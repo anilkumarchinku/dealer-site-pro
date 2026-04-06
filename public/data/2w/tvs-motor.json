@@ -19,20 +19,57 @@
       "transmission": "4-Speed Manual",
       "source_section": "Available",
       "description": "The TVS Sport is an entry-level commuter motorcycle with 80 kmpl ARAI-certified mileage, 10L fuel tank, alloy wheels, and combined braking system. Features fuel gauge and eco-meter.",
-      "features": ["Fuel Gauge", "Eco-meter", "Combined Braking System", "Alloy Wheels", "Kick Start", "Self Start"],
+      "features": [
+        "Fuel Gauge",
+        "Eco-meter",
+        "Combined Braking System",
+        "Alloy Wheels",
+        "Kick Start",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Drum", "price": "₹62,147"},
-        {"name": "Disc", "price": "₹63,630"}
+        {
+          "name": "Drum",
+          "price": "₹62,147"
+        },
+        {
+          "name": "Disc",
+          "price": "₹63,630"
+        }
       ],
       "colors": [
-        {"name": "Metallic Blue", "hex": "#1A4A8B"},
-        {"name": "Black Blue", "hex": "#1A1A5A"},
-        {"name": "White Purple", "hex": "#F5F5F0"},
-        {"name": "Black Red", "hex": "#8B0000"},
-        {"name": "Starlight Blue", "hex": "#2A7ABB"},
-        {"name": "All Red", "hex": "#CC2020"},
-        {"name": "All Grey", "hex": "#6B6B6B"},
-        {"name": "All Black", "hex": "#1A1A1A"}
+        {
+          "name": "Metallic Blue",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Black Blue",
+          "hex": "#1A1A5A"
+        },
+        {
+          "name": "White Purple",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Black Red",
+          "hex": "#8B0000"
+        },
+        {
+          "name": "Starlight Blue",
+          "hex": "#2A7ABB"
+        },
+        {
+          "name": "All Red",
+          "hex": "#CC2020"
+        },
+        {
+          "name": "All Grey",
+          "hex": "#6B6B6B"
+        },
+        {
+          "name": "All Black",
+          "hex": "#1A1A1A"
+        }
       ],
       "technical_specifications": {
         "engine": "109.7 cc, Single Cylinder, BS6 Phase 2",
@@ -59,20 +96,57 @@
       "transmission": "4-Speed Manual",
       "source_section": "Available",
       "description": "The TVS Radeon is a stylish commuter motorcycle with LED headlamp, digital meter, and excellent mileage of up to 74 kmpl. Comfortable ergonomics for city riding.",
-      "features": ["LED Headlamp", "Digital Meter", "Combined Braking System", "Alloy Wheels", "Kick Start", "Self Start"],
+      "features": [
+        "LED Headlamp",
+        "Digital Meter",
+        "Combined Braking System",
+        "Alloy Wheels",
+        "Kick Start",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Drum", "price": "₹70,143"},
-        {"name": "Drum i-TOUCHstart", "price": "₹73,000"},
-        {"name": "Disc", "price": "₹77,000"},
-        {"name": "Disc i-TOUCHstart", "price": "₹80,881"}
+        {
+          "name": "Drum",
+          "price": "₹70,143"
+        },
+        {
+          "name": "Drum i-TOUCHstart",
+          "price": "₹73,000"
+        },
+        {
+          "name": "Disc",
+          "price": "₹77,000"
+        },
+        {
+          "name": "Disc i-TOUCHstart",
+          "price": "₹80,881"
+        }
       ],
       "colors": [
-        {"name": "Metal Black", "hex": "#1A1A1A"},
-        {"name": "Titanium Grey", "hex": "#6B6B6B"},
-        {"name": "Royal Purple", "hex": "#5A2A7A"},
-        {"name": "Starlight Blue", "hex": "#2A7ABB"},
-        {"name": "Blue and Black", "hex": "#1A4A8B"},
-        {"name": "Red and Black", "hex": "#8B0000"}
+        {
+          "name": "Metal Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Titanium Grey",
+          "hex": "#6B6B6B"
+        },
+        {
+          "name": "Royal Purple",
+          "hex": "#5A2A7A"
+        },
+        {
+          "name": "Starlight Blue",
+          "hex": "#2A7ABB"
+        },
+        {
+          "name": "Blue and Black",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Red and Black",
+          "hex": "#8B0000"
+        }
       ],
       "technical_specifications": {
         "engine": "109.7 cc, Single Cylinder, BS6 Phase 2",
@@ -98,16 +172,39 @@
       "transmission": "4-Speed Manual",
       "source_section": "Available",
       "description": "The TVS Star City Plus is a feature-rich 110cc commuter with LED headlamp, digital meter option, combined braking system, alloy wheels, and low running costs.",
-      "features": ["LED Headlamp", "Combined Braking System", "Alloy Wheels", "Self Start"],
+      "features": [
+        "LED Headlamp",
+        "Combined Braking System",
+        "Alloy Wheels",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Drum", "price": "₹72,022"},
-        {"name": "Disc", "price": "₹75,544"}
+        {
+          "name": "Drum",
+          "price": "₹72,022"
+        },
+        {
+          "name": "Disc",
+          "price": "₹75,544"
+        }
       ],
       "colors": [
-        {"name": "Black Green", "hex": "#1A3A1A"},
-        {"name": "Black Red", "hex": "#8B0000"},
-        {"name": "Grey Black", "hex": "#3A3A3A"},
-        {"name": "Black Blue", "hex": "#1A1A5A"}
+        {
+          "name": "Black Green",
+          "hex": "#1A3A1A"
+        },
+        {
+          "name": "Black Red",
+          "hex": "#8B0000"
+        },
+        {
+          "name": "Grey Black",
+          "hex": "#3A3A3A"
+        },
+        {
+          "name": "Black Blue",
+          "hex": "#1A1A5A"
+        }
       ],
       "technical_specifications": {
         "engine": "109.7 cc, Single Cylinder, BS6 Phase 2",
@@ -134,21 +231,59 @@
       "transmission": "Automatic CVT",
       "source_section": "Available",
       "description": "The TVS Jupiter is a popular family scooter with 113cc engine, 53.84 kmpl ARAI mileage, USB charging port, and SmartXonnect Bluetooth on select variants.",
-      "features": ["USB Charging Port", "Combined Braking System", "Self Start", "Bluetooth (Smart variant)"],
+      "features": [
+        "USB Charging Port",
+        "Combined Braking System",
+        "Self Start",
+        "Bluetooth (Smart variant)"
+      ],
       "variants": [
-        {"name": "Standard", "price": "₹76,542"},
-        {"name": "SmartXonnect", "price": "₹80,000"},
-        {"name": "ZX", "price": "₹84,000"},
-        {"name": "ZX Disc", "price": "₹87,000"},
-        {"name": "SmartXonnect Disc", "price": "₹89,489"}
+        {
+          "name": "Standard",
+          "price": "₹76,542"
+        },
+        {
+          "name": "SmartXonnect",
+          "price": "₹80,000"
+        },
+        {
+          "name": "ZX",
+          "price": "₹84,000"
+        },
+        {
+          "name": "ZX Disc",
+          "price": "₹87,000"
+        },
+        {
+          "name": "SmartXonnect Disc",
+          "price": "₹89,489"
+        }
       ],
       "colors": [
-        {"name": "Galactic Copper Matte", "hex": "#7A5A3A"},
-        {"name": "Dawn Blue Matte", "hex": "#1A4A8B"},
-        {"name": "Starlight Blue Gloss", "hex": "#2A7ABB"},
-        {"name": "Titanium Grey Matte", "hex": "#6B6B6B"},
-        {"name": "Lunar White Gloss", "hex": "#F5F5F0"},
-        {"name": "Stardust Black", "hex": "#1A1A1A"}
+        {
+          "name": "Galactic Copper Matte",
+          "hex": "#7A5A3A"
+        },
+        {
+          "name": "Dawn Blue Matte",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Starlight Blue Gloss",
+          "hex": "#2A7ABB"
+        },
+        {
+          "name": "Titanium Grey Matte",
+          "hex": "#6B6B6B"
+        },
+        {
+          "name": "Lunar White Gloss",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Stardust Black",
+          "hex": "#1A1A1A"
+        }
       ],
       "technical_specifications": {
         "engine": "113.3 cc, Single Cylinder, BS6 Phase 2B",
@@ -175,22 +310,62 @@
       "transmission": "Automatic CVT",
       "source_section": "Available",
       "description": "The TVS Jupiter 125 is a premium 125cc scooter with 50 kmpl ARAI mileage, combined braking system, alloy wheels, and multiple color options for stylish city commuting.",
-      "features": ["Combined Braking System", "Alloy Wheels", "Self Start"],
+      "features": [
+        "Combined Braking System",
+        "Alloy Wheels",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Drum", "price": "₹83,630"},
-        {"name": "Disc", "price": "₹86,000"},
-        {"name": "ZX", "price": "₹90,000"},
-        {"name": "ZX Disc", "price": "₹93,950"}
+        {
+          "name": "Drum",
+          "price": "₹83,630"
+        },
+        {
+          "name": "Disc",
+          "price": "₹86,000"
+        },
+        {
+          "name": "ZX",
+          "price": "₹90,000"
+        },
+        {
+          "name": "ZX Disc",
+          "price": "₹93,950"
+        }
       ],
       "colors": [
-        {"name": "Titanium Grey", "hex": "#6B6B6B"},
-        {"name": "IndiBlue", "hex": "#1A4A8B"},
-        {"name": "Pristine White", "hex": "#F5F5F0"},
-        {"name": "Sparkling Black", "hex": "#1A1A1A"},
-        {"name": "Dawn Orange", "hex": "#E8600A"},
-        {"name": "Elite Green", "hex": "#2A5A2A"},
-        {"name": "Matte Copper Bronze", "hex": "#7A5A3A"},
-        {"name": "Elegant Red", "hex": "#CC2020"}
+        {
+          "name": "Titanium Grey",
+          "hex": "#6B6B6B"
+        },
+        {
+          "name": "IndiBlue",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Pristine White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Sparkling Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Dawn Orange",
+          "hex": "#E8600A"
+        },
+        {
+          "name": "Elite Green",
+          "hex": "#2A5A2A"
+        },
+        {
+          "name": "Matte Copper Bronze",
+          "hex": "#7A5A3A"
+        },
+        {
+          "name": "Elegant Red",
+          "hex": "#CC2020"
+        }
       ],
       "technical_specifications": {
         "engine": "124.8 cc, Single Cylinder, BS6 Phase 2",
@@ -217,23 +392,69 @@
       "transmission": "Automatic CVT",
       "source_section": "Available",
       "description": "The TVS Ntorq 125 is a sporty 125cc scooter with Bluetooth instrument cluster, USB charging port, disc brake, and multiple race-themed color options.",
-      "features": ["Bluetooth Instrument Cluster", "USB Charging Port", "Disc Brake", "Combined Braking System", "Alloy Wheels", "Self Start"],
+      "features": [
+        "Bluetooth Instrument Cluster",
+        "USB Charging Port",
+        "Disc Brake",
+        "Combined Braking System",
+        "Alloy Wheels",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Race Edition", "price": "₹87,935"},
-        {"name": "Super Squad Edition", "price": "₹92,000"},
-        {"name": "XT", "price": "₹96,000"},
-        {"name": "XT 125 Connected", "price": "₹1,00,000"},
-        {"name": "XT 125 Race Edition", "price": "₹1,03,778"}
+        {
+          "name": "Race Edition",
+          "price": "₹87,935"
+        },
+        {
+          "name": "Super Squad Edition",
+          "price": "₹92,000"
+        },
+        {
+          "name": "XT",
+          "price": "₹96,000"
+        },
+        {
+          "name": "XT 125 Connected",
+          "price": "₹1,00,000"
+        },
+        {
+          "name": "XT 125 Race Edition",
+          "price": "₹1,03,778"
+        }
       ],
       "colors": [
-        {"name": "Harlequin Blue", "hex": "#1A4A8B"},
-        {"name": "Nardo Gray", "hex": "#6B6B6B"},
-        {"name": "Turquoise Blue", "hex": "#2A7A7A"},
-        {"name": "Race Edition Marine Blue", "hex": "#1A2A5A"},
-        {"name": "Race Edition Red", "hex": "#CC2020"},
-        {"name": "Lightning Gray", "hex": "#8A8A8A"},
-        {"name": "Amazing Red", "hex": "#8B0000"},
-        {"name": "Stealth Black", "hex": "#1A1A1A"}
+        {
+          "name": "Harlequin Blue",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Nardo Gray",
+          "hex": "#6B6B6B"
+        },
+        {
+          "name": "Turquoise Blue",
+          "hex": "#2A7A7A"
+        },
+        {
+          "name": "Race Edition Marine Blue",
+          "hex": "#1A2A5A"
+        },
+        {
+          "name": "Race Edition Red",
+          "hex": "#CC2020"
+        },
+        {
+          "name": "Lightning Gray",
+          "hex": "#8A8A8A"
+        },
+        {
+          "name": "Amazing Red",
+          "hex": "#8B0000"
+        },
+        {
+          "name": "Stealth Black",
+          "hex": "#1A1A1A"
+        }
       ],
       "technical_specifications": {
         "engine": "124.8 cc, Single Cylinder, BS6 Phase 2",
@@ -260,22 +481,64 @@
       "transmission": "5-Speed Manual",
       "source_section": "Available",
       "description": "The TVS Raider 125 is a sporty 125cc motorcycle with 56.7 kmpl ARAI mileage, Marvel Universe themed editions, combined braking system, and 123 kg lightweight design.",
-      "features": ["Combined Braking System", "Alloy Wheels", "LED Headlamp", "Kick Start", "Self Start"],
+      "features": [
+        "Combined Braking System",
+        "Alloy Wheels",
+        "LED Headlamp",
+        "Kick Start",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Drum", "price": "₹84,489"},
-        {"name": "SuperSquad Edition", "price": "₹88,000"},
-        {"name": "Disc", "price": "₹91,000"},
-        {"name": "SmartConnect Disc", "price": "₹94,000"},
-        {"name": "SmartConnect Drum", "price": "₹92,000"},
-        {"name": "XT Disc", "price": "₹95,000"},
-        {"name": "XT SmartConnect", "price": "₹97,718"}
+        {
+          "name": "Drum",
+          "price": "₹84,489"
+        },
+        {
+          "name": "SuperSquad Edition",
+          "price": "₹88,000"
+        },
+        {
+          "name": "Disc",
+          "price": "₹91,000"
+        },
+        {
+          "name": "SmartConnect Disc",
+          "price": "₹94,000"
+        },
+        {
+          "name": "SmartConnect Drum",
+          "price": "₹92,000"
+        },
+        {
+          "name": "XT Disc",
+          "price": "₹95,000"
+        },
+        {
+          "name": "XT SmartConnect",
+          "price": "₹97,718"
+        }
       ],
       "colors": [
-        {"name": "Forza Blue", "hex": "#1A4A8B"},
-        {"name": "Wicked Black", "hex": "#1A1A1A"},
-        {"name": "Striking Red", "hex": "#CC2020"},
-        {"name": "Fiery Yellow", "hex": "#E8C200"},
-        {"name": "Blazing Blue", "hex": "#2A7ABB"}
+        {
+          "name": "Forza Blue",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Wicked Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Striking Red",
+          "hex": "#CC2020"
+        },
+        {
+          "name": "Fiery Yellow",
+          "hex": "#E8C200"
+        },
+        {
+          "name": "Blazing Blue",
+          "hex": "#2A7ABB"
+        }
       ],
       "technical_specifications": {
         "engine": "124.8 cc, Single Cylinder, BS6 Phase 2",
@@ -302,22 +565,65 @@
       "transmission": "5-Speed Manual",
       "source_section": "Available",
       "description": "The TVS Apache RTR 160 is a sporty 160cc motorcycle with LED DRLs, 61 kmpl ARAI mileage, Glide Through Technology (GTT), and single-channel ABS.",
-      "features": ["LED Headlamp with DRLs", "Glide Through Technology (GTT)", "3 Riding Modes", "ABS", "Alloy Wheels", "Self Start"],
+      "features": [
+        "LED Headlamp with DRLs",
+        "Glide Through Technology (GTT)",
+        "3 Riding Modes",
+        "ABS",
+        "Alloy Wheels",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Standard", "price": "₹1,09,029"},
-        {"name": "Bluetooth", "price": "₹1,14,000"},
-        {"name": "Special Edition", "price": "₹1,20,000"},
-        {"name": "Race Edition", "price": "₹1,23,000"},
-        {"name": "Race Edition Bluetooth", "price": "₹1,26,747"}
+        {
+          "name": "Standard",
+          "price": "₹1,09,029"
+        },
+        {
+          "name": "Bluetooth",
+          "price": "₹1,14,000"
+        },
+        {
+          "name": "Special Edition",
+          "price": "₹1,20,000"
+        },
+        {
+          "name": "Race Edition",
+          "price": "₹1,23,000"
+        },
+        {
+          "name": "Race Edition Bluetooth",
+          "price": "₹1,26,747"
+        }
       ],
       "colors": [
-        {"name": "Racing Red", "hex": "#CC2020"},
-        {"name": "T Grey", "hex": "#6B6B6B"},
-        {"name": "Gloss Black", "hex": "#1A1A1A"},
-        {"name": "Pearl White", "hex": "#F5F5F0"},
-        {"name": "Matte Blue", "hex": "#1A4A8B"},
-        {"name": "Matte Black", "hex": "#2A2A2A"},
-        {"name": "Black Champagne Gold Livery", "hex": "#1A1A1A"}
+        {
+          "name": "Racing Red",
+          "hex": "#CC2020"
+        },
+        {
+          "name": "T Grey",
+          "hex": "#6B6B6B"
+        },
+        {
+          "name": "Gloss Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Pearl White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Matte Blue",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Matte Black",
+          "hex": "#2A2A2A"
+        },
+        {
+          "name": "Black Champagne Gold Livery",
+          "hex": "#1A1A1A"
+        }
       ],
       "technical_specifications": {
         "engine": "159.7 cc, Single Cylinder, BS6 Phase 2",
@@ -346,23 +652,72 @@
       "transmission": "5-Speed Manual",
       "source_section": "Available",
       "description": "The TVS Apache RTR 160 4V has a 4-valve engine with Showa-tuned suspension, LED projector headlight, TFT display, Bluetooth navigation, and 3 riding modes.",
-      "features": ["4-Valve Engine", "LED Projector Headlight", "TFT Display", "Bluetooth Navigation", "3 Riding Modes", "Glide Through Technology", "ABS", "Alloy Wheels", "Self Start"],
+      "features": [
+        "4-Valve Engine",
+        "LED Projector Headlight",
+        "TFT Display",
+        "Bluetooth Navigation",
+        "3 Riding Modes",
+        "Glide Through Technology",
+        "ABS",
+        "Alloy Wheels",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Single Channel ABS", "price": "₹1,16,491"},
-        {"name": "Dual Channel ABS", "price": "₹1,22,000"},
-        {"name": "Race Edition Single ABS", "price": "₹1,28,000"},
-        {"name": "Race Edition Dual ABS", "price": "₹1,33,000"},
-        {"name": "Special Edition", "price": "₹1,36,000"},
-        {"name": "Black Champagne Dual ABS", "price": "₹1,38,689"}
+        {
+          "name": "Single Channel ABS",
+          "price": "₹1,16,491"
+        },
+        {
+          "name": "Dual Channel ABS",
+          "price": "₹1,22,000"
+        },
+        {
+          "name": "Race Edition Single ABS",
+          "price": "₹1,28,000"
+        },
+        {
+          "name": "Race Edition Dual ABS",
+          "price": "₹1,33,000"
+        },
+        {
+          "name": "Special Edition",
+          "price": "₹1,36,000"
+        },
+        {
+          "name": "Black Champagne Dual ABS",
+          "price": "₹1,38,689"
+        }
       ],
       "colors": [
-        {"name": "Metallic Blue", "hex": "#1A4A8B"},
-        {"name": "Knight Black", "hex": "#1A1A1A"},
-        {"name": "Racing Red", "hex": "#CC2020"},
-        {"name": "Pearl White", "hex": "#F5F5F0"},
-        {"name": "Matte Black", "hex": "#2A2A2A"},
-        {"name": "Lightning Blue", "hex": "#2A7ABB"},
-        {"name": "Granite Grey", "hex": "#6B6B6B"}
+        {
+          "name": "Metallic Blue",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Knight Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Racing Red",
+          "hex": "#CC2020"
+        },
+        {
+          "name": "Pearl White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Matte Black",
+          "hex": "#2A2A2A"
+        },
+        {
+          "name": "Lightning Blue",
+          "hex": "#2A7ABB"
+        },
+        {
+          "name": "Granite Grey",
+          "hex": "#6B6B6B"
+        }
       ],
       "technical_specifications": {
         "engine": "159.7 cc, Single Cylinder, BS6 Phase 2, 4-Valve",
@@ -389,20 +744,57 @@
       "transmission": "5-Speed Manual",
       "source_section": "Available",
       "description": "The TVS Apache RTR 200 4V is a potent 200cc naked motorcycle with fuel injection, disc brakes, smartphone connectivity, and LED DRLs for refined performance.",
-      "features": ["Fuel Injection", "Disc Brakes", "Smartphone Connectivity", "LED DRLs", "Alloy Wheels", "Self Start"],
+      "features": [
+        "Fuel Injection",
+        "Disc Brakes",
+        "Smartphone Connectivity",
+        "LED DRLs",
+        "Alloy Wheels",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Single Channel ABS", "price": "₹1,38,407"},
-        {"name": "Dual Channel ABS", "price": "₹1,43,000"},
-        {"name": "Race Edition", "price": "₹1,46,000"},
-        {"name": "Black Champagne", "price": "₹1,49,686"}
+        {
+          "name": "Single Channel ABS",
+          "price": "₹1,38,407"
+        },
+        {
+          "name": "Dual Channel ABS",
+          "price": "₹1,43,000"
+        },
+        {
+          "name": "Race Edition",
+          "price": "₹1,46,000"
+        },
+        {
+          "name": "Black Champagne",
+          "price": "₹1,49,686"
+        }
       ],
       "colors": [
-        {"name": "Matte Blue", "hex": "#1A4A8B"},
-        {"name": "Pearl White", "hex": "#F5F5F0"},
-        {"name": "Gloss Black", "hex": "#1A1A1A"},
-        {"name": "Matte Black", "hex": "#2A2A2A"},
-        {"name": "Granite Grey", "hex": "#6B6B6B"},
-        {"name": "Black Champagne Gold Livery", "hex": "#1A1A1A"}
+        {
+          "name": "Matte Blue",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Pearl White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Gloss Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Matte Black",
+          "hex": "#2A2A2A"
+        },
+        {
+          "name": "Granite Grey",
+          "hex": "#6B6B6B"
+        },
+        {
+          "name": "Black Champagne Gold Livery",
+          "hex": "#1A1A1A"
+        }
       ],
       "technical_specifications": {
         "engine": "197.75 cc, Single Cylinder, BS6 Phase 2",
@@ -429,23 +821,71 @@
       "transmission": "5-Speed Manual",
       "source_section": "Available",
       "description": "The TVS Ronin is a neo-retro motorcycle with 226cc engine, USD front forks, dual-channel ABS, round LED headlight with T DRL, Glide Through Technology, and 42 kmpl ARAI mileage.",
-      "features": ["USD Front Forks", "Dual Channel ABS", "Round LED Headlight", "T DRL", "Glide Through Technology", "Bluetooth (top variant)", "Alloy Wheels", "Self Start"],
+      "features": [
+        "USD Front Forks",
+        "Dual Channel ABS",
+        "Round LED Headlight",
+        "T DRL",
+        "Glide Through Technology",
+        "Bluetooth (top variant)",
+        "Alloy Wheels",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Single Channel ABS", "price": "₹1,26,751"},
-        {"name": "Dual Channel ABS", "price": "₹1,36,000"},
-        {"name": "Bluetooth Single ABS", "price": "₹1,48,000"},
-        {"name": "Bluetooth Dual ABS", "price": "₹1,53,000"},
-        {"name": "Matt Dual ABS", "price": "₹1,57,000"},
-        {"name": "Matt Bluetooth Dual ABS", "price": "₹1,60,217"}
+        {
+          "name": "Single Channel ABS",
+          "price": "₹1,26,751"
+        },
+        {
+          "name": "Dual Channel ABS",
+          "price": "₹1,36,000"
+        },
+        {
+          "name": "Bluetooth Single ABS",
+          "price": "₹1,48,000"
+        },
+        {
+          "name": "Bluetooth Dual ABS",
+          "price": "₹1,53,000"
+        },
+        {
+          "name": "Matt Dual ABS",
+          "price": "₹1,57,000"
+        },
+        {
+          "name": "Matt Bluetooth Dual ABS",
+          "price": "₹1,60,217"
+        }
       ],
       "colors": [
-        {"name": "Lightning Black", "hex": "#1A1A1A"},
-        {"name": "Midnight Blue", "hex": "#1A2A5A"},
-        {"name": "Nimbus Grey", "hex": "#6B6B6B"},
-        {"name": "Magma Red", "hex": "#CC2020"},
-        {"name": "Glacier Silver", "hex": "#C8C8C8"},
-        {"name": "Charcoal Ember", "hex": "#3A3A3A"},
-        {"name": "White", "hex": "#F5F5F0"}
+        {
+          "name": "Lightning Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Midnight Blue",
+          "hex": "#1A2A5A"
+        },
+        {
+          "name": "Nimbus Grey",
+          "hex": "#6B6B6B"
+        },
+        {
+          "name": "Magma Red",
+          "hex": "#CC2020"
+        },
+        {
+          "name": "Glacier Silver",
+          "hex": "#C8C8C8"
+        },
+        {
+          "name": "Charcoal Ember",
+          "hex": "#3A3A3A"
+        },
+        {
+          "name": "White",
+          "hex": "#F5F5F0"
+        }
       ],
       "technical_specifications": {
         "engine": "225.9 cc, Single Cylinder, BS6 Phase 2",
@@ -473,17 +913,49 @@
       "transmission": "Automatic CVT",
       "source_section": "Available",
       "description": "The TVS Ntorq 150 is a premium 150cc scooter with quad projector headlight, TFT display, Alexa integration, map navigation, GPS tracking, and 22L underseat storage.",
-      "features": ["Quad Projector Headlight", "TFT Display", "Alexa Integration", "Map Navigation", "GPS Tracking", "Bluetooth", "USB Charging Port", "ABS", "Alloy Wheels", "Self Start"],
+      "features": [
+        "Quad Projector Headlight",
+        "TFT Display",
+        "Alexa Integration",
+        "Map Navigation",
+        "GPS Tracking",
+        "Bluetooth",
+        "USB Charging Port",
+        "ABS",
+        "Alloy Wheels",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Standard", "price": "₹1,09,475"},
-        {"name": "Connected", "price": "₹1,14,000"},
-        {"name": "Race Edition", "price": "₹1,18,479"}
+        {
+          "name": "Standard",
+          "price": "₹1,09,475"
+        },
+        {
+          "name": "Connected",
+          "price": "₹1,14,000"
+        },
+        {
+          "name": "Race Edition",
+          "price": "₹1,18,479"
+        }
       ],
       "colors": [
-        {"name": "Nitro Green", "hex": "#5A8A00"},
-        {"name": "Racing Red", "hex": "#CC2020"},
-        {"name": "Turbo Blue", "hex": "#1A4A8B"},
-        {"name": "Stealth Silver", "hex": "#C8C8C8"}
+        {
+          "name": "Nitro Green",
+          "hex": "#5A8A00"
+        },
+        {
+          "name": "Racing Red",
+          "hex": "#CC2020"
+        },
+        {
+          "name": "Turbo Blue",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Stealth Silver",
+          "hex": "#C8C8C8"
+        }
       ],
       "technical_specifications": {
         "engine": "149.7 cc, Single Cylinder, BS6 Phase 2B",
@@ -511,18 +983,52 @@
       "transmission": "6-Speed Manual",
       "source_section": "Available",
       "description": "The TVS Apache RR 310 is a fully-faired sports bike with 312cc liquid-cooled engine, ride-by-wire, 4 riding modes, TFT display, quickshifter (top variant), and dual-channel ABS.",
-      "features": ["Full Fairing", "Ride-by-Wire", "4 Riding Modes", "TFT Display", "Quickshifter (top)", "Dual Channel ABS", "Slipper Clutch", "Alloy Wheels", "Self Start"],
+      "features": [
+        "Full Fairing",
+        "Ride-by-Wire",
+        "4 Riding Modes",
+        "TFT Display",
+        "Quickshifter (top)",
+        "Dual Channel ABS",
+        "Slipper Clutch",
+        "Alloy Wheels",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Standard", "price": "₹2,59,548"},
-        {"name": "BTO Standard", "price": "₹2,75,000"},
-        {"name": "BTO S", "price": "₹2,96,000"},
-        {"name": "BTO Special", "price": "₹3,12,700"}
+        {
+          "name": "Standard",
+          "price": "₹2,59,548"
+        },
+        {
+          "name": "BTO Standard",
+          "price": "₹2,75,000"
+        },
+        {
+          "name": "BTO S",
+          "price": "₹2,96,000"
+        },
+        {
+          "name": "BTO Special",
+          "price": "₹3,12,700"
+        }
       ],
       "colors": [
-        {"name": "Sepang Blue", "hex": "#1A4A8B"},
-        {"name": "Racing Red", "hex": "#CC2020"},
-        {"name": "Bomber Grey", "hex": "#6B6B6B"},
-        {"name": "Black Champagne Gold Livery", "hex": "#1A1A1A"}
+        {
+          "name": "Sepang Blue",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Racing Red",
+          "hex": "#CC2020"
+        },
+        {
+          "name": "Bomber Grey",
+          "hex": "#6B6B6B"
+        },
+        {
+          "name": "Black Champagne Gold Livery",
+          "hex": "#1A1A1A"
+        }
       ],
       "technical_specifications": {
         "engine": "312.2 cc, Single Cylinder, BS6 Phase 2B",
@@ -549,17 +1055,50 @@
       "transmission": "6-Speed Manual",
       "source_section": "Available",
       "description": "The TVS Apache RTR 310 is a naked street motorcycle with 312cc engine, 5-inch TFT display, cruise control, TPMS, quickshifter, 5 ride modes, launch control, and heated/cooled seat.",
-      "features": ["5-inch TFT Display", "Cruise Control", "TPMS", "Quickshifter", "5 Ride Modes", "Launch Control", "Drag Torque Control", "Climatic Seat", "Dual Channel ABS", "Alloy Wheels", "Self Start"],
+      "features": [
+        "5-inch TFT Display",
+        "Cruise Control",
+        "TPMS",
+        "Quickshifter",
+        "5 Ride Modes",
+        "Launch Control",
+        "Drag Torque Control",
+        "Climatic Seat",
+        "Dual Channel ABS",
+        "Alloy Wheels",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Standard", "price": "₹2,22,804"},
-        {"name": "Premium", "price": "₹2,55,000"},
-        {"name": "Special", "price": "₹2,88,254"}
+        {
+          "name": "Standard",
+          "price": "₹2,22,804"
+        },
+        {
+          "name": "Premium",
+          "price": "₹2,55,000"
+        },
+        {
+          "name": "Special",
+          "price": "₹2,88,254"
+        }
       ],
       "colors": [
-        {"name": "Arsenal Black", "hex": "#1A1A1A"},
-        {"name": "Fury Yellow", "hex": "#E8C200"},
-        {"name": "Black Champagne Gold Livery", "hex": "#1A1A1A"},
-        {"name": "Fiery Red", "hex": "#CC2020"}
+        {
+          "name": "Arsenal Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Fury Yellow",
+          "hex": "#E8C200"
+        },
+        {
+          "name": "Black Champagne Gold Livery",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Fiery Red",
+          "hex": "#CC2020"
+        }
       ],
       "technical_specifications": {
         "engine": "312.12 cc, Single Cylinder, BS6 Phase 2B",
@@ -585,18 +1124,51 @@
       "transmission": "6-Speed Manual",
       "source_section": "Available",
       "description": "The TVS Apache RTX is an adventure-touring motorcycle with 299cc engine, TFT display with navigation, 4 riding modes, traction control, wide handlebars, crash guards, and windscreen.",
-      "features": ["TFT Display with Navigation", "4 Riding Modes", "Traction Control", "Crash Guards", "Windscreen", "Dual Channel ABS", "Alloy Wheels", "Self Start"],
+      "features": [
+        "TFT Display with Navigation",
+        "4 Riding Modes",
+        "Traction Control",
+        "Crash Guards",
+        "Windscreen",
+        "Dual Channel ABS",
+        "Alloy Wheels",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Standard", "price": "₹1,99,000"},
-        {"name": "Premium", "price": "₹2,15,000"},
-        {"name": "Special", "price": "₹2,34,058"}
+        {
+          "name": "Standard",
+          "price": "₹1,99,000"
+        },
+        {
+          "name": "Premium",
+          "price": "₹2,15,000"
+        },
+        {
+          "name": "Special",
+          "price": "₹2,34,058"
+        }
       ],
       "colors": [
-        {"name": "Pearl White", "hex": "#F5F5F0"},
-        {"name": "Lightning Black", "hex": "#1A1A1A"},
-        {"name": "Metallic Blue", "hex": "#1A4A8B"},
-        {"name": "Tarn Bronze", "hex": "#7A5A3A"},
-        {"name": "Viper Green", "hex": "#2A5A2A"}
+        {
+          "name": "Pearl White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Lightning Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Metallic Blue",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Tarn Bronze",
+          "hex": "#7A5A3A"
+        },
+        {
+          "name": "Viper Green",
+          "hex": "#2A5A2A"
+        }
       ],
       "technical_specifications": {
         "engine": "299 cc, Single Cylinder, BS6 Phase 2B",
@@ -617,30 +1189,79 @@
       "engine_displacement": "N/A",
       "mileage": "94 km (range)",
       "max_power": "4.4 kW",
-      "max_torque": "N/A",
+      "max_torque": "140 Nm",
       "top_speed": "75 kmph",
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The TVS iQube is a popular electric scooter with 2.2/3.1/3.5 kWh battery options, up to 105 km range in eco mode, disc brake, TBT navigation, and USB charging port.",
-      "features": ["TBT Navigation", "USB Charging Port", "Disc Brake", "Combined Braking System", "Telescopic Front Suspension", "Self Start"],
+      "features": [
+        "TBT Navigation",
+        "USB Charging Port",
+        "Disc Brake",
+        "Combined Braking System",
+        "Telescopic Front Suspension",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "S (2.2 kWh)", "price": "₹1,09,319"},
-        {"name": "ST (3.1 kWh)", "price": "₹1,23,000"},
-        {"name": "ST+ (3.5 kWh)", "price": "₹1,37,000"},
-        {"name": "STX (3.5 kWh)", "price": "₹1,50,000"},
-        {"name": "STX Plus (3.5 kWh)", "price": "₹1,55,000"},
-        {"name": "Premium (3.5 kWh)", "price": "₹1,62,314"}
+        {
+          "name": "S (2.2 kWh)",
+          "price": "₹1,09,319"
+        },
+        {
+          "name": "ST (3.1 kWh)",
+          "price": "₹1,23,000"
+        },
+        {
+          "name": "ST+ (3.5 kWh)",
+          "price": "₹1,37,000"
+        },
+        {
+          "name": "STX (3.5 kWh)",
+          "price": "₹1,50,000"
+        },
+        {
+          "name": "STX Plus (3.5 kWh)",
+          "price": "₹1,55,000"
+        },
+        {
+          "name": "Premium (3.5 kWh)",
+          "price": "₹1,62,314"
+        }
       ],
       "colors": [
-        {"name": "Walnut Brown", "hex": "#7A5A3A"},
-        {"name": "Pearl White", "hex": "#F5F5F0"},
-        {"name": "Titanium Grey", "hex": "#6B6B6B"},
-        {"name": "Copper Brown Beige", "hex": "#9A7A5A"},
-        {"name": "Starlight Blue Beige", "hex": "#2A7ABB"},
-        {"name": "Celebration Orange", "hex": "#E8600A"},
-        {"name": "Mint Blue", "hex": "#2A8A8A"},
-        {"name": "Mercury Grey", "hex": "#8A8A8A"}
+        {
+          "name": "Walnut Brown",
+          "hex": "#7A5A3A"
+        },
+        {
+          "name": "Pearl White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Titanium Grey",
+          "hex": "#6B6B6B"
+        },
+        {
+          "name": "Copper Brown Beige",
+          "hex": "#9A7A5A"
+        },
+        {
+          "name": "Starlight Blue Beige",
+          "hex": "#2A7ABB"
+        },
+        {
+          "name": "Celebration Orange",
+          "hex": "#E8600A"
+        },
+        {
+          "name": "Mint Blue",
+          "hex": "#2A8A8A"
+        },
+        {
+          "name": "Mercury Grey",
+          "hex": "#8A8A8A"
+        }
       ],
       "technical_specifications": {
         "engine": "Electric Motor, 4.4 kW max",
@@ -663,18 +1284,31 @@
       "engine_displacement": "N/A",
       "mileage": "140 km (range)",
       "max_power": "7 kW",
-      "max_torque": "N/A",
+      "max_torque": "38 Nm",
       "top_speed": "105 kmph",
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The TVS X is a premium electric scooter with 11 kW max power, 140 km range, 4-hour charging, massive TFT screen, ABS, and big underseat storage.",
-      "features": ["Massive TFT Screen", "ABS", "Disc Brakes", "USB Charging Port", "Big Underseat Storage", "Self Start"],
+      "features": [
+        "Massive TFT Screen",
+        "ABS",
+        "Disc Brakes",
+        "USB Charging Port",
+        "Big Underseat Storage",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Standard", "price": "₹2,63,880"}
+        {
+          "name": "Standard",
+          "price": "₹2,63,880"
+        }
       ],
       "colors": [
-        {"name": "Red", "hex": "#CC2020"}
+        {
+          "name": "Red",
+          "hex": "#CC2020"
+        }
       ],
       "technical_specifications": {
         "engine": "Electric Motor, 7 kW rated / 11 kW max",
@@ -694,24 +1328,56 @@
       "engine_displacement": "N/A",
       "mileage": "86 km (range)",
       "max_power": "2.5 kW",
-      "max_torque": "N/A",
+      "max_torque": "25 Nm",
       "top_speed": "68 kmph",
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The TVS Orbiter is an entry-level electric scooter with removable battery, cruise control, hill hold assist, 2 riding modes, smartphone connectivity, and 101 kg lightweight build.",
-      "features": ["Removable Battery", "Cruise Control", "Hill Hold Assist", "2 Riding Modes", "Smartphone Connectivity", "USB Charging Port", "Self Start"],
+      "features": [
+        "Removable Battery",
+        "Cruise Control",
+        "Hill Hold Assist",
+        "2 Riding Modes",
+        "Smartphone Connectivity",
+        "USB Charging Port",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Standard", "price": "₹92,247"},
-        {"name": "Connect", "price": "₹1,09,894"}
+        {
+          "name": "Standard",
+          "price": "₹92,247"
+        },
+        {
+          "name": "Connect",
+          "price": "₹1,09,894"
+        }
       ],
       "colors": [
-        {"name": "Stellar Silver", "hex": "#C8C8C8"},
-        {"name": "Cosmic Titanium", "hex": "#6B6B6B"},
-        {"name": "Martian Copper", "hex": "#7A5A3A"},
-        {"name": "Lunar Grey", "hex": "#8A8A8A"},
-        {"name": "Stratos Blue", "hex": "#1A4A8B"},
-        {"name": "Neon Sunburst", "hex": "#E8C200"}
+        {
+          "name": "Stellar Silver",
+          "hex": "#C8C8C8"
+        },
+        {
+          "name": "Cosmic Titanium",
+          "hex": "#6B6B6B"
+        },
+        {
+          "name": "Martian Copper",
+          "hex": "#7A5A3A"
+        },
+        {
+          "name": "Lunar Grey",
+          "hex": "#8A8A8A"
+        },
+        {
+          "name": "Stratos Blue",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Neon Sunburst",
+          "hex": "#E8C200"
+        }
       ],
       "technical_specifications": {
         "engine": "Electric Motor, 2.5 kW",

@@ -13,20 +13,40 @@
       "engine_displacement": "N/A",
       "mileage": "200 km (range)",
       "max_power": "22 kW",
-      "max_torque": "N/A",
+      "max_torque": "80 Nm",
       "top_speed": "135 kmph",
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Raptee HV T30 is a premium electric motorcycle from Chennai-based Raptee HV, featuring India's first segment-level CCS2 fast charging, 240V high-voltage battery architecture, 22kW motor, 200km range, 135 kmph top speed, and dual disc ABS brakes.",
-      "features": ["CCS2 Fast Charging (Segment-First)", "240V High-Voltage Architecture", "Dual Disc ABS Brakes", "3 Ride Modes", "LED Lighting", "Digital Display", "Mobile App Connectivity"],
+      "features": [
+        "CCS2 Fast Charging (Segment-First)",
+        "240V High-Voltage Architecture",
+        "Dual Disc ABS Brakes",
+        "3 Ride Modes",
+        "LED Lighting",
+        "Digital Display",
+        "Mobile App Connectivity"
+      ],
       "variants": [
-        {"name": "T30 Standard", "price": "₹2,39,000"}
+        {
+          "name": "T30 Standard",
+          "price": "₹2,39,000"
+        }
       ],
       "colors": [
-        {"name": "Mercury Grey", "hex": "#9E9E9E"},
-        {"name": "Eclipse Black", "hex": "#1A1A1A"},
-        {"name": "Arctic White", "hex": "#F5F5F0"}
+        {
+          "name": "Mercury Grey",
+          "hex": "#9E9E9E"
+        },
+        {
+          "name": "Eclipse Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Arctic White",
+          "hex": "#F5F5F0"
+        }
       ],
       "technical_specifications": {
         "motor": "PMSM Motor",

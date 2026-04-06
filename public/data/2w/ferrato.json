@@ -12,21 +12,40 @@
       "price": "₹1,54,999",
       "engine_displacement": "N/A",
       "mileage": "129 km (range)",
-      "max_power": "N/A",
+      "max_power": "10 kW",
       "max_torque": "228 Nm (instant)",
       "top_speed": "95 kmph",
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Ferrato Disruptor is a petrol-bike-styled electric motorcycle with 129km range, 95 kmph top speed, 228Nm instant torque, and 3 ride modes (Eco, City, Sport). Rated 4.7/5 by owners for its aggressive styling and linear power delivery.",
-      "features": ["3 Ride Modes (Eco, City, Sport)", "Instant 228Nm Torque", "LED Headlamp", "Digital Display", "Disc Brakes", "Petrol-Bike Style Design"],
+      "features": [
+        "3 Ride Modes (Eco, City, Sport)",
+        "Instant 228Nm Torque",
+        "LED Headlamp",
+        "Digital Display",
+        "Disc Brakes",
+        "Petrol-Bike Style Design"
+      ],
       "variants": [
-        {"name": "Disruptor Standard", "price": "₹1,54,999"}
+        {
+          "name": "Disruptor Standard",
+          "price": "₹1,54,999"
+        }
       ],
       "colors": [
-        {"name": "Cosmic Black", "hex": "#1A1A1A"},
-        {"name": "Mars Red", "hex": "#C41E3A"},
-        {"name": "Lunar Grey", "hex": "#6B6B6B"}
+        {
+          "name": "Cosmic Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Mars Red",
+          "hex": "#C41E3A"
+        },
+        {
+          "name": "Lunar Grey",
+          "hex": "#6B6B6B"
+        }
       ],
       "technical_specifications": {
         "motor": "PMSM Motor",

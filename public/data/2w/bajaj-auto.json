@@ -19,15 +19,34 @@
       "transmission": "4-Speed Manual",
       "source_section": "Available",
       "description": "The Bajaj Platina 100 is a highly fuel-efficient entry-level commuter with 100cc engine offering 75 kmpl mileage, alloy wheels, and combined braking system.",
-      "features": ["Combined Braking System", "Alloy Wheels", "Self Start"],
+      "features": [
+        "Combined Braking System",
+        "Alloy Wheels",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Standard", "price": "₹67,463"}
+        {
+          "name": "Standard",
+          "price": "₹67,463"
+        }
       ],
       "colors": [
-        {"name": "Black & Blue", "hex": "#1A1A5A"},
-        {"name": "Black & Gold", "hex": "#1A1A1A"},
-        {"name": "Black & Silver", "hex": "#1A1A1A"},
-        {"name": "Black & Red", "hex": "#8B0000"}
+        {
+          "name": "Black & Blue",
+          "hex": "#1A1A5A"
+        },
+        {
+          "name": "Black & Gold",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Black & Silver",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Black & Red",
+          "hex": "#8B0000"
+        }
       ],
       "technical_specifications": {
         "engine": "99.59 cc, Single Cylinder, BS6 Phase 2",
@@ -54,18 +73,48 @@
       "transmission": "5-Speed Manual",
       "source_section": "Available",
       "description": "The Bajaj Pulsar 125 is a sporty 125cc motorcycle with disc brake, alloy wheels, 5-speed gearbox, and split seat design options available.",
-      "features": ["Disc Brake", "Combined Braking System", "Alloy Wheels", "Kick Start", "Self Start"],
+      "features": [
+        "Disc Brake",
+        "Combined Braking System",
+        "Alloy Wheels",
+        "Kick Start",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Split Seat", "price": "₹82,420"},
-        {"name": "Standard Disc", "price": "₹85,000"},
-        {"name": "Neon", "price": "₹89,000"},
-        {"name": "Carbon", "price": "₹92,691"}
+        {
+          "name": "Split Seat",
+          "price": "₹82,420"
+        },
+        {
+          "name": "Standard Disc",
+          "price": "₹85,000"
+        },
+        {
+          "name": "Neon",
+          "price": "₹89,000"
+        },
+        {
+          "name": "Carbon",
+          "price": "₹92,691"
+        }
       ],
       "colors": [
-        {"name": "Black Race Red", "hex": "#8B0000"},
-        {"name": "Black Cyan Blue", "hex": "#1A4A8B"},
-        {"name": "Black Dark Grey", "hex": "#3A3A3A"},
-        {"name": "Racing Red Tan Beige", "hex": "#CC2020"}
+        {
+          "name": "Black Race Red",
+          "hex": "#8B0000"
+        },
+        {
+          "name": "Black Cyan Blue",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Black Dark Grey",
+          "hex": "#3A3A3A"
+        },
+        {
+          "name": "Racing Red Tan Beige",
+          "hex": "#CC2020"
+        }
       ],
       "technical_specifications": {
         "engine": "124.4 cc, Single Cylinder, BS6 Phase 2",
@@ -92,19 +141,53 @@
       "transmission": "5-Speed Manual",
       "source_section": "Available",
       "description": "The Bajaj Pulsar NS125 is a naked streetfighter with 124cc engine, digital instrument cluster, disc brake with CBS, alloy wheels, and aggressive styling.",
-      "features": ["Disc Brake", "Combined Braking System", "Alloy Wheels", "Digital Cluster", "Kick Start", "Self Start"],
+      "features": [
+        "Disc Brake",
+        "Combined Braking System",
+        "Alloy Wheels",
+        "Digital Cluster",
+        "Kick Start",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Standard", "price": "₹92,671"},
-        {"name": "Bluetooth", "price": "₹98,000"},
-        {"name": "Carbon", "price": "₹1,02,695"}
+        {
+          "name": "Standard",
+          "price": "₹92,671"
+        },
+        {
+          "name": "Bluetooth",
+          "price": "₹98,000"
+        },
+        {
+          "name": "Carbon",
+          "price": "₹1,02,695"
+        }
       ],
       "colors": [
-        {"name": "Pewter Grey", "hex": "#6B6B6B"},
-        {"name": "Red", "hex": "#CC2020"},
-        {"name": "Orange", "hex": "#E8600A"},
-        {"name": "Blue", "hex": "#1A4A8B"},
-        {"name": "Pearl Metallic White", "hex": "#F5F5F0"},
-        {"name": "Black", "hex": "#1A1A1A"}
+        {
+          "name": "Pewter Grey",
+          "hex": "#6B6B6B"
+        },
+        {
+          "name": "Red",
+          "hex": "#CC2020"
+        },
+        {
+          "name": "Orange",
+          "hex": "#E8600A"
+        },
+        {
+          "name": "Blue",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Pearl Metallic White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Black",
+          "hex": "#1A1A1A"
+        }
       ],
       "technical_specifications": {
         "engine": "124.45 cc, Single Cylinder, BS6 Phase 2",
@@ -131,17 +214,46 @@
       "transmission": "5-Speed Manual",
       "source_section": "Available",
       "description": "The Bajaj Pulsar N125 is a sporty 125cc streetfighter with fuel injection, 60 kmpl ARAI mileage, disc brake, monoshock, telescopic forks, and a lightweight 125 kg kerb weight.",
-      "features": ["Fuel Injection", "Disc Brake", "Monoshock", "Alloy Wheels", "Digital Cluster", "Kick Start", "Self Start"],
+      "features": [
+        "Fuel Injection",
+        "Disc Brake",
+        "Monoshock",
+        "Alloy Wheels",
+        "Digital Cluster",
+        "Kick Start",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Standard", "price": "₹93,668"},
-        {"name": "Carbon", "price": "₹94,661"}
+        {
+          "name": "Standard",
+          "price": "₹93,668"
+        },
+        {
+          "name": "Carbon",
+          "price": "₹94,661"
+        }
       ],
       "colors": [
-        {"name": "Caribbean Blue", "hex": "#2A7A7A"},
-        {"name": "Cocktail Wine Red", "hex": "#8B0000"},
-        {"name": "Ebony Black", "hex": "#1A1A1A"},
-        {"name": "Pearl Metallic White", "hex": "#F5F5F0"},
-        {"name": "Pewter Grey/Citrus Rush", "hex": "#6B6B6B"}
+        {
+          "name": "Caribbean Blue",
+          "hex": "#2A7A7A"
+        },
+        {
+          "name": "Cocktail Wine Red",
+          "hex": "#8B0000"
+        },
+        {
+          "name": "Ebony Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Pearl Metallic White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Pewter Grey/Citrus Rush",
+          "hex": "#6B6B6B"
+        }
       ],
       "technical_specifications": {
         "engine": "124.58 cc, Single Cylinder, BS6 Phase 2",
@@ -170,17 +282,44 @@
       "transmission": "5-Speed Manual",
       "source_section": "Available",
       "description": "The Bajaj Pulsar 150 is a popular 150cc sports commuter with disc brake, ABS, tubeless tyres, alloy wheels, and 5-speed gearbox. One of the longest-running Pulsar variants.",
-      "features": ["Disc Brake", "ABS", "Tubeless Tyres", "Alloy Wheels", "Self Start"],
+      "features": [
+        "Disc Brake",
+        "ABS",
+        "Tubeless Tyres",
+        "Alloy Wheels",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Single Disc", "price": "₹1,10,120"},
-        {"name": "Split Seat", "price": "₹1,13,000"},
-        {"name": "Twin Disc", "price": "₹1,16,916"}
+        {
+          "name": "Single Disc",
+          "price": "₹1,10,120"
+        },
+        {
+          "name": "Split Seat",
+          "price": "₹1,13,000"
+        },
+        {
+          "name": "Twin Disc",
+          "price": "₹1,16,916"
+        }
       ],
       "colors": [
-        {"name": "Bottle Green with Copper Beige", "hex": "#2A5A2A"},
-        {"name": "Ebony Black Dark Grey", "hex": "#1A1A1A"},
-        {"name": "Ebony Black Ink Blue", "hex": "#1A1A5A"},
-        {"name": "Ebony Black Cherry Red", "hex": "#8B0000"}
+        {
+          "name": "Bottle Green with Copper Beige",
+          "hex": "#2A5A2A"
+        },
+        {
+          "name": "Ebony Black Dark Grey",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Ebony Black Ink Blue",
+          "hex": "#1A1A5A"
+        },
+        {
+          "name": "Ebony Black Cherry Red",
+          "hex": "#8B0000"
+        }
       ],
       "technical_specifications": {
         "engine": "149.5 cc, Single Cylinder, BS6 Phase 2",
@@ -207,20 +346,57 @@
       "transmission": "5-Speed Manual",
       "source_section": "Available",
       "description": "The Bajaj Pulsar N160 is a sporty 165cc naked motorcycle with LED projector headlamp with DRLs, dual-channel ABS disc brakes, oil-cooled engine, and 51.6 kmpl ARAI mileage.",
-      "features": ["LED Projector Headlamp", "DRLs", "Dual Channel ABS", "Oil-Cooled Engine", "Alloy Wheels", "Self Start"],
+      "features": [
+        "LED Projector Headlamp",
+        "DRLs",
+        "Dual Channel ABS",
+        "Oil-Cooled Engine",
+        "Alloy Wheels",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Single Channel ABS", "price": "₹1,14,840"},
-        {"name": "Dual Channel ABS", "price": "₹1,19,000"},
-        {"name": "Bluetooth", "price": "₹1,22,000"},
-        {"name": "Carbon Bluetooth", "price": "₹1,27,333"}
+        {
+          "name": "Single Channel ABS",
+          "price": "₹1,14,840"
+        },
+        {
+          "name": "Dual Channel ABS",
+          "price": "₹1,19,000"
+        },
+        {
+          "name": "Bluetooth",
+          "price": "₹1,22,000"
+        },
+        {
+          "name": "Carbon Bluetooth",
+          "price": "₹1,27,333"
+        }
       ],
       "colors": [
-        {"name": "Harbor Grey & Silver", "hex": "#6B6B6B"},
-        {"name": "Racing Red & Rush Red", "hex": "#CC2020"},
-        {"name": "Ebony Black & Charcoal Black", "hex": "#1A1A1A"},
-        {"name": "Pearl Metallic White & Silver", "hex": "#F5F5F0"},
-        {"name": "Polar Sky Blue", "hex": "#2A7ABB"},
-        {"name": "Brooklyn Black", "hex": "#2A2A2A"}
+        {
+          "name": "Harbor Grey & Silver",
+          "hex": "#6B6B6B"
+        },
+        {
+          "name": "Racing Red & Rush Red",
+          "hex": "#CC2020"
+        },
+        {
+          "name": "Ebony Black & Charcoal Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Pearl Metallic White & Silver",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Polar Sky Blue",
+          "hex": "#2A7ABB"
+        },
+        {
+          "name": "Brooklyn Black",
+          "hex": "#2A2A2A"
+        }
       ],
       "technical_specifications": {
         "engine": "164.82 cc, Single Cylinder, BS6 Phase 2",
@@ -247,15 +423,40 @@
       "transmission": "5-Speed Manual",
       "source_section": "Available",
       "description": "The Bajaj Pulsar NS160 is a naked streetfighter with 160cc engine, dual-channel ABS, Bluetooth connectivity, TBT navigation, TPMS, anti-theft system, and 52.2 kmpl ARAI mileage.",
-      "features": ["Dual Channel ABS", "Bluetooth Connectivity", "TBT Navigation", "TPMS", "Anti-theft System", "Digital Meter", "Alloy Wheels", "Kick Start", "Self Start"],
+      "features": [
+        "Dual Channel ABS",
+        "Bluetooth Connectivity",
+        "TBT Navigation",
+        "TPMS",
+        "Anti-theft System",
+        "Digital Meter",
+        "Alloy Wheels",
+        "Kick Start",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Standard", "price": "₹1,21,837"}
+        {
+          "name": "Standard",
+          "price": "₹1,21,837"
+        }
       ],
       "colors": [
-        {"name": "Cocktail Wine Red", "hex": "#8B0000"},
-        {"name": "Pearl Metallic White", "hex": "#F5F5F0"},
-        {"name": "Ebony Black", "hex": "#1A1A1A"},
-        {"name": "Pewter Grey", "hex": "#6B6B6B"}
+        {
+          "name": "Cocktail Wine Red",
+          "hex": "#8B0000"
+        },
+        {
+          "name": "Pearl Metallic White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Ebony Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Pewter Grey",
+          "hex": "#6B6B6B"
+        }
       ],
       "technical_specifications": {
         "engine": "160.3 cc, Single Cylinder, BS6 Phase 2",
@@ -282,15 +483,36 @@
       "transmission": "5-Speed Manual",
       "source_section": "Available",
       "description": "The Bajaj Pulsar 220 F is a semi-faired sports bike with 220cc DTS-i oil-cooled engine, projector headlamp, dual-channel ABS, and aggressive styling for 136 kmph top speed.",
-      "features": ["Semi-Fairing", "Projector Headlamp", "Dual Channel ABS", "Alloy Wheels", "Self Start"],
+      "features": [
+        "Semi-Fairing",
+        "Projector Headlamp",
+        "Dual Channel ABS",
+        "Alloy Wheels",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Standard", "price": "₹1,29,924"}
+        {
+          "name": "Standard",
+          "price": "₹1,29,924"
+        }
       ],
       "colors": [
-        {"name": "Green Light Copper", "hex": "#2A5A2A"},
-        {"name": "Black Copper Beige", "hex": "#1A1A1A"},
-        {"name": "Black Ink Blue", "hex": "#1A1A5A"},
-        {"name": "Black Cherry Red", "hex": "#8B0000"}
+        {
+          "name": "Green Light Copper",
+          "hex": "#2A5A2A"
+        },
+        {
+          "name": "Black Copper Beige",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Black Ink Blue",
+          "hex": "#1A1A5A"
+        },
+        {
+          "name": "Black Cherry Red",
+          "hex": "#8B0000"
+        }
       ],
       "technical_specifications": {
         "engine": "220 cc, Single Cylinder, BS6 Phase 2",
@@ -317,13 +539,27 @@
       "transmission": "5-Speed Manual",
       "source_section": "Available",
       "description": "The Bajaj Avenger Cruise 220 is an affordable cruiser motorcycle with 220cc engine, spoke wheels, single-channel ABS, low 737mm seat height, and comfortable riding posture.",
-      "features": ["Single-Channel ABS", "Spoke Wheels", "Comfortable Cruiser Ergonomics", "Self Start"],
+      "features": [
+        "Single-Channel ABS",
+        "Spoke Wheels",
+        "Comfortable Cruiser Ergonomics",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Standard", "price": "₹1,26,620"}
+        {
+          "name": "Standard",
+          "price": "₹1,26,620"
+        }
       ],
       "colors": [
-        {"name": "Auburn Black", "hex": "#1A1A1A"},
-        {"name": "Moon White", "hex": "#F5F5F0"}
+        {
+          "name": "Auburn Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Moon White",
+          "hex": "#F5F5F0"
+        }
       ],
       "technical_specifications": {
         "engine": "220 cc, Single Cylinder, BS6 Phase 2",
@@ -350,16 +586,39 @@
       "transmission": "6-Speed Manual",
       "source_section": "Available",
       "description": "The Bajaj Pulsar NS200 is a naked streetfighter with 200cc engine, USD forks, dual-channel ABS, and excellent performance-to-price ratio.",
-      "features": ["USD Front Forks", "Dual Channel ABS", "Alloy Wheels", "Self Start"],
+      "features": [
+        "USD Front Forks",
+        "Dual Channel ABS",
+        "Alloy Wheels",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Standard", "price": "₹1,34,162"},
-        {"name": "Bluetooth", "price": "₹1,44,136"}
+        {
+          "name": "Standard",
+          "price": "₹1,34,162"
+        },
+        {
+          "name": "Bluetooth",
+          "price": "₹1,44,136"
+        }
       ],
       "colors": [
-        {"name": "Pewter Grey", "hex": "#6B6B6B"},
-        {"name": "Metallic Pearl White", "hex": "#F5F5F0"},
-        {"name": "Glossy Ebony Black", "hex": "#1A1A1A"},
-        {"name": "Cocktail Wine Red", "hex": "#8B0000"}
+        {
+          "name": "Pewter Grey",
+          "hex": "#6B6B6B"
+        },
+        {
+          "name": "Metallic Pearl White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Glossy Ebony Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Cocktail Wine Red",
+          "hex": "#8B0000"
+        }
       ],
       "technical_specifications": {
         "engine": "199.5 cc, Single Cylinder, BS6 Phase 2",
@@ -387,14 +646,31 @@
       "transmission": "6-Speed Manual",
       "source_section": "Available",
       "description": "The Bajaj Pulsar RS 200 is a fully-faired sports bike with 200cc engine, ABS, 6-speed gearbox, and 140.8 kmph top speed offering great value in the sports segment.",
-      "features": ["Full Fairing", "ABS", "Alloy Wheels", "Self Start"],
+      "features": [
+        "Full Fairing",
+        "ABS",
+        "Alloy Wheels",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Standard", "price": "₹1,72,857"}
+        {
+          "name": "Standard",
+          "price": "₹1,72,857"
+        }
       ],
       "colors": [
-        {"name": "Active Satin Black", "hex": "#1A1A1A"},
-        {"name": "Pearl Metallic White", "hex": "#F5F5F0"},
-        {"name": "Glossy Racing Red", "hex": "#CC2020"}
+        {
+          "name": "Active Satin Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Pearl Metallic White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Glossy Racing Red",
+          "hex": "#CC2020"
+        }
       ],
       "technical_specifications": {
         "engine": "199.5 cc, Single Cylinder, BS6 Phase 2",
@@ -421,14 +697,34 @@
       "transmission": "5-Speed Manual",
       "source_section": "Available",
       "description": "The Bajaj Pulsar N250 is a 250cc naked motorcycle with USD forks, 44 kmpl ARAI mileage, Bluetooth TBT navigation, slip and assist clutch, and LED projector headlight.",
-      "features": ["USD Front Forks", "Slip and Assist Clutch", "Bluetooth TBT Navigation", "LED Projector Headlight", "Dual Channel ABS", "Alloy Wheels", "Self Start"],
+      "features": [
+        "USD Front Forks",
+        "Slip and Assist Clutch",
+        "Bluetooth TBT Navigation",
+        "LED Projector Headlight",
+        "Dual Channel ABS",
+        "Alloy Wheels",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Standard", "price": "₹1,34,758"}
+        {
+          "name": "Standard",
+          "price": "₹1,34,758"
+        }
       ],
       "colors": [
-        {"name": "Pearl Metallic White", "hex": "#F5F5F0"},
-        {"name": "Brooklyn Black", "hex": "#2A2A2A"},
-        {"name": "Glossy Racing Red", "hex": "#CC2020"}
+        {
+          "name": "Pearl Metallic White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Brooklyn Black",
+          "hex": "#2A2A2A"
+        },
+        {
+          "name": "Glossy Racing Red",
+          "hex": "#CC2020"
+        }
       ],
       "technical_specifications": {
         "engine": "249 cc, Single Cylinder, BS6 Phase 2",
@@ -456,14 +752,31 @@
       "transmission": "6-Speed Manual",
       "source_section": "Available",
       "description": "The Bajaj Dominar 250 is a sport-touring motorcycle with 249cc liquid-cooled engine, dual-channel ABS, disc brakes, and 35 kmpl ARAI mileage.",
-      "features": ["Dual Channel ABS", "Disc Brakes", "Alloy Wheels", "Self Start"],
+      "features": [
+        "Dual Channel ABS",
+        "Disc Brakes",
+        "Alloy Wheels",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Standard", "price": "₹1,78,273"}
+        {
+          "name": "Standard",
+          "price": "₹1,78,273"
+        }
       ],
       "colors": [
-        {"name": "Citrus Rush", "hex": "#E8C200"},
-        {"name": "Sparkling Black", "hex": "#1A1A1A"},
-        {"name": "Racing Red", "hex": "#CC2020"}
+        {
+          "name": "Citrus Rush",
+          "hex": "#E8C200"
+        },
+        {
+          "name": "Sparkling Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Racing Red",
+          "hex": "#CC2020"
+        }
       ],
       "technical_specifications": {
         "engine": "248.8 cc, Single Cylinder, BS6 Phase 2B",
@@ -490,15 +803,37 @@
       "transmission": "6-Speed Manual",
       "source_section": "Available",
       "description": "The Bajaj Pulsar NS400Z is Bajaj's flagship naked motorcycle with 373cc engine, 42.41 bhp power, ABS, Apollo Alpha H1 tyres, sintered brake pads, and aggressive streetfighter styling.",
-      "features": ["ABS", "Disc Brakes", "Apollo Alpha H1 Tyres", "Sintered Brake Pads", "Alloy Wheels", "Self Start"],
+      "features": [
+        "ABS",
+        "Disc Brakes",
+        "Apollo Alpha H1 Tyres",
+        "Sintered Brake Pads",
+        "Alloy Wheels",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Standard", "price": "₹1,94,061"}
+        {
+          "name": "Standard",
+          "price": "₹1,94,061"
+        }
       ],
       "colors": [
-        {"name": "Pewter Grey", "hex": "#6B6B6B"},
-        {"name": "Pearl Metallic White", "hex": "#F5F5F0"},
-        {"name": "Glossy Racing Red", "hex": "#CC2020"},
-        {"name": "Brooklyn Black", "hex": "#2A2A2A"}
+        {
+          "name": "Pewter Grey",
+          "hex": "#6B6B6B"
+        },
+        {
+          "name": "Pearl Metallic White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Glossy Racing Red",
+          "hex": "#CC2020"
+        },
+        {
+          "name": "Brooklyn Black",
+          "hex": "#2A2A2A"
+        }
       ],
       "technical_specifications": {
         "engine": "373 cc, Single Cylinder, BS6 Phase 2B",
@@ -525,13 +860,30 @@
       "transmission": "6-Speed Manual",
       "source_section": "Available",
       "description": "The Bajaj Dominar 400 is a sport-tourer with 373cc liquid-cooled engine, slipper clutch, dual-channel ABS, and touring-ready accessories package including tall windscreen and luggage rack.",
-      "features": ["Slipper Clutch", "Dual Channel ABS", "Tall Windscreen", "Engine Sump Guard", "Luggage Rack", "Alloy Wheels", "Self Start"],
+      "features": [
+        "Slipper Clutch",
+        "Dual Channel ABS",
+        "Tall Windscreen",
+        "Engine Sump Guard",
+        "Luggage Rack",
+        "Alloy Wheels",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Standard", "price": "₹2,38,873"}
+        {
+          "name": "Standard",
+          "price": "₹2,38,873"
+        }
       ],
       "colors": [
-        {"name": "Charcoal Black", "hex": "#2A2A2A"},
-        {"name": "Aurora Green", "hex": "#2A5A2A"}
+        {
+          "name": "Charcoal Black",
+          "hex": "#2A2A2A"
+        },
+        {
+          "name": "Aurora Green",
+          "hex": "#2A5A2A"
+        }
       ],
       "technical_specifications": {
         "engine": "373.3 cc, Single Cylinder, BS6 Phase 2B",
@@ -552,27 +904,65 @@
       "engine_displacement": "125 cc",
       "mileage": "90 km/kg (CNG)",
       "max_power": "9.3 bhp",
-      "max_torque": "N/A",
+      "max_torque": "9.74 Nm @ 5000 rpm",
       "top_speed": "93 kmph",
       "fuel_type": "CNG + Petrol (Dual Fuel)",
       "transmission": "5-Speed Manual",
       "source_section": "Available",
       "description": "The Bajaj Freedom 125 is the world's first CNG motorcycle with dual-fuel capability. 2 kg CNG tank plus 2L petrol reserve offering 330 km combined range and 90 km/kg CNG efficiency.",
-      "features": ["CNG + Petrol Dual Fuel", "Self Start", "Alloy Wheels", "330 km Combined Range"],
+      "features": [
+        "CNG + Petrol Dual Fuel",
+        "Self Start",
+        "Alloy Wheels",
+        "330 km Combined Range"
+      ],
       "variants": [
-        {"name": "Drum", "price": "₹91,790"},
-        {"name": "Drum LED", "price": "₹95,000"},
-        {"name": "Disc", "price": "₹1,02,000"},
-        {"name": "Disc LED", "price": "₹1,07,849"}
+        {
+          "name": "Drum",
+          "price": "₹91,790"
+        },
+        {
+          "name": "Drum LED",
+          "price": "₹95,000"
+        },
+        {
+          "name": "Disc",
+          "price": "₹1,02,000"
+        },
+        {
+          "name": "Disc LED",
+          "price": "₹1,07,849"
+        }
       ],
       "colors": [
-        {"name": "Cyber White", "hex": "#F5F5F0"},
-        {"name": "Racing Red", "hex": "#CC2020"},
-        {"name": "Pewter Grey-Black", "hex": "#6B6B6B"},
-        {"name": "Ebony Black-Grey", "hex": "#1A1A1A"},
-        {"name": "Caribbean Blue", "hex": "#2A7A7A"},
-        {"name": "Ebony Black-Red", "hex": "#8B0000"},
-        {"name": "Pewter Grey-Yellow", "hex": "#9ABB00"}
+        {
+          "name": "Cyber White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Racing Red",
+          "hex": "#CC2020"
+        },
+        {
+          "name": "Pewter Grey-Black",
+          "hex": "#6B6B6B"
+        },
+        {
+          "name": "Ebony Black-Grey",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Caribbean Blue",
+          "hex": "#2A7A7A"
+        },
+        {
+          "name": "Ebony Black-Red",
+          "hex": "#8B0000"
+        },
+        {
+          "name": "Pewter Grey-Yellow",
+          "hex": "#9ABB00"
+        }
       ],
       "technical_specifications": {
         "engine": "125 cc, Single Cylinder, BS6 Phase 2",
@@ -593,29 +983,76 @@
       "engine_displacement": "N/A",
       "mileage": "127 km (range)",
       "max_power": "3.1 kW",
-      "max_torque": "N/A",
+      "max_torque": "16 Nm",
       "top_speed": "63 kmph",
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Bajaj Chetak is an iconic retro-styled electric scooter with 127 km range, reverse mode, TFT display, USB charging, premium metal body, and 35L under-seat storage.",
-      "features": ["Reverse Mode", "TFT Display", "USB Charging Port", "LED Lighting", "Hill-Hold", "Premium Metal Body", "35L Under-seat Storage"],
+      "features": [
+        "Reverse Mode",
+        "TFT Display",
+        "USB Charging Port",
+        "LED Lighting",
+        "Hill-Hold",
+        "Premium Metal Body",
+        "35L Under-seat Storage"
+      ],
       "variants": [
-        {"name": "2801", "price": "₹1,07,533"},
-        {"name": "3501", "price": "₹1,17,000"},
-        {"name": "3502", "price": "₹1,28,000"},
-        {"name": "3503", "price": "₹1,39,603"}
+        {
+          "name": "2801",
+          "price": "₹1,07,533"
+        },
+        {
+          "name": "3501",
+          "price": "₹1,17,000"
+        },
+        {
+          "name": "3502",
+          "price": "₹1,28,000"
+        },
+        {
+          "name": "3503",
+          "price": "₹1,39,603"
+        }
       ],
       "colors": [
-        {"name": "Scarlet Red", "hex": "#CC2020"},
-        {"name": "Indigo Metallic", "hex": "#1A2A5A"},
-        {"name": "Hazel Nut", "hex": "#7A5A3A"},
-        {"name": "Pista Green", "hex": "#5A8A5A"},
-        {"name": "Brooklyn Black", "hex": "#2A2A2A"},
-        {"name": "Cyber White", "hex": "#F5F5F0"},
-        {"name": "Matte Coarse Grey", "hex": "#6B6B6B"},
-        {"name": "Lime Yellow", "hex": "#E8C200"},
-        {"name": "Azure Blue", "hex": "#1A4A8B"}
+        {
+          "name": "Scarlet Red",
+          "hex": "#CC2020"
+        },
+        {
+          "name": "Indigo Metallic",
+          "hex": "#1A2A5A"
+        },
+        {
+          "name": "Hazel Nut",
+          "hex": "#7A5A3A"
+        },
+        {
+          "name": "Pista Green",
+          "hex": "#5A8A5A"
+        },
+        {
+          "name": "Brooklyn Black",
+          "hex": "#2A2A2A"
+        },
+        {
+          "name": "Cyber White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Matte Coarse Grey",
+          "hex": "#6B6B6B"
+        },
+        {
+          "name": "Lime Yellow",
+          "hex": "#E8C200"
+        },
+        {
+          "name": "Azure Blue",
+          "hex": "#1A4A8B"
+        }
       ],
       "technical_specifications": {
         "engine": "Electric Motor, 3.1 kW",
@@ -636,23 +1073,49 @@
       "engine_displacement": "N/A",
       "mileage": "113 km (range)",
       "max_power": "1.8 kW",
-      "max_torque": "N/A",
+      "max_torque": "16 Nm",
       "top_speed": "55 kmph",
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Bajaj Chetak C25 is an entry-level electric scooter with 113 km range, disc brake, 3.45-hour charging time, USB charging port, and lightweight 108 kg build.",
-      "features": ["Disc Brake", "USB Charging Port", "Combined Braking System", "Self Start"],
+      "features": [
+        "Disc Brake",
+        "USB Charging Port",
+        "Combined Braking System",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Standard", "price": "₹96,424"}
+        {
+          "name": "Standard",
+          "price": "₹96,424"
+        }
       ],
       "colors": [
-        {"name": "Misty Yellow", "hex": "#E8C200"},
-        {"name": "Opalescent Silver", "hex": "#C8C8C8"},
-        {"name": "Active Black", "hex": "#1A1A1A"},
-        {"name": "Racing Red", "hex": "#CC2020"},
-        {"name": "Classic White", "hex": "#F5F5F0"},
-        {"name": "Ocean Teal", "hex": "#2A7A7A"}
+        {
+          "name": "Misty Yellow",
+          "hex": "#E8C200"
+        },
+        {
+          "name": "Opalescent Silver",
+          "hex": "#C8C8C8"
+        },
+        {
+          "name": "Active Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Racing Red",
+          "hex": "#CC2020"
+        },
+        {
+          "name": "Classic White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Ocean Teal",
+          "hex": "#2A7A7A"
+        }
       ],
       "technical_specifications": {
         "engine": "Electric Motor, 1.8 kW",

@@ -19,18 +19,52 @@
       "transmission": "6-Speed Manual",
       "source_section": "Available",
       "description": "The BMW G310 RR is a 312cc fully-faired supersport with 33.5 bhp, TFT display, multiple riding modes, gold USD forks, twin LED headlights, and 174kg weight. Available in 3 variants from ₹2,84,995 to ₹2,99,000.",
-      "features": ["312cc Single Engine", "Liquid Cooled", "ABS", "TFT Display", "Multiple Riding Modes", "Gold USD Forks", "Twin LED Headlights", "Self Start", "BS6 Phase 2"],
+      "features": [
+        "312cc Single Engine",
+        "Liquid Cooled",
+        "ABS",
+        "TFT Display",
+        "Multiple Riding Modes",
+        "Gold USD Forks",
+        "Twin LED Headlights",
+        "Self Start",
+        "BS6 Phase 2"
+      ],
       "variants": [
-        {"name": "G310 RR Standard", "price": "₹2,84,995"},
-        {"name": "G310 RR Urban GS Edition", "price": "₹2,92,000"},
-        {"name": "G310 RR LE", "price": "₹2,99,000"}
+        {
+          "name": "G310 RR Standard",
+          "price": "₹2,84,995"
+        },
+        {
+          "name": "G310 RR Urban GS Edition",
+          "price": "₹2,92,000"
+        },
+        {
+          "name": "G310 RR LE",
+          "price": "₹2,99,000"
+        }
       ],
       "colors": [
-        {"name": "Racing Blue Metallic", "hex": "#1A4A8B"},
-        {"name": "Cosmic Black 2", "hex": "#1A1A1A"},
-        {"name": "Light White/Racing Blue", "hex": "#F5F5F0"},
-        {"name": "Polar White LE", "hex": "#F5F5F0"},
-        {"name": "Cosmic Black LE", "hex": "#1A1A1A"}
+        {
+          "name": "Racing Blue Metallic",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Cosmic Black 2",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Light White/Racing Blue",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Polar White LE",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Cosmic Black LE",
+          "hex": "#1A1A1A"
+        }
       ],
       "technical_specifications": {
         "engine": "312 cc, Single Cylinder, Liquid Cooled",
@@ -53,19 +87,36 @@
       "engine_displacement": "N/A",
       "mileage": "108 km (range)",
       "max_power": "11 kW",
-      "max_torque": "N/A",
+      "max_torque": "55 Nm",
       "top_speed": "95 kmph",
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The BMW CE 02 is a 11kW electric urban scooter with 108km range, 95kmph top speed, reverse gear, ABS, 5.12hr charging, 142kg weight, and 745mm seat height at ₹4,49,900.",
-      "features": ["11kW Electric Motor", "108km Range", "ABS", "Reverse Gear", "USB Charging", "Disc Brakes", "Modern Design"],
+      "features": [
+        "11kW Electric Motor",
+        "108km Range",
+        "ABS",
+        "Reverse Gear",
+        "USB Charging",
+        "Disc Brakes",
+        "Modern Design"
+      ],
       "variants": [
-        {"name": "CE 02 Standard", "price": "₹4,49,900"}
+        {
+          "name": "CE 02 Standard",
+          "price": "₹4,49,900"
+        }
       ],
       "colors": [
-        {"name": "Cosmic Black Two", "hex": "#1A1A1A"},
-        {"name": "Cosmic Black", "hex": "#1A1A1A"}
+        {
+          "name": "Cosmic Black Two",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Cosmic Black",
+          "hex": "#1A1A1A"
+        }
       ],
       "technical_specifications": {
         "motor": "Electric Motor",
@@ -94,12 +145,28 @@
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The BMW C 400 GT is a 350cc premium maxi-scooter with 33.5 bhp, automatic transmission, ABS, USB charging, 12.8L tank, 214kg weight, wind protection, and spacious storage at ₹10,98,979.",
-      "features": ["350cc Single Engine", "Liquid Cooled", "Automatic Transmission", "ABS", "USB Charging", "Large Storage", "Wind Protection", "Self Start", "BS6 Phase 2"],
+      "features": [
+        "350cc Single Engine",
+        "Liquid Cooled",
+        "Automatic Transmission",
+        "ABS",
+        "USB Charging",
+        "Large Storage",
+        "Wind Protection",
+        "Self Start",
+        "BS6 Phase 2"
+      ],
       "variants": [
-        {"name": "C 400 GT Standard", "price": "₹10,98,979"}
+        {
+          "name": "C 400 GT Standard",
+          "price": "₹10,98,979"
+        }
       ],
       "colors": [
-        {"name": "Diamond White Metallic", "hex": "#F0F0F5"}
+        {
+          "name": "Diamond White Metallic",
+          "hex": "#F0F0F5"
+        }
       ],
       "technical_specifications": {
         "engine": "350 cc, Single Cylinder, Liquid Cooled",
@@ -122,18 +189,32 @@
       "engine_displacement": "N/A",
       "mileage": "130 km (range)",
       "max_power": "31 kW",
-      "max_torque": "N/A",
+      "max_torque": "62 Nm",
       "top_speed": "120 kmph",
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The BMW CE 04 is a 31kW (max) electric premium maxi-scooter with 130km range, 120kmph top speed, 4.2hr charging, 231kg weight, 780mm seat, and exclusive Avantgarde styling at ₹15,25,000.",
-      "features": ["31kW Max Electric Motor", "130km Range", "ABS", "USB Charging", "Disc Brakes", "Premium Design", "Automatic Transmission"],
+      "features": [
+        "31kW Max Electric Motor",
+        "130km Range",
+        "ABS",
+        "USB Charging",
+        "Disc Brakes",
+        "Premium Design",
+        "Automatic Transmission"
+      ],
       "variants": [
-        {"name": "CE 04 Standard", "price": "₹15,25,000"}
+        {
+          "name": "CE 04 Standard",
+          "price": "₹15,25,000"
+        }
       ],
       "colors": [
-        {"name": "Avantgarde", "hex": "#2A3A4A"}
+        {
+          "name": "Avantgarde",
+          "hex": "#2A3A4A"
+        }
       ],
       "technical_specifications": {
         "motor": "Electric Motor",
@@ -162,13 +243,31 @@
       "transmission": "6-Speed Manual",
       "source_section": "Available",
       "description": "The BMW F 900 GS is a 895cc mid-size adventure bike with 103.25 bhp, spoke wheels, 14.5L tank, 219kg weight, 870mm seat height, and reduced weight vs previous models at ₹15,49,915.",
-      "features": ["895cc Parallel-Twin Engine", "Liquid Cooled", "ABS", "Spoke Wheels", "Adventure Ergonomics", "Disc Brakes", "Self Start", "BS6 Phase 2"],
+      "features": [
+        "895cc Parallel-Twin Engine",
+        "Liquid Cooled",
+        "ABS",
+        "Spoke Wheels",
+        "Adventure Ergonomics",
+        "Disc Brakes",
+        "Self Start",
+        "BS6 Phase 2"
+      ],
       "variants": [
-        {"name": "F 900 GS Standard", "price": "₹15,49,915"}
+        {
+          "name": "F 900 GS Standard",
+          "price": "₹15,49,915"
+        }
       ],
       "colors": [
-        {"name": "GS Trophy", "hex": "#2D6A4F"},
-        {"name": "Passion", "hex": "#CC0000"}
+        {
+          "name": "GS Trophy",
+          "hex": "#2D6A4F"
+        },
+        {
+          "name": "Passion",
+          "hex": "#CC0000"
+        }
       ],
       "technical_specifications": {
         "engine": "895 cc, Parallel-Twin, Liquid Cooled",
@@ -197,14 +296,36 @@
       "transmission": "6-Speed Manual",
       "source_section": "Available",
       "description": "The BMW F 900 GS Adventure is a 895cc long-range adventure bike with 103.25 bhp, massive 23L tank, spoke wheels, 209kg weight, 875mm seat, and 2 variants from ₹16,99,888 to ₹17,49,858.",
-      "features": ["895cc Parallel-Twin Engine", "Liquid Cooled", "ABS", "Spoke Wheels", "23L Fuel Tank", "Adventure Ergonomics", "Off-Road Capable", "Self Start", "BS6 Phase 2"],
+      "features": [
+        "895cc Parallel-Twin Engine",
+        "Liquid Cooled",
+        "ABS",
+        "Spoke Wheels",
+        "23L Fuel Tank",
+        "Adventure Ergonomics",
+        "Off-Road Capable",
+        "Self Start",
+        "BS6 Phase 2"
+      ],
       "variants": [
-        {"name": "F 900 GS Adventure Standard", "price": "₹16,99,888"},
-        {"name": "F 900 GS Adventure Pro", "price": "₹17,49,858"}
+        {
+          "name": "F 900 GS Adventure Standard",
+          "price": "₹16,99,888"
+        },
+        {
+          "name": "F 900 GS Adventure Pro",
+          "price": "₹17,49,858"
+        }
       ],
       "colors": [
-        {"name": "Blackstorm Metallic", "hex": "#1A1A1A"},
-        {"name": "Ride Pro", "hex": "#5A5A5A"}
+        {
+          "name": "Blackstorm Metallic",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Ride Pro",
+          "hex": "#5A5A5A"
+        }
       ],
       "technical_specifications": {
         "engine": "895 cc, Parallel-Twin, Liquid Cooled",
@@ -233,14 +354,35 @@
       "transmission": "6-Speed Manual",
       "source_section": "Available",
       "description": "The BMW S 1000 R is a 999cc powerful naked streetfighter with 167.6 bhp, comfort ergonomics, top electronics, 16.5L tank, and 199kg weight. Available in 3 colors at ₹21,74,938.",
-      "features": ["999cc Inline-4 Engine", "Liquid Cooled", "ABS", "Loaded Electronics", "Comfortable Ergonomics", "Disc Brakes", "Self Start", "BS6 Phase 2"],
+      "features": [
+        "999cc Inline-4 Engine",
+        "Liquid Cooled",
+        "ABS",
+        "Loaded Electronics",
+        "Comfortable Ergonomics",
+        "Disc Brakes",
+        "Self Start",
+        "BS6 Phase 2"
+      ],
       "variants": [
-        {"name": "S 1000 R Standard", "price": "₹21,74,938"}
+        {
+          "name": "S 1000 R Standard",
+          "price": "₹21,74,938"
+        }
       ],
       "colors": [
-        {"name": "Bluefire/Mugiallo Yellow", "hex": "#1A4A8B"},
-        {"name": "Light White/M Motorsport", "hex": "#F5F5F0"},
-        {"name": "Blackstorm Metallic", "hex": "#1A1A1A"}
+        {
+          "name": "Bluefire/Mugiallo Yellow",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Light White/M Motorsport",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Blackstorm Metallic",
+          "hex": "#1A1A1A"
+        }
       ],
       "technical_specifications": {
         "engine": "999 cc, Inline-4, Liquid Cooled",
@@ -269,12 +411,28 @@
       "transmission": "6-Speed Manual",
       "source_section": "Available",
       "description": "The BMW R 12 is a 1170cc boxer-twin cruiser with 93.7 bhp, plenty of low-end torque, top electronics, 14L tank, 227kg weight, and 754mm low seat height at ₹21,74,965.",
-      "features": ["1170cc Boxer-Twin Engine", "Air/Oil Cooled", "ABS", "Top-Spec Electronics", "Cruiser Styling", "Low Seat Height", "Disc Brakes", "Self Start", "BS6 Phase 2"],
+      "features": [
+        "1170cc Boxer-Twin Engine",
+        "Air/Oil Cooled",
+        "ABS",
+        "Top-Spec Electronics",
+        "Cruiser Styling",
+        "Low Seat Height",
+        "Disc Brakes",
+        "Self Start",
+        "BS6 Phase 2"
+      ],
       "variants": [
-        {"name": "R 12 Standard", "price": "₹21,74,965"}
+        {
+          "name": "R 12 Standard",
+          "price": "₹21,74,965"
+        }
       ],
       "colors": [
-        {"name": "Blackstorm Metallic", "hex": "#1A1A1A"}
+        {
+          "name": "Blackstorm Metallic",
+          "hex": "#1A1A1A"
+        }
       ],
       "technical_specifications": {
         "engine": "1170 cc, Boxer-Twin, Air/Oil Cooled",
@@ -303,12 +461,27 @@
       "transmission": "6-Speed Manual",
       "source_section": "Available",
       "description": "The BMW R 12 nine T is a 1170cc neo-retro boxer-twin with 107.5 bhp, aspirational styling, top electronics, 16L tank, 220kg weight, and 795mm seat height at ₹22,74,974.",
-      "features": ["1170cc Boxer-Twin Engine", "Air/Oil Cooled", "ABS", "Top-Spec Electronics", "Neo-Retro Styling", "Disc Brakes", "Self Start", "BS6 Phase 2"],
+      "features": [
+        "1170cc Boxer-Twin Engine",
+        "Air/Oil Cooled",
+        "ABS",
+        "Top-Spec Electronics",
+        "Neo-Retro Styling",
+        "Disc Brakes",
+        "Self Start",
+        "BS6 Phase 2"
+      ],
       "variants": [
-        {"name": "R 12 nine T Standard", "price": "₹22,74,974"}
+        {
+          "name": "R 12 nine T Standard",
+          "price": "₹22,74,974"
+        }
       ],
       "colors": [
-        {"name": "Blackstorm Metallic", "hex": "#1A1A1A"}
+        {
+          "name": "Blackstorm Metallic",
+          "hex": "#1A1A1A"
+        }
       ],
       "technical_specifications": {
         "engine": "1170 cc, Boxer-Twin, Air/Oil Cooled",
@@ -337,14 +510,35 @@
       "transmission": "6-Speed Manual",
       "source_section": "Available",
       "description": "The BMW R 1300 GS is the 1300cc flagship boxer adventure bike with 145 bhp, more power/torque and lighter weight than previous generation, 19L tank, 237kg weight, 850mm seat. Available in 2 variants from ₹23,24,923 to ₹26,50,923.",
-      "features": ["1300cc Boxer-Twin Engine", "Liquid Cooled", "ABS", "Adventure Electronics", "Aggressive Styling", "19L Fuel Tank", "Self Start", "BS6 Phase 2"],
+      "features": [
+        "1300cc Boxer-Twin Engine",
+        "Liquid Cooled",
+        "ABS",
+        "Adventure Electronics",
+        "Aggressive Styling",
+        "19L Fuel Tank",
+        "Self Start",
+        "BS6 Phase 2"
+      ],
       "variants": [
-        {"name": "R 1300 GS Standard", "price": "₹23,24,923"},
-        {"name": "R 1300 GS Triple Black", "price": "₹26,50,923"}
+        {
+          "name": "R 1300 GS Standard",
+          "price": "₹23,24,923"
+        },
+        {
+          "name": "R 1300 GS Triple Black",
+          "price": "₹26,50,923"
+        }
       ],
       "colors": [
-        {"name": "Light White/Light Gray", "hex": "#F5F5F0"},
-        {"name": "Aurelius Green Metallic", "hex": "#4A7A4A"}
+        {
+          "name": "Light White/Light Gray",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Aurelius Green Metallic",
+          "hex": "#4A7A4A"
+        }
       ],
       "technical_specifications": {
         "engine": "1300 cc, Boxer-Twin, Liquid Cooled",
@@ -373,16 +567,43 @@
       "transmission": "6-Speed Manual",
       "source_section": "Available",
       "description": "The BMW S1000RR is a 999cc inline-4 superbike with 206.51 bhp, razor-sharp handling, advanced electronics, 16.5L tank, 197kg weight, 824mm seat, and 3 variants from ₹23,24,936 to ₹28,89,862.",
-      "features": ["999cc Inline-4 Engine", "Liquid Cooled", "ABS", "Advanced Electronics", "Race Track Capable", "Disc Brakes", "Self Start", "BS6 Phase 2"],
+      "features": [
+        "999cc Inline-4 Engine",
+        "Liquid Cooled",
+        "ABS",
+        "Advanced Electronics",
+        "Race Track Capable",
+        "Disc Brakes",
+        "Self Start",
+        "BS6 Phase 2"
+      ],
       "variants": [
-        {"name": "S1000RR Standard", "price": "₹23,24,936"},
-        {"name": "S1000RR M Sport", "price": "₹26,00,000"},
-        {"name": "S1000RR M Package", "price": "₹28,89,862"}
+        {
+          "name": "S1000RR Standard",
+          "price": "₹23,24,936"
+        },
+        {
+          "name": "S1000RR M Sport",
+          "price": "₹26,00,000"
+        },
+        {
+          "name": "S1000RR M Package",
+          "price": "₹28,89,862"
+        }
       ],
       "colors": [
-        {"name": "Sport", "hex": "#CC0000"},
-        {"name": "Blackstorm Metallic", "hex": "#1A1A1A"},
-        {"name": "Light White/M Motorsport", "hex": "#F5F5F0"}
+        {
+          "name": "Sport",
+          "hex": "#CC0000"
+        },
+        {
+          "name": "Blackstorm Metallic",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Light White/M Motorsport",
+          "hex": "#F5F5F0"
+        }
       ],
       "technical_specifications": {
         "engine": "999 cc, Inline-4, Liquid Cooled",
@@ -411,14 +632,35 @@
       "transmission": "6-Speed Manual",
       "source_section": "Available",
       "description": "The BMW S 1000 XR is a 999cc sport-adventure with 167.62 bhp, excellent handling, extensive electronics, 20L tank, 227kg weight, 850mm seat. Available in 3 colors at ₹24,53,000.",
-      "features": ["999cc Inline-4 Engine", "Liquid Cooled", "ABS", "Extensive Electronics", "Sport-Adventure Ergonomics", "20L Fuel Tank", "Self Start", "BS6 Phase 2"],
+      "features": [
+        "999cc Inline-4 Engine",
+        "Liquid Cooled",
+        "ABS",
+        "Extensive Electronics",
+        "Sport-Adventure Ergonomics",
+        "20L Fuel Tank",
+        "Self Start",
+        "BS6 Phase 2"
+      ],
       "variants": [
-        {"name": "S 1000 XR Standard", "price": "₹24,53,000"}
+        {
+          "name": "S 1000 XR Standard",
+          "price": "₹24,53,000"
+        }
       ],
       "colors": [
-        {"name": "Light White/M Motorsport", "hex": "#F5F5F0"},
-        {"name": "Gravity Blue Metallic", "hex": "#1A4A8B"},
-        {"name": "Blackstorm Metallic 2", "hex": "#1A1A1A"}
+        {
+          "name": "Light White/M Motorsport",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Gravity Blue Metallic",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Blackstorm Metallic 2",
+          "hex": "#1A1A1A"
+        }
       ],
       "technical_specifications": {
         "engine": "999 cc, Inline-4, Liquid Cooled",
@@ -447,18 +689,52 @@
       "transmission": "6-Speed Manual",
       "source_section": "Available",
       "description": "The BMW R 1300 GS Adventure is a 1300cc flagship long-range adventure with 143.4 bhp, massive 30L tank, TFT display, adaptive headlight, top electronics, 269kg weight. Available in 4 variants from ₹25,74,896 to ₹29,29,893.",
-      "features": ["1300cc Boxer-Twin Engine", "Liquid Cooled", "ABS", "30L Fuel Tank", "TFT Display", "Adaptive Headlight", "Top-End Electronics", "Self Start", "BS6 Phase 2"],
+      "features": [
+        "1300cc Boxer-Twin Engine",
+        "Liquid Cooled",
+        "ABS",
+        "30L Fuel Tank",
+        "TFT Display",
+        "Adaptive Headlight",
+        "Top-End Electronics",
+        "Self Start",
+        "BS6 Phase 2"
+      ],
       "variants": [
-        {"name": "R 1300 GS Adventure Standard", "price": "₹25,74,896"},
-        {"name": "R 1300 GS Adventure Option 719", "price": "₹27,00,000"},
-        {"name": "R 1300 GS Adventure Style HP", "price": "₹28,00,000"},
-        {"name": "R 1300 GS Adventure Triple Black", "price": "₹29,29,893"}
+        {
+          "name": "R 1300 GS Adventure Standard",
+          "price": "₹25,74,896"
+        },
+        {
+          "name": "R 1300 GS Adventure Option 719",
+          "price": "₹27,00,000"
+        },
+        {
+          "name": "R 1300 GS Adventure Style HP",
+          "price": "₹28,00,000"
+        },
+        {
+          "name": "R 1300 GS Adventure Triple Black",
+          "price": "₹29,29,893"
+        }
       ],
       "colors": [
-        {"name": "Racing Red", "hex": "#CC0000"},
-        {"name": "Triple Black", "hex": "#1A1A1A"},
-        {"name": "Racing Blue Metallic", "hex": "#1A4A8B"},
-        {"name": "Black and Grey with Gold", "hex": "#2A2A2A"}
+        {
+          "name": "Racing Red",
+          "hex": "#CC0000"
+        },
+        {
+          "name": "Triple Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Racing Blue Metallic",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Black and Grey with Gold",
+          "hex": "#2A2A2A"
+        }
       ],
       "technical_specifications": {
         "engine": "1300 cc, Boxer-Twin, Liquid Cooled",
@@ -487,13 +763,31 @@
       "transmission": "6-Speed Manual",
       "source_section": "Available",
       "description": "The BMW R 1250 RT is a 1254cc premium touring motorcycle with 136 bhp, extensive electronics, plentiful storage, and top-spec touring comfort at ₹26,66,000.",
-      "features": ["1254cc Boxer-Twin Engine", "Liquid Cooled", "ABS", "Premium Touring Ergonomics", "Extensive Storage", "Top-Spec Electronics", "Self Start", "BS6 Phase 2"],
+      "features": [
+        "1254cc Boxer-Twin Engine",
+        "Liquid Cooled",
+        "ABS",
+        "Premium Touring Ergonomics",
+        "Extensive Storage",
+        "Top-Spec Electronics",
+        "Self Start",
+        "BS6 Phase 2"
+      ],
       "variants": [
-        {"name": "R 1250 RT Standard", "price": "₹26,66,000"}
+        {
+          "name": "R 1250 RT Standard",
+          "price": "₹26,66,000"
+        }
       ],
       "colors": [
-        {"name": "Light White", "hex": "#F5F5F0"},
-        {"name": "Blackstorm Metallic", "hex": "#1A1A1A"}
+        {
+          "name": "Light White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Blackstorm Metallic",
+          "hex": "#1A1A1A"
+        }
       ],
       "technical_specifications": {
         "engine": "1254 cc, Boxer-Twin, Liquid Cooled",
@@ -522,14 +816,36 @@
       "transmission": "6-Speed Manual",
       "source_section": "Available",
       "description": "The BMW M 1000 R is a 999cc hyper-naked M Series with 206.5 bhp, updated aero package, fully adjustable Showa suspension, aggressive styling, 16.5L tank, 210kg weight at ₹33,50,000.",
-      "features": ["999cc Inline-4 Engine", "Liquid Cooled", "M Series", "ABS", "Aero Package", "Fully Adjustable Showa Suspension", "Race Track Capable", "Self Start", "BS6 Phase 2B"],
+      "features": [
+        "999cc Inline-4 Engine",
+        "Liquid Cooled",
+        "M Series",
+        "ABS",
+        "Aero Package",
+        "Fully Adjustable Showa Suspension",
+        "Race Track Capable",
+        "Self Start",
+        "BS6 Phase 2B"
+      ],
       "variants": [
-        {"name": "M 1000 R Standard", "price": "₹33,50,000"}
+        {
+          "name": "M 1000 R Standard",
+          "price": "₹33,50,000"
+        }
       ],
       "colors": [
-        {"name": "Blackstorm Metallic", "hex": "#1A1A1A"},
-        {"name": "White Aluminium Metallic Matt", "hex": "#D0D0D0"},
-        {"name": "Light White", "hex": "#F5F5F0"}
+        {
+          "name": "Blackstorm Metallic",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "White Aluminium Metallic Matt",
+          "hex": "#D0D0D0"
+        },
+        {
+          "name": "Light White",
+          "hex": "#F5F5F0"
+        }
       ],
       "technical_specifications": {
         "engine": "999 cc, Inline-4, Liquid Cooled",
@@ -558,16 +874,44 @@
       "transmission": "6-Speed Manual",
       "source_section": "Available",
       "description": "The BMW R18 is a 1802cc flagship cruiser with BMW's largest production boxer, massive 158 Nm torque, 24L tank, 427kg weight, 740mm low seat, and 5 color options at ₹34,72,855.",
-      "features": ["1802cc Boxer-Twin Engine", "Air Cooled", "World's Largest BMW Boxer", "ABS", "Cruiser Styling", "24L Fuel Tank", "Low Seat Height", "Self Start", "BS6 Phase 2"],
+      "features": [
+        "1802cc Boxer-Twin Engine",
+        "Air Cooled",
+        "World's Largest BMW Boxer",
+        "ABS",
+        "Cruiser Styling",
+        "24L Fuel Tank",
+        "Low Seat Height",
+        "Self Start",
+        "BS6 Phase 2"
+      ],
       "variants": [
-        {"name": "R18 Standard", "price": "₹34,72,855"}
+        {
+          "name": "R18 Standard",
+          "price": "₹34,72,855"
+        }
       ],
       "colors": [
-        {"name": "Manhattan Metallic Matt", "hex": "#5A5A5A"},
-        {"name": "Galaxy Dust Metallic/Titan Silver", "hex": "#C0C0C0"},
-        {"name": "Black Storm Metallic Transcontinental", "hex": "#1A1A1A"},
-        {"name": "Gravity Blue Metallic", "hex": "#1A4A8B"},
-        {"name": "Mineral White Metallic", "hex": "#F0F0E8"}
+        {
+          "name": "Manhattan Metallic Matt",
+          "hex": "#5A5A5A"
+        },
+        {
+          "name": "Galaxy Dust Metallic/Titan Silver",
+          "hex": "#C0C0C0"
+        },
+        {
+          "name": "Black Storm Metallic Transcontinental",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Gravity Blue Metallic",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Mineral White Metallic",
+          "hex": "#F0F0E8"
+        }
       ],
       "technical_specifications": {
         "engine": "1802 cc, Boxer-Twin, Air Cooled",
@@ -596,16 +940,43 @@
       "transmission": "6-Speed Manual",
       "source_section": "Available",
       "description": "The BMW K 1600 is a 1649cc premium grand tourer with 158 bhp, 26.5L tank, 344kg weight, 750mm seat, extensive storage, and loaded with touring-oriented features. Available in 2 variants from ₹37,49,261 to ₹37,49,755.",
-      "features": ["1649cc Inline-6 Engine", "Liquid Cooled", "ABS", "Grand Touring", "Extensive Storage", "Loaded Touring Features", "Self Start", "BS6 Phase 2"],
+      "features": [
+        "1649cc Inline-6 Engine",
+        "Liquid Cooled",
+        "ABS",
+        "Grand Touring",
+        "Extensive Storage",
+        "Loaded Touring Features",
+        "Self Start",
+        "BS6 Phase 2"
+      ],
       "variants": [
-        {"name": "K 1600 B", "price": "₹37,49,261"},
-        {"name": "K 1600 GTL", "price": "₹37,49,755"}
+        {
+          "name": "K 1600 B",
+          "price": "₹37,49,261"
+        },
+        {
+          "name": "K 1600 GTL",
+          "price": "₹37,49,755"
+        }
       ],
       "colors": [
-        {"name": "Blackstorm Metallic", "hex": "#1A1A1A"},
-        {"name": "Style Exclusive", "hex": "#C0C0C0"},
-        {"name": "Blackstorm Metallic GTL", "hex": "#1A1A1A"},
-        {"name": "Style Exclusive GTL", "hex": "#C0C0C0"}
+        {
+          "name": "Blackstorm Metallic",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Style Exclusive",
+          "hex": "#C0C0C0"
+        },
+        {
+          "name": "Blackstorm Metallic GTL",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Style Exclusive GTL",
+          "hex": "#C0C0C0"
+        }
       ],
       "technical_specifications": {
         "engine": "1649 cc, Inline-6, Liquid Cooled",
@@ -634,12 +1005,28 @@
       "transmission": "6-Speed Manual",
       "source_section": "Available",
       "description": "The BMW M 1000 XR is the flagship 999cc M Series sport-adventure with 201 bhp, Dynamic Traction Control, Dynamic Brake Control, Dynamic Electronic Suspension, 20L tank, 223kg weight. The most expensive BMW Motorrad in India at ₹48,63,000.",
-      "features": ["999cc Inline-4 Engine", "Liquid Cooled", "M Series", "Dynamic Traction Control", "Dynamic Brake Control", "Dynamic Electronic Suspension", "ABS", "Self Start", "BS6 Phase 2"],
+      "features": [
+        "999cc Inline-4 Engine",
+        "Liquid Cooled",
+        "M Series",
+        "Dynamic Traction Control",
+        "Dynamic Brake Control",
+        "Dynamic Electronic Suspension",
+        "ABS",
+        "Self Start",
+        "BS6 Phase 2"
+      ],
       "variants": [
-        {"name": "M 1000 XR Standard", "price": "₹48,63,000"}
+        {
+          "name": "M 1000 XR Standard",
+          "price": "₹48,63,000"
+        }
       ],
       "colors": [
-        {"name": "Light Blue, Dark Blue and Red", "hex": "#1A4A8B"}
+        {
+          "name": "Light Blue, Dark Blue and Red",
+          "hex": "#1A4A8B"
+        }
       ],
       "technical_specifications": {
         "engine": "999 cc, Inline-4, Liquid Cooled",
@@ -661,8 +1048,8 @@
       "price": "₹4,25,000",
       "engine_displacement": "N/A",
       "mileage": "N/A",
-      "max_power": "N/A",
-      "max_torque": "N/A",
+      "max_power": "50 bhp @ 8500 rpm",
+      "max_torque": "43 Nm @ 6250 rpm",
       "top_speed": "N/A",
       "fuel_type": "Petrol",
       "transmission": "Manual",

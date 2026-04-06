@@ -13,19 +13,35 @@
       "engine_displacement": "N/A",
       "mileage": "100 km (range)",
       "max_power": "1.5 kW",
-      "max_torque": "N/A",
+      "max_torque": "48 Nm",
       "top_speed": "70 kmph",
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Revolt RV1 is an entry-level AI-enabled electric motorcycle with 1.5kW motor, 100km range, 70 kmph top speed, 2.7kWh battery, and 4.5-hour charging. It offers 3 ride modes (Eco, Normal, Sport) at an accessible price point.",
-      "features": ["AI-Enabled", "3 Ride Modes (Eco, Normal, Sport)", "Regenerative Braking", "LED Headlamp", "Digital Display", "Mobile App Connectivity"],
+      "features": [
+        "AI-Enabled",
+        "3 Ride Modes (Eco, Normal, Sport)",
+        "Regenerative Braking",
+        "LED Headlamp",
+        "Digital Display",
+        "Mobile App Connectivity"
+      ],
       "variants": [
-        {"name": "RV1 Standard", "price": "₹99,983"}
+        {
+          "name": "RV1 Standard",
+          "price": "₹99,983"
+        }
       ],
       "colors": [
-        {"name": "Smokey Grey", "hex": "#6B6B6B"},
-        {"name": "Neon Black", "hex": "#1A1A1A"}
+        {
+          "name": "Smokey Grey",
+          "hex": "#6B6B6B"
+        },
+        {
+          "name": "Neon Black",
+          "hex": "#1A1A1A"
+        }
       ],
       "technical_specifications": {
         "motor": "PMSM Motor",
@@ -48,19 +64,35 @@
       "engine_displacement": "N/A",
       "mileage": "150 km (range)",
       "max_power": "4.1 kW",
-      "max_torque": "N/A",
+      "max_torque": "56 Nm",
       "top_speed": "85 kmph",
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Revolt RV BlazeX is a mid-range AI-enabled electric motorcycle with 4.1kW motor, 150km range, 85 kmph top speed, and premium features. It targets urban commuters seeking a sportier electric motorcycle experience.",
-      "features": ["AI-Enabled", "3 Ride Modes", "Regenerative Braking", "LED Headlamp", "Digital Display", "Mobile App Connectivity"],
+      "features": [
+        "AI-Enabled",
+        "3 Ride Modes",
+        "Regenerative Braking",
+        "LED Headlamp",
+        "Digital Display",
+        "Mobile App Connectivity"
+      ],
       "variants": [
-        {"name": "RV BlazeX Standard", "price": "₹1,24,980"}
+        {
+          "name": "RV BlazeX Standard",
+          "price": "₹1,24,980"
+        }
       ],
       "colors": [
-        {"name": "Blazing Red Black", "hex": "#C41E3A"},
-        {"name": "Midnight Black", "hex": "#1A1A1A"}
+        {
+          "name": "Blazing Red Black",
+          "hex": "#C41E3A"
+        },
+        {
+          "name": "Midnight Black",
+          "hex": "#1A1A1A"
+        }
       ],
       "technical_specifications": {
         "motor": "PMSM Motor",
@@ -83,21 +115,45 @@
       "engine_displacement": "N/A",
       "mileage": "150 km (range)",
       "max_power": "5 kW",
-      "max_torque": "N/A",
+      "max_torque": "170 Nm",
       "top_speed": "85 kmph",
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Revolt RV400 is India's first AI-enabled electric motorcycle with 5kW motor, 150km range, 85 kmph top speed, 3kWh battery, 4.5-hour charging, 3 ride modes with artificial sound simulation, and motorcycle-style design.",
-      "features": ["India's First AI Electric Motorcycle", "Artificial Sound Simulation", "3 Ride Modes (Eco, Normal, Sport)", "Regenerative Braking", "LED Headlamp", "Digital Display", "Mobile App Connectivity", "Fast Charge Compatible"],
+      "features": [
+        "India's First AI Electric Motorcycle",
+        "Artificial Sound Simulation",
+        "3 Ride Modes (Eco, Normal, Sport)",
+        "Regenerative Braking",
+        "LED Headlamp",
+        "Digital Display",
+        "Mobile App Connectivity",
+        "Fast Charge Compatible"
+      ],
       "variants": [
-        {"name": "RV400 Standard", "price": "₹1,42,934"},
-        {"name": "RV400 BRZ Edition", "price": "₹1,48,999"}
+        {
+          "name": "RV400 Standard",
+          "price": "₹1,42,934"
+        },
+        {
+          "name": "RV400 BRZ Edition",
+          "price": "₹1,48,999"
+        }
       ],
       "colors": [
-        {"name": "Cosmic Black", "hex": "#1A1A1A"},
-        {"name": "Rebel Red", "hex": "#C41E3A"},
-        {"name": "Mint Green", "hex": "#B2D8C8"}
+        {
+          "name": "Cosmic Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Rebel Red",
+          "hex": "#C41E3A"
+        },
+        {
+          "name": "Mint Green",
+          "hex": "#B2D8C8"
+        }
       ],
       "technical_specifications": {
         "motor": "PMSM Motor",

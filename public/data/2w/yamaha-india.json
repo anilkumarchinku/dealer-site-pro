@@ -19,23 +19,67 @@
       "transmission": "Automatic CVT",
       "source_section": "Available",
       "description": "The Yamaha Ray ZR 125 is a sporty 125cc scooter with BS6 Phase 2B engine, 49 kmpl ARAI mileage, combined braking system, alloy wheels, and a lightweight 99 kg design.",
-      "features": ["Combined Braking System", "Alloy Wheels", "Kick Start", "Self Start"],
+      "features": [
+        "Combined Braking System",
+        "Alloy Wheels",
+        "Kick Start",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Drum", "price": "₹76,887"},
-        {"name": "Drum Street Rally", "price": "₹80,000"},
-        {"name": "Disc", "price": "₹85,000"},
-        {"name": "Disc Street Rally", "price": "₹89,077"}
+        {
+          "name": "Drum",
+          "price": "₹76,887"
+        },
+        {
+          "name": "Drum Street Rally",
+          "price": "₹80,000"
+        },
+        {
+          "name": "Disc",
+          "price": "₹85,000"
+        },
+        {
+          "name": "Disc Street Rally",
+          "price": "₹89,077"
+        }
       ],
       "colors": [
-        {"name": "Silver White Cocktail", "hex": "#F0EDE8"},
-        {"name": "Matte Red", "hex": "#A52020"},
-        {"name": "Cyan Blue", "hex": "#2A7A7A"},
-        {"name": "Metallic Black", "hex": "#1A1A1A"},
-        {"name": "Dark Matte Blue", "hex": "#1A2A5A"},
-        {"name": "Racing Blue", "hex": "#1A4A8B"},
-        {"name": "Matte Grey Metallic", "hex": "#6B6B6B"},
-        {"name": "Cyber Green", "hex": "#5A8A00"},
-        {"name": "Ice Fluo-Vermillion", "hex": "#FF6B6B"}
+        {
+          "name": "Silver White Cocktail",
+          "hex": "#F0EDE8"
+        },
+        {
+          "name": "Matte Red",
+          "hex": "#A52020"
+        },
+        {
+          "name": "Cyan Blue",
+          "hex": "#2A7A7A"
+        },
+        {
+          "name": "Metallic Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Dark Matte Blue",
+          "hex": "#1A2A5A"
+        },
+        {
+          "name": "Racing Blue",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Matte Grey Metallic",
+          "hex": "#6B6B6B"
+        },
+        {
+          "name": "Cyber Green",
+          "hex": "#5A8A00"
+        },
+        {
+          "name": "Ice Fluo-Vermillion",
+          "hex": "#FF6B6B"
+        }
       ],
       "technical_specifications": {
         "engine": "125 cc, Single Cylinder, BS6 Phase 2B",
@@ -62,23 +106,67 @@
       "transmission": "Automatic CVT",
       "source_section": "Available",
       "description": "The Yamaha Fascino 125 is a retro-inspired 125cc scooter with BS6 Phase 2B compliance, 49 kmpl ARAI mileage, combined braking system, and 19 color options.",
-      "features": ["Combined Braking System", "Alloy Wheels", "Kick Start", "Self Start"],
+      "features": [
+        "Combined Braking System",
+        "Alloy Wheels",
+        "Kick Start",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Drum", "price": "₹77,091"},
-        {"name": "Hybrid Drum", "price": "₹83,000"},
-        {"name": "Disc", "price": "₹88,000"},
-        {"name": "Hybrid Disc", "price": "₹92,000"},
-        {"name": "Saree Guard Drum", "price": "₹78,000"},
-        {"name": "Deluxe", "price": "₹96,555"}
+        {
+          "name": "Drum",
+          "price": "₹77,091"
+        },
+        {
+          "name": "Hybrid Drum",
+          "price": "₹83,000"
+        },
+        {
+          "name": "Disc",
+          "price": "₹88,000"
+        },
+        {
+          "name": "Hybrid Disc",
+          "price": "₹92,000"
+        },
+        {
+          "name": "Saree Guard Drum",
+          "price": "₹78,000"
+        },
+        {
+          "name": "Deluxe",
+          "price": "₹96,555"
+        }
       ],
       "colors": [
-        {"name": "Metallic White", "hex": "#F5F5F0"},
-        {"name": "Matte Copper", "hex": "#7A5A3A"},
-        {"name": "Dark Matte Blue", "hex": "#1A2A5A"},
-        {"name": "Cool Blue Metallic", "hex": "#2A7ABB"},
-        {"name": "Metallic Black", "hex": "#1A1A1A"},
-        {"name": "Cyan Blue", "hex": "#2A7A7A"},
-        {"name": "Vivid Red", "hex": "#CC2020"}
+        {
+          "name": "Metallic White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Matte Copper",
+          "hex": "#7A5A3A"
+        },
+        {
+          "name": "Dark Matte Blue",
+          "hex": "#1A2A5A"
+        },
+        {
+          "name": "Cool Blue Metallic",
+          "hex": "#2A7ABB"
+        },
+        {
+          "name": "Metallic Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Cyan Blue",
+          "hex": "#2A7A7A"
+        },
+        {
+          "name": "Vivid Red",
+          "hex": "#CC2020"
+        }
       ],
       "technical_specifications": {
         "engine": "125 cc, Single Cylinder, BS6 Phase 2B",
@@ -105,13 +193,30 @@
       "transmission": "5-Speed Manual",
       "source_section": "Available",
       "description": "The Yamaha FZ FI V3 is a popular 150cc naked street motorcycle with fuel injection, LED headlamp, digital instrument cluster, disc brakes, and single-channel ABS.",
-      "features": ["Fuel Injection", "LED Headlamp", "Digital Instrument Cluster", "Disc Brakes", "Single-Channel ABS", "Alloy Wheels", "Self Start"],
+      "features": [
+        "Fuel Injection",
+        "LED Headlamp",
+        "Digital Instrument Cluster",
+        "Disc Brakes",
+        "Single-Channel ABS",
+        "Alloy Wheels",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Standard", "price": "₹1,10,511"}
+        {
+          "name": "Standard",
+          "price": "₹1,10,511"
+        }
       ],
       "colors": [
-        {"name": "Matte Cyan", "hex": "#2A8A8A"},
-        {"name": "Metallic Black", "hex": "#1A1A1A"}
+        {
+          "name": "Matte Cyan",
+          "hex": "#2A8A8A"
+        },
+        {
+          "name": "Metallic Black",
+          "hex": "#1A1A1A"
+        }
       ],
       "technical_specifications": {
         "engine": "149 cc, Single Cylinder, BS6 Phase 2",
@@ -138,20 +243,59 @@
       "transmission": "5-Speed Manual",
       "source_section": "Available",
       "description": "The Yamaha FZS FI V4 is a premium 150cc naked motorcycle with traction control, Bluetooth Y-Connect app, LED headlamp, digital cluster, and 60 kmpl ARAI mileage.",
-      "features": ["Traction Control", "Bluetooth Y-Connect", "LED Headlamp", "Digital Cluster", "Disc Brakes", "ABS", "Alloy Wheels", "Self Start"],
+      "features": [
+        "Traction Control",
+        "Bluetooth Y-Connect",
+        "LED Headlamp",
+        "Digital Cluster",
+        "Disc Brakes",
+        "ABS",
+        "Alloy Wheels",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Standard", "price": "₹1,20,409"},
-        {"name": "DLX", "price": "₹1,23,000"},
-        {"name": "Special Edition", "price": "₹1,26,667"}
+        {
+          "name": "Standard",
+          "price": "₹1,20,409"
+        },
+        {
+          "name": "DLX",
+          "price": "₹1,23,000"
+        },
+        {
+          "name": "Special Edition",
+          "price": "₹1,26,667"
+        }
       ],
       "colors": [
-        {"name": "Matte Black", "hex": "#2A2A2A"},
-        {"name": "Ice Fluo-Vermillion", "hex": "#FF6B6B"},
-        {"name": "Cyber Green", "hex": "#5A8A00"},
-        {"name": "Racing Blue", "hex": "#1A4A8B"},
-        {"name": "Majesty Red", "hex": "#A52020"},
-        {"name": "Metallic Grey", "hex": "#6B6B6B"},
-        {"name": "Dark Matte Blue", "hex": "#1A2A5A"}
+        {
+          "name": "Matte Black",
+          "hex": "#2A2A2A"
+        },
+        {
+          "name": "Ice Fluo-Vermillion",
+          "hex": "#FF6B6B"
+        },
+        {
+          "name": "Cyber Green",
+          "hex": "#5A8A00"
+        },
+        {
+          "name": "Racing Blue",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Majesty Red",
+          "hex": "#A52020"
+        },
+        {
+          "name": "Metallic Grey",
+          "hex": "#6B6B6B"
+        },
+        {
+          "name": "Dark Matte Blue",
+          "hex": "#1A2A5A"
+        }
       ],
       "technical_specifications": {
         "engine": "149 cc, Single Cylinder, BS6 Phase 2",
@@ -178,13 +322,28 @@
       "transmission": "5-Speed Manual",
       "source_section": "Available",
       "description": "The Yamaha FZ Rave is a streetfighter-styled 150cc motorcycle with bold muscular design, updated LED headlamp, disc brakes, and ABS for daily commuting.",
-      "features": ["LED Headlamp", "Disc Brakes", "ABS", "Alloy Wheels", "Self Start"],
+      "features": [
+        "LED Headlamp",
+        "Disc Brakes",
+        "ABS",
+        "Alloy Wheels",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Standard", "price": "₹1,20,653"}
+        {
+          "name": "Standard",
+          "price": "₹1,20,653"
+        }
       ],
       "colors": [
-        {"name": "Metallic Black", "hex": "#1A1A1A"},
-        {"name": "Matte Titan", "hex": "#6B6B6B"}
+        {
+          "name": "Metallic Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Matte Titan",
+          "hex": "#6B6B6B"
+        }
       ],
       "technical_specifications": {
         "engine": "149 cc, Single Cylinder, BS6 Phase 2B",
@@ -211,14 +370,34 @@
       "transmission": "5-Speed Manual",
       "source_section": "Available",
       "description": "The Yamaha FZ X is a crossover commuter motorcycle with upright ergonomics, 810mm seat height, LED headlamp, digital console, traction control, and dual disc brakes with ABS.",
-      "features": ["Traction Control", "LED Headlamp", "Digital Console", "Dual Disc Brakes", "ABS", "Alloy Wheels", "Self Start"],
+      "features": [
+        "Traction Control",
+        "LED Headlamp",
+        "Digital Console",
+        "Dual Disc Brakes",
+        "ABS",
+        "Alloy Wheels",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Standard", "price": "₹1,22,271"},
-        {"name": "Connected", "price": "₹1,30,659"}
+        {
+          "name": "Standard",
+          "price": "₹1,22,271"
+        },
+        {
+          "name": "Connected",
+          "price": "₹1,30,659"
+        }
       ],
       "colors": [
-        {"name": "Metallic Black", "hex": "#1A1A1A"},
-        {"name": "Dark Matte Blue", "hex": "#1A2A5A"}
+        {
+          "name": "Metallic Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Dark Matte Blue",
+          "hex": "#1A2A5A"
+        }
       ],
       "technical_specifications": {
         "engine": "149 cc, Single Cylinder, BS6 Phase 2",
@@ -245,14 +424,35 @@
       "transmission": "5-Speed Manual",
       "source_section": "Available",
       "description": "The Yamaha FZ S Hybrid uses Blue Core Hybrid technology with mild-hybrid assist, traction control, Bluetooth TFT console, LED headlight, and 60 kmpl ARAI mileage for exceptional efficiency.",
-      "features": ["Blue Core Hybrid Technology", "Traction Control", "Bluetooth TFT Console", "LED Headlight", "Disc Brakes", "ABS", "Alloy Wheels", "Self Start"],
+      "features": [
+        "Blue Core Hybrid Technology",
+        "Traction Control",
+        "Bluetooth TFT Console",
+        "LED Headlight",
+        "Disc Brakes",
+        "ABS",
+        "Alloy Wheels",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Standard", "price": "₹1,35,768"}
+        {
+          "name": "Standard",
+          "price": "₹1,35,768"
+        }
       ],
       "colors": [
-        {"name": "Matte Black", "hex": "#2A2A2A"},
-        {"name": "Racing Blue", "hex": "#1A4A8B"},
-        {"name": "Cyan Metallic Grey", "hex": "#2A8A8A"}
+        {
+          "name": "Matte Black",
+          "hex": "#2A2A2A"
+        },
+        {
+          "name": "Racing Blue",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Cyan Metallic Grey",
+          "hex": "#2A8A8A"
+        }
       ],
       "technical_specifications": {
         "engine": "149 cc, Single Cylinder, BS6 Phase 2B, Hybrid",
@@ -279,12 +479,28 @@
       "transmission": "5-Speed Manual",
       "source_section": "Available",
       "description": "The Yamaha FZ X Hybrid uses Smart Motor Generator (SMG) Stop & Start system, Bluetooth connectivity, traction control, TBT navigation, LED lights, and side stand cut-off.",
-      "features": ["SMG Stop & Start", "Bluetooth Connectivity", "Traction Control", "TBT Navigation", "LED Lights", "Side Stand Cut-off", "ABS", "Alloy Wheels", "Self Start"],
+      "features": [
+        "SMG Stop & Start",
+        "Bluetooth Connectivity",
+        "Traction Control",
+        "TBT Navigation",
+        "LED Lights",
+        "Side Stand Cut-off",
+        "ABS",
+        "Alloy Wheels",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Standard", "price": "₹1,40,572"}
+        {
+          "name": "Standard",
+          "price": "₹1,40,572"
+        }
       ],
       "colors": [
-        {"name": "Matte Titan", "hex": "#6B6B6B"}
+        {
+          "name": "Matte Titan",
+          "hex": "#6B6B6B"
+        }
       ],
       "technical_specifications": {
         "engine": "149 cc, Single Cylinder, BS6 Phase 2B, Hybrid",
@@ -311,16 +527,40 @@
       "transmission": "Automatic CVT",
       "source_section": "Available",
       "description": "The Yamaha Aerox 155 is India's first 155cc performance scooter with Variable Valve Actuation (VVA), ABS, keyless start option, disc brake, and sporty design.",
-      "features": ["Variable Valve Actuation (VVA)", "ABS", "Disc Brake", "Alloy Wheels", "Self Start"],
+      "features": [
+        "Variable Valve Actuation (VVA)",
+        "ABS",
+        "Disc Brake",
+        "Alloy Wheels",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Standard", "price": "₹1,41,057"},
-        {"name": "S", "price": "₹1,44,077"}
+        {
+          "name": "Standard",
+          "price": "₹1,41,057"
+        },
+        {
+          "name": "S",
+          "price": "₹1,44,077"
+        }
       ],
       "colors": [
-        {"name": "Metallic Black", "hex": "#1A1A1A"},
-        {"name": "Grey Vermillion", "hex": "#6B6B6B"},
-        {"name": "Ice Fluo Vermillion", "hex": "#FF6B6B"},
-        {"name": "Racing Blue", "hex": "#1A4A8B"}
+        {
+          "name": "Metallic Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Grey Vermillion",
+          "hex": "#6B6B6B"
+        },
+        {
+          "name": "Ice Fluo Vermillion",
+          "hex": "#FF6B6B"
+        },
+        {
+          "name": "Racing Blue",
+          "hex": "#1A4A8B"
+        }
       ],
       "technical_specifications": {
         "engine": "155 cc, Single Cylinder, BS6 Phase 2B, VVA",
@@ -347,19 +587,53 @@
       "transmission": "6-Speed Manual",
       "source_section": "Available",
       "description": "The Yamaha XSR 155 is a neo-retro motorcycle with 155cc liquid-cooled engine, round LED headlamp, assist and slipper clutch, disc brakes, and ABS on the R15/MT-15 platform.",
-      "features": ["Round LED Headlamp", "Assist and Slipper Clutch", "Disc Brakes", "ABS", "Alloy Wheels", "Self Start"],
+      "features": [
+        "Round LED Headlamp",
+        "Assist and Slipper Clutch",
+        "Disc Brakes",
+        "ABS",
+        "Alloy Wheels",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Standard", "price": "₹1,50,957"},
-        {"name": "Matte", "price": "₹1,53,000"},
-        {"name": "Special", "price": "₹1,57,000"},
-        {"name": "DLX", "price": "₹1,59,990"}
+        {
+          "name": "Standard",
+          "price": "₹1,50,957"
+        },
+        {
+          "name": "Matte",
+          "price": "₹1,53,000"
+        },
+        {
+          "name": "Special",
+          "price": "₹1,57,000"
+        },
+        {
+          "name": "DLX",
+          "price": "₹1,59,990"
+        }
       ],
       "colors": [
-        {"name": "Metallic Blue", "hex": "#1A4A8B"},
-        {"name": "Vivid Red", "hex": "#CC2020"},
-        {"name": "Metallic Grey", "hex": "#6B6B6B"},
-        {"name": "Metallic Black", "hex": "#1A1A1A"},
-        {"name": "Greyish Green Metallic", "hex": "#4A6B4A"}
+        {
+          "name": "Metallic Blue",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Vivid Red",
+          "hex": "#CC2020"
+        },
+        {
+          "name": "Metallic Grey",
+          "hex": "#6B6B6B"
+        },
+        {
+          "name": "Metallic Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Greyish Green Metallic",
+          "hex": "#4A6B4A"
+        }
       ],
       "technical_specifications": {
         "engine": "155 cc, Single Cylinder, BS6 Phase 2B",
@@ -386,14 +660,34 @@
       "transmission": "6-Speed Manual",
       "source_section": "Available",
       "description": "The Yamaha R15S is a fully-faired 155cc sports motorcycle with traction control, quickshifter, LED headlamps, and dual disc brakes with ABS based on the R15 V4 platform.",
-      "features": ["Traction Control", "Quickshifter", "LED Headlamps", "Disc Brakes", "ABS", "Alloy Wheels", "Self Start"],
+      "features": [
+        "Traction Control",
+        "Quickshifter",
+        "LED Headlamps",
+        "Disc Brakes",
+        "ABS",
+        "Alloy Wheels",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Standard", "price": "₹1,51,597"}
+        {
+          "name": "Standard",
+          "price": "₹1,51,597"
+        }
       ],
       "colors": [
-        {"name": "Matte Black (New)", "hex": "#2A2A2A"},
-        {"name": "Matte Black", "hex": "#2A2A2A"},
-        {"name": "Racing Blue", "hex": "#1A4A8B"}
+        {
+          "name": "Matte Black (New)",
+          "hex": "#2A2A2A"
+        },
+        {
+          "name": "Matte Black",
+          "hex": "#2A2A2A"
+        },
+        {
+          "name": "Racing Blue",
+          "hex": "#1A4A8B"
+        }
       ],
       "technical_specifications": {
         "engine": "155 cc, Single Cylinder, BS6 Phase 2",
@@ -420,18 +714,52 @@
       "transmission": "6-Speed Manual",
       "source_section": "Available",
       "description": "The Yamaha MT 15 V2 is a naked hyper-naked motorcycle with 155cc liquid-cooled engine, Variable Valve Actuation (VVA), assist and slipper clutch, USD forks, monoshock, and Bluetooth connectivity.",
-      "features": ["Variable Valve Actuation (VVA)", "Assist and Slipper Clutch", "USD Front Forks", "Monoshock", "Bluetooth Connectivity", "LED Headlamp", "ABS", "Alloy Wheels", "Self Start"],
+      "features": [
+        "Variable Valve Actuation (VVA)",
+        "Assist and Slipper Clutch",
+        "USD Front Forks",
+        "Monoshock",
+        "Bluetooth Connectivity",
+        "LED Headlamp",
+        "ABS",
+        "Alloy Wheels",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Standard", "price": "₹1,59,986"},
-        {"name": "DLX", "price": "₹1,64,000"},
-        {"name": "Special", "price": "₹1,69,239"}
+        {
+          "name": "Standard",
+          "price": "₹1,59,986"
+        },
+        {
+          "name": "DLX",
+          "price": "₹1,64,000"
+        },
+        {
+          "name": "Special",
+          "price": "₹1,69,239"
+        }
       ],
       "colors": [
-        {"name": "Metallic Black", "hex": "#1A1A1A"},
-        {"name": "Metallic Silver Cyan", "hex": "#9ABBC8"},
-        {"name": "Ice Storm", "hex": "#C8C8F0"},
-        {"name": "Vivid Violet Metallic", "hex": "#5A2A7A"},
-        {"name": "Metallic Black DLX", "hex": "#1A1A1A"}
+        {
+          "name": "Metallic Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Metallic Silver Cyan",
+          "hex": "#9ABBC8"
+        },
+        {
+          "name": "Ice Storm",
+          "hex": "#C8C8F0"
+        },
+        {
+          "name": "Vivid Violet Metallic",
+          "hex": "#5A2A7A"
+        },
+        {
+          "name": "Metallic Black DLX",
+          "hex": "#1A1A1A"
+        }
       ],
       "technical_specifications": {
         "engine": "155 cc, Single Cylinder, BS6 Phase 2, VVA",
@@ -460,25 +788,80 @@
       "transmission": "6-Speed Manual",
       "source_section": "Available",
       "description": "The Yamaha R15 V4 is a premium fully-faired 155cc sports bike with VVA technology, traction control, quickshifter, assist and slipper clutch, and aerodynamic design.",
-      "features": ["Variable Valve Actuation (VVA)", "Traction Control", "Quickshifter", "Assist and Slipper Clutch", "LED Headlamps", "Disc Brakes", "ABS", "Alloy Wheels", "Self Start"],
+      "features": [
+        "Variable Valve Actuation (VVA)",
+        "Traction Control",
+        "Quickshifter",
+        "Assist and Slipper Clutch",
+        "LED Headlamps",
+        "Disc Brakes",
+        "ABS",
+        "Alloy Wheels",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Standard", "price": "₹1,67,085"},
-        {"name": "V4 M", "price": "₹1,72,000"},
-        {"name": "Dark Knight", "price": "₹1,76,000"},
-        {"name": "MotoGP Edition", "price": "₹1,82,000"},
-        {"name": "Icon Performance", "price": "₹1,88,000"},
-        {"name": "Special Edition", "price": "₹1,92,100"}
+        {
+          "name": "Standard",
+          "price": "₹1,67,085"
+        },
+        {
+          "name": "V4 M",
+          "price": "₹1,72,000"
+        },
+        {
+          "name": "Dark Knight",
+          "price": "₹1,76,000"
+        },
+        {
+          "name": "MotoGP Edition",
+          "price": "₹1,82,000"
+        },
+        {
+          "name": "Icon Performance",
+          "price": "₹1,88,000"
+        },
+        {
+          "name": "Special Edition",
+          "price": "₹1,92,100"
+        }
       ],
       "colors": [
-        {"name": "Metallic Grey", "hex": "#6B6B6B"},
-        {"name": "Dark Knight", "hex": "#1A1A1A"},
-        {"name": "Metallic Black", "hex": "#1A1A1A"},
-        {"name": "Intensity White", "hex": "#F5F5F0"},
-        {"name": "Metallic Red", "hex": "#CC2020"},
-        {"name": "Matte White Pearl", "hex": "#F0EDE8"},
-        {"name": "Racing Blue", "hex": "#1A4A8B"},
-        {"name": "Icon Performance", "hex": "#1A1A5A"},
-        {"name": "MotoGP Edition", "hex": "#2A2A2A"}
+        {
+          "name": "Metallic Grey",
+          "hex": "#6B6B6B"
+        },
+        {
+          "name": "Dark Knight",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Metallic Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Intensity White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Metallic Red",
+          "hex": "#CC2020"
+        },
+        {
+          "name": "Matte White Pearl",
+          "hex": "#F0EDE8"
+        },
+        {
+          "name": "Racing Blue",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Icon Performance",
+          "hex": "#1A1A5A"
+        },
+        {
+          "name": "MotoGP Edition",
+          "hex": "#2A2A2A"
+        }
       ],
       "technical_specifications": {
         "engine": "155 cc, Single Cylinder, BS6 Phase 2, VVA",
@@ -499,18 +882,31 @@
       "engine_displacement": "N/A",
       "mileage": "169 km (range)",
       "max_power": "6.7 kW",
-      "max_torque": "N/A",
+      "max_torque": "300 Nm",
       "top_speed": "79 kmph",
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Yamaha EC 06 is Yamaha's first electric scooter in India with 169 km range, IP68 water rating, onboard charger, dual disc brakes, and LED headlights. Single color option.",
-      "features": ["IP68 Water Rating", "Onboard Charger", "Dual Disc Brakes", "LED Headlights", "USB Charging Port", "Self Start"],
+      "features": [
+        "IP68 Water Rating",
+        "Onboard Charger",
+        "Dual Disc Brakes",
+        "LED Headlights",
+        "USB Charging Port",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Standard", "price": "₹1,67,673"}
+        {
+          "name": "Standard",
+          "price": "₹1,67,673"
+        }
       ],
       "colors": [
-        {"name": "Bluish White", "hex": "#E0E8F0"}
+        {
+          "name": "Bluish White",
+          "hex": "#E0E8F0"
+        }
       ],
       "technical_specifications": {
         "engine": "Electric Motor, 6.7 kW",

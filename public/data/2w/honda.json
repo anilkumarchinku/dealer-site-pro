@@ -19,20 +19,57 @@
       "transmission": "Automatic CVT",
       "source_section": "Available",
       "description": "The Honda Activa 6G is India's most popular scooter with BS6 Phase 2B engine. It offers reliable performance with combined braking system, LED headlight, and alloy wheels.",
-      "features": ["LED Headlamp", "Combined Braking System", "Alloy Wheels", "USB Charging Port", "Self Start", "Kick Start"],
+      "features": [
+        "LED Headlamp",
+        "Combined Braking System",
+        "Alloy Wheels",
+        "USB Charging Port",
+        "Self Start",
+        "Kick Start"
+      ],
       "variants": [
-        {"name": "Standard", "price": "₹78,166"},
-        {"name": "Deluxe", "price": "₹84,000"},
-        {"name": "Anniversary Edition", "price": "₹88,000"},
-        {"name": "Premium", "price": "₹91,981"}
+        {
+          "name": "Standard",
+          "price": "₹78,166"
+        },
+        {
+          "name": "Deluxe",
+          "price": "₹84,000"
+        },
+        {
+          "name": "Anniversary Edition",
+          "price": "₹88,000"
+        },
+        {
+          "name": "Premium",
+          "price": "₹91,981"
+        }
       ],
       "colors": [
-        {"name": "Rebel Red Metallic", "hex": "#A52020"},
-        {"name": "Pearl Siren Blue", "hex": "#1A3A6B"},
-        {"name": "Pearl Precious White", "hex": "#F5F5F0"},
-        {"name": "Pearl Igneous Black", "hex": "#1A1A1A"},
-        {"name": "Mat Axis Gray Metallic", "hex": "#6B6B6B"},
-        {"name": "Decent Blue Metallic", "hex": "#2A4A7A"}
+        {
+          "name": "Rebel Red Metallic",
+          "hex": "#A52020"
+        },
+        {
+          "name": "Pearl Siren Blue",
+          "hex": "#1A3A6B"
+        },
+        {
+          "name": "Pearl Precious White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Pearl Igneous Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Mat Axis Gray Metallic",
+          "hex": "#6B6B6B"
+        },
+        {
+          "name": "Decent Blue Metallic",
+          "hex": "#2A4A7A"
+        }
       ],
       "technical_specifications": {
         "engine": "109.51 cc, Single Cylinder, BS6 Phase 2B",
@@ -61,19 +98,54 @@
       "transmission": "Automatic CVT",
       "source_section": "Available",
       "description": "The Honda Activa 125 is a premium scooter offering a 125cc BS6 Phase 2 engine with disc brake option, digital instrument cluster, and USB charging port for a refined commuting experience.",
-      "features": ["LED Headlamp", "USB Charging Port", "Digital Instrument Cluster", "Combined Braking System", "Alloy Wheels", "Kick Start", "Self Start"],
+      "features": [
+        "LED Headlamp",
+        "USB Charging Port",
+        "Digital Instrument Cluster",
+        "Combined Braking System",
+        "Alloy Wheels",
+        "Kick Start",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Drum", "price": "₹92,529"},
-        {"name": "Disc", "price": "₹95,000"},
-        {"name": "H-Smart", "price": "₹97,903"}
+        {
+          "name": "Drum",
+          "price": "₹92,529"
+        },
+        {
+          "name": "Disc",
+          "price": "₹95,000"
+        },
+        {
+          "name": "H-Smart",
+          "price": "₹97,903"
+        }
       ],
       "colors": [
-        {"name": "Mat Axis Gray Metallic", "hex": "#6B6B6B"},
-        {"name": "Pearl Deep Ground Gray", "hex": "#4A4A4A"},
-        {"name": "Pearl Igneous Black", "hex": "#1A1A1A"},
-        {"name": "Pearl Precious White", "hex": "#F5F5F0"},
-        {"name": "Pearl Siren Blue", "hex": "#1A3A6B"},
-        {"name": "Rebel Red Metallic", "hex": "#A52020"}
+        {
+          "name": "Mat Axis Gray Metallic",
+          "hex": "#6B6B6B"
+        },
+        {
+          "name": "Pearl Deep Ground Gray",
+          "hex": "#4A4A4A"
+        },
+        {
+          "name": "Pearl Igneous Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Pearl Precious White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Pearl Siren Blue",
+          "hex": "#1A3A6B"
+        },
+        {
+          "name": "Rebel Red Metallic",
+          "hex": "#A52020"
+        }
       ],
       "technical_specifications": {
         "engine": "123.92 cc, Single Cylinder, BS6 Phase 2",
@@ -100,17 +172,44 @@
       "transmission": "Automatic CVT",
       "source_section": "Available",
       "description": "The Honda Dio is a sporty scooter with a 109cc BS6 Phase 2B engine, tubeless tyres, and a youthful design with USB charging port option.",
-      "features": ["USB Charging Port", "Combined Braking System", "Kick Start", "Self Start", "Tubeless Tyres"],
+      "features": [
+        "USB Charging Port",
+        "Combined Braking System",
+        "Kick Start",
+        "Self Start",
+        "Tubeless Tyres"
+      ],
       "variants": [
-        {"name": "Standard", "price": "₹74,298"},
-        {"name": "Deluxe", "price": "₹86,333"}
+        {
+          "name": "Standard",
+          "price": "₹74,298"
+        },
+        {
+          "name": "Deluxe",
+          "price": "₹86,333"
+        }
       ],
       "colors": [
-        {"name": "Pearl Igneous Black + Pearl Deep Ground Gray", "hex": "#1A1A1A"},
-        {"name": "Pearl Igneous Black", "hex": "#1A1A1A"},
-        {"name": "Mat Marvel Blue", "hex": "#1A2A5A"},
-        {"name": "Mat Axis Gray Metallic", "hex": "#6B6B6B"},
-        {"name": "Imperial Red Metallic", "hex": "#8B0000"}
+        {
+          "name": "Pearl Igneous Black + Pearl Deep Ground Gray",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Pearl Igneous Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Mat Marvel Blue",
+          "hex": "#1A2A5A"
+        },
+        {
+          "name": "Mat Axis Gray Metallic",
+          "hex": "#6B6B6B"
+        },
+        {
+          "name": "Imperial Red Metallic",
+          "hex": "#8B0000"
+        }
       ],
       "technical_specifications": {
         "engine": "109.51 cc, Single Cylinder, BS6 Phase 2B",
@@ -138,19 +237,54 @@
       "transmission": "Automatic CVT",
       "source_section": "Available",
       "description": "The Honda Dio 125 is a premium 125cc scooter with PGM-FI fuel injection, disc brakes, USB charging port, and lightweight fiber body with external fuel filler cap.",
-      "features": ["USB Charging Port", "Disc Brake", "Combined Braking System", "ACG Silent Start", "Side-stand Engine Cut-off", "External Fuel Filler Cap", "Alloy Wheels"],
+      "features": [
+        "USB Charging Port",
+        "Disc Brake",
+        "Combined Braking System",
+        "ACG Silent Start",
+        "Side-stand Engine Cut-off",
+        "External Fuel Filler Cap",
+        "Alloy Wheels"
+      ],
       "variants": [
-        {"name": "Standard", "price": "₹93,289"},
-        {"name": "Deluxe", "price": "₹95,500"},
-        {"name": "H-Smart", "price": "₹98,240"}
+        {
+          "name": "Standard",
+          "price": "₹93,289"
+        },
+        {
+          "name": "Deluxe",
+          "price": "₹95,500"
+        },
+        {
+          "name": "H-Smart",
+          "price": "₹98,240"
+        }
       ],
       "colors": [
-        {"name": "Pearl Deep Ground Gray (Stripe)", "hex": "#4A4A4A"},
-        {"name": "Imperial Red", "hex": "#8B0000"},
-        {"name": "Pearl Igneous Black", "hex": "#1A1A1A"},
-        {"name": "Pearl Sports Yellow", "hex": "#E8C200"},
-        {"name": "Mat Marvel Blue Metallic", "hex": "#1A2A5A"},
-        {"name": "Pearl Siren Blue", "hex": "#1A3A6B"}
+        {
+          "name": "Pearl Deep Ground Gray (Stripe)",
+          "hex": "#4A4A4A"
+        },
+        {
+          "name": "Imperial Red",
+          "hex": "#8B0000"
+        },
+        {
+          "name": "Pearl Igneous Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Pearl Sports Yellow",
+          "hex": "#E8C200"
+        },
+        {
+          "name": "Mat Marvel Blue Metallic",
+          "hex": "#1A2A5A"
+        },
+        {
+          "name": "Pearl Siren Blue",
+          "hex": "#1A3A6B"
+        }
       ],
       "technical_specifications": {
         "engine": "123.92 cc, Single Cylinder, BS6 Phase 2B",
@@ -177,21 +311,61 @@
       "transmission": "4-Speed Manual",
       "source_section": "Available",
       "description": "The Honda Shine 100 is an entry-level commuter bike with a 100cc BS6 Phase 2B engine, E20 fuel compatibility, tubeless tyres, and excellent fuel efficiency at 65 kmpl.",
-      "features": ["Alloy Wheels", "Tubeless Tyres", "Combined Braking System", "Kick Start", "Self Start", "E20 Compatible"],
+      "features": [
+        "Alloy Wheels",
+        "Tubeless Tyres",
+        "Combined Braking System",
+        "Kick Start",
+        "Self Start",
+        "E20 Compatible"
+      ],
       "variants": [
-        {"name": "Standard", "price": "₹65,717"},
-        {"name": "DX", "price": "₹71,672"}
+        {
+          "name": "Standard",
+          "price": "₹65,717"
+        },
+        {
+          "name": "DX",
+          "price": "₹71,672"
+        }
       ],
       "colors": [
-        {"name": "Orange with Black", "hex": "#E8600A"},
-        {"name": "Green with Black", "hex": "#2A6B2A"},
-        {"name": "Gray with Black", "hex": "#6B6B6B"},
-        {"name": "Blue with Black", "hex": "#1A3A6B"},
-        {"name": "Red with Black", "hex": "#A52020"},
-        {"name": "Geny Gray Metallic", "hex": "#8A8A8A"},
-        {"name": "Athletic Blue Metallic", "hex": "#1A4A8B"},
-        {"name": "Pearl Igneous Black", "hex": "#1A1A1A"},
-        {"name": "Imperial Red Metallic", "hex": "#8B0000"}
+        {
+          "name": "Orange with Black",
+          "hex": "#E8600A"
+        },
+        {
+          "name": "Green with Black",
+          "hex": "#2A6B2A"
+        },
+        {
+          "name": "Gray with Black",
+          "hex": "#6B6B6B"
+        },
+        {
+          "name": "Blue with Black",
+          "hex": "#1A3A6B"
+        },
+        {
+          "name": "Red with Black",
+          "hex": "#A52020"
+        },
+        {
+          "name": "Geny Gray Metallic",
+          "hex": "#8A8A8A"
+        },
+        {
+          "name": "Athletic Blue Metallic",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Pearl Igneous Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Imperial Red Metallic",
+          "hex": "#8B0000"
+        }
       ],
       "technical_specifications": {
         "engine": "98.98 cc, Single Cylinder, BS6 Phase 2B",
@@ -218,19 +392,51 @@
       "transmission": "5-Speed Manual",
       "source_section": "Available",
       "description": "The Honda Shine is a popular 125cc commuter motorcycle with smooth engine, 5-speed gearbox, and combined braking system offering excellent daily performance.",
-      "features": ["Combined Braking System", "Alloy Wheels", "Kick Start", "Self Start"],
+      "features": [
+        "Combined Braking System",
+        "Alloy Wheels",
+        "Kick Start",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Drum", "price": "₹82,449"},
-        {"name": "Disc", "price": "₹85,000"},
-        {"name": "Limited Edition", "price": "₹87,838"}
+        {
+          "name": "Drum",
+          "price": "₹82,449"
+        },
+        {
+          "name": "Disc",
+          "price": "₹85,000"
+        },
+        {
+          "name": "Limited Edition",
+          "price": "₹87,838"
+        }
       ],
       "colors": [
-        {"name": "Pearl Siren Blue", "hex": "#1A3A6B"},
-        {"name": "Pearl Igneous Black", "hex": "#1A1A1A"},
-        {"name": "Decent Blue Metallic", "hex": "#2A4A7A"},
-        {"name": "Genny Grey Metallic", "hex": "#8A8A8A"},
-        {"name": "Matte Axis Gray Metallic", "hex": "#6B6B6B"},
-        {"name": "Rebel Red Metallic", "hex": "#A52020"}
+        {
+          "name": "Pearl Siren Blue",
+          "hex": "#1A3A6B"
+        },
+        {
+          "name": "Pearl Igneous Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Decent Blue Metallic",
+          "hex": "#2A4A7A"
+        },
+        {
+          "name": "Genny Grey Metallic",
+          "hex": "#8A8A8A"
+        },
+        {
+          "name": "Matte Axis Gray Metallic",
+          "hex": "#6B6B6B"
+        },
+        {
+          "name": "Rebel Red Metallic",
+          "hex": "#A52020"
+        }
       ],
       "technical_specifications": {
         "engine": "123.94 cc, Single Cylinder, BS6 Phase 2B",
@@ -257,15 +463,36 @@
       "transmission": "4-Speed Manual",
       "source_section": "Available",
       "description": "The Honda Livo is a stylish 110cc commuter motorcycle with excellent fuel efficiency, adjustable rear suspension, and available in both drum and disc variants.",
-      "features": ["Alloy Wheels", "Kick Start", "Self Start", "Combined Braking System", "5-Step Adjustable Rear Suspension"],
+      "features": [
+        "Alloy Wheels",
+        "Kick Start",
+        "Self Start",
+        "Combined Braking System",
+        "5-Step Adjustable Rear Suspension"
+      ],
       "variants": [
-        {"name": "Drum", "price": "₹80,752"},
-        {"name": "Disc", "price": "₹83,319"}
+        {
+          "name": "Drum",
+          "price": "₹80,752"
+        },
+        {
+          "name": "Disc",
+          "price": "₹83,319"
+        }
       ],
       "colors": [
-        {"name": "Pearl Siren Blue A", "hex": "#1A3A6B"},
-        {"name": "Pearl Igneous Black (Blue Stripes)", "hex": "#1A1A1A"},
-        {"name": "Pearl Igneous Black (Orange Stripes)", "hex": "#1A1A1A"}
+        {
+          "name": "Pearl Siren Blue A",
+          "hex": "#1A3A6B"
+        },
+        {
+          "name": "Pearl Igneous Black (Blue Stripes)",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Pearl Igneous Black (Orange Stripes)",
+          "hex": "#1A1A1A"
+        }
       ],
       "technical_specifications": {
         "engine": "109.51 cc, Single Cylinder, BS6 Phase 2B",
@@ -293,18 +520,48 @@
       "transmission": "5-Speed Manual",
       "source_section": "Available",
       "description": "The Honda SP 125 is a feature-rich 125cc commuter motorcycle with PGM-FI fuel injection, BS6 Phase 2B compliance, and excellent fuel efficiency of 62 kmpl.",
-      "features": ["PGM-FI Fuel Injection", "Combined Braking System", "Alloy Wheels", "Kick Start", "Self Start"],
+      "features": [
+        "PGM-FI Fuel Injection",
+        "Combined Braking System",
+        "Alloy Wheels",
+        "Kick Start",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Drum", "price": "₹89,406"},
-        {"name": "Disc", "price": "₹92,500"},
-        {"name": "Anniversary Edition", "price": "₹96,267"}
+        {
+          "name": "Drum",
+          "price": "₹89,406"
+        },
+        {
+          "name": "Disc",
+          "price": "₹92,500"
+        },
+        {
+          "name": "Anniversary Edition",
+          "price": "₹96,267"
+        }
       ],
       "colors": [
-        {"name": "Matte Marvel Blue Metallic", "hex": "#1A2A5A"},
-        {"name": "Pearl Igneous Black", "hex": "#1A1A1A"},
-        {"name": "Pearl Siren Blue", "hex": "#1A3A6B"},
-        {"name": "Matte Axis Gray Metallic", "hex": "#6B6B6B"},
-        {"name": "Imperial Red Metallic", "hex": "#8B0000"}
+        {
+          "name": "Matte Marvel Blue Metallic",
+          "hex": "#1A2A5A"
+        },
+        {
+          "name": "Pearl Igneous Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Pearl Siren Blue",
+          "hex": "#1A3A6B"
+        },
+        {
+          "name": "Matte Axis Gray Metallic",
+          "hex": "#6B6B6B"
+        },
+        {
+          "name": "Imperial Red Metallic",
+          "hex": "#8B0000"
+        }
       ],
       "technical_specifications": {
         "engine": "123.94 cc, Single Cylinder, BS6 Phase 2B",
@@ -331,15 +588,39 @@
       "transmission": "5-Speed Manual",
       "source_section": "Available",
       "description": "The Honda CB 125 Hornet is a sporty street motorcycle with USD front forks, full-color TFT display, Bluetooth connectivity, and single-channel ABS for enhanced safety.",
-      "features": ["TFT Display", "Bluetooth Connectivity", "USD Front Forks", "Disc Brake", "Single-Channel ABS", "LED Headlamps", "Alloy Wheels", "Self Start"],
+      "features": [
+        "TFT Display",
+        "Bluetooth Connectivity",
+        "USD Front Forks",
+        "Disc Brake",
+        "Single-Channel ABS",
+        "LED Headlamps",
+        "Alloy Wheels",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Standard", "price": "₹1,15,065"}
+        {
+          "name": "Standard",
+          "price": "₹1,15,065"
+        }
       ],
       "colors": [
-        {"name": "Pearl Siren Blue with Sports Red", "hex": "#1A3A6B"},
-        {"name": "Pearl Siren Blue with Athletic Blue", "hex": "#1A3A6B"},
-        {"name": "Pearl Igneous Black", "hex": "#1A1A1A"},
-        {"name": "Pearl Siren Blue with Lemon Ice Yellow", "hex": "#1A3A6B"}
+        {
+          "name": "Pearl Siren Blue with Sports Red",
+          "hex": "#1A3A6B"
+        },
+        {
+          "name": "Pearl Siren Blue with Athletic Blue",
+          "hex": "#1A3A6B"
+        },
+        {
+          "name": "Pearl Igneous Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Pearl Siren Blue with Lemon Ice Yellow",
+          "hex": "#1A3A6B"
+        }
       ],
       "technical_specifications": {
         "engine": "123.94 cc, Single Cylinder, BS6 Phase 2B",
@@ -367,16 +648,39 @@
       "transmission": "5-Speed Manual",
       "source_section": "Available",
       "description": "The Honda SP160 is a sporty 160cc commuter with single or double disc options, 5-speed gearbox, and ABS. Offers good performance and refinement for city riding.",
-      "features": ["Disc Brake", "ABS", "Alloy Wheels", "Self Start"],
+      "features": [
+        "Disc Brake",
+        "ABS",
+        "Alloy Wheels",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Single Disc", "price": "₹1,16,270"},
-        {"name": "Double Disc", "price": "₹1,21,780"}
+        {
+          "name": "Single Disc",
+          "price": "₹1,16,270"
+        },
+        {
+          "name": "Double Disc",
+          "price": "₹1,21,780"
+        }
       ],
       "colors": [
-        {"name": "Athletic Blue Metallic", "hex": "#1A4A8B"},
-        {"name": "Radiant Red Metallic", "hex": "#CC2020"},
-        {"name": "Pearl Deep Ground Gray", "hex": "#4A4A4A"},
-        {"name": "Pearl Igneous Black", "hex": "#1A1A1A"}
+        {
+          "name": "Athletic Blue Metallic",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Radiant Red Metallic",
+          "hex": "#CC2020"
+        },
+        {
+          "name": "Pearl Deep Ground Gray",
+          "hex": "#4A4A4A"
+        },
+        {
+          "name": "Pearl Igneous Black",
+          "hex": "#1A1A1A"
+        }
       ],
       "technical_specifications": {
         "engine": "162.71 cc, Single Cylinder, BS6 Phase 2",
@@ -403,14 +707,32 @@
       "transmission": "5-Speed Manual",
       "source_section": "Available",
       "description": "The Honda Unicorn is a premium 163cc street bike focused on comfort and daily commuting with disc brake and ABS, offering a smooth engine and strong build quality.",
-      "features": ["Disc Brake", "ABS", "Alloy Wheels", "Kick Start", "Self Start"],
+      "features": [
+        "Disc Brake",
+        "ABS",
+        "Alloy Wheels",
+        "Kick Start",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Standard", "price": "₹1,13,613"}
+        {
+          "name": "Standard",
+          "price": "₹1,13,613"
+        }
       ],
       "colors": [
-        {"name": "Radiant Red Metallic", "hex": "#CC2020"},
-        {"name": "Mat Axis Gray Metallic", "hex": "#6B6B6B"},
-        {"name": "Pearl Igneous Black", "hex": "#1A1A1A"}
+        {
+          "name": "Radiant Red Metallic",
+          "hex": "#CC2020"
+        },
+        {
+          "name": "Mat Axis Gray Metallic",
+          "hex": "#6B6B6B"
+        },
+        {
+          "name": "Pearl Igneous Black",
+          "hex": "#1A1A1A"
+        }
       ],
       "technical_specifications": {
         "engine": "162.71 cc, Single Cylinder, BS6 Phase 2",
@@ -437,15 +759,39 @@
       "transmission": "5-Speed Manual",
       "source_section": "Available",
       "description": "The Honda Hornet 2.0 is a sporty naked street bike with 184cc engine, TFT display, Bluetooth connectivity, inverted front forks, and single-channel ABS.",
-      "features": ["Digital TFT Display", "Bluetooth Connectivity", "Inverted Front Forks", "Slip and Assist Clutch", "LED Headlamps", "ABS", "Alloy Wheels", "Self Start"],
+      "features": [
+        "Digital TFT Display",
+        "Bluetooth Connectivity",
+        "Inverted Front Forks",
+        "Slip and Assist Clutch",
+        "LED Headlamps",
+        "ABS",
+        "Alloy Wheels",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Standard", "price": "₹1,47,864"}
+        {
+          "name": "Standard",
+          "price": "₹1,47,864"
+        }
       ],
       "colors": [
-        {"name": "Radiant Red Metallic", "hex": "#CC2020"},
-        {"name": "Athletic Blue Metallic", "hex": "#1A4A8B"},
-        {"name": "Pearl Igneous Black", "hex": "#1A1A1A"},
-        {"name": "Matte Axis Grey Metallic", "hex": "#6B6B6B"}
+        {
+          "name": "Radiant Red Metallic",
+          "hex": "#CC2020"
+        },
+        {
+          "name": "Athletic Blue Metallic",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Pearl Igneous Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Matte Axis Grey Metallic",
+          "hex": "#6B6B6B"
+        }
       ],
       "technical_specifications": {
         "engine": "184.4 cc, Single Cylinder, BS6 Phase 2",
@@ -473,14 +819,35 @@
       "transmission": "5-Speed Manual",
       "source_section": "Available",
       "description": "The Honda NX200 is a crossover/adventure motorcycle with 184cc engine, dual-channel ABS, USD forks, monoshock rear, TFT display with Honda RoadSync, and MRF Zapper CURRV tyres.",
-      "features": ["TFT Display", "Honda RoadSync", "USD Front Forks", "Monoshock", "Dual Channel ABS", "Assist & Slipper Clutch", "Alloy Wheels", "Self Start"],
+      "features": [
+        "TFT Display",
+        "Honda RoadSync",
+        "USD Front Forks",
+        "Monoshock",
+        "Dual Channel ABS",
+        "Assist & Slipper Clutch",
+        "Alloy Wheels",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Standard", "price": "₹1,58,607"}
+        {
+          "name": "Standard",
+          "price": "₹1,58,607"
+        }
       ],
       "colors": [
-        {"name": "Pearl Igneous Black", "hex": "#1A1A1A"},
-        {"name": "Radiant Red Metallic", "hex": "#CC2020"},
-        {"name": "Athletic Blue Metallic", "hex": "#1A4A8B"}
+        {
+          "name": "Pearl Igneous Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Radiant Red Metallic",
+          "hex": "#CC2020"
+        },
+        {
+          "name": "Athletic Blue Metallic",
+          "hex": "#1A4A8B"
+        }
       ],
       "technical_specifications": {
         "engine": "184.4 cc, Single Cylinder, BS6 Phase 2B",
@@ -510,14 +877,35 @@
       "transmission": "6-Speed Manual",
       "source_section": "Available",
       "description": "The Honda CB300F Flex-Fuel is India's first flex-fuel motorcycle compatible with E85 ethanol blend, featuring dual-channel ABS with traction control, Bluetooth connectivity, and LED lighting.",
-      "features": ["Flex Fuel (E85 Compatible)", "Dual Channel ABS", "Traction Control", "Bluetooth Connectivity", "LED Lighting", "Digital Cluster", "Alloy Wheels", "Self Start"],
+      "features": [
+        "Flex Fuel (E85 Compatible)",
+        "Dual Channel ABS",
+        "Traction Control",
+        "Bluetooth Connectivity",
+        "LED Lighting",
+        "Digital Cluster",
+        "Alloy Wheels",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Standard", "price": "₹1,55,658"}
+        {
+          "name": "Standard",
+          "price": "₹1,55,658"
+        }
       ],
       "colors": [
-        {"name": "Mat Marvel Blue Metallic", "hex": "#1A2A5A"},
-        {"name": "Matte Axis Grey Metallic", "hex": "#6B6B6B"},
-        {"name": "Sports Red", "hex": "#CC2020"}
+        {
+          "name": "Mat Marvel Blue Metallic",
+          "hex": "#1A2A5A"
+        },
+        {
+          "name": "Matte Axis Grey Metallic",
+          "hex": "#6B6B6B"
+        },
+        {
+          "name": "Sports Red",
+          "hex": "#CC2020"
+        }
       ],
       "technical_specifications": {
         "engine": "293.52 cc, Single Cylinder, BS6 Phase 2",
@@ -544,16 +932,41 @@
       "transmission": "5-Speed Manual",
       "source_section": "Available",
       "description": "The Honda H'ness CB350 is a premium retro-classic motorcycle with a 348cc single-cylinder engine, dual ABS disc brakes, and classic styling with round headlamp and chrome finishing.",
-      "features": ["Dual Channel ABS", "Disc Brakes", "Alloy Wheels", "Self Start", "Classic Retro Styling", "Chrome Finishing"],
+      "features": [
+        "Dual Channel ABS",
+        "Disc Brakes",
+        "Alloy Wheels",
+        "Self Start",
+        "Classic Retro Styling",
+        "Chrome Finishing"
+      ],
       "variants": [
-        {"name": "DLX", "price": "₹1,93,117"},
-        {"name": "DLX Pro", "price": "₹1,97,914"}
+        {
+          "name": "DLX",
+          "price": "₹1,93,117"
+        },
+        {
+          "name": "DLX Pro",
+          "price": "₹1,97,914"
+        }
       ],
       "colors": [
-        {"name": "Pearl Igneous Black", "hex": "#1A1A1A"},
-        {"name": "Pearl Deep Ground Grey", "hex": "#4A4A4A"},
-        {"name": "Rebel Red Metallic", "hex": "#A52020"},
-        {"name": "Athletic Blue Metallic", "hex": "#1A4A8B"}
+        {
+          "name": "Pearl Igneous Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Pearl Deep Ground Grey",
+          "hex": "#4A4A4A"
+        },
+        {
+          "name": "Rebel Red Metallic",
+          "hex": "#A52020"
+        },
+        {
+          "name": "Athletic Blue Metallic",
+          "hex": "#1A4A8B"
+        }
       ],
       "technical_specifications": {
         "engine": "348.36 cc, Single Cylinder, BS6 Phase 2B",
@@ -580,17 +993,45 @@
       "transmission": "5-Speed Manual",
       "source_section": "Available",
       "description": "The Honda CB350 is a modern retro-style motorcycle with 348cc engine, dual-channel ABS, traction control, and Bluetooth connectivity for a refined riding experience.",
-      "features": ["Dual Channel ABS", "Traction Control", "Bluetooth Connectivity", "Disc Brakes", "Alloy Wheels", "Self Start"],
+      "features": [
+        "Dual Channel ABS",
+        "Traction Control",
+        "Bluetooth Connectivity",
+        "Disc Brakes",
+        "Alloy Wheels",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "DLX", "price": "₹1,97,045"},
-        {"name": "DLX Pro", "price": "₹2,00,474"}
+        {
+          "name": "DLX",
+          "price": "₹1,97,045"
+        },
+        {
+          "name": "DLX Pro",
+          "price": "₹2,00,474"
+        }
       ],
       "colors": [
-        {"name": "Rebel Red Metallic DLX", "hex": "#A52020"},
-        {"name": "Pearl Igneous Black", "hex": "#1A1A1A"},
-        {"name": "Pearl Deep Ground Gray", "hex": "#4A4A4A"},
-        {"name": "Mat Dune Brown", "hex": "#7A5A3A"},
-        {"name": "Mat Axis Gray Metallic", "hex": "#6B6B6B"}
+        {
+          "name": "Rebel Red Metallic DLX",
+          "hex": "#A52020"
+        },
+        {
+          "name": "Pearl Igneous Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Pearl Deep Ground Gray",
+          "hex": "#4A4A4A"
+        },
+        {
+          "name": "Mat Dune Brown",
+          "hex": "#7A5A3A"
+        },
+        {
+          "name": "Mat Axis Gray Metallic",
+          "hex": "#6B6B6B"
+        }
       ],
       "technical_specifications": {
         "engine": "348.36 cc, Single Cylinder, BS6 Phase 2B",
@@ -617,17 +1058,46 @@
       "transmission": "5-Speed Manual",
       "source_section": "Available",
       "description": "The Honda CB350RS is a scrambler-styled motorcycle based on the CB350 platform, featuring Honda RoadSync app connectivity, slipper clutch, and dual ABS disc brakes.",
-      "features": ["Honda RoadSync App", "Slipper Clutch", "Dual Channel ABS", "Disc Brakes", "Alloy Wheels", "Self Start", "Scrambler Styling"],
+      "features": [
+        "Honda RoadSync App",
+        "Slipper Clutch",
+        "Dual Channel ABS",
+        "Disc Brakes",
+        "Alloy Wheels",
+        "Self Start",
+        "Scrambler Styling"
+      ],
       "variants": [
-        {"name": "DLX", "price": "₹1,97,914"},
-        {"name": "DLX Pro", "price": "₹2,00,363"}
+        {
+          "name": "DLX",
+          "price": "₹1,97,914"
+        },
+        {
+          "name": "DLX Pro",
+          "price": "₹2,00,363"
+        }
       ],
       "colors": [
-        {"name": "Pearl Igneous Black", "hex": "#1A1A1A"},
-        {"name": "Pearl Deep Ground Grey", "hex": "#4A4A4A"},
-        {"name": "Rebel Red Metallic", "hex": "#A52020"},
-        {"name": "Pearl Igneous Black Yellow", "hex": "#1A1A1A"},
-        {"name": "Mat Axis Grey Metallic", "hex": "#6B6B6B"}
+        {
+          "name": "Pearl Igneous Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Pearl Deep Ground Grey",
+          "hex": "#4A4A4A"
+        },
+        {
+          "name": "Rebel Red Metallic",
+          "hex": "#A52020"
+        },
+        {
+          "name": "Pearl Igneous Black Yellow",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Mat Axis Grey Metallic",
+          "hex": "#6B6B6B"
+        }
       ],
       "technical_specifications": {
         "engine": "348.36 cc, Single Cylinder, BS6 Phase 2B",
@@ -654,18 +1124,47 @@
       "transmission": "5-Speed Manual",
       "source_section": "Available",
       "description": "The Honda CB350C is a cruiser-styled variant of the CB350 with upright ergonomics, dual-channel ABS, and classic-meets-modern design language.",
-      "features": ["Dual Channel ABS", "Disc Brakes", "Alloy Wheels", "Self Start"],
+      "features": [
+        "Dual Channel ABS",
+        "Disc Brakes",
+        "Alloy Wheels",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Standard", "price": "₹1,98,120"},
-        {"name": "DLX", "price": "₹2,00,000"},
-        {"name": "DLX Pro", "price": "₹2,02,200"}
+        {
+          "name": "Standard",
+          "price": "₹1,98,120"
+        },
+        {
+          "name": "DLX",
+          "price": "₹2,00,000"
+        },
+        {
+          "name": "DLX Pro",
+          "price": "₹2,02,200"
+        }
       ],
       "colors": [
-        {"name": "DLX Pearl Igneous Black", "hex": "#1A1A1A"},
-        {"name": "DLX Pearl Deep Ground Grey", "hex": "#4A4A4A"},
-        {"name": "DLX Mat Dune Brown", "hex": "#7A5A3A"},
-        {"name": "DLX Mat Axis Grey Metallic", "hex": "#6B6B6B"},
-        {"name": "DLX Rebel Red Metallic", "hex": "#A52020"}
+        {
+          "name": "DLX Pearl Igneous Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "DLX Pearl Deep Ground Grey",
+          "hex": "#4A4A4A"
+        },
+        {
+          "name": "DLX Mat Dune Brown",
+          "hex": "#7A5A3A"
+        },
+        {
+          "name": "DLX Mat Axis Grey Metallic",
+          "hex": "#6B6B6B"
+        },
+        {
+          "name": "DLX Rebel Red Metallic",
+          "hex": "#A52020"
+        }
       ],
       "technical_specifications": {
         "engine": "348.36 cc, Single Cylinder, BS6 Phase 2B",
@@ -686,23 +1185,53 @@
       "engine_displacement": "N/A",
       "mileage": "102 km (range)",
       "max_power": "6 kW",
-      "max_torque": "N/A",
+      "max_torque": "22 Nm",
       "top_speed": "80 kmph",
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Honda Activa e is Honda's first electric scooter in India with swappable battery technology, fast charging (C-type), TFT display, and 102 km range per charge.",
-      "features": ["Swappable Battery", "Fast Charging (USB-C)", "TFT Display", "LED Lights", "Disc Brake", "Combined Braking System", "10-inch Front Tyre", "Joystick Control"],
+      "features": [
+        "Swappable Battery",
+        "Fast Charging (USB-C)",
+        "TFT Display",
+        "LED Lights",
+        "Disc Brake",
+        "Combined Braking System",
+        "10-inch Front Tyre",
+        "Joystick Control"
+      ],
       "variants": [
-        {"name": "Standard", "price": "₹1,19,909"},
-        {"name": "Premium", "price": "₹1,52,463"}
+        {
+          "name": "Standard",
+          "price": "₹1,19,909"
+        },
+        {
+          "name": "Premium",
+          "price": "₹1,52,463"
+        }
       ],
       "colors": [
-        {"name": "Pearl Igneous Black", "hex": "#1A1A1A"},
-        {"name": "Matt Foggy Silver Metallic", "hex": "#9A9A9A"},
-        {"name": "Pearl Serenity Blue", "hex": "#3A5A8A"},
-        {"name": "Pearl Misty White", "hex": "#F5F5F0"},
-        {"name": "Pearl Shallow Blue", "hex": "#7A9ABB"}
+        {
+          "name": "Pearl Igneous Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Matt Foggy Silver Metallic",
+          "hex": "#9A9A9A"
+        },
+        {
+          "name": "Pearl Serenity Blue",
+          "hex": "#3A5A8A"
+        },
+        {
+          "name": "Pearl Misty White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Pearl Shallow Blue",
+          "hex": "#7A9ABB"
+        }
       ],
       "technical_specifications": {
         "engine": "Electric Motor, 6 kW",
@@ -723,22 +1252,48 @@
       "engine_displacement": "N/A",
       "mileage": "80 km (range)",
       "max_power": "1.8 kW",
-      "max_torque": "N/A",
+      "max_torque": "40 Nm",
       "top_speed": "50 kmph",
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Honda QC1 is an entry-level electric scooter with 1.5 kWh fixed battery, 80 km range, 6.5-hour charging, 26L under-seat storage, and 5-year warranty on battery.",
-      "features": ["5-inch LCD Display", "LED Headlights", "USB Type-C Port", "26L Under-seat Storage", "Combined Braking System", "Alloy Wheels", "Telescopic Front Forks"],
+      "features": [
+        "5-inch LCD Display",
+        "LED Headlights",
+        "USB Type-C Port",
+        "26L Under-seat Storage",
+        "Combined Braking System",
+        "Alloy Wheels",
+        "Telescopic Front Forks"
+      ],
       "variants": [
-        {"name": "Standard", "price": "₹90,486"}
+        {
+          "name": "Standard",
+          "price": "₹90,486"
+        }
       ],
       "colors": [
-        {"name": "Pearl Igneous Black", "hex": "#1A1A1A"},
-        {"name": "Pearl Misty White", "hex": "#F5F5F0"},
-        {"name": "Matt Foggy Silver Metallic", "hex": "#9A9A9A"},
-        {"name": "Pearl Shallow Blue", "hex": "#7A9ABB"},
-        {"name": "Pearl Serenity Blue", "hex": "#3A5A8A"}
+        {
+          "name": "Pearl Igneous Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Pearl Misty White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Matt Foggy Silver Metallic",
+          "hex": "#9A9A9A"
+        },
+        {
+          "name": "Pearl Shallow Blue",
+          "hex": "#7A9ABB"
+        },
+        {
+          "name": "Pearl Serenity Blue",
+          "hex": "#3A5A8A"
+        }
       ],
       "technical_specifications": {
         "engine": "Electric Motor, 1.8 kW",
@@ -766,13 +1321,27 @@
       "transmission": "6-Speed Manual",
       "source_section": "Available",
       "description": "The Honda CB750 Hornet is a middleweight naked street motorcycle with a 755cc parallel-twin engine, dual ABS disc brakes, and outstanding suspension for city and highway riding.",
-      "features": ["Dual Channel ABS", "Disc Brakes", "Alloy Wheels", "Self Start"],
+      "features": [
+        "Dual Channel ABS",
+        "Disc Brakes",
+        "Alloy Wheels",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Standard", "price": "₹9,20,954"}
+        {
+          "name": "Standard",
+          "price": "₹9,20,954"
+        }
       ],
       "colors": [
-        {"name": "Matte Black Metallic", "hex": "#1A1A1A"},
-        {"name": "Matte Pearl White", "hex": "#F5F5F0"}
+        {
+          "name": "Matte Black Metallic",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Matte Pearl White",
+          "hex": "#F5F5F0"
+        }
       ],
       "technical_specifications": {
         "engine": "755 cc, Parallel Twin, BS6 Phase 2B",
@@ -799,13 +1368,28 @@
       "transmission": "6-Speed Manual",
       "source_section": "Available",
       "description": "The Honda Transalp XL750 is a capable adventure-tourer with a 755cc parallel-twin engine, spoke wheels, ABS, and excellent suspension for both on and off-road adventures.",
-      "features": ["ABS", "Disc Brakes", "Spoke Wheels", "Self Start", "Adventure Touring"],
+      "features": [
+        "ABS",
+        "Disc Brakes",
+        "Spoke Wheels",
+        "Self Start",
+        "Adventure Touring"
+      ],
       "variants": [
-        {"name": "Standard", "price": "₹11,78,649"}
+        {
+          "name": "Standard",
+          "price": "₹11,78,649"
+        }
       ],
       "colors": [
-        {"name": "Graphite Black", "hex": "#2A2A2A"},
-        {"name": "Ross White", "hex": "#F0EDE8"}
+        {
+          "name": "Graphite Black",
+          "hex": "#2A2A2A"
+        },
+        {
+          "name": "Ross White",
+          "hex": "#F0EDE8"
+        }
       ],
       "technical_specifications": {
         "engine": "755 cc, Parallel Twin, BS6 Phase 2B",
@@ -832,12 +1416,26 @@
       "transmission": "6-Speed Manual",
       "source_section": "Available",
       "description": "The Honda CB1000 Hornet is a litre-class naked superbike with Showa SFF-BP forks, Ohlins TTX36 monoshock, traction control, and full electronics package for track and road performance.",
-      "features": ["Showa SFF-BP Forks", "Ohlins TTX36 Monoshock", "Traction Control", "ABS", "TFT Display", "Alloy Wheels", "Self Start"],
+      "features": [
+        "Showa SFF-BP Forks",
+        "Ohlins TTX36 Monoshock",
+        "Traction Control",
+        "ABS",
+        "TFT Display",
+        "Alloy Wheels",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Standard", "price": "₹13,29,329"}
+        {
+          "name": "Standard",
+          "price": "₹13,29,329"
+        }
       ],
       "colors": [
-        {"name": "Matte Black Metallic", "hex": "#1A1A1A"}
+        {
+          "name": "Matte Black Metallic",
+          "hex": "#1A1A1A"
+        }
       ],
       "technical_specifications": {
         "engine": "999 cc, Inline-4, BS6 Phase 2B",
@@ -866,12 +1464,26 @@
       "transmission": "7-Speed Automatic (DCT)",
       "source_section": "Available",
       "description": "The Honda Goldwing Tour is Honda's flagship super-touring motorcycle with a 1833cc flat-6 engine, airbag, cruise control, DCT transmission, and TFT display for ultimate long-distance touring.",
-      "features": ["Airbag", "Cruise Control", "DCT Automatic Transmission", "TFT Display", "ABS", "Alloy Wheels", "Self Start"],
+      "features": [
+        "Airbag",
+        "Cruise Control",
+        "DCT Automatic Transmission",
+        "TFT Display",
+        "ABS",
+        "Alloy Wheels",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "DCT with Airbag", "price": "₹43,12,654"}
+        {
+          "name": "DCT with Airbag",
+          "price": "₹43,12,654"
+        }
       ],
       "colors": [
-        {"name": "Gunmetal Black Metallic", "hex": "#2A2A2A"}
+        {
+          "name": "Gunmetal Black Metallic",
+          "hex": "#2A2A2A"
+        }
       ],
       "technical_specifications": {
         "engine": "1833 cc, Flat-6, BS6 Phase 2",

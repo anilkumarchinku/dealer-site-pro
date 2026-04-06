@@ -13,22 +13,44 @@
       "engine_displacement": "N/A",
       "mileage": "82 km (range)",
       "max_power": "0.9 kW",
-      "max_torque": "N/A",
+      "max_torque": "30 Nm",
       "top_speed": "42 kmph",
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Hero Electric Optima CX is an affordable entry-level electric scooter with 82km range, 42 kmph top speed, and low-speed design suited for urban commuting. It is one of the most affordable electric scooters in India.",
-      "features": ["LED Headlamp", "Digital Speedometer", "USB Charging"],
+      "features": [
+        "LED Headlamp",
+        "Digital Speedometer",
+        "USB Charging"
+      ],
       "variants": [
-        {"name": "Optima CX Standard", "price": "₹75,540"},
-        {"name": "Optima CX HX", "price": "₹84,990"}
+        {
+          "name": "Optima CX Standard",
+          "price": "₹75,540"
+        },
+        {
+          "name": "Optima CX HX",
+          "price": "₹84,990"
+        }
       ],
       "colors": [
-        {"name": "Red", "hex": "#C41E3A"},
-        {"name": "Blue", "hex": "#1A4A8B"},
-        {"name": "Black", "hex": "#1A1A1A"},
-        {"name": "White", "hex": "#F5F5F0"}
+        {
+          "name": "Red",
+          "hex": "#C41E3A"
+        },
+        {
+          "name": "Blue",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "White",
+          "hex": "#F5F5F0"
+        }
       ],
       "technical_specifications": {
         "motor": "BLDC Motor",
@@ -51,22 +73,44 @@
       "engine_displacement": "N/A",
       "mileage": "85 km (range)",
       "max_power": "0.9 kW",
-      "max_torque": "N/A",
+      "max_torque": "30 Nm",
       "top_speed": "42 kmph",
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Hero Electric Atria LX is an entry-level electric scooter with 85km range, 42 kmph top speed, and practical design for urban commuting.",
-      "features": ["LED Headlamp", "Digital Speedometer", "Alloy Wheels"],
+      "features": [
+        "LED Headlamp",
+        "Digital Speedometer",
+        "Alloy Wheels"
+      ],
       "variants": [
-        {"name": "Atria LX Standard", "price": "₹79,990"}
+        {
+          "name": "Atria LX Standard",
+          "price": "₹79,990"
+        }
       ],
       "colors": [
-        {"name": "Red", "hex": "#C41E3A"},
-        {"name": "Blue", "hex": "#1A4A8B"},
-        {"name": "Black", "hex": "#1A1A1A"},
-        {"name": "White", "hex": "#F5F5F0"},
-        {"name": "Yellow", "hex": "#FFD700"}
+        {
+          "name": "Red",
+          "hex": "#C41E3A"
+        },
+        {
+          "name": "Blue",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Yellow",
+          "hex": "#FFD700"
+        }
       ],
       "technical_specifications": {
         "motor": "BLDC Motor",
@@ -89,22 +133,45 @@
       "engine_displacement": "N/A",
       "mileage": "95 km (range)",
       "max_power": "1.2 kW",
-      "max_torque": "N/A",
+      "max_torque": "40 Nm",
       "top_speed": "45 kmph",
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Hero Electric NYX HX is a high-speed electric scooter variant with 95km range, 45 kmph top speed, and 1.2kW motor. It is suited for urban delivery and daily commuting use cases.",
-      "features": ["LED Headlamp", "Digital Display", "USB Charging", "Alloy Wheels"],
+      "features": [
+        "LED Headlamp",
+        "Digital Display",
+        "USB Charging",
+        "Alloy Wheels"
+      ],
       "variants": [
-        {"name": "NYX E5", "price": "₹83,490"},
-        {"name": "NYX HX", "price": "₹88,990"}
+        {
+          "name": "NYX E5",
+          "price": "₹83,490"
+        },
+        {
+          "name": "NYX HX",
+          "price": "₹88,990"
+        }
       ],
       "colors": [
-        {"name": "Black", "hex": "#1A1A1A"},
-        {"name": "Grey", "hex": "#6B6B6B"},
-        {"name": "Red", "hex": "#C41E3A"},
-        {"name": "Blue", "hex": "#1A4A8B"}
+        {
+          "name": "Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Grey",
+          "hex": "#6B6B6B"
+        },
+        {
+          "name": "Red",
+          "hex": "#C41E3A"
+        },
+        {
+          "name": "Blue",
+          "hex": "#1A4A8B"
+        }
       ],
       "technical_specifications": {
         "motor": "BLDC Motor",
@@ -127,22 +194,46 @@
       "engine_displacement": "N/A",
       "mileage": "108 km (range)",
       "max_power": "1.5 kW",
-      "max_torque": "N/A",
+      "max_torque": "50 Nm",
       "top_speed": "45 kmph",
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Hero Electric Photon HX is a premium electric scooter with 108km range, 45 kmph top speed, and 1.5kW motor. It features a sporty design with disc brakes and practical features for daily urban commuting.",
-      "features": ["LED Headlamp", "Digital Display", "USB Charging", "Alloy Wheels", "Disc Brake Front"],
+      "features": [
+        "LED Headlamp",
+        "Digital Display",
+        "USB Charging",
+        "Alloy Wheels",
+        "Disc Brake Front"
+      ],
       "variants": [
-        {"name": "Photon Standard", "price": "₹95,490"},
-        {"name": "Photon HX", "price": "₹1,03,990"}
+        {
+          "name": "Photon Standard",
+          "price": "₹95,490"
+        },
+        {
+          "name": "Photon HX",
+          "price": "₹1,03,990"
+        }
       ],
       "colors": [
-        {"name": "Blazing Red", "hex": "#C41E3A"},
-        {"name": "Aqua Blue", "hex": "#1A4A8B"},
-        {"name": "Metallic Black", "hex": "#1A1A1A"},
-        {"name": "Pearl White", "hex": "#F5F5F0"}
+        {
+          "name": "Blazing Red",
+          "hex": "#C41E3A"
+        },
+        {
+          "name": "Aqua Blue",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Metallic Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Pearl White",
+          "hex": "#F5F5F0"
+        }
       ],
       "technical_specifications": {
         "motor": "BLDC Motor",

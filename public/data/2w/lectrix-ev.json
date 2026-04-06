@@ -19,13 +19,34 @@
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Lectrix SX25 is Lectrix's most affordable low-speed electric scooter with 60km range, 25 kmph top speed, lightweight design, and availability across 91 Indian cities. Rated 4.6/5 by owners.",
-      "features": ["LED Headlamp", "Digital Speedometer", "Compact Design"],
-      "variants": [{"name": "SX25 Standard", "price": "₹54,999"}],
+      "features": [
+        "LED Headlamp",
+        "Digital Speedometer",
+        "Compact Design"
+      ],
+      "variants": [
+        {
+          "name": "SX25 Standard",
+          "price": "₹54,999"
+        }
+      ],
       "colors": [
-        {"name": "Red", "hex": "#C41E3A"},
-        {"name": "Blue", "hex": "#1A4A8B"},
-        {"name": "White", "hex": "#F5F5F0"},
-        {"name": "Black", "hex": "#1A1A1A"}
+        {
+          "name": "Red",
+          "hex": "#C41E3A"
+        },
+        {
+          "name": "Blue",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Black",
+          "hex": "#1A1A1A"
+        }
       ],
       "technical_specifications": {
         "motor": "BLDC Motor",
@@ -54,13 +75,35 @@
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Lectrix LXS 2.0 is a high-speed electric scooter with 98km range, 55 kmph top speed, and 3-hour fast charging.",
-      "features": ["LED Headlamp", "Digital Display", "USB Charging", "Fast 3-Hour Charging"],
-      "variants": [{"name": "LXS 2.0 Standard", "price": "₹84,993"}],
+      "features": [
+        "LED Headlamp",
+        "Digital Display",
+        "USB Charging",
+        "Fast 3-Hour Charging"
+      ],
+      "variants": [
+        {
+          "name": "LXS 2.0 Standard",
+          "price": "₹84,993"
+        }
+      ],
       "colors": [
-        {"name": "Black", "hex": "#1A1A1A"},
-        {"name": "White", "hex": "#F5F5F0"},
-        {"name": "Red", "hex": "#C41E3A"},
-        {"name": "Blue", "hex": "#1A4A8B"}
+        {
+          "name": "Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Red",
+          "hex": "#C41E3A"
+        },
+        {
+          "name": "Blue",
+          "hex": "#1A4A8B"
+        }
       ],
       "technical_specifications": {
         "motor": "BLDC Motor",
@@ -89,13 +132,35 @@
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Lectrix LXS 3.0 is a premium long-range electric scooter with 120km range, 54 kmph top speed, and 3.5-hour charging. Rated 4.7/5 by owners.",
-      "features": ["LED Headlamp", "Digital Display", "USB Charging", "Long Range"],
-      "variants": [{"name": "LXS 3.0 Standard", "price": "₹91,997"}],
+      "features": [
+        "LED Headlamp",
+        "Digital Display",
+        "USB Charging",
+        "Long Range"
+      ],
+      "variants": [
+        {
+          "name": "LXS 3.0 Standard",
+          "price": "₹91,997"
+        }
+      ],
       "colors": [
-        {"name": "Midnight Black", "hex": "#1A1A1A"},
-        {"name": "Pearl White", "hex": "#F5F5F0"},
-        {"name": "Fiery Red", "hex": "#C41E3A"},
-        {"name": "Ocean Blue", "hex": "#1A4A8B"}
+        {
+          "name": "Midnight Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Pearl White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Fiery Red",
+          "hex": "#C41E3A"
+        },
+        {
+          "name": "Ocean Blue",
+          "hex": "#1A4A8B"
+        }
       ],
       "technical_specifications": {
         "motor": "BLDC Motor",
@@ -118,20 +183,46 @@
       "engine_displacement": "N/A",
       "mileage": "90 km (range)",
       "max_power": "1.2 kW",
-      "max_torque": "N/A",
+      "max_torque": "48 Nm",
       "top_speed": "65 kmph",
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Lectrix Nduro is a premium electric scooter with 90km range, 65 kmph top speed, 1.2kW motor, and rugged design. Rated 4.6/5 by owners.",
-      "features": ["LED Headlamp", "Digital Display", "USB Charging", "Disc Brakes", "Rugged Design"],
-      "variants": [{"name": "Nduro Standard", "price": "₹95,350"}],
+      "features": [
+        "LED Headlamp",
+        "Digital Display",
+        "USB Charging",
+        "Disc Brakes",
+        "Rugged Design"
+      ],
+      "variants": [
+        {
+          "name": "Nduro Standard",
+          "price": "₹95,350"
+        }
+      ],
       "colors": [
-        {"name": "Black", "hex": "#1A1A1A"},
-        {"name": "White", "hex": "#F5F5F0"},
-        {"name": "Red", "hex": "#C41E3A"},
-        {"name": "Orange", "hex": "#E8600A"},
-        {"name": "Green", "hex": "#2D6A4F"}
+        {
+          "name": "Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Red",
+          "hex": "#C41E3A"
+        },
+        {
+          "name": "Orange",
+          "hex": "#E8600A"
+        },
+        {
+          "name": "Green",
+          "hex": "#2D6A4F"
+        }
       ],
       "technical_specifications": {
         "motor": "BLDC Motor",

@@ -13,27 +13,72 @@
       "engine_displacement": "N/A",
       "mileage": "92 km (range)",
       "max_power": "6 kW",
-      "max_torque": "N/A",
+      "max_torque": "24 Nm",
       "top_speed": "70 kmph",
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The VIDA VX2 is Hero MotoCorp's affordable entry-level electric scooter with 92km range, 70 kmph top speed, 6kW motor, removable 3.4kWh battery, and 3.53-hour fast charging. It features Battery-as-a-Service (BaaS) option and 7 colour choices.",
-      "features": ["Removable Battery", "Battery-as-a-Service (BaaS)", "Drum Brake Front", "Drum Brake Rear", "Combined Braking System", "Digital Display", "USB Charging", "Multiple Ride Modes", "Reverse Parking Mode", "Mobile App Connectivity", "LED Headlamp"],
+      "features": [
+        "Removable Battery",
+        "Battery-as-a-Service (BaaS)",
+        "Drum Brake Front",
+        "Drum Brake Rear",
+        "Combined Braking System",
+        "Digital Display",
+        "USB Charging",
+        "Multiple Ride Modes",
+        "Reverse Parking Mode",
+        "Mobile App Connectivity",
+        "LED Headlamp"
+      ],
       "variants": [
-        {"name": "VX2 2 kWh", "price": "₹99,490"},
-        {"name": "VX2 2.5 kWh", "price": "₹1,07,490"},
-        {"name": "VX2 3 kWh", "price": "₹1,14,490"},
-        {"name": "VX2 3.4 kWh", "price": "₹1,20,440"}
+        {
+          "name": "VX2 2 kWh",
+          "price": "₹99,490"
+        },
+        {
+          "name": "VX2 2.5 kWh",
+          "price": "₹1,07,490"
+        },
+        {
+          "name": "VX2 3 kWh",
+          "price": "₹1,14,490"
+        },
+        {
+          "name": "VX2 3.4 kWh",
+          "price": "₹1,20,440"
+        }
       ],
       "colors": [
-        {"name": "Metallic Grey", "hex": "#6B6B6B"},
-        {"name": "Pearl Black", "hex": "#1A1A1A"},
-        {"name": "Nexus Blue", "hex": "#1A4A8B"},
-        {"name": "Pearl Red", "hex": "#C41E3A"},
-        {"name": "Matte White", "hex": "#F0F0F0"},
-        {"name": "Matte Lime", "hex": "#BFD900"},
-        {"name": "Autumn Orange", "hex": "#E8600A"}
+        {
+          "name": "Metallic Grey",
+          "hex": "#6B6B6B"
+        },
+        {
+          "name": "Pearl Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Nexus Blue",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Pearl Red",
+          "hex": "#C41E3A"
+        },
+        {
+          "name": "Matte White",
+          "hex": "#F0F0F0"
+        },
+        {
+          "name": "Matte Lime",
+          "hex": "#BFD900"
+        },
+        {
+          "name": "Autumn Orange",
+          "hex": "#E8600A"
+        }
       ],
       "technical_specifications": {
         "motor": "PMSM Motor",
@@ -56,24 +101,59 @@
       "engine_displacement": "N/A",
       "mileage": "143 km (range)",
       "max_power": "6 kW",
-      "max_torque": "N/A",
+      "max_torque": "24 Nm",
       "top_speed": "85 kmph",
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The VIDA V2 is Hero MotoCorp's premium electric scooter with 143km range, 85 kmph top speed, 6kW motor, TFT instrument cluster, cruise control, front disc brake, and 50,000km battery warranty. It bridges the gap between VX2 and performance EVs.",
-      "features": ["TFT Instrument Cluster", "Cruise Control", "Front Disc Brake", "Drum Brake Rear", "Removable Battery", "Multiple Ride Modes", "LED Headlamp", "USB Charging", "Mobile App Connectivity", "50,000 km Battery Warranty"],
+      "features": [
+        "TFT Instrument Cluster",
+        "Cruise Control",
+        "Front Disc Brake",
+        "Drum Brake Rear",
+        "Removable Battery",
+        "Multiple Ride Modes",
+        "LED Headlamp",
+        "USB Charging",
+        "Mobile App Connectivity",
+        "50,000 km Battery Warranty"
+      ],
       "variants": [
-        {"name": "V2 Plus", "price": "₹1,29,566"},
-        {"name": "V2 Pro", "price": "₹1,44,495"}
+        {
+          "name": "V2 Plus",
+          "price": "₹1,29,566"
+        },
+        {
+          "name": "V2 Pro",
+          "price": "₹1,44,495"
+        }
       ],
       "colors": [
-        {"name": "Matte Cyan", "hex": "#00CED1"},
-        {"name": "Matte White", "hex": "#F0F0F0"},
-        {"name": "Glossy Black", "hex": "#1A1A1A"},
-        {"name": "Glossy Sports Red", "hex": "#C41E3A"},
-        {"name": "Matte Abrax Orange", "hex": "#E8600A"},
-        {"name": "Matte Nexus Blue", "hex": "#1A4A8B"}
+        {
+          "name": "Matte Cyan",
+          "hex": "#00CED1"
+        },
+        {
+          "name": "Matte White",
+          "hex": "#F0F0F0"
+        },
+        {
+          "name": "Glossy Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Glossy Sports Red",
+          "hex": "#C41E3A"
+        },
+        {
+          "name": "Matte Abrax Orange",
+          "hex": "#E8600A"
+        },
+        {
+          "name": "Matte Nexus Blue",
+          "hex": "#1A4A8B"
+        }
       ],
       "technical_specifications": {
         "motor": "PMSM Motor",

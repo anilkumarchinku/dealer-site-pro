@@ -13,24 +13,55 @@
       "engine_displacement": "N/A",
       "mileage": "70 km (range)",
       "max_power": "1.5 kW",
-      "max_torque": "N/A",
+      "max_torque": "52 Nm",
       "top_speed": "65 kmph",
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Bounce Infinity E1 is an electric scooter with swappable battery technology, 70km range (up to 110km reported by users), 65 kmph top speed, 1.5kW motor, dual disc brakes, and a monthly battery subscription option. BPCL partnerships expand swap network across India.",
-      "features": ["Swappable Battery", "Battery Subscription Option", "Dual Disc Brakes", "Combined Braking System", "USB Charging", "LED Headlamp"],
+      "features": [
+        "Swappable Battery",
+        "Battery Subscription Option",
+        "Dual Disc Brakes",
+        "Combined Braking System",
+        "USB Charging",
+        "LED Headlamp"
+      ],
       "variants": [
-        {"name": "E1 Standard", "price": "₹1,15,605"},
-        {"name": "E1 Plus", "price": "₹1,20,990"},
-        {"name": "E1 Limited Edition", "price": "₹1,25,615"}
+        {
+          "name": "E1 Standard",
+          "price": "₹1,15,605"
+        },
+        {
+          "name": "E1 Plus",
+          "price": "₹1,20,990"
+        },
+        {
+          "name": "E1 Limited Edition",
+          "price": "₹1,25,615"
+        }
       ],
       "colors": [
-        {"name": "Wild Brown", "hex": "#8B4513"},
-        {"name": "Pearl White", "hex": "#F5F5F0"},
-        {"name": "Sporty Red", "hex": "#C41E3A"},
-        {"name": "Comet Gray", "hex": "#6B6B6B"},
-        {"name": "Sparkle Black", "hex": "#1A1A1A"}
+        {
+          "name": "Wild Brown",
+          "hex": "#8B4513"
+        },
+        {
+          "name": "Pearl White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Sporty Red",
+          "hex": "#C41E3A"
+        },
+        {
+          "name": "Comet Gray",
+          "hex": "#6B6B6B"
+        },
+        {
+          "name": "Sparkle Black",
+          "hex": "#1A1A1A"
+        }
       ],
       "technical_specifications": {
         "motor": "BLDC Motor",

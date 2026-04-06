@@ -19,22 +19,64 @@
       "transmission": "Automatic CVT",
       "source_section": "Available",
       "description": "The Suzuki Access 125 is a popular 124cc scooter with combined braking system, USB charging port, external fuel filling, wide seat, and 106 kg lightweight design.",
-      "features": ["USB Charging Port", "Combined Braking System", "External Fuel Filling", "Kick Start", "Self Start"],
+      "features": [
+        "USB Charging Port",
+        "Combined Braking System",
+        "External Fuel Filling",
+        "Kick Start",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Drum", "price": "₹81,455"},
-        {"name": "Disc CBS", "price": "₹88,000"},
-        {"name": "Disc CBS Special Edition", "price": "₹93,000"},
-        {"name": "Bluetooth", "price": "₹96,000"},
-        {"name": "Bluetooth Special Edition", "price": "₹98,000"},
-        {"name": "Ride Connect", "price": "₹1,01,749"}
+        {
+          "name": "Drum",
+          "price": "₹81,455"
+        },
+        {
+          "name": "Disc CBS",
+          "price": "₹88,000"
+        },
+        {
+          "name": "Disc CBS Special Edition",
+          "price": "₹93,000"
+        },
+        {
+          "name": "Bluetooth",
+          "price": "₹96,000"
+        },
+        {
+          "name": "Bluetooth Special Edition",
+          "price": "₹98,000"
+        },
+        {
+          "name": "Ride Connect",
+          "price": "₹1,01,749"
+        }
       ],
       "colors": [
-        {"name": "Metallic Mat Black", "hex": "#2A2A2A"},
-        {"name": "Pearl Grace White", "hex": "#F5F5F0"},
-        {"name": "Metallic Mat Stellar Blue", "hex": "#1A4A8B"},
-        {"name": "Solid Ice Green", "hex": "#5A8A5A"},
-        {"name": "Pearl Shiny Beige", "hex": "#C8B88A"},
-        {"name": "Pearl Mat Aqua Silver", "hex": "#9ABBC8"}
+        {
+          "name": "Metallic Mat Black",
+          "hex": "#2A2A2A"
+        },
+        {
+          "name": "Pearl Grace White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Metallic Mat Stellar Blue",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Solid Ice Green",
+          "hex": "#5A8A5A"
+        },
+        {
+          "name": "Pearl Shiny Beige",
+          "hex": "#C8B88A"
+        },
+        {
+          "name": "Pearl Mat Aqua Silver",
+          "hex": "#9ABBC8"
+        }
       ],
       "technical_specifications": {
         "engine": "124 cc, Single Cylinder, BS6 Phase 2B",
@@ -61,19 +103,55 @@
       "transmission": "Automatic CVT",
       "source_section": "Available",
       "description": "The Suzuki Avenis 125 is a sporty 124cc scooter with Bluetooth connectivity, navigation, disc brake with CBS, USB charging port, and 106 kg lightweight build.",
-      "features": ["Bluetooth Connectivity", "Navigation", "Disc Brake", "CBS", "USB Charging Port", "Alloy Wheels", "Kick Start", "Self Start"],
+      "features": [
+        "Bluetooth Connectivity",
+        "Navigation",
+        "Disc Brake",
+        "CBS",
+        "USB Charging Port",
+        "Alloy Wheels",
+        "Kick Start",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Standard", "price": "₹86,769"},
-        {"name": "Limited Edition", "price": "₹87,500"},
-        {"name": "Special", "price": "₹89,155"}
+        {
+          "name": "Standard",
+          "price": "₹86,769"
+        },
+        {
+          "name": "Limited Edition",
+          "price": "₹87,500"
+        },
+        {
+          "name": "Special",
+          "price": "₹89,155"
+        }
       ],
       "colors": [
-        {"name": "Metallic Matte Platinum Silver & Glass Sparkle Black", "hex": "#C8C8C8"},
-        {"name": "Glossy Sparkle Black", "hex": "#1A1A1A"},
-        {"name": "Glossy Sparkle Black Pearl Mira Red", "hex": "#8B0000"},
-        {"name": "Glossy Sparkle Black Pearl Glacier White", "hex": "#F5F5F0"},
-        {"name": "Champion Yellow No 2 Glossy Sparkle Black", "hex": "#E8C200"},
-        {"name": "Metallic Mat Black & Metallic Mat Titanium Silver", "hex": "#2A2A2A"}
+        {
+          "name": "Metallic Matte Platinum Silver & Glass Sparkle Black",
+          "hex": "#C8C8C8"
+        },
+        {
+          "name": "Glossy Sparkle Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Glossy Sparkle Black Pearl Mira Red",
+          "hex": "#8B0000"
+        },
+        {
+          "name": "Glossy Sparkle Black Pearl Glacier White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Champion Yellow No 2 Glossy Sparkle Black",
+          "hex": "#E8C200"
+        },
+        {
+          "name": "Metallic Mat Black & Metallic Mat Titanium Silver",
+          "hex": "#2A2A2A"
+        }
       ],
       "technical_specifications": {
         "engine": "124.3 cc, Single Cylinder, BS6 Phase 2B",
@@ -100,19 +178,52 @@
       "transmission": "Automatic CVT",
       "source_section": "Available",
       "description": "The Suzuki Burgman Street 125 is a maxi-style scooter with 58.5 kmpl ARAI mileage, disc brake with CBS, alloy wheels, and stylish maxi-scooter design at 114 kg.",
-      "features": ["Disc Brake", "CBS", "Alloy Wheels", "Kick Start", "Self Start"],
+      "features": [
+        "Disc Brake",
+        "CBS",
+        "Alloy Wheels",
+        "Kick Start",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Standard", "price": "₹1,01,944"},
-        {"name": "Bluetooth", "price": "₹1,07,000"},
-        {"name": "EX", "price": "₹1,10,000"},
-        {"name": "EX Bluetooth", "price": "₹1,13,220"}
+        {
+          "name": "Standard",
+          "price": "₹1,01,944"
+        },
+        {
+          "name": "Bluetooth",
+          "price": "₹1,07,000"
+        },
+        {
+          "name": "EX",
+          "price": "₹1,10,000"
+        },
+        {
+          "name": "EX Bluetooth",
+          "price": "₹1,13,220"
+        }
       ],
       "colors": [
-        {"name": "Met Mat Stellar Blue", "hex": "#1A4A8B"},
-        {"name": "Met Mat Black", "hex": "#2A2A2A"},
-        {"name": "Pearl Grace White", "hex": "#F5F5F0"},
-        {"name": "Pearl Mat Shadow Green", "hex": "#4A6B4A"},
-        {"name": "Met Royal Bronze", "hex": "#7A5A3A"}
+        {
+          "name": "Met Mat Stellar Blue",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Met Mat Black",
+          "hex": "#2A2A2A"
+        },
+        {
+          "name": "Pearl Grace White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Pearl Mat Shadow Green",
+          "hex": "#4A6B4A"
+        },
+        {
+          "name": "Met Royal Bronze",
+          "hex": "#7A5A3A"
+        }
       ],
       "technical_specifications": {
         "engine": "124 cc, Single Cylinder, BS6 Phase 2B",
@@ -139,16 +250,39 @@
       "transmission": "5-Speed Manual",
       "source_section": "Available",
       "description": "The Suzuki Gixxer is a naked 155cc street motorcycle with smooth engine, comfortable ergonomics, disc brakes, and ABS offering reliable performance for city riding.",
-      "features": ["Disc Brakes", "ABS", "Alloy Wheels", "Self Start"],
+      "features": [
+        "Disc Brakes",
+        "ABS",
+        "Alloy Wheels",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Standard", "price": "₹1,28,892"},
-        {"name": "Special Edition", "price": "₹1,29,345"}
+        {
+          "name": "Standard",
+          "price": "₹1,28,892"
+        },
+        {
+          "name": "Special Edition",
+          "price": "₹1,29,345"
+        }
       ],
       "colors": [
-        {"name": "Pearl Mira Red", "hex": "#CC2020"},
-        {"name": "Glass Sparkle Black", "hex": "#1A1A1A"},
-        {"name": "Metallic Triton Blue", "hex": "#1A4A8B"},
-        {"name": "Met Oort Gray and Met Lush Green", "hex": "#6B6B6B"}
+        {
+          "name": "Pearl Mira Red",
+          "hex": "#CC2020"
+        },
+        {
+          "name": "Glass Sparkle Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Metallic Triton Blue",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Met Oort Gray and Met Lush Green",
+          "hex": "#6B6B6B"
+        }
       ],
       "technical_specifications": {
         "engine": "155 cc, Single Cylinder, BS6 Phase 2B",
@@ -175,18 +309,48 @@
       "transmission": "5-Speed Manual",
       "source_section": "Available",
       "description": "The Suzuki Gixxer SF is a fully-faired 155cc sports motorcycle with disc brakes, single-channel ABS, and refined engine delivery for sporty daily commuting.",
-      "features": ["Full Fairing", "Disc Brakes", "Single-Channel ABS", "Alloy Wheels", "Self Start"],
+      "features": [
+        "Full Fairing",
+        "Disc Brakes",
+        "Single-Channel ABS",
+        "Alloy Wheels",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Standard", "price": "₹1,37,594"},
-        {"name": "Special Edition", "price": "₹1,38,061"}
+        {
+          "name": "Standard",
+          "price": "₹1,37,594"
+        },
+        {
+          "name": "Special Edition",
+          "price": "₹1,38,061"
+        }
       ],
       "colors": [
-        {"name": "Pearl Mira Red", "hex": "#CC2020"},
-        {"name": "Metallic Triton Blue", "hex": "#1A4A8B"},
-        {"name": "Glass Sparkle Black", "hex": "#1A1A1A"},
-        {"name": "Met Triton Blue with Pearl Glacier White", "hex": "#1A4A8B"},
-        {"name": "Grey and Red", "hex": "#6B6B6B"},
-        {"name": "Met Oort Gray with Met Lush Green", "hex": "#4A6B4A"}
+        {
+          "name": "Pearl Mira Red",
+          "hex": "#CC2020"
+        },
+        {
+          "name": "Metallic Triton Blue",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Glass Sparkle Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Met Triton Blue with Pearl Glacier White",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Grey and Red",
+          "hex": "#6B6B6B"
+        },
+        {
+          "name": "Met Oort Gray with Met Lush Green",
+          "hex": "#4A6B4A"
+        }
       ],
       "technical_specifications": {
         "engine": "155 cc, Single Cylinder, BS6 Phase 2B",
@@ -213,17 +377,44 @@
       "transmission": "6-Speed Manual",
       "source_section": "Available",
       "description": "The Suzuki Gixxer 250 is a naked 250cc street motorcycle with digital cluster, TBT navigation, ABS disc brakes, and Suzuki's legendary build quality and reliability.",
-      "features": ["Digital Cluster with TBT Navigation", "Disc Brakes", "ABS", "Alloy Wheels", "Self Start"],
+      "features": [
+        "Digital Cluster with TBT Navigation",
+        "Disc Brakes",
+        "ABS",
+        "Alloy Wheels",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Standard", "price": "₹1,83,994"},
-        {"name": "Special Edition", "price": "₹1,84,451"}
+        {
+          "name": "Standard",
+          "price": "₹1,83,994"
+        },
+        {
+          "name": "Special Edition",
+          "price": "₹1,84,451"
+        }
       ],
       "colors": [
-        {"name": "Met Triton Blue / Pearl Glacier White", "hex": "#1A4A8B"},
-        {"name": "Pearl Glacier White / Metallic Mat Platinum Silver", "hex": "#F5F5F0"},
-        {"name": "Glass Sparkle Black", "hex": "#1A1A1A"},
-        {"name": "Metallic Matte Black", "hex": "#2A2A2A"},
-        {"name": "Met Mat Black / Met Mat Bordeaux Red", "hex": "#2A2A2A"}
+        {
+          "name": "Met Triton Blue / Pearl Glacier White",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Pearl Glacier White / Metallic Mat Platinum Silver",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Glass Sparkle Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Metallic Matte Black",
+          "hex": "#2A2A2A"
+        },
+        {
+          "name": "Met Mat Black / Met Mat Bordeaux Red",
+          "hex": "#2A2A2A"
+        }
       ],
       "technical_specifications": {
         "engine": "249 cc, Single Cylinder, BS6 Phase 2B",
@@ -250,17 +441,44 @@
       "transmission": "6-Speed Manual",
       "source_section": "Available",
       "description": "The Suzuki Gixxer SF 250 is a fully-faired 250cc sports bike with 150 kmph top speed, ABS disc brakes, excellent stability at high speeds, and 35 kmpl ARAI mileage.",
-      "features": ["Full Fairing", "Disc Brakes", "ABS", "Alloy Wheels", "Self Start"],
+      "features": [
+        "Full Fairing",
+        "Disc Brakes",
+        "ABS",
+        "Alloy Wheels",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Standard", "price": "₹1,92,245"},
-        {"name": "Special Edition", "price": "₹1,92,703"}
+        {
+          "name": "Standard",
+          "price": "₹1,92,245"
+        },
+        {
+          "name": "Special Edition",
+          "price": "₹1,92,703"
+        }
       ],
       "colors": [
-        {"name": "Met Triton Blue / Pearl Glacier White", "hex": "#1A4A8B"},
-        {"name": "Pearl Glacier White / Metallic Mat Platinum Silver", "hex": "#F5F5F0"},
-        {"name": "Glass Sparkle Black", "hex": "#1A1A1A"},
-        {"name": "Metallic Matte Black", "hex": "#2A2A2A"},
-        {"name": "Met Mat Black / Met Mat Bordeaux Red", "hex": "#2A2A2A"}
+        {
+          "name": "Met Triton Blue / Pearl Glacier White",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Pearl Glacier White / Metallic Mat Platinum Silver",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Glass Sparkle Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Metallic Matte Black",
+          "hex": "#2A2A2A"
+        },
+        {
+          "name": "Met Mat Black / Met Mat Bordeaux Red",
+          "hex": "#2A2A2A"
+        }
       ],
       "technical_specifications": {
         "engine": "249 cc, Single Cylinder, BS6 Phase 2B",
@@ -287,16 +505,41 @@
       "transmission": "6-Speed Manual",
       "source_section": "Available",
       "description": "The Suzuki V-Strom SX is a 250cc adventure-touring motorcycle with Bluetooth instrument cluster, disc brakes with ABS, comfortable ergonomics, and excellent fuel economy.",
-      "features": ["Bluetooth Instrument Cluster", "Disc Brakes", "ABS", "Adventure Ergonomics", "Alloy Wheels", "Self Start"],
+      "features": [
+        "Bluetooth Instrument Cluster",
+        "Disc Brakes",
+        "ABS",
+        "Adventure Ergonomics",
+        "Alloy Wheels",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Standard", "price": "₹2,00,382"}
+        {
+          "name": "Standard",
+          "price": "₹2,00,382"
+        }
       ],
       "colors": [
-        {"name": "Glass Sparkle Black", "hex": "#1A1A1A"},
-        {"name": "Pearl Glacier White & Metallic Mat Stellar Blue", "hex": "#F5F5F0"},
-        {"name": "Champion Yellow", "hex": "#E8C200"},
-        {"name": "Champion Blue", "hex": "#1A4A8B"},
-        {"name": "Met Sonoma Red", "hex": "#CC2020"}
+        {
+          "name": "Glass Sparkle Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Pearl Glacier White & Metallic Mat Stellar Blue",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Champion Yellow",
+          "hex": "#E8C200"
+        },
+        {
+          "name": "Champion Blue",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Met Sonoma Red",
+          "hex": "#CC2020"
+        }
       ],
       "technical_specifications": {
         "engine": "249 cc, Single Cylinder, BS6 Phase 2B",
@@ -323,13 +566,29 @@
       "transmission": "6-Speed Manual",
       "source_section": "Available",
       "description": "The Suzuki Gixxer SF 250 Flex Fuel is India's flex-fuel sports bike compatible with ethanol blends, featuring full fairing, ABS disc brakes, and 35 kmpl ARAI mileage.",
-      "features": ["Flex Fuel Compatible", "Full Fairing", "Disc Brakes", "ABS", "Alloy Wheels", "Self Start"],
+      "features": [
+        "Flex Fuel Compatible",
+        "Full Fairing",
+        "Disc Brakes",
+        "ABS",
+        "Alloy Wheels",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Standard", "price": "₹2,00,791"}
+        {
+          "name": "Standard",
+          "price": "₹2,00,791"
+        }
       ],
       "colors": [
-        {"name": "Met Matt Black", "hex": "#2A2A2A"},
-        {"name": "Met Matt Black and Met Mat Bordeaux Red", "hex": "#2A2A2A"}
+        {
+          "name": "Met Matt Black",
+          "hex": "#2A2A2A"
+        },
+        {
+          "name": "Met Matt Black and Met Mat Bordeaux Red",
+          "hex": "#2A2A2A"
+        }
       ],
       "technical_specifications": {
         "engine": "249 cc, Single Cylinder, BS6 Phase 2B, Flex Fuel",
@@ -350,21 +609,44 @@
       "engine_displacement": "N/A",
       "mileage": "95 km (range)",
       "max_power": "4.1 kW",
-      "max_torque": "N/A",
+      "max_torque": "15 Nm",
       "top_speed": "71 kmph",
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Suzuki E Access is an electric scooter with LFP battery for longevity, 95 km range, color TFT with Bluetooth, disc brake with CBS, and 6.42-hour charging time.",
-      "features": ["LFP Battery", "Color TFT Display", "Bluetooth", "Disc Brake", "CBS", "USB Charging Port", "Self Start"],
+      "features": [
+        "LFP Battery",
+        "Color TFT Display",
+        "Bluetooth",
+        "Disc Brake",
+        "CBS",
+        "USB Charging Port",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Standard", "price": "₹1,90,665"}
+        {
+          "name": "Standard",
+          "price": "₹1,90,665"
+        }
       ],
       "colors": [
-        {"name": "Metallic Mat Stellar Blue / Mat Fibroin Gray", "hex": "#1A4A8B"},
-        {"name": "Pearl Jade Green and Mat Fibroin Gray", "hex": "#4A6B4A"},
-        {"name": "Pearl Grace White and Mat Fibroin Gray", "hex": "#F5F5F0"},
-        {"name": "Metallic Mat Black and Mat Bordeaux Red", "hex": "#2A2A2A"}
+        {
+          "name": "Metallic Mat Stellar Blue / Mat Fibroin Gray",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Pearl Jade Green and Mat Fibroin Gray",
+          "hex": "#4A6B4A"
+        },
+        {
+          "name": "Pearl Grace White and Mat Fibroin Gray",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Metallic Mat Black and Mat Bordeaux Red",
+          "hex": "#2A2A2A"
+        }
       ],
       "technical_specifications": {
         "engine": "Electric Motor, 4.1 kW",
@@ -392,14 +674,31 @@
       "transmission": "6-Speed Manual",
       "source_section": "Available",
       "description": "The Suzuki GSX-8R is a mid-size fully-faired sports tourer with 776cc parallel-twin engine, dual-channel ABS, and capability for both city and highway performance.",
-      "features": ["Full Fairing", "Dual Channel ABS", "Alloy Wheels", "Self Start"],
+      "features": [
+        "Full Fairing",
+        "Dual Channel ABS",
+        "Alloy Wheels",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Standard", "price": "₹9,89,328"}
+        {
+          "name": "Standard",
+          "price": "₹9,89,328"
+        }
       ],
       "colors": [
-        {"name": "Metallic Matt Black", "hex": "#2A2A2A"},
-        {"name": "Metallic Matt Sword Silver", "hex": "#C8C8C8"},
-        {"name": "Metallic Triton Blue", "hex": "#1A4A8B"}
+        {
+          "name": "Metallic Matt Black",
+          "hex": "#2A2A2A"
+        },
+        {
+          "name": "Metallic Matt Sword Silver",
+          "hex": "#C8C8C8"
+        },
+        {
+          "name": "Metallic Triton Blue",
+          "hex": "#1A4A8B"
+        }
       ],
       "technical_specifications": {
         "engine": "776 cc, Parallel-Twin, BS6 Phase 2B",
@@ -426,14 +725,34 @@
       "transmission": "6-Speed Manual",
       "source_section": "Available",
       "description": "The Suzuki Hayabusa is a legendary superbike with 1340cc inline-4 engine, Suzuki Intelligent Ride System (S.I.R.S.), lean-angle-sensitive traction control, cornering ABS, and bi-directional quickshifter.",
-      "features": ["S.I.R.S. (Suzuki Intelligent Ride System)", "Lean-angle Traction Control", "Cornering ABS", "Bi-directional Quickshifter", "IMU", "Alloy Wheels", "Self Start"],
+      "features": [
+        "S.I.R.S. (Suzuki Intelligent Ride System)",
+        "Lean-angle Traction Control",
+        "Cornering ABS",
+        "Bi-directional Quickshifter",
+        "IMU",
+        "Alloy Wheels",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Standard", "price": "₹18,06,885"}
+        {
+          "name": "Standard",
+          "price": "₹18,06,885"
+        }
       ],
       "colors": [
-        {"name": "Metallic Mystic Silver / Pearl Vigor Blue", "hex": "#C8C8C8"},
-        {"name": "Glass Sparkle Black / Metallic Mat Titanium Silver", "hex": "#1A1A1A"},
-        {"name": "Metallic Mat Steel Green / Glass Sparkle Black", "hex": "#2A4A2A"}
+        {
+          "name": "Metallic Mystic Silver / Pearl Vigor Blue",
+          "hex": "#C8C8C8"
+        },
+        {
+          "name": "Glass Sparkle Black / Metallic Mat Titanium Silver",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Metallic Mat Steel Green / Glass Sparkle Black",
+          "hex": "#2A4A2A"
+        }
       ],
       "technical_specifications": {
         "engine": "1340 cc, Inline-4, BS6 Phase 2B",

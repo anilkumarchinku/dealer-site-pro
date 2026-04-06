@@ -19,20 +19,57 @@
       "transmission": "5-Speed Manual",
       "source_section": "Available",
       "description": "The BSA Gold Star 650 is a premium classic motorcycle from the revived British BSA brand (owned by Classic Legends/Mahindra), featuring a 652cc single-cylinder engine, retro styling, chrome accents, and spoke wheels. Rated 4.6/5 by owners.",
-      "features": ["Chrome Accents", "Spoke Wheels", "Disc Brakes", "ABS", "LED Headlamp", "Self Start"],
+      "features": [
+        "Chrome Accents",
+        "Spoke Wheels",
+        "Disc Brakes",
+        "ABS",
+        "LED Headlamp",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Midnight Black", "price": "₹3,24,633"},
-        {"name": "Dawn Silver", "price": "₹3,24,633"},
-        {"name": "Insignia Red", "price": "₹3,37,190"},
-        {"name": "Highland Green", "price": "₹3,37,190"},
-        {"name": "Shadow Black", "price": "₹3,48,284"},
-        {"name": "Legacy Edition", "price": "₹3,62,381"}
+        {
+          "name": "Midnight Black",
+          "price": "₹3,24,633"
+        },
+        {
+          "name": "Dawn Silver",
+          "price": "₹3,24,633"
+        },
+        {
+          "name": "Insignia Red",
+          "price": "₹3,37,190"
+        },
+        {
+          "name": "Highland Green",
+          "price": "₹3,37,190"
+        },
+        {
+          "name": "Shadow Black",
+          "price": "₹3,48,284"
+        },
+        {
+          "name": "Legacy Edition",
+          "price": "₹3,62,381"
+        }
       ],
       "colors": [
-        {"name": "Black", "hex": "#1A1A1A"},
-        {"name": "Chrome Silver", "hex": "#C8C8C8"},
-        {"name": "British Green", "hex": "#2D6A4F"},
-        {"name": "Burgundy Red", "hex": "#800000"}
+        {
+          "name": "Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Chrome Silver",
+          "hex": "#C8C8C8"
+        },
+        {
+          "name": "British Green",
+          "hex": "#2D6A4F"
+        },
+        {
+          "name": "Burgundy Red",
+          "hex": "#800000"
+        }
       ],
       "technical_specifications": {
         "engine": "652 cc, Single Cylinder",
@@ -52,8 +89,8 @@
       "price": "₹2,65,000",
       "engine_displacement": "N/A",
       "mileage": "N/A",
-      "max_power": "N/A",
-      "max_torque": "N/A",
+      "max_power": "65 bhp @ 6500 rpm",
+      "max_torque": "65 Nm @ 4000 rpm",
       "top_speed": "N/A",
       "fuel_type": "Petrol",
       "transmission": "Manual",
@@ -71,8 +108,8 @@
       "price": "N/A",
       "engine_displacement": "652 cc",
       "mileage": "N/A",
-      "max_power": "N/A",
-      "max_torque": "N/A",
+      "max_power": "45 bhp @ 7000 rpm",
+      "max_torque": "55 Nm @ 5500 rpm",
       "top_speed": "N/A",
       "fuel_type": "Petrol",
       "transmission": "Manual",

@@ -19,16 +19,42 @@
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Yulu Miracle GR is a swappable-battery electric scooter designed for gig economy workers and high-frequency urban riders. It offers battery swapping via Yulu's swap network, eliminating charging downtime, with subscription-based battery plans.",
-      "features": ["Swappable Battery (Yulu Swap Stations)", "Zero Charging Downtime", "Mobile App for Swap Station Locator", "Anti-Theft with Remote Lock", "Digital Speedometer", "Lightweight Compact Design", "Subscription-Based Battery Plans"],
+      "features": [
+        "Swappable Battery (Yulu Swap Stations)",
+        "Zero Charging Downtime",
+        "Mobile App for Swap Station Locator",
+        "Anti-Theft with Remote Lock",
+        "Digital Speedometer",
+        "Lightweight Compact Design",
+        "Subscription-Based Battery Plans"
+      ],
       "variants": [
-        {"name": "Miracle GR (Without Battery)", "price": "₹49,999"},
-        {"name": "Miracle GR Swappable", "price": "₹74,999"}
+        {
+          "name": "Miracle GR (Without Battery)",
+          "price": "₹49,999"
+        },
+        {
+          "name": "Miracle GR Swappable",
+          "price": "₹74,999"
+        }
       ],
       "colors": [
-        {"name": "Red", "hex": "#C41E3A"},
-        {"name": "Blue", "hex": "#1A4A8B"},
-        {"name": "White", "hex": "#F5F5F0"},
-        {"name": "Black", "hex": "#1A1A1A"}
+        {
+          "name": "Red",
+          "hex": "#C41E3A"
+        },
+        {
+          "name": "Blue",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Black",
+          "hex": "#1A1A1A"
+        }
       ],
       "technical_specifications": {
         "motor": "BLDC Motor",
@@ -57,17 +83,45 @@
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Yulu Wynn is an upgraded swappable-battery scooter with 80km range per swap, larger motor, better ergonomics, and Yulu app integration. Designed for longer urban commutes with battery-swap convenience.",
-      "features": ["Swappable Battery Technology", "80 km Range Per Swap", "Yulu App Integration", "Anti-Theft System", "Digital Speedometer", "Subscription Battery Plans Available"],
+      "features": [
+        "Swappable Battery Technology",
+        "80 km Range Per Swap",
+        "Yulu App Integration",
+        "Anti-Theft System",
+        "Digital Speedometer",
+        "Subscription Battery Plans Available"
+      ],
       "variants": [
-        {"name": "Wynn (Without Battery)", "price": "₹59,999"},
-        {"name": "Wynn Swappable", "price": "₹84,999"}
+        {
+          "name": "Wynn (Without Battery)",
+          "price": "₹59,999"
+        },
+        {
+          "name": "Wynn Swappable",
+          "price": "₹84,999"
+        }
       ],
       "colors": [
-        {"name": "Red", "hex": "#C41E3A"},
-        {"name": "Blue", "hex": "#1A4A8B"},
-        {"name": "White", "hex": "#F5F5F0"},
-        {"name": "Black", "hex": "#1A1A1A"},
-        {"name": "Green", "hex": "#4CAF50"}
+        {
+          "name": "Red",
+          "hex": "#C41E3A"
+        },
+        {
+          "name": "Blue",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Green",
+          "hex": "#4CAF50"
+        }
       ],
       "technical_specifications": {
         "motor": "BLDC Motor",
@@ -90,20 +144,37 @@
       "engine_displacement": "N/A",
       "mileage": "50 km (range)",
       "max_power": "0.25 kW",
-      "max_torque": "N/A",
+      "max_torque": "7 Nm",
       "top_speed": "25 kmph",
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Yulu Bike D is a low-speed electric bicycle/scooter designed for short last-mile urban commutes with 50km range, 25 kmph top speed, and a lightweight design.",
-      "features": ["Low Speed Design", "Swappable Battery", "Lightweight", "Compact"],
+      "features": [
+        "Low Speed Design",
+        "Swappable Battery",
+        "Lightweight",
+        "Compact"
+      ],
       "variants": [
-        {"name": "Bike D Standard", "price": "₹54,999"}
+        {
+          "name": "Bike D Standard",
+          "price": "₹54,999"
+        }
       ],
       "colors": [
-        {"name": "Red", "hex": "#C41E3A"},
-        {"name": "White", "hex": "#F5F5F0"},
-        {"name": "Black", "hex": "#1A1A1A"}
+        {
+          "name": "Red",
+          "hex": "#C41E3A"
+        },
+        {
+          "name": "White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Black",
+          "hex": "#1A1A1A"
+        }
       ],
       "technical_specifications": {
         "motor": "BLDC Motor",

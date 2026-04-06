@@ -13,30 +13,79 @@
       "engine_displacement": "N/A",
       "mileage": "94 km (range)",
       "max_power": "4.4 kW",
-      "max_torque": "N/A",
+      "max_torque": "140 Nm",
       "top_speed": "75 kmph",
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The TVS iQube is TVS Motor's flagship electric scooter range with 94km range, 75 kmph top speed, 4.4kW motor, 6 variants across 2.2-3.5 kWh battery options, and 12 colour choices. Rated 3.6/5 by 703+ owners.",
-      "features": ["USB Charging", "Smart Digital Display", "Combined Braking System", "LED Headlamp", "Multiple Ride Modes", "OTA Updates"],
+      "features": [
+        "USB Charging",
+        "Smart Digital Display",
+        "Combined Braking System",
+        "LED Headlamp",
+        "Multiple Ride Modes",
+        "OTA Updates"
+      ],
       "variants": [
-        {"name": "iQube 2.2 kWh", "price": "₹1,09,319"},
-        {"name": "iQube S 2.2 kWh", "price": "₹1,19,000"},
-        {"name": "iQube S 3.0 kWh", "price": "₹1,34,000"},
-        {"name": "iQube ST 3.0 kWh", "price": "₹1,44,000"},
-        {"name": "iQube ST 3.5 kWh", "price": "₹1,54,000"},
-        {"name": "iQube ST 3.5 kWh Plus", "price": "₹1,62,314"}
+        {
+          "name": "iQube 2.2 kWh",
+          "price": "₹1,09,319"
+        },
+        {
+          "name": "iQube S 2.2 kWh",
+          "price": "₹1,19,000"
+        },
+        {
+          "name": "iQube S 3.0 kWh",
+          "price": "₹1,34,000"
+        },
+        {
+          "name": "iQube ST 3.0 kWh",
+          "price": "₹1,44,000"
+        },
+        {
+          "name": "iQube ST 3.5 kWh",
+          "price": "₹1,54,000"
+        },
+        {
+          "name": "iQube ST 3.5 kWh Plus",
+          "price": "₹1,62,314"
+        }
       ],
       "colors": [
-        {"name": "Wallnut Brown", "hex": "#8B4513"},
-        {"name": "Pearl White", "hex": "#F5F5F0"},
-        {"name": "Titanium Grey", "hex": "#6B6B6B"},
-        {"name": "Copper Brown Beige", "hex": "#C09050"},
-        {"name": "Starlight Blue Beige", "hex": "#1A4A8B"},
-        {"name": "Celebration Orange", "hex": "#E8600A"},
-        {"name": "Mint Blue", "hex": "#40E0D0"},
-        {"name": "Mercury Grey", "hex": "#9E9E9E"}
+        {
+          "name": "Wallnut Brown",
+          "hex": "#8B4513"
+        },
+        {
+          "name": "Pearl White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Titanium Grey",
+          "hex": "#6B6B6B"
+        },
+        {
+          "name": "Copper Brown Beige",
+          "hex": "#C09050"
+        },
+        {
+          "name": "Starlight Blue Beige",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Celebration Orange",
+          "hex": "#E8600A"
+        },
+        {
+          "name": "Mint Blue",
+          "hex": "#40E0D0"
+        },
+        {
+          "name": "Mercury Grey",
+          "hex": "#9E9E9E"
+        }
       ],
       "technical_specifications": {
         "motor": "PMSM Motor",

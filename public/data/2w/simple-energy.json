@@ -13,21 +13,43 @@
       "engine_displacement": "N/A",
       "mileage": "190 km (range)",
       "max_power": "6.5 kW",
-      "max_torque": "N/A",
+      "max_torque": "100 Nm",
       "top_speed": "90 kmph",
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Simple Energy One S Gen 2 is an affordable high-range electric scooter from Bengaluru-based Simple Energy, offering 190km range, 90 kmph top speed, and 6.5kW motor at ₹1,59,965. It is manufactured at Hosur, Tamil Nadu.",
-      "features": ["LED Headlamp", "Digital Display", "Multiple Ride Modes", "Regenerative Braking", "USB Charging", "Mobile App Connectivity"],
+      "features": [
+        "LED Headlamp",
+        "Digital Display",
+        "Multiple Ride Modes",
+        "Regenerative Braking",
+        "USB Charging",
+        "Mobile App Connectivity"
+      ],
       "variants": [
-        {"name": "One S Gen 2 Standard", "price": "₹1,59,965"}
+        {
+          "name": "One S Gen 2 Standard",
+          "price": "₹1,59,965"
+        }
       ],
       "colors": [
-        {"name": "Electric Blue", "hex": "#1A4A8B"},
-        {"name": "Midnight Black", "hex": "#1A1A1A"},
-        {"name": "Pearl White", "hex": "#F5F5F0"},
-        {"name": "Racing Red", "hex": "#C41E3A"}
+        {
+          "name": "Electric Blue",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Midnight Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Pearl White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Racing Red",
+          "hex": "#C41E3A"
+        }
       ],
       "technical_specifications": {
         "motor": "PMSM Motor",
@@ -50,22 +72,49 @@
       "engine_displacement": "N/A",
       "mileage": "265 km (range)",
       "max_power": "6.4 kW",
-      "max_torque": "N/A",
+      "max_torque": "100 Nm",
       "top_speed": "90 kmph",
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Simple Energy One Gen 2 is the flagship electric scooter from Simple Energy with a class-leading 265km range, 5kWh battery, 6.4kW motor, 90 kmph top speed, and premium features. It offers one of the highest ranges in the Indian electric scooter segment.",
-      "features": ["5 kWh Battery", "LED Headlamp", "TFT Display", "Multiple Ride Modes", "Regenerative Braking", "USB Charging", "Mobile App Connectivity", "Fast Charging Compatible"],
+      "features": [
+        "5 kWh Battery",
+        "LED Headlamp",
+        "TFT Display",
+        "Multiple Ride Modes",
+        "Regenerative Braking",
+        "USB Charging",
+        "Mobile App Connectivity",
+        "Fast Charging Compatible"
+      ],
       "variants": [
-        {"name": "One Gen 2 Standard", "price": "₹1,74,991"}
+        {
+          "name": "One Gen 2 Standard",
+          "price": "₹1,74,991"
+        }
       ],
       "colors": [
-        {"name": "Electric Blue", "hex": "#1A4A8B"},
-        {"name": "Midnight Black", "hex": "#1A1A1A"},
-        {"name": "Pearl White", "hex": "#F5F5F0"},
-        {"name": "Racing Red", "hex": "#C41E3A"},
-        {"name": "Matte Grey", "hex": "#6B6B6B"}
+        {
+          "name": "Electric Blue",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Midnight Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Pearl White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Racing Red",
+          "hex": "#C41E3A"
+        },
+        {
+          "name": "Matte Grey",
+          "hex": "#6B6B6B"
+        }
       ],
       "technical_specifications": {
         "motor": "PMSM Motor",
