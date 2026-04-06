@@ -54,7 +54,8 @@
         "start_type": "Self Start",
         "emission": "BS6 Phase 2"
       },
-      "max_torque": "23 Nm"
+      "max_power": "17.16 bhp @ 8500 rpm",
+      "max_torque": "17 Nm @ 6500 rpm"
     },
     {
       "make": "QJ Motor",
@@ -105,7 +106,8 @@
         "start_type": "Self Start",
         "emission": "BS6 Phase 2"
       },
-      "max_torque": "46 Nm"
+      "max_power": "25.15 bhp @ 8000 rpm",
+      "max_torque": "36 Nm @ 6000 rpm"
     },
     {
       "make": "QJ Motor",
@@ -157,7 +159,8 @@
         "start_type": "Self Start",
         "emission": "BS6 Phase 2"
       },
-      "max_torque": "28 Nm"
+      "max_power": "29.88 bhp @ 8000 rpm",
+      "max_torque": "26 Nm @ 6500 rpm"
     },
     {
       "make": "QJ Motor",
@@ -168,7 +171,8 @@
       "mileage": "25 kmpl",
       "top_speed": "160 kmph",
       "fuel_type": "Petrol",
-      "max_torque": "37 Nm",
+      "max_power": "40.34 bhp @ 8500 rpm",
+      "max_torque": "37 Nm @ 7000 rpm",
       "source_section": "Available",
       "description": "The QJ Motor SRK 400 is a middleweight street bike with a 400cc liquid-cooled parallel-twin engine delivering competitive performance. It features a TFT instrument cluster, sporty styling, and impressive handling characteristics for daily and weekend riding.",
       "features": [

@@ -145,7 +145,7 @@
       "engine_displacement": "N/A",
       "mileage": "120 km (range)",
       "max_power": "4 kW",
-      "max_torque": "N/A",
+      "max_torque": null,
       "top_speed": "80 kmph",
       "fuel_type": "Electric",
       "transmission": "Automatic",
