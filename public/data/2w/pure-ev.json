@@ -12,21 +12,38 @@
       "price": "₹79,699",
       "engine_displacement": "N/A",
       "mileage": "101 km (range)",
-      "max_power": "N/A",
-      "max_torque": "N/A",
+      "max_power": "2.5 kW",
+      "max_torque": "95 Nm",
       "top_speed": "47 kmph",
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The PURE EV ETrance Neo is an entry-level electric scooter with 101km range, 47 kmph top speed, and 86kg lightweight build. IIT Hyderabad incubated brand. Available across 52 cities at ₹79,699.",
-      "features": ["Electric Motor", "101km Range", "Lightweight 86kg", "Self Start"],
+      "features": [
+        "Electric Motor",
+        "101km Range",
+        "Lightweight 86kg",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "ETrance Neo Standard", "price": "₹79,699"}
+        {
+          "name": "ETrance Neo Standard",
+          "price": "₹79,699"
+        }
       ],
       "colors": [
-        {"name": "Blue", "hex": "#1A4A8B"},
-        {"name": "Red", "hex": "#CC0000"},
-        {"name": "White", "hex": "#F5F5F0"}
+        {
+          "name": "Blue",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Red",
+          "hex": "#CC0000"
+        },
+        {
+          "name": "White",
+          "hex": "#F5F5F0"
+        }
       ],
       "technical_specifications": {
         "motor": "Electric Motor",
@@ -48,21 +65,38 @@
       "price": "₹80,799",
       "engine_displacement": "N/A",
       "mileage": "101 km (range)",
-      "max_power": "N/A",
-      "max_torque": "N/A",
+      "max_power": "2 kW",
+      "max_torque": "85 Nm",
       "top_speed": "47 kmph",
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The PURE EV EPluto 7G is a lightweight 76kg electric scooter with 101km range, 47 kmph top speed, and value pricing. One of Pure EV's most popular models at ₹80,799.",
-      "features": ["Electric Motor", "101km Range", "Lightweight 76kg", "Self Start"],
+      "features": [
+        "Electric Motor",
+        "101km Range",
+        "Lightweight 76kg",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "EPluto 7G Standard", "price": "₹80,799"}
+        {
+          "name": "EPluto 7G Standard",
+          "price": "₹80,799"
+        }
       ],
       "colors": [
-        {"name": "Black", "hex": "#1A1A1A"},
-        {"name": "Blue", "hex": "#1A4A8B"},
-        {"name": "White", "hex": "#F5F5F0"}
+        {
+          "name": "Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Blue",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "White",
+          "hex": "#F5F5F0"
+        }
       ],
       "technical_specifications": {
         "motor": "Electric Motor",
@@ -84,21 +118,39 @@
       "price": "₹1,18,700",
       "engine_displacement": "N/A",
       "mileage": "151 km (range)",
-      "max_power": "N/A",
-      "max_torque": "N/A",
+      "max_power": "2 kW",
+      "max_torque": "85 Nm",
       "top_speed": "75 kmph",
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The PURE EV EcoDryft is a high-speed electric scooter with 151km range, 75 kmph top speed, 101kg weight, and a 4.4/5 user rating. Popular model at ₹1,18,700.",
-      "features": ["Electric Motor", "151km Range", "75 kmph Top Speed", "CBS Brakes", "Self Start"],
+      "features": [
+        "Electric Motor",
+        "151km Range",
+        "75 kmph Top Speed",
+        "CBS Brakes",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "EcoDryft Standard", "price": "₹1,18,700"}
+        {
+          "name": "EcoDryft Standard",
+          "price": "₹1,18,700"
+        }
       ],
       "colors": [
-        {"name": "Red", "hex": "#CC0000"},
-        {"name": "Black", "hex": "#1A1A1A"},
-        {"name": "White", "hex": "#F5F5F0"}
+        {
+          "name": "Red",
+          "hex": "#CC0000"
+        },
+        {
+          "name": "Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "White",
+          "hex": "#F5F5F0"
+        }
       ],
       "technical_specifications": {
         "motor": "Electric Motor",
@@ -120,21 +172,40 @@
       "price": "₹1,49,999",
       "engine_displacement": "N/A",
       "mileage": "171 km (range)",
-      "max_power": "N/A",
-      "max_torque": "N/A",
+      "max_power": "3 kW",
+      "max_torque": "120 Nm",
       "top_speed": "94 kmph",
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The PURE EV Etryst 350 is the flagship premium electric scooter with 171km range, 94 kmph top speed, 120kg weight, and advanced features at ₹1,49,999.",
-      "features": ["Electric Motor", "171km Range", "94 kmph Top Speed", "CBS Brakes", "Self Start", "Premium Features"],
+      "features": [
+        "Electric Motor",
+        "171km Range",
+        "94 kmph Top Speed",
+        "CBS Brakes",
+        "Self Start",
+        "Premium Features"
+      ],
       "variants": [
-        {"name": "Etryst 350 Standard", "price": "₹1,49,999"}
+        {
+          "name": "Etryst 350 Standard",
+          "price": "₹1,49,999"
+        }
       ],
       "colors": [
-        {"name": "Red", "hex": "#CC0000"},
-        {"name": "Black", "hex": "#1A1A1A"},
-        {"name": "White", "hex": "#F5F5F0"}
+        {
+          "name": "Red",
+          "hex": "#CC0000"
+        },
+        {
+          "name": "Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "White",
+          "hex": "#F5F5F0"
+        }
       ],
       "technical_specifications": {
         "motor": "Electric Motor",

@@ -12,21 +12,39 @@
       "price": "₹60,827",
       "engine_displacement": "N/A",
       "mileage": "90 km (range)",
-      "max_power": "N/A",
-      "max_torque": "N/A",
+      "max_power": "0.25 kW",
+      "max_torque": "7 Nm",
       "top_speed": "25 kmph",
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Joy e-bike Gen Nxt is an entry-level electric scooter with 90km range, 25 kmph top speed, 70kg lightweight build, and 5-hour charging at ₹60,827.",
-      "features": ["Electric Motor", "90km Range", "Lightweight 70kg", "USB Charging", "Self Start"],
+      "features": [
+        "Electric Motor",
+        "90km Range",
+        "Lightweight 70kg",
+        "USB Charging",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Gen Nxt Standard", "price": "₹60,827"}
+        {
+          "name": "Gen Nxt Standard",
+          "price": "₹60,827"
+        }
       ],
       "colors": [
-        {"name": "Blue", "hex": "#1A4A8B"},
-        {"name": "Red", "hex": "#CC0000"},
-        {"name": "White", "hex": "#F5F5F0"}
+        {
+          "name": "Blue",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Red",
+          "hex": "#CC0000"
+        },
+        {
+          "name": "White",
+          "hex": "#F5F5F0"
+        }
       ],
       "technical_specifications": {
         "motor": "Electric Motor",
@@ -48,21 +66,39 @@
       "price": "₹61,877",
       "engine_displacement": "N/A",
       "mileage": "90 km (range)",
-      "max_power": "N/A",
-      "max_torque": "N/A",
+      "max_power": "2 kW",
+      "max_torque": "85 Nm",
       "top_speed": "25 kmph",
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Joy e-bike Wolf is a lightweight 67kg electric scooter with 90km range, 25 kmph top speed, and 5-hour charging at ₹61,877.",
-      "features": ["Electric Motor", "90km Range", "Lightweight 67kg", "5hr Charging", "Self Start"],
+      "features": [
+        "Electric Motor",
+        "90km Range",
+        "Lightweight 67kg",
+        "5hr Charging",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Wolf Standard", "price": "₹61,877"}
+        {
+          "name": "Wolf Standard",
+          "price": "₹61,877"
+        }
       ],
       "colors": [
-        {"name": "Black", "hex": "#1A1A1A"},
-        {"name": "Red", "hex": "#CC0000"},
-        {"name": "White", "hex": "#F5F5F0"}
+        {
+          "name": "Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Red",
+          "hex": "#CC0000"
+        },
+        {
+          "name": "White",
+          "hex": "#F5F5F0"
+        }
       ],
       "technical_specifications": {
         "motor": "Electric Motor",
@@ -84,21 +120,39 @@
       "price": "₹70,000",
       "engine_displacement": "N/A",
       "mileage": "60 km (range)",
-      "max_power": "N/A",
-      "max_torque": "N/A",
+      "max_power": "0.25 kW",
+      "max_torque": "7 Nm",
       "top_speed": "25 kmph",
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Joy e-bike Glob is a compact 66kg electric scooter with 60km range, 25 kmph top speed, and affordable pricing at ₹70,000.",
-      "features": ["Electric Motor", "60km Range", "Compact 66kg", "5hr Charging", "Self Start"],
+      "features": [
+        "Electric Motor",
+        "60km Range",
+        "Compact 66kg",
+        "5hr Charging",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "Glob Standard", "price": "₹70,000"}
+        {
+          "name": "Glob Standard",
+          "price": "₹70,000"
+        }
       ],
       "colors": [
-        {"name": "Yellow", "hex": "#FFD700"},
-        {"name": "Blue", "hex": "#1A4A8B"},
-        {"name": "White", "hex": "#F5F5F0"}
+        {
+          "name": "Yellow",
+          "hex": "#FFD700"
+        },
+        {
+          "name": "Blue",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "White",
+          "hex": "#F5F5F0"
+        }
       ],
       "technical_specifications": {
         "motor": "Electric Motor",
@@ -120,21 +174,40 @@
       "price": "₹1,12,997",
       "engine_displacement": "N/A",
       "mileage": "130 km (range)",
-      "max_power": "N/A",
-      "max_torque": "N/A",
+      "max_power": "250 W",
+      "max_torque": "7 Nm",
       "top_speed": "65 kmph",
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Joy e-bike Mihos is the premium 110kg performance electric scooter with 130km range, 65 kmph top speed, and 5-hour charging at ₹1,12,997.",
-      "features": ["Electric Motor", "130km Range", "65 kmph Top Speed", "5hr Charging", "Self Start", "CBS Brakes"],
+      "features": [
+        "Electric Motor",
+        "130km Range",
+        "65 kmph Top Speed",
+        "5hr Charging",
+        "Self Start",
+        "CBS Brakes"
+      ],
       "variants": [
-        {"name": "Mihos Standard", "price": "₹1,12,997"}
+        {
+          "name": "Mihos Standard",
+          "price": "₹1,12,997"
+        }
       ],
       "colors": [
-        {"name": "Red", "hex": "#CC0000"},
-        {"name": "Black", "hex": "#1A1A1A"},
-        {"name": "White", "hex": "#F5F5F0"}
+        {
+          "name": "Red",
+          "hex": "#CC0000"
+        },
+        {
+          "name": "Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "White",
+          "hex": "#F5F5F0"
+        }
       ],
       "technical_specifications": {
         "motor": "Electric Motor",

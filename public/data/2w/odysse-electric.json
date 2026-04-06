@@ -12,19 +12,37 @@
       "price": "₹71,100",
       "engine_displacement": "N/A",
       "mileage": "70 km (range)",
-      "max_power": "N/A",
-      "max_torque": "N/A",
+      "max_power": "1 kW",
+      "max_torque": "40 Nm",
       "top_speed": "25 kmph",
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Odysse E2Go is Odysse's most affordable low-speed electric scooter with 70km range, 25 kmph top speed, and 4-hour charging. Ideal for short city commutes.",
-      "features": ["LED Headlamp", "Digital Speedometer", "USB Charging"],
-      "variants": [{"name": "E2Go Standard", "price": "₹71,100"}],
+      "features": [
+        "LED Headlamp",
+        "Digital Speedometer",
+        "USB Charging"
+      ],
+      "variants": [
+        {
+          "name": "E2Go Standard",
+          "price": "₹71,100"
+        }
+      ],
       "colors": [
-        {"name": "Black", "hex": "#1A1A1A"},
-        {"name": "White", "hex": "#F5F5F0"},
-        {"name": "Blue", "hex": "#1A4A8B"}
+        {
+          "name": "Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Blue",
+          "hex": "#1A4A8B"
+        }
       ],
       "technical_specifications": {
         "motor": "BLDC Motor",
@@ -46,20 +64,42 @@
       "price": "₹99,400",
       "engine_displacement": "N/A",
       "mileage": "85 km (range)",
-      "max_power": "N/A",
-      "max_torque": "N/A",
+      "max_power": "3 kW",
+      "max_torque": "40 Nm",
       "top_speed": "45 kmph",
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Odysse Hawk is a high-speed electric scooter with 85km range, 45 kmph top speed, and 3.5-hour charging. It offers a practical option for daily urban commuting.",
-      "features": ["LED Headlamp", "Digital Display", "USB Charging", "Alloy Wheels"],
-      "variants": [{"name": "Hawk Standard", "price": "₹99,400"}],
+      "features": [
+        "LED Headlamp",
+        "Digital Display",
+        "USB Charging",
+        "Alloy Wheels"
+      ],
+      "variants": [
+        {
+          "name": "Hawk Standard",
+          "price": "₹99,400"
+        }
+      ],
       "colors": [
-        {"name": "Black", "hex": "#1A1A1A"},
-        {"name": "White", "hex": "#F5F5F0"},
-        {"name": "Red", "hex": "#C41E3A"},
-        {"name": "Blue", "hex": "#1A4A8B"}
+        {
+          "name": "Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Red",
+          "hex": "#C41E3A"
+        },
+        {
+          "name": "Blue",
+          "hex": "#1A4A8B"
+        }
       ],
       "technical_specifications": {
         "motor": "BLDC Motor",
@@ -81,19 +121,38 @@
       "price": "₹1,18,000",
       "engine_displacement": "N/A",
       "mileage": "90 km (range)",
-      "max_power": "N/A",
-      "max_torque": "N/A",
+      "max_power": "4 kW",
+      "max_torque": "45 Nm",
       "top_speed": "75 kmph",
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Odysse Evoqis is Odysse's electric motorcycle with motorcycle-style body, 90km range, 75 kmph top speed, and 6-hour charging. It is Odysse's premium performance offering.",
-      "features": ["Motorcycle Style Body", "LED Headlamp", "Digital Display", "Multiple Ride Modes"],
-      "variants": [{"name": "Evoqis Standard", "price": "₹1,18,000"}],
+      "features": [
+        "Motorcycle Style Body",
+        "LED Headlamp",
+        "Digital Display",
+        "Multiple Ride Modes"
+      ],
+      "variants": [
+        {
+          "name": "Evoqis Standard",
+          "price": "₹1,18,000"
+        }
+      ],
       "colors": [
-        {"name": "Black", "hex": "#1A1A1A"},
-        {"name": "Red", "hex": "#C41E3A"},
-        {"name": "Blue", "hex": "#1A4A8B"}
+        {
+          "name": "Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Red",
+          "hex": "#C41E3A"
+        },
+        {
+          "name": "Blue",
+          "hex": "#1A4A8B"
+        }
       ],
       "technical_specifications": {
         "motor": "PMSM Motor",
@@ -115,20 +174,43 @@
       "price": "₹1,61,574",
       "engine_displacement": "N/A",
       "mileage": "125 km (range)",
-      "max_power": "N/A",
-      "max_torque": "N/A",
+      "max_power": "3 kW",
+      "max_torque": "45 Nm",
       "top_speed": "85 kmph",
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Odysse Vader is the flagship electric scooter from Odysse with 125km range, 85 kmph top speed, and 4-hour charging. It offers the best range and performance in Odysse's lineup.",
-      "features": ["LED Headlamp", "TFT Display", "Multiple Ride Modes", "Disc Brakes", "Mobile App Connectivity"],
-      "variants": [{"name": "Vader Standard", "price": "₹1,61,574"}],
+      "features": [
+        "LED Headlamp",
+        "TFT Display",
+        "Multiple Ride Modes",
+        "Disc Brakes",
+        "Mobile App Connectivity"
+      ],
+      "variants": [
+        {
+          "name": "Vader Standard",
+          "price": "₹1,61,574"
+        }
+      ],
       "colors": [
-        {"name": "Midnight Black", "hex": "#1A1A1A"},
-        {"name": "Silver", "hex": "#C8C8C8"},
-        {"name": "Blue", "hex": "#1A4A8B"},
-        {"name": "Red", "hex": "#C41E3A"}
+        {
+          "name": "Midnight Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Silver",
+          "hex": "#C8C8C8"
+        },
+        {
+          "name": "Blue",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Red",
+          "hex": "#C41E3A"
+        }
       ],
       "technical_specifications": {
         "motor": "PMSM Motor",

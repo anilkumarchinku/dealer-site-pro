@@ -22,7 +22,7 @@
       "variants": [
         {
           "name": "Premium",
-          "price": "N/A"
+          "price": "₹1,14,290"
         }
       ],
       "colors": [],
@@ -46,11 +46,11 @@
       "variants": [
         {
           "name": "Standard",
-          "price": "N/A"
+          "price": "₹1,32,606"
         },
         {
           "name": "Tech 125",
-          "price": "N/A"
+          "price": "₹1,32,606"
         }
       ],
       "colors": [],
@@ -74,11 +74,11 @@
       "variants": [
         {
           "name": "Standard",
-          "price": "N/A"
+          "price": "₹1,42,356"
         },
         {
           "name": "Tech 150",
-          "price": "N/A"
+          "price": "₹1,42,356"
         }
       ],
       "colors": [],
@@ -102,15 +102,15 @@
       "variants": [
         {
           "name": "Standard",
-          "price": "N/A"
+          "price": "₹1,28,321"
         },
         {
           "name": "Tech 125",
-          "price": "N/A"
+          "price": "₹1,28,321"
         },
         {
           "name": "Qala Edition",
-          "price": "N/A"
+          "price": "₹1,28,321"
         }
       ],
       "colors": [],
@@ -134,11 +134,11 @@
       "variants": [
         {
           "name": "Standard",
-          "price": "N/A"
+          "price": "₹1,45,424"
         },
         {
           "name": "Tech 150",
-          "price": "N/A"
+          "price": "₹1,45,424"
         }
       ],
       "colors": [],
@@ -162,7 +162,7 @@
       "variants": [
         {
           "name": "Standard",
-          "price": "N/A"
+          "price": "₹1,34,000"
         }
       ],
       "colors": [],
@@ -174,10 +174,10 @@
       "model": "VXL 125",
       "variant_name": "VXL 125",
       "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
+      "engine_displacement": "124.45 cc",
+      "mileage": "50 kmpl",
+      "max_power": "9.3 bhp",
+      "max_torque": "10.6 Nm @ 5000 rpm",
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
@@ -217,10 +217,10 @@
       "model": "SXL 125",
       "variant_name": "SXL 125",
       "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
+      "engine_displacement": "124.45 cc",
+      "mileage": "50 kmpl",
+      "max_power": "9.3 bhp",
+      "max_torque": "10.6 Nm @ 5000 rpm",
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
@@ -268,10 +268,10 @@
       "model": "SXL 150",
       "variant_name": "SXL 150",
       "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
+      "engine_displacement": "149.5 cc",
+      "mileage": "46 kmpl",
+      "max_power": "11.2 bhp",
+      "max_torque": "11.7 Nm @ 6500 rpm",
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
@@ -327,10 +327,10 @@
       "model": "VXL 150",
       "variant_name": "VXL 150",
       "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
+      "engine_displacement": "149.5 cc",
+      "mileage": "46 kmpl",
+      "max_power": "11.2 bhp",
+      "max_torque": "11.7 Nm @ 6500 rpm",
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
@@ -370,10 +370,10 @@
       "model": "LX",
       "variant_name": "LX",
       "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
+      "engine_displacement": "124.45 cc",
+      "mileage": "50 kmpl",
+      "max_power": "9.3 bhp",
+      "max_torque": "10.6 Nm @ 5000 rpm",
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
@@ -393,10 +393,10 @@
       "model": "VX 125",
       "variant_name": "VX 125",
       "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
+      "engine_displacement": "124.45 cc",
+      "mileage": "50 kmpl",
+      "max_power": "9.3 bhp",
+      "max_torque": "10.6 Nm @ 5000 rpm",
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
@@ -416,10 +416,10 @@
       "model": "946",
       "variant_name": "946",
       "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
+      "engine_displacement": "278 cc",
+      "mileage": "40 kmpl",
+      "max_power": "23.1 bhp",
+      "max_torque": "22 Nm @ 5000 rpm",
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
@@ -439,10 +439,10 @@
       "model": "S",
       "variant_name": "S",
       "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
+      "engine_displacement": "124.45 cc",
+      "mileage": "50 kmpl",
+      "max_power": "9.3 bhp",
+      "max_torque": "10.6 Nm @ 5000 rpm",
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
@@ -462,10 +462,10 @@
       "model": "Elegante 125",
       "variant_name": "Elegante 125",
       "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
+      "engine_displacement": "124.45 cc",
+      "mileage": "50 kmpl",
+      "max_power": "9.3 bhp",
+      "max_torque": "10.6 Nm @ 5000 rpm",
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
@@ -493,10 +493,10 @@
       "model": "LX 125",
       "variant_name": "LX 125",
       "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
+      "engine_displacement": "124.45 cc",
+      "mileage": "50 kmpl",
+      "max_power": "9.3 bhp",
+      "max_torque": "10.6 Nm @ 5000 rpm",
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
@@ -520,10 +520,10 @@
       "model": "VXL 150 Anniversary Edition",
       "variant_name": "VXL 150 Anniversary Edition",
       "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
+      "engine_displacement": "149.5 cc",
+      "mileage": "46 kmpl",
+      "max_power": "11.2 bhp",
+      "max_torque": "11.7 Nm @ 6500 rpm",
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
@@ -543,10 +543,10 @@
       "model": "Elegante 150",
       "variant_name": "Elegante 150",
       "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
+      "engine_displacement": "149.5 cc",
+      "mileage": "46 kmpl",
+      "max_power": "11.2 bhp",
+      "max_torque": "11.7 Nm @ 6500 rpm",
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
@@ -574,10 +574,10 @@
       "model": "RED",
       "variant_name": "RED",
       "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
+      "engine_displacement": "124.45 cc",
+      "mileage": "50 kmpl",
+      "max_power": "9.3 bhp",
+      "max_torque": "10.6 Nm @ 5000 rpm",
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
@@ -597,10 +597,10 @@
       "model": "Notte",
       "variant_name": "Notte",
       "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
+      "engine_displacement": "124.45 cc",
+      "mileage": "50 kmpl",
+      "max_power": "9.3 bhp",
+      "max_torque": "10.6 Nm @ 5000 rpm",
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
@@ -624,10 +624,10 @@
       "model": "Urban Club",
       "variant_name": "Urban Club",
       "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
+      "engine_displacement": "124.45 cc",
+      "mileage": "50 kmpl",
+      "max_power": "9.3 bhp",
+      "max_torque": "10.6 Nm @ 5000 rpm",
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",
@@ -651,10 +651,10 @@
       "model": "946 Dragon",
       "variant_name": "946 Dragon",
       "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "N/A bhp",
-      "max_torque": "N/A",
+      "engine_displacement": "278 cc",
+      "mileage": "40 kmpl",
+      "max_power": "23.1 bhp",
+      "max_torque": "22 Nm @ 5000 rpm",
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
       "source_section": "Discontinued",

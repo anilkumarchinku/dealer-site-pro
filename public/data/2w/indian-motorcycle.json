@@ -22,7 +22,7 @@
       "variants": [
         {
           "name": "Standard",
-          "price": "N/A"
+          "price": "₹14,95,115"
         }
       ],
       "colors": [],
@@ -45,7 +45,7 @@
       "variants": [
         {
           "name": "Standard",
-          "price": "N/A"
+          "price": "₹21,58,779"
         }
       ],
       "colors": [],
@@ -68,7 +68,7 @@
       "variants": [
         {
           "name": "Standard",
-          "price": "N/A"
+          "price": "₹13,88,244"
         }
       ],
       "colors": [],
@@ -91,7 +91,7 @@
       "variants": [
         {
           "name": "Standard",
-          "price": "N/A"
+          "price": "₹15,50,000"
         }
       ],
       "colors": [],
@@ -114,7 +114,7 @@
       "variants": [
         {
           "name": "Standard",
-          "price": "N/A"
+          "price": "₹20,00,000"
         }
       ],
       "colors": [],
@@ -137,7 +137,7 @@
       "variants": [
         {
           "name": "Limited",
-          "price": "N/A"
+          "price": "₹14,34,198"
         }
       ],
       "colors": [],
@@ -160,7 +160,7 @@
       "variants": [
         {
           "name": "Limited",
-          "price": "N/A"
+          "price": "₹14,19,237"
         }
       ],
       "colors": [],
@@ -183,7 +183,7 @@
       "variants": [
         {
           "name": "Standard",
-          "price": "N/A"
+          "price": "₹24,38,944"
         }
       ],
       "colors": [],
@@ -206,7 +206,7 @@
       "variants": [
         {
           "name": "Standard",
-          "price": "N/A"
+          "price": "₹15,05,802"
         }
       ],
       "colors": [],
@@ -229,7 +229,7 @@
       "variants": [
         {
           "name": "Standard",
-          "price": "N/A"
+          "price": "₹16,00,000"
         }
       ],
       "colors": [],
@@ -252,7 +252,7 @@
       "variants": [
         {
           "name": "Standard",
-          "price": "N/A"
+          "price": "₹17,00,000"
         }
       ],
       "colors": [],
@@ -269,7 +269,7 @@
       "max_torque": "N/A",
       "top_speed": "N/A kmph",
       "fuel_type": "Petrol",
-      "source_section": "Available",
+      "source_section": "Discontinued",
       "description": "The Indian FTR 1200 is a two-wheeler available in India.",
       "features": [],
       "variants": [

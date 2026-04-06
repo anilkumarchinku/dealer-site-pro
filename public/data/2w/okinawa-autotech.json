@@ -13,19 +13,39 @@
       "engine_displacement": "N/A",
       "mileage": "60 km (range)",
       "max_power": "0.25 kW",
-      "max_torque": "N/A",
+      "max_torque": "7 Nm",
       "top_speed": "25 kmph",
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Okinawa R30 is Okinawa's most affordable low-speed electric scooter with 60km range, 25 kmph top speed, and 0.25kW motor. Available across 134 cities in India, it targets budget-conscious urban commuters.",
-      "features": ["LED Headlamp", "Digital Speedometer"],
-      "variants": [{"name": "R30 Standard", "price": "₹61,998"}],
+      "features": [
+        "LED Headlamp",
+        "Digital Speedometer"
+      ],
+      "variants": [
+        {
+          "name": "R30 Standard",
+          "price": "₹61,998"
+        }
+      ],
       "colors": [
-        {"name": "Red", "hex": "#C41E3A"},
-        {"name": "Blue", "hex": "#1A4A8B"},
-        {"name": "Black", "hex": "#1A1A1A"},
-        {"name": "White", "hex": "#F5F5F0"}
+        {
+          "name": "Red",
+          "hex": "#C41E3A"
+        },
+        {
+          "name": "Blue",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "White",
+          "hex": "#F5F5F0"
+        }
       ],
       "technical_specifications": {
         "motor": "BLDC Motor",
@@ -48,19 +68,40 @@
       "engine_displacement": "N/A",
       "mileage": "60 km (range)",
       "max_power": "0.25 kW",
-      "max_torque": "N/A",
+      "max_torque": "7 Nm",
       "top_speed": "25 kmph",
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Okinawa Lite is an entry-level low-speed electric scooter with 60km range and 25 kmph top speed. It offers a light and compact design for daily short commutes.",
-      "features": ["LED Headlamp", "Digital Speedometer", "Compact Design"],
-      "variants": [{"name": "Lite Standard", "price": "₹69,087"}],
+      "features": [
+        "LED Headlamp",
+        "Digital Speedometer",
+        "Compact Design"
+      ],
+      "variants": [
+        {
+          "name": "Lite Standard",
+          "price": "₹69,087"
+        }
+      ],
       "colors": [
-        {"name": "Red", "hex": "#C41E3A"},
-        {"name": "Blue", "hex": "#1A4A8B"},
-        {"name": "Black", "hex": "#1A1A1A"},
-        {"name": "White", "hex": "#F5F5F0"}
+        {
+          "name": "Red",
+          "hex": "#C41E3A"
+        },
+        {
+          "name": "Blue",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "White",
+          "hex": "#F5F5F0"
+        }
       ],
       "technical_specifications": {
         "motor": "BLDC Motor",
@@ -83,20 +124,45 @@
       "engine_displacement": "N/A",
       "mileage": "88 km (range)",
       "max_power": "2.5 kW",
-      "max_torque": "N/A",
+      "max_torque": "80 Nm",
       "top_speed": "58 kmph",
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Okinawa Praise is a high-speed electric scooter with 88km range, 58 kmph top speed, and 2.5kW motor. It is one of Okinawa's most popular models.",
-      "features": ["LED Headlamp", "Digital Display", "USB Charging", "Alloy Wheels"],
-      "variants": [{"name": "Praise Standard", "price": "₹85,223"}],
+      "features": [
+        "LED Headlamp",
+        "Digital Display",
+        "USB Charging",
+        "Alloy Wheels"
+      ],
+      "variants": [
+        {
+          "name": "Praise Standard",
+          "price": "₹85,223"
+        }
+      ],
       "colors": [
-        {"name": "Red", "hex": "#C41E3A"},
-        {"name": "Blue", "hex": "#1A4A8B"},
-        {"name": "Black", "hex": "#1A1A1A"},
-        {"name": "White", "hex": "#F5F5F0"},
-        {"name": "Grey", "hex": "#6B6B6B"}
+        {
+          "name": "Red",
+          "hex": "#C41E3A"
+        },
+        {
+          "name": "Blue",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Grey",
+          "hex": "#6B6B6B"
+        }
       ],
       "technical_specifications": {
         "motor": "BLDC Motor",
@@ -119,18 +185,36 @@
       "engine_displacement": "N/A",
       "mileage": "84 km (range)",
       "max_power": "1.7 kW",
-      "max_torque": "N/A",
+      "max_torque": "16 Nm",
       "top_speed": "45 kmph",
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Okinawa Ridge Plus is an electric scooter with 84km range, 45 kmph top speed, and 1.7kW motor.",
-      "features": ["LED Headlamp", "Digital Display", "USB Charging"],
-      "variants": [{"name": "Ridge Plus Standard", "price": "₹90,549"}],
+      "features": [
+        "LED Headlamp",
+        "Digital Display",
+        "USB Charging"
+      ],
+      "variants": [
+        {
+          "name": "Ridge Plus Standard",
+          "price": "₹90,549"
+        }
+      ],
       "colors": [
-        {"name": "Black", "hex": "#1A1A1A"},
-        {"name": "White", "hex": "#F5F5F0"},
-        {"name": "Red", "hex": "#C41E3A"}
+        {
+          "name": "Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Red",
+          "hex": "#C41E3A"
+        }
       ],
       "technical_specifications": {
         "motor": "BLDC Motor",
@@ -153,19 +237,40 @@
       "engine_displacement": "N/A",
       "mileage": "149 km (range)",
       "max_power": "1.6 kW",
-      "max_torque": "N/A",
+      "max_torque": "50 Nm",
       "top_speed": "50 kmph",
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Okinawa Ridge 100 is a long-range electric scooter with 149km range, 50 kmph top speed, and 1.6kW motor. It offers impressive range for its price point.",
-      "features": ["LED Headlamp", "Digital Display", "USB Charging"],
-      "variants": [{"name": "Ridge 100 Standard", "price": "₹1,15,311"}],
+      "features": [
+        "LED Headlamp",
+        "Digital Display",
+        "USB Charging"
+      ],
+      "variants": [
+        {
+          "name": "Ridge 100 Standard",
+          "price": "₹1,15,311"
+        }
+      ],
       "colors": [
-        {"name": "Black", "hex": "#1A1A1A"},
-        {"name": "White", "hex": "#F5F5F0"},
-        {"name": "Red", "hex": "#C41E3A"},
-        {"name": "Blue", "hex": "#1A4A8B"}
+        {
+          "name": "Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Red",
+          "hex": "#C41E3A"
+        },
+        {
+          "name": "Blue",
+          "hex": "#1A4A8B"
+        }
       ],
       "technical_specifications": {
         "motor": "BLDC Motor",
@@ -188,19 +293,41 @@
       "engine_displacement": "N/A",
       "mileage": "149 km (range)",
       "max_power": "3 kW",
-      "max_torque": "N/A",
+      "max_torque": "90 Nm",
       "top_speed": "60 kmph",
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Okinawa Dual 100 is a performance electric scooter with 149km range, 60 kmph top speed, and 3kW motor. It offers a powerful combination of range and speed.",
-      "features": ["LED Headlamp", "Digital Display", "USB Charging", "Disc Brakes"],
-      "variants": [{"name": "Dual 100 Standard", "price": "₹1,19,085"}],
+      "features": [
+        "LED Headlamp",
+        "Digital Display",
+        "USB Charging",
+        "Disc Brakes"
+      ],
+      "variants": [
+        {
+          "name": "Dual 100 Standard",
+          "price": "₹1,19,085"
+        }
+      ],
       "colors": [
-        {"name": "Black", "hex": "#1A1A1A"},
-        {"name": "White", "hex": "#F5F5F0"},
-        {"name": "Red", "hex": "#C41E3A"},
-        {"name": "Blue", "hex": "#1A4A8B"}
+        {
+          "name": "Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Red",
+          "hex": "#C41E3A"
+        },
+        {
+          "name": "Blue",
+          "hex": "#1A4A8B"
+        }
       ],
       "technical_specifications": {
         "motor": "BLDC Motor",
@@ -223,19 +350,42 @@
       "engine_displacement": "N/A",
       "mileage": "139 km (range)",
       "max_power": "2.5 kW",
-      "max_torque": "N/A",
+      "max_torque": "45 Nm",
       "top_speed": "58 kmph",
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Okinawa i-Praise is a connected electric scooter with 139km range, 58 kmph top speed, and 2.5kW motor. It features connectivity features and Okinawa's enhanced design.",
-      "features": ["LED Headlamp", "Digital Display", "USB Charging", "Disc Brakes", "Mobile App Connectivity"],
-      "variants": [{"name": "i-Praise Standard", "price": "₹1,23,155"}],
+      "features": [
+        "LED Headlamp",
+        "Digital Display",
+        "USB Charging",
+        "Disc Brakes",
+        "Mobile App Connectivity"
+      ],
+      "variants": [
+        {
+          "name": "i-Praise Standard",
+          "price": "₹1,23,155"
+        }
+      ],
       "colors": [
-        {"name": "Midnight Black", "hex": "#1A1A1A"},
-        {"name": "Pearl White", "hex": "#F5F5F0"},
-        {"name": "Fiery Red", "hex": "#C41E3A"},
-        {"name": "Ocean Blue", "hex": "#1A4A8B"}
+        {
+          "name": "Midnight Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Pearl White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Fiery Red",
+          "hex": "#C41E3A"
+        },
+        {
+          "name": "Ocean Blue",
+          "hex": "#1A4A8B"
+        }
       ],
       "technical_specifications": {
         "motor": "BLDC Motor",
@@ -258,20 +408,47 @@
       "engine_displacement": "N/A",
       "mileage": "160 km (range)",
       "max_power": "3.8 kW",
-      "max_torque": "N/A",
+      "max_torque": "90 Nm",
       "top_speed": "90 kmph",
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Okinawa OKHI-90 is Okinawa's flagship premium electric scooter with 160km range, 90 kmph top speed, and 3.8kW motor. It is the brand's highest-speed and longest-range offering.",
-      "features": ["LED Headlamp", "TFT Display", "Dual Disc Brakes", "Alloy Wheels", "Multiple Ride Modes", "Mobile App Connectivity"],
-      "variants": [{"name": "OKHI-90 Standard", "price": "₹1,49,991"}],
+      "features": [
+        "LED Headlamp",
+        "TFT Display",
+        "Dual Disc Brakes",
+        "Alloy Wheels",
+        "Multiple Ride Modes",
+        "Mobile App Connectivity"
+      ],
+      "variants": [
+        {
+          "name": "OKHI-90 Standard",
+          "price": "₹1,49,991"
+        }
+      ],
       "colors": [
-        {"name": "Matte Black", "hex": "#1A1A1A"},
-        {"name": "Pearl White", "hex": "#F5F5F0"},
-        {"name": "Electric Blue", "hex": "#1A4A8B"},
-        {"name": "Fire Red", "hex": "#C41E3A"},
-        {"name": "Space Grey", "hex": "#6B6B6B"}
+        {
+          "name": "Matte Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Pearl White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Electric Blue",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Fire Red",
+          "hex": "#C41E3A"
+        },
+        {
+          "name": "Space Grey",
+          "hex": "#6B6B6B"
+        }
       ],
       "technical_specifications": {
         "motor": "BLDC Motor",

@@ -13,25 +13,59 @@
       "engine_displacement": "N/A",
       "mileage": "108 km (range)",
       "max_power": "7 kW",
-      "max_torque": "N/A",
+      "max_torque": "58 Nm",
       "top_speed": "101 kmph",
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Ola S1 X is an affordable entry-level electric scooter starting at ₹89,957 with 108km ARAI range, 101 kmph top speed, 7kW motor, and 5-hour charging. It offers a practical and economical EV option for daily commuters.",
-      "features": ["LED Headlamp", "Digital Display", "USB Charging", "Reverse Mode", "Multiple Ride Modes", "Self Start"],
+      "features": [
+        "LED Headlamp",
+        "Digital Display",
+        "USB Charging",
+        "Reverse Mode",
+        "Multiple Ride Modes",
+        "Self Start"
+      ],
       "variants": [
-        {"name": "S1 X 2 kWh", "price": "₹89,957"},
-        {"name": "S1 X 3 kWh", "price": "₹1,04,806"},
-        {"name": "S1 X 4 kWh", "price": "₹1,14,806"},
-        {"name": "S1 X Plus", "price": "₹1,24,806"}
+        {
+          "name": "S1 X 2 kWh",
+          "price": "₹89,957"
+        },
+        {
+          "name": "S1 X 3 kWh",
+          "price": "₹1,04,806"
+        },
+        {
+          "name": "S1 X 4 kWh",
+          "price": "₹1,14,806"
+        },
+        {
+          "name": "S1 X Plus",
+          "price": "₹1,24,806"
+        }
       ],
       "colors": [
-        {"name": "Liquid Silver", "hex": "#C8C8C8"},
-        {"name": "Midnight Black", "hex": "#1A1A1A"},
-        {"name": "Pearl White", "hex": "#F5F5F0"},
-        {"name": "Neo Mint", "hex": "#B2D8C8"},
-        {"name": "Coral Glam", "hex": "#D94F3D"}
+        {
+          "name": "Liquid Silver",
+          "hex": "#C8C8C8"
+        },
+        {
+          "name": "Midnight Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Pearl White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Neo Mint",
+          "hex": "#B2D8C8"
+        },
+        {
+          "name": "Coral Glam",
+          "hex": "#D94F3D"
+        }
       ],
       "technical_specifications": {
         "motor": "PMSM Motor",
@@ -54,26 +88,67 @@
       "engine_displacement": "N/A",
       "mileage": "176 km (range)",
       "max_power": "11 kW",
-      "max_torque": "N/A",
+      "max_torque": "98 Nm",
       "top_speed": "117 kmph",
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Ola S1 Pro is a premium electric scooter with 176km range, 117 kmph top speed, 11kW peak power, dual disc brakes, 7-inch touchscreen, MoveOS, and over-the-air updates. It is the flagship scooter from Ola Electric.",
-      "features": ["7-inch Touchscreen", "MoveOS", "OTA Updates", "Multiple Ride Modes", "Disc Brake Front", "Disc Brake Rear", "LED Headlamp", "USB Charging", "Reverse Mode", "Bluetooth Connectivity"],
+      "features": [
+        "7-inch Touchscreen",
+        "MoveOS",
+        "OTA Updates",
+        "Multiple Ride Modes",
+        "Disc Brake Front",
+        "Disc Brake Rear",
+        "LED Headlamp",
+        "USB Charging",
+        "Reverse Mode",
+        "Bluetooth Connectivity"
+      ],
       "variants": [
-        {"name": "S1 Pro 4 kWh", "price": "₹1,29,863"},
-        {"name": "S1 Pro 5.3 kWh", "price": "₹1,44,972"},
-        {"name": "S1 Pro 6.3 kWh", "price": "₹1,59,963"},
-        {"name": "S1 Pro Plus 8.5 kWh", "price": "₹1,74,976"}
+        {
+          "name": "S1 Pro 4 kWh",
+          "price": "₹1,29,863"
+        },
+        {
+          "name": "S1 Pro 5.3 kWh",
+          "price": "₹1,44,972"
+        },
+        {
+          "name": "S1 Pro 6.3 kWh",
+          "price": "₹1,59,963"
+        },
+        {
+          "name": "S1 Pro Plus 8.5 kWh",
+          "price": "₹1,74,976"
+        }
       ],
       "colors": [
-        {"name": "Midnight Black", "hex": "#1A1A1A"},
-        {"name": "Pearl White", "hex": "#F5F5F0"},
-        {"name": "Liquid Silver", "hex": "#C8C8C8"},
-        {"name": "Neo Mint", "hex": "#B2D8C8"},
-        {"name": "Coral Glam", "hex": "#D94F3D"},
-        {"name": "Porcelain", "hex": "#E8E0D8"}
+        {
+          "name": "Midnight Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Pearl White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Liquid Silver",
+          "hex": "#C8C8C8"
+        },
+        {
+          "name": "Neo Mint",
+          "hex": "#B2D8C8"
+        },
+        {
+          "name": "Coral Glam",
+          "hex": "#D94F3D"
+        },
+        {
+          "name": "Porcelain",
+          "hex": "#E8E0D8"
+        }
       ],
       "technical_specifications": {
         "motor": "PMSM Motor",
@@ -96,24 +171,58 @@
       "engine_displacement": "N/A",
       "mileage": "151 km (range)",
       "max_power": "13 kW",
-      "max_torque": "N/A",
+      "max_torque": "58 Nm",
       "top_speed": "116 kmph",
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Ola Roadster is an electric motorcycle with 13kW peak power, 151km base range, 116 kmph top speed, dual disc brakes with ABS, 7-inch TFT display, MoveOS, and sporty design. It marks Ola Electric's entry into the electric motorcycle segment.",
-      "features": ["7-inch TFT Display", "MoveOS", "Dual Disc Brakes", "ABS", "OTA Updates", "Multiple Ride Modes", "LED Lighting", "USB Charging", "Bluetooth Connectivity"],
+      "features": [
+        "7-inch TFT Display",
+        "MoveOS",
+        "Dual Disc Brakes",
+        "ABS",
+        "OTA Updates",
+        "Multiple Ride Modes",
+        "LED Lighting",
+        "USB Charging",
+        "Bluetooth Connectivity"
+      ],
       "variants": [
-        {"name": "Roadster 3.5 kWh", "price": "₹1,04,999"},
-        {"name": "Roadster 4.5 kWh", "price": "₹1,24,999"},
-        {"name": "Roadster 5.6 kWh", "price": "₹1,39,999"}
+        {
+          "name": "Roadster 3.5 kWh",
+          "price": "₹1,04,999"
+        },
+        {
+          "name": "Roadster 4.5 kWh",
+          "price": "₹1,24,999"
+        },
+        {
+          "name": "Roadster 5.6 kWh",
+          "price": "₹1,39,999"
+        }
       ],
       "colors": [
-        {"name": "Midnight Black", "hex": "#1A1A1A"},
-        {"name": "Pearl White", "hex": "#F5F5F0"},
-        {"name": "Industrial Silver", "hex": "#C8C8C8"},
-        {"name": "Pine Green", "hex": "#2D6A4F"},
-        {"name": "Stellar Blue", "hex": "#1A4A8B"}
+        {
+          "name": "Midnight Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Pearl White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Industrial Silver",
+          "hex": "#C8C8C8"
+        },
+        {
+          "name": "Pine Green",
+          "hex": "#2D6A4F"
+        },
+        {
+          "name": "Stellar Blue",
+          "hex": "#1A4A8B"
+        }
       ],
       "technical_specifications": {
         "motor": "Mid-drive PMSM Motor",
@@ -136,24 +245,55 @@
       "engine_displacement": "N/A",
       "mileage": "140 km (range)",
       "max_power": "7 kW",
-      "max_torque": "N/A",
+      "max_torque": "58 Nm",
       "top_speed": "105 kmph",
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Ola Roadster X is an entry-level electric motorcycle with 7kW motor, 140km range, 105 kmph top speed, combined braking system, and sporty styling at an accessible price starting at ₹1,04,480.",
-      "features": ["LED Lighting", "Digital Display", "USB Charging", "Combined Braking System", "Multiple Ride Modes", "Reverse Mode"],
+      "features": [
+        "LED Lighting",
+        "Digital Display",
+        "USB Charging",
+        "Combined Braking System",
+        "Multiple Ride Modes",
+        "Reverse Mode"
+      ],
       "variants": [
-        {"name": "Roadster X 2 kWh", "price": "₹1,04,480"},
-        {"name": "Roadster X 3 kWh", "price": "₹1,16,830"},
-        {"name": "Roadster X 4 kWh", "price": "₹1,29,350"}
+        {
+          "name": "Roadster X 2 kWh",
+          "price": "₹1,04,480"
+        },
+        {
+          "name": "Roadster X 3 kWh",
+          "price": "₹1,16,830"
+        },
+        {
+          "name": "Roadster X 4 kWh",
+          "price": "₹1,29,350"
+        }
       ],
       "colors": [
-        {"name": "Ceramic White", "hex": "#F5F5F0"},
-        {"name": "Pine Green", "hex": "#2D6A4F"},
-        {"name": "Stellar Blue", "hex": "#1A4A8B"},
-        {"name": "Anthracite", "hex": "#2A2A2A"},
-        {"name": "Industrial Silver", "hex": "#C8C8C8"}
+        {
+          "name": "Ceramic White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Pine Green",
+          "hex": "#2D6A4F"
+        },
+        {
+          "name": "Stellar Blue",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Anthracite",
+          "hex": "#2A2A2A"
+        },
+        {
+          "name": "Industrial Silver",
+          "hex": "#C8C8C8"
+        }
       ],
       "technical_specifications": {
         "motor": "Mid-drive PMSM Motor",
@@ -176,24 +316,56 @@
       "engine_displacement": "N/A",
       "mileage": "252 km (range)",
       "max_power": "11 kW",
-      "max_torque": "N/A",
+      "max_torque": "58 Nm",
       "top_speed": "125 kmph",
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Ola Roadster X Plus is a mid-range electric motorcycle with 11kW mid-drive motor, 252km range (top variant), 125 kmph top speed, front disc brake, and sporty design bridging the gap between Roadster X and Roadster.",
-      "features": ["Disc Brake Front", "Drum Brake Rear", "LED Lighting", "Digital Display", "USB Charging", "Multiple Ride Modes", "Combined Braking System"],
+      "features": [
+        "Disc Brake Front",
+        "Drum Brake Rear",
+        "LED Lighting",
+        "Digital Display",
+        "USB Charging",
+        "Multiple Ride Modes",
+        "Combined Braking System"
+      ],
       "variants": [
-        {"name": "Roadster X Plus 4.5 kWh", "price": "₹1,34,480"},
-        {"name": "Roadster X Plus 11 kWh", "price": "₹1,89,999"}
+        {
+          "name": "Roadster X Plus 4.5 kWh",
+          "price": "₹1,34,480"
+        },
+        {
+          "name": "Roadster X Plus 11 kWh",
+          "price": "₹1,89,999"
+        }
       ],
       "colors": [
-        {"name": "Industrial Silver", "hex": "#C8C8C8"},
-        {"name": "Anthracite", "hex": "#2A2A2A"},
-        {"name": "Stellar Blue", "hex": "#1A4A8B"},
-        {"name": "Pine Green", "hex": "#2D6A4F"},
-        {"name": "Ceramic White", "hex": "#F5F5F0"},
-        {"name": "Champions Edition", "hex": "#F5C518"}
+        {
+          "name": "Industrial Silver",
+          "hex": "#C8C8C8"
+        },
+        {
+          "name": "Anthracite",
+          "hex": "#2A2A2A"
+        },
+        {
+          "name": "Stellar Blue",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Pine Green",
+          "hex": "#2D6A4F"
+        },
+        {
+          "name": "Ceramic White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Champions Edition",
+          "hex": "#F5C518"
+        }
       ],
       "technical_specifications": {
         "motor": "Mid-drive PMSM Motor",
@@ -216,19 +388,38 @@
       "engine_displacement": "N/A",
       "mileage": "316 km (range)",
       "max_power": "52 kW",
-      "max_torque": "N/A",
+      "max_torque": "232 Nm",
       "top_speed": "154 kmph",
       "fuel_type": "Electric",
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Ola Roadster Pro is a flagship performance electric motorcycle with 52kW peak power, 316km range, 154 kmph top speed, dual disc brakes with ABS, fast 3.7-hour charging, and premium features. It is Ola Electric's most powerful and range-focused model.",
-      "features": ["Dual Disc Brakes", "ABS", "Fast Charging 3.7 hrs", "Multiple Ride Modes", "TFT Display", "OTA Updates", "LED Lighting", "USB Charging", "Bluetooth Connectivity"],
+      "features": [
+        "Dual Disc Brakes",
+        "ABS",
+        "Fast Charging 3.7 hrs",
+        "Multiple Ride Modes",
+        "TFT Display",
+        "OTA Updates",
+        "LED Lighting",
+        "USB Charging",
+        "Bluetooth Connectivity"
+      ],
       "variants": [
-        {"name": "Roadster Pro Standard", "price": "₹1,99,999"},
-        {"name": "Roadster Pro Max", "price": "₹2,49,999"}
+        {
+          "name": "Roadster Pro Standard",
+          "price": "₹1,99,999"
+        },
+        {
+          "name": "Roadster Pro Max",
+          "price": "₹2,49,999"
+        }
       ],
       "colors": [
-        {"name": "Pro Black", "hex": "#1A1A1A"}
+        {
+          "name": "Pro Black",
+          "hex": "#1A1A1A"
+        }
       ],
       "technical_specifications": {
         "motor": "Mid-drive PMSM Motor",
