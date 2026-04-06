@@ -27,11 +27,22 @@ function get2WImageUrl(brandId: string, model: string): string | null {
         if (urls[`${prefix}${shorter}.jpg`]) return urls[`${prefix}${shorter}.jpg`]
     }
 
-    // 3. Substring match
+    // 3. Suffix/substring match — handles brand-prefix naming (e.g. "kabira-km3000" vs slug "km3000")
     for (const key of Object.keys(urls)) {
         if (!key.startsWith(prefix)) continue
         const stored = key.slice(prefix.length, -4)
-        if (slug.startsWith(stored) || stored.startsWith(slug)) return urls[key]
+        if (slug.startsWith(stored) || stored.startsWith(slug) || stored.endsWith('-' + slug)) return urls[key]
+    }
+
+    // 4. Compact slug — handles digit-adjacent hyphens (e.g. "cb-125-hornet" → "cb125-hornet")
+    const slugCompact = slug.replace(/-(\d)/g, '$1')
+    if (slugCompact !== slug) {
+        if (urls[`${prefix}${slugCompact}.jpg`]) return urls[`${prefix}${slugCompact}.jpg`]
+        for (const key of Object.keys(urls)) {
+            if (!key.startsWith(prefix)) continue
+            const stored = key.slice(prefix.length, -4)
+            if (stored === slugCompact || stored.endsWith('-' + slugCompact)) return urls[key]
+        }
     }
 
     return null
