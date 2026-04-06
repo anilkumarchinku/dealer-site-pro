@@ -9,6 +9,33 @@ import brandData from '@/lib/data/brand-models.json'
 import { brandNameToId, modelToSlug } from '@/lib/utils/brand-model-images'
 import { getModelEnrichment } from '@/lib/data/2w-brand-data'
 import { TWO_WHEELER_MODEL_MILEAGE } from '@/lib/data/2w-model-mileage'
+import vehicleImageUrls from '@/public/data/vehicle-image-urls.json'
+
+function get2WImageUrl(brandId: string, model: string): string | null {
+    const urls = vehicleImageUrls as Record<string, string>
+    const toSlug = (s: string) => s.toLowerCase().replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-')
+    const slug = toSlug(model)
+    const prefix = `2w/${brandId}/`
+
+    // 1. Exact match
+    if (urls[`${prefix}${slug}.jpg`]) return urls[`${prefix}${slug}.jpg`]
+
+    // 2. Progressive prefix: try shorter slugs
+    const parts = slug.split('-')
+    for (let i = parts.length - 1; i >= 2; i--) {
+        const shorter = parts.slice(0, i).join('-')
+        if (urls[`${prefix}${shorter}.jpg`]) return urls[`${prefix}${shorter}.jpg`]
+    }
+
+    // 3. Substring match
+    for (const key of Object.keys(urls)) {
+        if (!key.startsWith(prefix)) continue
+        const stored = key.slice(prefix.length, -4)
+        if (slug.startsWith(stored) || stored.startsWith(slug)) return urls[key]
+    }
+
+    return null
+}
 
 const NOW = new Date().toISOString()
 const CURRENT_YEAR = new Date().getFullYear()
@@ -34,7 +61,7 @@ function buildTwoWheelerEntry(
 ): TwoWheelerVehicle {
     const fuelType: TwoWheelerFuelType = type === 'electric' ? 'electric' : 'petrol'
     const slug = modelToSlug(model)
-    const imageUrl = `/data/brand-model-images/2w/${brandId}/${slug}.jpg`
+    const imageUrl = get2WImageUrl(brandId, model) ?? `/data/brand-model-images/2w/${brandId}/${slug}.jpg`
 
     // Try to enrich from public/data/2w/*.json files
     const enrichment = getModelEnrichment(brandId, model)
