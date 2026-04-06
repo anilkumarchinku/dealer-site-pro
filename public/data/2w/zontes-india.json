@@ -11,7 +11,7 @@
       "variant_name": "350X",
       "price": "₹2,37,040",
       "engine_displacement": "348 cc",
-      "mileage": "N/A",
+      "mileage": "35 kmpl",
       "max_power": "38.2 bhp",
       "max_torque": "32 Nm",
       "top_speed": "160 kmph",
@@ -19,12 +19,34 @@
       "transmission": "6-Speed Manual",
       "source_section": "Available",
       "description": "The Zontes 350X is a 348cc naked streetfighter with 38.2 bhp, TFT display, keyless controls, 4 ride modes, dual-channel ABS, LED lighting, dual USB ports, and tyre pressure monitoring. Available through Moto Vault dealerships.",
-      "features": ["TFT Display", "Keyless Controls", "4 Ride Modes", "Dual-channel ABS", "LED Lighting", "Dual USB Ports", "Tyre Pressure Monitoring"],
-      "variants": [{"name": "350X Standard", "price": "₹2,37,040"}],
+      "features": [
+        "TFT Display",
+        "Keyless Controls",
+        "4 Ride Modes",
+        "Dual-channel ABS",
+        "LED Lighting",
+        "Dual USB Ports",
+        "Tyre Pressure Monitoring"
+      ],
+      "variants": [
+        {
+          "name": "350X Standard",
+          "price": "₹2,37,040"
+        }
+      ],
       "colors": [
-        {"name": "Black", "hex": "#1A1A1A"},
-        {"name": "White", "hex": "#F5F5F0"},
-        {"name": "Grey", "hex": "#6B6B6B"}
+        {
+          "name": "Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Grey",
+          "hex": "#6B6B6B"
+        }
       ],
       "technical_specifications": {
         "engine": "348 cc, Single Cylinder, Liquid Cooled",
@@ -43,7 +65,7 @@
       "variant_name": "350R",
       "price": "₹2,57,014",
       "engine_displacement": "348 cc",
-      "mileage": "N/A",
+      "mileage": "35 kmpl",
       "max_power": "38.2 bhp",
       "max_torque": "32 Nm",
       "top_speed": "165 kmph",
@@ -51,12 +73,35 @@
       "transmission": "6-Speed Manual",
       "source_section": "Available",
       "description": "The Zontes 350R is a 348cc scrambler-retro with 38.2 bhp, TFT display, keyless controls, 4 ride modes, and dual-channel ABS. Lightest in Zontes India lineup at 180kg.",
-      "features": ["TFT Display", "Keyless Controls", "4 Ride Modes", "Dual-channel ABS", "LED Lighting", "Dual USB Ports", "Tyre Pressure Monitoring", "Scrambler Styling"],
-      "variants": [{"name": "350R Standard", "price": "₹2,57,014"}],
+      "features": [
+        "TFT Display",
+        "Keyless Controls",
+        "4 Ride Modes",
+        "Dual-channel ABS",
+        "LED Lighting",
+        "Dual USB Ports",
+        "Tyre Pressure Monitoring",
+        "Scrambler Styling"
+      ],
+      "variants": [
+        {
+          "name": "350R Standard",
+          "price": "₹2,57,014"
+        }
+      ],
       "colors": [
-        {"name": "Khaki", "hex": "#9B9B6F"},
-        {"name": "Black", "hex": "#1A1A1A"},
-        {"name": "Silver", "hex": "#C8C8C8"}
+        {
+          "name": "Khaki",
+          "hex": "#9B9B6F"
+        },
+        {
+          "name": "Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Silver",
+          "hex": "#C8C8C8"
+        }
       ],
       "technical_specifications": {
         "engine": "348 cc, Single Cylinder, Liquid Cooled",
@@ -75,7 +120,7 @@
       "variant_name": "350T",
       "price": "₹2,75,016",
       "engine_displacement": "348 cc",
-      "mileage": "N/A",
+      "mileage": "35 kmpl",
       "max_power": "38.2 bhp",
       "max_torque": "32 Nm",
       "top_speed": "155 kmph",
@@ -83,12 +128,35 @@
       "transmission": "6-Speed Manual",
       "source_section": "Available",
       "description": "The Zontes 350T is a 348cc touring-adventure motorcycle with 38.2 bhp, TFT display, keyless controls, 4 ride modes, and large 196kg weight suited for long-distance touring.",
-      "features": ["TFT Display", "Keyless Controls", "4 Ride Modes", "Dual-channel ABS", "LED Lighting", "Dual USB Ports", "Tyre Pressure Monitoring", "Touring Ergonomics"],
-      "variants": [{"name": "350T Standard", "price": "₹2,75,016"}],
+      "features": [
+        "TFT Display",
+        "Keyless Controls",
+        "4 Ride Modes",
+        "Dual-channel ABS",
+        "LED Lighting",
+        "Dual USB Ports",
+        "Tyre Pressure Monitoring",
+        "Touring Ergonomics"
+      ],
+      "variants": [
+        {
+          "name": "350T Standard",
+          "price": "₹2,75,016"
+        }
+      ],
       "colors": [
-        {"name": "White Red", "hex": "#C41E3A"},
-        {"name": "Black", "hex": "#1A1A1A"},
-        {"name": "Grey", "hex": "#6B6B6B"}
+        {
+          "name": "White Red",
+          "hex": "#C41E3A"
+        },
+        {
+          "name": "Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Grey",
+          "hex": "#6B6B6B"
+        }
       ],
       "technical_specifications": {
         "engine": "348 cc, Single Cylinder, Liquid Cooled",
@@ -107,7 +175,7 @@
       "variant_name": "GK350",
       "price": "₹3,22,016",
       "engine_displacement": "348 cc",
-      "mileage": "N/A",
+      "mileage": "33 kmpl",
       "max_power": "38.2 bhp",
       "max_torque": "32 Nm",
       "top_speed": "160 kmph",
@@ -115,12 +183,35 @@
       "transmission": "6-Speed Manual",
       "source_section": "Available",
       "description": "The Zontes GK350 is the premium 348cc model from Zontes India with 38.2 bhp, premium retro-café styling, TFT display, keyless controls, 4 ride modes, and all premium features at ₹3,22,016.",
-      "features": ["TFT Display", "Keyless Controls", "4 Ride Modes", "Dual-channel ABS", "LED Lighting", "Dual USB Ports", "Tyre Pressure Monitoring", "Retro-Café Styling"],
-      "variants": [{"name": "GK350 Standard", "price": "₹3,22,016"}],
+      "features": [
+        "TFT Display",
+        "Keyless Controls",
+        "4 Ride Modes",
+        "Dual-channel ABS",
+        "LED Lighting",
+        "Dual USB Ports",
+        "Tyre Pressure Monitoring",
+        "Retro-Café Styling"
+      ],
+      "variants": [
+        {
+          "name": "GK350 Standard",
+          "price": "₹3,22,016"
+        }
+      ],
       "colors": [
-        {"name": "Black Chrome", "hex": "#2A2A2A"},
-        {"name": "Silver", "hex": "#C8C8C8"},
-        {"name": "Green", "hex": "#2D6A4F"}
+        {
+          "name": "Black Chrome",
+          "hex": "#2A2A2A"
+        },
+        {
+          "name": "Silver",
+          "hex": "#C8C8C8"
+        },
+        {
+          "name": "Green",
+          "hex": "#2D6A4F"
+        }
       ],
       "technical_specifications": {
         "engine": "348 cc, Single Cylinder, Liquid Cooled",

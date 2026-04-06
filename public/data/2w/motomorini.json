@@ -11,7 +11,7 @@
       "variant_name": "Seiemmezzo",
       "price": "₹4,79,143",
       "engine_displacement": "649 cc",
-      "mileage": "N/A",
+      "mileage": "25 kmpl",
       "max_power": "54.24 bhp",
       "max_torque": "54 Nm",
       "top_speed": "160 kmph",
@@ -19,15 +19,36 @@
       "transmission": "6-Speed Manual",
       "source_section": "Available",
       "description": "The Moto Morini Seiemmezzo is a premium 649cc retro-scrambler motorcycle with liquid-cooled parallel-twin engine, 54.24 bhp, disc brakes with ABS, and classic Italian styling. Available through 3 Indian dealerships. Rated 4.4/5.",
-      "features": ["649cc Parallel-Twin Engine", "Disc Brakes", "ABS", "LED Lighting", "Retro-Scrambler Styling"],
+      "features": [
+        "649cc Parallel-Twin Engine",
+        "Disc Brakes",
+        "ABS",
+        "LED Lighting",
+        "Retro-Scrambler Styling"
+      ],
       "variants": [
-        {"name": "Seiemmezzo STR", "price": "₹4,79,143"},
-        {"name": "Seiemmezzo SCR", "price": "₹5,10,000"}
+        {
+          "name": "Seiemmezzo STR",
+          "price": "₹4,79,143"
+        },
+        {
+          "name": "Seiemmezzo SCR",
+          "price": "₹5,10,000"
+        }
       ],
       "colors": [
-        {"name": "Classic Red", "hex": "#C41E3A"},
-        {"name": "Sand Beige", "hex": "#C2B280"},
-        {"name": "Matte Black", "hex": "#1A1A1A"}
+        {
+          "name": "Classic Red",
+          "hex": "#C41E3A"
+        },
+        {
+          "name": "Sand Beige",
+          "hex": "#C2B280"
+        },
+        {
+          "name": "Matte Black",
+          "hex": "#1A1A1A"
+        }
       ],
       "technical_specifications": {
         "engine": "649 cc, Parallel-Twin, Liquid Cooled",
@@ -46,7 +67,7 @@
       "variant_name": "X-Cape",
       "price": "₹6,39,973",
       "engine_displacement": "649 cc",
-      "mileage": "N/A",
+      "mileage": "22 kmpl",
       "max_power": "59.17 bhp",
       "max_torque": "54 Nm",
       "top_speed": "175 kmph",
@@ -54,14 +75,33 @@
       "transmission": "6-Speed Manual",
       "source_section": "Available",
       "description": "The Moto Morini X-Cape is a premium 649cc adventure-touring motorcycle with liquid-cooled parallel-twin engine, 59.17 bhp, disc brakes with ABS, and adventure-focused ergonomics. Rated 4.1/5.",
-      "features": ["649cc Parallel-Twin Engine", "Disc Brakes", "ABS", "LED Lighting", "Adventure Ergonomics", "Long-travel Suspension"],
+      "features": [
+        "649cc Parallel-Twin Engine",
+        "Disc Brakes",
+        "ABS",
+        "LED Lighting",
+        "Adventure Ergonomics",
+        "Long-travel Suspension"
+      ],
       "variants": [
-        {"name": "X-Cape Standard", "price": "₹6,39,973"}
+        {
+          "name": "X-Cape Standard",
+          "price": "₹6,39,973"
+        }
       ],
       "colors": [
-        {"name": "Red Black", "hex": "#C41E3A"},
-        {"name": "Grey", "hex": "#6B6B6B"},
-        {"name": "White", "hex": "#F5F5F0"}
+        {
+          "name": "Red Black",
+          "hex": "#C41E3A"
+        },
+        {
+          "name": "Grey",
+          "hex": "#6B6B6B"
+        },
+        {
+          "name": "White",
+          "hex": "#F5F5F0"
+        }
       ],
       "technical_specifications": {
         "engine": "649 cc, Parallel-Twin, Liquid Cooled",

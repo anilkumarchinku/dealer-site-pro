@@ -19,17 +19,46 @@
       "transmission": "6-Speed Manual",
       "source_section": "Available",
       "description": "The Ducati Scrambler Icon is the entry-level Ducati in India at ₹10,65,200, featuring an 803cc L-twin, 71.87 bhp, disc brakes with ABS, 13.5L tank, and 795mm seat height. Available in 3 variants up to ₹17,10,000 with 4 color options.",
-      "features": ["803cc L-Twin Engine", "ABS", "Disc Brakes", "LED Headlamp", "Self Start", "TFT Display", "BS6 Phase 2B"],
+      "features": [
+        "803cc L-Twin Engine",
+        "ABS",
+        "Disc Brakes",
+        "LED Headlamp",
+        "Self Start",
+        "TFT Display",
+        "BS6 Phase 2B"
+      ],
       "variants": [
-        {"name": "Scrambler Icon Standard", "price": "₹10,65,200"},
-        {"name": "Scrambler Icon Urban", "price": "₹12,00,000"},
-        {"name": "Scrambler Icon S", "price": "₹17,10,000"}
+        {
+          "name": "Scrambler Icon Standard",
+          "price": "₹10,65,200"
+        },
+        {
+          "name": "Scrambler Icon Urban",
+          "price": "₹12,00,000"
+        },
+        {
+          "name": "Scrambler Icon S",
+          "price": "₹17,10,000"
+        }
       ],
       "colors": [
-        {"name": "Matte Black", "hex": "#2A2A2A"},
-        {"name": "Ducati Red", "hex": "#CC0000"},
-        {"name": "Yellow", "hex": "#FFD700"},
-        {"name": "Stone White", "hex": "#F5F5F0"}
+        {
+          "name": "Matte Black",
+          "hex": "#2A2A2A"
+        },
+        {
+          "name": "Ducati Red",
+          "hex": "#CC0000"
+        },
+        {
+          "name": "Yellow",
+          "hex": "#FFD700"
+        },
+        {
+          "name": "Stone White",
+          "hex": "#F5F5F0"
+        }
       ],
       "technical_specifications": {
         "engine": "803 cc, L-Twin, Air Cooled",
@@ -58,12 +87,26 @@
       "transmission": "6-Speed Manual",
       "source_section": "Available",
       "description": "The Ducati Scrambler Nightshift is an 803cc café-racer style variant with 71.87 bhp, TFT display, spoke wheels, and Nebula Blue exclusive color at ₹13,46,600.",
-      "features": ["803cc L-Twin Engine", "TFT Display", "Spoke Wheels", "ABS", "LED Headlamp", "Self Start", "BS6 Phase 2"],
+      "features": [
+        "803cc L-Twin Engine",
+        "TFT Display",
+        "Spoke Wheels",
+        "ABS",
+        "LED Headlamp",
+        "Self Start",
+        "BS6 Phase 2"
+      ],
       "variants": [
-        {"name": "Scrambler Nightshift Standard", "price": "₹13,46,600"}
+        {
+          "name": "Scrambler Nightshift Standard",
+          "price": "₹13,46,600"
+        }
       ],
       "colors": [
-        {"name": "Nebula Blue", "hex": "#2A4A8A"}
+        {
+          "name": "Nebula Blue",
+          "hex": "#2A4A8A"
+        }
       ],
       "technical_specifications": {
         "engine": "803 cc, L-Twin, Air Cooled",
@@ -92,12 +135,26 @@
       "transmission": "6-Speed Manual",
       "source_section": "Available",
       "description": "The Ducati Scrambler Full Throttle is an 803cc flat-track inspired variant with unique Heritage Livery, scrambler styling, and some off-road capability at ₹13,46,600.",
-      "features": ["803cc L-Twin Engine", "ABS", "Disc Brakes", "Flat Track Styling", "LED Lighting", "Self Start", "BS6 Phase 2B"],
+      "features": [
+        "803cc L-Twin Engine",
+        "ABS",
+        "Disc Brakes",
+        "Flat Track Styling",
+        "LED Lighting",
+        "Self Start",
+        "BS6 Phase 2B"
+      ],
       "variants": [
-        {"name": "Scrambler Full Throttle Standard", "price": "₹13,46,600"}
+        {
+          "name": "Scrambler Full Throttle Standard",
+          "price": "₹13,46,600"
+        }
       ],
       "colors": [
-        {"name": "Heritage Livery", "hex": "#C8A870"}
+        {
+          "name": "Heritage Livery",
+          "hex": "#C8A870"
+        }
       ],
       "technical_specifications": {
         "engine": "803 cc, L-Twin, Air Cooled",
@@ -126,20 +183,60 @@
       "transmission": "6-Speed Manual",
       "source_section": "Available",
       "description": "The Ducati Monster is a 937cc liquid-cooled naked streetfighter with 109.96 bhp, aggressive styling, and top-spec electronics. Available in 3 variants from ₹13,84,000 to ₹17,04,580 with 7 color choices.",
-      "features": ["937cc L-Twin Engine", "Liquid Cooled", "ABS", "Disc Brakes", "TFT Display", "Ride-by-Wire", "Multiple Riding Modes", "LED Lighting", "BS6 Phase 2"],
+      "features": [
+        "937cc L-Twin Engine",
+        "Liquid Cooled",
+        "ABS",
+        "Disc Brakes",
+        "TFT Display",
+        "Ride-by-Wire",
+        "Multiple Riding Modes",
+        "LED Lighting",
+        "BS6 Phase 2"
+      ],
       "variants": [
-        {"name": "Monster Standard", "price": "₹13,84,000"},
-        {"name": "Monster Plus", "price": "₹15,50,000"},
-        {"name": "Monster SP", "price": "₹17,04,580"}
+        {
+          "name": "Monster Standard",
+          "price": "₹13,84,000"
+        },
+        {
+          "name": "Monster Plus",
+          "price": "₹15,50,000"
+        },
+        {
+          "name": "Monster SP",
+          "price": "₹17,04,580"
+        }
       ],
       "colors": [
-        {"name": "Dark Stealth", "hex": "#2A2A2A"},
-        {"name": "Aviator Grey", "hex": "#7A7A7A"},
-        {"name": "Ducati Red", "hex": "#CC0000"},
-        {"name": "Plus Dark Stealth", "hex": "#1A1A1A"},
-        {"name": "Plus Aviator Grey", "hex": "#8A8A8A"},
-        {"name": "Plus Ducati Red", "hex": "#CC0000"},
-        {"name": "Ducati Red SP", "hex": "#AA0000"}
+        {
+          "name": "Dark Stealth",
+          "hex": "#2A2A2A"
+        },
+        {
+          "name": "Aviator Grey",
+          "hex": "#7A7A7A"
+        },
+        {
+          "name": "Ducati Red",
+          "hex": "#CC0000"
+        },
+        {
+          "name": "Plus Dark Stealth",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Plus Aviator Grey",
+          "hex": "#8A8A8A"
+        },
+        {
+          "name": "Plus Ducati Red",
+          "hex": "#CC0000"
+        },
+        {
+          "name": "Ducati Red SP",
+          "hex": "#AA0000"
+        }
       ],
       "technical_specifications": {
         "engine": "937 cc, L-Twin, Liquid Cooled",
@@ -168,15 +265,39 @@
       "transmission": "6-Speed Manual",
       "source_section": "Available",
       "description": "The Ducati SuperSport is a 937cc sport-touring motorcycle with 108.62 bhp, refined electronics, 16L tank, and 210kg weight. Available in 2 variants from ₹17,16,100 to ₹20,10,300 with 3 color choices.",
-      "features": ["937cc L-Twin Engine", "Liquid Cooled", "ABS", "Disc Brakes", "Sport Touring Ergonomics", "Ride-by-Wire", "LED Lighting", "BS6 Phase 2"],
+      "features": [
+        "937cc L-Twin Engine",
+        "Liquid Cooled",
+        "ABS",
+        "Disc Brakes",
+        "Sport Touring Ergonomics",
+        "Ride-by-Wire",
+        "LED Lighting",
+        "BS6 Phase 2"
+      ],
       "variants": [
-        {"name": "SuperSport Standard", "price": "₹17,16,100"},
-        {"name": "SuperSport S", "price": "₹20,10,300"}
+        {
+          "name": "SuperSport Standard",
+          "price": "₹17,16,100"
+        },
+        {
+          "name": "SuperSport S",
+          "price": "₹20,10,300"
+        }
       ],
       "colors": [
-        {"name": "Ducati Red Standard", "hex": "#CC0000"},
-        {"name": "Ducati Red S", "hex": "#AA0000"},
-        {"name": "Arctic White", "hex": "#F5F5F0"}
+        {
+          "name": "Ducati Red Standard",
+          "hex": "#CC0000"
+        },
+        {
+          "name": "Ducati Red S",
+          "hex": "#AA0000"
+        },
+        {
+          "name": "Arctic White",
+          "hex": "#F5F5F0"
+        }
       ],
       "technical_specifications": {
         "engine": "937 cc, L-Twin, Liquid Cooled",
@@ -205,15 +326,40 @@
       "transmission": "6-Speed Manual",
       "source_section": "Available",
       "description": "The Ducati Hypermotard 950 is an aggressive 937cc supermoto with 112.6 bhp, top-spec electronics, and 870mm seat height. Available in 2 variants from ₹17,10,500 to ₹20,35,878 with Graffiti livery options.",
-      "features": ["937cc L-Twin Engine", "Liquid Cooled", "ABS", "Disc Brakes", "Supermoto Ergonomics", "Ride-by-Wire", "Multiple Riding Modes", "LED Lighting", "BS6 Phase 2"],
+      "features": [
+        "937cc L-Twin Engine",
+        "Liquid Cooled",
+        "ABS",
+        "Disc Brakes",
+        "Supermoto Ergonomics",
+        "Ride-by-Wire",
+        "Multiple Riding Modes",
+        "LED Lighting",
+        "BS6 Phase 2"
+      ],
       "variants": [
-        {"name": "Hypermotard 950 Standard", "price": "₹17,10,500"},
-        {"name": "Hypermotard 950 SP", "price": "₹20,35,878"}
+        {
+          "name": "Hypermotard 950 Standard",
+          "price": "₹17,10,500"
+        },
+        {
+          "name": "Hypermotard 950 SP",
+          "price": "₹20,35,878"
+        }
       ],
       "colors": [
-        {"name": "Graffiti Evo", "hex": "#E8E8E8"},
-        {"name": "Graffiti", "hex": "#F0F0F0"},
-        {"name": "SP Livery", "hex": "#CC0000"}
+        {
+          "name": "Graffiti Evo",
+          "hex": "#E8E8E8"
+        },
+        {
+          "name": "Graffiti",
+          "hex": "#F0F0F0"
+        },
+        {
+          "name": "SP Livery",
+          "hex": "#CC0000"
+        }
       ],
       "technical_specifications": {
         "engine": "937 cc, L-Twin, Liquid Cooled",
@@ -234,7 +380,7 @@
       "variant_name": "Desmo450 MX",
       "price": "₹17,23,600",
       "engine_displacement": "449.6 cc",
-      "mileage": "N/A",
+      "mileage": "28 kmpl",
       "max_power": "62.62 bhp",
       "max_torque": "53.5 Nm",
       "top_speed": "N/A",
@@ -242,12 +388,26 @@
       "transmission": "5-Speed Manual",
       "source_section": "Available",
       "description": "The Ducati Desmo450 MX is a 449.6cc Motocross competition motorcycle with 62.62 bhp, ultra-light spoke-wheel chassis, fully adjustable Showa suspension, 970mm seat height, and premium Italian motocross components at ₹17,23,600.",
-      "features": ["449.6cc Single Engine", "Fully Adjustable Suspension", "Spoke Wheels", "Disc Brakes", "Lightweight Chassis", "Motocross Ready", "BS6 Phase 2B"],
+      "features": [
+        "449.6cc Single Engine",
+        "Fully Adjustable Suspension",
+        "Spoke Wheels",
+        "Disc Brakes",
+        "Lightweight Chassis",
+        "Motocross Ready",
+        "BS6 Phase 2B"
+      ],
       "variants": [
-        {"name": "Desmo450 MX Standard", "price": "₹17,23,600"}
+        {
+          "name": "Desmo450 MX Standard",
+          "price": "₹17,23,600"
+        }
       ],
       "colors": [
-        {"name": "Ducati Red", "hex": "#CC0000"}
+        {
+          "name": "Ducati Red",
+          "hex": "#CC0000"
+        }
       ],
       "technical_specifications": {
         "engine": "449.6 cc, Single Cylinder",
@@ -276,14 +436,36 @@
       "transmission": "6-Speed Manual",
       "source_section": "Available",
       "description": "The Ducati Streetfighter V2 is a 890cc parallel-twin naked streetfighter with 118 bhp, V2 engine with strong mid-range, agile 200kg weight, and available in 2 variants from ₹17,50,200 to ₹19,48,900.",
-      "features": ["890cc Parallel-Twin Engine", "Liquid Cooled", "ABS", "Disc Brakes", "TFT Display", "Ride-by-Wire", "Multiple Riding Modes", "LED Lighting", "BS6 Phase 2B"],
+      "features": [
+        "890cc Parallel-Twin Engine",
+        "Liquid Cooled",
+        "ABS",
+        "Disc Brakes",
+        "TFT Display",
+        "Ride-by-Wire",
+        "Multiple Riding Modes",
+        "LED Lighting",
+        "BS6 Phase 2B"
+      ],
       "variants": [
-        {"name": "Streetfighter V2 Standard", "price": "₹17,50,200"},
-        {"name": "Streetfighter V2 S", "price": "₹19,48,900"}
+        {
+          "name": "Streetfighter V2 Standard",
+          "price": "₹17,50,200"
+        },
+        {
+          "name": "Streetfighter V2 S",
+          "price": "₹19,48,900"
+        }
       ],
       "colors": [
-        {"name": "Ducati Red", "hex": "#CC0000"},
-        {"name": "Ducati Red S", "hex": "#AA0000"}
+        {
+          "name": "Ducati Red",
+          "hex": "#CC0000"
+        },
+        {
+          "name": "Ducati Red S",
+          "hex": "#AA0000"
+        }
       ],
       "technical_specifications": {
         "engine": "890 cc, Parallel-Twin, Liquid Cooled",
@@ -312,12 +494,27 @@
       "transmission": "6-Speed Manual",
       "source_section": "Available",
       "description": "The Ducati Hypermotard 698 Mono is a 659cc single-cylinder supermoto with 76.43 bhp, ultra-light 159kg weight, agile chassis, top electronics, and 904mm seat height at ₹18,70,300.",
-      "features": ["659cc Single Engine", "Liquid Cooled", "ABS", "Disc Brakes", "Agile Chassis", "Top-spec Electronics", "LED Lighting", "BS6 Phase 2"],
+      "features": [
+        "659cc Single Engine",
+        "Liquid Cooled",
+        "ABS",
+        "Disc Brakes",
+        "Agile Chassis",
+        "Top-spec Electronics",
+        "LED Lighting",
+        "BS6 Phase 2"
+      ],
       "variants": [
-        {"name": "Hypermotard 698 Mono Standard", "price": "₹18,70,300"}
+        {
+          "name": "Hypermotard 698 Mono Standard",
+          "price": "₹18,70,300"
+        }
       ],
       "colors": [
-        {"name": "Ducati Red", "hex": "#CC0000"}
+        {
+          "name": "Ducati Red",
+          "hex": "#CC0000"
+        }
       ],
       "technical_specifications": {
         "engine": "659 cc, Single Cylinder, Liquid Cooled",
@@ -346,16 +543,44 @@
       "transmission": "6-Speed Manual",
       "source_section": "Available",
       "description": "The Ducati Multistrada V2 is a 890cc adventure-touring motorcycle with 113.98 bhp, 19L tank, radar cruise control, and available in 3 variants from ₹18,88,000 to ₹21,29,700.",
-      "features": ["890cc Parallel-Twin Engine", "Liquid Cooled", "ABS", "Disc Brakes", "Radar Cruise Control", "TFT Display", "Multiple Riding Modes", "LED Lighting", "BS6 Phase 2B"],
+      "features": [
+        "890cc Parallel-Twin Engine",
+        "Liquid Cooled",
+        "ABS",
+        "Disc Brakes",
+        "Radar Cruise Control",
+        "TFT Display",
+        "Multiple Riding Modes",
+        "LED Lighting",
+        "BS6 Phase 2B"
+      ],
       "variants": [
-        {"name": "Multistrada V2 Standard", "price": "₹18,88,000"},
-        {"name": "Multistrada V2 S (Red)", "price": "₹20,00,000"},
-        {"name": "Multistrada V2 S (Storm Green)", "price": "₹21,29,700"}
+        {
+          "name": "Multistrada V2 Standard",
+          "price": "₹18,88,000"
+        },
+        {
+          "name": "Multistrada V2 S (Red)",
+          "price": "₹20,00,000"
+        },
+        {
+          "name": "Multistrada V2 S (Storm Green)",
+          "price": "₹21,29,700"
+        }
       ],
       "colors": [
-        {"name": "Ducati Red", "hex": "#CC0000"},
-        {"name": "S Ducati Red", "hex": "#AA0000"},
-        {"name": "S Storm Green", "hex": "#2D5A3D"}
+        {
+          "name": "Ducati Red",
+          "hex": "#CC0000"
+        },
+        {
+          "name": "S Ducati Red",
+          "hex": "#AA0000"
+        },
+        {
+          "name": "S Storm Green",
+          "hex": "#2D5A3D"
+        }
       ],
       "technical_specifications": {
         "engine": "890 cc, Parallel-Twin, Liquid Cooled",
@@ -384,14 +609,37 @@
       "transmission": "6-Speed Manual",
       "source_section": "Available",
       "description": "The Ducati Panigale V2 is a 890cc supersport with 118 bhp, monocoque frame, fully adjustable suspension, and strong electronics. Available in 2 variants from ₹19,11,900 to ₹21,09,900.",
-      "features": ["890cc Parallel-Twin Engine", "Liquid Cooled", "ABS", "Disc Brakes", "Monocoque Frame", "Fully Adjustable Suspension", "Ride-by-Wire", "Multiple Riding Modes", "LED Lighting", "BS6 Phase 2B"],
+      "features": [
+        "890cc Parallel-Twin Engine",
+        "Liquid Cooled",
+        "ABS",
+        "Disc Brakes",
+        "Monocoque Frame",
+        "Fully Adjustable Suspension",
+        "Ride-by-Wire",
+        "Multiple Riding Modes",
+        "LED Lighting",
+        "BS6 Phase 2B"
+      ],
       "variants": [
-        {"name": "Panigale V2 Standard", "price": "₹19,11,900"},
-        {"name": "Panigale V2 S", "price": "₹21,09,900"}
+        {
+          "name": "Panigale V2 Standard",
+          "price": "₹19,11,900"
+        },
+        {
+          "name": "Panigale V2 S",
+          "price": "₹21,09,900"
+        }
       ],
       "colors": [
-        {"name": "Ducati Red", "hex": "#CC0000"},
-        {"name": "Ducati Red S", "hex": "#AA0000"}
+        {
+          "name": "Ducati Red",
+          "hex": "#CC0000"
+        },
+        {
+          "name": "Ducati Red S",
+          "hex": "#AA0000"
+        }
       ],
       "technical_specifications": {
         "engine": "890 cc, Parallel-Twin, Liquid Cooled",
@@ -420,17 +668,48 @@
       "transmission": "6-Speed Manual",
       "source_section": "Available",
       "description": "The Ducati DesertX is a 937cc long-range adventure motorcycle with 108.6 bhp, 21L tank, spoke wheels, 875mm seat, excellent off-road capability, and top-spec electronics. Available in variants from ₹19,59,200 to ₹25,33,700.",
-      "features": ["937cc L-Twin Engine", "Liquid Cooled", "ABS", "Spoke Wheels", "Off-Road Capability", "Top-spec Electronics", "21L Fuel Tank", "LED Lighting", "BS6 Phase 2"],
+      "features": [
+        "937cc L-Twin Engine",
+        "Liquid Cooled",
+        "ABS",
+        "Spoke Wheels",
+        "Off-Road Capability",
+        "Top-spec Electronics",
+        "21L Fuel Tank",
+        "LED Lighting",
+        "BS6 Phase 2"
+      ],
       "variants": [
-        {"name": "DesertX Standard", "price": "₹19,59,200"},
-        {"name": "DesertX Discovery", "price": "₹23,00,000"},
-        {"name": "DesertX Rally", "price": "₹25,33,700"}
+        {
+          "name": "DesertX Standard",
+          "price": "₹19,59,200"
+        },
+        {
+          "name": "DesertX Discovery",
+          "price": "₹23,00,000"
+        },
+        {
+          "name": "DesertX Rally",
+          "price": "₹25,33,700"
+        }
       ],
       "colors": [
-        {"name": "Star White Silk", "hex": "#F5F5F0"},
-        {"name": "Rally", "hex": "#C8A870"},
-        {"name": "Thrilling Black", "hex": "#1A1A1A"},
-        {"name": "Ducati Red", "hex": "#CC0000"}
+        {
+          "name": "Star White Silk",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Rally",
+          "hex": "#C8A870"
+        },
+        {
+          "name": "Thrilling Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Ducati Red",
+          "hex": "#CC0000"
+        }
       ],
       "technical_specifications": {
         "engine": "937 cc, L-Twin, Liquid Cooled",
@@ -459,17 +738,49 @@
       "transmission": "6-Speed Manual",
       "source_section": "Available",
       "description": "The Ducati Multistrada V4 is a 1158cc V4 flagship adventure-tourer with 170 bhp, radar-based cruise control (segment first), 22L tank, 240kg weight, and available in 3 variants from ₹24,56,300 to ₹36,16,700.",
-      "features": ["1158cc V4 Engine", "Liquid Cooled", "ABS", "Disc Brakes", "Radar Cruise Control", "TFT Display", "Multiple Riding Modes", "22L Fuel Tank", "LED Lighting", "BS6 Phase 2B"],
+      "features": [
+        "1158cc V4 Engine",
+        "Liquid Cooled",
+        "ABS",
+        "Disc Brakes",
+        "Radar Cruise Control",
+        "TFT Display",
+        "Multiple Riding Modes",
+        "22L Fuel Tank",
+        "LED Lighting",
+        "BS6 Phase 2B"
+      ],
       "variants": [
-        {"name": "Multistrada V4 Standard", "price": "₹24,56,300"},
-        {"name": "Multistrada V4 S", "price": "₹30,00,000"},
-        {"name": "Multistrada V4 S Grand Tour", "price": "₹36,16,700"}
+        {
+          "name": "Multistrada V4 Standard",
+          "price": "₹24,56,300"
+        },
+        {
+          "name": "Multistrada V4 S",
+          "price": "₹30,00,000"
+        },
+        {
+          "name": "Multistrada V4 S Grand Tour",
+          "price": "₹36,16,700"
+        }
       ],
       "colors": [
-        {"name": "Ducati Red", "hex": "#CC0000"},
-        {"name": "Arctic White", "hex": "#F5F5F0"},
-        {"name": "Thrilling Black", "hex": "#1A1A1A"},
-        {"name": "Red and Black", "hex": "#880000"}
+        {
+          "name": "Ducati Red",
+          "hex": "#CC0000"
+        },
+        {
+          "name": "Arctic White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Thrilling Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Red and Black",
+          "hex": "#880000"
+        }
       ],
       "technical_specifications": {
         "engine": "1158 cc, V4, Liquid Cooled",
@@ -498,13 +809,32 @@
       "transmission": "6-Speed Manual",
       "source_section": "Available",
       "description": "The Ducati Streetfighter V4 is a 1103cc V4 hyper-naked with savage 205 bhp, TFT with navigation and Bluetooth, 845mm seat height, and available in 2 variants from ₹28,68,600 to ₹32,38,400.",
-      "features": ["1103cc V4 Engine", "Liquid Cooled", "ABS", "Disc Brakes", "TFT Display with Navigation", "Bluetooth", "Multiple Riding Modes", "LED Lighting", "BS6 Phase 2"],
+      "features": [
+        "1103cc V4 Engine",
+        "Liquid Cooled",
+        "ABS",
+        "Disc Brakes",
+        "TFT Display with Navigation",
+        "Bluetooth",
+        "Multiple Riding Modes",
+        "LED Lighting",
+        "BS6 Phase 2"
+      ],
       "variants": [
-        {"name": "Streetfighter V4 Standard", "price": "₹28,68,600"},
-        {"name": "Streetfighter V4 S", "price": "₹32,38,400"}
+        {
+          "name": "Streetfighter V4 Standard",
+          "price": "₹28,68,600"
+        },
+        {
+          "name": "Streetfighter V4 S",
+          "price": "₹32,38,400"
+        }
       ],
       "colors": [
-        {"name": "Ducati Red", "hex": "#CC0000"}
+        {
+          "name": "Ducati Red",
+          "hex": "#CC0000"
+        }
       ],
       "technical_specifications": {
         "engine": "1103 cc, V4, Liquid Cooled",
@@ -533,13 +863,32 @@
       "transmission": "6-Speed Manual",
       "source_section": "Available",
       "description": "The Ducati Diavel V4 is a 1158cc V4 power cruiser with 166.28 bhp, radar cruise control, relaxed 770mm seat, 20L tank, and premium cruiser ergonomics at ₹29,07,600.",
-      "features": ["1158cc V4 Engine", "Liquid Cooled", "ABS", "Disc Brakes", "Radar Cruise Control", "TFT Display", "Multiple Riding Modes", "LED Lighting", "BS6 Phase 2"],
+      "features": [
+        "1158cc V4 Engine",
+        "Liquid Cooled",
+        "ABS",
+        "Disc Brakes",
+        "Radar Cruise Control",
+        "TFT Display",
+        "Multiple Riding Modes",
+        "LED Lighting",
+        "BS6 Phase 2"
+      ],
       "variants": [
-        {"name": "Diavel V4 Standard", "price": "₹29,07,600"}
+        {
+          "name": "Diavel V4 Standard",
+          "price": "₹29,07,600"
+        }
       ],
       "colors": [
-        {"name": "Thrilling Black", "hex": "#1A1A1A"},
-        {"name": "Ducati Red", "hex": "#CC0000"}
+        {
+          "name": "Thrilling Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Ducati Red",
+          "hex": "#CC0000"
+        }
       ],
       "technical_specifications": {
         "engine": "1158 cc, V4, Liquid Cooled",
@@ -560,7 +909,7 @@
       "variant_name": "XDiavel V4",
       "price": "₹30,88,700",
       "engine_displacement": "1158 cc",
-      "mileage": "N/A",
+      "mileage": "16 kmpl",
       "max_power": "166.28 bhp",
       "max_torque": "126 Nm",
       "top_speed": "N/A",
@@ -568,13 +917,32 @@
       "transmission": "6-Speed Manual",
       "source_section": "Available",
       "description": "The Ducati XDiavel V4 is a 1158cc V4 power cruiser with 166.28 bhp, radar cruise control, ultra-low 770mm seat, and extended cruiser ergonomics at ₹30,88,700.",
-      "features": ["1158cc V4 Engine", "Liquid Cooled", "ABS", "Disc Brakes", "Radar Cruise Control", "Low Seat Height", "TFT Display", "LED Lighting", "BS6 Phase 2"],
+      "features": [
+        "1158cc V4 Engine",
+        "Liquid Cooled",
+        "ABS",
+        "Disc Brakes",
+        "Radar Cruise Control",
+        "Low Seat Height",
+        "TFT Display",
+        "LED Lighting",
+        "BS6 Phase 2"
+      ],
       "variants": [
-        {"name": "XDiavel V4 Standard", "price": "₹30,88,700"}
+        {
+          "name": "XDiavel V4 Standard",
+          "price": "₹30,88,700"
+        }
       ],
       "colors": [
-        {"name": "Black Lava", "hex": "#1A1A1A"},
-        {"name": "Burning Red", "hex": "#CC0000"}
+        {
+          "name": "Black Lava",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Burning Red",
+          "hex": "#CC0000"
+        }
       ],
       "technical_specifications": {
         "engine": "1158 cc, V4, Liquid Cooled",
@@ -603,16 +971,44 @@
       "transmission": "6-Speed Manual",
       "source_section": "Available",
       "description": "The Ducati Panigale V4 is a 1103cc V4 flagship superbike with 219 bhp, advanced electronics, 17L tank, and available in 3 variants from ₹32,05,100 to ₹77,00,000. The apex of street-legal performance.",
-      "features": ["1103cc V4 Engine", "Liquid Cooled", "ABS", "Disc Brakes", "Advanced Electronics", "Race Sport Street Modes", "TFT Display", "LED Lighting", "BS6 Phase 2B"],
+      "features": [
+        "1103cc V4 Engine",
+        "Liquid Cooled",
+        "ABS",
+        "Disc Brakes",
+        "Advanced Electronics",
+        "Race Sport Street Modes",
+        "TFT Display",
+        "LED Lighting",
+        "BS6 Phase 2B"
+      ],
       "variants": [
-        {"name": "Panigale V4 Standard", "price": "₹32,05,100"},
-        {"name": "Panigale V4 S", "price": "₹45,00,000"},
-        {"name": "Panigale V4 SP2", "price": "₹77,00,000"}
+        {
+          "name": "Panigale V4 Standard",
+          "price": "₹32,05,100"
+        },
+        {
+          "name": "Panigale V4 S",
+          "price": "₹45,00,000"
+        },
+        {
+          "name": "Panigale V4 SP2",
+          "price": "₹77,00,000"
+        }
       ],
       "colors": [
-        {"name": "Ducati Red", "hex": "#CC0000"},
-        {"name": "Ducati Red S", "hex": "#AA0000"},
-        {"name": "Tricolore Livery", "hex": "#CC0000"}
+        {
+          "name": "Ducati Red",
+          "hex": "#CC0000"
+        },
+        {
+          "name": "Ducati Red S",
+          "hex": "#AA0000"
+        },
+        {
+          "name": "Tricolore Livery",
+          "hex": "#CC0000"
+        }
       ],
       "technical_specifications": {
         "engine": "1103 cc, V4, Liquid Cooled",
@@ -633,7 +1029,7 @@
       "variant_name": "Multistrada V4 RS",
       "price": "₹43,46,700",
       "engine_displacement": "1103 cc",
-      "mileage": "N/A",
+      "mileage": "18 kmpl",
       "max_power": "180 bhp",
       "max_torque": "118 Nm",
       "top_speed": "N/A",
@@ -641,13 +1037,32 @@
       "transmission": "6-Speed Manual",
       "source_section": "Available",
       "description": "The Ducati Multistrada V4 RS is the ultimate 1103cc V4 adventure-sports flagship with 180 bhp, race-track capable chassis, top-spec electronics, 22L tank, and exclusive Iceberg White Livery at ₹43,46,700.",
-      "features": ["1103cc V4 Engine", "Liquid Cooled", "ABS", "Disc Brakes", "Race Track Capability", "Top-spec Electronics", "22L Fuel Tank", "LED Lighting", "BS6 Phase 2"],
+      "features": [
+        "1103cc V4 Engine",
+        "Liquid Cooled",
+        "ABS",
+        "Disc Brakes",
+        "Race Track Capability",
+        "Top-spec Electronics",
+        "22L Fuel Tank",
+        "LED Lighting",
+        "BS6 Phase 2"
+      ],
       "variants": [
-        {"name": "Multistrada V4 RS Standard", "price": "₹43,46,700"}
+        {
+          "name": "Multistrada V4 RS Standard",
+          "price": "₹43,46,700"
+        }
       ],
       "colors": [
-        {"name": "Iceberg White Livery", "hex": "#F0F0F5"},
-        {"name": "Ducati Red", "hex": "#CC0000"}
+        {
+          "name": "Iceberg White Livery",
+          "hex": "#F0F0F5"
+        },
+        {
+          "name": "Ducati Red",
+          "hex": "#CC0000"
+        }
       ],
       "technical_specifications": {
         "engine": "1103 cc, V4, Liquid Cooled",
@@ -676,12 +1091,28 @@
       "transmission": "6-Speed Manual",
       "source_section": "Available",
       "description": "The Ducati Panigale V4 R is Ducati's homologation flagship — a 998cc V4 with 221 bhp, 193.5kg weight, 330 kmph top speed, Öhlins adjustable suspension, and Race, Sport, Street modes. The most expensive Ducati in India at ₹84,99,000.",
-      "features": ["998cc V4 Engine", "Liquid Cooled", "ABS", "Öhlins Suspension", "Race Sport Street Modes", "Track Focused", "TFT Display", "LED Lighting", "BS6 Phase 2B"],
+      "features": [
+        "998cc V4 Engine",
+        "Liquid Cooled",
+        "ABS",
+        "Öhlins Suspension",
+        "Race Sport Street Modes",
+        "Track Focused",
+        "TFT Display",
+        "LED Lighting",
+        "BS6 Phase 2B"
+      ],
       "variants": [
-        {"name": "Panigale V4 R Standard", "price": "₹84,99,000"}
+        {
+          "name": "Panigale V4 R Standard",
+          "price": "₹84,99,000"
+        }
       ],
       "colors": [
-        {"name": "Ducati Red", "hex": "#CC0000"}
+        {
+          "name": "Ducati Red",
+          "hex": "#CC0000"
+        }
       ],
       "technical_specifications": {
         "engine": "998 cc, V4, Liquid Cooled",

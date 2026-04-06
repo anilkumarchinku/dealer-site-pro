@@ -42,7 +42,8 @@
           "name": "EM",
           "price": "₹79,999"
         }
-      ]
+      ],
+      "mileage": "85 km (range)"
     },
     {
       "make": "Battre Electric",
@@ -81,7 +82,8 @@
           "name": "One",
           "price": "₹69,999"
         }
-      ]
+      ],
+      "mileage": "100 km (range)"
     },
     {
       "make": "Battre Electric",
@@ -120,7 +122,8 @@
           "name": "Yelo",
           "price": "₹59,999"
         }
-      ]
+      ],
+      "mileage": "75 km (range)"
     },
     {
       "make": "Battre Electric",
@@ -159,7 +162,8 @@
           "name": "Smart",
           "price": "₹64,999"
         }
-      ]
+      ],
+      "mileage": "80 km (range)"
     }
   ]
 }

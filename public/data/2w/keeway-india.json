@@ -19,12 +19,31 @@
       "transmission": "Manual",
       "source_section": "Available",
       "description": "The Keeway SR125 is an entry-level 125cc street motorcycle from Hungarian brand Keeway, available through Benelli-Keeway dealership network across 36 Indian cities.",
-      "features": ["Disc Brakes", "ABS", "LED Headlamp", "Self Start"],
-      "variants": [{"name": "SR125 Standard", "price": "₹1,24,992"}],
+      "features": [
+        "Disc Brakes",
+        "ABS",
+        "LED Headlamp",
+        "Self Start"
+      ],
+      "variants": [
+        {
+          "name": "SR125 Standard",
+          "price": "₹1,24,992"
+        }
+      ],
       "colors": [
-        {"name": "Black", "hex": "#1A1A1A"},
-        {"name": "White", "hex": "#F5F5F0"},
-        {"name": "Red", "hex": "#C41E3A"}
+        {
+          "name": "Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Red",
+          "hex": "#C41E3A"
+        }
       ],
       "technical_specifications": {
         "engine": "125 cc, Single Cylinder",
@@ -51,12 +70,32 @@
       "transmission": "Manual",
       "source_section": "Available",
       "description": "The Keeway SR250 is a 223cc naked street motorcycle with 35 kmpl mileage and sporty styling.",
-      "features": ["Disc Brakes", "ABS", "LED Headlamp", "Self Start", "Digital Display"],
-      "variants": [{"name": "SR250 Standard", "price": "₹1,53,992"}],
+      "features": [
+        "Disc Brakes",
+        "ABS",
+        "LED Headlamp",
+        "Self Start",
+        "Digital Display"
+      ],
+      "variants": [
+        {
+          "name": "SR250 Standard",
+          "price": "₹1,53,992"
+        }
+      ],
       "colors": [
-        {"name": "Black", "hex": "#1A1A1A"},
-        {"name": "White", "hex": "#F5F5F0"},
-        {"name": "Grey", "hex": "#6B6B6B"}
+        {
+          "name": "Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Grey",
+          "hex": "#6B6B6B"
+        }
       ],
       "technical_specifications": {
         "engine": "223 cc, Single Cylinder",
@@ -83,12 +122,32 @@
       "transmission": "Manual",
       "source_section": "Available",
       "description": "The Keeway K300 SF is a 292cc sports motorcycle with full fairing and 37 kmpl mileage.",
-      "features": ["Full Fairing", "Disc Brakes", "ABS", "LED Headlamp", "Self Start"],
-      "variants": [{"name": "K300 SF Standard", "price": "₹1,57,000"}],
+      "features": [
+        "Full Fairing",
+        "Disc Brakes",
+        "ABS",
+        "LED Headlamp",
+        "Self Start"
+      ],
+      "variants": [
+        {
+          "name": "K300 SF Standard",
+          "price": "₹1,57,000"
+        }
+      ],
       "colors": [
-        {"name": "Black", "hex": "#1A1A1A"},
-        {"name": "White Blue", "hex": "#1A4A8B"},
-        {"name": "Red", "hex": "#C41E3A"}
+        {
+          "name": "Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "White Blue",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Red",
+          "hex": "#C41E3A"
+        }
       ],
       "technical_specifications": {
         "engine": "292.4 cc, Single Cylinder",
@@ -115,12 +174,32 @@
       "transmission": "Manual",
       "source_section": "Available",
       "description": "The Keeway RR300 is a 292cc track-inspired sports motorcycle with race-style full fairing and 37 kmpl mileage.",
-      "features": ["Race-style Full Fairing", "Disc Brakes", "ABS", "LED Headlamp", "Self Start"],
-      "variants": [{"name": "RR300 Standard", "price": "₹1,85,000"}],
+      "features": [
+        "Race-style Full Fairing",
+        "Disc Brakes",
+        "ABS",
+        "LED Headlamp",
+        "Self Start"
+      ],
+      "variants": [
+        {
+          "name": "RR300 Standard",
+          "price": "₹1,85,000"
+        }
+      ],
       "colors": [
-        {"name": "Black", "hex": "#1A1A1A"},
-        {"name": "White Red", "hex": "#C41E3A"},
-        {"name": "Blue", "hex": "#1A4A8B"}
+        {
+          "name": "Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "White Red",
+          "hex": "#C41E3A"
+        },
+        {
+          "name": "Blue",
+          "hex": "#1A4A8B"
+        }
       ],
       "technical_specifications": {
         "engine": "292.4 cc, Single Cylinder",
@@ -147,12 +226,32 @@
       "transmission": "Manual",
       "source_section": "Available",
       "description": "The Keeway K-Light 250V is a 249cc V-twin custom cruiser with low riding position and classic styling.",
-      "features": ["V-Twin Engine", "Cruiser Styling", "Disc Brakes", "ABS", "Self Start"],
-      "variants": [{"name": "K-Light 250V Standard", "price": "₹2,50,046"}],
+      "features": [
+        "V-Twin Engine",
+        "Cruiser Styling",
+        "Disc Brakes",
+        "ABS",
+        "Self Start"
+      ],
+      "variants": [
+        {
+          "name": "K-Light 250V Standard",
+          "price": "₹2,50,046"
+        }
+      ],
       "colors": [
-        {"name": "Black", "hex": "#1A1A1A"},
-        {"name": "Silver", "hex": "#C8C8C8"},
-        {"name": "Brown", "hex": "#8B4513"}
+        {
+          "name": "Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Silver",
+          "hex": "#C8C8C8"
+        },
+        {
+          "name": "Brown",
+          "hex": "#8B4513"
+        }
       ],
       "technical_specifications": {
         "engine": "249 cc, V-Twin",
@@ -171,7 +270,7 @@
       "variant_name": "Vieste 300",
       "price": "₹3,02,015",
       "engine_displacement": "278.2 cc",
-      "mileage": "N/A",
+      "mileage": "35 kmpl",
       "max_power": "26 bhp @ 9000 rpm",
       "max_torque": "22 Nm @ 7000 rpm",
       "top_speed": "130 kmph",
@@ -179,12 +278,32 @@
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Keeway Vieste 300 is a 278cc maxi-scooter with automatic transmission, premium features, and modern design.",
-      "features": ["Automatic Transmission", "LED Headlamp", "Digital Display", "USB Charging", "ABS"],
-      "variants": [{"name": "Vieste 300 Standard", "price": "₹3,02,015"}],
+      "features": [
+        "Automatic Transmission",
+        "LED Headlamp",
+        "Digital Display",
+        "USB Charging",
+        "ABS"
+      ],
+      "variants": [
+        {
+          "name": "Vieste 300 Standard",
+          "price": "₹3,02,015"
+        }
+      ],
       "colors": [
-        {"name": "Black", "hex": "#1A1A1A"},
-        {"name": "White", "hex": "#F5F5F0"},
-        {"name": "Grey", "hex": "#6B6B6B"}
+        {
+          "name": "Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Grey",
+          "hex": "#6B6B6B"
+        }
       ],
       "technical_specifications": {
         "engine": "278.2 cc, Single Cylinder",
@@ -203,7 +322,7 @@
       "variant_name": "Sixties 300i",
       "price": "₹3,13,011",
       "engine_displacement": "278.2 cc",
-      "mileage": "N/A",
+      "mileage": "35 kmpl",
       "max_power": "26 bhp @ 9000 rpm",
       "max_torque": "22 Nm @ 7000 rpm",
       "top_speed": "120 kmph",
@@ -211,13 +330,36 @@
       "transmission": "Automatic",
       "source_section": "Available",
       "description": "The Keeway Sixties 300i is a retro-styled 278cc maxi-scooter with 1960s Italian design language and modern performance.",
-      "features": ["Retro Styling", "Automatic Transmission", "LED Headlamp", "ABS", "USB Charging"],
-      "variants": [{"name": "Sixties 300i Standard", "price": "₹3,13,011"}],
+      "features": [
+        "Retro Styling",
+        "Automatic Transmission",
+        "LED Headlamp",
+        "ABS",
+        "USB Charging"
+      ],
+      "variants": [
+        {
+          "name": "Sixties 300i Standard",
+          "price": "₹3,13,011"
+        }
+      ],
       "colors": [
-        {"name": "Cream White", "hex": "#FEFAE0"},
-        {"name": "Pastel Blue", "hex": "#AED6F1"},
-        {"name": "Classic Black", "hex": "#1A1A1A"},
-        {"name": "Mint Green", "hex": "#B2D8C8"}
+        {
+          "name": "Cream White",
+          "hex": "#FEFAE0"
+        },
+        {
+          "name": "Pastel Blue",
+          "hex": "#AED6F1"
+        },
+        {
+          "name": "Classic Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Mint Green",
+          "hex": "#B2D8C8"
+        }
       ],
       "technical_specifications": {
         "engine": "278.2 cc, Single Cylinder",
@@ -244,12 +386,33 @@
       "transmission": "Manual",
       "source_section": "Available",
       "description": "The Keeway V302C is the flagship 298cc V-twin custom cruiser from Keeway with 34 kmpl mileage and premium cruiser design.",
-      "features": ["V-Twin 298cc Engine", "Cruiser Styling", "Disc Brakes", "ABS", "Self Start", "LED Headlamp"],
-      "variants": [{"name": "V302C Standard", "price": "₹4,21,995"}],
+      "features": [
+        "V-Twin 298cc Engine",
+        "Cruiser Styling",
+        "Disc Brakes",
+        "ABS",
+        "Self Start",
+        "LED Headlamp"
+      ],
+      "variants": [
+        {
+          "name": "V302C Standard",
+          "price": "₹4,21,995"
+        }
+      ],
       "colors": [
-        {"name": "Black Chrome", "hex": "#2A2A2A"},
-        {"name": "Silver", "hex": "#C8C8C8"},
-        {"name": "Matte Black", "hex": "#1A1A1A"}
+        {
+          "name": "Black Chrome",
+          "hex": "#2A2A2A"
+        },
+        {
+          "name": "Silver",
+          "hex": "#C8C8C8"
+        },
+        {
+          "name": "Matte Black",
+          "hex": "#1A1A1A"
+        }
       ],
       "technical_specifications": {
         "engine": "298 cc, V-Twin",
