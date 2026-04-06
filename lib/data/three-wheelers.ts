@@ -93,7 +93,7 @@ function buildThreeWheelerEntry(
     dealerId: string
 ): ThreeWheelerVehicle {
     const slug = modelToSlug(model)
-    const imageUrl = `/data/brand-model-images/3w/${brandId}/${slug}.jpg`
+    const imageUrl = `/images/3w/${brandId}/${slug}.jpg`
     const enrichment = get3WModelEnrichment(brandId, model)
     return {
         id:                     `catalog-3w-${brandId}-${idx}`,
