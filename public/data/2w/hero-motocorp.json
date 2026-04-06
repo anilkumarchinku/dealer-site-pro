@@ -681,6 +681,222 @@
         "fuel_tank_capacity": "13.5 L",
         "seat_height": "803 mm"
       }
+    },
+    {
+      "make": "Hero",
+      "model": "HF 100",
+      "variant_name": "HF 100",
+      "price": "₹55,992",
+      "engine_displacement": "97.2 cc",
+      "mileage": "65 kmpl",
+      "max_power": "7.91 bhp @ 8000 rpm",
+      "max_torque": "8.05 Nm @ 5000 rpm",
+      "top_speed": "85 kmph",
+      "fuel_type": "Petrol",
+      "transmission": "4-Speed Manual",
+      "source_section": "Available",
+      "description": "The Hero HF 100 is Hero MotoCorp's most affordable motorcycle with 97cc BS6 engine, kick start, drum brakes, and 65 kmpl mileage for rural and semi-urban commuters on a tight budget.",
+      "features": ["Combined Braking System", "Alloy Wheels", "Kick Start"],
+      "variants": [
+        {"name": "Standard", "price": "₹55,992"}
+      ],
+      "colors": [
+        {"name": "Black Blue", "hex": "#1A1A5A"},
+        {"name": "Black Red", "hex": "#8B0000"},
+        {"name": "Black Grey", "hex": "#1A1A1A"}
+      ],
+      "technical_specifications": {
+        "engine": "97.2 cc, Single Cylinder, BS6 Phase 2B",
+        "cooling": "Air Cooled",
+        "starting": "Kick Start",
+        "brakes_front": "Drum",
+        "brakes_rear": "Drum",
+        "kerb_weight": "107 kg",
+        "fuel_tank_capacity": "8.5 L",
+        "seat_height": "790 mm"
+      }
+    },
+    {
+      "make": "Hero",
+      "model": "Super Splendor",
+      "variant_name": "Super Splendor",
+      "price": "₹83,855",
+      "engine_displacement": "124.7 cc",
+      "mileage": "65 kmpl",
+      "max_power": "10.7 bhp @ 7500 rpm",
+      "max_torque": "10.6 Nm @ 6000 rpm",
+      "top_speed": "95 kmph",
+      "fuel_type": "Petrol",
+      "transmission": "5-Speed Manual",
+      "source_section": "Available",
+      "description": "The Hero Super Splendor is a popular 125cc commuter motorcycle with i3S idle start-stop system, AutoSail technology, combined braking system, and 65 kmpl mileage for daily commuting.",
+      "features": ["i3S Idle Start-Stop", "AutoSail Technology", "Combined Braking System", "Alloy Wheels", "Self Start"],
+      "variants": [
+        {"name": "Drum", "price": "₹83,855"},
+        {"name": "Disc", "price": "₹88,000"}
+      ],
+      "colors": [
+        {"name": "Black Sports Red", "hex": "#8B0000"},
+        {"name": "Techno Blue Met Black", "hex": "#1A4A8B"},
+        {"name": "Black Metallic Silver", "hex": "#1A1A1A"},
+        {"name": "Candy Blazing Red", "hex": "#CC2020"}
+      ],
+      "technical_specifications": {
+        "engine": "124.7 cc, Single Cylinder, BS6 Phase 2B",
+        "cooling": "Air Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Drum",
+        "brakes_rear": "Drum",
+        "kerb_weight": "123 kg",
+        "fuel_tank_capacity": "10 L",
+        "seat_height": "790 mm"
+      }
+    },
+    {
+      "make": "Hero",
+      "model": "Super Splendor Xtec",
+      "variant_name": "Super Splendor Xtec",
+      "price": "₹93,553",
+      "engine_displacement": "124.7 cc",
+      "mileage": "69 kmpl",
+      "max_power": "10.7 bhp @ 7500 rpm",
+      "max_torque": "10.6 Nm @ 6000 rpm",
+      "top_speed": "95 kmph",
+      "fuel_type": "Petrol",
+      "transmission": "5-Speed Manual",
+      "source_section": "Available",
+      "description": "The Hero Super Splendor Xtec adds Bluetooth connectivity, digital console, call/SMS alerts, and AutoSail technology to the Super Splendor platform with a ARAI-certified 69 kmpl fuel efficiency.",
+      "features": ["Bluetooth Connectivity", "Digital Console", "Call/SMS Alerts", "AutoSail Technology", "i3S Idle Start-Stop", "CBS", "Self Start"],
+      "variants": [
+        {"name": "Standard", "price": "₹93,553"}
+      ],
+      "colors": [
+        {"name": "Matte Blazing Red", "hex": "#8B0000"},
+        {"name": "Matte Sports Red Black", "hex": "#CC2020"},
+        {"name": "Black Heavy Grey", "hex": "#1A1A1A"},
+        {"name": "Metallic Blue Grey", "hex": "#1A3A6B"}
+      ],
+      "technical_specifications": {
+        "engine": "124.7 cc, Single Cylinder, BS6 Phase 2B",
+        "cooling": "Air Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Disc with CBS",
+        "brakes_rear": "Drum",
+        "kerb_weight": "127 kg",
+        "fuel_tank_capacity": "10 L",
+        "seat_height": "790 mm"
+      }
+    },
+    {
+      "make": "Hero",
+      "model": "Splendor Plus Xtec 2.0",
+      "variant_name": "Splendor Plus Xtec 2.0",
+      "price": "₹79,964",
+      "engine_displacement": "97.2 cc",
+      "mileage": "70 kmpl",
+      "max_power": "7.91 bhp @ 8000 rpm",
+      "max_torque": "8.05 Nm @ 5000 rpm",
+      "top_speed": "87 kmph",
+      "fuel_type": "Petrol",
+      "transmission": "4-Speed Manual",
+      "source_section": "Available",
+      "description": "The Hero Splendor Plus Xtec 2.0 is a premium variant of the iconic Splendor Plus with full digital meter, Bluetooth connectivity, real-time mileage indicator, and side stand engine cut-off.",
+      "features": ["Bluetooth Connectivity", "Full Digital Meter", "Real-time Mileage Display", "Side Stand Cut-off", "CBS", "Self Start"],
+      "variants": [
+        {"name": "Standard", "price": "₹79,964"}
+      ],
+      "colors": [
+        {"name": "Noble Red", "hex": "#A52020"},
+        {"name": "Black Tornado Grey", "hex": "#2A2A2A"},
+        {"name": "Matt Grey", "hex": "#6B6B6B"},
+        {"name": "Black Sparkling Blue", "hex": "#1A3A6B"}
+      ],
+      "technical_specifications": {
+        "engine": "97.2 cc, Single Cylinder, BS6 Phase 2B",
+        "cooling": "Air Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Drum",
+        "brakes_rear": "Drum",
+        "kerb_weight": "112 kg",
+        "fuel_tank_capacity": "9.8 L",
+        "seat_height": "785 mm"
+      }
+    },
+    {
+      "make": "Hero",
+      "model": "Maestro Edge 125",
+      "variant_name": "Maestro Edge 125",
+      "price": "₹82,025",
+      "engine_displacement": "124.6 cc",
+      "mileage": "55 kmpl",
+      "max_power": "9 bhp @ 7000 rpm",
+      "max_torque": "10.4 Nm @ 5500 rpm",
+      "top_speed": "90 kmph",
+      "fuel_type": "Petrol",
+      "transmission": "Automatic CVT",
+      "source_section": "Available",
+      "description": "The Hero Maestro Edge 125 is a feature-packed 125cc scooter with Bluetooth connectivity, i3S start-stop, side stand indicator, and integrated braking system, positioned in the premium scooter segment.",
+      "features": ["Bluetooth Connectivity", "i3S Idle Start-Stop", "Integrated Braking System", "Side Stand Indicator", "USB Charging", "Self Start"],
+      "variants": [
+        {"name": "Drum", "price": "₹82,025"},
+        {"name": "Disc", "price": "₹88,000"},
+        {"name": "Xtec", "price": "₹91,000"}
+      ],
+      "colors": [
+        {"name": "Matte Blue", "hex": "#1A4A8B"},
+        {"name": "Matte Red", "hex": "#CC2020"},
+        {"name": "Pearl Silver White", "hex": "#F0EDE8"},
+        {"name": "Matt Black", "hex": "#1A1A1A"},
+        {"name": "Sports Red Black", "hex": "#8B0000"}
+      ],
+      "technical_specifications": {
+        "engine": "124.6 cc, Single Cylinder, BS6 Phase 2B",
+        "cooling": "Air Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Drum",
+        "brakes_rear": "Drum",
+        "kerb_weight": "112 kg",
+        "fuel_tank_capacity": "5.3 L",
+        "seat_height": "786 mm"
+      }
+    },
+    {
+      "make": "Hero",
+      "model": "Destini 125",
+      "variant_name": "Destini 125",
+      "price": "₹79,948",
+      "engine_displacement": "124.6 cc",
+      "mileage": "52 kmpl",
+      "max_power": "9 bhp @ 7000 rpm",
+      "max_torque": "10.36 Nm @ 5500 rpm",
+      "top_speed": "90 kmph",
+      "fuel_type": "Petrol",
+      "transmission": "Automatic CVT",
+      "source_section": "Available",
+      "description": "The Hero Destini 125 is a family-friendly 125cc scooter with i3S idle start-stop, digital speedometer with Bluetooth, turn-by-turn navigation, and 52 kmpl fuel efficiency. Available in 3 variants.",
+      "features": ["i3S Idle Start-Stop", "Digital Display", "Bluetooth Connectivity", "TBT Navigation", "USB Charging", "Self Start"],
+      "variants": [
+        {"name": "LX", "price": "₹79,948"},
+        {"name": "VX", "price": "₹84,000"},
+        {"name": "ZX", "price": "₹89,839"}
+      ],
+      "colors": [
+        {"name": "Pearl Silver White", "hex": "#F0EDE8"},
+        {"name": "Teal Blue", "hex": "#2A7A7A"},
+        {"name": "Matt Black", "hex": "#1A1A1A"},
+        {"name": "Matte Sports Red Black", "hex": "#8B0000"},
+        {"name": "Matte Cerulean Blue", "hex": "#1A4A8B"}
+      ],
+      "technical_specifications": {
+        "engine": "124.6 cc, Single Cylinder, BS6 Phase 2B",
+        "cooling": "Air Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Drum",
+        "brakes_rear": "Drum",
+        "kerb_weight": "115 kg",
+        "fuel_tank_capacity": "5.5 L",
+        "seat_height": "775 mm"
+      }
     }
   ]
 }

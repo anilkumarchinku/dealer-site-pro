@@ -2,7 +2,7 @@
   "brand": "Ultraviolette",
   "brandId": "ultraviolette",
   "type": "2w",
-  "lastUpdated": "2026-04-03",
+  "lastUpdated": "2026-04-04",
   "source": "BikeWale",
   "vehicles": [
     {
@@ -164,6 +164,81 @@
         "range": "211 km",
         "charging_time": "N/A",
         "top_speed": "145 kmph",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "197 kg",
+        "seat_height": "N/A"
+      }
+    },
+    {
+      "make": "Ultraviolette",
+      "model": "F77 Mach 2 Recon",
+      "variant_name": "F77 Mach 2 Recon",
+      "price": "₹3,99,000",
+      "engine_displacement": "N/A",
+      "mileage": "323 km (range)",
+      "max_power": "30 kW",
+      "max_torque": "100 Nm",
+      "top_speed": "155 kmph",
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "source_section": "Available",
+      "description": "The Ultraviolette F77 Mach 2 Recon is the top-spec flagship electric motorcycle with a 30kW motor, 40 bhp, 100 Nm torque, 10.3kWh battery, 323km certified range, 155 kmph top speed, and 0-100 kmph in 7.7 seconds. It adds 10-level switchable regenerative braking and 4-level traction control over the standard Mach 2. Available with Battery-as-a-Service at ₹3 per km.",
+      "features": [
+        "30 kW Motor",
+        "10.3 kWh Battery",
+        "323 km Certified Range",
+        "10-Level Switchable Regen Braking",
+        "4-Level Traction Control",
+        "5-inch TFT Display",
+        "Auto-Dimming Lights",
+        "Hill Hold Assist",
+        "ABS",
+        "Dynamic Stability Control",
+        "DC Fast Charging Compatible",
+        "Mobile App Connectivity",
+        "5-Year / 1,00,000 km Warranty",
+        "Battery-as-a-Service Option"
+      ],
+      "variants": [
+        {
+          "name": "F77 Mach 2 Recon Standard",
+          "price": "₹3,99,000"
+        }
+      ],
+      "colors": [
+        {
+          "name": "Afterburner Yellow",
+          "hex": "#FFD700"
+        },
+        {
+          "name": "Cosmic Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Stellar White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Lightning Blue",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Plasma Red",
+          "hex": "#C41E3A"
+        },
+        {
+          "name": "Supersonic Silver",
+          "hex": "#C8C8C8"
+        }
+      ],
+      "technical_specifications": {
+        "motor": "PMSM Motor",
+        "motor_power": "30 kW peak (40 bhp)",
+        "battery": "10.3 kWh",
+        "range": "323 km (certified)",
+        "charging_time": "N/A",
+        "top_speed": "155 kmph",
         "brakes_front": "Disc with ABS",
         "brakes_rear": "Disc with ABS",
         "kerb_weight": "197 kg",

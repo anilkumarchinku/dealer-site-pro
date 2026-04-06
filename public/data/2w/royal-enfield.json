@@ -526,6 +526,46 @@
         "fuel_tank_capacity": "14.7 L",
         "seat_height": "800 mm"
       }
+    },
+    {
+      "make": "Royal Enfield",
+      "model": "Bear 650",
+      "variant_name": "Bear 650",
+      "price": "₹3,39,000",
+      "engine_displacement": "648 cc",
+      "mileage": "22 kmpl",
+      "max_power": "46.8 bhp @ 7000 rpm",
+      "max_torque": "56.5 Nm @ 5650 rpm",
+      "top_speed": "160 kmph",
+      "fuel_type": "Petrol",
+      "transmission": "6-Speed Manual",
+      "source_section": "Available",
+      "description": "The Royal Enfield Bear 650 is the lightest 650cc Royal Enfield with 216 kg kerb weight, TFT display, 19-inch front wheel, 184mm ground clearance, dual-channel ABS, and rugged scrambler-adventure styling. Launched in November 2024.",
+      "features": ["TFT Display", "Dual Channel ABS", "19-inch Front Wheel", "High Ground Clearance", "Slip and Assist Clutch", "LED Lighting", "Self Start"],
+      "variants": [
+        {"name": "Boardwalk White", "price": "₹3,39,000"},
+        {"name": "Petrol Green", "price": "₹3,44,000"},
+        {"name": "Wild Honey", "price": "₹3,44,000"},
+        {"name": "Golden Shadow", "price": "₹3,51,000"},
+        {"name": "Two Four Nine", "price": "₹3,59,000"}
+      ],
+      "colors": [
+        {"name": "Boardwalk White", "hex": "#F5F5F0"},
+        {"name": "Petrol Green", "hex": "#2A5A3A"},
+        {"name": "Wild Honey", "hex": "#C8A030"},
+        {"name": "Golden Shadow", "hex": "#8B6914"},
+        {"name": "Two Four Nine", "hex": "#2A2A2A"}
+      ],
+      "technical_specifications": {
+        "engine": "648 cc, Parallel-Twin, BS6 Phase 2B",
+        "cooling": "Air-Oil Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "216 kg",
+        "fuel_tank_capacity": "13.7 L",
+        "seat_height": "820 mm"
+      }
     }
   ]
 }

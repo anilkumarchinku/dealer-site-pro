@@ -1127,6 +1127,179 @@
         "kerb_weight": "108 kg",
         "seat_height": "763 mm"
       }
+    },
+    {
+      "make": "Bajaj",
+      "model": "CT 100",
+      "variant_name": "CT 100",
+      "price": "₹52,628",
+      "engine_displacement": "99.7 cc",
+      "mileage": "75 kmpl",
+      "max_power": "7.79 bhp @ 7500 rpm",
+      "max_torque": "8.05 Nm @ 5500 rpm",
+      "top_speed": "85 kmph",
+      "fuel_type": "Petrol",
+      "transmission": "4-Speed Manual",
+      "source_section": "Available",
+      "description": "The Bajaj CT 100 is India's most affordable motorcycle with 100cc engine, 75 kmpl mileage, drum brakes, and a lightweight 115 kg build. It is the go-to entry-level commuter for rural and semi-urban riders.",
+      "features": ["Combined Braking System", "Alloy Wheels", "Kick Start"],
+      "variants": [
+        {"name": "Standard", "price": "₹52,628"}
+      ],
+      "colors": [
+        {"name": "Black Red", "hex": "#8B0000"},
+        {"name": "Black Blue", "hex": "#1A1A5A"},
+        {"name": "Black Silver", "hex": "#1A1A1A"}
+      ],
+      "technical_specifications": {
+        "engine": "99.7 cc, Single Cylinder, BS6 Phase 2",
+        "cooling": "Air Cooled",
+        "starting": "Kick Start",
+        "brakes_front": "Drum",
+        "brakes_rear": "Drum",
+        "kerb_weight": "115 kg",
+        "fuel_tank_capacity": "10 L",
+        "seat_height": "795 mm"
+      }
+    },
+    {
+      "make": "Bajaj",
+      "model": "CT 110",
+      "variant_name": "CT 110",
+      "price": "₹68,917",
+      "engine_displacement": "115.45 cc",
+      "mileage": "70 kmpl",
+      "max_power": "8.6 bhp @ 7000 rpm",
+      "max_torque": "9.81 Nm @ 5000 rpm",
+      "top_speed": "95 kmph",
+      "fuel_type": "Petrol",
+      "transmission": "4-Speed Manual",
+      "source_section": "Available",
+      "description": "The Bajaj CT 110 is a value commuter motorcycle with 115cc engine, alloy wheels, combined braking system, self start, and practical design for everyday city use.",
+      "features": ["Combined Braking System", "Alloy Wheels", "Self Start", "Kick Start"],
+      "variants": [
+        {"name": "Standard", "price": "₹68,917"}
+      ],
+      "colors": [
+        {"name": "Black Red", "hex": "#8B0000"},
+        {"name": "Black Blue", "hex": "#1A1A5A"},
+        {"name": "Ebony Black", "hex": "#1A1A1A"},
+        {"name": "Silver", "hex": "#C8C8C8"}
+      ],
+      "technical_specifications": {
+        "engine": "115.45 cc, Single Cylinder, BS6 Phase 2",
+        "cooling": "Air Cooled",
+        "starting": "Kick and Self Start",
+        "brakes_front": "Drum",
+        "brakes_rear": "Drum",
+        "kerb_weight": "127 kg",
+        "fuel_tank_capacity": "11 L",
+        "seat_height": "810 mm"
+      }
+    },
+    {
+      "make": "Bajaj",
+      "model": "CT 110X",
+      "variant_name": "CT 110X",
+      "price": "₹67,284",
+      "engine_displacement": "115.45 cc",
+      "mileage": "67 kmpl",
+      "max_power": "8.6 bhp @ 7000 rpm",
+      "max_torque": "9.81 Nm @ 5000 rpm",
+      "top_speed": "95 kmph",
+      "fuel_type": "Petrol",
+      "transmission": "4-Speed Manual",
+      "source_section": "Available",
+      "description": "The Bajaj CT 110X is a rugged commuter motorcycle with a sporty crossover-inspired design, 115cc engine, raised handlebars, and dual-tone colour options for riders who want style with utility.",
+      "features": ["Combined Braking System", "Alloy Wheels", "Self Start", "Kick Start", "Dual-tone Colours"],
+      "variants": [
+        {"name": "Standard", "price": "₹67,284"}
+      ],
+      "colors": [
+        {"name": "Matte Wild Green", "hex": "#3A5A2A"},
+        {"name": "Ebony Black Red", "hex": "#8B0000"},
+        {"name": "Ebony Black Blue", "hex": "#1A1A5A"}
+      ],
+      "technical_specifications": {
+        "engine": "115.45 cc, Single Cylinder, BS6 Phase 2",
+        "cooling": "Air Cooled",
+        "starting": "Kick and Self Start",
+        "brakes_front": "Drum",
+        "brakes_rear": "Drum",
+        "kerb_weight": "127 kg",
+        "fuel_tank_capacity": "11 L",
+        "seat_height": "810 mm"
+      }
+    },
+    {
+      "make": "Bajaj",
+      "model": "Platina 110",
+      "variant_name": "Platina 110",
+      "price": "₹70,675",
+      "engine_displacement": "115.45 cc",
+      "mileage": "70 kmpl",
+      "max_power": "8.6 bhp @ 7000 rpm",
+      "max_torque": "9.81 Nm @ 5000 rpm",
+      "top_speed": "95 kmph",
+      "fuel_type": "Petrol",
+      "transmission": "4-Speed Manual",
+      "source_section": "Available",
+      "description": "The Bajaj Platina 110 is a popular 115cc commuter motorcycle with spring-in-spring rear suspension for superior comfort, combined braking system, and class-leading fuel efficiency of 70 kmpl.",
+      "features": ["Spring-in-Spring Suspension", "Combined Braking System", "Alloy Wheels", "Kick Start", "Self Start"],
+      "variants": [
+        {"name": "Standard", "price": "₹70,675"},
+        {"name": "Disc CBS", "price": "₹73,000"}
+      ],
+      "colors": [
+        {"name": "Black Red", "hex": "#8B0000"},
+        {"name": "Black Blue", "hex": "#1A1A5A"},
+        {"name": "Silver Grey", "hex": "#C8C8C8"},
+        {"name": "Ebony Black", "hex": "#1A1A1A"}
+      ],
+      "technical_specifications": {
+        "engine": "115.45 cc, Single Cylinder, BS6 Phase 2",
+        "cooling": "Air Cooled",
+        "starting": "Kick and Self Start",
+        "brakes_front": "Drum",
+        "brakes_rear": "Drum",
+        "kerb_weight": "119 kg",
+        "fuel_tank_capacity": "11 L",
+        "seat_height": "807 mm"
+      }
+    },
+    {
+      "make": "Bajaj",
+      "model": "Avenger Street 160",
+      "variant_name": "Avenger Street 160",
+      "price": "₹1,12,280",
+      "engine_displacement": "160.03 cc",
+      "mileage": "45 kmpl",
+      "max_power": "15.02 bhp @ 8500 rpm",
+      "max_torque": "13.7 Nm @ 7000 rpm",
+      "top_speed": "115 kmph",
+      "fuel_type": "Petrol",
+      "transmission": "5-Speed Manual",
+      "source_section": "Available",
+      "description": "The Bajaj Avenger Street 160 is a 160cc cruiser motorcycle with low slung ergonomics, disc brakes with CBS, alloy wheels, and a relaxed seating position perfect for urban cruising.",
+      "features": ["Disc Brake Front", "CBS", "Alloy Wheels", "Low Seat Height", "Self Start"],
+      "variants": [
+        {"name": "Standard", "price": "₹1,12,280"}
+      ],
+      "colors": [
+        {"name": "Ebony Black", "hex": "#1A1A1A"},
+        {"name": "Fiery Orange", "hex": "#E8600A"},
+        {"name": "Cocktail Wine Red", "hex": "#8B0000"}
+      ],
+      "technical_specifications": {
+        "engine": "160.03 cc, Single Cylinder, BS6 Phase 2",
+        "cooling": "Air Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Disc with CBS",
+        "brakes_rear": "Drum",
+        "kerb_weight": "156 kg",
+        "fuel_tank_capacity": "13 L",
+        "seat_height": "740 mm"
+      }
     }
   ]
 }

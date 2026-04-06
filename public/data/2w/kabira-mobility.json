@@ -2,9 +2,189 @@
   "brand": "Kabira Mobility",
   "brandId": "kabira-mobility",
   "type": "2w",
-  "lastUpdated": "2026-04-03",
+  "lastUpdated": "2026-04-04",
   "source": "BikeWale",
   "vehicles": [
+    {
+      "make": "Kabira Mobility",
+      "model": "KM3000 Mark 2",
+      "variant_name": "Kabira KM3000 Mark 2",
+      "price": "₹1,49,900",
+      "engine_displacement": "N/A",
+      "mileage": "201 km (range)",
+      "max_power": "12 kW",
+      "max_torque": "192 Nm",
+      "top_speed": "120 kmph",
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "source_section": "Available",
+      "description": "The Kabira KM3000 Mark 2 is a 2024-generation electric motorcycle featuring India's first Foxconn aluminium-core powertrain, 12kW motor, 192 Nm wheel torque, 201km certified range, 120 kmph top speed, and 0-40 kmph in 2.9 seconds. Available with 4.1 kWh or 5.15 kWh battery options.",
+      "features": [
+        "Foxconn Aluminium Powertrain",
+        "Modular Battery Pack",
+        "TFT Digital Display",
+        "GPS with Geo-Fencing",
+        "Bluetooth App Connectivity",
+        "Fast Charging",
+        "Ride Modes (Eco/City/Sport)",
+        "Regenerative Braking",
+        "Disc Brakes with ABS"
+      ],
+      "variants": [
+        {
+          "name": "KM3000 Mark 2 4.1 kWh",
+          "price": "₹1,49,900"
+        },
+        {
+          "name": "KM3000 Mark 2 5.15 kWh",
+          "price": "₹1,70,900"
+        }
+      ],
+      "colors": [
+        {
+          "name": "Matte Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Pearl White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Electric Blue",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Racing Red",
+          "hex": "#C41E3A"
+        }
+      ],
+      "technical_specifications": {
+        "motor": "BLDC Aluminium Hub Motor (Foxconn)",
+        "motor_power": "12 kW peak",
+        "battery": "4.1 kWh / 5.15 kWh (modular)",
+        "range": "178 km (4.1 kWh) / 201 km (5.15 kWh)",
+        "charging_time": "3 hrs 20 min",
+        "top_speed": "120 kmph",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "N/A",
+        "seat_height": "N/A"
+      }
+    },
+    {
+      "make": "Kabira Mobility",
+      "model": "KM4000 Mark 2",
+      "variant_name": "Kabira KM4000 Mark 2",
+      "price": "₹1,59,900",
+      "engine_displacement": "N/A",
+      "mileage": "201 km (range)",
+      "max_power": "12 kW",
+      "max_torque": "192 Nm",
+      "top_speed": "120 kmph",
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "source_section": "Available",
+      "description": "The Kabira KM4000 Mark 2 is the 2024-generation flagship electric motorcycle with Foxconn aluminium powertrain, 12kW motor, 192 Nm wheel torque, 201km certified range, and 0-40 kmph in 2.9 seconds. It comes with a 4.1 kWh or 5.15 kWh modular battery pack.",
+      "features": [
+        "Foxconn Aluminium Powertrain",
+        "Modular Battery Pack",
+        "Full-Color TFT Display",
+        "GPS with Geo-Fencing",
+        "Bluetooth App Connectivity",
+        "DC Fast Charging",
+        "Ride Modes (Eco/City/Sport/Race)",
+        "Regenerative Braking",
+        "Disc Brakes with ABS"
+      ],
+      "variants": [
+        {
+          "name": "KM4000 Mark 2 4.1 kWh",
+          "price": "₹1,59,900"
+        },
+        {
+          "name": "KM4000 Mark 2 5.15 kWh",
+          "price": "₹1,76,900"
+        }
+      ],
+      "colors": [
+        {
+          "name": "Matte Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Pearl White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Electric Blue",
+          "hex": "#1A4A8B"
+        },
+        {
+          "name": "Racing Red",
+          "hex": "#C41E3A"
+        }
+      ],
+      "technical_specifications": {
+        "motor": "BLDC Aluminium Hub Motor (Foxconn)",
+        "motor_power": "12 kW peak",
+        "battery": "4.1 kWh / 5.15 kWh (modular)",
+        "range": "178 km (4.1 kWh) / 201 km (5.15 kWh)",
+        "charging_time": "3 hrs",
+        "top_speed": "120 kmph",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "N/A",
+        "seat_height": "N/A"
+      }
+    },
+    {
+      "make": "Kabira Mobility",
+      "model": "Hermes 75",
+      "variant_name": "Kabira Hermes 75",
+      "price": "₹90,825",
+      "engine_displacement": "N/A",
+      "mileage": "120 km (range)",
+      "max_power": "4 kW",
+      "max_torque": "N/A",
+      "top_speed": "80 kmph",
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "source_section": "Available",
+      "description": "The Kabira Hermes 75 is India's first high-speed commercial delivery electric scooter with a 2.5kW (4kW peak) hub motor, 120km range, 80 kmph top speed, and 150kg payload capacity. Designed for B2B last-mile delivery with a large rear storage box and Synchronized Braking System.",
+      "features": [
+        "High-Speed Commercial Delivery Scooter",
+        "150 kg Payload Capacity",
+        "Large Rear Storage Box",
+        "Synchronized Braking System",
+        "Disc Brakes Front & Rear",
+        "LED Lighting",
+        "Digital Display"
+      ],
+      "variants": [
+        {
+          "name": "Hermes 75 Standard",
+          "price": "₹90,825"
+        }
+      ],
+      "colors": [
+        {
+          "name": "White",
+          "hex": "#F5F5F0"
+        }
+      ],
+      "technical_specifications": {
+        "motor": "DeltaEV Hub Motor",
+        "motor_power": "2.5 kW rated / 4 kW peak",
+        "battery": "2.4 kWh Li-ion",
+        "range": "120 km",
+        "charging_time": "4 hrs",
+        "top_speed": "80 kmph",
+        "brakes_front": "Disc with SBS",
+        "brakes_rear": "Disc with SBS",
+        "kerb_weight": "N/A",
+        "seat_height": "N/A"
+      }
+    },
     {
       "make": "Kabira Mobility",
       "model": "KM3000",

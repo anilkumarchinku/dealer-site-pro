@@ -2,7 +2,7 @@
   "brand": "Harley-Davidson",
   "brandId": "harley-davidson-india",
   "type": "2w",
-  "lastUpdated": "2026-04-03",
+  "lastUpdated": "2026-04-04",
   "source": "BikeWale",
   "vehicles": [
     {
@@ -429,6 +429,125 @@
         "brakes_front": "Disc with ABS",
         "brakes_rear": "Disc with ABS",
         "kerb_weight": "380 kg",
+        "fuel_tank_capacity": "22.7 L",
+        "seat_height": "720 mm"
+      }
+    },
+    {
+      "make": "Harley-Davidson",
+      "model": "CVO Street Glide",
+      "variant_name": "CVO Street Glide",
+      "price": "₹63,03,000",
+      "engine_displacement": "1977 cc",
+      "mileage": "16 kmpl",
+      "max_power": "115.33 bhp",
+      "max_torque": "183 Nm",
+      "top_speed": "177 kmph",
+      "fuel_type": "Petrol",
+      "transmission": "6-Speed Manual",
+      "source_section": "Available",
+      "description": "The Harley-Davidson CVO Street Glide is the premium Custom Vehicle Operations bagger-tourer with the 1977cc Milwaukee-Eight VVT 121 V-twin engine, 115.33 bhp, 183 Nm torque, 12.3-inch TFT display, 4-speaker Rockford Fosgate sound system, wireless Apple CarPlay, and 22.7L fuel tank. CBU import.",
+      "features": [
+        "1977cc Milwaukee-Eight VVT 121 V-Twin",
+        "Air/Oil Cooled",
+        "ABS",
+        "12.3-inch TFT Display",
+        "4-Speaker Rockford Fosgate Audio",
+        "Wireless Apple CarPlay",
+        "Bluetooth Connectivity",
+        "CVO Premium Finish",
+        "Self Start",
+        "CBU Import"
+      ],
+      "variants": [
+        {
+          "name": "CVO Street Glide Standard",
+          "price": "₹63,03,000"
+        }
+      ],
+      "colors": [
+        {
+          "name": "Tobacco Fade",
+          "hex": "#8B6914"
+        },
+        {
+          "name": "Vivid Black Crystal",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Apex Factory Custom",
+          "hex": "#4A4A6A"
+        }
+      ],
+      "technical_specifications": {
+        "engine": "1977 cc, V-Twin, Air/Oil Cooled, VVT",
+        "cooling": "Air/Oil Cooled",
+        "max_power": "115.33 bhp @ 5020 rpm",
+        "max_torque": "183 Nm @ 3500 rpm",
+        "starting": "Self Start",
+        "brakes_front": "Dual Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "368 kg",
+        "fuel_tank_capacity": "22.7 L",
+        "seat_height": "715 mm"
+      }
+    },
+    {
+      "make": "Harley-Davidson",
+      "model": "CVO Road Glide",
+      "variant_name": "CVO Road Glide",
+      "price": "₹67,37,000",
+      "engine_displacement": "1977 cc",
+      "mileage": "16 kmpl",
+      "max_power": "115.33 bhp",
+      "max_torque": "183 Nm",
+      "top_speed": "177 kmph",
+      "fuel_type": "Petrol",
+      "transmission": "6-Speed Manual",
+      "source_section": "Available",
+      "description": "The Harley-Davidson CVO Road Glide is the top-of-the-line Custom Vehicle Operations tourer with a 1977cc Milwaukee-Eight VVT 121 V-twin, 115.33 bhp, 183 Nm torque, Sharknose frame-mounted fairing for improved stability, 12.3-inch TFT display, 4-speaker Rockford Fosgate audio, and 393kg weight. CBU import at ₹67.37 lakh.",
+      "features": [
+        "1977cc Milwaukee-Eight VVT 121 V-Twin",
+        "Air/Oil Cooled",
+        "ABS",
+        "Sharknose Frame-Mounted Fairing",
+        "12.3-inch TFT Display",
+        "4-Speaker Rockford Fosgate Audio",
+        "Wireless Apple CarPlay",
+        "Bluetooth Connectivity",
+        "CVO Premium Finish",
+        "Self Start",
+        "CBU Import"
+      ],
+      "variants": [
+        {
+          "name": "CVO Road Glide Standard",
+          "price": "₹67,37,000"
+        }
+      ],
+      "colors": [
+        {
+          "name": "Tobacco Fade",
+          "hex": "#8B6914"
+        },
+        {
+          "name": "Vivid Black Crystal",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Apex Factory Custom",
+          "hex": "#4A4A6A"
+        }
+      ],
+      "technical_specifications": {
+        "engine": "1977 cc, V-Twin, Air/Oil Cooled, VVT",
+        "cooling": "Air/Oil Cooled",
+        "max_power": "115.33 bhp @ 5020 rpm",
+        "max_torque": "183 Nm @ 3500 rpm",
+        "starting": "Self Start",
+        "brakes_front": "Dual Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "393 kg",
         "fuel_tank_capacity": "22.7 L",
         "seat_height": "720 mm"
       }

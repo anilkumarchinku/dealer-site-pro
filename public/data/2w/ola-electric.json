@@ -433,6 +433,95 @@
         "kerb_weight": "N/A",
         "seat_height": "N/A"
       }
+    },
+    {
+      "make": "OLA Electric",
+      "model": "S1 Z",
+      "variant_name": "S1 Z",
+      "price": "₹59,999",
+      "engine_displacement": "N/A",
+      "mileage": "146 km (range)",
+      "max_power": "2.5 kW",
+      "max_torque": "30 Nm",
+      "top_speed": "70 kmph",
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "source_section": "Available",
+      "description": "The Ola S1 Z is Ola Electric's most affordable scooter starting at ₹59,999 with a removable 1.5kWh battery, 146km ARAI range, and 70 kmph top speed. It targets daily urban commuters and students seeking an entry-level EV.",
+      "features": [
+        "Removable Battery",
+        "LED Headlamp",
+        "Digital Display",
+        "USB Charging",
+        "Multiple Ride Modes",
+        "Self Start"
+      ],
+      "variants": [
+        {"name": "S1 Z 1.5 kWh", "price": "₹59,999"},
+        {"name": "S1 Z 3 kWh", "price": "₹64,999"}
+      ],
+      "colors": [
+        {"name": "Pearl White", "hex": "#F5F5F0"},
+        {"name": "Midnight Black", "hex": "#1A1A1A"},
+        {"name": "Neo Mint", "hex": "#B2D8C8"},
+        {"name": "Coral Glam", "hex": "#D94F3D"}
+      ],
+      "technical_specifications": {
+        "motor": "PMSM Motor",
+        "motor_power": "2.5 kW peak",
+        "battery": "1.5 kWh / 3 kWh (removable)",
+        "range": "146 km (ARAI, 3 kWh)",
+        "charging_time": "3 hrs (standard charger)",
+        "top_speed": "70 kmph",
+        "brakes_front": "Drum",
+        "brakes_rear": "Drum",
+        "kerb_weight": "103 kg",
+        "seat_height": "N/A"
+      }
+    },
+    {
+      "make": "OLA Electric",
+      "model": "S1 Z Plus",
+      "variant_name": "S1 Z Plus",
+      "price": "₹64,999",
+      "engine_displacement": "N/A",
+      "mileage": "176 km (range)",
+      "max_power": "4 kW",
+      "max_torque": "40 Nm",
+      "top_speed": "75 kmph",
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "source_section": "Available",
+      "description": "The Ola S1 Z Plus is a step-up variant with dual removable 1.5kWh batteries for up to 176km range, slightly higher top speed, and added convenience features over the base S1 Z.",
+      "features": [
+        "Dual Removable Batteries",
+        "LED Headlamp",
+        "Digital Display",
+        "USB Charging",
+        "Multiple Ride Modes",
+        "Self Start"
+      ],
+      "variants": [
+        {"name": "S1 Z Plus 3 kWh", "price": "₹64,999"}
+      ],
+      "colors": [
+        {"name": "Pearl White", "hex": "#F5F5F0"},
+        {"name": "Midnight Black", "hex": "#1A1A1A"},
+        {"name": "Neo Mint", "hex": "#B2D8C8"},
+        {"name": "Coral Glam", "hex": "#D94F3D"}
+      ],
+      "technical_specifications": {
+        "motor": "PMSM Motor",
+        "motor_power": "4 kW peak",
+        "battery": "3 kWh (dual 1.5 kWh removable)",
+        "range": "176 km (ARAI)",
+        "charging_time": "5 hrs (standard charger)",
+        "top_speed": "75 kmph",
+        "brakes_front": "Drum",
+        "brakes_rear": "Drum",
+        "kerb_weight": "107 kg",
+        "seat_height": "N/A"
+      }
     }
   ]
 }

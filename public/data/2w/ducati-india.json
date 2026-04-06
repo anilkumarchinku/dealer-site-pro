@@ -2,9 +2,60 @@
   "brand": "Ducati",
   "brandId": "ducati-india",
   "type": "2w",
-  "lastUpdated": "2026-04-03",
+  "lastUpdated": "2026-04-04",
   "source": "BikeWale",
   "vehicles": [
+    {
+      "make": "Ducati",
+      "model": "Scrambler Icon Dark",
+      "variant_name": "Scrambler Icon Dark",
+      "price": "₹9,97,000",
+      "engine_displacement": "803 cc",
+      "mileage": "19 kmpl",
+      "max_power": "73 bhp",
+      "max_torque": "65 Nm",
+      "top_speed": "180 kmph",
+      "fuel_type": "Petrol",
+      "transmission": "6-Speed Manual",
+      "source_section": "Available",
+      "description": "The Ducati Scrambler Icon Dark is the 2025 all-black minimalist Scrambler priced at ₹9.97 lakh — the most affordable Ducati in India. It features an 803cc L-twin, 73 bhp, cornering ABS, 4-level traction control, 4.3-inch TFT with Bluetooth, bidirectional quickshifter, and a comprehensive matte black theme throughout.",
+      "features": [
+        "803cc L-Twin Engine",
+        "All-Matte Black Theme",
+        "4.3-inch TFT Display with Bluetooth",
+        "Cornering ABS",
+        "4-Level Traction Control",
+        "Bidirectional Quickshifter",
+        "Kayaba USD 41mm Front Forks",
+        "LED Headlamp",
+        "Self Start",
+        "BS6 Phase 2B"
+      ],
+      "variants": [
+        {
+          "name": "Scrambler Icon Dark Standard",
+          "price": "₹9,97,000"
+        }
+      ],
+      "colors": [
+        {
+          "name": "Matte Black",
+          "hex": "#2A2A2A"
+        }
+      ],
+      "technical_specifications": {
+        "engine": "803 cc, L-Twin, Air Cooled",
+        "cooling": "Air Cooled",
+        "max_power": "73 bhp @ 8250 rpm",
+        "max_torque": "65 Nm @ 7000 rpm",
+        "starting": "Self Start",
+        "brakes_front": "Disc 330mm with Cornering ABS",
+        "brakes_rear": "Disc 245mm with ABS",
+        "kerb_weight": "185 kg",
+        "fuel_tank_capacity": "13.5 L",
+        "seat_height": "795 mm"
+      }
+    },
     {
       "make": "Ducati",
       "model": "Scrambler Icon",

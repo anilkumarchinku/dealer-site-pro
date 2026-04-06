@@ -985,6 +985,108 @@
         "fuel_tank_capacity": "19 L",
         "seat_height": "835 mm"
       }
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Ninja ZX-4R",
+      "variant_name": "Ninja ZX-4R",
+      "price": "₹8,49,000",
+      "engine_displacement": "399 cc",
+      "mileage": "20 kmpl",
+      "max_power": "77 bhp @ 14000 rpm",
+      "max_torque": "40.2 Nm @ 12500 rpm",
+      "top_speed": "200 kmph",
+      "fuel_type": "Petrol",
+      "transmission": "6-Speed Manual",
+      "source_section": "Available",
+      "description": "The Kawasaki Ninja ZX-4R is a 400cc inline-4 supersport motorcycle with 77 bhp, traction control, quickshifter, dual-channel ABS, TFT display with smartphone connectivity, and aggressive aerodynamic fairing.",
+      "features": ["Inline-4 Engine", "Traction Control", "Quickshifter", "Dual Channel ABS", "TFT Display", "Smartphone Connectivity", "LED Lighting", "Self Start"],
+      "variants": [
+        {"name": "Standard", "price": "₹8,49,000"},
+        {"name": "SE", "price": "₹8,99,000"}
+      ],
+      "colors": [
+        {"name": "Lime Green / Ebony", "hex": "#5A8A00"},
+        {"name": "Metallic Flat Spark Black", "hex": "#1A1A1A"},
+        {"name": "Pearl Blizzard White", "hex": "#F5F5F0"}
+      ],
+      "technical_specifications": {
+        "engine": "399 cc, Inline-4, BS6 Phase 2B",
+        "cooling": "Liquid Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "187 kg",
+        "fuel_tank_capacity": "15 L",
+        "seat_height": "785 mm"
+      }
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Z900",
+      "variant_name": "Z900",
+      "price": "₹9,99,000",
+      "engine_displacement": "948 cc",
+      "mileage": "18 kmpl",
+      "max_power": "123.6 bhp @ 9500 rpm",
+      "max_torque": "98.6 Nm @ 7700 rpm",
+      "top_speed": "250 kmph",
+      "fuel_type": "Petrol",
+      "transmission": "6-Speed Manual",
+      "source_section": "Available",
+      "description": "The Kawasaki Z900 is a premium 948cc inline-4 naked motorcycle with a 6-axis IMU, cornering ABS, traction control, 5-inch TFT display with smartphone connectivity, and aggressive hyper-naked styling.",
+      "features": ["6-Axis IMU", "Cornering ABS", "Traction Control", "5-inch TFT Display", "Smartphone Connectivity", "LED Headlamp", "Alloy Wheels", "Self Start"],
+      "variants": [
+        {"name": "Standard", "price": "₹9,99,000"}
+      ],
+      "colors": [
+        {"name": "Metallic Flat Spark Black", "hex": "#1A1A1A"},
+        {"name": "Candy Lime Green / Metallic Flat Spark Black", "hex": "#5A8A00"}
+      ],
+      "technical_specifications": {
+        "engine": "948 cc, Inline-4, BS6 Phase 2B",
+        "cooling": "Liquid Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "193 kg",
+        "fuel_tank_capacity": "17 L",
+        "seat_height": "795 mm"
+      }
+    },
+    {
+      "make": "Kawasaki",
+      "model": "Z900RS",
+      "variant_name": "Z900RS",
+      "price": "₹16,80,000",
+      "engine_displacement": "948 cc",
+      "mileage": "15 kmpl",
+      "max_power": "109.96 bhp @ 8500 rpm",
+      "max_torque": "98.5 Nm @ 6500 rpm",
+      "top_speed": "220 kmph",
+      "fuel_type": "Petrol",
+      "transmission": "6-Speed Manual",
+      "source_section": "Available",
+      "description": "The Kawasaki Z900RS is a retro-modern naked motorcycle with 948cc inline-4 engine, 6-axis IMU, ride-by-wire, cornering ABS, traction control, 5-inch TFT display, and classic Z1 styling.",
+      "features": ["6-Axis IMU", "Ride-by-Wire", "Cornering ABS", "Traction Control", "5-inch TFT Display", "Smartphone Connectivity", "LED Headlamp", "Self Start"],
+      "variants": [
+        {"name": "Standard", "price": "₹16,80,000"}
+      ],
+      "colors": [
+        {"name": "Candy Brown / Metallic Flat Spark Black", "hex": "#7A5A3A"},
+        {"name": "Metallic Moondust Grey / Flat Ebony", "hex": "#6B6B6B"},
+        {"name": "Pearl Robbin Egg Blue / Metallic Spark Black", "hex": "#2A7A8B"}
+      ],
+      "technical_specifications": {
+        "engine": "948 cc, Inline-4, BS6 Phase 2B",
+        "cooling": "Liquid Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "215 kg",
+        "fuel_tank_capacity": "17 L",
+        "seat_height": "800 mm"
+      }
     }
   ]
 }

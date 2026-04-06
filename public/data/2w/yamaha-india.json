@@ -917,6 +917,91 @@
         "brakes_rear": "Disc",
         "kerb_weight": "132 kg"
       }
+    },
+    {
+      "make": "Yamaha",
+      "model": "R3",
+      "variant_name": "R3",
+      "price": "₹4,64,900",
+      "engine_displacement": "321 cc",
+      "mileage": "28 kmpl",
+      "max_power": "41.4 bhp @ 10750 rpm",
+      "max_torque": "29.5 Nm @ 9000 rpm",
+      "top_speed": "180 kmph",
+      "fuel_type": "Petrol",
+      "transmission": "6-Speed Manual",
+      "source_section": "Available",
+      "description": "The Yamaha R3 is a fully-faired 321cc parallel-twin supersport with 41.4 bhp, dual-channel ABS, slipper and assist clutch, Bluetooth connectivity, and KYB front forks. Imported as a CBU and sold through Blue Square showrooms.",
+      "features": [
+        "Full Fairing",
+        "Parallel-Twin Engine",
+        "Dual Channel ABS",
+        "Slipper and Assist Clutch",
+        "Bluetooth Connectivity",
+        "KYB Front Forks",
+        "LED Headlamp",
+        "Self Start"
+      ],
+      "variants": [
+        {"name": "Standard", "price": "₹4,64,900"}
+      ],
+      "colors": [
+        {"name": "Matte Black", "hex": "#2A2A2A"},
+        {"name": "Intensity White", "hex": "#F5F5F0"},
+        {"name": "Ice Storm", "hex": "#C8C8F0"}
+      ],
+      "technical_specifications": {
+        "engine": "321 cc, Parallel-Twin, BS6 Phase 2B",
+        "cooling": "Liquid Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "169 kg",
+        "fuel_tank_capacity": "14 L",
+        "seat_height": "780 mm"
+      }
+    },
+    {
+      "make": "Yamaha",
+      "model": "MT 03",
+      "variant_name": "MT 03",
+      "price": "₹4,59,900",
+      "engine_displacement": "321 cc",
+      "mileage": "28 kmpl",
+      "max_power": "41.4 bhp @ 10750 rpm",
+      "max_torque": "29.5 Nm @ 9000 rpm",
+      "top_speed": "170 kmph",
+      "fuel_type": "Petrol",
+      "transmission": "6-Speed Manual",
+      "source_section": "Available",
+      "description": "The Yamaha MT-03 is a 321cc parallel-twin naked streetfighter, the unfaired sibling of the R3, with an aggressive hyper-naked design, slipper and assist clutch, Bluetooth connectivity, and dual-channel ABS.",
+      "features": [
+        "Parallel-Twin Engine",
+        "Dual Channel ABS",
+        "Slipper and Assist Clutch",
+        "Bluetooth Connectivity",
+        "LED Headlamp",
+        "Alloy Wheels",
+        "Self Start"
+      ],
+      "variants": [
+        {"name": "Standard", "price": "₹4,59,900"}
+      ],
+      "colors": [
+        {"name": "Metallic Black", "hex": "#1A1A1A"},
+        {"name": "Ice Storm", "hex": "#C8C8F0"},
+        {"name": "Vivid Violet Metallic", "hex": "#5A2A7A"}
+      ],
+      "technical_specifications": {
+        "engine": "321 cc, Parallel-Twin, BS6 Phase 2B",
+        "cooling": "Liquid Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "168 kg",
+        "fuel_tank_capacity": "14 L",
+        "seat_height": "780 mm"
+      }
     }
   ]
 }

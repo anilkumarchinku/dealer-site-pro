@@ -2,33 +2,60 @@
   "brand": "Tork Motors",
   "brandId": "tork-motors",
   "type": "2w",
-  "lastUpdated": "2026-04-03",
+  "lastUpdated": "2026-04-04",
   "source": "BikeWale",
   "vehicles": [
     {
       "make": "Tork Motors",
       "model": "Kratos R",
       "variant_name": "Kratos R",
-      "price": "N/A",
+      "price": "₹1,87,000",
       "engine_displacement": "N/A",
-      "mileage": "N/A",
-      "max_power": "20.7 bhp",
+      "mileage": "180 km (range)",
+      "max_power": "9 kW",
       "max_torque": "38 Nm",
-      "top_speed": "N/A",
+      "top_speed": "105 kmph",
       "fuel_type": "Electric",
       "transmission": "Automatic",
-      "source_section": "Discontinued",
-      "description": "The Tork Kratos R was an electric motorcycle from Pune-based Tork Motors. The company has discontinued production and is no longer producing new motorcycles in India.",
-      "features": ["Eco+ Mode", "Regenerative Braking", "LED Lighting"],
-      "variants": [],
-      "colors": [],
+      "source_section": "Available",
+      "description": "The Tork Kratos R is a Pune-made performance electric motorcycle with a 9kW motor, 38 Nm torque, 180km certified range in Eco+ mode, 105 kmph top speed, 4kWh battery, and fast charging (0-80% under 60 minutes). Available across multiple Indian cities with doorstep delivery.",
+      "features": [
+        "Eco+ Ride Mode",
+        "Multiple Ride Modes",
+        "Regenerative Braking",
+        "LED Lighting",
+        "Digital Instrument Cluster",
+        "Mobile App Connectivity",
+        "Fast Charging (0-80% in 60 min)",
+        "Disc Brakes with ABS"
+      ],
+      "variants": [
+        {
+          "name": "Kratos R Standard",
+          "price": "₹1,87,000"
+        }
+      ],
+      "colors": [
+        {
+          "name": "Midnight Black",
+          "hex": "#1A1A1A"
+        },
+        {
+          "name": "Cosmic White",
+          "hex": "#F5F5F0"
+        },
+        {
+          "name": "Racing Red",
+          "hex": "#C41E3A"
+        }
+      ],
       "technical_specifications": {
         "motor": "PMSM Motor",
-        "motor_power": "20.7 bhp",
-        "battery": "N/A",
-        "range": "N/A",
-        "charging_time": "N/A",
-        "top_speed": "N/A",
+        "motor_power": "9 kW peak",
+        "battery": "4 kWh Li-ion",
+        "range": "180 km (Eco+ / IDC)",
+        "charging_time": "60 min (0-80%, fast charge)",
+        "top_speed": "105 kmph",
         "brakes_front": "Disc with ABS",
         "brakes_rear": "Disc",
         "kerb_weight": "N/A",

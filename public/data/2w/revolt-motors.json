@@ -2,7 +2,7 @@
   "brand": "Revolt",
   "brandId": "revolt-motors",
   "type": "2w",
-  "lastUpdated": "2026-04-03",
+  "lastUpdated": "2026-04-04",
   "source": "BikeWale",
   "vehicles": [
     {
@@ -54,6 +54,58 @@
         "brakes_rear": "Disc",
         "kerb_weight": "108 kg",
         "seat_height": "N/A"
+      }
+    },
+    {
+      "make": "Revolt",
+      "model": "RV1+",
+      "variant_name": "RV1+",
+      "price": "₹1,04,990",
+      "engine_displacement": "N/A",
+      "mileage": "160 km (range)",
+      "max_power": "2.8 kW",
+      "max_torque": "48 Nm",
+      "top_speed": "70 kmph",
+      "fuel_type": "Electric",
+      "transmission": "Automatic",
+      "source_section": "Available",
+      "description": "The Revolt RV1+ is the mid-tier AI-enabled electric motorcycle with a 2.8kW motor, 160km range in Eco mode, 70 kmph top speed, and 3.24kWh removable battery. It charges to 80% in 3.5 hours and offers 3 ride modes (Eco, Normal, Sport).",
+      "features": [
+        "AI-Enabled",
+        "3 Ride Modes (Eco, Normal, Sport)",
+        "Regenerative Braking",
+        "LED Headlamp",
+        "LCD Digital Display",
+        "Mobile App Connectivity",
+        "Removable Battery"
+      ],
+      "variants": [
+        {
+          "name": "RV1+ Standard",
+          "price": "₹1,04,990"
+        }
+      ],
+      "colors": [
+        {
+          "name": "Smokey Grey",
+          "hex": "#6B6B6B"
+        },
+        {
+          "name": "Neon Black",
+          "hex": "#1A1A1A"
+        }
+      ],
+      "technical_specifications": {
+        "motor": "PMSM Motor",
+        "motor_power": "2.8 kW",
+        "battery": "3.24 kWh (removable)",
+        "range": "160 km (Eco mode)",
+        "charging_time": "3.5 hrs (0-80%)",
+        "top_speed": "70 kmph",
+        "brakes_front": "Disc",
+        "brakes_rear": "Disc",
+        "kerb_weight": "110 kg",
+        "seat_height": "790 mm"
       }
     },
     {

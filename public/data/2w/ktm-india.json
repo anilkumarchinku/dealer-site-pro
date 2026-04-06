@@ -291,6 +291,109 @@
         "fuel_tank_capacity": "14.5 L",
         "seat_height": "830 mm"
       }
+    },
+    {
+      "make": "KTM",
+      "model": "160 Duke TFT",
+      "variant_name": "160 Duke TFT",
+      "price": "₹1,78,536",
+      "engine_displacement": "164.2 cc",
+      "mileage": "36 kmpl",
+      "max_power": "18.73 bhp @ 9500 rpm",
+      "max_torque": "15.5 Nm @ 7500 rpm",
+      "top_speed": "120 kmph",
+      "fuel_type": "Petrol",
+      "transmission": "6-Speed Manual",
+      "source_section": "Available",
+      "description": "The KTM 160 Duke TFT is a premium variant of the 160 Duke featuring a 5-inch TFT colour display, Bluetooth connectivity, turn-by-turn navigation, and the same 164cc liquid-cooled engine with 18.73 bhp.",
+      "features": ["5-inch TFT Display", "Bluetooth Connectivity", "Turn-by-Turn Navigation", "Disc Brakes", "ABS", "LED Headlamp", "Self Start"],
+      "variants": [
+        {"name": "Standard", "price": "₹1,78,536"}
+      ],
+      "colors": [
+        {"name": "Silver Metallic Matt", "hex": "#C8C8C8"},
+        {"name": "Atlantic Blue", "hex": "#1A4A8B"},
+        {"name": "Electronic Orange", "hex": "#E8600A"}
+      ],
+      "technical_specifications": {
+        "engine": "164.2 cc, Single Cylinder, BS6 Phase 2B",
+        "cooling": "Liquid Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "147 kg",
+        "fuel_tank_capacity": "10.1 L",
+        "seat_height": "815 mm"
+      }
+    },
+    {
+      "make": "KTM",
+      "model": "RC 160",
+      "variant_name": "RC 160",
+      "price": "₹1,84,994",
+      "engine_displacement": "164.2 cc",
+      "mileage": "35 kmpl",
+      "max_power": "18.73 bhp @ 9500 rpm",
+      "max_torque": "15.5 Nm @ 7500 rpm",
+      "top_speed": "130 kmph",
+      "fuel_type": "Petrol",
+      "transmission": "6-Speed Manual",
+      "source_section": "Available",
+      "description": "The KTM RC 160 is a fully-faired entry-level supersport motorcycle with 164cc liquid-cooled engine, ABS disc brakes, and aggressive aerodynamic bodywork inspired by KTM's MotoGP machines.",
+      "features": ["Full Fairing", "Disc Brakes", "ABS", "Alloy Wheels", "LED Headlamp", "Self Start"],
+      "variants": [
+        {"name": "Standard", "price": "₹1,84,994"}
+      ],
+      "colors": [
+        {"name": "GP Edition Orange", "hex": "#E8600A"},
+        {"name": "Metallic Grey", "hex": "#6B6B6B"},
+        {"name": "Black", "hex": "#1A1A1A"}
+      ],
+      "technical_specifications": {
+        "engine": "164.2 cc, Single Cylinder, BS6 Phase 2B",
+        "cooling": "Liquid Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Disc with ABS",
+        "brakes_rear": "Disc with ABS",
+        "kerb_weight": "155 kg",
+        "fuel_tank_capacity": "9.5 L",
+        "seat_height": "820 mm"
+      }
+    },
+    {
+      "make": "KTM",
+      "model": "390 Adventure X",
+      "variant_name": "390 Adventure X",
+      "price": "₹3,26,178",
+      "engine_displacement": "398.63 cc",
+      "mileage": "28 kmpl",
+      "max_power": "46 bhp @ 8500 rpm",
+      "max_torque": "39 Nm @ 6500 rpm",
+      "top_speed": "170 kmph",
+      "fuel_type": "Petrol",
+      "transmission": "6-Speed Manual",
+      "source_section": "Available",
+      "description": "The KTM 390 Adventure X is the more affordable touring-oriented 390 Adventure variant with 5-inch TFT display, Bluetooth, road-biased tyres, cornering ABS, and WP suspension at a lower price point than the flagship 390 Adventure.",
+      "features": ["5-inch TFT Display", "Bluetooth", "Cornering ABS", "WP Suspension", "LED Headlamp", "Self Start"],
+      "variants": [
+        {"name": "Standard", "price": "₹3,26,178"}
+      ],
+      "colors": [
+        {"name": "Ceramic White", "hex": "#F5F5F0"},
+        {"name": "Electronic Orange", "hex": "#E8600A"}
+      ],
+      "technical_specifications": {
+        "engine": "398.63 cc, Single Cylinder, BS6 Phase 2B",
+        "cooling": "Liquid Cooled",
+        "starting": "Self Start",
+        "brakes_front": "Disc with Cornering ABS",
+        "brakes_rear": "Disc with ABS",
+        "suspension_front": "WP Apex (non-adjustable)",
+        "suspension_rear": "WP Apex Monoshock",
+        "kerb_weight": "177 kg",
+        "fuel_tank_capacity": "14.5 L",
+        "seat_height": "820 mm"
+      }
     }
   ]
 }
