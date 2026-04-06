@@ -123,7 +123,12 @@ const BRAND_FOLDER_MAP_2W: Record<string, string> = {
     "qj motor india": "qj-motor-india",
     "bgauss": "bgauss",
     "battre electric": "battre-ev",
-    "ivoomi": "ivoomi-energy"
+    "ivoomi": "ivoomi-energy",
+    "moto morini": "motomorini",
+    "mahindra": "mahindra-two-wheelers",
+    "kinetic green": "kinetic",
+    "raptee hv": "raptee",
+    "yo electric": "yo"
 }
 
 const BRAND_FOLDER_MAP_3W: Record<string, string> = {
