@@ -54,6 +54,7 @@ export function VehicleCard({ vehicle, slug, dealerId, brandColor = "#1f2937", o
     const brandLogoSrc = `/data/brand-logos/${brandId}.png`
 
     function handleImgError() {
+        if (imgSrc !== jpgUrl && imgSrc !== pngUrl) { setImgSrc(jpgUrl); return }
         if (imgSrc === jpgUrl) { setImgSrc(pngUrl); return }
         setFailed(true)
     }

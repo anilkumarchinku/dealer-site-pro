@@ -220,10 +220,14 @@ export function CarCard({
                                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                                     onError={() => {
-                                        if (showScraped && scrapedIdx < scrapedUrls.length - 1) {
+                                        if (!imgError) {
+                                            // Hero URL failed — immediately switch to scraped fallbacks
+                                            setImgError(true);
+                                        } else if (showScraped && scrapedIdx < scrapedUrls.length - 1) {
                                             setScrapedIdx(prev => prev + 1);
                                         } else {
-                                            setImgError(true);
+                                            // All fallbacks exhausted — push index out of bounds so displayUrl → null → emoji shown
+                                            setScrapedIdx(scrapedUrls.length);
                                         }
                                     }}
                                 />
