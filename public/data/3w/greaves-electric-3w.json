@@ -49,7 +49,7 @@
       "variant_name": "Xargo EV/Electric",
       "ex_showroom_price": "Price Coming Soon",
       "mileage": "100 km range",
-      "engine_details": { "displacement": "", "max_power": "", "torque": "" },
+      "engine_details": { "displacement": "", "max_power": "1.5 kW", "torque": "15 Nm" },
       "payload_features": { "gross_vehicle_weight": "", "payload_capacity": "300 kg" },
       "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "battery_capacity": "5 kWh", "battery_type": "LFP", "range": "100 km" }
     }
