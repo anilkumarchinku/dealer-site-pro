@@ -781,20 +781,6 @@ export function SportyTemplate({
                     </div>
                     <div className="border-t border-gray-200 mt-8 pt-8 text-center text-gray-400">
                         <p>© {new Date().getFullYear()} {dealerName}. All rights reserved.</p>
-                        <div className="flex items-center justify-center gap-3 mt-3">
-                            <a
-                                href="https://www.cyepro.com/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="hover:opacity-80 transition-opacity"
-                            >
-                                <div className="relative w-40 h-12">
-                                    <Image src="/assets/cyepro-logo.png" alt="Cyepro" fill className="object-contain" sizes="160px" />
-                                </div>
-                            </a>
-                            <span className="text-lg" style={{ color: '#E5197D' }}>|</span>
-                            <span className="text-sm font-medium" style={{ color: '#E5197D' }}>India&apos;s leading CRM providers</span>
-                        </div>
                     </div>
                 </div>
             </footer>

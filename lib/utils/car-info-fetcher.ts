@@ -95,20 +95,32 @@ export async function getDetailedCarInfo(
                         return parseFloat(s) || 0;
                     };
 
+                    // Helper: parse power — handles both "X bhp" and "X kW" (converts kW→bhp)
+                    const parsePower = (val: any): number => {
+                        const str = String(val || '');
+                        const num = parseNum(str);
+                        if (!num) return 0;
+                        if (/kw/i.test(str)) return Math.round(num * 1.34102 * 10) / 10;
+                        return num;
+                    };
+
                     if (matchingVehicle && matchingVehicle.variants && Array.isArray(matchingVehicle.variants)) {
+                        const isEV = /electric/i.test(matchingVehicle.fuel_type || '');
+                        const rawMileage = String(matchingVehicle.mileage || '').trim();
+                        const mileageDisplay = rawMileage && rawMileage !== 'N/A'
+                            ? rawMileage
+                            : (isEV ? (matchingVehicle.range_km || '') : '');
                         return matchingVehicle.variants.map((v: any) => ({
                             make: matchingVehicle.make || data.brand || make,
                             model: matchingVehicle.model || model,
                             variant_name: v.name,
                             ex_showroom_price_min_inr: typeof v.price === 'number' ? v.price : (v.price_paise ? Math.round(v.price_paise / 100) : parseInt((v.price||'').replace(/[^0-9]/g, '')) || 0),
-                            fuel_type: matchingVehicle.fuel_type === 'electric' ? 'Electric' : 'Petrol',
+                            fuel_type: isEV ? 'Electric' : 'Petrol',
                             transmission: matchingVehicle.transmission || 'Manual',
                             engine_displacement_cc: parseNum(matchingVehicle.engine_cc || matchingVehicle.engine_displacement),
-                            power_bhp: parseNum(matchingVehicle.max_power),
+                            power_bhp: parsePower(matchingVehicle.max_power),
                             torque_nm: parseNum(matchingVehicle.max_torque || matchingVehicle.torque),
-                            mileage_kmpl_or_ev_range: matchingVehicle.fuel_type === 'electric'
-                                ? (matchingVehicle.range_km || String(matchingVehicle.mileage || ''))
-                                : (matchingVehicle.mileage_kmpl || matchingVehicle.mileage || 0),
+                            mileage_kmpl_or_ev_range: mileageDisplay,
                             seating_capacity: 2,
                             key_features: matchingVehicle.features?.join(', ') || '',
                             safety_features: '',

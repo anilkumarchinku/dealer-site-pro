@@ -282,10 +282,17 @@ export async function generateMetadata({ params }: SitePageProps): Promise<Metad
         .map(s => s.replace(/_/g, ' '))
         .join(', ')
 
+    const faviconUrl = dealer.logo_url ?? '/favicon.svg'
+
     return {
         title,
         description,
         keywords: `${dealer.dealership_name}, car dealership, ${brandKeywords}, ${dealer.location}, ${serviceKeywords}`,
+        icons: {
+            icon: faviconUrl,
+            shortcut: faviconUrl,
+            apple: faviconUrl,
+        },
         openGraph: {
             title,
             description,
