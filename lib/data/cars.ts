@@ -45,6 +45,17 @@ const MAKE_TO_JSON: Record<string, string> = {
     'mini': 'mini',
     'volvo': 'volvo',
     'porsche': 'porsche',
+    // Brands added 2026-04-07 — JSON files exist with image_urls
+    'aston martin': 'aston_martin',
+    'bentley': 'bentley',
+    'byd': 'byd',
+    'citroen': 'citroen',
+    'ferrari': 'ferrari',
+    'force motors': 'force',
+    'lamborghini': 'lamborghini',
+    'maserati': 'maserati',
+    'rolls-royce': 'rolls_royce',
+    'vinfast': 'vinfast',
 }
 
 /** Returns a map of lowercase model name → CardDekho image URL, read from brand JSON.
