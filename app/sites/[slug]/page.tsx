@@ -12,9 +12,8 @@ import type { DBVehicle } from '@/lib/db/vehicles'
 import type { Service } from '@/lib/types'
 
 
-// Cache dealer site pages for 5 minutes. Dealers who update settings
-// will see changes within 5 minutes via automatic revalidation.
-export const revalidate = 300
+// Always render fresh — ensures DB changes (e.g. image URLs) take effect immediately.
+export const dynamic = 'force-dynamic'
 
 interface SitePageProps {
     params: Promise<{ slug: string }>

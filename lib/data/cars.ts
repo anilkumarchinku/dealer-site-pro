@@ -76,6 +76,7 @@ function catalogRowToCar(row: any): Car {
         year:     row.year ?? new Date().getFullYear(),
         bodyType: row.body_type ?? 'SUV',
         segment:  'B' as Car['segment'],
+        vehicleCategory: '4w' as const,
         pricing: {
             exShowroom: {
                 min:      minPrice || null,
