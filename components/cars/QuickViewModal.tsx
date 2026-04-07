@@ -471,7 +471,7 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
                                         <SpecCard label="Height" value={car.dimensions?.height ? `${car.dimensions.height} mm` : null} />
                                         <SpecCard label="Wheelbase" value={car.dimensions?.wheelbase ? `${car.dimensions.wheelbase} mm` : null} />
                                         <SpecCard label="Ground Clear." value={car.dimensions?.groundClearance ? `${car.dimensions.groundClearance} mm` : null} />
-                                        <SpecCard label="Boot Space" value={car.dimensions?.bootSpace ? `${car.dimensions.bootSpace} L` : null} />
+                                        <SpecCard label={car.vehicleCategory === '3w' ? 'Payload' : 'Boot Space'} value={car.dimensions?.bootSpace ? `${car.dimensions.bootSpace} ${car.vehicleCategory === '3w' ? 'kg' : 'L'}` : null} />
                                         <SpecCard label="Fuel Tank" value={car.dimensions?.fuelTankCapacity ? `${car.dimensions.fuelTankCapacity} L` : null} />
                                         <SpecCard label="Seating" value={car.dimensions?.seatingCapacity ? `${car.dimensions.seatingCapacity} seats` : null} />
                                         <SpecCard label="Kerb Weight" value={car.dimensions?.kerbWeight ? `${car.dimensions.kerbWeight} kg` : null} />

@@ -130,7 +130,7 @@ function threeWheelersToCars(vehicles: ThreeWheelerVehicle[]): import("@/lib/typ
             topSpeed: v.max_speed_kmph ?? undefined,
             range: v.range_km ?? undefined,
         },
-        dimensions: { seatingCapacity: v.passenger_capacity ?? 3 },
+        dimensions: { seatingCapacity: v.passenger_capacity ?? 3, bootSpace: v.payload_kg ?? undefined },
         features: { keyFeatures: v.features ?? [] },
         images: { hero: v.images?.[0] ?? '/placeholder-car.jpg', exterior: v.images ?? [], interior: [] },
         colors: (v.colors ?? []).map(c => ({ name: c.name, type: 'Solid' as const, hex: c.hex, extraCost: 0 })),
