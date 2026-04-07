@@ -21,7 +21,7 @@ import {
     SelectValue,
 } from '@/components/ui/select';
 import { ChevronRight, Car, TrendingDown, TrendingUp, Calculator, Info, Calendar, Gauge, Users } from 'lucide-react';
-import { CAR_MAKES } from '@/lib/data/cars';
+import { CAR_MAKES } from '@/lib/data/cars-static';
 
 const BODY_TYPES = ['Hatchback', 'Sedan', 'SUV', 'MUV', 'Compact SUV', 'Luxury'];
 const FUEL_TYPES = ['Petrol', 'Diesel', 'CNG', 'Electric', 'Hybrid'];

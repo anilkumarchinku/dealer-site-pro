@@ -37,7 +37,7 @@ import {
     ArrowLeft,
     Sparkles,
 } from 'lucide-react';
-import { CAR_MAKES } from '@/lib/data/cars';
+import { CAR_MAKES } from '@/lib/data/cars-static';
 
 const CURRENT_YEAR = new Date().getFullYear();
 const YEARS = Array.from({ length: 15 }, (_, i) => String(CURRENT_YEAR - i));

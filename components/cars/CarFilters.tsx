@@ -22,7 +22,7 @@ import {
     AccordionTrigger,
 } from '@/components/ui/accordion';
 import { formatPriceInLakhs } from '@/lib/utils/car-utils';
-import { getAllMakes } from '@/lib/data/cars';
+import { getAllMakes } from '@/lib/data/cars-static';
 import { X } from 'lucide-react';
 
 interface CarFiltersProps {

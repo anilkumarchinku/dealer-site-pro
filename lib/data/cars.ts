@@ -1,13 +1,21 @@
 /**
  * lib/data/cars.ts
- * Car catalog helpers — static make list + server-side DB queries.
- * Used by filter components (getAllMakes) and site pages (getCarsByMake).
+ * Server-only car catalog helpers — DB queries + brand image loading.
+ * Uses Node.js `fs`/`path` — CANNOT be imported by client components.
+ *
+ * Client-safe static exports (CAR_MAKES, getAllMakes, allCars) live in
+ * cars-static.ts — import from there in client components.
  */
 
+import 'server-only'
 import fs from 'fs'
 import path from 'path'
 import { createClient } from '@supabase/supabase-js'
 import type { Car } from '@/lib/types/car'
+
+// Re-export static client-safe exports so server code can still use one import
+export { CAR_MAKES, getAllMakes, allCars } from '@/lib/data/cars-static'
+export type { CarMake } from '@/lib/data/cars-static'
 
 // ── Brand JSON image lookup (server-side only) ────────────────────────────────
 
@@ -110,54 +118,6 @@ function loadBrandImageMap(make: string): Record<string, string> {
         return {}
     }
 }
-
-// ── Static makes list ─────────────────────────────────────────────────────────
-
-export const CAR_MAKES = [
-    'Aston Martin',
-    'Audi',
-    'Bentley',
-    'BMW',
-    'BYD',
-    'Citroen',
-    'Ferrari',
-    'Force Motors',
-    'Honda',
-    'Hyundai',
-    'Isuzu',
-    'Jaguar',
-    'Jeep',
-    'Kia',
-    'Lamborghini',
-    'Land Rover',
-    'Lexus',
-    'Mahindra',
-    'Maserati',
-    'Maruti Suzuki',
-    'Mercedes-Benz',
-    'MG',
-    'MINI',
-    'Nissan',
-    'Porsche',
-    'Renault',
-    'Rolls-Royce',
-    'Skoda',
-    'Tata Motors',
-    'Toyota',
-    'VinFast',
-    'Volkswagen',
-    'Volvo',
-] as const
-
-export type CarMake = (typeof CAR_MAKES)[number]
-
-/** Returns all available car makes for filter UI. */
-export function getAllMakes(): string[] {
-    return [...CAR_MAKES]
-}
-
-// ── Fallback empty array (used when DB is unavailable) ────────────────────────
-export const allCars: Car[] = []
 
 // ── Server-side DB helpers ────────────────────────────────────────────────────
 
