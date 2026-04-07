@@ -2222,7 +2222,7 @@ export function getThreeWheelerCatalog(brand: string, dealerId: string): ThreeWh
     if (staticEntries && staticEntries.length > 0) {
         return staticEntries.map((entry, idx) => {
             const slug       = modelToSlug(entry.model)
-            const imageUrl   = get3WImageUrl(entry.brand, entry.model) ?? `/data/brand-model-images/3w/${brandId}/${slug}.jpg`
+            const imageUrl   = get3WImageUrl(entry.brand, entry.model) ?? `/images/3w/${brandId}/${slug}.jpg`
             const enrichment = get3WModelEnrichment(brandId, entry.model)
 
             // Real specs from JSON override fake static defaults
