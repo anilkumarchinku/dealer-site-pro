@@ -50,6 +50,11 @@ const nextConfig: NextConfig = {
                 protocol: 'https',
                 hostname: 'cdn.bikedekho.com',
             },
+            // V3Cars CDN (discontinued model fallback images)
+            {
+                protocol: 'https',
+                hostname: 'www.v3cars.com',
+            },
             // CardDekho Trucks CDN (3W vehicle catalog images)
             {
                 protocol: 'https',
@@ -75,7 +80,7 @@ const nextConfig: NextConfig = {
                     "default-src 'self'",
                     "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://checkout.razorpay.com",
                     "style-src 'self' 'unsafe-inline'",
-                    "img-src 'self' data: blob: https://*.supabase.co https://*.cyepro.com https://lh3.googleusercontent.com https://images.unsplash.com https://storage.googleapis.com https://maps.googleapis.com https://stimg.cardekho.com https://truckcdn.cardekho.com https://imgd.aeplcdn.com https://cdn.bikedekho.com",
+                    "img-src 'self' data: blob: https://*.supabase.co https://*.cyepro.com https://lh3.googleusercontent.com https://images.unsplash.com https://storage.googleapis.com https://maps.googleapis.com https://stimg.cardekho.com https://truckcdn.cardekho.com https://imgd.aeplcdn.com https://cdn.bikedekho.com https://www.v3cars.com",
                     "font-src 'self' data:",
                     "connect-src 'self' https://*.supabase.co https://api.cyepro.com https://checkout.razorpay.com wss://*.supabase.co",
                     "frame-src https://api.razorpay.com https://checkout.razorpay.com",
