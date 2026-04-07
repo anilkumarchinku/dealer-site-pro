@@ -278,6 +278,7 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                                     src={activeImage}
                                     alt={`${car.make} ${car.model}`}
                                     fill
+                                    unoptimized={activeImage.startsWith('http')}
                                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 60vw"
                                     className="object-cover"
                                     priority
