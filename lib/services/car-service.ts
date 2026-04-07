@@ -297,6 +297,7 @@ function mapDbCarToCar(dbCar: any): Car {
         year:     dbCar.year,
         bodyType: dbCar.body_type,
         segment:  dbCar.segment ?? null,
+        vehicleCategory: '4w' as const,
         price:    minINR ? `₹${minINR.toLocaleString('en-IN')}` : (dbCar.price ?? undefined),
 
         pricing,
