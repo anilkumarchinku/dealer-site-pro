@@ -4,8 +4,112 @@
  * Used by filter components (getAllMakes) and site pages (getCarsByMake).
  */
 
+import fs from 'fs'
+import path from 'path'
 import { createClient } from '@supabase/supabase-js'
 import type { Car } from '@/lib/types/car'
+
+// ── Brand JSON image lookup (server-side only) ────────────────────────────────
+
+const MAKE_TO_JSON: Record<string, string> = {
+    'tata motors': 'tata',
+    'tata': 'tata',
+    'hyundai': 'hyundai',
+    'maruti suzuki': 'maruti_suzuki',
+    'honda': 'honda',
+    'kia': 'kia',
+    'mahindra': 'mahindra',
+    'toyota': 'toyota',
+    'volkswagen': 'volkswagen',
+    'skoda': 'skoda',
+    'mg': 'mg',
+    'renault': 'renault',
+    'nissan': 'nissan',
+    'bmw': 'bmw',
+    'audi': 'audi',
+    'mercedes-benz': 'mercedes',
+    'mercedes': 'mercedes',
+    'jeep': 'jeep',
+    'isuzu': 'isuzu',
+    'land rover': 'land_rover',
+    'jaguar': 'jaguar',
+    'lexus': 'lexus',
+    'mini': 'mini',
+    'volvo': 'volvo',
+    'porsche': 'porsche',
+}
+
+/** Returns a map of lowercase model name → CardDekho image URL, read from brand JSON.
+ *  Uses a recursive tree walker so it handles all brand JSON formats:
+ *  - { items: [{model, image_urls}] }            BMW, Audi
+ *  - { brand: [{model, image_urls}] }            VW, Skoda, Toyota, MG, Renault, Nissan, KIA, Mahindra
+ *  - { brand: { '0': {model_name, image_urls} } } Mercedes
+ *  - { brand: { variants: [{model, image_urls}] } } Jeep
+ *  - { brand: { models: [{model, variants:[{image_urls}]}] } } Honda
+ *  - [ { '0': [variants_with_model+image_urls] } ]  Tata, Hyundai
+ *  - flat array of variants without model (Maruti) → extracted from image URL
+ */
+function loadBrandImageMap(make: string): Record<string, string> {
+    const jsonKey = MAKE_TO_JSON[make.toLowerCase()]
+    if (!jsonKey) return {}
+    try {
+        const filePath = path.join(process.cwd(), 'public', 'data', `${jsonKey}.json`)
+        const raw = JSON.parse(fs.readFileSync(filePath, 'utf8'))
+        const map: Record<string, string> = {}
+
+        const getImg = (imgUrls: unknown): string | null => {
+            if (!Array.isArray(imgUrls)) return null
+            const u = imgUrls.find((x: unknown) => {
+                const obj = x as Record<string, unknown>
+                return typeof obj.value === 'string' && obj.value.startsWith('http')
+            }) as Record<string, string> | undefined
+            return u?.value ?? null
+        }
+
+        // Recursive walker — passes parent model name as context for nested formats
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        function walk(node: any, ctxModel?: string): void {
+            if (!node || typeof node !== 'object') return
+            if (Array.isArray(node)) { node.forEach((n: unknown) => walk(n, ctxModel)); return }
+            const model: string | undefined = node.model || node.model_name || ctxModel
+            const imgUrl = getImg(node.image_urls)
+            if (model && imgUrl && !map[model.toLowerCase()]) map[model.toLowerCase()] = imgUrl
+            for (const [k, v] of Object.entries(node)) {
+                if (k === 'image_urls') continue
+                if (v && typeof v === 'object') walk(v, model ?? ctxModel)
+            }
+        }
+
+        walk(raw)
+
+        // Fallback for Maruti-style flat arrays (no model field) — extract model from image URL
+        // e.g. stimg.cardekho.com/…/Maruti/Grand-Vitara/… → "Grand Vitara"
+        if (Object.keys(map).length === 0) {
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            function collectImageUrls(node: any): void {
+                if (!node || typeof node !== 'object') return
+                if (Array.isArray(node)) { node.forEach(collectImageUrls); return }
+                const imgUrl = getImg(node.image_urls)
+                if (imgUrl) {
+                    const m = imgUrl.match(/\/([A-Z][^/]+)\/\d{4,}\//)
+                    if (m) {
+                        const modelName = m[1].replace(/-/g, ' ')
+                        if (!map[modelName.toLowerCase()]) map[modelName.toLowerCase()] = imgUrl
+                    }
+                }
+                for (const [k, v] of Object.entries(node)) {
+                    if (k === 'image_urls') continue
+                    if (v && typeof v === 'object') collectImageUrls(v)
+                }
+            }
+            collectImageUrls(raw)
+        }
+
+        return map
+    } catch {
+        return {}
+    }
+}
 
 // ── Static makes list ─────────────────────────────────────────────────────────
 
@@ -133,5 +237,22 @@ export async function getCarsByMake(make: string): Promise<Car[]> {
         .limit(24)
 
     if (error || !data) return []
-    return data.map(catalogRowToCar)
+
+    const cars = data.map(catalogRowToCar)
+
+    // Enrich placeholder images from brand JSON files (CardDekho CDN)
+    const needsImages = cars.some(c => c.images.hero === '/placeholder-car.jpg')
+    if (needsImages) {
+        const imageMap = loadBrandImageMap(make)
+        if (Object.keys(imageMap).length > 0) {
+            return cars.map(c => {
+                if (c.images.hero !== '/placeholder-car.jpg') return c
+                const imgUrl = imageMap[c.model.toLowerCase()]
+                if (!imgUrl) return c
+                return { ...c, images: { ...c.images, hero: imgUrl, exterior: [imgUrl] } }
+            })
+        }
+    }
+
+    return cars
 }
