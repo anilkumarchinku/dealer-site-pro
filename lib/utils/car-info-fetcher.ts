@@ -29,6 +29,38 @@ export interface DetailedCarInfo {
 }
 
 let carInfoCache: any = null;
+const brandFileCache: Record<string, any[]> = {};
+
+/** Load and flatten all variants from a brand-specific JSON file (e.g. /data/tata.json).
+ *  These files have CardDekho image_urls that carInfo.json lacks. */
+async function loadBrandFileVariants(brandKey: string): Promise<any[]> {
+    if (brandKey in brandFileCache) return brandFileCache[brandKey];
+    try {
+        const res = await fetch(`/data/${brandKey}.json`);
+        if (!res.ok) { brandFileCache[brandKey] = []; return []; }
+        const raw = await res.json();
+        // Format: array of arrays of variant objects, or object with numeric keys → arrays
+        const outer = Array.isArray(raw) ? raw : Object.values(raw);
+        const variants: any[] = [];
+        for (const outerItem of outer) {
+            if (Array.isArray(outerItem)) {
+                for (const inner of outerItem) {
+                    if (Array.isArray(inner)) variants.push(...inner);
+                    else if (inner && inner.model) variants.push(inner);
+                }
+            } else if (outerItem && typeof outerItem === 'object') {
+                for (const val of Object.values(outerItem)) {
+                    if (Array.isArray(val)) variants.push(...(val as any[]));
+                }
+            }
+        }
+        brandFileCache[brandKey] = variants;
+        return variants;
+    } catch {
+        brandFileCache[brandKey] = [];
+        return [];
+    }
+}
 
 /**
  * Fetch all car info data (with caching)
@@ -182,7 +214,27 @@ export async function getDetailedCarInfo(
         }
     }
 
-    return matchingCars.map(normalizeVariant);
+    const result = matchingCars.map(normalizeVariant);
+
+    // Enrich image_urls from brand JSON files (they have CardDekho CDN images)
+    const needsImages = result.some(r => !r.image_urls?.length);
+    if (needsImages) {
+        const brandVariants = await loadBrandFileVariants(brandKey);
+        const modelMatch = brandVariants.find(v => {
+            const m = (v.model || '').toLowerCase();
+            return m === normalizedSearchModel || m.includes(normalizedSearchModel) || normalizedSearchModel.includes(m);
+        });
+        if (modelMatch?.image_urls?.length > 0) {
+            const realImages = (modelMatch.image_urls as any[]).filter(
+                (u: any) => typeof u.value === 'string' && u.value.startsWith('http')
+            );
+            if (realImages.length > 0) {
+                result.forEach(r => { if (!r.image_urls?.length) r.image_urls = realImages; });
+            }
+        }
+    }
+
+    return result;
 }
 
 /**
