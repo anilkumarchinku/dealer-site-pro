@@ -130,6 +130,70 @@ function loadBrandImageMap(make: string): Record<string, string> {
     }
 }
 
+// ── Local 4W image resolver ───────────────────────────────────────────────────
+
+/** Same slug logic used when scraping: lowercase, remove periods, spaces→hyphens */
+function toSlug(s: string): string {
+    return s.toLowerCase().replace(/\./g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
+}
+
+/** Folder name for a car make inside public/data/brand-model-images/4w/ */
+const MAKE_TO_FOLDER_4W: Record<string, string> = {
+    'aston martin': 'aston-martin',
+    'audi': 'audi',
+    'bentley': 'bentley',
+    'bmw': 'bmw',
+    'byd': 'byd',
+    'citroen': 'citroen',
+    'ferrari': 'ferrari',
+    'force motors': 'force-motors',
+    'force': 'force',
+    'honda': 'honda',
+    'hyundai': 'hyundai',
+    'isuzu': 'isuzu',
+    'jaguar': 'jaguar',
+    'jeep': 'jeep',
+    'kia': 'kia',
+    'lamborghini': 'lamborghini',
+    'land rover': 'land-rover',
+    'lexus': 'lexus',
+    'mahindra': 'mahindra',
+    'maserati': 'maserati',
+    'maruti suzuki': 'maruti-suzuki',
+    'maruti': 'maruti-suzuki',
+    'mercedes-benz': 'mercedes-benz',
+    'mercedes': 'mercedes-benz',
+    'mg': 'mg',
+    'mini': 'mini',
+    'nissan': 'nissan',
+    'porsche': 'porsche',
+    'renault': 'renault',
+    'rolls-royce': 'rolls-royce',
+    'rolls royce': 'rolls-royce',
+    'skoda': 'skoda',
+    'tata motors': 'tata',
+    'tata': 'tata',
+    'toyota': 'toyota',
+    'vinfast': 'vinfast',
+    'volkswagen': 'volkswagen',
+    'volvo': 'volvo',
+}
+
+/**
+ * Returns a public URL to a locally committed 4W image, or null if not found.
+ * Tries {slug}.jpg then {slug}.png inside public/data/brand-model-images/4w/{folder}/
+ */
+function getLocal4WImage(make: string, model: string): string | null {
+    const folder = MAKE_TO_FOLDER_4W[make.toLowerCase()]
+    if (!folder) return null
+    const slug = toSlug(model)
+    const base = path.join(process.cwd(), 'public', 'data', 'brand-model-images', '4w', folder, slug)
+    for (const ext of ['.jpg', '.png']) {
+        if (fs.existsSync(base + ext)) return `/data/brand-model-images/4w/${folder}/${slug}${ext}`
+    }
+    return null
+}
+
 // ── Server-side DB helpers ────────────────────────────────────────────────────
 
 function getSupabase() {
@@ -211,12 +275,20 @@ export async function getCarsByMake(make: string): Promise<Car[]> {
 
     const cars = data.map(catalogRowToCar)
 
-    // Enrich placeholder images from brand JSON files (CardDekho CDN)
-    const needsImages = cars.some(c => c.images.hero === '/placeholder-car.jpg')
-    if (needsImages) {
+    // Step 1: Try local committed images first (no CDN, no hotlink issues)
+    const withLocal = cars.map(c => {
+        if (c.images.hero !== '/placeholder-car.jpg') return c
+        const localUrl = getLocal4WImage(make, c.model)
+        if (!localUrl) return c
+        return { ...c, images: { ...c.images, hero: localUrl, exterior: [localUrl] } }
+    })
+
+    // Step 2: For any still missing, fall back to CardDekho brand JSON
+    const stillMissing = withLocal.some(c => c.images.hero === '/placeholder-car.jpg')
+    if (stillMissing) {
         const imageMap = loadBrandImageMap(make)
         if (Object.keys(imageMap).length > 0) {
-            return cars.map(c => {
+            return withLocal.map(c => {
                 if (c.images.hero !== '/placeholder-car.jpg') return c
                 const imgUrl = imageMap[c.model.toLowerCase()]
                 if (!imgUrl) return c
@@ -225,5 +297,5 @@ export async function getCarsByMake(make: string): Promise<Car[]> {
         }
     }
 
-    return cars
+    return withLocal
 }
