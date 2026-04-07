@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Indian Two-Wheeler & Three-Wheeler Brand Models",
-    "description": "Comprehensive list of all currently sold 2W and 3W models in India (2026) — discontinued models removed",
+    "description": "Comprehensive list of all currently sold 2W and 3W models in India (2026) \u2014 discontinued models removed",
     "totalBrands": 69,
     "totalModels": 453,
     "generatedAt": "2026-03-31",
@@ -514,7 +514,7 @@
       },
       {
         "brandId": "mahindra-two-wheelers",
-        "brand": "Mahindra",
+        "brand": "Mahindra Two Wheelers",
         "models": {
           "motorcycles": []
         }
