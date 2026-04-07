@@ -114,7 +114,7 @@ function buildThreeWheelerEntry(
         transmission:           enrichment?.transmission ?? 'Automatic',
         payload_kg:             type === 'cargo' ? (enrichment?.gvw_kg ?? 500) : null,
         body_type:              null,
-        passenger_capacity:     type === 'passenger' || type === 'electric' ? 3 : type === 'school_van' ? 8 : null,
+        passenger_capacity:     enrichment?.passenger_capacity ?? (type === 'passenger' || type === 'electric' ? 3 : type === 'school_van' ? 8 : null),
         max_speed_kmph:         null,
         mileage_kmpl:           enrichment?.mileage_kmpl ?? null,
         cng_mileage_km_per_kg:  fuelType === 'cng' ? 28 : null,
