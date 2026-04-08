@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Image from "next/image"
 import { X, Fuel, Zap, Gauge, Palette, Settings, Shield, Info, Users, Package } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import type { ThreeWheelerVehicle } from "@/lib/types/three-wheeler"
@@ -56,9 +57,8 @@ export function QuickViewModal({ vehicle, open, onClose, brandColor = "#1f2937",
                 {/* Header with image */}
                 <div className="relative h-52 bg-gray-50 shrink-0">
                     {imgSrc
-                        ? (/* eslint-disable-next-line @next/next/no-img-element */
-                           <img src={imgSrc} alt={`${vehicle.brand} ${vehicle.model}`} className="w-full h-full object-contain bg-white p-4" />)
-                        : (<div className="flex items-center justify-center h-full text-gray-400 text-4xl">🛺</div>)
+                        ? <Image src={imgSrc} alt={`${vehicle.brand} ${vehicle.model}`} fill sizes="100%" className="object-contain bg-white p-4" priority unoptimized={imgSrc.startsWith('http')} />
+                        : <div className="flex items-center justify-center h-full text-gray-400 text-4xl">🛺</div>
                     }
                     <button onClick={onClose} className="absolute top-3 right-3 w-8 h-8 rounded-full bg-black/50 text-white flex items-center justify-center hover:bg-black/70 transition-colors">
                         <X className="w-4 h-4" />
