@@ -194,30 +194,114 @@ function getLocal4WImage(make: string, model: string): string | null {
     return null
 }
 
+/** Brand name → folder name for 2W images */
+const BRAND_TO_FOLDER_2W: Record<string, string> = {
+    'ampere': 'ampere-greaves',
+    'aprilia': 'aprilia-india',
+    'ather': 'ather-energy',
+    'bajaj': 'bajaj-auto',
+    'bajaj chetak': 'bajaj-chetak-ev',
+    'battre': 'battre-ev',
+    'benelli': 'benelli-india',
+    'bgauss': 'bgauss',
+    'bmw': 'bmw-motorrad-india',
+    'bounce': 'bounce-infinity',
+    'brixton': 'brixton-motorcycles',
+    'bsa': 'bsa',
+    'cfmoto': 'cfmoto-india',
+    'ducati': 'ducati-india',
+    'evolet': 'evolet',
+    'ferrato': 'ferrato',
+    'gemopai': 'gemopai',
+    'harley-davidson': 'harley-davidson-india',
+    'hero': 'hero-motocorp',
+    'hero electric': 'hero-electric',
+    'honda': 'honda-hmsi',
+    'honda motorcycle': 'honda-hmsi',
+    'hop': 'hop-electric',
+    'husqvarna': 'husqvarna-india',
+    'indian motorcycle': 'indian-motorcycle',
+    'ivoomi': 'ivoomi-energy',
+    'jawa': 'jawa-motorcycles',
+    'joy electric': 'joy-e-bike',
+    'kabira': 'kabira-mobility',
+    'kawasaki': 'kawasaki-india',
+    'keeway': 'keeway-india',
+    'kinetic': 'kinetic-india',
+    'ktm': 'ktm-india',
+    'life': 'life-electric',
+    'mahindra': 'mahindra-two-wheelers',
+    'matter': 'matter-aeon',
+    'mercury': 'mercury-motorcycles',
+    'morpheus': 'morpheus-motors',
+    'motoroyale': 'motoroyale',
+    'mx': 'mx-motor',
+    'okinawa': 'okinawa-autotech',
+    'ola': 'ola-electric',
+    'paltech': 'paltech-innovations',
+    'pounce': 'pounce-mobility',
+    'revolt': 'revolt-motors',
+    'roadmaster': 'roadmaster-motorcycles',
+    'royal enfield': 'royal-enfield',
+    'ryot': 'ryot-motor',
+    'sanya': 'sanya-motorcycles',
+    'skoda': 'skoda-auto',
+    'suzuki': 'suzuki-motorcycles',
+    'pure': 'pure-ev',
+    'tvs': 'tvs-motor',
+    'vespa': 'vespa-india',
+    'viverito': 'viverito',
+    'vmoto': 'vmoto',
+    'wahan': 'wahan-ev',
+    'yamaha': 'yamaha-motor-india',
+    'ycab': 'ycab-technologies',
+}
+
+/** Brand name → folder name for 3W images */
+const BRAND_TO_FOLDER_3W: Record<string, string> = {
+    'bajaj': 'bajaj-auto',
+    'bharat': 'bharat-automotive',
+    'atul': 'atul-auto',
+    'mahindra': 'mahindra-three-wheelers',
+    'piaggio': 'piaggio-india',
+    'tvs': 'tvs-motor',
+    'kangoo': 'kangoo-motors',
+    'kinetic': 'kinetic-india',
+    'touro': 'touro-mobility',
+}
+
 /**
  * Returns a public URL to a locally committed 2W image, or null if not found.
- * Tries {slug}.jpg then {slug}.png inside public/data/brand-model-images/2w/{brandId}/
+ * Tries {slug}.jpg then {slug}.png inside public/data/brand-model-images/2w/{folder}/
  */
 export function getLocal2WImage(brand: string, model: string): string | null {
-    const brandId = brand.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
+    let folder = BRAND_TO_FOLDER_2W[brand.toLowerCase().trim()]
+    if (!folder) {
+        // Fallback: try direct slug of brand name
+        folder = brand.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
+    }
     const slug = toSlug(model)
-    const base = path.join(process.cwd(), 'public', 'data', 'brand-model-images', '2w', brandId, slug)
+    const base = path.join(process.cwd(), 'public', 'data', 'brand-model-images', '2w', folder, slug)
     for (const ext of ['.jpg', '.png']) {
-        if (fs.existsSync(base + ext)) return `/data/brand-model-images/2w/${brandId}/${slug}${ext}`
+        if (fs.existsSync(base + ext)) return `/data/brand-model-images/2w/${folder}/${slug}${ext}`
     }
     return null
 }
 
 /**
  * Returns a public URL to a locally committed 3W image, or null if not found.
- * Tries {slug}.jpg then {slug}.png inside public/data/brand-model-images/3w/{brandId}/
+ * Tries {slug}.jpg then {slug}.png inside public/data/brand-model-images/3w/{folder}/
  */
 export function getLocal3WImage(brand: string, model: string): string | null {
-    const brandId = brand.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
+    let folder = BRAND_TO_FOLDER_3W[brand.toLowerCase().trim()]
+    if (!folder) {
+        // Fallback: try direct slug of brand name
+        folder = brand.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
+    }
     const slug = toSlug(model)
-    const base = path.join(process.cwd(), 'public', 'data', 'brand-model-images', '3w', brandId, slug)
+    const base = path.join(process.cwd(), 'public', 'data', 'brand-model-images', '3w', folder, slug)
     for (const ext of ['.jpg', '.png']) {
-        if (fs.existsSync(base + ext)) return `/data/brand-model-images/3w/${brandId}/${slug}${ext}`
+        if (fs.existsSync(base + ext)) return `/data/brand-model-images/3w/${folder}/${slug}${ext}`
     }
     return null
 }
