@@ -1,11 +1,9 @@
 "use client"
 
 import { useState } from "react"
-import Image from "next/image"
 import { X, Fuel, Zap, Gauge, Palette, Settings, Shield, Info, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import type { TwoWheelerVehicle } from "@/lib/types/two-wheeler"
-import { getScrapedImageUrls, brandNameToId } from "@/lib/utils/brand-model-images"
 
 interface Props {
     vehicle: TwoWheelerVehicle
@@ -22,8 +20,15 @@ export function QuickViewModal({ vehicle, open, onClose, brandColor = "#1f2937",
 
     if (!open) return null
 
-    const [jpgUrl] = getScrapedImageUrls("2w", brandNameToId(vehicle.brand), vehicle.model)
-    const imgSrc = vehicle.images[0] || jpgUrl
+    // Get the first image from vehicle.images array, with debug logging
+    const imgSrc = (() => {
+        if (!vehicle.images) return null
+        if (!Array.isArray(vehicle.images)) return null
+        if (vehicle.images.length === 0) return null
+        const firstImg = vehicle.images[0]
+        if (!firstImg || typeof firstImg !== 'string') return null
+        return firstImg
+    })()
 
     const priceRaw = vehicle.ex_showroom_price_paise
     const price = priceRaw > 0 ? `₹${(priceRaw / 100).toLocaleString("en-IN")}` : "Price on request"
@@ -53,12 +58,16 @@ export function QuickViewModal({ vehicle, open, onClose, brandColor = "#1f2937",
             >
                 {/* Header with image */}
                 <div className="relative h-52 bg-gray-50 shrink-0">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                        src={imgSrc}
-                        alt={`${vehicle.brand} ${vehicle.model}`}
-                        className="w-full h-full object-contain bg-white p-4"
-                    />
+                    {imgSrc ? (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img
+                            src={imgSrc}
+                            alt={`${vehicle.brand} ${vehicle.model}`}
+                            className="w-full h-full object-contain bg-white p-4"
+                        />
+                    ) : (
+                        <div className="flex items-center justify-center h-full text-gray-400 text-4xl">🏍️</div>
+                    )}
                     <button
                         onClick={onClose}
                         className="absolute top-3 right-3 w-8 h-8 rounded-full bg-black/50 text-white flex items-center justify-center hover:bg-black/70 transition-colors"
@@ -131,18 +140,6 @@ export function QuickViewModal({ vehicle, open, onClose, brandColor = "#1f2937",
                                         <p className="text-sm font-semibold">{vehicle.engine_cc} cc</p>
                                     </div>
                                 )}
-                                {vehicle.max_power && (
-                                    <div className="bg-gray-50 rounded-lg p-3">
-                                        <p className="text-[10px] text-gray-500">Power</p>
-                                        <p className="text-sm font-semibold">{vehicle.max_power}</p>
-                                    </div>
-                                )}
-                                {vehicle.torque && (
-                                    <div className="bg-gray-50 rounded-lg p-3">
-                                        <p className="text-[10px] text-gray-500">Torque</p>
-                                        <p className="text-sm font-semibold">{vehicle.torque}</p>
-                                    </div>
-                                )}
                                 {vehicle.mileage_kmpl && (
                                     <div className="bg-gray-50 rounded-lg p-3">
                                         <p className="text-[10px] text-gray-500">Mileage</p>
@@ -167,30 +164,13 @@ export function QuickViewModal({ vehicle, open, onClose, brandColor = "#1f2937",
                                         <p className="text-sm font-semibold">{vehicle.top_speed_kmph} kmph</p>
                                     </div>
                                 )}
-                                {vehicle.transmission && (
+                                {isEV && vehicle.charging_time_hours && (
                                     <div className="bg-gray-50 rounded-lg p-3">
-                                        <p className="text-[10px] text-gray-500">Transmission</p>
-                                        <p className="text-sm font-semibold">{vehicle.transmission}</p>
+                                        <p className="text-[10px] text-gray-500">Charging Time</p>
+                                        <p className="text-sm font-semibold">{vehicle.charging_time_hours} hrs</p>
                                     </div>
                                 )}
                             </div>
-
-                            {/* Variants */}
-                            {vehicle.all_variants && vehicle.all_variants.length > 0 && (
-                                <div>
-                                    <h4 className="text-xs font-semibold text-gray-700 mb-2">Variants ({vehicle.all_variants.length})</h4>
-                                    <div className="space-y-1.5">
-                                        {vehicle.all_variants.map((v, i) => (
-                                            <div key={i} className="flex items-center justify-between px-3 py-2 bg-gray-50 rounded-lg">
-                                                <span className="text-xs font-medium text-gray-800">{v.name}</span>
-                                                <span className="text-xs font-semibold text-gray-900">
-                                                    {v.price_paise > 0 ? `₹${(v.price_paise / 100).toLocaleString("en-IN")}` : "—"}
-                                                </span>
-                                            </div>
-                                        ))}
-                                    </div>
-                                </div>
-                            )}
                         </div>
                     )}
 
@@ -199,20 +179,14 @@ export function QuickViewModal({ vehicle, open, onClose, brandColor = "#1f2937",
                             {[
                                 { label: "Type", value: vehicle.type.charAt(0).toUpperCase() + vehicle.type.slice(1) },
                                 { label: "Fuel Type", value: vehicle.fuel_type === "electric" ? "Electric" : "Petrol" },
+                                { label: "Year", value: String(vehicle.year) },
                                 { label: "Engine", value: vehicle.engine_cc ? `${vehicle.engine_cc} cc` : null },
-                                { label: "Power", value: vehicle.max_power },
-                                { label: "Torque", value: vehicle.torque },
-                                { label: "Transmission", value: vehicle.transmission },
                                 { label: "Mileage", value: vehicle.mileage_kmpl ? `${vehicle.mileage_kmpl} kmpl` : null },
                                 { label: "Top Speed", value: vehicle.top_speed_kmph ? `${vehicle.top_speed_kmph} kmph` : null },
                                 { label: "Range", value: vehicle.range_km ? `${vehicle.range_km} km` : null },
                                 { label: "Battery", value: vehicle.battery_kwh ? `${vehicle.battery_kwh} kWh` : null },
                                 { label: "Charging Time", value: vehicle.charging_time_hours ? `${vehicle.charging_time_hours} hrs` : null },
-                                { label: "Wheelbase", value: vehicle.wheelbase_mm ? `${vehicle.wheelbase_mm} mm` : null },
-                                { label: "Length", value: vehicle.length_mm ? `${vehicle.length_mm} mm` : null },
-                                { label: "Width", value: vehicle.width_mm ? `${vehicle.width_mm} mm` : null },
-                                { label: "Height", value: vehicle.height_mm ? `${vehicle.height_mm} mm` : null },
-                                { label: "Year", value: String(vehicle.year) },
+                                { label: "Battery Warranty", value: vehicle.battery_warranty_years ? `${vehicle.battery_warranty_years} years` : null },
                             ].filter(s => s.value).map((s, i) => (
                                 <div key={i} className="flex justify-between items-center py-2 px-3 rounded-lg odd:bg-gray-50">
                                     <span className="text-xs text-gray-500">{s.label}</span>

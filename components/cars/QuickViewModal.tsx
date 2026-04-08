@@ -192,11 +192,13 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
     const scrapedUrls = showScraped ? getScrapedImageUrls(car.vehicleCategory as '2w' | '3w', brandNameToId(car.make, car.vehicleCategory as '2w' | '3w'), car.model) : [];
 
     const allImages = [...car.images.exterior, ...car.images.interior].filter(Boolean);
+
+    // Always add hero image if it's not a placeholder
     if (car.images.hero && car.images.hero !== '/placeholder-car.jpg') {
         allImages.unshift(car.images.hero);
     }
 
-    // If no real images, use scraped ones
+    // If no real images, use scraped ones (for 2W/3W)
     if (allImages.length === 0 && showScraped) {
         allImages.push(...scrapedUrls);
     }
@@ -271,10 +273,13 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
 
                         {/* Image gallery */}
                         <div className="space-y-2">
-                            <div className="relative aspect-[16/7] bg-gray-100 rounded-2xl overflow-hidden">
-                                {mainImage
+                            <div className="relative aspect-[16/7] bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl overflow-hidden flex items-center justify-center">
+                                {mainImage && mainImage !== '/placeholder-car.jpg'
                                     ? <Image src={mainImage} alt={`${car.make} ${car.model}`} fill sizes="(max-width:1024px) 100vw, 768px" className="object-cover" priority />
-                                    : <div className="flex items-center justify-center h-full text-5xl">🚗</div>
+                                    : <div className="flex flex-col items-center justify-center gap-2 text-center">
+                                        <div className="text-6xl">🚗</div>
+                                        <p className="text-sm text-gray-500">Image not available</p>
+                                      </div>
                                 }
                             </div>
                             {allImages.length > 1 && (

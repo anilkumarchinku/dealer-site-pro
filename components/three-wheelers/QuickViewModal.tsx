@@ -20,8 +20,15 @@ export function QuickViewModal({ vehicle, open, onClose, brandColor = "#1f2937",
 
     if (!open) return null
 
-    // Use the vehicle-images CDN URL — do not fall back to old brand-model-images bucket (rucks)
-    const imgSrc = vehicle.images[0] || null
+    // Get the first image from vehicle.images array, with robust handling
+    const imgSrc = (() => {
+        if (!vehicle.images) return null
+        if (!Array.isArray(vehicle.images)) return null
+        if (vehicle.images.length === 0) return null
+        const firstImg = vehicle.images[0]
+        if (!firstImg || typeof firstImg !== 'string') return null
+        return firstImg
+    })()
 
     const price = vehicle.ex_showroom_price_paise > 0
         ? `₹${(vehicle.ex_showroom_price_paise / 100).toLocaleString("en-IN")}`
@@ -140,10 +147,10 @@ export function QuickViewModal({ vehicle, open, onClose, brandColor = "#1f2937",
                                         <p className="text-sm font-semibold">{vehicle.cng_mileage_km_per_kg} km/kg</p>
                                     </div>
                                 )}
-                                {vehicle.transmission && (
+                                {vehicle.mileage_kmpl && (
                                     <div className="bg-gray-50 rounded-lg p-3">
-                                        <p className="text-[10px] text-gray-500">Transmission</p>
-                                        <p className="text-sm font-semibold">{vehicle.transmission}</p>
+                                        <p className="text-[10px] text-gray-500">Mileage</p>
+                                        <p className="text-sm font-semibold">{vehicle.mileage_kmpl} kmpl</p>
                                     </div>
                                 )}
                             </div>
@@ -153,21 +160,22 @@ export function QuickViewModal({ vehicle, open, onClose, brandColor = "#1f2937",
                     {tab === "specs" && (
                         <div className="space-y-2">
                             {[
+                                { label: "Year", value: String(vehicle.year) },
                                 { label: "Type", value: vehicle.type.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase()) },
+                                { label: "Body Type", value: vehicle.body_type?.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase()) },
                                 { label: "Fuel Type", value: fuelLabel },
                                 { label: "Engine", value: vehicle.engine_cc ? `${vehicle.engine_cc} cc` : null },
-                                { label: "Transmission", value: vehicle.transmission },
                                 { label: "Passengers", value: vehicle.passenger_capacity ? `${vehicle.passenger_capacity}` : null },
                                 { label: "Payload", value: vehicle.payload_kg ? `${vehicle.payload_kg} kg` : null },
                                 { label: "GVW", value: vehicle.gvw_kg ? `${vehicle.gvw_kg} kg` : null },
                                 { label: "Top Speed", value: vehicle.max_speed_kmph ? `${vehicle.max_speed_kmph} kmph` : null },
+                                { label: "Mileage", value: vehicle.mileage_kmpl ? `${vehicle.mileage_kmpl} kmpl` : null },
+                                { label: "CNG Mileage", value: vehicle.cng_mileage_km_per_kg ? `${vehicle.cng_mileage_km_per_kg} km/kg` : null },
                                 { label: "Range", value: vehicle.range_km ? `${vehicle.range_km} km` : null },
                                 { label: "Battery", value: vehicle.battery_kwh ? `${vehicle.battery_kwh} kWh` : null },
-                                { label: "Charging", value: vehicle.charging_time_hours ? `${vehicle.charging_time_hours} hrs` : null },
-                                { label: "CNG Mileage", value: vehicle.cng_mileage_km_per_kg ? `${vehicle.cng_mileage_km_per_kg} km/kg` : null },
-                                { label: "Mileage", value: vehicle.mileage_kmpl ? `${vehicle.mileage_kmpl} kmpl` : null },
-                                { label: "Body Type", value: vehicle.body_type?.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase()) },
-                                { label: "Permit", value: vehicle.permit_type?.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase()) },
+                                { label: "Charging Time", value: vehicle.charging_time_hours ? `${vehicle.charging_time_hours} hrs` : null },
+                                { label: "Battery Warranty", value: vehicle.battery_warranty_years ? `${vehicle.battery_warranty_years} years` : null },
+                                { label: "Permit Type", value: vehicle.permit_type?.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase()) },
                             ].filter(s => s.value).map((s, i) => (
                                 <div key={i} className="flex justify-between items-center py-2 px-3 rounded-lg odd:bg-gray-50">
                                     <span className="text-xs text-gray-500">{s.label}</span>

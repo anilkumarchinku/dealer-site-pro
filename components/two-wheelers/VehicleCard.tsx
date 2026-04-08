@@ -42,7 +42,7 @@ export function VehicleCard({ vehicle, slug, dealerId, brandColor = "#1f2937", o
     const emi = emiRaw && emiRaw > 0 ? (emiRaw / 100).toLocaleString("en-IN") : null
 
     const [jpgUrl, pngUrl] = getScrapedImageUrls("2w", brandNameToId(vehicle.brand), vehicle.model)
-    const primarySrc = vehicle.images[0] || jpgUrl
+    const primarySrc = vehicle.images && vehicle.images.length > 0 ? vehicle.images[0] : jpgUrl
     const [imgSrc, setImgSrc] = useState(primarySrc)
     const [imgFailed, setFailed] = useState(false)
     const [quickView, setQuickView] = useState(false)
