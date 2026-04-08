@@ -191,7 +191,7 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
     const showScraped = car.vehicleCategory === '2w' || car.vehicleCategory === '3w';
     const scrapedUrls = showScraped ? getScrapedImageUrls(car.vehicleCategory as '2w' | '3w', brandNameToId(car.make, car.vehicleCategory as '2w' | '3w'), car.model) : [];
 
-    const allImages = [...car.images.exterior, ...car.images.interior].filter(Boolean);
+    const allImages = [...(car.images.exterior || []), ...(car.images.interior || [])].filter(Boolean);
 
     // Always add hero image if it's not a placeholder
     if (car.images.hero && car.images.hero !== '/placeholder-car.jpg') {
@@ -204,6 +204,18 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
     }
 
     const mainImage = activeImage ?? allImages[0] ?? null;
+
+    // DEBUG: Log image data when modal opens
+    if (open) {
+        console.log(`[QuickViewModal] ${car.make} ${car.model}:`, {
+            hero: car.images.hero,
+            exterior_count: car.images.exterior?.length ?? 0,
+            interior_count: car.images.interior?.length ?? 0,
+            all_images_count: allImages.length,
+            mainImage: mainImage,
+            isPlaceholder: mainImage === '/placeholder-car.jpg' || !mainImage,
+        });
+    }
     const priceStart = formatPriceInLakhs(car.pricing.exShowroom.min);
     const priceEnd = formatPriceInLakhs(car.pricing.exShowroom.max);
     const hasRange = car.pricing.exShowroom.min !== car.pricing.exShowroom.max;
