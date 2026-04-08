@@ -1,0 +1,49 @@
+=============================================================================
+MISSING IMAGES - MODELS WITH NO IMAGE DATA
+=============================================================================
+Generated: 2026-04-08
+Total Models Missing Images: 6
+
+=============================================================================
+4W CARS (MISSING IMAGES)
+=============================================================================
+
+Status: ✅ ALL 4W MODELS HAVE IMAGES
+No 4W cars are missing images - full coverage!
+
+=============================================================================
+2W MOTORCYCLES (MISSING IMAGES) - 3 MODELS
+=============================================================================
+
+1. Honda - Activa 6G
+2. Ola Electric - S1 Pro
+3. Royal Enfield - Classic 350
+
+=============================================================================
+3W AUTO-RICKSHAWS (MISSING IMAGES) - 3 MODELS
+=============================================================================
+
+1. Bajaj - RE Compact
+2. Mahindra - Treo Zor
+3. TVS - King EV
+
+=============================================================================
+SUMMARY
+=============================================================================
+
+4W: 0/100+ models missing ✅
+2W: 3 models missing (out of 3 total)
+3W: 3 models missing (out of 3 total)
+
+Total Priority: IMMEDIATE - Only 6 models need images
+
+=============================================================================
+NOTES
+=============================================================================
+
+- 2W & 3W in database have empty image arrays []
+- No image_url field in tw_vehicles and thw_vehicles
+- Images need to be scraped and added to database
+- 4W has 100% coverage already!
+
+=============================================================================

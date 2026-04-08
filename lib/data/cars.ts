@@ -194,6 +194,34 @@ function getLocal4WImage(make: string, model: string): string | null {
     return null
 }
 
+/**
+ * Returns a public URL to a locally committed 2W image, or null if not found.
+ * Tries {slug}.jpg then {slug}.png inside public/data/brand-model-images/2w/{brandId}/
+ */
+export function getLocal2WImage(brand: string, model: string): string | null {
+    const brandId = brand.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
+    const slug = toSlug(model)
+    const base = path.join(process.cwd(), 'public', 'data', 'brand-model-images', '2w', brandId, slug)
+    for (const ext of ['.jpg', '.png']) {
+        if (fs.existsSync(base + ext)) return `/data/brand-model-images/2w/${brandId}/${slug}${ext}`
+    }
+    return null
+}
+
+/**
+ * Returns a public URL to a locally committed 3W image, or null if not found.
+ * Tries {slug}.jpg then {slug}.png inside public/data/brand-model-images/3w/{brandId}/
+ */
+export function getLocal3WImage(brand: string, model: string): string | null {
+    const brandId = brand.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
+    const slug = toSlug(model)
+    const base = path.join(process.cwd(), 'public', 'data', 'brand-model-images', '3w', brandId, slug)
+    for (const ext of ['.jpg', '.png']) {
+        if (fs.existsSync(base + ext)) return `/data/brand-model-images/3w/${brandId}/${slug}${ext}`
+    }
+    return null
+}
+
 // ── Server-side DB helpers ────────────────────────────────────────────────────
 
 function getSupabase() {

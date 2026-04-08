@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { fetchDealerBySlug } from "@/lib/db/dealers"
 import { getThreeWheelerVehicles, getUsedThreeWheelers } from "@/lib/db/three-wheelers"
 import { getThreeWheelerCatalog, THREE_WHEELER_BRANDS } from "@/lib/data/three-wheelers"
+import { getLocal3WImage } from "@/lib/data/cars"
 import { fetchCyeproInventoryAsCars } from "@/lib/services/cyepro-service"
 import { notFound } from "next/navigation"
 import { createClient } from "@supabase/supabase-js"
@@ -52,8 +53,8 @@ function threeWheelersToCars(vehicles: ThreeWheelerVehicle[]): Car[] {
     vehicleCategory: '3w' as const,
     features: { keyFeatures: v.features ?? [] },
     images: {
-      hero: v.images?.[0] ?? '',
-      exterior: v.images ?? [],
+      hero: getLocal3WImage(v.brand, v.model) ?? v.images?.[0] ?? '',
+      exterior: getLocal3WImage(v.brand, v.model) ? [getLocal3WImage(v.brand, v.model)!] : v.images ?? [],
       interior: [],
     },
     meta: { viewCount: v.views ?? 0 },

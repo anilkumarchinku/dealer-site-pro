@@ -1,0 +1,4 @@
+BRAND,MODEL,CATEGORY,STATUS,IMAGE_STATUS,NOTES,SCRAPE_LOCATION
+Bajaj,RE Compact,3W Auto-Rickshaw,ACTIVE,MISSING,Compact auto-rickshaw,public/data/brand-model-images/3w/bajaj-auto-3w/re-compact.jpg
+Mahindra,Treo Zor,3W Auto-Rickshaw,ACTIVE,MISSING,Mahindra 3W vehicle,public/data/brand-model-images/3w/mahindra-3w/treo-zor.jpg
+TVS,King EV,3W Electric,ACTIVE,MISSING,Electric auto-rickshaw,public/data/brand-model-images/3w/tvs-king/king-ev.jpg

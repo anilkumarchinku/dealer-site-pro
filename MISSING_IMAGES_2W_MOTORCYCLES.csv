@@ -1,0 +1,4 @@
+BRAND,MODEL,CATEGORY,STATUS,IMAGE_STATUS,NOTES,SCRAPE_LOCATION
+Honda,Activa 6G,2W Scooter,ACTIVE,MISSING,Popular scooter - high priority,public/data/brand-model-images/2w/honda-hmsi/activa-6g.jpg
+Ola Electric,S1 Pro,2W Electric Scooter,ACTIVE,MISSING,Electric scooter - modern design,public/data/brand-model-images/2w/ola-electric/s1-pro.jpg
+Royal Enfield,Classic 350,2W Motorcycle,ACTIVE,MISSING,Iconic motorcycle - should have good images,public/data/brand-model-images/2w/royal-enfield/classic-350.jpg

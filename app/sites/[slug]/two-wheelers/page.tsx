@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { fetchDealerBySlug } from '@/lib/db/dealers'
 import { getTwoWheelerVehicles, getUsedTwoWheelers } from '@/lib/db/two-wheelers'
 import { getTwoWheelerCatalog, TWO_WHEELER_BRANDS } from '@/lib/data/two-wheelers'
+import { getLocal2WImage } from '@/lib/data/cars'
 import { fetchCyeproInventoryAsCars } from '@/lib/services/cyepro-service'
 import { notFound } from 'next/navigation'
 import { createClient } from '@supabase/supabase-js'
@@ -69,8 +70,8 @@ function twoWheelersToCars(vehicles: TwoWheelerVehicle[]): Car[] {
         })),
         description: v.description ?? undefined,
         images: {
-            hero: v.images?.[0] ?? '',
-            exterior: v.images ?? [],
+            hero: getLocal2WImage(v.brand, v.model) ?? v.images?.[0] ?? '',
+            exterior: getLocal2WImage(v.brand, v.model) ? [getLocal2WImage(v.brand, v.model)!] : v.images ?? [],
             interior: [],
         },
         meta: { viewCount: v.views ?? 0 },

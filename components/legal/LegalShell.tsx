@@ -42,13 +42,6 @@ export function LegalShell({ dealerName, logoUrl, siteHref, children }: LegalShe
             {/* Footer */}
             <footer className="bg-white border-t border-gray-200 py-6 text-center text-sm text-gray-400">
                 <p>© {new Date().getFullYear()} {dealerName}. All rights reserved.</p>
-                <p className="mt-1">
-                    Powered by{' '}
-                    <a href="https://www.cyepro.com/" target="_blank" rel="noopener noreferrer" className="text-pink-500 hover:underline font-medium">
-                        Cyepro
-                    </a>
-                    {' '}— India&apos;s leading CRM providers
-                </p>
             </footer>
         </div>
     )

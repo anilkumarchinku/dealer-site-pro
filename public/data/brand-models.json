@@ -3,7 +3,7 @@
     "title": "Indian Two-Wheeler & Three-Wheeler Brand Models",
     "description": "Comprehensive list of all currently sold 2W and 3W models in India (2025)",
     "totalBrands": 71,
-    "generatedAt": "2026-03-02"
+    "generatedAt": "2026-04-07"
   },
   "twoWheelers": {
     "traditional": [
@@ -49,6 +49,7 @@
         "models": {
           "motorcycles": [
             "CD 110 Dream",
+            "Shine 100",
             "Livo",
             "SP 125",
             "Shine 125",
@@ -59,7 +60,9 @@
             "CB300F",
             "Hness CB350",
             "CB350RS",
+            "CB350C",
             "CB500X",
+            "NX200",
             "NX500",
             "CB650R",
             "CBR650R",
@@ -122,6 +125,7 @@
             "CT 110X",
             "Platina 100",
             "Platina 110",
+            "Freedom 125",
             "Pulsar 125",
             "Pulsar N125",
             "Pulsar NS125",
@@ -231,6 +235,8 @@
             "390 Adventure X",
             "390 Enduro R",
             "890 Duke R",
+            "890 Adventure R",
+            "1290 Super Adventure S",
             "1390 Super Duke R"
           ]
         }
@@ -292,6 +298,7 @@
             "Ninja 300",
             "Z400",
             "Ninja 500",
+            "Ninja ZX-6R",
             "Z650",
             "Z650RS",
             "Ninja 650",
@@ -320,10 +327,12 @@
             "Tuono 457",
             "RS 660",
             "Tuono 660",
+            "Tuareg 660",
             "RSV4 1100 Factory"
           ],
           "scooters": [
             "SR 125",
+            "SR 160",
             "SR 175",
             "SXR 125",
             "SXR 160",
@@ -336,12 +345,14 @@
         "brand": "Vespa India",
         "models": {
           "scooters": [
+            "Vespa ZX 125",
             "Vespa 125",
             "Vespa S 125",
             "Vespa Tech 125",
             "Vespa S Tech 125",
             "Vespa 150",
             "Vespa S 150",
+            "Vespa Officina 8",
             "Vespa Qala"
           ]
         }
@@ -351,6 +362,8 @@
         "brand": "Harley-Davidson India",
         "models": {
           "motorcycles": [
+            "X440",
+            "X440 T",
             "Nightster",
             "Nightster Special",
             "Sportster S",
@@ -373,8 +386,13 @@
           "motorcycles": [
             "Speed 400",
             "Scrambler 400 X",
+            "Scrambler 400 XC",
+            "Speed T4",
+            "Tracker 400",
+            "Thruxton 400",
             "Trident 660",
             "Tiger 660",
+            "Tiger Sport 660",
             "Tiger 850 Sport",
             "Speed Twin 900",
             "Scrambler 900",
@@ -382,7 +400,11 @@
             "Bonneville T120",
             "Bonneville Bobber",
             "Bonneville Speedmaster",
+            "Street Triple R",
+            "Street Triple RS",
             "Street Triple 765 R",
+            "Speed Twin 1200",
+            "Scrambler 1200",
             "Speed Triple 1200 RS",
             "Tiger 900",
             "Tiger 1200",
@@ -395,19 +417,26 @@
         "brand": "Ducati India",
         "models": {
           "motorcycles": [
+            "Scrambler Icon",
+            "Scrambler Nightshift",
+            "Scrambler Full Throttle",
             "Scrambler 800",
             "Monster",
+            "Hypermotard 698 Mono",
+            "Hypermotard 950",
+            "SuperSport 950",
             "Panigale V2",
             "Streetfighter V2",
             "Panigale V4",
+            "Panigale V4 R",
             "Streetfighter V4",
             "Multistrada V2",
             "Multistrada V4",
+            "Multistrada V4 RS",
             "DesertX",
             "DesertX Discovery",
             "Diavel V4",
-            "XDiavel",
-            "Hypermotard 950"
+            "XDiavel"
           ]
         }
       },
@@ -422,8 +451,11 @@
             "CE 02",
             "F 900 GS",
             "F 900 GS Adventure",
+            "R 1250 RT",
             "R 1300 GS",
+            "R 1300 GS Adventure",
             "S 1000 R",
+            "M 1000 R",
             "S 1000 RR",
             "S 1000 XR",
             "M 1000 XR",
@@ -441,6 +473,14 @@
         "brand": "Indian Motorcycle",
         "models": {
           "motorcycles": [
+            "101 Scout",
+            "Scout Classic",
+            "Scout Bobber",
+            "Scout Sixty Bobber",
+            "Scout Sixty Classic",
+            "Sport Scout",
+            "Sport Scout Sixty",
+            "Super Scout",
             "Chief Dark Horse",
             "Chief Bobber Dark Horse",
             "Sport Chief",
@@ -665,7 +705,8 @@
           "motorcycles": [
             "F77 Mach 2",
             "F77 SuperStreet",
-            "Shockwave"
+            "Shockwave",
+            "X47 Crossover"
           ],
           "scooters": [
             "Tesseract"
@@ -753,7 +794,8 @@
         "models": {
           "motorcycles": [
             "Rorr",
-            "Rorr EZ"
+            "Rorr EZ",
+            "Rorr EZ Sigma"
           ]
         }
       },
@@ -846,8 +888,10 @@
         "brand": "Quantum Energy",
         "models": {
           "scooters": [
+            "Milan",
             "Plasma",
-            "Bziness"
+            "Bziness",
+            "Bziness XS"
           ]
         }
       },
