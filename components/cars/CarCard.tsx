@@ -181,7 +181,9 @@ export function CarCard({
 
     const spec4 = car.vehicleCategory === '2w' || car.vehicleCategory === '3w'
         ? { icon: <Gauge className="w-3.5 h-3.5 text-blue-600" />, label: 'Trans', value: transDisplay }
-        : { icon: <Zap className="w-3.5 h-3.5 text-amber-600" />, label: 'Mileage', value: mileageDisplay };
+        : isEV
+            ? { icon: <Zap className="w-3.5 h-3.5 text-amber-600" />, label: 'Range', value: car.performance?.range ? `${car.performance.range} km` : '' }
+            : { icon: <Zap className="w-3.5 h-3.5 text-amber-600" />, label: 'Mileage', value: mileageDisplay };
 
     const handleEnquireNow = () => setIsEnquiryModalOpen(true);
 

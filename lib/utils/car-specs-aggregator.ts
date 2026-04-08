@@ -78,10 +78,15 @@ export async function getAggregatedCarSpecs(make: string, model: string): Promis
             })
             .filter(v => v != null)
 
-        const mileageRange = mileages.length > 0 ? {
-            min: Math.min(...mileages).toFixed(1),
-            max: Math.max(...mileages).toFixed(1),
-            unit: 'km/l'
+        // For pure-EV models, mileage_kmpl_or_ev_range stores km range (not km/l)
+        const isAllEV = fuels.length > 0 && fuels.every(f => f === 'Electric')
+        const mileageUnit = isAllEV ? 'km' : 'km/l'
+        // Exclude suspiciously high mileage values (>100) for non-EV models to avoid EV range being treated as ICE mileage
+        const validMileages = isAllEV ? mileages : mileages.filter(v => v <= 50)
+        const mileageRange = validMileages.length > 0 ? {
+            min: Math.min(...validMileages).toFixed(1),
+            max: Math.max(...validMileages).toFixed(1),
+            unit: mileageUnit
         } : {
             min: '',
             max: '',

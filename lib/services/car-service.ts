@@ -278,10 +278,9 @@ function mapDbCarToCar(dbCar: any): Car {
     };
 
     // ── Performance ───────────────────────────────────────────────────────────
-    // fuel_efficiency column does not exist in the current flat schema.
-    // Map it if present (future-proof) otherwise null.
     const performanceObj = dbCar.performance ?? {
         fuelEfficiency: dbCar.fuel_efficiency ?? null,
+        range: dbCar.range_km ?? null,    // km — populated for EVs
     };
 
     // ── Dimensions ────────────────────────────────────────────────────────────

@@ -233,6 +233,7 @@ function catalogRowToCar(row: any): Car {
         },
         performance: {
             fuelEfficiency: row.fuel_efficiency ?? row.mileage ?? null,
+            range: row.range_km ?? null,
         },
         dimensions: {
             seatingCapacity: row.seating_capacity ?? 5,
