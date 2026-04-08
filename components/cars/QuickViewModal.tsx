@@ -287,7 +287,7 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
                         <div className="space-y-2">
                             <div className="relative aspect-[16/7] bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl overflow-hidden flex items-center justify-center">
                                 {mainImage && mainImage !== '/placeholder-car.jpg'
-                                    ? <Image src={mainImage} alt={`${car.make} ${car.model}`} fill sizes="(max-width:1024px) 100vw, 768px" className="object-cover" priority />
+                                    ? <Image src={mainImage} alt={`${car.make} ${car.model}`} fill sizes="(max-width:1024px) 100vw, 768px" className="object-cover" priority unoptimized={mainImage.startsWith('http')} />
                                     : <div className="flex flex-col items-center justify-center gap-2 text-center">
                                         <div className="text-6xl">🚗</div>
                                         <p className="text-sm text-gray-500">Image not available</p>
@@ -304,7 +304,7 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
                                                 }`}
                                             style={mainImage === img ? { borderColor: brandColor } : {}}
                                         >
-                                            <Image src={img} alt={`view ${i + 1}`} fill sizes="56px" className="object-cover" />
+                                            <Image src={img} alt={`view ${i + 1}`} fill sizes="56px" className="object-cover" unoptimized={img.startsWith('http')} />
                                         </button>
                                     ))}
                                 </div>
