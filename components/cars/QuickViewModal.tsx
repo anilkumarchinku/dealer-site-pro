@@ -345,36 +345,64 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
                                     </div>
                                 ) : (
                                     <>
-                                        {/* Chips */}
-                                        <div className="space-y-2">
+                                        {/* Grouped by Fuel Type */}
+                                        <div className="space-y-3">
                                             <p className="text-[11px] text-gray-400 uppercase tracking-widest font-medium">
-                                                {detailedInfo.length} variant{detailedInfo.length > 1 ? 's' : ''} — tap to compare specs
+                                                {detailedInfo.length} variant{detailedInfo.length > 1 ? 's' : ''}
                                             </p>
-                                            <div className="flex flex-wrap gap-2">
-                                                {detailedInfo.map((v, i) => {
-                                                    const isSel = selVariant?.variant_name === v.variant_name;
-                                                    return (
-                                                        <button
-                                                            key={`${i}-${v.variant_name}`}
-                                                            onClick={() => setSelVariant(v)}
-                                                            className={`px-3 py-2 rounded-xl border text-left text-xs font-medium transition-all duration-150 ${fuelPill(v.fuel_type)} ${isSel ? 'scale-105 shadow-md' : 'opacity-55 hover:opacity-100 hover:scale-[1.02]'
-                                                                }`}
-                                                            style={isSel ? { outline: `2px solid ${brandColor}`, outlineOffset: '2px' } : {}}
-                                                        >
-                                                            <span className="block font-semibold leading-tight">{v.variant_name}</span>
-                                                            {v.ex_showroom_price_min_inr && (
-                                                                <span className="block text-[10px] opacity-70 mt-0.5">{fmtL(v.ex_showroom_price_min_inr)}</span>
-                                                            )}
-                                                        </button>
-                                                    );
-                                                })}
-                                            </div>
-                                            {/* Fuel legend */}
-                                            <div className="flex flex-wrap gap-2 pt-2 border-t border-gray-100">
-                                                {[...new Set(detailedInfo.map(v => v.fuel_type).filter(Boolean))].map(f => (
-                                                    <span key={f} className={`text-[10px] px-2 py-0.5 rounded-full border ${fuelPill(f)}`}>{f}</span>
-                                                ))}
-                                            </div>
+
+                                            {(() => {
+                                                const grouped = detailedInfo.reduce((acc, v) => {
+                                                    const fuelType = v.fuel_type || 'Other'
+                                                    if (!acc[fuelType]) acc[fuelType] = []
+                                                    acc[fuelType].push(v)
+                                                    return acc
+                                                }, {} as Record<string, typeof detailedInfo>)
+
+                                                const fuelOrder = ['Petrol', 'Diesel', 'CNG', 'Electric', 'Other']
+                                                const sortedFuels = fuelOrder.filter(f => grouped[f]).concat(Object.keys(grouped).filter(f => !fuelOrder.includes(f)))
+
+                                                return sortedFuels.map(fuelType => (
+                                                    <div key={fuelType} className="border border-gray-200 rounded-xl overflow-hidden">
+                                                        {/* Fuel Type Header */}
+                                                        <div className={`px-3 py-2.5 font-semibold text-sm ${fuelPill(fuelType)} flex items-center justify-between`}>
+                                                            <span className="flex items-center gap-2">
+                                                                {fuelType === 'Petrol' && '⛽'}
+                                                                {fuelType === 'Diesel' && '🛢️'}
+                                                                {fuelType === 'CNG' && '🔷'}
+                                                                {fuelType === 'Electric' && '⚡'}
+                                                                {fuelType === 'Other' && '•'}
+                                                                {fuelType} ({grouped[fuelType].length})
+                                                            </span>
+                                                        </div>
+
+                                                        {/* Variants List */}
+                                                        <div className="divide-y">
+                                                            {grouped[fuelType].map((v, i) => {
+                                                                const isSel = selVariant?.variant_name === v.variant_name
+                                                                return (
+                                                                    <button
+                                                                        key={`${fuelType}-${i}`}
+                                                                        onClick={() => setSelVariant(v)}
+                                                                        className={`w-full px-3 py-2.5 text-left text-sm transition-all hover:bg-gray-50 flex items-center justify-between ${isSel ? 'bg-gray-100 font-semibold' : ''}`}
+                                                                    >
+                                                                        <span className="flex-1">
+                                                                            <p className={`text-sm ${isSel ? 'font-semibold text-gray-900' : 'font-medium text-gray-800'}`}>
+                                                                                {v.variant_name}
+                                                                            </p>
+                                                                        </span>
+                                                                        {v.ex_showroom_price_min_inr && (
+                                                                            <p className="text-sm font-bold ml-2" style={{ color: brandColor }}>
+                                                                                {fmtL(v.ex_showroom_price_min_inr)}
+                                                                            </p>
+                                                                        )}
+                                                                    </button>
+                                                                )
+                                                            })}
+                                                        </div>
+                                                    </div>
+                                                ))
+                                            })()}
                                         </div>
 
                                         {/* Selected variant panel */}
