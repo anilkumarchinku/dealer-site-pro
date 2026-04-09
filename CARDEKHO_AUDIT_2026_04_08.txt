@@ -1,0 +1,383 @@
+================================================================================
+        COMPREHENSIVE 4W CAR CATALOG AUDIT: CARDEKHO.COM
+        Audit Date: 2026-04-08
+================================================================================
+
+OVERVIEW:
+- Total CardDekho Brands: 42 brands
+- Total CardDekho Models: ~289 models
+- Our Data Files: 35 brands (files created)
+- Our Populated Data: 5 brands (Tata, Hyundai, Toyota, BMW, Audi)
+- Our Data Files Unpopulated: 30 brands (structurally ready, no variant data)
+
+================================================================================
+MASS-MARKET BRANDS (TOP 10)
+================================================================================
+
+BRAND: Tata
+CARDEKHO MODELS: Sierra, Punch, Nexon, Tiago, Safari, Harrier, Punch EV, Altroz, 
+  Curvv, Nexon EV, Harrier EV, Tiago EV, Tigor, Curvv EV, Xpres, Tigor EV, 
+  Tiago NRG, Yodha Pickup, Nano EV (upcoming)
+OUR CATALOG: 19 models (Altroz, Curvv, Curvv EV, Harrier, Harrier EV, Nexon, 
+  Nexon EV, Punch, Punch EV, Safari, Sierra, Tiago, Tiago EV, Tiago NRG, Tigor, 
+  Tigor EV, Xpres, Xpres-T EV, Yodha Pickup)
+POTENTIALLY MISSING FROM OUR CATALOG: Nano EV (upcoming)
+NOTES: Comprehensive match. We have 19 current models; CardDekho lists same 
+  variants plus upcoming Nano EV. Our Xpres-T EV variant slightly different naming 
+  but same model.
+
+---
+
+BRAND: Maruti Suzuki
+CARDEKHO MODELS: FRONX, Ertiga, Swift, Brezza, e-Vitara, Baleno, Grand Vitara, 
+  Dzire, Wagon R, Alto K10, Victoris, Celerio, Ignis, Jimny, XL6, S-Presso, 
+  Eeco, Invicto, Ciaz, Dzire Tour S
+OUR CATALOG: File exists (maruti_suzuki.json) - 7699 lines but models NOT EXTRACTED
+  in data (appears to have variant details structure)
+POTENTIALLY MISSING FROM OUR CATALOG: CRITICAL - No model list extracted yet. 
+  CardDekho shows 20+ distinct models. We have the data file but need to extract.
+NOTES: Maruti is #1 market leader in India. Our file has data but extraction 
+  layer missing. Need to populate model extraction from existing variant data.
+
+---
+
+BRAND: Hyundai
+CARDEKHO MODELS: Creta, Venue, Verna, i20, Aura, Exter, Alcazar, Creta Electric, 
+  Venue N Line, Creta N Line, Prime SD, Prime HB, Grand i10 Nios, i20 N-Line, 
+  IONIQ 5 (and upcoming)
+OUR CATALOG: 16 models (Alcazar, Aura, Creta, Creta EV, Creta N Line, Exter, 
+  Grand i10 Nios, i20, i20 N Line, Ioniq 5, Prime HB, Prime SD, Tucson, Venue, 
+  Venue N Line, Verna)
+POTENTIALLY MISSING FROM OUR CATALOG: None - comprehensive match
+NOTES: We have all current CardDekho models plus Tucson which wasn't mentioned 
+  in featured carousel. Perfect coverage.
+
+---
+
+BRAND: Honda
+CARDEKHO MODELS: Amaze, City, Elevate, City Hybrid, Amaze 2nd Gen, City N Line 
+  (implied), plus upcoming: Elevate EV, Zero Alpha, Zero SUV
+OUR CATALOG: File exists (honda.json) - 933 lines - models NOT EXTRACTED
+POTENTIALLY MISSING FROM OUR CATALOG: CRITICAL - Data file exists but models 
+  not extracted. CardDekho shows 5-6 current models.
+NOTES: Honda is mass-market brand. Data file ready but extraction incomplete.
+
+---
+
+BRAND: Mahindra
+CARDEKHO MODELS: Thar, Scorpio-N, Scorpio, Bolero, Thar ROXX, XUV 3XO, XUV 7XO, 
+  BE 6, XEV 9e, Bolero Neo, Bolero Camper, Marazzo, XUV400 EV, Bolero Neo Plus, 
+  XEV 9S, XUV 3XO EV, Bolero Pik-Up
+OUR CATALOG: File exists (mahindra.json) - 19062 lines (LARGEST) - models NOT EXTRACTED
+POTENTIALLY MISSING FROM OUR CATALOG: CRITICAL - Massive data file (19K+ lines) 
+  but no model extraction. CardDekho shows 17 distinct models.
+NOTES: Mahindra is #3 market leader. We have the most comprehensive raw data 
+  file but extraction layer missing.
+
+---
+
+BRAND: Kia
+CARDEKHO MODELS: Seltos, Sonet, Carens, Carnival, Syros, Carens Clavis, EV6, 
+  Carens Clavis EV, EV9
+OUR CATALOG: File exists (kia.json) - 1454 lines - models NOT EXTRACTED
+POTENTIALLY MISSING FROM OUR CATALOG: CRITICAL - Data file exists but models 
+  not extracted. CardDekho shows 9 current models.
+NOTES: Kia has strong presence. File ready but extraction pending.
+
+---
+
+BRAND: Toyota
+CARDEKHO MODELS: Fortuner, Innova Crysta, Urban Cruiser Hyryder, Land Cruiser 300, 
+  Hilux, Innova Hycross, Camry, Vellfire, Glanza, Rumion, Taisor, Fortuner Legender
+OUR CATALOG: 12 models (Camry, Fortuner, Fortuner Legender, Glanza, Hilux, 
+  Innova Crysta, Innova Hycross, Land Cruiser 300, Rumion, Taisor, 
+  Urban Cruiser Hyryder, Vellfire)
+POTENTIALLY MISSING FROM OUR CATALOG: None - comprehensive match. Plus upcoming: 
+  Urban Cruiser EBELLA, Mini Fortuner
+NOTES: Perfect alignment with CardDekho. Upcoming models not yet in our catalog.
+
+---
+
+BRAND: Volkswagen
+CARDEKHO MODELS: Virtus, Taigun, Tiguan R-Line, Tayron R-Line, Golf GTI
+OUR CATALOG: File exists (volkswagen.json) - 905 lines - models NOT EXTRACTED
+POTENTIALLY MISSING FROM OUR CATALOG: CRITICAL - Data file exists but models 
+  not extracted. CardDekho shows 5 current models.
+NOTES: Upcoming: Taigun Facelift, Virtus Facelift, Tera.
+
+---
+
+BRAND: Skoda
+CARDEKHO MODELS: Kushaq, Kylaq, Slavia, Kodiaq, Octavia RS
+OUR CATALOG: File exists (skoda.json) - 643 lines - models NOT EXTRACTED
+POTENTIALLY MISSING FROM OUR CATALOG: CRITICAL - Data file exists but models 
+  not extracted. CardDekho shows 5 current models.
+NOTES: Upcoming: Kodiaq RS, Slavia Facelift, Superb 2026, Elroq.
+
+---
+
+BRAND: MG Motor
+CARDEKHO MODELS: Comet EV, Windsor EV, Hector, Cyberster, Astor, ZS EV, Gloster, 
+  M9, Hector Plus
+OUR CATALOG: File exists (mg.json) - 1109 lines - models NOT EXTRACTED
+POTENTIALLY MISSING FROM OUR CATALOG: CRITICAL - Data file exists but models 
+  not extracted. CardDekho shows 9 current models.
+NOTES: Upcoming: MG Majestor, Hector updated, MG IM5, MG IM6.
+
+================================================================================
+PREMIUM BRANDS
+================================================================================
+
+BRAND: BMW
+CARDEKHO MODELS: 2 Series Gran Coupe, 3 Series, 3 Series Long Wheelbase, 5 Series, 
+  6 Series Gran Turismo, 7 Series, 8 Series Gran Coupe, i4, i5, i7, iX, iX1, M2, 
+  M4 Competition, M5, M8 Coupe Competition, X1, X3, X4, X5, X6, X7, XM, Z4 Roadster
+OUR CATALOG: 27 models (2 Series Gran Coupe, 3 Series, 3 Series Gran Limousine, 
+  5 Series, 6 Series GT, 7 Series, 8 Series Gran Coupe, i4, i5, i7, iX, iX1, M2, 
+  M340i, M4, M4 Competition, M5, M8, M8 Coupe Competition, X1, X3, X4, X5, 
+  X5 M Competition, X7, XM, Z4)
+POTENTIALLY MISSING FROM OUR CATALOG: X6
+NOTES: Near-comprehensive. We have 27 vs CardDekho's 24 (including our M340i, 
+  M8 variants). Missing X6 only. Naming variations: our "Gran Limousine" vs their 
+  "Long Wheelbase", our "GT" vs their "Gran Turismo".
+
+---
+
+BRAND: Audi
+CARDEKHO MODELS: A4, Q7, Q3, A6, Q5, Q8, RS Q8, Q3 Sportback, S5 Sportback, 
+  Q8 e-tron, e-tron GT, Q8 Sportback e-tron, RS e-tron GT
+OUR CATALOG: 15 models (A4, A6, A8 L, e-tron GT, Q3, Q3 Sportback, Q5, Q7, Q8, 
+  Q8 e-tron, Q8 Sportback e-tron, RS e-tron GT, RS Q8, S5 Sportback, SQ8)
+POTENTIALLY MISSING FROM OUR CATALOG: None - comprehensive match. We include 
+  A8 L and SQ8 not listed in CardDekho carousel.
+NOTES: Strong coverage. We have all CardDekho models plus additional variants 
+  (A8 L, SQ8).
+
+---
+
+BRAND: Mercedes-Benz
+CARDEKHO MODELS: V-Class Extra LWB, GLS, S-Class, E-Class, C-Class, GLE, GLC, 
+  GLA, EQS, EQS SUV, Maybach GLS, Maybach EQS SUV, Maybach SL 680, AMG SL, 
+  AMG CLE 53, AMG GLC 43, AMG C43, G-Class, G-Class Electric, EQA, EQB, 
+  EQE SUV, A-Class Limousine (and more ~33 total listed)
+OUR CATALOG: File exists (mercedes.json) - mentioned in listing but not verified 
+  for extraction
+POTENTIALLY MISSING FROM OUR CATALOG: CRITICAL - Mercedes-Benz file existence 
+  not verified. CardDekho shows 33+ models across regular, AMG, Maybach, and EQ lines.
+NOTES: Mercedes is major luxury brand with extensive lineup. Need to verify 
+  our data file completeness.
+
+---
+
+BRAND: Renault
+CARDEKHO MODELS: Duster, KWID, Triber, Kiger
+OUR CATALOG: File exists (renault.json) - 419 lines - models NOT EXTRACTED
+POTENTIALLY MISSING FROM OUR CATALOG: CRITICAL - Data file exists but models 
+  not extracted. CardDekho shows 4 current models.
+NOTES: Upcoming: Bigster, Kardian, Bridger.
+
+---
+
+BRAND: Nissan
+CARDEKHO MODELS: Gravite, Magnite, X-Trail
+OUR CATALOG: File exists (nissan.json) - 5053 lines - models NOT EXTRACTED
+POTENTIALLY MISSING FROM OUR CATALOG: CRITICAL - Data file exists but models 
+  not extracted. CardDekho shows 3 current models.
+NOTES: File size (5K+ lines) suggests rich variant data despite only 3 models.
+
+---
+
+BRAND: Jeep
+CARDEKHO MODELS: Wrangler, Compass, Meridian, Grand Cherokee
+OUR CATALOG: File exists (jeep.json) - 841 lines - models NOT EXTRACTED
+POTENTIALLY MISSING FROM OUR CATALOG: CRITICAL - Data file exists but models 
+  not extracted. CardDekho shows 4 current models.
+NOTES: All are SUVs. Good market presence.
+
+---
+
+BRAND: Citroen
+CARDEKHO MODELS: C3, Aircross, Basalt, C5 Aircross, eC3
+OUR CATALOG: File exists (citroen.json) - 1760 lines - models NOT EXTRACTED
+POTENTIALLY MISSING FROM OUR CATALOG: CRITICAL - Data file exists but models 
+  not extracted. CardDekho shows 5 current models.
+NOTES: Mix of ICE and electric. eC3 is electric hatchback.
+
+---
+
+BRAND: Porsche
+CARDEKHO MODELS: 911, Cayenne, Macan, Panamera, Taycan (EV), Macan EV, 
+  Cayenne Coupe, Cayenne Electric
+OUR CATALOG: File exists (porsche.json) - 891 lines - models NOT EXTRACTED
+POTENTIALLY MISSING FROM OUR CATALOG: CRITICAL - Data file exists but models 
+  not extracted. CardDekho shows 8 current models.
+NOTES: Electric options: Taycan, Macan EV, Cayenne Electric.
+
+---
+
+BRAND: Lamborghini
+CARDEKHO MODELS: Urus, Revuelto, Temerario, Huracan EVO
+OUR CATALOG: File exists (lamborghini.json) - 588 lines - models NOT EXTRACTED
+POTENTIALLY MISSING FROM OUR CATALOG: CRITICAL - Data file exists but models 
+  not extracted. CardDekho shows 4 current models.
+NOTES: 2 SUVs, 2 Coupes.
+
+---
+
+BRAND: Ferrari
+CARDEKHO MODELS: 296 GTB, SF90 Stradale, F8 Tributo, Amalfi, Roma, 812, 
+  849 Testarossa (upcoming: 12Cilindri)
+OUR CATALOG: File exists (ferrari.json) - 308 lines - models NOT EXTRACTED
+POTENTIALLY MISSING FROM OUR CATALOG: CRITICAL - Data file exists but models 
+  not extracted. CardDekho shows 7 current models.
+NOTES: Ultra-premium lineup.
+
+---
+
+BRAND: Land Rover
+CARDEKHO MODELS: Defender, Range Rover, Range Rover Velar, Range Rover Sport, 
+  Range Rover Evoque, Discovery, Discovery Sport
+OUR CATALOG: File exists (land_rover.json) - 2401 lines - models NOT EXTRACTED
+POTENTIALLY MISSING FROM OUR CATALOG: CRITICAL - Data file exists but models 
+  not extracted. CardDekho shows 7 current models.
+NOTES: All SUVs. Strong off-road brand.
+
+---
+
+BRAND: Jaguar
+CARDEKHO MODELS: F-Pace (1 model only - luxury SUV)
+OUR CATALOG: File exists (jaguar.json) - 105 lines - models NOT EXTRACTED
+POTENTIALLY MISSING FROM OUR CATALOG: CRITICAL - Data file exists but models 
+  not extracted. CardDekho shows 1 current model.
+NOTES: Minimal current lineup (just F-Pace).
+
+---
+
+BRAND: Lexus
+CARDEKHO MODELS: LX, ES, LM, NX, RX
+OUR CATALOG: File exists (lexus.json) - 654 lines - models NOT EXTRACTED
+POTENTIALLY MISSING FROM OUR CATALOG: CRITICAL - Data file exists but models 
+  not extracted. CardDekho shows 5 current models.
+NOTES: Luxury Toyota sub-brand.
+
+---
+
+BRAND: Volvo
+CARDEKHO MODELS: XC90, XC60, EX30, EC40, EX40
+OUR CATALOG: File exists (volvo.json) - 294 lines - models NOT EXTRACTED
+POTENTIALLY MISSING FROM OUR CATALOG: CRITICAL - Data file exists but models 
+  not extracted. CardDekho shows 5 current models.
+NOTES: All SUVs. Strong on electric (EX series).
+
+---
+
+BRAND: Mini
+CARDEKHO MODELS: Mini Cooper Convertible, Mini Cooper S, Mini Countryman, 
+  Mini Countryman Electric
+OUR CATALOG: File exists (mini.json) - 1309 lines - models NOT EXTRACTED
+POTENTIALLY MISSING FROM OUR CATALOG: CRITICAL - Data file exists but models 
+  not extracted. CardDekho shows 4 current models.
+NOTES: BMW sub-brand.
+
+---
+
+BRAND: Aston Martin
+CARDEKHO MODELS: Vantage, DBX, DB12, Vanquish
+OUR CATALOG: File exists (aston_martin.json) - 307 lines - models NOT EXTRACTED
+POTENTIALLY MISSING FROM OUR CATALOG: CRITICAL - Data file exists but models 
+  not extracted. CardDekho shows 4 current models.
+NOTES: 3 Coupes, 1 SUV.
+
+---
+
+BRAND: Bentley
+CARDEKHO MODELS: Flying Spur, Continental, Bentayga
+OUR CATALOG: File exists (bentley.json) - 406 lines - models NOT EXTRACTED
+POTENTIALLY MISSING FROM OUR CATALOG: CRITICAL - Data file exists but models 
+  not extracted. CardDekho shows 3 current models.
+NOTES: 1 SUV, 1 Coupe, 1 Sedan.
+
+---
+
+BRAND: Maserati
+CARDEKHO MODELS: Levante, GranTurismo, Quattroporte, GranCabrio, Grecale
+OUR CATALOG: File exists (maserati.json) - 422 lines - models NOT EXTRACTED
+POTENTIALLY MISSING FROM OUR CATALOG: CRITICAL - Data file exists but models 
+  not extracted. CardDekho shows 5 current models.
+NOTES: 2 SUVs, 1 Sedan, 1 Coupe, 1 Convertible.
+
+---
+
+BRAND: Rolls-Royce
+CARDEKHO MODELS: Phantom, Cullinan, Spectre, Ghost Series II
+OUR CATALOG: File exists (rolls_royce.json) - 272 lines - models NOT EXTRACTED
+POTENTIALLY MISSING FROM OUR CATALOG: CRITICAL - Data file exists but models 
+  not extracted. CardDekho shows 4 current models.
+NOTES: Ultra-luxury. Spectre is electric.
+
+---
+
+BRAND: BYD
+CARDEKHO MODELS: Sealion 7, Atto 3, Seal, eMAX 7 (upcoming: Sealion 6)
+OUR CATALOG: File exists (byd.json) - 711 lines - models NOT EXTRACTED
+POTENTIALLY MISSING FROM OUR CATALOG: CRITICAL - Data file exists but models 
+  not extracted. CardDekho shows 4 current EV models.
+NOTES: All electric. Chinese brand gaining traction in India.
+
+---
+
+BRAND: Force Motors
+CARDEKHO MODELS: Urbania, Gurkha, Gurkha 5 Door
+OUR CATALOG: File exists (force.json) - 439 lines - models NOT EXTRACTED
+POTENTIALLY MISSING FROM OUR CATALOG: CRITICAL - Data file exists but models 
+  not extracted. CardDekho shows 3 current models.
+NOTES: 2 SUVs, 1 Minivan. Indian brand.
+
+---
+
+BRAND: Isuzu
+CARDEKHO MODELS: D-Max, MU-X, S-CAB Z, S-CAB, Hi-Lander, V-Cross
+OUR CATALOG: File exists (isuzu.json) - 557 lines - models NOT EXTRACTED
+POTENTIALLY MISSING FROM OUR CATALOG: CRITICAL - Data file exists but models 
+  not extracted. CardDekho shows 6 current models.
+NOTES: 4 Pickup Trucks, 2 SUVs.
+
+---
+
+BRAND: VinFast
+CARDEKHO MODELS: VF7, VF6 (upcoming: VF MPV 7, VF3)
+OUR CATALOG: File exists (vinfast.json) - 662 lines - models NOT EXTRACTED
+POTENTIALLY MISSING FROM OUR CATALOG: CRITICAL - Data file exists but models 
+  not extracted. CardDekho shows 2 current EV models.
+NOTES: Vietnamese EV brand. All models are electric SUVs.
+
+================================================================================
+SUMMARY & RECOMMENDATIONS
+================================================================================
+
+OVERALL STATUS:
+✓ Complete: Tata (19), Hyundai (16), Toyota (12), BMW (27), Audi (15)
+✗ Unpopulated: 30 brands (data files exist but no model extraction)
+✗ Missing Files: 0 brands (we have all 35 known brands as files)
+
+DATA GAPS ANALYSIS:
+1. MASS-MARKET CRITICAL (Top 5 coverage):
+   - Maruti Suzuki: 20+ models - UNPOPULATED (largest market leader)
+   - Mahindra: 17 models - UNPOPULATED (3rd largest, 19K line file)
+   - Honda: 6 models - UNPOPULATED
+   - Kia: 9 models - UNPOPULATED
+   - Volkswagen: 5 models - UNPOPULATED
+
+2. PREMIUM BRANDS (15 brands - all unpopulated):
+   - Mercedes-Benz, Porsche, Lamborghini, Ferrari, Land Rover, Jaguar, 
+   - Lexus, Volvo, Mini, Aston Martin, Bentley, Maserati, Rolls-Royce, 
+   - Renault, Nissan, Jeep, Citroen, BYD, Force, Isuzu, VinFast
+
+ACTION ITEMS:
+1. Extract model names from existing 30 brand JSON files
+2. Verify Mercedes-Benz file exists and contains data
+3. Add upcoming models (Nano EV for Tata, various facelifts, etc.)
+4. Ensure consistent naming (e.g., "Hyryder" vs "Urban Cruiser Hyryder")
+5. Document electric variants uniformly across all brands
+
+================================================================================

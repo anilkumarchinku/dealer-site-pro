@@ -246,6 +246,7 @@ export function VehicleCard({ vehicle, slug, dealerId, brandColor = "#1f2937", o
                         dealerId={dealerId}
                         vehicleId={vehicle.id}
                         vehicleName={`${vehicle.brand} ${vehicle.model}`}
+                        vehicleImage={imgSrc || undefined}
                         leadType="test_drive"
                         title={`Book a Trial Run — ${vehicle.model}`}
                         isOpen={trialOpen}

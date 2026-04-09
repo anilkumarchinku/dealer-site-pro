@@ -498,10 +498,23 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
                                         <SpecCard label="Battery" value={car.engine?.batteryCapacity ? `${car.engine.batteryCapacity} kWh` : null} />
                                         <SpecCard label="Transmission" value={car.transmission?.type} />
                                         <SpecCard label="Drive Type" value={car.transmission?.driveType} />
-                                        <SpecCard label="Fuel Efficiency" value={car.performance?.fuelEfficiency ? `${car.performance.fuelEfficiency} km/l` : null} />
+                                        {car.engine?.type === 'Electric'
+                                            ? <SpecCard label="Range" value={
+                                                car.performance?.range ? `${car.performance.range} km` :
+                                                selVariant?.mileage_kmpl_or_ev_range
+                                                    ? /[a-z]/i.test(String(selVariant.mileage_kmpl_or_ev_range))
+                                                        ? String(selVariant.mileage_kmpl_or_ev_range)
+                                                        : `${selVariant.mileage_kmpl_or_ev_range} km`
+                                                    : null
+                                              } />
+                                            : <SpecCard label="Mileage" value={
+                                                car.performance?.fuelEfficiency ? `${car.performance.fuelEfficiency} km/l` :
+                                                selVariant?.mileage_kmpl ? `${selVariant.mileage_kmpl} km/l` :
+                                                selVariant?.mileage_kmpl_or_ev_range ? `${selVariant.mileage_kmpl_or_ev_range} km/l` : null
+                                              } />
+                                        }
                                         <SpecCard label="Top Speed" value={car.performance?.topSpeed ? `${car.performance.topSpeed} km/h` : null} />
                                         <SpecCard label="0–100 km/h" value={car.performance?.acceleration0to100 ? `${car.performance.acceleration0to100}s` : null} />
-                                        <SpecCard label="EV Range" value={car.performance?.range ? `${car.performance.range} km` : null} />
                                     </div>
                                 </div>
 

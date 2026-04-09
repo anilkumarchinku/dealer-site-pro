@@ -6,6 +6,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
+import Image from 'next/image';
 import type { Car } from '@/lib/types/car';
 import {
     Calendar,
@@ -174,6 +175,20 @@ export function TestDriveModal({
                 className="w-full max-w-md bg-white rounded-2xl shadow-2xl overflow-hidden"
                 onClick={e => e.stopPropagation()}
             >
+                {/* ── Image ── */}
+                {car.images.hero && (
+                    <div className="relative h-40 bg-gray-100 w-full">
+                        <Image
+                            src={car.images.hero}
+                            alt={`${car.make} ${car.model}`}
+                            fill
+                            sizes="100%"
+                            className="object-contain p-3"
+                            unoptimized={car.images.hero.startsWith('http')}
+                        />
+                    </div>
+                )}
+
                 {/* ── Header ── */}
                 <div className="px-5 py-4 flex items-center justify-between border-b border-gray-100">
                     <div className="flex items-center gap-3">

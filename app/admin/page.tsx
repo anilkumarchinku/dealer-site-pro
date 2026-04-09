@@ -158,31 +158,35 @@ const KNOWN_LOGOS: Record<string, string> = {
     "Greaves Electric Mobility": "/assets/logos/greaves.png",
     "Kinetic Green": "/assets/logos/kinetic.png",
     "TVS King": "/assets/logos/2w/tvs-motor.svg",
-    "Vida (Hero MotoCorp)": "/assets/logos/2w/hero-motocorp.svg"
+    "Vida (Hero MotoCorp)": "/assets/logos/2w/hero-motocorp.svg",
+    // Brands whose file extension differs from .png
+    "Hop Electric": "/data/brand-logos/hop-electric.svg",
+    "Okinawa Autotech": "/data/brand-logos/okinawa-autotech.webp",
 };
 
-function BrandLogo({ brandName }: { brandName: string }) {
-    const [error, setError] = useState(false);
-    // Priority: KNOWN_LOGOS → /data/brand-logos/{brandId}.png → initials
+/** Build ordered list of candidate URLs to try for a brand logo */
+function getBrandLogoSrcs(brandName: string): string[] {
     const brandId = BRAND_ID_MAP[brandName];
-    const knownSrc = KNOWN_LOGOS[brandName];
-    const brandLogoSrc = brandId ? `/data/brand-logos/${brandId}.png` : null;
-    const src = knownSrc || brandLogoSrc || `/assets/logos/${brandName.toLowerCase().replace(/\s+/g, '-')}.png`;
+    const known = KNOWN_LOGOS[brandName];
+    const slug = brandName.toLowerCase().replace(/\s+/g, '-');
+    const srcs: string[] = [];
+    if (known) srcs.push(known);
+    if (brandId) {
+        srcs.push(`/data/brand-logos/${brandId}.png`);
+        srcs.push(`/data/brand-logos/${brandId}.svg`);
+        srcs.push(`/data/brand-logos/${brandId}.webp`);
+    }
+    srcs.push(`/assets/logos/${slug}.png`);
+    srcs.push(`/assets/logos/${slug}.svg`);
+    return srcs;
+}
 
-    if (error) {
-        // If KNOWN_LOGOS path failed, try brand-logos path as a second chance
-        if (knownSrc && brandLogoSrc) {
-            return (
-                <div className="w-12 h-12 relative flex items-center justify-center">
-                    <img
-                        src={brandLogoSrc}
-                        alt={brandName}
-                        onError={() => { }}
-                        className="max-w-full max-h-full object-contain"
-                    />
-                </div>
-            );
-        }
+/** Cascades through candidate URLs; shows initial avatar as final fallback */
+function BrandLogo({ brandName }: { brandName: string }) {
+    const srcs = getBrandLogoSrcs(brandName);
+    const [idx, setIdx] = useState(0);
+
+    if (idx >= srcs.length) {
         return (
             <div className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center border border-gray-200">
                 <span className="text-gray-500 font-bold text-lg">{brandName.charAt(0)}</span>
@@ -193,9 +197,10 @@ function BrandLogo({ brandName }: { brandName: string }) {
     return (
         <div className="w-12 h-12 relative flex items-center justify-center">
             <img
-                src={src}
+                key={srcs[idx]}
+                src={srcs[idx]}
                 alt={brandName}
-                onError={() => setError(true)}
+                onError={() => setIdx(i => i + 1)}
                 className="max-w-full max-h-full object-contain"
             />
         </div>

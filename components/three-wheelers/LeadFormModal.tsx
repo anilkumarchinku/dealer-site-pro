@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import Image from "next/image"
 import type { ThreeWheelerLeadType } from "@/lib/types/three-wheeler"
 import { X } from "lucide-react"
 import { validateLeadForm } from "@/lib/validations/client"
@@ -9,6 +10,7 @@ interface Props {
     dealerId:       string
     vehicleId?:     string
     vehicleName?:   string
+    vehicleImage?:  string
     usedVehicleId?: string
     leadType:       ThreeWheelerLeadType
     title:          string
@@ -17,7 +19,7 @@ interface Props {
 }
 
 export function LeadFormModal({
-    dealerId, vehicleId, vehicleName, usedVehicleId, leadType, title, isOpen, onClose
+    dealerId, vehicleId, vehicleName, vehicleImage, usedVehicleId, leadType, title, isOpen, onClose
 }: Props) {
     const [name,          setName]          = useState("")
     const [phone,         setPhone]         = useState("")
@@ -74,13 +76,28 @@ export function LeadFormModal({
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
             <div className="absolute inset-0 bg-black/50" onClick={onClose} />
-            <div className="relative bg-card border border-border rounded-2xl shadow-2xl w-full max-w-md p-6 space-y-5">
-                <div className="flex items-center justify-between">
-                    <h2 className="text-lg font-semibold">{title}</h2>
-                    <button onClick={onClose} className="text-muted-foreground hover:text-foreground"><X className="w-5 h-5" /></button>
-                </div>
+            <div className="relative bg-card border border-border rounded-2xl shadow-2xl w-full max-w-md overflow-hidden">
+                {/* Image */}
+                {vehicleImage && (
+                    <div className="relative h-40 bg-gray-100 w-full">
+                        <Image
+                            src={vehicleImage}
+                            alt={vehicleName || "Vehicle"}
+                            fill
+                            sizes="100%"
+                            className="object-contain p-3"
+                            unoptimized={vehicleImage.startsWith('http')}
+                        />
+                    </div>
+                )}
 
-                {submitted ? (
+                <div className="p-6 space-y-5">
+                    <div className="flex items-center justify-between">
+                        <h2 className="text-lg font-semibold">{title}</h2>
+                        <button onClick={onClose} className="text-muted-foreground hover:text-foreground"><X className="w-5 h-5" /></button>
+                    </div>
+
+                    {submitted ? (
                     <div className="text-center py-8 space-y-3">
                         <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto">
                             <svg className="w-8 h-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -129,6 +146,7 @@ export function LeadFormModal({
                         </button>
                     </form>
                 )}
+                </div>
             </div>
         </div>
     )
