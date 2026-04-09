@@ -205,7 +205,10 @@ export function getLocal2WImage(brand: string, model: string): string | null {
 
     try {
         const baseDir = path.join(process.cwd(), 'public', 'data', 'brand-model-images', '2w')
-        if (!fs.existsSync(baseDir)) return null
+        if (!fs.existsSync(baseDir)) {
+            console.log(`[getLocal2WImage] 2W dir not found: ${baseDir}`)
+            return null
+        }
 
         // Common folder naming patterns to try
         const folderPatterns = [
@@ -225,8 +228,11 @@ export function getLocal2WImage(brand: string, model: string): string | null {
         for (const folder of folderPatterns) {
             const imgPath = path.join(baseDir, folder, slug)
             for (const ext of ['.jpg', '.png']) {
-                if (fs.existsSync(imgPath + ext)) {
-                    return `/data/brand-model-images/2w/${folder}/${slug}${ext}`
+                const fullPath = imgPath + ext
+                if (fs.existsSync(fullPath)) {
+                    const url = `/data/brand-model-images/2w/${folder}/${slug}${ext}`
+                    console.log(`[getLocal2WImage] ✓ Found: ${brand} ${model} → ${url}`)
+                    return url
                 }
             }
         }
@@ -245,12 +251,17 @@ export function getLocal2WImage(brand: string, model: string): string | null {
             if (hasMatch) {
                 const imgPath = path.join(baseDir, folder, slug)
                 for (const ext of ['.jpg', '.png']) {
-                    if (fs.existsSync(imgPath + ext)) {
-                        return `/data/brand-model-images/2w/${folder}/${slug}${ext}`
+                    const fullPath = imgPath + ext
+                    if (fs.existsSync(fullPath)) {
+                        const url = `/data/brand-model-images/2w/${folder}/${slug}${ext}`
+                        console.log(`[getLocal2WImage] ✓ Found (fallback): ${brand} ${model} → ${url}`)
+                        return url
                     }
                 }
             }
         }
+
+        console.log(`[getLocal2WImage] ✗ NOT FOUND: ${brand} "${model}" (slug: ${slug})`)
     } catch (err) {
         console.error(`[getLocal2WImage] Error for ${brand} ${model}:`, err)
     }
@@ -264,47 +275,38 @@ export function getLocal2WImage(brand: string, model: string): string | null {
 export function getLocal3WImage(brand: string, model: string): string | null {
     const slug = toSlug(model)
     const brandLower = brand.toLowerCase().trim()
-    const brandSlug = brandLower.replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
 
     try {
-        const brandDir = path.join(process.cwd(), 'public', 'data', 'brand-model-images', '3w')
-        if (!fs.existsSync(brandDir)) return null
+        const baseDir = path.join(process.cwd(), 'public', 'data', 'brand-model-images', '3w')
+        if (!fs.existsSync(baseDir)) {
+            console.log(`[getLocal3WImage] 3W dir not found: ${baseDir}`)
+            return null
+        }
 
-        const folders = fs.readdirSync(brandDir)
+        // Common folder naming patterns
+        const folderPatterns = [
+            brandLower.replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''),
+            `${brandLower.replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}-auto`,
+            `${brandLower.replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}-motors`,
+            `${brandLower.replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}-india`,
+            `${brandLower.replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}-three-wheelers`,
+        ].filter(Boolean) as string[]
 
-        // Try to find a matching folder (same logic as 2W)
-        let bestMatch: string | null = null
-
-        for (const folder of folders) {
-            const folderLower = folder.toLowerCase()
-
-            // Exact slug match
-            if (folderLower === brandSlug) {
-                bestMatch = folder
-                break
-            }
-
-            // Check if folder contains brand keywords
-            const brandWords = brandSlug.split('-').filter(w => w.length > 2)
-            const folderWords = folderLower.split('-')
-            const matches = brandWords.filter(w => folderWords.some(fw => fw.includes(w) || w.includes(fw)))
-
-            if (matches.length > 0 && !bestMatch) {
-                bestMatch = folder
+        for (const folder of folderPatterns) {
+            const imgPath = path.join(baseDir, folder, slug)
+            for (const ext of ['.jpg', '.png']) {
+                const fullPath = imgPath + ext
+                if (fs.existsSync(fullPath)) {
+                    const url = `/data/brand-model-images/3w/${folder}/${slug}${ext}`
+                    console.log(`[getLocal3WImage] ✓ Found: ${brand} ${model} → ${url}`)
+                    return url
+                }
             }
         }
 
-        if (!bestMatch) return null
-
-        // Try to find the image
-        const base = path.join(brandDir, bestMatch, slug)
-        for (const ext of ['.jpg', '.png']) {
-            if (fs.existsSync(base + ext)) {
-                return `/data/brand-model-images/3w/${bestMatch}/${slug}${ext}`
-            }
-        }
-    } catch {
-        return null
+        console.log(`[getLocal3WImage] ✗ NOT FOUND: ${brand} "${model}" (slug: ${slug})`)
+    } catch (err) {
+        console.error(`[getLocal3WImage] Error for ${brand} ${model}:`, err)
     }
     return null
 }
