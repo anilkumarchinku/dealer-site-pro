@@ -2,8 +2,8 @@
   "meta": {
     "title": "Indian Two-Wheeler & Three-Wheeler Brand Models",
     "description": "Comprehensive list of all currently sold 2W and 3W models in India (2025)",
-    "totalBrands": 71,
-    "generatedAt": "2026-04-08"
+    "totalBrands": 77,
+    "generatedAt": "2026-04-09"
   },
   "twoWheelers": {
     "traditional": [
@@ -577,6 +577,57 @@
             "GK350"
           ]
         }
+      },
+      {
+        "brand": "QJ Motor India",
+        "brandId": "qj-motor-india",
+        "models": {
+          "motorcycles": [
+            "RX3",
+            "RX6",
+            "SRK 400"
+          ]
+        }
+      },
+      {
+        "brand": "Norton Motorcycles India",
+        "brandId": "norton-motorcycles",
+        "models": {
+          "motorcycles": [
+            "Commando 961",
+            "V4CR"
+          ]
+        }
+      },
+      {
+        "brand": "Brixton Motorcycles India",
+        "brandId": "brixton",
+        "models": {
+          "motorcycles": [
+            "BX 125",
+            "Cromwell 1200",
+            "Rayburn 125"
+          ]
+        }
+      },
+      {
+        "brand": "Moto Morini India",
+        "brandId": "moto-morini",
+        "models": {
+          "motorcycles": [
+            "X-Cape 650",
+            "Seiemmezzo 6C"
+          ]
+        }
+      },
+      {
+        "brand": "BSA Motorcycles India",
+        "brandId": "bsa",
+        "models": {
+          "motorcycles": [
+            "Gold Star 650"
+          ]
+        }
       }
     ],
     "electric": [
@@ -914,6 +965,69 @@
             "Wynn"
           ]
         }
+      },
+      {
+        "brand": "BGauss",
+        "brandId": "bgauss",
+        "models": {
+          "scooters": [
+            "D15",
+            "B8",
+            "A2G"
+          ]
+        }
+      },
+      {
+        "brand": "BattRE Electric",
+        "brandId": "battre-ev",
+        "models": {
+          "scooters": [
+            "MOVE",
+            "Starya"
+          ]
+        }
+      },
+      {
+        "brand": "iVOOMi Energy",
+        "brandId": "ivoomi-energy",
+        "models": {
+          "scooters": [
+            "S1",
+            "S1 Pro",
+            "E1",
+            "E1T"
+          ]
+        }
+      },
+      {
+        "brand": "Evolet",
+        "brandId": "evolet",
+        "models": {
+          "scooters": [
+            "Derby",
+            "Polo",
+            "Pony"
+          ]
+        }
+      },
+      {
+        "brand": "Gemopai",
+        "brandId": "gemopai",
+        "models": {
+          "scooters": [
+            "Astrid Lite",
+            "Ryder"
+          ]
+        }
+      },
+      {
+        "brand": "Raptee HV",
+        "brandId": "raptee-energy",
+        "models": {
+          "motorcycles": [
+            "T30"
+          ]
+        }
       }
     ]
   },
@@ -1106,6 +1220,55 @@
       "brand": "Force Motors",
       "models": {
         "note": "Force Motors has shifted focus to LCVs (Urbania, Gurkha, Trax). No current 3W production."
+      }
+    },
+    {
+      "brand": "Numeros Motors",
+      "brandId": "numeros-motors",
+      "models": {
+        "note": "Electric 3W manufacturer"
+      }
+    },
+    {
+      "brand": "YC Electric",
+      "brandId": "yc-ev",
+      "models": {
+        "note": "Electric 3W manufacturer"
+      }
+    },
+    {
+      "brand": "Saera Electric",
+      "brandId": "saera-ev",
+      "models": {
+        "note": "Electric 3W and 4W manufacturer"
+      }
+    },
+    {
+      "brand": "Omega Seiki Mobility",
+      "brandId": "omega-seiki-mobility",
+      "models": {
+        "note": "Electric cargo 3W"
+      }
+    },
+    {
+      "brand": "Altigreen",
+      "brandId": "altigreen",
+      "models": {
+        "note": "Electric 3W and LCV"
+      }
+    },
+    {
+      "brand": "VLF",
+      "brandId": "vlf",
+      "models": {
+        "note": "Electric 3W rickshaw manufacturer"
+      }
+    },
+    {
+      "brand": "Yo Electric",
+      "brandId": "yo-electric",
+      "models": {
+        "note": "Electric 3W manufacturer"
       }
     }
   ],
