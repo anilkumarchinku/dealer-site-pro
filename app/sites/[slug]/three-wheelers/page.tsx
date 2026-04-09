@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { fetchDealerBySlug } from "@/lib/db/dealers"
 import { getThreeWheelerVehicles, getUsedThreeWheelers } from "@/lib/db/three-wheelers"
 import { getThreeWheelerCatalog, THREE_WHEELER_BRANDS } from "@/lib/data/three-wheelers"
+import { getThreeWheelerCatalogFromDB } from "@/lib/data/catalog-db"
 import { getLocal3WImage } from "@/lib/data/cars"
 import { fetchCyeproInventoryAsCars } from "@/lib/services/cyepro-service"
 import { notFound } from "next/navigation"
@@ -285,9 +286,15 @@ export default async function ThreeWheelersPage({ params }: Props) {
 
   const primaryBrand = brandsToShow[0] ?? null
 
-  const catalogVehicles = brandsToShow.flatMap((brand, bi) =>
-    getThreeWheelerCatalog(brand, dealer.id).map(v => ({ ...v, id: `cat-3w-${bi}-${v.id}` }))
+  // Fetch catalog from DB (thw_catalog), fall back to static JSON if DB returns nothing
+  const catalogResults = await Promise.all(
+    brandsToShow.map(async (brand, bi) => {
+      const dbRows = await getThreeWheelerCatalogFromDB(brand, dealer.id)
+      if (dbRows.length > 0) return dbRows.map(v => ({ ...v, id: `cat-3w-${bi}-${v.id}` }))
+      return getThreeWheelerCatalog(brand, dealer.id).map(v => ({ ...v, id: `cat-3w-${bi}-${v.id}` }))
+    })
   )
+  const catalogVehicles = catalogResults.flat()
 
   const filteredDbVehicles = dealer.brandFilter
     ? dbVehicles.filter(v => v.brand.toLowerCase() === dealer.brandFilter!.toLowerCase())

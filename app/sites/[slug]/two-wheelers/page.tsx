@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { fetchDealerBySlug } from '@/lib/db/dealers'
 import { getTwoWheelerVehicles, getUsedTwoWheelers } from '@/lib/db/two-wheelers'
 import { getTwoWheelerCatalog, TWO_WHEELER_BRANDS } from '@/lib/data/two-wheelers'
+import { getTwoWheelerCatalogFromDB } from '@/lib/data/catalog-db'
 import { getLocal2WImage } from '@/lib/data/cars'
 import { fetchCyeproInventoryAsCars } from '@/lib/services/cyepro-service'
 import { notFound } from 'next/navigation'
@@ -313,9 +314,15 @@ export default async function TwoWheelersPage({ params }: Props) {
 
     const primaryBrand = brandsToShow[0] ?? null
 
-    const catalogVehicles = brandsToShow.flatMap((brand, bi) =>
-        getTwoWheelerCatalog(brand, dealer.id).map(v => ({ ...v, id: `cat-2w-${bi}-${v.id}` }))
+    // Fetch catalog from DB (tw_catalog), fall back to static JSON if DB returns nothing
+    const catalogResults = await Promise.all(
+        brandsToShow.map(async (brand, bi) => {
+            const dbRows = await getTwoWheelerCatalogFromDB(brand, dealer.id)
+            if (dbRows.length > 0) return dbRows.map(v => ({ ...v, id: `cat-2w-${bi}-${v.id}` }))
+            return getTwoWheelerCatalog(brand, dealer.id).map(v => ({ ...v, id: `cat-2w-${bi}-${v.id}` }))
+        })
     )
+    const catalogVehicles = catalogResults.flat()
 
     const filteredDbVehicles = dealer.brandFilter
         ? dbVehicles.filter(v => v.brand.toLowerCase() === dealer.brandFilter!.toLowerCase())

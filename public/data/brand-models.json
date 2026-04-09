@@ -3,7 +3,7 @@
     "title": "Indian Two-Wheeler & Three-Wheeler Brand Models",
     "description": "Comprehensive list of all currently sold 2W and 3W models in India (2025)",
     "totalBrands": 71,
-    "generatedAt": "2026-04-07"
+    "generatedAt": "2026-04-08"
   },
   "twoWheelers": {
     "traditional": [
@@ -48,30 +48,33 @@
         "brand": "Honda Motorcycle & Scooter India",
         "models": {
           "motorcycles": [
-            "CD 110 Dream",
-            "Shine 100",
-            "Livo",
-            "SP 125",
-            "Shine 125",
-            "Unicorn",
+            "Africa Twin",
+            "CB1000 Hornet",
             "CB125 Hornet",
-            "Hornet 2.0",
-            "SP160",
             "CB300F",
-            "Hness CB350",
-            "CB350RS",
             "CB350C",
+            "CB350C",
+            "CB350RS",
             "CB500X",
+            "CB650R",
+            "CB750 Hornet",
+            "CBR1000RR-R Fireblade",
+            "CBR650R",
+            "CD 110 Dream",
+            "Goldwing Tour",
+            "Hness CB350",
+            "Hornet 2.0",
+            "Livo",
+            "NX200",
             "NX200",
             "NX500",
-            "CB650R",
-            "CBR650R",
-            "CB750 Hornet",
+            "SP 125",
+            "SP160",
+            "Shine 100",
+            "Shine 100",
+            "Shine 125",
             "Transalp XL750",
-            "CB1000 Hornet",
-            "CBR1000RR-R Fireblade",
-            "Africa Twin",
-            "Goldwing Tour"
+            "Unicorn"
           ],
           "scooters": [
             "Activa 6G",
@@ -125,6 +128,7 @@
             "CT 110X",
             "Platina 100",
             "Platina 110",
+            "Freedom 125",
             "Freedom 125",
             "Pulsar 125",
             "Pulsar N125",
@@ -222,22 +226,24 @@
         "brand": "KTM India",
         "models": {
           "motorcycles": [
-            "RC 160",
+            "1290 Super Adventure S",
+            "1290 Super Adventure S",
+            "1390 Super Duke R",
             "160 Duke",
-            "RC 200",
             "200 Duke",
-            "250 Duke",
             "250 Adventure",
-            "RC 390",
-            "390 Duke",
+            "250 Duke",
             "390 Adventure",
             "390 Adventure R",
             "390 Adventure X",
+            "390 Duke",
             "390 Enduro R",
-            "890 Duke R",
             "890 Adventure R",
-            "1290 Super Adventure S",
-            "1390 Super Duke R"
+            "890 Adventure R",
+            "890 Duke R",
+            "RC 160",
+            "RC 200",
+            "RC 390"
           ]
         }
       },
@@ -246,7 +252,6 @@
         "brand": "Husqvarna India",
         "models": {
           "motorcycles": [
-            "Vitpilen 125",
             "Vitpilen 250",
             "Svartpilen 401"
           ]
@@ -293,28 +298,29 @@
         "brand": "Kawasaki India",
         "models": {
           "motorcycles": [
-            "W175",
             "Eliminator",
-            "Ninja 300",
-            "Z400",
-            "Ninja 500",
-            "Ninja ZX-6R",
-            "Z650",
-            "Z650RS",
-            "Ninja 650",
-            "Versys 650",
-            "Versys-X 300",
-            "Z900",
-            "Ninja 1100SX",
-            "Z1100",
-            "Vulcan S",
             "KLX230",
             "KLX230RS",
             "KLX450R",
-            "Ninja ZX-10R",
-            "Z H2",
+            "Ninja 1100SX",
+            "Ninja 300",
+            "Ninja 500",
+            "Ninja 650",
             "Ninja H2 SX SE",
-            "Versys 1100"
+            "Ninja ZX-10R",
+            "Ninja ZX-6R",
+            "Ninja ZX-6R",
+            "Versys 1100",
+            "Versys 650",
+            "Versys-X 300",
+            "Vulcan S",
+            "W175",
+            "Z H2",
+            "Z1100",
+            "Z400",
+            "Z650",
+            "Z650RS",
+            "Z900"
           ]
         }
       },
@@ -324,14 +330,16 @@
         "models": {
           "motorcycles": [
             "RS 457",
-            "Tuono 457",
             "RS 660",
-            "Tuono 660",
+            "RSV4 1100 Factory",
             "Tuareg 660",
-            "RSV4 1100 Factory"
+            "Tuareg 660",
+            "Tuono 457",
+            "Tuono 660"
           ],
           "scooters": [
             "SR 125",
+            "SR 160",
             "SR 160",
             "SR 175",
             "SXR 125",
@@ -345,15 +353,17 @@
         "brand": "Vespa India",
         "models": {
           "scooters": [
-            "Vespa ZX 125",
             "Vespa 125",
-            "Vespa S 125",
-            "Vespa Tech 125",
-            "Vespa S Tech 125",
             "Vespa 150",
-            "Vespa S 150",
             "Vespa Officina 8",
-            "Vespa Qala"
+            "Vespa Officina 8",
+            "Vespa Qala",
+            "Vespa S 125",
+            "Vespa S 150",
+            "Vespa S Tech 125",
+            "Vespa Tech 125",
+            "Vespa ZX 125",
+            "Vespa ZX 125"
           ]
         }
       },
@@ -362,20 +372,22 @@
         "brand": "Harley-Davidson India",
         "models": {
           "motorcycles": [
-            "X440",
-            "X440 T",
-            "Nightster",
-            "Nightster Special",
-            "Sportster S",
-            "Street Bob",
+            "Breakout",
+            "CVO Road Glide",
+            "CVO Street Glide",
             "Fat Boy",
             "Heritage Classic",
-            "Breakout",
-            "Street Glide",
+            "Nightster",
+            "Nightster Special",
+            "Pan America 1250 Special",
             "Road Glide",
-            "CVO Street Glide",
-            "CVO Road Glide",
-            "Pan America 1250 Special"
+            "Sportster S",
+            "Street Bob",
+            "Street Glide",
+            "X440",
+            "X440",
+            "X440 T",
+            "X440 T"
           ]
         }
       },
@@ -384,31 +396,40 @@
         "brand": "Triumph India",
         "models": {
           "motorcycles": [
-            "Speed 400",
-            "Scrambler 400 X",
-            "Scrambler 400 XC",
-            "Speed T4",
-            "Tracker 400",
-            "Thruxton 400",
-            "Trident 660",
-            "Tiger 660",
-            "Tiger Sport 660",
-            "Tiger 850 Sport",
-            "Speed Twin 900",
-            "Scrambler 900",
-            "Bonneville T100",
-            "Bonneville T120",
             "Bonneville Bobber",
             "Bonneville Speedmaster",
+            "Bonneville T100",
+            "Bonneville T120",
+            "Rocket 3",
+            "Scrambler 1200",
+            "Scrambler 1200",
+            "Scrambler 400 X",
+            "Scrambler 400 XC",
+            "Scrambler 400 XC",
+            "Scrambler 900",
+            "Speed 400",
+            "Speed T4",
+            "Speed T4",
+            "Speed Triple 1200 RS",
+            "Speed Twin 1200",
+            "Speed Twin 1200",
+            "Speed Twin 900",
+            "Street Triple 765 R",
+            "Street Triple R",
             "Street Triple R",
             "Street Triple RS",
-            "Street Triple 765 R",
-            "Speed Twin 1200",
-            "Scrambler 1200",
-            "Speed Triple 1200 RS",
-            "Tiger 900",
+            "Street Triple RS",
+            "Thruxton 400",
+            "Thruxton 400",
             "Tiger 1200",
-            "Rocket 3"
+            "Tiger 660",
+            "Tiger 850 Sport",
+            "Tiger 900",
+            "Tiger Sport 660",
+            "Tiger Sport 660",
+            "Tracker 400",
+            "Tracker 400",
+            "Trident 660"
           ]
         }
       },
@@ -417,25 +438,32 @@
         "brand": "Ducati India",
         "models": {
           "motorcycles": [
-            "Scrambler Icon",
-            "Scrambler Nightshift",
-            "Scrambler Full Throttle",
-            "Scrambler 800",
-            "Monster",
-            "Hypermotard 698 Mono",
-            "Hypermotard 950",
-            "SuperSport 950",
-            "Panigale V2",
-            "Streetfighter V2",
-            "Panigale V4",
-            "Panigale V4 R",
-            "Streetfighter V4",
-            "Multistrada V2",
-            "Multistrada V4",
-            "Multistrada V4 RS",
             "DesertX",
             "DesertX Discovery",
             "Diavel V4",
+            "Hypermotard 698 Mono",
+            "Hypermotard 698 Mono",
+            "Hypermotard 950",
+            "Monster",
+            "Multistrada V2",
+            "Multistrada V4",
+            "Multistrada V4 RS",
+            "Multistrada V4 RS",
+            "Panigale V2",
+            "Panigale V4",
+            "Panigale V4 R",
+            "Panigale V4 R",
+            "Scrambler 800",
+            "Scrambler Full Throttle",
+            "Scrambler Full Throttle",
+            "Scrambler Icon",
+            "Scrambler Icon",
+            "Scrambler Nightshift",
+            "Scrambler Nightshift",
+            "Streetfighter V2",
+            "Streetfighter V4",
+            "SuperSport 950",
+            "SuperSport 950",
             "XDiavel"
           ]
         }
@@ -445,26 +473,29 @@
         "brand": "BMW Motorrad India",
         "models": {
           "motorcycles": [
-            "G 310 R",
-            "G 310 GS",
-            "G 310 RR",
+            "C 400 GT",
             "CE 02",
+            "CE 04",
             "F 900 GS",
             "F 900 GS Adventure",
-            "R 1250 RT",
-            "R 1300 GS",
-            "R 1300 GS Adventure",
-            "S 1000 R",
+            "G 310 GS",
+            "G 310 R",
+            "G 310 RR",
+            "K 1600",
             "M 1000 R",
-            "S 1000 RR",
-            "S 1000 XR",
+            "M 1000 R",
             "M 1000 XR",
             "R 12",
             "R 12 nineT",
+            "R 1250 RT",
+            "R 1250 RT",
+            "R 1300 GS",
+            "R 1300 GS Adventure",
+            "R 1300 GS Adventure",
             "R18",
-            "C 400 GT",
-            "CE 04",
-            "K 1600"
+            "S 1000 R",
+            "S 1000 RR",
+            "S 1000 XR"
           ]
         }
       },
@@ -474,29 +505,37 @@
         "models": {
           "motorcycles": [
             "101 Scout",
-            "Scout Classic",
-            "Scout Bobber",
-            "Scout Sixty Bobber",
-            "Scout Sixty Classic",
-            "Sport Scout",
-            "Sport Scout Sixty",
-            "Super Scout",
-            "Chief Dark Horse",
+            "101 Scout",
+            "Challenger Dark Horse",
+            "Challenger Limited",
             "Chief Bobber Dark Horse",
-            "Sport Chief",
-            "Super Chief Limited",
-            "Super Chief Dark Horse",
-            "Springfield",
-            "Springfield Dark Horse",
+            "Chief Dark Horse",
             "Chieftain Dark Horse",
             "Chieftain Limited",
-            "Challenger Limited",
-            "Challenger Dark Horse",
-            "Pursuit Limited",
             "Pursuit Dark Horse",
+            "Pursuit Limited",
             "Roadmaster",
+            "Roadmaster Dark Horse",
             "Roadmaster Limited",
-            "Roadmaster Dark Horse"
+            "Scout Bobber",
+            "Scout Bobber",
+            "Scout Classic",
+            "Scout Classic",
+            "Scout Sixty Bobber",
+            "Scout Sixty Bobber",
+            "Scout Sixty Classic",
+            "Scout Sixty Classic",
+            "Sport Chief",
+            "Sport Scout",
+            "Sport Scout",
+            "Sport Scout Sixty",
+            "Sport Scout Sixty",
+            "Springfield",
+            "Springfield Dark Horse",
+            "Super Chief Dark Horse",
+            "Super Chief Limited",
+            "Super Scout",
+            "Super Scout"
           ]
         }
       },
@@ -505,24 +544,7 @@
         "brand": "Moto Guzzi",
         "models": {
           "motorcycles": [
-            "V7",
-            "V7 Sport",
-            "V85 TT",
-            "V100 Mandello"
-          ]
-        }
-      },
-      {
-        "brandId": "cfmoto-india",
-        "brand": "CFMoto India",
-        "models": {
-          "motorcycles": [
-            "300NK",
-            "450MT",
-            "675SR-R",
-            "650NK",
-            "650MT",
-            "650GT"
+            "V85 TT"
           ]
         }
       },
@@ -553,20 +575,6 @@
             "350R",
             "350T",
             "GK350"
-          ]
-        }
-      },
-      {
-        "brandId": "mahindra-two-wheelers",
-        "brand": "Mahindra Two Wheelers",
-        "models": {
-          "motorcycles": [
-            "Mojo 300",
-            "Centuro 125"
-          ],
-          "scooters": [
-            "Gusto 110",
-            "Gusto 125"
           ]
         }
       }
@@ -706,6 +714,7 @@
             "F77 Mach 2",
             "F77 SuperStreet",
             "Shockwave",
+            "X47 Crossover",
             "X47 Crossover"
           ],
           "scooters": [
@@ -765,7 +774,6 @@
         "brand": "Hop Electric",
         "models": {
           "scooters": [
-            "Lyf",
             "Leo",
             "OXO"
           ]
@@ -795,6 +803,7 @@
           "motorcycles": [
             "Rorr",
             "Rorr EZ",
+            "Rorr EZ Sigma",
             "Rorr EZ Sigma"
           ]
         }
@@ -888,10 +897,12 @@
         "brand": "Quantum Energy",
         "models": {
           "scooters": [
-            "Milan",
-            "Plasma",
             "Bziness",
-            "Bziness XS"
+            "Bziness XS",
+            "Bziness XS",
+            "Milan",
+            "Milan",
+            "Plasma"
           ]
         }
       },
@@ -922,11 +933,17 @@
         "cargo": [
           "Maxima XL Electric",
           "Maxima X Wide Diesel",
-          "Maxima C CNG"
+          "Maxima C CNG",
+          "Maxima Z",
+          "Maxima X Wide"
         ],
         "electric": [
-          "GoGo",
-          "Riki P40"
+          "GoGo P5009",
+          "GoGo P5012",
+          "GoGo P7012",
+          "Riki P40",
+          "Riki C40 05 E Cart",
+          "RE E-TEC 9.0"
         ]
       }
     },
@@ -938,16 +955,25 @@
           "Auto Classic",
           "Auto DX",
           "NXT+",
-          "Metro"
+          "Metro",
+          "Auto Plus",
+          "City Plus"
         ],
         "cargo": [
           "Xtra LDX Diesel",
-          "Xtra LDX CNG"
+          "Xtra LDX CNG",
+          "Xtra LDX Plus",
+          "Xtra Classic",
+          "Xtra 600",
+          "Xtra Bada 700"
         ],
         "electric": [
           "E-City",
           "E-Xtra FX",
-          "E-Xtra FX Max"
+          "E-Xtra FX Max",
+          "E-City FX",
+          "E-City FX Max",
+          "E-City Ultra"
         ]
       }
     },
@@ -961,7 +987,8 @@
           "King Duramax Plus"
         ],
         "cargo": [
-          "King Kargo"
+          "King Kargo",
+          "King Kargo CNG HD"
         ],
         "electric": [
           "King EV Max",
@@ -974,6 +1001,7 @@
       "brand": "Mahindra (3W)",
       "models": {
         "passenger": [
+          "Alfa DX",
           "Alfa Passenger",
           "E-Alfa Plus",
           "E-Alfa Mini"
@@ -988,7 +1016,9 @@
           "Treo Zor",
           "Treo Yaari HRT",
           "Treo Yaari SFT",
-          "UDO"
+          "UDO",
+          "Treo Zor Grand Range Plus",
+          "Treo Yaari Cargo"
         ]
       }
     },
@@ -997,13 +1027,12 @@
       "brand": "Atul Auto",
       "models": {
         "passenger": [
-          "Gem Paxx",
-          "Elite Plus",
-          "Rik Auto"
+          "Gem Paxx"
         ],
         "cargo": [
-          "Gem Cargo",
-          "Shakti Cargo"
+          "GEM Cargo",
+          "Shakti Cargo",
+          "Smart Cargo"
         ],
         "electric": [
           "Rik Electric"
@@ -1038,6 +1067,7 @@
           "Comfort F2F+"
         ],
         "electric": [
+          "YOUDHA EPOD L5",
           "Youdha E5 Passenger",
           "Youdha E5 Cargo"
         ]
@@ -1077,6 +1107,470 @@
       "models": {
         "note": "Force Motors has shifted focus to LCVs (Urbania, Gurkha, Trax). No current 3W production."
       }
+    }
+  ],
+  "fourWheelers": [
+    {
+      "brandId": "tata-motors",
+      "brand": "Tata Motors",
+      "models": [
+        "Nexon EV",
+        "Nexon EV Max",
+        "Nexon",
+        "Nexon Max",
+        "Harrier",
+        "Harrier Plus",
+        "Safari",
+        "Tigor",
+        "Tiago",
+        "Tiago EV",
+        "Altroz",
+        "Altroz EV",
+        "Punch",
+        "Punch EV",
+        "Curvv",
+        "Curvv EV",
+        "Gravitas",
+        "Avinya",
+        "Nano EV"
+      ]
+    },
+    {
+      "brandId": "maruti-suzuki",
+      "brand": "Maruti Suzuki",
+      "models": [
+        "Alto",
+        "Alto K10",
+        "Baleno",
+        "Brezza",
+        "Celerio",
+        "Ciaz",
+        "Dzire",
+        "Dzire Tour S",
+        "Eeco",
+        "Ertiga",
+        "Fronx",
+        "Grand Vitara",
+        "Ignis",
+        "Invicto",
+        "Jimny",
+        "S-Presso",
+        "Swift",
+        "Victoris",
+        "Wagon R",
+        "XL6",
+        "e-Vitara"
+      ]
+    },
+    {
+      "brandId": "hyundai-india",
+      "brand": "Hyundai",
+      "models": [
+        "Creta",
+        "Creta EV",
+        "Creta N Line",
+        "Venue",
+        "Venue N Line",
+        "Verna",
+        "i20",
+        "i20 N-Line",
+        "Aura",
+        "Exter",
+        "Alcazar",
+        "Grand i10 Nios",
+        "IONIQ 5",
+        "Tucson",
+        "Prime SD",
+        "Prime HB"
+      ]
+    },
+    {
+      "brandId": "honda-india",
+      "brand": "Honda",
+      "models": [
+        "Amaze",
+        "Amaze 2nd Gen",
+        "City",
+        "City Hybrid",
+        "Elevate"
+      ]
+    },
+    {
+      "brandId": "mahindra-india",
+      "brand": "Mahindra",
+      "models": [
+        "BE 6",
+        "Bolero",
+        "Bolero Camper",
+        "Bolero Neo",
+        "Bolero Neo Plus",
+        "Bolero Pik-Up",
+        "Marazzo",
+        "Scorpio Classic",
+        "Scorpio N",
+        "Thar",
+        "Thar Roxx",
+        "XEV 9S",
+        "XEV 9e",
+        "XUV 3XO",
+        "XUV 3XO EV",
+        "XUV 7XO",
+        "XUV400 EV",
+        "XUV700"
+      ]
+    },
+    {
+      "brandId": "kia-india",
+      "brand": "Kia",
+      "models": [
+        "Carens",
+        "Carens Clavis",
+        "Carens Clavis EV",
+        "Carnival",
+        "EV6",
+        "EV9",
+        "Seltos",
+        "Sonet",
+        "Syros"
+      ]
+    },
+    {
+      "brandId": "toyota-india",
+      "brand": "Toyota",
+      "models": [
+        "Camry",
+        "Corolla Altis",
+        "Fortuner",
+        "Fortuner Legender",
+        "Glanza",
+        "Hilux",
+        "Hilux Invincible",
+        "Innova",
+        "Innova Hycross",
+        "Urban Cruiser",
+        "Urban Cruiser Hyryder",
+        "Innova Crysta",
+        "Rumion"
+      ]
+    },
+    {
+      "brandId": "volkswagen-india",
+      "brand": "Volkswagen",
+      "models": [
+        "Virtus",
+        "Taigun",
+        "Tiguan R-Line",
+        "Tayron R-Line",
+        "Golf GTI"
+      ]
+    },
+    {
+      "brandId": "skoda-india",
+      "brand": "Skoda",
+      "models": [
+        "Kushaq",
+        "Kylaq",
+        "Slavia",
+        "Kodiaq",
+        "Octavia RS"
+      ]
+    },
+    {
+      "brandId": "mg-india",
+      "brand": "MG Motor",
+      "models": [
+        "Astor",
+        "Comet EV",
+        "Cyberster",
+        "Gloster",
+        "Hector",
+        "Hector Plus",
+        "M9",
+        "Windsor EV",
+        "ZS EV"
+      ]
+    },
+    {
+      "brandId": "renault-india",
+      "brand": "Renault",
+      "models": [
+        "Duster",
+        "Kiger",
+        "Kwid",
+        "Triber"
+      ]
+    },
+    {
+      "brandId": "nissan-india",
+      "brand": "Nissan",
+      "models": [
+        "Gravite",
+        "Magnite",
+        "X-Trail"
+      ]
+    },
+    {
+      "brandId": "jeep-india",
+      "brand": "Jeep",
+      "models": [
+        "Compass",
+        "Grand Cherokee",
+        "Meridian",
+        "Wrangler"
+      ]
+    },
+    {
+      "brandId": "citroen-india",
+      "brand": "Citroen",
+      "models": [
+        "C3",
+        "C3 Aircross",
+        "C5 Aircross",
+        "eC3",
+        "Basalt"
+      ]
+    },
+    {
+      "brandId": "byd-india",
+      "brand": "BYD",
+      "models": [
+        "Atto 3",
+        "Seal",
+        "Sealion 7",
+        "eMAX 7"
+      ]
+    },
+    {
+      "brandId": "force-india",
+      "brand": "Force Motors",
+      "models": [
+        "Gurkha",
+        "Trax Cruiser",
+        "Urbania"
+      ]
+    },
+    {
+      "brandId": "isuzu-india",
+      "brand": "Isuzu",
+      "models": [
+        "D-Max",
+        "Hi-Lander",
+        "MU-X",
+        "S-CAB",
+        "V-Cross"
+      ]
+    },
+    {
+      "brandId": "vinfast-india",
+      "brand": "VinFast",
+      "models": [
+        "Limo Green",
+        "VF 3",
+        "VF 6",
+        "VF 7",
+        "VF 8",
+        "VF 9"
+      ]
+    },
+    {
+      "brandId": "bmw-india",
+      "brand": "BMW",
+      "models": [
+        "i7",
+        "3 Series",
+        "5 Series",
+        "7 Series",
+        "X1",
+        "X2",
+        "X3",
+        "X4",
+        "X5",
+        "X6",
+        "X7",
+        "M340i",
+        "M440i xDrive",
+        "M550i",
+        "M760i",
+        "Z4",
+        "i4",
+        "i5",
+        "iX1",
+        "iX3",
+        "iX xDrive40",
+        "iX xDrive50",
+        "M440i",
+        "M850i",
+        "M550i xDrive",
+        "M760i xDrive"
+      ]
+    },
+    {
+      "brandId": "audi-india",
+      "brand": "Audi",
+      "models": [
+        "A3",
+        "A4",
+        "A6",
+        "A8",
+        "Q2",
+        "Q3",
+        "Q5",
+        "Q7",
+        "Q8",
+        "e-tron GT",
+        "e-tron",
+        "RS 5",
+        "RS 7",
+        "Q4 e-tron"
+      ]
+    },
+    {
+      "brandId": "mercedes-benz-india",
+      "brand": "Mercedes-Benz",
+      "models": [
+        "C-Class",
+        "E-Class",
+        "S-Class",
+        "A-Class",
+        "B-Class",
+        "GLA",
+        "GLB",
+        "GLC",
+        "GLE",
+        "GLS",
+        "AMG G 63",
+        "EQC",
+        "EQE",
+        "EQS"
+      ]
+    },
+    {
+      "brandId": "porsche-india",
+      "brand": "Porsche",
+      "models": [
+        "911",
+        "Cayman",
+        "Boxster",
+        "Taycan",
+        "Macan",
+        "Cayenne",
+        "Panamera"
+      ]
+    },
+    {
+      "brandId": "lamborghini-india",
+      "brand": "Lamborghini",
+      "models": [
+        "Huracan",
+        "Revuelto",
+        "Urus",
+        "Urus S"
+      ]
+    },
+    {
+      "brandId": "ferrari-india",
+      "brand": "Ferrari",
+      "models": [
+        "F8 Tributo",
+        "SF90 Stradale",
+        "Roma",
+        "Portofino",
+        "812 Superfast",
+        "California T",
+        "GTC4Lusso"
+      ]
+    },
+    {
+      "brandId": "land-rover-india",
+      "brand": "Land Rover",
+      "models": [
+        "Discovery",
+        "Discovery Sport",
+        "Freelander 2",
+        "Range Rover",
+        "Range Rover Sport",
+        "Range Rover Evoque",
+        "Defender"
+      ]
+    },
+    {
+      "brandId": "jaguar-india",
+      "brand": "Jaguar",
+      "models": [
+        "XF"
+      ]
+    },
+    {
+      "brandId": "lexus-india",
+      "brand": "Lexus",
+      "models": [
+        "ES",
+        "LS",
+        "LX",
+        "RX",
+        "UX"
+      ]
+    },
+    {
+      "brandId": "volvo-india",
+      "brand": "Volvo",
+      "models": [
+        "S60",
+        "S90",
+        "XC40",
+        "XC60",
+        "XC90"
+      ]
+    },
+    {
+      "brandId": "mini-india",
+      "brand": "Mini",
+      "models": [
+        "Cooper",
+        "Cooper S",
+        "Countryman",
+        "Clubman"
+      ]
+    },
+    {
+      "brandId": "aston-martin-india",
+      "brand": "Aston Martin",
+      "models": [
+        "DB11",
+        "Vantage",
+        "DBS",
+        "DBX"
+      ]
+    },
+    {
+      "brandId": "bentley-india",
+      "brand": "Bentley",
+      "models": [
+        "Continental GT",
+        "Flying Spur",
+        "Bentayga"
+      ]
+    },
+    {
+      "brandId": "maserati-india",
+      "brand": "Maserati",
+      "models": [
+        "Ghibli",
+        "Quattroporte",
+        "MC20",
+        "Levante",
+        "MC20 Cielo"
+      ]
+    },
+    {
+      "brandId": "rolls-royce-india",
+      "brand": "Rolls-Royce",
+      "models": [
+        "Ghost",
+        "Wraith",
+        "Dawn",
+        "Phantom"
+      ]
     }
   ]
 }

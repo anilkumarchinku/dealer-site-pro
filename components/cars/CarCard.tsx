@@ -146,12 +146,18 @@ export function CarCard({
         (car.engine?.type && car.engine.type !== 'TBD' ? car.engine.type : '');
     const transDisplay = aggregatedSpecs?.transmissionsDisplay ||
         (car.transmission?.type && car.transmission.type !== 'TBD' && car.transmission.type !== 'Transmission'
-            ? car.transmission.type : '');
+            ? car.transmission.type
+            : car.vehicleCategory === '3w' ? 'Automatic'
+            : car.vehicleCategory === '2w' ? (car.bodyType === 'Scooter' || car.bodyType === 'Electric' ? 'Automatic' : 'Manual')
+            : '');
     const seatingDisplay = aggregatedSpecs?.seatingDisplay ||
         (car.dimensions?.seatingCapacity ? `${car.dimensions.seatingCapacity}` : '');
     const mileageDisplay = aggregatedSpecs?.mileageDisplay ||
         (car.performance?.fuelEfficiency && car.performance.fuelEfficiency > 0
-            ? `${car.performance.fuelEfficiency} km/l` : '');
+            ? `${car.performance.fuelEfficiency} km/l`
+            : car.performance?.topSpeed && (car.vehicleCategory === '2w' || car.vehicleCategory === '3w')
+            ? `${car.performance.topSpeed} km/h top`
+            : '');
 
     // Category-specific specs
     const isEV = car.engine?.type === 'Electric';
@@ -160,8 +166,10 @@ export function CarCard({
             icon: <Settings className="w-3.5 h-3.5 text-orange-500" />,
             label: isEV ? 'Battery' : 'Engine',
             value: isEV
-                ? (car.engine?.batteryCapacity ? `${car.engine.batteryCapacity} kWh` : '')
-                : (car.engine?.displacement ? `${car.engine.displacement} cc` : ''),
+                ? (car.engine?.batteryCapacity ? `${car.engine.batteryCapacity} kWh` : (car.performance?.range ? `${car.performance.range} km` : ''))
+                : (car.engine?.displacement ? `${car.engine.displacement} cc`
+                    : car.engine?.power && car.engine.power !== '—' ? car.engine.power
+                    : ''),
         }
         : car.vehicleCategory === '3w'
             ? {
@@ -470,10 +478,9 @@ function SpecItem({
     value: string;
     light?: boolean;
 }) {
-    if (!value) return null;
     const isLong = value.includes('/');
     return (
-        <div className="flex items-center gap-2 p-2 rounded-lg bg-white border border-gray-100">
+        <div className={cn("flex items-center gap-2 p-2 rounded-lg bg-white border border-gray-100", !value && "invisible")}>
             <div className="w-7 h-7 rounded-md flex items-center justify-center shrink-0 bg-white shadow-sm border border-gray-100">
                 {icon}
             </div>
