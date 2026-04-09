@@ -196,55 +196,62 @@ function getLocal4WImage(make: string, model: string): string | null {
 
 /**
  * Returns a public URL to a locally committed 2W image, or null if not found.
- * Scans available folders to find a match for the brand.
+ * Tries direct folder paths and scans if needed.
  */
 export function getLocal2WImage(brand: string, model: string): string | null {
     const slug = toSlug(model)
     const brandLower = brand.toLowerCase().trim()
-    const brandSlug = brandLower.replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
 
     try {
-        const brandDir = path.join(process.cwd(), 'public', 'data', 'brand-model-images', '2w')
-        if (!fs.existsSync(brandDir)) return null
+        const baseDir = path.join(process.cwd(), 'public', 'data', 'brand-model-images', '2w')
+        if (!fs.existsSync(baseDir)) return null
 
-        const folders = fs.readdirSync(brandDir)
+        // Common folder naming patterns to try
+        const folderPatterns = [
+            // Direct slug
+            brandLower.replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''),
+            // With common suffixes
+            `${brandLower.replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}-india`,
+            `${brandLower.replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}-ev`,
+            `${brandLower.replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}-auto`,
+            `${brandLower.replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}-motorcycles`,
+            `${brandLower.replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}-motor`,
+            // Special cases (hardcoded for brands with non-obvious names)
+            brandLower.includes('honda') ? 'honda-hmsi' : null,
+            brandLower.includes('matter') ? 'matter-ev' : null,
+        ].filter(Boolean) as string[]
 
-        // Try to find a matching folder:
-        // 1. Exact match (unlikely)
-        // 2. Folder contains all words from brand (e.g. "honda-hmsi" contains "honda")
-        // 3. Brand slug matches folder prefix
-        let bestMatch: string | null = null
+        for (const folder of folderPatterns) {
+            const imgPath = path.join(baseDir, folder, slug)
+            for (const ext of ['.jpg', '.png']) {
+                if (fs.existsSync(imgPath + ext)) {
+                    return `/data/brand-model-images/2w/${folder}/${slug}${ext}`
+                }
+            }
+        }
 
-        for (const folder of folders) {
+        // Fallback: scan all folders if patterns didn't match
+        const allFolders = fs.readdirSync(baseDir)
+        const brandWords = brandLower.split(/[^a-z0-9]/g).filter(w => w.length > 2)
+
+        for (const folder of allFolders) {
             const folderLower = folder.toLowerCase()
-
-            // Exact slug match
-            if (folderLower === brandSlug) {
-                bestMatch = folder
-                break
-            }
-
-            // Check if folder starts with brand keywords
-            const brandWords = brandSlug.split('-').filter(w => w.length > 2)
             const folderWords = folderLower.split('-')
-            const matches = brandWords.filter(w => folderWords.some(fw => fw.includes(w) || w.includes(fw)))
 
-            if (matches.length > 0 && !bestMatch) {
-                bestMatch = folder
+            // Check if folder shares keywords with brand
+            const hasMatch = brandWords.some(bw => folderWords.some(fw => fw.includes(bw) || bw.includes(fw)))
+
+            if (hasMatch) {
+                const imgPath = path.join(baseDir, folder, slug)
+                for (const ext of ['.jpg', '.png']) {
+                    if (fs.existsSync(imgPath + ext)) {
+                        return `/data/brand-model-images/2w/${folder}/${slug}${ext}`
+                    }
+                }
             }
         }
-
-        if (!bestMatch) return null
-
-        // Try to find the image
-        const base = path.join(brandDir, bestMatch, slug)
-        for (const ext of ['.jpg', '.png']) {
-            if (fs.existsSync(base + ext)) {
-                return `/data/brand-model-images/2w/${bestMatch}/${slug}${ext}`
-            }
-        }
-    } catch {
-        return null
+    } catch (err) {
+        console.error(`[getLocal2WImage] Error for ${brand} ${model}:`, err)
     }
     return null
 }
