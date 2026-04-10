@@ -30,6 +30,7 @@ export async function getThreeWheelerVehicles(
     const {
         type, brand, fuelType, bodyType, stockStatus,
         minPrice, maxPrice,
+        permitType, minPayload, maxPayload,
         sortBy = 'newest',
         page = 1,
         pageSize = DEFAULT_PAGE_SIZE,
@@ -48,6 +49,9 @@ export async function getThreeWheelerVehicles(
     if (stockStatus) query = query.eq('stock_status', stockStatus)
     if (minPrice)    query = query.gte('ex_showroom_price_paise', minPrice)
     if (maxPrice)    query = query.lte('ex_showroom_price_paise', maxPrice)
+    if (permitType)  query = query.eq('permit_type', permitType)
+    if (minPayload)  query = query.gte('payload_kg', minPayload)
+    if (maxPayload)  query = query.lte('payload_kg', maxPayload)
 
     const orderMap: Record<string, { column: string; asc: boolean }> = {
         price_asc:  { column: 'ex_showroom_price_paise', asc: true  },

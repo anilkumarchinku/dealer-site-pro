@@ -1,11 +1,13 @@
 "use client"
 
-import type { ThreeWheelerFilters, ThreeWheelerType, ThreeWheelerFuelType, ThreeWheelerStockStatus } from "@/lib/types/three-wheeler"
+import type { ThreeWheelerFilters, ThreeWheelerType, ThreeWheelerFuelType, ThreeWheelerStockStatus, ThreeWheelerBodyType, ThreeWheelerPermit } from "@/lib/types/three-wheeler"
 
 interface Props {
-    filters:   ThreeWheelerFilters
-    onChange:  (filters: ThreeWheelerFilters) => void
-    brands?:   string[]
+    filters:        ThreeWheelerFilters
+    onChange:       (filters: ThreeWheelerFilters) => void
+    brands?:        string[]
+    showCargo?:     boolean
+    showPassenger?: boolean
 }
 
 const TYPES: { value: ThreeWheelerType; label: string }[] = [
@@ -31,13 +33,35 @@ const PRICE_RANGES = [
     { label: "Above ₹6L",     min: 60000000,  max: undefined  },
 ]
 
+const BODY_TYPES: { value: ThreeWheelerBodyType; label: string }[] = [
+    { value: "flatbed",     label: "Flatbed"     },
+    { value: "closed_body", label: "Closed Body" },
+    { value: "tipper",      label: "Tipper"      },
+    { value: "container",   label: "Container"   },
+    { value: "tanker",      label: "Tanker"      },
+    { value: "pickup",      label: "Pickup"      },
+]
+
+const PAYLOAD_RANGES = [
+    { label: "Up to 500 kg",   min: 0,    max: 500       },
+    { label: "500 – 750 kg",   min: 500,  max: 750       },
+    { label: "750 kg – 1 ton", min: 750,  max: 1000      },
+    { label: "Above 1 ton",    min: 1000, max: undefined  },
+]
+
+const PERMIT_TYPES: { value: ThreeWheelerPermit; label: string }[] = [
+    { value: "city",      label: "City Permit"      },
+    { value: "state",     label: "State Permit"     },
+    { value: "all_india", label: "All India Permit" },
+]
+
 const STOCK_STATUSES: { value: ThreeWheelerStockStatus; label: string }[] = [
     { value: "available",      label: "In Stock"       },
     { value: "booking_open",   label: "Booking Open"   },
     { value: "out_of_stock",   label: "Out of Stock"   },
 ]
 
-export function FilterSidebar({ filters, onChange, brands = [] }: Props) {
+export function FilterSidebar({ filters, onChange, brands = [], showCargo = false, showPassenger = false }: Props) {
     function toggle<T>(field: keyof ThreeWheelerFilters, value: T) {
         onChange({
             ...filters,
@@ -50,7 +74,7 @@ export function FilterSidebar({ filters, onChange, brands = [] }: Props) {
         onChange({ sortBy: "newest", page: 1, pageSize: filters.pageSize })
     }
 
-    const hasActive = !!(filters.type || filters.brand || filters.fuelType || filters.stockStatus || filters.minPrice)
+    const hasActive = !!(filters.type || filters.brand || filters.fuelType || filters.stockStatus || filters.minPrice || filters.bodyType || filters.minPayload || filters.permitType)
 
     return (
         <aside className="space-y-6 text-sm">
@@ -135,6 +159,72 @@ export function FilterSidebar({ filters, onChange, brands = [] }: Props) {
                     ))}
                 </div>
             </div>
+
+            {/* Body Type (cargo only) */}
+            {showCargo && (
+                <div>
+                    <p className="font-medium mb-2">Body Type</p>
+                    <div className="space-y-1.5">
+                        {BODY_TYPES.map(b => (
+                            <button
+                                key={b.value}
+                                onClick={() => toggle("bodyType", b.value)}
+                                className={`w-full text-left px-3 py-2 rounded-lg border transition-colors ${
+                                    filters.bodyType === b.value
+                                        ? "border-primary bg-primary/10 text-primary font-medium"
+                                        : "border-border hover:bg-muted/50"
+                                }`}
+                            >
+                                {b.label}
+                            </button>
+                        ))}
+                    </div>
+                </div>
+            )}
+
+            {/* Payload Capacity (cargo only) */}
+            {showCargo && (
+                <div>
+                    <p className="font-medium mb-2">Payload Capacity</p>
+                    <div className="space-y-1.5">
+                        {PAYLOAD_RANGES.map(r => (
+                            <button
+                                key={r.label}
+                                onClick={() => onChange({ ...filters, minPayload: r.min, maxPayload: r.max, page: 1 })}
+                                className={`w-full text-left px-3 py-2 rounded-lg border transition-colors ${
+                                    filters.minPayload === r.min && filters.maxPayload === r.max
+                                        ? "border-primary bg-primary/10 text-primary font-medium"
+                                        : "border-border hover:bg-muted/50"
+                                }`}
+                            >
+                                {r.label}
+                            </button>
+                        ))}
+                    </div>
+                </div>
+            )}
+
+            {/* Permit Type (passenger only) */}
+            {showPassenger && (
+                <div>
+                    <p className="font-medium mb-2">Permit Type</p>
+                    <div className="space-y-1.5">
+                        {PERMIT_TYPES.map(p => (
+                            <button
+                                key={p.value}
+                                onClick={() => toggle("permitType", p.value)}
+                                className={`w-full text-left px-3 py-2 rounded-lg border transition-colors ${
+                                    filters.permitType === p.value
+                                        ? "border-primary bg-primary/10 text-primary font-medium"
+                                        : "border-border hover:bg-muted/50"
+                                }`}
+                            >
+                                {p.label}
+                            </button>
+                        ))}
+                    </div>
+                </div>
+            )}
 
             {/* Brand */}
             {brands.length > 0 && (

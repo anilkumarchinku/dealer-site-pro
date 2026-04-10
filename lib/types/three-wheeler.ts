@@ -199,6 +199,9 @@ export interface ThreeWheelerFilters {
     minPrice?:    number
     maxPrice?:    number
     stockStatus?: ThreeWheelerStockStatus
+    permitType?:  ThreeWheelerPermit   // 'all_india' | 'state' | 'city' | 'none'
+    minPayload?:  number               // kg
+    maxPayload?:  number               // kg
     sortBy?:      'price_asc' | 'price_desc' | 'newest' | 'views'
     page?:        number
     pageSize?:    number

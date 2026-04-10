@@ -23,6 +23,13 @@ export default function ThreeWheelerEMICalculatorPage() {
 
             <EMICalculator defaultPrice={200000} />
 
+            <div className="mt-6 text-center">
+                <Link href={`${prefix}/three-wheelers/fleet-roi`}
+                    className="inline-flex items-center gap-2 text-sm text-primary hover:underline">
+                    Also try: Fleet ROI Calculator →
+                </Link>
+            </div>
+
             <div className="mt-8 p-5 bg-card border border-border rounded-xl space-y-3 text-sm text-muted-foreground">
                 <h3 className="font-semibold text-foreground">Finance Tips for 3-Wheeler Buyers</h3>
                 <ul className="space-y-1.5 list-disc list-inside">

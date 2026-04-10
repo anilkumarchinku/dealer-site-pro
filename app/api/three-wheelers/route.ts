@@ -15,14 +15,17 @@ export async function GET(request: NextRequest) {
     if (!dealerId) return NextResponse.json({ error: 'dealerId is required' }, { status: 400 })
 
     const filters: ThreeWheelerFilters = {
-        type:        searchParams.get('type')        as ThreeWheelerFilters['type']     ?? undefined,
+        type:        searchParams.get('type')        as ThreeWheelerFilters['type']        ?? undefined,
         brand:       searchParams.get('brand')        ?? undefined,
-        fuelType:    searchParams.get('fuelType')     as ThreeWheelerFilters['fuelType'] ?? undefined,
-        bodyType:    searchParams.get('bodyType')     as ThreeWheelerFilters['bodyType'] ?? undefined,
+        fuelType:    searchParams.get('fuelType')     as ThreeWheelerFilters['fuelType']   ?? undefined,
+        bodyType:    searchParams.get('bodyType')     as ThreeWheelerFilters['bodyType']   ?? undefined,
         stockStatus: searchParams.get('stockStatus')  as ThreeWheelerFilters['stockStatus'] ?? undefined,
-        sortBy:      searchParams.get('sortBy')       as ThreeWheelerFilters['sortBy']   ?? 'newest',
+        sortBy:      searchParams.get('sortBy')       as ThreeWheelerFilters['sortBy']     ?? 'newest',
         minPrice:    searchParams.get('minPrice')  ? Number(searchParams.get('minPrice'))  : undefined,
         maxPrice:    searchParams.get('maxPrice')  ? Number(searchParams.get('maxPrice'))  : undefined,
+        permitType:  searchParams.get('permitType') as ThreeWheelerFilters['permitType']  ?? undefined,
+        minPayload:  searchParams.get('minPayload') ? Number(searchParams.get('minPayload')) : undefined,
+        maxPayload:  searchParams.get('maxPayload') ? Number(searchParams.get('maxPayload')) : undefined,
         page:        searchParams.get('page')      ? Number(searchParams.get('page'))      : 1,
         pageSize:    searchParams.get('pageSize')  ? Number(searchParams.get('pageSize'))  : 20,
     }
