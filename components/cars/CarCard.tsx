@@ -238,16 +238,12 @@ export function CarCard({
                                 : car.images.hero;
 
                         if (displayUrl) {
-                            // Use unoptimized for external CDN URLs (CardDekho, Supabase, etc.)
-                            // Next.js image optimization fetches server-side which gets blocked by CDN
-                            // hotlink protection. unoptimized lets the browser load directly.
-                            const isExternal = displayUrl.startsWith('http');
                             return (
                                 <Image
                                     src={displayUrl}
                                     alt={`${car.make} ${car.model}`}
                                     fill
-                                    unoptimized={isExternal}
+                                    unoptimized
                                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                                     onError={() => {

@@ -181,7 +181,7 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
                                 src={heroSrc}
                                 alt={`${car.make} ${car.model}`}
                                 fill
-                                unoptimized={heroSrc.startsWith('http')}
+                                unoptimized
                                 sizes="(max-width: 1024px) 100vw, 896px"
                                 className="object-cover"
                                 onError={() => setHeroImgIdx(prev => prev + 1)}

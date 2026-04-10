@@ -303,7 +303,7 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
                                                 }`}
                                             style={mainImage === img ? { borderColor: brandColor } : {}}
                                         >
-                                            <Image src={img} alt={`view ${i + 1}`} fill sizes="56px" className="object-cover" unoptimized={img.startsWith('http')} />
+                                            <Image src={img} alt={`view ${i + 1}`} fill sizes="56px" className="object-cover" unoptimized />
                                         </button>
                                     ))}
                                 </div>
