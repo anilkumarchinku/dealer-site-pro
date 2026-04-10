@@ -69,18 +69,20 @@ const nextConfig: NextConfig = {
             { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
             { key: 'X-XSS-Protection', value: '1; mode=block' },
             { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
-            { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=(self)' },
+            { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
             {
                 key: 'Strict-Transport-Security',
-                value: 'max-age=63072000; includeSubDomains',
+                value: 'max-age=63072000; includeSubDomains; preload',
             },
             {
                 key: 'Content-Security-Policy',
                 value: [
                     "default-src 'self'",
-                    "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://checkout.razorpay.com",
+                    // unsafe-eval removed — not needed in production Next.js builds.
+                    // Razorpay checkout runs in an iframe (frame-src below), not inline.
+                    "script-src 'self' 'unsafe-inline' https://checkout.razorpay.com",
                     "style-src 'self' 'unsafe-inline'",
-                    "img-src 'self' data: blob: https://*.supabase.co https://*.cyepro.com https://lh3.googleusercontent.com https://images.unsplash.com https://storage.googleapis.com https://maps.googleapis.com https://stimg.cardekho.com https://truckcdn.cardekho.com https://imgd.aeplcdn.com https://cdn.bikedekho.com https://www.v3cars.com",
+                    "img-src 'self' data: blob: https://*.supabase.co https://*.cyepro.com https://lh3.googleusercontent.com https://images.unsplash.com https://storage.googleapis.com https://maps.googleapis.com https://*.cardekho.com https://*.aeplcdn.com https://*.bikedekho.com https://*.gaadi.com https://www.v3cars.com https://www.hyundai.com https://*.hyundai.com",
                     "font-src 'self' data:",
                     "connect-src 'self' https://*.supabase.co https://api.cyepro.com https://checkout.razorpay.com wss://*.supabase.co",
                     "frame-src https://api.razorpay.com https://checkout.razorpay.com",

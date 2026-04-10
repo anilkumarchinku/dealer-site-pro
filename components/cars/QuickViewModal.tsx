@@ -203,14 +203,16 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
         allImages.unshift(car.images.hero);
     }
 
-    // If the card already resolved a working image, use it as the first (ensures modal matches card)
+    // Put the card's already-resolved image first — it's the most likely to work
     if (resolvedImageSrc && !allImages.includes(resolvedImageSrc)) {
         allImages.unshift(resolvedImageSrc);
     }
 
-    // If still no real images, use scraped ones
-    if (allImages.length === 0 && showScraped) {
-        allImages.push(...scrapedUrls);
+    // Always append scraped URLs as last-resort fallback (not just when list is empty)
+    if (showScraped) {
+        for (const url of scrapedUrls) {
+            if (!allImages.includes(url)) allImages.push(url);
+        }
     }
 
     const mainImage = activeImage ?? allImages[imgOffset] ?? null;
