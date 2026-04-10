@@ -192,17 +192,19 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
     // Derived
     const logoSrc = getBrandLogo(car.make);
 
-    // Build a simple fallback list: card's image first, then scraped, then hero/exterior
+    // Build fallback list: local scraped path first, then CDN only for 2W/3W
+    // For 4W we never use CDN (car.images.hero) — some CDN URLs serve lifestyle/
+    // marketing shots with people in them instead of plain car exteriors.
     const scrapedUrls = getScrapedImageUrls(
         car.vehicleCategory as '2w' | '3w' | '4w',
         brandNameToId(car.make, car.vehicleCategory as '2w' | '3w' | '4w'),
         car.model
     );
+    const is4W = car.vehicleCategory === '4w';
     const fallbackList = [...new Set([
         resolvedImageSrc,
         ...scrapedUrls,
-        car.images.hero,
-        ...(car.images.exterior ?? []),
+        ...(is4W ? [] : [car.images.hero, ...(car.images.exterior ?? [])]),
     ].filter((u): u is string => !!u && u !== '/placeholder-car.jpg'))];
 
     const mainImage = activeImage ?? fallbackList[imgIdx] ?? null;
