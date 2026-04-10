@@ -25,6 +25,9 @@ export function modelToSlug(model: string): string {
  * Returns the public URL(s) to try for a scraped model image.
  * Always returns jpg first, then png — callers should use the first
  * one that loads (or pass both as fallback chain).
+ *
+ * 2W/3W → Supabase storage (scraped images uploaded there)
+ * 4W    → local public/data/brand-model-images/4w/ (committed static files, no Supabase upload)
  */
 export function getScrapedImageUrls(
     vehicleCategory: "2w" | "3w" | "4w",
@@ -32,6 +35,10 @@ export function getScrapedImageUrls(
     model: string
 ): [string, string] {
     const slug = modelToSlug(model);
+    if (vehicleCategory === "4w") {
+        const base = `/data/brand-model-images/4w/${brandId}/${slug}`;
+        return [`${base}.jpg`, `${base}.png`];
+    }
     const base = `${SUPABASE_STORAGE_URL}/${vehicleCategory}/${brandId}/${slug}`;
     return [`${base}.jpg`, `${base}.png`];
 }
