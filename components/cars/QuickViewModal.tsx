@@ -287,14 +287,11 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
                         <div className="space-y-2">
                             <div className="relative aspect-[16/7] bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl overflow-hidden flex items-center justify-center">
                                 {mainImage && mainImage !== '/placeholder-car.jpg'
-                                    ? <Image
+                                    ? // eslint-disable-next-line @next/next/no-img-element
+                                      <img
                                         src={mainImage}
                                         alt={`${car.make} ${car.model}`}
-                                        fill
-                                        sizes="(max-width:1024px) 100vw, 768px"
-                                        className="object-cover"
-                                        priority
-                                        unoptimized={mainImage.startsWith('http')}
+                                        className="w-full h-full object-cover"
                                         onError={() => {
                                             if (activeImage) { setActiveImage(null); }
                                             else if (imgOffset < allImages.length - 1) { setImgOffset(o => o + 1); }
