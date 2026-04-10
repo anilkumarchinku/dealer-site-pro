@@ -114,9 +114,13 @@ function RatingBar({ label, value, color }: { label: string; value: number; colo
 // ─── Main Component ───────────────────────────────────────────────────────────
 export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandColor = '#2563eb', resolvedImageSrc }: Props) {
     const [activeImage, setActiveImage] = useState<string | null>(null);
+    const [imgOffset, setImgOffset] = useState(0);
     const [detailedInfo, setDetailedInfo] = useState<DetailedCarInfo[]>([]);
     const [loading, setLoading] = useState(false);
     const [selVariant, setSelVariant] = useState<DetailedCarInfo | null>(null);
+
+    // Reset image offset when modal opens/closes
+    useEffect(() => { setImgOffset(0); setActiveImage(null); }, [open]);
 
     useEffect(() => {
         let isMounted = true;
@@ -209,19 +213,7 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
         allImages.push(...scrapedUrls);
     }
 
-    const mainImage = activeImage ?? allImages[0] ?? null;
-
-    // DEBUG: Log image data when modal opens
-    if (open) {
-        console.log(`[QuickViewModal] ${car.make} ${car.model}:`, {
-            hero: car.images.hero,
-            exterior_count: car.images.exterior?.length ?? 0,
-            interior_count: car.images.interior?.length ?? 0,
-            all_images_count: allImages.length,
-            mainImage: mainImage,
-            isPlaceholder: mainImage === '/placeholder-car.jpg' || !mainImage,
-        });
-    }
+    const mainImage = activeImage ?? allImages[imgOffset] ?? null;
     const priceStart = formatPriceInLakhs(car.pricing.exShowroom.min);
     const priceEnd = formatPriceInLakhs(car.pricing.exShowroom.max);
     const hasRange = car.pricing.exShowroom.min !== car.pricing.exShowroom.max;
@@ -293,7 +285,19 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
                         <div className="space-y-2">
                             <div className="relative aspect-[16/7] bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl overflow-hidden flex items-center justify-center">
                                 {mainImage && mainImage !== '/placeholder-car.jpg'
-                                    ? <Image src={mainImage} alt={`${car.make} ${car.model}`} fill sizes="(max-width:1024px) 100vw, 768px" className="object-cover" priority unoptimized={mainImage.startsWith('http')} />
+                                    ? <Image
+                                        src={mainImage}
+                                        alt={`${car.make} ${car.model}`}
+                                        fill
+                                        sizes="(max-width:1024px) 100vw, 768px"
+                                        className="object-cover"
+                                        priority
+                                        unoptimized={mainImage.startsWith('http')}
+                                        onError={() => {
+                                            if (activeImage) { setActiveImage(null); }
+                                            else if (imgOffset < allImages.length - 1) { setImgOffset(o => o + 1); }
+                                        }}
+                                      />
                                     : <div className="flex flex-col items-center justify-center gap-2 text-center">
                                         <div className="text-6xl">🚗</div>
                                         <p className="text-sm text-gray-500">Image not available</p>
