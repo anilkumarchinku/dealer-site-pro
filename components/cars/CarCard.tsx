@@ -230,9 +230,12 @@ export function CarCard({
                     {(() => {
                         const showScraped = car.vehicleCategory === '2w' || car.vehicleCategory === '3w' || car.vehicleCategory === '4w';
                         const scrapedUrls = showScraped ? getScrapedImageUrls(car.vehicleCategory as '2w' | '3w' | '4w', brandNameToId(car.make, car.vehicleCategory as '2w' | '3w' | '4w'), car.model) : [];
-                        const displayUrl = (!car.images.hero || car.images.hero === '/placeholder-car.jpg' || imgError)
-                            ? (scrapedUrls[scrapedIdx] || null)
-                            : car.images.hero;
+                        // 4W: always use local scraped path first — external CDN URLs get hotlink-blocked
+                        const displayUrl = (car.vehicleCategory === '4w' && scrapedUrls.length > 0)
+                            ? (scrapedIdx < scrapedUrls.length ? scrapedUrls[scrapedIdx] : null)
+                            : (!car.images.hero || car.images.hero === '/placeholder-car.jpg' || imgError)
+                                ? (scrapedUrls[scrapedIdx] || null)
+                                : car.images.hero;
 
                         if (displayUrl) {
                             // Use unoptimized for external CDN URLs (CardDekho, Supabase, etc.)
@@ -248,13 +251,14 @@ export function CarCard({
                                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                                     onError={() => {
-                                        if (!imgError) {
-                                            // Hero URL failed — immediately switch to scraped fallbacks
+                                        if (car.vehicleCategory === '4w') {
+                                            // jpg → png → null (emoji)
+                                            setScrapedIdx(prev => prev + 1);
+                                        } else if (!imgError) {
                                             setImgError(true);
                                         } else if (showScraped && scrapedIdx < scrapedUrls.length - 1) {
                                             setScrapedIdx(prev => prev + 1);
                                         } else {
-                                            // All fallbacks exhausted — push index out of bounds so displayUrl → null → emoji shown
                                             setScrapedIdx(scrapedUrls.length);
                                         }
                                     }}
@@ -466,6 +470,7 @@ export function CarCard({
                 onOpenChange={setIsEnquiryModalOpen}
                 brandColor={brandColor}
                 dealerPhone={dealerPhone}
+                resolvedImageSrc={cardDisplayUrl}
             />
             {dealerId && (
                 <TestDriveModal

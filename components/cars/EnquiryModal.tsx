@@ -37,6 +37,7 @@ import { formatPriceInLakhs } from '@/lib/utils/car-utils';
 import { getBrandLogo } from '@/lib/data/brand-logos';
 import { getContrastText } from '@/lib/utils/color-contrast';
 import { validateLeadForm, type ValidationErrors } from '@/lib/validations/client';
+import { getScrapedImageUrls, brandNameToId } from '@/lib/utils/brand-model-images';
 
 interface EnquiryModalProps {
     car: Car | null;
@@ -45,9 +46,11 @@ interface EnquiryModalProps {
     brandColor?: string;
     /** Dealer phone — enables WhatsApp direct chat option */
     dealerPhone?: string;
+    /** Pre-resolved image src from CarCard (local scraped path, avoids CDN hotlink issues) */
+    resolvedImageSrc?: string | null;
 }
 
-export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', dealerPhone }: EnquiryModalProps) {
+export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', dealerPhone, resolvedImageSrc }: EnquiryModalProps) {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -58,6 +61,7 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [formErrors, setFormErrors] = useState<ValidationErrors>({});
     const [detailedInfo, setDetailedInfo] = useState<DetailedCarInfo[]>([]);
+    const [heroImgIdx, setHeroImgIdx] = useState(0);
 
     // Fetch detailed car info when modal opens
     useEffect(() => {
@@ -118,6 +122,19 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
 
     if (!car) return null;
 
+    // Build image fallback list: resolvedImageSrc (local scraped) → scraped jpg/png → hero CDN
+    const heroScrapedUrls = getScrapedImageUrls(
+        car.vehicleCategory as '2w' | '3w' | '4w',
+        brandNameToId(car.make, car.vehicleCategory as '2w' | '3w' | '4w'),
+        car.model
+    );
+    const heroFallbackList = [...new Set([
+        resolvedImageSrc,
+        ...heroScrapedUrls,
+        car.images.hero,
+    ].filter((u): u is string => !!u && u !== '/placeholder-car.jpg'))];
+    const heroSrc = heroFallbackList[heroImgIdx] ?? null;
+
     // Get the first detailed variant that matches
     const detailedVariant = detailedInfo.find(
         (info) => info.variant_name.toLowerCase().includes(car.variant.toLowerCase())
@@ -159,13 +176,15 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
                 <div className="relative">
                     {/* Hero Image */}
                     <div className="relative h-64 w-full bg-gray-100">
-                        {car.images.hero ? (
+                        {heroSrc ? (
                             <Image
-                                src={car.images.hero}
+                                src={heroSrc}
                                 alt={`${car.make} ${car.model}`}
                                 fill
+                                unoptimized={heroSrc.startsWith('http')}
                                 sizes="(max-width: 1024px) 100vw, 896px"
                                 className="object-cover"
+                                onError={() => setHeroImgIdx(prev => prev + 1)}
                             />
                         ) : (
                             <div className="flex items-center justify-center h-full">
