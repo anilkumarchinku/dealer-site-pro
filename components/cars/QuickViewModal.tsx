@@ -114,13 +114,13 @@ function RatingBar({ label, value, color }: { label: string; value: number; colo
 // ─── Main Component ───────────────────────────────────────────────────────────
 export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandColor = '#2563eb', resolvedImageSrc }: Props) {
     const [activeImage, setActiveImage] = useState<string | null>(null);
-    const [imgOffset, setImgOffset] = useState(0);
+    const [imgIdx, setImgIdx] = useState(0);
     const [detailedInfo, setDetailedInfo] = useState<DetailedCarInfo[]>([]);
     const [loading, setLoading] = useState(false);
     const [selVariant, setSelVariant] = useState<DetailedCarInfo | null>(null);
 
-    // Reset image offset when modal opens/closes
-    useEffect(() => { setImgOffset(0); setActiveImage(null); }, [open]);
+    // Reset image index whenever the modal opens or the card's resolved image changes
+    useEffect(() => { setImgIdx(0); setActiveImage(null); }, [open, resolvedImageSrc]);
 
     useEffect(() => {
         let isMounted = true;
@@ -192,30 +192,20 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
     // Derived
     const logoSrc = getBrandLogo(car.make);
 
-    // Scraped fallbacks for 2W/3W/4W
-    const showScraped = car.vehicleCategory === '2w' || car.vehicleCategory === '3w' || car.vehicleCategory === '4w';
-    const scrapedUrls = showScraped ? getScrapedImageUrls(car.vehicleCategory as '2w' | '3w' | '4w', brandNameToId(car.make, car.vehicleCategory as '2w' | '3w' | '4w'), car.model) : [];
+    // Build a simple fallback list: card's image first, then scraped, then hero/exterior
+    const scrapedUrls = getScrapedImageUrls(
+        car.vehicleCategory as '2w' | '3w' | '4w',
+        brandNameToId(car.make, car.vehicleCategory as '2w' | '3w' | '4w'),
+        car.model
+    );
+    const fallbackList = [...new Set([
+        resolvedImageSrc,
+        ...scrapedUrls,
+        car.images.hero,
+        ...(car.images.exterior ?? []),
+    ].filter((u): u is string => !!u && u !== '/placeholder-car.jpg'))];
 
-    const allImages = [...(car.images.exterior || []), ...(car.images.interior || [])].filter(Boolean);
-
-    // Always add hero image if it's not a placeholder
-    if (car.images.hero && car.images.hero !== '/placeholder-car.jpg') {
-        allImages.unshift(car.images.hero);
-    }
-
-    // Put the card's already-resolved image first — it's the most likely to work
-    if (resolvedImageSrc && !allImages.includes(resolvedImageSrc)) {
-        allImages.unshift(resolvedImageSrc);
-    }
-
-    // Always append scraped URLs as last-resort fallback (not just when list is empty)
-    if (showScraped) {
-        for (const url of scrapedUrls) {
-            if (!allImages.includes(url)) allImages.push(url);
-        }
-    }
-
-    const mainImage = activeImage ?? allImages[imgOffset] ?? null;
+    const mainImage = activeImage ?? fallbackList[imgIdx] ?? null;
     const priceStart = formatPriceInLakhs(car.pricing.exShowroom.min);
     const priceEnd = formatPriceInLakhs(car.pricing.exShowroom.max);
     const hasRange = car.pricing.exShowroom.min !== car.pricing.exShowroom.max;
@@ -294,7 +284,7 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
                                         className="w-full h-full object-cover"
                                         onError={() => {
                                             if (activeImage) { setActiveImage(null); }
-                                            else if (imgOffset < allImages.length - 1) { setImgOffset(o => o + 1); }
+                                            else if (imgIdx < fallbackList.length - 1) { setImgIdx(i => i + 1); }
                                         }}
                                       />
                                     : <div className="flex flex-col items-center justify-center gap-2 text-center">
@@ -303,9 +293,9 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
                                       </div>
                                 }
                             </div>
-                            {allImages.length > 1 && (
+                            {fallbackList.length > 1 && (
                                 <div className="flex gap-2 overflow-x-auto pb-1">
-                                    {allImages.map((img, i) => (
+                                    {fallbackList.map((img, i) => (
                                         <button
                                             key={i}
                                             onClick={() => setActiveImage(img)}
