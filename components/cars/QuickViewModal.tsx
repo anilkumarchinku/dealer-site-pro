@@ -42,6 +42,7 @@ interface Props {
     onOpenChange: (open: boolean) => void;
     onEnquireNow?: () => void;
     brandColor?: string;
+    resolvedImageSrc?: string | null;
 }
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
@@ -111,7 +112,7 @@ function RatingBar({ label, value, color }: { label: string; value: number; colo
 }
 
 // ─── Main Component ───────────────────────────────────────────────────────────
-export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandColor = '#2563eb' }: Props) {
+export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandColor = '#2563eb', resolvedImageSrc }: Props) {
     const [activeImage, setActiveImage] = useState<string | null>(null);
     const [detailedInfo, setDetailedInfo] = useState<DetailedCarInfo[]>([]);
     const [loading, setLoading] = useState(false);
@@ -187,9 +188,9 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
     // Derived
     const logoSrc = getBrandLogo(car.make);
 
-    // Scraped fallbacks for 2W/3W
-    const showScraped = car.vehicleCategory === '2w' || car.vehicleCategory === '3w';
-    const scrapedUrls = showScraped ? getScrapedImageUrls(car.vehicleCategory as '2w' | '3w', brandNameToId(car.make, car.vehicleCategory as '2w' | '3w'), car.model) : [];
+    // Scraped fallbacks for 2W/3W/4W
+    const showScraped = car.vehicleCategory === '2w' || car.vehicleCategory === '3w' || car.vehicleCategory === '4w';
+    const scrapedUrls = showScraped ? getScrapedImageUrls(car.vehicleCategory as '2w' | '3w' | '4w', brandNameToId(car.make, car.vehicleCategory as '2w' | '3w' | '4w'), car.model) : [];
 
     const allImages = [...(car.images.exterior || []), ...(car.images.interior || [])].filter(Boolean);
 
@@ -198,7 +199,12 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
         allImages.unshift(car.images.hero);
     }
 
-    // If no real images, use scraped ones (for 2W/3W)
+    // If the card already resolved a working image, use it as the first (ensures modal matches card)
+    if (resolvedImageSrc && !allImages.includes(resolvedImageSrc)) {
+        allImages.unshift(resolvedImageSrc);
+    }
+
+    // If still no real images, use scraped ones
     if (allImages.length === 0 && showScraped) {
         allImages.push(...scrapedUrls);
     }

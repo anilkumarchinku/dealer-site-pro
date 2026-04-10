@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState, useCallback } from "react"
-import { useParams } from "next/navigation"
+import { useParams, useRouter, useSearchParams } from "next/navigation"
 import { supabase } from "@/lib/supabase"
 import { VehicleCard } from "@/components/three-wheelers/VehicleCard"
 import { FilterSidebar } from "@/components/three-wheelers/FilterSidebar"
@@ -14,15 +14,27 @@ import { ChevronLeft } from "lucide-react"
 import { useSitePrefix } from "@/lib/hooks/useSitePrefix"
 
 export default function PassengerAutoPage() {
-    const params = useParams()
-    const slug   = params.slug as string
-    const prefix = useSitePrefix(slug)
+    const params       = useParams()
+    const slug         = params.slug as string
+    const prefix       = useSitePrefix(slug)
+    const router       = useRouter()
+    const searchParams = useSearchParams()
 
     const [dealer, setDealer]         = useState<{ id: string } | null>(null)
     const [vehicles, setVehicles]     = useState<ThreeWheelerVehicle[]>([])
     const [total, setTotal]           = useState(0)
     const [loading, setLoading]       = useState(true)
-    const [filters, setFilters]       = useState<ThreeWheelerFilters>({ type: "passenger", sortBy: "newest", page: 1, pageSize: 12 })
+    const [filters, setFilters]       = useState<ThreeWheelerFilters>(() => ({
+        type:        "passenger",
+        brand:       searchParams.get("brand")      ?? undefined,
+        fuelType:    (searchParams.get("fuelType")   as ThreeWheelerFilters["fuelType"])   ?? undefined,
+        permitType:  (searchParams.get("permitType") as ThreeWheelerFilters["permitType"]) ?? undefined,
+        sortBy:      (searchParams.get("sortBy")     as ThreeWheelerFilters["sortBy"])     ?? "newest",
+        minPrice:    searchParams.get("minPrice")    ? Number(searchParams.get("minPrice")) : undefined,
+        maxPrice:    searchParams.get("maxPrice")    ? Number(searchParams.get("maxPrice")) : undefined,
+        page:        searchParams.get("page")        ? Number(searchParams.get("page"))     : 1,
+        pageSize:    12,
+    }))
     const [brands, setBrands]         = useState<string[]>([])
     const [filterOpen, setFilterOpen] = useState(false)
     const [leadVehicleId, setLeadVehicleId] = useState<string | null>(null)
@@ -54,6 +66,20 @@ export default function PassengerAutoPage() {
     }, [dealer, filters])
 
     useEffect(() => { loadVehicles() }, [loadVehicles])
+
+    // Sync filter state → URL (so back button restores filters)
+    useEffect(() => {
+        const p = new URLSearchParams()
+        if (filters.brand)      p.set("brand",      filters.brand)
+        if (filters.fuelType)   p.set("fuelType",   filters.fuelType)
+        if (filters.permitType) p.set("permitType", filters.permitType)
+        if (filters.sortBy && filters.sortBy !== "newest") p.set("sortBy", filters.sortBy)
+        if (filters.minPrice)   p.set("minPrice",   String(filters.minPrice))
+        if (filters.maxPrice)   p.set("maxPrice",   String(filters.maxPrice))
+        if (filters.page && filters.page > 1) p.set("page", String(filters.page))
+        router.replace(`?${p.toString()}`, { scroll: false })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [filters])
 
     const filtered = vehicles.filter(v =>
         v.brand.toLowerCase().includes(search.toLowerCase()) ||

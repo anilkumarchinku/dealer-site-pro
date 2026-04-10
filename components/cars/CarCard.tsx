@@ -200,6 +200,15 @@ export function CarCard({
         setIsQuickViewOpen(true);
     };
 
+    // Resolved image — same fallback chain used in the card image, passed to QuickViewModal
+    const cardShowScraped = car.vehicleCategory === '2w' || car.vehicleCategory === '3w' || car.vehicleCategory === '4w';
+    const cardScrapedUrls = cardShowScraped
+        ? getScrapedImageUrls(car.vehicleCategory as '2w' | '3w' | '4w', brandNameToId(car.make, car.vehicleCategory as '2w' | '3w' | '4w'), car.model)
+        : [] as string[];
+    const cardDisplayUrl = (!car.images.hero || car.images.hero === '/placeholder-car.jpg' || imgError)
+        ? (cardScrapedUrls[scrapedIdx] || null)
+        : car.images.hero;
+
     return (
         <>
             <Card
@@ -445,6 +454,7 @@ export function CarCard({
                 onOpenChange={setIsQuickViewOpen}
                 onEnquireNow={handleEnquireNow}
                 brandColor={brandColor}
+                resolvedImageSrc={cardDisplayUrl}
             />
             <EnquiryModal
                 car={car}

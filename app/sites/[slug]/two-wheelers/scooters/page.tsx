@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState, useCallback } from "react"
-import { useParams } from "next/navigation"
+import { useParams, useRouter, useSearchParams } from "next/navigation"
 import { supabase } from "@/lib/supabase"
 import { VehicleCard } from "@/components/two-wheelers/VehicleCard"
 import { FilterSidebar } from "@/components/two-wheelers/FilterSidebar"
@@ -11,13 +11,25 @@ import { ReviewsSection } from "@/components/shared/ReviewsSection"
 import type { TwoWheelerVehicle, TwoWheelerFilters } from "@/lib/types/two-wheeler"
 
 export default function ScootersListingPage() {
-    const params  = useParams()
-    const slug    = params.slug as string
+    const params       = useParams()
+    const slug         = params.slug as string
+    const router       = useRouter()
+    const searchParams = useSearchParams()
+
     const [dealerId, setDealerId]  = useState<string | null>(null)
     const [vehicles, setVehicles]  = useState<TwoWheelerVehicle[]>([])
     const [total,    setTotal]     = useState(0)
     const [loading,  setLoading]   = useState(true)
-    const [filters,  setFilters]   = useState<TwoWheelerFilters>({ type: "scooter", sortBy: "newest", page: 1, pageSize: 12 })
+    const [filters,  setFilters]   = useState<TwoWheelerFilters>(() => ({
+        type:      "scooter",
+        brand:     searchParams.get("brand")    ?? undefined,
+        fuelType:  (searchParams.get("fuelType") as TwoWheelerFilters["fuelType"]) ?? undefined,
+        sortBy:    (searchParams.get("sortBy")   as TwoWheelerFilters["sortBy"])   ?? "newest",
+        minPrice:  searchParams.get("minPrice")  ? Number(searchParams.get("minPrice"))  : undefined,
+        maxPrice:  searchParams.get("maxPrice")  ? Number(searchParams.get("maxPrice"))  : undefined,
+        page:      searchParams.get("page")      ? Number(searchParams.get("page"))      : 1,
+        pageSize:  12,
+    }))
     const [leadVehicleId, setLeadVehicleId] = useState<string | null>(null)
     const [brands, setBrands] = useState<string[]>([])
     const [search, setSearch] = useState("")
@@ -47,6 +59,19 @@ export default function ScootersListingPage() {
     }, [dealerId, filters])
 
     useEffect(() => { load() }, [load])
+
+    // Sync filter state → URL (so back button restores filters)
+    useEffect(() => {
+        const p = new URLSearchParams()
+        if (filters.brand)    p.set("brand",    filters.brand)
+        if (filters.fuelType) p.set("fuelType", filters.fuelType)
+        if (filters.sortBy && filters.sortBy !== "newest") p.set("sortBy", filters.sortBy)
+        if (filters.minPrice) p.set("minPrice", String(filters.minPrice))
+        if (filters.maxPrice) p.set("maxPrice", String(filters.maxPrice))
+        if (filters.page && filters.page > 1) p.set("page", String(filters.page))
+        router.replace(`?${p.toString()}`, { scroll: false })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [filters])
 
     const filtered = vehicles.filter(v =>
         v.brand.toLowerCase().includes(search.toLowerCase()) ||

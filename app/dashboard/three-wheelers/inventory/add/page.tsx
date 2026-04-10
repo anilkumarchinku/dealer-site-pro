@@ -87,7 +87,10 @@ export default function AddThreeWheelerVehiclePage() {
 
     async function handleSubmit(e: React.FormEvent) {
         e.preventDefault()
-        if (!dealerId) return
+        if (!dealerId) {
+            setError("Unable to identify your dealer account. Please refresh the page and try again.")
+            return
+        }
         if (!form.brand || !form.model || !form.ex_showroom_price_paise) {
             setError("Brand, model, and ex-showroom price are required.")
             return

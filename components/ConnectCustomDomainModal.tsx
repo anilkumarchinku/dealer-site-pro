@@ -34,7 +34,14 @@ export default function ConnectCustomDomainModal({ isOpen, onClose, dealerId, si
     const dnsInstructions = domain ? getDNSInstructions(domain) : null
 
     const handleContinueToTemplate = () => {
-        if (domain) setStep('select-template')
+        if (!domain) return
+        const domainRegex = /^(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,}$/
+        if (!domainRegex.test(domain)) {
+            setError('Please enter a valid domain name (e.g. mydealer.com)')
+            return
+        }
+        setError('')
+        setStep('select-template')
     }
 
     // Skip payment for now — go directly to DNS instructions

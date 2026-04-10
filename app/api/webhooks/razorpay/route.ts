@@ -62,7 +62,7 @@ export async function POST(request: NextRequest) {
             case 'subscription.activated': {
                 const sub = event.payload.subscription?.entity
                 if (!sub?.id) break
-                await supabase
+                const { data: activatedSub } = await supabase
                     .from('domain_subscriptions')
                     .update({
                         status: 'active',
@@ -70,6 +70,16 @@ export async function POST(request: NextRequest) {
                         current_period_end:   (sub.current_end   as string | undefined) ?? null,
                     })
                     .eq('razorpay_subscription_id', sub.id as string)
+                    .select('domain_id')
+                    .single()
+
+                // Also mark the domain as active
+                if (activatedSub?.domain_id) {
+                    await supabase
+                        .from('dealer_domains')
+                        .update({ status: 'active' })
+                        .eq('id', activatedSub.domain_id)
+                }
                 console.log('[Razorpay Webhook] Subscription activated:', sub.id)
                 break
             }

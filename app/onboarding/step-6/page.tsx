@@ -237,6 +237,9 @@ export default function Step6Page() {
                                     <div className="rounded-lg px-3 py-2 border border-primary/30 bg-background font-mono text-sm text-primary break-all">
                                         {dealerSiteUrl(data.slug || data.dealershipName?.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "") || "")}
                                     </div>
+                                    <p className="text-xs text-muted-foreground mt-1">
+                                        Preview — final URL confirmed after you click &ldquo;Complete Setup&rdquo;
+                                    </p>
                                     <div className="mt-3 flex items-center gap-2 text-xs text-primary">
                                         <Shield className="w-4 h-4" />
                                         <span>Free SSL certificate included · No setup required</span>
