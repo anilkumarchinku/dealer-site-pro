@@ -205,9 +205,13 @@ export function CarCard({
     const cardScrapedUrls = cardShowScraped
         ? getScrapedImageUrls(car.vehicleCategory as '2w' | '3w' | '4w', brandNameToId(car.make, car.vehicleCategory as '2w' | '3w' | '4w'), car.model)
         : [] as string[];
-    const cardDisplayUrl = (!car.images.hero || car.images.hero === '/placeholder-car.jpg' || imgError)
-        ? (cardScrapedUrls[scrapedIdx] || null)
-        : car.images.hero;
+    // 4W: always use local scraped path first — avoids CDN/CSP issues entirely.
+    // 2W/3W: use hero if available and not failed, else scraped Supabase path.
+    const cardDisplayUrl = car.vehicleCategory === '4w' && cardScrapedUrls.length > 0
+        ? (cardScrapedUrls[Math.min(scrapedIdx, cardScrapedUrls.length - 1)] ?? null)
+        : (!car.images.hero || car.images.hero === '/placeholder-car.jpg' || imgError)
+            ? (cardScrapedUrls[scrapedIdx] || null)
+            : car.images.hero;
 
     return (
         <>
