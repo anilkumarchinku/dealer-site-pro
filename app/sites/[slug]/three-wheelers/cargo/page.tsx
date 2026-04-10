@@ -5,6 +5,7 @@ import { useParams } from "next/navigation"
 import { supabase } from "@/lib/supabase"
 import { VehicleCard } from "@/components/three-wheelers/VehicleCard"
 import { LeadFormModal } from "@/components/three-wheelers/LeadFormModal"
+import { ReviewsSection } from "@/components/shared/ReviewsSection"
 import type { ThreeWheelerVehicle } from "@/lib/types/three-wheeler"
 import Link from "next/link"
 import { ChevronLeft } from "lucide-react"
@@ -107,6 +108,8 @@ export default function CargoThreeWheelerPage() {
                     onClose={() => setLeadVehicleId(null)}
                 />
             )}
+
+            <ReviewsSection dealerId={dealer.id} />
         </div>
     )
 }

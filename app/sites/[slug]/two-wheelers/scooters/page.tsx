@@ -5,7 +5,9 @@ import { useParams } from "next/navigation"
 import { supabase } from "@/lib/supabase"
 import { VehicleCard } from "@/components/two-wheelers/VehicleCard"
 import { FilterSidebar } from "@/components/two-wheelers/FilterSidebar"
+import { MobileFilterDrawer } from "@/components/two-wheelers/MobileFilterDrawer"
 import { LeadFormModal } from "@/components/two-wheelers/LeadFormModal"
+import { ReviewsSection } from "@/components/shared/ReviewsSection"
 import type { TwoWheelerVehicle, TwoWheelerFilters } from "@/lib/types/two-wheeler"
 
 export default function ScootersListingPage() {
@@ -17,7 +19,9 @@ export default function ScootersListingPage() {
     const [loading,  setLoading]   = useState(true)
     const [filters,  setFilters]   = useState<TwoWheelerFilters>({ type: "scooter", sortBy: "newest", page: 1, pageSize: 12 })
     const [leadVehicleId, setLeadVehicleId] = useState<string | null>(null)
+    const [brands, setBrands] = useState<string[]>([])
     const [search, setSearch] = useState("")
+    const [filterOpen, setFilterOpen] = useState(false)
 
     useEffect(() => {
         if (!slug) return
@@ -36,7 +40,10 @@ export default function ScootersListingPage() {
         const data = await res.json()
         setVehicles(data.vehicles ?? [])
         setTotal(data.total ?? 0)
+        const uniqueBrands = [...new Set((data.vehicles ?? []).map((v: TwoWheelerVehicle) => v.brand))] as string[]
+        if (uniqueBrands.length > brands.length) setBrands(uniqueBrands)
         setLoading(false)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [dealerId, filters])
 
     useEffect(() => { load() }, [load])
@@ -70,9 +77,23 @@ export default function ScootersListingPage() {
                 )}
             </div>
 
+            {/* Mobile filter button */}
+            <div className="flex items-center justify-between mb-4 md:hidden">
+                <p className="text-sm text-muted-foreground">{total} available</p>
+                <button
+                    onClick={() => setFilterOpen(true)}
+                    className="flex items-center gap-2 px-4 py-2 border border-border rounded-xl text-sm font-medium hover:bg-muted/50"
+                >
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2a1 1 0 01-.293.707L13 13.414V19a1 1 0 01-.553.894l-4 2A1 1 0 017 21v-7.586L3.293 6.707A1 1 0 013 6V4z" />
+                    </svg>
+                    Filter &amp; Sort
+                </button>
+            </div>
+
             <div className="flex gap-8">
                 <div className="w-52 shrink-0 hidden md:block">
-                    <FilterSidebar filters={filters} onChange={setFilters} />
+                    <FilterSidebar filters={filters} onChange={setFilters} brands={brands} />
                 </div>
                 <div className="flex-1">
                     {loading ? (
@@ -91,6 +112,15 @@ export default function ScootersListingPage() {
                 </div>
             </div>
 
+            {filterOpen && (
+                <MobileFilterDrawer
+                    filters={filters}
+                    onChange={setFilters}
+                    brands={brands}
+                    onClose={() => setFilterOpen(false)}
+                />
+            )}
+
             {dealerId && (
                 <LeadFormModal
                     dealerId={dealerId}
@@ -101,6 +131,8 @@ export default function ScootersListingPage() {
                     onClose={() => setLeadVehicleId(null)}
                 />
             )}
+
+            {dealerId && <ReviewsSection dealerId={dealerId} />}
         </div>
     )
 }

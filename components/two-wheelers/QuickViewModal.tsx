@@ -12,20 +12,19 @@ interface Props {
     onClose: () => void
     brandColor?: string
     onLead?: (vehicleId: string) => void
+    imgSrc?: string | null
 }
 
 type Tab = "overview" | "specs" | "colors" | "features"
 
-export function QuickViewModal({ vehicle, open, onClose, brandColor = "#1f2937", onLead }: Props) {
+export function QuickViewModal({ vehicle, open, onClose, brandColor = "#1f2937", onLead, imgSrc: imgSrcProp }: Props) {
     const [tab, setTab] = useState<Tab>("overview")
 
     if (!open) return null
 
-    // Get the first image from vehicle.images array
-    const imgSrc = (() => {
-        if (!vehicle.images) return null
-        if (!Array.isArray(vehicle.images)) return null
-        if (vehicle.images.length === 0) return null
+    // Use the image already resolved by the card (includes fallback logic), or derive from vehicle
+    const imgSrc = imgSrcProp ?? (() => {
+        if (!vehicle.images || !Array.isArray(vehicle.images) || vehicle.images.length === 0) return null
         const firstImg = vehicle.images[0]
         if (!firstImg || typeof firstImg !== 'string') return null
         return firstImg

@@ -279,6 +279,7 @@ export function VehicleCard({ vehicle, slug, dealerId, brandColor = "#1f2937", o
                 onClose={() => setQuickView(false)}
                 brandColor={brandColor}
                 onLead={onLead}
+                imgSrc={imgFailed ? null : imgSrc}
             />
         </div>
     )
