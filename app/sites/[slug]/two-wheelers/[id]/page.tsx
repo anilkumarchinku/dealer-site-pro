@@ -7,6 +7,9 @@ import { VehicleDetailGallery } from "@/components/two-wheelers/VehicleDetailGal
 import { EMICalculator } from "@/components/shared/EMICalculator"
 import { LeadFormModal } from "@/components/two-wheelers/LeadFormModal"
 import { BookingModal } from "@/components/two-wheelers/BookingModal"
+import { CityOnRoadPrice } from "@/components/two-wheelers/CityOnRoadPrice"
+import { FullSpecsSection } from "@/components/two-wheelers/FullSpecsSection"
+import { SimilarVehicles } from "@/components/two-wheelers/SimilarVehicles"
 import type { TwoWheelerVehicle, TwoWheelerLeadType } from "@/lib/types/two-wheeler"
 import { ChevronLeft } from "lucide-react"
 import Link from "next/link"
@@ -184,6 +187,28 @@ export default function VehicleDetailPage() {
                     <EMICalculator defaultPrice={price} />
                 </div>
             </section>
+
+            {/* On-Road Price */}
+            <div className="mt-10 max-w-lg">
+                <CityOnRoadPrice
+                    exShowroomPaise={vehicle.ex_showroom_price_paise}
+                    engineCc={vehicle.engine_cc}
+                    fuelType={vehicle.fuel_type}
+                />
+            </div>
+
+            {/* Full Specifications */}
+            <FullSpecsSection vehicle={vehicle} />
+
+            {/* Similar Vehicles */}
+            {dealerId && (
+                <SimilarVehicles
+                    currentId={id}
+                    dealerId={dealerId}
+                    vehicleType={vehicle.type}
+                    slug={slug}
+                />
+            )}
 
             {/* Modals */}
             {dealerId && (

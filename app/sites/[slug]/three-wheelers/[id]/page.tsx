@@ -7,6 +7,9 @@ import { VehicleDetailGallery } from "@/components/three-wheelers/VehicleDetailG
 import { LeadFormModal } from "@/components/three-wheelers/LeadFormModal"
 import { BookingModal } from "@/components/three-wheelers/BookingModal"
 import { EMICalculator } from "@/components/shared/EMICalculator"
+import { CityOnRoadPrice } from "@/components/three-wheelers/CityOnRoadPrice"
+import { FullSpecsSection } from "@/components/three-wheelers/FullSpecsSection"
+import { SimilarVehicles } from "@/components/three-wheelers/SimilarVehicles"
 import type { ThreeWheelerVehicle, ThreeWheelerLeadType } from "@/lib/types/three-wheeler"
 import { ChevronLeft } from "lucide-react"
 import Link from "next/link"
@@ -184,6 +187,22 @@ export default function ThreeWheelerDetailPage() {
                     <EMICalculator defaultPrice={price} />
                 </div>
             </section>
+
+            {/* On-Road Price */}
+            <CityOnRoadPrice exShowroomPaise={vehicle.ex_showroom_price_paise} fuelType={vehicle.fuel_type} />
+
+            {/* Full Specifications */}
+            <FullSpecsSection vehicle={vehicle} />
+
+            {/* Similar Vehicles */}
+            {dealerId && (
+                <SimilarVehicles
+                    currentId={id}
+                    dealerId={dealerId}
+                    vehicleType={vehicle.type}
+                    slug={slug}
+                />
+            )}
 
             {/* Modals */}
             {dealerId && (

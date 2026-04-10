@@ -16,6 +16,7 @@ export default function ElectricTwoWheelersPage() {
     const [loading,  setLoading]   = useState(true)
     const [filters,  setFilters]   = useState<TwoWheelerFilters>({ fuelType: "electric", sortBy: "newest", page: 1, pageSize: 12 })
     const [leadVehicleId, setLeadVehicleId] = useState<string | null>(null)
+    const [search, setSearch] = useState("")
 
     useEffect(() => {
         if (!slug) return
@@ -38,6 +39,11 @@ export default function ElectricTwoWheelersPage() {
     }, [dealerId, filters])
 
     useEffect(() => { load() }, [load])
+
+    const filtered = vehicles.filter(v =>
+        v.brand.toLowerCase().includes(search.toLowerCase()) ||
+        v.model.toLowerCase().includes(search.toLowerCase())
+    )
 
     return (
         <div className="min-h-screen">
@@ -69,15 +75,33 @@ export default function ElectricTwoWheelersPage() {
             {/* Listing */}
             <div className="max-w-5xl mx-auto px-4 pb-12">
                 <h2 className="text-2xl font-semibold mb-5">{total} Electric Vehicles Available</h2>
+
+                {/* Search bar */}
+                <div className="mb-4 flex flex-col sm:flex-row items-start sm:items-center gap-2">
+                    <div className="relative w-full max-w-sm">
+                        <svg className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                        <input
+                            type="text"
+                            value={search}
+                            onChange={e => setSearch(e.target.value)}
+                            placeholder="Search by brand or model..."
+                            className="w-full max-w-sm rounded-xl border border-input bg-background pl-9 pr-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40"
+                        />
+                    </div>
+                    {search && (
+                        <p className="text-sm text-muted-foreground">Showing {filtered.length} of {vehicles.length}</p>
+                    )}
+                </div>
+
                 {loading ? (
                     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                         {[...Array(6)].map((_, i) => <div key={i} className="h-64 rounded-2xl bg-muted/30 animate-pulse" />)}
                     </div>
-                ) : vehicles.length === 0 ? (
+                ) : filtered.length === 0 ? (
                     <div className="text-center py-20 text-muted-foreground">No electric vehicles listed yet.</div>
                 ) : (
                     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                        {vehicles.map(v => (
+                        {filtered.map(v => (
                             <VehicleCard key={v.id} vehicle={v} slug={slug} onLead={vid => setLeadVehicleId(vid)} />
                         ))}
                     </div>

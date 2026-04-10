@@ -17,6 +17,7 @@ export default function ScootersListingPage() {
     const [loading,  setLoading]   = useState(true)
     const [filters,  setFilters]   = useState<TwoWheelerFilters>({ type: "scooter", sortBy: "newest", page: 1, pageSize: 12 })
     const [leadVehicleId, setLeadVehicleId] = useState<string | null>(null)
+    const [search, setSearch] = useState("")
 
     useEffect(() => {
         if (!slug) return
@@ -40,11 +41,33 @@ export default function ScootersListingPage() {
 
     useEffect(() => { load() }, [load])
 
+    const filtered = vehicles.filter(v =>
+        v.brand.toLowerCase().includes(search.toLowerCase()) ||
+        v.model.toLowerCase().includes(search.toLowerCase())
+    )
+
     return (
         <div className="min-h-screen max-w-6xl mx-auto px-4 py-8">
             <div className="mb-6">
                 <h1 className="text-3xl font-bold">Scooters</h1>
                 <p className="text-muted-foreground mt-1">{total} scooter{total !== 1 ? "s" : ""} available</p>
+            </div>
+
+            {/* Search bar */}
+            <div className="mb-4 flex flex-col sm:flex-row items-start sm:items-center gap-2">
+                <div className="relative w-full max-w-sm">
+                    <svg className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                    <input
+                        type="text"
+                        value={search}
+                        onChange={e => setSearch(e.target.value)}
+                        placeholder="Search by brand or model..."
+                        className="w-full max-w-sm rounded-xl border border-input bg-background pl-9 pr-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40"
+                    />
+                </div>
+                {search && (
+                    <p className="text-sm text-muted-foreground">Showing {filtered.length} of {vehicles.length}</p>
+                )}
             </div>
 
             <div className="flex gap-8">
@@ -56,11 +79,11 @@ export default function ScootersListingPage() {
                         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                             {[...Array(6)].map((_, i) => <div key={i} className="h-64 rounded-2xl bg-muted/30 animate-pulse" />)}
                         </div>
-                    ) : vehicles.length === 0 ? (
+                    ) : filtered.length === 0 ? (
                         <div className="text-center py-20 text-muted-foreground">No scooters found.</div>
                     ) : (
                         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                            {vehicles.map(v => (
+                            {filtered.map(v => (
                                 <VehicleCard key={v.id} vehicle={v} slug={slug} onLead={vid => setLeadVehicleId(vid)} />
                             ))}
                         </div>

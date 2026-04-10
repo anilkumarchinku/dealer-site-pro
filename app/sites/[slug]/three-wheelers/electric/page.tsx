@@ -20,6 +20,7 @@ export default function ElectricThreeWheelerPage() {
     const [total, setTotal]     = useState(0)
     const [loading, setLoading] = useState(true)
     const [leadVehicleId, setLeadVehicleId] = useState<string | null>(null)
+    const [search, setSearch]   = useState("")
 
     useEffect(() => {
         if (!slug) return
@@ -62,19 +63,46 @@ export default function ElectricThreeWheelerPage() {
                 </div>
             </div>
 
-            {vehicles.length === 0 ? (
-                <div className="text-center py-20 text-muted-foreground">
-                    <p className="text-2xl">⚡</p>
-                    <p className="text-lg font-medium mt-4">No electric 3-wheelers available right now</p>
-                    <p className="text-sm mt-1">Contact us for upcoming EV models.</p>
-                </div>
-            ) : (
-                <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5">
-                    {vehicles.map(v => (
-                        <VehicleCard key={v.id} vehicle={v} slug={slug} onLead={vid => setLeadVehicleId(vid)} />
-                    ))}
-                </div>
-            )}
+            {/* Search bar */}
+            <div className="mb-6 relative w-full max-w-sm">
+                <svg className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <circle cx="11" cy="11" r="8" /><path strokeLinecap="round" d="M21 21l-4.35-4.35" />
+                </svg>
+                <input
+                    type="text"
+                    value={search}
+                    onChange={e => setSearch(e.target.value)}
+                    placeholder="Search by brand or model..."
+                    className="w-full max-w-sm rounded-xl border border-input bg-background pl-9 pr-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40"
+                />
+            </div>
+
+            {(() => {
+                const filtered = vehicles.filter(v =>
+                    v.brand.toLowerCase().includes(search.toLowerCase()) ||
+                    v.model.toLowerCase().includes(search.toLowerCase())
+                )
+                return (
+                    <>
+                        {search && (
+                            <p className="text-sm text-muted-foreground mb-4">Showing {filtered.length} of {vehicles.length}</p>
+                        )}
+                        {filtered.length === 0 ? (
+                            <div className="text-center py-20 text-muted-foreground">
+                                <p className="text-2xl">⚡</p>
+                                <p className="text-lg font-medium mt-4">{search ? "No results found" : "No electric 3-wheelers available right now"}</p>
+                                <p className="text-sm mt-1">{search ? "Try a different search term." : "Contact us for upcoming EV models."}</p>
+                            </div>
+                        ) : (
+                            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5">
+                                {filtered.map(v => (
+                                    <VehicleCard key={v.id} vehicle={v} slug={slug} onLead={vid => setLeadVehicleId(vid)} />
+                                ))}
+                            </div>
+                        )}
+                    </>
+                )
+            })()}
 
             {dealer && (
                 <LeadFormModal

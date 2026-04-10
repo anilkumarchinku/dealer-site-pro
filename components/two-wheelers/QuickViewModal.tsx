@@ -23,24 +23,11 @@ export function QuickViewModal({ vehicle, open, onClose, brandColor = "#1f2937",
 
     // Get the first image from vehicle.images array
     const imgSrc = (() => {
-        if (!vehicle.images) {
-            console.log('[2W QuickViewModal] No images array on vehicle')
-            return null
-        }
-        if (!Array.isArray(vehicle.images)) {
-            console.log('[2W QuickViewModal] images is not an array:', typeof vehicle.images)
-            return null
-        }
-        if (vehicle.images.length === 0) {
-            console.log('[2W QuickViewModal] images array is empty')
-            return null
-        }
+        if (!vehicle.images) return null
+        if (!Array.isArray(vehicle.images)) return null
+        if (vehicle.images.length === 0) return null
         const firstImg = vehicle.images[0]
-        if (!firstImg || typeof firstImg !== 'string') {
-            console.log('[2W QuickViewModal] firstImg invalid:', firstImg)
-            return null
-        }
-        console.log('[2W QuickViewModal] Using image:', firstImg)
+        if (!firstImg || typeof firstImg !== 'string') return null
         return firstImg
     })()
 
