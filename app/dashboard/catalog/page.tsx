@@ -1,243 +1,173 @@
-"use client"
+/**
+ * /dashboard/catalog — Server component.
+ * Reads brand JSON files at build/request time (no client fetch needed).
+ * Passes all models to CatalogClient which handles tabs + search.
+ */
+import fs from 'fs'
+import path from 'path'
+import { CatalogClient } from './CatalogClient'
+import type { CatalogModel } from '@/lib/types/catalog'
 
-import { useEffect, useState, useMemo } from "react"
-import { Search, Car, Bike, Truck, RefreshCw, ImageOff, Fuel, Zap } from "lucide-react"
-import { Input } from "@/components/ui/input"
-import type { CatalogModel } from "@/lib/types/catalog"
+// ── helpers ────────────────────────────────────────────────────────────────
 
-type CategoryKey = "4w" | "2w" | "3w"
+function slug(s: string) {
+    return s.toLowerCase().replace(/\./g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
+}
 
-// ── Website-style model card ───────────────────────────────────────────────
+const SUPABASE_IMG = 'https://llsvbyeumrfngjvbedbz.supabase.co/storage/v1/object/public/vehicle-images'
 
-function ModelCard({ m }: { m: CatalogModel }) {
-    const [imgSrc, setImgSrc]   = useState(m.imageUrl ?? "")
-    const [failed, setFailed]   = useState(!m.imageUrl)
-    const isEV = m.fuelType?.toLowerCase().includes("electric")
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function getImg(imgUrls: unknown): string | null {
+    if (!Array.isArray(imgUrls)) return null
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const u = (imgUrls as any[]).find((x) => typeof x?.value === 'string' && x.value.startsWith('http'))
+    return u?.value ?? null
+}
 
-    function handleError() {
-        if (m.category !== "4w" && imgSrc.endsWith(".jpg")) {
-            setImgSrc(imgSrc.replace(".jpg", ".png"))
-        } else {
-            setFailed(true)
-        }
+// ── 4W ────────────────────────────────────────────────────────────────────
+
+const FOUR_W = [
+    { make: 'Tata Motors',   json: 'tata',          id: 'tata'          },
+    { make: 'Maruti Suzuki', json: 'maruti_suzuki',  id: 'maruti-suzuki' },
+    { make: 'Hyundai',       json: 'hyundai',        id: 'hyundai'       },
+    { make: 'Honda',         json: 'honda',          id: 'honda'         },
+    { make: 'Mahindra',      json: 'mahindra',       id: 'mahindra'      },
+    { make: 'Kia',           json: 'kia',            id: 'kia'           },
+    { make: 'Toyota',        json: 'toyota',         id: 'toyota'        },
+    { make: 'Volkswagen',    json: 'volkswagen',     id: 'volkswagen'    },
+    { make: 'Skoda',         json: 'skoda',          id: 'skoda'         },
+    { make: 'MG',            json: 'mg',             id: 'mg'            },
+    { make: 'Renault',       json: 'renault',        id: 'renault'       },
+    { make: 'Nissan',        json: 'nissan',         id: 'nissan'        },
+    { make: 'Jeep',          json: 'jeep',           id: 'jeep'          },
+    { make: 'Citroen',       json: 'citroen',        id: 'citroen'       },
+    { make: 'BYD',           json: 'byd',            id: 'byd'           },
+    { make: 'Force Motors',  json: 'force',          id: 'force-motors'  },
+    { make: 'Isuzu',         json: 'isuzu',          id: 'isuzu'         },
+    { make: 'VinFast',       json: 'vinfast',        id: 'vinfast'       },
+    { make: 'BMW',           json: 'bmw',            id: 'bmw'           },
+    { make: 'Audi',          json: 'audi',           id: 'audi'          },
+    { make: 'Mercedes-Benz', json: 'mercedes',       id: 'mercedes-benz' },
+    { make: 'Porsche',       json: 'porsche',        id: 'porsche'       },
+    { make: 'Lamborghini',   json: 'lamborghini',    id: 'lamborghini'   },
+    { make: 'Ferrari',       json: 'ferrari',        id: 'ferrari'       },
+    { make: 'Land Rover',    json: 'land_rover',     id: 'land-rover'    },
+    { make: 'Jaguar',        json: 'jaguar',         id: 'jaguar'        },
+    { make: 'Lexus',         json: 'lexus',          id: 'lexus'         },
+    { make: 'Volvo',         json: 'volvo',          id: 'volvo'         },
+    { make: 'Mini',          json: 'mini',           id: 'mini'          },
+    { make: 'Aston Martin',  json: 'aston_martin',   id: 'aston-martin'  },
+    { make: 'Bentley',       json: 'bentley',        id: 'bentley'       },
+    { make: 'Maserati',      json: 'maserati',       id: 'maserati'      },
+    { make: 'Rolls-Royce',   json: 'rolls_royce',    id: 'rolls-royce'   },
+]
+
+function load4W(dataDir: string): CatalogModel[] {
+    const result: CatalogModel[] = []
+    for (const { make, json, id } of FOUR_W) {
+        const file = path.join(dataDir, `${json}.json`)
+        if (!fs.existsSync(file)) continue
+        try {
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            const raw: any = JSON.parse(fs.readFileSync(file, 'utf8'))
+            const seen = new Set<string>()
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            function walk(node: any, ctxModel?: string, ctxPrice?: string, ctxFuel?: string): void {
+                if (!node || typeof node !== 'object') return
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                if (Array.isArray(node)) { node.forEach((n: any) => walk(n, ctxModel, ctxPrice, ctxFuel)); return }
+                const model: string | undefined = node.model || node.model_name || ctxModel
+                const imgUrl = getImg(node.image_urls)
+                const price  = node.ex_showroom_price || node.ex_showroom_price_min_inr || ctxPrice
+                const fuel   = node.fuel_type || ctxFuel
+                if (model && imgUrl && !seen.has(model.toLowerCase())) {
+                    seen.add(model.toLowerCase())
+                    result.push({ id: `4w-${id}-${slug(model)}`, brand: make, brandId: id, model, imageUrl: imgUrl, price: price ? String(price) : null, fuelType: fuel ?? null, category: '4w' })
+                }
+                for (const [k, v] of Object.entries(node)) {
+                    if (k === 'image_urls') continue
+                    if (v && typeof v === 'object') walk(v, model ?? ctxModel, price ?? ctxPrice, fuel ?? ctxFuel)
+                }
+            }
+            walk(raw)
+            // Maruti-style: extract model from image URL path
+            if (!result.some((m) => m.brand === make)) {
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                function urlWalk(node: any): void {
+                    if (!node || typeof node !== 'object') return
+                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                    if (Array.isArray(node)) { node.forEach((n: any) => urlWalk(n)); return }
+                    const imgUrl = getImg(node.image_urls)
+                    if (imgUrl) {
+                        const m = imgUrl.match(/\/([A-Z][^/]+)\/\d{4,}\//)
+                        if (m) {
+                            const model = m[1].replace(/-/g, ' ')
+                            if (!seen.has(model.toLowerCase())) {
+                                seen.add(model.toLowerCase())
+                                result.push({ id: `4w-${id}-${slug(model)}`, brand: make, brandId: id, model, imageUrl: imgUrl, price: node.ex_showroom_price ?? null, fuelType: node.fuel_type ?? null, category: '4w' })
+                            }
+                        }
+                    }
+                    for (const [k, v] of Object.entries(node)) { if (k === 'image_urls') continue; if (v && typeof v === 'object') urlWalk(v) }
+                }
+                urlWalk(raw)
+            }
+        } catch { /* skip */ }
     }
-
-    return (
-        <div className="group flex flex-col bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 w-52 shrink-0">
-
-            {/* Image */}
-            <div className="relative h-32 bg-gray-50 overflow-hidden">
-                {!failed ? (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
-                        src={imgSrc}
-                        alt={`${m.brand} ${m.model}`}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        onError={handleError}
-                    />
-                ) : (
-                    <div className="flex items-center justify-center h-full">
-                        <ImageOff className="w-8 h-8 text-gray-300" />
-                    </div>
-                )}
-
-                {/* EV badge */}
-                {isEV && (
-                    <span className="absolute top-2 left-2 bg-emerald-600 text-white text-[9px] font-bold px-1.5 py-0.5 rounded-full flex items-center gap-0.5">
-                        <Zap className="w-2.5 h-2.5" /> EV
-                    </span>
-                )}
-            </div>
-
-            {/* Info */}
-            <div className="p-2.5 flex flex-col gap-1 flex-1">
-                <p className="text-[10px] text-gray-400 font-semibold uppercase tracking-wider truncate">
-                    {m.brand}
-                </p>
-                <p className="text-sm font-bold text-gray-900 leading-tight line-clamp-2">
-                    {m.model}
-                </p>
-
-                <div className="flex items-center gap-1.5 mt-auto pt-1.5 border-t border-gray-100">
-                    {m.fuelType && (
-                        <span className="flex items-center gap-0.5 text-[10px] text-gray-500">
-                            <Fuel className="w-3 h-3" /> {m.fuelType}
-                        </span>
-                    )}
-                    {m.price && (
-                        <span className="ml-auto text-[10px] font-semibold text-emerald-700 truncate">
-                            {m.price}
-                        </span>
-                    )}
-                </div>
-            </div>
-        </div>
-    )
+    return result
 }
 
-// ── Brand section ──────────────────────────────────────────────────────────
-
-function BrandSection({ brand, brandId, models }: { brand: string; brandId: string; models: CatalogModel[] }) {
-    return (
-        <div className="space-y-3">
-            {/* Brand header */}
-            <div className="flex items-center gap-2.5 sticky top-0 bg-gray-50 py-2 z-10">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                    src={`/data/brand-logos/${brandId}.png`}
-                    alt=""
-                    className="w-7 h-7 object-contain rounded bg-white border border-gray-100 p-0.5"
-                    onError={(e) => { (e.target as HTMLImageElement).style.display = "none" }}
-                />
-                <h3 className="text-sm font-bold text-gray-800">{brand}</h3>
-                <span className="text-xs text-gray-400 bg-white border border-gray-200 px-2 py-0.5 rounded-full">
-                    {models.length} model{models.length !== 1 ? "s" : ""}
-                </span>
-                <div className="flex-1 h-px bg-gray-200 ml-1" />
-            </div>
-
-            {/* Horizontal scroll of cards */}
-            <div className="flex gap-3 overflow-x-auto pb-3 -mx-1 px-1 scrollbar-thin">
-                {models.map((m) => (
-                    <ModelCard key={m.id} m={m} />
-                ))}
-            </div>
-        </div>
-    )
+function load2W(dir: string): CatalogModel[] {
+    const result: CatalogModel[] = []
+    if (!fs.existsSync(dir)) return result
+    for (const file of fs.readdirSync(dir)) {
+        if (!file.endsWith('.json')) continue
+        try {
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            const d: any = JSON.parse(fs.readFileSync(path.join(dir, file), 'utf8'))
+            const brand = d.brand ?? ''; const brandId = d.brandId ?? file.replace('.json', '')
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            for (const v of (d.vehicles ?? []) as any[]) {
+                const model: string = v.model ?? ''; if (!model) continue
+                const s = slug(model)
+                result.push({ id: `2w-${brandId}-${s}`, brand, brandId, model, imageUrl: `${SUPABASE_IMG}/2w/${brandId}/${s}.jpg`, price: v.price ?? null, fuelType: v.fuel_type ?? null, category: '2w' })
+            }
+        } catch { /* skip */ }
+    }
+    return result
 }
 
-// ── Main page ──────────────────────────────────────────────────────────────
+function load3W(dir: string): CatalogModel[] {
+    const result: CatalogModel[] = []
+    if (!fs.existsSync(dir)) return result
+    for (const file of fs.readdirSync(dir)) {
+        if (!file.endsWith('.json')) continue
+        try {
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            const d: any = JSON.parse(fs.readFileSync(path.join(dir, file), 'utf8'))
+            const brand = d.brand ?? ''; const brandId = d.brandId ?? file.replace('.json', '')
+            const seen = new Set<string>()
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            for (const v of (d.vehicles ?? []) as any[]) {
+                const model = (v.variant_name ?? v.model ?? '').split('/')[0].trim()
+                if (!model || seen.has(model.toLowerCase())) continue
+                seen.add(model.toLowerCase())
+                const s = slug(model)
+                result.push({ id: `3w-${brandId}-${s}`, brand, brandId, model, imageUrl: `${SUPABASE_IMG}/3w/${brandId}/${s}.jpg`, price: v.ex_showroom_price ?? null, fuelType: null, category: '3w' })
+            }
+        } catch { /* skip */ }
+    }
+    return result
+}
+
+// ── Page (Server Component) ────────────────────────────────────────────────
 
 export default function CatalogPage() {
-    const [models, setModels]   = useState<CatalogModel[]>([])
-    const [loading, setLoading] = useState(true)
-    const [error, setError]     = useState("")
-    const [activeTab, setActiveTab] = useState<CategoryKey>("4w")
-    const [search, setSearch]   = useState("")
-
-    useEffect(() => {
-        fetch("/api/admin/catalog")
-            .then((r) => {
-                if (!r.ok) throw new Error(`HTTP ${r.status}`)
-                return r.json()
-            })
-            .then((d) => setModels(d.models ?? []))
-            .catch((e) => setError(e.message))
-            .finally(() => setLoading(false))
-    }, [])
-
-    const counts = useMemo(() => ({
-        "4w": models.filter((m) => m.category === "4w").length,
-        "2w": models.filter((m) => m.category === "2w").length,
-        "3w": models.filter((m) => m.category === "3w").length,
-    }), [models])
-
-    // Group active tab models by brand, filtered by search
-    const brandGroups = useMemo(() => {
-        const q = search.toLowerCase().trim()
-        const inTab = models.filter((m) => m.category === activeTab)
-        const filtered = q
-            ? inTab.filter((m) => m.model.toLowerCase().includes(q) || m.brand.toLowerCase().includes(q))
-            : inTab
-
-        // Preserve brand order from the API (first-seen order)
-        const orderMap = new Map<string, number>()
-        const groupMap = new Map<string, { brand: string; brandId: string; models: CatalogModel[] }>()
-
-        filtered.forEach((m) => {
-            if (!groupMap.has(m.brand)) {
-                orderMap.set(m.brand, orderMap.size)
-                groupMap.set(m.brand, { brand: m.brand, brandId: m.brandId, models: [] })
-            }
-            groupMap.get(m.brand)!.models.push(m)
-        })
-
-        return Array.from(groupMap.values()).sort(
-            (a, b) => (orderMap.get(a.brand) ?? 0) - (orderMap.get(b.brand) ?? 0)
-        )
-    }, [models, activeTab, search])
-
-    const TABS: Array<{ key: CategoryKey; label: string; Icon: React.ElementType; activeClass: string }> = [
-        { key: "4w", label: "4-Wheeler", Icon: Car,   activeClass: "bg-blue-600 text-white border-blue-600"  },
-        { key: "2w", label: "2-Wheeler", Icon: Bike,  activeClass: "bg-green-600 text-white border-green-600" },
-        { key: "3w", label: "3-Wheeler", Icon: Truck, activeClass: "bg-amber-600 text-white border-amber-600" },
+    const dataDir = path.join(process.cwd(), 'public', 'data')
+    const models: CatalogModel[] = [
+        ...load4W(dataDir),
+        ...load2W(path.join(dataDir, '2w')),
+        ...load3W(path.join(dataDir, '3w')),
     ]
-
-    const totalModels = counts["4w"] + counts["2w"] + counts["3w"]
-
-    return (
-        <div className="min-h-screen bg-gray-50">
-            <div className="p-6 space-y-6 max-w-screen-2xl mx-auto">
-
-                {/* Header */}
-                <div>
-                    <h1 className="text-2xl font-bold text-gray-900">Vehicle Catalog</h1>
-                    <p className="text-sm text-gray-500 mt-1">
-                        {loading ? "Loading…" : `${totalModels} models across all brands`}
-                    </p>
-                </div>
-
-                {/* Tabs */}
-                <div className="flex gap-2 flex-wrap">
-                    {TABS.map(({ key, label, Icon, activeClass }) => (
-                        <button
-                            key={key}
-                            onClick={() => setActiveTab(key)}
-                            className={`flex items-center gap-2 px-4 py-2 rounded-lg border text-sm font-semibold transition-all ${
-                                activeTab === key
-                                    ? activeClass
-                                    : "bg-white text-gray-600 border-gray-200 hover:border-gray-300"
-                            }`}
-                        >
-                            <Icon className="w-4 h-4" />
-                            {label}
-                            <span className={`text-xs px-2 py-0.5 rounded-full font-bold ${
-                                activeTab === key ? "bg-white/20 text-white" : "bg-gray-100 text-gray-500"
-                            }`}>
-                                {loading ? "…" : counts[key]}
-                            </span>
-                        </button>
-                    ))}
-                </div>
-
-                {/* Search */}
-                <div className="relative max-w-xs">
-                    <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" />
-                    <Input
-                        placeholder="Search brand or model…"
-                        value={search}
-                        onChange={(e) => setSearch(e.target.value)}
-                        className="pl-9 bg-white"
-                    />
-                </div>
-
-                {/* Content */}
-                {loading ? (
-                    <div className="flex items-center justify-center gap-3 py-24 text-gray-400">
-                        <RefreshCw className="w-5 h-5 animate-spin" />
-                        <span className="text-sm">Loading catalog…</span>
-                    </div>
-                ) : error ? (
-                    <div className="text-center py-16 text-red-500 text-sm">
-                        Failed to load: {error}
-                    </div>
-                ) : brandGroups.length === 0 ? (
-                    <div className="text-center py-16 text-gray-400 text-sm">
-                        {search ? `No results for "${search}"` : "No models found."}
-                    </div>
-                ) : (
-                    <div className="space-y-8">
-                        {brandGroups.map((g) => (
-                            <BrandSection
-                                key={g.brand}
-                                brand={g.brand}
-                                brandId={g.brandId}
-                                models={g.models}
-                            />
-                        ))}
-                    </div>
-                )}
-            </div>
-        </div>
-    )
+    return <CatalogClient models={models} />
 }
