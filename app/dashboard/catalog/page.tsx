@@ -14,8 +14,6 @@ function slug(s: string) {
     return s.toLowerCase().replace(/\./g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
 }
 
-const SUPABASE_IMG = 'https://llsvbyeumrfngjvbedbz.supabase.co/storage/v1/object/public/vehicle-images'
-
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function getImg(imgUrls: unknown): string | null {
     if (!Array.isArray(imgUrls)) return null
@@ -117,6 +115,15 @@ function load4W(dataDir: string): CatalogModel[] {
     return result
 }
 
+/** Resolves a local downloaded image for 2W or 3W, returns null if not found */
+function localImg(category: '2w' | '3w', brandId: string, modelSlug: string): string | null {
+    const base = path.join(process.cwd(), 'public', 'data', 'brand-model-images', category, brandId, modelSlug)
+    for (const ext of ['.jpg', '.png']) {
+        if (fs.existsSync(base + ext)) return `/data/brand-model-images/${category}/${brandId}/${modelSlug}${ext}`
+    }
+    return null
+}
+
 function load2W(dir: string): CatalogModel[] {
     const result: CatalogModel[] = []
     if (!fs.existsSync(dir)) return result
@@ -130,7 +137,9 @@ function load2W(dir: string): CatalogModel[] {
             for (const v of (d.vehicles ?? []) as any[]) {
                 const model: string = v.model ?? ''; if (!model) continue
                 const s = slug(model)
-                result.push({ id: `2w-${brandId}-${s}`, brand, brandId, model, imageUrl: `${SUPABASE_IMG}/2w/${brandId}/${s}.jpg`, price: v.price ?? null, fuelType: v.fuel_type ?? null, category: '2w' })
+                // Use local downloaded image — same source as CardDekho/BikeWale (already downloaded)
+                const imageUrl = localImg('2w', brandId, s)
+                result.push({ id: `2w-${brandId}-${s}`, brand, brandId, model, imageUrl, price: v.price ?? null, fuelType: v.fuel_type ?? null, category: '2w' })
             }
         } catch { /* skip */ }
     }
@@ -153,7 +162,8 @@ function load3W(dir: string): CatalogModel[] {
                 if (!model || seen.has(model.toLowerCase())) continue
                 seen.add(model.toLowerCase())
                 const s = slug(model)
-                result.push({ id: `3w-${brandId}-${s}`, brand, brandId, model, imageUrl: `${SUPABASE_IMG}/3w/${brandId}/${s}.jpg`, price: v.ex_showroom_price ?? null, fuelType: null, category: '3w' })
+                const imageUrl = localImg('3w', brandId, s)
+                result.push({ id: `3w-${brandId}-${s}`, brand, brandId, model, imageUrl, price: v.ex_showroom_price ?? null, fuelType: null, category: '3w' })
             }
         } catch { /* skip */ }
     }
