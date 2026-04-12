@@ -393,27 +393,21 @@ export async function getCarsByMake(make: string): Promise<Car[]> {
 
     const cars = data.map(catalogRowToCar)
 
-    // Step 1: ALWAYS try local committed images first for every car.
-    // Local files are served from our own domain — no CDN, no hotlink blocking.
-    const withLocal = cars.map(c => {
+    // Step 1: Use CardDekho CDN images from brand JSON (matches what CardDekho displays).
+    const imageMap = loadBrandImageMap(make)
+    const withCDN = Object.keys(imageMap).length > 0
+        ? cars.map(c => {
+            const imgUrl = imageMap[c.model.toLowerCase()]
+            if (!imgUrl) return c
+            return { ...c, images: { ...c.images, hero: imgUrl, exterior: [imgUrl] } }
+        })
+        : cars
+
+    // Step 2: For any still without an image, fall back to local committed file.
+    return withCDN.map(c => {
+        if (c.images.hero && c.images.hero !== '/placeholder-car.jpg') return c
         const localUrl = getLocal4WImage(make, c.model)
         if (!localUrl) return c
         return { ...c, images: { ...c.images, hero: localUrl, exterior: [localUrl] } }
     })
-
-    // Step 2: For any without a local image, keep DB CDN URL or try brand JSON.
-    const stillMissing = withLocal.some(c => c.images.hero === '/placeholder-car.jpg')
-    if (stillMissing) {
-        const imageMap = loadBrandImageMap(make)
-        if (Object.keys(imageMap).length > 0) {
-            return withLocal.map(c => {
-                if (c.images.hero !== '/placeholder-car.jpg') return c
-                const imgUrl = imageMap[c.model.toLowerCase()]
-                if (!imgUrl) return c
-                return { ...c, images: { ...c.images, hero: imgUrl, exterior: [imgUrl] } }
-            })
-        }
-    }
-
-    return withLocal
 }
