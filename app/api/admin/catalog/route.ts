@@ -9,17 +9,7 @@
 import { NextResponse } from 'next/server'
 import fs from 'fs'
 import path from 'path'
-
-export interface CatalogModel {
-    id: string
-    brand: string
-    brandId: string
-    model: string
-    imageUrl: string | null
-    price: string | null
-    fuelType: string | null
-    category: '4w' | '2w' | '3w'
-}
+import type { CatalogModel } from '@/lib/types/catalog'
 
 // ── helpers ───────────────────────────────────────────────────────────────────
 

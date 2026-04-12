@@ -1,46 +1,39 @@
 "use client"
 
 import { useEffect, useState, useMemo } from "react"
-import { Search, Car, Bike, Truck, RefreshCw, ImageOff } from "lucide-react"
+import { Search, Car, Bike, Truck, RefreshCw, ImageOff, Fuel, Zap } from "lucide-react"
 import { Input } from "@/components/ui/input"
-import type { CatalogModel } from "@/app/api/admin/catalog/route"
-
-// ── Category config ────────────────────────────────────────────────────────
-
-const CATEGORIES = [
-    { key: "4w" as const, label: "4-Wheeler",  Icon: Car,   color: "text-blue-600",   bg: "bg-blue-50",   border: "border-blue-200"   },
-    { key: "2w" as const, label: "2-Wheeler",  Icon: Bike,  color: "text-green-600",  bg: "bg-green-50",  border: "border-green-200"  },
-    { key: "3w" as const, label: "3-Wheeler",  Icon: Truck, color: "text-amber-600",  bg: "bg-amber-50",  border: "border-amber-200"  },
-] as const
+import type { CatalogModel } from "@/lib/types/catalog"
 
 type CategoryKey = "4w" | "2w" | "3w"
 
-// ── Model card ─────────────────────────────────────────────────────────────
+// ── Website-style model card ───────────────────────────────────────────────
 
 function ModelCard({ m }: { m: CatalogModel }) {
-    const [imgSrc, setImgSrc] = useState(m.imageUrl ?? "")
-    const [failed, setFailed] = useState(!m.imageUrl)
+    const [imgSrc, setImgSrc]   = useState(m.imageUrl ?? "")
+    const [failed, setFailed]   = useState(!m.imageUrl)
+    const isEV = m.fuelType?.toLowerCase().includes("electric")
 
-    const brandLogoSrc = `/data/brand-logos/${m.brandId}.png`
+    function handleError() {
+        if (m.category !== "4w" && imgSrc.endsWith(".jpg")) {
+            setImgSrc(imgSrc.replace(".jpg", ".png"))
+        } else {
+            setFailed(true)
+        }
+    }
 
     return (
-        <div className="bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 flex flex-col">
+        <div className="group flex flex-col bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 w-52 shrink-0">
+
             {/* Image */}
-            <div className="relative aspect-[16/10] bg-gray-50 overflow-hidden">
+            <div className="relative h-32 bg-gray-50 overflow-hidden">
                 {!failed ? (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img
                         src={imgSrc}
                         alt={`${m.brand} ${m.model}`}
-                        className="w-full h-full object-cover"
-                        onError={() => {
-                            // Try PNG fallback for 2W/3W Supabase images
-                            if (m.category !== "4w" && imgSrc.endsWith(".jpg")) {
-                                setImgSrc(imgSrc.replace(".jpg", ".png"))
-                            } else {
-                                setFailed(true)
-                            }
-                        }}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        onError={handleError}
                     />
                 ) : (
                     <div className="flex items-center justify-center h-full">
@@ -48,41 +41,32 @@ function ModelCard({ m }: { m: CatalogModel }) {
                     </div>
                 )}
 
-                {/* Category pill */}
-                <span className={`absolute top-2 left-2 text-[10px] font-bold px-2 py-0.5 rounded-full border ${
-                    m.category === "4w" ? "bg-blue-50 text-blue-700 border-blue-200" :
-                    m.category === "2w" ? "bg-green-50 text-green-700 border-green-200" :
-                    "bg-amber-50 text-amber-700 border-amber-200"
-                }`}>
-                    {m.category.toUpperCase()}
-                </span>
+                {/* EV badge */}
+                {isEV && (
+                    <span className="absolute top-2 left-2 bg-emerald-600 text-white text-[9px] font-bold px-1.5 py-0.5 rounded-full flex items-center gap-0.5">
+                        <Zap className="w-2.5 h-2.5" /> EV
+                    </span>
+                )}
             </div>
 
             {/* Info */}
-            <div className="p-3 flex flex-col gap-1 flex-1">
-                {/* Brand row */}
-                <div className="flex items-center gap-1.5">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                        src={brandLogoSrc}
-                        alt=""
-                        className="w-4 h-4 object-contain"
-                        onError={(e) => { (e.target as HTMLImageElement).style.display = "none" }}
-                    />
-                    <p className="text-[11px] text-gray-500 font-medium truncate">{m.brand}</p>
-                </div>
+            <div className="p-2.5 flex flex-col gap-1 flex-1">
+                <p className="text-[10px] text-gray-400 font-semibold uppercase tracking-wider truncate">
+                    {m.brand}
+                </p>
+                <p className="text-sm font-bold text-gray-900 leading-tight line-clamp-2">
+                    {m.model}
+                </p>
 
-                {/* Model name */}
-                <p className="text-sm font-bold text-gray-900 leading-tight line-clamp-2">{m.model}</p>
-
-                {/* Price + fuel */}
-                <div className="flex items-center gap-2 mt-auto pt-1">
-                    {m.price && (
-                        <p className="text-xs text-emerald-700 font-semibold truncate">{m.price}</p>
-                    )}
+                <div className="flex items-center gap-1.5 mt-auto pt-1.5 border-t border-gray-100">
                     {m.fuelType && (
-                        <span className="ml-auto text-[10px] bg-gray-100 text-gray-600 px-1.5 py-0.5 rounded-full shrink-0">
-                            {m.fuelType}
+                        <span className="flex items-center gap-0.5 text-[10px] text-gray-500">
+                            <Fuel className="w-3 h-3" /> {m.fuelType}
+                        </span>
+                    )}
+                    {m.price && (
+                        <span className="ml-auto text-[10px] font-semibold text-emerald-700 truncate">
+                            {m.price}
                         </span>
                     )}
                 </div>
@@ -91,19 +75,54 @@ function ModelCard({ m }: { m: CatalogModel }) {
     )
 }
 
+// ── Brand section ──────────────────────────────────────────────────────────
+
+function BrandSection({ brand, brandId, models }: { brand: string; brandId: string; models: CatalogModel[] }) {
+    return (
+        <div className="space-y-3">
+            {/* Brand header */}
+            <div className="flex items-center gap-2.5 sticky top-0 bg-gray-50 py-2 z-10">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                    src={`/data/brand-logos/${brandId}.png`}
+                    alt=""
+                    className="w-7 h-7 object-contain rounded bg-white border border-gray-100 p-0.5"
+                    onError={(e) => { (e.target as HTMLImageElement).style.display = "none" }}
+                />
+                <h3 className="text-sm font-bold text-gray-800">{brand}</h3>
+                <span className="text-xs text-gray-400 bg-white border border-gray-200 px-2 py-0.5 rounded-full">
+                    {models.length} model{models.length !== 1 ? "s" : ""}
+                </span>
+                <div className="flex-1 h-px bg-gray-200 ml-1" />
+            </div>
+
+            {/* Horizontal scroll of cards */}
+            <div className="flex gap-3 overflow-x-auto pb-3 -mx-1 px-1 scrollbar-thin">
+                {models.map((m) => (
+                    <ModelCard key={m.id} m={m} />
+                ))}
+            </div>
+        </div>
+    )
+}
+
 // ── Main page ──────────────────────────────────────────────────────────────
 
 export default function CatalogPage() {
-    const [models, setModels] = useState<CatalogModel[]>([])
+    const [models, setModels]   = useState<CatalogModel[]>([])
     const [loading, setLoading] = useState(true)
+    const [error, setError]     = useState("")
     const [activeTab, setActiveTab] = useState<CategoryKey>("4w")
-    const [search, setSearch] = useState("")
+    const [search, setSearch]   = useState("")
 
     useEffect(() => {
         fetch("/api/admin/catalog")
-            .then((r) => r.json())
+            .then((r) => {
+                if (!r.ok) throw new Error(`HTTP ${r.status}`)
+                return r.json()
+            })
             .then((d) => setModels(d.models ?? []))
-            .catch(console.error)
+            .catch((e) => setError(e.message))
             .finally(() => setLoading(false))
     }, [])
 
@@ -113,82 +132,112 @@ export default function CatalogPage() {
         "3w": models.filter((m) => m.category === "3w").length,
     }), [models])
 
-    const filtered = useMemo(() => {
+    // Group active tab models by brand, filtered by search
+    const brandGroups = useMemo(() => {
         const q = search.toLowerCase().trim()
-        return models.filter((m) => {
-            if (m.category !== activeTab) return false
-            if (!q) return true
-            return m.model.toLowerCase().includes(q) || m.brand.toLowerCase().includes(q)
+        const inTab = models.filter((m) => m.category === activeTab)
+        const filtered = q
+            ? inTab.filter((m) => m.model.toLowerCase().includes(q) || m.brand.toLowerCase().includes(q))
+            : inTab
+
+        // Preserve brand order from the API (first-seen order)
+        const orderMap = new Map<string, number>()
+        const groupMap = new Map<string, { brand: string; brandId: string; models: CatalogModel[] }>()
+
+        filtered.forEach((m) => {
+            if (!groupMap.has(m.brand)) {
+                orderMap.set(m.brand, orderMap.size)
+                groupMap.set(m.brand, { brand: m.brand, brandId: m.brandId, models: [] })
+            }
+            groupMap.get(m.brand)!.models.push(m)
         })
+
+        return Array.from(groupMap.values()).sort(
+            (a, b) => (orderMap.get(a.brand) ?? 0) - (orderMap.get(b.brand) ?? 0)
+        )
     }, [models, activeTab, search])
 
+    const TABS: Array<{ key: CategoryKey; label: string; Icon: React.ElementType; activeClass: string }> = [
+        { key: "4w", label: "4-Wheeler", Icon: Car,   activeClass: "bg-blue-600 text-white border-blue-600"  },
+        { key: "2w", label: "2-Wheeler", Icon: Bike,  activeClass: "bg-green-600 text-white border-green-600" },
+        { key: "3w", label: "3-Wheeler", Icon: Truck, activeClass: "bg-amber-600 text-white border-amber-600" },
+    ]
+
+    const totalModels = counts["4w"] + counts["2w"] + counts["3w"]
+
     return (
-        <div className="p-6 space-y-6">
-            {/* Header */}
-            <div>
-                <h1 className="text-2xl font-bold text-gray-900">Vehicle Catalog</h1>
-                <p className="text-sm text-gray-500 mt-1">
-                    All models in the system — {models.length} total across 4W, 2W, 3W
-                </p>
-            </div>
+        <div className="min-h-screen bg-gray-50">
+            <div className="p-6 space-y-6 max-w-screen-2xl mx-auto">
 
-            {/* Category tabs */}
-            <div className="flex gap-3 flex-wrap">
-                {CATEGORIES.map(({ key, label, Icon, color, bg, border }) => (
-                    <button
-                        key={key}
-                        onClick={() => setActiveTab(key)}
-                        className={`flex items-center gap-2 px-4 py-2.5 rounded-xl border text-sm font-semibold transition-all ${
-                            activeTab === key
-                                ? `${bg} ${color} ${border} shadow-sm`
-                                : "bg-white text-gray-500 border-gray-200 hover:border-gray-300"
-                        }`}
-                    >
-                        <Icon className="w-4 h-4" />
-                        {label}
-                        <span className={`text-xs px-2 py-0.5 rounded-full font-bold ${
-                            activeTab === key ? `${bg} ${color}` : "bg-gray-100 text-gray-500"
-                        }`}>
-                            {loading ? "…" : counts[key]}
-                        </span>
-                    </button>
-                ))}
-            </div>
-
-            {/* Search */}
-            <div className="relative max-w-sm">
-                <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
-                <Input
-                    placeholder="Search brand or model…"
-                    value={search}
-                    onChange={(e) => setSearch(e.target.value)}
-                    className="pl-9"
-                />
-            </div>
-
-            {/* Grid */}
-            {loading ? (
-                <div className="flex items-center gap-3 text-gray-400 py-16 justify-center">
-                    <RefreshCw className="w-5 h-5 animate-spin" />
-                    <span className="text-sm">Loading catalog…</span>
-                </div>
-            ) : filtered.length === 0 ? (
-                <div className="text-center py-16 text-gray-400 text-sm">
-                    {search ? `No results for "${search}"` : "No models found in this category."}
-                </div>
-            ) : (
-                <>
-                    <p className="text-xs text-gray-400">
-                        Showing {filtered.length} model{filtered.length !== 1 ? "s" : ""}
-                        {search ? ` matching "${search}"` : ""}
+                {/* Header */}
+                <div>
+                    <h1 className="text-2xl font-bold text-gray-900">Vehicle Catalog</h1>
+                    <p className="text-sm text-gray-500 mt-1">
+                        {loading ? "Loading…" : `${totalModels} models across all brands`}
                     </p>
-                    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-                        {filtered.map((m) => (
-                            <ModelCard key={m.id} m={m} />
+                </div>
+
+                {/* Tabs */}
+                <div className="flex gap-2 flex-wrap">
+                    {TABS.map(({ key, label, Icon, activeClass }) => (
+                        <button
+                            key={key}
+                            onClick={() => setActiveTab(key)}
+                            className={`flex items-center gap-2 px-4 py-2 rounded-lg border text-sm font-semibold transition-all ${
+                                activeTab === key
+                                    ? activeClass
+                                    : "bg-white text-gray-600 border-gray-200 hover:border-gray-300"
+                            }`}
+                        >
+                            <Icon className="w-4 h-4" />
+                            {label}
+                            <span className={`text-xs px-2 py-0.5 rounded-full font-bold ${
+                                activeTab === key ? "bg-white/20 text-white" : "bg-gray-100 text-gray-500"
+                            }`}>
+                                {loading ? "…" : counts[key]}
+                            </span>
+                        </button>
+                    ))}
+                </div>
+
+                {/* Search */}
+                <div className="relative max-w-xs">
+                    <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" />
+                    <Input
+                        placeholder="Search brand or model…"
+                        value={search}
+                        onChange={(e) => setSearch(e.target.value)}
+                        className="pl-9 bg-white"
+                    />
+                </div>
+
+                {/* Content */}
+                {loading ? (
+                    <div className="flex items-center justify-center gap-3 py-24 text-gray-400">
+                        <RefreshCw className="w-5 h-5 animate-spin" />
+                        <span className="text-sm">Loading catalog…</span>
+                    </div>
+                ) : error ? (
+                    <div className="text-center py-16 text-red-500 text-sm">
+                        Failed to load: {error}
+                    </div>
+                ) : brandGroups.length === 0 ? (
+                    <div className="text-center py-16 text-gray-400 text-sm">
+                        {search ? `No results for "${search}"` : "No models found."}
+                    </div>
+                ) : (
+                    <div className="space-y-8">
+                        {brandGroups.map((g) => (
+                            <BrandSection
+                                key={g.brand}
+                                brand={g.brand}
+                                brandId={g.brandId}
+                                models={g.models}
+                            />
                         ))}
                     </div>
-                </>
-            )}
+                )}
+            </div>
         </div>
     )
 }
