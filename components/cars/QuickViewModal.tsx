@@ -295,7 +295,7 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
                                       </div>
                                 }
                             </div>
-                            {fallbackList.length > 1 && (
+                            {fallbackList.length > 1 && car.vehicleCategory !== '4w' && (
                                 <div className="flex gap-2 overflow-x-auto pb-1">
                                     {fallbackList.map((img, i) => (
                                         <button
