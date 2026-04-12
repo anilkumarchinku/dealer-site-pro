@@ -28,6 +28,7 @@ import {
     Bike,
     Truck,
     RefreshCw,
+    BookOpen,
 } from "lucide-react";
 import { dealerSiteHref } from "@/lib/utils/domain";
 
@@ -50,8 +51,9 @@ const navGroups = [
     {
         label: "Insights",
         items: [
-            { name: "Analytics", href: "/dashboard/analytics", icon: BarChart3 },
+            { name: "Analytics", href: "/dashboard/analytics", icon: BarChart3  },
             { name: "Reviews",   href: "/dashboard/reviews",   icon: Star       },
+            { name: "Catalog",   href: "/dashboard/catalog",   icon: BookOpen   },
         ],
     },
     {
