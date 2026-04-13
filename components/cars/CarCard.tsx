@@ -300,22 +300,29 @@ export function CarCard({
                 </div>
 
                 {/* ── Content ── */}
-                <CardContent className="flex flex-col flex-1 p-3 pt-2.5">
+                <CardContent className="flex flex-col flex-1 p-4">
                     {/* Brand & Model */}
-                    <div className="mb-1.5">
-                        <div className="flex items-center gap-1.5">
-                            {getBrandLogo(car.make) && (
-                                <Image src={getBrandLogo(car.make)!} alt={car.make} width={16} height={16} className="object-contain" />
+                    <div className="mb-2">
+                        <div className="flex items-center justify-between gap-1.5">
+                            <div className="flex items-center gap-1.5 min-w-0">
+                                {getBrandLogo(car.make) && (
+                                    <Image src={getBrandLogo(car.make)!} alt={car.make} width={16} height={16} className="object-contain shrink-0" />
+                                )}
+                                <p className="text-xs font-semibold uppercase tracking-wider truncate" style={{ color: brandColor }}>
+                                    {car.make}
+                                </p>
+                            </div>
+                            {isUsed && car.year && (
+                                <span className="inline-flex items-center gap-1 text-xs font-medium px-1.5 py-0.5 rounded-full bg-gray-100 text-gray-500 shrink-0">
+                                    {car.year}
+                                </span>
                             )}
-                            <p className="text-[11px] font-semibold uppercase tracking-wider" style={{ color: brandColor }}>
-                                {car.make}
-                            </p>
                         </div>
-                        <h3 className="text-base font-bold leading-tight line-clamp-1 text-gray-900">
+                        <h3 className="text-base font-bold leading-tight line-clamp-1 text-gray-900 mt-0.5">
                             {car.model}
                         </h3>
                         {car.variant && (
-                            <p className="text-[11px] line-clamp-1 text-gray-500">
+                            <p className="text-xs line-clamp-1 text-gray-500 mt-0.5">
                                 {car.variant}
                             </p>
                         )}
@@ -323,16 +330,11 @@ export function CarCard({
 
                     {/* Used Car Info Pills */}
                     {isUsed && (
-                        <div className="flex flex-wrap gap-1.5 mb-1.5">
-                            {car.year && (
-                                <span className="inline-flex items-center gap-1 text-[10px] font-medium px-1.5 py-0.5 rounded bg-white border border-gray-200 text-gray-600">
-                                    <Calendar className="w-2.5 h-2.5" />{car.year}
-                                </span>
-                            )}
-                            <span className="inline-flex items-center gap-1 text-[10px] font-medium px-1.5 py-0.5 rounded bg-white border border-gray-200 text-gray-600">
+                        <div className="flex flex-wrap gap-1.5 mb-2">
+                            <span className="inline-flex items-center gap-1 text-xs font-medium px-1.5 py-0.5 rounded-full bg-white border border-gray-200 text-gray-600">
                                 <Fuel className="w-2.5 h-2.5" />{fuelDisplay}
                             </span>
-                            <span className="inline-flex items-center gap-1 text-[10px] font-medium px-1.5 py-0.5 rounded bg-white border border-gray-200 text-gray-600">
+                            <span className="inline-flex items-center gap-1 text-xs font-medium px-1.5 py-0.5 rounded-full bg-white border border-gray-200 text-gray-600">
                                 <Gauge className="w-2.5 h-2.5" />{transDisplay}
                             </span>
                         </div>
@@ -348,10 +350,10 @@ export function CarCard({
                                 <span className="text-xs text-gray-500">– {maxPrice}</span>
                             )}
                         </div>
-                        <p className="text-[10px] text-gray-500">Ex-showroom price</p>
+                        <p className="text-xs text-gray-500">Ex-showroom price</p>
 
                         {showEMI && car.pricing.emi && (
-                            <Badge variant="secondary" className="mt-1 text-[10px] font-medium gap-1 h-5" style={{ color: brandColor }}>
+                            <Badge variant="secondary" className="mt-1 text-xs font-medium gap-1 h-5" style={{ color: brandColor }}>
                                 <TrendingUp className="w-3 h-3" />
                                 EMI ₹{car.pricing.emi.monthly.toLocaleString()}/mo
                             </Badge>
@@ -361,25 +363,24 @@ export function CarCard({
                     <Separator className="mb-2" />
 
                     {/* Specs Grid — always 4 items, adapts per vehicle category */}
-                    <div className="grid grid-cols-2 gap-1.5 mb-2">
+                    <div className="grid grid-cols-2 gap-2 mb-2">
                         <SpecItem icon={<Fuel className="w-3.5 h-3.5 text-emerald-600" />} label="Fuel" value={fuelDisplay} light={light} />
                         <SpecItem icon={spec2.icon} label={spec2.label} value={spec2.value} light={light} />
                         <SpecItem icon={spec3.icon} label={spec3.label} value={spec3.value} light={light} />
                         <SpecItem icon={spec4.icon} label={spec4.label} value={spec4.value} light={light} />
                     </div>
 
-
                     {/* Trust Badges for Used Cars */}
                     {isUsed && (
-                        <div className="flex items-center gap-2 mb-1.5">
-                            <span className="inline-flex items-center gap-1 text-[9px] font-medium text-emerald-500 bg-emerald-500/10 px-1.5 py-0.5 rounded">
+                        <div className="flex items-center gap-2 mb-2">
+                            <span className="inline-flex items-center gap-1 text-xs font-medium text-emerald-600 bg-emerald-50 border border-emerald-200 px-1.5 py-0.5 rounded-full">
                                 <ShieldCheck className="w-2.5 h-2.5" />Inspected
                             </span>
-                            <span className="inline-flex items-center gap-1 text-[9px] font-medium text-blue-500 bg-blue-500/10 px-1.5 py-0.5 rounded">
+                            <span className="inline-flex items-center gap-1 text-xs font-medium text-blue-600 bg-blue-50 border border-blue-200 px-1.5 py-0.5 rounded-full">
                                 Warranty
                             </span>
                             {car.condition === 'certified_pre_owned' && (
-                                <span className="inline-flex items-center gap-1 text-[9px] font-medium text-purple-500 bg-purple-500/10 px-1.5 py-0.5 rounded">
+                                <span className="inline-flex items-center gap-1 text-xs font-medium text-purple-600 bg-purple-50 border border-purple-200 px-1.5 py-0.5 rounded-full">
                                     7-Day Return
                                 </span>
                             )}
@@ -387,7 +388,7 @@ export function CarCard({
                     )}
 
                     {/* CTA row — Enquire + Test Drive + Quick View */}
-                    <div className="flex gap-2 mt-1">
+                    <div className="flex gap-2 mt-auto pt-1">
                         <Button
                             className="flex-1"
                             size="sm"
@@ -486,17 +487,14 @@ function SpecItem({
 }) {
     const isLong = value.includes('/');
     return (
-        <div className={cn("flex items-center gap-2 p-2 rounded-lg bg-white border border-gray-100", !value && "invisible")}>
-            <div className="w-7 h-7 rounded-md flex items-center justify-center shrink-0 bg-white shadow-sm border border-gray-100">
+        <div className={cn("flex items-center gap-2 p-2 rounded-xl bg-white border border-gray-200", !value && "invisible")}>
+            <div className="w-7 h-7 rounded-lg flex items-center justify-center shrink-0 bg-gray-50 border border-gray-200">
                 {icon}
             </div>
             <div className="min-w-0">
-                <p className="text-[10px] text-gray-500 leading-none">{label}</p>
+                <p className="text-xs text-gray-500 leading-none">{label}</p>
                 <p
-                    className={cn(
-                        'font-semibold leading-tight truncate text-gray-900',
-                        isLong ? 'text-[11px]' : 'text-xs',
-                    )}
+                    className="text-xs font-semibold leading-tight truncate text-gray-900"
                     title={value}
                 >
                     {value}

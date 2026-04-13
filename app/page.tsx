@@ -3,7 +3,7 @@ import WelcomeClient from "./welcome-client";
 
 export default async function WelcomePage() {
     // Fetch data on the server
-    const latestCars = await getLatestCars(8);
+    const latestCars = await getLatestCars(9);
 
     return (
         <WelcomeClient

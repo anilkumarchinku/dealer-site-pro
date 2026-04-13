@@ -5,8 +5,9 @@
  * Professional control center for template and brand management
  */
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { useRouter } from "next/navigation";
+import { supabase } from "@/lib/supabase";
 import Image from "next/image";
 import { useOnboardingStore } from "@/lib/store/onboarding-store";
 import { Button } from "@/components/ui/button";
@@ -100,7 +101,7 @@ const BRAND_CATEGORIES = [
     },
     {
         name: "Luxury",
-        brands: ["Mercedes-Benz", "BMW", "Audi", "Jaguar", "Land Rover", "Volvo", "Lexus", "Porsche", "Bentley", "Lamborghini"]
+        brands: ["Mercedes-Benz", "BMW", "Audi", "Jaguar", "Land Rover", "Volvo", "Lexus", "Porsche", "Bentley", "Lamborghini", "Aston Martin"]
     },
     {
         name: "Electric",
@@ -217,14 +218,33 @@ export default function AdminDashboard() {
     const [isLaunching, setIsLaunching] = useState(false);
     const [activeCategory, setActiveCategory] = useState<string>("all");
     const [cars, setCars] = useState<CarType[]>([]);
+    const [adminChecked, setAdminChecked] = useState(false);
+
+    // ── Admin gate: only allow emails listed in NEXT_PUBLIC_ADMIN_EMAILS ───────
+    useEffect(() => {
+        supabase.auth.getUser().then(({ data: { user } }) => {
+            const adminEmails = (process.env.NEXT_PUBLIC_ADMIN_EMAILS ?? '')
+                .split(',')
+                .map(e => e.trim().toLowerCase())
+                .filter(Boolean)
+            if (!user || !adminEmails.includes(user.email?.toLowerCase() ?? '')) {
+                router.replace('/dashboard')
+                return
+            }
+            setAdminChecked(true)
+        })
+    }, [router])
 
     useEffect(() => {
+        if (!adminChecked) return
         let isMounted = true;
         getAllCars({ limit: 12 }).then(res => {
             if (isMounted) setCars(res.cars);
         });
         return () => { isMounted = false; };
-    }, []);
+    }, [adminChecked])
+
+    if (!adminChecked) return null
 
 
     const handleLaunch = async () => {
