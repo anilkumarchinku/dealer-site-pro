@@ -38,7 +38,7 @@ export default async function BrandsPage() {
                 {/* Header */}
                 <div className="mb-8">
                     <h1 className="text-3xl font-bold tracking-tight">All Car Brands</h1>
-                    <p className="text-muted-foreground mt-1">
+                    <p className="text-sm text-muted-foreground mt-1">
                         Explore {brands.length} car brands and find your perfect car
                     </p>
                 </div>

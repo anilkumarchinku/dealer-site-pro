@@ -47,7 +47,7 @@ const statusConfig: Record<string, { bg: string; text: string; label: string }> 
     contacted: { bg: "bg-blue-50", text: "text-blue-700", label: "Contacted" },
     qualified: { bg: "bg-purple-50", text: "text-purple-700", label: "Qualified" },
     converted: { bg: "bg-emerald-50", text: "text-emerald-700", label: "Converted" },
-    lost: { bg: "bg-gray-100", text: "text-gray-600", label: "Lost" },
+    lost: { bg: "bg-muted", text: "text-muted-foreground", label: "Lost" },
 };
 
 const PAGE_SIZE = 20;

@@ -168,7 +168,7 @@ export default function DashboardPage() {
             {/* Welcome */}
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
                 <div>
-                    <h1 className="text-3xl font-bold text-foreground">
+                    <h1 className="text-2xl font-bold text-foreground">
                         Welcome back, {data.dealershipName || "Dealer"}!
                     </h1>
                     <p className="text-muted-foreground">Here's what's happening with your dealership today.</p>
@@ -249,7 +249,7 @@ export default function DashboardPage() {
             </div>
 
             {/* ── Info & Brands ─────────────────────────────────────────── */}
-            <div className="bg-card border border-border rounded-xl p-5">
+            <div className="bg-card border border-border rounded-xl p-6">
                 <div className="flex items-center justify-between mb-4">
                     <div>
                         <h2 className="font-semibold text-base">Info &amp; Brands</h2>
@@ -386,9 +386,17 @@ export default function DashboardPage() {
                     </CardHeader>
                     <CardContent>
                         {leadsLoading ? (
-                            <div className="flex items-center justify-center py-16 gap-2 text-muted-foreground">
-                                <Loader2 className="w-5 h-5 animate-spin" />
-                                <span className="text-sm">Loading leads…</span>
+                            <div className="space-y-4">
+                                {[...Array(3)].map((_, i) => (
+                                    <div key={i} className="flex items-start gap-4 p-4 rounded-xl bg-muted/30 animate-pulse">
+                                        <div className="w-12 h-12 rounded-full bg-muted shrink-0" />
+                                        <div className="flex-1 space-y-2 pt-1">
+                                            <div className="h-3.5 bg-muted rounded-full w-1/3" />
+                                            <div className="h-3 bg-muted rounded-full w-1/2" />
+                                            <div className="h-3 bg-muted rounded-full w-2/3" />
+                                        </div>
+                                    </div>
+                                ))}
                             </div>
                         ) : recentLeads.length === 0 ? (
                             <div className="text-center py-16 text-muted-foreground">
@@ -497,7 +505,7 @@ export default function DashboardPage() {
                             ) : (
                                 <div className="space-y-3">
                                     {topVehicles.map((v, i) => (
-                                        <div key={v.id} className="flex items-center gap-3">
+                                        <div key={v.id} className="flex items-center gap-4">
                                             <span className="text-sm text-muted-foreground w-5">{i + 1}.</span>
                                             <div className="flex-1 min-w-0">
                                                 <p className="font-medium text-sm truncate">{v.make} {v.model}</p>
