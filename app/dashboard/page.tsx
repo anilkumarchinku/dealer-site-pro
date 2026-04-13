@@ -386,12 +386,12 @@ export default function DashboardPage() {
                     </CardHeader>
                     <CardContent>
                         {leadsLoading ? (
-                            <div className="flex items-center justify-center py-12 gap-2 text-muted-foreground">
+                            <div className="flex items-center justify-center py-16 gap-2 text-muted-foreground">
                                 <Loader2 className="w-5 h-5 animate-spin" />
                                 <span className="text-sm">Loading leads…</span>
                             </div>
                         ) : recentLeads.length === 0 ? (
-                            <div className="text-center py-12 text-muted-foreground">
+                            <div className="text-center py-16 text-muted-foreground">
                                 <Users className="w-10 h-10 mx-auto mb-3 opacity-30" />
                                 <p className="font-medium">No leads yet</p>
                                 <p className="text-sm mt-1">New customer inquiries will appear here</p>

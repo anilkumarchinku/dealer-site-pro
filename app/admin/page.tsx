@@ -298,10 +298,10 @@ export default function AdminDashboard() {
     const selectedTemplateData = TEMPLATES.find(t => t.id === selectedTemplate);
 
     return (
-        <div className="min-h-screen bg-gray-50">
+        <div className="min-h-screen bg-muted/30">
             {/* Premium Header */}
-            <header className="bg-white border-b border-gray-100 sticky top-0 z-50">
-                <div className="max-w-7xl mx-auto px-6">
+            <header className="bg-background border-b border-border sticky top-0 z-50">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="h-16 flex items-center justify-between">
                         {/* Logo */}
                         <div className="flex items-center gap-3">
@@ -309,8 +309,8 @@ export default function AdminDashboard() {
                                 <Settings className="w-5 h-5 text-white" />
                             </div>
                             <div>
-                                <h1 className="font-bold text-gray-900">Admin Dashboard</h1>
-                                <p className="text-xs text-gray-500">Template Control Center</p>
+                                <h1 className="font-bold text-foreground">Admin Dashboard</h1>
+                                <p className="text-xs text-muted-foreground">Template Control Center</p>
                             </div>
                         </div>
 
@@ -319,22 +319,21 @@ export default function AdminDashboard() {
                             <Button
                                 variant="outline"
                                 onClick={() => router.push("/admin/inventory-audit")}
-                                className="border-gray-200 text-gray-700 bg-white"
                             >
                                 <Eye className="w-4 h-4 mr-2" />
                                 Inventory Audit
                             </Button>
-                            <div className="flex items-center gap-4 px-4 py-2 bg-gray-50 rounded-xl">
+                            <div className="flex items-center gap-4 px-4 py-2 bg-muted/50 rounded-xl">
                                 <div className="flex items-center gap-2">
-                                    <Palette className="w-4 h-4 text-gray-400" />
-                                    <span className="text-sm text-gray-500">Template:</span>
-                                    <span className="text-sm font-semibold text-gray-900 capitalize">{selectedTemplate}</span>
+                                    <Palette className="w-4 h-4 text-muted-foreground" />
+                                    <span className="text-sm text-muted-foreground">Template:</span>
+                                    <span className="text-sm font-semibold text-foreground capitalize">{selectedTemplate}</span>
                                 </div>
-                                <div className="w-px h-4 bg-gray-200" />
+                                <div className="w-px h-4 bg-border" />
                                 <div className="flex items-center gap-2">
-                                    <Car className="w-4 h-4 text-gray-400" />
-                                    <span className="text-sm text-gray-500">Brand:</span>
-                                    <span className="text-sm font-semibold text-gray-900">{selectedBrand}</span>
+                                    <Car className="w-4 h-4 text-muted-foreground" />
+                                    <span className="text-sm text-muted-foreground">Brand:</span>
+                                    <span className="text-sm font-semibold text-foreground">{selectedBrand}</span>
                                 </div>
                             </div>
 
@@ -356,7 +355,7 @@ export default function AdminDashboard() {
                 </div>
             </header>
 
-            <main className="max-w-7xl mx-auto px-6 py-8 space-y-12">
+            <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
                 {/* Quick Stats */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                     {[
@@ -377,8 +376,8 @@ export default function AdminDashboard() {
                                     <stat.icon className="w-5 h-5" />
                                 </div>
                                 <div>
-                                    <p className="text-2xl font-bold text-gray-900">{stat.value}</p>
-                                    <p className="text-xs text-gray-500">{stat.label}</p>
+                                    <p className="text-2xl font-bold text-foreground">{stat.value}</p>
+                                    <p className="text-xs text-muted-foreground">{stat.label}</p>
                                 </div>
                             </div>
                         </Card>
@@ -393,8 +392,8 @@ export default function AdminDashboard() {
                                 <LayoutTemplate className="w-5 h-5 text-white" />
                             </div>
                             <div>
-                                <h2 className="text-xl font-bold text-gray-900">Choose Template</h2>
-                                <p className="text-sm text-gray-500">Select the perfect design for your dealership</p>
+                                <h2 className="text-xl font-semibold text-foreground">Choose Template</h2>
+                                <p className="text-sm text-muted-foreground">Select the perfect design for your dealership</p>
                             </div>
                         </div>
                     </div>
@@ -445,14 +444,14 @@ export default function AdminDashboard() {
                                             "absolute bottom-3 left-3 w-10 h-10 rounded-xl flex items-center justify-center backdrop-blur-sm",
                                             template.dark ? "bg-white/20" : "bg-black/10"
                                         )}>
-                                            <Icon className={cn("w-5 h-5", template.dark ? "text-white" : "text-gray-700")} />
+                                            <Icon className={cn("w-5 h-5", template.dark ? "text-white" : "text-foreground/70")} />
                                         </div>
                                     </div>
 
                                     {/* Info */}
                                     <div className="p-4">
                                         <div className="flex items-center justify-between mb-2">
-                                            <h3 className="text-lg font-bold text-gray-900">{template.name}</h3>
+                                            <h3 className="text-lg font-semibold text-foreground">{template.name}</h3>
                                             <span className={cn(
                                                 "text-xs font-medium px-2 py-1 rounded-full",
                                                 `bg-gradient-to-r ${template.gradient} text-white`
@@ -460,7 +459,7 @@ export default function AdminDashboard() {
                                                 {template.preview}
                                             </span>
                                         </div>
-                                        <p className="text-sm text-gray-500 line-clamp-2">{template.description}</p>
+                                        <p className="text-sm text-muted-foreground line-clamp-2">{template.description}</p>
                                     </div>
                                 </Card>
                             );
@@ -476,8 +475,8 @@ export default function AdminDashboard() {
                                 <Car className="w-5 h-5 text-white" />
                             </div>
                             <div>
-                                <h2 className="text-xl font-bold text-gray-900">Select Brand</h2>
-                                <p className="text-sm text-gray-500">Choose the automotive brand to showcase</p>
+                                <h2 className="text-xl font-semibold text-foreground">Select Brand</h2>
+                                <p className="text-sm text-muted-foreground">Choose the automotive brand to showcase</p>
                             </div>
                         </div>
 
@@ -488,8 +487,8 @@ export default function AdminDashboard() {
                                 className={cn(
                                     "px-4 py-2 rounded-full text-sm font-medium transition-all",
                                     activeCategory === "all"
-                                        ? "bg-gray-900 text-white"
-                                        : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                                        ? "bg-foreground text-background"
+                                        : "bg-muted text-muted-foreground hover:bg-muted/80"
                                 )}
                             >
                                 All ({ALL_BRANDS.length})
@@ -501,8 +500,8 @@ export default function AdminDashboard() {
                                     className={cn(
                                         "px-4 py-2 rounded-full text-sm font-medium transition-all",
                                         activeCategory === cat.name
-                                            ? "bg-gray-900 text-white"
-                                            : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                                            ? "bg-foreground text-background"
+                                            : "bg-muted text-muted-foreground hover:bg-muted/80"
                                     )}
                                 >
                                     {cat.name}
@@ -524,8 +523,8 @@ export default function AdminDashboard() {
                                         "p-4 flex flex-col items-center gap-3 cursor-pointer transition-all duration-200 relative",
                                         "hover:shadow-lg hover:-translate-y-1",
                                         isSelected
-                                            ? "ring-2 bg-gray-50 shadow-lg"
-                                            : "hover:bg-gray-50"
+                                            ? "ring-2 bg-muted/30 shadow-lg"
+                                            : "hover:bg-muted/30"
                                     )}
                                     style={isSelected ? { borderColor: brandColor } : {}}
                                     onClick={() => setSelectedBrand(brandName)}
@@ -533,7 +532,7 @@ export default function AdminDashboard() {
                                     <BrandLogo brandName={brandName} />
                                     <span className={cn(
                                         "text-xs font-medium text-center line-clamp-1",
-                                        isSelected ? "font-bold" : "text-gray-600"
+                                        isSelected ? "font-bold" : "text-muted-foreground"
                                     )}
                                         style={isSelected ? { color: brandColor } : {}}>
                                         {brandName}
@@ -567,8 +566,8 @@ export default function AdminDashboard() {
                                 <Car className="w-5 h-5 text-white" />
                             </div>
                             <div>
-                                <h2 className="text-xl font-bold text-gray-900">Browse All Available Cars</h2>
-                                <p className="text-sm text-gray-500">Click any car to view details and specifications</p>
+                                <h2 className="text-xl font-semibold text-foreground">Browse All Available Cars</h2>
+                                <p className="text-sm text-muted-foreground">Click any car to view details and specifications</p>
                             </div>
                         </div>
                         <Button
@@ -602,7 +601,7 @@ export default function AdminDashboard() {
                                 <h3 className="text-2xl font-bold mb-2">
                                     {selectedBrand} with {selectedTemplateData?.name} Template
                                 </h3>
-                                <p className="text-gray-400 mb-4">
+                                <p className="text-white/60 mb-4">
                                     See how your dealership website will look with the selected template and brand combination.
                                 </p>
                                 <div className="flex items-center gap-3">
@@ -649,7 +648,7 @@ export default function AdminDashboard() {
             </main>
 
             {/* Mobile Fixed Bottom Bar */}
-            <div className="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4 shadow-lg">
+            <div className="md:hidden fixed bottom-0 left-0 right-0 bg-background border-t border-border p-4 shadow-lg">
                 <Button
                     onClick={handleLaunch}
                     disabled={isLaunching}

@@ -33,7 +33,7 @@ import {
 
 function CarCardSkeleton() {
     return (
-        <div className="bg-card border border-border rounded-2xl overflow-hidden animate-pulse">
+        <div className="bg-card border border-border rounded-xl overflow-hidden animate-pulse">
             <div className="aspect-[16/10] bg-muted" />
             <div className="p-5 space-y-3">
                 <div className="h-3 w-20 bg-muted rounded" />

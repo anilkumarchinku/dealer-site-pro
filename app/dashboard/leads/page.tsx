@@ -5,9 +5,10 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { cn } from "@/lib/utils";
-import { Search, Filter, Mail, Phone, CheckCircle, Loader2, RefreshCw, Users, Clock, TrendingUp, Globe } from "lucide-react";
+import { Search, Filter, Mail, Phone, CheckCircle, Loader2, RefreshCw, Clock, TrendingUp, Globe, Inbox, ChevronLeft, ChevronRight } from "lucide-react";
 import { fetchLeads, updateLeadStatus, type ExternalLead } from "@/lib/db/leads";
 import { useOnboardingStore } from "@/lib/store/onboarding-store";
+import { toast } from "@/lib/utils/toast";
 
 function timeAgo(iso: string): string {
     if (!iso) return "";
@@ -49,6 +50,8 @@ const statusConfig: Record<string, { bg: string; text: string; label: string }> 
     lost: { bg: "bg-gray-100", text: "text-gray-600", label: "Lost" },
 };
 
+const PAGE_SIZE = 20;
+
 export default function LeadsPage() {
     const { dealerId } = useOnboardingStore();
     const [searchQuery, setSearchQuery] = useState("");
@@ -56,6 +59,7 @@ export default function LeadsPage() {
     const [filterStatus, setFilterStatus] = useState<string>("all");
     const [apiLeads, setApiLeads] = useState<ExternalLead[]>([]);
     const [loading, setLoading] = useState(false);
+    const [page, setPage] = useState(1);
 
     const loadLeads = () => {
         if (!dealerId) return;
@@ -70,6 +74,7 @@ export default function LeadsPage() {
     const handleMarkContacted = async (id: string) => {
         await updateLeadStatus(id, "contacted");
         setApiLeads(prev => prev.map(l => l.id === id ? { ...l, status: "contacted" as const } : l));
+        toast.success("Lead updated");
     };
 
     const filteredLeads = apiLeads.filter(lead => {
@@ -82,8 +87,17 @@ export default function LeadsPage() {
         return matchesSearch && matchesPriority && matchesStatus;
     });
 
+    const totalFiltered = filteredLeads.length;
+    const totalPages = Math.max(1, Math.ceil(totalFiltered / PAGE_SIZE));
+    const safePage = Math.min(page, totalPages);
+    const startIdx = (safePage - 1) * PAGE_SIZE;
+    const endIdx = Math.min(startIdx + PAGE_SIZE, totalFiltered);
+    const pagedLeads = filteredLeads.slice(startIdx, endIdx);
+
     const hotCount = apiLeads.filter(l => l.priority === "hot").length;
     const newCount = apiLeads.filter(l => l.status === "new").length;
+
+    const isFiltered = searchQuery || filterPriority !== "all" || filterStatus !== "all";
 
     return (
         <div className="space-y-6 animate-fade-in">
@@ -96,12 +110,12 @@ export default function LeadsPage() {
                 <div className="flex items-center gap-3">
                     <div className="flex items-center gap-2">
                         {hotCount > 0 && (
-                            <span className="px-2.5 py-1 rounded-full bg-red-50 text-red-600 border border-red-200 font-medium text-xs">
+                            <span className="px-3 py-1.5 rounded-full bg-red-50 text-red-600 border border-red-200 font-medium text-xs">
                                 {hotCount} hot
                             </span>
                         )}
                         {newCount > 0 && (
-                            <span className="px-2.5 py-1 rounded-full bg-green-50 text-green-700 border border-green-200 font-medium text-xs">
+                            <span className="px-3 py-1.5 rounded-full bg-green-50 text-green-700 border border-green-200 font-medium text-xs">
                                 {newCount} new
                             </span>
                         )}
@@ -154,14 +168,14 @@ export default function LeadsPage() {
                                     type="text"
                                     placeholder="Search by name, email, or vehicle..."
                                     value={searchQuery}
-                                    onChange={(e) => setSearchQuery(e.target.value)}
+                                    onChange={(e) => { setSearchQuery(e.target.value); setPage(1); }}
                                     className="pl-10"
                                 />
                             </div>
                         </div>
                         <div className="flex items-center gap-2">
                             <Filter className="w-4 h-4 text-muted-foreground" />
-                            <Select value={filterPriority} onValueChange={setFilterPriority}>
+                            <Select value={filterPriority} onValueChange={(v) => { setFilterPriority(v); setPage(1); }}>
                                 <SelectTrigger className="w-[160px]">
                                     <SelectValue placeholder="All Priorities" />
                                 </SelectTrigger>
@@ -172,7 +186,7 @@ export default function LeadsPage() {
                                     <SelectItem value="cold">🔵 Cold</SelectItem>
                                 </SelectContent>
                             </Select>
-                            <Select value={filterStatus} onValueChange={setFilterStatus}>
+                            <Select value={filterStatus} onValueChange={(v) => { setFilterStatus(v); setPage(1); }}>
                                 <SelectTrigger className="w-[140px]">
                                     <SelectValue placeholder="All Status" />
                                 </SelectTrigger>
@@ -184,11 +198,11 @@ export default function LeadsPage() {
                                     <SelectItem value="converted">Converted</SelectItem>
                                 </SelectContent>
                             </Select>
-                            {(filterPriority !== "all" || filterStatus !== "all" || searchQuery) && (
+                            {isFiltered && (
                                 <Button
                                     variant="ghost"
                                     size="sm"
-                                    onClick={() => { setFilterPriority("all"); setFilterStatus("all"); setSearchQuery(""); }}
+                                    onClick={() => { setFilterPriority("all"); setFilterStatus("all"); setSearchQuery(""); setPage(1); }}
                                     className="h-8 text-xs text-muted-foreground hover:text-foreground px-2"
                                 >
                                     Clear filters
@@ -203,133 +217,177 @@ export default function LeadsPage() {
             <Card variant="glass">
                 <CardContent className="p-0">
                     {loading ? (
-                        <div className="flex items-center justify-center py-16 gap-2 text-muted-foreground">
-                            <Loader2 className="w-5 h-5 animate-spin" />
-                            <span className="text-sm">Loading leads...</span>
+                        <div className="divide-y divide-border">
+                            {[...Array(3)].map((_, i) => (
+                                <div key={i} className="flex items-center gap-4 p-4">
+                                    <div className="w-10 h-10 rounded-full bg-muted/50 animate-pulse shrink-0" />
+                                    <div className="flex-1 space-y-2">
+                                        <div className="h-3.5 bg-muted/50 rounded-full animate-pulse w-1/3" />
+                                        <div className="h-3 bg-muted/50 rounded-full animate-pulse w-1/2" />
+                                        <div className="h-3 bg-muted/50 rounded-full animate-pulse w-2/3" />
+                                    </div>
+                                    <div className="h-8 w-24 bg-muted/50 rounded-lg animate-pulse shrink-0" />
+                                </div>
+                            ))}
                         </div>
                     ) : filteredLeads.length === 0 ? (
                         <div className="text-center py-16 text-muted-foreground">
-                            <Users className="w-10 h-10 mx-auto mb-3 opacity-30" />
+                            <Inbox className="w-10 h-10 mx-auto mb-3 opacity-30" />
                             <p className="font-medium">
-                                {searchQuery || filterPriority !== "all" || filterStatus !== "all"
+                                {isFiltered
                                     ? "No leads match your filters"
                                     : "No leads yet"}
                             </p>
                             <p className="text-sm mt-1">
-                                {searchQuery || filterPriority !== "all" || filterStatus !== "all"
+                                {isFiltered
                                     ? "Try adjusting your search or filters"
-                                    : "Customer enquiries from your website will appear here"}
+                                    : "When customers submit enquiries from your website, they'll appear here."}
                             </p>
                         </div>
                     ) : (
-                        <div className="divide-y divide-border">
-                            {filteredLeads.map((lead) => {
-                                const pc = priorityConfig[lead.priority as keyof typeof priorityConfig] ?? priorityConfig.cold;
-                                const sc = statusConfig[lead.status] ?? statusConfig.new;
-                                const initials = lead.name.split(" ").map(w => w[0]).join("").slice(0, 2).toUpperCase();
-                                const isDone = lead.status === "contacted" || lead.status === "converted";
-                                return (
-                                    <div
-                                        key={lead.id}
-                                        className="flex items-center gap-4 p-4 hover:bg-muted/20 transition-colors"
-                                    >
-                                        {/* Avatar with priority color */}
-                                        <div className={cn(
-                                            "w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold shrink-0",
-                                            pc.bg, pc.text
-                                        )}>
-                                            {initials}
-                                        </div>
+                        <>
+                            <div className="overflow-x-auto -mx-4 sm:mx-0">
+                                <div className="divide-y divide-border min-w-[600px]">
+                                    {pagedLeads.map((lead) => {
+                                        const pc = priorityConfig[lead.priority as keyof typeof priorityConfig] ?? priorityConfig.cold;
+                                        const sc = statusConfig[lead.status] ?? statusConfig.new;
+                                        const initials = lead.name.split(" ").map(w => w[0]).join("").slice(0, 2).toUpperCase();
+                                        const isDone = lead.status === "contacted" || lead.status === "converted";
+                                        return (
+                                            <div
+                                                key={lead.id}
+                                                className="flex items-center gap-4 p-4 hover:bg-muted/20 transition-colors"
+                                            >
+                                                {/* Avatar with priority color */}
+                                                <div className={cn(
+                                                    "w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold shrink-0",
+                                                    pc.bg, pc.text
+                                                )}>
+                                                    {initials}
+                                                </div>
 
-                                        {/* Lead Info */}
-                                        <div className="flex-1 min-w-0">
-                                            <div className="flex items-center gap-2 mb-0.5 flex-wrap">
-                                                <h3 className="font-semibold text-sm">{lead.name}</h3>
-                                                <span className={cn(
-                                                    "inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold border",
-                                                    pc.bg, pc.text, pc.border
-                                                )}>
-                                                    <span className={cn("w-1.5 h-1.5 rounded-full", pc.dot)} />
-                                                    {pc.label}
-                                                </span>
-                                                <span className={cn(
-                                                    "px-2 py-0.5 rounded-full text-xs font-medium",
-                                                    sc.bg, sc.text
-                                                )}>
-                                                    {sc.label}
-                                                </span>
-                                            </div>
-                                            <p className="text-sm text-muted-foreground mb-1">
-                                                {formatLeadType(lead.type)}
-                                                {lead.vehicle_interest ? ` · ${lead.vehicle_interest}` : ""}
-                                            </p>
-                                            <div className="flex items-center gap-4 text-xs text-muted-foreground">
-                                                <span className="flex items-center gap-1">
-                                                    <Mail className="w-3 h-3" />{lead.email}
-                                                </span>
-                                                {lead.phone && (
-                                                    <span className="flex items-center gap-1">
-                                                        <Phone className="w-3 h-3" />{lead.phone}
-                                                    </span>
-                                                )}
-                                                {lead.source && lead.source !== 'website' && lead.source !== 'Website' && (
-                                                    <a
-                                                        href={lead.source.startsWith('http') ? lead.source : `https://${lead.source}`}
-                                                        target="_blank"
-                                                        rel="noopener noreferrer"
-                                                        className="flex items-center gap-1 text-blue-500 hover:underline max-w-[200px] truncate"
-                                                        title={lead.source}
+                                                {/* Lead Info */}
+                                                <div className="flex-1 min-w-0">
+                                                    <div className="flex items-center gap-2 mb-0.5 flex-wrap">
+                                                        <h3 className="font-semibold text-sm">{lead.name}</h3>
+                                                        <span className={cn(
+                                                            "inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold border",
+                                                            pc.bg, pc.text, pc.border
+                                                        )}>
+                                                            <span className={cn("w-1.5 h-1.5 rounded-full", pc.dot)} />
+                                                            {pc.label}
+                                                        </span>
+                                                        <span className={cn(
+                                                            "px-2 py-0.5 rounded-full text-xs font-medium",
+                                                            sc.bg, sc.text
+                                                        )}>
+                                                            {sc.label}
+                                                        </span>
+                                                    </div>
+                                                    <p className="text-sm text-muted-foreground mb-1">
+                                                        {formatLeadType(lead.type)}
+                                                        {lead.vehicle_interest ? ` · ${lead.vehicle_interest}` : ""}
+                                                    </p>
+                                                    <div className="flex items-center gap-4 text-xs text-muted-foreground">
+                                                        <span className="flex items-center gap-1">
+                                                            <Mail className="w-3 h-3" />{lead.email}
+                                                        </span>
+                                                        {lead.phone && (
+                                                            <span className="flex items-center gap-1">
+                                                                <Phone className="w-3 h-3" />{lead.phone}
+                                                            </span>
+                                                        )}
+                                                        {lead.source && lead.source !== 'website' && lead.source !== 'Website' && (
+                                                            <a
+                                                                href={lead.source.startsWith('http') ? lead.source : `https://${lead.source}`}
+                                                                target="_blank"
+                                                                rel="noopener noreferrer"
+                                                                className="flex items-center gap-1 text-blue-500 hover:underline max-w-[200px] truncate"
+                                                                title={lead.source}
+                                                            >
+                                                                <Globe className="w-3 h-3 shrink-0" />
+                                                                <span className="truncate">{formatSourceUrl(lead.source)}</span>
+                                                            </a>
+                                                        )}
+                                                    </div>
+                                                </div>
+
+                                                {/* Time */}
+                                                <div className="text-xs text-muted-foreground flex items-center gap-1 shrink-0">
+                                                    <Clock className="w-3 h-3" />
+                                                    {timeAgo(lead.created_at)}
+                                                </div>
+
+                                                {/* Actions */}
+                                                <div className="flex items-center gap-1 shrink-0">
+                                                    <Button
+                                                        variant="ghost"
+                                                        size="sm"
+                                                        className="h-8 w-8 p-0"
+                                                        title={`Email ${lead.name}`}
+                                                        onClick={() => window.open(`mailto:${lead.email}`, "_blank")}
                                                     >
-                                                        <Globe className="w-3 h-3 shrink-0" />
-                                                        <span className="truncate">{formatSourceUrl(lead.source)}</span>
-                                                    </a>
-                                                )}
+                                                        <Mail className="w-4 h-4" />
+                                                    </Button>
+                                                    {lead.phone && (
+                                                        <Button
+                                                            variant="ghost"
+                                                            size="sm"
+                                                            className="h-8 w-8 p-0"
+                                                            title={`Call ${lead.name}`}
+                                                            onClick={() => window.open(`tel:${lead.phone}`, "_blank")}
+                                                        >
+                                                            <Phone className="w-4 h-4" />
+                                                        </Button>
+                                                    )}
+                                                    <Button
+                                                        variant={isDone ? "ghost" : "outline"}
+                                                        size="sm"
+                                                        className="text-xs"
+                                                        onClick={() => !isDone && handleMarkContacted(lead.id)}
+                                                        disabled={isDone}
+                                                    >
+                                                        <CheckCircle className={cn("w-3.5 h-3.5 mr-1", isDone && "text-green-600")} />
+                                                        {lead.status === "converted" ? "Converted" : lead.status === "contacted" ? "Done" : "Mark Done"}
+                                                    </Button>
+                                                </div>
                                             </div>
-                                        </div>
+                                        );
+                                    })}
+                                </div>
+                            </div>
 
-                                        {/* Time */}
-                                        <div className="text-xs text-muted-foreground flex items-center gap-1 shrink-0">
-                                            <Clock className="w-3 h-3" />
-                                            {timeAgo(lead.created_at)}
-                                        </div>
-
-                                        {/* Actions */}
-                                        <div className="flex items-center gap-1 shrink-0">
-                                            <Button
-                                                variant="ghost"
-                                                size="sm"
-                                                className="h-8 w-8 p-0"
-                                                title={`Email ${lead.name}`}
-                                                onClick={() => window.open(`mailto:${lead.email}`, "_blank")}
-                                            >
-                                                <Mail className="w-4 h-4" />
-                                            </Button>
-                                            {lead.phone && (
-                                                <Button
-                                                    variant="ghost"
-                                                    size="sm"
-                                                    className="h-8 w-8 p-0"
-                                                    title={`Call ${lead.name}`}
-                                                    onClick={() => window.open(`tel:${lead.phone}`, "_blank")}
-                                                >
-                                                    <Phone className="w-4 h-4" />
-                                                </Button>
-                                            )}
-                                            <Button
-                                                variant={isDone ? "ghost" : "outline"}
-                                                size="sm"
-                                                className="text-xs"
-                                                onClick={() => !isDone && handleMarkContacted(lead.id)}
-                                                disabled={isDone}
-                                            >
-                                                <CheckCircle className={cn("w-3.5 h-3.5 mr-1", isDone && "text-green-600")} />
-                                                {lead.status === "converted" ? "Converted" : lead.status === "contacted" ? "Done" : "Mark Done"}
-                                            </Button>
-                                        </div>
+                            {/* Pagination */}
+                            {totalFiltered > PAGE_SIZE && (
+                                <div className="flex items-center justify-between px-4 py-3 border-t border-border">
+                                    <p className="text-xs text-muted-foreground">
+                                        Showing {startIdx + 1}–{endIdx} of {totalFiltered} leads
+                                    </p>
+                                    <div className="flex items-center gap-2">
+                                        <Button
+                                            variant="outline"
+                                            size="sm"
+                                            className="h-8 text-xs"
+                                            onClick={() => setPage(p => Math.max(1, p - 1))}
+                                            disabled={safePage <= 1}
+                                        >
+                                            <ChevronLeft className="w-3.5 h-3.5 mr-1" />
+                                            Previous
+                                        </Button>
+                                        <Button
+                                            variant="outline"
+                                            size="sm"
+                                            className="h-8 text-xs"
+                                            onClick={() => setPage(p => Math.min(totalPages, p + 1))}
+                                            disabled={safePage >= totalPages}
+                                        >
+                                            Next
+                                            <ChevronRight className="w-3.5 h-3.5 ml-1" />
+                                        </Button>
                                     </div>
-                                );
-                            })}
-                        </div>
+                                </div>
+                            )}
+                        </>
                     )}
                 </CardContent>
             </Card>
