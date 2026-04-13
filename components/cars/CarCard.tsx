@@ -570,27 +570,27 @@ function VariantAccordionButton({
                     onClick={e => { e.stopPropagation(); setOpen(false); }}
                 >
                     <div
-                        className="w-full max-w-lg bg-white rounded-2xl border border-gray-200 shadow-2xl overflow-hidden max-h-[90vh] flex flex-col"
+                        className="w-full max-w-lg bg-background rounded-2xl border border-border shadow-2xl overflow-hidden max-h-[90vh] flex flex-col"
                         onClick={e => e.stopPropagation()}
                     >
                         {/* ── Header ── */}
                         <div
-                            className="px-4 py-3 flex items-center justify-between shrink-0 bg-white border-b border-gray-200"
+                            className="px-4 py-3 flex items-center justify-between shrink-0 bg-background border-b border-border"
                         >
                             <div className="flex items-center gap-2">
                                 {logoSrc && <Image src={logoSrc} alt={make} width={20} height={20} className="object-contain" />}
                                 <div>
                                     <p className="text-[10px] font-semibold uppercase tracking-widest" style={{ color: brandColor }}>{make}</p>
-                                    <p className="text-sm font-bold text-gray-900 leading-tight">{model}</p>
+                                    <p className="text-sm font-bold text-foreground leading-tight">{model}</p>
                                 </div>
                             </div>
                             <div className="flex items-center gap-2">
-                                <Badge variant="outline" className="text-[11px] text-gray-600 border-gray-200">
+                                <Badge variant="outline" className="text-[11px] text-muted-foreground border-border">
                                     {variants.length > 0 ? `${variants.length} variants` : 'No data'}
                                 </Badge>
                                 <button
                                     onClick={e => { e.stopPropagation(); setOpen(false); }}
-                                    className="w-7 h-7 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition-colors"
+                                    className="w-7 h-7 rounded-full bg-muted flex items-center justify-center hover:bg-muted/80 transition-colors"
                                 >
                                     <ChevronDown className="w-4 h-4" />
                                 </button>
@@ -600,14 +600,14 @@ function VariantAccordionButton({
                         {/* ── Scrollable body ── */}
                         <div className="overflow-y-auto flex-1">
                             {variants.length === 0 ? (
-                                <p className="text-sm text-gray-500 text-center py-8 px-5">
+                                <p className="text-sm text-muted-foreground text-center py-8 px-5">
                                     No variant data available for {model}
                                 </p>
                             ) : (
                                 <>
                                     {/* Variant chips */}
                                     <div className="px-4 pt-3 pb-2">
-                                        <p className="text-[11px] text-gray-500 mb-2">Select a variant to see specs</p>
+                                        <p className="text-[11px] text-muted-foreground mb-2">Select a variant to see specs</p>
                                         <div className="flex flex-wrap gap-2">
                                             {variants.map((v) => {
                                                 const isSelected = selected?.variant_name === v.variant_name;
@@ -633,7 +633,7 @@ function VariantAccordionButton({
                                             })}
                                         </div>
                                         {/* Fuel legend */}
-                                        <div className="flex flex-wrap gap-2 mt-3 pt-2 border-t border-gray-200">
+                                        <div className="flex flex-wrap gap-2 mt-3 pt-2 border-t border-border">
                                             {Array.from(new Set(variants.map(v => v.fuel_type).filter(Boolean))).map(fuel => (
                                                 <span key={fuel} className={cn('text-[10px] px-2 py-0.5 rounded border', fuelChipClass(fuel))}>{fuel}</span>
                                             ))}
@@ -642,17 +642,17 @@ function VariantAccordionButton({
 
                                     {/* ── Selected variant specs (inline) ── */}
                                     {selected && (
-                                        <div className="border-t border-gray-200 mx-4 mt-1 pt-3 pb-4 space-y-3">
+                                        <div className="border-t border-border mx-4 mt-1 pt-3 pb-4 space-y-3">
                                             {/* Price + badges */}
                                             <div className="flex items-end justify-between">
                                                 <div>
-                                                    <p className="text-[10px] text-gray-500">Ex-Showroom</p>
+                                                    <p className="text-[10px] text-muted-foreground">Ex-Showroom</p>
                                                     <p className="text-xl font-bold" style={{ color: brandColor }}>
                                                         {fmtPrice(selected.ex_showroom_price_min_inr)}
                                                     </p>
                                                     {selected.hyderabad_on_road_price && (
-                                                        <p className="text-[10px] text-gray-500 mt-0.5">
-                                                            On-Road (Hyd): <span className="font-semibold text-gray-700">{fmtPrice(selected.hyderabad_on_road_price)}</span>
+                                                        <p className="text-[10px] text-muted-foreground mt-0.5">
+                                                            On-Road (Hyd): <span className="font-semibold text-foreground">{fmtPrice(selected.hyderabad_on_road_price)}</span>
                                                         </p>
                                                     )}
                                                 </div>
@@ -707,10 +707,10 @@ function VariantAccordionButton({
                                             {/* Key features */}
                                             {selected.key_features && (
                                                 <div>
-                                                    <p className="text-[10px] font-semibold uppercase tracking-wider text-gray-500 mb-1.5">Key Features</p>
+                                                    <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground mb-1.5">Key Features</p>
                                                     <div className="flex flex-wrap gap-1.5">
                                                         {parseKeyFeatures(selected.key_features).map((f, i) => (
-                                                            <span key={i} className="text-[10px] px-2 py-0.5 rounded-full bg-gray-100 text-gray-700 border border-gray-200">{f.trim()}</span>
+                                                            <span key={i} className="text-[10px] px-2 py-0.5 rounded-full bg-muted text-foreground border border-border">{f.trim()}</span>
                                                         ))}
                                                     </div>
                                                 </div>
@@ -719,7 +719,7 @@ function VariantAccordionButton({
                                             {/* Safety features */}
                                             {selected.safety_features && (
                                                 <div>
-                                                    <p className="text-[10px] font-semibold uppercase tracking-wider text-gray-500 mb-1.5">Safety</p>
+                                                    <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground mb-1.5">Safety</p>
                                                     <div className="flex flex-wrap gap-1.5">
                                                         {parseSafetyFeatures(selected.safety_features).map((f, i) => (
                                                             <span key={i} className="text-[10px] px-2 py-0.5 rounded-full bg-red-500/10 text-red-400 border border-red-500/20">{f.trim()}</span>
@@ -752,11 +752,11 @@ function VariantAccordionButton({
 /** Compact spec chip inside the inline popup */
 function PopSpecChip({ icon, label, value }: { icon: React.ReactNode; label: string; value: string }) {
     return (
-        <div className="flex items-center gap-2 p-2 rounded-lg bg-white border border-gray-100">
-            <div className="w-6 h-6 rounded-md bg-white border border-gray-100 flex items-center justify-center shrink-0 shadow-sm">{icon}</div>
+        <div className="flex items-center gap-2 p-2 rounded-lg bg-muted/30 border border-border">
+            <div className="w-6 h-6 rounded-md bg-background border border-border flex items-center justify-center shrink-0">{icon}</div>
             <div className="min-w-0">
-                <p className="text-[9px] text-gray-500 leading-none">{label}</p>
-                <p className="text-[11px] font-semibold text-gray-900 mt-0.5 truncate" title={value}>{value}</p>
+                <p className="text-[9px] text-muted-foreground leading-none">{label}</p>
+                <p className="text-[11px] font-semibold text-foreground mt-0.5 truncate" title={value}>{value}</p>
             </div>
         </div>
     );

@@ -31,11 +31,17 @@ interface CarFiltersProps {
     showUsedCarFilters?: boolean;
 }
 
+const PRICE_MAX_DEFAULT = 5_000_000;
+const PRICE_SLIDER_MAX = 10_000_000;
+const PRICE_STEP = 50_000;
+const KM_MAX_DEFAULT = 200_000;
+const KM_STEP = 5_000;
+
 export function CarFilters({ className, onFilterChange, hideBrand = false, showUsedCarFilters = false }: CarFiltersProps) {
     const router = useRouter();
     const searchParams = useSearchParams();
 
-    const [priceRange, setPriceRange] = useState<[number, number]>([0, 5000000]);
+    const [priceRange, setPriceRange] = useState<[number, number]>([0, PRICE_MAX_DEFAULT]);
     const [selectedMakes, setSelectedMakes] = useState<string[]>([]);
     const [selectedBodyTypes, setSelectedBodyTypes] = useState<string[]>([]);
     const [selectedFuelTypes, setSelectedFuelTypes] = useState<string[]>([]);
@@ -44,7 +50,7 @@ export function CarFilters({ className, onFilterChange, hideBrand = false, showU
     const [selectedSeating, setSelectedSeating] = useState<string[]>([]);
     const [selectedColors, setSelectedColors] = useState<string[]>([]);
     const [selectedOwners, setSelectedOwners] = useState<string[]>([]);
-    const [kmRange, setKmRange] = useState<[number, number]>([0, 200000]);
+    const [kmRange, setKmRange] = useState<[number, number]>([0, KM_MAX_DEFAULT]);
     const [availableMakes, setAvailableMakes] = useState<string[]>([]);
 
     useEffect(() => {
@@ -76,7 +82,7 @@ export function CarFilters({ className, onFilterChange, hideBrand = false, showU
     // Sync from URL params
     useEffect(() => {
         const minPrice = searchParams.get('minPrice') ? parseInt(searchParams.get('minPrice')!) : 0;
-        const maxPrice = searchParams.get('maxPrice') ? parseInt(searchParams.get('maxPrice')!) : 5000000;
+        const maxPrice = searchParams.get('maxPrice') ? parseInt(searchParams.get('maxPrice')!) : PRICE_MAX_DEFAULT;
         setPriceRange([minPrice, maxPrice]);
 
         const makes = searchParams.get('make')?.split(',').filter(Boolean) || [];
@@ -104,7 +110,7 @@ export function CarFilters({ className, onFilterChange, hideBrand = false, showU
         setSelectedOwners(owners);
 
         const minKm = searchParams.get('minKm') ? parseInt(searchParams.get('minKm')!) : 0;
-        const maxKm = searchParams.get('maxKm') ? parseInt(searchParams.get('maxKm')!) : 200000;
+        const maxKm = searchParams.get('maxKm') ? parseInt(searchParams.get('maxKm')!) : KM_MAX_DEFAULT;
         setKmRange([minKm, maxKm]);
         return;
     }, [searchParams]);
@@ -165,7 +171,7 @@ export function CarFilters({ className, onFilterChange, hideBrand = false, showU
     };
 
     const clearFilters = () => {
-        setPriceRange([0, 5000000]);
+        setPriceRange([0, PRICE_MAX_DEFAULT]);
         setSelectedMakes([]);
         setSelectedBodyTypes([]);
         setSelectedFuelTypes([]);
@@ -174,7 +180,7 @@ export function CarFilters({ className, onFilterChange, hideBrand = false, showU
         setSelectedSeating([]);
         setSelectedColors([]);
         setSelectedOwners([]);
-        setKmRange([0, 200000]);
+        setKmRange([0, KM_MAX_DEFAULT]);
         router.push('?');
     };
 
@@ -184,8 +190,8 @@ export function CarFilters({ className, onFilterChange, hideBrand = false, showU
 
     const totalActive = selectedMakes.length + selectedBodyTypes.length + selectedFuelTypes.length + selectedTransmissions.length +
         selectedYears.length + selectedSeating.length + selectedColors.length + selectedOwners.length +
-        (priceRange[0] > 0 || priceRange[1] < 5000000 ? 1 : 0) +
-        (showUsedCarFilters && (kmRange[0] > 0 || kmRange[1] < 200000) ? 1 : 0);
+        (priceRange[0] > 0 || priceRange[1] < PRICE_MAX_DEFAULT ? 1 : 0) +
+        (showUsedCarFilters && (kmRange[0] > 0 || kmRange[1] < KM_MAX_DEFAULT) ? 1 : 0);
 
     return (
         <Card className={className}>
@@ -219,15 +225,15 @@ export function CarFilters({ className, onFilterChange, hideBrand = false, showU
                         <AccordionContent className="pb-4">
                             <Slider
                                 value={priceRange}
-                                max={10000000}
-                                step={50000}
+                                max={PRICE_SLIDER_MAX}
+                                step={PRICE_STEP}
                                 onValueChange={(val) => setPriceRange(val as [number, number])}
                                 className="mb-3"
                             />
                             <div className="flex items-center justify-between">
-                                <span className="text-xs font-medium px-2 py-1 bg-gray-100 rounded-md">{formatPriceInLakhs(priceRange[0])}</span>
-                                <span className="text-xs text-gray-500">to</span>
-                                <span className="text-xs font-medium px-2 py-1 bg-gray-100 rounded-md">{formatPriceInLakhs(priceRange[1])}</span>
+                                <span className="text-xs font-medium px-2 py-1 bg-muted rounded-md">{formatPriceInLakhs(priceRange[0])}</span>
+                                <span className="text-xs text-muted-foreground">to</span>
+                                <span className="text-xs font-medium px-2 py-1 bg-muted rounded-md">{formatPriceInLakhs(priceRange[1])}</span>
                             </div>
                         </AccordionContent>
                     </AccordionItem>
@@ -358,8 +364,8 @@ export function CarFilters({ className, onFilterChange, hideBrand = false, showU
                                         onClick={() => toggleItem(year, selectedYears, setSelectedYears)}
                                         className={`px-3 py-1.5 text-xs font-medium rounded-full border transition-colors ${
                                             selectedYears.includes(year)
-                                                ? 'bg-gray-900 text-white border-gray-900'
-                                                : 'bg-white text-gray-900 border-gray-200 hover:bg-gray-50'
+                                                ? 'bg-foreground text-background border-foreground'
+                                                : 'bg-background text-foreground border-border hover:bg-muted/50'
                                         }`}
                                     >
                                         {year}
@@ -387,8 +393,8 @@ export function CarFilters({ className, onFilterChange, hideBrand = false, showU
                                         onClick={() => toggleItem(seats, selectedSeating, setSelectedSeating)}
                                         className={`px-3 py-1.5 text-xs font-medium rounded-full border transition-colors ${
                                             selectedSeating.includes(seats)
-                                                ? 'bg-gray-900 text-white border-gray-900'
-                                                : 'bg-white text-gray-900 border-gray-200 hover:bg-gray-50'
+                                                ? 'bg-foreground text-background border-foreground'
+                                                : 'bg-background text-foreground border-border hover:bg-muted/50'
                                         }`}
                                     >
                                         {seats} Seater
@@ -420,12 +426,12 @@ export function CarFilters({ className, onFilterChange, hideBrand = false, showU
                                         <div
                                             className={`w-8 h-8 rounded-full border-2 transition-all ${
                                                 selectedColors.includes(color.name)
-                                                    ? 'border-gray-900 scale-110 ring-2 ring-gray-900/30'
-                                                    : 'border-gray-200 hover:scale-105'
+                                                    ? 'border-primary scale-110 ring-2 ring-primary/30'
+                                                    : 'border-border hover:scale-105'
                                             }`}
                                             style={{ backgroundColor: color.hex }}
                                         />
-                                        <span className="text-[9px] text-gray-500 leading-none">{color.name}</span>
+                                        <span className="text-[9px] text-muted-foreground leading-none">{color.name}</span>
                                     </button>
                                 ))}
                             </div>
@@ -441,17 +447,17 @@ export function CarFilters({ className, onFilterChange, hideBrand = false, showU
                             <AccordionContent className="pb-4">
                                 <Slider
                                     value={kmRange}
-                                    max={200000}
-                                    step={5000}
+                                    max={KM_MAX_DEFAULT}
+                                    step={KM_STEP}
                                     onValueChange={(val) => setKmRange(val as [number, number])}
                                     className="mb-3"
                                 />
                                 <div className="flex items-center justify-between">
-                                    <span className="text-xs font-medium px-2 py-1 bg-gray-100 rounded-md">
+                                    <span className="text-xs font-medium px-2 py-1 bg-muted rounded-md">
                                         {kmRange[0].toLocaleString()} km
                                     </span>
-                                    <span className="text-xs text-gray-500">to</span>
-                                    <span className="text-xs font-medium px-2 py-1 bg-gray-100 rounded-md">
+                                    <span className="text-xs text-muted-foreground">to</span>
+                                    <span className="text-xs font-medium px-2 py-1 bg-muted rounded-md">
                                         {kmRange[1].toLocaleString()} km
                                     </span>
                                 </div>

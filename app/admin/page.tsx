@@ -5,6 +5,8 @@
  * Professional control center for template and brand management
  */
 
+const ADMIN_CARS_PREVIEW_LIMIT = 12;
+
 import { useState, useEffect, useCallback } from "react";
 import { useRouter } from "next/navigation";
 import { supabase } from "@/lib/supabase";
@@ -189,8 +191,8 @@ function BrandLogo({ brandName }: { brandName: string }) {
 
     if (idx >= srcs.length) {
         return (
-            <div className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center border border-gray-200">
-                <span className="text-gray-500 font-bold text-lg">{brandName.charAt(0)}</span>
+            <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center border border-border">
+                <span className="text-muted-foreground font-bold text-lg">{brandName.charAt(0)}</span>
             </div>
         );
     }
@@ -238,7 +240,7 @@ export default function AdminDashboard() {
     useEffect(() => {
         if (!adminChecked) return
         let isMounted = true;
-        getAllCars({ limit: 12 }).then(res => {
+        getAllCars({ limit: ADMIN_CARS_PREVIEW_LIMIT }).then(res => {
             if (isMounted) setCars(res.cars);
         });
         return () => { isMounted = false; };

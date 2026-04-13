@@ -52,6 +52,10 @@ function CarCardSkeleton() {
     );
 }
 
+const PRICE_MAX_DEFAULT = 5_000_000;
+const PRICE_CRORE_THRESHOLD = 10_000_000;
+const PRICE_LAKH_THRESHOLD = 100_000;
+
 function CarsContent() {
     const router = useRouter();
     const searchParams = useSearchParams();
@@ -128,16 +132,16 @@ function CarsContent() {
 
         const minPrice = searchParams.get('minPrice');
         const maxPrice = searchParams.get('maxPrice');
-        if ((minPrice && minPrice !== '0') || (maxPrice && maxPrice !== '5000000')) {
-            chips.push({ label: `Price: ${formatPriceLabel(Number(minPrice || 0))} - ${formatPriceLabel(Number(maxPrice || 5000000))}`, key: 'price', value: 'price' });
+        if ((minPrice && minPrice !== '0') || (maxPrice && maxPrice !== String(PRICE_MAX_DEFAULT))) {
+            chips.push({ label: `Price: ${formatPriceLabel(Number(minPrice || 0))} - ${formatPriceLabel(Number(maxPrice || PRICE_MAX_DEFAULT))}`, key: 'price', value: 'price' });
         }
 
         return chips;
     };
 
     const formatPriceLabel = (price: number) => {
-        if (price >= 10000000) return `${(price / 10000000).toFixed(1)} Cr`;
-        if (price >= 100000) return `${(price / 100000).toFixed(1)} L`;
+        if (price >= PRICE_CRORE_THRESHOLD) return `${(price / PRICE_CRORE_THRESHOLD).toFixed(1)} Cr`;
+        if (price >= PRICE_LAKH_THRESHOLD) return `${(price / PRICE_LAKH_THRESHOLD).toFixed(1)} L`;
         return `${(price / 1000).toFixed(0)}K`;
     };
 
