@@ -328,17 +328,6 @@ export function CarCard({
                         )}
                     </div>
 
-                    {/* Used Car Info Pills */}
-                    {isUsed && (
-                        <div className="flex flex-wrap gap-1.5 mb-2">
-                            <span className="inline-flex items-center gap-1 text-xs font-medium px-1.5 py-0.5 rounded-full bg-white border border-gray-200 text-gray-600">
-                                <Fuel className="w-2.5 h-2.5" />{fuelDisplay}
-                            </span>
-                            <span className="inline-flex items-center gap-1 text-xs font-medium px-1.5 py-0.5 rounded-full bg-white border border-gray-200 text-gray-600">
-                                <Gauge className="w-2.5 h-2.5" />{transDisplay}
-                            </span>
-                        </div>
-                    )}
 
                     {/* Price */}
                     <div className="mb-2">
@@ -364,10 +353,10 @@ export function CarCard({
 
                     {/* Specs Grid — always 4 items, adapts per vehicle category */}
                     <div className="grid grid-cols-2 gap-2 mb-2">
-                        <SpecItem icon={<Fuel className="w-3.5 h-3.5 text-emerald-600" />} label="Fuel" value={fuelDisplay} light={light} />
-                        <SpecItem icon={spec2.icon} label={spec2.label} value={spec2.value} light={light} />
-                        <SpecItem icon={spec3.icon} label={spec3.label} value={spec3.value} light={light} />
-                        <SpecItem icon={spec4.icon} label={spec4.label} value={spec4.value} light={light} />
+                        <SpecItem icon={<Fuel className="w-3.5 h-3.5 text-emerald-600" />} label="Fuel" value={fuelDisplay} />
+                        <SpecItem icon={spec2.icon} label={spec2.label} value={spec2.value} />
+                        <SpecItem icon={spec3.icon} label={spec3.label} value={spec3.value} />
+                        <SpecItem icon={spec4.icon} label={spec4.label} value={spec4.value} />
                     </div>
 
                     {/* Trust Badges for Used Cars */}
@@ -478,14 +467,11 @@ function SpecItem({
     icon,
     label,
     value,
-    light,
 }: {
     icon: React.ReactNode;
     label: string;
     value: string;
-    light?: boolean;
 }) {
-    const isLong = value.includes('/');
     return (
         <div className={cn("flex items-center gap-2 p-2 rounded-xl bg-white border border-gray-200", !value && "invisible")}>
             <div className="w-7 h-7 rounded-lg flex items-center justify-center shrink-0 bg-gray-50 border border-gray-200">
