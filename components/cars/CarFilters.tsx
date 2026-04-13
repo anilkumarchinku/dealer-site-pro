@@ -22,7 +22,6 @@ import {
     AccordionTrigger,
 } from '@/components/ui/accordion';
 import { formatPriceInLakhs } from '@/lib/utils/car-utils';
-import { getAllMakes } from '@/lib/data/cars-static';
 import { X } from 'lucide-react';
 
 interface CarFiltersProps {
@@ -46,6 +45,14 @@ export function CarFilters({ className, onFilterChange, hideBrand = false, showU
     const [selectedColors, setSelectedColors] = useState<string[]>([]);
     const [selectedOwners, setSelectedOwners] = useState<string[]>([]);
     const [kmRange, setKmRange] = useState<[number, number]>([0, 200000]);
+    const [availableMakes, setAvailableMakes] = useState<string[]>([]);
+
+    useEffect(() => {
+        fetch('/api/brands')
+            .then(r => r.json())
+            .then(data => { if (data.success) setAvailableMakes(data.makes); })
+            .catch(() => {});
+    }, []);
 
     const BODY_TYPES = ['Hatchback', 'Sedan', 'SUV', 'MUV', 'Compact SUV', 'Luxury'];
     const FUEL_TYPES = ['Petrol', 'Diesel', 'CNG', 'Electric', 'Hybrid'];
@@ -239,7 +246,7 @@ export function CarFilters({ className, onFilterChange, hideBrand = false, showU
                             <AccordionContent className="pb-4">
                                 <ScrollArea className="h-48 pr-3">
                                     <div className="space-y-2.5">
-                                        {getAllMakes().map((make) => (
+                                        {availableMakes.map((make) => (
                                             <div key={make} className="flex items-center gap-2">
                                                 <Checkbox
                                                     id={`make-${make}`}
