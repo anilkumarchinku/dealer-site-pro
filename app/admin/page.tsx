@@ -5,9 +5,7 @@
  * Professional control center for template and brand management
  */
 
-const ADMIN_CARS_PREVIEW_LIMIT = 12;
-
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { supabase } from "@/lib/supabase";
 import Image from "next/image";
@@ -37,6 +35,8 @@ import { getAllCars } from "@/lib/services/car-service";
 import type { Car as CarType } from "@/lib/types/car";
 import { CarGrid } from "@/components/cars/CarGrid";
 import brandModelsData from "@/lib/data/brand-models.json";
+
+const ADMIN_CARS_PREVIEW_LIMIT = 12;
 
 const TEMPLATES = [
     {

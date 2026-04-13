@@ -9,6 +9,8 @@ on:
 jobs:
   quality:
     runs-on: ubuntu-latest
+    env:
+      NEXT_TELEMETRY_DISABLED: 1
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -16,12 +18,33 @@ jobs:
           node-version: '20'
           cache: 'npm'
       - run: npm ci
+
+      # next-env.d.ts references .next/types/routes.d.ts which only exists after
+      # `next build`. Create a minimal stub so `tsc --noEmit` can run before build.
+      - name: Generate Next.js type stubs
+        run: |
+          mkdir -p .next/types
+          cat > .next/types/routes.d.ts << 'EOF'
+          // Minimal stub for CI — regenerated with correct types during `next build`
+          type AppRoutes = string
+          type AppRouteHandlerRoutes = string
+          type PageRoutes = never
+          type LayoutRoutes = string
+          type RedirectRoutes = never
+          type RewriteRoutes = never
+          type Routes = string
+          interface ParamMap {}
+          EOF
+
       - name: Type check
         run: npm run typecheck
+
       - name: Lint
         run: npm run lint
+
       - name: Test
         run: npm run test -- --run
+
       - name: Build
         run: npm run build
         env:
@@ -30,3 +53,6 @@ jobs:
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
           NEXT_PUBLIC_RAZORPAY_KEY_ID: ${{ secrets.NEXT_PUBLIC_RAZORPAY_KEY_ID }}
           RAZORPAY_KEY_SECRET: ${{ secrets.RAZORPAY_KEY_SECRET }}
+          NEXT_PUBLIC_BASE_DOMAIN: ${{ secrets.NEXT_PUBLIC_BASE_DOMAIN }}
+          NEXT_PUBLIC_APP_URL: ${{ secrets.NEXT_PUBLIC_APP_URL }}
+          NEXT_PUBLIC_USE_SUBDOMAIN: ${{ secrets.NEXT_PUBLIC_USE_SUBDOMAIN }}
