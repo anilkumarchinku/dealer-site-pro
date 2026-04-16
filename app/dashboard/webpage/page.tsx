@@ -42,32 +42,48 @@ export default function WebpagePage() {
     const [sellsUsedCars,   setSellsUsedCars]   = useState(data.sellsUsedCars ?? false)
     const [sellsNewCars,    setSellsNewCars]     = useState(data.sellsNewCars ?? true)
 
-    // ── Bootstrap: if store not yet populated, load from DB ──────────────────
+    // ── Always fetch fresh from DB on mount — avoids stale Zustand state ────
     useEffect(() => {
-        // Always fetch fresh data from DB if vehicleType is missing — guards against
-        // stale Zustand state where dealerSlug is cached but vehicleType wasn't saved.
-        if (dealerSlug && vehicleType) return
-
         async function selfInit() {
             try {
                 const { data: { user } } = await supabase.auth.getUser()
-                if (!user) return
+                if (!user) { setLoading(false); return }
+
                 const { data: dealerRaw } = await supabase
                     .from("dealers")
-                    .select("id, slug, sells_new_cars, sells_used_cars, vehicle_type, sells_two_wheelers, sells_three_wheelers, sells_four_wheelers")
+                    .select("id, slug, dealership_name, sells_new_cars, sells_used_cars, vehicle_type, sells_two_wheelers, sells_three_wheelers, sells_four_wheelers")
                     .eq("user_id", user.id)
                     .eq("onboarding_complete", true)
                     .maybeSingle()
                 // eslint-disable-next-line @typescript-eslint/no-explicit-any
                 const dealer = dealerRaw as any
-                if (dealer?.id)   setDealerId(dealer.id)
-                if (dealer?.slug) setDealerSlug(dealer.slug)
-                if (dealer?.sells_used_cars != null) setSellsUsedCars(dealer.sells_used_cars)
-                if (dealer?.sells_new_cars  != null) setSellsNewCars(dealer.sells_new_cars)
-                if (dealer?.vehicle_type)   setVehicleType(dealer.vehicle_type)
-                if (dealer?.sells_two_wheelers   != null) setSellsTwoWheelers(dealer.sells_two_wheelers)
-                if (dealer?.sells_three_wheelers != null) setSellsThreeWheelers(dealer.sells_three_wheelers)
-                if (dealer?.sells_four_wheelers  != null) setSellsFourWheelers(dealer.sells_four_wheelers)
+                if (!dealer?.slug) { setLoading(false); return }
+
+                // Fetch brands from dealer_brands
+                const { data: brandsRaw } = await supabase
+                    .from("dealer_brands")
+                    .select("brand_name")
+                    .eq("dealer_id", dealer.id)
+                    .order("is_primary", { ascending: false })
+                const brands = brandsRaw?.map((b: { brand_name: string }) => b.brand_name) ?? []
+
+                // Sync to store
+                setDealerId(dealer.id)
+                setDealerSlug(dealer.slug)
+                const vtype = dealer.vehicle_type ?? 'car'
+                setVehicleType(vtype)
+                const isNew  = dealer.sells_new_cars  ?? false
+                const isUsed = dealer.sells_used_cars ?? false
+                const has2W  = dealer.sells_two_wheelers   ?? false
+                const has3W  = dealer.sells_three_wheelers ?? false
+                const has4W  = dealer.sells_four_wheelers  ?? false
+                setSellsNewCars(isNew)
+                setSellsUsedCars(isUsed)
+                setSellsTwoWheelers(has2W)
+                setSellsThreeWheelers(has3W)
+                setSellsFourWheelers(has4W)
+
+                buildSiteCards(dealer.slug, brands, isNew, isUsed, vtype, has2W, has3W, has4W, dealer.dealership_name)
             } finally {
                 setLoading(false)
             }
@@ -77,62 +93,44 @@ export default function WebpagePage() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
-    // ── Build site cards whenever slug / brands / dealer type change ─────────
-    useEffect(() => {
-        if (!dealerSlug) return
-        buildSiteCards(dealerSlug, data.brands ?? [], sellsNewCars, sellsUsedCars, vehicleType, sellsTwoWheelers, sellsThreeWheelers, sellsFourWheelers)
-        setLoading(false)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [dealerSlug, data.brands, sellsNewCars, sellsUsedCars, vehicleType, sellsTwoWheelers, sellsThreeWheelers, sellsFourWheelers])
-
-    function build2WCards(slug: string, brands: string[]): SiteCard[] {
-        if (brands.length <= 1) {
-            return [{
-                slug:        `${slug}/two-wheelers`,
-                brand:       null,
-                label:       data.dealershipName ?? "My 2W Site",
-                previewPath: `/sites/${slug}/two-wheelers`,
-            }]
-        }
-        return brands.map(brand => {
-            const brandSlug = `${slug}-${brandToUrlSlug(brand)}`
-            return { slug: `${brandSlug}/two-wheelers`, brand, label: brand, previewPath: `/sites/${brandSlug}/two-wheelers` }
-        })
+    function build2WCards(slug: string, brands: string[], name: string): SiteCard[] {
+        // For 2W: hybrid → single portal card; multi-brand new → single portal card
+        // The portal at /sites/{slug}/two-wheelers handles routing to new/used sub-pages
+        return [{
+            slug:        `${slug}/two-wheelers`,
+            brand:       null,
+            label:       name || "My 2W Site",
+            previewPath: `/sites/${slug}/two-wheelers`,
+        }]
     }
 
-    function build3WCards(slug: string, brands: string[]): SiteCard[] {
-        if (brands.length <= 1) {
-            return [{
-                slug:        `${slug}/three-wheelers`,
-                brand:       null,
-                label:       data.dealershipName ?? "My 3W Site",
-                previewPath: `/sites/${slug}/three-wheelers`,
-            }]
-        }
-        return brands.map(brand => {
-            const brandSlug = `${slug}-${brandToUrlSlug(brand)}`
-            return { slug: `${brandSlug}/three-wheelers`, brand, label: brand, previewPath: `/sites/${brandSlug}/three-wheelers` }
-        })
+    function build3WCards(slug: string, brands: string[], name: string): SiteCard[] {
+        return [{
+            slug:        `${slug}/three-wheelers`,
+            brand:       null,
+            label:       name || "My 3W Site",
+            previewPath: `/sites/${slug}/three-wheelers`,
+        }]
     }
 
-    function buildCarCards(slug: string, brands: string[], isNew: boolean, isUsed: boolean): SiteCard[] {
+    function buildCarCards(slug: string, brands: string[], isNew: boolean, isUsed: boolean, name: string): SiteCard[] {
         const isHybrid = isNew && isUsed
         if (isUsed && !isNew) {
-            return [{ slug, brand: null, label: data.dealershipName ?? "My Site", isUsed: true }]
+            return [{ slug, brand: null, label: name || "My Site", isUsed: true }]
         }
         if (brands.length <= 1 && !isHybrid) {
-            return [{ slug, brand: null, label: data.dealershipName ?? "My Site" }]
+            return [{ slug, brand: null, label: name || "My Site" }]
         }
         if (isHybrid) {
             const brandCards: SiteCard[] = brands.length > 0
                 ? brands.map(brand => ({ slug: `${slug}-${brandToUrlSlug(brand)}`, brand, label: brand }))
-                : [{ slug, brand: null, label: data.dealershipName ?? "My Site" }]
+                : [{ slug, brand: null, label: name || "My Site" }]
             return [...brandCards, { slug: `${slug}-used`, brand: null, label: "Pre-Owned", isUsed: true }]
         }
         return brands.map(brand => ({ slug: `${slug}-${brandToUrlSlug(brand)}`, brand, label: brand }))
     }
 
-    function buildSiteCards(slug: string, brands: string[], isNew: boolean, isUsed: boolean, vtype: string, has2W: boolean, has3W: boolean, has4W: boolean) {
+    function buildSiteCards(slug: string, brands: string[], isNew: boolean, isUsed: boolean, vtype: string, has2W: boolean, has3W: boolean, has4W: boolean, name: string) {
         const effectiveHasCars = vtype === 'car'           || has4W
         const effectiveHas2W   = vtype === 'two-wheeler'   || has2W
         const effectiveHas3W   = vtype === 'three-wheeler' || has3W
@@ -141,46 +139,27 @@ export default function WebpagePage() {
         const isMultiSegment = [effectiveHasCars, effectiveHas2W, effectiveHas3W].filter(Boolean).length > 1
         if (isMultiSegment) {
             const allCards: SiteCard[] = []
-            if (effectiveHas2W)   allCards.push(...build2WCards(slug, brands))
-            if (effectiveHas3W)   allCards.push(...build3WCards(slug, brands))
-            if (effectiveHasCars) {
-                // 4W cards use the existing car logic
-                const carCards = buildCarCards(slug, brands, isNew, isUsed)
-                allCards.push(...carCards)
-            }
+            if (effectiveHas2W)   allCards.push(...build2WCards(slug, brands, name))
+            if (effectiveHas3W)   allCards.push(...build3WCards(slug, brands, name))
+            if (effectiveHasCars) allCards.push(...buildCarCards(slug, brands, isNew, isUsed, name))
             setSites(allCards)
             return
         }
 
-        // ── Single 2W / 3W dealers ───────────────────────────────────────────
-        // Single-brand: one card → /sites/{slug}/two-wheelers
-        // Multi-brand:  one card per brand → /sites/{slug}-{brand}/two-wheelers
-        if (vtype === 'two-wheeler' || vtype === 'three-wheeler') {
-            const hubPath = vtype === 'two-wheeler' ? 'two-wheelers' : 'three-wheelers'
-
-            if (brands.length <= 1) {
-                setSites([{
-                    slug:        `${slug}/${hubPath}`,
-                    brand:       null,
-                    label:       data.dealershipName ?? "My Site",
-                    previewPath: `/sites/${slug}/${hubPath}`,
-                }])
-            } else {
-                setSites(brands.map(brand => {
-                    const brandSlug = `${slug}-${brandToUrlSlug(brand)}`
-                    return {
-                        slug:        `${brandSlug}/${hubPath}`,
-                        brand,
-                        label:       brand,
-                        previewPath: `/sites/${brandSlug}/${hubPath}`,
-                    }
-                }))
-            }
+        // ── Pure 2W dealers ──────────────────────────────────────────────────
+        if (effectiveHas2W) {
+            setSites(build2WCards(slug, brands, name))
             return
         }
 
-        // ── 4W / car dealers ────────────────────────────────────────────────
-        setSites(buildCarCards(slug, brands, isNew, isUsed))
+        // ── Pure 3W dealers ──────────────────────────────────────────────────
+        if (effectiveHas3W) {
+            setSites(build3WCards(slug, brands, name))
+            return
+        }
+
+        // ── 4W / car dealers ─────────────────────────────────────────────────
+        setSites(buildCarCards(slug, brands, isNew, isUsed, name))
     }
 
     function handleCopy(slug: string) {
