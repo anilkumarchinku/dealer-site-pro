@@ -12,6 +12,7 @@
 
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
+import { requireAuth } from '@/lib/supabase-server'
 import { rateLimitOrNull } from '@/lib/utils/rate-limiter'
 import { logger } from '@/lib/utils/logger'
 
@@ -52,8 +53,8 @@ export async function GET(request: NextRequest) {
 
 // ── PATCH: approve a review (dealer dashboard) ───────────────────────────────
 export async function PATCH(request: NextRequest) {
-    const authHeader = request.headers.get('authorization')
-    if (!authHeader) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+    const { errorResponse } = await requireAuth()
+    if (errorResponse) return errorResponse
 
     const body = await request.json().catch(() => null)
     if (!body) return NextResponse.json({ error: 'Invalid JSON' }, { status: 400 })

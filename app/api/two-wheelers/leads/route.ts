@@ -42,7 +42,7 @@ export async function POST(request: NextRequest) {
     const supabaseCheck = getSupabase()
     const fiveMinutesAgo = new Date(Date.now() - 5 * 60 * 1000).toISOString()
     const { data: recentLead } = await supabaseCheck
-        .from('two_wheeler_leads')
+        .from('tw_leads')
         .select('id')
         .eq('dealer_id', dealer_id)
         .eq('phone', phone.trim())
