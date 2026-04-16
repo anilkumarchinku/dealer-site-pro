@@ -131,11 +131,29 @@ export default function DashboardLayout({
                 const { data: { user } } = await supabase.auth.getUser();
                 if (!user) return;
 
-                const { data: dealer } = await supabase
-                    .from('dealers')
-                    .select('id, dealership_name, tagline, location, full_address, phone, whatsapp, email, gstin, sells_new_cars, sells_used_cars, style_template, slug, onboarding_complete, vehicle_type, sells_two_wheelers, sells_three_wheelers, sells_four_wheelers')
-                    .eq('user_id', user.id)
-                    .maybeSingle();
+                // Retry up to 3 times with a short delay — guards against the race
+                // where the user just finished onboarding and the session/DB write
+                // hasn't fully propagated when the dashboard first mounts.
+                let dealer = null;
+                let dealerError = null;
+                for (let attempt = 0; attempt < 3; attempt++) {
+                    if (attempt > 0) await new Promise(r => setTimeout(r, 800));
+                    const result = await supabase
+                        .from('dealers')
+                        .select('id, dealership_name, tagline, location, full_address, phone, whatsapp, email, gstin, sells_new_cars, sells_used_cars, style_template, slug, onboarding_complete, vehicle_type, sells_two_wheelers, sells_three_wheelers, sells_four_wheelers')
+                        .eq('user_id', user.id)
+                        .maybeSingle();
+                    dealerError = result.error;
+                    dealer = result.data;
+                    // If query succeeded and dealer exists, stop retrying
+                    if (!dealerError && dealer) break;
+                    // If query errored, stop retrying (network issue — don't redirect)
+                    if (dealerError) break;
+                }
+
+                // Query errored (network, rate-limit, etc.) — do NOT redirect.
+                // Stay on dashboard and silently fail.
+                if (dealerError) return;
 
                 // No dealer record or onboarding not finished → send back to onboarding
                 if (!dealer || !dealer.onboarding_complete) {
