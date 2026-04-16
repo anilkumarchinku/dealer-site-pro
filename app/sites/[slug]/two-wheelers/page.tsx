@@ -178,12 +178,13 @@ function TwoWheelerPortal({
             emoji: '🛡️',
         })
     } else {
-        // Multi-brand new-only: one card per brand, all pointing to /new
+        // Multi-brand new-only: one card per brand, each with its own brand-filtered URL
         brands.forEach(brand => {
+            const brandSlug = brand.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')
             siteCards.push({
                 label: brand,
                 sublabel: 'New Two-Wheelers · Authorised Dealer',
-                href: `${prefix}/new`,
+                href: `${prefix}/new?brand=${encodeURIComponent(brandSlug)}`,
                 color: 'green',
                 emoji: '🏍️',
             })

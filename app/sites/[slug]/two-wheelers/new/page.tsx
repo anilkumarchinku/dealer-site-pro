@@ -15,6 +15,7 @@ import type { Service } from '@/lib/types'
 
 interface Props {
     params: Promise<{ slug: string }>
+    searchParams: Promise<{ brand?: string }>
 }
 
 function generate2WFeatures(v: TwoWheelerVehicle): string[] {
@@ -121,8 +122,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     }
 }
 
-export default async function NewTwoWheelersPage({ params }: Props) {
+export default async function NewTwoWheelersPage({ params, searchParams }: Props) {
     const { slug } = await params
+    const { brand: brandParam } = await searchParams
 
     const dealer = await fetchDealerBySlug(slug)
     if (!dealer) notFound()
@@ -150,14 +152,21 @@ export default async function NewTwoWheelersPage({ params }: Props) {
         ? dealer2wBrands
         : TWO_WHEELER_BRANDS
 
-    // If accessed via a brand-specific slug (e.g. varun-group-royal-enfield),
-    // restrict to that brand only; otherwise show all dealer brands.
-    const brandsToShow = dealer.brandFilter
-        ? allBrands.filter(b => b.toLowerCase() === dealer.brandFilter!.toLowerCase())
+    // Resolve the active brand filter:
+    // Priority: dealer.brandFilter (from slug suffix) > ?brand= query param > show all
+    const activeBrandFilter: string | null = dealer.brandFilter
+        ?? (brandParam
+            ? allBrands.find(b =>
+                b.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '') === brandParam
+              ) ?? null
+            : null)
+
+    // Restrict to single brand if a filter is active; otherwise show all dealer brands.
+    const brandsToShow = activeBrandFilter
+        ? allBrands.filter(b => b.toLowerCase() === activeBrandFilter.toLowerCase())
             .concat(
-                // fallback: if brandFilter doesn't match any stored brand exactly, use it directly
-                allBrands.filter(b => b.toLowerCase() === dealer.brandFilter!.toLowerCase()).length === 0
-                    ? [dealer.brandFilter]
+                allBrands.filter(b => b.toLowerCase() === activeBrandFilter.toLowerCase()).length === 0
+                    ? [activeBrandFilter]
                     : []
             )
         : allBrands
@@ -168,8 +177,8 @@ export default async function NewTwoWheelersPage({ params }: Props) {
         getTwoWheelerCatalog(brand, dealer.id).map(v => ({ ...v, id: `cat-2w-${bi}-${v.id}` }))
     )
 
-    const filteredDbVehicles = dealer.brandFilter
-        ? dbVehicles.filter(v => v.brand.toLowerCase() === dealer.brandFilter!.toLowerCase())
+    const filteredDbVehicles = activeBrandFilter
+        ? dbVehicles.filter(v => v.brand.toLowerCase() === activeBrandFilter.toLowerCase())
         : dbVehicles
 
     const dbKeys = new Set(filteredDbVehicles.map(v => `${v.brand}__${v.model}`))

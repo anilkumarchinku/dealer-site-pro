@@ -93,15 +93,30 @@ function MultiSitePortal({
     const siteCards: { label: string; sublabel: string; href: string; color: string; emoji: string }[] = []
 
     if (isHybrid) {
-        // Hybrid: brand new + pre-owned
-        const brandSlug = brands[0]?.toLowerCase().replace(/\s+/g, '-') ?? 'new'
-        siteCards.push({
-            label: 'New Cars',
-            sublabel: brands.length > 0 ? brands.join(' · ') : 'Brand New Vehicles',
-            href: `/${slug}-${brandSlug}`,
-            color: 'blue',
-            emoji: '🚗',
-        })
+        // Hybrid: one card per brand (new) + one pre-owned card
+        if (brands.length > 1) {
+            // Multi-brand hybrid: separate card per brand
+            brands.forEach(brand => {
+                const brandSlug = brand.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')
+                siteCards.push({
+                    label: brand,
+                    sublabel: 'New Cars · Authorised Dealer',
+                    href: `/${slug}-${brandSlug}`,
+                    color: 'blue',
+                    emoji: '🚗',
+                })
+            })
+        } else {
+            // Single-brand hybrid: one "New Cars" card
+            const brandSlug = brands[0]?.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '') ?? 'new'
+            siteCards.push({
+                label: 'New Cars',
+                sublabel: brands.length > 0 ? brands[0] : 'Brand New Vehicles',
+                href: `/${slug}-${brandSlug}`,
+                color: 'blue',
+                emoji: '🚗',
+            })
+        }
         siteCards.push({
             label: 'Pre-Owned Cars',
             sublabel: 'Certified Used Vehicles',
@@ -112,7 +127,7 @@ function MultiSitePortal({
     } else {
         // Multi-brand new-car only: one card per brand
         brands.forEach(brand => {
-            const brandSlug = brand.toLowerCase().replace(/\s+/g, '-')
+            const brandSlug = brand.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')
             siteCards.push({
                 label: brand,
                 sublabel: 'New Cars · Authorised Dealer',

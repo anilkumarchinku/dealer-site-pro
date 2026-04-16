@@ -162,12 +162,13 @@ function ThreeWheelerPortal({
       emoji: '🛡️',
     })
   } else {
-    // Multi-brand new-only: one card per brand
+    // Multi-brand new-only: one card per brand, each with its own brand-filtered URL
     brands.forEach(brand => {
+      const brandSlug = brand.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')
       siteCards.push({
         label: brand,
         sublabel: 'New Three-Wheelers · Authorised Dealer',
-        href: `${prefix}/new`,
+        href: `${prefix}/new?brand=${encodeURIComponent(brandSlug)}`,
         color: 'purple',
         emoji: '🛺',
       })
