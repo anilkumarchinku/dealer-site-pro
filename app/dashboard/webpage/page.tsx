@@ -74,9 +74,10 @@ export default function WebpagePage() {
                 setVehicleType(vtype)
                 const isNew  = dealer.sells_new_cars  ?? false
                 const isUsed = dealer.sells_used_cars ?? false
-                const has2W  = dealer.sells_two_wheelers   ?? false
-                const has3W  = dealer.sells_three_wheelers ?? false
-                const has4W  = dealer.sells_four_wheelers  ?? false
+                // Fallback: if boolean flags are missing, infer from vehicle_type
+                const has2W  = dealer.sells_two_wheelers   ?? (vtype === 'two-wheeler')
+                const has3W  = dealer.sells_three_wheelers ?? (vtype === 'three-wheeler')
+                const has4W  = dealer.sells_four_wheelers  ?? (vtype === 'car' || vtype === 'four-wheeler')
                 setSellsNewCars(isNew)
                 setSellsUsedCars(isUsed)
                 setSellsTwoWheelers(has2W)
