@@ -320,6 +320,7 @@ interface Props {
     primaryBrand: string | null
     logoUrl: string | null
     vehicles: TwoWheelerVehicle[]
+    brands: string[]
     slug: string
 }
 
@@ -336,7 +337,7 @@ function getVehicleHeroImage(v: TwoWheelerVehicle): string | null {
 
 export function TwoWheelerTemplate({
     dealerId, dealerName, phone, email, location, fullAddress,
-    primaryBrand, logoUrl, vehicles, slug,
+    primaryBrand, logoUrl, vehicles, brands, slug,
 }: Props) {
     const theme = getBrandTheme(primaryBrand)
     const prefix = useSitePrefix(slug)
@@ -651,20 +652,70 @@ export function TwoWheelerTemplate({
                     </div>
                 </div>
 
-                {filtered.length > 0 ? (
-                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
-                        {filtered.map(v => (
-                            <VehicleCard
-                                key={v.id}
-                                vehicle={v}
-                                slug={slug}
-                                brandColor={theme.accent}
-                                onLead={vid => { setLeadType("best_price"); setLeadVehicleId(vid); setLeadVehicleName(vehicles.find(v => v.id === vid) ? `${vehicles.find(v => v.id === vid)!.brand} ${vehicles.find(v => v.id === vid)!.model}` : undefined) }}
-                                onCompare={undefined}
-                            />
-                        ))}
-                    </div>
-                ) : (
+                {filtered.length > 0 ? (() => {
+                    // For multi-brand dealers group by brand; single-brand renders flat
+                    const uniqueBrands = brands.length > 1
+                        ? brands.filter(b => filtered.some(v => v.brand === b))
+                        : []
+
+                    if (uniqueBrands.length > 1) {
+                        return (
+                            <div className="space-y-12">
+                                {uniqueBrands.map(brand => {
+                                    const brandVehicles = filtered.filter(v => v.brand === brand)
+                                    if (brandVehicles.length === 0) return null
+                                    const brandTheme = getBrandTheme(brand)
+                                    const logoSrc = getBrandLogoSrc(brand)
+                                    return (
+                                        <div key={brand}>
+                                            {/* Brand header */}
+                                            <div className="flex items-center gap-3 mb-5 pb-3 border-b border-gray-200">
+                                                {logoSrc && (
+                                                    <div className="relative w-10 h-10 shrink-0">
+                                                        <Image src={logoSrc} alt={brand} fill className="object-contain" sizes="40px" />
+                                                    </div>
+                                                )}
+                                                <div>
+                                                    <h3 className="text-lg font-bold text-gray-900">{brand}</h3>
+                                                    <p className="text-xs text-gray-500">{brandVehicles.length} model{brandVehicles.length !== 1 ? "s" : ""}</p>
+                                                </div>
+                                                <div className="ml-auto h-1 w-12 rounded-full" style={{ backgroundColor: brandTheme.accent }} />
+                                            </div>
+                                            <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+                                                {brandVehicles.map(v => (
+                                                    <VehicleCard
+                                                        key={v.id}
+                                                        vehicle={v}
+                                                        slug={slug}
+                                                        brandColor={brandTheme.accent}
+                                                        onLead={vid => { setLeadType("best_price"); setLeadVehicleId(vid); setLeadVehicleName(`${v.brand} ${v.model}`) }}
+                                                        onCompare={undefined}
+                                                    />
+                                                ))}
+                                            </div>
+                                        </div>
+                                    )
+                                })}
+                            </div>
+                        )
+                    }
+
+                    // Single-brand flat grid
+                    return (
+                        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+                            {filtered.map(v => (
+                                <VehicleCard
+                                    key={v.id}
+                                    vehicle={v}
+                                    slug={slug}
+                                    brandColor={theme.accent}
+                                    onLead={vid => { setLeadType("best_price"); setLeadVehicleId(vid); setLeadVehicleName(vehicles.find(x => x.id === vid) ? `${vehicles.find(x => x.id === vid)!.brand} ${vehicles.find(x => x.id === vid)!.model}` : undefined) }}
+                                    onCompare={undefined}
+                                />
+                            ))}
+                        </div>
+                    )
+                })() : (
                     <div className="text-center py-16 text-gray-400">
                         <p className="text-lg font-medium">No vehicles in this category yet.</p>
                         <p className="text-sm mt-1">Check back soon or contact us directly.</p>

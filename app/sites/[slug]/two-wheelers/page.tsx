@@ -8,6 +8,7 @@ import { fetchCyeproInventoryAsCars } from '@/lib/services/cyepro-service'
 import { notFound } from 'next/navigation'
 import { createClient } from '@supabase/supabase-js'
 import { brandNameToId } from '@/lib/utils/brand-model-images'
+import { TwoWheelerTemplate } from '@/components/two-wheelers/TwoWheelerTemplate'
 import { ModernTemplate } from '@/components/templates/ModernTemplate'
 import { LuxuryTemplate } from '@/components/templates/LuxuryTemplate'
 import { SportyTemplate } from '@/components/templates/SportyTemplate'
@@ -546,6 +547,28 @@ export default async function TwoWheelersPage({ params }: Props) {
     const jsonLd = (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
     )
+
+    // Multi-brand new dealers → TwoWheelerTemplate with per-brand sections
+    if (hasNew && brandsToShow.length > 1) {
+        return (
+            <>
+                {jsonLd}
+                <TwoWheelerTemplate
+                    dealerId={dealer.id}
+                    dealerName={dealer.dealership_name}
+                    phone={dealer.phone}
+                    email={dealer.email ?? ''}
+                    location={dealer.location}
+                    fullAddress={dealer.full_address ?? null}
+                    primaryBrand={primaryBrand}
+                    logoUrl={brandLogoUrl ?? null}
+                    vehicles={vehicles}
+                    brands={brandsToShow}
+                    slug={dealer.slug}
+                />
+            </>
+        )
+    }
 
     switch (dealer.style_template) {
         case 'luxury':
