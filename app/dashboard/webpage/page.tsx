@@ -11,7 +11,7 @@ import { SiteDomainModal } from "@/components/SiteDomainModal"
 import { cn } from "@/lib/utils"
 import {
     Copy, Check, ExternalLink, Globe,
-    Edit3, Loader2, Plus,
+    Edit3, Loader2,
 } from "lucide-react"
 
 // ── Types ──────────────────────────────────────────────────────────────────────
