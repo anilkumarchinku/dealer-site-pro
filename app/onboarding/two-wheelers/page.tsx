@@ -1,10 +1,12 @@
 "use client"
+import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useOnboardingStore } from "@/lib/store/onboarding-store";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { Sparkles, Building2, RefreshCw, ArrowRight, ArrowLeft, Bike } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { supabase, isSupabaseReady } from "@/lib/supabase";
 
 const DEALER_TYPES = [
     {
@@ -45,6 +47,23 @@ const colorStyles: Record<string, { border: string; bg: string; text: string; ba
 export default function TwoWheelerIndexPage() {
     const router = useRouter();
     const { updateData, reset, setVehicleType } = useOnboardingStore();
+
+    // Guard: redirect already-completed users back to dashboard
+    useEffect(() => {
+        if (!isSupabaseReady()) return;
+        supabase.auth.getUser().then(({ data: { user } }) => {
+            if (!user) return;
+            supabase
+                .from('dealers')
+                .select('onboarding_complete')
+                .eq('user_id', user.id)
+                .maybeSingle()
+                .then(({ data: dealer }) => {
+                    if (dealer?.onboarding_complete) router.replace('/dashboard');
+                });
+        });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     const handleSelect = (category: "new" | "used" | "both") => {
         reset();

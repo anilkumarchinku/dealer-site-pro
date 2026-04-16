@@ -1,5 +1,5 @@
 "use client"
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useOnboardingStore } from "@/lib/store/onboarding-store";
@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { Sparkles, Car, ArrowRight, Building2, RefreshCw } from "lucide-react";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { cn } from "@/lib/utils";
+import { supabase, isSupabaseReady } from "@/lib/supabase";
 
 // ── Vehicle category selector ─────────────────────────────────────────────
 const VEHICLE_CATEGORIES = [
@@ -366,10 +367,26 @@ export default function OnboardingIndexPage() {
     const { updateData, reset, setVehicleType } = useOnboardingStore();
     const [vehicleCategory, setVehicleCategory] = useState<'car' | 'two-wheeler' | 'three-wheeler' | null>(null);
 
-    // No auto-reset on mount — reset happens explicitly when user picks a vehicle type.
-    // Previously calling reset() here caused a loop: after completing onboarding the
-    // dashboard would redirect back to /onboarding (e.g. no auth yet), which mounted
-    // this page and wiped the store, sending the user back to step 1.
+    // Guard: if the user already completed onboarding, send them to the dashboard.
+    // This prevents the loop where dashboard redirects an unauthenticated visit to
+    // /onboarding, the page mounts, and the user sees the vehicle picker again.
+    useEffect(() => {
+        if (!isSupabaseReady()) return;
+        supabase.auth.getUser().then(({ data: { user } }) => {
+            if (!user) return;
+            supabase
+                .from('dealers')
+                .select('onboarding_complete')
+                .eq('user_id', user.id)
+                .maybeSingle()
+                .then(({ data: dealer }) => {
+                    if (dealer?.onboarding_complete) {
+                        router.replace('/dashboard');
+                    }
+                });
+        });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     const handleVehicleCategory = (cat: 'car' | 'two-wheeler' | 'three-wheeler') => {
         reset();
