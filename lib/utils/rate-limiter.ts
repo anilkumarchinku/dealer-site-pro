@@ -116,6 +116,10 @@ export function getClientIP(request: Request): string {
 /**
  * Returns a 429 NextResponse if rate limited, or null if allowed.
  * Uses Redis when configured, in-memory Map otherwise.
+ *
+ * In production without Redis: logs a critical Sentry alert and falls back
+ * to in-memory (per-instance) rather than blocking the app entirely.
+ * Fix: set UPSTASH_REDIS_REST_URL + UPSTASH_REDIS_REST_TOKEN in your env.
  */
 export async function rateLimitOrNull(
     storeName: string,
@@ -124,6 +128,19 @@ export async function rateLimitOrNull(
     windowMs: number
 ): Promise<NextResponse | null> {
     const ip = getClientIP(request)
+
+    // Warn loudly in production when Redis is missing — ops must see this
+    if (!redisRatelimit && process.env.NODE_ENV === 'production') {
+        // Lazy import to avoid pulling Sentry into every edge runtime
+        try {
+            const Sentry = await import('@sentry/nextjs')
+            Sentry.captureMessage(
+                `[RateLimiter] Redis not configured — falling back to in-memory for store "${storeName}". Rate limits are NOT distributed.`,
+                'warning'
+            )
+        } catch { /* Sentry not available — console fallback */ }
+        console.warn(`[RateLimiter] Redis unavailable — in-memory fallback active for "${storeName}"`)
+    }
 
     let allowed: boolean
     let retryAfterMs: number

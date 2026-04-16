@@ -50,6 +50,46 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ reviews: data, avgRating, total: data.length })
 }
 
+// ── PATCH: approve a review (dealer dashboard) ───────────────────────────────
+export async function PATCH(request: NextRequest) {
+    const authHeader = request.headers.get('authorization')
+    if (!authHeader) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+
+    const body = await request.json().catch(() => null)
+    if (!body) return NextResponse.json({ error: 'Invalid JSON' }, { status: 400 })
+
+    const { review_id, dealer_id } = body
+    if (!review_id || !dealer_id) {
+        return NextResponse.json({ error: 'review_id and dealer_id required' }, { status: 400 })
+    }
+
+    const supabase = getSupabase()
+
+    // Verify the review belongs to this dealer
+    const { data: review, error: fetchErr } = await supabase
+        .from('dealer_reviews')
+        .select('id, dealer_id')
+        .eq('id', review_id)
+        .eq('dealer_id', dealer_id)
+        .single()
+
+    if (fetchErr || !review) {
+        return NextResponse.json({ error: 'Review not found or access denied' }, { status: 404 })
+    }
+
+    const { error } = await supabase
+        .from('dealer_reviews')
+        .update({ is_approved: true })
+        .eq('id', review_id)
+
+    if (error) {
+        logger.error('Review approve error:', error)
+        return NextResponse.json({ error: 'Failed to approve review' }, { status: 500 })
+    }
+
+    return NextResponse.json({ success: true })
+}
+
 // ── POST: submit a new review ────────────────────────────────────────────────
 export async function POST(request: NextRequest) {
     // Rate limiting (5 reviews per IP per day)

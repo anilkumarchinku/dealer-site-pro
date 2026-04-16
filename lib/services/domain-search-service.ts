@@ -41,14 +41,9 @@ async function checkDomainAvailability(domain: string): Promise<{
     price?: number
 }> {
     try {
-        // If no API keys configured, return mock data
+        // If no API keys configured, fail explicitly — never return random results
         if (!GODADDY_API_KEY || !GODADDY_API_SECRET) {
-            console.log('[GoDaddy] No API keys - using mock data')
-            return {
-                available: Math.random() > 0.5,
-                definitive: false,
-                price: undefined
-            }
+            throw new Error('Domain search is not configured. Please contact support.')
         }
 
         const response = await fetch(

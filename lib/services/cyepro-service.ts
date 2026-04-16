@@ -200,6 +200,7 @@ export async function fetchCyeproVehicles(
                 headers: buildHeaders(apiKey),
                 body:    JSON.stringify(body),
                 cache:   'no-store',  // Don't cache — always fetch fresh data
+                signal:  AbortSignal.timeout(10_000),
             },
         )
 
@@ -258,6 +259,7 @@ export async function fetchCyeproAggregations(
                 method:  'GET',
                 headers: buildHeaders(apiKey),
                 cache:   'no-store',
+                signal:  AbortSignal.timeout(10_000),
             },
         )
 
@@ -301,6 +303,7 @@ export async function forwardLeadToCyepro(
                 remarks:           payload.message      ?? '',
                 leadSource:        payload.leadSource   ?? 'Website',
             }),
+            signal:  AbortSignal.timeout(5_000),
         })
 
         if (!res.ok) {

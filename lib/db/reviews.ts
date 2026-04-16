@@ -75,6 +75,39 @@ export async function respondToReview(
     return { success: true };
 }
 
+// ── Fetch pending (unapproved) reviews for a dealer ─────────
+export async function fetchPendingReviews(dealerId: string): Promise<DBReview[]> {
+    if (!isSupabaseReady()) return [];
+
+    const { data, error } = await supabase
+        .from("reviews")
+        .select("*")
+        .eq("dealer_id", dealerId)
+        .eq("status", "pending")
+        .order("created_at", { ascending: false });
+
+    if (error) {
+        console.error("[fetchPendingReviews]", error.message);
+        return [];
+    }
+    return (data ?? []).map(normalize);
+}
+
+// ── Approve a review ─────────────────────────────────────────
+export async function approveReview(
+    reviewId: string
+): Promise<{ success: boolean; error?: string }> {
+    if (!isSupabaseReady()) return { success: false, error: "Supabase not configured" };
+
+    const { error } = await supabase
+        .from("reviews")
+        .update({ status: "published", updated_at: new Date().toISOString() })
+        .eq("id", reviewId);
+
+    if (error) return { success: false, error: error.message };
+    return { success: true };
+}
+
 // ── Compute avg rating + total from an array (used for UI) ───
 export function computeReviewStats(reviews: DBReview[]) {
     if (reviews.length === 0) return { avgRating: 0, total: 0, responded: 0 };

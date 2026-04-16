@@ -11,8 +11,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-    title: "DealerSite Pro - Free Dealership Websites",
-    description: "Get a professional dealership website in 10 minutes. 100% FREE. No tech skills needed.",
+    title: "DealerSite Pro - Professional Dealership Websites",
+    description: "Get a professional dealership website in 10 minutes. Free subdomain included. Custom domain available on upgrade.",
     icons: {
         icon: "/favicon.svg",
         apple: "/favicon.svg",

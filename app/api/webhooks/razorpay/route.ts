@@ -19,6 +19,13 @@ import { NextRequest, NextResponse } from 'next/server'
 import crypto from 'crypto'
 import { createAdminClient } from '@/lib/supabase-server'
 
+// ── In-process event deduplication ───────────────────────────────────────────
+// Keeps the last 500 event IDs in memory. Sufficient for a single serverless
+// instance. For multi-instance production, replace with a DB-backed table:
+//   CREATE TABLE webhook_events (event_id TEXT PRIMARY KEY, received_at TIMESTAMPTZ DEFAULT now());
+const processedEventIds = new Set<string>()
+const MAX_EVENT_CACHE = 500
+
 // Verify Razorpay webhook signature
 function verifyWebhookSignature(body: string, signature: string, secret: string): boolean {
     if (!secret) return false
@@ -54,8 +61,23 @@ export async function POST(request: NextRequest) {
 
     const supabase = createAdminClient()
     const eventType = event.event
+    const eventId   = request.headers.get('x-razorpay-event-id')
 
-    console.log('[Razorpay Webhook] Received event:', eventType)
+    console.log('[Razorpay Webhook] Received event:', eventType, eventId ?? '(no event-id)')
+
+    // ── Idempotency: skip duplicate events within this instance ──────────────
+    if (eventId) {
+        if (processedEventIds.has(eventId)) {
+            console.log('[Razorpay Webhook] Duplicate event, skipping:', eventId)
+            return NextResponse.json({ received: true, duplicate: true })
+        }
+        // Evict oldest entries when cache is full
+        if (processedEventIds.size >= MAX_EVENT_CACHE) {
+            const [first] = processedEventIds
+            processedEventIds.delete(first)
+        }
+        processedEventIds.add(eventId)
+    }
 
     try {
         switch (eventType) {

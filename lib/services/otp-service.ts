@@ -18,10 +18,13 @@ function getAdminClient() {
 }
 
 /**
- * Generate a random 6-digit code
+ * Generate a cryptographically secure random 6-digit code
  */
 function generateOtpCode(): string {
-    const code = Math.floor(100000 + Math.random() * 900000).toString()
+    const array = new Uint32Array(1)
+    crypto.getRandomValues(array)
+    // Map to 100000–999999 range
+    const code = (100000 + (array[0] % 900000)).toString()
     return code
 }
 

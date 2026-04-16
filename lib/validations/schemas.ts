@@ -50,6 +50,30 @@ export const personName = z
 /** UUID (Supabase IDs) */
 export const uuid = z.string().uuid('Invalid ID format')
 
+/**
+ * Safe URL — only http/https allowed.
+ * Rejects javascript:, data:, vbscript: and empty/invalid strings.
+ */
+export const safeUrl = z
+    .string()
+    .trim()
+    .max(2000, 'URL too long')
+    .refine(
+        (val) => {
+            if (!val) return true
+            try {
+                const url = new URL(val)
+                return url.protocol === 'http:' || url.protocol === 'https:'
+            } catch {
+                return false
+            }
+        },
+        'URL must start with http:// or https://'
+    )
+    .optional()
+    .nullable()
+    .or(z.literal(''))
+
 /** Free-text message (capped at 1000 chars) */
 export const message = z
     .string()
@@ -130,7 +154,8 @@ export const twLeadSchema = z.object({
     used_vehicle_id:   z.string().optional().nullable(),
     preferred_date:    dateString.optional().nullable(),
     message:           message,
-    offer_price_paise: z.number().int().min(0).optional().nullable(),
+    // ₹1 crore ceiling (100,000 * 100 paise) — prevents absurd offer prices
+    offer_price_paise: z.number().int().min(0).max(10_000_000).optional().nullable(),
 })
 
 export type TwLeadInput = z.infer<typeof twLeadSchema>
@@ -152,7 +177,7 @@ export const thwLeadSchema = z.object({
     used_vehicle_id:   z.string().optional().nullable(),
     preferred_date:    dateString.optional().nullable(),
     message:           message,
-    offer_price_paise: z.number().int().min(0).optional().nullable(),
+    offer_price_paise: z.number().int().min(0).max(10_000_000).optional().nullable(),
 })
 
 export type ThwLeadInput = z.infer<typeof thwLeadSchema>

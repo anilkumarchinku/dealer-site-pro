@@ -55,9 +55,13 @@ export async function saveDealer(
     existingDealerId?: string,
     vehicleType?: 'car' | 'two-wheeler' | 'three-wheeler'
 ): Promise<SaveDealerResult> {
-    // Graceful no-op when Supabase isn't set up yet
+    // Supabase must be configured — fail loudly in production
     if (!isSupabaseReady()) {
-        return { success: true };
+        if (process.env.NODE_ENV === 'production') {
+            return { success: false, error: 'Database not configured. Please contact support.' }
+        }
+        // Dev-only no-op — lets UI be tested without a real Supabase instance
+        return { success: true }
     }
 
     try {

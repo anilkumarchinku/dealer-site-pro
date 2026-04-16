@@ -33,6 +33,22 @@ export async function POST(request: NextRequest) {
     }
     const { dealer_id, lead_type, name, phone, email, vehicle_id, vehicle_name, used_vehicle_id, preferred_date, message, offer_price_paise } = parsed.data
 
+    // ── Idempotency: reject duplicate 3W leads within a 5-minute window ───────
+    const supabaseCheck = getSupabase()
+    const fiveMinutesAgo = new Date(Date.now() - 5 * 60 * 1000).toISOString()
+    const { data: recentLead } = await supabaseCheck
+        .from('three_wheeler_leads')
+        .select('id')
+        .eq('dealer_id', dealer_id)
+        .eq('phone', phone.trim())
+        .gte('created_at', fiveMinutesAgo)
+        .limit(1)
+        .maybeSingle()
+
+    if (recentLead) {
+        return NextResponse.json({ success: true, id: recentLead.id, duplicate: true }, { status: 200 })
+    }
+
     const result = await createThreeWheelerLead({
         dealer_id,
         vehicle_id:        vehicle_id        ?? null,

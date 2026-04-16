@@ -44,8 +44,8 @@ interface WelcomeClientProps {
 
 const FEATURES = [
     { icon: Clock, title: "10 Minutes Setup", description: "Answer 5 simple questions and your website is live instantly", color: "bg-blue-500/10 text-blue-500" },
-    { icon: Zap, title: "100% FREE Forever", description: "No setup fees, no monthly costs — completely free to use", color: "bg-amber-500/10 text-amber-500" },
-    { icon: TrendingUp, title: "Automatic Marketing", description: "SEO, social media, and email campaigns — all automated", color: "bg-emerald-500/10 text-emerald-500" },
+    { icon: Zap, title: "Free to Start", description: "Launch your dealership website free. Upgrade to connect your own domain.", color: "bg-amber-500/10 text-amber-500" },
+    { icon: TrendingUp, title: "Built-in Lead Capture", description: "Every enquiry, test drive request, and offer goes straight to your dashboard.", color: "bg-emerald-500/10 text-emerald-500" },
     { icon: Users, title: "More Customers", description: "Leads start coming in within days of launch", color: "bg-purple-500/10 text-purple-500" },
 ];
 
@@ -173,7 +173,7 @@ export default function WelcomeClient({ cars }: WelcomeClientProps) {
                             {/* Overline badge */}
                             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-foreground/5 border border-border mb-8">
                                 <span className="w-1.5 h-1.5 rounded-full bg-foreground" />
-                                <span className="text-sm font-semibold text-foreground">100% FREE — No Credit Card</span>
+                                <span className="text-sm font-semibold text-foreground">Free to Start — No Credit Card</span>
                             </div>
 
                             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight mb-6">

@@ -73,8 +73,10 @@ export async function confirmOtpAndAuthenticate(
                 return { success: false, error: "Missing registration details" };
             }
 
-            // Generate a random temporary password (users won't need it, they'll use OTP)
-            const tempPassword = Math.random().toString(36).slice(-16);
+            // Generate a cryptographically secure temporary password (users won't need it, they'll use OTP)
+            const tempPasswordBytes = new Uint8Array(16)
+            crypto.getRandomValues(tempPasswordBytes)
+            const tempPassword = Buffer.from(tempPasswordBytes).toString('base64url')
 
             const { data: authData, error: signUpError } = await supabase.auth.signUp({
                 email,
@@ -112,7 +114,7 @@ export async function confirmOtpAndAuthenticate(
             // Since we already verified OTP, we can create a session directly
             const { data: sessionData, error: loginError } = await supabase.auth.signInWithPassword({
                 email,
-                password: Math.random().toString(36).slice(-16), // This will fail, but we'll handle it
+                password: 'otp-verified-placeholder', // Will fail — caught below; OTP already verified above
             }).catch(() => {
                 // OTP is verified, so we can trust this user
                 return { data: { user: existingUser }, error: null };

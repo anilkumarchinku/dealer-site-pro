@@ -9,7 +9,6 @@ import React, { useState, Suspense, useEffect } from 'react';
 import { useOnboardingStore } from "@/lib/store/onboarding-store";
 import { getPrimaryBrand, automotiveBrands } from "@/lib/colors/automotive-brands";
 import type { TemplateStyle } from "@/lib/templates";
-import { getCarsByMake, getAllCars } from "@/lib/services/car-service";
 import type { Car } from "@/lib/types/car";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
@@ -184,14 +183,20 @@ function PreviewContent() {
                     const vehicles = getThreeWheelerCatalog(primaryBrand, dealerId || "preview-dealer")
                     if (isMounted) setDisplayCars(threeWheelersToCars(vehicles))
                 } else {
-                    let cars = await getCarsByMake(primaryBrand);
-                    if (cars.length === 0) {
-                        // Use brand-specific static catalog if available, else generic fallback
-                        if (primaryBrand === 'VinFast') {
-                            cars = VINFAST_CARS;
-                        } else {
-                            const result = await getAllCars({ limit: 8 });
-                            cars = result.cars;
+                    let cars: Car[] = []
+                    if (primaryBrand === 'VinFast') {
+                        // VinFast has no DB rows yet — use static catalog
+                        cars = VINFAST_CARS
+                    } else {
+                        // Fetch from server-side API route (admin client, bypasses RLS)
+                        try {
+                            const res = await fetch(`/api/catalog/4w/${encodeURIComponent(primaryBrand)}`)
+                            if (res.ok) {
+                                const json = await res.json()
+                                cars = json.cars ?? []
+                            }
+                        } catch (fetchErr) {
+                            console.error('[Preview] Failed to fetch catalog:', fetchErr)
                         }
                     }
                     if (isMounted) setDisplayCars(cars);

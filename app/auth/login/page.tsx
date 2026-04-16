@@ -136,12 +136,20 @@ function LoginForm() {
                         )}
                     </Button>
 
-                    <p className="text-center text-sm text-muted-foreground">
-                        Don't have an account?{" "}
-                        <Link href="/auth/register" className="font-medium text-blue-600 dark:text-blue-400 hover:underline">
-                            Create one free
+                    <div className="flex flex-col items-center gap-1.5">
+                        <p className="text-center text-sm text-muted-foreground">
+                            Don't have an account?{" "}
+                            <Link href="/auth/register" className="font-medium text-blue-600 dark:text-blue-400 hover:underline">
+                                Create one free
+                            </Link>
+                        </p>
+                        <Link
+                            href="/reset"
+                            className="text-sm text-muted-foreground hover:text-foreground hover:underline"
+                        >
+                            Forgot your password?
                         </Link>
-                    </p>
+                    </div>
                 </form>
             </CardContent>
         </Card>

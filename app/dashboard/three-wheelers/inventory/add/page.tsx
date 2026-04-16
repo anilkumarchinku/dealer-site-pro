@@ -9,6 +9,7 @@ import Link from "next/link"
 import brandData from "@/lib/data/brand-models.json"
 import { VehicleImageUpload } from "@/components/three-wheelers/VehicleImageUpload"
 import { getScrapedImageUrls } from "@/lib/utils/brand-model-images"
+import { toast } from "@/lib/utils/toast"
 
 const ALL_3W_BRANDS = (brandData.threeWheelers as unknown as { brandId: string; brand: string; models: Record<string, string[]> }[])
 
@@ -57,6 +58,7 @@ export default function AddThreeWheelerVehiclePage() {
         description: "",
         features: "",
         brochure_url: "",
+        colors: "",
     })
 
     const selectedBrandData = useMemo(
@@ -132,7 +134,7 @@ export default function AddThreeWheelerVehiclePage() {
             features: form.features.split("\n").map(s => s.trim()).filter(Boolean),
             images,
             brochure_url: form.brochure_url.trim() || null,
-            colors: [],
+            colors: form.colors.split(",").map(s => s.trim()).filter(Boolean),
             status: "active",
         }
 
@@ -144,6 +146,7 @@ export default function AddThreeWheelerVehiclePage() {
             })
             const data = await res.json()
             if (!res.ok) throw new Error(data.error ?? "Failed to add vehicle")
+            toast.success("Vehicle added successfully!")
             router.push("/dashboard/three-wheelers/inventory")
         } catch (err) {
             setError(err instanceof Error ? err.message : "Something went wrong")
@@ -400,6 +403,16 @@ export default function AddThreeWheelerVehiclePage() {
                         <select value={form.stock_status} onChange={e => set("stock_status", e.target.value)} className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm">
                             {STOCK.map(s => <option key={s} value={s}>{s.replace("_", " ")}</option>)}
                         </select>
+                    </div>
+
+                    <div>
+                        <label className="text-sm font-medium">Available Colors</label>
+                        <input
+                            value={form.colors}
+                            onChange={e => set("colors", e.target.value)}
+                            placeholder="Red, Blue, Black"
+                            className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm"
+                        />
                     </div>
                 </fieldset>
 

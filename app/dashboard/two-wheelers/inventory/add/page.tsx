@@ -9,6 +9,7 @@ import { ArrowLeft, Sparkles, ChevronDown } from "lucide-react"
 import Link from "next/link"
 import brandData from "@/lib/data/brand-models.json"
 import { getScrapedImageUrls } from "@/lib/utils/brand-model-images"
+import { toast } from "@/lib/utils/toast"
 
 const TYPES   = ["bike", "scooter", "moped", "electric"] as const
 const FUEL    = ["petrol", "electric"] as const
@@ -55,6 +56,7 @@ export default function AddTwoWheelerVehiclePage() {
         description:             "",
         features:                "",
         brochure_url:            "",
+        colors:                  "",
     })
 
     const selectedBrandData = useMemo(
@@ -121,7 +123,7 @@ export default function AddTwoWheelerVehiclePage() {
             features:                form.features.split("\n").map(s => s.trim()).filter(Boolean),
             images,
             brochure_url:            form.brochure_url.trim() || null,
-            colors:                  [],
+            colors:                  form.colors.split(",").map(s => s.trim()).filter(Boolean),
             status:                  "active",
         }
 
@@ -133,6 +135,7 @@ export default function AddTwoWheelerVehiclePage() {
             })
             const data = await res.json()
             if (!res.ok) throw new Error(data.error ?? "Failed to add vehicle")
+            toast.success("Vehicle added successfully!")
             router.push("/dashboard/two-wheelers/inventory")
         } catch (err) {
             setError(err instanceof Error ? err.message : "Something went wrong")
@@ -344,6 +347,16 @@ export default function AddTwoWheelerVehiclePage() {
                         <select value={form.stock_status} onChange={e => set("stock_status", e.target.value)} className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm">
                             {STOCK.map(s => <option key={s} value={s}>{s.replace("_", " ")}</option>)}
                         </select>
+                    </div>
+
+                    <div>
+                        <label className="text-sm font-medium">Available Colors</label>
+                        <input
+                            value={form.colors}
+                            onChange={e => set("colors", e.target.value)}
+                            placeholder="Red, Blue, Black"
+                            className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm"
+                        />
                     </div>
                 </fieldset>
 

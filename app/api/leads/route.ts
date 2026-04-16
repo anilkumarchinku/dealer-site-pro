@@ -55,6 +55,24 @@ export async function POST(request: NextRequest) {
 
         const supabase = getSupabase()
 
+        // ── Idempotency: reject duplicate leads within a 5-minute window ──────
+        // Prevents double-submission when a user taps the button twice or the
+        // network retries the request on a timeout.
+        const fiveMinutesAgo = new Date(Date.now() - 5 * 60 * 1000).toISOString()
+        const { data: recentLead } = await supabase
+            .from('leads')
+            .select('id')
+            .eq('dealer_id', dealer_id)
+            .eq('customer_phone', phone.trim())
+            .gte('created_at', fiveMinutesAgo)
+            .limit(1)
+            .maybeSingle()
+
+        if (recentLead) {
+            // Return the existing lead ID so the frontend behaves as if it succeeded
+            return NextResponse.json({ success: true, leadId: recentLead.id, duplicate: true })
+        }
+
         // ── Verify dealer_id exists and is active (prevent phantom leads) ─────
         const { data: dealer, error: dealerErr } = await supabase
             .from('dealers')

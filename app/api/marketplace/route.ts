@@ -142,7 +142,7 @@ export async function GET(req: NextRequest) {
 
     if (error) {
         console.error('[Marketplace API]', error.message)
-        return NextResponse.json({ success: false, error: error.message }, { status: 500 })
+        return NextResponse.json({ success: false, error: 'Failed to fetch listings' }, { status: 500 })
     }
 
     // Aggregate filter options from the result set (for sidebar counts)

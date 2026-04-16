@@ -1,9 +1,72 @@
 /**
  * Email Notification Service
- * Sends domain-related emails using Resend
+ * Sends domain-related emails via the Resend API.
+ *
+ * All user-supplied values are HTML-escaped before interpolation
+ * to prevent XSS in email clients that render HTML.
  */
 
 import { logger } from '@/lib/utils/logger'
+
+// ── HTML escaping ───────────────────────────────────────────────────────────
+
+function esc(str: string): string {
+    return str
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;')
+}
+
+// ── Core send helper ────────────────────────────────────────────────────────
+
+interface SendEmailPayload {
+    to: string
+    subject: string
+    html: string
+}
+
+async function sendEmail(payload: SendEmailPayload): Promise<{ success: boolean; error?: string }> {
+    const apiKey = process.env.RESEND_API_KEY
+
+    if (!apiKey) {
+        // In development, log the email content so it's visible without a real key
+        if (process.env.NODE_ENV !== 'production') {
+            logger.log(`[Email:DEV] To: ${payload.to} | Subject: ${payload.subject}`)
+            return { success: true }
+        }
+        logger.error('[Email] RESEND_API_KEY is not configured — email not sent')
+        return { success: false, error: 'Email service not configured' }
+    }
+
+    try {
+        const res = await fetch('https://api.resend.com/emails', {
+            method: 'POST',
+            headers: {
+                Authorization: `Bearer ${apiKey}`,
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                from: 'DealerSite Pro <noreply@dealersitepro.com>',
+                ...payload,
+            }),
+        })
+
+        if (!res.ok) {
+            const body = await res.text()
+            throw new Error(`Resend API error ${res.status}: ${body}`)
+        }
+
+        return { success: true }
+    } catch (err) {
+        const msg = err instanceof Error ? err.message : String(err)
+        logger.error('[Email] Send failed:', msg)
+        return { success: false, error: msg }
+    }
+}
+
+// ── Shared types ─────────────────────────────────────────────────────────────
 
 export interface EmailParams {
     to: string
@@ -11,257 +74,229 @@ export interface EmailParams {
     domain: string
 }
 
-/**
- * Sends email when subdomain is created
- */
+// ── 1. Subdomain created ─────────────────────────────────────────────────────
+
 export async function sendSubdomainCreatedEmail(params: EmailParams) {
     const { to, dealerName, domain } = params
+    const safeName = esc(dealerName)
+    const safeDomain = esc(domain)
 
-    try {
-        // In production, use Resend API
-        const emailContent = {
-            from: 'DealerSite Pro <domains@dealersitepro.com>',
-            to,
-            subject: '🎉 Your Website is Live!',
-            html: `
-        <!DOCTYPE html>
-        <html>
-        <head>
-          <style>
-            body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
-            .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-            .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; text-align: center; border-radius: 10px 10px 0 0; }
-            .content { background: #f9fafb; padding: 30px; border-radius: 0 0 10px 10px; }
-            .domain-box { background: white; border: 2px solid #3b82f6; padding: 20px; margin: 20px 0; border-radius: 8px; text-align: center; }
-            .domain { font-size: 24px; font-weight: bold; color: #3b82f6; font-family: monospace; }
-            .button { display: inline-block; background: #3b82f6; color: white; padding: 12px 30px; text-decoration: none; border-radius: 6px; margin: 20px 0; }
-            .features { background: white; padding: 20px; margin: 20px 0; border-radius: 8px; }
-            .feature { margin: 10px 0; padding-left: 30px; position: relative; }
-            .feature:before { content: "✓"; position: absolute; left: 0; color: #10b981; font-weight: bold; }
-          </style>
-        </head>
-        <body>
-          <div class="container">
-            <div class="header">
-              <h1>🎉 Welcome to DealerSite Pro!</h1>
-            </div>
-            <div class="content">
-              <p>Hi ${dealerName},</p>
-              
-              <p>Great news! Your website is now live and ready to attract customers.</p>
-              
-              <div class="domain-box">
-                <p style="margin: 0; font-size: 14px; color: #6b7280;">Your website URL:</p>
-                <p class="domain">${domain}</p>
-              </div>
-
-              <div style="text-align: center;">
-                <a href="https://${domain}" class="button">Visit Your Website →</a>
-              </div>
-
-              <div class="features">
-                <h3>What's included:</h3>
-                <div class="feature">Free SSL Certificate (HTTPS)</div>
-                <div class="feature">Unlimited bandwidth</div>
-                <div class="feature">Professional templates</div>
-                <div class="feature">Lead capture forms</div>
-                <div class="feature">Mobile-responsive design</div>
-              </div>
-
-              <h3>Next Steps:</h3>
-              <ol>
-                <li>Complete your onboarding to customize your site</li>
-                <li>Add your vehicle inventory</li>
-                <li>Share your new website with customers</li>
-              </ol>
-
-              <p style="background: #fef3c7; padding: 15px; border-left: 4px solid #f59e0b; margin: 20px 0;">
-                <strong>Want a custom domain?</strong><br>
-                Upgrade to PRO (₹499/month) to use your own domain like mydealer.com
-              </p>
-
-              <p>Need help? Reply to this email anytime!</p>
-              
-              <p>Best regards,<br>
-              The DealerSite Pro Team</p>
-            </div>
-          </div>
-        </body>
-        </html>
-      `
-        }
-
-        // In production, call Resend API:
-        /*
-        const response = await fetch('https://api.resend.com/emails', {
-          method: 'POST',
-          headers: {
-            'Authorization': `Bearer ${process.env.RESEND_API_KEY}`,
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(emailContent)
-        });
-        */
-
-        logger.log(`[Email] Subdomain created notification sent to ${to}`)
-        return { success: true }
-    } catch (error) {
-        logger.error('Error sending email:', error)
-        return { success: false, error }
-    }
-}
-
-/**
- * Sends DNS setup instructions for custom domain
- */
-export async function sendDNSInstructionsEmail(params: EmailParams & { aRecord: string; cnameRecord: string }) {
-    const { to, dealerName, domain, aRecord, cnameRecord } = params
-
-    const emailContent = {
-        from: 'DealerSite Pro <domains@dealersitepro.com>',
+    return sendEmail({
         to,
-        subject: `📋 DNS Setup Instructions for ${domain}`,
-        html: `
-      <!DOCTYPE html>
-      <html>
-      <body style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
-        <h2>DNS Setup Instructions</h2>
-        <p>Hi ${dealerName},</p>
-        <p>To connect <strong>${domain}</strong> to your DealerSite Pro website, please add these DNS records at your domain registrar:</p>
-        
-        <div style="background: #f3f4f6; padding: 20px; border-radius: 8px; margin: 20px 0;">
-          <h3 style="margin-top: 0;">Record 1: A Record</h3>
-          <table style="width: 100%; border-collapse: collapse;">
-            <tr style="background: white;">
-              <td style="padding: 10px; border: 1px solid #e5e7eb;"><strong>Type:</strong></td>
-              <td style="padding: 10px; border: 1px solid #e5e7eb; font-family: monospace;">A</td>
-            </tr>
-            <tr style="background: white;">
-              <td style="padding: 10px; border: 1px solid #e5e7eb;"><strong>Name:</strong></td>
-              <td style="padding: 10px; border: 1px solid #e5e7eb; font-family: monospace;">@</td>
-            </tr>
-            <tr style="background: white;">
-              <td style="padding: 10px; border: 1px solid #e5e7eb;"><strong>Value:</strong></td>
-              <td style="padding: 10px; border: 1px solid #e5e7eb; font-family: monospace; color: #3b82f6;">${aRecord}</td>
-            </tr>
-          </table>
-
-          <h3>Record 2: CNAME Record</h3>
-          <table style="width: 100%; border-collapse: collapse;">
-            <tr style="background: white;">
-              <td style="padding: 10px; border: 1px solid #e5e7eb;"><strong>Type:</strong></td>
-              <td style="padding: 10px; border: 1px solid #e5e7eb; font-family: monospace;">CNAME</td>
-            </tr>
-            <tr style="background: white;">
-              <td style="padding: 10px; border: 1px solid #e5e7eb;"><strong>Name:</strong></td>
-              <td style="padding: 10px; border: 1px solid #e5e7eb; font-family: monospace;">www</td>
-            </tr>
-            <tr style="background: white;">
-              <td style="padding: 10px; border: 1px solid #e5e7eb;"><strong>Value:</strong></td>
-              <td style="padding: 10px; border: 1px solid #e5e7eb; font-family: monospace; color: #3b82f6;">${cnameRecord}</td>
-            </tr>
-          </table>
-        </div>
-
-        <p><strong>Next Steps:</strong></p>
-        <ol>
-          <li>Log in to your domain registrar (GoDaddy, Namecheap, etc.)</li>
-          <li>Find DNS Management or DNS Settings</li>
-          <li>Add the records above</li>
-          <li>Save changes and wait 5-30 minutes</li>
-          <li>Return to your dashboard and click "Verify Domain"</li>
-        </ol>
-
-        <p style="background: #dbeafe; padding: 15px; border-radius: 6px;">
-          <strong>💡 Tip:</strong> DNS changes typically propagate in 5-30 minutes but can take up to 48 hours.
-        </p>
-
-        <p>Need help? Reply to this email!</p>
-        
-        <p>Best regards,<br>DealerSite Pro Team</p>
-      </body>
-      </html>
-    `
-    }
-
-    logger.log(`[Email] DNS instructions sent to ${to}`)
-    return { success: true }
+        subject: '🎉 Your Dealership Website is Live!',
+        html: `<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <style>
+    body{font-family:Arial,sans-serif;line-height:1.6;color:#333;margin:0;padding:0}
+    .wrap{max-width:600px;margin:0 auto;padding:20px}
+    .hdr{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:30px;text-align:center;border-radius:10px 10px 0 0}
+    .body{background:#f9fafb;padding:30px;border-radius:0 0 10px 10px}
+    .url-box{background:#fff;border:2px solid #3b82f6;padding:20px;margin:20px 0;border-radius:8px;text-align:center;font-family:monospace;font-size:18px;font-weight:bold;color:#3b82f6;word-break:break-all}
+    .btn{display:inline-block;background:#3b82f6;color:#fff;padding:12px 30px;text-decoration:none;border-radius:6px;margin:10px 0}
+    .tip{background:#fef3c7;padding:15px;border-left:4px solid #f59e0b;margin:20px 0;border-radius:0 4px 4px 0}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="hdr"><h1 style="margin:0">🎉 Welcome to DealerSite Pro!</h1></div>
+    <div class="body">
+      <p>Hi ${safeName},</p>
+      <p>Your dealership website is now <strong>live</strong> and ready to attract customers.</p>
+      <div class="url-box">${safeDomain}</div>
+      <div style="text-align:center">
+        <a href="https://${safeDomain}" class="btn">Visit Your Website →</a>
+      </div>
+      <h3>Next Steps</h3>
+      <ol>
+        <li>Log in to your <strong>dashboard</strong> and add your vehicle inventory</li>
+        <li>Share your new website URL with customers and on WhatsApp</li>
+        <li>Check back for leads submitted through your site</li>
+      </ol>
+      <div class="tip">
+        <strong>Want a custom domain?</strong><br/>
+        Upgrade to PRO (₹499/month) to connect your own domain like <em>mydealer.com</em>
+      </div>
+      <p>Need help? Reply to this email anytime.</p>
+      <p>Best regards,<br/><strong>The DealerSite Pro Team</strong></p>
+    </div>
+  </div>
+</body>
+</html>`,
+    })
 }
 
-/**
- * Sends verification success email
- */
+// ── 2. DNS setup instructions ─────────────────────────────────────────────────
+
+export async function sendDNSInstructionsEmail(
+    params: EmailParams & { aRecord: string; cnameRecord: string }
+) {
+    const { to, dealerName, domain, aRecord, cnameRecord } = params
+    const safeName   = esc(dealerName)
+    const safeDomain = esc(domain)
+    const safeA      = esc(aRecord)
+    const safeCname  = esc(cnameRecord)
+
+    return sendEmail({
+        to,
+        subject: `📋 DNS Setup Instructions for ${safeDomain}`,
+        html: `<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <style>
+    body{font-family:Arial,sans-serif;line-height:1.6;color:#333;max-width:600px;margin:0 auto;padding:20px}
+    table{width:100%;border-collapse:collapse;margin:10px 0}
+    td,th{padding:10px;border:1px solid #e5e7eb;font-size:14px}
+    th{background:#f3f4f6;font-weight:600;text-align:left}
+    code{font-family:monospace;background:#f3f4f6;padding:2px 6px;border-radius:3px;color:#1d4ed8}
+    .tip{background:#dbeafe;padding:15px;border-radius:6px;margin:20px 0}
+  </style>
+</head>
+<body>
+  <h2>DNS Setup Instructions</h2>
+  <p>Hi ${safeName},</p>
+  <p>To connect <strong>${safeDomain}</strong> to your DealerSite Pro website, add these two DNS records at your domain registrar (GoDaddy, Namecheap, etc.).</p>
+
+  <h3>Record 1 — A Record (root domain)</h3>
+  <table>
+    <tr><th>Type</th><td><code>A</code></td></tr>
+    <tr><th>Name / Host</th><td><code>@</code></td></tr>
+    <tr><th>Value / Points to</th><td><code>${safeA}</code></td></tr>
+    <tr><th>TTL</th><td>3600 (or "Automatic")</td></tr>
+  </table>
+
+  <h3>Record 2 — CNAME Record (www)</h3>
+  <table>
+    <tr><th>Type</th><td><code>CNAME</code></td></tr>
+    <tr><th>Name / Host</th><td><code>www</code></td></tr>
+    <tr><th>Value / Points to</th><td><code>${safeCname}</code></td></tr>
+    <tr><th>TTL</th><td>3600 (or "Automatic")</td></tr>
+  </table>
+
+  <h3>Steps</h3>
+  <ol>
+    <li>Log in to your domain registrar</li>
+    <li>Go to <strong>DNS Management</strong> or <strong>DNS Settings</strong></li>
+    <li>Add both records above and save</li>
+    <li>Wait 5–30 minutes for propagation</li>
+    <li>Return to your DealerSite Pro dashboard and click <strong>"Verify Domain"</strong></li>
+  </ol>
+
+  <div class="tip">
+    💡 <strong>Tip:</strong> DNS changes usually propagate in 5–30 minutes but can take up to 48 hours.
+    If verification fails, wait a bit and try again.
+  </div>
+
+  <p>Need help? Reply to this email!</p>
+  <p>Best regards,<br/><strong>DealerSite Pro Team</strong></p>
+</body>
+</html>`,
+    })
+}
+
+// ── 3. Domain verified ────────────────────────────────────────────────────────
+
 export async function sendDomainVerifiedEmail(params: EmailParams) {
     const { to, dealerName, domain } = params
+    const safeName   = esc(dealerName)
+    const safeDomain = esc(domain)
 
-    logger.log(`[Email] Domain verified notification sent to ${to} for ${domain}`)
-    return { success: true }
+    return sendEmail({
+        to,
+        subject: `✅ Domain Verified — ${safeDomain} is Live!`,
+        html: `<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8" /></head>
+<body style="font-family:Arial,sans-serif;line-height:1.6;color:#333;max-width:600px;margin:0 auto;padding:20px">
+  <h2 style="color:#10b981">✅ Your Custom Domain is Verified!</h2>
+  <p>Hi ${safeName},</p>
+  <p>Great news — <strong>${safeDomain}</strong> is now connected to your DealerSite Pro website.</p>
+  <p>Your SSL certificate is being provisioned automatically and will be active within a few minutes.</p>
+  <p>Customers can now reach your website at <a href="https://${safeDomain}">${safeDomain}</a>.</p>
+  <p>Best regards,<br/><strong>DealerSite Pro Team</strong></p>
+</body>
+</html>`,
+    })
 }
 
-/**
- * Sends domain expiry warning (30 days, 7 days before)
- */
-export async function sendDomainExpiryWarning(params: EmailParams & { daysUntilExpiry: number }) {
+// ── 4. Domain expiry warning ──────────────────────────────────────────────────
+
+export async function sendDomainExpiryWarning(
+    params: EmailParams & { daysUntilExpiry: number }
+) {
     const { to, dealerName, domain, daysUntilExpiry } = params
+    const safeName        = esc(dealerName)
+    const safeDomain      = esc(domain)
+    const urgency         = daysUntilExpiry <= 7 ? '🚨 Urgent' : '⚠️ Action Required'
+    const borderColor     = daysUntilExpiry <= 7 ? '#ef4444' : '#f59e0b'
 
-    logger.log(`[Email] Domain expiry warning sent to ${to}: ${domain} expires in ${daysUntilExpiry} days`)
-    return { success: true }
+    return sendEmail({
+        to,
+        subject: `${urgency}: ${safeDomain} expires in ${daysUntilExpiry} days`,
+        html: `<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8" /></head>
+<body style="font-family:Arial,sans-serif;line-height:1.6;color:#333;max-width:600px;margin:0 auto;padding:20px">
+  <div style="border-left:4px solid ${borderColor};padding:15px;background:#fff7ed;margin-bottom:20px">
+    <h2 style="margin:0;color:${borderColor}">${urgency}: Domain Expiring Soon</h2>
+  </div>
+  <p>Hi ${safeName},</p>
+  <p>Your domain <strong>${safeDomain}</strong> is set to expire in <strong>${daysUntilExpiry} day${daysUntilExpiry === 1 ? '' : 's'}</strong>.</p>
+  <p>If it expires, your dealership website will go offline and customers will not be able to reach you.</p>
+  <p>
+    <a href="https://app.dealersitepro.com/dashboard/domains"
+       style="display:inline-block;background:#3b82f6;color:#fff;padding:12px 30px;text-decoration:none;border-radius:6px">
+      Renew My Domain →
+    </a>
+  </p>
+  <p>Need help? Reply to this email.</p>
+  <p>Best regards,<br/><strong>DealerSite Pro Team</strong></p>
+</body>
+</html>`,
+    })
 }
 
-/**
- * Sends SSL renewal notification
- */
-export async function sendSSLRenewalNotification(params: EmailParams & { status: 'success' | 'failed' }) {
+// ── 5. SSL renewal notification ───────────────────────────────────────────────
+
+export async function sendSSLRenewalNotification(
+    params: EmailParams & { status: 'success' | 'failed' }
+) {
     const { to, dealerName, domain, status } = params
+    const safeName   = esc(dealerName)
+    const safeDomain = esc(domain)
 
-    logger.log(`[Email] SSL renewal ${status} notification sent to ${to} for ${domain}`)
-    return { success: true }
+    const isSuccess   = status === 'success'
+    const emoji       = isSuccess ? '🔒' : '⚠️'
+    const heading     = isSuccess ? 'SSL Certificate Renewed' : 'SSL Renewal Failed — Action Required'
+    const bodyText    = isSuccess
+        ? `Your SSL certificate for <strong>${safeDomain}</strong> has been renewed automatically. Your website continues to be secure with HTTPS.`
+        : `We were unable to automatically renew the SSL certificate for <strong>${safeDomain}</strong>. Your website may show a security warning to visitors. Please log in to your dashboard and check your domain settings.`
+
+    return sendEmail({
+        to,
+        subject: `${emoji} ${heading} — ${safeDomain}`,
+        html: `<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8" /></head>
+<body style="font-family:Arial,sans-serif;line-height:1.6;color:#333;max-width:600px;margin:0 auto;padding:20px">
+  <h2>${emoji} ${esc(heading)}</h2>
+  <p>Hi ${safeName},</p>
+  <p>${bodyText}</p>
+  ${!isSuccess ? `<p><a href="https://app.dealersitepro.com/dashboard/domains" style="display:inline-block;background:#ef4444;color:#fff;padding:12px 24px;text-decoration:none;border-radius:6px">Fix Domain Settings →</a></p>` : ''}
+  <p>Best regards,<br/><strong>DealerSite Pro Team</strong></p>
+</body>
+</html>`,
+    })
 }
 
-/**
- * Sends OTP code via email for login/registration
- */
+// ── 6. OTP email (already working — preserved as-is) ─────────────────────────
+
 export async function sendOtpEmail(
     to: string,
     subject: string,
     html: string
 ): Promise<{ success: boolean; error?: string }> {
-    try {
-        const resendApiKey = process.env.RESEND_API_KEY
-
-        if (!resendApiKey) {
-            logger.warn('[OTP Email] RESEND_API_KEY not configured, logging to console')
-            logger.log(`[OTP Email] To: ${to}`)
-            logger.log(`[OTP Email] Subject: ${subject}`)
-            logger.log(`[OTP Email] HTML: ${html}`)
-            return { success: true }
-        }
-
-        // Send via Resend API
-        const response = await fetch('https://api.resend.com/emails', {
-            method: 'POST',
-            headers: {
-                'Authorization': `Bearer ${resendApiKey}`,
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                from: 'DealerSite Pro <auth@dealersitepro.com>',
-                to,
-                subject,
-                html,
-            }),
-        })
-
-        if (!response.ok) {
-            const error = await response.text()
-            throw new Error(`Resend API error: ${error}`)
-        }
-
-        logger.log(`[OTP Email] Sent successfully to ${to}`)
-        return { success: true }
-    } catch (error) {
-        const msg = error instanceof Error ? error.message : String(error)
-        logger.error('[OTP Email] Failed:', msg)
-        return { success: false, error: msg }
-    }
+    return sendEmail({ to, subject, html })
 }

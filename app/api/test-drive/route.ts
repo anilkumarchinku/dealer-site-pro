@@ -79,7 +79,7 @@ export async function POST(req: NextRequest) {
     } catch (err) {
         console.error('[test-drive] booking error:', err);
         return NextResponse.json(
-            { error: err instanceof Error ? err.message : 'Internal error' },
+            { error: 'Failed to book test drive. Please try again.' },
             { status: 500 }
         );
     }

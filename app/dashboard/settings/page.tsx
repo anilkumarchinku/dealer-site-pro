@@ -16,8 +16,9 @@ import {
     ExternalLink, Sun, Moon, Info,
     Plug, Eye, EyeOff, CheckCircle2, XCircle, Loader2,
     Link2, Copy, RefreshCw, Trash2, Upload, ImageIcon, X,
-    Star, RefreshCcw, Plus,
+    Star, RefreshCcw, Plus, AlertTriangle,
 } from "lucide-react";
+import { useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { supabase } from "@/lib/supabase";
@@ -34,6 +35,13 @@ const NOTIFICATION_CONFIG: Record<string, { label: string; description: string }
 export default function SettingsPage() {
     const { data, updateData, dealerId } = useOnboardingStore();
     const { theme } = useTheme();
+    const router = useRouter();
+
+    // ── Delete account state ──────────────────────────────────────────────────
+    const [deleteConfirmText, setDeleteConfirmText] = useState("");
+    const [deleteDialogOpen,  setDeleteDialogOpen]  = useState(false);
+    const [deleting,          setDeleting]          = useState(false);
+    const [deleteError,       setDeleteError]       = useState("");
 
     const [formData, setFormData] = useState({
         dealershipName:  data.dealershipName || "",
@@ -465,6 +473,27 @@ export default function SettingsPage() {
             setGoogleSyncResult({ success: false, message: err instanceof Error ? err.message : "Sync failed" });
         } finally {
             setGoogleSyncing(false);
+        }
+    };
+
+    const handleDeleteAccount = async () => {
+        if (deleteConfirmText !== "DELETE") return;
+        setDeleting(true);
+        setDeleteError("");
+        try {
+            const res = await fetch("/api/auth/delete-account", { method: "DELETE" });
+            if (!res.ok) {
+                const body = await res.json().catch(() => ({}));
+                setDeleteError(body.error ?? "Failed to delete account. Please try again.");
+                return;
+            }
+            // Sign out locally and redirect to home
+            await supabase.auth.signOut();
+            router.push("/");
+        } catch {
+            setDeleteError("An unexpected error occurred. Please try again.");
+        } finally {
+            setDeleting(false);
         }
     };
 
@@ -1330,7 +1359,7 @@ export default function SettingsPage() {
                                 Danger Zone
                             </CardTitle>
                         </CardHeader>
-                        <CardContent>
+                        <CardContent className="space-y-3">
                             <div className="flex items-center justify-between px-4 py-3.5 rounded-xl bg-red-500/5 border border-destructive/20">
                                 <div>
                                     <p className="text-sm font-medium text-foreground">Reset Onboarding</p>
@@ -1339,6 +1368,71 @@ export default function SettingsPage() {
                                     </p>
                                 </div>
                                 <Button variant="destructive" size="sm">Reset</Button>
+                            </div>
+
+                            {/* Delete Account */}
+                            <div className="px-4 py-3.5 rounded-xl bg-red-500/5 border border-destructive/20 space-y-3">
+                                <div className="flex items-center justify-between">
+                                    <div>
+                                        <p className="text-sm font-medium text-foreground">Delete Account</p>
+                                        <p className="text-xs text-muted-foreground mt-0.5">
+                                            Permanently delete your account and all associated data
+                                        </p>
+                                    </div>
+                                    {!deleteDialogOpen && (
+                                        <Button
+                                            variant="destructive"
+                                            size="sm"
+                                            onClick={() => { setDeleteDialogOpen(true); setDeleteConfirmText(""); setDeleteError(""); }}
+                                        >
+                                            Delete
+                                        </Button>
+                                    )}
+                                </div>
+
+                                {deleteDialogOpen && (
+                                    <div className="space-y-3 pt-1 border-t border-destructive/20">
+                                        <div className="flex items-start gap-2 text-xs text-destructive">
+                                            <AlertTriangle className="w-3.5 h-3.5 mt-0.5 shrink-0" />
+                                            <span>
+                                                This action is <strong>irreversible</strong>. All your inventory, leads, and dealership data will be permanently deleted.
+                                            </span>
+                                        </div>
+                                        <div className="space-y-1.5">
+                                            <p className="text-xs text-muted-foreground">
+                                                Type <strong className="text-foreground">DELETE</strong> to confirm:
+                                            </p>
+                                            <Input
+                                                value={deleteConfirmText}
+                                                onChange={e => setDeleteConfirmText(e.target.value)}
+                                                placeholder="DELETE"
+                                                className="h-8 text-sm font-mono"
+                                                disabled={deleting}
+                                            />
+                                        </div>
+                                        {deleteError && (
+                                            <p className="text-xs text-destructive">{deleteError}</p>
+                                        )}
+                                        <div className="flex gap-2">
+                                            <Button
+                                                variant="destructive"
+                                                size="sm"
+                                                disabled={deleteConfirmText !== "DELETE" || deleting}
+                                                onClick={handleDeleteAccount}
+                                            >
+                                                {deleting ? <><Loader2 className="w-3 h-3 mr-1 animate-spin" /> Deleting…</> : "Confirm Delete"}
+                                            </Button>
+                                            <Button
+                                                variant="outline"
+                                                size="sm"
+                                                disabled={deleting}
+                                                onClick={() => { setDeleteDialogOpen(false); setDeleteConfirmText(""); setDeleteError(""); }}
+                                            >
+                                                Cancel
+                                            </Button>
+                                        </div>
+                                    </div>
+                                )}
                             </div>
                         </CardContent>
                     </Card>

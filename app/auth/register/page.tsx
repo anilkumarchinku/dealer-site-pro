@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Loader2, AlertCircle, CheckCircle, Mail, Lock } from "lucide-react";
+import { Loader2, AlertCircle, CheckCircle, Mail } from "lucide-react";
 import { useOnboardingStore } from "@/lib/store/onboarding-store";
 import { supabase } from "@/lib/supabase";
 
@@ -23,6 +23,7 @@ export default function RegisterPage() {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState<string | null>(null);
     const [sent, setSent] = useState(false);
+    const [consentGiven, setConsentGiven] = useState(false);
 
     const update = (field: string, value: string) =>
         setForm(prev => ({ ...prev, [field]: value }));
@@ -38,6 +39,7 @@ export default function RegisterPage() {
         if (!form.password) return "Password is required";
         if (form.password.length < 12) return "Password must be at least 12 characters";
         if (form.password !== form.confirmPassword) return "Passwords do not match";
+        if (!consentGiven) return "Please agree to the Privacy Policy and Terms of Service to continue";
         return null;
     };
 
@@ -212,7 +214,7 @@ export default function RegisterPage() {
                             type="submit"
                             className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
                             size="lg"
-                            disabled={loading}
+                            disabled={loading || !consentGiven}
                         >
                             {loading ? (
                                 <><Loader2 className="w-4 h-4 mr-2 animate-spin" /> Creating account…</>
@@ -221,17 +223,30 @@ export default function RegisterPage() {
                             )}
                         </Button>
 
+                        {/* DPDP Act consent checkbox */}
+                        <div className="flex items-start gap-2.5">
+                            <input
+                                id="consent"
+                                type="checkbox"
+                                checked={consentGiven}
+                                onChange={e => setConsentGiven(e.target.checked)}
+                                disabled={loading}
+                                className="mt-0.5 h-4 w-4 shrink-0 cursor-pointer rounded border-input accent-blue-600"
+                            />
+                            <label htmlFor="consent" className="text-xs text-muted-foreground leading-relaxed cursor-pointer">
+                                I agree to the{" "}
+                                <Link href="/terms" className="text-blue-600 dark:text-blue-400 hover:underline">Terms of Service</Link>
+                                {" "}and{" "}
+                                <Link href="/privacy" className="text-blue-600 dark:text-blue-400 hover:underline">Privacy Policy</Link>.
+                                {" "}I consent to DealerSite Pro processing my personal data as described therein (DPDP Act, 2023).
+                            </label>
+                        </div>
+
                         <p className="text-center text-sm text-muted-foreground">
                             Already have an account?{" "}
                             <Link href="/auth/login" className="font-medium text-blue-600 dark:text-blue-400 hover:underline">
                                 Sign in
                             </Link>
-                        </p>
-
-                        <p className="text-xs text-muted-foreground text-center">
-                            By signing up, you agree to our{" "}
-                            <Link href="/terms" className="hover:underline">Terms of Service</Link> and{" "}
-                            <Link href="/privacy" className="hover:underline">Privacy Policy</Link>
                         </p>
                     </form>
                 )}
