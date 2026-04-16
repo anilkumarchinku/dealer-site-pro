@@ -1,5 +1,4 @@
 "use client"
-import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useOnboardingStore } from "@/lib/store/onboarding-store";
 import { Button } from "@/components/ui/button";
@@ -46,8 +45,6 @@ const colorStyles: Record<string, { border: string; bg: string; text: string; ba
 export default function TwoWheelerIndexPage() {
     const router = useRouter();
     const { updateData, reset, setVehicleType } = useOnboardingStore();
-
-    useEffect(() => { reset(); }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
     const handleSelect = (category: "new" | "used" | "both") => {
         reset();

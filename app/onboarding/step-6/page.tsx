@@ -13,7 +13,7 @@ import {
 
 export default function Step6Page() {
     const router = useRouter();
-    const { data, setStep, dealerId, setDealerId, reset } = useOnboardingStore();
+    const { data, setStep, dealerId, setDealerId } = useOnboardingStore();
     const [showUpgradeOptions, setShowUpgradeOptions] = useState(true);
     const [saving, setSaving] = useState(false);
     const [saveError, setSaveError] = useState<string | null>(null);
@@ -128,7 +128,7 @@ export default function Step6Page() {
                             </Button>
                             <Button
                                 className="flex-1 gap-2 rounded-xl"
-                                onClick={() => { reset(); router.push("/dashboard"); }}
+                                onClick={() => router.push("/dashboard")}
                             >
                                 Go to Dashboard
                                 <ArrowRight className="w-4 h-4" />

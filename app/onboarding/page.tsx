@@ -1,5 +1,5 @@
 "use client"
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useOnboardingStore } from "@/lib/store/onboarding-store";
@@ -366,11 +366,10 @@ export default function OnboardingIndexPage() {
     const { updateData, reset, setVehicleType } = useOnboardingStore();
     const [vehicleCategory, setVehicleCategory] = useState<'car' | 'two-wheeler' | 'three-wheeler' | null>(null);
 
-    useEffect(() => {
-        reset();
-        return;
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+    // No auto-reset on mount — reset happens explicitly when user picks a vehicle type.
+    // Previously calling reset() here caused a loop: after completing onboarding the
+    // dashboard would redirect back to /onboarding (e.g. no auth yet), which mounted
+    // this page and wiped the store, sending the user back to step 1.
 
     const handleVehicleCategory = (cat: 'car' | 'two-wheeler' | 'three-wheeler') => {
         reset();
