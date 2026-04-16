@@ -8,7 +8,6 @@ import { fetchCyeproInventoryAsCars } from '@/lib/services/cyepro-service'
 import { notFound } from 'next/navigation'
 import { createClient } from '@supabase/supabase-js'
 import { brandNameToId } from '@/lib/utils/brand-model-images'
-import { TwoWheelerTemplate } from '@/components/two-wheelers/TwoWheelerTemplate'
 import { ModernTemplate } from '@/components/templates/ModernTemplate'
 import { LuxuryTemplate } from '@/components/templates/LuxuryTemplate'
 import { SportyTemplate } from '@/components/templates/SportyTemplate'
@@ -152,13 +151,51 @@ function NoStockPage({ dealerName, phone, email }: { dealerName: string; phone: 
     )
 }
 
-// ── Hybrid Portal — shown when dealer sells both new + used 2W ────────────────
+// ── 2W Portal — shown for hybrid dealers and multi-brand new-only dealers ─────
 function TwoWheelerPortal({
-    dealerName, location, phone, email, slug, primaryBrand,
+    dealerName, location, phone, email, slug, brands, isHybrid,
 }: {
     dealerName: string; location: string; phone: string; email: string;
-    slug: string; primaryBrand: string | null;
+    slug: string; brands: string[]; isHybrid: boolean;
 }) {
+    const prefix = `/sites/${slug}/two-wheelers`
+
+    const siteCards: { label: string; sublabel: string; href: string; color: string; emoji: string }[] = []
+
+    if (isHybrid) {
+        siteCards.push({
+            label: 'New Bikes & Scooters',
+            sublabel: brands.length > 0 ? brands.join(' · ') : 'Latest models · Factory fresh',
+            href: `${prefix}/new`,
+            color: 'green',
+            emoji: '✨',
+        })
+        siteCards.push({
+            label: 'Pre-Owned Bikes & Scooters',
+            sublabel: 'Certified used · Best prices',
+            href: `${prefix}/used`,
+            color: 'amber',
+            emoji: '🛡️',
+        })
+    } else {
+        // Multi-brand new-only: one card per brand, all pointing to /new
+        brands.forEach(brand => {
+            siteCards.push({
+                label: brand,
+                sublabel: 'New Two-Wheelers · Authorised Dealer',
+                href: `${prefix}/new`,
+                color: 'green',
+                emoji: '🏍️',
+            })
+        })
+    }
+
+    const colorMap: Record<string, { border: string; bg: string; text: string }> = {
+        green:  { border: 'border-green-500/30',  bg: 'bg-green-500/5',  text: 'text-green-400'  },
+        amber:  { border: 'border-amber-500/30',  bg: 'bg-amber-500/5',  text: 'text-amber-400'  },
+        blue:   { border: 'border-blue-500/30',   bg: 'bg-blue-500/5',   text: 'text-blue-400'   },
+    }
+
     return (
         <div className="min-h-screen bg-gray-950 flex flex-col items-center justify-center px-4 py-12">
             <div className="w-full max-w-2xl">
@@ -171,41 +208,34 @@ function TwoWheelerPortal({
                     </h1>
                     <p className="text-gray-400 text-base mb-4">{location}</p>
                     <p className="text-lg text-gray-300 font-medium max-w-md mx-auto leading-relaxed">
-                        {primaryBrand ? `Authorised ${primaryBrand} Dealer` : `Your Trusted Two-Wheeler Partner in ${location}`}
+                        {brands.length > 0
+                            ? `Authorised ${brands.slice(0, 2).join(' & ')} Dealer`
+                            : `Your Trusted Two-Wheeler Partner in ${location}`}
                     </p>
                 </div>
 
-                <div className="grid gap-4 mb-10 sm:grid-cols-2">
-                    <a
-                        href="/two-wheelers/new"
-                        className="group flex flex-col gap-4 p-6 rounded-2xl border-2 border-green-500/30 bg-green-500/5 hover:scale-[1.02] transition-all duration-200"
-                    >
-                        <div className="flex items-center gap-3">
-                            <span className="text-3xl">✨</span>
-                            <div>
-                                <p className="text-white font-bold text-base">New Bikes & Scooters</p>
-                                <p className="text-green-400 text-xs mt-0.5">Latest models · Factory fresh</p>
-                            </div>
-                        </div>
-                        <span className="text-xs font-semibold text-green-400 group-hover:underline">
-                            Explore New Two-Wheelers →
-                        </span>
-                    </a>
-                    <a
-                        href="/two-wheelers/used"
-                        className="group flex flex-col gap-4 p-6 rounded-2xl border-2 border-amber-500/30 bg-amber-500/5 hover:scale-[1.02] transition-all duration-200"
-                    >
-                        <div className="flex items-center gap-3">
-                            <span className="text-3xl">🛡️</span>
-                            <div>
-                                <p className="text-white font-bold text-base">Pre-Owned Bikes & Scooters</p>
-                                <p className="text-amber-400 text-xs mt-0.5">Certified used · Best prices</p>
-                            </div>
-                        </div>
-                        <span className="text-xs font-semibold text-amber-400 group-hover:underline">
-                            Explore Used Two-Wheelers →
-                        </span>
-                    </a>
+                <div className={`grid gap-4 mb-10 ${siteCards.length === 2 ? 'sm:grid-cols-2' : 'sm:grid-cols-2 lg:grid-cols-3'}`}>
+                    {siteCards.map((card, i) => {
+                        const c = colorMap[card.color] ?? colorMap.green
+                        return (
+                            <a
+                                key={i}
+                                href={card.href}
+                                className={`group flex flex-col gap-4 p-6 rounded-2xl border-2 ${c.border} ${c.bg} hover:scale-[1.02] transition-all duration-200`}
+                            >
+                                <div className="flex items-center gap-3">
+                                    <span className="text-3xl">{card.emoji}</span>
+                                    <div>
+                                        <p className="text-white font-bold text-base">{card.label}</p>
+                                        <p className={`text-xs mt-0.5 ${c.text}`}>{card.sublabel}</p>
+                                    </div>
+                                </div>
+                                <span className={`text-xs font-semibold ${c.text} group-hover:underline`}>
+                                    Explore {card.label} →
+                                </span>
+                            </a>
+                        )
+                    })}
                 </div>
 
                 <div className="bg-white/5 border border-white/10 rounded-2xl p-6 text-center">
@@ -346,8 +376,9 @@ export default async function TwoWheelersPage({ params }: Props) {
     const hasUsed = usedCars.length > 0
     const isHybrid = hasNew && hasUsed
 
-    // ── Hybrid dealers → show portal so user picks new vs used ────────────────
-    if (isHybrid) {
+    // ── Multi-brand new-only OR hybrid → show portal so user picks section ──
+    const isMultiBrandNewOnly = hasNew && !hasUsed && brandsToShow.length > 1
+    if (isHybrid || isMultiBrandNewOnly) {
         return (
             <TwoWheelerPortal
                 dealerName={dealer.dealership_name}
@@ -355,7 +386,8 @@ export default async function TwoWheelersPage({ params }: Props) {
                 phone={dealer.phone}
                 email={dealer.email ?? ''}
                 slug={dealer.slug}
-                primaryBrand={primaryBrand}
+                brands={brandsToShow}
+                isHybrid={isHybrid}
             />
         )
     }
@@ -547,28 +579,6 @@ export default async function TwoWheelersPage({ params }: Props) {
     const jsonLd = (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
     )
-
-    // Multi-brand new dealers → TwoWheelerTemplate with per-brand sections
-    if (hasNew && brandsToShow.length > 1) {
-        return (
-            <>
-                {jsonLd}
-                <TwoWheelerTemplate
-                    dealerId={dealer.id}
-                    dealerName={dealer.dealership_name}
-                    phone={dealer.phone}
-                    email={dealer.email ?? ''}
-                    location={dealer.location}
-                    fullAddress={dealer.full_address ?? null}
-                    primaryBrand={primaryBrand}
-                    logoUrl={brandLogoUrl ?? null}
-                    vehicles={vehicles}
-                    brands={brandsToShow}
-                    slug={dealer.slug}
-                />
-            </>
-        )
-    }
 
     switch (dealer.style_template) {
         case 'luxury':
