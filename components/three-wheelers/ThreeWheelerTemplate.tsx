@@ -214,9 +214,9 @@ export function ThreeWheelerTemplate({
             {/* ── Sticky Navbar ─────────────────────────────────────────────── */}
             <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-white/95 backdrop-blur-lg shadow-sm" : "bg-transparent"}`}>
                 <div className="max-w-7xl mx-auto px-4 py-3">
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between gap-4">
                         {/* Logo + Name */}
-                        <button onClick={() => setActiveTab("home")} className="flex items-center gap-3">
+                        <button onClick={() => setActiveTab("home")} className="flex min-w-0 shrink-0 items-center gap-3">
                             {resolvedLogo ? (
                                 <div className="relative w-10 h-10 shrink-0 rounded-lg overflow-hidden bg-white/10">
                                     <Image src={resolvedLogo} alt={primaryBrand ?? dealerName} fill className="object-contain p-0.5" sizes="40px"
@@ -230,13 +230,13 @@ export function ThreeWheelerTemplate({
                                     {primaryBrand.slice(0, 2).toUpperCase()}
                                 </div>
                             ) : null}
-                            <span className={`text-lg font-semibold tracking-wide ${isScrolled ? "text-gray-900" : "text-white"}`}>
+                            <span className={`max-w-[170px] text-base font-semibold leading-tight tracking-wide xl:max-w-none xl:text-lg ${isScrolled ? "text-gray-900" : "text-white"}`}>
                                 {dealerName}
                             </span>
                         </button>
 
                         {/* Desktop nav */}
-                        <div className="hidden md:flex items-center gap-6">
+                        <div className="hidden xl:flex flex-1 items-center justify-center gap-4 px-4 2xl:gap-6">
                             {[
                                 { label: "Home",      tab: "home" as const },
                                 { label: "Inventory", tab: "inventory" as const },
@@ -244,7 +244,7 @@ export function ThreeWheelerTemplate({
                                 <button
                                     key={tab}
                                     onClick={() => setActiveTab(tab)}
-                                    className={`text-sm font-medium transition-colors ${isScrolled ? "text-gray-600 hover:text-gray-900" : "text-white/80 hover:text-white"}`}
+                                    className={`whitespace-nowrap text-sm font-medium transition-colors ${isScrolled ? "text-gray-600 hover:text-gray-900" : "text-white/80 hover:text-white"}`}
                                     style={activeTab === tab ? { color: accent } : {}}
                                 >
                                     {label}
@@ -252,18 +252,18 @@ export function ThreeWheelerTemplate({
                             ))}
                             <a
                                 href="#contact"
-                                className={`text-sm font-medium transition-colors ${isScrolled ? "text-gray-600 hover:text-gray-900" : "text-white/80 hover:text-white"}`}
+                                className={`whitespace-nowrap text-sm font-medium transition-colors ${isScrolled ? "text-gray-600 hover:text-gray-900" : "text-white/80 hover:text-white"}`}
                             >
                                 Contact
                             </a>
                         </div>
 
                         {/* Actions */}
-                        <div className="flex items-center gap-2">
+                        <div className="flex shrink-0 items-center gap-2">
                             <Button
                                 variant="outline"
                                 size="sm"
-                                className={`hidden sm:flex ${isScrolled ? "border-gray-300 text-gray-900 hover:bg-gray-100" : "border-white/40 text-white bg-white/10 hover:bg-white/20"}`}
+                                className={`hidden whitespace-nowrap lg:flex ${isScrolled ? "border-gray-300 text-gray-900 hover:bg-gray-100" : "border-white/40 text-white bg-white/10 hover:bg-white/20"}`}
                                 onClick={() => { setActiveTab("home"); document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" }) }}
                             >
                                 <MessageSquare className="w-4 h-4 mr-1.5" />
@@ -271,7 +271,7 @@ export function ThreeWheelerTemplate({
                             </Button>
                             <Button
                                 size="sm"
-                                className="text-white"
+                                className="whitespace-nowrap text-white"
                                 style={{ backgroundColor: accent }}
                                 asChild
                             >
@@ -281,7 +281,7 @@ export function ThreeWheelerTemplate({
                                 </a>
                             </Button>
                             <button
-                                className={`md:hidden p-2 rounded-lg transition-colors ${isScrolled ? "text-gray-900 hover:bg-gray-100" : "text-white hover:bg-white/10"}`}
+                                className={`xl:hidden p-2 rounded-lg transition-colors ${isScrolled ? "text-gray-900 hover:bg-gray-100" : "text-white hover:bg-white/10"}`}
                                 onClick={() => setMobileMenuOpen(o => !o)}
                                 aria-label="Toggle menu"
                             >
@@ -292,7 +292,7 @@ export function ThreeWheelerTemplate({
 
                     {/* Mobile menu */}
                     {mobileMenuOpen && (
-                        <div className="md:hidden mt-3 border-t border-white/20 pt-3 space-y-1">
+                        <div className="xl:hidden mt-3 border-t border-white/20 pt-3 space-y-1">
                             {[
                                 { label: "Home",      action: () => { setActiveTab("home");      setMobileMenuOpen(false) } },
                                 { label: "Inventory", action: () => { setActiveTab("inventory"); setMobileMenuOpen(false) } },
