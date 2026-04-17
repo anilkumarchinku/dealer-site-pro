@@ -12,15 +12,17 @@ function SpecSection({ title, rows }: { title: string; rows: SpecRow[] }) {
     const visibleRows = rows.filter(r => r.value != null && r.value !== "")
     if (visibleRows.length === 0) return null
     return (
-        <>
+        <div>
             <h3 className="text-base font-semibold text-foreground mb-3 mt-6">{title}</h3>
-            {visibleRows.map(row => (
-                <div key={row.label} className="flex justify-between py-2.5 border-b border-border/50 text-sm">
-                    <span className="text-muted-foreground">{row.label}</span>
-                    <span className="font-medium text-right">{row.value}</span>
-                </div>
-            ))}
-        </>
+            <div className="rounded-2xl border border-border bg-card p-5 shadow-sm">
+                {visibleRows.map((row, index) => (
+                    <div key={row.label} className={`flex justify-between gap-4 py-2.5 text-sm ${index !== visibleRows.length - 1 ? "border-b border-border/60" : ""}`}>
+                        <span className="text-muted-foreground">{row.label}</span>
+                        <span className="font-medium text-right">{row.value}</span>
+                    </div>
+                ))}
+            </div>
+        </div>
     )
 }
 
@@ -67,17 +69,19 @@ export function FullSpecsSection({ vehicle }: Props) {
             <SpecSection title="Cargo & Capacity" rows={cargoRows} />
             <SpecSection title="Regulatory" rows={regulatoryRows} />
             {vehicle.all_variants && vehicle.all_variants.length > 1 && (
-                <>
+                <div>
                     <h3 className="text-base font-semibold text-foreground mb-3 mt-6">Variants</h3>
-                    {vehicle.all_variants.map(variant => (
-                        <div key={variant.name} className="flex justify-between py-2.5 border-b border-border/50 text-sm">
-                            <span className="text-muted-foreground">{variant.name}</span>
-                            <span className="font-medium text-right">
-                                ₹{(variant.price_paise / 100).toLocaleString("en-IN")}
-                            </span>
-                        </div>
-                    ))}
-                </>
+                    <div className="rounded-2xl border border-border bg-card p-5 shadow-sm">
+                        {vehicle.all_variants.map((variant, index) => (
+                            <div key={variant.name} className={`flex justify-between gap-4 py-2.5 text-sm ${index !== vehicle.all_variants!.length - 1 ? "border-b border-border/60" : ""}`}>
+                                <span className="text-muted-foreground">{variant.name}</span>
+                                <span className="font-medium text-right">
+                                    ₹{(variant.price_paise / 100).toLocaleString("en-IN")}
+                                </span>
+                            </div>
+                        ))}
+                    </div>
+                </div>
             )}
         </section>
     )

@@ -13,11 +13,11 @@ const Card = forwardRef<HTMLDivElement, CardProps>(
     ({ className, variant = "default", children, ...props }, ref) => {
         const variants = {
             // shadcn/ui style - Clean, professional with subtle shadow
-            default: "bg-white border border-gray-200 shadow-sm dark:bg-gray-900 dark:border-gray-700",
+            default: "bg-card text-card-foreground border border-border shadow-sm",
             // Glassmorphism - For dark template selector
             glass: "glass",
             // Outline only
-            outline: "border-2 border-gray-200 bg-transparent dark:border-gray-700",
+            outline: "border-2 border-border bg-transparent text-card-foreground",
         };
 
         return (
@@ -47,14 +47,14 @@ CardHeader.displayName = "CardHeader";
 
 const CardTitle = forwardRef<HTMLHeadingElement, HTMLAttributes<HTMLHeadingElement>>(
     ({ className, ...props }, ref) => (
-        <h3 ref={ref} className={cn("text-2xl font-semibold leading-none tracking-tight text-gray-900 dark:text-gray-100", className)} {...props} />
+        <h3 ref={ref} className={cn("text-2xl font-semibold leading-none tracking-tight text-card-foreground", className)} {...props} />
     )
 );
 CardTitle.displayName = "CardTitle";
 
 const CardDescription = forwardRef<HTMLParagraphElement, HTMLAttributes<HTMLParagraphElement>>(
     ({ className, ...props }, ref) => (
-        <p ref={ref} className={cn("text-sm text-gray-500 dark:text-gray-400", className)} {...props} />
+        <p ref={ref} className={cn("text-sm text-muted-foreground", className)} {...props} />
     )
 );
 CardDescription.displayName = "CardDescription";
@@ -68,7 +68,7 @@ CardContent.displayName = "CardContent";
 
 const CardFooter = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
     ({ className, ...props }, ref) => (
-        <div ref={ref} className={cn("mt-6 flex items-center pt-6 border-t border-gray-200 dark:border-gray-700", className)} {...props} />
+        <div ref={ref} className={cn("mt-6 flex items-center pt-6 border-t border-border", className)} {...props} />
     )
 );
 CardFooter.displayName = "CardFooter";

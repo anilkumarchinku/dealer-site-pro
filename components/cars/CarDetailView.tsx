@@ -256,12 +256,14 @@ export function CarDetailView({ car, similarCars = [], siteSlug }: CarDetailView
         ? `${inventoryHref}?make=${encodeURIComponent(car.make)}`
         : `/cars?make=${encodeURIComponent(car.make)}`;
     const detailBasePath = siteSlug ? sitePrefix : undefined;
-    const lightCardClass = 'bg-white border border-slate-200 shadow-[0_12px_30px_rgba(15,23,42,0.06)]';
-    const softCardClass = 'bg-slate-50 border border-slate-200 shadow-none';
+    const lightCardClass = 'bg-white border border-slate-200 text-slate-900 shadow-[0_12px_30px_rgba(15,23,42,0.06)] dark:!bg-white dark:!border-slate-200 dark:!text-slate-900';
+    const softCardClass = 'bg-slate-50 border border-slate-200 text-slate-900 shadow-none dark:!bg-slate-50 dark:!border-slate-200 dark:!text-slate-900';
     const lightTableRowHoverClass = 'hover:bg-slate-50';
+    const lightOutlineButtonClass = 'border-slate-200 bg-white text-slate-900 hover:bg-slate-50 dark:!border-slate-200 dark:!bg-white dark:!text-slate-900 dark:hover:!bg-slate-50';
+    const lightGhostButtonClass = 'text-slate-600 hover:bg-slate-100 hover:text-slate-900 dark:!text-slate-600 dark:hover:!bg-slate-100 dark:hover:!text-slate-900';
 
     return (
-        <div className="bg-white min-h-screen">
+        <div className="min-h-screen bg-white text-slate-900 [color-scheme:light] dark:!bg-white dark:!text-slate-900">
             {/* ── Breadcrumb ── */}
             <div className="bg-gray-100/30 border-b">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
@@ -386,16 +388,16 @@ export function CarDetailView({ car, similarCars = [], siteSlug }: CarDetailView
                                         Check On-Road Price
                                     </Button>
                                     <div className="grid grid-cols-2 gap-2">
-                                        <Button variant="outline" size="sm">
+                                        <Button variant="outline" size="sm" className={lightOutlineButtonClass}>
                                             <Calendar className="w-3.5 h-3.5 mr-1.5" />
                                             Test Drive
                                         </Button>
-                                        <Button variant="outline" size="sm">
+                                        <Button variant="outline" size="sm" className={lightOutlineButtonClass}>
                                             <Download className="w-3.5 h-3.5 mr-1.5" />
                                             Brochure
                                         </Button>
                                     </div>
-                                    <Button variant="ghost" size="sm" className="w-full text-gray-500">
+                                    <Button variant="ghost" size="sm" className={`w-full ${lightGhostButtonClass}`}>
                                         <Share2 className="w-3.5 h-3.5 mr-1.5" />
                                         Share
                                     </Button>
@@ -877,7 +879,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug }: CarDetailView
                                             <TableCell>{variant.fuelType}</TableCell>
                                             <TableCell>{variant.transmission}</TableCell>
                                             <TableCell className="text-right">
-                                                <Button variant="outline" size="sm">
+                                                <Button variant="outline" size="sm" className={lightOutlineButtonClass}>
                                                     Get Price
                                                 </Button>
                                             </TableCell>
@@ -1133,7 +1135,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug }: CarDetailView
                         <Card className={`${lightCardClass} p-8 text-center`}>
                             <MessageSquare className="w-10 h-10 text-gray-500 mx-auto mb-3" />
                             <p className="text-gray-500">No reviews available yet. Be the first to review!</p>
-                            <Button variant="outline" className="mt-4">Write a Review</Button>
+                            <Button variant="outline" className={`mt-4 ${lightOutlineButtonClass}`}>Write a Review</Button>
                         </Card>
                     )}
                 </section>

@@ -11,6 +11,7 @@ import {
     addTwoWheelerVehicle,
 } from '@/lib/db/two-wheelers'
 import type { TwoWheelerFilters } from '@/lib/types/two-wheeler'
+import { hydrateTwoWheelerWithJson } from '@/lib/data/two-wheeler-detail'
 
 // ── GET (public) ───────────────────────────────────────────────
 
@@ -34,7 +35,10 @@ export async function GET(request: NextRequest) {
     }
 
     const result = await getTwoWheelerVehicles(dealerId, filters)
-    return NextResponse.json(result)
+    return NextResponse.json({
+        ...result,
+        vehicles: result.vehicles.map(hydrateTwoWheelerWithJson),
+    })
 }
 
 // ── POST (dealer, authenticated) ──────────────────────────────

@@ -1,7 +1,9 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import Link from "next/link"
 import type { ThreeWheelerVehicle } from "@/lib/types/three-wheeler"
+import { useSitePrefix } from "@/lib/hooks/useSitePrefix"
 
 interface Props {
     currentId:   string
@@ -12,6 +14,7 @@ interface Props {
 
 export function SimilarVehicles({ currentId, dealerId, vehicleType, slug }: Props) {
     const [vehicles, setVehicles] = useState<ThreeWheelerVehicle[]>([])
+    const prefix = useSitePrefix(slug)
 
     useEffect(() => {
         if (!dealerId || !vehicleType) return
@@ -31,9 +34,9 @@ export function SimilarVehicles({ currentId, dealerId, vehicleType, slug }: Prop
             <h2 className="text-xl font-bold mb-4">Similar Vehicles</h2>
             <div className="flex gap-4 overflow-x-auto pb-2">
                 {vehicles.map(v => (
-                    <a
+                    <Link
                         key={v.id}
-                        href={`/sites/${slug}/three-wheelers/${v.id}`}
+                        href={`${prefix}/three-wheelers/${v.id}`}
                         className="shrink-0 w-44 rounded-xl border border-border bg-card p-3 hover:shadow-md transition-shadow"
                     >
                         <img
@@ -47,7 +50,7 @@ export function SimilarVehicles({ currentId, dealerId, vehicleType, slug }: Prop
                                 ? `₹${(v.ex_showroom_price_paise / 100).toLocaleString("en-IN")}`
                                 : "Price on request"}
                         </p>
-                    </a>
+                    </Link>
                 ))}
             </div>
         </section>

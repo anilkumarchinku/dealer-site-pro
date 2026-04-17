@@ -11,9 +11,9 @@ function SpecTable({ rows }: { rows: SpecRow[] }) {
     const visible = rows.filter(r => r.value != null && r.value !== "")
     if (visible.length === 0) return null
     return (
-        <div>
+        <div className="rounded-2xl border border-border bg-card p-5 shadow-sm">
             {visible.map((r, i) => (
-                <div key={i} className="flex justify-between py-2.5 border-b border-border/50 text-sm">
+                <div key={i} className={`flex justify-between gap-4 py-2.5 text-sm ${i !== visible.length - 1 ? "border-b border-border/60" : ""}`}>
                     <span className="text-muted-foreground">{r.label}</span>
                     <span className="font-medium text-right">{r.value}</span>
                 </div>
@@ -94,7 +94,7 @@ export function FullSpecsSection({ vehicle }: Props) {
                 {hasVariants && (
                     <div>
                         <h3 className="text-base font-semibold text-foreground mb-3">Variants</h3>
-                        <div className="overflow-x-auto">
+                        <div className="overflow-x-auto rounded-2xl border border-border bg-card p-5 shadow-sm">
                             <table className="w-full text-sm">
                                 <thead>
                                     <tr className="border-b border-border">
@@ -104,7 +104,7 @@ export function FullSpecsSection({ vehicle }: Props) {
                                 </thead>
                                 <tbody>
                                     {vehicle.all_variants!.map((v, i) => (
-                                        <tr key={i} className="border-b border-border/50">
+                                        <tr key={i} className="border-b border-border/50 last:border-b-0">
                                             <td className="py-2.5 text-muted-foreground">{v.name}</td>
                                             <td className="py-2.5 font-medium text-right">
                                                 ₹{(v.price_paise / 100).toLocaleString("en-IN")}
