@@ -8,6 +8,7 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import type { Car } from '@/lib/types/car';
 import { formatPriceInLakhs } from '@/lib/utils/car-utils';
@@ -19,9 +20,7 @@ import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
 
 import { EnquiryModal } from './EnquiryModal';
-import { QuickViewModal } from './QuickViewModal';
 import { TestDriveModal } from './TestDriveModal';
-import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
 import { WishlistButton } from '@/components/ui/WishlistButton';
 import {
     Fuel,
@@ -92,6 +91,8 @@ interface CarCardProps {
     brandColor?: string;
     /** Light card styling for templates with a white/light background */
     light?: boolean;
+    /** Base path for detail pages, e.g. "/sites/demo-dealer" or "" on custom domains */
+    detailBasePath?: string;
     /** Dealer phone — enables per-car WhatsApp button */
     dealerPhone?: string;
     /** Dealer ID — enables test drive booking */
@@ -106,11 +107,12 @@ export function CarCard({
     className,
     brandColor = '#2563eb',
     light,
+    detailBasePath,
     dealerPhone,
     dealerId,
 }: CarCardProps) {
+    const router = useRouter();
     const [isEnquiryModalOpen, setIsEnquiryModalOpen] = useState(false);
-    const [isQuickViewOpen, setIsQuickViewOpen] = useState(false);
     const [isTestDriveOpen, setIsTestDriveOpen] = useState(false);
     const [imgError, setImgError] = useState(false);
     const [scrapedIdx, setScrapedIdx] = useState(0);
@@ -193,14 +195,21 @@ export function CarCard({
             ? { icon: <Zap className="w-3.5 h-3.5 text-amber-600" />, label: 'Range', value: car.performance?.range ? `${car.performance.range} km` : '' }
             : { icon: <Zap className="w-3.5 h-3.5 text-amber-600" />, label: 'Mileage', value: mileageDisplay };
 
-    const handleEnquireNow = () => setIsEnquiryModalOpen(true);
+    const detailHref = detailBasePath !== undefined
+        ? `${detailBasePath.replace(/\/$/, '')}/${car.id}`.replace(/^\/\//, '/')
+        : `/cars/${car.id}`;
 
-    const handleQuickView = (e: React.MouseEvent) => {
-        e.stopPropagation();
-        setIsQuickViewOpen(true);
+    const handleEnquireNow = () => setIsEnquiryModalOpen(true);
+    const handleViewDetails = (e?: React.MouseEvent) => {
+        e?.stopPropagation();
+        if (onViewDetails) {
+            onViewDetails(car.id);
+            return;
+        }
+        router.push(detailHref);
     };
 
-    // Resolved image passed to QuickViewModal — same source as what card renders.
+    // Resolved image reused by detail-oriented actions and the enquiry modal.
     const imageCategory = car.vehicleCategory as '2w' | '3w' | '4w';
     const cardImageUrls = getVehicleImageUrls(
         imageCategory,
@@ -223,7 +232,7 @@ export function CarCard({
                     'rounded-2xl',
                     className
                 )}
-                onClick={handleEnquireNow}
+                onClick={handleViewDetails}
             >
                 {/* ── Image ── */}
                 <div className="relative aspect-[16/10] overflow-hidden bg-white">
@@ -293,11 +302,11 @@ export function CarCard({
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
                         <button
-                            onClick={handleQuickView}
+                            onClick={handleViewDetails}
                             className="flex items-center gap-1.5 bg-white/95 text-gray-900 backdrop-blur-sm text-xs font-semibold px-4 py-2 rounded-full shadow-md hover:bg-white hover:shadow-lg transition-all scale-95 group-hover:scale-100"
                         >
                             <Eye className="w-3.5 h-3.5" />
-                            Quick View
+                            View Details
                         </button>
                     </div>
                 </div>
@@ -379,7 +388,7 @@ export function CarCard({
                         </div>
                     )}
 
-                    {/* CTA row — Enquire + Test Drive + Quick View */}
+                    {/* CTA row — Enquire + Test Drive + View Details */}
                     <div className="flex gap-2 mt-auto pt-2">
                         <Button
                             className="flex-1 h-11 rounded-xl text-sm font-semibold shadow-sm"
@@ -408,8 +417,8 @@ export function CarCard({
                             variant="outline"
                             className="shrink-0 gap-1 text-xs h-11 px-3 rounded-xl font-medium bg-white dark:bg-white hover:bg-gray-50 dark:hover:bg-gray-50"
                             style={{ borderColor: brandColor, color: brandColor }}
-                            onClick={(e) => { e.stopPropagation(); setIsQuickViewOpen(true); }}
-                            title="Quick View"
+                            onClick={handleViewDetails}
+                            title="View Details"
                         >
                             <Info className="w-3.5 h-3.5" />
                         </Button>
@@ -436,14 +445,6 @@ export function CarCard({
             </Card>
 
             {/* Modals */}
-            <QuickViewModal
-                car={car}
-                open={isQuickViewOpen}
-                onOpenChange={setIsQuickViewOpen}
-                onEnquireNow={handleEnquireNow}
-                brandColor={brandColor}
-                resolvedImageSrc={cardDisplayUrl}
-            />
             <EnquiryModal
                 car={car}
                 open={isEnquiryModalOpen}

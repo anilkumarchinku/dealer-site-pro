@@ -506,7 +506,7 @@ export function ModernTemplate({
                                     </Button>
                                 )}
                             </div>
-                            <CarGrid cars={featuredCars} brandColor={brandColors.primary} light dealerPhone={contactInfo.phone} dealerId={dealerId} />
+                            <CarGrid cars={featuredCars} brandColor={brandColors.primary} light detailBasePath={siteBase} dealerPhone={contactInfo.phone} dealerId={dealerId} />
                         </div>
                     </section>
 
@@ -775,6 +775,7 @@ export function ModernTemplate({
                                                 : cars : cars}
                                     brandColor={brandColors.primary}
                                     light
+                                    detailBasePath={siteBase}
                                     dealerPhone={contactInfo.phone}
                                     dealerId={dealerId}
                                 />

@@ -32,6 +32,7 @@ import {
 import { Slider } from '@/components/ui/slider';
 import { CarCard } from './CarCard';
 import { getBrandLogo } from '@/lib/data/brand-logos';
+import { useSitePrefix } from '@/lib/hooks/useSitePrefix';
 import {
     ChevronRight,
     Download,
@@ -73,6 +74,7 @@ import {
 interface CarDetailViewProps {
     car: Car;
     similarCars?: Car[];
+    siteSlug?: string;
 }
 
 const NEW_CAR_TABS = [
@@ -155,7 +157,8 @@ const INSPECTION_CATEGORIES = [
     },
 ];
 
-export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
+export function CarDetailView({ car, similarCars = [], siteSlug }: CarDetailViewProps) {
+    const sitePrefix = useSitePrefix(siteSlug ?? '');
     const isUsed = car.condition === 'used' || car.condition === 'certified_pre_owned';
     const isCPO = car.condition === 'certified_pre_owned';
     const TABS = isUsed ? USED_CAR_TABS : NEW_CAR_TABS;
@@ -248,6 +251,11 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
         };
     };
     const emiResult = calcEmi();
+    const inventoryHref = siteSlug ? (sitePrefix || '/') : '/cars';
+    const makeHref = siteSlug
+        ? `${inventoryHref}?make=${encodeURIComponent(car.make)}`
+        : `/cars?make=${encodeURIComponent(car.make)}`;
+    const detailBasePath = siteSlug ? sitePrefix : undefined;
 
     return (
         <div className="bg-white min-h-screen">
@@ -255,11 +263,11 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
             <div className="bg-gray-100/30 border-b">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
                     <nav className="flex items-center gap-1.5 text-sm text-gray-500">
-                        <Link href="/" className="hover:text-gray-900 transition-colors">Home</Link>
+                        <Link href={inventoryHref} className="hover:text-gray-900 transition-colors">Home</Link>
                         <ChevronRight className="w-3.5 h-3.5" />
-                        <Link href="/cars" className="hover:text-gray-900 transition-colors">Cars</Link>
+                        <Link href={inventoryHref} className="hover:text-gray-900 transition-colors">Cars</Link>
                         <ChevronRight className="w-3.5 h-3.5" />
-                        <Link href={`/cars?make=${car.make}`} className="hover:text-gray-900 transition-colors">{car.make}</Link>
+                        <Link href={makeHref} className="hover:text-gray-900 transition-colors">{car.make}</Link>
                         <ChevronRight className="w-3.5 h-3.5" />
                         <span className="text-gray-900 font-medium">{car.model}</span>
                     </nav>
@@ -1209,13 +1217,13 @@ export function CarDetailView({ car, similarCars = [] }: CarDetailViewProps) {
                     <section>
                         <div className="flex items-center justify-between mb-6">
                             <h2 className="text-2xl font-bold">Similar Cars</h2>
-                            <Link href="/cars" className="text-sm text-blue-600 hover:underline">
+                            <Link href={inventoryHref} className="text-sm text-blue-600 hover:underline">
                                 View All Cars
                             </Link>
                         </div>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                             {similarCars.slice(0, 4).map((simCar) => (
-                                <CarCard key={simCar.id} car={simCar} light />
+                                <CarCard key={simCar.id} car={simCar} light detailBasePath={detailBasePath} />
                             ))}
                         </div>
                     </section>

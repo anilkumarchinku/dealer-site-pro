@@ -20,6 +20,8 @@ interface CarGridProps {
     brandColor?: string;
     /** Use white/light card styling (for light-background templates like Modern/Family) */
     light?: boolean;
+    /** Base path for dealer-scoped detail pages, e.g. "/sites/demo-dealer" or "" on custom domains */
+    detailBasePath?: string;
     /** Dealer phone number — enables per-car WhatsApp button */
     dealerPhone?: string;
     /** Dealer ID — enables test drive booking modal */
@@ -36,6 +38,7 @@ export function CarGrid({
     emptyMessage = 'No cars found matching your criteria.',
     brandColor,
     light,
+    detailBasePath,
     dealerPhone,
     dealerId,
 }: CarGridProps) {
@@ -66,6 +69,7 @@ export function CarGrid({
                     onCompare={onCompare}
                     brandColor={brandColor}
                     light={light}
+                    detailBasePath={detailBasePath}
                     dealerPhone={dealerPhone}
                     dealerId={dealerId}
                 />

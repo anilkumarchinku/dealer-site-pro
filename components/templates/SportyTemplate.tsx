@@ -422,7 +422,7 @@ export function SportyTemplate({
                                     </Button>
                                 )}
                             </div>
-                            <CarGrid cars={featuredCars} brandColor={brandAccent} light dealerPhone={contactInfo.phone} dealerId={dealerId} />
+                            <CarGrid cars={featuredCars} brandColor={brandAccent} light detailBasePath={siteBase} dealerPhone={contactInfo.phone} dealerId={dealerId} />
                         </div>
                     </section>
 
@@ -653,6 +653,7 @@ export function SportyTemplate({
                                                 : cars : cars}
                                     brandColor={brandAccent}
                                     light
+                                    detailBasePath={siteBase}
                                     dealerPhone={contactInfo.phone}
                                     dealerId={dealerId}
                                 />
