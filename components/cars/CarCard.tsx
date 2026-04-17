@@ -392,12 +392,12 @@ export function CarCard({
                             <Button
                                 size="sm"
                                 variant="outline"
-                                className="shrink-0 gap-1.5 text-xs h-8 px-2.5 font-semibold bg-white text-gray-700"
-                                style={{ borderColor: brandColor }}
+                                className="shrink-0 gap-1.5 text-xs h-8 px-2.5 font-semibold bg-white"
+                                style={{ borderColor: brandColor, color: brandColor }}
                                 onClick={(e) => { e.stopPropagation(); setIsTestDriveOpen(true); }}
                                 title="Book Test Drive"
                             >
-                                <Calendar className="w-3.5 h-3.5" style={{ color: brandColor }} />
+                                <Calendar className="w-3.5 h-3.5" />
                                 <span className="hidden sm:inline">Test Drive</span>
                             </Button>
                         )}
