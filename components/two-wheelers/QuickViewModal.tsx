@@ -99,7 +99,7 @@ export function QuickViewModal({ vehicle, open, onClose, brandColor = "#1f2937",
                                 {vehicle.brand}
                             </p>
                             <h3 className="text-lg font-bold text-gray-900">{vehicle.model}</h3>
-                            {vehicle.variant && <p className="text-xs text-gray-500">{vehicle.variant}</p>}
+                            {vehicle.variant && <p className="text-xs text-gray-600">{vehicle.variant}</p>}
                         </div>
                         <div className="text-right">
                             <p className="text-lg font-bold text-gray-900">{price}</p>
@@ -139,37 +139,37 @@ export function QuickViewModal({ vehicle, open, onClose, brandColor = "#1f2937",
                             <div className="grid grid-cols-2 gap-2">
                                 {vehicle.engine_cc && (
                                     <div className="bg-gray-50 rounded-lg p-3">
-                                        <p className="text-[10px] text-gray-500">Engine</p>
+                                        <p className="text-[10px] text-gray-600">Engine</p>
                                         <p className="text-sm font-semibold">{vehicle.engine_cc} cc</p>
                                     </div>
                                 )}
                                 {vehicle.mileage_kmpl && (
                                     <div className="bg-gray-50 rounded-lg p-3">
-                                        <p className="text-[10px] text-gray-500">Mileage</p>
+                                        <p className="text-[10px] text-gray-600">Mileage</p>
                                         <p className="text-sm font-semibold">{vehicle.mileage_kmpl} kmpl</p>
                                     </div>
                                 )}
                                 {isEV && vehicle.range_km && (
                                     <div className="bg-gray-50 rounded-lg p-3">
-                                        <p className="text-[10px] text-gray-500">Range</p>
+                                        <p className="text-[10px] text-gray-600">Range</p>
                                         <p className="text-sm font-semibold">{vehicle.range_km} km</p>
                                     </div>
                                 )}
                                 {isEV && vehicle.battery_kwh && (
                                     <div className="bg-gray-50 rounded-lg p-3">
-                                        <p className="text-[10px] text-gray-500">Battery</p>
+                                        <p className="text-[10px] text-gray-600">Battery</p>
                                         <p className="text-sm font-semibold">{vehicle.battery_kwh} kWh</p>
                                     </div>
                                 )}
                                 {vehicle.top_speed_kmph && (
                                     <div className="bg-gray-50 rounded-lg p-3">
-                                        <p className="text-[10px] text-gray-500">Top Speed</p>
+                                        <p className="text-[10px] text-gray-600">Top Speed</p>
                                         <p className="text-sm font-semibold">{vehicle.top_speed_kmph} kmph</p>
                                     </div>
                                 )}
                                 {isEV && vehicle.charging_time_hours && (
                                     <div className="bg-gray-50 rounded-lg p-3">
-                                        <p className="text-[10px] text-gray-500">Charging Time</p>
+                                        <p className="text-[10px] text-gray-600">Charging Time</p>
                                         <p className="text-sm font-semibold">{vehicle.charging_time_hours} hrs</p>
                                     </div>
                                 )}
@@ -192,7 +192,7 @@ export function QuickViewModal({ vehicle, open, onClose, brandColor = "#1f2937",
                                 { label: "Battery Warranty", value: vehicle.battery_warranty_years ? `${vehicle.battery_warranty_years} years` : null },
                             ].filter(s => s.value).map((s, i) => (
                                 <div key={i} className="flex justify-between items-center py-2 px-3 rounded-lg odd:bg-gray-50">
-                                    <span className="text-xs text-gray-500">{s.label}</span>
+                                    <span className="text-xs text-gray-600">{s.label}</span>
                                     <span className="text-xs font-semibold text-gray-900">{s.value}</span>
                                 </div>
                             ))}
@@ -216,7 +216,15 @@ export function QuickViewModal({ vehicle, open, onClose, brandColor = "#1f2937",
                                     ))}
                                 </div>
                             ) : (
-                                <p className="text-sm text-gray-400 text-center py-8">No color options available</p>
+                                <div className="flex flex-col items-center justify-center py-12 gap-3">
+                                    <div className="w-12 h-12 rounded-2xl bg-gray-50 border border-gray-100 flex items-center justify-center">
+                                        <Palette className="w-6 h-6 text-gray-300" />
+                                    </div>
+                                    <div className="text-center">
+                                        <p className="text-sm font-semibold text-gray-500">Color options not listed</p>
+                                        <p className="text-xs text-gray-400 mt-1">Visit the dealer to see available colors</p>
+                                    </div>
+                                </div>
                             )}
                         </div>
                     )}
@@ -240,28 +248,35 @@ export function QuickViewModal({ vehicle, open, onClose, brandColor = "#1f2937",
                                     ))}
                                 </div>
                             ) : (
-                                <p className="text-sm text-gray-400 text-center py-8">No features listed</p>
+                                <div className="flex flex-col items-center justify-center py-12 gap-3">
+                                    <div className="w-12 h-12 rounded-2xl bg-gray-50 border border-gray-100 flex items-center justify-center">
+                                        <Shield className="w-6 h-6 text-gray-300" />
+                                    </div>
+                                    <div className="text-center">
+                                        <p className="text-sm font-semibold text-gray-500">Features not listed</p>
+                                        <p className="text-xs text-gray-400 mt-1">Contact the dealer for full details</p>
+                                    </div>
+                                </div>
                             )}
                         </div>
                     )}
                 </div>
 
                 {/* Footer CTA */}
-                <div className="px-4 py-3 border-t border-gray-100 flex gap-2 shrink-0">
-                    <Button
-                        className="flex-1 text-white"
-                        style={{ backgroundColor: brandColor }}
-                        onClick={() => { onLead?.(vehicle.id); onClose() }}
-                    >
-                        Get Best Price
-                    </Button>
+                <div className="px-4 py-3.5 border-t border-gray-100 flex items-center gap-2.5 shrink-0">
                     <Button
                         variant="outline"
-                        className="flex-1"
-                        style={{ borderColor: brandColor, color: brandColor }}
+                        className="h-10 px-5 text-sm font-medium text-gray-600 border-gray-200"
                         onClick={onClose}
                     >
                         Close
+                    </Button>
+                    <Button
+                        className="flex-1 h-10 font-semibold text-sm shadow-sm"
+                        style={{ backgroundColor: brandColor, color: '#fff' }}
+                        onClick={() => { onLead?.(vehicle.id); onClose() }}
+                    >
+                        Get Best Price
                     </Button>
                 </div>
             </div>

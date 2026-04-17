@@ -287,8 +287,17 @@ export function CarCard({
                         </div>
                     )}
 
-                    {/* Hover overlay — gradient only, Quick View is in the action bar */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    {/* Hover overlay — gradient + Quick View button */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+                        <button
+                            onClick={handleQuickView}
+                            className="flex items-center gap-1.5 bg-white/95 backdrop-blur-sm text-gray-900 text-xs font-semibold px-4 py-2 rounded-full shadow-md hover:bg-white hover:shadow-lg transition-all scale-95 group-hover:scale-100"
+                        >
+                            <Eye className="w-3.5 h-3.5" />
+                            Quick View
+                        </button>
+                    </div>
                 </div>
 
                 {/* ── Content ── */}

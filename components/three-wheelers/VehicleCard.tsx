@@ -26,7 +26,7 @@ function SpecItem({ icon, label, value }: { icon: React.ReactNode; label: string
                 {icon}
             </div>
             <div className="min-w-0">
-                <p className="text-[10px] text-gray-500 leading-none">{label}</p>
+                <p className="text-[10px] text-gray-600 leading-none">{label}</p>
                 <p className="text-xs font-semibold text-gray-900 leading-tight truncate">{value}</p>
             </div>
         </div>
@@ -87,7 +87,7 @@ export function VehicleCard({ vehicle, slug, dealerId, brandColor = "#1f2937", o
                     <img
                         src={imgSrc}
                         alt={`${vehicle.brand} ${vehicle.model}`}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
                         onError={handleImgError}
                     />
                 ) : (
@@ -154,7 +154,7 @@ export function VehicleCard({ vehicle, slug, dealerId, brandColor = "#1f2937", o
                         {vehicle.model}
                     </h3>
                     {vehicle.variant && (
-                        <p className="text-[11px] text-gray-500 line-clamp-1 mt-0.5">{vehicle.variant}</p>
+                        <p className="text-[11px] text-gray-600 line-clamp-1 mt-0.5">{vehicle.variant}</p>
                     )}
                 </div>
 
@@ -163,7 +163,7 @@ export function VehicleCard({ vehicle, slug, dealerId, brandColor = "#1f2937", o
                     {price ? (
                         <>
                             <p className="text-lg font-bold text-gray-900">₹{price}</p>
-                            <p className="text-[10px] text-gray-500">Ex-showroom</p>
+                            <p className="text-[10px] text-gray-600">Ex-showroom</p>
                             {emi && (
                                 <p className="text-[10px] text-emerald-600 font-medium flex items-center gap-0.5 mt-0.5">
                                     <TrendingUp className="w-3 h-3" /> EMI from ₹{emi}/mo
@@ -197,7 +197,7 @@ export function VehicleCard({ vehicle, slug, dealerId, brandColor = "#1f2937", o
                             />
                         ))}
                         {vehicle.colors.length > 5 && (
-                            <span className="text-[10px] text-gray-400 ml-0.5">+{vehicle.colors.length - 5}</span>
+                            <span className="text-[10px] text-gray-600 ml-0.5">+{vehicle.colors.length - 5}</span>
                         )}
                     </div>
                 )}
@@ -229,12 +229,12 @@ export function VehicleCard({ vehicle, slug, dealerId, brandColor = "#1f2937", o
                 <div className="flex items-center gap-2 mt-2">
                     {onCompare && (
                         <button onClick={() => onCompare(vehicle)}
-                            className="flex items-center gap-1 text-[10px] text-gray-400 hover:text-gray-700 transition-colors">
+                            className="flex items-center gap-1 text-[10px] text-gray-500 hover:text-gray-800 transition-colors">
                             <GitCompare className="w-3 h-3" /> Compare
                         </button>
                     )}
                     <Link href={`${prefix}/three-wheelers/${vehicle.id}`}
-                        className="flex items-center gap-1 text-[10px] text-gray-400 hover:text-gray-700 transition-colors ml-auto"
+                        className="flex items-center gap-1 text-[10px] text-gray-500 hover:text-gray-800 transition-colors ml-auto"
                         onClick={e => e.stopPropagation()}>
                         <ChevronRight className="w-3 h-3" /> View Details
                     </Link>

@@ -283,14 +283,16 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
                                       <img
                                         src={mainImage}
                                         alt={`${car.make} ${car.model}`}
-                                        className="w-full h-full object-cover"
+                                        className={`w-full h-full ${(car.vehicleCategory === '2w' || car.vehicleCategory === '3w') ? 'object-contain p-4' : 'object-cover'}`}
                                         onError={() => {
                                             if (activeImage) { setActiveImage(null); }
                                             else if (imgIdx < fallbackList.length - 1) { setImgIdx(i => i + 1); }
                                         }}
                                       />
                                     : <div className="flex flex-col items-center justify-center gap-2 text-center">
-                                        <div className="text-6xl">🚗</div>
+                                        <div className="text-6xl">
+                                            {car.vehicleCategory === '2w' ? '🏍️' : car.vehicleCategory === '3w' ? '🛺' : '🚗'}
+                                        </div>
                                         <p className="text-sm text-gray-500">Image not available</p>
                                       </div>
                                 }
@@ -611,7 +613,15 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
                                     </>
                                 )}
                                 {!keyFeatures.length && !safetyFeat.length && !comfortFeat.length && !techFeat.length && !extFeat.length && (
-                                    <p className="text-center text-gray-400 text-sm py-10">No feature data available.</p>
+                                    <div className="flex flex-col items-center justify-center py-14 gap-3">
+                                        <div className="w-14 h-14 rounded-2xl bg-gray-50 border border-gray-100 flex items-center justify-center">
+                                            <BadgeCheck className="w-7 h-7 text-gray-300" />
+                                        </div>
+                                        <div className="text-center">
+                                            <p className="text-sm font-semibold text-gray-500">Feature details not listed</p>
+                                            <p className="text-xs text-gray-400 mt-1">Contact the dealer for full feature information</p>
+                                        </div>
+                                    </div>
                                 )}
                             </TabsContent>
 
@@ -639,11 +649,13 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
                                         </div>
                                     </div>
                                 ) : (
-                                    <div className="flex flex-col items-center justify-center py-14 gap-3 text-gray-300">
-                                        <Palette className="w-12 h-12" />
+                                    <div className="flex flex-col items-center justify-center py-14 gap-3">
+                                        <div className="w-14 h-14 rounded-2xl bg-gray-50 border border-gray-100 flex items-center justify-center">
+                                            <Palette className="w-7 h-7 text-gray-300" />
+                                        </div>
                                         <div className="text-center">
-                                            <p className="text-sm font-medium text-gray-400">No color data available</p>
-                                            <p className="text-xs text-gray-300 mt-0.5">Visit your nearest dealer for options</p>
+                                            <p className="text-sm font-semibold text-gray-500">Color options not listed</p>
+                                            <p className="text-xs text-gray-400 mt-1">Visit your nearest dealer to see available colors</p>
                                         </div>
                                     </div>
                                 )}
@@ -753,12 +765,21 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
                 </div>
 
                 {/* ══ STICKY FOOTER ═══════════════════════════════════════════ */}
-                <div className="shrink-0 border-t border-gray-200 bg-white px-5 py-3 flex gap-3">
-                    <Button variant="outline" className="flex-1 h-10 dark:bg-white dark:text-gray-900 dark:border-gray-300 dark:hover:bg-gray-50" onClick={() => onOpenChange(false)}>
+                <div className="shrink-0 border-t border-gray-100 bg-white px-5 py-3.5 flex items-center gap-2.5">
+                    <Button
+                        variant="outline"
+                        className="h-10 px-5 text-sm font-medium text-gray-600 border-gray-200 dark:bg-white dark:text-gray-900 dark:border-gray-300 hover:bg-gray-50"
+                        onClick={() => onOpenChange(false)}
+                    >
                         Close
                     </Button>
-                    <Button className="flex-1 h-10 gap-2" style={{ backgroundColor: brandColor, color: getContrastText(brandColor) }} onClick={enquire}>
-                        <Send className="w-4 h-4" /> Enquire Now
+                    <Button
+                        className="flex-1 h-10 gap-2 font-semibold text-sm shadow-sm"
+                        style={{ backgroundColor: brandColor, color: getContrastText(brandColor) }}
+                        onClick={enquire}
+                    >
+                        <Send className="w-4 h-4" />
+                        Enquire Now
                     </Button>
                 </div>
             </DialogContent>
