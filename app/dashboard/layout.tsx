@@ -29,6 +29,8 @@ import {
     Truck,
     RefreshCw,
     BookOpen,
+    AlertCircle,
+    ArrowRight,
 } from "lucide-react";
 import { dealerSiteHref } from "@/lib/utils/domain";
 
@@ -113,6 +115,7 @@ export default function DashboardLayout({
     const { data, updateData, setDealerId, setDealerSlug, dealerSlug, setSellsTwoWheelers, setSellsThreeWheelers, setSellsFourWheelers } = useOnboardingStore();
     const isFirstHand = data.sellsNewCars && !data.sellsUsedCars;
     const [unreadCount,        setUnreadCount]         = useState(0);
+    const [onboardingComplete, setOnboardingComplete]  = useState(true);
     const [vehicleType,        setVehicleType]         = useState<string | null>(null);
     const [sellsTwoWheelers,   setSellsTwoWheelersL]   = useState(false);
     const [sellsThreeWheelers, setSellsThreeWheelersL] = useState(false);
@@ -165,6 +168,7 @@ export default function DashboardLayout({
 
                 setDealerId(dealer.id);
                 if (dealer.slug) setDealerSlug(dealer.slug);
+                setOnboardingComplete(dealer.onboarding_complete ?? false);
 
                 // eslint-disable-next-line @typescript-eslint/no-explicit-any
                 const d = dealer as any;
@@ -367,6 +371,27 @@ export default function DashboardLayout({
                         </div>
                     </div>
                 </header>
+
+                {/* Onboarding incomplete banner */}
+                {!onboardingComplete && (
+                    <div className="flex items-center justify-between gap-4 px-6 py-3 bg-amber-500/10 border-b border-amber-500/20">
+                        <div className="flex items-center gap-3 min-w-0">
+                            <AlertCircle className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0" />
+                            <div className="min-w-0">
+                                <p className="text-sm font-semibold text-amber-800 dark:text-amber-300">Setup incomplete</p>
+                                <p className="text-xs text-amber-700 dark:text-amber-400/80 truncate">
+                                    Complete your dealership profile to go live and start receiving leads.
+                                </p>
+                            </div>
+                        </div>
+                        <Link href="/onboarding">
+                            <Button size="sm" className="shrink-0 bg-amber-500 hover:bg-amber-600 text-white gap-1.5">
+                                Complete Setup
+                                <ArrowRight className="w-3.5 h-3.5" />
+                            </Button>
+                        </Link>
+                    </div>
+                )}
 
                 {/* Page Content */}
                 <main className="p-6">

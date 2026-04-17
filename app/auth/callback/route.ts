@@ -37,6 +37,28 @@ export async function GET(request: Request) {
         const { error } = await supabase.auth.exchangeCodeForSession(code)
 
         if (!error) {
+            // After email verification: create a stub dealer row so registration
+            // data lands in the DB immediately. ignoreDuplicates:true ensures we
+            // never overwrite an existing row (idempotent on retry).
+            const { data: { user } } = await supabase.auth.getUser()
+            if (user) {
+                const meta = user.user_metadata ?? {}
+                const dealershipName = (meta.dealership_name as string | undefined) ?? ''
+                if (dealershipName) {
+                    await supabase.from('dealers').upsert(
+                        {
+                            user_id: user.id,
+                            dealership_name: dealershipName,
+                            phone: (meta.phone as string | undefined) ?? null,
+                            email: user.email ?? null,
+                            onboarding_complete: false,
+                            onboarding_step: 0,
+                        },
+                        { onConflict: 'user_id', ignoreDuplicates: true }
+                    )
+                }
+            }
+
             // If coming from registration, redirect to login with success banner
             if (next === '/auth/login') {
                 // Sign out so user can log in with their password

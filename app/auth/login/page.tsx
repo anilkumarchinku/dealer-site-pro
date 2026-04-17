@@ -62,19 +62,17 @@ function LoginForm() {
                 return;
             }
 
-            // Route new users to onboarding, existing users to dashboard.
-            // Only redirect to /onboarding if there is truly NO dealer row —
-            // meaning they registered but never started onboarding.
+            // Route users to onboarding if setup isn't complete, otherwise to dashboard.
             const user = signInData?.user;
             if (user) {
                 const { data: dealer } = await supabase
                     .from("dealers")
-                    .select("id")
+                    .select("id, onboarding_complete")
                     .eq("user_id", user.id)
                     .maybeSingle();
 
-                // No dealer row at all → brand new user, must go through onboarding
-                if (!dealer) {
+                // No dealer row OR onboarding not complete → must go through onboarding
+                if (!dealer || !dealer.onboarding_complete) {
                     window.location.href = "/onboarding";
                     return;
                 }
