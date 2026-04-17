@@ -117,7 +117,6 @@ export function CarCard({
     const [aggregatedSpecs, setAggregatedSpecs] = useState<ReturnType<typeof formatSpecsForDisplay>>(null);
     const { addCar, removeCar, isSelected } = useCompareStore();
     const inCompare = isSelected(car.id);
-    const useLightSurface = light ?? false;
 
     useEffect(() => {
         const fetchSpecs = async () => {
@@ -209,7 +208,8 @@ export function CarCard({
         car.model,
         car.images.hero,
     );
-    const cardDisplayUrl = (!car.images.hero || car.images.hero === '/placeholder-car.jpg' || imgError)
+    const shouldPreferResolvedImages = imageCategory === '4w' || !car.images.hero || car.images.hero === '/placeholder-car.jpg' || imgError;
+    const cardDisplayUrl = shouldPreferResolvedImages
         ? (cardImageUrls[scrapedIdx] || null)
         : car.images.hero;
 
@@ -218,9 +218,7 @@ export function CarCard({
             <Card
                 className={cn(
                     'group relative flex flex-col overflow-hidden transition-all duration-300 cursor-pointer h-full',
-                    useLightSurface
-                        ? 'bg-white border border-gray-200 text-gray-900 hover:border-gray-300'
-                        : 'bg-white border border-gray-200 text-gray-900 hover:border-gray-300 dark:bg-slate-950 dark:border-slate-800 dark:text-slate-100 dark:hover:border-slate-700',
+                    'bg-white border border-gray-200 text-gray-900 hover:border-gray-300',
                     'hover:shadow-lg hover:-translate-y-0.5',
                     'rounded-xl',
                     className
@@ -228,13 +226,10 @@ export function CarCard({
                 onClick={handleEnquireNow}
             >
                 {/* ── Image ── */}
-                <div className={cn(
-                    "relative aspect-[16/10] overflow-hidden bg-white",
-                    !useLightSurface && "dark:bg-slate-900"
-                )}>
+                <div className="relative aspect-[16/10] overflow-hidden bg-white">
                     {(() => {
                         const fallbackUrls = cardImageUrls;
-                        const displayUrl = (!car.images.hero || car.images.hero === '/placeholder-car.jpg' || imgError)
+                        const displayUrl = shouldPreferResolvedImages
                             ? (fallbackUrls[scrapedIdx] || null)
                             : car.images.hero;
 
@@ -265,10 +260,7 @@ export function CarCard({
                             );
                         }
                         return (
-                            <div className={cn(
-                                "flex items-center justify-center h-full bg-white border-b border-gray-100",
-                                !useLightSurface && "dark:bg-slate-900 dark:border-slate-800"
-                            )}>
+                            <div className="flex items-center justify-center h-full bg-white border-b border-gray-100">
                                 <span className="text-4xl">
                                     {car.vehicleCategory === '2w' ? '🏍️' : car.vehicleCategory === '3w' ? '🛺' : '🚗'}
                                 </span>
@@ -302,10 +294,7 @@ export function CarCard({
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
                         <button
                             onClick={handleQuickView}
-                            className={cn(
-                                "flex items-center gap-1.5 bg-white/95 text-gray-900 backdrop-blur-sm text-xs font-semibold px-4 py-2 rounded-full shadow-md hover:bg-white hover:shadow-lg transition-all scale-95 group-hover:scale-100",
-                                !useLightSurface && "dark:bg-slate-950/90 dark:text-slate-100 dark:hover:bg-slate-900"
-                            )}
+                            className="flex items-center gap-1.5 bg-white/95 text-gray-900 backdrop-blur-sm text-xs font-semibold px-4 py-2 rounded-full shadow-md hover:bg-white hover:shadow-lg transition-all scale-95 group-hover:scale-100"
                         >
                             <Eye className="w-3.5 h-3.5" />
                             Quick View
@@ -327,22 +316,16 @@ export function CarCard({
                                 </p>
                             </div>
                             {isUsed && car.year && (
-                                <span className="inline-flex items-center gap-1 text-xs font-medium px-1.5 py-0.5 rounded-full bg-gray-100 text-gray-500 shrink-0 dark:bg-slate-900 dark:text-slate-400">
+                                <span className="inline-flex items-center gap-1 text-xs font-medium px-1.5 py-0.5 rounded-full bg-gray-100 text-gray-500 shrink-0">
                                     {car.year}
                                 </span>
                             )}
                         </div>
-                        <h3 className={cn(
-                            "text-base font-bold leading-tight line-clamp-1 text-gray-900 mt-0.5",
-                            !useLightSurface && "dark:text-slate-100"
-                        )}>
+                        <h3 className="text-base font-bold leading-tight line-clamp-1 text-gray-900 mt-0.5">
                             {car.model}
                         </h3>
                         {car.variant && (
-                            <p className={cn(
-                                "text-xs line-clamp-1 text-gray-600 mt-0.5",
-                                !useLightSurface && "dark:text-slate-400"
-                            )}>
+                            <p className="text-xs line-clamp-1 text-gray-600 mt-0.5">
                                 {car.variant}
                             </p>
                         )}
@@ -352,23 +335,14 @@ export function CarCard({
                     {/* Price */}
                     <div className="mb-2">
                         <div className="flex items-baseline gap-1.5 flex-wrap">
-                            <span className={cn(
-                                "text-lg font-bold text-gray-900",
-                                !useLightSurface && "dark:text-slate-100"
-                            )}>
+                            <span className="text-lg font-bold text-gray-900">
                                 {priceRange}
                             </span>
                             {hasPriceRange && (
-                                <span className={cn(
-                                    "text-xs text-gray-500",
-                                    !useLightSurface && "dark:text-slate-400"
-                                )}>– {maxPrice}</span>
+                                <span className="text-xs text-gray-500">– {maxPrice}</span>
                             )}
                         </div>
-                        <p className={cn(
-                            "text-xs text-gray-600",
-                            !useLightSurface && "dark:text-slate-400"
-                        )}>{isUsed ? 'Selling price' : 'Ex-showroom price'}</p>
+                        <p className="text-xs text-gray-600">{isUsed ? 'Selling price' : 'Ex-showroom price'}</p>
 
                         {showEMI && car.pricing.emi && (
                             <Badge variant="secondary" className="mt-1 text-xs font-medium gap-1 h-5" style={{ color: brandColor }}>
@@ -420,10 +394,7 @@ export function CarCard({
                             <Button
                                 size="sm"
                                 variant="outline"
-                                className={cn(
-                                    "shrink-0 gap-1.5 text-xs h-8 px-2.5 font-semibold bg-transparent",
-                                    !useLightSurface && "dark:bg-slate-950/60 dark:hover:bg-slate-900"
-                                )}
+                                className="shrink-0 gap-1.5 text-xs h-8 px-2.5 font-semibold bg-transparent"
                                 style={{ borderColor: brandColor, color: brandColor }}
                                 onClick={(e) => { e.stopPropagation(); setIsTestDriveOpen(true); }}
                                 title="Book Test Drive"
@@ -435,10 +406,7 @@ export function CarCard({
                         <Button
                             size="sm"
                             variant="outline"
-                            className={cn(
-                                "shrink-0 gap-1 text-xs h-8 px-2.5 font-medium bg-transparent",
-                                !useLightSurface && "dark:bg-slate-950/60 dark:hover:bg-slate-900"
-                            )}
+                            className="shrink-0 gap-1 text-xs h-8 px-2.5 font-medium bg-transparent"
                             style={{ borderColor: brandColor, color: brandColor }}
                             onClick={(e) => { e.stopPropagation(); setIsQuickViewOpen(true); }}
                             title="Quick View"
@@ -448,10 +416,7 @@ export function CarCard({
                         <Button
                             size="sm"
                             variant="outline"
-                            className={cn(
-                                "shrink-0 gap-1 text-xs h-8 px-2.5 font-medium bg-transparent",
-                                !useLightSurface && "dark:bg-slate-950/60 dark:hover:bg-slate-900"
-                            )}
+                            className="shrink-0 gap-1 text-xs h-8 px-2.5 font-medium bg-transparent"
                             style={inCompare
                                 ? { backgroundColor: brandColor, color: getContrastText(brandColor), borderColor: brandColor }
                                 : { borderColor: brandColor, color: brandColor }}
@@ -587,7 +552,7 @@ function VariantAccordionButton({
             <Button
                 size="sm"
                 variant="outline"
-                className="shrink-0 gap-1 text-xs h-8 px-2.5 font-medium bg-transparent dark:bg-slate-950/60 dark:hover:bg-slate-900"
+                className="shrink-0 gap-1 text-xs h-8 px-2.5 font-medium bg-transparent"
                 style={{ borderColor: brandColor, color: brandColor }}
                 onClick={handleToggle}
             >

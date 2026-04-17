@@ -249,7 +249,7 @@ export function ModernTemplate({
                             <WishlistDrawer cars={cars} dealerId={dealerId} brandColor={brandColors.primary} />
                             <Button
                                 variant="outline"
-                                className="hidden sm:flex bg-transparent text-gray-700 border-gray-300 hover:bg-gray-100 dark:text-slate-100 dark:border-slate-600 dark:hover:bg-slate-800"
+                                className="hidden sm:flex bg-transparent text-gray-700 border-gray-300 hover:bg-gray-100"
                                 onClick={() => setEnquireSidebarOpen(true)}
                             >
                                 <MessageSquare className="w-4 h-4 mr-2" />

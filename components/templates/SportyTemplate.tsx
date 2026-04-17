@@ -652,6 +652,7 @@ export function SportyTemplate({
                                             : inventoryTab === 'used' ? cars.filter(c => c.condition !== 'new')
                                                 : cars : cars}
                                     brandColor={brandAccent}
+                                    light
                                     dealerPhone={contactInfo.phone}
                                     dealerId={dealerId}
                                 />

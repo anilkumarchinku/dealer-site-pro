@@ -68,11 +68,18 @@ export function getVehicleImageUrls(
     const normalizedPrimary = primaryImage && primaryImage !== "/placeholder-car.jpg" ? primaryImage : null;
 
     return [...new Set([
-        ...(vehicleCategory === "4w" ? curatedAssets : []),
-        ...(vehicleCategory === "4w" && normalizedPrimary?.startsWith("/assets/") ? [normalizedPrimary] : []),
-        ...scrapedAssets,
-        normalizedPrimary,
-        ...(vehicleCategory !== "4w" ? curatedAssets : []),
+        ...(vehicleCategory === "4w"
+            ? [
+                ...curatedAssets,
+                ...(normalizedPrimary?.startsWith("/assets/") ? [normalizedPrimary] : []),
+                normalizedPrimary,
+                ...scrapedAssets,
+            ]
+            : [
+                normalizedPrimary,
+                ...scrapedAssets,
+                ...curatedAssets,
+            ]),
     ].filter((url): url is string => Boolean(url)))];
 }
 

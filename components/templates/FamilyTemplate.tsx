@@ -198,7 +198,7 @@ export function FamilyTemplate({
                         <div className="flex items-center gap-2">
                             <WishlistDrawer cars={cars} dealerId={dealerId} brandColor={brandColors.primary} />
                             <Button
-                                className="rounded-full hidden sm:flex bg-white dark:bg-slate-950/70 dark:hover:bg-slate-900"
+                                className="rounded-full hidden sm:flex bg-white"
                                 variant="outline"
                                 style={{ borderColor: brandColors.primary, color: brandColors.primary }}
                                 onClick={() => setEnquireSidebarOpen(true)}
@@ -309,7 +309,7 @@ export function FamilyTemplate({
                                                 <ArrowRight className="ml-2 w-5 h-5" />
                                             </Button>
                                         )}
-                                        <Button size="lg" variant="outline" className="rounded-full bg-white dark:bg-slate-950/70 dark:hover:bg-slate-900" style={{ borderColor: brandColors.primary, color: brandColors.primary }} asChild>
+                                        <Button size="lg" variant="outline" className="rounded-full bg-white" style={{ borderColor: brandColors.primary, color: brandColors.primary }} asChild>
                                             <a href="#contact">Talk to Our Team</a>
                                         </Button>
                                     </div>
