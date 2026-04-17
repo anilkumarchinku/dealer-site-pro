@@ -1,7 +1,6 @@
 import { createHmac, timingSafeEqual } from "crypto"
 import { cookies } from "next/headers"
 import { NextResponse } from "next/server"
-import { isAdminEmail } from "@/lib/utils/admin-auth"
 
 export const ADMIN_SESSION_COOKIE = "dealer_site_admin_session"
 
@@ -27,12 +26,9 @@ export function validateAdminCredentials(username: string, password: string): bo
     const configuredPassword = process.env.ADMIN_PASSWORD
     if (!configuredPassword) return false
 
-    const normalizedUsername = username.trim()
+    const normalizedUsername = username.trim().toLowerCase()
     const configuredUsername = getAdminUsername()
-    const configuredAdminEmails = process.env.ADMIN_EMAILS ?? process.env.NEXT_PUBLIC_ADMIN_EMAILS
-    const matchesIdentity =
-        normalizedUsername === configuredUsername ||
-        isAdminEmail(normalizedUsername, configuredAdminEmails)
+    const matchesIdentity = normalizedUsername === configuredUsername.toLowerCase()
 
     return matchesIdentity && password === configuredPassword
 }

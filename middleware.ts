@@ -4,6 +4,7 @@ import { extractSlugFromHostname } from './lib/utils/slug'
 
 const PROTECTED_PREFIXES = ['/dashboard', '/onboarding', '/preview']
 const AUTH_PAGES       = ['/auth/login', '/auth/register']
+const ADMIN_SESSION_COOKIE = 'dealer_site_admin_session'
 
 // Base domain from env (e.g. "your-project.vercel.app" or "dealersitepro.com")
 const BASE_DOMAIN = process.env.NEXT_PUBLIC_BASE_DOMAIN ?? 'dealersitepro.com'
@@ -152,6 +153,10 @@ export async function middleware(request: NextRequest) {
     }
 
     // ── Auth guard (only on main domain) ─────────────────────
+    if (pathname.startsWith('/admin/') && !request.cookies.get(ADMIN_SESSION_COOKIE)?.value) {
+        return NextResponse.redirect(new URL('/admin', request.url))
+    }
+
     const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
     const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 

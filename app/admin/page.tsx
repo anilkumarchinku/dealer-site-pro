@@ -38,6 +38,17 @@ import brandModelsData from "@/lib/data/brand-models.json";
 
 const ADMIN_CARS_PREVIEW_LIMIT = 12;
 
+type AdminDealerOption = {
+    id: string;
+    dealershipName: string;
+    slug: string | null;
+    location: string | null;
+    styleTemplate: string;
+    brands: string[];
+    vehicleType: string | null;
+    onboardingComplete: boolean;
+};
+
 const TEMPLATES = [
     {
         id: "modern",
@@ -213,7 +224,7 @@ function BrandLogo({ brandName }: { brandName: string }) {
 export default function AdminDashboard() {
 
     const router = useRouter();
-    const { data, updateData } = useOnboardingStore();
+    const { data, updateData, setDealerId, setDealerSlug } = useOnboardingStore();
 
     const [selectedTemplate, setSelectedTemplate] = useState<string>(data.styleTemplate || "modern");
     const [selectedBrand, setSelectedBrand] = useState<string>(data.brands?.[0] || "Toyota");
@@ -226,6 +237,11 @@ export default function AdminDashboard() {
     const [passwordInput, setPasswordInput] = useState('');
     const [passwordError, setPasswordError] = useState('');
     const [passwordLoading, setPasswordLoading] = useState(false);
+    const [dealers, setDealers] = useState<AdminDealerOption[]>([]);
+    const [selectedDealerId, setSelectedDealerId] = useState("");
+    const [dealersLoading, setDealersLoading] = useState(false);
+    const [dealerError, setDealerError] = useState('');
+    const [launchError, setLaunchError] = useState('');
 
     // ── Step 1: Check whether an admin session cookie already exists ─────────
     useEffect(() => {
@@ -295,6 +311,70 @@ export default function AdminDashboard() {
         return () => { isMounted = false; };
     }, [isAuthenticated])
 
+    useEffect(() => {
+        if (!isAuthenticated) {
+            setDealers([]);
+            setSelectedDealerId("");
+            setDealerError("");
+            return;
+        }
+
+        let isMounted = true;
+        setDealersLoading(true);
+        setDealerError("");
+
+        fetch("/api/admin/dealers")
+            .then(async (res) => {
+                const json = await res.json();
+                if (!isMounted) return;
+
+                if (!res.ok) {
+                    setDealerError(json.error ?? "Failed to load dealers");
+                    setDealers([]);
+                    return;
+                }
+
+                const nextDealers = Array.isArray(json.dealers) ? json.dealers as AdminDealerOption[] : [];
+                setDealers(nextDealers);
+
+                const persistedDealerId = useOnboardingStore.getState().dealerId;
+                const preferredDealerId = persistedDealerId && nextDealers.some((dealer) => dealer.id === persistedDealerId)
+                    ? persistedDealerId
+                    : nextDealers[0]?.id ?? "";
+
+                setSelectedDealerId(preferredDealerId);
+            })
+            .catch(() => {
+                if (!isMounted) return;
+                setDealerError("Failed to load dealers");
+                setDealers([]);
+            })
+            .finally(() => {
+                if (isMounted) setDealersLoading(false);
+            });
+
+        return () => {
+            isMounted = false;
+        };
+    }, [isAuthenticated])
+
+    const selectedDealer = dealers.find((dealer) => dealer.id === selectedDealerId) ?? null;
+
+    useEffect(() => {
+        if (!selectedDealer) return;
+
+        setSelectedTemplate(selectedDealer.styleTemplate || "modern");
+
+        if (selectedDealer.brands[0]) {
+            setSelectedBrand(selectedDealer.brands[0]);
+        }
+
+        setDealerId(selectedDealer.id);
+        if (selectedDealer.slug) {
+            setDealerSlug(selectedDealer.slug);
+        }
+    }, [selectedDealer, setDealerId, setDealerSlug])
+
     if (!sessionChecked) return null
 
     // ── Direct admin login prompt ────────────────────────────────────────────
@@ -304,12 +384,12 @@ export default function AdminDashboard() {
                 <div className="text-center space-y-1">
                     <div className="text-3xl font-bold">🔐</div>
                     <h1 className="text-xl font-semibold text-foreground">Admin Access</h1>
-                    <p className="text-sm text-muted-foreground">Enter your admin username or admin email, plus password</p>
+                    <p className="text-sm text-muted-foreground">Enter your configured admin username and password</p>
                 </div>
                 <form onSubmit={handlePasswordSubmit} className="space-y-4">
                     <input
                         type="text"
-                        placeholder="Admin username or email"
+                        placeholder="Admin username"
                         value={usernameInput}
                         onChange={e => setUsernameInput(e.target.value)}
                         autoFocus
@@ -337,35 +417,54 @@ export default function AdminDashboard() {
 
 
     const handleLaunch = async () => {
+        setLaunchError('');
         setIsLaunching(true);
 
         try {
+            if (!selectedDealer) {
+                throw new Error("Select a dealer before launching the admin preview.");
+            }
+
             // Wait for store update first
             updateData({
                 styleTemplate: selectedTemplate as any,
                 brands: [selectedBrand as any],
             });
 
-            // Persist to actual Supabase Database via our secure server route if dealerId is known
-            const { dealerId } = useOnboardingStore.getState();
-            if (dealerId) {
-                const res = await fetch("/api/admin/deploy-template", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-                    body: JSON.stringify({
-                        dealerId,
-                        template: selectedTemplate,
-                        brands: [selectedBrand]
-                    })
-                });
-                const responseData = await res.json();
-                if (!res.ok) {
-                    console.error("Failed to deploy to Supabase:", responseData.error);
-                }
-            } else {
-                console.warn("No active Dealer ID found. Previewing locally only.");
+            setDealerId(selectedDealer.id);
+            if (selectedDealer.slug) {
+                setDealerSlug(selectedDealer.slug);
+            }
+
+            const res = await fetch("/api/admin/deploy-template", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    dealerId: selectedDealer.id,
+                    template: selectedTemplate,
+                    brands: [selectedBrand]
+                })
+            });
+            const responseData = await res.json();
+            if (!res.ok) {
+                throw new Error(responseData.error ?? "Failed to save admin changes");
+            }
+
+            setDealers((currentDealers) => currentDealers.map((dealer) => (
+                dealer.id === selectedDealer.id
+                    ? {
+                        ...dealer,
+                        styleTemplate: selectedTemplate,
+                        brands: [selectedBrand],
+                        slug: responseData.slug ?? dealer.slug,
+                    }
+                    : dealer
+            )));
+
+            if (responseData.slug) {
+                setDealerSlug(responseData.slug);
             }
 
             // Redirect user to preview
@@ -374,6 +473,8 @@ export default function AdminDashboard() {
             }, 600);
 
         } catch (e) {
+            const message = e instanceof Error ? e.message : "Failed to launch admin preview";
+            setLaunchError(message);
             console.error("Deploy error", e);
             setIsLaunching(false);
         }
@@ -428,14 +529,14 @@ export default function AdminDashboard() {
                                 <div className="w-px h-4 bg-border" />
                                 <div className="flex items-center gap-2">
                                     <Car className="w-4 h-4 text-muted-foreground" />
-                                    <span className="text-sm text-muted-foreground">Brand:</span>
-                                    <span className="text-sm font-semibold text-foreground">{selectedBrand}</span>
+                                    <span className="text-sm text-muted-foreground">Dealer:</span>
+                                    <span className="text-sm font-semibold text-foreground">{selectedDealer?.dealershipName ?? "None selected"}</span>
                                 </div>
                             </div>
 
                             <Button
                                 onClick={handleLaunch}
-                                disabled={isLaunching}
+                                disabled={isLaunching || !selectedDealer}
                                 className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 shadow-lg shadow-blue-600/30"
                             >
                                 {isLaunching ? (
@@ -479,6 +580,54 @@ export default function AdminDashboard() {
                         </Card>
                     ))}
                 </div>
+
+                <section>
+                    <Card className="p-6 border-0 shadow-sm">
+                        <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+                            <div className="space-y-1">
+                                <h2 className="text-xl font-semibold text-foreground">Choose Dealer</h2>
+                                <p className="text-sm text-muted-foreground">
+                                    This admin session is global, but every template and brand change is applied to the selected dealer below.
+                                </p>
+                            </div>
+
+                            <div className="w-full lg:max-w-xl space-y-2">
+                                <label className="text-sm font-medium text-foreground" htmlFor="dealer-selector">
+                                    Active dealer
+                                </label>
+                                <select
+                                    id="dealer-selector"
+                                    className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground outline-none focus:ring-2 focus:ring-primary"
+                                    value={selectedDealerId}
+                                    onChange={(e) => setSelectedDealerId(e.target.value)}
+                                    disabled={dealersLoading || dealers.length === 0}
+                                >
+                                    {dealers.length === 0 ? (
+                                        <option value="">
+                                            {dealersLoading ? "Loading dealers..." : "No dealers found"}
+                                        </option>
+                                    ) : (
+                                        dealers.map((dealer) => (
+                                            <option key={dealer.id} value={dealer.id}>
+                                                {dealer.dealershipName}{dealer.location ? ` - ${dealer.location}` : ""}
+                                            </option>
+                                        ))
+                                    )}
+                                </select>
+                                {dealerError && (
+                                    <p className="text-sm text-destructive">{dealerError}</p>
+                                )}
+                                {selectedDealer && (
+                                    <p className="text-sm text-muted-foreground">
+                                        Managing <span className="font-medium text-foreground">{selectedDealer.dealershipName}</span>
+                                        {selectedDealer.slug ? <> at <span className="font-medium text-foreground">/{selectedDealer.slug}</span></> : null}
+                                        {selectedDealer.brands.length > 0 ? <> with saved brands: <span className="font-medium text-foreground">{selectedDealer.brands.join(", ")}</span></> : null}
+                                    </p>
+                                )}
+                            </div>
+                        </div>
+                    </Card>
+                </section>
 
                 {/* Templates Section */}
                 <section>
@@ -695,15 +844,18 @@ export default function AdminDashboard() {
                                     <span className="text-amber-400 text-sm font-medium">Ready to Preview</span>
                                 </div>
                                 <h3 className="text-2xl font-bold mb-2">
-                                    {selectedBrand} with {selectedTemplateData?.name} Template
+                                    {selectedDealer?.dealershipName ?? "Choose a dealer"} with {selectedTemplateData?.name} Template
                                 </h3>
                                 <p className="text-white/60 mb-4">
-                                    See how your dealership website will look with the selected template and brand combination.
+                                    Save the selected template and brand for the active dealer, then open the preview using the same admin session.
                                 </p>
+                                {launchError && (
+                                    <p className="mb-4 text-sm text-rose-300">{launchError}</p>
+                                )}
                                 <div className="flex items-center gap-3">
                                     <Button
                                         onClick={handleLaunch}
-                                        disabled={isLaunching}
+                                        disabled={isLaunching || !selectedDealer}
                                         size="lg"
                                         className="bg-white text-gray-900 hover:bg-gray-100"
                                     >
@@ -747,7 +899,7 @@ export default function AdminDashboard() {
             <div className="md:hidden fixed bottom-0 left-0 right-0 bg-background border-t border-border p-4 shadow-lg">
                 <Button
                     onClick={handleLaunch}
-                    disabled={isLaunching}
+                    disabled={isLaunching || !selectedDealer}
                     className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
                     size="lg"
                 >
@@ -756,7 +908,7 @@ export default function AdminDashboard() {
                     ) : (
                         <Eye className="w-4 h-4 mr-2" />
                     )}
-                    Preview: {selectedTemplate} / {selectedBrand}
+                    Preview: {selectedDealer?.dealershipName ?? "Select dealer"}
                 </Button>
             </div>
         </div>

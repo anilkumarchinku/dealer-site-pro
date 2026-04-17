@@ -9,7 +9,6 @@ import { Label } from "@/components/ui/label";
 import { Loader2, AlertCircle, CheckCircle, LogIn } from "lucide-react";
 import { supabase } from "@/lib/supabase";
 import { isValidEmail } from "@/lib/validations/client";
-import { isAdminEmail } from "@/lib/utils/admin-auth";
 
 export default function LoginPage() {
     return (
@@ -66,14 +65,6 @@ function LoginForm() {
             // Route users to onboarding if setup isn't complete, otherwise to dashboard.
             const user = signInData?.user;
             if (user) {
-                const adminRedirect = redirectTo?.startsWith("/admin") ? redirectTo : null;
-                const adminList = process.env.NEXT_PUBLIC_ADMIN_EMAILS ?? "";
-
-                if (adminRedirect && isAdminEmail(user.email, adminList)) {
-                    window.location.href = adminRedirect;
-                    return;
-                }
-
                 const { data: dealer } = await supabase
                     .from("dealers")
                     .select("id, onboarding_complete")

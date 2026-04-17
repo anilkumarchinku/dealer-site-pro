@@ -10,6 +10,7 @@ import { NextResponse } from 'next/server'
 import fs from 'fs'
 import path from 'path'
 import type { CatalogModel } from '@/lib/types/catalog'
+import { requireAdminSession } from "@/lib/utils/admin-session"
 
 // ── helpers ───────────────────────────────────────────────────────────────────
 
@@ -253,6 +254,9 @@ function load3WModels(): CatalogModel[] {
 // ── Handler ───────────────────────────────────────────────────────────────────
 
 export async function GET() {
+    const { errorResponse } = await requireAdminSession()
+    if (errorResponse) return errorResponse
+
     const models = [
         ...load4WModels(),
         ...load2WModels(),

@@ -14,6 +14,10 @@ export async function POST(req: Request) {
             return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
         }
 
+        if (!Array.isArray(brands) || brands.length === 0 || brands.some((brand) => typeof brand !== "string" || !brand.trim())) {
+            return NextResponse.json({ error: "Brands must be a non-empty list of strings" }, { status: 400 });
+        }
+
         const VALID_TEMPLATES = ['modern', 'luxury', 'sporty', 'family']
         if (!VALID_TEMPLATES.includes(template)) {
             return NextResponse.json({ error: "Invalid template value" }, { status: 400 });
@@ -24,7 +28,7 @@ export async function POST(req: Request) {
             .from("dealers")
             .update({
                 style_template: template,
-                brands: brands
+                brands: brands.map((brand: string) => brand.trim())
             })
             .eq("id", dealerId)
             .select("slug")
@@ -40,7 +44,11 @@ export async function POST(req: Request) {
             revalidatePath(`/sites/${updatedDealer.slug}`)
         }
 
-        return NextResponse.json({ success: true, message: "Template & Brand saved successfully!" });
+        return NextResponse.json({
+            success: true,
+            slug: updatedDealer?.slug ?? null,
+            message: "Template & Brand saved successfully!"
+        });
     } catch (e: unknown) {
         const message = e instanceof Error ? e.message : "Internal server error";
         return NextResponse.json({ error: message }, { status: 500 });
