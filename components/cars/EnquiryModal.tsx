@@ -160,7 +160,7 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
 
     return (
         <Dialog open={open} onOpenChange={onOpenChange}>
-            <DialogContent className="max-w-4xl max-h-[85vh] overflow-y-auto p-0 bg-white text-gray-900 dark:bg-slate-950 dark:text-slate-100 dark:border-slate-800">
+            <DialogContent className="max-w-4xl max-h-[85vh] overflow-y-auto p-0 bg-white text-gray-900 border border-gray-200 shadow-2xl">
                 {/* Visually hidden title for screen-reader accessibility (Radix requirement) */}
                 <DialogTitle className="sr-only">
                     {car.make} {car.model} — Enquiry
@@ -171,7 +171,7 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
                 {/* Car Details Section */}
                 <div className="relative">
                     {/* Hero Image */}
-                    <div className="relative h-64 w-full bg-gray-100 dark:bg-slate-900">
+                    <div className="relative h-64 w-full bg-gray-100">
                         {heroSrc ? (
                             <Image
                                 src={heroSrc}
@@ -205,22 +205,22 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
                     </div>
 
                     {/* Content */}
-                    <div className="p-6 space-y-6 bg-white dark:bg-slate-950">
+                    <div className="p-6 space-y-6 bg-white">
                         {/* Price */}
                         <div className="flex items-baseline gap-3 pb-4 border-b">
                             <div>
-                                <p className="text-xs text-gray-500 dark:text-slate-400 uppercase tracking-wide mb-1">Price Range</p>
+                                <p className="text-xs text-gray-500 uppercase tracking-wide mb-1">Price Range</p>
                                 <div className="flex items-baseline gap-2">
-                                    <span className="text-3xl font-bold text-gray-900 dark:text-slate-100">{priceRange}</span>
+                                    <span className="text-3xl font-bold text-gray-900">{priceRange}</span>
                                     {car.pricing.exShowroom.min !== car.pricing.exShowroom.max && (
-                                        <span className="text-lg text-gray-400 dark:text-slate-500">- {maxPrice}</span>
+                                        <span className="text-lg text-gray-400">- {maxPrice}</span>
                                     )}
                                 </div>
-                                <p className="text-xs text-gray-400 dark:text-slate-500 mt-1">Ex-showroom price</p>
+                                <p className="text-xs text-gray-400 mt-1">Ex-showroom price</p>
                             </div>
                             {car.pricing.emi && (
                                 <div className="ml-auto text-right">
-                                    <p className="text-xs text-gray-500 dark:text-slate-400 uppercase tracking-wide mb-1">EMI Starts From</p>
+                                    <p className="text-xs text-gray-500 uppercase tracking-wide mb-1">EMI Starts From</p>
                                     <p className="text-xl font-bold" style={{ color: brandColor }}>
                                         ₹{car.pricing.emi.monthly.toLocaleString()}/mo
                                     </p>
@@ -230,20 +230,20 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
 
                         {/* Specifications */}
                         <div>
-                            <h3 className="text-lg font-bold text-gray-900 dark:text-slate-100 mb-4">Specifications</h3>
+                            <h3 className="text-lg font-bold text-gray-900 mb-4">Specifications</h3>
                             <div className="grid grid-cols-2 gap-4">
                                 {/* Engine */}
-                                <div className="flex items-start gap-3 p-3 bg-white border border-gray-100 rounded-lg dark:bg-slate-900 dark:border-slate-800">
-                                    <div className="w-10 h-10 rounded-lg bg-white shadow-sm flex items-center justify-center flex-shrink-0 dark:bg-slate-950">
+                                <div className="flex items-start gap-3 p-3 bg-white border border-gray-100 rounded-lg">
+                                    <div className="w-10 h-10 rounded-lg bg-white shadow-sm flex items-center justify-center flex-shrink-0">
                                         <Fuel className="w-5 h-5 text-emerald-600" />
                                     </div>
                                     <div>
-                                        <p className="text-xs text-gray-500 dark:text-slate-400 uppercase tracking-wide">Fuel Type</p>
-                                        <p className="text-sm font-semibold text-gray-900 dark:text-slate-100">
+                                        <p className="text-xs text-gray-500 uppercase tracking-wide">Fuel Type</p>
+                                        <p className="text-sm font-semibold text-gray-900">
                                             {aggregatedSpecs?.fuelTypes || detailedVariant?.fuel_type || car.engine.type}
                                         </p>
                                         {(detailedVariant?.engine_displacement_cc || car.engine.displacement) && (
-                                            <p className="text-xs text-gray-500 dark:text-slate-400">
+                                            <p className="text-xs text-gray-500">
                                                 {detailedVariant?.engine_displacement_cc || car.engine.displacement}cc
                                             </p>
                                         )}
@@ -251,26 +251,26 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
                                 </div>
 
                                 {/* Transmission */}
-                                <div className="flex items-start gap-3 p-3 bg-white border border-gray-100 rounded-lg dark:bg-slate-900 dark:border-slate-800">
-                                    <div className="w-10 h-10 rounded-lg bg-white shadow-sm flex items-center justify-center flex-shrink-0 dark:bg-slate-950">
+                                <div className="flex items-start gap-3 p-3 bg-white border border-gray-100 rounded-lg">
+                                    <div className="w-10 h-10 rounded-lg bg-white shadow-sm flex items-center justify-center flex-shrink-0">
                                         <Gauge className="w-5 h-5 text-blue-600" />
                                     </div>
                                     <div>
-                                        <p className="text-xs text-gray-500 dark:text-slate-400 uppercase tracking-wide">Transmission</p>
-                                        <p className="text-sm font-semibold text-gray-900 dark:text-slate-100">
+                                        <p className="text-xs text-gray-500 uppercase tracking-wide">Transmission</p>
+                                        <p className="text-sm font-semibold text-gray-900">
                                             {aggregatedSpecs?.transmissions || detailedVariant?.transmission || car.transmission.type}
                                         </p>
                                     </div>
                                 </div>
 
                                 {/* Seating */}
-                                <div className="flex items-start gap-3 p-3 bg-white border border-gray-100 rounded-lg dark:bg-slate-900 dark:border-slate-800">
-                                    <div className="w-10 h-10 rounded-lg bg-white shadow-sm flex items-center justify-center flex-shrink-0 dark:bg-slate-950">
+                                <div className="flex items-start gap-3 p-3 bg-white border border-gray-100 rounded-lg">
+                                    <div className="w-10 h-10 rounded-lg bg-white shadow-sm flex items-center justify-center flex-shrink-0">
                                         <Users className="w-5 h-5 text-purple-600" />
                                     </div>
                                     <div>
-                                        <p className="text-xs text-gray-500 dark:text-slate-400 uppercase tracking-wide">Seating</p>
-                                        <p className="text-sm font-semibold text-gray-900 dark:text-slate-100">
+                                        <p className="text-xs text-gray-500 uppercase tracking-wide">Seating</p>
+                                        <p className="text-sm font-semibold text-gray-900">
                                             {detailedVariant?.seating_capacity || car.dimensions?.seatingCapacity || ''} Seats
                                         </p>
                                     </div>
@@ -278,13 +278,13 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
 
                                 {/* Mileage */}
                                 {(aggregatedSpecs?.mileages || detailedVariant?.mileage_kmpl_or_ev_range || (detailedVariant as any)?.mileage_kmpl || car.performance?.fuelEfficiency) && (
-                                    <div className="flex items-start gap-3 p-3 bg-white border border-gray-100 rounded-lg dark:bg-slate-900 dark:border-slate-800">
-                                        <div className="w-10 h-10 rounded-lg bg-white shadow-sm flex items-center justify-center flex-shrink-0 dark:bg-slate-950">
+                                    <div className="flex items-start gap-3 p-3 bg-white border border-gray-100 rounded-lg">
+                                        <div className="w-10 h-10 rounded-lg bg-white shadow-sm flex items-center justify-center flex-shrink-0">
                                             <Zap className="w-5 h-5 text-amber-600" />
                                         </div>
                                         <div>
-                                            <p className="text-xs text-gray-500 dark:text-slate-400 uppercase tracking-wide">Mileage</p>
-                                            <p className="text-sm font-semibold text-gray-900 dark:text-slate-100">
+                                            <p className="text-xs text-gray-500 uppercase tracking-wide">Mileage</p>
+                                            <p className="text-sm font-semibold text-gray-900">
                                                 {aggregatedSpecs?.mileages ? `${aggregatedSpecs.mileages} km/l` :
                                                     detailedVariant?.mileage_kmpl_or_ev_range ||
                                                     ((detailedVariant as any)?.mileage_kmpl ? `${(detailedVariant as any).mileage_kmpl} km/l` : null) ||

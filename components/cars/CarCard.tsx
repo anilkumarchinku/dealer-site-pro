@@ -219,8 +219,8 @@ export function CarCard({
                 className={cn(
                     'group relative flex flex-col overflow-hidden transition-all duration-300 cursor-pointer h-full',
                     'bg-white border border-gray-200 text-gray-900 hover:border-gray-300',
-                    'hover:shadow-lg hover:-translate-y-0.5',
-                    'rounded-xl',
+                    'hover:shadow-xl hover:-translate-y-1',
+                    'rounded-2xl',
                     className
                 )}
                 onClick={handleEnquireNow}
@@ -303,29 +303,29 @@ export function CarCard({
                 </div>
 
                 {/* ── Content ── */}
-                <CardContent className="flex flex-col flex-1 p-4">
+                <CardContent className="flex flex-col flex-1 p-5">
                     {/* Brand & Model */}
-                    <div className="mb-2">
+                    <div className="mb-3">
                         <div className="flex items-center justify-between gap-1.5">
                             <div className="flex items-center gap-1.5 min-w-0">
                                 {getBrandLogo(car.make) && (
                                     <Image src={getBrandLogo(car.make)!} alt={car.make} width={16} height={16} className="object-contain shrink-0" />
                                 )}
-                                <p className="text-xs font-semibold uppercase tracking-wider truncate" style={{ color: brandColor }}>
+                                <p className="text-[11px] font-semibold uppercase tracking-[0.22em] truncate" style={{ color: brandColor }}>
                                     {car.make}
                                 </p>
                             </div>
                             {isUsed && car.year && (
-                                <span className="inline-flex items-center gap-1 text-xs font-medium px-1.5 py-0.5 rounded-full bg-gray-100 text-gray-500 shrink-0">
+                                <span className="inline-flex items-center gap-1 text-[11px] font-medium px-2 py-1 rounded-full bg-gray-100 text-gray-500 shrink-0">
                                     {car.year}
                                 </span>
                             )}
                         </div>
-                        <h3 className="text-base font-bold leading-tight line-clamp-1 text-gray-900 mt-0.5">
+                        <h3 className="text-[1.375rem] font-bold leading-[1.15] line-clamp-2 text-gray-900 mt-1">
                             {car.model}
                         </h3>
                         {car.variant && (
-                            <p className="text-xs line-clamp-1 text-gray-600 mt-0.5">
+                            <p className="text-sm line-clamp-1 text-gray-500 mt-1">
                                 {car.variant}
                             </p>
                         )}
@@ -333,29 +333,29 @@ export function CarCard({
 
 
                     {/* Price */}
-                    <div className="mb-2">
+                    <div className="mb-3">
                         <div className="flex items-baseline gap-1.5 flex-wrap">
-                            <span className="text-lg font-bold text-gray-900">
+                            <span className="text-[1.75rem] font-bold tracking-tight text-gray-900">
                                 {priceRange}
                             </span>
                             {hasPriceRange && (
-                                <span className="text-xs text-gray-500">– {maxPrice}</span>
+                                <span className="text-sm text-gray-500">– {maxPrice}</span>
                             )}
                         </div>
-                        <p className="text-xs text-gray-600">{isUsed ? 'Selling price' : 'Ex-showroom price'}</p>
+                        <p className="text-sm text-gray-500">{isUsed ? 'Selling price' : 'Ex-showroom price'}</p>
 
                         {showEMI && car.pricing.emi && (
-                            <Badge variant="secondary" className="mt-1 text-xs font-medium gap-1 h-5" style={{ color: brandColor }}>
+                            <Badge variant="secondary" className="mt-2 text-xs font-medium gap-1 h-6 px-2.5 rounded-full bg-gray-50 border border-gray-200" style={{ color: brandColor }}>
                                 <TrendingUp className="w-3 h-3" />
                                 EMI ₹{car.pricing.emi.monthly.toLocaleString()}/mo
                             </Badge>
                         )}
                     </div>
 
-                    <Separator className="mb-2" />
+                    <Separator className="mb-3" />
 
                     {/* Specs Grid — always 4 items, adapts per vehicle category */}
-                    <div className="grid grid-cols-2 gap-2 mb-2">
+                    <div className="grid grid-cols-2 gap-2.5 mb-3">
                         <SpecItem icon={<Fuel className="w-3.5 h-3.5 text-emerald-600" />} label="Fuel" value={fuelDisplay} />
                         <SpecItem icon={spec2.icon} label={spec2.label} value={spec2.value} />
                         <SpecItem icon={spec3.icon} label={spec3.label} value={spec3.value} />
@@ -364,15 +364,15 @@ export function CarCard({
 
                     {/* Trust Badges for Used Cars */}
                     {isUsed && (
-                        <div className="flex items-center gap-2 mb-2">
-                            <span className="inline-flex items-center gap-1 text-xs font-medium text-emerald-600 bg-emerald-50 border border-emerald-200 px-1.5 py-0.5 rounded-full">
+                        <div className="flex items-center gap-2 mb-3 flex-wrap">
+                            <span className="inline-flex items-center gap-1 text-xs font-medium text-emerald-600 bg-emerald-50 border border-emerald-200 px-2 py-1 rounded-full">
                                 <ShieldCheck className="w-2.5 h-2.5" />Inspected
                             </span>
-                            <span className="inline-flex items-center gap-1 text-xs font-medium text-blue-600 bg-blue-50 border border-blue-200 px-1.5 py-0.5 rounded-full">
+                            <span className="inline-flex items-center gap-1 text-xs font-medium text-blue-600 bg-blue-50 border border-blue-200 px-2 py-1 rounded-full">
                                 Warranty
                             </span>
                             {car.condition === 'certified_pre_owned' && (
-                                <span className="inline-flex items-center gap-1 text-xs font-medium text-purple-600 bg-purple-50 border border-purple-200 px-1.5 py-0.5 rounded-full">
+                                <span className="inline-flex items-center gap-1 text-xs font-medium text-purple-600 bg-purple-50 border border-purple-200 px-2 py-1 rounded-full">
                                     7-Day Return
                                 </span>
                             )}
@@ -380,9 +380,9 @@ export function CarCard({
                     )}
 
                     {/* CTA row — Enquire + Test Drive + Quick View */}
-                    <div className="flex gap-2 mt-auto pt-1">
+                    <div className="flex gap-2 mt-auto pt-2">
                         <Button
-                            className="flex-1"
+                            className="flex-1 h-11 rounded-xl text-sm font-semibold shadow-sm"
                             size="sm"
                             style={{ backgroundColor: brandColor, color: getContrastText(brandColor) }}
                             onClick={(e) => { e.stopPropagation(); handleEnquireNow(); }}
@@ -394,7 +394,7 @@ export function CarCard({
                             <Button
                                 size="sm"
                                 variant="outline"
-                                className="shrink-0 gap-1.5 text-xs h-8 px-2.5 font-semibold bg-transparent"
+                                className="shrink-0 gap-1.5 text-xs h-11 px-3 rounded-xl font-semibold bg-white hover:bg-gray-50"
                                 style={{ borderColor: brandColor, color: brandColor }}
                                 onClick={(e) => { e.stopPropagation(); setIsTestDriveOpen(true); }}
                                 title="Book Test Drive"
@@ -406,7 +406,7 @@ export function CarCard({
                         <Button
                             size="sm"
                             variant="outline"
-                            className="shrink-0 gap-1 text-xs h-8 px-2.5 font-medium bg-transparent"
+                            className="shrink-0 gap-1 text-xs h-11 px-3 rounded-xl font-medium bg-white hover:bg-gray-50"
                             style={{ borderColor: brandColor, color: brandColor }}
                             onClick={(e) => { e.stopPropagation(); setIsQuickViewOpen(true); }}
                             title="Quick View"
@@ -416,7 +416,7 @@ export function CarCard({
                         <Button
                             size="sm"
                             variant="outline"
-                            className="shrink-0 gap-1 text-xs h-8 px-2.5 font-medium bg-transparent"
+                            className="shrink-0 gap-1 text-xs h-11 px-3 rounded-xl font-medium bg-white hover:bg-gray-50"
                             style={inCompare
                                 ? { backgroundColor: brandColor, color: getContrastText(brandColor), borderColor: brandColor }
                                 : { borderColor: brandColor, color: brandColor }}
@@ -476,14 +476,14 @@ function SpecItem({
     value: string;
 }) {
     return (
-        <div className={cn("flex items-center gap-2 p-2 rounded-xl bg-white border border-gray-200", !value && "invisible")}>
-            <div className="w-7 h-7 rounded-lg flex items-center justify-center shrink-0 bg-gray-50 border border-gray-200">
+        <div className={cn("flex items-center gap-2.5 p-2.5 rounded-xl bg-gray-50 border border-gray-200", !value && "invisible")}>
+            <div className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0 bg-white border border-gray-200">
                 {icon}
             </div>
             <div className="min-w-0">
-                <p className="text-[11px] text-gray-500 leading-none mb-0.5">{label}</p>
+                <p className="text-[11px] text-gray-500 leading-none mb-1">{label}</p>
                 <p
-                    className="text-xs font-bold leading-tight truncate text-gray-800"
+                    className="text-[13px] font-semibold leading-tight truncate text-gray-800"
                     title={value}
                 >
                     {value}
@@ -573,27 +573,27 @@ function VariantAccordionButton({
                     onClick={e => { e.stopPropagation(); setOpen(false); }}
                 >
                     <div
-                        className="w-full max-w-lg bg-background rounded-2xl border border-border shadow-2xl overflow-hidden max-h-[90vh] flex flex-col"
+                        className="w-full max-w-lg bg-white rounded-2xl border border-gray-200 shadow-2xl overflow-hidden max-h-[90vh] flex flex-col"
                         onClick={e => e.stopPropagation()}
                     >
                         {/* ── Header ── */}
                         <div
-                            className="px-4 py-3 flex items-center justify-between shrink-0 bg-background border-b border-border"
+                            className="px-4 py-3 flex items-center justify-between shrink-0 bg-white border-b border-gray-200"
                         >
                             <div className="flex items-center gap-2">
                                 {logoSrc && <Image src={logoSrc} alt={make} width={20} height={20} className="object-contain" />}
                                 <div>
                                     <p className="text-[10px] font-semibold uppercase tracking-widest" style={{ color: brandColor }}>{make}</p>
-                                    <p className="text-sm font-bold text-foreground leading-tight">{model}</p>
+                                    <p className="text-sm font-bold text-gray-900 leading-tight">{model}</p>
                                 </div>
                             </div>
                             <div className="flex items-center gap-2">
-                                <Badge variant="outline" className="text-[11px] text-muted-foreground border-border">
+                                <Badge variant="outline" className="text-[11px] text-gray-500 border-gray-200">
                                     {variants.length > 0 ? `${variants.length} variants` : 'No data'}
                                 </Badge>
                                 <button
                                     onClick={e => { e.stopPropagation(); setOpen(false); }}
-                                    className="w-7 h-7 rounded-full bg-muted flex items-center justify-center hover:bg-muted/80 transition-colors"
+                                    className="w-7 h-7 rounded-full bg-gray-100 text-gray-600 flex items-center justify-center hover:bg-gray-200 transition-colors"
                                 >
                                     <ChevronDown className="w-4 h-4" />
                                 </button>
@@ -603,14 +603,14 @@ function VariantAccordionButton({
                         {/* ── Scrollable body ── */}
                         <div className="overflow-y-auto flex-1">
                             {variants.length === 0 ? (
-                                <p className="text-sm text-muted-foreground text-center py-8 px-5">
+                                <p className="text-sm text-gray-500 text-center py-8 px-5">
                                     No variant data available for {model}
                                 </p>
                             ) : (
                                 <>
                                     {/* Variant chips */}
                                     <div className="px-4 pt-3 pb-2">
-                                        <p className="text-[11px] text-muted-foreground mb-2">Select a variant to see specs</p>
+                                        <p className="text-[11px] text-gray-500 mb-2">Select a variant to see specs</p>
                                         <div className="flex flex-wrap gap-2">
                                             {variants.map((v) => {
                                                 const isSelected = selected?.variant_name === v.variant_name;
@@ -636,7 +636,7 @@ function VariantAccordionButton({
                                             })}
                                         </div>
                                         {/* Fuel legend */}
-                                        <div className="flex flex-wrap gap-2 mt-3 pt-2 border-t border-border">
+                                        <div className="flex flex-wrap gap-2 mt-3 pt-2 border-t border-gray-200">
                                             {Array.from(new Set(variants.map(v => v.fuel_type).filter(Boolean))).map(fuel => (
                                                 <span key={fuel} className={cn('text-[10px] px-2 py-0.5 rounded border', fuelChipClass(fuel))}>{fuel}</span>
                                             ))}
@@ -645,17 +645,17 @@ function VariantAccordionButton({
 
                                     {/* ── Selected variant specs (inline) ── */}
                                     {selected && (
-                                        <div className="border-t border-border mx-4 mt-1 pt-3 pb-4 space-y-3">
+                                        <div className="border-t border-gray-200 mx-4 mt-1 pt-3 pb-4 space-y-3">
                                             {/* Price + badges */}
                                             <div className="flex items-end justify-between">
                                                 <div>
-                                                    <p className="text-[10px] text-muted-foreground">Ex-Showroom</p>
+                                                    <p className="text-[10px] text-gray-500">Ex-Showroom</p>
                                                     <p className="text-xl font-bold" style={{ color: brandColor }}>
                                                         {fmtPrice(selected.ex_showroom_price_min_inr)}
                                                     </p>
                                                     {selected.hyderabad_on_road_price && (
-                                                        <p className="text-[10px] text-muted-foreground mt-0.5">
-                                                            On-Road (Hyd): <span className="font-semibold text-foreground">{fmtPrice(selected.hyderabad_on_road_price)}</span>
+                                                        <p className="text-[10px] text-gray-500 mt-0.5">
+                                                            On-Road (Hyd): <span className="font-semibold text-gray-900">{fmtPrice(selected.hyderabad_on_road_price)}</span>
                                                         </p>
                                                     )}
                                                 </div>
@@ -710,10 +710,10 @@ function VariantAccordionButton({
                                             {/* Key features */}
                                             {selected.key_features && (
                                                 <div>
-                                                    <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground mb-1.5">Key Features</p>
+                                                    <p className="text-[10px] font-semibold uppercase tracking-wider text-gray-500 mb-1.5">Key Features</p>
                                                     <div className="flex flex-wrap gap-1.5">
                                                         {parseKeyFeatures(selected.key_features).map((f, i) => (
-                                                            <span key={i} className="text-[10px] px-2 py-0.5 rounded-full bg-muted text-foreground border border-border">{f.trim()}</span>
+                                                            <span key={i} className="text-[10px] px-2 py-0.5 rounded-full bg-gray-50 text-gray-700 border border-gray-200">{f.trim()}</span>
                                                         ))}
                                                     </div>
                                                 </div>
@@ -722,10 +722,10 @@ function VariantAccordionButton({
                                             {/* Safety features */}
                                             {selected.safety_features && (
                                                 <div>
-                                                    <p className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground mb-1.5">Safety</p>
+                                                    <p className="text-[10px] font-semibold uppercase tracking-wider text-gray-500 mb-1.5">Safety</p>
                                                     <div className="flex flex-wrap gap-1.5">
                                                         {parseSafetyFeatures(selected.safety_features).map((f, i) => (
-                                                            <span key={i} className="text-[10px] px-2 py-0.5 rounded-full bg-red-500/10 text-red-400 border border-red-500/20">{f.trim()}</span>
+                                                            <span key={i} className="text-[10px] px-2 py-0.5 rounded-full bg-red-50 text-red-600 border border-red-200">{f.trim()}</span>
                                                         ))}
                                                     </div>
                                                 </div>
@@ -755,11 +755,11 @@ function VariantAccordionButton({
 /** Compact spec chip inside the inline popup */
 function PopSpecChip({ icon, label, value }: { icon: React.ReactNode; label: string; value: string }) {
     return (
-        <div className="flex items-center gap-2 p-2 rounded-lg bg-muted/30 border border-border">
-            <div className="w-6 h-6 rounded-md bg-background border border-border flex items-center justify-center shrink-0">{icon}</div>
+        <div className="flex items-center gap-2 p-2 rounded-lg bg-gray-50 border border-gray-200">
+            <div className="w-6 h-6 rounded-md bg-white border border-gray-200 flex items-center justify-center shrink-0">{icon}</div>
             <div className="min-w-0">
-                <p className="text-[9px] text-muted-foreground leading-none">{label}</p>
-                <p className="text-[11px] font-semibold text-foreground mt-0.5 truncate" title={value}>{value}</p>
+                <p className="text-[9px] text-gray-500 leading-none">{label}</p>
+                <p className="text-[11px] font-semibold text-gray-900 mt-0.5 truncate" title={value}>{value}</p>
             </div>
         </div>
     );

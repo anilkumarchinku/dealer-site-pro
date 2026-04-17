@@ -223,10 +223,10 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
 
     return (
         <Dialog open={open} onOpenChange={onOpenChange}>
-            <DialogContent className="max-w-3xl max-h-[92vh] overflow-hidden flex flex-col p-0 gap-0 bg-white text-gray-900 dark:bg-slate-950 dark:text-slate-100 dark:border-slate-800">
+            <DialogContent className="max-w-3xl max-h-[92vh] overflow-hidden flex flex-col p-0 gap-0 bg-white text-gray-900 border border-gray-200 shadow-2xl">
 
                 {/* ══ HEADER ══════════════════════════════════════════════════ */}
-                <div className="shrink-0 border-b border-gray-200 bg-white dark:border-slate-800 dark:bg-slate-950" style={{ background: `linear-gradient(135deg, ${brandColor}10 0%, transparent 60%)` }}>
+                <div className="shrink-0 border-b border-gray-200 bg-white" style={{ background: `linear-gradient(135deg, ${brandColor}10 0%, transparent 60%)` }}>
                     <DialogHeader className="p-5 pb-4">
                         <div className="flex items-start justify-between gap-4">
                             {/* Brand + model */}
@@ -237,13 +237,13 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
                                     </div>
                                 )}
                                 <div className="min-w-0">
-                                    <DialogTitle className="text-lg font-extrabold text-gray-900 dark:text-slate-100 leading-tight">
+                                    <DialogTitle className="text-lg font-extrabold text-gray-900 leading-tight">
                                         {car.make} {car.model}
                                     </DialogTitle>
                                     <DialogDescription className="sr-only">
                                         Quick view — {car.make} {car.model} {car.variant}
                                     </DialogDescription>
-                                    <p className="text-xs text-gray-500 dark:text-slate-400 mt-0.5 truncate">
+                                    <p className="text-xs text-gray-500 mt-0.5 truncate">
                                         {car.variant} &bull; {car.year} &bull; {car.bodyType}
                                     </p>
                                 </div>
@@ -251,10 +251,10 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
 
                             {/* Price block */}
                             <div className="text-right shrink-0">
-                                <p className="text-[10px] uppercase tracking-widest text-gray-400 dark:text-slate-500">Ex-showroom</p>
-                                <p className="text-xl font-extrabold text-gray-900 dark:text-slate-100">
+                                <p className="text-[10px] uppercase tracking-widest text-gray-400">Ex-showroom</p>
+                                <p className="text-xl font-extrabold text-gray-900">
                                     {priceStart}
-                                    {hasRange && <span className="text-sm font-normal text-gray-400 dark:text-slate-500"> – {priceEnd}</span>}
+                                    {hasRange && <span className="text-sm font-normal text-gray-400"> – {priceEnd}</span>}
                                 </p>
                             </div>
                         </div>
@@ -271,12 +271,12 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
                 </div>
 
                 {/* ══ SCROLLABLE BODY ═════════════════════════════════════════ */}
-                <div className="flex-1 overflow-y-auto bg-white dark:bg-slate-950">
+                <div className="flex-1 overflow-y-auto bg-white">
                     <div className="p-5 space-y-5">
 
                         {/* Image gallery */}
                         <div className="space-y-2">
-                            <div className="relative aspect-[16/7] bg-gradient-to-br from-gray-100 to-gray-200 dark:from-slate-900 dark:to-slate-800 rounded-2xl overflow-hidden flex items-center justify-center">
+                            <div className="relative aspect-[16/7] bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl overflow-hidden flex items-center justify-center">
                                 {mainImage && mainImage !== '/placeholder-car.jpg'
                                     ? // eslint-disable-next-line @next/next/no-img-element
                                       <img
@@ -292,7 +292,7 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
                                         <div className="text-6xl">
                                             {car.vehicleCategory === '2w' ? '🏍️' : car.vehicleCategory === '3w' ? '🛺' : '🚗'}
                                         </div>
-                                        <p className="text-sm text-gray-500 dark:text-slate-400">Image not available</p>
+                                        <p className="text-sm text-gray-500">Image not available</p>
                                       </div>
                                 }
                             </div>
@@ -302,7 +302,7 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
                                         <button
                                             key={i}
                                             onClick={() => setActiveImage(img)}
-                                            className={`relative w-14 h-10 flex-shrink-0 rounded-lg overflow-hidden border-2 transition-all ${mainImage === img ? 'scale-105 shadow' : 'border-gray-200 dark:border-slate-800 opacity-60 hover:opacity-100'
+                                            className={`relative w-14 h-10 flex-shrink-0 rounded-lg overflow-hidden border-2 transition-all ${mainImage === img ? 'scale-105 shadow' : 'border-gray-200 opacity-60 hover:opacity-100'
                                                 }`}
                                             style={mainImage === img ? { borderColor: brandColor } : {}}
                                         >
@@ -315,9 +315,9 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
 
                         {/* Tabs */}
                         <Tabs defaultValue="variants">
-                            <TabsList className="w-full grid grid-cols-5 h-9 bg-gray-100 dark:bg-slate-900">
+                            <TabsList className="w-full grid grid-cols-5 h-9 bg-gray-100">
                                 {['variants', 'specs', 'features', 'colors', 'overview'].map(t => (
-                                    <TabsTrigger key={t} value={t} className="text-[11px] capitalize text-gray-600 dark:text-slate-400 dark:data-[state=active]:bg-slate-800 dark:data-[state=active]:text-slate-100">{t}</TabsTrigger>
+                                    <TabsTrigger key={t} value={t} className="text-[11px] capitalize text-gray-600 data-[state=active]:bg-white data-[state=active]:text-gray-900">{t}</TabsTrigger>
                                 ))}
                             </TabsList>
 
@@ -764,10 +764,10 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
                 </div>
 
                 {/* ══ STICKY FOOTER ═══════════════════════════════════════════ */}
-                <div className="shrink-0 border-t border-gray-100 bg-white dark:border-slate-800 dark:bg-slate-950 px-5 py-3.5 flex items-center gap-2.5">
+                <div className="shrink-0 border-t border-gray-100 bg-white px-5 py-3.5 flex items-center gap-2.5">
                     <Button
                         variant="outline"
-                        className="h-10 px-5 text-sm font-medium text-gray-600 border-gray-200 hover:bg-gray-50 dark:text-slate-300 dark:border-slate-700 dark:bg-slate-900 dark:hover:bg-slate-800"
+                        className="h-10 px-5 text-sm font-medium text-gray-600 border-gray-200 hover:bg-gray-50"
                         onClick={() => onOpenChange(false)}
                     >
                         Close

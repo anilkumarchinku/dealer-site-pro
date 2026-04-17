@@ -21,6 +21,7 @@ import {
     AccordionItem,
     AccordionTrigger,
 } from '@/components/ui/accordion';
+import { cn } from '@/lib/utils';
 import { formatPriceInLakhs } from '@/lib/utils/car-utils';
 import { X } from 'lucide-react';
 
@@ -194,19 +195,19 @@ export function CarFilters({ className, onFilterChange, hideBrand = false, showU
         (showUsedCarFilters && (kmRange[0] > 0 || kmRange[1] < KM_MAX_DEFAULT) ? 1 : 0);
 
     return (
-        <Card className={className}>
-            <CardHeader className="pb-3 pt-4 px-4">
+        <Card className={cn('overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm', className)}>
+            <CardHeader className="pb-3 pt-5 px-5 bg-gradient-to-b from-gray-50 to-white">
                 <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
-                        <h3 className="text-base font-semibold">Filters</h3>
+                        <h3 className="text-base font-semibold text-gray-900">Filters</h3>
                         {totalActive > 0 && (
-                            <Badge variant="secondary" className="text-[10px] h-5 px-1.5">
+                            <Badge variant="secondary" className="text-[10px] h-5 px-1.5 bg-gray-900 text-white hover:bg-gray-900">
                                 {totalActive}
                             </Badge>
                         )}
                     </div>
                     {totalActive > 0 && (
-                        <Button variant="ghost" size="sm" onClick={clearFilters} className="text-xs text-destructive hover:text-destructive h-7 px-2">
+                        <Button variant="ghost" size="sm" onClick={clearFilters} className="text-xs text-red-600 hover:text-red-700 hover:bg-red-50 h-8 px-2.5 rounded-lg">
                             <X className="w-3 h-3 mr-1" /> Clear
                         </Button>
                     )}
@@ -215,7 +216,7 @@ export function CarFilters({ className, onFilterChange, hideBrand = false, showU
 
             <Separator />
 
-            <CardContent className="px-4 pt-2 pb-4">
+            <CardContent className="px-5 pt-3 pb-5">
                 <Accordion type="multiple" defaultValue={['price', 'make', 'bodyType']} className="w-full">
                     {/* Price Range */}
                     <AccordionItem value="price" className="border-b-0">
@@ -231,9 +232,9 @@ export function CarFilters({ className, onFilterChange, hideBrand = false, showU
                                 className="mb-3"
                             />
                             <div className="flex items-center justify-between">
-                                <span className="text-xs font-medium px-2 py-1 bg-muted rounded-md">{formatPriceInLakhs(priceRange[0])}</span>
-                                <span className="text-xs text-muted-foreground">to</span>
-                                <span className="text-xs font-medium px-2 py-1 bg-muted rounded-md">{formatPriceInLakhs(priceRange[1])}</span>
+                                <span className="text-xs font-medium px-2 py-1 bg-gray-100 text-gray-700 rounded-md">{formatPriceInLakhs(priceRange[0])}</span>
+                                <span className="text-xs text-gray-500">to</span>
+                                <span className="text-xs font-medium px-2 py-1 bg-gray-100 text-gray-700 rounded-md">{formatPriceInLakhs(priceRange[1])}</span>
                             </div>
                         </AccordionContent>
                     </AccordionItem>
@@ -364,8 +365,8 @@ export function CarFilters({ className, onFilterChange, hideBrand = false, showU
                                         onClick={() => toggleItem(year, selectedYears, setSelectedYears)}
                                         className={`px-3 py-1.5 text-xs font-medium rounded-full border transition-colors ${
                                             selectedYears.includes(year)
-                                                ? 'bg-foreground text-background border-foreground'
-                                                : 'bg-background text-foreground border-border hover:bg-muted/50'
+                                                ? 'bg-gray-900 text-white border-gray-900'
+                                                : 'bg-white text-gray-700 border-gray-200 hover:bg-gray-50'
                                         }`}
                                     >
                                         {year}
@@ -393,8 +394,8 @@ export function CarFilters({ className, onFilterChange, hideBrand = false, showU
                                         onClick={() => toggleItem(seats, selectedSeating, setSelectedSeating)}
                                         className={`px-3 py-1.5 text-xs font-medium rounded-full border transition-colors ${
                                             selectedSeating.includes(seats)
-                                                ? 'bg-foreground text-background border-foreground'
-                                                : 'bg-background text-foreground border-border hover:bg-muted/50'
+                                                ? 'bg-gray-900 text-white border-gray-900'
+                                                : 'bg-white text-gray-700 border-gray-200 hover:bg-gray-50'
                                         }`}
                                     >
                                         {seats} Seater
@@ -427,11 +428,11 @@ export function CarFilters({ className, onFilterChange, hideBrand = false, showU
                                             className={`w-8 h-8 rounded-full border-2 transition-all ${
                                                 selectedColors.includes(color.name)
                                                     ? 'border-primary scale-110 ring-2 ring-primary/30'
-                                                    : 'border-border hover:scale-105'
+                                                    : 'border-gray-200 hover:scale-105'
                                             }`}
                                             style={{ backgroundColor: color.hex }}
                                         />
-                                        <span className="text-[9px] text-muted-foreground leading-none">{color.name}</span>
+                                        <span className="text-[9px] text-gray-500 leading-none">{color.name}</span>
                                     </button>
                                 ))}
                             </div>
@@ -453,11 +454,11 @@ export function CarFilters({ className, onFilterChange, hideBrand = false, showU
                                     className="mb-3"
                                 />
                                 <div className="flex items-center justify-between">
-                                    <span className="text-xs font-medium px-2 py-1 bg-muted rounded-md">
+                                    <span className="text-xs font-medium px-2 py-1 bg-gray-100 text-gray-700 rounded-md">
                                         {kmRange[0].toLocaleString()} km
                                     </span>
-                                    <span className="text-xs text-muted-foreground">to</span>
-                                    <span className="text-xs font-medium px-2 py-1 bg-muted rounded-md">
+                                    <span className="text-xs text-gray-500">to</span>
+                                    <span className="text-xs font-medium px-2 py-1 bg-gray-100 text-gray-700 rounded-md">
                                         {kmRange[1].toLocaleString()} km
                                     </span>
                                 </div>
@@ -494,7 +495,7 @@ export function CarFilters({ className, onFilterChange, hideBrand = false, showU
                     )}
                 </Accordion>
 
-                <Button className="w-full mt-4" size="sm" onClick={applyFilters}>
+                <Button className="w-full mt-5 h-11 rounded-xl text-sm font-semibold shadow-sm" size="sm" onClick={applyFilters}>
                     Apply Filters
                 </Button>
             </CardContent>

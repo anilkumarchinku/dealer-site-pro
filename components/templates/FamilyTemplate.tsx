@@ -638,7 +638,7 @@ export function FamilyTemplate({
                         </div>
                         <div className="flex flex-col lg:flex-row gap-8">
                             <div className="w-full lg:w-72">
-                                <div className="sticky top-24 bg-white rounded-2xl shadow-sm p-6"><CarFilters hideBrand={sellsNewCars} /></div>
+                                <div className="sticky top-24 rounded-2xl border border-gray-200 bg-gradient-to-b from-gray-50 to-white p-4 shadow-sm"><CarFilters hideBrand={sellsNewCars} /></div>
                             </div>
                             <div className="flex-1">
                                 <CarGrid

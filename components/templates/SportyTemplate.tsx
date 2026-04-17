@@ -641,7 +641,7 @@ export function SportyTemplate({
                         </div>
                         <div className="flex flex-col lg:flex-row gap-8">
                             <div className="w-full lg:w-72">
-                                <div className="sticky top-24 bg-gray-50 rounded-lg p-6 border border-gray-200">
+                                <div className="sticky top-24 rounded-2xl bg-gradient-to-b from-gray-50 to-white p-4 border border-gray-200 shadow-sm">
                                     <CarFilters hideBrand={sellsNewCars} />
                                 </div>
                             </div>
