@@ -3,6 +3,7 @@ import 'server-only'
 import fs from 'fs'
 import path from 'path'
 import type { Car, CarVariant } from '@/lib/types/car'
+import { CAR_MODEL_COLORS } from '@/lib/data/car-colors'
 
 const MAKE_TO_JSON: Record<string, string> = {
     'tata motors': 'tata',
@@ -186,6 +187,81 @@ function buildVariants(entries: Record<string, unknown>[], carId: string, fallba
         .filter((variant): variant is CarVariant => Boolean(variant))
 }
 
+function normalizeColorName(value: string): string {
+    return value
+        .replace(/\s+/g, ' ')
+        .replace(/\b([a-z])/gi, (match) => match.toUpperCase())
+        .trim()
+}
+
+function inferColorType(name: string): 'Solid' | 'Metallic' | 'Pearl' | string {
+    const normalized = name.toLowerCase()
+    if (normalized.includes('metallic')) return 'Metallic'
+    if (normalized.includes('pearl')) return 'Pearl'
+    return 'Solid'
+}
+
+function resolveVehicleColorHex(name: string): string {
+    const normalized = name.toLowerCase()
+    if (normalized.includes('white')) return '#F5F5F5'
+    if (normalized.includes('black')) return '#1A1A1A'
+    if (normalized.includes('silver')) return '#C0C0C0'
+    if (normalized.includes('grey') || normalized.includes('gray')) return '#808080'
+    if (normalized.includes('red') || normalized.includes('maroon')) return '#C00000'
+    if (normalized.includes('blue') || normalized.includes('navy')) return '#1E40AF'
+    if (normalized.includes('green') || normalized.includes('olive')) return '#2E7D32'
+    if (normalized.includes('yellow') || normalized.includes('gold')) return '#D4AF37'
+    if (normalized.includes('orange') || normalized.includes('bronze') || normalized.includes('copper')) return '#C26A2D'
+    if (normalized.includes('brown') || normalized.includes('beige') || normalized.includes('mocha')) return '#8B6B4A'
+    if (normalized.includes('purple') || normalized.includes('violet')) return '#6D28D9'
+    return '#9CA3AF'
+}
+
+function extractColors(entry: Record<string, unknown>): Array<{ name: string; type: string; hex: string; extraCost: number }> {
+    const candidateKeys = ['colors', 'colour_options', 'color_options', 'available_colors', 'available_colours']
+
+    for (const key of candidateKeys) {
+        const raw = entry[key]
+        if (!Array.isArray(raw) || raw.length === 0) continue
+
+        return raw
+            .map((color) => {
+                if (typeof color === 'string') {
+                    const name = normalizeColorName(color)
+                    return { name, type: inferColorType(name), hex: resolveVehicleColorHex(name), extraCost: 0 }
+                }
+
+                if (color && typeof color === 'object') {
+                    const record = color as Record<string, unknown>
+                    const name = normalizeColorName(String(record.name ?? record.value ?? record.label ?? ''))
+                    if (!name) return null
+                    const hex = String(record.hex ?? '').trim() || resolveVehicleColorHex(name)
+                    return {
+                        name,
+                        type: String(record.type ?? inferColorType(name)),
+                        hex,
+                        extraCost: parsePrice(record.extraCost ?? record.extra_cost) ?? 0,
+                    }
+                }
+
+                return null
+            })
+            .filter((color): color is { name: string; type: string; hex: string; extraCost: number } => Boolean(color))
+    }
+
+    return []
+}
+
+function uniqueColors(colors: Array<{ name: string; type: string; hex: string; extraCost: number }>) {
+    const seen = new Set<string>()
+    return colors.filter((color) => {
+        const key = normalizeText(color.name)
+        if (!key || seen.has(key)) return false
+        seen.add(key)
+        return true
+    })
+}
+
 export function hydrateCarWithJsonDetails(car: Car): Car {
     if (!car.make || !car.model) return car
 
@@ -249,6 +325,10 @@ export function hydrateCarWithJsonDetails(car: Car): Car {
         fuelTypes[0] ?? car.engine.type,
         transmissions[0] ?? car.transmission.type
     )
+    const jsonColors = uniqueColors(matchingVariants.flatMap(extractColors))
+    const fallbackColors = car.colors?.length
+        ? car.colors
+        : (CAR_MODEL_COLORS[`${car.make} ${car.model}`] ?? [])
 
     return {
         ...car,
@@ -314,6 +394,7 @@ export function hydrateCarWithJsonDetails(car: Car): Car {
             interior: car.images.interior,
             colors: car.images.colors,
         },
+        colors: jsonColors.length > 0 ? jsonColors : fallbackColors,
         variants: variantEntries.length > 0 ? variantEntries : car.variants,
         meta: {
             ...car.meta,
