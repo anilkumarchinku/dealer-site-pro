@@ -72,7 +72,7 @@ interface CarVariantInfo {
 
 function fmtPrice(inr?: number) {
     if (!inr) return '';
-    return `₹${(inr / 100000).toFixed(2)}L`;
+    return `₹${(inr / 100000).toFixed(2)} L`;
 }
 
 function fuelChipClass(fuel?: string) {
@@ -239,7 +239,12 @@ export function CarCard({
                                     fill
                                     unoptimized
                                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                                    className={cn(
+                                        "transition-transform duration-500 group-hover:scale-105",
+                                        (car.vehicleCategory === '2w' || car.vehicleCategory === '3w')
+                                            ? "object-contain p-3"
+                                            : "object-cover"
+                                    )}
                                     onError={() => {
                                         if (!imgError) {
                                             setImgError(true);
@@ -282,21 +287,8 @@ export function CarCard({
                         </div>
                     )}
 
-                    {/* Hover overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
-                    {/* Quick View */}
-                    <div className="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
-                        <Button
-                            size="sm"
-                            variant="secondary"
-                            className="w-full bg-white/90 backdrop-blur-sm text-gray-900 hover:bg-white shadow-md"
-                            onClick={handleQuickView}
-                        >
-                            <Eye className="w-3.5 h-3.5 mr-1.5" />
-                            Quick View
-                        </Button>
-                    </div>
+                    {/* Hover overlay — gradient only, Quick View is in the action bar */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
 
                 {/* ── Content ── */}
@@ -339,7 +331,7 @@ export function CarCard({
                                 <span className="text-xs text-gray-500">– {maxPrice}</span>
                             )}
                         </div>
-                        <p className="text-xs text-gray-500">Ex-showroom price</p>
+                        <p className="text-xs text-gray-500">{isUsed ? 'Selling price' : 'Ex-showroom price'}</p>
 
                         {showEMI && car.pricing.emi && (
                             <Badge variant="secondary" className="mt-1 text-xs font-medium gap-1 h-5" style={{ color: brandColor }}>
