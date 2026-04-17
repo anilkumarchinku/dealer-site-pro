@@ -507,6 +507,7 @@ export function ThreeWheelerTemplate({
                                         vehicle={v}
                                         slug={slug}
                                         brandColor={accent}
+                                        summaryOnly
                                         onLead={vid => { setLeadVehicleId(vid); setLeadVehicleName(vehicles.find(v => v.id === vid) ? `${vehicles.find(v => v.id === vid)!.brand} ${vehicles.find(v => v.id === vid)!.model}` : undefined) }}
                                     />
                                 ))}

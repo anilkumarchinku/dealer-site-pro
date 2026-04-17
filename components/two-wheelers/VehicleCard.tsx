@@ -16,6 +16,7 @@ interface Props {
     slug:       string
     dealerId?:  string
     brandColor?: string
+    summaryOnly?: boolean
     onLead?:    (vehicleId: string) => void
     onCompare?: (vehicle: TwoWheelerVehicle) => void
 }
@@ -34,7 +35,7 @@ function SpecItem({ icon, label, value }: { icon: React.ReactNode; label: string
     )
 }
 
-export function VehicleCard({ vehicle, slug, dealerId, brandColor = "#1f2937", onLead, onCompare }: Props) {
+export function VehicleCard({ vehicle, slug, dealerId, brandColor = "#1f2937", summaryOnly = false, onLead, onCompare }: Props) {
     const prefix = useSitePrefix(slug)
     const priceRaw = vehicle.ex_showroom_price_paise
     const price  = priceRaw > 0 ? (priceRaw / 100).toLocaleString("en-IN") : null
@@ -70,6 +71,77 @@ export function VehicleCard({ vehicle, slug, dealerId, brandColor = "#1f2937", o
 
     const engineValue = vehicle.engine_cc ? `${vehicle.engine_cc} cc` : "—"
     const typeLabel = vehicle.type.charAt(0).toUpperCase() + vehicle.type.slice(1)
+
+    if (summaryOnly) {
+        return (
+            <Link
+                href={`${prefix}/two-wheelers/${vehicle.id}`}
+                className="group relative flex h-full flex-col overflow-hidden rounded-xl border border-gray-200 bg-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
+            >
+                <div className="relative h-44 overflow-hidden bg-gray-50">
+                    {!imgFailed ? (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img
+                            src={imgSrc}
+                            alt={`${vehicle.brand} ${vehicle.model}`}
+                            className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105"
+                            onError={handleImgError}
+                        />
+                    ) : (
+                        <div className="flex h-full items-center justify-center text-sm text-gray-400">🏍️</div>
+                    )}
+
+                    <button
+                        onClick={(e) => { e.preventDefault(); e.stopPropagation(); setWishlisted(w => !w) }}
+                        className="absolute top-2.5 right-2.5 flex h-8 w-8 items-center justify-center rounded-full bg-white/85 shadow-sm backdrop-blur-sm transition-colors hover:bg-white"
+                    >
+                        <Heart className={`h-4 w-4 transition-colors ${wishlisted ? "fill-red-500 text-red-500" : "text-gray-400"}`} />
+                    </button>
+
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                </div>
+
+                <div className="flex flex-1 flex-col p-4">
+                    <div className="mb-5">
+                        <div className="flex items-center gap-1.5">
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img
+                                src={brandLogoSrc}
+                                alt=""
+                                className="h-4 w-4 rounded-sm object-contain"
+                                onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
+                            />
+                            <p className="truncate text-[11px] font-semibold uppercase tracking-wider" style={{ color: brandColor }}>
+                                {vehicle.brand}
+                            </p>
+                        </div>
+                        <h3 className="mt-2 line-clamp-2 text-xl font-bold leading-tight text-gray-900">
+                            {vehicle.model}
+                        </h3>
+                        <div className="mt-4">
+                            {price ? (
+                                <>
+                                    <p className="text-3xl font-black tracking-tight text-gray-900">₹{price}</p>
+                                    <p className="mt-1 text-sm text-gray-500">Ex-showroom price</p>
+                                </>
+                            ) : (
+                                <p className="text-base font-semibold italic text-gray-500">Price on request</p>
+                            )}
+                        </div>
+                    </div>
+
+                    <Button
+                        size="sm"
+                        className="mt-auto w-full text-white"
+                        style={{ backgroundColor: brandColor }}
+                    >
+                        <Eye className="mr-2 h-4 w-4" />
+                        View Details
+                    </Button>
+                </div>
+            </Link>
+        )
+    }
 
     return (
         <div className="group relative flex flex-col bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 cursor-pointer h-full">

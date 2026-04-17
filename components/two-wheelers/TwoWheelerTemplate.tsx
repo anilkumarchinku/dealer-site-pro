@@ -688,6 +688,7 @@ export function TwoWheelerTemplate({
                                                         vehicle={v}
                                                         slug={slug}
                                                         brandColor={brandTheme.accent}
+                                                        summaryOnly
                                                         onLead={vid => { setLeadType("best_price"); setLeadVehicleId(vid); setLeadVehicleName(`${v.brand} ${v.model}`) }}
                                                         onCompare={undefined}
                                                     />
@@ -709,6 +710,7 @@ export function TwoWheelerTemplate({
                                     vehicle={v}
                                     slug={slug}
                                     brandColor={theme.accent}
+                                    summaryOnly
                                     onLead={vid => { setLeadType("best_price"); setLeadVehicleId(vid); setLeadVehicleName(vehicles.find(x => x.id === vid) ? `${vehicles.find(x => x.id === vid)!.brand} ${vehicles.find(x => x.id === vid)!.model}` : undefined) }}
                                     onCompare={undefined}
                                 />
