@@ -31,9 +31,13 @@ const SheetOverlay = React.forwardRef<
 SheetOverlay.displayName = SheetPrimitive.Overlay.displayName
 
 const sheetVariants = cva(
-    "fixed z-50 gap-4 bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 p-6 shadow-lg transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500",
+    "fixed z-50 gap-4 p-6 shadow-lg transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500",
     {
         variants: {
+            appearance: {
+                default: "bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100",
+                light: "bg-white text-gray-900",
+            },
             side: {
                 top: "inset-x-0 top-0 border-b border-gray-200 dark:border-gray-700 data-[state=closed]:slide-out-to-top data-[state=open]:slide-in-from-top",
                 bottom:
@@ -44,6 +48,7 @@ const sheetVariants = cva(
             },
         },
         defaultVariants: {
+            appearance: "default",
             side: "right",
         },
     }
@@ -56,12 +61,12 @@ interface SheetContentProps
 const SheetContent = React.forwardRef<
     React.ElementRef<typeof SheetPrimitive.Content>,
     SheetContentProps
->(({ side = "right", className, children, ...props }, ref) => (
+>(({ side = "right", appearance = "default", className, children, ...props }, ref) => (
     <SheetPortal>
         <SheetOverlay />
         <SheetPrimitive.Content
             ref={ref}
-            className={cn(sheetVariants({ side }), className)}
+            className={cn(sheetVariants({ side, appearance }), className)}
             {...props}
         >
             <SheetPrimitive.Close className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-white dark:ring-offset-gray-900 transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-gray-400 dark:focus:ring-gray-600 focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-gray-100 dark:data-[state=open]:bg-gray-800">

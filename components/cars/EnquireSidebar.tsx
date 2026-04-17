@@ -279,7 +279,8 @@ export function EnquireSidebar({
         <Sheet open={open} onOpenChange={handleClose}>
             <SheetContent
                 side="right"
-                className="w-full sm:max-w-[420px] p-0 flex flex-col overflow-hidden"
+                appearance="light"
+                className="w-full sm:max-w-[420px] p-0 flex flex-col overflow-hidden bg-white text-gray-900 border-l border-gray-200"
             >
                 {/* Header */}
                 <div className="p-5 border-b border-gray-200 bg-white">

@@ -465,9 +465,9 @@ export function SportyTemplate({
                     </section>
 
                     {/* Customer Reviews */}
-                    <section className="py-16 bg-gray-950">
+                    <section className="py-16 bg-gradient-to-b from-white via-gray-50 to-white border-t border-gray-200">
                         <div className="max-w-7xl mx-auto px-4">
-                            <ReviewsSection dealerId={dealerId} brandColor={brandAccent} variant="dark" />
+                            <ReviewsSection dealerId={dealerId} brandColor={brandAccent} variant="light" />
                         </div>
                     </section>
 

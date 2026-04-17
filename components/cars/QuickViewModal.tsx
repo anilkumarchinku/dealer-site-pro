@@ -226,13 +226,13 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
             <DialogContent className="max-w-3xl max-h-[92vh] overflow-hidden flex flex-col p-0 gap-0 bg-white text-gray-900 border border-gray-200 shadow-2xl">
 
                 {/* ══ HEADER ══════════════════════════════════════════════════ */}
-                <div className="shrink-0 border-b border-gray-200 bg-white" style={{ background: `linear-gradient(135deg, ${brandColor}10 0%, transparent 60%)` }}>
+                <div className="shrink-0 border-b border-gray-200 bg-white" style={{ background: `linear-gradient(180deg, ${brandColor}0f 0%, rgba(255,255,255,0.96) 55%, #ffffff 100%)` }}>
                     <DialogHeader className="p-5 pb-4">
                         <div className="flex items-start justify-between gap-4">
                             {/* Brand + model */}
                             <div className="flex items-center gap-3 min-w-0">
                                 {logoSrc && (
-                                    <div className="w-10 h-10 rounded-xl bg-white shadow-sm border flex items-center justify-center shrink-0">
+                                    <div className="w-10 h-10 rounded-xl bg-white shadow-sm border border-gray-200 flex items-center justify-center shrink-0">
                                         <Image src={logoSrc} alt={car.make} width={28} height={28} className="object-contain" />
                                     </div>
                                 )}
@@ -276,7 +276,7 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
 
                         {/* Image gallery */}
                         <div className="space-y-2">
-                            <div className="relative aspect-[16/7] bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl overflow-hidden flex items-center justify-center">
+                            <div className="relative aspect-[16/7] bg-gradient-to-br from-gray-50 via-white to-gray-100 rounded-2xl overflow-hidden flex items-center justify-center border border-gray-200">
                                 {mainImage && mainImage !== '/placeholder-car.jpg'
                                     ? // eslint-disable-next-line @next/next/no-img-element
                                       <img
@@ -315,9 +315,9 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
 
                         {/* Tabs */}
                         <Tabs defaultValue="variants">
-                            <TabsList className="w-full grid grid-cols-5 h-9 bg-gray-100">
+                            <TabsList className="w-full grid grid-cols-5 h-10 rounded-xl border border-gray-200 bg-gray-50 p-1">
                                 {['variants', 'specs', 'features', 'colors', 'overview'].map(t => (
-                                    <TabsTrigger key={t} value={t} className="text-[11px] capitalize text-gray-600 data-[state=active]:bg-white data-[state=active]:text-gray-900">{t}</TabsTrigger>
+                                    <TabsTrigger key={t} value={t} className="rounded-lg text-[11px] capitalize text-gray-500 data-[state=active]:bg-white data-[state=active]:text-gray-900 data-[state=active]:shadow-sm">{t}</TabsTrigger>
                                 ))}
                             </TabsList>
 

@@ -48,23 +48,26 @@ export function VideoSection({
     if (videoUrl) {
         const embedUrl = buildEmbedUrl(videoUrl);
         return (
-            <section className="py-16 bg-gray-900">
+            <section className="py-16 bg-gradient-to-b from-white via-gray-50 to-white">
                 <div className="max-w-5xl mx-auto px-4">
                     {/* Section header */}
                     <div className="text-center mb-8">
-                        <span
-                            className="text-sm font-semibold uppercase tracking-widest"
-                            style={{ color: brandColor }}
-                        >
+                        <span className="text-sm font-semibold uppercase tracking-widest" style={{ color: brandColor }}>
                             Brand Video
                         </span>
-                        <h2 className="mt-2 text-3xl md:text-4xl font-bold text-white">
+                        <h2 className="mt-2 text-3xl md:text-4xl font-bold text-gray-900">
                             See {brandName} in Action
                         </h2>
+                        <p className="mt-3 text-base text-gray-600 max-w-2xl mx-auto">
+                            Explore the lineup, design highlights, and showroom walkthrough in one place.
+                        </p>
                     </div>
 
                     {/* YouTube iframe — aspect-video */}
-                    <div className="relative w-full overflow-hidden rounded-2xl shadow-2xl" style={{ paddingBottom: '56.25%' }}>
+                    <div
+                        className="relative w-full overflow-hidden rounded-[28px] border border-gray-200 bg-white shadow-[0_24px_70px_rgba(15,23,42,0.12)]"
+                        style={{ paddingBottom: '56.25%' }}
+                    >
                         <iframe
                             src={embedUrl}
                             title={`${brandName} video`}
@@ -80,15 +83,15 @@ export function VideoSection({
 
     // Promotional static fallback
     return (
-        <section className="py-20 bg-gray-900">
+        <section className="py-20 bg-gradient-to-b from-white via-gray-50 to-white">
             <div className="max-w-5xl mx-auto px-4 text-center">
                 {/* Play button */}
                 <div className="flex justify-center mb-8">
                     <div className="relative">
                         {/* Outer glow ring */}
                         <div
-                            className="w-24 h-24 rounded-full flex items-center justify-center"
-                            style={{ backgroundColor: '#FF0000' }}
+                            className="w-24 h-24 rounded-full flex items-center justify-center shadow-[0_18px_45px_rgba(37,99,235,0.24)]"
+                            style={{ background: `linear-gradient(135deg, ${brandColor}, #111827)` }}
                         >
                             <Play className="w-10 h-10 text-white fill-white ml-1" />
                         </div>
@@ -101,10 +104,10 @@ export function VideoSection({
                 </div>
 
                 {/* Title */}
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                     See {brandName} in Action
                 </h2>
-                <p className="text-gray-400 max-w-xl mx-auto text-base mb-10">
+                <p className="text-gray-600 max-w-xl mx-auto text-base mb-10">
                     Visit our showroom for a live demo — experience the power firsthand
                 </p>
 
@@ -115,9 +118,9 @@ export function VideoSection({
                         return (
                             <div
                                 key={stat.label}
-                                className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/10 text-white text-sm font-medium"
+                                className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-gray-200 bg-white text-gray-700 text-sm font-medium shadow-sm"
                             >
-                                <Icon className="w-4 h-4 opacity-80" style={{ color: brandColor }} />
+                                <Icon className="w-4 h-4" style={{ color: brandColor }} />
                                 {stat.label}
                             </div>
                         );
@@ -127,7 +130,8 @@ export function VideoSection({
                 {/* CTA */}
                 <a
                     href="#contact"
-                    className="inline-flex items-center gap-2 px-8 py-4 rounded-full text-white font-semibold text-base shadow-lg hover:opacity-90 transition-opacity bg-green-600"
+                    className="inline-flex items-center gap-2 px-8 py-4 rounded-full text-white font-semibold text-base shadow-lg hover:opacity-90 transition-opacity"
+                    style={{ backgroundColor: brandColor }}
                 >
                     <Play className="w-5 h-5 fill-white" />
                     Book a Showroom Visit

@@ -65,10 +65,11 @@ function GoogleLogo() {
 
 function ReviewCard({ review, variant }: { review: Review; variant: 'light' | 'dark' }) {
     const date = new Date(review.created_at).toLocaleDateString('en-IN', { month: 'short', year: 'numeric' });
-    const bg = variant === 'dark' ? 'bg-white/5 border-white/10' : 'bg-gray-50 border-gray-100';
-    const nameColor = variant === 'dark' ? 'text-white' : 'text-gray-900';
-    const textColor = variant === 'dark' ? 'text-gray-300' : 'text-gray-600';
-    const metaColor = variant === 'dark' ? 'text-gray-400' : 'text-gray-400';
+    const isMutedLight = variant === 'dark';
+    const bg = isMutedLight ? 'bg-white border-gray-200 shadow-sm' : 'bg-gray-50 border-gray-100';
+    const nameColor = 'text-gray-900';
+    const textColor = 'text-gray-600';
+    const metaColor = 'text-gray-400';
     const isGoogle = review.source === 'google';
 
     return (
@@ -153,15 +154,14 @@ export function ReviewsSection({ dealerId, brandColor = '#2563eb', variant = 'li
         }
     }
 
-    const headingColor = variant === 'dark' ? 'text-white' : 'text-gray-900'
-    const subColor     = variant === 'dark' ? 'text-gray-400' : 'text-gray-600'
-    const inputCls     = variant === 'dark'
-        ? 'bg-white/5 border-white/10 text-white placeholder:text-gray-500 focus:border-white/30'
-        : 'bg-gray-50 border-gray-200 text-gray-900 placeholder:text-gray-400 focus:border-gray-400'
-    const labelCls     = variant === 'dark' ? 'text-gray-300' : 'text-gray-700'
+    const isMutedLight = variant === 'dark'
+    const headingColor = 'text-gray-900'
+    const subColor     = isMutedLight ? 'text-gray-500' : 'text-gray-600'
+    const inputCls     = 'bg-gray-50 border-gray-200 text-gray-900 placeholder:text-gray-400 focus:border-gray-400'
+    const labelCls     = 'text-gray-700'
 
     return (
-        <section className="py-16">
+        <section className={`py-16 ${isMutedLight ? 'rounded-[32px] border border-gray-200 bg-gradient-to-b from-white via-gray-50 to-white px-5 md:px-8 shadow-sm' : ''}`}>
             {/* Header */}
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
                 <div>
@@ -190,7 +190,7 @@ export function ReviewsSection({ dealerId, brandColor = '#2563eb', variant = 'li
 
             {/* Review Form */}
             {showForm && (
-                <div className={`rounded-2xl border p-6 mb-8 ${variant === 'dark' ? 'bg-white/5 border-white/10' : 'bg-white border-gray-200 shadow-sm'}`}>
+                <div className="rounded-2xl border border-gray-200 bg-white p-6 mb-8 shadow-sm">
                     {submitStatus === 'done' ? (
                         <div className="text-center py-4">
                             <ThumbsUp className="w-10 h-10 mx-auto mb-2" style={{ color: brandColor }} />
@@ -264,7 +264,7 @@ export function ReviewsSection({ dealerId, brandColor = '#2563eb', variant = 'li
             {loading ? (
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                     {[1, 2, 3].map(i => (
-                        <div key={i} className={`rounded-2xl h-32 animate-pulse ${variant === 'dark' ? 'bg-white/5' : 'bg-gray-100'}`} />
+                        <div key={i} className={`rounded-2xl h-32 animate-pulse ${isMutedLight ? 'bg-white border border-gray-200' : 'bg-gray-100'}`} />
                     ))}
                 </div>
             ) : reviews.length === 0 ? (

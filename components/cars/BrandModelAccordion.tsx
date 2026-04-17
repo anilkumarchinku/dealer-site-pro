@@ -316,7 +316,7 @@ export function BrandModelAccordion({
 
             {/* ── Right-side Spec Sheet ── */}
             <Sheet open={sheetOpen} onOpenChange={setSheetOpen}>
-                <SheetContent side="right" className="w-full max-w-md sm:max-w-lg p-0 flex flex-col">
+                <SheetContent side="right" appearance="light" className="w-full max-w-md sm:max-w-lg p-0 flex flex-col bg-white text-gray-900 border-l border-gray-200">
                     {selectedVariant && (
                         <>
                             {/* Header */}
@@ -429,10 +429,10 @@ export function BrandModelAccordion({
                             {/* Sticky Enquire Bar */}
                             <div className="border-t border-gray-200 px-5 py-4 bg-white/95 backdrop-blur-sm">
                                 <div className="flex items-center gap-2 mb-3">
-                                    <Badge variant="outline" className="text-[11px]" style={{ borderColor: brandColor, color: brandColor }}>
+                                    <Badge variant="outline" className="text-[11px] bg-white text-gray-700 border-gray-200" style={{ borderColor: brandColor, color: brandColor }}>
                                         {selectedVariant.fuel_type}
                                     </Badge>
-                                    <Badge variant="outline" className="text-[11px]">
+                                    <Badge variant="outline" className="text-[11px] bg-white text-gray-700 border-gray-200">
                                         {selectedVariant.transmission}
                                     </Badge>
                                 </div>
