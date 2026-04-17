@@ -43,6 +43,7 @@ export interface ThreeWheelerVehicle {
     charging_time_hours:    number | null
     battery_warranty_years: number | null
     transmission:           string | null
+    wheelbase_mm?:          number | null
 
     // Cargo
     payload_kg:             number | null
@@ -69,6 +70,7 @@ export interface ThreeWheelerVehicle {
 
     stock_status:   ThreeWheelerStockStatus
     colors:         ThreeWheelerColor[]
+    all_variants?:  { name: string; price_paise: number }[]
     images:         string[]
     brochure_url:   string | null
     description:    string | null

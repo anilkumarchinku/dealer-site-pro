@@ -10,7 +10,7 @@ interface Props {
     slug:        string
 }
 
-export function SimilarVehicles({ currentId, dealerId, vehicleType }: Props) {
+export function SimilarVehicles({ currentId, dealerId, vehicleType, slug }: Props) {
     const [vehicles, setVehicles] = useState<ThreeWheelerVehicle[]>([])
 
     useEffect(() => {
@@ -33,7 +33,7 @@ export function SimilarVehicles({ currentId, dealerId, vehicleType }: Props) {
                 {vehicles.map(v => (
                     <a
                         key={v.id}
-                        href={`/three-wheelers/${v.id}`}
+                        href={`/sites/${slug}/three-wheelers/${v.id}`}
                         className="shrink-0 w-44 rounded-xl border border-border bg-card p-3 hover:shadow-md transition-shadow"
                     >
                         <img

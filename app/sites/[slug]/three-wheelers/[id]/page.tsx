@@ -37,7 +37,7 @@ export default function ThreeWheelerDetailPage() {
         async function load() {
             const [{ data: dealer }, vehicleRes] = await Promise.all([
                 supabase.from("dealers").select("id").eq("slug", slug).single(),
-                fetch(`/api/three-wheelers/${id}`),
+                fetch(`/api/three-wheelers/${encodeURIComponent(id)}?slug=${encodeURIComponent(slug)}`),
             ])
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
             if (dealer) setDealerId((dealer as any).id)
@@ -194,6 +194,20 @@ export default function ThreeWheelerDetailPage() {
                 </section>
             )}
 
+            {vehicle.colors.length > 0 && (
+                <section className="mt-8">
+                    <h2 className="text-xl font-bold mb-3">Available Colors</h2>
+                    <div className="flex flex-wrap gap-3">
+                        {vehicle.colors.map(color => (
+                            <div key={color.name} className="flex items-center gap-2 rounded-xl border border-border bg-white px-3 py-2">
+                                <span className="h-5 w-5 rounded-full border border-gray-200" style={{ backgroundColor: color.hex }} />
+                                <span className="text-sm font-medium">{color.name}</span>
+                            </div>
+                        ))}
+                    </div>
+                </section>
+            )}
+
             {/* EMI Calculator */}
             <section className="mt-10">
                 <h2 className="text-xl font-bold mb-4">Calculate EMI</h2>
@@ -211,7 +225,7 @@ export default function ThreeWheelerDetailPage() {
             {/* Similar Vehicles */}
             {dealerId && (
                 <SimilarVehicles
-                    currentId={id}
+                    currentId={vehicle.id}
                     dealerId={dealerId}
                     vehicleType={vehicle.type}
                     slug={slug}

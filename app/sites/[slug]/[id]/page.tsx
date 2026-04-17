@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import { CarDetailView } from '@/components/cars/CarDetailView';
 import { allCars, getCarsByMake } from '@/lib/data/cars';
+import { hydrateCarWithJsonDetails } from '@/lib/data/car-detail';
 import { fetchDealerBySlug } from '@/lib/db/dealers';
 import { fetchCyeproInventoryAsCars } from '@/lib/services/cyepro-service';
 import type { Car } from '@/lib/types/car';
@@ -89,7 +90,8 @@ export default async function SiteCarDetailPage({ params }: SiteCarDetailPagePro
         }
     }
 
-    const car = cars.find(item => item.id === id);
+    const selectedCar = cars.find(item => item.id === id);
+    const car = selectedCar ? hydrateCarWithJsonDetails(selectedCar) : null;
     if (!car) notFound();
 
     const similarCars = cars.filter(item => item.id !== id && item.make === car.make).slice(0, 4);

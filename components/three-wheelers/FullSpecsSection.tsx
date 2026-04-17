@@ -32,6 +32,7 @@ export function FullSpecsSection({ vehicle }: Props) {
         { label: "Torque",            value: vehicle.torque },
         { label: "Transmission",      value: vehicle.transmission },
         { label: "Max Speed",         value: vehicle.max_speed_kmph ? `${vehicle.max_speed_kmph} kmph` : null },
+        { label: "Wheelbase",         value: vehicle.wheelbase_mm ? `${vehicle.wheelbase_mm} mm` : null },
         { label: "Mileage (petrol)",  value: vehicle.mileage_kmpl ? `${vehicle.mileage_kmpl} kmpl` : null },
         { label: "CNG Mileage",       value: vehicle.cng_mileage_km_per_kg ? `${vehicle.cng_mileage_km_per_kg} km/kg` : null },
     ]
@@ -65,6 +66,19 @@ export function FullSpecsSection({ vehicle }: Props) {
             )}
             <SpecSection title="Cargo & Capacity" rows={cargoRows} />
             <SpecSection title="Regulatory" rows={regulatoryRows} />
+            {vehicle.all_variants && vehicle.all_variants.length > 1 && (
+                <>
+                    <h3 className="text-base font-semibold text-foreground mb-3 mt-6">Variants</h3>
+                    {vehicle.all_variants.map(variant => (
+                        <div key={variant.name} className="flex justify-between py-2.5 border-b border-border/50 text-sm">
+                            <span className="text-muted-foreground">{variant.name}</span>
+                            <span className="font-medium text-right">
+                                ₹{(variant.price_paise / 100).toLocaleString("en-IN")}
+                            </span>
+                        </div>
+                    ))}
+                </>
+            )}
         </section>
     )
 }
