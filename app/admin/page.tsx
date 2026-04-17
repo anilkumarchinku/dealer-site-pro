@@ -304,12 +304,12 @@ export default function AdminDashboard() {
                 <div className="text-center space-y-1">
                     <div className="text-3xl font-bold">🔐</div>
                     <h1 className="text-xl font-semibold text-foreground">Admin Access</h1>
-                    <p className="text-sm text-muted-foreground">Enter admin credentials to continue</p>
+                    <p className="text-sm text-muted-foreground">Enter your admin username or admin email, plus password</p>
                 </div>
                 <form onSubmit={handlePasswordSubmit} className="space-y-4">
                     <input
                         type="text"
-                        placeholder="Admin username"
+                        placeholder="Admin username or email"
                         value={usernameInput}
                         onChange={e => setUsernameInput(e.target.value)}
                         autoFocus

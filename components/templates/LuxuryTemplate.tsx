@@ -342,7 +342,7 @@ export function LuxuryTemplate({
                                 <span className="text-sm tracking-widest uppercase" style={{ color: brandAccent }}>Curated Selection</span>
                                 <h2 className="text-5xl font-light mt-4 text-gray-900">Featured Collection</h2>
                             </div>
-                            <CarGrid cars={featuredCars} brandColor={brandAccent} dealerPhone={contactInfo.phone} dealerId={dealerId} />
+                            <CarGrid cars={featuredCars} brandColor={brandAccent} light dealerPhone={contactInfo.phone} dealerId={dealerId} />
                             {showInventoryTab && (
                                 <div className="text-center mt-10">
                                     <Button variant="outline" className="border-gray-300 bg-transparent text-gray-900 hover:bg-gray-100" onClick={() => setActiveTab('inventory')}>

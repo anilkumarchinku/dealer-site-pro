@@ -117,6 +117,7 @@ export function CarCard({
     const [aggregatedSpecs, setAggregatedSpecs] = useState<ReturnType<typeof formatSpecsForDisplay>>(null);
     const { addCar, removeCar, isSelected } = useCompareStore();
     const inCompare = isSelected(car.id);
+    const useLightSurface = light ?? false;
 
     useEffect(() => {
         const fetchSpecs = async () => {
@@ -217,9 +218,9 @@ export function CarCard({
             <Card
                 className={cn(
                     'group relative flex flex-col overflow-hidden transition-all duration-300 cursor-pointer h-full',
-                    'bg-white border border-gray-200 text-gray-900',
-                    'dark:bg-slate-950 dark:border-slate-800 dark:text-slate-100 dark:hover:border-slate-700',
-                    'hover:border-gray-300',
+                    useLightSurface
+                        ? 'bg-white border border-gray-200 text-gray-900 hover:border-gray-300'
+                        : 'bg-white border border-gray-200 text-gray-900 hover:border-gray-300 dark:bg-slate-950 dark:border-slate-800 dark:text-slate-100 dark:hover:border-slate-700',
                     'hover:shadow-lg hover:-translate-y-0.5',
                     'rounded-xl',
                     className
@@ -227,7 +228,10 @@ export function CarCard({
                 onClick={handleEnquireNow}
             >
                 {/* ── Image ── */}
-                <div className="relative aspect-[16/10] overflow-hidden bg-white dark:bg-slate-900">
+                <div className={cn(
+                    "relative aspect-[16/10] overflow-hidden bg-white",
+                    !useLightSurface && "dark:bg-slate-900"
+                )}>
                     {(() => {
                         const fallbackUrls = cardImageUrls;
                         const displayUrl = (!car.images.hero || car.images.hero === '/placeholder-car.jpg' || imgError)
@@ -261,7 +265,10 @@ export function CarCard({
                             );
                         }
                         return (
-                            <div className="flex items-center justify-center h-full bg-white border-b border-gray-100 dark:bg-slate-900 dark:border-slate-800">
+                            <div className={cn(
+                                "flex items-center justify-center h-full bg-white border-b border-gray-100",
+                                !useLightSurface && "dark:bg-slate-900 dark:border-slate-800"
+                            )}>
                                 <span className="text-4xl">
                                     {car.vehicleCategory === '2w' ? '🏍️' : car.vehicleCategory === '3w' ? '🛺' : '🚗'}
                                 </span>
@@ -295,7 +302,10 @@ export function CarCard({
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
                         <button
                             onClick={handleQuickView}
-                            className="flex items-center gap-1.5 bg-white/95 text-gray-900 backdrop-blur-sm text-xs font-semibold px-4 py-2 rounded-full shadow-md hover:bg-white hover:shadow-lg dark:bg-slate-950/90 dark:text-slate-100 dark:hover:bg-slate-900 transition-all scale-95 group-hover:scale-100"
+                            className={cn(
+                                "flex items-center gap-1.5 bg-white/95 text-gray-900 backdrop-blur-sm text-xs font-semibold px-4 py-2 rounded-full shadow-md hover:bg-white hover:shadow-lg transition-all scale-95 group-hover:scale-100",
+                                !useLightSurface && "dark:bg-slate-950/90 dark:text-slate-100 dark:hover:bg-slate-900"
+                            )}
                         >
                             <Eye className="w-3.5 h-3.5" />
                             Quick View
@@ -322,11 +332,17 @@ export function CarCard({
                                 </span>
                             )}
                         </div>
-                        <h3 className="text-base font-bold leading-tight line-clamp-1 text-gray-900 dark:text-slate-100 mt-0.5">
+                        <h3 className={cn(
+                            "text-base font-bold leading-tight line-clamp-1 text-gray-900 mt-0.5",
+                            !useLightSurface && "dark:text-slate-100"
+                        )}>
                             {car.model}
                         </h3>
                         {car.variant && (
-                            <p className="text-xs line-clamp-1 text-gray-600 dark:text-slate-400 mt-0.5">
+                            <p className={cn(
+                                "text-xs line-clamp-1 text-gray-600 mt-0.5",
+                                !useLightSurface && "dark:text-slate-400"
+                            )}>
                                 {car.variant}
                             </p>
                         )}
@@ -336,14 +352,23 @@ export function CarCard({
                     {/* Price */}
                     <div className="mb-2">
                         <div className="flex items-baseline gap-1.5 flex-wrap">
-                            <span className="text-lg font-bold text-gray-900 dark:text-slate-100">
+                            <span className={cn(
+                                "text-lg font-bold text-gray-900",
+                                !useLightSurface && "dark:text-slate-100"
+                            )}>
                                 {priceRange}
                             </span>
                             {hasPriceRange && (
-                                <span className="text-xs text-gray-500 dark:text-slate-400">– {maxPrice}</span>
+                                <span className={cn(
+                                    "text-xs text-gray-500",
+                                    !useLightSurface && "dark:text-slate-400"
+                                )}>– {maxPrice}</span>
                             )}
                         </div>
-                        <p className="text-xs text-gray-600 dark:text-slate-400">{isUsed ? 'Selling price' : 'Ex-showroom price'}</p>
+                        <p className={cn(
+                            "text-xs text-gray-600",
+                            !useLightSurface && "dark:text-slate-400"
+                        )}>{isUsed ? 'Selling price' : 'Ex-showroom price'}</p>
 
                         {showEMI && car.pricing.emi && (
                             <Badge variant="secondary" className="mt-1 text-xs font-medium gap-1 h-5" style={{ color: brandColor }}>
@@ -395,7 +420,10 @@ export function CarCard({
                             <Button
                                 size="sm"
                                 variant="outline"
-                                className="shrink-0 gap-1.5 text-xs h-8 px-2.5 font-semibold bg-transparent dark:bg-slate-950/60 dark:hover:bg-slate-900"
+                                className={cn(
+                                    "shrink-0 gap-1.5 text-xs h-8 px-2.5 font-semibold bg-transparent",
+                                    !useLightSurface && "dark:bg-slate-950/60 dark:hover:bg-slate-900"
+                                )}
                                 style={{ borderColor: brandColor, color: brandColor }}
                                 onClick={(e) => { e.stopPropagation(); setIsTestDriveOpen(true); }}
                                 title="Book Test Drive"
@@ -407,7 +435,10 @@ export function CarCard({
                         <Button
                             size="sm"
                             variant="outline"
-                            className="shrink-0 gap-1 text-xs h-8 px-2.5 font-medium bg-transparent dark:bg-slate-950/60 dark:hover:bg-slate-900"
+                            className={cn(
+                                "shrink-0 gap-1 text-xs h-8 px-2.5 font-medium bg-transparent",
+                                !useLightSurface && "dark:bg-slate-950/60 dark:hover:bg-slate-900"
+                            )}
                             style={{ borderColor: brandColor, color: brandColor }}
                             onClick={(e) => { e.stopPropagation(); setIsQuickViewOpen(true); }}
                             title="Quick View"
@@ -417,7 +448,10 @@ export function CarCard({
                         <Button
                             size="sm"
                             variant="outline"
-                            className="shrink-0 gap-1 text-xs h-8 px-2.5 font-medium bg-transparent dark:bg-slate-950/60 dark:hover:bg-slate-900"
+                            className={cn(
+                                "shrink-0 gap-1 text-xs h-8 px-2.5 font-medium bg-transparent",
+                                !useLightSurface && "dark:bg-slate-950/60 dark:hover:bg-slate-900"
+                            )}
                             style={inCompare
                                 ? { backgroundColor: brandColor, color: getContrastText(brandColor), borderColor: brandColor }
                                 : { borderColor: brandColor, color: brandColor }}
@@ -477,14 +511,14 @@ function SpecItem({
     value: string;
 }) {
     return (
-        <div className={cn("flex items-center gap-2 p-2 rounded-xl bg-white border border-gray-200 dark:bg-slate-900/80 dark:border-slate-800", !value && "invisible")}>
-            <div className="w-7 h-7 rounded-lg flex items-center justify-center shrink-0 bg-gray-50 border border-gray-200 dark:bg-slate-950 dark:border-slate-800">
+        <div className={cn("flex items-center gap-2 p-2 rounded-xl bg-white border border-gray-200", !value && "invisible")}>
+            <div className="w-7 h-7 rounded-lg flex items-center justify-center shrink-0 bg-gray-50 border border-gray-200">
                 {icon}
             </div>
             <div className="min-w-0">
-                <p className="text-[11px] text-gray-500 dark:text-slate-400 leading-none mb-0.5">{label}</p>
+                <p className="text-[11px] text-gray-500 leading-none mb-0.5">{label}</p>
                 <p
-                    className="text-xs font-bold leading-tight truncate text-gray-800 dark:text-slate-100"
+                    className="text-xs font-bold leading-tight truncate text-gray-800"
                     title={value}
                 >
                     {value}
