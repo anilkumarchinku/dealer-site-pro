@@ -85,6 +85,7 @@ interface CarCardProps {
     car: Car;
     variant?: 'compact' | 'detailed';
     showEMI?: boolean;
+    summaryOnly?: boolean;
     onViewDetails?: (carId: string) => void;
     onCompare?: (carId: string) => void;
     className?: string;
@@ -103,6 +104,7 @@ export function CarCard({
     car,
     variant = 'compact',
     showEMI = true,
+    summaryOnly = false,
     onViewDetails,
     className,
     brandColor = '#2563eb',
@@ -221,6 +223,95 @@ export function CarCard({
     const cardDisplayUrl = shouldPreferResolvedImages
         ? (cardImageUrls[scrapedIdx] || null)
         : car.images.hero;
+
+    if (summaryOnly) {
+        return (
+            <>
+                <Card
+                    className={cn(
+                        'group relative flex h-full cursor-pointer flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white text-gray-900 transition-all duration-300 hover:-translate-y-1 hover:border-gray-300 hover:shadow-xl',
+                        className
+                    )}
+                    onClick={handleViewDetails}
+                >
+                    <div className="relative aspect-[16/10] overflow-hidden bg-white">
+                        {cardDisplayUrl ? (
+                            <Image
+                                src={cardDisplayUrl}
+                                alt={`${car.make} ${car.model}`}
+                                fill
+                                unoptimized
+                                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                className={cn(
+                                    'transition-transform duration-500 group-hover:scale-105',
+                                    (car.vehicleCategory === '2w' || car.vehicleCategory === '3w')
+                                        ? 'object-contain p-3'
+                                        : 'object-cover'
+                                )}
+                                onError={() => {
+                                    if (!imgError) {
+                                        setImgError(true);
+                                    } else if (scrapedIdx < cardImageUrls.length - 1) {
+                                        setScrapedIdx((prev) => prev + 1);
+                                    } else {
+                                        setScrapedIdx(cardImageUrls.length);
+                                    }
+                                }}
+                            />
+                        ) : (
+                            <div className="flex h-full items-center justify-center bg-white border-b border-gray-100">
+                                <span className="text-4xl">
+                                    {car.vehicleCategory === '2w' ? '🏍️' : car.vehicleCategory === '3w' ? '🛺' : '🚗'}
+                                </span>
+                            </div>
+                        )}
+
+                        <div className="absolute top-2 right-2 z-10">
+                            <WishlistButton carId={car.id} />
+                        </div>
+
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                    </div>
+
+                    <CardContent className="flex flex-1 flex-col p-5">
+                        <div className="mb-5">
+                            <div className="flex items-center gap-1.5 min-w-0">
+                                {getBrandLogo(car.make) && (
+                                    <Image src={getBrandLogo(car.make)!} alt={car.make} width={16} height={16} className="object-contain shrink-0" />
+                                )}
+                                <p className="truncate text-[11px] font-semibold uppercase tracking-[0.22em]" style={{ color: brandColor }}>
+                                    {car.make}
+                                </p>
+                            </div>
+                            <h3 className="mt-2 line-clamp-2 text-[1.375rem] font-bold leading-[1.15] text-gray-900">
+                                {car.model}
+                            </h3>
+                            <div className="mt-4">
+                                <p className="text-3xl font-black tracking-tight text-gray-900">{priceRange}</p>
+                                <p className="mt-1 text-sm text-gray-500">Ex-showroom price</p>
+                            </div>
+                        </div>
+
+                        <div className="mt-auto">
+                            <Button
+                                type="button"
+                                onClick={handleViewDetails}
+                                className="w-full rounded-xl text-sm font-semibold text-white shadow-sm hover:shadow-md"
+                                style={{
+                                    backgroundColor: brandColor,
+                                    borderColor: brandColor,
+                                    color: getContrastText(brandColor),
+                                }}
+                            >
+                                <Eye className="mr-2 h-4 w-4" />
+                                View Details
+                            </Button>
+                        </div>
+                    </CardContent>
+                </Card>
+            </>
+        );
+    }
 
     return (
         <>

@@ -389,7 +389,7 @@ export function FamilyTemplate({
                                 </span>
                                 <h2 className="text-4xl font-bold mt-2">Family-Friendly Vehicles</h2>
                             </div>
-                            <CarGrid cars={featuredCars} brandColor={brandColors.primary} light detailBasePath={siteBase} dealerPhone={contactInfo.phone} dealerId={dealerId} />
+                            <CarGrid cars={featuredCars} brandColor={brandColors.primary} light summaryOnly detailBasePath={siteBase} dealerPhone={contactInfo.phone} dealerId={dealerId} />
                             {showInventoryTab && (
                                 <div className="text-center mt-8">
                                     <Button variant="outline" size="lg" className="rounded-full bg-white text-gray-700 border-gray-300 hover:bg-gray-100" onClick={() => setActiveTab('inventory')}>

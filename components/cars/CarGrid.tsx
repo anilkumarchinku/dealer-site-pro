@@ -13,6 +13,7 @@ interface CarGridProps {
     cars: Car[];
     variant?: 'compact' | 'detailed';
     showEMI?: boolean;
+    summaryOnly?: boolean;
     onViewDetails?: (carId: string) => void;
     onCompare?: (carId: string) => void;
     className?: string;
@@ -32,6 +33,7 @@ export function CarGrid({
     cars,
     variant = 'compact',
     showEMI = true,
+    summaryOnly = false,
     onViewDetails,
     onCompare,
     className,
@@ -65,6 +67,7 @@ export function CarGrid({
                     car={car}
                     variant={variant}
                     showEMI={showEMI}
+                    summaryOnly={summaryOnly}
                     onViewDetails={onViewDetails}
                     onCompare={onCompare}
                     brandColor={brandColor}
