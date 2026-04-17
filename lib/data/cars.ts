@@ -311,6 +311,146 @@ export function getLocal3WImage(brand: string, model: string): string | null {
     return null
 }
 
+// ── JSON-based catalog fallback (mirrors admin catalog/page.tsx load4W logic) ─
+
+function parsePriceINR(priceStr: string): number {
+    return parseInt(String(priceStr).replace(/[^0-9]/g, ''), 10) || 0
+}
+
+/**
+ * Load 4W models from brand JSON when DB is empty.
+ * Uses the same recursive walk() pattern as the admin catalog page (load4W).
+ * Falls back to local committed images for models without a CDN image.
+ */
+function getCarsByMakeFromJson(make: string): Car[] {
+    const jsonKey = MAKE_TO_JSON[make.toLowerCase()]
+    if (!jsonKey) return []
+    try {
+        const filePath = path.join(process.cwd(), 'public', 'data', `${jsonKey}.json`)
+        const raw = JSON.parse(fs.readFileSync(filePath, 'utf8'))
+
+        const seen = new Set<string>()
+        const collected: Array<{
+            model: string; cdnImg: string | null; price: string | null
+            fuel: string | null; transmission: string | null; seating: number
+        }> = []
+
+        // Inline getImg matching the admin catalog pattern exactly
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        function getImg(imgUrls: unknown): string | null {
+            if (!Array.isArray(imgUrls)) return null
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            const u = (imgUrls as any[]).find((x) => typeof x?.value === 'string' && x.value.startsWith('http'))
+            return u?.value ?? null
+        }
+
+        // Same recursive walk as admin catalog load4W()
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        function walk(node: any, ctxModel?: string, ctxPrice?: string, ctxFuel?: string): void {
+            if (!node || typeof node !== 'object') return
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            if (Array.isArray(node)) { node.forEach((n: any) => walk(n, ctxModel, ctxPrice, ctxFuel)); return }
+            const model: string | undefined = node.model || node.model_name || ctxModel
+            const imgUrl = getImg(node.image_urls)
+            const price  = node.ex_showroom_price || node.ex_showroom_price_min_inr || ctxPrice
+            const fuel   = node.fuel_type || ctxFuel
+            if (model && !seen.has(model.toLowerCase())) {
+                seen.add(model.toLowerCase())
+                collected.push({
+                    model,
+                    cdnImg: imgUrl && !imgUrl.includes('spacer') ? imgUrl : null,
+                    price: price ? String(price) : null,
+                    fuel: fuel ?? null,
+                    transmission: node.transmission ?? null,
+                    seating: node.seating_capacity ?? 5,
+                })
+            }
+            for (const [k, v] of Object.entries(node)) {
+                if (k === 'image_urls') continue
+                if (v && typeof v === 'object') walk(v, model ?? ctxModel, price ?? ctxPrice, fuel ?? ctxFuel)
+            }
+        }
+
+        walk(raw)
+
+        // Maruti-style fallback: no model field — extract model name from image URL path
+        // e.g. stimg.cardekho.com/…/Maruti/Grand-Vitara/… → "Grand Vitara"
+        if (collected.length === 0) {
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            function urlWalk(node: any): void {
+                if (!node || typeof node !== 'object') return
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                if (Array.isArray(node)) { node.forEach((n: any) => urlWalk(n)); return }
+                const imgUrl = getImg(node.image_urls)
+                if (imgUrl) {
+                    const m = imgUrl.match(/\/([A-Z][^/]+)\/\d{4,}\//)
+                    if (m) {
+                        const model = m[1].replace(/-/g, ' ')
+                        if (!seen.has(model.toLowerCase())) {
+                            seen.add(model.toLowerCase())
+                            collected.push({
+                                model,
+                                cdnImg: !imgUrl.includes('spacer') ? imgUrl : null,
+                                price: node.ex_showroom_price ? String(node.ex_showroom_price) : null,
+                                fuel: node.fuel_type ?? null,
+                                transmission: node.transmission ?? null,
+                                seating: node.seating_capacity ?? 5,
+                            })
+                        }
+                    }
+                }
+                for (const [k, v] of Object.entries(node)) {
+                    if (k === 'image_urls') continue
+                    if (v && typeof v === 'object') urlWalk(v)
+                }
+            }
+            urlWalk(raw)
+        }
+
+        return collected.map((m, idx) => {
+            const localUrl = m.cdnImg ? null : getLocal4WImage(make, m.model)
+            const heroImg  = m.cdnImg ?? localUrl ?? '/placeholder-car.jpg'
+            const minPrice = parsePriceINR(m.price ?? '')
+
+            return {
+                id: `json-${jsonKey}-${idx}`,
+                make,
+                model: m.model,
+                variant: '',
+                year: new Date().getFullYear(),
+                bodyType: 'SUV' as Car['bodyType'],
+                segment: 'B' as Car['segment'],
+                vehicleCategory: '4w' as const,
+                pricing: {
+                    exShowroom: {
+                        min: minPrice || null,
+                        max: minPrice || null,
+                        currency: 'INR' as const,
+                    },
+                },
+                engine: {
+                    type: (m.fuel ?? 'Petrol') as Car['engine']['type'],
+                    power: '—',
+                    torque: '—',
+                },
+                transmission: { type: (m.transmission ?? 'Manual') as Car['transmission']['type'] },
+                performance: {},
+                dimensions: { seatingCapacity: m.seating },
+                features: { keyFeatures: [] },
+                images: {
+                    hero: heroImg,
+                    exterior: heroImg !== '/placeholder-car.jpg' ? [heroImg] : [],
+                    interior: [],
+                },
+                meta: {},
+                price: minPrice ? `₹${minPrice.toLocaleString('en-IN')}` : undefined,
+            }
+        })
+    } catch {
+        return []
+    }
+}
+
 // ── Server-side DB helpers ────────────────────────────────────────────────────
 
 function getSupabase() {
@@ -373,41 +513,11 @@ function catalogRowToCar(row: any): Car {
 }
 
 /**
- * Fetch up to 24 cars from the car_catalog table for a given make.
- * Returns [] if the DB is unavailable or the make is not found.
+ * Returns all models for a given make.
+ * Always reads from the brand JSON file — same source as the admin catalog page.
+ * This guarantees dealers see all correct models/variants matching what admin shows.
  */
 export async function getCarsByMake(make: string): Promise<Car[]> {
     if (!make) return []
-    const supabase = getSupabase()
-    if (!supabase) return []
-
-    const { data, error } = await supabase
-        .from('car_catalog')
-        .select('*')
-        .ilike('make', make)
-        .eq('is_active', true)
-        .order('year', { ascending: false })
-        .limit(24)
-
-    if (error || !data) return []
-
-    const cars = data.map(catalogRowToCar)
-
-    // Step 1: Use CardDekho CDN images from brand JSON (matches what CardDekho displays).
-    const imageMap = loadBrandImageMap(make)
-    const withCDN = Object.keys(imageMap).length > 0
-        ? cars.map(c => {
-            const imgUrl = imageMap[c.model.toLowerCase()]
-            if (!imgUrl) return c
-            return { ...c, images: { ...c.images, hero: imgUrl, exterior: [imgUrl] } }
-        })
-        : cars
-
-    // Step 2: For any still without an image, fall back to local committed file.
-    return withCDN.map(c => {
-        if (c.images.hero && c.images.hero !== '/placeholder-car.jpg') return c
-        const localUrl = getLocal4WImage(make, c.model)
-        if (!localUrl) return c
-        return { ...c, images: { ...c.images, hero: localUrl, exterior: [localUrl] } }
-    })
+    return getCarsByMakeFromJson(make)
 }

@@ -221,8 +221,12 @@ export default function AdminDashboard() {
     const [activeCategory, setActiveCategory] = useState<string>("all");
     const [cars, setCars] = useState<CarType[]>([]);
     const [adminChecked, setAdminChecked] = useState(false);
+    const [passwordVerified, setPasswordVerified] = useState(false);
+    const [passwordInput, setPasswordInput] = useState('');
+    const [passwordError, setPasswordError] = useState('');
+    const [passwordLoading, setPasswordLoading] = useState(false);
 
-    // ── Admin gate: only allow emails listed in NEXT_PUBLIC_ADMIN_EMAILS ───────
+    // ── Step 1: Check email is in the admin list ──────────────────────────────
     useEffect(() => {
         supabase.auth.getUser().then(({ data: { user } }) => {
             const adminEmails = (process.env.NEXT_PUBLIC_ADMIN_EMAILS ?? '')
@@ -237,16 +241,71 @@ export default function AdminDashboard() {
         })
     }, [router])
 
+    // ── Step 2: Verify admin password via server-side API ────────────────────
+    const handlePasswordSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setPasswordError('');
+        setPasswordLoading(true);
+        try {
+            const res = await fetch('/api/admin/verify-password', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ password: passwordInput }),
+            });
+            const json = await res.json();
+            if (json.success) {
+                setPasswordVerified(true);
+            } else {
+                setPasswordError('Wrong password. Try again.');
+                setPasswordInput('');
+            }
+        } catch {
+            setPasswordError('Something went wrong. Try again.');
+        } finally {
+            setPasswordLoading(false);
+        }
+    };
+
     useEffect(() => {
-        if (!adminChecked) return
+        if (!adminChecked || !passwordVerified) return
         let isMounted = true;
         getAllCars({ limit: ADMIN_CARS_PREVIEW_LIMIT }).then(res => {
             if (isMounted) setCars(res.cars);
         });
         return () => { isMounted = false; };
-    }, [adminChecked])
+    }, [adminChecked, passwordVerified])
 
     if (!adminChecked) return null
+
+    // ── Password prompt (shown after email check passes) ─────────────────────
+    if (!passwordVerified) return (
+        <div className="min-h-screen bg-background flex items-center justify-center p-4">
+            <div className="w-full max-w-sm space-y-6">
+                <div className="text-center space-y-1">
+                    <div className="text-3xl font-bold">🔐</div>
+                    <h1 className="text-xl font-semibold text-foreground">Admin Access</h1>
+                    <p className="text-sm text-muted-foreground">Enter your admin password to continue</p>
+                </div>
+                <form onSubmit={handlePasswordSubmit} className="space-y-4">
+                    <input
+                        type="password"
+                        placeholder="Admin password"
+                        value={passwordInput}
+                        onChange={e => setPasswordInput(e.target.value)}
+                        autoFocus
+                        disabled={passwordLoading}
+                        className="w-full px-4 py-2.5 rounded-lg border border-border bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary"
+                    />
+                    {passwordError && (
+                        <p className="text-sm text-destructive">{passwordError}</p>
+                    )}
+                    <Button type="submit" className="w-full" disabled={passwordLoading || !passwordInput}>
+                        {passwordLoading ? 'Verifying…' : 'Enter Admin Panel'}
+                    </Button>
+                </form>
+            </div>
+        </div>
+    )
 
 
     const handleLaunch = async () => {

@@ -155,8 +155,10 @@ export default function DashboardLayout({
                 // Stay on dashboard and silently fail.
                 if (dealerError) return;
 
-                // No dealer record or onboarding not finished → send back to onboarding
-                if (!dealer || !dealer.onboarding_complete) {
+                // No dealer record at all → brand new user, send to onboarding.
+                // Do NOT check onboarding_complete here — it can be false for
+                // existing users if the DB save failed mid-way (missing column etc).
+                if (!dealer) {
                     router.replace('/onboarding');
                     return;
                 }

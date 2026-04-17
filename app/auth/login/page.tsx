@@ -21,6 +21,7 @@ export default function LoginPage() {
 function LoginForm() {
     const searchParams = useSearchParams();
     const justRegistered = searchParams.get("registered") === "true";
+    const redirectTo = searchParams.get("redirect") || null;
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -58,22 +59,28 @@ function LoginForm() {
                 return;
             }
 
-            // Check if this user has completed onboarding
+            // Route new users to onboarding, existing users to dashboard.
+            // Only redirect to /onboarding if there is truly NO dealer row —
+            // meaning they registered but never started onboarding.
+            // Do NOT rely on onboarding_complete flag here: it can be false for
+            // existing users if the DB save failed mid-way (e.g. missing column).
             const { data: { user } } = await supabase.auth.getUser();
             if (user) {
                 const { data: dealer } = await supabase
                     .from("dealers")
-                    .select("id, onboarding_complete")
+                    .select("id, onboarding_complete, slug")
                     .eq("user_id", user.id)
                     .maybeSingle();
 
-                if (!dealer || !dealer.onboarding_complete) {
+                // No dealer row at all → brand new user, must go through onboarding
+                if (!dealer) {
                     window.location.href = "/onboarding";
                     return;
                 }
             }
 
-            window.location.href = "/dashboard";
+            // Honor the ?redirect= param (e.g. ?redirect=%2Fadmin)
+            window.location.href = redirectTo ?? "/dashboard";
         } catch (err) {
             const msg = err instanceof Error ? err.message : String(err);
             setError(msg || "Login failed");

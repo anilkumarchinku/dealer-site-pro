@@ -102,10 +102,9 @@ export default function DashboardPage() {
                 .eq("user_id", user.id)
                 .maybeSingle()
                 .then(({ data: dealer }) => {
-                    if (!dealer || !dealer.onboarding_complete) {
+                    if (!dealer) {
                         window.location.href = "/onboarding";
                     } else {
-                        updateData({});  // trigger re-render with dealerId restored
                         useOnboardingStore.setState({ dealerId: dealer.id });
                     }
                 });
