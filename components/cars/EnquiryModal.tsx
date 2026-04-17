@@ -345,7 +345,7 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
                                 <h3 className="text-lg font-bold text-gray-900 mb-3">Key Features</h3>
                                 <div className="flex flex-wrap gap-2">
                                     {allKeyFeatures.map((feature, idx) => (
-                                        <Badge key={idx} variant="outline" className="text-xs px-3 py-1">
+                                        <Badge key={idx} variant="outline" className="text-xs px-3 py-1 bg-white dark:bg-white text-gray-700 dark:text-gray-700 border-gray-200 dark:border-gray-200">
                                             {feature}
                                         </Badge>
                                     ))}
@@ -427,6 +427,7 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
                                             <Label htmlFor="name">Full Name *</Label>
                                             <Input
                                                 id="name"
+                                                appearance="light"
                                                 placeholder="John Doe"
                                                 value={formData.name}
                                                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -438,6 +439,7 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
                                             <Label htmlFor="phone">Phone Number *</Label>
                                             <Input
                                                 id="phone"
+                                                appearance="light"
                                                 type="tel"
                                                 placeholder="+91 98765 43210"
                                                 value={formData.phone}
@@ -451,6 +453,7 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
                                         <Label htmlFor="email">Email Address *</Label>
                                         <Input
                                             id="email"
+                                            appearance="light"
                                             type="email"
                                             placeholder="john@example.com"
                                             value={formData.email}
@@ -463,10 +466,12 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
                                         <Label htmlFor="message">Message (Optional)</Label>
                                         <Textarea
                                             id="message"
+                                            appearance="light"
                                             placeholder="I'm interested in this car. Please contact me..."
                                             rows={3}
                                             value={formData.message}
                                             onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                                            className="resize-none"
                                         />
                                     </div>
                                     <Button

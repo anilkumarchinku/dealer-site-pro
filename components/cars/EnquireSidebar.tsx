@@ -395,11 +395,12 @@ export function EnquireSidebar({
                                 </Label>
                                 <Input
                                     id="eq-name"
+                                    appearance="light"
                                     placeholder="Enter your name"
                                     value={form.name}
                                     onChange={e => handleChange('name', e.target.value)}
                                     required
-                                    className="h-10 text-sm"
+                                    className="h-11 text-sm"
                                 />
                             </div>
 
@@ -409,12 +410,13 @@ export function EnquireSidebar({
                                 </Label>
                                 <Input
                                     id="eq-phone"
+                                    appearance="light"
                                     type="tel"
                                     placeholder="+91 98765 43210"
                                     value={form.phone}
                                     onChange={e => handleChange('phone', e.target.value)}
                                     required
-                                    className="h-10 text-sm"
+                                    className="h-11 text-sm"
                                 />
                             </div>
 
@@ -441,6 +443,7 @@ export function EnquireSidebar({
                                 </Label>
                                 <Textarea
                                     id="eq-msg"
+                                    appearance="light"
                                     placeholder="Tell us what you're looking for…"
                                     rows={3}
                                     value={form.message}

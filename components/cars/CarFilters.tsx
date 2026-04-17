@@ -195,13 +195,13 @@ export function CarFilters({ className, onFilterChange, hideBrand = false, showU
         (showUsedCarFilters && (kmRange[0] > 0 || kmRange[1] < KM_MAX_DEFAULT) ? 1 : 0);
 
     return (
-        <Card className={cn('overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm', className)}>
+        <Card className={cn('overflow-hidden rounded-2xl border border-gray-200 dark:border-gray-200 bg-white dark:bg-white shadow-sm', className)}>
             <CardHeader className="pb-3 pt-5 px-5 bg-gradient-to-b from-gray-50 to-white">
                 <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
                         <h3 className="text-base font-semibold text-gray-900">Filters</h3>
                         {totalActive > 0 && (
-                            <Badge variant="secondary" className="text-[10px] h-5 px-1.5 bg-gray-900 text-white hover:bg-gray-900">
+                            <Badge variant="secondary" className="text-[10px] h-5 px-1.5 bg-gray-900 dark:bg-gray-900 text-white dark:text-white hover:bg-gray-900 dark:hover:bg-gray-900">
                                 {totalActive}
                             </Badge>
                         )}
@@ -246,7 +246,7 @@ export function CarFilters({ className, onFilterChange, hideBrand = false, showU
                                 <span className="flex items-center gap-2">
                                     Brand
                                     {selectedMakes.length > 0 && (
-                                        <Badge variant="secondary" className="text-[10px] h-4 px-1">{selectedMakes.length}</Badge>
+                                        <Badge variant="secondary" className="text-[10px] h-4 px-1 bg-gray-100 dark:bg-gray-100 text-gray-700 dark:text-gray-700">{selectedMakes.length}</Badge>
                                     )}
                                 </span>
                             </AccordionTrigger>
@@ -275,7 +275,7 @@ export function CarFilters({ className, onFilterChange, hideBrand = false, showU
                             <span className="flex items-center gap-2">
                                 Body Type
                                 {selectedBodyTypes.length > 0 && (
-                                    <Badge variant="secondary" className="text-[10px] h-4 px-1">{selectedBodyTypes.length}</Badge>
+                                        <Badge variant="secondary" className="text-[10px] h-4 px-1 bg-gray-100 dark:bg-gray-100 text-gray-700 dark:text-gray-700">{selectedBodyTypes.length}</Badge>
                                 )}
                             </span>
                         </AccordionTrigger>
@@ -301,7 +301,7 @@ export function CarFilters({ className, onFilterChange, hideBrand = false, showU
                             <span className="flex items-center gap-2">
                                 Fuel Type
                                 {selectedFuelTypes.length > 0 && (
-                                    <Badge variant="secondary" className="text-[10px] h-4 px-1">{selectedFuelTypes.length}</Badge>
+                                        <Badge variant="secondary" className="text-[10px] h-4 px-1 bg-gray-100 dark:bg-gray-100 text-gray-700 dark:text-gray-700">{selectedFuelTypes.length}</Badge>
                                 )}
                             </span>
                         </AccordionTrigger>
@@ -327,7 +327,7 @@ export function CarFilters({ className, onFilterChange, hideBrand = false, showU
                             <span className="flex items-center gap-2">
                                 Transmission
                                 {selectedTransmissions.length > 0 && (
-                                    <Badge variant="secondary" className="text-[10px] h-4 px-1">{selectedTransmissions.length}</Badge>
+                                        <Badge variant="secondary" className="text-[10px] h-4 px-1 bg-gray-100 dark:bg-gray-100 text-gray-700 dark:text-gray-700">{selectedTransmissions.length}</Badge>
                                 )}
                             </span>
                         </AccordionTrigger>
@@ -353,7 +353,7 @@ export function CarFilters({ className, onFilterChange, hideBrand = false, showU
                             <span className="flex items-center gap-2">
                                 Year
                                 {selectedYears.length > 0 && (
-                                    <Badge variant="secondary" className="text-[10px] h-4 px-1">{selectedYears.length}</Badge>
+                                        <Badge variant="secondary" className="text-[10px] h-4 px-1 bg-gray-100 dark:bg-gray-100 text-gray-700 dark:text-gray-700">{selectedYears.length}</Badge>
                                 )}
                             </span>
                         </AccordionTrigger>
@@ -382,7 +382,7 @@ export function CarFilters({ className, onFilterChange, hideBrand = false, showU
                             <span className="flex items-center gap-2">
                                 Seating Capacity
                                 {selectedSeating.length > 0 && (
-                                    <Badge variant="secondary" className="text-[10px] h-4 px-1">{selectedSeating.length}</Badge>
+                                        <Badge variant="secondary" className="text-[10px] h-4 px-1 bg-gray-100 dark:bg-gray-100 text-gray-700 dark:text-gray-700">{selectedSeating.length}</Badge>
                                 )}
                             </span>
                         </AccordionTrigger>
@@ -411,7 +411,7 @@ export function CarFilters({ className, onFilterChange, hideBrand = false, showU
                             <span className="flex items-center gap-2">
                                 Color
                                 {selectedColors.length > 0 && (
-                                    <Badge variant="secondary" className="text-[10px] h-4 px-1">{selectedColors.length}</Badge>
+                                        <Badge variant="secondary" className="text-[10px] h-4 px-1 bg-gray-100 dark:bg-gray-100 text-gray-700 dark:text-gray-700">{selectedColors.length}</Badge>
                                 )}
                             </span>
                         </AccordionTrigger>
@@ -473,7 +473,7 @@ export function CarFilters({ className, onFilterChange, hideBrand = false, showU
                                 <span className="flex items-center gap-2">
                                     No. of Owners
                                     {selectedOwners.length > 0 && (
-                                        <Badge variant="secondary" className="text-[10px] h-4 px-1">{selectedOwners.length}</Badge>
+                                        <Badge variant="secondary" className="text-[10px] h-4 px-1 bg-gray-100 dark:bg-gray-100 text-gray-700 dark:text-gray-700">{selectedOwners.length}</Badge>
                                     )}
                                 </span>
                             </AccordionTrigger>

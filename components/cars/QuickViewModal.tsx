@@ -261,11 +261,11 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
 
                         {/* Badge row */}
                         <div className="flex flex-wrap gap-1.5 mt-3">
-                            {car.engine?.type && <Badge variant="outline" className="text-[10px] h-5">{car.engine.type}</Badge>}
-                            {car.transmission?.type && <Badge variant="outline" className="text-[10px] h-5">{car.transmission.type}</Badge>}
-                            {car.safety?.airbags && <Badge variant="outline" className="text-[10px] h-5 border-red-200 text-red-600">{car.safety.airbags} Airbags</Badge>}
-                            {car.safety?.ncapRating && <Badge variant="outline" className="text-[10px] h-5 border-amber-300 text-amber-600">⭐ {car.safety.ncapRating.stars}-Star NCAP</Badge>}
-                            {car.segment && <Badge variant="secondary" className="text-[10px] h-5">{car.segment}</Badge>}
+                            {car.engine?.type && <Badge variant="outline" className="text-[10px] h-5 bg-white dark:bg-white text-gray-700 dark:text-gray-700 border-gray-200 dark:border-gray-200">{car.engine.type}</Badge>}
+                            {car.transmission?.type && <Badge variant="outline" className="text-[10px] h-5 bg-white dark:bg-white text-gray-700 dark:text-gray-700 border-gray-200 dark:border-gray-200">{car.transmission.type}</Badge>}
+                            {car.safety?.airbags && <Badge variant="outline" className="text-[10px] h-5 bg-white dark:bg-white border-red-200 dark:border-red-200 text-red-600 dark:text-red-600">{car.safety.airbags} Airbags</Badge>}
+                            {car.safety?.ncapRating && <Badge variant="outline" className="text-[10px] h-5 bg-white dark:bg-white border-amber-300 dark:border-amber-300 text-amber-600 dark:text-amber-600">⭐ {car.safety.ncapRating.stars}-Star NCAP</Badge>}
+                            {car.segment && <Badge variant="secondary" className="text-[10px] h-5 bg-gray-100 dark:bg-gray-100 text-gray-700 dark:text-gray-700">{car.segment}</Badge>}
                         </div>
                     </DialogHeader>
                 </div>

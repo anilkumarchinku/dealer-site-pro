@@ -218,7 +218,7 @@ export function CarCard({
             <Card
                 className={cn(
                     'group relative flex flex-col overflow-hidden transition-all duration-300 cursor-pointer h-full',
-                    'bg-white border border-gray-200 text-gray-900 hover:border-gray-300',
+                    'bg-white dark:bg-white border border-gray-200 dark:border-gray-200 text-gray-900 dark:text-gray-900 hover:border-gray-300 dark:hover:border-gray-300',
                     'hover:shadow-xl hover:-translate-y-1',
                     'rounded-2xl',
                     className
@@ -345,7 +345,7 @@ export function CarCard({
                         <p className="text-sm text-gray-500">{isUsed ? 'Selling price' : 'Ex-showroom price'}</p>
 
                         {showEMI && car.pricing.emi && (
-                            <Badge variant="secondary" className="mt-2 text-xs font-medium gap-1 h-6 px-2.5 rounded-full bg-gray-50 border border-gray-200" style={{ color: brandColor }}>
+                            <Badge variant="secondary" className="mt-2 text-xs font-medium gap-1 h-6 px-2.5 rounded-full bg-gray-50 dark:bg-gray-50 border border-gray-200 dark:border-gray-200 text-gray-700 dark:text-gray-700" style={{ color: brandColor }}>
                                 <TrendingUp className="w-3 h-3" />
                                 EMI ₹{car.pricing.emi.monthly.toLocaleString()}/mo
                             </Badge>
@@ -394,7 +394,7 @@ export function CarCard({
                             <Button
                                 size="sm"
                                 variant="outline"
-                                className="shrink-0 gap-1.5 text-xs h-11 px-3 rounded-xl font-semibold bg-white hover:bg-gray-50"
+                                className="shrink-0 gap-1.5 text-xs h-11 px-3 rounded-xl font-semibold bg-white dark:bg-white hover:bg-gray-50 dark:hover:bg-gray-50"
                                 style={{ borderColor: brandColor, color: brandColor }}
                                 onClick={(e) => { e.stopPropagation(); setIsTestDriveOpen(true); }}
                                 title="Book Test Drive"
@@ -406,7 +406,7 @@ export function CarCard({
                         <Button
                             size="sm"
                             variant="outline"
-                            className="shrink-0 gap-1 text-xs h-11 px-3 rounded-xl font-medium bg-white hover:bg-gray-50"
+                            className="shrink-0 gap-1 text-xs h-11 px-3 rounded-xl font-medium bg-white dark:bg-white hover:bg-gray-50 dark:hover:bg-gray-50"
                             style={{ borderColor: brandColor, color: brandColor }}
                             onClick={(e) => { e.stopPropagation(); setIsQuickViewOpen(true); }}
                             title="Quick View"
@@ -416,7 +416,7 @@ export function CarCard({
                         <Button
                             size="sm"
                             variant="outline"
-                            className="shrink-0 gap-1 text-xs h-11 px-3 rounded-xl font-medium bg-white hover:bg-gray-50"
+                            className="shrink-0 gap-1 text-xs h-11 px-3 rounded-xl font-medium bg-white dark:bg-white hover:bg-gray-50 dark:hover:bg-gray-50"
                             style={inCompare
                                 ? { backgroundColor: brandColor, color: getContrastText(brandColor), borderColor: brandColor }
                                 : { borderColor: brandColor, color: brandColor }}
@@ -588,7 +588,7 @@ function VariantAccordionButton({
                                 </div>
                             </div>
                             <div className="flex items-center gap-2">
-                                <Badge variant="outline" className="text-[11px] text-gray-500 border-gray-200">
+                                <Badge variant="outline" className="text-[11px] text-gray-500 dark:text-gray-500 border-gray-200 dark:border-gray-200 bg-white dark:bg-white">
                                     {variants.length > 0 ? `${variants.length} variants` : 'No data'}
                                 </Badge>
                                 <button
@@ -661,12 +661,12 @@ function VariantAccordionButton({
                                                 </div>
                                                 <div className="flex gap-1.5">
                                                     {selected.fuel_type && (
-                                                        <Badge variant="outline" className="text-[10px]" style={{ borderColor: brandColor, color: brandColor }}>
+                                                        <Badge variant="outline" className="text-[10px] bg-white dark:bg-white" style={{ borderColor: brandColor, color: brandColor }}>
                                                             {selected.fuel_type}
                                                         </Badge>
                                                     )}
                                                     {selected.transmission && (
-                                                        <Badge variant="outline" className="text-[10px]">{selected.transmission}</Badge>
+                                                        <Badge variant="outline" className="text-[10px] bg-white dark:bg-white text-gray-700 dark:text-gray-700 border-gray-200 dark:border-gray-200">{selected.transmission}</Badge>
                                                     )}
                                                 </div>
                                             </div>
