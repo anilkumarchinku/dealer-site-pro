@@ -256,6 +256,9 @@ export function CarDetailView({ car, similarCars = [], siteSlug }: CarDetailView
         ? `${inventoryHref}?make=${encodeURIComponent(car.make)}`
         : `/cars?make=${encodeURIComponent(car.make)}`;
     const detailBasePath = siteSlug ? sitePrefix : undefined;
+    const lightCardClass = 'bg-white border border-slate-200 shadow-[0_12px_30px_rgba(15,23,42,0.06)]';
+    const softCardClass = 'bg-slate-50 border border-slate-200 shadow-none';
+    const lightTableRowHoverClass = 'hover:bg-slate-50';
 
     return (
         <div className="bg-white min-h-screen">
@@ -331,7 +334,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug }: CarDetailView
 
                     {/* Price Summary Card */}
                     <div className="space-y-4">
-                        <Card>
+                        <Card className={lightCardClass}>
                             <CardContent className="p-5">
                                 {/* Title */}
                                 <div className="mb-3">
@@ -406,7 +409,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug }: CarDetailView
             {/* ── Sticky Tab Navigation ── */}
             <div
                 ref={tabBarRef}
-                className={`sticky top-14 z-40 bg-white border-b transition-shadow ${isTabBarSticky ? 'shadow-sm' : ''}`}
+                className={`sticky top-14 z-40 border-b border-slate-200 bg-white/95 backdrop-blur transition-shadow ${isTabBarSticky ? 'shadow-sm' : ''}`}
             >
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex gap-0 overflow-x-auto no-scrollbar">
@@ -475,8 +478,8 @@ export function CarDetailView({ car, similarCars = [], siteSlug }: CarDetailView
                     {/* Key Highlights */}
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 mb-8">
                         {keySpecs.map((spec, idx) => (
-                            <Card key={idx} className="text-center p-4">
-                                <div className="mx-auto mb-2 w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">
+                            <Card key={idx} className={`${softCardClass} text-center p-4`}>
+                                <div className="mx-auto mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-sm">
                                     {spec.icon}
                                 </div>
                                 <p className="text-xs text-gray-500">{spec.label}</p>
@@ -548,7 +551,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug }: CarDetailView
                         <h2 className="text-2xl font-bold mb-6">Inspection Report</h2>
 
                         {/* Overall Score */}
-                        <Card className="mb-6">
+                        <Card className={`${lightCardClass} mb-6`}>
                             <CardContent className="p-6">
                                 <div className="flex flex-col sm:flex-row items-center gap-6">
                                     <div className="text-center">
@@ -580,7 +583,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug }: CarDetailView
                                 const goodCount = cat.items.filter(i => i.status === 'good').length;
                                 const total = cat.items.length;
                                 return (
-                                    <Card key={cat.name}>
+                                    <Card key={cat.name} className={lightCardClass}>
                                         <CardContent className="p-5">
                                             <div className="flex items-center justify-between mb-3">
                                                 <h4 className="text-sm font-semibold flex items-center gap-2">
@@ -621,7 +624,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug }: CarDetailView
                         <h2 className="text-2xl font-bold mb-6">Car History</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             {/* Ownership Timeline */}
-                            <Card>
+                            <Card className={lightCardClass}>
                                 <CardContent className="p-5">
                                     <h3 className="text-base font-semibold mb-4 flex items-center gap-2">
                                         <Users className="w-4 h-4 text-gray-500" />
@@ -653,7 +656,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug }: CarDetailView
                             </Card>
 
                             {/* Service & Documents */}
-                            <Card>
+                            <Card className={lightCardClass}>
                                 <CardContent className="p-5">
                                     <h3 className="text-base font-semibold mb-4 flex items-center gap-2">
                                         <FileText className="w-4 h-4 text-gray-500" />
@@ -689,7 +692,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug }: CarDetailView
                             </Card>
 
                             {/* Service History */}
-                            <Card className="md:col-span-2">
+                            <Card className={`${lightCardClass} md:col-span-2`}>
                                 <CardContent className="p-5">
                                     <h3 className="text-base font-semibold mb-4 flex items-center gap-2">
                                         <Wrench className="w-4 h-4 text-gray-500" />
@@ -732,7 +735,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug }: CarDetailView
                     <h2 className="text-2xl font-bold mb-6">{car.make} {car.model} Specifications</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {/* Engine & Transmission */}
-                        <Card>
+                        <Card className={lightCardClass}>
                             <CardContent className="p-5">
                                 <h3 className="text-base font-semibold mb-4 flex items-center gap-2">
                                     <Settings className="w-4 h-4 text-gray-500" />
@@ -752,7 +755,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug }: CarDetailView
                         </Card>
 
                         {/* Performance */}
-                        <Card>
+                        <Card className={lightCardClass}>
                             <CardContent className="p-5">
                                 <h3 className="text-base font-semibold mb-4 flex items-center gap-2">
                                     <Zap className="w-4 h-4 text-gray-500" />
@@ -777,7 +780,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug }: CarDetailView
                         </Card>
 
                         {/* Dimensions */}
-                        <Card>
+                        <Card className={lightCardClass}>
                             <CardContent className="p-5">
                                 <h3 className="text-base font-semibold mb-4 flex items-center gap-2">
                                     <CarIcon className="w-4 h-4 text-gray-500" />
@@ -797,7 +800,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug }: CarDetailView
                         </Card>
 
                         {/* Safety */}
-                        <Card>
+                        <Card className={lightCardClass}>
                             <CardContent className="p-5">
                                 <h3 className="text-base font-semibold mb-4 flex items-center gap-2">
                                     <Shield className="w-4 h-4 text-gray-500" />
@@ -838,7 +841,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug }: CarDetailView
                         )}
                     </div>
                     {(!car.features?.keyFeatures || car.features.keyFeatures.length === 0) && (
-                        <Card className="p-8 text-center">
+                        <Card className={`${lightCardClass} p-8 text-center`}>
                             <p className="text-gray-500">Feature information not available for this model.</p>
                         </Card>
                     )}
@@ -847,7 +850,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug }: CarDetailView
                 {/* ──────── VARIANTS & PRICE ──────── */}
                 <section ref={el => { sectionRefs.current['variants'] = el; }} id="variants">
                     <h2 className="text-2xl font-bold mb-6">{car.make} {car.model} Variants & Price</h2>
-                    <Card>
+                    <Card className={lightCardClass}>
                         <CardContent className="p-0">
                             <Table>
                                 <TableHeader>
@@ -861,7 +864,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug }: CarDetailView
                                 </TableHeader>
                                 <TableBody>
                                     {car.variants?.map((variant) => (
-                                        <TableRow key={variant.id} className="hover:bg-gray-100/20">
+                                        <TableRow key={variant.id} className={lightTableRowHoverClass}>
                                             <TableCell>
                                                 <div>
                                                     <span className="font-medium">{variant.name}</span>
@@ -897,7 +900,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug }: CarDetailView
                 <section ref={el => { sectionRefs.current['colors'] = el; }} id="colors">
                     <h2 className="text-2xl font-bold mb-6">{car.make} {car.model} Colours</h2>
                     {car.colors && car.colors.length > 0 ? (
-                        <Card>
+                        <Card className={lightCardClass}>
                             <CardContent className="p-6">
                                 <div className="flex flex-wrap gap-3 mb-4">
                                     {car.colors.map((color) => (
@@ -931,7 +934,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug }: CarDetailView
                             </CardContent>
                         </Card>
                     ) : (
-                        <Card className="p-8 text-center">
+                        <Card className={`${lightCardClass} p-8 text-center`}>
                             <p className="text-gray-500">Colour options not available for this model.</p>
                         </Card>
                     )}
@@ -940,7 +943,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug }: CarDetailView
                 {/* ──────── EMI CALCULATOR ──────── */}
                 <section ref={el => { sectionRefs.current['emi'] = el; }} id="emi">
                     <h2 className="text-2xl font-bold mb-6">{car.make} {car.model} EMI Calculator</h2>
-                    <Card>
+                    <Card className={lightCardClass}>
                         <CardContent className="p-6">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                 {/* Inputs */}
@@ -986,7 +989,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug }: CarDetailView
                                 {/* Result */}
                                 <div>
                                     {emiResult ? (
-                                        <Card className="bg-gray-100/30 h-full">
+                                        <Card className={`${softCardClass} h-full`}>
                                             <CardContent className="p-6 flex flex-col h-full">
                                                 <div className="text-center pb-4 mb-4 border-b">
                                                     <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-1">Monthly EMI</p>
@@ -1033,7 +1036,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug }: CarDetailView
                                             </CardContent>
                                         </Card>
                                     ) : (
-                                        <Card className="bg-gray-100/30 h-full flex items-center justify-center">
+                                        <Card className={`${softCardClass} flex h-full items-center justify-center`}>
                                             <CardContent className="text-center p-6">
                                                 <Calculator className="w-10 h-10 text-gray-500 mx-auto mb-3" />
                                                 <p className="text-sm text-gray-500">Adjust sliders to calculate EMI</p>
@@ -1048,7 +1051,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug }: CarDetailView
 
                 {/* ──────── ON-ROAD PRICE BREAKDOWN ──────── */}
                 {car.pricing.onRoad && (
-                    <Card>
+                    <Card className={lightCardClass}>
                         <CardContent className="p-6">
                             <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
                                 <MapPin className="w-4 h-4 text-gray-500" />
@@ -1082,7 +1085,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug }: CarDetailView
                 <section ref={el => { sectionRefs.current['reviews'] = el; }} id="reviews">
                     <h2 className="text-2xl font-bold mb-6">{car.make} {car.model} Reviews</h2>
                     {car.rating ? (
-                        <Card>
+                        <Card className={lightCardClass}>
                             <CardContent className="p-6">
                                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                                     {/* Overall Rating */}
@@ -1127,7 +1130,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug }: CarDetailView
                             </CardContent>
                         </Card>
                     ) : (
-                        <Card className="p-8 text-center">
+                        <Card className={`${lightCardClass} p-8 text-center`}>
                             <MessageSquare className="w-10 h-10 text-gray-500 mx-auto mb-3" />
                             <p className="text-gray-500">No reviews available yet. Be the first to review!</p>
                             <Button variant="outline" className="mt-4">Write a Review</Button>
@@ -1138,7 +1141,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug }: CarDetailView
                 {/* ──────── FAQS ──────── */}
                 <section ref={el => { sectionRefs.current['faqs'] = el; }} id="faqs">
                     <h2 className="text-2xl font-bold mb-6">Frequently Asked Questions</h2>
-                    <Card>
+                    <Card className={lightCardClass}>
                         <CardContent className="p-5">
                             <Accordion type="single" collapsible className="w-full">
                                 <AccordionItem value="price">
@@ -1247,7 +1250,7 @@ function SpecRow({ label, value, last }: { label: string; value: string; last?: 
 
 function FeatureGroup({ title, features, icon }: { title: string; features: string[]; icon: React.ReactNode }) {
     return (
-        <Card>
+        <Card className="bg-white border border-slate-200 shadow-[0_12px_30px_rgba(15,23,42,0.06)]">
             <CardContent className="p-5">
                 <h4 className="font-semibold text-sm mb-3 flex items-center gap-2">
                     {icon} {title}
