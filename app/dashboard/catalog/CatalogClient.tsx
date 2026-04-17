@@ -9,6 +9,7 @@ import type { Car as CarType } from "@/lib/types/car"
 import { QuickViewModal } from "@/components/cars/QuickViewModal"
 import { EnquiryModal } from "@/components/cars/EnquiryModal"
 import { getContrastText } from "@/lib/utils/color-contrast"
+import { getVehicleImageUrls } from "@/lib/utils/brand-model-images"
 
 type CategoryKey = "4w" | "2w" | "3w"
 
@@ -92,27 +93,39 @@ function toCar(m: CatalogModel): CarType {
 
 function CatalogCard({ m, brandColor }: { m: CatalogModel; brandColor: string }) {
     const [imgFailed, setImgFailed]       = useState(false)
+    const [fallbackIdx, setFallbackIdx]   = useState(0)
     const [qvOpen,    setQvOpen]          = useState(false)
     const [enquireOpen, setEnquireOpen]   = useState(false)
 
     const isEV = m.fuelType?.toLowerCase().includes("electric")
     const car  = useMemo(() => toCar(m), [m])
+    const imageCandidates = useMemo(
+        () => getVehicleImageUrls(m.category, m.brandId, m.model, m.imageUrl),
+        [m.brandId, m.category, m.imageUrl, m.model],
+    )
+    const resolvedImageSrc = imageCandidates[fallbackIdx] ?? null
 
     return (
         <>
             <div
-                className="group relative flex flex-col overflow-hidden bg-white border border-gray-200 rounded-xl hover:border-gray-300 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 cursor-pointer h-full"
+                className="group relative flex flex-col overflow-hidden bg-white border border-gray-200 rounded-xl hover:border-gray-300 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 cursor-pointer h-full dark:bg-slate-950 dark:border-slate-800 dark:hover:border-slate-700"
                 onClick={() => setEnquireOpen(true)}
             >
                 {/* ── Image ── */}
-                <div className="relative aspect-[16/10] overflow-hidden bg-gray-50">
-                    {m.imageUrl && !imgFailed ? (
+                <div className="relative aspect-[16/10] overflow-hidden bg-gray-50 dark:bg-slate-900">
+                    {resolvedImageSrc && !imgFailed ? (
                         // eslint-disable-next-line @next/next/no-img-element
                         <img
-                            src={m.imageUrl}
+                            src={resolvedImageSrc}
                             alt={`${m.brand} ${m.model}`}
                             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                            onError={() => setImgFailed(true)}
+                            onError={() => {
+                                if (fallbackIdx < imageCandidates.length - 1) {
+                                    setFallbackIdx((current) => current + 1)
+                                } else {
+                                    setImgFailed(true)
+                                }
+                            }}
                         />
                     ) : (
                         <div className="flex items-center justify-center h-full">
@@ -137,7 +150,7 @@ function CatalogCard({ m, brandColor }: { m: CatalogModel; brandColor: string })
                         <Button
                             size="sm"
                             variant="secondary"
-                            className="w-full bg-white/90 backdrop-blur-sm text-gray-900 hover:bg-white shadow-md"
+                            className="w-full bg-white/90 backdrop-blur-sm text-gray-900 hover:bg-white shadow-md dark:bg-slate-950/90 dark:text-slate-100 dark:hover:bg-slate-900"
                             onClick={(e) => { e.stopPropagation(); setQvOpen(true) }}
                         >
                             <Eye className="w-3.5 h-3.5 mr-1.5" />
@@ -163,26 +176,26 @@ function CatalogCard({ m, brandColor }: { m: CatalogModel; brandColor: string })
                     </div>
 
                     {/* Model */}
-                    <h3 className="text-base font-bold leading-tight line-clamp-1 text-gray-900 mb-1.5">
+                    <h3 className="text-base font-bold leading-tight line-clamp-1 text-gray-900 dark:text-slate-100 mb-1.5">
                         {m.model}
                     </h3>
 
                     {/* Price */}
                     <div className="mb-2">
-                        <p className="text-lg font-bold text-gray-900">
+                        <p className="text-lg font-bold text-gray-900 dark:text-slate-100">
                             {m.price ?? "Price on request"}
                         </p>
-                        <p className="text-[10px] text-gray-500">Ex-showroom price</p>
+                        <p className="text-[10px] text-gray-500 dark:text-slate-400">Ex-showroom price</p>
                     </div>
 
-                    <div className="h-px bg-gray-100 mb-2" />
+                    <div className="h-px bg-gray-100 dark:bg-slate-800 mb-2" />
 
                     {/* Specs row */}
                     <div className="grid grid-cols-2 gap-1.5 mb-2">
                         {m.fuelType && (
-                            <div className="p-2 bg-gray-50 rounded-lg border border-gray-100 flex items-center gap-1.5">
+                            <div className="p-2 bg-gray-50 rounded-lg border border-gray-100 flex items-center gap-1.5 dark:bg-slate-900 dark:border-slate-800">
                                 <Fuel className="w-3 h-3 text-emerald-600 shrink-0" />
-                                <span className="text-[10px] text-gray-700 truncate">{m.fuelType}</span>
+                                <span className="text-[10px] text-gray-700 dark:text-slate-300 truncate">{m.fuelType}</span>
                             </div>
                         )}
                     </div>
@@ -201,7 +214,7 @@ function CatalogCard({ m, brandColor }: { m: CatalogModel; brandColor: string })
                         <Button
                             size="sm"
                             variant="outline"
-                            className="shrink-0 gap-1 text-xs h-8 px-2.5 font-medium bg-white"
+                            className="shrink-0 gap-1 text-xs h-8 px-2.5 font-medium bg-transparent dark:bg-slate-950/60 dark:hover:bg-slate-900"
                             style={{ borderColor: brandColor, color: brandColor }}
                             onClick={(e) => { e.stopPropagation(); setQvOpen(true) }}
                             title="Quick View"
@@ -225,14 +238,14 @@ function CatalogCard({ m, brandColor }: { m: CatalogModel; brandColor: string })
                 onOpenChange={setQvOpen}
                 onEnquireNow={() => { setQvOpen(false); setEnquireOpen(true) }}
                 brandColor={brandColor}
-                resolvedImageSrc={m.imageUrl}
+                resolvedImageSrc={resolvedImageSrc}
             />
             <EnquiryModal
                 car={car}
                 open={enquireOpen}
                 onOpenChange={setEnquireOpen}
                 brandColor={brandColor}
-                resolvedImageSrc={m.imageUrl}
+                resolvedImageSrc={resolvedImageSrc}
             />
         </>
     )
@@ -316,12 +329,12 @@ export function CatalogClient({ models }: Props) {
     }, [models, activeTab, search])
 
     return (
-        <div className="min-h-screen bg-gray-50">
+        <div className="min-h-screen bg-gray-50 dark:bg-slate-950">
             <div className="p-6 space-y-5 max-w-screen-2xl mx-auto">
                 {/* Header */}
                 <div>
-                    <h1 className="text-2xl font-bold text-gray-900">Vehicle Catalog</h1>
-                    <p className="text-sm text-gray-500 mt-0.5">{models.length} models across all brands</p>
+                    <h1 className="text-2xl font-bold text-gray-900 dark:text-slate-100">Vehicle Catalog</h1>
+                    <p className="text-sm text-gray-500 dark:text-slate-400 mt-0.5">{models.length} models across all brands</p>
                 </div>
 
                 {/* Tabs */}
@@ -331,13 +344,13 @@ export function CatalogClient({ models }: Props) {
                             key={key}
                             onClick={() => setActiveTab(key)}
                             className={`flex items-center gap-2 px-4 py-2 rounded-lg border text-sm font-semibold transition-all ${
-                                activeTab === key ? cls : "bg-white text-gray-600 border-gray-200 hover:border-gray-300"
+                                activeTab === key ? cls : "bg-white text-gray-600 border-gray-200 hover:border-gray-300 dark:bg-slate-950 dark:text-slate-300 dark:border-slate-800 dark:hover:border-slate-700"
                             }`}
                         >
                             <Icon className="w-4 h-4" />
                             {label}
                             <span className={`text-xs px-2 py-0.5 rounded-full font-bold ${
-                                activeTab === key ? "bg-white/25 text-white" : "bg-gray-100 text-gray-500"
+                                activeTab === key ? "bg-white/25 text-white" : "bg-gray-100 text-gray-500 dark:bg-slate-900 dark:text-slate-400"
                             }`}>
                                 {counts[key]}
                             </span>
@@ -352,13 +365,13 @@ export function CatalogClient({ models }: Props) {
                         placeholder="Search brand or model…"
                         value={search}
                         onChange={(e) => setSearch(e.target.value)}
-                        className="pl-9 bg-white"
+                        className="pl-9 bg-white dark:bg-slate-900 dark:border-slate-800 dark:text-slate-100 dark:placeholder:text-slate-500"
                     />
                 </div>
 
                 {/* Brand sections */}
                 {brandGroups.length === 0 ? (
-                    <p className="text-sm text-gray-400 py-12 text-center">
+                    <p className="text-sm text-gray-400 dark:text-slate-500 py-12 text-center">
                         {search ? `No results for "${search}"` : "No models found."}
                     </p>
                 ) : (

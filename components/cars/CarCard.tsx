@@ -46,7 +46,7 @@ import {
 import { getBrandLogo } from '@/lib/data/brand-logos';
 import { getContrastText } from '@/lib/utils/color-contrast';
 import { useCompareStore } from '@/lib/store/compare-store';
-import { getScrapedImageUrls, brandNameToId } from '@/lib/utils/brand-model-images';
+import { getVehicleImageUrls, brandNameToId } from '@/lib/utils/brand-model-images';
 
 // ── Variant types for the accordion ──────────────────────────────────────────
 interface CarVariantInfo {
@@ -201,12 +201,15 @@ export function CarCard({
     };
 
     // Resolved image passed to QuickViewModal — same source as what card renders.
-    const cardShowScraped = car.vehicleCategory === '2w' || car.vehicleCategory === '3w' || car.vehicleCategory === '4w';
-    const cardScrapedUrls = cardShowScraped
-        ? getScrapedImageUrls(car.vehicleCategory as '2w' | '3w' | '4w', brandNameToId(car.make, car.vehicleCategory as '2w' | '3w' | '4w'), car.model)
-        : [] as string[];
+    const imageCategory = car.vehicleCategory as '2w' | '3w' | '4w';
+    const cardImageUrls = getVehicleImageUrls(
+        imageCategory,
+        brandNameToId(car.make, imageCategory),
+        car.model,
+        car.images.hero,
+    );
     const cardDisplayUrl = (!car.images.hero || car.images.hero === '/placeholder-car.jpg' || imgError)
-        ? (cardScrapedUrls[scrapedIdx] || null)
+        ? (cardImageUrls[scrapedIdx] || null)
         : car.images.hero;
 
     return (
@@ -214,7 +217,9 @@ export function CarCard({
             <Card
                 className={cn(
                     'group relative flex flex-col overflow-hidden transition-all duration-300 cursor-pointer h-full',
-                    'bg-white border border-gray-200 hover:border-gray-300 text-gray-900 dark:bg-white dark:border-gray-200 dark:text-gray-900',
+                    'bg-white border border-gray-200 text-gray-900',
+                    'dark:bg-slate-950 dark:border-slate-800 dark:text-slate-100 dark:hover:border-slate-700',
+                    'hover:border-gray-300',
                     'hover:shadow-lg hover:-translate-y-0.5',
                     'rounded-xl',
                     className
@@ -222,13 +227,11 @@ export function CarCard({
                 onClick={handleEnquireNow}
             >
                 {/* ── Image ── */}
-                <div className="relative aspect-[16/10] overflow-hidden bg-white">
+                <div className="relative aspect-[16/10] overflow-hidden bg-white dark:bg-slate-900">
                     {(() => {
-                        const showScraped = car.vehicleCategory === '2w' || car.vehicleCategory === '3w' || car.vehicleCategory === '4w';
-                        const scrapedUrls = showScraped ? getScrapedImageUrls(car.vehicleCategory as '2w' | '3w' | '4w', brandNameToId(car.make, car.vehicleCategory as '2w' | '3w' | '4w'), car.model) : [];
-                        // CDN hero first for all categories; scraped local paths are fallback
+                        const fallbackUrls = cardImageUrls;
                         const displayUrl = (!car.images.hero || car.images.hero === '/placeholder-car.jpg' || imgError)
-                            ? (scrapedUrls[scrapedIdx] || null)
+                            ? (fallbackUrls[scrapedIdx] || null)
                             : car.images.hero;
 
                         if (displayUrl) {
@@ -248,17 +251,17 @@ export function CarCard({
                                     onError={() => {
                                         if (!imgError) {
                                             setImgError(true);
-                                        } else if (showScraped && scrapedIdx < scrapedUrls.length - 1) {
+                                        } else if (scrapedIdx < fallbackUrls.length - 1) {
                                             setScrapedIdx(prev => prev + 1);
                                         } else {
-                                            setScrapedIdx(scrapedUrls.length);
+                                            setScrapedIdx(fallbackUrls.length);
                                         }
                                     }}
                                 />
                             );
                         }
                         return (
-                            <div className="flex items-center justify-center h-full bg-white border-b border-gray-100">
+                            <div className="flex items-center justify-center h-full bg-white border-b border-gray-100 dark:bg-slate-900 dark:border-slate-800">
                                 <span className="text-4xl">
                                     {car.vehicleCategory === '2w' ? '🏍️' : car.vehicleCategory === '3w' ? '🛺' : '🚗'}
                                 </span>
@@ -292,7 +295,7 @@ export function CarCard({
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
                         <button
                             onClick={handleQuickView}
-                            className="flex items-center gap-1.5 bg-white/95 backdrop-blur-sm text-gray-900 text-xs font-semibold px-4 py-2 rounded-full shadow-md hover:bg-white hover:shadow-lg transition-all scale-95 group-hover:scale-100"
+                            className="flex items-center gap-1.5 bg-white/95 text-gray-900 backdrop-blur-sm text-xs font-semibold px-4 py-2 rounded-full shadow-md hover:bg-white hover:shadow-lg dark:bg-slate-950/90 dark:text-slate-100 dark:hover:bg-slate-900 transition-all scale-95 group-hover:scale-100"
                         >
                             <Eye className="w-3.5 h-3.5" />
                             Quick View
@@ -314,16 +317,16 @@ export function CarCard({
                                 </p>
                             </div>
                             {isUsed && car.year && (
-                                <span className="inline-flex items-center gap-1 text-xs font-medium px-1.5 py-0.5 rounded-full bg-gray-100 text-gray-500 shrink-0">
+                                <span className="inline-flex items-center gap-1 text-xs font-medium px-1.5 py-0.5 rounded-full bg-gray-100 text-gray-500 shrink-0 dark:bg-slate-900 dark:text-slate-400">
                                     {car.year}
                                 </span>
                             )}
                         </div>
-                        <h3 className="text-base font-bold leading-tight line-clamp-1 text-gray-900 mt-0.5">
+                        <h3 className="text-base font-bold leading-tight line-clamp-1 text-gray-900 dark:text-slate-100 mt-0.5">
                             {car.model}
                         </h3>
                         {car.variant && (
-                            <p className="text-xs line-clamp-1 text-gray-600 mt-0.5">
+                            <p className="text-xs line-clamp-1 text-gray-600 dark:text-slate-400 mt-0.5">
                                 {car.variant}
                             </p>
                         )}
@@ -333,14 +336,14 @@ export function CarCard({
                     {/* Price */}
                     <div className="mb-2">
                         <div className="flex items-baseline gap-1.5 flex-wrap">
-                            <span className="text-lg font-bold text-gray-900">
+                            <span className="text-lg font-bold text-gray-900 dark:text-slate-100">
                                 {priceRange}
                             </span>
                             {hasPriceRange && (
-                                <span className="text-xs text-gray-500">– {maxPrice}</span>
+                                <span className="text-xs text-gray-500 dark:text-slate-400">– {maxPrice}</span>
                             )}
                         </div>
-                        <p className="text-xs text-gray-600">{isUsed ? 'Selling price' : 'Ex-showroom price'}</p>
+                        <p className="text-xs text-gray-600 dark:text-slate-400">{isUsed ? 'Selling price' : 'Ex-showroom price'}</p>
 
                         {showEMI && car.pricing.emi && (
                             <Badge variant="secondary" className="mt-1 text-xs font-medium gap-1 h-5" style={{ color: brandColor }}>
@@ -392,7 +395,7 @@ export function CarCard({
                             <Button
                                 size="sm"
                                 variant="outline"
-                                className="shrink-0 gap-1.5 text-xs h-8 px-2.5 font-semibold bg-white"
+                                className="shrink-0 gap-1.5 text-xs h-8 px-2.5 font-semibold bg-transparent dark:bg-slate-950/60 dark:hover:bg-slate-900"
                                 style={{ borderColor: brandColor, color: brandColor }}
                                 onClick={(e) => { e.stopPropagation(); setIsTestDriveOpen(true); }}
                                 title="Book Test Drive"
@@ -404,7 +407,7 @@ export function CarCard({
                         <Button
                             size="sm"
                             variant="outline"
-                            className="shrink-0 gap-1 text-xs h-8 px-2.5 font-medium bg-white"
+                            className="shrink-0 gap-1 text-xs h-8 px-2.5 font-medium bg-transparent dark:bg-slate-950/60 dark:hover:bg-slate-900"
                             style={{ borderColor: brandColor, color: brandColor }}
                             onClick={(e) => { e.stopPropagation(); setIsQuickViewOpen(true); }}
                             title="Quick View"
@@ -414,10 +417,10 @@ export function CarCard({
                         <Button
                             size="sm"
                             variant="outline"
-                            className="shrink-0 gap-1 text-xs h-8 px-2.5 font-medium"
+                            className="shrink-0 gap-1 text-xs h-8 px-2.5 font-medium bg-transparent dark:bg-slate-950/60 dark:hover:bg-slate-900"
                             style={inCompare
                                 ? { backgroundColor: brandColor, color: getContrastText(brandColor), borderColor: brandColor }
-                                : { borderColor: brandColor, color: brandColor, background: 'white' }}
+                                : { borderColor: brandColor, color: brandColor }}
                             onClick={(e) => { e.stopPropagation(); inCompare ? removeCar(car.id) : addCar(car); }}
                             title={inCompare ? 'Remove from compare' : 'Add to compare'}
                         >
@@ -474,14 +477,14 @@ function SpecItem({
     value: string;
 }) {
     return (
-        <div className={cn("flex items-center gap-2 p-2 rounded-xl bg-white border border-gray-200", !value && "invisible")}>
-            <div className="w-7 h-7 rounded-lg flex items-center justify-center shrink-0 bg-gray-50 border border-gray-200">
+        <div className={cn("flex items-center gap-2 p-2 rounded-xl bg-white border border-gray-200 dark:bg-slate-900/80 dark:border-slate-800", !value && "invisible")}>
+            <div className="w-7 h-7 rounded-lg flex items-center justify-center shrink-0 bg-gray-50 border border-gray-200 dark:bg-slate-950 dark:border-slate-800">
                 {icon}
             </div>
             <div className="min-w-0">
-                <p className="text-[11px] text-gray-500 leading-none mb-0.5">{label}</p>
+                <p className="text-[11px] text-gray-500 dark:text-slate-400 leading-none mb-0.5">{label}</p>
                 <p
-                    className="text-xs font-bold leading-tight truncate text-gray-800"
+                    className="text-xs font-bold leading-tight truncate text-gray-800 dark:text-slate-100"
                     title={value}
                 >
                     {value}
@@ -550,7 +553,7 @@ function VariantAccordionButton({
             <Button
                 size="sm"
                 variant="outline"
-                className="shrink-0 gap-1 text-xs h-8 px-2.5 font-medium bg-white"
+                className="shrink-0 gap-1 text-xs h-8 px-2.5 font-medium bg-transparent dark:bg-slate-950/60 dark:hover:bg-slate-900"
                 style={{ borderColor: brandColor, color: brandColor }}
                 onClick={handleToggle}
             >
@@ -762,4 +765,3 @@ function PopSpecChip({ icon, label, value }: { icon: React.ReactNode; label: str
         </div>
     );
 }
-

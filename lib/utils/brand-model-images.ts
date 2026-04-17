@@ -12,6 +12,8 @@
 const SUPABASE_STORAGE_URL =
     "https://llsvbyeumrfngjvbedbz.supabase.co/storage/v1/object/public/vehicle-images";
 
+const IMAGE_EXTENSIONS = ["jpg", "png", "webp"] as const;
+
 /** Convert a model name to the file-system slug used during scraping */
 export function modelToSlug(model: string): string {
     return model
@@ -33,14 +35,45 @@ export function getScrapedImageUrls(
     vehicleCategory: "2w" | "3w" | "4w",
     brandId: string,
     model: string
-): [string, string] {
+): string[] {
     const slug = modelToSlug(model);
     if (vehicleCategory === "4w") {
         const base = `/data/brand-model-images/4w/${brandId}/${slug}`;
-        return [`${base}.jpg`, `${base}.png`];
+        return IMAGE_EXTENSIONS.map((ext) => `${base}.${ext}`);
     }
     const base = `${SUPABASE_STORAGE_URL}/${vehicleCategory}/${brandId}/${slug}`;
-    return [`${base}.jpg`, `${base}.png`];
+    return IMAGE_EXTENSIONS.map((ext) => `${base}.${ext}`);
+}
+
+export function getAppAssetImageUrls(
+    vehicleCategory: "2w" | "3w" | "4w",
+    brandId: string,
+    model: string
+): string[] {
+    const slug = modelToSlug(model);
+    if (vehicleCategory !== "4w") return [];
+
+    const base = `/assets/cars/${brandId}/${slug}`;
+    return IMAGE_EXTENSIONS.map((ext) => `${base}.${ext}`);
+}
+
+export function getVehicleImageUrls(
+    vehicleCategory: "2w" | "3w" | "4w",
+    brandId: string,
+    model: string,
+    primaryImage?: string | null,
+): string[] {
+    const curatedAssets = getAppAssetImageUrls(vehicleCategory, brandId, model);
+    const scrapedAssets = getScrapedImageUrls(vehicleCategory, brandId, model);
+    const normalizedPrimary = primaryImage && primaryImage !== "/placeholder-car.jpg" ? primaryImage : null;
+
+    return [...new Set([
+        ...(vehicleCategory === "4w" ? curatedAssets : []),
+        ...(vehicleCategory === "4w" && normalizedPrimary?.startsWith("/assets/") ? [normalizedPrimary] : []),
+        ...scrapedAssets,
+        normalizedPrimary,
+        ...(vehicleCategory !== "4w" ? curatedAssets : []),
+    ].filter((url): url is string => Boolean(url)))];
 }
 
 /**

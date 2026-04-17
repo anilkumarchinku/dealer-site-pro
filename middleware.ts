@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { createServerClient } from '@supabase/ssr'
 import { extractSlugFromHostname } from './lib/utils/slug'
 
-const PROTECTED_PREFIXES = ['/dashboard', '/onboarding', '/preview', '/admin']
+const PROTECTED_PREFIXES = ['/dashboard', '/onboarding', '/preview']
 const AUTH_PAGES       = ['/auth/login', '/auth/register']
 
 // Base domain from env (e.g. "your-project.vercel.app" or "dealersitepro.com")

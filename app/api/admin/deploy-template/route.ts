@@ -1,10 +1,11 @@
 import { NextResponse } from "next/server";
 import { revalidatePath } from "next/cache";
-import { createAdminClient, requireAuth, requireDealerOwnership } from "@/lib/supabase-server";
+import { createAdminClient } from "@/lib/supabase-server";
+import { requireAdminSession } from "@/lib/utils/admin-session";
 
 export async function POST(req: Request) {
     try {
-        const { user, supabase: authClient, errorResponse } = await requireAuth();
+        const { errorResponse } = await requireAdminSession();
         if (errorResponse) return errorResponse;
 
         const { dealerId, template, brands } = await req.json();
@@ -18,10 +19,6 @@ export async function POST(req: Request) {
             return NextResponse.json({ error: "Invalid template value" }, { status: 400 });
         }
 
-        const { errorResponse: ownerErr } = await requireDealerOwnership(authClient, user.id, dealerId);
-        if (ownerErr) return ownerErr;
-
-        // Use admin client after ownership is verified
         const supabase = createAdminClient();
         const { data: updatedDealer, error } = await supabase
             .from("dealers")

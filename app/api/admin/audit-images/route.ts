@@ -1,10 +1,10 @@
 import { NextResponse } from "next/server";
 import fs from "fs";
 import path from "path";
-import { requireAuth } from "@/lib/supabase-server";
+import { requireAdminSession } from "@/lib/utils/admin-session";
 
 export async function GET(request: Request) {
-    const { errorResponse } = await requireAuth()
+    const { errorResponse } = await requireAdminSession()
     if (errorResponse) return errorResponse
     try {
         const dataPath = path.join(process.cwd(), 'public/data/brand-models.json');

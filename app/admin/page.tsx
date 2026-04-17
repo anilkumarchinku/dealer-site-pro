@@ -7,7 +7,6 @@
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import { supabase } from "@/lib/supabase";
 import Image from "next/image";
 import { useOnboardingStore } from "@/lib/store/onboarding-store";
 import { Button } from "@/components/ui/button";
@@ -27,7 +26,8 @@ import {
     ChevronRight,
     Palette,
     Globe,
-    TrendingUp
+    TrendingUp,
+    LogOut,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { automotiveBrands } from "@/lib/colors/automotive-brands";
@@ -220,43 +220,63 @@ export default function AdminDashboard() {
     const [isLaunching, setIsLaunching] = useState(false);
     const [activeCategory, setActiveCategory] = useState<string>("all");
     const [cars, setCars] = useState<CarType[]>([]);
-    const [adminChecked, setAdminChecked] = useState(false);
-    const [passwordVerified, setPasswordVerified] = useState(false);
+    const [sessionChecked, setSessionChecked] = useState(false);
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
+    const [usernameInput, setUsernameInput] = useState("admin");
     const [passwordInput, setPasswordInput] = useState('');
     const [passwordError, setPasswordError] = useState('');
     const [passwordLoading, setPasswordLoading] = useState(false);
 
-    // ── Step 1: Check email is in the admin list ──────────────────────────────
+    // ── Step 1: Check whether an admin session cookie already exists ─────────
     useEffect(() => {
-        supabase.auth.getUser().then(({ data: { user } }) => {
-            const adminEmails = (process.env.NEXT_PUBLIC_ADMIN_EMAILS ?? '')
-                .split(',')
-                .map(e => e.trim().toLowerCase())
-                .filter(Boolean)
-            if (!user || !adminEmails.includes(user.email?.toLowerCase() ?? '')) {
-                router.replace('/dashboard')
-                return
-            }
-            setAdminChecked(true)
-        })
-    }, [router])
+        let isMounted = true;
 
-    // ── Step 2: Verify admin password via server-side API ────────────────────
+        fetch('/api/admin/session')
+            .then(async (res) => {
+                const json = await res.json();
+                if (!isMounted) return;
+                setIsAuthenticated(Boolean(json.authenticated));
+            })
+            .catch(() => {
+                if (!isMounted) return;
+                setIsAuthenticated(false);
+            })
+            .finally(() => {
+                if (isMounted) {
+                    setSessionChecked(true);
+                }
+            });
+
+        return () => {
+            isMounted = false;
+        };
+    }, [])
+
+    const handleLogout = async () => {
+        await fetch('/api/admin/session', { method: 'DELETE' });
+        setIsAuthenticated(false);
+        setPasswordInput('');
+        setPasswordError('');
+        router.refresh();
+    };
+
+    // ── Step 2: Verify admin credentials via dedicated session route ─────────
     const handlePasswordSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setPasswordError('');
         setPasswordLoading(true);
         try {
-            const res = await fetch('/api/admin/verify-password', {
+            const res = await fetch('/api/admin/session', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ password: passwordInput }),
+                body: JSON.stringify({ username: usernameInput, password: passwordInput }),
             });
             const json = await res.json();
             if (json.success) {
-                setPasswordVerified(true);
+                setIsAuthenticated(true);
+                setPasswordInput('');
             } else {
-                setPasswordError('Wrong password. Try again.');
+                setPasswordError('Invalid admin credentials. Try again.');
                 setPasswordInput('');
             }
         } catch {
@@ -267,39 +287,47 @@ export default function AdminDashboard() {
     };
 
     useEffect(() => {
-        if (!adminChecked || !passwordVerified) return
+        if (!isAuthenticated) return
         let isMounted = true;
         getAllCars({ limit: ADMIN_CARS_PREVIEW_LIMIT }).then(res => {
             if (isMounted) setCars(res.cars);
         });
         return () => { isMounted = false; };
-    }, [adminChecked, passwordVerified])
+    }, [isAuthenticated])
 
-    if (!adminChecked) return null
+    if (!sessionChecked) return null
 
-    // ── Password prompt (shown after email check passes) ─────────────────────
-    if (!passwordVerified) return (
+    // ── Direct admin login prompt ────────────────────────────────────────────
+    if (!isAuthenticated) return (
         <div className="min-h-screen bg-background flex items-center justify-center p-4">
             <div className="w-full max-w-sm space-y-6">
                 <div className="text-center space-y-1">
                     <div className="text-3xl font-bold">🔐</div>
                     <h1 className="text-xl font-semibold text-foreground">Admin Access</h1>
-                    <p className="text-sm text-muted-foreground">Enter your admin password to continue</p>
+                    <p className="text-sm text-muted-foreground">Enter admin credentials to continue</p>
                 </div>
                 <form onSubmit={handlePasswordSubmit} className="space-y-4">
+                    <input
+                        type="text"
+                        placeholder="Admin username"
+                        value={usernameInput}
+                        onChange={e => setUsernameInput(e.target.value)}
+                        autoFocus
+                        disabled={passwordLoading}
+                        className="w-full px-4 py-2.5 rounded-lg border border-border bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary"
+                    />
                     <input
                         type="password"
                         placeholder="Admin password"
                         value={passwordInput}
                         onChange={e => setPasswordInput(e.target.value)}
-                        autoFocus
                         disabled={passwordLoading}
                         className="w-full px-4 py-2.5 rounded-lg border border-border bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                     />
                     {passwordError && (
                         <p className="text-sm text-destructive">{passwordError}</p>
                     )}
-                    <Button type="submit" className="w-full" disabled={passwordLoading || !passwordInput}>
+                    <Button type="submit" className="w-full" disabled={passwordLoading || !usernameInput || !passwordInput}>
                         {passwordLoading ? 'Verifying…' : 'Enter Admin Panel'}
                     </Button>
                 </form>
@@ -383,6 +411,13 @@ export default function AdminDashboard() {
                             >
                                 <Eye className="w-4 h-4 mr-2" />
                                 Inventory Audit
+                            </Button>
+                            <Button
+                                variant="outline"
+                                onClick={handleLogout}
+                            >
+                                <LogOut className="w-4 h-4 mr-2" />
+                                Logout
                             </Button>
                             <div className="flex items-center gap-4 px-4 py-2 bg-muted/50 rounded-xl">
                                 <div className="flex items-center gap-2">

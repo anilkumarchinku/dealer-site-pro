@@ -7,6 +7,7 @@
 import { NextResponse } from 'next/server';
 import { createServerClient } from '@supabase/ssr';
 import { cookies } from 'next/headers';
+import { isAdminEmail } from '@/lib/utils/admin-auth';
 
 export async function POST(request: Request) {
     // 1. Must be logged in
@@ -32,12 +33,8 @@ export async function POST(request: Request) {
     }
 
     // 2. Must be an admin email
-    const adminEmails = (process.env.NEXT_PUBLIC_ADMIN_EMAILS ?? '')
-        .split(',')
-        .map(e => e.trim().toLowerCase())
-        .filter(Boolean);
-
-    if (!adminEmails.includes(user.email?.toLowerCase() ?? '')) {
+    const adminEmailList = process.env.ADMIN_EMAILS ?? process.env.NEXT_PUBLIC_ADMIN_EMAILS;
+    if (!isAdminEmail(user.email, adminEmailList)) {
         return NextResponse.json({ success: false, error: 'Forbidden' }, { status: 403 });
     }
 

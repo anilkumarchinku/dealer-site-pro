@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -26,6 +27,7 @@ type AuditStats = {
 };
 
 export default function InventoryAuditPage() {
+    const router = useRouter();
     const [loading, setLoading] = useState(true);
     const [refreshing, setRefreshing] = useState(false);
     const [stats, setStats] = useState<AuditStats | null>(null);
@@ -53,8 +55,29 @@ export default function InventoryAuditPage() {
     };
 
     useEffect(() => {
-        fetchAudit();
-    }, []);
+        let isMounted = true;
+
+        fetch('/api/admin/session')
+            .then(async (res) => {
+                const data = await res.json();
+                if (!isMounted) return;
+
+                if (!data.authenticated) {
+                    router.replace('/admin');
+                    return;
+                }
+
+                fetchAudit();
+            })
+            .catch(() => {
+                if (!isMounted) return;
+                router.replace('/admin');
+            });
+
+        return () => {
+            isMounted = false;
+        };
+    }, [router]);
 
     const filteredModels = models.filter(m => {
         const matchesSearch = (m.originalBrand + " " + m.model).toLowerCase().includes(searchQuery.toLowerCase());

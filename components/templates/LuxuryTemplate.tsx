@@ -185,13 +185,13 @@ export function LuxuryTemplate({
                             <WishlistDrawer cars={cars} dealerId={dealerId} brandColor={brandAccent} />
                             <Button
                                 variant="outline"
-                                className="border-gray-300 bg-transparent text-gray-900 hover:bg-gray-100 hidden sm:flex"
+                                className="border-gray-300 bg-transparent text-gray-900 hover:bg-gray-100 hidden sm:flex dark:text-slate-100 dark:border-slate-600 dark:hover:bg-slate-800"
                                 onClick={() => setEnquireSidebarOpen(true)}
                             >
                                 <MessageSquare className="w-4 h-4 mr-2" />
                                 Enquire Now
                             </Button>
-                            <Button variant="outline" className="border-gray-300 bg-transparent text-gray-900 hover:bg-gray-100" asChild>
+                            <Button variant="outline" className="border-gray-300 bg-transparent text-gray-900 hover:bg-gray-100 dark:text-slate-100 dark:border-slate-600 dark:hover:bg-slate-800" asChild>
                                 <a href={`tel:${contactInfo.phone}`}>
                                     <Phone className="w-4 h-4 mr-2" />
                                     Call
