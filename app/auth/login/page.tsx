@@ -43,7 +43,10 @@ function LoginForm() {
 
         setLoading(true);
         try {
-            const { error: authError } = await supabase.auth.signInWithPassword({
+            // Capture data.user directly — don't make a second getUser() call.
+            // signInData.user is always non-null after a successful login and
+            // avoids a race where a second network call might return null.
+            const { data: signInData, error: authError } = await supabase.auth.signInWithPassword({
                 email: email.trim().toLowerCase(),
                 password,
             });
@@ -62,13 +65,11 @@ function LoginForm() {
             // Route new users to onboarding, existing users to dashboard.
             // Only redirect to /onboarding if there is truly NO dealer row —
             // meaning they registered but never started onboarding.
-            // Do NOT rely on onboarding_complete flag here: it can be false for
-            // existing users if the DB save failed mid-way (e.g. missing column).
-            const { data: { user } } = await supabase.auth.getUser();
+            const user = signInData?.user;
             if (user) {
                 const { data: dealer } = await supabase
                     .from("dealers")
-                    .select("id, onboarding_complete, slug")
+                    .select("id")
                     .eq("user_id", user.id)
                     .maybeSingle();
 
