@@ -30,7 +30,12 @@
       "Bash(/tmp/audit-3w-transmission.js:*)",
       "Bash(/tmp/audit-carcard-trans.js:*)",
       "Bash(/tmp/audit-2w-transmission.js:*)",
-      "Read(//Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/3w/**)"
+      "Read(//Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/3w/**)",
+      "Bash(sed -n '45,60p' \"/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/app/onboarding/two-wheelers/page.tsx\")",
+      "Bash(sed -n '45,60p' \"/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/app/onboarding/three-wheelers/page.tsx\")",
+      "Bash(sed -n '1,35p' \"/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/app/onboarding/step-1/page.tsx\")",
+      "Bash(sed -n '1,35p' \"/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/app/onboarding/two-wheelers/step-1/page.tsx\")",
+      "Bash(sed -n '1,35p' \"/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/app/onboarding/three-wheelers/step-1/page.tsx\")"
     ],
     "additionalDirectories": [
       "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/assets/logos/2w"

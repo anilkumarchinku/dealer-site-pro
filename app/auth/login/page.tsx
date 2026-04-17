@@ -58,7 +58,21 @@ function LoginForm() {
                 return;
             }
 
-            // Redirect to dashboard
+            // Check if this user has completed onboarding
+            const { data: { user } } = await supabase.auth.getUser();
+            if (user) {
+                const { data: dealer } = await supabase
+                    .from("dealers")
+                    .select("id, onboarding_complete")
+                    .eq("user_id", user.id)
+                    .maybeSingle();
+
+                if (!dealer || !dealer.onboarding_complete) {
+                    window.location.href = "/onboarding";
+                    return;
+                }
+            }
+
             window.location.href = "/dashboard";
         } catch (err) {
             const msg = err instanceof Error ? err.message : String(err);

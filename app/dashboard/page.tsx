@@ -90,6 +90,29 @@ export default function DashboardPage() {
     const [recentLeads, setRecentLeads]   = useState<ExternalLead[]>([]);
     const [topVehicles, setTopVehicles]   = useState<TopVehicle[]>([]);
 
+    // Safety net: if dealerId is missing from local store (new device / cleared cache),
+    // fetch it from DB. If user has no dealer record at all, send them to onboarding.
+    useEffect(() => {
+        if (!isSupabaseReady() || dealerId) return;
+        supabase.auth.getUser().then(({ data: { user } }) => {
+            if (!user) return;
+            supabase
+                .from("dealers")
+                .select("id, onboarding_complete")
+                .eq("user_id", user.id)
+                .maybeSingle()
+                .then(({ data: dealer }) => {
+                    if (!dealer || !dealer.onboarding_complete) {
+                        window.location.href = "/onboarding";
+                    } else {
+                        updateData({});  // trigger re-render with dealerId restored
+                        useOnboardingStore.setState({ dealerId: dealer.id });
+                    }
+                });
+        });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
     useEffect(() => {
         if (!isSupabaseReady() || !dealerId) return;
 
