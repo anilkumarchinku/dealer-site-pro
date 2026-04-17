@@ -169,8 +169,8 @@ export function FamilyTemplate({
         <div className="min-h-screen bg-white text-gray-900 font-sans">
             <nav className={`fixed ${previewMode ? 'top-12' : 'top-0'} left-0 right-0 z-50 transition-all ${isScrolled ? 'bg-white shadow-md' : 'bg-white/95'}`}>
                 <div className="max-w-7xl mx-auto px-4 py-4">
-                    <div className="flex justify-between items-center">
-                        <div className="flex items-center gap-3 cursor-pointer" onClick={() => setActiveTab('home')}>
+                    <div className="flex items-center justify-between gap-4">
+                        <div className="flex min-w-0 shrink-0 items-center gap-3 cursor-pointer" onClick={() => setActiveTab('home')}>
                             <div className="relative w-10 h-10">
                                 <Image
                                     src={logoUrl || `/assets/logos/${brandName.toLowerCase().replace(/\s+/g, '-')}.png`}
@@ -181,24 +181,24 @@ export function FamilyTemplate({
                                     onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
                                 />
                             </div>
-                            <span className="text-xl font-semibold">{dealerName}</span>
+                            <span className="max-w-[180px] text-lg font-semibold leading-tight text-gray-900 xl:max-w-none xl:text-xl">{dealerName}</span>
                         </div>
-                        <div className="hidden md:flex items-center gap-6">
-                            <button onClick={() => setActiveTab('home')} className="font-medium hover:opacity-70" style={activeTab === 'home' ? { color: brandColors.primary } : {}}>Home</button>
+                        <div className="hidden xl:flex flex-1 items-center justify-center gap-4 px-4 2xl:gap-6">
+                            <button onClick={() => setActiveTab('home')} className="whitespace-nowrap text-sm font-medium hover:opacity-70" style={activeTab === 'home' ? { color: brandColors.primary } : {}}>Home</button>
                             {showInventoryTab && (
-                                <button onClick={() => setActiveTab('inventory')} className="font-medium hover:opacity-70" style={activeTab === 'inventory' ? { color: brandColors.primary } : {}}>Inventory</button>
+                                <button onClick={() => setActiveTab('inventory')} className="whitespace-nowrap text-sm font-medium hover:opacity-70" style={activeTab === 'inventory' ? { color: brandColors.primary } : {}}>Inventory</button>
                             )}
-                            <a href="#contact" className="font-medium hover:opacity-70">Contact</a>
-                            <button onClick={() => setNavEMIOpen(true)} className="font-medium hover:opacity-70">EMI Calc</button>
-                            <a href="#exchange-section" className="font-medium hover:opacity-70">Exchange</a>
-                            <a href="#finance-section" className="font-medium hover:opacity-70">Finance</a>
-                            <a href="#service-section" className="font-medium hover:opacity-70">Service</a>
-                            <a href="#trust-section" className="font-medium hover:opacity-70">Trust Us</a>
+                            <a href="#contact" className="whitespace-nowrap text-sm font-medium hover:opacity-70">Contact</a>
+                            <button onClick={() => setNavEMIOpen(true)} className="whitespace-nowrap text-sm font-medium hover:opacity-70">EMI Calc</button>
+                            <a href="#exchange-section" className="whitespace-nowrap text-sm font-medium hover:opacity-70">Exchange</a>
+                            <a href="#finance-section" className="whitespace-nowrap text-sm font-medium hover:opacity-70">Finance</a>
+                            <a href="#service-section" className="whitespace-nowrap text-sm font-medium hover:opacity-70">Service</a>
+                            <a href="#trust-section" className="whitespace-nowrap text-sm font-medium hover:opacity-70">Trust Us</a>
                         </div>
-                        <div className="flex items-center gap-2">
+                        <div className="flex shrink-0 items-center gap-2">
                             <WishlistDrawer cars={cars} dealerId={dealerId} brandColor={brandColors.primary} />
                             <Button
-                                className="rounded-full hidden sm:flex bg-white"
+                                className="hidden rounded-full bg-white px-4 lg:flex"
                                 variant="outline"
                                 style={{ borderColor: brandColors.primary, color: brandColors.primary }}
                                 onClick={() => setEnquireSidebarOpen(true)}
@@ -206,7 +206,7 @@ export function FamilyTemplate({
                                 <MessageSquare className="w-4 h-4 mr-2" />
                                 Enquire Now
                             </Button>
-                            <Button className="rounded-full text-white" style={{ backgroundColor: brandColors.primary }} asChild>
+                            <Button className="rounded-full px-4 text-white lg:px-5" style={{ backgroundColor: brandColors.primary }} asChild>
                                 <a href={`tel:${contactInfo.phone}`}>
                                     <Phone className="w-4 h-4 mr-2" />
                                     Call Us
@@ -214,7 +214,7 @@ export function FamilyTemplate({
                             </Button>
                             <WhatsAppButton phone={contactInfo.phone} variant="nav" />
                             <button
-                                className="md:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors"
+                                className="xl:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors"
                                 onClick={() => setMobileMenuOpen(o => !o)}
                                 aria-label="Toggle navigation menu"
                             >

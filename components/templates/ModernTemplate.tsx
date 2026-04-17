@@ -193,10 +193,10 @@ export function ModernTemplate({
                 className={`fixed ${previewMode ? 'top-12' : 'top-0'} left-0 right-0 z-50 transition-all duration-300 bg-white ${isScrolled ? 'shadow-lg' : 'shadow-sm border-b border-gray-100'}`}
             >
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="flex justify-between items-center h-16">
+                    <div className="flex items-center justify-between gap-4 h-16">
                         {/* Logo */}
-                        <div className="flex items-center cursor-pointer" onClick={() => setActiveTab('home')}>
-                            <div className="relative w-10 h-10 mr-3">
+                        <div className="flex min-w-0 shrink-0 items-center cursor-pointer" onClick={() => setActiveTab('home')}>
+                            <div className="relative w-10 h-10 mr-3 shrink-0">
                                 <Image
                                     src={logoUrl || `/assets/logos/${brandName.toLowerCase().replace(/\s+/g, '-')}.png`}
                                     alt={logoUrl ? dealerName : brandName}
@@ -206,16 +206,16 @@ export function ModernTemplate({
                                     onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
                                 />
                             </div>
-                            <span className="text-xl font-bold text-gray-900">
+                            <span className="max-w-[180px] text-lg font-bold leading-tight text-gray-900 xl:max-w-none xl:text-xl">
                                 {dealerName}
                             </span>
                         </div>
 
                         {/* Nav Links */}
-                        <div className="hidden md:flex items-center gap-6">
+                        <div className="hidden xl:flex flex-1 items-center justify-center gap-4 px-4 2xl:gap-6">
                             <button
                                 onClick={() => setActiveTab('home')}
-                                className="font-medium transition-colors text-gray-600 hover:text-gray-900"
+                                className="whitespace-nowrap font-medium transition-colors text-sm text-gray-600 hover:text-gray-900"
                                 style={activeTab === 'home' ? { color: brandColors.primary } : {}}
                             >
                                 Home
@@ -223,40 +223,40 @@ export function ModernTemplate({
                             {showInventoryTab && (
                                 <button
                                     onClick={() => setActiveTab('inventory')}
-                                    className="font-medium transition-colors text-gray-600 hover:text-gray-900"
+                                    className="whitespace-nowrap font-medium transition-colors text-sm text-gray-600 hover:text-gray-900"
                                     style={activeTab === 'inventory' ? { color: brandColors.primary } : {}}
                                 >
                                     Inventory
                                 </button>
                             )}
-                            <a href="#contact" className="font-medium transition-colors text-gray-600 hover:text-gray-900">
+                            <a href="#contact" className="whitespace-nowrap font-medium transition-colors text-sm text-gray-600 hover:text-gray-900">
                                 Contact
                             </a>
                             <button
                                 onClick={() => setNavEMIOpen(true)}
-                                className="font-medium transition-colors text-sm text-gray-600 hover:text-gray-900"
+                                className="whitespace-nowrap font-medium transition-colors text-sm text-gray-600 hover:text-gray-900"
                             >
                                 EMI Calc
                             </button>
-                            <a href="#exchange-section" className="font-medium transition-colors text-sm text-gray-600 hover:text-gray-900">Exchange</a>
-                            <a href="#finance-section" className="font-medium transition-colors text-sm text-gray-600 hover:text-gray-900">Finance</a>
-                            <a href="#service-section" className="font-medium transition-colors text-sm text-gray-600 hover:text-gray-900">Service</a>
-                            <a href="#trust-section" className="font-medium transition-colors text-sm text-gray-600 hover:text-gray-900">Trust Us</a>
+                            <a href="#exchange-section" className="whitespace-nowrap font-medium transition-colors text-sm text-gray-600 hover:text-gray-900">Exchange</a>
+                            <a href="#finance-section" className="whitespace-nowrap font-medium transition-colors text-sm text-gray-600 hover:text-gray-900">Finance</a>
+                            <a href="#service-section" className="whitespace-nowrap font-medium transition-colors text-sm text-gray-600 hover:text-gray-900">Service</a>
+                            <a href="#trust-section" className="whitespace-nowrap font-medium transition-colors text-sm text-gray-600 hover:text-gray-900">Trust Us</a>
                         </div>
 
                         {/* CTA Buttons */}
-                        <div className="flex items-center gap-2">
+                        <div className="flex shrink-0 items-center gap-2">
                             <WishlistDrawer cars={cars} dealerId={dealerId} brandColor={brandColors.primary} />
                             <Button
                                 variant="outline"
-                                className="hidden sm:flex bg-transparent text-gray-700 border-gray-300 hover:bg-gray-100"
+                                className="hidden bg-transparent px-4 text-gray-700 border-gray-300 hover:bg-gray-100 lg:flex"
                                 onClick={() => setEnquireSidebarOpen(true)}
                             >
                                 <MessageSquare className="w-4 h-4 mr-2" />
                                 Enquire Now
                             </Button>
                             <Button
-                                className="text-white shadow-lg"
+                                className="px-4 text-white shadow-lg lg:px-5"
                                 style={{ backgroundColor: brandColors.primary }}
                                 asChild
                             >
@@ -267,7 +267,7 @@ export function ModernTemplate({
                             </Button>
                             <WhatsAppButton phone={contactInfo.phone} variant="nav" />
                             <button
-                                className="md:hidden p-2 rounded-lg transition-colors text-gray-900"
+                                className="xl:hidden p-2 rounded-lg transition-colors text-gray-900"
                                 onClick={() => setMobileMenuOpen(o => !o)}
                                 aria-label="Toggle navigation menu"
                             >

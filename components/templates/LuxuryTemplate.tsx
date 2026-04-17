@@ -155,8 +155,8 @@ export function LuxuryTemplate({
         <div className="min-h-screen bg-white text-gray-900 font-serif">
             <nav className={`fixed ${previewMode ? 'top-12' : 'top-0'} left-0 right-0 z-50 transition-all ${isScrolled ? 'bg-white/95 backdrop-blur-lg shadow-sm' : 'bg-transparent'}`}>
                 <div className="max-w-7xl mx-auto px-4 py-4">
-                    <div className="flex justify-between items-center">
-                        <div className="flex items-center gap-3 cursor-pointer" onClick={() => setActiveTab('home')}>
+                    <div className="flex items-center justify-between gap-4">
+                        <div className="flex min-w-0 shrink-0 items-center gap-3 cursor-pointer" onClick={() => setActiveTab('home')}>
                             <div className="relative w-10 h-10">
                                 <Image
                                     src={logoUrl || `/assets/logos/${brandName.toLowerCase().replace(/\s+/g, '-')}.png`}
@@ -167,31 +167,31 @@ export function LuxuryTemplate({
                                     onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
                                 />
                             </div>
-                            <span className="text-2xl font-light tracking-widest text-gray-900">{dealerName}</span>
+                            <span className="max-w-[190px] text-lg font-light leading-tight tracking-wide text-gray-900 xl:max-w-none xl:text-2xl xl:tracking-widest">{dealerName}</span>
                         </div>
-                        <div className="hidden md:flex items-center gap-8">
-                            <button onClick={() => setActiveTab('home')} className="text-sm tracking-wider text-gray-600 hover:text-gray-900" style={activeTab === 'home' ? { color: brandAccent } : {}}>Home</button>
+                        <div className="hidden xl:flex flex-1 items-center justify-center gap-4 px-4 2xl:gap-8">
+                            <button onClick={() => setActiveTab('home')} className="whitespace-nowrap text-sm tracking-wider text-gray-600 hover:text-gray-900" style={activeTab === 'home' ? { color: brandAccent } : {}}>Home</button>
                             {showInventoryTab && (
-                                <button onClick={() => setActiveTab('inventory')} className="text-sm tracking-wider text-gray-600 hover:text-gray-900" style={activeTab === 'inventory' ? { color: brandAccent } : {}}>Collection</button>
+                                <button onClick={() => setActiveTab('inventory')} className="whitespace-nowrap text-sm tracking-wider text-gray-600 hover:text-gray-900" style={activeTab === 'inventory' ? { color: brandAccent } : {}}>Collection</button>
                             )}
-                            <a href="#contact" className="text-sm tracking-wider text-gray-600 hover:text-gray-900">Contact</a>
-                            <button onClick={() => setNavEMIOpen(true)} className="text-sm tracking-wider text-gray-600 hover:text-gray-900">EMI Calc</button>
-                            <a href="#exchange-section" className="text-sm tracking-wider text-gray-600 hover:text-gray-900">Exchange</a>
-                            <a href="#finance-section" className="text-sm tracking-wider text-gray-600 hover:text-gray-900">Finance</a>
-                            <a href="#service-section" className="text-sm tracking-wider text-gray-600 hover:text-gray-900">Service</a>
-                            <a href="#trust-section" className="text-sm tracking-wider text-gray-600 hover:text-gray-900">Trust Us</a>
+                            <a href="#contact" className="whitespace-nowrap text-sm tracking-wider text-gray-600 hover:text-gray-900">Contact</a>
+                            <button onClick={() => setNavEMIOpen(true)} className="whitespace-nowrap text-sm tracking-wider text-gray-600 hover:text-gray-900">EMI Calc</button>
+                            <a href="#exchange-section" className="whitespace-nowrap text-sm tracking-wider text-gray-600 hover:text-gray-900">Exchange</a>
+                            <a href="#finance-section" className="whitespace-nowrap text-sm tracking-wider text-gray-600 hover:text-gray-900">Finance</a>
+                            <a href="#service-section" className="whitespace-nowrap text-sm tracking-wider text-gray-600 hover:text-gray-900">Service</a>
+                            <a href="#trust-section" className="whitespace-nowrap text-sm tracking-wider text-gray-600 hover:text-gray-900">Trust Us</a>
                         </div>
-                        <div className="flex items-center gap-2">
+                        <div className="flex shrink-0 items-center gap-2">
                             <WishlistDrawer cars={cars} dealerId={dealerId} brandColor={brandAccent} />
                             <Button
                                 variant="outline"
-                                className="border-gray-300 bg-transparent text-gray-900 hover:bg-gray-100 hidden sm:flex"
+                                className="hidden border-gray-300 bg-transparent px-4 text-gray-900 hover:bg-gray-100 lg:flex"
                                 onClick={() => setEnquireSidebarOpen(true)}
                             >
                                 <MessageSquare className="w-4 h-4 mr-2" />
                                 Enquire Now
                             </Button>
-                            <Button variant="outline" className="border-gray-300 bg-transparent text-gray-900 hover:bg-gray-100" asChild>
+                            <Button variant="outline" className="border-gray-300 bg-transparent px-4 text-gray-900 hover:bg-gray-100 lg:px-5" asChild>
                                 <a href={`tel:${contactInfo.phone}`}>
                                     <Phone className="w-4 h-4 mr-2" />
                                     Call
@@ -199,7 +199,7 @@ export function LuxuryTemplate({
                             </Button>
                             <WhatsAppButton phone={contactInfo.phone} variant="nav" />
                             <button
-                                className="md:hidden p-2 rounded-lg text-gray-900 transition-colors hover:bg-gray-100"
+                                className="xl:hidden p-2 rounded-lg text-gray-900 transition-colors hover:bg-gray-100"
                                 onClick={() => setMobileMenuOpen(o => !o)}
                                 aria-label="Toggle navigation menu"
                             >

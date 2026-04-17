@@ -183,9 +183,9 @@ export function SportyTemplate({
             {/* Navigation */}
             <nav className={`fixed ${previewMode ? 'top-12' : 'top-0'} left-0 right-0 z-50 transition-all ${isScrolled ? 'bg-white/95 backdrop-blur-lg shadow-sm' : 'bg-transparent'}`}>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="flex justify-between items-center h-16">
-                        <div className="flex items-center cursor-pointer" onClick={() => setActiveTab('home')}>
-                            <div className="relative w-10 h-10 mr-3">
+                    <div className="flex items-center justify-between gap-4 h-16">
+                        <div className="flex min-w-0 shrink-0 items-center cursor-pointer" onClick={() => setActiveTab('home')}>
+                            <div className="relative w-10 h-10 mr-3 shrink-0">
                                 <Image
                                     src={logoUrl || `/assets/logos/${brandName.toLowerCase().replace(/\s+/g, '-')}.png`}
                                     alt={logoUrl ? dealerName : brandName}
@@ -195,12 +195,12 @@ export function SportyTemplate({
                                     onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
                                 />
                             </div>
-                            <span className="text-xl font-bold text-gray-900">{dealerName}</span>
+                            <span className="max-w-[180px] text-lg font-bold leading-tight text-gray-900 xl:max-w-none xl:text-xl">{dealerName}</span>
                         </div>
-                        <div className="hidden md:flex items-center gap-6">
+                        <div className="hidden xl:flex flex-1 items-center justify-center gap-4 px-4 2xl:gap-6">
                             <button
                                 onClick={() => setActiveTab('home')}
-                                className="font-bold uppercase text-sm tracking-wider text-gray-600 hover:text-gray-900"
+                                className="whitespace-nowrap font-bold uppercase text-sm tracking-wider text-gray-600 hover:text-gray-900"
                                 style={activeTab === 'home' ? { color: brandAccent } : {}}
                             >
                                 Home
@@ -208,32 +208,32 @@ export function SportyTemplate({
                             {showInventoryTab && (
                                 <button
                                     onClick={() => setActiveTab('inventory')}
-                                    className="font-bold uppercase text-sm tracking-wider text-gray-600 hover:text-gray-900"
+                                    className="whitespace-nowrap font-bold uppercase text-sm tracking-wider text-gray-600 hover:text-gray-900"
                                     style={activeTab === 'inventory' ? { color: brandAccent } : {}}
                                 >
                                     Inventory
                                 </button>
                             )}
-                            <a href="#contact" className="font-bold uppercase text-sm tracking-wider text-gray-600 hover:text-gray-900">
+                            <a href="#contact" className="whitespace-nowrap font-bold uppercase text-sm tracking-wider text-gray-600 hover:text-gray-900">
                                 Contact
                             </a>
-                            <button onClick={() => setNavEMIOpen(true)} className="font-bold uppercase text-sm tracking-wider text-gray-600 hover:text-gray-900">EMI Calc</button>
-                            <a href="#exchange-section" className="font-bold uppercase text-sm tracking-wider text-gray-600 hover:text-gray-900">Exchange</a>
-                            <a href="#finance-section" className="font-bold uppercase text-sm tracking-wider text-gray-600 hover:text-gray-900">Finance</a>
-                            <a href="#service-section" className="font-bold uppercase text-sm tracking-wider text-gray-600 hover:text-gray-900">Service</a>
-                            <a href="#trust-section" className="font-bold uppercase text-sm tracking-wider text-gray-600 hover:text-gray-900">Trust Us</a>
+                            <button onClick={() => setNavEMIOpen(true)} className="whitespace-nowrap font-bold uppercase text-sm tracking-wider text-gray-600 hover:text-gray-900">EMI Calc</button>
+                            <a href="#exchange-section" className="whitespace-nowrap font-bold uppercase text-sm tracking-wider text-gray-600 hover:text-gray-900">Exchange</a>
+                            <a href="#finance-section" className="whitespace-nowrap font-bold uppercase text-sm tracking-wider text-gray-600 hover:text-gray-900">Finance</a>
+                            <a href="#service-section" className="whitespace-nowrap font-bold uppercase text-sm tracking-wider text-gray-600 hover:text-gray-900">Service</a>
+                            <a href="#trust-section" className="whitespace-nowrap font-bold uppercase text-sm tracking-wider text-gray-600 hover:text-gray-900">Trust Us</a>
                         </div>
-                        <div className="flex items-center gap-2">
+                        <div className="flex shrink-0 items-center gap-2">
                             <WishlistDrawer cars={cars} dealerId={dealerId} brandColor={brandAccent} />
                             <Button
-                                className="text-white font-bold hidden sm:flex"
+                                className="hidden px-4 text-white font-bold lg:flex"
                                 style={{ backgroundColor: `${brandAccent}cc` }}
                                 onClick={() => setEnquireSidebarOpen(true)}
                             >
                                 <MessageSquare className="w-4 h-4 mr-2" />
                                 ENQUIRE
                             </Button>
-                            <Button className="text-white font-bold" style={{ backgroundColor: brandAccent }} asChild>
+                            <Button className="px-4 text-white font-bold lg:px-5" style={{ backgroundColor: brandAccent }} asChild>
                                 <a href={`tel:${contactInfo.phone}`}>
                                     <Phone className="w-4 h-4 mr-2" />
                                     CALL NOW
@@ -241,7 +241,7 @@ export function SportyTemplate({
                             </Button>
                             <WhatsAppButton phone={contactInfo.phone} variant="nav" />
                             <button
-                                className="md:hidden p-2 rounded-lg text-gray-900 transition-colors hover:bg-gray-100"
+                                className="xl:hidden p-2 rounded-lg text-gray-900 transition-colors hover:bg-gray-100"
                                 onClick={() => setMobileMenuOpen(o => !o)}
                                 aria-label="Toggle navigation menu"
                             >
