@@ -314,7 +314,7 @@ export function CarCard({
                             {car.model}
                         </h3>
                         {car.variant && (
-                            <p className="text-xs line-clamp-1 text-gray-500 mt-0.5">
+                            <p className="text-xs line-clamp-1 text-gray-600 mt-0.5">
                                 {car.variant}
                             </p>
                         )}
@@ -331,7 +331,7 @@ export function CarCard({
                                 <span className="text-xs text-gray-500">– {maxPrice}</span>
                             )}
                         </div>
-                        <p className="text-xs text-gray-500">{isUsed ? 'Selling price' : 'Ex-showroom price'}</p>
+                        <p className="text-xs text-gray-600">{isUsed ? 'Selling price' : 'Ex-showroom price'}</p>
 
                         {showEMI && car.pricing.emi && (
                             <Badge variant="secondary" className="mt-1 text-xs font-medium gap-1 h-5" style={{ color: brandColor }}>
@@ -383,12 +383,12 @@ export function CarCard({
                             <Button
                                 size="sm"
                                 variant="outline"
-                                className="shrink-0 gap-1.5 text-xs h-8 px-2.5 font-semibold bg-white"
-                                style={{ borderColor: brandColor, color: brandColor }}
+                                className="shrink-0 gap-1.5 text-xs h-8 px-2.5 font-semibold bg-white text-gray-700"
+                                style={{ borderColor: brandColor }}
                                 onClick={(e) => { e.stopPropagation(); setIsTestDriveOpen(true); }}
                                 title="Book Test Drive"
                             >
-                                <Calendar className="w-3.5 h-3.5" />
+                                <Calendar className="w-3.5 h-3.5" style={{ color: brandColor }} />
                                 <span className="hidden sm:inline">Test Drive</span>
                             </Button>
                         )}
@@ -470,9 +470,9 @@ function SpecItem({
                 {icon}
             </div>
             <div className="min-w-0">
-                <p className="text-xs text-gray-500 leading-none">{label}</p>
+                <p className="text-[11px] text-gray-500 leading-none mb-0.5">{label}</p>
                 <p
-                    className="text-xs font-semibold leading-tight truncate text-gray-900"
+                    className="text-xs font-bold leading-tight truncate text-gray-800"
                     title={value}
                 >
                     {value}
