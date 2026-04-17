@@ -30,9 +30,10 @@ import {
     TableRow,
 } from '@/components/ui/table';
 import { Slider } from '@/components/ui/slider';
-import { CarCard } from './CarCard';
 import { getBrandLogo } from '@/lib/data/brand-logos';
 import { useSitePrefix } from '@/lib/hooks/useSitePrefix';
+import { getBrandColors } from '@/lib/colors/automotive-brands';
+import { getContrastText } from '@/lib/utils/color-contrast';
 import {
     ChevronRight,
     Download,
@@ -256,6 +257,8 @@ export function CarDetailView({ car, similarCars = [], siteSlug }: CarDetailView
         ? `${inventoryHref}?make=${encodeURIComponent(car.make)}`
         : `/cars?make=${encodeURIComponent(car.make)}`;
     const detailBasePath = siteSlug ? sitePrefix : undefined;
+    const brandColor = getBrandColors(car.make).primary ?? '#2563eb';
+    const brandContrast = getContrastText(brandColor);
     const lightCardClass = 'bg-white border border-slate-200 text-slate-900 shadow-[0_12px_30px_rgba(15,23,42,0.06)] dark:!bg-white dark:!border-slate-200 dark:!text-slate-900';
     const softCardClass = 'bg-slate-50 border border-slate-200 text-slate-900 shadow-none dark:!bg-slate-50 dark:!border-slate-200 dark:!text-slate-900';
     const lightTableRowHoverClass = 'hover:bg-slate-50';
@@ -359,7 +362,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug }: CarDetailView
                                     </div>
                                     <p className="text-xs text-gray-500 mt-0.5">Ex-showroom Price</p>
                                     {car.pricing.emi && (
-                                        <Badge variant="secondary" className="mt-2 text-xs gap-1">
+                                        <Badge variant="secondary" className="mt-2 text-xs gap-1" style={{ color: brandColor }}>
                                             <TrendingUp className="w-3 h-3" />
                                             EMI from ₹{car.pricing.emi.monthly.toLocaleString()}/mo
                                         </Badge>
@@ -383,7 +386,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug }: CarDetailView
 
                                 {/* CTAs */}
                                 <div className="space-y-2.5">
-                                    <Button className="w-full" size="lg">
+                                    <Button className="w-full" size="lg" style={{ backgroundColor: brandColor, color: brandContrast }}>
                                         <Phone className="w-4 h-4 mr-2" />
                                         Check On-Road Price
                                     </Button>
@@ -419,11 +422,12 @@ export function CarDetailView({ car, similarCars = [], siteSlug }: CarDetailView
                             <button
                                 key={tab.id}
                                 onClick={() => scrollToSection(tab.id)}
-                                className={`flex items-center gap-1.5 px-4 py-3 text-sm font-medium whitespace-nowrap border-b-2 transition-colors ${activeTab === tab.id
-                                        ? 'border-blue-600 text-blue-600'
+                                    className={`flex items-center gap-1.5 px-4 py-3 text-sm font-medium whitespace-nowrap border-b-2 transition-colors ${activeTab === tab.id
+                                        ? ''
                                         : 'border-transparent text-gray-500 hover:text-gray-900'
                                     }`}
-                            >
+                                    style={activeTab === tab.id ? { borderColor: brandColor, color: brandColor } : undefined}
+                                >
                                 <tab.icon className="w-3.5 h-3.5" />
                                 {tab.label}
                             </button>
@@ -995,7 +999,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug }: CarDetailView
                                             <CardContent className="p-6 flex flex-col h-full">
                                                 <div className="text-center pb-4 mb-4 border-b">
                                                     <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-1">Monthly EMI</p>
-                                                    <p className="text-4xl font-bold text-blue-600">
+                                                    <p className="text-4xl font-bold" style={{ color: brandColor }}>
                                                         ₹{emiResult.emi.toLocaleString('en-IN')}
                                                     </p>
                                                     <p className="text-xs text-gray-500 mt-1">per month for {emiTenure} months</p>
@@ -1027,8 +1031,8 @@ export function CarDetailView({ car, similarCars = [], siteSlug }: CarDetailView
                                                     </div>
                                                     <div className="w-full h-2 bg-gray-100 rounded-full overflow-hidden">
                                                         <div
-                                                            className="h-full bg-blue-600 rounded-full transition-all"
-                                                            style={{ width: `${(emiResult.loan / emiResult.total) * 100}%` }}
+                                                            className="h-full rounded-full transition-all"
+                                                            style={{ width: `${(emiResult.loan / emiResult.total) * 100}%`, backgroundColor: brandColor }}
                                                         />
                                                     </div>
                                                 </div>
@@ -1222,13 +1226,51 @@ export function CarDetailView({ car, similarCars = [], siteSlug }: CarDetailView
                     <section>
                         <div className="flex items-center justify-between mb-6">
                             <h2 className="text-2xl font-bold">Similar Cars</h2>
-                            <Link href={inventoryHref} className="text-sm text-blue-600 hover:underline">
+                            <Link href={inventoryHref} className="text-sm hover:underline" style={{ color: brandColor }}>
                                 View All Cars
                             </Link>
                         </div>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                             {similarCars.slice(0, 4).map((simCar) => (
-                                <CarCard key={simCar.id} car={simCar} light detailBasePath={detailBasePath} />
+                                <Link
+                                    key={simCar.id}
+                                    href={`${(detailBasePath ?? '/cars').replace(/\/$/, '')}/${simCar.id}`.replace(/^\/\//, '/')}
+                                    className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                                >
+                                    <div className="relative aspect-[16/10] bg-slate-50">
+                                        {simCar.images.hero ? (
+                                            <Image
+                                                src={simCar.images.hero}
+                                                alt={`${simCar.make} ${simCar.model}`}
+                                                fill
+                                                unoptimized={simCar.images.hero.startsWith('http')}
+                                                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                                                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                                            />
+                                        ) : (
+                                            <div className="flex h-full items-center justify-center text-sm text-slate-400">
+                                                No Image
+                                            </div>
+                                        )}
+                                    </div>
+                                    <div className="p-4">
+                                        <p className="text-[11px] font-semibold uppercase tracking-[0.22em]" style={{ color: brandColor }}>
+                                            {simCar.make}
+                                        </p>
+                                        <h3 className="mt-1 line-clamp-2 text-lg font-bold text-slate-900">{simCar.model}</h3>
+                                        <p className="mt-2 text-base font-semibold text-slate-900">
+                                            {simCar.pricing?.exShowroom?.min != null
+                                                ? formatPriceInLakhs(simCar.pricing.exShowroom.min)
+                                                : (simCar.price || 'Price on request')}
+                                        </p>
+                                        <div
+                                            className="mt-4 inline-flex items-center rounded-xl px-4 py-2 text-sm font-semibold transition-opacity group-hover:opacity-90"
+                                            style={{ backgroundColor: brandColor, color: brandContrast }}
+                                        >
+                                            View Details
+                                        </div>
+                                    </div>
+                                </Link>
                             ))}
                         </div>
                     </section>
