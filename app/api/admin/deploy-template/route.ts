@@ -26,27 +26,64 @@ export async function POST(req: Request) {
         const supabase = createAdminClient();
         const { data: updatedDealer, error } = await supabase
             .from("dealers")
-            .update({
-                style_template: template,
-                brands: brands.map((brand: string) => brand.trim())
-            })
+            .select("id, slug, vehicle_type")
             .eq("id", dealerId)
-            .select("slug")
             .single();
 
-        if (error) {
+        if (error || !updatedDealer) {
+            return NextResponse.json({ error: "Dealer not found" }, { status: 404 });
+        }
+
+        const { error: updateError } = await supabase
+            .from("dealers")
+            .update({
+                style_template: template,
+            })
+            .eq("id", dealerId);
+
+        if (updateError) {
             return NextResponse.json({ error: "Failed to save template settings" }, { status: 500 });
+        }
+
+        const brandVehicleType = updatedDealer.vehicle_type === 'two-wheeler'
+            ? '2w'
+            : updatedDealer.vehicle_type === 'three-wheeler'
+                ? '3w'
+                : 'cars';
+
+        const normalizedBrands = brands.map((brand: string, index: number) => ({
+            dealer_id: dealerId,
+            brand_name: brand.trim(),
+            is_primary: index === 0,
+            vehicle_type: brandVehicleType,
+        }));
+
+        const { error: deleteBrandsError } = await supabase
+            .from("dealer_brands")
+            .delete()
+            .eq("dealer_id", dealerId);
+
+        if (deleteBrandsError) {
+            return NextResponse.json({ error: "Failed to clear existing dealer brands" }, { status: 500 });
+        }
+
+        const { error: insertBrandsError } = await supabase
+            .from("dealer_brands")
+            .insert(normalizedBrands);
+
+        if (insertBrandsError) {
+            return NextResponse.json({ error: "Failed to save dealer brands" }, { status: 500 });
         }
 
         // Trigger ISR revalidation so the public dealer site reflects the new
         // template/brand immediately rather than waiting up to 5 minutes.
-        if (updatedDealer?.slug) {
+        if (updatedDealer.slug) {
             revalidatePath(`/sites/${updatedDealer.slug}`)
         }
 
         return NextResponse.json({
             success: true,
-            slug: updatedDealer?.slug ?? null,
+            slug: updatedDealer.slug ?? null,
             message: "Template & Brand saved successfully!"
         });
     } catch (e: unknown) {

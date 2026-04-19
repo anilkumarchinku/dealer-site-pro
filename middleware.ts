@@ -104,6 +104,7 @@ export async function middleware(request: NextRequest) {
         hostname === BASE_DOMAIN ||
         hostname === `www.${BASE_DOMAIN}` ||
         hostname.startsWith('localhost') ||
+        hostname.startsWith('127.0.0.1') ||
         hostname.endsWith('.vercel.app')   // Vercel preview/production deployments
 
     // ── Subdomain / custom domain routing ────────────────────
