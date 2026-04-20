@@ -84,10 +84,12 @@ function normalizeUrl(url: string): string {
         .replace(/\\\//g, '/')
         .replace(/&amp;/g, '&')
         .replace(/\?tr=[^"' )]+/g, '')
-        .replace('/630x420/', '/930x620/')
+        // Upgrade to highest resolution variant
+        .replace(/\/\d{3,4}x\d{3,4}\//g, '/930x620/')
         .trim()
 }
 
+/** Deduplicate by a size-agnostic key so 630x420 and 930x620 of the same image collapse. */
 function uniqueUrls(values: string[]): string[] {
     const seen = new Set<string>()
     const output: string[] = []
@@ -95,8 +97,10 @@ function uniqueUrls(values: string[]): string[] {
     for (const value of values) {
         const normalized = normalizeUrl(value)
         if (!normalized.startsWith('https://stimg.cardekho.com/images/')) continue
-        if (seen.has(normalized)) continue
-        seen.add(normalized)
+        // Build dedup key by stripping ALL size segments
+        const dedupKey = normalized.replace(/\/\d{3,4}x\d{3,4}\//g, '/')
+        if (seen.has(dedupKey)) continue
+        seen.add(dedupKey)
         output.push(normalized)
     }
 

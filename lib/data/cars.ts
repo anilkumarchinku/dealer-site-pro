@@ -12,7 +12,7 @@ import fs from 'fs'
 import path from 'path'
 import { createClient } from '@supabase/supabase-js'
 import type { Car } from '@/lib/types/car'
-import { brandNameToId } from '@/lib/utils/brand-model-images'
+import { brandNameToId, getScrapedImageFallback } from '@/lib/utils/brand-model-images'
 
 // Re-export static client-safe exports so server code can still use one import
 export { CAR_MAKES, getAllMakes, allCars } from '@/lib/data/cars-static'
@@ -131,190 +131,16 @@ function loadBrandImageMap(make: string): Record<string, string> {
     }
 }
 
-// ── Local 4W image resolver ───────────────────────────────────────────────────
-
-/** Same slug logic used when scraping: lowercase, remove periods, spaces→hyphens */
-function toSlug(s: string): string {
-    return s.toLowerCase().replace(/\./g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
-}
-
-/** Folder name for a car make inside public/data/brand-model-images/4w/ */
-const MAKE_TO_FOLDER_4W: Record<string, string> = {
-    'aston martin': 'aston-martin',
-    'audi': 'audi',
-    'bentley': 'bentley',
-    'bmw': 'bmw',
-    'byd': 'byd',
-    'citroen': 'citroen',
-    'ferrari': 'ferrari',
-    'force motors': 'force-motors',
-    'force': 'force',
-    'honda': 'honda',
-    'hyundai': 'hyundai',
-    'isuzu': 'isuzu',
-    'jaguar': 'jaguar',
-    'jeep': 'jeep',
-    'kia': 'kia',
-    'lamborghini': 'lamborghini',
-    'land rover': 'land-rover',
-    'lexus': 'lexus',
-    'mahindra': 'mahindra',
-    'maserati': 'maserati',
-    'maruti suzuki': 'maruti',
-    'maruti': 'maruti',
-    'mercedes-benz': 'mercedes-benz',
-    'mercedes': 'mercedes-benz',
-    'mg': 'mg',
-    'mg motor': 'mg',
-    'mini': 'mini',
-    'nissan': 'nissan',
-    'porsche': 'porsche',
-    'renault': 'renault',
-    'rolls-royce': 'rolls-royce',
-    'rolls royce': 'rolls-royce',
-    'skoda': 'skoda',
-    'tata motors': 'tata',
-    'tata': 'tata',
-    'toyota': 'toyota',
-    'vinfast': 'vinfast',
-    'volkswagen': 'volkswagen',
-    'volvo': 'volvo',
-}
-
-/**
- * Returns a public URL to a locally committed 4W image, or null if not found.
- * Tries {slug}.jpg then {slug}.png inside public/data/brand-model-images/4w/{folder}/
- */
 function getLocal4WImage(make: string, model: string): string | null {
-    const folder = MAKE_TO_FOLDER_4W[make.toLowerCase()]
-    if (!folder) return null
-    const slug = toSlug(model)
-    const base = path.join(process.cwd(), 'public', 'data', 'brand-model-images', '4w', folder, slug)
-    for (const ext of ['.jpg', '.png']) {
-        if (fs.existsSync(base + ext)) return `/data/brand-model-images/4w/${folder}/${slug}${ext}`
-    }
-    return null
+    return getScrapedImageFallback('4w', brandNameToId(make, '4w'), model)
 }
 
-/**
- * Returns a public URL to a locally committed 2W image, or null if not found.
- * Tries direct folder paths and scans if needed.
- */
 export function getLocal2WImage(brand: string, model: string): string | null {
-    const slug = toSlug(model)
-    const brandLower = brand.toLowerCase().trim()
-
-    try {
-        const baseDir = path.join(process.cwd(), 'public', 'data', 'brand-model-images', '2w')
-        if (!fs.existsSync(baseDir)) {
-            console.log(`[getLocal2WImage] 2W dir not found: ${baseDir}`)
-            return null
-        }
-
-        // Common folder naming patterns to try
-        const folderPatterns = [
-            // Direct slug
-            brandLower.replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''),
-            // With common suffixes
-            `${brandLower.replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}-india`,
-            `${brandLower.replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}-ev`,
-            `${brandLower.replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}-auto`,
-            `${brandLower.replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}-motorcycles`,
-            `${brandLower.replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}-motor`,
-            // Special cases (hardcoded for brands with non-obvious names)
-            brandLower.includes('honda') ? 'honda-hmsi' : null,
-            brandLower.includes('matter') ? 'matter-ev' : null,
-        ].filter(Boolean) as string[]
-
-        for (const folder of folderPatterns) {
-            const imgPath = path.join(baseDir, folder, slug)
-            for (const ext of ['.jpg', '.png']) {
-                const fullPath = imgPath + ext
-                if (fs.existsSync(fullPath)) {
-                    const url = `/data/brand-model-images/2w/${folder}/${slug}${ext}`
-                    console.log(`[getLocal2WImage] ✓ Found: ${brand} ${model} → ${url}`)
-                    return url
-                }
-            }
-        }
-
-        // Fallback: scan all folders if patterns didn't match
-        const allFolders = fs.readdirSync(baseDir)
-        const brandWords = brandLower.split(/[^a-z0-9]/g).filter(w => w.length > 2)
-
-        for (const folder of allFolders) {
-            const folderLower = folder.toLowerCase()
-            const folderWords = folderLower.split('-')
-
-            // Check if folder shares keywords with brand
-            const hasMatch = brandWords.some(bw => folderWords.some(fw => fw.includes(bw) || bw.includes(fw)))
-
-            if (hasMatch) {
-                const imgPath = path.join(baseDir, folder, slug)
-                for (const ext of ['.jpg', '.png']) {
-                    const fullPath = imgPath + ext
-                    if (fs.existsSync(fullPath)) {
-                        const url = `/data/brand-model-images/2w/${folder}/${slug}${ext}`
-                        console.log(`[getLocal2WImage] ✓ Found (fallback): ${brand} ${model} → ${url}`)
-                        return url
-                    }
-                }
-            }
-        }
-
-        console.log(`[getLocal2WImage] ✗ NOT FOUND: ${brand} "${model}" (slug: ${slug})`)
-    } catch (err) {
-        console.error(`[getLocal2WImage] Error for ${brand} ${model}:`, err)
-    }
-    return null
+    return getScrapedImageFallback('2w', brandNameToId(brand, '2w'), model)
 }
 
-/**
- * Returns a public URL to a locally committed 3W image, or null if not found.
- * Scans available folders to find a match for the brand.
- */
 export function getLocal3WImage(brand: string, model: string): string | null {
-    const slug = toSlug(model)
-    const brandLower = brand.toLowerCase().trim()
-
-    try {
-        const baseDir = path.join(process.cwd(), 'public', 'data', 'brand-model-images', '3w')
-        if (!fs.existsSync(baseDir)) {
-            console.log(`[getLocal3WImage] 3W dir not found: ${baseDir}`)
-            return null
-        }
-
-        const canonicalFolder = brandNameToId(brand, '3w')
-        const normalizedFolder = brandLower.replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
-
-        // Prefer the canonical brand-to-folder mapping used elsewhere in the app,
-        // then fall back to legacy folder guesses for older assets.
-        const folderPatterns = Array.from(new Set([
-            canonicalFolder,
-            normalizedFolder,
-            `${normalizedFolder}-auto`,
-            `${normalizedFolder}-motors`,
-            `${normalizedFolder}-india`,
-            `${normalizedFolder}-three-wheelers`,
-        ].filter(Boolean))) as string[]
-
-        for (const folder of folderPatterns) {
-            const imgPath = path.join(baseDir, folder, slug)
-            for (const ext of ['.jpg', '.png']) {
-                const fullPath = imgPath + ext
-                if (fs.existsSync(fullPath)) {
-                    const url = `/data/brand-model-images/3w/${folder}/${slug}${ext}`
-                    console.log(`[getLocal3WImage] ✓ Found: ${brand} ${model} → ${url}`)
-                    return url
-                }
-            }
-        }
-
-        console.log(`[getLocal3WImage] ✗ NOT FOUND: ${brand} "${model}" (slug: ${slug})`)
-    } catch (err) {
-        console.error(`[getLocal3WImage] Error for ${brand} ${model}:`, err)
-    }
-    return null
+    return getScrapedImageFallback('3w', brandNameToId(brand, '3w'), model)
 }
 
 // ── JSON-based catalog fallback (mirrors admin catalog/page.tsx load4W logic) ─
@@ -358,7 +184,8 @@ function getCarsByMakeFromJson(make: string): Car[] {
             if (Array.isArray(node)) { node.forEach((n: any) => walk(n, ctxModel, ctxPrice, ctxFuel)); return }
             const model: string | undefined = node.model || node.model_name || ctxModel
             const imgUrl = getImg(node.image_urls)
-            const price  = node.ex_showroom_price || node.ex_showroom_price_min_inr || ctxPrice
+            const rawPrice = node.ex_showroom_price
+            const price  = (rawPrice && typeof rawPrice === 'object' ? rawPrice.min : rawPrice) || node.ex_showroom_price_min_inr || ctxPrice
             const fuel   = node.fuel_type || ctxFuel
             if (model && !seen.has(model.toLowerCase())) {
                 seen.add(model.toLowerCase())
@@ -394,10 +221,12 @@ function getCarsByMakeFromJson(make: string): Car[] {
                         const model = m[1].replace(/-/g, ' ')
                         if (!seen.has(model.toLowerCase())) {
                             seen.add(model.toLowerCase())
+                            const rawP = node.ex_showroom_price
+                            const priceVal = rawP && typeof rawP === 'object' ? rawP.min : rawP
                             collected.push({
                                 model,
                                 cdnImg: !imgUrl.includes('spacer') ? imgUrl : null,
-                                price: node.ex_showroom_price ? String(node.ex_showroom_price) : null,
+                                price: priceVal ? String(priceVal) : null,
                                 fuel: node.fuel_type ?? null,
                                 transmission: node.transmission ?? null,
                                 seating: node.seating_capacity ?? 5,

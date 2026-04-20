@@ -1,10 +1,9 @@
 import 'server-only'
 
-import fs from 'fs'
-import path from 'path'
 import type { Car, CarVariant } from '@/lib/types/car'
 import { CAR_MODEL_COLORS } from '@/lib/data/car-colors'
 import { fetchCardekhoGallery } from '@/lib/data/cardekho-gallery'
+import { getRequestOrigin } from '@/lib/utils/request-origin'
 
 const MAKE_TO_JSON: Record<string, string> = {
     'tata motors': 'tata',
@@ -62,6 +61,10 @@ function parseNumber(value: unknown): number | null {
 }
 
 function parsePrice(value: unknown): number | null {
+    // Handle {min, max} object structure from JSON data files
+    if (value && typeof value === 'object' && 'min' in value) {
+        return parsePrice((value as Record<string, unknown>).min)
+    }
     const parsed = parseNumber(value)
     return parsed && parsed > 0 ? Math.round(parsed) : null
 }
@@ -136,23 +139,34 @@ function flattenBrandVariants(raw: unknown): Record<string, unknown>[] {
     return variants
 }
 
-function getBrandVariants(make: string): Record<string, unknown>[] {
-    const jsonKey = MAKE_TO_JSON[make.toLowerCase()]
-    if (!jsonKey) return []
+async function getPublicJson<T>(pathname: string): Promise<T | null> {
+    const origin = await getRequestOrigin()
+    if (!origin) return null
 
     try {
-        const filePath = path.join(process.cwd(), 'public', 'data', `${jsonKey}.json`)
-        const raw = JSON.parse(fs.readFileSync(filePath, 'utf8'))
-        return flattenBrandVariants(raw)
+        const response = await fetch(`${origin}${pathname}`, {
+            next: { revalidate: 60 * 60 },
+        })
+        if (!response.ok) return null
+        return await response.json() as T
     } catch {
-        return []
+        return null
     }
 }
 
-function getMatchingModelVariants(make: string, model: string): Record<string, unknown>[] {
-    const normalizedModel = normalizeText(model)
+async function getBrandVariants(make: string): Promise<Record<string, unknown>[]> {
+    const jsonKey = MAKE_TO_JSON[make.toLowerCase()]
+    if (!jsonKey) return []
 
-    return getBrandVariants(make).filter(entry => {
+    const raw = await getPublicJson<unknown>(`/data/${jsonKey}.json`)
+    return raw ? flattenBrandVariants(raw) : []
+}
+
+async function getMatchingModelVariants(make: string, model: string): Promise<Record<string, unknown>[]> {
+    const normalizedModel = normalizeText(model)
+    const variants = await getBrandVariants(make)
+
+    return variants.filter(entry => {
         const entryModel = normalizeText(String(entry.model ?? entry.model_name ?? ''))
         return entryModel === normalizedModel ||
             entryModel.includes(normalizedModel) ||
@@ -291,7 +305,7 @@ function colorsFromNames(
 export async function hydrateCarWithJsonDetails(car: Car): Promise<Car> {
     if (!car.make || !car.model) return car
 
-    const matchingVariants = getMatchingModelVariants(car.make, car.model)
+    const matchingVariants = await getMatchingModelVariants(car.make, car.model)
     if (matchingVariants.length === 0) return car
 
     const priceValues = matchingVariants
