@@ -60,8 +60,8 @@ export async function GET(request: NextRequest) {
             filters.seatingCapacity = seating.split(',').map(s => parseInt(s));
         }
 
-        // Search query
-        const searchQuery = searchParams.get('q');
+        // Search query — accept both 'q' and 'searchQuery' (SiteHeader uses 'searchQuery')
+        const searchQuery = searchParams.get('searchQuery') || searchParams.get('q');
         if (searchQuery) {
             filters.searchQuery = searchQuery;
         }

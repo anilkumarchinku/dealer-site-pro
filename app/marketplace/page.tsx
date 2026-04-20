@@ -3,6 +3,7 @@
 import { Suspense, useState, useEffect, useCallback } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
+import Image from 'next/image'
 import { SiteHeader } from '@/components/layout/SiteHeader'
 import { SiteFooter } from '@/components/layout/SiteFooter'
 import { Button } from '@/components/ui/button'
@@ -21,6 +22,7 @@ import {
     GitCompare, MessageCircle, Eye, Clock, IndianRupee,
     CheckCircle2, ChevronDown, ArrowRight,
 } from 'lucide-react'
+import { getBrandLogo } from '@/lib/data/brand-logos'
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -507,7 +509,20 @@ function VehicleCard({
 
             {/* Image area */}
             <div className="aspect-[16/10] bg-gradient-to-br from-gray-50 to-gray-100 relative flex items-center justify-center overflow-hidden">
-                <Car className="w-20 h-20 text-gray-200 group-hover:scale-105 transition-transform duration-300" />
+                {getBrandLogo(v.make) ? (
+                    <div className="relative w-32 h-20">
+                        <Image
+                            src={getBrandLogo(v.make)!}
+                            alt={v.make}
+                            fill
+                            className="object-contain opacity-30 group-hover:opacity-45 transition-opacity duration-300"
+                            sizes="128px"
+                            onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
+                        />
+                    </div>
+                ) : (
+                    <Car className="w-20 h-20 text-gray-200 group-hover:scale-105 transition-transform duration-300" />
+                )}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
 
                 {/* Top-left: condition badge */}

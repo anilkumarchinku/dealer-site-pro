@@ -121,9 +121,21 @@ export async function GET(req: NextRequest) {
 
     const city  = sp.get('city')?.trim()
     const state = sp.get('state')?.trim()
-    // Both city and state match against dealers.location (which stores city, state or full address)
-    if (city)  query = query.ilike('dealers.location', `%${city}%`)
-    if (state) query = query.ilike('dealers.location', `%${state}%`)
+    // Filter by dealer location — PostgREST can't ilike on joined table columns,
+    // so we resolve matching dealer IDs first then IN-filter on dealer_id
+    if (city || state) {
+        let dealerQuery = supabase.from('dealers').select('id')
+        if (city)  dealerQuery = dealerQuery.ilike('location', `%${city}%`)
+        if (state) dealerQuery = dealerQuery.ilike('location', `%${state}%`)
+        const { data: matchedDealers } = await dealerQuery
+        const dealerIds = (matchedDealers ?? []).map((d: { id: string }) => d.id)
+        if (dealerIds.length > 0) {
+            query = query.in('dealer_id', dealerIds)
+        } else {
+            // No dealers match — return empty
+            return NextResponse.json({ success: true, data: { vehicles: [], total: 0, page, pageSize, totalPages: 0 } })
+        }
+    }
 
     const minPrice = parseFloat(sp.get('minPrice') ?? '0')
     const maxPrice = parseFloat(sp.get('maxPrice') ?? '0')

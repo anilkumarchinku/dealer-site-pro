@@ -60,7 +60,7 @@ export async function getAllCars(filters?: CarFilters): Promise<CarSearchResult>
 
     if (error) {
         console.error('Error fetching cars:', error);
-        return { cars: [], total: 0, page, pageSize, filters: filters || {} };
+        return { cars: [], total: 0, page, pageSize, totalPages: 0, filters: filters || {} };
     }
 
     let cars = groupVariantsByModel(data || []).map(mapDbCarToCar);
@@ -91,6 +91,7 @@ export async function getAllCars(filters?: CarFilters): Promise<CarSearchResult>
         total,
         page,
         pageSize,
+        totalPages: Math.ceil(total / pageSize),
         filters: filters || {},
     };
 }

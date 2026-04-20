@@ -249,6 +249,7 @@ export interface CarSearchResult {
     total: number;
     page: number;
     pageSize: number;
+    totalPages: number;
     filters: CarFilters;
 }
 
