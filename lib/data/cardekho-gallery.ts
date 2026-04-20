@@ -1,8 +1,7 @@
 import 'server-only'
 
 import { cache } from 'react'
-import fs from 'fs'
-import path from 'path'
+import { getRequestOrigin } from '@/lib/utils/request-origin'
 
 export interface CardekhoGalleryData {
     sourceUrl: string
@@ -80,118 +79,6 @@ function deriveSourceTokens(sourceUrl: string): { brandSlug: string; modelTokens
     }
 }
 
-type LocalGalleryEntry = CardekhoGalleryData & {
-    brandSlug: string
-    modelSlug: string
-    makeSlug: string
-    modelNameSlug: string
-    sourceUrlNormalized: string
-    modelTokens: string[]
-}
-
-const loadLocalGalleryIndex = cache((): LocalGalleryEntry[] => {
-    const rootDir = path.join(
-        process.cwd(),
-        'public',
-        'data',
-        'brand-model-images',
-        '4w-galleries'
-    )
-
-    if (!fs.existsSync(rootDir)) return []
-
-    const entries: LocalGalleryEntry[] = []
-
-    const visit = (dirPath: string) => {
-        for (const entry of fs.readdirSync(dirPath, { withFileTypes: true })) {
-            const fullPath = path.join(dirPath, entry.name)
-            if (entry.isDirectory()) {
-                visit(fullPath)
-                continue
-            }
-
-            if (entry.name !== 'metadata.json') continue
-
-            try {
-                const metadata = JSON.parse(fs.readFileSync(fullPath, 'utf8')) as Partial<CardekhoGalleryData> & {
-                    sourceUrl?: string
-                    brandSlug?: string
-                    modelSlug?: string
-                    make?: string
-                    model?: string
-                }
-
-                const brandSlug = String(metadata.brandSlug ?? '')
-                const modelSlug = String(metadata.modelSlug ?? '')
-                const makeSlug = slugify(String(metadata.make ?? brandSlug))
-                const modelNameSlug = slugify(String(metadata.model ?? modelSlug))
-                const strippedModelSlug = stripBrandPrefix(modelSlug, brandSlug)
-
-                entries.push({
-                    sourceUrl: metadata.sourceUrl ?? '',
-                    hero: metadata.hero ?? null,
-                    exterior: metadata.exterior ?? [],
-                    interior: metadata.interior ?? [],
-                    colorNames: metadata.colorNames ?? [],
-                    colorImages: metadata.colorImages ?? [],
-                    feature: metadata.feature ?? [],
-                    brandSlug,
-                    modelSlug,
-                    makeSlug,
-                    modelNameSlug,
-                    sourceUrlNormalized: normalizeSourceUrl(metadata.sourceUrl ?? ''),
-                    modelTokens: Array.from(new Set([
-                        slugify(modelSlug),
-                        strippedModelSlug,
-                        modelNameSlug,
-                    ].filter(Boolean))),
-                })
-            } catch {
-                continue
-            }
-        }
-    }
-
-    visit(rootDir)
-    return entries
-})
-
-function loadLocalGallery(sourceUrl: string): CardekhoGalleryData | null {
-    try {
-        const entries = loadLocalGalleryIndex()
-        if (entries.length === 0) return null
-
-        const normalizedSourceUrl = normalizeSourceUrl(sourceUrl)
-
-        const exactSourceMatch = entries.find((entry) => entry.sourceUrlNormalized === normalizedSourceUrl)
-        if (exactSourceMatch) return exactSourceMatch
-
-        const tokens = deriveSourceTokens(sourceUrl)
-        if (!tokens) return null
-
-        const exactTokenMatch = entries.find((entry) =>
-            (entry.makeSlug === tokens.brandSlug || slugify(entry.brandSlug) === tokens.brandSlug) &&
-            tokens.modelTokens.some((token) => entry.modelTokens.includes(token))
-        )
-        if (exactTokenMatch) return exactTokenMatch
-
-        const looseTokenMatch = entries.find((entry) =>
-            (entry.makeSlug === tokens.brandSlug || slugify(entry.brandSlug) === tokens.brandSlug) &&
-            tokens.modelTokens.some((token) =>
-                entry.modelTokens.some((entryToken) =>
-                    entryToken === token ||
-                    entryToken.startsWith(`${token}-`) ||
-                    token.startsWith(`${entryToken}-`)
-                )
-            )
-        )
-
-        return looseTokenMatch ?? null
-    } catch {
-        return null
-    }
-}
-
 function normalizeUrl(url: string): string {
     return url
         .replace(/\\\//g, '/')
@@ -218,23 +105,23 @@ function uniqueUrls(values: string[]): string[] {
 
 function extractUrls(html: string, folder: 'carexteriorimages' | 'carinteriorimages'): string[] {
     const pattern = new RegExp(`https?:\\\\?/\\\\?/stimg\\.cardekho\\.com\\\\?/images\\\\?/${folder}[^"'\\s<)]+`, 'gi')
-    return uniqueUrls(Array.from(html.matchAll(pattern), match => match[0]))
+    return uniqueUrls(Array.from(html.matchAll(pattern), (match) => match[0]))
 }
 
 function extractColorImages(html: string): string[] {
     const pattern = /https?:\\?\/\\?\/stimg\.cardekho\.com\\?\/images\\?\/car-images[^"'\\s<)]+/gi
-    return uniqueUrls(Array.from(html.matchAll(pattern), match => match[0]))
+    return uniqueUrls(Array.from(html.matchAll(pattern), (match) => match[0]))
 }
 
 function extractFeatureExterior(html: string): string[] {
     const pattern = /https?:\\?\/\\?\/stimg\.cardekho\.com\\?\/images\\?\/carexteriorimages[^"'\\s<)]*visual-summary[^"'\\s<)]*/gi
-    return uniqueUrls(Array.from(html.matchAll(pattern), match => match[0]))
+    return uniqueUrls(Array.from(html.matchAll(pattern), (match) => match[0]))
 }
 
 function extractLdJsonBlocks(html: string): string[] {
     const blocks = html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/gi) ?? []
     return blocks
-        .map(block => block.replace(/^<script type="application\/ld\+json">/i, '').replace(/<\/script>$/i, '').trim())
+        .map((block) => block.replace(/^<script type="application\/ld\+json">/i, '').replace(/<\/script>$/i, '').trim())
         .filter(Boolean)
 }
 
@@ -261,12 +148,68 @@ function extractColorNamesFromLdJson(html: string): string[] {
     return Array.from(names)
 }
 
+async function loadLocalGallery(sourceUrl: string): Promise<CardekhoGalleryData | null> {
+    const origin = await getRequestOrigin()
+    const tokens = deriveSourceTokens(sourceUrl)
+    if (!origin || !tokens) return null
+
+    const candidates = Array.from(new Set(
+        tokens.modelTokens.map((modelToken) =>
+            `${origin}/data/brand-model-images/4w-galleries/${tokens.brandSlug}/${modelToken}/metadata.json`
+        )
+    ))
+
+    for (const candidate of candidates) {
+        try {
+            const response = await fetch(candidate, {
+                next: { revalidate: 60 * 60 * 24 },
+            })
+
+            if (!response.ok) continue
+
+            const metadata = await response.json() as Partial<CardekhoGalleryData> & { sourceUrl?: string }
+            return {
+                sourceUrl: metadata.sourceUrl ?? sourceUrl,
+                hero: metadata.hero ?? null,
+                exterior: metadata.exterior ?? [],
+                interior: metadata.interior ?? [],
+                colorNames: metadata.colorNames ?? [],
+                colorImages: metadata.colorImages ?? [],
+                feature: metadata.feature ?? [],
+            }
+        } catch {
+            continue
+        }
+    }
+
+    return null
+}
+
+/**
+ * Filter scraped image URLs to only those belonging to the target model.
+ * CardDekho URLs follow: stimg.cardekho.com/images/{folder}/{size}/{Brand}/{Model}/{id}/...
+ * We check that the URL contains the model token (e.g. "BE-6", "Thar-ROXX") so images
+ * from "Similar Cars" / "More from Brand" sections are excluded.
+ */
+function filterByModel(urls: string[], modelTokens: string[]): string[] {
+    if (modelTokens.length === 0) return urls
+    // Normalise tokens for case-insensitive comparison
+    const lower = modelTokens.map(t => t.toLowerCase())
+    return urls.filter(url => {
+        const urlLower = url.toLowerCase()
+        return lower.some(token => urlLower.includes(`/${token}/`))
+    })
+}
+
 export const fetchCardekhoGallery = cache(async (sourceUrl: string): Promise<CardekhoGalleryData | null> => {
     if (!sourceUrl?.startsWith('http')) return null
 
     try {
-        const localGallery = loadLocalGallery(sourceUrl)
+        const localGallery = await loadLocalGallery(sourceUrl)
         if (localGallery) return localGallery
+
+        const tokens = deriveSourceTokens(sourceUrl)
+        const modelTokens = tokens?.modelTokens ?? []
 
         const picturesUrl = sourceUrl.replace(/\/$/, '') + '/pictures'
         const colorsUrl = sourceUrl.replace(/\/$/, '') + '/colors'
@@ -292,14 +235,16 @@ export const fetchCardekhoGallery = cache(async (sourceUrl: string): Promise<Car
 
         const html = response.ok ? await response.text() : ''
         const colorsHtml = colorsResponse.ok ? await colorsResponse.text() : ''
-        const exterior = extractUrls(html, 'carexteriorimages')
-        const interior = extractUrls(html, 'carinteriorimages')
+
+        // Extract all URLs then filter to only the target model
+        const exterior = filterByModel(extractUrls(html, 'carexteriorimages'), modelTokens)
+        const interior = filterByModel(extractUrls(html, 'carinteriorimages'), modelTokens)
         const colorNames = extractColorNamesFromLdJson(colorsHtml || html)
-        const colorImages = extractColorImages(colorsHtml)
-        const feature = extractFeatureExterior(colorsHtml)
+        const colorImages = filterByModel(extractColorImages(colorsHtml), modelTokens)
+        const feature = filterByModel(extractFeatureExterior(colorsHtml), modelTokens)
 
         return {
-            sourceUrl,
+            sourceUrl: normalizeSourceUrl(sourceUrl),
             hero: exterior[0] ?? feature[0] ?? colorImages[0] ?? null,
             exterior,
             interior,
