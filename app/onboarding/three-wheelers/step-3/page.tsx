@@ -64,7 +64,7 @@ export default function ThreeWheelerStep3Page() {
                 </div>
             </header>
 
-            <main className="flex-1 container max-w-4xl mx-auto px-8 py-10">
+            <main className="flex-1 container max-w-4xl mx-auto px-8 py-10 pb-28">
                 <div className="space-y-8">
                     <div className="text-center space-y-2">
                         <h1 className="text-2xl font-bold">Pick a style for your website</h1>
@@ -116,7 +116,7 @@ export default function ThreeWheelerStep3Page() {
                 </div>
             </main>
 
-            <div className="sticky bottom-0 border-t bg-background/95 backdrop-blur">
+            <div className="fixed bottom-0 left-0 right-0 z-50 border-t bg-background/95 backdrop-blur">
                 <div className="container max-w-4xl mx-auto px-8 py-4 flex justify-between items-center">
                     <Button variant="ghost" onClick={() => router.push("/onboarding/three-wheelers/step-2")}>
                         <ArrowLeft className="w-4 h-4 mr-2" />
