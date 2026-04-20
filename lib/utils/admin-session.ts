@@ -18,6 +18,13 @@ function getSessionSecret(): string | null {
     return process.env.ADMIN_SESSION_SECRET ?? process.env.ADMIN_PASSWORD ?? null
 }
 
+function getAllowedAdminEmails(): string[] {
+    return (process.env.NEXT_PUBLIC_ADMIN_EMAILS ?? "")
+        .split(",")
+        .map((email) => email.trim().toLowerCase())
+        .filter(Boolean)
+}
+
 export function getAdminUsername(): string {
     return (process.env.ADMIN_USERNAME ?? "admin").trim()
 }
@@ -28,7 +35,10 @@ export function validateAdminCredentials(username: string, password: string): bo
 
     const normalizedUsername = username.trim().toLowerCase()
     const configuredUsername = getAdminUsername()
-    const matchesIdentity = normalizedUsername === configuredUsername.toLowerCase()
+    const allowedEmails = getAllowedAdminEmails()
+    const matchesIdentity =
+        normalizedUsername === configuredUsername.toLowerCase() ||
+        allowedEmails.includes(normalizedUsername)
 
     return matchesIdentity && password === configuredPassword
 }

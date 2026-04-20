@@ -136,6 +136,12 @@ const BRAND_CATEGORIES = [
 
 const ALL_BRANDS = BRAND_CATEGORIES.flatMap(cat => cat.brands);
 
+const DEFAULT_ADMIN_EMAIL =
+    process.env.NEXT_PUBLIC_ADMIN_EMAILS
+        ?.split(",")
+        .map((email) => email.trim())
+        .find(Boolean) ?? "";
+
 
 // Map of brand name -> brandId for all 2W/3W brands (from brand-models.json)
 const BRAND_ID_MAP: Record<string, string> = {};
@@ -233,7 +239,7 @@ export default function AdminDashboard() {
     const [cars, setCars] = useState<CarType[]>([]);
     const [sessionChecked, setSessionChecked] = useState(false);
     const [isAuthenticated, setIsAuthenticated] = useState(false);
-    const [usernameInput, setUsernameInput] = useState("admin");
+    const [usernameInput, setUsernameInput] = useState(DEFAULT_ADMIN_EMAIL || "admin");
     const [passwordInput, setPasswordInput] = useState('');
     const [passwordError, setPasswordError] = useState('');
     const [passwordLoading, setPasswordLoading] = useState(false);
@@ -384,12 +390,12 @@ export default function AdminDashboard() {
                 <div className="text-center space-y-1">
                     <div className="text-3xl font-bold">🔐</div>
                     <h1 className="text-xl font-semibold text-foreground">Admin Access</h1>
-                    <p className="text-sm text-muted-foreground">Enter your configured admin username and password</p>
+                    <p className="text-sm text-muted-foreground">Enter your configured admin email and password</p>
                 </div>
                 <form onSubmit={handlePasswordSubmit} className="space-y-4">
                     <input
                         type="text"
-                        placeholder="Admin username"
+                        placeholder="Admin email"
                         value={usernameInput}
                         onChange={e => setUsernameInput(e.target.value)}
                         autoFocus
@@ -865,6 +871,15 @@ export default function AdminDashboard() {
                                             <ExternalLink className="w-4 h-4 mr-2" />
                                         )}
                                         Launch Preview
+                                    </Button>
+                                    <Button
+                                        variant="outline"
+                                        size="lg"
+                                        className="border-white/20 text-white hover:bg-white/10"
+                                        onClick={() => router.push(`/admin/preview-gallery?template=${selectedTemplate}`)}
+                                    >
+                                        <LayoutTemplate className="w-4 h-4 mr-2" />
+                                        View All Brand Outputs
                                     </Button>
                                     <Button
                                         variant="outline"

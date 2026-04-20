@@ -15,6 +15,7 @@ import { FamilyTemplate } from "@/components/templates/FamilyTemplate"
 import type { Car } from "@/lib/types/car"
 import type { ThreeWheelerVehicle, ThreeWheelerUsedVehicle } from "@/lib/types/three-wheeler"
 import type { Service } from "@/lib/types"
+import { dedupeByBrandModel, dedupeCaseInsensitiveStrings } from "@/lib/utils/listing-dedupe"
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -302,11 +303,11 @@ export default async function ThreeWheelersPage({ params }: Props) {
     dealer3wBrands = dealer.brands.filter(b => THREE_WHEELER_BRANDS.includes(b))
   }
 
-  const allBrands = dealer3wBrands.length > 0 ? dealer3wBrands : ALL_3W_BRANDS
+  const allBrands = dedupeCaseInsensitiveStrings(dealer3wBrands.length > 0 ? dealer3wBrands : ALL_3W_BRANDS)
 
   // If accessed via a brand-specific slug (e.g. varun-group-bajaj-auto-3w),
   // restrict to that brand only; otherwise show all dealer brands.
-  const brandsToShow = dealer.brandFilter
+  const brandsToShow = dedupeCaseInsensitiveStrings(dealer.brandFilter
     ? allBrands.filter(b => b.toLowerCase() === dealer.brandFilter!.toLowerCase())
         .concat(
           allBrands.filter(b => b.toLowerCase() === dealer.brandFilter!.toLowerCase()).length === 0
@@ -314,6 +315,7 @@ export default async function ThreeWheelersPage({ params }: Props) {
             : []
         )
     : allBrands
+  )
 
   const primaryBrand = brandsToShow[0] ?? null
 
@@ -325,15 +327,16 @@ export default async function ThreeWheelersPage({ params }: Props) {
       return getThreeWheelerCatalog(brand, dealer.id).map(v => ({ ...v, id: `cat-3w-${bi}-${v.id}` }))
     })
   )
-  const catalogVehicles = catalogResults.flat()
+  const catalogVehicles = dedupeByBrandModel(catalogResults.flat())
 
-  const filteredDbVehicles = dealer.brandFilter
+  const filteredDbVehicles = dedupeByBrandModel(dealer.brandFilter
     ? dbVehicles.filter(v => v.brand.toLowerCase() === dealer.brandFilter!.toLowerCase())
     : dbVehicles
+  )
 
   const dbKeys = new Set(filteredDbVehicles.map(v => `${v.brand}__${v.model}`))
   const catalogExtra = catalogVehicles.filter(v => !dbKeys.has(`${v.brand}__${v.model}`))
-  const vehicles = [...filteredDbVehicles, ...catalogExtra]
+  const vehicles = dedupeByBrandModel([...filteredDbVehicles, ...catalogExtra])
 
   // Merge Cyepro used inventory if dealer has API key
   const cyeproCars = dealer.cyepro_api_key

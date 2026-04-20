@@ -12,6 +12,7 @@ import { FamilyTemplate } from "@/components/templates/FamilyTemplate"
 import type { Car } from "@/lib/types/car"
 import type { ThreeWheelerVehicle } from "@/lib/types/three-wheeler"
 import type { Service } from "@/lib/types"
+import { dedupeByBrandModel, dedupeCaseInsensitiveStrings } from "@/lib/utils/listing-dedupe"
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -143,7 +144,7 @@ export default async function NewThreeWheelersPage({ params, searchParams }: Pro
     dealer3wBrands = dealer.brands.filter(b => THREE_WHEELER_BRANDS.includes(b))
   }
 
-  const allBrands = dealer3wBrands.length > 0 ? dealer3wBrands : ALL_3W_BRANDS
+  const allBrands = dedupeCaseInsensitiveStrings(dealer3wBrands.length > 0 ? dealer3wBrands : ALL_3W_BRANDS)
 
   // Resolve the active brand filter:
   // Priority: dealer.brandFilter (from slug suffix) > ?brand= query param > show all
@@ -155,7 +156,7 @@ export default async function NewThreeWheelersPage({ params, searchParams }: Pro
         : null)
 
   // Restrict to single brand if a filter is active; otherwise show all dealer brands.
-  const brandsToShow = activeBrandFilter
+  const brandsToShow = dedupeCaseInsensitiveStrings(activeBrandFilter
     ? allBrands.filter(b => b.toLowerCase() === activeBrandFilter.toLowerCase())
         .concat(
           allBrands.filter(b => b.toLowerCase() === activeBrandFilter.toLowerCase()).length === 0
@@ -163,20 +164,22 @@ export default async function NewThreeWheelersPage({ params, searchParams }: Pro
             : []
         )
     : allBrands
+  )
 
   const primaryBrand = brandsToShow[0] ?? null
 
-  const catalogVehicles = brandsToShow.flatMap((brand, bi) =>
+  const catalogVehicles = dedupeByBrandModel(brandsToShow.flatMap((brand, bi) =>
     getThreeWheelerCatalog(brand, dealer.id).map(v => ({ ...v, id: `cat-3w-${bi}-${v.id}` }))
-  )
+  ))
 
-  const filteredDbVehicles = activeBrandFilter
+  const filteredDbVehicles = dedupeByBrandModel(activeBrandFilter
     ? dbVehicles.filter(v => v.brand.toLowerCase() === activeBrandFilter.toLowerCase())
     : dbVehicles
+  )
 
   const dbKeys = new Set(filteredDbVehicles.map(v => `${v.brand}__${v.model}`))
   const catalogExtra = catalogVehicles.filter(v => !dbKeys.has(`${v.brand}__${v.model}`))
-  const vehicles = [...filteredDbVehicles, ...catalogExtra]
+  const vehicles = dedupeByBrandModel([...filteredDbVehicles, ...catalogExtra])
 
   const cars = threeWheelersToCars(vehicles)
 

@@ -10,6 +10,7 @@ import { fetchCyeproInventoryAsCars } from '@/lib/services/cyepro-service'
 import type { Car } from '@/lib/types/car'
 import type { DBVehicle } from '@/lib/db/vehicles'
 import type { Service } from '@/lib/types'
+import { dedupeByMakeModel, dedupeCaseInsensitiveStrings } from '@/lib/utils/listing-dedupe'
 
 
 // Always render fresh — ensures DB changes (e.g. image URLs) take effect immediately.
@@ -479,11 +480,13 @@ export default async function SitePage({ params }: SitePageProps) {
 
     if (brandFilter || (sells_new_cars && !sells_used_cars)) {
         // NEW-CAR site — brand-specific URL OR new-only dealer
+        const uniqueBrands = dedupeCaseInsensitiveStrings(brands)
         const catalog = brandFilter
             ? await getCarsByMake(brandFilter)
-            : (await Promise.all(brands.map(b => getCarsByMake(b)))).flat()
-        cars = (catalog.length > 0 ? catalog : allCars.slice(0, 16))
+            : (await Promise.all(uniqueBrands.map(b => getCarsByMake(b)))).flat()
+        cars = dedupeByMakeModel((catalog.length > 0 ? catalog : allCars.slice(0, 16))
             .map(c => ({ ...c, condition: 'new' as const }))
+        )
         templateSellsNew = true
         templateSellsUsed = false
 

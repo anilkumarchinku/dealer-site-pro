@@ -12,6 +12,7 @@ import {
 } from '@/lib/db/two-wheelers'
 import type { TwoWheelerFilters } from '@/lib/types/two-wheeler'
 import { hydrateTwoWheelerWithJson } from '@/lib/data/two-wheeler-detail'
+import { dedupeByBrandModel } from '@/lib/utils/listing-dedupe'
 
 // ── GET (public) ───────────────────────────────────────────────
 
@@ -35,9 +36,10 @@ export async function GET(request: NextRequest) {
     }
 
     const result = await getTwoWheelerVehicles(dealerId, filters)
+    const vehicles = dedupeByBrandModel(result.vehicles).map(hydrateTwoWheelerWithJson)
     return NextResponse.json({
         ...result,
-        vehicles: result.vehicles.map(hydrateTwoWheelerWithJson),
+        vehicles,
     })
 }
 

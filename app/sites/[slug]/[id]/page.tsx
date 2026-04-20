@@ -6,6 +6,7 @@ import { fetchDealerBySlug } from '@/lib/db/dealers';
 import { fetchCyeproInventoryAsCars } from '@/lib/services/cyepro-service';
 import type { Car } from '@/lib/types/car';
 import type { DBVehicle } from '@/lib/db/vehicles';
+import { dedupeByMakeModel, dedupeCaseInsensitiveStrings } from '@/lib/utils/listing-dedupe';
 
 export const dynamic = 'force-dynamic';
 
@@ -69,13 +70,14 @@ export default async function SiteCarDetailPage({ params }: SiteCarDetailPagePro
     let cars: Car[];
 
     if (brandFilter || (sells_new_cars && !sells_used_cars)) {
+        const uniqueBrands = dedupeCaseInsensitiveStrings(brands);
         const catalog = brandFilter
             ? await getCarsByMake(brandFilter)
-            : (await Promise.all(brands.map(b => getCarsByMake(b)))).flat();
-        cars = (catalog.length > 0 ? catalog : allCars.slice(0, 16)).map(c => ({
+            : (await Promise.all(uniqueBrands.map(b => getCarsByMake(b)))).flat();
+        cars = dedupeByMakeModel((catalog.length > 0 ? catalog : allCars.slice(0, 16)).map(c => ({
             ...c,
             condition: 'new' as const,
-        }));
+        })));
     } else {
         const cyeproCars = cyepro_api_key
             ? await fetchCyeproInventoryAsCars(cyepro_api_key, { size: 30 })

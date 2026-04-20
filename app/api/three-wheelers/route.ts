@@ -9,6 +9,7 @@ import { rateLimitOrNull } from '@/lib/utils/rate-limiter'
 import { getThreeWheelerVehicles, addThreeWheelerVehicle } from '@/lib/db/three-wheelers'
 import type { ThreeWheelerFilters } from '@/lib/types/three-wheeler'
 import { hydrateThreeWheelerWithJson } from '@/lib/data/three-wheeler-detail'
+import { dedupeByBrandModel } from '@/lib/utils/listing-dedupe'
 
 export async function GET(request: NextRequest) {
     const { searchParams } = new URL(request.url)
@@ -32,9 +33,10 @@ export async function GET(request: NextRequest) {
     }
 
     const result = await getThreeWheelerVehicles(dealerId, filters)
+    const vehicles = dedupeByBrandModel(result.vehicles).map(hydrateThreeWheelerWithJson)
     return NextResponse.json({
         ...result,
-        vehicles: result.vehicles.map(hydrateThreeWheelerWithJson),
+        vehicles,
     })
 }
 
