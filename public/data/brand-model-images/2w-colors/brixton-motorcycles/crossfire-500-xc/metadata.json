@@ -1,0 +1,21 @@
+{
+  "brand": "Brixton Motorcycles",
+  "model": "Crossfire 500 XC",
+  "brandId": "brixton-motorcycles",
+  "makeSlug": "brixton-motorcycles-bikes",
+  "modelSlug": "crossfire-500-xc",
+  "sourceUrl": "https://www.bikewale.com/brixton-motorcycles-bikes/crossfire-500-xc/colours/",
+  "scrapedAt": "2026-04-20T05:19:01.835Z",
+  "count": 2,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/6f5uj9b_1793633.jpg?q=100",
+  "colors": [
+    {
+      "name": "Backstage Black",
+      "image": "/data/brand-model-images/2w-colors/brixton-motorcycles/crossfire-500-xc/backstage-black.avif"
+    },
+    {
+      "name": "Desert Gold Matt",
+      "image": "/data/brand-model-images/2w-colors/brixton-motorcycles/crossfire-500-xc/desert-gold-matt.avif"
+    }
+  ]
+}

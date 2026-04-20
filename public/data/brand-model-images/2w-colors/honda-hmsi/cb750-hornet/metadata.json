@@ -1,0 +1,21 @@
+{
+  "brand": "Honda Motorcycle & Scooter India",
+  "model": "CB750 Hornet",
+  "brandId": "honda-hmsi",
+  "makeSlug": "honda-bikes",
+  "modelSlug": "cb750-hornet",
+  "sourceUrl": "https://www.bikewale.com/honda-bikes/cb750-hornet/colours/",
+  "scrapedAt": "2026-04-20T05:15:27.139Z",
+  "count": 2,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/irjn0gb_1836522.jpg?q=100",
+  "colors": [
+    {
+      "name": "Matte Black Metallic",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/cb750-hornet/matte-black-metallic.avif"
+    },
+    {
+      "name": "Matte Pearl White",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/cb750-hornet/matte-pearl-white.avif"
+    }
+  ]
+}

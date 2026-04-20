@@ -1,0 +1,23 @@
+{
+  "make": "audi",
+  "model": "A6",
+  "brandSlug": "Audi",
+  "modelSlug": "Audi_A6",
+  "sourceUrl": "https://www.cardekho.com/carmodels/Audi/Audi_A6",
+  "scrapedAt": "2026-04-20T06:30:28.498Z",
+  "counts": {
+    "exterior": 1,
+    "interior": 0,
+    "feature": 0,
+    "colors": 0,
+    "total": 1
+  },
+  "hero": "/data/brand-model-images/4w-galleries/Audi/Audi_A6/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/Audi/Audi_A6/exterior/01.avif"
+  ],
+  "interior": [],
+  "feature": [],
+  "colorNames": [],
+  "colorImages": []
+}

@@ -1,0 +1,37 @@
+{
+  "brand": "Vida (Hero MotoCorp)",
+  "model": "V2",
+  "brandId": "vida-hero",
+  "makeSlug": "vida-bikes",
+  "modelSlug": "v2",
+  "sourceUrl": "https://www.bikewale.com/vida-bikes/v2/colours/",
+  "scrapedAt": "2026-04-20T06:15:08.934Z",
+  "count": 6,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/1377o9b_1798665.jpg?q=100",
+  "colors": [
+    {
+      "name": "Matte Cyan",
+      "image": "/data/brand-model-images/2w-colors/vida-hero/v2/matte-cyan.avif"
+    },
+    {
+      "name": "Matte White",
+      "image": "/data/brand-model-images/2w-colors/vida-hero/v2/matte-white.avif"
+    },
+    {
+      "name": "Glossy Black",
+      "image": "/data/brand-model-images/2w-colors/vida-hero/v2/glossy-black.avif"
+    },
+    {
+      "name": "Glossy Sports Red",
+      "image": "/data/brand-model-images/2w-colors/vida-hero/v2/glossy-sports-red.avif"
+    },
+    {
+      "name": "Matte Abrax Orange",
+      "image": "/data/brand-model-images/2w-colors/vida-hero/v2/matte-abrax-orange.avif"
+    },
+    {
+      "name": "Matte Nexus Blue",
+      "image": "/data/brand-model-images/2w-colors/vida-hero/v2/matte-nexus-blue.avif"
+    }
+  ]
+}

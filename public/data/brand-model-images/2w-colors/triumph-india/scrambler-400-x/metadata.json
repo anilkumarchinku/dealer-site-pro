@@ -1,0 +1,29 @@
+{
+  "brand": "Triumph India",
+  "model": "Scrambler 400 X",
+  "brandId": "triumph-india",
+  "makeSlug": "triumph-bikes",
+  "modelSlug": "scrambler-400-x",
+  "sourceUrl": "https://www.bikewale.com/triumph-bikes/scrambler-400-x/colours/",
+  "scrapedAt": "2026-04-20T05:17:42.786Z",
+  "count": 4,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/ke4gg8b_1924466.jpg?q=100",
+  "colors": [
+    {
+      "name": "Phantom Black / Silver Ice",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/scrambler-400-x/phantom-black-silver-ice.avif"
+    },
+    {
+      "name": "Pearl Metallic White / Phantom Black",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/scrambler-400-x/pearl-metallic-white-phantom-black.avif"
+    },
+    {
+      "name": "Volcanic Red and Phantom Black",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/scrambler-400-x/volcanic-red-and-phantom-black.avif"
+    },
+    {
+      "name": "Matt Khaki Green / Fusion White",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/scrambler-400-x/matt-khaki-green-fusion-white.png"
+    }
+  ]
+}

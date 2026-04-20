@@ -1,0 +1,33 @@
+{
+  "brand": "Gemopai",
+  "model": "Astrid Lite",
+  "brandId": "gemopai",
+  "makeSlug": "gemopai-bikes",
+  "modelSlug": "astrid-lite",
+  "sourceUrl": "https://www.bikewale.com/gemopai-bikes/astrid-lite/colours/",
+  "scrapedAt": "2026-04-20T05:20:33.045Z",
+  "count": 5,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/undefined-burnt-charcoal-1602092312137.jpg?q=100",
+  "colors": [
+    {
+      "name": "Burnt Charcoal",
+      "image": "/data/brand-model-images/2w-colors/gemopai/astrid-lite/burnt-charcoal.avif"
+    },
+    {
+      "name": "Deep Indigo",
+      "image": "/data/brand-model-images/2w-colors/gemopai/astrid-lite/deep-indigo.avif"
+    },
+    {
+      "name": "Fiery Red",
+      "image": "/data/brand-model-images/2w-colors/gemopai/astrid-lite/fiery-red.avif"
+    },
+    {
+      "name": "Fireball Orange",
+      "image": "/data/brand-model-images/2w-colors/gemopai/astrid-lite/fireball-orange.avif"
+    },
+    {
+      "name": "Electric Neon",
+      "image": "/data/brand-model-images/2w-colors/gemopai/astrid-lite/electric-neon.avif"
+    }
+  ]
+}

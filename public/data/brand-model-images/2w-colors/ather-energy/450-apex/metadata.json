@@ -1,0 +1,17 @@
+{
+  "brand": "Ather Energy",
+  "model": "450 Apex",
+  "brandId": "ather-energy",
+  "makeSlug": "ather-bikes",
+  "modelSlug": "450-apex",
+  "sourceUrl": "https://www.bikewale.com/ather-bikes/450-apex/colours/",
+  "scrapedAt": "2026-04-20T05:19:13.612Z",
+  "count": 1,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/n86gu9b_1806559.jpeg?q=100",
+  "colors": [
+    {
+      "name": "Edium Blue",
+      "image": "/data/brand-model-images/2w-colors/ather-energy/450-apex/edium-blue.avif"
+    }
+  ]
+}

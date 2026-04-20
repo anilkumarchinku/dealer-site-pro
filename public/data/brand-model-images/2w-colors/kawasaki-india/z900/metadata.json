@@ -1,0 +1,21 @@
+{
+  "brand": "Kawasaki India",
+  "model": "Z900",
+  "brandId": "kawasaki-india",
+  "makeSlug": "kawasaki-bikes",
+  "modelSlug": "z900",
+  "sourceUrl": "https://www.bikewale.com/kawasaki-bikes/z900/colours/",
+  "scrapedAt": "2026-04-20T05:16:59.490Z",
+  "count": 2,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/akharhb_1882839.jpg?q=100",
+  "colors": [
+    {
+      "name": "Metallic Matte Graphenesteel Gray / Metallic Spark Black",
+      "image": "/data/brand-model-images/2w-colors/kawasaki-india/z900/metallic-matte-graphenesteel-gray-metallic-spark-black.avif"
+    },
+    {
+      "name": "Candy Lime Green / Metallic Carbon Gray",
+      "image": "/data/brand-model-images/2w-colors/kawasaki-india/z900/candy-lime-green-metallic-carbon-gray.avif"
+    }
+  ]
+}

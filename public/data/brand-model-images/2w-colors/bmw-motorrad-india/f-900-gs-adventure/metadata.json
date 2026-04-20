@@ -1,0 +1,21 @@
+{
+  "brand": "BMW Motorrad India",
+  "model": "F 900 GS Adventure",
+  "brandId": "bmw-motorrad-india",
+  "makeSlug": "bmw-bikes",
+  "modelSlug": "f-900-gs-adventure",
+  "sourceUrl": "https://www.bikewale.com/bmw-bikes/f-900-gs-adventure/colours/",
+  "scrapedAt": "2026-04-20T05:18:19.421Z",
+  "count": 2,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/1s7g6eb_1772355.jpg?q=100",
+  "colors": [
+    {
+      "name": "Blackstorm Metallic",
+      "image": "/data/brand-model-images/2w-colors/bmw-motorrad-india/f-900-gs-adventure/blackstorm-metallic.avif"
+    },
+    {
+      "name": "Ride Pro",
+      "image": "/data/brand-model-images/2w-colors/bmw-motorrad-india/f-900-gs-adventure/ride-pro.webp"
+    }
+  ]
+}

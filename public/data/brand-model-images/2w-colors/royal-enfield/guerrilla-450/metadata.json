@@ -1,0 +1,45 @@
+{
+  "brand": "Royal Enfield",
+  "model": "Guerrilla 450",
+  "brandId": "royal-enfield",
+  "makeSlug": "royalenfield-bikes",
+  "modelSlug": "guerrilla-450",
+  "sourceUrl": "https://www.bikewale.com/royalenfield-bikes/guerrilla-450/colours/",
+  "scrapedAt": "2026-04-20T05:15:54.754Z",
+  "count": 8,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/6rmbb8b_1918876.jpg?q=100",
+  "colors": [
+    {
+      "name": "Twilight Blue",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/guerrilla-450/twilight-blue.avif"
+    },
+    {
+      "name": "Brava Blue",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/guerrilla-450/brava-blue.png"
+    },
+    {
+      "name": "Peix Bronze",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/guerrilla-450/peix-bronze.png"
+    },
+    {
+      "name": "Smoke Silver",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/guerrilla-450/smoke-silver.png"
+    },
+    {
+      "name": "Shadow Ash",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/guerrilla-450/shadow-ash.png"
+    },
+    {
+      "name": "Red",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/guerrilla-450/red.avif"
+    },
+    {
+      "name": "Green",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/guerrilla-450/green.avif"
+    },
+    {
+      "name": "Black",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/guerrilla-450/black.avif"
+    }
+  ]
+}

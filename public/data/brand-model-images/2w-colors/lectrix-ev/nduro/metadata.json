@@ -1,0 +1,29 @@
+{
+  "brand": "Lectrix EV",
+  "model": "NDuro",
+  "brandId": "lectrix-ev",
+  "makeSlug": "lectrix-bikes",
+  "modelSlug": "nduro",
+  "sourceUrl": "https://www.bikewale.com/lectrix-bikes/nduro/colours/",
+  "scrapedAt": "2026-04-20T06:15:11.710Z",
+  "count": 4,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/wdfj59b_1803067.jpg?q=100",
+  "colors": [
+    {
+      "name": "Quantum Black",
+      "image": "/data/brand-model-images/2w-colors/lectrix-ev/nduro/quantum-black.avif"
+    },
+    {
+      "name": "Nova White",
+      "image": "/data/brand-model-images/2w-colors/lectrix-ev/nduro/nova-white.avif"
+    },
+    {
+      "name": "Cosmic Blue",
+      "image": "/data/brand-model-images/2w-colors/lectrix-ev/nduro/cosmic-blue.avif"
+    },
+    {
+      "name": "Solar Red",
+      "image": "/data/brand-model-images/2w-colors/lectrix-ev/nduro/solar-red.avif"
+    }
+  ]
+}

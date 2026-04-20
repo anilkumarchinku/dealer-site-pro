@@ -1,0 +1,65 @@
+{
+  "brand": "TVS Motor Company",
+  "model": "Ntorq 125",
+  "brandId": "tvs-motor",
+  "makeSlug": "tvs-bikes",
+  "modelSlug": "ntorq-125",
+  "sourceUrl": "https://www.bikewale.com/tvs-bikes/ntorq-125/colours/",
+  "scrapedAt": "2026-04-20T06:07:48.898Z",
+  "count": 13,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/uf5vseb_1777493.jpg?q=100",
+  "colors": [
+    {
+      "name": "Harlequin Blue",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/ntorq-125/harlequin-blue.avif"
+    },
+    {
+      "name": "Nardo Gray",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/ntorq-125/nardo-gray.avif"
+    },
+    {
+      "name": "Turquoise Blue",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/ntorq-125/turquoise-blue.avif"
+    },
+    {
+      "name": "Race Edition Marine Blue",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/ntorq-125/race-edition-marine-blue.avif"
+    },
+    {
+      "name": "Race Edition Red",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/ntorq-125/race-edition-red.avif"
+    },
+    {
+      "name": "Super Soldier",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/ntorq-125/super-soldier.avif"
+    },
+    {
+      "name": "Lightning Gray",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/ntorq-125/lightning-gray.avif"
+    },
+    {
+      "name": "Amazing Red",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/ntorq-125/amazing-red.avif"
+    },
+    {
+      "name": "Stealth Black",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/ntorq-125/stealth-black.avif"
+    },
+    {
+      "name": "Combat Blue",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/ntorq-125/combat-blue.avif"
+    },
+    {
+      "name": "Dark Black",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/ntorq-125/dark-black.avif"
+    },
+    {
+      "name": "Race Red Black",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/ntorq-125/race-red-black.avif"
+    },
+    {
+      "name": "Neon",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/ntorq-125/neon.avif"
+    }
+  ]
+}

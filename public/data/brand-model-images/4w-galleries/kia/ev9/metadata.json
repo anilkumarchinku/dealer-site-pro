@@ -1,0 +1,48 @@
+{
+  "make": "kia",
+  "model": "EV9",
+  "brandSlug": "kia",
+  "modelSlug": "ev9",
+  "sourceUrl": "https://www.cardekho.com/kia/ev9",
+  "scrapedAt": "2026-04-20T05:03:29.739Z",
+  "counts": {
+    "exterior": 5,
+    "interior": 8,
+    "feature": 0,
+    "colors": 5,
+    "total": 18
+  },
+  "hero": "/data/brand-model-images/4w-galleries/kia/ev9/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/kia/ev9/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/kia/ev9/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/kia/ev9/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/kia/ev9/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/kia/ev9/exterior/06.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/kia/ev9/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/kia/ev9/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/kia/ev9/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/kia/ev9/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/kia/ev9/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/kia/ev9/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/kia/ev9/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/kia/ev9/interior/08.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "Panthera Metal",
+    "Pebble Gray",
+    "Aurora Black Pearl",
+    "Snow White Pearl",
+    "Ocean Blue Pearl"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/kia/ev9/colors/panthera-metal.avif",
+    "/data/brand-model-images/4w-galleries/kia/ev9/colors/pebble-gray.avif",
+    "/data/brand-model-images/4w-galleries/kia/ev9/colors/aurora-black-pearl.avif",
+    "/data/brand-model-images/4w-galleries/kia/ev9/colors/snow-white-pearl.avif",
+    "/data/brand-model-images/4w-galleries/kia/ev9/colors/ocean-blue-pearl.avif"
+  ]
+}

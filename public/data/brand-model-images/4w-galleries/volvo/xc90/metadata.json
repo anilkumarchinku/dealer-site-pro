@@ -1,0 +1,40 @@
+{
+  "make": "volvo",
+  "model": "XC90",
+  "brandSlug": "volvo",
+  "modelSlug": "xc90",
+  "sourceUrl": "https://www.cardekho.com/volvo/xc90",
+  "scrapedAt": "2026-04-20T05:06:07.837Z",
+  "counts": {
+    "exterior": 7,
+    "interior": 4,
+    "feature": 0,
+    "colors": 2,
+    "total": 13
+  },
+  "hero": "/data/brand-model-images/4w-galleries/volvo/xc90/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/volvo/xc90/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/volvo/xc90/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/volvo/xc90/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/volvo/xc90/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/volvo/xc90/exterior/06.avif",
+    "/data/brand-model-images/4w-galleries/volvo/xc90/exterior/07.avif",
+    "/data/brand-model-images/4w-galleries/volvo/xc90/exterior/08.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/volvo/xc90/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/volvo/xc90/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/volvo/xc90/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/volvo/xc90/interior/06.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "Onyx Black",
+    "Crystal White"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/volvo/xc90/colors/onyx-black.avif",
+    "/data/brand-model-images/4w-galleries/volvo/xc90/colors/crystal-white.avif"
+  ]
+}

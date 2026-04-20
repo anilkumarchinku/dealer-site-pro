@@ -1,0 +1,29 @@
+{
+  "brand": "Yamaha India",
+  "model": "Aerox 155",
+  "brandId": "yamaha-india",
+  "makeSlug": "yamaha-bikes",
+  "modelSlug": "aerox-155",
+  "sourceUrl": "https://www.bikewale.com/yamaha-bikes/aerox-155/colours/",
+  "scrapedAt": "2026-04-20T06:07:47.843Z",
+  "count": 4,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/yamaha-select-model-metallic-black-1668143042070.jpg?q=100",
+  "colors": [
+    {
+      "name": "Metallic Black",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/aerox-155/metallic-black.avif"
+    },
+    {
+      "name": "Grey Vermillion",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/aerox-155/grey-vermillion.avif"
+    },
+    {
+      "name": "Ice Fluo Vermillion",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/aerox-155/ice-fluo-vermillion.avif"
+    },
+    {
+      "name": "Racing Blue",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/aerox-155/racing-blue.avif"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "brand": "Pure EV",
+  "model": "ETrance Neo",
+  "brandId": "pure-ev",
+  "makeSlug": "pureev-bikes",
+  "modelSlug": "etrance-neo",
+  "sourceUrl": "https://www.bikewale.com/pureev-bikes/etrance-neo/colours/",
+  "scrapedAt": "2026-04-20T06:12:31.230Z",
+  "count": 6,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/pure-ev-select-model-yellow-1698477312450.png?q=100",
+  "colors": [
+    {
+      "name": "Yellow",
+      "image": "/data/brand-model-images/2w-colors/pure-ev/etrance-neo/yellow.png"
+    },
+    {
+      "name": "Grey",
+      "image": "/data/brand-model-images/2w-colors/pure-ev/etrance-neo/grey.png"
+    },
+    {
+      "name": "Black",
+      "image": "/data/brand-model-images/2w-colors/pure-ev/etrance-neo/black.png"
+    },
+    {
+      "name": "Blue",
+      "image": "/data/brand-model-images/2w-colors/pure-ev/etrance-neo/blue.png"
+    },
+    {
+      "name": "Red",
+      "image": "/data/brand-model-images/2w-colors/pure-ev/etrance-neo/red.png"
+    },
+    {
+      "name": "White",
+      "image": "/data/brand-model-images/2w-colors/pure-ev/etrance-neo/white.png"
+    }
+  ]
+}

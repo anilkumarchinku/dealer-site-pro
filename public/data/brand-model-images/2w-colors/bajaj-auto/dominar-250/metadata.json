@@ -1,0 +1,25 @@
+{
+  "brand": "Bajaj Auto",
+  "model": "Dominar 250",
+  "brandId": "bajaj-auto",
+  "makeSlug": "bajaj-bikes",
+  "modelSlug": "dominar-250",
+  "sourceUrl": "https://www.bikewale.com/bajaj-bikes/dominar-250/colours/",
+  "scrapedAt": "2026-04-20T06:07:46.621Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/0inpmib_1905017.webp?q=100",
+  "colors": [
+    {
+      "name": "Citrus Rush",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/dominar-250/citrus-rush.webp"
+    },
+    {
+      "name": "Sparkling Black",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/dominar-250/sparkling-black.webp"
+    },
+    {
+      "name": "Racing Red",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/dominar-250/racing-red.webp"
+    }
+  ]
+}

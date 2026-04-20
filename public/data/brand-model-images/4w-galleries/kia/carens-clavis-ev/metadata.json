@@ -1,0 +1,50 @@
+{
+  "make": "kia",
+  "model": "Carens Clavis EV",
+  "brandSlug": "kia",
+  "modelSlug": "carens-clavis-ev",
+  "sourceUrl": "https://www.cardekho.com/kia/carens-clavis-ev",
+  "scrapedAt": "2026-04-20T05:03:33.191Z",
+  "counts": {
+    "exterior": 5,
+    "interior": 8,
+    "feature": 0,
+    "colors": 6,
+    "total": 19
+  },
+  "hero": "/data/brand-model-images/4w-galleries/kia/carens-clavis-ev/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/kia/carens-clavis-ev/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/kia/carens-clavis-ev/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/kia/carens-clavis-ev/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/kia/carens-clavis-ev/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/kia/carens-clavis-ev/exterior/06.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/kia/carens-clavis-ev/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/kia/carens-clavis-ev/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/kia/carens-clavis-ev/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/kia/carens-clavis-ev/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/kia/carens-clavis-ev/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/kia/carens-clavis-ev/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/kia/carens-clavis-ev/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/kia/carens-clavis-ev/interior/08.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "Glacier White Pearl",
+    "Pewter Olive",
+    "Aurora Black Pearl",
+    "Imperial Blue",
+    "Ivory Silver Matte",
+    "Gravity Gray"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/kia/carens-clavis-ev/colors/glacier-white-pearl.avif",
+    "/data/brand-model-images/4w-galleries/kia/carens-clavis-ev/colors/pewter-olive.avif",
+    "/data/brand-model-images/4w-galleries/kia/carens-clavis-ev/colors/aurora-black-pearl.avif",
+    "/data/brand-model-images/4w-galleries/kia/carens-clavis-ev/colors/imperial-blue.avif",
+    "/data/brand-model-images/4w-galleries/kia/carens-clavis-ev/colors/ivory-silver-matte.avif",
+    "/data/brand-model-images/4w-galleries/kia/carens-clavis-ev/colors/gravity-gray.avif"
+  ]
+}

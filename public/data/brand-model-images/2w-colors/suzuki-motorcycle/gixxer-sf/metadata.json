@@ -1,0 +1,29 @@
+{
+  "brand": "Suzuki Motorcycle India",
+  "model": "Gixxer SF",
+  "brandId": "suzuki-motorcycle",
+  "makeSlug": "suzuki-bikes",
+  "modelSlug": "gixxer-sf",
+  "sourceUrl": "https://www.bikewale.com/suzuki-bikes/gixxer-sf/colours/",
+  "scrapedAt": "2026-04-20T05:16:11.138Z",
+  "count": 4,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/rx6p7fb_1823119.jpg?q=100",
+  "colors": [
+    {
+      "name": "Met Triton Blue and Pearl Glacier White",
+      "image": "/data/brand-model-images/2w-colors/suzuki-motorcycle/gixxer-sf/met-triton-blue-and-pearl-glacier-white.avif"
+    },
+    {
+      "name": "Grey and Red",
+      "image": "/data/brand-model-images/2w-colors/suzuki-motorcycle/gixxer-sf/grey-and-red.avif"
+    },
+    {
+      "name": "Glass Sparkle Black",
+      "image": "/data/brand-model-images/2w-colors/suzuki-motorcycle/gixxer-sf/glass-sparkle-black.avif"
+    },
+    {
+      "name": "Met Oort Gray and Met Lush Green",
+      "image": "/data/brand-model-images/2w-colors/suzuki-motorcycle/gixxer-sf/met-oort-gray-and-met-lush-green.avif"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "brand": "Hero MotoCorp",
+  "model": "Xoom 110",
+  "brandId": "hero-motocorp",
+  "makeSlug": "hero-bikes",
+  "modelSlug": "xoom-110",
+  "sourceUrl": "https://www.bikewale.com/hero-bikes/xoom-110/colours/",
+  "scrapedAt": "2026-04-20T05:15:21.143Z",
+  "count": 6,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/on6dqfb_1828039.webp?q=100",
+  "colors": [
+    {
+      "name": "Pearl Silver White",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/xoom-110/pearl-silver-white.webp"
+    },
+    {
+      "name": "Polestar Blue",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/xoom-110/polestar-blue.webp"
+    },
+    {
+      "name": "Black",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/xoom-110/black.webp"
+    },
+    {
+      "name": "Matte Abrax Orange",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/xoom-110/matte-abrax-orange.webp"
+    },
+    {
+      "name": "Sports Red",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/xoom-110/sports-red.webp"
+    },
+    {
+      "name": "Matt Shadow Grey",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/xoom-110/matt-shadow-grey.webp"
+    }
+  ]
+}

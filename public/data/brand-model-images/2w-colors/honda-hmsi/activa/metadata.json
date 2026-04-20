@@ -1,0 +1,53 @@
+{
+  "brand": "Honda Motorcycle & Scooter India",
+  "model": "Activa",
+  "brandId": "honda-hmsi",
+  "makeSlug": "honda-bikes",
+  "modelSlug": "activa",
+  "sourceUrl": "https://www.bikewale.com/honda-bikes/activa/colours/",
+  "scrapedAt": "2026-04-20T05:15:28.552Z",
+  "count": 10,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/honda-activa-5g-trance-blue-metallic-1521110159620.jpg?20190103151915&q=100",
+  "colors": [
+    {
+      "name": "Trance Blue Metallic",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/activa/trance-blue-metallic.avif"
+    },
+    {
+      "name": "Pearl Spartan Red",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/activa/pearl-spartan-red.avif"
+    },
+    {
+      "name": "Pearl Amazing White",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/activa/pearl-amazing-white.avif"
+    },
+    {
+      "name": "Matte Selene Silver Metallic",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/activa/matte-selene-silver-metallic.avif"
+    },
+    {
+      "name": "Black",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/activa/black.avif"
+    },
+    {
+      "name": "Matte Axis Grey Metallic",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/activa/matte-axis-grey-metallic.avif"
+    },
+    {
+      "name": "Majestic Brown Metallic",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/activa/majestic-brown-metallic.avif"
+    },
+    {
+      "name": "Dazzle Yellow Metallic",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/activa/dazzle-yellow-metallic.avif"
+    },
+    {
+      "name": "Strontium Silver Metalic / Pearl Igneous Black",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/activa/strontium-silver-metalic-pearl-igneous-black.avif"
+    },
+    {
+      "name": "Pearl Precious White / Matte Selen Silver",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/activa/pearl-precious-white-matte-selen-silver.avif"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "brand": "Numeros",
+  "model": "Diplos",
+  "brandId": "numeros",
+  "makeSlug": "numeros-bikes",
+  "modelSlug": "diplos",
+  "sourceUrl": "https://www.bikewale.com/numeros-bikes/diplos/colours/",
+  "scrapedAt": "2026-04-20T05:20:43.961Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/mte6ehb_1868075.jpg?q=100",
+  "colors": [
+    {
+      "name": "Blaze Red",
+      "image": "/data/brand-model-images/2w-colors/numeros/diplos/blaze-red.avif"
+    },
+    {
+      "name": "Piano Black",
+      "image": "/data/brand-model-images/2w-colors/numeros/diplos/piano-black.avif"
+    },
+    {
+      "name": "Volt Blue",
+      "image": "/data/brand-model-images/2w-colors/numeros/diplos/volt-blue.avif"
+    }
+  ]
+}

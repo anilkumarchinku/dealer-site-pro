@@ -1,0 +1,25 @@
+{
+  "brand": "BGauss",
+  "model": "OoWah",
+  "brandId": "bgauss",
+  "makeSlug": "bgauss-bikes",
+  "modelSlug": "oowah",
+  "sourceUrl": "https://www.bikewale.com/bgauss-bikes/oowah/colours/",
+  "scrapedAt": "2026-04-20T06:14:05.953Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/y95gfhb_1869563.jpg?q=100",
+  "colors": [
+    {
+      "name": "Sage Green",
+      "image": "/data/brand-model-images/2w-colors/bgauss/oowah/sage-green.avif"
+    },
+    {
+      "name": "Laguna Blue",
+      "image": "/data/brand-model-images/2w-colors/bgauss/oowah/laguna-blue.avif"
+    },
+    {
+      "name": "Cloud White",
+      "image": "/data/brand-model-images/2w-colors/bgauss/oowah/cloud-white.avif"
+    }
+  ]
+}

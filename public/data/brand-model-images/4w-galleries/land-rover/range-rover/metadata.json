@@ -1,0 +1,52 @@
+{
+  "make": "land rover",
+  "model": "Range Rover",
+  "brandSlug": "land-rover",
+  "modelSlug": "range-rover",
+  "sourceUrl": "https://www.cardekho.com/land-rover/range-rover",
+  "scrapedAt": "2026-04-20T05:03:47.333Z",
+  "counts": {
+    "exterior": 5,
+    "interior": 8,
+    "feature": 0,
+    "colors": 7,
+    "total": 20
+  },
+  "hero": "/data/brand-model-images/4w-galleries/land-rover/range-rover/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover/exterior/06.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover/interior/08.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "Velocity Blue Gloss Finish DT",
+    "Ethereal Frost Silver Gloss Finish DT",
+    "Varesine Blue DT",
+    "Belgravia Green DT",
+    "Sunset Gold Gloss Finish DT",
+    "Flux Silver Satin Finish DT",
+    "Constellation Blue Gloss Finish"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover/colors/velocity-blue-gloss-finish-dt.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover/colors/ethereal-frost-silver-gloss-finish-dt.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover/colors/varesine-blue-dt.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover/colors/belgravia-green-dt.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover/colors/sunset-gold-gloss-finish-dt.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover/colors/flux-silver-satin-finish-dt.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover/colors/constellation-blue-gloss-finish.avif"
+  ]
+}

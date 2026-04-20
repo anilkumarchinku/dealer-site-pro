@@ -1,0 +1,29 @@
+{
+  "brand": "TVS Motor Company",
+  "model": "Apache RTR 310",
+  "brandId": "tvs-motor",
+  "makeSlug": "tvs-bikes",
+  "modelSlug": "apache-rtr-310",
+  "sourceUrl": "https://www.bikewale.com/tvs-bikes/apache-rtr-310/colours/",
+  "scrapedAt": "2026-04-20T06:07:46.369Z",
+  "count": 4,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/5207sgb_1858050.jpg?q=100",
+  "colors": [
+    {
+      "name": "Arsenal Black",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/apache-rtr-310/arsenal-black.avif"
+    },
+    {
+      "name": "Fury yellow",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/apache-rtr-310/fury-yellow.avif"
+    },
+    {
+      "name": "Black Champagne Gold Livery",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/apache-rtr-310/black-champagne-gold-livery.avif"
+    },
+    {
+      "name": "Fiery Red",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/apache-rtr-310/fiery-red.avif"
+    }
+  ]
+}

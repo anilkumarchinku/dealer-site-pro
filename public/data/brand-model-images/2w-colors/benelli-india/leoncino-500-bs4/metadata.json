@@ -1,0 +1,21 @@
+{
+  "brand": "Benelli India",
+  "model": "Leoncino 500",
+  "brandId": "benelli-india",
+  "makeSlug": "benelli-bikes",
+  "modelSlug": "leoncino-500-bs4",
+  "sourceUrl": "https://www.bikewale.com/benelli-bikes/leoncino-500-bs4/colours/",
+  "scrapedAt": "2026-04-20T05:16:51.788Z",
+  "count": 2,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/benelli-select-model-steel-gray-1565000117873.jpg?q=100",
+  "colors": [
+    {
+      "name": "Steel Gray",
+      "image": "/data/brand-model-images/2w-colors/benelli-india/leoncino-500-bs4/steel-gray.avif"
+    },
+    {
+      "name": "Leoncino Red",
+      "image": "/data/brand-model-images/2w-colors/benelli-india/leoncino-500-bs4/leoncino-red.avif"
+    }
+  ]
+}

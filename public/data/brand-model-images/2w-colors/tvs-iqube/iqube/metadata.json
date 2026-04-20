@@ -1,0 +1,61 @@
+{
+  "brand": "TVS iQube",
+  "model": "iQube ST 5.3 kWh",
+  "brandId": "tvs-iqube",
+  "makeSlug": "tvs-bikes",
+  "modelSlug": "iqube",
+  "sourceUrl": "https://www.bikewale.com/tvs-bikes/iqube/colours/",
+  "scrapedAt": "2026-04-20T06:07:53.264Z",
+  "count": 12,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/ea5avfb_1835153.jpg?q=100",
+  "colors": [
+    {
+      "name": "Wallnut Brown",
+      "image": "/data/brand-model-images/2w-colors/tvs-iqube/iqube/wallnut-brown.avif"
+    },
+    {
+      "name": "Pearl White",
+      "image": "/data/brand-model-images/2w-colors/tvs-iqube/iqube/pearl-white.avif"
+    },
+    {
+      "name": "Titanium Grey",
+      "image": "/data/brand-model-images/2w-colors/tvs-iqube/iqube/titanium-grey.avif"
+    },
+    {
+      "name": "Copper Brown Beige",
+      "image": "/data/brand-model-images/2w-colors/tvs-iqube/iqube/copper-brown-beige.avif"
+    },
+    {
+      "name": "Starlight Blue Beige",
+      "image": "/data/brand-model-images/2w-colors/tvs-iqube/iqube/starlight-blue-beige.avif"
+    },
+    {
+      "name": "Celebration Orange",
+      "image": "/data/brand-model-images/2w-colors/tvs-iqube/iqube/celebration-orange.avif"
+    },
+    {
+      "name": "Mint Blue",
+      "image": "/data/brand-model-images/2w-colors/tvs-iqube/iqube/mint-blue.avif"
+    },
+    {
+      "name": "Mercury Grey",
+      "image": "/data/brand-model-images/2w-colors/tvs-iqube/iqube/mercury-grey.avif"
+    },
+    {
+      "name": "Titanium Grey - Matte",
+      "image": "/data/brand-model-images/2w-colors/tvs-iqube/iqube/titanium-grey-matte.avif"
+    },
+    {
+      "name": "Walnut Brown - Backrest",
+      "image": "/data/brand-model-images/2w-colors/tvs-iqube/iqube/walnut-brown-backrest.avif"
+    },
+    {
+      "name": "Titanium Grey - Backrest",
+      "image": "/data/brand-model-images/2w-colors/tvs-iqube/iqube/titanium-grey-backrest.avif"
+    },
+    {
+      "name": "Pearl White - Backrest",
+      "image": "/data/brand-model-images/2w-colors/tvs-iqube/iqube/pearl-white-backrest.avif"
+    }
+  ]
+}

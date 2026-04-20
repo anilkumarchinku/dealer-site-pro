@@ -83,6 +83,11 @@ function uniqueStrings(values: string[]): string[] {
     return Array.from(new Set(values.map(v => v.trim()).filter(Boolean)))
 }
 
+function removeMatchingUrl(urls: string[], blocked: string[]): string[] {
+    const blockedSet = new Set(blocked.map(value => value.trim()).filter(Boolean))
+    return uniqueStrings(urls).filter(url => !blockedSet.has(url))
+}
+
 function summarizeRange(values: Array<number | null>, suffix: string): string {
     const filtered = values.filter((value): value is number => value != null && Number.isFinite(value))
     if (filtered.length === 0) return '—'
@@ -369,6 +374,9 @@ export async function hydrateCarWithJsonDetails(car: Car): Promise<Car> {
     const mergedExteriorWithFeatures = featureImages.length > 0
         ? uniqueStrings([...mergedExterior, ...featureImages])
         : mergedExterior
+    const heroImage = scrapedGallery?.hero || imageUrls[0] || car.images.hero
+    const dedupedExterior = removeMatchingUrl(mergedExteriorWithFeatures, [heroImage])
+    const dedupedInterior = removeMatchingUrl(mergedInterior, [heroImage, ...dedupedExterior])
 
     return {
         ...car,
@@ -429,10 +437,10 @@ export async function hydrateCarWithJsonDetails(car: Car): Promise<Car> {
             ncapRating: car.safety?.ncapRating,
         },
         images: {
-            hero: scrapedGallery?.hero || imageUrls[0] || car.images.hero,
-            exterior: mergedExteriorWithFeatures,
-            interior: mergedInterior,
-            colors: mergedColorImages,
+            hero: heroImage,
+            exterior: dedupedExterior,
+            interior: dedupedInterior,
+            colors: uniqueStrings(mergedColorImages ?? []),
         },
         colors: mergedColors.length > 0 ? mergedColors : fallbackColors,
         variants: variantEntries.length > 0 ? variantEntries : car.variants,

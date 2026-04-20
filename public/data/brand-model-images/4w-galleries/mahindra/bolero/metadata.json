@@ -1,0 +1,48 @@
+{
+  "make": "mahindra",
+  "model": "Bolero",
+  "brandSlug": "mahindra",
+  "modelSlug": "bolero",
+  "sourceUrl": "https://www.cardekho.com/mahindra/bolero",
+  "scrapedAt": "2026-04-20T05:03:49.474Z",
+  "counts": {
+    "exterior": 7,
+    "interior": 8,
+    "feature": 0,
+    "colors": 4,
+    "total": 19
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mahindra/bolero/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/mahindra/bolero/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/bolero/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/bolero/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/bolero/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/bolero/exterior/06.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/bolero/exterior/07.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/bolero/exterior/08.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/mahindra/bolero/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/bolero/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/bolero/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/bolero/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/bolero/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/bolero/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/bolero/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/bolero/interior/08.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "Dimond White",
+    "Rocky Beige",
+    "D'sat Silver",
+    "Stealth Black"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mahindra/bolero/colors/dimond-white.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/bolero/colors/rocky-beige.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/bolero/colors/d-sat-silver.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/bolero/colors/stealth-black.avif"
+  ]
+}

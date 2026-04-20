@@ -1,0 +1,37 @@
+{
+  "brand": "Harley-Davidson India",
+  "model": "X440",
+  "brandId": "harley-davidson-india",
+  "makeSlug": "harleydavidson-bikes",
+  "modelSlug": "x440",
+  "sourceUrl": "https://www.bikewale.com/harleydavidson-bikes/x440/colours/",
+  "scrapedAt": "2026-04-20T05:53:31.054Z",
+  "count": 6,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/5rdnbgb_1838314.jpg?q=100",
+  "colors": [
+    {
+      "name": "Vivid Mustard",
+      "image": "/data/brand-model-images/2w-colors/harley-davidson-india/x440/vivid-mustard.avif"
+    },
+    {
+      "name": "Vivid Metallic Thick Red",
+      "image": "/data/brand-model-images/2w-colors/harley-davidson-india/x440/vivid-metallic-thick-red.png"
+    },
+    {
+      "name": "Vivid Metallic Dark Silver",
+      "image": "/data/brand-model-images/2w-colors/harley-davidson-india/x440/vivid-metallic-dark-silver.png"
+    },
+    {
+      "name": "Vivid Goldfish Silver",
+      "image": "/data/brand-model-images/2w-colors/harley-davidson-india/x440/vivid-goldfish-silver.png"
+    },
+    {
+      "name": "Baja Orange",
+      "image": "/data/brand-model-images/2w-colors/harley-davidson-india/x440/baja-orange.avif"
+    },
+    {
+      "name": "Matte Black",
+      "image": "/data/brand-model-images/2w-colors/harley-davidson-india/x440/matte-black.avif"
+    }
+  ]
+}

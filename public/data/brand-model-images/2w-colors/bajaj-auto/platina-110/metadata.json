@@ -1,0 +1,29 @@
+{
+  "brand": "Bajaj Auto",
+  "model": "Platina 110",
+  "brandId": "bajaj-auto",
+  "makeSlug": "bajaj-bikes",
+  "modelSlug": "platina-110",
+  "sourceUrl": "https://www.bikewale.com/bajaj-bikes/platina-110/colours/",
+  "scrapedAt": "2026-04-20T06:07:36.352Z",
+  "count": 4,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/tj4h3ib_1915496.png?q=100",
+  "colors": [
+    {
+      "name": "Black & White (Drum)",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/platina-110/black-and-white-drum.png"
+    },
+    {
+      "name": "Cocktail Wine Red - Orange (Drum)",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/platina-110/cocktail-wine-red-orange-drum.png"
+    },
+    {
+      "name": "Ebony Black Red (Drum)",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/platina-110/ebony-black-red-drum.png"
+    },
+    {
+      "name": "Ebony Black Blue (Drum)",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/platina-110/ebony-black-blue-drum.png"
+    }
+  ]
+}

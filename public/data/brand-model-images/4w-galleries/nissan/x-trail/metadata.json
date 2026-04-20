@@ -1,0 +1,46 @@
+{
+  "make": "nissan",
+  "model": "X-Trail",
+  "brandSlug": "nissan",
+  "modelSlug": "x-trail",
+  "sourceUrl": "https://www.cardekho.com/nissan/x-trail",
+  "scrapedAt": "2026-04-20T05:04:22.364Z",
+  "counts": {
+    "exterior": 7,
+    "interior": 8,
+    "feature": 0,
+    "colors": 3,
+    "total": 18
+  },
+  "hero": "/data/brand-model-images/4w-galleries/nissan/x-trail/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/nissan/x-trail/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/nissan/x-trail/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/nissan/x-trail/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/nissan/x-trail/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/nissan/x-trail/exterior/06.avif",
+    "/data/brand-model-images/4w-galleries/nissan/x-trail/exterior/07.avif",
+    "/data/brand-model-images/4w-galleries/nissan/x-trail/exterior/08.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/nissan/x-trail/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/nissan/x-trail/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/nissan/x-trail/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/nissan/x-trail/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/nissan/x-trail/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/nissan/x-trail/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/nissan/x-trail/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/nissan/x-trail/interior/08.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "Diamond Black",
+    "Pearl White",
+    "CHAMPAGNE SILVER"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/nissan/x-trail/colors/diamond-black.avif",
+    "/data/brand-model-images/4w-galleries/nissan/x-trail/colors/pearl-white.avif",
+    "/data/brand-model-images/4w-galleries/nissan/x-trail/colors/champagne-silver.avif"
+  ]
+}

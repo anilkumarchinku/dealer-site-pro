@@ -1,0 +1,25 @@
+{
+  "brand": "KTM India",
+  "model": "160 Duke",
+  "brandId": "ktm-india",
+  "makeSlug": "ktm-bikes",
+  "modelSlug": "160-duke",
+  "sourceUrl": "https://www.bikewale.com/ktm-bikes/160-duke/colours/",
+  "scrapedAt": "2026-04-20T05:16:14.501Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/i6tf6hb_1880335.jpg?q=100",
+  "colors": [
+    {
+      "name": "Silver Metallic Matt",
+      "image": "/data/brand-model-images/2w-colors/ktm-india/160-duke/silver-metallic-matt.avif"
+    },
+    {
+      "name": "Atlantic Blue",
+      "image": "/data/brand-model-images/2w-colors/ktm-india/160-duke/atlantic-blue.avif"
+    },
+    {
+      "name": "Electronic Orange",
+      "image": "/data/brand-model-images/2w-colors/ktm-india/160-duke/electronic-orange.avif"
+    }
+  ]
+}

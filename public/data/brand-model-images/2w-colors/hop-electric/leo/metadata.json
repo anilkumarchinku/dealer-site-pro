@@ -1,0 +1,33 @@
+{
+  "brand": "Hop Electric",
+  "model": "Leo",
+  "brandId": "hop-electric",
+  "makeSlug": "hop-electric-bikes",
+  "modelSlug": "leo",
+  "sourceUrl": "https://www.bikewale.com/hop-electric-bikes/leo/colours/",
+  "scrapedAt": "2026-04-20T05:19:39.131Z",
+  "count": 5,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/hop-electric-select-model-white-1663590348974.gif?q=100",
+  "colors": [
+    {
+      "name": "White",
+      "image": "/data/brand-model-images/2w-colors/hop-electric/leo/white.avif"
+    },
+    {
+      "name": "Silver",
+      "image": "/data/brand-model-images/2w-colors/hop-electric/leo/silver.avif"
+    },
+    {
+      "name": "Red",
+      "image": "/data/brand-model-images/2w-colors/hop-electric/leo/red.avif"
+    },
+    {
+      "name": "Blue",
+      "image": "/data/brand-model-images/2w-colors/hop-electric/leo/blue.avif"
+    },
+    {
+      "name": "Black",
+      "image": "/data/brand-model-images/2w-colors/hop-electric/leo/black.avif"
+    }
+  ]
+}

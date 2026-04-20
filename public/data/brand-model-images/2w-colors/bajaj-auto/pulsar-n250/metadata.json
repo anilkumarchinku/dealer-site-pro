@@ -1,0 +1,25 @@
+{
+  "brand": "Bajaj Auto",
+  "model": "Pulsar N250",
+  "brandId": "bajaj-auto",
+  "makeSlug": "bajaj-bikes",
+  "modelSlug": "pulsar-n250",
+  "sourceUrl": "https://www.bikewale.com/bajaj-bikes/pulsar-n250/colours/",
+  "scrapedAt": "2026-04-20T06:07:45.734Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/bajaj-select-model-pearl-metallic-white-1712905539089.png?q=100",
+  "colors": [
+    {
+      "name": "Pearl Metallic White",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/pulsar-n250/pearl-metallic-white.png"
+    },
+    {
+      "name": "Brooklyn Black",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/pulsar-n250/brooklyn-black.png"
+    },
+    {
+      "name": "Glossy Racing Red",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/pulsar-n250/glossy-racing-red.png"
+    }
+  ]
+}

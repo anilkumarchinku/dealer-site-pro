@@ -1,0 +1,25 @@
+{
+  "brand": "BMW Motorrad India",
+  "model": "S 1000 R",
+  "brandId": "bmw-motorrad-india",
+  "makeSlug": "bmw-bikes",
+  "modelSlug": "s-1000-r",
+  "sourceUrl": "https://www.bikewale.com/bmw-bikes/s-1000-r/colours/",
+  "scrapedAt": "2026-04-20T05:18:22.732Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/qy5chhb_1871213.jpg?q=100",
+  "colors": [
+    {
+      "name": "Bluefire/Mugiallo Yellow",
+      "image": "/data/brand-model-images/2w-colors/bmw-motorrad-india/s-1000-r/bluefire-mugiallo-yellow.avif"
+    },
+    {
+      "name": "Light White/M Motorsport",
+      "image": "/data/brand-model-images/2w-colors/bmw-motorrad-india/s-1000-r/light-white-m-motorsport.avif"
+    },
+    {
+      "name": "Blackstorm Metallic",
+      "image": "/data/brand-model-images/2w-colors/bmw-motorrad-india/s-1000-r/blackstorm-metallic.avif"
+    }
+  ]
+}

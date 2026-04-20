@@ -1,0 +1,33 @@
+{
+  "brand": "Hero MotoCorp",
+  "model": "Destini 125",
+  "brandId": "hero-motocorp",
+  "makeSlug": "hero-bikes",
+  "modelSlug": "destini-125",
+  "sourceUrl": "https://www.bikewale.com/hero-bikes/destini-125/colours/",
+  "scrapedAt": "2026-04-20T06:13:24.265Z",
+  "count": 5,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/7ineqfb_1828067.webp?q=100",
+  "colors": [
+    {
+      "name": "Eternal White",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/destini-125/eternal-white.webp"
+    },
+    {
+      "name": "Groovy Red",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/destini-125/groovy-red.webp"
+    },
+    {
+      "name": "Regal Black",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/destini-125/regal-black.webp"
+    },
+    {
+      "name": "Cosmic Blue",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/destini-125/cosmic-blue.webp"
+    },
+    {
+      "name": "Mystique Magenta",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/destini-125/mystique-magenta.webp"
+    }
+  ]
+}

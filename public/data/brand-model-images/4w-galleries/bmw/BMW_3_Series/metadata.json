@@ -1,0 +1,43 @@
+{
+  "make": "bmw",
+  "model": "3 Series",
+  "brandSlug": "BMW",
+  "modelSlug": "BMW_3_Series",
+  "sourceUrl": "https://www.cardekho.com/BMW/BMW_3_Series",
+  "scrapedAt": "2026-04-20T06:30:52.074Z",
+  "counts": {
+    "exterior": 6,
+    "interior": 8,
+    "feature": 0,
+    "colors": 2,
+    "total": 16
+  },
+  "hero": "/data/brand-model-images/4w-galleries/BMW/BMW_3_Series/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/BMW/BMW_3_Series/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/BMW/BMW_3_Series/exterior/02.avif",
+    "/data/brand-model-images/4w-galleries/BMW/BMW_3_Series/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/BMW/BMW_3_Series/exterior/06.avif",
+    "/data/brand-model-images/4w-galleries/BMW/BMW_3_Series/exterior/07.avif",
+    "/data/brand-model-images/4w-galleries/BMW/BMW_3_Series/exterior/08.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/BMW/BMW_3_Series/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/BMW/BMW_3_Series/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/BMW/BMW_3_Series/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/BMW/BMW_3_Series/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/BMW/BMW_3_Series/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/BMW/BMW_3_Series/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/BMW/BMW_3_Series/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/BMW/BMW_3_Series/interior/08.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "Tanzanite Blue Metallic",
+    "Dravit Grey Metallic"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/BMW/BMW_3_Series/colors/tanzanite-blue-metallic.avif",
+    "/data/brand-model-images/4w-galleries/BMW/BMW_3_Series/colors/dravit-grey-metallic.avif"
+  ]
+}

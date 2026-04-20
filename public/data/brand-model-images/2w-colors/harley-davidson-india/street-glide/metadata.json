@@ -1,0 +1,41 @@
+{
+  "brand": "Harley-Davidson India",
+  "model": "Street Glide",
+  "brandId": "harley-davidson-india",
+  "makeSlug": "harleydavidson-bikes",
+  "modelSlug": "street-glide",
+  "sourceUrl": "https://www.bikewale.com/harleydavidson-bikes/street-glide/colours/",
+  "scrapedAt": "2026-04-20T05:53:25.444Z",
+  "count": 7,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/8zucohb_1879317.jpg?q=100",
+  "colors": [
+    {
+      "name": "Mystic Shift",
+      "image": "/data/brand-model-images/2w-colors/harley-davidson-india/street-glide/mystic-shift.avif"
+    },
+    {
+      "name": "Billiard Gray",
+      "image": "/data/brand-model-images/2w-colors/harley-davidson-india/street-glide/billiard-gray.avif"
+    },
+    {
+      "name": "Vivid Black",
+      "image": "/data/brand-model-images/2w-colors/harley-davidson-india/street-glide/vivid-black.avif"
+    },
+    {
+      "name": "Iron Horse Metallic",
+      "image": "/data/brand-model-images/2w-colors/harley-davidson-india/street-glide/iron-horse-metallic.avif"
+    },
+    {
+      "name": "Brilliant Red",
+      "image": "/data/brand-model-images/2w-colors/harley-davidson-india/street-glide/brilliant-red.avif"
+    },
+    {
+      "name": "Blue Burst",
+      "image": "/data/brand-model-images/2w-colors/harley-davidson-india/street-glide/blue-burst.avif"
+    },
+    {
+      "name": "Atlas Silver Metallic",
+      "image": "/data/brand-model-images/2w-colors/harley-davidson-india/street-glide/atlas-silver-metallic.avif"
+    }
+  ]
+}

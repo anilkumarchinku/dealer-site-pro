@@ -1,0 +1,21 @@
+{
+  "brand": "Revolt Motors",
+  "model": "RV BlazeX",
+  "brandId": "revolt-motors",
+  "makeSlug": "revolt-bikes",
+  "modelSlug": "rv-blazex",
+  "sourceUrl": "https://www.bikewale.com/revolt-bikes/rv-blazex/colours/",
+  "scrapedAt": "2026-04-20T05:53:11.654Z",
+  "count": 2,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/rh5jhfb_1817483.jpg?q=100",
+  "colors": [
+    {
+      "name": "Eclipse Red Black",
+      "image": "/data/brand-model-images/2w-colors/revolt-motors/rv-blazex/eclipse-red-black.avif"
+    },
+    {
+      "name": "Sterling Silver Black",
+      "image": "/data/brand-model-images/2w-colors/revolt-motors/rv-blazex/sterling-silver-black.avif"
+    }
+  ]
+}

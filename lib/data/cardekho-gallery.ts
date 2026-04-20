@@ -14,43 +14,179 @@ export interface CardekhoGalleryData {
     feature: string[]
 }
 
-function loadLocalGallery(sourceUrl: string): CardekhoGalleryData | null {
+function slugify(value: string): string {
+    return String(value || '')
+        .toLowerCase()
+        .replace(/\./g, '')
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-|-$/g, '')
+}
+
+function stripBrandPrefix(modelSlug: string, brandSlug: string): string {
+    const normalizedModel = slugify(modelSlug)
+    const normalizedBrand = slugify(brandSlug)
+    if (!normalizedBrand) return normalizedModel
+
+    if (normalizedModel === normalizedBrand) return normalizedModel
+    if (normalizedModel.startsWith(`${normalizedBrand}-`)) {
+        return normalizedModel.slice(normalizedBrand.length + 1)
+    }
+    return normalizedModel
+}
+
+function normalizeSourceUrl(url: string): string {
+    try {
+        const parsed = new URL(String(url || '').trim())
+        const cleanedPath = parsed.pathname
+            .replace(/\/(?:variants\.htm|specs|colors)$/i, '')
+            .replace(/\/price-in-[^/]+$/i, '')
+            .replace(/\/$/, '')
+
+        return `${parsed.origin.toLowerCase()}${cleanedPath}`
+    } catch {
+        return String(url || '').trim().replace(/\/$/, '')
+    }
+}
+
+function deriveSourceTokens(sourceUrl: string): { brandSlug: string; modelTokens: string[] } | null {
     try {
         const parsed = new URL(sourceUrl)
-        const [brandSlug, modelSlug] = parsed.pathname.split('/').filter(Boolean)
-        if (!brandSlug || !modelSlug) return null
+        const parts = parsed.pathname.split('/').filter(Boolean)
+        if (parts.length === 0) return null
 
-        const metadataPath = path.join(
-            process.cwd(),
-            'public',
-            'data',
-            'brand-model-images',
-            '4w-galleries',
-            brandSlug,
-            modelSlug,
-            'metadata.json'
+        let brandSlug = ''
+        let rawModel = ''
+
+        if (parts[0].toLowerCase() === 'overview' && parts[1]) {
+            rawModel = parts[1]
+            brandSlug = slugify(rawModel.split(/[_-]+/)[0] || '')
+        } else if (parts[0].toLowerCase() === 'carmodels' && parts[1] && parts[2]) {
+            brandSlug = slugify(parts[1])
+            rawModel = parts[2]
+        } else if (parts[0] && parts[1]) {
+            brandSlug = slugify(parts[0])
+            rawModel = parts[1]
+        } else {
+            return null
+        }
+
+        const primaryModel = slugify(rawModel)
+        const strippedModel = stripBrandPrefix(primaryModel, brandSlug)
+        const modelTokens = Array.from(new Set([primaryModel, strippedModel].filter(Boolean)))
+
+        return { brandSlug, modelTokens }
+    } catch {
+        return null
+    }
+}
+
+type LocalGalleryEntry = CardekhoGalleryData & {
+    brandSlug: string
+    modelSlug: string
+    makeSlug: string
+    modelNameSlug: string
+    sourceUrlNormalized: string
+    modelTokens: string[]
+}
+
+const loadLocalGalleryIndex = cache((): LocalGalleryEntry[] => {
+    const rootDir = path.join(
+        process.cwd(),
+        'public',
+        'data',
+        'brand-model-images',
+        '4w-galleries'
+    )
+
+    if (!fs.existsSync(rootDir)) return []
+
+    const entries: LocalGalleryEntry[] = []
+
+    const visit = (dirPath: string) => {
+        for (const entry of fs.readdirSync(dirPath, { withFileTypes: true })) {
+            const fullPath = path.join(dirPath, entry.name)
+            if (entry.isDirectory()) {
+                visit(fullPath)
+                continue
+            }
+
+            if (entry.name !== 'metadata.json') continue
+
+            try {
+                const metadata = JSON.parse(fs.readFileSync(fullPath, 'utf8')) as Partial<CardekhoGalleryData> & {
+                    sourceUrl?: string
+                    brandSlug?: string
+                    modelSlug?: string
+                    make?: string
+                    model?: string
+                }
+
+                const brandSlug = String(metadata.brandSlug ?? '')
+                const modelSlug = String(metadata.modelSlug ?? '')
+                const makeSlug = slugify(String(metadata.make ?? brandSlug))
+                const modelNameSlug = slugify(String(metadata.model ?? modelSlug))
+                const strippedModelSlug = stripBrandPrefix(modelSlug, brandSlug)
+
+                entries.push({
+                    sourceUrl: metadata.sourceUrl ?? '',
+                    hero: metadata.hero ?? null,
+                    exterior: metadata.exterior ?? [],
+                    interior: metadata.interior ?? [],
+                    colorNames: metadata.colorNames ?? [],
+                    colorImages: metadata.colorImages ?? [],
+                    feature: metadata.feature ?? [],
+                    brandSlug,
+                    modelSlug,
+                    makeSlug,
+                    modelNameSlug,
+                    sourceUrlNormalized: normalizeSourceUrl(metadata.sourceUrl ?? ''),
+                    modelTokens: Array.from(new Set([
+                        slugify(modelSlug),
+                        strippedModelSlug,
+                        modelNameSlug,
+                    ].filter(Boolean))),
+                })
+            } catch {
+                continue
+            }
+        }
+    }
+
+    visit(rootDir)
+    return entries
+})
+
+function loadLocalGallery(sourceUrl: string): CardekhoGalleryData | null {
+    try {
+        const entries = loadLocalGalleryIndex()
+        if (entries.length === 0) return null
+
+        const normalizedSourceUrl = normalizeSourceUrl(sourceUrl)
+
+        const exactSourceMatch = entries.find((entry) => entry.sourceUrlNormalized === normalizedSourceUrl)
+        if (exactSourceMatch) return exactSourceMatch
+
+        const tokens = deriveSourceTokens(sourceUrl)
+        if (!tokens) return null
+
+        const exactTokenMatch = entries.find((entry) =>
+            (entry.makeSlug === tokens.brandSlug || slugify(entry.brandSlug) === tokens.brandSlug) &&
+            tokens.modelTokens.some((token) => entry.modelTokens.includes(token))
+        )
+        if (exactTokenMatch) return exactTokenMatch
+
+        const looseTokenMatch = entries.find((entry) =>
+            (entry.makeSlug === tokens.brandSlug || slugify(entry.brandSlug) === tokens.brandSlug) &&
+            tokens.modelTokens.some((token) =>
+                entry.modelTokens.some((entryToken) =>
+                    entryToken === token ||
+                    entryToken.startsWith(`${token}-`) ||
+                    token.startsWith(`${entryToken}-`)
+                )
+            )
         )
 
-        if (!fs.existsSync(metadataPath)) return null
-
-        const metadata = JSON.parse(fs.readFileSync(metadataPath, 'utf8')) as Partial<CardekhoGalleryData> & {
-            colorNames?: string[]
-            colorImages?: string[]
-            hero?: string | null
-            exterior?: string[]
-            interior?: string[]
-            feature?: string[]
-        }
-
-        return {
-            sourceUrl,
-            hero: metadata.hero ?? null,
-            exterior: metadata.exterior ?? [],
-            interior: metadata.interior ?? [],
-            colorNames: metadata.colorNames ?? [],
-            colorImages: metadata.colorImages ?? [],
-            feature: metadata.feature ?? [],
-        }
+        return looseTokenMatch ?? null
     } catch {
         return null
     }

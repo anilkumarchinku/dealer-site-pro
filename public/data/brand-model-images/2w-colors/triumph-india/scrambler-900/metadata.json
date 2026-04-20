@@ -1,0 +1,25 @@
+{
+  "brand": "Triumph India",
+  "model": "Scrambler 900",
+  "brandId": "triumph-india",
+  "makeSlug": "triumph-bikes",
+  "modelSlug": "scrambler-900",
+  "sourceUrl": "https://www.bikewale.com/triumph-bikes/scrambler-900/colours/",
+  "scrapedAt": "2026-04-20T05:17:44.157Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/triumph-select-model-carnival-red--jet-black-1659013007094.jpg?q=100",
+  "colors": [
+    {
+      "name": "Carnival Red / Jet Black",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/scrambler-900/carnival-red-jet-black.avif"
+    },
+    {
+      "name": "Matt Khaki",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/scrambler-900/matt-khaki.avif"
+    },
+    {
+      "name": "Jet Black",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/scrambler-900/jet-black.avif"
+    }
+  ]
+}

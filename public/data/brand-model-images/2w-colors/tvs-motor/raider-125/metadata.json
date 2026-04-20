@@ -1,0 +1,69 @@
+{
+  "brand": "TVS Motor Company",
+  "model": "Raider 125",
+  "brandId": "tvs-motor",
+  "makeSlug": "tvs-bikes",
+  "modelSlug": "raider-125",
+  "sourceUrl": "https://www.bikewale.com/tvs-bikes/raider-125/colours/",
+  "scrapedAt": "2026-04-20T06:07:39.029Z",
+  "count": 14,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/rnnjchb_1866077.jpg?q=100",
+  "colors": [
+    {
+      "name": "Forza Blue",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/raider-125/forza-blue.avif"
+    },
+    {
+      "name": "Wicked Black",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/raider-125/wicked-black.png"
+    },
+    {
+      "name": "Striking Red",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/raider-125/striking-red.avif"
+    },
+    {
+      "name": "Fiery Yellow",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/raider-125/fiery-yellow.avif"
+    },
+    {
+      "name": "Blazing Blue",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/raider-125/blazing-blue.avif"
+    },
+    {
+      "name": "Wicked Black (Single Seat)",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/raider-125/wicked-black-single-seat.avif"
+    },
+    {
+      "name": "Striking Red (Single Seat)",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/raider-125/striking-red-single-seat.avif"
+    },
+    {
+      "name": "Wolverine",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/raider-125/wolverine.avif"
+    },
+    {
+      "name": "Deadpool",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/raider-125/deadpool.avif"
+    },
+    {
+      "name": "Iron Man",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/raider-125/iron-man.avif"
+    },
+    {
+      "name": "Black Panther",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/raider-125/black-panther.avif"
+    },
+    {
+      "name": "Wicked Black (iGO)",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/raider-125/wicked-black-igo.avif"
+    },
+    {
+      "name": "Nardo Grey (iGO)",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/raider-125/nardo-grey-igo.avif"
+    },
+    {
+      "name": "Striking Red",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/raider-125/striking-red.avif"
+    }
+  ]
+}

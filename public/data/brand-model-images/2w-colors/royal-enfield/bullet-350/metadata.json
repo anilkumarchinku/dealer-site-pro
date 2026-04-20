@@ -1,0 +1,33 @@
+{
+  "brand": "Royal Enfield",
+  "model": "Bullet 350",
+  "brandId": "royal-enfield",
+  "makeSlug": "royalenfield-bikes",
+  "modelSlug": "bullet-350",
+  "sourceUrl": "https://www.bikewale.com/royalenfield-bikes/bullet-350/colours/",
+  "scrapedAt": "2026-04-20T05:15:52.320Z",
+  "count": 5,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/mwh0fhb_1869309.jpg?q=100",
+  "colors": [
+    {
+      "name": "Military Black",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/bullet-350/military-black.avif"
+    },
+    {
+      "name": "Maroon",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/bullet-350/maroon.avif"
+    },
+    {
+      "name": "Standard Black",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/bullet-350/standard-black.avif"
+    },
+    {
+      "name": "Black Gold",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/bullet-350/black-gold.avif"
+    },
+    {
+      "name": "Battalion Black",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/bullet-350/battalion-black.avif"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "brand": "Honda Motorcycle & Scooter India",
+  "model": "Shine 100",
+  "brandId": "honda-hmsi",
+  "makeSlug": "honda-bikes",
+  "modelSlug": "shine-100",
+  "sourceUrl": "https://www.bikewale.com/honda-bikes/shine-100/colours/",
+  "scrapedAt": "2026-04-20T05:15:23.252Z",
+  "count": 9,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/rz0tkgb_1848450.jpg?q=100",
+  "colors": [
+    {
+      "name": "Orange with Black",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/shine-100/orange-with-black.avif"
+    },
+    {
+      "name": "Green with Black",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/shine-100/green-with-black.avif"
+    },
+    {
+      "name": "Gray with Black",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/shine-100/gray-with-black.avif"
+    },
+    {
+      "name": "Blue with Black",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/shine-100/blue-with-black.avif"
+    },
+    {
+      "name": "Red with Black",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/shine-100/red-with-black.avif"
+    },
+    {
+      "name": "Geny Gray Metallic",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/shine-100/geny-gray-metallic.avif"
+    },
+    {
+      "name": "Athletic Blue Metallic",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/shine-100/athletic-blue-metallic.avif"
+    },
+    {
+      "name": "Pearl Igneous Black",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/shine-100/pearl-igneous-black.avif"
+    },
+    {
+      "name": "Imperial Red Metallic",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/shine-100/imperial-red-metallic.avif"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "brand": "Ola Electric",
+  "model": "Roadster X",
+  "brandId": "ola-electric",
+  "makeSlug": "ola-bikes",
+  "modelSlug": "roadster-x",
+  "sourceUrl": "https://www.bikewale.com/ola-bikes/roadster-x/colours/",
+  "scrapedAt": "2026-04-20T06:07:40.940Z",
+  "count": 5,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/vf6tcfb_1812469.jpg?q=100",
+  "colors": [
+    {
+      "name": "Ceramic White",
+      "image": "/data/brand-model-images/2w-colors/ola-electric/roadster-x/ceramic-white.avif"
+    },
+    {
+      "name": "Pine Green",
+      "image": "/data/brand-model-images/2w-colors/ola-electric/roadster-x/pine-green.avif"
+    },
+    {
+      "name": "Stellar Blue",
+      "image": "/data/brand-model-images/2w-colors/ola-electric/roadster-x/stellar-blue.avif"
+    },
+    {
+      "name": "Anthracite",
+      "image": "/data/brand-model-images/2w-colors/ola-electric/roadster-x/anthracite.avif"
+    },
+    {
+      "name": "Industrial Silver",
+      "image": "/data/brand-model-images/2w-colors/ola-electric/roadster-x/industrial-silver.avif"
+    }
+  ]
+}

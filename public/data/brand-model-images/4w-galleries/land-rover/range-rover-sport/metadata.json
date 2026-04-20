@@ -1,0 +1,52 @@
+{
+  "make": "land rover",
+  "model": "Range Rover Sport",
+  "brandSlug": "land-rover",
+  "modelSlug": "range-rover-sport",
+  "sourceUrl": "https://www.cardekho.com/land-rover/range-rover-sport",
+  "scrapedAt": "2026-04-20T05:03:44.205Z",
+  "counts": {
+    "exterior": 5,
+    "interior": 8,
+    "feature": 0,
+    "colors": 7,
+    "total": 20
+  },
+  "hero": "/data/brand-model-images/4w-galleries/land-rover/range-rover-sport/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-sport/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-sport/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-sport/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-sport/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-sport/exterior/06.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-sport/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-sport/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-sport/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-sport/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-sport/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-sport/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-sport/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-sport/interior/08.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "Velocity Blue Gloss Finish DT",
+    "Giola Green",
+    "Ethereal Frost Silver Gloss Finish DT",
+    "Varesine Blue DT",
+    "Sunset Gold Gloss Finish DT",
+    "Flux Silver Satin Finish DT",
+    "Constellation Blue Gloss Finish"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-sport/colors/velocity-blue-gloss-finish-dt.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-sport/colors/giola-green.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-sport/colors/ethereal-frost-silver-gloss-finish-dt.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-sport/colors/varesine-blue-dt.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-sport/colors/sunset-gold-gloss-finish-dt.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-sport/colors/flux-silver-satin-finish-dt.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-sport/colors/constellation-blue-gloss-finish.avif"
+  ]
+}

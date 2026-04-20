@@ -1,0 +1,52 @@
+{
+  "make": "hyundai",
+  "model": "Tucson",
+  "brandSlug": "hyundai",
+  "modelSlug": "tucson",
+  "sourceUrl": "https://www.cardekho.com/hyundai/tucson",
+  "scrapedAt": "2026-04-20T06:16:47.675Z",
+  "counts": {
+    "exterior": 5,
+    "interior": 8,
+    "feature": 0,
+    "colors": 7,
+    "total": 20
+  },
+  "hero": "/data/brand-model-images/4w-galleries/hyundai/tucson/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/hyundai/tucson/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/tucson/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/tucson/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/tucson/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/tucson/exterior/06.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/hyundai/tucson/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/tucson/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/tucson/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/tucson/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/tucson/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/tucson/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/tucson/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/tucson/interior/08.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "Fiery Red Dual Tone",
+    "Fiery Red",
+    "Starry Night",
+    "Atlas White",
+    "Amazon Grey",
+    "Abyss Black Pearl",
+    "Atlas White Dual Tone"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/hyundai/tucson/colors/fiery-red-dual-tone.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/tucson/colors/fiery-red.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/tucson/colors/starry-night.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/tucson/colors/atlas-white.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/tucson/colors/amazon-grey.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/tucson/colors/abyss-black-pearl.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/tucson/colors/atlas-white-dual-tone.avif"
+  ]
+}

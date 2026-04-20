@@ -1,0 +1,29 @@
+{
+  "brand": "KTM India",
+  "model": "RC 200",
+  "brandId": "ktm-india",
+  "makeSlug": "ktm-bikes",
+  "modelSlug": "rc-200",
+  "sourceUrl": "https://www.bikewale.com/ktm-bikes/rc-200/colours/",
+  "scrapedAt": "2026-04-20T05:16:14.964Z",
+  "count": 4,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/ktm-select-model-gp-editiond-1670826275682.png?q=100",
+  "colors": [
+    {
+      "name": "GP Edition",
+      "image": "/data/brand-model-images/2w-colors/ktm-india/rc-200/gp-edition.png"
+    },
+    {
+      "name": "Metallic Grey",
+      "image": "/data/brand-model-images/2w-colors/ktm-india/rc-200/metallic-grey.avif"
+    },
+    {
+      "name": "Black",
+      "image": "/data/brand-model-images/2w-colors/ktm-india/rc-200/black.avif"
+    },
+    {
+      "name": "Blue",
+      "image": "/data/brand-model-images/2w-colors/ktm-india/rc-200/blue.avif"
+    }
+  ]
+}

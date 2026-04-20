@@ -1,0 +1,53 @@
+{
+  "brand": "Suzuki Motorcycle India",
+  "model": "Burgman Street 125",
+  "brandId": "suzuki-motorcycle",
+  "makeSlug": "suzuki-bikes",
+  "modelSlug": "burgman-street-125",
+  "sourceUrl": "https://www.bikewale.com/suzuki-bikes/burgman-street-125/colours/",
+  "scrapedAt": "2026-04-20T05:16:13.605Z",
+  "count": 10,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/e73s98b_1923148.png?q=100",
+  "colors": [
+    {
+      "name": "Met. Mat Stellar Blue",
+      "image": "/data/brand-model-images/2w-colors/suzuki-motorcycle/burgman-street-125/met-mat-stellar-blue.png"
+    },
+    {
+      "name": "Met. Mat Black",
+      "image": "/data/brand-model-images/2w-colors/suzuki-motorcycle/burgman-street-125/met-mat-black.png"
+    },
+    {
+      "name": "Prl. Grace White",
+      "image": "/data/brand-model-images/2w-colors/suzuki-motorcycle/burgman-street-125/prl-grace-white.png"
+    },
+    {
+      "name": "Prl. Mat Shadow Green",
+      "image": "/data/brand-model-images/2w-colors/suzuki-motorcycle/burgman-street-125/prl-mat-shadow-green.png"
+    },
+    {
+      "name": "Met. Royal Bronze",
+      "image": "/data/brand-model-images/2w-colors/suzuki-motorcycle/burgman-street-125/met-royal-bronze.png"
+    },
+    {
+      "name": "Met. Royal Bronze / Met. Mat Luxe Copper",
+      "image": "/data/brand-model-images/2w-colors/suzuki-motorcycle/burgman-street-125/met-royal-bronze-met-mat-luxe-copper.png"
+    },
+    {
+      "name": "Met. Mat Platinum Silver / Met. Mat Luxe Copper",
+      "image": "/data/brand-model-images/2w-colors/suzuki-motorcycle/burgman-street-125/met-mat-platinum-silver-met-mat-luxe-copper.png"
+    },
+    {
+      "name": "Met. Mat Stellar Blue / Met. Mat Luxe Copper",
+      "image": "/data/brand-model-images/2w-colors/suzuki-motorcycle/burgman-street-125/met-mat-stellar-blue-met-mat-luxe-copper.png"
+    },
+    {
+      "name": "Met. Mat Black / Met. Mat Luxe Copper",
+      "image": "/data/brand-model-images/2w-colors/suzuki-motorcycle/burgman-street-125/met-mat-black-met-mat-luxe-copper.png"
+    },
+    {
+      "name": "Prl. Grace White / Met. Mat Luxe Copper",
+      "image": "/data/brand-model-images/2w-colors/suzuki-motorcycle/burgman-street-125/prl-grace-white-met-mat-luxe-copper.png"
+    }
+  ]
+}

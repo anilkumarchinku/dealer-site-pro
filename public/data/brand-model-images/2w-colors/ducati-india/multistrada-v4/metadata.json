@@ -1,0 +1,29 @@
+{
+  "brand": "Ducati India",
+  "model": "Multistrada V4",
+  "brandId": "ducati-india",
+  "makeSlug": "ducati-bikes",
+  "modelSlug": "multistrada-v4",
+  "sourceUrl": "https://www.bikewale.com/ducati-bikes/multistrada-v4/colours/",
+  "scrapedAt": "2026-04-20T05:18:02.496Z",
+  "count": 4,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/c8689hb_1868749.jpg?q=100",
+  "colors": [
+    {
+      "name": "Ducati Red",
+      "image": "/data/brand-model-images/2w-colors/ducati-india/multistrada-v4/ducati-red.avif"
+    },
+    {
+      "name": "Arctic White",
+      "image": "/data/brand-model-images/2w-colors/ducati-india/multistrada-v4/arctic-white.avif"
+    },
+    {
+      "name": "Thrilling Black",
+      "image": "/data/brand-model-images/2w-colors/ducati-india/multistrada-v4/thrilling-black.avif"
+    },
+    {
+      "name": "Red and Black",
+      "image": "/data/brand-model-images/2w-colors/ducati-india/multistrada-v4/red-and-black.avif"
+    }
+  ]
+}

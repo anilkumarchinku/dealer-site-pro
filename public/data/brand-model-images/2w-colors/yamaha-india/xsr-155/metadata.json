@@ -1,0 +1,33 @@
+{
+  "brand": "Yamaha India",
+  "model": "XSR155",
+  "brandId": "yamaha-india",
+  "makeSlug": "yamaha-bikes",
+  "modelSlug": "xsr-155",
+  "sourceUrl": "https://www.bikewale.com/yamaha-bikes/xsr-155/colours/",
+  "scrapedAt": "2026-04-20T06:07:44.811Z",
+  "count": 5,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/txu4uhb_1888107.png?q=100",
+  "colors": [
+    {
+      "name": "Metallic Blue",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/xsr-155/metallic-blue.png"
+    },
+    {
+      "name": "Vivid Red",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/xsr-155/vivid-red.avif"
+    },
+    {
+      "name": "Metallic Grey",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/xsr-155/metallic-grey.avif"
+    },
+    {
+      "name": "Metallic Black",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/xsr-155/metallic-black.avif"
+    },
+    {
+      "name": "Greyish Green Metallic",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/xsr-155/greyish-green-metallic.avif"
+    }
+  ]
+}

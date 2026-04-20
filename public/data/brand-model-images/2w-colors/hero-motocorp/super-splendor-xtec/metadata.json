@@ -1,0 +1,29 @@
+{
+  "brand": "Hero MotoCorp",
+  "model": "Super Splendor Xtec",
+  "brandId": "hero-motocorp",
+  "makeSlug": "hero-bikes",
+  "modelSlug": "super-splendor-xtec",
+  "sourceUrl": "https://www.bikewale.com/hero-bikes/super-splendor-xtec/colours/",
+  "scrapedAt": "2026-04-20T06:13:18.660Z",
+  "count": 4,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bqqtpfb_1827771.jpg?q=100",
+  "colors": [
+    {
+      "name": "Matt Nexus Blue",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/super-splendor-xtec/matt-nexus-blue.avif"
+    },
+    {
+      "name": "Matt Grey",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/super-splendor-xtec/matt-grey.webp"
+    },
+    {
+      "name": "Black",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/super-splendor-xtec/black.webp"
+    },
+    {
+      "name": "Candy Blazing Red",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/super-splendor-xtec/candy-blazing-red.webp"
+    }
+  ]
+}

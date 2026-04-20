@@ -1,0 +1,50 @@
+{
+  "make": "mahindra",
+  "model": "XEV 9S",
+  "brandSlug": "mahindra",
+  "modelSlug": "xev-9s",
+  "sourceUrl": "https://www.cardekho.com/mahindra/xev-9s",
+  "scrapedAt": "2026-04-20T05:04:14.734Z",
+  "counts": {
+    "exterior": 5,
+    "interior": 8,
+    "feature": 0,
+    "colors": 6,
+    "total": 19
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mahindra/xev-9s/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/mahindra/xev-9s/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xev-9s/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xev-9s/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xev-9s/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xev-9s/exterior/06.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/mahindra/xev-9s/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xev-9s/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xev-9s/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xev-9s/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xev-9s/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xev-9s/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xev-9s/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xev-9s/interior/08.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "Everest White",
+    "Ruby Velvet",
+    "Stealth Black",
+    "Desert Myst",
+    "Nebula Blue",
+    "Midnight Black"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mahindra/xev-9s/colors/everest-white.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xev-9s/colors/ruby-velvet.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xev-9s/colors/stealth-black.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xev-9s/colors/desert-myst.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xev-9s/colors/nebula-blue.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xev-9s/colors/midnight-black.avif"
+  ]
+}

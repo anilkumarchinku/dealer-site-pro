@@ -1,0 +1,57 @@
+{
+  "brand": "Yamaha India",
+  "model": "Ray ZR 125 Fi",
+  "brandId": "yamaha-india",
+  "makeSlug": "yamaha-bikes",
+  "modelSlug": "ray-zr-125",
+  "sourceUrl": "https://www.bikewale.com/yamaha-bikes/ray-zr-125/colours/",
+  "scrapedAt": "2026-04-20T06:07:46.010Z",
+  "count": 11,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/3bhvmib_1905279.png?q=100",
+  "colors": [
+    {
+      "name": "Silver White Cocktail",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/ray-zr-125/silver-white-cocktail.png"
+    },
+    {
+      "name": "Matte Red-Disc",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/ray-zr-125/matte-red-disc.png"
+    },
+    {
+      "name": "Cyan Blue-Disc",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/ray-zr-125/cyan-blue-disc.png"
+    },
+    {
+      "name": "Metallic Black-Disc",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/ray-zr-125/metallic-black-disc.png"
+    },
+    {
+      "name": "Dark Matte Blue-Disc",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/ray-zr-125/dark-matte-blue-disc.avif"
+    },
+    {
+      "name": "Racing Blue-Disc",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/ray-zr-125/racing-blue-disc.avif"
+    },
+    {
+      "name": "Cyan Blue-Drum",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/ray-zr-125/cyan-blue-drum.avif"
+    },
+    {
+      "name": "Matte Grey Metallic",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/ray-zr-125/matte-grey-metallic.avif"
+    },
+    {
+      "name": "Matte Black",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/ray-zr-125/matte-black.avif"
+    },
+    {
+      "name": "Cyber Green",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/ray-zr-125/cyber-green.avif"
+    },
+    {
+      "name": "Ice Fluo-Vermillion",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/ray-zr-125/ice-fluo-vermillion.avif"
+    }
+  ]
+}

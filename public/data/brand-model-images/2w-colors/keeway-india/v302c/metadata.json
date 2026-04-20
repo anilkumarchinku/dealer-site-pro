@@ -1,0 +1,25 @@
+{
+  "brand": "Keeway India",
+  "model": "V302C",
+  "brandId": "keeway-india",
+  "makeSlug": "keeway-bikes",
+  "modelSlug": "v302c",
+  "sourceUrl": "https://www.bikewale.com/keeway-bikes/v302c/colours/",
+  "scrapedAt": "2026-04-20T05:18:46.136Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/keeway-select-model-glossy-grey-1661846900373.gif?q=100",
+  "colors": [
+    {
+      "name": "Glossy Grey",
+      "image": "/data/brand-model-images/2w-colors/keeway-india/v302c/glossy-grey.avif"
+    },
+    {
+      "name": "Glossy Black",
+      "image": "/data/brand-model-images/2w-colors/keeway-india/v302c/glossy-black.avif"
+    },
+    {
+      "name": "Glossy Red",
+      "image": "/data/brand-model-images/2w-colors/keeway-india/v302c/glossy-red.avif"
+    }
+  ]
+}

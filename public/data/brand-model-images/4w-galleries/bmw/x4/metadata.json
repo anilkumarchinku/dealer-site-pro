@@ -1,0 +1,41 @@
+{
+  "make": "bmw",
+  "model": "X4",
+  "brandSlug": "bmw",
+  "modelSlug": "x4",
+  "sourceUrl": "https://www.cardekho.com/bmw/x4",
+  "scrapedAt": "2026-04-20T06:30:37.316Z",
+  "counts": {
+    "exterior": 4,
+    "interior": 8,
+    "feature": 0,
+    "colors": 2,
+    "total": 14
+  },
+  "hero": "/data/brand-model-images/4w-galleries/bmw/x4/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/bmw/x4/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x4/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x4/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x4/exterior/07.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/bmw/x4/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x4/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x4/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x4/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x4/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x4/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x4/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x4/interior/08.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "M Brooklyn Grey Metallic",
+    "Black Sapphire"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/bmw/x4/colors/m-brooklyn-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x4/colors/black-sapphire.avif"
+  ]
+}

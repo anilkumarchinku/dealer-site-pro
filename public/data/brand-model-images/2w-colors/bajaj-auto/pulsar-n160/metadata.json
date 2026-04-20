@@ -1,0 +1,57 @@
+{
+  "brand": "Bajaj Auto",
+  "model": "Pulsar N160",
+  "brandId": "bajaj-auto",
+  "makeSlug": "bajaj-bikes",
+  "modelSlug": "pulsar-n160",
+  "sourceUrl": "https://www.bikewale.com/bajaj-bikes/pulsar-n160/colours/",
+  "scrapedAt": "2026-04-20T06:07:40.423Z",
+  "count": 11,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/mcfdaib_1891027.png?q=100",
+  "colors": [
+    {
+      "name": "Harbor Grey & Silver",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/pulsar-n160/harbor-grey-and-silver.png"
+    },
+    {
+      "name": "Racing Red & Rush Red",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/pulsar-n160/racing-red-and-rush-red.png"
+    },
+    {
+      "name": "Ebony Black & Charcoal Black",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/pulsar-n160/ebony-black-and-charcoal-black.png"
+    },
+    {
+      "name": "Pearl Metallic White & Silver",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/pulsar-n160/pearl-metallic-white-and-silver.png"
+    },
+    {
+      "name": "Pearl Metalic White",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/pulsar-n160/pearl-metalic-white.png"
+    },
+    {
+      "name": "Polar Sky Blue",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/pulsar-n160/polar-sky-blue.png"
+    },
+    {
+      "name": "Brooklyn Black",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/pulsar-n160/brooklyn-black.png"
+    },
+    {
+      "name": "Glossy Racing Red (Bluetooth)",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/pulsar-n160/glossy-racing-red-bluetooth.png"
+    },
+    {
+      "name": "Pearl Metallic White (Bluetooth)",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/pulsar-n160/pearl-metallic-white-bluetooth.avif"
+    },
+    {
+      "name": "Polar Sky Blue (Bluetooth)",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/pulsar-n160/polar-sky-blue-bluetooth.avif"
+    },
+    {
+      "name": "Brooklyn Black (Bluetooth)",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/pulsar-n160/brooklyn-black-bluetooth.avif"
+    }
+  ]
+}

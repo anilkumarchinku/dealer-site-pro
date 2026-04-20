@@ -1,0 +1,41 @@
+{
+  "brand": "Bajaj Auto",
+  "model": "Pulsar N125",
+  "brandId": "bajaj-auto",
+  "makeSlug": "bajaj-bikes",
+  "modelSlug": "pulsar-n125",
+  "sourceUrl": "https://www.bikewale.com/bajaj-bikes/pulsar-n125/colours/",
+  "scrapedAt": "2026-04-20T06:07:37.886Z",
+  "count": 7,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/3m8oa9b_1783451.jpg?q=100",
+  "colors": [
+    {
+      "name": "Caribbean Blue",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/pulsar-n125/caribbean-blue.avif"
+    },
+    {
+      "name": "Cocktail Wine Red",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/pulsar-n125/cocktail-wine-red.avif"
+    },
+    {
+      "name": "Ebony Black",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/pulsar-n125/ebony-black.avif"
+    },
+    {
+      "name": "Pearl Metallic White",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/pulsar-n125/pearl-metallic-white.avif"
+    },
+    {
+      "name": "Ebony Black / Purple Fury",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/pulsar-n125/ebony-black-purple-fury.avif"
+    },
+    {
+      "name": "Pewter Grey / Citrus Rush",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/pulsar-n125/pewter-grey-citrus-rush.avif"
+    },
+    {
+      "name": "Ebony Black / Cocktail Wine Red",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/pulsar-n125/ebony-black-cocktail-wine-red.avif"
+    }
+  ]
+}

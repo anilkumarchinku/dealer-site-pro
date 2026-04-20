@@ -1,0 +1,33 @@
+{
+  "brand": "BGauss",
+  "model": "RUV 350",
+  "brandId": "bgauss",
+  "makeSlug": "bgauss-bikes",
+  "modelSlug": "ruv-350",
+  "sourceUrl": "https://www.bikewale.com/bgauss-bikes/ruv-350/colours/",
+  "scrapedAt": "2026-04-20T06:14:05.799Z",
+  "count": 5,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/bgauss-select-model-white-1719377853600.png?q=100",
+  "colors": [
+    {
+      "name": "Platinum Silver",
+      "image": "/data/brand-model-images/2w-colors/bgauss/ruv-350/platinum-silver.png"
+    },
+    {
+      "name": "Fury Red Black",
+      "image": "/data/brand-model-images/2w-colors/bgauss/ruv-350/fury-red-black.png"
+    },
+    {
+      "name": "Graphite Grey",
+      "image": "/data/brand-model-images/2w-colors/bgauss/ruv-350/graphite-grey.png"
+    },
+    {
+      "name": "Mystic Green",
+      "image": "/data/brand-model-images/2w-colors/bgauss/ruv-350/mystic-green.png"
+    },
+    {
+      "name": "Astro Blue Black",
+      "image": "/data/brand-model-images/2w-colors/bgauss/ruv-350/astro-blue-black.png"
+    }
+  ]
+}

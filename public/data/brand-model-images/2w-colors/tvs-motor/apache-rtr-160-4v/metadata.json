@@ -1,0 +1,61 @@
+{
+  "brand": "TVS Motor Company",
+  "model": "Apache RTR 160 4V",
+  "brandId": "tvs-motor",
+  "makeSlug": "tvs-bikes",
+  "modelSlug": "apache-rtr-160-4v",
+  "sourceUrl": "https://www.bikewale.com/tvs-bikes/apache-rtr-160-4v/colours/",
+  "scrapedAt": "2026-04-20T06:07:43.241Z",
+  "count": 12,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/tvs-select-model-metallic-blue-1697706162784.png?q=100",
+  "colors": [
+    {
+      "name": "Metallic Blue",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/apache-rtr-160-4v/metallic-blue.png"
+    },
+    {
+      "name": "Knight Black",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/apache-rtr-160-4v/knight-black.png"
+    },
+    {
+      "name": "Racing Red",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/apache-rtr-160-4v/racing-red.avif"
+    },
+    {
+      "name": "Pearl White",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/apache-rtr-160-4v/pearl-white.png"
+    },
+    {
+      "name": "Matte Black",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/apache-rtr-160-4v/matte-black.avif"
+    },
+    {
+      "name": "Lightning Blue",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/apache-rtr-160-4v/lightning-blue.png"
+    },
+    {
+      "name": "Glossy Black (BE)",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/apache-rtr-160-4v/glossy-black-be.avif"
+    },
+    {
+      "name": "Granite Grey",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/apache-rtr-160-4v/granite-grey.avif"
+    },
+    {
+      "name": "Black Champagne Gold Livery",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/apache-rtr-160-4v/black-champagne-gold-livery.avif"
+    },
+    {
+      "name": "Racing Red (New)",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/apache-rtr-160-4v/racing-red-new.avif"
+    },
+    {
+      "name": "Matte Black",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/apache-rtr-160-4v/matte-black.avif"
+    },
+    {
+      "name": "Marine Blue",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/apache-rtr-160-4v/marine-blue.avif"
+    }
+  ]
+}

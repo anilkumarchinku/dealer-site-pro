@@ -1,0 +1,17 @@
+{
+  "brand": "Husqvarna India",
+  "model": "Vitpilen 250",
+  "brandId": "husqvarna-india",
+  "makeSlug": "husqvarna-bikes",
+  "modelSlug": "vitpilen-250",
+  "sourceUrl": "https://www.bikewale.com/husqvarna-bikes/vitpilen-250/colours/",
+  "scrapedAt": "2026-04-20T05:16:26.742Z",
+  "count": 1,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/husqvarna-select-model-white-1705430284982.png?q=100",
+  "colors": [
+    {
+      "name": "White",
+      "image": "/data/brand-model-images/2w-colors/husqvarna-india/vitpilen-250/white.png"
+    }
+  ]
+}

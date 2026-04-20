@@ -1,0 +1,37 @@
+{
+  "brand": "Honda Motorcycle & Scooter India",
+  "model": "CB350RS",
+  "brandId": "honda-hmsi",
+  "makeSlug": "honda-bikes",
+  "modelSlug": "cb350rs",
+  "sourceUrl": "https://www.bikewale.com/honda-bikes/cb350rs/colours/",
+  "scrapedAt": "2026-04-20T05:15:26.448Z",
+  "count": 6,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/x1k5nfb_1825003.jpg?q=100",
+  "colors": [
+    {
+      "name": "Pearl Igneous Black - Dlx",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/cb350rs/pearl-igneous-black-dlx.avif"
+    },
+    {
+      "name": "Pearl Deep Ground Grey - Dlx",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/cb350rs/pearl-deep-ground-grey-dlx.avif"
+    },
+    {
+      "name": "Rebel Red Metallic - Dlx Pro",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/cb350rs/rebel-red-metallic-dlx-pro.avif"
+    },
+    {
+      "name": "Pearl Igneous Black Yellow - Dlx Pro",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/cb350rs/pearl-igneous-black-yellow-dlx-pro.avif"
+    },
+    {
+      "name": "Pearl Deep Ground Grey - Dlx Pro",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/cb350rs/pearl-deep-ground-grey-dlx-pro.avif"
+    },
+    {
+      "name": "Mat Axis Grey Metallic - Dlx Pro",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/cb350rs/mat-axis-grey-metallic-dlx-pro.avif"
+    }
+  ]
+}

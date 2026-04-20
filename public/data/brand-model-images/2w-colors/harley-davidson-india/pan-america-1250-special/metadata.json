@@ -1,0 +1,29 @@
+{
+  "brand": "Harley-Davidson India",
+  "model": "Pan America 1250 Special",
+  "brandId": "harley-davidson-india",
+  "makeSlug": "harleydavidson-bikes",
+  "modelSlug": "pan-america-1250-special",
+  "sourceUrl": "https://www.bikewale.com/harleydavidson-bikes/pan-america-1250-special/colours/",
+  "scrapedAt": "2026-04-20T05:53:30.377Z",
+  "count": 4,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/1o7pohb_1879815.jpg?q=100",
+  "colors": [
+    {
+      "name": "Whiskey Fire/Raven Metallic",
+      "image": "/data/brand-model-images/2w-colors/harley-davidson-india/pan-america-1250-special/whiskey-fire-raven-metallic.avif"
+    },
+    {
+      "name": "Blue Burst",
+      "image": "/data/brand-model-images/2w-colors/harley-davidson-india/pan-america-1250-special/blue-burst.avif"
+    },
+    {
+      "name": "Billiard Gray",
+      "image": "/data/brand-model-images/2w-colors/harley-davidson-india/pan-america-1250-special/billiard-gray.avif"
+    },
+    {
+      "name": "Vivid Black",
+      "image": "/data/brand-model-images/2w-colors/harley-davidson-india/pan-america-1250-special/vivid-black.avif"
+    }
+  ]
+}

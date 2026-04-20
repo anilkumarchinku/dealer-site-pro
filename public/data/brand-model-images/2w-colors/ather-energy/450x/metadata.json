@@ -1,0 +1,45 @@
+{
+  "brand": "Ather Energy",
+  "model": "450X",
+  "brandId": "ather-energy",
+  "makeSlug": "ather-bikes",
+  "modelSlug": "450x",
+  "sourceUrl": "https://www.bikewale.com/ather-bikes/450x/colours/",
+  "scrapedAt": "2026-04-20T05:19:13.387Z",
+  "count": 8,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/6wugu9b_1806567.jpg?q=100",
+  "colors": [
+    {
+      "name": "Stealth Blue",
+      "image": "/data/brand-model-images/2w-colors/ather-energy/450x/stealth-blue.avif"
+    },
+    {
+      "name": "Hyper Sand",
+      "image": "/data/brand-model-images/2w-colors/ather-energy/450x/hyper-sand.avif"
+    },
+    {
+      "name": "Grey",
+      "image": "/data/brand-model-images/2w-colors/ather-energy/450x/grey.png"
+    },
+    {
+      "name": "White",
+      "image": "/data/brand-model-images/2w-colors/ather-energy/450x/white.png"
+    },
+    {
+      "name": "Lunar Grey",
+      "image": "/data/brand-model-images/2w-colors/ather-energy/450x/lunar-grey.png"
+    },
+    {
+      "name": "True Red",
+      "image": "/data/brand-model-images/2w-colors/ather-energy/450x/true-red.png"
+    },
+    {
+      "name": "Salt Green",
+      "image": "/data/brand-model-images/2w-colors/ather-energy/450x/salt-green.png"
+    },
+    {
+      "name": "Cosmic Black",
+      "image": "/data/brand-model-images/2w-colors/ather-energy/450x/cosmic-black.png"
+    }
+  ]
+}

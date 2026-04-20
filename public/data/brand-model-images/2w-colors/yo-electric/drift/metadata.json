@@ -1,0 +1,33 @@
+{
+  "brand": "Yo Electric",
+  "model": "Drift",
+  "brandId": "yo-electric",
+  "makeSlug": "yo-bikes",
+  "modelSlug": "drift",
+  "sourceUrl": "https://www.bikewale.com/yo-bikes/drift/colours/",
+  "scrapedAt": "2026-04-20T05:20:43.672Z",
+  "count": 5,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/undefined-red-1600710167927.jpg?q=100",
+  "colors": [
+    {
+      "name": "Red",
+      "image": "/data/brand-model-images/2w-colors/yo-electric/drift/red.avif"
+    },
+    {
+      "name": "Green",
+      "image": "/data/brand-model-images/2w-colors/yo-electric/drift/green.avif"
+    },
+    {
+      "name": "Gray",
+      "image": "/data/brand-model-images/2w-colors/yo-electric/drift/gray.avif"
+    },
+    {
+      "name": "Blue",
+      "image": "/data/brand-model-images/2w-colors/yo-electric/drift/blue.avif"
+    },
+    {
+      "name": "Black",
+      "image": "/data/brand-model-images/2w-colors/yo-electric/drift/black.avif"
+    }
+  ]
+}

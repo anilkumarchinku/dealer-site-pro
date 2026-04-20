@@ -1,0 +1,37 @@
+{
+  "brand": "TVS iQube",
+  "model": "TVS Orbiter",
+  "brandId": "tvs-iqube",
+  "makeSlug": "tvs-bikes",
+  "modelSlug": "orbiter",
+  "sourceUrl": "https://www.bikewale.com/tvs-bikes/orbiter/colours/",
+  "scrapedAt": "2026-04-20T06:07:54.349Z",
+  "count": 6,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/mv5gchb_1865963.jpg?q=100",
+  "colors": [
+    {
+      "name": "Stellar Silver",
+      "image": "/data/brand-model-images/2w-colors/tvs-iqube/orbiter/stellar-silver.avif"
+    },
+    {
+      "name": "Cosmic Titanium",
+      "image": "/data/brand-model-images/2w-colors/tvs-iqube/orbiter/cosmic-titanium.avif"
+    },
+    {
+      "name": "Martian Copper",
+      "image": "/data/brand-model-images/2w-colors/tvs-iqube/orbiter/martian-copper.avif"
+    },
+    {
+      "name": "Lunar Grey",
+      "image": "/data/brand-model-images/2w-colors/tvs-iqube/orbiter/lunar-grey.avif"
+    },
+    {
+      "name": "Stratos Blue",
+      "image": "/data/brand-model-images/2w-colors/tvs-iqube/orbiter/stratos-blue.avif"
+    },
+    {
+      "name": "Neon Sunburst",
+      "image": "/data/brand-model-images/2w-colors/tvs-iqube/orbiter/neon-sunburst.avif"
+    }
+  ]
+}

@@ -6,7 +6,7 @@
 
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useMemo } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Car } from '@/lib/types/car';
@@ -163,8 +163,14 @@ export function CarDetailView({ car, similarCars = [], siteSlug }: CarDetailView
     const isUsed = car.condition === 'used' || car.condition === 'certified_pre_owned';
     const isCPO = car.condition === 'certified_pre_owned';
     const TABS = isUsed ? USED_CAR_TABS : NEW_CAR_TABS;
+    const allImages = useMemo(
+        () => Array.from(
+            new Set([car.images.hero, ...car.images.exterior, ...car.images.interior].filter(Boolean))
+        ),
+        [car.images.hero, car.images.exterior, car.images.interior]
+    );
 
-    const [activeImage, setActiveImage] = useState(car.images.hero);
+    const [activeImage, setActiveImage] = useState(allImages[0] ?? car.images.hero);
     const [activeTab, setActiveTab] = useState('overview');
     const [isTabBarSticky, setIsTabBarSticky] = useState(false);
     const [selectedColor, setSelectedColor] = useState(car.colors?.[0]?.name || '');
@@ -179,8 +185,9 @@ export function CarDetailView({ car, similarCars = [], siteSlug }: CarDetailView
     const tabBarRef = useRef<HTMLDivElement>(null);
     const sectionRefs = useRef<Record<string, HTMLElement | null>>({});
 
-    // All images combined
-    const allImages = [car.images.hero, ...car.images.exterior, ...car.images.interior].filter(Boolean);
+    useEffect(() => {
+        setActiveImage(allImages[0] ?? car.images.hero);
+    }, [car.images.hero, allImages]);
 
     // Price formatting
     const exShowroom = car.pricing?.exShowroom ?? { min: null, max: null };

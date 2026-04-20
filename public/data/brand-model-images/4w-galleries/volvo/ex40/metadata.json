@@ -1,0 +1,53 @@
+{
+  "make": "volvo",
+  "model": "EX40",
+  "brandSlug": "volvo",
+  "modelSlug": "ex40",
+  "sourceUrl": "https://www.cardekho.com/volvo/ex40",
+  "scrapedAt": "2026-04-20T05:06:15.622Z",
+  "counts": {
+    "exterior": 8,
+    "interior": 8,
+    "feature": 0,
+    "colors": 6,
+    "total": 22
+  },
+  "hero": "/data/brand-model-images/4w-galleries/volvo/ex40/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/volvo/ex40/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/volvo/ex40/exterior/02.avif",
+    "/data/brand-model-images/4w-galleries/volvo/ex40/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/volvo/ex40/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/volvo/ex40/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/volvo/ex40/exterior/06.avif",
+    "/data/brand-model-images/4w-galleries/volvo/ex40/exterior/07.avif",
+    "/data/brand-model-images/4w-galleries/volvo/ex40/exterior/08.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/volvo/ex40/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/volvo/ex40/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/volvo/ex40/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/volvo/ex40/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/volvo/ex40/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/volvo/ex40/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/volvo/ex40/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/volvo/ex40/interior/08.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "Sand Dune",
+    "Onyx Black",
+    "Fjord Blue",
+    "Crystal White",
+    "Sage Green",
+    "Cloud Blue"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/volvo/ex40/colors/sand-dune.avif",
+    "/data/brand-model-images/4w-galleries/volvo/ex40/colors/onyx-black.avif",
+    "/data/brand-model-images/4w-galleries/volvo/ex40/colors/fjord-blue.avif",
+    "/data/brand-model-images/4w-galleries/volvo/ex40/colors/crystal-white.avif",
+    "/data/brand-model-images/4w-galleries/volvo/ex40/colors/sage-green.avif",
+    "/data/brand-model-images/4w-galleries/volvo/ex40/colors/cloud-blue.avif"
+  ]
+}

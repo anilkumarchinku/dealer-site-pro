@@ -1,0 +1,33 @@
+{
+  "brand": "Royal Enfield",
+  "model": "Bear 650",
+  "brandId": "royal-enfield",
+  "makeSlug": "royalenfield-bikes",
+  "modelSlug": "bear-650",
+  "sourceUrl": "https://www.bikewale.com/royalenfield-bikes/bear-650/colours/",
+  "scrapedAt": "2026-04-20T05:15:56.238Z",
+  "count": 5,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/lmktc9b_1785463.jpg?q=100",
+  "colors": [
+    {
+      "name": "Boardwalk White",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/bear-650/boardwalk-white.avif"
+    },
+    {
+      "name": "Wild Honey",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/bear-650/wild-honey.avif"
+    },
+    {
+      "name": "Petrol Green",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/bear-650/petrol-green.avif"
+    },
+    {
+      "name": "Golden Shadow",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/bear-650/golden-shadow.avif"
+    },
+    {
+      "name": "Two Four Nine",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/bear-650/two-four-nine.avif"
+    }
+  ]
+}

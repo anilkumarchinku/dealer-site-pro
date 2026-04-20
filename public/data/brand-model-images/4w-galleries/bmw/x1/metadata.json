@@ -1,0 +1,48 @@
+{
+  "make": "bmw",
+  "model": "X1",
+  "brandSlug": "bmw",
+  "modelSlug": "x1",
+  "sourceUrl": "https://www.cardekho.com/bmw/x1",
+  "scrapedAt": "2026-04-20T06:30:44.271Z",
+  "counts": {
+    "exterior": 5,
+    "interior": 8,
+    "feature": 0,
+    "colors": 5,
+    "total": 18
+  },
+  "hero": "/data/brand-model-images/4w-galleries/bmw/x1/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/bmw/x1/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x1/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x1/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x1/exterior/07.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x1/exterior/08.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/bmw/x1/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x1/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x1/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x1/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x1/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x1/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x1/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x1/interior/08.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "Storm Bay Metallic",
+    "Alpine White",
+    "Space Silver Metallic",
+    "Portimao Blue",
+    "Black Sapphire Metallic"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/bmw/x1/colors/storm-bay-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x1/colors/alpine-white.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x1/colors/space-silver-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x1/colors/portimao-blue.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x1/colors/black-sapphire-metallic.avif"
+  ]
+}

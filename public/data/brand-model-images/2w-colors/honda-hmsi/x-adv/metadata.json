@@ -1,0 +1,21 @@
+{
+  "brand": "Honda Motorcycle & Scooter India",
+  "model": "X-ADV 750",
+  "brandId": "honda-hmsi",
+  "makeSlug": "honda-bikes",
+  "modelSlug": "x-adv",
+  "sourceUrl": "https://www.bikewale.com/honda-bikes/x-adv/colours/",
+  "scrapedAt": "2026-04-20T05:15:32.008Z",
+  "count": 2,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/6h800gb_1836011.jpg?q=100",
+  "colors": [
+    {
+      "name": "Graphite Black",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/x-adv/graphite-black.avif"
+    },
+    {
+      "name": "Pearl Glare White",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/x-adv/pearl-glare-white.avif"
+    }
+  ]
+}

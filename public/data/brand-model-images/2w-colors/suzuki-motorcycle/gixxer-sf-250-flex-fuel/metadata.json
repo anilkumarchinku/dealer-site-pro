@@ -1,0 +1,21 @@
+{
+  "brand": "Suzuki Motorcycle India",
+  "model": "Gixxer SF 250 Flex Fuel",
+  "brandId": "suzuki-motorcycle",
+  "makeSlug": "suzuki-bikes",
+  "modelSlug": "gixxer-sf-250-flex-fuel",
+  "sourceUrl": "https://www.bikewale.com/suzuki-bikes/gixxer-sf-250-flex-fuel/colours/",
+  "scrapedAt": "2026-04-20T05:16:11.887Z",
+  "count": 2,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/19e3lfb_1822445.jpg?q=100",
+  "colors": [
+    {
+      "name": "Met Matt Black",
+      "image": "/data/brand-model-images/2w-colors/suzuki-motorcycle/gixxer-sf-250-flex-fuel/met-matt-black.avif"
+    },
+    {
+      "name": "Met Matt Black and Met Mat Bordeaux Red",
+      "image": "/data/brand-model-images/2w-colors/suzuki-motorcycle/gixxer-sf-250-flex-fuel/met-matt-black-and-met-mat-bordeaux-red.avif"
+    }
+  ]
+}

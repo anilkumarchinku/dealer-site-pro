@@ -1,0 +1,29 @@
+{
+  "brand": "Ducati India",
+  "model": "Scrambler Icon",
+  "brandId": "ducati-india",
+  "makeSlug": "ducati-bikes",
+  "modelSlug": "scrambler-icon",
+  "sourceUrl": "https://www.bikewale.com/ducati-bikes/scrambler-icon/colours/",
+  "scrapedAt": "2026-04-20T05:18:11.784Z",
+  "count": 4,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/48etlfb_1822355.jpg?q=100",
+  "colors": [
+    {
+      "name": "Matte Black",
+      "image": "/data/brand-model-images/2w-colors/ducati-india/scrambler-icon/matte-black.avif"
+    },
+    {
+      "name": "Ducati Red",
+      "image": "/data/brand-model-images/2w-colors/ducati-india/scrambler-icon/ducati-red.avif"
+    },
+    {
+      "name": "Yellow",
+      "image": "/data/brand-model-images/2w-colors/ducati-india/scrambler-icon/yellow.avif"
+    },
+    {
+      "name": "Stone White and Metal Roase",
+      "image": "/data/brand-model-images/2w-colors/ducati-india/scrambler-icon/stone-white-and-metal-roase.png"
+    }
+  ]
+}

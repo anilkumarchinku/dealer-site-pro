@@ -1,0 +1,21 @@
+{
+  "brand": "Ducati India",
+  "model": "XDiavel V4",
+  "brandId": "ducati-india",
+  "makeSlug": "ducati-bikes",
+  "modelSlug": "xdiavel-v4",
+  "sourceUrl": "https://www.bikewale.com/ducati-bikes/xdiavel-v4/colours/",
+  "scrapedAt": "2026-04-20T05:18:06.794Z",
+  "count": 2,
+  "hero": "https://imgd.aeplcdn.com/0x0/bw/static/icons/svg/no-bike-image-with-text.svg?v2021",
+  "colors": [
+    {
+      "name": "Black Lava",
+      "image": "/data/brand-model-images/2w-colors/ducati-india/xdiavel-v4/black-lava.jpg"
+    },
+    {
+      "name": "Burning Red",
+      "image": "/data/brand-model-images/2w-colors/ducati-india/xdiavel-v4/burning-red.jpg"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "brand": "Honda Motorcycle & Scooter India",
+  "model": "SP160",
+  "brandId": "honda-hmsi",
+  "makeSlug": "honda-bikes",
+  "modelSlug": "sp160",
+  "sourceUrl": "https://www.bikewale.com/honda-bikes/sp160/colours/",
+  "scrapedAt": "2026-04-20T05:15:24.736Z",
+  "count": 4,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/3kiskgb_1848430.jpg?q=100",
+  "colors": [
+    {
+      "name": "Athletic Blue Metallic",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/sp160/athletic-blue-metallic.avif"
+    },
+    {
+      "name": "Radiant Red Metallic",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/sp160/radiant-red-metallic.avif"
+    },
+    {
+      "name": "Pearl Deep Ground Gray",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/sp160/pearl-deep-ground-gray.avif"
+    },
+    {
+      "name": "Pearl Igneous Black",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/sp160/pearl-igneous-black.avif"
+    }
+  ]
+}

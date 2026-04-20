@@ -1,0 +1,37 @@
+{
+  "brand": "Odysse Electric",
+  "model": "E2go Lite",
+  "brandId": "odysse-electric",
+  "makeSlug": "odysse-bikes",
+  "modelSlug": "e2go",
+  "sourceUrl": "https://www.bikewale.com/odysse-bikes/e2go/colours/",
+  "scrapedAt": "2026-04-20T06:12:21.662Z",
+  "count": 6,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/odysse-select-model-black-1635507057934.jpg?q=100",
+  "colors": [
+    {
+      "name": "Black",
+      "image": "/data/brand-model-images/2w-colors/odysse-electric/e2go/black.avif"
+    },
+    {
+      "name": "Matte Black",
+      "image": "/data/brand-model-images/2w-colors/odysse-electric/e2go/matte-black.avif"
+    },
+    {
+      "name": "Combat Blue",
+      "image": "/data/brand-model-images/2w-colors/odysse-electric/e2go/combat-blue.avif"
+    },
+    {
+      "name": "Azure Blue",
+      "image": "/data/brand-model-images/2w-colors/odysse-electric/e2go/azure-blue.avif"
+    },
+    {
+      "name": "Teal Green",
+      "image": "/data/brand-model-images/2w-colors/odysse-electric/e2go/teal-green.avif"
+    },
+    {
+      "name": "Scarlet Red",
+      "image": "/data/brand-model-images/2w-colors/odysse-electric/e2go/scarlet-red.avif"
+    }
+  ]
+}

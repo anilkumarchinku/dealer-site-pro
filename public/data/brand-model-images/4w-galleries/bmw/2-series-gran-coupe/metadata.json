@@ -1,0 +1,48 @@
+{
+  "make": "bmw",
+  "model": "2 Series Gran Coupe",
+  "brandSlug": "bmw",
+  "modelSlug": "2-series-gran-coupe",
+  "sourceUrl": "https://www.cardekho.com/bmw/2-series-gran-coupe",
+  "scrapedAt": "2026-04-20T06:30:29.006Z",
+  "counts": {
+    "exterior": 7,
+    "interior": 8,
+    "feature": 0,
+    "colors": 4,
+    "total": 19
+  },
+  "hero": "/data/brand-model-images/4w-galleries/bmw/2-series-gran-coupe/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/bmw/2-series-gran-coupe/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/bmw/2-series-gran-coupe/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/bmw/2-series-gran-coupe/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/bmw/2-series-gran-coupe/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/bmw/2-series-gran-coupe/exterior/06.avif",
+    "/data/brand-model-images/4w-galleries/bmw/2-series-gran-coupe/exterior/07.avif",
+    "/data/brand-model-images/4w-galleries/bmw/2-series-gran-coupe/exterior/08.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/bmw/2-series-gran-coupe/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/bmw/2-series-gran-coupe/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/bmw/2-series-gran-coupe/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/bmw/2-series-gran-coupe/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/bmw/2-series-gran-coupe/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/bmw/2-series-gran-coupe/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/bmw/2-series-gran-coupe/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/bmw/2-series-gran-coupe/interior/08.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "Brooklyn Grey Metallic",
+    "Alpine White",
+    "Portimao Blue Metallic",
+    "Black Sapphire"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/bmw/2-series-gran-coupe/colors/brooklyn-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/2-series-gran-coupe/colors/alpine-white.avif",
+    "/data/brand-model-images/4w-galleries/bmw/2-series-gran-coupe/colors/portimao-blue-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/2-series-gran-coupe/colors/black-sapphire.avif"
+  ]
+}

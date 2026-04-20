@@ -1,0 +1,37 @@
+{
+  "brand": "OPG Mobility",
+  "model": "Faast F2F",
+  "brandId": "opg-mobility",
+  "makeSlug": "opg-mobility-bikes",
+  "modelSlug": "faast-f2f",
+  "sourceUrl": "https://www.bikewale.com/opg-mobility-bikes/faast-f2f/colours/",
+  "scrapedAt": "2026-04-20T05:20:33.982Z",
+  "count": 6,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/okaya-select-model-metallic-cyan-1693808204142.jpg?q=100",
+  "colors": [
+    {
+      "name": "Metallic Cyan",
+      "image": "/data/brand-model-images/2w-colors/opg-mobility/faast-f2f/metallic-cyan.avif"
+    },
+    {
+      "name": "Metallic Grey",
+      "image": "/data/brand-model-images/2w-colors/opg-mobility/faast-f2f/metallic-grey.avif"
+    },
+    {
+      "name": "Metallic White",
+      "image": "/data/brand-model-images/2w-colors/opg-mobility/faast-f2f/metallic-white.avif"
+    },
+    {
+      "name": "Metallic Silver",
+      "image": "/data/brand-model-images/2w-colors/opg-mobility/faast-f2f/metallic-silver.avif"
+    },
+    {
+      "name": "Metallic Black",
+      "image": "/data/brand-model-images/2w-colors/opg-mobility/faast-f2f/metallic-black.avif"
+    },
+    {
+      "name": "Matte Green",
+      "image": "/data/brand-model-images/2w-colors/opg-mobility/faast-f2f/matte-green.avif"
+    }
+  ]
+}

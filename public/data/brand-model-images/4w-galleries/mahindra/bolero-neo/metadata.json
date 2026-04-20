@@ -1,0 +1,54 @@
+{
+  "make": "mahindra",
+  "model": "Bolero Neo",
+  "brandSlug": "mahindra",
+  "modelSlug": "bolero-neo",
+  "sourceUrl": "https://www.cardekho.com/mahindra/bolero-neo",
+  "scrapedAt": "2026-04-20T05:03:51.220Z",
+  "counts": {
+    "exterior": 7,
+    "interior": 8,
+    "feature": 0,
+    "colors": 7,
+    "total": 22
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mahindra/bolero-neo/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/mahindra/bolero-neo/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/bolero-neo/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/bolero-neo/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/bolero-neo/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/bolero-neo/exterior/06.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/bolero-neo/exterior/07.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/bolero-neo/exterior/08.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/mahindra/bolero-neo/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/bolero-neo/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/bolero-neo/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/bolero-neo/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/bolero-neo/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/bolero-neo/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/bolero-neo/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/bolero-neo/interior/08.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "Dimond White",
+    "Pearl White",
+    "Concrete Grey",
+    "Stealth Black",
+    "Jeans Blue Dual Tone",
+    "Jeans Blue",
+    "Concrete Grey With Black Roof"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mahindra/bolero-neo/colors/dimond-white.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/bolero-neo/colors/pearl-white.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/bolero-neo/colors/concrete-grey.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/bolero-neo/colors/stealth-black.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/bolero-neo/colors/jeans-blue-dual-tone.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/bolero-neo/colors/jeans-blue.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/bolero-neo/colors/concrete-grey-with-black-roof.avif"
+  ]
+}

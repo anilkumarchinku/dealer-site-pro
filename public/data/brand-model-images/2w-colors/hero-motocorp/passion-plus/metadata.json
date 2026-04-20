@@ -1,0 +1,25 @@
+{
+  "brand": "Hero MotoCorp",
+  "model": "Passion Plus",
+  "brandId": "hero-motocorp",
+  "makeSlug": "hero-bikes",
+  "modelSlug": "passion-plus",
+  "sourceUrl": "https://www.bikewale.com/hero-bikes/passion-plus/colours/",
+  "scrapedAt": "2026-04-20T06:13:18.848Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/hcve6fb_1826279.webp?q=100",
+  "colors": [
+    {
+      "name": "Black Heavy Grey",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/passion-plus/black-heavy-grey.webp"
+    },
+    {
+      "name": "Black Nexus Blue",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/passion-plus/black-nexus-blue.webp"
+    },
+    {
+      "name": "Industrial Dark Grey",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/passion-plus/industrial-dark-grey.avif"
+    }
+  ]
+}

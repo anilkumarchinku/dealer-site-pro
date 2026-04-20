@@ -1,0 +1,65 @@
+{
+  "brand": "TVS Motor Company",
+  "model": "Jupiter 125",
+  "brandId": "tvs-motor",
+  "makeSlug": "tvs-bikes",
+  "modelSlug": "jupiter-125",
+  "sourceUrl": "https://www.bikewale.com/tvs-bikes/jupiter-125/colours/",
+  "scrapedAt": "2026-04-20T06:07:48.401Z",
+  "count": 13,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/tvs-select-model-titanium-grey-drum-1701166884853.png?q=100",
+  "colors": [
+    {
+      "name": "Titanium Grey Drum",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/jupiter-125/titanium-grey-drum.png"
+    },
+    {
+      "name": "IndiBlue Drum",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/jupiter-125/indiblue-drum.png"
+    },
+    {
+      "name": "Pristine White",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/jupiter-125/pristine-white.png"
+    },
+    {
+      "name": "Sparkling Black",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/jupiter-125/sparkling-black.avif"
+    },
+    {
+      "name": "White",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/jupiter-125/white.png"
+    },
+    {
+      "name": "Titanium Grey",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/jupiter-125/titanium-grey.png"
+    },
+    {
+      "name": "IndiBlue",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/jupiter-125/indiblue.avif"
+    },
+    {
+      "name": "Dawn Orange",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/jupiter-125/dawn-orange.png"
+    },
+    {
+      "name": "Elite Green",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/jupiter-125/elite-green.avif"
+    },
+    {
+      "name": "Matte Copper Bronze",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/jupiter-125/matte-copper-bronze.avif"
+    },
+    {
+      "name": "Elegant Red",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/jupiter-125/elegant-red.avif"
+    },
+    {
+      "name": "Ivory Grey",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/jupiter-125/ivory-grey.avif"
+    },
+    {
+      "name": "Ivory Brown",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/jupiter-125/ivory-brown.avif"
+    }
+  ]
+}

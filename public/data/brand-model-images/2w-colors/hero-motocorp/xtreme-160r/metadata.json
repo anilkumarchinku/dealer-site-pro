@@ -1,0 +1,21 @@
+{
+  "brand": "Hero MotoCorp",
+  "model": "Xtreme 160R",
+  "brandId": "hero-motocorp",
+  "makeSlug": "hero-bikes",
+  "modelSlug": "xtreme-160r",
+  "sourceUrl": "https://www.bikewale.com/hero-bikes/xtreme-160r/colours/",
+  "scrapedAt": "2026-04-20T06:13:20.861Z",
+  "count": 2,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/a0esaib_1891625.png?q=100",
+  "colors": [
+    {
+      "name": "Matt Pearl White",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/xtreme-160r/matt-pearl-white.png"
+    },
+    {
+      "name": "Stealth Black",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/xtreme-160r/stealth-black.webp"
+    }
+  ]
+}

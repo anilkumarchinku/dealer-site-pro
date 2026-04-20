@@ -1,0 +1,33 @@
+{
+  "brand": "Kinetic Green",
+  "model": "DX",
+  "brandId": "kinetic-green",
+  "makeSlug": "kinetic-bikes",
+  "modelSlug": "dx",
+  "sourceUrl": "https://www.bikewale.com/kinetic-bikes/dx/colours/",
+  "scrapedAt": "2026-04-20T06:14:08.588Z",
+  "count": 5,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/4oct9hb_1869153.jpg?q=100",
+  "colors": [
+    {
+      "name": "Grey",
+      "image": "/data/brand-model-images/2w-colors/kinetic-green/dx/grey.avif"
+    },
+    {
+      "name": "Black",
+      "image": "/data/brand-model-images/2w-colors/kinetic-green/dx/black.avif"
+    },
+    {
+      "name": "White",
+      "image": "/data/brand-model-images/2w-colors/kinetic-green/dx/white.avif"
+    },
+    {
+      "name": "Blue",
+      "image": "/data/brand-model-images/2w-colors/kinetic-green/dx/blue.avif"
+    },
+    {
+      "name": "Red",
+      "image": "/data/brand-model-images/2w-colors/kinetic-green/dx/red.avif"
+    }
+  ]
+}

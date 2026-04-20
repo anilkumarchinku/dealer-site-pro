@@ -1,0 +1,639 @@
+category,brand,model,image_count,status,brand_id,matched_slug,note
+2w,Ampere (Greaves Electric),Magnus,5,scraped_exact,ampere-greaves,magnus,
+2w,Ampere (Greaves Electric),Magnus Grand,3,scraped_exact,ampere-greaves,magnus-grand,
+2w,Ampere (Greaves Electric),Nexus,6,scraped_exact,ampere-greaves,nexus,
+2w,Ampere (Greaves Electric),Reo,4,scraped_exact,ampere-greaves,reo,
+2w,Aprilia India,RS 457,6,scraped_exact,aprilia-india,rs-457,
+2w,Aprilia India,RS 660,3,scraped_exact,aprilia-india,rs-660,
+2w,Aprilia India,RSV4 1100 Factory,1,scraped_exact,aprilia-india,rsv4-1100-factory,
+2w,Aprilia India,SR 125,7,scraped_exact,aprilia-india,sr-125,
+2w,Aprilia India,Storm 125,2,scraped_exact,aprilia-india,storm-125,
+2w,Aprilia India,Tuono 457,2,scraped_exact,aprilia-india,tuono-457,
+2w,Aprilia India,Tuono 660,2,scraped_exact,aprilia-india,tuono-660,
+2w,Ather Energy,450 Apex,1,scraped_exact,ather-energy,450-apex,
+2w,Ather Energy,450S,4,scraped_exact,ather-energy,450s,
+2w,Ather Energy,450X,8,scraped_exact,ather-energy,450x,
+2w,Ather Energy,Rizta,9,scraped_exact,ather-energy,rizta,
+2w,Bajaj Auto,Avenger Cruise 220,2,scraped_exact,bajaj-auto,avenger-cruise-220,
+2w,Bajaj Auto,CT 110,3,scraped_exact,bajaj-auto,ct-110,
+2w,Bajaj Auto,Dominar 250,3,scraped_exact,bajaj-auto,dominar-250,
+2w,Bajaj Auto,Dominar 400,2,scraped_exact,bajaj-auto,dominar-400,
+2w,Bajaj Auto,Platina 110,4,scraped_exact,bajaj-auto,platina-110,
+2w,Bajaj Auto,Pulsar 125,8,scraped_exact,bajaj-auto,pulsar-125,
+2w,Bajaj Auto,Pulsar 150,9,scraped_exact,bajaj-auto,pulsar-150,
+2w,Bajaj Auto,Pulsar 220F,4,scraped_exact,bajaj-auto,pulsar-220-f,
+2w,Bajaj Auto,Pulsar N125,7,scraped_exact,bajaj-auto,pulsar-n125,
+2w,Bajaj Auto,Pulsar N160,11,scraped_exact,bajaj-auto,pulsar-n160,
+2w,Bajaj Auto,Pulsar N250,3,scraped_exact,bajaj-auto,pulsar-n250,
+2w,Bajaj Auto,Pulsar NS125,6,scraped_exact,bajaj-auto,pulsar-ns125,
+2w,Bajaj Auto,Pulsar NS160,4,scraped_exact,bajaj-auto,pulsar-ns160,
+2w,Bajaj Auto,Pulsar NS200,4,covered_by_alias,bajaj-auto,pulsar-ns,"uses shared source model ""Pulsar NS400Z"""
+2w,Bajaj Auto,Pulsar NS400Z,4,scraped_exact,bajaj-auto,pulsar-ns,
+2w,Bajaj Chetak,Chetak,14,scraped_exact,bajaj-chetak-ev,chetak,
+2w,Bajaj Chetak,Chetak C25,6,scraped_exact,bajaj-chetak-ev,chetak-c25,
+2w,BattRE Electric,LOEV,0,unavailable_on_source,battre-electric,,no confirmed BikeWale colour page
+2w,BattRE Electric,LOEV+,0,unavailable_on_source,battre-electric,,no confirmed BikeWale colour page
+2w,BattRE Electric,ONE,0,unavailable_on_source,battre-electric,,no confirmed BikeWale colour page
+2w,BattRE Electric,Storie,0,unavailable_on_source,battre-electric,,no confirmed BikeWale colour page
+2w,Benelli India,502C,3,scraped_exact,benelli-india,502c,
+2w,Benelli India,Leoncino 500,2,scraped_exact,benelli-india,leoncino-500-bs4,
+2w,Benelli India,TRK 502,2,scraped_exact,benelli-india,trk-502,
+2w,Benelli India,TRK 502X,3,scraped_exact,benelli-india,trk-502x,
+2w,BGauss,C12i EX,7,covered_by_alias,bgauss,c12i,"uses shared source model ""C12i Max"""
+2w,BGauss,C12i Max,7,scraped_exact,bgauss,c12i,
+2w,BGauss,OoWah,3,scraped_exact,bgauss,oowah,
+2w,BGauss,RUV 350,5,scraped_exact,bgauss,ruv-350,
+2w,BMW Motorrad India,C 400 GT,1,scraped_exact,bmw-motorrad-india,c-400-gt,
+2w,BMW Motorrad India,CE 02,2,scraped_exact,bmw-motorrad-india,ce-02,
+2w,BMW Motorrad India,CE 04,1,scraped_exact,bmw-motorrad-india,ce-04,
+2w,BMW Motorrad India,F 900 GS,2,scraped_exact,bmw-motorrad-india,f-900-gs,
+2w,BMW Motorrad India,F 900 GS Adventure,2,scraped_exact,bmw-motorrad-india,f-900-gs-adventure,
+2w,BMW Motorrad India,G 310 RR,5,scraped_exact,bmw-motorrad-india,g310-rr,
+2w,BMW Motorrad India,K 1600,4,scraped_exact,bmw-motorrad-india,k-1600,
+2w,BMW Motorrad India,M 1000 R,3,scraped_exact,bmw-motorrad-india,m-1000-r,
+2w,BMW Motorrad India,M 1000 XR,1,scraped_exact,bmw-motorrad-india,m-1000-xr,
+2w,BMW Motorrad India,R 12,1,scraped_exact,bmw-motorrad-india,r-12,
+2w,BMW Motorrad India,R 12 nineT,1,scraped_exact,bmw-motorrad-india,r-12-nine-t,
+2w,BMW Motorrad India,R 1300 GS,2,scraped_exact,bmw-motorrad-india,r-1300-gs,
+2w,BMW Motorrad India,R18,5,scraped_exact,bmw-motorrad-india,r18,
+2w,BMW Motorrad India,S 1000 R,3,scraped_exact,bmw-motorrad-india,s-1000-r,
+2w,BMW Motorrad India,S 1000 RR,3,scraped_exact,bmw-motorrad-india,s-1000-rr,
+2w,BMW Motorrad India,S 1000 XR,3,scraped_exact,bmw-motorrad-india,s-1000-xr,
+2w,Bounce Infinity,E1,12,scraped_exact,bounce-infinity,infinity-e1,
+2w,Bounce Infinity,E1X,0,unavailable_on_source,bounce-infinity,,no confirmed BikeWale colour page
+2w,Brixton Motorcycles,Cromwell 1200,3,scraped_exact,brixton-motorcycles,cromwell-1200,
+2w,Brixton Motorcycles,Cromwell 1200 X,2,scraped_exact,brixton-motorcycles,cromwell-1200-x,
+2w,Brixton Motorcycles,Crossfire 500 X,3,scraped_exact,brixton-motorcycles,crossfire-500-x,
+2w,Brixton Motorcycles,Crossfire 500 XC,2,scraped_exact,brixton-motorcycles,crossfire-500-xc,
+2w,BSA Motorcycles,Gold Star 650,6,scraped_exact,bsa-motorcycles,gold-star-650,
+2w,Ducati India,DesertX,3,scraped_exact,ducati-india,desertx,
+2w,Ducati India,Diavel V4,2,scraped_exact,ducati-india,diavel-v4,
+2w,Ducati India,Hypermotard 950,3,scraped_exact,ducati-india,hypermotard-950,
+2w,Ducati India,Monster,4,scraped_exact,ducati-india,monster,
+2w,Ducati India,Multistrada V2,3,scraped_exact,ducati-india,multistrada-v2,
+2w,Ducati India,Multistrada V4,4,scraped_exact,ducati-india,multistrada-v4,
+2w,Ducati India,Panigale V2,2,scraped_exact,ducati-india,panigale-v2,
+2w,Ducati India,Panigale V4,3,scraped_exact,ducati-india,panigale-v4,
+2w,Ducati India,Scrambler Icon,4,scraped_exact,ducati-india,scrambler-icon,
+2w,Ducati India,Scrambler Nightshift,1,scraped_exact,ducati-india,scrambler-nightshift,
+2w,Ducati India,Streetfighter V2,2,scraped_exact,ducati-india,streetfighter-v2,
+2w,Ducati India,Streetfighter V4,1,scraped_exact,ducati-india,streetfighter-v4,
+2w,Ducati India,XDiavel V4,2,scraped_exact,ducati-india,xdiavel-v4,
+2w,Evolet,Derby,2,scraped_exact,evolet,derby,
+2w,Evolet,Pony,1,scraped_exact,evolet,pony,
+2w,Ferrato,Disruptor,3,scraped_exact,ferrato,disruptor,
+2w,Gemopai,Astrid Lite,5,scraped_exact,gemopai,astrid-lite,
+2w,Gemopai,Ryder,5,scraped_exact,gemopai,ryder,
+2w,Gemopai,Ryder SuperMax,6,scraped_exact,gemopai,ryder-supermax,
+2w,Harley-Davidson India,Breakout,5,scraped_exact,harley-davidson-india,breakout,
+2w,Harley-Davidson India,Fat Boy,4,scraped_exact,harley-davidson-india,fat-boy,
+2w,Harley-Davidson India,Heritage Classic,5,scraped_exact,harley-davidson-india,heritage-classic,
+2w,Harley-Davidson India,Nightster,3,scraped_exact,harley-davidson-india,nightster,
+2w,Harley-Davidson India,Nightster Special,4,scraped_exact,harley-davidson-india,nightster-special,
+2w,Harley-Davidson India,Pan America 1250 Special,4,scraped_exact,harley-davidson-india,pan-america-1250-special,
+2w,Harley-Davidson India,Road Glide,7,scraped_exact,harley-davidson-india,road-glide,
+2w,Harley-Davidson India,Sportster S,4,scraped_exact,harley-davidson-india,sportster-s,
+2w,Harley-Davidson India,Street Glide,7,scraped_exact,harley-davidson-india,street-glide,
+2w,Harley-Davidson India,X440,6,scraped_exact,harley-davidson-india,x440,
+2w,Hero Electric,Atria LX,2,scraped_exact,hero-electric,atria,
+2w,Hero Electric,NYX HX,2,scraped_exact,hero-electric,nyx-hx,
+2w,Hero Electric,Optima CX,4,scraped_exact,hero-electric,optima-cx,
+2w,Hero Electric,Photon HX,5,scraped_exact,hero-electric,photon,
+2w,Hero MotoCorp,Destini 125,5,scraped_exact,hero-motocorp,destini-125,
+2w,Hero MotoCorp,Destini Prime,4,scraped_exact,hero-motocorp,destini-prime,
+2w,Hero MotoCorp,Glamour,4,scraped_exact,hero-motocorp,glamour,
+2w,Hero MotoCorp,Glamour X 125,5,scraped_exact,hero-motocorp,glamour-x-125,
+2w,Hero MotoCorp,Glamour Xtec,4,scraped_exact,hero-motocorp,glamour-xtec,
+2w,Hero MotoCorp,HF Deluxe,11,scraped_exact,hero-motocorp,hf-deluxe,
+2w,Hero MotoCorp,Karizma XMR,4,scraped_exact,hero-motocorp,karizma-xmr,
+2w,Hero MotoCorp,Mavrick 440,5,scraped_exact,hero-motocorp,mavrick-440,
+2w,Hero MotoCorp,Passion Plus,3,scraped_exact,hero-motocorp,passion-plus,
+2w,Hero MotoCorp,Pleasure Plus,7,scraped_exact,hero-motocorp,pleasure-plus,
+2w,Hero MotoCorp,Pleasure Plus Xtec,4,scraped_exact,hero-motocorp,pleasure-plus-xtec,
+2w,Hero MotoCorp,Splendor Plus,8,scraped_exact,hero-motocorp,splendor-plus,
+2w,Hero MotoCorp,Splendor Plus Xtec,7,scraped_exact,hero-motocorp,splendor-plus-xtec,
+2w,Hero MotoCorp,Super Splendor Xtec,4,scraped_exact,hero-motocorp,super-splendor-xtec,
+2w,Hero MotoCorp,Xoom 110,6,scraped_exact,hero-motocorp,xoom-110,
+2w,Hero MotoCorp,Xoom 125,4,scraped_exact,hero-motocorp,xoom-125,
+2w,Hero MotoCorp,Xoom 160,4,scraped_exact,hero-motocorp,xoom-160,
+2w,Hero MotoCorp,XPulse 200 4V,8,scraped_exact,hero-motocorp,xpulse-200-4v,
+2w,Hero MotoCorp,XPulse 210,4,scraped_exact,hero-motocorp,xpulse-210,
+2w,Hero MotoCorp,Xtreme 125R,11,scraped_exact,hero-motocorp,xtreme-125r,
+2w,Hero MotoCorp,Xtreme 160R,2,scraped_exact,hero-motocorp,xtreme-160r,
+2w,Hero MotoCorp,Xtreme 160R 4V,5,scraped_exact,hero-motocorp,xtreme-160r-4v,
+2w,Hero MotoCorp,Xtreme 250R,3,scraped_exact,hero-motocorp,xtreme-250r,
+2w,Honda Motorcycle & Scooter India,Activa,10,scraped_exact,honda-hmsi,activa,
+2w,Honda Motorcycle & Scooter India,Activa 125,8,scraped_exact,honda-hmsi,activa-125,
+2w,Honda Motorcycle & Scooter India,Activa e,5,scraped_exact,honda-hmsi,activa-e,
+2w,Honda Motorcycle & Scooter India,CB1000 Hornet,1,scraped_exact,honda-hmsi,cb1000-hornet,
+2w,Honda Motorcycle & Scooter India,CB125 Hornet,4,scraped_exact,honda-hmsi,cb-125-hornet,
+2w,Honda Motorcycle & Scooter India,CB300F,3,scraped_exact,honda-hmsi,cb300f,
+2w,Honda Motorcycle & Scooter India,CB350RS,6,scraped_exact,honda-hmsi,cb350rs,
+2w,Honda Motorcycle & Scooter India,CB650R,2,scraped_exact,honda-hmsi,cb650r,
+2w,Honda Motorcycle & Scooter India,CB750 Hornet,2,scraped_exact,honda-hmsi,cb750-hornet,
+2w,Honda Motorcycle & Scooter India,CBR1000RR-R Fireblade,1,scraped_exact,honda-hmsi,cbr1000rr-r-fireblade,
+2w,Honda Motorcycle & Scooter India,CBR650R,2,scraped_exact,honda-hmsi,cbr650r,
+2w,Honda Motorcycle & Scooter India,Dio,5,scraped_exact,honda-hmsi,dio,
+2w,Honda Motorcycle & Scooter India,Dio 125,7,scraped_exact,honda-hmsi,dio-125,
+2w,Honda Motorcycle & Scooter India,Goldwing Tour,1,scraped_exact,honda-hmsi,goldwing-tour,
+2w,Honda Motorcycle & Scooter India,Hness CB350,8,scraped_exact,honda-hmsi,hness-cb350,
+2w,Honda Motorcycle & Scooter India,Hornet 2.0,4,scraped_exact,honda-hmsi,hornet,
+2w,Honda Motorcycle & Scooter India,Livo,3,scraped_exact,honda-hmsi,livo,
+2w,Honda Motorcycle & Scooter India,NX200,3,scraped_exact,honda-hmsi,nx200,
+2w,Honda Motorcycle & Scooter India,NX500,3,scraped_exact,honda-hmsi,nx500,
+2w,Honda Motorcycle & Scooter India,QC1,5,scraped_exact,honda-hmsi,qc1,
+2w,Honda Motorcycle & Scooter India,Shine,7,scraped_exact,honda-hmsi,shine,
+2w,Honda Motorcycle & Scooter India,Shine 100,9,scraped_exact,honda-hmsi,shine-100,
+2w,Honda Motorcycle & Scooter India,SP 125,7,scraped_exact,honda-hmsi,sp-125,
+2w,Honda Motorcycle & Scooter India,SP160,4,scraped_exact,honda-hmsi,sp160,
+2w,Honda Motorcycle & Scooter India,Transalp XL750,2,scraped_exact,honda-hmsi,transalp-xl750,
+2w,Honda Motorcycle & Scooter India,Unicorn,3,scraped_exact,honda-hmsi,unicorn,
+2w,Honda Motorcycle & Scooter India,X-ADV 750,2,scraped_exact,honda-hmsi,x-adv,
+2w,Hop Electric,Leo,5,scraped_exact,hop-electric,leo,
+2w,Hop Electric,OXO,5,scraped_exact,hop-electric,oxo,
+2w,Husqvarna India,Svartpilen 401,1,scraped_exact,husqvarna-india,svartpilen-401,
+2w,Husqvarna India,Vitpilen 250,1,scraped_exact,husqvarna-india,vitpilen-250,
+2w,Indian Motorcycle,101 Scout,2,scraped_exact,indian-motorcycle,101-scout,
+2w,Indian Motorcycle,Scout Bobber,1,scraped_exact,indian-motorcycle,scout-bobber,
+2w,Indian Motorcycle,Scout Classic,1,scraped_exact,indian-motorcycle,scout-classic,
+2w,Indian Motorcycle,Sport Scout,1,scraped_exact,indian-motorcycle,sport-scout,
+2w,Indian Motorcycle,Super Scout,2,scraped_exact,indian-motorcycle,super-scout,
+2w,iVOOMi,Jeet X,4,scraped_exact,ivoomi,jeet-x,
+2w,iVOOMi,S1,3,scraped_exact,ivoomi,s1,
+2w,Jawa Motorcycles,Jawa 350,8,scraped_exact,jawa-motorcycles,350,
+2w,Jawa Motorcycles,Jawa 42,14,scraped_exact,jawa-motorcycles,42,
+2w,Jawa Motorcycles,Jawa 42 Bobber,5,scraped_exact,jawa-motorcycles,42-bobber,
+2w,Jawa Motorcycles,Jawa 42 FJ,5,scraped_exact,jawa-motorcycles,42-fj,
+2w,Joy e-bike,Gen Nxt,4,scraped_exact,joy-e-bike,gen-nxt,
+2w,Joy e-bike,Glob,1,scraped_exact,joy-e-bike,glob,
+2w,Joy e-bike,Mihos,3,scraped_exact,joy-e-bike,mihos,
+2w,Joy e-bike,Wolf,7,scraped_exact,joy-e-bike,wolf,
+2w,Kabira Mobility,Intercity FS,0,unavailable_on_source,kabira-mobility,,no confirmed BikeWale colour page
+2w,Kabira Mobility,Intercity Neo,0,unavailable_on_source,kabira-mobility,,no confirmed BikeWale colour page
+2w,Kabira Mobility,KM3000,0,unavailable_on_source,kabira-mobility,,no confirmed BikeWale colour page
+2w,Kabira Mobility,KM4000,0,unavailable_on_source,kabira-mobility,,no confirmed BikeWale colour page
+2w,Kabira Mobility,KM5000,0,unavailable_on_source,kabira-mobility,,no confirmed BikeWale colour page
+2w,Kawasaki India,Eliminator,1,scraped_exact,kawasaki-india,eliminator,
+2w,Kawasaki India,Ninja 1100SX,1,scraped_exact,kawasaki-india,ninja-1100sx,
+2w,Kawasaki India,Ninja 300,2,scraped_exact,kawasaki-india,ninja-300,
+2w,Kawasaki India,Ninja 500,1,scraped_exact,kawasaki-india,ninja-500,
+2w,Kawasaki India,Ninja 650,1,scraped_exact,kawasaki-india,ninja-650,
+2w,Kawasaki India,Ninja H2 SX SE,1,scraped_exact,kawasaki-india,ninja-h2-sx-se,
+2w,Kawasaki India,Ninja ZX-10R,2,scraped_exact,kawasaki-india,ninja-zx-10r,
+2w,Kawasaki India,Versys 650,1,scraped_exact,kawasaki-india,versys-650,
+2w,Kawasaki India,Vulcan S,1,scraped_exact,kawasaki-india,vulcan-s,
+2w,Kawasaki India,W175,6,scraped_exact,kawasaki-india,w175,
+2w,Kawasaki India,Z H2,1,scraped_exact,kawasaki-india,z-h2,
+2w,Kawasaki India,Z650,1,scraped_exact,kawasaki-india,z650,
+2w,Kawasaki India,Z650RS,1,scraped_exact,kawasaki-india,z650rs,
+2w,Kawasaki India,Z900,2,scraped_exact,kawasaki-india,z900,
+2w,Keeway India,K-Light 250V,3,scraped_exact,keeway-india,k-light-250v,
+2w,Keeway India,K300 SF,3,scraped_exact,keeway-india,k300-sf,
+2w,Keeway India,RR300,3,scraped_exact,keeway-india,rr300,
+2w,Keeway India,Sixties 300i,3,scraped_exact,keeway-india,sixties-300i,
+2w,Keeway India,SR125,3,scraped_exact,keeway-india,sr125,
+2w,Keeway India,SR250,3,scraped_exact,keeway-india,sr250,
+2w,Keeway India,V302C,3,scraped_exact,keeway-india,v302c,
+2w,Keeway India,Vieste 300,3,scraped_exact,keeway-india,vieste-300,
+2w,Kinetic Green,DX,5,scraped_exact,kinetic-green,dx,
+2w,Kinetic Green,E Luna,5,scraped_exact,kinetic-green,e-luna,
+2w,Komaki,DT 3000,0,unavailable_on_source,komaki,,no confirmed BikeWale colour page
+2w,Komaki,Flora,0,unavailable_on_source,komaki,,no confirmed BikeWale colour page
+2w,Komaki,Ranger,0,unavailable_on_source,komaki,,no confirmed BikeWale colour page
+2w,Komaki,SE,0,unavailable_on_source,komaki,,no confirmed BikeWale colour page
+2w,Komaki,TN 95,0,unavailable_on_source,komaki,,no confirmed BikeWale colour page
+2w,Komaki,Venice,0,unavailable_on_source,komaki,,no confirmed BikeWale colour page
+2w,Komaki,X One,0,unavailable_on_source,komaki,,no confirmed BikeWale colour page
+2w,Komaki,XGT CAT 2.0,0,unavailable_on_source,komaki,,no confirmed BikeWale colour page
+2w,Komaki,XGT KM,0,unavailable_on_source,komaki,,no confirmed BikeWale colour page
+2w,Komaki,XGT X5,0,unavailable_on_source,komaki,,no confirmed BikeWale colour page
+2w,KTM India,1390 Super Duke R,1,scraped_exact,ktm-india,1390-super-duke-r,
+2w,KTM India,160 Duke,3,scraped_exact,ktm-india,160-duke,
+2w,KTM India,200 Duke,4,scraped_exact,ktm-india,200-duke,
+2w,KTM India,250 Adventure,2,scraped_exact,ktm-india,250-adventure,
+2w,KTM India,250 Duke,2,scraped_exact,ktm-india,250-duke,
+2w,KTM India,390 Adventure,2,scraped_exact,ktm-india,390-adventure,
+2w,KTM India,390 Adventure R,1,scraped_exact,ktm-india,390-adventure-r,
+2w,KTM India,390 Adventure X,2,scraped_exact,ktm-india,390-adventure-x,
+2w,KTM India,390 Duke,3,scraped_exact,ktm-india,390-duke,
+2w,KTM India,390 Enduro R,1,scraped_exact,ktm-india,390-enduro-r,
+2w,KTM India,890 Duke R,1,scraped_exact,ktm-india,890-duke-r,
+2w,KTM India,RC 160,3,scraped_exact,ktm-india,rc-160,
+2w,KTM India,RC 200,4,scraped_exact,ktm-india,rc-200,
+2w,KTM India,RC 390,3,scraped_exact,ktm-india,rc-390,
+2w,Lectrix EV,LXS 2.0,5,scraped_exact,lectrix-ev,lxs-20,
+2w,Lectrix EV,LXS 3.0,5,scraped_exact,lectrix-ev,lxs-30,
+2w,Lectrix EV,NDuro,4,scraped_exact,lectrix-ev,nduro,
+2w,Lectrix EV,SX25,4,scraped_exact,lectrix-ev,sx25,
+2w,Lectrix EV,ZYRO,0,unavailable_on_source,lectrix-ev,,no confirmed BikeWale colour page
+2w,Matter,Aera 5000,5,scraped_exact,matter,aera,
+2w,Matter,Aera 5000+,5,scraped_exact,matter,aera,
+2w,Moto Guzzi,V85 TT,4,scraped_exact,moto-guzzi,v85-tt,
+2w,Moto Morini,Seiemmezzo,6,scraped_exact,moto-morini,seiemmezzo,
+2w,Moto Morini,X-Cape,4,scraped_exact,moto-morini,x-cape,
+2w,Numeros,Diplos,3,scraped_exact,numeros,diplos,
+2w,Numeros,n-First,2,scraped_exact,numeros,n-first,
+2w,Oben Electric,Rorr,2,scraped_exact,oben-electric,rorr,
+2w,Oben Electric,Rorr EZ,4,scraped_exact,oben-electric,rorr-ez,
+2w,Oben Electric,Rorr EZ Sigma,4,scraped_exact,oben-electric,rorr-ez-sigma,
+2w,Odysse Electric,E2go,6,covered_by_alias,odysse-electric,e2go,"uses shared source model ""E2go Lite"""
+2w,Odysse Electric,E2go Lite,6,scraped_exact,odysse-electric,e2go,
+2w,Odysse Electric,Hawk Plus,5,scraped_exact,odysse-electric,hawk,
+2w,Odysse Electric,Racer,5,scraped_exact,odysse-electric,racer,
+2w,Odysse Electric,SNAP,0,unavailable_on_source,odysse-electric,,no confirmed BikeWale colour page
+2w,Odysse Electric,V2,0,unavailable_on_source,odysse-electric,,no confirmed BikeWale colour page
+2w,Odysse Electric,V2 Plus,0,unavailable_on_source,odysse-electric,,no confirmed BikeWale colour page
+2w,Okaya EV (OPG Mobility),Faast F2B,6,scraped_exact,okaya-ev-opg-mobility,faast-f2b,
+2w,Okaya EV (OPG Mobility),Faast F2F,6,scraped_exact,okaya-ev-opg-mobility,faast-f2f,
+2w,Okaya EV (OPG Mobility),Faast F2T,6,scraped_exact,okaya-ev-opg-mobility,faast-f2t,
+2w,Okaya EV (OPG Mobility),Faast F3,6,scraped_exact,okaya-ev-opg-mobility,faast-f3,
+2w,Okaya EV (OPG Mobility),Faast F4,11,scraped_exact,okaya-ev-opg-mobility,faast,
+2w,Okaya EV (OPG Mobility),Freedum,7,scraped_exact,okaya-ev-opg-mobility,freedum,
+2w,Okaya EV (OPG Mobility),Motofaast,6,scraped_exact,okaya-ev-opg-mobility,motofaast,
+2w,Okinawa Autotech,Dual 100,2,scraped_exact,okinawa-autotech,dual-100,
+2w,Okinawa Autotech,iPraise+,6,scraped_exact,okinawa-autotech,i-praise,
+2w,Okinawa Autotech,Lite,5,scraped_exact,okinawa-autotech,lite,
+2w,Okinawa Autotech,Okhi 90,4,scraped_exact,okinawa-autotech,okhi-90,
+2w,Okinawa Autotech,PraisePro,8,scraped_exact,okinawa-autotech,praise,
+2w,Okinawa Autotech,R30,5,scraped_exact,okinawa-autotech,r30,
+2w,Okinawa Autotech,Ridge 100,3,scraped_exact,okinawa-autotech,ridge-100,
+2w,Okinawa Autotech,Ridge+,3,scraped_exact,okinawa-autotech,ridge,
+2w,Ola Electric,Roadster,1,scraped_exact,ola-electric,roadster,
+2w,Ola Electric,Roadster Pro,1,scraped_exact,ola-electric,roadster-pro,
+2w,Ola Electric,Roadster X,5,scraped_exact,ola-electric,roadster-x,
+2w,Ola Electric,S1 Pro,8,covered_by_alias,ola-electric,s1-pro,"uses shared source model ""S1 Pro Plus"""
+2w,Ola Electric,S1 Pro Plus,8,scraped_exact,ola-electric,s1-pro,
+2w,Ola Electric,S1 X,5,covered_by_alias,ola-electric,s1-x,"uses shared source model ""S1 X Plus"""
+2w,Ola Electric,S1 X Plus,5,scraped_exact,ola-electric,s1-x,
+2w,OPG Mobility,Classiq,8,scraped_exact,opg-mobility,classiq,
+2w,OPG Mobility,Faast F2B,6,scraped_exact,opg-mobility,faast-f2b,
+2w,OPG Mobility,Faast F2F,6,scraped_exact,opg-mobility,faast-f2f,
+2w,OPG Mobility,Faast F2T,6,scraped_exact,opg-mobility,faast-f2t,
+2w,OPG Mobility,Faast F3,6,scraped_exact,opg-mobility,faast-f3,
+2w,OPG Mobility,Faast F4,11,scraped_exact,opg-mobility,faast,
+2w,OPG Mobility,Freedum,7,scraped_exact,opg-mobility,freedum,
+2w,OPG Mobility,Motofaast,6,scraped_exact,opg-mobility,motofaast,
+2w,Pure EV,EcoDryft,4,scraped_exact,pure-ev,ecodryft,
+2w,Pure EV,EPluto 7G,13,scraped_exact,pure-ev,epluto-7g,
+2w,Pure EV,ETrance Neo,6,scraped_exact,pure-ev,etrance-neo,
+2w,Pure EV,Etryst 350,3,scraped_exact,pure-ev,etryst-350,
+2w,QJ Motor India,SRC 250,3,scraped_exact,qj-motor-india,src-250,
+2w,QJ Motor India,SRC 500,3,scraped_exact,qj-motor-india,src-500,
+2w,QJ Motor India,SRK 400,3,scraped_exact,qj-motor-india,srk-400,
+2w,QJ Motor India,SRV 300,4,scraped_exact,qj-motor-india,srv-300,
+2w,Quantum Energy,BZiness,3,scraped_exact,quantum-energy,bziness,
+2w,Quantum Energy,Milan,3,scraped_exact,quantum-energy,milan,
+2w,Quantum Energy,Plasma,4,scraped_exact,quantum-energy,plasma,
+2w,Raptee HV,T30,3,scraped_exact,raptee-hv,t30,
+2w,Revolt Motors,RV BlazeX,2,scraped_exact,revolt-motors,rv-blazex,
+2w,Revolt Motors,RV1,4,scraped_exact,revolt-motors,rv1,
+2w,Revolt Motors,RV400,9,covered_by_alias,revolt-motors,rv400,"uses shared source model ""RV400 BRZ"""
+2w,Revolt Motors,RV400 BRZ,9,scraped_exact,revolt-motors,rv400,
+2w,River,Indie Gen 3,5,scraped_exact,river,indie,
+2w,Royal Enfield,Bear 650,5,scraped_exact,royal-enfield,bear-650,
+2w,Royal Enfield,Bullet 350,5,scraped_exact,royal-enfield,bullet-350,
+2w,Royal Enfield,Classic 350,9,scraped_exact,royal-enfield,classic-350,
+2w,Royal Enfield,Classic 650,4,scraped_exact,royal-enfield,classic-650,
+2w,Royal Enfield,Continental GT 650,5,scraped_exact,royal-enfield,continental-gt-650,
+2w,Royal Enfield,Guerrilla 450,8,scraped_exact,royal-enfield,guerrilla-450,
+2w,Royal Enfield,Himalayan 450,6,scraped_exact,royal-enfield,himalayan-450,
+2w,Royal Enfield,Hunter 350,10,scraped_exact,royal-enfield,hunter-350,
+2w,Royal Enfield,Interceptor 650,6,scraped_exact,royal-enfield,interceptor-650,
+2w,Royal Enfield,Meteor 350,8,scraped_exact,royal-enfield,meteor-350,
+2w,Royal Enfield,Scram 440,5,scraped_exact,royal-enfield,scram-440,
+2w,Royal Enfield,Shotgun 650,4,scraped_exact,royal-enfield,shotgun-650,
+2w,Royal Enfield,Super Meteor 650,6,scraped_exact,royal-enfield,super-meteor-650,
+2w,Simple Energy,One Gen 2,9,scraped_exact,simple-energy,one-gen-2,
+2w,Simple Energy,OneS Gen 2,3,scraped_exact,simple-energy,one-s-gen-2,
+2w,Suzuki Motorcycle India,Access 125,6,scraped_exact,suzuki-motorcycle,access-125,
+2w,Suzuki Motorcycle India,Avenis 125,6,scraped_exact,suzuki-motorcycle,avenis-125,
+2w,Suzuki Motorcycle India,Burgman Street 125,10,scraped_exact,suzuki-motorcycle,burgman-street-125,
+2w,Suzuki Motorcycle India,Gixxer,4,scraped_exact,suzuki-motorcycle,gixxer,
+2w,Suzuki Motorcycle India,Gixxer 250,5,scraped_exact,suzuki-motorcycle,gixxer-250,
+2w,Suzuki Motorcycle India,Gixxer SF,4,scraped_exact,suzuki-motorcycle,gixxer-sf,
+2w,Suzuki Motorcycle India,Gixxer SF 250,5,scraped_exact,suzuki-motorcycle,gixxer-sf-250,
+2w,Suzuki Motorcycle India,Gixxer SF 250 Flex Fuel,2,scraped_exact,suzuki-motorcycle,gixxer-sf-250-flex-fuel,
+2w,Suzuki Motorcycle India,GSX-8R,3,scraped_exact,suzuki-motorcycle,gsx-8r,
+2w,Suzuki Motorcycle India,Hayabusa,3,scraped_exact,suzuki-motorcycle,hayabusa,
+2w,Suzuki Motorcycle India,V-Strom 800 DE,3,scraped_exact,suzuki-motorcycle,v-strom-800-de,
+2w,Suzuki Motorcycle India,V-Strom SX,7,scraped_exact,suzuki-motorcycle,v-strom-sx,
+2w,Tork Motors,Kratos,5,covered_by_alias,tork-motors,kratos,"uses shared source model ""Kratos R"""
+2w,Tork Motors,Kratos R,5,scraped_exact,tork-motors,kratos,
+2w,Triumph India,Bonneville Bobber,5,scraped_exact,triumph-india,bonneville-bobber,
+2w,Triumph India,Bonneville Speedmaster,4,scraped_exact,triumph-india,bonneville-speedmaster,
+2w,Triumph India,Bonneville T100,4,scraped_exact,triumph-india,bonneville-t100,
+2w,Triumph India,Bonneville T120,4,scraped_exact,triumph-india,bonneville-t120,
+2w,Triumph India,Rocket 3,5,scraped_exact,triumph-india,rocket-3,
+2w,Triumph India,Scrambler 400 X,4,scraped_exact,triumph-india,scrambler-400-x,
+2w,Triumph India,Scrambler 900,3,scraped_exact,triumph-india,scrambler-900,
+2w,Triumph India,Speed 400,4,scraped_exact,triumph-india,speed-400,
+2w,Triumph India,Speed T4,5,scraped_exact,triumph-india,speed-t4,
+2w,Triumph India,Speed Triple 1200 RS,4,scraped_exact,triumph-india,speed-triple-1200-rs,
+2w,Triumph India,Speed Twin 900,3,scraped_exact,triumph-india,speed-twin-900,
+2w,Triumph India,Street Triple R,3,scraped_exact,triumph-india,street-triple-r,
+2w,Triumph India,Thruxton 400,4,scraped_exact,triumph-india,thruxton-400,
+2w,Triumph India,Tiger 1200,12,scraped_exact,triumph-india,tiger-1200,
+2w,Triumph India,Tiger 900,6,scraped_exact,triumph-india,tiger-900,
+2w,Triumph India,Trident 660,4,scraped_exact,triumph-india,trident-660,
+2w,TVS iQube,iQube,12,covered_by_alias,tvs-iqube,iqube,"uses shared source model ""iQube ST 5.3 kWh"""
+2w,TVS iQube,iQube S,12,covered_by_alias,tvs-iqube,iqube,"uses shared source model ""iQube ST 5.3 kWh"""
+2w,TVS iQube,iQube ST,12,covered_by_alias,tvs-iqube,iqube,"uses shared source model ""iQube ST 5.3 kWh"""
+2w,TVS iQube,iQube ST 5.3 kWh,12,scraped_exact,tvs-iqube,iqube,
+2w,TVS iQube,TVS Orbiter,6,scraped_exact,tvs-iqube,orbiter,
+2w,TVS iQube,TVS X,1,scraped_exact,tvs-iqube,x,
+2w,TVS Motor Company,Apache RR 310,4,scraped_exact,tvs-motor,apache-rr-310,
+2w,TVS Motor Company,Apache RTR 160,12,covered_by_alias,tvs-motor,apache-rtr-160-4v,"uses shared source model ""Apache RTR 160 4V"""
+2w,TVS Motor Company,Apache RTR 160 4V,12,scraped_exact,tvs-motor,apache-rtr-160-4v,
+2w,TVS Motor Company,Apache RTR 180,5,scraped_exact,tvs-motor,apache-rtr-180,
+2w,TVS Motor Company,Apache RTR 200 4V,7,scraped_exact,tvs-motor,apache-rtr-200-4v,
+2w,TVS Motor Company,Apache RTR 310,4,scraped_exact,tvs-motor,apache-rtr-310,
+2w,TVS Motor Company,Apache RTX 300,5,scraped_exact,tvs-motor,apache-rtx-300,
+2w,TVS Motor Company,Jupiter,6,scraped_exact,tvs-motor,jupiter,
+2w,TVS Motor Company,Jupiter 125,13,scraped_exact,tvs-motor,jupiter-125,
+2w,TVS Motor Company,Ntorq 125,13,scraped_exact,tvs-motor,ntorq-125,
+2w,TVS Motor Company,Ntorq 150,4,scraped_exact,tvs-motor,ntorq-150,
+2w,TVS Motor Company,Radeon,8,scraped_exact,tvs-motor,radeon,
+2w,TVS Motor Company,Raider 125,14,scraped_exact,tvs-motor,raider-125,
+2w,TVS Motor Company,Ronin,7,scraped_exact,tvs-motor,ronin,
+2w,TVS Motor Company,Sport,6,scraped_exact,tvs-motor,sport,
+2w,TVS Motor Company,Star City Plus,6,scraped_exact,tvs-motor,star-city-plus,
+2w,TVS Motor Company,XL100 Comfort,4,scraped_exact,tvs-motor,xl-100-comfort,
+2w,TVS Motor Company,XL100 Heavy Duty,12,scraped_exact,tvs-motor,xl-100-heavy-duty,
+2w,TVS Motor Company,Zest 110,8,scraped_exact,tvs-motor,zest-110,
+2w,Ultraviolette Automotive,F77 Mach 2,9,scraped_exact,ultraviolette-automotive,f77-mach-2,
+2w,Ultraviolette Automotive,F77 SuperStreet,4,scraped_exact,ultraviolette-automotive,f77-superstreet,
+2w,Ultraviolette Automotive,X47 Crossover,4,scraped_exact,ultraviolette-automotive,x47-crossover,
+2w,Vespa India,Vespa 125,7,scraped_exact,vespa-india,vespa-125,
+2w,Vespa India,Vespa 150,8,scraped_exact,vespa-india,150,
+2w,Vespa India,Vespa S 125,10,scraped_exact,vespa-india,s-125,
+2w,Vespa India,Vespa S 150,10,scraped_exact,vespa-india,s-150,
+2w,Vida (Hero MotoCorp),V2,6,scraped_exact,vida-hero,v2,
+2w,Vida (Hero MotoCorp),VX2 Go,7,covered_by_alias,vida-hero,vx2,"uses shared source model ""VX2 Plus"""
+2w,Vida (Hero MotoCorp),VX2 Plus,7,scraped_exact,vida-hero,vx2,
+2w,VLF,Mobster,4,scraped_exact,vlf,mobster,
+2w,VLF,Tennis 1500,3,scraped_exact,vlf,tennis-1500,
+2w,Yamaha India,Aerox 155,4,scraped_exact,yamaha-india,aerox-155,
+2w,Yamaha India,Fascino 125 Fi,15,scraped_exact,yamaha-india,fascino,
+2w,Yamaha India,FZ Rave,2,scraped_exact,yamaha-india,fz-rave,
+2w,Yamaha India,FZ-Fi,2,scraped_exact,yamaha-india,fz,
+2w,Yamaha India,FZ-S Fi,3,covered_by_alias,yamaha-india,fz-s,"uses shared source model ""FZ-S Fi Hybrid"""
+2w,Yamaha India,FZ-S Fi Hybrid,3,scraped_exact,yamaha-india,fz-s,
+2w,Yamaha India,FZ-X,2,scraped_exact,yamaha-india,fz-x,
+2w,Yamaha India,MT-15 V2.0,5,scraped_exact,yamaha-india,mt-15,
+2w,Yamaha India,R15 V4,9,scraped_exact,yamaha-india,r15-v4,
+2w,Yamaha India,R15S,3,scraped_exact,yamaha-india,r15s,
+2w,Yamaha India,Ray ZR 125 Fi,11,scraped_exact,yamaha-india,ray-zr-125,
+2w,Yamaha India,XSR155,5,scraped_exact,yamaha-india,xsr-155,
+2w,Yezdi Motorcycles,Adventure,6,scraped_exact,yezdi-motorcycles,adventure,
+2w,Yezdi Motorcycles,Roadster,6,scraped_exact,yezdi-motorcycles,roadster,
+2w,Yezdi Motorcycles,Scrambler,7,scraped_exact,yezdi-motorcycles,scrambler,
+2w,Yo Electric,Drift,5,scraped_exact,yo-electric,drift,
+2w,Yo Electric,Edge,5,scraped_exact,yo-electric,edge,
+2w,Yulu,Wynn,0,unavailable_on_source,yulu,,no confirmed BikeWale colour page
+2w,Zontes India,350R,3,scraped_exact,zontes-india,350r,
+2w,Zontes India,350T,4,scraped_exact,zontes-india,350t,
+2w,Zontes India,350X,3,scraped_exact,zontes-india,350x,
+2w,Zontes India,GK350,3,scraped_exact,zontes-india,gk350,
+3w,Altigreen,neEV High Deck,1,hero_present,altigreen,neev.jpg,local 3W hero image present
+3w,Altigreen,neEV Low Deck,1,hero_present,altigreen,neev.jpg,local 3W hero image present
+3w,Altigreen,neEV Rahi,1,hero_present,altigreen,neev-rahi.jpg,local 3W hero image present
+3w,Altigreen,neEV Tez,1,hero_present,altigreen,neev-tez.jpg,local 3W hero image present
+3w,Atul Auto,Elite Cargo,1,hero_present,atul-auto,elite-cargo.jpg,local 3W hero image present
+3w,Atul Auto,Elite Plus,1,hero_present,atul-auto,elite-plus.jpg,local 3W hero image present
+3w,Atul Auto,Gem Cargo,1,hero_present,atul-auto,gem-cargo.jpg,local 3W hero image present
+3w,Atul Auto,Gem Paxx,1,hero_present,atul-auto,gem-paxx.jpg,local 3W hero image present
+3w,Atul Auto,Gemini Plus,1,hero_present,atul-auto,gemini-plus.jpg,local 3W hero image present
+3w,Atul Auto,Rik,1,hero_present,atul-auto,rik-auto.jpg,local 3W hero image present
+3w,Atul Auto,Rik Twin,1,hero_present,atul-auto,rik-twin.jpg,local 3W hero image present
+3w,Atul Auto,Shakti Cargo,1,hero_present,atul-auto,shakti-cargo.jpg,local 3W hero image present
+3w,Bajaj Auto (3W),Compact RE CNG,1,hero_present,bajaj-auto-3w,compact-re-cng.jpg,local 3W hero image present
+3w,Bajaj Auto (3W),GoGo P50,1,hero_present,bajaj-auto-3w,gogo.jpg,local 3W hero image present
+3w,Bajaj Auto (3W),GoGo P70,1,hero_present,bajaj-auto-3w,gogo.jpg,local 3W hero image present
+3w,Bajaj Auto (3W),Maxima C CNG,1,hero_present,bajaj-auto-3w,maxima-c-cng.jpg,local 3W hero image present
+3w,Bajaj Auto (3W),Maxima X Wide Diesel,1,hero_present,bajaj-auto-3w,maxima-x-wide-diesel.jpg,local 3W hero image present
+3w,Bajaj Auto (3W),Maxima XL E-Tec,1,hero_present,bajaj-auto-3w,maxima-xl-e-tec.jpg,local 3W hero image present
+3w,Bajaj Auto (3W),Maxima Z Diesel,1,hero_present,bajaj-auto-3w,maxima-z-diesel.jpg,local 3W hero image present
+3w,Bajaj Auto (3W),RE CNG,1,hero_present,bajaj-auto-3w,compact-re-cng.jpg,local 3W hero image present
+3w,Bajaj Auto (3W),RE Diesel,1,hero_present,bajaj-auto-3w,re-diesel.jpg,local 3W hero image present
+3w,Bajaj Auto (3W),RE E Tech 9.0,1,hero_present,bajaj-auto-3w,re-e-tech-90.jpg,local 3W hero image present
+3w,Bajaj Auto (3W),RE LPG,1,hero_present,bajaj-auto-3w,re-lpg.jpg,local 3W hero image present
+3w,Bajaj Auto (3W),Riki P4005,1,hero_present,bajaj-auto-3w,riki-p40.jpg,local 3W hero image present
+3w,Bajaj Auto (3W),WEGO P9018,1,hero_present,bajaj-auto-3w,wego-p9018.jpg,local 3W hero image present
+3w,ETrio,Touro Max,1,hero_present,etrio,touro-max-plus-plus.jpg,local 3W hero image present
+3w,Euler Motors,HiLoad EV,1,hero_present,euler-motors,hiload-ev-120.jpg,local 3W hero image present
+3w,Euler Motors,NEO HiCITY,1,hero_present,euler-motors,neo-hicity.jpg,local 3W hero image present
+3w,Euler Motors,NEO HiRange,1,hero_present,euler-motors,neo-hirange.jpg,local 3W hero image present
+3w,Greaves Electric Mobility,E Pro Cargo,1,hero_present,greaves-electric-3w,e-pro-cargo.jpg,local 3W hero image present
+3w,Greaves Electric Mobility,Eltra City,1,hero_present,greaves-electric-3w,eltra-city-xtra.jpg,local 3W hero image present
+3w,Greaves Electric Mobility,Eltra City XTRA,1,hero_present,greaves-electric-3w,eltra-city-xtra.jpg,local 3W hero image present
+3w,Kinetic Green,Safar Jumbo,1,hero_present,kinetic-green,safar-jumbo-ranger.jpg,local 3W hero image present
+3w,Kinetic Green,Safar Shakti,1,hero_present,kinetic-green,safar-shakti.jpg,local 3W hero image present
+3w,Kinetic Green,Safar Smart,1,hero_present,kinetic-green,safar-smart.jpg,local 3W hero image present
+3w,Kinetic Green,Super DX,1,hero_present,kinetic-green,super-dx.jpg,local 3W hero image present
+3w,Lohia Auto,Narain DLX,1,hero_present,lohia-auto,narain-dlx.jpg,local 3W hero image present
+3w,Lohia Auto,Narain XiV,1,hero_present,lohia-auto,narain-xiv.jpg,local 3W hero image present
+3w,Lohia Auto,Narain XiW,1,hero_present,lohia-auto,narain-xiw.jpg,local 3W hero image present
+3w,Lohia Auto,Youdha EPOD,1,hero_present,lohia-auto,youdha-epod.jpg,local 3W hero image present
+3w,Lohia Auto,Youdha Garbage Van,1,hero_present,lohia-auto,youdha-garbage-van.jpg,local 3W hero image present
+3w,Lohia Auto,Youdha Humsafar,1,hero_present,lohia-auto,youdha-humsafar.jpg,local 3W hero image present
+3w,Lohia Auto,Youdha Trevo Cargo,1,hero_present,lohia-auto,youdha-trevo-cargo.jpg,local 3W hero image present
+3w,Mahindra (3W),Alfa DX,1,hero_present,mahindra-3w,alfa-dx.jpg,local 3W hero image present
+3w,Mahindra (3W),Alfa Load,1,hero_present,mahindra-3w,alfa-load.jpg,local 3W hero image present
+3w,Mahindra (3W),Alfa Plus,1,hero_present,mahindra-3w,e-alfa-plus.jpg,local 3W hero image present
+3w,Mahindra (3W),E-Alfa Mini,1,hero_present,mahindra-3w,e-alfa-mini.jpg,local 3W hero image present
+3w,Mahindra (3W),E-Alfa Plus,1,hero_present,mahindra-3w,e-alfa-plus.jpg,local 3W hero image present
+3w,Mahindra (3W),Treo,1,hero_present,mahindra-3w,treo-plus.jpg,local 3W hero image present
+3w,Mahindra (3W),Treo Plus,1,hero_present,mahindra-3w,treo-plus.jpg,local 3W hero image present
+3w,Mahindra (3W),Treo Yaari Cargo,1,hero_present,mahindra-3w,treo.jpg,local 3W hero image present
+3w,Mahindra (3W),Treo Yaari Passenger,1,hero_present,mahindra-3w,treo.jpg,local 3W hero image present
+3w,Mahindra (3W),Treo Zor,1,hero_present,mahindra-3w,treo-zor.jpg,local 3W hero image present
+3w,Mahindra (3W),UDO,1,hero_present,mahindra-3w,udo.jpg,local 3W hero image present
+3w,Mahindra (3W),Zor Grand,1,hero_present,mahindra-3w,zor-grand.jpg,local 3W hero image present
+3w,Montra Electric,Super Auto,1,hero_present,montra-ev,super-auto-x.jpg,local 3W hero image present
+3w,Montra Electric,Super Cargo,1,hero_present,montra-ev,super-cargo.jpg,local 3W hero image present
+3w,Omega Seiki Mobility,Rage Plus,1,hero_present,omega-seiki-mobility,rage-plus.jpg,local 3W hero image present
+3w,Omega Seiki Mobility,Rage Plus Rapid EV,1,hero_present,omega-seiki-mobility,rage-plus.jpg,local 3W hero image present
+3w,Omega Seiki Mobility,Stream,1,hero_present,omega-seiki-mobility,stream-city-20.jpg,local 3W hero image present
+3w,Omega Seiki Mobility,Stream City,1,hero_present,omega-seiki-mobility,stream-city-20.jpg,local 3W hero image present
+3w,Omega Seiki Mobility,Stream City Qik,1,hero_present,omega-seiki-mobility,stream-city.jpg,local 3W hero image present
+3w,Piaggio Ape,Auto Classic,1,hero_present,piaggio-ape,auto-classic.jpg,local 3W hero image present
+3w,Piaggio Ape,Auto DX,1,hero_present,piaggio-ape,auto-dx.jpg,local 3W hero image present
+3w,Piaggio Ape,Auto DXL,1,hero_present,piaggio-ape,auto-dx.jpg,local 3W hero image present
+3w,Piaggio Ape,Auto Plus,1,hero_present,piaggio-ape,auto-plus.jpg,local 3W hero image present
+3w,Piaggio Ape,City Plus,1,hero_present,piaggio-ape,city-plus.jpg,local 3W hero image present
+3w,Piaggio Ape,E-City,1,hero_present,piaggio-ape,e-city.jpg,local 3W hero image present
+3w,Piaggio Ape,E-Xtra FX Max,1,hero_present,piaggio-ape,e-xtra-fx-max.jpg,local 3W hero image present
+3w,Piaggio Ape,Metro,1,hero_present,piaggio-ape,metro.jpg,local 3W hero image present
+3w,Piaggio Ape,NXT+,1,hero_present,piaggio-ape,nxt-plus.jpg,local 3W hero image present
+3w,Piaggio Ape,Xtra HD,1,hero_present,piaggio-ape,xtra-hd.jpg,local 3W hero image present
+3w,Piaggio Ape,Xtra LDX CNG,1,hero_present,piaggio-ape,xtra-ldx-cng.jpg,local 3W hero image present
+3w,Piaggio Ape,Xtra LDX Diesel,1,hero_present,piaggio-ape,xtra-ldx-diesel.jpg,local 3W hero image present
+3w,Piaggio Ape,Xtra LDX Plus,1,hero_present,piaggio-ape,xtra-ldx-plus.jpg,local 3W hero image present
+3w,Saera Electric (Mayuri),Mayuri DV,1,hero_present,saera-ev,mayuri-dv.jpg,local 3W hero image present
+3w,Saera Electric (Mayuri),Mayuri E Cart Loader,1,hero_present,saera-ev,mayuri-e-cart-loader.jpg,local 3W hero image present
+3w,Saera Electric (Mayuri),Mayuri Grand,1,hero_present,saera-ev,mayuri-grand.jpg,local 3W hero image present
+3w,Saera Electric (Mayuri),Mayuri Pro 1000,1,hero_present,saera-ev,mayuri-pro-1000.jpg,local 3W hero image present
+3w,Saera Electric (Mayuri),Mayuri Pro Star,1,hero_present,saera-ev,mayuri-pro-star.jpg,local 3W hero image present
+3w,Saera Electric (Mayuri),Mayuri Star,1,hero_present,saera-ev,mayuri-star.jpg,local 3W hero image present
+3w,Terra Motors,Kyoro L5,1,hero_present,terra-motors,kyoro-l5.jpg,local 3W hero image present
+3w,Terra Motors,Kyoto,1,hero_present,terra-motors,kyoto.jpg,local 3W hero image present
+3w,Terra Motors,Rizin,1,hero_present,terra-motors,rizin.jpg,local 3W hero image present
+3w,Terra Motors,Sumo,1,hero_present,terra-motors,sumo.jpg,local 3W hero image present
+3w,Terra Motors,Y4A,1,hero_present,terra-motors,y4a-pro.jpg,local 3W hero image present
+3w,Terra Motors,Y4A Pro,1,hero_present,terra-motors,y4a-pro.jpg,local 3W hero image present
+3w,TVS King,King Deluxe,1,hero_present,tvs-king,king-deluxe.jpg,local 3W hero image present
+3w,TVS King,King Duramax,1,hero_present,tvs-king,king-duramax-plus.jpg,local 3W hero image present
+3w,TVS King,King Duramax Plus,1,hero_present,tvs-king,king-duramax-plus.jpg,local 3W hero image present
+3w,TVS King,King EP1,1,hero_present,tvs-king,king-ep1.jpg,local 3W hero image present
+3w,TVS King,King EV Max,1,hero_present,tvs-king,king-ev-max.jpg,local 3W hero image present
+3w,TVS King,King Kargo,1,hero_present,tvs-king,king-kargo-hd-ev.jpg,local 3W hero image present
+3w,TVS King,King Kargo HD EV,1,hero_present,tvs-king,king-kargo-hd-ev.jpg,local 3W hero image present
+3w,YC Electric,E Loader,1,hero_present,yc-ev,e-loader.jpg,local 3W hero image present
+3w,YC Electric,Yatri,1,hero_present,yc-ev,yatri-cart.jpg,local 3W hero image present
+3w,YC Electric,Yatri Cart,1,hero_present,yc-ev,yatri-cart.jpg,local 3W hero image present
+3w,YC Electric,Yatri Deluxe,1,hero_present,yc-ev,yatri-deluxe.jpg,local 3W hero image present
+4w,audi,A4,20,scraped_exact,audi,a4,
+4w,audi,A6,2,scraped_exact,Audi,Audi_A6,
+4w,audi,A8 L,21,scraped_exact,audi,a8-l,
+4w,audi,e-tron GT,23,scraped_exact,audi,e-tron-gt,
+4w,audi,Q3,21,scraped_exact,audi,q3,
+4w,audi,Q3 Sportback,18,scraped_exact,audi,q3-sportback,
+4w,audi,Q5,20,scraped_exact,audi,q5,
+4w,audi,Q7,19,scraped_exact,audi,q7,
+4w,audi,Q8,19,scraped_exact,audi,q8,
+4w,audi,Q8 e-tron,23,scraped_exact,audi,q8-e-tron,
+4w,audi,Q8 Sportback e-tron,19,scraped_exact,audi,q8-sportback-e-tron,
+4w,audi,RS e-tron GT,21,scraped_exact,audi,rs-e-tron-gt,
+4w,audi,RS Q8,21,scraped_exact,audi,rs-q8,
+4w,audi,S5 Sportback,20,scraped_exact,audi,s5-sportback,
+4w,audi,SQ8,23,scraped_exact,audi,sq8,
+4w,bmw,2 Series Gran Coupe,20,scraped_exact,bmw,2-series-gran-coupe,
+4w,bmw,3 Series,18,scraped_exact,BMW,BMW_3_Series,
+4w,bmw,3 Series Gran Limousine,16,scraped_exact,bmw,3-series-gran-limousine,
+4w,bmw,5 Series,18,scraped_exact,bmw,5-series,
+4w,bmw,6 Series GT,22,scraped_exact,BMW,BMW_6_Series,
+4w,bmw,7 Series,22,scraped_exact,bmw,7-series,
+4w,bmw,8 Series Gran Coupe,21,scraped_exact,bmw,8-series,
+4w,bmw,i4,18,scraped_exact,bmw,i4,
+4w,bmw,i5,21,scraped_exact,bmw,i5,
+4w,bmw,i7,21,scraped_exact,bmw,i7,
+4w,bmw,iX,23,scraped_exact,bmw,ix,
+4w,bmw,iX1,19,scraped_exact,bmw,ix1,
+4w,bmw,M2,19,scraped_exact,bmw,m2,
+4w,bmw,M340i,18,scraped_exact,bmw,m340i,
+4w,bmw,M4,21,covered_by_alias,bmw,m4-competition,"uses shared source model ""M4 Competition"""
+4w,bmw,M4 Competition,21,scraped_exact,bmw,m4-competition,
+4w,bmw,M5,15,scraped_exact,bmw,m5,
+4w,bmw,M8,23,covered_by_alias,bmw,m8-coupe-competition,"uses shared source model ""M8 Coupe Competition"""
+4w,bmw,M8 Coupe Competition,23,scraped_exact,bmw,m8-coupe-competition,
+4w,bmw,X1,19,scraped_exact,bmw,x1,
+4w,bmw,X3,15,scraped_exact,bmw,x3,
+4w,bmw,X4,18,scraped_exact,bmw,x4,
+4w,bmw,X5,20,scraped_exact,bmw,x5,
+4w,bmw,X5 M Competition,21,scraped_exact,bmw,x5-m,
+4w,bmw,X7,21,scraped_exact,bmw,x7,
+4w,bmw,XM,21,scraped_exact,bmw,xm,
+4w,bmw,Z4,21,scraped_exact,bmw,z4,
+4w,hyundai,Alcazar,20,scraped_exact,hyundai,alcazar,
+4w,hyundai,Aura,19,scraped_exact,hyundai,aura,
+4w,hyundai,Creta,29,scraped_exact,hyundai,creta,
+4w,hyundai,Creta EV,17,scraped_exact,hyundai,creta-electric,
+4w,hyundai,Creta N Line,19,scraped_exact,hyundai,creta-n-line,
+4w,hyundai,Exter,23,scraped_exact,hyundai,exter,
+4w,hyundai,Grand i10 Nios,21,scraped_exact,hyundai,grand-i10-nios,
+4w,hyundai,i20,21,scraped_exact,hyundai,i20,
+4w,hyundai,i20 N Line,21,scraped_exact,hyundai,i20-n-line,
+4w,hyundai,Ioniq 5,18,scraped_exact,hyundai,ioniq-5,
+4w,hyundai,Prime HB,4,scraped_exact,hyundai,prime-hb,
+4w,hyundai,Prime SD,4,scraped_exact,hyundai,prime-sd,
+4w,hyundai,Tucson,21,scraped_exact,hyundai,tucson,
+4w,hyundai,Venue,21,scraped_exact,hyundai,venue,
+4w,hyundai,Venue N Line,19,scraped_exact,hyundai,venue-n-line,
+4w,hyundai,Verna,23,scraped_exact,hyundai,verna,
+4w,kia,Carens,20,scraped_exact,kia,carens,
+4w,kia,Carens Clavis,21,scraped_exact,kia,carens-clavis,
+4w,kia,Carens Clavis EV,20,scraped_exact,kia,carens-clavis-ev,
+4w,kia,Carnival,16,scraped_exact,kia,carnival,
+4w,kia,EV6,18,scraped_exact,kia,ev6,
+4w,kia,EV9,19,scraped_exact,kia,ev9,
+4w,kia,Seltos,3,scraped_exact,kia,seltos,
+4w,kia,Sonet,23,scraped_exact,kia,sonet,
+4w,kia,Syros,21,scraped_exact,kia,syros,
+4w,land rover,Defender,21,scraped_exact,land-rover,defender,
+4w,land rover,Discovery,19,scraped_exact,land-rover,discovery,
+4w,land rover,Discovery Sport,17,scraped_exact,land-rover,discovery-sport,
+4w,land rover,Range Rover,21,scraped_exact,land-rover,range-rover,
+4w,land rover,Range Rover Evoque,18,scraped_exact,land-rover,range-rover-evoque,
+4w,land rover,Range Rover Sport,21,scraped_exact,land-rover,range-rover-sport,
+4w,land rover,Range Rover Velar,18,scraped_exact,land-rover,range-rover-velar,
+4w,mahindra,BE 6,28,scraped_exact,mahindra,be-6,
+4w,mahindra,Bolero,20,scraped_exact,mahindra,bolero,
+4w,mahindra,Bolero Camper,5,scraped_exact,mahindra,bolero-camper,
+4w,mahindra,Bolero Neo,23,scraped_exact,mahindra,bolero-neo,
+4w,mahindra,Bolero Neo Plus,13,scraped_exact,mahindra,bolero-neo-plus,
+4w,mahindra,Bolero Pik-Up,4,scraped_exact,mahindra,bolero-pik-up,
+4w,mahindra,Marazzo,18,scraped_exact,mahindra,marazzo,
+4w,mahindra,Scorpio Classic,18,scraped_exact,mahindra,scorpio-classic,
+4w,mahindra,Scorpio N,21,scraped_exact,mahindra,scorpio-n,
+4w,mahindra,Thar,20,scraped_exact,mahindra,thar,
+4w,mahindra,Thar Roxx,30,scraped_exact,mahindra,thar-roxx,
+4w,mahindra,XEV 9e,15,scraped_exact,mahindra,xev-9e,
+4w,mahindra,XEV 9S,20,scraped_exact,mahindra,xev-9s,
+4w,mahindra,XUV 3XO,30,scraped_exact,mahindra,xuv-3xo,
+4w,mahindra,XUV 3XO EV,22,scraped_exact,mahindra,xuv-3xo-ev,
+4w,mahindra,XUV 7XO,21,scraped_exact,mahindra,xuv-7xo,
+4w,mahindra,XUV400 EV,18,scraped_exact,mahindra,xuv400-ev,
+4w,mahindra,XUV700,30,scraped_exact,mahindra,xuv700,
+4w,nissan,Gravite,19,scraped_exact,nissan,gravite,
+4w,nissan,Magnite,21,scraped_exact,nissan,magnite,
+4w,nissan,X-Trail,19,scraped_exact,nissan,x-trail,
+4w,renault,Duster,21,scraped_exact,renault,duster,
+4w,renault,Kiger,21,scraped_exact,renault,kiger,
+4w,renault,Kwid,21,scraped_exact,renault,kwid,
+4w,renault,Triber,21,scraped_exact,renault,triber,
+4w,skoda,Kodiaq,20,scraped_exact,skoda,kodiaq,
+4w,skoda,Kushaq,14,scraped_exact,skoda,kushaq,
+4w,skoda,Kylaq,20,scraped_exact,skoda,kylaq,
+4w,skoda,Octavia RS,14,scraped_exact,skoda,octavia-rs,
+4w,skoda,Slavia,21,scraped_exact,skoda,slavia,
+4w,tata,Altroz,23,scraped_exact,tata,altroz,
+4w,tata,Curvv,21,scraped_exact,tata,curvv,
+4w,tata,Curvv EV,19,scraped_exact,tata,curvv-ev,
+4w,tata,Harrier,21,scraped_exact,tata,harrier,
+4w,tata,Harrier EV,19,scraped_exact,tata,harrier-ev,
+4w,tata,Nexon,30,scraped_exact,tata,nexon,
+4w,tata,Nexon EV,19,scraped_exact,tata,nexon-ev,
+4w,tata,Punch,20,scraped_exact,tata,punch,
+4w,tata,Punch EV,22,scraped_exact,tata,punch-ev,
+4w,tata,Safari,22,scraped_exact,tata,safari,
+4w,tata,Sierra,20,scraped_exact,tata,sierra,
+4w,tata,Tiago,27,scraped_exact,tata,tiago,
+4w,tata,Tiago EV,18,scraped_exact,tata,tiago-ev,
+4w,tata,Tiago NRG,20,scraped_exact,tata,tiago-nrg,
+4w,tata,Tigor,19,scraped_exact,tata,tigor,
+4w,tata,Tigor EV,19,scraped_exact,tata,tigor-ev,
+4w,tata,Xpres,17,scraped_exact,tata,xpres,
+4w,tata,Xpres-T EV,15,scraped_exact,tata,xpres-t-ev,
+4w,tata,Yodha Pickup,15,scraped_exact,tata,yodha-pickup,
+4w,toyota,Camry,20,scraped_exact,toyota,camry,
+4w,toyota,Fortuner,23,scraped_exact,Toyota,Toyota_Fortuner,
+4w,toyota,Fortuner Legender,17,scraped_exact,toyota,fortuner-legender,
+4w,toyota,Glanza,21,scraped_exact,toyota,glanza,
+4w,toyota,Hilux,19,scraped_exact,toyota,hilux,
+4w,toyota,Innova Crysta,21,scraped_exact,toyota,innova-crysta,
+4w,toyota,Innova Hycross,20,scraped_exact,toyota,innova-hycross,
+4w,toyota,Land Cruiser 300,16,scraped_exact,toyota,land-cruiser-300,
+4w,toyota,Rumion,19,scraped_exact,Toyota,Toyota_Rumion,
+4w,toyota,Taisor,23,scraped_exact,toyota,taisor,
+4w,toyota,Urban Cruiser Hyryder,20,scraped_exact,toyota,urban-cruiser-hyryder,
+4w,toyota,Vellfire,17,scraped_exact,toyota,vellfire,
+4w,volkswagen,Golf GTI,18,scraped_exact,volkswagen,golf-gti,
+4w,volkswagen,Taigun,4,scraped_exact,volkswagen,taigun,
+4w,volkswagen,Tayron R-Line,20,scraped_exact,volkswagen,tayron-r-line,
+4w,volkswagen,Tiguan R-Line,21,scraped_exact,volkswagen,tiguan-r-line,
+4w,volkswagen,Virtus,23,scraped_exact,volkswagen,virtus,
+4w,volvo,EC40,21,scraped_exact,volvo,ec40,
+4w,volvo,EX30,15,scraped_exact,volvo,ex30,
+4w,volvo,EX40,22,scraped_exact,volvo,ex40,
+4w,volvo,XC60,21,scraped_exact,volvo,xc60,
+4w,volvo,XC90,14,scraped_exact,volvo,xc90,

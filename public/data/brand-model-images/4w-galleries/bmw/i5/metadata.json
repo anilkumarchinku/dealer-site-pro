@@ -1,0 +1,52 @@
+{
+  "make": "bmw",
+  "model": "i5",
+  "brandSlug": "bmw",
+  "modelSlug": "i5",
+  "sourceUrl": "https://www.cardekho.com/bmw/i5",
+  "scrapedAt": "2026-04-20T06:30:32.745Z",
+  "counts": {
+    "exterior": 5,
+    "interior": 8,
+    "feature": 0,
+    "colors": 7,
+    "total": 20
+  },
+  "hero": "/data/brand-model-images/4w-galleries/bmw/i5/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/bmw/i5/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/bmw/i5/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/bmw/i5/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/bmw/i5/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/bmw/i5/exterior/06.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/bmw/i5/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/bmw/i5/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/bmw/i5/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/bmw/i5/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/bmw/i5/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/bmw/i5/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/bmw/i5/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/bmw/i5/interior/08.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "Brooklyn Grey Metallic",
+    "Mineral White Metallic",
+    "Oxide Grey Metallic",
+    "Tanzanite Blue Metallic",
+    "DRAGON-FIRE-RED-METALLIC",
+    "Cape York Green Metallic",
+    "Carbon Black Metallic"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/bmw/i5/colors/brooklyn-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/i5/colors/mineral-white-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/i5/colors/oxide-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/i5/colors/tanzanite-blue-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/i5/colors/dragon-fire-red-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/i5/colors/cape-york-green-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/i5/colors/carbon-black-metallic.avif"
+  ]
+}

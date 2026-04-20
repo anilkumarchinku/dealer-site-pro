@@ -1,0 +1,41 @@
+{
+  "brand": "Hero MotoCorp",
+  "model": "Pleasure Plus",
+  "brandId": "hero-motocorp",
+  "makeSlug": "hero-bikes",
+  "modelSlug": "pleasure-plus",
+  "sourceUrl": "https://www.bikewale.com/hero-bikes/pleasure-plus/colours/",
+  "scrapedAt": "2026-04-20T06:13:23.721Z",
+  "count": 7,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/tq3drib_1909948.png?q=100",
+  "colors": [
+    {
+      "name": "Sport Red",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/pleasure-plus/sport-red.png"
+    },
+    {
+      "name": "Polestar Blue",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/pleasure-plus/polestar-blue.png"
+    },
+    {
+      "name": "Pearl Silver White",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/pleasure-plus/pearl-silver-white.png"
+    },
+    {
+      "name": "Teal Blue",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/pleasure-plus/teal-blue.png"
+    },
+    {
+      "name": "Mat Black",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/pleasure-plus/mat-black.png"
+    },
+    {
+      "name": "Matte Red",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/pleasure-plus/matte-red.png"
+    },
+    {
+      "name": "Mat Vernier Grey",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/pleasure-plus/mat-vernier-grey.png"
+    }
+  ]
+}

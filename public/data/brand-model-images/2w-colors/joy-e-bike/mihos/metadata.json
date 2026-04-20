@@ -1,0 +1,25 @@
+{
+  "brand": "Joy e-bike",
+  "model": "Mihos",
+  "brandId": "joy-e-bike",
+  "makeSlug": "joyebike-bikes",
+  "modelSlug": "mihos",
+  "sourceUrl": "https://www.bikewale.com/joyebike-bikes/mihos/colours/",
+  "scrapedAt": "2026-04-20T05:53:17.585Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/9n6ob9b_1784359.jpg?q=100",
+  "colors": [
+    {
+      "name": "Sparkle Black",
+      "image": "/data/brand-model-images/2w-colors/joy-e-bike/mihos/sparkle-black.avif"
+    },
+    {
+      "name": "Satin Blue",
+      "image": "/data/brand-model-images/2w-colors/joy-e-bike/mihos/satin-blue.avif"
+    },
+    {
+      "name": "Matt Gold",
+      "image": "/data/brand-model-images/2w-colors/joy-e-bike/mihos/matt-gold.avif"
+    }
+  ]
+}

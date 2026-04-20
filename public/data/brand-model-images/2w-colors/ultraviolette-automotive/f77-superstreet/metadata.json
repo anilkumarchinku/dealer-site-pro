@@ -1,0 +1,29 @@
+{
+  "brand": "Ultraviolette Automotive",
+  "model": "F77 SuperStreet",
+  "brandId": "ultraviolette-automotive",
+  "makeSlug": "ultraviolette-bikes",
+  "modelSlug": "f77-superstreet",
+  "sourceUrl": "https://www.bikewale.com/ultraviolette-bikes/f77-superstreet/colours/",
+  "scrapedAt": "2026-04-20T05:20:06.933Z",
+  "count": 4,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/wnu0cfb_1811727.jpg?q=100",
+  "colors": [
+    {
+      "name": "Turbo Red",
+      "image": "/data/brand-model-images/2w-colors/ultraviolette-automotive/f77-superstreet/turbo-red.avif"
+    },
+    {
+      "name": "Afterburner Yellow",
+      "image": "/data/brand-model-images/2w-colors/ultraviolette-automotive/f77-superstreet/afterburner-yellow.avif"
+    },
+    {
+      "name": "Stellar White",
+      "image": "/data/brand-model-images/2w-colors/ultraviolette-automotive/f77-superstreet/stellar-white.avif"
+    },
+    {
+      "name": "Cosmic Black",
+      "image": "/data/brand-model-images/2w-colors/ultraviolette-automotive/f77-superstreet/cosmic-black.avif"
+    }
+  ]
+}

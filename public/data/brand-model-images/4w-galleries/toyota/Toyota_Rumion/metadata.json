@@ -1,0 +1,48 @@
+{
+  "make": "toyota",
+  "model": "Rumion",
+  "brandSlug": "Toyota",
+  "modelSlug": "Toyota_Rumion",
+  "sourceUrl": "https://www.cardekho.com/Toyota/Toyota_Rumion",
+  "scrapedAt": "2026-04-20T06:30:35.406Z",
+  "counts": {
+    "exterior": 5,
+    "interior": 8,
+    "feature": 0,
+    "colors": 5,
+    "total": 18
+  },
+  "hero": "/data/brand-model-images/4w-galleries/Toyota/Toyota_Rumion/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/Toyota/Toyota_Rumion/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/Toyota/Toyota_Rumion/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/Toyota/Toyota_Rumion/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/Toyota/Toyota_Rumion/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/Toyota/Toyota_Rumion/exterior/06.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/Toyota/Toyota_Rumion/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/Toyota/Toyota_Rumion/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/Toyota/Toyota_Rumion/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/Toyota/Toyota_Rumion/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/Toyota/Toyota_Rumion/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/Toyota/Toyota_Rumion/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/Toyota/Toyota_Rumion/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/Toyota/Toyota_Rumion/interior/08.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "Enticing Silver",
+    "Spunky Blue",
+    "Iconic Grey",
+    "Rustic Brown",
+    "Cafe White"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/Toyota/Toyota_Rumion/colors/enticing-silver.avif",
+    "/data/brand-model-images/4w-galleries/Toyota/Toyota_Rumion/colors/spunky-blue.avif",
+    "/data/brand-model-images/4w-galleries/Toyota/Toyota_Rumion/colors/iconic-grey.avif",
+    "/data/brand-model-images/4w-galleries/Toyota/Toyota_Rumion/colors/rustic-brown.avif",
+    "/data/brand-model-images/4w-galleries/Toyota/Toyota_Rumion/colors/cafe-white.avif"
+  ]
+}

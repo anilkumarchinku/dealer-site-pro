@@ -1,0 +1,52 @@
+{
+  "make": "audi",
+  "model": "RS Q8",
+  "brandSlug": "audi",
+  "modelSlug": "rs-q8",
+  "sourceUrl": "https://www.cardekho.com/audi/rs-q8",
+  "scrapedAt": "2026-04-20T06:30:32.922Z",
+  "counts": {
+    "exterior": 5,
+    "interior": 8,
+    "feature": 0,
+    "colors": 7,
+    "total": 20
+  },
+  "hero": "/data/brand-model-images/4w-galleries/audi/rs-q8/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/audi/rs-q8/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/audi/rs-q8/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/audi/rs-q8/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/audi/rs-q8/exterior/07.avif",
+    "/data/brand-model-images/4w-galleries/audi/rs-q8/exterior/08.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/audi/rs-q8/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/audi/rs-q8/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/audi/rs-q8/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/audi/rs-q8/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/audi/rs-q8/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/audi/rs-q8/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/audi/rs-q8/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/audi/rs-q8/interior/08.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "Daytona Grey Pearl Effect",
+    "Mythos Black Metallic",
+    "Waitomo Blue Metallic",
+    "Ascari Blue Metallic",
+    "Sakhir Gold Metallic",
+    "Chilli Red Mettalic",
+    "Glacier White Metallic"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/audi/rs-q8/colors/daytona-grey-pearl-effect.avif",
+    "/data/brand-model-images/4w-galleries/audi/rs-q8/colors/mythos-black-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/rs-q8/colors/waitomo-blue-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/rs-q8/colors/ascari-blue-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/rs-q8/colors/sakhir-gold-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/rs-q8/colors/chilli-red-mettalic.avif",
+    "/data/brand-model-images/4w-galleries/audi/rs-q8/colors/glacier-white-metallic.avif"
+  ]
+}

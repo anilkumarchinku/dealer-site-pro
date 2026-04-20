@@ -1,0 +1,25 @@
+{
+  "brand": "Okinawa Autotech",
+  "model": "Ridge+",
+  "brandId": "okinawa-autotech",
+  "makeSlug": "okinawa-bikes",
+  "modelSlug": "ridge",
+  "sourceUrl": "https://www.bikewale.com/okinawa-bikes/ridge/colours/",
+  "scrapedAt": "2026-04-20T05:19:30.401Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/okinawa-ridge-red-1511876702477.jpg?20190103151915&q=100",
+  "colors": [
+    {
+      "name": "Red",
+      "image": "/data/brand-model-images/2w-colors/okinawa-autotech/ridge/red.avif"
+    },
+    {
+      "name": "Fire Red",
+      "image": "/data/brand-model-images/2w-colors/okinawa-autotech/ridge/fire-red.avif"
+    },
+    {
+      "name": "Arctic White",
+      "image": "/data/brand-model-images/2w-colors/okinawa-autotech/ridge/arctic-white.avif"
+    }
+  ]
+}

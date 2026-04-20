@@ -1,0 +1,54 @@
+{
+  "make": "kia",
+  "model": "Sonet",
+  "brandSlug": "kia",
+  "modelSlug": "sonet",
+  "sourceUrl": "https://www.cardekho.com/kia/sonet",
+  "scrapedAt": "2026-04-20T05:03:26.001Z",
+  "counts": {
+    "exterior": 7,
+    "interior": 8,
+    "feature": 0,
+    "colors": 7,
+    "total": 22
+  },
+  "hero": "/data/brand-model-images/4w-galleries/kia/sonet/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/kia/sonet/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/kia/sonet/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/kia/sonet/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/kia/sonet/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/kia/sonet/exterior/06.avif",
+    "/data/brand-model-images/4w-galleries/kia/sonet/exterior/07.avif",
+    "/data/brand-model-images/4w-galleries/kia/sonet/exterior/08.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/kia/sonet/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/kia/sonet/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/kia/sonet/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/kia/sonet/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/kia/sonet/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/kia/sonet/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/kia/sonet/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/kia/sonet/interior/08.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "Glacier White Pearl",
+    "Sparkling Silver",
+    "Pewter Olive",
+    "Intense Red",
+    "Aurora Black Pearl",
+    "Imperial Blue",
+    "Glacier White Pearl With Aurora Black Pearl"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/kia/sonet/colors/glacier-white-pearl.avif",
+    "/data/brand-model-images/4w-galleries/kia/sonet/colors/sparkling-silver.avif",
+    "/data/brand-model-images/4w-galleries/kia/sonet/colors/pewter-olive.avif",
+    "/data/brand-model-images/4w-galleries/kia/sonet/colors/intense-red.avif",
+    "/data/brand-model-images/4w-galleries/kia/sonet/colors/aurora-black-pearl.avif",
+    "/data/brand-model-images/4w-galleries/kia/sonet/colors/imperial-blue.avif",
+    "/data/brand-model-images/4w-galleries/kia/sonet/colors/glacier-white-pearl-with-aurora-black-pearl.avif"
+  ]
+}

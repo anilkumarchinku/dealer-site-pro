@@ -1,0 +1,41 @@
+{
+  "brand": "TVS Motor Company",
+  "model": "Ronin",
+  "brandId": "tvs-motor",
+  "makeSlug": "tvs-bikes",
+  "modelSlug": "ronin",
+  "sourceUrl": "https://www.bikewale.com/tvs-bikes/ronin/colours/",
+  "scrapedAt": "2026-04-20T06:07:47.121Z",
+  "count": 7,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/3qu0ffb_1815327.jpg?q=100",
+  "colors": [
+    {
+      "name": "Lightning Black",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/ronin/lightning-black.avif"
+    },
+    {
+      "name": "Midnight Blue",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/ronin/midnight-blue.avif"
+    },
+    {
+      "name": "Nimbus Grey",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/ronin/nimbus-grey.avif"
+    },
+    {
+      "name": "Magma Red",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/ronin/magma-red.avif"
+    },
+    {
+      "name": "Glacier Silver",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/ronin/glacier-silver.avif"
+    },
+    {
+      "name": "Charcoal Ember",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/ronin/charcoal-ember.avif"
+    },
+    {
+      "name": "White",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/ronin/white.avif"
+    }
+  ]
+}

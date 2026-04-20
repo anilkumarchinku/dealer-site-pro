@@ -1,0 +1,25 @@
+{
+  "brand": "Keeway India",
+  "model": "Vieste 300",
+  "brandId": "keeway-india",
+  "makeSlug": "keeway-bikes",
+  "modelSlug": "vieste-300",
+  "sourceUrl": "https://www.bikewale.com/keeway-bikes/vieste-300/colours/",
+  "scrapedAt": "2026-04-20T05:18:46.896Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/keeway-select-model-matte-white-1653659771166.gif?q=100",
+  "colors": [
+    {
+      "name": "Matte white",
+      "image": "/data/brand-model-images/2w-colors/keeway-india/vieste-300/matte-white.avif"
+    },
+    {
+      "name": "Matte Black",
+      "image": "/data/brand-model-images/2w-colors/keeway-india/vieste-300/matte-black.avif"
+    },
+    {
+      "name": "Matte Blue",
+      "image": "/data/brand-model-images/2w-colors/keeway-india/vieste-300/matte-blue.avif"
+    }
+  ]
+}

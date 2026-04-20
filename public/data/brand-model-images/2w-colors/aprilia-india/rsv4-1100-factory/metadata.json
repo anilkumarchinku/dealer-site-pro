@@ -1,0 +1,17 @@
+{
+  "brand": "Aprilia India",
+  "model": "RSV4 1100 Factory",
+  "brandId": "aprilia-india",
+  "makeSlug": "aprilia-bikes",
+  "modelSlug": "rsv4-1100-factory",
+  "sourceUrl": "https://www.bikewale.com/aprilia-bikes/rsv4-1100-factory/colours/",
+  "scrapedAt": "2026-04-20T05:17:14.049Z",
+  "count": 1,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/aprilia-select-model-ultra-gold-1713330908540.png?q=100",
+  "colors": [
+    {
+      "name": "Ultra Gold",
+      "image": "/data/brand-model-images/2w-colors/aprilia-india/rsv4-1100-factory/ultra-gold.png"
+    }
+  ]
+}

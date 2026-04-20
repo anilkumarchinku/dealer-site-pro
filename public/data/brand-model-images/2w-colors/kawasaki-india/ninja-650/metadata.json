@@ -1,0 +1,17 @@
+{
+  "brand": "Kawasaki India",
+  "model": "Ninja 650",
+  "brandId": "kawasaki-india",
+  "makeSlug": "kawasaki-bikes",
+  "modelSlug": "ninja-650",
+  "sourceUrl": "https://www.bikewale.com/kawasaki-bikes/ninja-650/colours/",
+  "scrapedAt": "2026-04-20T05:16:56.403Z",
+  "count": 1,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/16nefib_1896467.png?q=100",
+  "colors": [
+    {
+      "name": "Lime Green",
+      "image": "/data/brand-model-images/2w-colors/kawasaki-india/ninja-650/lime-green.png"
+    }
+  ]
+}

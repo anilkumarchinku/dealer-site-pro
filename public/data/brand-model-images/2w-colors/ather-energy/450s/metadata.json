@@ -1,0 +1,29 @@
+{
+  "brand": "Ather Energy",
+  "model": "450S",
+  "brandId": "ather-energy",
+  "makeSlug": "ather-bikes",
+  "modelSlug": "450s",
+  "sourceUrl": "https://www.bikewale.com/ather-bikes/450s/colours/",
+  "scrapedAt": "2026-04-20T05:19:13.834Z",
+  "count": 4,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/wyc7ehb_1867953.jpg?q=100",
+  "colors": [
+    {
+      "name": "Stealth Blue",
+      "image": "/data/brand-model-images/2w-colors/ather-energy/450s/stealth-blue.avif"
+    },
+    {
+      "name": "Still White",
+      "image": "/data/brand-model-images/2w-colors/ather-energy/450s/still-white.avif"
+    },
+    {
+      "name": "Cosmic Black",
+      "image": "/data/brand-model-images/2w-colors/ather-energy/450s/cosmic-black.avif"
+    },
+    {
+      "name": "Space Grey",
+      "image": "/data/brand-model-images/2w-colors/ather-energy/450s/space-grey.avif"
+    }
+  ]
+}

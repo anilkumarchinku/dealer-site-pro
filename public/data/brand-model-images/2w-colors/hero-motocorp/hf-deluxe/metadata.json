@@ -1,0 +1,57 @@
+{
+  "brand": "Hero MotoCorp",
+  "model": "HF Deluxe",
+  "brandId": "hero-motocorp",
+  "makeSlug": "hero-bikes",
+  "modelSlug": "hf-deluxe",
+  "sourceUrl": "https://www.bikewale.com/hero-bikes/hf-deluxe/colours/",
+  "scrapedAt": "2026-04-20T06:13:17.770Z",
+  "count": 11,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/inn5pfb_1827707.webp?q=100",
+  "colors": [
+    {
+      "name": "Blue Black",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/hf-deluxe/blue-black.webp"
+    },
+    {
+      "name": "Red Black",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/hf-deluxe/red-black.webp"
+    },
+    {
+      "name": "Candy Blazing Red",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/hf-deluxe/candy-blazing-red.avif"
+    },
+    {
+      "name": "Black Nexus Blue",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/hf-deluxe/black-nexus-blue.avif"
+    },
+    {
+      "name": "Sports Red Black",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/hf-deluxe/sports-red-black.avif"
+    },
+    {
+      "name": "Black Grey Stripe",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/hf-deluxe/black-grey-stripe.avif"
+    },
+    {
+      "name": "Black",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/hf-deluxe/black.avif"
+    },
+    {
+      "name": "Red and Black",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/hf-deluxe/red-and-black.avif"
+    },
+    {
+      "name": "Yellow and Black",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/hf-deluxe/yellow-and-black.avif"
+    },
+    {
+      "name": "Grey and Black",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/hf-deluxe/grey-and-black.avif"
+    },
+    {
+      "name": "Blue and Black",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/hf-deluxe/blue-and-black.avif"
+    }
+  ]
+}

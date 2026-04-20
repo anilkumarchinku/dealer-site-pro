@@ -1,0 +1,37 @@
+{
+  "brand": "Kawasaki India",
+  "model": "W175",
+  "brandId": "kawasaki-india",
+  "makeSlug": "kawasaki-bikes",
+  "modelSlug": "w175",
+  "sourceUrl": "https://www.bikewale.com/kawasaki-bikes/w175/colours/",
+  "scrapedAt": "2026-04-20T05:16:52.372Z",
+  "count": 6,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/kawasaki-select-model-ebony-1676444157537.png?q=100",
+  "colors": [
+    {
+      "name": "Ebony",
+      "image": "/data/brand-model-images/2w-colors/kawasaki-india/w175/ebony.png"
+    },
+    {
+      "name": "Candy Persimmon Red",
+      "image": "/data/brand-model-images/2w-colors/kawasaki-india/w175/candy-persimmon-red.png"
+    },
+    {
+      "name": "Metallic Moondust Gray",
+      "image": "/data/brand-model-images/2w-colors/kawasaki-india/w175/metallic-moondust-gray.png"
+    },
+    {
+      "name": "Candy Emerald Green",
+      "image": "/data/brand-model-images/2w-colors/kawasaki-india/w175/candy-emerald-green.png"
+    },
+    {
+      "name": "Metallic Graphite Grey",
+      "image": "/data/brand-model-images/2w-colors/kawasaki-india/w175/metallic-graphite-grey.png"
+    },
+    {
+      "name": "Metallic Ocean Blue",
+      "image": "/data/brand-model-images/2w-colors/kawasaki-india/w175/metallic-ocean-blue.png"
+    }
+  ]
+}

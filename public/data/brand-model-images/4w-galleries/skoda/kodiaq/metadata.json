@@ -1,0 +1,50 @@
+{
+  "make": "skoda",
+  "model": "Kodiaq",
+  "brandSlug": "skoda",
+  "modelSlug": "kodiaq",
+  "sourceUrl": "https://www.cardekho.com/skoda/kodiaq",
+  "scrapedAt": "2026-04-20T05:04:37.900Z",
+  "counts": {
+    "exterior": 5,
+    "interior": 8,
+    "feature": 0,
+    "colors": 6,
+    "total": 19
+  },
+  "hero": "/data/brand-model-images/4w-galleries/skoda/kodiaq/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/skoda/kodiaq/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/skoda/kodiaq/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/skoda/kodiaq/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/skoda/kodiaq/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/skoda/kodiaq/exterior/06.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/skoda/kodiaq/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/skoda/kodiaq/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/skoda/kodiaq/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/skoda/kodiaq/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/skoda/kodiaq/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/skoda/kodiaq/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/skoda/kodiaq/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/skoda/kodiaq/interior/08.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "Moon White",
+    "Bronx Gold",
+    "Graphite Grey",
+    "Magic Black",
+    "Race Blue",
+    "Velvet Red"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/skoda/kodiaq/colors/moon-white.avif",
+    "/data/brand-model-images/4w-galleries/skoda/kodiaq/colors/bronx-gold.avif",
+    "/data/brand-model-images/4w-galleries/skoda/kodiaq/colors/graphite-grey.avif",
+    "/data/brand-model-images/4w-galleries/skoda/kodiaq/colors/magic-black.avif",
+    "/data/brand-model-images/4w-galleries/skoda/kodiaq/colors/race-blue.avif",
+    "/data/brand-model-images/4w-galleries/skoda/kodiaq/colors/velvet-red.avif"
+  ]
+}

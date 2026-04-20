@@ -1,0 +1,52 @@
+{
+  "make": "land rover",
+  "model": "Defender",
+  "brandSlug": "land-rover",
+  "modelSlug": "defender",
+  "sourceUrl": "https://www.cardekho.com/land-rover/defender",
+  "scrapedAt": "2026-04-20T05:03:35.185Z",
+  "counts": {
+    "exterior": 5,
+    "interior": 8,
+    "feature": 0,
+    "colors": 7,
+    "total": 20
+  },
+  "hero": "/data/brand-model-images/4w-galleries/land-rover/defender/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/land-rover/defender/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/defender/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/defender/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/defender/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/defender/exterior/06.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/land-rover/defender/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/defender/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/defender/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/defender/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/defender/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/defender/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/defender/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/defender/interior/08.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "Tasman Blue Matte White DT",
+    "Borasco Grey Matte DT",
+    "Woolstone Green Matte DT",
+    "Santorini Black White DT",
+    "Fuji White",
+    "Borasco Grey Matte White DT",
+    "Gondwana Stone Matte White DT"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/land-rover/defender/colors/tasman-blue-matte-white-dt.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/defender/colors/borasco-grey-matte-dt.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/defender/colors/woolstone-green-matte-dt.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/defender/colors/santorini-black-white-dt.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/defender/colors/fuji-white.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/defender/colors/borasco-grey-matte-white-dt.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/defender/colors/gondwana-stone-matte-white-dt.avif"
+  ]
+}

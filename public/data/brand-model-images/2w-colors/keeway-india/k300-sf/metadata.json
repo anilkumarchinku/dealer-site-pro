@@ -1,0 +1,25 @@
+{
+  "brand": "Keeway India",
+  "model": "K300 SF",
+  "brandId": "keeway-india",
+  "makeSlug": "keeway-bikes",
+  "modelSlug": "k300-sf",
+  "sourceUrl": "https://www.bikewale.com/keeway-bikes/k300-sf/colours/",
+  "scrapedAt": "2026-04-20T05:18:46.407Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/mmegafb_1810145.jpg?q=100",
+  "colors": [
+    {
+      "name": "Matte Black",
+      "image": "/data/brand-model-images/2w-colors/keeway-india/k300-sf/matte-black.avif"
+    },
+    {
+      "name": "Matte Red",
+      "image": "/data/brand-model-images/2w-colors/keeway-india/k300-sf/matte-red.avif"
+    },
+    {
+      "name": "Matte White",
+      "image": "/data/brand-model-images/2w-colors/keeway-india/k300-sf/matte-white.avif"
+    }
+  ]
+}

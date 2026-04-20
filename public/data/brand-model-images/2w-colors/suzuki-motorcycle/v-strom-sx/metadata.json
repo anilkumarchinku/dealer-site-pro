@@ -1,0 +1,41 @@
+{
+  "brand": "Suzuki Motorcycle India",
+  "model": "V-Strom SX",
+  "brandId": "suzuki-motorcycle",
+  "makeSlug": "suzuki-bikes",
+  "modelSlug": "v-strom-sx",
+  "sourceUrl": "https://www.bikewale.com/suzuki-bikes/v-strom-sx/colours/",
+  "scrapedAt": "2026-04-20T05:16:12.224Z",
+  "count": 7,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/59hdkhb_1874829.jpg?q=100",
+  "colors": [
+    {
+      "name": "Glass Sparkle Black (YVB)",
+      "image": "/data/brand-model-images/2w-colors/suzuki-motorcycle/v-strom-sx/glass-sparkle-black-yvb.avif"
+    },
+    {
+      "name": "Pearl Glacier White + Metallic Mat Stellar Blue",
+      "image": "/data/brand-model-images/2w-colors/suzuki-motorcycle/v-strom-sx/pearl-glacier-white-metallic-mat-stellar-blue.avif"
+    },
+    {
+      "name": "Champion Yellow + Glass Sparkle Black",
+      "image": "/data/brand-model-images/2w-colors/suzuki-motorcycle/v-strom-sx/champion-yellow-glass-sparkle-black.avif"
+    },
+    {
+      "name": "Champion Blue",
+      "image": "/data/brand-model-images/2w-colors/suzuki-motorcycle/v-strom-sx/champion-blue.avif"
+    },
+    {
+      "name": "Met Sonoma Red",
+      "image": "/data/brand-model-images/2w-colors/suzuki-motorcycle/v-strom-sx/met-sonoma-red.avif"
+    },
+    {
+      "name": "Glass Sparkle Black",
+      "image": "/data/brand-model-images/2w-colors/suzuki-motorcycle/v-strom-sx/glass-sparkle-black.avif"
+    },
+    {
+      "name": "Champion Yellow No 2",
+      "image": "/data/brand-model-images/2w-colors/suzuki-motorcycle/v-strom-sx/champion-yellow-no-2.avif"
+    }
+  ]
+}

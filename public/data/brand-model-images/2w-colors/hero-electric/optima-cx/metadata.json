@@ -1,0 +1,29 @@
+{
+  "brand": "Hero Electric",
+  "model": "Optima CX",
+  "brandId": "hero-electric",
+  "makeSlug": "heroelectric-bikes",
+  "modelSlug": "optima-cx",
+  "sourceUrl": "https://www.bikewale.com/heroelectric-bikes/optima-cx/colours/",
+  "scrapedAt": "2026-04-20T05:20:27.746Z",
+  "count": 4,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/hero-electric-select-model-white-1628875298278.jpg?q=100",
+  "colors": [
+    {
+      "name": "White",
+      "image": "/data/brand-model-images/2w-colors/hero-electric/optima-cx/white.avif"
+    },
+    {
+      "name": "Blue",
+      "image": "/data/brand-model-images/2w-colors/hero-electric/optima-cx/blue.avif"
+    },
+    {
+      "name": "Grey",
+      "image": "/data/brand-model-images/2w-colors/hero-electric/optima-cx/grey.avif"
+    },
+    {
+      "name": "Red",
+      "image": "/data/brand-model-images/2w-colors/hero-electric/optima-cx/red.avif"
+    }
+  ]
+}

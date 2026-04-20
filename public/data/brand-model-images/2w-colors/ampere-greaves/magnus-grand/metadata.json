@@ -1,0 +1,25 @@
+{
+  "brand": "Ampere (Greaves Electric)",
+  "model": "Magnus Grand",
+  "brandId": "ampere-greaves",
+  "makeSlug": "ampere-bikes",
+  "modelSlug": "magnus-grand",
+  "sourceUrl": "https://www.bikewale.com/ampere-bikes/magnus-grand/colours/",
+  "scrapedAt": "2026-04-20T05:53:15.913Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/v9vbihb_1872089.jpg?q=100",
+  "colors": [
+    {
+      "name": "Ocean Blue",
+      "image": "/data/brand-model-images/2w-colors/ampere-greaves/magnus-grand/ocean-blue.avif"
+    },
+    {
+      "name": "Matcha Green",
+      "image": "/data/brand-model-images/2w-colors/ampere-greaves/magnus-grand/matcha-green.avif"
+    },
+    {
+      "name": "Cinnamon Copper",
+      "image": "/data/brand-model-images/2w-colors/ampere-greaves/magnus-grand/cinnamon-copper.avif"
+    }
+  ]
+}

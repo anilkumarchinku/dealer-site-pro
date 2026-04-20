@@ -12,6 +12,7 @@ import fs from 'fs'
 import path from 'path'
 import { createClient } from '@supabase/supabase-js'
 import type { Car } from '@/lib/types/car'
+import { brandNameToId } from '@/lib/utils/brand-model-images'
 
 // Re-export static client-safe exports so server code can still use one import
 export { CAR_MAKES, getAllMakes, allCars } from '@/lib/data/cars-static'
@@ -283,14 +284,19 @@ export function getLocal3WImage(brand: string, model: string): string | null {
             return null
         }
 
-        // Common folder naming patterns
-        const folderPatterns = [
-            brandLower.replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''),
-            `${brandLower.replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}-auto`,
-            `${brandLower.replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}-motors`,
-            `${brandLower.replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}-india`,
-            `${brandLower.replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}-three-wheelers`,
-        ].filter(Boolean) as string[]
+        const canonicalFolder = brandNameToId(brand, '3w')
+        const normalizedFolder = brandLower.replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
+
+        // Prefer the canonical brand-to-folder mapping used elsewhere in the app,
+        // then fall back to legacy folder guesses for older assets.
+        const folderPatterns = Array.from(new Set([
+            canonicalFolder,
+            normalizedFolder,
+            `${normalizedFolder}-auto`,
+            `${normalizedFolder}-motors`,
+            `${normalizedFolder}-india`,
+            `${normalizedFolder}-three-wheelers`,
+        ].filter(Boolean))) as string[]
 
         for (const folder of folderPatterns) {
             const imgPath = path.join(baseDir, folder, slug)

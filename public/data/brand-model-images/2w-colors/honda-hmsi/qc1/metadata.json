@@ -1,0 +1,33 @@
+{
+  "brand": "Honda Motorcycle & Scooter India",
+  "model": "QC1",
+  "brandId": "honda-hmsi",
+  "makeSlug": "honda-bikes",
+  "modelSlug": "qc1",
+  "sourceUrl": "https://www.bikewale.com/honda-bikes/qc1/colours/",
+  "scrapedAt": "2026-04-20T05:15:30.795Z",
+  "count": 5,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/xrf0m9b_1796407.jpg?q=100",
+  "colors": [
+    {
+      "name": "Pearl Shallow Blue",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/qc1/pearl-shallow-blue.avif"
+    },
+    {
+      "name": "Pearl Misty White",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/qc1/pearl-misty-white.avif"
+    },
+    {
+      "name": "Pearl Serenity Blue",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/qc1/pearl-serenity-blue.avif"
+    },
+    {
+      "name": "Matt Foggy Silver Metallic",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/qc1/matt-foggy-silver-metallic.avif"
+    },
+    {
+      "name": "Pearl Igneous Black",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/qc1/pearl-igneous-black.avif"
+    }
+  ]
+}

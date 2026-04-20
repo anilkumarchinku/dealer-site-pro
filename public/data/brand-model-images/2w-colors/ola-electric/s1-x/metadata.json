@@ -1,0 +1,33 @@
+{
+  "brand": "Ola Electric",
+  "model": "S1 X Plus",
+  "brandId": "ola-electric",
+  "makeSlug": "ola-bikes",
+  "modelSlug": "s1-x",
+  "sourceUrl": "https://www.bikewale.com/ola-bikes/s1-x/colours/",
+  "scrapedAt": "2026-04-20T06:07:38.063Z",
+  "count": 5,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/cxnvbfb_1811687.jpg?q=100",
+  "colors": [
+    {
+      "name": "Passion Red",
+      "image": "/data/brand-model-images/2w-colors/ola-electric/s1-x/passion-red.avif"
+    },
+    {
+      "name": "Midnight Blue",
+      "image": "/data/brand-model-images/2w-colors/ola-electric/s1-x/midnight-blue.avif"
+    },
+    {
+      "name": "Jet Black",
+      "image": "/data/brand-model-images/2w-colors/ola-electric/s1-x/jet-black.avif"
+    },
+    {
+      "name": "Industrial Silver",
+      "image": "/data/brand-model-images/2w-colors/ola-electric/s1-x/industrial-silver.avif"
+    },
+    {
+      "name": "Porcelain White",
+      "image": "/data/brand-model-images/2w-colors/ola-electric/s1-x/porcelain-white.avif"
+    }
+  ]
+}

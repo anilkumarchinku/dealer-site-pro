@@ -1,0 +1,21 @@
+{
+  "brand": "Indian Motorcycle",
+  "model": "101 Scout",
+  "brandId": "indian-motorcycle",
+  "makeSlug": "indian-bikes",
+  "modelSlug": "101-scout",
+  "sourceUrl": "https://www.bikewale.com/indian-bikes/101-scout/colours/",
+  "scrapedAt": "2026-04-20T05:18:43.429Z",
+  "count": 2,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/3x3kbhb_1865218.jpg?q=100",
+  "colors": [
+    {
+      "name": "Ghost White Metallic with Graphics",
+      "image": "/data/brand-model-images/2w-colors/indian-motorcycle/101-scout/ghost-white-metallic-with-graphics.avif"
+    },
+    {
+      "name": "Sunset Red Metallic with Graphics",
+      "image": "/data/brand-model-images/2w-colors/indian-motorcycle/101-scout/sunset-red-metallic-with-graphics.avif"
+    }
+  ]
+}

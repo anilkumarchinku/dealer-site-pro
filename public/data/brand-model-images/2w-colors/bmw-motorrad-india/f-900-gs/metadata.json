@@ -1,0 +1,21 @@
+{
+  "brand": "BMW Motorrad India",
+  "model": "F 900 GS",
+  "brandId": "bmw-motorrad-india",
+  "makeSlug": "bmw-bikes",
+  "modelSlug": "f-900-gs",
+  "sourceUrl": "https://www.bikewale.com/bmw-bikes/f-900-gs/colours/",
+  "scrapedAt": "2026-04-20T05:18:18.196Z",
+  "count": 2,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/ateg6eb_1772345.jpg?q=100",
+  "colors": [
+    {
+      "name": "GS Trophy",
+      "image": "/data/brand-model-images/2w-colors/bmw-motorrad-india/f-900-gs/gs-trophy.avif"
+    },
+    {
+      "name": "Passion",
+      "image": "/data/brand-model-images/2w-colors/bmw-motorrad-india/f-900-gs/passion.avif"
+    }
+  ]
+}

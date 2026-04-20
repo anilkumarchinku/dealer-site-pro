@@ -1,0 +1,29 @@
+{
+  "brand": "Zontes India",
+  "model": "350T",
+  "brandId": "zontes-india",
+  "makeSlug": "zontes-bikes",
+  "modelSlug": "350t",
+  "sourceUrl": "https://www.bikewale.com/zontes-bikes/350t/colours/",
+  "scrapedAt": "2026-04-20T05:18:53.843Z",
+  "count": 4,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/zontes-select-model-orange-1664891292544.gif?q=100",
+  "colors": [
+    {
+      "name": "Orange",
+      "image": "/data/brand-model-images/2w-colors/zontes-india/350t/orange.avif"
+    },
+    {
+      "name": "Champagne",
+      "image": "/data/brand-model-images/2w-colors/zontes-india/350t/champagne.avif"
+    },
+    {
+      "name": "Orange (Adv)",
+      "image": "/data/brand-model-images/2w-colors/zontes-india/350t/orange-adv.avif"
+    },
+    {
+      "name": "Black (Adv)",
+      "image": "/data/brand-model-images/2w-colors/zontes-india/350t/black-adv.avif"
+    }
+  ]
+}

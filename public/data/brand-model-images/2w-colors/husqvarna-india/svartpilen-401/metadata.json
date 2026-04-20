@@ -1,0 +1,17 @@
+{
+  "brand": "Husqvarna India",
+  "model": "Svartpilen 401",
+  "brandId": "husqvarna-india",
+  "makeSlug": "husqvarna-bikes",
+  "modelSlug": "svartpilen-401",
+  "sourceUrl": "https://www.bikewale.com/husqvarna-bikes/svartpilen-401/colours/",
+  "scrapedAt": "2026-04-20T05:16:27.485Z",
+  "count": 1,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/husqvarna-select-model-black-1705431624392.png?q=100",
+  "colors": [
+    {
+      "name": "Black",
+      "image": "/data/brand-model-images/2w-colors/husqvarna-india/svartpilen-401/black.png"
+    }
+  ]
+}

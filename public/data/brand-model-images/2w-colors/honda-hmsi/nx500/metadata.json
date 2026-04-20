@@ -1,0 +1,25 @@
+{
+  "brand": "Honda Motorcycle & Scooter India",
+  "model": "NX500",
+  "brandId": "honda-hmsi",
+  "makeSlug": "honda-bikes",
+  "modelSlug": "nx500",
+  "sourceUrl": "https://www.bikewale.com/honda-bikes/nx500/colours/",
+  "scrapedAt": "2026-04-20T05:15:26.655Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/honda-select-model-pearl-horizon-white-1705657375652.png?q=100",
+  "colors": [
+    {
+      "name": "Pearl Horizon White",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/nx500/pearl-horizon-white.png"
+    },
+    {
+      "name": "Matte Gunpowder Black Metallic",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/nx500/matte-gunpowder-black-metallic.png"
+    },
+    {
+      "name": "Grand Prix Red",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/nx500/grand-prix-red.png"
+    }
+  ]
+}

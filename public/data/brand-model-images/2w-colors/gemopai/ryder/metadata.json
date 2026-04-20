@@ -1,0 +1,33 @@
+{
+  "brand": "Gemopai",
+  "model": "Ryder",
+  "brandId": "gemopai",
+  "makeSlug": "gemopai-bikes",
+  "modelSlug": "ryder",
+  "sourceUrl": "https://www.bikewale.com/gemopai-bikes/ryder/colours/",
+  "scrapedAt": "2026-04-20T05:20:32.329Z",
+  "count": 5,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/undefined-glossy-white-1602092423082.jpg?q=100",
+  "colors": [
+    {
+      "name": "Glossy White",
+      "image": "/data/brand-model-images/2w-colors/gemopai/ryder/glossy-white.avif"
+    },
+    {
+      "name": "Ivory Gold",
+      "image": "/data/brand-model-images/2w-colors/gemopai/ryder/ivory-gold.avif"
+    },
+    {
+      "name": "Charcoal Grey",
+      "image": "/data/brand-model-images/2w-colors/gemopai/ryder/charcoal-grey.avif"
+    },
+    {
+      "name": "Sapphire Blue",
+      "image": "/data/brand-model-images/2w-colors/gemopai/ryder/sapphire-blue.avif"
+    },
+    {
+      "name": "Imperial Red",
+      "image": "/data/brand-model-images/2w-colors/gemopai/ryder/imperial-red.avif"
+    }
+  ]
+}

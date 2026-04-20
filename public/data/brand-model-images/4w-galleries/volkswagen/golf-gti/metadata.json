@@ -1,0 +1,46 @@
+{
+  "make": "volkswagen",
+  "model": "Golf GTI",
+  "brandSlug": "volkswagen",
+  "modelSlug": "golf-gti",
+  "sourceUrl": "https://www.cardekho.com/volkswagen/golf-gti",
+  "scrapedAt": "2026-04-20T06:18:18.891Z",
+  "counts": {
+    "exterior": 5,
+    "interior": 8,
+    "feature": 0,
+    "colors": 4,
+    "total": 17
+  },
+  "hero": "/data/brand-model-images/4w-galleries/volkswagen/golf-gti/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/volkswagen/golf-gti/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/volkswagen/golf-gti/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/volkswagen/golf-gti/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/volkswagen/golf-gti/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/volkswagen/golf-gti/exterior/06.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/volkswagen/golf-gti/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/volkswagen/golf-gti/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/volkswagen/golf-gti/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/volkswagen/golf-gti/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/volkswagen/golf-gti/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/volkswagen/golf-gti/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/volkswagen/golf-gti/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/volkswagen/golf-gti/interior/08.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "Oryx White Premium Mother Of Pearl Black",
+    "Grenadilla Black Metallic",
+    "Moonstone Grey Black",
+    "Kings Red Premium Metallic Black"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/volkswagen/golf-gti/colors/oryx-white-premium-mother-of-pearl-black.avif",
+    "/data/brand-model-images/4w-galleries/volkswagen/golf-gti/colors/grenadilla-black-metallic.avif",
+    "/data/brand-model-images/4w-galleries/volkswagen/golf-gti/colors/moonstone-grey-black.avif",
+    "/data/brand-model-images/4w-galleries/volkswagen/golf-gti/colors/kings-red-premium-metallic-black.avif"
+  ]
+}

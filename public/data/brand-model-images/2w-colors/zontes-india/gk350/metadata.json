@@ -1,0 +1,25 @@
+{
+  "brand": "Zontes India",
+  "model": "GK350",
+  "brandId": "zontes-india",
+  "makeSlug": "zontes-bikes",
+  "modelSlug": "gk350",
+  "sourceUrl": "https://www.bikewale.com/zontes-bikes/gk350/colours/",
+  "scrapedAt": "2026-04-20T05:18:55.272Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/zontes-select-model-silver-orange-1664891357983.gif?q=100",
+  "colors": [
+    {
+      "name": "Silver orange",
+      "image": "/data/brand-model-images/2w-colors/zontes-india/gk350/silver-orange.avif"
+    },
+    {
+      "name": "Black Gold",
+      "image": "/data/brand-model-images/2w-colors/zontes-india/gk350/black-gold.avif"
+    },
+    {
+      "name": "Black Blue",
+      "image": "/data/brand-model-images/2w-colors/zontes-india/gk350/black-blue.avif"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "brand": "Okinawa Autotech",
+  "model": "Dual 100",
+  "brandId": "okinawa-autotech",
+  "makeSlug": "okinawa-bikes",
+  "modelSlug": "dual-100",
+  "sourceUrl": "https://www.bikewale.com/okinawa-bikes/dual-100/colours/",
+  "scrapedAt": "2026-04-20T05:19:30.017Z",
+  "count": 2,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/okinawa-select-model-yellow-1689837764349.png?q=100",
+  "colors": [
+    {
+      "name": "Yellow",
+      "image": "/data/brand-model-images/2w-colors/okinawa-autotech/dual-100/yellow.png"
+    },
+    {
+      "name": "Red",
+      "image": "/data/brand-model-images/2w-colors/okinawa-autotech/dual-100/red.png"
+    }
+  ]
+}

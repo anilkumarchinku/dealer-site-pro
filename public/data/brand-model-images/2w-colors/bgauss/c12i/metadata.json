@@ -1,0 +1,41 @@
+{
+  "brand": "BGauss",
+  "model": "C12i Max",
+  "brandId": "bgauss",
+  "makeSlug": "bgauss-bikes",
+  "modelSlug": "c12i",
+  "sourceUrl": "https://www.bikewale.com/bgauss-bikes/c12i/colours/",
+  "scrapedAt": "2026-04-20T06:14:05.397Z",
+  "count": 7,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/3h3m0gb_1836508.avif?q=100",
+  "colors": [
+    {
+      "name": "Brooklyn Black",
+      "image": "/data/brand-model-images/2w-colors/bgauss/c12i/brooklyn-black.avif"
+    },
+    {
+      "name": "Foliage Green",
+      "image": "/data/brand-model-images/2w-colors/bgauss/c12i/foliage-green.avif"
+    },
+    {
+      "name": "Pearl White",
+      "image": "/data/brand-model-images/2w-colors/bgauss/c12i/pearl-white.avif"
+    },
+    {
+      "name": "Matte BGauss Blue",
+      "image": "/data/brand-model-images/2w-colors/bgauss/c12i/matte-bgauss-blue.png"
+    },
+    {
+      "name": "Yellow Techno",
+      "image": "/data/brand-model-images/2w-colors/bgauss/c12i/yellow-techno.png"
+    },
+    {
+      "name": "Peach and White",
+      "image": "/data/brand-model-images/2w-colors/bgauss/c12i/peach-and-white.avif"
+    },
+    {
+      "name": "Teal and White",
+      "image": "/data/brand-model-images/2w-colors/bgauss/c12i/teal-and-white.avif"
+    }
+  ]
+}

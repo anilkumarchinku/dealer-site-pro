@@ -1,0 +1,21 @@
+{
+  "brand": "BMW Motorrad India",
+  "model": "R 1300 GS",
+  "brandId": "bmw-motorrad-india",
+  "makeSlug": "bmw-bikes",
+  "modelSlug": "r-1300-gs",
+  "sourceUrl": "https://www.bikewale.com/bmw-bikes/r-1300-gs/colours/",
+  "scrapedAt": "2026-04-20T05:18:21.188Z",
+  "count": 2,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/bmw-select-model-light-white--light-gray-1717615532587.png?q=100",
+  "colors": [
+    {
+      "name": "Light White / Light Gray",
+      "image": "/data/brand-model-images/2w-colors/bmw-motorrad-india/r-1300-gs/light-white-light-gray.png"
+    },
+    {
+      "name": "Aurelius Green Metallic",
+      "image": "/data/brand-model-images/2w-colors/bmw-motorrad-india/r-1300-gs/aurelius-green-metallic.avif"
+    }
+  ]
+}

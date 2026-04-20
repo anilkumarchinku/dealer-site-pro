@@ -1,0 +1,25 @@
+{
+  "brand": "iVOOMi",
+  "model": "S1",
+  "brandId": "ivoomi",
+  "makeSlug": "ivoomi-bikes",
+  "modelSlug": "s1",
+  "sourceUrl": "https://www.bikewale.com/ivoomi-bikes/s1/colours/",
+  "scrapedAt": "2026-04-20T05:19:59.447Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/ivoomi-select-model-grey-1663938378055.gif?q=100",
+  "colors": [
+    {
+      "name": "Grey",
+      "image": "/data/brand-model-images/2w-colors/ivoomi/s1/grey.avif"
+    },
+    {
+      "name": "White",
+      "image": "/data/brand-model-images/2w-colors/ivoomi/s1/white.avif"
+    },
+    {
+      "name": "Red",
+      "image": "/data/brand-model-images/2w-colors/ivoomi/s1/red.avif"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "brand": "Triumph India",
+  "model": "Street Triple R",
+  "brandId": "triumph-india",
+  "makeSlug": "triumph-bikes",
+  "modelSlug": "street-triple-r",
+  "sourceUrl": "https://www.bikewale.com/triumph-bikes/street-triple-r/colours/",
+  "scrapedAt": "2026-04-20T05:17:46.736Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/7ynq6ib_1907747.png?q=100",
+  "colors": [
+    {
+      "name": "Phantom Black",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/street-triple-r/phantom-black.png"
+    },
+    {
+      "name": "Matt Baja Orange",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/street-triple-r/matt-baja-orange.avif"
+    },
+    {
+      "name": "Pure White",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/street-triple-r/pure-white.avif"
+    }
+  ]
+}

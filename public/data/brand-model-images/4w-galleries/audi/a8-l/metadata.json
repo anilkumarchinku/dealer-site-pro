@@ -1,0 +1,50 @@
+{
+  "make": "audi",
+  "model": "A8 L",
+  "brandSlug": "audi",
+  "modelSlug": "a8-l",
+  "sourceUrl": "https://www.cardekho.com/audi/a8-l",
+  "scrapedAt": "2026-04-20T06:30:46.651Z",
+  "counts": {
+    "exterior": 5,
+    "interior": 8,
+    "feature": 0,
+    "colors": 6,
+    "total": 19
+  },
+  "hero": "/data/brand-model-images/4w-galleries/audi/a8-l/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/audi/a8-l/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/audi/a8-l/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/audi/a8-l/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/audi/a8-l/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/audi/a8-l/exterior/06.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/audi/a8-l/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/audi/a8-l/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/audi/a8-l/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/audi/a8-l/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/audi/a8-l/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/audi/a8-l/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/audi/a8-l/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/audi/a8-l/interior/08.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "Firmament Blue Metallic",
+    "Manhattan Grey Metallic",
+    "Mythos Black Metallic",
+    "Floret Silver Metallic",
+    "Terra Gray Metallic",
+    "Glacier White Metallic"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/audi/a8-l/colors/firmament-blue-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/a8-l/colors/manhattan-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/a8-l/colors/mythos-black-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/a8-l/colors/floret-silver-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/a8-l/colors/terra-gray-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/a8-l/colors/glacier-white-metallic.avif"
+  ]
+}

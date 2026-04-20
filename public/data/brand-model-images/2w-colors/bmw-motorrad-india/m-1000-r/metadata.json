@@ -1,0 +1,25 @@
+{
+  "brand": "BMW Motorrad India",
+  "model": "M 1000 R",
+  "brandId": "bmw-motorrad-india",
+  "makeSlug": "bmw-bikes",
+  "modelSlug": "m-1000-r",
+  "sourceUrl": "https://www.bikewale.com/bmw-bikes/m-1000-r/colours/",
+  "scrapedAt": "2026-04-20T05:18:30.421Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/o80e3ib_1915350.png?q=100",
+  "colors": [
+    {
+      "name": "Blackstorm Metallic",
+      "image": "/data/brand-model-images/2w-colors/bmw-motorrad-india/m-1000-r/blackstorm-metallic.png"
+    },
+    {
+      "name": "White Aluminium Metallic Matt",
+      "image": "/data/brand-model-images/2w-colors/bmw-motorrad-india/m-1000-r/white-aluminium-metallic-matt.png"
+    },
+    {
+      "name": "Light White",
+      "image": "/data/brand-model-images/2w-colors/bmw-motorrad-india/m-1000-r/light-white.png"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "brand": "Honda Motorcycle & Scooter India",
+  "model": "Transalp XL750",
+  "brandId": "honda-hmsi",
+  "makeSlug": "honda-bikes",
+  "modelSlug": "transalp-xl750",
+  "sourceUrl": "https://www.bikewale.com/honda-bikes/transalp-xl750/colours/",
+  "scrapedAt": "2026-04-20T05:15:27.288Z",
+  "count": 2,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/r0ruegb_1841332.jpg?q=100",
+  "colors": [
+    {
+      "name": "Graphite Black",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/transalp-xl750/graphite-black.avif"
+    },
+    {
+      "name": "Ross White",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/transalp-xl750/ross-white.avif"
+    }
+  ]
+}

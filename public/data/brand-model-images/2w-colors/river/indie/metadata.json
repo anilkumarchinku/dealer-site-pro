@@ -1,0 +1,33 @@
+{
+  "brand": "River",
+  "model": "Indie Gen 3",
+  "brandId": "river",
+  "makeSlug": "river-bikes",
+  "modelSlug": "indie",
+  "sourceUrl": "https://www.bikewale.com/river-bikes/indie/colours/",
+  "scrapedAt": "2026-04-20T05:20:27.355Z",
+  "count": 5,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/7v7379b_1796355.jpg?q=100",
+  "colors": [
+    {
+      "name": "Storm Grey",
+      "image": "/data/brand-model-images/2w-colors/river/indie/storm-grey.avif"
+    },
+    {
+      "name": "Winter White",
+      "image": "/data/brand-model-images/2w-colors/river/indie/winter-white.avif"
+    },
+    {
+      "name": "Spring Yellow",
+      "image": "/data/brand-model-images/2w-colors/river/indie/spring-yellow.avif"
+    },
+    {
+      "name": "Monsoon Blue",
+      "image": "/data/brand-model-images/2w-colors/river/indie/monsoon-blue.avif"
+    },
+    {
+      "name": "Summer Red",
+      "image": "/data/brand-model-images/2w-colors/river/indie/summer-red.avif"
+    }
+  ]
+}

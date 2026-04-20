@@ -1,0 +1,29 @@
+{
+  "brand": "Lectrix EV",
+  "model": "SX25",
+  "brandId": "lectrix-ev",
+  "makeSlug": "lectrix-bikes",
+  "modelSlug": "sx25",
+  "sourceUrl": "https://www.bikewale.com/lectrix-bikes/sx25/colours/",
+  "scrapedAt": "2026-04-20T06:15:09.526Z",
+  "count": 4,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/lectrix-select-model-white-1701782841782.png?q=100",
+  "colors": [
+    {
+      "name": "White",
+      "image": "/data/brand-model-images/2w-colors/lectrix-ev/sx25/white.png"
+    },
+    {
+      "name": "Green",
+      "image": "/data/brand-model-images/2w-colors/lectrix-ev/sx25/green.png"
+    },
+    {
+      "name": "Blue",
+      "image": "/data/brand-model-images/2w-colors/lectrix-ev/sx25/blue.png"
+    },
+    {
+      "name": "Red",
+      "image": "/data/brand-model-images/2w-colors/lectrix-ev/sx25/red.png"
+    }
+  ]
+}

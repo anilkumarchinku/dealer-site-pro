@@ -1,0 +1,21 @@
+{
+  "brand": "KTM India",
+  "model": "390 Adventure X",
+  "brandId": "ktm-india",
+  "makeSlug": "ktm-bikes",
+  "modelSlug": "390-adventure-x",
+  "sourceUrl": "https://www.bikewale.com/ktm-bikes/390-adventure-x/colours/",
+  "scrapedAt": "2026-04-20T05:16:23.485Z",
+  "count": 2,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/yfpjngb_1851680.avif?q=100",
+  "colors": [
+    {
+      "name": "Ceramic White",
+      "image": "/data/brand-model-images/2w-colors/ktm-india/390-adventure-x/ceramic-white.avif"
+    },
+    {
+      "name": "Electronic Orange",
+      "image": "/data/brand-model-images/2w-colors/ktm-india/390-adventure-x/electronic-orange.avif"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "brand": "Yamaha India",
+  "model": "FZ-S Fi Hybrid",
+  "brandId": "yamaha-india",
+  "makeSlug": "yamaha-bikes",
+  "modelSlug": "fz-s",
+  "sourceUrl": "https://www.bikewale.com/yamaha-bikes/fz-s/colours/",
+  "scrapedAt": "2026-04-20T06:07:38.095Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/yamaha-select-model-matte-red-1704797366461.png?q=100",
+  "colors": [
+    {
+      "name": "Matte Red",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/fz-s/matte-red.png"
+    },
+    {
+      "name": "Matte Grey",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/fz-s/matte-grey.png"
+    },
+    {
+      "name": "Dark Knight",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/fz-s/dark-knight.png"
+    }
+  ]
+}

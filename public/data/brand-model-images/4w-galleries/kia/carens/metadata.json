@@ -1,0 +1,50 @@
+{
+  "make": "kia",
+  "model": "Carens",
+  "brandSlug": "kia",
+  "modelSlug": "carens",
+  "sourceUrl": "https://www.cardekho.com/kia/carens",
+  "scrapedAt": "2026-04-20T05:03:24.794Z",
+  "counts": {
+    "exterior": 5,
+    "interior": 8,
+    "feature": 0,
+    "colors": 6,
+    "total": 19
+  },
+  "hero": "/data/brand-model-images/4w-galleries/kia/carens/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/kia/carens/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/kia/carens/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/kia/carens/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/kia/carens/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/kia/carens/exterior/06.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/kia/carens/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/kia/carens/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/kia/carens/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/kia/carens/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/kia/carens/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/kia/carens/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/kia/carens/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/kia/carens/interior/08.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "Sparkling Silver",
+    "Clear White",
+    "Pewter Olive",
+    "Aurora Black Pearl",
+    "Imperial Blue",
+    "Gravity Gray"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/kia/carens/colors/sparkling-silver.avif",
+    "/data/brand-model-images/4w-galleries/kia/carens/colors/clear-white.avif",
+    "/data/brand-model-images/4w-galleries/kia/carens/colors/pewter-olive.avif",
+    "/data/brand-model-images/4w-galleries/kia/carens/colors/aurora-black-pearl.avif",
+    "/data/brand-model-images/4w-galleries/kia/carens/colors/imperial-blue.avif",
+    "/data/brand-model-images/4w-galleries/kia/carens/colors/gravity-gray.avif"
+  ]
+}

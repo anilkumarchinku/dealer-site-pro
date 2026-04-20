@@ -1,0 +1,25 @@
+{
+  "brand": "Quantum Energy",
+  "model": "Milan",
+  "brandId": "quantum-energy",
+  "makeSlug": "quantum-energy-bikes",
+  "modelSlug": "milan",
+  "sourceUrl": "https://www.bikewale.com/quantum-energy-bikes/milan/colours/",
+  "scrapedAt": "2026-04-20T05:19:52.187Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/iou9c9b_1784907.jpg?q=100",
+  "colors": [
+    {
+      "name": "Blue",
+      "image": "/data/brand-model-images/2w-colors/quantum-energy/milan/blue.avif"
+    },
+    {
+      "name": "White",
+      "image": "/data/brand-model-images/2w-colors/quantum-energy/milan/white.avif"
+    },
+    {
+      "name": "Grey",
+      "image": "/data/brand-model-images/2w-colors/quantum-energy/milan/grey.avif"
+    }
+  ]
+}

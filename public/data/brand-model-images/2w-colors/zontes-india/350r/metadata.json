@@ -1,0 +1,25 @@
+{
+  "brand": "Zontes India",
+  "model": "350R",
+  "brandId": "zontes-india",
+  "makeSlug": "zontes-bikes",
+  "modelSlug": "350r",
+  "sourceUrl": "https://www.bikewale.com/zontes-bikes/350r/colours/",
+  "scrapedAt": "2026-04-20T05:18:51.985Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/b0fomib_1904947.png?q=100",
+  "colors": [
+    {
+      "name": "Blue",
+      "image": "/data/brand-model-images/2w-colors/zontes-india/350r/blue.png"
+    },
+    {
+      "name": "Silver",
+      "image": "/data/brand-model-images/2w-colors/zontes-india/350r/silver.png"
+    },
+    {
+      "name": "Black",
+      "image": "/data/brand-model-images/2w-colors/zontes-india/350r/black.png"
+    }
+  ]
+}

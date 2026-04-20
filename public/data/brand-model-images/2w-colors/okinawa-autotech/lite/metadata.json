@@ -1,0 +1,33 @@
+{
+  "brand": "Okinawa Autotech",
+  "model": "Lite",
+  "brandId": "okinawa-autotech",
+  "makeSlug": "okinawa-bikes",
+  "modelSlug": "lite",
+  "sourceUrl": "https://www.bikewale.com/okinawa-bikes/lite/colours/",
+  "scrapedAt": "2026-04-20T05:19:30.998Z",
+  "count": 5,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/okinawa-select-model-yellow-1689753226384.png?q=100",
+  "colors": [
+    {
+      "name": "Yellow",
+      "image": "/data/brand-model-images/2w-colors/okinawa-autotech/lite/yellow.png"
+    },
+    {
+      "name": "White",
+      "image": "/data/brand-model-images/2w-colors/okinawa-autotech/lite/white.png"
+    },
+    {
+      "name": "Red",
+      "image": "/data/brand-model-images/2w-colors/okinawa-autotech/lite/red.png"
+    },
+    {
+      "name": "Cyan",
+      "image": "/data/brand-model-images/2w-colors/okinawa-autotech/lite/cyan.png"
+    },
+    {
+      "name": "Blue",
+      "image": "/data/brand-model-images/2w-colors/okinawa-autotech/lite/blue.png"
+    }
+  ]
+}

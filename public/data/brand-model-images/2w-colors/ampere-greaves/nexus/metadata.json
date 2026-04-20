@@ -1,0 +1,37 @@
+{
+  "brand": "Ampere (Greaves Electric)",
+  "model": "Nexus",
+  "brandId": "ampere-greaves",
+  "makeSlug": "ampere-bikes",
+  "modelSlug": "nexus",
+  "sourceUrl": "https://www.bikewale.com/ampere-bikes/nexus/colours/",
+  "scrapedAt": "2026-04-20T05:53:14.456Z",
+  "count": 6,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/xpln88b_1927424.jpg?q=100",
+  "colors": [
+    {
+      "name": "Carbon Knight",
+      "image": "/data/brand-model-images/2w-colors/ampere-greaves/nexus/carbon-knight.avif"
+    },
+    {
+      "name": "Infinite Blue",
+      "image": "/data/brand-model-images/2w-colors/ampere-greaves/nexus/infinite-blue.avif"
+    },
+    {
+      "name": "Indian Red",
+      "image": "/data/brand-model-images/2w-colors/ampere-greaves/nexus/indian-red.png"
+    },
+    {
+      "name": "Steel Grey",
+      "image": "/data/brand-model-images/2w-colors/ampere-greaves/nexus/steel-grey.png"
+    },
+    {
+      "name": "Lunar White",
+      "image": "/data/brand-model-images/2w-colors/ampere-greaves/nexus/lunar-white.png"
+    },
+    {
+      "name": "Zanskar Aqua",
+      "image": "/data/brand-model-images/2w-colors/ampere-greaves/nexus/zanskar-aqua.png"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "brand": "Kawasaki India",
+  "model": "Ninja ZX-10R",
+  "brandId": "kawasaki-india",
+  "makeSlug": "kawasaki-bikes",
+  "modelSlug": "ninja-zx-10r",
+  "sourceUrl": "https://www.bikewale.com/kawasaki-bikes/ninja-zx-10r/colours/",
+  "scrapedAt": "2026-04-20T05:17:02.151Z",
+  "count": 2,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/tmn9fhb_1869497.jpg?q=100",
+  "colors": [
+    {
+      "name": "Metallic Graphite Gray / Metallic Diablo Black",
+      "image": "/data/brand-model-images/2w-colors/kawasaki-india/ninja-zx-10r/metallic-graphite-gray-metallic-diablo-black.avif"
+    },
+    {
+      "name": "Lime Green / Ebony / Pearl Blizzard White",
+      "image": "/data/brand-model-images/2w-colors/kawasaki-india/ninja-zx-10r/lime-green-ebony-pearl-blizzard-white.avif"
+    }
+  ]
+}

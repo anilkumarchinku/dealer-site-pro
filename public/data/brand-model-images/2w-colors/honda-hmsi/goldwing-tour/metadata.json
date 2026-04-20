@@ -1,0 +1,17 @@
+{
+  "brand": "Honda Motorcycle & Scooter India",
+  "model": "Goldwing Tour",
+  "brandId": "honda-hmsi",
+  "makeSlug": "honda-bikes",
+  "modelSlug": "goldwing-tour",
+  "sourceUrl": "https://www.bikewale.com/honda-bikes/goldwing-tour/colours/",
+  "scrapedAt": "2026-04-20T05:15:27.861Z",
+  "count": 1,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/51icbgb_1837900.avif?q=100",
+  "colors": [
+    {
+      "name": "Gunmetal Black Metallic – Dct With Airbag",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/goldwing-tour/gunmetal-black-metallic-dct-with-airbag.avif"
+    }
+  ]
+}

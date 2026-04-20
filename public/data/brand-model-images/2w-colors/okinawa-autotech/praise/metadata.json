@@ -1,0 +1,45 @@
+{
+  "brand": "Okinawa Autotech",
+  "model": "PraisePro",
+  "brandId": "okinawa-autotech",
+  "makeSlug": "okinawa-bikes",
+  "modelSlug": "praise",
+  "sourceUrl": "https://www.bikewale.com/okinawa-bikes/praise/colours/",
+  "scrapedAt": "2026-04-20T05:19:29.673Z",
+  "count": 8,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/okinawa-select-model-white-1689834046305.png?q=100",
+  "colors": [
+    {
+      "name": "White",
+      "image": "/data/brand-model-images/2w-colors/okinawa-autotech/praise/white.png"
+    },
+    {
+      "name": "Olive Green",
+      "image": "/data/brand-model-images/2w-colors/okinawa-autotech/praise/olive-green.png"
+    },
+    {
+      "name": "Mocha Brown",
+      "image": "/data/brand-model-images/2w-colors/okinawa-autotech/praise/mocha-brown.png"
+    },
+    {
+      "name": "Seafoam Green",
+      "image": "/data/brand-model-images/2w-colors/okinawa-autotech/praise/seafoam-green.png"
+    },
+    {
+      "name": "Sun Orange",
+      "image": "/data/brand-model-images/2w-colors/okinawa-autotech/praise/sun-orange.png"
+    },
+    {
+      "name": "Black",
+      "image": "/data/brand-model-images/2w-colors/okinawa-autotech/praise/black.png"
+    },
+    {
+      "name": "Blue",
+      "image": "/data/brand-model-images/2w-colors/okinawa-autotech/praise/blue.png"
+    },
+    {
+      "name": "Glossy Red Black",
+      "image": "/data/brand-model-images/2w-colors/okinawa-autotech/praise/glossy-red-black.png"
+    }
+  ]
+}

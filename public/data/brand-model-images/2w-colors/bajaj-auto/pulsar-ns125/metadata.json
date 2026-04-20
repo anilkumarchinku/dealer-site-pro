@@ -1,0 +1,37 @@
+{
+  "brand": "Bajaj Auto",
+  "model": "Pulsar NS125",
+  "brandId": "bajaj-auto",
+  "makeSlug": "bajaj-bikes",
+  "modelSlug": "pulsar-ns125",
+  "sourceUrl": "https://www.bikewale.com/bajaj-bikes/pulsar-ns125/colours/",
+  "scrapedAt": "2026-04-20T06:07:38.476Z",
+  "count": 6,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/32hmoib_1906689.png?q=100",
+  "colors": [
+    {
+      "name": "Pewter Grey",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/pulsar-ns125/pewter-grey.png"
+    },
+    {
+      "name": "Red",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/pulsar-ns125/red.png"
+    },
+    {
+      "name": "Orange",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/pulsar-ns125/orange.png"
+    },
+    {
+      "name": "Blue",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/pulsar-ns125/blue.png"
+    },
+    {
+      "name": "Pearl Mettalic White",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/pulsar-ns125/pearl-mettalic-white.png"
+    },
+    {
+      "name": "Black",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/pulsar-ns125/black.png"
+    }
+  ]
+}

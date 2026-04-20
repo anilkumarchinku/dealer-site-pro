@@ -1,0 +1,29 @@
+{
+  "brand": "Harley-Davidson India",
+  "model": "Sportster S",
+  "brandId": "harley-davidson-india",
+  "makeSlug": "harleydavidson-bikes",
+  "modelSlug": "sportster-s",
+  "sourceUrl": "https://www.bikewale.com/harleydavidson-bikes/sportster-s/colours/",
+  "scrapedAt": "2026-04-20T05:53:15.437Z",
+  "count": 4,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/6jqoohb_1879761.jpg?q=100",
+  "colors": [
+    {
+      "name": "Mystic Shift",
+      "image": "/data/brand-model-images/2w-colors/harley-davidson-india/sportster-s/mystic-shift.avif"
+    },
+    {
+      "name": "Brilliant Red",
+      "image": "/data/brand-model-images/2w-colors/harley-davidson-india/sportster-s/brilliant-red.avif"
+    },
+    {
+      "name": "Billiard Gray",
+      "image": "/data/brand-model-images/2w-colors/harley-davidson-india/sportster-s/billiard-gray.avif"
+    },
+    {
+      "name": "Vivid Black",
+      "image": "/data/brand-model-images/2w-colors/harley-davidson-india/sportster-s/vivid-black.avif"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "brand": "Simple Energy",
+  "model": "One Gen 2",
+  "brandId": "simple-energy",
+  "makeSlug": "simple-energy-bikes",
+  "modelSlug": "one-gen-2",
+  "sourceUrl": "https://www.bikewale.com/simple-energy-bikes/one-gen-2/colours/",
+  "scrapedAt": "2026-04-20T05:19:31.319Z",
+  "count": 9,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/d35khib_1898513.jpg?q=100",
+  "colors": [
+    {
+      "name": "Aero X",
+      "image": "/data/brand-model-images/2w-colors/simple-energy/one-gen-2/aero-x.avif"
+    },
+    {
+      "name": "Light X",
+      "image": "/data/brand-model-images/2w-colors/simple-energy/one-gen-2/light-x.avif"
+    },
+    {
+      "name": "Asphalt X",
+      "image": "/data/brand-model-images/2w-colors/simple-energy/one-gen-2/asphalt-x.avif"
+    },
+    {
+      "name": "Brazen X",
+      "image": "/data/brand-model-images/2w-colors/simple-energy/one-gen-2/brazen-x.avif"
+    },
+    {
+      "name": "Aero Grey",
+      "image": "/data/brand-model-images/2w-colors/simple-energy/one-gen-2/aero-grey.avif"
+    },
+    {
+      "name": "Grace White",
+      "image": "/data/brand-model-images/2w-colors/simple-energy/one-gen-2/grace-white.avif"
+    },
+    {
+      "name": "Azure Blue",
+      "image": "/data/brand-model-images/2w-colors/simple-energy/one-gen-2/azure-blue.avif"
+    },
+    {
+      "name": "Brazen Black",
+      "image": "/data/brand-model-images/2w-colors/simple-energy/one-gen-2/brazen-black.avif"
+    },
+    {
+      "name": "Sonic Red",
+      "image": "/data/brand-model-images/2w-colors/simple-energy/one-gen-2/sonic-red.avif"
+    }
+  ]
+}

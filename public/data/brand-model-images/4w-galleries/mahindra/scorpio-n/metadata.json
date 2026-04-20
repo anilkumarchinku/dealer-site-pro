@@ -1,0 +1,50 @@
+{
+  "make": "mahindra",
+  "model": "Scorpio N",
+  "brandSlug": "mahindra",
+  "modelSlug": "scorpio-n",
+  "sourceUrl": "https://www.cardekho.com/mahindra/scorpio-n",
+  "scrapedAt": "2026-04-20T05:04:09.887Z",
+  "counts": {
+    "exterior": 7,
+    "interior": 8,
+    "feature": 0,
+    "colors": 5,
+    "total": 20
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mahindra/scorpio-n/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/mahindra/scorpio-n/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/scorpio-n/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/scorpio-n/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/scorpio-n/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/scorpio-n/exterior/06.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/scorpio-n/exterior/07.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/scorpio-n/exterior/08.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/mahindra/scorpio-n/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/scorpio-n/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/scorpio-n/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/scorpio-n/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/scorpio-n/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/scorpio-n/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/scorpio-n/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/scorpio-n/interior/08.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "Everest White",
+    "Stealth Black",
+    "Valyrian Silver",
+    "Deep Forest",
+    "Midnight Black"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mahindra/scorpio-n/colors/everest-white.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/scorpio-n/colors/stealth-black.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/scorpio-n/colors/valyrian-silver.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/scorpio-n/colors/deep-forest.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/scorpio-n/colors/midnight-black.avif"
+  ]
+}

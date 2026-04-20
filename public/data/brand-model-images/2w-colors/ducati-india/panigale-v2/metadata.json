@@ -1,0 +1,21 @@
+{
+  "brand": "Ducati India",
+  "model": "Panigale V2",
+  "brandId": "ducati-india",
+  "makeSlug": "ducati-bikes",
+  "modelSlug": "panigale-v2",
+  "sourceUrl": "https://www.bikewale.com/ducati-bikes/panigale-v2/colours/",
+  "scrapedAt": "2026-04-20T05:17:54.950Z",
+  "count": 2,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/28qt5hb_1884471.webp?q=100",
+  "colors": [
+    {
+      "name": "Ducati Red",
+      "image": "/data/brand-model-images/2w-colors/ducati-india/panigale-v2/ducati-red.webp"
+    },
+    {
+      "name": "S - Ducati Red",
+      "image": "/data/brand-model-images/2w-colors/ducati-india/panigale-v2/s-ducati-red.webp"
+    }
+  ]
+}

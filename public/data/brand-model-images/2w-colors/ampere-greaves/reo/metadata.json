@@ -1,0 +1,29 @@
+{
+  "brand": "Ampere (Greaves Electric)",
+  "model": "Reo",
+  "brandId": "ampere-greaves",
+  "makeSlug": "ampere-bikes",
+  "modelSlug": "reo",
+  "sourceUrl": "https://www.bikewale.com/ampere-bikes/reo/colours/",
+  "scrapedAt": "2026-04-20T05:53:17.424Z",
+  "count": 4,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/s8nmnfb_1824797.jpg?q=100",
+  "colors": [
+    {
+      "name": "Black - Eighty",
+      "image": "/data/brand-model-images/2w-colors/ampere-greaves/reo/black-eighty.avif"
+    },
+    {
+      "name": "White - Eighty",
+      "image": "/data/brand-model-images/2w-colors/ampere-greaves/reo/white-eighty.avif"
+    },
+    {
+      "name": "Red - Eighty",
+      "image": "/data/brand-model-images/2w-colors/ampere-greaves/reo/red-eighty.avif"
+    },
+    {
+      "name": "Blue - Eighty",
+      "image": "/data/brand-model-images/2w-colors/ampere-greaves/reo/blue-eighty.avif"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "make": "nissan",
+  "model": "Gravite",
+  "brandSlug": "nissan",
+  "modelSlug": "gravite",
+  "sourceUrl": "https://www.cardekho.com/nissan/gravite",
+  "scrapedAt": "2026-04-20T05:04:21.117Z",
+  "counts": {
+    "exterior": 5,
+    "interior": 8,
+    "feature": 0,
+    "colors": 5,
+    "total": 18
+  },
+  "hero": "/data/brand-model-images/4w-galleries/nissan/gravite/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/nissan/gravite/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/nissan/gravite/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/nissan/gravite/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/nissan/gravite/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/nissan/gravite/exterior/06.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/nissan/gravite/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/nissan/gravite/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/nissan/gravite/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/nissan/gravite/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/nissan/gravite/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/nissan/gravite/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/nissan/gravite/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/nissan/gravite/interior/08.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "Forest Green",
+    "Metallic Grey",
+    "Onyx Black",
+    "Blade Silver",
+    "Storm White"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/nissan/gravite/colors/forest-green.avif",
+    "/data/brand-model-images/4w-galleries/nissan/gravite/colors/metallic-grey.avif",
+    "/data/brand-model-images/4w-galleries/nissan/gravite/colors/onyx-black.avif",
+    "/data/brand-model-images/4w-galleries/nissan/gravite/colors/blade-silver.avif",
+    "/data/brand-model-images/4w-galleries/nissan/gravite/colors/storm-white.avif"
+  ]
+}

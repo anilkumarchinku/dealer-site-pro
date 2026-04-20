@@ -1,0 +1,25 @@
+{
+  "brand": "QJ Motor India",
+  "model": "SRC 500",
+  "brandId": "qj-motor-india",
+  "makeSlug": "qjmotor-bikes",
+  "modelSlug": "src-500",
+  "sourceUrl": "https://www.bikewale.com/qjmotor-bikes/src-500/colours/",
+  "scrapedAt": "2026-04-20T05:19:00.838Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/qj-motor-select-model-silver-black-1682057380943.png?q=100",
+  "colors": [
+    {
+      "name": "Silver Black",
+      "image": "/data/brand-model-images/2w-colors/qj-motor-india/src-500/silver-black.png"
+    },
+    {
+      "name": "Red & White",
+      "image": "/data/brand-model-images/2w-colors/qj-motor-india/src-500/red-and-white.avif"
+    },
+    {
+      "name": "Golden Black",
+      "image": "/data/brand-model-images/2w-colors/qj-motor-india/src-500/golden-black.png"
+    }
+  ]
+}

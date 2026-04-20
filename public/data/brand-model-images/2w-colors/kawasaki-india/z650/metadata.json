@@ -1,0 +1,17 @@
+{
+  "brand": "Kawasaki India",
+  "model": "Z650",
+  "brandId": "kawasaki-india",
+  "makeSlug": "kawasaki-bikes",
+  "modelSlug": "z650",
+  "sourceUrl": "https://www.bikewale.com/kawasaki-bikes/z650/colours/",
+  "scrapedAt": "2026-04-20T05:16:54.306Z",
+  "count": 1,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/427qoib_1906845.png?q=100",
+  "colors": [
+    {
+      "name": "Metallic Matte Dark Gray/Metallic Spark Black",
+      "image": "/data/brand-model-images/2w-colors/kawasaki-india/z650/metallic-matte-dark-gray-metallic-spark-black.png"
+    }
+  ]
+}

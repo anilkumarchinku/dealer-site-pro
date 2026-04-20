@@ -1,0 +1,50 @@
+{
+  "make": "audi",
+  "model": "S5 Sportback",
+  "brandSlug": "audi",
+  "modelSlug": "s5-sportback",
+  "sourceUrl": "https://www.cardekho.com/audi/s5-sportback",
+  "scrapedAt": "2026-04-20T06:30:30.950Z",
+  "counts": {
+    "exterior": 5,
+    "interior": 8,
+    "feature": 0,
+    "colors": 6,
+    "total": 19
+  },
+  "hero": "/data/brand-model-images/4w-galleries/audi/s5-sportback/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/audi/s5-sportback/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/audi/s5-sportback/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/audi/s5-sportback/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/audi/s5-sportback/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/audi/s5-sportback/exterior/06.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/audi/s5-sportback/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/audi/s5-sportback/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/audi/s5-sportback/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/audi/s5-sportback/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/audi/s5-sportback/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/audi/s5-sportback/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/audi/s5-sportback/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/audi/s5-sportback/interior/08.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "Ascari Blue Metallic",
+    "Chronos Grey Metallic",
+    "Glacier White Metallic",
+    "Myth Black Metallic",
+    "District Green Metallic",
+    "Navarra Blue Metallic"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/audi/s5-sportback/colors/ascari-blue-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/s5-sportback/colors/chronos-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/s5-sportback/colors/glacier-white-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/s5-sportback/colors/myth-black-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/s5-sportback/colors/district-green-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/s5-sportback/colors/navarra-blue-metallic.avif"
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "make": "toyota",
+  "model": "Glanza",
+  "brandSlug": "toyota",
+  "modelSlug": "glanza",
+  "sourceUrl": "https://www.cardekho.com/toyota/glanza",
+  "scrapedAt": "2026-04-20T06:30:31.551Z",
+  "counts": {
+    "exterior": 7,
+    "interior": 8,
+    "feature": 0,
+    "colors": 5,
+    "total": 20
+  },
+  "hero": "/data/brand-model-images/4w-galleries/toyota/glanza/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/toyota/glanza/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/toyota/glanza/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/toyota/glanza/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/toyota/glanza/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/toyota/glanza/exterior/06.avif",
+    "/data/brand-model-images/4w-galleries/toyota/glanza/exterior/07.avif",
+    "/data/brand-model-images/4w-galleries/toyota/glanza/exterior/08.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/toyota/glanza/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/toyota/glanza/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/toyota/glanza/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/toyota/glanza/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/toyota/glanza/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/toyota/glanza/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/toyota/glanza/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/toyota/glanza/interior/08.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "Enticing Silver",
+    "Insta Blue",
+    "Gaming Grey",
+    "Sportin Red",
+    "Cafe White"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/toyota/glanza/colors/enticing-silver.avif",
+    "/data/brand-model-images/4w-galleries/toyota/glanza/colors/insta-blue.avif",
+    "/data/brand-model-images/4w-galleries/toyota/glanza/colors/gaming-grey.avif",
+    "/data/brand-model-images/4w-galleries/toyota/glanza/colors/sportin-red.avif",
+    "/data/brand-model-images/4w-galleries/toyota/glanza/colors/cafe-white.avif"
+  ]
+}

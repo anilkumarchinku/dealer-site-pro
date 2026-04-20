@@ -1,0 +1,25 @@
+{
+  "brand": "Okinawa Autotech",
+  "model": "Ridge 100",
+  "brandId": "okinawa-autotech",
+  "makeSlug": "okinawa-bikes",
+  "modelSlug": "ridge-100",
+  "sourceUrl": "https://www.bikewale.com/okinawa-bikes/ridge-100/colours/",
+  "scrapedAt": "2026-04-20T05:19:30.155Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/okinawa-select-model-silver-1689829448847.png?q=100",
+  "colors": [
+    {
+      "name": "Silver",
+      "image": "/data/brand-model-images/2w-colors/okinawa-autotech/ridge-100/silver.png"
+    },
+    {
+      "name": "Grey",
+      "image": "/data/brand-model-images/2w-colors/okinawa-autotech/ridge-100/grey.png"
+    },
+    {
+      "name": "Blue",
+      "image": "/data/brand-model-images/2w-colors/okinawa-autotech/ridge-100/blue.png"
+    }
+  ]
+}

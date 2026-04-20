@@ -1,0 +1,52 @@
+{
+  "make": "renault",
+  "model": "Kiger",
+  "brandSlug": "renault",
+  "modelSlug": "kiger",
+  "sourceUrl": "https://www.cardekho.com/renault/kiger",
+  "scrapedAt": "2026-04-20T05:04:26.051Z",
+  "counts": {
+    "exterior": 5,
+    "interior": 8,
+    "feature": 0,
+    "colors": 7,
+    "total": 20
+  },
+  "hero": "/data/brand-model-images/4w-galleries/renault/kiger/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/renault/kiger/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/renault/kiger/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/renault/kiger/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/renault/kiger/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/renault/kiger/exterior/06.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/renault/kiger/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/renault/kiger/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/renault/kiger/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/renault/kiger/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/renault/kiger/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/renault/kiger/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/renault/kiger/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/renault/kiger/interior/08.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "Oasis Yellow",
+    "Ice Cool White",
+    "Stealth Black",
+    "Moonlight Silver",
+    "Shadow Grey",
+    "Shadow Grey With Mystery Black Roof",
+    "Oasis Yellow With Mystery Black"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/renault/kiger/colors/oasis-yellow.avif",
+    "/data/brand-model-images/4w-galleries/renault/kiger/colors/ice-cool-white.avif",
+    "/data/brand-model-images/4w-galleries/renault/kiger/colors/stealth-black.avif",
+    "/data/brand-model-images/4w-galleries/renault/kiger/colors/moonlight-silver.avif",
+    "/data/brand-model-images/4w-galleries/renault/kiger/colors/shadow-grey.avif",
+    "/data/brand-model-images/4w-galleries/renault/kiger/colors/shadow-grey-with-mystery-black-roof.avif",
+    "/data/brand-model-images/4w-galleries/renault/kiger/colors/oasis-yellow-with-mystery-black.avif"
+  ]
+}

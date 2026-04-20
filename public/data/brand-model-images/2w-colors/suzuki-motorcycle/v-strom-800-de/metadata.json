@@ -1,0 +1,25 @@
+{
+  "brand": "Suzuki Motorcycle India",
+  "model": "V-Strom 800 DE",
+  "brandId": "suzuki-motorcycle",
+  "makeSlug": "suzuki-bikes",
+  "modelSlug": "v-strom-800-de",
+  "sourceUrl": "https://www.bikewale.com/suzuki-bikes/v-strom-800-de/colours/",
+  "scrapedAt": "2026-04-20T05:16:12.521Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/t8bgcgb_1838942.jpg?q=100",
+  "colors": [
+    {
+      "name": "Glass Sparkle Black",
+      "image": "/data/brand-model-images/2w-colors/suzuki-motorcycle/v-strom-800-de/glass-sparkle-black.avif"
+    },
+    {
+      "name": "Pearl Tech White",
+      "image": "/data/brand-model-images/2w-colors/suzuki-motorcycle/v-strom-800-de/pearl-tech-white.avif"
+    },
+    {
+      "name": "Champion Yellow",
+      "image": "/data/brand-model-images/2w-colors/suzuki-motorcycle/v-strom-800-de/champion-yellow.avif"
+    }
+  ]
+}

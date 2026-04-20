@@ -1,0 +1,17 @@
+{
+  "brand": "Kawasaki India",
+  "model": "Z650RS",
+  "brandId": "kawasaki-india",
+  "makeSlug": "kawasaki-bikes",
+  "modelSlug": "z650rs",
+  "sourceUrl": "https://www.bikewale.com/kawasaki-bikes/z650rs/colours/",
+  "scrapedAt": "2026-04-20T05:16:55.531Z",
+  "count": 1,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/wehbgib_1897269.jpg?q=100",
+  "colors": [
+    {
+      "name": "Metallic Ocean Blue",
+      "image": "/data/brand-model-images/2w-colors/kawasaki-india/z650rs/metallic-ocean-blue.avif"
+    }
+  ]
+}

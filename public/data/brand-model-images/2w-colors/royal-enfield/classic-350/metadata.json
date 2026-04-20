@@ -1,0 +1,49 @@
+{
+  "brand": "Royal Enfield",
+  "model": "Classic 350",
+  "brandId": "royal-enfield",
+  "makeSlug": "royalenfield-bikes",
+  "modelSlug": "classic-350",
+  "sourceUrl": "https://www.bikewale.com/royalenfield-bikes/classic-350/colours/",
+  "scrapedAt": "2026-04-20T05:15:52.660Z",
+  "count": 9,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/kjerleb_1768265.jpg?q=100",
+  "colors": [
+    {
+      "name": "Madras Red",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/classic-350/madras-red.avif"
+    },
+    {
+      "name": "Jodhpur Blue",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/classic-350/jodhpur-blue.avif"
+    },
+    {
+      "name": "Medallion Bronze",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/classic-350/medallion-bronze.avif"
+    },
+    {
+      "name": "Commando Sand",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/classic-350/commando-sand.avif"
+    },
+    {
+      "name": "Stealth Black",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/classic-350/stealth-black.avif"
+    },
+    {
+      "name": "Gun Grey",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/classic-350/gun-grey.avif"
+    },
+    {
+      "name": "Emerald",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/classic-350/emerald.avif"
+    },
+    {
+      "name": "Redditch Red",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/classic-350/redditch-red.avif"
+    },
+    {
+      "name": "Halcyon Black",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/classic-350/halcyon-black.avif"
+    }
+  ]
+}

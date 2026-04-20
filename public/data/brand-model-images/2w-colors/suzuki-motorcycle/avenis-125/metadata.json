@@ -1,0 +1,37 @@
+{
+  "brand": "Suzuki Motorcycle India",
+  "model": "Avenis 125",
+  "brandId": "suzuki-motorcycle",
+  "makeSlug": "suzuki-bikes",
+  "modelSlug": "avenis-125",
+  "sourceUrl": "https://www.bikewale.com/suzuki-bikes/avenis-125/colours/",
+  "scrapedAt": "2026-04-20T05:16:13.338Z",
+  "count": 6,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/u7sttgb_1859274.jpg?q=100",
+  "colors": [
+    {
+      "name": "Metallic Matte Platinum Silver and Glass Sparkle Black",
+      "image": "/data/brand-model-images/2w-colors/suzuki-motorcycle/avenis-125/metallic-matte-platinum-silver-and-glass-sparkle-black.avif"
+    },
+    {
+      "name": "Glossy Sparkle Black",
+      "image": "/data/brand-model-images/2w-colors/suzuki-motorcycle/avenis-125/glossy-sparkle-black.avif"
+    },
+    {
+      "name": "Glossy Sparkle Black Pearl Mira Red",
+      "image": "/data/brand-model-images/2w-colors/suzuki-motorcycle/avenis-125/glossy-sparkle-black-pearl-mira-red.avif"
+    },
+    {
+      "name": "Glossy Sparkle Black Pearl Glacier White",
+      "image": "/data/brand-model-images/2w-colors/suzuki-motorcycle/avenis-125/glossy-sparkle-black-pearl-glacier-white.avif"
+    },
+    {
+      "name": "Champion Yellow No 2 Glossy Sparkle Black",
+      "image": "/data/brand-model-images/2w-colors/suzuki-motorcycle/avenis-125/champion-yellow-no-2-glossy-sparkle-black.avif"
+    },
+    {
+      "name": "Metallic Mat Black and Metallic Mat Titanium Silver",
+      "image": "/data/brand-model-images/2w-colors/suzuki-motorcycle/avenis-125/metallic-mat-black-and-metallic-mat-titanium-silver.avif"
+    }
+  ]
+}

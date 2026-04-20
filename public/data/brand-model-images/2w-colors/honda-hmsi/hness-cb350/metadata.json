@@ -1,0 +1,45 @@
+{
+  "brand": "Honda Motorcycle & Scooter India",
+  "model": "Hness CB350",
+  "brandId": "honda-hmsi",
+  "makeSlug": "honda-bikes",
+  "modelSlug": "hness-cb350",
+  "sourceUrl": "https://www.bikewale.com/honda-bikes/hness-cb350/colours/",
+  "scrapedAt": "2026-04-20T05:15:26.204Z",
+  "count": 8,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/lphrnfb_1824969.jpg?q=100",
+  "colors": [
+    {
+      "name": "Pearl Igneous Black - Dlx",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/hness-cb350/pearl-igneous-black-dlx.avif"
+    },
+    {
+      "name": "Pearl Deep Ground Grey - Dlx",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/hness-cb350/pearl-deep-ground-grey-dlx.avif"
+    },
+    {
+      "name": "Rebel Red Metallic - Dlx Pro",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/hness-cb350/rebel-red-metallic-dlx-pro.avif"
+    },
+    {
+      "name": "Pearl Deep Ground Grey - Dlx Pro",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/hness-cb350/pearl-deep-ground-grey-dlx-pro.avif"
+    },
+    {
+      "name": "Pearl Igneous Black - Dlx Pro",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/hness-cb350/pearl-igneous-black-dlx-pro.avif"
+    },
+    {
+      "name": "Pearl Igneous Black - Dlx Pro Chrome",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/hness-cb350/pearl-igneous-black-dlx-pro-chrome.avif"
+    },
+    {
+      "name": "Pearl Deep Ground Grey - Dlx Pro Chrome",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/hness-cb350/pearl-deep-ground-grey-dlx-pro-chrome.avif"
+    },
+    {
+      "name": "Athletic Blue Metallic - Dlx Pro Chrome",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/hness-cb350/athletic-blue-metallic-dlx-pro-chrome.avif"
+    }
+  ]
+}

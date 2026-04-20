@@ -1,0 +1,25 @@
+{
+  "brand": "Benelli India",
+  "model": "502C",
+  "brandId": "benelli-india",
+  "makeSlug": "benelli-bikes",
+  "modelSlug": "502c",
+  "sourceUrl": "https://www.bikewale.com/benelli-bikes/502c/colours/",
+  "scrapedAt": "2026-04-20T05:16:50.174Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/benelli-select-model-glossy-black-1645507335732.png?q=100",
+  "colors": [
+    {
+      "name": "Glossy Black",
+      "image": "/data/brand-model-images/2w-colors/benelli-india/502c/glossy-black.png"
+    },
+    {
+      "name": "Purple",
+      "image": "/data/brand-model-images/2w-colors/benelli-india/502c/purple.avif"
+    },
+    {
+      "name": "Matte Black",
+      "image": "/data/brand-model-images/2w-colors/benelli-india/502c/matte-black.avif"
+    }
+  ]
+}

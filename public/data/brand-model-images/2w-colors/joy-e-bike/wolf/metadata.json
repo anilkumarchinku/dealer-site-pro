@@ -1,0 +1,41 @@
+{
+  "brand": "Joy e-bike",
+  "model": "Wolf",
+  "brandId": "joy-e-bike",
+  "makeSlug": "joyebike-bikes",
+  "modelSlug": "wolf",
+  "sourceUrl": "https://www.bikewale.com/joyebike-bikes/wolf/colours/",
+  "scrapedAt": "2026-04-20T05:53:16.376Z",
+  "count": 7,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/c1e6b9b_1784375.jpg?q=100",
+  "colors": [
+    {
+      "name": "White and Red",
+      "image": "/data/brand-model-images/2w-colors/joy-e-bike/wolf/white-and-red.avif"
+    },
+    {
+      "name": "Orange and Silver",
+      "image": "/data/brand-model-images/2w-colors/joy-e-bike/wolf/orange-and-silver.avif"
+    },
+    {
+      "name": "Black and Red",
+      "image": "/data/brand-model-images/2w-colors/joy-e-bike/wolf/black-and-red.avif"
+    },
+    {
+      "name": "Stardust Grey",
+      "image": "/data/brand-model-images/2w-colors/joy-e-bike/wolf/stardust-grey.avif"
+    },
+    {
+      "name": "Matt Black",
+      "image": "/data/brand-model-images/2w-colors/joy-e-bike/wolf/matt-black.avif"
+    },
+    {
+      "name": "Deep Wine",
+      "image": "/data/brand-model-images/2w-colors/joy-e-bike/wolf/deep-wine.avif"
+    },
+    {
+      "name": "Black",
+      "image": "/data/brand-model-images/2w-colors/joy-e-bike/wolf/black.avif"
+    }
+  ]
+}

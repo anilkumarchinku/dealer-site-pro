@@ -1,0 +1,21 @@
+{
+  "brand": "Bajaj Auto",
+  "model": "Avenger Cruise 220",
+  "brandId": "bajaj-auto",
+  "makeSlug": "bajaj-bikes",
+  "modelSlug": "avenger-cruise-220",
+  "sourceUrl": "https://www.bikewale.com/bajaj-bikes/avenger-cruise-220/colours/",
+  "scrapedAt": "2026-04-20T06:07:47.069Z",
+  "count": 2,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/bajaj-select-model-auburn-black-1669289946200.png?q=100",
+  "colors": [
+    {
+      "name": "Auburn Black",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/avenger-cruise-220/auburn-black.png"
+    },
+    {
+      "name": "Moon White",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/avenger-cruise-220/moon-white.png"
+    }
+  ]
+}

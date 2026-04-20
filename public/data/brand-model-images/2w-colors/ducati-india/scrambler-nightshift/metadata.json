@@ -1,0 +1,17 @@
+{
+  "brand": "Ducati India",
+  "model": "Scrambler Nightshift",
+  "brandId": "ducati-india",
+  "makeSlug": "ducati-bikes",
+  "modelSlug": "scrambler-nightshift",
+  "sourceUrl": "https://www.bikewale.com/ducati-bikes/scrambler-nightshift/colours/",
+  "scrapedAt": "2026-04-20T05:18:12.603Z",
+  "count": 1,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/ducati-select-model-nebula-blue-1695208837325.png?q=100",
+  "colors": [
+    {
+      "name": "Nebula Blue",
+      "image": "/data/brand-model-images/2w-colors/ducati-india/scrambler-nightshift/nebula-blue.png"
+    }
+  ]
+}

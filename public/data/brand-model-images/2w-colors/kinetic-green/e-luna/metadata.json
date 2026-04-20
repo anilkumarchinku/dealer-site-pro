@@ -1,0 +1,33 @@
+{
+  "brand": "Kinetic Green",
+  "model": "E Luna",
+  "brandId": "kinetic-green",
+  "makeSlug": "kinetic-green-bikes",
+  "modelSlug": "e-luna",
+  "sourceUrl": "https://www.bikewale.com/kinetic-green-bikes/e-luna/colours/",
+  "scrapedAt": "2026-04-20T06:14:09.170Z",
+  "count": 5,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/kinetic-green-select-model-night-star-black-1707465661090.png?q=100",
+  "colors": [
+    {
+      "name": "Night Star Black",
+      "image": "/data/brand-model-images/2w-colors/kinetic-green/e-luna/night-star-black.png"
+    },
+    {
+      "name": "Sparkling Green",
+      "image": "/data/brand-model-images/2w-colors/kinetic-green/e-luna/sparkling-green.png"
+    },
+    {
+      "name": "Pearl Yellow",
+      "image": "/data/brand-model-images/2w-colors/kinetic-green/e-luna/pearl-yellow.png"
+    },
+    {
+      "name": "Ocean Blue",
+      "image": "/data/brand-model-images/2w-colors/kinetic-green/e-luna/ocean-blue.png"
+    },
+    {
+      "name": "Mulberry Red",
+      "image": "/data/brand-model-images/2w-colors/kinetic-green/e-luna/mulberry-red.png"
+    }
+  ]
+}

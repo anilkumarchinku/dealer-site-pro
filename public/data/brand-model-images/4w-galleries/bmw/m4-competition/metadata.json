@@ -1,0 +1,52 @@
+{
+  "make": "bmw",
+  "model": "M4 Competition",
+  "brandSlug": "bmw",
+  "modelSlug": "m4-competition",
+  "sourceUrl": "https://www.cardekho.com/bmw/m4-competition",
+  "scrapedAt": "2026-04-20T06:30:54.168Z",
+  "counts": {
+    "exterior": 5,
+    "interior": 8,
+    "feature": 0,
+    "colors": 7,
+    "total": 20
+  },
+  "hero": "/data/brand-model-images/4w-galleries/bmw/m4-competition/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/bmw/m4-competition/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m4-competition/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m4-competition/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m4-competition/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m4-competition/exterior/06.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/bmw/m4-competition/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m4-competition/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m4-competition/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m4-competition/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m4-competition/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m4-competition/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m4-competition/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m4-competition/interior/08.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "Brooklyn Grey Metallic",
+    "Skyscraper Grey Metallic",
+    "Paulo Yellow Solid",
+    "Tanzanite Blue Metallic",
+    "Toronto Red Metallic",
+    "Portimao Blue Metallic",
+    "Dravit Grey Metallic"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/bmw/m4-competition/colors/brooklyn-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m4-competition/colors/skyscraper-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m4-competition/colors/paulo-yellow-solid.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m4-competition/colors/tanzanite-blue-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m4-competition/colors/toronto-red-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m4-competition/colors/portimao-blue-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m4-competition/colors/dravit-grey-metallic.avif"
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "make": "kia",
+  "model": "EV6",
+  "brandSlug": "kia",
+  "modelSlug": "ev6",
+  "sourceUrl": "https://www.cardekho.com/kia/ev6",
+  "scrapedAt": "2026-04-20T05:03:28.595Z",
+  "counts": {
+    "exterior": 5,
+    "interior": 8,
+    "feature": 0,
+    "colors": 4,
+    "total": 17
+  },
+  "hero": "/data/brand-model-images/4w-galleries/kia/ev6/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/kia/ev6/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/kia/ev6/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/kia/ev6/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/kia/ev6/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/kia/ev6/exterior/06.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/kia/ev6/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/kia/ev6/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/kia/ev6/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/kia/ev6/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/kia/ev6/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/kia/ev6/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/kia/ev6/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/kia/ev6/interior/08.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "Wolf Grey",
+    "Aurora Black Pearl",
+    "Runway Red",
+    "Snow White Pearl"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/kia/ev6/colors/wolf-grey.avif",
+    "/data/brand-model-images/4w-galleries/kia/ev6/colors/aurora-black-pearl.avif",
+    "/data/brand-model-images/4w-galleries/kia/ev6/colors/runway-red.avif",
+    "/data/brand-model-images/4w-galleries/kia/ev6/colors/snow-white-pearl.avif"
+  ]
+}

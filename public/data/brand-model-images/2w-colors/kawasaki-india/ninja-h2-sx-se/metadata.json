@@ -1,0 +1,17 @@
+{
+  "brand": "Kawasaki India",
+  "model": "Ninja H2 SX SE",
+  "brandId": "kawasaki-india",
+  "makeSlug": "kawasaki-bikes",
+  "modelSlug": "ninja-h2-sx-se",
+  "sourceUrl": "https://www.bikewale.com/kawasaki-bikes/ninja-h2-sx-se/colours/",
+  "scrapedAt": "2026-04-20T05:17:04.303Z",
+  "count": 1,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/kawasaki-select-model-metallic-diablo-blackmetallic-graphite-gray-1692016940357.png?q=100",
+  "colors": [
+    {
+      "name": "Metallic Diablo Black/Metallic Graphite Gray",
+      "image": "/data/brand-model-images/2w-colors/kawasaki-india/ninja-h2-sx-se/metallic-diablo-black-metallic-graphite-gray.png"
+    }
+  ]
+}

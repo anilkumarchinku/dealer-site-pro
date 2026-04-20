@@ -1,0 +1,37 @@
+{
+  "brand": "Royal Enfield",
+  "model": "Interceptor 650",
+  "brandId": "royal-enfield",
+  "makeSlug": "royalenfield-bikes",
+  "modelSlug": "interceptor-650",
+  "sourceUrl": "https://www.bikewale.com/royalenfield-bikes/interceptor-650/colours/",
+  "scrapedAt": "2026-04-20T05:15:55.052Z",
+  "count": 6,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/isn6seb_1777187.jpg?q=100",
+  "colors": [
+    {
+      "name": "Cali Green",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/interceptor-650/cali-green.avif"
+    },
+    {
+      "name": "Canyon Red",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/interceptor-650/canyon-red.avif"
+    },
+    {
+      "name": "Sunset Strip",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/interceptor-650/sunset-strip.avif"
+    },
+    {
+      "name": "Mark 2",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/interceptor-650/mark-2.avif"
+    },
+    {
+      "name": "Barcelona Blue",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/interceptor-650/barcelona-blue.avif"
+    },
+    {
+      "name": "Black Ray",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/interceptor-650/black-ray.avif"
+    }
+  ]
+}

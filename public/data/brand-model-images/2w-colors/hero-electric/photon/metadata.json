@@ -1,0 +1,33 @@
+{
+  "brand": "Hero Electric",
+  "model": "Photon HX",
+  "brandId": "hero-electric",
+  "makeSlug": "heroelectric-bikes",
+  "modelSlug": "photon",
+  "sourceUrl": "https://www.bikewale.com/heroelectric-bikes/photon/colours/",
+  "scrapedAt": "2026-04-20T05:20:30.283Z",
+  "count": 5,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/hero-electric-photon-silver-1547444315802.jpg?q=100",
+  "colors": [
+    {
+      "name": "Silver",
+      "image": "/data/brand-model-images/2w-colors/hero-electric/photon/silver.avif"
+    },
+    {
+      "name": "Red",
+      "image": "/data/brand-model-images/2w-colors/hero-electric/photon/red.avif"
+    },
+    {
+      "name": "Matt Black",
+      "image": "/data/brand-model-images/2w-colors/hero-electric/photon/matt-black.avif"
+    },
+    {
+      "name": "Beige",
+      "image": "/data/brand-model-images/2w-colors/hero-electric/photon/beige.avif"
+    },
+    {
+      "name": "Blue",
+      "image": "/data/brand-model-images/2w-colors/hero-electric/photon/blue.avif"
+    }
+  ]
+}

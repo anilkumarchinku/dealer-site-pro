@@ -1,0 +1,54 @@
+{
+  "make": "audi",
+  "model": "Q8 e-tron",
+  "brandSlug": "audi",
+  "modelSlug": "q8-e-tron",
+  "sourceUrl": "https://www.cardekho.com/audi/q8-e-tron",
+  "scrapedAt": "2026-04-20T06:30:42.458Z",
+  "counts": {
+    "exterior": 7,
+    "interior": 8,
+    "feature": 0,
+    "colors": 7,
+    "total": 22
+  },
+  "hero": "/data/brand-model-images/4w-galleries/audi/q8-e-tron/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/audi/q8-e-tron/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/audi/q8-e-tron/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/audi/q8-e-tron/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/audi/q8-e-tron/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/audi/q8-e-tron/exterior/06.avif",
+    "/data/brand-model-images/4w-galleries/audi/q8-e-tron/exterior/07.avif",
+    "/data/brand-model-images/4w-galleries/audi/q8-e-tron/exterior/08.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/audi/q8-e-tron/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/audi/q8-e-tron/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/audi/q8-e-tron/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/audi/q8-e-tron/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/audi/q8-e-tron/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/audi/q8-e-tron/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/audi/q8-e-tron/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/audi/q8-e-tron/interior/08.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "Purple Velvet Pearl Effect",
+    "Soneira Red Metallic",
+    "Suzuka Grey Metallic",
+    "Carat Beige Metallic",
+    "Mythos Black Metallic",
+    "Camouflage Green",
+    "Midnight Blue Pearl Effect"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/audi/q8-e-tron/colors/purple-velvet-pearl-effect.avif",
+    "/data/brand-model-images/4w-galleries/audi/q8-e-tron/colors/soneira-red-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/q8-e-tron/colors/suzuka-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/q8-e-tron/colors/carat-beige-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/q8-e-tron/colors/mythos-black-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/q8-e-tron/colors/camouflage-green.avif",
+    "/data/brand-model-images/4w-galleries/audi/q8-e-tron/colors/midnight-blue-pearl-effect.avif"
+  ]
+}

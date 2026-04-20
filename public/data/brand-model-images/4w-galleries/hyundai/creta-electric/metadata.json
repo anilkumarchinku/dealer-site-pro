@@ -1,0 +1,44 @@
+{
+  "make": "hyundai",
+  "model": "Creta EV",
+  "brandSlug": "hyundai",
+  "modelSlug": "creta-electric",
+  "sourceUrl": "https://www.cardekho.com/hyundai/creta-electric",
+  "scrapedAt": "2026-04-20T06:16:56.302Z",
+  "counts": {
+    "exterior": 5,
+    "interior": 8,
+    "feature": 0,
+    "colors": 3,
+    "total": 16
+  },
+  "hero": "/data/brand-model-images/4w-galleries/hyundai/creta-electric/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/hyundai/creta-electric/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta-electric/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta-electric/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta-electric/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta-electric/exterior/06.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/hyundai/creta-electric/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta-electric/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta-electric/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta-electric/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta-electric/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta-electric/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta-electric/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta-electric/interior/08.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "Robust Emerald Matte",
+    "Starry Night",
+    "Shadow Grey"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/hyundai/creta-electric/colors/robust-emerald-matte.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta-electric/colors/starry-night.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta-electric/colors/shadow-grey.avif"
+  ]
+}

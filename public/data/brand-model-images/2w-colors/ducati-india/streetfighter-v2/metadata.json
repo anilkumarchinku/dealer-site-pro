@@ -1,0 +1,21 @@
+{
+  "brand": "Ducati India",
+  "model": "Streetfighter V2",
+  "brandId": "ducati-india",
+  "makeSlug": "ducati-bikes",
+  "modelSlug": "streetfighter-v2",
+  "sourceUrl": "https://www.bikewale.com/ducati-bikes/streetfighter-v2/colours/",
+  "scrapedAt": "2026-04-20T05:17:56.832Z",
+  "count": 2,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/00q9aib_1891101.png?q=100",
+  "colors": [
+    {
+      "name": "Ducati Red",
+      "image": "/data/brand-model-images/2w-colors/ducati-india/streetfighter-v2/ducati-red.png"
+    },
+    {
+      "name": "Ducati Red - S",
+      "image": "/data/brand-model-images/2w-colors/ducati-india/streetfighter-v2/ducati-red-s.png"
+    }
+  ]
+}

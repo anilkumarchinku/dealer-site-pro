@@ -1,0 +1,45 @@
+{
+  "brand": "Bajaj Auto",
+  "model": "Pulsar 125",
+  "brandId": "bajaj-auto",
+  "makeSlug": "bajaj-bikes",
+  "modelSlug": "pulsar-125",
+  "sourceUrl": "https://www.bikewale.com/bajaj-bikes/pulsar-125/colours/",
+  "scrapedAt": "2026-04-20T06:07:37.281Z",
+  "count": 8,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/f2r908b_1917202.png?q=100",
+  "colors": [
+    {
+      "name": "Black Race Red",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/pulsar-125/black-race-red.png"
+    },
+    {
+      "name": "Black Cyan Blue",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/pulsar-125/black-cyan-blue.png"
+    },
+    {
+      "name": "Black Dark Grey",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/pulsar-125/black-dark-grey.png"
+    },
+    {
+      "name": "Racing Red with Tan Beige",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/pulsar-125/racing-red-with-tan-beige.png"
+    },
+    {
+      "name": "Racing Red Tan Beige (Split Seat)",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/pulsar-125/racing-red-tan-beige-split-seat.png"
+    },
+    {
+      "name": "Black Race Red (Split Seat)",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/pulsar-125/black-race-red-split-seat.png"
+    },
+    {
+      "name": "Black Dark Grey (Split Seat)",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/pulsar-125/black-dark-grey-split-seat.png"
+    },
+    {
+      "name": "Black Cyan Blue (Split Seat)",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/pulsar-125/black-cyan-blue-split-seat.png"
+    }
+  ]
+}

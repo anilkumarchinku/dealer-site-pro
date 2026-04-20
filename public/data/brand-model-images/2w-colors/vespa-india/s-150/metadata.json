@@ -1,0 +1,53 @@
+{
+  "brand": "Vespa India",
+  "model": "Vespa S 150",
+  "brandId": "vespa-india",
+  "makeSlug": "vespa-bikes",
+  "modelSlug": "s-150",
+  "sourceUrl": "https://www.bikewale.com/vespa-bikes/s-150/colours/",
+  "scrapedAt": "2026-04-20T05:17:37.176Z",
+  "count": 10,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/o8nv9fb_1815287.jpg?q=100",
+  "colors": [
+    {
+      "name": "Oro",
+      "image": "/data/brand-model-images/2w-colors/vespa-india/s-150/oro.avif"
+    },
+    {
+      "name": "Black & White",
+      "image": "/data/brand-model-images/2w-colors/vespa-india/s-150/black-and-white.avif"
+    },
+    {
+      "name": "Red & White",
+      "image": "/data/brand-model-images/2w-colors/vespa-india/s-150/red-and-white.avif"
+    },
+    {
+      "name": "Nero Black",
+      "image": "/data/brand-model-images/2w-colors/vespa-india/s-150/nero-black.avif"
+    },
+    {
+      "name": "Pearl White",
+      "image": "/data/brand-model-images/2w-colors/vespa-india/s-150/pearl-white.avif"
+    },
+    {
+      "name": "Giallo Yellow",
+      "image": "/data/brand-model-images/2w-colors/vespa-india/s-150/giallo-yellow.avif"
+    },
+    {
+      "name": "Arancio Impulsivo",
+      "image": "/data/brand-model-images/2w-colors/vespa-india/s-150/arancio-impulsivo.avif"
+    },
+    {
+      "name": "Verde Ambizioso",
+      "image": "/data/brand-model-images/2w-colors/vespa-india/s-150/verde-ambizioso.avif"
+    },
+    {
+      "name": "Nero Black - Tech",
+      "image": "/data/brand-model-images/2w-colors/vespa-india/s-150/nero-black-tech.avif"
+    },
+    {
+      "name": "Pearl White - Tech",
+      "image": "/data/brand-model-images/2w-colors/vespa-india/s-150/pearl-white-tech.avif"
+    }
+  ]
+}

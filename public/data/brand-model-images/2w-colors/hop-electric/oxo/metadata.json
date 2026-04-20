@@ -1,0 +1,33 @@
+{
+  "brand": "Hop Electric",
+  "model": "OXO",
+  "brandId": "hop-electric",
+  "makeSlug": "hop-electric-bikes",
+  "modelSlug": "oxo",
+  "sourceUrl": "https://www.bikewale.com/hop-electric-bikes/oxo/colours/",
+  "scrapedAt": "2026-04-20T05:19:39.714Z",
+  "count": 5,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/hop-electric-select-model-twilight-grey-1692854376284.png?q=100",
+  "colors": [
+    {
+      "name": "Twilight Grey",
+      "image": "/data/brand-model-images/2w-colors/hop-electric/oxo/twilight-grey.png"
+    },
+    {
+      "name": "Midnight Blue",
+      "image": "/data/brand-model-images/2w-colors/hop-electric/oxo/midnight-blue.png"
+    },
+    {
+      "name": "Electric Yellow",
+      "image": "/data/brand-model-images/2w-colors/hop-electric/oxo/electric-yellow.png"
+    },
+    {
+      "name": "True Black",
+      "image": "/data/brand-model-images/2w-colors/hop-electric/oxo/true-black.png"
+    },
+    {
+      "name": "Candy Red",
+      "image": "/data/brand-model-images/2w-colors/hop-electric/oxo/candy-red.png"
+    }
+  ]
+}

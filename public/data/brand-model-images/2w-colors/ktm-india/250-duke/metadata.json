@@ -1,0 +1,21 @@
+{
+  "brand": "KTM India",
+  "model": "250 Duke",
+  "brandId": "ktm-india",
+  "makeSlug": "ktm-bikes",
+  "modelSlug": "250-duke",
+  "sourceUrl": "https://www.bikewale.com/ktm-bikes/250-duke/colours/",
+  "scrapedAt": "2026-04-20T05:16:16.032Z",
+  "count": 2,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/ktm-select-model-ebony-black-1670847601331.png?q=100",
+  "colors": [
+    {
+      "name": "Ebony Black",
+      "image": "/data/brand-model-images/2w-colors/ktm-india/250-duke/ebony-black.png"
+    },
+    {
+      "name": "Dark Galvano",
+      "image": "/data/brand-model-images/2w-colors/ktm-india/250-duke/dark-galvano.png"
+    }
+  ]
+}

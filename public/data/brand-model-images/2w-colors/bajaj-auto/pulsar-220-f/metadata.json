@@ -1,0 +1,29 @@
+{
+  "brand": "Bajaj Auto",
+  "model": "Pulsar 220F",
+  "brandId": "bajaj-auto",
+  "makeSlug": "bajaj-bikes",
+  "modelSlug": "pulsar-220-f",
+  "sourceUrl": "https://www.bikewale.com/bajaj-bikes/pulsar-220-f/colours/",
+  "scrapedAt": "2026-04-20T06:07:45.417Z",
+  "count": 4,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/bajaj-select-model-sapphire-blue-1619591300094.png?q=100",
+  "colors": [
+    {
+      "name": "Sapphire Blue",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/pulsar-220-f/sapphire-blue.png"
+    },
+    {
+      "name": "Sparkle Black",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/pulsar-220-f/sparkle-black.png"
+    },
+    {
+      "name": "Pearl White",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/pulsar-220-f/pearl-white.png"
+    },
+    {
+      "name": "Volcanic Red",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/pulsar-220-f/volcanic-red.png"
+    }
+  ]
+}

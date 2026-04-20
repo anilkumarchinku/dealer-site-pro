@@ -1,0 +1,48 @@
+{
+  "make": "hyundai",
+  "model": "Creta N Line",
+  "brandSlug": "hyundai",
+  "modelSlug": "creta-n-line",
+  "sourceUrl": "https://www.cardekho.com/hyundai/creta-n-line",
+  "scrapedAt": "2026-04-20T06:16:39.051Z",
+  "counts": {
+    "exterior": 5,
+    "interior": 8,
+    "feature": 0,
+    "colors": 5,
+    "total": 18
+  },
+  "hero": "/data/brand-model-images/4w-galleries/hyundai/creta-n-line/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/hyundai/creta-n-line/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta-n-line/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta-n-line/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta-n-line/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta-n-line/exterior/06.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/hyundai/creta-n-line/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta-n-line/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta-n-line/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta-n-line/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta-n-line/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta-n-line/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta-n-line/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta-n-line/interior/08.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "Thunder Blue With Abyss Black",
+    "Titan Grey Matte",
+    "Atlas White",
+    "Atlas White With Abyss Black",
+    "Abyss Black"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/hyundai/creta-n-line/colors/thunder-blue-with-abyss-black.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta-n-line/colors/titan-grey-matte.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta-n-line/colors/atlas-white.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta-n-line/colors/atlas-white-with-abyss-black.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta-n-line/colors/abyss-black.avif"
+  ]
+}

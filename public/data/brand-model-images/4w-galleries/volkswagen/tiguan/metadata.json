@@ -1,0 +1,52 @@
+{
+  "make": "volkswagen",
+  "model": "Tiguan R-Line",
+  "brandSlug": "volkswagen",
+  "modelSlug": "tiguan",
+  "sourceUrl": "https://www.cardekho.com/volkswagen/tiguan",
+  "scrapedAt": "2026-04-20T06:18:17.714Z",
+  "counts": {
+    "exterior": 5,
+    "interior": 8,
+    "feature": 0,
+    "colors": 7,
+    "total": 20
+  },
+  "hero": "/data/brand-model-images/4w-galleries/volkswagen/tiguan/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/volkswagen/tiguan/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/volkswagen/tiguan/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/volkswagen/tiguan/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/volkswagen/tiguan/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/volkswagen/tiguan/exterior/06.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/volkswagen/tiguan/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/volkswagen/tiguan/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/volkswagen/tiguan/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/volkswagen/tiguan/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/volkswagen/tiguan/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/volkswagen/tiguan/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/volkswagen/tiguan/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/volkswagen/tiguan/interior/08.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "Kings Red",
+    "Oryx White",
+    "Nightshade Blue",
+    "Deep Black",
+    "Dolphin Grey",
+    "Pure White",
+    "Reflex Silver"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/volkswagen/tiguan/colors/kings-red.avif",
+    "/data/brand-model-images/4w-galleries/volkswagen/tiguan/colors/oryx-white.avif",
+    "/data/brand-model-images/4w-galleries/volkswagen/tiguan/colors/nightshade-blue.avif",
+    "/data/brand-model-images/4w-galleries/volkswagen/tiguan/colors/deep-black.avif",
+    "/data/brand-model-images/4w-galleries/volkswagen/tiguan/colors/dolphin-grey.avif",
+    "/data/brand-model-images/4w-galleries/volkswagen/tiguan/colors/pure-white.avif",
+    "/data/brand-model-images/4w-galleries/volkswagen/tiguan/colors/reflex-silver.avif"
+  ]
+}

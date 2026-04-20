@@ -1,0 +1,41 @@
+{
+  "make": "volvo",
+  "model": "EX30",
+  "brandSlug": "volvo",
+  "modelSlug": "ex30",
+  "sourceUrl": "https://www.cardekho.com/volvo/ex30",
+  "scrapedAt": "2026-04-20T05:06:14.268Z",
+  "counts": {
+    "exterior": 6,
+    "interior": 8,
+    "feature": 0,
+    "colors": 1,
+    "total": 15
+  },
+  "hero": "/data/brand-model-images/4w-galleries/volvo/ex30/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/volvo/ex30/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/volvo/ex30/exterior/02.avif",
+    "/data/brand-model-images/4w-galleries/volvo/ex30/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/volvo/ex30/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/volvo/ex30/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/volvo/ex30/exterior/06.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/volvo/ex30/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/volvo/ex30/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/volvo/ex30/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/volvo/ex30/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/volvo/ex30/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/volvo/ex30/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/volvo/ex30/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/volvo/ex30/interior/08.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "Grey"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/volvo/ex30/colors/grey.avif"
+  ]
+}

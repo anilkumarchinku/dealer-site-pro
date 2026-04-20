@@ -1,0 +1,46 @@
+{
+  "make": "audi",
+  "model": "Q3 Sportback",
+  "brandSlug": "audi",
+  "modelSlug": "q3-sportback",
+  "sourceUrl": "https://www.cardekho.com/audi/q3-sportback",
+  "scrapedAt": "2026-04-20T06:30:37.025Z",
+  "counts": {
+    "exterior": 5,
+    "interior": 8,
+    "feature": 0,
+    "colors": 4,
+    "total": 17
+  },
+  "hero": "/data/brand-model-images/4w-galleries/audi/q3-sportback/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/audi/q3-sportback/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/audi/q3-sportback/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/audi/q3-sportback/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/audi/q3-sportback/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/audi/q3-sportback/exterior/06.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/audi/q3-sportback/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/audi/q3-sportback/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/audi/q3-sportback/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/audi/q3-sportback/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/audi/q3-sportback/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/audi/q3-sportback/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/audi/q3-sportback/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/audi/q3-sportback/interior/08.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "Progressive-Red-Metallic",
+    "Mythos Black Metallic",
+    "Glacier White Metallic",
+    "Navarra Blue Metallic"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/audi/q3-sportback/colors/progressive-red-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/q3-sportback/colors/mythos-black-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/q3-sportback/colors/glacier-white-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/q3-sportback/colors/navarra-blue-metallic.avif"
+  ]
+}

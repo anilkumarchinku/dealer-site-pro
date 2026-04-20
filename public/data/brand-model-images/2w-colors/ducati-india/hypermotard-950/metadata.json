@@ -1,0 +1,25 @@
+{
+  "brand": "Ducati India",
+  "model": "Hypermotard 950",
+  "brandId": "ducati-india",
+  "makeSlug": "ducati-bikes",
+  "modelSlug": "hypermotard-950",
+  "sourceUrl": "https://www.bikewale.com/ducati-bikes/hypermotard-950/colours/",
+  "scrapedAt": "2026-04-20T05:18:09.223Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/m774seb_1777395.png?q=100",
+  "colors": [
+    {
+      "name": "Graffiti Evo",
+      "image": "/data/brand-model-images/2w-colors/ducati-india/hypermotard-950/graffiti-evo.png"
+    },
+    {
+      "name": "Graffiti",
+      "image": "/data/brand-model-images/2w-colors/ducati-india/hypermotard-950/graffiti.avif"
+    },
+    {
+      "name": "SP Livery",
+      "image": "/data/brand-model-images/2w-colors/ducati-india/hypermotard-950/sp-livery.avif"
+    }
+  ]
+}

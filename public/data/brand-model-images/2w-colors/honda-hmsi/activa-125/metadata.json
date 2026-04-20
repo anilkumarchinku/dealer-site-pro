@@ -1,0 +1,45 @@
+{
+  "brand": "Honda Motorcycle & Scooter India",
+  "model": "Activa 125",
+  "brandId": "honda-hmsi",
+  "makeSlug": "honda-bikes",
+  "modelSlug": "activa-125",
+  "sourceUrl": "https://www.bikewale.com/honda-bikes/activa-125/colours/",
+  "scrapedAt": "2026-04-20T05:15:29.079Z",
+  "count": 8,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/0hndafb_1810037.jpg?q=100",
+  "colors": [
+    {
+      "name": "Mat Axis Gray Metallic",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/activa-125/mat-axis-gray-metallic.avif"
+    },
+    {
+      "name": "Pearl Deep Ground Gray",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/activa-125/pearl-deep-ground-gray.avif"
+    },
+    {
+      "name": "Pearl Igneous Black",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/activa-125/pearl-igneous-black.avif"
+    },
+    {
+      "name": "Pearl Precious White",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/activa-125/pearl-precious-white.avif"
+    },
+    {
+      "name": "Pearl Siren Blue",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/activa-125/pearl-siren-blue.avif"
+    },
+    {
+      "name": "Rebel Red Metallic",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/activa-125/rebel-red-metallic.avif"
+    },
+    {
+      "name": "Mat Steel Black Metallic (Anniversary Edition)",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/activa-125/mat-steel-black-metallic-anniversary-edition.avif"
+    },
+    {
+      "name": "Pearl Siren Blue (Anniversary Edition)",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/activa-125/pearl-siren-blue-anniversary-edition.avif"
+    }
+  ]
+}

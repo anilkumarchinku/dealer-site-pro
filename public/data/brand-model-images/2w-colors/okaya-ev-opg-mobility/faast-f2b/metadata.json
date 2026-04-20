@@ -1,0 +1,37 @@
+{
+  "brand": "Okaya EV (OPG Mobility)",
+  "model": "Faast F2B",
+  "brandId": "okaya-ev-opg-mobility",
+  "makeSlug": "opg-mobility-bikes",
+  "modelSlug": "faast-f2b",
+  "sourceUrl": "https://www.bikewale.com/opg-mobility-bikes/faast-f2b/colours/",
+  "scrapedAt": "2026-04-20T05:55:01.782Z",
+  "count": 6,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/okaya-select-model-catty-cyan-1665045131763.jpg?q=100",
+  "colors": [
+    {
+      "name": "Catty Cyan",
+      "image": "/data/brand-model-images/2w-colors/okaya-ev-opg-mobility/faast-f2b/catty-cyan.avif"
+    },
+    {
+      "name": "Groovy Grey",
+      "image": "/data/brand-model-images/2w-colors/okaya-ev-opg-mobility/faast-f2b/groovy-grey.avif"
+    },
+    {
+      "name": "Winter White",
+      "image": "/data/brand-model-images/2w-colors/okaya-ev-opg-mobility/faast-f2b/winter-white.avif"
+    },
+    {
+      "name": "Silver",
+      "image": "/data/brand-model-images/2w-colors/okaya-ev-opg-mobility/faast-f2b/silver.avif"
+    },
+    {
+      "name": "Boldly Black",
+      "image": "/data/brand-model-images/2w-colors/okaya-ev-opg-mobility/faast-f2b/boldly-black.avif"
+    },
+    {
+      "name": "Grungy Greeny",
+      "image": "/data/brand-model-images/2w-colors/okaya-ev-opg-mobility/faast-f2b/grungy-greeny.avif"
+    }
+  ]
+}

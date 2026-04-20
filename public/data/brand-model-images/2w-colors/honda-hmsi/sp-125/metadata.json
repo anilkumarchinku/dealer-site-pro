@@ -1,0 +1,41 @@
+{
+  "brand": "Honda Motorcycle & Scooter India",
+  "model": "SP 125",
+  "brandId": "honda-hmsi",
+  "makeSlug": "honda-bikes",
+  "modelSlug": "sp-125",
+  "sourceUrl": "https://www.bikewale.com/honda-bikes/sp-125/colours/",
+  "scrapedAt": "2026-04-20T05:15:22.250Z",
+  "count": 7,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/advichb_1866029.jpg?q=100",
+  "colors": [
+    {
+      "name": "Matte Marvel Blue Metallic",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/sp-125/matte-marvel-blue-metallic.avif"
+    },
+    {
+      "name": "Black",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/sp-125/black.avif"
+    },
+    {
+      "name": "Pearl Siren Blue",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/sp-125/pearl-siren-blue.avif"
+    },
+    {
+      "name": "Matte Axis Gray Metallic",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/sp-125/matte-axis-gray-metallic.avif"
+    },
+    {
+      "name": "Imperial Red Metallic",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/sp-125/imperial-red-metallic.avif"
+    },
+    {
+      "name": "Mat Steel Black Metallic (Anniversary Edition)",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/sp-125/mat-steel-black-metallic-anniversary-edition.avif"
+    },
+    {
+      "name": "Pearl Siren Blue (Anniversary Edition)",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/sp-125/pearl-siren-blue-anniversary-edition.avif"
+    }
+  ]
+}

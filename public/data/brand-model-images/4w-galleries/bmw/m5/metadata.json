@@ -1,0 +1,40 @@
+{
+  "make": "bmw",
+  "model": "M5",
+  "brandSlug": "bmw",
+  "modelSlug": "m5",
+  "sourceUrl": "https://www.cardekho.com/bmw/m5",
+  "scrapedAt": "2026-04-20T06:30:35.307Z",
+  "counts": {
+    "exterior": 5,
+    "interior": 8,
+    "feature": 0,
+    "colors": 1,
+    "total": 14
+  },
+  "hero": "/data/brand-model-images/4w-galleries/bmw/m5/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/bmw/m5/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m5/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m5/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m5/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m5/exterior/06.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/bmw/m5/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m5/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m5/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m5/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m5/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m5/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m5/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m5/interior/08.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "Green"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/bmw/m5/colors/green.avif"
+  ]
+}

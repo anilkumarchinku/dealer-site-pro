@@ -1,0 +1,29 @@
+{
+  "brand": "Triumph India",
+  "model": "Bonneville T100",
+  "brandId": "triumph-india",
+  "makeSlug": "triumph-bikes",
+  "modelSlug": "bonneville-t100",
+  "sourceUrl": "https://www.bikewale.com/triumph-bikes/bonneville-t100/colours/",
+  "scrapedAt": "2026-04-20T05:17:44.459Z",
+  "count": 4,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/triumph-select-model-competition-green--ironstone-1717476985547.jpg?q=100",
+  "colors": [
+    {
+      "name": "Competition Green / Ironstone",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/bonneville-t100/competition-green-ironstone.avif"
+    },
+    {
+      "name": "Carnival Red Fusion White",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/bonneville-t100/carnival-red-fusion-white.avif"
+    },
+    {
+      "name": "Jet Black",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/bonneville-t100/jet-black.avif"
+    },
+    {
+      "name": "Aluminium / Baja Orange",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/bonneville-t100/aluminium-baja-orange.avif"
+    }
+  ]
+}

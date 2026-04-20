@@ -1,0 +1,25 @@
+{
+  "brand": "Keeway India",
+  "model": "RR300",
+  "brandId": "keeway-india",
+  "makeSlug": "keeway-bikes",
+  "modelSlug": "rr300",
+  "sourceUrl": "https://www.bikewale.com/keeway-bikes/rr300/colours/",
+  "scrapedAt": "2026-04-20T05:18:46.663Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/0ogm6gb_1853588.jpg?q=100",
+  "colors": [
+    {
+      "name": "Red",
+      "image": "/data/brand-model-images/2w-colors/keeway-india/rr300/red.avif"
+    },
+    {
+      "name": "White",
+      "image": "/data/brand-model-images/2w-colors/keeway-india/rr300/white.avif"
+    },
+    {
+      "name": "Black",
+      "image": "/data/brand-model-images/2w-colors/keeway-india/rr300/black.avif"
+    }
+  ]
+}

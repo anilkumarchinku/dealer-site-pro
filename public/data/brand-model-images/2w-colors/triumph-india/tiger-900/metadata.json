@@ -1,0 +1,37 @@
+{
+  "brand": "Triumph India",
+  "model": "Tiger 900",
+  "brandId": "triumph-india",
+  "makeSlug": "triumph-bikes",
+  "modelSlug": "tiger-900",
+  "sourceUrl": "https://www.bikewale.com/triumph-bikes/tiger-900/colours/",
+  "scrapedAt": "2026-04-20T05:17:48.343Z",
+  "count": 6,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/triumph-select-model-carnival-red--sapphire-black-1713266631342.png?q=100",
+  "colors": [
+    {
+      "name": "Carnival Red / Sapphire Black",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/tiger-900/carnival-red-sapphire-black.png"
+    },
+    {
+      "name": "Snowdonia White / Sapphire Black",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/tiger-900/snowdonia-white-sapphire-black.png"
+    },
+    {
+      "name": "Graphite / Sapphire Black",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/tiger-900/graphite-sapphire-black.png"
+    },
+    {
+      "name": "Matt Khaki Green / Matt Phantom Black",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/tiger-900/matt-khaki-green-matt-phantom-black.png"
+    },
+    {
+      "name": "Ash Grey / Intense Orange",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/tiger-900/ash-grey-intense-orange.png"
+    },
+    {
+      "name": "Carbon Black / Sapphire Black",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/tiger-900/carbon-black-sapphire-black.png"
+    }
+  ]
+}

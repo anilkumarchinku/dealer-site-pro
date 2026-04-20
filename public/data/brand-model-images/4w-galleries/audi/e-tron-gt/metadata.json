@@ -1,0 +1,53 @@
+{
+  "make": "audi",
+  "model": "e-tron GT",
+  "brandSlug": "audi",
+  "modelSlug": "e-tron-gt",
+  "sourceUrl": "https://www.cardekho.com/audi/e-tron-gt",
+  "scrapedAt": "2026-04-20T06:30:33.735Z",
+  "counts": {
+    "exterior": 6,
+    "interior": 8,
+    "feature": 0,
+    "colors": 7,
+    "total": 21
+  },
+  "hero": "/data/brand-model-images/4w-galleries/audi/e-tron-gt/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/audi/e-tron-gt/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/audi/e-tron-gt/exterior/02.avif",
+    "/data/brand-model-images/4w-galleries/audi/e-tron-gt/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/audi/e-tron-gt/exterior/06.avif",
+    "/data/brand-model-images/4w-galleries/audi/e-tron-gt/exterior/07.avif",
+    "/data/brand-model-images/4w-galleries/audi/e-tron-gt/exterior/08.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/audi/e-tron-gt/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/audi/e-tron-gt/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/audi/e-tron-gt/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/audi/e-tron-gt/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/audi/e-tron-gt/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/audi/e-tron-gt/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/audi/e-tron-gt/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/audi/e-tron-gt/interior/08.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "Suzuka Grey Metallic",
+    "Tango Red Metallic",
+    "Daytona Grey Pearl Effect",
+    "Kemora Gray Metallic",
+    "Mythos Black Metallic",
+    "Floret Silver Metallic",
+    "Ascari Blue Metallic"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/audi/e-tron-gt/colors/suzuka-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/e-tron-gt/colors/tango-red-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/e-tron-gt/colors/daytona-grey-pearl-effect.avif",
+    "/data/brand-model-images/4w-galleries/audi/e-tron-gt/colors/kemora-gray-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/e-tron-gt/colors/mythos-black-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/e-tron-gt/colors/floret-silver-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/e-tron-gt/colors/ascari-blue-metallic.avif"
+  ]
+}

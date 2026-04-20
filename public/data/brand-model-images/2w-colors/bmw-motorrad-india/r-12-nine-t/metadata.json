@@ -1,0 +1,17 @@
+{
+  "brand": "BMW Motorrad India",
+  "model": "R 12 nineT",
+  "brandId": "bmw-motorrad-india",
+  "makeSlug": "bmw-bikes",
+  "modelSlug": "r-12-nine-t",
+  "sourceUrl": "https://www.bikewale.com/bmw-bikes/r-12-nine-t/colours/",
+  "scrapedAt": "2026-04-20T05:18:32.883Z",
+  "count": 1,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/bmw-select-model-blackstorm-metallic-1720177853247.png?q=100",
+  "colors": [
+    {
+      "name": "Blackstorm Metallic",
+      "image": "/data/brand-model-images/2w-colors/bmw-motorrad-india/r-12-nine-t/blackstorm-metallic.png"
+    }
+  ]
+}

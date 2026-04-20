@@ -1,0 +1,25 @@
+{
+  "brand": "BMW Motorrad India",
+  "model": "S 1000 XR",
+  "brandId": "bmw-motorrad-india",
+  "makeSlug": "bmw-bikes",
+  "modelSlug": "s-1000-xr",
+  "sourceUrl": "https://www.bikewale.com/bmw-bikes/s-1000-xr/colours/",
+  "scrapedAt": "2026-04-20T05:18:26.947Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/bmw-select-model-light-whitem-motorsport-1716284312668.png?q=100",
+  "colors": [
+    {
+      "name": "Light White/M Motorsport",
+      "image": "/data/brand-model-images/2w-colors/bmw-motorrad-india/s-1000-xr/light-white-m-motorsport.png"
+    },
+    {
+      "name": "Gravity Blue Metallic",
+      "image": "/data/brand-model-images/2w-colors/bmw-motorrad-india/s-1000-xr/gravity-blue-metallic.png"
+    },
+    {
+      "name": "Blackstorm Metallic 2",
+      "image": "/data/brand-model-images/2w-colors/bmw-motorrad-india/s-1000-xr/blackstorm-metallic-2.png"
+    }
+  ]
+}

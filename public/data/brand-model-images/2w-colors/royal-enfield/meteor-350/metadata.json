@@ -1,0 +1,45 @@
+{
+  "brand": "Royal Enfield",
+  "model": "Meteor 350",
+  "brandId": "royal-enfield",
+  "makeSlug": "royalenfield-bikes",
+  "modelSlug": "meteor-350",
+  "sourceUrl": "https://www.bikewale.com/royalenfield-bikes/meteor-350/colours/",
+  "scrapedAt": "2026-04-20T05:15:52.986Z",
+  "count": 8,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/euv9hhb_1871309.jpg?q=100",
+  "colors": [
+    {
+      "name": "Fireball Grey",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/meteor-350/fireball-grey.avif"
+    },
+    {
+      "name": "Fireball Orange",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/meteor-350/fireball-orange.avif"
+    },
+    {
+      "name": "Stellar Marine Blue",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/meteor-350/stellar-marine-blue.avif"
+    },
+    {
+      "name": "Stellar Matt Grey",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/meteor-350/stellar-matt-grey.avif"
+    },
+    {
+      "name": "Aurora Red",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/meteor-350/aurora-red.avif"
+    },
+    {
+      "name": "Aurora Retro Green",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/meteor-350/aurora-retro-green.avif"
+    },
+    {
+      "name": "Supernova Black",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/meteor-350/supernova-black.avif"
+    },
+    {
+      "name": "Sundowner Orange",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/meteor-350/sundowner-orange.png"
+    }
+  ]
+}

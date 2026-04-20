@@ -1,0 +1,29 @@
+{
+  "brand": "TVS Motor Company",
+  "model": "Apache RR 310",
+  "brandId": "tvs-motor",
+  "makeSlug": "tvs-bikes",
+  "modelSlug": "apache-rr-310",
+  "sourceUrl": "https://www.bikewale.com/tvs-bikes/apache-rr-310/colours/",
+  "scrapedAt": "2026-04-20T06:07:46.750Z",
+  "count": 4,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/9bcfqfb_1828113.jpg?q=100",
+  "colors": [
+    {
+      "name": "Sepang Blue",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/apache-rr-310/sepang-blue.avif"
+    },
+    {
+      "name": "Racing Red",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/apache-rr-310/racing-red.avif"
+    },
+    {
+      "name": "Bomber Grey",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/apache-rr-310/bomber-grey.avif"
+    },
+    {
+      "name": "Black Champagne Gold Livery",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/apache-rr-310/black-champagne-gold-livery.avif"
+    }
+  ]
+}

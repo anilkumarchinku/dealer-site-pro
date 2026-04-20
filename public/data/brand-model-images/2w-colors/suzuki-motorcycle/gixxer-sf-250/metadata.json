@@ -1,0 +1,33 @@
+{
+  "brand": "Suzuki Motorcycle India",
+  "model": "Gixxer SF 250",
+  "brandId": "suzuki-motorcycle",
+  "makeSlug": "suzuki-bikes",
+  "modelSlug": "gixxer-sf-250",
+  "sourceUrl": "https://www.bikewale.com/suzuki-bikes/gixxer-sf-250/colours/",
+  "scrapedAt": "2026-04-20T05:16:11.728Z",
+  "count": 5,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/jff3nhb_1879147.jpg?q=100",
+  "colors": [
+    {
+      "name": "Met Triton Blue / Pearl Glacier White",
+      "image": "/data/brand-model-images/2w-colors/suzuki-motorcycle/gixxer-sf-250/met-triton-blue-pearl-glacier-white.avif"
+    },
+    {
+      "name": "Pearl Glacier White/Metallic Mat Platinum Silver",
+      "image": "/data/brand-model-images/2w-colors/suzuki-motorcycle/gixxer-sf-250/pearl-glacier-white-metallic-mat-platinum-silver.avif"
+    },
+    {
+      "name": "Glass Sparkle Black",
+      "image": "/data/brand-model-images/2w-colors/suzuki-motorcycle/gixxer-sf-250/glass-sparkle-black.avif"
+    },
+    {
+      "name": "Metallic Matte Black",
+      "image": "/data/brand-model-images/2w-colors/suzuki-motorcycle/gixxer-sf-250/metallic-matte-black.avif"
+    },
+    {
+      "name": "Met Mat Black / Met Mat Bordeaux Red",
+      "image": "/data/brand-model-images/2w-colors/suzuki-motorcycle/gixxer-sf-250/met-mat-black-met-mat-bordeaux-red.avif"
+    }
+  ]
+}

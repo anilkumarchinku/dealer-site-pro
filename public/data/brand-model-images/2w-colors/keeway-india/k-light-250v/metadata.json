@@ -1,0 +1,25 @@
+{
+  "brand": "Keeway India",
+  "model": "K-Light 250V",
+  "brandId": "keeway-india",
+  "makeSlug": "keeway-bikes",
+  "modelSlug": "k-light-250v",
+  "sourceUrl": "https://www.bikewale.com/keeway-bikes/k-light-250v/colours/",
+  "scrapedAt": "2026-04-20T05:18:45.699Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/keeway-select-model-matte-black-1657006802349.gif?q=100",
+  "colors": [
+    {
+      "name": "Matte Black",
+      "image": "/data/brand-model-images/2w-colors/keeway-india/k-light-250v/matte-black.avif"
+    },
+    {
+      "name": "Matte Dark Grey",
+      "image": "/data/brand-model-images/2w-colors/keeway-india/k-light-250v/matte-dark-grey.avif"
+    },
+    {
+      "name": "Matte Blue",
+      "image": "/data/brand-model-images/2w-colors/keeway-india/k-light-250v/matte-blue.avif"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "brand": "Revolt Motors",
+  "model": "RV400 BRZ",
+  "brandId": "revolt-motors",
+  "makeSlug": "revolt-bikes",
+  "modelSlug": "rv400",
+  "sourceUrl": "https://www.bikewale.com/revolt-bikes/rv400/colours/",
+  "scrapedAt": "2026-04-20T05:53:14.694Z",
+  "count": 9,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/revolt-select-model-lightning-yellow-1702545721769.png?q=100",
+  "colors": [
+    {
+      "name": "Lightning Yellow",
+      "image": "/data/brand-model-images/2w-colors/revolt-motors/rv400/lightning-yellow.png"
+    },
+    {
+      "name": "Mist Grey",
+      "image": "/data/brand-model-images/2w-colors/revolt-motors/rv400/mist-grey.avif"
+    },
+    {
+      "name": "Cosmic Black",
+      "image": "/data/brand-model-images/2w-colors/revolt-motors/rv400/cosmic-black.avif"
+    },
+    {
+      "name": "Rebel Red",
+      "image": "/data/brand-model-images/2w-colors/revolt-motors/rv400/rebel-red.avif"
+    },
+    {
+      "name": "Pacific Blue",
+      "image": "/data/brand-model-images/2w-colors/revolt-motors/rv400/pacific-blue.png"
+    },
+    {
+      "name": "Rebel Red (BRZ)",
+      "image": "/data/brand-model-images/2w-colors/revolt-motors/rv400/rebel-red-brz.png"
+    },
+    {
+      "name": "Cosmic Black (BRZ)",
+      "image": "/data/brand-model-images/2w-colors/revolt-motors/rv400/cosmic-black-brz.png"
+    },
+    {
+      "name": "Dark Silver",
+      "image": "/data/brand-model-images/2w-colors/revolt-motors/rv400/dark-silver.png"
+    },
+    {
+      "name": "Dark Lunar Green",
+      "image": "/data/brand-model-images/2w-colors/revolt-motors/rv400/dark-lunar-green.png"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "make": "hyundai",
+  "model": "Exter",
+  "brandSlug": "hyundai",
+  "modelSlug": "exter",
+  "sourceUrl": "https://www.cardekho.com/hyundai/exter",
+  "scrapedAt": "2026-04-20T06:16:40.155Z",
+  "counts": {
+    "exterior": 7,
+    "interior": 8,
+    "feature": 0,
+    "colors": 7,
+    "total": 22
+  },
+  "hero": "/data/brand-model-images/4w-galleries/hyundai/exter/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/hyundai/exter/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/exter/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/exter/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/exter/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/exter/exterior/06.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/exter/exterior/07.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/exter/exterior/08.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/hyundai/exter/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/exter/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/exter/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/exter/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/exter/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/exter/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/exter/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/exter/interior/08.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "Titan Black Matte",
+    "Starry Night",
+    "Atlas White",
+    "Ranger Khaki",
+    "Titan Grey",
+    "Ranger Khaki With Abyss Black Roof",
+    "Golden Bronze"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/hyundai/exter/colors/titan-black-matte.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/exter/colors/starry-night.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/exter/colors/atlas-white.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/exter/colors/ranger-khaki.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/exter/colors/titan-grey.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/exter/colors/ranger-khaki-with-abyss-black-roof.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/exter/colors/golden-bronze.avif"
+  ]
+}

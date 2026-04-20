@@ -1,0 +1,21 @@
+{
+  "brand": "Oben Electric",
+  "model": "Rorr",
+  "brandId": "oben-electric",
+  "makeSlug": "oben-bikes",
+  "modelSlug": "rorr",
+  "sourceUrl": "https://www.bikewale.com/oben-bikes/rorr/colours/",
+  "scrapedAt": "2026-04-20T05:20:12.198Z",
+  "count": 2,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/gcc3a9b_1783743.jpg?q=100",
+  "colors": [
+    {
+      "name": "Voltaic Yellow",
+      "image": "/data/brand-model-images/2w-colors/oben-electric/rorr/voltaic-yellow.avif"
+    },
+    {
+      "name": "Electric Red",
+      "image": "/data/brand-model-images/2w-colors/oben-electric/rorr/electric-red.avif"
+    }
+  ]
+}

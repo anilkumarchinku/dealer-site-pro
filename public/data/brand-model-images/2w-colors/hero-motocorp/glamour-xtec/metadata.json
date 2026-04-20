@@ -1,0 +1,29 @@
+{
+  "brand": "Hero MotoCorp",
+  "model": "Glamour Xtec",
+  "brandId": "hero-motocorp",
+  "makeSlug": "hero-bikes",
+  "modelSlug": "glamour-xtec",
+  "sourceUrl": "https://www.bikewale.com/hero-bikes/glamour-xtec/colours/",
+  "scrapedAt": "2026-04-20T06:13:19.362Z",
+  "count": 4,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/hero-select-model-candy-blazing-red-1707130689732.png?q=100",
+  "colors": [
+    {
+      "name": "Candy Blazing Red",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/glamour-xtec/candy-blazing-red.png"
+    },
+    {
+      "name": "Black",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/glamour-xtec/black.png"
+    },
+    {
+      "name": "Grey Blue Stripe",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/glamour-xtec/grey-blue-stripe.png"
+    },
+    {
+      "name": "Metallic Nexus Blue",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/glamour-xtec/metallic-nexus-blue.png"
+    }
+  ]
+}

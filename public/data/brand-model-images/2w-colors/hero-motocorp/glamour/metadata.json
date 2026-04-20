@@ -1,0 +1,29 @@
+{
+  "brand": "Hero MotoCorp",
+  "model": "Glamour",
+  "brandId": "hero-motocorp",
+  "makeSlug": "hero-bikes",
+  "modelSlug": "glamour",
+  "sourceUrl": "https://www.bikewale.com/hero-bikes/glamour/colours/",
+  "scrapedAt": "2026-04-20T06:13:19.171Z",
+  "count": 4,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/ljf4pfb_1827787.webp?q=100",
+  "colors": [
+    {
+      "name": "Black Metallic Silver",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/glamour/black-metallic-silver.webp"
+    },
+    {
+      "name": "Techno Blue Met Black",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/glamour/techno-blue-met-black.webp"
+    },
+    {
+      "name": "Candy Blazing Red",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/glamour/candy-blazing-red.webp"
+    },
+    {
+      "name": "Black Sports Red",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/glamour/black-sports-red.webp"
+    }
+  ]
+}

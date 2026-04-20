@@ -1,0 +1,41 @@
+{
+  "brand": "OPG Mobility",
+  "model": "Freedum",
+  "brandId": "opg-mobility",
+  "makeSlug": "opg-mobility-bikes",
+  "modelSlug": "freedum",
+  "sourceUrl": "https://www.bikewale.com/opg-mobility-bikes/freedum/colours/",
+  "scrapedAt": "2026-04-20T05:20:33.489Z",
+  "count": 7,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/okaya-select-model-white-1663138111759.jpg?q=100",
+  "colors": [
+    {
+      "name": "White",
+      "image": "/data/brand-model-images/2w-colors/opg-mobility/freedum/white.avif"
+    },
+    {
+      "name": "Silver",
+      "image": "/data/brand-model-images/2w-colors/opg-mobility/freedum/silver.avif"
+    },
+    {
+      "name": "Red",
+      "image": "/data/brand-model-images/2w-colors/opg-mobility/freedum/red.avif"
+    },
+    {
+      "name": "Matte Green",
+      "image": "/data/brand-model-images/2w-colors/opg-mobility/freedum/matte-green.avif"
+    },
+    {
+      "name": "Matte Blue",
+      "image": "/data/brand-model-images/2w-colors/opg-mobility/freedum/matte-blue.avif"
+    },
+    {
+      "name": "Grey",
+      "image": "/data/brand-model-images/2w-colors/opg-mobility/freedum/grey.avif"
+    },
+    {
+      "name": "Black",
+      "image": "/data/brand-model-images/2w-colors/opg-mobility/freedum/black.avif"
+    }
+  ]
+}

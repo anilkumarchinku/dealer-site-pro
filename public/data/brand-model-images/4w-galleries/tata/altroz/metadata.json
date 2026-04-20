@@ -1,0 +1,46 @@
+{
+  "make": "tata",
+  "model": "Altroz",
+  "brandSlug": "tata",
+  "modelSlug": "altroz",
+  "sourceUrl": "https://www.cardekho.com/tata/altroz",
+  "scrapedAt": "2026-04-20T06:18:39.797Z",
+  "counts": {
+    "exterior": 7,
+    "interior": 8,
+    "feature": 7,
+    "colors": 0,
+    "total": 22
+  },
+  "hero": "/data/brand-model-images/4w-galleries/tata/altroz/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/tata/altroz/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/tata/altroz/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/tata/altroz/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/tata/altroz/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/tata/altroz/exterior/06.avif",
+    "/data/brand-model-images/4w-galleries/tata/altroz/exterior/07.avif",
+    "/data/brand-model-images/4w-galleries/tata/altroz/exterior/08.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/tata/altroz/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/tata/altroz/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/tata/altroz/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/tata/altroz/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/tata/altroz/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/tata/altroz/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/tata/altroz/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/tata/altroz/interior/08.avif"
+  ],
+  "feature": [
+    "/data/brand-model-images/4w-galleries/tata/altroz/feature/01.avif",
+    "/data/brand-model-images/4w-galleries/tata/altroz/feature/02.avif",
+    "/data/brand-model-images/4w-galleries/tata/altroz/feature/03.avif",
+    "/data/brand-model-images/4w-galleries/tata/altroz/feature/04.avif",
+    "/data/brand-model-images/4w-galleries/tata/altroz/feature/05.avif",
+    "/data/brand-model-images/4w-galleries/tata/altroz/feature/06.avif",
+    "/data/brand-model-images/4w-galleries/tata/altroz/feature/07.avif"
+  ],
+  "colorNames": [],
+  "colorImages": []
+}

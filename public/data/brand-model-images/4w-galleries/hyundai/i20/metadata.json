@@ -1,0 +1,52 @@
+{
+  "make": "hyundai",
+  "model": "i20",
+  "brandSlug": "hyundai",
+  "modelSlug": "i20",
+  "sourceUrl": "https://www.cardekho.com/hyundai/i20",
+  "scrapedAt": "2026-04-20T06:16:44.179Z",
+  "counts": {
+    "exterior": 5,
+    "interior": 8,
+    "feature": 0,
+    "colors": 7,
+    "total": 20
+  },
+  "hero": "/data/brand-model-images/4w-galleries/hyundai/i20/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/hyundai/i20/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/i20/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/i20/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/i20/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/i20/exterior/06.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/hyundai/i20/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/i20/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/i20/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/i20/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/i20/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/i20/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/i20/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/i20/interior/08.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "Fiery Red",
+    "Typhoon Silver",
+    "Starry Night",
+    "Atlas White",
+    "Atlas White With Abyss Black",
+    "Titan Grey",
+    "Amazon Grey"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/hyundai/i20/colors/fiery-red.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/i20/colors/typhoon-silver.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/i20/colors/starry-night.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/i20/colors/atlas-white.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/i20/colors/atlas-white-with-abyss-black.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/i20/colors/titan-grey.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/i20/colors/amazon-grey.avif"
+  ]
+}

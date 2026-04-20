@@ -1,0 +1,29 @@
+{
+  "brand": "Triumph India",
+  "model": "Thruxton 400",
+  "brandId": "triumph-india",
+  "makeSlug": "triumph-bikes",
+  "modelSlug": "thruxton-400",
+  "sourceUrl": "https://www.bikewale.com/triumph-bikes/thruxton-400/colours/",
+  "scrapedAt": "2026-04-20T05:17:50.894Z",
+  "count": 4,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/0lsig8b_1924524.jpg?q=100",
+  "colors": [
+    {
+      "name": "Metallic Racing Yellow / Aluminium Silver",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/thruxton-400/metallic-racing-yellow-aluminium-silver.avif"
+    },
+    {
+      "name": "Pearl Metallic White / Storm Grey",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/thruxton-400/pearl-metallic-white-storm-grey.png"
+    },
+    {
+      "name": "Phantom Black / Aluminium Silver",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/thruxton-400/phantom-black-aluminium-silver.avif"
+    },
+    {
+      "name": "Carnival Red / Aluminium Silver",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/thruxton-400/carnival-red-aluminium-silver.avif"
+    }
+  ]
+}

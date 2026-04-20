@@ -1,0 +1,25 @@
+{
+  "brand": "Ducati India",
+  "model": "Panigale V4",
+  "brandId": "ducati-india",
+  "makeSlug": "ducati-bikes",
+  "modelSlug": "panigale-v4",
+  "sourceUrl": "https://www.bikewale.com/ducati-bikes/panigale-v4/colours/",
+  "scrapedAt": "2026-04-20T05:17:57.717Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/sa6s8fb_1819639.jpg?q=100",
+  "colors": [
+    {
+      "name": "Ducati Red",
+      "image": "/data/brand-model-images/2w-colors/ducati-india/panigale-v4/ducati-red.avif"
+    },
+    {
+      "name": "Ducati Red S",
+      "image": "/data/brand-model-images/2w-colors/ducati-india/panigale-v4/ducati-red-s.avif"
+    },
+    {
+      "name": "Tricolore Livery",
+      "image": "/data/brand-model-images/2w-colors/ducati-india/panigale-v4/tricolore-livery.png"
+    }
+  ]
+}

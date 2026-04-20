@@ -1,0 +1,48 @@
+{
+  "make": "toyota",
+  "model": "Hilux",
+  "brandSlug": "toyota",
+  "modelSlug": "hilux",
+  "sourceUrl": "https://www.cardekho.com/toyota/hilux",
+  "scrapedAt": "2026-04-20T06:30:32.648Z",
+  "counts": {
+    "exterior": 5,
+    "interior": 8,
+    "feature": 0,
+    "colors": 5,
+    "total": 18
+  },
+  "hero": "/data/brand-model-images/4w-galleries/toyota/hilux/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/toyota/hilux/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/toyota/hilux/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/toyota/hilux/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/toyota/hilux/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/toyota/hilux/exterior/06.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/toyota/hilux/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/toyota/hilux/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/toyota/hilux/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/toyota/hilux/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/toyota/hilux/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/toyota/hilux/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/toyota/hilux/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/toyota/hilux/interior/08.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "White Pearl Crystal Shine",
+    "Emotional Red",
+    "Attitude Black",
+    "Grey Metallic",
+    "Super White"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/toyota/hilux/colors/white-pearl-crystal-shine.avif",
+    "/data/brand-model-images/4w-galleries/toyota/hilux/colors/emotional-red.avif",
+    "/data/brand-model-images/4w-galleries/toyota/hilux/colors/attitude-black.avif",
+    "/data/brand-model-images/4w-galleries/toyota/hilux/colors/grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/toyota/hilux/colors/super-white.avif"
+  ]
+}

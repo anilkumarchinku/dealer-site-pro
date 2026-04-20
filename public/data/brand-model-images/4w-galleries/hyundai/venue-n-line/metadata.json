@@ -1,0 +1,50 @@
+{
+  "make": "hyundai",
+  "model": "Venue N Line",
+  "brandSlug": "hyundai",
+  "modelSlug": "venue-n-line",
+  "sourceUrl": "https://www.cardekho.com/hyundai/venue-n-line",
+  "scrapedAt": "2026-04-20T06:16:59.666Z",
+  "counts": {
+    "exterior": 5,
+    "interior": 6,
+    "feature": 0,
+    "colors": 7,
+    "total": 18
+  },
+  "hero": "/data/brand-model-images/4w-galleries/hyundai/venue-n-line/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/hyundai/venue-n-line/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/venue-n-line/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/venue-n-line/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/venue-n-line/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/venue-n-line/exterior/06.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/hyundai/venue-n-line/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/venue-n-line/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/venue-n-line/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/venue-n-line/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/venue-n-line/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/venue-n-line/interior/08.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "Dragon Red",
+    "Atlas White",
+    "Atlas White With Abyss Black",
+    "Titan Grey",
+    "Hazel Blue",
+    "Hazel Blue With Abyss Black Roof",
+    "Dragon Red With Abyss Black"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/hyundai/venue-n-line/colors/dragon-red.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/venue-n-line/colors/atlas-white.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/venue-n-line/colors/atlas-white-with-abyss-black.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/venue-n-line/colors/titan-grey.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/venue-n-line/colors/hazel-blue.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/venue-n-line/colors/hazel-blue-with-abyss-black-roof.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/venue-n-line/colors/dragon-red-with-abyss-black.avif"
+  ]
+}

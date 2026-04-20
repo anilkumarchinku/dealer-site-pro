@@ -1,0 +1,33 @@
+{
+  "brand": "Okinawa Autotech",
+  "model": "R30",
+  "brandId": "okinawa-autotech",
+  "makeSlug": "okinawa-bikes",
+  "modelSlug": "r30",
+  "sourceUrl": "https://www.bikewale.com/okinawa-bikes/r30/colours/",
+  "scrapedAt": "2026-04-20T05:19:30.779Z",
+  "count": 5,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/okinawa-select-model-yellow-1689754629633.png?q=100",
+  "colors": [
+    {
+      "name": "Yellow",
+      "image": "/data/brand-model-images/2w-colors/okinawa-autotech/r30/yellow.png"
+    },
+    {
+      "name": "Red",
+      "image": "/data/brand-model-images/2w-colors/okinawa-autotech/r30/red.png"
+    },
+    {
+      "name": "White",
+      "image": "/data/brand-model-images/2w-colors/okinawa-autotech/r30/white.png"
+    },
+    {
+      "name": "Orange",
+      "image": "/data/brand-model-images/2w-colors/okinawa-autotech/r30/orange.png"
+    },
+    {
+      "name": "Cyan",
+      "image": "/data/brand-model-images/2w-colors/okinawa-autotech/r30/cyan.png"
+    }
+  ]
+}

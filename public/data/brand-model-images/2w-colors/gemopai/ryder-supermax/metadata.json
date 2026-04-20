@@ -1,0 +1,37 @@
+{
+  "brand": "Gemopai",
+  "model": "Ryder SuperMax",
+  "brandId": "gemopai",
+  "makeSlug": "gemopai-bikes",
+  "modelSlug": "ryder-supermax",
+  "sourceUrl": "https://www.bikewale.com/gemopai-bikes/ryder-supermax/colours/",
+  "scrapedAt": "2026-04-20T05:20:32.660Z",
+  "count": 6,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/gemopai-select-model-fluorescent-yellow-1677670673121.jpg?q=100",
+  "colors": [
+    {
+      "name": "Fluorescent Yellow",
+      "image": "/data/brand-model-images/2w-colors/gemopai/ryder-supermax/fluorescent-yellow.avif"
+    },
+    {
+      "name": "Sparkling White",
+      "image": "/data/brand-model-images/2w-colors/gemopai/ryder-supermax/sparkling-white.avif"
+    },
+    {
+      "name": "Blazing Red",
+      "image": "/data/brand-model-images/2w-colors/gemopai/ryder-supermax/blazing-red.avif"
+    },
+    {
+      "name": "Graphite Grey",
+      "image": "/data/brand-model-images/2w-colors/gemopai/ryder-supermax/graphite-grey.avif"
+    },
+    {
+      "name": "Jazzy Neon",
+      "image": "/data/brand-model-images/2w-colors/gemopai/ryder-supermax/jazzy-neon.avif"
+    },
+    {
+      "name": "Electric Blue",
+      "image": "/data/brand-model-images/2w-colors/gemopai/ryder-supermax/electric-blue.avif"
+    }
+  ]
+}

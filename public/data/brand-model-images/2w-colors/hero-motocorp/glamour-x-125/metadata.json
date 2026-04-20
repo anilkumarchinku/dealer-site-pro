@@ -1,0 +1,33 @@
+{
+  "brand": "Hero MotoCorp",
+  "model": "Glamour X 125",
+  "brandId": "hero-motocorp",
+  "makeSlug": "hero-bikes",
+  "modelSlug": "glamour-x-125",
+  "sourceUrl": "https://www.bikewale.com/hero-bikes/glamour-x-125/colours/",
+  "scrapedAt": "2026-04-20T06:13:19.685Z",
+  "count": 5,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/kfmqahb_1864546.jpg?q=100",
+  "colors": [
+    {
+      "name": "Metallic Nexus Blue",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/glamour-x-125/metallic-nexus-blue.avif"
+    },
+    {
+      "name": "Matt Metallic Silver",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/glamour-x-125/matt-metallic-silver.avif"
+    },
+    {
+      "name": "Candy Blazing Red",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/glamour-x-125/candy-blazing-red.avif"
+    },
+    {
+      "name": "Black Teal Blue",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/glamour-x-125/black-teal-blue.avif"
+    },
+    {
+      "name": "Black Pearl Red",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/glamour-x-125/black-pearl-red.avif"
+    }
+  ]
+}

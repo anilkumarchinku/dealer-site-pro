@@ -1,0 +1,33 @@
+{
+  "brand": "Ampere (Greaves Electric)",
+  "model": "Magnus",
+  "brandId": "ampere-greaves",
+  "makeSlug": "ampere-bikes",
+  "modelSlug": "magnus",
+  "sourceUrl": "https://www.bikewale.com/ampere-bikes/magnus/colours/",
+  "scrapedAt": "2026-04-20T05:53:15.459Z",
+  "count": 5,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/4ruav9b_1808157.jpg?q=100",
+  "colors": [
+    {
+      "name": "Galactic Grey",
+      "image": "/data/brand-model-images/2w-colors/ampere-greaves/magnus/galactic-grey.avif"
+    },
+    {
+      "name": "Metallic Red",
+      "image": "/data/brand-model-images/2w-colors/ampere-greaves/magnus/metallic-red.avif"
+    },
+    {
+      "name": "Ocean Blue",
+      "image": "/data/brand-model-images/2w-colors/ampere-greaves/magnus/ocean-blue.avif"
+    },
+    {
+      "name": "Glacial White",
+      "image": "/data/brand-model-images/2w-colors/ampere-greaves/magnus/glacial-white.avif"
+    },
+    {
+      "name": "Glossy Black",
+      "image": "/data/brand-model-images/2w-colors/ampere-greaves/magnus/glossy-black.avif"
+    }
+  ]
+}

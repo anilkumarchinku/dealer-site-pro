@@ -1,0 +1,29 @@
+{
+  "brand": "Hero MotoCorp",
+  "model": "XPulse 210",
+  "brandId": "hero-motocorp",
+  "makeSlug": "hero-bikes",
+  "modelSlug": "xpulse-210",
+  "sourceUrl": "https://www.bikewale.com/hero-bikes/xpulse-210/colours/",
+  "scrapedAt": "2026-04-20T06:13:22.456Z",
+  "count": 4,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/h2600fb_1809019.jpg?q=100",
+  "colors": [
+    {
+      "name": "Wild Red",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/xpulse-210/wild-red.avif"
+    },
+    {
+      "name": "Glacier White",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/xpulse-210/glacier-white.avif"
+    },
+    {
+      "name": "Alpine Silver",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/xpulse-210/alpine-silver.avif"
+    },
+    {
+      "name": "Azure Blue",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/xpulse-210/azure-blue.avif"
+    }
+  ]
+}

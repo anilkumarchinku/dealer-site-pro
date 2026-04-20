@@ -1,0 +1,69 @@
+{
+  "brand": "Bajaj Chetak",
+  "model": "Chetak",
+  "brandId": "bajaj-chetak-ev",
+  "makeSlug": "bajaj-bikes",
+  "modelSlug": "chetak",
+  "sourceUrl": "https://www.bikewale.com/bajaj-bikes/chetak/colours/",
+  "scrapedAt": "2026-04-20T06:07:47.800Z",
+  "count": 14,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/fcn3r9b_1802657.jpg?q=100",
+  "colors": [
+    {
+      "name": "Scarlet Red",
+      "image": "/data/brand-model-images/2w-colors/bajaj-chetak-ev/chetak/scarlet-red.avif"
+    },
+    {
+      "name": "Indigo Metallic",
+      "image": "/data/brand-model-images/2w-colors/bajaj-chetak-ev/chetak/indigo-metallic.avif"
+    },
+    {
+      "name": "Hazel Nut",
+      "image": "/data/brand-model-images/2w-colors/bajaj-chetak-ev/chetak/hazel-nut.avif"
+    },
+    {
+      "name": "Pista Green",
+      "image": "/data/brand-model-images/2w-colors/bajaj-chetak-ev/chetak/pista-green.avif"
+    },
+    {
+      "name": "Brooklyn Black",
+      "image": "/data/brand-model-images/2w-colors/bajaj-chetak-ev/chetak/brooklyn-black.avif"
+    },
+    {
+      "name": "Cyber White",
+      "image": "/data/brand-model-images/2w-colors/bajaj-chetak-ev/chetak/cyber-white.avif"
+    },
+    {
+      "name": "Matte Coarse Grey",
+      "image": "/data/brand-model-images/2w-colors/bajaj-chetak-ev/chetak/matte-coarse-grey.avif"
+    },
+    {
+      "name": "Indigo Blue",
+      "image": "/data/brand-model-images/2w-colors/bajaj-chetak-ev/chetak/indigo-blue.avif"
+    },
+    {
+      "name": "Matt Grey",
+      "image": "/data/brand-model-images/2w-colors/bajaj-chetak-ev/chetak/matt-grey.avif"
+    },
+    {
+      "name": "Brooklyn Black",
+      "image": "/data/brand-model-images/2w-colors/bajaj-chetak-ev/chetak/brooklyn-black.avif"
+    },
+    {
+      "name": "Cyber White",
+      "image": "/data/brand-model-images/2w-colors/bajaj-chetak-ev/chetak/cyber-white.avif"
+    },
+    {
+      "name": "Racing Red",
+      "image": "/data/brand-model-images/2w-colors/bajaj-chetak-ev/chetak/racing-red.avif"
+    },
+    {
+      "name": "Lime Yellow",
+      "image": "/data/brand-model-images/2w-colors/bajaj-chetak-ev/chetak/lime-yellow.avif"
+    },
+    {
+      "name": "Azure Blue",
+      "image": "/data/brand-model-images/2w-colors/bajaj-chetak-ev/chetak/azure-blue.avif"
+    }
+  ]
+}

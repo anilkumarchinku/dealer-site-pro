@@ -1,0 +1,17 @@
+{
+  "brand": "Honda Motorcycle & Scooter India",
+  "model": "CBR1000RR-R Fireblade",
+  "brandId": "honda-hmsi",
+  "makeSlug": "honda-bikes",
+  "modelSlug": "cbr1000rr-r-fireblade",
+  "sourceUrl": "https://www.bikewale.com/honda-bikes/cbr1000rr-r-fireblade/colours/",
+  "scrapedAt": "2026-04-20T05:15:27.645Z",
+  "count": 1,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/vhn0hhb_1871117.jpg?q=100",
+  "colors": [
+    {
+      "name": "Grand Prix Red",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/cbr1000rr-r-fireblade/grand-prix-red.avif"
+    }
+  ]
+}

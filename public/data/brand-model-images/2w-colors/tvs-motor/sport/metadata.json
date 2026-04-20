@@ -1,0 +1,37 @@
+{
+  "brand": "TVS Motor Company",
+  "model": "Sport",
+  "brandId": "tvs-motor",
+  "makeSlug": "tvs-bikes",
+  "modelSlug": "sport",
+  "sourceUrl": "https://www.bikewale.com/tvs-bikes/sport/colours/",
+  "scrapedAt": "2026-04-20T06:07:35.874Z",
+  "count": 6,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/c0n3qeb_1774757.jpg?q=100",
+  "colors": [
+    {
+      "name": "Starlight Blue",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/sport/starlight-blue.avif"
+    },
+    {
+      "name": "All Red",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/sport/all-red.png"
+    },
+    {
+      "name": "All Grey",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/sport/all-grey.png"
+    },
+    {
+      "name": "All Black",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/sport/all-black.png"
+    },
+    {
+      "name": "Grey Red",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/sport/grey-red.avif"
+    },
+    {
+      "name": "Black Neon",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/sport/black-neon.avif"
+    }
+  ]
+}

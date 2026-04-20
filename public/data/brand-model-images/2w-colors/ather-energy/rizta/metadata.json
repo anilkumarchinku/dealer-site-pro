@@ -1,0 +1,49 @@
+{
+  "brand": "Ather Energy",
+  "model": "Rizta",
+  "brandId": "ather-energy",
+  "makeSlug": "ather-bikes",
+  "modelSlug": "rizta",
+  "sourceUrl": "https://www.bikewale.com/ather-bikes/rizta/colours/",
+  "scrapedAt": "2026-04-20T05:19:14.176Z",
+  "count": 9,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/ather-select-model-deccan-grey-1712392628151.png?q=100",
+  "colors": [
+    {
+      "name": "Deccan Grey",
+      "image": "/data/brand-model-images/2w-colors/ather-energy/rizta/deccan-grey.png"
+    },
+    {
+      "name": "Siachen White",
+      "image": "/data/brand-model-images/2w-colors/ather-energy/rizta/siachen-white.png"
+    },
+    {
+      "name": "Terracotta Red",
+      "image": "/data/brand-model-images/2w-colors/ather-energy/rizta/terracotta-red.avif"
+    },
+    {
+      "name": "Pangong Blue",
+      "image": "/data/brand-model-images/2w-colors/ather-energy/rizta/pangong-blue.avif"
+    },
+    {
+      "name": "Terracotta Red Duo",
+      "image": "/data/brand-model-images/2w-colors/ather-energy/rizta/terracotta-red-duo.avif"
+    },
+    {
+      "name": "Deccan Grey Duo",
+      "image": "/data/brand-model-images/2w-colors/ather-energy/rizta/deccan-grey-duo.avif"
+    },
+    {
+      "name": "Alphonso Yellow Duo",
+      "image": "/data/brand-model-images/2w-colors/ather-energy/rizta/alphonso-yellow-duo.avif"
+    },
+    {
+      "name": "Cardomom Green Duo",
+      "image": "/data/brand-model-images/2w-colors/ather-energy/rizta/cardomom-green-duo.avif"
+    },
+    {
+      "name": "Pangong Blue Duo",
+      "image": "/data/brand-model-images/2w-colors/ather-energy/rizta/pangong-blue-duo.avif"
+    }
+  ]
+}

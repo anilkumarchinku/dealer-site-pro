@@ -1,0 +1,17 @@
+{
+  "brand": "Kawasaki India",
+  "model": "Vulcan S",
+  "brandId": "kawasaki-india",
+  "makeSlug": "kawasaki-bikes",
+  "modelSlug": "vulcan-s",
+  "sourceUrl": "https://www.bikewale.com/kawasaki-bikes/vulcan-s/colours/",
+  "scrapedAt": "2026-04-20T05:17:01.233Z",
+  "count": 1,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/teacgib_1897291.jpg?q=100",
+  "colors": [
+    {
+      "name": "Metallic Flat Spark Black",
+      "image": "/data/brand-model-images/2w-colors/kawasaki-india/vulcan-s/metallic-flat-spark-black.avif"
+    }
+  ]
+}

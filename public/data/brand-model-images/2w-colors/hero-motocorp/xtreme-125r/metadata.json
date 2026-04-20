@@ -1,0 +1,57 @@
+{
+  "brand": "Hero MotoCorp",
+  "model": "Xtreme 125R",
+  "brandId": "hero-motocorp",
+  "makeSlug": "hero-bikes",
+  "modelSlug": "xtreme-125r",
+  "sourceUrl": "https://www.bikewale.com/hero-bikes/xtreme-125r/colours/",
+  "scrapedAt": "2026-04-20T06:13:20.323Z",
+  "count": 11,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/vlqlghb_1870641.jpg?q=100",
+  "colors": [
+    {
+      "name": "Abrax Orange (Single Seat)",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/xtreme-125r/abrax-orange-single-seat.avif"
+    },
+    {
+      "name": "Stallion Black (Single Seat)",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/xtreme-125r/stallion-black-single-seat.avif"
+    },
+    {
+      "name": "Firestorm Red (Single Seat)",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/xtreme-125r/firestorm-red-single-seat.avif"
+    },
+    {
+      "name": "Cobalt Blue (Single Seat)",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/xtreme-125r/cobalt-blue-single-seat.avif"
+    },
+    {
+      "name": "Stallion Black",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/xtreme-125r/stallion-black.avif"
+    },
+    {
+      "name": "Firestorm Red",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/xtreme-125r/firestorm-red.avif"
+    },
+    {
+      "name": "Cobalt Blue",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/xtreme-125r/cobalt-blue.avif"
+    },
+    {
+      "name": "Abrax Orange",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/xtreme-125r/abrax-orange.avif"
+    },
+    {
+      "name": "Black Leaf Green",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/xtreme-125r/black-leaf-green.avif"
+    },
+    {
+      "name": "Black Matshdow Grey",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/xtreme-125r/black-matshdow-grey.avif"
+    },
+    {
+      "name": "Black Pearl Red",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/xtreme-125r/black-pearl-red.avif"
+    }
+  ]
+}

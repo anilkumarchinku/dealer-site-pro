@@ -1,0 +1,21 @@
+{
+  "brand": "Yamaha India",
+  "model": "FZ Rave",
+  "brandId": "yamaha-india",
+  "makeSlug": "yamaha-bikes",
+  "modelSlug": "fz-rave",
+  "sourceUrl": "https://www.bikewale.com/yamaha-bikes/fz-rave/colours/",
+  "scrapedAt": "2026-04-20T06:07:36.755Z",
+  "count": 2,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/cma5uhb_1887991.png?q=100",
+  "colors": [
+    {
+      "name": "Metallic Black",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/fz-rave/metallic-black.png"
+    },
+    {
+      "name": "Matte Titan",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/fz-rave/matte-titan.png"
+    }
+  ]
+}

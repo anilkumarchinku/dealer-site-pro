@@ -1,0 +1,21 @@
+{
+  "brand": "Kawasaki India",
+  "model": "Ninja 300",
+  "brandId": "kawasaki-india",
+  "makeSlug": "kawasaki-bikes",
+  "modelSlug": "ninja-300",
+  "sourceUrl": "https://www.bikewale.com/kawasaki-bikes/ninja-300/colours/",
+  "scrapedAt": "2026-04-20T05:16:53.861Z",
+  "count": 2,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/1zvmkib_1902209.png?q=100",
+  "colors": [
+    {
+      "name": "Candy Lime Green / Ebony",
+      "image": "/data/brand-model-images/2w-colors/kawasaki-india/ninja-300/candy-lime-green-ebony.png"
+    },
+    {
+      "name": "Lime Green",
+      "image": "/data/brand-model-images/2w-colors/kawasaki-india/ninja-300/lime-green.png"
+    }
+  ]
+}

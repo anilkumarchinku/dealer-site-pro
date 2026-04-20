@@ -1,0 +1,25 @@
+{
+  "brand": "Suzuki Motorcycle India",
+  "model": "Hayabusa",
+  "brandId": "suzuki-motorcycle",
+  "makeSlug": "suzuki-bikes",
+  "modelSlug": "hayabusa",
+  "sourceUrl": "https://www.bikewale.com/suzuki-bikes/hayabusa/colours/",
+  "scrapedAt": "2026-04-20T05:16:12.777Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/locm6fb_1826583.webp?q=100",
+  "colors": [
+    {
+      "name": "Metallic Mystic Silver/Pearl Vigor Blue",
+      "image": "/data/brand-model-images/2w-colors/suzuki-motorcycle/hayabusa/metallic-mystic-silver-pearl-vigor-blue.webp"
+    },
+    {
+      "name": "Glass Sparkle Black/Metallic Mat Titanium Silver",
+      "image": "/data/brand-model-images/2w-colors/suzuki-motorcycle/hayabusa/glass-sparkle-black-metallic-mat-titanium-silver.webp"
+    },
+    {
+      "name": "Metallic Mat Steel Green/Glass Sparkle Black",
+      "image": "/data/brand-model-images/2w-colors/suzuki-motorcycle/hayabusa/metallic-mat-steel-green-glass-sparkle-black.webp"
+    }
+  ]
+}

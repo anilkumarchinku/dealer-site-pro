@@ -1,0 +1,53 @@
+{
+  "brand": "Royal Enfield",
+  "model": "Hunter 350",
+  "brandId": "royal-enfield",
+  "makeSlug": "royalenfield-bikes",
+  "modelSlug": "hunter-350",
+  "sourceUrl": "https://www.bikewale.com/royalenfield-bikes/hunter-350/colours/",
+  "scrapedAt": "2026-04-20T05:15:53.425Z",
+  "count": 10,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bghr5fb_1830369.jpg?q=100",
+  "colors": [
+    {
+      "name": "Factory Black",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/hunter-350/factory-black.avif"
+    },
+    {
+      "name": "Graphite Grey",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/hunter-350/graphite-grey.png"
+    },
+    {
+      "name": "Dapper Grey",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/hunter-350/dapper-grey.avif"
+    },
+    {
+      "name": "Rio White",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/hunter-350/rio-white.avif"
+    },
+    {
+      "name": "Mumbai Yellow",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/hunter-350/mumbai-yellow.avif"
+    },
+    {
+      "name": "Moonshot White",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/hunter-350/moonshot-white.avif"
+    },
+    {
+      "name": "Tokyo Black",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/hunter-350/tokyo-black.avif"
+    },
+    {
+      "name": "London Red",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/hunter-350/london-red.avif"
+    },
+    {
+      "name": "Rebel Blue",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/hunter-350/rebel-blue.avif"
+    },
+    {
+      "name": "Tarmac Black",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/hunter-350/tarmac-black.avif"
+    }
+  ]
+}

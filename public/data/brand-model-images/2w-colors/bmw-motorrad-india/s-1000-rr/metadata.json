@@ -1,0 +1,25 @@
+{
+  "brand": "BMW Motorrad India",
+  "model": "S 1000 RR",
+  "brandId": "bmw-motorrad-india",
+  "makeSlug": "bmw-bikes",
+  "modelSlug": "s-1000-rr",
+  "sourceUrl": "https://www.bikewale.com/bmw-bikes/s-1000-rr/colours/",
+  "scrapedAt": "2026-04-20T05:18:24.995Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/bmw-select-model-black-storm-metallic-1677058621251.jpg?q=100",
+  "colors": [
+    {
+      "name": "Black Storm Metallic",
+      "image": "/data/brand-model-images/2w-colors/bmw-motorrad-india/s-1000-rr/black-storm-metallic.avif"
+    },
+    {
+      "name": "Passion",
+      "image": "/data/brand-model-images/2w-colors/bmw-motorrad-india/s-1000-rr/passion.avif"
+    },
+    {
+      "name": "Light white",
+      "image": "/data/brand-model-images/2w-colors/bmw-motorrad-india/s-1000-rr/light-white.avif"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "brand": "Bajaj Auto",
+  "model": "Pulsar 150",
+  "brandId": "bajaj-auto",
+  "makeSlug": "bajaj-bikes",
+  "modelSlug": "pulsar-150",
+  "sourceUrl": "https://www.bikewale.com/bajaj-bikes/pulsar-150/colours/",
+  "scrapedAt": "2026-04-20T06:07:39.267Z",
+  "count": 9,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/0yrc88b_1927012.png?q=100",
+  "colors": [
+    {
+      "name": "Black Gold",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/pulsar-150/black-gold.png"
+    },
+    {
+      "name": "Bottle Green with Copper Beige",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/pulsar-150/bottle-green-with-copper-beige.png"
+    },
+    {
+      "name": "Ebony Black Dark Grey",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/pulsar-150/ebony-black-dark-grey.png"
+    },
+    {
+      "name": "Ebony Black Ink Blue",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/pulsar-150/ebony-black-ink-blue.png"
+    },
+    {
+      "name": "Ebony Black Cherry Red",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/pulsar-150/ebony-black-cherry-red.png"
+    },
+    {
+      "name": "Ebony Black Cherry Red (Split Seat)",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/pulsar-150/ebony-black-cherry-red-split-seat.png"
+    },
+    {
+      "name": "Ebony Black Dark Grey (Split Seat)",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/pulsar-150/ebony-black-dark-grey-split-seat.png"
+    },
+    {
+      "name": "Bottle Green with Copper Beige (Split Seat)",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/pulsar-150/bottle-green-with-copper-beige-split-seat.png"
+    },
+    {
+      "name": "Ebony Black Ink Blue (Split Seat)",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/pulsar-150/ebony-black-ink-blue-split-seat.png"
+    }
+  ]
+}

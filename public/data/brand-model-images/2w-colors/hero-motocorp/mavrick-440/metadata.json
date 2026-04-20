@@ -1,0 +1,33 @@
+{
+  "brand": "Hero MotoCorp",
+  "model": "Mavrick 440",
+  "brandId": "hero-motocorp",
+  "makeSlug": "hero-bikes",
+  "modelSlug": "mavrick-440",
+  "sourceUrl": "https://www.bikewale.com/hero-bikes/mavrick-440/colours/",
+  "scrapedAt": "2026-04-20T06:13:23.068Z",
+  "count": 5,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/hero-select-model-arctic-white-1706099601605.png?q=100",
+  "colors": [
+    {
+      "name": "Arctic White",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/mavrick-440/arctic-white.png"
+    },
+    {
+      "name": "Celestial Blue",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/mavrick-440/celestial-blue.png"
+    },
+    {
+      "name": "Fearless Red",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/mavrick-440/fearless-red.png"
+    },
+    {
+      "name": "Enigma Black",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/mavrick-440/enigma-black.png"
+    },
+    {
+      "name": "Phantom Black",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/mavrick-440/phantom-black.png"
+    }
+  ]
+}

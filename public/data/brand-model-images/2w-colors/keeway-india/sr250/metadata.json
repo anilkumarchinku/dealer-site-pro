@@ -1,0 +1,25 @@
+{
+  "brand": "Keeway India",
+  "model": "SR250",
+  "brandId": "keeway-india",
+  "makeSlug": "keeway-bikes",
+  "modelSlug": "sr250",
+  "sourceUrl": "https://www.bikewale.com/keeway-bikes/sr250/colours/",
+  "scrapedAt": "2026-04-20T05:18:45.899Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/keeway-select-model-glossy-black-1673440129841.png?q=100",
+  "colors": [
+    {
+      "name": "Glossy Black",
+      "image": "/data/brand-model-images/2w-colors/keeway-india/sr250/glossy-black.png"
+    },
+    {
+      "name": "Glossy Red",
+      "image": "/data/brand-model-images/2w-colors/keeway-india/sr250/glossy-red.png"
+    },
+    {
+      "name": "Glossy White",
+      "image": "/data/brand-model-images/2w-colors/keeway-india/sr250/glossy-white.png"
+    }
+  ]
+}

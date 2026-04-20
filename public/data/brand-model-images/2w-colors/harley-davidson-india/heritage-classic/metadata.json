@@ -1,0 +1,33 @@
+{
+  "brand": "Harley-Davidson India",
+  "model": "Heritage Classic",
+  "brandId": "harley-davidson-india",
+  "makeSlug": "harleydavidson-bikes",
+  "modelSlug": "heritage-classic",
+  "sourceUrl": "https://www.bikewale.com/harleydavidson-bikes/heritage-classic/colours/",
+  "scrapedAt": "2026-04-20T05:53:19.183Z",
+  "count": 5,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/cyhmohb_1879689.jpg?q=100",
+  "colors": [
+    {
+      "name": "Billiard Gray",
+      "image": "/data/brand-model-images/2w-colors/harley-davidson-india/heritage-classic/billiard-gray.avif"
+    },
+    {
+      "name": "Vivid Black",
+      "image": "/data/brand-model-images/2w-colors/harley-davidson-india/heritage-classic/vivid-black.avif"
+    },
+    {
+      "name": "Iron Horse Metallic",
+      "image": "/data/brand-model-images/2w-colors/harley-davidson-india/heritage-classic/iron-horse-metallic.avif"
+    },
+    {
+      "name": "White Onyx Pearl",
+      "image": "/data/brand-model-images/2w-colors/harley-davidson-india/heritage-classic/white-onyx-pearl.avif"
+    },
+    {
+      "name": "Whiskey Fire/Vivid Black",
+      "image": "/data/brand-model-images/2w-colors/harley-davidson-india/heritage-classic/whiskey-fire-vivid-black.avif"
+    }
+  ]
+}

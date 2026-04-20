@@ -1,0 +1,61 @@
+{
+  "brand": "TVS Motor Company",
+  "model": "XL100 Heavy Duty",
+  "brandId": "tvs-motor",
+  "makeSlug": "tvs-bikes",
+  "modelSlug": "xl-100-heavy-duty",
+  "sourceUrl": "https://www.bikewale.com/tvs-bikes/xl-100-heavy-duty/colours/",
+  "scrapedAt": "2026-04-20T06:07:49.874Z",
+  "count": 12,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/tvs-select-model-blue-1669637008244.png?q=100",
+  "colors": [
+    {
+      "name": "Blue",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/xl-100-heavy-duty/blue.png"
+    },
+    {
+      "name": "Mineral Purple",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/xl-100-heavy-duty/mineral-purple.png"
+    },
+    {
+      "name": "Red",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/xl-100-heavy-duty/red.png"
+    },
+    {
+      "name": "Green",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/xl-100-heavy-duty/green.png"
+    },
+    {
+      "name": "Black",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/xl-100-heavy-duty/black.png"
+    },
+    {
+      "name": "Black (Kick)",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/xl-100-heavy-duty/black-kick.png"
+    },
+    {
+      "name": "Green (Kick)",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/xl-100-heavy-duty/green-kick.png"
+    },
+    {
+      "name": "Delight Blue",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/xl-100-heavy-duty/delight-blue.png"
+    },
+    {
+      "name": "Beaver Brown",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/xl-100-heavy-duty/beaver-brown.png"
+    },
+    {
+      "name": "Grey (Alloy)",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/xl-100-heavy-duty/grey-alloy.avif"
+    },
+    {
+      "name": "Blue (Alloy)",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/xl-100-heavy-duty/blue-alloy.avif"
+    },
+    {
+      "name": "Red (Alloy)",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/xl-100-heavy-duty/red-alloy.avif"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "brand": "TVS Motor Company",
+  "model": "Apache RTR 180",
+  "brandId": "tvs-motor",
+  "makeSlug": "tvs-bikes",
+  "modelSlug": "apache-rtr-180",
+  "sourceUrl": "https://www.bikewale.com/tvs-bikes/apache-rtr-180/colours/",
+  "scrapedAt": "2026-04-20T06:07:44.878Z",
+  "count": 5,
+  "hero": "https://imgd.aeplcdn.com/0x0/bw/static/icons/svg/no-bike-image-with-text.svg?v2021",
+  "colors": [
+    {
+      "name": "T Grey",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/apache-rtr-180/t-grey.jpg"
+    },
+    {
+      "name": "Matte Black",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/apache-rtr-180/matte-black.jpg"
+    },
+    {
+      "name": "Matte Blue",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/apache-rtr-180/matte-blue.jpg"
+    },
+    {
+      "name": "Gloss Black",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/apache-rtr-180/gloss-black.jpg"
+    },
+    {
+      "name": "Pearl White",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/apache-rtr-180/pearl-white.jpg"
+    }
+  ]
+}

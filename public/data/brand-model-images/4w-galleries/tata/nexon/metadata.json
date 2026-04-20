@@ -1,0 +1,62 @@
+{
+  "make": "tata",
+  "model": "Nexon",
+  "brandSlug": "tata",
+  "modelSlug": "nexon",
+  "sourceUrl": "https://www.cardekho.com/tata/nexon",
+  "scrapedAt": "2026-04-20T06:18:48.928Z",
+  "counts": {
+    "exterior": 7,
+    "interior": 8,
+    "feature": 7,
+    "colors": 7,
+    "total": 29
+  },
+  "hero": "/data/brand-model-images/4w-galleries/tata/nexon/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/tata/nexon/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/tata/nexon/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/tata/nexon/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/tata/nexon/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/tata/nexon/exterior/06.avif",
+    "/data/brand-model-images/4w-galleries/tata/nexon/exterior/07.avif",
+    "/data/brand-model-images/4w-galleries/tata/nexon/exterior/08.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/tata/nexon/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/tata/nexon/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/tata/nexon/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/tata/nexon/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/tata/nexon/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/tata/nexon/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/tata/nexon/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/tata/nexon/interior/08.avif"
+  ],
+  "feature": [
+    "/data/brand-model-images/4w-galleries/tata/nexon/feature/01.avif",
+    "/data/brand-model-images/4w-galleries/tata/nexon/feature/02.avif",
+    "/data/brand-model-images/4w-galleries/tata/nexon/feature/03.avif",
+    "/data/brand-model-images/4w-galleries/tata/nexon/feature/04.avif",
+    "/data/brand-model-images/4w-galleries/tata/nexon/feature/05.avif",
+    "/data/brand-model-images/4w-galleries/tata/nexon/feature/06.avif",
+    "/data/brand-model-images/4w-galleries/tata/nexon/feature/07.avif"
+  ],
+  "colorNames": [
+    "Grassland Beige",
+    "Pristine White Dual Tone",
+    "Ocean Blue",
+    "Pure Grey",
+    "Royal Blue",
+    "Daytona Grey Dual Tone",
+    "Atlas Black"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/tata/nexon/colors/grassland-beige.avif",
+    "/data/brand-model-images/4w-galleries/tata/nexon/colors/pristine-white-dual-tone.avif",
+    "/data/brand-model-images/4w-galleries/tata/nexon/colors/ocean-blue.avif",
+    "/data/brand-model-images/4w-galleries/tata/nexon/colors/pure-grey.avif",
+    "/data/brand-model-images/4w-galleries/tata/nexon/colors/royal-blue.avif",
+    "/data/brand-model-images/4w-galleries/tata/nexon/colors/daytona-grey-dual-tone.avif",
+    "/data/brand-model-images/4w-galleries/tata/nexon/colors/atlas-black.avif"
+  ]
+}

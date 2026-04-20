@@ -1,0 +1,37 @@
+{
+  "brand": "Aprilia India",
+  "model": "RS 457",
+  "brandId": "aprilia-india",
+  "makeSlug": "aprilia-bikes",
+  "modelSlug": "rs-457",
+  "sourceUrl": "https://www.bikewale.com/aprilia-bikes/rs-457/colours/",
+  "scrapedAt": "2026-04-20T05:17:08.582Z",
+  "count": 6,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/grfloib_1906627.avif?q=100",
+  "colors": [
+    {
+      "name": "Coral Snake Blue",
+      "image": "/data/brand-model-images/2w-colors/aprilia-india/rs-457/coral-snake-blue.avif"
+    },
+    {
+      "name": "Arsenic Yellow",
+      "image": "/data/brand-model-images/2w-colors/aprilia-india/rs-457/arsenic-yellow.avif"
+    },
+    {
+      "name": "Opalescent Light",
+      "image": "/data/brand-model-images/2w-colors/aprilia-india/rs-457/opalescent-light.avif"
+    },
+    {
+      "name": "Prismatic Dark",
+      "image": "/data/brand-model-images/2w-colors/aprilia-india/rs-457/prismatic-dark.avif"
+    },
+    {
+      "name": "Racing Stripes",
+      "image": "/data/brand-model-images/2w-colors/aprilia-india/rs-457/racing-stripes.avif"
+    },
+    {
+      "name": "GP Replica",
+      "image": "/data/brand-model-images/2w-colors/aprilia-india/rs-457/gp-replica.avif"
+    }
+  ]
+}

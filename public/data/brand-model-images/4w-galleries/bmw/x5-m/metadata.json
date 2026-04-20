@@ -1,0 +1,52 @@
+{
+  "make": "bmw",
+  "model": "X5 M Competition",
+  "brandSlug": "bmw",
+  "modelSlug": "x5-m",
+  "sourceUrl": "https://www.cardekho.com/bmw/x5-m",
+  "scrapedAt": "2026-04-20T06:30:57.172Z",
+  "counts": {
+    "exterior": 5,
+    "interior": 8,
+    "feature": 0,
+    "colors": 7,
+    "total": 20
+  },
+  "hero": "/data/brand-model-images/4w-galleries/bmw/x5-m/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/bmw/x5-m/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x5-m/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x5-m/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x5-m/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x5-m/exterior/06.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/bmw/x5-m/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x5-m/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x5-m/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x5-m/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x5-m/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x5-m/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x5-m/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x5-m/interior/08.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "Alpine White",
+    "Donington Grey Metallic",
+    "Mineral White",
+    "Toronto Red Metallic",
+    "Carbon Black Metallic",
+    "Manhattan Metallic",
+    "Ametrine Metallic"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/bmw/x5-m/colors/alpine-white.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x5-m/colors/donington-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x5-m/colors/mineral-white.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x5-m/colors/toronto-red-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x5-m/colors/carbon-black-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x5-m/colors/manhattan-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x5-m/colors/ametrine-metallic.avif"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "brand": "Ola Electric",
+  "model": "Roadster",
+  "brandId": "ola-electric",
+  "makeSlug": "ola-bikes",
+  "modelSlug": "roadster",
+  "sourceUrl": "https://www.bikewale.com/ola-bikes/roadster/colours/",
+  "scrapedAt": "2026-04-20T06:07:40.109Z",
+  "count": 1,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/s1ebjeb_1765865.jpg?q=100",
+  "colors": [
+    {
+      "name": "Standard",
+      "image": "/data/brand-model-images/2w-colors/ola-electric/roadster/standard.avif"
+    }
+  ]
+}

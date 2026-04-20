@@ -1,0 +1,25 @@
+{
+  "brand": "Honda Motorcycle & Scooter India",
+  "model": "CB300F",
+  "brandId": "honda-hmsi",
+  "makeSlug": "honda-bikes",
+  "modelSlug": "cb300f",
+  "sourceUrl": "https://www.bikewale.com/honda-bikes/cb300f/colours/",
+  "scrapedAt": "2026-04-20T05:15:25.758Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/honda-select-model-mat-axis-grey-metallic-1694439610483.png?q=100",
+  "colors": [
+    {
+      "name": "Mat Axis Grey Metallic",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/cb300f/mat-axis-grey-metallic.png"
+    },
+    {
+      "name": "Mat Marvel Blue Metallic",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/cb300f/mat-marvel-blue-metallic.png"
+    },
+    {
+      "name": "Sports Red",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/cb300f/sports-red.png"
+    }
+  ]
+}

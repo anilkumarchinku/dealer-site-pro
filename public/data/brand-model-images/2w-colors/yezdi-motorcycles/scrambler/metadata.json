@@ -1,0 +1,41 @@
+{
+  "brand": "Yezdi Motorcycles",
+  "model": "Scrambler",
+  "brandId": "yezdi-motorcycles",
+  "makeSlug": "yezdi-bikes",
+  "modelSlug": "scrambler",
+  "sourceUrl": "https://www.bikewale.com/yezdi-bikes/scrambler/colours/",
+  "scrapedAt": "2026-04-20T05:18:56.115Z",
+  "count": 7,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/yezdi-select-model-mean-green-1676368830061.png?q=100",
+  "colors": [
+    {
+      "name": "Mean Green",
+      "image": "/data/brand-model-images/2w-colors/yezdi-motorcycles/scrambler/mean-green.png"
+    },
+    {
+      "name": "Midnight Blue",
+      "image": "/data/brand-model-images/2w-colors/yezdi-motorcycles/scrambler/midnight-blue.png"
+    },
+    {
+      "name": "Rebel Red",
+      "image": "/data/brand-model-images/2w-colors/yezdi-motorcycles/scrambler/rebel-red.avif"
+    },
+    {
+      "name": "Fire Orange",
+      "image": "/data/brand-model-images/2w-colors/yezdi-motorcycles/scrambler/fire-orange.png"
+    },
+    {
+      "name": "Bold Black",
+      "image": "/data/brand-model-images/2w-colors/yezdi-motorcycles/scrambler/bold-black.png"
+    },
+    {
+      "name": "Outlaw Olive",
+      "image": "/data/brand-model-images/2w-colors/yezdi-motorcycles/scrambler/outlaw-olive.avif"
+    },
+    {
+      "name": "Yelling Yellow",
+      "image": "/data/brand-model-images/2w-colors/yezdi-motorcycles/scrambler/yelling-yellow.png"
+    }
+  ]
+}

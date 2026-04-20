@@ -1,0 +1,53 @@
+{
+  "make": "bmw",
+  "model": "6 Series GT",
+  "brandSlug": "BMW",
+  "modelSlug": "BMW_6_Series",
+  "sourceUrl": "https://www.cardekho.com/BMW/BMW_6_Series",
+  "scrapedAt": "2026-04-20T06:44:11.850Z",
+  "counts": {
+    "exterior": 6,
+    "interior": 8,
+    "feature": 0,
+    "colors": 7,
+    "total": 21
+  },
+  "hero": "/data/brand-model-images/4w-galleries/BMW/BMW_6_Series/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/BMW/BMW_6_Series/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/BMW/BMW_6_Series/exterior/02.avif",
+    "/data/brand-model-images/4w-galleries/BMW/BMW_6_Series/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/BMW/BMW_6_Series/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/BMW/BMW_6_Series/exterior/06.avif",
+    "/data/brand-model-images/4w-galleries/BMW/BMW_6_Series/exterior/07.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/BMW/BMW_6_Series/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/BMW/BMW_6_Series/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/BMW/BMW_6_Series/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/BMW/BMW_6_Series/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/BMW/BMW_6_Series/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/BMW/BMW_6_Series/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/BMW/BMW_6_Series/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/BMW/BMW_6_Series/interior/08.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "Space Grey",
+    "Jatoba",
+    "Cashmere Silver",
+    "Tanzanite Blue",
+    "Mediterranean Blue",
+    "Black",
+    "Glacier Silver"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/BMW/BMW_6_Series/colors/space-grey.avif",
+    "/data/brand-model-images/4w-galleries/BMW/BMW_6_Series/colors/jatoba.avif",
+    "/data/brand-model-images/4w-galleries/BMW/BMW_6_Series/colors/cashmere-silver.avif",
+    "/data/brand-model-images/4w-galleries/BMW/BMW_6_Series/colors/tanzanite-blue.avif",
+    "/data/brand-model-images/4w-galleries/BMW/BMW_6_Series/colors/mediterranean-blue.avif",
+    "/data/brand-model-images/4w-galleries/BMW/BMW_6_Series/colors/black.avif",
+    "/data/brand-model-images/4w-galleries/BMW/BMW_6_Series/colors/glacier-silver.avif"
+  ]
+}

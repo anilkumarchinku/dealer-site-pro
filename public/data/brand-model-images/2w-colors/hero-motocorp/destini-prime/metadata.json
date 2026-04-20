@@ -1,0 +1,29 @@
+{
+  "brand": "Hero MotoCorp",
+  "model": "Destini Prime",
+  "brandId": "hero-motocorp",
+  "makeSlug": "hero-bikes",
+  "modelSlug": "destini-prime",
+  "sourceUrl": "https://www.bikewale.com/hero-bikes/destini-prime/colours/",
+  "scrapedAt": "2026-04-20T06:13:24.722Z",
+  "count": 4,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/l46fvfb_1835329.jpg?q=100",
+  "colors": [
+    {
+      "name": "Panther Black",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/destini-prime/panther-black.avif"
+    },
+    {
+      "name": "Metallic Nexus Blue",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/destini-prime/metallic-nexus-blue.avif"
+    },
+    {
+      "name": "Nobel Red",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/destini-prime/nobel-red.avif"
+    },
+    {
+      "name": "Pear Silver White",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/destini-prime/pear-silver-white.avif"
+    }
+  ]
+}

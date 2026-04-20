@@ -1,0 +1,65 @@
+{
+  "brand": "Pure EV",
+  "model": "EPluto 7G",
+  "brandId": "pure-ev",
+  "makeSlug": "pureev-bikes",
+  "modelSlug": "epluto-7g",
+  "sourceUrl": "https://www.bikewale.com/pureev-bikes/epluto-7g/colours/",
+  "scrapedAt": "2026-04-20T06:12:25.149Z",
+  "count": 13,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/undefined-stripling-yellow-1602248998321.jpg?q=100",
+  "colors": [
+    {
+      "name": "Stripling Yellow",
+      "image": "/data/brand-model-images/2w-colors/pure-ev/epluto-7g/stripling-yellow.avif"
+    },
+    {
+      "name": "Pearly White",
+      "image": "/data/brand-model-images/2w-colors/pure-ev/epluto-7g/pearly-white.avif"
+    },
+    {
+      "name": "Active Grey",
+      "image": "/data/brand-model-images/2w-colors/pure-ev/epluto-7g/active-grey.avif"
+    },
+    {
+      "name": "Electron Blue",
+      "image": "/data/brand-model-images/2w-colors/pure-ev/epluto-7g/electron-blue.avif"
+    },
+    {
+      "name": "Shadow Black",
+      "image": "/data/brand-model-images/2w-colors/pure-ev/epluto-7g/shadow-black.avif"
+    },
+    {
+      "name": "Ruby Red",
+      "image": "/data/brand-model-images/2w-colors/pure-ev/epluto-7g/ruby-red.avif"
+    },
+    {
+      "name": "Grey",
+      "image": "/data/brand-model-images/2w-colors/pure-ev/epluto-7g/grey.png"
+    },
+    {
+      "name": "White",
+      "image": "/data/brand-model-images/2w-colors/pure-ev/epluto-7g/white.png"
+    },
+    {
+      "name": "Matte Black",
+      "image": "/data/brand-model-images/2w-colors/pure-ev/epluto-7g/matte-black.png"
+    },
+    {
+      "name": "Red (Max)",
+      "image": "/data/brand-model-images/2w-colors/pure-ev/epluto-7g/red-max.png"
+    },
+    {
+      "name": "Black (Max)",
+      "image": "/data/brand-model-images/2w-colors/pure-ev/epluto-7g/black-max.avif"
+    },
+    {
+      "name": "Grey (Max)",
+      "image": "/data/brand-model-images/2w-colors/pure-ev/epluto-7g/grey-max.png"
+    },
+    {
+      "name": "White (Max)",
+      "image": "/data/brand-model-images/2w-colors/pure-ev/epluto-7g/white-max.png"
+    }
+  ]
+}

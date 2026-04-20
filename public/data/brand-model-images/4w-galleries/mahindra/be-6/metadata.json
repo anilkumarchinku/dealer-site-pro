@@ -1,0 +1,60 @@
+{
+  "make": "mahindra",
+  "model": "BE 6",
+  "brandSlug": "mahindra",
+  "modelSlug": "be-6",
+  "sourceUrl": "https://www.cardekho.com/mahindra/be-6",
+  "scrapedAt": "2026-04-20T05:03:48.773Z",
+  "counts": {
+    "exterior": 7,
+    "interior": 6,
+    "feature": 7,
+    "colors": 7,
+    "total": 27
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mahindra/be-6/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/mahindra/be-6/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/be-6/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/be-6/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/be-6/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/be-6/exterior/06.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/be-6/exterior/07.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/be-6/exterior/08.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/mahindra/be-6/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/be-6/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/be-6/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/be-6/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/be-6/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/be-6/interior/08.avif"
+  ],
+  "feature": [
+    "/data/brand-model-images/4w-galleries/mahindra/be-6/feature/01.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/be-6/feature/02.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/be-6/feature/03.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/be-6/feature/04.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/be-6/feature/05.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/be-6/feature/06.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/be-6/feature/07.avif"
+  ],
+  "colorNames": [
+    "Everest White",
+    "Stealth Black",
+    "Desert Myst",
+    "Deep Forest",
+    "Tango Red",
+    "Firestorm Orange",
+    "Desert Myst Satin"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mahindra/be-6/colors/everest-white.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/be-6/colors/stealth-black.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/be-6/colors/desert-myst.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/be-6/colors/deep-forest.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/be-6/colors/tango-red.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/be-6/colors/firestorm-orange.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/be-6/colors/desert-myst-satin.avif"
+  ]
+}

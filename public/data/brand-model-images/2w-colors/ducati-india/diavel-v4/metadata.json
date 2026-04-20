@@ -1,0 +1,21 @@
+{
+  "brand": "Ducati India",
+  "model": "Diavel V4",
+  "brandId": "ducati-india",
+  "makeSlug": "ducati-bikes",
+  "modelSlug": "diavel-v4",
+  "sourceUrl": "https://www.bikewale.com/ducati-bikes/diavel-v4/colours/",
+  "scrapedAt": "2026-04-20T05:18:06.359Z",
+  "count": 2,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/ducati-select-model-thrilling-black-1691487842546.png?q=100",
+  "colors": [
+    {
+      "name": "Thrilling Black",
+      "image": "/data/brand-model-images/2w-colors/ducati-india/diavel-v4/thrilling-black.png"
+    },
+    {
+      "name": "Ducati Red",
+      "image": "/data/brand-model-images/2w-colors/ducati-india/diavel-v4/ducati-red.png"
+    }
+  ]
+}

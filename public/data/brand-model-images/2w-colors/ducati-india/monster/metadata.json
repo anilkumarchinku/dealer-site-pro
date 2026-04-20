@@ -1,0 +1,29 @@
+{
+  "brand": "Ducati India",
+  "model": "Monster",
+  "brandId": "ducati-india",
+  "makeSlug": "ducati-bikes",
+  "modelSlug": "monster",
+  "sourceUrl": "https://www.bikewale.com/ducati-bikes/monster/colours/",
+  "scrapedAt": "2026-04-20T05:17:52.943Z",
+  "count": 4,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/ducati-select-model-dark-stealth-1632238973522.jpg?q=100",
+  "colors": [
+    {
+      "name": "Dark Stealth",
+      "image": "/data/brand-model-images/2w-colors/ducati-india/monster/dark-stealth.avif"
+    },
+    {
+      "name": "Aviator Grey",
+      "image": "/data/brand-model-images/2w-colors/ducati-india/monster/aviator-grey.avif"
+    },
+    {
+      "name": "Ducati Red",
+      "image": "/data/brand-model-images/2w-colors/ducati-india/monster/ducati-red.avif"
+    },
+    {
+      "name": "Ducati Red (SP)",
+      "image": "/data/brand-model-images/2w-colors/ducati-india/monster/ducati-red-sp.png"
+    }
+  ]
+}

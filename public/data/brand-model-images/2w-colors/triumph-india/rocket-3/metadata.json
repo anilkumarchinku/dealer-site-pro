@@ -1,0 +1,33 @@
+{
+  "brand": "Triumph India",
+  "model": "Rocket 3",
+  "brandId": "triumph-india",
+  "makeSlug": "triumph-bikes",
+  "modelSlug": "rocket-3",
+  "sourceUrl": "https://www.bikewale.com/triumph-bikes/rocket-3/colours/",
+  "scrapedAt": "2026-04-20T05:17:50.307Z",
+  "count": 5,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/triumph-select-model-silver-ice-cranberry-red-1642681794988.jpg?q=100",
+  "colors": [
+    {
+      "name": "Silver Ice Cranberry Red",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/rocket-3/silver-ice-cranberry-red.avif"
+    },
+    {
+      "name": "Phantom Black",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/rocket-3/phantom-black.avif"
+    },
+    {
+      "name": "Korosi Red",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/rocket-3/korosi-red.avif"
+    },
+    {
+      "name": "Sapphire Black (GT)",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/rocket-3/sapphire-black-gt.png"
+    },
+    {
+      "name": "Silver Ice and Storm Grey (GT)",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/rocket-3/silver-ice-and-storm-grey-gt.avif"
+    }
+  ]
+}

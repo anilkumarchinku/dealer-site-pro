@@ -1,0 +1,49 @@
+{
+  "brand": "Ultraviolette Automotive",
+  "model": "F77 Mach 2",
+  "brandId": "ultraviolette-automotive",
+  "makeSlug": "ultraviolette-bikes",
+  "modelSlug": "f77-mach-2",
+  "sourceUrl": "https://www.bikewale.com/ultraviolette-bikes/f77-mach-2/colours/",
+  "scrapedAt": "2026-04-20T05:20:05.672Z",
+  "count": 9,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/ayq949b_1805601.png?q=100",
+  "colors": [
+    {
+      "name": "Airstrike - Supersonic Silver",
+      "image": "/data/brand-model-images/2w-colors/ultraviolette-automotive/f77-mach-2/airstrike-supersonic-silver.png"
+    },
+    {
+      "name": "Airstrike - Stellar White",
+      "image": "/data/brand-model-images/2w-colors/ultraviolette-automotive/f77-mach-2/airstrike-stellar-white.png"
+    },
+    {
+      "name": "Airstrike - Lightning Blue",
+      "image": "/data/brand-model-images/2w-colors/ultraviolette-automotive/f77-mach-2/airstrike-lightning-blue.png"
+    },
+    {
+      "name": "Shadow - Stealth Grey",
+      "image": "/data/brand-model-images/2w-colors/ultraviolette-automotive/f77-mach-2/shadow-stealth-grey.png"
+    },
+    {
+      "name": "Shadow - Asteroid Grey",
+      "image": "/data/brand-model-images/2w-colors/ultraviolette-automotive/f77-mach-2/shadow-asteroid-grey.png"
+    },
+    {
+      "name": "Shadow - Cosmic Black",
+      "image": "/data/brand-model-images/2w-colors/ultraviolette-automotive/f77-mach-2/shadow-cosmic-black.png"
+    },
+    {
+      "name": "Laser- Turbo Red",
+      "image": "/data/brand-model-images/2w-colors/ultraviolette-automotive/f77-mach-2/laser-turbo-red.png"
+    },
+    {
+      "name": "Laser - Afterburner Yellow",
+      "image": "/data/brand-model-images/2w-colors/ultraviolette-automotive/f77-mach-2/laser-afterburner-yellow.png"
+    },
+    {
+      "name": "Laser - Plasma Red",
+      "image": "/data/brand-model-images/2w-colors/ultraviolette-automotive/f77-mach-2/laser-plasma-red.png"
+    }
+  ]
+}

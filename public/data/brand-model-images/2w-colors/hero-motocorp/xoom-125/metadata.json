@@ -1,0 +1,29 @@
+{
+  "brand": "Hero MotoCorp",
+  "model": "Xoom 125",
+  "brandId": "hero-motocorp",
+  "makeSlug": "hero-bikes",
+  "modelSlug": "xoom-125",
+  "sourceUrl": "https://www.bikewale.com/hero-bikes/xoom-125/colours/",
+  "scrapedAt": "2026-04-20T05:15:21.488Z",
+  "count": 4,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/m9fa0fb_1809037.jpg?q=100",
+  "colors": [
+    {
+      "name": "Metallic Turbo Blue",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/xoom-125/metallic-turbo-blue.avif"
+    },
+    {
+      "name": "Matt Storm Grey",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/xoom-125/matt-storm-grey.avif"
+    },
+    {
+      "name": "Inferno Red",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/xoom-125/inferno-red.avif"
+    },
+    {
+      "name": "Matt Neon Lime",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/xoom-125/matt-neon-lime.avif"
+    }
+  ]
+}

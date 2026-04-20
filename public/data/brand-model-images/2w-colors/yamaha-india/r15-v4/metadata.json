@@ -1,0 +1,49 @@
+{
+  "brand": "Yamaha India",
+  "model": "R15 V4",
+  "brandId": "yamaha-india",
+  "makeSlug": "yamaha-bikes",
+  "modelSlug": "r15-v4",
+  "sourceUrl": "https://www.bikewale.com/yamaha-bikes/r15-v4/colours/",
+  "scrapedAt": "2026-04-20T06:07:40.975Z",
+  "count": 9,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/gwc3ehb_1868343.jpg?q=100",
+  "colors": [
+    {
+      "name": "Metallic Grey",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/r15-v4/metallic-grey.avif"
+    },
+    {
+      "name": "Dark Knight",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/r15-v4/dark-knight.png"
+    },
+    {
+      "name": "Metallic Black",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/r15-v4/metallic-black.png"
+    },
+    {
+      "name": "Intensity White",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/r15-v4/intensity-white.png"
+    },
+    {
+      "name": "Metallic Red",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/r15-v4/metallic-red.png"
+    },
+    {
+      "name": "Matte White Pearl",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/r15-v4/matte-white-pearl.png"
+    },
+    {
+      "name": "Racing Blue",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/r15-v4/racing-blue.png"
+    },
+    {
+      "name": "Icon Performance",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/r15-v4/icon-performance.avif"
+    },
+    {
+      "name": "MotoGP Edition",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/r15-v4/motogp-edition.avif"
+    }
+  ]
+}

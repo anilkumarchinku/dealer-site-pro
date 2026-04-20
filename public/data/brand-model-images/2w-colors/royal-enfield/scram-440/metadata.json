@@ -1,0 +1,33 @@
+{
+  "brand": "Royal Enfield",
+  "model": "Scram 440",
+  "brandId": "royal-enfield",
+  "makeSlug": "royalenfield-bikes",
+  "modelSlug": "scram-440",
+  "sourceUrl": "https://www.bikewale.com/royalenfield-bikes/scram-440/colours/",
+  "scrapedAt": "2026-04-20T05:15:53.869Z",
+  "count": 5,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/sbvs0fb_1809749.png?q=100",
+  "colors": [
+    {
+      "name": "Force Teal",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/scram-440/force-teal.png"
+    },
+    {
+      "name": "Force Grey",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/scram-440/force-grey.png"
+    },
+    {
+      "name": "Force Blue",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/scram-440/force-blue.png"
+    },
+    {
+      "name": "Trail Green",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/scram-440/trail-green.png"
+    },
+    {
+      "name": "Trail Blue",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/scram-440/trail-blue.png"
+    }
+  ]
+}

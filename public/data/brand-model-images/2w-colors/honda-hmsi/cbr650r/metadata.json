@@ -1,0 +1,21 @@
+{
+  "brand": "Honda Motorcycle & Scooter India",
+  "model": "CBR650R",
+  "brandId": "honda-hmsi",
+  "makeSlug": "honda-bikes",
+  "modelSlug": "cbr650r",
+  "sourceUrl": "https://www.bikewale.com/honda-bikes/cbr650r/colours/",
+  "scrapedAt": "2026-04-20T05:15:26.968Z",
+  "count": 2,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/xdet3fb_1834955.jpg?q=100",
+  "colors": [
+    {
+      "name": "Matte Gunpowder Black Metallic",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/cbr650r/matte-gunpowder-black-metallic.avif"
+    },
+    {
+      "name": "Grand Prix Red",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/cbr650r/grand-prix-red.avif"
+    }
+  ]
+}

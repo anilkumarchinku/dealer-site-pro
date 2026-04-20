@@ -1,0 +1,25 @@
+{
+  "brand": "Ducati India",
+  "model": "Multistrada V2",
+  "brandId": "ducati-india",
+  "makeSlug": "ducati-bikes",
+  "modelSlug": "multistrada-v2",
+  "sourceUrl": "https://www.bikewale.com/ducati-bikes/multistrada-v2/colours/",
+  "scrapedAt": "2026-04-20T05:18:00.540Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/3f7urhb_1883625.jpg?q=100",
+  "colors": [
+    {
+      "name": "Ducati Red",
+      "image": "/data/brand-model-images/2w-colors/ducati-india/multistrada-v2/ducati-red.avif"
+    },
+    {
+      "name": "S (Ducati Red)",
+      "image": "/data/brand-model-images/2w-colors/ducati-india/multistrada-v2/s-ducati-red.avif"
+    },
+    {
+      "name": "S (Storm Green)",
+      "image": "/data/brand-model-images/2w-colors/ducati-india/multistrada-v2/s-storm-green.avif"
+    }
+  ]
+}

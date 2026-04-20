@@ -1,0 +1,21 @@
+{
+  "brand": "Evolet",
+  "model": "Derby",
+  "brandId": "evolet",
+  "makeSlug": "evolet-bikes",
+  "modelSlug": "derby",
+  "sourceUrl": "https://www.bikewale.com/evolet-bikes/derby/colours/",
+  "scrapedAt": "2026-04-20T05:20:31.858Z",
+  "count": 2,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/evolet-select-model-black-1698297868338.png?q=100",
+  "colors": [
+    {
+      "name": "Black",
+      "image": "/data/brand-model-images/2w-colors/evolet/derby/black.png"
+    },
+    {
+      "name": "White",
+      "image": "/data/brand-model-images/2w-colors/evolet/derby/white.avif"
+    }
+  ]
+}

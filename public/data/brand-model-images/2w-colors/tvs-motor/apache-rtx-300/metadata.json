@@ -1,0 +1,33 @@
+{
+  "brand": "TVS Motor Company",
+  "model": "Apache RTX 300",
+  "brandId": "tvs-motor",
+  "makeSlug": "tvs-bikes",
+  "modelSlug": "apache-rtx-300",
+  "sourceUrl": "https://www.bikewale.com/tvs-bikes/apache-rtx-300/colours/",
+  "scrapedAt": "2026-04-20T06:07:45.959Z",
+  "count": 5,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/d5teqhb_1882075.jpg?q=100",
+  "colors": [
+    {
+      "name": "Pearl White",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/apache-rtx-300/pearl-white.avif"
+    },
+    {
+      "name": "Lightning Black",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/apache-rtx-300/lightning-black.avif"
+    },
+    {
+      "name": "Metallic Blue",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/apache-rtx-300/metallic-blue.avif"
+    },
+    {
+      "name": "Tarn Bronze",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/apache-rtx-300/tarn-bronze.avif"
+    },
+    {
+      "name": "Viper Green",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/apache-rtx-300/viper-green.avif"
+    }
+  ]
+}

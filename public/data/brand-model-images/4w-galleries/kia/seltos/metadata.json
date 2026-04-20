@@ -1,0 +1,29 @@
+{
+  "make": "kia",
+  "model": "Seltos",
+  "brandSlug": "kia",
+  "modelSlug": "seltos",
+  "sourceUrl": "https://www.cardekho.com/kia/seltos",
+  "scrapedAt": "2026-04-20T05:03:24.977Z",
+  "counts": {
+    "exterior": 0,
+    "interior": 0,
+    "feature": 0,
+    "colors": 3,
+    "total": 3
+  },
+  "hero": "/data/brand-model-images/4w-galleries/kia/seltos/colors/magma-red-with-aurora-black.avif",
+  "exterior": [],
+  "interior": [],
+  "feature": [],
+  "colorNames": [
+    "Magma Red With Aurora Black",
+    "Matte Graphite",
+    "Glacier White Pearl With Aurora Black"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/kia/seltos/colors/magma-red-with-aurora-black.avif",
+    "/data/brand-model-images/4w-galleries/kia/seltos/colors/matte-graphite.avif",
+    "/data/brand-model-images/4w-galleries/kia/seltos/colors/glacier-white-pearl-with-aurora-black.avif"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "brand": "Ferrato",
+  "model": "Disruptor",
+  "brandId": "ferrato",
+  "makeSlug": "ferrato-bikes",
+  "modelSlug": "disruptor",
+  "sourceUrl": "https://www.bikewale.com/ferrato-bikes/disruptor/colours/",
+  "scrapedAt": "2026-04-20T05:20:32.019Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/ferrato-select-model-red-1719550622822.png?q=100",
+  "colors": [
+    {
+      "name": "Red",
+      "image": "/data/brand-model-images/2w-colors/ferrato/disruptor/red.png"
+    },
+    {
+      "name": "Blue",
+      "image": "/data/brand-model-images/2w-colors/ferrato/disruptor/blue.png"
+    },
+    {
+      "name": "Black",
+      "image": "/data/brand-model-images/2w-colors/ferrato/disruptor/black.png"
+    }
+  ]
+}

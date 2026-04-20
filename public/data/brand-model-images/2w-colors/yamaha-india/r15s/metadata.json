@@ -1,0 +1,25 @@
+{
+  "brand": "Yamaha India",
+  "model": "R15S",
+  "brandId": "yamaha-india",
+  "makeSlug": "yamaha-bikes",
+  "modelSlug": "r15s",
+  "sourceUrl": "https://www.bikewale.com/yamaha-bikes/r15s/colours/",
+  "scrapedAt": "2026-04-20T06:07:42.187Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/dbn3ehb_1868357.jpg?q=100",
+  "colors": [
+    {
+      "name": "Matte Black (New)",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/r15s/matte-black-new.avif"
+    },
+    {
+      "name": "Matte Black",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/r15s/matte-black.avif"
+    },
+    {
+      "name": "Racing Blue",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/r15s/racing-blue.avif"
+    }
+  ]
+}

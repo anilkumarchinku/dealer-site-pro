@@ -1,0 +1,99 @@
+category,brand,model,status,brand_id,matched_slug,image_count,note
+3w,Altigreen,neEV High Deck,hero_present,altigreen,neev.jpg,1,local 3W hero image present
+3w,Altigreen,neEV Low Deck,hero_present,altigreen,neev.jpg,1,local 3W hero image present
+3w,Altigreen,neEV Rahi,hero_present,altigreen,neev-rahi.jpg,1,local 3W hero image present
+3w,Altigreen,neEV Tez,hero_present,altigreen,neev-tez.jpg,1,local 3W hero image present
+3w,Atul Auto,Elite Cargo,hero_present,atul-auto,elite-cargo.jpg,1,local 3W hero image present
+3w,Atul Auto,Elite Plus,hero_present,atul-auto,elite-plus.jpg,1,local 3W hero image present
+3w,Atul Auto,Gem Cargo,hero_present,atul-auto,gem-cargo.jpg,1,local 3W hero image present
+3w,Atul Auto,Gem Paxx,hero_present,atul-auto,gem-paxx.jpg,1,local 3W hero image present
+3w,Atul Auto,Gemini Plus,hero_present,atul-auto,gemini-plus.jpg,1,local 3W hero image present
+3w,Atul Auto,Rik,hero_present,atul-auto,rik-auto.jpg,1,local 3W hero image present
+3w,Atul Auto,Rik Twin,hero_present,atul-auto,rik-twin.jpg,1,local 3W hero image present
+3w,Atul Auto,Shakti Cargo,hero_present,atul-auto,shakti-cargo.jpg,1,local 3W hero image present
+3w,Bajaj Auto (3W),Compact RE CNG,hero_present,bajaj-auto-3w,compact-re-cng.jpg,1,local 3W hero image present
+3w,Bajaj Auto (3W),GoGo P50,hero_present,bajaj-auto-3w,gogo.jpg,1,local 3W hero image present
+3w,Bajaj Auto (3W),GoGo P70,hero_present,bajaj-auto-3w,gogo.jpg,1,local 3W hero image present
+3w,Bajaj Auto (3W),Maxima C CNG,hero_present,bajaj-auto-3w,maxima-c-cng.jpg,1,local 3W hero image present
+3w,Bajaj Auto (3W),Maxima X Wide Diesel,hero_present,bajaj-auto-3w,maxima-x-wide-diesel.jpg,1,local 3W hero image present
+3w,Bajaj Auto (3W),Maxima XL E-Tec,hero_present,bajaj-auto-3w,maxima-xl-e-tec.jpg,1,local 3W hero image present
+3w,Bajaj Auto (3W),Maxima Z Diesel,hero_present,bajaj-auto-3w,maxima-z-diesel.jpg,1,local 3W hero image present
+3w,Bajaj Auto (3W),RE CNG,hero_present,bajaj-auto-3w,compact-re-cng.jpg,1,local 3W hero image present
+3w,Bajaj Auto (3W),RE Diesel,hero_present,bajaj-auto-3w,re-diesel.jpg,1,local 3W hero image present
+3w,Bajaj Auto (3W),RE E Tech 9.0,hero_present,bajaj-auto-3w,re-e-tech-90.jpg,1,local 3W hero image present
+3w,Bajaj Auto (3W),RE LPG,hero_present,bajaj-auto-3w,re-lpg.jpg,1,local 3W hero image present
+3w,Bajaj Auto (3W),Riki P4005,hero_present,bajaj-auto-3w,riki-p40.jpg,1,local 3W hero image present
+3w,Bajaj Auto (3W),WEGO P9018,hero_present,bajaj-auto-3w,wego-p9018.jpg,1,local 3W hero image present
+3w,ETrio,Touro Max,hero_present,etrio,touro-max-plus-plus.jpg,1,local 3W hero image present
+3w,Euler Motors,HiLoad EV,hero_present,euler-motors,hiload-ev-120.jpg,1,local 3W hero image present
+3w,Euler Motors,NEO HiCITY,hero_present,euler-motors,neo-hicity.jpg,1,local 3W hero image present
+3w,Euler Motors,NEO HiRange,hero_present,euler-motors,neo-hirange.jpg,1,local 3W hero image present
+3w,Greaves Electric Mobility,E Pro Cargo,hero_present,greaves-electric-3w,e-pro-cargo.jpg,1,local 3W hero image present
+3w,Greaves Electric Mobility,Eltra City,hero_present,greaves-electric-3w,eltra-city-xtra.jpg,1,local 3W hero image present
+3w,Greaves Electric Mobility,Eltra City XTRA,hero_present,greaves-electric-3w,eltra-city-xtra.jpg,1,local 3W hero image present
+3w,Kinetic Green,Safar Jumbo,hero_present,kinetic-green,safar-jumbo-ranger.jpg,1,local 3W hero image present
+3w,Kinetic Green,Safar Shakti,hero_present,kinetic-green,safar-shakti.jpg,1,local 3W hero image present
+3w,Kinetic Green,Safar Smart,hero_present,kinetic-green,safar-smart.jpg,1,local 3W hero image present
+3w,Kinetic Green,Super DX,hero_present,kinetic-green,super-dx.jpg,1,local 3W hero image present
+3w,Lohia Auto,Narain DLX,hero_present,lohia-auto,narain-dlx.jpg,1,local 3W hero image present
+3w,Lohia Auto,Narain XiV,hero_present,lohia-auto,narain-xiv.jpg,1,local 3W hero image present
+3w,Lohia Auto,Narain XiW,hero_present,lohia-auto,narain-xiw.jpg,1,local 3W hero image present
+3w,Lohia Auto,Youdha EPOD,hero_present,lohia-auto,youdha-epod.jpg,1,local 3W hero image present
+3w,Lohia Auto,Youdha Garbage Van,hero_present,lohia-auto,youdha-garbage-van.jpg,1,local 3W hero image present
+3w,Lohia Auto,Youdha Humsafar,hero_present,lohia-auto,youdha-humsafar.jpg,1,local 3W hero image present
+3w,Lohia Auto,Youdha Trevo Cargo,hero_present,lohia-auto,youdha-trevo-cargo.jpg,1,local 3W hero image present
+3w,Mahindra (3W),Alfa DX,hero_present,mahindra-3w,alfa-dx.jpg,1,local 3W hero image present
+3w,Mahindra (3W),Alfa Load,hero_present,mahindra-3w,alfa-load.jpg,1,local 3W hero image present
+3w,Mahindra (3W),Alfa Plus,hero_present,mahindra-3w,e-alfa-plus.jpg,1,local 3W hero image present
+3w,Mahindra (3W),E-Alfa Mini,hero_present,mahindra-3w,e-alfa-mini.jpg,1,local 3W hero image present
+3w,Mahindra (3W),E-Alfa Plus,hero_present,mahindra-3w,e-alfa-plus.jpg,1,local 3W hero image present
+3w,Mahindra (3W),Treo,hero_present,mahindra-3w,treo-plus.jpg,1,local 3W hero image present
+3w,Mahindra (3W),Treo Plus,hero_present,mahindra-3w,treo-plus.jpg,1,local 3W hero image present
+3w,Mahindra (3W),Treo Yaari Cargo,hero_present,mahindra-3w,treo.jpg,1,local 3W hero image present
+3w,Mahindra (3W),Treo Yaari Passenger,hero_present,mahindra-3w,treo.jpg,1,local 3W hero image present
+3w,Mahindra (3W),Treo Zor,hero_present,mahindra-3w,treo-zor.jpg,1,local 3W hero image present
+3w,Mahindra (3W),UDO,hero_present,mahindra-3w,udo.jpg,1,local 3W hero image present
+3w,Mahindra (3W),Zor Grand,hero_present,mahindra-3w,zor-grand.jpg,1,local 3W hero image present
+3w,Montra Electric,Super Auto,hero_present,montra-ev,super-auto-x.jpg,1,local 3W hero image present
+3w,Montra Electric,Super Cargo,hero_present,montra-ev,super-cargo.jpg,1,local 3W hero image present
+3w,Omega Seiki Mobility,Rage Plus,hero_present,omega-seiki-mobility,rage-plus.jpg,1,local 3W hero image present
+3w,Omega Seiki Mobility,Rage Plus Rapid EV,hero_present,omega-seiki-mobility,rage-plus.jpg,1,local 3W hero image present
+3w,Omega Seiki Mobility,Stream,hero_present,omega-seiki-mobility,stream-city-20.jpg,1,local 3W hero image present
+3w,Omega Seiki Mobility,Stream City,hero_present,omega-seiki-mobility,stream-city-20.jpg,1,local 3W hero image present
+3w,Omega Seiki Mobility,Stream City Qik,hero_present,omega-seiki-mobility,stream-city.jpg,1,local 3W hero image present
+3w,Piaggio Ape,Auto Classic,hero_present,piaggio-ape,auto-classic.jpg,1,local 3W hero image present
+3w,Piaggio Ape,Auto DX,hero_present,piaggio-ape,auto-dx.jpg,1,local 3W hero image present
+3w,Piaggio Ape,Auto DXL,hero_present,piaggio-ape,auto-dx.jpg,1,local 3W hero image present
+3w,Piaggio Ape,Auto Plus,hero_present,piaggio-ape,auto-plus.jpg,1,local 3W hero image present
+3w,Piaggio Ape,City Plus,hero_present,piaggio-ape,city-plus.jpg,1,local 3W hero image present
+3w,Piaggio Ape,E-City,hero_present,piaggio-ape,e-city.jpg,1,local 3W hero image present
+3w,Piaggio Ape,E-Xtra FX Max,hero_present,piaggio-ape,e-xtra-fx-max.jpg,1,local 3W hero image present
+3w,Piaggio Ape,Metro,hero_present,piaggio-ape,metro.jpg,1,local 3W hero image present
+3w,Piaggio Ape,NXT+,hero_present,piaggio-ape,nxt-plus.jpg,1,local 3W hero image present
+3w,Piaggio Ape,Xtra HD,hero_present,piaggio-ape,xtra-hd.jpg,1,local 3W hero image present
+3w,Piaggio Ape,Xtra LDX CNG,hero_present,piaggio-ape,xtra-ldx-cng.jpg,1,local 3W hero image present
+3w,Piaggio Ape,Xtra LDX Diesel,hero_present,piaggio-ape,xtra-ldx-diesel.jpg,1,local 3W hero image present
+3w,Piaggio Ape,Xtra LDX Plus,hero_present,piaggio-ape,xtra-ldx-plus.jpg,1,local 3W hero image present
+3w,Saera Electric (Mayuri),Mayuri DV,hero_present,saera-ev,mayuri-dv.jpg,1,local 3W hero image present
+3w,Saera Electric (Mayuri),Mayuri E Cart Loader,hero_present,saera-ev,mayuri-e-cart-loader.jpg,1,local 3W hero image present
+3w,Saera Electric (Mayuri),Mayuri Grand,hero_present,saera-ev,mayuri-grand.jpg,1,local 3W hero image present
+3w,Saera Electric (Mayuri),Mayuri Pro 1000,hero_present,saera-ev,mayuri-pro-1000.jpg,1,local 3W hero image present
+3w,Saera Electric (Mayuri),Mayuri Pro Star,hero_present,saera-ev,mayuri-pro-star.jpg,1,local 3W hero image present
+3w,Saera Electric (Mayuri),Mayuri Star,hero_present,saera-ev,mayuri-star.jpg,1,local 3W hero image present
+3w,Terra Motors,Kyoro L5,hero_present,terra-motors,kyoro-l5.jpg,1,local 3W hero image present
+3w,Terra Motors,Kyoto,hero_present,terra-motors,kyoto.jpg,1,local 3W hero image present
+3w,Terra Motors,Rizin,hero_present,terra-motors,rizin.jpg,1,local 3W hero image present
+3w,Terra Motors,Sumo,hero_present,terra-motors,sumo.jpg,1,local 3W hero image present
+3w,Terra Motors,Y4A,hero_present,terra-motors,y4a-pro.jpg,1,local 3W hero image present
+3w,Terra Motors,Y4A Pro,hero_present,terra-motors,y4a-pro.jpg,1,local 3W hero image present
+3w,TVS King,King Deluxe,hero_present,tvs-king,king-deluxe.jpg,1,local 3W hero image present
+3w,TVS King,King Duramax,hero_present,tvs-king,king-duramax-plus.jpg,1,local 3W hero image present
+3w,TVS King,King Duramax Plus,hero_present,tvs-king,king-duramax-plus.jpg,1,local 3W hero image present
+3w,TVS King,King EP1,hero_present,tvs-king,king-ep1.jpg,1,local 3W hero image present
+3w,TVS King,King EV Max,hero_present,tvs-king,king-ev-max.jpg,1,local 3W hero image present
+3w,TVS King,King Kargo,hero_present,tvs-king,king-kargo-hd-ev.jpg,1,local 3W hero image present
+3w,TVS King,King Kargo HD EV,hero_present,tvs-king,king-kargo-hd-ev.jpg,1,local 3W hero image present
+3w,YC Electric,E Loader,hero_present,yc-ev,e-loader.jpg,1,local 3W hero image present
+3w,YC Electric,Yatri,hero_present,yc-ev,yatri-cart.jpg,1,local 3W hero image present
+3w,YC Electric,Yatri Cart,hero_present,yc-ev,yatri-cart.jpg,1,local 3W hero image present
+3w,YC Electric,Yatri Deluxe,hero_present,yc-ev,yatri-deluxe.jpg,1,local 3W hero image present

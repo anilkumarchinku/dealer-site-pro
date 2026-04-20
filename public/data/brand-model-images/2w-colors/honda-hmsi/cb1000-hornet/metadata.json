@@ -1,0 +1,17 @@
+{
+  "brand": "Honda Motorcycle & Scooter India",
+  "model": "CB1000 Hornet",
+  "brandId": "honda-hmsi",
+  "makeSlug": "honda-bikes",
+  "modelSlug": "cb1000-hornet",
+  "sourceUrl": "https://www.bikewale.com/honda-bikes/cb1000-hornet/colours/",
+  "scrapedAt": "2026-04-20T05:15:27.415Z",
+  "count": 1,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/qzdn0gb_1836514.jpg?q=100",
+  "colors": [
+    {
+      "name": "Matte Black Metallic",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/cb1000-hornet/matte-black-metallic.avif"
+    }
+  ]
+}

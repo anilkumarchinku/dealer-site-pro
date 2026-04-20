@@ -1,0 +1,33 @@
+{
+  "brand": "Odysse Electric",
+  "model": "Hawk Plus",
+  "brandId": "odysse-electric",
+  "makeSlug": "odysse-bikes",
+  "modelSlug": "hawk",
+  "sourceUrl": "https://www.bikewale.com/odysse-bikes/hawk/colours/",
+  "scrapedAt": "2026-04-20T06:12:22.237Z",
+  "count": 5,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/odysse-select-model-blue-1635507814578.jpg?q=100",
+  "colors": [
+    {
+      "name": "Blue",
+      "image": "/data/brand-model-images/2w-colors/odysse-electric/hawk/blue.avif"
+    },
+    {
+      "name": "Mirage White",
+      "image": "/data/brand-model-images/2w-colors/odysse-electric/hawk/mirage-white.avif"
+    },
+    {
+      "name": "Intense Red",
+      "image": "/data/brand-model-images/2w-colors/odysse-electric/hawk/intense-red.avif"
+    },
+    {
+      "name": "Gravity Grey",
+      "image": "/data/brand-model-images/2w-colors/odysse-electric/hawk/gravity-grey.avif"
+    },
+    {
+      "name": "Charcoal Black",
+      "image": "/data/brand-model-images/2w-colors/odysse-electric/hawk/charcoal-black.avif"
+    }
+  ]
+}

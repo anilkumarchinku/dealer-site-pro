@@ -1,0 +1,33 @@
+{
+  "brand": "Triumph India",
+  "model": "Bonneville Bobber",
+  "brandId": "triumph-india",
+  "makeSlug": "triumph-bikes",
+  "modelSlug": "bonneville-bobber",
+  "sourceUrl": "https://www.bikewale.com/triumph-bikes/bonneville-bobber/colours/",
+  "scrapedAt": "2026-04-20T05:17:45.314Z",
+  "count": 5,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/triumph-select-model-jet-black--ash-gray-1698486184857.png?q=100",
+  "colors": [
+    {
+      "name": "Jet Black / Ash Gray",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/bonneville-bobber/jet-black-ash-gray.png"
+    },
+    {
+      "name": "Stealth Edition - Phantom Purple/ Silver Purple",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/bonneville-bobber/stealth-edition-phantom-purple-silver-purple.png"
+    },
+    {
+      "name": "Red Hopper",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/bonneville-bobber/red-hopper.avif"
+    },
+    {
+      "name": "Jet Black",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/bonneville-bobber/jet-black.png"
+    },
+    {
+      "name": "Matt Storm Grey / Matt Ironstone",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/bonneville-bobber/matt-storm-grey-matt-ironstone.png"
+    }
+  ]
+}

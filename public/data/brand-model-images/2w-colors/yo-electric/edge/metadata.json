@@ -1,0 +1,33 @@
+{
+  "brand": "Yo Electric",
+  "model": "Edge",
+  "brandId": "yo-electric",
+  "makeSlug": "yo-bikes",
+  "modelSlug": "edge",
+  "sourceUrl": "https://www.bikewale.com/yo-bikes/edge/colours/",
+  "scrapedAt": "2026-04-20T05:20:42.389Z",
+  "count": 5,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/undefined-white-1600710195767.jpg?q=100",
+  "colors": [
+    {
+      "name": "White",
+      "image": "/data/brand-model-images/2w-colors/yo-electric/edge/white.avif"
+    },
+    {
+      "name": "Red",
+      "image": "/data/brand-model-images/2w-colors/yo-electric/edge/red.avif"
+    },
+    {
+      "name": "Green",
+      "image": "/data/brand-model-images/2w-colors/yo-electric/edge/green.avif"
+    },
+    {
+      "name": "Blue",
+      "image": "/data/brand-model-images/2w-colors/yo-electric/edge/blue.avif"
+    },
+    {
+      "name": "Black",
+      "image": "/data/brand-model-images/2w-colors/yo-electric/edge/black.avif"
+    }
+  ]
+}

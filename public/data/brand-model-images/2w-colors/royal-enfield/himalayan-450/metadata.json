@@ -1,0 +1,37 @@
+{
+  "brand": "Royal Enfield",
+  "model": "Himalayan 450",
+  "brandId": "royal-enfield",
+  "makeSlug": "royalenfield-bikes",
+  "modelSlug": "himalayan-450",
+  "sourceUrl": "https://www.bikewale.com/royalenfield-bikes/himalayan-450/colours/",
+  "scrapedAt": "2026-04-20T05:15:54.436Z",
+  "count": 6,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/kw88aib_1891241.png?q=100",
+  "colors": [
+    {
+      "name": "Kaza Brown",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/himalayan-450/kaza-brown.png"
+    },
+    {
+      "name": "Slate Poppy Blue",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/himalayan-450/slate-poppy-blue.png"
+    },
+    {
+      "name": "Salte Himalayan Salt",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/himalayan-450/salte-himalayan-salt.png"
+    },
+    {
+      "name": "Kamet White",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/himalayan-450/kamet-white.png"
+    },
+    {
+      "name": "Hanle Black",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/himalayan-450/hanle-black.png"
+    },
+    {
+      "name": "Mana Black",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/himalayan-450/mana-black.avif"
+    }
+  ]
+}

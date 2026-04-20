@@ -1,0 +1,41 @@
+{
+  "brand": "Aprilia India",
+  "model": "SR 125",
+  "brandId": "aprilia-india",
+  "makeSlug": "aprilia-bikes",
+  "modelSlug": "sr-125",
+  "sourceUrl": "https://www.bikewale.com/aprilia-bikes/sr-125/colours/",
+  "scrapedAt": "2026-04-20T05:17:16.507Z",
+  "count": 7,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/aprilia-select-model-white-1683707939053.jpg?q=100",
+  "colors": [
+    {
+      "name": "White",
+      "image": "/data/brand-model-images/2w-colors/aprilia-india/sr-125/white.avif"
+    },
+    {
+      "name": "Red",
+      "image": "/data/brand-model-images/2w-colors/aprilia-india/sr-125/red.avif"
+    },
+    {
+      "name": "Grey",
+      "image": "/data/brand-model-images/2w-colors/aprilia-india/sr-125/grey.avif"
+    },
+    {
+      "name": "Blue",
+      "image": "/data/brand-model-images/2w-colors/aprilia-india/sr-125/blue.avif"
+    },
+    {
+      "name": "Glossy Red + Matt Black",
+      "image": "/data/brand-model-images/2w-colors/aprilia-india/sr-125/glossy-red-matt-black.avif"
+    },
+    {
+      "name": "Glossy Mazda Grey + Matt Black",
+      "image": "/data/brand-model-images/2w-colors/aprilia-india/sr-125/glossy-mazda-grey-matt-black.avif"
+    },
+    {
+      "name": "Matt Black",
+      "image": "/data/brand-model-images/2w-colors/aprilia-india/sr-125/matt-black.avif"
+    }
+  ]
+}

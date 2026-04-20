@@ -1,0 +1,45 @@
+{
+  "brand": "Hero MotoCorp",
+  "model": "XPulse 200 4V",
+  "brandId": "hero-motocorp",
+  "makeSlug": "hero-bikes",
+  "modelSlug": "xpulse-200-4v",
+  "sourceUrl": "https://www.bikewale.com/hero-bikes/xpulse-200-4v/colours/",
+  "scrapedAt": "2026-04-20T06:13:22.021Z",
+  "count": 8,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/hero-select-model-sports-red-1707139187405.png?q=100",
+  "colors": [
+    {
+      "name": "Sports Red",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/xpulse-200-4v/sports-red.png"
+    },
+    {
+      "name": "Techno Blue Met Black",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/xpulse-200-4v/techno-blue-met-black.png"
+    },
+    {
+      "name": "Met Nexus Blue White",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/xpulse-200-4v/met-nexus-blue-white.png"
+    },
+    {
+      "name": "Metallic Nexus Blue",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/xpulse-200-4v/metallic-nexus-blue.png"
+    },
+    {
+      "name": "Black Sports Red",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/xpulse-200-4v/black-sports-red.png"
+    },
+    {
+      "name": "Polestar Blue",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/xpulse-200-4v/polestar-blue.png"
+    },
+    {
+      "name": "Pearl Fadeless White",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/xpulse-200-4v/pearl-fadeless-white.png"
+    },
+    {
+      "name": "Gloss Goldfish Silver",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/xpulse-200-4v/gloss-goldfish-silver.avif"
+    }
+  ]
+}

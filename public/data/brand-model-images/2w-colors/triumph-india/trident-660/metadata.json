@@ -1,0 +1,29 @@
+{
+  "brand": "Triumph India",
+  "model": "Trident 660",
+  "brandId": "triumph-india",
+  "makeSlug": "triumph-bikes",
+  "modelSlug": "trident-660",
+  "sourceUrl": "https://www.bikewale.com/triumph-bikes/trident-660/colours/",
+  "scrapedAt": "2026-04-20T05:17:43.305Z",
+  "count": 4,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/q3iplgb_1849210.jpg?q=100",
+  "colors": [
+    {
+      "name": "Cobalt Blue / Sapphire Black",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/trident-660/cobalt-blue-sapphire-black.avif"
+    },
+    {
+      "name": "Cosmic Yellow / Sapphire Black",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/trident-660/cosmic-yellow-sapphire-black.avif"
+    },
+    {
+      "name": "Diablo Red / Sapphire Black",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/trident-660/diablo-red-sapphire-black.avif"
+    },
+    {
+      "name": "Jet Black",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/trident-660/jet-black.avif"
+    }
+  ]
+}

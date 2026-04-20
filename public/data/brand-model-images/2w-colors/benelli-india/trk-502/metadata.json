@@ -1,0 +1,21 @@
+{
+  "brand": "Benelli India",
+  "model": "TRK 502",
+  "brandId": "benelli-india",
+  "makeSlug": "benelli-bikes",
+  "modelSlug": "trk-502",
+  "sourceUrl": "https://www.bikewale.com/benelli-bikes/trk-502/colours/",
+  "scrapedAt": "2026-04-20T05:16:46.691Z",
+  "count": 2,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/qrqs4fb_1833141.jpg?q=100",
+  "colors": [
+    {
+      "name": "White",
+      "image": "/data/brand-model-images/2w-colors/benelli-india/trk-502/white.avif"
+    },
+    {
+      "name": "Black",
+      "image": "/data/brand-model-images/2w-colors/benelli-india/trk-502/black.avif"
+    }
+  ]
+}

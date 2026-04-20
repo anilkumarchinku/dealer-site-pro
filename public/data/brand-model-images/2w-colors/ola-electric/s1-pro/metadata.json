@@ -1,0 +1,45 @@
+{
+  "brand": "Ola Electric",
+  "model": "S1 Pro Plus",
+  "brandId": "ola-electric",
+  "makeSlug": "ola-bikes",
+  "modelSlug": "s1-pro",
+  "sourceUrl": "https://www.bikewale.com/ola-bikes/s1-pro/colours/",
+  "scrapedAt": "2026-04-20T06:07:39.370Z",
+  "count": 8,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/x6i0tib_1912510.jpg?q=100",
+  "colors": [
+    {
+      "name": "Champions Edition",
+      "image": "/data/brand-model-images/2w-colors/ola-electric/s1-pro/champions-edition.avif"
+    },
+    {
+      "name": "Industrial Silver",
+      "image": "/data/brand-model-images/2w-colors/ola-electric/s1-pro/industrial-silver.avif"
+    },
+    {
+      "name": "Midnight Blue",
+      "image": "/data/brand-model-images/2w-colors/ola-electric/s1-pro/midnight-blue.avif"
+    },
+    {
+      "name": "Stellar Blue",
+      "image": "/data/brand-model-images/2w-colors/ola-electric/s1-pro/stellar-blue.avif"
+    },
+    {
+      "name": "Jet Black",
+      "image": "/data/brand-model-images/2w-colors/ola-electric/s1-pro/jet-black.avif"
+    },
+    {
+      "name": "Porcelain White",
+      "image": "/data/brand-model-images/2w-colors/ola-electric/s1-pro/porcelain-white.avif"
+    },
+    {
+      "name": "Passion Red",
+      "image": "/data/brand-model-images/2w-colors/ola-electric/s1-pro/passion-red.avif"
+    },
+    {
+      "name": "Red",
+      "image": "/data/brand-model-images/2w-colors/ola-electric/s1-pro/red.avif"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "brand": "Suzuki Motorcycle India",
+  "model": "Access 125",
+  "brandId": "suzuki-motorcycle",
+  "makeSlug": "suzuki-bikes",
+  "modelSlug": "access-125",
+  "sourceUrl": "https://www.bikewale.com/suzuki-bikes/access-125/colours/",
+  "scrapedAt": "2026-04-20T05:16:13.008Z",
+  "count": 6,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/f6etjfb_1820555.jpeg?q=100",
+  "colors": [
+    {
+      "name": "Metallic Mat Black",
+      "image": "/data/brand-model-images/2w-colors/suzuki-motorcycle/access-125/metallic-mat-black.avif"
+    },
+    {
+      "name": "Pearl Grace White",
+      "image": "/data/brand-model-images/2w-colors/suzuki-motorcycle/access-125/pearl-grace-white.avif"
+    },
+    {
+      "name": "Metallic Mat Stellar Blue",
+      "image": "/data/brand-model-images/2w-colors/suzuki-motorcycle/access-125/metallic-mat-stellar-blue.avif"
+    },
+    {
+      "name": "Solid Ice Green",
+      "image": "/data/brand-model-images/2w-colors/suzuki-motorcycle/access-125/solid-ice-green.avif"
+    },
+    {
+      "name": "Pearl Shiny Beige",
+      "image": "/data/brand-model-images/2w-colors/suzuki-motorcycle/access-125/pearl-shiny-beige.avif"
+    },
+    {
+      "name": "Pearl Mat Aqua Silver",
+      "image": "/data/brand-model-images/2w-colors/suzuki-motorcycle/access-125/pearl-mat-aqua-silver.avif"
+    }
+  ]
+}

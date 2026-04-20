@@ -1,0 +1,29 @@
+{
+  "brand": "Bajaj Auto",
+  "model": "Pulsar NS160",
+  "brandId": "bajaj-auto",
+  "makeSlug": "bajaj-bikes",
+  "modelSlug": "pulsar-ns160",
+  "sourceUrl": "https://www.bikewale.com/bajaj-bikes/pulsar-ns160/colours/",
+  "scrapedAt": "2026-04-20T06:07:41.702Z",
+  "count": 4,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/e5tmoib_1906705.png?q=100",
+  "colors": [
+    {
+      "name": "Cocktail Wine Red",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/pulsar-ns160/cocktail-wine-red.png"
+    },
+    {
+      "name": "Pearl Metallic White",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/pulsar-ns160/pearl-metallic-white.png"
+    },
+    {
+      "name": "Ebony Black",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/pulsar-ns160/ebony-black.png"
+    },
+    {
+      "name": "Pewter Grey",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/pulsar-ns160/pewter-grey.png"
+    }
+  ]
+}

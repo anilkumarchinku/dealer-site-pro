@@ -1,0 +1,45 @@
+{
+  "brand": "Jawa Motorcycles",
+  "model": "Jawa 350",
+  "brandId": "jawa-motorcycles",
+  "makeSlug": "jawa-bikes",
+  "modelSlug": "350",
+  "sourceUrl": "https://www.bikewale.com/jawa-bikes/350/colours/",
+  "scrapedAt": "2026-04-20T05:16:45.414Z",
+  "count": 8,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/jawa-select-model-white-1719323089491.png?q=100",
+  "colors": [
+    {
+      "name": "White",
+      "image": "/data/brand-model-images/2w-colors/jawa-motorcycles/350/white.png"
+    },
+    {
+      "name": "Black",
+      "image": "/data/brand-model-images/2w-colors/jawa-motorcycles/350/black.png"
+    },
+    {
+      "name": "Orange",
+      "image": "/data/brand-model-images/2w-colors/jawa-motorcycles/350/orange.png"
+    },
+    {
+      "name": "Maroon",
+      "image": "/data/brand-model-images/2w-colors/jawa-motorcycles/350/maroon.png"
+    },
+    {
+      "name": "Deep Forest",
+      "image": "/data/brand-model-images/2w-colors/jawa-motorcycles/350/deep-forest.png"
+    },
+    {
+      "name": "Grey",
+      "image": "/data/brand-model-images/2w-colors/jawa-motorcycles/350/grey.png"
+    },
+    {
+      "name": "Obsidian Black",
+      "image": "/data/brand-model-images/2w-colors/jawa-motorcycles/350/obsidian-black.png"
+    },
+    {
+      "name": "Chrome Maroon",
+      "image": "/data/brand-model-images/2w-colors/jawa-motorcycles/350/chrome-maroon.png"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "make": "bmw",
+  "model": "iX1",
+  "brandSlug": "bmw",
+  "modelSlug": "ix1",
+  "sourceUrl": "https://www.cardekho.com/bmw/ix1",
+  "scrapedAt": "2026-04-20T06:30:49.357Z",
+  "counts": {
+    "exterior": 5,
+    "interior": 8,
+    "feature": 0,
+    "colors": 5,
+    "total": 18
+  },
+  "hero": "/data/brand-model-images/4w-galleries/bmw/ix1/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/bmw/ix1/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/bmw/ix1/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/bmw/ix1/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/bmw/ix1/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/bmw/ix1/exterior/06.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/bmw/ix1/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/bmw/ix1/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/bmw/ix1/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/bmw/ix1/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/bmw/ix1/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/bmw/ix1/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/bmw/ix1/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/bmw/ix1/interior/08.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "Skyscraper Grey Metallic",
+    "Mineral White Metallic",
+    "Carbon Black Metallic",
+    "Portimao Blue Metallic",
+    "Sparkling Copper Grey Metallic"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/bmw/ix1/colors/skyscraper-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/ix1/colors/mineral-white-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/ix1/colors/carbon-black-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/ix1/colors/portimao-blue-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/ix1/colors/sparkling-copper-grey-metallic.avif"
+  ]
+}

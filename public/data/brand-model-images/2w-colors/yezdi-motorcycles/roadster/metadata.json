@@ -1,0 +1,37 @@
+{
+  "brand": "Yezdi Motorcycles",
+  "model": "Roadster",
+  "brandId": "yezdi-motorcycles",
+  "makeSlug": "yezdi-bikes",
+  "modelSlug": "roadster",
+  "sourceUrl": "https://www.bikewale.com/yezdi-bikes/roadster/colours/",
+  "scrapedAt": "2026-04-20T05:18:55.551Z",
+  "count": 6,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/tkb0vgb_1862102.jpg?q=100",
+  "colors": [
+    {
+      "name": "Shadow Black",
+      "image": "/data/brand-model-images/2w-colors/yezdi-motorcycles/roadster/shadow-black.avif"
+    },
+    {
+      "name": "Savage Green",
+      "image": "/data/brand-model-images/2w-colors/yezdi-motorcycles/roadster/savage-green.avif"
+    },
+    {
+      "name": "Smoke Grey",
+      "image": "/data/brand-model-images/2w-colors/yezdi-motorcycles/roadster/smoke-grey.avif"
+    },
+    {
+      "name": "Sharkskin Blue",
+      "image": "/data/brand-model-images/2w-colors/yezdi-motorcycles/roadster/sharkskin-blue.avif"
+    },
+    {
+      "name": "Bloodrush Maroon",
+      "image": "/data/brand-model-images/2w-colors/yezdi-motorcycles/roadster/bloodrush-maroon.avif"
+    },
+    {
+      "name": "Red Wolf",
+      "image": "/data/brand-model-images/2w-colors/yezdi-motorcycles/roadster/red-wolf.png"
+    }
+  ]
+}

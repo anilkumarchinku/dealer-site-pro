@@ -1,0 +1,41 @@
+{
+  "brand": "Honda Motorcycle & Scooter India",
+  "model": "Shine",
+  "brandId": "honda-hmsi",
+  "makeSlug": "honda-bikes",
+  "modelSlug": "shine",
+  "sourceUrl": "https://www.bikewale.com/honda-bikes/shine/colours/",
+  "scrapedAt": "2026-04-20T05:15:22.679Z",
+  "count": 7,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/kv94kgb_1848486.jpg?q=100",
+  "colors": [
+    {
+      "name": "Pearl Siren Blue",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/shine/pearl-siren-blue.avif"
+    },
+    {
+      "name": "Pearl Igneous Black",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/shine/pearl-igneous-black.avif"
+    },
+    {
+      "name": "Decent Blue Metallic",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/shine/decent-blue-metallic.avif"
+    },
+    {
+      "name": "Genny Grey Metallic",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/shine/genny-grey-metallic.avif"
+    },
+    {
+      "name": "Matte Axis Gray Metallic",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/shine/matte-axis-gray-metallic.avif"
+    },
+    {
+      "name": "Rebel Red Metallic",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/shine/rebel-red-metallic.avif"
+    },
+    {
+      "name": "Pearl Siren Blue - Ltd Edition",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/shine/pearl-siren-blue-ltd-edition.png"
+    }
+  ]
+}

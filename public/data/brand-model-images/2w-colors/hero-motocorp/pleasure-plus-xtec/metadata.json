@@ -1,0 +1,29 @@
+{
+  "brand": "Hero MotoCorp",
+  "model": "Pleasure Plus Xtec",
+  "brandId": "hero-motocorp",
+  "makeSlug": "hero-bikes",
+  "modelSlug": "pleasure-plus-xtec",
+  "sourceUrl": "https://www.bikewale.com/hero-bikes/pleasure-plus-xtec/colours/",
+  "scrapedAt": "2026-04-20T06:13:24.041Z",
+  "count": 4,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bqrerib_1909972.png?q=100",
+  "colors": [
+    {
+      "name": "Pearl Blue",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/pleasure-plus-xtec/pearl-blue.png"
+    },
+    {
+      "name": "Copper Brown",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/pleasure-plus-xtec/copper-brown.png"
+    },
+    {
+      "name": "Matte Black",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/pleasure-plus-xtec/matte-black.png"
+    },
+    {
+      "name": "Matte Vernier Grey",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/pleasure-plus-xtec/matte-vernier-grey.png"
+    }
+  ]
+}

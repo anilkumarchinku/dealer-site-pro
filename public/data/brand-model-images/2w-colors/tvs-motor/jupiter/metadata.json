@@ -1,0 +1,37 @@
+{
+  "brand": "TVS Motor Company",
+  "model": "Jupiter",
+  "brandId": "tvs-motor",
+  "makeSlug": "tvs-bikes",
+  "modelSlug": "jupiter",
+  "sourceUrl": "https://www.bikewale.com/tvs-bikes/jupiter/colours/",
+  "scrapedAt": "2026-04-20T06:07:47.909Z",
+  "count": 6,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/nrqi7eb_1768821.jpg?q=100",
+  "colors": [
+    {
+      "name": "Galactic Copper Matte",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/jupiter/galactic-copper-matte.avif"
+    },
+    {
+      "name": "Dawn Blue Matte",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/jupiter/dawn-blue-matte.avif"
+    },
+    {
+      "name": "Starlight Blue Gloss",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/jupiter/starlight-blue-gloss.avif"
+    },
+    {
+      "name": "Titanium Grey Matte",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/jupiter/titanium-grey-matte.avif"
+    },
+    {
+      "name": "Lunar White Gloss",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/jupiter/lunar-white-gloss.avif"
+    },
+    {
+      "name": "Stardust Black",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/jupiter/stardust-black.avif"
+    }
+  ]
+}

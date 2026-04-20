@@ -1,0 +1,17 @@
+{
+  "brand": "Indian Motorcycle",
+  "model": "Sport Scout",
+  "brandId": "indian-motorcycle",
+  "makeSlug": "indian-bikes",
+  "modelSlug": "sport-scout",
+  "sourceUrl": "https://www.bikewale.com/indian-bikes/sport-scout/colours/",
+  "scrapedAt": "2026-04-20T05:18:42.202Z",
+  "count": 1,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/2i4kbhb_1865216.jpg?q=100",
+  "colors": [
+    {
+      "name": "Black Metallic",
+      "image": "/data/brand-model-images/2w-colors/indian-motorcycle/sport-scout/black-metallic.avif"
+    }
+  ]
+}

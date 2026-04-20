@@ -1,0 +1,25 @@
+{
+  "brand": "VLF",
+  "model": "Tennis 1500",
+  "brandId": "vlf",
+  "makeSlug": "vlf-bikes",
+  "modelSlug": "tennis-1500",
+  "sourceUrl": "https://www.bikewale.com/vlf-bikes/tennis-1500/colours/",
+  "scrapedAt": "2026-04-20T05:20:40.848Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/pe8tohb_1879961.jpg?q=100",
+  "colors": [
+    {
+      "name": "Fire Fury Dark Red",
+      "image": "/data/brand-model-images/2w-colors/vlf/tennis-1500/fire-fury-dark-red.avif"
+    },
+    {
+      "name": "Snowflake White",
+      "image": "/data/brand-model-images/2w-colors/vlf/tennis-1500/snowflake-white.avif"
+    },
+    {
+      "name": "Slate Grey",
+      "image": "/data/brand-model-images/2w-colors/vlf/tennis-1500/slate-grey.avif"
+    }
+  ]
+}

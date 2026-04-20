@@ -1,0 +1,45 @@
+{
+  "brand": "Vespa India",
+  "model": "Vespa 150",
+  "brandId": "vespa-india",
+  "makeSlug": "vespa-bikes",
+  "modelSlug": "150",
+  "sourceUrl": "https://www.bikewale.com/vespa-bikes/150/colours/",
+  "scrapedAt": "2026-04-20T05:17:29.264Z",
+  "count": 8,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/5yn5efb_1814207.jpg?q=100",
+  "colors": [
+    {
+      "name": "Blue & White",
+      "image": "/data/brand-model-images/2w-colors/vespa-india/150/blue-and-white.avif"
+    },
+    {
+      "name": "Nero Black",
+      "image": "/data/brand-model-images/2w-colors/vespa-india/150/nero-black.avif"
+    },
+    {
+      "name": "Pearl White",
+      "image": "/data/brand-model-images/2w-colors/vespa-india/150/pearl-white.avif"
+    },
+    {
+      "name": "Azzuro Provenza",
+      "image": "/data/brand-model-images/2w-colors/vespa-india/150/azzuro-provenza.avif"
+    },
+    {
+      "name": "Rosso Red",
+      "image": "/data/brand-model-images/2w-colors/vespa-india/150/rosso-red.avif"
+    },
+    {
+      "name": "Verde Amabile",
+      "image": "/data/brand-model-images/2w-colors/vespa-india/150/verde-amabile.avif"
+    },
+    {
+      "name": "Blue Energico - Tech",
+      "image": "/data/brand-model-images/2w-colors/vespa-india/150/blue-energico-tech.avif"
+    },
+    {
+      "name": "Grigio Grey - Tech",
+      "image": "/data/brand-model-images/2w-colors/vespa-india/150/grigio-grey-tech.avif"
+    }
+  ]
+}

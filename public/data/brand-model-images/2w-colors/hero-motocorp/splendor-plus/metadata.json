@@ -1,0 +1,45 @@
+{
+  "brand": "Hero MotoCorp",
+  "model": "Splendor Plus",
+  "brandId": "hero-motocorp",
+  "makeSlug": "hero-bikes",
+  "modelSlug": "splendor-plus",
+  "sourceUrl": "https://www.bikewale.com/hero-bikes/splendor-plus/colours/",
+  "scrapedAt": "2026-04-20T06:13:18.163Z",
+  "count": 8,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/futv6hb_1880995.jpg?q=100",
+  "colors": [
+    {
+      "name": "Black Heavy Grey",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/splendor-plus/black-heavy-grey.avif"
+    },
+    {
+      "name": "Blue Black",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/splendor-plus/blue-black.webp"
+    },
+    {
+      "name": "Black Red Purple",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/splendor-plus/black-red-purple.webp"
+    },
+    {
+      "name": "Sports Red Black",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/splendor-plus/sports-red-black.webp"
+    },
+    {
+      "name": "Force Silver",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/splendor-plus/force-silver.webp"
+    },
+    {
+      "name": "Black and Accent",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/splendor-plus/black-and-accent.webp"
+    },
+    {
+      "name": "Matt Grey",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/splendor-plus/matt-grey.webp"
+    },
+    {
+      "name": "Industrial Dark Grey",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/splendor-plus/industrial-dark-grey.avif"
+    }
+  ]
+}

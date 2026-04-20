@@ -1,0 +1,25 @@
+{
+  "brand": "Honda Motorcycle & Scooter India",
+  "model": "Unicorn",
+  "brandId": "honda-hmsi",
+  "makeSlug": "honda-bikes",
+  "modelSlug": "unicorn",
+  "sourceUrl": "https://www.bikewale.com/honda-bikes/unicorn/colours/",
+  "scrapedAt": "2026-04-20T05:15:23.532Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/feuds9b_1803747.jpg?q=100",
+  "colors": [
+    {
+      "name": "Radiant Red Metallic",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/unicorn/radiant-red-metallic.avif"
+    },
+    {
+      "name": "Mat Axis Gray Metallic",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/unicorn/mat-axis-gray-metallic.png"
+    },
+    {
+      "name": "Pearl Igneous Black",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/unicorn/pearl-igneous-black.avif"
+    }
+  ]
+}

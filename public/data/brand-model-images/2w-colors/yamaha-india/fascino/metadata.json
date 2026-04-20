@@ -1,0 +1,73 @@
+{
+  "brand": "Yamaha India",
+  "model": "Fascino 125 Fi",
+  "brandId": "yamaha-india",
+  "makeSlug": "yamaha-bikes",
+  "modelSlug": "fascino",
+  "sourceUrl": "https://www.bikewale.com/yamaha-bikes/fascino/colours/",
+  "scrapedAt": "2026-04-20T06:07:47.465Z",
+  "count": 15,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/yamaha-select-model-metallic-white--drum-1712697907928.png?q=100",
+  "colors": [
+    {
+      "name": "Metallic White - Drum",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/fascino/metallic-white-drum.png"
+    },
+    {
+      "name": "Vivid Red-Drum",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/fascino/vivid-red-drum.png"
+    },
+    {
+      "name": "Dark Matte Blue-Drum",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/fascino/dark-matte-blue-drum.png"
+    },
+    {
+      "name": "Cool Blue Mettalic-Drum",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/fascino/cool-blue-mettalic-drum.png"
+    },
+    {
+      "name": "Matte Copper - Disc",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/fascino/matte-copper-disc.png"
+    },
+    {
+      "name": "Metallic White - Disc",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/fascino/metallic-white-disc.png"
+    },
+    {
+      "name": "Cyan Blue-Disc",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/fascino/cyan-blue-disc.png"
+    },
+    {
+      "name": "Metallic Light Green - Disc",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/fascino/metallic-light-green-disc.avif"
+    },
+    {
+      "name": "Cool Blue Mettalic-Disc",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/fascino/cool-blue-mettalic-disc.png"
+    },
+    {
+      "name": "Dark Matte Blue-Disc",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/fascino/dark-matte-blue-disc.png"
+    },
+    {
+      "name": "Matte Black-Spl",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/fascino/matte-black-spl.png"
+    },
+    {
+      "name": "Vivid Red-Spl",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/fascino/vivid-red-spl.png"
+    },
+    {
+      "name": "Dark Matte Blue-Spl",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/fascino/dark-matte-blue-spl.png"
+    },
+    {
+      "name": "Metallic Black-Drum",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/fascino/metallic-black-drum.avif"
+    },
+    {
+      "name": "Matte Grey Special",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/fascino/matte-grey-special.png"
+    }
+  ]
+}

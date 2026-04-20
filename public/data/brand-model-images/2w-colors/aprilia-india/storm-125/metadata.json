@@ -1,0 +1,21 @@
+{
+  "brand": "Aprilia India",
+  "model": "Storm 125",
+  "brandId": "aprilia-india",
+  "makeSlug": "aprilia-bikes",
+  "modelSlug": "storm-125",
+  "sourceUrl": "https://www.bikewale.com/aprilia-bikes/storm-125/colours/",
+  "scrapedAt": "2026-04-20T05:17:17.820Z",
+  "count": 2,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/aprilia-select-model-yellow-1670998262490.png?q=100",
+  "colors": [
+    {
+      "name": "Yellow",
+      "image": "/data/brand-model-images/2w-colors/aprilia-india/storm-125/yellow.png"
+    },
+    {
+      "name": "Red",
+      "image": "/data/brand-model-images/2w-colors/aprilia-india/storm-125/red.png"
+    }
+  ]
+}

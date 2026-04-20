@@ -1,0 +1,29 @@
+{
+  "brand": "Hero MotoCorp",
+  "model": "Xoom 160",
+  "brandId": "hero-motocorp",
+  "makeSlug": "hero-bikes",
+  "modelSlug": "xoom-160",
+  "sourceUrl": "https://www.bikewale.com/hero-bikes/xoom-160/colours/",
+  "scrapedAt": "2026-04-20T05:15:21.759Z",
+  "count": 4,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/ar8jjhb_1874171.jpg?q=100",
+  "colors": [
+    {
+      "name": "Matte Rainforest Green",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/xoom-160/matte-rainforest-green.avif"
+    },
+    {
+      "name": "Matte Volcanic Grey",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/xoom-160/matte-volcanic-grey.avif"
+    },
+    {
+      "name": "Summit White",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/xoom-160/summit-white.avif"
+    },
+    {
+      "name": "Canyon Red",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/xoom-160/canyon-red.avif"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "make": "hyundai",
+  "model": "Prime HB",
+  "brandSlug": "hyundai",
+  "modelSlug": "prime-hb",
+  "sourceUrl": "https://www.cardekho.com/hyundai/prime-hb",
+  "scrapedAt": "2026-04-20T06:17:00.070Z",
+  "counts": {
+    "exterior": 3,
+    "interior": 0,
+    "feature": 0,
+    "colors": 0,
+    "total": 3
+  },
+  "hero": "/data/brand-model-images/4w-galleries/hyundai/prime-hb/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/hyundai/prime-hb/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/prime-hb/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/prime-hb/exterior/04.avif"
+  ],
+  "interior": [],
+  "feature": [],
+  "colorNames": [],
+  "colorImages": []
+}

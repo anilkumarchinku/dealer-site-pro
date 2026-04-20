@@ -1,0 +1,69 @@
+{
+  "brand": "Jawa Motorcycles",
+  "model": "Jawa 42",
+  "brandId": "jawa-motorcycles",
+  "makeSlug": "jawa-bikes",
+  "modelSlug": "42",
+  "sourceUrl": "https://www.bikewale.com/jawa-bikes/42/colours/",
+  "scrapedAt": "2026-04-20T05:16:32.947Z",
+  "count": 14,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/jongheb_1763357.png?q=100",
+  "colors": [
+    {
+      "name": "Vega White",
+      "image": "/data/brand-model-images/2w-colors/jawa-motorcycles/42/vega-white.png"
+    },
+    {
+      "name": "Voyager Red",
+      "image": "/data/brand-model-images/2w-colors/jawa-motorcycles/42/voyager-red.png"
+    },
+    {
+      "name": "Asteroid Grey",
+      "image": "/data/brand-model-images/2w-colors/jawa-motorcycles/42/asteroid-grey.png"
+    },
+    {
+      "name": "Odyssey Black",
+      "image": "/data/brand-model-images/2w-colors/jawa-motorcycles/42/odyssey-black.png"
+    },
+    {
+      "name": "Nebula Blue",
+      "image": "/data/brand-model-images/2w-colors/jawa-motorcycles/42/nebula-blue.png"
+    },
+    {
+      "name": "Celestial Copper Matte",
+      "image": "/data/brand-model-images/2w-colors/jawa-motorcycles/42/celestial-copper-matte.png"
+    },
+    {
+      "name": "Orion Red Matte",
+      "image": "/data/brand-model-images/2w-colors/jawa-motorcycles/42/orion-red-matte.png"
+    },
+    {
+      "name": "Sirius White Matte",
+      "image": "/data/brand-model-images/2w-colors/jawa-motorcycles/42/sirius-white-matte.png"
+    },
+    {
+      "name": "All Star Black Matte",
+      "image": "/data/brand-model-images/2w-colors/jawa-motorcycles/42/all-star-black-matte.png"
+    },
+    {
+      "name": "Cosmic Rock DT",
+      "image": "/data/brand-model-images/2w-colors/jawa-motorcycles/42/cosmic-rock-dt.png"
+    },
+    {
+      "name": "Celestial Copper Matte DT",
+      "image": "/data/brand-model-images/2w-colors/jawa-motorcycles/42/celestial-copper-matte-dt.png"
+    },
+    {
+      "name": "Starship Blue DT",
+      "image": "/data/brand-model-images/2w-colors/jawa-motorcycles/42/starship-blue-dt.png"
+    },
+    {
+      "name": "Infinity Black Matte DT",
+      "image": "/data/brand-model-images/2w-colors/jawa-motorcycles/42/infinity-black-matte-dt.png"
+    },
+    {
+      "name": "Ivory",
+      "image": "/data/brand-model-images/2w-colors/jawa-motorcycles/42/ivory.png"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "brand": "Hero MotoCorp",
+  "model": "Splendor Plus Xtec",
+  "brandId": "hero-motocorp",
+  "makeSlug": "hero-bikes",
+  "modelSlug": "splendor-plus-xtec",
+  "sourceUrl": "https://www.bikewale.com/hero-bikes/splendor-plus-xtec/colours/",
+  "scrapedAt": "2026-04-20T06:13:18.373Z",
+  "count": 7,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/unh96fb_1826289.webp?q=100",
+  "colors": [
+    {
+      "name": "Nobel Red",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/splendor-plus-xtec/nobel-red.webp"
+    },
+    {
+      "name": "Matte Grey",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/splendor-plus-xtec/matte-grey.webp"
+    },
+    {
+      "name": "Black Heavy Grey",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/splendor-plus-xtec/black-heavy-grey.webp"
+    },
+    {
+      "name": "BLACK WITH GREENISH YELLOW",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/splendor-plus-xtec/black-with-greenish-yellow.avif"
+    },
+    {
+      "name": "Red Black",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/splendor-plus-xtec/red-black.avif"
+    },
+    {
+      "name": "Black Tornado Grey",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/splendor-plus-xtec/black-tornado-grey.avif"
+    },
+    {
+      "name": "Black Sparking Blue",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/splendor-plus-xtec/black-sparking-blue.avif"
+    }
+  ]
+}

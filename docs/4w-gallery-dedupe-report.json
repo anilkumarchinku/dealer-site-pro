@@ -1,0 +1,3271 @@
+[
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/audi/Audi_A6/metadata.json",
+    "make": "audi",
+    "model": "A6",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/Audi/Audi_A6/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/Audi/Audi_A6/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 1,
+      "interior": 0,
+      "feature": 0,
+      "colors": 0,
+      "total": 1
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/audi/a4/metadata.json",
+    "make": "audi",
+    "model": "A4",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/audi/a4/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/audi/a4/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": [
+        {
+          "name": "Navarra Blue Metallic",
+          "path": "/data/brand-model-images/4w-galleries/audi/a4/colors/navarra-blue-metallic.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/audi/a4/colors/navvara-blue-metallic.avif",
+          "reason": "same_sha256"
+        }
+      ]
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 5,
+      "total": 18
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/audi/a8-l/metadata.json",
+    "make": "audi",
+    "model": "A8 L",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/audi/a8-l/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/audi/a8-l/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": [
+        {
+          "name": "Myth Black Metallic",
+          "path": "/data/brand-model-images/4w-galleries/audi/a8-l/colors/myth-black-metallic.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/audi/a8-l/colors/mythos-black-metallic.avif",
+          "reason": "same_sha256"
+        }
+      ]
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 6,
+      "total": 19
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/audi/e-tron-gt/metadata.json",
+    "make": "audi",
+    "model": "e-tron GT",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/audi/e-tron-gt/exterior/03.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/audi/e-tron-gt/exterior/02.avif",
+          "reason": "same_sha256"
+        },
+        {
+          "path": "/data/brand-model-images/4w-galleries/audi/e-tron-gt/exterior/04.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/audi/e-tron-gt/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 6,
+      "interior": 8,
+      "feature": 0,
+      "colors": 7,
+      "total": 21
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/audi/q3/metadata.json",
+    "make": "audi",
+    "model": "Q3",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/audi/q3/exterior/03.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/audi/q3/exterior/01.avif",
+          "reason": "same_sha256"
+        },
+        {
+          "path": "/data/brand-model-images/4w-galleries/audi/q3/exterior/05.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/audi/q3/exterior/04.avif",
+          "reason": "same_sha256"
+        },
+        {
+          "path": "/data/brand-model-images/4w-galleries/audi/q3/exterior/07.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/audi/q3/exterior/06.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 5,
+      "total": 18
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/audi/q3-sportback/metadata.json",
+    "make": "audi",
+    "model": "Q3 Sportback",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/audi/q3-sportback/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/audi/q3-sportback/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 4,
+      "total": 17
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/audi/q5/metadata.json",
+    "make": "audi",
+    "model": "Q5",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/audi/q5/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/audi/q5/exterior/01.avif",
+          "reason": "same_sha256"
+        },
+        {
+          "path": "/data/brand-model-images/4w-galleries/audi/q5/exterior/04.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/audi/q5/exterior/03.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 6,
+      "interior": 8,
+      "feature": 0,
+      "colors": 4,
+      "total": 18
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/audi/q7/metadata.json",
+    "make": "audi",
+    "model": "Q7",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/audi/q7/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/audi/q7/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 5,
+      "total": 18
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/audi/q8/metadata.json",
+    "make": "audi",
+    "model": "Q8",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/audi/q8/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/audi/q8/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 6,
+      "feature": 0,
+      "colors": 7,
+      "total": 18
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/audi/q8-e-tron/metadata.json",
+    "make": "audi",
+    "model": "Q8 e-tron",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/audi/q8-e-tron/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/audi/q8-e-tron/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 7,
+      "interior": 8,
+      "feature": 0,
+      "colors": 7,
+      "total": 22
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/audi/q8-sportback-e-tron/metadata.json",
+    "make": "audi",
+    "model": "Q8 Sportback e-tron",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/audi/q8-sportback-e-tron/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/audi/q8-sportback-e-tron/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 6,
+      "feature": 0,
+      "colors": 7,
+      "total": 18
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/audi/rs-e-tron-gt/metadata.json",
+    "make": "audi",
+    "model": "RS e-tron GT",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/audi/rs-e-tron-gt/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/audi/rs-e-tron-gt/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 7,
+      "total": 20
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/audi/rs-q8/metadata.json",
+    "make": "audi",
+    "model": "RS Q8",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/audi/rs-q8/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/audi/rs-q8/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 7,
+      "total": 20
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/audi/s5-sportback/metadata.json",
+    "make": "audi",
+    "model": "S5 Sportback",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/audi/s5-sportback/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/audi/s5-sportback/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 6,
+      "total": 19
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/audi/sq8/metadata.json",
+    "make": "audi",
+    "model": "SQ8",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/audi/sq8/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/audi/sq8/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 7,
+      "interior": 8,
+      "feature": 0,
+      "colors": 7,
+      "total": 22
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/bmw/2-series-gran-coupe/metadata.json",
+    "make": "bmw",
+    "model": "2 Series Gran Coupe",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/bmw/2-series-gran-coupe/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/bmw/2-series-gran-coupe/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 7,
+      "interior": 8,
+      "feature": 0,
+      "colors": 4,
+      "total": 19
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/bmw/3-series/metadata.json",
+    "make": "bmw",
+    "model": "M340i",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/bmw/3-series/exterior/03.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/bmw/3-series/exterior/02.avif",
+          "reason": "same_sha256"
+        },
+        {
+          "path": "/data/brand-model-images/4w-galleries/bmw/3-series/exterior/04.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/bmw/3-series/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 6,
+      "interior": 8,
+      "feature": 0,
+      "colors": 2,
+      "total": 16
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/bmw/3-series-long-wheelbase/metadata.json",
+    "make": "bmw",
+    "model": "3 Series Gran Limousine",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/bmw/3-series-long-wheelbase/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/bmw/3-series-long-wheelbase/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 7,
+      "interior": 8,
+      "feature": 0,
+      "colors": 0,
+      "total": 15
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/bmw/5-series/metadata.json",
+    "make": "bmw",
+    "model": "5 Series",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/bmw/5-series/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/bmw/5-series/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 4,
+      "total": 17
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/bmw/7-series/metadata.json",
+    "make": "bmw",
+    "model": "7 Series",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/bmw/7-series/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/bmw/7-series/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 7,
+      "interior": 8,
+      "feature": 0,
+      "colors": 6,
+      "total": 21
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/bmw/8-series/metadata.json",
+    "make": "bmw",
+    "model": "8 Series Gran Coupe",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/bmw/8-series/exterior/03.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/bmw/8-series/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 6,
+      "interior": 8,
+      "feature": 0,
+      "colors": 6,
+      "total": 20
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/bmw/BMW_3_Series/metadata.json",
+    "make": "bmw",
+    "model": "3 Series",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/BMW/BMW_3_Series/exterior/03.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/BMW/BMW_3_Series/exterior/02.avif",
+          "reason": "same_sha256"
+        },
+        {
+          "path": "/data/brand-model-images/4w-galleries/BMW/BMW_3_Series/exterior/04.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/BMW/BMW_3_Series/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 6,
+      "interior": 8,
+      "feature": 0,
+      "colors": 2,
+      "total": 16
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/bmw/BMW_6_Series/metadata.json",
+    "make": "bmw",
+    "model": "6 Series GT",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/BMW/BMW_6_Series/exterior/03.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/BMW/BMW_6_Series/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 6,
+      "interior": 8,
+      "feature": 0,
+      "colors": 7,
+      "total": 21
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/bmw/i4/metadata.json",
+    "make": "bmw",
+    "model": "i4",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/bmw/i4/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/bmw/i4/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 4,
+      "total": 17
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/bmw/i5/metadata.json",
+    "make": "bmw",
+    "model": "i5",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/bmw/i5/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/bmw/i5/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 7,
+      "total": 20
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/bmw/i7/metadata.json",
+    "make": "bmw",
+    "model": "i7",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/bmw/i7/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/bmw/i7/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 7,
+      "total": 20
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/bmw/ix/metadata.json",
+    "make": "bmw",
+    "model": "iX",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/bmw/ix/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/bmw/ix/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 7,
+      "interior": 8,
+      "feature": 0,
+      "colors": 7,
+      "total": 22
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/bmw/ix1/metadata.json",
+    "make": "bmw",
+    "model": "iX1",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/bmw/ix1/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/bmw/ix1/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 5,
+      "total": 18
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/bmw/m2/metadata.json",
+    "make": "bmw",
+    "model": "M2",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/bmw/m2/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/bmw/m2/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 5,
+      "total": 18
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/bmw/m4-competition/metadata.json",
+    "make": "bmw",
+    "model": "M4 Competition",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/bmw/m4-competition/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/bmw/m4-competition/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 7,
+      "total": 20
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/bmw/m5/metadata.json",
+    "make": "bmw",
+    "model": "M5",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/bmw/m5/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/bmw/m5/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 1,
+      "total": 14
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/bmw/m8-coupe-competition/metadata.json",
+    "make": "bmw",
+    "model": "M8 Coupe Competition",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/bmw/m8-coupe-competition/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/bmw/m8-coupe-competition/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 7,
+      "interior": 8,
+      "feature": 0,
+      "colors": 7,
+      "total": 22
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/bmw/x1/metadata.json",
+    "make": "bmw",
+    "model": "X1",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/bmw/x1/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/bmw/x1/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 5,
+      "total": 18
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/bmw/x3/metadata.json",
+    "make": "bmw",
+    "model": "X3",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/bmw/x3/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/bmw/x3/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 1,
+      "total": 14
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/bmw/x4/metadata.json",
+    "make": "bmw",
+    "model": "X4",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/bmw/x4/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/bmw/x4/exterior/01.avif",
+          "reason": "same_sha256"
+        },
+        {
+          "path": "/data/brand-model-images/4w-galleries/bmw/x4/exterior/04.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/bmw/x4/exterior/03.avif",
+          "reason": "same_sha256"
+        },
+        {
+          "path": "/data/brand-model-images/4w-galleries/bmw/x4/exterior/06.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/bmw/x4/exterior/05.avif",
+          "reason": "same_sha256"
+        },
+        {
+          "path": "/data/brand-model-images/4w-galleries/bmw/x4/exterior/08.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/bmw/x4/exterior/07.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 4,
+      "interior": 8,
+      "feature": 0,
+      "colors": 2,
+      "total": 14
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/bmw/x5-m/metadata.json",
+    "make": "bmw",
+    "model": "X5 M Competition",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/bmw/x5-m/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/bmw/x5-m/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 7,
+      "total": 20
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/bmw/x7/metadata.json",
+    "make": "bmw",
+    "model": "X7",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/bmw/x7/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/bmw/x7/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 7,
+      "total": 20
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/bmw/xm/metadata.json",
+    "make": "bmw",
+    "model": "XM",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/bmw/xm/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/bmw/xm/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 7,
+      "total": 20
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/bmw/z4/metadata.json",
+    "make": "bmw",
+    "model": "Z4",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/bmw/z4/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/bmw/z4/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": [
+        {
+          "name": "Portimao Blue Metallic",
+          "path": "/data/brand-model-images/4w-galleries/bmw/z4/colors/portimao-blue-metallic.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/bmw/z4/colors/m-portimao-blau-metallic.avif",
+          "reason": "same_sha256"
+        },
+        {
+          "name": "Black Sapphire Metallic",
+          "path": "/data/brand-model-images/4w-galleries/bmw/z4/colors/black-sapphire-metallic.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/bmw/z4/colors/m-portimao-blau-metallic.avif",
+          "reason": "same_sha256"
+        }
+      ]
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 5,
+      "total": 18
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/hyundai/alcazar/metadata.json",
+    "make": "hyundai",
+    "model": "Alcazar",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/hyundai/alcazar/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/hyundai/alcazar/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 6,
+      "total": 19
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/hyundai/aura/metadata.json",
+    "make": "hyundai",
+    "model": "Aura",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/hyundai/aura/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/hyundai/aura/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 5,
+      "total": 18
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/hyundai/creta/metadata.json",
+    "make": "hyundai",
+    "model": "Creta",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/hyundai/creta/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/hyundai/creta/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 7,
+      "interior": 8,
+      "feature": 7,
+      "colors": 6,
+      "total": 28
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/hyundai/creta-electric/metadata.json",
+    "make": "hyundai",
+    "model": "Creta EV",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/hyundai/creta-electric/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/hyundai/creta-electric/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 3,
+      "total": 16
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/hyundai/creta-n-line/metadata.json",
+    "make": "hyundai",
+    "model": "Creta N Line",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/hyundai/creta-n-line/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/hyundai/creta-n-line/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 5,
+      "total": 18
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/hyundai/exter/metadata.json",
+    "make": "hyundai",
+    "model": "Exter",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/hyundai/exter/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/hyundai/exter/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 7,
+      "interior": 8,
+      "feature": 0,
+      "colors": 7,
+      "total": 22
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/hyundai/grand-i10-nios/metadata.json",
+    "make": "hyundai",
+    "model": "Grand i10 Nios",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/hyundai/grand-i10-nios/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/hyundai/grand-i10-nios/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 7,
+      "total": 20
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/hyundai/i20/metadata.json",
+    "make": "hyundai",
+    "model": "i20",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/hyundai/i20/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/hyundai/i20/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 7,
+      "total": 20
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/hyundai/i20-n-line/metadata.json",
+    "make": "hyundai",
+    "model": "i20 N Line",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/hyundai/i20-n-line/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/hyundai/i20-n-line/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 7,
+      "total": 20
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/hyundai/ioniq-5/metadata.json",
+    "make": "hyundai",
+    "model": "Ioniq 5",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/hyundai/ioniq-5/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/hyundai/ioniq-5/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 4,
+      "total": 17
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/hyundai/prime-hb/metadata.json",
+    "make": "hyundai",
+    "model": "Prime HB",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/hyundai/prime-hb/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/hyundai/prime-hb/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 3,
+      "interior": 0,
+      "feature": 0,
+      "colors": 0,
+      "total": 3
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/hyundai/prime-sd/metadata.json",
+    "make": "hyundai",
+    "model": "Prime SD",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/hyundai/prime-sd/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/hyundai/prime-sd/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 3,
+      "interior": 0,
+      "feature": 0,
+      "colors": 0,
+      "total": 3
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/hyundai/tucson/metadata.json",
+    "make": "hyundai",
+    "model": "Tucson",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/hyundai/tucson/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/hyundai/tucson/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 7,
+      "total": 20
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/hyundai/venue/metadata.json",
+    "make": "hyundai",
+    "model": "Venue",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/hyundai/venue/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/hyundai/venue/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 7,
+      "total": 20
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/hyundai/venue-n-line/metadata.json",
+    "make": "hyundai",
+    "model": "Venue N Line",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/hyundai/venue-n-line/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/hyundai/venue-n-line/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 6,
+      "feature": 0,
+      "colors": 7,
+      "total": 18
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/kia/carens/metadata.json",
+    "make": "kia",
+    "model": "Carens",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/kia/carens/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/kia/carens/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 6,
+      "total": 19
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/kia/carens-clavis/metadata.json",
+    "make": "kia",
+    "model": "Carens Clavis",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/kia/carens-clavis/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/kia/carens-clavis/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 7,
+      "total": 20
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/kia/carens-clavis-ev/metadata.json",
+    "make": "kia",
+    "model": "Carens Clavis EV",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/kia/carens-clavis-ev/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/kia/carens-clavis-ev/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 6,
+      "total": 19
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/kia/carnival/metadata.json",
+    "make": "kia",
+    "model": "Carnival",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/kia/carnival/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/kia/carnival/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 2,
+      "total": 15
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/kia/ev6/metadata.json",
+    "make": "kia",
+    "model": "EV6",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/kia/ev6/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/kia/ev6/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 4,
+      "total": 17
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/kia/ev9/metadata.json",
+    "make": "kia",
+    "model": "EV9",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/kia/ev9/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/kia/ev9/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 5,
+      "total": 18
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/kia/sonet/metadata.json",
+    "make": "kia",
+    "model": "Sonet",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/kia/sonet/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/kia/sonet/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 7,
+      "interior": 8,
+      "feature": 0,
+      "colors": 7,
+      "total": 22
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/land-rover/defender/metadata.json",
+    "make": "land rover",
+    "model": "Defender",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/land-rover/defender/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/land-rover/defender/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 7,
+      "total": 20
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/land-rover/discovery-sport/metadata.json",
+    "make": "land rover",
+    "model": "Discovery Sport",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/land-rover/discovery-sport/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/land-rover/discovery-sport/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 6,
+      "feature": 0,
+      "colors": 5,
+      "total": 16
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/land-rover/range-rover/metadata.json",
+    "make": "land rover",
+    "model": "Range Rover",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/land-rover/range-rover/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/land-rover/range-rover/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 7,
+      "total": 20
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/land-rover/range-rover-evoque/metadata.json",
+    "make": "land rover",
+    "model": "Range Rover Evoque",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/land-rover/range-rover-evoque/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/land-rover/range-rover-evoque/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 4,
+      "total": 17
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/land-rover/range-rover-sport/metadata.json",
+    "make": "land rover",
+    "model": "Range Rover Sport",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/land-rover/range-rover-sport/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/land-rover/range-rover-sport/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 7,
+      "total": 20
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/land-rover/range-rover-velar/metadata.json",
+    "make": "land rover",
+    "model": "Range Rover Velar",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/land-rover/range-rover-velar/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/land-rover/range-rover-velar/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 6,
+      "feature": 0,
+      "colors": 6,
+      "total": 17
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/mahindra/be-6/metadata.json",
+    "make": "mahindra",
+    "model": "BE 6",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/mahindra/be-6/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/mahindra/be-6/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 7,
+      "interior": 6,
+      "feature": 7,
+      "colors": 7,
+      "total": 27
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/mahindra/bolero/metadata.json",
+    "make": "mahindra",
+    "model": "Bolero",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/mahindra/bolero/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/mahindra/bolero/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 7,
+      "interior": 8,
+      "feature": 0,
+      "colors": 4,
+      "total": 19
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/mahindra/bolero-camper/metadata.json",
+    "make": "mahindra",
+    "model": "Bolero Camper",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/mahindra/bolero-camper/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/mahindra/bolero-camper/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 3,
+      "interior": 0,
+      "feature": 0,
+      "colors": 1,
+      "total": 4
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/mahindra/bolero-neo/metadata.json",
+    "make": "mahindra",
+    "model": "Bolero Neo",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/mahindra/bolero-neo/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/mahindra/bolero-neo/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 7,
+      "interior": 8,
+      "feature": 0,
+      "colors": 7,
+      "total": 22
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/mahindra/bolero-neo-plus/metadata.json",
+    "make": "mahindra",
+    "model": "Bolero Neo Plus",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/mahindra/bolero-neo-plus/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/mahindra/bolero-neo-plus/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 4,
+      "feature": 0,
+      "colors": 3,
+      "total": 12
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/mahindra/bolero-pik-up/metadata.json",
+    "make": "mahindra",
+    "model": "Bolero Pik-Up",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/mahindra/bolero-pik-up/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/mahindra/bolero-pik-up/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 3,
+      "interior": 0,
+      "feature": 0,
+      "colors": 0,
+      "total": 3
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/mahindra/marazzo/metadata.json",
+    "make": "mahindra",
+    "model": "Marazzo",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/mahindra/marazzo/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/mahindra/marazzo/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 4,
+      "total": 17
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/mahindra/scorpio/metadata.json",
+    "make": "mahindra",
+    "model": "Scorpio Classic",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/mahindra/scorpio/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/mahindra/scorpio/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 7,
+      "interior": 8,
+      "feature": 0,
+      "colors": 2,
+      "total": 17
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/mahindra/scorpio-n/metadata.json",
+    "make": "mahindra",
+    "model": "Scorpio N",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/mahindra/scorpio-n/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/mahindra/scorpio-n/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 7,
+      "interior": 8,
+      "feature": 0,
+      "colors": 5,
+      "total": 20
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/mahindra/thar/metadata.json",
+    "make": "mahindra",
+    "model": "Thar",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/mahindra/thar/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/mahindra/thar/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 6,
+      "total": 19
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/mahindra/thar-roxx/metadata.json",
+    "make": "mahindra",
+    "model": "Thar Roxx",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/mahindra/thar-roxx/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/mahindra/thar-roxx/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 7,
+      "interior": 8,
+      "feature": 7,
+      "colors": 7,
+      "total": 29
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/mahindra/xev-9e/metadata.json",
+    "make": "mahindra",
+    "model": "XEV 9e",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/mahindra/xev-9e/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/mahindra/xev-9e/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 1,
+      "total": 14
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/mahindra/xev-9s/metadata.json",
+    "make": "mahindra",
+    "model": "XEV 9S",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/mahindra/xev-9s/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/mahindra/xev-9s/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 6,
+      "total": 19
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/mahindra/xuv-3xo/metadata.json",
+    "make": "mahindra",
+    "model": "XUV 3XO",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/mahindra/xuv-3xo/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/mahindra/xuv-3xo/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 7,
+      "interior": 8,
+      "feature": 7,
+      "colors": 7,
+      "total": 29
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/mahindra/xuv-3xo-ev/metadata.json",
+    "make": "mahindra",
+    "model": "XUV 3XO EV",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/mahindra/xuv-3xo-ev/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/mahindra/xuv-3xo-ev/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 7,
+      "interior": 8,
+      "feature": 0,
+      "colors": 6,
+      "total": 21
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/mahindra/xuv-7xo/metadata.json",
+    "make": "mahindra",
+    "model": "XUV 7XO",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/mahindra/xuv-7xo/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/mahindra/xuv-7xo/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 7,
+      "total": 20
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/mahindra/xuv400-ev/metadata.json",
+    "make": "mahindra",
+    "model": "XUV400 EV",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/mahindra/xuv400-ev/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/mahindra/xuv400-ev/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 4,
+      "total": 17
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/mahindra/xuv700/metadata.json",
+    "make": "mahindra",
+    "model": "XUV700",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/mahindra/xuv700/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/mahindra/xuv700/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 7,
+      "interior": 8,
+      "feature": 7,
+      "colors": 7,
+      "total": 29
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/nissan/gravite/metadata.json",
+    "make": "nissan",
+    "model": "Gravite",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/nissan/gravite/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/nissan/gravite/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 5,
+      "total": 18
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/nissan/magnite/metadata.json",
+    "make": "nissan",
+    "model": "Magnite",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/nissan/magnite/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/nissan/magnite/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 7,
+      "total": 20
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/nissan/x-trail/metadata.json",
+    "make": "nissan",
+    "model": "X-Trail",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/nissan/x-trail/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/nissan/x-trail/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 7,
+      "interior": 8,
+      "feature": 0,
+      "colors": 3,
+      "total": 18
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/renault/duster/metadata.json",
+    "make": "renault",
+    "model": "Duster",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/renault/duster/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/renault/duster/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 7,
+      "total": 20
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/renault/kiger/metadata.json",
+    "make": "renault",
+    "model": "Kiger",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/renault/kiger/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/renault/kiger/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 7,
+      "total": 20
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/renault/triber/metadata.json",
+    "make": "renault",
+    "model": "Triber",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/renault/triber/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/renault/triber/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 7,
+      "total": 20
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/skoda/kodiaq/metadata.json",
+    "make": "skoda",
+    "model": "Kodiaq",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/skoda/kodiaq/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/skoda/kodiaq/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 6,
+      "total": 19
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/skoda/kushaq/metadata.json",
+    "make": "skoda",
+    "model": "Kushaq",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/skoda/kushaq/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/skoda/kushaq/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 0,
+      "total": 13
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/skoda/kylaq/metadata.json",
+    "make": "skoda",
+    "model": "Kylaq",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/skoda/kylaq/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/skoda/kylaq/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 6,
+      "total": 19
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/skoda/octavia-rs/metadata.json",
+    "make": "skoda",
+    "model": "Octavia RS",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/skoda/octavia-rs/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/skoda/octavia-rs/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 0,
+      "total": 13
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/skoda/slavia/metadata.json",
+    "make": "skoda",
+    "model": "Slavia",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/skoda/slavia/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/skoda/slavia/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 7,
+      "interior": 6,
+      "feature": 0,
+      "colors": 7,
+      "total": 20
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/tata/altroz/metadata.json",
+    "make": "tata",
+    "model": "Altroz",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/tata/altroz/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/tata/altroz/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 7,
+      "interior": 8,
+      "feature": 7,
+      "colors": 0,
+      "total": 22
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/tata/curvv/metadata.json",
+    "make": "tata",
+    "model": "Curvv",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/tata/curvv/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/tata/curvv/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 7,
+      "total": 20
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/tata/curvv-ev/metadata.json",
+    "make": "tata",
+    "model": "Curvv EV",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/tata/curvv-ev/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/tata/curvv-ev/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 5,
+      "total": 18
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/tata/harrier/metadata.json",
+    "make": "tata",
+    "model": "Harrier",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/tata/harrier/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/tata/harrier/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 7,
+      "total": 20
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/tata/harrier-ev/metadata.json",
+    "make": "tata",
+    "model": "Harrier EV",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/tata/harrier-ev/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/tata/harrier-ev/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 5,
+      "total": 18
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/tata/nexon/metadata.json",
+    "make": "tata",
+    "model": "Nexon",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/tata/nexon/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/tata/nexon/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 7,
+      "interior": 8,
+      "feature": 7,
+      "colors": 7,
+      "total": 29
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/tata/nexon-ev/metadata.json",
+    "make": "tata",
+    "model": "Nexon EV",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/tata/nexon-ev/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/tata/nexon-ev/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 5,
+      "total": 18
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/tata/punch/metadata.json",
+    "make": "tata",
+    "model": "Punch",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/tata/punch/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/tata/punch/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 6,
+      "total": 19
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/tata/punch-ev/metadata.json",
+    "make": "tata",
+    "model": "Punch EV",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/tata/punch-ev/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/tata/punch-ev/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 6,
+      "interior": 8,
+      "feature": 0,
+      "colors": 7,
+      "total": 21
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/tata/safari/metadata.json",
+    "make": "tata",
+    "model": "Safari",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/tata/safari/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/tata/safari/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 7,
+      "interior": 8,
+      "feature": 0,
+      "colors": 6,
+      "total": 21
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/tata/sierra/metadata.json",
+    "make": "tata",
+    "model": "Sierra",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/tata/sierra/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/tata/sierra/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 6,
+      "total": 19
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/tata/tiago/metadata.json",
+    "make": "tata",
+    "model": "Tiago",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/tata/tiago/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/tata/tiago/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 7,
+      "interior": 6,
+      "feature": 7,
+      "colors": 6,
+      "total": 26
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/tata/tiago-ev/metadata.json",
+    "make": "tata",
+    "model": "Tiago EV",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/tata/tiago-ev/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/tata/tiago-ev/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 7,
+      "interior": 4,
+      "feature": 0,
+      "colors": 6,
+      "total": 17
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/tata/tiago-nrg/metadata.json",
+    "make": "tata",
+    "model": "Tiago NRG",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/tata/tiago-nrg/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/tata/tiago-nrg/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 7,
+      "interior": 8,
+      "feature": 0,
+      "colors": 4,
+      "total": 19
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/tata/tigor/metadata.json",
+    "make": "tata",
+    "model": "Tigor",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/tata/tigor/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/tata/tigor/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 7,
+      "interior": 6,
+      "feature": 0,
+      "colors": 5,
+      "total": 18
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/tata/tigor-ev/metadata.json",
+    "make": "tata",
+    "model": "Tigor EV",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/tata/tigor-ev/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/tata/tigor-ev/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 7,
+      "interior": 8,
+      "feature": 0,
+      "colors": 3,
+      "total": 18
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/tata/xpres/metadata.json",
+    "make": "tata",
+    "model": "Xpres",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/tata/xpres/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/tata/xpres/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 7,
+      "interior": 8,
+      "feature": 0,
+      "colors": 1,
+      "total": 16
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/tata/yodha-pickup/metadata.json",
+    "make": "tata",
+    "model": "Yodha Pickup",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/tata/yodha-pickup/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/tata/yodha-pickup/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 7,
+      "interior": 6,
+      "feature": 0,
+      "colors": 1,
+      "total": 14
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/toyota/Toyota_Fortuner/metadata.json",
+    "make": "toyota",
+    "model": "Fortuner",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/Toyota/Toyota_Fortuner/exterior/03.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/Toyota/Toyota_Fortuner/exterior/02.avif",
+          "reason": "same_sha256"
+        },
+        {
+          "path": "/data/brand-model-images/4w-galleries/Toyota/Toyota_Fortuner/exterior/04.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/Toyota/Toyota_Fortuner/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 6,
+      "interior": 8,
+      "feature": 0,
+      "colors": 7,
+      "total": 21
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/toyota/Toyota_Rumion/metadata.json",
+    "make": "toyota",
+    "model": "Rumion",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/Toyota/Toyota_Rumion/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/Toyota/Toyota_Rumion/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 5,
+      "total": 18
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/toyota/camry/metadata.json",
+    "make": "toyota",
+    "model": "Camry",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/toyota/camry/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/toyota/camry/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 6,
+      "total": 19
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/toyota/fortuner-legender/metadata.json",
+    "make": "toyota",
+    "model": "Fortuner Legender",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/toyota/fortuner-legender/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/toyota/fortuner-legender/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 7,
+      "interior": 8,
+      "feature": 0,
+      "colors": 1,
+      "total": 16
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/toyota/glanza/metadata.json",
+    "make": "toyota",
+    "model": "Glanza",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/toyota/glanza/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/toyota/glanza/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 7,
+      "interior": 8,
+      "feature": 0,
+      "colors": 5,
+      "total": 20
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/toyota/hilux/metadata.json",
+    "make": "toyota",
+    "model": "Hilux",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/toyota/hilux/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/toyota/hilux/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 5,
+      "total": 18
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/toyota/hyryder/metadata.json",
+    "make": "toyota",
+    "model": "Urban Cruiser Hyryder",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/toyota/hyryder/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/toyota/hyryder/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 6,
+      "total": 19
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/toyota/innova-crysta/metadata.json",
+    "make": "toyota",
+    "model": "Innova Crysta",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/toyota/innova-crysta/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/toyota/innova-crysta/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 7,
+      "interior": 8,
+      "feature": 0,
+      "colors": 5,
+      "total": 20
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/toyota/innova-hycross/metadata.json",
+    "make": "toyota",
+    "model": "Innova Hycross",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/toyota/innova-hycross/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/toyota/innova-hycross/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 6,
+      "total": 19
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/toyota/land-cruiser-300/metadata.json",
+    "make": "toyota",
+    "model": "Land Cruiser 300",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/toyota/land-cruiser-300/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/toyota/land-cruiser-300/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 2,
+      "total": 15
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/toyota/taisor/metadata.json",
+    "make": "toyota",
+    "model": "Taisor",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/toyota/taisor/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/toyota/taisor/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 7,
+      "interior": 8,
+      "feature": 0,
+      "colors": 7,
+      "total": 22
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/toyota/vellfire/metadata.json",
+    "make": "toyota",
+    "model": "Vellfire",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/toyota/vellfire/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/toyota/vellfire/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 3,
+      "total": 16
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/volkswagen/golf-gti/metadata.json",
+    "make": "volkswagen",
+    "model": "Golf GTI",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/volkswagen/golf-gti/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/volkswagen/golf-gti/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 4,
+      "total": 17
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/volkswagen/taigun/metadata.json",
+    "make": "volkswagen",
+    "model": "Taigun",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/volkswagen/taigun/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/volkswagen/taigun/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 3,
+      "interior": 0,
+      "feature": 0,
+      "colors": 0,
+      "total": 3
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/volkswagen/tayron-r-line/metadata.json",
+    "make": "volkswagen",
+    "model": "Tayron R-Line",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/volkswagen/tayron-r-line/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/volkswagen/tayron-r-line/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 6,
+      "total": 19
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/volkswagen/tiguan/metadata.json",
+    "make": "volkswagen",
+    "model": "Tiguan R-Line",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/volkswagen/tiguan/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/volkswagen/tiguan/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 7,
+      "total": 20
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/volkswagen/virtus/metadata.json",
+    "make": "volkswagen",
+    "model": "Virtus",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/volkswagen/virtus/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/volkswagen/virtus/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 7,
+      "interior": 8,
+      "feature": 0,
+      "colors": 7,
+      "total": 22
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/volvo/xc60/metadata.json",
+    "make": "volvo",
+    "model": "XC60",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/volvo/xc60/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/volvo/xc60/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 5,
+      "interior": 8,
+      "feature": 0,
+      "colors": 7,
+      "total": 20
+    }
+  },
+  {
+    "metadata": "public/data/brand-model-images/4w-galleries/volvo/xc90/metadata.json",
+    "make": "volvo",
+    "model": "XC90",
+    "removed": {
+      "exterior": [
+        {
+          "path": "/data/brand-model-images/4w-galleries/volvo/xc90/exterior/02.avif",
+          "duplicate_of": "/data/brand-model-images/4w-galleries/volvo/xc90/exterior/01.avif",
+          "reason": "same_sha256"
+        }
+      ],
+      "interior": [],
+      "feature": [],
+      "colors": []
+    },
+    "counts": {
+      "exterior": 7,
+      "interior": 4,
+      "feature": 0,
+      "colors": 2,
+      "total": 13
+    }
+  }
+]

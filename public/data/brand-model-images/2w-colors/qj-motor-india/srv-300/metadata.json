@@ -1,0 +1,29 @@
+{
+  "brand": "QJ Motor India",
+  "model": "SRV 300",
+  "brandId": "qj-motor-india",
+  "makeSlug": "qjmotor-bikes",
+  "modelSlug": "srv-300",
+  "sourceUrl": "https://www.bikewale.com/qjmotor-bikes/srv-300/colours/",
+  "scrapedAt": "2026-04-20T05:19:01.111Z",
+  "count": 4,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/qj-motor-select-model-green-1669379114555.png?q=100",
+  "colors": [
+    {
+      "name": "Green",
+      "image": "/data/brand-model-images/2w-colors/qj-motor-india/srv-300/green.png"
+    },
+    {
+      "name": "Red",
+      "image": "/data/brand-model-images/2w-colors/qj-motor-india/srv-300/red.png"
+    },
+    {
+      "name": "Orange",
+      "image": "/data/brand-model-images/2w-colors/qj-motor-india/srv-300/orange.png"
+    },
+    {
+      "name": "Black",
+      "image": "/data/brand-model-images/2w-colors/qj-motor-india/srv-300/black.png"
+    }
+  ]
+}

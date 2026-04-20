@@ -1,0 +1,48 @@
+{
+  "make": "tata",
+  "model": "Tiago EV",
+  "brandSlug": "tata",
+  "modelSlug": "tiago-ev",
+  "sourceUrl": "https://www.cardekho.com/tata/tiago-ev",
+  "scrapedAt": "2026-04-20T06:18:52.786Z",
+  "counts": {
+    "exterior": 7,
+    "interior": 4,
+    "feature": 0,
+    "colors": 6,
+    "total": 17
+  },
+  "hero": "/data/brand-model-images/4w-galleries/tata/tiago-ev/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/tata/tiago-ev/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/tata/tiago-ev/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/tata/tiago-ev/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/tata/tiago-ev/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/tata/tiago-ev/exterior/06.avif",
+    "/data/brand-model-images/4w-galleries/tata/tiago-ev/exterior/07.avif",
+    "/data/brand-model-images/4w-galleries/tata/tiago-ev/exterior/08.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/tata/tiago-ev/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/tata/tiago-ev/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/tata/tiago-ev/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/tata/tiago-ev/interior/06.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "Chill Lime With Dual Tone",
+    "Pristine White",
+    "Supernova Coper",
+    "Teal Blue",
+    "Arizona Blue",
+    "Daytona Grey"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/tata/tiago-ev/colors/chill-lime-with-dual-tone.avif",
+    "/data/brand-model-images/4w-galleries/tata/tiago-ev/colors/pristine-white.avif",
+    "/data/brand-model-images/4w-galleries/tata/tiago-ev/colors/supernova-coper.avif",
+    "/data/brand-model-images/4w-galleries/tata/tiago-ev/colors/teal-blue.avif",
+    "/data/brand-model-images/4w-galleries/tata/tiago-ev/colors/arizona-blue.avif",
+    "/data/brand-model-images/4w-galleries/tata/tiago-ev/colors/daytona-grey.avif"
+  ]
+}

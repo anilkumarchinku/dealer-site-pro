@@ -63,11 +63,15 @@ export async function hydrateTwoWheelerDetail(vehicle: TwoWheelerVehicle): Promi
         .map(color => color.image)
         .filter((image): image is string => Boolean(image))
 
-    const images = uniqueStrings([
-        gallery.hero ?? '',
-        ...colorImages,
-        ...hydratedVehicle.images,
-    ])
+    // For two-wheelers, the color gallery is the best source of truth.
+    // Mixing the remote hero/fallback image back in creates near-duplicate
+    // thumbnails where the same bike is shown twice from the same studio shot.
+    const images = colorImages.length > 0
+        ? uniqueStrings(colorImages)
+        : uniqueStrings([
+            gallery.hero ?? '',
+            ...hydratedVehicle.images,
+        ])
 
     return {
         ...hydratedVehicle,

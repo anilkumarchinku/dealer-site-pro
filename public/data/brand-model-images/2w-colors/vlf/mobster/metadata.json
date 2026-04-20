@@ -1,0 +1,29 @@
+{
+  "brand": "VLF",
+  "model": "Mobster",
+  "brandId": "vlf",
+  "makeSlug": "vlf-bikes",
+  "modelSlug": "mobster",
+  "sourceUrl": "https://www.bikewale.com/vlf-bikes/mobster/colours/",
+  "scrapedAt": "2026-04-20T05:20:41.032Z",
+  "count": 4,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/4qvsohb_1879949.jpg?q=100",
+  "colors": [
+    {
+      "name": "Ghostlight",
+      "image": "/data/brand-model-images/2w-colors/vlf/mobster/ghostlight.avif"
+    },
+    {
+      "name": "Crimson Override",
+      "image": "/data/brand-model-images/2w-colors/vlf/mobster/crimson-override.avif"
+    },
+    {
+      "name": "Ash Circuit",
+      "image": "/data/brand-model-images/2w-colors/vlf/mobster/ash-circuit.avif"
+    },
+    {
+      "name": "Neon Venom",
+      "image": "/data/brand-model-images/2w-colors/vlf/mobster/neon-venom.avif"
+    }
+  ]
+}

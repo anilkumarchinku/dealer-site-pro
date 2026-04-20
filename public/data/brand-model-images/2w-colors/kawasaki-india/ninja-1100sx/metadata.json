@@ -1,0 +1,17 @@
+{
+  "brand": "Kawasaki India",
+  "model": "Ninja 1100SX",
+  "brandId": "kawasaki-india",
+  "makeSlug": "kawasaki-bikes",
+  "modelSlug": "ninja-1100sx",
+  "sourceUrl": "https://www.bikewale.com/kawasaki-bikes/ninja-1100sx/colours/",
+  "scrapedAt": "2026-04-20T05:17:00.515Z",
+  "count": 1,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/cqanfib_1896811.png?q=100",
+  "colors": [
+    {
+      "name": "Metallic Brilliant Golden Black / Metallic Carbon Gray",
+      "image": "/data/brand-model-images/2w-colors/kawasaki-india/ninja-1100sx/metallic-brilliant-golden-black-metallic-carbon-gray.png"
+    }
+  ]
+}

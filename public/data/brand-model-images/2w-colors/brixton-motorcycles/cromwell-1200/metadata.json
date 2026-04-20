@@ -1,0 +1,25 @@
+{
+  "brand": "Brixton Motorcycles",
+  "model": "Cromwell 1200",
+  "brandId": "brixton-motorcycles",
+  "makeSlug": "brixton-motorcycles-bikes",
+  "modelSlug": "cromwell-1200",
+  "sourceUrl": "https://www.bikewale.com/brixton-motorcycles-bikes/cromwell-1200/colours/",
+  "scrapedAt": "2026-04-20T05:19:02.132Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/syhuj9b_1793619.jpg?q=100",
+  "colors": [
+    {
+      "name": "Timberwolf Grey",
+      "image": "/data/brand-model-images/2w-colors/brixton-motorcycles/cromwell-1200/timberwolf-grey.avif"
+    },
+    {
+      "name": "Cargo Green",
+      "image": "/data/brand-model-images/2w-colors/brixton-motorcycles/cromwell-1200/cargo-green.avif"
+    },
+    {
+      "name": "Backstage Black",
+      "image": "/data/brand-model-images/2w-colors/brixton-motorcycles/cromwell-1200/backstage-black.avif"
+    }
+  ]
+}

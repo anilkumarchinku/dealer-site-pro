@@ -1,0 +1,33 @@
+{
+  "brand": "Honda Motorcycle & Scooter India",
+  "model": "Dio",
+  "brandId": "honda-hmsi",
+  "makeSlug": "honda-bikes",
+  "modelSlug": "dio",
+  "sourceUrl": "https://www.bikewale.com/honda-bikes/dio/colours/",
+  "scrapedAt": "2026-04-20T05:15:29.944Z",
+  "count": 5,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/9krebgb_1837972.jpg?q=100",
+  "colors": [
+    {
+      "name": "Pearl Igneous Black + Pearl Deep Ground Gray",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/dio/pearl-igneous-black-pearl-deep-ground-gray.avif"
+    },
+    {
+      "name": "Pearl Igneous Black",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/dio/pearl-igneous-black.avif"
+    },
+    {
+      "name": "Mat Marvel Blue",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/dio/mat-marvel-blue.avif"
+    },
+    {
+      "name": "Mat Axis Gray Metallic",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/dio/mat-axis-gray-metallic.avif"
+    },
+    {
+      "name": "Imperial Red Metallic",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/dio/imperial-red-metallic.avif"
+    }
+  ]
+}

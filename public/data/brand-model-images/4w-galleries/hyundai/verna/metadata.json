@@ -1,0 +1,55 @@
+{
+  "make": "hyundai",
+  "model": "Verna",
+  "brandSlug": "hyundai",
+  "modelSlug": "verna",
+  "sourceUrl": "https://www.cardekho.com/hyundai/verna",
+  "scrapedAt": "2026-04-20T06:16:51.728Z",
+  "counts": {
+    "exterior": 8,
+    "interior": 8,
+    "feature": 0,
+    "colors": 7,
+    "total": 23
+  },
+  "hero": "/data/brand-model-images/4w-galleries/hyundai/verna/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/hyundai/verna/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/verna/exterior/02.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/verna/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/verna/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/verna/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/verna/exterior/06.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/verna/exterior/07.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/verna/exterior/08.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/hyundai/verna/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/verna/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/verna/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/verna/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/verna/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/verna/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/verna/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/verna/interior/08.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "Titan Grey Matte",
+    "Starry Night",
+    "Atlas White",
+    "Titan Grey",
+    "Atlas White With Black Roof",
+    "Classy Blue",
+    "Titanium Black"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/hyundai/verna/colors/titan-grey-matte.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/verna/colors/starry-night.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/verna/colors/atlas-white.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/verna/colors/titan-grey.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/verna/colors/atlas-white-with-black-roof.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/verna/colors/classy-blue.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/verna/colors/titanium-black.avif"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "brand": "Moto Guzzi",
+  "model": "V85 TT",
+  "brandId": "moto-guzzi",
+  "makeSlug": "motoguzzi-bikes",
+  "modelSlug": "v85-tt",
+  "sourceUrl": "https://www.bikewale.com/motoguzzi-bikes/v85-tt/colours/",
+  "scrapedAt": "2026-04-20T06:15:11.437Z",
+  "count": 4,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/moto-guzzi-select-model-grey-1630770733194.jpg?q=100",
+  "colors": [
+    {
+      "name": "Grey",
+      "image": "/data/brand-model-images/2w-colors/moto-guzzi/v85-tt/grey.avif"
+    },
+    {
+      "name": "White & Red",
+      "image": "/data/brand-model-images/2w-colors/moto-guzzi/v85-tt/white-and-red.avif"
+    },
+    {
+      "name": "White & Yellow",
+      "image": "/data/brand-model-images/2w-colors/moto-guzzi/v85-tt/white-and-yellow.avif"
+    },
+    {
+      "name": "Black",
+      "image": "/data/brand-model-images/2w-colors/moto-guzzi/v85-tt/black.avif"
+    }
+  ]
+}

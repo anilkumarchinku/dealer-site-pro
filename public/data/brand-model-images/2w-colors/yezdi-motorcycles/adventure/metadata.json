@@ -1,0 +1,37 @@
+{
+  "brand": "Yezdi Motorcycles",
+  "model": "Adventure",
+  "brandId": "yezdi-motorcycles",
+  "makeSlug": "yezdi-bikes",
+  "modelSlug": "adventure",
+  "sourceUrl": "https://www.bikewale.com/yezdi-bikes/adventure/colours/",
+  "scrapedAt": "2026-04-20T05:18:56.536Z",
+  "count": 6,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/280ecgb_1838850.jpg?q=100",
+  "colors": [
+    {
+      "name": "Forest Green White",
+      "image": "/data/brand-model-images/2w-colors/yezdi-motorcycles/adventure/forest-green-white.avif"
+    },
+    {
+      "name": "Nebula Blue White",
+      "image": "/data/brand-model-images/2w-colors/yezdi-motorcycles/adventure/nebula-blue-white.avif"
+    },
+    {
+      "name": "Khaki White",
+      "image": "/data/brand-model-images/2w-colors/yezdi-motorcycles/adventure/khaki-white.avif"
+    },
+    {
+      "name": "Gloss White",
+      "image": "/data/brand-model-images/2w-colors/yezdi-motorcycles/adventure/gloss-white.avif"
+    },
+    {
+      "name": "Grey Black",
+      "image": "/data/brand-model-images/2w-colors/yezdi-motorcycles/adventure/grey-black.avif"
+    },
+    {
+      "name": "Matt Black",
+      "image": "/data/brand-model-images/2w-colors/yezdi-motorcycles/adventure/matt-black.avif"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "brand": "Vida (Hero MotoCorp)",
+  "model": "VX2 Plus",
+  "brandId": "vida-hero",
+  "makeSlug": "vida-bikes",
+  "modelSlug": "vx2",
+  "sourceUrl": "https://www.bikewale.com/vida-bikes/vx2/colours/",
+  "scrapedAt": "2026-04-20T06:15:10.264Z",
+  "count": 7,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/ji8vlib_1903481.png?q=100",
+  "colors": [
+    {
+      "name": "Metallic Grey",
+      "image": "/data/brand-model-images/2w-colors/vida-hero/vx2/metallic-grey.png"
+    },
+    {
+      "name": "Pearl Black",
+      "image": "/data/brand-model-images/2w-colors/vida-hero/vx2/pearl-black.avif"
+    },
+    {
+      "name": "Nexus Blue",
+      "image": "/data/brand-model-images/2w-colors/vida-hero/vx2/nexus-blue.avif"
+    },
+    {
+      "name": "Pearl Red",
+      "image": "/data/brand-model-images/2w-colors/vida-hero/vx2/pearl-red.avif"
+    },
+    {
+      "name": "Matte White",
+      "image": "/data/brand-model-images/2w-colors/vida-hero/vx2/matte-white.avif"
+    },
+    {
+      "name": "Matte Lime",
+      "image": "/data/brand-model-images/2w-colors/vida-hero/vx2/matte-lime.avif"
+    },
+    {
+      "name": "Autumn Orange",
+      "image": "/data/brand-model-images/2w-colors/vida-hero/vx2/autumn-orange.avif"
+    }
+  ]
+}

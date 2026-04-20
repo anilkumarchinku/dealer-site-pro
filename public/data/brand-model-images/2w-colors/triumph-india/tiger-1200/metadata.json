@@ -1,0 +1,61 @@
+{
+  "brand": "Triumph India",
+  "model": "Tiger 1200",
+  "brandId": "triumph-india",
+  "makeSlug": "triumph-bikes",
+  "modelSlug": "tiger-1200",
+  "sourceUrl": "https://www.bikewale.com/triumph-bikes/tiger-1200/colours/",
+  "scrapedAt": "2026-04-20T05:17:49.983Z",
+  "count": 12,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/triumph-select-model-lucerne-blue-pro-1652099116902.jpg?q=100",
+  "colors": [
+    {
+      "name": "Lucerne Blue (Pro)",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/tiger-1200/lucerne-blue-pro.avif"
+    },
+    {
+      "name": "Sapphire Black (Pro)",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/tiger-1200/sapphire-black-pro.avif"
+    },
+    {
+      "name": "Snowdonia White (Pro)",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/tiger-1200/snowdonia-white-pro.avif"
+    },
+    {
+      "name": "Lucerne Blue (Explorer)",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/tiger-1200/lucerne-blue-explorer.avif"
+    },
+    {
+      "name": "Sapphire Black (Explorer)",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/tiger-1200/sapphire-black-explorer.avif"
+    },
+    {
+      "name": "Snowdonia White (Explorer)",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/tiger-1200/snowdonia-white-explorer.avif"
+    },
+    {
+      "name": "Matt Khaki Green (Rally Pro)",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/tiger-1200/matt-khaki-green-rally-pro.avif"
+    },
+    {
+      "name": "Sapphire Black (Rally Pro)",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/tiger-1200/sapphire-black-rally-pro.avif"
+    },
+    {
+      "name": "Snowdonia White (Rally Pro)",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/tiger-1200/snowdonia-white-rally-pro.avif"
+    },
+    {
+      "name": "Matt Khaki Green (Rally Explorer)",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/tiger-1200/matt-khaki-green-rally-explorer.avif"
+    },
+    {
+      "name": "Sapphire Black (Rally Explorer)",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/tiger-1200/sapphire-black-rally-explorer.avif"
+    },
+    {
+      "name": "Snowdonia White (Rally Explorer)",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/tiger-1200/snowdonia-white-rally-explorer.avif"
+    }
+  ]
+}

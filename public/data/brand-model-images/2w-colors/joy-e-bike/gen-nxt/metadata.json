@@ -1,0 +1,29 @@
+{
+  "brand": "Joy e-bike",
+  "model": "Gen Nxt",
+  "brandId": "joy-e-bike",
+  "makeSlug": "joyebike-bikes",
+  "modelSlug": "gen-nxt",
+  "sourceUrl": "https://www.bikewale.com/joyebike-bikes/gen-nxt/colours/",
+  "scrapedAt": "2026-04-20T05:53:12.550Z",
+  "count": 4,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/18eob9b_1784345.jpg?q=100",
+  "colors": [
+    {
+      "name": "Matt Black",
+      "image": "/data/brand-model-images/2w-colors/joy-e-bike/gen-nxt/matt-black.avif"
+    },
+    {
+      "name": "Silver",
+      "image": "/data/brand-model-images/2w-colors/joy-e-bike/gen-nxt/silver.avif"
+    },
+    {
+      "name": "White",
+      "image": "/data/brand-model-images/2w-colors/joy-e-bike/gen-nxt/white.avif"
+    },
+    {
+      "name": "Midnight Black",
+      "image": "/data/brand-model-images/2w-colors/joy-e-bike/gen-nxt/midnight-black.avif"
+    }
+  ]
+}

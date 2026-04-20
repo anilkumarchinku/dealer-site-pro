@@ -1,0 +1,17 @@
+{
+  "brand": "Kawasaki India",
+  "model": "Eliminator",
+  "brandId": "kawasaki-india",
+  "makeSlug": "kawasaki-bikes",
+  "modelSlug": "eliminator",
+  "sourceUrl": "https://www.bikewale.com/kawasaki-bikes/eliminator/colours/",
+  "scrapedAt": "2026-04-20T05:16:52.713Z",
+  "count": 1,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/kawasaki-select-model-metallic-flat-black-1704257031853.jpeg?q=100",
+  "colors": [
+    {
+      "name": "Metallic Flat Black",
+      "image": "/data/brand-model-images/2w-colors/kawasaki-india/eliminator/metallic-flat-black.avif"
+    }
+  ]
+}

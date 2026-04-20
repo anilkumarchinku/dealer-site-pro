@@ -1,0 +1,37 @@
+{
+  "brand": "TVS Motor Company",
+  "model": "Star City Plus",
+  "brandId": "tvs-motor",
+  "makeSlug": "tvs-bikes",
+  "modelSlug": "star-city-plus",
+  "sourceUrl": "https://www.bikewale.com/tvs-bikes/star-city-plus/colours/",
+  "scrapedAt": "2026-04-20T06:07:37.568Z",
+  "count": 6,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bn6srhb_1883539.jpg?q=100",
+  "colors": [
+    {
+      "name": "Black Green (Drum)",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/star-city-plus/black-green-drum.avif"
+    },
+    {
+      "name": "Black Red (Drum)",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/star-city-plus/black-red-drum.avif"
+    },
+    {
+      "name": "Grey Black (Drum)",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/star-city-plus/grey-black-drum.avif"
+    },
+    {
+      "name": "Black Blue (Drum)",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/star-city-plus/black-blue-drum.avif"
+    },
+    {
+      "name": "Black Green (Disc)",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/star-city-plus/black-green-disc.avif"
+    },
+    {
+      "name": "Black Red (Disc)",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/star-city-plus/black-red-disc.avif"
+    }
+  ]
+}

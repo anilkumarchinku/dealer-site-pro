@@ -1,0 +1,52 @@
+{
+  "make": "skoda",
+  "model": "Slavia",
+  "brandSlug": "skoda",
+  "modelSlug": "slavia",
+  "sourceUrl": "https://www.cardekho.com/skoda/slavia",
+  "scrapedAt": "2026-04-20T05:04:39.627Z",
+  "counts": {
+    "exterior": 7,
+    "interior": 6,
+    "feature": 0,
+    "colors": 7,
+    "total": 20
+  },
+  "hero": "/data/brand-model-images/4w-galleries/skoda/slavia/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/skoda/slavia/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/skoda/slavia/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/skoda/slavia/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/skoda/slavia/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/skoda/slavia/exterior/06.avif",
+    "/data/brand-model-images/4w-galleries/skoda/slavia/exterior/07.avif",
+    "/data/brand-model-images/4w-galleries/skoda/slavia/exterior/08.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/skoda/slavia/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/skoda/slavia/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/skoda/slavia/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/skoda/slavia/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/skoda/slavia/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/skoda/slavia/interior/06.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "Brilliant Silver",
+    "Lava Blue",
+    "Lava Blue Dual Tone",
+    "Carbon Steel",
+    "Candy White Dual Tone",
+    "Deep Black",
+    "Brilliant Silver Dual Tone"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/skoda/slavia/colors/brilliant-silver.avif",
+    "/data/brand-model-images/4w-galleries/skoda/slavia/colors/lava-blue.avif",
+    "/data/brand-model-images/4w-galleries/skoda/slavia/colors/lava-blue-dual-tone.avif",
+    "/data/brand-model-images/4w-galleries/skoda/slavia/colors/carbon-steel.avif",
+    "/data/brand-model-images/4w-galleries/skoda/slavia/colors/candy-white-dual-tone.avif",
+    "/data/brand-model-images/4w-galleries/skoda/slavia/colors/deep-black.avif",
+    "/data/brand-model-images/4w-galleries/skoda/slavia/colors/brilliant-silver-dual-tone.avif"
+  ]
+}

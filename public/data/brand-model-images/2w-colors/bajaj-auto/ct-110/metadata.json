@@ -1,0 +1,25 @@
+{
+  "brand": "Bajaj Auto",
+  "model": "CT 110",
+  "brandId": "bajaj-auto",
+  "makeSlug": "bajaj-bikes",
+  "modelSlug": "ct-110",
+  "sourceUrl": "https://www.bikewale.com/bajaj-bikes/ct-110/colours/",
+  "scrapedAt": "2026-04-20T06:07:35.793Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/kminigb_1845520.jpg?q=100",
+  "colors": [
+    {
+      "name": "Ebony Black - Blue",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/ct-110/ebony-black-blue.avif"
+    },
+    {
+      "name": "Ebony Black - Red",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/ct-110/ebony-black-red.avif"
+    },
+    {
+      "name": "Matte Wild Green",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/ct-110/matte-wild-green.avif"
+    }
+  ]
+}

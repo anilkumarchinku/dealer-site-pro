@@ -1,0 +1,17 @@
+{
+  "brand": "Kawasaki India",
+  "model": "Versys 650",
+  "brandId": "kawasaki-india",
+  "makeSlug": "kawasaki-bikes",
+  "modelSlug": "versys-650",
+  "sourceUrl": "https://www.bikewale.com/kawasaki-bikes/versys-650/colours/",
+  "scrapedAt": "2026-04-20T05:16:57.450Z",
+  "count": 1,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/4567fib_1896769.png?q=100",
+  "colors": [
+    {
+      "name": "Metallic Graphite Gray / Metallic Spark Black",
+      "image": "/data/brand-model-images/2w-colors/kawasaki-india/versys-650/metallic-graphite-gray-metallic-spark-black.png"
+    }
+  ]
+}

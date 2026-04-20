@@ -1,0 +1,33 @@
+{
+  "brand": "BMW Motorrad India",
+  "model": "R18",
+  "brandId": "bmw-motorrad-india",
+  "makeSlug": "bmw-bikes",
+  "modelSlug": "r18",
+  "sourceUrl": "https://www.bikewale.com/bmw-bikes/r18/colours/",
+  "scrapedAt": "2026-04-20T05:18:34.272Z",
+  "count": 5,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/bmw-select-model-manhattan-metallic-matt-1679567480713.png?q=100",
+  "colors": [
+    {
+      "name": "Manhattan metallic matt",
+      "image": "/data/brand-model-images/2w-colors/bmw-motorrad-india/r18/manhattan-metallic-matt.png"
+    },
+    {
+      "name": "Galaxy dust metallic /Titan silver 2 metallic",
+      "image": "/data/brand-model-images/2w-colors/bmw-motorrad-india/r18/galaxy-dust-metallic-titan-silver-2-metallic.png"
+    },
+    {
+      "name": "Black Storm Metallic (Transcontinental))",
+      "image": "/data/brand-model-images/2w-colors/bmw-motorrad-india/r18/black-storm-metallic-transcontinental.png"
+    },
+    {
+      "name": "Gravity Blue Metallic",
+      "image": "/data/brand-model-images/2w-colors/bmw-motorrad-india/r18/gravity-blue-metallic.png"
+    },
+    {
+      "name": "Mineral white metallic",
+      "image": "/data/brand-model-images/2w-colors/bmw-motorrad-india/r18/mineral-white-metallic.png"
+    }
+  ]
+}

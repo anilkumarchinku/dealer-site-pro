@@ -1,0 +1,41 @@
+{
+  "brand": "Vespa India",
+  "model": "Vespa 125",
+  "brandId": "vespa-india",
+  "makeSlug": "vespa-bikes",
+  "modelSlug": "vespa-125",
+  "sourceUrl": "https://www.bikewale.com/vespa-bikes/vespa-125/colours/",
+  "scrapedAt": "2026-04-20T05:17:19.663Z",
+  "count": 7,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/undefined-black-1597509860856.jpg?q=100",
+  "colors": [
+    {
+      "name": "Black",
+      "image": "/data/brand-model-images/2w-colors/vespa-india/vespa-125/black.avif"
+    },
+    {
+      "name": "White",
+      "image": "/data/brand-model-images/2w-colors/vespa-india/vespa-125/white.avif"
+    },
+    {
+      "name": "Pink",
+      "image": "/data/brand-model-images/2w-colors/vespa-india/vespa-125/pink.avif"
+    },
+    {
+      "name": "Red",
+      "image": "/data/brand-model-images/2w-colors/vespa-india/vespa-125/red.avif"
+    },
+    {
+      "name": "Sky Blue",
+      "image": "/data/brand-model-images/2w-colors/vespa-india/vespa-125/sky-blue.avif"
+    },
+    {
+      "name": "Yellow",
+      "image": "/data/brand-model-images/2w-colors/vespa-india/vespa-125/yellow.avif"
+    },
+    {
+      "name": "Grey",
+      "image": "/data/brand-model-images/2w-colors/vespa-india/vespa-125/grey.jpg"
+    }
+  ]
+}

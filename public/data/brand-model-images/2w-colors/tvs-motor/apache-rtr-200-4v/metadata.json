@@ -1,0 +1,41 @@
+{
+  "brand": "TVS Motor Company",
+  "model": "Apache RTR 200 4V",
+  "brandId": "tvs-motor",
+  "makeSlug": "tvs-bikes",
+  "modelSlug": "apache-rtr-200-4v",
+  "sourceUrl": "https://www.bikewale.com/tvs-bikes/apache-rtr-200-4v/colours/",
+  "scrapedAt": "2026-04-20T06:07:45.560Z",
+  "count": 7,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/undefined-matte-blue-1604475089223.jpg?q=100",
+  "colors": [
+    {
+      "name": "Matte Blue",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/apache-rtr-200-4v/matte-blue.avif"
+    },
+    {
+      "name": "Pearl White",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/apache-rtr-200-4v/pearl-white.png"
+    },
+    {
+      "name": "Gloss Black",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/apache-rtr-200-4v/gloss-black.avif"
+    },
+    {
+      "name": "Matte Black",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/apache-rtr-200-4v/matte-black.avif"
+    },
+    {
+      "name": "Granite Grey",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/apache-rtr-200-4v/granite-grey.avif"
+    },
+    {
+      "name": "Glossy Black",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/apache-rtr-200-4v/glossy-black.avif"
+    },
+    {
+      "name": "Black Champagne Gold Livery",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/apache-rtr-200-4v/black-champagne-gold-livery.avif"
+    }
+  ]
+}

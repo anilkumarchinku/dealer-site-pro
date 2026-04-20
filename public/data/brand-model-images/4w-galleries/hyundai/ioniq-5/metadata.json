@@ -1,0 +1,46 @@
+{
+  "make": "hyundai",
+  "model": "Ioniq 5",
+  "brandSlug": "hyundai",
+  "modelSlug": "ioniq-5",
+  "sourceUrl": "https://www.cardekho.com/hyundai/ioniq-5",
+  "scrapedAt": "2026-04-20T06:16:45.722Z",
+  "counts": {
+    "exterior": 5,
+    "interior": 8,
+    "feature": 0,
+    "colors": 4,
+    "total": 17
+  },
+  "hero": "/data/brand-model-images/4w-galleries/hyundai/ioniq-5/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/hyundai/ioniq-5/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/ioniq-5/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/ioniq-5/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/ioniq-5/exterior/07.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/ioniq-5/exterior/08.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/hyundai/ioniq-5/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/ioniq-5/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/ioniq-5/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/ioniq-5/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/ioniq-5/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/ioniq-5/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/ioniq-5/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/ioniq-5/interior/08.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "Gravity Gold Matte",
+    "Midnight Black Pearl",
+    "Optic White",
+    "Titan Grey"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/hyundai/ioniq-5/colors/gravity-gold-matte.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/ioniq-5/colors/midnight-black-pearl.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/ioniq-5/colors/optic-white.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/ioniq-5/colors/titan-grey.avif"
+  ]
+}

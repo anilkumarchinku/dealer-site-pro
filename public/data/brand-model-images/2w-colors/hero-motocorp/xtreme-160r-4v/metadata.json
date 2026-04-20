@@ -1,0 +1,33 @@
+{
+  "brand": "Hero MotoCorp",
+  "model": "Xtreme 160R 4V",
+  "brandId": "hero-motocorp",
+  "makeSlug": "hero-bikes",
+  "modelSlug": "xtreme-160r-4v",
+  "sourceUrl": "https://www.bikewale.com/hero-bikes/xtreme-160r-4v/colours/",
+  "scrapedAt": "2026-04-20T06:13:21.208Z",
+  "count": 5,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/plueaib_1891077.png?q=100",
+  "colors": [
+    {
+      "name": "Stealth Black",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/xtreme-160r-4v/stealth-black.png"
+    },
+    {
+      "name": "Neon Shooting Star",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/xtreme-160r-4v/neon-shooting-star.png"
+    },
+    {
+      "name": "Kevlar Brown",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/xtreme-160r-4v/kevlar-brown.png"
+    },
+    {
+      "name": "Matt Shadow Grey",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/xtreme-160r-4v/matt-shadow-grey.png"
+    },
+    {
+      "name": "Matt Slate Black",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/xtreme-160r-4v/matt-slate-black.png"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "brand": "Triumph India",
+  "model": "Bonneville Speedmaster",
+  "brandId": "triumph-india",
+  "makeSlug": "triumph-bikes",
+  "modelSlug": "bonneville-speedmaster",
+  "sourceUrl": "https://www.bikewale.com/triumph-bikes/bonneville-speedmaster/colours/",
+  "scrapedAt": "2026-04-20T05:17:46.217Z",
+  "count": 4,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/triumph-select-model-pacific-blue--silver-ice-1717566013710.jpg?q=100",
+  "colors": [
+    {
+      "name": "Pacific Blue / Silver Ice",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/bonneville-speedmaster/pacific-blue-silver-ice.avif"
+    },
+    {
+      "name": "Cordovan Red",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/bonneville-speedmaster/cordovan-red.avif"
+    },
+    {
+      "name": "Jet Black",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/bonneville-speedmaster/jet-black.avif"
+    },
+    {
+      "name": "Snowdonia / Cranberry Red",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/bonneville-speedmaster/snowdonia-cranberry-red.avif"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "make": "bmw",
+  "model": "X5",
+  "brandSlug": "bmw",
+  "modelSlug": "x5",
+  "sourceUrl": "https://www.cardekho.com/bmw/x5",
+  "scrapedAt": "2026-04-20T06:30:38.150Z",
+  "counts": {
+    "exterior": 6,
+    "interior": 8,
+    "feature": 0,
+    "colors": 6,
+    "total": 20
+  },
+  "hero": "/data/brand-model-images/4w-galleries/bmw/x5/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/bmw/x5/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x5/exterior/02.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x5/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x5/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x5/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x5/exterior/06.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/bmw/x5/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x5/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x5/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x5/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x5/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x5/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x5/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x5/interior/08.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "Skyscraper Grey Metallic",
+    "Individual Tanzanite Blue",
+    "Mineral White Metallic",
+    "M Carbon Black Metallic",
+    "M Brooklyn Grey Metallic",
+    "Black Sapphire Metallic"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/bmw/x5/colors/skyscraper-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x5/colors/individual-tanzanite-blue.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x5/colors/mineral-white-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x5/colors/m-carbon-black-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x5/colors/m-brooklyn-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x5/colors/black-sapphire-metallic.avif"
+  ]
+}

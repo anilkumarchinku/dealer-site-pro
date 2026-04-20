@@ -1,0 +1,29 @@
+{
+  "brand": "BMW Motorrad India",
+  "model": "K 1600",
+  "brandId": "bmw-motorrad-india",
+  "makeSlug": "bmw-bikes",
+  "modelSlug": "k-1600",
+  "sourceUrl": "https://www.bikewale.com/bmw-bikes/k-1600/colours/",
+  "scrapedAt": "2026-04-20T05:18:39.358Z",
+  "count": 4,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/bmw-select-model-blackstorm-metallic-1677042454441.png?q=100",
+  "colors": [
+    {
+      "name": "Blackstorm metallic",
+      "image": "/data/brand-model-images/2w-colors/bmw-motorrad-india/k-1600/blackstorm-metallic.png"
+    },
+    {
+      "name": "Style Exclusive",
+      "image": "/data/brand-model-images/2w-colors/bmw-motorrad-india/k-1600/style-exclusive.png"
+    },
+    {
+      "name": "Blackstorm metallic (GTL)",
+      "image": "/data/brand-model-images/2w-colors/bmw-motorrad-india/k-1600/blackstorm-metallic-gtl.png"
+    },
+    {
+      "name": "Style Exclusive (GTL)",
+      "image": "/data/brand-model-images/2w-colors/bmw-motorrad-india/k-1600/style-exclusive-gtl.png"
+    }
+  ]
+}

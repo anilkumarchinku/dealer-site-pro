@@ -1,0 +1,52 @@
+{
+  "make": "tata",
+  "model": "Curvv",
+  "brandSlug": "tata",
+  "modelSlug": "curvv",
+  "sourceUrl": "https://www.cardekho.com/tata/curvv",
+  "scrapedAt": "2026-04-20T06:18:52.057Z",
+  "counts": {
+    "exterior": 5,
+    "interior": 8,
+    "feature": 0,
+    "colors": 7,
+    "total": 20
+  },
+  "hero": "/data/brand-model-images/4w-galleries/tata/curvv/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/tata/curvv/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/tata/curvv/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/tata/curvv/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/tata/curvv/exterior/07.avif",
+    "/data/brand-model-images/4w-galleries/tata/curvv/exterior/08.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/tata/curvv/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/tata/curvv/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/tata/curvv/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/tata/curvv/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/tata/curvv/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/tata/curvv/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/tata/curvv/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/tata/curvv/interior/08.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "Pure Grey Black Roof",
+    "Nitro Crimson Dual Tone",
+    "Pristine White Dual Tone",
+    "Gold Essence With Dual Tone",
+    "Opera Blue/Black Roof",
+    "Flame Red Dual Tone",
+    "Daytona Grey"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/tata/curvv/colors/pure-grey-black-roof.avif",
+    "/data/brand-model-images/4w-galleries/tata/curvv/colors/nitro-crimson-dual-tone.avif",
+    "/data/brand-model-images/4w-galleries/tata/curvv/colors/pristine-white-dual-tone.avif",
+    "/data/brand-model-images/4w-galleries/tata/curvv/colors/gold-essence-with-dual-tone.avif",
+    "/data/brand-model-images/4w-galleries/tata/curvv/colors/opera-blue-black-roof.avif",
+    "/data/brand-model-images/4w-galleries/tata/curvv/colors/flame-red-dual-tone.avif",
+    "/data/brand-model-images/4w-galleries/tata/curvv/colors/daytona-grey.avif"
+  ]
+}

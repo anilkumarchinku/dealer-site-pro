@@ -1,0 +1,25 @@
+{
+  "brand": "Raptee HV",
+  "model": "T30",
+  "brandId": "raptee-hv",
+  "makeSlug": "raptee-bikes",
+  "modelSlug": "t30",
+  "sourceUrl": "https://www.bikewale.com/raptee-bikes/t30/colours/",
+  "scrapedAt": "2026-04-20T06:14:06.604Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/uy945ib_1911486.png?q=100",
+  "colors": [
+    {
+      "name": "Mercury Grey",
+      "image": "/data/brand-model-images/2w-colors/raptee-hv/t30/mercury-grey.png"
+    },
+    {
+      "name": "Eclipse Black",
+      "image": "/data/brand-model-images/2w-colors/raptee-hv/t30/eclipse-black.png"
+    },
+    {
+      "name": "Arctic White",
+      "image": "/data/brand-model-images/2w-colors/raptee-hv/t30/arctic-white.png"
+    }
+  ]
+}

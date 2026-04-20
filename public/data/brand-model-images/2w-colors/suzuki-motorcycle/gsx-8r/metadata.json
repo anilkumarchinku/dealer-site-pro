@@ -1,0 +1,25 @@
+{
+  "brand": "Suzuki Motorcycle India",
+  "model": "GSX-8R",
+  "brandId": "suzuki-motorcycle",
+  "makeSlug": "suzuki-bikes",
+  "modelSlug": "gsx-8r",
+  "sourceUrl": "https://www.bikewale.com/suzuki-bikes/gsx-8r/colours/",
+  "scrapedAt": "2026-04-20T05:16:12.376Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/rfr6cgb_1839292.jpg?q=100",
+  "colors": [
+    {
+      "name": "Metallic Matt Black",
+      "image": "/data/brand-model-images/2w-colors/suzuki-motorcycle/gsx-8r/metallic-matt-black.avif"
+    },
+    {
+      "name": "Metallic Matt Sword Silver",
+      "image": "/data/brand-model-images/2w-colors/suzuki-motorcycle/gsx-8r/metallic-matt-sword-silver.avif"
+    },
+    {
+      "name": "Metallic Triton Blue",
+      "image": "/data/brand-model-images/2w-colors/suzuki-motorcycle/gsx-8r/metallic-triton-blue.avif"
+    }
+  ]
+}

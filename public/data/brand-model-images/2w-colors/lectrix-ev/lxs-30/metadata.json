@@ -1,0 +1,33 @@
+{
+  "brand": "Lectrix EV",
+  "model": "LXS 3.0",
+  "brandId": "lectrix-ev",
+  "makeSlug": "lectrix-bikes",
+  "modelSlug": "lxs-30",
+  "sourceUrl": "https://www.bikewale.com/lectrix-bikes/lxs-30/colours/",
+  "scrapedAt": "2026-04-20T06:15:11.167Z",
+  "count": 5,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/tze4heb_1763885.jpg?q=100",
+  "colors": [
+    {
+      "name": "Military Green",
+      "image": "/data/brand-model-images/2w-colors/lectrix-ev/lxs-30/military-green.avif"
+    },
+    {
+      "name": "Zing Black",
+      "image": "/data/brand-model-images/2w-colors/lectrix-ev/lxs-30/zing-black.avif"
+    },
+    {
+      "name": "White",
+      "image": "/data/brand-model-images/2w-colors/lectrix-ev/lxs-30/white.avif"
+    },
+    {
+      "name": "Azure Blue",
+      "image": "/data/brand-model-images/2w-colors/lectrix-ev/lxs-30/azure-blue.avif"
+    },
+    {
+      "name": "Electric Red",
+      "image": "/data/brand-model-images/2w-colors/lectrix-ev/lxs-30/electric-red.avif"
+    }
+  ]
+}

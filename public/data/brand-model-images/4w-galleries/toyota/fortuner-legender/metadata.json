@@ -1,0 +1,42 @@
+{
+  "make": "toyota",
+  "model": "Fortuner Legender",
+  "brandSlug": "toyota",
+  "modelSlug": "fortuner-legender",
+  "sourceUrl": "https://www.cardekho.com/toyota/fortuner-legender",
+  "scrapedAt": "2026-04-20T06:30:41.248Z",
+  "counts": {
+    "exterior": 7,
+    "interior": 8,
+    "feature": 0,
+    "colors": 1,
+    "total": 16
+  },
+  "hero": "/data/brand-model-images/4w-galleries/toyota/fortuner-legender/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/toyota/fortuner-legender/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/toyota/fortuner-legender/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/toyota/fortuner-legender/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/toyota/fortuner-legender/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/toyota/fortuner-legender/exterior/06.avif",
+    "/data/brand-model-images/4w-galleries/toyota/fortuner-legender/exterior/07.avif",
+    "/data/brand-model-images/4w-galleries/toyota/fortuner-legender/exterior/08.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/toyota/fortuner-legender/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/toyota/fortuner-legender/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/toyota/fortuner-legender/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/toyota/fortuner-legender/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/toyota/fortuner-legender/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/toyota/fortuner-legender/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/toyota/fortuner-legender/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/toyota/fortuner-legender/interior/08.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "Platinum White Pearl With Black Roof"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/toyota/fortuner-legender/colors/platinum-white-pearl-with-black-roof.avif"
+  ]
+}

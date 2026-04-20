@@ -1,0 +1,25 @@
+{
+  "brand": "Honda Motorcycle & Scooter India",
+  "model": "NX200",
+  "brandId": "honda-hmsi",
+  "makeSlug": "honda-bikes",
+  "modelSlug": "nx200",
+  "sourceUrl": "https://www.bikewale.com/honda-bikes/nx200/colours/",
+  "scrapedAt": "2026-04-20T05:15:24.888Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/8rm5kgb_1848406.jpg?q=100",
+  "colors": [
+    {
+      "name": "Pearl Igneous Black",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/nx200/pearl-igneous-black.avif"
+    },
+    {
+      "name": "Radiant Red Metallic",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/nx200/radiant-red-metallic.avif"
+    },
+    {
+      "name": "Athletic Blue Metallic",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/nx200/athletic-blue-metallic.avif"
+    }
+  ]
+}

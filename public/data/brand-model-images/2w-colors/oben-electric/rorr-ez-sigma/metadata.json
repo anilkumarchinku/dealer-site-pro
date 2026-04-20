@@ -1,0 +1,29 @@
+{
+  "brand": "Oben Electric",
+  "model": "Rorr EZ Sigma",
+  "brandId": "oben-electric",
+  "makeSlug": "oben-bikes",
+  "modelSlug": "rorr-ez-sigma",
+  "sourceUrl": "https://www.bikewale.com/oben-bikes/rorr-ez-sigma/colours/",
+  "scrapedAt": "2026-04-20T05:20:17.558Z",
+  "count": 4,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/hntsnhb_1879045.jpg?q=100",
+  "colors": [
+    {
+      "name": "Photon White",
+      "image": "/data/brand-model-images/2w-colors/oben-electric/rorr-ez-sigma/photon-white.avif"
+    },
+    {
+      "name": "Electro Amber",
+      "image": "/data/brand-model-images/2w-colors/oben-electric/rorr-ez-sigma/electro-amber.avif"
+    },
+    {
+      "name": "Surge Cyan",
+      "image": "/data/brand-model-images/2w-colors/oben-electric/rorr-ez-sigma/surge-cyan.avif"
+    },
+    {
+      "name": "Electric Red",
+      "image": "/data/brand-model-images/2w-colors/oben-electric/rorr-ez-sigma/electric-red.avif"
+    }
+  ]
+}

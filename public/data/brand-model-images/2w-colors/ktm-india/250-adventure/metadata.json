@@ -1,0 +1,21 @@
+{
+  "brand": "KTM India",
+  "model": "250 Adventure",
+  "brandId": "ktm-india",
+  "makeSlug": "ktm-bikes",
+  "modelSlug": "250-adventure",
+  "sourceUrl": "https://www.bikewale.com/ktm-bikes/250-adventure/colours/",
+  "scrapedAt": "2026-04-20T05:16:16.911Z",
+  "count": 2,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/cpeucfb_1812515.jpg?q=100",
+  "colors": [
+    {
+      "name": "Ceramic White",
+      "image": "/data/brand-model-images/2w-colors/ktm-india/250-adventure/ceramic-white.avif"
+    },
+    {
+      "name": "Electronic Orange",
+      "image": "/data/brand-model-images/2w-colors/ktm-india/250-adventure/electronic-orange.avif"
+    }
+  ]
+}

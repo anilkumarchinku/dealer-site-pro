@@ -1,0 +1,25 @@
+{
+  "brand": "Ducati India",
+  "model": "DesertX",
+  "brandId": "ducati-india",
+  "makeSlug": "ducati-bikes",
+  "modelSlug": "desertx",
+  "sourceUrl": "https://www.bikewale.com/ducati-bikes/desertx/colours/",
+  "scrapedAt": "2026-04-20T05:18:04.559Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/ducati-select-model-star-white-silk-1670832722766.jpg?q=100",
+  "colors": [
+    {
+      "name": "Star White Silk",
+      "image": "/data/brand-model-images/2w-colors/ducati-india/desertx/star-white-silk.avif"
+    },
+    {
+      "name": "Rally",
+      "image": "/data/brand-model-images/2w-colors/ducati-india/desertx/rally.png"
+    },
+    {
+      "name": "Thrilling Black and Ducati Red",
+      "image": "/data/brand-model-images/2w-colors/ducati-india/desertx/thrilling-black-and-ducati-red.avif"
+    }
+  ]
+}

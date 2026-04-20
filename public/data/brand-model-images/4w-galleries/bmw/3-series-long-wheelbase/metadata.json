@@ -1,0 +1,38 @@
+{
+  "make": "bmw",
+  "model": "3 Series Gran Limousine",
+  "brandSlug": "bmw",
+  "modelSlug": "3-series-long-wheelbase",
+  "sourceUrl": "https://www.cardekho.com/bmw/3-series-long-wheelbase",
+  "scrapedAt": "2026-04-20T06:30:29.939Z",
+  "counts": {
+    "exterior": 7,
+    "interior": 8,
+    "feature": 0,
+    "colors": 0,
+    "total": 15
+  },
+  "hero": "/data/brand-model-images/4w-galleries/bmw/3-series-long-wheelbase/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/bmw/3-series-long-wheelbase/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/bmw/3-series-long-wheelbase/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/bmw/3-series-long-wheelbase/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/bmw/3-series-long-wheelbase/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/bmw/3-series-long-wheelbase/exterior/06.avif",
+    "/data/brand-model-images/4w-galleries/bmw/3-series-long-wheelbase/exterior/07.avif",
+    "/data/brand-model-images/4w-galleries/bmw/3-series-long-wheelbase/exterior/08.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/bmw/3-series-long-wheelbase/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/bmw/3-series-long-wheelbase/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/bmw/3-series-long-wheelbase/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/bmw/3-series-long-wheelbase/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/bmw/3-series-long-wheelbase/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/bmw/3-series-long-wheelbase/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/bmw/3-series-long-wheelbase/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/bmw/3-series-long-wheelbase/interior/08.avif"
+  ],
+  "feature": [],
+  "colorNames": [],
+  "colorImages": []
+}

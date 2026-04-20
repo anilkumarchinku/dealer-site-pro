@@ -1,0 +1,33 @@
+{
+  "brand": "Honda Motorcycle & Scooter India",
+  "model": "Activa e",
+  "brandId": "honda-hmsi",
+  "makeSlug": "honda-bikes",
+  "modelSlug": "activa-e",
+  "sourceUrl": "https://www.bikewale.com/honda-bikes/activa-e/colours/",
+  "scrapedAt": "2026-04-20T05:15:29.554Z",
+  "count": 5,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/gfnv79b_1796387.jpg?q=100",
+  "colors": [
+    {
+      "name": "Pearl Igneous Black",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/activa-e/pearl-igneous-black.avif"
+    },
+    {
+      "name": "Matt Foggy Silver Metallic",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/activa-e/matt-foggy-silver-metallic.avif"
+    },
+    {
+      "name": "Pearl Serenity Blue",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/activa-e/pearl-serenity-blue.avif"
+    },
+    {
+      "name": "Pearl Misty White",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/activa-e/pearl-misty-white.avif"
+    },
+    {
+      "name": "Pearl Shallow Blue",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/activa-e/pearl-shallow-blue.avif"
+    }
+  ]
+}

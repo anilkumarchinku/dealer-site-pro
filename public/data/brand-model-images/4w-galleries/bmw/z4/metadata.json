@@ -1,0 +1,48 @@
+{
+  "make": "bmw",
+  "model": "Z4",
+  "brandSlug": "bmw",
+  "modelSlug": "z4",
+  "sourceUrl": "https://www.cardekho.com/bmw/z4",
+  "scrapedAt": "2026-04-20T06:30:42.868Z",
+  "counts": {
+    "exterior": 5,
+    "interior": 8,
+    "feature": 0,
+    "colors": 5,
+    "total": 18
+  },
+  "hero": "/data/brand-model-images/4w-galleries/bmw/z4/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/bmw/z4/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/bmw/z4/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/bmw/z4/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/bmw/z4/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/bmw/z4/exterior/06.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/bmw/z4/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/bmw/z4/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/bmw/z4/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/bmw/z4/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/bmw/z4/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/bmw/z4/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/bmw/z4/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/bmw/z4/interior/08.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "Skyscraper Grey Metallic",
+    "Alpine White",
+    "M Portimao Blau Metallic",
+    "San Francisco Red Metallic",
+    "Thundernight Metallic"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/bmw/z4/colors/skyscraper-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/z4/colors/alpine-white.avif",
+    "/data/brand-model-images/4w-galleries/bmw/z4/colors/m-portimao-blau-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/z4/colors/san-francisco-red-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/z4/colors/thundernight-metallic.avif"
+  ]
+}

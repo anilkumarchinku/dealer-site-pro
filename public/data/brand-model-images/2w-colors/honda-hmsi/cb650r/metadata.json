@@ -1,0 +1,21 @@
+{
+  "brand": "Honda Motorcycle & Scooter India",
+  "model": "CB650R",
+  "brandId": "honda-hmsi",
+  "makeSlug": "honda-bikes",
+  "modelSlug": "cb650r",
+  "sourceUrl": "https://www.bikewale.com/honda-bikes/cb650r/colours/",
+  "scrapedAt": "2026-04-20T05:15:26.821Z",
+  "count": 2,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/57us3fb_1834947.jpg?q=100",
+  "colors": [
+    {
+      "name": "Candy Chromosphere Red",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/cb650r/candy-chromosphere-red.avif"
+    },
+    {
+      "name": "Matte Gunpowder Black Metallic",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/cb650r/matte-gunpowder-black-metallic.avif"
+    }
+  ]
+}

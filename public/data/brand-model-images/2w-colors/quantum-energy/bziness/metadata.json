@@ -1,0 +1,25 @@
+{
+  "brand": "Quantum Energy",
+  "model": "BZiness",
+  "brandId": "quantum-energy",
+  "makeSlug": "quantum-energy-bikes",
+  "modelSlug": "bziness",
+  "sourceUrl": "https://www.bikewale.com/quantum-energy-bikes/bziness/colours/",
+  "scrapedAt": "2026-04-20T05:19:52.999Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/a479c9b_1784895.jpg?q=100",
+  "colors": [
+    {
+      "name": "Grey",
+      "image": "/data/brand-model-images/2w-colors/quantum-energy/bziness/grey.avif"
+    },
+    {
+      "name": "Black",
+      "image": "/data/brand-model-images/2w-colors/quantum-energy/bziness/black.avif"
+    },
+    {
+      "name": "White",
+      "image": "/data/brand-model-images/2w-colors/quantum-energy/bziness/white.avif"
+    }
+  ]
+}

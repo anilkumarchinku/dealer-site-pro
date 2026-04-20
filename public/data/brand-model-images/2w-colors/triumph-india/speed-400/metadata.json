@@ -1,0 +1,29 @@
+{
+  "brand": "Triumph India",
+  "model": "Speed 400",
+  "brandId": "triumph-india",
+  "makeSlug": "triumph-bikes",
+  "modelSlug": "speed-400",
+  "sourceUrl": "https://www.bikewale.com/triumph-bikes/speed-400/colours/",
+  "scrapedAt": "2026-04-20T05:17:42.373Z",
+  "count": 4,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/vsjhg8b_1924482.jpg?q=100",
+  "colors": [
+    {
+      "name": "Racing Red / Pearl Metallic White",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/speed-400/racing-red-pearl-metallic-white.avif"
+    },
+    {
+      "name": "Pearl Metallic White / Pewter Grey",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/speed-400/pearl-metallic-white-pewter-grey.avif"
+    },
+    {
+      "name": "Phantom Black / Pewter Grey",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/speed-400/phantom-black-pewter-grey.png"
+    },
+    {
+      "name": "Racing Yellow / Pearl Metallic White",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/speed-400/racing-yellow-pearl-metallic-white.avif"
+    }
+  ]
+}

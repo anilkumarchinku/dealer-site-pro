@@ -1,0 +1,17 @@
+{
+  "brand": "KTM India",
+  "model": "390 Adventure R",
+  "brandId": "ktm-india",
+  "makeSlug": "ktm-bikes",
+  "modelSlug": "390-adventure-r",
+  "sourceUrl": "https://www.bikewale.com/ktm-bikes/390-adventure-r/colours/",
+  "scrapedAt": "2026-04-20T05:16:21.663Z",
+  "count": 1,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/rzuplib_1903227.webp?q=100",
+  "colors": [
+    {
+      "name": "Orange",
+      "image": "/data/brand-model-images/2w-colors/ktm-india/390-adventure-r/orange.webp"
+    }
+  ]
+}

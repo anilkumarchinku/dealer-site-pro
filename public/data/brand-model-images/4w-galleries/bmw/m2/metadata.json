@@ -1,0 +1,48 @@
+{
+  "make": "bmw",
+  "model": "M2",
+  "brandSlug": "bmw",
+  "modelSlug": "m2",
+  "sourceUrl": "https://www.cardekho.com/bmw/m2",
+  "scrapedAt": "2026-04-20T06:30:47.563Z",
+  "counts": {
+    "exterior": 5,
+    "interior": 8,
+    "feature": 0,
+    "colors": 5,
+    "total": 18
+  },
+  "hero": "/data/brand-model-images/4w-galleries/bmw/m2/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/bmw/m2/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m2/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m2/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m2/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m2/exterior/06.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/bmw/m2/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m2/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m2/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m2/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m2/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m2/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m2/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m2/interior/08.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "Brooklyn Grey Metallic",
+    "Skyscraper Grey Metallic",
+    "DRAGON-FIRE-RED-METALLIC",
+    "Portimao Blue Metallic",
+    "Black Sapphire"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/bmw/m2/colors/brooklyn-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m2/colors/skyscraper-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m2/colors/dragon-fire-red-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m2/colors/portimao-blue-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m2/colors/black-sapphire.avif"
+  ]
+}

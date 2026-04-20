@@ -1,0 +1,29 @@
+{
+  "brand": "Hero MotoCorp",
+  "model": "Karizma XMR",
+  "brandId": "hero-motocorp",
+  "makeSlug": "hero-bikes",
+  "modelSlug": "karizma-xmr",
+  "sourceUrl": "https://www.bikewale.com/hero-bikes/karizma-xmr/colours/",
+  "scrapedAt": "2026-04-20T06:13:22.779Z",
+  "count": 4,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/mrhmofb_1825689.jpg?q=100",
+  "colors": [
+    {
+      "name": "Matte Phantom Black",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/karizma-xmr/matte-phantom-black.avif"
+    },
+    {
+      "name": "Turbo Red",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/karizma-xmr/turbo-red.avif"
+    },
+    {
+      "name": "Iconic Yellow",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/karizma-xmr/iconic-yellow.avif"
+    },
+    {
+      "name": "Combat Edition",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/karizma-xmr/combat-edition.avif"
+    }
+  ]
+}

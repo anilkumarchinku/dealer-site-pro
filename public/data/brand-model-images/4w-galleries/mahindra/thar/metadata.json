@@ -1,0 +1,50 @@
+{
+  "make": "mahindra",
+  "model": "Thar",
+  "brandSlug": "mahindra",
+  "modelSlug": "thar",
+  "sourceUrl": "https://www.cardekho.com/mahindra/thar",
+  "scrapedAt": "2026-04-20T05:03:56.428Z",
+  "counts": {
+    "exterior": 5,
+    "interior": 8,
+    "feature": 0,
+    "colors": 6,
+    "total": 19
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mahindra/thar/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/mahindra/thar/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/thar/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/thar/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/thar/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/thar/exterior/06.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/mahindra/thar/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/thar/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/thar/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/thar/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/thar/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/thar/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/thar/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/thar/interior/08.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "Everest White",
+    "Galaxy Grey",
+    "Stealth Black",
+    "Battleship Gray",
+    "Deep Forest",
+    "Tango Red"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mahindra/thar/colors/everest-white.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/thar/colors/galaxy-grey.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/thar/colors/stealth-black.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/thar/colors/battleship-gray.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/thar/colors/deep-forest.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/thar/colors/tango-red.avif"
+  ]
+}

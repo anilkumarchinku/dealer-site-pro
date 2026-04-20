@@ -1,0 +1,21 @@
+{
+  "brand": "BMW Motorrad India",
+  "model": "CE 02",
+  "brandId": "bmw-motorrad-india",
+  "makeSlug": "bmw-bikes",
+  "modelSlug": "ce-02",
+  "sourceUrl": "https://www.bikewale.com/bmw-bikes/ce-02/colours/",
+  "scrapedAt": "2026-04-20T05:18:16.250Z",
+  "count": 2,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/ldca7eb_1768533.jpg?q=100",
+  "colors": [
+    {
+      "name": "Cosmic Black Two",
+      "image": "/data/brand-model-images/2w-colors/bmw-motorrad-india/ce-02/cosmic-black-two.avif"
+    },
+    {
+      "name": "Cosmic Black",
+      "image": "/data/brand-model-images/2w-colors/bmw-motorrad-india/ce-02/cosmic-black.avif"
+    }
+  ]
+}

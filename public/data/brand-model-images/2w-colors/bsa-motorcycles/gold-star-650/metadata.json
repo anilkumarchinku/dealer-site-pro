@@ -1,0 +1,37 @@
+{
+  "brand": "BSA Motorcycles",
+  "model": "Gold Star 650",
+  "brandId": "bsa-motorcycles",
+  "makeSlug": "bsa-bikes",
+  "modelSlug": "gold-star-650",
+  "sourceUrl": "https://www.bikewale.com/bsa-bikes/gold-star-650/colours/",
+  "scrapedAt": "2026-04-20T05:19:00.495Z",
+  "count": 6,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/78cujeb_1766613.jpg?q=100",
+  "colors": [
+    {
+      "name": "Highland Green",
+      "image": "/data/brand-model-images/2w-colors/bsa-motorcycles/gold-star-650/highland-green.avif"
+    },
+    {
+      "name": "Insignia Red",
+      "image": "/data/brand-model-images/2w-colors/bsa-motorcycles/gold-star-650/insignia-red.avif"
+    },
+    {
+      "name": "Dawn Silver",
+      "image": "/data/brand-model-images/2w-colors/bsa-motorcycles/gold-star-650/dawn-silver.avif"
+    },
+    {
+      "name": "Midnight Black",
+      "image": "/data/brand-model-images/2w-colors/bsa-motorcycles/gold-star-650/midnight-black.avif"
+    },
+    {
+      "name": "Shadow Black",
+      "image": "/data/brand-model-images/2w-colors/bsa-motorcycles/gold-star-650/shadow-black.avif"
+    },
+    {
+      "name": "Silver Sheen",
+      "image": "/data/brand-model-images/2w-colors/bsa-motorcycles/gold-star-650/silver-sheen.avif"
+    }
+  ]
+}

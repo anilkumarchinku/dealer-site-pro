@@ -1,0 +1,41 @@
+{
+  "brand": "Honda Motorcycle & Scooter India",
+  "model": "Dio 125",
+  "brandId": "honda-hmsi",
+  "makeSlug": "honda-bikes",
+  "modelSlug": "dio-125",
+  "sourceUrl": "https://www.bikewale.com/honda-bikes/dio-125/colours/",
+  "scrapedAt": "2026-04-20T05:15:30.444Z",
+  "count": 7,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/l0m6kgb_1848286.jpg?q=100",
+  "colors": [
+    {
+      "name": "Pearl Deep Ground Gray (Stripe)",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/dio-125/pearl-deep-ground-gray-stripe.avif"
+    },
+    {
+      "name": "Imperial Red",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/dio-125/imperial-red.avif"
+    },
+    {
+      "name": "Pearl Igneous Black",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/dio-125/pearl-igneous-black.avif"
+    },
+    {
+      "name": "Pearl Sports Yellow",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/dio-125/pearl-sports-yellow.avif"
+    },
+    {
+      "name": "Mat Marvel Blue Metallic",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/dio-125/mat-marvel-blue-metallic.avif"
+    },
+    {
+      "name": "Pearl Deep Ground Gray (Emblem)",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/dio-125/pearl-deep-ground-gray-emblem.avif"
+    },
+    {
+      "name": "Pearl Siren Blue and Pearl Deep Ground Gray",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/dio-125/pearl-siren-blue-and-pearl-deep-ground-gray.avif"
+    }
+  ]
+}

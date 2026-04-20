@@ -1,0 +1,57 @@
+{
+  "brand": "Okaya EV (OPG Mobility)",
+  "model": "Faast F4",
+  "brandId": "okaya-ev-opg-mobility",
+  "makeSlug": "opg-mobility-bikes",
+  "modelSlug": "faast",
+  "sourceUrl": "https://www.bikewale.com/opg-mobility-bikes/faast/colours/",
+  "scrapedAt": "2026-04-20T05:55:02.929Z",
+  "count": 11,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/okaya-select-model-metallic-yellow-1663138054097.jpg?q=100",
+  "colors": [
+    {
+      "name": "Metallic Yellow",
+      "image": "/data/brand-model-images/2w-colors/okaya-ev-opg-mobility/faast/metallic-yellow.avif"
+    },
+    {
+      "name": "Metallic White",
+      "image": "/data/brand-model-images/2w-colors/okaya-ev-opg-mobility/faast/metallic-white.avif"
+    },
+    {
+      "name": "Metallic Silver",
+      "image": "/data/brand-model-images/2w-colors/okaya-ev-opg-mobility/faast/metallic-silver.avif"
+    },
+    {
+      "name": "Metallic Rust",
+      "image": "/data/brand-model-images/2w-colors/okaya-ev-opg-mobility/faast/metallic-rust.avif"
+    },
+    {
+      "name": "Metallic Red",
+      "image": "/data/brand-model-images/2w-colors/okaya-ev-opg-mobility/faast/metallic-red.avif"
+    },
+    {
+      "name": "Metallic Grey",
+      "image": "/data/brand-model-images/2w-colors/okaya-ev-opg-mobility/faast/metallic-grey.avif"
+    },
+    {
+      "name": "Metallic Green",
+      "image": "/data/brand-model-images/2w-colors/okaya-ev-opg-mobility/faast/metallic-green.avif"
+    },
+    {
+      "name": "Metallic Cyan",
+      "image": "/data/brand-model-images/2w-colors/okaya-ev-opg-mobility/faast/metallic-cyan.avif"
+    },
+    {
+      "name": "Metallic Blue",
+      "image": "/data/brand-model-images/2w-colors/okaya-ev-opg-mobility/faast/metallic-blue.avif"
+    },
+    {
+      "name": "Metallic Black",
+      "image": "/data/brand-model-images/2w-colors/okaya-ev-opg-mobility/faast/metallic-black.avif"
+    },
+    {
+      "name": "Matte Green",
+      "image": "/data/brand-model-images/2w-colors/okaya-ev-opg-mobility/faast/matte-green.avif"
+    }
+  ]
+}

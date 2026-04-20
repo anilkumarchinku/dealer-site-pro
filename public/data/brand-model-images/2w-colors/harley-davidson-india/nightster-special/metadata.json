@@ -1,0 +1,29 @@
+{
+  "brand": "Harley-Davidson India",
+  "model": "Nightster Special",
+  "brandId": "harley-davidson-india",
+  "makeSlug": "harleydavidson-bikes",
+  "modelSlug": "nightster-special",
+  "sourceUrl": "https://www.bikewale.com/harleydavidson-bikes/nightster-special/colours/",
+  "scrapedAt": "2026-04-20T05:53:13.999Z",
+  "count": 4,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/qqt6ohb_1879795.jpg?q=100",
+  "colors": [
+    {
+      "name": "Blue Burst",
+      "image": "/data/brand-model-images/2w-colors/harley-davidson-india/nightster-special/blue-burst.avif"
+    },
+    {
+      "name": "Whiskey Fire",
+      "image": "/data/brand-model-images/2w-colors/harley-davidson-india/nightster-special/whiskey-fire.avif"
+    },
+    {
+      "name": "Billiard Gray",
+      "image": "/data/brand-model-images/2w-colors/harley-davidson-india/nightster-special/billiard-gray.avif"
+    },
+    {
+      "name": "Black Denim",
+      "image": "/data/brand-model-images/2w-colors/harley-davidson-india/nightster-special/black-denim.avif"
+    }
+  ]
+}

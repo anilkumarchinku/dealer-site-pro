@@ -1,0 +1,21 @@
+{
+  "brand": "Yamaha India",
+  "model": "FZ-X",
+  "brandId": "yamaha-india",
+  "makeSlug": "yamaha-bikes",
+  "modelSlug": "fz-x",
+  "sourceUrl": "https://www.bikewale.com/yamaha-bikes/fz-x/colours/",
+  "scrapedAt": "2026-04-20T06:07:38.476Z",
+  "count": 2,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/8vbr4gb_1860062.jpg?q=100",
+  "colors": [
+    {
+      "name": "Metallic Black",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/fz-x/metallic-black.avif"
+    },
+    {
+      "name": "Dark Matte Blue",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/fz-x/dark-matte-blue.avif"
+    }
+  ]
+}

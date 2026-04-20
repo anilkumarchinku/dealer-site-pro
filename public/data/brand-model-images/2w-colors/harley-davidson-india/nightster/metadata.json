@@ -1,0 +1,25 @@
+{
+  "brand": "Harley-Davidson India",
+  "model": "Nightster",
+  "brandId": "harley-davidson-india",
+  "makeSlug": "harleydavidson-bikes",
+  "modelSlug": "nightster",
+  "sourceUrl": "https://www.bikewale.com/harleydavidson-bikes/nightster/colours/",
+  "scrapedAt": "2026-04-20T05:53:11.487Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/v9h6ohb_1879779.jpg?q=100",
+  "colors": [
+    {
+      "name": "Whiskey Fire",
+      "image": "/data/brand-model-images/2w-colors/harley-davidson-india/nightster/whiskey-fire.avif"
+    },
+    {
+      "name": "Billiard Gray",
+      "image": "/data/brand-model-images/2w-colors/harley-davidson-india/nightster/billiard-gray.avif"
+    },
+    {
+      "name": "Vivid Black",
+      "image": "/data/brand-model-images/2w-colors/harley-davidson-india/nightster/vivid-black.avif"
+    }
+  ]
+}

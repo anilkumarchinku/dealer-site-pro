@@ -1,0 +1,29 @@
+{
+  "brand": "Pure EV",
+  "model": "EcoDryft",
+  "brandId": "pure-ev",
+  "makeSlug": "pureev-bikes",
+  "modelSlug": "ecodryft",
+  "sourceUrl": "https://www.bikewale.com/pureev-bikes/ecodryft/colours/",
+  "scrapedAt": "2026-04-20T06:12:29.108Z",
+  "count": 4,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/ov5ateb_1777553.png?q=100",
+  "colors": [
+    {
+      "name": "Silver",
+      "image": "/data/brand-model-images/2w-colors/pure-ev/ecodryft/silver.png"
+    },
+    {
+      "name": "Red",
+      "image": "/data/brand-model-images/2w-colors/pure-ev/ecodryft/red.png"
+    },
+    {
+      "name": "Blue",
+      "image": "/data/brand-model-images/2w-colors/pure-ev/ecodryft/blue.png"
+    },
+    {
+      "name": "Black",
+      "image": "/data/brand-model-images/2w-colors/pure-ev/ecodryft/black.png"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "brand": "Revolt Motors",
+  "model": "RV1",
+  "brandId": "revolt-motors",
+  "makeSlug": "revolt-bikes",
+  "modelSlug": "rv1",
+  "sourceUrl": "https://www.bikewale.com/revolt-bikes/rv1/colours/",
+  "scrapedAt": "2026-04-20T05:53:16.540Z",
+  "count": 4,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/0kabpeb_1773061.jpg?q=100",
+  "colors": [
+    {
+      "name": "Black Midnight Blue",
+      "image": "/data/brand-model-images/2w-colors/revolt-motors/rv1/black-midnight-blue.avif"
+    },
+    {
+      "name": "Black Neon Green",
+      "image": "/data/brand-model-images/2w-colors/revolt-motors/rv1/black-neon-green.avif"
+    },
+    {
+      "name": "Cosmic Black Red",
+      "image": "/data/brand-model-images/2w-colors/revolt-motors/rv1/cosmic-black-red.avif"
+    },
+    {
+      "name": "Titan Red Silver",
+      "image": "/data/brand-model-images/2w-colors/revolt-motors/rv1/titan-red-silver.avif"
+    }
+  ]
+}

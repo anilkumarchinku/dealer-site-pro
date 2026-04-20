@@ -1,0 +1,33 @@
+{
+  "brand": "Odysse Electric",
+  "model": "Racer",
+  "brandId": "odysse-electric",
+  "makeSlug": "odysse-bikes",
+  "modelSlug": "racer",
+  "sourceUrl": "https://www.bikewale.com/odysse-bikes/racer/colours/",
+  "scrapedAt": "2026-04-20T06:12:22.602Z",
+  "count": 5,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/odysse-select-model-spartan-matte-red-1635508082219.jpg?q=100",
+  "colors": [
+    {
+      "name": "Spartan Matte Red",
+      "image": "/data/brand-model-images/2w-colors/odysse-electric/racer/spartan-matte-red.avif"
+    },
+    {
+      "name": "Blue",
+      "image": "/data/brand-model-images/2w-colors/odysse-electric/racer/blue.avif"
+    },
+    {
+      "name": "Coffee Brown",
+      "image": "/data/brand-model-images/2w-colors/odysse-electric/racer/coffee-brown.avif"
+    },
+    {
+      "name": "Carbon Black",
+      "image": "/data/brand-model-images/2w-colors/odysse-electric/racer/carbon-black.avif"
+    },
+    {
+      "name": "Glacier White",
+      "image": "/data/brand-model-images/2w-colors/odysse-electric/racer/glacier-white.avif"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "brand": "Royal Enfield",
+  "model": "Super Meteor 650",
+  "brandId": "royal-enfield",
+  "makeSlug": "royalenfield-bikes",
+  "modelSlug": "super-meteor-650",
+  "sourceUrl": "https://www.bikewale.com/royalenfield-bikes/super-meteor-650/colours/",
+  "scrapedAt": "2026-04-20T05:15:55.677Z",
+  "count": 6,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/tl9pbgb_1838406.jpg?q=100",
+  "colors": [
+    {
+      "name": "Astral Green",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/super-meteor-650/astral-green.avif"
+    },
+    {
+      "name": "Astral Black",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/super-meteor-650/astral-black.avif"
+    },
+    {
+      "name": "Interstellar  Grey",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/super-meteor-650/interstellar-grey.avif"
+    },
+    {
+      "name": "Interstellar Green",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/super-meteor-650/interstellar-green.avif"
+    },
+    {
+      "name": "Celestial Blue",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/super-meteor-650/celestial-blue.avif"
+    },
+    {
+      "name": "Celestial Red",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/super-meteor-650/celestial-red.avif"
+    }
+  ]
+}

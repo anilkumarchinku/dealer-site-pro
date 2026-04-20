@@ -1,0 +1,29 @@
+{
+  "brand": "TVS Motor Company",
+  "model": "XL100 Comfort",
+  "brandId": "tvs-motor",
+  "makeSlug": "tvs-bikes",
+  "modelSlug": "xl-100-comfort",
+  "sourceUrl": "https://www.bikewale.com/tvs-bikes/xl-100-comfort/colours/",
+  "scrapedAt": "2026-04-20T06:07:50.381Z",
+  "count": 4,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/tvs-select-model-sparkling-silver-1669635041041.png?q=100",
+  "colors": [
+    {
+      "name": "Sparkling Silver",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/xl-100-comfort/sparkling-silver.png"
+    },
+    {
+      "name": "Coral Silk",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/xl-100-comfort/coral-silk.png"
+    },
+    {
+      "name": "Luster Gold",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/xl-100-comfort/luster-gold.png"
+    },
+    {
+      "name": "Mint Blue",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/xl-100-comfort/mint-blue.png"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "brand": "Hero MotoCorp",
+  "model": "Xtreme 250R",
+  "brandId": "hero-motocorp",
+  "makeSlug": "hero-bikes",
+  "modelSlug": "xtreme-250r",
+  "sourceUrl": "https://www.bikewale.com/hero-bikes/xtreme-250r/colours/",
+  "scrapedAt": "2026-04-20T06:13:21.598Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/nyqdaib_1891041.png?q=100",
+  "colors": [
+    {
+      "name": "Firestorm Red",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/xtreme-250r/firestorm-red.png"
+    },
+    {
+      "name": "Stealth Black",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/xtreme-250r/stealth-black.png"
+    },
+    {
+      "name": "Neon Shooting Star",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/xtreme-250r/neon-shooting-star.png"
+    }
+  ]
+}

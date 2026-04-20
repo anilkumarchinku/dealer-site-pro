@@ -1,0 +1,17 @@
+{
+  "brand": "BMW Motorrad India",
+  "model": "M 1000 XR",
+  "brandId": "bmw-motorrad-india",
+  "makeSlug": "bmw-bikes",
+  "modelSlug": "m-1000-xr",
+  "sourceUrl": "https://www.bikewale.com/bmw-bikes/m-1000-xr/colours/",
+  "scrapedAt": "2026-04-20T05:18:27.757Z",
+  "count": 1,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/bmw-select-model-light-blue-dark-blue-and-red-1715629514548.png?q=100",
+  "colors": [
+    {
+      "name": "Light Blue, Dark Blue and Red",
+      "image": "/data/brand-model-images/2w-colors/bmw-motorrad-india/m-1000-xr/light-blue-dark-blue-and-red.png"
+    }
+  ]
+}

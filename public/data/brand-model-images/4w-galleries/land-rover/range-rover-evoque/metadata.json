@@ -1,0 +1,46 @@
+{
+  "make": "land rover",
+  "model": "Range Rover Evoque",
+  "brandSlug": "land-rover",
+  "modelSlug": "range-rover-evoque",
+  "sourceUrl": "https://www.cardekho.com/land-rover/range-rover-evoque",
+  "scrapedAt": "2026-04-20T05:03:41.995Z",
+  "counts": {
+    "exterior": 5,
+    "interior": 8,
+    "feature": 0,
+    "colors": 4,
+    "total": 17
+  },
+  "hero": "/data/brand-model-images/4w-galleries/land-rover/range-rover-evoque/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-evoque/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-evoque/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-evoque/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-evoque/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-evoque/exterior/06.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-evoque/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-evoque/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-evoque/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-evoque/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-evoque/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-evoque/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-evoque/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-evoque/interior/08.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "Carpathian Grey DT",
+    "Fuji White DT",
+    "Santorini Black",
+    "Tribeca Blue DT"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-evoque/colors/carpathian-grey-dt.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-evoque/colors/fuji-white-dt.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-evoque/colors/santorini-black.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-evoque/colors/tribeca-blue-dt.avif"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "brand": "Royal Enfield",
+  "model": "Classic 650",
+  "brandId": "royal-enfield",
+  "makeSlug": "royalenfield-bikes",
+  "modelSlug": "classic-650",
+  "sourceUrl": "https://www.bikewale.com/royalenfield-bikes/classic-650/colours/",
+  "scrapedAt": "2026-04-20T05:15:56.548Z",
+  "count": 4,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/k1hqe9b_1787139.jpg?q=100",
+  "colors": [
+    {
+      "name": "Vallam Red",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/classic-650/vallam-red.avif"
+    },
+    {
+      "name": "Bruntingthorpe Blue",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/classic-650/bruntingthorpe-blue.avif"
+    },
+    {
+      "name": "Teal",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/classic-650/teal.avif"
+    },
+    {
+      "name": "Black Chrome",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/classic-650/black-chrome.avif"
+    }
+  ]
+}

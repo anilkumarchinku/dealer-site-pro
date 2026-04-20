@@ -1,0 +1,50 @@
+{
+  "make": "skoda",
+  "model": "Kylaq",
+  "brandSlug": "skoda",
+  "modelSlug": "kylaq",
+  "sourceUrl": "https://www.cardekho.com/skoda/kylaq",
+  "scrapedAt": "2026-04-20T05:04:35.176Z",
+  "counts": {
+    "exterior": 5,
+    "interior": 8,
+    "feature": 0,
+    "colors": 6,
+    "total": 19
+  },
+  "hero": "/data/brand-model-images/4w-galleries/skoda/kylaq/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/skoda/kylaq/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/skoda/kylaq/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/skoda/kylaq/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/skoda/kylaq/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/skoda/kylaq/exterior/06.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/skoda/kylaq/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/skoda/kylaq/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/skoda/kylaq/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/skoda/kylaq/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/skoda/kylaq/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/skoda/kylaq/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/skoda/kylaq/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/skoda/kylaq/interior/08.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "Brilliant Silver",
+    "Lava Blue",
+    "Carbon Steel",
+    "Deep Black Pearl",
+    "Candy White",
+    "Cherry Red"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/skoda/kylaq/colors/brilliant-silver.avif",
+    "/data/brand-model-images/4w-galleries/skoda/kylaq/colors/lava-blue.avif",
+    "/data/brand-model-images/4w-galleries/skoda/kylaq/colors/carbon-steel.avif",
+    "/data/brand-model-images/4w-galleries/skoda/kylaq/colors/deep-black-pearl.avif",
+    "/data/brand-model-images/4w-galleries/skoda/kylaq/colors/candy-white.avif",
+    "/data/brand-model-images/4w-galleries/skoda/kylaq/colors/cherry-red.avif"
+  ]
+}

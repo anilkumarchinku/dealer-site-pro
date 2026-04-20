@@ -1,0 +1,33 @@
+{
+  "brand": "Royal Enfield",
+  "model": "Continental GT 650",
+  "brandId": "royal-enfield",
+  "makeSlug": "royalenfield-bikes",
+  "modelSlug": "continental-gt-650",
+  "sourceUrl": "https://www.bikewale.com/royalenfield-bikes/continental-gt-650/colours/",
+  "scrapedAt": "2026-04-20T05:15:55.406Z",
+  "count": 5,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/ncvpseb_1777229.jpg?q=100",
+  "colors": [
+    {
+      "name": "British Racing Green",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/continental-gt-650/british-racing-green.avif"
+    },
+    {
+      "name": "Rocker Red",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/continental-gt-650/rocker-red.avif"
+    },
+    {
+      "name": "Mr Clean",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/continental-gt-650/mr-clean.avif"
+    },
+    {
+      "name": "Apex Grey",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/continental-gt-650/apex-grey.avif"
+    },
+    {
+      "name": "Slipstream Blue",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/continental-gt-650/slipstream-blue.avif"
+    }
+  ]
+}

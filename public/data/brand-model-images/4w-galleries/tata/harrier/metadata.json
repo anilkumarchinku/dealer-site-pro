@@ -1,0 +1,52 @@
+{
+  "make": "tata",
+  "model": "Harrier",
+  "brandSlug": "tata",
+  "modelSlug": "harrier",
+  "sourceUrl": "https://www.cardekho.com/tata/harrier",
+  "scrapedAt": "2026-04-20T06:18:42.666Z",
+  "counts": {
+    "exterior": 5,
+    "interior": 8,
+    "feature": 0,
+    "colors": 7,
+    "total": 20
+  },
+  "hero": "/data/brand-model-images/4w-galleries/tata/harrier/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/tata/harrier/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/tata/harrier/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/tata/harrier/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/tata/harrier/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/tata/harrier/exterior/06.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/tata/harrier/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/tata/harrier/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/tata/harrier/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/tata/harrier/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/tata/harrier/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/tata/harrier/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/tata/harrier/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/tata/harrier/interior/08.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "Nitro Crimson Dual Tone",
+    "Seaweed Green",
+    "Pristine White",
+    "Sunlit Yellow Dual Tone",
+    "Fearless Red Dual Tone",
+    "Daytona Grey Dual Tone",
+    "Oberon Black"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/tata/harrier/colors/nitro-crimson-dual-tone.avif",
+    "/data/brand-model-images/4w-galleries/tata/harrier/colors/seaweed-green.avif",
+    "/data/brand-model-images/4w-galleries/tata/harrier/colors/pristine-white.avif",
+    "/data/brand-model-images/4w-galleries/tata/harrier/colors/sunlit-yellow-dual-tone.avif",
+    "/data/brand-model-images/4w-galleries/tata/harrier/colors/fearless-red-dual-tone.avif",
+    "/data/brand-model-images/4w-galleries/tata/harrier/colors/daytona-grey-dual-tone.avif",
+    "/data/brand-model-images/4w-galleries/tata/harrier/colors/oberon-black.avif"
+  ]
+}

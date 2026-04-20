@@ -1,0 +1,25 @@
+{
+  "brand": "Zontes India",
+  "model": "350X",
+  "brandId": "zontes-india",
+  "makeSlug": "zontes-bikes",
+  "modelSlug": "350x",
+  "sourceUrl": "https://www.bikewale.com/zontes-bikes/350x/colours/",
+  "scrapedAt": "2026-04-20T05:18:49.300Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/zontes-select-model-silver-black-1698756023766.png?q=100",
+  "colors": [
+    {
+      "name": "Silver Black",
+      "image": "/data/brand-model-images/2w-colors/zontes-india/350x/silver-black.png"
+    },
+    {
+      "name": "Green Black",
+      "image": "/data/brand-model-images/2w-colors/zontes-india/350x/green-black.png"
+    },
+    {
+      "name": "Silver Orange",
+      "image": "/data/brand-model-images/2w-colors/zontes-india/350x/silver-orange.png"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "brand": "Triumph India",
+  "model": "Speed T4",
+  "brandId": "triumph-india",
+  "makeSlug": "triumph-bikes",
+  "modelSlug": "speed-t4",
+  "sourceUrl": "https://www.bikewale.com/triumph-bikes/speed-t4/colours/",
+  "scrapedAt": "2026-04-20T05:17:50.580Z",
+  "count": 5,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/andig8b_1924504.jpg?q=100",
+  "colors": [
+    {
+      "name": "Phantom Black / Pearl Metallic White",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/speed-t4/phantom-black-pearl-metallic-white.avif"
+    },
+    {
+      "name": "Phantom Black / Storm Grey",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/speed-t4/phantom-black-storm-grey.avif"
+    },
+    {
+      "name": "Caspian Blue / Pearl Metallic White",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/speed-t4/caspian-blue-pearl-metallic-white.avif"
+    },
+    {
+      "name": "Lava Red Gloss / Pearl Metallic White",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/speed-t4/lava-red-gloss-pearl-metallic-white.avif"
+    },
+    {
+      "name": "Baja Orange",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/speed-t4/baja-orange.avif"
+    }
+  ]
+}

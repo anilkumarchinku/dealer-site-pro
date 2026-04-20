@@ -1,0 +1,25 @@
+{
+  "brand": "KTM India",
+  "model": "RC 160",
+  "brandId": "ktm-india",
+  "makeSlug": "ktm-bikes",
+  "modelSlug": "rc-160",
+  "sourceUrl": "https://www.bikewale.com/ktm-bikes/rc-160/colours/",
+  "scrapedAt": "2026-04-20T05:16:14.061Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/pirorib_1910362.jpg?q=100",
+  "colors": [
+    {
+      "name": "Ceramic White Matte",
+      "image": "/data/brand-model-images/2w-colors/ktm-india/rc-160/ceramic-white-matte.avif"
+    },
+    {
+      "name": "Electronic Orange Matte",
+      "image": "/data/brand-model-images/2w-colors/ktm-india/rc-160/electronic-orange-matte.avif"
+    },
+    {
+      "name": "Black",
+      "image": "/data/brand-model-images/2w-colors/ktm-india/rc-160/black.png"
+    }
+  ]
+}

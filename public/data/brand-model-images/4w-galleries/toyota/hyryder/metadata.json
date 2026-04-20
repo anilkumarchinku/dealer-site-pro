@@ -1,0 +1,50 @@
+{
+  "make": "toyota",
+  "model": "Urban Cruiser Hyryder",
+  "brandSlug": "toyota",
+  "modelSlug": "hyryder",
+  "sourceUrl": "https://www.cardekho.com/toyota/hyryder",
+  "scrapedAt": "2026-04-20T06:30:37.898Z",
+  "counts": {
+    "exterior": 5,
+    "interior": 8,
+    "feature": 0,
+    "colors": 6,
+    "total": 19
+  },
+  "hero": "/data/brand-model-images/4w-galleries/toyota/hyryder/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/toyota/hyryder/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/toyota/hyryder/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/toyota/hyryder/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/toyota/hyryder/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/toyota/hyryder/exterior/06.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/toyota/hyryder/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/toyota/hyryder/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/toyota/hyryder/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/toyota/hyryder/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/toyota/hyryder/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/toyota/hyryder/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/toyota/hyryder/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/toyota/hyryder/interior/08.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "Enticing Silver",
+    "Speedy Blue",
+    "Cafe White With Midnight Black",
+    "Gaming Grey",
+    "Enticing Silver With Midnight Black",
+    "Speedy Blue With Midnight Black"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/toyota/hyryder/colors/enticing-silver.avif",
+    "/data/brand-model-images/4w-galleries/toyota/hyryder/colors/speedy-blue.avif",
+    "/data/brand-model-images/4w-galleries/toyota/hyryder/colors/cafe-white-with-midnight-black.avif",
+    "/data/brand-model-images/4w-galleries/toyota/hyryder/colors/gaming-grey.avif",
+    "/data/brand-model-images/4w-galleries/toyota/hyryder/colors/enticing-silver-with-midnight-black.avif",
+    "/data/brand-model-images/4w-galleries/toyota/hyryder/colors/speedy-blue-with-midnight-black.avif"
+  ]
+}

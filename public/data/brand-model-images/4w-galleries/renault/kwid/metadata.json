@@ -1,0 +1,53 @@
+{
+  "make": "renault",
+  "model": "Kwid",
+  "brandSlug": "renault",
+  "modelSlug": "kwid",
+  "sourceUrl": "https://www.cardekho.com/renault/kwid",
+  "scrapedAt": "2026-04-20T05:04:24.470Z",
+  "counts": {
+    "exterior": 6,
+    "interior": 8,
+    "feature": 0,
+    "colors": 7,
+    "total": 21
+  },
+  "hero": "/data/brand-model-images/4w-galleries/renault/kwid/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/renault/kwid/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/renault/kwid/exterior/02.avif",
+    "/data/brand-model-images/4w-galleries/renault/kwid/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/renault/kwid/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/renault/kwid/exterior/07.avif",
+    "/data/brand-model-images/4w-galleries/renault/kwid/exterior/08.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/renault/kwid/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/renault/kwid/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/renault/kwid/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/renault/kwid/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/renault/kwid/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/renault/kwid/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/renault/kwid/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/renault/kwid/interior/08.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "Fiery Red Dual Tone",
+    "Metal Mustard Black Roof",
+    "Moonlight Silver With Black Roof",
+    "Moonlight Silver",
+    "Zanskar Blue",
+    "Zanskar Blue Black Roof",
+    "Ice Cool White With Black Roof"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/renault/kwid/colors/fiery-red-dual-tone.avif",
+    "/data/brand-model-images/4w-galleries/renault/kwid/colors/metal-mustard-black-roof.avif",
+    "/data/brand-model-images/4w-galleries/renault/kwid/colors/moonlight-silver-with-black-roof.avif",
+    "/data/brand-model-images/4w-galleries/renault/kwid/colors/moonlight-silver.avif",
+    "/data/brand-model-images/4w-galleries/renault/kwid/colors/zanskar-blue.avif",
+    "/data/brand-model-images/4w-galleries/renault/kwid/colors/zanskar-blue-black-roof.avif",
+    "/data/brand-model-images/4w-galleries/renault/kwid/colors/ice-cool-white-with-black-roof.avif"
+  ]
+}

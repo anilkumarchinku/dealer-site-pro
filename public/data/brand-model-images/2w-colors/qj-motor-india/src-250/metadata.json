@@ -1,0 +1,25 @@
+{
+  "brand": "QJ Motor India",
+  "model": "SRC 250",
+  "brandId": "qj-motor-india",
+  "makeSlug": "qjmotor-bikes",
+  "modelSlug": "src-250",
+  "sourceUrl": "https://www.bikewale.com/qjmotor-bikes/src-250/colours/",
+  "scrapedAt": "2026-04-20T05:19:00.671Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/qj-motor-select-model-silver-1682056906166.png?q=100",
+  "colors": [
+    {
+      "name": "Silver",
+      "image": "/data/brand-model-images/2w-colors/qj-motor-india/src-250/silver.png"
+    },
+    {
+      "name": "Red",
+      "image": "/data/brand-model-images/2w-colors/qj-motor-india/src-250/red.png"
+    },
+    {
+      "name": "Black",
+      "image": "/data/brand-model-images/2w-colors/qj-motor-india/src-250/black.avif"
+    }
+  ]
+}

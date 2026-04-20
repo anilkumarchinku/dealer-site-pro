@@ -1,0 +1,33 @@
+{
+  "brand": "Jawa Motorcycles",
+  "model": "Jawa 42 FJ",
+  "brandId": "jawa-motorcycles",
+  "makeSlug": "jawa-bikes",
+  "modelSlug": "42-fj",
+  "sourceUrl": "https://www.bikewale.com/jawa-bikes/42-fj/colours/",
+  "scrapedAt": "2026-04-20T05:16:36.389Z",
+  "count": 5,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/u6607eb_1768519.jpg?q=100",
+  "colors": [
+    {
+      "name": "Cosmo Blue Matte",
+      "image": "/data/brand-model-images/2w-colors/jawa-motorcycles/42-fj/cosmo-blue-matte.avif"
+    },
+    {
+      "name": "Mystique Copper",
+      "image": "/data/brand-model-images/2w-colors/jawa-motorcycles/42-fj/mystique-copper.avif"
+    },
+    {
+      "name": "Deep Black Matte Black Clad",
+      "image": "/data/brand-model-images/2w-colors/jawa-motorcycles/42-fj/deep-black-matte-black-clad.avif"
+    },
+    {
+      "name": "Deep Black Matte Red Clad",
+      "image": "/data/brand-model-images/2w-colors/jawa-motorcycles/42-fj/deep-black-matte-red-clad.avif"
+    },
+    {
+      "name": "Aurora Green Matte",
+      "image": "/data/brand-model-images/2w-colors/jawa-motorcycles/42-fj/aurora-green-matte.avif"
+    }
+  ]
+}

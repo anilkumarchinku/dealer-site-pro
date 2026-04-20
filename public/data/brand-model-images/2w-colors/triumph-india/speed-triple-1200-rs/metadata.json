@@ -1,0 +1,29 @@
+{
+  "brand": "Triumph India",
+  "model": "Speed Triple 1200 RS",
+  "brandId": "triumph-india",
+  "makeSlug": "triumph-bikes",
+  "modelSlug": "speed-triple-1200-rs",
+  "sourceUrl": "https://www.bikewale.com/triumph-bikes/speed-triple-1200-rs/colours/",
+  "scrapedAt": "2026-04-20T05:17:47.320Z",
+  "count": 4,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/ql4m7gb_1850006.jpg?q=100",
+  "colors": [
+    {
+      "name": "Granite / Triumph Performance Yellow",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/speed-triple-1200-rs/granite-triumph-performance-yellow.avif"
+    },
+    {
+      "name": "Granite / Diablo Red",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/speed-triple-1200-rs/granite-diablo-red.avif"
+    },
+    {
+      "name": "Jet Black",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/speed-triple-1200-rs/jet-black.avif"
+    },
+    {
+      "name": "Triumph Performance Yellow",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/speed-triple-1200-rs/triumph-performance-yellow.avif"
+    }
+  ]
+}

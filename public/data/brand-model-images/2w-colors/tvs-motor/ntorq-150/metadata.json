@@ -1,0 +1,29 @@
+{
+  "brand": "TVS Motor Company",
+  "model": "Ntorq 150",
+  "brandId": "tvs-motor",
+  "makeSlug": "tvs-bikes",
+  "modelSlug": "ntorq-150",
+  "sourceUrl": "https://www.bikewale.com/tvs-bikes/ntorq-150/colours/",
+  "scrapedAt": "2026-04-20T06:07:49.086Z",
+  "count": 4,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/i4v09hb_1868429.jpg?q=100",
+  "colors": [
+    {
+      "name": "Nitro Green",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/ntorq-150/nitro-green.avif"
+    },
+    {
+      "name": "Racing Red",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/ntorq-150/racing-red.avif"
+    },
+    {
+      "name": "Turbo Blue",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/ntorq-150/turbo-blue.avif"
+    },
+    {
+      "name": "Stealth Silver",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/ntorq-150/stealth-silver.avif"
+    }
+  ]
+}

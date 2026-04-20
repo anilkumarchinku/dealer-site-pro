@@ -1,0 +1,25 @@
+{
+  "brand": "Aprilia India",
+  "model": "RS 660",
+  "brandId": "aprilia-india",
+  "makeSlug": "aprilia-bikes",
+  "modelSlug": "rs-660",
+  "sourceUrl": "https://www.bikewale.com/aprilia-bikes/rs-660/colours/",
+  "scrapedAt": "2026-04-20T05:17:11.082Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/aprilia-select-model-tribute-1713330941419.png?q=100",
+  "colors": [
+    {
+      "name": "Tribute",
+      "image": "/data/brand-model-images/2w-colors/aprilia-india/rs-660/tribute.png"
+    },
+    {
+      "name": "Acid Gold",
+      "image": "/data/brand-model-images/2w-colors/aprilia-india/rs-660/acid-gold.png"
+    },
+    {
+      "name": "Racing Black",
+      "image": "/data/brand-model-images/2w-colors/aprilia-india/rs-660/racing-black.png"
+    }
+  ]
+}

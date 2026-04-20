@@ -1,0 +1,25 @@
+{
+  "brand": "Honda Motorcycle & Scooter India",
+  "model": "Livo",
+  "brandId": "honda-hmsi",
+  "makeSlug": "honda-bikes",
+  "modelSlug": "livo",
+  "sourceUrl": "https://www.bikewale.com/honda-bikes/livo/colours/",
+  "scrapedAt": "2026-04-20T05:15:23.773Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/1p9oigb_1845546.jpg?q=100",
+  "colors": [
+    {
+      "name": "Pearl Siren Blue A (Geny Gray Shroud + Green Stripes)",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/livo/pearl-siren-blue-a-geny-gray-shroud-green-stripes.avif"
+    },
+    {
+      "name": "Pearl Igneous Black (Geny Gray Shroud + Blue Stripes)",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/livo/pearl-igneous-black-geny-gray-shroud-blue-stripes.avif"
+    },
+    {
+      "name": "Pearl Igneous Black (Pearl Igneous Black Shroud + Orange Stripes)",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/livo/pearl-igneous-black-pearl-igneous-black-shroud-orange-stripes.avif"
+    }
+  ]
+}

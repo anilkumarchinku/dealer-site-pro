@@ -1,0 +1,33 @@
+{
+  "brand": "Matter",
+  "model": "Aera 5000+",
+  "brandId": "matter",
+  "makeSlug": "matter-bikes",
+  "modelSlug": "aera",
+  "sourceUrl": "https://www.bikewale.com/matter-bikes/aera/colours/",
+  "scrapedAt": "2026-04-20T06:14:05.397Z",
+  "count": 5,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/matter-select-model-cosmic-blue-1688737115666.png?q=100",
+  "colors": [
+    {
+      "name": "Cosmic Blue",
+      "image": "/data/brand-model-images/2w-colors/matter/aera/cosmic-blue.png"
+    },
+    {
+      "name": "Cosmic Black",
+      "image": "/data/brand-model-images/2w-colors/matter/aera/cosmic-black.png"
+    },
+    {
+      "name": "Nord Grey",
+      "image": "/data/brand-model-images/2w-colors/matter/aera/nord-grey.png"
+    },
+    {
+      "name": "Blaze Red",
+      "image": "/data/brand-model-images/2w-colors/matter/aera/blaze-red.png"
+    },
+    {
+      "name": "Glacier White",
+      "image": "/data/brand-model-images/2w-colors/matter/aera/glacier-white.png"
+    }
+  ]
+}

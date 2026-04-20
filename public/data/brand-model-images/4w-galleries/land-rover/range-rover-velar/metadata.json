@@ -1,0 +1,48 @@
+{
+  "make": "land rover",
+  "model": "Range Rover Velar",
+  "brandSlug": "land-rover",
+  "modelSlug": "range-rover-velar",
+  "sourceUrl": "https://www.cardekho.com/land-rover/range-rover-velar",
+  "scrapedAt": "2026-04-20T05:03:46.212Z",
+  "counts": {
+    "exterior": 5,
+    "interior": 6,
+    "feature": 0,
+    "colors": 6,
+    "total": 17
+  },
+  "hero": "/data/brand-model-images/4w-galleries/land-rover/range-rover-velar/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-velar/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-velar/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-velar/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-velar/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-velar/exterior/06.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-velar/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-velar/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-velar/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-velar/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-velar/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-velar/interior/06.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "Batumi Gold DT",
+    "Ostuni Pearl White DT",
+    "Fuji White DT",
+    "Santorini Black",
+    "Arroios Grey DT",
+    "Varesine Blue DT"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-velar/colors/batumi-gold-dt.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-velar/colors/ostuni-pearl-white-dt.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-velar/colors/fuji-white-dt.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-velar/colors/santorini-black.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-velar/colors/arroios-grey-dt.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-velar/colors/varesine-blue-dt.avif"
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "brand": "Bounce Infinity",
+  "model": "E1",
+  "brandId": "bounce-infinity",
+  "makeSlug": "bounce-bikes",
+  "modelSlug": "infinity-e1",
+  "sourceUrl": "https://www.bikewale.com/bounce-bikes/infinity-e1/colours/",
+  "scrapedAt": "2026-04-20T06:15:59.435Z",
+  "count": 12,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/bounce-select-model-wild-brown-1708667372157.png?q=100",
+  "colors": [
+    {
+      "name": "Wild Brown",
+      "image": "/data/brand-model-images/2w-colors/bounce-infinity/infinity-e1/wild-brown.png"
+    },
+    {
+      "name": "Pearl White",
+      "image": "/data/brand-model-images/2w-colors/bounce-infinity/infinity-e1/pearl-white.png"
+    },
+    {
+      "name": "Sporty Red",
+      "image": "/data/brand-model-images/2w-colors/bounce-infinity/infinity-e1/sporty-red.png"
+    },
+    {
+      "name": "Comet Gray",
+      "image": "/data/brand-model-images/2w-colors/bounce-infinity/infinity-e1/comet-gray.png"
+    },
+    {
+      "name": "Sparkle Black",
+      "image": "/data/brand-model-images/2w-colors/bounce-infinity/infinity-e1/sparkle-black.png"
+    },
+    {
+      "name": "Pearl White (LE)",
+      "image": "/data/brand-model-images/2w-colors/bounce-infinity/infinity-e1/pearl-white-le.avif"
+    },
+    {
+      "name": "Sporty Red (LE)",
+      "image": "/data/brand-model-images/2w-colors/bounce-infinity/infinity-e1/sporty-red-le.avif"
+    },
+    {
+      "name": "Comet Gray (LE)",
+      "image": "/data/brand-model-images/2w-colors/bounce-infinity/infinity-e1/comet-gray-le.avif"
+    },
+    {
+      "name": "Sparkle Black (LE)",
+      "image": "/data/brand-model-images/2w-colors/bounce-infinity/infinity-e1/sparkle-black-le.avif"
+    },
+    {
+      "name": "Pearl White (Plus)",
+      "image": "/data/brand-model-images/2w-colors/bounce-infinity/infinity-e1/pearl-white-plus.avif"
+    },
+    {
+      "name": "Comet Gray (Plus)",
+      "image": "/data/brand-model-images/2w-colors/bounce-infinity/infinity-e1/comet-gray-plus.avif"
+    },
+    {
+      "name": "Sparkle Black (Plus)",
+      "image": "/data/brand-model-images/2w-colors/bounce-infinity/infinity-e1/sparkle-black-plus.avif"
+    }
+  ]
+}

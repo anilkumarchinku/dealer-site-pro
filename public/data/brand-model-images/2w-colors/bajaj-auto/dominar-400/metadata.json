@@ -1,0 +1,21 @@
+{
+  "brand": "Bajaj Auto",
+  "model": "Dominar 400",
+  "brandId": "bajaj-auto",
+  "makeSlug": "bajaj-bikes",
+  "modelSlug": "dominar-400",
+  "sourceUrl": "https://www.bikewale.com/bajaj-bikes/dominar-400/colours/",
+  "scrapedAt": "2026-04-20T06:07:46.869Z",
+  "count": 2,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/e4d888b_1927234.png?q=100",
+  "colors": [
+    {
+      "name": "Black",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/dominar-400/black.png"
+    },
+    {
+      "name": "Green",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/dominar-400/green.png"
+    }
+  ]
+}

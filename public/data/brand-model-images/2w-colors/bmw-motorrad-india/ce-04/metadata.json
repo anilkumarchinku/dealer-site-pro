@@ -1,0 +1,17 @@
+{
+  "brand": "BMW Motorrad India",
+  "model": "CE 04",
+  "brandId": "bmw-motorrad-india",
+  "makeSlug": "bmw-bikes",
+  "modelSlug": "ce-04",
+  "sourceUrl": "https://www.bikewale.com/bmw-bikes/ce-04/colours/",
+  "scrapedAt": "2026-04-20T05:18:36.017Z",
+  "count": 1,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/bmw-select-model-avantgarde-1721808292453.jpg?q=100",
+  "colors": [
+    {
+      "name": "Avantgarde",
+      "image": "/data/brand-model-images/2w-colors/bmw-motorrad-india/ce-04/avantgarde.avif"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "brand": "Harley-Davidson India",
+  "model": "Breakout",
+  "brandId": "harley-davidson-india",
+  "makeSlug": "harleydavidson-bikes",
+  "modelSlug": "breakout",
+  "sourceUrl": "https://www.bikewale.com/harleydavidson-bikes/breakout/colours/",
+  "scrapedAt": "2026-04-20T05:53:21.619Z",
+  "count": 5,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/apqeohb_1879371.jpg?q=100",
+  "colors": [
+    {
+      "name": "Midnight Firestorm",
+      "image": "/data/brand-model-images/2w-colors/harley-davidson-india/breakout/midnight-firestorm.avif"
+    },
+    {
+      "name": "Brilliant Red",
+      "image": "/data/brand-model-images/2w-colors/harley-davidson-india/breakout/brilliant-red.avif"
+    },
+    {
+      "name": "Billiard Gray",
+      "image": "/data/brand-model-images/2w-colors/harley-davidson-india/breakout/billiard-gray.avif"
+    },
+    {
+      "name": "Vivid Black",
+      "image": "/data/brand-model-images/2w-colors/harley-davidson-india/breakout/vivid-black.avif"
+    },
+    {
+      "name": "Centerline",
+      "image": "/data/brand-model-images/2w-colors/harley-davidson-india/breakout/centerline.avif"
+    }
+  ]
+}

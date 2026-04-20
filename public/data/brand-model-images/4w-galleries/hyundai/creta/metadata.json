@@ -1,0 +1,60 @@
+{
+  "make": "hyundai",
+  "model": "Creta",
+  "brandSlug": "hyundai",
+  "modelSlug": "creta",
+  "sourceUrl": "https://www.cardekho.com/hyundai/creta",
+  "scrapedAt": "2026-04-20T06:16:53.934Z",
+  "counts": {
+    "exterior": 7,
+    "interior": 8,
+    "feature": 7,
+    "colors": 6,
+    "total": 28
+  },
+  "hero": "/data/brand-model-images/4w-galleries/hyundai/creta/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/hyundai/creta/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta/exterior/06.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta/exterior/07.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta/exterior/08.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/hyundai/creta/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta/interior/08.avif"
+  ],
+  "feature": [
+    "/data/brand-model-images/4w-galleries/hyundai/creta/feature/01.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta/feature/02.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta/feature/03.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta/feature/04.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta/feature/05.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta/feature/06.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta/feature/07.avif"
+  ],
+  "colorNames": [
+    "Robust Emerald Pearl",
+    "Black Matte",
+    "Starry Night",
+    "Atlas White",
+    "Atlas White With Abyss Black",
+    "Titan Grey"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/hyundai/creta/colors/robust-emerald-pearl.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta/colors/black-matte.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta/colors/starry-night.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta/colors/atlas-white.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta/colors/atlas-white-with-abyss-black.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta/colors/titan-grey.avif"
+  ]
+}

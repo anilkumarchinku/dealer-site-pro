@@ -1,0 +1,33 @@
+{
+  "brand": "Tork Motors",
+  "model": "Kratos R",
+  "brandId": "tork-motors",
+  "makeSlug": "tork-bikes",
+  "modelSlug": "kratos",
+  "sourceUrl": "https://www.bikewale.com/tork-bikes/kratos/colours/",
+  "scrapedAt": "2026-04-20T06:12:23.847Z",
+  "count": 5,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/tork-select-model-black-1697698905411.png?q=100",
+  "colors": [
+    {
+      "name": "Black",
+      "image": "/data/brand-model-images/2w-colors/tork-motors/kratos/black.png"
+    },
+    {
+      "name": "Red",
+      "image": "/data/brand-model-images/2w-colors/tork-motors/kratos/red.png"
+    },
+    {
+      "name": "Blue",
+      "image": "/data/brand-model-images/2w-colors/tork-motors/kratos/blue.png"
+    },
+    {
+      "name": "White",
+      "image": "/data/brand-model-images/2w-colors/tork-motors/kratos/white.png"
+    },
+    {
+      "name": "Jet Black",
+      "image": "/data/brand-model-images/2w-colors/tork-motors/kratos/jet-black.png"
+    }
+  ]
+}

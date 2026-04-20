@@ -1,0 +1,46 @@
+{
+  "make": "bmw",
+  "model": "i4",
+  "brandSlug": "bmw",
+  "modelSlug": "i4",
+  "sourceUrl": "https://www.cardekho.com/bmw/i4",
+  "scrapedAt": "2026-04-20T06:30:31.808Z",
+  "counts": {
+    "exterior": 5,
+    "interior": 8,
+    "feature": 0,
+    "colors": 4,
+    "total": 17
+  },
+  "hero": "/data/brand-model-images/4w-galleries/bmw/i4/exterior/01.avif",
+  "exterior": [
+    "/data/brand-model-images/4w-galleries/bmw/i4/exterior/01.avif",
+    "/data/brand-model-images/4w-galleries/bmw/i4/exterior/03.avif",
+    "/data/brand-model-images/4w-galleries/bmw/i4/exterior/04.avif",
+    "/data/brand-model-images/4w-galleries/bmw/i4/exterior/05.avif",
+    "/data/brand-model-images/4w-galleries/bmw/i4/exterior/06.avif"
+  ],
+  "interior": [
+    "/data/brand-model-images/4w-galleries/bmw/i4/interior/01.avif",
+    "/data/brand-model-images/4w-galleries/bmw/i4/interior/02.avif",
+    "/data/brand-model-images/4w-galleries/bmw/i4/interior/03.avif",
+    "/data/brand-model-images/4w-galleries/bmw/i4/interior/04.avif",
+    "/data/brand-model-images/4w-galleries/bmw/i4/interior/05.avif",
+    "/data/brand-model-images/4w-galleries/bmw/i4/interior/06.avif",
+    "/data/brand-model-images/4w-galleries/bmw/i4/interior/07.avif",
+    "/data/brand-model-images/4w-galleries/bmw/i4/interior/08.avif"
+  ],
+  "feature": [],
+  "colorNames": [
+    "Brooklyn Grey Metallic",
+    "Mineral White",
+    "Portimao Blue Metallic",
+    "Black Sapphire"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/bmw/i4/colors/brooklyn-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/i4/colors/mineral-white.avif",
+    "/data/brand-model-images/4w-galleries/bmw/i4/colors/portimao-blue-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/i4/colors/black-sapphire.avif"
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "brand": "TVS Motor Company",
+  "model": "Radeon",
+  "brandId": "tvs-motor",
+  "makeSlug": "tvs-bikes",
+  "modelSlug": "radeon",
+  "sourceUrl": "https://www.bikewale.com/tvs-bikes/radeon/colours/",
+  "scrapedAt": "2026-04-20T06:07:36.755Z",
+  "count": 8,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/0n7dueb_1779435.jpg?q=100",
+  "colors": [
+    {
+      "name": "Metal Black",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/radeon/metal-black.avif"
+    },
+    {
+      "name": "All Black",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/radeon/all-black.avif"
+    },
+    {
+      "name": "Titanium Grey",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/radeon/titanium-grey.avif"
+    },
+    {
+      "name": "Royal Purple",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/radeon/royal-purple.avif"
+    },
+    {
+      "name": "Starlight Blue",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/radeon/starlight-blue.avif"
+    },
+    {
+      "name": "Black",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/radeon/black.avif"
+    },
+    {
+      "name": "Blue and Black",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/radeon/blue-and-black.avif"
+    },
+    {
+      "name": "Red and Black",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/radeon/red-and-black.avif"
+    }
+  ]
+}

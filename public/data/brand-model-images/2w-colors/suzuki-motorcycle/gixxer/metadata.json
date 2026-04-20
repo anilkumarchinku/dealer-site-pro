@@ -1,0 +1,29 @@
+{
+  "brand": "Suzuki Motorcycle India",
+  "model": "Gixxer",
+  "brandId": "suzuki-motorcycle",
+  "makeSlug": "suzuki-bikes",
+  "modelSlug": "gixxer",
+  "sourceUrl": "https://www.bikewale.com/suzuki-bikes/gixxer/colours/",
+  "scrapedAt": "2026-04-20T05:16:10.876Z",
+  "count": 4,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/7mqvnhb_1879191.avif?q=100",
+  "colors": [
+    {
+      "name": "Grey and Red",
+      "image": "/data/brand-model-images/2w-colors/suzuki-motorcycle/gixxer/grey-and-red.avif"
+    },
+    {
+      "name": "Glass Sparkle Black",
+      "image": "/data/brand-model-images/2w-colors/suzuki-motorcycle/gixxer/glass-sparkle-black.avif"
+    },
+    {
+      "name": "Met Oort Gray and Met Lush Green",
+      "image": "/data/brand-model-images/2w-colors/suzuki-motorcycle/gixxer/met-oort-gray-and-met-lush-green.avif"
+    },
+    {
+      "name": "Met Triton Blue and Pearl Glacier White",
+      "image": "/data/brand-model-images/2w-colors/suzuki-motorcycle/gixxer/met-triton-blue-and-pearl-glacier-white.avif"
+    }
+  ]
+}

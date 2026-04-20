@@ -1,0 +1,33 @@
+{
+  "brand": "BMW Motorrad India",
+  "model": "G 310 RR",
+  "brandId": "bmw-motorrad-india",
+  "makeSlug": "bmw-bikes",
+  "modelSlug": "g310-rr",
+  "sourceUrl": "https://www.bikewale.com/bmw-bikes/g310-rr/colours/",
+  "scrapedAt": "2026-04-20T05:18:14.715Z",
+  "count": 5,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/jy4q9gb_1842056.avif?q=100",
+  "colors": [
+    {
+      "name": "Racing Blue Metallic",
+      "image": "/data/brand-model-images/2w-colors/bmw-motorrad-india/g310-rr/racing-blue-metallic.avif"
+    },
+    {
+      "name": "Cosmic Black 2",
+      "image": "/data/brand-model-images/2w-colors/bmw-motorrad-india/g310-rr/cosmic-black-2.avif"
+    },
+    {
+      "name": "Light White Uni, Racing Blue Metallic and Racing R",
+      "image": "/data/brand-model-images/2w-colors/bmw-motorrad-india/g310-rr/light-white-uni-racing-blue-metallic-and-racing-r.avif"
+    },
+    {
+      "name": "Polar White (LE)",
+      "image": "/data/brand-model-images/2w-colors/bmw-motorrad-india/g310-rr/polar-white-le.avif"
+    },
+    {
+      "name": "Cosmic Black (LE)",
+      "image": "/data/brand-model-images/2w-colors/bmw-motorrad-india/g310-rr/cosmic-black-le.avif"
+    }
+  ]
+}

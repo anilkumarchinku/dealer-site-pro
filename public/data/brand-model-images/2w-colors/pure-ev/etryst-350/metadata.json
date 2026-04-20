@@ -1,0 +1,25 @@
+{
+  "brand": "Pure EV",
+  "model": "Etryst 350",
+  "brandId": "pure-ev",
+  "makeSlug": "pureev-bikes",
+  "modelSlug": "etryst-350",
+  "sourceUrl": "https://www.bikewale.com/pureev-bikes/etryst-350/colours/",
+  "scrapedAt": "2026-04-20T06:12:25.900Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/pure-ev-select-model-black-1711112848627.png?q=100",
+  "colors": [
+    {
+      "name": "Black",
+      "image": "/data/brand-model-images/2w-colors/pure-ev/etryst-350/black.png"
+    },
+    {
+      "name": "Blue",
+      "image": "/data/brand-model-images/2w-colors/pure-ev/etryst-350/blue.png"
+    },
+    {
+      "name": "Red",
+      "image": "/data/brand-model-images/2w-colors/pure-ev/etryst-350/red.png"
+    }
+  ]
+}
