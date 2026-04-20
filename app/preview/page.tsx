@@ -245,6 +245,12 @@ function PreviewContent() {
         return () => { isMounted = false; };
     }, [primaryBrand, dealerId, is2W, is3W]);
 
+    // Page load animation
+    const { showAnimation, isReady } = useTemplatePageAnimation(primaryBrand as any, templateId);
+
+    // Preview banner state
+    const [isBannerExpanded, setIsBannerExpanded] = useState(false);
+
     if (livePreviewPath) {
         return (
             <div className="min-h-screen bg-background flex items-center justify-center px-6">
@@ -258,12 +264,6 @@ function PreviewContent() {
             </div>
         );
     }
-
-    // Page load animation
-    const { showAnimation, isReady } = useTemplatePageAnimation(primaryBrand as any, templateId);
-
-    // Preview banner state
-    const [isBannerExpanded, setIsBannerExpanded] = useState(false);
 
     // Contact info from store or defaults
     const contactInfo = {

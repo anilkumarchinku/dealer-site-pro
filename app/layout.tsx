@@ -1,14 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { PWAProvider } from "@/components/PWAProvider";
 import '@/lib/env' // Validate required env vars at startup (throws in production if missing)
-
-const inter = Inter({
-    subsets: ["latin"],
-    variable: "--font-inter",
-});
 
 export const metadata: Metadata = {
     title: "DealerSite Pro - Professional Dealership Websites",
@@ -35,7 +29,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en" suppressHydrationWarning>
-            <body className={`${inter.variable} font-sans antialiased`}>
+            <body className="font-sans antialiased">
                 <PWAProvider />
                 <ThemeProvider>
                     <div className="min-h-screen gradient-bg">
