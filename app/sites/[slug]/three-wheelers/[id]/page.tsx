@@ -62,8 +62,8 @@ export default function ThreeWheelerDetailPage() {
     return (
         <div className="min-h-screen max-w-5xl mx-auto px-4 py-8">
             <div className="mb-6">
-                <Link href={`${prefix}/three-wheelers`} className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-                    <ChevronLeft className="w-4 h-4" /> Back
+                <Link href={prefix || "/"} className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+                    <ChevronLeft className="w-4 h-4" /> Back to Home
                 </Link>
             </div>
 

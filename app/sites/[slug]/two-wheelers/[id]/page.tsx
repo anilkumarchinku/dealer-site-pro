@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect, useMemo, useState } from "react"
 import { useParams } from "next/navigation"
 import { supabase } from "@/lib/supabase"
 import { VehicleDetailGallery } from "@/components/two-wheelers/VehicleDetailGallery"
@@ -31,6 +31,7 @@ export default function VehicleDetailPage() {
     const [leadTitle,   setLeadTitle]   = useState("")
     const [leadOpen,    setLeadOpen]    = useState(false)
     const [bookingOpen, setBookingOpen] = useState(false)
+    const [selectedColor, setSelectedColor] = useState("")
 
     useEffect(() => {
         if (!slug || !id) return
@@ -47,6 +48,11 @@ export default function VehicleDetailPage() {
         load()
     }, [slug, id])
 
+    useEffect(() => {
+        if (!vehicle) return
+        setSelectedColor(vehicle.colors[0]?.name ?? "")
+    }, [vehicle])
+
     function openLead(type: TwoWheelerLeadType, title: string) {
         setLeadType(type)
         setLeadTitle(title)
@@ -58,19 +64,32 @@ export default function VehicleDetailPage() {
 
     const price  = (vehicle.ex_showroom_price_paise / 100)
     const priceF = price.toLocaleString("en-IN")
+    const selectedColorImage = vehicle.colors.find(color => color.name === selectedColor)?.image ?? null
+    const galleryImages = useMemo(
+        () => Array.from(new Set([
+            selectedColorImage ?? '',
+            ...vehicle.images,
+        ].filter(Boolean))),
+        [selectedColorImage, vehicle.images]
+    )
 
     return (
         <div className="min-h-screen max-w-5xl mx-auto px-4 py-8">
             <div className="mb-6">
-                <Link href={`${prefix}/two-wheelers/${vehicle.type === 'electric' ? 'electric' : `${vehicle.type}s`}`} className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-                    <ChevronLeft className="w-4 h-4" /> Back
+                <Link href={prefix || "/"} className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
+                    <ChevronLeft className="w-4 h-4" /> Back to Home
                 </Link>
             </div>
 
             <div className="grid md:grid-cols-2 gap-8">
                 {/* Gallery */}
                 <div>
-                    <VehicleDetailGallery images={vehicle.images} alt={`${vehicle.brand} ${vehicle.model}`} brand={vehicle.brand} model={vehicle.model} />
+                    <VehicleDetailGallery
+                        images={galleryImages}
+                        alt={`${vehicle.brand} ${vehicle.model}`}
+                        brand={vehicle.brand}
+                        model={vehicle.model}
+                    />
                 </div>
 
                 {/* Info */}
@@ -199,12 +218,26 @@ export default function VehicleDetailPage() {
                     <h2 className="text-xl font-bold mb-3">Available Colors</h2>
                     <div className="flex flex-wrap gap-3">
                         {vehicle.colors.map(color => (
-                            <div key={color.name} className="flex items-center gap-2 rounded-xl border border-border bg-white px-3 py-2">
+                            <button
+                                key={color.name}
+                                type="button"
+                                onClick={() => setSelectedColor(color.name)}
+                                className={`flex items-center gap-2 rounded-xl border px-3 py-2 transition-colors ${
+                                    selectedColor === color.name
+                                        ? "border-primary bg-primary/5"
+                                        : "border-border bg-white"
+                                }`}
+                            >
                                 <span className="h-5 w-5 rounded-full border border-gray-200" style={{ backgroundColor: color.hex }} />
                                 <span className="text-sm font-medium">{color.name}</span>
-                            </div>
+                            </button>
                         ))}
                     </div>
+                    {selectedColor && (
+                        <p className="mt-3 text-sm text-muted-foreground">
+                            Selected color: <span className="font-medium text-foreground">{selectedColor}</span>
+                        </p>
+                    )}
                 </section>
             )}
 
