@@ -30,7 +30,8 @@ import {
     Bus,
     Crown,
     CircleDot,
-    Mountain
+    Mountain,
+    Bike,
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
@@ -137,6 +138,10 @@ export default function WelcomeClient({ cars }: WelcomeClientProps) {
                         <div className="flex items-center gap-3">
                             <Button variant="ghost" size="sm" onClick={() => router.push('/cars')} className="hidden sm:flex">
                                 Browse Cars
+                            </Button>
+                            <Button variant="ghost" size="sm" onClick={() => router.push('/marketplace?category=two_three_wheeler')} className="hidden md:flex items-center gap-1.5">
+                                <Bike className="w-4 h-4" />
+                                2W / 3W
                             </Button>
                             <ThemeToggle />
                             {mounted && (hasStarted || isComplete()) && (
@@ -430,6 +435,109 @@ export default function WelcomeClient({ cars }: WelcomeClientProps) {
                                 </Link>
                             );
                         })}
+                    </div>
+                </div>
+            </section>
+
+            {/* ── Two-Wheelers & Three-Wheelers ── */}
+            <section className="py-16 bg-muted/20 border-y border-border">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-10">
+                        <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-3">Beyond Cars</p>
+                        <h2 className="text-3xl font-bold text-foreground">Two-Wheelers & Three-Wheelers</h2>
+                        <p className="text-muted-foreground mt-2 max-w-xl mx-auto">
+                            Browse bikes, scooters, and auto-rickshaws from verified dealers across India
+                        </p>
+                    </div>
+
+                    {/* Two-Wheelers */}
+                    <div className="mb-10">
+                        <div className="flex items-center justify-between mb-5">
+                            <div className="flex items-center gap-2.5">
+                                <div className="w-9 h-9 rounded-xl bg-orange-500/10 flex items-center justify-center">
+                                    <Bike className="w-5 h-5 text-orange-500" />
+                                </div>
+                                <div>
+                                    <h3 className="text-base font-bold text-foreground leading-tight">Two-Wheelers</h3>
+                                    <p className="text-xs text-muted-foreground">Bikes, Scooters & EVs</p>
+                                </div>
+                            </div>
+                            <Link href="/marketplace?category=two_three_wheeler">
+                                <Button variant="outline" size="sm" className="group text-xs h-8">
+                                    Browse All <ArrowRight className="ml-1 w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
+                                </Button>
+                            </Link>
+                        </div>
+                        <div className="grid grid-cols-5 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-10 gap-3">
+                            {[
+                                { name: 'Royal Enfield', logo: '/assets/logos/2w/royal-enfield.svg' },
+                                { name: 'Hero MotoCorp', logo: '/assets/logos/2w/hero-motocorp.svg' },
+                                { name: 'Bajaj Auto',    logo: '/assets/logos/2w/bajaj-auto.svg' },
+                                { name: 'TVS Motor',     logo: '/assets/logos/2w/tvs-motor.svg' },
+                                { name: 'Honda',         logo: '/assets/logos/2w/honda-motorcycles.svg' },
+                                { name: 'Yamaha',        logo: '/assets/logos/2w/yamaha.svg' },
+                                { name: 'KTM',           logo: '/assets/logos/2w/ktm.svg' },
+                                { name: 'Suzuki',        logo: '/assets/logos/2w/suzuki-motorcycle.svg' },
+                                { name: 'Triumph',       logo: '/assets/logos/2w/triumph.svg' },
+                                { name: 'Ather Energy',  logo: '/assets/logos/2w/ather-energy.svg' },
+                            ].map((brand) => (
+                                <Link
+                                    key={brand.name}
+                                    href={`/marketplace?category=two_three_wheeler&make=${encodeURIComponent(brand.name)}`}
+                                    className="flex flex-col items-center gap-1.5 p-2.5 rounded-xl hover:bg-card hover:shadow-md transition-all group"
+                                >
+                                    <div className="w-12 h-12 bg-card border border-border rounded-xl flex items-center justify-center group-hover:border-orange-200 transition-colors">
+                                        <Image
+                                            src={brand.logo}
+                                            alt={brand.name}
+                                            width={36}
+                                            height={36}
+                                            className="object-contain"
+                                        />
+                                    </div>
+                                    <span className="text-[10px] font-medium text-muted-foreground group-hover:text-foreground text-center leading-tight">{brand.name}</span>
+                                </Link>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Three-Wheelers */}
+                    <div className="bg-card rounded-2xl border border-border p-6">
+                        <div className="flex items-center justify-between mb-5">
+                            <div className="flex items-center gap-2.5">
+                                <div className="w-9 h-9 rounded-xl bg-green-500/10 flex items-center justify-center">
+                                    <span className="text-lg">🛺</span>
+                                </div>
+                                <div>
+                                    <h3 className="text-base font-bold text-foreground leading-tight">Three-Wheelers & Autos</h3>
+                                    <p className="text-xs text-muted-foreground">Auto-Rickshaws, E-Autos & Cargo</p>
+                                </div>
+                            </div>
+                            <Link href="/marketplace?category=two_three_wheeler">
+                                <Button variant="outline" size="sm" className="group text-xs h-8">
+                                    Browse All <ArrowRight className="ml-1 w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
+                                </Button>
+                            </Link>
+                        </div>
+                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
+                            {[
+                                { name: 'Bajaj Qute',     desc: 'Passenger Auto',  emoji: '🛺', color: 'bg-blue-500/8' },
+                                { name: 'TVS King',       desc: 'Cargo & Passenger', emoji: '🛺', color: 'bg-red-500/8' },
+                                { name: 'Mahindra Treo',  desc: 'Electric Auto',   emoji: '⚡', color: 'bg-green-500/8' },
+                                { name: 'Piaggio Ape',    desc: 'Cargo Vehicle',   emoji: '🚛', color: 'bg-amber-500/8' },
+                                { name: 'Atul Gemini',    desc: 'E-Rickshaw',      emoji: '🔋', color: 'bg-purple-500/8' },
+                            ].map((v) => (
+                                <Link
+                                    key={v.name}
+                                    href={`/marketplace?category=two_three_wheeler`}
+                                    className={`flex flex-col items-center gap-2 p-4 ${v.color} rounded-xl border border-border hover:shadow-md hover:-translate-y-0.5 transition-all text-center group`}
+                                >
+                                    <span className="text-3xl">{v.emoji}</span>
+                                    <p className="text-sm font-semibold text-foreground">{v.name}</p>
+                                    <p className="text-xs text-muted-foreground">{v.desc}</p>
+                                </Link>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </section>
