@@ -8,6 +8,15 @@ const nextConfig: NextConfig = {
     typescript: {
         ignoreBuildErrors: false,
     },
+    // Exclude large static image directories from serverless function bundles.
+    // These are served by Vercel's CDN as static assets — they must NOT be
+    // traced into the function, or it blows past the 300 MB limit.
+    outputFileTracingExcludes: {
+        '*': [
+            './public/data/brand-model-images/**',
+            './public/data/brand-logos/**',
+        ],
+    },
     images: {
         remotePatterns: [
             // Supabase Storage (vehicle images, dealer logos)
