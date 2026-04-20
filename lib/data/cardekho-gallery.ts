@@ -89,7 +89,15 @@ function normalizeUrl(url: string): string {
         .trim()
 }
 
-/** Deduplicate by a size-agnostic key so 630x420 and 930x620 of the same image collapse. */
+/**
+ * Deduplicate scraped image URLs.
+ * CardDekho serves the same photo under multiple paths:
+ *   .../930x620/Brand/Model/11503/1738922227482/rear-view.jpg
+ *   .../630x420/Brand/Model/11279/1722506862133/rear-view.jpg
+ * These are the same "rear-view.jpg" for the same Brand/Model but with
+ * different size prefixes AND different numeric IDs (model-year entries).
+ * We dedup by extracting just Brand/Model/filename, ignoring size and IDs.
+ */
 function uniqueUrls(values: string[]): string[] {
     const seen = new Set<string>()
     const output: string[] = []
@@ -97,8 +105,11 @@ function uniqueUrls(values: string[]): string[] {
     for (const value of values) {
         const normalized = normalizeUrl(value)
         if (!normalized.startsWith('https://stimg.cardekho.com/images/')) continue
-        // Build dedup key by stripping ALL size segments
-        const dedupKey = normalized.replace(/\/\d{3,4}x\d{3,4}\//g, '/')
+        // Strip size segments AND all-numeric path segments (IDs/timestamps)
+        // to get a stable key like ".../carexteriorimages/Brand/Model/rear-view.jpg"
+        // Uses split+filter because regex can't handle consecutive numeric segments
+        // (the shared "/" between /11503/1738922227482/ gets consumed by the first match)
+        const dedupKey = normalized.split('/').filter(seg => !/^\d+$/.test(seg) && !/^\d{3,4}x\d{3,4}$/.test(seg)).join('/')
         if (seen.has(dedupKey)) continue
         seen.add(dedupKey)
         output.push(normalized)
