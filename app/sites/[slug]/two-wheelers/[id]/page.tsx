@@ -109,35 +109,36 @@ export default function VehicleDetailPage() {
                 style={{ borderBottomColor: `${brandColor}25` }}
             >
                 <div className="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between gap-4">
-                    {/* Logo + dealer name → back to home */}
-                    <Link
-                        href={prefix || "/"}
-                        className="flex items-center gap-2.5 hover:opacity-80 transition-opacity min-w-0"
-                    >
-                        {dealerInfo?.logoUrl && (
-                            <div className="relative w-8 h-8 shrink-0">
-                                <Image
-                                    src={dealerInfo.logoUrl}
-                                    alt={dealerInfo.dealerName}
-                                    fill
-                                    className="object-contain"
-                                    sizes="32px"
-                                    onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
-                                />
-                            </div>
-                        )}
-                        <span className="font-semibold text-gray-900 text-sm truncate max-w-[180px] sm:max-w-xs">
-                            {dealerInfo?.dealerName ?? ''}
-                        </span>
-                    </Link>
-
-                    {/* Back link */}
+                    {/* Back link — LEFT */}
                     <Link
                         href={prefix || "/"}
                         className="inline-flex items-center gap-1 text-sm text-gray-500 hover:text-gray-900 shrink-0 transition-colors"
                     >
                         <ChevronLeft className="w-4 h-4" />
                         Back
+                    </Link>
+
+                    {/* Logo + dealer name — RIGHT → navigates home */}
+                    <Link
+                        href={prefix || "/"}
+                        className="flex items-center gap-2.5 hover:opacity-80 transition-opacity min-w-0"
+                    >
+                        <span className="font-semibold text-gray-900 text-sm truncate max-w-[160px] sm:max-w-xs">
+                            {dealerInfo?.dealerName ?? ''}
+                        </span>
+                        <div className="relative w-8 h-8 shrink-0">
+                            <Image
+                                src={
+                                    dealerInfo?.logoUrl ||
+                                    `/assets/logos/2w/${vehicle?.brand.toLowerCase().replace(/\s+/g, '-')}.svg`
+                                }
+                                alt={dealerInfo?.dealerName || vehicle?.brand || ''}
+                                fill
+                                className="object-contain"
+                                sizes="32px"
+                                onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
+                            />
+                        </div>
                     </Link>
                 </div>
             </header>
