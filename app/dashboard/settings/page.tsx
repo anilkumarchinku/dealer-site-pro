@@ -33,9 +33,10 @@ const NOTIFICATION_CONFIG: Record<string, { label: string; description: string }
 };
 
 export default function SettingsPage() {
-    const { data, updateData, dealerId } = useOnboardingStore();
+    const { data, updateData, dealerId, dealerSlug } = useOnboardingStore();
     const { theme } = useTheme();
     const router = useRouter();
+    const previewSlug = dealerSlug ?? data.slug ?? "";
 
     // ── Delete account state ──────────────────────────────────────────────────
     const [deleteConfirmText, setDeleteConfirmText] = useState("");
@@ -1514,7 +1515,7 @@ export default function SettingsPage() {
                                     ? `${data.subdomain}.dealersitepro.com`
                                     : "subdomain.dealersitepro.com"}
                             </div>
-                            <Link href="/preview" className="block">
+                            <Link href={previewSlug ? `/preview?slug=${encodeURIComponent(previewSlug)}` : "/preview"} className="block">
                                 <Button variant="outline" size="sm" className="w-full gap-2">
                                     <ExternalLink className="w-3.5 h-3.5" />
                                     Preview Website

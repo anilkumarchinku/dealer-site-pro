@@ -69,10 +69,11 @@ const priorityColors = {
 };
 
 export default function DashboardPage() {
-    const { data, dealerId, updateData } = useOnboardingStore();
+    const { data, dealerId, dealerSlug, updateData } = useOnboardingStore();
     const primaryBrand = data.brands?.[0] ?? "Maruti Suzuki";
     const isMultiBrand  = (data.brands?.length ?? 0) > 1;
     const isFirstHand   = data.sellsNewCars && !data.sellsUsedCars;
+    const previewSlug = dealerSlug ?? data.slug ?? "";
 
     const [showBrandPicker, setShowBrandPicker] = useState(false);
 
@@ -236,7 +237,7 @@ export default function DashboardPage() {
                                         {data.brands?.map(brand => (
                                             <Link
                                                 key={brand}
-                                                href={`/preview?brand=${encodeURIComponent(brand)}&template=${data.styleTemplate || "modern"}`}
+                                                href={`/preview?brand=${encodeURIComponent(brand)}&template=${data.styleTemplate || "modern"}${previewSlug ? `&slug=${encodeURIComponent(previewSlug)}` : ''}`}
                                                 onClick={() => setShowBrandPicker(false)}
                                             >
                                                 <div className="flex items-center gap-3 px-3 py-2.5 hover:bg-muted/50 cursor-pointer">
@@ -252,7 +253,7 @@ export default function DashboardPage() {
                             )}
                         </div>
                     ) : (
-                        <Link href={`/preview?brand=${encodeURIComponent(primaryBrand)}&template=${data.styleTemplate || "modern"}`}>
+                        <Link href={`/preview?brand=${encodeURIComponent(primaryBrand)}&template=${data.styleTemplate || "modern"}${previewSlug ? `&slug=${encodeURIComponent(previewSlug)}` : ''}`}>
                             <Button variant="outline" className="gap-2">
                                 <Eye className="w-4 h-4" />
                                 View Website

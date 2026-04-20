@@ -5,13 +5,13 @@
  * Renders the selected template with brand-specific colors and cars
  */
 
-import React, { useState, Suspense, useEffect } from 'react';
+import React, { useState, Suspense, useEffect, useMemo } from 'react';
 import { useOnboardingStore } from "@/lib/store/onboarding-store";
 import { getPrimaryBrand, automotiveBrands } from "@/lib/colors/automotive-brands";
 import type { TemplateStyle } from "@/lib/templates";
 import type { Car } from "@/lib/types/car";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { TemplatePageLoader, useTemplatePageAnimation } from "@/components/onboarding/TemplatePageLoader";
 import "@/components/onboarding/template-animations.css";
@@ -41,6 +41,8 @@ import { VINFAST_CARS } from "@/lib/data/vinfast-catalog";
 import type { TwoWheelerVehicle } from "@/lib/types/two-wheeler";
 import type { ThreeWheelerVehicle } from "@/lib/types/three-wheeler";
 import { brandNameToId } from "@/lib/utils/brand-model-images";
+import { brandToUrlSlug } from "@/lib/utils/domain";
+import { dedupeByBrandModel } from "@/lib/utils/listing-dedupe";
 
 // Map 2W vehicles to the Car shape expected by 4W templates
 function twoWheelersToCars(vehicles: TwoWheelerVehicle[]): import("@/lib/types/car").Car[] {
@@ -143,10 +145,13 @@ function threeWheelersToCars(vehicles: ThreeWheelerVehicle[]): import("@/lib/typ
 
 
 function PreviewContent() {
+    const router = useRouter();
     const { data, dealerSlug, dealerId } = useOnboardingStore();
     const searchParams = useSearchParams();
+    const urlSlug = searchParams.get('slug');
     const urlBrand = searchParams.get('brand');
     const urlTemplate = searchParams.get('template');
+    const effectiveDealerSlug = urlSlug || dealerSlug;
 
     // Use URL params if available, otherwise fallback to store data
     const effectiveBrands = urlBrand ? [urlBrand] : (data.brands || ["Toyota"]);
@@ -167,8 +172,35 @@ function PreviewContent() {
     const is3W = THREE_WHEELER_BRANDS.includes(primaryBrand)
     const vehicleCategory = is3W ? "3w" : is2W ? "2w" : "cars"
 
+    const livePreviewPath = useMemo(() => {
+        if (!effectiveDealerSlug) return null;
+
+        if (is2W) {
+            const base = `/sites/${effectiveDealerSlug}/two-wheelers/new`;
+            return urlBrand
+                ? `${base}?brand=${encodeURIComponent(brandToUrlSlug(urlBrand))}`
+                : base;
+        }
+
+        if (is3W) {
+            const base = `/sites/${effectiveDealerSlug}/three-wheelers/new`;
+            return urlBrand
+                ? `${base}?brand=${encodeURIComponent(brandToUrlSlug(urlBrand))}`
+                : base;
+        }
+
+        return urlBrand
+            ? `/sites/${effectiveDealerSlug}-${brandToUrlSlug(urlBrand)}`
+            : `/sites/${effectiveDealerSlug}`;
+    }, [effectiveDealerSlug, is2W, is3W, urlBrand]);
+
     const [displayCars, setDisplayCars] = useState<any[]>([]);
     const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        if (!livePreviewPath) return;
+        router.replace(livePreviewPath);
+    }, [livePreviewPath, router]);
 
     useEffect(() => {
         let isMounted = true;
@@ -177,10 +209,10 @@ function PreviewContent() {
             setIsLoading(true);
             try {
                 if (is2W) {
-                    const vehicles = getTwoWheelerCatalog(primaryBrand, dealerId || "preview-dealer")
+                    const vehicles = dedupeByBrandModel(getTwoWheelerCatalog(primaryBrand, dealerId || "preview-dealer"))
                     if (isMounted) setDisplayCars(twoWheelersToCars(vehicles))
                 } else if (is3W) {
-                    const vehicles = getThreeWheelerCatalog(primaryBrand, dealerId || "preview-dealer")
+                    const vehicles = dedupeByBrandModel(getThreeWheelerCatalog(primaryBrand, dealerId || "preview-dealer"))
                     if (isMounted) setDisplayCars(threeWheelersToCars(vehicles))
                 } else {
                     let cars: Car[] = []
@@ -212,6 +244,20 @@ function PreviewContent() {
 
         return () => { isMounted = false; };
     }, [primaryBrand, dealerId, is2W, is3W]);
+
+    if (livePreviewPath) {
+        return (
+            <div className="min-h-screen bg-background flex items-center justify-center px-6">
+                <div className="text-center space-y-3">
+                    <div className="mx-auto h-10 w-10 animate-spin rounded-full border-2 border-muted-foreground/20 border-t-primary" />
+                    <h1 className="text-lg font-semibold text-foreground">Opening live preview</h1>
+                    <p className="text-sm text-muted-foreground">
+                        Redirecting to the same generated site route customers will see.
+                    </p>
+                </div>
+            </div>
+        );
+    }
 
     // Page load animation
     const { showAnimation, isReady } = useTemplatePageAnimation(primaryBrand as any, templateId);

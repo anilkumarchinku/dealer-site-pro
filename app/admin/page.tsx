@@ -475,7 +475,14 @@ export default function AdminDashboard() {
 
             // Redirect user to preview
             setTimeout(() => {
-                router.push(`/preview?brand=${encodeURIComponent(selectedBrand)}&template=${selectedTemplate}`);
+                const previewParams = new URLSearchParams({
+                    brand: selectedBrand,
+                    template: selectedTemplate,
+                });
+                if (responseData.slug ?? selectedDealer.slug) {
+                    previewParams.set('slug', responseData.slug ?? selectedDealer.slug);
+                }
+                router.push(`/preview?${previewParams.toString()}`);
             }, 600);
 
         } catch (e) {
