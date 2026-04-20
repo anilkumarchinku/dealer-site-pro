@@ -99,7 +99,7 @@ export function FamilyTemplate({
             const slugPart = pathname.split('/')[2] ?? '';
             return `/sites/${slugPart}${typeSuffix}`;
         }
-        return typeSuffix;
+        return typeSuffix || '/cars';
     }, [pathname, vehicleType]);
     const SERVICE_LABELS: Record<string, { label: string; icon: string; desc: string }> = {
         new_car_sales: { label: vl.newVehicle, icon: '🚗', desc: vl.newVehicleDesc },
