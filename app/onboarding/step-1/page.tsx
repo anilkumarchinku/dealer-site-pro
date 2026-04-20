@@ -6,7 +6,8 @@ import { useOnboardingStore } from "@/lib/store/onboarding-store";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Loader2, CheckCircle, XCircle, Globe, Edit3, Check, Building2, Car } from "lucide-react";
+import { PhoneInput, validatePhone } from "@/components/ui/phone-input";
+import { ArrowRight, Loader2, CheckCircle, XCircle, Globe, Edit3, Check, Building2, Car, ExternalLink } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { BASE_DOMAIN, USE_SUBDOMAIN } from "@/lib/utils/domain";
 import type { Brand } from "@/lib/types";
@@ -22,6 +23,9 @@ function toSlug(value: string) {
         .replace(/^-+|-+$/g, '')
         .substring(0, 63);
 }
+
+// GSTIN pattern: 2-digit state code + 10-char PAN + 1 entity code + 1 Z + 1 check digit
+const GSTIN_REGEX = /^[0-9]{2}[A-Z]{5}[0-9]{4}[A-Z]{1}[1-9A-Z]{1}Z[0-9A-Z]{1}$/;
 
 const BRANDS: { name: Brand; logo: string }[] = [
     { name: "Maruti Suzuki",  logo: "/assets/logos/maruti-suzuki.png" },
@@ -72,7 +76,9 @@ export default function Step1Page() {
         mapLink:         data.mapLink || "",
         yearsInBusiness: data.yearsInBusiness?.toString() || "",
         phone:           data.phone || "",
+        phoneCountryCode: "+91",
         whatsapp:        data.whatsapp || "",
+        whatsappCountryCode: "+91",
         email:           data.email || "",
         gstin:           data.gstin || "",
     });
@@ -93,7 +99,10 @@ export default function Step1Page() {
 
     // Multiple branches state (1st hand / hybrid only)
     const [hasMultipleBranches, setHasMultipleBranches] = useState(data.hasMultipleBranches || false);
-    const [branches, setBranches] = useState(data.branches || [{ city: "", address: "", phone: "" }]);
+    const [branches, setBranches] = useState(
+        data.branches || [{ city: "", state: "", address: "", phone: "", phoneCountryCode: "+91" }]
+    );
+    const [branchErrors, setBranchErrors] = useState<Record<string, string>>({});
 
     // Auto-generate slug from dealership name
     useEffect(() => {
@@ -154,12 +163,44 @@ export default function Step1Page() {
         const newErrors: Record<string, string> = {};
         if (!formData.dealershipName.trim()) newErrors.dealershipName = "Dealership name is required";
         if (!formData.location.trim())       newErrors.location       = "Location is required";
-        if (!formData.phone.trim())          newErrors.phone          = "Phone number is required";
+
+        // Phone validation with country code
+        if (!formData.phone.trim()) {
+            newErrors.phone = "Phone number is required";
+        } else {
+            const phoneCheck = validatePhone(formData.phone, formData.phoneCountryCode);
+            if (!phoneCheck.valid) newErrors.phone = phoneCheck.error!;
+        }
+
         if (!formData.email.trim())          newErrors.email          = "Email is required";
         else if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = "Please enter a valid email";
+
+        // GSTIN validation (optional but must be valid if provided)
+        if (formData.gstin.trim() && !GSTIN_REGEX.test(formData.gstin.trim().toUpperCase())) {
+            newErrors.gstin = "Enter a valid 15-character GSTIN";
+        }
+
         if (!siteSlug)                       newErrors.siteSlug       = "Site name is required";
         if (slugStatus === "taken")          newErrors.siteSlug       = "This site name is already taken";
         if (slugStatus === "invalid")        newErrors.siteSlug       = slugError;
+
+        // Branch validation (when branches are enabled)
+        if (hasMultipleBranches) {
+            const bErrors: Record<string, string> = {};
+            branches.forEach((branch, idx) => {
+                if (!branch.city?.trim())    bErrors[`${idx}-city`]    = "City is required";
+                if (!branch.state?.trim())   bErrors[`${idx}-state`]   = "State is required";
+                if (!branch.address?.trim()) bErrors[`${idx}-address`] = "Address is required";
+                if (!branch.phone?.trim())   bErrors[`${idx}-phone`]   = "Phone is required";
+                else {
+                    const bPhoneCheck = validatePhone(branch.phone, branch.phoneCountryCode || "+91");
+                    if (!bPhoneCheck.valid)   bErrors[`${idx}-phone`]   = bPhoneCheck.error!;
+                }
+            });
+            setBranchErrors(bErrors);
+            if (Object.keys(bErrors).length > 0) newErrors._branches = "Please fix branch errors";
+        }
+
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
     };
@@ -177,6 +218,11 @@ export default function Step1Page() {
 
         setIsSubmitting(true);
         try {
+            const fullPhone = `${formData.phoneCountryCode}${formData.phone.replace(/\D/g, "")}`;
+            const fullWhatsapp = formData.whatsapp
+                ? `${formData.whatsappCountryCode}${formData.whatsapp.replace(/\D/g, "")}`
+                : fullPhone;
+
             updateData({
                 dealershipName:  formData.dealershipName,
                 tagline:         formData.tagline,
@@ -184,13 +230,18 @@ export default function Step1Page() {
                 fullAddress:     formData.fullAddress,
                 mapLink:         formData.mapLink,
                 yearsInBusiness: formData.yearsInBusiness ? parseInt(formData.yearsInBusiness) : null,
-                phone:           formData.phone,
-                whatsapp:        formData.whatsapp || formData.phone,
+                phone:           fullPhone,
+                whatsapp:        fullWhatsapp,
                 email:           formData.email,
-                gstin:           formData.gstin,
+                gstin:           formData.gstin.toUpperCase(),
                 slug:            siteSlug,
                 hasMultipleBranches: hasMultipleBranches,
-                branches: hasMultipleBranches ? branches.filter(b => b.city && b.address) : [],
+                branches: hasMultipleBranches
+                    ? branches.filter(b => b.city && b.address).map(b => ({
+                        ...b,
+                        phone: b.phone ? `${b.phoneCountryCode || "+91"}${b.phone.replace(/\D/g, "")}` : "",
+                    }))
+                    : [],
                 ...(isFirstHand && {
                     brands:        selectedBrands,
                     sellsNewCars:  true,
@@ -205,10 +256,8 @@ export default function Step1Page() {
             setStep(2);
 
             if (isFirstHand) {
-                // 1st hand: brands captured here — skip step-2, go straight to Services
                 router.push("/onboarding/step-3");
             } else {
-                // 2nd hand & hybrid → brand colours/logo for the used section
                 router.push("/onboarding/step-2-used");
             }
         } finally {
@@ -220,6 +269,13 @@ export default function Step1Page() {
 
     const urlPrefix = USE_SUBDOMAIN ? null             : `${BASE_DOMAIN}/sites/`
     const urlSuffix = USE_SUBDOMAIN ? `.${BASE_DOMAIN}` : null
+
+    // Build the full preview URL for the slug
+    const previewUrl = siteSlug
+        ? USE_SUBDOMAIN
+            ? `https://${siteSlug}.${BASE_DOMAIN}`
+            : `https://${BASE_DOMAIN}/sites/${siteSlug}`
+        : null;
 
     return (
         <Card className="animate-fade-in">
@@ -262,15 +318,16 @@ export default function Step1Page() {
                 <Input
                     label="Dealership Name"
                     placeholder="Kumar Motors"
+                    maxLength={50}
                     value={formData.dealershipName}
                     onChange={(e) => handleChange("dealershipName", e.target.value)}
                     error={errors.dealershipName}
-                    helperText="What's your business called?"
+                    helperText={`What's your business called? (${formData.dealershipName.length}/50)`}
                     required
                 />
 
-                {/* Site Name / Slug Picker */}
-                {siteSlug && (
+                {/* Site Name / Slug Picker — always visible when dealership name is set */}
+                {(siteSlug || formData.dealershipName.trim()) && (
                     <div className="space-y-2">
                         <label className="text-sm font-medium text-gray-700 dark:text-gray-200 flex items-center gap-2">
                             <Globe className="w-4 h-4" />
@@ -302,10 +359,16 @@ export default function Step1Page() {
                                     {urlSuffix}
                                 </span>
                             )}
-                            <div className="px-3">
+                            <div className="px-3 flex items-center gap-1.5">
                                 {slugStatus === "checking"  && <Loader2 className="w-4 h-4 animate-spin text-muted-foreground" />}
                                 {slugStatus === "available" && <CheckCircle className="w-4 h-4 text-emerald-500" />}
                                 {(slugStatus === "taken" || slugStatus === "invalid") && <XCircle className="w-4 h-4 text-red-500" />}
+                                {slugStatus === "available" && previewUrl && (
+                                    <a href={previewUrl} target="_blank" rel="noopener noreferrer"
+                                        className="text-muted-foreground hover:text-foreground" title="Preview site">
+                                        <ExternalLink className="w-3.5 h-3.5" />
+                                    </a>
+                                )}
                             </div>
                         </div>
 
@@ -344,7 +407,7 @@ export default function Step1Page() {
                             <p className="text-xs text-red-500">{errors.siteSlug}</p>
                         )}
 
-                        {isFirstHand && (
+                        {isFirstHand && siteSlug && (
                             <p className="text-xs text-muted-foreground flex items-center gap-1.5">
                                 <Edit3 className="w-3 h-3 shrink-0" />
                                 After picking brands, e.g.{" "}
@@ -362,10 +425,11 @@ export default function Step1Page() {
                 <Input
                     label="Location"
                     placeholder="Mumbai, Maharashtra"
+                    maxLength={200}
                     value={formData.location}
                     onChange={(e) => handleChange("location", e.target.value)}
                     error={errors.location}
-                    helperText="What city are you in?"
+                    helperText={`What city are you in? (${formData.location.length}/200)`}
                     required
                 />
 
@@ -405,44 +469,90 @@ export default function Step1Page() {
                                                 </button>
                                             )}
                                         </div>
-                                        <input
-                                            type="text"
-                                            placeholder="City, State"
-                                            value={branch.city}
-                                            onChange={(e) => {
-                                                const newBranches = [...branches];
-                                                newBranches[idx].city = e.target.value;
-                                                setBranches(newBranches);
-                                            }}
-                                            className="flex w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-                                        />
-                                        <textarea
-                                            placeholder="Full address (e.g., 123 Main St, Mumbai, MH 400001)"
-                                            value={branch.address}
-                                            onChange={(e) => {
-                                                const newBranches = [...branches];
-                                                newBranches[idx].address = e.target.value;
-                                                setBranches(newBranches);
-                                            }}
-                                            className="flex w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground min-h-[60px] placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-                                        />
-                                        <input
-                                            type="tel"
-                                            placeholder="Phone (optional)"
-                                            value={branch.phone || ""}
-                                            onChange={(e) => {
-                                                const newBranches = [...branches];
-                                                newBranches[idx].phone = e.target.value;
-                                                setBranches(newBranches);
-                                            }}
-                                            className="flex w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-                                        />
+                                        <div className="grid grid-cols-2 gap-2">
+                                            <div>
+                                                <input
+                                                    type="text"
+                                                    placeholder="City *"
+                                                    maxLength={50}
+                                                    value={branch.city}
+                                                    onChange={(e) => {
+                                                        const newBranches = [...branches];
+                                                        newBranches[idx] = { ...newBranches[idx], city: e.target.value };
+                                                        setBranches(newBranches);
+                                                    }}
+                                                    className={cn(
+                                                        "flex w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
+                                                        branchErrors[`${idx}-city`] && "border-red-500"
+                                                    )}
+                                                />
+                                                {branchErrors[`${idx}-city`] && <p className="text-xs text-red-500 mt-1">{branchErrors[`${idx}-city`]}</p>}
+                                            </div>
+                                            <div>
+                                                <input
+                                                    type="text"
+                                                    placeholder="State *"
+                                                    maxLength={50}
+                                                    value={branch.state || ""}
+                                                    onChange={(e) => {
+                                                        const newBranches = [...branches];
+                                                        newBranches[idx] = { ...newBranches[idx], state: e.target.value };
+                                                        setBranches(newBranches);
+                                                    }}
+                                                    className={cn(
+                                                        "flex w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
+                                                        branchErrors[`${idx}-state`] && "border-red-500"
+                                                    )}
+                                                />
+                                                {branchErrors[`${idx}-state`] && <p className="text-xs text-red-500 mt-1">{branchErrors[`${idx}-state`]}</p>}
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <textarea
+                                                placeholder="Full address * (e.g., 123 Main St, Mumbai, MH 400001)"
+                                                maxLength={150}
+                                                value={branch.address}
+                                                onChange={(e) => {
+                                                    const newBranches = [...branches];
+                                                    newBranches[idx] = { ...newBranches[idx], address: e.target.value };
+                                                    setBranches(newBranches);
+                                                }}
+                                                className={cn(
+                                                    "flex w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground min-h-[60px] placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
+                                                    branchErrors[`${idx}-address`] && "border-red-500"
+                                                )}
+                                            />
+                                            <div className="flex justify-between mt-1">
+                                                {branchErrors[`${idx}-address`]
+                                                    ? <p className="text-xs text-red-500">{branchErrors[`${idx}-address`]}</p>
+                                                    : <span />}
+                                                <p className="text-xs text-muted-foreground">{(branch.address || "").length}/150</p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <PhoneInput
+                                                value={branch.phone || ""}
+                                                countryCode={branch.phoneCountryCode || "+91"}
+                                                onValueChange={(v) => {
+                                                    const newBranches = [...branches];
+                                                    newBranches[idx] = { ...newBranches[idx], phone: v };
+                                                    setBranches(newBranches);
+                                                }}
+                                                onCountryCodeChange={(c) => {
+                                                    const newBranches = [...branches];
+                                                    newBranches[idx] = { ...newBranches[idx], phoneCountryCode: c };
+                                                    setBranches(newBranches);
+                                                }}
+                                                error={branchErrors[`${idx}-phone`]}
+                                                required
+                                            />
+                                        </div>
                                     </div>
                                 ))}
 
                                 <button
                                     type="button"
-                                    onClick={() => setBranches([...branches, { city: "", address: "", phone: "" }])}
+                                    onClick={() => setBranches([...branches, { city: "", state: "", address: "", phone: "", phoneCountryCode: "+91" }])}
                                     className="w-full text-sm text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium py-2 border border-dashed border-blue-300 dark:border-blue-600 rounded-md"
                                 >
                                     + Add Another Branch
@@ -455,18 +565,22 @@ export default function Step1Page() {
                 <Input
                     label="Years in Business"
                     placeholder="10"
-                    type="number"
+                    type="text"
+                    inputMode="numeric"
+                    maxLength={3}
                     value={formData.yearsInBusiness}
-                    onChange={(e) => handleChange("yearsInBusiness", e.target.value)}
+                    onChange={(e) => handleChange("yearsInBusiness", e.target.value.replace(/\D/g, "").slice(0, 3))}
                     helperText="How long have you been open? (Leave blank if new)"
                 />
 
-                <Input
+                {/* Phone Number with country code */}
+                <PhoneInput
+                    id="phone"
                     label="Phone Number"
-                    placeholder="+91 98765 43210"
-                    type="tel"
                     value={formData.phone}
-                    onChange={(e) => handleChange("phone", e.target.value)}
+                    countryCode={formData.phoneCountryCode}
+                    onValueChange={v => handleChange("phone", v)}
+                    onCountryCodeChange={c => setFormData(prev => ({ ...prev, phoneCountryCode: c }))}
                     error={errors.phone}
                     required
                 />
@@ -475,6 +589,7 @@ export default function Step1Page() {
                     label="Email"
                     placeholder="info@kumarmotors.in"
                     type="email"
+                    maxLength={100}
                     value={formData.email}
                     onChange={(e) => handleChange("email", e.target.value)}
                     error={errors.email}
@@ -485,16 +600,19 @@ export default function Step1Page() {
                     <Input
                         label="Tagline (Optional)"
                         placeholder="Driven by Trust"
+                        maxLength={50}
                         value={formData.tagline}
                         onChange={(e) => handleChange("tagline", e.target.value)}
-                        helperText="A short slogan for your brand"
+                        helperText={`A short slogan (${formData.tagline.length}/50)`}
                     />
                     <Input
                         label="GSTIN (Optional)"
                         placeholder="22AAAAA0000A1Z5"
+                        maxLength={15}
                         value={formData.gstin}
-                        onChange={(e) => handleChange("gstin", e.target.value)}
-                        helperText="Adds credibility to your site"
+                        onChange={(e) => handleChange("gstin", e.target.value.toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, 15))}
+                        error={errors.gstin}
+                        helperText="15 alphanumeric characters"
                     />
                 </div>
 
@@ -523,12 +641,14 @@ export default function Step1Page() {
                     />
                 </div>
 
-                <Input
+                {/* WhatsApp Number with country code */}
+                <PhoneInput
+                    id="whatsapp"
                     label="WhatsApp Number (Optional)"
-                    placeholder="Same as phone"
-                    type="tel"
                     value={formData.whatsapp}
-                    onChange={(e) => handleChange("whatsapp", e.target.value)}
+                    countryCode={formData.whatsappCountryCode}
+                    onValueChange={v => handleChange("whatsapp", v)}
+                    onCountryCodeChange={c => setFormData(prev => ({ ...prev, whatsappCountryCode: c }))}
                     helperText="For instant chat button on site"
                 />
 

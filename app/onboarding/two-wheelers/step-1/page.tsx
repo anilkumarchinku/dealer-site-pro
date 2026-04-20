@@ -5,9 +5,12 @@ import { useOnboardingStore } from "@/lib/store/onboarding-store";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, ArrowLeft, Loader2, CheckCircle, XCircle, Globe, Check, Search } from "lucide-react";
+import { PhoneInput, validatePhone } from "@/components/ui/phone-input";
+import { ArrowRight, ArrowLeft, Loader2, CheckCircle, XCircle, Globe, Check, Search, ExternalLink } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { BASE_DOMAIN, USE_SUBDOMAIN } from "@/lib/utils/domain";
+
+const GSTIN_REGEX = /^[0-9]{2}[A-Z]{5}[0-9]{4}[A-Z]{1}[1-9A-Z]{1}Z[0-9A-Z]{1}$/;
 import brandData from "@/lib/data/brand-models.json";
 
 function toSlug(value: string) {
@@ -46,7 +49,9 @@ export default function TwoWheelerStep1Page() {
         mapLink:         data.mapLink         || "",
         yearsInBusiness: data.yearsInBusiness?.toString() || "",
         phone:           data.phone           || "",
+        phoneCountryCode: "+91",
         whatsapp:        data.whatsapp        || "",
+        whatsappCountryCode: "+91",
         email:           data.email           || "",
         gstin:           data.gstin           || "",
     });
@@ -114,9 +119,17 @@ export default function TwoWheelerStep1Page() {
         const e: Record<string, string> = {};
         if (!formData.dealershipName.trim()) e.dealershipName = "Dealership name is required";
         if (!formData.location.trim())       e.location       = "Location is required";
-        if (!formData.phone.trim())          e.phone          = "Phone number is required";
+        if (!formData.phone.trim()) {
+            e.phone = "Phone number is required";
+        } else {
+            const phoneCheck = validatePhone(formData.phone, formData.phoneCountryCode);
+            if (!phoneCheck.valid) e.phone = phoneCheck.error!;
+        }
         if (!formData.email.trim())          e.email          = "Email is required";
         else if (!/\S+@\S+\.\S+/.test(formData.email)) e.email = "Please enter a valid email";
+        if (formData.gstin.trim() && !GSTIN_REGEX.test(formData.gstin.trim().toUpperCase())) {
+            e.gstin = "Enter a valid 15-character GSTIN";
+        }
         if (!siteSlug)                       e.siteSlug       = "Site name is required";
         if (slugStatus === "taken")          e.siteSlug       = "This site name is already taken";
         if (slugStatus === "invalid")        e.siteSlug       = slugError;
@@ -134,6 +147,10 @@ export default function TwoWheelerStep1Page() {
         }
         setIsSubmitting(true);
         try {
+            const fullPhone = `${formData.phoneCountryCode}${formData.phone.replace(/\D/g, "")}`;
+            const fullWhatsapp = formData.whatsapp
+                ? `${formData.whatsappCountryCode}${formData.whatsapp.replace(/\D/g, "")}`
+                : fullPhone;
             updateData({
                 dealershipName:  formData.dealershipName,
                 tagline:         formData.tagline,
@@ -141,10 +158,10 @@ export default function TwoWheelerStep1Page() {
                 fullAddress:     formData.fullAddress,
                 mapLink:         formData.mapLink,
                 yearsInBusiness: formData.yearsInBusiness ? parseInt(formData.yearsInBusiness) : null,
-                phone:           formData.phone,
-                whatsapp:        formData.whatsapp || formData.phone,
+                phone:           fullPhone,
+                whatsapp:        fullWhatsapp,
                 email:           formData.email,
-                gstin:           formData.gstin,
+                gstin:           formData.gstin.toUpperCase(),
                 slug:            siteSlug,
                 // eslint-disable-next-line @typescript-eslint/no-explicit-any
                 brands:          selectedBrands as any,
@@ -183,15 +200,16 @@ export default function TwoWheelerStep1Page() {
                 <Input
                     label="Dealership Name"
                     placeholder="Kumar Bikes"
+                    maxLength={50}
                     value={formData.dealershipName}
                     onChange={(e) => handleChange("dealershipName", e.target.value)}
                     error={errors.dealershipName}
-                    helperText="What's your business called?"
+                    helperText={`What's your business called? (${formData.dealershipName.length}/50)`}
                     required
                 />
 
-                {/* Slug Picker */}
-                {siteSlug && (
+                {/* Slug Picker — always visible when dealership name is set */}
+                {(siteSlug || formData.dealershipName.trim()) && (
                     <div className="space-y-2">
                         <label className="text-sm font-medium text-gray-700 dark:text-gray-200 flex items-center gap-2">
                             <Globe className="w-4 h-4" />
@@ -268,28 +286,32 @@ export default function TwoWheelerStep1Page() {
                 <Input
                     label="Location"
                     placeholder="Mumbai, Maharashtra"
+                    maxLength={200}
                     value={formData.location}
                     onChange={(e) => handleChange("location", e.target.value)}
                     error={errors.location}
-                    helperText="What city are you in?"
+                    helperText={`What city are you in? (${formData.location.length}/200)`}
                     required
                 />
 
                 <Input
                     label="Years in Business"
                     placeholder="5"
-                    type="number"
+                    type="text"
+                    inputMode="numeric"
+                    maxLength={3}
                     value={formData.yearsInBusiness}
-                    onChange={(e) => handleChange("yearsInBusiness", e.target.value)}
+                    onChange={(e) => handleChange("yearsInBusiness", e.target.value.replace(/\D/g, "").slice(0, 3))}
                     helperText="How long have you been open? (Leave blank if new)"
                 />
 
-                <Input
+                <PhoneInput
+                    id="phone"
                     label="Phone Number"
-                    placeholder="+91 98765 43210"
-                    type="tel"
                     value={formData.phone}
-                    onChange={(e) => handleChange("phone", e.target.value)}
+                    countryCode={formData.phoneCountryCode}
+                    onValueChange={v => handleChange("phone", v)}
+                    onCountryCodeChange={c => setFormData(prev => ({ ...prev, phoneCountryCode: c }))}
                     error={errors.phone}
                     required
                 />
@@ -298,6 +320,7 @@ export default function TwoWheelerStep1Page() {
                     label="Email"
                     placeholder="info@kumarbikes.in"
                     type="email"
+                    maxLength={100}
                     value={formData.email}
                     onChange={(e) => handleChange("email", e.target.value)}
                     error={errors.email}
@@ -308,14 +331,19 @@ export default function TwoWheelerStep1Page() {
                     <Input
                         label="Tagline (Optional)"
                         placeholder="Ride Your Dream"
+                        maxLength={50}
                         value={formData.tagline}
                         onChange={(e) => handleChange("tagline", e.target.value)}
+                        helperText={`${formData.tagline.length}/50`}
                     />
                     <Input
                         label="GSTIN (Optional)"
                         placeholder="22AAAAA0000A1Z5"
+                        maxLength={15}
                         value={formData.gstin}
-                        onChange={(e) => handleChange("gstin", e.target.value)}
+                        onChange={(e) => handleChange("gstin", e.target.value.toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, 15))}
+                        error={errors.gstin}
+                        helperText="15 alphanumeric characters"
                     />
                 </div>
 
@@ -339,12 +367,13 @@ export default function TwoWheelerStep1Page() {
                     helperText="Paste your location's share link here"
                 />
 
-                <Input
+                <PhoneInput
+                    id="whatsapp"
                     label="WhatsApp Number (Optional)"
-                    placeholder="Same as phone"
-                    type="tel"
                     value={formData.whatsapp}
-                    onChange={(e) => handleChange("whatsapp", e.target.value)}
+                    countryCode={formData.whatsappCountryCode}
+                    onValueChange={v => handleChange("whatsapp", v)}
+                    onCountryCodeChange={c => setFormData(prev => ({ ...prev, whatsappCountryCode: c }))}
                     helperText="For instant chat button on site"
                 />
 
