@@ -129,6 +129,11 @@ export function ModernTemplate({
     const [enquireSidebarOpen, setEnquireSidebarOpen] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [navEMIOpen, setNavEMIOpen] = useState(false);
+    const [activeFilters, setActiveFilters] = useState<{
+        make?: string[]; bodyType?: string[]; fuelType?: string[];
+        transmission?: string[]; year?: string[]; seating?: string[];
+        priceRange?: { min: number; max: number };
+    } | null>(null);
 
     // Lead form state
     const [formData, setFormData] = useState({ name: '', phone: '', email: '', message: '' });
@@ -147,6 +152,36 @@ export function ModernTemplate({
 
     // Show all cars
     const featuredCars = cars;
+
+    // Client-side filtered inventory (responds to CarFilters selections)
+    const filteredInventoryCars = useMemo(() => {
+        if (!activeFilters) return cars;
+        let result = cars;
+        const { make, bodyType, fuelType, transmission, year, seating, priceRange } = activeFilters;
+        if (make?.length) result = result.filter(c => make.includes(c.make));
+        if (bodyType?.length) result = result.filter(c => bodyType.includes(c.bodyType));
+        if (fuelType?.length) result = result.filter(c => fuelType.includes(c.engine.type));
+        if (transmission?.length) result = result.filter(c => transmission.includes(c.transmission.type));
+        if (year?.length) result = result.filter(c => year.includes(c.year.toString()));
+        if (seating?.length) result = result.filter(c => seating.includes(String(c.dimensions?.seatingCapacity ?? '')));
+        if (priceRange) result = result.filter(c => {
+            const p = c.pricing?.exShowroom?.min ?? 0;
+            return p >= priceRange.min && p <= priceRange.max;
+        });
+        return result;
+    }, [cars, activeFilters]);
+
+    // Navigate to a home-tab section — switches tab then smooth-scrolls
+    const navigateTo = (sectionId: string) => {
+        setActiveTab('home');
+        setTimeout(() => {
+            document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+        }, 150);
+    };
+    const mobileNavigateTo = (sectionId: string) => {
+        setMobileMenuOpen(false);
+        navigateTo(sectionId);
+    };
 
     // Rotate featured car
     useEffect(() => {
@@ -229,19 +264,19 @@ export function ModernTemplate({
                                     Inventory
                                 </button>
                             )}
-                            <a href="#contact" className="whitespace-nowrap font-medium transition-colors text-sm text-gray-600 hover:text-gray-900">
+                            <button onClick={() => navigateTo('contact')} className="whitespace-nowrap font-medium transition-colors text-sm text-gray-600 hover:text-gray-900">
                                 Contact
-                            </a>
+                            </button>
                             <button
                                 onClick={() => setNavEMIOpen(true)}
                                 className="whitespace-nowrap font-medium transition-colors text-sm text-gray-600 hover:text-gray-900"
                             >
                                 EMI Calc
                             </button>
-                            <a href="#exchange-section" className="whitespace-nowrap font-medium transition-colors text-sm text-gray-600 hover:text-gray-900">Exchange</a>
-                            <a href="#finance-section" className="whitespace-nowrap font-medium transition-colors text-sm text-gray-600 hover:text-gray-900">Finance</a>
-                            <a href="#service-section" className="whitespace-nowrap font-medium transition-colors text-sm text-gray-600 hover:text-gray-900">Service</a>
-                            <a href="#trust-section" className="whitespace-nowrap font-medium transition-colors text-sm text-gray-600 hover:text-gray-900">Trust Us</a>
+                            <button onClick={() => navigateTo('exchange-section')} className="whitespace-nowrap font-medium transition-colors text-sm text-gray-600 hover:text-gray-900">Exchange</button>
+                            <button onClick={() => navigateTo('finance-section')} className="whitespace-nowrap font-medium transition-colors text-sm text-gray-600 hover:text-gray-900">Finance</button>
+                            <button onClick={() => navigateTo('service-section')} className="whitespace-nowrap font-medium transition-colors text-sm text-gray-600 hover:text-gray-900">Service</button>
+                            <button onClick={() => navigateTo('trust-section')} className="whitespace-nowrap font-medium transition-colors text-sm text-gray-600 hover:text-gray-900">Trust Us</button>
                         </div>
 
                         {/* CTA Buttons */}
@@ -293,23 +328,22 @@ export function ModernTemplate({
                                         Inventory
                                     </button>
                                 )}
-                                <a
-                                    href="#contact"
-                                    onClick={() => setMobileMenuOpen(false)}
-                                    className="block px-3 py-2.5 rounded-lg font-medium transition-colors text-gray-900 hover:bg-gray-100"
+                                <button
+                                    onClick={() => mobileNavigateTo('contact')}
+                                    className="block w-full text-left px-3 py-2.5 rounded-lg font-medium transition-colors text-gray-900 hover:bg-gray-100"
                                 >
                                     Contact
-                                </a>
+                                </button>
                                 <button
                                     onClick={() => { setNavEMIOpen(true); setMobileMenuOpen(false); }}
                                     className="block w-full text-left px-3 py-2.5 rounded-lg font-medium transition-colors text-gray-900 hover:bg-gray-100"
                                 >
                                     EMI Calc
                                 </button>
-                                <a href="#exchange-section" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2.5 rounded-lg font-medium transition-colors text-gray-900 hover:bg-gray-100">Exchange</a>
-                                <a href="#finance-section" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2.5 rounded-lg font-medium transition-colors text-gray-900 hover:bg-gray-100">Finance</a>
-                                <a href="#service-section" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2.5 rounded-lg font-medium transition-colors text-gray-900 hover:bg-gray-100">Service</a>
-                                <a href="#trust-section" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2.5 rounded-lg font-medium transition-colors text-gray-900 hover:bg-gray-100">Trust Us</a>
+                                <button onClick={() => mobileNavigateTo('exchange-section')} className="block w-full text-left px-3 py-2.5 rounded-lg font-medium transition-colors text-gray-900 hover:bg-gray-100">Exchange</button>
+                                <button onClick={() => mobileNavigateTo('finance-section')} className="block w-full text-left px-3 py-2.5 rounded-lg font-medium transition-colors text-gray-900 hover:bg-gray-100">Finance</button>
+                                <button onClick={() => mobileNavigateTo('service-section')} className="block w-full text-left px-3 py-2.5 rounded-lg font-medium transition-colors text-gray-900 hover:bg-gray-100">Service</button>
+                                <button onClick={() => mobileNavigateTo('trust-section')} className="block w-full text-left px-3 py-2.5 rounded-lg font-medium transition-colors text-gray-900 hover:bg-gray-100">Trust Us</button>
                                 <div className="pt-2 border-t border-gray-200">
                                     <Button
                                         className="w-full text-white"
@@ -764,17 +798,19 @@ export function ModernTemplate({
                         <div className="flex flex-col lg:flex-row gap-8">
                             <div className="w-full lg:w-72">
                                 <div className="sticky top-24 rounded-2xl border border-gray-200 bg-gradient-to-b from-gray-50 to-white p-4 shadow-sm">
-                                    <CarFilters hideBrand={sellsNewCars} />
+                                    <CarFilters hideBrand={sellsNewCars} onFilterChange={setActiveFilters} />
                                 </div>
                             </div>
                             <div className="flex-1">
                                 <CarGrid
                                     cars={isHybrid
-                                        ? inventoryTab === 'new' ? cars.filter(c => c.condition === 'new')
-                                            : inventoryTab === 'used' ? cars.filter(c => c.condition !== 'new')
-                                                : cars : cars}
+                                        ? inventoryTab === 'new' ? filteredInventoryCars.filter(c => c.condition === 'new')
+                                            : inventoryTab === 'used' ? filteredInventoryCars.filter(c => c.condition !== 'new')
+                                                : filteredInventoryCars
+                                        : filteredInventoryCars}
                                     brandColor={brandColors.primary}
                                     light
+                                    summaryOnly
                                     detailBasePath={siteBase}
                                     dealerPhone={contactInfo.phone}
                                     dealerId={dealerId}
@@ -863,12 +899,12 @@ export function ModernTemplate({
                                         Inventory
                                     </button>
                                 )}
-                                <a href="#contact" className="block text-gray-500 hover:text-gray-900">Contact</a>
+                                <button onClick={() => navigateTo('contact')} className="block text-gray-500 hover:text-gray-900">Contact</button>
                                 <button onClick={() => setNavEMIOpen(true)} className="block text-gray-500 hover:text-gray-900">EMI Calculator</button>
-                                <a href="#exchange-section" className="block text-gray-500 hover:text-gray-900">Exchange</a>
-                                <a href="#finance-section" className="block text-gray-500 hover:text-gray-900">Finance</a>
-                                <a href="#service-section" className="block text-gray-500 hover:text-gray-900">Service Booking</a>
-                                <a href="#trust-section" className="block text-gray-500 hover:text-gray-900">Why Trust Us</a>
+                                <button onClick={() => navigateTo('exchange-section')} className="block text-gray-500 hover:text-gray-900">Exchange</button>
+                                <button onClick={() => navigateTo('finance-section')} className="block text-gray-500 hover:text-gray-900">Finance</button>
+                                <button onClick={() => navigateTo('service-section')} className="block text-gray-500 hover:text-gray-900">Service Booking</button>
+                                <button onClick={() => navigateTo('trust-section')} className="block text-gray-500 hover:text-gray-900">Why Trust Us</button>
                                 <div className="border-t border-gray-100 mt-3 pt-3 space-y-2">
                                     <a href={`${siteBase}/about`} className="block text-gray-500 hover:text-gray-900">About Us</a>
                                     <a href={`${siteBase}/terms`} className="block text-gray-500 hover:text-gray-900">Terms &amp; Conditions</a>

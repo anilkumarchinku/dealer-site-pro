@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation'
+import { headers } from 'next/headers'
 import { fetchDealerBySlug } from '@/lib/db/dealers'
 import { LegalShell, AboutContent, getVehicleWord, getVehicleEmoji } from '@/components/legal'
 
@@ -17,9 +18,14 @@ export default async function AboutPage({ params }: Props) {
     if (!dealer) notFound()
 
     const seg = '4w'
+    const hdrs = await headers()
+    const host = hdrs.get('host') ?? ''
+    const BASE_DOMAIN = process.env.NEXT_PUBLIC_BASE_DOMAIN ?? 'dealersitepro.com'
+    const isMainDomain = host === BASE_DOMAIN || host === `www.${BASE_DOMAIN}` || host.startsWith('localhost') || host.endsWith('.vercel.app')
+    const siteHref = isMainDomain ? `/sites/${slug}` : '/'
 
     return (
-        <LegalShell dealerName={dealer.dealership_name} logoUrl={dealer.logo_url} siteHref={`/sites/${slug}`}>
+        <LegalShell dealerName={dealer.dealership_name} logoUrl={dealer.logo_url} siteHref={siteHref}>
             <AboutContent
                 dealerName={dealer.dealership_name}
                 tagline={dealer.tagline}

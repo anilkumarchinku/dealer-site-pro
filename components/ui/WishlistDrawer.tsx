@@ -6,7 +6,7 @@
 
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Heart, X, Bell, Send, Trash2, ShoppingBag } from 'lucide-react';
 import { useWishlistStore } from '@/lib/store/wishlist-store';
 import type { Car } from '@/lib/types/car';
@@ -24,9 +24,43 @@ export function WishlistDrawer({ cars, dealerId, brandColor = '#2563eb' }: Wishl
     const [open, setOpen] = useState(false);
     const [alertEmail, setAlertEmail] = useState('');
     const [alertStatus, setAlertStatus] = useState<'idle' | 'loading' | 'done' | 'error'>('idle');
-    const { items, remove, clear } = useWishlistStore();
+    const { items, remove, clear, savedCarData, hydrate } = useWishlistStore();
 
-    const savedCars = cars.filter(c => items.includes(c.id));
+    // Keep car snapshots in sync so the drawer works even if the inventory
+    // API returns different results on the next visit.
+    useEffect(() => {
+        hydrate(cars.map(c => ({
+            id: c.id,
+            make: c.make,
+            model: c.model,
+            variant: c.variant,
+            image: c.images?.hero,
+            priceMin: c.pricing?.exShowroom?.min ?? undefined,
+            price: c.price,
+        })));
+    }, [cars, hydrate]);
+
+    // Build the list — prefer live car data, fall back to stored snapshot
+    const savedCars = items
+        .map(id => {
+            const live = cars.find(c => c.id === id);
+            if (live) return live;
+            const snap = savedCarData[id];
+            if (!snap) return null;
+            // Shape a minimal Car-like object from the snapshot
+            return {
+                id: snap.id,
+                make: snap.make,
+                model: snap.model,
+                variant: snap.variant ?? '',
+                images: { hero: snap.image ?? '', exterior: [], interior: [] },
+                price: snap.price ?? '',
+                pricing: snap.priceMin != null
+                    ? { exShowroom: { min: snap.priceMin, max: snap.priceMin, currency: 'INR' as const } }
+                    : undefined,
+            } as unknown as Car;
+        })
+        .filter((c): c is Car => c !== null);
 
     const handleAlertSignup = async (e: React.FormEvent) => {
         e.preventDefault();
