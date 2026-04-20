@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { Suspense, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { ArrowLeft, ExternalLink, Eye, LayoutGrid, RefreshCw, Search } from "lucide-react";
@@ -83,7 +83,7 @@ function PreviewFrame({ brand, template }: { brand: string; template: AdminTempl
     );
 }
 
-export default function AdminPreviewGalleryPage() {
+function AdminPreviewGalleryPageContent() {
     const router = useRouter();
     const searchParams = useSearchParams();
     const initialTemplate = (searchParams.get("template") as AdminTemplateId | null) ?? "modern";
@@ -284,5 +284,22 @@ export default function AdminPreviewGalleryPage() {
                 </div>
             )}
         </div>
+    );
+}
+
+function PreviewGalleryFallback() {
+    return (
+        <div className="min-h-[60vh] flex flex-col items-center justify-center">
+            <RefreshCw className="w-8 h-8 animate-spin text-blue-600 mb-4" />
+            <p className="text-gray-500 font-medium">Loading admin preview gallery...</p>
+        </div>
+    );
+}
+
+export default function AdminPreviewGalleryPage() {
+    return (
+        <Suspense fallback={<PreviewGalleryFallback />}>
+            <AdminPreviewGalleryPageContent />
+        </Suspense>
     );
 }
