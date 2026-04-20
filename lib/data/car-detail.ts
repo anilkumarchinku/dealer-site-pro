@@ -388,8 +388,14 @@ export async function hydrateCarWithJsonDetails(car: Car): Promise<Car> {
     const mergedExteriorWithFeatures = featureImages.length > 0
         ? uniqueStrings([...mergedExterior, ...featureImages])
         : mergedExterior
-    const heroImage = scrapedGallery?.hero || imageUrls[0] || car.images.hero
-    const dedupedExterior = removeMatchingUrl(mergedExteriorWithFeatures, [heroImage])
+    // Prefer local hero image (reliable, no hotlink issues) over CDN
+    const hasLocalHero = car.images.hero?.startsWith('/data/')
+    const heroImage = hasLocalHero
+        ? car.images.hero
+        : (scrapedGallery?.hero || imageUrls[0] || car.images.hero)
+    // Remove the hero from exterior, and also remove the CDN version of the hero
+    const heroBlockList = [heroImage, scrapedGallery?.hero, imageUrls[0]].filter(Boolean) as string[]
+    const dedupedExterior = removeMatchingUrl(mergedExteriorWithFeatures, heroBlockList)
     const dedupedInterior = removeMatchingUrl(mergedInterior, [heroImage, ...dedupedExterior])
 
     return {

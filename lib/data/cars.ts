@@ -243,8 +243,9 @@ function getCarsByMakeFromJson(make: string): Car[] {
         }
 
         return collected.map((m, idx) => {
-            const localUrl = m.cdnImg ? null : getLocal4WImage(make, m.model)
-            const heroImg  = m.cdnImg ?? localUrl ?? '/placeholder-car.jpg'
+            // Prefer local image (always available, no hotlink issues) over CDN
+            const localUrl = getLocal4WImage(make, m.model)
+            const heroImg  = localUrl ?? m.cdnImg ?? '/placeholder-car.jpg'
             const minPrice = parsePriceINR(m.price ?? '')
 
             return {
