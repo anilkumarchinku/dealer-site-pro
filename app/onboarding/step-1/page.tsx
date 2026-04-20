@@ -110,8 +110,11 @@ export default function Step1Page() {
         setSlugStatus("checking");
 
         checkRef.current = setTimeout(async () => {
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), 8000);
             try {
-                const res = await fetch(`/api/domains/check-slug?slug=${encodeURIComponent(siteSlug)}`);
+                const res = await fetch(`/api/domains/check-slug?slug=${encodeURIComponent(siteSlug)}`, { signal: controller.signal });
+                clearTimeout(timeoutId);
                 if (!res.ok) { setSlugStatus("idle"); return; }
                 const result = await res.json();
                 if (!result.success) {
@@ -122,6 +125,7 @@ export default function Step1Page() {
                     setSlugError(result.message || "");
                 }
             } catch {
+                clearTimeout(timeoutId);
                 setSlugStatus("idle");
             }
         }, 600);
@@ -311,7 +315,26 @@ export default function Step1Page() {
                                 Available! Your site will be live at this URL.
                             </p>
                         )}
-                        {(slugStatus === "taken" || slugStatus === "invalid") && (
+                        {slugStatus === "taken" && (
+                            <div className="space-y-1">
+                                <p className="text-xs text-red-500 flex items-center gap-1.5">
+                                    <XCircle className="w-3.5 h-3.5" />
+                                    {slugError || "This site name is already taken."}
+                                </p>
+                                <p className="text-xs text-muted-foreground">
+                                    Try{" "}
+                                    <button
+                                        type="button"
+                                        className="font-mono underline text-blue-600 hover:text-blue-700"
+                                        onClick={() => { setSiteSlug(`${siteSlug}-2`); setSlugEdited(true); }}
+                                    >
+                                        {siteSlug}-2
+                                    </button>
+                                    {" "}instead
+                                </p>
+                            </div>
+                        )}
+                        {slugStatus === "invalid" && (
                             <p className="text-xs text-red-500 flex items-center gap-1.5">
                                 <XCircle className="w-3.5 h-3.5" />
                                 {slugError}
@@ -601,6 +624,7 @@ export default function Step1Page() {
 
             <CardFooter className="justify-end">
                 <Button
+                    type="button"
                     onClick={handleNext}
                     disabled={isSubmitting || slugStatus === "checking" || slugStatus === "taken" || slugStatus === "invalid"}
                 >
