@@ -4,6 +4,7 @@ import fs from 'fs'
 import path from 'path'
 import type { Car, CarVariant } from '@/lib/types/car'
 import { CAR_MODEL_COLORS } from '@/lib/data/car-colors'
+import { fetchCardekhoGallery } from '@/lib/data/cardekho-gallery'
 
 const MAKE_TO_JSON: Record<string, string> = {
     'tata motors': 'tata',
@@ -262,7 +263,27 @@ function uniqueColors(colors: Array<{ name: string; type: string; hex: string; e
     })
 }
 
-export function hydrateCarWithJsonDetails(car: Car): Car {
+function colorsFromNames(
+    names: string[],
+    images: string[] = [],
+): Array<{ name: string; type: string; hex: string; extraCost: number; image?: string }> {
+    return names
+        .map((name, index) => {
+            const normalized = normalizeColorName(name)
+            if (!normalized) return null
+            const image = images[index] || undefined
+            return {
+                name: normalized,
+                type: inferColorType(normalized),
+                hex: resolveVehicleColorHex(normalized),
+                extraCost: 0,
+                ...(image ? { image } : {}),
+            }
+        })
+        .filter((color): color is { name: string; type: string; hex: string; extraCost: number; image?: string } => Boolean(color))
+}
+
+export async function hydrateCarWithJsonDetails(car: Car): Promise<Car> {
     if (!car.make || !car.model) return car
 
     const matchingVariants = getMatchingModelVariants(car.make, car.model)
@@ -326,9 +347,28 @@ export function hydrateCarWithJsonDetails(car: Car): Car {
         transmissions[0] ?? car.transmission.type
     )
     const jsonColors = uniqueColors(matchingVariants.flatMap(extractColors))
+    const sourceUrl = matchingVariants
+        .map(entry => String(entry.model_citation ?? entry.source_url ?? ''))
+        .find(Boolean) || car.meta?.sourceUrl || ''
+    const scrapedGallery = sourceUrl ? await fetchCardekhoGallery(sourceUrl) : null
+    const scrapedColors = colorsFromNames(scrapedGallery?.colorNames ?? [], scrapedGallery?.colorImages ?? [])
+    const mergedColors = uniqueColors([...jsonColors, ...scrapedColors])
     const fallbackColors = car.colors?.length
         ? car.colors
         : (CAR_MODEL_COLORS[`${car.make} ${car.model}`] ?? [])
+    const mergedExterior = scrapedGallery?.exterior?.length
+        ? scrapedGallery.exterior
+        : (imageUrls.length > 0 ? imageUrls : car.images.exterior)
+    const mergedInterior = scrapedGallery?.interior?.length
+        ? scrapedGallery.interior
+        : car.images.interior
+    const mergedColorImages = scrapedGallery?.colorImages?.length
+        ? scrapedGallery.colorImages
+        : car.images.colors
+    const featureImages = scrapedGallery?.feature ?? []
+    const mergedExteriorWithFeatures = featureImages.length > 0
+        ? uniqueStrings([...mergedExterior, ...featureImages])
+        : mergedExterior
 
     return {
         ...car,
@@ -389,16 +429,17 @@ export function hydrateCarWithJsonDetails(car: Car): Car {
             ncapRating: car.safety?.ncapRating,
         },
         images: {
-            hero: imageUrls[0] || car.images.hero,
-            exterior: imageUrls.length > 0 ? imageUrls : car.images.exterior,
-            interior: car.images.interior,
-            colors: car.images.colors,
+            hero: scrapedGallery?.hero || imageUrls[0] || car.images.hero,
+            exterior: mergedExteriorWithFeatures,
+            interior: mergedInterior,
+            colors: mergedColorImages,
         },
-        colors: jsonColors.length > 0 ? jsonColors : fallbackColors,
+        colors: mergedColors.length > 0 ? mergedColors : fallbackColors,
         variants: variantEntries.length > 0 ? variantEntries : car.variants,
         meta: {
             ...car.meta,
             dataSource: 'Brand JSON',
+            sourceUrl: sourceUrl || car.meta?.sourceUrl,
         },
     }
 }

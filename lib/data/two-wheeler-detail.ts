@@ -3,6 +3,15 @@ import 'server-only'
 import type { TwoWheelerVehicle } from '@/lib/types/two-wheeler'
 import { getModelEnrichment } from '@/lib/data/2w-brand-data'
 import { brandNameToId, getScrapedImageFallback } from '@/lib/utils/brand-model-images'
+import { fetchTwoWheelerColorGallery } from '@/lib/data/two-wheeler-gallery'
+
+function normalizeColorName(value: string): string {
+    return value.toLowerCase().replace(/[^a-z0-9]+/g, '')
+}
+
+function uniqueStrings(values: string[]): string[] {
+    return Array.from(new Set(values.filter(Boolean)))
+}
 
 export function hydrateTwoWheelerWithJson(vehicle: TwoWheelerVehicle): TwoWheelerVehicle {
     const brandId = brandNameToId(vehicle.brand, '2w')
@@ -32,5 +41,37 @@ export function hydrateTwoWheelerWithJson(vehicle: TwoWheelerVehicle): TwoWheele
         width_mm: vehicle.width_mm ?? enrichment.width_mm ?? null,
         height_mm: vehicle.height_mm ?? enrichment.height_mm ?? null,
         stock_status: vehicle.stock_status ?? enrichment.stock_status,
+    }
+}
+
+export async function hydrateTwoWheelerDetail(vehicle: TwoWheelerVehicle): Promise<TwoWheelerVehicle> {
+    const hydratedVehicle = hydrateTwoWheelerWithJson(vehicle)
+    const gallery = await fetchTwoWheelerColorGallery(hydratedVehicle.brand, hydratedVehicle.model)
+
+    if (!gallery) return hydratedVehicle
+
+    const colorImageMap = new Map(
+        gallery.colors.map(color => [normalizeColorName(color.name), color.image])
+    )
+
+    const colors = hydratedVehicle.colors.map(color => ({
+        ...color,
+        image: color.image ?? colorImageMap.get(normalizeColorName(color.name)),
+    }))
+
+    const colorImages = colors
+        .map(color => color.image)
+        .filter((image): image is string => Boolean(image))
+
+    const images = uniqueStrings([
+        gallery.hero ?? '',
+        ...colorImages,
+        ...hydratedVehicle.images,
+    ])
+
+    return {
+        ...hydratedVehicle,
+        colors,
+        images,
     }
 }

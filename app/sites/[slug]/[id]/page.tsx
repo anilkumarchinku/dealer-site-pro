@@ -91,7 +91,7 @@ export default async function SiteCarDetailPage({ params }: SiteCarDetailPagePro
     }
 
     const selectedCar = cars.find(item => item.id === id);
-    const car = selectedCar ? hydrateCarWithJsonDetails(selectedCar) : null;
+    const car = selectedCar ? await hydrateCarWithJsonDetails(selectedCar) : null;
     if (!car) notFound();
 
     const similarCars = cars.filter(item => item.id !== id && item.make === car.make).slice(0, 4);

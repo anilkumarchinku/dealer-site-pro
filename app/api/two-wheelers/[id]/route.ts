@@ -18,7 +18,7 @@ import { getTwoWheelerCatalog } from '@/lib/data/two-wheelers'
 import { getTwoWheelerCatalogFromDB } from '@/lib/data/catalog-db'
 import { modelToSlug } from '@/lib/utils/brand-model-images'
 import type { TwoWheelerVehicle } from '@/lib/types/two-wheeler'
-import { hydrateTwoWheelerWithJson } from '@/lib/data/two-wheeler-detail'
+import { hydrateTwoWheelerDetail } from '@/lib/data/two-wheeler-detail'
 
 interface Params { params: Promise<{ id: string }> }
 
@@ -81,7 +81,7 @@ export async function GET(_req: NextRequest, { params }: Params) {
     if (!vehicle) {
         return NextResponse.json({ error: 'Vehicle not found' }, { status: 404 })
     }
-    const hydratedVehicle = hydrateTwoWheelerWithJson(vehicle)
+    const hydratedVehicle = await hydrateTwoWheelerDetail(vehicle)
     // Fire-and-forget view increment
     if (vehicle.id === id) incrementTwoWheelerViews(id).catch(() => {})
     return NextResponse.json(hydratedVehicle)

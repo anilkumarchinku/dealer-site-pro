@@ -9,6 +9,7 @@ import { CarDetailView } from '@/components/cars/CarDetailView';
 import { SiteHeader } from '@/components/layout/SiteHeader';
 import { SiteFooter } from '@/components/layout/SiteFooter';
 import { notFound } from 'next/navigation';
+import { hydrateCarWithJsonDetails } from '@/lib/data/car-detail';
 
 interface Props {
     params: Promise<{ id: string }>;
@@ -32,12 +33,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function CarPage({ params }: Props) {
     const { id } = await params;
-    const car = await getCarById(id);
+    const baseCar = await getCarById(id);
 
-    if (!car) {
+    if (!baseCar) {
         notFound();
     }
 
+    const car = await hydrateCarWithJsonDetails(baseCar);
     const similarCars = await getSimilarCars(id);
 
     return (

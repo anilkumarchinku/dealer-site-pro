@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useMemo, useState } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { getScrapedImageFallback, brandNameToId } from "@/lib/utils/brand-model-images"
 
@@ -18,9 +18,16 @@ export function VehicleDetailGallery({ images, alt, brand, model }: Props) {
         return [getScrapedImageFallback("2w", brandNameToId(brand), model)];
     })();
 
-    const displayImages = images.length > 0 ? images : scraped;
+    const displayImages = useMemo(
+        () => (images.length > 0 ? images : scraped),
+        [images, scraped]
+    )
 
     const [active, setActive] = useState(0)
+
+    useEffect(() => {
+        setActive(0)
+    }, [displayImages])
 
     if (displayImages.length === 0) {
         return (

@@ -45,6 +45,7 @@ export type TwoWheelerBookingStatus = 'pending' | 'paid' | 'failed' | 'refunded'
 export interface TwoWheelerColor {
     name: string
     hex:  string
+    image?: string
 }
 
 // ── Main entity interfaces ────────────────────────────────────

@@ -908,6 +908,17 @@ export function CarDetailView({ car, similarCars = [], siteSlug }: CarDetailView
                     {car.colors && car.colors.length > 0 ? (
                         <Card className={lightCardClass}>
                             <CardContent className="p-6">
+                                {car.colors.find(c => c.name === selectedColor)?.image && (
+                                    <div className="relative mb-6 aspect-[16/9] w-full overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
+                                        <Image
+                                            src={car.colors.find(c => c.name === selectedColor)?.image || ''}
+                                            alt={`${car.make} ${car.model} in ${selectedColor}`}
+                                            fill
+                                            unoptimized={(car.colors.find(c => c.name === selectedColor)?.image || '').startsWith('http')}
+                                            className="object-contain"
+                                        />
+                                    </div>
+                                )}
                                 <div className="flex flex-wrap gap-3 mb-4">
                                     {car.colors.map((color) => (
                                         <button
