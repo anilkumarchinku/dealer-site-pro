@@ -77,6 +77,13 @@ export default function ThreeWheelerDetailPage() {
         }
     }, [vehicle, dealerInfo])
 
+    // Logo: dealer-uploaded logo first, then brand logo as fallback
+    const logoSrc = useMemo(() => {
+        if (dealerInfo?.logoUrl) return dealerInfo.logoUrl
+        if (vehicle?.brand) return `/assets/logos/2w/${vehicle.brand.toLowerCase().replace(/\s+/g, '-')}.svg`
+        return null
+    }, [dealerInfo, vehicle])
+
     function openLead(type: ThreeWheelerLeadType, title: string) {
         setLeadType(type)
         setLeadTitle(title)
@@ -111,19 +118,18 @@ export default function ThreeWheelerDetailPage() {
                         <span className="font-semibold text-gray-900 text-sm truncate max-w-[160px] sm:max-w-xs">
                             {dealerInfo?.dealerName ?? ''}
                         </span>
-                        <div className="relative w-8 h-8 shrink-0">
-                            <Image
-                                src={
-                                    dealerInfo?.logoUrl ||
-                                    `/assets/logos/2w/${vehicle?.brand.toLowerCase().replace(/\s+/g, '-')}.svg`
-                                }
-                                alt={dealerInfo?.dealerName || vehicle?.brand || ''}
-                                fill
-                                className="object-contain"
-                                sizes="32px"
-                                onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
-                            />
-                        </div>
+                        {logoSrc && (
+                            <div className="relative w-8 h-8 shrink-0">
+                                <Image
+                                    src={logoSrc}
+                                    alt={dealerInfo?.dealerName || vehicle?.brand || ''}
+                                    fill
+                                    className="object-contain"
+                                    sizes="32px"
+                                    onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
+                                />
+                            </div>
+                        )}
                     </Link>
                 </div>
             </header>
