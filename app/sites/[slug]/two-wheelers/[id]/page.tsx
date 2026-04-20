@@ -253,35 +253,47 @@ export default function VehicleDetailPage() {
                             )}
 
                             {/* CTAs */}
-                            <div className="grid grid-cols-2 gap-3">
+                            <div className="flex flex-col gap-3">
+                                {/* Primary — Enquire Now (full width) */}
                                 <button
-                                    onClick={() => openLead("test_ride", "Book Test Ride")}
-                                    className="rounded-xl py-3 font-semibold text-white hover:opacity-90 transition-opacity"
+                                    onClick={() => openLead("callback", "Enquire Now")}
+                                    className="w-full rounded-xl py-3.5 font-bold text-white text-base hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
                                     style={{ backgroundColor: brandColor }}
                                 >
-                                    Book Test Ride
+                                    Enquire Now
                                 </button>
-                                <button
-                                    onClick={() => openLead("best_price", "Get Best Price")}
-                                    className="border rounded-xl py-3 font-semibold hover:bg-muted/50 transition-colors"
-                                    style={{ borderColor: brandColor, color: brandColor }}
-                                >
-                                    Get Best Price
-                                </button>
-                                <button
-                                    onClick={() => openLead("finance", "Apply for Finance")}
-                                    className="border border-border rounded-xl py-3 font-semibold hover:bg-muted/50 transition-colors"
-                                >
-                                    Finance Options
-                                </button>
-                                {vehicle.stock_status === "booking_open" && (
+
+                                {/* Secondary CTAs */}
+                                <div className="grid grid-cols-2 gap-3">
                                     <button
-                                        onClick={() => setBookingOpen(true)}
-                                        className="bg-green-600 text-white rounded-xl py-3 font-semibold hover:opacity-90 transition-opacity"
+                                        onClick={() => openLead("test_ride", "Book Test Ride")}
+                                        className="border rounded-xl py-3 font-semibold hover:bg-muted/50 transition-colors"
+                                        style={{ borderColor: brandColor, color: brandColor }}
                                     >
-                                        Book Now ₹500
+                                        Book Test Ride
                                     </button>
-                                )}
+                                    <button
+                                        onClick={() => openLead("best_price", "Get Best Price")}
+                                        className="border rounded-xl py-3 font-semibold hover:bg-muted/50 transition-colors"
+                                        style={{ borderColor: brandColor, color: brandColor }}
+                                    >
+                                        Get Best Price
+                                    </button>
+                                    <button
+                                        onClick={() => openLead("finance", "Apply for Finance")}
+                                        className="border border-border rounded-xl py-3 font-semibold hover:bg-muted/50 transition-colors"
+                                    >
+                                        Finance Options
+                                    </button>
+                                    {vehicle.stock_status === "booking_open" && (
+                                        <button
+                                            onClick={() => setBookingOpen(true)}
+                                            className="bg-green-600 text-white rounded-xl py-3 font-semibold hover:opacity-90 transition-opacity"
+                                        >
+                                            Book Now ₹500
+                                        </button>
+                                    )}
+                                </div>
                             </div>
 
                             {vehicle.brochure_url && (
