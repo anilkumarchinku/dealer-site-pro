@@ -1,0 +1,32 @@
+{
+  "make": "Maruti Suzuki",
+  "model": "Celerio",
+  "brandSlug": "maruti-suzuki",
+  "modelSlug": "celerio",
+  "sourceUrl": "https://www.cardekho.com/maruti/celerio",
+  "scrapedAt": "2026-04-21T06:22:12.967Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 7,
+    "total": 7
+  },
+  "hero": "/data/brand-model-images/4w-galleries/maruti-suzuki/celerio/colors/metallic-glistening-grey.avif",
+  "colorNames": [
+    "Metallic Glistening Grey",
+    "Solid Fire Red",
+    "Pearl Arctic White",
+    "Pearl Caffeine Brown",
+    "Metallic Silky Silver",
+    "Pearl Bluish Black",
+    "Metallic Speedy Blue"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/maruti-suzuki/celerio/colors/metallic-glistening-grey.avif",
+    "/data/brand-model-images/4w-galleries/maruti-suzuki/celerio/colors/solid-fire-red.avif",
+    "/data/brand-model-images/4w-galleries/maruti-suzuki/celerio/colors/pearl-arctic-white.avif",
+    "/data/brand-model-images/4w-galleries/maruti-suzuki/celerio/colors/pearl-caffeine-brown.avif",
+    "/data/brand-model-images/4w-galleries/maruti-suzuki/celerio/colors/metallic-silky-silver.avif",
+    "/data/brand-model-images/4w-galleries/maruti-suzuki/celerio/colors/pearl-bluish-black.avif",
+    "/data/brand-model-images/4w-galleries/maruti-suzuki/celerio/colors/metallic-speedy-blue.avif"
+  ]
+}

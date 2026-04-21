@@ -39,7 +39,17 @@ export function getScrapedImageUrls(
     const slug = modelToSlug(model);
     if (vehicleCategory === "4w") {
         const base = `/data/brand-model-images/4w/${brandId}/${slug}`;
-        return IMAGE_EXTENSIONS.map((ext) => `${base}.${ext}`);
+        const urls = IMAGE_EXTENSIONS.map((ext) => `${base}.${ext}`);
+        // Fallback: strip common suffixes (tour, cargo, gen, edition) to
+        // try the base model image (e.g. "wagon-r-tour" → "wagon-r")
+        const baseSlug = slug
+            .replace(/-(tour|cargo|edition|facelift|gen|2nd-gen|3rd-gen)$/i, "")
+            .replace(/-\d+(st|nd|rd|th)-gen$/i, "");
+        if (baseSlug !== slug) {
+            const fallback = `/data/brand-model-images/4w/${brandId}/${baseSlug}`;
+            IMAGE_EXTENSIONS.forEach((ext) => urls.push(`${fallback}.${ext}`));
+        }
+        return urls;
     }
     const base = `${SUPABASE_STORAGE_URL}/${vehicleCategory}/${brandId}/${slug}`;
     return IMAGE_EXTENSIONS.map((ext) => `${base}.${ext}`);

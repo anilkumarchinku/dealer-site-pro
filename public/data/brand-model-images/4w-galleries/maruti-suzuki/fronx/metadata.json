@@ -1,0 +1,38 @@
+{
+  "make": "Maruti Suzuki",
+  "model": "FRONX",
+  "brandSlug": "maruti-suzuki",
+  "modelSlug": "fronx",
+  "sourceUrl": "https://www.cardekho.com/maruti/fronx",
+  "scrapedAt": "2026-04-21T06:19:09.639Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 10,
+    "total": 10
+  },
+  "hero": "/data/brand-model-images/4w-galleries/maruti-suzuki/fronx/colors/arctic-white.avif",
+  "colorNames": [
+    "Arctic White",
+    "Earthen Brown With Bluish Black Roof",
+    "Opulent Red",
+    "Opulent Red With Black Roof",
+    "Splendid Silver With Black Roof",
+    "Grandeur Grey",
+    "Earthen Brown",
+    "Bluish Black",
+    "Nexa Blue",
+    "Splendid Silver"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/maruti-suzuki/fronx/colors/arctic-white.avif",
+    "/data/brand-model-images/4w-galleries/maruti-suzuki/fronx/colors/earthen-brown-with-bluish-black-roof.avif",
+    "/data/brand-model-images/4w-galleries/maruti-suzuki/fronx/colors/opulent-red.avif",
+    "/data/brand-model-images/4w-galleries/maruti-suzuki/fronx/colors/opulent-red-with-black-roof.avif",
+    "/data/brand-model-images/4w-galleries/maruti-suzuki/fronx/colors/splendid-silver-with-black-roof.avif",
+    "/data/brand-model-images/4w-galleries/maruti-suzuki/fronx/colors/grandeur-grey.avif",
+    "/data/brand-model-images/4w-galleries/maruti-suzuki/fronx/colors/earthen-brown.avif",
+    "/data/brand-model-images/4w-galleries/maruti-suzuki/fronx/colors/bluish-black.avif",
+    "/data/brand-model-images/4w-galleries/maruti-suzuki/fronx/colors/nexa-blue.avif",
+    "/data/brand-model-images/4w-galleries/maruti-suzuki/fronx/colors/splendid-silver.avif"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "make": "Maruti Suzuki",
+  "model": "Invicto",
+  "brandSlug": "maruti-suzuki",
+  "modelSlug": "invicto",
+  "sourceUrl": "https://www.cardekho.com/maruti/invicto",
+  "scrapedAt": "2026-04-21T06:19:12.833Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 5,
+    "total": 5
+  },
+  "hero": "/data/brand-model-images/4w-galleries/maruti-suzuki/invicto/colors/mystic-white.avif",
+  "colorNames": [
+    "Mystic White",
+    "Magnificent Black",
+    "Majestic Silver",
+    "Stellar Bronze",
+    "Nexa Blue Celestial"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/maruti-suzuki/invicto/colors/mystic-white.avif",
+    "/data/brand-model-images/4w-galleries/maruti-suzuki/invicto/colors/magnificent-black.avif",
+    "/data/brand-model-images/4w-galleries/maruti-suzuki/invicto/colors/majestic-silver.avif",
+    "/data/brand-model-images/4w-galleries/maruti-suzuki/invicto/colors/stellar-bronze.avif",
+    "/data/brand-model-images/4w-galleries/maruti-suzuki/invicto/colors/nexa-blue-celestial.avif"
+  ]
+}

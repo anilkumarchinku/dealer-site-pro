@@ -1,0 +1,38 @@
+{
+  "make": "Maruti Suzuki",
+  "model": "Swift",
+  "brandSlug": "maruti-suzuki",
+  "modelSlug": "swift",
+  "sourceUrl": "https://www.cardekho.com/maruti/swift",
+  "scrapedAt": "2026-04-21T06:19:09.962Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 10,
+    "total": 10
+  },
+  "hero": "/data/brand-model-images/4w-galleries/maruti-suzuki/swift/colors/pearl-arctic-white.avif",
+  "colorNames": [
+    "Pearl Arctic White",
+    "Sizzling Red With Bluish Black Roof",
+    "Magma Grey",
+    "Pearl Arctic White With Bluish Black Roof",
+    "Luster Blue With Bluish Black Roof",
+    "Bluish Black",
+    "Sizzling Red",
+    "Splendid Silver",
+    "Luster Blue",
+    "Novel Orange"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/maruti-suzuki/swift/colors/pearl-arctic-white.avif",
+    "/data/brand-model-images/4w-galleries/maruti-suzuki/swift/colors/sizzling-red-with-bluish-black-roof.avif",
+    "/data/brand-model-images/4w-galleries/maruti-suzuki/swift/colors/magma-grey.avif",
+    "/data/brand-model-images/4w-galleries/maruti-suzuki/swift/colors/pearl-arctic-white-with-bluish-black-roof.avif",
+    "/data/brand-model-images/4w-galleries/maruti-suzuki/swift/colors/luster-blue-with-bluish-black-roof.avif",
+    "/data/brand-model-images/4w-galleries/maruti-suzuki/swift/colors/bluish-black.avif",
+    "/data/brand-model-images/4w-galleries/maruti-suzuki/swift/colors/sizzling-red.avif",
+    "/data/brand-model-images/4w-galleries/maruti-suzuki/swift/colors/splendid-silver.avif",
+    "/data/brand-model-images/4w-galleries/maruti-suzuki/swift/colors/luster-blue.avif",
+    "/data/brand-model-images/4w-galleries/maruti-suzuki/swift/colors/novel-orange.avif"
+  ]
+}
