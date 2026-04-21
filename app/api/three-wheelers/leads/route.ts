@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { requireAuth, getDealerForUser } from '@/lib/supabase-server'
-import { rateLimitOrNull } from '@/lib/utils/rate-limiter'
+
 import { createThreeWheelerLead, getThreeWheelerLeads, updateThreeWheelerLeadStatus } from '@/lib/db/three-wheelers'
 import { forwardLeadToCyepro } from '@/lib/services/cyepro-service'
 import { createClient } from '@supabase/supabase-js'
@@ -15,9 +15,6 @@ function getSupabase() {
 }
 
 export async function POST(request: NextRequest) {
-    const rateLimit = await rateLimitOrNull('thw_lead_create', request, 5, 10 * 60 * 1000)
-    if (rateLimit) return rateLimit
-
     const body = await request.json().catch(() => null)
     if (!body) {
         return NextResponse.json({ error: 'Invalid JSON' }, { status: 400 })

@@ -18,7 +18,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
 import { sendLeadSmsToDealer } from '@/lib/services/sms-service'
 import { forwardLeadToCyepro } from '@/lib/services/cyepro-service'
-import { rateLimitOrNull } from '@/lib/utils/rate-limiter'
+
 import { logger } from '@/lib/utils/logger'
 import { leadSchema, formatZodErrors } from '@/lib/validations/schemas'
 
@@ -33,10 +33,6 @@ function getSupabase() {
 
 export async function POST(request: NextRequest) {
     try {
-        // ── Rate limiting (10 leads per IP per hour) ──────────────────────────
-        const rateLimitResponse = await rateLimitOrNull('leads', request, 10, 60 * 60 * 1000)
-        if (rateLimitResponse) return rateLimitResponse
-
         const body = await request.json()
 
         // Extract referer to know which exact website this lead came from

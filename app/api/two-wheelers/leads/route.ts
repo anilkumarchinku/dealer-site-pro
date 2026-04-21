@@ -5,7 +5,7 @@
 
 import { NextRequest, NextResponse } from 'next/server'
 import { requireAuth, getDealerForUser } from '@/lib/supabase-server'
-import { rateLimitOrNull } from '@/lib/utils/rate-limiter'
+
 import { createTwoWheelerLead, getTwoWheelerLeads, updateTwoWheelerLeadStatus } from '@/lib/db/two-wheelers'
 import { forwardLeadToCyepro } from '@/lib/services/cyepro-service'
 import { createClient } from '@supabase/supabase-js'
@@ -22,10 +22,6 @@ function getSupabase() {
 // ── POST (public / anon) ──────────────────────────────────────
 
 export async function POST(request: NextRequest) {
-    // Rate limit: 5 leads per IP per 10 minutes
-    const rateLimit = await rateLimitOrNull('tw_lead_submit', request, 5, 10 * 60 * 1000)
-    if (rateLimit) return rateLimit
-
     const body = await request.json()
 
     // ── Validate with Zod ───────────────────────────────────────────────
