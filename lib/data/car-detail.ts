@@ -370,10 +370,6 @@ export async function hydrateCarWithJsonDetails(car: Car): Promise<Car> {
         .map(entry => String(entry.model_citation ?? entry.source_url ?? ''))
         .find(Boolean) || car.meta?.sourceUrl || ''
 
-    // Only scrape CardDekho for color data — the exterior/interior gallery images
-    // are unreliable (duplicates, wrong models, broken CDN URLs). Cars with a
-    // verified local hero image just use that single image.
-    const hasLocalHero = car.images.hero?.startsWith('/data/')
     const scrapedGallery = sourceUrl ? await fetchCardekhoGallery(sourceUrl) : null
     const scrapedColors = colorsFromNames(scrapedGallery?.colorNames ?? [], scrapedGallery?.colorImages ?? [])
     const mergedColors = uniqueColors([...jsonColors, ...scrapedColors])
@@ -381,25 +377,30 @@ export async function hydrateCarWithJsonDetails(car: Car): Promise<Car> {
         ? car.colors
         : (CAR_MODEL_COLORS[`${car.make} ${car.model}`] ?? [])
 
-    // Use local hero when available; skip CDN gallery to avoid duplicates/broken images
+    // Prefer local hero (reliable, no hotlink issues) over CDN
+    const hasLocalHero = car.images.hero?.startsWith('/data/')
     const heroImage = hasLocalHero
         ? car.images.hero
         : (scrapedGallery?.hero || imageUrls[0] || car.images.hero)
-    const dedupedExterior = hasLocalHero
-        ? []
-        : removeMatchingUrl(
-            scrapedGallery?.exterior?.length ? scrapedGallery.exterior : (imageUrls.length > 0 ? imageUrls : car.images.exterior),
-            [heroImage, scrapedGallery?.hero, imageUrls[0]].filter(Boolean) as string[]
-          )
-    const dedupedInterior = hasLocalHero
-        ? []
-        : removeMatchingUrl(
-            scrapedGallery?.interior?.length ? scrapedGallery.interior : car.images.interior,
-            [heroImage, ...dedupedExterior]
-          )
+
+    // Build exterior gallery from scraped data; remove hero + CDN hero to avoid duplicates
+    const mergedExterior = scrapedGallery?.exterior?.length
+        ? scrapedGallery.exterior
+        : (imageUrls.length > 0 ? imageUrls : car.images.exterior)
+    const mergedInterior = scrapedGallery?.interior?.length
+        ? scrapedGallery.interior
+        : car.images.interior
     const mergedColorImages = scrapedGallery?.colorImages?.length
         ? scrapedGallery.colorImages
         : car.images.colors
+    const featureImages = scrapedGallery?.feature ?? []
+    const mergedExteriorWithFeatures = featureImages.length > 0
+        ? uniqueStrings([...mergedExterior, ...featureImages])
+        : mergedExterior
+    // Block both the local hero and CDN hero from the exterior array
+    const heroBlockList = [heroImage, scrapedGallery?.hero, imageUrls[0]].filter(Boolean) as string[]
+    const dedupedExterior = removeMatchingUrl(mergedExteriorWithFeatures, heroBlockList)
+    const dedupedInterior = removeMatchingUrl(mergedInterior, [heroImage, ...dedupedExterior])
 
     return {
         ...car,
