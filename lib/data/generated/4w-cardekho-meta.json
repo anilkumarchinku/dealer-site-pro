@@ -1,0 +1,3173 @@
+{
+  "meta": {
+    "generatedAt": "2026-04-21T05:17:39.136Z",
+    "brandsAudited": 33,
+    "currentModelCount": 256
+  },
+  "brands": {
+    "tata motors": {
+      "make": "Tata Motors",
+      "cardekhoBrandUrl": "https://www.cardekho.com/cars/Tata",
+      "totalLocalModels": 19,
+      "totalCardekhoModels": 19,
+      "missingModels": [],
+      "localOnlyModels": [],
+      "models": {
+        "sierra": {
+          "model": "Sierra",
+          "bodyType": "SUV",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Tata/Sierra/12271/1765181428462/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/carmodels/Tata/Tata_Sierra",
+          "priceMinInr": 1149000,
+          "existsInLocal": true
+        },
+        "punch": {
+          "model": "Punch",
+          "bodyType": "SUV",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Tata/Punch/13243/1768986024623/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/tata/punch",
+          "priceMinInr": 564990,
+          "existsInLocal": true
+        },
+        "nexon": {
+          "model": "Nexon",
+          "bodyType": "SUV",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Tata/Nexon/11880/1728046498038/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/tata/nexon",
+          "priceMinInr": 736990,
+          "existsInLocal": true
+        },
+        "tiago": {
+          "model": "Tiago",
+          "bodyType": "Hatchback",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Tata/Tiago/10655/1768302905210/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/carmodels/Tata/Tata_Tiago",
+          "priceMinInr": 459990,
+          "existsInLocal": true
+        },
+        "harrier": {
+          "model": "Harrier",
+          "bodyType": "SUV",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Tata/Harrier/9368/1766125794560/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/tata/harrier",
+          "priceMinInr": 1289000,
+          "existsInLocal": true
+        },
+        "safari": {
+          "model": "Safari",
+          "bodyType": "SUV",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Tata/Safari/12798/1755865650056/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/carmodels/Tata/Tata_Safari",
+          "priceMinInr": 1329000,
+          "existsInLocal": true
+        },
+        "punch ev": {
+          "model": "Punch EV",
+          "bodyType": "SUV",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Tata/Punch-EV/11419/1706182879498/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/tata/punch-ev",
+          "priceMinInr": 969000,
+          "existsInLocal": true
+        },
+        "altroz": {
+          "model": "Altroz",
+          "bodyType": "Hatchback",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Tata/Altroz/12614/1770888054138/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/tata/altroz",
+          "priceMinInr": 629990,
+          "existsInLocal": true
+        },
+        "curvv": {
+          "model": "Curvv",
+          "bodyType": "SUV",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Tata/Curvv/11462/1722849754498/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/tata/curvv",
+          "priceMinInr": 969990,
+          "existsInLocal": true
+        },
+        "nexon ev": {
+          "model": "Nexon EV",
+          "bodyType": "SUV",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Tata/Nexon-EV/9498/1724130498091/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/tata/nexon-ev",
+          "priceMinInr": 1249000,
+          "existsInLocal": true
+        },
+        "harrier ev": {
+          "model": "Harrier EV",
+          "bodyType": "SUV",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Tata/Harrier-EV/11768/1738133498091/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/tata/harrier-ev",
+          "priceMinInr": 2149000,
+          "existsInLocal": true
+        },
+        "tiago ev": {
+          "model": "Tiago EV",
+          "bodyType": "Hatchback",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Tata/Tiago-EV/8755/1735039498091/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/tata/tiago-ev",
+          "priceMinInr": 799000,
+          "existsInLocal": true
+        },
+        "tigor": {
+          "model": "Tigor",
+          "bodyType": "Sedan",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Tata/Tigor/10670/1767964333729/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/tata/tigor",
+          "priceMinInr": 554990,
+          "existsInLocal": true
+        },
+        "curvv ev": {
+          "model": "Curvv EV",
+          "bodyType": "SUV",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Tata/Curvv-EV/8935/1755844730329/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/tata/curvv-ev",
+          "priceMinInr": 1749000,
+          "existsInLocal": true
+        },
+        "xpres": {
+          "model": "Xpres",
+          "bodyType": "Sedan",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Tata/Xpres/13283/1769164209681/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/tata/xpres",
+          "priceMinInr": 559000,
+          "existsInLocal": true
+        },
+        "tigor ev": {
+          "model": "Tigor EV",
+          "bodyType": "Sedan",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Tata/Tigor-EV/9458/1755866201716/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/tata/tigor-ev",
+          "priceMinInr": 1249000,
+          "existsInLocal": true
+        },
+        "tiago nrg": {
+          "model": "Tiago NRG",
+          "bodyType": "Hatchback",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Tata/Tiago-NRG/10651/1755865961283/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/tata/tiago-nrg",
+          "priceMinInr": 673990,
+          "existsInLocal": true
+        },
+        "xpres t ev": {
+          "model": "Xpres T EV",
+          "bodyType": "Sedan",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Tata/Xpres-T-EV/8847/1660113786758/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/tata/xpres-t-ev",
+          "priceMinInr": 1304000,
+          "existsInLocal": true
+        },
+        "yodha pickup": {
+          "model": "Yodha Pickup",
+          "bodyType": "Pickup",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Tata/Yodha-Pickup/7621/1769504815932/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/tata/yodha-pickup",
+          "priceMinInr": 694637,
+          "existsInLocal": true
+        }
+      }
+    },
+    "maruti suzuki": {
+      "make": "Maruti Suzuki",
+      "cardekhoBrandUrl": "https://www.cardekho.com/maruti-suzuki-cars",
+      "totalLocalModels": 23,
+      "totalCardekhoModels": 20,
+      "missingModels": [
+        "e Vitara"
+      ],
+      "localOnlyModels": [
+        "Alto Tour H1",
+        "Wagon R tour",
+        "Ertiga Tour",
+        "Eeco Cargo"
+      ],
+      "models": {
+        "fronx": {
+          "model": "FRONX",
+          "bodyType": "SUV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/FRONX/9916/1771931850505/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/maruti/fronx",
+          "priceMinInr": 684900,
+          "existsInLocal": true
+        },
+        "swift": {
+          "model": "Swift",
+          "bodyType": "Hatchback",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Swift/9226/1755777061785/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/maruti/swift",
+          "priceMinInr": 578900,
+          "existsInLocal": true
+        },
+        "ertiga": {
+          "model": "Ertiga",
+          "bodyType": "MPV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Ertiga/10288/1755776579514/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/carmodels/Maruti/Maruti_Ertiga",
+          "priceMinInr": 880000,
+          "existsInLocal": true
+        },
+        "e vitara": {
+          "model": "e Vitara",
+          "bodyType": "SUV",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Tata/Nexon-EV/11024/1755845297648/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/maruti/e-vitara",
+          "priceMinInr": 1599000,
+          "existsInLocal": false
+        },
+        "brezza": {
+          "model": "Brezza",
+          "bodyType": "SUV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Brezza/10388/1774618174088/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/maruti/brezza",
+          "priceMinInr": 825900,
+          "existsInLocal": true
+        },
+        "baleno": {
+          "model": "Baleno",
+          "bodyType": "Hatchback",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Baleno/10492/1755851821713/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/carmodels/Maruti/Maruti_Baleno",
+          "priceMinInr": 598900,
+          "existsInLocal": true
+        },
+        "grand vitara": {
+          "model": "Grand Vitara",
+          "bodyType": "SUV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Grand-Vitara/10501/1755776910397/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/carmodels/Maruti/Maruti_Grand_Vitara",
+          "priceMinInr": 1076500,
+          "existsInLocal": true
+        },
+        "dzire": {
+          "model": "Dzire",
+          "bodyType": "Sedan",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Dzire/12186/1771935643542/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/maruti/dzire",
+          "priceMinInr": 625600,
+          "existsInLocal": true
+        },
+        "wagon r": {
+          "model": "Wagon R",
+          "bodyType": "Hatchback",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Wagon-R/10363/1755843602295/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/maruti/wagon-r",
+          "priceMinInr": 498900,
+          "existsInLocal": true
+        },
+        "alto k10": {
+          "model": "Alto K10",
+          "bodyType": "Hatchback",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Alto-K10/10330/1762856949864/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/maruti/alto-k10",
+          "priceMinInr": 369900,
+          "existsInLocal": true
+        },
+        "victoris": {
+          "model": "Victoris",
+          "bodyType": "SUV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Victoris/12902/1771932006780/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/maruti/victoris",
+          "priceMinInr": 1049900,
+          "existsInLocal": true
+        },
+        "celerio": {
+          "model": "Celerio",
+          "bodyType": "Hatchback",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Celerio/10355/1762857367030/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/carmodels/Maruti/Maruti_Celerio",
+          "priceMinInr": 469900,
+          "existsInLocal": true
+        },
+        "ignis": {
+          "model": "Ignis",
+          "bodyType": "Hatchback",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Ignis/10318/1762858603393/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/carmodels/Maruti/Maruti_Ignis",
+          "priceMinInr": 535100,
+          "existsInLocal": true
+        },
+        "jimny": {
+          "model": "Jimny",
+          "bodyType": "SUV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Jimny/6182/1762859095762/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/maruti/jimny",
+          "priceMinInr": 1231500,
+          "existsInLocal": true
+        },
+        "s presso": {
+          "model": "S-Presso",
+          "bodyType": "Hatchback",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/S-Presso/10347/1762859376235/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/maruti/s-presso",
+          "priceMinInr": 349900,
+          "existsInLocal": true
+        },
+        "xl6": {
+          "model": "XL6",
+          "bodyType": "MPV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/XL6/10378/1762863855359/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/maruti/xl6",
+          "priceMinInr": 1152300,
+          "existsInLocal": true
+        },
+        "eeco": {
+          "model": "Eeco",
+          "bodyType": "MPV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Eeco/10374/1762856748828/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/carmodels/Maruti/Maruti_Eeco",
+          "priceMinInr": 520900,
+          "existsInLocal": true
+        },
+        "invicto": {
+          "model": "Invicto",
+          "bodyType": "MPV",
+          "fuelType": "Hybrid",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Invicto/9483/1762858847096/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/maruti/invicto",
+          "priceMinInr": 2497400,
+          "existsInLocal": true
+        },
+        "ciaz": {
+          "model": "Ciaz",
+          "bodyType": "Sedan",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Ciaz/10340/1762857604189/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/carmodels/Maruti/Maruti_Ciaz",
+          "priceMinInr": 909000,
+          "existsInLocal": true
+        },
+        "dzire tour s": {
+          "model": "Dzire Tour S",
+          "bodyType": "Sedan",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Dzire-Tour-S/12461/1762857975456/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/maruti/dzire-tour-s",
+          "priceMinInr": 623800,
+          "existsInLocal": true
+        },
+        "alto tour h1": {
+          "model": "Alto Tour H1",
+          "bodyType": null,
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Alto-Tour-H1/12517/1762857166816/front-left-side-47.jpg",
+          "sourceUrl": null,
+          "priceMinInr": 399900,
+          "existsInLocal": true
+        },
+        "wagon r tour": {
+          "model": "Wagon R tour",
+          "bodyType": null,
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Wagon-R-tour/9442/1762863641169/front-left-side-47.jpg",
+          "sourceUrl": null,
+          "priceMinInr": 499000,
+          "existsInLocal": true
+        },
+        "ertiga tour": {
+          "model": "Ertiga Tour",
+          "bodyType": null,
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Ertiga-Tour/9617/1762858404297/front-left-side-47.jpg",
+          "sourceUrl": null,
+          "priceMinInr": 967820,
+          "existsInLocal": true
+        },
+        "eeco cargo": {
+          "model": "Eeco Cargo",
+          "bodyType": null,
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Eeco-Cargo/9449/1762858188201/front-left-side-47.jpg",
+          "sourceUrl": null,
+          "priceMinInr": 538800,
+          "existsInLocal": true
+        }
+      }
+    },
+    "hyundai": {
+      "make": "Hyundai",
+      "cardekhoBrandUrl": "https://www.cardekho.com/cars/Hyundai",
+      "totalLocalModels": 16,
+      "totalCardekhoModels": 15,
+      "missingModels": [
+        "Creta Electric"
+      ],
+      "localOnlyModels": [
+        "Tucson",
+        "Creta EV"
+      ],
+      "models": {
+        "creta": {
+          "model": "Creta",
+          "bodyType": "SUV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Creta/11810/1731322081163/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/hyundai/creta",
+          "priceMinInr": 1079000,
+          "existsInLocal": true
+        },
+        "aura": {
+          "model": "Aura",
+          "bodyType": "Sedan",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Aura/10125/1762429751468/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/hyundai/aura",
+          "priceMinInr": 599990,
+          "existsInLocal": true
+        },
+        "venue": {
+          "model": "Venue",
+          "bodyType": "SUV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Venue/10123/1762429486221/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/hyundai/venue",
+          "priceMinInr": 799900,
+          "existsInLocal": true
+        },
+        "verna": {
+          "model": "Verna",
+          "bodyType": "Sedan",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Verna/10129/1762431057793/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/hyundai/verna",
+          "priceMinInr": 1098400,
+          "existsInLocal": true
+        },
+        "i20": {
+          "model": "i20",
+          "bodyType": "Hatchback",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/i20/10091/1762430485966/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/hyundai/i20",
+          "priceMinInr": 599000,
+          "existsInLocal": true
+        },
+        "exter": {
+          "model": "Exter",
+          "bodyType": "Hatchback",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Exter/10121/1762429210086/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/hyundai/exter",
+          "priceMinInr": 579900,
+          "existsInLocal": true
+        },
+        "alcazar": {
+          "model": "Alcazar",
+          "bodyType": "SUV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Alcazar/9246/1758802404168/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/hyundai/alcazar",
+          "priceMinInr": 1449900,
+          "existsInLocal": true
+        },
+        "creta electric": {
+          "model": "Creta Electric",
+          "bodyType": "SUV",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Tata/Harrier-EV/9564/1759821423250/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/hyundai/creta-electric",
+          "priceMinInr": 1802200,
+          "existsInLocal": false
+        },
+        "venue n line": {
+          "model": "Venue N Line",
+          "bodyType": "SUV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Venue-N-Line/9505/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/hyundai/venue-n-line",
+          "priceMinInr": 1065400,
+          "existsInLocal": true
+        },
+        "creta n line": {
+          "model": "Creta N Line",
+          "bodyType": "SUV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Creta-N-Line/11593/1768815786514/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/hyundai/creta-n-line",
+          "priceMinInr": 1783000,
+          "existsInLocal": true
+        },
+        "prime sd": {
+          "model": "Prime SD",
+          "bodyType": "Sedan",
+          "fuelType": "CNG",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Prime-SD/13174/1770884620026/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/hyundai/prime-sd",
+          "priceMinInr": 689900,
+          "existsInLocal": true
+        },
+        "prime hb": {
+          "model": "Prime HB",
+          "bodyType": "Hatchback",
+          "fuelType": "CNG",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Prime-HB/13173/1767101740320/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/hyundai/prime-hb",
+          "priceMinInr": 599900,
+          "existsInLocal": true
+        },
+        "grand i10 nios": {
+          "model": "Grand i10 Nios",
+          "bodyType": "Hatchback",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Grand-i10-Nios/9788/1694589204095/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/hyundai/grand-i10-nios",
+          "priceMinInr": 555000,
+          "existsInLocal": true
+        },
+        "i20 n line": {
+          "model": "i20 N-Line",
+          "bodyType": "Hatchback",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/i20-N-Line/9500/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/hyundai/i20-n-line",
+          "priceMinInr": 921500,
+          "existsInLocal": true
+        },
+        "ioniq 5": {
+          "model": "IONIQ 5",
+          "bodyType": "SUV",
+          "fuelType": "Electric",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/IONIQ-5/8983/1762430808343/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/hyundai/ioniq-5",
+          "priceMinInr": 4630000,
+          "existsInLocal": true
+        },
+        "tucson": {
+          "model": "Tucson",
+          "bodyType": null,
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Tucson/10133/1762431617294/front-left-side-47.jpg",
+          "sourceUrl": null,
+          "priceMinInr": null,
+          "existsInLocal": true
+        },
+        "creta ev": {
+          "model": "Creta EV",
+          "bodyType": null,
+          "fuelType": "Electric",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Creta-EV/9710/front-left-side-47.jpg",
+          "sourceUrl": null,
+          "priceMinInr": null,
+          "existsInLocal": true
+        }
+      }
+    },
+    "honda": {
+      "make": "Honda",
+      "cardekhoBrandUrl": "https://www.cardekho.com/cars/Honda",
+      "totalLocalModels": 5,
+      "totalCardekhoModels": 5,
+      "missingModels": [],
+      "localOnlyModels": [],
+      "models": {
+        "amaze": {
+          "model": "Amaze",
+          "bodyType": "Sedan",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Dzire/12186/1771935643542/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/honda/amaze",
+          "priceMinInr": 751390,
+          "existsInLocal": true
+        },
+        "city": {
+          "model": "City",
+          "bodyType": "Sedan",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Verna-Facelift/13312/1773040519044/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/honda/city",
+          "priceMinInr": 1199900,
+          "existsInLocal": true
+        },
+        "elevate": {
+          "model": "Elevate",
+          "bodyType": "SUV",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Hyundai/Creta/8667/1755765115423/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/honda/elevate",
+          "priceMinInr": 1159890,
+          "existsInLocal": true
+        },
+        "city hybrid": {
+          "model": "City Hybrid",
+          "bodyType": "Sedan",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Toyota/Hyryder/12837/1776674323818/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/honda/city-hybrid",
+          "priceMinInr": 1999900,
+          "existsInLocal": true
+        },
+        "amaze 2nd gen": {
+          "model": "Amaze 2nd Gen",
+          "bodyType": "Sedan",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maruti/Dzire/12186/1771935643542/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/honda/amaze-2nd-gen",
+          "priceMinInr": 697700,
+          "existsInLocal": true
+        }
+      }
+    },
+    "mahindra": {
+      "make": "Mahindra",
+      "cardekhoBrandUrl": "https://www.cardekho.com/cars/Mahindra",
+      "totalLocalModels": 18,
+      "totalCardekhoModels": 17,
+      "missingModels": [
+        "Scorpio"
+      ],
+      "localOnlyModels": [
+        "Scorpio Classic",
+        "XUV700"
+      ],
+      "models": {
+        "thar": {
+          "model": "Thar",
+          "bodyType": "SUV",
+          "fuelType": "Diesel",
+          "imageUrl": "https://stimg2.cardekho.com/images/yt-video-img/kyp10iu-pZ8/1768571438408/hqdefault.jpg",
+          "sourceUrl": "https://www.cardekho.com/mahindra/thar",
+          "priceMinInr": 999500,
+          "existsInLocal": true
+        },
+        "scorpio n": {
+          "model": "Scorpio N",
+          "bodyType": "SUV",
+          "fuelType": "Diesel",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/Scorpio-N/8847/1721022382575/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/mahindra/scorpio-n",
+          "priceMinInr": 1349000,
+          "existsInLocal": true
+        },
+        "scorpio": {
+          "model": "Scorpio",
+          "bodyType": "SUV",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/Scorpio-N/10818/1755775730308/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/mahindra/scorpio",
+          "priceMinInr": 1299700,
+          "existsInLocal": false
+        },
+        "bolero": {
+          "model": "Bolero",
+          "bodyType": "SUV",
+          "fuelType": "Diesel",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/Bolero/10754/1761635045988/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/mahindra/bolero",
+          "priceMinInr": 799500,
+          "existsInLocal": true
+        },
+        "thar roxx": {
+          "model": "Thar ROXX",
+          "bodyType": "SUV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/pwa/img/spacer3x2.png",
+          "sourceUrl": "https://www.cardekho.com/mahindra/thar-roxx",
+          "priceMinInr": 1239500,
+          "existsInLocal": true
+        },
+        "xuv 3xo": {
+          "model": "XUV 3XO",
+          "bodyType": "SUV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/pwa/img/spacer3x2.png",
+          "sourceUrl": "https://www.cardekho.com/mahindra/xuv-3xo",
+          "priceMinInr": 754000,
+          "existsInLocal": true
+        },
+        "xuv 7xo": {
+          "model": "XUV 7XO",
+          "bodyType": "SUV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/pwa/img/spacer3x2.png",
+          "sourceUrl": "https://www.cardekho.com/mahindra/xuv-7xo",
+          "priceMinInr": 1366000,
+          "existsInLocal": true
+        },
+        "be 6": {
+          "model": "BE 6",
+          "bodyType": "SUV",
+          "fuelType": "Electric",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/BE-6/9263/1762423834412/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/mahindra/be-6",
+          "priceMinInr": 1890001,
+          "existsInLocal": true
+        },
+        "xev 9e": {
+          "model": "XEV 9e",
+          "bodyType": "SUV",
+          "fuelType": "Electric",
+          "imageUrl": "https://stimg.cardekho.com/pwa/img/spacer3x2.png",
+          "sourceUrl": "https://www.cardekho.com/mahindra/xev-9e",
+          "priceMinInr": 2190001,
+          "existsInLocal": true
+        },
+        "bolero neo": {
+          "model": "Bolero Neo",
+          "bodyType": "SUV",
+          "fuelType": "Diesel",
+          "imageUrl": "https://stimg.cardekho.com/pwa/img/spacer3x2.png",
+          "sourceUrl": "https://www.cardekho.com/mahindra/bolero-neo",
+          "priceMinInr": 884500,
+          "existsInLocal": true
+        },
+        "bolero camper": {
+          "model": "Bolero Camper",
+          "bodyType": "Pickup",
+          "fuelType": "Diesel",
+          "imageUrl": "https://stimg.cardekho.com/pwa/img/spacer3x2.png",
+          "sourceUrl": "https://www.cardekho.com/mahindra/bolero-camper",
+          "priceMinInr": 985000,
+          "existsInLocal": true
+        },
+        "marazzo": {
+          "model": "Marazzo",
+          "bodyType": "MPV",
+          "fuelType": "Diesel",
+          "imageUrl": "https://stimg.cardekho.com/pwa/img/spacer3x2.png",
+          "sourceUrl": "https://www.cardekho.com/mahindra/marazzo",
+          "priceMinInr": 1405900,
+          "existsInLocal": true
+        },
+        "xuv400 ev": {
+          "model": "XUV400 EV",
+          "bodyType": "SUV",
+          "fuelType": "Electric",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/XUV400-EV/10174/1675834882271/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/mahindra/xuv400-ev",
+          "priceMinInr": 1548999,
+          "existsInLocal": true
+        },
+        "bolero neo plus": {
+          "model": "Bolero Neo Plus",
+          "bodyType": "SUV",
+          "fuelType": "Diesel",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/Bolero-Neo-Plus/9137/1758198862271/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/mahindra/bolero-neo-plus",
+          "priceMinInr": 1099500,
+          "existsInLocal": true
+        },
+        "xev 9s": {
+          "model": "XEV 9S",
+          "bodyType": "SUV",
+          "fuelType": "Electric",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/XEV-9S/11200/1737523498498/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/mahindra/xev-9s",
+          "priceMinInr": 1994998,
+          "existsInLocal": true
+        },
+        "xuv 3xo ev": {
+          "model": "XUV 3XO EV",
+          "bodyType": "SUV",
+          "fuelType": "Electric",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/XUV-3XO-EV/12263/1767759269079/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/mahindra/xuv-3xo-ev",
+          "priceMinInr": 1389000,
+          "existsInLocal": true
+        },
+        "bolero pik up": {
+          "model": "Bolero Pik-Up",
+          "bodyType": "Pickup",
+          "fuelType": "Diesel",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mahindra/Bolero-Pik-Up/12238/1769597077567/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/mahindra/bolero-pik-up",
+          "priceMinInr": 904599,
+          "existsInLocal": true
+        },
+        "scorpio classic": {
+          "model": "Scorpio Classic",
+          "bodyType": null,
+          "fuelType": "Diesel",
+          "imageUrl": "https://stimg.cardekho.com/pwa/img/spacer3x2.png",
+          "sourceUrl": null,
+          "priceMinInr": null,
+          "existsInLocal": true
+        },
+        "xuv700": {
+          "model": "XUV700",
+          "bodyType": null,
+          "fuelType": "Petrol",
+          "imageUrl": "https://images10.gaadi.com/usedcar_image/4933585/original/8c139a997f65e84d9ca1f79d9c27242e.JPG?imwidth=320",
+          "sourceUrl": null,
+          "priceMinInr": null,
+          "existsInLocal": true
+        }
+      }
+    },
+    "kia": {
+      "make": "Kia",
+      "cardekhoBrandUrl": "https://www.cardekho.com/cars/Kia",
+      "totalLocalModels": 9,
+      "totalCardekhoModels": 9,
+      "missingModels": [],
+      "localOnlyModels": [],
+      "models": {
+        "seltos": {
+          "model": "Seltos",
+          "bodyType": "SUV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/Seltos-2026/12770/1766479168733/front-left-side-47.jpg?tr=w-230",
+          "sourceUrl": "https://www.cardekho.com/kia/seltos",
+          "priceMinInr": 1099000,
+          "existsInLocal": true
+        },
+        "sonet": {
+          "model": "Sonet",
+          "bodyType": "SUV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/Sonet/9783/1755775200530/front-left-side-47.jpg?tr=w-230",
+          "sourceUrl": "https://www.cardekho.com/kia/sonet",
+          "priceMinInr": 730138,
+          "existsInLocal": true
+        },
+        "carens": {
+          "model": "Carens",
+          "bodyType": "MPV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/Carens/11623/1755774968732/front-left-side-47.jpg?tr=w-230",
+          "sourceUrl": "https://www.cardekho.com/kia/carens",
+          "priceMinInr": 1099159,
+          "existsInLocal": true
+        },
+        "carnival": {
+          "model": "Carnival",
+          "bodyType": "MPV",
+          "fuelType": "Diesel",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/Carnival/8001/1755866555419/front-left-side-47.jpg?tr=w-230",
+          "sourceUrl": "https://www.cardekho.com/kia/carnival",
+          "priceMinInr": 5942459,
+          "existsInLocal": true
+        },
+        "syros": {
+          "model": "Syros",
+          "bodyType": "SUV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/Syros/11791/1755867065601/front-left-side-47.jpg?tr=w-230",
+          "sourceUrl": "https://www.cardekho.com/kia/syros",
+          "priceMinInr": 839900,
+          "existsInLocal": true
+        },
+        "ev6": {
+          "model": "EV6",
+          "bodyType": "SUV",
+          "fuelType": "Electric",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/EV6/11019/1694602498498/front-left-side-47.jpg?tr=w-230",
+          "sourceUrl": "https://www.cardekho.com/kia/ev6",
+          "priceMinInr": 6596638,
+          "existsInLocal": true
+        },
+        "carens clavis": {
+          "model": "Carens Clavis",
+          "bodyType": "SUV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/Carens-Clavis/11700/1755774968732/front-left-side-47.jpg?tr=w-230",
+          "sourceUrl": "https://www.cardekho.com/kia/carens-clavis",
+          "priceMinInr": 1120900,
+          "existsInLocal": true
+        },
+        "carens clavis ev": {
+          "model": "Carens Clavis EV",
+          "bodyType": "MPV",
+          "fuelType": "Electric",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/Carens-Clavis-EV/11650/1755866334119/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/kia/carens-clavis-ev",
+          "priceMinInr": 1799000,
+          "existsInLocal": true
+        },
+        "ev9": {
+          "model": "EV9",
+          "bodyType": "SUV",
+          "fuelType": "Electric",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/EV9/11456/1755867065601/front-left-side-47.jpg?tr=w-230",
+          "sourceUrl": "https://www.cardekho.com/kia/ev9",
+          "priceMinInr": 12990000,
+          "existsInLocal": true
+        }
+      }
+    },
+    "toyota": {
+      "make": "Toyota",
+      "cardekhoBrandUrl": "https://www.cardekho.com/cars/Toyota",
+      "totalLocalModels": 12,
+      "totalCardekhoModels": 12,
+      "missingModels": [],
+      "localOnlyModels": [],
+      "models": {
+        "fortuner": {
+          "model": "Fortuner",
+          "bodyType": "SUV",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Toyota/Fortuner/10904/1755846017683/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/carmodels/Toyota/Toyota_Fortuner",
+          "priceMinInr": 3476000,
+          "existsInLocal": true
+        },
+        "innova crysta": {
+          "model": "Innova Crysta",
+          "bodyType": "MPV",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Toyota/Innova-Crysta/9608/1755846139274/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/toyota/innova-crysta",
+          "priceMinInr": 1899000,
+          "existsInLocal": true
+        },
+        "urban cruiser hyryder": {
+          "model": "Urban Cruiser Hyryder",
+          "bodyType": "SUV",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Toyota/Hyryder/10910/1773385497668/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/toyota/hyryder",
+          "priceMinInr": 1099000,
+          "existsInLocal": true
+        },
+        "camry": {
+          "model": "Camry",
+          "bodyType": "Sedan",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Toyota/Camry/11344/1773396920075/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/toyota/camry",
+          "priceMinInr": 4748200,
+          "existsInLocal": true
+        },
+        "land cruiser 300": {
+          "model": "Land Cruiser 300",
+          "bodyType": "SUV",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Toyota/Toyota-Land-Cruiser/4545/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/toyota/land-cruiser-300",
+          "priceMinInr": 21775000,
+          "existsInLocal": true
+        },
+        "hilux": {
+          "model": "Hilux",
+          "bodyType": "Pickup",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Toyota/Hilux/10924/1772710059831/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/toyota/hilux",
+          "priceMinInr": 2852000,
+          "existsInLocal": true
+        },
+        "innova hycross": {
+          "model": "Innova Hycross",
+          "bodyType": "MPV",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Toyota/Innova-Hycross/10931/1766133675486/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/toyota/innova-hycross",
+          "priceMinInr": 1870000,
+          "existsInLocal": true
+        },
+        "vellfire": {
+          "model": "Vellfire",
+          "bodyType": "MPV",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Toyota/Vellfire/10337/1755846282322/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/toyota/vellfire",
+          "priceMinInr": 11973400,
+          "existsInLocal": true
+        },
+        "glanza": {
+          "model": "Glanza",
+          "bodyType": "Hatchback",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Toyota/Glanza/10231/1767782580969/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/toyota/glanza",
+          "priceMinInr": 646000,
+          "existsInLocal": true
+        },
+        "rumion": {
+          "model": "Rumion",
+          "bodyType": "MPV",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Toyota/Rumion/8650/1773142465050/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/carmodels/Toyota/Toyota_Rumion",
+          "priceMinInr": 955500,
+          "existsInLocal": true
+        },
+        "taisor": {
+          "model": "Taisor",
+          "bodyType": "SUV",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Toyota/Taisor/11637/1764935465349/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/toyota/taisor",
+          "priceMinInr": 725000,
+          "existsInLocal": true
+        },
+        "fortuner legender": {
+          "model": "Fortuner Legender",
+          "bodyType": "SUV",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Toyota/Fortuner-Legender/10229/1764935522846/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/toyota/fortuner-legender",
+          "priceMinInr": 4292000,
+          "existsInLocal": true
+        }
+      }
+    },
+    "volkswagen": {
+      "make": "Volkswagen",
+      "cardekhoBrandUrl": "https://www.cardekho.com/cars/Volkswagen",
+      "totalLocalModels": 5,
+      "totalCardekhoModels": 5,
+      "missingModels": [],
+      "localOnlyModels": [],
+      "models": {
+        "virtus": {
+          "model": "Virtus",
+          "bodyType": "Sedan",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Volkswagen/Virtus/12093/1770888507498/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/volkswagen/virtus",
+          "priceMinInr": 1049900,
+          "existsInLocal": true
+        },
+        "taigun": {
+          "model": "Taigun",
+          "bodyType": "SUV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Volkswagen/Taigun/12659/1770889095844/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/volkswagen/taigun",
+          "priceMinInr": 1099900,
+          "existsInLocal": true
+        },
+        "tiguan r line": {
+          "model": "Tiguan R-Line",
+          "bodyType": "SUV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Volkswagen/Tiguan/9848/1727960498498/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/volkswagen/tiguan-r-line",
+          "priceMinInr": 4573000,
+          "existsInLocal": true
+        },
+        "tayron r line": {
+          "model": "Tayron R-Line",
+          "bodyType": "SUV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Volkswagen/Tayron/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/volkswagen/tayron-r-line",
+          "priceMinInr": 4699000,
+          "existsInLocal": true
+        },
+        "golf gti": {
+          "model": "Golf GTI",
+          "bodyType": "Hatchback",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Volkswagen/Golf-GTI/9524/1727961498498/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/volkswagen/golf-gti",
+          "priceMinInr": 5090900,
+          "existsInLocal": true
+        }
+      }
+    },
+    "skoda": {
+      "make": "Skoda",
+      "cardekhoBrandUrl": "https://www.cardekho.com/cars/Skoda",
+      "totalLocalModels": 5,
+      "totalCardekhoModels": 5,
+      "missingModels": [],
+      "localOnlyModels": [],
+      "models": {
+        "kylaq": {
+          "model": "Kylaq",
+          "bodyType": "SUV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Skoda/Kylaq/12199/1771928734405/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/skoda/kylaq",
+          "priceMinInr": 759000,
+          "existsInLocal": true
+        },
+        "kushaq": {
+          "model": "Kushaq",
+          "bodyType": "SUV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Skoda/Kushaq/11810/1762938173534/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/skoda/kushaq",
+          "priceMinInr": 1069000,
+          "existsInLocal": true
+        },
+        "slavia": {
+          "model": "Slavia",
+          "bodyType": "Sedan",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Skoda/Slavia/11810/1762938173534/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/carmodels/Skoda/Skoda_Slavia",
+          "priceMinInr": 999900,
+          "existsInLocal": true
+        },
+        "kodiaq": {
+          "model": "Kodiaq",
+          "bodyType": "SUV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Skoda/Kodiaq/9930/1764935007679/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/skoda/kodiaq",
+          "priceMinInr": 3999000,
+          "existsInLocal": true
+        },
+        "octavia rs": {
+          "model": "Octavia RS",
+          "bodyType": "Sedan",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Skoda/Octavia-RS/9524/1762503875410/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/skoda/octavia-rs",
+          "priceMinInr": 4999001,
+          "existsInLocal": true
+        }
+      }
+    },
+    "mg": {
+      "make": "MG",
+      "cardekhoBrandUrl": "https://www.cardekho.com/cars/MG",
+      "totalLocalModels": 9,
+      "totalCardekhoModels": 9,
+      "missingModels": [],
+      "localOnlyModels": [],
+      "models": {
+        "windsor ev": {
+          "model": "Windsor EV",
+          "bodyType": "MPV",
+          "fuelType": "Electric",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/MG/Windsor-EV/11848/1755845275936/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/mg/windsor-ev",
+          "priceMinInr": 1399800,
+          "existsInLocal": true
+        },
+        "hector": {
+          "model": "Hector",
+          "bodyType": "SUV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/MG/Hector/13125/1768813549348/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/mg/hector",
+          "priceMinInr": 1199000,
+          "existsInLocal": true
+        },
+        "cyberster": {
+          "model": "Cyberster",
+          "bodyType": "Convertible",
+          "fuelType": "Electric",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/MG/Cyberster/12221/1758802623039/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/mg/cyberster",
+          "priceMinInr": 7499801,
+          "existsInLocal": true
+        },
+        "comet ev": {
+          "model": "Comet EV",
+          "bodyType": "Hatchback",
+          "fuelType": "Electric",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/MG/Comet-EV/11556/1772712400778/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/mg/comet-ev",
+          "priceMinInr": 749800,
+          "existsInLocal": true
+        },
+        "zs ev": {
+          "model": "ZS EV",
+          "bodyType": "SUV",
+          "fuelType": "Electric",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/MG/ZS-EV/11503/1755845485024/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/mg/zs-ev",
+          "priceMinInr": 1799000,
+          "existsInLocal": true
+        },
+        "astor": {
+          "model": "Astor",
+          "bodyType": "SUV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/MG/Astor/11413/1762752659543/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/mg/astor",
+          "priceMinInr": 979100,
+          "existsInLocal": true
+        },
+        "gloster": {
+          "model": "Gloster",
+          "bodyType": "SUV",
+          "fuelType": "Diesel",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/MG/Gloster/9294/1755844590260/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/mg/gloster",
+          "priceMinInr": 3833000,
+          "existsInLocal": true
+        },
+        "m9": {
+          "model": "M9",
+          "bodyType": "MPV",
+          "fuelType": "Electric",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/MG/M9/12270/1758802685718/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/mg/m9",
+          "priceMinInr": 7090000,
+          "existsInLocal": true
+        },
+        "hector plus": {
+          "model": "Hector Plus",
+          "bodyType": "SUV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/MG/Hector-Plus/13137/1765892297285/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/mg/hector-plus",
+          "priceMinInr": 1749000,
+          "existsInLocal": true
+        }
+      }
+    },
+    "renault": {
+      "make": "Renault",
+      "cardekhoBrandUrl": "https://www.cardekho.com/cars/Renault",
+      "totalLocalModels": 4,
+      "totalCardekhoModels": 4,
+      "missingModels": [],
+      "localOnlyModels": [],
+      "models": {
+        "duster": {
+          "model": "Duster",
+          "bodyType": "SUV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Renault/Duster/10351/1758692459782/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/renault/duster",
+          "priceMinInr": 1049000,
+          "existsInLocal": true
+        },
+        "kwid": {
+          "model": "KWID",
+          "bodyType": "Hatchback",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Renault/Kwid/10351/1758692459782/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/carmodels/Renault/Renault_KWID",
+          "priceMinInr": 429900,
+          "existsInLocal": true
+        },
+        "triber": {
+          "model": "Triber",
+          "bodyType": "MPV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Renault/Triber/10351/1758692459782/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/renault/triber",
+          "priceMinInr": 576300,
+          "existsInLocal": true
+        },
+        "kiger": {
+          "model": "Kiger",
+          "bodyType": "SUV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Renault/Kiger/10626/1758692459782/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/renault/kiger",
+          "priceMinInr": 580875,
+          "existsInLocal": true
+        }
+      }
+    },
+    "nissan": {
+      "make": "Nissan",
+      "cardekhoBrandUrl": "https://www.cardekho.com/cars/Nissan",
+      "totalLocalModels": 3,
+      "totalCardekhoModels": 3,
+      "missingModels": [],
+      "localOnlyModels": [],
+      "models": {
+        "gravite": {
+          "model": "Gravite",
+          "bodyType": "MPV",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Nissan/Gravite/11591/1763355574474/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/nissan/gravite",
+          "priceMinInr": 565000,
+          "existsInLocal": true
+        },
+        "magnite": {
+          "model": "Magnite",
+          "bodyType": "SUV",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Nissan/Magnite/11793/1760004620755/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/nissan/magnite",
+          "priceMinInr": 561650,
+          "existsInLocal": true
+        },
+        "x trail": {
+          "model": "X-Trail",
+          "bodyType": "SUV",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Nissan/X-Trail/10081/1769105282099/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/carmodels/Nissan/Nissan_X-Trail",
+          "priceMinInr": 4819862,
+          "existsInLocal": true
+        }
+      }
+    },
+    "jeep": {
+      "make": "Jeep",
+      "cardekhoBrandUrl": "https://www.cardekho.com/cars/Jeep",
+      "totalLocalModels": 4,
+      "totalCardekhoModels": 4,
+      "missingModels": [],
+      "localOnlyModels": [],
+      "models": {
+        "wrangler": {
+          "model": "Wrangler",
+          "bodyType": "SUV",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Jeep/Wrangler/9782/1767782355459/front-left-side-47.jpg?tr=w-230",
+          "sourceUrl": "https://www.cardekho.com/jeep/wrangler",
+          "priceMinInr": 6458000,
+          "existsInLocal": true
+        },
+        "compass": {
+          "model": "Compass",
+          "bodyType": "SUV",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Jeep/Compass/10938/1755774843690/front-left-side-47.jpg?tr=w-230",
+          "sourceUrl": "https://www.cardekho.com/jeep/compass",
+          "priceMinInr": 1799000,
+          "existsInLocal": true
+        },
+        "meridian": {
+          "model": "Meridian",
+          "bodyType": "SUV",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Jeep/Meridian/9783/1767782333389/front-left-side-47.jpg?tr=w-230",
+          "sourceUrl": "https://www.cardekho.com/jeep/meridian",
+          "priceMinInr": 2333000,
+          "existsInLocal": true
+        },
+        "grand cherokee": {
+          "model": "Grand Cherokee",
+          "bodyType": "SUV",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Jeep/Grand-Cherokee/10945/1767782308966/front-left-side-47.jpg?tr=w-230",
+          "sourceUrl": "https://www.cardekho.com/jeep/grand-cherokee",
+          "priceMinInr": 6300000,
+          "existsInLocal": true
+        }
+      }
+    },
+    "citroen": {
+      "make": "Citroen",
+      "cardekhoBrandUrl": "https://www.cardekho.com/cars/Citroen",
+      "totalLocalModels": 5,
+      "totalCardekhoModels": 5,
+      "missingModels": [],
+      "localOnlyModels": [],
+      "models": {
+        "c3": {
+          "model": "C3",
+          "bodyType": "Hatchback",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Citroen/C3/10946/1758802259604/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/citroen/c3",
+          "priceMinInr": 499000,
+          "existsInLocal": true
+        },
+        "aircross": {
+          "model": "Aircross",
+          "bodyType": "SUV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Citroen/Aircross/11331/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/citroen/aircross",
+          "priceMinInr": 889000,
+          "existsInLocal": true
+        },
+        "basalt": {
+          "model": "Basalt",
+          "bodyType": "SUV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Citroen/Basalt/11163/1758802543938/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/citroen/basalt",
+          "priceMinInr": 855000,
+          "existsInLocal": true
+        },
+        "c5 aircross": {
+          "model": "C5 Aircross",
+          "bodyType": "SUV",
+          "fuelType": "Diesel",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Citroen/C5-Aircross/9268/1769080851032/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/citroen/c5-aircross",
+          "priceMinInr": 3732400,
+          "existsInLocal": true
+        },
+        "ec3": {
+          "model": "eC3",
+          "bodyType": "Hatchback",
+          "fuelType": "Electric",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Citroen/eC3/10947/1758802328697/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/citroen/ec3",
+          "priceMinInr": 1290000,
+          "existsInLocal": true
+        }
+      }
+    },
+    "byd": {
+      "make": "BYD",
+      "cardekhoBrandUrl": "https://www.cardekho.com/cars/BYD",
+      "totalLocalModels": 4,
+      "totalCardekhoModels": 4,
+      "missingModels": [],
+      "localOnlyModels": [],
+      "models": {
+        "atto 3": {
+          "model": "Atto 3",
+          "bodyType": "SUV",
+          "fuelType": "Electric",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BYD/Atto-3/11837/1768891336368/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/byd/atto-3",
+          "priceMinInr": 2499000,
+          "existsInLocal": true
+        },
+        "seal": {
+          "model": "Seal",
+          "bodyType": "Sedan",
+          "fuelType": "Electric",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BYD/Seal/9561/1770881231451/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/byd/seal",
+          "priceMinInr": 4100000,
+          "existsInLocal": true
+        },
+        "sealion 7": {
+          "model": "Sealion 7",
+          "bodyType": "SUV",
+          "fuelType": "Electric",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BYD/Sealion-7/12273/1768892259667/front-left-side-47.jpg?imwidth=420&impolicy=resize",
+          "sourceUrl": "https://www.cardekho.com/byd/sealion-7",
+          "priceMinInr": 4940000,
+          "existsInLocal": true
+        },
+        "emax 7": {
+          "model": "eMAX 7",
+          "bodyType": "MPV",
+          "fuelType": "Electric",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BYD/eMAX-7/12144/1768891656918/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/byd/emax-7",
+          "priceMinInr": 2690000,
+          "existsInLocal": true
+        }
+      }
+    },
+    "force motors": {
+      "make": "Force Motors",
+      "cardekhoBrandUrl": "https://www.cardekho.com/cars/Force",
+      "totalLocalModels": 3,
+      "totalCardekhoModels": 3,
+      "missingModels": [],
+      "localOnlyModels": [],
+      "models": {
+        "urbania": {
+          "model": "Urbania",
+          "bodyType": "MPV",
+          "fuelType": "Diesel",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Force/Urbania/11849/1763466348855/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/force/urbania",
+          "priceMinInr": 2634119,
+          "existsInLocal": true
+        },
+        "gurkha": {
+          "model": "Gurkha",
+          "bodyType": "SUV",
+          "fuelType": "Diesel",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Force/Gurkha/10267/1763466108285/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/carmodels/Force/Force_Gurkha",
+          "priceMinInr": 1595358,
+          "existsInLocal": true
+        },
+        "gurkha 5 door": {
+          "model": "Gurkha 5 Door",
+          "bodyType": "SUV",
+          "fuelType": "Diesel",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Force/Gurkha-5-Door/10268/1763466156634/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/force/gurkha-5-door",
+          "priceMinInr": 1726949,
+          "existsInLocal": true
+        }
+      }
+    },
+    "isuzu": {
+      "make": "Isuzu",
+      "cardekhoBrandUrl": "https://www.cardekho.com/cars/Isuzu",
+      "totalLocalModels": 5,
+      "totalCardekhoModels": 6,
+      "missingModels": [
+        "S-CAB Z"
+      ],
+      "localOnlyModels": [],
+      "models": {
+        "d max": {
+          "model": "D-Max",
+          "bodyType": "Pickup",
+          "fuelType": "Diesel",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Isuzu/D-Max/9427/1768892642798/front-left-side-47.jpg?tr=w-230",
+          "sourceUrl": "https://www.cardekho.com/isuzu/d-max",
+          "priceMinInr": 1019000,
+          "existsInLocal": true
+        },
+        "mu x": {
+          "model": "MU-X",
+          "bodyType": "SUV",
+          "fuelType": "Diesel",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Isuzu/MU-X/8652/1768896726832/front-left-side-47.jpg?tr=w-230",
+          "sourceUrl": "https://www.cardekho.com/isuzu/mu-x",
+          "priceMinInr": 3453240,
+          "existsInLocal": true
+        },
+        "s cab z": {
+          "model": "S-CAB Z",
+          "bodyType": "SUV",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Volkswagen/Virtus/10617/1755846730435/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/isuzu/s-cab-z",
+          "priceMinInr": 1589510,
+          "existsInLocal": false
+        },
+        "s cab": {
+          "model": "S-CAB",
+          "bodyType": "Pickup",
+          "fuelType": "Diesel",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Isuzu/S-CAB/9890/1768897223625/front-left-side-47.jpg?tr=w-230",
+          "sourceUrl": "https://www.cardekho.com/isuzu/s-cab",
+          "priceMinInr": 1044000,
+          "existsInLocal": true
+        },
+        "hi lander": {
+          "model": "Hi-Lander",
+          "bodyType": "Pickup",
+          "fuelType": "Diesel",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Isuzu/Hi-Lander/9888/1768896503880/front-left-side-47.jpg?tr=w-230",
+          "sourceUrl": "https://www.cardekho.com/isuzu/hi-lander",
+          "priceMinInr": 2178080,
+          "existsInLocal": true
+        },
+        "v cross": {
+          "model": "V-Cross",
+          "bodyType": "Pickup",
+          "fuelType": "Diesel",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Isuzu/V-Cross/9891/1768897857216/front-left-side-47.jpg?tr=w-230",
+          "sourceUrl": "https://www.cardekho.com/isuzu/v-cross",
+          "priceMinInr": 2550260,
+          "existsInLocal": true
+        }
+      }
+    },
+    "vinfast": {
+      "make": "VinFast",
+      "cardekhoBrandUrl": "https://www.cardekho.com/cars/VinFast",
+      "totalLocalModels": 6,
+      "totalCardekhoModels": 2,
+      "missingModels": [
+        "VF7",
+        "VF6"
+      ],
+      "localOnlyModels": [
+        "VF 6",
+        "VF 7",
+        "VF 8",
+        "VF 9",
+        "VF 3",
+        "Limo Green"
+      ],
+      "models": {
+        "vf7": {
+          "model": "VF7",
+          "bodyType": "SUV",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/VinFast/VF6/11252/1758112114064/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/vinfast/vf7",
+          "priceMinInr": 2189000,
+          "existsInLocal": false
+        },
+        "vf6": {
+          "model": "VF6",
+          "bodyType": "SUV",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/VinFast/VF7/12938/1768890477947/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/vinfast/vf6",
+          "priceMinInr": 1729000,
+          "existsInLocal": false
+        },
+        "vf 6": {
+          "model": "VF 6",
+          "bodyType": null,
+          "fuelType": "Electric",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/VinFast/VF6/11252/1758112114064/front-left-side-47.jpg",
+          "sourceUrl": null,
+          "priceMinInr": 1649000,
+          "existsInLocal": true
+        },
+        "vf 7": {
+          "model": "VF 7",
+          "bodyType": null,
+          "fuelType": "Electric",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/VinFast/VF7/12938/1768890477947/front-left-side-47.jpg",
+          "sourceUrl": null,
+          "priceMinInr": 2089000,
+          "existsInLocal": true
+        },
+        "vf 8": {
+          "model": "VF 8",
+          "bodyType": null,
+          "fuelType": "Electric",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/VinFast/VF8/11254/1697092027821/front-left-side-47.jpg",
+          "sourceUrl": null,
+          "priceMinInr": 5000000,
+          "existsInLocal": true
+        },
+        "vf 9": {
+          "model": "VF 9",
+          "bodyType": null,
+          "fuelType": "Electric",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/VinFast/VF9/12337/1737020265933/front-left-side-47.jpg",
+          "sourceUrl": null,
+          "priceMinInr": 6500000,
+          "existsInLocal": true
+        },
+        "vf 3": {
+          "model": "VF 3",
+          "bodyType": null,
+          "fuelType": "Electric",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/VinFast/VF3/12337/front-left-side-47.jpg",
+          "sourceUrl": null,
+          "priceMinInr": 1000000,
+          "existsInLocal": true
+        },
+        "limo green": {
+          "model": "Limo Green",
+          "bodyType": null,
+          "fuelType": "Electric",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/VinFast/Limo-Green/front-left-side-47.jpg",
+          "sourceUrl": null,
+          "priceMinInr": 1900000,
+          "existsInLocal": true
+        }
+      }
+    },
+    "bmw": {
+      "make": "BMW",
+      "cardekhoBrandUrl": "https://www.cardekho.com/cars/BMW",
+      "totalLocalModels": 27,
+      "totalCardekhoModels": 20,
+      "missingModels": [
+        "3 Series Long Wheelbase"
+      ],
+      "localOnlyModels": [
+        "3 Series Gran Limousine",
+        "M4",
+        "X4",
+        "M8",
+        "6 Series GT",
+        "8 Series Gran Coupe",
+        "M340i",
+        "X5 M Competition"
+      ],
+      "models": {
+        "m5": {
+          "model": "M5",
+          "bodyType": "Sedan",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/M5/11821/1762779160108/front-left-side-47.jpg?tr=w-230",
+          "sourceUrl": "https://www.cardekho.com/bmw/m5",
+          "priceMinInr": 20500000,
+          "existsInLocal": true
+        },
+        "x7": {
+          "model": "X7",
+          "bodyType": "SUV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/X7/10571/1762780235473/front-left-side-47.jpg?tr=w-300",
+          "sourceUrl": "https://www.cardekho.com/bmw/x7",
+          "priceMinInr": 12581000,
+          "existsInLocal": true
+        },
+        "x1": {
+          "model": "X1",
+          "bodyType": "SUV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/X1/front-left-side-47.jpg?tr=w-300",
+          "sourceUrl": "https://www.cardekho.com/bmw/x1",
+          "priceMinInr": 5090000,
+          "existsInLocal": true
+        },
+        "x5": {
+          "model": "X5",
+          "bodyType": "SUV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/X5/10452/1762779994999/front-left-side-47.jpg?imwidth=420&impolicy=resize",
+          "sourceUrl": "https://www.cardekho.com/bmw/x5",
+          "priceMinInr": 9370000,
+          "existsInLocal": true
+        },
+        "m8 coupe competition": {
+          "model": "M8 Coupe Competition",
+          "bodyType": "Coupe",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/930x620/BMW/M8-Coupe-Competition/10583/1762779385889/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/bmw/m8-coupe-competition",
+          "priceMinInr": 23840000,
+          "existsInLocal": true
+        },
+        "z4": {
+          "model": "Z4",
+          "bodyType": "Convertible",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/Z4/10183/1762780966159/front-left-side-47.jpg?tr=w-300",
+          "sourceUrl": "https://www.cardekho.com/bmw/z4",
+          "priceMinInr": 9050000,
+          "existsInLocal": true
+        },
+        "x3": {
+          "model": "X3",
+          "bodyType": "SUV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/X3/11819/1770880789292/front-left-side-47.jpg?tr=w-300",
+          "sourceUrl": "https://www.cardekho.com/bmw/x3",
+          "priceMinInr": 7250000,
+          "existsInLocal": true
+        },
+        "5 series": {
+          "model": "5 Series",
+          "bodyType": "Sedan",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/5-Series/front-left-side-47.jpg?tr=w-300",
+          "sourceUrl": "https://www.cardekho.com/bmw/5-series",
+          "priceMinInr": 7480000,
+          "existsInLocal": true
+        },
+        "m2": {
+          "model": "M2",
+          "bodyType": "Coupe",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/M2/front-left-side-47.jpg?tr=w-300",
+          "sourceUrl": "https://www.cardekho.com/bmw/m2",
+          "priceMinInr": 10250000,
+          "existsInLocal": true
+        },
+        "ix1": {
+          "model": "iX1",
+          "bodyType": "SUV",
+          "fuelType": "Electric",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/iX1/front-left-side-47.jpg?tr=w-300",
+          "sourceUrl": "https://www.cardekho.com/bmw/ix1",
+          "priceMinInr": 5090000,
+          "existsInLocal": true
+        },
+        "m4 competition": {
+          "model": "M4 Competition",
+          "bodyType": "Coupe",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/M4-Competition/11702/1762778618869/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/bmw/m4-competition",
+          "priceMinInr": 15550000,
+          "existsInLocal": true
+        },
+        "3 series": {
+          "model": "3 Series",
+          "bodyType": "Sedan",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/3-Series/12300/1756024367684/front-left-side-47.jpg?tr=w-300",
+          "sourceUrl": "https://www.cardekho.com/bmw/3-series",
+          "priceMinInr": 7285000,
+          "existsInLocal": true
+        },
+        "xm": {
+          "model": "XM",
+          "bodyType": "SUV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/XM/10570/1762780641671/front-left-side-47.jpg?tr=w-230",
+          "sourceUrl": "https://www.cardekho.com/bmw/xm",
+          "priceMinInr": 25455000,
+          "existsInLocal": true
+        },
+        "7 series": {
+          "model": "7 Series",
+          "bodyType": "Sedan",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/7-Series/10575/1762776463158/front-left-side-47.jpg?tr=w-230",
+          "sourceUrl": "https://www.cardekho.com/bmw/7-series",
+          "priceMinInr": 18300000,
+          "existsInLocal": true
+        },
+        "i7": {
+          "model": "i7",
+          "bodyType": "Sedan",
+          "fuelType": "Electric",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/i7/front-left-side-47.jpg?tr=w-300",
+          "sourceUrl": "https://www.cardekho.com/bmw/i7",
+          "priceMinInr": 20500000,
+          "existsInLocal": true
+        },
+        "2 series gran coupe": {
+          "model": "2 Series Gran Coupe",
+          "bodyType": "Coupe",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/2-Series-Gran-Coupe/12171/1752747520096/front-left-side-47.jpg?tr=w-230",
+          "sourceUrl": "https://www.cardekho.com/bmw/2-series-gran-coupe",
+          "priceMinInr": 4580000,
+          "existsInLocal": true
+        },
+        "i4": {
+          "model": "i4",
+          "bodyType": "Sedan",
+          "fuelType": "Electric",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/i4/9693/1762776805472/front-left-side-47.jpg?tr=w-230",
+          "sourceUrl": "https://www.cardekho.com/bmw/i4",
+          "priceMinInr": 7250000,
+          "existsInLocal": true
+        },
+        "3 series long wheelbase": {
+          "model": "3 Series Long Wheelbase",
+          "bodyType": "Coupe",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Skoda/Octavia-RS/9524/1762503875410/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/bmw/3-series-long-wheelbase",
+          "priceMinInr": 6060000,
+          "existsInLocal": false
+        },
+        "ix": {
+          "model": "iX",
+          "bodyType": "SUV",
+          "fuelType": "Electric",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/iX/front-left-side-47.jpg?tr=w-300",
+          "sourceUrl": "https://www.cardekho.com/bmw/ix",
+          "priceMinInr": 13950000,
+          "existsInLocal": true
+        },
+        "i5": {
+          "model": "i5",
+          "bodyType": "Sedan",
+          "fuelType": "Electric",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/i5/10181/1762777086587/front-left-side-47.jpg?imwidth=420&impolicy=resize",
+          "sourceUrl": "https://www.cardekho.com/bmw/i5",
+          "priceMinInr": 11950000,
+          "existsInLocal": true
+        },
+        "3 series gran limousine": {
+          "model": "3 Series Gran Limousine",
+          "bodyType": null,
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/3-Series-Long-Wheelbase/12431/1762776117917/front-left-side-47.jpg?tr=w-300",
+          "sourceUrl": null,
+          "priceMinInr": 6050000,
+          "existsInLocal": true
+        },
+        "m4": {
+          "model": "M4",
+          "bodyType": null,
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/M4-Competition/11702/1762778618869/front-left-side-47.jpg?tr=w-230",
+          "sourceUrl": null,
+          "priceMinInr": 15200000,
+          "existsInLocal": true
+        },
+        "x4": {
+          "model": "X4",
+          "bodyType": null,
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/X4/11325/1698065430796/front-left-side-47.jpg?tr=w-300",
+          "sourceUrl": null,
+          "priceMinInr": 9620000,
+          "existsInLocal": true
+        },
+        "m8": {
+          "model": "M8",
+          "bodyType": null,
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/M8/front-left-side-47.jpg?tr=w-300",
+          "sourceUrl": null,
+          "priceMinInr": 23840000,
+          "existsInLocal": true
+        },
+        "6 series gt": {
+          "model": "6 Series GT",
+          "bodyType": null,
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/6-Series-GT/front-left-side-47.jpg?tr=w-300",
+          "sourceUrl": null,
+          "priceMinInr": 7350000,
+          "existsInLocal": true
+        },
+        "8 series gran coupe": {
+          "model": "8 Series Gran Coupe",
+          "bodyType": null,
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/8-Series-Gran-Coupe/front-left-side-47.jpg?tr=w-300",
+          "sourceUrl": null,
+          "priceMinInr": 12900000,
+          "existsInLocal": true
+        },
+        "m340i": {
+          "model": "M340i",
+          "bodyType": null,
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/3-Series-Gran-Limousine/front-left-side-47.jpg?tr=w-300",
+          "sourceUrl": null,
+          "priceMinInr": 7285000,
+          "existsInLocal": true
+        },
+        "x5 m competition": {
+          "model": "X5 M Competition",
+          "bodyType": null,
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/X5-M-Competition/front-left-side-47.jpg",
+          "sourceUrl": null,
+          "priceMinInr": 20790000,
+          "existsInLocal": true
+        }
+      }
+    },
+    "audi": {
+      "make": "Audi",
+      "cardekhoBrandUrl": "https://www.cardekho.com/cars/Audi",
+      "totalLocalModels": 15,
+      "totalCardekhoModels": 13,
+      "missingModels": [],
+      "localOnlyModels": [
+        "SQ8",
+        "A8 L"
+      ],
+      "models": {
+        "a4": {
+          "model": "A4",
+          "bodyType": "Sedan",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Audi/A4/10548/1757137106350/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/audi/a4",
+          "priceMinInr": 4688000,
+          "existsInLocal": true
+        },
+        "q7": {
+          "model": "Q7",
+          "bodyType": "SUV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Audi/Q7/12198/1768206503532/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/audi/q7",
+          "priceMinInr": 8716999,
+          "existsInLocal": true
+        },
+        "q3": {
+          "model": "Q3",
+          "bodyType": "SUV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Audi/Q3/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/audi/q3",
+          "priceMinInr": 4367000,
+          "existsInLocal": true
+        },
+        "a6": {
+          "model": "A6",
+          "bodyType": "Sedan",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Audi/A6/10551/1757140056684/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/carmodels/Audi/Audi_A6",
+          "priceMinInr": 6481000,
+          "existsInLocal": true
+        },
+        "q5": {
+          "model": "Q5",
+          "bodyType": "SUV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Audi/Q5/10556/1757140951323/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/audi/q5",
+          "priceMinInr": 6555000,
+          "existsInLocal": true
+        },
+        "q8": {
+          "model": "Q8",
+          "bodyType": "SUV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Audi/Q8/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/audi/q8",
+          "priceMinInr": 11310000,
+          "existsInLocal": true
+        },
+        "rs q8": {
+          "model": "RS Q8",
+          "bodyType": "SUV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Audi/RS-Q8/12377/1757402656751/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/audi/rs-q8",
+          "priceMinInr": 23383000,
+          "existsInLocal": true
+        },
+        "q3 sportback": {
+          "model": "Q3 Sportback",
+          "bodyType": "SUV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Audi/Q3-Sportback/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/audi/q3-sportback",
+          "priceMinInr": 5298000,
+          "existsInLocal": true
+        },
+        "rs e tron gt": {
+          "model": "RS e-tron GT",
+          "bodyType": "Coupe",
+          "fuelType": "Electric",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Audi/e-tron-GT/8340/1769504486883/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/audi/rs-e-tron-gt",
+          "priceMinInr": 19529000,
+          "existsInLocal": true
+        },
+        "q8 e tron": {
+          "model": "Q8 e-tron",
+          "bodyType": "SUV",
+          "fuelType": "Electric",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Audi/Q8-e-tron/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/audi/q8-e-tron",
+          "priceMinInr": 11473000,
+          "existsInLocal": true
+        },
+        "e tron gt": {
+          "model": "e-tron GT",
+          "bodyType": "Coupe",
+          "fuelType": "Electric",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Audi/e-tron-GT/8340/1769504486883/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/audi/e-tron-gt",
+          "priceMinInr": 17157000,
+          "existsInLocal": true
+        },
+        "q8 sportback e tron": {
+          "model": "Q8 Sportback e-tron",
+          "bodyType": "Sedan",
+          "fuelType": "Electric",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Audi/Q8-Sportback-e-tron/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/audi/q8-sportback-e-tron",
+          "priceMinInr": 11923000,
+          "existsInLocal": true
+        },
+        "s5 sportback": {
+          "model": "S5 Sportback",
+          "bodyType": "Coupe",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Audi/S5-Sportback/10569/1757403486629/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/audi/s5-sportback",
+          "priceMinInr": 7357000,
+          "existsInLocal": true
+        },
+        "sq8": {
+          "model": "SQ8",
+          "bodyType": null,
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Audi/SQ8/front-left-side-47.jpg",
+          "sourceUrl": null,
+          "priceMinInr": null,
+          "existsInLocal": true
+        },
+        "a8 l": {
+          "model": "A8 L",
+          "bodyType": null,
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Audi/A8-L/front-left-side-47.jpg",
+          "sourceUrl": null,
+          "priceMinInr": null,
+          "existsInLocal": true
+        }
+      }
+    },
+    "mercedes-benz": {
+      "make": "Mercedes-Benz",
+      "cardekhoBrandUrl": "https://www.cardekho.com/cars/Mercedes-Benz",
+      "totalLocalModels": 38,
+      "totalCardekhoModels": 20,
+      "missingModels": [
+        "V-Class Extra LWB"
+      ],
+      "localOnlyModels": [
+        "A-Class",
+        "EQB",
+        "Maybach S-Class",
+        "CLE",
+        "AMG C 63",
+        "AMG S 63",
+        "AMG EQS",
+        "AMG GT Coupe",
+        "AMG GT 4-Door Coupe",
+        "AMG GLE 53",
+        "AMG SL",
+        "CLE Cabriolet",
+        "AMG E 53 Cabriolet",
+        "V-Class",
+        "AMG GLE 63 S",
+        "AMG GT R",
+        "AMG A 45 S",
+        "AMG GLA 35",
+        "AMG E 63 S"
+      ],
+      "models": {
+        "e class": {
+          "model": "E-Class",
+          "bodyType": "Sedan",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/E-Class/9790/1763471140336/front-left-side-47.jpg?imwidth=420&impolicy=resize",
+          "sourceUrl": "https://www.cardekho.com/mercedes-benz/e-class",
+          "priceMinInr": 7851351,
+          "existsInLocal": true
+        },
+        "gls": {
+          "model": "GLS",
+          "bodyType": "SUV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/GLS/9791/1763535546980/front-left-side-47.jpg?imwidth=420&impolicy=resize",
+          "sourceUrl": "https://www.cardekho.com/mercedes-benz/gls",
+          "priceMinInr": 13206667,
+          "existsInLocal": true
+        },
+        "s class": {
+          "model": "S-Class",
+          "bodyType": "Sedan",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/S-Class/10852/1763536912245/front-left-side-47.jpg?tr=w-230",
+          "sourceUrl": "https://www.cardekho.com/mercedes-benz/s-class",
+          "priceMinInr": 17783784,
+          "existsInLocal": true
+        },
+        "c class": {
+          "model": "C-Class",
+          "bodyType": "Sedan",
+          "fuelType": "Diesel",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/C-Class/10859/Mercedes-Benz-C-Class-C-220d/1720160327253/front-view-118.jpg?imwidth=420&impolicy=resize",
+          "sourceUrl": "https://www.cardekho.com/carmodels/Mercedes-Benz/Mercedes-Benz_C-Class",
+          "priceMinInr": 5864865,
+          "existsInLocal": true
+        },
+        "maybach gls": {
+          "model": "Maybach GLS",
+          "bodyType": "SUV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/Maybach-GLS/8443/1763536042881/front-left-side-47.jpg?imwidth=420&impolicy=resize",
+          "sourceUrl": "https://www.cardekho.com/mercedes-benz/maybach-gls",
+          "priceMinInr": 31650000,
+          "existsInLocal": true
+        },
+        "gle": {
+          "model": "GLE",
+          "bodyType": "SUV",
+          "fuelType": "Diesel",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/GLE/11332/1763535294500/front-left-side-47.jpg?imwidth=420&impolicy=resize",
+          "sourceUrl": "https://www.cardekho.com/mercedes-benz/gle",
+          "priceMinInr": 9614486,
+          "existsInLocal": true
+        },
+        "glc": {
+          "model": "GLC",
+          "bodyType": "SUV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/GLC/9132/1763534747895/front-left-side-47.jpg?tr=w-230",
+          "sourceUrl": "https://www.cardekho.com/mercedes-benz/glc",
+          "priceMinInr": 7396667,
+          "existsInLocal": true
+        },
+        "eqa": {
+          "model": "EQA",
+          "bodyType": "SUV",
+          "fuelType": "Electric",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/EQA/8276/1763471333579/front-left-side-47.jpg?tr=w-230",
+          "sourceUrl": "https://www.cardekho.com/mercedes-benz/eqa",
+          "priceMinInr": 6720000,
+          "existsInLocal": true
+        },
+        "v class extra lwb": {
+          "model": "V-Class Extra LWB",
+          "bodyType": "MPV",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Toyota/Vellfire/10337/1755846282322/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/mercedes-benz/v-class",
+          "priceMinInr": 14000000,
+          "existsInLocal": false
+        },
+        "gla": {
+          "model": "GLA",
+          "bodyType": "SUV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/GLA/9731/1763534227744/front-left-side-47.jpg?imwidth=420&impolicy=resize",
+          "sourceUrl": "https://www.cardekho.com/mercedes-benz/gla",
+          "priceMinInr": 5080001,
+          "existsInLocal": true
+        },
+        "g class electric": {
+          "model": "G-Class Electric",
+          "bodyType": "SUV",
+          "fuelType": "Electric",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/G-Class-Electric/11502/1763533365029/front-left-side-47.jpg?tr=w-230",
+          "sourceUrl": "https://www.cardekho.com/mercedes-benz/g-class-electric",
+          "priceMinInr": 31000000,
+          "existsInLocal": true
+        },
+        "eqs": {
+          "model": "EQS",
+          "bodyType": "Sedan",
+          "fuelType": "Electric",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/EQS/8423/1763472088703/front-left-side-47.jpg?tr=w-230",
+          "sourceUrl": "https://www.cardekho.com/mercedes-benz/eqs",
+          "priceMinInr": 13000000,
+          "existsInLocal": true
+        },
+        "eqs suv": {
+          "model": "EQS SUV",
+          "bodyType": "SUV",
+          "fuelType": "Electric",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/EQS-SUV/8970/1763532863673/front-left-side-47.jpg?tr=w-230",
+          "sourceUrl": "https://www.cardekho.com/mercedes-benz/eqs-suv",
+          "priceMinInr": 13350000,
+          "existsInLocal": true
+        },
+        "amg cle 53": {
+          "model": "AMG CLE 53",
+          "bodyType": "Coupe",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/AMG-CLE-53/12771/1763468198459/front-left-side-47.jpg?tr=w-230",
+          "sourceUrl": "https://www.cardekho.com/mercedes-benz/amg-cle-53",
+          "priceMinInr": 12770270,
+          "existsInLocal": true
+        },
+        "amg glc 43": {
+          "model": "AMG GLC 43",
+          "bodyType": "SUV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/AMG-GLC-43/11890/1763469460364/front-left-side-47.jpg?tr=w-230",
+          "sourceUrl": "https://www.cardekho.com/mercedes-benz/amg-glc-43",
+          "priceMinInr": 9985000,
+          "existsInLocal": true
+        },
+        "maybach sl 680": {
+          "model": "Maybach SL 680",
+          "bodyType": "Convertible",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/Maybach-SL-680/12398/1763536529976/front-left-side-47.jpg?tr=w-230",
+          "sourceUrl": "https://www.cardekho.com/mercedes-benz/maybach-sl-680",
+          "priceMinInr": 41150000,
+          "existsInLocal": true
+        },
+        "g class": {
+          "model": "G-Class",
+          "bodyType": "SUV",
+          "fuelType": "Diesel",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/G-Class/10258/1763533134182/front-left-side-47.jpg?tr=w-230",
+          "sourceUrl": "https://www.cardekho.com/mercedes-benz/g-class",
+          "priceMinInr": 25500000,
+          "existsInLocal": true
+        },
+        "eqe suv": {
+          "model": "EQE SUV",
+          "bodyType": "SUV",
+          "fuelType": "Electric",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/EQE-SUV/9404/1763471752200/front-left-side-47.jpg?tr=w-230",
+          "sourceUrl": "https://www.cardekho.com/mercedes-benz/eqe-suv",
+          "priceMinInr": 14140000,
+          "existsInLocal": true
+        },
+        "amg c43": {
+          "model": "AMG C43",
+          "bodyType": "Sedan",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/AMG-C43/11277/1763467742516/front-left-side-47.jpg?tr=w-230",
+          "sourceUrl": "https://www.cardekho.com/mercedes-benz/amg-c43",
+          "priceMinInr": 9405000,
+          "existsInLocal": true
+        },
+        "maybach eqs suv": {
+          "model": "Maybach EQS SUV",
+          "bodyType": "SUV",
+          "fuelType": "Electric",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/Maybach-EQS-SUV/9898/1763535819468/front-left-side-47.jpg?tr=w-230",
+          "sourceUrl": "https://www.cardekho.com/mercedes-benz/maybach-eqs-suv",
+          "priceMinInr": 22820000,
+          "existsInLocal": true
+        },
+        "a class": {
+          "model": "A-Class",
+          "bodyType": null,
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/A-Class-Limousine/10868/1763467279231/front-left-side-47.jpg?tr=w-230",
+          "sourceUrl": null,
+          "priceMinInr": null,
+          "existsInLocal": true
+        },
+        "eqb": {
+          "model": "EQB",
+          "bodyType": null,
+          "fuelType": "Electric",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/EQB/11834/1763471553252/front-left-side-47.jpg?tr=w-230",
+          "sourceUrl": null,
+          "priceMinInr": null,
+          "existsInLocal": true
+        },
+        "maybach s class": {
+          "model": "Maybach S-Class",
+          "bodyType": null,
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/Maybach-S-Class/10866/1763536299202/front-left-side-47.jpg?tr=w-230",
+          "sourceUrl": null,
+          "priceMinInr": null,
+          "existsInLocal": true
+        },
+        "cle": {
+          "model": "CLE",
+          "bodyType": null,
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/AMG-CLE-53/12771/1763468198459/front-left-side-47.jpg?imwidth=420&impolicy=resize",
+          "sourceUrl": null,
+          "priceMinInr": null,
+          "existsInLocal": true
+        },
+        "amg c 63": {
+          "model": "AMG C 63",
+          "bodyType": null,
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/AMG-C-63/12197/1763467981493/front-left-side-47.jpg?tr=w-230",
+          "sourceUrl": null,
+          "priceMinInr": null,
+          "existsInLocal": true
+        },
+        "amg s 63": {
+          "model": "AMG S 63",
+          "bodyType": null,
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/AMG-S-63/11732/1763470421736/front-left-side-47.jpg?tr=w-230",
+          "sourceUrl": null,
+          "priceMinInr": null,
+          "existsInLocal": true
+        },
+        "amg eqs": {
+          "model": "AMG EQS",
+          "bodyType": null,
+          "fuelType": "Electric",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/AMG-EQS/11028/1763468709497/front-left-side-47.jpg?tr=w-230",
+          "sourceUrl": null,
+          "priceMinInr": null,
+          "existsInLocal": true
+        },
+        "amg gt coupe": {
+          "model": "AMG GT Coupe",
+          "bodyType": null,
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/AMG-GT-Coupe/11053/1763470161601/front-left-side-47.jpg?tr=w-230",
+          "sourceUrl": null,
+          "priceMinInr": null,
+          "existsInLocal": true
+        },
+        "amg gt 4 door coupe": {
+          "model": "AMG GT 4-Door Coupe",
+          "bodyType": null,
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/AMG-GT-4-Door-Coupe/9792/1769679914036/front-left-side-47.jpg?tr=w-230",
+          "sourceUrl": null,
+          "priceMinInr": null,
+          "existsInLocal": true
+        },
+        "amg gle 53": {
+          "model": "AMG GLE 53",
+          "bodyType": null,
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/AMG-GLE-53/10874/1763469756214/front-left-side-47.jpg?tr=w-230",
+          "sourceUrl": null,
+          "priceMinInr": null,
+          "existsInLocal": true
+        },
+        "amg sl": {
+          "model": "AMG SL",
+          "bodyType": null,
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/AMG-SL/10162/1763470676406/front-left-side-47.jpg?tr=w-230",
+          "sourceUrl": null,
+          "priceMinInr": null,
+          "existsInLocal": true
+        },
+        "cle cabriolet": {
+          "model": "CLE Cabriolet",
+          "bodyType": null,
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/CLE-Cabriolet/10440/1763470894885/front-left-side-47.jpg?tr=w-230",
+          "sourceUrl": null,
+          "priceMinInr": null,
+          "existsInLocal": true
+        },
+        "amg e 53 cabriolet": {
+          "model": "AMG E 53 Cabriolet",
+          "bodyType": null,
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/AMG-E-53-Cabriolet/10878/1763468433617/front-left-side-47.jpg?tr=w-230",
+          "sourceUrl": null,
+          "priceMinInr": null,
+          "existsInLocal": true
+        },
+        "v class": {
+          "model": "V-Class",
+          "bodyType": null,
+          "fuelType": "Diesel",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/V-Class/10902/1772526111627/front-left-side-47.jpg?tr=w-230",
+          "sourceUrl": null,
+          "priceMinInr": null,
+          "existsInLocal": true
+        },
+        "amg gle 63 s": {
+          "model": "AMG GLE 63 S",
+          "bodyType": null,
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/AMG-GLE-63-S/front-left-side-47.jpg?tr=w-230",
+          "sourceUrl": null,
+          "priceMinInr": null,
+          "existsInLocal": true
+        },
+        "amg gt r": {
+          "model": "AMG GT R",
+          "bodyType": null,
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/AMG-GT-R/front-left-side-47.jpg?tr=w-230",
+          "sourceUrl": null,
+          "priceMinInr": null,
+          "existsInLocal": true
+        },
+        "amg a 45 s": {
+          "model": "AMG A 45 S",
+          "bodyType": null,
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/AMG-A-45-S/front-left-side-47.jpg?tr=w-230",
+          "sourceUrl": null,
+          "priceMinInr": null,
+          "existsInLocal": true
+        },
+        "amg gla 35": {
+          "model": "AMG GLA 35",
+          "bodyType": null,
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/AMG-GLA-35/front-left-side-47.jpg?tr=w-230",
+          "sourceUrl": null,
+          "priceMinInr": null,
+          "existsInLocal": true
+        },
+        "amg e 63 s": {
+          "model": "AMG E 63 S",
+          "bodyType": null,
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mercedes-Benz/AMG-E63-S/front-left-side-47.jpg?tr=w-230",
+          "sourceUrl": null,
+          "priceMinInr": null,
+          "existsInLocal": true
+        }
+      }
+    },
+    "porsche": {
+      "make": "Porsche",
+      "cardekhoBrandUrl": "https://www.cardekho.com/cars/Porsche",
+      "totalLocalModels": 8,
+      "totalCardekhoModels": 7,
+      "missingModels": [],
+      "localOnlyModels": [
+        "Cayenne Electric"
+      ],
+      "models": {
+        "911": {
+          "model": "911",
+          "bodyType": "Coupe",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Porsche/911/11757/1762933836560/front-view-118.jpg",
+          "sourceUrl": "https://www.cardekho.com/carmodels/Porsche/Porsche_911",
+          "priceMinInr": 19984000,
+          "existsInLocal": true
+        },
+        "cayenne": {
+          "model": "Cayenne",
+          "bodyType": "SUV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Porsche/Cayenne/9903/1769058007478/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/porsche/cayenne",
+          "priceMinInr": 13869000,
+          "existsInLocal": true
+        },
+        "macan": {
+          "model": "Macan",
+          "bodyType": "SUV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Porsche/Macan/10973/1769058316029/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/carmodels/Porsche/Porsche_Macan",
+          "priceMinInr": 8965000,
+          "existsInLocal": true
+        },
+        "panamera": {
+          "model": "Panamera",
+          "bodyType": "Coupe",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Porsche/Panamera/11350/1769058657161/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/porsche/panamera",
+          "priceMinInr": 17057000,
+          "existsInLocal": true
+        },
+        "taycan": {
+          "model": "Taycan",
+          "bodyType": "Sedan",
+          "fuelType": "Electric",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Porsche/Taycan/11515/1769058931913/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/porsche/taycan",
+          "priceMinInr": 17028000,
+          "existsInLocal": true
+        },
+        "macan ev": {
+          "model": "Macan EV",
+          "bodyType": null,
+          "fuelType": "Electric",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Porsche/Macan-EV/11492/1769058457645/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/porsche/macan-ev",
+          "priceMinInr": 12162000,
+          "existsInLocal": true
+        },
+        "cayenne coupe": {
+          "model": "Cayenne Coupe",
+          "bodyType": "Coupe",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Porsche/Cayenne-Coupe/9596/1737541812498/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/porsche/cayenne-coupe",
+          "priceMinInr": 14441000,
+          "existsInLocal": true
+        },
+        "cayenne electric": {
+          "model": "Cayenne Electric",
+          "bodyType": null,
+          "fuelType": "Electric",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Porsche/Cayenne-Electric/13041/1763632824336/front-left-side-47.jpg",
+          "sourceUrl": null,
+          "priceMinInr": 17568000,
+          "existsInLocal": true
+        }
+      }
+    },
+    "lamborghini": {
+      "make": "Lamborghini",
+      "cardekhoBrandUrl": "https://www.cardekho.com/cars/Lamborghini",
+      "totalLocalModels": 4,
+      "totalCardekhoModels": 4,
+      "missingModels": [],
+      "localOnlyModels": [],
+      "models": {
+        "urus": {
+          "model": "Urus",
+          "bodyType": "SUV",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Lamborghini/Urus/10636/1769059431316/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/lamborghini/urus",
+          "priceMinInr": 41800000,
+          "existsInLocal": true
+        },
+        "revuelto": {
+          "model": "Revuelto",
+          "bodyType": "Coupe",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Lamborghini/Revuelto/9770/1769059148249/front-left-side-47.jpg?tr=w-300",
+          "sourceUrl": "https://www.cardekho.com/lamborghini/revuelto",
+          "priceMinInr": 88900001,
+          "existsInLocal": true
+        },
+        "temerario": {
+          "model": "Temerario",
+          "bodyType": "SUV",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Lamborghini/Temerario/12475/1769059319922/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/lamborghini/temerario",
+          "priceMinInr": 60000001,
+          "existsInLocal": true
+        },
+        "huracan evo": {
+          "model": "Huracan EVO",
+          "bodyType": "Coupe",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Lamborghini/Huracan-EVO/10643/1769680298561/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/lamborghini/huracan-evo",
+          "priceMinInr": 40000000,
+          "existsInLocal": true
+        }
+      }
+    },
+    "ferrari": {
+      "make": "Ferrari",
+      "cardekhoBrandUrl": "https://www.cardekho.com/cars/Ferrari",
+      "totalLocalModels": 8,
+      "totalCardekhoModels": 7,
+      "missingModels": [
+        "812"
+      ],
+      "localOnlyModels": [
+        "Purosangue",
+        "12Cilindri"
+      ],
+      "models": {
+        "812": {
+          "model": "812",
+          "bodyType": "Convertible",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Bentley/Bentayga/7891/1770880450103/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/ferrari/812",
+          "priceMinInr": 57500001,
+          "existsInLocal": false
+        },
+        "296 gtb": {
+          "model": "296 GTB",
+          "bodyType": "Coupe",
+          "fuelType": "Petrol (PHEV)",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Ferrari/296-GTB/9530/1769678172978/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/ferrari/296-gtb",
+          "priceMinInr": 54000000,
+          "existsInLocal": true
+        },
+        "sf90 stradale": {
+          "model": "SF90 Stradale",
+          "bodyType": "Coupe",
+          "fuelType": "Petrol (PHEV)",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Ferrari/SF90-Stradale/9532/1769678528743/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/ferrari/sf90-stradale",
+          "priceMinInr": 75000001,
+          "existsInLocal": true
+        },
+        "f8 tributo": {
+          "model": "F8 Tributo",
+          "bodyType": "Coupe",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Ferrari/F8-Tributo/9525/1769678001068/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/ferrari/f8-tributo",
+          "priceMinInr": 40200001,
+          "existsInLocal": true
+        },
+        "amalfi": {
+          "model": "Amalfi",
+          "bodyType": null,
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Ferrari/Amalfi/12977/1769677840498/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/ferrari/amalfi",
+          "priceMinInr": 55900000,
+          "existsInLocal": true
+        },
+        "roma": {
+          "model": "Roma",
+          "bodyType": "Coupe",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Ferrari/Roma/9538/1769678289085/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/ferrari/roma",
+          "priceMinInr": 37600001,
+          "existsInLocal": true
+        },
+        "849 testarossa": {
+          "model": "849 Testarossa",
+          "bodyType": "Coupe",
+          "fuelType": "Petrol (PHEV)",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Ferrari/849-Testarossa/13218/1769677999345/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/ferrari/849-testarossa",
+          "priceMinInr": 103700000,
+          "existsInLocal": true
+        },
+        "purosangue": {
+          "model": "Purosangue",
+          "bodyType": null,
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Ferrari/Purosangue/10485/1769678437601/front-left-side-47.jpg",
+          "sourceUrl": null,
+          "priceMinInr": 70000000,
+          "existsInLocal": true
+        },
+        "12cilindri": {
+          "model": "12Cilindri",
+          "bodyType": null,
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Ferrari/12Cilindri/12977/1769677840498/front-left-side-47.jpg",
+          "sourceUrl": null,
+          "priceMinInr": 85000000,
+          "existsInLocal": true
+        }
+      }
+    },
+    "land rover": {
+      "make": "Land Rover",
+      "cardekhoBrandUrl": "https://www.cardekho.com/cars/Land_Rover",
+      "totalLocalModels": 7,
+      "totalCardekhoModels": 7,
+      "missingModels": [],
+      "localOnlyModels": [],
+      "models": {
+        "defender": {
+          "model": "Defender",
+          "bodyType": "SUV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Land-Rover/Defender/9080/1755764417900/front-left-side-47.jpg?tr=w-300",
+          "sourceUrl": "https://www.cardekho.com/land-rover/defender",
+          "priceMinInr": 10290000,
+          "existsInLocal": true
+        },
+        "range rover": {
+          "model": "Range Rover",
+          "bodyType": "SUV",
+          "fuelType": "Diesel",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Land-Rover/Range-Rover/11540/1719037980777/front-left-side-47.jpg?tr=w-300",
+          "sourceUrl": "https://www.cardekho.com/land-rover/range-rover",
+          "priceMinInr": 23100000,
+          "existsInLocal": true
+        },
+        "range rover velar": {
+          "model": "Range Rover Velar",
+          "bodyType": "SUV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Land-Rover/Range-Rover-Velar/12767/1767783260921/front-left-side-47.jpg?tr=w-300",
+          "sourceUrl": "https://www.cardekho.com/land-rover/range-rover-velar",
+          "priceMinInr": 8590000,
+          "existsInLocal": true
+        },
+        "range rover sport": {
+          "model": "Range Rover Sport",
+          "bodyType": "SUV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Land-Rover/Range-Rover-Sport/12528/1745923553937/front-left-side-47.jpg?tr=w-300",
+          "sourceUrl": "https://www.cardekho.com/land-rover/range-rover-sport",
+          "priceMinInr": 13766000,
+          "existsInLocal": true
+        },
+        "discovery": {
+          "model": "Discovery",
+          "bodyType": "SUV",
+          "fuelType": "Diesel",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Land-Rover/Discovery/8520/1767783067458/front-left-side-47.jpg?tr=w-300",
+          "sourceUrl": "https://www.cardekho.com/land-rover/discovery",
+          "priceMinInr": 12525000,
+          "existsInLocal": true
+        },
+        "range rover evoque": {
+          "model": "Range Rover Evoque",
+          "bodyType": "SUV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Land-Rover/Range-Rover-Evoque/12549/1767783202589/front-left-side-47.jpg?tr=w-300",
+          "sourceUrl": "https://www.cardekho.com/land-rover/range-rover-evoque",
+          "priceMinInr": 6486000,
+          "existsInLocal": true
+        },
+        "discovery sport": {
+          "model": "Discovery Sport",
+          "bodyType": "SUV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Land-Rover/Discovery-Sport/7575/1767783116820/front-left-side-47.jpg?tr=w-300",
+          "sourceUrl": "https://www.cardekho.com/carmodels/Land_Rover/Land_Rover_Discovery_Sport",
+          "priceMinInr": 6337000,
+          "existsInLocal": true
+        }
+      }
+    },
+    "jaguar": {
+      "make": "Jaguar",
+      "cardekhoBrandUrl": "https://www.cardekho.com/cars/Jaguar",
+      "totalLocalModels": 1,
+      "totalCardekhoModels": 1,
+      "missingModels": [],
+      "localOnlyModels": [],
+      "models": {
+        "f pace": {
+          "model": "F-Pace",
+          "bodyType": "SUV",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Jaguar/F-Pace/10644/1755774688332/front-left-side-47.jpg?imwidth=420&impolicy=resize",
+          "sourceUrl": "https://www.cardekho.com/jaguar/f-pace",
+          "priceMinInr": 7290000,
+          "existsInLocal": true
+        }
+      }
+    },
+    "lexus": {
+      "make": "Lexus",
+      "cardekhoBrandUrl": "https://www.cardekho.com/cars/Lexus",
+      "totalLocalModels": 5,
+      "totalCardekhoModels": 5,
+      "missingModels": [],
+      "localOnlyModels": [],
+      "models": {
+        "es": {
+          "model": "ES",
+          "bodyType": "Coupe",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Lexus/ES/9398/1769080992566/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/lexus/es",
+          "priceMinInr": 8999000,
+          "existsInLocal": true
+        },
+        "nx": {
+          "model": "NX",
+          "bodyType": "SUV",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Lexus/NX/8887/1769081441968/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/lexus/nx",
+          "priceMinInr": 6659000,
+          "existsInLocal": true
+        },
+        "lm": {
+          "model": "LM",
+          "bodyType": "MPV",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Lexus/LM/9569/1769081102595/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/lexus/lm",
+          "priceMinInr": 21538000,
+          "existsInLocal": true
+        },
+        "lx": {
+          "model": "LX",
+          "bodyType": "SUV",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Lexus/LX/8657/1769081229491/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/lexus/lx",
+          "priceMinInr": 28000000,
+          "existsInLocal": true
+        },
+        "rx": {
+          "model": "RX",
+          "bodyType": "SUV",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Lexus/RX/11360/1769081565510/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/lexus/rx",
+          "priceMinInr": 8999000,
+          "existsInLocal": true
+        }
+      }
+    },
+    "volvo": {
+      "make": "Volvo",
+      "cardekhoBrandUrl": "https://www.cardekho.com/cars/Volvo",
+      "totalLocalModels": 5,
+      "totalCardekhoModels": 5,
+      "missingModels": [],
+      "localOnlyModels": [],
+      "models": {
+        "xc90": {
+          "model": "XC90",
+          "bodyType": "SUV",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Volvo/XC90/11096/1769685069498/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/volvo/xc90",
+          "priceMinInr": 9780000,
+          "existsInLocal": true
+        },
+        "xc60": {
+          "model": "XC60",
+          "bodyType": "SUV",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Volvo/XC60/11758/1769685248757/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/volvo/xc60",
+          "priceMinInr": 6890000,
+          "existsInLocal": true
+        },
+        "ex30": {
+          "model": "EX30",
+          "bodyType": "SUV",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Volvo/EX30/12120/1769685395024/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/volvo/ex30",
+          "priceMinInr": 4100000,
+          "existsInLocal": true
+        },
+        "ec40": {
+          "model": "EC40",
+          "bodyType": "SUV",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Volvo/C40-Recharge/9867/1769685530000/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/volvo/ec40",
+          "priceMinInr": 5900000,
+          "existsInLocal": true
+        },
+        "ex40": {
+          "model": "EX40",
+          "bodyType": "SUV",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Volvo/XC40-Recharge/9866/1769685458200/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/volvo/ex40",
+          "priceMinInr": 4900000,
+          "existsInLocal": true
+        }
+      }
+    },
+    "mini": {
+      "make": "Mini",
+      "cardekhoBrandUrl": "https://www.cardekho.com/cars/MINI",
+      "totalLocalModels": 4,
+      "totalCardekhoModels": 4,
+      "missingModels": [],
+      "localOnlyModels": [],
+      "models": {
+        "cooper convertible": {
+          "model": "Cooper Convertible",
+          "bodyType": "Convertible",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mini/Cooper-Convertible/13122/1765541689610/front-left-side-47.jpg?tr=w-230",
+          "sourceUrl": "https://www.cardekho.com/carmodels/Mini/Mini_Cooper_Convertible",
+          "priceMinInr": 5850000,
+          "existsInLocal": true
+        },
+        "cooper s": {
+          "model": "Cooper S",
+          "bodyType": "SUV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mini/Cooper-S/11777/1769679331815/front-left-side-47.jpg?tr=w-230",
+          "sourceUrl": "https://www.cardekho.com/mini/cooper-s",
+          "priceMinInr": 4445000,
+          "existsInLocal": true
+        },
+        "countryman": {
+          "model": "Countryman",
+          "bodyType": "SUV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mini/Countryman/12992/1760438648158/front-left-side-47.jpg?tr=w-230",
+          "sourceUrl": "https://www.cardekho.com/mini/countryman",
+          "priceMinInr": 6565000,
+          "existsInLocal": true
+        },
+        "countryman electric": {
+          "model": "Countryman Electric",
+          "bodyType": "SUV",
+          "fuelType": "Electric",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Mini/Countryman-Electric/5191/1769679539585/front-left-side-47.jpg?tr=w-230",
+          "sourceUrl": "https://www.cardekho.com/mini/countryman-electric",
+          "priceMinInr": 5490000,
+          "existsInLocal": true
+        }
+      }
+    },
+    "aston martin": {
+      "make": "Aston Martin",
+      "cardekhoBrandUrl": "https://www.cardekho.com/cars/Aston_Martin",
+      "totalLocalModels": 6,
+      "totalCardekhoModels": 4,
+      "missingModels": [],
+      "localOnlyModels": [
+        "DB11",
+        "DBS Superleggera"
+      ],
+      "models": {
+        "vantage": {
+          "model": "Vantage",
+          "bodyType": "Coupe",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Aston-Martin/Vantage/11671/1769509518605/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/aston-martin/vantage",
+          "priceMinInr": 37740000,
+          "existsInLocal": true
+        },
+        "dbx": {
+          "model": "DBX",
+          "bodyType": "SUV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Aston-Martin/DBX/6695/1769509254259/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/aston-martin/dbx",
+          "priceMinInr": 38200001,
+          "existsInLocal": true
+        },
+        "db12": {
+          "model": "DB12",
+          "bodyType": "Coupe",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Aston-Martin/DB12/10185/1769509097940/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/aston-martin/db12",
+          "priceMinInr": 43408000,
+          "existsInLocal": true
+        },
+        "vanquish": {
+          "model": "Vanquish",
+          "bodyType": "Coupe",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Aston-Martin/Vanquish/12432/1769509396621/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/aston-martin/vanquish",
+          "priceMinInr": 83716000,
+          "existsInLocal": true
+        },
+        "db11": {
+          "model": "DB11",
+          "bodyType": null,
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Aston-Martin/DB11/6694/1769509009640/front-left-side-47.jpg",
+          "sourceUrl": null,
+          "priceMinInr": 38000000,
+          "existsInLocal": true
+        },
+        "dbs superleggera": {
+          "model": "DBS Superleggera",
+          "bodyType": null,
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Aston-Martin/DBS-Superleggera/6693/1769508892516/front-left-side-47.jpg",
+          "sourceUrl": null,
+          "priceMinInr": 50000000,
+          "existsInLocal": true
+        }
+      }
+    },
+    "bentley": {
+      "make": "Bentley",
+      "cardekhoBrandUrl": "https://www.cardekho.com/cars/Bentley",
+      "totalLocalModels": 4,
+      "totalCardekhoModels": 3,
+      "missingModels": [
+        "Continental"
+      ],
+      "localOnlyModels": [
+        "Continental GT",
+        "Continental GTC"
+      ],
+      "models": {
+        "flying spur": {
+          "model": "Flying Spur",
+          "bodyType": "Sedan",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Bentley/Flying-Spur/11205/1769061207122/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/carmodels/Bentley/Bentley_Flying_Spur",
+          "priceMinInr": 52500001,
+          "existsInLocal": true
+        },
+        "continental": {
+          "model": "Continental",
+          "bodyType": "Coupe",
+          "fuelType": null,
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Bentley/Flying-Spur/11205/1769061207122/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/carmodels/Bentley/Bentley_Continental",
+          "priceMinInr": 52293489,
+          "existsInLocal": false
+        },
+        "bentayga": {
+          "model": "Bentayga",
+          "bodyType": "SUV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Bentley/Bentayga/7891/1770880450103/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/bentley/bentayga",
+          "priceMinInr": 50032967,
+          "existsInLocal": true
+        },
+        "continental gt": {
+          "model": "Continental GT",
+          "bodyType": null,
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Bentley/Continental/10473/1769060132454/front-left-side-47.jpg",
+          "sourceUrl": null,
+          "priceMinInr": null,
+          "existsInLocal": true
+        },
+        "continental gtc": {
+          "model": "Continental GTC",
+          "bodyType": null,
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Bentley/Continental/10473/1769060132454/front-left-side-47.jpg",
+          "sourceUrl": null,
+          "priceMinInr": null,
+          "existsInLocal": true
+        }
+      }
+    },
+    "maserati": {
+      "make": "Maserati",
+      "cardekhoBrandUrl": "https://www.cardekho.com/cars/Maserati",
+      "totalLocalModels": 5,
+      "totalCardekhoModels": 5,
+      "missingModels": [],
+      "localOnlyModels": [],
+      "models": {
+        "levante": {
+          "model": "Levante",
+          "bodyType": "SUV",
+          "fuelType": "Diesel",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maserati/Levante/6716/1769679178413/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/maserati/levante",
+          "priceMinInr": 14936448,
+          "existsInLocal": true
+        },
+        "granturismo": {
+          "model": "GranTurismo",
+          "bodyType": "Coupe",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maserati/GranTurismo/6718/1769678894025/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/carmodels/Maserati/Maserati_Gran_Turismo",
+          "priceMinInr": 22500000,
+          "existsInLocal": true
+        },
+        "grancabrio": {
+          "model": "GranCabrio",
+          "bodyType": "Convertible",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maserati/GranCabrio/6719/1769678730637/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/carmodels/Maserati/Maserati_Gran_Cabrio",
+          "priceMinInr": 24600000,
+          "existsInLocal": true
+        },
+        "grecale": {
+          "model": "Grecale",
+          "bodyType": "SUV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maserati/Grecale/9759/1769679013614/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/maserati/grecale",
+          "priceMinInr": 13100000,
+          "existsInLocal": true
+        },
+        "quattroporte": {
+          "model": "Quattroporte",
+          "bodyType": "Sedan",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Maserati/Quattroporte/6715/1769679309754/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/carmodels/Maserati/Maserati_Quattroporte",
+          "priceMinInr": 17131299,
+          "existsInLocal": true
+        }
+      }
+    },
+    "rolls-royce": {
+      "make": "Rolls-Royce",
+      "cardekhoBrandUrl": "https://www.cardekho.com/cars/Rolls-Royce",
+      "totalLocalModels": 4,
+      "totalCardekhoModels": 4,
+      "missingModels": [],
+      "localOnlyModels": [],
+      "models": {
+        "phantom": {
+          "model": "Phantom",
+          "bodyType": "Sedan",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Rolls-Royce/Phantom/7754/1769058142088/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/carmodels/Rolls-Royce/Rolls-Royce_Phantom",
+          "priceMinInr": 89900001,
+          "existsInLocal": true
+        },
+        "cullinan": {
+          "model": "Cullinan",
+          "bodyType": "SUV",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Rolls-Royce/Cullinan/7756/1769057668688/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/rolls-royce/cullinan",
+          "priceMinInr": 105000000,
+          "existsInLocal": true
+        },
+        "spectre": {
+          "model": "Spectre",
+          "bodyType": "Coupe",
+          "fuelType": "Electric",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Rolls-Royce/Spectre/10939/1769058319978/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/rolls-royce/spectre",
+          "priceMinInr": 75000001,
+          "existsInLocal": true
+        },
+        "ghost series ii": {
+          "model": "Ghost Series II",
+          "bodyType": "Sedan",
+          "fuelType": "Petrol",
+          "imageUrl": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Rolls-Royce/Ghost/11203/1769057920697/front-left-side-47.jpg",
+          "sourceUrl": "https://www.cardekho.com/rolls-royce/ghost-series-ii",
+          "priceMinInr": 89500000,
+          "existsInLocal": true
+        }
+      }
+    }
+  }
+}
