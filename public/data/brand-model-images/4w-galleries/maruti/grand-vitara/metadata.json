@@ -1,0 +1,38 @@
+{
+  "make": "Maruti Suzuki",
+  "model": "Grand Vitara",
+  "brandSlug": "maruti",
+  "modelSlug": "grand-vitara",
+  "sourceUrl": "https://www.cardekho.com/maruti/grand-vitara",
+  "scrapedAt": "2026-04-21T06:22:13.055Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 10,
+    "total": 10
+  },
+  "hero": "/data/brand-model-images/4w-galleries/maruti/grand-vitara/colors/arctic-white.avif",
+  "colorNames": [
+    "Arctic White",
+    "Opulent Red",
+    "Opulent Red With Black Roof",
+    "Chestnut Brown",
+    "Splendid Silver With Black Roof",
+    "Grandeur Grey",
+    "Arctic White Black Roof",
+    "Midnight Black",
+    "Nexa Blue",
+    "Splendid Silver"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/maruti/grand-vitara/colors/arctic-white.avif",
+    "/data/brand-model-images/4w-galleries/maruti/grand-vitara/colors/opulent-red.avif",
+    "/data/brand-model-images/4w-galleries/maruti/grand-vitara/colors/opulent-red-with-black-roof.avif",
+    "/data/brand-model-images/4w-galleries/maruti/grand-vitara/colors/chestnut-brown.avif",
+    "/data/brand-model-images/4w-galleries/maruti/grand-vitara/colors/splendid-silver-with-black-roof.avif",
+    "/data/brand-model-images/4w-galleries/maruti/grand-vitara/colors/grandeur-grey.avif",
+    "/data/brand-model-images/4w-galleries/maruti/grand-vitara/colors/arctic-white-black-roof.avif",
+    "/data/brand-model-images/4w-galleries/maruti/grand-vitara/colors/midnight-black.avif",
+    "/data/brand-model-images/4w-galleries/maruti/grand-vitara/colors/nexa-blue.avif",
+    "/data/brand-model-images/4w-galleries/maruti/grand-vitara/colors/splendid-silver.avif"
+  ]
+}

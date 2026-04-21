@@ -1,0 +1,26 @@
+{
+  "make": "BMW",
+  "model": "3 Series Long Wheelbase",
+  "brandSlug": "bmw",
+  "modelSlug": "3-series-long-wheelbase",
+  "sourceUrl": "https://www.cardekho.com/bmw/3-series-long-wheelbase",
+  "scrapedAt": "2026-04-21T06:25:18.136Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 4,
+    "total": 4
+  },
+  "hero": "/data/brand-model-images/4w-galleries/bmw/3-series-long-wheelbase/colors/carbon-black.avif",
+  "colorNames": [
+    "Carbon Black",
+    "Mineral White",
+    "Portimao Blue",
+    "Skyscraper Metallic"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/bmw/3-series-long-wheelbase/colors/carbon-black.avif",
+    "/data/brand-model-images/4w-galleries/bmw/3-series-long-wheelbase/colors/mineral-white.avif",
+    "/data/brand-model-images/4w-galleries/bmw/3-series-long-wheelbase/colors/portimao-blue.avif",
+    "/data/brand-model-images/4w-galleries/bmw/3-series-long-wheelbase/colors/skyscraper-metallic.avif"
+  ]
+}

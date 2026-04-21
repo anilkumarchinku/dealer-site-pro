@@ -1,0 +1,32 @@
+{
+  "make": "Kia",
+  "model": "Carens Clavis",
+  "brandSlug": "kia",
+  "modelSlug": "carens-clavis",
+  "sourceUrl": "https://www.cardekho.com/kia/carens-clavis",
+  "scrapedAt": "2026-04-21T06:19:29.422Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 7,
+    "total": 7
+  },
+  "hero": "/data/brand-model-images/4w-galleries/kia/carens-clavis/colors/glacier-white-pearl.avif",
+  "colorNames": [
+    "Glacier White Pearl",
+    "Sparkling Silver",
+    "Ivory Silver Gloss",
+    "Pewter Olive",
+    "Aurora Black Pearl",
+    "Imperial Blue",
+    "Gravity Gray"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/kia/carens-clavis/colors/glacier-white-pearl.avif",
+    "/data/brand-model-images/4w-galleries/kia/carens-clavis/colors/sparkling-silver.avif",
+    "/data/brand-model-images/4w-galleries/kia/carens-clavis/colors/ivory-silver-gloss.avif",
+    "/data/brand-model-images/4w-galleries/kia/carens-clavis/colors/pewter-olive.avif",
+    "/data/brand-model-images/4w-galleries/kia/carens-clavis/colors/aurora-black-pearl.avif",
+    "/data/brand-model-images/4w-galleries/kia/carens-clavis/colors/imperial-blue.avif",
+    "/data/brand-model-images/4w-galleries/kia/carens-clavis/colors/gravity-gray.avif"
+  ]
+}

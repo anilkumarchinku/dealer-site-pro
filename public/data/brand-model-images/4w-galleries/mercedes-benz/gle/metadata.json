@@ -1,0 +1,28 @@
+{
+  "make": "Mercedes-Benz",
+  "model": "GLE",
+  "brandSlug": "mercedes-benz",
+  "modelSlug": "gle",
+  "sourceUrl": "https://www.cardekho.com/mercedes-benz/gle",
+  "scrapedAt": "2026-04-21T06:20:06.037Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 5,
+    "total": 5
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mercedes-benz/gle/colors/gray.avif",
+  "colorNames": [
+    "Gray",
+    "White",
+    "High Tech Silver",
+    "Blue",
+    "Black"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mercedes-benz/gle/colors/gray.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/gle/colors/white.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/gle/colors/high-tech-silver.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/gle/colors/blue.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/gle/colors/black.avif"
+  ]
+}

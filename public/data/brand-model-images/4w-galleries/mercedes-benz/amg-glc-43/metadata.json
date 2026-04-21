@@ -1,0 +1,26 @@
+{
+  "make": "Mercedes-Benz",
+  "model": "AMG GLC 43",
+  "brandSlug": "mercedes-benz",
+  "modelSlug": "amg-glc-43",
+  "sourceUrl": "https://www.cardekho.com/mercedes-benz/amg-glc-43",
+  "scrapedAt": "2026-04-21T06:20:11.604Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 4,
+    "total": 4
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mercedes-benz/amg-glc-43/colors/spectral-blue.avif",
+  "colorNames": [
+    "Spectral Blue",
+    "High Tech Silver",
+    "Polar White",
+    "Obsidian Black"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-glc-43/colors/spectral-blue.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-glc-43/colors/high-tech-silver.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-glc-43/colors/polar-white.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-glc-43/colors/obsidian-black.avif"
+  ]
+}

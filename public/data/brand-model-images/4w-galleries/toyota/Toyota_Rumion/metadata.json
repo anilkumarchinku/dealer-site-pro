@@ -1,0 +1,28 @@
+{
+  "make": "Toyota",
+  "model": "Rumion",
+  "brandSlug": "Toyota",
+  "modelSlug": "Toyota_Rumion",
+  "sourceUrl": "https://www.cardekho.com/Toyota/Toyota_Rumion",
+  "scrapedAt": "2026-04-21T06:19:34.195Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 5,
+    "total": 5
+  },
+  "hero": "/data/brand-model-images/4w-galleries/Toyota/Toyota_Rumion/colors/enticing-silver.avif",
+  "colorNames": [
+    "Enticing Silver",
+    "Spunky Blue",
+    "Iconic Grey",
+    "Rustic Brown",
+    "Cafe White"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/Toyota/Toyota_Rumion/colors/enticing-silver.avif",
+    "/data/brand-model-images/4w-galleries/Toyota/Toyota_Rumion/colors/spunky-blue.avif",
+    "/data/brand-model-images/4w-galleries/Toyota/Toyota_Rumion/colors/iconic-grey.avif",
+    "/data/brand-model-images/4w-galleries/Toyota/Toyota_Rumion/colors/rustic-brown.avif",
+    "/data/brand-model-images/4w-galleries/Toyota/Toyota_Rumion/colors/cafe-white.avif"
+  ]
+}

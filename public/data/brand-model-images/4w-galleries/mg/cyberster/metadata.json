@@ -1,0 +1,26 @@
+{
+  "make": "MG",
+  "model": "Cyberster",
+  "brandSlug": "mg",
+  "modelSlug": "cyberster",
+  "sourceUrl": "https://www.cardekho.com/mg/cyberster",
+  "scrapedAt": "2026-04-21T06:19:38.929Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 4,
+    "total": 4
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mg/cyberster/colors/andes-grey.avif",
+  "colorNames": [
+    "Andes Grey",
+    "Nuclear Yellow",
+    "Flare Red",
+    "Modern Beige"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mg/cyberster/colors/andes-grey.avif",
+    "/data/brand-model-images/4w-galleries/mg/cyberster/colors/nuclear-yellow.avif",
+    "/data/brand-model-images/4w-galleries/mg/cyberster/colors/flare-red.avif",
+    "/data/brand-model-images/4w-galleries/mg/cyberster/colors/modern-beige.avif"
+  ]
+}

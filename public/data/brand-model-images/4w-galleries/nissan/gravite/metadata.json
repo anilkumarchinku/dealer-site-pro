@@ -1,0 +1,28 @@
+{
+  "make": "Nissan",
+  "model": "Gravite",
+  "brandSlug": "nissan",
+  "modelSlug": "gravite",
+  "sourceUrl": "https://www.cardekho.com/nissan/gravite",
+  "scrapedAt": "2026-04-21T06:19:41.410Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 5,
+    "total": 5
+  },
+  "hero": "/data/brand-model-images/4w-galleries/nissan/gravite/colors/forest-green.avif",
+  "colorNames": [
+    "Forest Green",
+    "Metallic Grey",
+    "Onyx Black",
+    "Blade Silver",
+    "Storm White"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/nissan/gravite/colors/forest-green.avif",
+    "/data/brand-model-images/4w-galleries/nissan/gravite/colors/metallic-grey.avif",
+    "/data/brand-model-images/4w-galleries/nissan/gravite/colors/onyx-black.avif",
+    "/data/brand-model-images/4w-galleries/nissan/gravite/colors/blade-silver.avif",
+    "/data/brand-model-images/4w-galleries/nissan/gravite/colors/storm-white.avif"
+  ]
+}

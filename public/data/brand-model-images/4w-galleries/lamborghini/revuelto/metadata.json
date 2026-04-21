@@ -1,0 +1,44 @@
+{
+  "make": "Lamborghini",
+  "model": "Revuelto",
+  "brandSlug": "lamborghini",
+  "modelSlug": "revuelto",
+  "sourceUrl": "https://www.cardekho.com/lamborghini/revuelto",
+  "scrapedAt": "2026-04-21T06:20:18.723Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 13,
+    "total": 13
+  },
+  "hero": "/data/brand-model-images/4w-galleries/lamborghini/revuelto/colors/verde-selvans.avif",
+  "colorNames": [
+    "Verde Selvans",
+    "Blu Astraeus",
+    "Blu Mehit",
+    "Bianco Monocerus",
+    "Arancio Borealis",
+    "Viola Pasifae",
+    "Giallo",
+    "Nero Noctis",
+    "Blu Eleos",
+    "Bronzo Zenas",
+    "Verde Turbine",
+    "Arancio Dac Lucido",
+    "Viola Rubus"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/lamborghini/revuelto/colors/verde-selvans.avif",
+    "/data/brand-model-images/4w-galleries/lamborghini/revuelto/colors/blu-astraeus.avif",
+    "/data/brand-model-images/4w-galleries/lamborghini/revuelto/colors/blu-mehit.avif",
+    "/data/brand-model-images/4w-galleries/lamborghini/revuelto/colors/bianco-monocerus.avif",
+    "/data/brand-model-images/4w-galleries/lamborghini/revuelto/colors/arancio-borealis.avif",
+    "/data/brand-model-images/4w-galleries/lamborghini/revuelto/colors/viola-pasifae.avif",
+    "/data/brand-model-images/4w-galleries/lamborghini/revuelto/colors/giallo.avif",
+    "/data/brand-model-images/4w-galleries/lamborghini/revuelto/colors/nero-noctis.avif",
+    "/data/brand-model-images/4w-galleries/lamborghini/revuelto/colors/blu-eleos.avif",
+    "/data/brand-model-images/4w-galleries/lamborghini/revuelto/colors/bronzo-zenas.avif",
+    "/data/brand-model-images/4w-galleries/lamborghini/revuelto/colors/verde-turbine.avif",
+    "/data/brand-model-images/4w-galleries/lamborghini/revuelto/colors/arancio-dac-lucido.avif",
+    "/data/brand-model-images/4w-galleries/lamborghini/revuelto/colors/viola-rubus.avif"
+  ]
+}

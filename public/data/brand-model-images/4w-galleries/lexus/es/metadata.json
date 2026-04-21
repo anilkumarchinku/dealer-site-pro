@@ -1,0 +1,28 @@
+{
+  "make": "Lexus",
+  "model": "ES",
+  "brandSlug": "lexus",
+  "modelSlug": "es",
+  "sourceUrl": "https://www.cardekho.com/lexus/es",
+  "scrapedAt": "2026-04-21T06:20:52.938Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 5,
+    "total": 5
+  },
+  "hero": "/data/brand-model-images/4w-galleries/lexus/es/colors/white-nova.avif",
+  "colorNames": [
+    "White Nova",
+    "Sonic Titanium",
+    "Graphite Black",
+    "SOU",
+    "Sonic Copper"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/lexus/es/colors/white-nova.avif",
+    "/data/brand-model-images/4w-galleries/lexus/es/colors/sonic-titanium.avif",
+    "/data/brand-model-images/4w-galleries/lexus/es/colors/graphite-black.avif",
+    "/data/brand-model-images/4w-galleries/lexus/es/colors/sou.avif",
+    "/data/brand-model-images/4w-galleries/lexus/es/colors/sonic-copper.avif"
+  ]
+}

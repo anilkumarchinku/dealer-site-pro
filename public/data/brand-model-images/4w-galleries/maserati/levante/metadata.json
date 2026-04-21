@@ -1,0 +1,26 @@
+{
+  "make": "Maserati",
+  "model": "Levante",
+  "brandSlug": "maserati",
+  "modelSlug": "levante",
+  "sourceUrl": "https://www.cardekho.com/maserati/levante",
+  "scrapedAt": "2026-04-21T06:23:07.520Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 4,
+    "total": 4
+  },
+  "hero": "/data/brand-model-images/4w-galleries/maserati/levante/colors/gray.avif",
+  "colorNames": [
+    "Gray",
+    "White",
+    "Black",
+    "Bianco Alpi"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/maserati/levante/colors/gray.avif",
+    "/data/brand-model-images/4w-galleries/maserati/levante/colors/white.avif",
+    "/data/brand-model-images/4w-galleries/maserati/levante/colors/black.avif",
+    "/data/brand-model-images/4w-galleries/maserati/levante/colors/bianco-alpi.avif"
+  ]
+}

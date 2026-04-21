@@ -1,0 +1,46 @@
+{
+  "make": "Rolls-Royce",
+  "model": "Cullinan",
+  "brandSlug": "rolls-royce",
+  "modelSlug": "cullinan",
+  "sourceUrl": "https://www.cardekho.com/rolls-royce/cullinan",
+  "scrapedAt": "2026-04-21T06:21:28.472Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 14,
+    "total": 14
+  },
+  "hero": "/data/brand-model-images/4w-galleries/rolls-royce/cullinan/colors/lyrical-copper.avif",
+  "colorNames": [
+    "Lyrical Copper",
+    "Belladonna Purple",
+    "Dark Emerald",
+    "English White",
+    "Scala Red",
+    "Midnight Sapphire",
+    "Anthracite",
+    "Jubilee Silver",
+    "Silver",
+    "Black Diamond",
+    "Darkest Tungsten",
+    "Iguazu-Blue",
+    "Tempest Grey",
+    "Bohemian Red"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/rolls-royce/cullinan/colors/lyrical-copper.avif",
+    "/data/brand-model-images/4w-galleries/rolls-royce/cullinan/colors/belladonna-purple.avif",
+    "/data/brand-model-images/4w-galleries/rolls-royce/cullinan/colors/dark-emerald.avif",
+    "/data/brand-model-images/4w-galleries/rolls-royce/cullinan/colors/english-white.avif",
+    "/data/brand-model-images/4w-galleries/rolls-royce/cullinan/colors/scala-red.avif",
+    "/data/brand-model-images/4w-galleries/rolls-royce/cullinan/colors/midnight-sapphire.avif",
+    "/data/brand-model-images/4w-galleries/rolls-royce/cullinan/colors/anthracite.avif",
+    "/data/brand-model-images/4w-galleries/rolls-royce/cullinan/colors/jubilee-silver.avif",
+    "/data/brand-model-images/4w-galleries/rolls-royce/cullinan/colors/silver.avif",
+    "/data/brand-model-images/4w-galleries/rolls-royce/cullinan/colors/black-diamond.avif",
+    "/data/brand-model-images/4w-galleries/rolls-royce/cullinan/colors/darkest-tungsten.avif",
+    "/data/brand-model-images/4w-galleries/rolls-royce/cullinan/colors/iguazu-blue.avif",
+    "/data/brand-model-images/4w-galleries/rolls-royce/cullinan/colors/tempest-grey.avif",
+    "/data/brand-model-images/4w-galleries/rolls-royce/cullinan/colors/bohemian-red.avif"
+  ]
+}

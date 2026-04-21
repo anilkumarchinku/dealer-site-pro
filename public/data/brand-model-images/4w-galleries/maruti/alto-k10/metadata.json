@@ -1,0 +1,32 @@
+{
+  "make": "Maruti Suzuki",
+  "model": "Alto K10",
+  "brandSlug": "maruti",
+  "modelSlug": "alto-k10",
+  "sourceUrl": "https://www.cardekho.com/maruti/alto-k10",
+  "scrapedAt": "2026-04-21T06:19:11.278Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 7,
+    "total": 7
+  },
+  "hero": "/data/brand-model-images/4w-galleries/maruti/alto-k10/colors/metallic-sizzling-red.avif",
+  "colorNames": [
+    "Metallic Sizzling Red",
+    "Metallic Silky Silver",
+    "Premium Earth Gold",
+    "Solid White",
+    "Metallic Granite Grey",
+    "Pearl Bluish Black",
+    "Metallic Speedy Blue"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/maruti/alto-k10/colors/metallic-sizzling-red.avif",
+    "/data/brand-model-images/4w-galleries/maruti/alto-k10/colors/metallic-silky-silver.avif",
+    "/data/brand-model-images/4w-galleries/maruti/alto-k10/colors/premium-earth-gold.avif",
+    "/data/brand-model-images/4w-galleries/maruti/alto-k10/colors/solid-white.avif",
+    "/data/brand-model-images/4w-galleries/maruti/alto-k10/colors/metallic-granite-grey.avif",
+    "/data/brand-model-images/4w-galleries/maruti/alto-k10/colors/pearl-bluish-black.avif",
+    "/data/brand-model-images/4w-galleries/maruti/alto-k10/colors/metallic-speedy-blue.avif"
+  ]
+}

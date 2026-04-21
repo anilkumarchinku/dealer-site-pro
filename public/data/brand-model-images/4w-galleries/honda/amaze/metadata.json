@@ -1,0 +1,32 @@
+{
+  "make": "Honda",
+  "model": "Amaze",
+  "brandSlug": "honda",
+  "modelSlug": "amaze",
+  "sourceUrl": "https://www.cardekho.com/honda/amaze",
+  "scrapedAt": "2026-04-21T06:19:20.066Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 7,
+    "total": 7
+  },
+  "hero": "/data/brand-model-images/4w-galleries/honda/amaze/colors/platinum-white-pearl.avif",
+  "colorNames": [
+    "Platinum White Pearl",
+    "Lunar Silver Metallic",
+    "Golden Brown Metallic",
+    "Obsidian Blue Pearl",
+    "Meteoroid Grey Metallic",
+    "Crystal Black Pearl",
+    "Radiant Red Metallic"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/honda/amaze/colors/platinum-white-pearl.avif",
+    "/data/brand-model-images/4w-galleries/honda/amaze/colors/lunar-silver-metallic.avif",
+    "/data/brand-model-images/4w-galleries/honda/amaze/colors/golden-brown-metallic.avif",
+    "/data/brand-model-images/4w-galleries/honda/amaze/colors/obsidian-blue-pearl.avif",
+    "/data/brand-model-images/4w-galleries/honda/amaze/colors/meteoroid-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/honda/amaze/colors/crystal-black-pearl.avif",
+    "/data/brand-model-images/4w-galleries/honda/amaze/colors/radiant-red-metallic.avif"
+  ]
+}

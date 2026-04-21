@@ -1,0 +1,24 @@
+{
+  "make": "Toyota",
+  "model": "Vellfire",
+  "brandSlug": "toyota",
+  "modelSlug": "vellfire",
+  "sourceUrl": "https://www.cardekho.com/toyota/vellfire",
+  "scrapedAt": "2026-04-21T06:19:33.358Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 3,
+    "total": 3
+  },
+  "hero": "/data/brand-model-images/4w-galleries/toyota/vellfire/colors/platinum-white-pearl.avif",
+  "colorNames": [
+    "Platinum White Pearl",
+    "Precious Metal",
+    "Black"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/toyota/vellfire/colors/platinum-white-pearl.avif",
+    "/data/brand-model-images/4w-galleries/toyota/vellfire/colors/precious-metal.avif",
+    "/data/brand-model-images/4w-galleries/toyota/vellfire/colors/black.avif"
+  ]
+}

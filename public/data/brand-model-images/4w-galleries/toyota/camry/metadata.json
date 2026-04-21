@@ -1,0 +1,30 @@
+{
+  "make": "Toyota",
+  "model": "Camry",
+  "brandSlug": "toyota",
+  "modelSlug": "camry",
+  "sourceUrl": "https://www.cardekho.com/toyota/camry",
+  "scrapedAt": "2026-04-21T06:19:32.081Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 6,
+    "total": 6
+  },
+  "hero": "/data/brand-model-images/4w-galleries/toyota/camry/colors/platinum-white-pearl.avif",
+  "colorNames": [
+    "Platinum White Pearl",
+    "Precious Metal",
+    "Emotional Red",
+    "Attitude Black",
+    "Dark Blue",
+    "Cement Grey"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/toyota/camry/colors/platinum-white-pearl.avif",
+    "/data/brand-model-images/4w-galleries/toyota/camry/colors/precious-metal.avif",
+    "/data/brand-model-images/4w-galleries/toyota/camry/colors/emotional-red.avif",
+    "/data/brand-model-images/4w-galleries/toyota/camry/colors/attitude-black.avif",
+    "/data/brand-model-images/4w-galleries/toyota/camry/colors/dark-blue.avif",
+    "/data/brand-model-images/4w-galleries/toyota/camry/colors/cement-grey.avif"
+  ]
+}

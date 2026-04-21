@@ -1,0 +1,42 @@
+{
+  "make": "Porsche",
+  "model": "Macan",
+  "brandSlug": "porsche",
+  "modelSlug": "macan",
+  "sourceUrl": "https://www.cardekho.com/porsche/macan",
+  "scrapedAt": "2026-04-21T06:22:41.386Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 12,
+    "total": 12
+  },
+  "hero": "/data/brand-model-images/4w-galleries/porsche/macan/colors/silver.avif",
+  "colorNames": [
+    "Silver",
+    "White",
+    "Blue",
+    "Burgundy Red Metallic",
+    "Black Stone",
+    "Ruby Red",
+    "Light Grey Satin",
+    "Machine Grey",
+    "Pure White",
+    "Dark Blue",
+    "Black",
+    "Orange"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/porsche/macan/colors/silver.avif",
+    "/data/brand-model-images/4w-galleries/porsche/macan/colors/white.avif",
+    "/data/brand-model-images/4w-galleries/porsche/macan/colors/blue.avif",
+    "/data/brand-model-images/4w-galleries/porsche/macan/colors/burgundy-red-metallic.avif",
+    "/data/brand-model-images/4w-galleries/porsche/macan/colors/black-stone.avif",
+    "/data/brand-model-images/4w-galleries/porsche/macan/colors/ruby-red.avif",
+    "/data/brand-model-images/4w-galleries/porsche/macan/colors/light-grey-satin.avif",
+    "/data/brand-model-images/4w-galleries/porsche/macan/colors/machine-grey.avif",
+    "/data/brand-model-images/4w-galleries/porsche/macan/colors/pure-white.avif",
+    "/data/brand-model-images/4w-galleries/porsche/macan/colors/dark-blue.avif",
+    "/data/brand-model-images/4w-galleries/porsche/macan/colors/black.avif",
+    "/data/brand-model-images/4w-galleries/porsche/macan/colors/orange.avif"
+  ]
+}

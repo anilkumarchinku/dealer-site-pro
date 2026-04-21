@@ -1,0 +1,32 @@
+{
+  "make": "Tata Motors",
+  "model": "Curvv",
+  "brandSlug": "tata",
+  "modelSlug": "curvv",
+  "sourceUrl": "https://www.cardekho.com/tata/curvv",
+  "scrapedAt": "2026-04-21T06:19:06.836Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 7,
+    "total": 7
+  },
+  "hero": "/data/brand-model-images/4w-galleries/tata/curvv/colors/pure-grey-black-roof.avif",
+  "colorNames": [
+    "Pure Grey Black Roof",
+    "Nitro Crimson Dual Tone",
+    "Pristine White Dual Tone",
+    "Gold Essence With Dual Tone",
+    "Opera Blue/Black Roof",
+    "Flame Red Dual Tone",
+    "Daytona Grey"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/tata/curvv/colors/pure-grey-black-roof.avif",
+    "/data/brand-model-images/4w-galleries/tata/curvv/colors/nitro-crimson-dual-tone.avif",
+    "/data/brand-model-images/4w-galleries/tata/curvv/colors/pristine-white-dual-tone.avif",
+    "/data/brand-model-images/4w-galleries/tata/curvv/colors/gold-essence-with-dual-tone.avif",
+    "/data/brand-model-images/4w-galleries/tata/curvv/colors/opera-blue-black-roof.avif",
+    "/data/brand-model-images/4w-galleries/tata/curvv/colors/flame-red-dual-tone.avif",
+    "/data/brand-model-images/4w-galleries/tata/curvv/colors/daytona-grey.avif"
+  ]
+}

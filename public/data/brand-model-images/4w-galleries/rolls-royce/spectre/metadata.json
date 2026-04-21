@@ -1,0 +1,42 @@
+{
+  "make": "Rolls-Royce",
+  "model": "Spectre",
+  "brandSlug": "rolls-royce",
+  "modelSlug": "spectre",
+  "sourceUrl": "https://www.cardekho.com/rolls-royce/spectre",
+  "scrapedAt": "2026-04-21T06:21:28.878Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 12,
+    "total": 12
+  },
+  "hero": "/data/brand-model-images/4w-galleries/rolls-royce/spectre/colors/jubilee-silver.avif",
+  "colorNames": [
+    "Jubilee Silver",
+    "Belladonna Purple",
+    "Dark Emerald",
+    "English White",
+    "Black Diamond",
+    "Scala Red",
+    "Darkest Tungsten",
+    "Iguazu-Blue",
+    "Midnight Sapphire",
+    "Tempest Grey",
+    "Bohemian Red",
+    "Anthracite"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/rolls-royce/spectre/colors/jubilee-silver.avif",
+    "/data/brand-model-images/4w-galleries/rolls-royce/spectre/colors/belladonna-purple.avif",
+    "/data/brand-model-images/4w-galleries/rolls-royce/spectre/colors/dark-emerald.avif",
+    "/data/brand-model-images/4w-galleries/rolls-royce/spectre/colors/english-white.avif",
+    "/data/brand-model-images/4w-galleries/rolls-royce/spectre/colors/black-diamond.avif",
+    "/data/brand-model-images/4w-galleries/rolls-royce/spectre/colors/scala-red.avif",
+    "/data/brand-model-images/4w-galleries/rolls-royce/spectre/colors/darkest-tungsten.avif",
+    "/data/brand-model-images/4w-galleries/rolls-royce/spectre/colors/iguazu-blue.avif",
+    "/data/brand-model-images/4w-galleries/rolls-royce/spectre/colors/midnight-sapphire.avif",
+    "/data/brand-model-images/4w-galleries/rolls-royce/spectre/colors/tempest-grey.avif",
+    "/data/brand-model-images/4w-galleries/rolls-royce/spectre/colors/bohemian-red.avif",
+    "/data/brand-model-images/4w-galleries/rolls-royce/spectre/colors/anthracite.avif"
+  ]
+}

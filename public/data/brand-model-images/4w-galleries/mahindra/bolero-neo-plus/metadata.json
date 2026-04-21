@@ -1,0 +1,24 @@
+{
+  "make": "Mahindra",
+  "model": "Bolero Neo Plus",
+  "brandSlug": "mahindra",
+  "modelSlug": "bolero-neo-plus",
+  "sourceUrl": "https://www.cardekho.com/mahindra/bolero-neo-plus",
+  "scrapedAt": "2026-04-21T06:19:27.225Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 3,
+    "total": 3
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mahindra/bolero-neo-plus/colors/diamond-white.avif",
+  "colorNames": [
+    "Diamond White",
+    "Napoli Black",
+    "Dsat Silver"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mahindra/bolero-neo-plus/colors/diamond-white.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/bolero-neo-plus/colors/napoli-black.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/bolero-neo-plus/colors/dsat-silver.avif"
+  ]
+}

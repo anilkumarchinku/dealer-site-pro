@@ -1,0 +1,30 @@
+{
+  "make": "Maruti Suzuki",
+  "model": "Baleno",
+  "brandSlug": "maruti",
+  "modelSlug": "baleno",
+  "sourceUrl": "https://www.cardekho.com/maruti/baleno",
+  "scrapedAt": "2026-04-21T06:22:13.190Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 6,
+    "total": 6
+  },
+  "hero": "/data/brand-model-images/4w-galleries/maruti/baleno/colors/opulent-red.avif",
+  "colorNames": [
+    "Opulent Red",
+    "Grandeur Grey",
+    "Luxe Beige",
+    "Bluish Black",
+    "Nexa Blue",
+    "Splendid Silver"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/maruti/baleno/colors/opulent-red.avif",
+    "/data/brand-model-images/4w-galleries/maruti/baleno/colors/grandeur-grey.avif",
+    "/data/brand-model-images/4w-galleries/maruti/baleno/colors/luxe-beige.avif",
+    "/data/brand-model-images/4w-galleries/maruti/baleno/colors/bluish-black.avif",
+    "/data/brand-model-images/4w-galleries/maruti/baleno/colors/nexa-blue.avif",
+    "/data/brand-model-images/4w-galleries/maruti/baleno/colors/splendid-silver.avif"
+  ]
+}

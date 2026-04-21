@@ -1,0 +1,26 @@
+{
+  "make": "BYD",
+  "model": "Atto 3",
+  "brandSlug": "byd",
+  "modelSlug": "atto-3",
+  "sourceUrl": "https://www.cardekho.com/byd/atto-3",
+  "scrapedAt": "2026-04-21T06:19:44.346Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 4,
+    "total": 4
+  },
+  "hero": "/data/brand-model-images/4w-galleries/byd/atto-3/colors/harbour-grey.avif",
+  "colorNames": [
+    "Harbour Grey",
+    "Surf Blue",
+    "Ski White",
+    "Cosmos Black"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/byd/atto-3/colors/harbour-grey.avif",
+    "/data/brand-model-images/4w-galleries/byd/atto-3/colors/surf-blue.avif",
+    "/data/brand-model-images/4w-galleries/byd/atto-3/colors/ski-white.avif",
+    "/data/brand-model-images/4w-galleries/byd/atto-3/colors/cosmos-black.avif"
+  ]
+}

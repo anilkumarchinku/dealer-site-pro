@@ -1,0 +1,46 @@
+{
+  "make": "Rolls-Royce",
+  "model": "Ghost Series II",
+  "brandSlug": "rolls-royce",
+  "modelSlug": "ghost-series-ii",
+  "sourceUrl": "https://www.cardekho.com/rolls-royce/ghost-series-ii",
+  "scrapedAt": "2026-04-21T06:21:29.191Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 14,
+    "total": 14
+  },
+  "hero": "/data/brand-model-images/4w-galleries/rolls-royce/ghost-series-ii/colors/lyrical-copper.avif",
+  "colorNames": [
+    "Lyrical Copper",
+    "Belladonna Purple",
+    "Dark Emerald",
+    "English White",
+    "Scala Red",
+    "Midnight Sapphire",
+    "Anthracite",
+    "Jubilee Silver",
+    "Silver",
+    "Black Diamond",
+    "Darkest Tungsten",
+    "Iguazu-Blue",
+    "Tempest Grey",
+    "Bohemian Red"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/rolls-royce/ghost-series-ii/colors/lyrical-copper.avif",
+    "/data/brand-model-images/4w-galleries/rolls-royce/ghost-series-ii/colors/belladonna-purple.avif",
+    "/data/brand-model-images/4w-galleries/rolls-royce/ghost-series-ii/colors/dark-emerald.avif",
+    "/data/brand-model-images/4w-galleries/rolls-royce/ghost-series-ii/colors/english-white.avif",
+    "/data/brand-model-images/4w-galleries/rolls-royce/ghost-series-ii/colors/scala-red.avif",
+    "/data/brand-model-images/4w-galleries/rolls-royce/ghost-series-ii/colors/midnight-sapphire.avif",
+    "/data/brand-model-images/4w-galleries/rolls-royce/ghost-series-ii/colors/anthracite.avif",
+    "/data/brand-model-images/4w-galleries/rolls-royce/ghost-series-ii/colors/jubilee-silver.avif",
+    "/data/brand-model-images/4w-galleries/rolls-royce/ghost-series-ii/colors/silver.avif",
+    "/data/brand-model-images/4w-galleries/rolls-royce/ghost-series-ii/colors/black-diamond.avif",
+    "/data/brand-model-images/4w-galleries/rolls-royce/ghost-series-ii/colors/darkest-tungsten.avif",
+    "/data/brand-model-images/4w-galleries/rolls-royce/ghost-series-ii/colors/iguazu-blue.avif",
+    "/data/brand-model-images/4w-galleries/rolls-royce/ghost-series-ii/colors/tempest-grey.avif",
+    "/data/brand-model-images/4w-galleries/rolls-royce/ghost-series-ii/colors/bohemian-red.avif"
+  ]
+}

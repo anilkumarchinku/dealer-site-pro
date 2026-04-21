@@ -1,0 +1,30 @@
+{
+  "make": "Tata Motors",
+  "model": "Punch",
+  "brandSlug": "tata",
+  "modelSlug": "punch",
+  "sourceUrl": "https://www.cardekho.com/tata/punch",
+  "scrapedAt": "2026-04-21T06:19:04.983Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 6,
+    "total": 6
+  },
+  "hero": "/data/brand-model-images/4w-galleries/tata/punch/colors/coorg-clouds.avif",
+  "colorNames": [
+    "Coorg Clouds",
+    "Pristine White",
+    "Bengal Rouge",
+    "Cyantafic",
+    "Caramel",
+    "Daytona Grey"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/tata/punch/colors/coorg-clouds.avif",
+    "/data/brand-model-images/4w-galleries/tata/punch/colors/pristine-white.avif",
+    "/data/brand-model-images/4w-galleries/tata/punch/colors/bengal-rouge.avif",
+    "/data/brand-model-images/4w-galleries/tata/punch/colors/cyantafic.avif",
+    "/data/brand-model-images/4w-galleries/tata/punch/colors/caramel.avif",
+    "/data/brand-model-images/4w-galleries/tata/punch/colors/daytona-grey.avif"
+  ]
+}

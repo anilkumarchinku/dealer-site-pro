@@ -1,0 +1,36 @@
+{
+  "make": "BMW",
+  "model": "i7",
+  "brandSlug": "bmw",
+  "modelSlug": "i7",
+  "sourceUrl": "https://www.cardekho.com/bmw/i7",
+  "scrapedAt": "2026-04-21T06:19:52.707Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 9,
+    "total": 9
+  },
+  "hero": "/data/brand-model-images/4w-galleries/bmw/i7/colors/alpine-white.avif",
+  "colorNames": [
+    "Alpine White",
+    "Individual Tanzanite Blue",
+    "Mineral White Metallic",
+    "Oxide Grey Metallic",
+    "Brooklyn Grey",
+    "Carbon Black Metallic",
+    "Individual Dravit Grey Metallic",
+    "Aventurine Red Metallic",
+    "Black Sapphire"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/bmw/i7/colors/alpine-white.avif",
+    "/data/brand-model-images/4w-galleries/bmw/i7/colors/individual-tanzanite-blue.avif",
+    "/data/brand-model-images/4w-galleries/bmw/i7/colors/mineral-white-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/i7/colors/oxide-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/i7/colors/brooklyn-grey.avif",
+    "/data/brand-model-images/4w-galleries/bmw/i7/colors/carbon-black-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/i7/colors/individual-dravit-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/i7/colors/aventurine-red-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/i7/colors/black-sapphire.avif"
+  ]
+}

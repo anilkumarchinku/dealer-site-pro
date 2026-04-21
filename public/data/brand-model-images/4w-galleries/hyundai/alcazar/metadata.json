@@ -1,0 +1,34 @@
+{
+  "make": "Hyundai",
+  "model": "Alcazar",
+  "brandSlug": "hyundai",
+  "modelSlug": "alcazar",
+  "sourceUrl": "https://www.cardekho.com/hyundai/alcazar",
+  "scrapedAt": "2026-04-21T06:19:16.178Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 8,
+    "total": 8
+  },
+  "hero": "/data/brand-model-images/4w-galleries/hyundai/alcazar/colors/black-matte.avif",
+  "colorNames": [
+    "Black Matte",
+    "Starry Night",
+    "Shadow Grey",
+    "Atlas White",
+    "Tital Grey Matte",
+    "Atlas White With Black Roof",
+    "Robust Emerald",
+    "Abyss Black"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/hyundai/alcazar/colors/black-matte.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/alcazar/colors/starry-night.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/alcazar/colors/shadow-grey.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/alcazar/colors/atlas-white.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/alcazar/colors/tital-grey-matte.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/alcazar/colors/atlas-white-with-black-roof.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/alcazar/colors/robust-emerald.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/alcazar/colors/abyss-black.avif"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "make": "Audi",
+  "model": "S5 Sportback",
+  "brandSlug": "audi",
+  "modelSlug": "s5-sportback",
+  "sourceUrl": "https://www.cardekho.com/audi/s5-sportback",
+  "scrapedAt": "2026-04-21T06:20:04.261Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 6,
+    "total": 6
+  },
+  "hero": "/data/brand-model-images/4w-galleries/audi/s5-sportback/colors/ascari-blue-metallic.avif",
+  "colorNames": [
+    "Ascari Blue Metallic",
+    "Chronos Grey Metallic",
+    "Glacier White Metallic",
+    "Myth Black Metallic",
+    "District Green Metallic",
+    "Navarra Blue Metallic"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/audi/s5-sportback/colors/ascari-blue-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/s5-sportback/colors/chronos-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/s5-sportback/colors/glacier-white-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/s5-sportback/colors/myth-black-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/s5-sportback/colors/district-green-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/s5-sportback/colors/navarra-blue-metallic.avif"
+  ]
+}

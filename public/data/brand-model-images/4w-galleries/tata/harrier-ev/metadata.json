@@ -1,0 +1,28 @@
+{
+  "make": "Tata Motors",
+  "model": "Harrier EV",
+  "brandSlug": "tata",
+  "modelSlug": "harrier-ev",
+  "sourceUrl": "https://www.cardekho.com/tata/harrier-ev",
+  "scrapedAt": "2026-04-21T06:19:07.342Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 5,
+    "total": 5
+  },
+  "hero": "/data/brand-model-images/4w-galleries/tata/harrier-ev/colors/nainital-nocturne.avif",
+  "colorNames": [
+    "Nainital Nocturne",
+    "Seaweed Green Dual Tone",
+    "Pristine White",
+    "Pure Grey",
+    "Empowered Oxide"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/tata/harrier-ev/colors/nainital-nocturne.avif",
+    "/data/brand-model-images/4w-galleries/tata/harrier-ev/colors/seaweed-green-dual-tone.avif",
+    "/data/brand-model-images/4w-galleries/tata/harrier-ev/colors/pristine-white.avif",
+    "/data/brand-model-images/4w-galleries/tata/harrier-ev/colors/pure-grey.avif",
+    "/data/brand-model-images/4w-galleries/tata/harrier-ev/colors/empowered-oxide.avif"
+  ]
+}

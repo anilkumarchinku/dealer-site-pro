@@ -1,0 +1,26 @@
+{
+  "make": "Hyundai",
+  "model": "IONIQ 5",
+  "brandSlug": "hyundai",
+  "modelSlug": "ioniq-5",
+  "sourceUrl": "https://www.cardekho.com/hyundai/ioniq-5",
+  "scrapedAt": "2026-04-21T06:19:19.705Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 4,
+    "total": 4
+  },
+  "hero": "/data/brand-model-images/4w-galleries/hyundai/ioniq-5/colors/gravity-gold-matte.avif",
+  "colorNames": [
+    "Gravity Gold Matte",
+    "Midnight Black Pearl",
+    "Optic White",
+    "Titan Grey"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/hyundai/ioniq-5/colors/gravity-gold-matte.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/ioniq-5/colors/midnight-black-pearl.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/ioniq-5/colors/optic-white.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/ioniq-5/colors/titan-grey.avif"
+  ]
+}

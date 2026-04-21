@@ -1,0 +1,30 @@
+{
+  "make": "Honda",
+  "model": "City Hybrid",
+  "brandSlug": "honda",
+  "modelSlug": "city-hybrid",
+  "sourceUrl": "https://www.cardekho.com/honda/city-hybrid",
+  "scrapedAt": "2026-04-21T06:19:22.465Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 6,
+    "total": 6
+  },
+  "hero": "/data/brand-model-images/4w-galleries/honda/city-hybrid/colors/platinum-white-pearl.avif",
+  "colorNames": [
+    "Platinum White Pearl",
+    "Lunar Silver Metallic",
+    "Golden Brown Metallic",
+    "Obsidian Blue Pearl",
+    "Meteoroid Grey Metallic",
+    "Radiant Red Metallic"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/honda/city-hybrid/colors/platinum-white-pearl.avif",
+    "/data/brand-model-images/4w-galleries/honda/city-hybrid/colors/lunar-silver-metallic.avif",
+    "/data/brand-model-images/4w-galleries/honda/city-hybrid/colors/golden-brown-metallic.avif",
+    "/data/brand-model-images/4w-galleries/honda/city-hybrid/colors/obsidian-blue-pearl.avif",
+    "/data/brand-model-images/4w-galleries/honda/city-hybrid/colors/meteoroid-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/honda/city-hybrid/colors/radiant-red-metallic.avif"
+  ]
+}

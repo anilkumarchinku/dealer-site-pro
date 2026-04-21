@@ -1,0 +1,28 @@
+{
+  "make": "MG",
+  "model": "Hector",
+  "brandSlug": "mg",
+  "modelSlug": "hector",
+  "sourceUrl": "https://www.cardekho.com/mg/hector",
+  "scrapedAt": "2026-04-21T06:19:38.785Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 5,
+    "total": 5
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mg/hector/colors/pearl-white.avif",
+  "colorNames": [
+    "Pearl White",
+    "Starry Black",
+    "Aurora Silver",
+    "Glaze Red",
+    "Celadon Blue"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mg/hector/colors/pearl-white.avif",
+    "/data/brand-model-images/4w-galleries/mg/hector/colors/starry-black.avif",
+    "/data/brand-model-images/4w-galleries/mg/hector/colors/aurora-silver.avif",
+    "/data/brand-model-images/4w-galleries/mg/hector/colors/glaze-red.avif",
+    "/data/brand-model-images/4w-galleries/mg/hector/colors/celadon-blue.avif"
+  ]
+}

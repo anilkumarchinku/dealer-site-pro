@@ -1,0 +1,44 @@
+{
+  "make": "Porsche",
+  "model": "Taycan",
+  "brandSlug": "porsche",
+  "modelSlug": "taycan",
+  "sourceUrl": "https://www.cardekho.com/porsche/taycan",
+  "scrapedAt": "2026-04-21T06:20:16.297Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 13,
+    "total": 13
+  },
+  "hero": "/data/brand-model-images/4w-galleries/porsche/taycan/colors/frozen-berry-metallic.avif",
+  "colorNames": [
+    "Frozen Berry Metallic",
+    "Oak Green Metallic Neo",
+    "Provence",
+    "Ice Grey Metallic",
+    "Gentian Blue Metallic",
+    "Crayon",
+    "Volcano Grey Metallic",
+    "Shade Green Metallic",
+    "Jet Black Metallic",
+    "Frozen Blue Metallic",
+    "Carmine Red",
+    "Dolomite Silver Metallic",
+    "Neptune Blue"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/porsche/taycan/colors/frozen-berry-metallic.avif",
+    "/data/brand-model-images/4w-galleries/porsche/taycan/colors/oak-green-metallic-neo.avif",
+    "/data/brand-model-images/4w-galleries/porsche/taycan/colors/provence.avif",
+    "/data/brand-model-images/4w-galleries/porsche/taycan/colors/ice-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/porsche/taycan/colors/gentian-blue-metallic.avif",
+    "/data/brand-model-images/4w-galleries/porsche/taycan/colors/crayon.avif",
+    "/data/brand-model-images/4w-galleries/porsche/taycan/colors/volcano-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/porsche/taycan/colors/shade-green-metallic.avif",
+    "/data/brand-model-images/4w-galleries/porsche/taycan/colors/jet-black-metallic.avif",
+    "/data/brand-model-images/4w-galleries/porsche/taycan/colors/frozen-blue-metallic.avif",
+    "/data/brand-model-images/4w-galleries/porsche/taycan/colors/carmine-red.avif",
+    "/data/brand-model-images/4w-galleries/porsche/taycan/colors/dolomite-silver-metallic.avif",
+    "/data/brand-model-images/4w-galleries/porsche/taycan/colors/neptune-blue.avif"
+  ]
+}

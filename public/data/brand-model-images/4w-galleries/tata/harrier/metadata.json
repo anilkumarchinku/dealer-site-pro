@@ -1,0 +1,46 @@
+{
+  "make": "Tata Motors",
+  "model": "Harrier",
+  "brandSlug": "tata",
+  "modelSlug": "harrier",
+  "sourceUrl": "https://www.cardekho.com/tata/harrier",
+  "scrapedAt": "2026-04-21T06:19:05.890Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 14,
+    "total": 14
+  },
+  "hero": "/data/brand-model-images/4w-galleries/tata/harrier/colors/nitro-crimson-dual-tone.avif",
+  "colorNames": [
+    "Nitro Crimson Dual Tone",
+    "Seaweed Green",
+    "Pristine White",
+    "Sunlit Yellow Dual Tone",
+    "Fearless Red Dual Tone",
+    "Daytona Grey Dual Tone",
+    "Oberon Black",
+    "Seaweed Green Dual Tone",
+    "Pristine White Dual Tone",
+    "Pure Grey-Dual Tone",
+    "Pure Grey",
+    "Matte Stealth Black",
+    "Carbon Black Red DARK",
+    "Daytona Grey"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/tata/harrier/colors/nitro-crimson-dual-tone.avif",
+    "/data/brand-model-images/4w-galleries/tata/harrier/colors/seaweed-green.avif",
+    "/data/brand-model-images/4w-galleries/tata/harrier/colors/pristine-white.avif",
+    "/data/brand-model-images/4w-galleries/tata/harrier/colors/sunlit-yellow-dual-tone.avif",
+    "/data/brand-model-images/4w-galleries/tata/harrier/colors/fearless-red-dual-tone.avif",
+    "/data/brand-model-images/4w-galleries/tata/harrier/colors/daytona-grey-dual-tone.avif",
+    "/data/brand-model-images/4w-galleries/tata/harrier/colors/oberon-black.avif",
+    "/data/brand-model-images/4w-galleries/tata/harrier/colors/seaweed-green-dual-tone.avif",
+    "/data/brand-model-images/4w-galleries/tata/harrier/colors/pristine-white-dual-tone.avif",
+    "/data/brand-model-images/4w-galleries/tata/harrier/colors/pure-grey-dual-tone.avif",
+    "/data/brand-model-images/4w-galleries/tata/harrier/colors/pure-grey.avif",
+    "/data/brand-model-images/4w-galleries/tata/harrier/colors/matte-stealth-black.avif",
+    "/data/brand-model-images/4w-galleries/tata/harrier/colors/carbon-black-red-dark.avif",
+    "/data/brand-model-images/4w-galleries/tata/harrier/colors/daytona-grey.avif"
+  ]
+}

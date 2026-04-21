@@ -1,0 +1,30 @@
+{
+  "make": "Tata Motors",
+  "model": "Safari",
+  "brandSlug": "tata",
+  "modelSlug": "safari",
+  "sourceUrl": "https://www.cardekho.com/tata/safari",
+  "scrapedAt": "2026-04-21T06:19:06.278Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 6,
+    "total": 6
+  },
+  "hero": "/data/brand-model-images/4w-galleries/tata/safari/colors/cosmic-gold.avif",
+  "colorNames": [
+    "Cosmic Gold",
+    "Frost White",
+    "Pure Grey",
+    "Royal Blue",
+    "Supernova Copper",
+    "Daytona Grey"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/tata/safari/colors/cosmic-gold.avif",
+    "/data/brand-model-images/4w-galleries/tata/safari/colors/frost-white.avif",
+    "/data/brand-model-images/4w-galleries/tata/safari/colors/pure-grey.avif",
+    "/data/brand-model-images/4w-galleries/tata/safari/colors/royal-blue.avif",
+    "/data/brand-model-images/4w-galleries/tata/safari/colors/supernova-copper.avif",
+    "/data/brand-model-images/4w-galleries/tata/safari/colors/daytona-grey.avif"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "make": "Renault",
+  "model": "Duster",
+  "brandSlug": "renault",
+  "modelSlug": "duster",
+  "sourceUrl": "https://www.cardekho.com/renault/duster",
+  "scrapedAt": "2026-04-21T06:19:40.573Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 10,
+    "total": 10
+  },
+  "hero": "/data/brand-model-images/4w-galleries/renault/duster/colors/pearl-white-with-black-roof.avif",
+  "colorNames": [
+    "Pearl White With Black Roof",
+    "Mountain Jade Green With Black Roof",
+    "Pearl White",
+    "Stealth Black",
+    "Mountain Jade Green",
+    "Sunset Red With Black Roof",
+    "River Blue With Black Roof",
+    "Moonlight Silver",
+    "Sunset Red",
+    "River Blue"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/renault/duster/colors/pearl-white-with-black-roof.avif",
+    "/data/brand-model-images/4w-galleries/renault/duster/colors/mountain-jade-green-with-black-roof.avif",
+    "/data/brand-model-images/4w-galleries/renault/duster/colors/pearl-white.avif",
+    "/data/brand-model-images/4w-galleries/renault/duster/colors/stealth-black.avif",
+    "/data/brand-model-images/4w-galleries/renault/duster/colors/mountain-jade-green.avif",
+    "/data/brand-model-images/4w-galleries/renault/duster/colors/sunset-red-with-black-roof.avif",
+    "/data/brand-model-images/4w-galleries/renault/duster/colors/river-blue-with-black-roof.avif",
+    "/data/brand-model-images/4w-galleries/renault/duster/colors/moonlight-silver.avif",
+    "/data/brand-model-images/4w-galleries/renault/duster/colors/sunset-red.avif",
+    "/data/brand-model-images/4w-galleries/renault/duster/colors/river-blue.avif"
+  ]
+}

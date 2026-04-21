@@ -1,0 +1,32 @@
+{
+  "make": "Mercedes-Benz",
+  "model": "EQA",
+  "brandSlug": "mercedes-benz",
+  "modelSlug": "eqa",
+  "sourceUrl": "https://www.cardekho.com/mercedes-benz/eqa",
+  "scrapedAt": "2026-04-21T06:20:07.413Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 7,
+    "total": 7
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mercedes-benz/eqa/colors/spectral-blue.avif",
+  "colorNames": [
+    "Spectral Blue",
+    "High Tech Silver",
+    "Designo Patagonia Red Metallic BRIGHT",
+    "COSMOS BLACK METALLIC",
+    "Polar White",
+    "Mountain Grey Metallic",
+    "Designo Mountain Grey Magno"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mercedes-benz/eqa/colors/spectral-blue.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/eqa/colors/high-tech-silver.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/eqa/colors/designo-patagonia-red-metallic-bright.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/eqa/colors/cosmos-black-metallic.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/eqa/colors/polar-white.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/eqa/colors/mountain-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/eqa/colors/designo-mountain-grey-magno.avif"
+  ]
+}

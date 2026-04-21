@@ -1,0 +1,28 @@
+{
+  "make": "Tata Motors",
+  "model": "Nexon EV",
+  "brandSlug": "tata",
+  "modelSlug": "nexon-ev",
+  "sourceUrl": "https://www.cardekho.com/tata/nexon-ev",
+  "scrapedAt": "2026-04-21T06:19:07.065Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 5,
+    "total": 5
+  },
+  "hero": "/data/brand-model-images/4w-galleries/tata/nexon-ev/colors/pristine-white-dual-tone.avif",
+  "colorNames": [
+    "Pristine White Dual Tone",
+    "Empowered Oxide Dual Tone",
+    "Ocean Blue DT",
+    "Daytona Grey With Black Roof",
+    "Intensi Teal With Dual Tone"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/tata/nexon-ev/colors/pristine-white-dual-tone.avif",
+    "/data/brand-model-images/4w-galleries/tata/nexon-ev/colors/empowered-oxide-dual-tone.avif",
+    "/data/brand-model-images/4w-galleries/tata/nexon-ev/colors/ocean-blue-dt.avif",
+    "/data/brand-model-images/4w-galleries/tata/nexon-ev/colors/daytona-grey-with-black-roof.avif",
+    "/data/brand-model-images/4w-galleries/tata/nexon-ev/colors/intensi-teal-with-dual-tone.avif"
+  ]
+}

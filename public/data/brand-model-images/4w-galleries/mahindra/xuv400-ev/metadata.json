@@ -1,0 +1,28 @@
+{
+  "make": "Mahindra",
+  "model": "XUV400 EV",
+  "brandSlug": "mahindra",
+  "modelSlug": "xuv400-ev",
+  "sourceUrl": "https://www.cardekho.com/mahindra/xuv400-ev",
+  "scrapedAt": "2026-04-21T06:19:26.990Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 5,
+    "total": 5
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mahindra/xuv400-ev/colors/everest-white-dualtone.avif",
+  "colorNames": [
+    "Everest White Dualtone",
+    "Stealth Black Dual Tone",
+    "Nebula Blue Dualtone",
+    "Galaxy Grey Dualtone",
+    "Arctic Blue Dualtone"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mahindra/xuv400-ev/colors/everest-white-dualtone.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xuv400-ev/colors/stealth-black-dual-tone.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xuv400-ev/colors/nebula-blue-dualtone.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xuv400-ev/colors/galaxy-grey-dualtone.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xuv400-ev/colors/arctic-blue-dualtone.avif"
+  ]
+}

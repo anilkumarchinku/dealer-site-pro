@@ -1,0 +1,36 @@
+{
+  "make": "Kia",
+  "model": "Sonet",
+  "brandSlug": "kia",
+  "modelSlug": "sonet",
+  "sourceUrl": "https://www.cardekho.com/kia/sonet",
+  "scrapedAt": "2026-04-21T06:19:28.359Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 9,
+    "total": 9
+  },
+  "hero": "/data/brand-model-images/4w-galleries/kia/sonet/colors/glacier-white-pearl.avif",
+  "colorNames": [
+    "Glacier White Pearl",
+    "Sparkling Silver",
+    "Pewter Olive",
+    "Intense Red",
+    "Aurora Black Pearl",
+    "Imperial Blue",
+    "Glacier White Pearl With Aurora Black Pearl",
+    "Gravity Gray",
+    "Intense Red With Aurora Black Pearl"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/kia/sonet/colors/glacier-white-pearl.avif",
+    "/data/brand-model-images/4w-galleries/kia/sonet/colors/sparkling-silver.avif",
+    "/data/brand-model-images/4w-galleries/kia/sonet/colors/pewter-olive.avif",
+    "/data/brand-model-images/4w-galleries/kia/sonet/colors/intense-red.avif",
+    "/data/brand-model-images/4w-galleries/kia/sonet/colors/aurora-black-pearl.avif",
+    "/data/brand-model-images/4w-galleries/kia/sonet/colors/imperial-blue.avif",
+    "/data/brand-model-images/4w-galleries/kia/sonet/colors/glacier-white-pearl-with-aurora-black-pearl.avif",
+    "/data/brand-model-images/4w-galleries/kia/sonet/colors/gravity-gray.avif",
+    "/data/brand-model-images/4w-galleries/kia/sonet/colors/intense-red-with-aurora-black-pearl.avif"
+  ]
+}

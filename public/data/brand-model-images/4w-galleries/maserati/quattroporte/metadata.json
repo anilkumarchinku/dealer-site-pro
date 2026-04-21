@@ -1,0 +1,30 @@
+{
+  "make": "Maserati",
+  "model": "Quattroporte",
+  "brandSlug": "maserati",
+  "modelSlug": "quattroporte",
+  "sourceUrl": "https://www.cardekho.com/maserati/quattroporte",
+  "scrapedAt": "2026-04-21T06:23:16.132Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 6,
+    "total": 6
+  },
+  "hero": "/data/brand-model-images/4w-galleries/maserati/quattroporte/colors/white.avif",
+  "colorNames": [
+    "White",
+    "Rebel Blue",
+    "Black",
+    "Noble Blue",
+    "Emotion Blue",
+    "Grey"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/maserati/quattroporte/colors/white.avif",
+    "/data/brand-model-images/4w-galleries/maserati/quattroporte/colors/rebel-blue.avif",
+    "/data/brand-model-images/4w-galleries/maserati/quattroporte/colors/black.avif",
+    "/data/brand-model-images/4w-galleries/maserati/quattroporte/colors/noble-blue.avif",
+    "/data/brand-model-images/4w-galleries/maserati/quattroporte/colors/emotion-blue.avif",
+    "/data/brand-model-images/4w-galleries/maserati/quattroporte/colors/grey.avif"
+  ]
+}

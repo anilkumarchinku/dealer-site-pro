@@ -1,0 +1,40 @@
+{
+  "make": "Toyota",
+  "model": "Urban Cruiser Hyryder",
+  "brandSlug": "toyota",
+  "modelSlug": "hyryder",
+  "sourceUrl": "https://www.cardekho.com/toyota/hyryder",
+  "scrapedAt": "2026-04-21T06:19:31.785Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 11,
+    "total": 11
+  },
+  "hero": "/data/brand-model-images/4w-galleries/toyota/hyryder/colors/enticing-silver.avif",
+  "colorNames": [
+    "Enticing Silver",
+    "Speedy Blue",
+    "Cafe White With Midnight Black",
+    "Gaming Grey",
+    "Sportin Red With Midnight Black",
+    "Enticing Silver With Midnight Black",
+    "Speedy Blue With Midnight Black",
+    "Cave Black",
+    "Sportin Red",
+    "Midnight Black",
+    "Cafe White"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/toyota/hyryder/colors/enticing-silver.avif",
+    "/data/brand-model-images/4w-galleries/toyota/hyryder/colors/speedy-blue.avif",
+    "/data/brand-model-images/4w-galleries/toyota/hyryder/colors/cafe-white-with-midnight-black.avif",
+    "/data/brand-model-images/4w-galleries/toyota/hyryder/colors/gaming-grey.avif",
+    "/data/brand-model-images/4w-galleries/toyota/hyryder/colors/sportin-red-with-midnight-black.avif",
+    "/data/brand-model-images/4w-galleries/toyota/hyryder/colors/enticing-silver-with-midnight-black.avif",
+    "/data/brand-model-images/4w-galleries/toyota/hyryder/colors/speedy-blue-with-midnight-black.avif",
+    "/data/brand-model-images/4w-galleries/toyota/hyryder/colors/cave-black.avif",
+    "/data/brand-model-images/4w-galleries/toyota/hyryder/colors/sportin-red.avif",
+    "/data/brand-model-images/4w-galleries/toyota/hyryder/colors/midnight-black.avif",
+    "/data/brand-model-images/4w-galleries/toyota/hyryder/colors/cafe-white.avif"
+  ]
+}

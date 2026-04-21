@@ -1,0 +1,30 @@
+{
+  "make": "Mercedes-Benz",
+  "model": "Maybach EQS SUV",
+  "brandSlug": "mercedes-benz",
+  "modelSlug": "maybach-eqs-suv",
+  "sourceUrl": "https://www.cardekho.com/mercedes-benz/maybach-eqs-suv",
+  "scrapedAt": "2026-04-21T06:49:45.242Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 6,
+    "total": 6
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mercedes-benz/maybach-eqs-suv/colors/selenite-grey.avif",
+  "colorNames": [
+    "Selenite Grey",
+    "High Tech Silver",
+    "Velvet Brown",
+    "Sodalite Blue",
+    "Obsidian Black",
+    "Emerald Green"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mercedes-benz/maybach-eqs-suv/colors/selenite-grey.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/maybach-eqs-suv/colors/high-tech-silver.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/maybach-eqs-suv/colors/velvet-brown.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/maybach-eqs-suv/colors/sodalite-blue.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/maybach-eqs-suv/colors/obsidian-black.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/maybach-eqs-suv/colors/emerald-green.avif"
+  ]
+}

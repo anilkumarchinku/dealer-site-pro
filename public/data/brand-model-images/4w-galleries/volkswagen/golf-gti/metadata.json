@@ -1,0 +1,26 @@
+{
+  "make": "Volkswagen",
+  "model": "Golf GTI",
+  "brandSlug": "volkswagen",
+  "modelSlug": "golf-gti",
+  "sourceUrl": "https://www.cardekho.com/volkswagen/golf-gti",
+  "scrapedAt": "2026-04-21T06:19:36.624Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 4,
+    "total": 4
+  },
+  "hero": "/data/brand-model-images/4w-galleries/volkswagen/golf-gti/colors/oryx-white-premium-mother-of-pearl-black.avif",
+  "colorNames": [
+    "Oryx White Premium Mother Of Pearl Black",
+    "Grenadilla Black Metallic",
+    "Moonstone Grey Black",
+    "Kings Red Premium Metallic Black"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/volkswagen/golf-gti/colors/oryx-white-premium-mother-of-pearl-black.avif",
+    "/data/brand-model-images/4w-galleries/volkswagen/golf-gti/colors/grenadilla-black-metallic.avif",
+    "/data/brand-model-images/4w-galleries/volkswagen/golf-gti/colors/moonstone-grey-black.avif",
+    "/data/brand-model-images/4w-galleries/volkswagen/golf-gti/colors/kings-red-premium-metallic-black.avif"
+  ]
+}

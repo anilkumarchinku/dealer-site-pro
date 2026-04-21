@@ -1,0 +1,32 @@
+{
+  "make": "BMW",
+  "model": "iX",
+  "brandSlug": "bmw",
+  "modelSlug": "ix",
+  "sourceUrl": "https://www.cardekho.com/bmw/ix",
+  "scrapedAt": "2026-04-21T06:19:53.793Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 7,
+    "total": 7
+  },
+  "hero": "/data/brand-model-images/4w-galleries/bmw/ix/colors/oxide-grey-metallic.avif",
+  "colorNames": [
+    "Oxide Grey Metallic",
+    "Individual Storm Bay Metallic",
+    "Mineral White",
+    "Phytonic Blue",
+    "Sophisto Grey Brilliant Effect",
+    "Aventurine Red Metallic",
+    "Black Sapphire"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/bmw/ix/colors/oxide-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/ix/colors/individual-storm-bay-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/ix/colors/mineral-white.avif",
+    "/data/brand-model-images/4w-galleries/bmw/ix/colors/phytonic-blue.avif",
+    "/data/brand-model-images/4w-galleries/bmw/ix/colors/sophisto-grey-brilliant-effect.avif",
+    "/data/brand-model-images/4w-galleries/bmw/ix/colors/aventurine-red-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/ix/colors/black-sapphire.avif"
+  ]
+}

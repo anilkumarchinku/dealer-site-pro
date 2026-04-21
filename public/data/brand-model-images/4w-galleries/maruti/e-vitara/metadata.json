@@ -1,0 +1,40 @@
+{
+  "make": "Maruti Suzuki",
+  "model": "e Vitara",
+  "brandSlug": "maruti",
+  "modelSlug": "e-vitara",
+  "sourceUrl": "https://www.cardekho.com/maruti/e-vitara",
+  "scrapedAt": "2026-04-21T06:19:10.233Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 11,
+    "total": 11
+  },
+  "hero": "/data/brand-model-images/4w-galleries/maruti/e-vitara/colors/arctic-white.avif",
+  "colorNames": [
+    "Arctic White",
+    "Opulent Red",
+    "Splendid Silver With Bluish Black Roof",
+    "Grandeur Grey",
+    "Land Breeze Green",
+    "Land Breeze Green With Bluish Black Roof",
+    "Bluish Black",
+    "Arctic White Pearl With Bluish Black Pearl",
+    "Nexa Blue",
+    "Splendid Silver",
+    "Opulent Red With Bluish Black Roof"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/maruti/e-vitara/colors/arctic-white.avif",
+    "/data/brand-model-images/4w-galleries/maruti/e-vitara/colors/opulent-red.avif",
+    "/data/brand-model-images/4w-galleries/maruti/e-vitara/colors/splendid-silver-with-bluish-black-roof.avif",
+    "/data/brand-model-images/4w-galleries/maruti/e-vitara/colors/grandeur-grey.avif",
+    "/data/brand-model-images/4w-galleries/maruti/e-vitara/colors/land-breeze-green.avif",
+    "/data/brand-model-images/4w-galleries/maruti/e-vitara/colors/land-breeze-green-with-bluish-black-roof.avif",
+    "/data/brand-model-images/4w-galleries/maruti/e-vitara/colors/bluish-black.avif",
+    "/data/brand-model-images/4w-galleries/maruti/e-vitara/colors/arctic-white-pearl-with-bluish-black-pearl.avif",
+    "/data/brand-model-images/4w-galleries/maruti/e-vitara/colors/nexa-blue.avif",
+    "/data/brand-model-images/4w-galleries/maruti/e-vitara/colors/splendid-silver.avif",
+    "/data/brand-model-images/4w-galleries/maruti/e-vitara/colors/opulent-red-with-bluish-black-roof.avif"
+  ]
+}

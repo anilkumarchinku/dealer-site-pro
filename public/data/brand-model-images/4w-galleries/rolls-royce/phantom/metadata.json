@@ -1,0 +1,46 @@
+{
+  "make": "Rolls-Royce",
+  "model": "Phantom",
+  "brandSlug": "rolls-royce",
+  "modelSlug": "phantom",
+  "sourceUrl": "https://www.cardekho.com/rolls-royce/phantom",
+  "scrapedAt": "2026-04-21T06:23:08.003Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 14,
+    "total": 14
+  },
+  "hero": "/data/brand-model-images/4w-galleries/rolls-royce/phantom/colors/lyrical-copper.avif",
+  "colorNames": [
+    "Lyrical Copper",
+    "Belladonna Purple",
+    "Dark Emerald",
+    "English White",
+    "Midnight Sapphire",
+    "Anthracite",
+    "Red",
+    "Diamond Black",
+    "Jubilee Silver",
+    "Silver",
+    "Darkest Tungsten",
+    "Iguazu-Blue",
+    "Tempest Grey",
+    "Bohemian Red"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/rolls-royce/phantom/colors/lyrical-copper.avif",
+    "/data/brand-model-images/4w-galleries/rolls-royce/phantom/colors/belladonna-purple.avif",
+    "/data/brand-model-images/4w-galleries/rolls-royce/phantom/colors/dark-emerald.avif",
+    "/data/brand-model-images/4w-galleries/rolls-royce/phantom/colors/english-white.avif",
+    "/data/brand-model-images/4w-galleries/rolls-royce/phantom/colors/midnight-sapphire.avif",
+    "/data/brand-model-images/4w-galleries/rolls-royce/phantom/colors/anthracite.avif",
+    "/data/brand-model-images/4w-galleries/rolls-royce/phantom/colors/red.avif",
+    "/data/brand-model-images/4w-galleries/rolls-royce/phantom/colors/diamond-black.avif",
+    "/data/brand-model-images/4w-galleries/rolls-royce/phantom/colors/jubilee-silver.avif",
+    "/data/brand-model-images/4w-galleries/rolls-royce/phantom/colors/silver.avif",
+    "/data/brand-model-images/4w-galleries/rolls-royce/phantom/colors/darkest-tungsten.avif",
+    "/data/brand-model-images/4w-galleries/rolls-royce/phantom/colors/iguazu-blue.avif",
+    "/data/brand-model-images/4w-galleries/rolls-royce/phantom/colors/tempest-grey.avif",
+    "/data/brand-model-images/4w-galleries/rolls-royce/phantom/colors/bohemian-red.avif"
+  ]
+}

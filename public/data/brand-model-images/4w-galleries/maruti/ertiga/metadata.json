@@ -1,0 +1,32 @@
+{
+  "make": "Maruti Suzuki",
+  "model": "Ertiga",
+  "brandSlug": "maruti",
+  "modelSlug": "ertiga",
+  "sourceUrl": "https://www.cardekho.com/maruti/ertiga",
+  "scrapedAt": "2026-04-21T06:22:12.967Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 7,
+    "total": 7
+  },
+  "hero": "/data/brand-model-images/4w-galleries/maruti/ertiga/colors/arctic-white.avif",
+  "colorNames": [
+    "Arctic White",
+    "Pearl Metallic Dignity Brown",
+    "Prime Oxford Blue",
+    "Magma Grey",
+    "Auburn Red",
+    "Bluish Black",
+    "Splendid Silver"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/maruti/ertiga/colors/arctic-white.avif",
+    "/data/brand-model-images/4w-galleries/maruti/ertiga/colors/pearl-metallic-dignity-brown.avif",
+    "/data/brand-model-images/4w-galleries/maruti/ertiga/colors/prime-oxford-blue.avif",
+    "/data/brand-model-images/4w-galleries/maruti/ertiga/colors/magma-grey.avif",
+    "/data/brand-model-images/4w-galleries/maruti/ertiga/colors/auburn-red.avif",
+    "/data/brand-model-images/4w-galleries/maruti/ertiga/colors/bluish-black.avif",
+    "/data/brand-model-images/4w-galleries/maruti/ertiga/colors/splendid-silver.avif"
+  ]
+}

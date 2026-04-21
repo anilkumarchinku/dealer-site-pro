@@ -1,0 +1,28 @@
+{
+  "make": "Toyota",
+  "model": "Glanza",
+  "brandSlug": "toyota",
+  "modelSlug": "glanza",
+  "sourceUrl": "https://www.cardekho.com/toyota/glanza",
+  "scrapedAt": "2026-04-21T06:19:33.665Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 5,
+    "total": 5
+  },
+  "hero": "/data/brand-model-images/4w-galleries/toyota/glanza/colors/enticing-silver.avif",
+  "colorNames": [
+    "Enticing Silver",
+    "Insta Blue",
+    "Gaming Grey",
+    "Sportin Red",
+    "Cafe White"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/toyota/glanza/colors/enticing-silver.avif",
+    "/data/brand-model-images/4w-galleries/toyota/glanza/colors/insta-blue.avif",
+    "/data/brand-model-images/4w-galleries/toyota/glanza/colors/gaming-grey.avif",
+    "/data/brand-model-images/4w-galleries/toyota/glanza/colors/sportin-red.avif",
+    "/data/brand-model-images/4w-galleries/toyota/glanza/colors/cafe-white.avif"
+  ]
+}

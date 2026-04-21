@@ -1,0 +1,30 @@
+{
+  "make": "Honda",
+  "model": "City",
+  "brandSlug": "honda",
+  "modelSlug": "city",
+  "sourceUrl": "https://www.cardekho.com/honda/city",
+  "scrapedAt": "2026-04-21T06:19:20.593Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 6,
+    "total": 6
+  },
+  "hero": "/data/brand-model-images/4w-galleries/honda/city/colors/platinum-white-pearl.avif",
+  "colorNames": [
+    "Platinum White Pearl",
+    "Lunar Silver Metallic",
+    "Golden Brown Metallic",
+    "Obsidian Blue Pearl",
+    "Meteoroid Grey Metallic",
+    "Radiant Red Metallic"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/honda/city/colors/platinum-white-pearl.avif",
+    "/data/brand-model-images/4w-galleries/honda/city/colors/lunar-silver-metallic.avif",
+    "/data/brand-model-images/4w-galleries/honda/city/colors/golden-brown-metallic.avif",
+    "/data/brand-model-images/4w-galleries/honda/city/colors/obsidian-blue-pearl.avif",
+    "/data/brand-model-images/4w-galleries/honda/city/colors/meteoroid-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/honda/city/colors/radiant-red-metallic.avif"
+  ]
+}

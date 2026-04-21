@@ -1,0 +1,20 @@
+{
+  "make": "BMW",
+  "model": "X3",
+  "brandSlug": "bmw",
+  "modelSlug": "x3",
+  "sourceUrl": "https://www.cardekho.com/bmw/x3",
+  "scrapedAt": "2026-04-21T06:19:48.863Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 1,
+    "total": 1
+  },
+  "hero": "/data/brand-model-images/4w-galleries/bmw/x3/colors/creamy-white.avif",
+  "colorNames": [
+    "Creamy White"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/bmw/x3/colors/creamy-white.avif"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "make": "Land Rover",
+  "model": "Range Rover Velar",
+  "brandSlug": "land-rover",
+  "modelSlug": "range-rover-velar",
+  "sourceUrl": "https://www.cardekho.com/land-rover/range-rover-velar",
+  "scrapedAt": "2026-04-21T06:20:46.487Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 6,
+    "total": 6
+  },
+  "hero": "/data/brand-model-images/4w-galleries/land-rover/range-rover-velar/colors/batumi-gold-dt.avif",
+  "colorNames": [
+    "Batumi Gold DT",
+    "Ostuni Pearl White DT",
+    "Fuji White DT",
+    "Santorini Black",
+    "Arroios Grey DT",
+    "Varesine Blue DT"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-velar/colors/batumi-gold-dt.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-velar/colors/ostuni-pearl-white-dt.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-velar/colors/fuji-white-dt.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-velar/colors/santorini-black.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-velar/colors/arroios-grey-dt.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-velar/colors/varesine-blue-dt.avif"
+  ]
+}

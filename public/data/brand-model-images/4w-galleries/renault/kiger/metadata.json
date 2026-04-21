@@ -1,0 +1,38 @@
+{
+  "make": "Renault",
+  "model": "Kiger",
+  "brandSlug": "renault",
+  "modelSlug": "kiger",
+  "sourceUrl": "https://www.cardekho.com/renault/kiger",
+  "scrapedAt": "2026-04-21T06:19:41.218Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 10,
+    "total": 10
+  },
+  "hero": "/data/brand-model-images/4w-galleries/renault/kiger/colors/oasis-yellow.avif",
+  "colorNames": [
+    "Oasis Yellow",
+    "Ice Cool White",
+    "Stealth Black",
+    "Moonlight Silver",
+    "Shadow Grey",
+    "Shadow Grey With Mystery Black Roof",
+    "Oasis Yellow With Mystery Black",
+    "Caspian Blue",
+    "Ice Cool White With Mystery Black",
+    "Radiant Red With Mystery Black"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/renault/kiger/colors/oasis-yellow.avif",
+    "/data/brand-model-images/4w-galleries/renault/kiger/colors/ice-cool-white.avif",
+    "/data/brand-model-images/4w-galleries/renault/kiger/colors/stealth-black.avif",
+    "/data/brand-model-images/4w-galleries/renault/kiger/colors/moonlight-silver.avif",
+    "/data/brand-model-images/4w-galleries/renault/kiger/colors/shadow-grey.avif",
+    "/data/brand-model-images/4w-galleries/renault/kiger/colors/shadow-grey-with-mystery-black-roof.avif",
+    "/data/brand-model-images/4w-galleries/renault/kiger/colors/oasis-yellow-with-mystery-black.avif",
+    "/data/brand-model-images/4w-galleries/renault/kiger/colors/caspian-blue.avif",
+    "/data/brand-model-images/4w-galleries/renault/kiger/colors/ice-cool-white-with-mystery-black.avif",
+    "/data/brand-model-images/4w-galleries/renault/kiger/colors/radiant-red-with-mystery-black.avif"
+  ]
+}

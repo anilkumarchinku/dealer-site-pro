@@ -1,0 +1,34 @@
+{
+  "make": "Jeep",
+  "model": "Compass",
+  "brandSlug": "jeep",
+  "modelSlug": "compass",
+  "sourceUrl": "https://www.cardekho.com/jeep/compass",
+  "scrapedAt": "2026-04-21T06:19:42.172Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 8,
+    "total": 8
+  },
+  "hero": "/data/brand-model-images/4w-galleries/jeep/compass/colors/grigio-magnesio.avif",
+  "colorNames": [
+    "Grigio Magnesio",
+    "Galaxy Blue",
+    "Pearl White",
+    "Brilliant Black",
+    "Grigo Magnesio Grey",
+    "Exotica Red",
+    "Techno Metallic Green",
+    "Silvery Moon"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/jeep/compass/colors/grigio-magnesio.avif",
+    "/data/brand-model-images/4w-galleries/jeep/compass/colors/galaxy-blue.avif",
+    "/data/brand-model-images/4w-galleries/jeep/compass/colors/pearl-white.avif",
+    "/data/brand-model-images/4w-galleries/jeep/compass/colors/brilliant-black.avif",
+    "/data/brand-model-images/4w-galleries/jeep/compass/colors/grigo-magnesio-grey.avif",
+    "/data/brand-model-images/4w-galleries/jeep/compass/colors/exotica-red.avif",
+    "/data/brand-model-images/4w-galleries/jeep/compass/colors/techno-metallic-green.avif",
+    "/data/brand-model-images/4w-galleries/jeep/compass/colors/silvery-moon.avif"
+  ]
+}

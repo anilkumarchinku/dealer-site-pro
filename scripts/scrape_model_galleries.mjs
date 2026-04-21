@@ -7,15 +7,11 @@ import { readFileSync } from 'fs'
 const ROOT = '/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro'
 const PUBLIC_DIR = path.join(ROOT, 'public')
 const DATA_DIR = path.join(PUBLIC_DIR, 'data')
+const GENERATED_4W_META_PATH = path.join(ROOT, 'lib', 'data', 'generated', '4w-cardekho-meta.json')
 const FOUR_W_DIR = path.join(DATA_DIR, 'brand-model-images', '4w-galleries')
 const TWO_W_COLOR_DIR = path.join(DATA_DIR, 'brand-model-images', '2w-colors')
 
 const USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36'
-const MAX_4W_EXTERIOR = 8
-const MAX_4W_INTERIOR = 8
-const MAX_4W_FEATURE = 7
-const MAX_4W_COLOR = 7
-
 function slugify(value) {
   return String(value)
     .toLowerCase()
@@ -33,6 +29,21 @@ function normalizeUrl(url) {
     .trim()
 }
 
+function absolutizeCardekhoImageUrl(url) {
+  const normalized = normalizeUrl(url)
+  if (!normalized) return ''
+  if (normalized.startsWith('https://')) return normalized
+  if (normalized.startsWith('//')) return `https:${normalized}`
+  if (
+    normalized.startsWith('car-images/') ||
+    normalized.startsWith('carexteriorimages/') ||
+    normalized.startsWith('carinteriorimages/')
+  ) {
+    return `https://stimg.cardekho.com/images/${normalized}`
+  }
+  return normalized
+}
+
 function normalizeLoose(value) {
   return String(value || '')
     .toLowerCase()
@@ -43,13 +54,47 @@ function uniqueUrls(values) {
   const seen = new Set()
   const output = []
   for (const value of values) {
-    const normalized = normalizeUrl(value)
+    const normalized = absolutizeCardekhoImageUrl(value)
     if (!normalized.startsWith('https://')) continue
     if (seen.has(normalized)) continue
     seen.add(normalized)
     output.push(normalized)
   }
   return output
+}
+
+function canonicalImageKey(url) {
+  const normalized = normalizeUrl(url)
+  if (!normalized.startsWith('https://')) return ''
+
+  try {
+    const parsed = new URL(normalized)
+    const segments = parsed.pathname
+      .split('/')
+      .filter(Boolean)
+      .map((segment) => segment.toLowerCase())
+
+    const categoryIndex = segments.findIndex((segment) =>
+      segment === 'carexteriorimages' ||
+      segment === 'carinteriorimages' ||
+      segment === 'car-images'
+    )
+
+    if (categoryIndex >= 0) {
+      const relevantSegments = segments.slice(categoryIndex + 1)
+      const filteredSegments = relevantSegments.filter((segment, index) => {
+        if (index === 0 && /^\d+x\d+$/.test(segment)) return false
+        return true
+      })
+      if (filteredSegments.length > 0) {
+        return filteredSegments.join('/')
+      }
+    }
+
+    return `${parsed.hostname.toLowerCase()}${parsed.pathname.toLowerCase()}`
+  } catch {
+    return normalized.toLowerCase()
+  }
 }
 
 async function fetchText(url) {
@@ -128,17 +173,17 @@ function extractUrls(html, folder) {
 }
 
 function extractColorImages(html) {
-  const pattern = /https?:\\?\/\\?\/stimg\.cardekho\.com\\?\/images\\?\/car-images[^"'\\s<)]+/gi
+  const pattern = /(?:https?:\\?\/\\?\/stimg\.cardekho\.com\\?\/images\\?\/)?car-images[^"'\\s<)]+?\.(?:jpe?g|png|webp|avif)(?:\?[^"'\\s<)]*)?/gi
   return uniqueUrls(Array.from(html.matchAll(pattern), (match) => match[0]))
 }
 
 function extractColorPairsFromHtml(html) {
-  const pattern = /"src":"(https?:\\?\/\\?\/stimg\.cardekho\.com\\?\/images\\?\/car-images[^"]+)","title":"([^"]+)"/gi
+  const pattern = /"src":"((?:https?:\\?\/\\?\/stimg\.cardekho\.com\\?\/images\\?\/)?car-images[^"]+)","title":"([^"]+)"/gi
   const output = []
   const seen = new Set()
 
   for (const match of html.matchAll(pattern)) {
-    const image = normalizeUrl(match[1])
+    const image = absolutizeCardekhoImageUrl(match[1])
     const name = String(match[2] || '').trim()
     if (!image || !name) continue
     const key = `${name.toLowerCase()}|${image}`
@@ -150,9 +195,102 @@ function extractColorPairsFromHtml(html) {
   return output
 }
 
-function extractFeatureExterior(html) {
-  const pattern = /https?:\\?\/\\?\/stimg\.cardekho\.com\\?\/images\\?\/carexteriorimages[^"'\\s<)]*visual-summary[^"'\\s<)]*/gi
-  return uniqueUrls(Array.from(html.matchAll(pattern), (match) => match[0]))
+function extractJsonValueFromHtml(html, key) {
+  const needle = `"${key}":`
+  const start = html.indexOf(needle)
+  if (start < 0) return null
+
+  let index = start + needle.length
+  while (index < html.length && /\s/.test(html[index])) index += 1
+
+  const openChar = html[index]
+  const closeChar = openChar === '[' ? ']' : openChar === '{' ? '}' : ''
+  if (!closeChar) return null
+
+  let depth = 0
+  let inString = false
+  let escaped = false
+  let value = ''
+
+  for (; index < html.length; index += 1) {
+    const char = html[index]
+    value += char
+
+    if (inString) {
+      if (escaped) {
+        escaped = false
+        continue
+      }
+      if (char === '\\') {
+        escaped = true
+        continue
+      }
+      if (char === '"') {
+        inString = false
+      }
+      continue
+    }
+
+    if (char === '"') {
+      inString = true
+      continue
+    }
+
+    if (char === openChar) {
+      depth += 1
+      continue
+    }
+
+    if (char === closeChar) {
+      depth -= 1
+      if (depth === 0) {
+        return value
+      }
+    }
+  }
+
+  return null
+}
+
+function extract4WGalleryPopup(html) {
+  const raw = extractJsonValueFromHtml(html, 'galleryPopup')
+  if (!raw) return null
+
+  try {
+    const parsed = JSON.parse(raw)
+    return Array.isArray(parsed) ? parsed : null
+  } catch {
+    return null
+  }
+}
+
+function extract4WGalleryPopupBuckets(html) {
+  const galleryPopup = extract4WGalleryPopup(html)
+  if (!galleryPopup) {
+    return { colors: [] }
+  }
+
+  const colors = []
+
+  for (const section of galleryPopup) {
+    const sectionValue = String(section?.value || '').toLowerCase()
+    const sectionLists = Array.isArray(section?.list) ? section.list : []
+
+    if (sectionValue === 'colours') {
+      for (const image of sectionLists) {
+        if (typeof image?.src === 'string' && typeof image?.title === 'string') {
+          colors.push({ name: image.title, image: image.src })
+        }
+      }
+    }
+  }
+
+  return {
+    colors: dedupeColorPairs(
+      colors.map((entry) => entry.name),
+      colors.map((entry) => entry.image)
+    ),
+  }
 }
 
 function buildModelLooseCandidates(brandSlug, modelSlug) {
@@ -160,6 +298,13 @@ function buildModelLooseCandidates(brandSlug, modelSlug) {
   const brandLoose = normalizeLoose(brandSlug)
   const rawModel = String(modelSlug || '')
   const rawModelLoose = normalizeLoose(rawModel)
+  const aliasMap = {
+    'bmw|3serieslongwheelbase': ['3seriesgranlimousine'],
+    'volkswagen|tiguanrline': ['tiguan2025', 'tiguan'],
+    'honda|amaze2ndgen': ['amaze'],
+    'mini|cooperconvertible': ['convertible', 'cooperconvertible'],
+    'mercedesbenz|maybacheqssuv': ['maybacheqs'],
+  }
 
   if (rawModelLoose) candidates.add(rawModelLoose)
 
@@ -175,6 +320,12 @@ function buildModelLooseCandidates(brandSlug, modelSlug) {
 
   if (brandLoose && rawModelLoose.startsWith(brandLoose)) {
     candidates.add(rawModelLoose.slice(brandLoose.length))
+  }
+
+  const manualAliases = aliasMap[`${brandLoose}|${rawModelLoose}`] || []
+  for (const alias of manualAliases) {
+    const aliasLoose = normalizeLoose(alias)
+    if (aliasLoose) candidates.add(aliasLoose)
   }
 
   return Array.from(candidates).filter(Boolean)
@@ -280,8 +431,29 @@ async function saveDownloadedImage(url, destWithoutExt) {
   throw lastError ?? new Error(`Failed to download ${url}`)
 }
 
-function selectLimited(values, limit) {
-  return uniqueUrls(values).slice(0, limit)
+function selectUniqueBucket(values, limit, sharedSeen) {
+  const output = []
+  const localSeen = new Set()
+
+  for (const value of values) {
+    const normalized = normalizeUrl(value)
+    if (!normalized.startsWith('https://')) continue
+
+    const canonicalKey = canonicalImageKey(normalized)
+    const looseKey = normalized.toLowerCase()
+    const key = canonicalKey || looseKey
+
+    if (localSeen.has(key)) continue
+    if (sharedSeen.has(key)) continue
+
+    localSeen.add(key)
+    sharedSeen.add(key)
+    output.push(normalized)
+
+    if (limit && output.length >= limit) break
+  }
+
+  return output
 }
 
 function dedupeColorPairs(names, images) {
@@ -296,6 +468,71 @@ function dedupeColorPairs(names, images) {
     seen.add(key)
     output.push({ name, image })
   }
+  return output
+}
+
+function guessColorNameFromImageUrl(url) {
+  try {
+    const parsed = new URL(normalizeUrl(url))
+    const filename = decodeURIComponent(parsed.pathname.split('/').pop() || '')
+      .replace(/\.[a-z0-9]+$/i, '')
+      .trim()
+
+    if (!filename) return ''
+
+    const parts = filename.split('_').filter(Boolean)
+    const trimmedParts = parts.filter((part, index) => {
+      if (index === 0 && /^\d+$/.test(part)) return false
+      if (index === parts.length - 1 && /^[a-f0-9]{3,}$/i.test(part)) return false
+      return true
+    })
+
+    const value = trimmedParts.join(' ')
+      .replace(/[-_]+/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim()
+
+    if (!value) return ''
+
+    return value
+      .split(' ')
+      .map((part) => part ? part[0].toUpperCase() + part.slice(1) : '')
+      .join(' ')
+      .trim()
+  } catch {
+    return ''
+  }
+}
+
+function deriveColorPairsFromImages(images) {
+  return uniqueUrls(images)
+    .map((image) => ({
+      name: guessColorNameFromImageUrl(image),
+      image,
+    }))
+    .filter((entry) => entry.name && entry.image)
+}
+
+function selectUniqueColorPairs(values, sharedSeen) {
+  const output = []
+  const localSeen = new Set()
+
+  for (const entry of values) {
+    const name = String(entry?.name ?? '').trim()
+    const image = absolutizeCardekhoImageUrl(entry?.image)
+    if (!name || !image.startsWith('https://')) continue
+
+    const imageKey = canonicalImageKey(image) || image.toLowerCase()
+    const pairKey = name.toLowerCase()
+
+    if (localSeen.has(pairKey)) continue
+    if (sharedSeen.has(imageKey)) continue
+
+    localSeen.add(pairKey)
+    sharedSeen.add(imageKey)
+    output.push({ name, image })
+  }
+
   return output
 }
 
@@ -343,6 +580,26 @@ function normalize4WSourceUrl(make, model, sourceUrl) {
     const url = new URL(sourceUrl)
     const segments = url.pathname.split('/').filter(Boolean)
 
+    if (segments[0] === 'carmodels') {
+      const rawBrand = segments[1] || ''
+      const rawModel = segments[2] || ''
+
+      if (rawBrand && rawModel) {
+        const brandSlug = slugify(rawBrand)
+        const modelSlug = slugify(
+          rawModel
+            .replace(new RegExp(`^${rawBrand.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}_?`, 'i'), '')
+            .replace(/_/g, ' ')
+        )
+
+        if (brandSlug && modelSlug) {
+          return `https://www.cardekho.com/${brandSlug}/${modelSlug}`
+        }
+      }
+
+      return `https://www.cardekho.com/${fallbackBrandSlug}/${fallbackModelSlug}`
+    }
+
     if (segments.length >= 2 && segments[0] !== 'overview' && segments[0] !== 'cars') {
       const [brandSlug, modelSlug] = segments
       return `https://www.cardekho.com/${brandSlug}/${modelSlug}`
@@ -364,7 +621,7 @@ function normalize4WSourceUrl(make, model, sourceUrl) {
   }
 }
 
-function gather4WModels() {
+function gather4WFallbackModels() {
   const makeToJson = {
     'aston martin': 'aston_martin',
     audi: 'audi',
@@ -444,6 +701,41 @@ function gather4WModels() {
   }
 
   return output
+}
+
+function gather4WModelsFromGeneratedMeta() {
+  const raw = JSON.parse(readFileSync(GENERATED_4W_META_PATH, 'utf8'))
+  const brands = raw?.brands && typeof raw.brands === 'object' ? raw.brands : {}
+  const output = []
+  const seen = new Set()
+
+  for (const [brandKey, brandEntry] of Object.entries(brands)) {
+    const make = String(brandEntry?.make || brandKey || '').trim()
+    const models = brandEntry?.models && typeof brandEntry.models === 'object' ? brandEntry.models : {}
+
+    for (const modelEntry of Object.values(models)) {
+      const model = String(modelEntry?.model || '').trim()
+      const sourceUrl = String(modelEntry?.sourceUrl || '').trim()
+      if (!make || !model || !sourceUrl.startsWith('http')) continue
+
+      const normalizedSourceUrl = normalize4WSourceUrl(make, model, sourceUrl)
+      const key = `${make.toLowerCase()}|${model.toLowerCase()}|${normalizedSourceUrl}`
+      if (seen.has(key)) continue
+
+      seen.add(key)
+      output.push({
+        make,
+        model,
+        sourceUrl: normalizedSourceUrl,
+      })
+    }
+  }
+
+  return output
+}
+
+function gather4WModels() {
+  return gather4WModelsFromGeneratedMeta()
 }
 
 function gather2WModels() {
@@ -723,77 +1015,51 @@ async function scrape4WOne(modelEntry) {
     throw new Error(`Could not parse source URL: ${modelEntry.sourceUrl}`)
   }
 
+  const makeKey = String(modelEntry.make || '').trim().toLowerCase()
+  const modelKey = String(modelEntry.model || '').trim().toLowerCase()
+  const overrideColorPageMap = {
+    'audi|a6': 'https://www.cardekho.com/audi/audi-a6-colors.html',
+    'mini|cooper convertible': 'https://www.cardekho.com/mini/mini-cooper-convertible-2015-2023-colors.html',
+    'mercedes-benz|v-class extra lwb': 'https://www.cardekho.com/mercedes-benz/v-class-2019-2022/colors',
+  }
+
   const picturesUrl = `${modelEntry.sourceUrl.replace(/\/$/, '')}/pictures`
-  const colorsUrl = `${modelEntry.sourceUrl.replace(/\/$/, '')}/colors`
+  const colorsUrl = overrideColorPageMap[`${makeKey}|${modelKey}`] || `${modelEntry.sourceUrl.replace(/\/$/, '')}/colors`
 
   const [picturesHtml, colorsHtml] = await Promise.all([
     fetchText(picturesUrl),
     fetchText(colorsUrl).catch(() => ''),
   ])
+  const popupBuckets = extract4WGalleryPopupBuckets(picturesHtml)
 
-  const exterior = selectLimited(
-    filterUrlsForModel(extractUrls(picturesHtml, 'carexteriorimages'), brandSlug, modelSlug),
-    MAX_4W_EXTERIOR
-  )
-  const interior = selectLimited(
-    filterUrlsForModel(extractUrls(picturesHtml, 'carinteriorimages'), brandSlug, modelSlug),
-    MAX_4W_INTERIOR
-  )
-  const feature = selectLimited(
-    filterUrlsForModel(
-      [...extractFeatureExterior(colorsHtml), ...extractFeatureExterior(picturesHtml)],
+  const sharedImageKeys = new Set()
+  const colorPairs = selectUniqueColorPairs(
+    filterColorPairsForModel(
+      [
+        ...popupBuckets.colors,
+        ...extractColorPairsFromHtml(picturesHtml),
+        ...dedupeColorPairs(
+          extractColorNamesFromLdJson(colorsHtml || picturesHtml),
+          [...extractColorImages(colorsHtml), ...extractColorImages(picturesHtml)]
+        ),
+        ...deriveColorPairsFromImages([
+          ...extractColorImages(colorsHtml),
+          ...extractColorImages(picturesHtml),
+        ]),
+      ],
       brandSlug,
       modelSlug
     ),
-    MAX_4W_FEATURE
+    sharedImageKeys
   )
-  const colorPairs = filterColorPairsForModel(
-    [
-      ...extractColorPairsFromHtml(picturesHtml),
-      ...dedupeColorPairs(
-        extractColorNamesFromLdJson(colorsHtml || picturesHtml),
-        [...extractColorImages(colorsHtml), ...extractColorImages(picturesHtml)]
-      ),
-    ],
-    brandSlug,
-    modelSlug
-  ).slice(0, MAX_4W_COLOR)
 
-  const destDir = path.join(FOUR_W_DIR, brandSlug, modelSlug)
+  const brandDir = slugify(modelEntry.make || brandSlug)
+  const modelDir = slugify(modelEntry.model || modelSlug)
+  const destDir = path.join(FOUR_W_DIR, brandDir, modelDir)
   await ensureDir(destDir)
 
   const saved = {
-    exterior: [],
-    interior: [],
-    feature: [],
     colors: [],
-  }
-
-  for (let index = 0; index < exterior.length; index += 1) {
-    try {
-      const file = await saveDownloadedImage(exterior[index], path.join(destDir, 'exterior', String(index + 1).padStart(2, '0')))
-      saved.exterior.push({ file, source: exterior[index] })
-    } catch {
-      continue
-    }
-  }
-
-  for (let index = 0; index < interior.length; index += 1) {
-    try {
-      const file = await saveDownloadedImage(interior[index], path.join(destDir, 'interior', String(index + 1).padStart(2, '0')))
-      saved.interior.push({ file, source: interior[index] })
-    } catch {
-      continue
-    }
-  }
-
-  for (let index = 0; index < feature.length; index += 1) {
-    try {
-      const file = await saveDownloadedImage(feature[index], path.join(destDir, 'feature', String(index + 1).padStart(2, '0')))
-      saved.feature.push({ file, source: feature[index] })
-    } catch {
-      continue
-    }
   }
 
   for (let index = 0; index < colorPairs.length; index += 1) {
@@ -810,13 +1076,8 @@ async function scrape4WOne(modelEntry) {
     }
   }
 
-  if (
-    saved.exterior.length === 0 &&
-    saved.interior.length === 0 &&
-    saved.feature.length === 0 &&
-    saved.colors.length === 0
-  ) {
-    throw new Error(`No gallery files downloaded for ${modelEntry.make} ${modelEntry.model}`)
+  if (saved.colors.length === 0) {
+    throw new Error(`No color images downloaded for ${modelEntry.make} ${modelEntry.model}`)
   }
 
   const metadata = {
@@ -826,19 +1087,14 @@ async function scrape4WOne(modelEntry) {
     modelSlug,
     sourceUrl: modelEntry.sourceUrl,
     scrapedAt: new Date().toISOString(),
+    mode: 'colors-only',
     counts: {
-      exterior: saved.exterior.length,
-      interior: saved.interior.length,
-      feature: saved.feature.length,
       colors: saved.colors.length,
-      total: saved.exterior.length + saved.interior.length + saved.feature.length + saved.colors.length,
+      total: saved.colors.length,
     },
-    hero: saved.exterior[0] ? `/data/brand-model-images/4w-galleries/${brandSlug}/${modelSlug}/exterior/${saved.exterior[0].file}` : null,
-    exterior: saved.exterior.map((entry) => `/data/brand-model-images/4w-galleries/${brandSlug}/${modelSlug}/exterior/${entry.file}`),
-    interior: saved.interior.map((entry) => `/data/brand-model-images/4w-galleries/${brandSlug}/${modelSlug}/interior/${entry.file}`),
-    feature: saved.feature.map((entry) => `/data/brand-model-images/4w-galleries/${brandSlug}/${modelSlug}/feature/${entry.file}`),
+    hero: saved.colors[0] ? `/data/brand-model-images/4w-galleries/${brandDir}/${modelDir}/colors/${saved.colors[0].file}` : null,
     colorNames: saved.colors.map((entry) => entry.name),
-    colorImages: saved.colors.map((entry) => `/data/brand-model-images/4w-galleries/${brandSlug}/${modelSlug}/colors/${entry.file}`),
+    colorImages: saved.colors.map((entry) => `/data/brand-model-images/4w-galleries/${brandDir}/${modelDir}/colors/${entry.file}`),
   }
 
   await fs.writeFile(path.join(destDir, 'metadata.json'), JSON.stringify(metadata, null, 2))
@@ -942,8 +1198,8 @@ async function main() {
     for (const model of models) {
       try {
         const metadata = await scrape4WOne(model)
-        report.fourWheelers.push({ ok: true, make: model.make, model: model.model, counts: metadata.counts })
-        console.log(`4W OK  ${model.make} ${model.model} -> ${metadata.counts.total} images`)
+        report.fourWheelers.push({ ok: true, make: model.make, model: model.model, colors: metadata.counts.colors })
+        console.log(`4W OK  ${model.make} ${model.model} -> ${metadata.counts.colors} colors`)
       } catch (error) {
         report.fourWheelers.push({ ok: false, make: model.make, model: model.model, error: error.message })
         console.log(`4W ERR ${model.make} ${model.model} -> ${error.message}`)

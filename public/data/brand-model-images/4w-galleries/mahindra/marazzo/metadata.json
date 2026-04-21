@@ -1,0 +1,26 @@
+{
+  "make": "Mahindra",
+  "model": "Marazzo",
+  "brandSlug": "mahindra",
+  "modelSlug": "marazzo",
+  "sourceUrl": "https://www.cardekho.com/mahindra/marazzo",
+  "scrapedAt": "2026-04-21T06:19:26.713Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 4,
+    "total": 4
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mahindra/marazzo/colors/shimmering-silver.avif",
+  "colorNames": [
+    "Shimmering Silver",
+    "Iceberg White",
+    "Aqua Marine",
+    "Oceanic Black"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mahindra/marazzo/colors/shimmering-silver.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/marazzo/colors/iceberg-white.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/marazzo/colors/aqua-marine.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/marazzo/colors/oceanic-black.avif"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "make": "Hyundai",
+  "model": "Grand i10 Nios",
+  "brandSlug": "hyundai",
+  "modelSlug": "grand-i10-nios",
+  "sourceUrl": "https://www.cardekho.com/hyundai/grand-i10-nios",
+  "scrapedAt": "2026-04-21T06:19:19.157Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 8,
+    "total": 8
+  },
+  "hero": "/data/brand-model-images/4w-galleries/hyundai/grand-i10-nios/colors/fiery-red.avif",
+  "colorNames": [
+    "Fiery Red",
+    "Typhoon Silver",
+    "Atlas White",
+    "Tital Grey Matte",
+    "Titan Grey",
+    "Amazon Grey",
+    "Teal Blue",
+    "Spark Green"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/hyundai/grand-i10-nios/colors/fiery-red.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/grand-i10-nios/colors/typhoon-silver.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/grand-i10-nios/colors/atlas-white.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/grand-i10-nios/colors/tital-grey-matte.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/grand-i10-nios/colors/titan-grey.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/grand-i10-nios/colors/amazon-grey.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/grand-i10-nios/colors/teal-blue.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/grand-i10-nios/colors/spark-green.avif"
+  ]
+}

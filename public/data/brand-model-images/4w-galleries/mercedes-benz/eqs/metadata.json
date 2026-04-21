@@ -1,0 +1,28 @@
+{
+  "make": "Mercedes-Benz",
+  "model": "EQS",
+  "brandSlug": "mercedes-benz",
+  "modelSlug": "eqs",
+  "sourceUrl": "https://www.cardekho.com/mercedes-benz/eqs",
+  "scrapedAt": "2026-04-21T06:20:10.591Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 5,
+    "total": 5
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mercedes-benz/eqs/colors/high-tech-silver.avif",
+  "colorNames": [
+    "High Tech Silver",
+    "Graphite Grey",
+    "Sodalite Blue",
+    "Obsidian Black",
+    "Diamond White Bright"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mercedes-benz/eqs/colors/high-tech-silver.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/eqs/colors/graphite-grey.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/eqs/colors/sodalite-blue.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/eqs/colors/obsidian-black.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/eqs/colors/diamond-white-bright.avif"
+  ]
+}

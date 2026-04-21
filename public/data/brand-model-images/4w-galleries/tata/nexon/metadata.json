@@ -1,0 +1,32 @@
+{
+  "make": "Tata Motors",
+  "model": "Nexon",
+  "brandSlug": "tata",
+  "modelSlug": "nexon",
+  "sourceUrl": "https://www.cardekho.com/tata/nexon",
+  "scrapedAt": "2026-04-21T06:19:05.271Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 7,
+    "total": 7
+  },
+  "hero": "/data/brand-model-images/4w-galleries/tata/nexon/colors/grassland-beige.avif",
+  "colorNames": [
+    "Grassland Beige",
+    "Pristine White Dual Tone",
+    "Ocean Blue",
+    "Pure Grey",
+    "Royal Blue",
+    "Daytona Grey Dual Tone",
+    "Atlas Black"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/tata/nexon/colors/grassland-beige.avif",
+    "/data/brand-model-images/4w-galleries/tata/nexon/colors/pristine-white-dual-tone.avif",
+    "/data/brand-model-images/4w-galleries/tata/nexon/colors/ocean-blue.avif",
+    "/data/brand-model-images/4w-galleries/tata/nexon/colors/pure-grey.avif",
+    "/data/brand-model-images/4w-galleries/tata/nexon/colors/royal-blue.avif",
+    "/data/brand-model-images/4w-galleries/tata/nexon/colors/daytona-grey-dual-tone.avif",
+    "/data/brand-model-images/4w-galleries/tata/nexon/colors/atlas-black.avif"
+  ]
+}

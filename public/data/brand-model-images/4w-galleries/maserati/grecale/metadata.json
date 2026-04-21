@@ -1,0 +1,28 @@
+{
+  "make": "Maserati",
+  "model": "Grecale",
+  "brandSlug": "maserati",
+  "modelSlug": "grecale",
+  "sourceUrl": "https://www.cardekho.com/maserati/grecale",
+  "scrapedAt": "2026-04-21T06:23:14.204Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 5,
+    "total": 5
+  },
+  "hero": "/data/brand-model-images/4w-galleries/maserati/grecale/colors/blu-intenso.avif",
+  "colorNames": [
+    "Blu Intenso",
+    "Bianco",
+    "Biano Astro",
+    "Nero Tempesta",
+    "Grigio Lava"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/maserati/grecale/colors/blu-intenso.avif",
+    "/data/brand-model-images/4w-galleries/maserati/grecale/colors/bianco.avif",
+    "/data/brand-model-images/4w-galleries/maserati/grecale/colors/biano-astro.avif",
+    "/data/brand-model-images/4w-galleries/maserati/grecale/colors/nero-tempesta.avif",
+    "/data/brand-model-images/4w-galleries/maserati/grecale/colors/grigio-lava.avif"
+  ]
+}

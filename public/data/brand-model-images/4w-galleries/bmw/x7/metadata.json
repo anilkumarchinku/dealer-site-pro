@@ -1,0 +1,34 @@
+{
+  "make": "BMW",
+  "model": "X7",
+  "brandSlug": "bmw",
+  "modelSlug": "x7",
+  "sourceUrl": "https://www.cardekho.com/bmw/x7",
+  "scrapedAt": "2026-04-21T06:19:47.745Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 8,
+    "total": 8
+  },
+  "hero": "/data/brand-model-images/4w-galleries/bmw/x7/colors/mineral-white-metallic.avif",
+  "colorNames": [
+    "Mineral White Metallic",
+    "Tanzanite Blue Metallic",
+    "Mineral White",
+    "Carbon Black Metallic",
+    "Dravit Grey Metallic",
+    "Sparkling Copper Grey Metallic",
+    "Dravite Grey Metallic",
+    "Black Sapphire"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/bmw/x7/colors/mineral-white-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x7/colors/tanzanite-blue-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x7/colors/mineral-white.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x7/colors/carbon-black-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x7/colors/dravit-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x7/colors/sparkling-copper-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x7/colors/dravite-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x7/colors/black-sapphire.avif"
+  ]
+}

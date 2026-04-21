@@ -1,0 +1,30 @@
+{
+  "make": "Tata Motors",
+  "model": "Sierra",
+  "brandSlug": "tata",
+  "modelSlug": "sierra",
+  "sourceUrl": "https://www.cardekho.com/tata/sierra",
+  "scrapedAt": "2026-04-21T06:19:04.716Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 6,
+    "total": 6
+  },
+  "hero": "/data/brand-model-images/4w-galleries/tata/sierra/colors/coorg-clouds.avif",
+  "colorNames": [
+    "Coorg Clouds",
+    "Pristine White",
+    "Pure Grey",
+    "Bengal Rouge",
+    "Munnar Mist",
+    "Andaman Adventure"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/tata/sierra/colors/coorg-clouds.avif",
+    "/data/brand-model-images/4w-galleries/tata/sierra/colors/pristine-white.avif",
+    "/data/brand-model-images/4w-galleries/tata/sierra/colors/pure-grey.avif",
+    "/data/brand-model-images/4w-galleries/tata/sierra/colors/bengal-rouge.avif",
+    "/data/brand-model-images/4w-galleries/tata/sierra/colors/munnar-mist.avif",
+    "/data/brand-model-images/4w-galleries/tata/sierra/colors/andaman-adventure.avif"
+  ]
+}

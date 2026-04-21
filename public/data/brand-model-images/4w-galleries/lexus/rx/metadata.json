@@ -1,0 +1,40 @@
+{
+  "make": "Lexus",
+  "model": "RX",
+  "brandSlug": "lexus",
+  "modelSlug": "rx",
+  "sourceUrl": "https://www.cardekho.com/lexus/rx",
+  "scrapedAt": "2026-04-21T06:20:56.443Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 11,
+    "total": 11
+  },
+  "hero": "/data/brand-model-images/4w-galleries/lexus/rx/colors/red.avif",
+  "colorNames": [
+    "Red",
+    "Silver",
+    "Gray",
+    "White",
+    "Pearl White",
+    "Olive Green",
+    "Lapis Blue",
+    "Machine Grey",
+    "Black",
+    "Orange",
+    "Denim Blue"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/lexus/rx/colors/red.avif",
+    "/data/brand-model-images/4w-galleries/lexus/rx/colors/silver.avif",
+    "/data/brand-model-images/4w-galleries/lexus/rx/colors/gray.avif",
+    "/data/brand-model-images/4w-galleries/lexus/rx/colors/white.avif",
+    "/data/brand-model-images/4w-galleries/lexus/rx/colors/pearl-white.avif",
+    "/data/brand-model-images/4w-galleries/lexus/rx/colors/olive-green.avif",
+    "/data/brand-model-images/4w-galleries/lexus/rx/colors/lapis-blue.avif",
+    "/data/brand-model-images/4w-galleries/lexus/rx/colors/machine-grey.avif",
+    "/data/brand-model-images/4w-galleries/lexus/rx/colors/black.avif",
+    "/data/brand-model-images/4w-galleries/lexus/rx/colors/orange.avif",
+    "/data/brand-model-images/4w-galleries/lexus/rx/colors/denim-blue.avif"
+  ]
+}

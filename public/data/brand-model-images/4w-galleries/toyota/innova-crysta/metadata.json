@@ -1,0 +1,28 @@
+{
+  "make": "Toyota",
+  "model": "Innova Crysta",
+  "brandSlug": "toyota",
+  "modelSlug": "innova-crysta",
+  "sourceUrl": "https://www.cardekho.com/toyota/innova-crysta",
+  "scrapedAt": "2026-04-21T06:19:31.421Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 5,
+    "total": 5
+  },
+  "hero": "/data/brand-model-images/4w-galleries/toyota/innova-crysta/colors/silver.avif",
+  "colorNames": [
+    "Silver",
+    "Platinum White Pearl",
+    "Avant Garde Bronze",
+    "Attitude Black",
+    "Super White"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/toyota/innova-crysta/colors/silver.avif",
+    "/data/brand-model-images/4w-galleries/toyota/innova-crysta/colors/platinum-white-pearl.avif",
+    "/data/brand-model-images/4w-galleries/toyota/innova-crysta/colors/avant-garde-bronze.avif",
+    "/data/brand-model-images/4w-galleries/toyota/innova-crysta/colors/attitude-black.avif",
+    "/data/brand-model-images/4w-galleries/toyota/innova-crysta/colors/super-white.avif"
+  ]
+}

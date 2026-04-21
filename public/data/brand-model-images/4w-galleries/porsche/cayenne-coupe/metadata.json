@@ -1,0 +1,40 @@
+{
+  "make": "Porsche",
+  "model": "Cayenne Coupe",
+  "brandSlug": "porsche",
+  "modelSlug": "cayenne-coupe",
+  "sourceUrl": "https://www.cardekho.com/porsche/cayenne-coupe",
+  "scrapedAt": "2026-04-21T06:20:17.763Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 11,
+    "total": 11
+  },
+  "hero": "/data/brand-model-images/4w-galleries/porsche/cayenne-coupe/colors/chromite-black.avif",
+  "colorNames": [
+    "Chromite Black",
+    "Carmine Red",
+    "White",
+    "Cashmere Beige Metallic",
+    "Dolomite Silver Metallic",
+    "Carrara White Metallic",
+    "Arctic Grey",
+    "Montego Blue Metallic",
+    "Quartz Grey",
+    "Crayon",
+    "Algarve Blue Metallic"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/porsche/cayenne-coupe/colors/chromite-black.avif",
+    "/data/brand-model-images/4w-galleries/porsche/cayenne-coupe/colors/carmine-red.avif",
+    "/data/brand-model-images/4w-galleries/porsche/cayenne-coupe/colors/white.avif",
+    "/data/brand-model-images/4w-galleries/porsche/cayenne-coupe/colors/cashmere-beige-metallic.avif",
+    "/data/brand-model-images/4w-galleries/porsche/cayenne-coupe/colors/dolomite-silver-metallic.avif",
+    "/data/brand-model-images/4w-galleries/porsche/cayenne-coupe/colors/carrara-white-metallic.avif",
+    "/data/brand-model-images/4w-galleries/porsche/cayenne-coupe/colors/arctic-grey.avif",
+    "/data/brand-model-images/4w-galleries/porsche/cayenne-coupe/colors/montego-blue-metallic.avif",
+    "/data/brand-model-images/4w-galleries/porsche/cayenne-coupe/colors/quartz-grey.avif",
+    "/data/brand-model-images/4w-galleries/porsche/cayenne-coupe/colors/crayon.avif",
+    "/data/brand-model-images/4w-galleries/porsche/cayenne-coupe/colors/algarve-blue-metallic.avif"
+  ]
+}

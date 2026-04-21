@@ -1,0 +1,38 @@
+{
+  "make": "Mercedes-Benz",
+  "model": "EQS SUV",
+  "brandSlug": "mercedes-benz",
+  "modelSlug": "eqs-suv",
+  "sourceUrl": "https://www.cardekho.com/mercedes-benz/eqs-suv",
+  "scrapedAt": "2026-04-21T06:20:11.031Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 10,
+    "total": 10
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mercedes-benz/eqs-suv/colors/velvet-brown.avif",
+  "colorNames": [
+    "Velvet Brown",
+    "BLACK LACQUER",
+    "Obsidian Black Metallic",
+    "SMARAGD GREEN METALLIC",
+    "Selenite Grey Metallic",
+    "Opalith White Metallic",
+    "HIGH TECH SILBER METALLICLACK",
+    "Sodalite Blue Metallic",
+    "Polar White Non Metallic",
+    "ALPINGRAU UNILACK"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mercedes-benz/eqs-suv/colors/velvet-brown.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/eqs-suv/colors/black-lacquer.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/eqs-suv/colors/obsidian-black-metallic.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/eqs-suv/colors/smaragd-green-metallic.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/eqs-suv/colors/selenite-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/eqs-suv/colors/opalith-white-metallic.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/eqs-suv/colors/high-tech-silber-metalliclack.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/eqs-suv/colors/sodalite-blue-metallic.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/eqs-suv/colors/polar-white-non-metallic.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/eqs-suv/colors/alpingrau-unilack.avif"
+  ]
+}

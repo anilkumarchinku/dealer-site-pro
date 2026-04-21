@@ -1,0 +1,34 @@
+{
+  "make": "Kia",
+  "model": "Syros",
+  "brandSlug": "kia",
+  "modelSlug": "syros",
+  "sourceUrl": "https://www.cardekho.com/kia/syros",
+  "scrapedAt": "2026-04-21T06:19:28.958Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 8,
+    "total": 8
+  },
+  "hero": "/data/brand-model-images/4w-galleries/kia/syros/colors/glacier-white-pearl.avif",
+  "colorNames": [
+    "Glacier White Pearl",
+    "Sparkling Silver",
+    "Pewter Olive",
+    "Intense Red",
+    "Frost Blue",
+    "Aurora Black Pearl",
+    "Imperial Blue",
+    "Gravity Gray"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/kia/syros/colors/glacier-white-pearl.avif",
+    "/data/brand-model-images/4w-galleries/kia/syros/colors/sparkling-silver.avif",
+    "/data/brand-model-images/4w-galleries/kia/syros/colors/pewter-olive.avif",
+    "/data/brand-model-images/4w-galleries/kia/syros/colors/intense-red.avif",
+    "/data/brand-model-images/4w-galleries/kia/syros/colors/frost-blue.avif",
+    "/data/brand-model-images/4w-galleries/kia/syros/colors/aurora-black-pearl.avif",
+    "/data/brand-model-images/4w-galleries/kia/syros/colors/imperial-blue.avif",
+    "/data/brand-model-images/4w-galleries/kia/syros/colors/gravity-gray.avif"
+  ]
+}

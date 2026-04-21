@@ -1,0 +1,28 @@
+{
+  "make": "Tata Motors",
+  "model": "Altroz",
+  "brandSlug": "tata",
+  "modelSlug": "altroz",
+  "sourceUrl": "https://www.cardekho.com/tata/altroz",
+  "scrapedAt": "2026-04-21T06:19:06.628Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 5,
+    "total": 5
+  },
+  "hero": "/data/brand-model-images/4w-galleries/tata/altroz/colors/ember-glow.avif",
+  "colorNames": [
+    "Ember Glow",
+    "Pristine White",
+    "Pure Grey",
+    "Dune GLow",
+    "Royal Blue"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/tata/altroz/colors/ember-glow.avif",
+    "/data/brand-model-images/4w-galleries/tata/altroz/colors/pristine-white.avif",
+    "/data/brand-model-images/4w-galleries/tata/altroz/colors/pure-grey.avif",
+    "/data/brand-model-images/4w-galleries/tata/altroz/colors/dune-glow.avif",
+    "/data/brand-model-images/4w-galleries/tata/altroz/colors/royal-blue.avif"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "make": "Citroen",
+  "model": "eC3",
+  "brandSlug": "citroen",
+  "modelSlug": "ec3",
+  "sourceUrl": "https://www.cardekho.com/citroen/ec3",
+  "scrapedAt": "2026-04-21T06:19:44.203Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 8,
+    "total": 8
+  },
+  "hero": "/data/brand-model-images/4w-galleries/citroen/ec3/colors/steel-grey-with-cosmo-blue.avif",
+  "colorNames": [
+    "Steel Grey With Cosmo Blue",
+    "Platinum Grey With Polar White",
+    "Steel Grey With Platinum Grey",
+    "Polar White With Platinum Grey",
+    "Polar White With Cosmo Blue",
+    "Steel Grey With Polar White",
+    "Cosmo Blue",
+    "Cosmo Blue With Polar White"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/citroen/ec3/colors/steel-grey-with-cosmo-blue.avif",
+    "/data/brand-model-images/4w-galleries/citroen/ec3/colors/platinum-grey-with-polar-white.avif",
+    "/data/brand-model-images/4w-galleries/citroen/ec3/colors/steel-grey-with-platinum-grey.avif",
+    "/data/brand-model-images/4w-galleries/citroen/ec3/colors/polar-white-with-platinum-grey.avif",
+    "/data/brand-model-images/4w-galleries/citroen/ec3/colors/polar-white-with-cosmo-blue.avif",
+    "/data/brand-model-images/4w-galleries/citroen/ec3/colors/steel-grey-with-polar-white.avif",
+    "/data/brand-model-images/4w-galleries/citroen/ec3/colors/cosmo-blue.avif",
+    "/data/brand-model-images/4w-galleries/citroen/ec3/colors/cosmo-blue-with-polar-white.avif"
+  ]
+}

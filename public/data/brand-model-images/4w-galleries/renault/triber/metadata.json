@@ -1,0 +1,36 @@
+{
+  "make": "Renault",
+  "model": "Triber",
+  "brandSlug": "renault",
+  "modelSlug": "triber",
+  "sourceUrl": "https://www.cardekho.com/renault/triber",
+  "scrapedAt": "2026-04-21T06:19:40.991Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 9,
+    "total": 9
+  },
+  "hero": "/data/brand-model-images/4w-galleries/renault/triber/colors/ice-cool-white-with-mystery-black-roof.avif",
+  "colorNames": [
+    "Ice Cool White With Mystery Black Roof",
+    "Amber Terracotta",
+    "Ice Cool White",
+    "Stealth Black",
+    "Moonlight Silver",
+    "Zanskar Blue",
+    "Shadow Grey",
+    "Shadow Grey With Mystery Black Roof",
+    "Amber Terracotta With Mystery Black Roof"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/renault/triber/colors/ice-cool-white-with-mystery-black-roof.avif",
+    "/data/brand-model-images/4w-galleries/renault/triber/colors/amber-terracotta.avif",
+    "/data/brand-model-images/4w-galleries/renault/triber/colors/ice-cool-white.avif",
+    "/data/brand-model-images/4w-galleries/renault/triber/colors/stealth-black.avif",
+    "/data/brand-model-images/4w-galleries/renault/triber/colors/moonlight-silver.avif",
+    "/data/brand-model-images/4w-galleries/renault/triber/colors/zanskar-blue.avif",
+    "/data/brand-model-images/4w-galleries/renault/triber/colors/shadow-grey.avif",
+    "/data/brand-model-images/4w-galleries/renault/triber/colors/shadow-grey-with-mystery-black-roof.avif",
+    "/data/brand-model-images/4w-galleries/renault/triber/colors/amber-terracotta-with-mystery-black-roof.avif"
+  ]
+}

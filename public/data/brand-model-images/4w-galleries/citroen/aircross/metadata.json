@@ -1,0 +1,38 @@
+{
+  "make": "Citroen",
+  "model": "Aircross",
+  "brandSlug": "citroen",
+  "modelSlug": "aircross",
+  "sourceUrl": "https://www.cardekho.com/citroen/aircross",
+  "scrapedAt": "2026-04-21T06:19:43.203Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 10,
+    "total": 10
+  },
+  "hero": "/data/brand-model-images/4w-galleries/citroen/aircross/colors/deep-forest-green-with-perla-nera-black.avif",
+  "colorNames": [
+    "Deep Forest Green With Perla Nera Black",
+    "Polar White With Perlanera Black",
+    "Polar White",
+    "Perla Nera Black",
+    "Steel Grey",
+    "Garnet Red With Perlanera Black",
+    "Garnet Red",
+    "Deep Forest Green",
+    "Cosmo Blue With Polar White",
+    "Cosmo Blue"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/citroen/aircross/colors/deep-forest-green-with-perla-nera-black.avif",
+    "/data/brand-model-images/4w-galleries/citroen/aircross/colors/polar-white-with-perlanera-black.avif",
+    "/data/brand-model-images/4w-galleries/citroen/aircross/colors/polar-white.avif",
+    "/data/brand-model-images/4w-galleries/citroen/aircross/colors/perla-nera-black.avif",
+    "/data/brand-model-images/4w-galleries/citroen/aircross/colors/steel-grey.avif",
+    "/data/brand-model-images/4w-galleries/citroen/aircross/colors/garnet-red-with-perlanera-black.avif",
+    "/data/brand-model-images/4w-galleries/citroen/aircross/colors/garnet-red.avif",
+    "/data/brand-model-images/4w-galleries/citroen/aircross/colors/deep-forest-green.avif",
+    "/data/brand-model-images/4w-galleries/citroen/aircross/colors/cosmo-blue-with-polar-white.avif",
+    "/data/brand-model-images/4w-galleries/citroen/aircross/colors/cosmo-blue.avif"
+  ]
+}

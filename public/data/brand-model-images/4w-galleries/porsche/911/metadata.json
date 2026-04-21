@@ -1,0 +1,42 @@
+{
+  "make": "Porsche",
+  "model": "911",
+  "brandSlug": "porsche",
+  "modelSlug": "911",
+  "sourceUrl": "https://www.cardekho.com/porsche/911",
+  "scrapedAt": "2026-04-21T06:22:41.528Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 12,
+    "total": 12
+  },
+  "hero": "/data/brand-model-images/4w-galleries/porsche/911/colors/jet-black-metallic.avif",
+  "colorNames": [
+    "Jet Black Metallic",
+    "Carmine Red",
+    "White",
+    "Provence",
+    "Guards Red",
+    "Gt Silver Metallic",
+    "Cartagena Yellow Metallic",
+    "Black",
+    "Ice Grey Metallic",
+    "Vanadium Grey Metallic",
+    "Lugano Blue",
+    "Gentian Blue Metallic"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/porsche/911/colors/jet-black-metallic.avif",
+    "/data/brand-model-images/4w-galleries/porsche/911/colors/carmine-red.avif",
+    "/data/brand-model-images/4w-galleries/porsche/911/colors/white.avif",
+    "/data/brand-model-images/4w-galleries/porsche/911/colors/provence.avif",
+    "/data/brand-model-images/4w-galleries/porsche/911/colors/guards-red.avif",
+    "/data/brand-model-images/4w-galleries/porsche/911/colors/gt-silver-metallic.avif",
+    "/data/brand-model-images/4w-galleries/porsche/911/colors/cartagena-yellow-metallic.avif",
+    "/data/brand-model-images/4w-galleries/porsche/911/colors/black.avif",
+    "/data/brand-model-images/4w-galleries/porsche/911/colors/ice-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/porsche/911/colors/vanadium-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/porsche/911/colors/lugano-blue.avif",
+    "/data/brand-model-images/4w-galleries/porsche/911/colors/gentian-blue-metallic.avif"
+  ]
+}

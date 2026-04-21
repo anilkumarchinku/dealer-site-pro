@@ -1,0 +1,40 @@
+{
+  "make": "Lexus",
+  "model": "NX",
+  "brandSlug": "lexus",
+  "modelSlug": "nx",
+  "sourceUrl": "https://www.cardekho.com/lexus/nx",
+  "scrapedAt": "2026-04-21T06:20:53.747Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 11,
+    "total": 11
+  },
+  "hero": "/data/brand-model-images/4w-galleries/lexus/nx/colors/moon-desert.avif",
+  "colorNames": [
+    "Moon Desert",
+    "Blazing Carnelian",
+    "Heat Blue Contrast",
+    "Sonic Titanium",
+    "White Nova Glass Flake",
+    "Graphite Black Glass Flake",
+    "Sonic Quartz",
+    "Black",
+    "Madder Red",
+    "Celestial Blue",
+    "Sonic Chrome"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/lexus/nx/colors/moon-desert.avif",
+    "/data/brand-model-images/4w-galleries/lexus/nx/colors/blazing-carnelian.avif",
+    "/data/brand-model-images/4w-galleries/lexus/nx/colors/heat-blue-contrast.avif",
+    "/data/brand-model-images/4w-galleries/lexus/nx/colors/sonic-titanium.avif",
+    "/data/brand-model-images/4w-galleries/lexus/nx/colors/white-nova-glass-flake.avif",
+    "/data/brand-model-images/4w-galleries/lexus/nx/colors/graphite-black-glass-flake.avif",
+    "/data/brand-model-images/4w-galleries/lexus/nx/colors/sonic-quartz.avif",
+    "/data/brand-model-images/4w-galleries/lexus/nx/colors/black.avif",
+    "/data/brand-model-images/4w-galleries/lexus/nx/colors/madder-red.avif",
+    "/data/brand-model-images/4w-galleries/lexus/nx/colors/celestial-blue.avif",
+    "/data/brand-model-images/4w-galleries/lexus/nx/colors/sonic-chrome.avif"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "make": "Audi",
+  "model": "Q3",
+  "brandSlug": "audi",
+  "modelSlug": "q3",
+  "sourceUrl": "https://www.cardekho.com/audi/q3",
+  "scrapedAt": "2026-04-21T06:19:56.945Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 5,
+    "total": 5
+  },
+  "hero": "/data/brand-model-images/4w-galleries/audi/q3/colors/nano-grey-metallic.avif",
+  "colorNames": [
+    "Nano Grey Metallic",
+    "Mythos Black Metallic",
+    "Pulse Orange Solid",
+    "Glacier White Metallic",
+    "Navarra Blue Metallic"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/audi/q3/colors/nano-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/q3/colors/mythos-black-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/q3/colors/pulse-orange-solid.avif",
+    "/data/brand-model-images/4w-galleries/audi/q3/colors/glacier-white-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/q3/colors/navarra-blue-metallic.avif"
+  ]
+}

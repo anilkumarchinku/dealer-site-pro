@@ -1,0 +1,30 @@
+{
+  "make": "Audi",
+  "model": "A4",
+  "brandSlug": "audi",
+  "modelSlug": "a4",
+  "sourceUrl": "https://www.cardekho.com/audi/a4",
+  "scrapedAt": "2026-04-21T06:19:56.404Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 6,
+    "total": 6
+  },
+  "hero": "/data/brand-model-images/4w-galleries/audi/a4/colors/progressive-red-metallic.avif",
+  "colorNames": [
+    "Progressive-Red-Metallic",
+    "Manhattan Grey Metallic",
+    "Navvara Blue Metallic",
+    "Mythos Black Metallic",
+    "Glacier White Metallic",
+    "Navarra Blue Metallic"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/audi/a4/colors/progressive-red-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/a4/colors/manhattan-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/a4/colors/navvara-blue-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/a4/colors/mythos-black-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/a4/colors/glacier-white-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/a4/colors/navarra-blue-metallic.avif"
+  ]
+}

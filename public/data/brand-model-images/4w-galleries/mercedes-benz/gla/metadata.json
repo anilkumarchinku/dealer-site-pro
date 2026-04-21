@@ -1,0 +1,26 @@
+{
+  "make": "Mercedes-Benz",
+  "model": "GLA",
+  "brandSlug": "mercedes-benz",
+  "modelSlug": "gla",
+  "sourceUrl": "https://www.cardekho.com/mercedes-benz/gla",
+  "scrapedAt": "2026-04-21T06:20:07.785Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 4,
+    "total": 4
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mercedes-benz/gla/colors/mountain-grey.avif",
+  "colorNames": [
+    "Mountain Grey",
+    "Iridium Silver",
+    "Polar White",
+    "Cosmos Black"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mercedes-benz/gla/colors/mountain-grey.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/gla/colors/iridium-silver.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/gla/colors/polar-white.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/gla/colors/cosmos-black.avif"
+  ]
+}

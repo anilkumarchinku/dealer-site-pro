@@ -1,0 +1,22 @@
+{
+  "make": "Toyota",
+  "model": "Land Cruiser 300",
+  "brandSlug": "toyota",
+  "modelSlug": "land-cruiser-300",
+  "sourceUrl": "https://www.cardekho.com/toyota/land-cruiser-300",
+  "scrapedAt": "2026-04-21T06:19:32.299Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 2,
+    "total": 2
+  },
+  "hero": "/data/brand-model-images/4w-galleries/toyota/land-cruiser-300/colors/precious-white-pearl.avif",
+  "colorNames": [
+    "Precious White Pearl",
+    "Attitude Black"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/toyota/land-cruiser-300/colors/precious-white-pearl.avif",
+    "/data/brand-model-images/4w-galleries/toyota/land-cruiser-300/colors/attitude-black.avif"
+  ]
+}

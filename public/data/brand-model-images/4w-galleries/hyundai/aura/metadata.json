@@ -1,0 +1,28 @@
+{
+  "make": "Hyundai",
+  "model": "Aura",
+  "brandSlug": "hyundai",
+  "modelSlug": "aura",
+  "sourceUrl": "https://www.cardekho.com/hyundai/aura",
+  "scrapedAt": "2026-04-21T06:19:14.129Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 5,
+    "total": 5
+  },
+  "hero": "/data/brand-model-images/4w-galleries/hyundai/aura/colors/typhoon-silver.avif",
+  "colorNames": [
+    "Typhoon Silver",
+    "Starry Night",
+    "Atlas White",
+    "Titan Grey",
+    "Aqua Teal"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/hyundai/aura/colors/typhoon-silver.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/aura/colors/starry-night.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/aura/colors/atlas-white.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/aura/colors/titan-grey.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/aura/colors/aqua-teal.avif"
+  ]
+}

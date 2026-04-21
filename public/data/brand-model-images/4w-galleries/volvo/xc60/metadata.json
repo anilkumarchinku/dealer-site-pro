@@ -1,0 +1,32 @@
+{
+  "make": "Volvo",
+  "model": "XC60",
+  "brandSlug": "volvo",
+  "modelSlug": "xc60",
+  "sourceUrl": "https://www.cardekho.com/volvo/xc60",
+  "scrapedAt": "2026-04-21T06:20:57.032Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 7,
+    "total": 7
+  },
+  "hero": "/data/brand-model-images/4w-galleries/volvo/xc60/colors/platinum-grey.avif",
+  "colorNames": [
+    "Platinum Grey",
+    "Mulberry Red",
+    "Onyx Black",
+    "Crystal White",
+    "Vapour Grey",
+    "Denim Blue",
+    "Bright Dusk"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/volvo/xc60/colors/platinum-grey.avif",
+    "/data/brand-model-images/4w-galleries/volvo/xc60/colors/mulberry-red.avif",
+    "/data/brand-model-images/4w-galleries/volvo/xc60/colors/onyx-black.avif",
+    "/data/brand-model-images/4w-galleries/volvo/xc60/colors/crystal-white.avif",
+    "/data/brand-model-images/4w-galleries/volvo/xc60/colors/vapour-grey.avif",
+    "/data/brand-model-images/4w-galleries/volvo/xc60/colors/denim-blue.avif",
+    "/data/brand-model-images/4w-galleries/volvo/xc60/colors/bright-dusk.avif"
+  ]
+}

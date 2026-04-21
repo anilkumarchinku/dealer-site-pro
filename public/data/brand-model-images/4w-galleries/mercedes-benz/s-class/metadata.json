@@ -1,0 +1,28 @@
+{
+  "make": "Mercedes-Benz",
+  "model": "S-Class",
+  "brandSlug": "mercedes-benz",
+  "modelSlug": "s-class",
+  "sourceUrl": "https://www.cardekho.com/mercedes-benz/s-class",
+  "scrapedAt": "2026-04-21T06:20:05.461Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 5,
+    "total": 5
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mercedes-benz/s-class/colors/selenite-grey.avif",
+  "colorNames": [
+    "Selenite Grey",
+    "Designo Diamond White Bright",
+    "High Tech Silver",
+    "Onyx Black",
+    "Graphite Grey"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mercedes-benz/s-class/colors/selenite-grey.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/s-class/colors/designo-diamond-white-bright.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/s-class/colors/high-tech-silver.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/s-class/colors/onyx-black.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/s-class/colors/graphite-grey.avif"
+  ]
+}

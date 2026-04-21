@@ -1,0 +1,36 @@
+{
+  "make": "Volkswagen",
+  "model": "Taigun",
+  "brandSlug": "volkswagen",
+  "modelSlug": "taigun",
+  "sourceUrl": "https://www.cardekho.com/volkswagen/taigun",
+  "scrapedAt": "2026-04-21T06:19:35.326Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 9,
+    "total": 9
+  },
+  "hero": "/data/brand-model-images/4w-galleries/volkswagen/taigun/colors/wild-cherry-red-metallic.avif",
+  "colorNames": [
+    "Wild Cherry Red Metallic",
+    "Lava Blue Metallic",
+    "Carban Steel Matte",
+    "Carbon Steel Grey Metallic",
+    "Deep Black Pearl",
+    "Steel Grey",
+    "Candy White",
+    "Avocado Pearl Effect",
+    "Reflex Silver Metallic"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/volkswagen/taigun/colors/wild-cherry-red-metallic.avif",
+    "/data/brand-model-images/4w-galleries/volkswagen/taigun/colors/lava-blue-metallic.avif",
+    "/data/brand-model-images/4w-galleries/volkswagen/taigun/colors/carban-steel-matte.avif",
+    "/data/brand-model-images/4w-galleries/volkswagen/taigun/colors/carbon-steel-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/volkswagen/taigun/colors/deep-black-pearl.avif",
+    "/data/brand-model-images/4w-galleries/volkswagen/taigun/colors/steel-grey.avif",
+    "/data/brand-model-images/4w-galleries/volkswagen/taigun/colors/candy-white.avif",
+    "/data/brand-model-images/4w-galleries/volkswagen/taigun/colors/avocado-pearl-effect.avif",
+    "/data/brand-model-images/4w-galleries/volkswagen/taigun/colors/reflex-silver-metallic.avif"
+  ]
+}

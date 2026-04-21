@@ -1,0 +1,28 @@
+{
+  "make": "BMW",
+  "model": "Z4",
+  "brandSlug": "bmw",
+  "modelSlug": "z4",
+  "sourceUrl": "https://www.cardekho.com/bmw/z4",
+  "scrapedAt": "2026-04-21T06:19:48.731Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 5,
+    "total": 5
+  },
+  "hero": "/data/brand-model-images/4w-galleries/bmw/z4/colors/skyscraper-grey-metallic.avif",
+  "colorNames": [
+    "Skyscraper Grey Metallic",
+    "Alpine White",
+    "M Portimao Blau Metallic",
+    "San Francisco Red Metallic",
+    "Thundernight Metallic"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/bmw/z4/colors/skyscraper-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/z4/colors/alpine-white.avif",
+    "/data/brand-model-images/4w-galleries/bmw/z4/colors/m-portimao-blau-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/z4/colors/san-francisco-red-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/z4/colors/thundernight-metallic.avif"
+  ]
+}

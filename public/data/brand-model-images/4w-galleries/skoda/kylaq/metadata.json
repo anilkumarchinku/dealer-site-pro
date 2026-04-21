@@ -1,0 +1,30 @@
+{
+  "make": "Skoda",
+  "model": "Kylaq",
+  "brandSlug": "skoda",
+  "modelSlug": "kylaq",
+  "sourceUrl": "https://www.cardekho.com/skoda/kylaq",
+  "scrapedAt": "2026-04-21T06:19:37.012Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 6,
+    "total": 6
+  },
+  "hero": "/data/brand-model-images/4w-galleries/skoda/kylaq/colors/brilliant-silver.avif",
+  "colorNames": [
+    "Brilliant Silver",
+    "Lava Blue",
+    "Carbon Steel",
+    "Deep Black Pearl",
+    "Candy White",
+    "Cherry Red"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/skoda/kylaq/colors/brilliant-silver.avif",
+    "/data/brand-model-images/4w-galleries/skoda/kylaq/colors/lava-blue.avif",
+    "/data/brand-model-images/4w-galleries/skoda/kylaq/colors/carbon-steel.avif",
+    "/data/brand-model-images/4w-galleries/skoda/kylaq/colors/deep-black-pearl.avif",
+    "/data/brand-model-images/4w-galleries/skoda/kylaq/colors/candy-white.avif",
+    "/data/brand-model-images/4w-galleries/skoda/kylaq/colors/cherry-red.avif"
+  ]
+}

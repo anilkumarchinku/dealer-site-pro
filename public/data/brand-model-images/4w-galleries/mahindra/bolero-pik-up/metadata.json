@@ -1,0 +1,20 @@
+{
+  "make": "Mahindra",
+  "model": "Bolero Pik-Up",
+  "brandSlug": "mahindra",
+  "modelSlug": "bolero-pik-up",
+  "sourceUrl": "https://www.cardekho.com/mahindra/bolero-pik-up",
+  "scrapedAt": "2026-04-21T06:19:27.786Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 1,
+    "total": 1
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mahindra/bolero-pik-up/colors/white.avif",
+  "colorNames": [
+    "White"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mahindra/bolero-pik-up/colors/white.avif"
+  ]
+}

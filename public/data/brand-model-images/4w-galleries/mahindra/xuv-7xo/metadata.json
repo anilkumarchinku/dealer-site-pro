@@ -1,0 +1,40 @@
+{
+  "make": "Mahindra",
+  "model": "XUV 7XO",
+  "brandSlug": "mahindra",
+  "modelSlug": "xuv-7xo",
+  "sourceUrl": "https://www.cardekho.com/mahindra/xuv-7xo",
+  "scrapedAt": "2026-04-21T06:19:25.520Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 11,
+    "total": 11
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mahindra/xuv-7xo/colors/everest-white.avif",
+  "colorNames": [
+    "Everest White",
+    "Galaxy Grey",
+    "Ruby Velvet",
+    "Everest White Plus Stealth Black",
+    "Stealth Black",
+    "Desert Myst",
+    "Nebula Blue",
+    "Midnight Black Dt",
+    "Desert Myst Satin",
+    "Midnight Black",
+    "Galaxy Grey Plus Stealth Black"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mahindra/xuv-7xo/colors/everest-white.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xuv-7xo/colors/galaxy-grey.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xuv-7xo/colors/ruby-velvet.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xuv-7xo/colors/everest-white-plus-stealth-black.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xuv-7xo/colors/stealth-black.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xuv-7xo/colors/desert-myst.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xuv-7xo/colors/nebula-blue.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xuv-7xo/colors/midnight-black-dt.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xuv-7xo/colors/desert-myst-satin.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xuv-7xo/colors/midnight-black.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xuv-7xo/colors/galaxy-grey-plus-stealth-black.avif"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "make": "Jaguar",
+  "model": "F-Pace",
+  "brandSlug": "jaguar",
+  "modelSlug": "f-pace",
+  "sourceUrl": "https://www.cardekho.com/jaguar/f-pace",
+  "scrapedAt": "2026-04-21T06:20:52.659Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 4,
+    "total": 4
+  },
+  "hero": "/data/brand-model-images/4w-galleries/jaguar/f-pace/colors/portimao-blue.avif",
+  "colorNames": [
+    "Portimao Blue",
+    "Eiger Grey",
+    "Santorini Black",
+    "Fuji White"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/jaguar/f-pace/colors/portimao-blue.avif",
+    "/data/brand-model-images/4w-galleries/jaguar/f-pace/colors/eiger-grey.avif",
+    "/data/brand-model-images/4w-galleries/jaguar/f-pace/colors/santorini-black.avif",
+    "/data/brand-model-images/4w-galleries/jaguar/f-pace/colors/fuji-white.avif"
+  ]
+}

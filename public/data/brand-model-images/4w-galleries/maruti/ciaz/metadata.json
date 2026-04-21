@@ -1,0 +1,38 @@
+{
+  "make": "Maruti Suzuki",
+  "model": "Ciaz",
+  "brandSlug": "maruti",
+  "modelSlug": "ciaz",
+  "sourceUrl": "https://www.cardekho.com/maruti/ciaz",
+  "scrapedAt": "2026-04-21T06:22:22.171Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 10,
+    "total": 10
+  },
+  "hero": "/data/brand-model-images/4w-galleries/maruti/ciaz/colors/pearl-arctic-white.avif",
+  "colorNames": [
+    "Pearl Arctic White",
+    "Pearl Metallic Dignity Brown",
+    "Opulent Red",
+    "Pearl Metallic Dignity Brown And Bluish Black",
+    "Grandeur Grey",
+    "Grandeur Grey And Bluish Black",
+    "Bluish Black",
+    "Nexa Blue",
+    "Splendid Silver",
+    "Opulent Red With Bluish Black Roof"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/maruti/ciaz/colors/pearl-arctic-white.avif",
+    "/data/brand-model-images/4w-galleries/maruti/ciaz/colors/pearl-metallic-dignity-brown.avif",
+    "/data/brand-model-images/4w-galleries/maruti/ciaz/colors/opulent-red.avif",
+    "/data/brand-model-images/4w-galleries/maruti/ciaz/colors/pearl-metallic-dignity-brown-and-bluish-black.avif",
+    "/data/brand-model-images/4w-galleries/maruti/ciaz/colors/grandeur-grey.avif",
+    "/data/brand-model-images/4w-galleries/maruti/ciaz/colors/grandeur-grey-and-bluish-black.avif",
+    "/data/brand-model-images/4w-galleries/maruti/ciaz/colors/bluish-black.avif",
+    "/data/brand-model-images/4w-galleries/maruti/ciaz/colors/nexa-blue.avif",
+    "/data/brand-model-images/4w-galleries/maruti/ciaz/colors/splendid-silver.avif",
+    "/data/brand-model-images/4w-galleries/maruti/ciaz/colors/opulent-red-with-bluish-black-roof.avif"
+  ]
+}

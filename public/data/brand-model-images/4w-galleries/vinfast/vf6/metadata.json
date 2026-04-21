@@ -1,0 +1,30 @@
+{
+  "make": "VinFast",
+  "model": "VF6",
+  "brandSlug": "vinfast",
+  "modelSlug": "vf6",
+  "sourceUrl": "https://www.cardekho.com/vinfast/vf6",
+  "scrapedAt": "2026-04-21T06:19:47.357Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 6,
+    "total": 6
+  },
+  "hero": "/data/brand-model-images/4w-galleries/vinfast/vf6/colors/crimson-red.avif",
+  "colorNames": [
+    "Crimson Red",
+    "Zenith Grey",
+    "Urban Mint",
+    "Jet Black",
+    "Desat Silver",
+    "Infinity Blanc"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/vinfast/vf6/colors/crimson-red.avif",
+    "/data/brand-model-images/4w-galleries/vinfast/vf6/colors/zenith-grey.avif",
+    "/data/brand-model-images/4w-galleries/vinfast/vf6/colors/urban-mint.avif",
+    "/data/brand-model-images/4w-galleries/vinfast/vf6/colors/jet-black.avif",
+    "/data/brand-model-images/4w-galleries/vinfast/vf6/colors/desat-silver.avif",
+    "/data/brand-model-images/4w-galleries/vinfast/vf6/colors/infinity-blanc.avif"
+  ]
+}

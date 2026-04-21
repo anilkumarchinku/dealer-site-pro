@@ -1,0 +1,28 @@
+{
+  "make": "Mercedes-Benz",
+  "model": "AMG C43",
+  "brandSlug": "mercedes-benz",
+  "modelSlug": "amg-c43",
+  "sourceUrl": "https://www.cardekho.com/mercedes-benz/amg-c43",
+  "scrapedAt": "2026-04-21T06:20:14.600Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 5,
+    "total": 5
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mercedes-benz/amg-c43/colors/spectral-blue.avif",
+  "colorNames": [
+    "Spectral Blue",
+    "White",
+    "High Tech Silver",
+    "Polar White",
+    "Obsidian Black"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-c43/colors/spectral-blue.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-c43/colors/white.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-c43/colors/high-tech-silver.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-c43/colors/polar-white.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-c43/colors/obsidian-black.avif"
+  ]
+}

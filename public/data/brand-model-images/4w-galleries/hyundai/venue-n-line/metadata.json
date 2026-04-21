@@ -1,0 +1,34 @@
+{
+  "make": "Hyundai",
+  "model": "Venue N Line",
+  "brandSlug": "hyundai",
+  "modelSlug": "venue-n-line",
+  "sourceUrl": "https://www.cardekho.com/hyundai/venue-n-line",
+  "scrapedAt": "2026-04-21T06:19:17.487Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 8,
+    "total": 8
+  },
+  "hero": "/data/brand-model-images/4w-galleries/hyundai/venue-n-line/colors/dragon-red.avif",
+  "colorNames": [
+    "Dragon Red",
+    "Atlas White",
+    "Atlas White With Abyss Black",
+    "Titan Grey",
+    "Hazel Blue",
+    "Hazel Blue With Abyss Black Roof",
+    "Dragon Red With Abyss Black",
+    "Abyss Black"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/hyundai/venue-n-line/colors/dragon-red.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/venue-n-line/colors/atlas-white.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/venue-n-line/colors/atlas-white-with-abyss-black.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/venue-n-line/colors/titan-grey.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/venue-n-line/colors/hazel-blue.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/venue-n-line/colors/hazel-blue-with-abyss-black-roof.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/venue-n-line/colors/dragon-red-with-abyss-black.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/venue-n-line/colors/abyss-black.avif"
+  ]
+}

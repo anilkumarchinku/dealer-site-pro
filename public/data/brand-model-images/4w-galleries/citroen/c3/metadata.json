@@ -1,0 +1,28 @@
+{
+  "make": "Citroen",
+  "model": "C3",
+  "brandSlug": "citroen",
+  "modelSlug": "c3",
+  "sourceUrl": "https://www.cardekho.com/citroen/c3",
+  "scrapedAt": "2026-04-21T06:19:42.978Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 5,
+    "total": 5
+  },
+  "hero": "/data/brand-model-images/4w-galleries/citroen/c3/colors/polar-white.avif",
+  "colorNames": [
+    "Polar White",
+    "Perla Nera Black",
+    "Steel Grey",
+    "Garnet Red",
+    "Cosmo Blue"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/citroen/c3/colors/polar-white.avif",
+    "/data/brand-model-images/4w-galleries/citroen/c3/colors/perla-nera-black.avif",
+    "/data/brand-model-images/4w-galleries/citroen/c3/colors/steel-grey.avif",
+    "/data/brand-model-images/4w-galleries/citroen/c3/colors/garnet-red.avif",
+    "/data/brand-model-images/4w-galleries/citroen/c3/colors/cosmo-blue.avif"
+  ]
+}

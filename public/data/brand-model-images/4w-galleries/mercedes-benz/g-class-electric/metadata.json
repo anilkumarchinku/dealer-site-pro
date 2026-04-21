@@ -1,0 +1,28 @@
+{
+  "make": "Mercedes-Benz",
+  "model": "G-Class Electric",
+  "brandSlug": "mercedes-benz",
+  "modelSlug": "g-class-electric",
+  "sourceUrl": "https://www.cardekho.com/mercedes-benz/g-class-electric",
+  "scrapedAt": "2026-04-21T06:20:10.357Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 5,
+    "total": 5
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mercedes-benz/g-class-electric/colors/south-seas-blue-magno.avif",
+  "colorNames": [
+    "South Seas Blue Magno",
+    "Classic Grey Non Metallic",
+    "Opalite White Magno",
+    "Obsidian Black",
+    "Opalite White Bright"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mercedes-benz/g-class-electric/colors/south-seas-blue-magno.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/g-class-electric/colors/classic-grey-non-metallic.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/g-class-electric/colors/opalite-white-magno.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/g-class-electric/colors/obsidian-black.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/g-class-electric/colors/opalite-white-bright.avif"
+  ]
+}

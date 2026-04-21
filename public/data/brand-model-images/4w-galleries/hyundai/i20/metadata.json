@@ -1,0 +1,34 @@
+{
+  "make": "Hyundai",
+  "model": "i20",
+  "brandSlug": "hyundai",
+  "modelSlug": "i20",
+  "sourceUrl": "https://www.cardekho.com/hyundai/i20",
+  "scrapedAt": "2026-04-21T06:19:15.354Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 8,
+    "total": 8
+  },
+  "hero": "/data/brand-model-images/4w-galleries/hyundai/i20/colors/fiery-red.avif",
+  "colorNames": [
+    "Fiery Red",
+    "Typhoon Silver",
+    "Starry Night",
+    "Atlas White",
+    "Atlas White With Abyss Black",
+    "Titan Grey",
+    "Amazon Grey",
+    "Abyss Black"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/hyundai/i20/colors/fiery-red.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/i20/colors/typhoon-silver.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/i20/colors/starry-night.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/i20/colors/atlas-white.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/i20/colors/atlas-white-with-abyss-black.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/i20/colors/titan-grey.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/i20/colors/amazon-grey.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/i20/colors/abyss-black.avif"
+  ]
+}

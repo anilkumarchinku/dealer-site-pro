@@ -1,0 +1,42 @@
+{
+  "make": "Mercedes-Benz",
+  "model": "Maybach GLS",
+  "brandSlug": "mercedes-benz",
+  "modelSlug": "maybach-gls",
+  "sourceUrl": "https://www.cardekho.com/mercedes-benz/maybach-gls",
+  "scrapedAt": "2026-04-21T06:20:05.731Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 12,
+    "total": 12
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mercedes-benz/maybach-gls/colors/nautic-blue-high-tech-silver.avif",
+  "colorNames": [
+    "Nautic Blue High Tech Silver",
+    "Hyacinth Red Metallic",
+    "Obsidian Black With Rubellite Red",
+    "Sodalite Blue Metallic",
+    "Selenite Grey",
+    "High Tech Silver",
+    "Alpine Grey Solid",
+    "Obsidian Black With Kalahari Gold",
+    "Polar White",
+    "Emerald Green Mojave Silver",
+    "Obsidian Black",
+    "Emerald Green"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mercedes-benz/maybach-gls/colors/nautic-blue-high-tech-silver.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/maybach-gls/colors/hyacinth-red-metallic.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/maybach-gls/colors/obsidian-black-with-rubellite-red.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/maybach-gls/colors/sodalite-blue-metallic.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/maybach-gls/colors/selenite-grey.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/maybach-gls/colors/high-tech-silver.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/maybach-gls/colors/alpine-grey-solid.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/maybach-gls/colors/obsidian-black-with-kalahari-gold.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/maybach-gls/colors/polar-white.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/maybach-gls/colors/emerald-green-mojave-silver.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/maybach-gls/colors/obsidian-black.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/maybach-gls/colors/emerald-green.avif"
+  ]
+}

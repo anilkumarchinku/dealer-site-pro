@@ -1,0 +1,28 @@
+{
+  "make": "Audi",
+  "model": "Q7",
+  "brandSlug": "audi",
+  "modelSlug": "q7",
+  "sourceUrl": "https://www.cardekho.com/audi/q7",
+  "scrapedAt": "2026-04-21T06:19:56.618Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 5,
+    "total": 5
+  },
+  "hero": "/data/brand-model-images/4w-galleries/audi/q7/colors/mythos-black-metallic.avif",
+  "colorNames": [
+    "Mythos Black Metallic",
+    "Samurai-Gray-Metallic",
+    "Waitomo Blue Metallic",
+    "Sakhir Gold Metallic",
+    "Glacier White Metallic"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/audi/q7/colors/mythos-black-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/q7/colors/samurai-gray-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/q7/colors/waitomo-blue-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/q7/colors/sakhir-gold-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/q7/colors/glacier-white-metallic.avif"
+  ]
+}

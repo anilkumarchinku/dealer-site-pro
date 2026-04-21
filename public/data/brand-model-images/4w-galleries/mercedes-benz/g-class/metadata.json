@@ -1,0 +1,32 @@
+{
+  "make": "Mercedes-Benz",
+  "model": "G-Class",
+  "brandSlug": "mercedes-benz",
+  "modelSlug": "g-class",
+  "sourceUrl": "https://www.cardekho.com/mercedes-benz/g-class",
+  "scrapedAt": "2026-04-21T06:20:11.989Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 7,
+    "total": 7
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mercedes-benz/g-class/colors/obsidian-black-metallic.avif",
+  "colorNames": [
+    "Obsidian Black Metallic",
+    "Selenite Grey Metallic",
+    "Rubellite Red",
+    "Polar White",
+    "Brilliant Blue Metallic",
+    "Mojave Silver",
+    "Iridium Silver Metallic"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mercedes-benz/g-class/colors/obsidian-black-metallic.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/g-class/colors/selenite-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/g-class/colors/rubellite-red.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/g-class/colors/polar-white.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/g-class/colors/brilliant-blue-metallic.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/g-class/colors/mojave-silver.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/g-class/colors/iridium-silver-metallic.avif"
+  ]
+}

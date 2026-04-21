@@ -1,0 +1,30 @@
+{
+  "make": "VinFast",
+  "model": "VF7",
+  "brandSlug": "vinfast",
+  "modelSlug": "vf7",
+  "sourceUrl": "https://www.cardekho.com/vinfast/vf7",
+  "scrapedAt": "2026-04-21T06:19:47.165Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 6,
+    "total": 6
+  },
+  "hero": "/data/brand-model-images/4w-galleries/vinfast/vf7/colors/crimson-red.avif",
+  "colorNames": [
+    "Crimson Red",
+    "Zenith Grey",
+    "Urban Mint",
+    "Jet Black",
+    "Desat Silver",
+    "Infinity Blanc"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/vinfast/vf7/colors/crimson-red.avif",
+    "/data/brand-model-images/4w-galleries/vinfast/vf7/colors/zenith-grey.avif",
+    "/data/brand-model-images/4w-galleries/vinfast/vf7/colors/urban-mint.avif",
+    "/data/brand-model-images/4w-galleries/vinfast/vf7/colors/jet-black.avif",
+    "/data/brand-model-images/4w-galleries/vinfast/vf7/colors/desat-silver.avif",
+    "/data/brand-model-images/4w-galleries/vinfast/vf7/colors/infinity-blanc.avif"
+  ]
+}

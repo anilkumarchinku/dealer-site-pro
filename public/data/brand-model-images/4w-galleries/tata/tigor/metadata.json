@@ -1,0 +1,28 @@
+{
+  "make": "Tata Motors",
+  "model": "Tigor",
+  "brandSlug": "tata",
+  "modelSlug": "tigor",
+  "sourceUrl": "https://www.cardekho.com/tata/tigor",
+  "scrapedAt": "2026-04-21T06:19:07.682Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 5,
+    "total": 5
+  },
+  "hero": "/data/brand-model-images/4w-galleries/tata/tigor/colors/meteor-bronze.avif",
+  "colorNames": [
+    "Meteor Bronze",
+    "Pristine White",
+    "Supernova Coper",
+    "Arizona Blue",
+    "Daytona Grey"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/tata/tigor/colors/meteor-bronze.avif",
+    "/data/brand-model-images/4w-galleries/tata/tigor/colors/pristine-white.avif",
+    "/data/brand-model-images/4w-galleries/tata/tigor/colors/supernova-coper.avif",
+    "/data/brand-model-images/4w-galleries/tata/tigor/colors/arizona-blue.avif",
+    "/data/brand-model-images/4w-galleries/tata/tigor/colors/daytona-grey.avif"
+  ]
+}

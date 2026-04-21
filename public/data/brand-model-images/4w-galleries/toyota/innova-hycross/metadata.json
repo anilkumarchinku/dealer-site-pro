@@ -1,0 +1,30 @@
+{
+  "make": "Toyota",
+  "model": "Innova Hycross",
+  "brandSlug": "toyota",
+  "modelSlug": "innova-hycross",
+  "sourceUrl": "https://www.cardekho.com/toyota/innova-hycross",
+  "scrapedAt": "2026-04-21T06:19:33.199Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 6,
+    "total": 6
+  },
+  "hero": "/data/brand-model-images/4w-galleries/toyota/innova-hycross/colors/platinum-white-pearl.avif",
+  "colorNames": [
+    "Platinum White Pearl",
+    "Attitude Black Mica",
+    "Blackish Ageha Glass Flake",
+    "Silver Metallic",
+    "Super White",
+    "Avant Garde Bronze Metallic"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/toyota/innova-hycross/colors/platinum-white-pearl.avif",
+    "/data/brand-model-images/4w-galleries/toyota/innova-hycross/colors/attitude-black-mica.avif",
+    "/data/brand-model-images/4w-galleries/toyota/innova-hycross/colors/blackish-ageha-glass-flake.avif",
+    "/data/brand-model-images/4w-galleries/toyota/innova-hycross/colors/silver-metallic.avif",
+    "/data/brand-model-images/4w-galleries/toyota/innova-hycross/colors/super-white.avif",
+    "/data/brand-model-images/4w-galleries/toyota/innova-hycross/colors/avant-garde-bronze-metallic.avif"
+  ]
+}

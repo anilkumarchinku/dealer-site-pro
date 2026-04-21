@@ -1,0 +1,26 @@
+{
+  "make": "Tata Motors",
+  "model": "Tiago NRG",
+  "brandSlug": "tata",
+  "modelSlug": "tiago-nrg",
+  "sourceUrl": "https://www.cardekho.com/tata/tiago-nrg",
+  "scrapedAt": "2026-04-21T06:19:09.019Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 4,
+    "total": 4
+  },
+  "hero": "/data/brand-model-images/4w-galleries/tata/tiago-nrg/colors/grassland-beige.avif",
+  "colorNames": [
+    "Grassland Beige",
+    "Polar White",
+    "Supernova Coper",
+    "Daytona Grey"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/tata/tiago-nrg/colors/grassland-beige.avif",
+    "/data/brand-model-images/4w-galleries/tata/tiago-nrg/colors/polar-white.avif",
+    "/data/brand-model-images/4w-galleries/tata/tiago-nrg/colors/supernova-coper.avif",
+    "/data/brand-model-images/4w-galleries/tata/tiago-nrg/colors/daytona-grey.avif"
+  ]
+}

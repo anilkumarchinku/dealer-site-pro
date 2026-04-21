@@ -1,0 +1,42 @@
+{
+  "make": "Land Rover",
+  "model": "Discovery",
+  "brandSlug": "land-rover",
+  "modelSlug": "discovery",
+  "sourceUrl": "https://www.cardekho.com/land-rover/discovery",
+  "scrapedAt": "2026-04-21T06:20:52.220Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 12,
+    "total": 12
+  },
+  "hero": "/data/brand-model-images/4w-galleries/land-rover/discovery/colors/lantau-bronze.avif",
+  "colorNames": [
+    "Lantau Bronze",
+    "Eiger Grey DT",
+    "Carpathian Grey DT",
+    "Sedona Red DT",
+    "Fuji White DT",
+    "Carpathian Grey",
+    "Eiger Grey",
+    "Varesine Blue",
+    "Santorini Black",
+    "Fuji White",
+    "Charente Grey",
+    "Varesine Blue DT"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/land-rover/discovery/colors/lantau-bronze.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/discovery/colors/eiger-grey-dt.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/discovery/colors/carpathian-grey-dt.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/discovery/colors/sedona-red-dt.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/discovery/colors/fuji-white-dt.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/discovery/colors/carpathian-grey.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/discovery/colors/eiger-grey.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/discovery/colors/varesine-blue.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/discovery/colors/santorini-black.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/discovery/colors/fuji-white.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/discovery/colors/charente-grey.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/discovery/colors/varesine-blue-dt.avif"
+  ]
+}

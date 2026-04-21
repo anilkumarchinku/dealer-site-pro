@@ -1,0 +1,24 @@
+{
+  "make": "Tata Motors",
+  "model": "Tigor EV",
+  "brandSlug": "tata",
+  "modelSlug": "tigor-ev",
+  "sourceUrl": "https://www.cardekho.com/tata/tigor-ev",
+  "scrapedAt": "2026-04-21T06:19:08.747Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 3,
+    "total": 3
+  },
+  "hero": "/data/brand-model-images/4w-galleries/tata/tigor-ev/colors/signature-teal-blue-with-dual-tone.avif",
+  "colorNames": [
+    "Signature Teal Blue With Dual Tone",
+    "Magnetic Red",
+    "Daytona Grey Dual Tone"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/tata/tigor-ev/colors/signature-teal-blue-with-dual-tone.avif",
+    "/data/brand-model-images/4w-galleries/tata/tigor-ev/colors/magnetic-red.avif",
+    "/data/brand-model-images/4w-galleries/tata/tigor-ev/colors/daytona-grey-dual-tone.avif"
+  ]
+}

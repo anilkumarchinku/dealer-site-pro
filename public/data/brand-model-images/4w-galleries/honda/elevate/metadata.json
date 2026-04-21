@@ -1,0 +1,36 @@
+{
+  "make": "Honda",
+  "model": "Elevate",
+  "brandSlug": "honda",
+  "modelSlug": "elevate",
+  "sourceUrl": "https://www.cardekho.com/honda/elevate",
+  "scrapedAt": "2026-04-21T06:19:21.097Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 9,
+    "total": 9
+  },
+  "hero": "/data/brand-model-images/4w-galleries/honda/elevate/colors/platinum-white-pearl.avif",
+  "colorNames": [
+    "Platinum White Pearl",
+    "Lunar Silver Metallic",
+    "Platinum White Pearl With Crystal Black Pearl",
+    "Meteor Grey Metallic",
+    "Radiant Red Metallic With Crystal Black Pearl",
+    "Golden Brown Metallic",
+    "Obsidian Blue Pearl",
+    "Crystal Black Pearl",
+    "Radiant Red Metallic"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/honda/elevate/colors/platinum-white-pearl.avif",
+    "/data/brand-model-images/4w-galleries/honda/elevate/colors/lunar-silver-metallic.avif",
+    "/data/brand-model-images/4w-galleries/honda/elevate/colors/platinum-white-pearl-with-crystal-black-pearl.avif",
+    "/data/brand-model-images/4w-galleries/honda/elevate/colors/meteor-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/honda/elevate/colors/radiant-red-metallic-with-crystal-black-pearl.avif",
+    "/data/brand-model-images/4w-galleries/honda/elevate/colors/golden-brown-metallic.avif",
+    "/data/brand-model-images/4w-galleries/honda/elevate/colors/obsidian-blue-pearl.avif",
+    "/data/brand-model-images/4w-galleries/honda/elevate/colors/crystal-black-pearl.avif",
+    "/data/brand-model-images/4w-galleries/honda/elevate/colors/radiant-red-metallic.avif"
+  ]
+}

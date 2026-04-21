@@ -1,0 +1,30 @@
+{
+  "make": "Tata Motors",
+  "model": "Tiago",
+  "brandSlug": "tata",
+  "modelSlug": "tiago",
+  "sourceUrl": "https://www.cardekho.com/tata/tiago",
+  "scrapedAt": "2026-04-21T06:19:05.533Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 6,
+    "total": 6
+  },
+  "hero": "/data/brand-model-images/4w-galleries/tata/tiago/colors/ocean-blue.avif",
+  "colorNames": [
+    "Ocean Blue",
+    "Pristine White",
+    "Tornado Blue",
+    "Supernova Coper",
+    "Arizona Blue",
+    "Daytona Grey"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/tata/tiago/colors/ocean-blue.avif",
+    "/data/brand-model-images/4w-galleries/tata/tiago/colors/pristine-white.avif",
+    "/data/brand-model-images/4w-galleries/tata/tiago/colors/tornado-blue.avif",
+    "/data/brand-model-images/4w-galleries/tata/tiago/colors/supernova-coper.avif",
+    "/data/brand-model-images/4w-galleries/tata/tiago/colors/arizona-blue.avif",
+    "/data/brand-model-images/4w-galleries/tata/tiago/colors/daytona-grey.avif"
+  ]
+}

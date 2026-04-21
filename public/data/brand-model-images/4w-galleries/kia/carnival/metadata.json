@@ -1,0 +1,22 @@
+{
+  "make": "Kia",
+  "model": "Carnival",
+  "brandSlug": "kia",
+  "modelSlug": "carnival",
+  "sourceUrl": "https://www.cardekho.com/kia/carnival",
+  "scrapedAt": "2026-04-21T06:19:28.773Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 2,
+    "total": 2
+  },
+  "hero": "/data/brand-model-images/4w-galleries/kia/carnival/colors/glacier-white-pearl.avif",
+  "colorNames": [
+    "Glacier White Pearl",
+    "Fusion Black"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/kia/carnival/colors/glacier-white-pearl.avif",
+    "/data/brand-model-images/4w-galleries/kia/carnival/colors/fusion-black.avif"
+  ]
+}

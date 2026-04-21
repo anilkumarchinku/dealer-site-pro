@@ -1,0 +1,30 @@
+{
+  "make": "Volkswagen",
+  "model": "Tiguan R-Line",
+  "brandSlug": "volkswagen",
+  "modelSlug": "tiguan-r-line",
+  "sourceUrl": "https://www.cardekho.com/volkswagen/tiguan-r-line",
+  "scrapedAt": "2026-04-21T06:25:18.155Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 6,
+    "total": 6
+  },
+  "hero": "/data/brand-model-images/4w-galleries/volkswagen/tiguan-r-line/colors/nightshade-blue-metallic.avif",
+  "colorNames": [
+    "Nightshade Blue Metallic",
+    "Persimmon Red Metallic",
+    "Oryx White Mother Of Pearl Effect",
+    "Grenadilla Black Metallic",
+    "Oyster Silver Metallic",
+    "Cipressino Green Metallic"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/volkswagen/tiguan-r-line/colors/nightshade-blue-metallic.avif",
+    "/data/brand-model-images/4w-galleries/volkswagen/tiguan-r-line/colors/persimmon-red-metallic.avif",
+    "/data/brand-model-images/4w-galleries/volkswagen/tiguan-r-line/colors/oryx-white-mother-of-pearl-effect.avif",
+    "/data/brand-model-images/4w-galleries/volkswagen/tiguan-r-line/colors/grenadilla-black-metallic.avif",
+    "/data/brand-model-images/4w-galleries/volkswagen/tiguan-r-line/colors/oyster-silver-metallic.avif",
+    "/data/brand-model-images/4w-galleries/volkswagen/tiguan-r-line/colors/cipressino-green-metallic.avif"
+  ]
+}

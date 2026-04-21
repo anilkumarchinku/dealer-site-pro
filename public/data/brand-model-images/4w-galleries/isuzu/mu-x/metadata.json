@@ -1,0 +1,30 @@
+{
+  "make": "Isuzu",
+  "model": "MU-X",
+  "brandSlug": "isuzu",
+  "modelSlug": "mu-x",
+  "sourceUrl": "https://www.cardekho.com/isuzu/mu-x",
+  "scrapedAt": "2026-04-21T06:19:45.737Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 6,
+    "total": 6
+  },
+  "hero": "/data/brand-model-images/4w-galleries/isuzu/mu-x/colors/galena-gray.avif",
+  "colorNames": [
+    "Galena Gray",
+    "Nautilus Blue",
+    "Red Spinal Mica",
+    "Black Mica",
+    "Silver Metallic",
+    "Silky White Pearl"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/isuzu/mu-x/colors/galena-gray.avif",
+    "/data/brand-model-images/4w-galleries/isuzu/mu-x/colors/nautilus-blue.avif",
+    "/data/brand-model-images/4w-galleries/isuzu/mu-x/colors/red-spinal-mica.avif",
+    "/data/brand-model-images/4w-galleries/isuzu/mu-x/colors/black-mica.avif",
+    "/data/brand-model-images/4w-galleries/isuzu/mu-x/colors/silver-metallic.avif",
+    "/data/brand-model-images/4w-galleries/isuzu/mu-x/colors/silky-white-pearl.avif"
+  ]
+}

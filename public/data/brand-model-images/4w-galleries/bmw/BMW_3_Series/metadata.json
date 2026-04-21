@@ -1,0 +1,22 @@
+{
+  "make": "BMW",
+  "model": "3 Series",
+  "brandSlug": "BMW",
+  "modelSlug": "BMW_3_Series",
+  "sourceUrl": "https://www.cardekho.com/BMW/BMW_3_Series",
+  "scrapedAt": "2026-04-21T06:19:51.509Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 2,
+    "total": 2
+  },
+  "hero": "/data/brand-model-images/4w-galleries/BMW/BMW_3_Series/colors/tanzanite-blue-metallic.avif",
+  "colorNames": [
+    "Tanzanite Blue Metallic",
+    "Dravit Grey Metallic"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/BMW/BMW_3_Series/colors/tanzanite-blue-metallic.avif",
+    "/data/brand-model-images/4w-galleries/BMW/BMW_3_Series/colors/dravit-grey-metallic.avif"
+  ]
+}

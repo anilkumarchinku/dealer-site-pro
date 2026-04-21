@@ -1,0 +1,34 @@
+{
+  "make": "Mahindra",
+  "model": "BE 6",
+  "brandSlug": "mahindra",
+  "modelSlug": "be-6",
+  "sourceUrl": "https://www.cardekho.com/mahindra/be-6",
+  "scrapedAt": "2026-04-21T06:19:25.839Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 8,
+    "total": 8
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mahindra/be-6/colors/everest-white.avif",
+  "colorNames": [
+    "Everest White",
+    "Stealth Black",
+    "Desert Myst",
+    "Deep Forest",
+    "Tango Red",
+    "Firestorm Orange",
+    "Desert Myst Satin",
+    "Everest White Satin"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mahindra/be-6/colors/everest-white.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/be-6/colors/stealth-black.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/be-6/colors/desert-myst.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/be-6/colors/deep-forest.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/be-6/colors/tango-red.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/be-6/colors/firestorm-orange.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/be-6/colors/desert-myst-satin.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/be-6/colors/everest-white-satin.avif"
+  ]
+}

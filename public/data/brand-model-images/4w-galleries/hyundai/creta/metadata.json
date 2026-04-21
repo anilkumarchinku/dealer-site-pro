@@ -1,0 +1,38 @@
+{
+  "make": "Hyundai",
+  "model": "Creta",
+  "brandSlug": "hyundai",
+  "modelSlug": "creta",
+  "sourceUrl": "https://www.cardekho.com/hyundai/creta",
+  "scrapedAt": "2026-04-21T06:19:13.724Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 10,
+    "total": 10
+  },
+  "hero": "/data/brand-model-images/4w-galleries/hyundai/creta/colors/robust-emerald-pearl.avif",
+  "colorNames": [
+    "Robust Emerald Pearl",
+    "Black Matte",
+    "Titan Grey Matte",
+    "Starry Night",
+    "Atlas White",
+    "Atlas White With Abyss Black",
+    "Titan Grey",
+    "Abyss Black Matte",
+    "Abyss Black",
+    "Shadow Grey DT"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/hyundai/creta/colors/robust-emerald-pearl.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta/colors/black-matte.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta/colors/titan-grey-matte.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta/colors/starry-night.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta/colors/atlas-white.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta/colors/atlas-white-with-abyss-black.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta/colors/titan-grey.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta/colors/abyss-black-matte.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta/colors/abyss-black.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta/colors/shadow-grey-dt.avif"
+  ]
+}

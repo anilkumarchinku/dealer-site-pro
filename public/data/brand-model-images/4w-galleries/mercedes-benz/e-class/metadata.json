@@ -1,0 +1,30 @@
+{
+  "make": "Mercedes-Benz",
+  "model": "E-Class",
+  "brandSlug": "mercedes-benz",
+  "modelSlug": "e-class",
+  "sourceUrl": "https://www.cardekho.com/mercedes-benz/e-class",
+  "scrapedAt": "2026-04-21T06:20:04.479Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 6,
+    "total": 6
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mercedes-benz/e-class/colors/nautik-blue-metallic.avif",
+  "colorNames": [
+    "Nautik Blue Metallic",
+    "Verde Sliver Metallic",
+    "Obsidian Black Metallic",
+    "High Tech Sliver Metallic",
+    "Polar White",
+    "Graphite Grey Metallic"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mercedes-benz/e-class/colors/nautik-blue-metallic.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/e-class/colors/verde-sliver-metallic.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/e-class/colors/obsidian-black-metallic.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/e-class/colors/high-tech-sliver-metallic.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/e-class/colors/polar-white.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/e-class/colors/graphite-grey-metallic.avif"
+  ]
+}

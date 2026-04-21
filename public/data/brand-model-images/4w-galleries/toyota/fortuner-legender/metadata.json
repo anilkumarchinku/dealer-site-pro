@@ -1,0 +1,20 @@
+{
+  "make": "Toyota",
+  "model": "Fortuner Legender",
+  "brandSlug": "toyota",
+  "modelSlug": "fortuner-legender",
+  "sourceUrl": "https://www.cardekho.com/toyota/fortuner-legender",
+  "scrapedAt": "2026-04-21T06:19:34.706Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 1,
+    "total": 1
+  },
+  "hero": "/data/brand-model-images/4w-galleries/toyota/fortuner-legender/colors/platinum-white-pearl-with-black-roof.avif",
+  "colorNames": [
+    "Platinum White Pearl With Black Roof"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/toyota/fortuner-legender/colors/platinum-white-pearl-with-black-roof.avif"
+  ]
+}

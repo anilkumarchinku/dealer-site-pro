@@ -1,0 +1,28 @@
+{
+  "make": "Audi",
+  "model": "A6",
+  "brandSlug": "Audi",
+  "modelSlug": "Audi_A6",
+  "sourceUrl": "https://www.cardekho.com/carmodels/Audi/Audi_A6",
+  "scrapedAt": "2026-04-21T06:48:09.137Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 5,
+    "total": 5
+  },
+  "hero": "/data/brand-model-images/4w-galleries/audi/a6/colors/firmament-blue-metallic.avif",
+  "colorNames": [
+    "Firmament Blue Metallic",
+    "Manhattan Gray Metallic",
+    "Madeira Brown Metallic",
+    "Glacier White Metallic",
+    "Mythos Black Metallic"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/audi/a6/colors/firmament-blue-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/a6/colors/manhattan-gray-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/a6/colors/madeira-brown-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/a6/colors/glacier-white-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/a6/colors/mythos-black-metallic.jpg"
+  ]
+}

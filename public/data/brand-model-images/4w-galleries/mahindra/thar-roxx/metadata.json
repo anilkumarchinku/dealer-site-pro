@@ -1,0 +1,32 @@
+{
+  "make": "Mahindra",
+  "model": "Thar ROXX",
+  "brandSlug": "mahindra",
+  "modelSlug": "thar-roxx",
+  "sourceUrl": "https://www.cardekho.com/mahindra/thar-roxx",
+  "scrapedAt": "2026-04-21T06:19:24.840Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 7,
+    "total": 7
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mahindra/thar-roxx/colors/everest-white.avif",
+  "colorNames": [
+    "Everest White",
+    "Stealth Black",
+    "Nebula Blue",
+    "Battleship Gray",
+    "Deep Forest",
+    "Tango Red",
+    "Burnt Sienna"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mahindra/thar-roxx/colors/everest-white.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/thar-roxx/colors/stealth-black.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/thar-roxx/colors/nebula-blue.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/thar-roxx/colors/battleship-gray.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/thar-roxx/colors/deep-forest.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/thar-roxx/colors/tango-red.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/thar-roxx/colors/burnt-sienna.avif"
+  ]
+}

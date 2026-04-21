@@ -1,0 +1,46 @@
+{
+  "make": "Bentley",
+  "model": "Flying Spur",
+  "brandSlug": "bentley",
+  "modelSlug": "flying-spur",
+  "sourceUrl": "https://www.cardekho.com/bentley/flying-spur",
+  "scrapedAt": "2026-04-21T06:23:08.506Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 14,
+    "total": 14
+  },
+  "hero": "/data/brand-model-images/4w-galleries/bentley/flying-spur/colors/bronze.avif",
+  "colorNames": [
+    "Bronze",
+    "Verdant",
+    "Glacier White",
+    "Moonbeam",
+    "Onyx Black",
+    "Alpine Green",
+    "Special Magnolia",
+    "Black Sapphire Over Sequin Blue",
+    "St James Red",
+    "Windsor Blue",
+    "Grey Violet",
+    "Rose Gold Over Magnetic",
+    "Blue Crystal",
+    "Orange Flame"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/bentley/flying-spur/colors/bronze.avif",
+    "/data/brand-model-images/4w-galleries/bentley/flying-spur/colors/verdant.avif",
+    "/data/brand-model-images/4w-galleries/bentley/flying-spur/colors/glacier-white.avif",
+    "/data/brand-model-images/4w-galleries/bentley/flying-spur/colors/moonbeam.avif",
+    "/data/brand-model-images/4w-galleries/bentley/flying-spur/colors/onyx-black.avif",
+    "/data/brand-model-images/4w-galleries/bentley/flying-spur/colors/alpine-green.avif",
+    "/data/brand-model-images/4w-galleries/bentley/flying-spur/colors/special-magnolia.avif",
+    "/data/brand-model-images/4w-galleries/bentley/flying-spur/colors/black-sapphire-over-sequin-blue.avif",
+    "/data/brand-model-images/4w-galleries/bentley/flying-spur/colors/st-james-red.avif",
+    "/data/brand-model-images/4w-galleries/bentley/flying-spur/colors/windsor-blue.avif",
+    "/data/brand-model-images/4w-galleries/bentley/flying-spur/colors/grey-violet.avif",
+    "/data/brand-model-images/4w-galleries/bentley/flying-spur/colors/rose-gold-over-magnetic.avif",
+    "/data/brand-model-images/4w-galleries/bentley/flying-spur/colors/blue-crystal.avif",
+    "/data/brand-model-images/4w-galleries/bentley/flying-spur/colors/orange-flame.avif"
+  ]
+}

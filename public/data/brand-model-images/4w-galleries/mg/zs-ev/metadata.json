@@ -1,0 +1,26 @@
+{
+  "make": "MG",
+  "model": "ZS EV",
+  "brandSlug": "mg",
+  "modelSlug": "zs-ev",
+  "sourceUrl": "https://www.cardekho.com/mg/zs-ev",
+  "scrapedAt": "2026-04-21T06:19:39.293Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 4,
+    "total": 4
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mg/zs-ev/colors/starry-black.avif",
+  "colorNames": [
+    "Starry Black",
+    "Aurora Silver",
+    "Candy White",
+    "Colored Glaze Red"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mg/zs-ev/colors/starry-black.avif",
+    "/data/brand-model-images/4w-galleries/mg/zs-ev/colors/aurora-silver.avif",
+    "/data/brand-model-images/4w-galleries/mg/zs-ev/colors/candy-white.avif",
+    "/data/brand-model-images/4w-galleries/mg/zs-ev/colors/colored-glaze-red.avif"
+  ]
+}

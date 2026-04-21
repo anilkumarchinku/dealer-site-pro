@@ -1,0 +1,28 @@
+{
+  "make": "Tata Motors",
+  "model": "Curvv EV",
+  "brandSlug": "tata",
+  "modelSlug": "curvv-ev",
+  "sourceUrl": "https://www.cardekho.com/tata/curvv-ev",
+  "scrapedAt": "2026-04-21T06:19:07.868Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 5,
+    "total": 5
+  },
+  "hero": "/data/brand-model-images/4w-galleries/tata/curvv-ev/colors/virtual-sunrise.avif",
+  "colorNames": [
+    "Virtual Sunrise",
+    "Flame Red",
+    "Pristine White",
+    "Pure Grey",
+    "Empowered Oxide"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/tata/curvv-ev/colors/virtual-sunrise.avif",
+    "/data/brand-model-images/4w-galleries/tata/curvv-ev/colors/flame-red.avif",
+    "/data/brand-model-images/4w-galleries/tata/curvv-ev/colors/pristine-white.avif",
+    "/data/brand-model-images/4w-galleries/tata/curvv-ev/colors/pure-grey.avif",
+    "/data/brand-model-images/4w-galleries/tata/curvv-ev/colors/empowered-oxide.avif"
+  ]
+}

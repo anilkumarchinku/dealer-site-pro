@@ -1,0 +1,26 @@
+{
+  "make": "Lexus",
+  "model": "LM",
+  "brandSlug": "lexus",
+  "modelSlug": "lm",
+  "sourceUrl": "https://www.cardekho.com/lexus/lm",
+  "scrapedAt": "2026-04-21T06:20:53.905Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 4,
+    "total": 4
+  },
+  "hero": "/data/brand-model-images/4w-galleries/lexus/lm/colors/sonic-agate.avif",
+  "colorNames": [
+    "Sonic Agate",
+    "Sonic Titanium",
+    "Graphite Black Glass Flake",
+    "Sonic Quartz"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/lexus/lm/colors/sonic-agate.avif",
+    "/data/brand-model-images/4w-galleries/lexus/lm/colors/sonic-titanium.avif",
+    "/data/brand-model-images/4w-galleries/lexus/lm/colors/graphite-black-glass-flake.avif",
+    "/data/brand-model-images/4w-galleries/lexus/lm/colors/sonic-quartz.avif"
+  ]
+}

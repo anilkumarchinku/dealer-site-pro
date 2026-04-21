@@ -1,0 +1,30 @@
+{
+  "make": "Maserati",
+  "model": "GranTurismo",
+  "brandSlug": "maserati",
+  "modelSlug": "gran-turismo",
+  "sourceUrl": "https://www.cardekho.com/maserati/gran-turismo",
+  "scrapedAt": "2026-04-21T06:23:10.095Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 6,
+    "total": 6
+  },
+  "hero": "/data/brand-model-images/4w-galleries/maserati/gran-turismo/colors/grigio-maratea-matte.avif",
+  "colorNames": [
+    "Grigio Maratea Matte",
+    "Bianco",
+    "Rosso Granturismo Fuoriserie",
+    "Nero Assoluto",
+    "Grigio Cangiante Fuoriserie",
+    "Giallo Corse"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/maserati/gran-turismo/colors/grigio-maratea-matte.avif",
+    "/data/brand-model-images/4w-galleries/maserati/gran-turismo/colors/bianco.avif",
+    "/data/brand-model-images/4w-galleries/maserati/gran-turismo/colors/rosso-granturismo-fuoriserie.avif",
+    "/data/brand-model-images/4w-galleries/maserati/gran-turismo/colors/nero-assoluto.avif",
+    "/data/brand-model-images/4w-galleries/maserati/gran-turismo/colors/grigio-cangiante-fuoriserie.avif",
+    "/data/brand-model-images/4w-galleries/maserati/gran-turismo/colors/giallo-corse.avif"
+  ]
+}

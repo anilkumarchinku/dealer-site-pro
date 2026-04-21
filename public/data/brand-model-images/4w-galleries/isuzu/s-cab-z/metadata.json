@@ -1,0 +1,26 @@
+{
+  "make": "Isuzu",
+  "model": "S-CAB Z",
+  "brandSlug": "isuzu",
+  "modelSlug": "s-cab-z",
+  "sourceUrl": "https://www.cardekho.com/isuzu/s-cab-z",
+  "scrapedAt": "2026-04-21T06:19:45.891Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 4,
+    "total": 4
+  },
+  "hero": "/data/brand-model-images/4w-galleries/isuzu/s-cab-z/colors/splash-white.avif",
+  "colorNames": [
+    "Splash White",
+    "Galena Greay Metallc",
+    "Titanium Silver",
+    "Comic Black Mica"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/isuzu/s-cab-z/colors/splash-white.avif",
+    "/data/brand-model-images/4w-galleries/isuzu/s-cab-z/colors/galena-greay-metallc.avif",
+    "/data/brand-model-images/4w-galleries/isuzu/s-cab-z/colors/titanium-silver.avif",
+    "/data/brand-model-images/4w-galleries/isuzu/s-cab-z/colors/comic-black-mica.avif"
+  ]
+}

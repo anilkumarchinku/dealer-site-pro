@@ -1,0 +1,28 @@
+{
+  "make": "Skoda",
+  "model": "Octavia RS",
+  "brandSlug": "skoda",
+  "modelSlug": "octavia-rs",
+  "sourceUrl": "https://www.cardekho.com/skoda/octavia-rs",
+  "scrapedAt": "2026-04-21T06:19:38.356Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 5,
+    "total": 5
+  },
+  "hero": "/data/brand-model-images/4w-galleries/skoda/octavia-rs/colors/mamba-green.avif",
+  "colorNames": [
+    "Mamba Green",
+    "Magic Black",
+    "Race Blue",
+    "Velvet Red",
+    "Candy White"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/skoda/octavia-rs/colors/mamba-green.avif",
+    "/data/brand-model-images/4w-galleries/skoda/octavia-rs/colors/magic-black.avif",
+    "/data/brand-model-images/4w-galleries/skoda/octavia-rs/colors/race-blue.avif",
+    "/data/brand-model-images/4w-galleries/skoda/octavia-rs/colors/velvet-red.avif",
+    "/data/brand-model-images/4w-galleries/skoda/octavia-rs/colors/candy-white.avif"
+  ]
+}

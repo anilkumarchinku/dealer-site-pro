@@ -1,0 +1,34 @@
+{
+  "make": "Audi",
+  "model": "Q8",
+  "brandSlug": "audi",
+  "modelSlug": "q8",
+  "sourceUrl": "https://www.cardekho.com/audi/q8",
+  "scrapedAt": "2026-04-21T06:19:58.119Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 8,
+    "total": 8
+  },
+  "hero": "/data/brand-model-images/4w-galleries/audi/q8/colors/vicuna-beige-metallic.avif",
+  "colorNames": [
+    "Vicuna Beige Metallic",
+    "Mythos Black Metallic",
+    "Samurai-Gray-Metallic",
+    "Waitomo Blue Metallic",
+    "Sakhir Gold Metallic",
+    "Glacier White Metallic",
+    "Satellite Silver Metallic",
+    "Tamarind Brown Metallic"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/audi/q8/colors/vicuna-beige-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/q8/colors/mythos-black-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/q8/colors/samurai-gray-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/q8/colors/waitomo-blue-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/q8/colors/sakhir-gold-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/q8/colors/glacier-white-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/q8/colors/satellite-silver-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/q8/colors/tamarind-brown-metallic.avif"
+  ]
+}

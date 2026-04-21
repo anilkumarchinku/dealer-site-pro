@@ -1,0 +1,22 @@
+{
+  "make": "Mercedes-Benz",
+  "model": "Maybach SL 680",
+  "brandSlug": "mercedes-benz",
+  "modelSlug": "maybach-sl-680",
+  "sourceUrl": "https://www.cardekho.com/mercedes-benz/maybach-sl-680",
+  "scrapedAt": "2026-04-21T06:20:11.791Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 2,
+    "total": 2
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mercedes-benz/maybach-sl-680/colors/white-magno.avif",
+  "colorNames": [
+    "White Magno",
+    "Garnet Red Metallic"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mercedes-benz/maybach-sl-680/colors/white-magno.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/maybach-sl-680/colors/garnet-red-metallic.avif"
+  ]
+}

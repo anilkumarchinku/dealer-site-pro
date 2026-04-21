@@ -1,0 +1,30 @@
+{
+  "make": "Isuzu",
+  "model": "Hi-Lander",
+  "brandSlug": "isuzu",
+  "modelSlug": "hi-lander",
+  "sourceUrl": "https://www.cardekho.com/isuzu/hi-lander",
+  "scrapedAt": "2026-04-21T06:19:46.297Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 6,
+    "total": 6
+  },
+  "hero": "/data/brand-model-images/4w-galleries/isuzu/hi-lander/colors/galena-gray.avif",
+  "colorNames": [
+    "Galena Gray",
+    "Splash White",
+    "Nautilus Blue",
+    "Red Spinal Mica",
+    "Black Mica",
+    "Silver Metallic"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/isuzu/hi-lander/colors/galena-gray.avif",
+    "/data/brand-model-images/4w-galleries/isuzu/hi-lander/colors/splash-white.avif",
+    "/data/brand-model-images/4w-galleries/isuzu/hi-lander/colors/nautilus-blue.avif",
+    "/data/brand-model-images/4w-galleries/isuzu/hi-lander/colors/red-spinal-mica.avif",
+    "/data/brand-model-images/4w-galleries/isuzu/hi-lander/colors/black-mica.avif",
+    "/data/brand-model-images/4w-galleries/isuzu/hi-lander/colors/silver-metallic.avif"
+  ]
+}

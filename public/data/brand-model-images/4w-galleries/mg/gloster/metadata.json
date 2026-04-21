@@ -1,0 +1,26 @@
+{
+  "make": "MG",
+  "model": "Gloster",
+  "brandSlug": "mg",
+  "modelSlug": "gloster",
+  "sourceUrl": "https://www.cardekho.com/mg/gloster",
+  "scrapedAt": "2026-04-21T06:19:39.820Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 4,
+    "total": 4
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mg/gloster/colors/deep-golden.avif",
+  "colorNames": [
+    "Deep Golden",
+    "Warm White",
+    "Metal Ash",
+    "Metal Black"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mg/gloster/colors/deep-golden.avif",
+    "/data/brand-model-images/4w-galleries/mg/gloster/colors/warm-white.avif",
+    "/data/brand-model-images/4w-galleries/mg/gloster/colors/metal-ash.avif",
+    "/data/brand-model-images/4w-galleries/mg/gloster/colors/metal-black.avif"
+  ]
+}

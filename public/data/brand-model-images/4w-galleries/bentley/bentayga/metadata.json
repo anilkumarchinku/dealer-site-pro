@@ -1,0 +1,50 @@
+{
+  "make": "Bentley",
+  "model": "Bentayga",
+  "brandSlug": "bentley",
+  "modelSlug": "bentayga",
+  "sourceUrl": "https://www.cardekho.com/bentley/bentayga",
+  "scrapedAt": "2026-04-21T06:21:25.157Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 16,
+    "total": 16
+  },
+  "hero": "/data/brand-model-images/4w-galleries/bentley/bentayga/colors/bronze.avif",
+  "colorNames": [
+    "Bronze",
+    "Glacier White",
+    "Black Crystal",
+    "Special Magnolia",
+    "Magenta",
+    "Rose Gold",
+    "Camel",
+    "Black",
+    "Apple Green",
+    "Magnetic Over Rose Gold",
+    "St James Red",
+    "Ice White",
+    "Rose Gold Over Magnetic",
+    "Blue Crystal",
+    "Orange Flame",
+    "Silver Storm"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/bentley/bentayga/colors/bronze.avif",
+    "/data/brand-model-images/4w-galleries/bentley/bentayga/colors/glacier-white.avif",
+    "/data/brand-model-images/4w-galleries/bentley/bentayga/colors/black-crystal.avif",
+    "/data/brand-model-images/4w-galleries/bentley/bentayga/colors/special-magnolia.avif",
+    "/data/brand-model-images/4w-galleries/bentley/bentayga/colors/magenta.avif",
+    "/data/brand-model-images/4w-galleries/bentley/bentayga/colors/rose-gold.avif",
+    "/data/brand-model-images/4w-galleries/bentley/bentayga/colors/camel.avif",
+    "/data/brand-model-images/4w-galleries/bentley/bentayga/colors/black.avif",
+    "/data/brand-model-images/4w-galleries/bentley/bentayga/colors/apple-green.avif",
+    "/data/brand-model-images/4w-galleries/bentley/bentayga/colors/magnetic-over-rose-gold.avif",
+    "/data/brand-model-images/4w-galleries/bentley/bentayga/colors/st-james-red.avif",
+    "/data/brand-model-images/4w-galleries/bentley/bentayga/colors/ice-white.avif",
+    "/data/brand-model-images/4w-galleries/bentley/bentayga/colors/rose-gold-over-magnetic.avif",
+    "/data/brand-model-images/4w-galleries/bentley/bentayga/colors/blue-crystal.avif",
+    "/data/brand-model-images/4w-galleries/bentley/bentayga/colors/orange-flame.avif",
+    "/data/brand-model-images/4w-galleries/bentley/bentayga/colors/silver-storm.avif"
+  ]
+}

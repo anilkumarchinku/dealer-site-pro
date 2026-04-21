@@ -1,0 +1,22 @@
+{
+  "make": "Force Motors",
+  "model": "Urbania",
+  "brandSlug": "force",
+  "modelSlug": "urbania",
+  "sourceUrl": "https://www.cardekho.com/force/urbania",
+  "scrapedAt": "2026-04-21T06:19:45.230Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 2,
+    "total": 2
+  },
+  "hero": "/data/brand-model-images/4w-galleries/force/urbania/colors/white.avif",
+  "colorNames": [
+    "White",
+    "Grey"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/force/urbania/colors/white.avif",
+    "/data/brand-model-images/4w-galleries/force/urbania/colors/grey.avif"
+  ]
+}

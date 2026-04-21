@@ -1,0 +1,30 @@
+{
+  "make": "BMW",
+  "model": "X5",
+  "brandSlug": "bmw",
+  "modelSlug": "x5",
+  "sourceUrl": "https://www.cardekho.com/bmw/x5",
+  "scrapedAt": "2026-04-21T06:19:48.201Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 6,
+    "total": 6
+  },
+  "hero": "/data/brand-model-images/4w-galleries/bmw/x5/colors/skyscraper-grey-metallic.avif",
+  "colorNames": [
+    "Skyscraper Grey Metallic",
+    "Individual Tanzanite Blue",
+    "Mineral White Metallic",
+    "M Carbon Black Metallic",
+    "M Brooklyn Grey Metallic",
+    "Black Sapphire Metallic"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/bmw/x5/colors/skyscraper-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x5/colors/individual-tanzanite-blue.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x5/colors/mineral-white-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x5/colors/m-carbon-black-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x5/colors/m-brooklyn-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x5/colors/black-sapphire-metallic.avif"
+  ]
+}

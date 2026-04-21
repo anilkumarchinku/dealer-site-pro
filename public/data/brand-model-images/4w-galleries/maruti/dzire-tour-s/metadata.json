@@ -1,0 +1,24 @@
+{
+  "make": "Maruti Suzuki",
+  "model": "Dzire Tour S",
+  "brandSlug": "maruti",
+  "modelSlug": "dzire-tour-s",
+  "sourceUrl": "https://www.cardekho.com/maruti/dzire-tour-s",
+  "scrapedAt": "2026-04-21T06:19:13.080Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 3,
+    "total": 3
+  },
+  "hero": "/data/brand-model-images/4w-galleries/maruti/dzire-tour-s/colors/arctic-white.avif",
+  "colorNames": [
+    "Arctic White",
+    "Bluish Black",
+    "Splendid Silver"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/maruti/dzire-tour-s/colors/arctic-white.avif",
+    "/data/brand-model-images/4w-galleries/maruti/dzire-tour-s/colors/bluish-black.avif",
+    "/data/brand-model-images/4w-galleries/maruti/dzire-tour-s/colors/splendid-silver.avif"
+  ]
+}

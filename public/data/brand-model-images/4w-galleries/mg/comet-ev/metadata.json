@@ -1,0 +1,24 @@
+{
+  "make": "MG",
+  "model": "Comet EV",
+  "brandSlug": "mg",
+  "modelSlug": "comet-ev",
+  "sourceUrl": "https://www.cardekho.com/mg/comet-ev",
+  "scrapedAt": "2026-04-21T06:19:39.083Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 3,
+    "total": 3
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mg/comet-ev/colors/starry-black.avif",
+  "colorNames": [
+    "Starry Black",
+    "Aurora Silver",
+    "Candy White"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mg/comet-ev/colors/starry-black.avif",
+    "/data/brand-model-images/4w-galleries/mg/comet-ev/colors/aurora-silver.avif",
+    "/data/brand-model-images/4w-galleries/mg/comet-ev/colors/candy-white.avif"
+  ]
+}

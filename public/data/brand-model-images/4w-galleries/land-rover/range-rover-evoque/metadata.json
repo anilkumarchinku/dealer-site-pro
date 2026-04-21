@@ -1,0 +1,26 @@
+{
+  "make": "Land Rover",
+  "model": "Range Rover Evoque",
+  "brandSlug": "land-rover",
+  "modelSlug": "range-rover-evoque",
+  "sourceUrl": "https://www.cardekho.com/land-rover/range-rover-evoque",
+  "scrapedAt": "2026-04-21T06:20:52.407Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 4,
+    "total": 4
+  },
+  "hero": "/data/brand-model-images/4w-galleries/land-rover/range-rover-evoque/colors/carpathian-grey-dt.avif",
+  "colorNames": [
+    "Carpathian Grey DT",
+    "Fuji White DT",
+    "Santorini Black",
+    "Tribeca Blue DT"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-evoque/colors/carpathian-grey-dt.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-evoque/colors/fuji-white-dt.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-evoque/colors/santorini-black.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/range-rover-evoque/colors/tribeca-blue-dt.avif"
+  ]
+}

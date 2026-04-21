@@ -1,0 +1,30 @@
+{
+  "make": "Mahindra",
+  "model": "XEV 9S",
+  "brandSlug": "mahindra",
+  "modelSlug": "xev-9s",
+  "sourceUrl": "https://www.cardekho.com/mahindra/xev-9s",
+  "scrapedAt": "2026-04-21T06:19:27.410Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 6,
+    "total": 6
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mahindra/xev-9s/colors/everest-white.avif",
+  "colorNames": [
+    "Everest White",
+    "Ruby Velvet",
+    "Stealth Black",
+    "Desert Myst",
+    "Nebula Blue",
+    "Midnight Black"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mahindra/xev-9s/colors/everest-white.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xev-9s/colors/ruby-velvet.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xev-9s/colors/stealth-black.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xev-9s/colors/desert-myst.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xev-9s/colors/nebula-blue.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xev-9s/colors/midnight-black.avif"
+  ]
+}

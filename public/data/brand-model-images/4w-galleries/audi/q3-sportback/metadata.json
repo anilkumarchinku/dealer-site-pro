@@ -1,0 +1,26 @@
+{
+  "make": "Audi",
+  "model": "Q3 Sportback",
+  "brandSlug": "audi",
+  "modelSlug": "q3-sportback",
+  "sourceUrl": "https://www.cardekho.com/audi/q3-sportback",
+  "scrapedAt": "2026-04-21T06:19:58.679Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 4,
+    "total": 4
+  },
+  "hero": "/data/brand-model-images/4w-galleries/audi/q3-sportback/colors/progressive-red-metallic.avif",
+  "colorNames": [
+    "Progressive-Red-Metallic",
+    "Mythos Black Metallic",
+    "Glacier White Metallic",
+    "Navarra Blue Metallic"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/audi/q3-sportback/colors/progressive-red-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/q3-sportback/colors/mythos-black-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/q3-sportback/colors/glacier-white-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/q3-sportback/colors/navarra-blue-metallic.avif"
+  ]
+}

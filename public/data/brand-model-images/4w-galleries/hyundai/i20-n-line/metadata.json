@@ -1,0 +1,32 @@
+{
+  "make": "Hyundai",
+  "model": "i20 N-Line",
+  "brandSlug": "hyundai",
+  "modelSlug": "i20-n-line",
+  "sourceUrl": "https://www.cardekho.com/hyundai/i20-n-line",
+  "scrapedAt": "2026-04-21T06:19:19.547Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 7,
+    "total": 7
+  },
+  "hero": "/data/brand-model-images/4w-galleries/hyundai/i20-n-line/colors/thunder-blue-with-abyss-black.avif",
+  "colorNames": [
+    "Thunder Blue With Abyss Black",
+    "Starry Night",
+    "Thunder Blue",
+    "Atlas White",
+    "Atlas White/Abyss Black",
+    "Titan Grey",
+    "Abyss Black"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/hyundai/i20-n-line/colors/thunder-blue-with-abyss-black.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/i20-n-line/colors/starry-night.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/i20-n-line/colors/thunder-blue.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/i20-n-line/colors/atlas-white.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/i20-n-line/colors/atlas-white-abyss-black.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/i20-n-line/colors/titan-grey.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/i20-n-line/colors/abyss-black.avif"
+  ]
+}

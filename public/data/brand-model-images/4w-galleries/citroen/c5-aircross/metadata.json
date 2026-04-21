@@ -1,0 +1,32 @@
+{
+  "make": "Citroen",
+  "model": "C5 Aircross",
+  "brandSlug": "citroen",
+  "modelSlug": "c5-aircross",
+  "sourceUrl": "https://www.cardekho.com/citroen/c5-aircross",
+  "scrapedAt": "2026-04-21T06:19:43.963Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 7,
+    "total": 7
+  },
+  "hero": "/data/brand-model-images/4w-galleries/citroen/c5-aircross/colors/pearl-white-with-black-roof.avif",
+  "colorNames": [
+    "Pearl White With Black Roof",
+    "Eclipse Blue With Black Roof",
+    "Pearl White",
+    "Cumulus Grey With Black Roof",
+    "Cumulus Gray",
+    "Pearl Nera Black",
+    "Eclipse Blue"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/citroen/c5-aircross/colors/pearl-white-with-black-roof.avif",
+    "/data/brand-model-images/4w-galleries/citroen/c5-aircross/colors/eclipse-blue-with-black-roof.avif",
+    "/data/brand-model-images/4w-galleries/citroen/c5-aircross/colors/pearl-white.avif",
+    "/data/brand-model-images/4w-galleries/citroen/c5-aircross/colors/cumulus-grey-with-black-roof.avif",
+    "/data/brand-model-images/4w-galleries/citroen/c5-aircross/colors/cumulus-gray.avif",
+    "/data/brand-model-images/4w-galleries/citroen/c5-aircross/colors/pearl-nera-black.avif",
+    "/data/brand-model-images/4w-galleries/citroen/c5-aircross/colors/eclipse-blue.avif"
+  ]
+}

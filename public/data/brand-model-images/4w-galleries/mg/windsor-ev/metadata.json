@@ -1,0 +1,30 @@
+{
+  "make": "MG",
+  "model": "Windsor EV",
+  "brandSlug": "mg",
+  "modelSlug": "windsor-ev",
+  "sourceUrl": "https://www.cardekho.com/mg/windsor-ev",
+  "scrapedAt": "2026-04-21T06:19:38.538Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 6,
+    "total": 6
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mg/windsor-ev/colors/pearl-white.avif",
+  "colorNames": [
+    "Pearl White",
+    "Starry Black",
+    "Turquoise Green",
+    "Aurora Silver",
+    "Glaze Red",
+    "Celadon Blue"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mg/windsor-ev/colors/pearl-white.avif",
+    "/data/brand-model-images/4w-galleries/mg/windsor-ev/colors/starry-black.avif",
+    "/data/brand-model-images/4w-galleries/mg/windsor-ev/colors/turquoise-green.avif",
+    "/data/brand-model-images/4w-galleries/mg/windsor-ev/colors/aurora-silver.avif",
+    "/data/brand-model-images/4w-galleries/mg/windsor-ev/colors/glaze-red.avif",
+    "/data/brand-model-images/4w-galleries/mg/windsor-ev/colors/celadon-blue.avif"
+  ]
+}

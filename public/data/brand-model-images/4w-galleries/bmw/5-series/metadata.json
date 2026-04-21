@@ -1,0 +1,26 @@
+{
+  "make": "BMW",
+  "model": "5 Series",
+  "brandSlug": "bmw",
+  "modelSlug": "5-series",
+  "sourceUrl": "https://www.cardekho.com/bmw/5-series",
+  "scrapedAt": "2026-04-21T06:19:49.040Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 4,
+    "total": 4
+  },
+  "hero": "/data/brand-model-images/4w-galleries/bmw/5-series/colors/carbon-black.avif",
+  "colorNames": [
+    "Carbon Black",
+    "Mineral White",
+    "Phytonic Blue",
+    "Sparkling Copper Grey Metallic"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/bmw/5-series/colors/carbon-black.avif",
+    "/data/brand-model-images/4w-galleries/bmw/5-series/colors/mineral-white.avif",
+    "/data/brand-model-images/4w-galleries/bmw/5-series/colors/phytonic-blue.avif",
+    "/data/brand-model-images/4w-galleries/bmw/5-series/colors/sparkling-copper-grey-metallic.avif"
+  ]
+}

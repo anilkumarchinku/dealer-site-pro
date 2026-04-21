@@ -1,0 +1,24 @@
+{
+  "make": "Nissan",
+  "model": "X-Trail",
+  "brandSlug": "nissan",
+  "modelSlug": "x-trail",
+  "sourceUrl": "https://www.cardekho.com/nissan/x-trail",
+  "scrapedAt": "2026-04-21T06:22:31.310Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 3,
+    "total": 3
+  },
+  "hero": "/data/brand-model-images/4w-galleries/nissan/x-trail/colors/diamond-black.avif",
+  "colorNames": [
+    "Diamond Black",
+    "Pearl White",
+    "CHAMPAGNE SILVER"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/nissan/x-trail/colors/diamond-black.avif",
+    "/data/brand-model-images/4w-galleries/nissan/x-trail/colors/pearl-white.avif",
+    "/data/brand-model-images/4w-galleries/nissan/x-trail/colors/champagne-silver.avif"
+  ]
+}

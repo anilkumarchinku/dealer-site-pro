@@ -1,0 +1,26 @@
+{
+  "make": "Jeep",
+  "model": "Grand Cherokee",
+  "brandSlug": "jeep",
+  "modelSlug": "grand-cherokee",
+  "sourceUrl": "https://www.cardekho.com/jeep/grand-cherokee",
+  "scrapedAt": "2026-04-21T06:19:42.713Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 4,
+    "total": 4
+  },
+  "hero": "/data/brand-model-images/4w-galleries/jeep/grand-cherokee/colors/rocky-mountain.avif",
+  "colorNames": [
+    "Rocky Mountain",
+    "Diamond Black Crystal",
+    "Velvet Red",
+    "Bright White"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/jeep/grand-cherokee/colors/rocky-mountain.avif",
+    "/data/brand-model-images/4w-galleries/jeep/grand-cherokee/colors/diamond-black-crystal.avif",
+    "/data/brand-model-images/4w-galleries/jeep/grand-cherokee/colors/velvet-red.avif",
+    "/data/brand-model-images/4w-galleries/jeep/grand-cherokee/colors/bright-white.avif"
+  ]
+}

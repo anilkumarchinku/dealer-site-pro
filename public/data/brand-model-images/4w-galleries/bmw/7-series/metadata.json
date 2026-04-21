@@ -1,0 +1,30 @@
+{
+  "make": "BMW",
+  "model": "7 Series",
+  "brandSlug": "bmw",
+  "modelSlug": "7-series",
+  "sourceUrl": "https://www.cardekho.com/bmw/7-series",
+  "scrapedAt": "2026-04-21T06:19:52.097Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 6,
+    "total": 6
+  },
+  "hero": "/data/brand-model-images/4w-galleries/bmw/7-series/colors/individual-tanzanite-blue.avif",
+  "colorNames": [
+    "Individual Tanzanite Blue",
+    "Mineral White Metallic",
+    "Oxide Grey Metallic",
+    "Carbon Black Metallic",
+    "Individual Dravit Grey Metallic",
+    "Black Sapphire Metallic"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/bmw/7-series/colors/individual-tanzanite-blue.avif",
+    "/data/brand-model-images/4w-galleries/bmw/7-series/colors/mineral-white-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/7-series/colors/oxide-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/7-series/colors/carbon-black-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/7-series/colors/individual-dravit-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/7-series/colors/black-sapphire-metallic.avif"
+  ]
+}

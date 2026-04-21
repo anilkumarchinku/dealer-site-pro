@@ -1,0 +1,44 @@
+{
+  "make": "Porsche",
+  "model": "Macan EV",
+  "brandSlug": "porsche",
+  "modelSlug": "macan-ev",
+  "sourceUrl": "https://www.cardekho.com/porsche/macan-ev",
+  "scrapedAt": "2026-04-21T06:22:41.892Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 13,
+    "total": 13
+  },
+  "hero": "/data/brand-model-images/4w-galleries/porsche/macan-ev/colors/copper-ruby-metallic.avif",
+  "colorNames": [
+    "Copper Ruby Metallic",
+    "Aventurine Green Metallic",
+    "Oak Green Metallic Neo",
+    "Provence",
+    "Black",
+    "Ice Grey Metallic",
+    "Gentian Blue Metallic",
+    "Volcano Grey Metallic",
+    "Jet Black Metallic",
+    "Frozen Blue Metallic",
+    "White",
+    "Dolomite Silver Metallic",
+    "Papaya Metallic"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/porsche/macan-ev/colors/copper-ruby-metallic.avif",
+    "/data/brand-model-images/4w-galleries/porsche/macan-ev/colors/aventurine-green-metallic.avif",
+    "/data/brand-model-images/4w-galleries/porsche/macan-ev/colors/oak-green-metallic-neo.avif",
+    "/data/brand-model-images/4w-galleries/porsche/macan-ev/colors/provence.avif",
+    "/data/brand-model-images/4w-galleries/porsche/macan-ev/colors/black.avif",
+    "/data/brand-model-images/4w-galleries/porsche/macan-ev/colors/ice-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/porsche/macan-ev/colors/gentian-blue-metallic.avif",
+    "/data/brand-model-images/4w-galleries/porsche/macan-ev/colors/volcano-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/porsche/macan-ev/colors/jet-black-metallic.avif",
+    "/data/brand-model-images/4w-galleries/porsche/macan-ev/colors/frozen-blue-metallic.avif",
+    "/data/brand-model-images/4w-galleries/porsche/macan-ev/colors/white.avif",
+    "/data/brand-model-images/4w-galleries/porsche/macan-ev/colors/dolomite-silver-metallic.avif",
+    "/data/brand-model-images/4w-galleries/porsche/macan-ev/colors/papaya-metallic.avif"
+  ]
+}

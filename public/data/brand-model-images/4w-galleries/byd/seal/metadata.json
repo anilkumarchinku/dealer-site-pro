@@ -1,0 +1,26 @@
+{
+  "make": "BYD",
+  "model": "Seal",
+  "brandSlug": "byd",
+  "modelSlug": "seal",
+  "sourceUrl": "https://www.cardekho.com/byd/seal",
+  "scrapedAt": "2026-04-21T06:19:44.582Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 4,
+    "total": 4
+  },
+  "hero": "/data/brand-model-images/4w-galleries/byd/seal/colors/aurora-white.avif",
+  "colorNames": [
+    "Aurora White",
+    "Atlantic Grey",
+    "Arctic Blue",
+    "Cosmos Black"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/byd/seal/colors/aurora-white.avif",
+    "/data/brand-model-images/4w-galleries/byd/seal/colors/atlantic-grey.avif",
+    "/data/brand-model-images/4w-galleries/byd/seal/colors/arctic-blue.avif",
+    "/data/brand-model-images/4w-galleries/byd/seal/colors/cosmos-black.avif"
+  ]
+}

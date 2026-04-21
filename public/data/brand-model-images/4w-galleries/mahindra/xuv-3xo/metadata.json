@@ -1,0 +1,50 @@
+{
+  "make": "Mahindra",
+  "model": "XUV 3XO",
+  "brandSlug": "mahindra",
+  "modelSlug": "xuv-3xo",
+  "sourceUrl": "https://www.cardekho.com/mahindra/xuv-3xo",
+  "scrapedAt": "2026-04-21T06:19:25.252Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 16,
+    "total": 16
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mahindra/xuv-3xo/colors/dune-beige.avif",
+  "colorNames": [
+    "Dune Beige",
+    "Everest White",
+    "Stealth Black Plus Galvano Grey",
+    "Stealth Black",
+    "Dune Beige Plus Stealth Black",
+    "Nebula Blue Plus Galvano Grey",
+    "Galaxy Grey Plus Stealth Black",
+    "Tango Red Plus Stealth Black",
+    "Galaxy Grey",
+    "Everest White Plus Stealth Black",
+    "Citrine Yellow Plus Stealth Black",
+    "Deep Forest Plus Galvano Grey",
+    "Nebula Blue",
+    "Deep Forest",
+    "Tango Red",
+    "Citrine Yellow"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mahindra/xuv-3xo/colors/dune-beige.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xuv-3xo/colors/everest-white.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xuv-3xo/colors/stealth-black-plus-galvano-grey.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xuv-3xo/colors/stealth-black.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xuv-3xo/colors/dune-beige-plus-stealth-black.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xuv-3xo/colors/nebula-blue-plus-galvano-grey.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xuv-3xo/colors/galaxy-grey-plus-stealth-black.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xuv-3xo/colors/tango-red-plus-stealth-black.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xuv-3xo/colors/galaxy-grey.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xuv-3xo/colors/everest-white-plus-stealth-black.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xuv-3xo/colors/citrine-yellow-plus-stealth-black.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xuv-3xo/colors/deep-forest-plus-galvano-grey.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xuv-3xo/colors/nebula-blue.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xuv-3xo/colors/deep-forest.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xuv-3xo/colors/tango-red.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xuv-3xo/colors/citrine-yellow.avif"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "make": "Mahindra",
+  "model": "Scorpio N",
+  "brandSlug": "mahindra",
+  "modelSlug": "scorpio-n",
+  "sourceUrl": "https://www.cardekho.com/mahindra/scorpio-n",
+  "scrapedAt": "2026-04-21T06:19:23.924Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 5,
+    "total": 5
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mahindra/scorpio-n/colors/everest-white.avif",
+  "colorNames": [
+    "Everest White",
+    "Stealth Black",
+    "Valyrian Silver",
+    "Deep Forest",
+    "Midnight Black"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mahindra/scorpio-n/colors/everest-white.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/scorpio-n/colors/stealth-black.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/scorpio-n/colors/valyrian-silver.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/scorpio-n/colors/deep-forest.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/scorpio-n/colors/midnight-black.avif"
+  ]
+}

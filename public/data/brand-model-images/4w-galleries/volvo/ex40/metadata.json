@@ -1,0 +1,30 @@
+{
+  "make": "Volvo",
+  "model": "EX40",
+  "brandSlug": "volvo",
+  "modelSlug": "ex40",
+  "sourceUrl": "https://www.cardekho.com/volvo/ex40",
+  "scrapedAt": "2026-04-21T06:20:58.450Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 6,
+    "total": 6
+  },
+  "hero": "/data/brand-model-images/4w-galleries/volvo/ex40/colors/sand-dune.avif",
+  "colorNames": [
+    "Sand Dune",
+    "Onyx Black",
+    "Fjord Blue",
+    "Crystal White",
+    "Sage Green",
+    "Cloud Blue"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/volvo/ex40/colors/sand-dune.avif",
+    "/data/brand-model-images/4w-galleries/volvo/ex40/colors/onyx-black.avif",
+    "/data/brand-model-images/4w-galleries/volvo/ex40/colors/fjord-blue.avif",
+    "/data/brand-model-images/4w-galleries/volvo/ex40/colors/crystal-white.avif",
+    "/data/brand-model-images/4w-galleries/volvo/ex40/colors/sage-green.avif",
+    "/data/brand-model-images/4w-galleries/volvo/ex40/colors/cloud-blue.avif"
+  ]
+}

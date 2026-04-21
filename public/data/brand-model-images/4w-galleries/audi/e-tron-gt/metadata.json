@@ -1,0 +1,36 @@
+{
+  "make": "Audi",
+  "model": "e-tron GT",
+  "brandSlug": "audi",
+  "modelSlug": "e-tron-gt",
+  "sourceUrl": "https://www.cardekho.com/audi/e-tron-gt",
+  "scrapedAt": "2026-04-21T06:20:01.024Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 9,
+    "total": 9
+  },
+  "hero": "/data/brand-model-images/4w-galleries/audi/e-tron-gt/colors/suzuka-grey-metallic.avif",
+  "colorNames": [
+    "Suzuka Grey Metallic",
+    "Tango Red Metallic",
+    "Daytona Grey Pearl Effect",
+    "Kemora Gray Metallic",
+    "Mythos Black Metallic",
+    "Floret Silver Metallic",
+    "Ascari Blue Metallic",
+    "Ibis White",
+    "Tactics Green Metallic"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/audi/e-tron-gt/colors/suzuka-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/e-tron-gt/colors/tango-red-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/e-tron-gt/colors/daytona-grey-pearl-effect.avif",
+    "/data/brand-model-images/4w-galleries/audi/e-tron-gt/colors/kemora-gray-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/e-tron-gt/colors/mythos-black-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/e-tron-gt/colors/floret-silver-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/e-tron-gt/colors/ascari-blue-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/e-tron-gt/colors/ibis-white.avif",
+    "/data/brand-model-images/4w-galleries/audi/e-tron-gt/colors/tactics-green-metallic.avif"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "make": "BYD",
+  "model": "eMAX 7",
+  "brandSlug": "byd",
+  "modelSlug": "emax-7",
+  "sourceUrl": "https://www.cardekho.com/byd/emax-7",
+  "scrapedAt": "2026-04-21T06:19:45.064Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 4,
+    "total": 4
+  },
+  "hero": "/data/brand-model-images/4w-galleries/byd/emax-7/colors/harbour-grey.avif",
+  "colorNames": [
+    "Harbour Grey",
+    "Crystal White",
+    "Quartz Blue",
+    "Cosmos Black"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/byd/emax-7/colors/harbour-grey.avif",
+    "/data/brand-model-images/4w-galleries/byd/emax-7/colors/crystal-white.avif",
+    "/data/brand-model-images/4w-galleries/byd/emax-7/colors/quartz-blue.avif",
+    "/data/brand-model-images/4w-galleries/byd/emax-7/colors/cosmos-black.avif"
+  ]
+}

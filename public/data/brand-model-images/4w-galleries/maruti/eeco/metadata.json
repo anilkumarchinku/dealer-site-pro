@@ -1,0 +1,28 @@
+{
+  "make": "Maruti Suzuki",
+  "model": "Eeco",
+  "brandSlug": "maruti",
+  "modelSlug": "eeco",
+  "sourceUrl": "https://www.cardekho.com/maruti/eeco",
+  "scrapedAt": "2026-04-21T06:22:21.869Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 5,
+    "total": 5
+  },
+  "hero": "/data/brand-model-images/4w-galleries/maruti/eeco/colors/metallic-glistening-grey.avif",
+  "colorNames": [
+    "Metallic Glistening Grey",
+    "Metallic Silky Silver",
+    "Metallic Brisk Blue",
+    "Solid White",
+    "Bluish Black"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/maruti/eeco/colors/metallic-glistening-grey.avif",
+    "/data/brand-model-images/4w-galleries/maruti/eeco/colors/metallic-silky-silver.avif",
+    "/data/brand-model-images/4w-galleries/maruti/eeco/colors/metallic-brisk-blue.avif",
+    "/data/brand-model-images/4w-galleries/maruti/eeco/colors/solid-white.avif",
+    "/data/brand-model-images/4w-galleries/maruti/eeco/colors/bluish-black.avif"
+  ]
+}

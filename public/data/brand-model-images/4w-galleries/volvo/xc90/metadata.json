@@ -1,0 +1,22 @@
+{
+  "make": "Volvo",
+  "model": "XC90",
+  "brandSlug": "volvo",
+  "modelSlug": "xc90",
+  "sourceUrl": "https://www.cardekho.com/volvo/xc90",
+  "scrapedAt": "2026-04-21T06:20:56.685Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 2,
+    "total": 2
+  },
+  "hero": "/data/brand-model-images/4w-galleries/volvo/xc90/colors/onyx-black.avif",
+  "colorNames": [
+    "Onyx Black",
+    "Crystal White"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/volvo/xc90/colors/onyx-black.avif",
+    "/data/brand-model-images/4w-galleries/volvo/xc90/colors/crystal-white.avif"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "make": "Skoda",
+  "model": "Kushaq",
+  "brandSlug": "skoda",
+  "modelSlug": "kushaq",
+  "sourceUrl": "https://www.cardekho.com/skoda/kushaq",
+  "scrapedAt": "2026-04-21T06:19:37.367Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 8,
+    "total": 8
+  },
+  "hero": "/data/brand-model-images/4w-galleries/skoda/kushaq/colors/brilliant-silver.avif",
+  "colorNames": [
+    "Brilliant Silver",
+    "Lava Blue",
+    "Carbon Steel",
+    "Deep Black",
+    "Shimla Green",
+    "Steel Grey",
+    "Candy White",
+    "Cherry Red"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/skoda/kushaq/colors/brilliant-silver.avif",
+    "/data/brand-model-images/4w-galleries/skoda/kushaq/colors/lava-blue.avif",
+    "/data/brand-model-images/4w-galleries/skoda/kushaq/colors/carbon-steel.avif",
+    "/data/brand-model-images/4w-galleries/skoda/kushaq/colors/deep-black.avif",
+    "/data/brand-model-images/4w-galleries/skoda/kushaq/colors/shimla-green.avif",
+    "/data/brand-model-images/4w-galleries/skoda/kushaq/colors/steel-grey.avif",
+    "/data/brand-model-images/4w-galleries/skoda/kushaq/colors/candy-white.avif",
+    "/data/brand-model-images/4w-galleries/skoda/kushaq/colors/cherry-red.avif"
+  ]
+}

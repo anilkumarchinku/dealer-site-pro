@@ -1,0 +1,32 @@
+{
+  "make": "Tata Motors",
+  "model": "Punch EV",
+  "brandSlug": "tata",
+  "modelSlug": "punch-ev",
+  "sourceUrl": "https://www.cardekho.com/tata/punch-ev",
+  "scrapedAt": "2026-04-21T06:19:06.464Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 7,
+    "total": 7
+  },
+  "hero": "/data/brand-model-images/4w-galleries/tata/punch-ev/colors/oxide-grey-metallic.avif",
+  "colorNames": [
+    "Oxide Grey Metallic",
+    "Pristine White",
+    "Pure Grey",
+    "Fearless Yellow",
+    "Bengal Rouge",
+    "Supernova Coper",
+    "Caramel"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/tata/punch-ev/colors/oxide-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/tata/punch-ev/colors/pristine-white.avif",
+    "/data/brand-model-images/4w-galleries/tata/punch-ev/colors/pure-grey.avif",
+    "/data/brand-model-images/4w-galleries/tata/punch-ev/colors/fearless-yellow.avif",
+    "/data/brand-model-images/4w-galleries/tata/punch-ev/colors/bengal-rouge.avif",
+    "/data/brand-model-images/4w-galleries/tata/punch-ev/colors/supernova-coper.avif",
+    "/data/brand-model-images/4w-galleries/tata/punch-ev/colors/caramel.avif"
+  ]
+}

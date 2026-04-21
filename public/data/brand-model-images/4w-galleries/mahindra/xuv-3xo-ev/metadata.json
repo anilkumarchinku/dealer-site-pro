@@ -1,0 +1,30 @@
+{
+  "make": "Mahindra",
+  "model": "XUV 3XO EV",
+  "brandSlug": "mahindra",
+  "modelSlug": "xuv-3xo-ev",
+  "sourceUrl": "https://www.cardekho.com/mahindra/xuv-3xo-ev",
+  "scrapedAt": "2026-04-21T06:19:27.583Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 6,
+    "total": 6
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mahindra/xuv-3xo-ev/colors/everest-white.avif",
+  "colorNames": [
+    "Everest White",
+    "Galaxy Grey",
+    "Stealth Black",
+    "Nebula Blue",
+    "Deep Forest",
+    "Tango Red"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mahindra/xuv-3xo-ev/colors/everest-white.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xuv-3xo-ev/colors/galaxy-grey.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xuv-3xo-ev/colors/stealth-black.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xuv-3xo-ev/colors/nebula-blue.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xuv-3xo-ev/colors/deep-forest.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xuv-3xo-ev/colors/tango-red.avif"
+  ]
+}

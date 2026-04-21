@@ -1,0 +1,30 @@
+{
+  "make": "MG",
+  "model": "Astor",
+  "brandSlug": "mg",
+  "modelSlug": "astor",
+  "sourceUrl": "https://www.cardekho.com/mg/astor",
+  "scrapedAt": "2026-04-21T06:19:39.576Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 6,
+    "total": 6
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mg/astor/colors/havana-grey.avif",
+  "colorNames": [
+    "Havana Grey",
+    "White/Black Roof",
+    "Starry Black",
+    "Aurora Silver",
+    "Glaze Red",
+    "Candy White"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mg/astor/colors/havana-grey.avif",
+    "/data/brand-model-images/4w-galleries/mg/astor/colors/white-black-roof.avif",
+    "/data/brand-model-images/4w-galleries/mg/astor/colors/starry-black.avif",
+    "/data/brand-model-images/4w-galleries/mg/astor/colors/aurora-silver.avif",
+    "/data/brand-model-images/4w-galleries/mg/astor/colors/glaze-red.avif",
+    "/data/brand-model-images/4w-galleries/mg/astor/colors/candy-white.avif"
+  ]
+}

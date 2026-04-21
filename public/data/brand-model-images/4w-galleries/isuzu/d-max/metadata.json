@@ -1,0 +1,20 @@
+{
+  "make": "Isuzu",
+  "model": "D-Max",
+  "brandSlug": "isuzu",
+  "modelSlug": "d-max",
+  "sourceUrl": "https://www.cardekho.com/isuzu/d-max",
+  "scrapedAt": "2026-04-21T06:19:45.555Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 1,
+    "total": 1
+  },
+  "hero": "/data/brand-model-images/4w-galleries/isuzu/d-max/colors/splash-white.avif",
+  "colorNames": [
+    "Splash White"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/isuzu/d-max/colors/splash-white.avif"
+  ]
+}

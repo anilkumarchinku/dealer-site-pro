@@ -1,0 +1,28 @@
+{
+  "make": "Mercedes-Benz",
+  "model": "C-Class",
+  "brandSlug": "mercedes-benz",
+  "modelSlug": "c-class",
+  "sourceUrl": "https://www.cardekho.com/mercedes-benz/c-class",
+  "scrapedAt": "2026-04-21T06:22:31.114Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 5,
+    "total": 5
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mercedes-benz/c-class/colors/selenite-grey.avif",
+  "colorNames": [
+    "Selenite Grey",
+    "High Tech Silver",
+    "Sodalite Blue",
+    "Manufaktur Opalite White Bright",
+    "Obsidian Black"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mercedes-benz/c-class/colors/selenite-grey.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/c-class/colors/high-tech-silver.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/c-class/colors/sodalite-blue.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/c-class/colors/manufaktur-opalite-white-bright.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/c-class/colors/obsidian-black.avif"
+  ]
+}

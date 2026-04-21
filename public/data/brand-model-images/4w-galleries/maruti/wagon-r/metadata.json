@@ -1,0 +1,36 @@
+{
+  "make": "Maruti Suzuki",
+  "model": "Wagon R",
+  "brandSlug": "maruti",
+  "modelSlug": "wagon-r",
+  "sourceUrl": "https://www.cardekho.com/maruti/wagon-r",
+  "scrapedAt": "2026-04-21T06:19:11.041Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 9,
+    "total": 9
+  },
+  "hero": "/data/brand-model-images/4w-galleries/maruti/wagon-r/colors/pearl-metallic-nutmeg-brown.avif",
+  "colorNames": [
+    "Pearl Metallic Nutmeg Brown",
+    "Pearl Metallic Gallant Red",
+    "Metallic Silky Silver",
+    "Pearl Bluish Black Mettalic With Magma Grey",
+    "Solid White",
+    "Pearl Metallic Poolside Blue",
+    "Pearl Bluish Black Metallic With Gallant Red",
+    "Pearl Bluish Black",
+    "Metallic Magma Grey"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/maruti/wagon-r/colors/pearl-metallic-nutmeg-brown.avif",
+    "/data/brand-model-images/4w-galleries/maruti/wagon-r/colors/pearl-metallic-gallant-red.avif",
+    "/data/brand-model-images/4w-galleries/maruti/wagon-r/colors/metallic-silky-silver.avif",
+    "/data/brand-model-images/4w-galleries/maruti/wagon-r/colors/pearl-bluish-black-mettalic-with-magma-grey.avif",
+    "/data/brand-model-images/4w-galleries/maruti/wagon-r/colors/solid-white.avif",
+    "/data/brand-model-images/4w-galleries/maruti/wagon-r/colors/pearl-metallic-poolside-blue.avif",
+    "/data/brand-model-images/4w-galleries/maruti/wagon-r/colors/pearl-bluish-black-metallic-with-gallant-red.avif",
+    "/data/brand-model-images/4w-galleries/maruti/wagon-r/colors/pearl-bluish-black.avif",
+    "/data/brand-model-images/4w-galleries/maruti/wagon-r/colors/metallic-magma-grey.avif"
+  ]
+}

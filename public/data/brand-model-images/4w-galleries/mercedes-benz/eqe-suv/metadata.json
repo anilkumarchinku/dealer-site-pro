@@ -1,0 +1,36 @@
+{
+  "make": "Mercedes-Benz",
+  "model": "EQE SUV",
+  "brandSlug": "mercedes-benz",
+  "modelSlug": "eqe-suv",
+  "sourceUrl": "https://www.cardekho.com/mercedes-benz/eqe-suv",
+  "scrapedAt": "2026-04-21T06:20:12.880Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 9,
+    "total": 9
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mercedes-benz/eqe-suv/colors/alpine-grey.avif",
+  "colorNames": [
+    "Alpine Grey",
+    "Selenite Grey",
+    "High Tech Silver",
+    "Diamond White",
+    "Velvet Brown",
+    "Sodalite Blue",
+    "Polar White",
+    "Obsidian Black",
+    "Emerald Green"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mercedes-benz/eqe-suv/colors/alpine-grey.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/eqe-suv/colors/selenite-grey.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/eqe-suv/colors/high-tech-silver.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/eqe-suv/colors/diamond-white.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/eqe-suv/colors/velvet-brown.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/eqe-suv/colors/sodalite-blue.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/eqe-suv/colors/polar-white.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/eqe-suv/colors/obsidian-black.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/eqe-suv/colors/emerald-green.avif"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "make": "Mini",
+  "model": "Cooper S",
+  "brandSlug": "mini",
+  "modelSlug": "cooper-s",
+  "sourceUrl": "https://www.cardekho.com/mini/cooper-s",
+  "scrapedAt": "2026-04-21T06:20:59.829Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 10,
+    "total": 10
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mini/cooper-s/colors/melting-silver-iii.avif",
+  "colorNames": [
+    "MELTING-SILVER-III",
+    "Blazing Blue White Roof",
+    "ICY-SUNSHINE-BLUE",
+    "British Racing Green Black Roof",
+    "Sunny Side Yellow Black Roof",
+    "Nanuq White",
+    "OCEAN WAVE GREEN",
+    "Midnight Black",
+    "Chilli Red Black Roof",
+    "INDIGO-SUNSET-BLUE"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mini/cooper-s/colors/melting-silver-iii.avif",
+    "/data/brand-model-images/4w-galleries/mini/cooper-s/colors/blazing-blue-white-roof.avif",
+    "/data/brand-model-images/4w-galleries/mini/cooper-s/colors/icy-sunshine-blue.avif",
+    "/data/brand-model-images/4w-galleries/mini/cooper-s/colors/british-racing-green-black-roof.avif",
+    "/data/brand-model-images/4w-galleries/mini/cooper-s/colors/sunny-side-yellow-black-roof.avif",
+    "/data/brand-model-images/4w-galleries/mini/cooper-s/colors/nanuq-white.avif",
+    "/data/brand-model-images/4w-galleries/mini/cooper-s/colors/ocean-wave-green.avif",
+    "/data/brand-model-images/4w-galleries/mini/cooper-s/colors/midnight-black.avif",
+    "/data/brand-model-images/4w-galleries/mini/cooper-s/colors/chilli-red-black-roof.avif",
+    "/data/brand-model-images/4w-galleries/mini/cooper-s/colors/indigo-sunset-blue.avif"
+  ]
+}

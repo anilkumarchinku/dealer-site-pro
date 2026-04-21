@@ -1,0 +1,34 @@
+{
+  "make": "Mahindra",
+  "model": "XEV 9e",
+  "brandSlug": "mahindra",
+  "modelSlug": "xev-9e",
+  "sourceUrl": "https://www.cardekho.com/mahindra/xev-9e",
+  "scrapedAt": "2026-04-21T06:19:26.048Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 8,
+    "total": 8
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mahindra/xev-9e/colors/everest-white.avif",
+  "colorNames": [
+    "Everest White",
+    "Ruby Velvet",
+    "Stealth Black",
+    "Desert Myst",
+    "Nebula Blue",
+    "Deep Forest",
+    "Tango Red",
+    "Satin White"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mahindra/xev-9e/colors/everest-white.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xev-9e/colors/ruby-velvet.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xev-9e/colors/stealth-black.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xev-9e/colors/desert-myst.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xev-9e/colors/nebula-blue.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xev-9e/colors/deep-forest.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xev-9e/colors/tango-red.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xev-9e/colors/satin-white.avif"
+  ]
+}

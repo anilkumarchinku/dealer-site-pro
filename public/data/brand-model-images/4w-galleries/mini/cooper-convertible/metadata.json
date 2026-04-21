@@ -1,0 +1,26 @@
+{
+  "make": "Mini",
+  "model": "Cooper Convertible",
+  "brandSlug": "mini",
+  "modelSlug": "cooper-convertible",
+  "sourceUrl": "https://www.cardekho.com/mini/cooper-convertible",
+  "scrapedAt": "2026-04-21T06:49:52.775Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 4,
+    "total": 4
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mini/cooper-convertible/colors/rooftop-grey.avif",
+  "colorNames": [
+    "Rooftop Grey",
+    "Chilli Red",
+    "Blue",
+    "Midnight Black"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mini/cooper-convertible/colors/rooftop-grey.avif",
+    "/data/brand-model-images/4w-galleries/mini/cooper-convertible/colors/chilli-red.avif",
+    "/data/brand-model-images/4w-galleries/mini/cooper-convertible/colors/blue.avif",
+    "/data/brand-model-images/4w-galleries/mini/cooper-convertible/colors/midnight-black.avif"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "make": "Tata Motors",
+  "model": "Yodha Pickup",
+  "brandSlug": "tata",
+  "modelSlug": "yodha-pickup",
+  "sourceUrl": "https://www.cardekho.com/tata/yodha-pickup",
+  "scrapedAt": "2026-04-21T06:19:09.382Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 1,
+    "total": 1
+  },
+  "hero": "/data/brand-model-images/4w-galleries/tata/yodha-pickup/colors/white.avif",
+  "colorNames": [
+    "White"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/tata/yodha-pickup/colors/white.avif"
+  ]
+}

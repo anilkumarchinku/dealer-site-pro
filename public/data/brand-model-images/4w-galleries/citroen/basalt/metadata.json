@@ -1,0 +1,28 @@
+{
+  "make": "Citroen",
+  "model": "Basalt",
+  "brandSlug": "citroen",
+  "modelSlug": "basalt",
+  "sourceUrl": "https://www.cardekho.com/citroen/basalt",
+  "scrapedAt": "2026-04-21T06:19:43.575Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 5,
+    "total": 5
+  },
+  "hero": "/data/brand-model-images/4w-galleries/citroen/basalt/colors/cosmos-blue.avif",
+  "colorNames": [
+    "Cosmos Blue",
+    "Perla Nera Black",
+    "Polar White",
+    "Steel Grey",
+    "Garnet Red"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/citroen/basalt/colors/cosmos-blue.avif",
+    "/data/brand-model-images/4w-galleries/citroen/basalt/colors/perla-nera-black.avif",
+    "/data/brand-model-images/4w-galleries/citroen/basalt/colors/polar-white.avif",
+    "/data/brand-model-images/4w-galleries/citroen/basalt/colors/steel-grey.avif",
+    "/data/brand-model-images/4w-galleries/citroen/basalt/colors/garnet-red.avif"
+  ]
+}

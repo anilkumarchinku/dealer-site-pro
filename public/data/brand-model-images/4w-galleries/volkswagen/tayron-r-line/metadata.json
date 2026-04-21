@@ -1,0 +1,30 @@
+{
+  "make": "Volkswagen",
+  "model": "Tayron R-Line",
+  "brandSlug": "volkswagen",
+  "modelSlug": "tayron-r-line",
+  "sourceUrl": "https://www.cardekho.com/volkswagen/tayron-r-line",
+  "scrapedAt": "2026-04-21T06:19:36.096Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 6,
+    "total": 6
+  },
+  "hero": "/data/brand-model-images/4w-galleries/volkswagen/tayron-r-line/colors/nightshade-blue-metallic.avif",
+  "colorNames": [
+    "Nightshade Blue Metallic",
+    "Ultra Violet Metallic",
+    "Oryx White Mother Of Pearl Effect",
+    "Grenadilla Black Metallic",
+    "Oyster Silver Metallic",
+    "Dolphin Grey Metallic"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/volkswagen/tayron-r-line/colors/nightshade-blue-metallic.avif",
+    "/data/brand-model-images/4w-galleries/volkswagen/tayron-r-line/colors/ultra-violet-metallic.avif",
+    "/data/brand-model-images/4w-galleries/volkswagen/tayron-r-line/colors/oryx-white-mother-of-pearl-effect.avif",
+    "/data/brand-model-images/4w-galleries/volkswagen/tayron-r-line/colors/grenadilla-black-metallic.avif",
+    "/data/brand-model-images/4w-galleries/volkswagen/tayron-r-line/colors/oyster-silver-metallic.avif",
+    "/data/brand-model-images/4w-galleries/volkswagen/tayron-r-line/colors/dolphin-grey-metallic.avif"
+  ]
+}

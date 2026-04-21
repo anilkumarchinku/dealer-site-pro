@@ -1,0 +1,28 @@
+{
+  "make": "Land Rover",
+  "model": "Discovery Sport",
+  "brandSlug": "land-rover",
+  "modelSlug": "discovery-sport",
+  "sourceUrl": "https://www.cardekho.com/land-rover/discovery-sport",
+  "scrapedAt": "2026-04-21T06:22:41.391Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 5,
+    "total": 5
+  },
+  "hero": "/data/brand-model-images/4w-galleries/land-rover/discovery-sport/colors/firenze-red-dt.avif",
+  "colorNames": [
+    "Firenze Red DT",
+    "Eiger Grey DT",
+    "Fuji White DT",
+    "Santorini Black",
+    "Varesine Blue DT"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/land-rover/discovery-sport/colors/firenze-red-dt.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/discovery-sport/colors/eiger-grey-dt.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/discovery-sport/colors/fuji-white-dt.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/discovery-sport/colors/santorini-black.avif",
+    "/data/brand-model-images/4w-galleries/land-rover/discovery-sport/colors/varesine-blue-dt.avif"
+  ]
+}

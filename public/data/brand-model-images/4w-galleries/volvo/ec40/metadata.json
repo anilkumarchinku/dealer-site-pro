@@ -1,0 +1,34 @@
+{
+  "make": "Volvo",
+  "model": "EC40",
+  "brandSlug": "volvo",
+  "modelSlug": "ec40",
+  "sourceUrl": "https://www.cardekho.com/volvo/ec40",
+  "scrapedAt": "2026-04-21T06:20:58.179Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 8,
+    "total": 8
+  },
+  "hero": "/data/brand-model-images/4w-galleries/volvo/ec40/colors/sand-dune.avif",
+  "colorNames": [
+    "Sand Dune",
+    "Onyx Black",
+    "Fjord Blue",
+    "Silver Dawn",
+    "Crystal White",
+    "Vapour Grey",
+    "Sage Green",
+    "Cloud Blue"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/volvo/ec40/colors/sand-dune.avif",
+    "/data/brand-model-images/4w-galleries/volvo/ec40/colors/onyx-black.avif",
+    "/data/brand-model-images/4w-galleries/volvo/ec40/colors/fjord-blue.avif",
+    "/data/brand-model-images/4w-galleries/volvo/ec40/colors/silver-dawn.avif",
+    "/data/brand-model-images/4w-galleries/volvo/ec40/colors/crystal-white.avif",
+    "/data/brand-model-images/4w-galleries/volvo/ec40/colors/vapour-grey.avif",
+    "/data/brand-model-images/4w-galleries/volvo/ec40/colors/sage-green.avif",
+    "/data/brand-model-images/4w-galleries/volvo/ec40/colors/cloud-blue.avif"
+  ]
+}

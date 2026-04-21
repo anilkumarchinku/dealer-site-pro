@@ -1,0 +1,32 @@
+{
+  "make": "Isuzu",
+  "model": "V-Cross",
+  "brandSlug": "isuzu",
+  "modelSlug": "v-cross",
+  "sourceUrl": "https://www.cardekho.com/isuzu/v-cross",
+  "scrapedAt": "2026-04-21T06:19:46.853Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 7,
+    "total": 7
+  },
+  "hero": "/data/brand-model-images/4w-galleries/isuzu/v-cross/colors/galena-gray.avif",
+  "colorNames": [
+    "Galena Gray",
+    "Splash White",
+    "Nautilus Blue",
+    "Red Spinal Mica",
+    "Black Mica",
+    "Silver Metallic",
+    "Silky White Pearl"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/isuzu/v-cross/colors/galena-gray.avif",
+    "/data/brand-model-images/4w-galleries/isuzu/v-cross/colors/splash-white.avif",
+    "/data/brand-model-images/4w-galleries/isuzu/v-cross/colors/nautilus-blue.avif",
+    "/data/brand-model-images/4w-galleries/isuzu/v-cross/colors/red-spinal-mica.avif",
+    "/data/brand-model-images/4w-galleries/isuzu/v-cross/colors/black-mica.avif",
+    "/data/brand-model-images/4w-galleries/isuzu/v-cross/colors/silver-metallic.avif",
+    "/data/brand-model-images/4w-galleries/isuzu/v-cross/colors/silky-white-pearl.avif"
+  ]
+}

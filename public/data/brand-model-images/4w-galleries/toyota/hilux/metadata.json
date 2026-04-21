@@ -1,0 +1,28 @@
+{
+  "make": "Toyota",
+  "model": "Hilux",
+  "brandSlug": "toyota",
+  "modelSlug": "hilux",
+  "sourceUrl": "https://www.cardekho.com/toyota/hilux",
+  "scrapedAt": "2026-04-21T06:19:32.864Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 5,
+    "total": 5
+  },
+  "hero": "/data/brand-model-images/4w-galleries/toyota/hilux/colors/white-pearl-crystal-shine.avif",
+  "colorNames": [
+    "White Pearl Crystal Shine",
+    "Emotional Red",
+    "Attitude Black",
+    "Grey Metallic",
+    "Super White"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/toyota/hilux/colors/white-pearl-crystal-shine.avif",
+    "/data/brand-model-images/4w-galleries/toyota/hilux/colors/emotional-red.avif",
+    "/data/brand-model-images/4w-galleries/toyota/hilux/colors/attitude-black.avif",
+    "/data/brand-model-images/4w-galleries/toyota/hilux/colors/grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/toyota/hilux/colors/super-white.avif"
+  ]
+}

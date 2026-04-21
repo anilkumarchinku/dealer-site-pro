@@ -1,0 +1,34 @@
+{
+  "make": "Ferrari",
+  "model": "849 Testarossa",
+  "brandSlug": "ferrari",
+  "modelSlug": "849-testarossa",
+  "sourceUrl": "https://www.cardekho.com/ferrari/849-testarossa",
+  "scrapedAt": "2026-04-21T06:20:43.395Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 8,
+    "total": 8
+  },
+  "hero": "/data/brand-model-images/4w-galleries/ferrari/849-testarossa/colors/nero-ds.avif",
+  "colorNames": [
+    "Nero Ds",
+    "Rosso Mugello",
+    "W.B.Bianco Avus",
+    "W.B.Blu Pozzi",
+    "Rosso Corsa Ds",
+    "Rosso Scuderia",
+    "Grigio Scuro",
+    "Giallo Modena Ds"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/ferrari/849-testarossa/colors/nero-ds.avif",
+    "/data/brand-model-images/4w-galleries/ferrari/849-testarossa/colors/rosso-mugello.avif",
+    "/data/brand-model-images/4w-galleries/ferrari/849-testarossa/colors/wbbianco-avus.avif",
+    "/data/brand-model-images/4w-galleries/ferrari/849-testarossa/colors/wbblu-pozzi.avif",
+    "/data/brand-model-images/4w-galleries/ferrari/849-testarossa/colors/rosso-corsa-ds.avif",
+    "/data/brand-model-images/4w-galleries/ferrari/849-testarossa/colors/rosso-scuderia.avif",
+    "/data/brand-model-images/4w-galleries/ferrari/849-testarossa/colors/grigio-scuro.avif",
+    "/data/brand-model-images/4w-galleries/ferrari/849-testarossa/colors/giallo-modena-ds.avif"
+  ]
+}

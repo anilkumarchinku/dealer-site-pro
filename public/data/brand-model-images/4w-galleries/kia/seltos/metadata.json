@@ -1,0 +1,42 @@
+{
+  "make": "Kia",
+  "model": "Seltos",
+  "brandSlug": "kia",
+  "modelSlug": "seltos",
+  "sourceUrl": "https://www.cardekho.com/kia/seltos",
+  "scrapedAt": "2026-04-21T06:19:28.063Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 12,
+    "total": 12
+  },
+  "hero": "/data/brand-model-images/4w-galleries/kia/seltos/colors/glacier-white-pearl.avif",
+  "colorNames": [
+    "Glacier White Pearl",
+    "Magma Red With Aurora Black",
+    "Ivory Silver Gloss",
+    "Pewter Olive",
+    "Frost Blue",
+    "Morning Haze",
+    "Aurora Black Pearl",
+    "Matte Graphite",
+    "Magma Red",
+    "Imperial Blue",
+    "Glacier White Pearl With Aurora Black",
+    "Gravity Grey"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/kia/seltos/colors/glacier-white-pearl.avif",
+    "/data/brand-model-images/4w-galleries/kia/seltos/colors/magma-red-with-aurora-black.avif",
+    "/data/brand-model-images/4w-galleries/kia/seltos/colors/ivory-silver-gloss.avif",
+    "/data/brand-model-images/4w-galleries/kia/seltos/colors/pewter-olive.avif",
+    "/data/brand-model-images/4w-galleries/kia/seltos/colors/frost-blue.avif",
+    "/data/brand-model-images/4w-galleries/kia/seltos/colors/morning-haze.avif",
+    "/data/brand-model-images/4w-galleries/kia/seltos/colors/aurora-black-pearl.avif",
+    "/data/brand-model-images/4w-galleries/kia/seltos/colors/matte-graphite.avif",
+    "/data/brand-model-images/4w-galleries/kia/seltos/colors/magma-red.avif",
+    "/data/brand-model-images/4w-galleries/kia/seltos/colors/imperial-blue.avif",
+    "/data/brand-model-images/4w-galleries/kia/seltos/colors/glacier-white-pearl-with-aurora-black.avif",
+    "/data/brand-model-images/4w-galleries/kia/seltos/colors/gravity-grey.avif"
+  ]
+}

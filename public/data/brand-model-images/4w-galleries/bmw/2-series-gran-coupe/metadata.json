@@ -1,0 +1,26 @@
+{
+  "make": "BMW",
+  "model": "2 Series Gran Coupe",
+  "brandSlug": "bmw",
+  "modelSlug": "2-series-gran-coupe",
+  "sourceUrl": "https://www.cardekho.com/bmw/2-series-gran-coupe",
+  "scrapedAt": "2026-04-21T06:19:53.061Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 4,
+    "total": 4
+  },
+  "hero": "/data/brand-model-images/4w-galleries/bmw/2-series-gran-coupe/colors/brooklyn-grey-metallic.avif",
+  "colorNames": [
+    "Brooklyn Grey Metallic",
+    "Alpine White",
+    "Portimao Blue Metallic",
+    "Black Sapphire"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/bmw/2-series-gran-coupe/colors/brooklyn-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/2-series-gran-coupe/colors/alpine-white.avif",
+    "/data/brand-model-images/4w-galleries/bmw/2-series-gran-coupe/colors/portimao-blue-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/2-series-gran-coupe/colors/black-sapphire.avif"
+  ]
+}

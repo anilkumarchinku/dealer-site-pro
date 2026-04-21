@@ -1,0 +1,26 @@
+{
+  "make": "Mercedes-Benz",
+  "model": "GLC",
+  "brandSlug": "mercedes-benz",
+  "modelSlug": "glc",
+  "sourceUrl": "https://www.cardekho.com/mercedes-benz/glc",
+  "scrapedAt": "2026-04-21T06:20:06.373Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 4,
+    "total": 4
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mercedes-benz/glc/colors/polar-white-with-black-roof.avif",
+  "colorNames": [
+    "Polar White With Black Roof",
+    "Nautic Blue",
+    "Mojave Silver",
+    "Obsidian Black"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mercedes-benz/glc/colors/polar-white-with-black-roof.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/glc/colors/nautic-blue.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/glc/colors/mojave-silver.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/glc/colors/obsidian-black.avif"
+  ]
+}

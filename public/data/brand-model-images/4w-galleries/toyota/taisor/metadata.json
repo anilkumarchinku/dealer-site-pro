@@ -1,0 +1,36 @@
+{
+  "make": "Toyota",
+  "model": "Taisor",
+  "brandSlug": "toyota",
+  "modelSlug": "taisor",
+  "sourceUrl": "https://www.cardekho.com/toyota/taisor",
+  "scrapedAt": "2026-04-21T06:19:34.409Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 9,
+    "total": 9
+  },
+  "hero": "/data/brand-model-images/4w-galleries/toyota/taisor/colors/enticing-silver.avif",
+  "colorNames": [
+    "Enticing Silver",
+    "Cafe White With Midnight Black",
+    "Gaming Grey",
+    "Lucent Orange",
+    "Sportin Red With Midnight Black",
+    "Enticing Silver With Midnight Black",
+    "Bluish Black",
+    "Sportin Red",
+    "Cafe White"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/toyota/taisor/colors/enticing-silver.avif",
+    "/data/brand-model-images/4w-galleries/toyota/taisor/colors/cafe-white-with-midnight-black.avif",
+    "/data/brand-model-images/4w-galleries/toyota/taisor/colors/gaming-grey.avif",
+    "/data/brand-model-images/4w-galleries/toyota/taisor/colors/lucent-orange.avif",
+    "/data/brand-model-images/4w-galleries/toyota/taisor/colors/sportin-red-with-midnight-black.avif",
+    "/data/brand-model-images/4w-galleries/toyota/taisor/colors/enticing-silver-with-midnight-black.avif",
+    "/data/brand-model-images/4w-galleries/toyota/taisor/colors/bluish-black.avif",
+    "/data/brand-model-images/4w-galleries/toyota/taisor/colors/sportin-red.avif",
+    "/data/brand-model-images/4w-galleries/toyota/taisor/colors/cafe-white.avif"
+  ]
+}

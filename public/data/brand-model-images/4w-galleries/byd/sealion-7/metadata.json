@@ -1,0 +1,26 @@
+{
+  "make": "BYD",
+  "model": "Sealion 7",
+  "brandSlug": "byd",
+  "modelSlug": "sealion-7",
+  "sourceUrl": "https://www.cardekho.com/byd/sealion-7",
+  "scrapedAt": "2026-04-21T06:19:44.741Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 4,
+    "total": 4
+  },
+  "hero": "/data/brand-model-images/4w-galleries/byd/sealion-7/colors/aurora-white.avif",
+  "colorNames": [
+    "Aurora White",
+    "Gray",
+    "Cosmic Black",
+    "Atlantis Gray"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/byd/sealion-7/colors/aurora-white.avif",
+    "/data/brand-model-images/4w-galleries/byd/sealion-7/colors/gray.avif",
+    "/data/brand-model-images/4w-galleries/byd/sealion-7/colors/cosmic-black.avif",
+    "/data/brand-model-images/4w-galleries/byd/sealion-7/colors/atlantis-gray.avif"
+  ]
+}

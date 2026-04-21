@@ -1,0 +1,34 @@
+{
+  "make": "Volkswagen",
+  "model": "Virtus",
+  "brandSlug": "volkswagen",
+  "modelSlug": "virtus",
+  "sourceUrl": "https://www.cardekho.com/volkswagen/virtus",
+  "scrapedAt": "2026-04-21T06:19:35.050Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 8,
+    "total": 8
+  },
+  "hero": "/data/brand-model-images/4w-galleries/volkswagen/virtus/colors/lava-blue.avif",
+  "colorNames": [
+    "Lava Blue",
+    "Carbon Steel Grey Matte",
+    "Rising Blue Metallic",
+    "Carbon Steel Grey",
+    "Deep Black Pearl",
+    "Reflex Silver",
+    "Candy White",
+    "Wild Cherry Red"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/volkswagen/virtus/colors/lava-blue.avif",
+    "/data/brand-model-images/4w-galleries/volkswagen/virtus/colors/carbon-steel-grey-matte.avif",
+    "/data/brand-model-images/4w-galleries/volkswagen/virtus/colors/rising-blue-metallic.avif",
+    "/data/brand-model-images/4w-galleries/volkswagen/virtus/colors/carbon-steel-grey.avif",
+    "/data/brand-model-images/4w-galleries/volkswagen/virtus/colors/deep-black-pearl.avif",
+    "/data/brand-model-images/4w-galleries/volkswagen/virtus/colors/reflex-silver.avif",
+    "/data/brand-model-images/4w-galleries/volkswagen/virtus/colors/candy-white.avif",
+    "/data/brand-model-images/4w-galleries/volkswagen/virtus/colors/wild-cherry-red.avif"
+  ]
+}

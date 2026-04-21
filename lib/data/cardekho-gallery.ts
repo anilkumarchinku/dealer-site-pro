@@ -1,6 +1,9 @@
 import 'server-only'
 
+import fs from 'fs/promises'
+import path from 'path'
 import { cache } from 'react'
+import { brandNameToId, modelToSlug } from '@/lib/utils/brand-model-images'
 import { getRequestOrigin } from '@/lib/utils/request-origin'
 
 export interface CardekhoGalleryData {
@@ -11,6 +14,11 @@ export interface CardekhoGalleryData {
     colorNames: string[]
     colorImages: string[]
     feature: string[]
+}
+
+interface GalleryLookupOptions {
+    make?: string
+    model?: string
 }
 
 function slugify(value: string): string {
@@ -163,23 +171,62 @@ function extractColorNamesFromLdJson(html: string): string[] {
     return Array.from(names)
 }
 
-async function loadLocalGallery(sourceUrl: string): Promise<CardekhoGalleryData | null> {
-    const origin = await getRequestOrigin()
-    const tokens = deriveSourceTokens(sourceUrl)
-    if (!origin || !tokens) return null
+function buildLocalGalleryCandidates(sourceUrl: string, options?: GalleryLookupOptions): string[] {
+    const candidates = new Set<string>()
+    const root = process.cwd()
 
-    const candidates = Array.from(new Set(
-        tokens.modelTokens.map((modelToken) =>
-            `${origin}/data/brand-model-images/4w-galleries/${tokens.brandSlug}/${modelToken}/metadata.json`
+    if (options?.make && options?.model) {
+        const brandFolder = brandNameToId(options.make, '4w')
+        const modelFolder = modelToSlug(options.model)
+        candidates.add(
+            path.join(root, 'public', 'data', 'brand-model-images', '4w-galleries', brandFolder, modelFolder, 'metadata.json')
         )
-    ))
+    }
 
-    for (const candidate of candidates) {
+    const tokens = deriveSourceTokens(sourceUrl)
+    if (tokens) {
+        for (const modelToken of tokens.modelTokens) {
+            candidates.add(
+                path.join(root, 'public', 'data', 'brand-model-images', '4w-galleries', tokens.brandSlug, modelToken, 'metadata.json')
+            )
+        }
+    }
+
+    return Array.from(candidates)
+}
+
+async function loadLocalGallery(sourceUrl: string, options?: GalleryLookupOptions): Promise<CardekhoGalleryData | null> {
+    for (const candidate of buildLocalGalleryCandidates(sourceUrl, options)) {
         try {
-            const response = await fetch(candidate, {
+            const metadata = JSON.parse(
+                await fs.readFile(candidate, 'utf8')
+            ) as Partial<CardekhoGalleryData> & { sourceUrl?: string }
+
+            return {
+                sourceUrl: metadata.sourceUrl ?? sourceUrl,
+                hero: metadata.hero ?? null,
+                exterior: metadata.exterior ?? [],
+                interior: metadata.interior ?? [],
+                colorNames: metadata.colorNames ?? [],
+                colorImages: metadata.colorImages ?? [],
+                feature: metadata.feature ?? [],
+            }
+        } catch {
+            continue
+        }
+    }
+
+    const origin = await getRequestOrigin()
+    if (!origin) return null
+
+    for (const candidate of buildLocalGalleryCandidates(sourceUrl, options)) {
+        const publicPath = candidate.split(`${path.sep}public${path.sep}`)[1]
+        if (!publicPath) continue
+
+        try {
+            const response = await fetch(`${origin}/${publicPath.split(path.sep).join('/')}`, {
                 next: { revalidate: 60 * 60 * 24 },
             })
-
             if (!response.ok) continue
 
             const metadata = await response.json() as Partial<CardekhoGalleryData> & { sourceUrl?: string }
@@ -216,12 +263,15 @@ function filterByModel(urls: string[], modelTokens: string[]): string[] {
     })
 }
 
-export const fetchCardekhoGallery = cache(async (sourceUrl: string): Promise<CardekhoGalleryData | null> => {
-    if (!sourceUrl?.startsWith('http')) return null
-
+export const fetchCardekhoGallery = cache(async (
+    sourceUrl: string,
+    options?: GalleryLookupOptions,
+): Promise<CardekhoGalleryData | null> => {
     try {
-        const localGallery = await loadLocalGallery(sourceUrl)
+        const localGallery = await loadLocalGallery(sourceUrl, options)
         if (localGallery) return localGallery
+
+        if (!sourceUrl?.startsWith('http')) return null
 
         const tokens = deriveSourceTokens(sourceUrl)
         const modelTokens = tokens?.modelTokens ?? []

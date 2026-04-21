@@ -1,0 +1,30 @@
+{
+  "make": "Skoda",
+  "model": "Kodiaq",
+  "brandSlug": "skoda",
+  "modelSlug": "kodiaq",
+  "sourceUrl": "https://www.cardekho.com/skoda/kodiaq",
+  "scrapedAt": "2026-04-21T06:19:37.552Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 6,
+    "total": 6
+  },
+  "hero": "/data/brand-model-images/4w-galleries/skoda/kodiaq/colors/moon-white.avif",
+  "colorNames": [
+    "Moon White",
+    "Bronx Gold",
+    "Graphite Grey",
+    "Magic Black",
+    "Race Blue",
+    "Velvet Red"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/skoda/kodiaq/colors/moon-white.avif",
+    "/data/brand-model-images/4w-galleries/skoda/kodiaq/colors/bronx-gold.avif",
+    "/data/brand-model-images/4w-galleries/skoda/kodiaq/colors/graphite-grey.avif",
+    "/data/brand-model-images/4w-galleries/skoda/kodiaq/colors/magic-black.avif",
+    "/data/brand-model-images/4w-galleries/skoda/kodiaq/colors/race-blue.avif",
+    "/data/brand-model-images/4w-galleries/skoda/kodiaq/colors/velvet-red.avif"
+  ]
+}

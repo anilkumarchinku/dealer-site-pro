@@ -1,0 +1,28 @@
+{
+  "make": "Jeep",
+  "model": "Wrangler",
+  "brandSlug": "jeep",
+  "modelSlug": "wrangler",
+  "sourceUrl": "https://www.cardekho.com/jeep/wrangler",
+  "scrapedAt": "2026-04-21T06:19:41.936Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 5,
+    "total": 5
+  },
+  "hero": "/data/brand-model-images/4w-galleries/jeep/wrangler/colors/anvil-clear-coat.avif",
+  "colorNames": [
+    "Anvil Clear Coat",
+    "Special Edition",
+    "Fire Cracker Red",
+    "Black",
+    "Bright White"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/jeep/wrangler/colors/anvil-clear-coat.avif",
+    "/data/brand-model-images/4w-galleries/jeep/wrangler/colors/special-edition.avif",
+    "/data/brand-model-images/4w-galleries/jeep/wrangler/colors/fire-cracker-red.avif",
+    "/data/brand-model-images/4w-galleries/jeep/wrangler/colors/black.avif",
+    "/data/brand-model-images/4w-galleries/jeep/wrangler/colors/bright-white.avif"
+  ]
+}

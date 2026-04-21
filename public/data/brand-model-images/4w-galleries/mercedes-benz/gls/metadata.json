@@ -1,0 +1,28 @@
+{
+  "make": "Mercedes-Benz",
+  "model": "GLS",
+  "brandSlug": "mercedes-benz",
+  "modelSlug": "gls",
+  "sourceUrl": "https://www.cardekho.com/mercedes-benz/gls",
+  "scrapedAt": "2026-04-21T06:20:04.655Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 5,
+    "total": 5
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mercedes-benz/gls/colors/selenite-grey.avif",
+  "colorNames": [
+    "Selenite Grey",
+    "High Tech Silver",
+    "Sodalite Blue",
+    "Polar White",
+    "Obsidian Black"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mercedes-benz/gls/colors/selenite-grey.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/gls/colors/high-tech-silver.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/gls/colors/sodalite-blue.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/gls/colors/polar-white.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/gls/colors/obsidian-black.avif"
+  ]
+}

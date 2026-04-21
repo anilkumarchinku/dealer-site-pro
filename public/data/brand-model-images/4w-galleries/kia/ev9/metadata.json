@@ -1,0 +1,28 @@
+{
+  "make": "Kia",
+  "model": "EV9",
+  "brandSlug": "kia",
+  "modelSlug": "ev9",
+  "sourceUrl": "https://www.cardekho.com/kia/ev9",
+  "scrapedAt": "2026-04-21T06:19:30.721Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 5,
+    "total": 5
+  },
+  "hero": "/data/brand-model-images/4w-galleries/kia/ev9/colors/panthera-metal.avif",
+  "colorNames": [
+    "Panthera Metal",
+    "Pebble Gray",
+    "Aurora Black Pearl",
+    "Snow White Pearl",
+    "Ocean Blue Pearl"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/kia/ev9/colors/panthera-metal.avif",
+    "/data/brand-model-images/4w-galleries/kia/ev9/colors/pebble-gray.avif",
+    "/data/brand-model-images/4w-galleries/kia/ev9/colors/aurora-black-pearl.avif",
+    "/data/brand-model-images/4w-galleries/kia/ev9/colors/snow-white-pearl.avif",
+    "/data/brand-model-images/4w-galleries/kia/ev9/colors/ocean-blue-pearl.avif"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "make": "Force Motors",
+  "model": "Gurkha",
+  "brandSlug": "force",
+  "modelSlug": "gurkha",
+  "sourceUrl": "https://www.cardekho.com/force/gurkha",
+  "scrapedAt": "2026-04-21T06:22:31.024Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 4,
+    "total": 4
+  },
+  "hero": "/data/brand-model-images/4w-galleries/force/gurkha/colors/red.avif",
+  "colorNames": [
+    "Red",
+    "White",
+    "Black",
+    "Green"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/force/gurkha/colors/red.avif",
+    "/data/brand-model-images/4w-galleries/force/gurkha/colors/white.avif",
+    "/data/brand-model-images/4w-galleries/force/gurkha/colors/black.avif",
+    "/data/brand-model-images/4w-galleries/force/gurkha/colors/green.avif"
+  ]
+}

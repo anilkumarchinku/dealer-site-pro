@@ -1,0 +1,34 @@
+{
+  "make": "Jeep",
+  "model": "Meridian",
+  "brandSlug": "jeep",
+  "modelSlug": "meridian",
+  "sourceUrl": "https://www.cardekho.com/jeep/meridian",
+  "scrapedAt": "2026-04-21T06:19:42.511Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 8,
+    "total": 8
+  },
+  "hero": "/data/brand-model-images/4w-galleries/jeep/meridian/colors/galaxy-blue.avif",
+  "colorNames": [
+    "Galaxy Blue",
+    "Pearl White",
+    "Brilliant Black",
+    "Minimal Grey",
+    "Techno Metallic Green",
+    "Velvet Red",
+    "Silvery Moon",
+    "Magnesio Grey"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/jeep/meridian/colors/galaxy-blue.avif",
+    "/data/brand-model-images/4w-galleries/jeep/meridian/colors/pearl-white.avif",
+    "/data/brand-model-images/4w-galleries/jeep/meridian/colors/brilliant-black.avif",
+    "/data/brand-model-images/4w-galleries/jeep/meridian/colors/minimal-grey.avif",
+    "/data/brand-model-images/4w-galleries/jeep/meridian/colors/techno-metallic-green.avif",
+    "/data/brand-model-images/4w-galleries/jeep/meridian/colors/velvet-red.avif",
+    "/data/brand-model-images/4w-galleries/jeep/meridian/colors/silvery-moon.avif",
+    "/data/brand-model-images/4w-galleries/jeep/meridian/colors/magnesio-grey.avif"
+  ]
+}

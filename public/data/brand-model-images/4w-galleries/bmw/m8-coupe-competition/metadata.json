@@ -1,0 +1,36 @@
+{
+  "make": "BMW",
+  "model": "M8 Coupe Competition",
+  "brandSlug": "bmw",
+  "modelSlug": "m8-coupe-competition",
+  "sourceUrl": "https://www.cardekho.com/bmw/m8-coupe-competition",
+  "scrapedAt": "2026-04-21T06:19:48.417Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 9,
+    "total": 9
+  },
+  "hero": "/data/brand-model-images/4w-galleries/bmw/m8-coupe-competition/colors/brooklyn-grey-metallic.avif",
+  "colorNames": [
+    "Brooklyn Grey Metallic",
+    "Skyscraper Grey Metallic",
+    "Tanzanite Blue Metallic",
+    "Dravit Grey Metallic",
+    "Daytona Beach Blue Uni",
+    "Aventurine Red Metallic",
+    "Marina Bay Blue Metallic",
+    "Black Sapphire Metallic",
+    "Man Green Metallic"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/bmw/m8-coupe-competition/colors/brooklyn-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m8-coupe-competition/colors/skyscraper-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m8-coupe-competition/colors/tanzanite-blue-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m8-coupe-competition/colors/dravit-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m8-coupe-competition/colors/daytona-beach-blue-uni.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m8-coupe-competition/colors/aventurine-red-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m8-coupe-competition/colors/marina-bay-blue-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m8-coupe-competition/colors/black-sapphire-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m8-coupe-competition/colors/man-green-metallic.avif"
+  ]
+}

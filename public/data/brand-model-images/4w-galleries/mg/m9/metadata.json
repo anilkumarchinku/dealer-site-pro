@@ -1,0 +1,24 @@
+{
+  "make": "MG",
+  "model": "M9",
+  "brandSlug": "mg",
+  "modelSlug": "m9",
+  "sourceUrl": "https://www.cardekho.com/mg/m9",
+  "scrapedAt": "2026-04-21T06:19:39.985Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 3,
+    "total": 3
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mg/m9/colors/concrete-grey-with-black-roof.avif",
+  "colorNames": [
+    "Concrete Grey With Black Roof",
+    "Pearl Lustre White With Black Roof",
+    "Metal Black"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mg/m9/colors/concrete-grey-with-black-roof.avif",
+    "/data/brand-model-images/4w-galleries/mg/m9/colors/pearl-lustre-white-with-black-roof.avif",
+    "/data/brand-model-images/4w-galleries/mg/m9/colors/metal-black.avif"
+  ]
+}

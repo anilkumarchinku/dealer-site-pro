@@ -3,6 +3,7 @@ import 'server-only'
 import type { Car, CarVariant } from '@/lib/types/car'
 import { CAR_MODEL_COLORS } from '@/lib/data/car-colors'
 import { fetchCardekhoGallery } from '@/lib/data/cardekho-gallery'
+import { get4WPriceMaxInr, get4WPriceMinInr } from '@/lib/data/four-wheelers'
 import { getRequestOrigin } from '@/lib/utils/request-origin'
 
 const MAKE_TO_JSON: Record<string, string> = {
@@ -115,8 +116,8 @@ function flattenBrandVariants(raw: unknown): Record<string, unknown>[] {
         const model = record.model ?? record.model_name
         const variant = record.variant_name ?? record.variant
         const hasUsefulDetail = Boolean(
-            record.ex_showroom_price ||
-            record.ex_showroom_price_min_inr ||
+            get4WPriceMinInr(record) ||
+            get4WPriceMaxInr(record) ||
             record.power ||
             record.torque ||
             record.key_features ||
@@ -190,7 +191,7 @@ function inferAirbags(values: string[]): number {
 
 function buildVariants(entries: Record<string, unknown>[], carId: string, fallbackFuel: string, fallbackTransmission: string): CarVariant[] {
     const variants: Array<CarVariant | null> = entries.map((entry, index) => {
-            const price = parsePrice(entry.ex_showroom_price ?? entry.ex_showroom_price_min_inr)
+            const price = get4WPriceMinInr(entry)
             if (!price) return null
 
             return {
@@ -306,10 +307,69 @@ export async function hydrateCarWithJsonDetails(car: Car): Promise<Car> {
     if (!car.make || !car.model) return car
 
     const matchingVariants = await getMatchingModelVariants(car.make, car.model)
-    if (matchingVariants.length === 0) return car
+    const sourceUrlFromVariants = matchingVariants
+        .map(entry => String(entry.model_citation ?? entry.source_url ?? ''))
+        .find(Boolean) || ''
+    const sourceUrl = sourceUrlFromVariants || car.meta?.sourceUrl || ''
+    const scrapedGallery = await fetchCardekhoGallery(sourceUrl, {
+        make: car.make,
+        model: car.model,
+    })
+    const scrapedColors = colorsFromNames(scrapedGallery?.colorNames ?? [], scrapedGallery?.colorImages ?? [])
+    const fallbackColors = car.colors?.length
+        ? car.colors
+        : (CAR_MODEL_COLORS[`${car.make} ${car.model}`] ?? [])
+
+    const baseHeroImage = car.images.hero
+    const hasLocalHero = baseHeroImage?.startsWith('/data/')
+    const heroImage = hasLocalHero
+        ? baseHeroImage
+        : (scrapedGallery?.hero || car.images.hero)
+    const baseMergedExterior = scrapedGallery?.exterior?.length
+        ? scrapedGallery.exterior
+        : car.images.exterior
+    const baseMergedInterior = scrapedGallery?.interior?.length
+        ? scrapedGallery.interior
+        : car.images.interior
+    const baseMergedColorImages = scrapedGallery?.colorImages?.length
+        ? scrapedGallery.colorImages
+        : car.images.colors
+    const baseFeatureImages = scrapedGallery?.feature ?? []
+    const baseMergedExteriorWithFeatures = baseFeatureImages.length > 0
+        ? uniqueStrings([...baseMergedExterior, ...baseFeatureImages])
+        : baseMergedExterior
+    const baseHeroBlockList = [
+        heroImage,
+        scrapedGallery?.hero,
+        scrapedGallery?.exterior?.[0],
+    ].filter(Boolean) as string[]
+    const baseDedupedExterior = removeMatchingUrl(baseMergedExteriorWithFeatures, baseHeroBlockList)
+    const baseDedupedInterior = removeMatchingUrl(baseMergedInterior, [heroImage, ...baseDedupedExterior])
+    const mergedColorsWithoutJson = scrapedColors.length > 0 ? scrapedColors : fallbackColors
+
+    if (matchingVariants.length === 0) {
+        return {
+            ...car,
+            images: {
+                hero: heroImage,
+                exterior: baseDedupedExterior,
+                interior: baseDedupedInterior,
+                colors: uniqueStrings(baseMergedColorImages ?? []),
+            },
+            colors: mergedColorsWithoutJson,
+            meta: {
+                ...car.meta,
+                sourceUrl: sourceUrl || car.meta?.sourceUrl,
+            },
+        }
+    }
 
     const priceValues = matchingVariants
-        .map(entry => parsePrice(entry.ex_showroom_price ?? entry.ex_showroom_price_min_inr))
+        .flatMap((entry) => {
+            const min = get4WPriceMinInr(entry)
+            const max = get4WPriceMaxInr(entry)
+            return [min, max].filter((value): value is number => value != null)
+        })
         .filter((value): value is number => value != null)
     const fuelTypes = uniqueStrings(matchingVariants.map(entry => String(entry.fuel_type ?? '')).filter(Boolean))
     const transmissions = uniqueStrings(matchingVariants.map(entry => String(entry.transmission ?? '')).filter(Boolean))
@@ -366,21 +426,9 @@ export async function hydrateCarWithJsonDetails(car: Car): Promise<Car> {
         transmissions[0] ?? car.transmission.type
     )
     const jsonColors = uniqueColors(matchingVariants.flatMap(extractColors))
-    const sourceUrl = matchingVariants
-        .map(entry => String(entry.model_citation ?? entry.source_url ?? ''))
-        .find(Boolean) || car.meta?.sourceUrl || ''
-
-    const scrapedGallery = sourceUrl ? await fetchCardekhoGallery(sourceUrl) : null
-    const scrapedColors = colorsFromNames(scrapedGallery?.colorNames ?? [], scrapedGallery?.colorImages ?? [])
     const mergedColors = uniqueColors([...jsonColors, ...scrapedColors])
-    const fallbackColors = car.colors?.length
-        ? car.colors
-        : (CAR_MODEL_COLORS[`${car.make} ${car.model}`] ?? [])
-
-    // Prefer local hero (reliable, no hotlink issues) over CDN
-    const hasLocalHero = car.images.hero?.startsWith('/data/')
-    const heroImage = hasLocalHero
-        ? car.images.hero
+    const pricedHeroImage = hasLocalHero
+        ? baseHeroImage
         : (scrapedGallery?.hero || imageUrls[0] || car.images.hero)
 
     // Build exterior gallery from scraped data; remove hero + CDN hero to avoid duplicates
@@ -401,14 +449,14 @@ export async function hydrateCarWithJsonDetails(car: Car): Promise<Car> {
     // served at different CDN paths/sizes). Also block first 2 JSON imageUrls
     // (often spacers or the same hero shot from the JSON data).
     const heroBlockList = [
-        heroImage,
+        pricedHeroImage,
         scrapedGallery?.hero,
         scrapedGallery?.exterior?.[0],
         imageUrls[0],
         imageUrls[1],
     ].filter(Boolean) as string[]
     const dedupedExterior = removeMatchingUrl(mergedExteriorWithFeatures, heroBlockList)
-    const dedupedInterior = removeMatchingUrl(mergedInterior, [heroImage, ...dedupedExterior])
+    const dedupedInterior = removeMatchingUrl(mergedInterior, [pricedHeroImage, ...dedupedExterior])
 
     return {
         ...car,
@@ -469,7 +517,7 @@ export async function hydrateCarWithJsonDetails(car: Car): Promise<Car> {
             ncapRating: car.safety?.ncapRating,
         },
         images: {
-            hero: heroImage,
+            hero: pricedHeroImage,
             exterior: dedupedExterior,
             interior: dedupedInterior,
             colors: uniqueStrings(mergedColorImages ?? []),

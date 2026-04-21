@@ -1,0 +1,42 @@
+{
+  "make": "BMW",
+  "model": "i5",
+  "brandSlug": "bmw",
+  "modelSlug": "i5",
+  "sourceUrl": "https://www.cardekho.com/bmw/i5",
+  "scrapedAt": "2026-04-21T06:19:56.220Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 12,
+    "total": 12
+  },
+  "hero": "/data/brand-model-images/4w-galleries/bmw/i5/colors/brooklyn-grey-metallic.avif",
+  "colorNames": [
+    "Brooklyn Grey Metallic",
+    "Mineral White Metallic",
+    "Oxide Grey Metallic",
+    "Tanzanite Blue Metallic",
+    "DRAGON-FIRE-RED-METALLIC",
+    "Cape York Green Metallic",
+    "Carbon Black Metallic",
+    "Phytonic Blue Metallic",
+    "FROZEN-DEEP-GREY-METALLIC",
+    "Sophisto Grey Brilliant Effect",
+    "Black Sapphire",
+    "Frozen Pure Grey Metallic"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/bmw/i5/colors/brooklyn-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/i5/colors/mineral-white-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/i5/colors/oxide-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/i5/colors/tanzanite-blue-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/i5/colors/dragon-fire-red-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/i5/colors/cape-york-green-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/i5/colors/carbon-black-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/i5/colors/phytonic-blue-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/i5/colors/frozen-deep-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/i5/colors/sophisto-grey-brilliant-effect.avif",
+    "/data/brand-model-images/4w-galleries/bmw/i5/colors/black-sapphire.avif",
+    "/data/brand-model-images/4w-galleries/bmw/i5/colors/frozen-pure-grey-metallic.avif"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "make": "Lexus",
+  "model": "LX",
+  "brandSlug": "lexus",
+  "modelSlug": "lx",
+  "sourceUrl": "https://www.cardekho.com/lexus/lx",
+  "scrapedAt": "2026-04-21T06:20:54.845Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 4,
+    "total": 4
+  },
+  "hero": "/data/brand-model-images/4w-galleries/lexus/lx/colors/moon-desert.avif",
+  "colorNames": [
+    "Moon Desert",
+    "Sonic Titanium",
+    "Graphite Black Glass Flake",
+    "Sonic Quartz"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/lexus/lx/colors/moon-desert.avif",
+    "/data/brand-model-images/4w-galleries/lexus/lx/colors/sonic-titanium.avif",
+    "/data/brand-model-images/4w-galleries/lexus/lx/colors/graphite-black-glass-flake.avif",
+    "/data/brand-model-images/4w-galleries/lexus/lx/colors/sonic-quartz.avif"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "make": "Nissan",
+  "model": "Magnite",
+  "brandSlug": "nissan",
+  "modelSlug": "magnite",
+  "sourceUrl": "https://www.cardekho.com/nissan/magnite",
+  "scrapedAt": "2026-04-21T06:19:41.654Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 11,
+    "total": 11
+  },
+  "hero": "/data/brand-model-images/4w-galleries/nissan/magnite/colors/flare-garnet-red-with-onyx-black.avif",
+  "colorNames": [
+    "Flare Garnet Red With Onyx Black",
+    "Pearl White",
+    "Sunrise Copper Orange",
+    "Blade Silver With Onyx Black",
+    "Onyx Black",
+    "Flare Garnet Red",
+    "Blade Silver",
+    "Sunrise Copper Orange With Onyx Black",
+    "Pearl White With Onyx Black",
+    "Grey Metallic",
+    "Storm White"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/nissan/magnite/colors/flare-garnet-red-with-onyx-black.avif",
+    "/data/brand-model-images/4w-galleries/nissan/magnite/colors/pearl-white.avif",
+    "/data/brand-model-images/4w-galleries/nissan/magnite/colors/sunrise-copper-orange.avif",
+    "/data/brand-model-images/4w-galleries/nissan/magnite/colors/blade-silver-with-onyx-black.avif",
+    "/data/brand-model-images/4w-galleries/nissan/magnite/colors/onyx-black.avif",
+    "/data/brand-model-images/4w-galleries/nissan/magnite/colors/flare-garnet-red.avif",
+    "/data/brand-model-images/4w-galleries/nissan/magnite/colors/blade-silver.avif",
+    "/data/brand-model-images/4w-galleries/nissan/magnite/colors/sunrise-copper-orange-with-onyx-black.avif",
+    "/data/brand-model-images/4w-galleries/nissan/magnite/colors/pearl-white-with-onyx-black.avif",
+    "/data/brand-model-images/4w-galleries/nissan/magnite/colors/grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/nissan/magnite/colors/storm-white.avif"
+  ]
+}

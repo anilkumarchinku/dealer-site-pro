@@ -1,0 +1,44 @@
+{
+  "make": "Porsche",
+  "model": "Panamera",
+  "brandSlug": "porsche",
+  "modelSlug": "panamera",
+  "sourceUrl": "https://www.cardekho.com/porsche/panamera",
+  "scrapedAt": "2026-04-21T06:20:15.947Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 13,
+    "total": 13
+  },
+  "hero": "/data/brand-model-images/4w-galleries/porsche/panamera/colors/aventurine-green-metallic.avif",
+  "colorNames": [
+    "Aventurine Green Metallic",
+    "Oak Green Metallic Neo",
+    "Provence",
+    "Carrara White Metallic",
+    "Black",
+    "Gentian Blue Metallic",
+    "Crayon",
+    "Jet Black Metallic",
+    "Frozen Blue Metallic",
+    "Carmine Red",
+    "White",
+    "Dolomite Silver Metallic",
+    "Grey Metallic"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/porsche/panamera/colors/aventurine-green-metallic.avif",
+    "/data/brand-model-images/4w-galleries/porsche/panamera/colors/oak-green-metallic-neo.avif",
+    "/data/brand-model-images/4w-galleries/porsche/panamera/colors/provence.avif",
+    "/data/brand-model-images/4w-galleries/porsche/panamera/colors/carrara-white-metallic.avif",
+    "/data/brand-model-images/4w-galleries/porsche/panamera/colors/black.avif",
+    "/data/brand-model-images/4w-galleries/porsche/panamera/colors/gentian-blue-metallic.avif",
+    "/data/brand-model-images/4w-galleries/porsche/panamera/colors/crayon.avif",
+    "/data/brand-model-images/4w-galleries/porsche/panamera/colors/jet-black-metallic.avif",
+    "/data/brand-model-images/4w-galleries/porsche/panamera/colors/frozen-blue-metallic.avif",
+    "/data/brand-model-images/4w-galleries/porsche/panamera/colors/carmine-red.avif",
+    "/data/brand-model-images/4w-galleries/porsche/panamera/colors/white.avif",
+    "/data/brand-model-images/4w-galleries/porsche/panamera/colors/dolomite-silver-metallic.avif",
+    "/data/brand-model-images/4w-galleries/porsche/panamera/colors/grey-metallic.avif"
+  ]
+}

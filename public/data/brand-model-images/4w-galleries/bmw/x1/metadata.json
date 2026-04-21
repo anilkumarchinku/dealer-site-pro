@@ -1,0 +1,28 @@
+{
+  "make": "BMW",
+  "model": "X1",
+  "brandSlug": "bmw",
+  "modelSlug": "x1",
+  "sourceUrl": "https://www.cardekho.com/bmw/x1",
+  "scrapedAt": "2026-04-21T06:19:47.903Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 5,
+    "total": 5
+  },
+  "hero": "/data/brand-model-images/4w-galleries/bmw/x1/colors/storm-bay-metallic.avif",
+  "colorNames": [
+    "Storm Bay Metallic",
+    "Alpine White",
+    "Space Silver Metallic",
+    "Portimao Blue",
+    "Black Sapphire Metallic"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/bmw/x1/colors/storm-bay-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x1/colors/alpine-white.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x1/colors/space-silver-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x1/colors/portimao-blue.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x1/colors/black-sapphire-metallic.avif"
+  ]
+}
