@@ -98,5 +98,5 @@ export default async function SiteCarDetailPage({ params }: SiteCarDetailPagePro
 
     const similarCars = cars.filter(item => item.id !== id && item.make === car.make).slice(0, 4);
 
-    return <CarDetailView car={car} similarCars={similarCars} siteSlug={slug} />;
+    return <CarDetailView car={car} similarCars={similarCars} siteSlug={slug} dealerId={dealer.id} dealerPhone={dealer.phone} />;
 }

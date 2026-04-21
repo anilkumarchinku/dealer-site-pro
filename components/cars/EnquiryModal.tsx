@@ -44,13 +44,15 @@ interface EnquiryModalProps {
     open: boolean;
     onOpenChange: (open: boolean) => void;
     brandColor?: string;
+    /** Dealer ID — required to save the lead to database */
+    dealerId?: string;
     /** Dealer phone — enables WhatsApp direct chat option */
     dealerPhone?: string;
     /** Pre-resolved image src from CarCard (local scraped path, avoids CDN hotlink issues) */
     resolvedImageSrc?: string | null;
 }
 
-export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', dealerPhone, resolvedImageSrc }: EnquiryModalProps) {
+export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', dealerId, dealerPhone, resolvedImageSrc }: EnquiryModalProps) {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -105,8 +107,31 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
 
         setIsSubmitting(true);
 
-        // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 1500));
+        try {
+            if (!dealerId) throw new Error('Dealer not found');
+            const res = await fetch('/api/leads', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    dealer_id: dealerId,
+                    name: formData.name.trim(),
+                    phone: formData.phone.trim(),
+                    email: formData.email.trim() || undefined,
+                    message: formData.message.trim() || undefined,
+                    car_id: car?.id ?? undefined,
+                    car_name: car ? `${car.make} ${car.model}` : undefined,
+                    lead_source: 'car_enquiry',
+                }),
+            });
+            if (!res.ok) {
+                const errBody = await res.json().catch(() => null);
+                throw new Error(errBody?.error || 'Failed to submit enquiry');
+            }
+        } catch (err) {
+            setIsSubmitting(false);
+            setFormErrors({ name: err instanceof Error ? err.message : 'Something went wrong' });
+            return;
+        }
 
         setIsSubmitting(false);
         setIsSubmitted(true);

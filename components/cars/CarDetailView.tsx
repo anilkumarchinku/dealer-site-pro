@@ -13,6 +13,8 @@ import { Car } from '@/lib/types/car';
 import { formatPriceInLakhs } from '@/lib/utils/car-utils';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import { EnquiryModal } from '@/components/cars/EnquiryModal';
+import { TestDriveModal } from '@/components/cars/TestDriveModal';
 import { Card, CardContent } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import {
@@ -76,6 +78,8 @@ interface CarDetailViewProps {
     car: Car;
     similarCars?: Car[];
     siteSlug?: string;
+    dealerId?: string;
+    dealerPhone?: string;
 }
 
 const NEW_CAR_TABS = [
@@ -158,11 +162,15 @@ const INSPECTION_CATEGORIES = [
     },
 ];
 
-export function CarDetailView({ car, similarCars = [], siteSlug }: CarDetailViewProps) {
+export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, dealerPhone }: CarDetailViewProps) {
     const sitePrefix = useSitePrefix(siteSlug ?? '');
     const isUsed = car.condition === 'used' || car.condition === 'certified_pre_owned';
     const isCPO = car.condition === 'certified_pre_owned';
     const TABS = isUsed ? USED_CAR_TABS : NEW_CAR_TABS;
+
+    // Enquiry & Test Drive modal state
+    const [enquiryOpen, setEnquiryOpen] = useState(false);
+    const [testDriveOpen, setTestDriveOpen] = useState(false);
     const allImages = useMemo(
         () => Array.from(
             new Set([car.images.hero, ...car.images.exterior, ...car.images.interior].filter(Boolean))
@@ -272,7 +280,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug }: CarDetailView
     const lightOutlineButtonClass = 'border-slate-200 bg-white text-slate-900 hover:bg-slate-50 dark:!border-slate-200 dark:!bg-white dark:!text-slate-900 dark:hover:!bg-slate-50';
     const lightGhostButtonClass = 'text-slate-600 hover:bg-slate-100 hover:text-slate-900 dark:!text-slate-600 dark:hover:!bg-slate-100 dark:hover:!text-slate-900';
 
-    return (
+    return (<>
         <div className="min-h-screen bg-white text-slate-900 [color-scheme:light] dark:!bg-white dark:!text-slate-900">
             {/* ── Breadcrumb ── */}
             <div className="bg-gray-100/30 border-b">
@@ -393,21 +401,32 @@ export function CarDetailView({ car, similarCars = [], siteSlug }: CarDetailView
 
                                 {/* CTAs */}
                                 <div className="space-y-2.5">
-                                    <Button className="w-full" size="lg" style={{ backgroundColor: brandColor, color: brandContrast }}>
+                                    <Button className="w-full" size="lg" style={{ backgroundColor: brandColor, color: brandContrast }}
+                                        onClick={() => setEnquiryOpen(true)}>
                                         <Phone className="w-4 h-4 mr-2" />
                                         Check On-Road Price
                                     </Button>
                                     <div className="grid grid-cols-2 gap-2">
-                                        <Button variant="outline" size="sm" className={lightOutlineButtonClass}>
+                                        <Button variant="outline" size="sm" className={lightOutlineButtonClass}
+                                            onClick={() => setTestDriveOpen(true)}>
                                             <Calendar className="w-3.5 h-3.5 mr-1.5" />
                                             Test Drive
                                         </Button>
-                                        <Button variant="outline" size="sm" className={lightOutlineButtonClass}>
+                                        <Button variant="outline" size="sm" className={lightOutlineButtonClass}
+                                            onClick={() => setEnquiryOpen(true)}>
                                             <Download className="w-3.5 h-3.5 mr-1.5" />
                                             Brochure
                                         </Button>
                                     </div>
-                                    <Button variant="ghost" size="sm" className={`w-full ${lightGhostButtonClass}`}>
+                                    <Button variant="ghost" size="sm" className={`w-full ${lightGhostButtonClass}`}
+                                        onClick={() => {
+                                            if (navigator.share) {
+                                                navigator.share({ title: `${car.make} ${car.model}`, url: window.location.href });
+                                            } else {
+                                                navigator.clipboard.writeText(window.location.href);
+                                                alert('Link copied to clipboard!');
+                                            }
+                                        }}>
                                         <Share2 className="w-3.5 h-3.5 mr-1.5" />
                                         Share
                                     </Button>
@@ -1295,6 +1314,29 @@ export function CarDetailView({ car, similarCars = [], siteSlug }: CarDetailView
                 )}
             </div>
         </div>
+
+        {/* Enquiry Modal */}
+        <EnquiryModal
+            car={car}
+            open={enquiryOpen}
+            onOpenChange={setEnquiryOpen}
+            brandColor={brandColor}
+            dealerId={dealerId}
+            dealerPhone={dealerPhone}
+        />
+
+        {/* Test Drive Modal */}
+        {dealerId && (
+            <TestDriveModal
+                car={car}
+                dealerId={dealerId}
+                dealerPhone={dealerPhone}
+                open={testDriveOpen}
+                onOpenChange={setTestDriveOpen}
+                brandColor={brandColor}
+            />
+        )}
+    </>
     );
 }
 
