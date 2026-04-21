@@ -301,7 +301,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug }: CarDetailView
                                     src={activeImage}
                                     alt={`${car.make} ${car.model}`}
                                     fill
-                                    unoptimized={activeImage.startsWith('http')}
+                                    unoptimized
                                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 60vw"
                                     className="object-cover"
                                     priority
@@ -338,7 +338,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug }: CarDetailView
                                             : 'border-transparent hover:border-muted-foreground/30'
                                         }`}
                                 >
-                                    <Image src={img} alt={`View ${idx + 1}`} fill className="object-cover" />
+                                    <Image src={img} alt={`View ${idx + 1}`} fill unoptimized className="object-cover" />
                                 </button>
                             ))}
                         </div>
@@ -1261,7 +1261,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug }: CarDetailView
                                                 src={simCar.images.hero}
                                                 alt={`${simCar.make} ${simCar.model}`}
                                                 fill
-                                                unoptimized={simCar.images.hero.startsWith('http')}
+                                                unoptimized
                                                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                                                 className="object-cover transition-transform duration-500 group-hover:scale-105"
                                             />
