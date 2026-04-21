@@ -397,8 +397,16 @@ export async function hydrateCarWithJsonDetails(car: Car): Promise<Car> {
     const mergedExteriorWithFeatures = featureImages.length > 0
         ? uniqueStrings([...mergedExterior, ...featureImages])
         : mergedExterior
-    // Block both the local hero and CDN hero from the exterior array
-    const heroBlockList = [heroImage, scrapedGallery?.hero, imageUrls[0]].filter(Boolean) as string[]
+    // Block the local hero, CDN hero, AND exterior[0] (same front-view photo
+    // served at different CDN paths/sizes). Also block first 2 JSON imageUrls
+    // (often spacers or the same hero shot from the JSON data).
+    const heroBlockList = [
+        heroImage,
+        scrapedGallery?.hero,
+        scrapedGallery?.exterior?.[0],
+        imageUrls[0],
+        imageUrls[1],
+    ].filter(Boolean) as string[]
     const dedupedExterior = removeMatchingUrl(mergedExteriorWithFeatures, heroBlockList)
     const dedupedInterior = removeMatchingUrl(mergedInterior, [heroImage, ...dedupedExterior])
 
