@@ -353,12 +353,6 @@ export default function DashboardLayout({
                             {/* Divider */}
                             <div className="w-px h-5 bg-border" />
 
-                            <Button variant="ghost" size="sm" asChild className="gap-2 text-muted-foreground hover:text-foreground">
-                                <a href={dealerSlug ? dealerSiteHref(dealerSlug) : '#'} target="_blank" rel="noopener noreferrer">
-                                    <Globe className="w-4 h-4" />
-                                    View Website
-                                </a>
-                            </Button>
                             <Button
                                 variant="ghost"
                                 size="sm"
