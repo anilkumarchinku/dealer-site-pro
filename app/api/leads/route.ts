@@ -33,8 +33,8 @@ function getSupabase() {
 
 export async function POST(request: NextRequest) {
     try {
-        // ── Rate limiting (3 leads per IP per hour) ───────────────────────────
-        const rateLimitResponse = await rateLimitOrNull('leads', request, 3, 60 * 60 * 1000)
+        // ── Rate limiting (10 leads per IP per hour) ──────────────────────────
+        const rateLimitResponse = await rateLimitOrNull('leads', request, 10, 60 * 60 * 1000)
         if (rateLimitResponse) return rateLimitResponse
 
         const body = await request.json()

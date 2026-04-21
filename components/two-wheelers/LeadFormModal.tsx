@@ -64,10 +64,17 @@ export function LeadFormModal({
                     offer_price_paise: offerPrice ? Math.round(Number(offerPrice) * 100) : null,
                 }),
             })
-            if (!res.ok) throw new Error("Failed to submit")
+            if (!res.ok) {
+                const errBody = await res.json().catch(() => null)
+                const errMsg = errBody?.error || (res.status === 429
+                    ? 'Too many requests. Please wait a few minutes.'
+                    : 'Something went wrong. Please call us directly.')
+                setError(errMsg)
+                return
+            }
             setSubmitted(true)
         } catch {
-            setError("Something went wrong. Please call us directly.")
+            setError("Network error. Please check your connection.")
         } finally {
             setSubmitting(false)
         }

@@ -256,8 +256,11 @@ export function EnquireSidebar({
             if (res.ok) {
                 setSubmitted(true);
             } else {
-                console.error('Enquiry submission failed');
-                alert('Something went wrong. Please try again or call us directly.');
+                const errBody = await res.json().catch(() => null);
+                const errMsg = errBody?.error || (res.status === 429
+                    ? 'Too many requests. Please wait a few minutes and try again.'
+                    : 'Something went wrong. Please try again or call us directly.');
+                alert(errMsg);
             }
         } catch (err) {
             console.error('Enquiry submission error:', err);
