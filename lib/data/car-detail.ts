@@ -458,6 +458,14 @@ export async function hydrateCarWithJsonDetails(car: Car): Promise<Car> {
     const dedupedExterior = removeMatchingUrl(mergedExteriorWithFeatures, heroBlockList)
     const dedupedInterior = removeMatchingUrl(mergedInterior, [pricedHeroImage, ...dedupedExterior])
 
+    // Include color images in the gallery so users see more than just the hero.
+    // Local gallery color images (from 4w-galleries/{brand}/{model}/colors/) are
+    // reliable and model-specific — add them as additional gallery views.
+    const localColorImages = (mergedColorImages ?? []).filter(url => url.startsWith('/data/'))
+    const galleryExterior = localColorImages.length > 0
+        ? uniqueStrings([...dedupedExterior, ...localColorImages])
+        : dedupedExterior
+
     return {
         ...car,
         pricing: {
@@ -518,7 +526,7 @@ export async function hydrateCarWithJsonDetails(car: Car): Promise<Car> {
         },
         images: {
             hero: pricedHeroImage,
-            exterior: dedupedExterior,
+            exterior: galleryExterior,
             interior: dedupedInterior,
             colors: uniqueStrings(mergedColorImages ?? []),
         },
