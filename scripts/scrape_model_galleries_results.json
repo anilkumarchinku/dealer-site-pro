@@ -1,20 +1,74 @@
 {
-  "generatedAt": "2026-04-20T06:40:05.947Z",
+  "generatedAt": "2026-04-22T13:09:47.250Z",
   "options": {
-    "category": "4w",
-    "limit": 5,
-    "brand": "bmw",
-    "model": "6 series gt"
+    "category": "2w",
+    "limit": null,
+    "brand": "harley-davidson",
+    "model": ""
   },
   "report": {
-    "fourWheelers": [
+    "fourWheelers": [],
+    "twoWheelers": [
       {
-        "ok": false,
-        "make": "bmw",
-        "model": "6 Series GT",
-        "error": "No gallery files downloaded for bmw 6 Series GT"
+        "ok": true,
+        "brand": "Harley-Davidson India",
+        "model": "Nightster",
+        "count": 3
+      },
+      {
+        "ok": true,
+        "brand": "Harley-Davidson India",
+        "model": "Nightster Special",
+        "count": 4
+      },
+      {
+        "ok": true,
+        "brand": "Harley-Davidson India",
+        "model": "Sportster S",
+        "count": 4
+      },
+      {
+        "ok": true,
+        "brand": "Harley-Davidson India",
+        "model": "Fat Boy",
+        "count": 4
+      },
+      {
+        "ok": true,
+        "brand": "Harley-Davidson India",
+        "model": "Heritage Classic",
+        "count": 5
+      },
+      {
+        "ok": true,
+        "brand": "Harley-Davidson India",
+        "model": "Breakout",
+        "count": 5
+      },
+      {
+        "ok": true,
+        "brand": "Harley-Davidson India",
+        "model": "Street Glide",
+        "count": 7
+      },
+      {
+        "ok": true,
+        "brand": "Harley-Davidson India",
+        "model": "Road Glide",
+        "count": 7
+      },
+      {
+        "ok": true,
+        "brand": "Harley-Davidson India",
+        "model": "Pan America 1250 Special",
+        "count": 4
+      },
+      {
+        "ok": true,
+        "brand": "Harley-Davidson India",
+        "model": "X440",
+        "count": 6
       }
-    ],
-    "twoWheelers": []
+    ]
   }
 }
