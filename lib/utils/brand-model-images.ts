@@ -55,18 +55,40 @@ export function getScrapedImageUrls(
     const localBase = `/data/brand-model-images/${vehicleCategory}/${brandId}/${slug}`;
     const urls = IMAGE_EXTENSIONS.map((ext) => `${localBase}.${ext}`);
 
-    // 3W models often have brand prefix in name (e.g. "Ape City Plus" → slug "ape-city-plus")
-    // but image files strip the prefix (e.g. "city-plus.jpg"). Try without common prefixes.
     if (vehicleCategory === "3w") {
-        const prefixes = ["ape-", "re-", "king-", "alfa-", "maxima-", "treo-"];
+        // 3W JSON models have variant suffixes and brand prefixes that don't match image filenames.
+        // e.g. "Eltra City 3 Seater" → slug "eltra-city-3-seater" but file is "eltra-city.jpg"
+        // e.g. "Ape City Plus" → slug "ape-city-plus" but file is "city-plus.jpg"
+        // Generate multiple fallback slugs to try:
+        const fallbackSlugs = new Set<string>();
+
+        // Strip variant suffixes: "3 seater", "4 seater", "epl-2-0-r", etc.
+        const stripped = slug
+            .replace(/-\d+-seater$/i, "")
+            .replace(/-(?:epl|std|lx|dx|vx|zx|premium|plus|duo|super|deluxe|special|edition|bs6|bs-vi)(?:-.+)?$/i, "");
+        if (stripped !== slug) fallbackSlugs.add(stripped);
+
+        // Strip progressively from the end (try shorter slugs)
+        const parts = slug.split("-");
+        for (let i = parts.length - 1; i >= 2; i--) {
+            fallbackSlugs.add(parts.slice(0, i).join("-"));
+        }
+
+        // Strip common brand prefixes
+        const prefixes = ["ape-", "re-", "king-", "alfa-", "maxima-", "treo-", "super-auto-"];
         for (const prefix of prefixes) {
             if (slug.startsWith(prefix)) {
-                const stripped = slug.slice(prefix.length);
-                if (stripped) {
-                    IMAGE_EXTENSIONS.forEach((ext) => urls.push(`${`/data/brand-model-images/3w/${brandId}/${stripped}`}.${ext}`));
-                }
-                break;
+                const withoutPrefix = slug.slice(prefix.length);
+                if (withoutPrefix) fallbackSlugs.add(withoutPrefix);
+                // Also strip suffixes from prefix-stripped version
+                const strippedWithout = withoutPrefix.replace(/-\d+-seater$/i, "").replace(/-(?:epl|std|lx|dx|vx)(?:-.+)?$/i, "");
+                if (strippedWithout !== withoutPrefix) fallbackSlugs.add(strippedWithout);
             }
+        }
+
+        const dir3w = `/data/brand-model-images/3w/${brandId}`;
+        for (const fb of fallbackSlugs) {
+            IMAGE_EXTENSIONS.forEach((ext) => urls.push(`${dir3w}/${fb}.${ext}`));
         }
     }
 
