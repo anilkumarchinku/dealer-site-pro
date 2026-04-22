@@ -285,7 +285,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
             {/* ── Breadcrumb ── */}
             <div className="bg-gray-100/30 border-b">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-                    <nav className="flex items-center gap-1.5 text-sm text-gray-500">
+                    <nav className="flex items-center gap-1.5 text-sm text-gray-600">
                         <Link href={inventoryHref} className="hover:text-gray-900 transition-colors">Home</Link>
                         <ChevronRight className="w-3.5 h-3.5" />
                         <Link href={inventoryHref} className="hover:text-gray-900 transition-colors">Cars</Link>
@@ -315,7 +315,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                                     priority
                                 />
                             ) : (
-                                <div className="flex items-center justify-center h-full text-gray-500">
+                                <div className="flex items-center justify-center h-full text-gray-600">
                                     No Image Available
                                 </div>
                             )}
@@ -364,7 +364,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                                         )}
                                         {car.make} {car.model}
                                     </h1>
-                                    <p className="text-sm text-gray-500">{car.variant} {car.year && `• ${car.year}`}</p>
+                                    <p className="text-sm text-gray-600">{car.variant} {car.year && `• ${car.year}`}</p>
                                 </div>
 
                                 {/* Price */}
@@ -372,10 +372,10 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                                     <div className="flex items-baseline gap-2">
                                         <span className="text-2xl font-bold text-gray-900">{priceDisplay}</span>
                                         {hasPriceRange && (
-                                            <span className="text-sm text-gray-500">- {maxPriceDisplay}</span>
+                                            <span className="text-sm text-gray-600">- {maxPriceDisplay}</span>
                                         )}
                                     </div>
-                                    <p className="text-xs text-gray-500 mt-0.5">Ex-showroom Price</p>
+                                    <p className="text-xs text-gray-600 mt-0.5">Ex-showroom Price</p>
                                     {car.pricing.emi && (
                                         <Badge variant="secondary" className="mt-2 text-xs gap-1" style={{ color: brandColor }}>
                                             <TrendingUp className="w-3 h-3" />
@@ -392,7 +392,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                                         <div key={idx} className="flex items-center gap-2 p-2 bg-gray-100/40 rounded-lg">
                                             {spec.icon}
                                             <div>
-                                                <p className="text-[10px] text-gray-500">{spec.label}</p>
+                                                <p className="text-[10px] text-gray-600">{spec.label}</p>
                                                 <p className="text-xs font-semibold">{spec.value}</p>
                                             </div>
                                         </div>
@@ -450,7 +450,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                                 onClick={() => scrollToSection(tab.id)}
                                     className={`flex items-center gap-1.5 px-4 py-3 text-sm font-medium whitespace-nowrap border-b-2 transition-colors ${activeTab === tab.id
                                         ? ''
-                                        : 'border-transparent text-gray-500 hover:text-gray-900'
+                                        : 'border-transparent text-gray-600 hover:text-gray-900'
                                     }`}
                                     style={activeTab === tab.id ? { borderColor: brandColor, color: brandColor } : undefined}
                                 >
@@ -514,7 +514,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                                 <div className="mx-auto mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-sm">
                                     {spec.icon}
                                 </div>
-                                <p className="text-xs text-gray-500">{spec.label}</p>
+                                <p className="text-xs text-gray-600">{spec.label}</p>
                                 <p className="text-sm font-semibold mt-0.5">{spec.value}</p>
                             </Card>
                         ))}
@@ -535,7 +535,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                                         </li>
                                     ))}
                                     {(!car.features?.keyFeatures || car.features.keyFeatures.length === 0) && (
-                                        <li className="text-sm text-gray-500">Information not available</li>
+                                        <li className="text-sm text-gray-600">Information not available</li>
                                     )}
                                 </ul>
                             </CardContent>
@@ -590,11 +590,11 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                                         <div className="w-24 h-24 rounded-full bg-emerald-500/10 flex items-center justify-center">
                                             <span className="text-3xl font-bold text-emerald-500">4.2</span>
                                         </div>
-                                        <p className="text-xs text-gray-500 mt-2">out of 5.0</p>
+                                        <p className="text-xs text-gray-600 mt-2">out of 5.0</p>
                                     </div>
                                     <div className="flex-1">
                                         <h3 className="text-lg font-semibold mb-1">Overall Condition: Good</h3>
-                                        <p className="text-sm text-gray-500 mb-3">
+                                        <p className="text-sm text-gray-600 mb-3">
                                             Inspected on {new Date(Date.now() - 7 * 86400000).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })} by a certified mechanic.
                                             This vehicle passed 186 out of 200+ quality checkpoints.
                                         </p>
@@ -628,7 +628,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                                             <div className="space-y-2">
                                                 {cat.items.map((item) => (
                                                     <div key={item.name} className="flex items-center justify-between text-sm">
-                                                        <span className="text-gray-500">{item.name}</span>
+                                                        <span className="text-gray-600">{item.name}</span>
                                                         <span className={`text-xs font-medium flex items-center gap-1 ${item.status === 'good' ? 'text-emerald-600' : item.status === 'fair' ? 'text-amber-600' : 'text-red-600'
                                                             }`}>
                                                             {item.status === 'good' && <CheckCircle2 className="w-3.5 h-3.5" />}
@@ -644,7 +644,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                             })}
                         </div>
 
-                        <p className="text-[10px] text-gray-500 mt-4">
+                        <p className="text-[10px] text-gray-600 mt-4">
                             * Inspection report is based on assessment at the time of listing. Vehicle condition may change over time.
                         </p>
                     </section>
@@ -659,7 +659,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                             <Card className={lightCardClass}>
                                 <CardContent className="p-5">
                                     <h3 className="text-base font-semibold mb-4 flex items-center gap-2">
-                                        <Users className="w-4 h-4 text-gray-500" />
+                                        <Users className="w-4 h-4 text-gray-600" />
                                         Ownership History
                                     </h3>
                                     <div className="relative pl-6 space-y-6">
@@ -670,8 +670,8 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                                             <div className="absolute -left-6 top-0 w-[18px] h-[18px] rounded-full bg-blue-600 border-2 border-white" />
                                             <div>
                                                 <p className="text-sm font-semibold">Current Owner (You viewing)</p>
-                                                <p className="text-xs text-gray-500">Since {car.year ? car.year + 2 : 2023} - Present</p>
-                                                <p className="text-xs text-gray-500 mt-1">Individual • Metro City</p>
+                                                <p className="text-xs text-gray-600">Since {car.year ? car.year + 2 : 2023} - Present</p>
+                                                <p className="text-xs text-gray-600 mt-1">Individual • Metro City</p>
                                             </div>
                                         </div>
 
@@ -679,8 +679,8 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                                             <div className="absolute -left-6 top-0 w-[18px] h-[18px] rounded-full bg-gray-100 border-2 border-white" />
                                             <div>
                                                 <p className="text-sm font-semibold">1st Owner</p>
-                                                <p className="text-xs text-gray-500">{car.year || 2020} - {car.year ? car.year + 2 : 2022}</p>
-                                                <p className="text-xs text-gray-500 mt-1">Individual • Metro City</p>
+                                                <p className="text-xs text-gray-600">{car.year || 2020} - {car.year ? car.year + 2 : 2022}</p>
+                                                <p className="text-xs text-gray-600 mt-1">Individual • Metro City</p>
                                             </div>
                                         </div>
                                     </div>
@@ -691,7 +691,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                             <Card className={lightCardClass}>
                                 <CardContent className="p-5">
                                     <h3 className="text-base font-semibold mb-4 flex items-center gap-2">
-                                        <FileText className="w-4 h-4 text-gray-500" />
+                                        <FileText className="w-4 h-4 text-gray-600" />
                                         Documents & Service
                                     </h3>
                                     <div className="space-y-3">
@@ -705,7 +705,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                                         ].map((doc) => (
                                             <div key={doc.label} className="flex items-center justify-between p-2.5 bg-gray-100/30 rounded-lg">
                                                 <div className="flex items-center gap-2.5 text-sm">
-                                                    <span className="text-gray-500">{doc.icon}</span>
+                                                    <span className="text-gray-600">{doc.icon}</span>
                                                     {doc.label}
                                                 </div>
                                                 <Badge
@@ -727,7 +727,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                             <Card className={`${lightCardClass} md:col-span-2`}>
                                 <CardContent className="p-5">
                                     <h3 className="text-base font-semibold mb-4 flex items-center gap-2">
-                                        <Wrench className="w-4 h-4 text-gray-500" />
+                                        <Wrench className="w-4 h-4 text-gray-600" />
                                         Service History
                                     </h3>
                                     <Table>
@@ -751,7 +751,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                                                     <TableCell className="text-sm">{s.date}</TableCell>
                                                     <TableCell className="text-sm">{s.km} km</TableCell>
                                                     <TableCell className="text-sm">{s.type}</TableCell>
-                                                    <TableCell className="text-sm text-gray-500">{s.center}</TableCell>
+                                                    <TableCell className="text-sm text-gray-600">{s.center}</TableCell>
                                                 </TableRow>
                                             ))}
                                         </TableBody>
@@ -770,7 +770,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                         <Card className={lightCardClass}>
                             <CardContent className="p-5">
                                 <h3 className="text-base font-semibold mb-4 flex items-center gap-2">
-                                    <Settings className="w-4 h-4 text-gray-500" />
+                                    <Settings className="w-4 h-4 text-gray-600" />
                                     Engine & Transmission
                                 </h3>
                                 <div className="space-y-0">
@@ -790,7 +790,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                         <Card className={lightCardClass}>
                             <CardContent className="p-5">
                                 <h3 className="text-base font-semibold mb-4 flex items-center gap-2">
-                                    <Zap className="w-4 h-4 text-gray-500" />
+                                    <Zap className="w-4 h-4 text-gray-600" />
                                     Performance & Fuel
                                 </h3>
                                 <div className="space-y-0">
@@ -815,7 +815,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                         <Card className={lightCardClass}>
                             <CardContent className="p-5">
                                 <h3 className="text-base font-semibold mb-4 flex items-center gap-2">
-                                    <CarIcon className="w-4 h-4 text-gray-500" />
+                                    <CarIcon className="w-4 h-4 text-gray-600" />
                                     Dimensions & Weight
                                 </h3>
                                 <div className="space-y-0">
@@ -835,7 +835,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                         <Card className={lightCardClass}>
                             <CardContent className="p-5">
                                 <h3 className="text-base font-semibold mb-4 flex items-center gap-2">
-                                    <Shield className="w-4 h-4 text-gray-500" />
+                                    <Shield className="w-4 h-4 text-gray-600" />
                                     Safety
                                 </h3>
                                 <div className="space-y-0">
@@ -874,7 +874,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                     </div>
                     {(!car.features?.keyFeatures || car.features.keyFeatures.length === 0) && (
                         <Card className={`${lightCardClass} p-8 text-center`}>
-                            <p className="text-gray-500">Feature information not available for this model.</p>
+                            <p className="text-gray-600">Feature information not available for this model.</p>
                         </Card>
                     )}
                 </section>
@@ -917,7 +917,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                                     ))}
                                     {(!car.variants || car.variants.length === 0) && (
                                         <TableRow>
-                                            <TableCell colSpan={5} className="text-center py-8 text-gray-500">
+                                            <TableCell colSpan={5} className="text-center py-8 text-gray-600">
                                                 Variant details are not available yet.
                                             </TableCell>
                                         </TableRow>
@@ -961,13 +961,13 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                                             />
                                             <span className="text-xs font-medium">{color.name}</span>
                                             {color.extraCost > 0 && (
-                                                <span className="text-[10px] text-gray-500">+₹{color.extraCost.toLocaleString()}</span>
+                                                <span className="text-[10px] text-gray-600">+₹{color.extraCost.toLocaleString()}</span>
                                             )}
                                         </button>
                                     ))}
                                 </div>
                                 {selectedColor && (
-                                    <p className="text-sm text-gray-500">
+                                    <p className="text-sm text-gray-600">
                                         Selected: <span className="font-medium text-gray-900">{selectedColor}</span>
                                         {car.colors.find(c => c.name === selectedColor)?.type && (
                                             <> ({car.colors.find(c => c.name === selectedColor)?.type})</>
@@ -978,7 +978,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                         </Card>
                     ) : (
                         <Card className={`${lightCardClass} p-8 text-center`}>
-                            <p className="text-gray-500">Colour options not available for this model.</p>
+                            <p className="text-gray-600">Colour options not available for this model.</p>
                         </Card>
                     )}
                 </section>
@@ -1035,19 +1035,19 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                                         <Card className={`${softCardClass} h-full`}>
                                             <CardContent className="p-6 flex flex-col h-full">
                                                 <div className="text-center pb-4 mb-4 border-b">
-                                                    <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-1">Monthly EMI</p>
+                                                    <p className="text-xs font-semibold uppercase tracking-wider text-gray-600 mb-1">Monthly EMI</p>
                                                     <p className="text-4xl font-bold" style={{ color: brandColor }}>
                                                         ₹{emiResult.emi.toLocaleString('en-IN')}
                                                     </p>
-                                                    <p className="text-xs text-gray-500 mt-1">per month for {emiTenure} months</p>
+                                                    <p className="text-xs text-gray-600 mt-1">per month for {emiTenure} months</p>
                                                 </div>
                                                 <div className="space-y-3 flex-1">
                                                     <div className="flex justify-between text-sm">
-                                                        <span className="text-gray-500">Loan Amount</span>
+                                                        <span className="text-gray-600">Loan Amount</span>
                                                         <span className="font-semibold">₹{emiResult.loan.toLocaleString('en-IN')}</span>
                                                     </div>
                                                     <div className="flex justify-between text-sm">
-                                                        <span className="text-gray-500">Total Interest</span>
+                                                        <span className="text-gray-600">Total Interest</span>
                                                         <span className="font-semibold">₹{emiResult.interest.toLocaleString('en-IN')}</span>
                                                     </div>
                                                     <Separator />
@@ -1059,10 +1059,10 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                                                 {/* Principal vs Interest bar */}
                                                 <div className="mt-4">
                                                     <div className="flex justify-between text-[11px] mb-1">
-                                                        <span className="text-gray-500">
+                                                        <span className="text-gray-600">
                                                             Principal {Math.round((emiResult.loan / emiResult.total) * 100)}%
                                                         </span>
-                                                        <span className="text-gray-500">
+                                                        <span className="text-gray-600">
                                                             Interest {Math.round((emiResult.interest / emiResult.total) * 100)}%
                                                         </span>
                                                     </div>
@@ -1073,7 +1073,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                                                         />
                                                     </div>
                                                 </div>
-                                                <p className="text-[10px] text-gray-500 mt-3">
+                                                <p className="text-[10px] text-gray-600 mt-3">
                                                     * Indicative EMI. Actual values may vary based on lender terms.
                                                 </p>
                                             </CardContent>
@@ -1081,8 +1081,8 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                                     ) : (
                                         <Card className={`${softCardClass} flex h-full items-center justify-center`}>
                                             <CardContent className="text-center p-6">
-                                                <Calculator className="w-10 h-10 text-gray-500 mx-auto mb-3" />
-                                                <p className="text-sm text-gray-500">Adjust sliders to calculate EMI</p>
+                                                <Calculator className="w-10 h-10 text-gray-600 mx-auto mb-3" />
+                                                <p className="text-sm text-gray-600">Adjust sliders to calculate EMI</p>
                                             </CardContent>
                                         </Card>
                                     )}
@@ -1097,25 +1097,25 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                     <Card className={lightCardClass}>
                         <CardContent className="p-6">
                             <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                                <MapPin className="w-4 h-4 text-gray-500" />
+                                <MapPin className="w-4 h-4 text-gray-600" />
                                 On-Road Price Estimate
                             </h3>
                             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                                 {car.pricing.onRoad.delhi && (
                                     <div className="p-4 bg-gray-100/30 rounded-lg">
-                                        <p className="text-xs text-gray-500">Delhi</p>
+                                        <p className="text-xs text-gray-600">Delhi</p>
                                         <p className="text-lg font-bold">{formatPriceInLakhs(car.pricing.onRoad.delhi)}</p>
                                     </div>
                                 )}
                                 {car.pricing.onRoad.mumbai && (
                                     <div className="p-4 bg-gray-100/30 rounded-lg">
-                                        <p className="text-xs text-gray-500">Mumbai</p>
+                                        <p className="text-xs text-gray-600">Mumbai</p>
                                         <p className="text-lg font-bold">{formatPriceInLakhs(car.pricing.onRoad.mumbai)}</p>
                                     </div>
                                 )}
                                 {car.pricing.onRoad.bangalore && (
                                     <div className="p-4 bg-gray-100/30 rounded-lg">
-                                        <p className="text-xs text-gray-500">Bangalore</p>
+                                        <p className="text-xs text-gray-600">Bangalore</p>
                                         <p className="text-lg font-bold">{formatPriceInLakhs(car.pricing.onRoad.bangalore)}</p>
                                     </div>
                                 )}
@@ -1142,7 +1142,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                                                 />
                                             ))}
                                         </div>
-                                        <p className="text-sm text-gray-500">
+                                        <p className="text-sm text-gray-600">
                                             Based on {car.rating.reviewCount || 0} reviews
                                         </p>
                                     </div>
@@ -1158,7 +1158,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                                             { label: 'Value for Money', value: car.rating.valueForMoney },
                                         ].filter(r => r.value).map((rating) => (
                                             <div key={rating.label} className="flex items-center gap-3">
-                                                <span className="text-sm w-32 text-gray-500">{rating.label}</span>
+                                                <span className="text-sm w-32 text-gray-600">{rating.label}</span>
                                                 <div className="flex-1 h-2 bg-gray-100 rounded-full overflow-hidden">
                                                     <div
                                                         className="h-full bg-amber-400 rounded-full"
@@ -1174,8 +1174,8 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                         </Card>
                     ) : (
                         <Card className={`${lightCardClass} p-8 text-center`}>
-                            <MessageSquare className="w-10 h-10 text-gray-500 mx-auto mb-3" />
-                            <p className="text-gray-500">No reviews available yet. Be the first to review!</p>
+                            <MessageSquare className="w-10 h-10 text-gray-600 mx-auto mb-3" />
+                            <p className="text-gray-600">No reviews available yet. Be the first to review!</p>
                             <Button variant="outline" className={`mt-4 ${lightOutlineButtonClass}`}>Write a Review</Button>
                         </Card>
                     )}
@@ -1191,7 +1191,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                                     <AccordionTrigger className="text-sm font-medium hover:no-underline">
                                         What is the price of {car.make} {car.model}?
                                     </AccordionTrigger>
-                                    <AccordionContent className="text-sm text-gray-500">
+                                    <AccordionContent className="text-sm text-gray-600">
                                         The {car.make} {car.model} price starts at {priceDisplay}
                                         {hasPriceRange && ` and goes up to ${maxPriceDisplay}`} (ex-showroom).
                                         The actual on-road price may vary depending on your city, registration charges, and insurance.
@@ -1201,7 +1201,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                                     <AccordionTrigger className="text-sm font-medium hover:no-underline">
                                         What is the mileage of {car.make} {car.model}?
                                     </AccordionTrigger>
-                                    <AccordionContent className="text-sm text-gray-500">
+                                    <AccordionContent className="text-sm text-gray-600">
                                         The {car.make} {car.model} delivers a mileage of {car.performance?.fuelEfficiency ? `${car.performance.fuelEfficiency} km/l (ARAI certified)` : 'data not available'}.
                                         Real-world mileage may vary depending on driving conditions and habits.
                                     </AccordionContent>
@@ -1210,7 +1210,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                                     <AccordionTrigger className="text-sm font-medium hover:no-underline">
                                         What engine does the {car.make} {car.model} have?
                                     </AccordionTrigger>
-                                    <AccordionContent className="text-sm text-gray-500">
+                                    <AccordionContent className="text-sm text-gray-600">
                                         The {car.make} {car.model} is powered by a {car.engine?.displacement ? `${car.engine.displacement}cc` : ''} {car.engine?.type} engine
                                         that produces {car.engine?.power || ''} of power and {car.engine?.torque || ''} of torque,
                                         mated to a {car.transmission?.type} transmission.
@@ -1220,7 +1220,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                                     <AccordionTrigger className="text-sm font-medium hover:no-underline">
                                         How many variants does {car.make} {car.model} come in?
                                     </AccordionTrigger>
-                                    <AccordionContent className="text-sm text-gray-500">
+                                    <AccordionContent className="text-sm text-gray-600">
                                         The {car.make} {car.model} is available in {car.variants?.length || 'multiple'} variants.
                                         {car.variants && car.variants.length > 0 && (
                                             <> The variants include: {car.variants.map(v => v.name).join(', ')}.</>
@@ -1231,7 +1231,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                                     <AccordionTrigger className="text-sm font-medium hover:no-underline">
                                         How safe is the {car.make} {car.model}?
                                     </AccordionTrigger>
-                                    <AccordionContent className="text-sm text-gray-500">
+                                    <AccordionContent className="text-sm text-gray-600">
                                         The {car.make} {car.model} comes with {car.safety?.airbags || 'multiple'} airbags
                                         {car.safety?.abs && ', ABS with EBD'}
                                         {car.safety?.esp && ', Electronic Stability Program'}
@@ -1243,7 +1243,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                                     <AccordionTrigger className="text-sm font-medium hover:no-underline">
                                         What is the EMI for {car.make} {car.model}?
                                     </AccordionTrigger>
-                                    <AccordionContent className="text-sm text-gray-500">
+                                    <AccordionContent className="text-sm text-gray-600">
                                         {car.pricing.emi ? (
                                             <>The EMI for {car.make} {car.model} starts at ₹{car.pricing.emi.monthly.toLocaleString()} per month
                                                 with a down payment of ₹{car.pricing.emi.downPayment.toLocaleString()} for a tenure of {car.pricing.emi.tenure} months.
@@ -1285,7 +1285,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                                                 className="object-cover transition-transform duration-500 group-hover:scale-105"
                                             />
                                         ) : (
-                                            <div className="flex h-full items-center justify-center text-sm text-slate-400">
+                                            <div className="flex h-full items-center justify-center text-sm text-slate-500">
                                                 No Image
                                             </div>
                                         )}
@@ -1346,7 +1346,7 @@ function SpecRow({ label, value, last }: { label: string; value: string; last?: 
     if (!value || value === '—' || value === 'N/A') return null;
     return (
         <div className={`flex justify-between py-2.5 ${!last ? 'border-b border-gray-200/50' : ''}`}>
-            <span className="text-sm text-gray-500">{label}</span>
+            <span className="text-sm text-gray-600">{label}</span>
             <span className="text-sm font-medium text-gray-900">{value}</span>
         </div>
     );
@@ -1363,7 +1363,7 @@ function FeatureGroup({ title, features, icon }: { title: string; features: stri
                     {features.map((feat, i) => (
                         <li key={i} className="flex items-start gap-2 text-sm">
                             <Check className="w-3.5 h-3.5 mt-0.5 text-emerald-500 shrink-0" />
-                            <span className="text-gray-500">{feat}</span>
+                            <span className="text-gray-600">{feat}</span>
                         </li>
                     ))}
                 </ul>
@@ -1386,7 +1386,7 @@ function EmiSlider({
     return (
         <div>
             <div className="flex justify-between items-center mb-2">
-                <label className="text-xs font-semibold uppercase tracking-wider text-gray-500">{label}</label>
+                <label className="text-xs font-semibold uppercase tracking-wider text-gray-600">{label}</label>
                 <span className="text-sm font-bold text-blue-600">{format(value)}</span>
             </div>
             <Slider

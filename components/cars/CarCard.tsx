@@ -288,7 +288,7 @@ export function CarCard({
                             </h3>
                             <div className="mt-4">
                                 <p className="text-3xl font-black tracking-tight text-gray-900">{priceRange}</p>
-                                <p className="mt-1 text-sm text-gray-500">Ex-showroom price</p>
+                                <p className="mt-1 text-sm text-gray-600">Ex-showroom price</p>
                             </div>
                         </div>
 
@@ -416,7 +416,7 @@ export function CarCard({
                                 </p>
                             </div>
                             {isUsed && car.year && (
-                                <span className="inline-flex items-center gap-1 text-[11px] font-medium px-2 py-1 rounded-full bg-gray-100 text-gray-500 shrink-0">
+                                <span className="inline-flex items-center gap-1 text-[11px] font-medium px-2 py-1 rounded-full bg-gray-100 text-gray-600 shrink-0">
                                     {car.year}
                                 </span>
                             )}
@@ -425,7 +425,7 @@ export function CarCard({
                             {car.model}
                         </h3>
                         {car.variant && (
-                            <p className="text-sm line-clamp-1 text-gray-500 mt-1">
+                            <p className="text-sm line-clamp-1 text-gray-600 mt-1">
                                 {car.variant}
                             </p>
                         )}
@@ -439,10 +439,10 @@ export function CarCard({
                                 {priceRange}
                             </span>
                             {hasPriceRange && (
-                                <span className="text-sm text-gray-500">– {maxPrice}</span>
+                                <span className="text-sm text-gray-600">– {maxPrice}</span>
                             )}
                         </div>
-                        <p className="text-sm text-gray-500">{isUsed ? 'Selling price' : 'Ex-showroom price'}</p>
+                        <p className="text-sm text-gray-600">{isUsed ? 'Selling price' : 'Ex-showroom price'}</p>
 
                         {showEMI && car.pricing.emi && (
                             <Badge variant="secondary" className="mt-2 text-xs font-medium gap-1 h-6 px-2.5 rounded-full bg-gray-50 dark:bg-gray-50 border border-gray-200 dark:border-gray-200 text-gray-700 dark:text-gray-700" style={{ color: brandColor }}>
@@ -573,7 +573,7 @@ function SpecItem({
                 {icon}
             </div>
             <div className="min-w-0">
-                <p className="text-[11px] text-gray-500 leading-none mb-1">{label}</p>
+                <p className="text-[11px] text-gray-600 leading-none mb-1">{label}</p>
                 <p
                     className="text-[13px] font-semibold leading-tight truncate text-gray-800"
                     title={value}
@@ -680,7 +680,7 @@ function VariantAccordionButton({
                                 </div>
                             </div>
                             <div className="flex items-center gap-2">
-                                <Badge variant="outline" className="text-[11px] text-gray-500 dark:text-gray-500 border-gray-200 dark:border-gray-200 bg-white dark:bg-white">
+                                <Badge variant="outline" className="text-[11px] text-gray-600 dark:text-gray-600 border-gray-200 dark:border-gray-200 bg-white dark:bg-white">
                                     {variants.length > 0 ? `${variants.length} variants` : 'No data'}
                                 </Badge>
                                 <button
@@ -695,14 +695,14 @@ function VariantAccordionButton({
                         {/* ── Scrollable body ── */}
                         <div className="overflow-y-auto flex-1">
                             {variants.length === 0 ? (
-                                <p className="text-sm text-gray-500 text-center py-8 px-5">
+                                <p className="text-sm text-gray-600 text-center py-8 px-5">
                                     No variant data available for {model}
                                 </p>
                             ) : (
                                 <>
                                     {/* Variant chips */}
                                     <div className="px-4 pt-3 pb-2">
-                                        <p className="text-[11px] text-gray-500 mb-2">Select a variant to see specs</p>
+                                        <p className="text-[11px] text-gray-600 mb-2">Select a variant to see specs</p>
                                         <div className="flex flex-wrap gap-2">
                                             {variants.map((v) => {
                                                 const isSelected = selected?.variant_name === v.variant_name;
@@ -741,12 +741,12 @@ function VariantAccordionButton({
                                             {/* Price + badges */}
                                             <div className="flex items-end justify-between">
                                                 <div>
-                                                    <p className="text-[10px] text-gray-500">Ex-Showroom</p>
+                                                    <p className="text-[10px] text-gray-600">Ex-Showroom</p>
                                                     <p className="text-xl font-bold" style={{ color: brandColor }}>
                                                         {fmtPrice(selected.ex_showroom_price_min_inr)}
                                                     </p>
                                                     {selected.hyderabad_on_road_price && (
-                                                        <p className="text-[10px] text-gray-500 mt-0.5">
+                                                        <p className="text-[10px] text-gray-600 mt-0.5">
                                                             On-Road (Hyd): <span className="font-semibold text-gray-900">{fmtPrice(selected.hyderabad_on_road_price)}</span>
                                                         </p>
                                                     )}
@@ -802,7 +802,7 @@ function VariantAccordionButton({
                                             {/* Key features */}
                                             {selected.key_features && (
                                                 <div>
-                                                    <p className="text-[10px] font-semibold uppercase tracking-wider text-gray-500 mb-1.5">Key Features</p>
+                                                    <p className="text-[10px] font-semibold uppercase tracking-wider text-gray-600 mb-1.5">Key Features</p>
                                                     <div className="flex flex-wrap gap-1.5">
                                                         {parseKeyFeatures(selected.key_features).map((f, i) => (
                                                             <span key={i} className="text-[10px] px-2 py-0.5 rounded-full bg-gray-50 text-gray-700 border border-gray-200">{f.trim()}</span>
@@ -814,7 +814,7 @@ function VariantAccordionButton({
                                             {/* Safety features */}
                                             {selected.safety_features && (
                                                 <div>
-                                                    <p className="text-[10px] font-semibold uppercase tracking-wider text-gray-500 mb-1.5">Safety</p>
+                                                    <p className="text-[10px] font-semibold uppercase tracking-wider text-gray-600 mb-1.5">Safety</p>
                                                     <div className="flex flex-wrap gap-1.5">
                                                         {parseSafetyFeatures(selected.safety_features).map((f, i) => (
                                                             <span key={i} className="text-[10px] px-2 py-0.5 rounded-full bg-red-50 text-red-600 border border-red-200">{f.trim()}</span>
@@ -850,7 +850,7 @@ function PopSpecChip({ icon, label, value }: { icon: React.ReactNode; label: str
         <div className="flex items-center gap-2 p-2 rounded-lg bg-gray-50 border border-gray-200">
             <div className="w-6 h-6 rounded-md bg-white border border-gray-200 flex items-center justify-center shrink-0">{icon}</div>
             <div className="min-w-0">
-                <p className="text-[9px] text-gray-500 leading-none">{label}</p>
+                <p className="text-[9px] text-gray-600 leading-none">{label}</p>
                 <p className="text-[11px] font-semibold text-gray-900 mt-0.5 truncate" title={value}>{value}</p>
             </div>
         </div>
