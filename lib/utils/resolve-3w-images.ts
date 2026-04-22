@@ -13,39 +13,56 @@ import { modelToSlug, getVehicleImageUrls } from './brand-model-images';
 
 const IMAGE_EXTENSIONS = ['jpg', 'png', 'webp'] as const;
 
-// Cache: brandId → Set of image stems (filenames without extension)
-let cachedImageMap: Map<string, Set<string>> | null = null;
+// Cache: brandId → Map of image stem → source directory prefix
+// Source prefix: '/data/brand-model-images/3w' or '/images/3w'
+interface StemInfo {
+    stems: Set<string>;
+    stemToPrefix: Map<string, string>;
+}
+let cachedImageMap: Map<string, StemInfo> | null = null;
 
-/** Scan 3W image directory and build a map of brandId → available image stems */
-function getImageMap(): Map<string, Set<string>> {
+/** Scan BOTH 3W image directories and build a map of brandId → available image stems */
+function getImageMap(): Map<string, StemInfo> {
     if (cachedImageMap) return cachedImageMap;
 
-    const baseDir = path.join(process.cwd(), 'public', 'data', 'brand-model-images', '3w');
-    const map = new Map<string, Set<string>>();
+    const map = new Map<string, StemInfo>();
 
-    try {
-        const brandDirs = fs.readdirSync(baseDir, { withFileTypes: true })
-            .filter(d => d.isDirectory())
-            .map(d => d.name);
+    // Scan both directories: data/brand-model-images/3w (scraped) and images/3w (complete)
+    const dirs = [
+        { base: path.join(process.cwd(), 'public', 'images', '3w'), prefix: '/images/3w' },
+        { base: path.join(process.cwd(), 'public', 'data', 'brand-model-images', '3w'), prefix: '/data/brand-model-images/3w' },
+    ];
 
-        for (const brandId of brandDirs) {
-            const brandDir = path.join(baseDir, brandId);
-            const stems = new Set<string>();
+    for (const { base, prefix } of dirs) {
+        try {
+            const brandDirs = fs.readdirSync(base, { withFileTypes: true })
+                .filter(d => d.isDirectory())
+                .map(d => d.name);
 
-            const files = fs.readdirSync(brandDir);
-            for (const file of files) {
-                const ext = file.split('.').pop()?.toLowerCase();
-                if (ext && (IMAGE_EXTENSIONS as readonly string[]).includes(ext)) {
-                    // Store stem without extension
-                    const stem = file.substring(0, file.length - ext.length - 1);
-                    stems.add(stem);
+            for (const brandId of brandDirs) {
+                const brandDir = path.join(base, brandId);
+
+                if (!map.has(brandId)) {
+                    map.set(brandId, { stems: new Set(), stemToPrefix: new Map() });
+                }
+                const info = map.get(brandId)!;
+
+                const files = fs.readdirSync(brandDir);
+                for (const file of files) {
+                    const ext = file.split('.').pop()?.toLowerCase();
+                    if (ext && (IMAGE_EXTENSIONS as readonly string[]).includes(ext)) {
+                        const stem = file.substring(0, file.length - ext.length - 1);
+                        info.stems.add(stem);
+                        // First directory wins (images/3w has priority — more complete)
+                        if (!info.stemToPrefix.has(stem)) {
+                            info.stemToPrefix.set(stem, prefix);
+                        }
+                    }
                 }
             }
-
-            map.set(brandId, stems);
+        } catch {
+            // Directory doesn't exist
         }
-    } catch {
-        // Directory doesn't exist or can't be read
     }
 
     cachedImageMap = map;
@@ -55,8 +72,9 @@ function getImageMap(): Map<string, Set<string>> {
 /** Find matching image stems for a model slug within a brand's image directory */
 function findMatchingStems(brandId: string, modelSlug: string): string[] {
     const imageMap = getImageMap();
-    const stems = imageMap.get(brandId);
-    if (!stems || stems.size === 0) return [];
+    const info = imageMap.get(brandId);
+    if (!info || info.stems.size === 0) return [];
+    const stems = info.stems;
 
     const matches: string[] = [];
 
@@ -186,12 +204,18 @@ export function resolve3wImageUrls(brandId: string, model: string): string[] {
 
     if (matchedStems.length === 0) return [];
 
+    const imageMap = getImageMap();
+    const info = imageMap.get(brandId);
+    if (!info) return [];
+
     const urls: string[] = [];
     const seen = new Set<string>();
 
     for (const stem of matchedStems) {
+        // Use the correct directory prefix for this stem
+        const prefix = info.stemToPrefix.get(stem) ?? '/data/brand-model-images/3w';
         for (const ext of IMAGE_EXTENSIONS) {
-            const url = `/data/brand-model-images/3w/${brandId}/${stem}.${ext}`;
+            const url = `${prefix}/${brandId}/${stem}.${ext}`;
             if (!seen.has(url)) {
                 seen.add(url);
                 urls.push(url);
