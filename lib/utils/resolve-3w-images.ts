@@ -9,7 +9,7 @@
 
 import fs from 'fs';
 import path from 'path';
-import { modelToSlug } from './brand-model-images';
+import { modelToSlug, getVehicleImageUrls } from './brand-model-images';
 
 const IMAGE_EXTENSIONS = ['jpg', 'png', 'webp'] as const;
 
@@ -206,6 +206,15 @@ export function resolve3wImageUrls(brandId: string, model: string): string[] {
  * Get all image URLs for a 3W vehicle, combining filesystem scan with fallbacks.
  * Use this in API routes instead of getVehicleImageUrls for 3W.
  */
+/**
+ * Get all image URLs for a 3W vehicle, combining filesystem scan with fallbacks.
+ * Use this in API routes instead of getVehicleImageUrls for 3W.
+ *
+ * Priority:
+ * 1. primaryImage (if provided)
+ * 2. Filesystem-matched local images (accurate, confirmed on disk)
+ * 3. Fallback to heuristic URL generation (Supabase storage etc.) when no local match
+ */
 export function get3wVehicleImageUrls(
     brandId: string,
     model: string,
@@ -214,8 +223,15 @@ export function get3wVehicleImageUrls(
     const fsUrls = resolve3wImageUrls(brandId, model);
     const normalizedPrimary = primaryImage && primaryImage !== '/placeholder-car.jpg' ? primaryImage : null;
 
-    return [...new Set([
-        normalizedPrimary,
-        ...fsUrls,
-    ].filter((url): url is string => Boolean(url)))];
+    // If filesystem scan found images, use those (most accurate)
+    if (fsUrls.length > 0) {
+        return [...new Set([
+            normalizedPrimary,
+            ...fsUrls,
+        ].filter((url): url is string => Boolean(url)))];
+    }
+
+    // No local images found — fall back to heuristic URL generation
+    // (includes Supabase storage URLs as last resort)
+    return getVehicleImageUrls('3w', brandId, model, primaryImage);
 }
