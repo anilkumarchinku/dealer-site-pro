@@ -35,7 +35,7 @@ import {
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
 import { formatPriceInLakhs } from '@/lib/utils/car-utils';
 import { getBrandLogo } from '@/lib/data/brand-logos';
-import { getContrastText } from '@/lib/utils/color-contrast';
+import { getContrastText, getReadableAccent } from '@/lib/utils/color-contrast';
 import { validateLeadForm, type ValidationErrors } from '@/lib/validations/client';
 import { getVehicleImageUrls, brandNameToId } from '@/lib/utils/brand-model-images';
 
@@ -182,6 +182,8 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
 
     const priceRange = formatPriceInLakhs(car.pricing.exShowroom.min);
     const maxPrice = formatPriceInLakhs(car.pricing.exShowroom.max);
+    const brandAccent = getReadableAccent(brandColor);
+    const brandContrast = getContrastText(brandColor);
 
     return (
         <Dialog open={open} onOpenChange={onOpenChange}>
@@ -220,7 +222,7 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
                                 {getBrandLogo(car.make) && (
                                     <Image src={getBrandLogo(car.make)!} alt={car.make} width={24} height={24} className="object-contain" />
                                 )}
-                                <p className="text-sm font-medium uppercase tracking-wider" style={{ color: brandColor }}>
+                                <p className="text-sm font-medium uppercase tracking-wider" style={{ color: brandAccent }}>
                                     {car.make}
                                 </p>
                             </div>
@@ -246,7 +248,7 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
                             {car.pricing.emi && (
                                 <div className="ml-auto text-right">
                                     <p className="text-xs text-gray-500 uppercase tracking-wide mb-1">EMI Starts From</p>
-                                    <p className="text-xl font-bold" style={{ color: brandColor }}>
+                                    <p className="text-xl font-bold" style={{ color: brandAccent }}>
                                         ₹{car.pricing.emi.monthly.toLocaleString()}/mo
                                     </p>
                                 </div>
@@ -410,7 +412,7 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
                                     </div>
                                     <div className="flex-1 min-w-0">
                                         <p className="text-sm font-semibold text-gray-800">Prefer WhatsApp?</p>
-                                        <p className="text-xs text-gray-500">Get an instant reply from the dealer</p>
+                                        <p className="text-xs text-gray-600">Get an instant reply from the dealer</p>
                                     </div>
                                     <a
                                         href={`https://wa.me/${dealerPhone.replace(/[^0-9]/g, '').replace(/^(?!91)/, '91')}?text=${encodeURIComponent(`Hi, I'm interested in the ${car?.make} ${car?.model}${car?.variant ? ' ' + car.variant : ''}. Can you share more details and pricing?`)}`}
@@ -446,7 +448,7 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
                                     )}
                                 </div>
                             ) : (
-                                <form onSubmit={handleSubmit} className="space-y-4">
+                                <form onSubmit={handleSubmit} className="space-y-4 text-gray-900">
                                     <div className="grid grid-cols-2 gap-4">
                                         <div>
                                             <Label htmlFor="name">Full Name *</Label>
@@ -502,7 +504,7 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
                                     <Button
                                         type="submit"
                                         className="w-full"
-                                        style={{ backgroundColor: brandColor, color: getContrastText(brandColor) }}
+                                        style={{ backgroundColor: brandColor, color: brandContrast }}
                                         disabled={isSubmitting}
                                     >
                                         {isSubmitting ? (

@@ -1,12 +1,15 @@
 /**
  * POST /api/test-drive
- * Saves a test-drive booking as a lead with lead_source = 'test_drive'
- * and stores structured date/time in the message field.
+ * Saves a test-drive booking as:
+ * 1. a lead row in `leads`
+ * 2. a structured booking row in `test_drive_bookings`
+ * linked together via `lead_id`.
  */
 
 import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
 import { testDriveSchema, formatZodErrors } from '@/lib/validations/schemas';
+import { logger } from '@/lib/utils/logger';
 
 const UUID_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i
 
@@ -60,10 +63,11 @@ export async function POST(req: NextRequest) {
 
         // Format a human-readable message for the lead record
         const message = `${vehicle_type === '2w' ? 'Test Ride' : vehicle_type === '3w' ? 'Trial Run' : 'Test Drive'} request for ${car_name ?? 'vehicle'}.\nPreferred: ${preferred_date} at ${preferred_time}.`;
+        const referer = req.headers.get('referer') || 'Direct/Unknown';
 
         const supabase = getSupabase();
         const vehicleId = await resolveVehicleId(supabase, car_id);
-        const { error } = await supabase
+        const { data: lead, error: leadError } = await supabase
             .from('leads')
             .insert({
                 dealer_id,
@@ -75,17 +79,57 @@ export async function POST(req: NextRequest) {
                 vehicle_interest: car_name?.trim() || null,
                 lead_type: 'test_drive',
                 source: 'website',
-                utm_source: req.headers.get('referer') || 'Direct/Unknown',
+                utm_source: referer,
                 status: 'new',
-            });
+            })
+            .select('id')
+            .single();
 
-        if (error) {
-            throw error;
+        if (leadError) {
+            throw leadError;
         }
 
-        return NextResponse.json({ success: true }, { status: 201 });
+        const { data: booking, error: bookingError } = await supabase
+            .from('test_drive_bookings')
+            .insert({
+                dealer_id,
+                lead_id: lead.id,
+                vehicle_id: vehicleId,
+                customer_name: name.trim(),
+                customer_phone: phone.trim(),
+                customer_email: email?.trim() || null,
+                vehicle_interest: car_name?.trim() || null,
+                preferred_date,
+                preferred_time,
+                status: 'pending',
+                notes: message,
+                source: 'website',
+                utm_source: referer,
+            })
+            .select('id')
+            .single();
+
+        if (bookingError) {
+            logger.error('[test-drive] booking insert failed after lead insert:', bookingError);
+
+            const { error: rollbackError } = await supabase
+                .from('leads')
+                .delete()
+                .eq('id', lead.id);
+
+            if (rollbackError) {
+                logger.error('[test-drive] rollback failed for lead:', rollbackError);
+            }
+
+            throw bookingError;
+        }
+
+        return NextResponse.json(
+            { success: true, leadId: lead.id, bookingId: booking.id },
+            { status: 201 }
+        );
     } catch (err) {
-        console.error('[test-drive] booking error:', err);
+        logger.error('[test-drive] booking error:', err);
         return NextResponse.json(
             { error: 'Failed to book test drive. Please try again.' },
             { status: 500 }

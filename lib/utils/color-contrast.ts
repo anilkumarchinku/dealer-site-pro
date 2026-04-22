@@ -24,6 +24,14 @@ export function getContrastText(hex: string): string {
     return getLuminance(hex) < 0.4 ? '#ffffff' : '#1f2937';
 }
 
+/**
+ * Returns a brand accent color that stays readable when used as text/icon color
+ * on light backgrounds. Light brand colors fall back to a neutral slate tone.
+ */
+export function getReadableAccent(hex: string, fallback = '#1f2937'): string {
+    return getLuminance(hex) < 0.32 ? hex : fallback;
+}
+
 /** Returns true if the color is dark (needs white text on top). */
 export function isDark(hex: string): boolean {
     return getLuminance(hex) < 0.4;

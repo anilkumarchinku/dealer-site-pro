@@ -19,6 +19,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import type { Service } from '@/lib/types';
+import { getContrastText, getReadableAccent } from '@/lib/utils/color-contrast';
 import { getVehicleLabels } from '@/lib/utils/vehicle-labels';
 import { validateLeadForm } from '@/lib/validations/client';
 import {
@@ -183,6 +184,8 @@ export function EnquireSidebar({
         preferredTime: '',
         message: '',
     });
+    const brandContrast = getContrastText(brandColor);
+    const brandAccent = getReadableAccent(brandColor);
 
     // Build vehicle-type-aware overrides for labels & descriptions
     const vl = getVehicleLabels(vehicleType);
@@ -291,7 +294,7 @@ export function EnquireSidebar({
                         <SheetTitle className="text-lg font-bold text-gray-900">
                             How Can We Help You?
                         </SheetTitle>
-                        <SheetDescription className="text-sm text-gray-500">
+                        <SheetDescription className="text-sm text-gray-600">
                             {dealerName} — choose a service & we'll call you back
                         </SheetDescription>
                     </SheetHeader>
@@ -306,17 +309,17 @@ export function EnquireSidebar({
                         <h3 className="text-xl font-bold text-gray-900 mb-2">
                             Request Received!
                         </h3>
-                        <p className="text-gray-500 text-sm mb-1">
+                        <p className="text-gray-600 text-sm mb-1">
                             Thank you, <strong>{form.name}</strong>!
                         </p>
-                        <p className="text-gray-500 text-sm mb-6">
+                        <p className="text-gray-600 text-sm mb-6">
                             Our team will call you at <strong>{form.phone}</strong> shortly.
                         </p>
                         {contactPhone && (
                             <a
                                 href={`tel:${contactPhone}`}
                                 className="text-sm font-medium flex items-center gap-2 mb-6"
-                                style={{ color: brandColor }}
+                                style={{ color: brandAccent }}
                             >
                                 <Phone className="w-4 h-4" />
                                 Can't wait? Call us now
@@ -324,8 +327,8 @@ export function EnquireSidebar({
                         )}
                         <Button
                             onClick={handleClose}
-                            className="text-white"
-                            style={{ backgroundColor: brandColor }}
+                            className="font-semibold"
+                            style={{ backgroundColor: brandColor, color: brandContrast }}
                         >
                             Close
                         </Button>
@@ -335,7 +338,7 @@ export function EnquireSidebar({
                     <div className="flex-1 overflow-y-auto">
                         {/* Service tiles */}
                         <div className="p-5 pb-3">
-                            <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-3">
+                            <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-3">
                                 Select a Service
                             </p>
                             <div className="grid grid-cols-2 gap-2">
@@ -359,19 +362,19 @@ export function EnquireSidebar({
                                         >
                                             <div className={`w-8 h-8 rounded-lg flex items-center justify-center mb-2 ${isSelected ? 'bg-white' : 'bg-white/80'}`}>
                                                 <Icon className={`w-4 h-4 ${isSelected ? '' : svc.color}`}
-                                                    style={isSelected ? { color: brandColor } : {}} />
+                                                    style={isSelected ? { color: brandAccent } : {}} />
                                             </div>
-                                            <p className={`text-xs font-semibold leading-tight ${isSelected ? '' : 'text-gray-800'}`}
-                                                style={isSelected ? { color: brandColor } : {}}>
+                                            <p className={`text-xs font-semibold leading-tight ${isSelected ? 'text-gray-900' : 'text-gray-800'}`}
+                                                style={isSelected ? undefined : {}}>
                                                 {svc.label}
                                             </p>
-                                            <p className="text-xs text-gray-400 mt-0.5 leading-tight line-clamp-1">
+                                            <p className="text-xs text-gray-600 mt-0.5 leading-tight line-clamp-1">
                                                 {svc.description}
                                             </p>
                                             {isSelected && (
                                                 <div className="absolute top-2 right-2 w-4 h-4 rounded-full flex items-center justify-center"
                                                     style={{ backgroundColor: brandColor }}>
-                                                    <CheckCircle2 className="w-3 h-3 text-white" />
+                                                    <CheckCircle2 className="w-3 h-3" style={{ color: brandContrast }} />
                                                 </div>
                                             )}
                                         </button>
@@ -384,7 +387,7 @@ export function EnquireSidebar({
                         <div className="px-5 py-3">
                             <div className="flex items-center gap-3">
                                 <div className="flex-1 h-px bg-gray-100" />
-                                <p className="text-xs font-semibold uppercase tracking-wider text-gray-400">
+                                <p className="text-xs font-semibold uppercase tracking-wider text-gray-500">
                                     Get a Callback
                                 </p>
                                 <div className="flex-1 h-px bg-gray-100" />
@@ -458,8 +461,8 @@ export function EnquireSidebar({
 
                             <Button
                                 type="submit"
-                                className="w-full text-white font-semibold h-11 transition-all"
-                                style={{ backgroundColor: brandColor }}
+                                className="w-full font-semibold h-11 transition-all"
+                                style={{ backgroundColor: brandColor, color: brandContrast }}
                                 disabled={!form.name || !form.phone}
                             >
                                 <Phone className="w-4 h-4 mr-2" />
@@ -468,9 +471,9 @@ export function EnquireSidebar({
                             </Button>
 
                             {contactPhone && (
-                                <p className="text-center text-xs text-gray-400">
+                                <p className="text-center text-xs text-gray-500">
                                     Or call us directly:{' '}
-                                    <a href={`tel:${contactPhone}`} className="font-semibold" style={{ color: brandColor }}>
+                                    <a href={`tel:${contactPhone}`} className="font-semibold" style={{ color: brandAccent }}>
                                         {contactPhone}
                                     </a>
                                 </p>

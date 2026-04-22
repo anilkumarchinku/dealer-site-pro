@@ -290,6 +290,36 @@ export interface Database {
         Update: Partial<Database['public']['Tables']['leads']['Row']>
         Relationships: []
       }
+      test_drive_bookings: {
+        Row: {
+          id: string
+          dealer_id: string
+          lead_id: string | null
+          vehicle_id: string | null
+          customer_name: string
+          customer_phone: string
+          customer_email: string | null
+          vehicle_interest: string | null
+          preferred_date: string | null
+          preferred_time: string | null
+          status: 'pending' | 'confirmed' | 'completed' | 'cancelled' | 'no_show'
+          notes: string | null
+          source: string
+          utm_source: string | null
+          confirmed_at: string | null
+          completed_at: string | null
+          cancelled_at: string | null
+          created_at: string
+          updated_at: string
+        }
+        Insert: Partial<Database['public']['Tables']['test_drive_bookings']['Row']> & {
+          dealer_id: string
+          customer_name: string
+          customer_phone: string
+        }
+        Update: Partial<Database['public']['Tables']['test_drive_bookings']['Row']>
+        Relationships: []
+      }
       messages: {
         Row: {
           id: string

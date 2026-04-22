@@ -21,6 +21,7 @@ import {
     MapPin,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { getContrastText, getReadableAccent } from '@/lib/utils/color-contrast';
 import { validateLeadForm } from '@/lib/validations/client';
 
 interface TestDriveModalProps {
@@ -104,6 +105,8 @@ export function TestDriveModal({
     const dateTiles = useMemo(() => buildDateTiles(10), []);
     const carLabel = `${car.make} ${car.model}${car.variant ? ' · ' + car.variant : ''}`;
     const verb = testDriveVerb(vehicleType ?? car.vehicleCategory as '2w' | '3w' | undefined);
+    const brandContrast = getContrastText(brandColor);
+    const brandAccent = getReadableAccent(brandColor);
 
     if (!open) return null;
 
@@ -202,10 +205,10 @@ export function TestDriveModal({
                         )}
                         <div className="w-10 h-10 rounded-xl flex items-center justify-center border border-gray-100 shadow-sm"
                             style={{ backgroundColor: `${brandColor}15` }}>
-                            <CarIcon className="w-5 h-5" style={{ color: brandColor }} />
+                            <CarIcon className="w-5 h-5" style={{ color: brandAccent }} />
                         </div>
                         <div>
-                            <p className="text-[10px] font-bold uppercase tracking-widest" style={{ color: brandColor }}>
+                            <p className="text-[10px] font-bold uppercase tracking-widest" style={{ color: brandAccent }}>
                                 Book {verb}
                             </p>
                             <p className="text-xs font-semibold text-gray-700 leading-tight line-clamp-1">{carLabel}</p>
@@ -228,9 +231,9 @@ export function TestDriveModal({
                                     <div
                                         className="w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-bold transition-colors"
                                         style={step > i + 1
-                                            ? { backgroundColor: brandColor, color: '#fff' }
+                                            ? { backgroundColor: brandColor, color: brandContrast }
                                             : step === i + 1
-                                            ? { backgroundColor: brandColor, color: '#fff' }
+                                            ? { backgroundColor: brandColor, color: brandContrast }
                                             : { backgroundColor: '#f3f4f6', color: '#9ca3af' }}
                                     >
                                         {step > i + 1 ? '✓' : i + 1}
@@ -268,16 +271,16 @@ export function TestDriveModal({
                                             onClick={() => setSelectedDate(ds)}
                                             className="flex flex-col items-center py-2.5 px-1 rounded-xl border-2 transition-all duration-150 hover:scale-105"
                                             style={isSelected
-                                                ? { backgroundColor: brandColor, borderColor: brandColor, color: '#fff' }
+                                                ? { backgroundColor: brandColor, borderColor: brandColor, color: brandContrast }
                                                 : { backgroundColor: '#f9fafb', borderColor: '#e5e7eb', color: '#374151' }}
                                         >
-                                            <span className={`text-[9px] font-semibold uppercase ${isSelected ? 'text-white/80' : 'text-gray-400'}`}>
+                                            <span className={`text-[9px] font-semibold uppercase ${isSelected ? '' : 'text-gray-500'}`} style={isSelected ? { color: brandContrast } : undefined}>
                                                 {tile.day}
                                             </span>
-                                            <span className={`text-base font-bold leading-none my-0.5 ${isSelected ? 'text-white' : 'text-gray-900'}`}>
+                                            <span className={`text-base font-bold leading-none my-0.5 ${isSelected ? '' : 'text-gray-900'}`} style={isSelected ? { color: brandContrast } : undefined}>
                                                 {tile.label}
                                             </span>
-                                            <span className={`text-[9px] ${isSelected ? 'text-white/80' : 'text-gray-400'}`}>
+                                            <span className={`text-[9px] ${isSelected ? '' : 'text-gray-500'}`} style={isSelected ? { color: brandContrast } : undefined}>
                                                 {tile.month}
                                             </span>
                                         </button>
@@ -289,7 +292,7 @@ export function TestDriveModal({
                                 className="w-full mt-4 gap-2 font-semibold"
                                 disabled={!selectedDate}
                                 onClick={() => setStep(2)}
-                                style={{ backgroundColor: selectedDate ? brandColor : undefined }}
+                                style={selectedDate ? { backgroundColor: brandColor, color: brandContrast } : undefined}
                             >
                                 Continue → Choose Time
                             </Button>
@@ -316,7 +319,7 @@ export function TestDriveModal({
                                                     onClick={() => setSelectedTime(slot)}
                                                     className="py-2.5 rounded-xl border-2 text-xs font-semibold transition-all duration-150 hover:scale-105"
                                                     style={isSelected
-                                                        ? { backgroundColor: brandColor, borderColor: brandColor, color: '#fff' }
+                                                        ? { backgroundColor: brandColor, borderColor: brandColor, color: brandContrast }
                                                         : { backgroundColor: '#f9fafb', borderColor: '#e5e7eb', color: '#374151' }}
                                                 >
                                                     {slot}
@@ -330,7 +333,7 @@ export function TestDriveModal({
                                 className="w-full mt-2 gap-2 font-semibold"
                                 disabled={!selectedTime}
                                 onClick={() => setStep(3)}
-                                style={{ backgroundColor: selectedTime ? brandColor : undefined }}
+                                style={selectedTime ? { backgroundColor: brandColor, color: brandContrast } : undefined}
                             >
                                 Continue → Your Details
                             </Button>
@@ -342,7 +345,7 @@ export function TestDriveModal({
                         <form onSubmit={handleSubmit} className="space-y-3">
                             {/* Booking summary pill */}
                             <div className="flex items-center gap-2 px-3 py-2 rounded-xl text-xs font-medium"
-                                style={{ backgroundColor: `${brandColor}12`, color: brandColor }}>
+                                style={{ backgroundColor: `${brandColor}12`, color: brandAccent }}>
                                 <Calendar className="w-3.5 h-3.5 shrink-0" />
                                 {formatDisplayDate(selectedDate)} &nbsp;·&nbsp; {selectedTime}
                             </div>
@@ -358,7 +361,7 @@ export function TestDriveModal({
                                     value={form.name}
                                     onChange={e => setForm(f => ({ ...f, name: e.target.value }))}
                                     placeholder="Your name"
-                                    className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 text-sm text-gray-900 bg-gray-50 focus:outline-none focus:ring-2 focus:border-transparent placeholder:text-gray-400"
+                                    className="w-full px-3.5 py-2.5 rounded-xl border border-gray-300 bg-white text-sm text-gray-900 focus:outline-none focus:ring-2 focus:border-transparent placeholder:text-gray-500"
                                     style={{ '--tw-ring-color': brandColor } as React.CSSProperties}
                                 />
                             </div>
@@ -374,7 +377,7 @@ export function TestDriveModal({
                                     onChange={e => setForm(f => ({ ...f, phone: e.target.value }))}
                                     placeholder="10-digit mobile number"
                                     maxLength={13}
-                                    className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 text-sm text-gray-900 bg-gray-50 focus:outline-none focus:ring-2 focus:border-transparent placeholder:text-gray-400"
+                                    className="w-full px-3.5 py-2.5 rounded-xl border border-gray-300 bg-white text-sm text-gray-900 focus:outline-none focus:ring-2 focus:border-transparent placeholder:text-gray-500"
                                     style={{ '--tw-ring-color': brandColor } as React.CSSProperties}
                                 />
                             </div>
@@ -388,7 +391,7 @@ export function TestDriveModal({
                                     value={form.email}
                                     onChange={e => setForm(f => ({ ...f, email: e.target.value }))}
                                     placeholder="you@email.com"
-                                    className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 text-sm text-gray-900 bg-gray-50 focus:outline-none focus:ring-2 focus:border-transparent placeholder:text-gray-400"
+                                    className="w-full px-3.5 py-2.5 rounded-xl border border-gray-300 bg-white text-sm text-gray-900 focus:outline-none focus:ring-2 focus:border-transparent placeholder:text-gray-500"
                                     style={{ '--tw-ring-color': brandColor } as React.CSSProperties}
                                 />
                             </div>
@@ -401,11 +404,11 @@ export function TestDriveModal({
                                 type="submit"
                                 disabled={status === 'loading' || !form.name.trim() || !form.phone.trim()}
                                 className="w-full gap-2 font-semibold"
-                                style={{ backgroundColor: brandColor }}
+                                style={{ backgroundColor: brandColor, color: brandContrast }}
                             >
                                 {status === 'loading' ? (
                                     <>
-                                        <div className="w-4 h-4 border-2 border-white/40 border-t-white rounded-full animate-spin" />
+                                        <div className="w-4 h-4 border-2 rounded-full animate-spin" style={{ borderColor: `${brandContrast}66`, borderTopColor: brandContrast }} />
                                         Booking…
                                     </>
                                 ) : (
@@ -429,7 +432,7 @@ export function TestDriveModal({
                                 className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
                                 style={{ backgroundColor: `${brandColor}15` }}
                             >
-                                <CheckCircle2 className="w-9 h-9" style={{ color: brandColor }} />
+                                <CheckCircle2 className="w-9 h-9" style={{ color: brandAccent }} />
                             </div>
                             <h3 className="text-xl font-bold text-gray-900 mb-1">{verb} Booked!</h3>
                             <p className="text-sm text-gray-500 mb-5">
@@ -438,13 +441,13 @@ export function TestDriveModal({
 
                             {/* Booking summary card */}
                             <div className="text-left bg-gray-50 rounded-2xl p-4 space-y-2.5 mb-5 border border-gray-100">
-                                <Row icon={<CarIcon className="w-3.5 h-3.5" style={{ color: brandColor }} />} label="Vehicle" value={carLabel} />
-                                <Row icon={<Calendar className="w-3.5 h-3.5" style={{ color: brandColor }} />} label="Date" value={formatDisplayDate(selectedDate)} />
-                                <Row icon={<Clock className="w-3.5 h-3.5" style={{ color: brandColor }} />} label="Time" value={selectedTime} />
-                                <Row icon={<User className="w-3.5 h-3.5" style={{ color: brandColor }} />} label="Name" value={form.name} />
-                                <Row icon={<Phone className="w-3.5 h-3.5" style={{ color: brandColor }} />} label="Phone" value={form.phone} />
+                                <Row icon={<CarIcon className="w-3.5 h-3.5" style={{ color: brandAccent }} />} label="Vehicle" value={carLabel} />
+                                <Row icon={<Calendar className="w-3.5 h-3.5" style={{ color: brandAccent }} />} label="Date" value={formatDisplayDate(selectedDate)} />
+                                <Row icon={<Clock className="w-3.5 h-3.5" style={{ color: brandAccent }} />} label="Time" value={selectedTime} />
+                                <Row icon={<User className="w-3.5 h-3.5" style={{ color: brandAccent }} />} label="Name" value={form.name} />
+                                <Row icon={<Phone className="w-3.5 h-3.5" style={{ color: brandAccent }} />} label="Phone" value={form.phone} />
                                 {dealerName && (
-                                    <Row icon={<MapPin className="w-3.5 h-3.5" style={{ color: brandColor }} />} label="Dealer" value={dealerName} />
+                                    <Row icon={<MapPin className="w-3.5 h-3.5" style={{ color: brandAccent }} />} label="Dealer" value={dealerName} />
                                 )}
                             </div>
 
