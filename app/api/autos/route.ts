@@ -95,10 +95,25 @@ export async function GET(request: NextRequest) {
         }
 
         const total = count ?? 0;
-        const totalPages = Math.ceil(total / pageSize);
+
+        // Group variants by make+model — keep first row per model
+        const modelMap = new Map<string, (typeof data)[number]>();
+        for (const row of (data ?? [])) {
+            const key = `${(row.make ?? '').toLowerCase()}__${(row.model ?? '').toLowerCase()}`;
+            if (!modelMap.has(key)) {
+                modelMap.set(key, row);
+            } else {
+                const existing = modelMap.get(key)!;
+                const ep = existing.price_min_paise ?? 0;
+                const rp = row.price_min_paise ?? 0;
+                if (rp > 0 && (ep === 0 || rp < ep)) modelMap.set(key, row);
+            }
+        }
+        const groupedData = Array.from(modelMap.values());
+        const totalPages = Math.ceil(groupedData.length > 0 ? total / pageSize : 0);
 
         // Map rows to a simplified vehicle shape for the frontend
-        const vehicles = (data ?? []).map((row) => {
+        const vehicles = groupedData.map((row) => {
             const fuelRaw = (row.fuel_type ?? '').toLowerCase();
             const isElectric = fuelRaw === 'electric';
             const vehicleType: string = isElectric

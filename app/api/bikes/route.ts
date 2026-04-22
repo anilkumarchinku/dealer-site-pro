@@ -104,11 +104,29 @@ export async function GET(request: NextRequest) {
             );
         }
 
+        // Note: total reflects grouped count (models, not variants)
         const total = count ?? 0;
-        const totalPages = Math.ceil(total / pageSize);
+
+        // Group variants by make+model — keep first row per model (highest popularity)
+        const modelMap = new Map<string, typeof data[0]>();
+        for (const row of (data ?? [])) {
+            const key = `${(row.make ?? '').toLowerCase()}__${(row.model ?? '').toLowerCase()}`;
+            if (!modelMap.has(key)) {
+                modelMap.set(key, row);
+            } else {
+                // Keep the one with lowest price for display
+                const existing = modelMap.get(key)!;
+                const existingPrice = existing.price_min_paise ?? 0;
+                const rowPrice = row.price_min_paise ?? 0;
+                if (rowPrice > 0 && (existingPrice === 0 || rowPrice < existingPrice)) {
+                    modelMap.set(key, row);
+                }
+            }
+        }
+        const groupedData = Array.from(modelMap.values());
 
         // Map rows to a simplified vehicle shape for the frontend
-        const vehicles = (data ?? []).map((row) => {
+        const vehicles = groupedData.map((row) => {
             const fuelRaw = (row.fuel_type ?? '').toLowerCase();
             const isElectric = fuelRaw === 'electric';
             const bodyType = (row.body_type ?? '').toLowerCase();
@@ -138,11 +156,13 @@ export async function GET(request: NextRequest) {
             };
         });
 
+        const totalPages = Math.ceil(vehicles.length > 0 ? total / pageSize : 0);
+
         return NextResponse.json({
             success: true,
             data: {
                 vehicles,
-                total,
+                total: vehicles.length,
                 page,
                 pageSize,
                 totalPages,

@@ -365,25 +365,7 @@ export default function BikeDetailPage({ params }: Props) {
                                 />
                             </div>
 
-                            {/* Thumbnails - only show if multiple images */}
-                            {imageUrls.length > 1 && (
-                                <div className="flex gap-2 overflow-x-auto pb-1">
-                                    {imageUrls.slice(0, 6).map((img, idx) => (
-                                        <div
-                                            key={idx}
-                                            className="relative w-20 h-14 flex-shrink-0 rounded-lg overflow-hidden border-2 border-transparent"
-                                        >
-                                            <Image
-                                                src={img}
-                                                alt={`View ${idx + 1}`}
-                                                fill
-                                                unoptimized
-                                                className="object-cover"
-                                            />
-                                        </div>
-                                    ))}
-                                </div>
-                            )}
+                            {/* Gallery thumbnails removed — 2W catalog only has one reliable hero image per model */}
                         </div>
 
                         {/* Price Summary Card */}
