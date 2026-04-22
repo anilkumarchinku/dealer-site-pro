@@ -73,6 +73,7 @@ interface VariantItem {
     variant: string | null;
     fuel_type: string;
     price_min_paise: number;
+    image_url?: string | null;
 }
 
 // ── Helpers ─────────────────────────────────────────────────────
