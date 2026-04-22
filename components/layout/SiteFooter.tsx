@@ -6,14 +6,13 @@ import Link from 'next/link';
 import { Calculator, GitCompare, Star, Mail, Phone, MapPin } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import BrandLogo from '@/components/BrandLogo';
+import { FOUR_W_BODY_TYPES } from '@/lib/data/four-wheelers';
 
 const POPULAR_BRANDS = [
     'Maruti Suzuki', 'Hyundai', 'Tata Motors', 'Kia', 'Mahindra',
     'Toyota', 'Honda', 'MG', 'BMW', 'Mercedes-Benz',
     'Skoda', 'Volkswagen', 'Audi', 'Volvo', 'Jeep',
 ];
-
-const BODY_TYPES = ['Hatchback', 'Sedan', 'SUV', 'MUV', 'Compact SUV', 'Luxury'];
 
 const BUDGET_LINKS = [
     { label: 'Cars Under 5 Lakh', min: 0, max: 500000 },
@@ -69,7 +68,7 @@ export function SiteFooter() {
                     <div>
                         <h4 className="text-sm font-semibold mb-3">By Body Type</h4>
                         <ul className="space-y-1.5">
-                            {BODY_TYPES.map((type) => (
+                            {FOUR_W_BODY_TYPES.map((type) => (
                                 <li key={type}>
                                     <Link
                                         href={`/cars?bodyType=${encodeURIComponent(type)}`}

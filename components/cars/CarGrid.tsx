@@ -49,7 +49,7 @@ export function CarGrid({
             <div className="text-center py-16 px-4">
                 <div className="text-5xl mb-3">🚗</div>
                 <p className="text-base font-medium text-gray-900">{emptyMessage}</p>
-                <p className="text-sm mt-1 text-gray-500">Try adjusting your filters</p>
+                <p className="text-sm mt-1 text-gray-600">Try adjusting your filters</p>
             </div>
         );
     }

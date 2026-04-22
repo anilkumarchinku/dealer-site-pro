@@ -69,9 +69,9 @@ export default function CompareBar({ brandColor = '#2563eb' }: CompareBarProps) 
                         >
                             <div className="w-14 h-10 rounded-lg border-2 border-dashed border-gray-300
                                             flex items-center justify-center bg-gray-50">
-                                <Plus className="w-4 h-4 text-gray-400" />
+                                <Plus className="w-4 h-4 text-gray-600" />
                             </div>
-                            <p className="mt-0.5 text-[10px] text-gray-400 text-center leading-tight">
+                            <p className="mt-0.5 text-[10px] text-gray-600 text-center leading-tight">
                                 Add car
                             </p>
                         </div>
@@ -97,7 +97,7 @@ export default function CompareBar({ brandColor = '#2563eb' }: CompareBarProps) 
                     <button
                         onClick={clearCars}
                         className="flex items-center justify-center w-8 h-8 rounded-xl
-                                   border border-gray-200 text-gray-500 hover:bg-gray-100 transition-colors"
+                                   border border-gray-200 text-gray-600 hover:bg-gray-100 transition-colors"
                         aria-label="Clear all"
                     >
                         <X className="w-4 h-4" />

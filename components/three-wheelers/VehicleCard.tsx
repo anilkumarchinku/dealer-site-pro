@@ -94,14 +94,14 @@ export function VehicleCard({ vehicle, slug, dealerId, brandColor = "#1f2937", s
                             onError={handleImgError}
                         />
                     ) : (
-                        <div className="flex h-full items-center justify-center text-sm text-gray-400">🛺</div>
+                        <div className="flex h-full items-center justify-center text-sm text-gray-600">🛺</div>
                     )}
 
                     <button
                         onClick={(e) => { e.preventDefault(); e.stopPropagation(); setWishlisted(w => !w) }}
                         className="absolute top-2.5 right-2.5 flex h-8 w-8 items-center justify-center rounded-full bg-white/85 shadow-sm backdrop-blur-sm transition-colors hover:bg-white"
                     >
-                        <Heart className={`h-4 w-4 transition-colors ${wishlisted ? "fill-red-500 text-red-500" : "text-gray-400"}`} />
+                        <Heart className={`h-4 w-4 transition-colors ${wishlisted ? "fill-red-500 text-red-500" : "text-gray-600"}`} />
                     </button>
 
                     <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
@@ -124,10 +124,10 @@ export function VehicleCard({ vehicle, slug, dealerId, brandColor = "#1f2937", s
                             {price ? (
                                 <>
                                     <p className="text-3xl font-black tracking-tight text-gray-900">₹{price}</p>
-                                    <p className="mt-1 text-sm text-gray-500">Ex-showroom price</p>
+                                    <p className="mt-1 text-sm text-gray-600">Ex-showroom price</p>
                                 </>
                             ) : (
-                                <p className="text-base font-semibold italic text-gray-500">Price on request</p>
+                                <p className="text-base font-semibold italic text-gray-600">Price on request</p>
                             )}
                         </div>
                     </div>
@@ -159,7 +159,7 @@ export function VehicleCard({ vehicle, slug, dealerId, brandColor = "#1f2937", s
                         onError={handleImgError}
                     />
                 ) : (
-                    <div className="flex items-center justify-center h-full text-gray-400 text-sm">🛺</div>
+                    <div className="flex items-center justify-center h-full text-gray-600 text-sm">🛺</div>
                 )}
 
                 {/* Badges */}
@@ -182,7 +182,7 @@ export function VehicleCard({ vehicle, slug, dealerId, brandColor = "#1f2937", s
                     onClick={(e) => { e.stopPropagation(); setWishlisted(w => !w) }}
                     className="absolute top-2.5 right-2.5 w-8 h-8 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center shadow-sm hover:bg-white transition-colors"
                 >
-                    <Heart className={`w-4 h-4 transition-colors ${wishlisted ? "fill-red-500 text-red-500" : "text-gray-400"}`} />
+                    <Heart className={`w-4 h-4 transition-colors ${wishlisted ? "fill-red-500 text-red-500" : "text-gray-600"}`} />
                 </button>
 
                 {/* Stock status */}
@@ -239,7 +239,7 @@ export function VehicleCard({ vehicle, slug, dealerId, brandColor = "#1f2937", s
                             )}
                         </>
                     ) : (
-                        <p className="text-sm font-semibold text-gray-500 italic">Price on request</p>
+                        <p className="text-sm font-semibold text-gray-600 italic">Price on request</p>
                     )}
                 </div>
 
@@ -297,12 +297,12 @@ export function VehicleCard({ vehicle, slug, dealerId, brandColor = "#1f2937", s
                 <div className="flex items-center gap-2 mt-2">
                     {onCompare && (
                         <button onClick={() => onCompare(vehicle)}
-                            className="flex items-center gap-1 text-[10px] text-gray-500 hover:text-gray-800 transition-colors">
+                            className="flex items-center gap-1 text-[10px] text-gray-600 hover:text-gray-800 transition-colors">
                             <GitCompare className="w-3 h-3" /> Compare
                         </button>
                     )}
                     <Link href={`${prefix}/three-wheelers/${vehicle.id}`}
-                        className="flex items-center gap-1 text-[10px] text-gray-500 hover:text-gray-800 transition-colors ml-auto"
+                        className="flex items-center gap-1 text-[10px] text-gray-600 hover:text-gray-800 transition-colors ml-auto"
                         onClick={e => e.stopPropagation()}>
                         <ChevronRight className="w-3 h-3" /> View Details
                     </Link>

@@ -10,7 +10,7 @@ export function PrivacyContent({ dealerName, location, email, phone }: PrivacyCo
     return (
         <div className="prose prose-gray max-w-none">
             <h1 className="text-3xl font-bold text-gray-900 mb-2">Privacy Policy</h1>
-            <p className="text-sm text-gray-500 mb-8">Last updated: {today}</p>
+            <p className="text-sm text-gray-600 mb-8">Last updated: {today}</p>
 
             <p className="text-gray-600 mb-6">
                 {dealerName} (&quot;we&quot;, &quot;our&quot;, &quot;us&quot;) is committed to protecting your privacy.

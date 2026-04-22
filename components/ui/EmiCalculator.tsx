@@ -57,12 +57,12 @@ export function EmiCalculator({ brandColor, theme = 'light' }: EmiCalculatorProp
 
     /* ── Styles ── */
     const card        = dark ? 'bg-white/5 border-white/10'   : 'bg-gray-50 border-gray-200';
-    const label       = dark ? 'text-gray-400'                : 'text-gray-500';
+    const label       = dark ? 'text-gray-600'                : 'text-gray-600';
     const inputCls    = dark
         ? 'bg-white/10 border-white/20 text-white focus:border-white/50'
         : 'bg-white border-gray-300 text-gray-900 focus:border-gray-400';
     const resultCard  = dark ? 'bg-black/40 border-white/10' : 'bg-white border-gray-200 shadow-sm';
-    const resultLabel = dark ? 'text-gray-400'               : 'text-gray-500';
+    const resultLabel = dark ? 'text-gray-600'               : 'text-gray-600';
     const resultVal   = dark ? 'text-white'                  : 'text-gray-900';
     const divider     = dark ? 'border-white/10'             : 'border-gray-100';
     const trackBg     = dark ? '#ffffff22'                   : '#e5e7eb';

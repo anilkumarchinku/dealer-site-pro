@@ -236,18 +236,18 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
                         {/* Price */}
                         <div className="flex items-baseline gap-3 pb-4 border-b">
                             <div>
-                                <p className="text-xs text-gray-500 uppercase tracking-wide mb-1">Price Range</p>
+                                <p className="text-xs text-gray-600 uppercase tracking-wide mb-1">Price Range</p>
                                 <div className="flex items-baseline gap-2">
                                     <span className="text-3xl font-bold text-gray-900">{priceRange}</span>
                                     {car.pricing.exShowroom.min !== car.pricing.exShowroom.max && (
-                                        <span className="text-lg text-gray-400">- {maxPrice}</span>
+                                        <span className="text-lg text-gray-600">- {maxPrice}</span>
                                     )}
                                 </div>
-                                <p className="text-xs text-gray-400 mt-1">Ex-showroom price</p>
+                                <p className="text-xs text-gray-600 mt-1">Ex-showroom price</p>
                             </div>
                             {car.pricing.emi && (
                                 <div className="ml-auto text-right">
-                                    <p className="text-xs text-gray-500 uppercase tracking-wide mb-1">EMI Starts From</p>
+                                    <p className="text-xs text-gray-600 uppercase tracking-wide mb-1">EMI Starts From</p>
                                     <p className="text-xl font-bold" style={{ color: brandAccent }}>
                                         ₹{car.pricing.emi.monthly.toLocaleString()}/mo
                                     </p>
@@ -265,12 +265,12 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
                                         <Fuel className="w-5 h-5 text-emerald-600" />
                                     </div>
                                     <div>
-                                        <p className="text-xs text-gray-500 uppercase tracking-wide">Fuel Type</p>
+                                        <p className="text-xs text-gray-600 uppercase tracking-wide">Fuel Type</p>
                                         <p className="text-sm font-semibold text-gray-900">
                                             {aggregatedSpecs?.fuelTypes || detailedVariant?.fuel_type || car.engine.type}
                                         </p>
                                         {(detailedVariant?.engine_displacement_cc || car.engine.displacement) && (
-                                            <p className="text-xs text-gray-500">
+                                            <p className="text-xs text-gray-600">
                                                 {detailedVariant?.engine_displacement_cc || car.engine.displacement}cc
                                             </p>
                                         )}
@@ -283,7 +283,7 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
                                         <Gauge className="w-5 h-5 text-blue-600" />
                                     </div>
                                     <div>
-                                        <p className="text-xs text-gray-500 uppercase tracking-wide">Transmission</p>
+                                        <p className="text-xs text-gray-600 uppercase tracking-wide">Transmission</p>
                                         <p className="text-sm font-semibold text-gray-900">
                                             {aggregatedSpecs?.transmissions || detailedVariant?.transmission || car.transmission.type}
                                         </p>
@@ -296,7 +296,7 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
                                         <Users className="w-5 h-5 text-purple-600" />
                                     </div>
                                     <div>
-                                        <p className="text-xs text-gray-500 uppercase tracking-wide">Seating</p>
+                                        <p className="text-xs text-gray-600 uppercase tracking-wide">Seating</p>
                                         <p className="text-sm font-semibold text-gray-900">
                                             {detailedVariant?.seating_capacity || car.dimensions?.seatingCapacity || ''} Seats
                                         </p>
@@ -310,7 +310,7 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
                                             <Zap className="w-5 h-5 text-amber-600" />
                                         </div>
                                         <div>
-                                            <p className="text-xs text-gray-500 uppercase tracking-wide">Mileage</p>
+                                            <p className="text-xs text-gray-600 uppercase tracking-wide">Mileage</p>
                                             <p className="text-sm font-semibold text-gray-900">
                                                 {aggregatedSpecs?.mileages ? `${aggregatedSpecs.mileages} km/l` :
                                                     detailedVariant?.mileage_kmpl_or_ev_range ||
@@ -328,8 +328,8 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
                             <div className="grid grid-cols-3 gap-4 py-4 border-y">
                                 {(aggregatedSpecs?.powerRange || detailedVariant?.power_bhp || car.engine.power !== 'TBD') && (
                                     <div className="text-center">
-                                        <Settings className="w-5 h-5 mx-auto mb-1 text-gray-400" />
-                                        <p className="text-xs text-gray-500">Power</p>
+                                        <Settings className="w-5 h-5 mx-auto mb-1 text-gray-600" />
+                                        <p className="text-xs text-gray-600">Power</p>
                                         <p className="text-sm font-semibold text-gray-900">
                                             {aggregatedSpecs?.powerRange || (detailedVariant?.power_bhp ? `${detailedVariant.power_bhp} bhp` : car.engine.power)}
                                         </p>
@@ -337,29 +337,29 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
                                 )}
                                 {detailedVariant?.ground_clearance_mm && (
                                     <div className="text-center">
-                                        <Package className="w-5 h-5 mx-auto mb-1 text-gray-400" />
-                                        <p className="text-xs text-gray-500">Ground Clearance</p>
+                                        <Package className="w-5 h-5 mx-auto mb-1 text-gray-600" />
+                                        <p className="text-xs text-gray-600">Ground Clearance</p>
                                         <p className="text-sm font-semibold text-gray-900">{detailedVariant.ground_clearance_mm}mm</p>
                                     </div>
                                 )}
                                 {detailedVariant?.boot_space_l && (
                                     <div className="text-center">
-                                        <Package className="w-5 h-5 mx-auto mb-1 text-gray-400" />
-                                        <p className="text-xs text-gray-500">Boot Space</p>
+                                        <Package className="w-5 h-5 mx-auto mb-1 text-gray-600" />
+                                        <p className="text-xs text-gray-600">Boot Space</p>
                                         <p className="text-sm font-semibold text-gray-900">{detailedVariant.boot_space_l}L</p>
                                     </div>
                                 )}
                                 {car.bodyType && (
                                     <div className="text-center">
-                                        <Package className="w-5 h-5 mx-auto mb-1 text-gray-400" />
-                                        <p className="text-xs text-gray-500">Body Type</p>
+                                        <Package className="w-5 h-5 mx-auto mb-1 text-gray-600" />
+                                        <p className="text-xs text-gray-600">Body Type</p>
                                         <p className="text-sm font-semibold text-gray-900">{car.bodyType}</p>
                                     </div>
                                 )}
                                 {car.year && (
                                     <div className="text-center">
-                                        <Calendar className="w-5 h-5 mx-auto mb-1 text-gray-400" />
-                                        <p className="text-xs text-gray-500">Year</p>
+                                        <Calendar className="w-5 h-5 mx-auto mb-1 text-gray-600" />
+                                        <p className="text-xs text-gray-600">Year</p>
                                         <p className="text-sm font-semibold text-gray-900">{car.year}</p>
                                     </div>
                                 )}

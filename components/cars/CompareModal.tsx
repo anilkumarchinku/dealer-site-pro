@@ -117,7 +117,7 @@ export default function CompareModal({ open, onOpenChange, brandColor }: Compare
                         <thead className="sticky top-0 z-10 bg-white">
                             <tr className="border-b border-gray-200">
                                 {/* Feature label column */}
-                                <th className="w-36 min-w-[9rem] py-4 px-4 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider bg-gray-50 sticky left-0 z-20">
+                                <th className="w-36 min-w-[9rem] py-4 px-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider bg-gray-50 sticky left-0 z-20">
                                     Feature
                                 </th>
 
@@ -141,7 +141,7 @@ export default function CompareModal({ open, onOpenChange, brandColor }: Compare
                                                 <p className="font-semibold text-gray-900 text-sm leading-tight">
                                                     {car.make} {car.model}
                                                 </p>
-                                                <p className="text-xs text-gray-500 truncate max-w-[9rem]">
+                                                <p className="text-xs text-gray-600 truncate max-w-[9rem]">
                                                     {car.variant}
                                                 </p>
                                             </div>
@@ -167,7 +167,7 @@ export default function CompareModal({ open, onOpenChange, brandColor }: Compare
                                 >
                                     {/* Sticky feature label */}
                                     <td
-                                        className={`py-3 px-4 text-xs font-medium text-gray-500 sticky left-0 z-10 ${
+                                        className={`py-3 px-4 text-xs font-medium text-gray-600 sticky left-0 z-10 ${
                                             rowIdx % 2 === 0 ? 'bg-white' : 'bg-gray-50'
                                         }`}
                                     >

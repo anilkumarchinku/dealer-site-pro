@@ -61,7 +61,7 @@ function SectionHeading({ icon, label }: { icon: React.ReactNode; label: string 
     return (
         <div className="flex items-center gap-2 mb-3">
             <div className="w-1 h-4 rounded-full bg-current opacity-60" />
-            <span className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-gray-500">
+            <span className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-gray-600">
                 {icon}{label}
             </span>
         </div>
@@ -72,7 +72,7 @@ function SpecCard({ label, value }: { label: string; value?: string | null }) {
     if (!value) return null;
     return (
         <div className="p-3 bg-gray-50 rounded-xl border border-gray-100 flex flex-col gap-0.5">
-            <p className="text-[10px] uppercase tracking-widest text-gray-400 font-medium">{label}</p>
+            <p className="text-[10px] uppercase tracking-widest text-gray-600 font-medium">{label}</p>
             <p className="text-sm font-semibold text-gray-900 leading-snug">{value}</p>
         </div>
     );
@@ -98,7 +98,7 @@ function RatingBar({ label, value, color }: { label: string; value: number; colo
     return (
         <div className="space-y-1">
             <div className="flex justify-between text-xs">
-                <span className="text-gray-500">{label}</span>
+                <span className="text-gray-600">{label}</span>
                 <span className="font-semibold text-gray-900">{value.toFixed(1)}</span>
             </div>
             <div className="h-1.5 bg-gray-100 rounded-full overflow-hidden">
@@ -243,7 +243,7 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
                                     <DialogDescription className="sr-only">
                                         Quick view — {car.make} {car.model} {car.variant}
                                     </DialogDescription>
-                                    <p className="text-xs text-gray-500 mt-0.5 truncate">
+                                    <p className="text-xs text-gray-600 mt-0.5 truncate">
                                         {car.variant} &bull; {car.year} &bull; {car.bodyType}
                                     </p>
                                 </div>
@@ -251,10 +251,10 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
 
                             {/* Price block */}
                             <div className="text-right shrink-0">
-                                <p className="text-[10px] uppercase tracking-widest text-gray-400">Ex-showroom</p>
+                                <p className="text-[10px] uppercase tracking-widest text-gray-600">Ex-showroom</p>
                                 <p className="text-xl font-extrabold text-gray-900">
                                     {priceStart}
-                                    {hasRange && <span className="text-sm font-normal text-gray-400"> – {priceEnd}</span>}
+                                    {hasRange && <span className="text-sm font-normal text-gray-600"> – {priceEnd}</span>}
                                 </p>
                             </div>
                         </div>
@@ -292,7 +292,7 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
                                         <div className="text-6xl">
                                             {car.vehicleCategory === '2w' ? '🏍️' : car.vehicleCategory === '3w' ? '🛺' : '🚗'}
                                         </div>
-                                        <p className="text-sm text-gray-500">Image not available</p>
+                                        <p className="text-sm text-gray-600">Image not available</p>
                                       </div>
                                 }
                             </div>
@@ -317,19 +317,19 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
                         <Tabs defaultValue="variants">
                             <TabsList className="w-full grid grid-cols-5 h-10 rounded-xl border border-gray-200 bg-gray-50 p-1">
                                 {['variants', 'specs', 'features', 'colors', 'overview'].map(t => (
-                                    <TabsTrigger key={t} value={t} className="rounded-lg text-[11px] capitalize text-gray-500 data-[state=active]:bg-white data-[state=active]:text-gray-900 data-[state=active]:shadow-sm">{t}</TabsTrigger>
+                                    <TabsTrigger key={t} value={t} className="rounded-lg text-[11px] capitalize text-gray-600 data-[state=active]:bg-white data-[state=active]:text-gray-900 data-[state=active]:shadow-sm">{t}</TabsTrigger>
                                 ))}
                             </TabsList>
 
                             {/* ── VARIANTS ─────────────────────────────────── */}
                             <TabsContent value="variants" className="mt-4 space-y-4">
                                 {loading ? (
-                                    <div className="flex items-center justify-center gap-2 py-10 text-gray-400 text-sm">
+                                    <div className="flex items-center justify-center gap-2 py-10 text-gray-600 text-sm">
                                         <div className="w-4 h-4 border-2 border-gray-200 border-t-gray-500 rounded-full animate-spin" />
                                         Loading variants…
                                     </div>
                                 ) : detailedInfo.length === 0 ? (
-                                    <div className="text-center py-10 text-gray-400 text-sm">
+                                    <div className="text-center py-10 text-gray-600 text-sm">
                                         No variant data available for this model.
                                         {car.variants && car.variants.length > 0 && (
                                             <div className="mt-4 space-y-2 text-left">
@@ -337,7 +337,7 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
                                                     <div key={v.id} className="flex items-center justify-between p-3 border border-gray-200 rounded-xl">
                                                         <div>
                                                             <p className="font-semibold text-gray-900 text-sm">{v.name}</p>
-                                                            <p className="text-xs text-gray-400">{v.fuelType} · {v.transmission}</p>
+                                                            <p className="text-xs text-gray-600">{v.fuelType} · {v.transmission}</p>
                                                         </div>
                                                         <p className="font-bold text-sm" style={{ color: brandColor }}>{fmtL(v.price)}</p>
                                                     </div>
@@ -349,7 +349,7 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
                                     <>
                                         {/* Grouped by Fuel Type */}
                                         <div className="space-y-3">
-                                            <p className="text-[11px] text-gray-400 uppercase tracking-widest font-medium">
+                                            <p className="text-[11px] text-gray-600 uppercase tracking-widest font-medium">
                                                 {detailedInfo.length} variant{detailedInfo.length > 1 ? 's' : ''}
                                             </p>
 
@@ -414,7 +414,7 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
                                                 <div className="px-5 py-4 grid grid-cols-2 gap-4 items-center"
                                                     style={{ background: `linear-gradient(135deg, ${brandColor}12, transparent)` }}>
                                                     <div>
-                                                        <p className="text-[10px] uppercase tracking-widest text-gray-400 mb-1">Selected Variant</p>
+                                                        <p className="text-[10px] uppercase tracking-widest text-gray-600 mb-1">Selected Variant</p>
                                                         <p className="text-base font-extrabold text-gray-900 leading-tight">{selVariant.variant_name}</p>
                                                         <div className="flex flex-wrap gap-1 mt-1.5">
                                                             {selVariant.fuel_type && (
@@ -430,7 +430,7 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
                                                         </div>
                                                     </div>
                                                     <div className="text-right">
-                                                        <p className="text-[10px] uppercase tracking-widest text-gray-400">Ex-Showroom</p>
+                                                        <p className="text-[10px] uppercase tracking-widest text-gray-600">Ex-Showroom</p>
                                                         <p className="text-2xl font-extrabold leading-tight" style={{ color: brandColor }}>
                                                             {fmtL(selVariant.ex_showroom_price_min_inr)}
                                                         </p>
@@ -456,7 +456,7 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
                                                 {/* Key features */}
                                                 {selVariant.key_features && (
                                                     <div className="px-4 pb-3 border-t border-gray-100 pt-3 space-y-2">
-                                                        <p className="text-[10px] uppercase tracking-widest text-gray-400 font-semibold">Key Features</p>
+                                                        <p className="text-[10px] uppercase tracking-widest text-gray-600 font-semibold">Key Features</p>
                                                         <div className="flex flex-wrap gap-1.5">
                                                             {parseKeyFeatures(selVariant.key_features).map((f, i) => <Pill key={i} text={f.trim()} color="blue" />)}
                                                         </div>
@@ -466,7 +466,7 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
                                                 {/* Safety */}
                                                 {selVariant.safety_features && (
                                                     <div className="px-4 pb-3 border-t border-gray-100 pt-3 space-y-2">
-                                                        <p className="text-[10px] uppercase tracking-widest text-gray-400 font-semibold">Safety</p>
+                                                        <p className="text-[10px] uppercase tracking-widest text-gray-600 font-semibold">Safety</p>
                                                         <div className="flex flex-wrap gap-1.5">
                                                             {parseSafetyFeatures(selVariant.safety_features).map((f, i) => <Pill key={i} text={f.trim()} color="red" />)}
                                                         </div>
@@ -617,8 +617,8 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
                                             <BadgeCheck className="w-7 h-7 text-gray-300" />
                                         </div>
                                         <div className="text-center">
-                                            <p className="text-sm font-semibold text-gray-500">Feature details not listed</p>
-                                            <p className="text-xs text-gray-400 mt-1">Contact the dealer for full feature information</p>
+                                            <p className="text-sm font-semibold text-gray-600">Feature details not listed</p>
+                                            <p className="text-xs text-gray-600 mt-1">Contact the dealer for full feature information</p>
                                         </div>
                                     </div>
                                 )}
@@ -628,7 +628,7 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
                             <TabsContent value="colors" className="mt-4">
                                 {car.colors && car.colors.length > 0 ? (
                                     <div className="space-y-3">
-                                        <p className="text-[11px] uppercase tracking-widest text-gray-400 font-medium">{car.colors.length} color option{car.colors.length > 1 ? 's' : ''}</p>
+                                        <p className="text-[11px] uppercase tracking-widest text-gray-600 font-medium">{car.colors.length} color option{car.colors.length > 1 ? 's' : ''}</p>
                                         <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                                             {car.colors.map((c, i) => (
                                                 <div key={i} className="flex items-center gap-3 p-3 rounded-xl border border-gray-200 hover:border-gray-300 transition-colors bg-white">
@@ -638,7 +638,7 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
                                                     />
                                                     <div className="min-w-0">
                                                         <p className="text-sm font-semibold text-gray-900 truncate leading-tight">{c.name}</p>
-                                                        <p className="text-[10px] text-gray-400">{c.type}</p>
+                                                        <p className="text-[10px] text-gray-600">{c.type}</p>
                                                         {c.extraCost > 0 && (
                                                             <p className="text-[10px] text-amber-600 font-semibold">+{fmtL(c.extraCost)}</p>
                                                         )}
@@ -653,8 +653,8 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
                                             <Palette className="w-7 h-7 text-gray-300" />
                                         </div>
                                         <div className="text-center">
-                                            <p className="text-sm font-semibold text-gray-500">Color options not listed</p>
-                                            <p className="text-xs text-gray-400 mt-1">Visit your nearest dealer to see available colors</p>
+                                            <p className="text-sm font-semibold text-gray-600">Color options not listed</p>
+                                            <p className="text-xs text-gray-600 mt-1">Visit your nearest dealer to see available colors</p>
                                         </div>
                                     </div>
                                 )}
@@ -687,7 +687,7 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
                                                         ))}
                                                     </div>
                                                     {car.rating.reviewCount && (
-                                                        <p className="text-xs text-gray-500">{car.rating.reviewCount.toLocaleString()} owner reviews</p>
+                                                        <p className="text-xs text-gray-600">{car.rating.reviewCount.toLocaleString()} owner reviews</p>
                                                     )}
                                                 </div>
                                             </div>
@@ -751,7 +751,7 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
                                                 {car.competitors.map((c, i) => (
                                                     <div key={i} className="flex items-center justify-between p-3 rounded-xl bg-gray-50 border border-gray-100 text-sm">
                                                         <span className="font-medium text-gray-900">{c.make} {c.model}</span>
-                                                        <span className="text-gray-500 text-xs font-semibold">{fmtL(c.startingPrice)}</span>
+                                                        <span className="text-gray-600 text-xs font-semibold">{fmtL(c.startingPrice)}</span>
                                                     </div>
                                                 ))}
                                             </div>

@@ -32,8 +32,8 @@ export function AboutContent({
             <div className="text-center py-8 border-b border-gray-200">
                 <div className="text-5xl mb-4">{vehicleEmoji}</div>
                 <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">{dealerName}</h1>
-                {tagline && <p className="text-lg text-gray-500 italic">&ldquo;{tagline}&rdquo;</p>}
-                <p className="text-gray-500 mt-2 flex items-center justify-center gap-1.5">
+                {tagline && <p className="text-lg text-gray-600 italic">&ldquo;{tagline}&rdquo;</p>}
+                <p className="text-gray-600 mt-2 flex items-center justify-center gap-1.5">
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                         <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -113,7 +113,7 @@ export function AboutContent({
             {/* Contact CTA */}
             <div className="bg-gray-100 rounded-2xl p-6 text-center">
                 <h2 className="text-xl font-bold text-gray-900 mb-2">Get In Touch</h2>
-                <p className="text-gray-500 mb-4">We&apos;d love to help you find your next {vehicleWord}.</p>
+                <p className="text-gray-600 mb-4">We&apos;d love to help you find your next {vehicleWord}.</p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
                     <a
                         href={`tel:${phone}`}
@@ -135,7 +135,7 @@ export function AboutContent({
                     </a>
                 </div>
                 {fullAddress && (
-                    <p className="text-xs text-gray-400 mt-4">{fullAddress}</p>
+                    <p className="text-xs text-gray-600 mt-4">{fullAddress}</p>
                 )}
             </div>
         </div>
@@ -147,7 +147,7 @@ function ValueCard({ icon, title, desc }: { icon: string; title: string; desc: s
         <div className="bg-white rounded-xl border border-gray-200 p-5 text-center">
             <div className="text-3xl mb-3">{icon}</div>
             <h3 className="font-semibold text-gray-900 mb-1" dangerouslySetInnerHTML={{ __html: title }} />
-            <p className="text-sm text-gray-500" dangerouslySetInnerHTML={{ __html: desc }} />
+            <p className="text-sm text-gray-600" dangerouslySetInnerHTML={{ __html: desc }} />
         </div>
     )
 }

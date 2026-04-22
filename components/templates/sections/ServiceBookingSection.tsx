@@ -98,7 +98,7 @@ export function ServiceBookingSection({
                     <h2 className="mt-2 text-3xl md:text-4xl font-bold text-gray-900">
                         Book Your Service
                     </h2>
-                    <p className="mt-3 text-gray-500 max-w-xl mx-auto">
+                    <p className="mt-3 text-gray-600 max-w-xl mx-auto">
                         Schedule a service appointment at {dealerName} in just a few clicks.
                     </p>
                 </div>
@@ -115,7 +115,7 @@ export function ServiceBookingSection({
                             </div>
                             <div>
                                 <h3 className="font-bold text-gray-900">Select Service Type</h3>
-                                <p className="text-sm text-gray-500">Choose what you need done</p>
+                                <p className="text-sm text-gray-600">Choose what you need done</p>
                             </div>
                         </div>
 
@@ -167,7 +167,7 @@ export function ServiceBookingSection({
                                     <CheckCircle2 className="w-8 h-8 text-green-600" />
                                 </div>
                                 <h3 className="text-xl font-bold text-gray-900">Appointment Booked!</h3>
-                                <p className="text-gray-500 max-w-xs">
+                                <p className="text-gray-600 max-w-xs">
                                     We&apos;ve received your service request. Our team will confirm your appointment shortly.
                                 </p>
                             </div>

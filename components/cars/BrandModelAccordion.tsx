@@ -143,7 +143,7 @@ export function BrandModelAccordion({
 
     // Fuel color helpers
     const fuelBadgeColor = (fuel?: string) => {
-        if (!fuel) return 'bg-gray-100 text-gray-500';
+        if (!fuel) return 'bg-gray-100 text-gray-600';
         if (fuel === 'Electric') return 'bg-emerald-500/15 text-emerald-400 border-emerald-500/30';
         if (fuel === 'Diesel') return 'bg-amber-500/15 text-amber-400 border-amber-500/30';
         if (fuel === 'CNG') return 'bg-teal-500/15 text-teal-400 border-teal-500/30';
@@ -175,7 +175,7 @@ export function BrandModelAccordion({
                         <h3 className={cn('text-base font-bold leading-tight', light ? 'text-gray-900' : 'text-gray-900')}>
                             {brandDisplay}
                         </h3>
-                        <p className="text-xs text-gray-500 mt-0.5">
+                        <p className="text-xs text-gray-600 mt-0.5">
                             {expanded && totalModels > 0
                                 ? `${totalModels} models · ${totalVariants} variants`
                                 : 'Official Authorised Dealer'}
@@ -203,12 +203,12 @@ export function BrandModelAccordion({
             {expanded && (
                 <div className="border-t border-gray-200">
                     {loading ? (
-                        <div className="flex items-center justify-center py-8 gap-2 text-gray-500 text-sm">
+                        <div className="flex items-center justify-center py-8 gap-2 text-gray-600 text-sm">
                             <div className="w-4 h-4 border-2 border-gray-300 border-t-gray-600 rounded-full animate-spin" />
                             Loading models…
                         </div>
                     ) : Object.keys(models).length === 0 ? (
-                        <p className="text-center text-gray-500 text-sm py-6">No model data available</p>
+                        <p className="text-center text-gray-600 text-sm py-6">No model data available</p>
                     ) : (
                         <div className="divide-y divide-border">
                             {Object.entries(models).map(([model, variants]) => {
@@ -235,7 +235,7 @@ export function BrandModelAccordion({
                                                 <span className={cn('text-sm font-semibold', light ? 'text-gray-900' : 'text-gray-900')}>
                                                     {model}
                                                 </span>
-                                                <span className="text-xs text-gray-500 ml-2">
+                                                <span className="text-xs text-gray-600 ml-2">
                                                     {variants.length} variant{variants.length > 1 ? 's' : ''}
                                                 </span>
                                             </div>
@@ -244,11 +244,11 @@ export function BrandModelAccordion({
                                             {priceMin && (
                                                 <span className="text-xs font-semibold text-gray-900 shrink-0">
                                                     {formatPrice(priceMin)}
-                                                    {hasPriceRange && <span className="text-gray-500 font-normal"> – {formatPrice(priceMax)}</span>}
+                                                    {hasPriceRange && <span className="text-gray-600 font-normal"> – {formatPrice(priceMax)}</span>}
                                                 </span>
                                             )}
 
-                                            <ChevronDown className={cn('w-4 h-4 text-gray-500 transition-transform shrink-0', isOpen && 'rotate-180')} />
+                                            <ChevronDown className={cn('w-4 h-4 text-gray-600 transition-transform shrink-0', isOpen && 'rotate-180')} />
                                         </button>
 
                                         {/* Variant Chips */}
@@ -256,7 +256,7 @@ export function BrandModelAccordion({
                                             <div className="px-4 pb-4 bg-gray-100/20">
                                                 {/* Quick spec row */}
                                                 {baseVariant && (
-                                                    <div className="flex flex-wrap gap-2 py-2 mb-3 text-[11px] text-gray-500">
+                                                    <div className="flex flex-wrap gap-2 py-2 mb-3 text-[11px] text-gray-600">
                                                         {baseVariant.fuel_type && (
                                                             <span className="flex items-center gap-1">
                                                                 <Fuel className="w-3 h-3" />{baseVariant.fuel_type}
@@ -336,7 +336,7 @@ export function BrandModelAccordion({
                                     <SheetTitle className="text-lg font-bold leading-snug">
                                         {selectedVariant.model}
                                     </SheetTitle>
-                                    <p className="text-sm text-gray-500">{selectedVariant.variant_name}</p>
+                                    <p className="text-sm text-gray-600">{selectedVariant.variant_name}</p>
                                 </SheetHeader>
                             </div>
 
@@ -358,12 +358,12 @@ export function BrandModelAccordion({
                                 {/* Price */}
                                 {selectedVariant.ex_showroom_price_min_inr && (
                                     <div>
-                                        <p className="text-xs text-gray-500 mb-1">Ex-Showroom Price</p>
+                                        <p className="text-xs text-gray-600 mb-1">Ex-Showroom Price</p>
                                         <p className="text-2xl font-bold" style={{ color: brandColor }}>
                                             {formatPrice(selectedVariant.ex_showroom_price_min_inr)}
                                         </p>
                                         {selectedVariant.hyderabad_on_road_price && (
-                                            <p className="text-xs text-gray-500 mt-1">
+                                            <p className="text-xs text-gray-600 mt-1">
                                                 On-Road (Hyderabad): <span className="font-semibold text-gray-700">{formatPrice(selectedVariant.hyderabad_on_road_price)}</span>
                                             </p>
                                         )}
@@ -374,7 +374,7 @@ export function BrandModelAccordion({
 
                                 {/* Key Specs Grid */}
                                 <div>
-                                    <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-3">Key Specs</p>
+                                    <p className="text-xs font-semibold uppercase tracking-wider text-gray-600 mb-3">Key Specs</p>
                                     <div className="grid grid-cols-2 gap-2.5">
                                         {selectedVariant.fuel_type && <SpecChip icon={<Fuel className="w-4 h-4 text-blue-400" />} label="Fuel" value={selectedVariant.fuel_type} />}
                                         {selectedVariant.transmission && <SpecChip icon={<Gauge className="w-4 h-4 text-purple-400" />} label="Transmission" value={selectedVariant.transmission} />}
@@ -396,7 +396,7 @@ export function BrandModelAccordion({
                                     <>
                                         <Separator />
                                         <div>
-                                            <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-3">Key Features</p>
+                                            <p className="text-xs font-semibold uppercase tracking-wider text-gray-600 mb-3">Key Features</p>
                                             <div className="flex flex-wrap gap-2">
                                                 {parseKeyFeatures(selectedVariant.key_features).map((f, i) => (
                                                     <span key={i} className="text-xs px-2.5 py-1 rounded-full bg-gray-100 text-gray-700 border border-gray-200">
@@ -413,7 +413,7 @@ export function BrandModelAccordion({
                                     <>
                                         <Separator />
                                         <div>
-                                            <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-3">Safety Features</p>
+                                            <p className="text-xs font-semibold uppercase tracking-wider text-gray-600 mb-3">Safety Features</p>
                                             <div className="flex flex-wrap gap-2">
                                                 {parseSafetyFeatures(selectedVariant.safety_features).map((f, i) => (
                                                     <span key={i} className="text-xs px-2.5 py-1 rounded-full bg-red-500/10 text-red-400 border border-red-500/20">
@@ -469,7 +469,7 @@ function SpecChip({
                 {icon}
             </div>
             <div className="min-w-0">
-                <p className="text-[10px] text-gray-500 leading-none">{label}</p>
+                <p className="text-[10px] text-gray-600 leading-none">{label}</p>
                 <p className="text-xs font-semibold text-gray-900 mt-0.5 truncate" title={value}>{value}</p>
             </div>
         </div>

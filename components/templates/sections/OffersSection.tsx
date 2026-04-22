@@ -86,7 +86,7 @@ export function OffersSection({
                     <h2 className="mt-2 text-3xl md:text-4xl font-bold text-gray-900">
                         This Month&apos;s Schemes
                     </h2>
-                    <p className="mt-3 text-gray-500 max-w-xl mx-auto">
+                    <p className="mt-3 text-gray-600 max-w-xl mx-auto">
                         Take advantage of these limited-time deals available exclusively at {dealerName}.
                     </p>
                 </div>
@@ -123,7 +123,7 @@ export function OffersSection({
                                 {/* Content */}
                                 <div className="flex-1">
                                     <h3 className="font-bold text-gray-900 mb-1">{offer.title}</h3>
-                                    <p className="text-sm text-gray-500 leading-relaxed">
+                                    <p className="text-sm text-gray-600 leading-relaxed">
                                         {offer.description}
                                     </p>
                                 </div>

@@ -72,7 +72,7 @@ export function OnRoadPriceSection({
                     <h2 className="mt-2 text-3xl md:text-4xl font-bold text-gray-900">
                         On-Road Price Calculator
                     </h2>
-                    <p className="mt-3 text-gray-500 max-w-xl mx-auto">
+                    <p className="mt-3 text-gray-600 max-w-xl mx-auto">
                         Get an instant estimate of your total on-road cost including taxes, insurance and more.
                     </p>
                 </div>
@@ -98,7 +98,7 @@ export function OnRoadPriceSection({
                             className="w-full h-2 rounded-lg appearance-none cursor-pointer"
                             style={{ accentColor: brandColor }}
                         />
-                        <div className="flex justify-between text-xs text-gray-400 mt-1">
+                        <div className="flex justify-between text-xs text-gray-600 mt-1">
                             <span>{formatLakhs(range.min)}</span>
                             <span>{formatLakhs(range.max)}</span>
                         </div>
@@ -126,11 +126,11 @@ export function OnRoadPriceSection({
                     {/* Read-only computed fields */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div className="rounded-xl border border-gray-200 bg-white px-4 py-3">
-                            <p className="text-xs text-gray-400 mb-0.5">Insurance (3.5% — read-only)</p>
+                            <p className="text-xs text-gray-600 mb-0.5">Insurance (3.5% — read-only)</p>
                             <p className="text-sm font-semibold text-gray-800">{formatINR(insurance)}</p>
                         </div>
                         <div className="rounded-xl border border-gray-200 bg-white px-4 py-3">
-                            <p className="text-xs text-gray-400 mb-0.5">
+                            <p className="text-xs text-gray-600 mb-0.5">
                                 TCS {exShowroom > 1000000 ? '(1% — above ₹10L)' : '(0% — below ₹10L)'}
                             </p>
                             <p className="text-sm font-semibold text-gray-800">{formatINR(tcs)}</p>

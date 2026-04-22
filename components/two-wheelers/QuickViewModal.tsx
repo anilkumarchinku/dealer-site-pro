@@ -69,7 +69,7 @@ export function QuickViewModal({ vehicle, open, onClose, brandColor = "#1f2937",
                             unoptimized={imgSrc.startsWith('http')}
                         />
                     ) : (
-                        <div className="flex items-center justify-center h-full text-gray-400 text-4xl">🏍️</div>
+                        <div className="flex items-center justify-center h-full text-gray-600 text-4xl">🏍️</div>
                     )}
                     <button
                         onClick={onClose}
@@ -103,7 +103,7 @@ export function QuickViewModal({ vehicle, open, onClose, brandColor = "#1f2937",
                         </div>
                         <div className="text-right">
                             <p className="text-lg font-bold text-gray-900">{price}</p>
-                            {onRoad && <p className="text-[10px] text-gray-500">On-road: {onRoad}</p>}
+                            {onRoad && <p className="text-[10px] text-gray-600">On-road: {onRoad}</p>}
                             {emi && <p className="text-[10px] text-emerald-600 font-medium">EMI from {emi}</p>}
                         </div>
                     </div>
@@ -118,7 +118,7 @@ export function QuickViewModal({ vehicle, open, onClose, brandColor = "#1f2937",
                             className={`flex items-center gap-1 px-3 py-2.5 text-xs font-medium transition-colors border-b-2 ${
                                 tab === t.key
                                     ? "border-current text-gray-900"
-                                    : "border-transparent text-gray-400 hover:text-gray-600"
+                                    : "border-transparent text-gray-600 hover:text-gray-600"
                             }`}
                             style={tab === t.key ? { color: brandColor, borderColor: brandColor } : undefined}
                         >
@@ -221,8 +221,8 @@ export function QuickViewModal({ vehicle, open, onClose, brandColor = "#1f2937",
                                         <Palette className="w-6 h-6 text-gray-300" />
                                     </div>
                                     <div className="text-center">
-                                        <p className="text-sm font-semibold text-gray-500">Color options not listed</p>
-                                        <p className="text-xs text-gray-400 mt-1">Visit the dealer to see available colors</p>
+                                        <p className="text-sm font-semibold text-gray-600">Color options not listed</p>
+                                        <p className="text-xs text-gray-600 mt-1">Visit the dealer to see available colors</p>
                                     </div>
                                 </div>
                             )}
@@ -253,8 +253,8 @@ export function QuickViewModal({ vehicle, open, onClose, brandColor = "#1f2937",
                                         <Shield className="w-6 h-6 text-gray-300" />
                                     </div>
                                     <div className="text-center">
-                                        <p className="text-sm font-semibold text-gray-500">Features not listed</p>
-                                        <p className="text-xs text-gray-400 mt-1">Contact the dealer for full details</p>
+                                        <p className="text-sm font-semibold text-gray-600">Features not listed</p>
+                                        <p className="text-xs text-gray-600 mt-1">Contact the dealer for full details</p>
                                     </div>
                                 </div>
                             )}

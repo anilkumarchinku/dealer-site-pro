@@ -69,7 +69,7 @@ function ReviewCard({ review, variant }: { review: Review; variant: 'light' | 'd
     const bg = isMutedLight ? 'bg-white border-gray-200 shadow-sm' : 'bg-gray-50 border-gray-100';
     const nameColor = 'text-gray-900';
     const textColor = 'text-gray-600';
-    const metaColor = 'text-gray-400';
+    const metaColor = 'text-gray-600';
     const isGoogle = review.source === 'google';
 
     return (
@@ -79,7 +79,7 @@ function ReviewCard({ review, variant }: { review: Review; variant: 'light' | 'd
                     <div className="flex items-center gap-1.5">
                         <p className={`font-semibold text-sm ${nameColor}`}>{review.reviewer_name}</p>
                         {isGoogle && (
-                            <span className="inline-flex items-center gap-1 text-[10px] font-medium px-1.5 py-0.5 rounded-full bg-white border border-gray-200 text-gray-500">
+                            <span className="inline-flex items-center gap-1 text-[10px] font-medium px-1.5 py-0.5 rounded-full bg-white border border-gray-200 text-gray-600">
                                 <GoogleLogo /> Google
                             </span>
                         )}
@@ -156,8 +156,8 @@ export function ReviewsSection({ dealerId, brandColor = '#2563eb', variant = 'li
 
     const isMutedLight = variant === 'dark'
     const headingColor = 'text-gray-900'
-    const subColor     = isMutedLight ? 'text-gray-500' : 'text-gray-600'
-    const inputCls     = 'bg-gray-50 border-gray-200 text-gray-900 placeholder:text-gray-400 focus:border-gray-400'
+    const subColor     = isMutedLight ? 'text-gray-600' : 'text-gray-600'
+    const inputCls     = 'bg-gray-50 border-gray-200 text-gray-900 placeholder:text-gray-600 focus:border-gray-400'
     const labelCls     = 'text-gray-700'
 
     return (

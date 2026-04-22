@@ -116,7 +116,7 @@ export function ExchangeSection({
                         <h2 className="mt-2 text-3xl md:text-4xl font-bold text-gray-900">
                             Exchange Your Old {vehicleLabel}
                         </h2>
-                        <p className="mt-4 text-gray-500 leading-relaxed">
+                        <p className="mt-4 text-gray-600 leading-relaxed">
                             Trade in your existing vehicle and get the best exchange value. Quick
                             evaluation, transparent pricing, zero hassle.
                         </p>
@@ -158,7 +158,7 @@ export function ExchangeSection({
                                             <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                                         </svg>
                                     ))}
-                                    <span className="ml-1 text-xs text-gray-500">4.8 / 5</span>
+                                    <span className="ml-1 text-xs text-gray-600">4.8 / 5</span>
                                 </div>
                             </div>
                         </div>
@@ -175,7 +175,7 @@ export function ExchangeSection({
                                     <CheckCircle2 className="w-8 h-8" style={{ color: brandColor }} />
                                 </div>
                                 <h3 className="text-xl font-bold text-gray-900">Request Received!</h3>
-                                <p className="text-gray-500 text-sm max-w-xs">
+                                <p className="text-gray-600 text-sm max-w-xs">
                                     We&apos;ll call with your estimate within 2 hours!
                                 </p>
                             </div>

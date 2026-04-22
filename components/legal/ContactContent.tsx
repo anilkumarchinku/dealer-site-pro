@@ -24,7 +24,7 @@ export function ContactContent({
         <div className="space-y-8">
             <div>
                 <h1 className="text-3xl font-bold text-gray-900 mb-2">Contact Us</h1>
-                <p className="text-gray-500">We&apos;re here to help. Reach out to us through any of the channels below.</p>
+                <p className="text-gray-600">We&apos;re here to help. Reach out to us through any of the channels below.</p>
             </div>
 
             {/* Contact Cards */}
@@ -82,7 +82,7 @@ export function ContactContent({
             {workingHours && (
                 <div className="bg-gray-50 border border-gray-200 rounded-xl p-5">
                     <div className="flex items-center gap-2 mb-2">
-                        <svg className="w-5 h-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                        <svg className="w-5 h-5 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                             <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                         <h3 className="font-semibold text-gray-900">Working Hours</h3>
@@ -103,7 +103,7 @@ export function ContactContent({
                         referrerPolicy="no-referrer-when-downgrade"
                     />
                 </div>
-                <p className="text-sm text-gray-400 mt-2">{dealerName} — {fullAddress ?? location}</p>
+                <p className="text-sm text-gray-600 mt-2">{dealerName} — {fullAddress ?? location}</p>
             </div>
 
             {/* Quick Actions */}
@@ -171,7 +171,7 @@ function ContactCard({
         >
             <div className={`${iconColor} mt-0.5 shrink-0`}>{icon}</div>
             <div className="min-w-0">
-                <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-0.5">{label}</p>
+                <p className="text-xs font-semibold text-gray-600 uppercase tracking-wider mb-0.5">{label}</p>
                 <p className="text-gray-800 text-sm font-medium break-all">{value}</p>
             </div>
         </a>

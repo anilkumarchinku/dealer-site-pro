@@ -86,7 +86,7 @@ export function FinanceSection({ brandColor, dealerId, dealerName }: FinanceSect
                     <h2 className="mt-2 text-3xl md:text-4xl font-bold text-gray-900">
                         Finance Made Easy
                     </h2>
-                    <p className="mt-3 text-gray-500 max-w-xl mx-auto">
+                    <p className="mt-3 text-gray-600 max-w-xl mx-auto">
                         Get the best financing options from India&apos;s top lenders, available at {dealerName}.
                     </p>
                 </div>
@@ -117,7 +117,7 @@ export function FinanceSection({ brandColor, dealerId, dealerName }: FinanceSect
 
                 {/* Partner banks */}
                 <div className="mb-10">
-                    <p className="text-center text-xs font-semibold uppercase tracking-widest text-gray-400 mb-5">
+                    <p className="text-center text-xs font-semibold uppercase tracking-widest text-gray-600 mb-5">
                         Finance Partners
                     </p>
                     <div className="flex flex-wrap justify-center gap-3">
@@ -153,7 +153,7 @@ export function FinanceSection({ brandColor, dealerId, dealerName }: FinanceSect
                                     </div>
                                     <div>
                                         <h3 className="font-bold text-gray-900 mb-0.5">{benefit.title}</h3>
-                                        <p className="text-sm text-gray-500">{benefit.subtitle}</p>
+                                        <p className="text-sm text-gray-600">{benefit.subtitle}</p>
                                     </div>
                                 </div>
                             );
@@ -174,7 +174,7 @@ export function FinanceSection({ brandColor, dealerId, dealerName }: FinanceSect
                                     <CheckCircle2 className="w-8 h-8" style={{ color: brandColor }} />
                                 </div>
                                 <h3 className="text-xl font-bold text-gray-900">Thank You!</h3>
-                                <p className="text-gray-500 max-w-xs">
+                                <p className="text-gray-600 max-w-xs">
                                     Our finance team will call you within 24 hours to discuss the best loan options for you.
                                 </p>
                             </div>

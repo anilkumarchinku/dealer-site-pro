@@ -224,7 +224,7 @@ export default function LeadCaptureModal({ isOpen, onClose, car, dealerId, brand
                 <div className="p-8">
                     {/* 1. KEY FEATURES (Top) */}
                     <div className="mb-8">
-                        <h3 className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-3">Key Features</h3>
+                        <h3 className="text-xs font-bold text-gray-600 uppercase tracking-widest mb-3">Key Features</h3>
                         <div className="flex flex-wrap gap-2">
                             {(car as any).features.map((feature, idx) => (
                                 <span
@@ -258,7 +258,7 @@ export default function LeadCaptureModal({ isOpen, onClose, car, dealerId, brand
                     {car.specs && (
                         <div className="mb-10">
                             <h3 className="flex items-center gap-2 text-sm font-bold text-gray-900 uppercase tracking-widest mb-5">
-                                <Shield className="w-4 h-4 text-gray-400" />
+                                <Shield className="w-4 h-4 text-gray-600" />
                                 Detailed Specifications
                             </h3>
 
@@ -270,23 +270,23 @@ export default function LeadCaptureModal({ isOpen, onClose, car, dealerId, brand
                                     </div>
                                     <div className="p-5 space-y-4">
                                         <div className="flex justify-between items-center border-b border-gray-50 pb-2 last:border-0 last:pb-0">
-                                            <span className="text-sm text-gray-500">Engine Type</span>
+                                            <span className="text-sm text-gray-600">Engine Type</span>
                                             <span className="text-sm font-medium text-gray-900">{car.specs.engine?.type || 'Petrol'}</span>
                                         </div>
                                         <div className="flex justify-between items-center border-b border-gray-50 pb-2 last:border-0 last:pb-0">
-                                            <span className="text-sm text-gray-500">Displacement</span>
+                                            <span className="text-sm text-gray-600">Displacement</span>
                                             <span className="text-sm font-medium text-gray-900">{car.specs.engine?.displacement ? `${car.specs.engine.displacement} cc` : 'N/A'}</span>
                                         </div>
                                         <div className="flex justify-between items-center border-b border-gray-50 pb-2 last:border-0 last:pb-0">
-                                            <span className="text-sm text-gray-500">Max Power</span>
+                                            <span className="text-sm text-gray-600">Max Power</span>
                                             <span className="text-sm font-medium text-gray-900">{car.specs.engine?.power || 'TBD'}</span>
                                         </div>
                                         <div className="flex justify-between items-center border-b border-gray-50 pb-2 last:border-0 last:pb-0">
-                                            <span className="text-sm text-gray-500">Max Torque</span>
+                                            <span className="text-sm text-gray-600">Max Torque</span>
                                             <span className="text-sm font-medium text-gray-900">{car.specs.engine?.torque || 'TBD'}</span>
                                         </div>
                                         <div className="flex justify-between items-center border-b border-gray-50 pb-2 last:border-0 last:pb-0">
-                                            <span className="text-sm text-gray-500">Mileage (ARAI)</span>
+                                            <span className="text-sm text-gray-600">Mileage (ARAI)</span>
                                             <span className="text-sm font-bold text-green-600">{car.mileage}</span>
                                         </div>
                                     </div>
@@ -299,23 +299,23 @@ export default function LeadCaptureModal({ isOpen, onClose, car, dealerId, brand
                                     </div>
                                     <div className="p-5 space-y-4">
                                         <div className="flex justify-between items-center border-b border-gray-50 pb-2 last:border-0 last:pb-0">
-                                            <span className="text-sm text-gray-500">Gearbox</span>
+                                            <span className="text-sm text-gray-600">Gearbox</span>
                                             <span className="text-sm font-medium text-gray-900">{car.transmission.join(' / ')}</span>
                                         </div>
                                         <div className="flex justify-between items-center border-b border-gray-50 pb-2 last:border-0 last:pb-0">
-                                            <span className="text-sm text-gray-500">Seating Capacity</span>
+                                            <span className="text-sm text-gray-600">Seating Capacity</span>
                                             <span className="text-sm font-medium text-gray-900">{car.seating} Persons</span>
                                         </div>
                                         <div className="flex justify-between items-center border-b border-gray-50 pb-2 last:border-0 last:pb-0">
-                                            <span className="text-sm text-gray-500">Fuel Tank</span>
+                                            <span className="text-sm text-gray-600">Fuel Tank</span>
                                             <span className="text-sm font-medium text-gray-900">{car.specs.dimensions?.fuelTankCapacity ? `${car.specs.dimensions.fuelTankCapacity} L` : 'N/A'}</span>
                                         </div>
                                         <div className="flex justify-between items-center border-b border-gray-50 pb-2 last:border-0 last:pb-0">
-                                            <span className="text-sm text-gray-500">Ground Clearance</span>
+                                            <span className="text-sm text-gray-600">Ground Clearance</span>
                                             <span className="text-sm font-medium text-gray-900">{car.specs.dimensions?.groundClearance ? `${car.specs.dimensions.groundClearance} mm` : 'N/A'}</span>
                                         </div>
                                         <div className="flex justify-between items-center border-b border-gray-50 pb-2 last:border-0 last:pb-0">
-                                            <span className="text-sm text-gray-500">Boot Space</span>
+                                            <span className="text-sm text-gray-600">Boot Space</span>
                                             <span className="text-sm font-medium text-gray-900">{car.specs.dimensions?.bootSpace ? `${car.specs.dimensions.bootSpace} L` : 'N/A'}</span>
                                         </div>
                                     </div>
@@ -348,7 +348,7 @@ export default function LeadCaptureModal({ isOpen, onClose, car, dealerId, brand
                         ) : (
                             <div>
                                 <h3 className="text-xl font-bold text-gray-900 mb-1">Get More Information</h3>
-                                <p className="text-gray-500 text-sm mb-6">Fill in your details and we'll get back to you soon!</p>
+                                <p className="text-gray-600 text-sm mb-6">Fill in your details and we'll get back to you soon!</p>
 
                                 <form onSubmit={handleSubmit} className="space-y-5">
                                     <div>
@@ -359,7 +359,7 @@ export default function LeadCaptureModal({ isOpen, onClose, car, dealerId, brand
                                             type="text"
                                             value={formData.fullName}
                                             onChange={(e) => handleChange('fullName', e.target.value)}
-                                            className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-sm text-gray-900 placeholder:text-gray-400 focus:bg-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-all"
+                                            className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-sm text-gray-900 placeholder:text-gray-600 focus:bg-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-all"
                                             placeholder="John Doe"
                                         />
                                         {errors.fullName && <p className="mt-1 text-xs text-red-500">{errors.fullName}</p>}
@@ -371,12 +371,12 @@ export default function LeadCaptureModal({ isOpen, onClose, car, dealerId, brand
                                                 Phone Number <span className="text-red-500">*</span>
                                             </label>
                                             <div className="relative">
-                                                <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
+                                                <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-600" />
                                                 <input
                                                     type="tel"
                                                     value={formData.phone}
                                                     onChange={(e) => handleChange('phone', e.target.value)}
-                                                    className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-sm text-gray-900 placeholder:text-gray-400 focus:bg-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-all"
+                                                    className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-sm text-gray-900 placeholder:text-gray-600 focus:bg-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-all"
                                                     placeholder="98765 43210"
                                                 />
                                             </div>
@@ -391,7 +391,7 @@ export default function LeadCaptureModal({ isOpen, onClose, car, dealerId, brand
                                                 type="email"
                                                 value={formData.email}
                                                 onChange={(e) => handleChange('email', e.target.value)}
-                                                className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-sm text-gray-900 placeholder:text-gray-400 focus:bg-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-all"
+                                                className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-sm text-gray-900 placeholder:text-gray-600 focus:bg-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-all"
                                                 placeholder="john@example.com"
                                             />
                                             {errors.email && <p className="mt-1 text-xs text-red-500">{errors.email}</p>}

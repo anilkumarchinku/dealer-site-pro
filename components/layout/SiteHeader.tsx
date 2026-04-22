@@ -32,20 +32,22 @@ import type { Car as CarType } from '@/lib/types/car';
 import { formatPriceInLakhs } from '@/lib/utils/car-utils';
 import { getBrandLogo } from '@/lib/data/brand-logos';
 import BrandLogo from '@/components/BrandLogo';
+import { FOUR_W_BODY_TYPES } from '@/lib/data/four-wheelers';
 
 const POPULAR_BRANDS = [
     'Maruti Suzuki', 'Hyundai', 'Tata Motors', 'Kia', 'Mahindra',
     'Toyota', 'Honda', 'MG', 'Skoda', 'Volkswagen',
 ];
 
-const BODY_TYPES = [
-    { name: 'Hatchback', icon: '🚗' },
-    { name: 'Sedan', icon: '🚘' },
-    { name: 'SUV', icon: '🚙' },
-    { name: 'MUV', icon: '🚐' },
-    { name: 'Compact SUV', icon: '🏎️' },
-    { name: 'Luxury', icon: '✨' },
-];
+const BODY_TYPE_ICONS: Record<string, string> = {
+    Hatchback: '🚗',
+    Sedan: '🚘',
+    SUV: '🚙',
+    MPV: '🚐',
+    Coupe: '🏎️',
+    Convertible: '🌤️',
+    Pickup: '🛻',
+};
 
 const BUDGET_RANGES = [
     { label: 'Under 5 Lakh', min: 0, max: 500000 },
@@ -346,15 +348,15 @@ export function SiteHeader() {
                             <div>
                                 <h3 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-3">By Body Type</h3>
                                 <div className="space-y-1">
-                                    {BODY_TYPES.map((type) => (
+                                    {FOUR_W_BODY_TYPES.map((type) => (
                                         <Link
-                                            key={type.name}
-                                            href={`/cars?bodyType=${encodeURIComponent(type.name)}`}
+                                            key={type}
+                                            href={`/cars?bodyType=${encodeURIComponent(type)}`}
                                             className="flex items-center gap-2 py-1.5 text-sm hover:text-primary transition-colors"
                                             onClick={() => setActiveMegaMenu(null)}
                                         >
-                                            <span className="text-base">{type.icon}</span>
-                                            {type.name}
+                                            <span className="text-base">{BODY_TYPE_ICONS[type] ?? '🚗'}</span>
+                                            {type}
                                         </Link>
                                     ))}
                                 </div>

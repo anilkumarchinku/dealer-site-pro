@@ -122,7 +122,7 @@ export function WishlistDrawer({ cars, dealerId, brandColor = '#2563eb' }: Wishl
                     </div>
                     <div className="flex items-center gap-2">
                         {items.length > 0 && (
-                            <button onClick={clear} className="text-xs text-gray-400 hover:text-red-500 flex items-center gap-1">
+                            <button onClick={clear} className="text-xs text-gray-600 hover:text-red-500 flex items-center gap-1">
                                 <Trash2 className="w-3 h-3" />Clear
                             </button>
                         )}
@@ -137,8 +137,8 @@ export function WishlistDrawer({ cars, dealerId, brandColor = '#2563eb' }: Wishl
                     {savedCars.length === 0 ? (
                         <div className="text-center py-16">
                             <ShoppingBag className="w-12 h-12 mx-auto mb-3 text-gray-200" />
-                            <p className="text-gray-500 text-sm font-medium">No saved cars yet</p>
-                            <p className="text-gray-400 text-xs mt-1">Tap the &#x2665; on any car to save it</p>
+                            <p className="text-gray-600 text-sm font-medium">No saved cars yet</p>
+                            <p className="text-gray-600 text-xs mt-1">Tap the &#x2665; on any car to save it</p>
                         </div>
                     ) : savedCars.map(car => {
                         const price = formatPriceInLakhs(car.pricing?.exShowroom?.min ?? null);
@@ -154,7 +154,7 @@ export function WishlistDrawer({ cars, dealerId, brandColor = '#2563eb' }: Wishl
                                 <div className="flex-1 min-w-0">
                                     <p className="text-xs font-semibold uppercase tracking-wide truncate" style={{ color: brandColor }}>{car.make}</p>
                                     <p className="text-sm font-bold text-gray-900 leading-tight">{car.model}</p>
-                                    {car.variant && <p className="text-xs text-gray-500 truncate">{car.variant}</p>}
+                                    {car.variant && <p className="text-xs text-gray-600 truncate">{car.variant}</p>}
                                     <p className="text-sm font-bold mt-1 text-gray-900">{price}</p>
                                 </div>
                                 <button onClick={() => remove(car.id)} className="shrink-0 text-gray-300 hover:text-red-500 transition-colors mt-1">
@@ -183,7 +183,7 @@ export function WishlistDrawer({ cars, dealerId, brandColor = '#2563eb' }: Wishl
                                     value={alertEmail}
                                     onChange={e => setAlertEmail(e.target.value)}
                                     placeholder="your@email.com"
-                                    className="flex-1 px-3 py-2 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-gray-400 text-gray-900 bg-white placeholder:text-gray-400"
+                                    className="flex-1 px-3 py-2 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-gray-400 text-gray-900 bg-white placeholder:text-gray-600"
                                 />
                                 <Button type="submit" size="sm" disabled={alertStatus === 'loading'} style={{ backgroundColor: brandColor }}>
                                     <Send className="w-3.5 h-3.5" />

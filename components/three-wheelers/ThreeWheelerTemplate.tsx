@@ -445,9 +445,9 @@ export function ThreeWheelerTemplate({
                                     </div>
                                     <div className="text-center">
                                         <p className="font-semibold text-gray-900">{label}</p>
-                                        <p className="text-xs text-gray-500 mt-0.5">{desc}</p>
+                                        <p className="text-xs text-gray-600 mt-0.5">{desc}</p>
                                     </div>
-                                    <ChevronRight className="w-4 h-4 text-gray-400 group-hover:translate-x-1 transition-transform" style={{ color: accent }} />
+                                    <ChevronRight className="w-4 h-4 text-gray-600 group-hover:translate-x-1 transition-transform" style={{ color: accent }} />
                                 </Link>
                             ))}
                         </div>
@@ -547,7 +547,7 @@ export function ThreeWheelerTemplate({
                                             <Icon className="w-7 h-7" />
                                         </div>
                                         <h3 className="text-lg font-semibold mb-3 text-gray-900">{title}</h3>
-                                        <p className="text-gray-500 text-sm leading-relaxed">{desc}</p>
+                                        <p className="text-gray-600 text-sm leading-relaxed">{desc}</p>
                                     </div>
                                 ))}
                             </div>
@@ -559,7 +559,7 @@ export function ThreeWheelerTemplate({
                         <div className="text-center mb-10">
                             <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: accent }}>Finance</span>
                             <h2 className="text-3xl font-bold mt-2 text-gray-900">EMI Calculator</h2>
-                            <p className="text-gray-500 mt-2">Plan your monthly payments before you visit us</p>
+                            <p className="text-gray-600 mt-2">Plan your monthly payments before you visit us</p>
                         </div>
                         <EmiCalculator brandColor={accent} theme="light" />
                     </section>
@@ -577,7 +577,7 @@ export function ThreeWheelerTemplate({
                                     <div key={label} className="flex flex-col items-center gap-2">
                                         <Icon className="w-8 h-8" style={{ color: accent }} />
                                         <p className="text-2xl font-bold text-gray-900">{stat}</p>
-                                        <p className="text-sm text-gray-500">{label}</p>
+                                        <p className="text-sm text-gray-600">{label}</p>
                                     </div>
                                 ))}
                             </div>
@@ -597,7 +597,7 @@ export function ThreeWheelerTemplate({
                                 <div>
                                     <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: accent }}>Contact Us</span>
                                     <h2 className="text-4xl font-bold mt-3 mb-6 text-gray-900">Get in Touch</h2>
-                                    <p className="text-gray-500 mb-8 text-lg">
+                                    <p className="text-gray-600 mb-8 text-lg">
                                         Our team will call you back with the best price and availability. No spam, just answers.
                                     </p>
 
@@ -654,7 +654,7 @@ export function ThreeWheelerTemplate({
                                         <div className="text-center py-12">
                                             <CheckCircle2 className="w-16 h-16 mx-auto mb-4" style={{ color: accent }} />
                                             <h3 className="text-2xl font-bold mb-2 text-gray-900">Thank You!</h3>
-                                            <p className="text-gray-500">Our team will call you back shortly.</p>
+                                            <p className="text-gray-600">Our team will call you back shortly.</p>
                                         </div>
                                     ) : (
                                         <form onSubmit={handleSubmit} className="space-y-5">
@@ -665,7 +665,7 @@ export function ThreeWheelerTemplate({
                                                 { label: "Email",          key: "email",   type: "email", placeholder: "your@email.com",        required: false },
                                             ].map(({ label, key, type, placeholder, required }) => (
                                                 <div key={key}>
-                                                    <label className="block text-xs font-semibold uppercase tracking-wider text-gray-500 mb-2">{label}</label>
+                                                    <label className="block text-xs font-semibold uppercase tracking-wider text-gray-600 mb-2">{label}</label>
                                                     <input
                                                         type={type}
                                                         required={required}
@@ -678,7 +678,7 @@ export function ThreeWheelerTemplate({
                                                 </div>
                                             ))}
                                             <div>
-                                                <label className="block text-xs font-semibold uppercase tracking-wider text-gray-500 mb-2">Message</label>
+                                                <label className="block text-xs font-semibold uppercase tracking-wider text-gray-600 mb-2">Message</label>
                                                 <textarea
                                                     rows={3}
                                                     value={formData.message}
@@ -724,7 +724,7 @@ export function ThreeWheelerTemplate({
                                 </span>
                                 <h1 className="text-4xl font-bold mt-1 text-gray-900">
                                     Our Inventory
-                                    <span className="ml-3 text-lg font-normal text-gray-400">({vehicles.length} vehicles)</span>
+                                    <span className="ml-3 text-lg font-normal text-gray-600">({vehicles.length} vehicles)</span>
                                 </h1>
                             </div>
                             <Button
@@ -763,7 +763,7 @@ export function ThreeWheelerTemplate({
                                 ))}
                             </div>
                         ) : (
-                            <div className="text-center py-24 text-gray-400">
+                            <div className="text-center py-24 text-gray-600">
                                 <p className="text-5xl mb-4">🛺</p>
                                 <p className="text-xl font-semibold text-gray-600">Stock coming soon</p>
                                 <p className="mt-2">Call us to check current availability</p>
@@ -796,11 +796,11 @@ export function ThreeWheelerTemplate({
                         ) : null}
                         <div>
                             <p className="text-xl font-bold text-gray-900">{dealerName}</p>
-                            {tagline && <p className="text-sm text-gray-500">{tagline}</p>}
+                            {tagline && <p className="text-sm text-gray-600">{tagline}</p>}
                         </div>
                     </div>
 
-                    <div className="grid md:grid-cols-3 gap-8 text-gray-500 mb-8">
+                    <div className="grid md:grid-cols-3 gap-8 text-gray-600 mb-8">
                         {/* Contact */}
                         <div>
                             <h4 className="font-semibold text-gray-900 mb-4">Contact</h4>
@@ -858,7 +858,7 @@ export function ThreeWheelerTemplate({
 
                     {/* Bottom */}
                     <div className="border-t border-gray-200 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-                        <p className="text-sm text-gray-400">© {new Date().getFullYear()} {dealerName}. All rights reserved.</p>
+                        <p className="text-sm text-gray-600">© {new Date().getFullYear()} {dealerName}. All rights reserved.</p>
                         <a href="https://www.cyepro.com/" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
                             <div className="relative w-32 h-10">
                                 <Image src="/assets/cyepro-logo.png" alt="Cyepro" fill className="object-contain" sizes="128px" />

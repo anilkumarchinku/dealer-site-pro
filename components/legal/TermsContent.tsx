@@ -11,7 +11,7 @@ export function TermsContent({ dealerName, location, email, phone, vehicleWord }
     return (
         <div className="prose prose-gray max-w-none">
             <h1 className="text-3xl font-bold text-gray-900 mb-2">Terms &amp; Conditions</h1>
-            <p className="text-sm text-gray-500 mb-8">Last updated: {today}</p>
+            <p className="text-sm text-gray-600 mb-8">Last updated: {today}</p>
 
             <p className="text-gray-600 mb-6">
                 Welcome to <strong>{dealerName}</strong>, located in {location}. By visiting our showroom, using our website,

@@ -238,7 +238,7 @@ export function TestDriveModal({
                                     >
                                         {step > i + 1 ? '✓' : i + 1}
                                     </div>
-                                    <p className="text-[9px] text-gray-500 text-center leading-none">{label}</p>
+                                    <p className="text-[9px] text-gray-600 text-center leading-none">{label}</p>
                                 </div>
                             ))}
                         </div>
@@ -257,7 +257,7 @@ export function TestDriveModal({
                     {/* STEP 1 — Choose Date */}
                     {step === 1 && (
                         <div>
-                            <p className="text-xs font-semibold text-gray-500 mb-3 flex items-center gap-1.5">
+                            <p className="text-xs font-semibold text-gray-600 mb-3 flex items-center gap-1.5">
                                 <Calendar className="w-3.5 h-3.5" />
                                 Select a preferred date
                             </p>
@@ -274,20 +274,20 @@ export function TestDriveModal({
                                                 ? { backgroundColor: brandColor, borderColor: brandColor, color: brandContrast }
                                                 : { backgroundColor: '#f9fafb', borderColor: '#e5e7eb', color: '#374151' }}
                                         >
-                                            <span className={`text-[9px] font-semibold uppercase ${isSelected ? '' : 'text-gray-500'}`} style={isSelected ? { color: brandContrast } : undefined}>
+                                            <span className={`text-[9px] font-semibold uppercase ${isSelected ? '' : 'text-gray-600'}`} style={isSelected ? { color: brandContrast } : undefined}>
                                                 {tile.day}
                                             </span>
                                             <span className={`text-base font-bold leading-none my-0.5 ${isSelected ? '' : 'text-gray-900'}`} style={isSelected ? { color: brandContrast } : undefined}>
                                                 {tile.label}
                                             </span>
-                                            <span className={`text-[9px] ${isSelected ? '' : 'text-gray-500'}`} style={isSelected ? { color: brandContrast } : undefined}>
+                                            <span className={`text-[9px] ${isSelected ? '' : 'text-gray-600'}`} style={isSelected ? { color: brandContrast } : undefined}>
                                                 {tile.month}
                                             </span>
                                         </button>
                                     );
                                 })}
                             </div>
-                            <p className="text-[10px] text-gray-400 mt-2 text-center">Sundays excluded · Slots available Mon–Sat</p>
+                            <p className="text-[10px] text-gray-600 mt-2 text-center">Sundays excluded · Slots available Mon–Sat</p>
                             <Button
                                 className="w-full mt-4 gap-2 font-semibold"
                                 disabled={!selectedDate}
@@ -302,14 +302,14 @@ export function TestDriveModal({
                     {/* STEP 2 — Choose Time */}
                     {step === 2 && (
                         <div>
-                            <p className="text-xs font-semibold text-gray-500 mb-1 flex items-center gap-1.5">
+                            <p className="text-xs font-semibold text-gray-600 mb-1 flex items-center gap-1.5">
                                 <Clock className="w-3.5 h-3.5" />
                                 {formatDisplayDate(selectedDate)}
                             </p>
-                            <p className="text-[10px] text-gray-400 mb-3">Pick a time slot that works for you</p>
+                            <p className="text-[10px] text-gray-600 mb-3">Pick a time slot that works for you</p>
                             {Object.entries(TIME_SLOTS).map(([period, slots]) => (
                                 <div key={period} className="mb-3">
-                                    <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1.5">{period}</p>
+                                    <p className="text-[10px] font-bold text-gray-600 uppercase tracking-widest mb-1.5">{period}</p>
                                     <div className="grid grid-cols-3 gap-2">
                                         {slots.map(slot => {
                                             const isSelected = selectedTime === slot;
@@ -361,7 +361,7 @@ export function TestDriveModal({
                                     value={form.name}
                                     onChange={e => setForm(f => ({ ...f, name: e.target.value }))}
                                     placeholder="Your name"
-                                    className="w-full px-3.5 py-2.5 rounded-xl border border-gray-300 bg-white text-sm text-gray-900 focus:outline-none focus:ring-2 focus:border-transparent placeholder:text-gray-500"
+                                    className="w-full px-3.5 py-2.5 rounded-xl border border-gray-300 bg-white text-sm text-gray-900 focus:outline-none focus:ring-2 focus:border-transparent placeholder:text-gray-600"
                                     style={{ '--tw-ring-color': brandColor } as React.CSSProperties}
                                 />
                             </div>
@@ -377,21 +377,21 @@ export function TestDriveModal({
                                     onChange={e => setForm(f => ({ ...f, phone: e.target.value }))}
                                     placeholder="10-digit mobile number"
                                     maxLength={13}
-                                    className="w-full px-3.5 py-2.5 rounded-xl border border-gray-300 bg-white text-sm text-gray-900 focus:outline-none focus:ring-2 focus:border-transparent placeholder:text-gray-500"
+                                    className="w-full px-3.5 py-2.5 rounded-xl border border-gray-300 bg-white text-sm text-gray-900 focus:outline-none focus:ring-2 focus:border-transparent placeholder:text-gray-600"
                                     style={{ '--tw-ring-color': brandColor } as React.CSSProperties}
                                 />
                             </div>
 
                             <div>
                                 <label className="block text-xs font-semibold text-gray-700 mb-1.5">
-                                    <Mail className="w-3.5 h-3.5 inline mr-1" />Email <span className="font-normal text-gray-400">(optional)</span>
+                                    <Mail className="w-3.5 h-3.5 inline mr-1" />Email <span className="font-normal text-gray-600">(optional)</span>
                                 </label>
                                 <input
                                     type="email"
                                     value={form.email}
                                     onChange={e => setForm(f => ({ ...f, email: e.target.value }))}
                                     placeholder="you@email.com"
-                                    className="w-full px-3.5 py-2.5 rounded-xl border border-gray-300 bg-white text-sm text-gray-900 focus:outline-none focus:ring-2 focus:border-transparent placeholder:text-gray-500"
+                                    className="w-full px-3.5 py-2.5 rounded-xl border border-gray-300 bg-white text-sm text-gray-900 focus:outline-none focus:ring-2 focus:border-transparent placeholder:text-gray-600"
                                     style={{ '--tw-ring-color': brandColor } as React.CSSProperties}
                                 />
                             </div>
@@ -419,7 +419,7 @@ export function TestDriveModal({
                                 )}
                             </Button>
 
-                            <p className="text-center text-[10px] text-gray-400">
+                            <p className="text-center text-[10px] text-gray-600">
                                 Our team will call within 1 hour to confirm your slot
                             </p>
                         </form>
@@ -435,7 +435,7 @@ export function TestDriveModal({
                                 <CheckCircle2 className="w-9 h-9" style={{ color: brandAccent }} />
                             </div>
                             <h3 className="text-xl font-bold text-gray-900 mb-1">{verb} Booked!</h3>
-                            <p className="text-sm text-gray-500 mb-5">
+                            <p className="text-sm text-gray-600 mb-5">
                                 We&apos;ll call you to confirm your slot shortly.
                             </p>
 
@@ -487,7 +487,7 @@ function Row({ icon, label, value }: { icon: React.ReactNode; label: string; val
         <div className="flex items-start gap-2">
             <div className="mt-0.5 shrink-0">{icon}</div>
             <div className="min-w-0">
-                <p className="text-[10px] text-gray-400 leading-none">{label}</p>
+                <p className="text-[10px] text-gray-600 leading-none">{label}</p>
                 <p className="text-xs font-semibold text-gray-800 leading-snug">{value}</p>
             </div>
         </div>

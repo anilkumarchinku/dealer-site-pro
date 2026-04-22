@@ -99,7 +99,7 @@ export function NavEMIModal({ open, onOpenChange, brandColor, cars }: NavEMIModa
                         </div>
                         <div>
                             <h2 className="text-base font-bold text-gray-900">EMI Calculator</h2>
-                            <p className="text-xs text-gray-500">Select model &amp; variant to get started</p>
+                            <p className="text-xs text-gray-600">Select model &amp; variant to get started</p>
                         </div>
                     </div>
                     <button
@@ -126,7 +126,7 @@ export function NavEMIModal({ open, onOpenChange, brandColor, cars }: NavEMIModa
                                     <option value="">-- Choose Model --</option>
                                     {models.map(m => <option key={m.key} value={m.key}>{m.label}</option>)}
                                 </select>
-                                <ChevronDown className="absolute right-2.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" />
+                                <ChevronDown className="absolute right-2.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-600 pointer-events-none" />
                             </div>
                         </div>
                         <div>
@@ -147,7 +147,7 @@ export function NavEMIModal({ open, onOpenChange, brandColor, cars }: NavEMIModa
                                         return <option key={i} value={i}>{label}</option>;
                                     })}
                                 </select>
-                                <ChevronDown className="absolute right-2.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" />
+                                <ChevronDown className="absolute right-2.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-600 pointer-events-none" />
                             </div>
                         </div>
                     </div>
@@ -156,11 +156,11 @@ export function NavEMIModal({ open, onOpenChange, brandColor, cars }: NavEMIModa
                     {exShowroom > 0 && (
                         <div className="flex items-center gap-3 px-4 py-3 rounded-xl border" style={{ borderColor: `${brandColor}40`, backgroundColor: `${brandColor}08` }}>
                             <div className="flex-1">
-                                <p className="text-xs text-gray-500">Ex-Showroom Price</p>
+                                <p className="text-xs text-gray-600">Ex-Showroom Price</p>
                                 <p className="text-xl font-bold" style={{ color: brandColor }}>{fmt(exShowroom)}</p>
                             </div>
                             <div className="text-right">
-                                <p className="text-xs text-gray-500">Loan Amount</p>
+                                <p className="text-xs text-gray-600">Loan Amount</p>
                                 <p className="text-base font-semibold text-gray-800">{fmt(principal)}</p>
                             </div>
                         </div>
@@ -182,7 +182,7 @@ export function NavEMIModal({ open, onOpenChange, brandColor, cars }: NavEMIModa
                             className="w-full h-2 rounded-full appearance-none cursor-pointer"
                             style={{ accentColor: brandColor }}
                         />
-                        <div className="flex justify-between text-[10px] text-gray-400 mt-1">
+                        <div className="flex justify-between text-[10px] text-gray-600 mt-1">
                             <span>₹0</span>
                             <span>{exShowroom > 0 ? `₹${((exShowroom * 0.8) / 100000).toFixed(1)}L` : '₹20L'}</span>
                         </div>
@@ -202,7 +202,7 @@ export function NavEMIModal({ open, onOpenChange, brandColor, cars }: NavEMIModa
                                         <option key={m} value={m}>{m} months ({m / 12} yr{m > 12 ? 's' : ''})</option>
                                     ))}
                                 </select>
-                                <ChevronDown className="absolute right-2.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" />
+                                <ChevronDown className="absolute right-2.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-600 pointer-events-none" />
                             </div>
                         </div>
                         <div>

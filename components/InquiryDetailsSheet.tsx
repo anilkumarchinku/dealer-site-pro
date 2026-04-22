@@ -65,7 +65,7 @@ export function InquiryDetailsSheet({
                     {/* TEST DRIVE FORM */}
                     <TabsContent value="test-drive">
                         <form onSubmit={handleSubmit} className="space-y-4">
-                            <div className="flex items-center gap-2 mb-4 text-sm font-medium text-gray-500">
+                            <div className="flex items-center gap-2 mb-4 text-sm font-medium text-gray-600">
                                 <Car className="w-4 h-4" />
                                 <span>Schedule a Test Drive</span>
                             </div>
@@ -146,7 +146,7 @@ export function InquiryDetailsSheet({
                     {/* SERVICE FORM */}
                     <TabsContent value="service">
                         <form onSubmit={handleSubmit} className="space-y-4">
-                            <div className="flex items-center gap-2 mb-4 text-sm font-medium text-gray-500">
+                            <div className="flex items-center gap-2 mb-4 text-sm font-medium text-gray-600">
                                 <Wrench className="w-4 h-4" />
                                 <span>Book a Service Appointment</span>
                             </div>
@@ -174,7 +174,7 @@ export function InquiryDetailsSheet({
                             <div className="grid grid-cols-2 gap-4">
                                 <div className="space-y-2">
                                     <Label>Preferred Date</Label>
-                                    <div className="border rounded-md p-2 text-sm text-gray-500">
+                                    <div className="border rounded-md p-2 text-sm text-gray-600">
                                         Calender picker...
                                     </div>
                                 </div>
@@ -206,7 +206,7 @@ export function InquiryDetailsSheet({
                     {/* CALL BACK FORM */}
                     <TabsContent value="callback">
                         <form onSubmit={handleSubmit} className="space-y-5">
-                            <div className="flex items-center gap-2 mb-4 text-sm font-medium text-gray-500">
+                            <div className="flex items-center gap-2 mb-4 text-sm font-medium text-gray-600">
                                 <Phone className="w-4 h-4" />
                                 <span>Request a Call Back</span>
                             </div>
@@ -250,7 +250,7 @@ export function InquiryDetailsSheet({
                     {/* ACCESSORIES FORM */}
                     <TabsContent value="accessories">
                         <form onSubmit={handleSubmit} className="space-y-5">
-                            <div className="flex items-center gap-2 mb-4 text-sm font-medium text-gray-500">
+                            <div className="flex items-center gap-2 mb-4 text-sm font-medium text-gray-600">
                                 <ShoppingBag className="w-4 h-4" />
                                 <span>Buy Genuine Accessories</span>
                             </div>

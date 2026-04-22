@@ -142,7 +142,7 @@ function FAQItem({
                     {item.question}
                 </span>
                 <ChevronDown
-                    className="w-5 h-5 shrink-0 text-gray-400 transition-transform duration-300"
+                    className="w-5 h-5 shrink-0 text-gray-600 transition-transform duration-300"
                     style={{
                         transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',
                         color: isOpen ? brandColor : undefined,
@@ -185,7 +185,7 @@ export function FAQSection({ brandColor, vehicleType, dealerName }: FAQSectionPr
                     <h2 className="mt-2 text-3xl md:text-4xl font-bold text-gray-900">
                         Questions
                     </h2>
-                    <p className="mt-3 text-gray-500 text-sm">
+                    <p className="mt-3 text-gray-600 text-sm">
                         Everything you need to know before visiting {dealerName}.
                     </p>
                 </div>
@@ -204,7 +204,7 @@ export function FAQSection({ brandColor, vehicleType, dealerName }: FAQSectionPr
                 </div>
 
                 {/* Footer note */}
-                <p className="mt-8 text-center text-sm text-gray-400">
+                <p className="mt-8 text-center text-sm text-gray-600">
                     Still have questions?{' '}
                     <a
                         href="#contact"

@@ -76,7 +76,7 @@ export function TrustBadgesSection({
                     <h2 className="mt-2 text-3xl md:text-4xl font-bold text-gray-900">
                         Why Trust Us
                     </h2>
-                    <p className="mt-3 text-gray-500 max-w-xl mx-auto">
+                    <p className="mt-3 text-gray-600 max-w-xl mx-auto">
                         {dealerName} is committed to giving you the best vehicle buying experience in the region.
                     </p>
                 </div>
@@ -108,7 +108,7 @@ export function TrustBadgesSection({
                                 {isStarRated && <StarRating />}
 
                                 {/* Subtitle */}
-                                <p className="text-xs text-gray-500 leading-relaxed">
+                                <p className="text-xs text-gray-600 leading-relaxed">
                                     {badge.subtitle}
                                 </p>
                             </div>

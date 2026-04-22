@@ -615,7 +615,7 @@ export function TwoWheelerTemplate({
                             <span className="text-4xl">{c.emoji}</span>
                             <span className="font-semibold text-gray-900">{c.label}</span>
                             {c.count != null && c.count > 0 && (
-                                <span className="text-xs text-gray-500">{c.count} models</span>
+                                <span className="text-xs text-gray-600">{c.count} models</span>
                             )}
                         </Link>
                     ))}
@@ -627,7 +627,7 @@ export function TwoWheelerTemplate({
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
                     <div>
                         <h2 className="text-2xl font-bold text-gray-900">Our Inventory</h2>
-                        <p className="text-gray-500 text-sm mt-1">{vehicles.length} models available</p>
+                        <p className="text-gray-600 text-sm mt-1">{vehicles.length} models available</p>
                     </div>
 
                     {/* Filter tabs */}
@@ -677,7 +677,7 @@ export function TwoWheelerTemplate({
                                                 )}
                                                 <div>
                                                     <h3 className="text-lg font-bold text-gray-900">{brand}</h3>
-                                                    <p className="text-xs text-gray-500">{brandVehicles.length} model{brandVehicles.length !== 1 ? "s" : ""}</p>
+                                                    <p className="text-xs text-gray-600">{brandVehicles.length} model{brandVehicles.length !== 1 ? "s" : ""}</p>
                                                 </div>
                                                 <div className="ml-auto h-1 w-12 rounded-full" style={{ backgroundColor: brandTheme.accent }} />
                                             </div>
@@ -718,7 +718,7 @@ export function TwoWheelerTemplate({
                         </div>
                     )
                 })() : (
-                    <div className="text-center py-16 text-gray-400">
+                    <div className="text-center py-16 text-gray-600">
                         <p className="text-lg font-medium">No vehicles in this category yet.</p>
                         <p className="text-sm mt-1">Check back soon or contact us directly.</p>
                     </div>
@@ -742,7 +742,7 @@ export function TwoWheelerTemplate({
                                 </div>
                                 <div>
                                     <h3 className="font-semibold text-gray-900">{s.title}</h3>
-                                    <p className="text-sm text-gray-500 mt-1">{s.text}</p>
+                                    <p className="text-sm text-gray-600 mt-1">{s.text}</p>
                                 </div>
                             </div>
                         ))}
@@ -755,14 +755,14 @@ export function TwoWheelerTemplate({
                 <div className="grid md:grid-cols-2 gap-10 items-center">
                     <div>
                         <h2 className="text-2xl font-bold text-gray-900 mb-2">Get in Touch</h2>
-                        <p className="text-gray-500 mb-8">Our team is here to help you find the perfect ride.</p>
+                        <p className="text-gray-600 mb-8">Our team is here to help you find the perfect ride.</p>
                         <div className="space-y-4">
                             <a href={`tel:${phone}`} className="flex items-center gap-3 text-gray-700 hover:text-gray-900 group">
                                 <div className="w-10 h-10 rounded-xl flex items-center justify-center group-hover:opacity-80 transition-opacity" style={{ backgroundColor: theme.accent + "15" }}>
                                     <Phone className="w-5 h-5" style={{ color: theme.accent }} />
                                 </div>
                                 <div>
-                                    <p className="text-xs text-gray-400">Call Us</p>
+                                    <p className="text-xs text-gray-600">Call Us</p>
                                     <p className="font-semibold">{phone}</p>
                                 </div>
                             </a>
@@ -771,7 +771,7 @@ export function TwoWheelerTemplate({
                                     <Mail className="w-5 h-5" style={{ color: theme.accent }} />
                                 </div>
                                 <div>
-                                    <p className="text-xs text-gray-400">Email</p>
+                                    <p className="text-xs text-gray-600">Email</p>
                                     <p className="font-semibold">{email}</p>
                                 </div>
                             </a>
@@ -780,7 +780,7 @@ export function TwoWheelerTemplate({
                                     <MapPin className="w-5 h-5" style={{ color: theme.accent }} />
                                 </div>
                                 <div>
-                                    <p className="text-xs text-gray-400">Address</p>
+                                    <p className="text-xs text-gray-600">Address</p>
                                     <p className="font-semibold">{fullAddress ?? location}</p>
                                 </div>
                             </div>
@@ -845,10 +845,10 @@ export function TwoWheelerTemplate({
                         </div>
                         <div>
                             <p className="font-bold text-gray-900 text-lg">{dealerName}</p>
-                            <p className="text-sm text-gray-500">{location}</p>
+                            <p className="text-sm text-gray-600">{location}</p>
                         </div>
                     </div>
-                    <p className="text-gray-400 text-xs text-center">
+                    <p className="text-gray-600 text-xs text-center">
                         Powered by <span className="font-semibold" style={{ color: theme.accent }}>DealerSite Pro</span>
                     </p>
                 </div>

@@ -24,6 +24,7 @@ import {
 import { cn } from '@/lib/utils';
 import { formatPriceInLakhs } from '@/lib/utils/car-utils';
 import { X } from 'lucide-react';
+import { FOUR_W_BODY_TYPES } from '@/lib/data/four-wheelers';
 
 interface CarFiltersProps {
     className?: string;
@@ -61,7 +62,6 @@ export function CarFilters({ className, onFilterChange, hideBrand = false, showU
             .catch(() => {});
     }, []);
 
-    const BODY_TYPES = ['Hatchback', 'Sedan', 'SUV', 'MUV', 'Compact SUV', 'Luxury'];
     const FUEL_TYPES = ['Petrol', 'Diesel', 'CNG', 'Electric', 'Hybrid'];
     const TRANSMISSIONS = ['Manual', 'Automatic', 'AMT', 'CVT', 'DCT'];
     const YEARS = ['2026', '2025', '2024', '2023', '2022', '2021', '2020', '2019', '2018'];
@@ -233,7 +233,7 @@ export function CarFilters({ className, onFilterChange, hideBrand = false, showU
                             />
                             <div className="flex items-center justify-between">
                                 <span className="text-xs font-medium px-2 py-1 bg-gray-100 text-gray-700 rounded-md">{formatPriceInLakhs(priceRange[0])}</span>
-                                <span className="text-xs text-gray-500">to</span>
+                                <span className="text-xs text-gray-600">to</span>
                                 <span className="text-xs font-medium px-2 py-1 bg-gray-100 text-gray-700 rounded-md">{formatPriceInLakhs(priceRange[1])}</span>
                             </div>
                         </AccordionContent>
@@ -281,7 +281,7 @@ export function CarFilters({ className, onFilterChange, hideBrand = false, showU
                         </AccordionTrigger>
                         <AccordionContent className="pb-4">
                             <div className="space-y-2.5">
-                                {BODY_TYPES.map((type) => (
+                                {FOUR_W_BODY_TYPES.map((type) => (
                                     <div key={type} className="flex items-center gap-2">
                                         <Checkbox
                                             id={`body-${type}`}
@@ -432,7 +432,7 @@ export function CarFilters({ className, onFilterChange, hideBrand = false, showU
                                             }`}
                                             style={{ backgroundColor: color.hex }}
                                         />
-                                        <span className="text-[9px] text-gray-500 leading-none">{color.name}</span>
+                                        <span className="text-[9px] text-gray-600 leading-none">{color.name}</span>
                                     </button>
                                 ))}
                             </div>
@@ -457,7 +457,7 @@ export function CarFilters({ className, onFilterChange, hideBrand = false, showU
                                     <span className="text-xs font-medium px-2 py-1 bg-gray-100 text-gray-700 rounded-md">
                                         {kmRange[0].toLocaleString()} km
                                     </span>
-                                    <span className="text-xs text-gray-500">to</span>
+                                    <span className="text-xs text-gray-600">to</span>
                                     <span className="text-xs font-medium px-2 py-1 bg-gray-100 text-gray-700 rounded-md">
                                         {kmRange[1].toLocaleString()} km
                                     </span>
