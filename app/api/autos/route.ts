@@ -1,154 +1,406 @@
 /**
  * Autos API Route
- * GET /api/autos - List three-wheelers from thw_catalog with filtering, sorting, and pagination
+ * GET /api/autos - List three-wheelers from local JSON files with filtering, sorting, and pagination
  */
 
 import { NextRequest, NextResponse } from 'next/server';
-import { createClient } from '@supabase/supabase-js';
+import fs from 'fs';
+import path from 'path';
+import {
+    brandNameToId,
+    getVehicleImageUrls,
+    modelToSlug,
+} from '@/lib/utils/brand-model-images';
 
-function getSupabase() {
-    const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
-    const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-    if (!url || !key || url.includes('placeholder')) return null;
-    return createClient(url, key);
+// ---------- brand-models.json types ----------
+interface BrandModelsFile {
+    threeWheelers: ThreeWheelerBrandEntry[];
+}
+interface ThreeWheelerBrandEntry {
+    brandId: string;
+    brand: string;
+    models: {
+        passenger?: string[];
+        cargo?: string[];
+        cargo_cng?: string[];
+        electric?: string[];
+    };
+}
+
+// ---------- JSON vehicle shape (public/data/3w/*.json) ----------
+interface RawVehicleFile {
+    brand: string;
+    brandId: string;
+    vehicles: RawVehicle[];
+}
+interface RawVehicle {
+    model?: string;
+    variant_name: string;
+    ex_showroom_price?: string;
+    price?: string;
+    mileage?: string;
+    engine_details?: {
+        displacement?: string;
+        max_power?: string;
+        torque?: string;
+        motor_type?: string;
+    };
+    payload_features?: {
+        gross_vehicle_weight?: string;
+        payload_capacity?: string;
+    };
+    technical_specifications?: {
+        fuel_type?: string;
+        transmission_type?: string;
+        battery_capacity?: string;
+        range?: string;
+        top_speed?: string;
+        seating_capacity?: string;
+        body_type?: string;
+        [key: string]: string | undefined;
+    };
+    dimensions?: {
+        [key: string]: string | undefined;
+    };
+}
+
+// ---------- helpers ----------
+
+/** Parse Indian price strings like "₹2.65 Lakh", "₹74,999" → paise (integer) */
+function parsePriceToPaise(raw: string | undefined | null): number {
+    if (!raw) return 0;
+    const cleaned = raw.replace(/[₹,\s]/g, '');
+    const lakhMatch = cleaned.match(/^([\d.]+)\s*[Ll]akh$/);
+    if (lakhMatch) {
+        return Math.round(parseFloat(lakhMatch[1]) * 100000 * 100);
+    }
+    const croreMatch = cleaned.match(/^([\d.]+)\s*[Cc]rore$/);
+    if (croreMatch) {
+        return Math.round(parseFloat(croreMatch[1]) * 10000000 * 100);
+    }
+    const num = parseFloat(cleaned);
+    if (!isNaN(num)) return Math.round(num * 100);
+    return 0;
+}
+
+/** Extract numeric cc from strings like "236.2 cc" */
+function parseCC(raw: string | undefined | null): number | null {
+    if (!raw || raw === 'N/A' || raw === '') return null;
+    const m = raw.match(/([\d.]+)/);
+    return m ? parseFloat(m[1]) : null;
+}
+
+/** Extract numeric mileage (kmpl) and range from strings */
+function parseMileage(raw: string | undefined | null): { kmpl: number | null; rangeKm: number | null } {
+    if (!raw) return { kmpl: null, rangeKm: null };
+    const rangeMatch = raw.match(/([\d.]+)\s*km\s*(?:range|\()/i);
+    if (rangeMatch) return { kmpl: null, rangeKm: parseFloat(rangeMatch[1]) };
+    const kmplMatch = raw.match(/([\d.]+)\s*kmpl/i);
+    if (kmplMatch) return { kmpl: parseFloat(kmplMatch[1]), rangeKm: null };
+    const kmkgMatch = raw.match(/([\d.]+)\s*km\/kg/i);
+    if (kmkgMatch) return { kmpl: parseFloat(kmkgMatch[1]), rangeKm: null };
+    const numMatch = raw.match(/([\d.]+)/);
+    if (numMatch) return { kmpl: parseFloat(numMatch[1]), rangeKm: null };
+    return { kmpl: null, rangeKm: null };
+}
+
+/** Extract numeric payload in kg */
+function parsePayloadKg(raw: string | undefined | null): number | null {
+    if (!raw || raw === '') return null;
+    const m = raw.match(/([\d.]+)/);
+    return m ? parseFloat(m[1]) : null;
+}
+
+/** Extract passenger capacity from "Driver + 3 Passenger" style strings */
+function parsePassengerCapacity(raw: string | undefined | null): number | null {
+    if (!raw || raw === '') return null;
+    // "Driver + 3 Passenger" → 3 (passengers, not counting driver)
+    const m = raw.match(/(\d+)\s*(?:Passenger|passenger|pax)/i);
+    if (m) return parseInt(m[1]);
+    const numMatch = raw.match(/(\d+)/);
+    return numMatch ? parseInt(numMatch[1]) : null;
+}
+
+/** Extract top speed */
+function parseTopSpeed(raw: string | undefined | null): number | null {
+    if (!raw) return null;
+    const m = raw.match(/([\d.]+)/);
+    return m ? parseFloat(m[1]) : null;
+}
+
+/** Parse range from technical_specifications.range like "135 km" */
+function parseRange(raw: string | undefined | null): number | null {
+    if (!raw) return null;
+    const m = raw.match(/([\d.]+)/);
+    return m ? parseFloat(m[1]) : null;
+}
+
+// ---------- type classification from brand-models.json ----------
+type ThreeWheelerType = 'passenger' | 'cargo' | 'electric';
+
+let cachedTypeMap: Map<string, ThreeWheelerType> | null = null;
+
+/** Build a map of brandId::modelNameLower → type from brand-models.json */
+function getTypeMap(): Map<string, ThreeWheelerType> {
+    if (cachedTypeMap) return cachedTypeMap;
+    const bmPath = path.join(process.cwd(), 'lib', 'data', 'brand-models.json');
+    const bmData: BrandModelsFile = JSON.parse(fs.readFileSync(bmPath, 'utf-8'));
+
+    const map = new Map<string, ThreeWheelerType>();
+    for (const entry of bmData.threeWheelers) {
+        for (const model of entry.models.passenger ?? []) {
+            map.set(`${entry.brandId}::${model.toLowerCase()}`, 'passenger');
+        }
+        for (const model of entry.models.cargo ?? []) {
+            map.set(`${entry.brandId}::${model.toLowerCase()}`, 'cargo');
+        }
+        for (const model of entry.models.cargo_cng ?? []) {
+            map.set(`${entry.brandId}::${model.toLowerCase()}`, 'cargo');
+        }
+        for (const model of entry.models.electric ?? []) {
+            map.set(`${entry.brandId}::${model.toLowerCase()}`, 'electric');
+        }
+    }
+
+    cachedTypeMap = map;
+    return map;
+}
+
+/** Determine the 3W type for a vehicle by checking brand-models.json, then fallback heuristics */
+function classifyType(
+    brandId: string,
+    modelName: string,
+    fuelType: string,
+    payloadKg: number | null,
+    passengerCapacity: number | null,
+    bodyType: string | undefined
+): ThreeWheelerType {
+    const typeMap = getTypeMap();
+
+    // Exact match on model name
+    const key = `${brandId}::${modelName.toLowerCase()}`;
+    if (typeMap.has(key)) return typeMap.get(key)!;
+
+    // Try matching against partial model names (variant_name often has extra text)
+    for (const [mapKey, mapType] of typeMap.entries()) {
+        if (!mapKey.startsWith(`${brandId}::`)) continue;
+        const mapModel = mapKey.split('::')[1];
+        if (modelName.toLowerCase().includes(mapModel)) return mapType;
+    }
+
+    // Fallback heuristics
+    if (fuelType === 'electric') return 'electric';
+    if (bodyType) {
+        const bt = bodyType.toLowerCase();
+        if (bt.includes('passenger')) return 'passenger';
+        if (bt.includes('cargo') || bt.includes('load')) return 'cargo';
+    }
+    if (passengerCapacity && passengerCapacity >= 3) return 'passenger';
+    if (payloadKg && payloadKg > 0) return 'cargo';
+    return 'passenger';
+}
+
+// ---------- cache ----------
+let cachedVehicles: ProcessedVehicle[] | null = null;
+
+interface ProcessedVehicle {
+    id: string;
+    make: string;
+    model: string;
+    variant: string;
+    type: string;
+    fuel_type: string;
+    engine_cc: number | null;
+    mileage_kmpl: number | null;
+    range_km: number | null;
+    payload_kg: number | null;
+    passenger_capacity: number | null;
+    price_min_paise: number;
+    image_url: string | null;
+    is_featured: boolean;
+    year: number;
+}
+
+function loadAllVehicles(): ProcessedVehicle[] {
+    if (cachedVehicles) return cachedVehicles;
+
+    const dir = path.join(process.cwd(), 'public', 'data', '3w');
+    const files = fs.readdirSync(dir).filter((f) => f.endsWith('.json'));
+
+    const allVehicles: ProcessedVehicle[] = [];
+
+    for (const file of files) {
+        const raw: RawVehicleFile = JSON.parse(
+            fs.readFileSync(path.join(dir, file), 'utf-8')
+        );
+
+        const brandName = raw.brand;
+        const brandId = raw.brandId;
+
+        for (let i = 0; i < raw.vehicles.length; i++) {
+            const v = raw.vehicles[i];
+            // Model: use explicit model field, or extract from variant_name before "/"
+            const modelName =
+                v.model ?? v.variant_name.split('/')[0].trim();
+            const fuelTypeRaw = (
+                v.technical_specifications?.fuel_type ?? ''
+            ).toLowerCase();
+            const isElectric = fuelTypeRaw === 'electric';
+            const modelSlug = modelToSlug(modelName);
+
+            const priceStr = v.ex_showroom_price ?? v.price;
+            const pricePaise = parsePriceToPaise(priceStr);
+            const ccVal = parseCC(v.engine_details?.displacement);
+            const { kmpl, rangeKm: mileageRange } = parseMileage(v.mileage);
+            const specRange = parseRange(v.technical_specifications?.range);
+            const rangeKm = mileageRange ?? specRange;
+            const payloadKg = parsePayloadKg(
+                v.payload_features?.payload_capacity
+            );
+            const passengerCapacity = parsePassengerCapacity(
+                v.technical_specifications?.seating_capacity
+            );
+            const topSpeed = parseTopSpeed(v.technical_specifications?.top_speed);
+
+            const vehicleType = classifyType(
+                brandId,
+                modelName,
+                fuelTypeRaw,
+                payloadKg,
+                passengerCapacity,
+                v.technical_specifications?.body_type
+            );
+
+            const imageUrls = getVehicleImageUrls(
+                '3w',
+                brandNameToId(brandName, '3w'),
+                modelName
+            );
+
+            const id = `${brandId}-${modelSlug}-${i}`;
+
+            allVehicles.push({
+                id,
+                make: brandName,
+                model: modelName,
+                variant: v.variant_name,
+                type: vehicleType,
+                fuel_type: isElectric ? 'electric' : (fuelTypeRaw || 'petrol'),
+                engine_cc: ccVal,
+                mileage_kmpl: kmpl,
+                range_km: rangeKm,
+                payload_kg: payloadKg,
+                passenger_capacity: passengerCapacity,
+                price_min_paise: pricePaise,
+                image_url: imageUrls[0] ?? null,
+                is_featured: false,
+                year: new Date().getFullYear(),
+            });
+        }
+    }
+
+    cachedVehicles = allVehicles;
+    return allVehicles;
 }
 
 export async function GET(request: NextRequest) {
     try {
-        const supabase = getSupabase();
-        if (!supabase) {
-            return NextResponse.json(
-                { success: false, error: 'Database not configured' },
-                { status: 503 }
-            );
-        }
-
         const { searchParams } = new URL(request.url);
 
         // Parse query params
         const make = searchParams.get('make');
         const type = searchParams.get('type'); // passenger, cargo, electric
         const page = Math.max(1, parseInt(searchParams.get('page') || '1'));
-        const pageSize = Math.min(60, Math.max(1, parseInt(searchParams.get('pageSize') || '30')));
+        const pageSize = Math.min(
+            60,
+            Math.max(1, parseInt(searchParams.get('pageSize') || '30'))
+        );
         const sortBy = searchParams.get('sortBy') || 'popular';
-
-        // Build query
-        let query = supabase
-            .from('thw_catalog')
-            .select('*', { count: 'exact' })
-            .eq('is_active', true);
-
-        // Brand filter
-        if (make) {
-            query = query.ilike('make', make);
-        }
-
-        // Type filter: passenger, cargo, or electric
-        if (type === 'electric') {
-            query = query.ilike('fuel_type', 'electric');
-        } else if (type === 'passenger') {
-            query = query.not('fuel_type', 'ilike', 'electric');
-            query = query.gt('passenger_capacity', 0);
-        } else if (type === 'cargo') {
-            query = query.not('fuel_type', 'ilike', 'electric');
-            query = query.gt('payload_kg', 0);
-        }
-
-        // Text search
         const q = searchParams.get('q') || searchParams.get('searchQuery');
-        if (q) {
-            query = query.or(`make.ilike.%${q}%,model.ilike.%${q}%`);
+
+        const allVehicles = loadAllVehicles();
+
+        // --- Group by brand+model (keep variant with lowest non-zero price) ---
+        const modelMap = new Map<string, ProcessedVehicle>();
+        for (const v of allVehicles) {
+            const key = `${v.make.toLowerCase()}__${v.model.toLowerCase()}`;
+            if (!modelMap.has(key)) {
+                modelMap.set(key, v);
+            } else {
+                const existing = modelMap.get(key)!;
+                if (
+                    v.price_min_paise > 0 &&
+                    (existing.price_min_paise === 0 ||
+                        v.price_min_paise < existing.price_min_paise)
+                ) {
+                    modelMap.set(key, v);
+                }
+            }
         }
+        let grouped = Array.from(modelMap.values());
 
-        // Sorting
-        switch (sortBy) {
-            case 'price_low':
-                query = query.order('price_min_paise', { ascending: true });
-                break;
-            case 'price_high':
-                query = query.order('price_min_paise', { ascending: false });
-                break;
-            case 'newest':
-                query = query.order('created_at', { ascending: false });
-                break;
-            case 'popular':
-            default:
-                query = query
-                    .order('popularity_score', { ascending: false })
-                    .order('model', { ascending: true });
-                break;
-        }
-
-        // Pagination
-        const from = (page - 1) * pageSize;
-        const to = from + pageSize - 1;
-        query = query.range(from, to);
-
-        const { data, error, count } = await query;
-
-        if (error) {
-            console.error('Error fetching autos:', error);
-            return NextResponse.json(
-                { success: false, error: 'Failed to fetch autos' },
-                { status: 500 }
+        // --- Filters ---
+        if (make) {
+            const makeLower = make.toLowerCase();
+            grouped = grouped.filter(
+                (v) => v.make.toLowerCase() === makeLower
             );
         }
 
-        const total = count ?? 0;
-
-        // Group variants by make+model — keep first row per model
-        const modelMap = new Map<string, (typeof data)[number]>();
-        for (const row of (data ?? [])) {
-            const key = `${(row.make ?? '').toLowerCase()}__${(row.model ?? '').toLowerCase()}`;
-            if (!modelMap.has(key)) {
-                modelMap.set(key, row);
-            } else {
-                const existing = modelMap.get(key)!;
-                const ep = existing.price_min_paise ?? 0;
-                const rp = row.price_min_paise ?? 0;
-                if (rp > 0 && (ep === 0 || rp < ep)) modelMap.set(key, row);
-            }
+        if (type === 'electric') {
+            grouped = grouped.filter((v) => v.type === 'electric');
+        } else if (type === 'passenger') {
+            grouped = grouped.filter((v) => v.type === 'passenger');
+        } else if (type === 'cargo') {
+            grouped = grouped.filter((v) => v.type === 'cargo');
         }
-        const groupedData = Array.from(modelMap.values());
-        const totalPages = Math.ceil(groupedData.length > 0 ? total / pageSize : 0);
 
-        // Map rows to a simplified vehicle shape for the frontend
-        const vehicles = groupedData.map((row) => {
-            const fuelRaw = (row.fuel_type ?? '').toLowerCase();
-            const isElectric = fuelRaw === 'electric';
-            // Use body_type from DB — it has correct values: "Passenger", "Cargo", "Electric Three Wheeler"
-            const bodyType = (row.body_type ?? '').toLowerCase();
-            const vehicleType: string = isElectric
-                ? 'electric'
-                : bodyType.includes('passenger') ? 'passenger'
-                : bodyType.includes('cargo') || bodyType.includes('load') ? 'cargo'
-                : (row.passenger_capacity ?? 0) >= 3 ? 'passenger'
-                : 'cargo';
+        if (q) {
+            const qLower = q.toLowerCase();
+            grouped = grouped.filter(
+                (v) =>
+                    v.make.toLowerCase().includes(qLower) ||
+                    v.model.toLowerCase().includes(qLower) ||
+                    v.variant.toLowerCase().includes(qLower)
+            );
+        }
 
-            return {
-                id: row.id,
-                make: row.make,
-                model: row.model,
-                variant: row.variant ?? null,
-                year: row.year ?? new Date().getFullYear(),
-                type: vehicleType,
-                fuel_type: isElectric ? 'electric' : (fuelRaw || 'petrol'),
-                engine_cc: row.engine_cc ?? null,
-                mileage_kmpl: row.mileage_kmpl ? parseFloat(row.mileage_kmpl) : null,
-                range_km: row.range_km ?? null,
-                payload_kg: row.payload_kg ?? null,
-                passenger_capacity: row.passenger_capacity ?? null,
-                price_min_paise: row.price_min_paise ?? 0,
-                image_url: row.image_url ?? null,
-                popularity_score: row.popularity_score ?? 0,
-                is_featured: (row.popularity_score ?? 0) >= 8,
-            };
-        });
+        // --- Sorting ---
+        switch (sortBy) {
+            case 'price_low':
+                grouped.sort((a, b) => a.price_min_paise - b.price_min_paise);
+                break;
+            case 'price_high':
+                grouped.sort((a, b) => b.price_min_paise - a.price_min_paise);
+                break;
+            case 'newest':
+                break;
+            case 'popular':
+            default:
+                grouped.sort((a, b) => {
+                    const priceDiff = b.price_min_paise - a.price_min_paise;
+                    if (priceDiff !== 0) return priceDiff;
+                    return a.model.localeCompare(b.model);
+                });
+                break;
+        }
+
+        // Mark top 20% as featured
+        const featuredCount = Math.max(1, Math.ceil(grouped.length * 0.2));
+        for (let i = 0; i < grouped.length; i++) {
+            grouped[i] = { ...grouped[i], is_featured: i < featuredCount };
+        }
+
+        // --- Pagination ---
+        const total = grouped.length;
+        const totalPages = Math.ceil(total / pageSize);
+        const from = (page - 1) * pageSize;
+        const paged = grouped.slice(from, from + pageSize);
 
         return NextResponse.json({
             success: true,
             data: {
-                vehicles,
+                vehicles: paged,
                 total,
                 page,
                 pageSize,
