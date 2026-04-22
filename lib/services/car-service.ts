@@ -7,6 +7,8 @@ import { supabase } from '@/lib/supabase';
 import type { Car, CarFilters, CarSearchResult } from '@/lib/types/car';
 import { searchCars, sortCars, calculateEMI } from '@/lib/utils/car-utils';
 import { CAR_MODEL_COLORS } from '@/lib/data/car-colors';
+import { get4WCardekhoModelMeta } from '@/lib/data/4w-cardekho-meta';
+import { brandNameToId, getScrapedImageFallback } from '@/lib/utils/brand-model-images';
 
 // Table name in Supabase
 const CAR_TABLE = 'car_catalog';
@@ -21,11 +23,6 @@ export async function getAllCars(filters?: CarFilters): Promise<CarSearchResult>
     if (filters?.make) {
         const makes = Array.isArray(filters.make) ? filters.make : [filters.make];
         query = query.in('make', makes);
-    }
-
-    if (filters?.bodyType) {
-        const types = Array.isArray(filters.bodyType) ? filters.bodyType : [filters.bodyType];
-        query = query.in('body_type', types);
     }
 
     if (filters?.fuelType) {
@@ -70,8 +67,10 @@ export async function getAllCars(filters?: CarFilters): Promise<CarSearchResult>
         cars = searchCars(cars, filters.searchQuery);
     }
 
-    // Apply remaining filters that weren't handled by SQL (if any)
-    // ...
+    if (filters?.bodyType) {
+        const requestedTypes = new Set(Array.isArray(filters.bodyType) ? filters.bodyType : [filters.bodyType]);
+        cars = cars.filter((car) => requestedTypes.has(car.bodyType));
+    }
 
     // Sort results
     if (filters?.sortBy) {
@@ -189,9 +188,11 @@ function groupVariantsByModel(rows: any[]): any[] {
     const modelMap = new Map<string, any>();
     for (const row of rows) {
         const key = `${row.make}|${row.model}`;
+        const normalizedBodyType = get4WCardekhoModelMeta(row.make, row.model)?.bodyType ?? row.body_type ?? 'Other';
         if (!modelMap.has(key)) {
             modelMap.set(key, {
                 ...row,
+                body_type: normalizedBodyType,
                 fuel_types: row.fuel_type ? [row.fuel_type] : [],
                 transmissions: row.transmission ? [row.transmission] : [],
                 variant: '',
@@ -208,6 +209,7 @@ function groupVariantsByModel(rows: any[]): any[] {
                 existing.fuel_types.push(row.fuel_type);
             if (row.transmission && !existing.transmissions.includes(row.transmission))
                 existing.transmissions.push(row.transmission);
+            existing.body_type = existing.body_type || normalizedBodyType;
         }
     }
     return Array.from(modelMap.values());
@@ -295,7 +297,7 @@ function mapDbCarToCar(dbCar: any): Car {
         model:    dbCar.model,
         variant:  dbCar.variant ?? '',
         year:     dbCar.year,
-        bodyType: dbCar.body_type,
+        bodyType: get4WCardekhoModelMeta(dbCar.make, dbCar.model)?.bodyType ?? dbCar.body_type ?? 'Other',
         segment:  dbCar.segment ?? null,
         vehicleCategory: '4w' as const,
         price:    minINR ? `₹${minINR.toLocaleString('en-IN')}` : (dbCar.price ?? undefined),
@@ -309,11 +311,16 @@ function mapDbCarToCar(dbCar: any): Car {
             keyFeatures:     Array.isArray(dbCar.key_features)    ? dbCar.key_features    : [],
             safetyFeatures:  Array.isArray(dbCar.safety_features) ? dbCar.safety_features : [],
         },
-        images:       dbCar.images ?? {
-            hero:     dbCar.image_url ?? null,
-            exterior: dbCar.image_url ? [dbCar.image_url] : [],
-            interior: [],
-        },
+        images:       dbCar.images ?? (() => {
+            // Prefer local image (reliable, no CDN hotlink issues) over DB image_url
+            const localHero = getScrapedImageFallback('4w', brandNameToId(dbCar.make, '4w'), dbCar.model);
+            const hero = localHero ?? dbCar.image_url ?? null;
+            return {
+                hero,
+                exterior: hero ? [hero] : [],
+                interior: [],
+            };
+        })(),
         colors: (() => {
             // Use DB colors if they exist and are non-empty
             if (Array.isArray(dbCar.colors) && dbCar.colors.length > 0) return dbCar.colors;
@@ -364,7 +371,7 @@ export async function getAllBrandsWithStats(): Promise<{
 }[]> {
     const { data } = await supabase
         .from(CAR_TABLE)
-        .select('make, body_type, price_min_paise, price_max_paise')
+        .select('make, model, body_type, price_min_paise, price_max_paise')
         .eq('is_active', true);
 
     if (!data) return [];
@@ -380,18 +387,19 @@ export async function getAllBrandsWithStats(): Promise<{
         const existing = brandMap.get(row.make);
         const minP = row.price_min_paise ? Math.round(row.price_min_paise / 100) : 0;
         const maxP = row.price_max_paise ? Math.round(row.price_max_paise / 100) : 0;
+        const normalizedBodyType = get4WCardekhoModelMeta(row.make, row.model)?.bodyType ?? row.body_type ?? null;
 
         if (existing) {
             existing.modelCount++;
             if (minP > 0 && (existing.priceMin === 0 || minP < existing.priceMin)) existing.priceMin = minP;
             if (maxP > existing.priceMax) existing.priceMax = maxP;
-            if (row.body_type) existing.bodyTypes.add(row.body_type);
+            if (normalizedBodyType) existing.bodyTypes.add(normalizedBodyType);
         } else {
             brandMap.set(row.make, {
                 modelCount: 1,
                 priceMin: minP,
                 priceMax: maxP,
-                bodyTypes: new Set(row.body_type ? [row.body_type] : []),
+                bodyTypes: new Set(normalizedBodyType ? [normalizedBodyType] : []),
             });
         }
     }
@@ -411,18 +419,15 @@ export async function getAllBrandsWithStats(): Promise<{
  * Get cars by make with optional body type filter
  */
 export async function getCarsByMakeAndBodyType(make: string, bodyType?: string): Promise<Car[]> {
-    let query = supabase
+    const query = supabase
         .from(CAR_TABLE)
         .select('*')
         .eq('make', make)
         .eq('is_active', true);
 
-    if (bodyType && bodyType !== 'All') {
-        query = query.eq('body_type', bodyType);
-    }
-
     const { data } = await query.order('popularity_score', { ascending: false });
     if (!data) return [];
-    return groupVariantsByModel(data).map(mapDbCarToCar);
+    const cars = groupVariantsByModel(data).map(mapDbCarToCar);
+    if (!bodyType || bodyType === 'All') return cars;
+    return cars.filter((car) => car.bodyType === bodyType);
 }
-
