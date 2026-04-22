@@ -15,7 +15,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { SiteHeader } from '@/components/layout/SiteHeader';
 import { SiteFooter } from '@/components/layout/SiteFooter';
-import { getVehicleImageUrls, brandNameToId } from '@/lib/utils/brand-model-images';
 import {
     ChevronRight,
     Fuel,
@@ -47,6 +46,7 @@ interface AutoRow {
     passenger_capacity: number | null;
     price_min_paise: number | null;
     image_url: string | null;
+    image_urls: string[];
     popularity_score: number | null;
     is_active: boolean;
     max_power: string | null;
@@ -64,6 +64,18 @@ interface AutoRow {
     wheelbase_mm: number | null;
     created_at: string | null;
     updated_at: string | null;
+    variants: ApiVariant[];
+}
+
+interface ApiVariant {
+    id: string;
+    variant: string | null;
+    fuel_type: string;
+    price_min_paise: number;
+    engine_cc: number | null;
+    max_power: string | null;
+    mileage_kmpl: number | null;
+    range_km: number | null;
 }
 
 interface VariantItem {
@@ -140,10 +152,6 @@ export default function AutoDetailPage() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
 
-    // Variants
-    const [variants, setVariants] = useState<VariantItem[]>([]);
-    const [variantsLoading, setVariantsLoading] = useState(false);
-
     // Similar autos
     const [similarAutos, setSimilarAutos] = useState<VariantItem[]>([]);
 
@@ -179,21 +187,9 @@ export default function AutoDetailPage() {
             .finally(() => setLoading(false));
     }, [id]);
 
-    // ── Fetch variants & similar autos ──────────────────────────
+    // ── Fetch similar autos ───────────────────────────────────
     useEffect(() => {
         if (!vehicle) return;
-
-        // Variants: same make + model name search
-        setVariantsLoading(true);
-        fetch(`/api/autos?make=${encodeURIComponent(vehicle.make)}&q=${encodeURIComponent(vehicle.model)}&pageSize=20`)
-            .then(res => res.json())
-            .then(json => {
-                if (json.success && json.data?.vehicles) {
-                    setVariants(json.data.vehicles);
-                }
-            })
-            .catch(() => {})
-            .finally(() => setVariantsLoading(false));
 
         // Similar: same brand, different models
         fetch(`/api/autos?make=${encodeURIComponent(vehicle.make)}&pageSize=12`)
@@ -247,14 +243,11 @@ export default function AutoDetailPage() {
                 : 'Cargo'
         : '';
 
-    const imageUrls = vehicle
-        ? getVehicleImageUrls(
-            '3w',
-            brandNameToId(vehicle.make, '3w'),
-            vehicle.model,
-            vehicle.image_url
-        )
-        : [];
+    // Use image_urls from the API (resolved server-side via filesystem scan)
+    const imageUrls = vehicle?.image_urls?.length ? vehicle.image_urls : [];
+
+    // Variants come directly from the detail API (all fuel-type variants for same model)
+    const variants = vehicle?.variants ?? [];
 
     // EMI calculation
     const emiResult = useMemo(() => {
@@ -603,12 +596,7 @@ export default function AutoDetailPage() {
                     <h2 className="text-xl font-bold text-gray-900 mb-6">
                         {vehicle.make} {vehicle.model} Variants & Price
                     </h2>
-                    {variantsLoading ? (
-                        <div className="flex items-center justify-center py-8">
-                            <Loader2 className="w-5 h-5 animate-spin text-gray-400 mr-2" />
-                            <span className="text-sm text-gray-500">Loading variants...</span>
-                        </div>
-                    ) : variants.length > 0 ? (
+                    {variants.length > 0 ? (
                         <div className="overflow-x-auto">
                             <table className="w-full text-sm">
                                 <thead>
@@ -616,6 +604,7 @@ export default function AutoDetailPage() {
                                         <th className="text-left py-3 px-4 font-semibold text-gray-700">Variant</th>
                                         <th className="text-left py-3 px-4 font-semibold text-gray-700">Ex-Showroom Price</th>
                                         <th className="text-left py-3 px-4 font-semibold text-gray-700">Fuel</th>
+                                        <th className="text-left py-3 px-4 font-semibold text-gray-700">Power</th>
                                         <th className="text-right py-3 px-4 font-semibold text-gray-700">Action</th>
                                     </tr>
                                 </thead>
@@ -627,7 +616,7 @@ export default function AutoDetailPage() {
                                         >
                                             <td className="py-3 px-4">
                                                 <span className="font-medium text-gray-900">
-                                                    {v.variant || v.model}
+                                                    {v.variant || vehicle.model}
                                                 </span>
                                                 {v.id === vehicle.id && (
                                                     <span className="ml-2 inline-flex items-center bg-blue-100 text-blue-700 text-[10px] font-semibold px-1.5 py-0.5 rounded">
@@ -640,6 +629,9 @@ export default function AutoDetailPage() {
                                             </td>
                                             <td className="py-3 px-4 text-gray-700">
                                                 {parseFuelType(v.fuel_type)}
+                                            </td>
+                                            <td className="py-3 px-4 text-gray-600">
+                                                {v.max_power || '-'}
                                             </td>
                                             <td className="py-3 px-4 text-right">
                                                 {v.id !== vehicle.id ? (
@@ -660,7 +652,7 @@ export default function AutoDetailPage() {
                         </div>
                     ) : (
                         <p className="text-sm text-gray-500 text-center py-8">
-                            Variant details are not available yet.
+                            Only one variant available for this model.
                         </p>
                     )}
                 </section>
@@ -913,13 +905,6 @@ function EmiSlider({
 }
 
 function SimilarAutoCard({ auto }: { auto: VariantItem }) {
-    const imageUrls = getVehicleImageUrls(
-        '3w',
-        brandNameToId(auto.make, '3w'),
-        auto.model,
-        auto.image_url ?? null
-    );
-    const [imgIdx, setImgIdx] = useState(0);
     const [imgFailed, setImgFailed] = useState(false);
 
     return (
@@ -928,18 +913,15 @@ function SimilarAutoCard({ auto }: { auto: VariantItem }) {
             className="group overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
         >
             <div className="relative aspect-[16/10] bg-gray-50">
-                {!imgFailed && imageUrls.length > 0 ? (
+                {!imgFailed && auto.image_url ? (
                     <Image
-                        src={imageUrls[imgIdx]}
+                        src={auto.image_url}
                         alt={`${auto.make} ${auto.model}`}
                         fill
                         unoptimized
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                         className="object-contain transition-transform duration-500 group-hover:scale-105"
-                        onError={() => {
-                            if (imgIdx < imageUrls.length - 1) setImgIdx(prev => prev + 1);
-                            else setImgFailed(true);
-                        }}
+                        onError={() => setImgFailed(true)}
                     />
                 ) : (
                     <div className="flex h-full items-center justify-center">

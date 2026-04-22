@@ -8,9 +8,9 @@ import fs from 'fs';
 import path from 'path';
 import {
     brandNameToId,
-    getVehicleImageUrls,
     modelToSlug,
 } from '@/lib/utils/brand-model-images';
+import { get3wVehicleImageUrls } from '@/lib/utils/resolve-3w-images';
 
 // ---------- brand-models.json types ----------
 interface BrandModelsFile {
@@ -288,8 +288,7 @@ function loadAllVehicles(): ProcessedVehicle[] {
                     v.technical_specifications?.body_type
                 );
 
-            const imageUrls = getVehicleImageUrls(
-                '3w',
+            const imageUrls = get3wVehicleImageUrls(
                 brandNameToId(brandName, '3w'),
                 modelName
             );
