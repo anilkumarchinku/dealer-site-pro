@@ -91,15 +91,14 @@ export async function GET(req: NextRequest) {
     if (bodyTypes.length > 0) {
         query = query.in('body_type', bodyTypes)
     } else if (category === 'four_wheeler') {
-        // Exclude non-4-wheeler body types
+        // Exclude non-4-wheeler body types, but KEEP vehicles with NULL body_type
+        // (most dealer-uploaded vehicles don't set body_type — they're 4W by default)
         const exclude4w = [
             ...CATEGORY_BODY_TYPES.two_three_wheeler,
             ...CATEGORY_BODY_TYPES.fleet,
             ...CATEGORY_BODY_TYPES.bus,
         ]
-        for (const bt of exclude4w) {
-            query = query.neq('body_type', bt)
-        }
+        query = query.or(`body_type.is.null,body_type.not.in.(${exclude4w.map(b => `"${b}"`).join(',')})`)
     }
 
     const condition = sp.get('condition')
