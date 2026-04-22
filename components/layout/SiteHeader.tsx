@@ -89,11 +89,26 @@ export function SiteHeader() {
         const timer = setTimeout(async () => {
             setIsSearching(true);
             try {
-                const res = await fetch(`/api/cars?searchQuery=${encodeURIComponent(searchQuery)}&limit=6`);
-                const data = await res.json();
-                if (data.success) {
-                    setSearchResults(data.data.cars);
-                }
+                const q = encodeURIComponent(searchQuery);
+                // Search across 4W, 2W, and 3W catalogs in parallel
+                const [carsRes, bikesRes, autosRes] = await Promise.all([
+                    fetch(`/api/cars?searchQuery=${q}&limit=4`).then(r => r.json()).catch(() => null),
+                    fetch(`/api/bikes?q=${q}&pageSize=3`).then(r => r.json()).catch(() => null),
+                    fetch(`/api/autos?q=${q}&pageSize=2`).then(r => r.json()).catch(() => null),
+                ]);
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                const mapVehicle = (v: any, category: string) => ({
+                    id: v.id, make: v.make ?? '', model: v.model ?? '', variant: v.variant ?? '',
+                    images: { hero: v.image_url ?? '', exterior: [] as string[], interior: [] as string[] },
+                    pricing: { exShowroom: { min: (v.price_min_paise ?? 0) / 100, max: null, currency: 'INR' as const } },
+                    _category: category,
+                });
+                const cars = (carsRes?.success ? carsRes.data.cars : []).map((c: CarType) => ({ ...c, _category: '4w' }));
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                const bikes = (bikesRes?.success ? bikesRes.data.vehicles : []).map((b: any) => mapVehicle(b, '2w'));
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                const autos = (autosRes?.success ? autosRes.data.vehicles : []).map((a: any) => mapVehicle(a, '3w'));
+                setSearchResults([...cars, ...bikes, ...autos].slice(0, 8));
             } catch {
                 setSearchResults([]);
             } finally {
@@ -126,10 +141,14 @@ export function SiteHeader() {
         return () => document.removeEventListener('mousedown', handleClick);
     }, []);
 
-    const handleSearchSelect = (carId: string) => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const handleSearchSelect = (result: any) => {
         setIsSearchOpen(false);
         setSearchQuery('');
-        router.push(`/cars/${carId}`);
+        const category = result._category ?? '4w';
+        if (category === '2w') router.push(`/bikes/${result.id}`);
+        else if (category === '3w') router.push(`/autos/${result.id}`);
+        else router.push(`/cars/${result.id}`);
     };
 
     const handleSearchSubmit = (e: React.FormEvent) => {
@@ -156,7 +175,7 @@ export function SiteHeader() {
                         <form onSubmit={handleSearchSubmit}>
                             <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
                             <Input
-                                placeholder="Search cars, brands, models..."
+                                placeholder="Search cars, bikes, autos..."
                                 value={searchQuery}
                                 onChange={(e) => {
                                     setSearchQuery(e.target.value);
@@ -176,7 +195,7 @@ export function SiteHeader() {
                                 {searchResults.map((car) => (
                                     <button
                                         key={car.id}
-                                        onClick={() => handleSearchSelect(car.id)}
+                                        onClick={() => handleSearchSelect(car)}
                                         className="w-full flex items-center gap-3 px-4 py-2.5 hover:bg-muted/50 transition-colors text-left"
                                     >
                                         <div className="relative w-12 h-8 bg-muted rounded overflow-hidden shrink-0">
@@ -203,7 +222,7 @@ export function SiteHeader() {
                                         className="w-full flex items-center gap-2 px-4 py-2.5 text-sm text-primary hover:bg-muted/50 border-t"
                                     >
                                         <Search className="w-3.5 h-3.5" />
-                                        Search all cars for &ldquo;{searchQuery}&rdquo;
+                                        Search all vehicles for &ldquo;{searchQuery}&rdquo;
                                     </button>
                                 )}
                             </div>
@@ -428,7 +447,7 @@ export function SiteHeader() {
                             {searchResults.slice(0, 4).map((car) => (
                                 <button
                                     key={car.id}
-                                    onClick={() => handleSearchSelect(car.id)}
+                                    onClick={() => handleSearchSelect(car)}
                                     className="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-muted text-left text-sm"
                                 >
                                     <span className="font-medium flex items-center gap-1.5">

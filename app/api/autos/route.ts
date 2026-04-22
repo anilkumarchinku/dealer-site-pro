@@ -54,6 +54,12 @@ export async function GET(request: NextRequest) {
             query = query.gt('payload_kg', 0);
         }
 
+        // Text search
+        const q = searchParams.get('q') || searchParams.get('searchQuery');
+        if (q) {
+            query = query.or(`make.ilike.%${q}%,model.ilike.%${q}%`);
+        }
+
         // Sorting
         switch (sortBy) {
             case 'price_low':
