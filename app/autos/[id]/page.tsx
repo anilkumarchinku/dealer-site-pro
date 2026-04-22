@@ -934,8 +934,10 @@ function SimilarAutoCard({ auto }: { auto: VariantItem }) {
         '3w',
         brandNameToId(auto.make, '3w'),
         auto.model,
-        null
+        auto.image_url ?? null
     );
+    const [imgIdx, setImgIdx] = useState(0);
+    const [imgFailed, setImgFailed] = useState(false);
 
     return (
         <Link
@@ -943,14 +945,18 @@ function SimilarAutoCard({ auto }: { auto: VariantItem }) {
             className="group overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
         >
             <div className="relative aspect-[16/10] bg-gray-50">
-                {imageUrls.length > 0 ? (
+                {!imgFailed && imageUrls.length > 0 ? (
                     <Image
-                        src={imageUrls[0]}
+                        src={imageUrls[imgIdx]}
                         alt={`${auto.make} ${auto.model}`}
                         fill
                         unoptimized
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                         className="object-contain transition-transform duration-500 group-hover:scale-105"
+                        onError={() => {
+                            if (imgIdx < imageUrls.length - 1) setImgIdx(prev => prev + 1);
+                            else setImgFailed(true);
+                        }}
                     />
                 ) : (
                     <div className="flex h-full items-center justify-center">
