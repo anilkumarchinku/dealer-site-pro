@@ -22,11 +22,10 @@ import {
     Car,
     Fuel,
     Calculator,
-    GitCompare,
     Star,
     TrendingUp,
     ArrowRight,
-    Store,
+    Bike,
 } from 'lucide-react';
 import type { Car as CarType } from '@/lib/types/car';
 import { formatPriceInLakhs } from '@/lib/utils/car-utils';
@@ -60,9 +59,9 @@ const BUDGET_RANGES = [
 
 const NAV_ITEMS = [
     { label: 'New Cars', href: '/cars' },
-    { label: 'Marketplace', href: '/marketplace' },
+    { label: 'Bikes & Scooters', href: '/#two-wheelers' },
+    { label: 'Autos & 3W', href: '/#three-wheelers' },
     { label: 'Brands', href: '/brands' },
-    { label: 'Compare', href: '/compare' },
     { label: 'EMI Calculator', href: '/tools/emi-calculator' },
     { label: 'Car Valuation', href: '/tools/car-valuation' },
     { label: 'On-Road Price', href: '/tools/on-road-price' },
@@ -225,14 +224,14 @@ export function SiteHeader() {
                             </button>
                         </div>
 
-                        <Link href="/marketplace" className="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground rounded-md transition-colors">
-                            Marketplace
+                        <Link href="/#two-wheelers" className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground rounded-md transition-colors">
+                            <Bike className="w-3.5 h-3.5" /> Bikes
+                        </Link>
+                        <Link href="/#three-wheelers" className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground rounded-md transition-colors">
+                            <span className="text-sm">🛺</span> Autos
                         </Link>
                         <Link href="/brands" className="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground rounded-md transition-colors">
                             Brands
-                        </Link>
-                        <Link href="/compare" className="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground rounded-md transition-colors">
-                            Compare
                         </Link>
                     </nav>
 
@@ -381,15 +380,8 @@ export function SiteHeader() {
 
                             {/* Quick Links */}
                             <div>
-                                <h3 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-3">Tools</h3>
+                                <h3 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-3">Explore</h3>
                                 <div className="space-y-1">
-                                    <Link
-                                        href="/compare"
-                                        className="flex items-center gap-2 py-1.5 text-sm hover:text-primary transition-colors"
-                                        onClick={() => setActiveMegaMenu(null)}
-                                    >
-                                        <GitCompare className="w-4 h-4" /> Compare Cars
-                                    </Link>
                                     <Link
                                         href="/cars"
                                         className="flex items-center gap-2 py-1.5 text-sm hover:text-primary transition-colors"
@@ -398,11 +390,18 @@ export function SiteHeader() {
                                         <Star className="w-4 h-4" /> All Cars
                                     </Link>
                                     <Link
-                                        href="/marketplace"
+                                        href="/#two-wheelers"
                                         className="flex items-center gap-2 py-1.5 text-sm hover:text-primary transition-colors"
                                         onClick={() => setActiveMegaMenu(null)}
                                     >
-                                        <Store className="w-4 h-4" /> Dealer Marketplace
+                                        <Bike className="w-4 h-4" /> Bikes & Scooters
+                                    </Link>
+                                    <Link
+                                        href="/#three-wheelers"
+                                        className="flex items-center gap-2 py-1.5 text-sm hover:text-primary transition-colors"
+                                        onClick={() => setActiveMegaMenu(null)}
+                                    >
+                                        <span className="text-base">🛺</span> Autos & 3W
                                     </Link>
                                 </div>
                             </div>

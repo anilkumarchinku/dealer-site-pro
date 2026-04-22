@@ -3,7 +3,7 @@
  */
 
 import Link from 'next/link';
-import { Calculator, GitCompare, Star, Mail, Phone, MapPin } from 'lucide-react';
+import { Calculator, Star, Mail, Phone, MapPin } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import BrandLogo from '@/components/BrandLogo';
 import { FOUR_W_BODY_TYPES } from '@/lib/data/four-wheelers';
@@ -102,11 +102,6 @@ export function SiteFooter() {
                     <div>
                         <h4 className="text-sm font-semibold mb-3">Tools</h4>
                         <ul className="space-y-1.5">
-                            <li>
-                                <Link href="/compare" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                                    Compare Cars
-                                </Link>
-                            </li>
                             <li>
                                 <Link href="/tools/emi-calculator" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                                     EMI Calculator

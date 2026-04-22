@@ -417,7 +417,7 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
                                         Visit a dealer&apos;s website to send an enquiry and get personalised pricing for your city.
                                     </p>
                                     <Link
-                                        href="/marketplace"
+                                        href="/"
                                         className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold text-white transition-colors"
                                         style={{ backgroundColor: brandColor, color: brandContrast }}
                                     >

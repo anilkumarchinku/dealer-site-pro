@@ -139,7 +139,7 @@ export default function WelcomeClient({ cars }: WelcomeClientProps) {
                             <Button variant="ghost" size="sm" onClick={() => router.push('/cars')} className="hidden sm:flex">
                                 Browse Cars
                             </Button>
-                            <Button variant="ghost" size="sm" onClick={() => router.push('/marketplace?category=two_three_wheeler')} className="hidden md:flex items-center gap-1.5">
+                            <Button variant="ghost" size="sm" onClick={() => router.push('/cars?category=two_three_wheeler')} className="hidden md:flex items-center gap-1.5">
                                 <Bike className="w-4 h-4" />
                                 2W / 3W
                             </Button>
@@ -440,7 +440,7 @@ export default function WelcomeClient({ cars }: WelcomeClientProps) {
             </section>
 
             {/* ── Two-Wheelers & Three-Wheelers ── */}
-            <section className="py-16 bg-muted/20 border-y border-border">
+            <section id="two-wheelers" className="py-16 bg-muted/20 border-y border-border scroll-mt-16">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-10">
                         <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-3">Beyond Cars</p>
@@ -462,7 +462,7 @@ export default function WelcomeClient({ cars }: WelcomeClientProps) {
                                     <p className="text-xs text-muted-foreground">Bikes, Scooters & EVs</p>
                                 </div>
                             </div>
-                            <Link href="/marketplace?category=two_three_wheeler">
+                            <Link href="/cars?category=two_three_wheeler">
                                 <Button variant="outline" size="sm" className="group text-xs h-8">
                                     Browse All <ArrowRight className="ml-1 w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
                                 </Button>
@@ -483,7 +483,7 @@ export default function WelcomeClient({ cars }: WelcomeClientProps) {
                             ].map((brand) => (
                                 <Link
                                     key={brand.name}
-                                    href={`/marketplace?category=two_three_wheeler&make=${encodeURIComponent(brand.name)}`}
+                                    href={`/cars?category=two_three_wheeler&make=${encodeURIComponent(brand.name)}`}
                                     className="flex flex-col items-center gap-1.5 p-2.5 rounded-xl hover:bg-card hover:shadow-md transition-all group"
                                 >
                                     <div className="w-12 h-12 bg-card border border-border rounded-xl flex items-center justify-center group-hover:border-orange-200 transition-colors">
@@ -503,7 +503,7 @@ export default function WelcomeClient({ cars }: WelcomeClientProps) {
                     </div>
 
                     {/* Three-Wheelers */}
-                    <div className="bg-card rounded-2xl border border-border p-6">
+                    <div id="three-wheelers" className="bg-card rounded-2xl border border-border p-6 scroll-mt-16">
                         <div className="flex items-center justify-between mb-5">
                             <div className="flex items-center gap-2.5">
                                 <div className="w-9 h-9 rounded-xl bg-green-500/10 flex items-center justify-center">
@@ -514,7 +514,7 @@ export default function WelcomeClient({ cars }: WelcomeClientProps) {
                                     <p className="text-xs text-muted-foreground">Auto-Rickshaws, E-Autos & Cargo</p>
                                 </div>
                             </div>
-                            <Link href="/marketplace?category=two_three_wheeler">
+                            <Link href="/cars?category=two_three_wheeler">
                                 <Button variant="outline" size="sm" className="group text-xs h-8">
                                     Browse All <ArrowRight className="ml-1 w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
                                 </Button>
@@ -530,7 +530,7 @@ export default function WelcomeClient({ cars }: WelcomeClientProps) {
                             ].map((v) => (
                                 <Link
                                     key={v.name}
-                                    href={`/marketplace?category=two_three_wheeler`}
+                                    href={`/cars?category=two_three_wheeler`}
                                     className={`flex flex-col items-center gap-2 p-4 ${v.color} rounded-xl border border-border hover:shadow-md hover:-translate-y-0.5 transition-all text-center group`}
                                 >
                                     <span className="text-3xl">{v.emoji}</span>
@@ -578,50 +578,6 @@ export default function WelcomeClient({ cars }: WelcomeClientProps) {
                                 </div>
                             </Card>
                         ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* ── Popular Comparisons ── */}
-            <section className="py-16 bg-muted/20 border-y border-border">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-10">
-                        <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-3">Head to Head</p>
-                        <h2 className="text-3xl font-bold text-foreground">Popular Comparisons</h2>
-                    </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                        {[
-                            { a: 'Hyundai Creta', b: 'Kia Seltos' },
-                            { a: 'Tata Nexon', b: 'Maruti Brezza' },
-                            { a: 'Mahindra XUV700', b: 'Tata Safari' },
-                            { a: 'Maruti Swift', b: 'Hyundai i20' },
-                            { a: 'Toyota Fortuner', b: 'MG Gloster' },
-                            { a: 'Honda City', b: 'Hyundai Verna' },
-                        ].map((pair, i) => (
-                            <Link key={i} href="/compare">
-                                <Card className="p-4 hover:shadow-lg hover:-translate-y-0.5 transition-all cursor-pointer border-border">
-                                    <div className="flex items-center justify-between">
-                                        <div className="text-center flex-1">
-                                            <p className="text-sm font-semibold text-foreground">{pair.a}</p>
-                                        </div>
-                                        <div className="mx-3 px-2.5 py-1 bg-primary/10 text-primary text-xs font-bold rounded-full shrink-0">
-                                            VS
-                                        </div>
-                                        <div className="text-center flex-1">
-                                            <p className="text-sm font-semibold text-foreground">{pair.b}</p>
-                                        </div>
-                                    </div>
-                                </Card>
-                            </Link>
-                        ))}
-                    </div>
-                    <div className="text-center mt-8">
-                        <Link href="/compare">
-                            <Button variant="outline" size="sm" className="group">
-                                Compare Any Cars
-                                <ArrowRight className="ml-1.5 w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
-                            </Button>
-                        </Link>
                     </div>
                 </div>
             </section>
