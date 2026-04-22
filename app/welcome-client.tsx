@@ -507,7 +507,7 @@ export default function WelcomeClient({ cars }: WelcomeClientProps) {
                                     <p className="text-xs text-muted-foreground">Bikes, Scooters & EVs</p>
                                 </div>
                             </div>
-                            <Link href="/cars?category=two_three_wheeler">
+                            <Link href="/bikes">
                                 <Button variant="outline" size="sm" className="group text-xs h-8">
                                     Browse All <ArrowRight className="ml-1 w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
                                 </Button>
@@ -528,7 +528,7 @@ export default function WelcomeClient({ cars }: WelcomeClientProps) {
                             ].map((brand) => (
                                 <Link
                                     key={brand.name}
-                                    href={`/cars?category=two_three_wheeler&make=${encodeURIComponent(brand.name)}`}
+                                    href={`/bikes?make=${encodeURIComponent(brand.name)}`}
                                     className="flex flex-col items-center gap-1.5 p-2.5 rounded-xl hover:bg-card hover:shadow-md transition-all group"
                                 >
                                     <div className="w-12 h-12 bg-card border border-border rounded-xl flex items-center justify-center group-hover:border-orange-200 transition-colors">
@@ -559,7 +559,7 @@ export default function WelcomeClient({ cars }: WelcomeClientProps) {
                                     <p className="text-xs text-muted-foreground">Auto-Rickshaws, E-Autos & Cargo</p>
                                 </div>
                             </div>
-                            <Link href="/cars?category=two_three_wheeler">
+                            <Link href="/autos">
                                 <Button variant="outline" size="sm" className="group text-xs h-8">
                                     Browse All <ArrowRight className="ml-1 w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
                                 </Button>
@@ -567,15 +567,15 @@ export default function WelcomeClient({ cars }: WelcomeClientProps) {
                         </div>
                         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
                             {[
-                                { name: 'Bajaj Qute',     desc: 'Passenger Auto',  emoji: '🛺', color: 'bg-blue-500/8' },
-                                { name: 'TVS King',       desc: 'Cargo & Passenger', emoji: '🛺', color: 'bg-red-500/8' },
-                                { name: 'Mahindra Treo',  desc: 'Electric Auto',   emoji: '⚡', color: 'bg-green-500/8' },
-                                { name: 'Piaggio Ape',    desc: 'Cargo Vehicle',   emoji: '🚛', color: 'bg-amber-500/8' },
-                                { name: 'Atul Gemini',    desc: 'E-Rickshaw',      emoji: '🔋', color: 'bg-purple-500/8' },
+                                { name: 'Bajaj Qute',     make: 'Bajaj Auto (3W)', desc: 'Passenger Auto',  emoji: '🛺', color: 'bg-blue-500/8' },
+                                { name: 'TVS King',       make: 'TVS King',        desc: 'Cargo & Passenger', emoji: '🛺', color: 'bg-red-500/8' },
+                                { name: 'Mahindra Treo',  make: 'Mahindra (3W)',   desc: 'Electric Auto',   emoji: '⚡', color: 'bg-green-500/8' },
+                                { name: 'Piaggio Ape',    make: 'Piaggio Ape',     desc: 'Cargo Vehicle',   emoji: '🚛', color: 'bg-amber-500/8' },
+                                { name: 'Atul Gemini',    make: 'Atul Auto',       desc: 'E-Rickshaw',      emoji: '🔋', color: 'bg-purple-500/8' },
                             ].map((v) => (
                                 <Link
                                     key={v.name}
-                                    href={`/cars?category=two_three_wheeler`}
+                                    href={`/autos?make=${encodeURIComponent(v.make)}`}
                                     className={`flex flex-col items-center gap-2 p-4 ${v.color} rounded-xl border border-border hover:shadow-md hover:-translate-y-0.5 transition-all text-center group`}
                                 >
                                     <span className="text-3xl">{v.emoji}</span>
