@@ -204,12 +204,16 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
     const hasPriceRange = exShowroom.min !== exShowroom.max && exShowroom.max;
 
     // Key specs
+    const isElectric = /electric/i.test(car.engine?.type ?? '');
+    const mileageOrRange = isElectric
+        ? (car.performance?.range ?? car.engine?.range ? `${car.performance?.range ?? car.engine?.range} km Range` : '')
+        : (car.performance?.fuelEfficiency ? `${car.performance.fuelEfficiency} kmpl` : '');
     const keySpecs = [
         { icon: <Fuel className="w-5 h-5 text-emerald-600" />, label: 'Fuel Type', value: car.engine?.type || '' },
         { icon: <Gauge className="w-5 h-5 text-blue-600" />, label: 'Transmission', value: car.transmission?.type || '' },
-        { icon: <Zap className="w-5 h-5 text-amber-600" />, label: 'Mileage', value: car.performance?.fuelEfficiency ? `${car.performance.fuelEfficiency} km/l` : '' },
+        { icon: <Zap className="w-5 h-5 text-amber-600" />, label: isElectric ? 'Range' : 'Mileage', value: mileageOrRange },
         { icon: <Users className="w-5 h-5 text-purple-600" />, label: 'Seating', value: car.dimensions?.seatingCapacity ? `${car.dimensions.seatingCapacity} Seater` : '' },
-        { icon: <Settings className="w-5 h-5 text-gray-600" />, label: 'Engine', value: car.engine?.displacement ? `${car.engine.displacement} cc` : '' },
+        { icon: <Settings className="w-5 h-5 text-gray-600" />, label: isElectric ? 'Battery' : 'Engine', value: isElectric ? (car.engine?.batteryCapacity ? `${car.engine.batteryCapacity} kWh` : '') : (car.engine?.displacement ? `${car.engine.displacement} cc` : '') },
         { icon: <Shield className="w-5 h-5 text-red-600" />, label: 'Safety', value: car.safety?.ncapRating?.stars ? `${car.safety.ncapRating.stars} Star` : `${car.safety?.airbags || 0} Airbags` },
     ].filter(s => s.value);
 
@@ -520,61 +524,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                         ))}
                     </div>
 
-                    {/* Pros & Cons */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <Card className="border-emerald-500/20 bg-emerald-500/5">
-                            <CardContent className="p-5">
-                                <h3 className="text-base font-semibold text-emerald-600 mb-3 flex items-center gap-2">
-                                    <Check className="w-4 h-4" /> Things We Like
-                                </h3>
-                                <ul className="space-y-2">
-                                    {(car.features?.keyFeatures || []).slice(0, 5).map((feat, i) => (
-                                        <li key={i} className="flex items-start gap-2 text-sm text-emerald-700">
-                                            <Check className="w-3.5 h-3.5 mt-0.5 text-emerald-500 shrink-0" />
-                                            {feat}
-                                        </li>
-                                    ))}
-                                    {(!car.features?.keyFeatures || car.features.keyFeatures.length === 0) && (
-                                        <li className="text-sm text-gray-600">Information not available</li>
-                                    )}
-                                </ul>
-                            </CardContent>
-                        </Card>
-                        <Card className="border-red-500/20 bg-red-500/5">
-                            <CardContent className="p-5">
-                                <h3 className="text-base font-semibold text-red-600 mb-3 flex items-center gap-2">
-                                    <X className="w-4 h-4" /> Things to Consider
-                                </h3>
-                                <ul className="space-y-2">
-                                    {/* Auto-generate considerations from data */}
-                                    {!car.safety?.esp && (
-                                        <li className="flex items-start gap-2 text-sm text-red-700">
-                                            <X className="w-3.5 h-3.5 mt-0.5 text-red-500 shrink-0" />
-                                            ESP not available in base variants
-                                        </li>
-                                    )}
-                                    {car.safety && car.safety.airbags < 6 && (
-                                        <li className="flex items-start gap-2 text-sm text-red-700">
-                                            <X className="w-3.5 h-3.5 mt-0.5 text-red-500 shrink-0" />
-                                            Only {car.safety.airbags} airbags (6 recommended)
-                                        </li>
-                                    )}
-                                    {!car.engine?.displacement && (
-                                        <li className="flex items-start gap-2 text-sm text-red-700">
-                                            <X className="w-3.5 h-3.5 mt-0.5 text-red-500 shrink-0" />
-                                            Engine details not fully available
-                                        </li>
-                                    )}
-                                    {car.performance?.fuelEfficiency && car.performance.fuelEfficiency < 15 && (
-                                        <li className="flex items-start gap-2 text-sm text-red-700">
-                                            <X className="w-3.5 h-3.5 mt-0.5 text-red-500 shrink-0" />
-                                            Below average fuel efficiency ({car.performance.fuelEfficiency} km/l)
-                                        </li>
-                                    )}
-                                </ul>
-                            </CardContent>
-                        </Card>
-                    </div>
+                    {/* Pros & Cons removed — auto-generated data was unreliable */}
                 </section>
 
                 {/* ──────── INSPECTION REPORT (Used Cars Only) ──────── */}
@@ -794,7 +744,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                                     Performance & Fuel
                                 </h3>
                                 <div className="space-y-0">
-                                    <SpecRow label="Mileage (ARAI)" value={car.performance?.fuelEfficiency ? `${car.performance.fuelEfficiency} km/l` : ''} />
+                                    <SpecRow label={isElectric ? "Range" : "Mileage (ARAI)"} value={isElectric ? (car.performance?.range ?? car.engine?.range ? `${car.performance?.range ?? car.engine?.range} km` : '') : (car.performance?.fuelEfficiency ? `${car.performance.fuelEfficiency} km/l` : '')} />
                                     <SpecRow label="Top Speed" value={car.performance?.topSpeed ? `${car.performance.topSpeed} km/h` : ''} />
                                     <SpecRow label="0-100 km/h" value={car.performance?.acceleration0to100 ? `${car.performance.acceleration0to100} sec` : ''} />
                                     <SpecRow label="Fuel Tank" value={car.dimensions?.fuelTankCapacity ? `${car.dimensions.fuelTankCapacity} L` : ''} />

@@ -157,11 +157,13 @@ export function CarCard({
     const seatingDisplay = aggregatedSpecs?.seatingDisplay ||
         (car.dimensions?.seatingCapacity ? `${car.dimensions.seatingCapacity}` : '');
     const mileageDisplay = aggregatedSpecs?.mileageDisplay ||
-        (car.performance?.fuelEfficiency && car.performance.fuelEfficiency > 0
-            ? `${car.performance.fuelEfficiency} km/l`
-            : car.performance?.topSpeed && (car.vehicleCategory === '2w' || car.vehicleCategory === '3w')
-            ? `${car.performance.topSpeed} km/h top`
-            : '');
+        (car.engine?.type && /electric/i.test(car.engine.type)
+            ? (car.performance?.range ?? car.engine?.range ? `${car.performance?.range ?? car.engine?.range} km` : '')
+            : car.performance?.fuelEfficiency && car.performance.fuelEfficiency > 0
+                ? `${car.performance.fuelEfficiency} kmpl`
+                : car.performance?.topSpeed && (car.vehicleCategory === '2w' || car.vehicleCategory === '3w')
+                    ? `${car.performance.topSpeed} km/h top`
+                    : '');
 
     // Category-specific specs
     const isEV = car.engine?.type === 'Electric';
