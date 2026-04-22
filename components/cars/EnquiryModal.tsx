@@ -7,6 +7,7 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import type { Car } from '@/lib/types/car';
 import { getDetailedCarInfo, parseKeyFeatures, type DetailedCarInfo } from '@/lib/utils/car-info-fetcher';
 import {
@@ -415,14 +416,14 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
                                     <p className="text-sm text-gray-600 mb-5">
                                         Visit a dealer&apos;s website to send an enquiry and get personalised pricing for your city.
                                     </p>
-                                    <a
+                                    <Link
                                         href="/marketplace"
                                         className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold text-white transition-colors"
                                         style={{ backgroundColor: brandColor, color: brandContrast }}
                                     >
                                         <MapPin className="w-4 h-4" />
                                         Find a Dealer
-                                    </a>
+                                    </Link>
                                 </div>
                             )}
 
