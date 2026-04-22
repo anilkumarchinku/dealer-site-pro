@@ -51,8 +51,30 @@ export function getScrapedImageUrls(
         }
         return urls;
     }
-    const base = `${SUPABASE_STORAGE_URL}/${vehicleCategory}/${brandId}/${slug}`;
-    return IMAGE_EXTENSIONS.map((ext) => `${base}.${ext}`);
+    // 2W and 3W: try local files first, then Supabase storage
+    const localBase = `/data/brand-model-images/${vehicleCategory}/${brandId}/${slug}`;
+    const urls = IMAGE_EXTENSIONS.map((ext) => `${localBase}.${ext}`);
+
+    // 3W models often have brand prefix in name (e.g. "Ape City Plus" → slug "ape-city-plus")
+    // but image files strip the prefix (e.g. "city-plus.jpg"). Try without common prefixes.
+    if (vehicleCategory === "3w") {
+        const prefixes = ["ape-", "re-", "king-", "alfa-", "maxima-", "treo-"];
+        for (const prefix of prefixes) {
+            if (slug.startsWith(prefix)) {
+                const stripped = slug.slice(prefix.length);
+                if (stripped) {
+                    IMAGE_EXTENSIONS.forEach((ext) => urls.push(`${`/data/brand-model-images/3w/${brandId}/${stripped}`}.${ext}`));
+                }
+                break;
+            }
+        }
+    }
+
+    // Supabase storage as final fallback
+    const supaBase = `${SUPABASE_STORAGE_URL}/${vehicleCategory}/${brandId}/${slug}`;
+    IMAGE_EXTENSIONS.forEach((ext) => urls.push(`${supaBase}.${ext}`));
+
+    return urls;
 }
 
 export function getAppAssetImageUrls(
