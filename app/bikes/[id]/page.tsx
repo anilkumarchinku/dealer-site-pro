@@ -189,20 +189,29 @@ export default function BikeDetailPage({ params }: Props) {
     }, [bike, id]);
 
     // ── Fetch color images from 2w-colors gallery ────────────────
+    // Fetch metadata.json directly from CDN (static file in public/)
+    // instead of going through the API, because outputFileTracingExcludes
+    // blocks fs access to brand-model-images/** in the serverless function.
     useEffect(() => {
         if (!bike) return;
         async function fetchColors() {
             try {
                 const brandId = brandNameToId(bike!.make, '2w');
                 const modelSlug = bike!.model.toLowerCase().replace(/\./g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-                const res = await fetch(`/api/bikes/colors?brand=${encodeURIComponent(brandId)}&model=${encodeURIComponent(modelSlug)}`);
-                const json = await res.json();
-                if (json.success && json.colors?.length > 0) {
-                    setColorImages(json.colors);
+                const metadataUrl = `/data/brand-model-images/2w-colors/${brandId}/${modelSlug}/metadata.json`;
+                const res = await fetch(metadataUrl);
+                if (!res.ok) return;
+                const meta = await res.json();
+                const colors = (meta.colors ?? []).map((c: { name: string; image: string }) => ({
+                    name: c.name,
+                    image: c.image,
+                }));
+                if (colors.length > 0) {
+                    setColorImages(colors);
                     setSelectedColorIdx(0);
                 }
             } catch {
-                // silently fail
+                // silently fail — no color gallery for this model
             }
         }
         fetchColors();
