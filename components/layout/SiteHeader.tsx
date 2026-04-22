@@ -182,7 +182,7 @@ export function SiteHeader() {
                                     >
                                         <div className="relative w-12 h-8 bg-muted rounded overflow-hidden shrink-0">
                                             {car.images.hero ? (
-                                                <Image src={car.images.hero} alt="" fill className="object-cover" />
+                                                <Image src={car.images.hero} alt="" fill unoptimized className="object-cover" />
                                             ) : (
                                                 <Car className="w-4 h-4 m-auto text-muted-foreground" />
                                             )}
@@ -190,7 +190,7 @@ export function SiteHeader() {
                                         <div className="flex-1 min-w-0">
                                             <p className="text-sm font-medium truncate flex items-center gap-1.5">
                                                 {getBrandLogo(car.make) && (
-                                                    <Image src={getBrandLogo(car.make)!} alt={car.make} width={16} height={16} className="object-contain shrink-0" />
+                                                    <Image src={getBrandLogo(car.make)!} alt={car.make} width={16} height={16} unoptimized className="object-contain shrink-0" />
                                                 )}
                                                 {car.make} {car.model}
                                             </p>
@@ -275,11 +275,11 @@ export function SiteHeader() {
                                         {POPULAR_BRANDS.slice(0, 8).map((brand) => (
                                             <Link
                                                 key={brand}
-                                                href={`/brands/${encodeURIComponent(brand)}`}
+                                                href={`/cars?make=${encodeURIComponent(brand)}`}
                                                 className="flex items-center gap-2 px-3 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted rounded-md transition-colors"
                                             >
                                                 {getBrandLogo(brand) ? (
-                                                    <Image src={getBrandLogo(brand)!} alt={brand} width={18} height={18} className="object-contain" />
+                                                    <Image src={getBrandLogo(brand)!} alt={brand} width={18} height={18} unoptimized className="object-contain" />
                                                 ) : (
                                                     <span className="w-[18px] h-[18px] rounded-full bg-muted text-[9px] font-bold flex items-center justify-center">{brand.charAt(0)}</span>
                                                 )}
@@ -322,12 +322,12 @@ export function SiteHeader() {
                                     {POPULAR_BRANDS.map((brand) => (
                                         <Link
                                             key={brand}
-                                            href={`/brands/${encodeURIComponent(brand)}`}
+                                            href={`/cars?make=${encodeURIComponent(brand)}`}
                                             className="flex items-center gap-2.5 py-1.5 text-sm hover:text-primary transition-colors"
                                             onClick={() => setActiveMegaMenu(null)}
                                         >
                                             {getBrandLogo(brand) ? (
-                                                <Image src={getBrandLogo(brand)!} alt={brand} width={20} height={20} className="object-contain" />
+                                                <Image src={getBrandLogo(brand)!} alt={brand} width={20} height={20} unoptimized className="object-contain" />
                                             ) : (
                                                 <span className="w-5 h-5 rounded-full bg-muted text-[10px] font-bold flex items-center justify-center">{brand.charAt(0)}</span>
                                             )}
@@ -434,7 +434,7 @@ export function SiteHeader() {
                                 >
                                     <span className="font-medium flex items-center gap-1.5">
                                         {getBrandLogo(car.make) && (
-                                            <Image src={getBrandLogo(car.make)!} alt={car.make} width={16} height={16} className="object-contain shrink-0" />
+                                            <Image src={getBrandLogo(car.make)!} alt={car.make} width={16} height={16} unoptimized className="object-contain shrink-0" />
                                         )}
                                         {car.make} {car.model}
                                     </span>

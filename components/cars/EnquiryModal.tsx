@@ -31,6 +31,7 @@ import {
     Settings,
     Send,
     CheckCircle,
+    MapPin,
 } from 'lucide-react';
 import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
 import { formatPriceInLakhs } from '@/lib/utils/car-utils';
@@ -404,6 +405,27 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
                         <div className="pt-6 border-t">
                             <h3 className="text-lg font-bold text-gray-900 mb-4">Send Enquiry</h3>
 
+                            {/* No dealer context — platform page */}
+                            {!dealerId && !dealerPhone && (
+                                <div className="text-center py-8">
+                                    <div className="w-16 h-16 rounded-full bg-blue-50 mx-auto mb-4 flex items-center justify-center">
+                                        <Send className="w-7 h-7 text-blue-500" />
+                                    </div>
+                                    <h4 className="text-lg font-bold text-gray-900 mb-2">Interested in the {car.make} {car.model}?</h4>
+                                    <p className="text-sm text-gray-600 mb-5">
+                                        Visit a dealer&apos;s website to send an enquiry and get personalised pricing for your city.
+                                    </p>
+                                    <a
+                                        href="/marketplace"
+                                        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold text-white transition-colors"
+                                        style={{ backgroundColor: brandColor, color: brandContrast }}
+                                    >
+                                        <MapPin className="w-4 h-4" />
+                                        Find a Dealer
+                                    </a>
+                                </div>
+                            )}
+
                             {/* WhatsApp quick-connect option */}
                             {dealerPhone && !isSubmitted && (
                                 <div className="flex items-center gap-3 mb-5 p-3 rounded-xl bg-green-50 border border-green-200">
@@ -425,7 +447,7 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
                                 </div>
                             )}
 
-                            {isSubmitted ? (
+                            {(dealerId || dealerPhone) && isSubmitted ? (
                                 <div className="text-center py-8">
                                     <div className="w-16 h-16 rounded-full bg-green-100 mx-auto mb-4 flex items-center justify-center">
                                         <CheckCircle className="w-8 h-8 text-green-600" />
@@ -447,7 +469,7 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
                                         </div>
                                     )}
                                 </div>
-                            ) : (
+                            ) : (dealerId || dealerPhone) ? (
                                 <form onSubmit={handleSubmit} className="space-y-4 text-gray-900">
                                     <div className="grid grid-cols-2 gap-4">
                                         <div>
@@ -520,7 +542,7 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
                                         )}
                                     </Button>
                                 </form>
-                            )}
+                            ) : null}
                         </div>
                     </div>
                 </div>

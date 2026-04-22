@@ -30,6 +30,7 @@ import {
     ArrowRight,
 } from 'lucide-react';
 import { getBrandLogo } from '@/lib/data/brand-logos';
+import { getVehicleImageUrls, brandNameToId } from '@/lib/utils/brand-model-images';
 
 const MAX_COMPARE = 4;
 
@@ -73,6 +74,90 @@ const COMPARE_SPECS: CompareSpec[] = [
     { label: 'ESP', category: 'Safety', getValue: (c) => c.safety?.esp ? 'Yes' : 'No' },
     { label: 'Rear Camera', category: 'Safety', getValue: (c) => c.safety?.rearCamera ? 'Yes' : 'No' },
 ];
+
+/**
+ * Resolves car image URLs with local fallback chain.
+ * CDN hero URLs are often blocked by hotlink protection, so we prefer
+ * local images from /data/brand-model-images/4w/ via getVehicleImageUrls.
+ */
+function useResolvedCarImage(car: Car) {
+    const category = (car.vehicleCategory ?? '4w') as '2w' | '3w' | '4w';
+    const urls = getVehicleImageUrls(
+        category,
+        brandNameToId(car.make, category),
+        car.model,
+        car.images.hero,
+    );
+    return urls;
+}
+
+/** Small image component with fallback cycling & unoptimized flag */
+function CarImage({ car, fill, className, sizes }: {
+    car: Car;
+    fill?: boolean;
+    className?: string;
+    sizes?: string;
+}) {
+    const urls = useResolvedCarImage(car);
+    const [idx, setIdx] = useState(0);
+
+    const src = urls[idx] ?? null;
+
+    if (!src) {
+        return (
+            <div className="flex items-center justify-center h-full">
+                <CarIcon className="w-8 h-8 text-muted-foreground" />
+            </div>
+        );
+    }
+
+    return (
+        <Image
+            src={src}
+            alt={`${car.make} ${car.model}`}
+            fill={fill}
+            unoptimized
+            sizes={sizes}
+            className={className}
+            onError={() => {
+                if (idx < urls.length - 1) {
+                    setIdx((prev) => prev + 1);
+                }
+            }}
+        />
+    );
+}
+
+/** Smaller thumbnail variant for search results */
+function CarThumbnail({ car }: { car: Car }) {
+    const urls = useResolvedCarImage(car);
+    const [idx, setIdx] = useState(0);
+
+    const src = urls[idx] ?? null;
+
+    if (!src) {
+        return (
+            <div className="flex items-center justify-center h-full">
+                <CarIcon className="w-4 h-4 text-muted-foreground" />
+            </div>
+        );
+    }
+
+    return (
+        <Image
+            src={src}
+            alt=""
+            fill
+            unoptimized
+            className="object-cover"
+            onError={() => {
+                if (idx < urls.length - 1) {
+                    setIdx((prev) => prev + 1);
+                }
+            }}
+        />
+    );
+}
 
 export function ComparePageContent() {
     const [selectedCars, setSelectedCars] = useState<Car[]>([]);
@@ -168,22 +253,16 @@ export function ComparePageContent() {
                                     </button>
                                     <CardContent className="p-3 text-center">
                                         <div className="relative aspect-[16/10] bg-muted rounded-lg overflow-hidden mb-2">
-                                            {car.images.hero ? (
-                                                <Image
-                                                    src={car.images.hero}
-                                                    alt={`${car.make} ${car.model}`}
-                                                    fill
-                                                    className="object-cover"
-                                                />
-                                            ) : (
-                                                <div className="flex items-center justify-center h-full">
-                                                    <CarIcon className="w-8 h-8 text-muted-foreground" />
-                                                </div>
-                                            )}
+                                            <CarImage
+                                                car={car}
+                                                fill
+                                                className="object-cover"
+                                                sizes="(max-width: 768px) 50vw, 25vw"
+                                            />
                                         </div>
                                         <div className="flex items-center justify-center gap-1">
                                             {getBrandLogo(car.make) && (
-                                                <Image src={getBrandLogo(car.make)!} alt={car.make} width={14} height={14} className="object-contain" />
+                                                <Image src={getBrandLogo(car.make)!} alt={car.make} width={14} height={14} unoptimized className="object-contain" />
                                             )}
                                             <p className="text-xs text-muted-foreground">{car.make}</p>
                                         </div>
@@ -240,18 +319,12 @@ export function ComparePageContent() {
                                             className="w-full flex items-center gap-3 p-2.5 rounded-lg hover:bg-muted/50 transition-colors text-left"
                                         >
                                             <div className="relative w-12 h-8 bg-muted rounded overflow-hidden shrink-0">
-                                                {car.images.hero ? (
-                                                    <Image src={car.images.hero} alt="" fill className="object-cover" />
-                                                ) : (
-                                                    <div className="flex items-center justify-center h-full">
-                                                        <CarIcon className="w-4 h-4 text-muted-foreground" />
-                                                    </div>
-                                                )}
+                                                <CarThumbnail car={car} />
                                             </div>
                                             <div className="flex-1 min-w-0">
                                                 <p className="text-sm font-medium flex items-center gap-1.5">
                                                     {getBrandLogo(car.make) && (
-                                                        <Image src={getBrandLogo(car.make)!} alt={car.make} width={16} height={16} className="object-contain shrink-0" />
+                                                        <Image src={getBrandLogo(car.make)!} alt={car.make} width={16} height={16} unoptimized className="object-contain shrink-0" />
                                                     )}
                                                     {car.make} {car.model}
                                                 </p>
