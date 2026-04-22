@@ -145,6 +145,16 @@ function flattenBrandVariants(raw: unknown): Record<string, unknown>[] {
                 seen.add(key)
                 variants.push(flat)
             }
+        } else if (!model && variant && hasUsefulDetail) {
+            // No model field (e.g. Isuzu, Force, Jaguar, MINI) — use variant_name as-is.
+            // The matching step will fuzzy-match against car.model later.
+            const variantStr = String(variant)
+            const key = `__nomodel__::${variantStr}`
+            if (!seen.has(key)) {
+                seen.add(key)
+                flat.variant_name = variantStr
+                variants.push(flat)
+            }
         }
 
         Object.values(record).forEach(walk)
@@ -183,9 +193,15 @@ async function getMatchingModelVariants(make: string, model: string): Promise<Re
 
     return variants.filter(entry => {
         const entryModel = normalizeText(String(entry.model ?? entry.model_name ?? ''))
-        return entryModel === normalizedModel ||
-            entryModel.includes(normalizedModel) ||
-            normalizedModel.includes(entryModel)
+        if (entryModel) {
+            return entryModel === normalizedModel ||
+                entryModel.includes(normalizedModel) ||
+                normalizedModel.includes(entryModel)
+        }
+        // No model field — match against variant_name (e.g. "V-Cross 4x2 Z AT" matches model "V Cross")
+        const entryVariant = normalizeText(String(entry.variant_name ?? ''))
+        return entryVariant.startsWith(normalizedModel) ||
+            entryVariant.includes(normalizedModel)
     })
 }
 
