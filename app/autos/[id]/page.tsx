@@ -361,21 +361,7 @@ export default function AutoDetailPage() {
                 <section className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
                     {/* Hero Image */}
                     <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden">
-                        {imageUrls.length > 0 ? (
-                            <div className="relative aspect-[16/10] bg-gray-50">
-                                <Image
-                                    src={imageUrls[0]}
-                                    alt={title}
-                                    fill
-                                    unoptimized
-                                    className="object-contain"
-                                />
-                            </div>
-                        ) : (
-                            <div className="aspect-[16/10] flex items-center justify-center bg-gray-50">
-                                <span className="text-7xl">🛺</span>
-                            </div>
-                        )}
+                        <HeroImage imageUrls={imageUrls} alt={title} />
                     </div>
 
                     {/* Price Card */}
@@ -980,5 +966,35 @@ function SimilarAutoCard({ auto }: { auto: VariantItem }) {
                 </div>
             </div>
         </Link>
+    );
+}
+
+/** Hero image with fallback cycling through all candidate URLs */
+function HeroImage({ imageUrls, alt }: { imageUrls: string[]; alt: string }) {
+    const [idx, setIdx] = useState(0);
+    const [failed, setFailed] = useState(false);
+
+    if (failed || imageUrls.length === 0) {
+        return (
+            <div className="aspect-[16/10] flex items-center justify-center bg-gray-50">
+                <span className="text-7xl">🛺</span>
+            </div>
+        );
+    }
+
+    return (
+        <div className="relative aspect-[16/10] bg-gray-50">
+            <Image
+                src={imageUrls[idx]}
+                alt={alt}
+                fill
+                unoptimized
+                className="object-contain"
+                onError={() => {
+                    if (idx < imageUrls.length - 1) setIdx(idx + 1);
+                    else setFailed(true);
+                }}
+            />
+        </div>
     );
 }
