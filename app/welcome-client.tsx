@@ -32,6 +32,8 @@ import {
     CircleDot,
     Mountain,
     Bike,
+    Menu,
+    X,
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
@@ -119,6 +121,7 @@ export default function WelcomeClient({ cars }: WelcomeClientProps) {
     const hasStarted = data.dealershipName;
     const [isVisible, setIsVisible] = useState(false);
     const [mounted, setMounted] = useState(false);
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     useEffect(() => { setIsVisible(true); setMounted(true); }, []);
 
@@ -135,20 +138,20 @@ export default function WelcomeClient({ cars }: WelcomeClientProps) {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between items-center h-16">
                         <BrandLogo />
-                        <div className="flex items-center gap-3">
-                            <Button variant="ghost" size="sm" onClick={() => router.push('/cars')} className="hidden sm:flex">
+
+                        {/* Desktop nav */}
+                        <div className="hidden md:flex items-center gap-3">
+                            <Button variant="ghost" size="sm" onClick={() => router.push('/cars')}>
                                 Browse Cars
                             </Button>
-                            <Button variant="ghost" size="sm" onClick={() => router.push('/cars?category=two_three_wheeler')} className="hidden md:flex items-center gap-1.5">
+                            <Button variant="ghost" size="sm" onClick={() => router.push('/#two-wheelers')} className="flex items-center gap-1.5">
                                 <Bike className="w-4 h-4" />
-                                2W / 3W
+                                Bikes
                             </Button>
+                            <Link href="/brands">
+                                <Button variant="ghost" size="sm">Brands</Button>
+                            </Link>
                             <ThemeToggle />
-                            {mounted && (hasStarted || isComplete()) && (
-                                <Button variant="outline" size="sm" onClick={handleReset} className="hidden sm:flex">
-                                    Reset
-                                </Button>
-                            )}
                             {mounted && isComplete() ? (
                                 <Button size="sm" onClick={handleDashboard} className="bg-foreground text-background hover:bg-foreground/90">
                                     Dashboard <ArrowRight className="ml-1 w-3.5 h-3.5" />
@@ -162,7 +165,49 @@ export default function WelcomeClient({ cars }: WelcomeClientProps) {
                                 </Link>
                             )}
                         </div>
+
+                        {/* Mobile nav */}
+                        <div className="flex md:hidden items-center gap-2">
+                            <ThemeToggle />
+                            {mounted && isComplete() ? (
+                                <Button size="sm" onClick={handleDashboard} className="bg-foreground text-background hover:bg-foreground/90">
+                                    Dashboard
+                                </Button>
+                            ) : (
+                                <Link href="/auth/login">
+                                    <Button size="sm" variant="outline">Sign In</Button>
+                                </Link>
+                            )}
+                            <button
+                                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                                className="p-2 rounded-md hover:bg-muted transition-colors"
+                                aria-label="Toggle menu"
+                            >
+                                {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+                            </button>
+                        </div>
                     </div>
+
+                    {/* Mobile dropdown menu */}
+                    {mobileMenuOpen && (
+                        <div className="md:hidden border-t border-border py-3 space-y-1">
+                            <Link href="/cars" className="block px-3 py-2.5 text-sm font-medium rounded-md hover:bg-muted transition-colors" onClick={() => setMobileMenuOpen(false)}>
+                                Browse Cars
+                            </Link>
+                            <Link href="/#two-wheelers" className="flex items-center gap-2 px-3 py-2.5 text-sm font-medium rounded-md hover:bg-muted transition-colors" onClick={() => setMobileMenuOpen(false)}>
+                                <Bike className="w-4 h-4" /> Bikes & Scooters
+                            </Link>
+                            <Link href="/#three-wheelers" className="flex items-center gap-2 px-3 py-2.5 text-sm font-medium rounded-md hover:bg-muted transition-colors" onClick={() => setMobileMenuOpen(false)}>
+                                <span>🛺</span> Autos & 3W
+                            </Link>
+                            <Link href="/brands" className="block px-3 py-2.5 text-sm font-medium rounded-md hover:bg-muted transition-colors" onClick={() => setMobileMenuOpen(false)}>
+                                All Brands
+                            </Link>
+                            <Link href="/onboarding" className="block px-3 py-2.5 text-sm font-medium text-primary rounded-md hover:bg-muted transition-colors" onClick={() => setMobileMenuOpen(false)}>
+                                Get Started FREE →
+                            </Link>
+                        </div>
+                    )}
                 </div>
             </nav>
 
