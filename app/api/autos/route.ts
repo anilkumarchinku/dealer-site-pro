@@ -116,15 +116,14 @@ export async function GET(request: NextRequest) {
         const vehicles = groupedData.map((row) => {
             const fuelRaw = (row.fuel_type ?? '').toLowerCase();
             const isElectric = fuelRaw === 'electric';
-            // Type detection: prioritize payload (cargo indicator) over passenger capacity
-            // Cargo vehicles also have 1-2 passengers (driver + helper)
+            // Use body_type from DB — it has correct values: "Passenger", "Cargo", "Electric Three Wheeler"
+            const bodyType = (row.body_type ?? '').toLowerCase();
             const vehicleType: string = isElectric
                 ? 'electric'
-                : (row.payload_kg ?? 0) > 0
-                  ? 'cargo'
-                  : (row.passenger_capacity ?? 0) > 2
-                    ? 'passenger'
-                    : 'cargo';
+                : bodyType.includes('passenger') ? 'passenger'
+                : bodyType.includes('cargo') || bodyType.includes('load') ? 'cargo'
+                : (row.passenger_capacity ?? 0) >= 3 ? 'passenger'
+                : 'cargo';
 
             return {
                 id: row.id,
