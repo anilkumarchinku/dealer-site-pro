@@ -202,7 +202,7 @@ function findVehicleById(id: string) {
 
             // Found — build full detail response
             // Handle BOTH flat fields (Piaggio) and nested fields (Mahindra)
-            const rec = v as Record<string, unknown>;
+            const rec = v as unknown as Record<string, unknown>;
             const fuelTypeRaw = (
                 rec.fuel_type as string ?? v.technical_specifications?.fuel_type ?? ''
             ).toString().toLowerCase();
