@@ -8,11 +8,37 @@ import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
 import { testDriveSchema, formatZodErrors } from '@/lib/validations/schemas';
 
+const UUID_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i
+
 function getSupabase() {
     return createClient(
         process.env.NEXT_PUBLIC_SUPABASE_URL!,
         process.env.SUPABASE_SERVICE_ROLE_KEY!
     );
+}
+
+async function resolveVehicleId(
+    supabase: ReturnType<typeof getSupabase>,
+    rawCarId?: string | null
+) {
+    const trimmedCarId = rawCarId?.trim();
+    if (!trimmedCarId || !UUID_PATTERN.test(trimmedCarId)) {
+        return null;
+    }
+
+    const { data, error } = await supabase
+        .from('vehicles')
+        .select('id')
+        .eq('id', trimmedCarId)
+        .maybeSingle();
+
+    if (error) {
+        console.error('[test-drive] vehicle lookup error:', error);
+        return null;
+    }
+
+    const vehicleRow = data as { id: string } | null;
+    return vehicleRow?.id ?? null;
 }
 
 export async function POST(req: NextRequest) {
@@ -36,43 +62,25 @@ export async function POST(req: NextRequest) {
         const message = `${vehicle_type === '2w' ? 'Test Ride' : vehicle_type === '3w' ? 'Trial Run' : 'Test Drive'} request for ${car_name ?? 'vehicle'}.\nPreferred: ${preferred_date} at ${preferred_time}.`;
 
         const supabase = getSupabase();
+        const vehicleId = await resolveVehicleId(supabase, car_id);
         const { error } = await supabase
             .from('leads')
             .insert({
                 dealer_id,
-                name: name.trim(),
-                phone: phone.trim(),
-                email: email?.trim() || null,
+                customer_name: name.trim(),
+                customer_phone: phone.trim(),
+                customer_email: email?.trim() || null,
                 message,
-                car_id: car_id ?? null,
-                car_name: car_name ?? null,
-                lead_source: 'test_drive',
-                preferred_date,
-                preferred_time,
+                vehicle_id: vehicleId,
+                vehicle_interest: car_name?.trim() || null,
+                lead_type: 'test_drive',
+                source: 'website',
+                utm_source: req.headers.get('referer') || 'Direct/Unknown',
                 status: 'new',
             });
 
         if (error) {
-            // If preferred_date / preferred_time columns don't exist yet, fallback gracefully
-            if (error.code === '42703') {
-                // Column doesn't exist — insert without those fields
-                const { error: fallbackError } = await supabase
-                    .from('leads')
-                    .insert({
-                        dealer_id,
-                        name: name.trim(),
-                        phone: phone.trim(),
-                        email: email?.trim() || null,
-                        message,
-                        car_id: car_id ?? null,
-                        car_name: car_name ?? null,
-                        lead_source: 'test_drive',
-                        status: 'new',
-                    });
-                if (fallbackError) throw fallbackError;
-            } else {
-                throw error;
-            }
+            throw error;
         }
 
         return NextResponse.json({ success: true }, { status: 201 });

@@ -22,12 +22,38 @@ import { forwardLeadToCyepro } from '@/lib/services/cyepro-service'
 import { logger } from '@/lib/utils/logger'
 import { leadSchema, formatZodErrors } from '@/lib/validations/schemas'
 
+const UUID_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i
+
 // ── Supabase client with SERVICE ROLE key (server-side only — bypasses RLS) ──
 function getSupabase() {
     return createClient(
         process.env.NEXT_PUBLIC_SUPABASE_URL!,
         process.env.SUPABASE_SERVICE_ROLE_KEY!
     )
+}
+
+async function resolveVehicleId(
+    supabase: ReturnType<typeof getSupabase>,
+    rawCarId?: string | null
+) {
+    const trimmedCarId = rawCarId?.trim()
+    if (!trimmedCarId || !UUID_PATTERN.test(trimmedCarId)) {
+        return null
+    }
+
+    const { data, error } = await supabase
+        .from('vehicles')
+        .select('id')
+        .eq('id', trimmedCarId)
+        .maybeSingle()
+
+    if (error) {
+        logger.warn('Lead vehicle lookup failed:', error.message)
+        return null
+    }
+
+    const vehicleRow = data as { id: string } | null
+    return vehicleRow?.id ?? null
 }
 
 
@@ -93,6 +119,8 @@ export async function POST(request: NextRequest) {
             'price_alert': 'inquiry',
         }
 
+        const vehicleId = await resolveVehicleId(supabase, car_id)
+
         // ── Insert lead ───────────────────────────────────────────────────────
         const { data, error } = await supabase
             .from('leads')
@@ -102,7 +130,7 @@ export async function POST(request: NextRequest) {
                 customer_phone: phone.trim(),
                 customer_email: email?.trim() ?? null,
                 message: message?.trim() ?? null,
-                vehicle_id: car_id ?? null,
+                vehicle_id: vehicleId,
                 vehicle_interest: car_name?.trim() ?? null,
                 lead_type: leadTypeMap[safeSource] ?? 'inquiry',
                 source: 'website',
