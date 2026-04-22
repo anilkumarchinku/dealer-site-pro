@@ -331,8 +331,16 @@ export default function BikeDetailPage({ params }: Props) {
     const features: string[] = bike.features ?? bike.key_features ?? [];
     const safetyFeatures: string[] = bike.safety_features ?? [];
 
-    // Colors from DB (text[] column added in migration)
-    const bikeColors: string[] = bike.colors ?? [];
+    // Colors — API may return string[] or {name, hex}[] depending on data source
+    const rawColors: Array<string | { name: string; hex?: string }> = bike.colors ?? [];
+    const bikeColors: string[] = rawColors.map(
+        (c) => typeof c === 'string' ? c : c.name
+    );
+    // Build hex lookup from API data (when {name, hex} objects are available)
+    const apiColorHexMap: Record<string, string> = {};
+    for (const c of rawColors) {
+        if (typeof c === 'object' && c.hex) apiColorHexMap[c.name] = c.hex;
+    }
 
     // Key specs for overview grid
     const keySpecs = [
@@ -791,7 +799,7 @@ export default function BikeDetailPage({ params }: Props) {
                                             >
                                                 <div
                                                     className="w-8 h-8 rounded-full border-2 border-gray-200 shadow-sm"
-                                                    style={{ backgroundColor: colorNameToHex(color) }}
+                                                    style={{ backgroundColor: apiColorHexMap[color] || colorNameToHex(color) }}
                                                 />
                                                 <span className="text-xs font-medium text-gray-900 max-w-[80px] text-center leading-tight">
                                                     {color}
