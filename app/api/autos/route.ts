@@ -29,7 +29,7 @@ export async function GET(request: NextRequest) {
         const make = searchParams.get('make');
         const type = searchParams.get('type'); // passenger, cargo, electric
         const page = Math.max(1, parseInt(searchParams.get('page') || '1'));
-        const pageSize = Math.min(60, Math.max(1, parseInt(searchParams.get('pageSize') || '12')));
+        const pageSize = Math.min(60, Math.max(1, parseInt(searchParams.get('pageSize') || '30')));
         const sortBy = searchParams.get('sortBy') || 'popular';
 
         // Build query

@@ -101,6 +101,7 @@ export default function BikeDetailPage({ params }: Props) {
     const [error, setError] = useState<string | null>(null);
     const [variants, setVariants] = useState<BikeListItem[]>([]);
     const [similarBikes, setSimilarBikes] = useState<BikeListItem[]>([]);
+    const [colorImages, setColorImages] = useState<{ name: string; image: string }[]>([]);
 
     // UI state
     const [activeTab, setActiveTab] = useState('overview');
@@ -186,6 +187,26 @@ export default function BikeDetailPage({ params }: Props) {
         }
         fetchSimilar();
     }, [bike, id]);
+
+    // ── Fetch color images from 2w-colors gallery ────────────────
+    useEffect(() => {
+        if (!bike) return;
+        async function fetchColors() {
+            try {
+                const brandId = brandNameToId(bike!.make, '2w');
+                const modelSlug = bike!.model.toLowerCase().replace(/\./g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+                const res = await fetch(`/api/bikes/colors?brand=${encodeURIComponent(brandId)}&model=${encodeURIComponent(modelSlug)}`);
+                const json = await res.json();
+                if (json.success && json.colors?.length > 0) {
+                    setColorImages(json.colors);
+                    setSelectedColorIdx(0);
+                }
+            } catch {
+                // silently fail
+            }
+        }
+        fetchColors();
+    }, [bike]);
 
     // ── Sticky tab bar detection ─────────────────────────────────
     useEffect(() => {
@@ -706,7 +727,55 @@ export default function BikeDetailPage({ params }: Props) {
                         <h2 className="text-2xl font-bold text-gray-900 mb-6">
                             {bike.make} {bike.model} Colours
                         </h2>
-                        {bikeColors.length > 0 ? (
+                        {colorImages.length > 0 ? (
+                            <Card className="bg-white border border-gray-200 shadow-sm">
+                                <CardContent className="p-6">
+                                    {/* Color image preview */}
+                                    {colorImages[selectedColorIdx]?.image && (
+                                        <div className="relative mb-6 aspect-[16/9] w-full overflow-hidden rounded-2xl border border-gray-200 bg-gray-50">
+                                            <Image
+                                                src={colorImages[selectedColorIdx].image}
+                                                alt={`${bike.make} ${bike.model} in ${colorImages[selectedColorIdx].name}`}
+                                                fill
+                                                unoptimized
+                                                className="object-contain"
+                                            />
+                                        </div>
+                                    )}
+                                    {/* Color swatches */}
+                                    <div className="flex flex-wrap gap-3 mb-4">
+                                        {colorImages.map((color, idx) => (
+                                            <button
+                                                key={idx}
+                                                onClick={() => setSelectedColorIdx(idx)}
+                                                className={`flex flex-col items-center gap-1.5 p-3 rounded-lg transition-all ${
+                                                    selectedColorIdx === idx
+                                                        ? 'bg-blue-50 ring-2 ring-blue-600'
+                                                        : 'bg-gray-50 hover:bg-gray-100'
+                                                }`}
+                                            >
+                                                {color.image ? (
+                                                    <div className="relative w-10 h-10 rounded-full overflow-hidden border-2 border-gray-200 shadow-sm">
+                                                        <Image src={color.image} alt={color.name} fill unoptimized className="object-cover" />
+                                                    </div>
+                                                ) : (
+                                                    <div
+                                                        className="w-10 h-10 rounded-full border-2 border-gray-200 shadow-sm"
+                                                        style={{ backgroundColor: colorNameToHex(color.name) }}
+                                                    />
+                                                )}
+                                                <span className="text-xs font-medium text-gray-900 max-w-[80px] text-center leading-tight">
+                                                    {color.name}
+                                                </span>
+                                            </button>
+                                        ))}
+                                    </div>
+                                    <p className="text-sm text-gray-700">
+                                        Selected: <span className="font-semibold text-gray-900">{colorImages[selectedColorIdx]?.name}</span>
+                                    </p>
+                                </CardContent>
+                            </Card>
+                        ) : bikeColors.length > 0 ? (
                             <Card className="bg-white border border-gray-200 shadow-sm">
                                 <CardContent className="p-6">
                                     <div className="flex flex-wrap gap-3 mb-4">
