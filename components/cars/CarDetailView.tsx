@@ -178,7 +178,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
         [car.images.hero, car.images.exterior, car.images.interior]
     );
 
-    const [activeImage, setActiveImage] = useState(allImages[0] ?? car.images.hero);
+    const [activeImage, setActiveImage] = useState<string | null>(allImages[0] ?? car.images.hero);
     const [activeTab, setActiveTab] = useState('overview');
     const [isTabBarSticky, setIsTabBarSticky] = useState(false);
     const [selectedColor, setSelectedColor] = useState(car.colors?.[0]?.name || '');
@@ -317,6 +317,15 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 60vw"
                                     className="object-cover"
                                     priority
+                                    onError={() => {
+                                        // Cycle to next image in allImages
+                                        const currentIdx = allImages.indexOf(activeImage);
+                                        if (currentIdx >= 0 && currentIdx < allImages.length - 1) {
+                                            setActiveImage(allImages[currentIdx + 1]);
+                                        } else {
+                                            setActiveImage(null);
+                                        }
+                                    }}
                                 />
                             ) : (
                                 <div className="flex items-center justify-center h-full text-gray-600">
@@ -327,7 +336,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                             {/* Image counter */}
                             <div className="absolute bottom-3 right-3 bg-black/60 text-white text-xs px-2.5 py-1 rounded-full backdrop-blur-sm">
                                 <Eye className="w-3 h-3 inline mr-1" />
-                                {allImages.indexOf(activeImage) + 1}/{allImages.length}
+                                {activeImage ? allImages.indexOf(activeImage) + 1 : 0}/{allImages.length}
                             </div>
 
                             {/* Favorite */}
@@ -1219,45 +1228,13 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                         </div>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                             {similarCars.slice(0, 4).map((simCar) => (
-                                <Link
+                                <SimilarCarCard
                                     key={simCar.id}
+                                    car={simCar}
                                     href={`${(detailBasePath ?? '/cars').replace(/\/$/, '')}/${simCar.id}`.replace(/^\/\//, '/')}
-                                    className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
-                                >
-                                    <div className="relative aspect-[16/10] bg-slate-50">
-                                        {simCar.images.hero ? (
-                                            <Image
-                                                src={simCar.images.hero}
-                                                alt={`${simCar.make} ${simCar.model}`}
-                                                fill
-                                                unoptimized
-                                                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                                                className="object-cover transition-transform duration-500 group-hover:scale-105"
-                                            />
-                                        ) : (
-                                            <div className="flex h-full items-center justify-center text-sm text-slate-500">
-                                                No Image
-                                            </div>
-                                        )}
-                                    </div>
-                                    <div className="p-4">
-                                        <p className="text-[11px] font-semibold uppercase tracking-[0.22em]" style={{ color: brandColor }}>
-                                            {simCar.make}
-                                        </p>
-                                        <h3 className="mt-1 line-clamp-2 text-lg font-bold text-slate-900">{simCar.model}</h3>
-                                        <p className="mt-2 text-base font-semibold text-slate-900">
-                                            {simCar.pricing?.exShowroom?.min != null
-                                                ? formatPriceInLakhs(simCar.pricing.exShowroom.min)
-                                                : (simCar.price || 'Price on request')}
-                                        </p>
-                                        <div
-                                            className="mt-4 inline-flex items-center rounded-xl px-4 py-2 text-sm font-semibold transition-opacity group-hover:opacity-90"
-                                            style={{ backgroundColor: brandColor, color: brandContrast }}
-                                        >
-                                            View Details
-                                        </div>
-                                    </div>
-                                </Link>
+                                    brandColor={brandColor}
+                                    brandContrast={brandContrast}
+                                />
                             ))}
                         </div>
                     </section>
@@ -1347,5 +1324,67 @@ function EmiSlider({
                 onValueChange={([v]) => onChange(v)}
             />
         </div>
+    );
+}
+
+/** Similar car card with onError image fallback cycling */
+function SimilarCarCard({
+    car,
+    href,
+    brandColor,
+    brandContrast,
+}: {
+    car: Car;
+    href: string;
+    brandColor: string;
+    brandContrast: string;
+}) {
+    const imageUrls = car.images.exterior?.length ? car.images.exterior : (car.images.hero ? [car.images.hero] : []);
+    const [imgIdx, setImgIdx] = useState(0);
+    const [imgFailed, setImgFailed] = useState(false);
+
+    return (
+        <Link
+            href={href}
+            className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+        >
+            <div className="relative aspect-[16/10] bg-slate-50">
+                {!imgFailed && imageUrls.length > 0 ? (
+                    <Image
+                        src={imageUrls[imgIdx]}
+                        alt={`${car.make} ${car.model}`}
+                        fill
+                        unoptimized
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        onError={() => {
+                            if (imgIdx < imageUrls.length - 1) setImgIdx(prev => prev + 1);
+                            else setImgFailed(true);
+                        }}
+                    />
+                ) : (
+                    <div className="flex h-full items-center justify-center text-sm text-slate-500">
+                        No Image
+                    </div>
+                )}
+            </div>
+            <div className="p-4">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.22em]" style={{ color: brandColor }}>
+                    {car.make}
+                </p>
+                <h3 className="mt-1 line-clamp-2 text-lg font-bold text-slate-900">{car.model}</h3>
+                <p className="mt-2 text-base font-semibold text-slate-900">
+                    {car.pricing?.exShowroom?.min != null
+                        ? formatPriceInLakhs(car.pricing.exShowroom.min)
+                        : (car.price || 'Price on request')}
+                </p>
+                <div
+                    className="mt-4 inline-flex items-center rounded-xl px-4 py-2 text-sm font-semibold transition-opacity group-hover:opacity-90"
+                    style={{ backgroundColor: brandColor, color: brandContrast }}
+                >
+                    View Details
+                </div>
+            </div>
+        </Link>
     );
 }

@@ -8,7 +8,7 @@ import type { Car, CarFilters, CarSearchResult } from '@/lib/types/car';
 import { searchCars, sortCars, calculateEMI } from '@/lib/utils/car-utils';
 import { CAR_MODEL_COLORS } from '@/lib/data/car-colors';
 import { get4WCardekhoModelMeta } from '@/lib/data/4w-cardekho-meta';
-import { brandNameToId, getScrapedImageFallback } from '@/lib/utils/brand-model-images';
+import { brandNameToId, getVehicleImageUrls } from '@/lib/utils/brand-model-images';
 
 // Table name in Supabase
 const CAR_TABLE = 'car_catalog';
@@ -312,12 +312,12 @@ function mapDbCarToCar(dbCar: any): Car {
             safetyFeatures:  Array.isArray(dbCar.safety_features) ? dbCar.safety_features : [],
         },
         images:       dbCar.images ?? (() => {
-            // Prefer local image (reliable, no CDN hotlink issues) over DB image_url
-            const localHero = getScrapedImageFallback('4w', brandNameToId(dbCar.make, '4w'), dbCar.model);
-            const hero = localHero ?? dbCar.image_url ?? null;
+            // Build full candidate list: curated assets → DB URL → scraped images
+            const allUrls = getVehicleImageUrls('4w', brandNameToId(dbCar.make, '4w'), dbCar.model, dbCar.image_url);
+            const hero = allUrls[0] ?? null;
             return {
                 hero,
-                exterior: hero ? [hero] : [],
+                exterior: allUrls,
                 interior: [],
             };
         })(),
