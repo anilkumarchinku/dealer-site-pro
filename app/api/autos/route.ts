@@ -239,37 +239,54 @@ function loadAllVehicles(): ProcessedVehicle[] {
 
         for (let i = 0; i < raw.vehicles.length; i++) {
             const v = raw.vehicles[i];
-            // Model: use explicit model field, or extract from variant_name before "/"
-            const modelName =
-                v.model ?? v.variant_name.split('/')[0].trim();
+            // Cast to access flat fields that aren't in the RawVehicle interface
+            const flat = v as unknown as Record<string, unknown>;
+
+            // Model: flat field first, then extract from variant_name before "/"
+            const modelName = (flat.model as string) ?? v.variant_name?.split('/')[0].trim() ?? 'Unknown';
+
+            // Fuel type: flat field first, then nested
             const fuelTypeRaw = (
-                v.technical_specifications?.fuel_type ?? ''
+                (flat.fuel_type as string) ?? v.technical_specifications?.fuel_type ?? ''
             ).toLowerCase();
             const isElectric = fuelTypeRaw === 'electric';
             const modelSlug = modelToSlug(modelName);
 
+            // Price
             const priceStr = v.ex_showroom_price ?? v.price;
             const pricePaise = parsePriceToPaise(priceStr);
-            const ccVal = parseCC(v.engine_details?.displacement);
-            const { kmpl, rangeKm: mileageRange } = parseMileage(v.mileage);
-            const specRange = parseRange(v.technical_specifications?.range);
-            const rangeKm = mileageRange ?? specRange;
-            const payloadKg = parsePayloadKg(
-                v.payload_features?.payload_capacity
-            );
-            const passengerCapacity = parsePassengerCapacity(
-                v.technical_specifications?.seating_capacity
-            );
-            const topSpeed = parseTopSpeed(v.technical_specifications?.top_speed);
 
-            const vehicleType = classifyType(
-                brandId,
-                modelName,
-                fuelTypeRaw,
-                payloadKg,
-                passengerCapacity,
-                v.technical_specifications?.body_type
-            );
+            // Engine CC: flat number first, then parse from nested string
+            const ccVal = (typeof flat.engine_cc === 'number' ? flat.engine_cc : null)
+                ?? parseCC(v.engine_details?.displacement);
+
+            // Mileage / Range
+            const flatMileage = typeof flat.mileage_kmpl === 'number' ? flat.mileage_kmpl : null;
+            const { kmpl: parsedKmpl, rangeKm: mileageRange } = parseMileage(v.mileage);
+            const kmpl = flatMileage ?? parsedKmpl;
+            const specRange = parseRange(v.technical_specifications?.range);
+            const rangeKm = mileageRange ?? specRange ?? (flat.range_km as number | null) ?? null;
+
+            // Payload: flat number first, then parse from nested string
+            const payloadKg = (typeof flat.payload_kg === 'number' ? flat.payload_kg : null)
+                ?? parsePayloadKg(v.payload_features?.payload_capacity);
+
+            // Passenger capacity: flat number first, then parse from nested string
+            const passengerCapacity = (typeof flat.passenger_capacity === 'number' ? flat.passenger_capacity : null)
+                ?? parsePassengerCapacity(v.technical_specifications?.seating_capacity);
+
+            // Top speed
+            const topSpeed = (typeof flat.top_speed_kmph === 'number' ? flat.top_speed_kmph : null)
+                ?? parseTopSpeed(v.technical_specifications?.top_speed);
+
+            // Type: explicit vehicle_category first, then brand-models.json, then heuristics
+            const explicitCategory = flat.vehicle_category as string | undefined;
+            const vehicleType = explicitCategory && ['passenger', 'cargo', 'electric'].includes(explicitCategory)
+                ? explicitCategory
+                : classifyType(
+                    brandId, modelName, fuelTypeRaw, payloadKg, passengerCapacity,
+                    v.technical_specifications?.body_type
+                );
 
             const imageUrls = getVehicleImageUrls(
                 '3w',
@@ -283,7 +300,7 @@ function loadAllVehicles(): ProcessedVehicle[] {
                 id,
                 make: brandName,
                 model: modelName,
-                variant: v.variant_name,
+                variant: (flat.variant as string) ?? v.variant_name ?? '',
                 type: vehicleType,
                 fuel_type: isElectric ? 'electric' : (fuelTypeRaw || 'petrol'),
                 engine_cc: ccVal,
