@@ -277,7 +277,7 @@ export function CarCard({
                         <div className="mb-5">
                             <div className="flex items-center gap-1.5 min-w-0">
                                 {getBrandLogo(car.make) && (
-                                    <Image src={getBrandLogo(car.make)!} alt={car.make} width={16} height={16} className="object-contain shrink-0" />
+                                    <Image src={getBrandLogo(car.make)!} alt={car.make} width={16} height={16} unoptimized className="object-contain shrink-0" />
                                 )}
                                 <p className="truncate text-[11px] font-semibold uppercase tracking-[0.22em]" style={{ color: brandColor }}>
                                     {car.make}
@@ -409,7 +409,7 @@ export function CarCard({
                         <div className="flex items-center justify-between gap-1.5">
                             <div className="flex items-center gap-1.5 min-w-0">
                                 {getBrandLogo(car.make) && (
-                                    <Image src={getBrandLogo(car.make)!} alt={car.make} width={16} height={16} className="object-contain shrink-0" />
+                                    <Image src={getBrandLogo(car.make)!} alt={car.make} width={16} height={16} unoptimized className="object-contain shrink-0" />
                                 )}
                                 <p className="text-[11px] font-semibold uppercase tracking-[0.22em] truncate" style={{ color: brandColor }}>
                                     {car.make}
@@ -673,7 +673,7 @@ function VariantAccordionButton({
                             className="px-4 py-3 flex items-center justify-between shrink-0 bg-white border-b border-gray-200"
                         >
                             <div className="flex items-center gap-2">
-                                {logoSrc && <Image src={logoSrc} alt={make} width={20} height={20} className="object-contain" />}
+                                {logoSrc && <Image src={logoSrc} alt={make} width={20} height={20} unoptimized className="object-contain" />}
                                 <div>
                                     <p className="text-[10px] font-semibold uppercase tracking-widest" style={{ color: brandColor }}>{make}</p>
                                     <p className="text-sm font-bold text-gray-900 leading-tight">{model}</p>

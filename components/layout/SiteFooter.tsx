@@ -152,9 +152,9 @@ export function SiteFooter() {
                 <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
                     <p>&copy; {year} DealerSite Pro. All rights reserved.</p>
                     <div className="flex items-center gap-4">
-                        <Link href="#" className="hover:text-foreground transition-colors">Privacy Policy</Link>
-                        <Link href="#" className="hover:text-foreground transition-colors">Terms of Service</Link>
-                        <Link href="#" className="hover:text-foreground transition-colors">Contact</Link>
+                        <Link href="/privacy" className="hover:text-foreground transition-colors">Privacy Policy</Link>
+                        <Link href="/terms" className="hover:text-foreground transition-colors">Terms of Service</Link>
+                        <Link href="mailto:support@dealersitepro.com" className="hover:text-foreground transition-colors">Contact</Link>
                     </div>
                 </div>
             </div>

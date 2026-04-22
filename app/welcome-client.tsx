@@ -223,7 +223,7 @@ export default function WelcomeClient({ cars }: WelcomeClientProps) {
                                             Get Started FREE
                                             <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                                         </Button>
-                                        <Button size="lg" variant="outline" className="text-lg px-8 py-6 h-auto">
+                                        <Button size="lg" variant="outline" className="text-lg px-8 py-6 h-auto" onClick={() => router.push('/onboarding')}>
                                             <Play className="mr-2 w-5 h-5" />
                                             Watch Demo
                                         </Button>
@@ -279,7 +279,7 @@ export default function WelcomeClient({ cars }: WelcomeClientProps) {
                                                 <div key={i} className="bg-muted/50 rounded-lg p-2 border border-border">
                                                     <div className="aspect-video bg-muted rounded mb-2 overflow-hidden relative">
                                                         {car.images.hero && (
-                                                            <Image src={car.images.hero} alt={car.model} fill className="object-cover" />
+                                                            <Image src={car.images.hero} alt={car.model} fill unoptimized className="object-cover" />
                                                         )}
                                                     </div>
                                                     <p className="text-xs font-medium truncate text-foreground">{car.model}</p>
@@ -380,7 +380,7 @@ export default function WelcomeClient({ cars }: WelcomeClientProps) {
                                 className="flex flex-col items-center gap-2 p-3 rounded-xl hover:bg-card hover:shadow-md transition-all group">
                                 <div className="w-16 h-16 flex items-center justify-center">
                                     {getBrandLogo(brand) ? (
-                                        <Image src={getBrandLogo(brand)!} alt={brand} width={56} height={56} className="object-contain" />
+                                        <Image src={getBrandLogo(brand)!} alt={brand} width={56} height={56} unoptimized className="object-contain" />
                                     ) : (
                                         <div className="w-16 h-16 rounded-full bg-card border border-border flex items-center justify-center group-hover:border-primary transition-colors">
                                             <span className="text-xl font-bold text-primary">{brand.charAt(0)}</span>
@@ -492,6 +492,7 @@ export default function WelcomeClient({ cars }: WelcomeClientProps) {
                                             alt={brand.name}
                                             width={36}
                                             height={36}
+                                            unoptimized
                                             className="object-contain"
                                         />
                                     </div>
@@ -557,7 +558,7 @@ export default function WelcomeClient({ cars }: WelcomeClientProps) {
                                     <div>
                                         <div className="flex items-center gap-1.5 mb-1">
                                             {getBrandLogo(car.brand) && (
-                                                <Image src={getBrandLogo(car.brand)!} alt={car.brand} width={20} height={20} className="object-contain" />
+                                                <Image src={getBrandLogo(car.brand)!} alt={car.brand} width={20} height={20} unoptimized className="object-contain" />
                                             )}
                                             <p className="text-xs text-muted-foreground font-medium">{car.brand}</p>
                                         </div>
@@ -750,6 +751,7 @@ export default function WelcomeClient({ cars }: WelcomeClientProps) {
                             <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                         </Button>
                         <Button size="lg"
+                            onClick={() => window.open('mailto:sales@dealersitepro.com', '_blank')}
                             className="bg-transparent text-background border border-background/30 hover:bg-background/10 text-lg px-10 py-6 h-auto">
                             <MessageSquare className="mr-2 w-5 h-5" />
                             Talk to Sales
@@ -764,9 +766,9 @@ export default function WelcomeClient({ cars }: WelcomeClientProps) {
                     <div className="flex flex-col md:flex-row justify-between items-center gap-6">
                         <BrandLogo />
                         <div className="flex gap-8">
-                            <a href="#" className="text-muted-foreground hover:text-foreground transition-colors text-sm">Privacy Policy</a>
-                            <a href="#" className="text-muted-foreground hover:text-foreground transition-colors text-sm">Terms of Service</a>
-                            <a href="#" className="text-muted-foreground hover:text-foreground transition-colors text-sm">Contact</a>
+                            <Link href="/privacy" className="text-muted-foreground hover:text-foreground transition-colors text-sm">Privacy Policy</Link>
+                            <Link href="/terms" className="text-muted-foreground hover:text-foreground transition-colors text-sm">Terms of Service</Link>
+                            <Link href="mailto:support@dealersitepro.com" className="text-muted-foreground hover:text-foreground transition-colors text-sm">Contact</Link>
                         </div>
                         <p className="text-muted-foreground text-sm">
                             © {new Date().getFullYear()} DealerSite Pro. All rights reserved.
