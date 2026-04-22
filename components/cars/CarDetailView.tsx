@@ -940,7 +940,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                                             src={car.colors.find(c => c.name === selectedColor)?.image || ''}
                                             alt={`${car.make} ${car.model} in ${selectedColor}`}
                                             fill
-                                            unoptimized={(car.colors.find(c => c.name === selectedColor)?.image || '').startsWith('http')}
+                                            unoptimized
                                             className="object-contain"
                                         />
                                     </div>
