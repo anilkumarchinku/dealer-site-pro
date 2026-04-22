@@ -115,21 +115,35 @@ function flattenBrandVariants(raw: unknown): Record<string, unknown>[] {
         const record = node as Record<string, unknown>
         const model = record.model ?? record.model_name
         const variant = record.variant_name ?? record.variant
+
+        // Flatten nested spec objects (engine_specs, engine_performance, powertrain, dimensions)
+        // so hydration can read entry.power instead of entry.engine_specs.power
+        const nested = ['engine_specs', 'engine_performance', 'powertrain', 'powertrain_details'] as const
+        const flat: Record<string, unknown> = { ...record }
+        for (const key of nested) {
+            const sub = record[key]
+            if (sub && typeof sub === 'object' && !Array.isArray(sub)) {
+                for (const [sk, sv] of Object.entries(sub as Record<string, unknown>)) {
+                    if (flat[sk] === undefined || flat[sk] === null) flat[sk] = sv
+                }
+            }
+        }
+
         const hasUsefulDetail = Boolean(
-            get4WPriceMinInr(record) ||
-            get4WPriceMaxInr(record) ||
-            record.power ||
-            record.torque ||
-            record.key_features ||
-            record.safety_features ||
-            record.image_urls
+            get4WPriceMinInr(flat) ||
+            get4WPriceMaxInr(flat) ||
+            flat.power || flat.power_bhp ||
+            flat.torque || flat.torque_nm ||
+            flat.key_features ||
+            flat.safety_features ||
+            flat.image_urls
         )
 
         if (model && hasUsefulDetail) {
             const key = `${String(model)}::${String(variant ?? '')}`
             if (!seen.has(key)) {
                 seen.add(key)
-                variants.push(record)
+                variants.push(flat)
             }
         }
 
@@ -371,7 +385,7 @@ export async function hydrateCarWithJsonDetails(car: Car): Promise<Car> {
             return [min, max].filter((value): value is number => value != null)
         })
         .filter((value): value is number => value != null)
-    const fuelTypes = uniqueStrings(matchingVariants.map(entry => String(entry.fuel_type ?? '')).filter(Boolean))
+    const fuelTypes = uniqueStrings(matchingVariants.map(entry => String(entry.fuel_type ?? entry.fuel ?? '')).filter(Boolean))
     const transmissions = uniqueStrings(matchingVariants.map(entry => String(entry.transmission ?? '')).filter(Boolean))
     const keyFeatures = uniqueStrings(matchingVariants.flatMap(entry => extractFeatureValues(entry.key_features)))
     const safetyFeatures = uniqueStrings(matchingVariants.flatMap(entry => extractFeatureValues(entry.safety_features)))
@@ -392,7 +406,7 @@ export async function hydrateCarWithJsonDetails(car: Car): Promise<Car> {
     )
 
     const displacement = matchingVariants
-        .map(entry => parseNumber(entry.engine_displacement_cc ?? entry.engine_displacement))
+        .map(entry => parseNumber(entry.engine_displacement_cc ?? entry.engine_displacement ?? entry.displacement))
         .find(value => value != null) ?? car.engine.displacement ?? null
     const seatingCapacity = matchingVariants
         .map(entry => parseNumber(entry.seating_capacity))
@@ -412,10 +426,10 @@ export async function hydrateCarWithJsonDetails(car: Car): Promise<Car> {
     const height = matchingVariants
         .map(entry => parseNumber((entry.dimensions as Record<string, unknown> | undefined)?.height))
         .find(value => value != null) ?? car.dimensions.height ?? null
-    const powerValues = matchingVariants.map(entry => parseNumber(entry.power))
-    const torqueValues = matchingVariants.map(entry => parseNumber(entry.torque))
+    const powerValues = matchingVariants.map(entry => parseNumber(entry.power ?? entry.power_bhp))
+    const torqueValues = matchingVariants.map(entry => parseNumber(entry.torque ?? entry.torque_nm))
     const mileageText = matchingVariants
-        .map(entry => String(entry.mileage_range ?? entry.mileage_kmpl_or_ev_range ?? ''))
+        .map(entry => String(entry.mileage_range ?? entry.mileage_kmpl_or_ev_range ?? entry.mileage ?? entry.mileage_kmpl ?? ''))
         .find(Boolean)
     const mileageNumber = parseNumber(mileageText)
     const airbags = inferAirbags(safetyFeatures)
