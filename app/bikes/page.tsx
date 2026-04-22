@@ -150,8 +150,11 @@ function BikeCard({ bike }: { bike: BikeVehicle }) {
         : (bike.engine_cc ? `${bike.engine_cc} cc` : '--');
     const typeLabel = bike.type.charAt(0).toUpperCase() + bike.type.slice(1);
 
+    const slug = `${bike.make.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${bike.model.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
+    const detailHref = `/bikes/${bike.id ?? slug}`;
+
     return (
-        <div className="group relative flex flex-col bg-card border border-border rounded-xl overflow-hidden hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 h-full">
+        <Link href={detailHref} className="group relative flex flex-col bg-card border border-border rounded-xl overflow-hidden hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 h-full">
             {/* Image */}
             <div className="relative aspect-[16/10] bg-muted overflow-hidden">
                 {!imgFailed && imageUrls.length > 0 ? (
@@ -246,8 +249,15 @@ function BikeCard({ bike }: { bike: BikeVehicle }) {
                         </div>
                     </div>
                 </div>
+
+                {/* View Details button */}
+                <div className="mt-auto pt-3">
+                    <span className="w-full inline-flex items-center justify-center rounded-lg bg-primary text-primary-foreground text-sm font-semibold py-2.5 group-hover:opacity-90 transition-opacity">
+                        View Details <ChevronRight className="w-4 h-4 ml-1" />
+                    </span>
+                </div>
             </div>
-        </div>
+        </Link>
     );
 }
 

@@ -149,8 +149,11 @@ function AutoCard({ vehicle }: { vehicle: AutoVehicle }) {
         : vehicle.type === 'passenger' ? 'Passenger'
         : 'Cargo';
 
+    const slug = `${vehicle.make.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${vehicle.model.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
+    const detailHref = `/autos/${vehicle.id ?? slug}`;
+
     return (
-        <div className="group bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
+        <Link href={detailHref} className="group bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
             {/* Image */}
             <div className="relative aspect-[16/10] bg-gray-50 overflow-hidden">
                 {!imgFailed && imageUrls.length > 0 ? (
@@ -247,8 +250,15 @@ function AutoCard({ vehicle }: { vehicle: AutoVehicle }) {
                         </div>
                     ) : null}
                 </div>
+
+                {/* View Details */}
+                <div className="mt-3 pt-3 border-t border-gray-100">
+                    <span className="w-full inline-flex items-center justify-center rounded-lg bg-gray-900 text-white text-sm font-semibold py-2.5 group-hover:bg-gray-800 transition-colors">
+                        View Details <ChevronRight className="w-4 h-4 ml-1" />
+                    </span>
+                </div>
             </div>
-        </div>
+        </Link>
     );
 }
 
