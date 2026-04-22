@@ -201,30 +201,43 @@ function findVehicleById(id: string) {
             if (vehicleId !== id) continue;
 
             // Found — build full detail response
+            // Handle BOTH flat fields (Piaggio) and nested fields (Mahindra)
+            const rec = v as Record<string, unknown>;
             const fuelTypeRaw = (
-                v.technical_specifications?.fuel_type ?? ''
-            ).toLowerCase();
+                rec.fuel_type as string ?? v.technical_specifications?.fuel_type ?? ''
+            ).toString().toLowerCase();
             const isElectric = fuelTypeRaw === 'electric';
 
             const priceStr = v.ex_showroom_price ?? v.price;
             const pricePaise = parsePriceToPaise(priceStr);
-            const ccVal = parseCC(v.engine_details?.displacement);
-            const { kmpl, rangeKm: mileageRange } = parseMileage(v.mileage);
+            const ccVal = (rec.engine_cc as number) ?? parseCC(v.engine_details?.displacement) ?? null;
+            const { kmpl, rangeKm: mileageRange } = parseMileage(
+                (rec.mileage_kmpl as string) ?? v.mileage
+            );
             const specRange = parseRange(v.technical_specifications?.range);
-            const rangeKm = mileageRange ?? specRange;
-            const payloadKg = parsePayloadKg(v.payload_features?.payload_capacity);
-            const passengerCapacity = parsePassengerCapacity(
+            const rangeKm = mileageRange ?? specRange ?? (rec.range_km as number | null) ?? null;
+            const payloadKg = (rec.payload_kg as number | null) ?? parsePayloadKg(v.payload_features?.payload_capacity);
+            const passengerCapacity = (rec.passenger_capacity as number | null) ?? parsePassengerCapacity(
                 v.technical_specifications?.seating_capacity
             );
+            const maxPower = (rec.max_power as string | null) ?? v.engine_details?.max_power ?? null;
+            const torque = (rec.torque as string | null) ?? v.engine_details?.torque ?? null;
+            const gvw = (rec.gvw_kg as number | null) ?? null;
+            const transmission = (rec.transmission_type as string | null) ?? v.technical_specifications?.transmission_type ?? null;
+            const wheelbase = (rec.wheelbase_mm as number | null) ?? null;
+            const topSpeed = (rec.top_speed_kmph as number | null) ?? parseRange(v.technical_specifications?.top_speed) ?? null;
+            const vehicleCategory = (rec.vehicle_category as string | null) ?? null;
 
-            const vehicleType = classifyType(
-                brandId,
-                modelName,
-                fuelTypeRaw,
-                payloadKg,
-                passengerCapacity,
-                v.technical_specifications?.body_type
-            );
+            const vehicleType = vehicleCategory
+                ? (vehicleCategory as ThreeWheelerType)
+                : classifyType(
+                    brandId,
+                    modelName,
+                    fuelTypeRaw,
+                    payloadKg,
+                    passengerCapacity,
+                    v.technical_specifications?.body_type
+                );
 
             const imageUrls = getVehicleImageUrls(
                 '3w',
@@ -236,26 +249,32 @@ function findVehicleById(id: string) {
                 id: vehicleId,
                 make: brandName,
                 model: modelName,
-                variant: v.variant_name,
+                variant: (rec.variant as string) ?? v.variant_name ?? null,
                 type: vehicleType,
                 fuel_type: isElectric ? 'electric' : (fuelTypeRaw || 'petrol'),
                 engine_cc: ccVal,
-                mileage_kmpl: kmpl,
+                max_power: maxPower,
+                torque: torque,
+                transmission: transmission,
+                mileage_kmpl: kmpl ?? (rec.mileage_kmpl as number | null) ?? null,
                 range_km: rangeKm,
+                top_speed_kmph: topSpeed,
                 payload_kg: payloadKg,
                 passenger_capacity: passengerCapacity,
+                gvw_kg: gvw,
+                wheelbase_mm: wheelbase,
                 price_min_paise: pricePaise,
                 price_display: priceStr ?? null,
                 image_url: imageUrls[0] ?? null,
                 image_urls: imageUrls,
                 is_featured: false,
                 year: new Date().getFullYear(),
-                max_power: v.engine_details?.max_power ?? null,
-                torque: v.engine_details?.torque ?? null,
                 motor_type: v.engine_details?.motor_type ?? null,
-                gross_vehicle_weight: v.payload_features?.gross_vehicle_weight ?? null,
+                gross_vehicle_weight: v.payload_features?.gross_vehicle_weight ?? (gvw ? `${gvw} kg` : null),
                 technical_specifications: v.technical_specifications ?? {},
                 dimensions: v.dimensions ?? {},
+                features: (rec.features as string[] | null) ?? [],
+                description: (rec.description as string | null) ?? null,
             };
         }
     }

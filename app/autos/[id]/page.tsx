@@ -506,11 +506,7 @@ export default function AutoDetailPage() {
                                 icon={<Settings className="w-5 h-5 text-gray-600" />}
                             />
                         )}
-                        <OverviewCard
-                            label="Type"
-                            value={typeLabel}
-                            icon={<span className="text-lg">🛺</span>}
-                        />
+                        {/* Type card removed — not useful for users */}
                     </div>
 
                     {/* Description if available */}
