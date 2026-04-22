@@ -105,15 +105,15 @@ function flattenBrandVariants(raw: unknown): Record<string, unknown>[] {
     const variants: Record<string, unknown>[] = []
     const seen = new Set<string>()
 
-    function walk(node: unknown): void {
+    function walk(node: unknown, ctxModel?: string): void {
         if (!node || typeof node !== 'object') return
         if (Array.isArray(node)) {
-            node.forEach(walk)
+            node.forEach(item => walk(item, ctxModel))
             return
         }
 
         const record = node as Record<string, unknown>
-        const model = record.model ?? record.model_name
+        const model = record.model ?? record.model_name ?? ctxModel
         const variant = record.variant_name ?? record.variant
 
         // Flatten nested spec objects (engine_specs, engine_performance, powertrain, dimensions)
@@ -143,6 +143,8 @@ function flattenBrandVariants(raw: unknown): Record<string, unknown>[] {
             const key = `${String(model)}::${String(variant ?? '')}`
             if (!seen.has(key)) {
                 seen.add(key)
+                // Ensure model is on the flat record (may come from ctxModel, not the record itself)
+                if (!flat.model && !flat.model_name) flat.model = String(model)
                 variants.push(flat)
             }
         } else if (!model && variant && hasUsefulDetail) {
@@ -157,7 +159,12 @@ function flattenBrandVariants(raw: unknown): Record<string, unknown>[] {
             }
         }
 
-        Object.values(record).forEach(walk)
+        // Pass model context to children so nested variants inherit the parent model
+        const modelCtx = model ? String(model) : ctxModel
+        for (const [k, v] of Object.entries(record)) {
+            if (k === 'image_urls') continue
+            if (v && typeof v === 'object') walk(v, modelCtx)
+        }
     }
 
     walk(raw)
