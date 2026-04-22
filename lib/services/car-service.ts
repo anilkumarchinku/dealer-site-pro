@@ -332,6 +332,7 @@ function mapDbCarToCar(dbCar: any): Car {
             lastUpdated:    dbCar.scraped_at     ?? undefined,
             isAvailable:    dbCar.is_active      ?? true,
             popularityScore: dbCar.popularity_score ?? undefined,
+            sourceUrl:      dbCar.source_url     ?? undefined,
         },
         rating:      dbCar.rating      ?? undefined,
         variants:    dbCar.variants    ?? undefined,
