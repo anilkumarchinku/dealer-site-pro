@@ -1,0 +1,36 @@
+{
+  "make": "Mercedes-Benz",
+  "model": "AMG A 45 S",
+  "brandSlug": "mercedes-benz",
+  "modelSlug": "amg-a-45-s",
+  "sourceUrl": "https://www.cardekho.com/mercedes-benz/amg-a-45-s",
+  "scrapedAt": "2026-04-23T09:48:41.863Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 9,
+    "total": 9
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mercedes-benz/amg-a-45-s/colors/mountain-grey.avif",
+  "colorNames": [
+    "Mountain Grey",
+    "Iridium Silver",
+    "Night Black",
+    "Designo Patagonia Red Metallic",
+    "Sun Yellow",
+    "Polar White",
+    "Denim Blue",
+    "Cosmos Black",
+    "Designo Mountain Grey Magno"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-a-45-s/colors/mountain-grey.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-a-45-s/colors/iridium-silver.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-a-45-s/colors/night-black.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-a-45-s/colors/designo-patagonia-red-metallic.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-a-45-s/colors/sun-yellow.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-a-45-s/colors/polar-white.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-a-45-s/colors/denim-blue.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-a-45-s/colors/cosmos-black.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-a-45-s/colors/designo-mountain-grey-magno.avif"
+  ]
+}

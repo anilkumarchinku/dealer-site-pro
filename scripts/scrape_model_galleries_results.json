@@ -1,54 +1,18 @@
 {
-  "generatedAt": "2026-04-23T09:13:53.135Z",
+  "generatedAt": "2026-04-23T09:49:45.958Z",
   "options": {
     "category": "4w",
     "limit": null,
-    "brand": "porsche",
-    "model": ""
+    "brand": "ferrari",
+    "model": "purosangue"
   },
   "report": {
     "fourWheelers": [
       {
-        "ok": true,
-        "make": "Porsche",
-        "model": "911",
-        "colors": 12
-      },
-      {
-        "ok": true,
-        "make": "Porsche",
-        "model": "Cayenne",
-        "colors": 11
-      },
-      {
-        "ok": true,
-        "make": "Porsche",
-        "model": "Macan",
-        "colors": 12
-      },
-      {
-        "ok": true,
-        "make": "Porsche",
-        "model": "Panamera",
-        "colors": 13
-      },
-      {
-        "ok": true,
-        "make": "Porsche",
-        "model": "Taycan",
-        "colors": 13
-      },
-      {
-        "ok": true,
-        "make": "Porsche",
-        "model": "Macan EV",
-        "colors": 13
-      },
-      {
-        "ok": true,
-        "make": "Porsche",
-        "model": "Cayenne Coupe",
-        "colors": 11
+        "ok": false,
+        "make": "Ferrari",
+        "model": "Purosangue",
+        "error": "No color images downloaded for Ferrari Purosangue"
       }
     ],
     "twoWheelers": []

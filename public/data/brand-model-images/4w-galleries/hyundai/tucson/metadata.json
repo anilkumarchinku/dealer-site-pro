@@ -1,0 +1,32 @@
+{
+  "make": "Hyundai",
+  "model": "Tucson",
+  "brandSlug": "hyundai",
+  "modelSlug": "tucson",
+  "sourceUrl": "https://www.cardekho.com/hyundai/tucson",
+  "scrapedAt": "2026-04-23T09:48:42.517Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 7,
+    "total": 7
+  },
+  "hero": "/data/brand-model-images/4w-galleries/hyundai/tucson/colors/fiery-red-dual-tone.avif",
+  "colorNames": [
+    "Fiery Red Dual Tone",
+    "Fiery Red",
+    "Starry Night",
+    "Atlas White",
+    "Amazon Grey",
+    "Abyss Black Pearl",
+    "Atlas White Dual Tone"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/hyundai/tucson/colors/fiery-red-dual-tone.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/tucson/colors/fiery-red.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/tucson/colors/starry-night.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/tucson/colors/atlas-white.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/tucson/colors/amazon-grey.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/tucson/colors/abyss-black-pearl.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/tucson/colors/atlas-white-dual-tone.avif"
+  ]
+}
