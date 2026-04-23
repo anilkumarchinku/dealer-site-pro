@@ -4,11 +4,11 @@
   "brandSlug": "hyundai",
   "modelSlug": "exter",
   "sourceUrl": "https://www.cardekho.com/hyundai/exter",
-  "scrapedAt": "2026-04-21T06:19:15.547Z",
+  "scrapedAt": "2026-04-23T09:13:07.989Z",
   "mode": "colors-only",
   "counts": {
-    "colors": 8,
-    "total": 8
+    "colors": 9,
+    "total": 9
   },
   "hero": "/data/brand-model-images/4w-galleries/hyundai/exter/colors/titan-black-matte.avif",
   "colorNames": [
@@ -19,7 +19,8 @@
     "Titan Grey",
     "Ranger Khaki With Abyss Black Roof",
     "Golden Bronze",
-    "Titanium Black"
+    "Titanium Black",
+    "Ranger Khaki With Black Roof"
   ],
   "colorImages": [
     "/data/brand-model-images/4w-galleries/hyundai/exter/colors/titan-black-matte.avif",
@@ -29,6 +30,7 @@
     "/data/brand-model-images/4w-galleries/hyundai/exter/colors/titan-grey.avif",
     "/data/brand-model-images/4w-galleries/hyundai/exter/colors/ranger-khaki-with-abyss-black-roof.avif",
     "/data/brand-model-images/4w-galleries/hyundai/exter/colors/golden-bronze.avif",
-    "/data/brand-model-images/4w-galleries/hyundai/exter/colors/titanium-black.avif"
+    "/data/brand-model-images/4w-galleries/hyundai/exter/colors/titanium-black.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/exter/colors/ranger-khaki-with-black-roof.avif"
   ]
 }

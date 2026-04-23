@@ -1,10 +1,10 @@
 {
   "make": "Maruti Suzuki",
   "model": "Eeco",
-  "brandSlug": "maruti-suzuki",
+  "brandSlug": "maruti",
   "modelSlug": "eeco",
   "sourceUrl": "https://www.cardekho.com/maruti/eeco",
-  "scrapedAt": "2026-04-21T06:22:21.869Z",
+  "scrapedAt": "2026-04-23T09:13:49.337Z",
   "mode": "colors-only",
   "counts": {
     "colors": 5,

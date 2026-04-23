@@ -4,11 +4,11 @@
   "brandSlug": "hyundai",
   "modelSlug": "creta-electric",
   "sourceUrl": "https://www.cardekho.com/hyundai/creta-electric",
-  "scrapedAt": "2026-04-21T06:19:17.112Z",
+  "scrapedAt": "2026-04-23T09:13:08.763Z",
   "mode": "colors-only",
   "counts": {
-    "colors": 12,
-    "total": 12
+    "colors": 13,
+    "total": 13
   },
   "hero": "/data/brand-model-images/4w-galleries/hyundai/creta-electric/colors/fiery-red.avif",
   "colorNames": [
@@ -23,7 +23,8 @@
     "Titan Grey",
     "Ocean Blue Matte",
     "Abyss Black",
-    "Atlas White Dual Tone"
+    "Atlas White Dual Tone",
+    "Ocean Blue Dual Tone"
   ],
   "colorImages": [
     "/data/brand-model-images/4w-galleries/hyundai/creta-electric/colors/fiery-red.avif",
@@ -37,6 +38,7 @@
     "/data/brand-model-images/4w-galleries/hyundai/creta-electric/colors/titan-grey.avif",
     "/data/brand-model-images/4w-galleries/hyundai/creta-electric/colors/ocean-blue-matte.avif",
     "/data/brand-model-images/4w-galleries/hyundai/creta-electric/colors/abyss-black.avif",
-    "/data/brand-model-images/4w-galleries/hyundai/creta-electric/colors/atlas-white-dual-tone.avif"
+    "/data/brand-model-images/4w-galleries/hyundai/creta-electric/colors/atlas-white-dual-tone.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta-electric/colors/ocean-blue-dual-tone.avif"
   ]
 }

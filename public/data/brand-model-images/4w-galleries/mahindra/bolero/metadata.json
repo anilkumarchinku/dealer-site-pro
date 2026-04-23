@@ -4,23 +4,31 @@
   "brandSlug": "mahindra",
   "modelSlug": "bolero",
   "sourceUrl": "https://www.cardekho.com/mahindra/bolero",
-  "scrapedAt": "2026-04-21T06:19:24.468Z",
+  "scrapedAt": "2026-04-23T09:13:00.937Z",
   "mode": "colors-only",
   "counts": {
-    "colors": 4,
-    "total": 4
+    "colors": 8,
+    "total": 8
   },
   "hero": "/data/brand-model-images/4w-galleries/mahindra/bolero/colors/dimond-white.avif",
   "colorNames": [
     "Dimond White",
     "Rocky Beige",
     "D'sat Silver",
-    "Stealth Black"
+    "Stealth Black",
+    "DIAMOND WHITE",
+    "ROCKEY BEIGE",
+    "PEARL WHITE DT",
+    "CONCRETE GREY"
   ],
   "colorImages": [
     "/data/brand-model-images/4w-galleries/mahindra/bolero/colors/dimond-white.avif",
     "/data/brand-model-images/4w-galleries/mahindra/bolero/colors/rocky-beige.avif",
     "/data/brand-model-images/4w-galleries/mahindra/bolero/colors/d-sat-silver.avif",
-    "/data/brand-model-images/4w-galleries/mahindra/bolero/colors/stealth-black.avif"
+    "/data/brand-model-images/4w-galleries/mahindra/bolero/colors/stealth-black.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/bolero/colors/diamond-white.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/bolero/colors/rockey-beige.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/bolero/colors/pearl-white-dt.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/bolero/colors/concrete-grey.avif"
   ]
 }

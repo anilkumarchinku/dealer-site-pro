@@ -4,23 +4,25 @@
   "brandSlug": "audi",
   "modelSlug": "q5",
   "sourceUrl": "https://www.cardekho.com/audi/q5",
-  "scrapedAt": "2026-04-21T06:19:57.446Z",
+  "scrapedAt": "2026-04-23T09:13:29.252Z",
   "mode": "colors-only",
   "counts": {
-    "colors": 4,
-    "total": 4
+    "colors": 5,
+    "total": 5
   },
   "hero": "/data/brand-model-images/4w-galleries/audi/q5/colors/mythos-black-metallic.avif",
   "colorNames": [
     "Mythos Black Metallic",
     "Glacier White Metallic",
     "Navarra Blue Metallic",
-    "Manhattan Gray"
+    "Manhattan Gray",
+    "Navarra Blue"
   ],
   "colorImages": [
     "/data/brand-model-images/4w-galleries/audi/q5/colors/mythos-black-metallic.avif",
     "/data/brand-model-images/4w-galleries/audi/q5/colors/glacier-white-metallic.avif",
     "/data/brand-model-images/4w-galleries/audi/q5/colors/navarra-blue-metallic.avif",
-    "/data/brand-model-images/4w-galleries/audi/q5/colors/manhattan-gray.avif"
+    "/data/brand-model-images/4w-galleries/audi/q5/colors/manhattan-gray.avif",
+    "/data/brand-model-images/4w-galleries/audi/q5/colors/navarra-blue.avif"
   ]
 }

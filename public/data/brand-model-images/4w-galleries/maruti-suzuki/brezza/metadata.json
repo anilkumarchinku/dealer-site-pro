@@ -1,14 +1,14 @@
 {
   "make": "Maruti Suzuki",
   "model": "Brezza",
-  "brandSlug": "maruti-suzuki",
+  "brandSlug": "maruti",
   "modelSlug": "brezza",
   "sourceUrl": "https://www.cardekho.com/maruti/brezza",
-  "scrapedAt": "2026-04-21T06:19:10.537Z",
+  "scrapedAt": "2026-04-23T09:13:42.896Z",
   "mode": "colors-only",
   "counts": {
-    "colors": 10,
-    "total": 10
+    "colors": 12,
+    "total": 12
   },
   "hero": "/data/brand-model-images/4w-galleries/maruti-suzuki/brezza/colors/pearl-arctic-white.avif",
   "colorNames": [
@@ -21,7 +21,9 @@
     "Magma Grey",
     "Bluish Black",
     "Sizzling Red",
-    "Splendid Silver"
+    "Splendid Silver",
+    "Brave Khakhi",
+    "Brave Khaki With Pearl Arctic White Roof"
   ],
   "colorImages": [
     "/data/brand-model-images/4w-galleries/maruti-suzuki/brezza/colors/pearl-arctic-white.avif",
@@ -33,6 +35,8 @@
     "/data/brand-model-images/4w-galleries/maruti-suzuki/brezza/colors/magma-grey.avif",
     "/data/brand-model-images/4w-galleries/maruti-suzuki/brezza/colors/bluish-black.avif",
     "/data/brand-model-images/4w-galleries/maruti-suzuki/brezza/colors/sizzling-red.avif",
-    "/data/brand-model-images/4w-galleries/maruti-suzuki/brezza/colors/splendid-silver.avif"
+    "/data/brand-model-images/4w-galleries/maruti-suzuki/brezza/colors/splendid-silver.avif",
+    "/data/brand-model-images/4w-galleries/maruti-suzuki/brezza/colors/brave-khakhi.avif",
+    "/data/brand-model-images/4w-galleries/maruti-suzuki/brezza/colors/brave-khaki-with-pearl-arctic-white-roof.avif"
   ]
 }

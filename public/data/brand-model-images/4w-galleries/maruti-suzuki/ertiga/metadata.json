@@ -1,10 +1,10 @@
 {
   "make": "Maruti Suzuki",
   "model": "Ertiga",
-  "brandSlug": "maruti-suzuki",
+  "brandSlug": "maruti",
   "modelSlug": "ertiga",
   "sourceUrl": "https://www.cardekho.com/maruti/ertiga",
-  "scrapedAt": "2026-04-21T06:22:12.967Z",
+  "scrapedAt": "2026-04-23T09:13:41.097Z",
   "mode": "colors-only",
   "counts": {
     "colors": 7,

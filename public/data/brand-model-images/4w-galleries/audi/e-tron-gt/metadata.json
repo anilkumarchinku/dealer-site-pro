@@ -4,11 +4,11 @@
   "brandSlug": "audi",
   "modelSlug": "e-tron-gt",
   "sourceUrl": "https://www.cardekho.com/audi/e-tron-gt",
-  "scrapedAt": "2026-04-21T06:20:01.024Z",
+  "scrapedAt": "2026-04-23T09:13:32.581Z",
   "mode": "colors-only",
   "counts": {
-    "colors": 9,
-    "total": 9
+    "colors": 11,
+    "total": 11
   },
   "hero": "/data/brand-model-images/4w-galleries/audi/e-tron-gt/colors/suzuka-grey-metallic.avif",
   "colorNames": [
@@ -20,7 +20,9 @@
     "Floret Silver Metallic",
     "Ascari Blue Metallic",
     "Ibis White",
-    "Tactics Green Metallic"
+    "Tactics Green Metallic",
+    "Daytone Gray Pearl Effect",
+    "Tactical Green Metallic"
   ],
   "colorImages": [
     "/data/brand-model-images/4w-galleries/audi/e-tron-gt/colors/suzuka-grey-metallic.avif",
@@ -31,6 +33,8 @@
     "/data/brand-model-images/4w-galleries/audi/e-tron-gt/colors/floret-silver-metallic.avif",
     "/data/brand-model-images/4w-galleries/audi/e-tron-gt/colors/ascari-blue-metallic.avif",
     "/data/brand-model-images/4w-galleries/audi/e-tron-gt/colors/ibis-white.avif",
-    "/data/brand-model-images/4w-galleries/audi/e-tron-gt/colors/tactics-green-metallic.avif"
+    "/data/brand-model-images/4w-galleries/audi/e-tron-gt/colors/tactics-green-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/e-tron-gt/colors/daytone-gray-pearl-effect.avif",
+    "/data/brand-model-images/4w-galleries/audi/e-tron-gt/colors/tactical-green-metallic.avif"
   ]
 }

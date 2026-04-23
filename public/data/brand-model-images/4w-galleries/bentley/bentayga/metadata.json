@@ -4,11 +4,11 @@
   "brandSlug": "bentley",
   "modelSlug": "bentayga",
   "sourceUrl": "https://www.cardekho.com/bentley/bentayga",
-  "scrapedAt": "2026-04-21T06:21:25.157Z",
+  "scrapedAt": "2026-04-23T09:13:38.600Z",
   "mode": "colors-only",
   "counts": {
-    "colors": 16,
-    "total": 16
+    "colors": 18,
+    "total": 18
   },
   "hero": "/data/brand-model-images/4w-galleries/bentley/bentayga/colors/bronze.avif",
   "colorNames": [
@@ -27,7 +27,9 @@
     "Rose Gold Over Magnetic",
     "Blue Crystal",
     "Orange Flame",
-    "Silver Storm"
+    "Silver Storm",
+    "Ice",
+    "Golden"
   ],
   "colorImages": [
     "/data/brand-model-images/4w-galleries/bentley/bentayga/colors/bronze.avif",
@@ -45,6 +47,8 @@
     "/data/brand-model-images/4w-galleries/bentley/bentayga/colors/rose-gold-over-magnetic.avif",
     "/data/brand-model-images/4w-galleries/bentley/bentayga/colors/blue-crystal.avif",
     "/data/brand-model-images/4w-galleries/bentley/bentayga/colors/orange-flame.avif",
-    "/data/brand-model-images/4w-galleries/bentley/bentayga/colors/silver-storm.avif"
+    "/data/brand-model-images/4w-galleries/bentley/bentayga/colors/silver-storm.avif",
+    "/data/brand-model-images/4w-galleries/bentley/bentayga/colors/ice.avif",
+    "/data/brand-model-images/4w-galleries/bentley/bentayga/colors/golden.avif"
   ]
 }

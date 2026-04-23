@@ -4,11 +4,11 @@
   "brandSlug": "mahindra",
   "modelSlug": "xuv-3xo",
   "sourceUrl": "https://www.cardekho.com/mahindra/xuv-3xo",
-  "scrapedAt": "2026-04-21T06:19:25.252Z",
+  "scrapedAt": "2026-04-23T09:13:02.126Z",
   "mode": "colors-only",
   "counts": {
-    "colors": 16,
-    "total": 16
+    "colors": 18,
+    "total": 18
   },
   "hero": "/data/brand-model-images/4w-galleries/mahindra/xuv-3xo/colors/dune-beige.avif",
   "colorNames": [
@@ -27,7 +27,9 @@
     "Nebula Blue",
     "Deep Forest",
     "Tango Red",
-    "Citrine Yellow"
+    "Citrine Yellow",
+    "Nebula Blue + Galvano Grey",
+    "Mahindra XUV 3XO"
   ],
   "colorImages": [
     "/data/brand-model-images/4w-galleries/mahindra/xuv-3xo/colors/dune-beige.avif",
@@ -45,6 +47,8 @@
     "/data/brand-model-images/4w-galleries/mahindra/xuv-3xo/colors/nebula-blue.avif",
     "/data/brand-model-images/4w-galleries/mahindra/xuv-3xo/colors/deep-forest.avif",
     "/data/brand-model-images/4w-galleries/mahindra/xuv-3xo/colors/tango-red.avif",
-    "/data/brand-model-images/4w-galleries/mahindra/xuv-3xo/colors/citrine-yellow.avif"
+    "/data/brand-model-images/4w-galleries/mahindra/xuv-3xo/colors/citrine-yellow.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xuv-3xo/colors/nebula-blue-galvano-grey.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xuv-3xo/colors/mahindra-xuv-3xo.avif"
   ]
 }

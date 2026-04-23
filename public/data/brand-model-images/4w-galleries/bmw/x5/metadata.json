@@ -4,11 +4,11 @@
   "brandSlug": "bmw",
   "modelSlug": "x5",
   "sourceUrl": "https://www.cardekho.com/bmw/x5",
-  "scrapedAt": "2026-04-21T06:19:48.201Z",
+  "scrapedAt": "2026-04-23T09:12:13.543Z",
   "mode": "colors-only",
   "counts": {
-    "colors": 6,
-    "total": 6
+    "colors": 7,
+    "total": 7
   },
   "hero": "/data/brand-model-images/4w-galleries/bmw/x5/colors/skyscraper-grey-metallic.avif",
   "colorNames": [
@@ -17,7 +17,8 @@
     "Mineral White Metallic",
     "M Carbon Black Metallic",
     "M Brooklyn Grey Metallic",
-    "Black Sapphire Metallic"
+    "Black Sapphire Metallic",
+    "BMW Individual Tanzanite Blue Metallic"
   ],
   "colorImages": [
     "/data/brand-model-images/4w-galleries/bmw/x5/colors/skyscraper-grey-metallic.avif",
@@ -25,6 +26,7 @@
     "/data/brand-model-images/4w-galleries/bmw/x5/colors/mineral-white-metallic.avif",
     "/data/brand-model-images/4w-galleries/bmw/x5/colors/m-carbon-black-metallic.avif",
     "/data/brand-model-images/4w-galleries/bmw/x5/colors/m-brooklyn-grey-metallic.avif",
-    "/data/brand-model-images/4w-galleries/bmw/x5/colors/black-sapphire-metallic.avif"
+    "/data/brand-model-images/4w-galleries/bmw/x5/colors/black-sapphire-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x5/colors/bmw-individual-tanzanite-blue-metallic.avif"
   ]
 }

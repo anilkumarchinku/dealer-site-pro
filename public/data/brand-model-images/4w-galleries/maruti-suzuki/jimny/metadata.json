@@ -1,14 +1,14 @@
 {
   "make": "Maruti Suzuki",
   "model": "Jimny",
-  "brandSlug": "maruti-suzuki",
+  "brandSlug": "maruti",
   "modelSlug": "jimny",
   "sourceUrl": "https://www.cardekho.com/maruti/jimny",
-  "scrapedAt": "2026-04-21T06:19:11.791Z",
+  "scrapedAt": "2026-04-23T09:13:48.049Z",
   "mode": "colors-only",
   "counts": {
-    "colors": 7,
-    "total": 7
+    "colors": 8,
+    "total": 8
   },
   "hero": "/data/brand-model-images/4w-galleries/maruti-suzuki/jimny/colors/pearl-arctic-white.avif",
   "colorNames": [
@@ -18,7 +18,8 @@
     "Bluish Black",
     "Sizzling Red",
     "Nexa Blue",
-    "Kinetic Yellow/Bluish Black Roof"
+    "Kinetic Yellow/Bluish Black Roof",
+    "Pearl Artic White"
   ],
   "colorImages": [
     "/data/brand-model-images/4w-galleries/maruti-suzuki/jimny/colors/pearl-arctic-white.avif",
@@ -27,6 +28,7 @@
     "/data/brand-model-images/4w-galleries/maruti-suzuki/jimny/colors/bluish-black.avif",
     "/data/brand-model-images/4w-galleries/maruti-suzuki/jimny/colors/sizzling-red.avif",
     "/data/brand-model-images/4w-galleries/maruti-suzuki/jimny/colors/nexa-blue.avif",
-    "/data/brand-model-images/4w-galleries/maruti-suzuki/jimny/colors/kinetic-yellow-bluish-black-roof.avif"
+    "/data/brand-model-images/4w-galleries/maruti-suzuki/jimny/colors/kinetic-yellow-bluish-black-roof.avif",
+    "/data/brand-model-images/4w-galleries/maruti-suzuki/jimny/colors/pearl-artic-white.avif"
   ]
 }

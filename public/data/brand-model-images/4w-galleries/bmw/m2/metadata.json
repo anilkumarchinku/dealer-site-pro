@@ -4,11 +4,11 @@
   "brandSlug": "bmw",
   "modelSlug": "m2",
   "sourceUrl": "https://www.cardekho.com/bmw/m2",
-  "scrapedAt": "2026-04-21T06:19:49.445Z",
+  "scrapedAt": "2026-04-23T09:12:15.357Z",
   "mode": "colors-only",
   "counts": {
-    "colors": 5,
-    "total": 5
+    "colors": 7,
+    "total": 7
   },
   "hero": "/data/brand-model-images/4w-galleries/bmw/m2/colors/brooklyn-grey-metallic.avif",
   "colorNames": [
@@ -16,13 +16,17 @@
     "Skyscraper Grey Metallic",
     "DRAGON-FIRE-RED-METALLIC",
     "Portimao Blue Metallic",
-    "Black Sapphire"
+    "Black Sapphire",
+    "DRAGON FIRE RED METALLIC",
+    "Gray"
   ],
   "colorImages": [
     "/data/brand-model-images/4w-galleries/bmw/m2/colors/brooklyn-grey-metallic.avif",
     "/data/brand-model-images/4w-galleries/bmw/m2/colors/skyscraper-grey-metallic.avif",
     "/data/brand-model-images/4w-galleries/bmw/m2/colors/dragon-fire-red-metallic.avif",
     "/data/brand-model-images/4w-galleries/bmw/m2/colors/portimao-blue-metallic.avif",
-    "/data/brand-model-images/4w-galleries/bmw/m2/colors/black-sapphire.avif"
+    "/data/brand-model-images/4w-galleries/bmw/m2/colors/black-sapphire.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m2/colors/dragon-fire-red-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m2/colors/gray.avif"
   ]
 }

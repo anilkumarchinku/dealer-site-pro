@@ -4,24 +4,22 @@
   "brandSlug": "mahindra",
   "modelSlug": "scorpio",
   "sourceUrl": "https://www.cardekho.com/mahindra/scorpio",
-  "scrapedAt": "2026-04-21T06:19:24.123Z",
+  "scrapedAt": "2026-04-23T09:12:59.867Z",
   "mode": "colors-only",
   "counts": {
-    "colors": 5,
-    "total": 5
+    "colors": 4,
+    "total": 4
   },
   "hero": "/data/brand-model-images/4w-galleries/mahindra/scorpio/colors/everest-white.avif",
   "colorNames": [
     "Everest White",
     "Galaxy Grey",
-    "Molten Red Rage",
     "Diamond White",
     "Stealth Black"
   ],
   "colorImages": [
     "/data/brand-model-images/4w-galleries/mahindra/scorpio/colors/everest-white.avif",
     "/data/brand-model-images/4w-galleries/mahindra/scorpio/colors/galaxy-grey.avif",
-    "/data/brand-model-images/4w-galleries/mahindra/scorpio/colors/molten-red-rage.avif",
     "/data/brand-model-images/4w-galleries/mahindra/scorpio/colors/diamond-white.avif",
     "/data/brand-model-images/4w-galleries/mahindra/scorpio/colors/stealth-black.avif"
   ]

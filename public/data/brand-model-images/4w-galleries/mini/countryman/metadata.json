@@ -4,21 +4,23 @@
   "brandSlug": "mini",
   "modelSlug": "countryman",
   "sourceUrl": "https://www.cardekho.com/mini/countryman",
-  "scrapedAt": "2026-04-21T06:21:00.196Z",
+  "scrapedAt": "2026-04-23T09:13:25.363Z",
   "mode": "colors-only",
   "counts": {
-    "colors": 3,
-    "total": 3
+    "colors": 4,
+    "total": 4
   },
   "hero": "/data/brand-model-images/4w-galleries/mini/countryman/colors/british-racing-green.avif",
   "colorNames": [
     "British Racing Green",
     "Legend Grey",
-    "Midnight Black"
+    "Midnight Black",
+    "Midnight Black II"
   ],
   "colorImages": [
     "/data/brand-model-images/4w-galleries/mini/countryman/colors/british-racing-green.avif",
     "/data/brand-model-images/4w-galleries/mini/countryman/colors/legend-grey.avif",
-    "/data/brand-model-images/4w-galleries/mini/countryman/colors/midnight-black.avif"
+    "/data/brand-model-images/4w-galleries/mini/countryman/colors/midnight-black.avif",
+    "/data/brand-model-images/4w-galleries/mini/countryman/colors/midnight-black-ii.avif"
   ]
 }

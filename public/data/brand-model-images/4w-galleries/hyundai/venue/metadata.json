@@ -4,31 +4,35 @@
   "brandSlug": "hyundai",
   "modelSlug": "venue",
   "sourceUrl": "https://www.cardekho.com/hyundai/venue",
-  "scrapedAt": "2026-04-21T06:19:14.394Z",
+  "scrapedAt": "2026-04-23T09:13:07.236Z",
   "mode": "colors-only",
   "counts": {
-    "colors": 8,
-    "total": 8
+    "colors": 10,
+    "total": 10
   },
   "hero": "/data/brand-model-images/4w-galleries/hyundai/venue/colors/dragon-red.avif",
   "colorNames": [
     "Dragon Red",
     "Atlas White",
-    "Atlas White With Abyss Black",
     "Titan Grey",
     "Hazel Blue",
-    "Hazel Blue With Abyss Black Roof",
+    "Hazel Blue Matte",
     "Mystic Sapphire",
-    "Abyss Black"
+    "Atlas White With Black Roof",
+    "Hazel Blue With Black Roof",
+    "Mystic Sapphire Matte",
+    "Titanium Black"
   ],
   "colorImages": [
     "/data/brand-model-images/4w-galleries/hyundai/venue/colors/dragon-red.avif",
     "/data/brand-model-images/4w-galleries/hyundai/venue/colors/atlas-white.avif",
-    "/data/brand-model-images/4w-galleries/hyundai/venue/colors/atlas-white-with-abyss-black.avif",
     "/data/brand-model-images/4w-galleries/hyundai/venue/colors/titan-grey.avif",
     "/data/brand-model-images/4w-galleries/hyundai/venue/colors/hazel-blue.avif",
-    "/data/brand-model-images/4w-galleries/hyundai/venue/colors/hazel-blue-with-abyss-black-roof.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/venue/colors/hazel-blue-matte.avif",
     "/data/brand-model-images/4w-galleries/hyundai/venue/colors/mystic-sapphire.avif",
-    "/data/brand-model-images/4w-galleries/hyundai/venue/colors/abyss-black.avif"
+    "/data/brand-model-images/4w-galleries/hyundai/venue/colors/atlas-white-with-black-roof.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/venue/colors/hazel-blue-with-black-roof.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/venue/colors/mystic-sapphire-matte.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/venue/colors/titanium-black.avif"
   ]
 }

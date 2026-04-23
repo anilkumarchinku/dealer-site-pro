@@ -4,11 +4,11 @@
   "brandSlug": "mahindra",
   "modelSlug": "be-6",
   "sourceUrl": "https://www.cardekho.com/mahindra/be-6",
-  "scrapedAt": "2026-04-21T06:19:25.839Z",
+  "scrapedAt": "2026-04-23T09:13:03.254Z",
   "mode": "colors-only",
   "counts": {
-    "colors": 8,
-    "total": 8
+    "colors": 10,
+    "total": 10
   },
   "hero": "/data/brand-model-images/4w-galleries/mahindra/be-6/colors/everest-white.avif",
   "colorNames": [
@@ -19,7 +19,9 @@
     "Tango Red",
     "Firestorm Orange",
     "Desert Myst Satin",
-    "Everest White Satin"
+    "Everest White Satin",
+    "Mahindra BE 6e Napoli Black",
+    "Mahindra BE 6e Tango Red"
   ],
   "colorImages": [
     "/data/brand-model-images/4w-galleries/mahindra/be-6/colors/everest-white.avif",
@@ -29,6 +31,8 @@
     "/data/brand-model-images/4w-galleries/mahindra/be-6/colors/tango-red.avif",
     "/data/brand-model-images/4w-galleries/mahindra/be-6/colors/firestorm-orange.avif",
     "/data/brand-model-images/4w-galleries/mahindra/be-6/colors/desert-myst-satin.avif",
-    "/data/brand-model-images/4w-galleries/mahindra/be-6/colors/everest-white-satin.avif"
+    "/data/brand-model-images/4w-galleries/mahindra/be-6/colors/everest-white-satin.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/be-6/colors/mahindra-be-6e-napoli-black.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/be-6/colors/mahindra-be-6e-tango-red.avif"
   ]
 }

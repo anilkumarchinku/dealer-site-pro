@@ -4,11 +4,11 @@
   "brandSlug": "bmw",
   "modelSlug": "ix",
   "sourceUrl": "https://www.cardekho.com/bmw/ix",
-  "scrapedAt": "2026-04-21T06:19:53.793Z",
+  "scrapedAt": "2026-04-23T09:12:22.007Z",
   "mode": "colors-only",
   "counts": {
-    "colors": 7,
-    "total": 7
+    "colors": 10,
+    "total": 10
   },
   "hero": "/data/brand-model-images/4w-galleries/bmw/ix/colors/oxide-grey-metallic.avif",
   "colorNames": [
@@ -18,7 +18,10 @@
     "Phytonic Blue",
     "Sophisto Grey Brilliant Effect",
     "Aventurine Red Metallic",
-    "Black Sapphire"
+    "Black Sapphire",
+    "BMW Individual Aventurine Red Metallic",
+    "Mineral White Metallic",
+    "Phytonic Blue Metallic"
   ],
   "colorImages": [
     "/data/brand-model-images/4w-galleries/bmw/ix/colors/oxide-grey-metallic.avif",
@@ -27,6 +30,9 @@
     "/data/brand-model-images/4w-galleries/bmw/ix/colors/phytonic-blue.avif",
     "/data/brand-model-images/4w-galleries/bmw/ix/colors/sophisto-grey-brilliant-effect.avif",
     "/data/brand-model-images/4w-galleries/bmw/ix/colors/aventurine-red-metallic.avif",
-    "/data/brand-model-images/4w-galleries/bmw/ix/colors/black-sapphire.avif"
+    "/data/brand-model-images/4w-galleries/bmw/ix/colors/black-sapphire.avif",
+    "/data/brand-model-images/4w-galleries/bmw/ix/colors/bmw-individual-aventurine-red-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/ix/colors/mineral-white-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/ix/colors/phytonic-blue-metallic.avif"
   ]
 }

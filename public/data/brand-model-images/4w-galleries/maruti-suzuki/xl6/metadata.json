@@ -1,14 +1,14 @@
 {
   "make": "Maruti Suzuki",
   "model": "XL6",
-  "brandSlug": "maruti-suzuki",
+  "brandSlug": "maruti",
   "modelSlug": "xl6",
   "sourceUrl": "https://www.cardekho.com/maruti/xl6",
-  "scrapedAt": "2026-04-21T06:19:12.311Z",
+  "scrapedAt": "2026-04-23T09:13:49.031Z",
   "mode": "colors-only",
   "counts": {
-    "colors": 10,
-    "total": 10
+    "colors": 12,
+    "total": 12
   },
   "hero": "/data/brand-model-images/4w-galleries/maruti-suzuki/xl6/colors/arctic-white.avif",
   "colorNames": [
@@ -21,7 +21,9 @@
     "Bluish Black",
     "Splendid Silver Midnight Black",
     "Nexa Blue",
-    "Splendid Silver"
+    "Splendid Silver",
+    "Opulent Red With Midnight Black Roof",
+    "Brave Khaki With Midnight Black Roof"
   ],
   "colorImages": [
     "/data/brand-model-images/4w-galleries/maruti-suzuki/xl6/colors/arctic-white.avif",
@@ -33,6 +35,8 @@
     "/data/brand-model-images/4w-galleries/maruti-suzuki/xl6/colors/bluish-black.avif",
     "/data/brand-model-images/4w-galleries/maruti-suzuki/xl6/colors/splendid-silver-midnight-black.avif",
     "/data/brand-model-images/4w-galleries/maruti-suzuki/xl6/colors/nexa-blue.avif",
-    "/data/brand-model-images/4w-galleries/maruti-suzuki/xl6/colors/splendid-silver.avif"
+    "/data/brand-model-images/4w-galleries/maruti-suzuki/xl6/colors/splendid-silver.avif",
+    "/data/brand-model-images/4w-galleries/maruti-suzuki/xl6/colors/opulent-red-with-midnight-black-roof.avif",
+    "/data/brand-model-images/4w-galleries/maruti-suzuki/xl6/colors/brave-khaki-with-midnight-black-roof.avif"
   ]
 }

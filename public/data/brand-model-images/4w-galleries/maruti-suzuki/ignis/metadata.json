@@ -1,10 +1,10 @@
 {
   "make": "Maruti Suzuki",
   "model": "Ignis",
-  "brandSlug": "maruti-suzuki",
+  "brandSlug": "maruti",
   "modelSlug": "ignis",
   "sourceUrl": "https://www.cardekho.com/maruti/ignis",
-  "scrapedAt": "2026-04-21T06:22:22.204Z",
+  "scrapedAt": "2026-04-23T09:13:47.663Z",
   "mode": "colors-only",
   "counts": {
     "colors": 10,

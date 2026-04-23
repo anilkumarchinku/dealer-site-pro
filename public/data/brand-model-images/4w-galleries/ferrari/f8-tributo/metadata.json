@@ -4,11 +4,11 @@
   "brandSlug": "ferrari",
   "modelSlug": "f8-tributo",
   "sourceUrl": "https://www.cardekho.com/ferrari/f8-tributo",
-  "scrapedAt": "2026-04-21T06:20:36.480Z",
+  "scrapedAt": "2026-04-23T09:13:20.524Z",
   "mode": "colors-only",
   "counts": {
-    "colors": 27,
-    "total": 27
+    "colors": 32,
+    "total": 32
   },
   "hero": "/data/brand-model-images/4w-galleries/ferrari/f8-tributo/colors/avorio.avif",
   "colorNames": [
@@ -38,7 +38,12 @@
     "Rosso Mugello",
     "Blu Tour De France",
     "Rosso Scuderia",
-    "Grigio Scuro"
+    "Grigio Scuro",
+    "Grigio Titanio Mettal",
+    "Blue Abu Dhabi",
+    "Ganna De Fugile",
+    "Nero Daytone",
+    "Blue Tour De France"
   ],
   "colorImages": [
     "/data/brand-model-images/4w-galleries/ferrari/f8-tributo/colors/avorio.avif",
@@ -67,6 +72,11 @@
     "/data/brand-model-images/4w-galleries/ferrari/f8-tributo/colors/rosso-mugello.avif",
     "/data/brand-model-images/4w-galleries/ferrari/f8-tributo/colors/blu-tour-de-france.avif",
     "/data/brand-model-images/4w-galleries/ferrari/f8-tributo/colors/rosso-scuderia.avif",
-    "/data/brand-model-images/4w-galleries/ferrari/f8-tributo/colors/grigio-scuro.avif"
+    "/data/brand-model-images/4w-galleries/ferrari/f8-tributo/colors/grigio-scuro.avif",
+    "/data/brand-model-images/4w-galleries/ferrari/f8-tributo/colors/grigio-titanio-mettal.avif",
+    "/data/brand-model-images/4w-galleries/ferrari/f8-tributo/colors/blue-abu-dhabi.avif",
+    "/data/brand-model-images/4w-galleries/ferrari/f8-tributo/colors/ganna-de-fugile.avif",
+    "/data/brand-model-images/4w-galleries/ferrari/f8-tributo/colors/nero-daytone.avif",
+    "/data/brand-model-images/4w-galleries/ferrari/f8-tributo/colors/blue-tour-de-france.avif"
   ]
 }

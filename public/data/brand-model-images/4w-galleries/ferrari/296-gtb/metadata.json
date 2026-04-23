@@ -4,11 +4,11 @@
   "brandSlug": "ferrari",
   "modelSlug": "296-gtb",
   "sourceUrl": "https://www.cardekho.com/ferrari/296-gtb",
-  "scrapedAt": "2026-04-21T06:20:31.529Z",
+  "scrapedAt": "2026-04-23T09:13:17.228Z",
   "mode": "colors-only",
   "counts": {
-    "colors": 28,
-    "total": 28
+    "colors": 30,
+    "total": 30
   },
   "hero": "/data/brand-model-images/4w-galleries/ferrari/296-gtb/colors/avorio.avif",
   "colorNames": [
@@ -39,7 +39,9 @@
     "Rosso Imola",
     "Blu Tour De France",
     "Rosso Scuderia",
-    "Grigio Scuro"
+    "Grigio Scuro",
+    "GRIGIO TITANIO METALL",
+    "Canna Di Fucil"
   ],
   "colorImages": [
     "/data/brand-model-images/4w-galleries/ferrari/296-gtb/colors/avorio.avif",
@@ -69,6 +71,8 @@
     "/data/brand-model-images/4w-galleries/ferrari/296-gtb/colors/rosso-imola.avif",
     "/data/brand-model-images/4w-galleries/ferrari/296-gtb/colors/blu-tour-de-france.avif",
     "/data/brand-model-images/4w-galleries/ferrari/296-gtb/colors/rosso-scuderia.avif",
-    "/data/brand-model-images/4w-galleries/ferrari/296-gtb/colors/grigio-scuro.avif"
+    "/data/brand-model-images/4w-galleries/ferrari/296-gtb/colors/grigio-scuro.avif",
+    "/data/brand-model-images/4w-galleries/ferrari/296-gtb/colors/grigio-titanio-metall.avif",
+    "/data/brand-model-images/4w-galleries/ferrari/296-gtb/colors/canna-di-fucil.avif"
   ]
 }

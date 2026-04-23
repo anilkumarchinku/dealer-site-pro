@@ -4,11 +4,11 @@
   "brandSlug": "audi",
   "modelSlug": "q8",
   "sourceUrl": "https://www.cardekho.com/audi/q8",
-  "scrapedAt": "2026-04-21T06:19:58.119Z",
+  "scrapedAt": "2026-04-23T09:13:29.998Z",
   "mode": "colors-only",
   "counts": {
-    "colors": 8,
-    "total": 8
+    "colors": 9,
+    "total": 9
   },
   "hero": "/data/brand-model-images/4w-galleries/audi/q8/colors/vicuna-beige-metallic.avif",
   "colorNames": [
@@ -19,7 +19,8 @@
     "Sakhir Gold Metallic",
     "Glacier White Metallic",
     "Satellite Silver Metallic",
-    "Tamarind Brown Metallic"
+    "Tamarind Brown Metallic",
+    "Vicugna Beige Metallic"
   ],
   "colorImages": [
     "/data/brand-model-images/4w-galleries/audi/q8/colors/vicuna-beige-metallic.avif",
@@ -29,6 +30,7 @@
     "/data/brand-model-images/4w-galleries/audi/q8/colors/sakhir-gold-metallic.avif",
     "/data/brand-model-images/4w-galleries/audi/q8/colors/glacier-white-metallic.avif",
     "/data/brand-model-images/4w-galleries/audi/q8/colors/satellite-silver-metallic.avif",
-    "/data/brand-model-images/4w-galleries/audi/q8/colors/tamarind-brown-metallic.avif"
+    "/data/brand-model-images/4w-galleries/audi/q8/colors/tamarind-brown-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/q8/colors/vicugna-beige-metallic.avif"
   ]
 }

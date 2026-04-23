@@ -1,10 +1,10 @@
 {
   "make": "Maruti Suzuki",
   "model": "Victoris",
-  "brandSlug": "maruti-suzuki",
+  "brandSlug": "maruti",
   "modelSlug": "victoris",
   "sourceUrl": "https://www.cardekho.com/maruti/victoris",
-  "scrapedAt": "2026-04-21T06:19:11.593Z",
+  "scrapedAt": "2026-04-23T09:13:46.749Z",
   "mode": "colors-only",
   "counts": {
     "colors": 10,

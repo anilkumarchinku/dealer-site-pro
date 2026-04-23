@@ -4,17 +4,19 @@
   "brandSlug": "mini",
   "modelSlug": "countryman-electric",
   "sourceUrl": "https://www.cardekho.com/mini/countryman-electric",
-  "scrapedAt": "2026-04-21T06:21:00.687Z",
+  "scrapedAt": "2026-04-23T09:13:25.702Z",
   "mode": "colors-only",
   "counts": {
-    "colors": 1,
-    "total": 1
+    "colors": 2,
+    "total": 2
   },
   "hero": "/data/brand-model-images/4w-galleries/mini/countryman-electric/colors/grey.avif",
   "colorNames": [
-    "Grey"
+    "Grey",
+    "Gray"
   ],
   "colorImages": [
-    "/data/brand-model-images/4w-galleries/mini/countryman-electric/colors/grey.avif"
+    "/data/brand-model-images/4w-galleries/mini/countryman-electric/colors/grey.avif",
+    "/data/brand-model-images/4w-galleries/mini/countryman-electric/colors/gray.avif"
   ]
 }

@@ -4,11 +4,11 @@
   "brandSlug": "mahindra",
   "modelSlug": "bolero-neo",
   "sourceUrl": "https://www.cardekho.com/mahindra/bolero-neo",
-  "scrapedAt": "2026-04-21T06:19:26.350Z",
+  "scrapedAt": "2026-04-23T09:13:04.438Z",
   "mode": "colors-only",
   "counts": {
-    "colors": 9,
-    "total": 9
+    "colors": 12,
+    "total": 12
   },
   "hero": "/data/brand-model-images/4w-galleries/mahindra/bolero-neo/colors/dimond-white.avif",
   "colorNames": [
@@ -20,7 +20,10 @@
     "Jeans Blue",
     "Concrete Grey With Black Roof",
     "Rockey Beige",
-    "Pearl White Dual Tone"
+    "Pearl White Dual Tone",
+    "DIAMOND WHITE",
+    "PEARL WHITE DT",
+    "CONCRETE GREY DT"
   ],
   "colorImages": [
     "/data/brand-model-images/4w-galleries/mahindra/bolero-neo/colors/dimond-white.avif",
@@ -31,6 +34,9 @@
     "/data/brand-model-images/4w-galleries/mahindra/bolero-neo/colors/jeans-blue.avif",
     "/data/brand-model-images/4w-galleries/mahindra/bolero-neo/colors/concrete-grey-with-black-roof.avif",
     "/data/brand-model-images/4w-galleries/mahindra/bolero-neo/colors/rockey-beige.avif",
-    "/data/brand-model-images/4w-galleries/mahindra/bolero-neo/colors/pearl-white-dual-tone.avif"
+    "/data/brand-model-images/4w-galleries/mahindra/bolero-neo/colors/pearl-white-dual-tone.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/bolero-neo/colors/diamond-white.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/bolero-neo/colors/pearl-white-dt.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/bolero-neo/colors/concrete-grey-dt.avif"
   ]
 }

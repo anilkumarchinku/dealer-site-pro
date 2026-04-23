@@ -4,11 +4,11 @@
   "brandSlug": "bmw",
   "modelSlug": "i5",
   "sourceUrl": "https://www.cardekho.com/bmw/i5",
-  "scrapedAt": "2026-04-21T06:19:56.220Z",
+  "scrapedAt": "2026-04-23T09:12:23.114Z",
   "mode": "colors-only",
   "counts": {
-    "colors": 12,
-    "total": 12
+    "colors": 17,
+    "total": 17
   },
   "hero": "/data/brand-model-images/4w-galleries/bmw/i5/colors/brooklyn-grey-metallic.avif",
   "colorNames": [
@@ -23,7 +23,12 @@
     "FROZEN-DEEP-GREY-METALLIC",
     "Sophisto Grey Brilliant Effect",
     "Black Sapphire",
-    "Frozen Pure Grey Metallic"
+    "Frozen Pure Grey Metallic",
+    "OXID GREY II METALLIC",
+    "BMW INDIVIDUAL TANZANITE BLUE METALLIC",
+    "DRAGON FIRE RED METALLIC",
+    "FROZEN DEEP GREY METALLIC",
+    "Red"
   ],
   "colorImages": [
     "/data/brand-model-images/4w-galleries/bmw/i5/colors/brooklyn-grey-metallic.avif",
@@ -37,6 +42,11 @@
     "/data/brand-model-images/4w-galleries/bmw/i5/colors/frozen-deep-grey-metallic.avif",
     "/data/brand-model-images/4w-galleries/bmw/i5/colors/sophisto-grey-brilliant-effect.avif",
     "/data/brand-model-images/4w-galleries/bmw/i5/colors/black-sapphire.avif",
-    "/data/brand-model-images/4w-galleries/bmw/i5/colors/frozen-pure-grey-metallic.avif"
+    "/data/brand-model-images/4w-galleries/bmw/i5/colors/frozen-pure-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/i5/colors/oxid-grey-ii-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/i5/colors/bmw-individual-tanzanite-blue-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/i5/colors/dragon-fire-red-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/i5/colors/frozen-deep-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/i5/colors/red.avif"
   ]
 }

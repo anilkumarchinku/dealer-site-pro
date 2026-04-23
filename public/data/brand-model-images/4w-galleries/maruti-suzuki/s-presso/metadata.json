@@ -1,10 +1,10 @@
 {
   "make": "Maruti Suzuki",
   "model": "S-Presso",
-  "brandSlug": "maruti-suzuki",
+  "brandSlug": "maruti",
   "modelSlug": "s-presso",
   "sourceUrl": "https://www.cardekho.com/maruti/s-presso",
-  "scrapedAt": "2026-04-21T06:19:12.082Z",
+  "scrapedAt": "2026-04-23T09:13:48.338Z",
   "mode": "colors-only",
   "counts": {
     "colors": 7,

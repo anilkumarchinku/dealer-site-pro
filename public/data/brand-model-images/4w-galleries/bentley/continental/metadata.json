@@ -4,11 +4,11 @@
   "brandSlug": "bentley",
   "modelSlug": "continental",
   "sourceUrl": "https://www.cardekho.com/bentley/continental",
-  "scrapedAt": "2026-04-21T06:23:10.782Z",
+  "scrapedAt": "2026-04-23T09:13:37.829Z",
   "mode": "colors-only",
   "counts": {
-    "colors": 18,
-    "total": 18
+    "colors": 23,
+    "total": 23
   },
   "hero": "/data/brand-model-images/4w-galleries/bentley/continental/colors/anthracite-satin-by-mulliner.avif",
   "colorNames": [
@@ -29,7 +29,12 @@
     "Barnato (Solid)",
     "Candy Red Satin By Mulliner",
     "Blue Crystal",
-    "Brodgar"
+    "Brodgar",
+    "Cumbrian Green",
+    "Cricket Ball By Mulliner",
+    "Bentley Continental Beluga",
+    "Claret By Mulliner",
+    "Dragon Red II"
   ],
   "colorImages": [
     "/data/brand-model-images/4w-galleries/bentley/continental/colors/anthracite-satin-by-mulliner.avif",
@@ -49,6 +54,11 @@
     "/data/brand-model-images/4w-galleries/bentley/continental/colors/barnato-solid.avif",
     "/data/brand-model-images/4w-galleries/bentley/continental/colors/candy-red-satin-by-mulliner.avif",
     "/data/brand-model-images/4w-galleries/bentley/continental/colors/blue-crystal.avif",
-    "/data/brand-model-images/4w-galleries/bentley/continental/colors/brodgar.avif"
+    "/data/brand-model-images/4w-galleries/bentley/continental/colors/brodgar.avif",
+    "/data/brand-model-images/4w-galleries/bentley/continental/colors/cumbrian-green.avif",
+    "/data/brand-model-images/4w-galleries/bentley/continental/colors/cricket-ball-by-mulliner.avif",
+    "/data/brand-model-images/4w-galleries/bentley/continental/colors/bentley-continental-beluga.avif",
+    "/data/brand-model-images/4w-galleries/bentley/continental/colors/claret-by-mulliner.avif",
+    "/data/brand-model-images/4w-galleries/bentley/continental/colors/dragon-red-ii.avif"
   ]
 }

@@ -4,11 +4,11 @@
   "brandSlug": "hyundai",
   "modelSlug": "creta-n-line",
   "sourceUrl": "https://www.cardekho.com/hyundai/creta-n-line",
-  "scrapedAt": "2026-04-21T06:19:18.179Z",
+  "scrapedAt": "2026-04-23T09:13:09.648Z",
   "mode": "colors-only",
   "counts": {
-    "colors": 7,
-    "total": 7
+    "colors": 9,
+    "total": 9
   },
   "hero": "/data/brand-model-images/4w-galleries/hyundai/creta-n-line/colors/shadow-grey-with-abyss-black-roof.avif",
   "colorNames": [
@@ -18,7 +18,9 @@
     "Titan Grey Matte",
     "Atlas White",
     "Atlas White With Abyss Black",
-    "Abyss Black"
+    "Abyss Black",
+    "Thunder Blue",
+    "Titan Grey"
   ],
   "colorImages": [
     "/data/brand-model-images/4w-galleries/hyundai/creta-n-line/colors/shadow-grey-with-abyss-black-roof.avif",
@@ -27,6 +29,8 @@
     "/data/brand-model-images/4w-galleries/hyundai/creta-n-line/colors/titan-grey-matte.avif",
     "/data/brand-model-images/4w-galleries/hyundai/creta-n-line/colors/atlas-white.avif",
     "/data/brand-model-images/4w-galleries/hyundai/creta-n-line/colors/atlas-white-with-abyss-black.avif",
-    "/data/brand-model-images/4w-galleries/hyundai/creta-n-line/colors/abyss-black.avif"
+    "/data/brand-model-images/4w-galleries/hyundai/creta-n-line/colors/abyss-black.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta-n-line/colors/thunder-blue.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/creta-n-line/colors/titan-grey.avif"
   ]
 }

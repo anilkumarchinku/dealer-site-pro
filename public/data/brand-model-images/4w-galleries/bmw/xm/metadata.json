@@ -4,11 +4,11 @@
   "brandSlug": "bmw",
   "modelSlug": "xm",
   "sourceUrl": "https://www.cardekho.com/bmw/xm",
-  "scrapedAt": "2026-04-21T06:19:51.841Z",
+  "scrapedAt": "2026-04-23T09:12:19.431Z",
   "mode": "colors-only",
   "counts": {
-    "colors": 7,
-    "total": 7
+    "colors": 11,
+    "total": 11
   },
   "hero": "/data/brand-model-images/4w-galleries/bmw/xm/colors/mineral-white-metallic.avif",
   "colorNames": [
@@ -18,7 +18,11 @@
     "Toronto Red",
     "Dravit Grey Metallic",
     "Marina Bay Blue Metallic",
-    "Black Sapphire Metallic"
+    "Black Sapphire Metallic",
+    "M Carbon Black Metallic",
+    "221 M Toronto Red Metallic",
+    "M Marina Bay Blue Metallic",
+    "Ravit Grey Metallic"
   ],
   "colorImages": [
     "/data/brand-model-images/4w-galleries/bmw/xm/colors/mineral-white-metallic.avif",
@@ -27,6 +31,10 @@
     "/data/brand-model-images/4w-galleries/bmw/xm/colors/toronto-red.avif",
     "/data/brand-model-images/4w-galleries/bmw/xm/colors/dravit-grey-metallic.avif",
     "/data/brand-model-images/4w-galleries/bmw/xm/colors/marina-bay-blue-metallic.avif",
-    "/data/brand-model-images/4w-galleries/bmw/xm/colors/black-sapphire-metallic.avif"
+    "/data/brand-model-images/4w-galleries/bmw/xm/colors/black-sapphire-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/xm/colors/m-carbon-black-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/xm/colors/221-m-toronto-red-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/xm/colors/m-marina-bay-blue-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/xm/colors/ravit-grey-metallic.avif"
   ]
 }

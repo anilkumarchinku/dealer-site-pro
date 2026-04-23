@@ -1,10 +1,10 @@
 {
   "make": "Maruti Suzuki",
   "model": "Swift",
-  "brandSlug": "maruti-suzuki",
+  "brandSlug": "maruti",
   "modelSlug": "swift",
   "sourceUrl": "https://www.cardekho.com/maruti/swift",
-  "scrapedAt": "2026-04-21T06:19:09.962Z",
+  "scrapedAt": "2026-04-23T09:13:40.568Z",
   "mode": "colors-only",
   "counts": {
     "colors": 10,

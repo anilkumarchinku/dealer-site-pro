@@ -4,11 +4,11 @@
   "brandSlug": "audi",
   "modelSlug": "q8-e-tron",
   "sourceUrl": "https://www.cardekho.com/audi/q8-e-tron",
-  "scrapedAt": "2026-04-21T06:20:00.625Z",
+  "scrapedAt": "2026-04-23T09:13:31.984Z",
   "mode": "colors-only",
   "counts": {
-    "colors": 19,
-    "total": 19
+    "colors": 22,
+    "total": 22
   },
   "hero": "/data/brand-model-images/4w-galleries/audi/q8-e-tron/colors/purple-velvet-pearl-effect.avif",
   "colorNames": [
@@ -30,7 +30,10 @@
     "Madeira Brown Metallic",
     "Terra Gray Metallic",
     "Chronos Grey Metallic",
-    "Glacier White Metallic"
+    "Glacier White Metallic",
+    "Goodwood Green Pearl Effect",
+    "Manhattan Gray Metallic",
+    "Terra Grey Metallic"
   ],
   "colorImages": [
     "/data/brand-model-images/4w-galleries/audi/q8-e-tron/colors/purple-velvet-pearl-effect.avif",
@@ -51,6 +54,9 @@
     "/data/brand-model-images/4w-galleries/audi/q8-e-tron/colors/madeira-brown-metallic.avif",
     "/data/brand-model-images/4w-galleries/audi/q8-e-tron/colors/terra-gray-metallic.avif",
     "/data/brand-model-images/4w-galleries/audi/q8-e-tron/colors/chronos-grey-metallic.avif",
-    "/data/brand-model-images/4w-galleries/audi/q8-e-tron/colors/glacier-white-metallic.avif"
+    "/data/brand-model-images/4w-galleries/audi/q8-e-tron/colors/glacier-white-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/q8-e-tron/colors/goodwood-green-pearl-effect.avif",
+    "/data/brand-model-images/4w-galleries/audi/q8-e-tron/colors/manhattan-gray-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/q8-e-tron/colors/terra-grey-metallic.avif"
   ]
 }

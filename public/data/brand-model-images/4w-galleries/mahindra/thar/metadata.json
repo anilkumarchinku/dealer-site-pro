@@ -4,11 +4,11 @@
   "brandSlug": "mahindra",
   "modelSlug": "thar",
   "sourceUrl": "https://www.cardekho.com/mahindra/thar",
-  "scrapedAt": "2026-04-21T06:19:23.307Z",
+  "scrapedAt": "2026-04-23T09:12:58.970Z",
   "mode": "colors-only",
   "counts": {
-    "colors": 6,
-    "total": 6
+    "colors": 7,
+    "total": 7
   },
   "hero": "/data/brand-model-images/4w-galleries/mahindra/thar/colors/everest-white.avif",
   "colorNames": [
@@ -17,7 +17,8 @@
     "Stealth Black",
     "Battleship Gray",
     "Deep Forest",
-    "Tango Red"
+    "Tango Red",
+    "NEBULA BLUE"
   ],
   "colorImages": [
     "/data/brand-model-images/4w-galleries/mahindra/thar/colors/everest-white.avif",
@@ -25,6 +26,7 @@
     "/data/brand-model-images/4w-galleries/mahindra/thar/colors/stealth-black.avif",
     "/data/brand-model-images/4w-galleries/mahindra/thar/colors/battleship-gray.avif",
     "/data/brand-model-images/4w-galleries/mahindra/thar/colors/deep-forest.avif",
-    "/data/brand-model-images/4w-galleries/mahindra/thar/colors/tango-red.avif"
+    "/data/brand-model-images/4w-galleries/mahindra/thar/colors/tango-red.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/thar/colors/nebula-blue.avif"
   ]
 }

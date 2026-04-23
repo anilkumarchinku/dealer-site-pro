@@ -1,14 +1,14 @@
 {
   "make": "Maruti Suzuki",
   "model": "Alto K10",
-  "brandSlug": "maruti-suzuki",
+  "brandSlug": "maruti",
   "modelSlug": "alto-k10",
   "sourceUrl": "https://www.cardekho.com/maruti/alto-k10",
-  "scrapedAt": "2026-04-21T06:19:11.278Z",
+  "scrapedAt": "2026-04-23T09:13:46.499Z",
   "mode": "colors-only",
   "counts": {
-    "colors": 7,
-    "total": 7
+    "colors": 8,
+    "total": 8
   },
   "hero": "/data/brand-model-images/4w-galleries/maruti-suzuki/alto-k10/colors/metallic-sizzling-red.avif",
   "colorNames": [
@@ -18,7 +18,8 @@
     "Solid White",
     "Metallic Granite Grey",
     "Pearl Bluish Black",
-    "Metallic Speedy Blue"
+    "Metallic Speedy Blue",
+    "Pearl Midnight Black"
   ],
   "colorImages": [
     "/data/brand-model-images/4w-galleries/maruti-suzuki/alto-k10/colors/metallic-sizzling-red.avif",
@@ -27,6 +28,7 @@
     "/data/brand-model-images/4w-galleries/maruti-suzuki/alto-k10/colors/solid-white.avif",
     "/data/brand-model-images/4w-galleries/maruti-suzuki/alto-k10/colors/metallic-granite-grey.avif",
     "/data/brand-model-images/4w-galleries/maruti-suzuki/alto-k10/colors/pearl-bluish-black.avif",
-    "/data/brand-model-images/4w-galleries/maruti-suzuki/alto-k10/colors/metallic-speedy-blue.avif"
+    "/data/brand-model-images/4w-galleries/maruti-suzuki/alto-k10/colors/metallic-speedy-blue.avif",
+    "/data/brand-model-images/4w-galleries/maruti-suzuki/alto-k10/colors/pearl-midnight-black.avif"
   ]
 }
