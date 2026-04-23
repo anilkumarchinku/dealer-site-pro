@@ -468,13 +468,9 @@ export async function hydrateCarWithJsonDetails(car: Car): Promise<Car> {
         ? baseHeroImage
         : (scrapedGallery?.hero || imageUrls[0] || car.images.hero)
 
-    // Build exterior gallery from scraped data; remove hero + CDN hero to avoid duplicates
-    const mergedExterior = scrapedGallery?.exterior?.length
-        ? scrapedGallery.exterior
-        : (imageUrls.length > 0 ? imageUrls : car.images.exterior)
-    const mergedInterior = scrapedGallery?.interior?.length
-        ? scrapedGallery.interior
-        : car.images.interior
+    // Phase 1: only color images in gallery. Exterior/interior for phase 2.
+    const mergedExterior: string[] = []
+    const mergedInterior: string[] = []
     const mergedColorImages = scrapedGallery?.colorImages?.length
         ? scrapedGallery.colorImages
         : car.images.colors
