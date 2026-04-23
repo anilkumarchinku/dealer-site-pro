@@ -60,6 +60,16 @@ interface BikeListItem {
     image_url: string | null;
 }
 
+interface BikeVariantRow {
+    key: string;
+    name: string;
+    priceLabel: string;
+    fuelLabel: string;
+    engineOrBatteryLabel: string;
+    isCurrent: boolean;
+    href?: string;
+}
+
 interface Props {
     params: Promise<{ id: string }>;
 }
@@ -89,6 +99,18 @@ function formatPriceINR(paise: number): string {
     if (!paise || paise <= 0) return 'Price on request';
     const inr = paise / 100;
     return `\u20B9${inr.toLocaleString('en-IN')}`;
+}
+
+function parsePriceToPaise(raw: string | null | undefined): number {
+    if (!raw) return 0;
+    const cleaned = raw.replace(/[₹,\s]/g, '');
+    const lakhMatch = cleaned.match(/^([\d.]+)\s*[Ll]akh$/);
+    if (lakhMatch) return Math.round(parseFloat(lakhMatch[1]) * 100000 * 100);
+    const croreMatch = cleaned.match(/^([\d.]+)\s*[Cc]rore$/);
+    if (croreMatch) return Math.round(parseFloat(croreMatch[1]) * 10000000 * 100);
+    const num = parseFloat(cleaned);
+    if (!isNaN(num)) return Math.round(num * 100);
+    return 0;
 }
 
 // ── Page Component ───────────────────────────────────────────────
@@ -147,9 +169,9 @@ export default function BikeDetailPage({ params }: Props) {
         fetchBike();
     }, [id]);
 
-    // ── Fetch variants (same make + model) ───────────────────────
+    // ── Fetch grouped model rows only as a fallback when raw variants are absent ──
     useEffect(() => {
-        if (!bike) return;
+        if (!bike || (Array.isArray(bike.variants) && bike.variants.length > 0)) return;
         async function fetchVariants() {
             try {
                 const res = await fetch(
@@ -330,7 +352,46 @@ export default function BikeDetailPage({ params }: Props) {
     const fuelLabel = isElectric ? 'Electric' : 'Petrol';
     const transmissionLabel = bike.transmission ?? (isElectric ? 'Automatic' : '--');
     const mileageKmpl = bike.mileage_kmpl ? parseFloat(bike.mileage_kmpl) : null;
-    const variant = bike.variant ? ` ${bike.variant}` : '';
+    const displayVariant = bike.variant && bike.variant.trim().toLowerCase() !== bike.model.trim().toLowerCase()
+        ? bike.variant
+        : null;
+    const variant = displayVariant ? ` ${displayVariant}` : '';
+
+    const detailVariants = Array.isArray(bike.variants) ? bike.variants : [];
+    const currentVariantName = detailVariants.length > 0
+        ? (detailVariants.some((v: { name: string }) => v.name === bike.variant)
+            ? bike.variant
+            : detailVariants[0]?.name)
+        : null;
+
+    const variantRows: BikeVariantRow[] = detailVariants.length > 0
+        ? detailVariants.map((v: { name?: string; price?: string }, index: number) => {
+            const parsedPrice = parsePriceToPaise(v.price);
+            const fallbackPrice = index === 0 ? (bike.price_min_paise ?? 0) : 0;
+            const effectivePrice = parsedPrice > 0 ? parsedPrice : fallbackPrice;
+
+            return {
+                key: `${v.name ?? 'variant'}-${index}`,
+                name: v.name || `Variant ${index + 1}`,
+                priceLabel: formatPricePaise(effectivePrice),
+                fuelLabel: bike.fuel_type === 'electric' ? 'Electric' : 'Petrol',
+                engineOrBatteryLabel: bike.fuel_type === 'electric'
+                    ? (bike.range_km ? `${bike.range_km} km range` : '--')
+                    : (bike.engine_cc ? `${bike.engine_cc} cc` : '--'),
+                isCurrent: (v.name || '') === currentVariantName,
+            };
+        })
+        : variants.map((v) => ({
+            key: v.id,
+            name: `${v.model} ${v.variant || ''}`.trim(),
+            priceLabel: formatPricePaise(v.price_min_paise),
+            fuelLabel: v.fuel_type === 'electric' ? 'Electric' : 'Petrol',
+            engineOrBatteryLabel: v.fuel_type === 'electric'
+                ? (v.range_km ? `${v.range_km} km range` : '--')
+                : (v.engine_cc ? `${v.engine_cc} cc` : '--'),
+            isCurrent: v.id === id,
+            href: v.id !== id ? `/bikes/${v.id}` : undefined,
+        }));
 
     // Image fallback chain
     const brandId = brandNameToId(bike.make, '2w');
@@ -418,8 +479,8 @@ export default function BikeDetailPage({ params }: Props) {
                                         <h1 className="text-xl font-bold text-gray-900">
                                             {bike.model}
                                         </h1>
-                                        {bike.variant && (
-                                            <p className="text-sm text-gray-700">{bike.variant}</p>
+                                        {displayVariant && (
+                                            <p className="text-sm text-gray-700">{displayVariant}</p>
                                         )}
                                         {bike.year && (
                                             <p className="text-xs text-gray-700 mt-0.5">{bike.year} Model</p>
@@ -688,37 +749,39 @@ export default function BikeDetailPage({ params }: Props) {
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            {variants.length > 0 ? (
-                                                variants.map((v) => (
-                                                    <tr key={v.id} className="border-b border-gray-100 hover:bg-gray-50">
+                                            {variantRows.length > 0 ? (
+                                                variantRows.map((v) => (
+                                                    <tr key={v.key} className="border-b border-gray-100 hover:bg-gray-50">
                                                         <td className="px-4 py-3">
                                                             <div className="flex items-center gap-2">
                                                                 <span className="text-sm font-medium text-gray-900">
-                                                                    {v.model} {v.variant || ''}
+                                                                    {v.name}
                                                                 </span>
-                                                                {v.id === id && (
+                                                                {v.isCurrent && (
                                                                     <Badge variant="secondary" className="text-[10px]">Current</Badge>
                                                                 )}
                                                             </div>
                                                         </td>
                                                         <td className="px-4 py-3 text-sm font-semibold text-gray-900">
-                                                            {formatPricePaise(v.price_min_paise)}
+                                                            {v.priceLabel}
                                                         </td>
                                                         <td className="px-4 py-3 text-sm text-gray-700">
-                                                            {v.fuel_type === 'electric' ? 'Electric' : 'Petrol'}
+                                                            {v.fuelLabel}
                                                         </td>
                                                         <td className="px-4 py-3 text-sm text-gray-700">
-                                                            {v.fuel_type === 'electric'
-                                                                ? (v.range_km ? `${v.range_km} km range` : '--')
-                                                                : (v.engine_cc ? `${v.engine_cc} cc` : '--')}
+                                                            {v.engineOrBatteryLabel}
                                                         </td>
                                                         <td className="px-4 py-3 text-right">
-                                                            {v.id !== id ? (
-                                                                <Link href={`/bikes/${v.id}`}>
+                                                            {v.href ? (
+                                                                <Link href={v.href}>
                                                                     <Button variant="outline" size="sm" className="border-gray-200 text-gray-900 hover:bg-gray-50 text-xs">
                                                                         View Details
                                                                     </Button>
                                                                 </Link>
+                                                            ) : detailVariants.length > 0 ? (
+                                                                <span className="text-xs text-gray-700">
+                                                                    {v.isCurrent ? 'Viewing' : 'Included'}
+                                                                </span>
                                                             ) : (
                                                                 <span className="text-xs text-gray-700">Viewing</span>
                                                             )}

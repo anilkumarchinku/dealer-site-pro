@@ -13,6 +13,7 @@ import {
     getVehicleImageUrls,
     modelToSlug,
 } from '@/lib/utils/brand-model-images';
+import { isDiscontinuedTwoWheeler } from '@/lib/utils/two-wheeler-source-status';
 
 // ---------- brand-models.json types ----------
 interface BrandModelsFile {
@@ -152,6 +153,7 @@ function findVehicleById(id: string) {
             const vehicleId = `${brandId}-${modelSlugVal}-${i}`;
 
             if (vehicleId !== id) continue;
+            if (isDiscontinuedTwoWheeler(v.source_section)) return null;
 
             // Found it — build the full detail response
             const fuelTypeRaw = (

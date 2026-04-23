@@ -7,6 +7,7 @@
  */
 
 import { resolveVehicleColorHex } from '@/lib/utils/resolve-vehicle-color'
+import { parseTwoWheelerSourceStatus } from '@/lib/utils/two-wheeler-source-status'
 
 export interface BrandModelEnrichment {
     engine_cc: number | null
@@ -110,14 +111,6 @@ function parseMM(str: string | null | undefined): number | null {
     const match = str.match(/([\d.]+)\s*mm/i)
     if (!match) return null
     return Math.round(parseFloat(match[1]))
-}
-
-function parseSourceSection(section: string | null | undefined): 'available' | 'booking_open' | 'out_of_stock' {
-    if (!section) return 'available'
-    const s = section.toLowerCase()
-    if (s.includes('upcoming') || s.includes('launch')) return 'booking_open'
-    if (s.includes('discontinu') || s.includes('stopped')) return 'out_of_stock'
-    return 'available'
 }
 
 function parseBatteryKwh(str: string | null | undefined): number | null {
@@ -481,7 +474,7 @@ function extractFromVehicle(v: any): BrandModelEnrichment {
             torque: engine['Max Torque'] || topSpecs['Torque (Motor)'] || topSpecs['Torque'] || v.max_torque || null,
             variant: firstVar.variant_name || firstVar.name || null,
             all_variants: allVariants,
-            stock_status: parseSourceSection(v.source_section),
+            stock_status: parseTwoWheelerSourceStatus(v.source_section),
             transmission: isEV ? 'Automatic'
                 : normalizeTransmission(engine['Gear Box'] || engine['Gearbox'] || v.transmission),
             wheelbase_mm: parseMM(dims['Wheelbase']) || parseMM(newTech.wheelbase),
@@ -524,7 +517,7 @@ function extractFromVehicle(v: any): BrandModelEnrichment {
                     price_paise: parsePrice(vv.price),
                 })).filter((vv: { name: string; price_paise: number }) => vv.name)
                 : [],
-            stock_status: parseSourceSection(v.source_section),
+            stock_status: parseTwoWheelerSourceStatus(v.source_section),
             transmission: 'Automatic',
             wheelbase_mm: null,
             length_mm: null,
@@ -567,7 +560,7 @@ function extractFromVehicle(v: any): BrandModelEnrichment {
                 price_paise: parsePrice(vv.price),
             })).filter((vv: { name: string; price_paise: number }) => vv.name)
             : [],
-        stock_status: parseSourceSection(v.source_section),
+        stock_status: parseTwoWheelerSourceStatus(v.source_section),
         transmission: normalizeTransmission(techEngine['Gear Box'] || techEngine['Gearbox'] || techEngine['Transmission']
             || techTrans['Gear Box'] || techTrans['Gearbox'] || techTrans['GearBox']
             || (v.other_performance_metrics || {})['gearbox']

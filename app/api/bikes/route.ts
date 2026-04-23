@@ -11,6 +11,7 @@ import {
     getVehicleImageUrls,
     modelToSlug,
 } from '@/lib/utils/brand-model-images';
+import { isDiscontinuedTwoWheeler } from '@/lib/utils/two-wheeler-source-status';
 
 // ---------- brand-models.json types ----------
 interface BrandModelsFile {
@@ -179,6 +180,7 @@ function loadAllVehicles() {
 
         for (let i = 0; i < raw.vehicles.length; i++) {
             const v = raw.vehicles[i];
+            if (isDiscontinuedTwoWheeler(v.source_section)) continue;
             const modelName = v.model ?? v.variant_name.split('/')[0].trim();
             const fuelTypeRaw = (
                 v.fuel_type ??
