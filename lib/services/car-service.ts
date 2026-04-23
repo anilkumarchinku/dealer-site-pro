@@ -312,13 +312,18 @@ function mapDbCarToCar(dbCar: any): Car {
             safetyFeatures:  Array.isArray(dbCar.safety_features) ? dbCar.safety_features : [],
         },
         images:       dbCar.images ?? (() => {
-            // Build full candidate list: curated assets → DB URL → scraped images
+            // Build candidate list for fallback cycling (curated → DB URL → scraped)
             const allUrls = getVehicleImageUrls('4w', brandNameToId(dbCar.make, '4w'), dbCar.model, dbCar.image_url);
             const hero = allUrls[0] ?? null;
+            // exterior: only store the hero for gallery display.
+            // The full candidate list (allUrls) is used by SimilarCarCard's
+            // onError cycling but should NOT populate gallery thumbnails
+            // (non-existent URLs render as blank thumbnails).
             return {
                 hero,
-                exterior: allUrls,
+                exterior: hero ? [hero] : [],
                 interior: [],
+                _fallbackUrls: allUrls, // used by SimilarCarCard onError
             };
         })(),
         colors: (() => {

@@ -1339,7 +1339,9 @@ function SimilarCarCard({
     brandColor: string;
     brandContrast: string;
 }) {
-    const imageUrls = car.images.exterior?.length ? car.images.exterior : (car.images.hero ? [car.images.hero] : []);
+    // Use _fallbackUrls (full candidate chain) for onError cycling, or fall back to exterior/hero
+    const fallbacks = (car.images as unknown as Record<string, unknown>)?._fallbackUrls as string[] | undefined;
+    const imageUrls = fallbacks?.length ? fallbacks : (car.images.hero ? [car.images.hero] : []);
     const [imgIdx, setImgIdx] = useState(0);
     const [imgFailed, setImgFailed] = useState(false);
 
