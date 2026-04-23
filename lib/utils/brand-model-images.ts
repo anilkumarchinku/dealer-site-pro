@@ -280,6 +280,7 @@ const BRAND_FOLDER_MAP_3W: Record<string, string> = {
     "lohia auto": "lohia-auto",
     "yc electric": "yc-ev",
     "saera electric (mayuri)": "saera-ev",
+    "saera electric": "saera-ev",
     "omega seiki mobility": "omega-seiki-mobility",
     "altigreen": "altigreen",
     "montra electric": "montra-ev",

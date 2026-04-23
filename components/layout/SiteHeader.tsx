@@ -155,7 +155,17 @@ export function SiteHeader() {
         e.preventDefault();
         if (searchQuery.trim()) {
             setIsSearchOpen(false);
-            router.push(`/cars?searchQuery=${encodeURIComponent(searchQuery)}`);
+            const q = encodeURIComponent(searchQuery.trim());
+            // Route to the category that has results, based on dropdown search
+            if (searchResults.length > 0) {
+                const firstCategory = (searchResults[0] as unknown as Record<string, unknown>)._category;
+                if (firstCategory === '2w') router.push(`/bikes?q=${q}`);
+                else if (firstCategory === '3w') router.push(`/autos?q=${q}`);
+                else router.push(`/cars?searchQuery=${q}`);
+            } else {
+                // No dropdown results yet — search all three pages
+                router.push(`/cars?searchQuery=${q}`);
+            }
             setSearchQuery('');
         }
     };
@@ -435,7 +445,7 @@ export function SiteHeader() {
                     <form onSubmit={handleSearchSubmit} className="relative">
                         <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
                         <Input
-                            placeholder="Search cars..."
+                            placeholder="Search cars, bikes, autos..."
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
                             className="pl-9"
