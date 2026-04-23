@@ -9,49 +9,122 @@
       "variant_name": "Narain Plus/Electric",
       "ex_showroom_price": "₹1.55 Lakh",
       "mileage": "100-120 km range",
-      "engine_details": { "displacement": "", "max_power": "1.4 kW", "torque": "55 Nm" },
-      "payload_features": { "gross_vehicle_weight": "733 kg", "payload_capacity": "" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "range": "100-120 km", "top_speed": "25 kmph" }
+      "engine_details": {
+        "displacement": "",
+        "max_power": "1.4 kW",
+        "torque": "55 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "733 kg",
+        "payload_capacity": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic",
+        "range": "100-120 km",
+        "top_speed": "25 kmph"
+      },
+      "vehicle_category": "electric"
     },
     {
       "variant_name": "Narain SLC/Electric",
       "ex_showroom_price": "₹1.32 Lakh",
       "mileage": "100 km range",
-      "engine_details": { "displacement": "", "max_power": "1.36 kW", "torque": "55 Nm" },
-      "payload_features": { "gross_vehicle_weight": "752 kg", "payload_capacity": "" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "range": "100 km", "top_speed": "25 kmph" }
+      "engine_details": {
+        "displacement": "",
+        "max_power": "1.36 kW",
+        "torque": "55 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "752 kg",
+        "payload_capacity": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic",
+        "range": "100 km",
+        "top_speed": "25 kmph"
+      },
+      "vehicle_category": "electric"
     },
     {
       "variant_name": "Narain LC/Electric",
       "ex_showroom_price": "₹0.90 Lakh",
       "mileage": "80 km range",
-      "engine_details": { "displacement": "", "max_power": "1.5 kW", "torque": "55 Nm" },
-      "payload_features": { "gross_vehicle_weight": "", "payload_capacity": "" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic" }
+      "engine_details": {
+        "displacement": "",
+        "max_power": "1.5 kW",
+        "torque": "55 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "",
+        "payload_capacity": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic"
+      },
+      "vehicle_category": "electric"
     },
     {
       "variant_name": "Humsafar IAQ/Electric",
       "ex_showroom_price": "₹1.85 Lakh",
       "mileage": "110 km range",
-      "engine_details": { "displacement": "", "max_power": "10 kW", "torque": "55 Nm" },
-      "payload_features": { "gross_vehicle_weight": "990 kg", "payload_capacity": "" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "range": "110 km", "top_speed": "55 kmph" }
+      "engine_details": {
+        "displacement": "",
+        "max_power": "10 kW",
+        "torque": "55 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "990 kg",
+        "payload_capacity": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic",
+        "range": "110 km",
+        "top_speed": "55 kmph"
+      },
+      "vehicle_category": "electric"
     },
     {
       "variant_name": "Comfort F2F Plus/Electric",
       "ex_showroom_price": "₹1.75 Lakh",
       "mileage": "100 km range",
-      "engine_details": { "displacement": "", "max_power": "1 bhp", "torque": "55 Nm" },
-      "payload_features": { "gross_vehicle_weight": "732 kg", "payload_capacity": "" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic" }
+      "engine_details": {
+        "displacement": "",
+        "max_power": "1 bhp",
+        "torque": "55 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "732 kg",
+        "payload_capacity": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic"
+      },
+      "vehicle_category": "electric"
     },
     {
       "variant_name": "E-Tipper/Electric",
       "ex_showroom_price": "₹1.35 Lakh",
       "mileage": "80 km range",
-      "engine_details": { "displacement": "", "max_power": "1 bhp", "torque": "65 Nm" },
-      "payload_features": { "gross_vehicle_weight": "720 kg", "payload_capacity": "" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "body_type": "Tipper" }
+      "engine_details": {
+        "displacement": "",
+        "max_power": "1 bhp",
+        "torque": "65 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "720 kg",
+        "payload_capacity": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic",
+        "body_type": "Tipper"
+      },
+      "vehicle_category": "electric"
     }
   ]
 }

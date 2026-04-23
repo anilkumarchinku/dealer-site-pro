@@ -24,7 +24,8 @@
         "battery_capacity": "7.67 kWh",
         "range": "101 km",
         "top_speed": "45 kmph"
-      }
+      },
+      "vehicle_category": "cargo"
     },
     {
       "variant_name": "OSM Rage+ Flame",
@@ -45,7 +46,8 @@
         "battery_capacity": "11.5 kWh",
         "range": "151 km",
         "top_speed": "45 kmph"
-      }
+      },
+      "vehicle_category": "cargo"
     },
     {
       "variant_name": "OSM Rage+ Blaze",
@@ -66,7 +68,8 @@
         "battery_capacity": "15.34 kWh",
         "range": "201 km",
         "top_speed": "45 kmph"
-      }
+      },
+      "vehicle_category": "cargo"
     },
     {
       "variant_name": "OSM Stream City",
@@ -87,7 +90,8 @@
         "battery_capacity": "9.2 kWh",
         "range": "120 km",
         "top_speed": "50 kmph"
-      }
+      },
+      "vehicle_category": "passenger"
     },
     {
       "variant_name": "OSM Stream Highway",
@@ -108,7 +112,8 @@
         "battery_capacity": "13.8 kWh",
         "range": "175 km",
         "top_speed": "50 kmph"
-      }
+      },
+      "vehicle_category": "passenger"
     },
     {
       "variant_name": "OSM Swayamgati Cargo",
@@ -129,7 +134,8 @@
         "battery_capacity": "5.4 kWh",
         "range": "80 km",
         "top_speed": "40 kmph"
-      }
+      },
+      "vehicle_category": "cargo"
     },
     {
       "variant_name": "OSM Swayamgati Cargo Plus",
@@ -150,7 +156,8 @@
         "battery_capacity": "8.1 kWh",
         "range": "120 km",
         "top_speed": "40 kmph"
-      }
+      },
+      "vehicle_category": "cargo"
     }
   ]
 }

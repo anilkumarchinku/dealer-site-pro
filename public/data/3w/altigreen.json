@@ -9,57 +9,153 @@
       "variant_name": "neEV TEZ/Electric",
       "ex_showroom_price": "₹3.60 Lakh",
       "mileage": "98 km range",
-      "engine_details": { "displacement": "", "max_power": "8.25 kW", "torque": "63 Nm" },
-      "payload_features": { "gross_vehicle_weight": "950 kg", "payload_capacity": "550 kg" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "battery_capacity": "8.2 kWh", "range": "98 km", "top_speed": "55 kmph" }
+      "engine_details": {
+        "displacement": "",
+        "max_power": "8.25 kW",
+        "torque": "63 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "950 kg",
+        "payload_capacity": "550 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic",
+        "battery_capacity": "8.2 kWh",
+        "range": "98 km",
+        "top_speed": "55 kmph"
+      },
+      "vehicle_category": "cargo"
     },
     {
       "variant_name": "neEV High Deck/Electric",
       "ex_showroom_price": "₹4.41 Lakh",
       "mileage": "151 km range",
-      "engine_details": { "displacement": "", "max_power": "8.25 kW", "torque": "63 Nm" },
-      "payload_features": { "gross_vehicle_weight": "950 kg", "payload_capacity": "550 kg" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "battery_capacity": "11 kWh", "range": "151 km", "top_speed": "55 kmph" }
+      "engine_details": {
+        "displacement": "",
+        "max_power": "8.25 kW",
+        "torque": "63 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "950 kg",
+        "payload_capacity": "550 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic",
+        "battery_capacity": "11 kWh",
+        "range": "151 km",
+        "top_speed": "55 kmph"
+      },
+      "vehicle_category": "cargo"
     },
     {
       "variant_name": "neEV Low Deck/Electric",
       "ex_showroom_price": "₹4.12 Lakh",
       "mileage": "151 km range",
-      "engine_details": { "displacement": "", "max_power": "8.25 kW", "torque": "63 Nm" },
-      "payload_features": { "gross_vehicle_weight": "950 kg", "payload_capacity": "550 kg" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "battery_capacity": "11 kWh", "range": "151 km", "top_speed": "55 kmph" }
+      "engine_details": {
+        "displacement": "",
+        "max_power": "8.25 kW",
+        "torque": "63 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "950 kg",
+        "payload_capacity": "550 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic",
+        "battery_capacity": "11 kWh",
+        "range": "151 km",
+        "top_speed": "55 kmph"
+      },
+      "vehicle_category": "cargo"
     },
     {
       "variant_name": "neEV Bhai Low Deck/Electric",
       "ex_showroom_price": "₹3.77 Lakh",
       "mileage": "135 km range",
-      "engine_details": { "displacement": "", "max_power": "8.25 kW", "torque": "63 Nm" },
-      "payload_features": { "gross_vehicle_weight": "950 kg", "payload_capacity": "550 kg" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "battery_capacity": "9.85 kWh", "range": "135 km", "top_speed": "55 kmph" }
+      "engine_details": {
+        "displacement": "",
+        "max_power": "8.25 kW",
+        "torque": "63 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "950 kg",
+        "payload_capacity": "550 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic",
+        "battery_capacity": "9.85 kWh",
+        "range": "135 km",
+        "top_speed": "55 kmph"
+      },
+      "vehicle_category": "electric"
     },
     {
       "variant_name": "neEV Bhai Flatbed/Electric",
       "ex_showroom_price": "₹3.81 Lakh",
       "mileage": "135 km range",
-      "engine_details": { "displacement": "", "max_power": "8.25 kW", "torque": "63 Nm" },
-      "payload_features": { "gross_vehicle_weight": "950 kg", "payload_capacity": "550 kg" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "battery_capacity": "9.85 kWh", "range": "135 km", "top_speed": "55 kmph" }
+      "engine_details": {
+        "displacement": "",
+        "max_power": "8.25 kW",
+        "torque": "63 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "950 kg",
+        "payload_capacity": "550 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic",
+        "battery_capacity": "9.85 kWh",
+        "range": "135 km",
+        "top_speed": "55 kmph"
+      },
+      "vehicle_category": "electric"
     },
     {
       "variant_name": "neEV Rahi/Electric",
       "ex_showroom_price": "₹4.50 Lakh",
       "mileage": "146 km range",
-      "engine_details": { "displacement": "", "max_power": "8.25 kW", "torque": "63 Nm" },
-      "payload_features": { "gross_vehicle_weight": "1050 kg", "payload_capacity": "" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "battery_capacity": "11 kWh", "range": "146 km", "top_speed": "55 kmph", "seating_capacity": "Driver + 4 Passenger" }
+      "engine_details": {
+        "displacement": "",
+        "max_power": "8.25 kW",
+        "torque": "63 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1050 kg",
+        "payload_capacity": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic",
+        "battery_capacity": "11 kWh",
+        "range": "146 km",
+        "top_speed": "55 kmph",
+        "seating_capacity": "Driver + 4 Passenger"
+      },
+      "vehicle_category": "passenger"
     },
     {
       "variant_name": "NEEV Flatbed/Electric",
       "ex_showroom_price": "₹3.75 Lakh",
       "mileage": "150 km range",
-      "engine_details": { "displacement": "", "max_power": "11 kW", "torque": "63 Nm" },
-      "payload_features": { "gross_vehicle_weight": "", "payload_capacity": "" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic" }
+      "engine_details": {
+        "displacement": "",
+        "max_power": "11 kW",
+        "torque": "63 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "",
+        "payload_capacity": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic"
+      },
+      "vehicle_category": "electric"
     }
   ]
 }

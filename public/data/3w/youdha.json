@@ -24,7 +24,8 @@
         "battery_capacity": "7.68 kWh",
         "range": "100 km",
         "top_speed": "45 kmph"
-      }
+      },
+      "vehicle_category": "cargo"
     },
     {
       "variant_name": "YOUDHA Trevo Cargo Plus",
@@ -45,7 +46,8 @@
         "battery_capacity": "10.24 kWh",
         "range": "140 km",
         "top_speed": "45 kmph"
-      }
+      },
+      "vehicle_category": "cargo"
     },
     {
       "variant_name": "YOUDHA EPOD Cargo",
@@ -66,7 +68,8 @@
         "battery_capacity": "5.12 kWh",
         "range": "80 km",
         "top_speed": "40 kmph"
-      }
+      },
+      "vehicle_category": "cargo"
     },
     {
       "variant_name": "YOUDHA EPOD Cargo Plus",
@@ -87,7 +90,8 @@
         "battery_capacity": "7.68 kWh",
         "range": "120 km",
         "top_speed": "40 kmph"
-      }
+      },
+      "vehicle_category": "cargo"
     },
     {
       "variant_name": "YOUDHA G-Van Cargo",
@@ -108,7 +112,8 @@
         "battery_capacity": "10.24 kWh",
         "range": "130 km",
         "top_speed": "50 kmph"
-      }
+      },
+      "vehicle_category": "cargo"
     },
     {
       "variant_name": "YOUDHA G-Van Cargo Plus",
@@ -129,7 +134,8 @@
         "battery_capacity": "14.34 kWh",
         "range": "180 km",
         "top_speed": "50 kmph"
-      }
+      },
+      "vehicle_category": "cargo"
     },
     {
       "variant_name": "YOUDHA Passenger E-Rickshaw Standard",
@@ -150,7 +156,8 @@
         "battery_capacity": "4.4 kWh",
         "range": "90 km",
         "top_speed": "25 kmph"
-      }
+      },
+      "vehicle_category": "electric"
     },
     {
       "variant_name": "YOUDHA Passenger E-Rickshaw Deluxe",
@@ -171,7 +178,8 @@
         "battery_capacity": "6.4 kWh",
         "range": "110 km",
         "top_speed": "25 kmph"
-      }
+      },
+      "vehicle_category": "electric"
     }
   ]
 }

@@ -9,153 +9,437 @@
       "variant_name": "Alfa DX/Diesel",
       "ex_showroom_price": "₹2.88 Lakh",
       "mileage": "28.9 kmpl",
-      "engine_details": { "displacement": "395 cc", "max_power": "9.5 bhp @ 3400 rpm", "torque": "23 Nm" },
-      "payload_features": { "gross_vehicle_weight": "835 kg", "payload_capacity": "" },
-      "technical_specifications": { "fuel_type": "Diesel", "transmission_type": "Manual", "wheelbase": "2005 mm", "top_speed": "53 kmph", "seating_capacity": "Driver + 3 Passenger" }
+      "engine_details": {
+        "displacement": "395 cc",
+        "max_power": "9.5 bhp @ 3400 rpm",
+        "torque": "23 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "835 kg",
+        "payload_capacity": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual",
+        "wheelbase": "2005 mm",
+        "top_speed": "53 kmph",
+        "seating_capacity": "Driver + 3 Passenger"
+      },
+      "vehicle_category": "passenger"
     },
     {
       "variant_name": "Alfa DX/CNG",
       "ex_showroom_price": "₹2.95 Lakh",
       "mileage": "25-30 km/kg",
-      "engine_details": { "displacement": "395 cc", "max_power": "9.5 bhp @ 3400 rpm", "torque": "23 Nm" },
-      "payload_features": { "gross_vehicle_weight": "860 kg", "payload_capacity": "" },
-      "technical_specifications": { "fuel_type": "CNG", "transmission_type": "Manual", "wheelbase": "2005 mm", "top_speed": "53 kmph", "seating_capacity": "Driver + 3 Passenger" }
+      "engine_details": {
+        "displacement": "395 cc",
+        "max_power": "9.5 bhp @ 3400 rpm",
+        "torque": "23 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "860 kg",
+        "payload_capacity": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual",
+        "wheelbase": "2005 mm",
+        "top_speed": "53 kmph",
+        "seating_capacity": "Driver + 3 Passenger"
+      },
+      "vehicle_category": "passenger"
     },
     {
       "variant_name": "Alfa DX Duo/CNG+Petrol",
       "ex_showroom_price": "₹2.83 Lakh",
       "mileage": "37.56 km/kg",
-      "engine_details": { "displacement": "395 cc", "max_power": "9.38 bhp @ 3400 rpm", "torque": "23 Nm" },
-      "payload_features": { "gross_vehicle_weight": "867 kg", "payload_capacity": "320 kg" },
-      "technical_specifications": { "fuel_type": "CNG+Petrol", "transmission_type": "Manual", "wheelbase": "2030 mm", "seating_capacity": "Driver + 3 Passenger" }
+      "engine_details": {
+        "displacement": "395 cc",
+        "max_power": "9.38 bhp @ 3400 rpm",
+        "torque": "23 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "867 kg",
+        "payload_capacity": "320 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG+Petrol",
+        "transmission_type": "Manual",
+        "wheelbase": "2030 mm",
+        "seating_capacity": "Driver + 3 Passenger"
+      },
+      "vehicle_category": "passenger"
     },
     {
       "variant_name": "Alfa Plus/Diesel",
       "ex_showroom_price": "₹2.58 Lakh",
       "mileage": "29.4 kmpl",
-      "engine_details": { "displacement": "597.7 cc", "max_power": "9.38 bhp @ 3600 rpm", "torque": "23.5 Nm @ 2200 rpm" },
-      "payload_features": { "gross_vehicle_weight": "995 kg", "payload_capacity": "505 kg" },
-      "technical_specifications": { "fuel_type": "Diesel", "transmission_type": "Manual", "wheelbase": "2165 mm", "top_speed": "53 kmph" }
+      "engine_details": {
+        "displacement": "597.7 cc",
+        "max_power": "9.38 bhp @ 3600 rpm",
+        "torque": "23.5 Nm @ 2200 rpm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "995 kg",
+        "payload_capacity": "505 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual",
+        "wheelbase": "2165 mm",
+        "top_speed": "53 kmph"
+      },
+      "vehicle_category": "passenger"
     },
     {
       "variant_name": "Alfa Plus Duo/CNG+Petrol",
       "ex_showroom_price": "₹2.85 Lakh",
       "mileage": "38.1 km/kg",
-      "engine_details": { "displacement": "395 cc", "max_power": "7 kW", "torque": "23 Nm" },
-      "payload_features": { "gross_vehicle_weight": "995 kg", "payload_capacity": "436 kg" },
-      "technical_specifications": { "fuel_type": "CNG+Petrol", "transmission_type": "Manual", "wheelbase": "2195 mm" }
+      "engine_details": {
+        "displacement": "395 cc",
+        "max_power": "7 kW",
+        "torque": "23 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "995 kg",
+        "payload_capacity": "436 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG+Petrol",
+        "transmission_type": "Manual",
+        "wheelbase": "2195 mm"
+      },
+      "vehicle_category": "passenger"
     },
     {
       "variant_name": "Alfa Champ/Petrol",
       "ex_showroom_price": "₹2.76 Lakh",
       "mileage": "40.2 kmpl",
-      "engine_details": { "displacement": "436 cc", "max_power": "7.5 bhp", "torque": "18 Nm" },
-      "payload_features": { "gross_vehicle_weight": "780 kg", "payload_capacity": "" },
-      "technical_specifications": { "fuel_type": "Petrol", "transmission_type": "Manual", "wheelbase": "2005 mm", "top_speed": "53 kmph", "seating_capacity": "Driver + 3 Passenger" }
+      "engine_details": {
+        "displacement": "436 cc",
+        "max_power": "7.5 bhp",
+        "torque": "18 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "780 kg",
+        "payload_capacity": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Petrol",
+        "transmission_type": "Manual",
+        "wheelbase": "2005 mm",
+        "top_speed": "53 kmph",
+        "seating_capacity": "Driver + 3 Passenger"
+      },
+      "vehicle_category": "passenger"
     },
     {
       "variant_name": "Alfa Comfy/Diesel",
       "ex_showroom_price": "₹2.75 Lakh",
       "mileage": "28.9 kmpl",
-      "engine_details": { "displacement": "436 cc", "max_power": "7.5 bhp @ 3600 rpm", "torque": "18 Nm" },
-      "payload_features": { "gross_vehicle_weight": "", "payload_capacity": "" },
-      "technical_specifications": { "fuel_type": "Diesel", "transmission_type": "Manual", "wheelbase": "2005 mm", "top_speed": "53 kmph", "seating_capacity": "Driver + 3 Passenger" }
+      "engine_details": {
+        "displacement": "436 cc",
+        "max_power": "7.5 bhp @ 3600 rpm",
+        "torque": "18 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "",
+        "payload_capacity": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Diesel",
+        "transmission_type": "Manual",
+        "wheelbase": "2005 mm",
+        "top_speed": "53 kmph",
+        "seating_capacity": "Driver + 3 Passenger"
+      },
+      "vehicle_category": "passenger"
     },
     {
       "variant_name": "e-Alfa Cargo/Electric",
       "ex_showroom_price": "₹1.56 Lakh",
       "mileage": "95 km range",
-      "engine_details": { "displacement": "", "max_power": "1.6 kW", "torque": "48 Nm" },
-      "payload_features": { "gross_vehicle_weight": "793 kg", "payload_capacity": "310 kg" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Constant Mesh", "wheelbase": "2168 mm", "top_speed": "25 kmph" }
+      "engine_details": {
+        "displacement": "",
+        "max_power": "1.6 kW",
+        "torque": "48 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "793 kg",
+        "payload_capacity": "310 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Constant Mesh",
+        "wheelbase": "2168 mm",
+        "top_speed": "25 kmph"
+      },
+      "vehicle_category": "electric"
     },
     {
       "variant_name": "e-Alfa Mini/Electric",
       "ex_showroom_price": "₹1.45 Lakh",
       "mileage": "80 km range",
-      "engine_details": { "displacement": "", "max_power": "1.56 kW", "torque": "48 Nm" },
-      "payload_features": { "gross_vehicle_weight": "", "payload_capacity": "" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "battery_capacity": "48V 120 Ah", "range": "80 km", "top_speed": "25 kmph", "seating_capacity": "Driver + 4 Passenger" }
+      "engine_details": {
+        "displacement": "",
+        "max_power": "1.56 kW",
+        "torque": "48 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "",
+        "payload_capacity": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic",
+        "battery_capacity": "48V 120 Ah",
+        "range": "80 km",
+        "top_speed": "25 kmph",
+        "seating_capacity": "Driver + 4 Passenger"
+      },
+      "vehicle_category": "passenger"
     },
     {
       "variant_name": "e-Alfa Plus/Electric",
       "ex_showroom_price": "₹1.78 Lakh",
       "mileage": "100 km range",
-      "engine_details": { "displacement": "", "max_power": "1.95 kW", "torque": "26.9 Nm" },
-      "payload_features": { "gross_vehicle_weight": "816 kg", "payload_capacity": "" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Constant Mesh", "battery_capacity": "150 Ah", "range": "100 km", "charging_time": "10-12 hours", "top_speed": "25 kmph", "wheelbase": "2168 mm", "seating_capacity": "Driver + 4 Passenger" }
+      "engine_details": {
+        "displacement": "",
+        "max_power": "1.95 kW",
+        "torque": "26.9 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "816 kg",
+        "payload_capacity": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Constant Mesh",
+        "battery_capacity": "150 Ah",
+        "range": "100 km",
+        "charging_time": "10-12 hours",
+        "top_speed": "25 kmph",
+        "wheelbase": "2168 mm",
+        "seating_capacity": "Driver + 4 Passenger"
+      },
+      "vehicle_category": "passenger"
     },
     {
       "variant_name": "e-Alfa Super/Electric",
       "ex_showroom_price": "₹1.78 Lakh",
       "mileage": "95 km range",
-      "engine_details": { "displacement": "", "max_power": "2 bhp", "torque": "22 Nm" },
-      "payload_features": { "gross_vehicle_weight": "792 kg", "payload_capacity": "" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Constant Mesh", "battery_capacity": "140 Ah", "range": "95 km", "charging_time": "4-5 hours", "top_speed": "25 kmph", "wheelbase": "2168 mm", "seating_capacity": "Driver + 3 Passenger" }
+      "engine_details": {
+        "displacement": "",
+        "max_power": "2 bhp",
+        "torque": "22 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "792 kg",
+        "payload_capacity": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Constant Mesh",
+        "battery_capacity": "140 Ah",
+        "range": "95 km",
+        "charging_time": "4-5 hours",
+        "top_speed": "25 kmph",
+        "wheelbase": "2168 mm",
+        "seating_capacity": "Driver + 3 Passenger"
+      },
+      "vehicle_category": "electric"
     },
     {
       "variant_name": "Treo Yaari/Electric",
       "ex_showroom_price": "₹1.96 Lakh",
       "mileage": "125 km range",
-      "engine_details": { "displacement": "", "max_power": "1.95 kW", "torque": "22 Nm" },
-      "payload_features": { "gross_vehicle_weight": "740 kg", "payload_capacity": "" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Direct Drive", "battery_capacity": "48V 3.69 kWh", "range": "125 km", "charging_time": "2.5 hours", "top_speed": "24.5 kmph", "wheelbase": "2073 mm", "seating_capacity": "Driver + 4 Passenger" }
+      "engine_details": {
+        "displacement": "",
+        "max_power": "1.95 kW",
+        "torque": "22 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "740 kg",
+        "payload_capacity": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Direct Drive",
+        "battery_capacity": "48V 3.69 kWh",
+        "range": "125 km",
+        "charging_time": "2.5 hours",
+        "top_speed": "24.5 kmph",
+        "wheelbase": "2073 mm",
+        "seating_capacity": "Driver + 4 Passenger"
+      },
+      "vehicle_category": "electric"
     },
     {
       "variant_name": "Treo Yaari Cargo/Electric",
       "ex_showroom_price": "Price Coming Soon",
       "mileage": "125 km range",
-      "engine_details": { "displacement": "", "max_power": "1.95 kW", "torque": "42 Nm" },
-      "payload_features": { "gross_vehicle_weight": "665 kg", "payload_capacity": "348 kg" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "battery_capacity": "48V 3.69 kWh", "range": "125 km", "wheelbase": "2166 mm" }
+      "engine_details": {
+        "displacement": "",
+        "max_power": "1.95 kW",
+        "torque": "42 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "665 kg",
+        "payload_capacity": "348 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic",
+        "battery_capacity": "48V 3.69 kWh",
+        "range": "125 km",
+        "wheelbase": "2166 mm"
+      },
+      "vehicle_category": "electric"
     },
     {
       "variant_name": "Treo/Electric",
       "ex_showroom_price": "₹3.23 Lakh",
       "mileage": "139 km range",
-      "engine_details": { "displacement": "", "max_power": "8 kW", "torque": "42 Nm" },
-      "payload_features": { "gross_vehicle_weight": "698 kg", "payload_capacity": "550 kg" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Direct Drive", "battery_capacity": "48V 7.37 kWh", "range": "139 km", "charging_time": "3 hours 50 min", "top_speed": "55 kmph", "wheelbase": "2073 mm", "seating_capacity": "Driver + 3 Passenger" }
+      "engine_details": {
+        "displacement": "",
+        "max_power": "8 kW",
+        "torque": "42 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "698 kg",
+        "payload_capacity": "550 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Direct Drive",
+        "battery_capacity": "48V 7.37 kWh",
+        "range": "139 km",
+        "charging_time": "3 hours 50 min",
+        "top_speed": "55 kmph",
+        "wheelbase": "2073 mm",
+        "seating_capacity": "Driver + 3 Passenger"
+      },
+      "vehicle_category": "electric"
     },
     {
       "variant_name": "Treo Plus/Electric",
       "ex_showroom_price": "₹3.69 Lakh",
       "mileage": "167 km range",
-      "engine_details": { "displacement": "", "max_power": "8 kW", "torque": "42 Nm" },
-      "payload_features": { "gross_vehicle_weight": "720 kg", "payload_capacity": "" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "battery_capacity": "48V 10.24 kWh", "range": "167 km", "charging_time": "4 hours 30 min", "top_speed": "55 kmph", "wheelbase": "2073 mm", "seating_capacity": "Driver + 3 Passenger" }
+      "engine_details": {
+        "displacement": "",
+        "max_power": "8 kW",
+        "torque": "42 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "720 kg",
+        "payload_capacity": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic",
+        "battery_capacity": "48V 10.24 kWh",
+        "range": "167 km",
+        "charging_time": "4 hours 30 min",
+        "top_speed": "55 kmph",
+        "wheelbase": "2073 mm",
+        "seating_capacity": "Driver + 3 Passenger"
+      },
+      "vehicle_category": "electric"
     },
     {
       "variant_name": "Treo Zor/Electric",
       "ex_showroom_price": "₹3.55 Lakh",
       "mileage": "80 km range",
-      "engine_details": { "displacement": "", "max_power": "8 kW", "torque": "42 Nm" },
-      "payload_features": { "gross_vehicle_weight": "995 kg", "payload_capacity": "578 kg" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Direct Drive", "battery_capacity": "48V 7.37 kWh", "range": "80 km", "charging_time": "3 hours 50 min", "top_speed": "50 kmph", "wheelbase": "2216 mm" }
+      "engine_details": {
+        "displacement": "",
+        "max_power": "8 kW",
+        "torque": "42 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "995 kg",
+        "payload_capacity": "578 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Direct Drive",
+        "battery_capacity": "48V 7.37 kWh",
+        "range": "80 km",
+        "charging_time": "3 hours 50 min",
+        "top_speed": "50 kmph",
+        "wheelbase": "2216 mm"
+      },
+      "vehicle_category": "electric"
     },
     {
       "variant_name": "Zor Grand/Electric",
       "ex_showroom_price": "₹4.12 Lakh",
       "mileage": "158 km range",
-      "engine_details": { "displacement": "", "max_power": "12 kW", "torque": "42 Nm" },
-      "payload_features": { "gross_vehicle_weight": "998 kg", "payload_capacity": "400 kg" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "battery_capacity": "10.24 kWh", "range": "158 km", "charging_time": "4 hours 30 min", "wheelbase": "2200 mm" }
+      "engine_details": {
+        "displacement": "",
+        "max_power": "12 kW",
+        "torque": "42 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "998 kg",
+        "payload_capacity": "400 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic",
+        "battery_capacity": "10.24 kWh",
+        "range": "158 km",
+        "charging_time": "4 hours 30 min",
+        "wheelbase": "2200 mm"
+      },
+      "vehicle_category": "cargo"
     },
     {
       "variant_name": "Zor Grand Range Plus/Electric",
       "ex_showroom_price": "₹4.12 Lakh",
       "mileage": "158 km range",
-      "engine_details": { "displacement": "", "max_power": "16 bhp", "torque": "42 Nm" },
-      "payload_features": { "gross_vehicle_weight": "998 kg", "payload_capacity": "418 kg" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "battery_capacity": "10.24 kWh", "range": "158 km", "wheelbase": "2200 mm", "gradeability": "20.34%" }
+      "engine_details": {
+        "displacement": "",
+        "max_power": "16 bhp",
+        "torque": "42 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "998 kg",
+        "payload_capacity": "418 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic",
+        "battery_capacity": "10.24 kWh",
+        "range": "158 km",
+        "wheelbase": "2200 mm",
+        "gradeability": "20.34%"
+      },
+      "vehicle_category": "cargo"
     },
     {
       "variant_name": "UDO/Electric",
       "ex_showroom_price": "₹3.84 Lakh",
       "mileage": "265 km range",
-      "engine_details": { "displacement": "", "max_power": "10 kW", "torque": "52 Nm" },
-      "payload_features": { "gross_vehicle_weight": "759 kg", "payload_capacity": "" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "battery_capacity": "11.7 kWh", "range": "265 km", "charging_time": "5 hours 15 min", "top_speed": "55 kmph", "wheelbase": "2100 mm", "seating_capacity": "Driver + 3 Passenger" }
+      "engine_details": {
+        "displacement": "",
+        "max_power": "10 kW",
+        "torque": "52 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "759 kg",
+        "payload_capacity": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic",
+        "battery_capacity": "11.7 kWh",
+        "range": "265 km",
+        "charging_time": "5 hours 15 min",
+        "top_speed": "55 kmph",
+        "wheelbase": "2100 mm",
+        "seating_capacity": "Driver + 3 Passenger"
+      },
+      "vehicle_category": "electric"
     }
   ]
 }

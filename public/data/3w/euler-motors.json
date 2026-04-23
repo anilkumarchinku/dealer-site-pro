@@ -37,7 +37,8 @@
         "gradeability": "",
         "body_type": "Open Load Body (3-Wheeler Cargo)"
       },
-      "source_url": "https://trucks.cardekho.com/en/trucks/euler/hi-load"
+      "source_url": "https://trucks.cardekho.com/en/trucks/euler/hi-load",
+      "vehicle_category": "cargo"
     },
     {
       "model": "HiLoad EV",
@@ -71,7 +72,8 @@
         "gradeability": "",
         "body_type": "Container Load Body (3-Wheeler Cargo)"
       },
-      "source_url": "https://trucks.cardekho.com/en/trucks/euler/hi-load"
+      "source_url": "https://trucks.cardekho.com/en/trucks/euler/hi-load",
+      "vehicle_category": "cargo"
     },
     {
       "model": "HiLoad EV",
@@ -105,7 +107,8 @@
         "gradeability": "",
         "body_type": "High Deck Open Body (3-Wheeler Cargo)"
       },
-      "source_url": "https://trucks.cardekho.com/en/trucks/euler/hi-load"
+      "source_url": "https://trucks.cardekho.com/en/trucks/euler/hi-load",
+      "vehicle_category": "cargo"
     },
     {
       "model": "NEO HiRANGE",
@@ -135,7 +138,8 @@
         "gradeability": "30%",
         "body_type": "Auto Rickshaw (3-Wheeler Passenger)"
       },
-      "source_url": "https://trucks.cardekho.com/en/trucks/euler/neo-hirange"
+      "source_url": "https://trucks.cardekho.com/en/trucks/euler/neo-hirange",
+      "vehicle_category": "passenger"
     },
     {
       "model": "NEO HiRANGE",
@@ -165,7 +169,8 @@
         "gradeability": "30%",
         "body_type": "Auto Rickshaw (3-Wheeler Passenger)"
       },
-      "source_url": "https://trucks.cardekho.com/en/trucks/euler/neo-hirange"
+      "source_url": "https://trucks.cardekho.com/en/trucks/euler/neo-hirange",
+      "vehicle_category": "passenger"
     },
     {
       "model": "NEO HiRANGE",
@@ -195,7 +200,8 @@
         "gradeability": "30%",
         "body_type": "Auto Rickshaw (3-Wheeler Passenger)"
       },
-      "source_url": "https://trucks.cardekho.com/en/trucks/euler/neo-hirange"
+      "source_url": "https://trucks.cardekho.com/en/trucks/euler/neo-hirange",
+      "vehicle_category": "passenger"
     },
     {
       "model": "NEO HiCity",
@@ -226,7 +232,8 @@
         "gradeability": "22%",
         "body_type": "Auto Rickshaw (3-Wheeler Passenger, 3+1 seating)"
       },
-      "source_url": "https://trucks.cardekho.com/en/trucks/euler/neo-hicity"
+      "source_url": "https://trucks.cardekho.com/en/trucks/euler/neo-hicity",
+      "vehicle_category": "passenger"
     },
     {
       "model": "NEO HiCity",
@@ -257,7 +264,8 @@
         "gradeability": "22%",
         "body_type": "Auto Rickshaw (3-Wheeler Passenger, 3+1 seating)"
       },
-      "source_url": "https://trucks.cardekho.com/en/trucks/euler/neo-hicity"
+      "source_url": "https://trucks.cardekho.com/en/trucks/euler/neo-hicity",
+      "vehicle_category": "passenger"
     },
     {
       "model": "Turbo EV 1000",
@@ -290,7 +298,8 @@
         "gradeability": "30%",
         "body_type": "Mini Truck / Deck Body (SCV)"
       },
-      "source_url": "https://trucks.cardekho.com/en/trucks/euler/turbo-ev-1000"
+      "source_url": "https://trucks.cardekho.com/en/trucks/euler/turbo-ev-1000",
+      "vehicle_category": "electric"
     },
     {
       "model": "Turbo EV 1000",
@@ -323,7 +332,8 @@
         "gradeability": "30%",
         "body_type": "Mini Truck / Deck Body (SCV)"
       },
-      "source_url": "https://trucks.cardekho.com/en/trucks/euler/turbo-ev-1000"
+      "source_url": "https://trucks.cardekho.com/en/trucks/euler/turbo-ev-1000",
+      "vehicle_category": "electric"
     },
     {
       "model": "Turbo EV 1000",
@@ -354,7 +364,8 @@
         "gradeability": "30%",
         "body_type": "Mini Truck / Deck Body (SCV)"
       },
-      "source_url": "https://trucks.cardekho.com/en/trucks/euler/turbo-ev-1000"
+      "source_url": "https://trucks.cardekho.com/en/trucks/euler/turbo-ev-1000",
+      "vehicle_category": "electric"
     },
     {
       "model": "Storm EV",
@@ -386,7 +397,8 @@
         "body_type": "Mini Truck / High Speed Goods Carrier (L5N)",
         "load_volume_options": "220 cu ft / 260 cu ft"
       },
-      "source_url": "https://trucks.cardekho.com/en/trucks/euler/storm-ev"
+      "source_url": "https://trucks.cardekho.com/en/trucks/euler/storm-ev",
+      "vehicle_category": "electric"
     },
     {
       "model": "Storm EV",
@@ -419,7 +431,8 @@
         "body_type": "Mini Truck / High Speed Goods Carrier (L5N)",
         "load_volume": "330 cu ft"
       },
-      "source_url": "https://trucks.cardekho.com/en/trucks/euler/storm-ev"
+      "source_url": "https://trucks.cardekho.com/en/trucks/euler/storm-ev",
+      "vehicle_category": "electric"
     }
   ]
 }

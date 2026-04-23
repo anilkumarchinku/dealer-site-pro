@@ -21,7 +21,8 @@
       "technical_specifications": {
         "fuel_type": "Diesel",
         "transmission_type": "Manual"
-      }
+      },
+      "vehicle_category": "cargo"
     },
     {
       "variant_name": "Shakti Cargo XD/Diesel",
@@ -39,7 +40,8 @@
       "technical_specifications": {
         "fuel_type": "Diesel",
         "transmission_type": "Manual"
-      }
+      },
+      "vehicle_category": "cargo"
     },
     {
       "variant_name": "GEM Cargo/Diesel",
@@ -57,7 +59,8 @@
       "technical_specifications": {
         "fuel_type": "Diesel",
         "transmission_type": "Manual"
-      }
+      },
+      "vehicle_category": "cargo"
     },
     {
       "variant_name": "GEM Cargo/CNG",
@@ -75,7 +78,8 @@
       "technical_specifications": {
         "fuel_type": "CNG",
         "transmission_type": "Manual"
-      }
+      },
+      "vehicle_category": "cargo"
     },
     {
       "variant_name": "Gem Paxx 3-Seater/CNG",
@@ -93,7 +97,8 @@
       "technical_specifications": {
         "fuel_type": "CNG",
         "transmission_type": "Manual"
-      }
+      },
+      "vehicle_category": "passenger"
     },
     {
       "variant_name": "Gem Paxx 3-Seater/CNG Aqua 3P",
@@ -111,7 +116,8 @@
       "technical_specifications": {
         "fuel_type": "CNG",
         "transmission_type": "Manual"
-      }
+      },
+      "vehicle_category": "passenger"
     },
     {
       "variant_name": "Gem Paxx 3-Seater/Petrol",
@@ -129,7 +135,8 @@
       "technical_specifications": {
         "fuel_type": "Petrol",
         "transmission_type": "Manual"
-      }
+      },
+      "vehicle_category": "passenger"
     },
     {
       "variant_name": "Gem Paxx 3-Seater/Diesel",
@@ -147,7 +154,8 @@
       "technical_specifications": {
         "fuel_type": "Diesel",
         "transmission_type": "Manual"
-      }
+      },
+      "vehicle_category": "passenger"
     },
     {
       "variant_name": "Gem Paxx 3-Seater/LPG",
@@ -165,7 +173,8 @@
       "technical_specifications": {
         "fuel_type": "LPG",
         "transmission_type": "Manual"
-      }
+      },
+      "vehicle_category": "passenger"
     },
     {
       "variant_name": "Rik 3-Seater/Petrol",
@@ -183,7 +192,8 @@
       "technical_specifications": {
         "fuel_type": "Petrol",
         "transmission_type": "Manual"
-      }
+      },
+      "vehicle_category": "passenger"
     },
     {
       "variant_name": "Rik 3-Seater/LPG",
@@ -201,7 +211,8 @@
       "technical_specifications": {
         "fuel_type": "LPG",
         "transmission_type": "Manual"
-      }
+      },
+      "vehicle_category": "passenger"
     },
     {
       "variant_name": "Rik 3-Seater/CNG",
@@ -219,7 +230,8 @@
       "technical_specifications": {
         "fuel_type": "CNG",
         "transmission_type": "Manual"
-      }
+      },
+      "vehicle_category": "passenger"
     },
     {
       "variant_name": "Gemini Passenger/Petrol",
@@ -237,7 +249,8 @@
       "technical_specifications": {
         "fuel_type": "Petrol",
         "transmission_type": "Manual"
-      }
+      },
+      "vehicle_category": "passenger"
     },
     {
       "variant_name": "Gemini Passenger/CNG",
@@ -255,7 +268,8 @@
       "technical_specifications": {
         "fuel_type": "CNG",
         "transmission_type": "Manual"
-      }
+      },
+      "vehicle_category": "passenger"
     },
     {
       "variant_name": "Gemini Plus/CNG",
@@ -273,7 +287,8 @@
       "technical_specifications": {
         "fuel_type": "CNG",
         "transmission_type": "Manual"
-      }
+      },
+      "vehicle_category": "passenger"
     },
     {
       "variant_name": "Smart Cargo/CNG",
@@ -291,7 +306,8 @@
       "technical_specifications": {
         "fuel_type": "CNG",
         "transmission_type": "Manual"
-      }
+      },
+      "vehicle_category": "cargo"
     },
     {
       "variant_name": "Elite Cargo/Electric",
@@ -311,7 +327,8 @@
         "transmission_type": "Automatic",
         "battery": "12V 100 Ah Lead-Acid",
         "charging_time": "8-10 hours"
-      }
+      },
+      "vehicle_category": "cargo"
     },
     {
       "variant_name": "Elite Plus Cargo/Electric",
@@ -331,7 +348,8 @@
         "transmission_type": "Automatic",
         "battery": "100 Ah Li-ion",
         "charging_time": "3-4 hours"
-      }
+      },
+      "vehicle_category": "passenger"
     },
     {
       "variant_name": "Elite Plus Passenger/Electric",
@@ -351,7 +369,8 @@
         "transmission_type": "Automatic",
         "battery": "12V 100 Ah Lead-Acid",
         "charging_time": "8-10 hours"
-      }
+      },
+      "vehicle_category": "passenger"
     },
     {
       "variant_name": "Mobili/Electric",
@@ -371,7 +390,8 @@
         "transmission_type": "Automatic",
         "battery": "6.6 kWh Li-ion",
         "charging_time": "4 hours"
-      }
+      },
+      "vehicle_category": "electric"
     },
     {
       "variant_name": "Energie/Electric",
@@ -391,7 +411,8 @@
         "transmission_type": "Automatic",
         "battery": "13.2 kWh Li-ion",
         "charging_time": "6-7 hours"
-      }
+      },
+      "vehicle_category": "electric"
     }
   ]
 }

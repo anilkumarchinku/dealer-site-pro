@@ -21,7 +21,8 @@
       "technical_specifications": {
         "fuel_type": "Petrol",
         "transmission_type": "Manual"
-      }
+      },
+      "vehicle_category": "passenger"
     },
     {
       "variant_name": "RE Compact 4S/CNG",
@@ -39,7 +40,8 @@
       "technical_specifications": {
         "fuel_type": "CNG",
         "transmission_type": "Manual"
-      }
+      },
+      "vehicle_category": "passenger"
     },
     {
       "variant_name": "RE Compact 4S/LPG",
@@ -57,7 +59,8 @@
       "technical_specifications": {
         "fuel_type": "LPG",
         "transmission_type": "Manual"
-      }
+      },
+      "vehicle_category": "passenger"
     },
     {
       "variant_name": "RE Compact 4S/Diesel",
@@ -75,7 +78,8 @@
       "technical_specifications": {
         "fuel_type": "Diesel",
         "transmission_type": "Manual"
-      }
+      },
+      "vehicle_category": "passenger"
     },
     {
       "variant_name": "Maxima Z/CNG",
@@ -93,7 +97,8 @@
       "technical_specifications": {
         "fuel_type": "CNG",
         "transmission_type": "Manual"
-      }
+      },
+      "vehicle_category": "passenger"
     },
     {
       "variant_name": "Maxima Z/LPG",
@@ -111,7 +116,8 @@
       "technical_specifications": {
         "fuel_type": "LPG",
         "transmission_type": "Manual"
-      }
+      },
+      "vehicle_category": "passenger"
     },
     {
       "variant_name": "Maxima Z/Diesel",
@@ -129,7 +135,8 @@
       "technical_specifications": {
         "fuel_type": "Diesel",
         "transmission_type": "Manual"
-      }
+      },
+      "vehicle_category": "passenger"
     },
     {
       "variant_name": "Maxima C/CNG",
@@ -147,7 +154,8 @@
       "technical_specifications": {
         "fuel_type": "CNG",
         "transmission_type": "Manual"
-      }
+      },
+      "vehicle_category": "cargo"
     },
     {
       "variant_name": "Maxima C/Diesel",
@@ -165,7 +173,8 @@
       "technical_specifications": {
         "fuel_type": "Diesel",
         "transmission_type": "Manual"
-      }
+      },
+      "vehicle_category": "cargo"
     },
     {
       "variant_name": "Maxima X Wide/CNG",
@@ -183,7 +192,8 @@
       "technical_specifications": {
         "fuel_type": "CNG",
         "transmission_type": "Manual"
-      }
+      },
+      "vehicle_category": "cargo"
     },
     {
       "variant_name": "Maxima X Wide/LPG",
@@ -201,7 +211,8 @@
       "technical_specifications": {
         "fuel_type": "LPG",
         "transmission_type": "Manual"
-      }
+      },
+      "vehicle_category": "cargo"
     },
     {
       "variant_name": "Maxima X Wide/Diesel",
@@ -219,7 +230,8 @@
       "technical_specifications": {
         "fuel_type": "Diesel",
         "transmission_type": "Manual"
-      }
+      },
+      "vehicle_category": "cargo"
     },
     {
       "variant_name": "Maxima XL Cargo E-TEC 9.0/Electric",
@@ -240,7 +252,8 @@
         "battery_capacity": "8.9 kWh",
         "range": "149 km",
         "top_speed": "40 kmph"
-      }
+      },
+      "vehicle_category": "electric"
     },
     {
       "variant_name": "Maxima XL Cargo E-TEC 12.0/Electric",
@@ -261,7 +274,8 @@
         "battery_capacity": "11.8 kWh",
         "range": "183 km",
         "top_speed": "40 kmph"
-      }
+      },
+      "vehicle_category": "electric"
     },
     {
       "variant_name": "GoGo P5009/Electric",
@@ -282,7 +296,8 @@
         "battery_capacity": "9.2 kWh",
         "range": "212 km",
         "top_speed": "50 kmph"
-      }
+      },
+      "vehicle_category": "electric"
     },
     {
       "variant_name": "GoGo P5012/Electric",
@@ -303,7 +318,8 @@
         "battery_capacity": "12.0 kWh",
         "range": "251 km",
         "top_speed": "50 kmph"
-      }
+      },
+      "vehicle_category": "electric"
     },
     {
       "variant_name": "GoGo P7012/Electric",
@@ -324,7 +340,8 @@
         "battery_capacity": "12.1 kWh",
         "range": "259 km",
         "top_speed": "50 kmph"
-      }
+      },
+      "vehicle_category": "electric"
     },
     {
       "variant_name": "RE E-TEC 9.0/Electric",
@@ -345,7 +362,8 @@
         "battery_capacity": "8.9 kWh",
         "range": "178 km",
         "top_speed": "45 kmph"
-      }
+      },
+      "vehicle_category": "electric"
     },
     {
       "variant_name": "WEGO P9018/Electric",
@@ -366,7 +384,8 @@
         "battery_capacity": "17.7 kWh",
         "range": "296 km",
         "top_speed": "45 kmph"
-      }
+      },
+      "vehicle_category": "electric"
     },
     {
       "variant_name": "Qute/CNG",
@@ -384,7 +403,8 @@
       "technical_specifications": {
         "fuel_type": "CNG",
         "transmission_type": "Manual"
-      }
+      },
+      "vehicle_category": "passenger"
     },
     {
       "variant_name": "Qute/LPG",
@@ -402,7 +422,8 @@
       "technical_specifications": {
         "fuel_type": "LPG",
         "transmission_type": "Manual"
-      }
+      },
+      "vehicle_category": "passenger"
     },
     {
       "variant_name": "RE Optima/Electric",
@@ -423,7 +444,8 @@
         "battery_capacity": "1.6 kWh",
         "range": "50 km",
         "top_speed": "50 kmph"
-      }
+      },
+      "vehicle_category": "electric"
     },
     {
       "variant_name": "RE Optima Plus/Electric",
@@ -444,7 +466,8 @@
         "battery_capacity": "2.0 kWh",
         "range": "65 km",
         "top_speed": "50 kmph"
-      }
+      },
+      "vehicle_category": "electric"
     }
   ]
 }

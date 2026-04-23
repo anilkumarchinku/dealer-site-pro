@@ -9,41 +9,97 @@
       "variant_name": "Y4A/Electric",
       "ex_showroom_price": "₹1.30 Lakh",
       "mileage": "80 km range",
-      "engine_details": { "displacement": "", "max_power": "1 bhp", "torque": "25 Nm" },
-      "payload_features": { "gross_vehicle_weight": "", "payload_capacity": "250 kg" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic" }
+      "engine_details": {
+        "displacement": "",
+        "max_power": "1 bhp",
+        "torque": "25 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "",
+        "payload_capacity": "250 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic"
+      },
+      "vehicle_category": "passenger"
     },
     {
       "variant_name": "Pace-E Cargo/Electric",
       "ex_showroom_price": "₹1.35 Lakh",
       "mileage": "100 km range",
-      "engine_details": { "displacement": "", "max_power": "1 bhp", "torque": "35 Nm" },
-      "payload_features": { "gross_vehicle_weight": "", "payload_capacity": "336 kg" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic" }
+      "engine_details": {
+        "displacement": "",
+        "max_power": "1 bhp",
+        "torque": "35 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "",
+        "payload_capacity": "336 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic"
+      },
+      "vehicle_category": "electric"
     },
     {
       "variant_name": "Sumo/Electric",
       "ex_showroom_price": "₹1.41 Lakh",
       "mileage": "100 km range",
-      "engine_details": { "displacement": "", "max_power": "3.5 kW", "torque": "35 Nm" },
-      "payload_features": { "gross_vehicle_weight": "", "payload_capacity": "" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic" }
+      "engine_details": {
+        "displacement": "",
+        "max_power": "3.5 kW",
+        "torque": "35 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "",
+        "payload_capacity": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic"
+      },
+      "vehicle_category": "passenger"
     },
     {
       "variant_name": "Kyoro L5/Electric",
       "ex_showroom_price": "Price Coming Soon",
       "mileage": "120 km range",
-      "engine_details": { "displacement": "", "max_power": "8 kW", "torque": "30 Nm" },
-      "payload_features": { "gross_vehicle_weight": "750 kg", "payload_capacity": "" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic" }
+      "engine_details": {
+        "displacement": "",
+        "max_power": "8 kW",
+        "torque": "30 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "750 kg",
+        "payload_capacity": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic"
+      },
+      "vehicle_category": "cargo"
     },
     {
       "variant_name": "Kyoro Plus/Electric",
       "ex_showroom_price": "₹3.65 Lakh",
       "mileage": "200 km range",
-      "engine_details": { "displacement": "", "max_power": "8 kW", "torque": "32 Nm" },
-      "payload_features": { "gross_vehicle_weight": "750 kg", "payload_capacity": "" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "range": "200 km" }
+      "engine_details": {
+        "displacement": "",
+        "max_power": "8 kW",
+        "torque": "32 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "750 kg",
+        "payload_capacity": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic",
+        "range": "200 km"
+      },
+      "vehicle_category": "electric"
     }
   ]
 }

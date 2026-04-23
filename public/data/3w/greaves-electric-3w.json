@@ -9,49 +9,144 @@
       "variant_name": "E-Pro Cargo 2100/Electric",
       "ex_showroom_price": "₹3.08 Lakh",
       "mileage": "119 km range",
-      "engine_details": { "displacement": "", "max_power": "7.5 kW", "torque": "38 Nm" },
-      "payload_features": { "gross_vehicle_weight": "996 kg", "payload_capacity": "536 kg" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "battery_capacity": "8.5 kWh", "range": "119 km", "charging_time": "4-5 hrs", "wheelbase": "2100 mm" }
+      "engine_details": {
+        "displacement": "",
+        "max_power": "7.5 kW",
+        "torque": "38 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "996 kg",
+        "payload_capacity": "536 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic",
+        "battery_capacity": "8.5 kWh",
+        "range": "119 km",
+        "charging_time": "4-5 hrs",
+        "wheelbase": "2100 mm"
+      },
+      "vehicle_category": "electric"
     },
     {
       "variant_name": "Eltra EV Cargo PU/Electric",
       "ex_showroom_price": "₹3.87 Lakh",
       "mileage": "105 km range",
-      "engine_details": { "displacement": "", "max_power": "9.5 kW", "torque": "49 Nm" },
-      "payload_features": { "gross_vehicle_weight": "996 kg", "payload_capacity": "507 kg" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "battery_capacity": "10.8 kWh", "range": "105 km", "charging_time": "5-6 hrs", "wheelbase": "2100 mm" }
+      "engine_details": {
+        "displacement": "",
+        "max_power": "9.5 kW",
+        "torque": "49 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "996 kg",
+        "payload_capacity": "507 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic",
+        "battery_capacity": "10.8 kWh",
+        "range": "105 km",
+        "charging_time": "5-6 hrs",
+        "wheelbase": "2100 mm"
+      },
+      "vehicle_category": "electric"
     },
     {
       "variant_name": "Eltra EV Cargo FB/Electric",
       "ex_showroom_price": "₹4.33 Lakh",
       "mileage": "105 km range",
-      "engine_details": { "displacement": "", "max_power": "9.5 kW", "torque": "49 Nm" },
-      "payload_features": { "gross_vehicle_weight": "996 kg", "payload_capacity": "528 kg" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "battery_capacity": "10.8 kWh", "range": "105 km", "charging_time": "5-6 hrs", "wheelbase": "2100 mm", "body_type": "Delivery Van" }
+      "engine_details": {
+        "displacement": "",
+        "max_power": "9.5 kW",
+        "torque": "49 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "996 kg",
+        "payload_capacity": "528 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic",
+        "battery_capacity": "10.8 kWh",
+        "range": "105 km",
+        "charging_time": "5-6 hrs",
+        "wheelbase": "2100 mm",
+        "body_type": "Delivery Van"
+      },
+      "vehicle_category": "electric"
     },
     {
       "variant_name": "Eltra City 3 Seater/Electric",
       "ex_showroom_price": "₹3.86 Lakh",
       "mileage": "160 km range",
-      "engine_details": { "displacement": "", "max_power": "9.6 kW", "torque": "49 Nm" },
-      "payload_features": { "gross_vehicle_weight": "754 kg", "payload_capacity": "330 kg" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "battery_capacity": "10.8 kWh", "range": "160 km", "charging_time": "5-6 hrs", "wheelbase": "1910 mm", "top_speed": "60 kmph", "seating_capacity": "Driver + 3" }
+      "engine_details": {
+        "displacement": "",
+        "max_power": "9.6 kW",
+        "torque": "49 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "754 kg",
+        "payload_capacity": "330 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic",
+        "battery_capacity": "10.8 kWh",
+        "range": "160 km",
+        "charging_time": "5-6 hrs",
+        "wheelbase": "1910 mm",
+        "top_speed": "60 kmph",
+        "seating_capacity": "Driver + 3"
+      },
+      "vehicle_category": "passenger"
     },
     {
       "variant_name": "Eltra City Xtra 3 Seater/Electric",
       "ex_showroom_price": "₹3.57 Lakh",
       "mileage": "170 km range",
-      "engine_details": { "displacement": "", "max_power": "9.5 kW", "torque": "49 Nm" },
-      "payload_features": { "gross_vehicle_weight": "996 kg", "payload_capacity": "330 kg" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "battery_capacity": "10.75 kWh", "battery_type": "LFP", "range": "170 km", "charging_time": "4-5 hrs", "wheelbase": "1910 mm", "top_speed": "60 kmph", "seating_capacity": "Driver + 3" }
+      "engine_details": {
+        "displacement": "",
+        "max_power": "9.5 kW",
+        "torque": "49 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "996 kg",
+        "payload_capacity": "330 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic",
+        "battery_capacity": "10.75 kWh",
+        "battery_type": "LFP",
+        "range": "170 km",
+        "charging_time": "4-5 hrs",
+        "wheelbase": "1910 mm",
+        "top_speed": "60 kmph",
+        "seating_capacity": "Driver + 3"
+      },
+      "vehicle_category": "passenger"
     },
     {
       "variant_name": "Xargo EV/Electric",
       "ex_showroom_price": "Price Coming Soon",
       "mileage": "100 km range",
-      "engine_details": { "displacement": "", "max_power": "1.5 kW", "torque": "15 Nm" },
-      "payload_features": { "gross_vehicle_weight": "", "payload_capacity": "300 kg" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "battery_capacity": "5 kWh", "battery_type": "LFP", "range": "100 km" }
+      "engine_details": {
+        "displacement": "",
+        "max_power": "1.5 kW",
+        "torque": "15 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "",
+        "payload_capacity": "300 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic",
+        "battery_capacity": "5 kWh",
+        "battery_type": "LFP",
+        "range": "100 km"
+      },
+      "vehicle_category": "electric"
     }
   ]
 }

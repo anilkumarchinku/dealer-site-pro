@@ -9,145 +9,361 @@
       "variant_name": "King Duramax/Petrol",
       "ex_showroom_price": "₹1.80 Lakh",
       "mileage": "35 kmpl",
-      "engine_details": { "displacement": "197.2 cc", "max_power": "6.5 bhp", "torque": "10.8 Nm" },
-      "payload_features": { "gross_vehicle_weight": "640 kg", "payload_capacity": "300 kg" },
-      "technical_specifications": { "fuel_type": "Petrol", "transmission_type": "Manual" }
+      "engine_details": {
+        "displacement": "197.2 cc",
+        "max_power": "6.5 bhp",
+        "torque": "10.8 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "640 kg",
+        "payload_capacity": "300 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Petrol",
+        "transmission_type": "Manual"
+      },
+      "vehicle_category": "passenger"
     },
     {
       "variant_name": "King Duramax/CNG",
       "ex_showroom_price": "₹2.25 Lakh",
       "mileage": "36 km/kg",
-      "engine_details": { "displacement": "197.2 cc", "max_power": "6.5 bhp", "torque": "10.8 Nm" },
-      "payload_features": { "gross_vehicle_weight": "660 kg", "payload_capacity": "300 kg" },
-      "technical_specifications": { "fuel_type": "CNG", "transmission_type": "Manual" }
+      "engine_details": {
+        "displacement": "197.2 cc",
+        "max_power": "6.5 bhp",
+        "torque": "10.8 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "660 kg",
+        "payload_capacity": "300 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "vehicle_category": "passenger"
     },
     {
       "variant_name": "King Duramax Plus/Petrol",
       "ex_showroom_price": "₹2.30 Lakh",
       "mileage": "35 kmpl",
-      "engine_details": { "displacement": "197.2 cc", "max_power": "7.5 bhp", "torque": "12 Nm" },
-      "payload_features": { "gross_vehicle_weight": "690 kg", "payload_capacity": "350 kg" },
-      "technical_specifications": { "fuel_type": "Petrol", "transmission_type": "Manual" }
+      "engine_details": {
+        "displacement": "197.2 cc",
+        "max_power": "7.5 bhp",
+        "torque": "12 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "690 kg",
+        "payload_capacity": "350 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Petrol",
+        "transmission_type": "Manual"
+      },
+      "vehicle_category": "passenger"
     },
     {
       "variant_name": "King Duramax Plus/CNG",
       "ex_showroom_price": "₹2.58 Lakh",
       "mileage": "36 km/kg",
-      "engine_details": { "displacement": "197.2 cc", "max_power": "7.5 bhp", "torque": "12 Nm" },
-      "payload_features": { "gross_vehicle_weight": "710 kg", "payload_capacity": "350 kg" },
-      "technical_specifications": { "fuel_type": "CNG", "transmission_type": "Manual" }
+      "engine_details": {
+        "displacement": "197.2 cc",
+        "max_power": "7.5 bhp",
+        "torque": "12 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "710 kg",
+        "payload_capacity": "350 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "vehicle_category": "passenger"
     },
     {
       "variant_name": "King Deluxe/Petrol",
       "ex_showroom_price": "₹2.01 Lakh",
       "mileage": "35 kmpl",
-      "engine_details": { "displacement": "197.2 cc", "max_power": "8.2 bhp", "torque": "14 Nm" },
-      "payload_features": { "gross_vehicle_weight": "660 kg", "payload_capacity": "" },
-      "technical_specifications": { "fuel_type": "Petrol", "transmission_type": "Manual", "seating_capacity": "Driver + 3 Passenger" }
+      "engine_details": {
+        "displacement": "197.2 cc",
+        "max_power": "8.2 bhp",
+        "torque": "14 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "660 kg",
+        "payload_capacity": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Petrol",
+        "transmission_type": "Manual",
+        "seating_capacity": "Driver + 3 Passenger"
+      },
+      "vehicle_category": "passenger"
     },
     {
       "variant_name": "King Deluxe/LPG",
       "ex_showroom_price": "₹2.10 Lakh",
       "mileage": "30 km/kg",
-      "engine_details": { "displacement": "197.2 cc", "max_power": "8.2 bhp", "torque": "14 Nm" },
-      "payload_features": { "gross_vehicle_weight": "660 kg", "payload_capacity": "" },
-      "technical_specifications": { "fuel_type": "LPG", "transmission_type": "Manual", "seating_capacity": "Driver + 3 Passenger" }
+      "engine_details": {
+        "displacement": "197.2 cc",
+        "max_power": "8.2 bhp",
+        "torque": "14 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "660 kg",
+        "payload_capacity": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "LPG",
+        "transmission_type": "Manual",
+        "seating_capacity": "Driver + 3 Passenger"
+      },
+      "vehicle_category": "passenger"
     },
     {
       "variant_name": "King Deluxe/CNG",
       "ex_showroom_price": "₹2.23 Lakh",
       "mileage": "36 km/kg",
-      "engine_details": { "displacement": "197.2 cc", "max_power": "8.2 bhp", "torque": "14 Nm" },
-      "payload_features": { "gross_vehicle_weight": "680 kg", "payload_capacity": "" },
-      "technical_specifications": { "fuel_type": "CNG", "transmission_type": "Manual", "seating_capacity": "Driver + 3 Passenger" }
+      "engine_details": {
+        "displacement": "197.2 cc",
+        "max_power": "8.2 bhp",
+        "torque": "14 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "680 kg",
+        "payload_capacity": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual",
+        "seating_capacity": "Driver + 3 Passenger"
+      },
+      "vehicle_category": "passenger"
     },
     {
       "variant_name": "King Kargo/CNG PF",
       "ex_showroom_price": "₹2.45 Lakh",
       "mileage": "36 km/kg",
-      "engine_details": { "displacement": "197.2 cc", "max_power": "8.2 bhp", "torque": "14 Nm" },
-      "payload_features": { "gross_vehicle_weight": "750 kg", "payload_capacity": "380 kg" },
-      "technical_specifications": { "fuel_type": "CNG", "transmission_type": "Manual" }
+      "engine_details": {
+        "displacement": "197.2 cc",
+        "max_power": "8.2 bhp",
+        "torque": "14 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "750 kg",
+        "payload_capacity": "380 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "vehicle_category": "cargo"
     },
     {
       "variant_name": "King Kargo/CNG Deck",
       "ex_showroom_price": "₹2.69 Lakh",
       "mileage": "36 km/kg",
-      "engine_details": { "displacement": "197.2 cc", "max_power": "8.2 bhp", "torque": "14 Nm" },
-      "payload_features": { "gross_vehicle_weight": "750 kg", "payload_capacity": "380 kg" },
-      "technical_specifications": { "fuel_type": "CNG", "transmission_type": "Manual" }
+      "engine_details": {
+        "displacement": "197.2 cc",
+        "max_power": "8.2 bhp",
+        "torque": "14 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "750 kg",
+        "payload_capacity": "380 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "vehicle_category": "cargo"
     },
     {
       "variant_name": "King Kargo CNG HD/FSD",
       "ex_showroom_price": "₹2.71 Lakh",
       "mileage": "36 km/kg",
-      "engine_details": { "displacement": "301.1 cc", "max_power": "9.1 kW", "torque": "22.4 Nm" },
-      "payload_features": { "gross_vehicle_weight": "998 kg", "payload_capacity": "435 kg" },
-      "technical_specifications": { "fuel_type": "CNG", "transmission_type": "Manual" }
+      "engine_details": {
+        "displacement": "301.1 cc",
+        "max_power": "9.1 kW",
+        "torque": "22.4 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "998 kg",
+        "payload_capacity": "435 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "vehicle_category": "cargo"
     },
     {
       "variant_name": "King Kargo CNG HD/PF",
       "ex_showroom_price": "₹2.71 Lakh",
       "mileage": "36 km/kg",
-      "engine_details": { "displacement": "301.1 cc", "max_power": "9.1 kW", "torque": "22.4 Nm" },
-      "payload_features": { "gross_vehicle_weight": "998 kg", "payload_capacity": "435 kg" },
-      "technical_specifications": { "fuel_type": "CNG", "transmission_type": "Manual" }
+      "engine_details": {
+        "displacement": "301.1 cc",
+        "max_power": "9.1 kW",
+        "torque": "22.4 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "998 kg",
+        "payload_capacity": "435 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "vehicle_category": "cargo"
     },
     {
       "variant_name": "King Kargo CNG HD/Container",
       "ex_showroom_price": "₹2.71 Lakh",
       "mileage": "36 km/kg",
-      "engine_details": { "displacement": "301.1 cc", "max_power": "9.1 kW", "torque": "22.4 Nm" },
-      "payload_features": { "gross_vehicle_weight": "998 kg", "payload_capacity": "435 kg" },
-      "technical_specifications": { "fuel_type": "CNG", "transmission_type": "Manual" }
+      "engine_details": {
+        "displacement": "301.1 cc",
+        "max_power": "9.1 kW",
+        "torque": "22.4 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "998 kg",
+        "payload_capacity": "435 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "vehicle_category": "cargo"
     },
     {
       "variant_name": "King Kargo CNG HD/CBC",
       "ex_showroom_price": "₹2.71 Lakh",
       "mileage": "36 km/kg",
-      "engine_details": { "displacement": "301.1 cc", "max_power": "9.1 kW", "torque": "22.4 Nm" },
-      "payload_features": { "gross_vehicle_weight": "998 kg", "payload_capacity": "435 kg" },
-      "technical_specifications": { "fuel_type": "CNG", "transmission_type": "Manual" }
+      "engine_details": {
+        "displacement": "301.1 cc",
+        "max_power": "9.1 kW",
+        "torque": "22.4 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "998 kg",
+        "payload_capacity": "435 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "CNG",
+        "transmission_type": "Manual"
+      },
+      "vehicle_category": "cargo"
     },
     {
       "variant_name": "King Kargo HD EV/FSD",
       "ex_showroom_price": "₹3.85 Lakh",
       "mileage": "143 km range",
-      "engine_details": { "displacement": "", "max_power": "11 kW", "torque": "40 Nm" },
-      "payload_features": { "gross_vehicle_weight": "998 kg", "payload_capacity": "457 kg" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "battery_capacity": "8.86 kWh", "battery_type": "LiFePO4", "range": "143 km" }
+      "engine_details": {
+        "displacement": "",
+        "max_power": "11 kW",
+        "torque": "40 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "998 kg",
+        "payload_capacity": "457 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic",
+        "battery_capacity": "8.86 kWh",
+        "battery_type": "LiFePO4",
+        "range": "143 km"
+      },
+      "vehicle_category": "electric"
     },
     {
       "variant_name": "King Kargo HD EV/PF",
       "ex_showroom_price": "₹3.85 Lakh",
       "mileage": "143 km range",
-      "engine_details": { "displacement": "", "max_power": "11 kW", "torque": "40 Nm" },
-      "payload_features": { "gross_vehicle_weight": "998 kg", "payload_capacity": "457 kg" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "battery_capacity": "8.86 kWh", "battery_type": "LiFePO4", "range": "143 km" }
+      "engine_details": {
+        "displacement": "",
+        "max_power": "11 kW",
+        "torque": "40 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "998 kg",
+        "payload_capacity": "457 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic",
+        "battery_capacity": "8.86 kWh",
+        "battery_type": "LiFePO4",
+        "range": "143 km"
+      },
+      "vehicle_category": "electric"
     },
     {
       "variant_name": "King Kargo HD EV/Container",
       "ex_showroom_price": "₹3.85 Lakh",
       "mileage": "156 km range",
-      "engine_details": { "displacement": "", "max_power": "11 kW", "torque": "40 Nm" },
-      "payload_features": { "gross_vehicle_weight": "998 kg", "payload_capacity": "457 kg" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "battery_capacity": "8.86 kWh", "battery_type": "LiFePO4", "range": "156 km" }
+      "engine_details": {
+        "displacement": "",
+        "max_power": "11 kW",
+        "torque": "40 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "998 kg",
+        "payload_capacity": "457 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic",
+        "battery_capacity": "8.86 kWh",
+        "battery_type": "LiFePO4",
+        "range": "156 km"
+      },
+      "vehicle_category": "electric"
     },
     {
       "variant_name": "King Kargo HD EV/CBC",
       "ex_showroom_price": "₹3.85 Lakh",
       "mileage": "156 km range",
-      "engine_details": { "displacement": "", "max_power": "11 kW", "torque": "40 Nm" },
-      "payload_features": { "gross_vehicle_weight": "998 kg", "payload_capacity": "457 kg" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "battery_capacity": "8.86 kWh", "battery_type": "LiFePO4", "range": "156 km" }
+      "engine_details": {
+        "displacement": "",
+        "max_power": "11 kW",
+        "torque": "40 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "998 kg",
+        "payload_capacity": "457 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic",
+        "battery_capacity": "8.86 kWh",
+        "battery_type": "LiFePO4",
+        "range": "156 km"
+      },
+      "vehicle_category": "electric"
     },
     {
       "variant_name": "King EV MAX/Electric",
       "ex_showroom_price": "₹3.00 Lakh",
       "mileage": "179 km range",
-      "engine_details": { "displacement": "", "max_power": "11 kW", "torque": "40 Nm" },
-      "payload_features": { "gross_vehicle_weight": "760 kg", "payload_capacity": "" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "battery_capacity": "9.2 kWh", "range": "179 km", "seating_capacity": "Driver + 3 Passenger" }
+      "engine_details": {
+        "displacement": "",
+        "max_power": "11 kW",
+        "torque": "40 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "760 kg",
+        "payload_capacity": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic",
+        "battery_capacity": "9.2 kWh",
+        "range": "179 km",
+        "seating_capacity": "Driver + 3 Passenger"
+      },
+      "vehicle_category": "electric"
     }
   ]
 }

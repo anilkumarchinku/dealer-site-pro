@@ -9,33 +9,82 @@
       "variant_name": "Super Auto ePL 2.0 R/Electric",
       "ex_showroom_price": "₹3.77 Lakh",
       "mileage": "197 km range",
-      "engine_details": { "displacement": "", "max_power": "10 kW", "torque": "60 Nm" },
-      "payload_features": { "gross_vehicle_weight": "791 kg", "payload_capacity": "" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "range": "197 km", "seating_capacity": "Driver + 3 Passenger" }
+      "engine_details": {
+        "displacement": "",
+        "max_power": "10 kW",
+        "torque": "60 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "791 kg",
+        "payload_capacity": ""
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic",
+        "range": "197 km",
+        "seating_capacity": "Driver + 3 Passenger"
+      },
+      "vehicle_category": "passenger"
     },
     {
       "variant_name": "Super Cargo eCx d+/Electric",
       "ex_showroom_price": "₹4.37 Lakh",
       "mileage": "200 km range",
-      "engine_details": { "displacement": "", "max_power": "12 kW", "torque": "42 Nm" },
-      "payload_features": { "gross_vehicle_weight": "1200 kg", "payload_capacity": "580 kg" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "range": "200 km" }
+      "engine_details": {
+        "displacement": "",
+        "max_power": "12 kW",
+        "torque": "42 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "1200 kg",
+        "payload_capacity": "580 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic",
+        "range": "200 km"
+      },
+      "vehicle_category": "cargo"
     },
     {
       "variant_name": "Eviator E-350L/Electric",
       "ex_showroom_price": "₹16.11 Lakh",
       "mileage": "245 km range",
-      "engine_details": { "displacement": "", "max_power": "80 kW", "torque": "300 Nm" },
-      "payload_features": { "gross_vehicle_weight": "3490 kg", "payload_capacity": "1707 kg" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "range": "245 km" }
+      "engine_details": {
+        "displacement": "",
+        "max_power": "80 kW",
+        "torque": "300 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "3490 kg",
+        "payload_capacity": "1707 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic",
+        "range": "245 km"
+      },
+      "vehicle_category": "electric"
     },
     {
       "variant_name": "Eviator E-350X/Electric",
       "ex_showroom_price": "₹16.39 Lakh",
       "mileage": "249 km range",
-      "engine_details": { "displacement": "", "max_power": "80 kW", "torque": "300 Nm" },
-      "payload_features": { "gross_vehicle_weight": "3490 kg", "payload_capacity": "1707 kg" },
-      "technical_specifications": { "fuel_type": "Electric", "transmission_type": "Automatic", "range": "249 km" }
+      "engine_details": {
+        "displacement": "",
+        "max_power": "80 kW",
+        "torque": "300 Nm"
+      },
+      "payload_features": {
+        "gross_vehicle_weight": "3490 kg",
+        "payload_capacity": "1707 kg"
+      },
+      "technical_specifications": {
+        "fuel_type": "Electric",
+        "transmission_type": "Automatic",
+        "range": "249 km"
+      },
+      "vehicle_category": "electric"
     }
   ]
 }
