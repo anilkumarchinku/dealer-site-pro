@@ -23,7 +23,7 @@
         "transmission_type": "Automatic",
         "range": "75-105 km"
       },
-      "vehicle_category": "electric"
+      "vehicle_category": "cargo"
     },
     {
       "variant_name": "Touro Max Cargo L5N/Electric",
@@ -43,7 +43,7 @@
         "transmission_type": "Automatic",
         "range": "157 km"
       },
-      "vehicle_category": "passenger"
+      "vehicle_category": "cargo"
     },
     {
       "variant_name": "Touro Max Passenger L5M/Electric",
@@ -83,7 +83,7 @@
         "transmission_type": "Automatic",
         "range": "100 km"
       },
-      "vehicle_category": "passenger"
+      "vehicle_category": "cargo"
     }
   ]
 }

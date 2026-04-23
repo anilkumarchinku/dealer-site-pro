@@ -253,7 +253,7 @@
         "range": "149 km",
         "top_speed": "40 kmph"
       },
-      "vehicle_category": "electric"
+      "vehicle_category": "cargo"
     },
     {
       "variant_name": "Maxima XL Cargo E-TEC 12.0/Electric",
@@ -275,7 +275,7 @@
         "range": "183 km",
         "top_speed": "40 kmph"
       },
-      "vehicle_category": "electric"
+      "vehicle_category": "cargo"
     },
     {
       "variant_name": "GoGo P5009/Electric",

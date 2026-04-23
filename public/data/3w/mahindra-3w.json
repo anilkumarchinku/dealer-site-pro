@@ -174,7 +174,7 @@
         "wheelbase": "2168 mm",
         "top_speed": "25 kmph"
       },
-      "vehicle_category": "electric"
+      "vehicle_category": "cargo"
     },
     {
       "variant_name": "e-Alfa Mini/Electric",
@@ -294,7 +294,7 @@
         "range": "125 km",
         "wheelbase": "2166 mm"
       },
-      "vehicle_category": "electric"
+      "vehicle_category": "cargo"
     },
     {
       "variant_name": "Treo/Electric",

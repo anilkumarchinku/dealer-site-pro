@@ -41,7 +41,7 @@
         "fuel_type": "Electric",
         "transmission_type": "Automatic"
       },
-      "vehicle_category": "electric"
+      "vehicle_category": "cargo"
     },
     {
       "variant_name": "Sumo/Electric",

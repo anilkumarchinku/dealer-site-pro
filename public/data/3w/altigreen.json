@@ -91,7 +91,7 @@
         "range": "135 km",
         "top_speed": "55 kmph"
       },
-      "vehicle_category": "electric"
+      "vehicle_category": "cargo"
     },
     {
       "variant_name": "neEV Bhai Flatbed/Electric",
@@ -113,7 +113,7 @@
         "range": "135 km",
         "top_speed": "55 kmph"
       },
-      "vehicle_category": "electric"
+      "vehicle_category": "cargo"
     },
     {
       "variant_name": "neEV Rahi/Electric",
@@ -155,7 +155,7 @@
         "fuel_type": "Electric",
         "transmission_type": "Automatic"
       },
-      "vehicle_category": "electric"
+      "vehicle_category": "cargo"
     }
   ]
 }
