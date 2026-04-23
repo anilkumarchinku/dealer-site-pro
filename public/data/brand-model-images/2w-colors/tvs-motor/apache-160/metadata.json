@@ -1,0 +1,45 @@
+{
+  "brand": "TVS Motor Company",
+  "model": "Apache RTR 160",
+  "brandId": "tvs-motor",
+  "makeSlug": "tvs-bikes",
+  "modelSlug": "apache-160",
+  "sourceUrl": "https://www.bikewale.com/tvs-bikes/apache-160/colours/",
+  "scrapedAt": "2026-04-22T13:24:27.368Z",
+  "count": 8,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/tvs-select-model-racing-red-1697702431812.png?q=100",
+  "colors": [
+    {
+      "name": "Racing Red",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/apache-160/racing-red.png"
+    },
+    {
+      "name": "T Grey",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/apache-160/t-grey.avif"
+    },
+    {
+      "name": "Gloss Black",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/apache-160/gloss-black.avif"
+    },
+    {
+      "name": "Pearl White",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/apache-160/pearl-white.avif"
+    },
+    {
+      "name": "Matte Blue",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/apache-160/matte-blue.avif"
+    },
+    {
+      "name": "Glossy Black (BE)",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/apache-160/glossy-black-be.png"
+    },
+    {
+      "name": "Matte Black",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/apache-160/matte-black.avif"
+    },
+    {
+      "name": "Black Champagne Gold Livery",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/apache-160/black-champagne-gold-livery.avif"
+    }
+  ]
+}

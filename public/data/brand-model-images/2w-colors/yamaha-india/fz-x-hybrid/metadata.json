@@ -1,0 +1,16 @@
+{
+  "brand": "Yamaha",
+  "model": "FZ X Hybrid",
+  "brandId": "yamaha-india",
+  "modelSlug": "fz-x-hybrid",
+  "sourceUrl": "https://www.bikewale.com/yamaha-bikes/fz-x-hybrid/colours/",
+  "scrapedAt": "2026-04-22T13:34:29.746Z",
+  "count": 1,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/o5boogb_1852742.jpg?q=100",
+  "colors": [
+    {
+      "name": "Matte Titan",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/fz-x-hybrid/matte-titan.avif"
+    }
+  ]
+}

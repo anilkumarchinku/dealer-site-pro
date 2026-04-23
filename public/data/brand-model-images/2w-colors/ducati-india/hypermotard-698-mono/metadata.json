@@ -1,0 +1,16 @@
+{
+  "brand": "Ducati",
+  "model": "Hypermotard 698 Mono",
+  "brandId": "ducati-india",
+  "modelSlug": "hypermotard-698-mono",
+  "sourceUrl": "https://www.bikewale.com/ducati-bikes/hypermotard-698-mono/colours/",
+  "scrapedAt": "2026-04-22T13:33:35.779Z",
+  "count": 1,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/ducati-select-model-ducati-red-1719992997510.jpg?q=100",
+  "colors": [
+    {
+      "name": "Ducati Red",
+      "image": "/data/brand-model-images/2w-colors/ducati-india/hypermotard-698-mono/ducati-red.avif"
+    }
+  ]
+}

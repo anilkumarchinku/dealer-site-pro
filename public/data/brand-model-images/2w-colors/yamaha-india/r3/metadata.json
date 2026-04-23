@@ -1,0 +1,20 @@
+{
+  "brand": "Yamaha",
+  "model": "R3",
+  "brandId": "yamaha-india",
+  "modelSlug": "r3",
+  "sourceUrl": "https://www.bikewale.com/yamaha-bikes/r3/colours/",
+  "scrapedAt": "2026-04-22T13:34:33.705Z",
+  "count": 2,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/yamaha-select-model-yamaha-black-1702635690402.png?q=100",
+  "colors": [
+    {
+      "name": "Yamaha Black",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/r3/yamaha-black.png"
+    },
+    {
+      "name": "Icon Blue",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/r3/icon-blue.png"
+    }
+  ]
+}

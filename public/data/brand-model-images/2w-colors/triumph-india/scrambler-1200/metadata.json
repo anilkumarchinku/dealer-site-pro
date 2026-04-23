@@ -1,0 +1,24 @@
+{
+  "brand": "Triumph",
+  "model": "Scrambler 1200",
+  "brandId": "triumph-india",
+  "modelSlug": "scrambler-1200",
+  "sourceUrl": "https://www.bikewale.com/triumph-bikes/scrambler-1200/colours/",
+  "scrapedAt": "2026-04-22T13:34:16.976Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/triumph-select-model-carnival-red-1707808374957.jpg?q=100",
+  "colors": [
+    {
+      "name": "Carnival Red",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/scrambler-1200/carnival-red.avif"
+    },
+    {
+      "name": "Ash Grey",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/scrambler-1200/ash-grey.avif"
+    },
+    {
+      "name": "Sapphire Black",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/scrambler-1200/sapphire-black.png"
+    }
+  ]
+}

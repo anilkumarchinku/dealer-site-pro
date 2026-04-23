@@ -78,7 +78,7 @@ export function BrandPageContent({ brand, cars, brandInfo }: BrandPageContentPro
                             {/* Brand Logo */}
                             <div className="w-16 h-16 flex items-center justify-center shrink-0">
                                 {getBrandLogo(brand) ? (
-                                    <Image src={getBrandLogo(brand)!} alt={brand} width={56} height={56} className="object-contain" />
+                                    <Image src={getBrandLogo(brand)!} alt={brand} width={56} height={56} unoptimized className="object-contain" />
                                 ) : (
                                     <div className="w-14 h-14 rounded-xl bg-card border border-border flex items-center justify-center">
                                         <span className="text-primary text-2xl font-bold">{brand.charAt(0)}</span>

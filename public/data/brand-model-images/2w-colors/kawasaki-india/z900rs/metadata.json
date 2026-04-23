@@ -1,0 +1,16 @@
+{
+  "brand": "Kawasaki",
+  "model": "Z900RS",
+  "brandId": "kawasaki-india",
+  "modelSlug": "z900rs",
+  "sourceUrl": "https://www.bikewale.com/kawasaki-bikes/z900rs/colours/",
+  "scrapedAt": "2026-04-22T13:34:00.174Z",
+  "count": 1,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/kawasaki-select-model-metallic-diablo-black-1691498877507.png?q=100",
+  "colors": [
+    {
+      "name": "Metallic Diablo Black",
+      "image": "/data/brand-model-images/2w-colors/kawasaki-india/z900rs/metallic-diablo-black.png"
+    }
+  ]
+}

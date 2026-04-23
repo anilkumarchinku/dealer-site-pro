@@ -1,0 +1,28 @@
+{
+  "brand": "iVOOMi",
+  "model": "Jeet X",
+  "brandId": "ivoomi-energy",
+  "modelSlug": "jeet-x",
+  "sourceUrl": "https://www.bikewale.com/ivoomi-bikes/jeet-x/colours/",
+  "scrapedAt": "2026-04-22T13:33:55.376Z",
+  "count": 4,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/i7hbteb_1777569.gif?q=100",
+  "colors": [
+    {
+      "name": "White",
+      "image": "/data/brand-model-images/2w-colors/ivoomi-energy/jeet-x/white.avif"
+    },
+    {
+      "name": "Grey",
+      "image": "/data/brand-model-images/2w-colors/ivoomi-energy/jeet-x/grey.avif"
+    },
+    {
+      "name": "Blue",
+      "image": "/data/brand-model-images/2w-colors/ivoomi-energy/jeet-x/blue.avif"
+    },
+    {
+      "name": "Red",
+      "image": "/data/brand-model-images/2w-colors/ivoomi-energy/jeet-x/red.avif"
+    }
+  ]
+}

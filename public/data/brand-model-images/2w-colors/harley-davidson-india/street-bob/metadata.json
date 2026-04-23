@@ -1,0 +1,32 @@
+{
+  "brand": "Harley-Davidson",
+  "model": "Street Bob",
+  "brandId": "harley-davidson-india",
+  "modelSlug": "street-bob",
+  "sourceUrl": "https://www.bikewale.com/harleydavidson-bikes/street-bob/colours/",
+  "scrapedAt": "2026-04-22T13:33:40.996Z",
+  "count": 5,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bcln0hb_1863524.jpg?q=100",
+  "colors": [
+    {
+      "name": "Billiard Gray",
+      "image": "/data/brand-model-images/2w-colors/harley-davidson-india/street-bob/billiard-gray.avif"
+    },
+    {
+      "name": "Vivid Black",
+      "image": "/data/brand-model-images/2w-colors/harley-davidson-india/street-bob/vivid-black.avif"
+    },
+    {
+      "name": "Centerline",
+      "image": "/data/brand-model-images/2w-colors/harley-davidson-india/street-bob/centerline.avif"
+    },
+    {
+      "name": "Purple Abyss Denim",
+      "image": "/data/brand-model-images/2w-colors/harley-davidson-india/street-bob/purple-abyss-denim.avif"
+    },
+    {
+      "name": "Iron Horse Metallic",
+      "image": "/data/brand-model-images/2w-colors/harley-davidson-india/street-bob/iron-horse-metallic.avif"
+    }
+  ]
+}

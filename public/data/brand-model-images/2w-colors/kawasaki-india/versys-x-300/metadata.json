@@ -1,0 +1,16 @@
+{
+  "brand": "Kawasaki",
+  "model": "Versys-X 300",
+  "brandId": "kawasaki-india",
+  "modelSlug": "versys-x-300",
+  "sourceUrl": "https://www.bikewale.com/kawasaki-bikes/versys-x-300/colours/",
+  "scrapedAt": "2026-04-22T13:33:59.204Z",
+  "count": 1,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/4gu45hb_1884507.jpg?q=100",
+  "colors": [
+    {
+      "name": "Candy Lime Green / Metallic Flat Spark Black",
+      "image": "/data/brand-model-images/2w-colors/kawasaki-india/versys-x-300/candy-lime-green-metallic-flat-spark-black.avif"
+    }
+  ]
+}

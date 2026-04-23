@@ -1,0 +1,64 @@
+{
+  "brand": "Honda Motorcycle & Scooter India",
+  "model": "CB350C",
+  "brandId": "honda-hmsi",
+  "modelSlug": "cb350c",
+  "sourceUrl": "https://www.bikewale.com/honda-bikes/cb350c/colours/",
+  "scrapedAt": "2026-04-22T13:33:54.999Z",
+  "count": 13,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/u5v8qhb_1882259.jpg?q=100",
+  "colors": [
+    {
+      "name": "DLX Pearl Igneous Black",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/cb350c/dlx-pearl-igneous-black.avif"
+    },
+    {
+      "name": "DLX Pearl Deep Ground Grey",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/cb350c/dlx-pearl-deep-ground-grey.avif"
+    },
+    {
+      "name": "DLX Mat Dune Brown",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/cb350c/dlx-mat-dune-brown.avif"
+    },
+    {
+      "name": "DLX Mat Axis Grey Metallic",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/cb350c/dlx-mat-axis-grey-metallic.avif"
+    },
+    {
+      "name": "DLX Rebel Red Metallic",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/cb350c/dlx-rebel-red-metallic.avif"
+    },
+    {
+      "name": "Pearl Igneous Black",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/cb350c/pearl-igneous-black.avif"
+    },
+    {
+      "name": "Pearl Deep Ground Grey",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/cb350c/pearl-deep-ground-grey.avif"
+    },
+    {
+      "name": "Mat Axis Grey Metallic",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/cb350c/mat-axis-grey-metallic.avif"
+    },
+    {
+      "name": "DLX Pro Pearl Igneous Black",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/cb350c/dlx-pro-pearl-igneous-black.avif"
+    },
+    {
+      "name": "DLX Pro Pearl Deep Ground Grey",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/cb350c/dlx-pro-pearl-deep-ground-grey.avif"
+    },
+    {
+      "name": "DLX Pro Mat Axis Grey Mettalic",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/cb350c/dlx-pro-mat-axis-grey-mettalic.avif"
+    },
+    {
+      "name": "Mat Dune Brown (SE)",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/cb350c/mat-dune-brown-se.avif"
+    },
+    {
+      "name": "Red Metallic (SE)",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/cb350c/red-metallic-se.avif"
+    }
+  ]
+}

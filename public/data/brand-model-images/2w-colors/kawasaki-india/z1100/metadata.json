@@ -1,0 +1,16 @@
+{
+  "brand": "Kawasaki",
+  "model": "Z1100",
+  "brandId": "kawasaki-india",
+  "modelSlug": "z1100",
+  "sourceUrl": "https://www.bikewale.com/kawasaki-bikes/z1100/colours/",
+  "scrapedAt": "2026-04-22T13:33:59.710Z",
+  "count": 1,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/spq93hb_1888401.jpg?q=100",
+  "colors": [
+    {
+      "name": "Ebony/Mettallic Carbon Grey",
+      "image": "/data/brand-model-images/2w-colors/kawasaki-india/z1100/ebony-mettallic-carbon-grey.avif"
+    }
+  ]
+}

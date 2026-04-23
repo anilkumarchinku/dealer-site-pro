@@ -254,7 +254,7 @@ async function scrapeCar(browser, brand, modelSlug) {
             model: modelSlug.charAt(0).toUpperCase() + modelSlug.slice(1).replace(/-/g, ' '),
             variant: "Standard",
             year: new Date().getFullYear(),
-            bodyType: getSpec(['body type']) || "Hatchback",
+            bodyType: getSpec(['body type']) || null,
             segment: "B",
             price: data.priceText,
             pricing: {

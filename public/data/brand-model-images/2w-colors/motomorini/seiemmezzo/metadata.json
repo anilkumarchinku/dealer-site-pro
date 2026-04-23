@@ -1,0 +1,36 @@
+{
+  "brand": "Moto Morini",
+  "model": "Seiemmezzo",
+  "brandId": "motomorini",
+  "modelSlug": "seiemmezzo",
+  "sourceUrl": "https://www.bikewale.com/motomorini-bikes/seiemmezzo/colours/",
+  "scrapedAt": "2026-04-22T13:34:01.235Z",
+  "count": 6,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/moto-morini-select-model-milano-red-1665490217567.gif?q=100",
+  "colors": [
+    {
+      "name": "Milano Red",
+      "image": "/data/brand-model-images/2w-colors/motomorini/seiemmezzo/milano-red.avif"
+    },
+    {
+      "name": "Metalized White",
+      "image": "/data/brand-model-images/2w-colors/motomorini/seiemmezzo/metalized-white.avif"
+    },
+    {
+      "name": "Matt Grey",
+      "image": "/data/brand-model-images/2w-colors/motomorini/seiemmezzo/matt-grey.avif"
+    },
+    {
+      "name": "Graphite Black",
+      "image": "/data/brand-model-images/2w-colors/motomorini/seiemmezzo/graphite-black.avif"
+    },
+    {
+      "name": "Matte Green",
+      "image": "/data/brand-model-images/2w-colors/motomorini/seiemmezzo/matte-green.avif"
+    },
+    {
+      "name": "Indigo Blue",
+      "image": "/data/brand-model-images/2w-colors/motomorini/seiemmezzo/indigo-blue.avif"
+    }
+  ]
+}

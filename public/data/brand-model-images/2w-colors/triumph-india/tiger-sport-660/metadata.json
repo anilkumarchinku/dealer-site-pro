@@ -1,0 +1,24 @@
+{
+  "brand": "Triumph",
+  "model": "Tiger Sport 660",
+  "brandId": "triumph-india",
+  "modelSlug": "tiger-sport-660",
+  "sourceUrl": "https://www.bikewale.com/triumph-bikes/tiger-sport-660/colours/",
+  "scrapedAt": "2026-04-22T13:34:22.946Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/triumph-select-model-graphite--sapphire-black-1633452854925.jpg?q=100",
+  "colors": [
+    {
+      "name": "Graphite & Sapphire Black",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/tiger-sport-660/graphite-and-sapphire-black.avif"
+    },
+    {
+      "name": "Korosi Red & Graphite",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/tiger-sport-660/korosi-red-and-graphite.avif"
+    },
+    {
+      "name": "Lucerne Blue & Sapphire Black",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/tiger-sport-660/lucerne-blue-and-sapphire-black.avif"
+    }
+  ]
+}

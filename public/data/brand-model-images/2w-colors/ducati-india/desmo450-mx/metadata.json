@@ -1,0 +1,16 @@
+{
+  "brand": "Ducati",
+  "model": "Desmo450 MX",
+  "brandId": "ducati-india",
+  "modelSlug": "desmo450-mx",
+  "sourceUrl": "https://www.bikewale.com/ducati-bikes/desmo450-mx/colours/",
+  "scrapedAt": "2026-04-22T13:33:35.086Z",
+  "count": 1,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/k2sb3ib_1915284.png?q=100",
+  "colors": [
+    {
+      "name": "Ducati Red",
+      "image": "/data/brand-model-images/2w-colors/ducati-india/desmo450-mx/ducati-red.png"
+    }
+  ]
+}

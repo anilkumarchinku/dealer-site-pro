@@ -1,0 +1,32 @@
+{
+  "brand": "Odysse",
+  "model": "Vader",
+  "brandId": "odysse-electric",
+  "modelSlug": "vader",
+  "sourceUrl": "https://www.bikewale.com/odysse-bikes/vader/colours/",
+  "scrapedAt": "2026-04-22T13:34:08.572Z",
+  "count": 5,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/odysse-select-model-misty-grey-1680779166057.png?q=100",
+  "colors": [
+    {
+      "name": "Misty Grey",
+      "image": "/data/brand-model-images/2w-colors/odysse-electric/vader/misty-grey.png"
+    },
+    {
+      "name": "Venom Green",
+      "image": "/data/brand-model-images/2w-colors/odysse-electric/vader/venom-green.png"
+    },
+    {
+      "name": "Glossy Black",
+      "image": "/data/brand-model-images/2w-colors/odysse-electric/vader/glossy-black.png"
+    },
+    {
+      "name": "Fiery Red",
+      "image": "/data/brand-model-images/2w-colors/odysse-electric/vader/fiery-red.png"
+    },
+    {
+      "name": "Midnight Blue",
+      "image": "/data/brand-model-images/2w-colors/odysse-electric/vader/midnight-blue.png"
+    }
+  ]
+}

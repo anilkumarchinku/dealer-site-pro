@@ -1,0 +1,40 @@
+{
+  "brand": "Bajaj",
+  "model": "Freedom 125 CNG",
+  "brandId": "bajaj-auto",
+  "modelSlug": "freedom-125-cng",
+  "sourceUrl": "https://www.bikewale.com/bajaj-bikes/freedom-125-cng/colours/",
+  "scrapedAt": "2026-04-22T13:33:32.370Z",
+  "count": 7,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/da475ib_1911176.png?q=100",
+  "colors": [
+    {
+      "name": "Cyber White",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/freedom-125-cng/cyber-white.png"
+    },
+    {
+      "name": "Racing Red",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/freedom-125-cng/racing-red.png"
+    },
+    {
+      "name": "Pewter Grey - Black",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/freedom-125-cng/pewter-grey-black.png"
+    },
+    {
+      "name": "Ebony Black - Grey",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/freedom-125-cng/ebony-black-grey.png"
+    },
+    {
+      "name": "Caribbean Blue",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/freedom-125-cng/caribbean-blue.png"
+    },
+    {
+      "name": "Ebony Black - Red",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/freedom-125-cng/ebony-black-red.png"
+    },
+    {
+      "name": "Pewter Grey - Yellow",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/freedom-125-cng/pewter-grey-yellow.png"
+    }
+  ]
+}

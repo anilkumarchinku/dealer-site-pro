@@ -1,0 +1,32 @@
+{
+  "brand": "Yamaha",
+  "model": "MT 15 V2",
+  "brandId": "yamaha-india",
+  "modelSlug": "mt-15-v2",
+  "sourceUrl": "https://www.bikewale.com/yamaha-bikes/mt-15-v2/colours/",
+  "scrapedAt": "2026-04-22T13:34:32.409Z",
+  "count": 5,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/v2cnphb_1881513.jpg?q=100",
+  "colors": [
+    {
+      "name": "Metallic Black",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/mt-15-v2/metallic-black.avif"
+    },
+    {
+      "name": "Metallic Silver Cyan",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/mt-15-v2/metallic-silver-cyan.avif"
+    },
+    {
+      "name": "Ice Storm",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/mt-15-v2/ice-storm.avif"
+    },
+    {
+      "name": "Vivid Violet Metallic",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/mt-15-v2/vivid-violet-metallic.avif"
+    },
+    {
+      "name": "Metallic Black DLX",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/mt-15-v2/metallic-black-dlx.avif"
+    }
+  ]
+}

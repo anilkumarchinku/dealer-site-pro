@@ -1,0 +1,44 @@
+{
+  "brand": "Honda Motorcycle & Scooter India",
+  "model": "Activa 6G",
+  "brandId": "honda-hmsi",
+  "modelSlug": "activa-6g",
+  "sourceUrl": "https://www.bikewale.com/honda-bikes/activa-6g/colours/",
+  "scrapedAt": "2026-04-22T13:33:45.418Z",
+  "count": 8,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/apiepgb_1854160.jpg?q=100",
+  "colors": [
+    {
+      "name": "Rebel Red Metallic",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/activa-6g/rebel-red-metallic.avif"
+    },
+    {
+      "name": "Pearl Siren Blue",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/activa-6g/pearl-siren-blue.avif"
+    },
+    {
+      "name": "Pearl Precious White",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/activa-6g/pearl-precious-white.avif"
+    },
+    {
+      "name": "Pearl Igneous Black",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/activa-6g/pearl-igneous-black.avif"
+    },
+    {
+      "name": "Mat Axis Gray Metallic",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/activa-6g/mat-axis-gray-metallic.avif"
+    },
+    {
+      "name": "Decent Blue Metallic",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/activa-6g/decent-blue-metallic.avif"
+    },
+    {
+      "name": "Mat Steel Black Metallic (Anniversary Edition)",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/activa-6g/mat-steel-black-metallic-anniversary-edition.avif"
+    },
+    {
+      "name": "Pearl Siren Blue (Anniversary Edition)",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/activa-6g/pearl-siren-blue-anniversary-edition.avif"
+    }
+  ]
+}

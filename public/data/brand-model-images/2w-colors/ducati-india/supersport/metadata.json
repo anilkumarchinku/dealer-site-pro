@@ -1,0 +1,20 @@
+{
+  "brand": "Ducati",
+  "model": "SuperSport",
+  "brandId": "ducati-india",
+  "modelSlug": "supersport",
+  "sourceUrl": "https://www.bikewale.com/ducati-bikes/supersport/colours/",
+  "scrapedAt": "2026-04-22T13:33:39.149Z",
+  "count": 2,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/ducati-select-model-ducati-red--standard-1631179070191.jpg?q=100",
+  "colors": [
+    {
+      "name": "Ducati Red - Standard",
+      "image": "/data/brand-model-images/2w-colors/ducati-india/supersport/ducati-red-standard.avif"
+    },
+    {
+      "name": "Arctic White",
+      "image": "/data/brand-model-images/2w-colors/ducati-india/supersport/arctic-white.avif"
+    }
+  ]
+}

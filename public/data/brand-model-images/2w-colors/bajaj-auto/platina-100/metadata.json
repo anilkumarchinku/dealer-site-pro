@@ -1,0 +1,28 @@
+{
+  "brand": "Bajaj",
+  "model": "Platina 100",
+  "brandId": "bajaj-auto",
+  "modelSlug": "platina-100",
+  "sourceUrl": "https://www.bikewale.com/bajaj-bikes/platina-100/colours/",
+  "scrapedAt": "2026-04-22T13:33:32.587Z",
+  "count": 4,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/bajaj-select-model-black--blue-1671529556548.png?q=100",
+  "colors": [
+    {
+      "name": "Black & Blue",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/platina-100/black-and-blue.png"
+    },
+    {
+      "name": "Black & Gold",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/platina-100/black-and-gold.png"
+    },
+    {
+      "name": "Black & Silver",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/platina-100/black-and-silver.png"
+    },
+    {
+      "name": "Black & Red",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/platina-100/black-and-red.png"
+    }
+  ]
+}

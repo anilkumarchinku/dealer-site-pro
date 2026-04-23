@@ -10,6 +10,8 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server'
+import { get4WCardekhoBrandMeta, get4WCardekhoModelMeta } from '@/lib/data/4w-cardekho-meta'
+import { extract4WModelsFromJson, FOUR_W_BRANDS, normalize4WModelKey } from '@/lib/data/four-wheelers'
 import { createAdminClient } from '@/lib/supabase-server'
 
 // Lightweight Car shape — enough for the preview hero card
@@ -33,6 +35,99 @@ interface PreviewCar {
     colors: []
     meta: { isAvailable: boolean }
     condition: 'new'
+}
+
+function find4WJsonKey(make: string): string | null {
+    const match = FOUR_W_BRANDS.find((brand) => brand.make.toLowerCase() === make.toLowerCase())
+    return match?.jsonKey ?? null
+}
+
+async function loadBrandJson<T>(request: NextRequest, jsonKey: string): Promise<T | null> {
+    try {
+        const response = await fetch(new URL(`/data/${jsonKey}.json`, request.url), {
+            next: { revalidate: 60 * 60 },
+        })
+        if (!response.ok) return null
+        return await response.json() as T
+    } catch {
+        return null
+    }
+}
+
+function jsonModelToPreviewCar(make: string, model: {
+    model: string
+    imageUrl: string | null
+    priceMinInr: number | null
+    fuelType: string | null
+    transmission: string | null
+    seating: number
+}): PreviewCar {
+    const meta = get4WCardekhoModelMeta(make, model.model)
+    const price = model.priceMinInr ?? meta?.priceMinInr ?? null
+    const hero = model.imageUrl ?? meta?.imageUrl ?? null
+
+    return {
+        id: `json-${make}-${normalize4WModelKey(model.model)}`,
+        make,
+        model: model.model,
+        variant: '',
+        year: new Date().getFullYear(),
+        bodyType: meta?.bodyType ?? null,
+        segment: 'B',
+        vehicleCategory: '4w',
+        price: price ? `₹${price.toLocaleString('en-IN')}` : undefined,
+        pricing: {
+            exShowroom: { min: price, max: price, currency: 'INR' },
+        },
+        engine: {
+            type: model.fuelType ?? meta?.fuelType ?? 'Petrol',
+            power: '—',
+            torque: '—',
+        },
+        transmission: { type: model.transmission ?? 'Manual' },
+        performance: {},
+        dimensions: { seatingCapacity: model.seating ?? 5 },
+        features: { keyFeatures: [] },
+        images: {
+            hero,
+            exterior: hero ? [hero] : [],
+            interior: [],
+        },
+        colors: [],
+        meta: { isAvailable: true },
+        condition: 'new',
+    }
+}
+
+async function getJsonFallbackCars(request: NextRequest, make: string): Promise<PreviewCar[]> {
+    const jsonKey = find4WJsonKey(make)
+    if (!jsonKey) return []
+
+    const raw = await loadBrandJson<unknown>(request, jsonKey)
+    if (!raw) return []
+
+    const models = extract4WModelsFromJson(raw)
+    const brandMeta = get4WCardekhoBrandMeta(make)
+    const seen = new Set(models.map((entry) => normalize4WModelKey(entry.model)))
+    const mergedModels = [...models]
+
+    for (const meta of Object.values(brandMeta?.models ?? {})) {
+        const key = normalize4WModelKey(meta.model)
+        if (seen.has(key)) continue
+        seen.add(key)
+        mergedModels.push({
+            model: meta.model,
+            imageUrl: meta.imageUrl,
+            priceMinInr: meta.priceMinInr,
+            fuelType: meta.fuelType,
+            transmission: null,
+            seating: 5,
+        })
+    }
+
+    return mergedModels
+        .slice(0, 20)
+        .map((model) => jsonModelToPreviewCar(make, model))
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -97,7 +192,7 @@ function groupByModel(rows: any[]): any[] {
 }
 
 export async function GET(
-    _req: NextRequest,
+    req: NextRequest,
     { params }: { params: Promise<{ make: string }> }
 ) {
     const { make } = await params
@@ -112,22 +207,33 @@ export async function GET(
     // Fetch variants for the requested make
     const { data: makeData, error: makeError } = await supabase
         .from('car_catalog')
-        .select('id, make, model, year, body_type, fuel_type, transmission, seating_capacity, price_min_paise, price_max_paise, image_url, segment, is_active')
+        .select('id, make, model, year, body_type, fuel_type, transmission, seating_capacity, price_min_paise, price_max_paise, image_url, is_active')
         .eq('make', decodedMake)
         .eq('is_active', true)
         .order('year', { ascending: false })
         .limit(100)
 
-    if (!makeError && makeData && makeData.length > 0) {
-        const cars = groupByModel(makeData).slice(0, 20).map(rowToPreviewCar)
+    const makeRows = ((makeData ?? []) as unknown) as Array<Record<string, unknown>>
+    const makeRowsHavePrice = makeRows.some((row) => {
+        const priceMinPaise = row.price_min_paise
+        return typeof priceMinPaise === 'number' && priceMinPaise > 0
+    })
+
+    if (!makeError && makeRows.length > 0 && makeRowsHavePrice) {
+        const cars = groupByModel(makeRows).slice(0, 20).map(rowToPreviewCar)
         return NextResponse.json({ cars })
+    }
+
+    const jsonFallbackCars = await getJsonFallbackCars(req, decodedMake)
+    if (jsonFallbackCars.length > 0) {
+        return NextResponse.json({ cars: jsonFallbackCars })
     }
 
     // Fallback: return the top 8 most recent active cars from any brand
     // so the preview hero always has something to show
     const { data: fallbackData } = await supabase
         .from('car_catalog')
-        .select('id, make, model, year, body_type, fuel_type, transmission, seating_capacity, price_min_paise, price_max_paise, image_url, segment, is_active')
+        .select('id, make, model, year, body_type, fuel_type, transmission, seating_capacity, price_min_paise, price_max_paise, image_url, is_active')
         .eq('is_active', true)
         .order('year', { ascending: false })
         .limit(8)

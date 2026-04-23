@@ -55,7 +55,7 @@ export default async function BrandsPage() {
                                     {/* Brand Logo */}
                                     <div className="w-16 h-16 mx-auto mb-3 flex items-center justify-center">
                                         {getBrandLogo(brand.name) ? (
-                                            <Image src={getBrandLogo(brand.name)!} alt={brand.name} width={56} height={56} className="object-contain" />
+                                            <Image src={getBrandLogo(brand.name)!} alt={brand.name} width={56} height={56} unoptimized className="object-contain" />
                                         ) : (
                                             <div className="w-14 h-14 rounded-full bg-muted/50 border border-border flex items-center justify-center group-hover:border-primary transition-colors">
                                                 <span className="text-primary text-xl font-bold">{brand.name.charAt(0)}</span>

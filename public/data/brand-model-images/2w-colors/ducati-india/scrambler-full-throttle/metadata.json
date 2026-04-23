@@ -1,0 +1,16 @@
+{
+  "brand": "Ducati",
+  "model": "Scrambler Full Throttle",
+  "brandId": "ducati-india",
+  "modelSlug": "scrambler-full-throttle",
+  "sourceUrl": "https://www.bikewale.com/ducati-bikes/scrambler-full-throttle/colours/",
+  "scrapedAt": "2026-04-22T13:33:38.382Z",
+  "count": 1,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/si8qrfb_1829441.png?q=100",
+  "colors": [
+    {
+      "name": "Heritage Livery",
+      "image": "/data/brand-model-images/2w-colors/ducati-india/scrambler-full-throttle/heritage-livery.png"
+    }
+  ]
+}

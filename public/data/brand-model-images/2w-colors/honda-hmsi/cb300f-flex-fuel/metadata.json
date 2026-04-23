@@ -1,0 +1,24 @@
+{
+  "brand": "Honda Motorcycle & Scooter India",
+  "model": "CB300F Flex-Fuel",
+  "brandId": "honda-hmsi",
+  "modelSlug": "cb300f-flex-fuel",
+  "sourceUrl": "https://www.bikewale.com/honda-bikes/cb300f-flex-fuel/colours/",
+  "scrapedAt": "2026-04-22T13:33:47.854Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/s9jeuib_1914462.png?q=100",
+  "colors": [
+    {
+      "name": "Mat Marvel Blue Metallic",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/cb300f-flex-fuel/mat-marvel-blue-metallic.png"
+    },
+    {
+      "name": "Matte Axis Grey Metallic",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/cb300f-flex-fuel/matte-axis-grey-metallic.avif"
+    },
+    {
+      "name": "Sports Red",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/cb300f-flex-fuel/sports-red.avif"
+    }
+  ]
+}

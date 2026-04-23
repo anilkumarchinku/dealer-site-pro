@@ -1,90 +1,72 @@
 import { NextResponse } from "next/server";
-import fs from "fs";
-import path from "path";
 import { requireAdminSession } from "@/lib/utils/admin-session";
+import { brandNameToId, getScrapedImageUrls, modelToSlug } from "@/lib/utils/brand-model-images";
+
+type BrandModelsPayload = {
+    twoWheelers?: Record<string, Array<{ brand?: string; brandId?: string; models?: Record<string, string[]> | string[] }>>
+    threeWheelers?: Array<{ brand?: string; brandId?: string; models?: Record<string, string[]> | string[] }>
+}
+
+async function fetchJson<T>(origin: string, pathname: string): Promise<T | null> {
+    try {
+        const response = await fetch(`${origin}${pathname}`, { cache: 'no-store' })
+        if (!response.ok) return null
+        return await response.json() as T
+    } catch {
+        return null
+    }
+}
+
+async function resolveLiveImage(origin: string, urls: string[]): Promise<string | null> {
+    for (const rawUrl of urls) {
+        const absoluteUrl = rawUrl.startsWith('http') ? rawUrl : `${origin}${rawUrl}`
+
+        try {
+            const response = await fetch(absoluteUrl, {
+                method: 'HEAD',
+                cache: 'no-store',
+            })
+
+            if (response.ok) return rawUrl
+        } catch {
+            continue
+        }
+    }
+
+    return null
+}
 
 export async function GET(request: Request) {
     const { errorResponse } = await requireAdminSession()
     if (errorResponse) return errorResponse
+
     try {
-        const dataPath = path.join(process.cwd(), 'public/data/brand-models.json');
-        const imagesBase = path.join(process.cwd(), 'public/data/brand-model-images');
+        const origin = new URL(request.url).origin
+        const data = await fetchJson<BrandModelsPayload>(origin, '/data/brand-models.json')
 
-        if (!fs.existsSync(dataPath)) {
-            return NextResponse.json({ error: "brand-models.json not found" }, { status: 404 });
+        if (!data) {
+            return NextResponse.json({ error: "brand-models.json not found" }, { status: 404 })
         }
 
-        const data = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
+        let total = 0
+        let missing = 0
+        const auditList: Array<{
+            type: string
+            brandId: string
+            originalBrand: string
+            model: string
+            slug: string
+            isMissing: boolean
+            imageUrl: string | null
+        }> = []
 
-        const BRAND_FOLDER_MAP_2W: Record<string, string> = {
-            "royal enfield": "royal-enfield",
-            "hero motocorp": "hero-motocorp",
-            "honda motorcycle & scooter india": "honda-hmsi",
-            "honda": "honda-hmsi",
-            "tvs motor company": "tvs-motor",
-            "tvs": "tvs-motor",
-            "bajaj auto": "bajaj-auto",
-            "bajaj": "bajaj-auto",
-            "yamaha india": "yamaha-india",
-            "yamaha": "yamaha-india",
-            "suzuki motorcycle india": "suzuki-motorcycle",
-            "suzuki": "suzuki-motorcycle",
-            "ktm india": "ktm-india",
-            "ktm": "ktm-india",
-            "kawasaki india": "kawasaki-india",
-            "kawasaki": "kawasaki-india",
-            "ather energy": "ather-energy",
-            "ather": "ather-energy",
-            "ola electric": "ola-electric"
-        };
+        async function checkModel(vehicleType: "2w" | "3w", brandId: string, model: string, originalBrand: string) {
+            total++
+            const slug = modelToSlug(model)
+            const imageUrl = await resolveLiveImage(origin, getScrapedImageUrls(vehicleType, brandId, model))
+            const isMissing = !imageUrl
 
-        const BRAND_FOLDER_MAP_3W: Record<string, string> = {
-            "mahindra": "mahindra-3w",
-            "bajaj": "bajaj-auto-3w",
-            "bajaj auto": "bajaj-auto-3w",
-            "tvs": "tvs-king",
-            "tvs motor company": "tvs-king",
-            "piaggio": "piaggio-ape",
-            "greaves": "greaves-electric-3w",
-            "greaves electric": "greaves-electric-3w",
-            "kinetic": "kinetic-green",
-            "kinetic green": "kinetic-green",
-            "euler": "euler-motors",
-            "euler motors": "euler-motors",
-            "atul": "atul-auto",
-            "atul auto": "atul-auto",
-            "lohia": "lohia-auto",
-            "lohia auto": "lohia-auto"
-        };
-
-        function brandNameToId(brandName: string, category = "2w") {
-            const lower = brandName.toLowerCase().trim();
-            const map = category === "3w" ? BRAND_FOLDER_MAP_3W : BRAND_FOLDER_MAP_2W;
-            if (map[lower]) return map[lower];
-            return lower.replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
-        }
-
-        function modelToSlug(model: string) {
-            return model.toLowerCase().replace(/\./g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
-        }
-
-        let total = 0;
-        let missing = 0;
-        const auditList: any[] = [];
-
-        function checkModel(vehicleType: string, brandId: string, model: string, originalBrand: string) {
-            total++;
-            const slug = modelToSlug(model);
-            const jpgPath = path.join(imagesBase, vehicleType, brandId, `${slug}.jpg`);
-            const pngPath = path.join(imagesBase, vehicleType, brandId, `${slug}.png`);
-
-            const hasJpg = fs.existsSync(jpgPath);
-            const hasPng = fs.existsSync(pngPath);
-            const isMissing = !hasJpg && !hasPng;
-
-            if (isMissing) missing++;
-
-            const url = isMissing ? null : `/data/brand-model-images/${vehicleType}/${brandId}/${slug}.${hasJpg ? 'jpg' : 'png'}`;
+            if (isMissing) missing++
 
             auditList.push({
                 type: vehicleType,
@@ -93,52 +75,68 @@ export async function GET(request: Request) {
                 model,
                 slug,
                 isMissing,
-                imageUrl: url
-            });
+                imageUrl,
+            })
         }
 
-        // 2W
-        for (const [, brands] of Object.entries(data.twoWheelers) as any) {
-            for (const brandGroup of brands) {
-                const rawBrandId = brandGroup.brandId || brandGroup.brand;
-                const brandId = brandNameToId(rawBrandId || brandGroup.brand, "2w");
-                const originalBrand = brandGroup.brand;
-                const modelsObj = brandGroup.models;
-                if (Array.isArray(modelsObj)) {
-                    modelsObj.forEach((model: string) => checkModel("2w", brandId, model, originalBrand));
-                } else {
-                    for (const [, models] of Object.entries(modelsObj) as any) {
-                        if (Array.isArray(models)) {
-                            models.forEach((model: string) => checkModel("2w", brandId, model, originalBrand));
+        if (data.twoWheelers) {
+            for (const brands of Object.values(data.twoWheelers)) {
+                for (const brandGroup of brands) {
+                    const originalBrand = brandGroup.brand ?? ''
+                    const brandId = brandNameToId(brandGroup.brandId || originalBrand, "2w")
+                    const modelsObj = brandGroup.models
+
+                    if (Array.isArray(modelsObj)) {
+                        for (const model of modelsObj) {
+                            await checkModel("2w", brandId, model, originalBrand)
+                        }
+                        continue
+                    }
+
+                    if (modelsObj && typeof modelsObj === 'object') {
+                        for (const models of Object.values(modelsObj)) {
+                            if (!Array.isArray(models)) continue
+                            for (const model of models) {
+                                await checkModel("2w", brandId, model, originalBrand)
+                            }
                         }
                     }
                 }
             }
         }
 
-        // 3W
-        data.threeWheelers.forEach((brandGroup: any) => {
-            const rawBrandId = brandGroup.brandId || brandGroup.brand;
-            const brandId = brandNameToId(rawBrandId || brandGroup.brand, "3w");
-            const originalBrand = brandGroup.brand;
-            const modelsObj = brandGroup.models;
-            if (Array.isArray(modelsObj)) {
-                modelsObj.forEach((model: string) => checkModel("3w", brandId, model, originalBrand));
-            } else {
-                for (const [, models] of Object.entries(modelsObj) as any) {
-                    if (Array.isArray(models)) {
-                        models.forEach((model: string) => checkModel("3w", brandId, model, originalBrand));
+        if (Array.isArray(data.threeWheelers)) {
+            for (const brandGroup of data.threeWheelers) {
+                const originalBrand = brandGroup.brand ?? ''
+                const brandId = brandNameToId(brandGroup.brandId || originalBrand, "3w")
+                const modelsObj = brandGroup.models
+
+                if (Array.isArray(modelsObj)) {
+                    for (const model of modelsObj) {
+                        await checkModel("3w", brandId, model, originalBrand)
+                    }
+                    continue
+                }
+
+                if (modelsObj && typeof modelsObj === 'object') {
+                    for (const models of Object.values(modelsObj)) {
+                        if (!Array.isArray(models)) continue
+                        for (const model of models) {
+                            await checkModel("3w", brandId, model, originalBrand)
+                        }
                     }
                 }
             }
-        });
+        }
 
         return NextResponse.json({
             stats: { total, missing, present: total - missing },
-            models: auditList
-        });
-
-    } catch (error: any) {
-        return NextResponse.json({ error: error.message }, { status: 500 });
+            models: auditList,
+        })
+    } catch (error) {
+        return NextResponse.json(
+            { error: error instanceof Error ? error.message : "Unknown error" },
+            { status: 500 }
+        )
     }
 }

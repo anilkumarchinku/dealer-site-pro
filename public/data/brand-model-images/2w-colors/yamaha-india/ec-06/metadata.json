@@ -1,0 +1,16 @@
+{
+  "brand": "Yamaha",
+  "model": "EC 06",
+  "brandId": "yamaha-india",
+  "modelSlug": "ec-06",
+  "sourceUrl": "https://www.bikewale.com/yamaha-bikes/ec-06/colours/",
+  "scrapedAt": "2026-04-22T13:34:28.701Z",
+  "count": 1,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bg5k7ib_1903913.png?q=100",
+  "colors": [
+    {
+      "name": "Bluish White",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/ec-06/bluish-white.png"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "brand": "River",
+  "model": "Indie",
+  "brandId": "river-ev",
+  "modelSlug": "indie",
+  "sourceUrl": "https://www.bikewale.com/river-bikes/indie/colours/",
+  "scrapedAt": "2026-04-22T13:34:11.962Z",
+  "count": 5,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/7v7379b_1796355.jpg?q=100",
+  "colors": [
+    {
+      "name": "Storm Grey",
+      "image": "/data/brand-model-images/2w-colors/river-ev/indie/storm-grey.avif"
+    },
+    {
+      "name": "Winter White",
+      "image": "/data/brand-model-images/2w-colors/river-ev/indie/winter-white.avif"
+    },
+    {
+      "name": "Spring Yellow",
+      "image": "/data/brand-model-images/2w-colors/river-ev/indie/spring-yellow.avif"
+    },
+    {
+      "name": "Monsoon Blue",
+      "image": "/data/brand-model-images/2w-colors/river-ev/indie/monsoon-blue.avif"
+    },
+    {
+      "name": "Summer Red",
+      "image": "/data/brand-model-images/2w-colors/river-ev/indie/summer-red.avif"
+    }
+  ]
+}

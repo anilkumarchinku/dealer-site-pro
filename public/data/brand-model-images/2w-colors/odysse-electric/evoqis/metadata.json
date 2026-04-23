@@ -1,0 +1,32 @@
+{
+  "brand": "Odysse",
+  "model": "Evoqis",
+  "brandId": "odysse-electric",
+  "modelSlug": "evoqis",
+  "sourceUrl": "https://www.bikewale.com/odysse-bikes/evoqis/colours/",
+  "scrapedAt": "2026-04-22T13:34:03.908Z",
+  "count": 5,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/odysse-select-model-black-1635507417016.jpg?q=100",
+  "colors": [
+    {
+      "name": "Black",
+      "image": "/data/brand-model-images/2w-colors/odysse-electric/evoqis/black.avif"
+    },
+    {
+      "name": "Lime Green",
+      "image": "/data/brand-model-images/2w-colors/odysse-electric/evoqis/lime-green.avif"
+    },
+    {
+      "name": "Fire Red",
+      "image": "/data/brand-model-images/2w-colors/odysse-electric/evoqis/fire-red.avif"
+    },
+    {
+      "name": "Magna White",
+      "image": "/data/brand-model-images/2w-colors/odysse-electric/evoqis/magna-white.avif"
+    },
+    {
+      "name": "Cobalt Blue",
+      "image": "/data/brand-model-images/2w-colors/odysse-electric/evoqis/cobalt-blue.avif"
+    }
+  ]
+}

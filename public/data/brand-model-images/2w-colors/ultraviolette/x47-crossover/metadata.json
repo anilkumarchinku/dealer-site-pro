@@ -1,0 +1,28 @@
+{
+  "brand": "Ultraviolette",
+  "model": "X47 Crossover",
+  "brandId": "ultraviolette",
+  "modelSlug": "x47-crossover",
+  "sourceUrl": "https://www.bikewale.com/ultraviolette-bikes/x47-crossover/colours/",
+  "scrapedAt": "2026-04-22T13:34:28.507Z",
+  "count": 4,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/pz7hjhb_1874085.jpg?q=100",
+  "colors": [
+    {
+      "name": "Cosmic Black",
+      "image": "/data/brand-model-images/2w-colors/ultraviolette/x47-crossover/cosmic-black.avif"
+    },
+    {
+      "name": "Sand",
+      "image": "/data/brand-model-images/2w-colors/ultraviolette/x47-crossover/sand.avif"
+    },
+    {
+      "name": "Stellar White",
+      "image": "/data/brand-model-images/2w-colors/ultraviolette/x47-crossover/stellar-white.avif"
+    },
+    {
+      "name": "Turbo Red",
+      "image": "/data/brand-model-images/2w-colors/ultraviolette/x47-crossover/turbo-red.avif"
+    }
+  ]
+}

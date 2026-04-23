@@ -1,0 +1,36 @@
+{
+  "brand": "Bajaj",
+  "model": "CT 100",
+  "brandId": "bajaj-auto",
+  "modelSlug": "ct-100",
+  "sourceUrl": "https://www.bikewale.com/bajaj-bikes/ct-100/colours/",
+  "scrapedAt": "2026-04-22T13:33:29.577Z",
+  "count": 6,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/undefined-gloss-flame-red-with-bright-red-decals-1587632773799.jpg?q=100",
+  "colors": [
+    {
+      "name": "Gloss Flame Red with Bright Red Decals",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/ct-100/gloss-flame-red-with-bright-red-decals.avif"
+    },
+    {
+      "name": "Matte Olive Green with Yellow Decals",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/ct-100/matte-olive-green-with-yellow-decals.avif"
+    },
+    {
+      "name": "Gloss Ebony Black with Blue Decals",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/ct-100/gloss-ebony-black-with-blue-decals.avif"
+    },
+    {
+      "name": "Gloss Flame Red",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/ct-100/gloss-flame-red.avif"
+    },
+    {
+      "name": "Matte Olive Green",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/ct-100/matte-olive-green.avif"
+    },
+    {
+      "name": "Gloss Ebony Black",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/ct-100/gloss-ebony-black.avif"
+    }
+  ]
+}

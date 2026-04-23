@@ -1,0 +1,16 @@
+{
+  "brand": "Kawasaki",
+  "model": "Versys 1100",
+  "brandId": "kawasaki-india",
+  "modelSlug": "versys-1100",
+  "sourceUrl": "https://www.bikewale.com/kawasaki-bikes/versys-1100/colours/",
+  "scrapedAt": "2026-04-22T13:33:58.803Z",
+  "count": 1,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/ih7v5hb_1884585.jpg?q=100",
+  "colors": [
+    {
+      "name": "Metallic Matte Graphenesteel Gray / Metallic Diablo Black",
+      "image": "/data/brand-model-images/2w-colors/kawasaki-india/versys-1100/metallic-matte-graphenesteel-gray-metallic-diablo-black.avif"
+    }
+  ]
+}

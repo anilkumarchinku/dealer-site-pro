@@ -1,0 +1,28 @@
+{
+  "brand": "Suzuki",
+  "model": "E Access",
+  "brandId": "suzuki-motorcycle",
+  "modelSlug": "e-access",
+  "sourceUrl": "https://www.bikewale.com/suzuki-bikes/e-access/colours/",
+  "scrapedAt": "2026-04-22T13:34:14.434Z",
+  "count": 4,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/dqvtiib_1899779.jpg?q=100",
+  "colors": [
+    {
+      "name": "Metallic Mat Stellar Blue / Metallic Mat Fibroin Gray",
+      "image": "/data/brand-model-images/2w-colors/suzuki-motorcycle/e-access/metallic-mat-stellar-blue-metallic-mat-fibroin-gray.avif"
+    },
+    {
+      "name": "Pearl Jade Green and Metallic Mat Fibroin Gray",
+      "image": "/data/brand-model-images/2w-colors/suzuki-motorcycle/e-access/pearl-jade-green-and-metallic-mat-fibroin-gray.avif"
+    },
+    {
+      "name": "Pearl Grace White and Metallic Mat Fibroin Gray",
+      "image": "/data/brand-model-images/2w-colors/suzuki-motorcycle/e-access/pearl-grace-white-and-metallic-mat-fibroin-gray.avif"
+    },
+    {
+      "name": "Metallic Mat Black and Metallic Mat Bordeaux Red",
+      "image": "/data/brand-model-images/2w-colors/suzuki-motorcycle/e-access/metallic-mat-black-and-metallic-mat-bordeaux-red.avif"
+    }
+  ]
+}

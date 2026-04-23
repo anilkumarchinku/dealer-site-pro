@@ -1,0 +1,16 @@
+{
+  "brand": "Ducati",
+  "model": "Panigale V4 R",
+  "brandId": "ducati-india",
+  "modelSlug": "panigale-v4-r",
+  "sourceUrl": "https://www.bikewale.com/ducati-bikes/panigale-v4-r/colours/",
+  "scrapedAt": "2026-04-22T13:33:37.386Z",
+  "count": 1,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/ctfpgib_1897807.png?q=100",
+  "colors": [
+    {
+      "name": "Ducati Red",
+      "image": "/data/brand-model-images/2w-colors/ducati-india/panigale-v4-r/ducati-red.png"
+    }
+  ]
+}

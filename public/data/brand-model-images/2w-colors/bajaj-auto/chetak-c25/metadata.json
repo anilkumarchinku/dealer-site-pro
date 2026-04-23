@@ -1,0 +1,36 @@
+{
+  "brand": "Bajaj",
+  "model": "Chetak C25",
+  "brandId": "bajaj-auto",
+  "modelSlug": "chetak-c25",
+  "sourceUrl": "https://www.bikewale.com/bajaj-bikes/chetak-c25/colours/",
+  "scrapedAt": "2026-04-22T13:33:29.073Z",
+  "count": 6,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/vaqdkib_1901841.png?q=100",
+  "colors": [
+    {
+      "name": "Misty Yellow",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/chetak-c25/misty-yellow.png"
+    },
+    {
+      "name": "Opalescent Silver",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/chetak-c25/opalescent-silver.png"
+    },
+    {
+      "name": "Active Black",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/chetak-c25/active-black.png"
+    },
+    {
+      "name": "Racing Red",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/chetak-c25/racing-red.png"
+    },
+    {
+      "name": "Classic White",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/chetak-c25/classic-white.png"
+    },
+    {
+      "name": "Ocean Teal",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/chetak-c25/ocean-teal.png"
+    }
+  ]
+}

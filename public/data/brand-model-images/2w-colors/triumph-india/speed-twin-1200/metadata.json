@@ -1,0 +1,32 @@
+{
+  "brand": "Triumph",
+  "model": "Speed Twin 1200",
+  "brandId": "triumph-india",
+  "modelSlug": "speed-twin-1200",
+  "sourceUrl": "https://www.bikewale.com/triumph-bikes/speed-twin-1200/colours/",
+  "scrapedAt": "2026-04-22T13:34:20.523Z",
+  "count": 5,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/1wc8bfb_1811133.jpg?q=100",
+  "colors": [
+    {
+      "name": "Carnival Red and Sapphire Black",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/speed-twin-1200/carnival-red-and-sapphire-black.avif"
+    },
+    {
+      "name": "Crystal White and Sapphire Black",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/speed-twin-1200/crystal-white-and-sapphire-black.avif"
+    },
+    {
+      "name": "Aluminium Silver",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/speed-twin-1200/aluminium-silver.avif"
+    },
+    {
+      "name": "Baja Orange and Sapphire Black",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/speed-twin-1200/baja-orange-and-sapphire-black.avif"
+    },
+    {
+      "name": "Sapphire Black",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/speed-twin-1200/sapphire-black.avif"
+    }
+  ]
+}

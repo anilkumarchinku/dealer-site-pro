@@ -1,0 +1,60 @@
+{
+  "brand": "Yamaha",
+  "model": "FZS FI V4",
+  "brandId": "yamaha-india",
+  "modelSlug": "fzs-fi-v4",
+  "sourceUrl": "https://www.bikewale.com/yamaha-bikes/fzs-fi-v4/colours/",
+  "scrapedAt": "2026-04-22T13:34:31.324Z",
+  "count": 12,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/yamaha-select-model-ice-fluovermillion-1715156147635.png?q=100",
+  "colors": [
+    {
+      "name": "Ice Fluo-Vermillion",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/fzs-fi-v4/ice-fluo-vermillion.png"
+    },
+    {
+      "name": "Cyber Green",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/fzs-fi-v4/cyber-green.png"
+    },
+    {
+      "name": "Matte Black Dlx",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/fzs-fi-v4/matte-black-dlx.png"
+    },
+    {
+      "name": "Racing Blue(2024)",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/fzs-fi-v4/racing-blue-2024.png"
+    },
+    {
+      "name": "Majesty Red",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/fzs-fi-v4/majesty-red.png"
+    },
+    {
+      "name": "Metallic Grey",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/fzs-fi-v4/metallic-grey.png"
+    },
+    {
+      "name": "Matte Black",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/fzs-fi-v4/matte-black.png"
+    },
+    {
+      "name": "Dark Matte Blue",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/fzs-fi-v4/dark-matte-blue.png"
+    },
+    {
+      "name": "Cyber Green",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/fzs-fi-v4/cyber-green.avif"
+    },
+    {
+      "name": "Ice Fluo-Vermillion",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/fzs-fi-v4/ice-fluo-vermillion.avif"
+    },
+    {
+      "name": "Matte Black",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/fzs-fi-v4/matte-black.avif"
+    },
+    {
+      "name": "Metallic Grey",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/fzs-fi-v4/metallic-grey.avif"
+    }
+  ]
+}

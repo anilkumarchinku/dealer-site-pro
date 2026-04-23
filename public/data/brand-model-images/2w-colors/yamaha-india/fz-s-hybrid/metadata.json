@@ -1,0 +1,24 @@
+{
+  "brand": "Yamaha",
+  "model": "FZ S Hybrid",
+  "brandId": "yamaha-india",
+  "modelSlug": "fz-s-hybrid",
+  "sourceUrl": "https://www.bikewale.com/yamaha-bikes/fz-s-hybrid/colours/",
+  "scrapedAt": "2026-04-22T13:34:29.586Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/wmk46ib_1907893.png?q=100",
+  "colors": [
+    {
+      "name": "Matte Black",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/fz-s-hybrid/matte-black.png"
+    },
+    {
+      "name": "Racing Blue",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/fz-s-hybrid/racing-blue.avif"
+    },
+    {
+      "name": "Cyan Metallic Grey",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/fz-s-hybrid/cyan-metallic-grey.avif"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "brand": "Kawasaki",
+  "model": "KLX230R",
+  "brandId": "kawasaki-india",
+  "modelSlug": "klx230r",
+  "sourceUrl": "https://www.bikewale.com/kawasaki-bikes/klx230r/colours/",
+  "scrapedAt": "2026-04-22T13:33:57.408Z",
+  "count": 1,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/q84avgb_1862156.jpg?q=100",
+  "colors": [
+    {
+      "name": "Lime Green",
+      "image": "/data/brand-model-images/2w-colors/kawasaki-india/klx230r/lime-green.avif"
+    }
+  ]
+}

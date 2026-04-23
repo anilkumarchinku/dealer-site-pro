@@ -1,0 +1,24 @@
+{
+  "brand": "Triumph",
+  "model": "Daytona 660",
+  "brandId": "triumph-india",
+  "modelSlug": "daytona-660",
+  "sourceUrl": "https://www.bikewale.com/triumph-bikes/daytona-660/colours/",
+  "scrapedAt": "2026-04-22T13:34:15.975Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/hvnrkeb_1767377.jpg?q=100",
+  "colors": [
+    {
+      "name": "Carnival Red / Sapphire Black",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/daytona-660/carnival-red-sapphire-black.avif"
+    },
+    {
+      "name": "Satin Granite / Satin Jet Black",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/daytona-660/satin-granite-satin-jet-black.avif"
+    },
+    {
+      "name": "Snowdonia White / Sapphire Black",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/daytona-660/snowdonia-white-sapphire-black.avif"
+    }
+  ]
+}

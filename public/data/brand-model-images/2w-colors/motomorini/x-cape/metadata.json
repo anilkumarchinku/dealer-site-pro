@@ -1,0 +1,28 @@
+{
+  "brand": "Moto Morini",
+  "model": "X-Cape",
+  "brandId": "motomorini",
+  "modelSlug": "x-cape",
+  "sourceUrl": "https://www.bikewale.com/motomorini-bikes/x-cape/colours/",
+  "scrapedAt": "2026-04-22T13:34:01.456Z",
+  "count": 4,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/moto-morini-select-model-red-passion-1665490273190.gif?q=100",
+  "colors": [
+    {
+      "name": "Red Passion",
+      "image": "/data/brand-model-images/2w-colors/motomorini/x-cape/red-passion.avif"
+    },
+    {
+      "name": "Carrara White",
+      "image": "/data/brand-model-images/2w-colors/motomorini/x-cape/carrara-white.avif"
+    },
+    {
+      "name": "Smoky Anthracite",
+      "image": "/data/brand-model-images/2w-colors/motomorini/x-cape/smoky-anthracite.avif"
+    },
+    {
+      "name": "Smoky Anthracite (X)",
+      "image": "/data/brand-model-images/2w-colors/motomorini/x-cape/smoky-anthracite-x.avif"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "brand": "Hero MotoCorp",
+  "model": "Maestro Edge 125",
+  "brandId": "hero-motocorp",
+  "modelSlug": "maestro-edge-125",
+  "sourceUrl": "https://www.bikewale.com/hero-bikes/maestro-edge-125/colours/",
+  "scrapedAt": "2026-04-22T13:33:43.684Z",
+  "count": 6,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/hero-select-model-panther-black2021-1669369423281.png?q=100",
+  "colors": [
+    {
+      "name": "Panther Black(2021)",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/maestro-edge-125/panther-black-2021.png"
+    },
+    {
+      "name": "Matte Techno Blue(2021)",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/maestro-edge-125/matte-techno-blue-2021.png"
+    },
+    {
+      "name": "Pearl Silver White",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/maestro-edge-125/pearl-silver-white.png"
+    },
+    {
+      "name": "Candy Blazing Red",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/maestro-edge-125/candy-blazing-red.png"
+    },
+    {
+      "name": "Prismatic Purple (2021)",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/maestro-edge-125/prismatic-purple-2021.png"
+    },
+    {
+      "name": "Prismatic Yellow",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/maestro-edge-125/prismatic-yellow.png"
+    }
+  ]
+}

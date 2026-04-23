@@ -1,0 +1,24 @@
+{
+  "brand": "Okinawa",
+  "model": "Ridge Plus",
+  "brandId": "okinawa-autotech",
+  "modelSlug": "ridge-plus",
+  "sourceUrl": "https://www.bikewale.com/okinawa-bikes/ridge-plus/colours/",
+  "scrapedAt": "2026-04-22T13:34:11.396Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/okinawa-select-model-blue-1689773297046.png?q=100",
+  "colors": [
+    {
+      "name": "Blue",
+      "image": "/data/brand-model-images/2w-colors/okinawa-autotech/ridge-plus/blue.png"
+    },
+    {
+      "name": "Grey",
+      "image": "/data/brand-model-images/2w-colors/okinawa-autotech/ridge-plus/grey.png"
+    },
+    {
+      "name": "Silver",
+      "image": "/data/brand-model-images/2w-colors/okinawa-autotech/ridge-plus/silver.png"
+    }
+  ]
+}

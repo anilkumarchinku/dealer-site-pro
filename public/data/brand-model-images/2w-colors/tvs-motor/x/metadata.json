@@ -1,0 +1,16 @@
+{
+  "brand": "TVS",
+  "model": "X",
+  "brandId": "tvs-motor",
+  "modelSlug": "x",
+  "sourceUrl": "https://www.bikewale.com/tvs-bikes/x/colours/",
+  "scrapedAt": "2026-04-22T13:34:23.841Z",
+  "count": 1,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/tvs-select-model-red-1692811028530.png?q=100",
+  "colors": [
+    {
+      "name": "Red",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/x/red.png"
+    }
+  ]
+}

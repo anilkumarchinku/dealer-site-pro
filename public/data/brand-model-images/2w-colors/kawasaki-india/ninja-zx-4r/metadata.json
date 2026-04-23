@@ -1,0 +1,16 @@
+{
+  "brand": "Kawasaki",
+  "model": "Ninja ZX-4R",
+  "brandId": "kawasaki-india",
+  "modelSlug": "ninja-zx-4r",
+  "sourceUrl": "https://www.bikewale.com/kawasaki-bikes/ninja-zx-4r/colours/",
+  "scrapedAt": "2026-04-22T13:33:58.287Z",
+  "count": 1,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/kawasaki-select-model-metallic-spark-black-1694437893301.png?q=100",
+  "colors": [
+    {
+      "name": "Metallic Spark Black",
+      "image": "/data/brand-model-images/2w-colors/kawasaki-india/ninja-zx-4r/metallic-spark-black.png"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "brand": "Hero MotoCorp",
+  "model": "Super Splendor",
+  "brandId": "hero-motocorp",
+  "modelSlug": "super-splendor",
+  "sourceUrl": "https://www.bikewale.com/hero-bikes/super-splendor/colours/",
+  "scrapedAt": "2026-04-22T13:33:44.451Z",
+  "count": 5,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/hero-select-model-black-and-accent-1707133727019.png?q=100",
+  "colors": [
+    {
+      "name": "Black and Accent",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/super-splendor/black-and-accent.png"
+    },
+    {
+      "name": "Black Sports Red",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/super-splendor/black-sports-red.png"
+    },
+    {
+      "name": "Candy Blazing Red",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/super-splendor/candy-blazing-red.png"
+    },
+    {
+      "name": "Metallic Nexus Blue",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/super-splendor/metallic-nexus-blue.png"
+    },
+    {
+      "name": "Black Silver Str",
+      "image": "/data/brand-model-images/2w-colors/hero-motocorp/super-splendor/black-silver-str.png"
+    }
+  ]
+}

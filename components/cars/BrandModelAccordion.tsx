@@ -164,7 +164,7 @@ export function BrandModelAccordion({
                     {/* Logo */}
                     <div className="w-12 h-12 rounded-xl bg-gray-100 flex items-center justify-center shrink-0 overflow-hidden">
                         {logoSrc ? (
-                            <Image src={logoSrc} alt={brandDisplay} width={36} height={36} className="object-contain" />
+                            <Image src={logoSrc} alt={brandDisplay} width={36} height={36} unoptimized className="object-contain" />
                         ) : (
                             <span className="text-2xl">🚗</span>
                         )}
@@ -327,7 +327,7 @@ export function BrandModelAccordion({
                                 <SheetHeader className="space-y-0.5 text-left">
                                     <div className="flex items-center gap-2 mb-1">
                                         {logoSrc && (
-                                            <Image src={logoSrc} alt={brandDisplay} width={20} height={20} className="object-contain" />
+                                            <Image src={logoSrc} alt={brandDisplay} width={20} height={20} unoptimized className="object-contain" />
                                         )}
                                         <span className="text-xs font-semibold uppercase tracking-wider" style={{ color: brandColor }}>
                                             {selectedVariant.make}
@@ -347,6 +347,7 @@ export function BrandModelAccordion({
                                         src={selectedVariant.image_urls[0].value}
                                         alt={`${selectedVariant.model} ${selectedVariant.variant_name}`}
                                         fill
+                                        unoptimized
                                         sizes="(max-width: 768px) 100vw, 448px"
                                         className="object-cover"
                                     />

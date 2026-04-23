@@ -1,0 +1,32 @@
+{
+  "brand": "TVS",
+  "model": "Apache RTX",
+  "brandId": "tvs-motor",
+  "modelSlug": "apache-rtx",
+  "sourceUrl": "https://www.bikewale.com/tvs-bikes/apache-rtx/colours/",
+  "scrapedAt": "2026-04-22T13:34:23.168Z",
+  "count": 5,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/d5teqhb_1882075.jpg?q=100",
+  "colors": [
+    {
+      "name": "Pearl White",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/apache-rtx/pearl-white.avif"
+    },
+    {
+      "name": "Lightning Black",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/apache-rtx/lightning-black.avif"
+    },
+    {
+      "name": "Metallic Blue",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/apache-rtx/metallic-blue.avif"
+    },
+    {
+      "name": "Tarn Bronze",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/apache-rtx/tarn-bronze.avif"
+    },
+    {
+      "name": "Viper Green",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/apache-rtx/viper-green.avif"
+    }
+  ]
+}

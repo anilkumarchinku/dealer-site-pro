@@ -1,0 +1,60 @@
+{
+  "brand": "TVS",
+  "model": "iQube",
+  "brandId": "tvs-motor",
+  "modelSlug": "iqube",
+  "sourceUrl": "https://www.bikewale.com/tvs-bikes/iqube/colours/",
+  "scrapedAt": "2026-04-22T13:34:23.569Z",
+  "count": 12,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/ea5avfb_1835153.jpg?q=100",
+  "colors": [
+    {
+      "name": "Wallnut Brown",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/iqube/wallnut-brown.avif"
+    },
+    {
+      "name": "Pearl White",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/iqube/pearl-white.avif"
+    },
+    {
+      "name": "Titanium Grey",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/iqube/titanium-grey.avif"
+    },
+    {
+      "name": "Copper Brown Beige",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/iqube/copper-brown-beige.avif"
+    },
+    {
+      "name": "Starlight Blue Beige",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/iqube/starlight-blue-beige.avif"
+    },
+    {
+      "name": "Celebration Orange",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/iqube/celebration-orange.avif"
+    },
+    {
+      "name": "Mint Blue",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/iqube/mint-blue.avif"
+    },
+    {
+      "name": "Mercury Grey",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/iqube/mercury-grey.avif"
+    },
+    {
+      "name": "Titanium Grey - Matte",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/iqube/titanium-grey-matte.avif"
+    },
+    {
+      "name": "Walnut Brown - Backrest",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/iqube/walnut-brown-backrest.avif"
+    },
+    {
+      "name": "Titanium Grey - Backrest",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/iqube/titanium-grey-backrest.avif"
+    },
+    {
+      "name": "Pearl White - Backrest",
+      "image": "/data/brand-model-images/2w-colors/tvs-motor/iqube/pearl-white-backrest.avif"
+    }
+  ]
+}

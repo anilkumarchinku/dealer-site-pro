@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useMemo } from "react"
+import { useEffect, useMemo, useState } from "react"
 import { Search, Car, Bike, Truck, Send, Eye, Fuel, Zap, Info } from "lucide-react"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
@@ -294,7 +294,7 @@ function BrandSection({
 // ── Main client ──────────────────────────────────────────────────────────────
 
 interface Props {
-    models: CatalogModel[]
+    models?: CatalogModel[]
 }
 
 const TABS = [
@@ -303,9 +303,47 @@ const TABS = [
     { key: "3w" as CategoryKey, label: "3-Wheeler", Icon: Truck, cls: "bg-amber-600 border-amber-600 text-white" },
 ]
 
-export function CatalogClient({ models }: Props) {
+export function CatalogClient({ models: initialModels }: Props) {
+    const [models, setModels] = useState<CatalogModel[]>(initialModels ?? [])
+    const [isLoading, setIsLoading] = useState(!initialModels)
     const [activeTab, setActiveTab] = useState<CategoryKey>("4w")
     const [search, setSearch]       = useState("")
+
+    useEffect(() => {
+        if (initialModels) {
+            setModels(initialModels)
+            setIsLoading(false)
+            return
+        }
+
+        let cancelled = false
+
+        const loadCatalog = async () => {
+            try {
+                const response = await fetch('/api/admin/catalog', { cache: 'no-store' })
+                if (!response.ok) throw new Error('Failed to load catalog')
+
+                const payload = await response.json() as { models?: CatalogModel[] }
+                if (!cancelled) {
+                    setModels(Array.isArray(payload.models) ? payload.models : [])
+                }
+            } catch {
+                if (!cancelled) {
+                    setModels([])
+                }
+            } finally {
+                if (!cancelled) {
+                    setIsLoading(false)
+                }
+            }
+        }
+
+        loadCatalog()
+
+        return () => {
+            cancelled = true
+        }
+    }, [initialModels])
 
     const counts = useMemo(() => ({
         "4w": models.filter((m) => m.category === "4w").length,
@@ -369,8 +407,14 @@ export function CatalogClient({ models }: Props) {
                     />
                 </div>
 
+                {isLoading && (
+                    <div className="rounded-2xl border border-gray-200 bg-white px-6 py-10 text-center text-sm text-gray-500 shadow-sm dark:border-slate-800 dark:bg-slate-950 dark:text-slate-400">
+                        Loading catalog models...
+                    </div>
+                )}
+
                 {/* Brand sections */}
-                {brandGroups.length === 0 ? (
+                {!isLoading && brandGroups.length === 0 ? (
                     <p className="text-sm text-gray-400 dark:text-slate-500 py-12 text-center">
                         {search ? `No results for "${search}"` : "No models found."}
                     </p>

@@ -1,0 +1,20 @@
+{
+  "brand": "Kawasaki",
+  "model": "KLX230",
+  "brandId": "kawasaki-india",
+  "modelSlug": "klx230",
+  "sourceUrl": "https://www.bikewale.com/kawasaki-bikes/klx230/colours/",
+  "scrapedAt": "2026-04-22T13:33:56.849Z",
+  "count": 2,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/hp3vvgb_1862998.jpg?q=100",
+  "colors": [
+    {
+      "name": "Battle Grey / Bright White / Ebony",
+      "image": "/data/brand-model-images/2w-colors/kawasaki-india/klx230/battle-grey-bright-white-ebony.avif"
+    },
+    {
+      "name": "Lime Green",
+      "image": "/data/brand-model-images/2w-colors/kawasaki-india/klx230/lime-green.avif"
+    }
+  ]
+}

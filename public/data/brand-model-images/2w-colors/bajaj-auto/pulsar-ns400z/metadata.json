@@ -1,0 +1,29 @@
+{
+  "brand": "Bajaj Auto",
+  "model": "Pulsar NS400Z",
+  "brandId": "bajaj-auto",
+  "makeSlug": "bajaj-bikes",
+  "modelSlug": "pulsar-ns400z",
+  "sourceUrl": "https://www.bikewale.com/bajaj-bikes/pulsar-ns400z/colours/",
+  "scrapedAt": "2026-04-22T13:25:12.152Z",
+  "count": 4,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/h73vk8b_1929598.avif?q=100",
+  "colors": [
+    {
+      "name": "Pewter Grey",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/pulsar-ns400z/pewter-grey.avif"
+    },
+    {
+      "name": "Pearl Metallic White",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/pulsar-ns400z/pearl-metallic-white.avif"
+    },
+    {
+      "name": "Glossy Racing Red",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/pulsar-ns400z/glossy-racing-red.avif"
+    },
+    {
+      "name": "Brooklyn Black",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/pulsar-ns400z/brooklyn-black.avif"
+    }
+  ]
+}

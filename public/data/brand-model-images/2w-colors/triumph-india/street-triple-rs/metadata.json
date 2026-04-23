@@ -1,0 +1,32 @@
+{
+  "brand": "Triumph",
+  "model": "Street Triple RS",
+  "brandId": "triumph-india",
+  "modelSlug": "street-triple-rs",
+  "sourceUrl": "https://www.bikewale.com/triumph-bikes/street-triple-rs/colours/",
+  "scrapedAt": "2026-04-22T13:34:22.570Z",
+  "count": 5,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/gsn3pib_1908857.png?q=100",
+  "colors": [
+    {
+      "name": "Granite",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/street-triple-rs/granite.png"
+    },
+    {
+      "name": "Phantom Black",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/street-triple-rs/phantom-black.avif"
+    },
+    {
+      "name": "Cosmic Yellow",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/street-triple-rs/cosmic-yellow.avif"
+    },
+    {
+      "name": "Silver Ice",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/street-triple-rs/silver-ice.avif"
+    },
+    {
+      "name": "Carnival Red",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/street-triple-rs/carnival-red.avif"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "brand": "Jawa",
+  "model": "Perak",
+  "brandId": "jawa-motorcycles",
+  "modelSlug": "perak",
+  "sourceUrl": "https://www.bikewale.com/jawa-bikes/perak/colours/",
+  "scrapedAt": "2026-04-22T13:33:55.677Z",
+  "count": 1,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/2x8unib_1906121.png?q=100",
+  "colors": [
+    {
+      "name": "Stealth",
+      "image": "/data/brand-model-images/2w-colors/jawa-motorcycles/perak/stealth.png"
+    }
+  ]
+}

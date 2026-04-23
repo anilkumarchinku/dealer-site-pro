@@ -1,0 +1,16 @@
+{
+  "brand": "Ducati",
+  "model": "Multistrada V4 RS",
+  "brandId": "ducati-india",
+  "modelSlug": "multistrada-v4-rs",
+  "sourceUrl": "https://www.bikewale.com/ducati-bikes/multistrada-v4-rs/colours/",
+  "scrapedAt": "2026-04-22T13:33:36.421Z",
+  "count": 1,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/o9fqkeb_1767337.jpg?q=100",
+  "colors": [
+    {
+      "name": "Iceberg White Livery and Red",
+      "image": "/data/brand-model-images/2w-colors/ducati-india/multistrada-v4-rs/iceberg-white-livery-and-red.avif"
+    }
+  ]
+}

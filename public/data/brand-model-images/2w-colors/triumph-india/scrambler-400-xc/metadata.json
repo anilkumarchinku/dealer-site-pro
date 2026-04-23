@@ -1,0 +1,24 @@
+{
+  "brand": "Triumph",
+  "model": "Scrambler 400 XC",
+  "brandId": "triumph-india",
+  "modelSlug": "scrambler-400-xc",
+  "sourceUrl": "https://www.bikewale.com/triumph-bikes/scrambler-400-xc/colours/",
+  "scrapedAt": "2026-04-22T13:34:18.448Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/elp8g8b_1924550.png?q=100",
+  "colors": [
+    {
+      "name": "Storm Grey",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/scrambler-400-xc/storm-grey.png"
+    },
+    {
+      "name": "Vanilla White",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/scrambler-400-xc/vanilla-white.avif"
+    },
+    {
+      "name": "Racing Yellow",
+      "image": "/data/brand-model-images/2w-colors/triumph-india/scrambler-400-xc/racing-yellow.png"
+    }
+  ]
+}

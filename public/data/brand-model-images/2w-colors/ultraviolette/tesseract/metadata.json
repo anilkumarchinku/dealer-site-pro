@@ -1,0 +1,28 @@
+{
+  "brand": "Ultraviolette",
+  "model": "Tesseract",
+  "brandId": "ultraviolette",
+  "modelSlug": "tesseract",
+  "sourceUrl": "https://www.bikewale.com/ultraviolette-bikes/tesseract/colours/",
+  "scrapedAt": "2026-04-22T13:34:28.369Z",
+  "count": 4,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/icqt8fb_1819671.jpg?q=100",
+  "colors": [
+    {
+      "name": "Solar White",
+      "image": "/data/brand-model-images/2w-colors/ultraviolette/tesseract/solar-white.avif"
+    },
+    {
+      "name": "Stealth Black",
+      "image": "/data/brand-model-images/2w-colors/ultraviolette/tesseract/stealth-black.avif"
+    },
+    {
+      "name": "Sonic Pink",
+      "image": "/data/brand-model-images/2w-colors/ultraviolette/tesseract/sonic-pink.avif"
+    },
+    {
+      "name": "Desert Sand",
+      "image": "/data/brand-model-images/2w-colors/ultraviolette/tesseract/desert-sand.avif"
+    }
+  ]
+}

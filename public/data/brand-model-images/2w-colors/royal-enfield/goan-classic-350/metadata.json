@@ -1,0 +1,28 @@
+{
+  "brand": "Royal Enfield",
+  "model": "Goan Classic 350",
+  "brandId": "royal-enfield",
+  "modelSlug": "goan-classic-350",
+  "sourceUrl": "https://www.bikewale.com/royalenfield-bikes/goan-classic-350/colours/",
+  "scrapedAt": "2026-04-22T13:34:13.023Z",
+  "count": 4,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/oacg8ib_1900143.avif?q=100",
+  "colors": [
+    {
+      "name": "Purple Haze",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/goan-classic-350/purple-haze.avif"
+    },
+    {
+      "name": "Shack Black",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/goan-classic-350/shack-black.avif"
+    },
+    {
+      "name": "Trip Teal",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/goan-classic-350/trip-teal.avif"
+    },
+    {
+      "name": "Rave Red",
+      "image": "/data/brand-model-images/2w-colors/royal-enfield/goan-classic-350/rave-red.avif"
+    }
+  ]
+}
