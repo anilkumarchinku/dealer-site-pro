@@ -63,7 +63,7 @@
         "transmission_type": "Automatic",
         "range": "85 km"
       },
-      "vehicle_category": "passenger"
+      "vehicle_category": "cargo"
     },
     {
       "variant_name": "Touro Max++/Electric",
@@ -83,7 +83,7 @@
         "transmission_type": "Automatic",
         "range": "100 km"
       },
-      "vehicle_category": "passenger"
+      "vehicle_category": "cargo"
     }
   ]
 }
