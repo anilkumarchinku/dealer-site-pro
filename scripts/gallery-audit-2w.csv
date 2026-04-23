@@ -27,8 +27,8 @@ category,brand,model,status,brand_id,matched_slug,image_count,note
 2w,Bajaj Auto,Pulsar N250,scraped_exact,bajaj-auto,pulsar-n250,3,
 2w,Bajaj Auto,Pulsar NS125,scraped_exact,bajaj-auto,pulsar-ns125,6,
 2w,Bajaj Auto,Pulsar NS160,scraped_exact,bajaj-auto,pulsar-ns160,4,
-2w,Bajaj Auto,Pulsar NS200,covered_by_alias,bajaj-auto,pulsar-ns,4,"uses shared source model ""Pulsar NS400Z"""
-2w,Bajaj Auto,Pulsar NS400Z,scraped_exact,bajaj-auto,pulsar-ns,4,
+2w,Bajaj Auto,Pulsar NS200,scraped_exact,bajaj-auto,pulsar-ns,4,
+2w,Bajaj Auto,Pulsar NS400Z,scraped_exact,bajaj-auto,pulsar-ns400z,4,
 2w,Bajaj Chetak,Chetak,scraped_exact,bajaj-chetak-ev,chetak,14,
 2w,Bajaj Chetak,Chetak C25,scraped_exact,bajaj-chetak-ev,chetak-c25,6,
 2w,BattRE Electric,LOEV,unavailable_on_source,battre-electric,,0,no confirmed BikeWale colour page
@@ -342,7 +342,7 @@ category,brand,model,status,brand_id,matched_slug,image_count,note
 2w,TVS iQube,TVS Orbiter,scraped_exact,tvs-iqube,orbiter,6,
 2w,TVS iQube,TVS X,scraped_exact,tvs-iqube,x,1,
 2w,TVS Motor Company,Apache RR 310,scraped_exact,tvs-motor,apache-rr-310,4,
-2w,TVS Motor Company,Apache RTR 160,covered_by_alias,tvs-motor,apache-rtr-160-4v,12,"uses shared source model ""Apache RTR 160 4V"""
+2w,TVS Motor Company,Apache RTR 160,scraped_exact,tvs-motor,apache-160,8,
 2w,TVS Motor Company,Apache RTR 160 4V,scraped_exact,tvs-motor,apache-rtr-160-4v,12,
 2w,TVS Motor Company,Apache RTR 180,scraped_exact,tvs-motor,apache-rtr-180,5,
 2w,TVS Motor Company,Apache RTR 200 4V,scraped_exact,tvs-motor,apache-rtr-200-4v,7,
