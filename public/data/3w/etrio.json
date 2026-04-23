@@ -83,7 +83,7 @@
         "transmission_type": "Automatic",
         "range": "100 km"
       },
-      "vehicle_category": "cargo"
+      "vehicle_category": "passenger"
     }
   ]
 }

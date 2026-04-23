@@ -79,7 +79,7 @@
         "fuel_type": "Electric",
         "transmission_type": "Automatic"
       },
-      "vehicle_category": "cargo"
+      "vehicle_category": "passenger"
     },
     {
       "variant_name": "Kyoro Plus/Electric",
@@ -99,7 +99,7 @@
         "transmission_type": "Automatic",
         "range": "200 km"
       },
-      "vehicle_category": "electric"
+      "vehicle_category": "passenger"
     }
   ]
 }
