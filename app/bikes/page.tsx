@@ -63,16 +63,17 @@ interface BikeVehicle {
     is_featured: boolean;
 }
 
-// ── Brand list from brand-models.json (hardcoded for filter sidebar) ──
+// ── Brand list — names must match the `make` field from /api/bikes ──
+// (v.make from JSON, e.g. "Hero" not "Hero MotoCorp", "BMW" not "BMW Motorrad")
 const TRADITIONAL_BRANDS = [
-    'Hero MotoCorp', 'Honda', 'TVS', 'Bajaj', 'Royal Enfield',
+    'Hero', 'Honda', 'TVS', 'Bajaj', 'Royal Enfield',
     'Yamaha', 'Suzuki', 'KTM', 'Kawasaki', 'Triumph',
-    'Ducati', 'BMW Motorrad', 'Harley-Davidson', 'Aprilia', 'Vespa',
+    'Ducati', 'BMW', 'Harley-Davidson', 'Aprilia', 'Vespa',
     'Husqvarna', 'Jawa', 'Yezdi', 'Benelli',
 ];
 
 const ELECTRIC_BRANDS = [
-    'Ola Electric', 'Ather Energy', 'Bajaj Chetak', 'TVS iQube',
+    'Ola Electric', 'Ather', 'Bajaj Chetak', 'TVS',
     'Hero Electric', 'Vida', 'Revolt', 'Ampere',
     'Okinawa', 'Tork Motors', 'Ultraviolette', 'Simple Energy',
 ];

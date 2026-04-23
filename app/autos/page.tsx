@@ -42,22 +42,27 @@ import {
 } from '@/components/ui/sheet';
 import { getVehicleImageUrls, brandNameToId } from '@/lib/utils/brand-model-images';
 
-// 3W brand list from brand-models.json
+// 3W brand list — `brand` must match the `make` field returned by /api/autos
+// (which comes from the JSON `brand` field, e.g. "Piaggio" not "Piaggio Ape")
 const THREE_WHEELER_BRANDS = [
-    { brandId: 'bajaj-auto-3w', brand: 'Bajaj Auto (3W)' },
-    { brandId: 'piaggio-ape', brand: 'Piaggio Ape' },
+    { brandId: 'bajaj-auto-3w', brand: 'Bajaj' },
+    { brandId: 'piaggio-ape', brand: 'Piaggio' },
     { brandId: 'tvs-king', brand: 'TVS King' },
-    { brandId: 'mahindra-3w', brand: 'Mahindra (3W)' },
+    { brandId: 'mahindra-3w', brand: 'Mahindra' },
     { brandId: 'atul-auto', brand: 'Atul Auto' },
     { brandId: 'kinetic-green', brand: 'Kinetic Green' },
     { brandId: 'euler-motors', brand: 'Euler Motors' },
-    { brandId: 'greaves-electric-3w', brand: 'Greaves Electric Mobility' },
+    { brandId: 'greaves-electric-3w', brand: 'Greaves Electric' },
     { brandId: 'lohia-auto', brand: 'Lohia Auto' },
     { brandId: 'yc-ev', brand: 'YC Electric' },
-    { brandId: 'saera-ev', brand: 'Saera Electric (Mayuri)' },
+    { brandId: 'saera-ev', brand: 'Saera Electric' },
     { brandId: 'omega-seiki-mobility', brand: 'Omega Seiki Mobility' },
     { brandId: 'altigreen', brand: 'Altigreen' },
     { brandId: 'montra-ev', brand: 'Montra Electric' },
+    { brandId: 'terra-motors', brand: 'Terra Motors' },
+    { brandId: 'etrio', brand: 'ETrio' },
+    { brandId: 'osm', brand: 'OSM' },
+    { brandId: 'youdha', brand: 'YOUDHA' },
 ];
 
 const TYPE_OPTIONS = [
