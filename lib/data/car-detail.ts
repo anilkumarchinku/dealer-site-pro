@@ -252,6 +252,14 @@ function normalizeColorName(value: string): string {
         .trim()
 }
 
+function normalizeColorKey(value: string): string {
+    return normalizeText(
+        String(value ?? '')
+            .replace(/\((solid|metallic|pearl)\)/gi, ' ')
+            .replace(/\b(solid|metallic|pearl)\b/gi, ' ')
+    )
+}
+
 function inferColorType(name: string): 'Solid' | 'Metallic' | 'Pearl' | string {
     const normalized = name.toLowerCase()
     if (normalized.includes('metallic')) return 'Metallic'
@@ -310,20 +318,40 @@ function extractColors(entry: Record<string, unknown>): Array<{ name: string; ty
     return []
 }
 
-function uniqueColors(colors: Array<{ name: string; type: string; hex: string; extraCost: number }>) {
-    const seen = new Set<string>()
-    return colors.filter((color) => {
-        const key = normalizeText(color.name)
-        if (!key || seen.has(key)) return false
-        seen.add(key)
-        return true
-    })
+type HydratedColor = { name: string; type: string; hex: string; extraCost: number; image?: string }
+
+function uniqueColors(colors: HydratedColor[]) {
+    const merged: HydratedColor[] = []
+    const seen = new Map<string, number>()
+
+    for (const color of colors) {
+        const key = normalizeColorKey(color.name)
+        if (!key) continue
+
+        const existingIndex = seen.get(key)
+        if (existingIndex == null) {
+            seen.set(key, merged.length)
+            merged.push(color)
+            continue
+        }
+
+        const existing = merged[existingIndex]
+        merged[existingIndex] = {
+            ...existing,
+            type: existing.type || color.type,
+            hex: existing.hex && existing.hex !== '#9CA3AF' ? existing.hex : color.hex,
+            extraCost: existing.extraCost > 0 ? existing.extraCost : color.extraCost,
+            ...(existing.image ? {} : color.image ? { image: color.image } : {}),
+        }
+    }
+
+    return merged
 }
 
 function colorsFromNames(
     names: string[],
     images: string[] = [],
-): Array<{ name: string; type: string; hex: string; extraCost: number; image?: string }> {
+): HydratedColor[] {
     return names
         .map((name, index) => {
             const normalized = normalizeColorName(name)
@@ -337,7 +365,7 @@ function colorsFromNames(
                 ...(image ? { image } : {}),
             }
         })
-        .filter((color): color is { name: string; type: string; hex: string; extraCost: number; image?: string } => Boolean(color))
+        .filter((color): color is HydratedColor => Boolean(color))
 }
 
 export async function hydrateCarWithJsonDetails(car: Car): Promise<Car> {
@@ -463,7 +491,7 @@ export async function hydrateCarWithJsonDetails(car: Car): Promise<Car> {
         transmissions[0] ?? car.transmission.type
     )
     const jsonColors = uniqueColors(matchingVariants.flatMap(extractColors))
-    const mergedColors = uniqueColors([...jsonColors, ...scrapedColors])
+    const mergedColors = uniqueColors([...scrapedColors, ...jsonColors])
     const pricedHeroImage = hasLocalHero
         ? baseHeroImage
         : (scrapedGallery?.hero || imageUrls[0] || car.images.hero)

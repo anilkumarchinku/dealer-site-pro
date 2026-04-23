@@ -29,6 +29,15 @@ function slugify(value: string): string {
         .replace(/^-|-$/g, '')
 }
 
+function normalizeAliasKey(value: string): string {
+    return String(value || '')
+        .toLowerCase()
+        .replace(/&/g, ' and ')
+        .replace(/[^a-z0-9]+/g, ' ')
+        .replace(/\s+/g, ' ')
+        .trim()
+}
+
 function stripBrandPrefix(modelSlug: string, brandSlug: string): string {
     const normalizedModel = slugify(modelSlug)
     const normalizedBrand = slugify(brandSlug)
@@ -85,6 +94,19 @@ function deriveSourceTokens(sourceUrl: string): { brandSlug: string; modelTokens
     } catch {
         return null
     }
+}
+
+const EXPLICIT_4W_GALLERY_ALIASES: Record<string, string[]> = {
+    'bentley::continental gt': ['continental'],
+    'bentley::continental gtc': ['continental'],
+    'mahindra::xuv400': ['xuv400-ev'],
+    'hyundai::creta ev': ['creta-electric'],
+    'mercedes-benz::eqg': ['g-class-electric'],
+}
+
+function getExplicitGalleryAliasTokens(make: string, model: string): string[] {
+    const key = `${slugify(make)}::${normalizeAliasKey(model)}`
+    return EXPLICIT_4W_GALLERY_ALIASES[key] ?? []
 }
 
 function normalizeUrl(url: string): string {
@@ -181,6 +203,12 @@ function buildLocalGalleryCandidates(sourceUrl: string, options?: GalleryLookupO
         candidates.add(
             path.join(root, 'public', 'data', 'brand-model-images', '4w-galleries', brandFolder, modelFolder, 'metadata.json')
         )
+
+        for (const relatedModelToken of getExplicitGalleryAliasTokens(options.make, options.model)) {
+            candidates.add(
+                path.join(root, 'public', 'data', 'brand-model-images', '4w-galleries', brandFolder, relatedModelToken, 'metadata.json')
+            )
+        }
     }
 
     const tokens = deriveSourceTokens(sourceUrl)
