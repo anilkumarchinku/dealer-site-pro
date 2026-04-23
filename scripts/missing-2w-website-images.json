@@ -1,0 +1,546 @@
+{
+  "generatedAt": "2026-04-23T11:01:10.012Z",
+  "source": "public/data/2w/*.json",
+  "totalModels": 540,
+  "presentCount": 540,
+  "missingCount": 0,
+  "brands": [
+    {
+      "brand": "Ampere",
+      "brandId": "ampere-greaves",
+      "total": 12,
+      "present": 12,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "Aprilia",
+      "brandId": "aprilia-india",
+      "total": 34,
+      "present": 34,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "Ather",
+      "brandId": "ather-energy",
+      "total": 4,
+      "present": 4,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "Bajaj",
+      "brandId": "bajaj-auto",
+      "total": 23,
+      "present": 23,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "Bajaj Chetak",
+      "brandId": "bajaj-chetak-ev",
+      "total": 4,
+      "present": 4,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "Battre Electric",
+      "brandId": "battre-ev",
+      "total": 4,
+      "present": 4,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "Benelli",
+      "brandId": "benelli-india",
+      "total": 23,
+      "present": 23,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "BGauss",
+      "brandId": "bgauss",
+      "total": 3,
+      "present": 3,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "BMW Motorrad",
+      "brandId": "bmw-motorrad-india",
+      "total": 19,
+      "present": 19,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "Bounce",
+      "brandId": "bounce-infinity",
+      "total": 1,
+      "present": 1,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "Brixton Motorcycles",
+      "brandId": "brixton-motorcycles",
+      "total": 4,
+      "present": 4,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "BSA",
+      "brandId": "bsa",
+      "total": 3,
+      "present": 3,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "CFMoto",
+      "brandId": "cfmoto-india",
+      "total": 5,
+      "present": 5,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "Ducati",
+      "brandId": "ducati-india",
+      "total": 20,
+      "present": 20,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "Evolet",
+      "brandId": "evolet",
+      "total": 3,
+      "present": 3,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "Ferrato",
+      "brandId": "ferrato",
+      "total": 1,
+      "present": 1,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "Gemopai",
+      "brandId": "gemopai",
+      "total": 3,
+      "present": 3,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "Harley-Davidson",
+      "brandId": "harley-davidson-india",
+      "total": 13,
+      "present": 13,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "Hero Electric",
+      "brandId": "hero-electric",
+      "total": 4,
+      "present": 4,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "Hero MotoCorp",
+      "brandId": "hero-motocorp",
+      "total": 24,
+      "present": 24,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "Honda Motorcycle & Scooter India",
+      "brandId": "honda-hmsi",
+      "total": 24,
+      "present": 24,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "Hop Electric",
+      "brandId": "hop-electric",
+      "total": 3,
+      "present": 3,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "Husqvarna",
+      "brandId": "husqvarna-india",
+      "total": 2,
+      "present": 2,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "Indian",
+      "brandId": "indian-motorcycle",
+      "total": 27,
+      "present": 27,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "iVOOMi",
+      "brandId": "ivoomi-energy",
+      "total": 2,
+      "present": 2,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "Jawa",
+      "brandId": "jawa-motorcycles",
+      "total": 5,
+      "present": 5,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "Joy e-bike",
+      "brandId": "joy-e-bike",
+      "total": 4,
+      "present": 4,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "Kabira Mobility",
+      "brandId": "kabira-mobility",
+      "total": 8,
+      "present": 8,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "Kawasaki",
+      "brandId": "kawasaki-india",
+      "total": 22,
+      "present": 22,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "Keeway",
+      "brandId": "keeway-india",
+      "total": 8,
+      "present": 8,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "Kinetic Green",
+      "brandId": "kinetic",
+      "total": 2,
+      "present": 2,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "Komaki",
+      "brandId": "komaki",
+      "total": 4,
+      "present": 4,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "KTM",
+      "brandId": "ktm-india",
+      "total": 11,
+      "present": 11,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "Lectrix",
+      "brandId": "lectrix-ev",
+      "total": 4,
+      "present": 4,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "Mahindra",
+      "brandId": "mahindra-two-wheelers",
+      "total": 3,
+      "present": 3,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "Matter",
+      "brandId": "matter-ev",
+      "total": 1,
+      "present": 1,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "Moto Guzzi",
+      "brandId": "moto-guzzi",
+      "total": 7,
+      "present": 7,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "Moto Morini",
+      "brandId": "motomorini",
+      "total": 2,
+      "present": 2,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "Norton",
+      "brandId": "norton-motorcycles",
+      "total": 7,
+      "present": 7,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "Numeros",
+      "brandId": "numeros",
+      "total": 2,
+      "present": 2,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "Oben",
+      "brandId": "oben-electric",
+      "total": 3,
+      "present": 3,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "Odysse",
+      "brandId": "odysse-electric",
+      "total": 4,
+      "present": 4,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "Okaya EV",
+      "brandId": "okaya-ev",
+      "total": 6,
+      "present": 6,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "Okinawa",
+      "brandId": "okinawa-autotech",
+      "total": 8,
+      "present": 8,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "OLA Electric",
+      "brandId": "ola-electric",
+      "total": 8,
+      "present": 8,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "OPG Mobility",
+      "brandId": "opg-mobility",
+      "total": 8,
+      "present": 8,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "Pure EV",
+      "brandId": "pure-ev",
+      "total": 4,
+      "present": 4,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "QJ Motor India",
+      "brandId": "qj-motor-india",
+      "total": 4,
+      "present": 4,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "Quantum Energy",
+      "brandId": "quantum-energy",
+      "total": 3,
+      "present": 3,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "Raptee HV",
+      "brandId": "raptee",
+      "total": 1,
+      "present": 1,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "Revolt",
+      "brandId": "revolt-motors",
+      "total": 4,
+      "present": 4,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "River",
+      "brandId": "river-ev",
+      "total": 1,
+      "present": 1,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "Royal Enfield",
+      "brandId": "royal-enfield",
+      "total": 14,
+      "present": 14,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "Simple Energy",
+      "brandId": "simple-energy",
+      "total": 2,
+      "present": 2,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "Suzuki",
+      "brandId": "suzuki-motorcycle",
+      "total": 12,
+      "present": 12,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "Tork Motors",
+      "brandId": "tork-motors",
+      "total": 1,
+      "present": 1,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "Triumph",
+      "brandId": "triumph-india",
+      "total": 21,
+      "present": 21,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "TVS",
+      "brandId": "tvs-motor",
+      "total": 19,
+      "present": 19,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "Ultraviolette",
+      "brandId": "ultraviolette",
+      "total": 6,
+      "present": 6,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "Vespa",
+      "brandId": "vespa-india",
+      "total": 22,
+      "present": 22,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "VIDA",
+      "brandId": "vida-hero",
+      "total": 2,
+      "present": 2,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "VLF",
+      "brandId": "vlf",
+      "total": 2,
+      "present": 2,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "Yamaha",
+      "brandId": "yamaha-india",
+      "total": 16,
+      "present": 16,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "Yezdi",
+      "brandId": "yezdi-motorcycles",
+      "total": 3,
+      "present": 3,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "Yo",
+      "brandId": "yo",
+      "total": 4,
+      "present": 4,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "Yulu",
+      "brandId": "yulu",
+      "total": 3,
+      "present": 3,
+      "missing": 0,
+      "missingModels": []
+    },
+    {
+      "brand": "Zontes",
+      "brandId": "zontes-india",
+      "total": 4,
+      "present": 4,
+      "missing": 0,
+      "missingModels": []
+    }
+  ],
+  "missing": []
+}
