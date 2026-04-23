@@ -384,6 +384,7 @@ function BikesContent() {
     const sortBy = searchParams.get('sortBy') || 'popular';
     const minPriceParam = searchParams.get('minPrice') || '';
     const maxPriceParam = searchParams.get('maxPrice') || '';
+    const searchQuery = searchParams.get('q') || '';
 
     const selectedBrands = makeParam ? makeParam.split(',').filter(Boolean) : [];
     const selectedType = typeParam || null;
@@ -398,6 +399,7 @@ function BikesContent() {
             try {
                 const params = new URLSearchParams();
                 if (makeParam) params.set('make', makeParam);
+                if (searchQuery) params.set('q', searchQuery);
                 if (typeParam) params.set('type', typeParam);
                 if (minPriceParam) params.set('minPrice', minPriceParam);
                 if (maxPriceParam) params.set('maxPrice', maxPriceParam);

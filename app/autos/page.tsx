@@ -358,6 +358,7 @@ function AutosContent() {
     const selectedBrand = searchParams.get('make') || '';
     const selectedType = searchParams.get('type') || 'all';
     const sortBy = searchParams.get('sortBy') || 'popular';
+    const searchQuery = searchParams.get('q') || '';
 
     const updateParams = useCallback(
         (updates: Record<string, string>) => {
@@ -380,6 +381,7 @@ function AutosContent() {
             try {
                 const params = new URLSearchParams();
                 if (selectedBrand) params.set('make', selectedBrand);
+                if (searchQuery) params.set('q', searchQuery);
                 if (selectedType !== 'all') params.set('type', selectedType);
                 params.set('sortBy', sortBy);
                 params.set('page', String(currentPage));
@@ -400,7 +402,7 @@ function AutosContent() {
             }
         };
         fetchAutos();
-    }, [selectedBrand, selectedType, sortBy, currentPage]);
+    }, [selectedBrand, selectedType, sortBy, currentPage, searchQuery]);
 
     const handleBrandChange = (brand: string) => {
         setCurrentPage(1);
