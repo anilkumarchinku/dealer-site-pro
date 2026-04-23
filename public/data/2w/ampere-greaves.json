@@ -188,33 +188,6 @@
     },
     {
       "make": "Ampere",
-      "model": "REO [2019-2023]",
-      "variant_name": "REO [2019-2023]",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A kmpl",
-      "max_power": "0.25 kW",
-      "max_torque": "22 Nm",
-      "top_speed": "N/A kmph",
-      "fuel_type": "Petrol",
-      "source_section": "Discontinued",
-      "description": "The Ampere REO [2019-2023] is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Lead Acid Battery",
-          "price": "N/A"
-        },
-        {
-          "name": "Li Battery",
-          "price": "N/A"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {}
-    },
-    {
-      "make": "Ampere",
       "model": "Magnus Pro",
       "variant_name": "Magnus Pro",
       "price": "₹1,10,000",
@@ -235,30 +208,6 @@
         {
           "name": "Pro - Li Battery",
           "price": "₹1,10,000"
-        }
-      ],
-      "colors": [],
-      "technical_specifications": {},
-      "transmission": "Automatic"
-    },
-    {
-      "make": "Ampere",
-      "model": "Zeal",
-      "variant_name": "Zeal",
-      "price": "N/A",
-      "engine_displacement": "N/A cc",
-      "mileage": "N/A",
-      "max_power": "1.5 kW",
-      "max_torque": "45 Nm",
-      "top_speed": "N/A",
-      "fuel_type": "Electric",
-      "source_section": "Discontinued",
-      "description": "The Ampere Zeal is a two-wheeler available in India.",
-      "features": [],
-      "variants": [
-        {
-          "name": "Ex - Li Battery",
-          "price": "N/A"
         }
       ],
       "colors": [],
