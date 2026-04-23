@@ -52,7 +52,7 @@ function CarCardSkeleton() {
     );
 }
 
-const PRICE_MAX_DEFAULT = 5_000_000;
+const PRICE_MAX_DEFAULT = 100_000_000; // ₹10 Cr
 const PRICE_CRORE_THRESHOLD = 10_000_000;
 const PRICE_LAKH_THRESHOLD = 100_000;
 

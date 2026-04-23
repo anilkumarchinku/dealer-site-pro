@@ -33,9 +33,9 @@ interface CarFiltersProps {
     showUsedCarFilters?: boolean;
 }
 
-const PRICE_MAX_DEFAULT = 5_000_000;
-const PRICE_SLIDER_MAX = 10_000_000;
-const PRICE_STEP = 50_000;
+const PRICE_MAX_DEFAULT = 100_000_000; // ₹10 Cr
+const PRICE_SLIDER_MAX = 100_000_000; // ₹10 Cr
+const PRICE_STEP = 100_000; // ₹1 Lakh steps
 const KM_MAX_DEFAULT = 200_000;
 const KM_STEP = 5_000;
 
@@ -224,17 +224,45 @@ export function CarFilters({ className, onFilterChange, hideBrand = false, showU
                             Price Range
                         </AccordionTrigger>
                         <AccordionContent className="pb-4">
+                            <div className="flex items-center justify-between mb-3">
+                                <span className="text-sm font-semibold text-gray-900">{formatPriceInLakhs(priceRange[0])}</span>
+                                <span className="text-xs text-gray-400">to</span>
+                                <span className="text-sm font-semibold text-gray-900">
+                                    {priceRange[1] >= PRICE_SLIDER_MAX ? '₹10 Cr+' : formatPriceInLakhs(priceRange[1])}
+                                </span>
+                            </div>
                             <Slider
                                 value={priceRange}
+                                min={0}
                                 max={PRICE_SLIDER_MAX}
                                 step={PRICE_STEP}
                                 onValueChange={(val) => setPriceRange(val as [number, number])}
-                                className="mb-3"
+                                className="mb-4"
                             />
-                            <div className="flex items-center justify-between">
-                                <span className="text-xs font-medium px-2 py-1 bg-gray-100 text-gray-700 rounded-md">{formatPriceInLakhs(priceRange[0])}</span>
-                                <span className="text-xs text-gray-600">to</span>
-                                <span className="text-xs font-medium px-2 py-1 bg-gray-100 text-gray-700 rounded-md">{formatPriceInLakhs(priceRange[1])}</span>
+                            {/* Quick preset buttons */}
+                            <div className="flex flex-wrap gap-1.5">
+                                {[
+                                    { label: 'Under 5 L', min: 0, max: 500_000 },
+                                    { label: 'Under 10 L', min: 0, max: 1_000_000 },
+                                    { label: '10-20 L', min: 1_000_000, max: 2_000_000 },
+                                    { label: '20-50 L', min: 2_000_000, max: 5_000_000 },
+                                    { label: '50 L-1 Cr', min: 5_000_000, max: 10_000_000 },
+                                    { label: '1-5 Cr', min: 10_000_000, max: 50_000_000 },
+                                    { label: 'All', min: 0, max: PRICE_SLIDER_MAX },
+                                ].map((p) => (
+                                    <button
+                                        key={p.label}
+                                        onClick={() => setPriceRange([p.min, p.max])}
+                                        className={cn(
+                                            'text-[11px] px-2 py-1 rounded-md border transition-colors',
+                                            priceRange[0] === p.min && priceRange[1] === p.max
+                                                ? 'bg-gray-900 text-white border-gray-900'
+                                                : 'bg-white text-gray-600 border-gray-200 hover:border-gray-400'
+                                        )}
+                                    >
+                                        {p.label}
+                                    </button>
+                                ))}
                             </div>
                         </AccordionContent>
                     </AccordionItem>
