@@ -1,0 +1,28 @@
+{
+  "make": "Mercedes-Benz",
+  "model": "CLA Electric",
+  "brandSlug": "mercedes-benz",
+  "modelSlug": "cla-electric",
+  "sourceUrl": "https://www.cardekho.com/mercedes-benz/cla-electric",
+  "scrapedAt": "2026-04-23T10:06:51.752Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 5,
+    "total": 5
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mercedes-benz/cla-electric/colors/patagonia-red-metallic.avif",
+  "colorNames": [
+    "Patagonia Red Metallic",
+    "Night Black",
+    "Alpine Grey Solid",
+    "COSMOS BLACK METALLIC",
+    "Polar White"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mercedes-benz/cla-electric/colors/patagonia-red-metallic.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/cla-electric/colors/night-black.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/cla-electric/colors/alpine-grey-solid.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/cla-electric/colors/cosmos-black-metallic.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/cla-electric/colors/polar-white.avif"
+  ]
+}

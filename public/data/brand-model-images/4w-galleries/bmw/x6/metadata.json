@@ -1,0 +1,44 @@
+{
+  "make": "BMW",
+  "model": "X6",
+  "brandSlug": "bmw",
+  "modelSlug": "x6",
+  "sourceUrl": "https://www.cardekho.com/bmw/x6",
+  "scrapedAt": "2026-04-23T10:06:54.892Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 13,
+    "total": 13
+  },
+  "hero": "/data/brand-model-images/4w-galleries/bmw/x6/colors/carbon-black.avif",
+  "colorNames": [
+    "Carbon Black",
+    "Alpine White",
+    "Flamenco Red Brilliant Effect",
+    "Manhattan Grey Metallic",
+    "Tanzanite Blue",
+    "Mineral White",
+    "Sophisto Grey Brilliant Effect",
+    "Ametrine Metallic",
+    "Black Sapphire",
+    "Carbon Black Metallic",
+    "Flamenco Red Brilliant Effect Metallic",
+    "Manhattan Metallic",
+    "Tanzanite Blue II Metallic"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/bmw/x6/colors/carbon-black.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x6/colors/alpine-white.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x6/colors/flamenco-red-brilliant-effect.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x6/colors/manhattan-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x6/colors/tanzanite-blue.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x6/colors/mineral-white.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x6/colors/sophisto-grey-brilliant-effect.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x6/colors/ametrine-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x6/colors/black-sapphire.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x6/colors/carbon-black-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x6/colors/flamenco-red-brilliant-effect-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x6/colors/manhattan-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x6/colors/tanzanite-blue-ii-metallic.avif"
+  ]
+}

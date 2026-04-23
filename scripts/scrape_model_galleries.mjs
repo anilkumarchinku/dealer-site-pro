@@ -300,6 +300,7 @@ function buildModelLooseCandidates(brandSlug, modelSlug) {
   const rawModelLoose = normalizeLoose(rawModel)
   const aliasMap = {
     'bmw|3serieslongwheelbase': ['3seriesgranlimousine'],
+    'bmw|6seriesgt': ['6series'],
     'volkswagen|tiguanrline': ['tiguan2025', 'tiguan'],
     'honda|amaze2ndgen': ['amaze'],
     'mini|cooperconvertible': ['convertible', 'cooperconvertible'],
@@ -544,6 +545,7 @@ function normalize4WSourceUrl(make, model, sourceUrl) {
     'bmw|3 series gran limousine': 'https://www.cardekho.com/bmw/3-series-long-wheelbase',
     'bmw|m8': 'https://www.cardekho.com/bmw/m8-coupe-competition',
     'bmw|6 series gt': 'https://www.cardekho.com/carmodels/BMW/BMW_6_Series',
+    'bmw|x6': 'https://www.cardekho.com/bmw/x6',
     'bmw|8 series gran coupe': 'https://www.cardekho.com/bmw/8-series',
     'bmw|3 series': 'https://www.cardekho.com/BMW/BMW_3_Series',
     'bmw|m8 coupe competition': 'https://www.cardekho.com/bmw/m8-coupe-competition',
@@ -553,6 +555,7 @@ function normalize4WSourceUrl(make, model, sourceUrl) {
     'mahindra|xuv400': 'https://www.cardekho.com/mahindra/xuv400-ev',
     'mahindra|xuv400 ev': 'https://www.cardekho.com/mahindra/xuv400-ev',
     'mahindra|xuv700': 'https://www.cardekho.com/mahindra/xuv700',
+    'mercedes-benz|cla electric': 'https://www.cardekho.com/mercedes-benz/cla-electric',
     'porsche|cayenne electric': 'https://www.cardekho.com/porsche/cayenne-electric',
     'toyota|fortuner': 'https://www.cardekho.com/Toyota/Toyota_Fortuner',
     'toyota|rumion': 'https://www.cardekho.com/Toyota/Toyota_Rumion',
@@ -637,6 +640,7 @@ function getManual4WSourceUrl(make, model) {
     'bmw|3 series gran limousine': 'https://www.cardekho.com/bmw/3-series-long-wheelbase',
     'bmw|m8': 'https://www.cardekho.com/bmw/m8-coupe-competition',
     'bmw|6 series gt': 'https://www.cardekho.com/carmodels/BMW/BMW_6_Series',
+    'bmw|x6': 'https://www.cardekho.com/bmw/x6',
     'bmw|8 series gran coupe': 'https://www.cardekho.com/bmw/8-series',
     'bmw|3 series': 'https://www.cardekho.com/BMW/BMW_3_Series',
     'bmw|m8 coupe competition': 'https://www.cardekho.com/bmw/m8-coupe-competition',
@@ -646,6 +650,7 @@ function getManual4WSourceUrl(make, model) {
     'mahindra|xuv400': 'https://www.cardekho.com/mahindra/xuv400-ev',
     'mahindra|xuv400 ev': 'https://www.cardekho.com/mahindra/xuv400-ev',
     'mahindra|xuv700': 'https://www.cardekho.com/mahindra/xuv700',
+    'mercedes-benz|cla electric': 'https://www.cardekho.com/mercedes-benz/cla-electric',
     'porsche|cayenne electric': 'https://www.cardekho.com/porsche/cayenne-electric',
     'toyota|fortuner': 'https://www.cardekho.com/Toyota/Toyota_Fortuner',
     'toyota|rumion': 'https://www.cardekho.com/Toyota/Toyota_Rumion',
@@ -821,8 +826,39 @@ function gather4WModelsFromGeneratedMeta() {
   return output
 }
 
+function gatherManual4WModels() {
+  return [
+    {
+      make: 'BMW',
+      model: 'X6',
+      sourceUrl: 'https://www.cardekho.com/bmw/x6',
+    },
+    {
+      make: 'Mercedes-Benz',
+      model: 'CLA Electric',
+      sourceUrl: 'https://www.cardekho.com/mercedes-benz/cla-electric',
+    },
+  ]
+}
+
 function gather4WModels() {
-  return gather4WModelsFromGeneratedMeta()
+  const output = []
+  const seen = new Set()
+
+  for (const model of [...gather4WModelsFromGeneratedMeta(), ...gatherManual4WModels()]) {
+    const normalizedSourceUrl = normalize4WSourceUrl(model.make, model.model, model.sourceUrl)
+    const key = `${String(model.make).toLowerCase()}|${String(model.model).toLowerCase()}|${normalizedSourceUrl}`
+    if (seen.has(key)) continue
+
+    seen.add(key)
+    output.push({
+      make: model.make,
+      model: model.model,
+      sourceUrl: normalizedSourceUrl,
+    })
+  }
+
+  return output
 }
 
 function gather2WModels() {
