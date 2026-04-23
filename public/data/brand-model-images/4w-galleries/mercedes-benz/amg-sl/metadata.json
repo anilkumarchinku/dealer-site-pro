@@ -1,0 +1,34 @@
+{
+  "make": "Mercedes-Benz",
+  "model": "AMG SL",
+  "brandSlug": "mercedes-benz",
+  "modelSlug": "amg-sl",
+  "sourceUrl": "https://www.cardekho.com/mercedes-benz/amg-sl",
+  "scrapedAt": "2026-04-23T09:28:08.664Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 8,
+    "total": 8
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mercedes-benz/amg-sl/colors/selenite-grey.avif",
+  "colorNames": [
+    "Selenite Grey",
+    "Spectral Blue Magno",
+    "Alpine Grey Solid",
+    "Hyper Blue",
+    "Monza Grey Magno",
+    "Patagonia Red Bright",
+    "Obsidian Black",
+    "Opalite White Bright"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-sl/colors/selenite-grey.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-sl/colors/spectral-blue-magno.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-sl/colors/alpine-grey-solid.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-sl/colors/hyper-blue.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-sl/colors/monza-grey-magno.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-sl/colors/patagonia-red-bright.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-sl/colors/obsidian-black.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-sl/colors/opalite-white-bright.avif"
+  ]
+}

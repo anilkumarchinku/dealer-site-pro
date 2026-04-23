@@ -1,11 +1,11 @@
 {
   "meta": {
-    "generatedAt": "2026-04-21T06:57:03.589Z",
+    "generatedAt": "2026-04-23T09:28:44.009Z",
     "sourceMetaGeneratedAt": "2026-04-21T05:17:39.136Z",
     "brandCount": 33,
     "modelCount": 256,
     "sourceCurrentModelCount": 256,
-    "metadataModelCount": 251,
+    "metadataModelCount": 267,
     "dedupeAuditedModelCount": 133
   },
   "targets": {
@@ -21,7 +21,7 @@
     "modelsWithZeroColorImages": 0,
     "modelsWithColorDuplicateRemovals": 2,
     "modelsPendingCardekhoColorValidation": 256,
-    "totalCurrentColorImages": 1837
+    "totalCurrentColorImages": 1883
   },
   "brands": [
     {
@@ -323,7 +323,7 @@
       "modelsWithZeroColorImages": 0,
       "modelsWithColorDuplicateRemovals": 1,
       "modelsPendingCardekhoColorValidation": 13,
-      "totalCurrentColorImages": 76,
+      "totalCurrentColorImages": 75,
       "models": [
         {
           "make": "Audi",
@@ -341,7 +341,7 @@
           },
           "currentCoverage": {
             "metadataExists": true,
-            "rawColorCount": 6,
+            "rawColorCount": 8,
             "currentColorCount": 5,
             "colorNames": [
               "Progressive-Red-Metallic",
@@ -349,7 +349,9 @@
               "Navvara Blue Metallic",
               "Mythos Black Metallic",
               "Glacier White Metallic",
-              "Navarra Blue Metallic"
+              "Navarra Blue Metallic",
+              "Tango Red Metallic",
+              "Manhattan Gray Metallic"
             ],
             "duplicateRemovedCount": 1,
             "metadataTracked": true,
@@ -382,14 +384,13 @@
           },
           "currentCoverage": {
             "metadataExists": true,
-            "rawColorCount": 5,
-            "currentColorCount": 5,
+            "rawColorCount": 4,
+            "currentColorCount": 4,
             "colorNames": [
               "Firmament Blue Metallic",
               "Manhattan Gray Metallic",
               "Madeira Brown Metallic",
-              "Glacier White Metallic",
-              "Mythos Black Metallic"
+              "Glacier White Metallic"
             ],
             "duplicateRemovedCount": 0,
             "metadataTracked": true,
@@ -422,7 +423,7 @@
           },
           "currentCoverage": {
             "metadataExists": true,
-            "rawColorCount": 9,
+            "rawColorCount": 11,
             "currentColorCount": 7,
             "colorNames": [
               "Suzuka Grey Metallic",
@@ -433,7 +434,9 @@
               "Floret Silver Metallic",
               "Ascari Blue Metallic",
               "Ibis White",
-              "Tactics Green Metallic"
+              "Tactics Green Metallic",
+              "Daytone Gray Pearl Effect",
+              "Tactical Green Metallic"
             ],
             "duplicateRemovedCount": 0,
             "metadataTracked": true,
@@ -466,14 +469,15 @@
           },
           "currentCoverage": {
             "metadataExists": true,
-            "rawColorCount": 5,
+            "rawColorCount": 6,
             "currentColorCount": 5,
             "colorNames": [
               "Nano Grey Metallic",
               "Mythos Black Metallic",
               "Pulse Orange Solid",
               "Glacier White Metallic",
-              "Navarra Blue Metallic"
+              "Navarra Blue Metallic",
+              "Nano Grey Matallic"
             ],
             "duplicateRemovedCount": 0,
             "metadataTracked": true,
@@ -545,13 +549,14 @@
           },
           "currentCoverage": {
             "metadataExists": true,
-            "rawColorCount": 4,
+            "rawColorCount": 5,
             "currentColorCount": 4,
             "colorNames": [
               "Mythos Black Metallic",
               "Glacier White Metallic",
               "Navarra Blue Metallic",
-              "Manhattan Gray"
+              "Manhattan Gray",
+              "Navarra Blue"
             ],
             "duplicateRemovedCount": 0,
             "metadataTracked": true,
@@ -624,7 +629,7 @@
           },
           "currentCoverage": {
             "metadataExists": true,
-            "rawColorCount": 8,
+            "rawColorCount": 9,
             "currentColorCount": 7,
             "colorNames": [
               "Vicuna Beige Metallic",
@@ -634,7 +639,8 @@
               "Sakhir Gold Metallic",
               "Glacier White Metallic",
               "Satellite Silver Metallic",
-              "Tamarind Brown Metallic"
+              "Tamarind Brown Metallic",
+              "Vicugna Beige Metallic"
             ],
             "duplicateRemovedCount": 0,
             "metadataTracked": true,
@@ -667,7 +673,7 @@
           },
           "currentCoverage": {
             "metadataExists": true,
-            "rawColorCount": 19,
+            "rawColorCount": 22,
             "currentColorCount": 7,
             "colorNames": [
               "Purple Velvet Pearl Effect",
@@ -688,7 +694,10 @@
               "Madeira Brown Metallic",
               "Terra Gray Metallic",
               "Chronos Grey Metallic",
-              "Glacier White Metallic"
+              "Glacier White Metallic",
+              "Goodwood Green Pearl Effect",
+              "Manhattan Gray Metallic",
+              "Terra Grey Metallic"
             ],
             "duplicateRemovedCount": 0,
             "metadataTracked": true,
@@ -900,7 +909,7 @@
       "modelsWithZeroColorImages": 0,
       "modelsWithColorDuplicateRemovals": 0,
       "modelsPendingCardekhoColorValidation": 3,
-      "totalCurrentColorImages": 48,
+      "totalCurrentColorImages": 55,
       "models": [
         {
           "make": "Bentley",
@@ -918,8 +927,8 @@
           },
           "currentCoverage": {
             "metadataExists": true,
-            "rawColorCount": 16,
-            "currentColorCount": 16,
+            "rawColorCount": 18,
+            "currentColorCount": 18,
             "colorNames": [
               "Bronze",
               "Glacier White",
@@ -936,7 +945,9 @@
               "Rose Gold Over Magnetic",
               "Blue Crystal",
               "Orange Flame",
-              "Silver Storm"
+              "Silver Storm",
+              "Ice",
+              "Golden"
             ],
             "duplicateRemovedCount": 0,
             "metadataTracked": true,
@@ -969,8 +980,8 @@
           },
           "currentCoverage": {
             "metadataExists": true,
-            "rawColorCount": 18,
-            "currentColorCount": 18,
+            "rawColorCount": 23,
+            "currentColorCount": 23,
             "colorNames": [
               "Anthracite Satin By Mulliner",
               "Bronze",
@@ -989,7 +1000,12 @@
               "Barnato (Solid)",
               "Candy Red Satin By Mulliner",
               "Blue Crystal",
-              "Brodgar"
+              "Brodgar",
+              "Cumbrian Green",
+              "Cricket Ball By Mulliner",
+              "Bentley Continental Beluga",
+              "Claret By Mulliner",
+              "Dragon Red II"
             ],
             "duplicateRemovedCount": 0,
             "metadataTracked": true,
@@ -1068,7 +1084,7 @@
       "modelsWithZeroColorImages": 0,
       "modelsWithColorDuplicateRemovals": 1,
       "modelsPendingCardekhoColorValidation": 20,
-      "totalCurrentColorImages": 101,
+      "totalCurrentColorImages": 102,
       "models": [
         {
           "make": "BMW",
@@ -1172,7 +1188,7 @@
             ],
             "duplicateRemovedCount": 0,
             "metadataTracked": true,
-            "metadataPath": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w-galleries/bmw/3-series-long-wheelbase/metadata.json",
+            "metadataPath": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w-galleries/bmw/m340i/metadata.json",
             "scrapeMode": "colors-only",
             "fullCardekhoColorCoverageNeedsValidation": true,
             "colorStatus": "captured_needs_validation"
@@ -1320,7 +1336,7 @@
           },
           "currentCoverage": {
             "metadataExists": true,
-            "rawColorCount": 12,
+            "rawColorCount": 17,
             "currentColorCount": 7,
             "colorNames": [
               "Brooklyn Grey Metallic",
@@ -1334,7 +1350,12 @@
               "FROZEN-DEEP-GREY-METALLIC",
               "Sophisto Grey Brilliant Effect",
               "Black Sapphire",
-              "Frozen Pure Grey Metallic"
+              "Frozen Pure Grey Metallic",
+              "OXID GREY II METALLIC",
+              "BMW INDIVIDUAL TANZANITE BLUE METALLIC",
+              "DRAGON FIRE RED METALLIC",
+              "FROZEN DEEP GREY METALLIC",
+              "Red"
             ],
             "duplicateRemovedCount": 0,
             "metadataTracked": true,
@@ -1367,7 +1388,7 @@
           },
           "currentCoverage": {
             "metadataExists": true,
-            "rawColorCount": 9,
+            "rawColorCount": 12,
             "currentColorCount": 7,
             "colorNames": [
               "Alpine White",
@@ -1378,7 +1399,10 @@
               "Carbon Black Metallic",
               "Individual Dravit Grey Metallic",
               "Aventurine Red Metallic",
-              "Black Sapphire"
+              "Black Sapphire",
+              "BMW Individual Tanzanite Blue Metallic",
+              "M Brooklyn Grey Metallic",
+              "BMW Individual Dravit Grey Metallic"
             ],
             "duplicateRemovedCount": 0,
             "metadataTracked": true,
@@ -1411,7 +1435,7 @@
           },
           "currentCoverage": {
             "metadataExists": true,
-            "rawColorCount": 7,
+            "rawColorCount": 10,
             "currentColorCount": 7,
             "colorNames": [
               "Oxide Grey Metallic",
@@ -1420,7 +1444,10 @@
               "Phytonic Blue",
               "Sophisto Grey Brilliant Effect",
               "Aventurine Red Metallic",
-              "Black Sapphire"
+              "Black Sapphire",
+              "BMW Individual Aventurine Red Metallic",
+              "Mineral White Metallic",
+              "Phytonic Blue Metallic"
             ],
             "duplicateRemovedCount": 0,
             "metadataTracked": true,
@@ -1493,14 +1520,16 @@
           },
           "currentCoverage": {
             "metadataExists": true,
-            "rawColorCount": 5,
+            "rawColorCount": 7,
             "currentColorCount": 5,
             "colorNames": [
               "Brooklyn Grey Metallic",
               "Skyscraper Grey Metallic",
               "DRAGON-FIRE-RED-METALLIC",
               "Portimao Blue Metallic",
-              "Black Sapphire"
+              "Black Sapphire",
+              "DRAGON FIRE RED METALLIC",
+              "Gray"
             ],
             "duplicateRemovedCount": 0,
             "metadataTracked": true,
@@ -1533,7 +1562,7 @@
           },
           "currentCoverage": {
             "metadataExists": true,
-            "rawColorCount": 10,
+            "rawColorCount": 15,
             "currentColorCount": 7,
             "colorNames": [
               "Brooklyn Grey Metallic",
@@ -1545,7 +1574,12 @@
               "Dravit Grey Metallic",
               "Isle Of Man Green Metallic",
               "Aventurine Red Metallic",
-              "Black Sapphire Metallic"
+              "Black Sapphire Metallic",
+              "M Brooklyn Grey Metallic",
+              "BMW Individual Tanzanite Blue Metallic",
+              "M Toronto Red Metallic",
+              "M Portimao Blue Metallic",
+              "BMW Individual Dravit Grey Metallic"
             ],
             "duplicateRemovedCount": 0,
             "metadataTracked": true,
@@ -1658,14 +1692,15 @@
           },
           "currentCoverage": {
             "metadataExists": true,
-            "rawColorCount": 5,
+            "rawColorCount": 6,
             "currentColorCount": 5,
             "colorNames": [
               "Storm Bay Metallic",
               "Alpine White",
               "Space Silver Metallic",
               "Portimao Blue",
-              "Black Sapphire Metallic"
+              "Black Sapphire Metallic",
+              "Phytonic Blue Metallic"
             ],
             "duplicateRemovedCount": 0,
             "metadataTracked": true,
@@ -1698,10 +1733,11 @@
           },
           "currentCoverage": {
             "metadataExists": true,
-            "rawColorCount": 1,
+            "rawColorCount": 2,
             "currentColorCount": 1,
             "colorNames": [
-              "Creamy White"
+              "Creamy White",
+              "BMW X"
             ],
             "duplicateRemovedCount": 0,
             "metadataTracked": true,
@@ -1734,15 +1770,16 @@
           },
           "currentCoverage": {
             "metadataExists": true,
-            "rawColorCount": 6,
-            "currentColorCount": 6,
+            "rawColorCount": 7,
+            "currentColorCount": 7,
             "colorNames": [
               "Skyscraper Grey Metallic",
               "Individual Tanzanite Blue",
               "Mineral White Metallic",
               "M Carbon Black Metallic",
               "M Brooklyn Grey Metallic",
-              "Black Sapphire Metallic"
+              "Black Sapphire Metallic",
+              "BMW Individual Tanzanite Blue Metallic"
             ],
             "duplicateRemovedCount": 0,
             "metadataTracked": true,
@@ -1818,7 +1855,7 @@
           },
           "currentCoverage": {
             "metadataExists": true,
-            "rawColorCount": 7,
+            "rawColorCount": 11,
             "currentColorCount": 7,
             "colorNames": [
               "Mineral White Metallic",
@@ -1827,7 +1864,11 @@
               "Toronto Red",
               "Dravit Grey Metallic",
               "Marina Bay Blue Metallic",
-              "Black Sapphire Metallic"
+              "Black Sapphire Metallic",
+              "M Carbon Black Metallic",
+              "221 M Toronto Red Metallic",
+              "M Marina Bay Blue Metallic",
+              "Ravit Grey Metallic"
             ],
             "duplicateRemovedCount": 0,
             "metadataTracked": true,
@@ -1860,14 +1901,15 @@
           },
           "currentCoverage": {
             "metadataExists": true,
-            "rawColorCount": 5,
+            "rawColorCount": 6,
             "currentColorCount": 5,
             "colorNames": [
               "Skyscraper Grey Metallic",
               "Alpine White",
               "M Portimao Blau Metallic",
               "San Francisco Red Metallic",
-              "Thundernight Metallic"
+              "Thundernight Metallic",
+              "Purple"
             ],
             "duplicateRemovedCount": 2,
             "metadataTracked": true,
@@ -2293,7 +2335,7 @@
       "modelsWithZeroColorImages": 0,
       "modelsWithColorDuplicateRemovals": 0,
       "modelsPendingCardekhoColorValidation": 7,
-      "totalCurrentColorImages": 140,
+      "totalCurrentColorImages": 156,
       "models": [
         {
           "make": "Ferrari",
@@ -2311,8 +2353,8 @@
           },
           "currentCoverage": {
             "metadataExists": true,
-            "rawColorCount": 28,
-            "currentColorCount": 28,
+            "rawColorCount": 30,
+            "currentColorCount": 30,
             "colorNames": [
               "Avorio",
               "Rosso Ferrari F1-75",
@@ -2341,7 +2383,9 @@
               "Rosso Imola",
               "Blu Tour De France",
               "Rosso Scuderia",
-              "Grigio Scuro"
+              "Grigio Scuro",
+              "GRIGIO TITANIO METALL",
+              "Canna Di Fucil"
             ],
             "duplicateRemovedCount": 0,
             "metadataTracked": true,
@@ -2374,8 +2418,8 @@
           },
           "currentCoverage": {
             "metadataExists": true,
-            "rawColorCount": 26,
-            "currentColorCount": 26,
+            "rawColorCount": 31,
+            "currentColorCount": 31,
             "colorNames": [
               "Avorio",
               "Rosso Ferrari F1-75",
@@ -2402,7 +2446,12 @@
               "Rosso Mugello",
               "Blu Tour De France",
               "Rosso Scuderia",
-              "Grigio Scuro"
+              "Grigio Scuro",
+              "Grigio Titanio Mettal",
+              "Blue Abu Dhabi",
+              "Ganna De Fugile",
+              "Nero Daytone",
+              "Blue Tour De France"
             ],
             "duplicateRemovedCount": 0,
             "metadataTracked": true,
@@ -2512,8 +2561,8 @@
           },
           "currentCoverage": {
             "metadataExists": true,
-            "rawColorCount": 27,
-            "currentColorCount": 27,
+            "rawColorCount": 32,
+            "currentColorCount": 32,
             "colorNames": [
               "Avorio",
               "Rosso Ferrari F1-75",
@@ -2541,7 +2590,12 @@
               "Rosso Mugello",
               "Blu Tour De France",
               "Rosso Scuderia",
-              "Grigio Scuro"
+              "Grigio Scuro",
+              "Grigio Titanio Mettal",
+              "Blue Abu Dhabi",
+              "Ganna De Fugile",
+              "Nero Daytone",
+              "Blue Tour De France"
             ],
             "duplicateRemovedCount": 0,
             "metadataTracked": true,
@@ -2574,8 +2628,8 @@
           },
           "currentCoverage": {
             "metadataExists": true,
-            "rawColorCount": 26,
-            "currentColorCount": 26,
+            "rawColorCount": 30,
+            "currentColorCount": 30,
             "colorNames": [
               "Avorio",
               "Rosso Ferrari F1-75",
@@ -2602,7 +2656,11 @@
               "Rosso Mugello",
               "Blu Tour De France",
               "Rosso Scuderia",
-              "Grigio Scuro"
+              "Grigio Scuro",
+              "GRIGIO TITANIO METALL",
+              "BLU MIRABEAU",
+              "ARGENTO NURBURG­RING",
+              "CANNA DI FUCILE"
             ],
             "duplicateRemovedCount": 0,
             "metadataTracked": true,
@@ -2692,7 +2750,7 @@
       "modelsWithZeroColorImages": 0,
       "modelsWithColorDuplicateRemovals": 0,
       "modelsPendingCardekhoColorValidation": 3,
-      "totalCurrentColorImages": 10,
+      "totalCurrentColorImages": 11,
       "models": [
         {
           "make": "Force Motors",
@@ -2720,7 +2778,7 @@
             ],
             "duplicateRemovedCount": 0,
             "metadataTracked": true,
-            "metadataPath": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w-galleries/force/gurkha/metadata.json",
+            "metadataPath": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w-galleries/force-motors/gurkha/metadata.json",
             "scrapeMode": "colors-only",
             "fullCardekhoColorCoverageNeedsValidation": true,
             "colorStatus": "captured_needs_validation"
@@ -2759,7 +2817,7 @@
             ],
             "duplicateRemovedCount": 0,
             "metadataTracked": true,
-            "metadataPath": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w-galleries/force/gurkha-5-door/metadata.json",
+            "metadataPath": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w-galleries/force-motors/gurkha-5-door/metadata.json",
             "scrapeMode": "colors-only",
             "fullCardekhoColorCoverageNeedsValidation": true,
             "colorStatus": "captured_needs_validation"
@@ -2788,15 +2846,16 @@
           },
           "currentCoverage": {
             "metadataExists": true,
-            "rawColorCount": 2,
-            "currentColorCount": 2,
+            "rawColorCount": 3,
+            "currentColorCount": 3,
             "colorNames": [
               "White",
-              "Grey"
+              "Grey",
+              "Gray"
             ],
             "duplicateRemovedCount": 0,
             "metadataTracked": true,
-            "metadataPath": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w-galleries/force/urbania/metadata.json",
+            "metadataPath": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w-galleries/force-motors/urbania/metadata.json",
             "scrapeMode": "colors-only",
             "fullCardekhoColorCoverageNeedsValidation": true,
             "colorStatus": "captured_needs_validation"
@@ -3059,7 +3118,7 @@
       "modelsWithZeroColorImages": 0,
       "modelsWithColorDuplicateRemovals": 0,
       "modelsPendingCardekhoColorValidation": 15,
-      "totalCurrentColorImages": 87,
+      "totalCurrentColorImages": 88,
       "models": [
         {
           "make": "Hyundai",
@@ -3120,14 +3179,15 @@
           },
           "currentCoverage": {
             "metadataExists": true,
-            "rawColorCount": 5,
+            "rawColorCount": 6,
             "currentColorCount": 5,
             "colorNames": [
               "Typhoon Silver",
               "Starry Night",
               "Atlas White",
               "Titan Grey",
-              "Aqua Teal"
+              "Aqua Teal",
+              "Polar White"
             ],
             "duplicateRemovedCount": 0,
             "metadataTracked": true,
@@ -3205,8 +3265,8 @@
           },
           "currentCoverage": {
             "metadataExists": true,
-            "rawColorCount": 12,
-            "currentColorCount": 12,
+            "rawColorCount": 13,
+            "currentColorCount": 13,
             "colorNames": [
               "Fiery Red",
               "Black Matte",
@@ -3219,7 +3279,8 @@
               "Titan Grey",
               "Ocean Blue Matte",
               "Abyss Black",
-              "Atlas White Dual Tone"
+              "Atlas White Dual Tone",
+              "Ocean Blue Dual Tone"
             ],
             "duplicateRemovedCount": 0,
             "metadataTracked": true,
@@ -3252,7 +3313,7 @@
           },
           "currentCoverage": {
             "metadataExists": true,
-            "rawColorCount": 7,
+            "rawColorCount": 9,
             "currentColorCount": 5,
             "colorNames": [
               "Shadow Grey With Abyss Black Roof",
@@ -3261,7 +3322,9 @@
               "Titan Grey Matte",
               "Atlas White",
               "Atlas White With Abyss Black",
-              "Abyss Black"
+              "Abyss Black",
+              "Thunder Blue",
+              "Titan Grey"
             ],
             "duplicateRemovedCount": 0,
             "metadataTracked": true,
@@ -3294,7 +3357,7 @@
           },
           "currentCoverage": {
             "metadataExists": true,
-            "rawColorCount": 8,
+            "rawColorCount": 9,
             "currentColorCount": 7,
             "colorNames": [
               "Titan Black Matte",
@@ -3304,7 +3367,8 @@
               "Titan Grey",
               "Ranger Khaki With Abyss Black Roof",
               "Golden Bronze",
-              "Titanium Black"
+              "Titanium Black",
+              "Ranger Khaki With Black Roof"
             ],
             "duplicateRemovedCount": 0,
             "metadataTracked": true,
@@ -3572,17 +3636,19 @@
           },
           "currentCoverage": {
             "metadataExists": true,
-            "rawColorCount": 8,
+            "rawColorCount": 10,
             "currentColorCount": 7,
             "colorNames": [
               "Dragon Red",
               "Atlas White",
-              "Atlas White With Abyss Black",
               "Titan Grey",
               "Hazel Blue",
-              "Hazel Blue With Abyss Black Roof",
+              "Hazel Blue Matte",
               "Mystic Sapphire",
-              "Abyss Black"
+              "Atlas White With Black Roof",
+              "Hazel Blue With Black Roof",
+              "Mystic Sapphire Matte",
+              "Titanium Black"
             ],
             "duplicateRemovedCount": 0,
             "metadataTracked": true,
@@ -5482,7 +5548,7 @@
           },
           "currentCoverage": {
             "metadataExists": true,
-            "rawColorCount": 8,
+            "rawColorCount": 10,
             "currentColorCount": 7,
             "colorNames": [
               "Everest White",
@@ -5492,7 +5558,9 @@
               "Tango Red",
               "Firestorm Orange",
               "Desert Myst Satin",
-              "Everest White Satin"
+              "Everest White Satin",
+              "Mahindra BE 6e Napoli Black",
+              "Mahindra BE 6e Tango Red"
             ],
             "duplicateRemovedCount": 0,
             "metadataTracked": true,
@@ -5525,13 +5593,17 @@
           },
           "currentCoverage": {
             "metadataExists": true,
-            "rawColorCount": 4,
+            "rawColorCount": 8,
             "currentColorCount": 4,
             "colorNames": [
               "Dimond White",
               "Rocky Beige",
               "D'sat Silver",
-              "Stealth Black"
+              "Stealth Black",
+              "DIAMOND WHITE",
+              "ROCKEY BEIGE",
+              "PEARL WHITE DT",
+              "CONCRETE GREY"
             ],
             "duplicateRemovedCount": 0,
             "metadataTracked": true,
@@ -5600,7 +5672,7 @@
           },
           "currentCoverage": {
             "metadataExists": true,
-            "rawColorCount": 9,
+            "rawColorCount": 12,
             "currentColorCount": 7,
             "colorNames": [
               "Dimond White",
@@ -5611,7 +5683,10 @@
               "Jeans Blue",
               "Concrete Grey With Black Roof",
               "Rockey Beige",
-              "Pearl White Dual Tone"
+              "Pearl White Dual Tone",
+              "DIAMOND WHITE",
+              "PEARL WHITE DT",
+              "CONCRETE GREY DT"
             ],
             "duplicateRemovedCount": 0,
             "metadataTracked": true,
@@ -5682,10 +5757,11 @@
           },
           "currentCoverage": {
             "metadataExists": true,
-            "rawColorCount": 1,
-            "currentColorCount": 1,
+            "rawColorCount": 2,
+            "currentColorCount": 2,
             "colorNames": [
-              "White"
+              "White",
+              "Mahindra Bolero Pikup White"
             ],
             "duplicateRemovedCount": 0,
             "metadataTracked": true,
@@ -5757,12 +5833,11 @@
           },
           "currentCoverage": {
             "metadataExists": true,
-            "rawColorCount": 5,
-            "currentColorCount": 5,
+            "rawColorCount": 4,
+            "currentColorCount": 4,
             "colorNames": [
               "Everest White",
               "Galaxy Grey",
-              "Molten Red Rage",
               "Diamond White",
               "Stealth Black"
             ],
@@ -5837,7 +5912,7 @@
           },
           "currentCoverage": {
             "metadataExists": true,
-            "rawColorCount": 6,
+            "rawColorCount": 7,
             "currentColorCount": 6,
             "colorNames": [
               "Everest White",
@@ -5845,7 +5920,8 @@
               "Stealth Black",
               "Battleship Gray",
               "Deep Forest",
-              "Tango Red"
+              "Tango Red",
+              "NEBULA BLUE"
             ],
             "duplicateRemovedCount": 0,
             "metadataTracked": true,
@@ -5920,7 +5996,7 @@
           },
           "currentCoverage": {
             "metadataExists": true,
-            "rawColorCount": 8,
+            "rawColorCount": 10,
             "currentColorCount": 1,
             "colorNames": [
               "Everest White",
@@ -5930,7 +6006,9 @@
               "Nebula Blue",
               "Deep Forest",
               "Tango Red",
-              "Satin White"
+              "Satin White",
+              "Mahindra XEV 9e Nebula Blue",
+              "Mahindra XEV 9e Tango Red"
             ],
             "duplicateRemovedCount": 0,
             "metadataTracked": true,
@@ -6004,7 +6082,7 @@
           },
           "currentCoverage": {
             "metadataExists": true,
-            "rawColorCount": 16,
+            "rawColorCount": 18,
             "currentColorCount": 7,
             "colorNames": [
               "Dune Beige",
@@ -6022,7 +6100,9 @@
               "Nebula Blue",
               "Deep Forest",
               "Tango Red",
-              "Citrine Yellow"
+              "Citrine Yellow",
+              "Nebula Blue + Galvano Grey",
+              "Mahindra XUV 3XO"
             ],
             "duplicateRemovedCount": 0,
             "metadataTracked": true,
@@ -6142,14 +6222,15 @@
           },
           "currentCoverage": {
             "metadataExists": true,
-            "rawColorCount": 5,
+            "rawColorCount": 6,
             "currentColorCount": 4,
             "colorNames": [
               "Everest White Dualtone",
               "Stealth Black Dual Tone",
               "Nebula Blue Dualtone",
               "Galaxy Grey Dualtone",
-              "Arctic Blue Dualtone"
+              "Arctic Blue Dualtone",
+              "Napoli Black Dualtone"
             ],
             "duplicateRemovedCount": 0,
             "metadataTracked": true,
@@ -6179,7 +6260,7 @@
       "modelsWithZeroColorImages": 0,
       "modelsWithColorDuplicateRemovals": 0,
       "modelsPendingCardekhoColorValidation": 20,
-      "totalCurrentColorImages": 161,
+      "totalCurrentColorImages": 180,
       "models": [
         {
           "make": "Maruti Suzuki",
@@ -6197,8 +6278,8 @@
           },
           "currentCoverage": {
             "metadataExists": true,
-            "rawColorCount": 7,
-            "currentColorCount": 7,
+            "rawColorCount": 8,
+            "currentColorCount": 8,
             "colorNames": [
               "Metallic Sizzling Red",
               "Metallic Silky Silver",
@@ -6206,11 +6287,12 @@
               "Solid White",
               "Metallic Granite Grey",
               "Pearl Bluish Black",
-              "Metallic Speedy Blue"
+              "Metallic Speedy Blue",
+              "Pearl Midnight Black"
             ],
             "duplicateRemovedCount": 0,
             "metadataTracked": true,
-            "metadataPath": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w-galleries/maruti/alto-k10/metadata.json",
+            "metadataPath": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w-galleries/maruti-suzuki/alto-k10/metadata.json",
             "scrapeMode": "colors-only",
             "fullCardekhoColorCoverageNeedsValidation": true,
             "colorStatus": "captured_needs_validation"
@@ -6239,19 +6321,20 @@
           },
           "currentCoverage": {
             "metadataExists": true,
-            "rawColorCount": 6,
-            "currentColorCount": 6,
+            "rawColorCount": 7,
+            "currentColorCount": 7,
             "colorNames": [
               "Opulent Red",
               "Grandeur Grey",
               "Luxe Beige",
               "Bluish Black",
               "Nexa Blue",
-              "Splendid Silver"
+              "Splendid Silver",
+              "Granduer Grey"
             ],
             "duplicateRemovedCount": 0,
             "metadataTracked": true,
-            "metadataPath": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w-galleries/maruti/baleno/metadata.json",
+            "metadataPath": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w-galleries/maruti-suzuki/baleno/metadata.json",
             "scrapeMode": "colors-only",
             "fullCardekhoColorCoverageNeedsValidation": true,
             "colorStatus": "captured_needs_validation"
@@ -6280,8 +6363,8 @@
           },
           "currentCoverage": {
             "metadataExists": true,
-            "rawColorCount": 10,
-            "currentColorCount": 10,
+            "rawColorCount": 12,
+            "currentColorCount": 12,
             "colorNames": [
               "Pearl Arctic White",
               "Metallic Sizzling Red With Bluish Black",
@@ -6292,11 +6375,13 @@
               "Magma Grey",
               "Bluish Black",
               "Sizzling Red",
-              "Splendid Silver"
+              "Splendid Silver",
+              "Brave Khakhi",
+              "Brave Khaki With Pearl Arctic White Roof"
             ],
             "duplicateRemovedCount": 0,
             "metadataTracked": true,
-            "metadataPath": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w-galleries/maruti/brezza/metadata.json",
+            "metadataPath": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w-galleries/maruti-suzuki/brezza/metadata.json",
             "scrapeMode": "colors-only",
             "fullCardekhoColorCoverageNeedsValidation": true,
             "colorStatus": "captured_needs_validation"
@@ -6325,8 +6410,8 @@
           },
           "currentCoverage": {
             "metadataExists": true,
-            "rawColorCount": 7,
-            "currentColorCount": 7,
+            "rawColorCount": 9,
+            "currentColorCount": 9,
             "colorNames": [
               "Metallic Glistening Grey",
               "Solid Fire Red",
@@ -6334,11 +6419,13 @@
               "Pearl Caffeine Brown",
               "Metallic Silky Silver",
               "Pearl Bluish Black",
-              "Metallic Speedy Blue"
+              "Metallic Speedy Blue",
+              "Pearl Artic White",
+              "Pearl Caffirne Brown"
             ],
             "duplicateRemovedCount": 0,
             "metadataTracked": true,
-            "metadataPath": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w-galleries/maruti/celerio/metadata.json",
+            "metadataPath": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w-galleries/maruti-suzuki/celerio/metadata.json",
             "scrapeMode": "colors-only",
             "fullCardekhoColorCoverageNeedsValidation": true,
             "colorStatus": "captured_needs_validation"
@@ -6383,7 +6470,7 @@
             ],
             "duplicateRemovedCount": 0,
             "metadataTracked": true,
-            "metadataPath": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w-galleries/maruti/ciaz/metadata.json",
+            "metadataPath": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w-galleries/maruti-suzuki/ciaz/metadata.json",
             "scrapeMode": "colors-only",
             "fullCardekhoColorCoverageNeedsValidation": true,
             "colorStatus": "captured_needs_validation"
@@ -6425,7 +6512,7 @@
             ],
             "duplicateRemovedCount": 0,
             "metadataTracked": true,
-            "metadataPath": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w-galleries/maruti/dzire/metadata.json",
+            "metadataPath": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w-galleries/maruti-suzuki/dzire/metadata.json",
             "scrapeMode": "colors-only",
             "fullCardekhoColorCoverageNeedsValidation": true,
             "colorStatus": "captured_needs_validation"
@@ -6463,7 +6550,7 @@
             ],
             "duplicateRemovedCount": 0,
             "metadataTracked": true,
-            "metadataPath": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w-galleries/maruti/dzire-tour-s/metadata.json",
+            "metadataPath": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w-galleries/maruti-suzuki/dzire-tour-s/metadata.json",
             "scrapeMode": "colors-only",
             "fullCardekhoColorCoverageNeedsValidation": true,
             "colorStatus": "captured_needs_validation"
@@ -6509,7 +6596,7 @@
             ],
             "duplicateRemovedCount": 0,
             "metadataTracked": true,
-            "metadataPath": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w-galleries/maruti/e-vitara/metadata.json",
+            "metadataPath": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w-galleries/maruti-suzuki/e-vitara/metadata.json",
             "scrapeMode": "colors-only",
             "fullCardekhoColorCoverageNeedsValidation": true,
             "colorStatus": "captured_needs_validation"
@@ -6549,7 +6636,7 @@
             ],
             "duplicateRemovedCount": 0,
             "metadataTracked": true,
-            "metadataPath": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w-galleries/maruti/eeco/metadata.json",
+            "metadataPath": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w-galleries/maruti-suzuki/eeco/metadata.json",
             "scrapeMode": "colors-only",
             "fullCardekhoColorCoverageNeedsValidation": true,
             "colorStatus": "captured_needs_validation"
@@ -6591,7 +6678,7 @@
             ],
             "duplicateRemovedCount": 0,
             "metadataTracked": true,
-            "metadataPath": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w-galleries/maruti/ertiga/metadata.json",
+            "metadataPath": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w-galleries/maruti-suzuki/ertiga/metadata.json",
             "scrapeMode": "colors-only",
             "fullCardekhoColorCoverageNeedsValidation": true,
             "colorStatus": "captured_needs_validation"
@@ -6620,8 +6707,8 @@
           },
           "currentCoverage": {
             "metadataExists": true,
-            "rawColorCount": 10,
-            "currentColorCount": 10,
+            "rawColorCount": 13,
+            "currentColorCount": 13,
             "colorNames": [
               "Arctic White",
               "Earthen Brown With Bluish Black Roof",
@@ -6632,11 +6719,14 @@
               "Earthen Brown",
               "Bluish Black",
               "Nexa Blue",
-              "Splendid Silver"
+              "Splendid Silver",
+              "Earthen Brown With Black",
+              "Opulent Red With Black",
+              "Granduer Gray"
             ],
             "duplicateRemovedCount": 0,
             "metadataTracked": true,
-            "metadataPath": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w-galleries/maruti/fronx/metadata.json",
+            "metadataPath": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w-galleries/maruti-suzuki/fronx/metadata.json",
             "scrapeMode": "colors-only",
             "fullCardekhoColorCoverageNeedsValidation": true,
             "colorStatus": "captured_needs_validation"
@@ -6665,8 +6755,8 @@
           },
           "currentCoverage": {
             "metadataExists": true,
-            "rawColorCount": 10,
-            "currentColorCount": 10,
+            "rawColorCount": 13,
+            "currentColorCount": 13,
             "colorNames": [
               "Arctic White",
               "Opulent Red",
@@ -6677,11 +6767,14 @@
               "Arctic White Black Roof",
               "Midnight Black",
               "Nexa Blue",
-              "Splendid Silver"
+              "Splendid Silver",
+              "Opulent Red Midnight Black",
+              "Grandeur Gray",
+              "Arctic White Midnight Black"
             ],
             "duplicateRemovedCount": 0,
             "metadataTracked": true,
-            "metadataPath": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w-galleries/maruti/grand-vitara/metadata.json",
+            "metadataPath": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w-galleries/maruti-suzuki/grand-vitara/metadata.json",
             "scrapeMode": "colors-only",
             "fullCardekhoColorCoverageNeedsValidation": true,
             "colorStatus": "captured_needs_validation"
@@ -6726,7 +6819,7 @@
             ],
             "duplicateRemovedCount": 0,
             "metadataTracked": true,
-            "metadataPath": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w-galleries/maruti/ignis/metadata.json",
+            "metadataPath": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w-galleries/maruti-suzuki/ignis/metadata.json",
             "scrapeMode": "colors-only",
             "fullCardekhoColorCoverageNeedsValidation": true,
             "colorStatus": "captured_needs_validation"
@@ -6755,18 +6848,19 @@
           },
           "currentCoverage": {
             "metadataExists": true,
-            "rawColorCount": 5,
-            "currentColorCount": 5,
+            "rawColorCount": 6,
+            "currentColorCount": 6,
             "colorNames": [
               "Mystic White",
               "Magnificent Black",
               "Majestic Silver",
               "Stellar Bronze",
-              "Nexa Blue Celestial"
+              "Nexa Blue Celestial",
+              "NEXA BLUE"
             ],
             "duplicateRemovedCount": 0,
             "metadataTracked": true,
-            "metadataPath": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w-galleries/maruti/invicto/metadata.json",
+            "metadataPath": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w-galleries/maruti-suzuki/invicto/metadata.json",
             "scrapeMode": "colors-only",
             "fullCardekhoColorCoverageNeedsValidation": true,
             "colorStatus": "captured_needs_validation"
@@ -6795,8 +6889,8 @@
           },
           "currentCoverage": {
             "metadataExists": true,
-            "rawColorCount": 7,
-            "currentColorCount": 7,
+            "rawColorCount": 8,
+            "currentColorCount": 8,
             "colorNames": [
               "Pearl Arctic White",
               "Sizzling Red/ Bluish Black Roof",
@@ -6804,11 +6898,12 @@
               "Bluish Black",
               "Sizzling Red",
               "Nexa Blue",
-              "Kinetic Yellow/Bluish Black Roof"
+              "Kinetic Yellow/Bluish Black Roof",
+              "Pearl Artic White"
             ],
             "duplicateRemovedCount": 0,
             "metadataTracked": true,
-            "metadataPath": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w-galleries/maruti/jimny/metadata.json",
+            "metadataPath": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w-galleries/maruti-suzuki/jimny/metadata.json",
             "scrapeMode": "colors-only",
             "fullCardekhoColorCoverageNeedsValidation": true,
             "colorStatus": "captured_needs_validation"
@@ -6850,7 +6945,7 @@
             ],
             "duplicateRemovedCount": 0,
             "metadataTracked": true,
-            "metadataPath": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w-galleries/maruti/s-presso/metadata.json",
+            "metadataPath": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w-galleries/maruti-suzuki/s-presso/metadata.json",
             "scrapeMode": "colors-only",
             "fullCardekhoColorCoverageNeedsValidation": true,
             "colorStatus": "captured_needs_validation"
@@ -6895,7 +6990,7 @@
             ],
             "duplicateRemovedCount": 0,
             "metadataTracked": true,
-            "metadataPath": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w-galleries/maruti/swift/metadata.json",
+            "metadataPath": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w-galleries/maruti-suzuki/swift/metadata.json",
             "scrapeMode": "colors-only",
             "fullCardekhoColorCoverageNeedsValidation": true,
             "colorStatus": "captured_needs_validation"
@@ -6940,7 +7035,7 @@
             ],
             "duplicateRemovedCount": 0,
             "metadataTracked": true,
-            "metadataPath": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w-galleries/maruti/victoris/metadata.json",
+            "metadataPath": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w-galleries/maruti-suzuki/victoris/metadata.json",
             "scrapeMode": "colors-only",
             "fullCardekhoColorCoverageNeedsValidation": true,
             "colorStatus": "captured_needs_validation"
@@ -6969,8 +7064,8 @@
           },
           "currentCoverage": {
             "metadataExists": true,
-            "rawColorCount": 9,
-            "currentColorCount": 9,
+            "rawColorCount": 12,
+            "currentColorCount": 12,
             "colorNames": [
               "Pearl Metallic Nutmeg Brown",
               "Pearl Metallic Gallant Red",
@@ -6980,11 +7075,14 @@
               "Pearl Metallic Poolside Blue",
               "Pearl Bluish Black Metallic With Gallant Red",
               "Pearl Bluish Black",
-              "Metallic Magma Grey"
+              "Metallic Magma Grey",
+              "PRIME GALLANT RED",
+              "MET MAGMA GRAY WITH BLACK",
+              "MAGMA GREY"
             ],
             "duplicateRemovedCount": 0,
             "metadataTracked": true,
-            "metadataPath": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w-galleries/maruti/wagon-r/metadata.json",
+            "metadataPath": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w-galleries/maruti-suzuki/wagon-r/metadata.json",
             "scrapeMode": "colors-only",
             "fullCardekhoColorCoverageNeedsValidation": true,
             "colorStatus": "captured_needs_validation"
@@ -7013,8 +7111,8 @@
           },
           "currentCoverage": {
             "metadataExists": true,
-            "rawColorCount": 10,
-            "currentColorCount": 10,
+            "rawColorCount": 12,
+            "currentColorCount": 12,
             "colorNames": [
               "Arctic White",
               "Opulent Red Midnight Black",
@@ -7025,11 +7123,13 @@
               "Bluish Black",
               "Splendid Silver Midnight Black",
               "Nexa Blue",
-              "Splendid Silver"
+              "Splendid Silver",
+              "Opulent Red With Midnight Black Roof",
+              "Brave Khaki With Midnight Black Roof"
             ],
             "duplicateRemovedCount": 0,
             "metadataTracked": true,
-            "metadataPath": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w-galleries/maruti/xl6/metadata.json",
+            "metadataPath": "/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro/public/data/brand-model-images/4w-galleries/maruti-suzuki/xl6/metadata.json",
             "scrapeMode": "colors-only",
             "fullCardekhoColorCoverageNeedsValidation": true,
             "colorStatus": "captured_needs_validation"
@@ -8470,7 +8570,7 @@
       "modelsWithZeroColorImages": 0,
       "modelsWithColorDuplicateRemovals": 0,
       "modelsPendingCardekhoColorValidation": 4,
-      "totalCurrentColorImages": 18,
+      "totalCurrentColorImages": 20,
       "models": [
         {
           "make": "Mini",
@@ -8572,12 +8672,13 @@
           },
           "currentCoverage": {
             "metadataExists": true,
-            "rawColorCount": 3,
-            "currentColorCount": 3,
+            "rawColorCount": 4,
+            "currentColorCount": 4,
             "colorNames": [
               "British Racing Green",
               "Legend Grey",
-              "Midnight Black"
+              "Midnight Black",
+              "Midnight Black II"
             ],
             "duplicateRemovedCount": 0,
             "metadataTracked": true,
@@ -8610,10 +8711,11 @@
           },
           "currentCoverage": {
             "metadataExists": true,
-            "rawColorCount": 1,
-            "currentColorCount": 1,
+            "rawColorCount": 2,
+            "currentColorCount": 2,
             "colorNames": [
-              "Grey"
+              "Grey",
+              "Gray"
             ],
             "duplicateRemovedCount": 0,
             "metadataTracked": true,

@@ -1,0 +1,48 @@
+{
+  "make": "BMW",
+  "model": "M4",
+  "brandSlug": "bmw",
+  "modelSlug": "m4-competition",
+  "sourceUrl": "https://www.cardekho.com/bmw/m4-competition",
+  "scrapedAt": "2026-04-23T09:29:39.469Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 15,
+    "total": 15
+  },
+  "hero": "/data/brand-model-images/4w-galleries/bmw/m4/colors/brooklyn-grey-metallic.avif",
+  "colorNames": [
+    "Brooklyn Grey Metallic",
+    "Skyscraper Grey Metallic",
+    "Paulo Yellow Solid",
+    "Tanzanite Blue Metallic",
+    "Toronto Red Metallic",
+    "Portimao Blue Metallic",
+    "Dravit Grey Metallic",
+    "Isle Of Man Green Metallic",
+    "Aventurine Red Metallic",
+    "Black Sapphire Metallic",
+    "M Brooklyn Grey Metallic",
+    "BMW Individual Tanzanite Blue Metallic",
+    "M Toronto Red Metallic",
+    "M Portimao Blue Metallic",
+    "BMW Individual Dravit Grey Metallic"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/bmw/m4/colors/brooklyn-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m4/colors/skyscraper-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m4/colors/paulo-yellow-solid.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m4/colors/tanzanite-blue-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m4/colors/toronto-red-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m4/colors/portimao-blue-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m4/colors/dravit-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m4/colors/isle-of-man-green-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m4/colors/aventurine-red-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m4/colors/black-sapphire-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m4/colors/m-brooklyn-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m4/colors/bmw-individual-tanzanite-blue-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m4/colors/m-toronto-red-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m4/colors/m-portimao-blue-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/m4/colors/bmw-individual-dravit-grey-metallic.avif"
+  ]
+}

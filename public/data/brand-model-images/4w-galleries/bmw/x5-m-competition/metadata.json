@@ -1,0 +1,44 @@
+{
+  "make": "BMW",
+  "model": "X5 M Competition",
+  "brandSlug": "bmw",
+  "modelSlug": "x5-m",
+  "sourceUrl": "https://www.cardekho.com/bmw/x5-m",
+  "scrapedAt": "2026-04-23T09:26:39.051Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 13,
+    "total": 13
+  },
+  "hero": "/data/brand-model-images/4w-galleries/bmw/x5-m-competition/colors/alpine-white.avif",
+  "colorNames": [
+    "Alpine White",
+    "Donington Grey Metallic",
+    "Mineral White",
+    "Toronto Red Metallic",
+    "Carbon Black Metallic",
+    "Manhattan Metallic",
+    "Ametrine Metallic",
+    "Tansanite Blue Metallic",
+    "Marina Bay Blue Metallic",
+    "Black Sapphire Metallic",
+    "Mineral White Metallic",
+    "BMW Individual Ametrine Metallic",
+    "BMW Individual Tanzanite Blue Metallic"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/bmw/x5-m-competition/colors/alpine-white.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x5-m-competition/colors/donington-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x5-m-competition/colors/mineral-white.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x5-m-competition/colors/toronto-red-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x5-m-competition/colors/carbon-black-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x5-m-competition/colors/manhattan-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x5-m-competition/colors/ametrine-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x5-m-competition/colors/tansanite-blue-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x5-m-competition/colors/marina-bay-blue-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x5-m-competition/colors/black-sapphire-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x5-m-competition/colors/mineral-white-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x5-m-competition/colors/bmw-individual-ametrine-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x5-m-competition/colors/bmw-individual-tanzanite-blue-metallic.avif"
+  ]
+}

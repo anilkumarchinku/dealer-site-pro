@@ -1,0 +1,30 @@
+{
+  "make": "BMW",
+  "model": "8 Series Gran Coupe",
+  "brandSlug": "bmw",
+  "modelSlug": "8-series",
+  "sourceUrl": "https://www.cardekho.com/bmw/8-series",
+  "scrapedAt": "2026-04-23T09:27:13.583Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 6,
+    "total": 6
+  },
+  "hero": "/data/brand-model-images/4w-galleries/bmw/8-series-gran-coupe/colors/alpine-white.avif",
+  "colorNames": [
+    "Alpine White",
+    "Bluestone Metallic",
+    "Blue",
+    "Mineral White",
+    "Sunset Orange",
+    "Black Sapphire"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/bmw/8-series-gran-coupe/colors/alpine-white.avif",
+    "/data/brand-model-images/4w-galleries/bmw/8-series-gran-coupe/colors/bluestone-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/8-series-gran-coupe/colors/blue.avif",
+    "/data/brand-model-images/4w-galleries/bmw/8-series-gran-coupe/colors/mineral-white.avif",
+    "/data/brand-model-images/4w-galleries/bmw/8-series-gran-coupe/colors/sunset-orange.avif",
+    "/data/brand-model-images/4w-galleries/bmw/8-series-gran-coupe/colors/black-sapphire.avif"
+  ]
+}

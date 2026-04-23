@@ -1,0 +1,30 @@
+{
+  "make": "Mercedes-Benz",
+  "model": "AMG GLE 53",
+  "brandSlug": "mercedes-benz",
+  "modelSlug": "amg-gle-53",
+  "sourceUrl": "https://www.cardekho.com/mercedes-benz/amg-gle-53",
+  "scrapedAt": "2026-04-23T09:27:30.636Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 6,
+    "total": 6
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mercedes-benz/amg-gle-53/colors/high-tech-silver.avif",
+  "colorNames": [
+    "High Tech Silver",
+    "Sodalite Blue",
+    "Selenite Grey Metallic",
+    "Polar White",
+    "Obsidian Black",
+    "Emerald Green"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-gle-53/colors/high-tech-silver.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-gle-53/colors/sodalite-blue.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-gle-53/colors/selenite-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-gle-53/colors/polar-white.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-gle-53/colors/obsidian-black.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-gle-53/colors/emerald-green.avif"
+  ]
+}

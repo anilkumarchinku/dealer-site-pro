@@ -540,13 +540,20 @@ function normalize4WSourceUrl(make, model, sourceUrl) {
   const manualMap = {
     'audi|a6': 'https://www.cardekho.com/carmodels/Audi/Audi_A6',
     'bmw|m4': 'https://www.cardekho.com/bmw/m4-competition',
+    'bmw|m340i': 'https://www.cardekho.com/bmw/3-series-long-wheelbase',
+    'bmw|3 series gran limousine': 'https://www.cardekho.com/bmw/3-series-long-wheelbase',
     'bmw|m8': 'https://www.cardekho.com/bmw/m8-coupe-competition',
     'bmw|6 series gt': 'https://www.cardekho.com/carmodels/BMW/BMW_6_Series',
     'bmw|8 series gran coupe': 'https://www.cardekho.com/bmw/8-series',
     'bmw|3 series': 'https://www.cardekho.com/BMW/BMW_3_Series',
     'bmw|m8 coupe competition': 'https://www.cardekho.com/bmw/m8-coupe-competition',
     'bmw|x5 m competition': 'https://www.cardekho.com/bmw/x5-m',
+    'ferrari|purosangue': 'https://www.cardekho.com/ferrari/purosangue',
     'hyundai|creta ev': 'https://www.cardekho.com/hyundai/creta-electric',
+    'mahindra|xuv400': 'https://www.cardekho.com/mahindra/xuv400-ev',
+    'mahindra|xuv400 ev': 'https://www.cardekho.com/mahindra/xuv400-ev',
+    'mahindra|xuv700': 'https://www.cardekho.com/mahindra/xuv700',
+    'porsche|cayenne electric': 'https://www.cardekho.com/porsche/cayenne-electric',
     'toyota|fortuner': 'https://www.cardekho.com/Toyota/Toyota_Fortuner',
     'toyota|rumion': 'https://www.cardekho.com/Toyota/Toyota_Rumion',
     'volkswagen|tayron r-line': 'https://www.cardekho.com/volkswagen/tayron-r-line',
@@ -618,6 +625,77 @@ function normalize4WSourceUrl(make, model, sourceUrl) {
     return `https://www.cardekho.com/${fallbackBrandSlug}/${fallbackModelSlug}`
   } catch {
     return `https://www.cardekho.com/${fallbackBrandSlug}/${fallbackModelSlug}`
+  }
+}
+
+function getManual4WSourceUrl(make, model) {
+  const key = `${String(make).toLowerCase()}|${String(model).toLowerCase()}`
+  const manualMap = {
+    'audi|a6': 'https://www.cardekho.com/carmodels/Audi/Audi_A6',
+    'bmw|m4': 'https://www.cardekho.com/bmw/m4-competition',
+    'bmw|m340i': 'https://www.cardekho.com/bmw/3-series-long-wheelbase',
+    'bmw|3 series gran limousine': 'https://www.cardekho.com/bmw/3-series-long-wheelbase',
+    'bmw|m8': 'https://www.cardekho.com/bmw/m8-coupe-competition',
+    'bmw|6 series gt': 'https://www.cardekho.com/carmodels/BMW/BMW_6_Series',
+    'bmw|8 series gran coupe': 'https://www.cardekho.com/bmw/8-series',
+    'bmw|3 series': 'https://www.cardekho.com/BMW/BMW_3_Series',
+    'bmw|m8 coupe competition': 'https://www.cardekho.com/bmw/m8-coupe-competition',
+    'bmw|x5 m competition': 'https://www.cardekho.com/bmw/x5-m',
+    'ferrari|purosangue': 'https://www.cardekho.com/ferrari/purosangue',
+    'hyundai|creta ev': 'https://www.cardekho.com/hyundai/creta-electric',
+    'mahindra|xuv400': 'https://www.cardekho.com/mahindra/xuv400-ev',
+    'mahindra|xuv400 ev': 'https://www.cardekho.com/mahindra/xuv400-ev',
+    'mahindra|xuv700': 'https://www.cardekho.com/mahindra/xuv700',
+    'porsche|cayenne electric': 'https://www.cardekho.com/porsche/cayenne-electric',
+    'toyota|fortuner': 'https://www.cardekho.com/Toyota/Toyota_Fortuner',
+    'toyota|rumion': 'https://www.cardekho.com/Toyota/Toyota_Rumion',
+    'volkswagen|tayron r-line': 'https://www.cardekho.com/volkswagen/tayron-r-line',
+    'tata motors|altroz': 'https://www.cardekho.com/tata/altroz',
+    'tata motors|curvv ev': 'https://www.cardekho.com/tata/curvv-ev',
+    'tata motors|punch': 'https://www.cardekho.com/tata/punch',
+    'tata motors|harrier': 'https://www.cardekho.com/tata/harrier',
+    'tata motors|tiago': 'https://www.cardekho.com/tata/tiago',
+    'tata motors|tigor': 'https://www.cardekho.com/tata/tigor',
+    'tata motors|tigor ev': 'https://www.cardekho.com/tata/tigor-ev',
+    'tata motors|sierra': 'https://www.cardekho.com/tata/sierra',
+    'tata motors|nexon': 'https://www.cardekho.com/tata/nexon',
+    'tata motors|nexon ev': 'https://www.cardekho.com/tata/nexon-ev',
+    'tata motors|safari': 'https://www.cardekho.com/tata/safari',
+    'tata motors|curvv': 'https://www.cardekho.com/tata/curvv',
+    'tata motors|tiago ev': 'https://www.cardekho.com/tata/tiago-ev',
+    'tata motors|punch ev': 'https://www.cardekho.com/tata/punch-ev',
+    'tata motors|harrier ev': 'https://www.cardekho.com/tata/harrier-ev',
+    'tata motors|xpres-t ev': 'https://www.cardekho.com/tata/xpres-t-ev',
+    'tata motors|tiago nrg': 'https://www.cardekho.com/tata/tiago-nrg',
+    'tata motors|xpres': 'https://www.cardekho.com/tata/xpres',
+    'tata motors|yodha pickup': 'https://www.cardekho.com/tata/yodha-pickup',
+  }
+  return manualMap[key] || ''
+}
+
+function derive4WSourceUrlFromImageUrl(make, model, imageUrl) {
+  const normalizedImageUrl = absolutizeCardekhoImageUrl(imageUrl)
+  if (!normalizedImageUrl.startsWith('https://stimg.cardekho.com/images/')) return ''
+
+  try {
+    const parsed = new URL(normalizedImageUrl)
+    const segments = parsed.pathname.split('/').filter(Boolean)
+    const imagesIndex = segments.findIndex((segment) => segment.toLowerCase() === 'images')
+    if (imagesIndex < 0) return ''
+
+    const tail = segments.slice(imagesIndex + 1)
+    const sizeOffset = /^\d+x\d+$/i.test(tail[1] || '') ? 2 : 1
+    const brandSegment = tail[sizeOffset]
+    const modelSegment = tail[sizeOffset + 1]
+    if (!brandSegment || !modelSegment) return ''
+
+    return normalize4WSourceUrl(
+      make,
+      model,
+      `https://www.cardekho.com/${slugify(brandSegment)}/${slugify(modelSegment)}`
+    )
+  } catch {
+    return ''
   }
 }
 
@@ -715,7 +793,16 @@ function gather4WModelsFromGeneratedMeta() {
 
     for (const modelEntry of Object.values(models)) {
       const model = String(modelEntry?.model || '').trim()
-      const sourceUrl = String(modelEntry?.sourceUrl || '').trim()
+      const directSourceUrl = String(modelEntry?.sourceUrl || '').trim()
+      const inferredSourceUrl = derive4WSourceUrlFromImageUrl(
+        make,
+        model,
+        String(modelEntry?.imageUrl || '').trim()
+      )
+      const manualSourceUrl = getManual4WSourceUrl(make, model)
+      const sourceUrl = directSourceUrl.startsWith('http')
+        ? directSourceUrl
+        : inferredSourceUrl || manualSourceUrl
       if (!make || !model || !sourceUrl.startsWith('http')) continue
 
       const normalizedSourceUrl = normalize4WSourceUrl(make, model, sourceUrl)

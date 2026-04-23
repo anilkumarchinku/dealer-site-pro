@@ -1,0 +1,26 @@
+{
+  "make": "BMW",
+  "model": "3 Series Gran Limousine",
+  "brandSlug": "bmw",
+  "modelSlug": "3-series-long-wheelbase",
+  "sourceUrl": "https://www.cardekho.com/bmw/3-series-long-wheelbase",
+  "scrapedAt": "2026-04-23T09:24:20.094Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 4,
+    "total": 4
+  },
+  "hero": "/data/brand-model-images/4w-galleries/bmw/3-series-gran-limousine/colors/carbon-black.avif",
+  "colorNames": [
+    "Carbon Black",
+    "Mineral White",
+    "Portimao Blue",
+    "Skyscraper Metallic"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/bmw/3-series-gran-limousine/colors/carbon-black.avif",
+    "/data/brand-model-images/4w-galleries/bmw/3-series-gran-limousine/colors/mineral-white.avif",
+    "/data/brand-model-images/4w-galleries/bmw/3-series-gran-limousine/colors/portimao-blue.avif",
+    "/data/brand-model-images/4w-galleries/bmw/3-series-gran-limousine/colors/skyscraper-metallic.avif"
+  ]
+}

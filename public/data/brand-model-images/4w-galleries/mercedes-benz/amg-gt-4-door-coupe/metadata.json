@@ -1,0 +1,28 @@
+{
+  "make": "Mercedes-Benz",
+  "model": "AMG GT 4-Door Coupe",
+  "brandSlug": "mercedes-benz",
+  "modelSlug": "amg-gt-4-door-coupe",
+  "sourceUrl": "https://www.cardekho.com/mercedes-benz/amg-gt-4-door-coupe",
+  "scrapedAt": "2026-04-23T09:28:10.963Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 5,
+    "total": 5
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mercedes-benz/amg-gt-4-door-coupe/colors/spectral-blue.avif",
+  "colorNames": [
+    "Spectral Blue",
+    "High Tech Silver",
+    "Polar White",
+    "Graphite Grey Metallic",
+    "Obsidian Black"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-gt-4-door-coupe/colors/spectral-blue.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-gt-4-door-coupe/colors/high-tech-silver.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-gt-4-door-coupe/colors/polar-white.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-gt-4-door-coupe/colors/graphite-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-gt-4-door-coupe/colors/obsidian-black.avif"
+  ]
+}

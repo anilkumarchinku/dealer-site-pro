@@ -1,6 +1,6 @@
 # 4W Color Image Checklist
 
-- Generated at: 2026-04-21T06:57:03.589Z
+- Generated at: 2026-04-23T09:28:44.009Z
 - Cardekho-backed current models tracked: 256
 - Brands tracked: 33
 - Models with local metadata rows: 251
@@ -9,7 +9,7 @@
 - Models with metadata but zero current color images: 0
 - Models with color duplicate removals already flagged: 2
 - Models still needing full Cardekho color coverage validation: 256
-- Total current color images saved locally: 1837
+- Total current color images saved locally: 1883
 
 Target per model:
 
@@ -54,12 +54,12 @@ Color counts show the current local color-image count after applying any availab
 - Models with metadata but zero current color images: 0
 - Color duplicate removals flagged: 1
 - Models pending full Cardekho color validation: 13
-- Total current saved color images: 76
+- Total current saved color images: 75
 
 | Model | Body Type | In Local | Metadata Exists | Current Colors | Dupes Removed | Needs Coverage Validation | Status |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | A4 | Sedan | Yes | Yes | 5 | 1 | Yes | colors_captured_after_dedupe_validation_pending |
-| A6 | Sedan | Yes | Yes | 5 | 0 | Yes | colors_captured_validation_pending |
+| A6 | Sedan | Yes | Yes | 4 | 0 | Yes | colors_captured_validation_pending |
 | e-tron GT | Coupe | Yes | Yes | 7 | 0 | Yes | colors_captured_validation_pending |
 | Q3 | SUV | Yes | Yes | 5 | 0 | Yes | colors_captured_validation_pending |
 | Q3 Sportback | SUV | Yes | Yes | 4 | 0 | Yes | colors_captured_validation_pending |
@@ -82,12 +82,12 @@ Color counts show the current local color-image count after applying any availab
 - Models with metadata but zero current color images: 0
 - Color duplicate removals flagged: 0
 - Models pending full Cardekho color validation: 3
-- Total current saved color images: 48
+- Total current saved color images: 55
 
 | Model | Body Type | In Local | Metadata Exists | Current Colors | Dupes Removed | Needs Coverage Validation | Status |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Bentayga | SUV | Yes | Yes | 16 | 0 | Yes | colors_captured_validation_pending |
-| Continental | Coupe | No | Yes | 18 | 0 | Yes | colors_captured_validation_pending |
+| Bentayga | SUV | Yes | Yes | 18 | 0 | Yes | colors_captured_validation_pending |
+| Continental | Coupe | No | Yes | 23 | 0 | Yes | colors_captured_validation_pending |
 | Flying Spur | Sedan | Yes | Yes | 14 | 0 | Yes | colors_captured_validation_pending |
 
 ## BMW
@@ -100,7 +100,7 @@ Color counts show the current local color-image count after applying any availab
 - Models with metadata but zero current color images: 0
 - Color duplicate removals flagged: 1
 - Models pending full Cardekho color validation: 20
-- Total current saved color images: 101
+- Total current saved color images: 102
 
 | Model | Body Type | In Local | Metadata Exists | Current Colors | Dupes Removed | Needs Coverage Validation | Status |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -120,7 +120,7 @@ Color counts show the current local color-image count after applying any availab
 | M8 Coupe Competition | Coupe | Yes | Yes | 7 | 0 | Yes | colors_captured_validation_pending |
 | X1 | SUV | Yes | Yes | 5 | 0 | Yes | colors_captured_validation_pending |
 | X3 | SUV | Yes | Yes | 1 | 0 | Yes | colors_captured_validation_pending |
-| X5 | SUV | Yes | Yes | 6 | 0 | Yes | colors_captured_validation_pending |
+| X5 | SUV | Yes | Yes | 7 | 0 | Yes | colors_captured_validation_pending |
 | X7 | SUV | Yes | Yes | 7 | 0 | Yes | colors_captured_validation_pending |
 | XM | SUV | Yes | Yes | 7 | 0 | Yes | colors_captured_validation_pending |
 | Z4 | Convertible | Yes | Yes | 5 | 2 | Yes | colors_captured_after_dedupe_validation_pending |
@@ -174,16 +174,16 @@ Color counts show the current local color-image count after applying any availab
 - Models with metadata but zero current color images: 0
 - Color duplicate removals flagged: 0
 - Models pending full Cardekho color validation: 7
-- Total current saved color images: 140
+- Total current saved color images: 156
 
 | Model | Body Type | In Local | Metadata Exists | Current Colors | Dupes Removed | Needs Coverage Validation | Status |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 296 GTB | Coupe | Yes | Yes | 28 | 0 | Yes | colors_captured_validation_pending |
-| 812 | Convertible | No | Yes | 26 | 0 | Yes | colors_captured_validation_pending |
+| 296 GTB | Coupe | Yes | Yes | 30 | 0 | Yes | colors_captured_validation_pending |
+| 812 | Convertible | No | Yes | 31 | 0 | Yes | colors_captured_validation_pending |
 | 849 Testarossa | Coupe | Yes | Yes | 8 | 0 | Yes | colors_captured_validation_pending |
 | Amalfi | Unknown | Yes | No | 0 | 0 | Yes | not_started |
-| F8 Tributo | Coupe | Yes | Yes | 27 | 0 | Yes | colors_captured_validation_pending |
-| Roma | Coupe | Yes | Yes | 26 | 0 | Yes | colors_captured_validation_pending |
+| F8 Tributo | Coupe | Yes | Yes | 32 | 0 | Yes | colors_captured_validation_pending |
+| Roma | Coupe | Yes | Yes | 30 | 0 | Yes | colors_captured_validation_pending |
 | SF90 Stradale | Coupe | Yes | Yes | 25 | 0 | Yes | colors_captured_validation_pending |
 
 ## Force Motors
@@ -196,13 +196,13 @@ Color counts show the current local color-image count after applying any availab
 - Models with metadata but zero current color images: 0
 - Color duplicate removals flagged: 0
 - Models pending full Cardekho color validation: 3
-- Total current saved color images: 10
+- Total current saved color images: 11
 
 | Model | Body Type | In Local | Metadata Exists | Current Colors | Dupes Removed | Needs Coverage Validation | Status |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Gurkha | SUV | Yes | Yes | 4 | 0 | Yes | colors_captured_validation_pending |
 | Gurkha 5 Door | SUV | Yes | Yes | 4 | 0 | Yes | colors_captured_validation_pending |
-| Urbania | MPV | Yes | Yes | 2 | 0 | Yes | colors_captured_validation_pending |
+| Urbania | MPV | Yes | Yes | 3 | 0 | Yes | colors_captured_validation_pending |
 
 ## Honda
 
@@ -234,14 +234,14 @@ Color counts show the current local color-image count after applying any availab
 - Models with metadata but zero current color images: 0
 - Color duplicate removals flagged: 0
 - Models pending full Cardekho color validation: 15
-- Total current saved color images: 87
+- Total current saved color images: 88
 
 | Model | Body Type | In Local | Metadata Exists | Current Colors | Dupes Removed | Needs Coverage Validation | Status |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Alcazar | SUV | Yes | Yes | 6 | 0 | Yes | colors_captured_validation_pending |
 | Aura | Sedan | Yes | Yes | 5 | 0 | Yes | colors_captured_validation_pending |
 | Creta | SUV | Yes | Yes | 6 | 0 | Yes | colors_captured_validation_pending |
-| Creta Electric | SUV | No | Yes | 12 | 0 | Yes | colors_captured_validation_pending |
+| Creta Electric | SUV | No | Yes | 13 | 0 | Yes | colors_captured_validation_pending |
 | Creta N Line | SUV | Yes | Yes | 5 | 0 | Yes | colors_captured_validation_pending |
 | Exter | Hatchback | Yes | Yes | 7 | 0 | Yes | colors_captured_validation_pending |
 | Grand i10 Nios | Hatchback | Yes | Yes | 7 | 0 | Yes | colors_captured_validation_pending |
@@ -414,9 +414,9 @@ Color counts show the current local color-image count after applying any availab
 | Bolero Camper | Pickup | Yes | Yes | 1 | 0 | Yes | colors_captured_validation_pending |
 | Bolero Neo | SUV | Yes | Yes | 7 | 0 | Yes | colors_captured_validation_pending |
 | Bolero Neo Plus | SUV | Yes | Yes | 3 | 0 | Yes | colors_captured_validation_pending |
-| Bolero Pik-Up | Pickup | Yes | Yes | 1 | 0 | Yes | colors_captured_validation_pending |
+| Bolero Pik-Up | Pickup | Yes | Yes | 2 | 0 | Yes | colors_captured_validation_pending |
 | Marazzo | MPV | Yes | Yes | 4 | 0 | Yes | colors_captured_validation_pending |
-| Scorpio | SUV | No | Yes | 5 | 0 | Yes | colors_captured_validation_pending |
+| Scorpio | SUV | No | Yes | 4 | 0 | Yes | colors_captured_validation_pending |
 | Scorpio N | SUV | Yes | Yes | 5 | 0 | Yes | colors_captured_validation_pending |
 | Thar | SUV | Yes | Yes | 6 | 0 | Yes | colors_captured_validation_pending |
 | Thar ROXX | SUV | Yes | Yes | 7 | 0 | Yes | colors_captured_validation_pending |
@@ -437,30 +437,30 @@ Color counts show the current local color-image count after applying any availab
 - Models with metadata but zero current color images: 0
 - Color duplicate removals flagged: 0
 - Models pending full Cardekho color validation: 20
-- Total current saved color images: 161
+- Total current saved color images: 180
 
 | Model | Body Type | In Local | Metadata Exists | Current Colors | Dupes Removed | Needs Coverage Validation | Status |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Alto K10 | Hatchback | Yes | Yes | 7 | 0 | Yes | colors_captured_validation_pending |
-| Baleno | Hatchback | Yes | Yes | 6 | 0 | Yes | colors_captured_validation_pending |
-| Brezza | SUV | Yes | Yes | 10 | 0 | Yes | colors_captured_validation_pending |
-| Celerio | Hatchback | Yes | Yes | 7 | 0 | Yes | colors_captured_validation_pending |
+| Alto K10 | Hatchback | Yes | Yes | 8 | 0 | Yes | colors_captured_validation_pending |
+| Baleno | Hatchback | Yes | Yes | 7 | 0 | Yes | colors_captured_validation_pending |
+| Brezza | SUV | Yes | Yes | 12 | 0 | Yes | colors_captured_validation_pending |
+| Celerio | Hatchback | Yes | Yes | 9 | 0 | Yes | colors_captured_validation_pending |
 | Ciaz | Sedan | Yes | Yes | 10 | 0 | Yes | colors_captured_validation_pending |
 | Dzire | Sedan | Yes | Yes | 7 | 0 | Yes | colors_captured_validation_pending |
 | Dzire Tour S | Sedan | Yes | Yes | 3 | 0 | Yes | colors_captured_validation_pending |
 | e Vitara | SUV | No | Yes | 11 | 0 | Yes | colors_captured_validation_pending |
 | Eeco | MPV | Yes | Yes | 5 | 0 | Yes | colors_captured_validation_pending |
 | Ertiga | MPV | Yes | Yes | 7 | 0 | Yes | colors_captured_validation_pending |
-| FRONX | SUV | Yes | Yes | 10 | 0 | Yes | colors_captured_validation_pending |
-| Grand Vitara | SUV | Yes | Yes | 10 | 0 | Yes | colors_captured_validation_pending |
+| FRONX | SUV | Yes | Yes | 13 | 0 | Yes | colors_captured_validation_pending |
+| Grand Vitara | SUV | Yes | Yes | 13 | 0 | Yes | colors_captured_validation_pending |
 | Ignis | Hatchback | Yes | Yes | 10 | 0 | Yes | colors_captured_validation_pending |
-| Invicto | MPV | Yes | Yes | 5 | 0 | Yes | colors_captured_validation_pending |
-| Jimny | SUV | Yes | Yes | 7 | 0 | Yes | colors_captured_validation_pending |
+| Invicto | MPV | Yes | Yes | 6 | 0 | Yes | colors_captured_validation_pending |
+| Jimny | SUV | Yes | Yes | 8 | 0 | Yes | colors_captured_validation_pending |
 | S-Presso | Hatchback | Yes | Yes | 7 | 0 | Yes | colors_captured_validation_pending |
 | Swift | Hatchback | Yes | Yes | 10 | 0 | Yes | colors_captured_validation_pending |
 | Victoris | SUV | Yes | Yes | 10 | 0 | Yes | colors_captured_validation_pending |
-| Wagon R | Hatchback | Yes | Yes | 9 | 0 | Yes | colors_captured_validation_pending |
-| XL6 | MPV | Yes | Yes | 10 | 0 | Yes | colors_captured_validation_pending |
+| Wagon R | Hatchback | Yes | Yes | 12 | 0 | Yes | colors_captured_validation_pending |
+| XL6 | MPV | Yes | Yes | 12 | 0 | Yes | colors_captured_validation_pending |
 
 ## Maserati
 
@@ -551,14 +551,14 @@ Color counts show the current local color-image count after applying any availab
 - Models with metadata but zero current color images: 0
 - Color duplicate removals flagged: 0
 - Models pending full Cardekho color validation: 4
-- Total current saved color images: 18
+- Total current saved color images: 20
 
 | Model | Body Type | In Local | Metadata Exists | Current Colors | Dupes Removed | Needs Coverage Validation | Status |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Cooper Convertible | Convertible | Yes | Yes | 4 | 0 | Yes | colors_captured_validation_pending |
 | Cooper S | SUV | Yes | Yes | 10 | 0 | Yes | colors_captured_validation_pending |
-| Countryman | SUV | Yes | Yes | 3 | 0 | Yes | colors_captured_validation_pending |
-| Countryman Electric | SUV | Yes | Yes | 1 | 0 | Yes | colors_captured_validation_pending |
+| Countryman | SUV | Yes | Yes | 4 | 0 | Yes | colors_captured_validation_pending |
+| Countryman Electric | SUV | Yes | Yes | 2 | 0 | Yes | colors_captured_validation_pending |
 
 ## Nissan
 

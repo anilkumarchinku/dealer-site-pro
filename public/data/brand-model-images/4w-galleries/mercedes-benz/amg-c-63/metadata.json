@@ -1,0 +1,32 @@
+{
+  "make": "Mercedes-Benz",
+  "model": "AMG C 63",
+  "brandSlug": "mercedes-benz",
+  "modelSlug": "amg-c-63",
+  "sourceUrl": "https://www.cardekho.com/mercedes-benz/amg-c-63",
+  "scrapedAt": "2026-04-23T09:28:09.844Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 7,
+    "total": 7
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mercedes-benz/amg-c-63/colors/spectral-blue.avif",
+  "colorNames": [
+    "Spectral Blue",
+    "Selenite Grey",
+    "High Tech Silver",
+    "Graphite Grey",
+    "Sodalite Blue",
+    "Polar White",
+    "Obsidian Black"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-c-63/colors/spectral-blue.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-c-63/colors/selenite-grey.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-c-63/colors/high-tech-silver.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-c-63/colors/graphite-grey.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-c-63/colors/sodalite-blue.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-c-63/colors/polar-white.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-c-63/colors/obsidian-black.avif"
+  ]
+}

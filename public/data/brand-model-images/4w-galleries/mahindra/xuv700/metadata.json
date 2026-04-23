@@ -1,0 +1,40 @@
+{
+  "make": "Mahindra",
+  "model": "XUV700",
+  "brandSlug": "mahindra",
+  "modelSlug": "xuv700",
+  "sourceUrl": "https://www.cardekho.com/mahindra/xuv700",
+  "scrapedAt": "2026-04-23T09:26:37.849Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 11,
+    "total": 11
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mahindra/xuv700/colors/everest-white.avif",
+  "colorNames": [
+    "Everest White",
+    "Valyrian Silver DT",
+    "Stealth Black",
+    "Valyrian Silver",
+    "Deep Forest",
+    "Midnight Black Dt",
+    "Burnt Sienna",
+    "Midnight Black",
+    "Everest White Dt",
+    "NapoliBlack",
+    "MidnightBlack"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mahindra/xuv700/colors/everest-white.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xuv700/colors/valyrian-silver-dt.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xuv700/colors/stealth-black.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xuv700/colors/valyrian-silver.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xuv700/colors/deep-forest.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xuv700/colors/midnight-black-dt.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xuv700/colors/burnt-sienna.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xuv700/colors/midnight-black.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xuv700/colors/everest-white-dt.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xuv700/colors/napoliblack.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xuv700/colors/midnightblack.avif"
+  ]
+}

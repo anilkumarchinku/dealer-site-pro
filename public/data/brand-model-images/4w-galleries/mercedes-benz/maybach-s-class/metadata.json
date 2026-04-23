@@ -1,0 +1,26 @@
+{
+  "make": "Mercedes-Benz",
+  "model": "Maybach S-Class",
+  "brandSlug": "mercedes-benz",
+  "modelSlug": "maybach-s-class",
+  "sourceUrl": "https://www.cardekho.com/mercedes-benz/maybach-s-class",
+  "scrapedAt": "2026-04-23T09:27:13.339Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 4,
+    "total": 4
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mercedes-benz/maybach-s-class/colors/designo-diamond-white-bright.avif",
+  "colorNames": [
+    "Designo Diamond White Bright",
+    "Onyx Black",
+    "Nautic Blue",
+    "Emerald Green"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mercedes-benz/maybach-s-class/colors/designo-diamond-white-bright.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/maybach-s-class/colors/onyx-black.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/maybach-s-class/colors/nautic-blue.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/maybach-s-class/colors/emerald-green.avif"
+  ]
+}

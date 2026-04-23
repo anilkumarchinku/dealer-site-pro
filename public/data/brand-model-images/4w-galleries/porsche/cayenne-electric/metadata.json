@@ -1,0 +1,38 @@
+{
+  "make": "Porsche",
+  "model": "Cayenne Electric",
+  "brandSlug": "porsche",
+  "modelSlug": "cayenne-electric",
+  "sourceUrl": "https://www.cardekho.com/porsche/cayenne-electric",
+  "scrapedAt": "2026-04-23T09:24:21.518Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 10,
+    "total": 10
+  },
+  "hero": "/data/brand-model-images/4w-galleries/porsche/cayenne-electric/colors/monteverde-metallic.avif",
+  "colorNames": [
+    "Monteverde Metallic",
+    "Madeira Gold Metallic",
+    "White",
+    "Dolomite Silver Metallic",
+    "Carrara White Metallic",
+    "Vanadium Grey Metallic",
+    "Chromite Black Metallic",
+    "Slate Grey Neo",
+    "Mystic Green Metallic",
+    "Algarve Blue Metallic"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/porsche/cayenne-electric/colors/monteverde-metallic.avif",
+    "/data/brand-model-images/4w-galleries/porsche/cayenne-electric/colors/madeira-gold-metallic.avif",
+    "/data/brand-model-images/4w-galleries/porsche/cayenne-electric/colors/white.avif",
+    "/data/brand-model-images/4w-galleries/porsche/cayenne-electric/colors/dolomite-silver-metallic.avif",
+    "/data/brand-model-images/4w-galleries/porsche/cayenne-electric/colors/carrara-white-metallic.avif",
+    "/data/brand-model-images/4w-galleries/porsche/cayenne-electric/colors/vanadium-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/porsche/cayenne-electric/colors/chromite-black-metallic.avif",
+    "/data/brand-model-images/4w-galleries/porsche/cayenne-electric/colors/slate-grey-neo.avif",
+    "/data/brand-model-images/4w-galleries/porsche/cayenne-electric/colors/mystic-green-metallic.avif",
+    "/data/brand-model-images/4w-galleries/porsche/cayenne-electric/colors/algarve-blue-metallic.avif"
+  ]
+}
