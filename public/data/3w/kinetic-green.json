@@ -98,7 +98,7 @@
         "top_speed": "55 kmph",
         "seating_capacity": "Driver + 2"
       },
-      "vehicle_category": "passenger"
+      "vehicle_category": "cargo"
     },
     {
       "variant_name": "Safar Jumbo Ranger/Electric",
@@ -121,7 +121,7 @@
         "charging_time": "4 hrs",
         "top_speed": "55 kmph"
       },
-      "vehicle_category": "passenger"
+      "vehicle_category": "cargo"
     }
   ]
 }

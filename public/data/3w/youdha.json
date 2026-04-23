@@ -50,50 +50,6 @@
       "vehicle_category": "cargo"
     },
     {
-      "variant_name": "YOUDHA EPOD Cargo",
-      "ex_showroom_price": "₹2.99 Lakh",
-      "mileage": "80 km range",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "5 kW",
-        "torque": "25 Nm"
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "750 kg",
-        "payload_capacity": "350 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "Electric",
-        "transmission_type": "Automatic",
-        "battery_capacity": "5.12 kWh",
-        "range": "80 km",
-        "top_speed": "40 kmph"
-      },
-      "vehicle_category": "cargo"
-    },
-    {
-      "variant_name": "YOUDHA EPOD Cargo Plus",
-      "ex_showroom_price": "₹3.45 Lakh",
-      "mileage": "120 km range",
-      "engine_details": {
-        "displacement": "",
-        "max_power": "5 kW",
-        "torque": "25 Nm"
-      },
-      "payload_features": {
-        "gross_vehicle_weight": "750 kg",
-        "payload_capacity": "350 kg"
-      },
-      "technical_specifications": {
-        "fuel_type": "Electric",
-        "transmission_type": "Automatic",
-        "battery_capacity": "7.68 kWh",
-        "range": "120 km",
-        "top_speed": "40 kmph"
-      },
-      "vehicle_category": "cargo"
-    },
-    {
       "variant_name": "YOUDHA G-Van Cargo",
       "ex_showroom_price": "₹4.25 Lakh",
       "mileage": "130 km range",

@@ -193,7 +193,7 @@
         "fuel_type": "CNG",
         "transmission_type": "Manual"
       },
-      "vehicle_category": "cargo"
+      "vehicle_category": "passenger"
     },
     {
       "variant_name": "Maxima X Wide/LPG",
@@ -212,7 +212,7 @@
         "fuel_type": "LPG",
         "transmission_type": "Manual"
       },
-      "vehicle_category": "cargo"
+      "vehicle_category": "passenger"
     },
     {
       "variant_name": "Maxima X Wide/Diesel",
@@ -231,7 +231,7 @@
         "fuel_type": "Diesel",
         "transmission_type": "Manual"
       },
-      "vehicle_category": "cargo"
+      "vehicle_category": "passenger"
     },
     {
       "variant_name": "Maxima XL Cargo E-TEC 9.0/Electric",

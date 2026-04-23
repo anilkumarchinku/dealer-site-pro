@@ -89,7 +89,7 @@
         "wheelbase": "2165 mm",
         "top_speed": "53 kmph"
       },
-      "vehicle_category": "passenger"
+      "vehicle_category": "cargo"
     },
     {
       "variant_name": "Alfa Plus Duo/CNG+Petrol",
@@ -109,7 +109,7 @@
         "transmission_type": "Manual",
         "wheelbase": "2195 mm"
       },
-      "vehicle_category": "passenger"
+      "vehicle_category": "cargo"
     },
     {
       "variant_name": "Alfa Champ/Petrol",
