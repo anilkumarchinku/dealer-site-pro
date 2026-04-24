@@ -550,7 +550,7 @@
           }
         ],
         "variant_name": "2.0 Limited Opt FWD AT",
-        "ex_showroom_price": 2645000,
+        "ex_showroom_price": 2665000,
         "hyderabad_on_road_price": null
       },
       {
@@ -803,7 +803,7 @@
         "make": "Jeep",
         "model": "Wrangler",
         "variant_name": "Willys 41 Special Edition",
-        "ex_showroom_price": 7324000,
+        "ex_showroom_price": 7031000,
         "hyderabad_on_road_price": null,
         "powertrain": {
           "fuel": "Petrol",

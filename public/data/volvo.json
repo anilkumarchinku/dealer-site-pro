@@ -26,25 +26,59 @@
       },
       "features": {
         "key_features": [
-          { "value": "9-inch touchscreen infotainment" },
-          { "value": "Panoramic sunroof" },
-          { "value": "360-degree camera" },
-          { "value": "Air suspension with adjustable ride height" },
-          { "value": "Harman Kardon premium audio" },
-          { "value": "4-zone climate control" },
-          { "value": "Wireless charging" },
-          { "value": "Head-up display" }
+          {
+            "value": "9-inch touchscreen infotainment"
+          },
+          {
+            "value": "Panoramic sunroof"
+          },
+          {
+            "value": "360-degree camera"
+          },
+          {
+            "value": "Air suspension with adjustable ride height"
+          },
+          {
+            "value": "Harman Kardon premium audio"
+          },
+          {
+            "value": "4-zone climate control"
+          },
+          {
+            "value": "Wireless charging"
+          },
+          {
+            "value": "Head-up display"
+          }
         ],
         "safety_features": [
-          { "value": "7 airbags" },
-          { "value": "ABS with EBD" },
-          { "value": "ESC" },
-          { "value": "BLIS (Blind Spot Information System)" },
-          { "value": "Lane Keeping Aid" },
-          { "value": "Collision Avoidance" },
-          { "value": "Cross Traffic Alert" },
-          { "value": "Hill Start Assist" },
-          { "value": "ADAS" }
+          {
+            "value": "7 airbags"
+          },
+          {
+            "value": "ABS with EBD"
+          },
+          {
+            "value": "ESC"
+          },
+          {
+            "value": "BLIS (Blind Spot Information System)"
+          },
+          {
+            "value": "Lane Keeping Aid"
+          },
+          {
+            "value": "Collision Avoidance"
+          },
+          {
+            "value": "Cross Traffic Alert"
+          },
+          {
+            "value": "Hill Start Assist"
+          },
+          {
+            "value": "ADAS"
+          }
         ]
       },
       "image_urls": [
@@ -56,7 +90,9 @@
         "availability": "On Sale",
         "source_url": "https://www.cardekho.com/volvo/xc90",
         "launch_year": 2025
-      }
+      },
+      "ex_showroom_price_min_inr": 9780000,
+      "ex_showroom_price_max_inr": 9780000
     },
     {
       "make": "Volvo",
@@ -84,24 +120,56 @@
       },
       "features": {
         "key_features": [
-          { "value": "9-inch touchscreen with Google built-in" },
-          { "value": "Panoramic sunroof" },
-          { "value": "360-degree camera" },
-          { "value": "Harman Kardon premium audio" },
-          { "value": "Wireless charging" },
-          { "value": "2-zone climate control" },
-          { "value": "Power tailgate" },
-          { "value": "LED headlamps with Thor Hammer DRL" }
+          {
+            "value": "9-inch touchscreen with Google built-in"
+          },
+          {
+            "value": "Panoramic sunroof"
+          },
+          {
+            "value": "360-degree camera"
+          },
+          {
+            "value": "Harman Kardon premium audio"
+          },
+          {
+            "value": "Wireless charging"
+          },
+          {
+            "value": "2-zone climate control"
+          },
+          {
+            "value": "Power tailgate"
+          },
+          {
+            "value": "LED headlamps with Thor Hammer DRL"
+          }
         ],
         "safety_features": [
-          { "value": "6 airbags" },
-          { "value": "ABS with EBD" },
-          { "value": "ESC" },
-          { "value": "BLIS (Blind Spot Information System)" },
-          { "value": "Lane Keeping Aid" },
-          { "value": "Collision Avoidance" },
-          { "value": "Cross Traffic Alert" },
-          { "value": "Hill Start Assist" }
+          {
+            "value": "6 airbags"
+          },
+          {
+            "value": "ABS with EBD"
+          },
+          {
+            "value": "ESC"
+          },
+          {
+            "value": "BLIS (Blind Spot Information System)"
+          },
+          {
+            "value": "Lane Keeping Aid"
+          },
+          {
+            "value": "Collision Avoidance"
+          },
+          {
+            "value": "Cross Traffic Alert"
+          },
+          {
+            "value": "Hill Start Assist"
+          }
         ]
       },
       "image_urls": [
@@ -113,7 +181,9 @@
         "availability": "On Sale",
         "source_url": "https://www.cardekho.com/volvo/xc60",
         "launch_year": 2025
-      }
+      },
+      "ex_showroom_price_min_inr": 6890000,
+      "ex_showroom_price_max_inr": 6890000
     },
     {
       "make": "Volvo",
@@ -141,24 +211,56 @@
       },
       "features": {
         "key_features": [
-          { "value": "12.3-inch centre touchscreen" },
-          { "value": "Panoramic roof" },
-          { "value": "360-degree camera" },
-          { "value": "Harman Kardon audio" },
-          { "value": "Wireless Apple CarPlay & Android Auto" },
-          { "value": "Wireless phone charging" },
-          { "value": "One-pedal driving" },
-          { "value": "150 kW DC fast charging (26 min 10-80%)" }
+          {
+            "value": "12.3-inch centre touchscreen"
+          },
+          {
+            "value": "Panoramic roof"
+          },
+          {
+            "value": "360-degree camera"
+          },
+          {
+            "value": "Harman Kardon audio"
+          },
+          {
+            "value": "Wireless Apple CarPlay & Android Auto"
+          },
+          {
+            "value": "Wireless phone charging"
+          },
+          {
+            "value": "One-pedal driving"
+          },
+          {
+            "value": "150 kW DC fast charging (26 min 10-80%)"
+          }
         ],
         "safety_features": [
-          { "value": "6 airbags" },
-          { "value": "ABS with EBD" },
-          { "value": "ESC" },
-          { "value": "Lane Keeping Aid" },
-          { "value": "Collision Avoidance" },
-          { "value": "ADAS" },
-          { "value": "BLIS" },
-          { "value": "Cross Traffic Alert" }
+          {
+            "value": "6 airbags"
+          },
+          {
+            "value": "ABS with EBD"
+          },
+          {
+            "value": "ESC"
+          },
+          {
+            "value": "Lane Keeping Aid"
+          },
+          {
+            "value": "Collision Avoidance"
+          },
+          {
+            "value": "ADAS"
+          },
+          {
+            "value": "BLIS"
+          },
+          {
+            "value": "Cross Traffic Alert"
+          }
         ]
       },
       "image_urls": [
@@ -171,7 +273,9 @@
         "source_url": "https://www.cardekho.com/volvo/ex30",
         "launch_year": 2025,
         "battery_capacity": "69 kWh"
-      }
+      },
+      "ex_showroom_price_min_inr": 4100000,
+      "ex_showroom_price_max_inr": 4100000
     },
     {
       "make": "Volvo",
@@ -199,24 +303,56 @@
       },
       "features": {
         "key_features": [
-          { "value": "9-inch touchscreen with Google built-in" },
-          { "value": "Panoramic sunroof" },
-          { "value": "360-degree camera" },
-          { "value": "Harman Kardon premium audio" },
-          { "value": "Wireless charging" },
-          { "value": "One-pedal driving" },
-          { "value": "150 kW DC fast charging (28 min 10-80%)" },
-          { "value": "Heated front seats" }
+          {
+            "value": "9-inch touchscreen with Google built-in"
+          },
+          {
+            "value": "Panoramic sunroof"
+          },
+          {
+            "value": "360-degree camera"
+          },
+          {
+            "value": "Harman Kardon premium audio"
+          },
+          {
+            "value": "Wireless charging"
+          },
+          {
+            "value": "One-pedal driving"
+          },
+          {
+            "value": "150 kW DC fast charging (28 min 10-80%)"
+          },
+          {
+            "value": "Heated front seats"
+          }
         ],
         "safety_features": [
-          { "value": "7 airbags" },
-          { "value": "ABS with EBD" },
-          { "value": "ESC" },
-          { "value": "BLIS (Blind Spot Information System)" },
-          { "value": "Lane Keeping Aid" },
-          { "value": "Collision Avoidance" },
-          { "value": "Cross Traffic Alert" },
-          { "value": "Pilot Assist (semi-autonomous driving)" }
+          {
+            "value": "7 airbags"
+          },
+          {
+            "value": "ABS with EBD"
+          },
+          {
+            "value": "ESC"
+          },
+          {
+            "value": "BLIS (Blind Spot Information System)"
+          },
+          {
+            "value": "Lane Keeping Aid"
+          },
+          {
+            "value": "Collision Avoidance"
+          },
+          {
+            "value": "Cross Traffic Alert"
+          },
+          {
+            "value": "Pilot Assist (semi-autonomous driving)"
+          }
         ]
       },
       "image_urls": [
@@ -257,25 +393,59 @@
       },
       "features": {
         "key_features": [
-          { "value": "12.3-inch touchscreen infotainment" },
-          { "value": "Panoramic sunroof" },
-          { "value": "360-degree camera" },
-          { "value": "Harman Kardon premium audio" },
-          { "value": "Wireless Apple CarPlay & Android Auto" },
-          { "value": "Wireless phone charging" },
-          { "value": "One-pedal driving" },
-          { "value": "150 kW DC fast charging" }
+          {
+            "value": "12.3-inch touchscreen infotainment"
+          },
+          {
+            "value": "Panoramic sunroof"
+          },
+          {
+            "value": "360-degree camera"
+          },
+          {
+            "value": "Harman Kardon premium audio"
+          },
+          {
+            "value": "Wireless Apple CarPlay & Android Auto"
+          },
+          {
+            "value": "Wireless phone charging"
+          },
+          {
+            "value": "One-pedal driving"
+          },
+          {
+            "value": "150 kW DC fast charging"
+          }
         ],
         "safety_features": [
-          { "value": "7 airbags" },
-          { "value": "ABS with EBD" },
-          { "value": "ESC" },
-          { "value": "BLIS (Blind Spot Information System)" },
-          { "value": "Lane Keeping Aid" },
-          { "value": "Adaptive Cruise Control" },
-          { "value": "Automatic Emergency Braking" },
-          { "value": "Cross Traffic Alert" },
-          { "value": "ADAS" }
+          {
+            "value": "7 airbags"
+          },
+          {
+            "value": "ABS with EBD"
+          },
+          {
+            "value": "ESC"
+          },
+          {
+            "value": "BLIS (Blind Spot Information System)"
+          },
+          {
+            "value": "Lane Keeping Aid"
+          },
+          {
+            "value": "Adaptive Cruise Control"
+          },
+          {
+            "value": "Automatic Emergency Braking"
+          },
+          {
+            "value": "Cross Traffic Alert"
+          },
+          {
+            "value": "ADAS"
+          }
         ]
       },
       "image_urls": [

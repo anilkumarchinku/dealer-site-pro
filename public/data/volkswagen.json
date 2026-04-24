@@ -38,21 +38,54 @@
       "height_mm": 1507,
       "height_mm_citation": "https://www.cardekho.com/volkswagen/virtus",
       "key_features": [
-        { "value": "10.1-inch touchscreen infotainment", "value_citation": "https://www.cardekho.com/volkswagen/virtus" },
-        { "value": "8-inch digital driver's display", "value_citation": "https://www.cardekho.com/volkswagen/virtus" },
-        { "value": "Wireless Android Auto & Apple CarPlay", "value_citation": "https://www.cardekho.com/volkswagen/virtus" },
-        { "value": "Automatic climate control", "value_citation": "https://www.cardekho.com/volkswagen/virtus" },
-        { "value": "Cruise control", "value_citation": "https://www.cardekho.com/volkswagen/virtus" }
+        {
+          "value": "10.1-inch touchscreen infotainment",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        },
+        {
+          "value": "8-inch digital driver's display",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        },
+        {
+          "value": "Wireless Android Auto & Apple CarPlay",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        },
+        {
+          "value": "Automatic climate control",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        },
+        {
+          "value": "Cruise control",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        }
       ],
       "safety_features": [
-        { "value": "6 airbags", "value_citation": "https://www.cardekho.com/volkswagen/virtus" },
-        { "value": "ABS with EBD", "value_citation": "https://www.cardekho.com/volkswagen/virtus" },
-        { "value": "ESC", "value_citation": "https://www.cardekho.com/volkswagen/virtus" },
-        { "value": "Rear parking sensors", "value_citation": "https://www.cardekho.com/volkswagen/virtus" },
-        { "value": "TPMS", "value_citation": "https://www.cardekho.com/volkswagen/virtus" }
+        {
+          "value": "6 airbags",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        },
+        {
+          "value": "ABS with EBD",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        },
+        {
+          "value": "Rear parking sensors",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Volkswagen/Virtus/12093/1770888507498/front-left-side-47.jpg", "value_citation": "https://www.cardekho.com/volkswagen/virtus" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Volkswagen/Virtus/12093/1770888507498/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        }
       ],
       "availability_status": "on_sale",
       "availability_status_citation": "https://www.cardekho.com/volkswagen/virtus",
@@ -97,21 +130,54 @@
       "height_mm": 1507,
       "height_mm_citation": "https://www.cardekho.com/volkswagen/virtus",
       "key_features": [
-        { "value": "10.1-inch touchscreen infotainment", "value_citation": "https://www.cardekho.com/volkswagen/virtus" },
-        { "value": "8-inch digital driver's display", "value_citation": "https://www.cardekho.com/volkswagen/virtus" },
-        { "value": "Wireless Android Auto & Apple CarPlay", "value_citation": "https://www.cardekho.com/volkswagen/virtus" },
-        { "value": "Automatic climate control", "value_citation": "https://www.cardekho.com/volkswagen/virtus" },
-        { "value": "Cruise control", "value_citation": "https://www.cardekho.com/volkswagen/virtus" }
+        {
+          "value": "10.1-inch touchscreen infotainment",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        },
+        {
+          "value": "8-inch digital driver's display",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        },
+        {
+          "value": "Wireless Android Auto & Apple CarPlay",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        },
+        {
+          "value": "Automatic climate control",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        },
+        {
+          "value": "Cruise control",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        }
       ],
       "safety_features": [
-        { "value": "6 airbags", "value_citation": "https://www.cardekho.com/volkswagen/virtus" },
-        { "value": "ABS with EBD", "value_citation": "https://www.cardekho.com/volkswagen/virtus" },
-        { "value": "ESC", "value_citation": "https://www.cardekho.com/volkswagen/virtus" },
-        { "value": "Rear parking sensors", "value_citation": "https://www.cardekho.com/volkswagen/virtus" },
-        { "value": "TPMS", "value_citation": "https://www.cardekho.com/volkswagen/virtus" }
+        {
+          "value": "6 airbags",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        },
+        {
+          "value": "ABS with EBD",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        },
+        {
+          "value": "Rear parking sensors",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Volkswagen/Virtus/12093/1770888507498/front-left-side-47.jpg", "value_citation": "https://www.cardekho.com/volkswagen/virtus" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Volkswagen/Virtus/12093/1770888507498/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        }
       ],
       "availability_status": "on_sale",
       "availability_status_citation": "https://www.cardekho.com/volkswagen/virtus",
@@ -156,21 +222,54 @@
       "height_mm": 1507,
       "height_mm_citation": "https://www.cardekho.com/volkswagen/virtus",
       "key_features": [
-        { "value": "10.1-inch touchscreen infotainment", "value_citation": "https://www.cardekho.com/volkswagen/virtus" },
-        { "value": "8-inch digital driver's display", "value_citation": "https://www.cardekho.com/volkswagen/virtus" },
-        { "value": "Ventilated front seats", "value_citation": "https://www.cardekho.com/volkswagen/virtus" },
-        { "value": "Electric sunroof", "value_citation": "https://www.cardekho.com/volkswagen/virtus" },
-        { "value": "Wireless Android Auto & Apple CarPlay", "value_citation": "https://www.cardekho.com/volkswagen/virtus" }
+        {
+          "value": "10.1-inch touchscreen infotainment",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        },
+        {
+          "value": "8-inch digital driver's display",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        },
+        {
+          "value": "Ventilated front seats",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        },
+        {
+          "value": "Electric sunroof",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        },
+        {
+          "value": "Wireless Android Auto & Apple CarPlay",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        }
       ],
       "safety_features": [
-        { "value": "6 airbags", "value_citation": "https://www.cardekho.com/volkswagen/virtus" },
-        { "value": "ABS with EBD", "value_citation": "https://www.cardekho.com/volkswagen/virtus" },
-        { "value": "ESC", "value_citation": "https://www.cardekho.com/volkswagen/virtus" },
-        { "value": "Rear parking sensors", "value_citation": "https://www.cardekho.com/volkswagen/virtus" },
-        { "value": "Hill hold control", "value_citation": "https://www.cardekho.com/volkswagen/virtus" }
+        {
+          "value": "6 airbags",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        },
+        {
+          "value": "ABS with EBD",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        },
+        {
+          "value": "Rear parking sensors",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        },
+        {
+          "value": "Hill hold control",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Volkswagen/Virtus/12093/1770888507498/front-left-side-47.jpg", "value_citation": "https://www.cardekho.com/volkswagen/virtus" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Volkswagen/Virtus/12093/1770888507498/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        }
       ],
       "availability_status": "on_sale",
       "availability_status_citation": "https://www.cardekho.com/volkswagen/virtus",
@@ -215,21 +314,54 @@
       "height_mm": 1507,
       "height_mm_citation": "https://www.cardekho.com/volkswagen/virtus",
       "key_features": [
-        { "value": "10.1-inch touchscreen infotainment", "value_citation": "https://www.cardekho.com/volkswagen/virtus" },
-        { "value": "8-inch digital driver's display", "value_citation": "https://www.cardekho.com/volkswagen/virtus" },
-        { "value": "Ventilated front seats", "value_citation": "https://www.cardekho.com/volkswagen/virtus" },
-        { "value": "Electric sunroof", "value_citation": "https://www.cardekho.com/volkswagen/virtus" },
-        { "value": "Wireless Android Auto & Apple CarPlay", "value_citation": "https://www.cardekho.com/volkswagen/virtus" }
+        {
+          "value": "10.1-inch touchscreen infotainment",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        },
+        {
+          "value": "8-inch digital driver's display",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        },
+        {
+          "value": "Ventilated front seats",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        },
+        {
+          "value": "Electric sunroof",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        },
+        {
+          "value": "Wireless Android Auto & Apple CarPlay",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        }
       ],
       "safety_features": [
-        { "value": "6 airbags", "value_citation": "https://www.cardekho.com/volkswagen/virtus" },
-        { "value": "ABS with EBD", "value_citation": "https://www.cardekho.com/volkswagen/virtus" },
-        { "value": "ESC", "value_citation": "https://www.cardekho.com/volkswagen/virtus" },
-        { "value": "Rear parking sensors", "value_citation": "https://www.cardekho.com/volkswagen/virtus" },
-        { "value": "Hill hold control", "value_citation": "https://www.cardekho.com/volkswagen/virtus" }
+        {
+          "value": "6 airbags",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        },
+        {
+          "value": "ABS with EBD",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        },
+        {
+          "value": "Rear parking sensors",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        },
+        {
+          "value": "Hill hold control",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Volkswagen/Virtus/12093/1770888507498/front-left-side-47.jpg", "value_citation": "https://www.cardekho.com/volkswagen/virtus" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Volkswagen/Virtus/12093/1770888507498/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        }
       ],
       "availability_status": "on_sale",
       "availability_status_citation": "https://www.cardekho.com/volkswagen/virtus",
@@ -274,23 +406,62 @@
       "height_mm": 1507,
       "height_mm_citation": "https://www.cardekho.com/volkswagen/virtus",
       "key_features": [
-        { "value": "10.1-inch touchscreen infotainment", "value_citation": "https://www.cardekho.com/volkswagen/virtus" },
-        { "value": "8-inch digital driver's display", "value_citation": "https://www.cardekho.com/volkswagen/virtus" },
-        { "value": "Ventilated front seats", "value_citation": "https://www.cardekho.com/volkswagen/virtus" },
-        { "value": "Electric sunroof", "value_citation": "https://www.cardekho.com/volkswagen/virtus" },
-        { "value": "Wireless Android Auto & Apple CarPlay", "value_citation": "https://www.cardekho.com/volkswagen/virtus" },
-        { "value": "Ambient lighting", "value_citation": "https://www.cardekho.com/volkswagen/virtus" }
+        {
+          "value": "10.1-inch touchscreen infotainment",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        },
+        {
+          "value": "8-inch digital driver's display",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        },
+        {
+          "value": "Ventilated front seats",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        },
+        {
+          "value": "Electric sunroof",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        },
+        {
+          "value": "Wireless Android Auto & Apple CarPlay",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        },
+        {
+          "value": "Ambient lighting",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        }
       ],
       "safety_features": [
-        { "value": "6 airbags", "value_citation": "https://www.cardekho.com/volkswagen/virtus" },
-        { "value": "ABS with EBD", "value_citation": "https://www.cardekho.com/volkswagen/virtus" },
-        { "value": "ESC", "value_citation": "https://www.cardekho.com/volkswagen/virtus" },
-        { "value": "Rear parking camera", "value_citation": "https://www.cardekho.com/volkswagen/virtus" },
-        { "value": "Hill hold control", "value_citation": "https://www.cardekho.com/volkswagen/virtus" },
-        { "value": "TPMS", "value_citation": "https://www.cardekho.com/volkswagen/virtus" }
+        {
+          "value": "6 airbags",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        },
+        {
+          "value": "ABS with EBD",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        },
+        {
+          "value": "Rear parking camera",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        },
+        {
+          "value": "Hill hold control",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Volkswagen/Virtus/12093/1770888507498/front-left-side-47.jpg", "value_citation": "https://www.cardekho.com/volkswagen/virtus" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Volkswagen/Virtus/12093/1770888507498/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        }
       ],
       "availability_status": "on_sale",
       "availability_status_citation": "https://www.cardekho.com/volkswagen/virtus",
@@ -335,24 +506,66 @@
       "height_mm": 1507,
       "height_mm_citation": "https://www.cardekho.com/volkswagen/virtus",
       "key_features": [
-        { "value": "10.1-inch touchscreen infotainment", "value_citation": "https://www.cardekho.com/volkswagen/virtus" },
-        { "value": "8-inch digital driver's display", "value_citation": "https://www.cardekho.com/volkswagen/virtus" },
-        { "value": "Ventilated front seats", "value_citation": "https://www.cardekho.com/volkswagen/virtus" },
-        { "value": "Electric sunroof", "value_citation": "https://www.cardekho.com/volkswagen/virtus" },
-        { "value": "Wireless Android Auto & Apple CarPlay", "value_citation": "https://www.cardekho.com/volkswagen/virtus" },
-        { "value": "Ambient lighting", "value_citation": "https://www.cardekho.com/volkswagen/virtus" },
-        { "value": "GT sport badging", "value_citation": "https://www.cardekho.com/volkswagen/virtus" }
+        {
+          "value": "10.1-inch touchscreen infotainment",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        },
+        {
+          "value": "8-inch digital driver's display",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        },
+        {
+          "value": "Ventilated front seats",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        },
+        {
+          "value": "Electric sunroof",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        },
+        {
+          "value": "Wireless Android Auto & Apple CarPlay",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        },
+        {
+          "value": "Ambient lighting",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        },
+        {
+          "value": "GT sport badging",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        }
       ],
       "safety_features": [
-        { "value": "6 airbags", "value_citation": "https://www.cardekho.com/volkswagen/virtus" },
-        { "value": "ABS with EBD", "value_citation": "https://www.cardekho.com/volkswagen/virtus" },
-        { "value": "ESC", "value_citation": "https://www.cardekho.com/volkswagen/virtus" },
-        { "value": "Rear parking camera", "value_citation": "https://www.cardekho.com/volkswagen/virtus" },
-        { "value": "Hill hold control", "value_citation": "https://www.cardekho.com/volkswagen/virtus" },
-        { "value": "TPMS", "value_citation": "https://www.cardekho.com/volkswagen/virtus" }
+        {
+          "value": "6 airbags",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        },
+        {
+          "value": "ABS with EBD",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        },
+        {
+          "value": "Rear parking camera",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        },
+        {
+          "value": "Hill hold control",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Volkswagen/Virtus/12093/1770888507498/front-left-side-47.jpg", "value_citation": "https://www.cardekho.com/volkswagen/virtus" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Volkswagen/Virtus/12093/1770888507498/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/volkswagen/virtus"
+        }
       ],
       "availability_status": "on_sale",
       "availability_status_citation": "https://www.cardekho.com/volkswagen/virtus",
@@ -397,21 +610,54 @@
       "height_mm": 1612,
       "height_mm_citation": "https://www.cardekho.com/volkswagen/taigun",
       "key_features": [
-        { "value": "10.1-inch touchscreen infotainment", "value_citation": "https://www.cardekho.com/volkswagen/taigun" },
-        { "value": "8-inch digital display", "value_citation": "https://www.cardekho.com/volkswagen/taigun" },
-        { "value": "Wireless Android Auto & Apple CarPlay", "value_citation": "https://www.cardekho.com/volkswagen/taigun" },
-        { "value": "Automatic climate control", "value_citation": "https://www.cardekho.com/volkswagen/taigun" },
-        { "value": "Cruise control", "value_citation": "https://www.cardekho.com/volkswagen/taigun" }
+        {
+          "value": "10.1-inch touchscreen infotainment",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        },
+        {
+          "value": "8-inch digital display",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        },
+        {
+          "value": "Wireless Android Auto & Apple CarPlay",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        },
+        {
+          "value": "Automatic climate control",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        },
+        {
+          "value": "Cruise control",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        }
       ],
       "safety_features": [
-        { "value": "6 airbags", "value_citation": "https://www.cardekho.com/volkswagen/taigun" },
-        { "value": "ABS with EBD", "value_citation": "https://www.cardekho.com/volkswagen/taigun" },
-        { "value": "ESC", "value_citation": "https://www.cardekho.com/volkswagen/taigun" },
-        { "value": "Rear parking sensors", "value_citation": "https://www.cardekho.com/volkswagen/taigun" },
-        { "value": "5-star Global NCAP", "value_citation": "https://www.cardekho.com/volkswagen/taigun" }
+        {
+          "value": "6 airbags",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        },
+        {
+          "value": "ABS with EBD",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        },
+        {
+          "value": "Rear parking sensors",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        },
+        {
+          "value": "5-star Global NCAP",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Volkswagen/Taigun/12659/1770889095844/front-left-side-47.jpg", "value_citation": "https://www.cardekho.com/volkswagen/taigun" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Volkswagen/Taigun/12659/1770889095844/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        }
       ],
       "availability_status": "on_sale",
       "availability_status_citation": "https://www.cardekho.com/volkswagen/taigun",
@@ -456,21 +702,54 @@
       "height_mm": 1612,
       "height_mm_citation": "https://www.cardekho.com/volkswagen/taigun",
       "key_features": [
-        { "value": "10.1-inch touchscreen infotainment", "value_citation": "https://www.cardekho.com/volkswagen/taigun" },
-        { "value": "8-inch digital display", "value_citation": "https://www.cardekho.com/volkswagen/taigun" },
-        { "value": "Wireless Android Auto & Apple CarPlay", "value_citation": "https://www.cardekho.com/volkswagen/taigun" },
-        { "value": "Automatic climate control", "value_citation": "https://www.cardekho.com/volkswagen/taigun" },
-        { "value": "Cruise control", "value_citation": "https://www.cardekho.com/volkswagen/taigun" }
+        {
+          "value": "10.1-inch touchscreen infotainment",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        },
+        {
+          "value": "8-inch digital display",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        },
+        {
+          "value": "Wireless Android Auto & Apple CarPlay",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        },
+        {
+          "value": "Automatic climate control",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        },
+        {
+          "value": "Cruise control",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        }
       ],
       "safety_features": [
-        { "value": "6 airbags", "value_citation": "https://www.cardekho.com/volkswagen/taigun" },
-        { "value": "ABS with EBD", "value_citation": "https://www.cardekho.com/volkswagen/taigun" },
-        { "value": "ESC", "value_citation": "https://www.cardekho.com/volkswagen/taigun" },
-        { "value": "Rear parking sensors", "value_citation": "https://www.cardekho.com/volkswagen/taigun" },
-        { "value": "5-star Global NCAP", "value_citation": "https://www.cardekho.com/volkswagen/taigun" }
+        {
+          "value": "6 airbags",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        },
+        {
+          "value": "ABS with EBD",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        },
+        {
+          "value": "Rear parking sensors",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        },
+        {
+          "value": "5-star Global NCAP",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Volkswagen/Taigun/12659/1770889095844/front-left-side-47.jpg", "value_citation": "https://www.cardekho.com/volkswagen/taigun" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Volkswagen/Taigun/12659/1770889095844/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        }
       ],
       "availability_status": "on_sale",
       "availability_status_citation": "https://www.cardekho.com/volkswagen/taigun",
@@ -515,21 +794,54 @@
       "height_mm": 1612,
       "height_mm_citation": "https://www.cardekho.com/volkswagen/taigun",
       "key_features": [
-        { "value": "10.1-inch touchscreen infotainment", "value_citation": "https://www.cardekho.com/volkswagen/taigun" },
-        { "value": "Powered ventilated front seats", "value_citation": "https://www.cardekho.com/volkswagen/taigun" },
-        { "value": "Single-pane sunroof", "value_citation": "https://www.cardekho.com/volkswagen/taigun" },
-        { "value": "Wireless Android Auto & Apple CarPlay", "value_citation": "https://www.cardekho.com/volkswagen/taigun" },
-        { "value": "Keyless entry", "value_citation": "https://www.cardekho.com/volkswagen/taigun" }
+        {
+          "value": "10.1-inch touchscreen infotainment",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        },
+        {
+          "value": "Powered ventilated front seats",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        },
+        {
+          "value": "Single-pane sunroof",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        },
+        {
+          "value": "Wireless Android Auto & Apple CarPlay",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        },
+        {
+          "value": "Keyless entry",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        }
       ],
       "safety_features": [
-        { "value": "6 airbags", "value_citation": "https://www.cardekho.com/volkswagen/taigun" },
-        { "value": "ABS with EBD", "value_citation": "https://www.cardekho.com/volkswagen/taigun" },
-        { "value": "ESC", "value_citation": "https://www.cardekho.com/volkswagen/taigun" },
-        { "value": "Rear parking camera", "value_citation": "https://www.cardekho.com/volkswagen/taigun" },
-        { "value": "5-star Global NCAP", "value_citation": "https://www.cardekho.com/volkswagen/taigun" }
+        {
+          "value": "6 airbags",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        },
+        {
+          "value": "ABS with EBD",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        },
+        {
+          "value": "Rear parking camera",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        },
+        {
+          "value": "5-star Global NCAP",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Volkswagen/Taigun/12659/1770889095844/front-left-side-47.jpg", "value_citation": "https://www.cardekho.com/volkswagen/taigun" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Volkswagen/Taigun/12659/1770889095844/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        }
       ],
       "availability_status": "on_sale",
       "availability_status_citation": "https://www.cardekho.com/volkswagen/taigun",
@@ -574,21 +886,54 @@
       "height_mm": 1612,
       "height_mm_citation": "https://www.cardekho.com/volkswagen/taigun",
       "key_features": [
-        { "value": "10.1-inch touchscreen infotainment", "value_citation": "https://www.cardekho.com/volkswagen/taigun" },
-        { "value": "Powered ventilated front seats", "value_citation": "https://www.cardekho.com/volkswagen/taigun" },
-        { "value": "Single-pane sunroof", "value_citation": "https://www.cardekho.com/volkswagen/taigun" },
-        { "value": "Wireless Android Auto & Apple CarPlay", "value_citation": "https://www.cardekho.com/volkswagen/taigun" },
-        { "value": "Keyless entry with push-button start", "value_citation": "https://www.cardekho.com/volkswagen/taigun" }
+        {
+          "value": "10.1-inch touchscreen infotainment",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        },
+        {
+          "value": "Powered ventilated front seats",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        },
+        {
+          "value": "Single-pane sunroof",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        },
+        {
+          "value": "Wireless Android Auto & Apple CarPlay",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        },
+        {
+          "value": "Keyless entry with push-button start",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        }
       ],
       "safety_features": [
-        { "value": "6 airbags", "value_citation": "https://www.cardekho.com/volkswagen/taigun" },
-        { "value": "ABS with EBD", "value_citation": "https://www.cardekho.com/volkswagen/taigun" },
-        { "value": "ESC", "value_citation": "https://www.cardekho.com/volkswagen/taigun" },
-        { "value": "Rear parking camera", "value_citation": "https://www.cardekho.com/volkswagen/taigun" },
-        { "value": "5-star Global NCAP", "value_citation": "https://www.cardekho.com/volkswagen/taigun" }
+        {
+          "value": "6 airbags",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        },
+        {
+          "value": "ABS with EBD",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        },
+        {
+          "value": "Rear parking camera",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        },
+        {
+          "value": "5-star Global NCAP",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Volkswagen/Taigun/12659/1770889095844/front-left-side-47.jpg", "value_citation": "https://www.cardekho.com/volkswagen/taigun" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Volkswagen/Taigun/12659/1770889095844/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        }
       ],
       "availability_status": "on_sale",
       "availability_status_citation": "https://www.cardekho.com/volkswagen/taigun",
@@ -633,23 +978,62 @@
       "height_mm": 1612,
       "height_mm_citation": "https://www.cardekho.com/volkswagen/taigun",
       "key_features": [
-        { "value": "10.1-inch touchscreen infotainment", "value_citation": "https://www.cardekho.com/volkswagen/taigun" },
-        { "value": "Powered ventilated front seats", "value_citation": "https://www.cardekho.com/volkswagen/taigun" },
-        { "value": "Single-pane sunroof", "value_citation": "https://www.cardekho.com/volkswagen/taigun" },
-        { "value": "Wireless Android Auto & Apple CarPlay", "value_citation": "https://www.cardekho.com/volkswagen/taigun" },
-        { "value": "Alloy wheels", "value_citation": "https://www.cardekho.com/volkswagen/taigun" },
-        { "value": "Ambient lighting", "value_citation": "https://www.cardekho.com/volkswagen/taigun" }
+        {
+          "value": "10.1-inch touchscreen infotainment",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        },
+        {
+          "value": "Powered ventilated front seats",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        },
+        {
+          "value": "Single-pane sunroof",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        },
+        {
+          "value": "Wireless Android Auto & Apple CarPlay",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        },
+        {
+          "value": "Alloy wheels",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        },
+        {
+          "value": "Ambient lighting",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        }
       ],
       "safety_features": [
-        { "value": "6 airbags", "value_citation": "https://www.cardekho.com/volkswagen/taigun" },
-        { "value": "ABS with EBD", "value_citation": "https://www.cardekho.com/volkswagen/taigun" },
-        { "value": "ESC", "value_citation": "https://www.cardekho.com/volkswagen/taigun" },
-        { "value": "Rear parking camera", "value_citation": "https://www.cardekho.com/volkswagen/taigun" },
-        { "value": "Hill hold control", "value_citation": "https://www.cardekho.com/volkswagen/taigun" },
-        { "value": "5-star Global NCAP", "value_citation": "https://www.cardekho.com/volkswagen/taigun" }
+        {
+          "value": "6 airbags",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        },
+        {
+          "value": "ABS with EBD",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        },
+        {
+          "value": "Rear parking camera",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        },
+        {
+          "value": "Hill hold control",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        },
+        {
+          "value": "5-star Global NCAP",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Volkswagen/Taigun/12659/1770889095844/front-left-side-47.jpg", "value_citation": "https://www.cardekho.com/volkswagen/taigun" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Volkswagen/Taigun/12659/1770889095844/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        }
       ],
       "availability_status": "on_sale",
       "availability_status_citation": "https://www.cardekho.com/volkswagen/taigun",
@@ -694,23 +1078,62 @@
       "height_mm": 1612,
       "height_mm_citation": "https://www.cardekho.com/volkswagen/taigun",
       "key_features": [
-        { "value": "10.1-inch touchscreen infotainment", "value_citation": "https://www.cardekho.com/volkswagen/taigun" },
-        { "value": "Powered ventilated front seats", "value_citation": "https://www.cardekho.com/volkswagen/taigun" },
-        { "value": "Single-pane sunroof", "value_citation": "https://www.cardekho.com/volkswagen/taigun" },
-        { "value": "Wireless Android Auto & Apple CarPlay", "value_citation": "https://www.cardekho.com/volkswagen/taigun" },
-        { "value": "GT sport badging", "value_citation": "https://www.cardekho.com/volkswagen/taigun" },
-        { "value": "Ambient lighting", "value_citation": "https://www.cardekho.com/volkswagen/taigun" }
+        {
+          "value": "10.1-inch touchscreen infotainment",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        },
+        {
+          "value": "Powered ventilated front seats",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        },
+        {
+          "value": "Single-pane sunroof",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        },
+        {
+          "value": "Wireless Android Auto & Apple CarPlay",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        },
+        {
+          "value": "GT sport badging",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        },
+        {
+          "value": "Ambient lighting",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        }
       ],
       "safety_features": [
-        { "value": "6 airbags", "value_citation": "https://www.cardekho.com/volkswagen/taigun" },
-        { "value": "ABS with EBD", "value_citation": "https://www.cardekho.com/volkswagen/taigun" },
-        { "value": "ESC", "value_citation": "https://www.cardekho.com/volkswagen/taigun" },
-        { "value": "Rear parking camera", "value_citation": "https://www.cardekho.com/volkswagen/taigun" },
-        { "value": "Hill hold control", "value_citation": "https://www.cardekho.com/volkswagen/taigun" },
-        { "value": "5-star Global NCAP", "value_citation": "https://www.cardekho.com/volkswagen/taigun" }
+        {
+          "value": "6 airbags",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        },
+        {
+          "value": "ABS with EBD",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        },
+        {
+          "value": "Rear parking camera",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        },
+        {
+          "value": "Hill hold control",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        },
+        {
+          "value": "5-star Global NCAP",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Volkswagen/Taigun/12659/1770889095844/front-left-side-47.jpg", "value_citation": "https://www.cardekho.com/volkswagen/taigun" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Volkswagen/Taigun/12659/1770889095844/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/volkswagen/taigun"
+        }
       ],
       "availability_status": "on_sale",
       "availability_status_citation": "https://www.cardekho.com/volkswagen/taigun",
@@ -755,23 +1178,62 @@
       "height_mm": 1674,
       "height_mm_citation": "https://www.cardekho.com/volkswagen/tiguan",
       "key_features": [
-        { "value": "10.1-inch touchscreen infotainment", "value_citation": "https://www.cardekho.com/volkswagen/tiguan" },
-        { "value": "Digital cockpit display", "value_citation": "https://www.cardekho.com/volkswagen/tiguan" },
-        { "value": "Panoramic sunroof", "value_citation": "https://www.cardekho.com/volkswagen/tiguan" },
-        { "value": "Powered front seats", "value_citation": "https://www.cardekho.com/volkswagen/tiguan" },
-        { "value": "R-Line exterior styling", "value_citation": "https://www.cardekho.com/volkswagen/tiguan" },
-        { "value": "Ambient lighting", "value_citation": "https://www.cardekho.com/volkswagen/tiguan" }
+        {
+          "value": "10.1-inch touchscreen infotainment",
+          "value_citation": "https://www.cardekho.com/volkswagen/tiguan"
+        },
+        {
+          "value": "Digital cockpit display",
+          "value_citation": "https://www.cardekho.com/volkswagen/tiguan"
+        },
+        {
+          "value": "Panoramic sunroof",
+          "value_citation": "https://www.cardekho.com/volkswagen/tiguan"
+        },
+        {
+          "value": "Powered front seats",
+          "value_citation": "https://www.cardekho.com/volkswagen/tiguan"
+        },
+        {
+          "value": "R-Line exterior styling",
+          "value_citation": "https://www.cardekho.com/volkswagen/tiguan"
+        },
+        {
+          "value": "Ambient lighting",
+          "value_citation": "https://www.cardekho.com/volkswagen/tiguan"
+        }
       ],
       "safety_features": [
-        { "value": "6 airbags", "value_citation": "https://www.cardekho.com/volkswagen/tiguan" },
-        { "value": "ABS with EBD", "value_citation": "https://www.cardekho.com/volkswagen/tiguan" },
-        { "value": "Lane assist", "value_citation": "https://www.cardekho.com/volkswagen/tiguan" },
-        { "value": "Adaptive cruise control", "value_citation": "https://www.cardekho.com/volkswagen/tiguan" },
-        { "value": "360-degree camera", "value_citation": "https://www.cardekho.com/volkswagen/tiguan" },
-        { "value": "ESC", "value_citation": "https://www.cardekho.com/volkswagen/tiguan" }
+        {
+          "value": "6 airbags",
+          "value_citation": "https://www.cardekho.com/volkswagen/tiguan"
+        },
+        {
+          "value": "ABS with EBD",
+          "value_citation": "https://www.cardekho.com/volkswagen/tiguan"
+        },
+        {
+          "value": "Lane assist",
+          "value_citation": "https://www.cardekho.com/volkswagen/tiguan"
+        },
+        {
+          "value": "Adaptive cruise control",
+          "value_citation": "https://www.cardekho.com/volkswagen/tiguan"
+        },
+        {
+          "value": "360-degree camera",
+          "value_citation": "https://www.cardekho.com/volkswagen/tiguan"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/volkswagen/tiguan"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Volkswagen/Tiguan/9848/1727960498498/front-left-side-47.jpg", "value_citation": "https://www.cardekho.com/volkswagen/tiguan" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Volkswagen/Tiguan/9848/1727960498498/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/volkswagen/tiguan"
+        }
       ],
       "availability_status": "on_sale",
       "availability_status_citation": "https://www.cardekho.com/volkswagen/tiguan",
@@ -786,9 +1248,9 @@
       "variant_name": "Golf GTI 2.0 TSI DSG",
       "variant_name_citation": "https://www.cardekho.com/volkswagen/golf-gti",
       "ex_showroom_price": {
-        "min": 5091000,
+        "min": 5090900,
         "min_citation": "https://www.cardekho.com/volkswagen/golf-gti",
-        "max": 5091000,
+        "max": 5090900,
         "max_citation": "https://www.cardekho.com/volkswagen/golf-gti"
       },
       "fuel_type": "Petrol",
@@ -816,23 +1278,62 @@
       "height_mm": 1456,
       "height_mm_citation": "https://www.cardekho.com/volkswagen/golf-gti",
       "key_features": [
-        { "value": "10.1-inch touchscreen infotainment", "value_citation": "https://www.cardekho.com/volkswagen/golf-gti" },
-        { "value": "Digital cockpit Pro", "value_citation": "https://www.cardekho.com/volkswagen/golf-gti" },
-        { "value": "Red GTI accents & badges", "value_citation": "https://www.cardekho.com/volkswagen/golf-gti" },
-        { "value": "18-inch alloy wheels", "value_citation": "https://www.cardekho.com/volkswagen/golf-gti" },
-        { "value": "Adaptive cruise control", "value_citation": "https://www.cardekho.com/volkswagen/golf-gti" },
-        { "value": "LED matrix headlamps", "value_citation": "https://www.cardekho.com/volkswagen/golf-gti" }
+        {
+          "value": "10.1-inch touchscreen infotainment",
+          "value_citation": "https://www.cardekho.com/volkswagen/golf-gti"
+        },
+        {
+          "value": "Digital cockpit Pro",
+          "value_citation": "https://www.cardekho.com/volkswagen/golf-gti"
+        },
+        {
+          "value": "Red GTI accents & badges",
+          "value_citation": "https://www.cardekho.com/volkswagen/golf-gti"
+        },
+        {
+          "value": "18-inch alloy wheels",
+          "value_citation": "https://www.cardekho.com/volkswagen/golf-gti"
+        },
+        {
+          "value": "Adaptive cruise control",
+          "value_citation": "https://www.cardekho.com/volkswagen/golf-gti"
+        },
+        {
+          "value": "LED matrix headlamps",
+          "value_citation": "https://www.cardekho.com/volkswagen/golf-gti"
+        }
       ],
       "safety_features": [
-        { "value": "7 airbags", "value_citation": "https://www.cardekho.com/volkswagen/golf-gti" },
-        { "value": "ABS with EBD", "value_citation": "https://www.cardekho.com/volkswagen/golf-gti" },
-        { "value": "ESC", "value_citation": "https://www.cardekho.com/volkswagen/golf-gti" },
-        { "value": "Front Assist with autonomous braking", "value_citation": "https://www.cardekho.com/volkswagen/golf-gti" },
-        { "value": "Lane Assist", "value_citation": "https://www.cardekho.com/volkswagen/golf-gti" },
-        { "value": "TPMS", "value_citation": "https://www.cardekho.com/volkswagen/golf-gti" }
+        {
+          "value": "7 airbags",
+          "value_citation": "https://www.cardekho.com/volkswagen/golf-gti"
+        },
+        {
+          "value": "ABS with EBD",
+          "value_citation": "https://www.cardekho.com/volkswagen/golf-gti"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/volkswagen/golf-gti"
+        },
+        {
+          "value": "Front Assist with autonomous braking",
+          "value_citation": "https://www.cardekho.com/volkswagen/golf-gti"
+        },
+        {
+          "value": "Lane Assist",
+          "value_citation": "https://www.cardekho.com/volkswagen/golf-gti"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/volkswagen/golf-gti"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Volkswagen/Golf-GTI/9524/1727961498498/front-left-side-47.jpg", "value_citation": "https://www.cardekho.com/volkswagen/golf-gti" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Volkswagen/Golf-GTI/9524/1727961498498/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/volkswagen/golf-gti"
+        }
       ],
       "availability_status": "on_sale",
       "availability_status_citation": "https://www.cardekho.com/volkswagen/golf-gti",
@@ -877,25 +1378,70 @@
       "height_mm": 1682,
       "height_mm_citation": "https://www.cardekho.com/volkswagen/tayron",
       "key_features": [
-        { "value": "15-inch infotainment touchscreen", "value_citation": "https://www.cardekho.com/volkswagen/tayron" },
-        { "value": "Digital cockpit Pro", "value_citation": "https://www.cardekho.com/volkswagen/tayron" },
-        { "value": "Panoramic sunroof", "value_citation": "https://www.cardekho.com/volkswagen/tayron" },
-        { "value": "R-Line exterior styling", "value_citation": "https://www.cardekho.com/volkswagen/tayron" },
-        { "value": "4MOTION all-wheel drive", "value_citation": "https://www.cardekho.com/volkswagen/tayron" },
-        { "value": "Powered front seats with memory", "value_citation": "https://www.cardekho.com/volkswagen/tayron" },
-        { "value": "Matrix LED headlamps", "value_citation": "https://www.cardekho.com/volkswagen/tayron" }
+        {
+          "value": "15-inch infotainment touchscreen",
+          "value_citation": "https://www.cardekho.com/volkswagen/tayron"
+        },
+        {
+          "value": "Digital cockpit Pro",
+          "value_citation": "https://www.cardekho.com/volkswagen/tayron"
+        },
+        {
+          "value": "Panoramic sunroof",
+          "value_citation": "https://www.cardekho.com/volkswagen/tayron"
+        },
+        {
+          "value": "R-Line exterior styling",
+          "value_citation": "https://www.cardekho.com/volkswagen/tayron"
+        },
+        {
+          "value": "4MOTION all-wheel drive",
+          "value_citation": "https://www.cardekho.com/volkswagen/tayron"
+        },
+        {
+          "value": "Powered front seats with memory",
+          "value_citation": "https://www.cardekho.com/volkswagen/tayron"
+        },
+        {
+          "value": "Matrix LED headlamps",
+          "value_citation": "https://www.cardekho.com/volkswagen/tayron"
+        }
       ],
       "safety_features": [
-        { "value": "8 airbags", "value_citation": "https://www.cardekho.com/volkswagen/tayron" },
-        { "value": "ABS with EBD", "value_citation": "https://www.cardekho.com/volkswagen/tayron" },
-        { "value": "ESC", "value_citation": "https://www.cardekho.com/volkswagen/tayron" },
-        { "value": "Lane Assist", "value_citation": "https://www.cardekho.com/volkswagen/tayron" },
-        { "value": "Adaptive cruise control", "value_citation": "https://www.cardekho.com/volkswagen/tayron" },
-        { "value": "360-degree camera", "value_citation": "https://www.cardekho.com/volkswagen/tayron" },
-        { "value": "TPMS", "value_citation": "https://www.cardekho.com/volkswagen/tayron" }
+        {
+          "value": "8 airbags",
+          "value_citation": "https://www.cardekho.com/volkswagen/tayron"
+        },
+        {
+          "value": "ABS with EBD",
+          "value_citation": "https://www.cardekho.com/volkswagen/tayron"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/volkswagen/tayron"
+        },
+        {
+          "value": "Lane Assist",
+          "value_citation": "https://www.cardekho.com/volkswagen/tayron"
+        },
+        {
+          "value": "Adaptive cruise control",
+          "value_citation": "https://www.cardekho.com/volkswagen/tayron"
+        },
+        {
+          "value": "360-degree camera",
+          "value_citation": "https://www.cardekho.com/volkswagen/tayron"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/volkswagen/tayron"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Volkswagen/Tayron/front-left-side-47.jpg", "value_citation": "https://www.cardekho.com/volkswagen/tayron" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Volkswagen/Tayron/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/volkswagen/tayron"
+        }
       ],
       "availability_status": "on_sale",
       "availability_status_citation": "https://www.cardekho.com/volkswagen/tayron",

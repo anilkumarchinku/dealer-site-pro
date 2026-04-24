@@ -4,14 +4,14 @@
       "make": "Ferrari",
       "model": "Roma",
       "variant_name": "V8",
-      "ex_showroom_price": 37600000,
+      "ex_showroom_price": 37600001,
       "fuel_type": "Petrol",
       "transmission": "Automatic (8-Speed DCT)",
       "drivetrain": "RWD",
       "engine_displacement_cc": 3855,
       "power_bhp": 611,
       "torque_nm": 760,
-      "mileage_kmpl": 10.0,
+      "mileage_kmpl": 10,
       "seating_capacity": 2,
       "boot_space_l": 272,
       "ground_clearance_mm": 125,
@@ -19,21 +19,43 @@
       "width_mm": 1974,
       "height_mm": 1301,
       "key_features": [
-        { "value": "3.9L twin-turbo V8 engine" },
-        { "value": "8-speed DCT transmission" },
-        { "value": "Manettino driving mode selector" },
-        { "value": "10.25-inch touchscreen infotainment" },
-        { "value": "Adaptive suspension with multiple modes" }
+        {
+          "value": "3.9L twin-turbo V8 engine"
+        },
+        {
+          "value": "8-speed DCT transmission"
+        },
+        {
+          "value": "Manettino driving mode selector"
+        },
+        {
+          "value": "10.25-inch touchscreen infotainment"
+        },
+        {
+          "value": "Adaptive suspension with multiple modes"
+        }
       ],
       "safety_features": [
-        { "value": "6 Airbags" },
-        { "value": "ABS with EBD" },
-        { "value": "Electronic Stability Control" },
-        { "value": "Traction control" },
-        { "value": "Cruise control" }
+        {
+          "value": "6 Airbags"
+        },
+        {
+          "value": "ABS with EBD"
+        },
+        {
+          "value": "Electronic Stability Control"
+        },
+        {
+          "value": "Traction control"
+        },
+        {
+          "value": "Cruise control"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Ferrari/Roma/9538/1769678289085/front-left-side-47.jpg" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Ferrari/Roma/9538/1769678289085/front-left-side-47.jpg"
+        }
       ],
       "availability_status": "on_sale",
       "launch_year": 2021
@@ -49,7 +71,7 @@
       "engine_displacement_cc": 2992,
       "power_bhp": 818,
       "torque_nm": 740,
-      "mileage_kmpl": 18.0,
+      "mileage_kmpl": 18,
       "seating_capacity": 2,
       "boot_space_l": 92,
       "ground_clearance_mm": 110,
@@ -57,21 +79,43 @@
       "width_mm": 1958,
       "height_mm": 1187,
       "key_features": [
-        { "value": "3.0L twin-turbo V6 with electric motor (PHEV)" },
-        { "value": "Assetto Fiorano track-focused package" },
-        { "value": "Carbon-ceramic brakes" },
-        { "value": "Multimatic shock absorbers" },
-        { "value": "8-speed DCT transmission" }
+        {
+          "value": "3.0L twin-turbo V6 with electric motor (PHEV)"
+        },
+        {
+          "value": "Assetto Fiorano track-focused package"
+        },
+        {
+          "value": "Carbon-ceramic brakes"
+        },
+        {
+          "value": "Multimatic shock absorbers"
+        },
+        {
+          "value": "8-speed DCT transmission"
+        }
       ],
       "safety_features": [
-        { "value": "6 Airbags" },
-        { "value": "ABS with EBD" },
-        { "value": "Electronic Stability Control" },
-        { "value": "Side Slip Control" },
-        { "value": "Traction control" }
+        {
+          "value": "6 Airbags"
+        },
+        {
+          "value": "ABS with EBD"
+        },
+        {
+          "value": "Electronic Stability Control"
+        },
+        {
+          "value": "Side Slip Control"
+        },
+        {
+          "value": "Traction control"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Ferrari/296-GTB/9530/1769678172978/front-left-side-47.jpg" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Ferrari/296-GTB/9530/1769678172978/front-left-side-47.jpg"
+        }
       ],
       "availability_status": "on_sale",
       "launch_year": 2022
@@ -80,14 +124,14 @@
       "make": "Ferrari",
       "model": "Purosangue",
       "variant_name": "V12",
-      "ex_showroom_price": 70000000,
+      "ex_showroom_price": 50000000,
       "fuel_type": "Petrol",
       "transmission": "Automatic (8-Speed DCT)",
       "drivetrain": "AWD",
       "engine_displacement_cc": 6496,
       "power_bhp": 715,
       "torque_nm": 716,
-      "mileage_kmpl": 8.0,
+      "mileage_kmpl": 8,
       "seating_capacity": 4,
       "boot_space_l": 473,
       "ground_clearance_mm": 185,
@@ -95,21 +139,43 @@
       "width_mm": 2028,
       "height_mm": 1589,
       "key_features": [
-        { "value": "6.5L naturally aspirated V12 engine" },
-        { "value": "All-wheel drive" },
-        { "value": "Rear-hinged suicide doors" },
-        { "value": "10.25-inch driver display + passenger display" },
-        { "value": "Adaptive suspension with dual-clutch dampers" }
+        {
+          "value": "6.5L naturally aspirated V12 engine"
+        },
+        {
+          "value": "All-wheel drive"
+        },
+        {
+          "value": "Rear-hinged suicide doors"
+        },
+        {
+          "value": "10.25-inch driver display + passenger display"
+        },
+        {
+          "value": "Adaptive suspension with dual-clutch dampers"
+        }
       ],
       "safety_features": [
-        { "value": "6 Airbags" },
-        { "value": "ABS with EBD" },
-        { "value": "Electronic Stability Control" },
-        { "value": "Side Slip Control" },
-        { "value": "Lane Departure Warning" }
+        {
+          "value": "6 Airbags"
+        },
+        {
+          "value": "ABS with EBD"
+        },
+        {
+          "value": "Electronic Stability Control"
+        },
+        {
+          "value": "Side Slip Control"
+        },
+        {
+          "value": "Lane Departure Warning"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Ferrari/Purosangue/10485/1769678437601/front-left-side-47.jpg" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Ferrari/Purosangue/10485/1769678437601/front-left-side-47.jpg"
+        }
       ],
       "availability_status": "on_sale",
       "launch_year": 2023
@@ -118,7 +184,7 @@
       "make": "Ferrari",
       "model": "F8 Tributo",
       "variant_name": "V8 Turbo",
-      "ex_showroom_price": 40200000,
+      "ex_showroom_price": 40200001,
       "fuel_type": "Petrol",
       "transmission": "Automatic (7-Speed DCT)",
       "drivetrain": "RWD",
@@ -133,21 +199,43 @@
       "width_mm": 1979,
       "height_mm": 1206,
       "key_features": [
-        { "value": "3.9L twin-turbo V8 engine (most powerful V8 Ferrari)" },
-        { "value": "7-speed DCT transmission" },
-        { "value": "Manettino driving mode selector" },
-        { "value": "Ferrari Dynamic Enhancer+" },
-        { "value": "Passive suspension with magnetorheological dampers" }
+        {
+          "value": "3.9L twin-turbo V8 engine (most powerful V8 Ferrari)"
+        },
+        {
+          "value": "7-speed DCT transmission"
+        },
+        {
+          "value": "Manettino driving mode selector"
+        },
+        {
+          "value": "Ferrari Dynamic Enhancer+"
+        },
+        {
+          "value": "Passive suspension with magnetorheological dampers"
+        }
       ],
       "safety_features": [
-        { "value": "4 Airbags" },
-        { "value": "ABS with EBD" },
-        { "value": "Electronic Stability Control" },
-        { "value": "Side Slip Control 6.0" },
-        { "value": "Traction control" }
+        {
+          "value": "4 Airbags"
+        },
+        {
+          "value": "ABS with EBD"
+        },
+        {
+          "value": "Electronic Stability Control"
+        },
+        {
+          "value": "Side Slip Control 6.0"
+        },
+        {
+          "value": "Traction control"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Ferrari/F8-Tributo/9525/1769678001068/front-left-side-47.jpg" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Ferrari/F8-Tributo/9525/1769678001068/front-left-side-47.jpg"
+        }
       ],
       "availability_status": "on_sale",
       "launch_year": 2020
@@ -156,14 +244,14 @@
       "make": "Ferrari",
       "model": "SF90 Stradale",
       "variant_name": "Assetto Fiorano",
-      "ex_showroom_price": 75000000,
+      "ex_showroom_price": 75000001,
       "fuel_type": "Petrol (PHEV)",
       "transmission": "Automatic (8-Speed DCT)",
       "drivetrain": "AWD",
       "engine_displacement_cc": 3990,
       "power_bhp": 769,
       "torque_nm": 800,
-      "mileage_kmpl": 18.0,
+      "mileage_kmpl": 18,
       "seating_capacity": 2,
       "boot_space_l": 92,
       "ground_clearance_mm": 105,
@@ -171,21 +259,43 @@
       "width_mm": 1972,
       "height_mm": 1186,
       "key_features": [
-        { "value": "4.0L twin-turbo V8 + three electric motors (PHEV)" },
-        { "value": "All-wheel drive with electric front axle" },
-        { "value": "Assetto Fiorano track package" },
-        { "value": "8-speed DCT transmission" },
-        { "value": "Retractable hard-top (Spider only)" }
+        {
+          "value": "4.0L twin-turbo V8 + three electric motors (PHEV)"
+        },
+        {
+          "value": "All-wheel drive with electric front axle"
+        },
+        {
+          "value": "Assetto Fiorano track package"
+        },
+        {
+          "value": "8-speed DCT transmission"
+        },
+        {
+          "value": "Retractable hard-top (Spider only)"
+        }
       ],
       "safety_features": [
-        { "value": "6 Airbags" },
-        { "value": "ABS with EBD" },
-        { "value": "Electronic Stability Control" },
-        { "value": "Side Slip Control" },
-        { "value": "TPMS" }
+        {
+          "value": "6 Airbags"
+        },
+        {
+          "value": "ABS with EBD"
+        },
+        {
+          "value": "Electronic Stability Control"
+        },
+        {
+          "value": "Side Slip Control"
+        },
+        {
+          "value": "TPMS"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Ferrari/SF90-Stradale/9532/1769678528743/front-left-side-47.jpg" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Ferrari/SF90-Stradale/9532/1769678528743/front-left-side-47.jpg"
+        }
       ],
       "availability_status": "on_sale",
       "launch_year": 2020
@@ -201,7 +311,7 @@
       "engine_displacement_cc": 3902,
       "power_bhp": 631,
       "torque_nm": 760,
-      "mileage_kmpl": 9.0,
+      "mileage_kmpl": 9,
       "seating_capacity": 2,
       "boot_space_l": 270,
       "ground_clearance_mm": 120,
@@ -209,21 +319,43 @@
       "width_mm": 1975,
       "height_mm": 1300,
       "key_features": [
-        { "value": "3.9L twin-turbo V8 engine" },
-        { "value": "8-speed DCT transmission" },
-        { "value": "Luxury grand tourer positioning" },
-        { "value": "Advanced infotainment with connectivity" },
-        { "value": "Adaptive suspension system" }
+        {
+          "value": "3.9L twin-turbo V8 engine"
+        },
+        {
+          "value": "8-speed DCT transmission"
+        },
+        {
+          "value": "Luxury grand tourer positioning"
+        },
+        {
+          "value": "Advanced infotainment with connectivity"
+        },
+        {
+          "value": "Adaptive suspension system"
+        }
       ],
       "safety_features": [
-        { "value": "6 Airbags" },
-        { "value": "ABS with EBD" },
-        { "value": "Electronic Stability Control" },
-        { "value": "Traction control" },
-        { "value": "Cruise control" }
+        {
+          "value": "6 Airbags"
+        },
+        {
+          "value": "ABS with EBD"
+        },
+        {
+          "value": "Electronic Stability Control"
+        },
+        {
+          "value": "Traction control"
+        },
+        {
+          "value": "Cruise control"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Ferrari/Amalfi/12977/1769677840498/front-left-side-47.jpg" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Ferrari/Amalfi/12977/1769677840498/front-left-side-47.jpg"
+        }
       ],
       "availability_status": "on_sale",
       "launch_year": 2026
@@ -239,7 +371,7 @@
       "engine_displacement_cc": 3990,
       "power_bhp": 1035,
       "torque_nm": 842,
-      "mileage_kmpl": 12.0,
+      "mileage_kmpl": 12,
       "seating_capacity": 2,
       "boot_space_l": 92,
       "ground_clearance_mm": 100,
@@ -247,21 +379,43 @@
       "width_mm": 1975,
       "height_mm": 1190,
       "key_features": [
-        { "value": "4.0L twin-turbo V8 with hybrid system (1035 bhp)" },
-        { "value": "Plug-in hybrid drivetrain (PHEV)" },
-        { "value": "All-wheel drive" },
-        { "value": "8-speed DCT transmission" },
-        { "value": "New-generation Ferrari HMI cockpit" }
+        {
+          "value": "4.0L twin-turbo V8 with hybrid system (1035 bhp)"
+        },
+        {
+          "value": "Plug-in hybrid drivetrain (PHEV)"
+        },
+        {
+          "value": "All-wheel drive"
+        },
+        {
+          "value": "8-speed DCT transmission"
+        },
+        {
+          "value": "New-generation Ferrari HMI cockpit"
+        }
       ],
       "safety_features": [
-        { "value": "6 Airbags" },
-        { "value": "ABS with EBD" },
-        { "value": "Electronic Stability Control" },
-        { "value": "Side Slip Control" },
-        { "value": "TPMS" }
+        {
+          "value": "6 Airbags"
+        },
+        {
+          "value": "ABS with EBD"
+        },
+        {
+          "value": "Electronic Stability Control"
+        },
+        {
+          "value": "Side Slip Control"
+        },
+        {
+          "value": "TPMS"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Ferrari/849-Testarossa/13218/1769677999345/front-left-side-47.jpg" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Ferrari/849-Testarossa/13218/1769677999345/front-left-side-47.jpg"
+        }
       ],
       "availability_status": "on_sale",
       "launch_year": 2026
@@ -285,21 +439,43 @@
       "width_mm": 1975,
       "height_mm": 1280,
       "key_features": [
-        { "value": "6.5L naturally aspirated V12 engine" },
-        { "value": "8-speed DCT transmission" },
-        { "value": "Rear-wheel drive" },
-        { "value": "Manettino driving mode selector" },
-        { "value": "Advanced Ferrari HMI cockpit" }
+        {
+          "value": "6.5L naturally aspirated V12 engine"
+        },
+        {
+          "value": "8-speed DCT transmission"
+        },
+        {
+          "value": "Rear-wheel drive"
+        },
+        {
+          "value": "Manettino driving mode selector"
+        },
+        {
+          "value": "Advanced Ferrari HMI cockpit"
+        }
       ],
       "safety_features": [
-        { "value": "6 Airbags" },
-        { "value": "ABS with EBD" },
-        { "value": "Electronic Stability Control" },
-        { "value": "Traction control" },
-        { "value": "TPMS" }
+        {
+          "value": "6 Airbags"
+        },
+        {
+          "value": "ABS with EBD"
+        },
+        {
+          "value": "Electronic Stability Control"
+        },
+        {
+          "value": "Traction control"
+        },
+        {
+          "value": "TPMS"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Ferrari/12Cilindri/12977/1769677840498/front-left-side-47.jpg" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Ferrari/12Cilindri/12977/1769677840498/front-left-side-47.jpg"
+        }
       ],
       "availability_status": "upcoming",
       "launch_year": 2028

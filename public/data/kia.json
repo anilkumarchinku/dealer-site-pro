@@ -4,7 +4,7 @@
       "make": "Kia",
       "model": "Carnival",
       "variant_name": "Carnival Limousine Plus",
-      "ex_showroom_price": 5942000,
+      "ex_showroom_price": 5942459,
       "hyderabad_on_road_price": 7621082,
       "fuel_type": "Diesel",
       "transmission": "Automatic",
@@ -188,7 +188,7 @@
       "make": "Kia",
       "model": "Carens",
       "variant_name": "Carens Premium Opt Diesel",
-      "ex_showroom_price": 1277000,
+      "ex_showroom_price": 1285900,
       "hyderabad_on_road_price": 1622000,
       "fuel_type": "Diesel",
       "transmission": "Manual",
@@ -748,7 +748,7 @@
       "make": "Kia",
       "model": "Sonet",
       "variant_name": "Sonet GTX Plus Diesel AT",
-      "ex_showroom_price": 1400000,
+      "ex_showroom_price": 1400475,
       "hyderabad_on_road_price": 1717000,
       "fuel_type": "Diesel",
       "transmission": "Automatic",
@@ -956,7 +956,7 @@
       "make": "Kia",
       "model": "EV6",
       "variant_name": "EV6 AWD",
-      "ex_showroom_price": 6597000,
+      "ex_showroom_price": 6596638,
       "hyderabad_on_road_price": 7200000,
       "fuel_type": "Electric",
       "transmission": "Automatic",
@@ -971,23 +971,62 @@
       "mileage_range_km": 663,
       "battery_capacity_kwh": 84,
       "key_features": [
-        { "value": "Dual 12.3-inch curved displays", "value_citation": "https://www.cardekho.com/kia/ev6/specs" },
-        { "value": "Vehicle-to-Load (V2L)", "value_citation": "https://www.cardekho.com/kia/ev6/specs" },
-        { "value": "350 kW ultra-fast charging", "value_citation": "https://www.cardekho.com/kia/ev6/specs" },
-        { "value": "Panoramic sunroof", "value_citation": "https://www.cardekho.com/kia/ev6/specs" },
-        { "value": "Ventilated front seats", "value_citation": "https://www.cardekho.com/kia/ev6/specs" },
-        { "value": "Level 2 ADAS", "value_citation": "https://www.cardekho.com/kia/ev6/specs" }
+        {
+          "value": "Dual 12.3-inch curved displays",
+          "value_citation": "https://www.cardekho.com/kia/ev6/specs"
+        },
+        {
+          "value": "Vehicle-to-Load (V2L)",
+          "value_citation": "https://www.cardekho.com/kia/ev6/specs"
+        },
+        {
+          "value": "350 kW ultra-fast charging",
+          "value_citation": "https://www.cardekho.com/kia/ev6/specs"
+        },
+        {
+          "value": "Panoramic sunroof",
+          "value_citation": "https://www.cardekho.com/kia/ev6/specs"
+        },
+        {
+          "value": "Ventilated front seats",
+          "value_citation": "https://www.cardekho.com/kia/ev6/specs"
+        },
+        {
+          "value": "Level 2 ADAS",
+          "value_citation": "https://www.cardekho.com/kia/ev6/specs"
+        }
       ],
       "safety_features": [
-        { "value": "8 airbags", "value_citation": "https://www.cardekho.com/kia/ev6/specs" },
-        { "value": "ABS", "value_citation": "https://www.cardekho.com/kia/ev6/specs" },
-        { "value": "ESC", "value_citation": "https://www.cardekho.com/kia/ev6/specs" },
-        { "value": "TPMS", "value_citation": "https://www.cardekho.com/kia/ev6/specs" },
-        { "value": "Blind Spot Collision Avoidance", "value_citation": "https://www.cardekho.com/kia/ev6/specs" },
-        { "value": "360° view camera", "value_citation": "https://www.cardekho.com/kia/ev6/specs" }
+        {
+          "value": "8 airbags",
+          "value_citation": "https://www.cardekho.com/kia/ev6/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/kia/ev6/specs"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/kia/ev6/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/kia/ev6/specs"
+        },
+        {
+          "value": "Blind Spot Collision Avoidance",
+          "value_citation": "https://www.cardekho.com/kia/ev6/specs"
+        },
+        {
+          "value": "360° view camera",
+          "value_citation": "https://www.cardekho.com/kia/ev6/specs"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/EV6/11019/1694602498498/front-left-side-47.jpg?tr=w-230", "value_citation": "https://www.cardekho.com/kia/ev6/specs" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/EV6/11019/1694602498498/front-left-side-47.jpg?tr=w-230",
+          "value_citation": "https://www.cardekho.com/kia/ev6/specs"
+        }
       ],
       "availability_status": "on_sale",
       "source_url": "https://www.cardekho.com/kia/ev6"
@@ -1011,24 +1050,66 @@
       "mileage_range_km": 561,
       "battery_capacity_kwh": 99.8,
       "key_features": [
-        { "value": "Large dual-screen setup", "value_citation": "https://www.cardekho.com/kia/ev9/specs" },
-        { "value": "Massaging seats", "value_citation": "https://www.cardekho.com/kia/ev9/specs" },
-        { "value": "Panoramic sunroof", "value_citation": "https://www.cardekho.com/kia/ev9/specs" },
-        { "value": "Level 2 ADAS", "value_citation": "https://www.cardekho.com/kia/ev9/specs" },
-        { "value": "350 kW DC fast charging", "value_citation": "https://www.cardekho.com/kia/ev9/specs" },
-        { "value": "3-row seating", "value_citation": "https://www.cardekho.com/kia/ev9/specs" }
+        {
+          "value": "Large dual-screen setup",
+          "value_citation": "https://www.cardekho.com/kia/ev9/specs"
+        },
+        {
+          "value": "Massaging seats",
+          "value_citation": "https://www.cardekho.com/kia/ev9/specs"
+        },
+        {
+          "value": "Panoramic sunroof",
+          "value_citation": "https://www.cardekho.com/kia/ev9/specs"
+        },
+        {
+          "value": "Level 2 ADAS",
+          "value_citation": "https://www.cardekho.com/kia/ev9/specs"
+        },
+        {
+          "value": "350 kW DC fast charging",
+          "value_citation": "https://www.cardekho.com/kia/ev9/specs"
+        },
+        {
+          "value": "3-row seating",
+          "value_citation": "https://www.cardekho.com/kia/ev9/specs"
+        }
       ],
       "safety_features": [
-        { "value": "10 airbags", "value_citation": "https://www.cardekho.com/kia/ev9/specs" },
-        { "value": "ABS", "value_citation": "https://www.cardekho.com/kia/ev9/specs" },
-        { "value": "ESC", "value_citation": "https://www.cardekho.com/kia/ev9/specs" },
-        { "value": "TPMS", "value_citation": "https://www.cardekho.com/kia/ev9/specs" },
-        { "value": "Level 2 ADAS", "value_citation": "https://www.cardekho.com/kia/ev9/specs" },
-        { "value": "360° view camera", "value_citation": "https://www.cardekho.com/kia/ev9/specs" },
-        { "value": "Blind Spot Collision Avoidance", "value_citation": "https://www.cardekho.com/kia/ev9/specs" }
+        {
+          "value": "10 airbags",
+          "value_citation": "https://www.cardekho.com/kia/ev9/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/kia/ev9/specs"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/kia/ev9/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/kia/ev9/specs"
+        },
+        {
+          "value": "Level 2 ADAS",
+          "value_citation": "https://www.cardekho.com/kia/ev9/specs"
+        },
+        {
+          "value": "360° view camera",
+          "value_citation": "https://www.cardekho.com/kia/ev9/specs"
+        },
+        {
+          "value": "Blind Spot Collision Avoidance",
+          "value_citation": "https://www.cardekho.com/kia/ev9/specs"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/EV9/11456/1755867065601/front-left-side-47.jpg?tr=w-230", "value_citation": "https://www.cardekho.com/kia/ev9/specs" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/EV9/11456/1755867065601/front-left-side-47.jpg?tr=w-230",
+          "value_citation": "https://www.cardekho.com/kia/ev9/specs"
+        }
       ],
       "availability_status": "on_sale",
       "source_url": "https://www.cardekho.com/kia/ev9"
@@ -1050,18 +1131,42 @@
       "width_mm": 1800,
       "height_mm": 1708,
       "key_features": [
-        { "value": "Dual 12.3-inch screens", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "2-spoke steering wheel", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "Power Steering", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" }
+        {
+          "value": "Dual 12.3-inch screens",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "2-spoke steering wheel",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "Power Steering",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        }
       ],
       "safety_features": [
-        { "value": "6 Airbags", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "ABS", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "EBD", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "ESC", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" }
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/Carens-Clavis/11700/1755774968732/front-left-side-47.jpg?tr=w-230", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/Carens-Clavis/11700/1755774968732/front-left-side-47.jpg?tr=w-230",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        }
       ],
       "availability_status": "on_sale",
       "source_url": "https://www.cardekho.com/kia/carens-clavis"
@@ -1083,18 +1188,42 @@
       "width_mm": 1800,
       "height_mm": 1708,
       "key_features": [
-        { "value": "Dual 12.3-inch screens", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "Power Steering", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "Power Windows", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" }
+        {
+          "value": "Dual 12.3-inch screens",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "Power Steering",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "Power Windows",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        }
       ],
       "safety_features": [
-        { "value": "6 Airbags", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "ABS", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "EBD", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "ESC", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" }
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/Carens-Clavis/11700/1755774968732/front-left-side-47.jpg?tr=w-230", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/Carens-Clavis/11700/1755774968732/front-left-side-47.jpg?tr=w-230",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        }
       ],
       "availability_status": "on_sale",
       "source_url": "https://www.cardekho.com/kia/carens-clavis"
@@ -1103,7 +1232,7 @@
       "make": "Kia",
       "model": "Carens Clavis",
       "variant_name": "HTE (O) Turbo Petrol MT",
-      "ex_showroom_price": 1340000,
+      "ex_showroom_price": 1299900,
       "hyderabad_on_road_price": 1661600,
       "fuel_type": "Petrol",
       "transmission": "Manual",
@@ -1115,18 +1244,42 @@
       "width_mm": 1800,
       "height_mm": 1708,
       "key_features": [
-        { "value": "Dual 12.3-inch screens", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "Power Steering", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "Power Windows", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" }
+        {
+          "value": "Dual 12.3-inch screens",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "Power Steering",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "Power Windows",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        }
       ],
       "safety_features": [
-        { "value": "6 Airbags", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "ABS", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "EBD", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "ESC", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" }
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/Carens-Clavis/11700/1755774968732/front-left-side-47.jpg?tr=w-230", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/Carens-Clavis/11700/1755774968732/front-left-side-47.jpg?tr=w-230",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        }
       ],
       "availability_status": "on_sale",
       "source_url": "https://www.cardekho.com/kia/carens-clavis"
@@ -1135,7 +1288,7 @@
       "make": "Kia",
       "model": "Carens Clavis",
       "variant_name": "HTE (O) Diesel MT",
-      "ex_showroom_price": 1455000,
+      "ex_showroom_price": 1611448,
       "hyderabad_on_road_price": 1804200,
       "fuel_type": "Diesel",
       "transmission": "Manual",
@@ -1148,18 +1301,42 @@
       "width_mm": 1800,
       "height_mm": 1708,
       "key_features": [
-        { "value": "Dual 12.3-inch screens", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "Power Steering", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "Power Windows", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" }
+        {
+          "value": "Dual 12.3-inch screens",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "Power Steering",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "Power Windows",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        }
       ],
       "safety_features": [
-        { "value": "6 Airbags", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "ABS", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "EBD", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "ESC", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" }
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/Carens-Clavis/11700/1755774968732/front-left-side-47.jpg?tr=w-230", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/Carens-Clavis/11700/1755774968732/front-left-side-47.jpg?tr=w-230",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        }
       ],
       "availability_status": "on_sale",
       "source_url": "https://www.cardekho.com/kia/carens-clavis"
@@ -1168,7 +1345,7 @@
       "make": "Kia",
       "model": "Carens Clavis",
       "variant_name": "HTK Plus Turbo DCT",
-      "ex_showroom_price": 1690000,
+      "ex_showroom_price": 1662899,
       "hyderabad_on_road_price": 2095600,
       "fuel_type": "Petrol",
       "transmission": "Automatic",
@@ -1180,20 +1357,50 @@
       "width_mm": 1800,
       "height_mm": 1708,
       "key_features": [
-        { "value": "Dual 12.3-inch screens", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "Auto AC", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "Wireless phone charger", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "Panoramic sunroof", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" }
+        {
+          "value": "Dual 12.3-inch screens",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "Auto AC",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "Wireless phone charger",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "Panoramic sunroof",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        }
       ],
       "safety_features": [
-        { "value": "6 Airbags", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "ABS", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "EBD", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "ESC", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "TPMS", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" }
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/Carens-Clavis/11700/1755774968732/front-left-side-47.jpg?tr=w-230", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/Carens-Clavis/11700/1755774968732/front-left-side-47.jpg?tr=w-230",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        }
       ],
       "availability_status": "on_sale",
       "source_url": "https://www.cardekho.com/kia/carens-clavis"
@@ -1202,7 +1409,7 @@
       "make": "Kia",
       "model": "Carens Clavis",
       "variant_name": "HTK Plus Diesel AT",
-      "ex_showroom_price": 1800000,
+      "ex_showroom_price": 1734900,
       "hyderabad_on_road_price": 2232000,
       "fuel_type": "Diesel",
       "transmission": "Automatic",
@@ -1215,20 +1422,50 @@
       "width_mm": 1800,
       "height_mm": 1708,
       "key_features": [
-        { "value": "Dual 12.3-inch screens", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "Auto AC", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "Wireless phone charger", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "Panoramic sunroof", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" }
+        {
+          "value": "Dual 12.3-inch screens",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "Auto AC",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "Wireless phone charger",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "Panoramic sunroof",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        }
       ],
       "safety_features": [
-        { "value": "6 Airbags", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "ABS", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "EBD", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "ESC", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "TPMS", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" }
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/Carens-Clavis/11700/1755774968732/front-left-side-47.jpg?tr=w-230", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/Carens-Clavis/11700/1755774968732/front-left-side-47.jpg?tr=w-230",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        }
       ],
       "availability_status": "on_sale",
       "source_url": "https://www.cardekho.com/kia/carens-clavis"
@@ -1249,22 +1486,58 @@
       "width_mm": 1800,
       "height_mm": 1708,
       "key_features": [
-        { "value": "Dual 12.3-inch screens", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "LED headlights", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "Leatherette seat upholstery", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "360° camera", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "Dual-camera dashcam", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" }
+        {
+          "value": "Dual 12.3-inch screens",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "LED headlights",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "Leatherette seat upholstery",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "360° camera",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "Dual-camera dashcam",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        }
       ],
       "safety_features": [
-        { "value": "6 Airbags", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "ABS", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "EBD", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "ESC", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "TPMS", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "360° view camera", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" }
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "360° view camera",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/Carens-Clavis/11700/1755774968732/front-left-side-47.jpg?tr=w-230", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/Carens-Clavis/11700/1755774968732/front-left-side-47.jpg?tr=w-230",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        }
       ],
       "availability_status": "on_sale",
       "source_url": "https://www.cardekho.com/kia/carens-clavis"
@@ -1273,7 +1546,7 @@
       "make": "Kia",
       "model": "Carens Clavis",
       "variant_name": "HTX Plus Turbo DCT",
-      "ex_showroom_price": 1940000,
+      "ex_showroom_price": 2084900,
       "hyderabad_on_road_price": 2405600,
       "fuel_type": "Petrol",
       "transmission": "Automatic",
@@ -1285,24 +1558,66 @@
       "width_mm": 1800,
       "height_mm": 1708,
       "key_features": [
-        { "value": "Dual 12.3-inch screens", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "Ventilated front seats", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "Captain seats (6-seater option)", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "Level 2 ADAS", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "Panoramic sunroof", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "Adaptive cruise control", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" }
+        {
+          "value": "Dual 12.3-inch screens",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "Ventilated front seats",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "Captain seats (6-seater option)",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "Level 2 ADAS",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "Panoramic sunroof",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "Adaptive cruise control",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        }
       ],
       "safety_features": [
-        { "value": "6 Airbags", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "ABS", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "EBD", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "ESC", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "TPMS", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "Level 2 ADAS", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "360° view camera", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" }
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "Level 2 ADAS",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "360° view camera",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/Carens-Clavis/11700/1755774968732/front-left-side-47.jpg?tr=w-230", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/Carens-Clavis/11700/1755774968732/front-left-side-47.jpg?tr=w-230",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        }
       ],
       "availability_status": "on_sale",
       "source_url": "https://www.cardekho.com/kia/carens-clavis"
@@ -1324,24 +1639,66 @@
       "width_mm": 1800,
       "height_mm": 1708,
       "key_features": [
-        { "value": "Dual 12.3-inch screens", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "Ventilated front seats", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "Captain seats (6-seater option)", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "Level 2 ADAS", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "Panoramic sunroof", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "Adaptive cruise control", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" }
+        {
+          "value": "Dual 12.3-inch screens",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "Ventilated front seats",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "Captain seats (6-seater option)",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "Level 2 ADAS",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "Panoramic sunroof",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "Adaptive cruise control",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        }
       ],
       "safety_features": [
-        { "value": "6 Airbags", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "ABS", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "EBD", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "ESC", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "TPMS", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "Level 2 ADAS", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" },
-        { "value": "360° view camera", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" }
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "EBD",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "Level 2 ADAS",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        },
+        {
+          "value": "360° view camera",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/Carens-Clavis/11700/1755774968732/front-left-side-47.jpg?tr=w-230", "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/Carens-Clavis/11700/1755774968732/front-left-side-47.jpg?tr=w-230",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis/specs"
+        }
       ],
       "availability_status": "on_sale",
       "source_url": "https://www.cardekho.com/kia/carens-clavis"
@@ -1362,21 +1719,54 @@
       "width_mm": 1800,
       "height_mm": 1708,
       "key_features": [
-        { "value": "Level 2 ADAS with 20 features", "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev" },
-        { "value": "Panoramic sunroof", "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev" },
-        { "value": "Ventilated seats", "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev" },
-        { "value": "AC vents in all three rows", "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev" },
-        { "value": "Wireless charging", "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev" }
+        {
+          "value": "Level 2 ADAS with 20 features",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev"
+        },
+        {
+          "value": "Panoramic sunroof",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev"
+        },
+        {
+          "value": "Ventilated seats",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev"
+        },
+        {
+          "value": "AC vents in all three rows",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev"
+        },
+        {
+          "value": "Wireless charging",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev"
+        }
       ],
       "safety_features": [
-        { "value": "6 Airbags", "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev" },
-        { "value": "Front Collision Avoidance", "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev" },
-        { "value": "Lane Keep Assist", "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev" },
-        { "value": "Blind Spot Detection", "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev" },
-        { "value": "Rear Cross Traffic Alert", "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev" }
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev"
+        },
+        {
+          "value": "Front Collision Avoidance",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev"
+        },
+        {
+          "value": "Lane Keep Assist",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev"
+        },
+        {
+          "value": "Blind Spot Detection",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev"
+        },
+        {
+          "value": "Rear Cross Traffic Alert",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/Carens-Clavis-EV/11650/1755866334119/front-left-side-47.jpg", "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/Carens-Clavis-EV/11650/1755866334119/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev"
+        }
       ],
       "availability_status": "on_sale",
       "source_url": "https://www.cardekho.com/kia/carens-clavis-ev"
@@ -1397,21 +1787,54 @@
       "width_mm": 1800,
       "height_mm": 1708,
       "key_features": [
-        { "value": "Level 2 ADAS with 20 features", "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev" },
-        { "value": "Panoramic sunroof", "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev" },
-        { "value": "Ventilated seats", "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev" },
-        { "value": "Captain seats in second row", "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev" },
-        { "value": "Smart Cruise Control", "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev" }
+        {
+          "value": "Level 2 ADAS with 20 features",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev"
+        },
+        {
+          "value": "Panoramic sunroof",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev"
+        },
+        {
+          "value": "Ventilated seats",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev"
+        },
+        {
+          "value": "Captain seats in second row",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev"
+        },
+        {
+          "value": "Smart Cruise Control",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev"
+        }
       ],
       "safety_features": [
-        { "value": "6 Airbags", "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev" },
-        { "value": "Front Collision Avoidance", "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev" },
-        { "value": "Lane Keep Assist", "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev" },
-        { "value": "Blind Spot Detection", "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev" },
-        { "value": "Rear Cross Traffic Alert", "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev" }
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev"
+        },
+        {
+          "value": "Front Collision Avoidance",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev"
+        },
+        {
+          "value": "Lane Keep Assist",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev"
+        },
+        {
+          "value": "Blind Spot Detection",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev"
+        },
+        {
+          "value": "Rear Cross Traffic Alert",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/Carens-Clavis-EV/11650/1755866334119/front-left-side-47.jpg", "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/Carens-Clavis-EV/11650/1755866334119/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev"
+        }
       ],
       "availability_status": "on_sale",
       "source_url": "https://www.cardekho.com/kia/carens-clavis-ev"
@@ -1432,21 +1855,54 @@
       "width_mm": 1800,
       "height_mm": 1708,
       "key_features": [
-        { "value": "Level 2 ADAS with 20 features", "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev" },
-        { "value": "Panoramic sunroof", "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev" },
-        { "value": "Ventilated seats", "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev" },
-        { "value": "Long range 51.4 kWh battery", "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev" },
-        { "value": "Fast charging (10-80% in 39 min)", "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev" }
+        {
+          "value": "Level 2 ADAS with 20 features",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev"
+        },
+        {
+          "value": "Panoramic sunroof",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev"
+        },
+        {
+          "value": "Ventilated seats",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev"
+        },
+        {
+          "value": "Long range 51.4 kWh battery",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev"
+        },
+        {
+          "value": "Fast charging (10-80% in 39 min)",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev"
+        }
       ],
       "safety_features": [
-        { "value": "6 Airbags", "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev" },
-        { "value": "Front Collision Avoidance", "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev" },
-        { "value": "Lane Keep Assist", "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev" },
-        { "value": "Blind Spot Detection", "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev" },
-        { "value": "Rear Cross Traffic Alert", "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev" }
+        {
+          "value": "6 Airbags",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev"
+        },
+        {
+          "value": "Front Collision Avoidance",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev"
+        },
+        {
+          "value": "Lane Keep Assist",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev"
+        },
+        {
+          "value": "Blind Spot Detection",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev"
+        },
+        {
+          "value": "Rear Cross Traffic Alert",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/Carens-Clavis-EV/11650/1755866334119/front-left-side-47.jpg", "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Kia/Carens-Clavis-EV/11650/1755866334119/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/kia/carens-clavis-ev"
+        }
       ],
       "availability_status": "on_sale",
       "source_url": "https://www.cardekho.com/kia/carens-clavis-ev"

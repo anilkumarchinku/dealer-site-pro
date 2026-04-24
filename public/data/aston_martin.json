@@ -11,7 +11,7 @@
       "engine_displacement_cc": 3998,
       "power_bhp": 656,
       "torque_nm": 800,
-      "mileage_kmpl": 7.0,
+      "mileage_kmpl": 7,
       "seating_capacity": 2,
       "boot_space_l": 350,
       "ground_clearance_mm": 120,
@@ -19,21 +19,43 @@
       "width_mm": 1942,
       "height_mm": 1274,
       "key_features": [
-        { "value": "4.0L twin-turbo V8 (Mercedes-AMG M177)" },
-        { "value": "8-speed automatic transmission" },
-        { "value": "Rear-wheel drive" },
-        { "value": "10.25-inch touchscreen infotainment" },
-        { "value": "Adaptive damping with sport modes" }
+        {
+          "value": "4.0L twin-turbo V8 (Mercedes-AMG M177)"
+        },
+        {
+          "value": "8-speed automatic transmission"
+        },
+        {
+          "value": "Rear-wheel drive"
+        },
+        {
+          "value": "10.25-inch touchscreen infotainment"
+        },
+        {
+          "value": "Adaptive damping with sport modes"
+        }
       ],
       "safety_features": [
-        { "value": "4 airbags" },
-        { "value": "ABS with EBD" },
-        { "value": "Electronic Stability Control" },
-        { "value": "Traction control" },
-        { "value": "360-degree parking camera" }
+        {
+          "value": "4 airbags"
+        },
+        {
+          "value": "ABS with EBD"
+        },
+        {
+          "value": "Electronic Stability Control"
+        },
+        {
+          "value": "Traction control"
+        },
+        {
+          "value": "360-degree parking camera"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Aston-Martin/Vantage/11671/1769509518605/front-left-side-47.jpg" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Aston-Martin/Vantage/11671/1769509518605/front-left-side-47.jpg"
+        }
       ],
       "availability_status": "on_sale",
       "launch_year": 2025
@@ -49,7 +71,7 @@
       "engine_displacement_cc": 3982,
       "power_bhp": 697,
       "torque_nm": 900,
-      "mileage_kmpl": 8.0,
+      "mileage_kmpl": 8,
       "seating_capacity": 5,
       "boot_space_l": 632,
       "ground_clearance_mm": 190,
@@ -57,21 +79,43 @@
       "width_mm": 1998,
       "height_mm": 1680,
       "key_features": [
-        { "value": "4.0L quad-cam twin-turbo V8 engine" },
-        { "value": "All-wheel drive with electronic limited-slip diff" },
-        { "value": "10.25-inch touchscreen infotainment" },
-        { "value": "Panoramic glass roof" },
-        { "value": "Adaptive air suspension with multiple modes" }
+        {
+          "value": "4.0L quad-cam twin-turbo V8 engine"
+        },
+        {
+          "value": "All-wheel drive with electronic limited-slip diff"
+        },
+        {
+          "value": "10.25-inch touchscreen infotainment"
+        },
+        {
+          "value": "Panoramic glass roof"
+        },
+        {
+          "value": "Adaptive air suspension with multiple modes"
+        }
       ],
       "safety_features": [
-        { "value": "10 airbags" },
-        { "value": "ABS with EBD" },
-        { "value": "Electronic Stability Control" },
-        { "value": "360-degree surround camera" },
-        { "value": "Blind spot monitoring" }
+        {
+          "value": "10 airbags"
+        },
+        {
+          "value": "ABS with EBD"
+        },
+        {
+          "value": "Electronic Stability Control"
+        },
+        {
+          "value": "360-degree surround camera"
+        },
+        {
+          "value": "Blind spot monitoring"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Aston-Martin/DBX/6695/1769509254259/front-left-side-47.jpg" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Aston-Martin/DBX/6695/1769509254259/front-left-side-47.jpg"
+        }
       ],
       "availability_status": "on_sale",
       "launch_year": 2025
@@ -87,7 +131,7 @@
       "engine_displacement_cc": 3982,
       "power_bhp": 671,
       "torque_nm": 800,
-      "mileage_kmpl": 10.0,
+      "mileage_kmpl": 10,
       "seating_capacity": 2,
       "boot_space_l": 78,
       "ground_clearance_mm": 115,
@@ -95,21 +139,43 @@
       "width_mm": 1965,
       "height_mm": 1295,
       "key_features": [
-        { "value": "4.0L twin-turbo V8 engine" },
-        { "value": "8-speed automatic transmission" },
-        { "value": "10.25-inch touchscreen with Apple CarPlay/Android Auto" },
-        { "value": "Carbon-ceramic brakes optional" },
-        { "value": "Adaptive damping with GT/Sport/Sport+ modes" }
+        {
+          "value": "4.0L twin-turbo V8 engine"
+        },
+        {
+          "value": "8-speed automatic transmission"
+        },
+        {
+          "value": "10.25-inch touchscreen with Apple CarPlay/Android Auto"
+        },
+        {
+          "value": "Carbon-ceramic brakes optional"
+        },
+        {
+          "value": "Adaptive damping with GT/Sport/Sport+ modes"
+        }
       ],
       "safety_features": [
-        { "value": "10 airbags" },
-        { "value": "ABS with EBD" },
-        { "value": "Electronic Stability Control" },
-        { "value": "Cruise control" },
-        { "value": "Parking sensors with rear camera" }
+        {
+          "value": "10 airbags"
+        },
+        {
+          "value": "ABS with EBD"
+        },
+        {
+          "value": "Electronic Stability Control"
+        },
+        {
+          "value": "Cruise control"
+        },
+        {
+          "value": "Parking sensors with rear camera"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Aston-Martin/DB12/10185/1769509097940/front-left-side-47.jpg" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Aston-Martin/DB12/10185/1769509097940/front-left-side-47.jpg"
+        }
       ],
       "availability_status": "on_sale",
       "launch_year": 2024
@@ -118,14 +184,14 @@
       "make": "Aston Martin",
       "model": "DB12",
       "variant_name": "Volante",
-      "ex_showroom_price": 48000000,
+      "ex_showroom_price": 43408000,
       "fuel_type": "Petrol",
       "transmission": "Automatic (8-Speed AT)",
       "drivetrain": "RWD",
       "engine_displacement_cc": 3982,
       "power_bhp": 671,
       "torque_nm": 800,
-      "mileage_kmpl": 10.0,
+      "mileage_kmpl": 10,
       "seating_capacity": 2,
       "boot_space_l": 78,
       "ground_clearance_mm": 115,
@@ -133,21 +199,43 @@
       "width_mm": 1965,
       "height_mm": 1295,
       "key_features": [
-        { "value": "4.0L twin-turbo V8 with convertible soft-top" },
-        { "value": "Retractable roof in 14 seconds" },
-        { "value": "10.25-inch touchscreen infotainment" },
-        { "value": "Premium leather interior" },
-        { "value": "Adaptive damping system" }
+        {
+          "value": "4.0L twin-turbo V8 with convertible soft-top"
+        },
+        {
+          "value": "Retractable roof in 14 seconds"
+        },
+        {
+          "value": "10.25-inch touchscreen infotainment"
+        },
+        {
+          "value": "Premium leather interior"
+        },
+        {
+          "value": "Adaptive damping system"
+        }
       ],
       "safety_features": [
-        { "value": "10 airbags" },
-        { "value": "ABS with EBD" },
-        { "value": "Electronic Stability Control" },
-        { "value": "Roll-over protection bars" },
-        { "value": "360-degree camera" }
+        {
+          "value": "10 airbags"
+        },
+        {
+          "value": "ABS with EBD"
+        },
+        {
+          "value": "Electronic Stability Control"
+        },
+        {
+          "value": "Roll-over protection bars"
+        },
+        {
+          "value": "360-degree camera"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Aston-Martin/DB12/10185/1769509097940/front-left-side-47.jpg" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Aston-Martin/DB12/10185/1769509097940/front-left-side-47.jpg"
+        }
       ],
       "availability_status": "on_sale",
       "launch_year": 2024
@@ -171,21 +259,43 @@
       "width_mm": 2007,
       "height_mm": 1274,
       "key_features": [
-        { "value": "5.2L twin-turbo V12 engine" },
-        { "value": "Carbon-fiber body panels" },
-        { "value": "Adaptive suspension with multiple modes" },
-        { "value": "10.25-inch touchscreen infotainment" },
-        { "value": "Performance seats with memory" }
+        {
+          "value": "5.2L twin-turbo V12 engine"
+        },
+        {
+          "value": "Carbon-fiber body panels"
+        },
+        {
+          "value": "Adaptive suspension with multiple modes"
+        },
+        {
+          "value": "10.25-inch touchscreen infotainment"
+        },
+        {
+          "value": "Performance seats with memory"
+        }
       ],
       "safety_features": [
-        { "value": "4 airbags" },
-        { "value": "ABS with EBD" },
-        { "value": "Electronic Stability Control" },
-        { "value": "Traction control" },
-        { "value": "Advanced safety systems" }
+        {
+          "value": "4 airbags"
+        },
+        {
+          "value": "ABS with EBD"
+        },
+        {
+          "value": "Electronic Stability Control"
+        },
+        {
+          "value": "Traction control"
+        },
+        {
+          "value": "Advanced safety systems"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Aston-Martin/Vanquish/12432/1769509396621/front-left-side-47.jpg" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Aston-Martin/Vanquish/12432/1769509396621/front-left-side-47.jpg"
+        }
       ],
       "availability_status": "on_sale",
       "launch_year": 2025
@@ -201,7 +311,7 @@
       "engine_displacement_cc": 3982,
       "power_bhp": 542,
       "torque_nm": 700,
-      "mileage_kmpl": 8.0,
+      "mileage_kmpl": 8,
       "seating_capacity": 5,
       "boot_space_l": 632,
       "ground_clearance_mm": 190,
@@ -209,21 +319,43 @@
       "width_mm": 1998,
       "height_mm": 1680,
       "key_features": [
-        { "value": "4.0L twin-turbo V8 engine" },
-        { "value": "All-wheel drive" },
-        { "value": "10.25-inch touchscreen infotainment" },
-        { "value": "Panoramic glass roof" },
-        { "value": "Adaptive air suspension" }
+        {
+          "value": "4.0L twin-turbo V8 engine"
+        },
+        {
+          "value": "All-wheel drive"
+        },
+        {
+          "value": "10.25-inch touchscreen infotainment"
+        },
+        {
+          "value": "Panoramic glass roof"
+        },
+        {
+          "value": "Adaptive air suspension"
+        }
       ],
       "safety_features": [
-        { "value": "10 airbags" },
-        { "value": "ABS with EBD" },
-        { "value": "Electronic Stability Control" },
-        { "value": "360-degree surround camera" },
-        { "value": "Blind spot monitoring" }
+        {
+          "value": "10 airbags"
+        },
+        {
+          "value": "ABS with EBD"
+        },
+        {
+          "value": "Electronic Stability Control"
+        },
+        {
+          "value": "360-degree surround camera"
+        },
+        {
+          "value": "Blind spot monitoring"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Aston-Martin/DBX/6695/1769509254259/front-left-side-47.jpg" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Aston-Martin/DBX/6695/1769509254259/front-left-side-47.jpg"
+        }
       ],
       "availability_status": "on_sale",
       "launch_year": 2025
@@ -239,7 +371,7 @@
       "engine_displacement_cc": 3998,
       "power_bhp": 502.88,
       "torque_nm": 675,
-      "mileage_kmpl": 9.0,
+      "mileage_kmpl": 9,
       "seating_capacity": 2,
       "boot_space_l": 300,
       "ground_clearance_mm": 120,
@@ -247,21 +379,43 @@
       "width_mm": 1940,
       "height_mm": 1279,
       "key_features": [
-        { "value": "4.0L twin-turbo V8 engine" },
-        { "value": "9-speed automatic transmission" },
-        { "value": "Rear-wheel drive" },
-        { "value": "10.25-inch touchscreen infotainment with Apple CarPlay" },
-        { "value": "Adaptive damping with Sport/GT/Sport+ modes" }
+        {
+          "value": "4.0L twin-turbo V8 engine"
+        },
+        {
+          "value": "9-speed automatic transmission"
+        },
+        {
+          "value": "Rear-wheel drive"
+        },
+        {
+          "value": "10.25-inch touchscreen infotainment with Apple CarPlay"
+        },
+        {
+          "value": "Adaptive damping with Sport/GT/Sport+ modes"
+        }
       ],
       "safety_features": [
-        { "value": "8 airbags" },
-        { "value": "ABS with EBD" },
-        { "value": "Electronic Stability Control" },
-        { "value": "Traction control" },
-        { "value": "Parking sensors with rear camera" }
+        {
+          "value": "8 airbags"
+        },
+        {
+          "value": "ABS with EBD"
+        },
+        {
+          "value": "Electronic Stability Control"
+        },
+        {
+          "value": "Traction control"
+        },
+        {
+          "value": "Parking sensors with rear camera"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Aston-Martin/DB11/6694/1769509009640/front-left-side-47.jpg" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Aston-Martin/DB11/6694/1769509009640/front-left-side-47.jpg"
+        }
       ],
       "availability_status": "discontinued",
       "launch_year": 2017
@@ -277,7 +431,7 @@
       "engine_displacement_cc": 5204,
       "power_bhp": 715,
       "torque_nm": 900,
-      "mileage_kmpl": 8.0,
+      "mileage_kmpl": 8,
       "seating_capacity": 2,
       "boot_space_l": 270,
       "ground_clearance_mm": 110,
@@ -285,21 +439,43 @@
       "width_mm": 1967,
       "height_mm": 1280,
       "key_features": [
-        { "value": "5.2L twin-turbo V12 engine" },
-        { "value": "8-speed automatic transmission" },
-        { "value": "Carbon-fibre bodywork (superleggera)" },
-        { "value": "10.25-inch touchscreen infotainment" },
-        { "value": "Adaptive damping suspension" }
+        {
+          "value": "5.2L twin-turbo V12 engine"
+        },
+        {
+          "value": "8-speed automatic transmission"
+        },
+        {
+          "value": "Carbon-fibre bodywork (superleggera)"
+        },
+        {
+          "value": "10.25-inch touchscreen infotainment"
+        },
+        {
+          "value": "Adaptive damping suspension"
+        }
       ],
       "safety_features": [
-        { "value": "4 airbags" },
-        { "value": "ABS with EBD" },
-        { "value": "Electronic Stability Control" },
-        { "value": "Traction control" },
-        { "value": "Advanced safety systems" }
+        {
+          "value": "4 airbags"
+        },
+        {
+          "value": "ABS with EBD"
+        },
+        {
+          "value": "Electronic Stability Control"
+        },
+        {
+          "value": "Traction control"
+        },
+        {
+          "value": "Advanced safety systems"
+        }
       ],
       "image_urls": [
-        { "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Aston-Martin/DBS-Superleggera/6693/1769508892516/front-left-side-47.jpg" }
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Aston-Martin/DBS-Superleggera/6693/1769508892516/front-left-side-47.jpg"
+        }
       ],
       "availability_status": "upcoming",
       "launch_year": 2026
