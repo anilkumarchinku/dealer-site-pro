@@ -2652,72 +2652,288 @@
       "make_citation": "https://www.cardekho.com/audi/a8-l/variants.htm",
       "model": "A8 L",
       "model_citation": "https://www.cardekho.com/audi/a8-l/variants.htm",
-      "variant_name": "55 TFSI",
-      "variant_name_citation": "https://www.cardekho.com/audi/a8-l/variants.htm",
-      "ex_showroom_price_min": 17050000,
-      "ex_showroom_price_min_citation": "https://www.cardekho.com/audi/a8-l/variants.htm",
-      "ex_showroom_price_max": 17050000,
-      "ex_showroom_price_max_citation": "https://www.cardekho.com/audi/a8-l/variants.htm",
+      "variant_name": "Celebration",
+      "variant_name_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Celebration.htm",
+      "ex_showroom_price_min": 13413000,
+      "ex_showroom_price_min_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Celebration.htm",
+      "ex_showroom_price_max": 13413000,
+      "ex_showroom_price_max_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Celebration.htm",
       "hyderabad_on_road_price": null,
-      "hyderabad_on_road_price_citation": "https://www.cardekho.com/audi/a8-l/variants.htm",
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Celebration.htm",
       "fuel_type": "Petrol",
-      "fuel_type_citation": "https://www.cardekho.com/audi/a8-l/variants.htm",
+      "fuel_type_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Celebration.htm",
       "transmission": "Automatic",
-      "transmission_citation": "https://www.cardekho.com/audi/a8-l/variants.htm",
+      "transmission_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Celebration.htm",
       "engine_displacement_cc": 2995,
-      "engine_displacement_cc_citation": "https://www.cardekho.com/audi/a8-l/variants.htm",
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Celebration.htm",
       "power_bhp": 335,
-      "power_bhp_citation": "https://www.cardekho.com/audi/a8-l/variants.htm",
+      "power_bhp_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Celebration.htm",
       "torque_nm": 500,
-      "torque_nm_citation": "https://www.cardekho.com/audi/a8-l/variants.htm",
+      "torque_nm_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Celebration.htm",
       "seating_capacity": 5,
-      "seating_capacity_citation": "https://www.cardekho.com/audi/a8-l/variants.htm",
-      "boot_space_l_citation": "https://www.cardekho.com/audi/a8-l/variants.htm",
-      "ground_clearance_mm_citation": "https://www.cardekho.com/audi/a8-l/variants.htm",
+      "seating_capacity_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Celebration.htm",
+      "boot_space_l_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Celebration.htm",
+      "ground_clearance_mm_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Celebration.htm",
       "key_features": [
         {
           "value": "Audi Virtual Cockpit",
-          "value_citation": "https://www.cardekho.com/audi/a8-l/variants.htm"
+          "value_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Celebration.htm"
         },
         {
           "value": "MMI Touchscreen",
-          "value_citation": "https://www.cardekho.com/audi/a8-l/variants.htm"
+          "value_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Celebration.htm"
         },
         {
           "value": "Wireless Charger",
-          "value_citation": "https://www.cardekho.com/audi/a8-l/variants.htm"
+          "value_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Celebration.htm"
         }
       ],
       "safety_features": [
         {
           "value": "ABS",
-          "value_citation": "https://www.cardekho.com/audi/a8-l/variants.htm"
+          "value_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Celebration.htm"
         },
         {
           "value": "8 Airbags",
-          "value_citation": "https://www.cardekho.com/audi/a8-l/variants.htm"
+          "value_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Celebration.htm"
         },
         {
           "value": "ESC",
-          "value_citation": "https://www.cardekho.com/audi/a8-l/variants.htm"
+          "value_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Celebration.htm"
         },
         {
           "value": "TPMS",
-          "value_citation": "https://www.cardekho.com/audi/a8-l/variants.htm"
+          "value_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Celebration.htm"
         }
       ],
       "image_urls": [
         {
           "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Audi/A8-L/front-left-side-47.jpg",
-          "value_citation": "https://www.cardekho.com/audi/a8-l/variants.htm"
+          "value_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Celebration.htm"
         }
       ],
       "availability_status": "On Sale",
       "availability_status_citation": "https://www.cardekho.com/audi/a8-l/variants.htm",
-      "source_url": "https://www.cardekho.com/audi/a8-l/variants.htm",
-      "source_url_citation": "https://www.cardekho.com/audi/a8-l/variants.htm",
+      "source_url": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Celebration.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Celebration.htm",
       "mileage_kmpl": 7,
-      "mileage_kmpl_citation": "https://www.cardekho.com/audi/a8-l/variants.htm"
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Celebration.htm"
+    },
+    {
+      "make": "Audi",
+      "make_citation": "https://www.cardekho.com/audi/a8-l/variants.htm",
+      "model": "A8 L",
+      "model_citation": "https://www.cardekho.com/audi/a8-l/variants.htm",
+      "variant_name": "Celebration BSVI",
+      "variant_name_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Celebration_BSVI.htm",
+      "ex_showroom_price_min": 13413000,
+      "ex_showroom_price_min_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Celebration_BSVI.htm",
+      "ex_showroom_price_max": 13413000,
+      "ex_showroom_price_max_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Celebration_BSVI.htm",
+      "hyderabad_on_road_price": null,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Celebration_BSVI.htm",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Celebration_BSVI.htm",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Celebration_BSVI.htm",
+      "engine_displacement_cc": 2995,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Celebration_BSVI.htm",
+      "power_bhp": 335,
+      "power_bhp_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Celebration_BSVI.htm",
+      "torque_nm": 500,
+      "torque_nm_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Celebration_BSVI.htm",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Celebration_BSVI.htm",
+      "boot_space_l_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Celebration_BSVI.htm",
+      "ground_clearance_mm_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Celebration_BSVI.htm",
+      "key_features": [
+        {
+          "value": "Audi Virtual Cockpit",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Celebration_BSVI.htm"
+        },
+        {
+          "value": "MMI Touchscreen",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Celebration_BSVI.htm"
+        },
+        {
+          "value": "Wireless Charger",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Celebration_BSVI.htm"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Celebration_BSVI.htm"
+        },
+        {
+          "value": "8 Airbags",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Celebration_BSVI.htm"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Celebration_BSVI.htm"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Celebration_BSVI.htm"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Audi/A8-L/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Celebration_BSVI.htm"
+        }
+      ],
+      "availability_status": "On Sale",
+      "availability_status_citation": "https://www.cardekho.com/audi/a8-l/variants.htm",
+      "source_url": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Celebration_BSVI.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Celebration_BSVI.htm",
+      "mileage_kmpl": 7,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Celebration_BSVI.htm"
+    },
+    {
+      "make": "Audi",
+      "make_citation": "https://www.cardekho.com/audi/a8-l/variants.htm",
+      "model": "A8 L",
+      "model_citation": "https://www.cardekho.com/audi/a8-l/variants.htm",
+      "variant_name": "Technology",
+      "variant_name_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Technology.htm",
+      "ex_showroom_price_min": 16257000,
+      "ex_showroom_price_min_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Technology.htm",
+      "ex_showroom_price_max": 16257000,
+      "ex_showroom_price_max_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Technology.htm",
+      "hyderabad_on_road_price": null,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Technology.htm",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Technology.htm",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Technology.htm",
+      "engine_displacement_cc": 2995,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Technology.htm",
+      "power_bhp": 335,
+      "power_bhp_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Technology.htm",
+      "torque_nm": 500,
+      "torque_nm_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Technology.htm",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Technology.htm",
+      "boot_space_l_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Technology.htm",
+      "ground_clearance_mm_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Technology.htm",
+      "key_features": [
+        {
+          "value": "Audi Virtual Cockpit",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Technology.htm"
+        },
+        {
+          "value": "MMI Touchscreen",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Technology.htm"
+        },
+        {
+          "value": "Wireless Charger",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Technology.htm"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Technology.htm"
+        },
+        {
+          "value": "8 Airbags",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Technology.htm"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Technology.htm"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Technology.htm"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Audi/A8-L/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Technology.htm"
+        }
+      ],
+      "availability_status": "On Sale",
+      "availability_status_citation": "https://www.cardekho.com/audi/a8-l/variants.htm",
+      "source_url": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Technology.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Technology.htm",
+      "mileage_kmpl": 10.8,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Technology.htm"
+    },
+    {
+      "make": "Audi",
+      "make_citation": "https://www.cardekho.com/audi/a8-l/variants.htm",
+      "model": "A8 L",
+      "model_citation": "https://www.cardekho.com/audi/a8-l/variants.htm",
+      "variant_name": "Technology BSVI",
+      "variant_name_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Technology_BSVI.htm",
+      "ex_showroom_price_min": 16257000,
+      "ex_showroom_price_min_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Technology_BSVI.htm",
+      "ex_showroom_price_max": 16257000,
+      "ex_showroom_price_max_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Technology_BSVI.htm",
+      "hyderabad_on_road_price": null,
+      "hyderabad_on_road_price_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Technology_BSVI.htm",
+      "fuel_type": "Petrol",
+      "fuel_type_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Technology_BSVI.htm",
+      "transmission": "Automatic",
+      "transmission_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Technology_BSVI.htm",
+      "engine_displacement_cc": 2995,
+      "engine_displacement_cc_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Technology_BSVI.htm",
+      "power_bhp": 335,
+      "power_bhp_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Technology_BSVI.htm",
+      "torque_nm": 500,
+      "torque_nm_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Technology_BSVI.htm",
+      "seating_capacity": 5,
+      "seating_capacity_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Technology_BSVI.htm",
+      "boot_space_l_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Technology_BSVI.htm",
+      "ground_clearance_mm_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Technology_BSVI.htm",
+      "key_features": [
+        {
+          "value": "Audi Virtual Cockpit",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Technology_BSVI.htm"
+        },
+        {
+          "value": "MMI Touchscreen",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Technology_BSVI.htm"
+        },
+        {
+          "value": "Wireless Charger",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Technology_BSVI.htm"
+        }
+      ],
+      "safety_features": [
+        {
+          "value": "ABS",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Technology_BSVI.htm"
+        },
+        {
+          "value": "8 Airbags",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Technology_BSVI.htm"
+        },
+        {
+          "value": "ESC",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Technology_BSVI.htm"
+        },
+        {
+          "value": "TPMS",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Technology_BSVI.htm"
+        }
+      ],
+      "image_urls": [
+        {
+          "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Audi/A8-L/front-left-side-47.jpg",
+          "value_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Technology_BSVI.htm"
+        }
+      ],
+      "availability_status": "On Sale",
+      "availability_status_citation": "https://www.cardekho.com/audi/a8-l/variants.htm",
+      "source_url": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Technology_BSVI.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Technology_BSVI.htm",
+      "mileage_kmpl": 10.8,
+      "mileage_kmpl_citation": "https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Technology_BSVI.htm"
     }
   ]
 }
