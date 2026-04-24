@@ -9,10 +9,42 @@
  * e.g. "Splendor Plus Xtec 2.0" → "splendor-plus-xtec-20"
  */
 
+import fourWColorHeroFallbacks from '@/lib/data/generated/4w-color-hero-fallbacks.json';
+import twoWColorHeroFallbacks from '@/lib/data/generated/2w-color-hero-fallbacks.json';
+
 const SUPABASE_STORAGE_URL =
     "https://llsvbyeumrfngjvbedbz.supabase.co/storage/v1/object/public/vehicle-images";
 
 const IMAGE_EXTENSIONS = ["jpg", "png", "webp"] as const;
+
+const FOUR_W_GALLERY_ALIASES: Record<string, string> = {
+    "bentley/continental-gt": "bentley/continental",
+    "bentley/continental-gtc": "bentley/continental",
+    "bmw/m8": "bmw/m8-coupe-competition",
+    "mahindra/xuv400": "mahindra/xuv400-ev",
+    "mahindra/scorpio-classic": "mahindra/scorpio",
+    "maruti-suzuki/wagonr": "maruti-suzuki/wagon-r",
+    "hyundai/creta-ev": "hyundai/creta-electric",
+    "mercedes-benz/eqg": "mercedes-benz/g-class-electric",
+    "mercedes-benz/amg-gt-coupe": "mercedes-benz/amg-gt-4-door-coupe",
+    "toyota/fortuner": "toyota/Toyota_Fortuner",
+    "toyota/urban-cruiser-hyryder": "toyota/hyryder",
+    "toyota/rumion": "toyota/Toyota_Rumion",
+    "vinfast/vf-6": "vinfast/vf6",
+    "vinfast/vf-7": "vinfast/vf7",
+};
+
+function get4WColorHeroFallback(brandId: string, model: string): string | null {
+    const key = `${brandId}/${modelToSlug(model)}`;
+    const manifest = fourWColorHeroFallbacks as Record<string, string>;
+    return manifest[key] ?? manifest[FOUR_W_GALLERY_ALIASES[key] ?? ""] ?? null;
+}
+
+function get2WColorHeroFallback(brandId: string, model: string): string | null {
+    const key = `${brandId}/${modelToSlug(model)}`;
+    const manifest = twoWColorHeroFallbacks as Record<string, string>;
+    return manifest[key] ?? null;
+}
 
 /** Convert a model name to the file-system slug used during scraping */
 export function modelToSlug(model: string): string {
@@ -39,7 +71,10 @@ export function getScrapedImageUrls(
     const slug = modelToSlug(model);
     if (vehicleCategory === "4w") {
         const base = `/data/brand-model-images/4w/${brandId}/${slug}`;
-        const urls = IMAGE_EXTENSIONS.map((ext) => `${base}.${ext}`);
+        const urls = [
+            get4WColorHeroFallback(brandId, model),
+            ...IMAGE_EXTENSIONS.map((ext) => `${base}.${ext}`),
+        ].filter((url): url is string => Boolean(url));
         // Fallback: strip common suffixes (tour, cargo, gen, edition) to
         // try the base model image (e.g. "wagon-r-tour" → "wagon-r")
         const baseSlug = slug
@@ -53,7 +88,12 @@ export function getScrapedImageUrls(
     }
     // 2W and 3W: try local files first, then Supabase storage
     const localBase = `/data/brand-model-images/${vehicleCategory}/${brandId}/${slug}`;
-    const urls = IMAGE_EXTENSIONS.map((ext) => `${localBase}.${ext}`);
+    const urls = [
+        ...(vehicleCategory === "2w"
+            ? [get2WColorHeroFallback(brandId, model)]
+            : []),
+        ...IMAGE_EXTENSIONS.map((ext) => `${localBase}.${ext}`),
+    ].filter((url): url is string => Boolean(url));
 
     if (vehicleCategory === "3w") {
         // 3W JSON models have variant suffixes and brand prefixes that don't match image filenames.
@@ -120,16 +160,23 @@ export function getVehicleImageUrls(
     const curatedAssets = getAppAssetImageUrls(vehicleCategory, brandId, model);
     const scrapedAssets = getScrapedImageUrls(vehicleCategory, brandId, model);
     const normalizedPrimary = primaryImage && primaryImage !== "/placeholder-car.jpg" ? primaryImage : null;
+    const preferredColorHero = vehicleCategory === "2w"
+        ? get2WColorHeroFallback(brandId, model)
+        : vehicleCategory === "4w"
+            ? get4WColorHeroFallback(brandId, model)
+            : null;
 
     return [...new Set([
         ...(vehicleCategory === "4w"
             ? [
+                preferredColorHero,
+                normalizedPrimary,
                 ...curatedAssets,
                 ...(normalizedPrimary?.startsWith("/assets/") ? [normalizedPrimary] : []),
-                normalizedPrimary,
                 ...scrapedAssets,
             ]
             : [
+                preferredColorHero,
                 normalizedPrimary,
                 ...scrapedAssets,
                 ...curatedAssets,
