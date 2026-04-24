@@ -14,6 +14,7 @@ import { formatPriceInLakhs } from '@/lib/utils/car-utils';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { EnquiryModal } from '@/components/cars/EnquiryModal';
+import { OnRoadPriceDialog } from '@/components/cars/OnRoadPriceDialog';
 import { TestDriveModal } from '@/components/cars/TestDriveModal';
 import { Card, CardContent } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
@@ -40,7 +41,6 @@ import {
     ChevronRight,
     Download,
     Share2,
-    Phone,
     Calendar,
     Shield,
     Fuel,
@@ -169,6 +169,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
     const TABS = isUsed ? USED_CAR_TABS : NEW_CAR_TABS;
 
     // Enquiry & Test Drive modal state
+    const [onRoadOpen, setOnRoadOpen] = useState(false);
     const [enquiryOpen, setEnquiryOpen] = useState(false);
     const [testDriveOpen, setTestDriveOpen] = useState(false);
     const allImages = useMemo(
@@ -414,10 +415,14 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
 
                                 {/* CTAs */}
                                 <div className="space-y-2.5">
-                                    <Button className="w-full" size="lg" style={{ backgroundColor: brandColor, color: brandContrast }}
-                                        onClick={() => setEnquiryOpen(true)}>
-                                        <Phone className="w-4 h-4 mr-2" />
-                                        Check On-Road Price
+                                    <Button
+                                        className="w-full"
+                                        size="lg"
+                                        style={{ backgroundColor: brandColor, color: brandContrast }}
+                                        onClick={() => (isUsed ? setEnquiryOpen(true) : setOnRoadOpen(true))}
+                                    >
+                                        {isUsed ? <MessageSquare className="w-4 h-4 mr-2" /> : <MapPin className="w-4 h-4 mr-2" />}
+                                        {isUsed ? 'Send Enquiry' : 'Check On-Road Price'}
                                     </Button>
                                     <div className="grid grid-cols-2 gap-2">
                                         <Button variant="outline" size="sm" className={lightOutlineButtonClass}
@@ -1052,32 +1057,32 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                 </section>
 
                 {/* ──────── ON-ROAD PRICE BREAKDOWN ──────── */}
-                {car.pricing.onRoad && (
+                {!isUsed && (
                     <Card className={lightCardClass}>
                         <CardContent className="p-6">
                             <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
                                 <MapPin className="w-4 h-4 text-gray-600" />
-                                On-Road Price Estimate
+                                On-Road Price Calculator
                             </h3>
-                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                                {car.pricing.onRoad.delhi && (
-                                    <div className="p-4 bg-gray-100/30 rounded-lg">
-                                        <p className="text-xs text-gray-600">Delhi</p>
-                                        <p className="text-lg font-bold">{formatPriceInLakhs(car.pricing.onRoad.delhi)}</p>
+                            <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5 sm:p-6">
+                                <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                                    <div>
+                                        <p className="text-sm text-gray-600">
+                                            Select your state and variant to see the full estimated on-road price above ex-showroom.
+                                        </p>
+                                        <p className="mt-2 text-xs text-gray-500">
+                                            Includes road tax, registration, HSRP, FASTag, insurance, TCS and optional hypothecation.
+                                        </p>
                                     </div>
-                                )}
-                                {car.pricing.onRoad.mumbai && (
-                                    <div className="p-4 bg-gray-100/30 rounded-lg">
-                                        <p className="text-xs text-gray-600">Mumbai</p>
-                                        <p className="text-lg font-bold">{formatPriceInLakhs(car.pricing.onRoad.mumbai)}</p>
-                                    </div>
-                                )}
-                                {car.pricing.onRoad.bangalore && (
-                                    <div className="p-4 bg-gray-100/30 rounded-lg">
-                                        <p className="text-xs text-gray-600">Bangalore</p>
-                                        <p className="text-lg font-bold">{formatPriceInLakhs(car.pricing.onRoad.bangalore)}</p>
-                                    </div>
-                                )}
+                                    <Button
+                                        size="lg"
+                                        onClick={() => setOnRoadOpen(true)}
+                                        style={{ backgroundColor: brandColor, color: brandContrast }}
+                                    >
+                                        <MapPin className="w-4 h-4 mr-2" />
+                                        Open Calculator
+                                    </Button>
+                                </div>
                             </div>
                         </CardContent>
                     </Card>
@@ -1250,6 +1255,13 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
             brandColor={brandColor}
             dealerId={dealerId}
             dealerPhone={dealerPhone}
+        />
+
+        <OnRoadPriceDialog
+            car={car}
+            open={onRoadOpen}
+            onOpenChange={setOnRoadOpen}
+            brandColor={brandColor}
         />
 
         {/* Test Drive Modal */}
