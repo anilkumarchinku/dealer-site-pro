@@ -1067,9 +1067,9 @@
       "variant_name": "EX (O) MT",
       "variant_name_citation": "https://www.cardekho.com/hyundai/creta/specs",
       "ex_showroom_price": {
-        "min": 1252000,
+        "min": 1313400,
         "min_citation": "https://www.cardekho.com/hyundai/creta/specs",
-        "max": 1252000,
+        "max": 1313400,
         "max_citation": "https://www.cardekho.com/hyundai/creta/specs"
       },
       "hyderabad_on_road_price": 1552480,
@@ -9578,13 +9578,13 @@
       "make_citation": "https://www.cardekho.com/cars/Hyundai",
       "model": "Verna",
       "model_citation": "https://www.cardekho.com/cars/Hyundai",
-      "variant_name": "HX2 MT",
-      "variant_name_citation": "https://www.cardekho.com/hyundai/verna/specs",
+      "variant_name": "HX2",
+      "variant_name_citation": "https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_HX2.htm",
       "ex_showroom_price": {
-        "min": 1098000,
-        "min_citation": "https://www.cardekho.com/hyundai/verna/specs",
-        "max": 1098000,
-        "max_citation": "https://www.cardekho.com/hyundai/verna/specs"
+        "min": 1098400,
+        "min_citation": "https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_HX2.htm",
+        "max": 1098400,
+        "max_citation": "https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_HX2.htm"
       },
       "hyderabad_on_road_price": 1361520,
       "hyderabad_on_road_price_citation": "https://www.cardekho.com/hyundai/verna/price-in-hyderabad",
@@ -9671,22 +9671,22 @@
         }
       ],
       "availability_status": "on_sale",
-      "availability_status_citation": "https://www.cardekho.com/hyundai/verna/specs",
-      "source_url": "https://www.cardekho.com/hyundai/verna/variants",
-      "source_url_citation": "https://www.cardekho.com/hyundai/verna/variants"
+      "availability_status_citation": "https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_HX2.htm",
+      "source_url": "https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_HX2.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_HX2.htm"
     },
     {
       "make": "Hyundai",
       "make_citation": "https://www.cardekho.com/cars/Hyundai",
       "model": "Verna",
       "model_citation": "https://www.cardekho.com/cars/Hyundai",
-      "variant_name": "HX4 MT",
-      "variant_name_citation": "https://www.cardekho.com/hyundai/verna/specs",
+      "variant_name": "HX4",
+      "variant_name_citation": "https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_HX4.htm",
       "ex_showroom_price": {
-        "min": 1224000,
-        "min_citation": "https://www.cardekho.com/hyundai/verna/specs",
-        "max": 1224000,
-        "max_citation": "https://www.cardekho.com/hyundai/verna/specs"
+        "min": 1225400,
+        "min_citation": "https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_HX4.htm",
+        "max": 1225400,
+        "max_citation": "https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_HX4.htm"
       },
       "hyderabad_on_road_price": 1517760,
       "hyderabad_on_road_price_citation": "https://www.cardekho.com/hyundai/verna/price-in-hyderabad",
@@ -9773,22 +9773,22 @@
         }
       ],
       "availability_status": "on_sale",
-      "availability_status_citation": "https://www.cardekho.com/hyundai/verna/specs",
-      "source_url": "https://www.cardekho.com/hyundai/verna/variants",
-      "source_url_citation": "https://www.cardekho.com/hyundai/verna/variants"
+      "availability_status_citation": "https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_HX4.htm",
+      "source_url": "https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_HX4.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_HX4.htm"
     },
     {
       "make": "Hyundai",
       "make_citation": "https://www.cardekho.com/cars/Hyundai",
       "model": "Verna",
       "model_citation": "https://www.cardekho.com/cars/Hyundai",
-      "variant_name": "HX6 MT",
-      "variant_name_citation": "https://www.cardekho.com/hyundai/verna/specs",
+      "variant_name": "HX6",
+      "variant_name_citation": "https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_HX6.htm",
       "ex_showroom_price": {
-        "min": 1319000,
-        "min_citation": "https://www.cardekho.com/hyundai/verna/specs",
-        "max": 1319000,
-        "max_citation": "https://www.cardekho.com/hyundai/verna/specs"
+        "min": 1319400,
+        "min_citation": "https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_HX6.htm",
+        "max": 1319400,
+        "max_citation": "https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_HX6.htm"
       },
       "hyderabad_on_road_price": 1635560,
       "hyderabad_on_road_price_citation": "https://www.cardekho.com/hyundai/verna/price-in-hyderabad",
@@ -9875,22 +9875,22 @@
         }
       ],
       "availability_status": "on_sale",
-      "availability_status_citation": "https://www.cardekho.com/hyundai/verna/specs",
-      "source_url": "https://www.cardekho.com/hyundai/verna/variants",
-      "source_url_citation": "https://www.cardekho.com/hyundai/verna/variants"
+      "availability_status_citation": "https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_HX6.htm",
+      "source_url": "https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_HX6.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_HX6.htm"
     },
     {
       "make": "Hyundai",
       "make_citation": "https://www.cardekho.com/cars/Hyundai",
       "model": "Verna",
       "model_citation": "https://www.cardekho.com/cars/Hyundai",
-      "variant_name": "HX6 CVT",
-      "variant_name_citation": "https://www.cardekho.com/hyundai/verna/specs",
+      "variant_name": "HX6 iVT",
+      "variant_name_citation": "https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_HX6_iVT.htm",
       "ex_showroom_price": {
-        "min": 1440000,
-        "min_citation": "https://www.cardekho.com/hyundai/verna/specs",
-        "max": 1440000,
-        "max_citation": "https://www.cardekho.com/hyundai/verna/specs"
+        "min": 1440400,
+        "min_citation": "https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_HX6_iVT.htm",
+        "max": 1440400,
+        "max_citation": "https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_HX6_iVT.htm"
       },
       "hyderabad_on_road_price": 1785600,
       "hyderabad_on_road_price_citation": "https://www.cardekho.com/hyundai/verna/price-in-hyderabad",
@@ -9977,9 +9977,9 @@
         }
       ],
       "availability_status": "on_sale",
-      "availability_status_citation": "https://www.cardekho.com/hyundai/verna/specs",
-      "source_url": "https://www.cardekho.com/hyundai/verna/variants",
-      "source_url_citation": "https://www.cardekho.com/hyundai/verna/variants"
+      "availability_status_citation": "https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_HX6_iVT.htm",
+      "source_url": "https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_HX6_iVT.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_HX6_iVT.htm"
     },
     {
       "make": "Hyundai",
@@ -10402,13 +10402,13 @@
       "make_citation": "https://www.cardekho.com/cars/Hyundai",
       "model": "Verna",
       "model_citation": "https://www.cardekho.com/cars/Hyundai",
-      "variant_name": "HX10 Turbo CVT",
-      "variant_name_citation": "https://www.cardekho.com/hyundai/verna/specs",
+      "variant_name": "HX10 iVT",
+      "variant_name_citation": "https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_HX10_iVT.htm",
       "ex_showroom_price": {
-        "min": 1715000,
-        "min_citation": "https://www.cardekho.com/hyundai/verna/specs",
-        "max": 1715000,
-        "max_citation": "https://www.cardekho.com/hyundai/verna/specs"
+        "min": 1715400,
+        "min_citation": "https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_HX10_iVT.htm",
+        "max": 1715400,
+        "max_citation": "https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_HX10_iVT.htm"
       },
       "hyderabad_on_road_price": 2126600,
       "hyderabad_on_road_price_citation": "https://www.cardekho.com/hyundai/verna/price-in-hyderabad",
@@ -10499,9 +10499,9 @@
         }
       ],
       "availability_status": "on_sale",
-      "availability_status_citation": "https://www.cardekho.com/hyundai/verna/specs",
-      "source_url": "https://www.cardekho.com/hyundai/verna/variants",
-      "source_url_citation": "https://www.cardekho.com/hyundai/verna/variants"
+      "availability_status_citation": "https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_HX10_iVT.htm",
+      "source_url": "https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_HX10_iVT.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_HX10_iVT.htm"
     },
     {
       "make": "Hyundai",
@@ -15883,19 +15883,19 @@
       "make": "Hyundai",
       "make_citation": "https://www.cardekho.com/cars/Hyundai",
       "model": "Creta EV",
-      "model_citation": "https://www.cardekho.com/hyundai/creta-ev",
+      "model_citation": "https://www.cardekho.com/hyundai/creta-electric/variants.htm",
       "variant_name": "Executive",
-      "variant_name_citation": "https://www.cardekho.com/hyundai/creta-ev",
+      "variant_name_citation": "https://www.cardekho.com/overview/Hyundai_Creta_Electric/Hyundai_Creta_Electric_Executive.htm",
       "ex_showroom_price": {
         "min": 1802200,
-        "min_citation": "https://www.cardekho.com/hyundai/creta-ev",
+        "min_citation": "https://www.cardekho.com/overview/Hyundai_Creta_Electric/Hyundai_Creta_Electric_Executive.htm",
         "max": 1802200,
-        "max_citation": "https://www.cardekho.com/hyundai/creta-ev"
+        "max_citation": "https://www.cardekho.com/overview/Hyundai_Creta_Electric/Hyundai_Creta_Electric_Executive.htm"
       },
       "fuel_type": "Electric",
-      "fuel_type_citation": "https://www.cardekho.com/hyundai/creta-ev",
+      "fuel_type_citation": "https://www.cardekho.com/overview/Hyundai_Creta_Electric/Hyundai_Creta_Electric_Executive.htm",
       "transmission": "Automatic",
-      "transmission_citation": "https://www.cardekho.com/hyundai/creta-ev",
+      "transmission_citation": "https://www.cardekho.com/overview/Hyundai_Creta_Electric/Hyundai_Creta_Electric_Executive.htm",
       "battery_capacity_kwh": 42,
       "range_km": 390,
       "power_bhp": 133,
@@ -15963,27 +15963,27 @@
         }
       ],
       "availability_status": "on_sale",
-      "availability_status_citation": "https://www.cardekho.com/hyundai/creta-ev",
-      "source_url": "https://www.cardekho.com/hyundai/creta-ev",
-      "source_url_citation": "https://www.cardekho.com/hyundai/creta-ev"
+      "availability_status_citation": "https://www.cardekho.com/overview/Hyundai_Creta_Electric/Hyundai_Creta_Electric_Executive.htm",
+      "source_url": "https://www.cardekho.com/overview/Hyundai_Creta_Electric/Hyundai_Creta_Electric_Executive.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Hyundai_Creta_Electric/Hyundai_Creta_Electric_Executive.htm"
     },
     {
       "make": "Hyundai",
       "make_citation": "https://www.cardekho.com/cars/Hyundai",
       "model": "Creta EV",
-      "model_citation": "https://www.cardekho.com/hyundai/creta-ev",
+      "model_citation": "https://www.cardekho.com/hyundai/creta-electric/variants.htm",
       "variant_name": "Smart",
-      "variant_name_citation": "https://www.cardekho.com/hyundai/creta-ev",
+      "variant_name_citation": "https://www.cardekho.com/overview/Hyundai_Creta_Electric/Hyundai_Creta_Electric_Smart.htm",
       "ex_showroom_price": {
         "min": 1999000,
-        "min_citation": "https://www.cardekho.com/hyundai/creta-ev",
+        "min_citation": "https://www.cardekho.com/overview/Hyundai_Creta_Electric/Hyundai_Creta_Electric_Smart.htm",
         "max": 1999000,
-        "max_citation": "https://www.cardekho.com/hyundai/creta-ev"
+        "max_citation": "https://www.cardekho.com/overview/Hyundai_Creta_Electric/Hyundai_Creta_Electric_Smart.htm"
       },
       "fuel_type": "Electric",
-      "fuel_type_citation": "https://www.cardekho.com/hyundai/creta-ev",
+      "fuel_type_citation": "https://www.cardekho.com/overview/Hyundai_Creta_Electric/Hyundai_Creta_Electric_Smart.htm",
       "transmission": "Automatic",
-      "transmission_citation": "https://www.cardekho.com/hyundai/creta-ev",
+      "transmission_citation": "https://www.cardekho.com/overview/Hyundai_Creta_Electric/Hyundai_Creta_Electric_Smart.htm",
       "battery_capacity_kwh": 42,
       "range_km": 390,
       "power_bhp": 133,
@@ -16051,27 +16051,27 @@
         }
       ],
       "availability_status": "on_sale",
-      "availability_status_citation": "https://www.cardekho.com/hyundai/creta-ev",
-      "source_url": "https://www.cardekho.com/hyundai/creta-ev",
-      "source_url_citation": "https://www.cardekho.com/hyundai/creta-ev"
+      "availability_status_citation": "https://www.cardekho.com/overview/Hyundai_Creta_Electric/Hyundai_Creta_Electric_Smart.htm",
+      "source_url": "https://www.cardekho.com/overview/Hyundai_Creta_Electric/Hyundai_Creta_Electric_Smart.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Hyundai_Creta_Electric/Hyundai_Creta_Electric_Smart.htm"
     },
     {
       "make": "Hyundai",
       "make_citation": "https://www.cardekho.com/cars/Hyundai",
       "model": "Creta EV",
-      "model_citation": "https://www.cardekho.com/hyundai/creta-ev",
+      "model_citation": "https://www.cardekho.com/hyundai/creta-electric/variants.htm",
       "variant_name": "Excellence LR",
-      "variant_name_citation": "https://www.cardekho.com/hyundai/creta-ev",
+      "variant_name_citation": "https://www.cardekho.com/overview/Hyundai_Creta_Electric/Hyundai_Creta_Electric_Excellence_LR.htm",
       "ex_showroom_price": {
         "min": 2469500,
-        "min_citation": "https://www.cardekho.com/hyundai/creta-ev",
+        "min_citation": "https://www.cardekho.com/overview/Hyundai_Creta_Electric/Hyundai_Creta_Electric_Excellence_LR.htm",
         "max": 2469500,
-        "max_citation": "https://www.cardekho.com/hyundai/creta-ev"
+        "max_citation": "https://www.cardekho.com/overview/Hyundai_Creta_Electric/Hyundai_Creta_Electric_Excellence_LR.htm"
       },
       "fuel_type": "Electric",
-      "fuel_type_citation": "https://www.cardekho.com/hyundai/creta-ev",
+      "fuel_type_citation": "https://www.cardekho.com/overview/Hyundai_Creta_Electric/Hyundai_Creta_Electric_Excellence_LR.htm",
       "transmission": "Automatic",
-      "transmission_citation": "https://www.cardekho.com/hyundai/creta-ev",
+      "transmission_citation": "https://www.cardekho.com/overview/Hyundai_Creta_Electric/Hyundai_Creta_Electric_Excellence_LR.htm",
       "battery_capacity_kwh": 51.4,
       "range_km": 420,
       "power_bhp": 133,
@@ -16139,22 +16139,22 @@
         }
       ],
       "availability_status": "on_sale",
-      "availability_status_citation": "https://www.cardekho.com/hyundai/creta-ev",
-      "source_url": "https://www.cardekho.com/hyundai/creta-ev",
-      "source_url_citation": "https://www.cardekho.com/hyundai/creta-ev"
+      "availability_status_citation": "https://www.cardekho.com/overview/Hyundai_Creta_Electric/Hyundai_Creta_Electric_Excellence_LR.htm",
+      "source_url": "https://www.cardekho.com/overview/Hyundai_Creta_Electric/Hyundai_Creta_Electric_Excellence_LR.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Hyundai_Creta_Electric/Hyundai_Creta_Electric_Excellence_LR.htm"
     },
     {
       "make": "Hyundai",
       "make_citation": "https://www.cardekho.com/cars/Hyundai",
       "model": "i20 N Line",
       "model_citation": "https://www.cardekho.com/hyundai/i20-n-line",
-      "variant_name": "i20 N Line 1.0 Turbo GDi MT",
-      "variant_name_citation": "https://www.cardekho.com/hyundai/i20-n-line",
+      "variant_name": "N6",
+      "variant_name_citation": "https://www.cardekho.com/overview/Hyundai_i20_N-Line/Hyundai_i20_N-Line_N6.htm",
       "ex_showroom_price": {
         "min": 921500,
-        "min_citation": "https://www.cardekho.com/hyundai/i20-n-line",
+        "min_citation": "https://www.cardekho.com/overview/Hyundai_i20_N-Line/Hyundai_i20_N-Line_N6.htm",
         "max": 921500,
-        "max_citation": "https://www.cardekho.com/hyundai/i20-n-line"
+        "max_citation": "https://www.cardekho.com/overview/Hyundai_i20_N-Line/Hyundai_i20_N-Line_N6.htm"
       },
       "fuel_type": "Petrol",
       "fuel_type_citation": "https://www.cardekho.com/hyundai/i20-n-line",
@@ -16227,9 +16227,9 @@
         }
       ],
       "availability_status": "on_sale",
-      "availability_status_citation": "https://www.cardekho.com/hyundai/i20-n-line",
-      "source_url": "https://www.cardekho.com/hyundai/i20-n-line",
-      "source_url_citation": "https://www.cardekho.com/hyundai/i20-n-line"
+      "availability_status_citation": "https://www.cardekho.com/overview/Hyundai_i20_N-Line/Hyundai_i20_N-Line_N6.htm",
+      "source_url": "https://www.cardekho.com/overview/Hyundai_i20_N-Line/Hyundai_i20_N-Line_N6.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Hyundai_i20_N-Line/Hyundai_i20_N-Line_N6.htm"
     },
     {
       "make": "Hyundai",

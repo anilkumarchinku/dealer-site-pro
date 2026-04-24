@@ -14,7 +14,7 @@ Audi,A4,Technology,5583000,Technology,5583000,0,MATCH,https://www.cardekho.com/a
 Audi,A6,45 TFSI Premium Plus,6481000,45 TFSI Premium Plus,6481000,0,MATCH,https://www.cardekho.com/audi/a6/variants.htm,https://www.cardekho.com/overview/Audi_A6/Audi_A6_45_TFSI_Premium_Plus.htm,
 Audi,A6,45 TFSI Technology,7166000,45 TFSI Technology,7166000,0,MATCH,https://www.cardekho.com/audi/a6/variants.htm,https://www.cardekho.com/overview/Audi_A6/Audi_A6_45_TFSI_Technology.htm,
 Audi,A8 L,Celebration,13413000,Celebration,13413000,0,MATCH,https://www.cardekho.com/audi/a8-l/variants.htm,https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Celebration.htm,
-Audi,A8 L,Celebration BSVI,13413000,Celebration BSVI,16257000,2844000,PRICE_MISMATCH,https://www.cardekho.com/audi/a8-l/variants.htm,https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Celebration_BSVI.htm,"Local ₹1,34,13,000 vs Cardekho ₹1,62,57,000"
+Audi,A8 L,Celebration BSVI,16257000,Celebration BSVI,16257000,0,MATCH,https://www.cardekho.com/audi/a8-l/variants.htm,https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Celebration_BSVI.htm,
 Audi,A8 L,Technology,16257000,,,,LOCAL_ONLY_VARIANT,https://www.cardekho.com/audi/a8-l/variants.htm,https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Technology.htm,Local variant not found on current Cardekho variants feed
 Audi,A8 L,Technology BSVI,16257000,,,,LOCAL_ONLY_VARIANT,https://www.cardekho.com/audi/a8-l/variants.htm,https://www.cardekho.com/overview/Audi_A8_L/Audi_A8_L_Technology_BSVI.htm,Local variant not found on current Cardekho variants feed
 Audi,e-tron GT,e-tron GT Quattro,17157000,Quattro,17157000,0,MATCH,https://www.cardekho.com/audi/e-tron-gt/variants.htm,https://www.cardekho.com/audi/e-tron-gt/specs,
@@ -35,9 +35,7 @@ Audi,Q3 Sportback,40 TFSI Technology,5390000,,,,LOCAL_ONLY_VARIANT,https://www.c
 Audi,Q3 Sportback,,,40TFSI Quattro,5371001,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/audi/q3-sportback/variants.htm,,Current Cardekho variant not found locally
 Audi,Q3 Sportback,,,40TFSI Quattro,5298000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/audi/q3-sportback/variants.htm,,Current Cardekho variant not found locally
 Audi,Q3 Sportback,,,Bold Edition,5298000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/audi/q3-sportback/variants.htm,,Current Cardekho variant not found locally
-Audi,Q3 Sportback,,,Bold Edition,5355000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/audi/q3-sportback/variants.htm,,Current Cardekho variant not found locally
 Audi,Q3 Sportback,,,Signature Line,5355000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/audi/q3-sportback/variants.htm,,Current Cardekho variant not found locally
-Audi,Q3 Sportback,,,Signature Line,5371001,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/audi/q3-sportback/variants.htm,,Current Cardekho variant not found locally
 Audi,Q5,Bold Edition,6986000,Bold Edition,6986000,0,MATCH,https://www.cardekho.com/audi/q5/variants.htm,https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Bold_Edition.htm,
 Audi,Q5,Premium Plus,6555000,Premium Plus,6555000,0,MATCH,https://www.cardekho.com/audi/q5/variants.htm,https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Premium_Plus.htm,
 Audi,Q5,Signature Line,6986000,Signature Line,6986000,0,MATCH,https://www.cardekho.com/audi/q5/variants.htm,https://www.cardekho.com/overview/Audi_Q5/Audi_Q5_Signature_Line.htm,
@@ -95,20 +93,19 @@ BMW,2 Series Gran Coupe,218 M Sport Pro,4770000,218 M Sport Pro,4770000,0,MATCH,
 BMW,3 Series,M340i 50 Jahre Edition,7285000,M340i 50 Jahre Edition,7285000,0,MATCH,https://www.cardekho.com/bmw/3-series/variants.htm,https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_50_Jahre_Edition.htm,
 BMW,3 Series,M340i xDrive,7540000,M340i xDrive,7540000,0,MATCH,https://www.cardekho.com/bmw/3-series/variants.htm,https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_xDrive.htm,
 BMW,3 Series Gran Limousine,330Li M Sport,6150000,,,,NO_PRICE_PARSED,https://www.cardekho.com/bmw/3-series-gran-limousine/variants.htm,https://www.cardekho.com/overview/BMW_3_Series_Long_Wheelbase/BMW_3_Series_Long_Wheelbase_330Li_M_Sport.htm,NO_PRICE_PARSED
-BMW,3 Series Gran Limousine,M340i 50 Jahre Edition,7285000,,,,NO_PRICE_PARSED,https://www.cardekho.com/bmw/3-series-gran-limousine/variants.htm,https://www.cardekho.com/bmw/3-series/variants.htm,NO_PRICE_PARSED
-BMW,3 Series Gran Limousine,M340i xDrive,7540000,,,,NO_PRICE_PARSED,https://www.cardekho.com/bmw/3-series-gran-limousine/variants.htm,https://www.cardekho.com/bmw/3-series/variants.htm,NO_PRICE_PARSED
+BMW,3 Series Gran Limousine,M340i 50 Jahre Edition,7285000,,,,NO_PRICE_PARSED,https://www.cardekho.com/bmw/3-series-gran-limousine/variants.htm,https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_50_Jahre_Edition.htm,NO_PRICE_PARSED
+BMW,3 Series Gran Limousine,M340i xDrive,7540000,,,,NO_PRICE_PARSED,https://www.cardekho.com/bmw/3-series-gran-limousine/variants.htm,https://www.cardekho.com/overview/BMW_3_Series/BMW_3_Series_M340i_xDrive.htm,NO_PRICE_PARSED
 BMW,5 Series,530Li,7480000,530Li,7480000,0,MATCH,https://www.cardekho.com/bmw/5-series/variants.htm,https://www.cardekho.com/bmw/5-series/variants.htm,
-BMW,6 Series GT,620d M Sport,7550000,,,,NO_PRICE_PARSED,https://www.cardekho.com/bmw/6-series-gt/variants.htm,https://www.cardekho.com/bmw/6-series-gt/variants.htm,NO_PRICE_PARSED
-BMW,6 Series GT,620d M Sport Signature,7890000,,,,NO_PRICE_PARSED,https://www.cardekho.com/bmw/6-series-gt/variants.htm,https://www.cardekho.com/bmw/6-series-gt/variants.htm,NO_PRICE_PARSED
-BMW,6 Series GT,630d M Sport,7990000,,,,NO_PRICE_PARSED,https://www.cardekho.com/bmw/6-series-gt/variants.htm,https://www.cardekho.com/bmw/6-series-gt/variants.htm,NO_PRICE_PARSED
-BMW,6 Series GT,630i M Sport,7350000,,,,NO_PRICE_PARSED,https://www.cardekho.com/bmw/6-series-gt/variants.htm,https://www.cardekho.com/bmw/6-series-gt/variants.htm,NO_PRICE_PARSED
+BMW,6 Series GT,620d M Sport,7550000,,,,NO_PRICE_PARSED,https://www.cardekho.com/bmw/6-series-gt/variants.htm,https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_620d_M_Sport.htm,NO_PRICE_PARSED
+BMW,6 Series GT,620d M Sport Signature,7890000,,,,NO_PRICE_PARSED,https://www.cardekho.com/bmw/6-series-gt/variants.htm,https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_620d_M_Sport_Signature.htm,NO_PRICE_PARSED
+BMW,6 Series GT,630d M Sport,7990000,,,,NO_PRICE_PARSED,https://www.cardekho.com/bmw/6-series-gt/variants.htm,https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630d_M_Sport.htm,NO_PRICE_PARSED
+BMW,6 Series GT,630i M Sport,7350000,,,,NO_PRICE_PARSED,https://www.cardekho.com/bmw/6-series-gt/variants.htm,https://www.cardekho.com/overview/BMW_6_Series/BMW_6_Series_GT_630i_M_Sport.htm,NO_PRICE_PARSED
 BMW,7 Series,740d M Sport,18300000,740d M Sport,18300000,0,MATCH,https://www.cardekho.com/bmw/7-series/variants.htm,https://www.cardekho.com/overview/BMW_7_Series/BMW_7_Series_740d_M_Sport.htm,
 BMW,7 Series,740i M Sport,18300000,740i M Sport,18300000,0,MATCH,https://www.cardekho.com/bmw/7-series/variants.htm,https://www.cardekho.com/overview/BMW_7_Series/BMW_7_Series_740i_M_Sport.htm,
 BMW,8 Series Gran Coupe,840i M Sport,12900000,,,,NO_PRICE_PARSED,https://www.cardekho.com/bmw/8-series-gran-coupe/variants.htm,https://www.cardekho.com/bmw/8-series-gran-coupe/variants.htm,NO_PRICE_PARSED
 BMW,8 Series Gran Coupe,M850i xDrive,16900000,,,,NO_PRICE_PARSED,https://www.cardekho.com/bmw/8-series-gran-coupe/variants.htm,https://www.cardekho.com/bmw/8-series-gran-coupe/variants.htm,NO_PRICE_PARSED
 BMW,i4,eDrive35 M Sport,7250000,eDrive35 M Sport,7250000,0,MATCH,https://www.cardekho.com/bmw/i4/variants.htm,https://www.cardekho.com/overview/BMW_i4/BMW_i4_eDrive35_M_Sport.htm,
-BMW,i4,,,eDrive40 M Sport,7750000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/bmw/i4/variants.htm,,Current Cardekho variant not found locally
-BMW,i4,,,eDrive40 M Sport,7250000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/bmw/i4/variants.htm,,Current Cardekho variant not found locally
+BMW,i4,eDrive40 M Sport,7750000,eDrive40 M Sport,7750000,0,MATCH,https://www.cardekho.com/bmw/i4/variants.htm,https://www.cardekho.com/overview/BMW_i4/BMW_i4_eDrive40_M_Sport.htm,
 BMW,i5,M60 xDrive,11950000,M60 xDrive,11950000,0,MATCH,https://www.cardekho.com/bmw/i5/variants.htm,https://www.cardekho.com/overview/BMW_i5/BMW_i5_M60_xDrive.htm,
 BMW,i7,eDrive50 M Sport,20500000,eDrive50 M Sport,20500000,0,MATCH,https://www.cardekho.com/bmw/i7/variants.htm,https://www.cardekho.com/bmw/i7/variants.htm,
 BMW,i7,M70 xDrive,25800000,M70 xDrive,25800000,0,MATCH,https://www.cardekho.com/bmw/i7/variants.htm,https://www.cardekho.com/bmw/i7/variants.htm,
@@ -127,32 +124,27 @@ BMW,M4,Competition xDrive,15500000,,,,NO_PRICE_PARSED,https://www.cardekho.com/b
 BMW,M4,CS xDrive,17900000,,,,NO_PRICE_PARSED,https://www.cardekho.com/bmw/m4/variants.htm,https://www.cardekho.com/bmw/m4/variants.htm,NO_PRICE_PARSED
 BMW,M4 Competition,xDrive,15550000,xDrive,15550000,0,MATCH,https://www.cardekho.com/bmw/m4-competition/variants.htm,https://www.cardekho.com/overview/BMW_M4_Competition/BMW_M4_Competition_xDrive.htm,
 BMW,M5,xDrive,20500000,xDrive,20500000,0,MATCH,https://www.cardekho.com/bmw/m5/variants.htm,https://www.cardekho.com/overview/BMW_M5/BMW_M5_xDrive.htm,
-BMW,M8,Coupe Competition 50 Jahre,23840000,,,,NO_PRICE_PARSED,https://www.cardekho.com/bmw/m8/variants.htm,https://www.cardekho.com/bmw/m8/variants.htm,NO_PRICE_PARSED
+BMW,M8,50 Jahre M Edition,23840000,,,,NO_PRICE_PARSED,https://www.cardekho.com/bmw/m8/variants.htm,https://www.cardekho.com/overview/BMW_M8_Coupe_Competition/BMW_M8_Coupe_Competition_50_Jahre_M_Edition.htm,NO_PRICE_PARSED
 BMW,M8 Coupe Competition,Coupe Competition 50 Jahre,23840000,50 Jahre M Edition,23840000,0,MATCH,https://www.cardekho.com/bmw/m8-coupe-competition/variants.htm,https://www.cardekho.com/bmw/m8/variants.htm,
 BMW,X1,sDrive18d M Sport,5220000,sDrive18d M Sport,5220000,0,MATCH,https://www.cardekho.com/bmw/x1/variants.htm,https://www.cardekho.com/bmw/x1/variants.htm,
 BMW,X1,sDrive18i M Sport,5090000,sDrive18i M Sport,5090000,0,MATCH,https://www.cardekho.com/bmw/x1/variants.htm,https://www.cardekho.com/bmw/x1/variants.htm,
 BMW,X3,xDrive 20 M Sport,7250000,xDrive 20 M Sport,7250000,0,MATCH,https://www.cardekho.com/bmw/x3/variants.htm,https://www.cardekho.com/overview/BMW_X3/BMW_X3_xDrive_20_M_Sport.htm,
-BMW,X3,,,xDrive 20d M Sport,7450000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/bmw/x3/variants.htm,,Current Cardekho variant not found locally
-BMW,X3,,,xDrive 30 M Sport Pro,7450000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/bmw/x3/variants.htm,,Current Cardekho variant not found locally
+BMW,X3,xDrive 20d M Sport,7450000,xDrive 20d M Sport,7450000,0,MATCH,https://www.cardekho.com/bmw/x3/variants.htm,https://www.cardekho.com/overview/BMW_X3/BMW_X3_xDrive_20d_M_Sport.htm,
+BMW,X3,xDrive 30 M Sport Pro,7450000,xDrive 30 M Sport Pro,7450000,0,MATCH,https://www.cardekho.com/bmw/x3/variants.htm,https://www.cardekho.com/overview/BMW_X3/BMW_X3_xDrive_30_M_Sport_Pro.htm,
 BMW,X4,M40i,9620000,M40i,9620000,0,MATCH,https://www.cardekho.com/bmw/x4/variants.htm,https://www.cardekho.com/overview/BMW_X4/BMW_X4_M40i.htm,
-BMW,X5,,,xDrive30d M Sport,10500000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/bmw/x5/variants.htm,,Current Cardekho variant not found locally
-BMW,X5,,,xDrive30d xLine,9550000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/bmw/x5/variants.htm,,Current Cardekho variant not found locally
-BMW,X5,,,xDrive30d xLine,10320000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/bmw/x5/variants.htm,,Current Cardekho variant not found locally
-BMW,X5,,,xDrive40i M Sport,10320000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/bmw/x5/variants.htm,,Current Cardekho variant not found locally
-BMW,X5,,,xDrive40i M Sport,10500000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/bmw/x5/variants.htm,,Current Cardekho variant not found locally
+BMW,X5,xDrive30d M Sport,10500000,xDrive30d M Sport,10500000,0,MATCH,https://www.cardekho.com/bmw/x5/variants.htm,https://www.cardekho.com/overview/BMW_X5/BMW_X5_xDrive30d_M_Sport.htm,
+BMW,X5,xDrive30d xLine,9550000,xDrive30d xLine,9550000,0,MATCH,https://www.cardekho.com/bmw/x5/variants.htm,https://www.cardekho.com/overview/BMW_X5/BMW_X5_xDrive30d_xLine.htm,
+BMW,X5,xDrive40i M Sport,10320000,xDrive40i M Sport,10320000,0,MATCH,https://www.cardekho.com/bmw/x5/variants.htm,https://www.cardekho.com/overview/BMW_X5/BMW_X5_xDrive40i_M_Sport.htm,
 BMW,X5,xDrive40i xLine,9370000,xDrive40i xLine,9370000,0,MATCH,https://www.cardekho.com/bmw/x5/variants.htm,https://www.cardekho.com/overview/BMW_X5/BMW_X5_xDrive40i_xLine.htm,
 BMW,X5 M Competition,Competition,20790000,,,,NO_PRICE_PARSED,https://www.cardekho.com/bmw/x5-m-competition/variants.htm,https://www.cardekho.com/overview/BMW_X5_M_Competition/BMW_X5_M_Competition.htm,NO_PRICE_PARSED
-BMW,X7,,,xDrive40d Design Pure Excellence,12800000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/bmw/x7/variants.htm,,Current Cardekho variant not found locally
-BMW,X7,,,xDrive40d M Sport,13170000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/bmw/x7/variants.htm,,Current Cardekho variant not found locally
-BMW,X7,,,xDrive40i M Sport,12800000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/bmw/x7/variants.htm,,Current Cardekho variant not found locally
-BMW,X7,,,xDrive40i M Sport,13170000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/bmw/x7/variants.htm,,Current Cardekho variant not found locally
+BMW,X7,xDrive40d Design Pure Excellence,12800000,xDrive40d Design Pure Excellence,12800000,0,MATCH,https://www.cardekho.com/bmw/x7/variants.htm,https://www.cardekho.com/overview/BMW_X7/BMW_X7_xDrive40d_Design_Pure_Excellence.htm,
+BMW,X7,xDrive40d M Sport,13170000,xDrive40d M Sport,13170000,0,MATCH,https://www.cardekho.com/bmw/x7/variants.htm,https://www.cardekho.com/overview/BMW_X7/BMW_X7_xDrive40d_M_Sport.htm,
+BMW,X7,xDrive40i M Sport,12800000,xDrive40i M Sport,12800000,0,MATCH,https://www.cardekho.com/bmw/x7/variants.htm,https://www.cardekho.com/overview/BMW_X7/BMW_X7_xDrive40i_M_Sport.htm,
 BMW,X7,xDrive40i M Sport Signature,12581000,xDrive40i M Sport Signature,12581000,0,MATCH,https://www.cardekho.com/bmw/x7/variants.htm,https://www.cardekho.com/overview/BMW_X7/BMW_X7_xDrive40i_M_Sport_Signature.htm,
 BMW,XM,xDrive,25455000,xDrive,25455000,0,MATCH,https://www.cardekho.com/bmw/xm/variants.htm,https://www.cardekho.com/overview/BMW_XM/BMW_XM_xDrive.htm,
 BMW,Z4,M40i,9050000,M40i,9050000,0,MATCH,https://www.cardekho.com/bmw/z4/variants.htm,https://www.cardekho.com/overview/BMW_Z4/BMW_Z4_M40i.htm,
-BMW,Z4,,,M40i Pure Impulse,9520000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/bmw/z4/variants.htm,,Current Cardekho variant not found locally
-BMW,Z4,,,M40i Pure Impulse,9050000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/bmw/z4/variants.htm,,Current Cardekho variant not found locally
-BMW,Z4,,,M40i Pure Impulse AT,9170000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/bmw/z4/variants.htm,,Current Cardekho variant not found locally
-BMW,Z4,,,M40i Pure Impulse AT,9520000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/bmw/z4/variants.htm,,Current Cardekho variant not found locally
+BMW,Z4,M40i Pure Impulse,9520000,M40i Pure Impulse,9520000,0,MATCH,https://www.cardekho.com/bmw/z4/variants.htm,https://www.cardekho.com/overview/BMW_Z4/BMW_Z4_M40i_Pure_Impulse.htm,
+BMW,Z4,M40i Pure Impulse AT,9170000,M40i Pure Impulse AT,9170000,0,MATCH,https://www.cardekho.com/bmw/z4/variants.htm,https://www.cardekho.com/overview/BMW_Z4/BMW_Z4_M40i_Pure_Impulse_AT.htm,
 BYD,Atto 3,Dynamic,2499000,Dynamic,2499000,0,MATCH,https://www.cardekho.com/byd/atto-3/variants.htm,,
 BYD,Atto 3,Premium,2985000,Premium,2985000,0,MATCH,https://www.cardekho.com/byd/atto-3/variants.htm,,
 BYD,Atto 3,Superior,3399000,Superior,3399000,0,MATCH,https://www.cardekho.com/byd/atto-3/variants.htm,,
@@ -372,11 +364,11 @@ Hyundai,Creta,,,King DT,1741500,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/
 Hyundai,Creta,,,King iVT,1868000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/hyundai/creta/variants.htm,,Current Cardekho variant not found locally
 Hyundai,Creta,,,King iVT,1880000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/hyundai/creta/variants.htm,,Current Cardekho variant not found locally
 Hyundai,Creta,,,King iVT DT,1882500,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/hyundai/creta/variants.htm,,Current Cardekho variant not found locally
+Hyundai,Creta,,,King iVT DT,1894500,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/hyundai/creta/variants.htm,,Current Cardekho variant not found locally
 Hyundai,Creta,King Knight CVT,1882000,,,,LOCAL_ONLY_VARIANT,https://www.cardekho.com/hyundai/creta/variants.htm,https://www.cardekho.com/hyundai/creta/variants,Local variant not found on current Cardekho variants feed
 Hyundai,Creta,King Knight Diesel AT,2005500,King Knight Diesel AT,2005500,0,MATCH,https://www.cardekho.com/hyundai/creta/variants.htm,https://www.cardekho.com/hyundai/creta/variants,
 Hyundai,Creta,,,King Knight Diesel AT DT,2020000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/hyundai/creta/variants.htm,,Current Cardekho variant not found locally
 Hyundai,Creta,,,King Knight iVT,1882500,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/hyundai/creta/variants.htm,,Current Cardekho variant not found locally
-Hyundai,Creta,,,King Knight iVT,1894500,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/hyundai/creta/variants.htm,,Current Cardekho variant not found locally
 Hyundai,Creta,,,King Knight iVT DT,1897000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/hyundai/creta/variants.htm,,Current Cardekho variant not found locally
 Hyundai,Creta,,,King Knight iVT DT,1930931,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/hyundai/creta/variants.htm,,Current Cardekho variant not found locally
 Hyundai,Creta,King Limited Edition CVT,1897000,,,,LOCAL_ONLY_VARIANT,https://www.cardekho.com/hyundai/creta/variants.htm,https://www.cardekho.com/hyundai/creta/variants,Local variant not found on current Cardekho variants feed
@@ -479,14 +471,13 @@ Hyundai,Creta,,,SX Tech iVT,1714946,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.
 Hyundai,Creta,,,SX Tech iVT DT,1729000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/hyundai/creta/variants.htm,,Current Cardekho variant not found locally
 Hyundai,Creta,,,SX Tech iVT DT,1737000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/hyundai/creta/variants.htm,,Current Cardekho variant not found locally
 Hyundai,Creta,SX Tech MT,1569500,SX Tech,1569500,0,MATCH,https://www.cardekho.com/hyundai/creta/variants.htm,https://www.cardekho.com/hyundai/creta/variants,
-Hyundai,Creta EV,Excellence LR,2469500,,,,NO_PRICE_PARSED,https://www.cardekho.com/hyundai/creta-ev/variants.htm,https://www.cardekho.com/hyundai/creta-ev,NO_PRICE_PARSED
-Hyundai,Creta EV,Executive,1802200,,,,NO_PRICE_PARSED,https://www.cardekho.com/hyundai/creta-ev/variants.htm,https://www.cardekho.com/hyundai/creta-ev,NO_PRICE_PARSED
-Hyundai,Creta EV,Smart,1999000,,,,NO_PRICE_PARSED,https://www.cardekho.com/hyundai/creta-ev/variants.htm,https://www.cardekho.com/hyundai/creta-ev,NO_PRICE_PARSED
+Hyundai,Creta EV,Excellence LR,2469500,,,,NO_PRICE_PARSED,https://www.cardekho.com/hyundai/creta-electric/variants.htm,https://www.cardekho.com/overview/Hyundai_Creta_Electric/Hyundai_Creta_Electric_Excellence_LR.htm,NO_PRICE_PARSED
+Hyundai,Creta EV,Executive,1802200,,,,NO_PRICE_PARSED,https://www.cardekho.com/hyundai/creta-electric/variants.htm,https://www.cardekho.com/overview/Hyundai_Creta_Electric/Hyundai_Creta_Electric_Executive.htm,NO_PRICE_PARSED
+Hyundai,Creta EV,Smart,1999000,,,,NO_PRICE_PARSED,https://www.cardekho.com/hyundai/creta-electric/variants.htm,https://www.cardekho.com/overview/Hyundai_Creta_Electric/Hyundai_Creta_Electric_Smart.htm,NO_PRICE_PARSED
 Hyundai,Creta N Line,,,N10,1902500,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/hyundai/creta-n-line/variants.htm,,Current Cardekho variant not found locally
 Hyundai,Creta N Line,N10 DCT,1995000,N10 DCT,1995000,0,MATCH,https://www.cardekho.com/hyundai/creta-n-line/variants.htm,https://www.cardekho.com/hyundai/creta-n-line/variants,
 Hyundai,Creta N Line,,,N10 DCT Dual Tone,2009500,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/hyundai/creta-n-line/variants.htm,,Current Cardekho variant not found locally
 Hyundai,Creta N Line,,,N10 Dual Tone,1917000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/hyundai/creta-n-line/variants.htm,,Current Cardekho variant not found locally
-Hyundai,Creta N Line,,,N10 Dual Tone,1995000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/hyundai/creta-n-line/variants.htm,,Current Cardekho variant not found locally
 Hyundai,Creta N Line,N6 DCT,1873000,,,,LOCAL_ONLY_VARIANT,https://www.cardekho.com/hyundai/creta-n-line/variants.htm,https://www.cardekho.com/hyundai/creta-n-line/variants,Local variant not found on current Cardekho variants feed
 Hyundai,Creta N Line,N6 MT,1783000,,,,LOCAL_ONLY_VARIANT,https://www.cardekho.com/hyundai/creta-n-line/variants.htm,https://www.cardekho.com/hyundai/creta-n-line/variants,Local variant not found on current Cardekho variants feed
 Hyundai,Creta N Line,N8 DCT,1783000,N8 DCT,1783000,0,MATCH,https://www.cardekho.com/hyundai/creta-n-line/variants.htm,https://www.cardekho.com/overview/Hyundai_Creta_N_Line/Hyundai_Creta_N_Line_N8_DCT.htm,
@@ -610,9 +601,7 @@ Hyundai,i20,,,Sportz Opt IVT,931500,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.
 Hyundai,i20,,,Sportz Opt Knight,837000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/hyundai/i20/variants.htm,,Current Cardekho variant not found locally
 Hyundai,i20,,,Sportz Opt Knight,861500,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/hyundai/i20/variants.htm,,Current Cardekho variant not found locally
 Hyundai,i20 N Line,i20 N Line 1.0 Turbo GDi DCT,1247000,,,,LOCAL_ONLY_VARIANT,https://www.cardekho.com/hyundai/i20-n-line/variants.htm,https://www.cardekho.com/hyundai/i20-n-line,Local variant not found on current Cardekho variants feed
-Hyundai,i20 N Line,i20 N Line 1.0 Turbo GDi MT,921500,,,,LOCAL_ONLY_VARIANT,https://www.cardekho.com/hyundai/i20-n-line/variants.htm,https://www.cardekho.com/hyundai/i20-n-line,Local variant not found on current Cardekho variants feed
-Hyundai,i20 N Line,,,N6,921500,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/hyundai/i20-n-line/variants.htm,,Current Cardekho variant not found locally
-Hyundai,i20 N Line,,,N6,932468,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/hyundai/i20-n-line/variants.htm,,Current Cardekho variant not found locally
+Hyundai,i20 N Line,N6,921500,N6,921500,0,MATCH,https://www.cardekho.com/hyundai/i20-n-line/variants.htm,https://www.cardekho.com/overview/Hyundai_i20_N-Line/Hyundai_i20_N-Line_N6.htm,
 Hyundai,i20 N Line,,,N6 DCT,1023391,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/hyundai/i20-n-line/variants.htm,,Current Cardekho variant not found locally
 Hyundai,i20 N Line,,,N6 DCT Dual Tone,1037111,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/hyundai/i20-n-line/variants.htm,,Current Cardekho variant not found locally
 Hyundai,i20 N Line,,,N6 DCT Dual Tone,1052500,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/hyundai/i20-n-line/variants.htm,,Current Cardekho variant not found locally
@@ -724,29 +713,19 @@ Hyundai,Venue N Line,N6 DCT,1155400,N6 DCT,1155400,0,MATCH,https://www.cardekho.
 Hyundai,Venue N Line,N6 DCT Dual Tone,1173400,N6 DCT Dual Tone,1173400,0,MATCH,https://www.cardekho.com/hyundai/venue-n-line/variants.htm,https://www.cardekho.com/hyundai/venue-n-line/variants.htm,
 Hyundai,Venue N Line,N6 Dual Tone,1083400,N6 Dual Tone,1083400,0,MATCH,https://www.cardekho.com/hyundai/venue-n-line/variants.htm,https://www.cardekho.com/hyundai/venue-n-line/variants.htm,
 Hyundai,Verna,EX,1079500,,,,LOCAL_ONLY_VARIANT,https://www.cardekho.com/hyundai/verna/variants.htm,https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_EX.htm,Local variant not found on current Cardekho variants feed
-Hyundai,Verna,,,HX10 iVT,1715400,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/hyundai/verna/variants.htm,,Current Cardekho variant not found locally
-Hyundai,Verna,,,HX10 iVT,1730400,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/hyundai/verna/variants.htm,,Current Cardekho variant not found locally
+Hyundai,Verna,HX10 iVT,1715400,HX10 iVT,1715400,0,MATCH,https://www.cardekho.com/hyundai/verna/variants.htm,https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_HX10_iVT.htm,
 Hyundai,Verna,,,HX10 iVT DT,1730400,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/hyundai/verna/variants.htm,,Current Cardekho variant not found locally
 Hyundai,Verna,,,HX10 iVT DT,1762400,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/hyundai/verna/variants.htm,,Current Cardekho variant not found locally
-Hyundai,Verna,HX10 Turbo CVT,1715000,,,,LOCAL_ONLY_VARIANT,https://www.cardekho.com/hyundai/verna/variants.htm,https://www.cardekho.com/hyundai/verna/variants,Local variant not found on current Cardekho variants feed
 Hyundai,Verna,HX10 Turbo DCT,1825400,HX10 Turbo DCT,1825400,0,MATCH,https://www.cardekho.com/hyundai/verna/variants.htm,https://www.cardekho.com/hyundai/verna/variants,
 Hyundai,Verna,,,HX10 Turbo DCT DT,1840400,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/hyundai/verna/variants.htm,,Current Cardekho variant not found locally
-Hyundai,Verna,,,HX2,1098400,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/hyundai/verna/variants.htm,,Current Cardekho variant not found locally
-Hyundai,Verna,,,HX2,1225400,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/hyundai/verna/variants.htm,,Current Cardekho variant not found locally
-Hyundai,Verna,HX2 MT,1098000,,,,LOCAL_ONLY_VARIANT,https://www.cardekho.com/hyundai/verna/variants.htm,https://www.cardekho.com/hyundai/verna/variants,Local variant not found on current Cardekho variants feed
-Hyundai,Verna,,,HX4,1225400,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/hyundai/verna/variants.htm,,Current Cardekho variant not found locally
-Hyundai,Verna,,,HX4,1319400,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/hyundai/verna/variants.htm,,Current Cardekho variant not found locally
-Hyundai,Verna,HX4 MT,1224000,,,,LOCAL_ONLY_VARIANT,https://www.cardekho.com/hyundai/verna/variants.htm,https://www.cardekho.com/hyundai/verna/variants,Local variant not found on current Cardekho variants feed
-Hyundai,Verna,,,HX6,1319400,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/hyundai/verna/variants.htm,,Current Cardekho variant not found locally
-Hyundai,Verna,,,HX6,1334400,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/hyundai/verna/variants.htm,,Current Cardekho variant not found locally
-Hyundai,Verna,HX6 CVT,1440000,,,,LOCAL_ONLY_VARIANT,https://www.cardekho.com/hyundai/verna/variants.htm,https://www.cardekho.com/hyundai/verna/variants,Local variant not found on current Cardekho variants feed
+Hyundai,Verna,HX2,1098400,HX2,1098400,0,MATCH,https://www.cardekho.com/hyundai/verna/variants.htm,https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_HX2.htm,
+Hyundai,Verna,HX4,1225400,HX4,1225400,0,MATCH,https://www.cardekho.com/hyundai/verna/variants.htm,https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_HX4.htm,
+Hyundai,Verna,HX6,1319400,HX6,1319400,0,MATCH,https://www.cardekho.com/hyundai/verna/variants.htm,https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_HX6.htm,
 Hyundai,Verna,,,HX6 DT,1334400,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/hyundai/verna/variants.htm,,Current Cardekho variant not found locally
 Hyundai,Verna,,,HX6 DT,1381400,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/hyundai/verna/variants.htm,,Current Cardekho variant not found locally
-Hyundai,Verna,,,HX6 iVT,1440400,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/hyundai/verna/variants.htm,,Current Cardekho variant not found locally
-Hyundai,Verna,,,HX6 iVT,1455400,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/hyundai/verna/variants.htm,,Current Cardekho variant not found locally
+Hyundai,Verna,HX6 iVT,1440400,HX6 iVT,1440400,0,MATCH,https://www.cardekho.com/hyundai/verna/variants.htm,https://www.cardekho.com/overview/Hyundai_Verna/Hyundai_Verna_HX6_iVT.htm,
 Hyundai,Verna,,,HX6 iVT DT,1455400,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/hyundai/verna/variants.htm,,Current Cardekho variant not found locally
 Hyundai,Verna,,,HX6 iVT DT,1488400,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/hyundai/verna/variants.htm,,Current Cardekho variant not found locally
-Hyundai,Verna,HX6 MT,1319000,,,,LOCAL_ONLY_VARIANT,https://www.cardekho.com/hyundai/verna/variants.htm,https://www.cardekho.com/hyundai/verna/variants,Local variant not found on current Cardekho variants feed
 Hyundai,Verna,,,HX6 Plus,1381400,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/hyundai/verna/variants.htm,,Current Cardekho variant not found locally
 Hyundai,Verna,,,HX6 Plus,1396400,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/hyundai/verna/variants.htm,,Current Cardekho variant not found locally
 Hyundai,Verna,HX6 Plus CVT,1502000,,,,LOCAL_ONLY_VARIANT,https://www.cardekho.com/hyundai/verna/variants.htm,https://www.cardekho.com/hyundai/verna/variants,Local variant not found on current Cardekho variants feed
@@ -1131,8 +1110,12 @@ Land Rover,Range Rover Evoque,Autobiography Diesel,6486000,Autobiography Diesel,
 Land Rover,Range Rover Sport,3.0 l Diesel Dynamic HSE,13766000,3.0 l Diesel Dynamic HSE,13766000,0,MATCH,https://www.cardekho.com/land-rover/range-rover-sport/variants.htm,https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_Diesel_Dynamic_HSE.htm,
 Land Rover,Range Rover Sport,3.0 l Petrol Dynamic HSE,13766000,3.0 l Petrol Dynamic HSE,13766000,0,MATCH,https://www.cardekho.com/land-rover/range-rover-sport/variants.htm,https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_Petrol_Dynamic_HSE.htm,
 Land Rover,Range Rover Sport,3.0 l PHEV Autobiography,19600001,3.0 l PHEV Autobiography,19600001,0,MATCH,https://www.cardekho.com/land-rover/range-rover-sport/variants.htm,https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_3.0_l_PHEV_Autobiography.htm,
+Land Rover,Range Rover Sport,,,3.0l Autobiography Petrol,15990000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/land-rover/range-rover-sport/variants.htm,,Current Cardekho variant not found locally
+Land Rover,Range Rover Sport,,,3.0l Autobiography Petrol,15990000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/land-rover/range-rover-sport/variants.htm,,Current Cardekho variant not found locally
 Land Rover,Range Rover Sport,4.4 l Autobiography,19740000,4.4 l Autobiography,19740000,0,MATCH,https://www.cardekho.com/land-rover/range-rover-sport/variants.htm,https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_4.4_l_Autobiography.htm,
 Land Rover,Range Rover Sport,4.4 l SV Edition Two,27533000,4.4 l SV Edition Two,27533000,0,MATCH,https://www.cardekho.com/land-rover/range-rover-sport/variants.htm,https://www.cardekho.com/overview/Land_Rover_Range_Rover_Sport/Land_Rover_Range_Rover_Sport_4.4_l_SV_Edition_Two.htm,
+Land Rover,Range Rover Sport,,,Land Rover  3.0l Autobiography Diesel,15990000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/land-rover/range-rover-sport/variants.htm,,Current Cardekho variant not found locally
+Land Rover,Range Rover Sport,,,Land Rover  3.0l Autobiography Diesel,15990000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/land-rover/range-rover-sport/variants.htm,,Current Cardekho variant not found locally
 Land Rover,Range Rover Velar,2.0 l Diesel Autobiography,8390000,,,,LOCAL_ONLY_VARIANT,https://www.cardekho.com/land-rover/range-rover-velar/variants.htm,https://www.cardekho.com/overview/Land_Rover_Range_Rover_Velar/Land_Rover_Range_Rover_Velar_2.0_l_Diesel_Autobiography.htm,Local variant not found on current Cardekho variants feed
 Land Rover,Range Rover Velar,2.0 l Petrol Autobiography,8390000,,,,LOCAL_ONLY_VARIANT,https://www.cardekho.com/land-rover/range-rover-velar/variants.htm,https://www.cardekho.com/overview/Land_Rover_Range_Rover_Velar/Land_Rover_Range_Rover_Velar_2.0_l_Petrol_Autobiography.htm,Local variant not found on current Cardekho variants feed
 Land Rover,Range Rover Velar,,,Land Rover  2.0 l Diesel Autobiography,8590000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/land-rover/range-rover-velar/variants.htm,,Current Cardekho variant not found locally
@@ -1191,14 +1174,12 @@ Mahindra,BE 6,Pack Three 79 kWh 7.2 kW Charger,2740000,,,,LOCAL_ONLY_VARIANT,htt
 Mahindra,BE 6,,,Pack Three 79kwh 11.2kw Charger,2765000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/mahindra/be-6/variants.htm,,Current Cardekho variant not found locally
 Mahindra,BE 6,,,Pack Three 79kwh 11.2kw Charger,2849000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/mahindra/be-6/variants.htm,,Current Cardekho variant not found locally
 Mahindra,BE 6,,,Pack Three 79kwh 7.2kw Charger,2740000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/mahindra/be-6/variants.htm,,Current Cardekho variant not found locally
-Mahindra,BE 6,,,Pack Three 79kwh 7.2kw Charger,2765000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/mahindra/be-6/variants.htm,,Current Cardekho variant not found locally
 Mahindra,BE 6,Pack Three Select,2450001,Pack Three Select,2450001,0,MATCH,https://www.cardekho.com/mahindra/be-6/variants.htm,https://www.cardekho.com/mahindra/be-6/price-in-hyderabad,
 Mahindra,BE 6,Pack Three Select 11.2 kW Charger,2525001,,,,LOCAL_ONLY_VARIANT,https://www.cardekho.com/mahindra/be-6/variants.htm,https://www.cardekho.com/mahindra/be-6/price-in-hyderabad,Local variant not found on current Cardekho variants feed
 Mahindra,BE 6,,,Pack Three Select 11.2kw Charger,2525000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/mahindra/be-6/variants.htm,,Current Cardekho variant not found locally
 Mahindra,BE 6,,,Pack Three Select 11.2kw Charger,2690000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/mahindra/be-6/variants.htm,,Current Cardekho variant not found locally
 Mahindra,BE 6,Pack Three Select 7.2 kW Charger,2500000,,,,LOCAL_ONLY_VARIANT,https://www.cardekho.com/mahindra/be-6/variants.htm,https://www.cardekho.com/mahindra/be-6/price-in-hyderabad,Local variant not found on current Cardekho variants feed
 Mahindra,BE 6,,,Pack Three Select 7.2kw Charger,2500000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/mahindra/be-6/variants.htm,,Current Cardekho variant not found locally
-Mahindra,BE 6,,,Pack Three Select 7.2kw Charger,2525000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/mahindra/be-6/variants.htm,,Current Cardekho variant not found locally
 Mahindra,BE 6,,,Pack Two,2190001,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/mahindra/be-6/variants.htm,,Current Cardekho variant not found locally
 Mahindra,BE 6,,,Pack Two,2240000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/mahindra/be-6/variants.htm,,Current Cardekho variant not found locally
 Mahindra,BE 6,Pack Two (Base),2190001,,,,LOCAL_ONLY_VARIANT,https://www.cardekho.com/mahindra/be-6/variants.htm,https://www.cardekho.com/mahindra/be-6/price-in-hyderabad,Local variant not found on current Cardekho variants feed
@@ -5205,15 +5186,12 @@ Tata,Harrier EV,,,Empowered 75,2798000,,CARDEKHO_ONLY_VARIANT,https://www.cardek
 Tata,Harrier EV,,,Empowered 75 ACFC,2798000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/harrier-ev/variants.htm,,Current Cardekho variant not found locally
 Tata,Harrier EV,,,Empowered 75 ACFC,2824000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/harrier-ev/variants.htm,,Current Cardekho variant not found locally
 Tata,Harrier EV,,,Empowered 75 Stealth,2824000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/harrier-ev/variants.htm,,Current Cardekho variant not found locally
-Tata,Harrier EV,,,Empowered 75 Stealth,2873000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/harrier-ev/variants.htm,,Current Cardekho variant not found locally
 Tata,Harrier EV,,,Empowered 75 Stealth ACFC,2873000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/harrier-ev/variants.htm,,Current Cardekho variant not found locally
 Tata,Harrier EV,,,Empowered 75 Stealth ACFC,2899000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/harrier-ev/variants.htm,,Current Cardekho variant not found locally
 Tata,Harrier EV,,,Empowered QWD 75,2899000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/harrier-ev/variants.htm,,Current Cardekho variant not found locally
 Tata,Harrier EV,,,Empowered QWD 75,2948000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/harrier-ev/variants.htm,,Current Cardekho variant not found locally
 Tata,Harrier EV,,,Empowered QWD 75 ACFC,2948000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/harrier-ev/variants.htm,,Current Cardekho variant not found locally
-Tata,Harrier EV,,,Empowered QWD 75 ACFC,2974000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/harrier-ev/variants.htm,,Current Cardekho variant not found locally
 Tata,Harrier EV,,,Empowered QWD 75 Stealth,2974000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/harrier-ev/variants.htm,,Current Cardekho variant not found locally
-Tata,Harrier EV,,,Empowered QWD 75 Stealth,3023000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/harrier-ev/variants.htm,,Current Cardekho variant not found locally
 Tata,Harrier EV,,,Empowered QWD 75 Stealth ACFC,3023000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/harrier-ev/variants.htm,,Current Cardekho variant not found locally
 Tata,Harrier EV,,,Empowered QWD 75 Stealth ACFC,2149000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/harrier-ev/variants.htm,,Current Cardekho variant not found locally
 Tata,Harrier EV,,,Fearless Plus 65,2399000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/harrier-ev/variants.htm,,Current Cardekho variant not found locally
@@ -5225,7 +5203,6 @@ Tata,Harrier EV,,,Fearless Plus 75,2548000,,CARDEKHO_ONLY_VARIANT,https://www.ca
 Tata,Harrier EV,,,Fearless Plus 75 ACFC,2548000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/harrier-ev/variants.htm,,Current Cardekho variant not found locally
 Tata,Harrier EV,,,Fearless Plus 75 ACFC,2649000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/harrier-ev/variants.htm,,Current Cardekho variant not found locally
 Tata,Harrier EV,,,Fearless Plus QWD 75,2649000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/harrier-ev/variants.htm,,Current Cardekho variant not found locally
-Tata,Harrier EV,,,Fearless Plus QWD 75,2698000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/harrier-ev/variants.htm,,Current Cardekho variant not found locally
 Tata,Harrier EV,,,Fearless Plus QWD 75 ACFC,2698000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/harrier-ev/variants.htm,,Current Cardekho variant not found locally
 Tata,Harrier EV,,,Fearless Plus QWD 75 ACFC,2749000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/harrier-ev/variants.htm,,Current Cardekho variant not found locally
 Tata,Harrier EV,Harrier EV Adventure 65,2149000,,,,LOCAL_ONLY_VARIANT,https://www.cardekho.com/tata/harrier-ev/variants.htm,https://www.cardekho.com/tata/harrier-ev,Local variant not found on current Cardekho variants feed
@@ -5242,8 +5219,6 @@ Tata,Nexon,,,Creative AMT,1076990,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.co
 Tata,Nexon,,,Creative DCA,1124990,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/nexon/variants.htm,,Current Cardekho variant not found locally
 Tata,Nexon,,,Creative Diesel,1124990,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/nexon/variants.htm,,Current Cardekho variant not found locally
 Tata,Nexon,,,Creative Diesel,1125190,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/nexon/variants.htm,,Current Cardekho variant not found locally
-Tata,Nexon,,,Creative Diesel AMT,1184990,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/nexon/variants.htm,,Current Cardekho variant not found locally
-Tata,Nexon,,,Creative Diesel AMT,1186990,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/nexon/variants.htm,,Current Cardekho variant not found locally
 Tata,Nexon,,,Creative Plus PS Dark,1171990,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/nexon/variants.htm,,Current Cardekho variant not found locally
 Tata,Nexon,,,Creative Plus PS Dark,1184990,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/nexon/variants.htm,,Current Cardekho variant not found locally
 Tata,Nexon,,,Creative Plus PS Dark CNG,1253290,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/nexon/variants.htm,,Current Cardekho variant not found locally
@@ -5256,7 +5231,6 @@ Tata,Nexon,,,Creative Plus PS DT,1146990,,CARDEKHO_ONLY_VARIANT,https://www.card
 Tata,Nexon,,,Creative Plus PS DT CNG,1216690,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/nexon/variants.htm,,Current Cardekho variant not found locally
 Tata,Nexon,,,Creative Plus PS DT CNG,1234990,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/nexon/variants.htm,,Current Cardekho variant not found locally
 Tata,Nexon,,,Creative Plus PS DT DCA,1234990,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/nexon/variants.htm,,Current Cardekho variant not found locally
-Tata,Nexon,,,Creative Plus PS DT DCA,1241990,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/nexon/variants.htm,,Current Cardekho variant not found locally
 Tata,Nexon,,,Creative Plus PS DT Diesel,1241990,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/nexon/variants.htm,,Current Cardekho variant not found locally
 Tata,Nexon,,,Creative Plus PS DT Diesel,1244990,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/nexon/variants.htm,,Current Cardekho variant not found locally
 Tata,Nexon,,,Creative Plus PS DT Diesel AMT,1306990,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/nexon/variants.htm,,Current Cardekho variant not found locally
@@ -5273,16 +5247,13 @@ Tata,Nexon,,,Creative Plus S Dark AMT,1149990,,CARDEKHO_ONLY_VARIANT,https://www
 Tata,Nexon,,,Creative Plus S Dark CNG,1161790,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/nexon/variants.htm,,Current Cardekho variant not found locally
 Tata,Nexon,,,Creative Plus S Dark CNG,1171990,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/nexon/variants.htm,,Current Cardekho variant not found locally
 Tata,Nexon,,,Creative Plus S Dark Diesel,1186990,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/nexon/variants.htm,,Current Cardekho variant not found locally
-Tata,Nexon,,,Creative Plus S Dark Diesel,1214990,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/nexon/variants.htm,,Current Cardekho variant not found locally
 Tata,Nexon,,,Creative Plus S Dark Diesel AMT,1251990,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/nexon/variants.htm,,Current Cardekho variant not found locally
-Tata,Nexon,,,Creative Plus S Dark Diesel AMT,1253290,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/nexon/variants.htm,,Current Cardekho variant not found locally
 Tata,Nexon,,,Creative Plus S Diesel,1149990,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/nexon/variants.htm,,Current Cardekho variant not found locally
 Tata,Nexon,,,Creative Plus S Diesel,1161790,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/nexon/variants.htm,,Current Cardekho variant not found locally
 Tata,Nexon,,,Creative Plus S Diesel AMT,1214990,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/nexon/variants.htm,,Current Cardekho variant not found locally
 Tata,Nexon,,,Creative Plus S Diesel AMT,1216690,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/nexon/variants.htm,,Current Cardekho variant not found locally
 Tata,Nexon,,,Fearless Plus A PS Dark DCA,1401990,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/nexon/variants.htm,,Current Cardekho variant not found locally
 Tata,Nexon,,,Fearless Plus A PS DT DCA,1353490,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/nexon/variants.htm,,Current Cardekho variant not found locally
-Tata,Nexon,,,Fearless Plus A PS DT DCA,1356990,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/nexon/variants.htm,,Current Cardekho variant not found locally
 Tata,Nexon,,,Fearless Plus A PS Red Dark DCA,1381790,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/nexon/variants.htm,,Current Cardekho variant not found locally
 Tata,Nexon,,,Fearless Plus PS Dark,1246990,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/nexon/variants.htm,,Current Cardekho variant not found locally
 Tata,Nexon,,,Fearless Plus PS Dark CNG,1326490,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/nexon/variants.htm,,Current Cardekho variant not found locally
@@ -5290,7 +5261,6 @@ Tata,Nexon,,,Fearless Plus PS Dark DCA,1344790,,CARDEKHO_ONLY_VARIANT,https://ww
 Tata,Nexon,,,Fearless Plus PS Dark Diesel,1356990,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/nexon/variants.htm,,Current Cardekho variant not found locally
 Tata,Nexon,,,Fearless Plus PS Dark Diesel AMT,1421990,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/nexon/variants.htm,,Current Cardekho variant not found locally
 Tata,Nexon,,,Fearless Plus PS DT,1336990,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/nexon/variants.htm,,Current Cardekho variant not found locally
-Tata,Nexon,,,Fearless Plus PS DT,1341990,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/nexon/variants.htm,,Current Cardekho variant not found locally
 Tata,Nexon,,,Fearless Plus PS DT CNG,1308190,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/nexon/variants.htm,,Current Cardekho variant not found locally
 Tata,Nexon,,,Fearless Plus PS DT CNG,1324190,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/nexon/variants.htm,,Current Cardekho variant not found locally
 Tata,Nexon,,,Fearless Plus PS DT DCA,1326490,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/nexon/variants.htm,,Current Cardekho variant not found locally
@@ -5303,13 +5273,12 @@ Tata,Nexon,,,Fearless Plus PS Red Dark,1246990,,CARDEKHO_ONLY_VARIANT,https://ww
 Tata,Nexon,,,Fearless Plus PS Red Dark CNG,1341990,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/nexon/variants.htm,,Current Cardekho variant not found locally
 Tata,Nexon,,,Fearless Plus PS Red Dark CNG,1344790,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/nexon/variants.htm,,Current Cardekho variant not found locally
 Tata,Nexon,,,Fearless Plus PS Red Dark Diesel,1352290,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/nexon/variants.htm,,Current Cardekho variant not found locally
-Tata,Nexon,,,Fearless Plus PS Red Dark Diesel,1353490,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/nexon/variants.htm,,Current Cardekho variant not found locally
 Tata,Nexon,,,Fearless Plus PS Red Dark Diesel AMT,1415290,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/nexon/variants.htm,,Current Cardekho variant not found locally
 Tata,Nexon,Nexon Creative,1050000,,,,LOCAL_ONLY_VARIANT,https://www.cardekho.com/tata/nexon/variants.htm,https://www.cardekho.com/tata/nexon,Local variant not found on current Cardekho variants feed
 Tata,Nexon,Nexon Creative AMT,1130000,,,,LOCAL_ONLY_VARIANT,https://www.cardekho.com/tata/nexon/variants.htm,https://www.cardekho.com/tata/nexon,Local variant not found on current Cardekho variants feed
 Tata,Nexon,Nexon Creative CNG,1104990,Creative CNG,1104990,0,MATCH,https://www.cardekho.com/tata/nexon/variants.htm,https://www.cardekho.com/tata/nexon,
 Tata,Nexon,Nexon Creative Diesel,1189000,,,,LOCAL_ONLY_VARIANT,https://www.cardekho.com/tata/nexon/variants.htm,https://www.cardekho.com/tata/nexon,Local variant not found on current Cardekho variants feed
-Tata,Nexon,Nexon Creative Diesel AMT,1269000,,,,LOCAL_ONLY_VARIANT,https://www.cardekho.com/tata/nexon/variants.htm,https://www.cardekho.com/tata/nexon,Local variant not found on current Cardekho variants feed
+Tata,Nexon,Nexon Creative Diesel AMT,1184990,Creative Diesel AMT,1184990,0,MATCH,https://www.cardekho.com/tata/nexon/variants.htm,https://www.cardekho.com/tata/nexon,
 Tata,Nexon,Nexon Creative Plus DCT,1200000,,,,LOCAL_ONLY_VARIANT,https://www.cardekho.com/tata/nexon/variants.htm,https://www.cardekho.com/tata/nexon,Local variant not found on current Cardekho variants feed
 Tata,Nexon,Nexon Creative Plus S,1110000,,,,LOCAL_ONLY_VARIANT,https://www.cardekho.com/tata/nexon/variants.htm,https://www.cardekho.com/tata/nexon,Local variant not found on current Cardekho variants feed
 Tata,Nexon,Nexon Creative Plus S DCT,1230000,,,,LOCAL_ONLY_VARIANT,https://www.cardekho.com/tata/nexon/variants.htm,https://www.cardekho.com/tata/nexon,Local variant not found on current Cardekho variants feed
@@ -5578,14 +5547,10 @@ Tata,Safari,Safari Smart Plus Diesel MT,1599000,,,,LOCAL_ONLY_VARIANT,https://ww
 Tata,Safari,Safari Smart Plus Petrol MT,1399000,,,,LOCAL_ONLY_VARIANT,https://www.cardekho.com/tata/safari/variants.htm,https://www.cardekho.com/tata/safari,Local variant not found on current Cardekho variants feed
 Tata,Sierra,,,Accomplished,1799000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/sierra/variants.htm,,Current Cardekho variant not found locally
 Tata,Sierra,,,Accomplished Diesel,1899000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/sierra/variants.htm,,Current Cardekho variant not found locally
-Tata,Sierra,,,Accomplished Diesel,1999000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/sierra/variants.htm,,Current Cardekho variant not found locally
 Tata,Sierra,,,Accomplished Diesel AT,1999000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/sierra/variants.htm,,Current Cardekho variant not found locally
 Tata,Sierra,,,Accomplished Plus Diesel,2029000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/sierra/variants.htm,,Current Cardekho variant not found locally
-Tata,Sierra,,,Accomplished Plus Diesel,2099000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/sierra/variants.htm,,Current Cardekho variant not found locally
-Tata,Sierra,,,Accomplished Plus Diesel AT,2129000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/sierra/variants.htm,,Current Cardekho variant not found locally
 Tata,Sierra,,,Accomplished Plus Turbo,2099000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/sierra/variants.htm,,Current Cardekho variant not found locally
 Tata,Sierra,,,Accomplished Turbo,1999000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/sierra/variants.htm,,Current Cardekho variant not found locally
-Tata,Sierra,,,Accomplished Turbo,2029000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/sierra/variants.htm,,Current Cardekho variant not found locally
 Tata,Sierra,,,Adventure,1529000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/sierra/variants.htm,,Current Cardekho variant not found locally
 Tata,Sierra,,,Adventure,1599000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/sierra/variants.htm,,Current Cardekho variant not found locally
 Tata,Sierra,,,Adventure DCA,1679000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/sierra/variants.htm,,Current Cardekho variant not found locally
@@ -5608,7 +5573,7 @@ Tata,Sierra,,,Pure Plus DCA,1599000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.
 Tata,Sierra,,,Pure Plus DIesel,1599000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/sierra/variants.htm,,Current Cardekho variant not found locally
 Tata,Sierra,,,Pure Plus Diesel AT,1749000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/sierra/variants.htm,,Current Cardekho variant not found locally
 Tata,Sierra,,,Pure Plus Diesel AT,1799000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/tata/sierra/variants.htm,,Current Cardekho variant not found locally
-Tata,Sierra,Sierra Accomplished Plus Diesel AT,2129000,,,,LOCAL_ONLY_VARIANT,https://www.cardekho.com/tata/sierra/variants.htm,https://www.cardekho.com/tata/sierra,Local variant not found on current Cardekho variants feed
+Tata,Sierra,Sierra Accomplished Plus Diesel AT,2129000,Accomplished Plus Diesel AT,2129000,0,MATCH,https://www.cardekho.com/tata/sierra/variants.htm,https://www.cardekho.com/tata/sierra,
 Tata,Sierra,Sierra Adventure,1529000,,,,LOCAL_ONLY_VARIANT,https://www.cardekho.com/tata/sierra/variants.htm,https://www.cardekho.com/tata/sierra,Local variant not found on current Cardekho variants feed
 Tata,Sierra,Sierra Pure,1299000,,,,LOCAL_ONLY_VARIANT,https://www.cardekho.com/tata/sierra/variants.htm,https://www.cardekho.com/tata/sierra,Local variant not found on current Cardekho variants feed
 Tata,Sierra,Sierra Pure DCA,1449000,Pure DCA,1449000,0,MATCH,https://www.cardekho.com/tata/sierra/variants.htm,https://www.cardekho.com/tata/sierra,
@@ -5894,23 +5859,22 @@ Toyota,Taisor,,,V Turbo Dual Tone,1124000,,CARDEKHO_ONLY_VARIANT,https://www.car
 Toyota,Taisor,,,V Turbo Dual Tone,1157000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/toyota/taisor/variants.htm,,Current Cardekho variant not found locally
 Toyota,Urban Cruiser Hyryder,,,E,1099000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/toyota/hyryder/variants.htm,,Current Cardekho variant not found locally
 Toyota,Urban Cruiser Hyryder,,,E,1251000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/toyota/hyryder/variants.htm,,Current Cardekho variant not found locally
+Toyota,Urban Cruiser Hyryder,,,G CNG,1534000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/toyota/hyryder/variants.htm,,Current Cardekho variant not found locally
 Toyota,Urban Cruiser Hyryder,,,G CNG,1539000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/toyota/hyryder/variants.htm,,Current Cardekho variant not found locally
 Toyota,Urban Cruiser Hyryder,,,S,1338000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/toyota/hyryder/variants.htm,,Current Cardekho variant not found locally
 Toyota,Urban Cruiser Hyryder,,,S AT,1423100,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/toyota/hyryder/variants.htm,,Current Cardekho variant not found locally
 Toyota,Urban Cruiser Hyryder,,,S CNG,1377000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/toyota/hyryder/variants.htm,,Current Cardekho variant not found locally
-Toyota,Urban Cruiser Hyryder,,,S HYBRID,1677000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/toyota/hyryder/variants.htm,,Current Cardekho variant not found locally
-Toyota,Urban Cruiser Hyryder,,,S HYBRID,1707900,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/toyota/hyryder/variants.htm,,Current Cardekho variant not found locally
-Toyota,Urban Cruiser Hyryder,,,Toyota Hyryder G Opt,1534000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/toyota/hyryder/variants.htm,,Current Cardekho variant not found locally
-Toyota,Urban Cruiser Hyryder,,,Toyota Hyryder G Opt AT,1592000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/toyota/hyryder/variants.htm,,Current Cardekho variant not found locally
+Toyota,Urban Cruiser Hyryder,,,Toyota Hyryder G Opt HYBRID,1844400,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/toyota/hyryder/variants.htm,,Current Cardekho variant not found locally
 Toyota,Urban Cruiser Hyryder,,,Toyota Hyryder G Opt HYBRID Dual Tone,1863700,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/toyota/hyryder/variants.htm,,Current Cardekho variant not found locally
-Toyota,Urban Cruiser Hyryder,,,Toyota Hyryder V AWD AT,1844400,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/toyota/hyryder/variants.htm,,Current Cardekho variant not found locally
 Toyota,Urban Cruiser Hyryder,,,Toyota Hyryder V AWD Dual Tone AT,1847900,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/toyota/hyryder/variants.htm,,Current Cardekho variant not found locally
-Toyota,Urban Cruiser Hyryder,,,Toyota Hyryder V Dual Tone,1602000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/toyota/hyryder/variants.htm,,Current Cardekho variant not found locally
+Toyota,Urban Cruiser Hyryder,,,Toyota Hyryder V Dual Tone,1592000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/toyota/hyryder/variants.htm,,Current Cardekho variant not found locally
+Toyota,Urban Cruiser Hyryder,,,Toyota Hyryder V Dual Tone AT,1707900,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/toyota/hyryder/variants.htm,,Current Cardekho variant not found locally
 Toyota,Urban Cruiser Hyryder,,,Toyota Hyryder V HYBRID Dual Tone,1976300,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/toyota/hyryder/variants.htm,,Current Cardekho variant not found locally
 Toyota,Urban Cruiser Hyryder,Urban Cruiser Hyryder E,1099000,,,,LOCAL_ONLY_VARIANT,https://www.cardekho.com/toyota/hyryder/variants.htm,https://www.cardekho.com/toyota/hyryder/specs,Local variant not found on current Cardekho variants feed
 Toyota,Urban Cruiser Hyryder,Urban Cruiser Hyryder S CNG,1338000,,,,LOCAL_ONLY_VARIANT,https://www.cardekho.com/toyota/hyryder/variants.htm,https://www.cardekho.com/toyota/hyryder/specs,Local variant not found on current Cardekho variants feed
-Toyota,Urban Cruiser Hyryder,Urban Cruiser Hyryder S HYBRID,1672000,,,,LOCAL_ONLY_VARIANT,https://www.cardekho.com/toyota/hyryder/variants.htm,https://www.cardekho.com/toyota/hyryder/specs,Local variant not found on current Cardekho variants feed
+Toyota,Urban Cruiser Hyryder,Urban Cruiser Hyryder S HYBRID,1677000,S HYBRID,1677000,0,MATCH,https://www.cardekho.com/toyota/hyryder/variants.htm,https://www.cardekho.com/toyota/hyryder/specs,
 Toyota,Urban Cruiser Hyryder,Urban Cruiser Hyryder V HYBRID,1999000,V HYBRID,1999000,0,MATCH,https://www.cardekho.com/toyota/hyryder/variants.htm,https://www.cardekho.com/toyota/hyryder/specs,
+Toyota,Urban Cruiser Hyryder,,,V,1602000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/toyota/hyryder/variants.htm,,Current Cardekho variant not found locally
 Toyota,Urban Cruiser Hyryder,,,V AT,1724000,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/toyota/hyryder/variants.htm,,Current Cardekho variant not found locally
 Toyota,Urban Cruiser Hyryder,,,V AT,1828600,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/toyota/hyryder/variants.htm,,Current Cardekho variant not found locally
 Toyota,Vellfire,,,Hi,11973400,,CARDEKHO_ONLY_VARIANT,https://www.cardekho.com/toyota/vellfire/variants.htm,,Current Cardekho variant not found locally

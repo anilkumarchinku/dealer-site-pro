@@ -334,6 +334,11 @@ function extractLocalVariants(raw, filePath, defaultMake) {
 }
 
 function slugifyModel(model) {
+    const overrides = {
+        'creta ev': 'creta-electric',
+    }
+    const override = overrides[String(model ?? '').trim().toLowerCase()]
+    if (override) return override
     return String(model ?? '')
         .replace(/\b&\b/g, 'and')
         .replace(/\./g, '')

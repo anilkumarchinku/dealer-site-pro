@@ -1,6 +1,6 @@
 # 4W Ex-Showroom Price Sync Checklist
 
-Generated: 2026-04-24T08:54:25.026Z
+Generated: 2026-04-24T10:27:47.042Z
 
 This checklist is grouped make-wise, then model-wise, so we can fix one model at a time from the live Cardekho variants page.
 
@@ -11,46 +11,24 @@ Priority order:
 - `LOCAL_ONLY_VARIANT`: local variant is not matching the current Cardekho feed
 - `CARDEKHO_ONLY_VARIANT`: current Cardekho variant is not present locally
 
-Actionable rows: 5473
-Makes with pending work: 32
-
-## Aston Martin
-
-Pending models: 1
-Pending rows: 3
-
-### DBX
-
-Cardekho variants: https://www.cardekho.com/aston-martin/dbx/variants.htm
-Rows to review: 3
-Status mix: LOCAL_ONLY_VARIANT=1, CARDEKHO_ONLY_VARIANT=2
-
-- [ ] LOCAL_ONLY_VARIANT: local `DBX707` (₹4,37,97,000) -> Cardekho `—` (—)
-  Note: Local variant not found on current Cardekho variants feed
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `707` (₹4,37,97,000)
-  Note: Current Cardekho variant not found locally
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `707` (₹3,82,00,001)
-  Note: Current Cardekho variant not found locally
+Actionable rows: 5408
+Makes with pending work: 31
 
 ## Audi
 
 Pending models: 5
-Pending rows: 36
+Pending rows: 32
 
 ### A8 L
 
 Cardekho variants: https://www.cardekho.com/audi/a8-l/variants.htm
-Rows to review: 4
-Status mix: LOCAL_ONLY_VARIANT=1, CARDEKHO_ONLY_VARIANT=3
+Rows to review: 2
+Status mix: LOCAL_ONLY_VARIANT=2
 
-- [ ] LOCAL_ONLY_VARIANT: local `55 TFSI` (₹1,70,50,000) -> Cardekho `—` (—)
+- [ ] LOCAL_ONLY_VARIANT: local `Technology` (₹1,62,57,000) -> Cardekho `—` (—)
   Note: Local variant not found on current Cardekho variants feed
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Celebration` (₹1,34,13,000)
-  Note: Current Cardekho variant not found locally
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Celebration` (₹1,62,57,000)
-  Note: Current Cardekho variant not found locally
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Celebration BSVI` (₹1,62,57,000)
-  Note: Current Cardekho variant not found locally
+- [ ] LOCAL_ONLY_VARIANT: local `Technology BSVI` (₹1,62,57,000) -> Cardekho `—` (—)
+  Note: Local variant not found on current Cardekho variants feed
 
 ### Q3
 
@@ -86,8 +64,8 @@ Status mix: LOCAL_ONLY_VARIANT=2, CARDEKHO_ONLY_VARIANT=10
 ### Q3 Sportback
 
 Cardekho variants: https://www.cardekho.com/audi/q3-sportback/variants.htm
-Rows to review: 8
-Status mix: LOCAL_ONLY_VARIANT=2, CARDEKHO_ONLY_VARIANT=6
+Rows to review: 6
+Status mix: LOCAL_ONLY_VARIANT=2, CARDEKHO_ONLY_VARIANT=4
 
 - [ ] LOCAL_ONLY_VARIANT: local `40 TFSI Premium Plus` (₹46,90,000) -> Cardekho `—` (—)
   Note: Local variant not found on current Cardekho variants feed
@@ -99,11 +77,7 @@ Status mix: LOCAL_ONLY_VARIANT=2, CARDEKHO_ONLY_VARIANT=6
   Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Bold Edition` (₹52,98,000)
   Note: Current Cardekho variant not found locally
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Bold Edition` (₹53,55,000)
-  Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Signature Line` (₹53,55,000)
-  Note: Current Cardekho variant not found locally
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Signature Line` (₹53,71,001)
   Note: Current Cardekho variant not found locally
 
 ### Q8 e-tron
@@ -204,8 +178,8 @@ Status mix: CARDEKHO_ONLY_VARIANT=12
 
 ## BMW
 
-Pending models: 12
-Pending rows: 36
+Pending models: 7
+Pending rows: 19
 
 ### 3 Series Gran Limousine
 
@@ -246,17 +220,6 @@ Status mix: NO_PRICE_PARSED=2
 - [ ] NO_PRICE_PARSED: local `M850i xDrive` (₹1,69,00,000) -> Cardekho `—` (—)
   Note: NO_PRICE_PARSED
 
-### i4
-
-Cardekho variants: https://www.cardekho.com/bmw/i4/variants.htm
-Rows to review: 2
-Status mix: CARDEKHO_ONLY_VARIANT=2
-
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `eDrive40 M Sport` (₹77,50,000)
-  Note: Current Cardekho variant not found locally
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `eDrive40 M Sport` (₹72,50,000)
-  Note: Current Cardekho variant not found locally
-
 ### M340i
 
 Cardekho variants: https://www.cardekho.com/bmw/3-series/variants.htm
@@ -293,36 +256,8 @@ Cardekho variants: https://www.cardekho.com/bmw/m8/variants.htm
 Rows to review: 1
 Status mix: NO_PRICE_PARSED=1
 
-- [ ] NO_PRICE_PARSED: local `Coupe Competition 50 Jahre` (₹2,38,40,000) -> Cardekho `—` (—)
+- [ ] NO_PRICE_PARSED: local `50 Jahre M Edition` (₹2,38,40,000) -> Cardekho `—` (—)
   Note: NO_PRICE_PARSED
-
-### X3
-
-Cardekho variants: https://www.cardekho.com/bmw/x3/variants.htm
-Rows to review: 2
-Status mix: CARDEKHO_ONLY_VARIANT=2
-
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `xDrive 20d M Sport` (₹74,50,000)
-  Note: Current Cardekho variant not found locally
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `xDrive 30 M Sport Pro` (₹74,50,000)
-  Note: Current Cardekho variant not found locally
-
-### X5
-
-Cardekho variants: https://www.cardekho.com/bmw/x5/variants.htm
-Rows to review: 5
-Status mix: CARDEKHO_ONLY_VARIANT=5
-
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `xDrive30d M Sport` (₹1,05,00,000)
-  Note: Current Cardekho variant not found locally
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `xDrive30d xLine` (₹95,50,000)
-  Note: Current Cardekho variant not found locally
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `xDrive30d xLine` (₹1,03,20,000)
-  Note: Current Cardekho variant not found locally
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `xDrive40i M Sport` (₹1,03,20,000)
-  Note: Current Cardekho variant not found locally
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `xDrive40i M Sport` (₹1,05,00,000)
-  Note: Current Cardekho variant not found locally
 
 ### X5 M Competition
 
@@ -332,36 +267,6 @@ Status mix: NO_PRICE_PARSED=1
 
 - [ ] NO_PRICE_PARSED: local `Competition` (₹2,07,90,000) -> Cardekho `—` (—)
   Note: NO_PRICE_PARSED
-
-### X7
-
-Cardekho variants: https://www.cardekho.com/bmw/x7/variants.htm
-Rows to review: 4
-Status mix: CARDEKHO_ONLY_VARIANT=4
-
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `xDrive40d Design Pure Excellence` (₹1,28,00,000)
-  Note: Current Cardekho variant not found locally
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `xDrive40d M Sport` (₹1,31,70,000)
-  Note: Current Cardekho variant not found locally
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `xDrive40i M Sport` (₹1,28,00,000)
-  Note: Current Cardekho variant not found locally
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `xDrive40i M Sport` (₹1,31,70,000)
-  Note: Current Cardekho variant not found locally
-
-### Z4
-
-Cardekho variants: https://www.cardekho.com/bmw/z4/variants.htm
-Rows to review: 4
-Status mix: CARDEKHO_ONLY_VARIANT=4
-
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `M40i Pure Impulse` (₹95,20,000)
-  Note: Current Cardekho variant not found locally
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `M40i Pure Impulse` (₹90,50,000)
-  Note: Current Cardekho variant not found locally
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `M40i Pure Impulse AT` (₹91,70,000)
-  Note: Current Cardekho variant not found locally
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `M40i Pure Impulse AT` (₹95,20,000)
-  Note: Current Cardekho variant not found locally
 
 ## BYD
 
@@ -687,7 +592,7 @@ Status mix: CARDEKHO_ONLY_VARIANT=12
 ## Hyundai
 
 Pending models: 12
-Pending rows: 426
+Pending rows: 407
 
 ### Alcazar
 
@@ -895,11 +800,11 @@ Status mix: LOCAL_ONLY_VARIANT=25, CARDEKHO_ONLY_VARIANT=98
   Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `King iVT DT` (₹18,82,500)
   Note: Current Cardekho variant not found locally
+- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `King iVT DT` (₹18,94,500)
+  Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `King Knight Diesel AT DT` (₹20,20,000)
   Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `King Knight iVT` (₹18,82,500)
-  Note: Current Cardekho variant not found locally
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `King Knight iVT` (₹18,94,500)
   Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `King Knight iVT DT` (₹18,97,000)
   Note: Current Cardekho variant not found locally
@@ -1048,7 +953,7 @@ Status mix: LOCAL_ONLY_VARIANT=25, CARDEKHO_ONLY_VARIANT=98
 
 ### Creta EV
 
-Cardekho variants: https://www.cardekho.com/hyundai/creta-ev/variants.htm
+Cardekho variants: https://www.cardekho.com/hyundai/creta-electric/variants.htm
 Rows to review: 3
 Status mix: NO_PRICE_PARSED=3
 
@@ -1062,8 +967,8 @@ Status mix: NO_PRICE_PARSED=3
 ### Creta N Line
 
 Cardekho variants: https://www.cardekho.com/hyundai/creta-n-line/variants.htm
-Rows to review: 9
-Status mix: LOCAL_ONLY_VARIANT=3, CARDEKHO_ONLY_VARIANT=6
+Rows to review: 8
+Status mix: LOCAL_ONLY_VARIANT=3, CARDEKHO_ONLY_VARIANT=5
 
 - [ ] LOCAL_ONLY_VARIANT: local `N6 DCT` (₹18,73,000) -> Cardekho `—` (—)
   Note: Local variant not found on current Cardekho variants feed
@@ -1076,8 +981,6 @@ Status mix: LOCAL_ONLY_VARIANT=3, CARDEKHO_ONLY_VARIANT=6
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `N10 DCT Dual Tone` (₹20,09,500)
   Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `N10 Dual Tone` (₹19,17,000)
-  Note: Current Cardekho variant not found locally
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `N10 Dual Tone` (₹19,95,000)
   Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `N8 DCT Dual Tone` (₹17,97,110)
   Note: Current Cardekho variant not found locally
@@ -1318,17 +1221,11 @@ Status mix: LOCAL_ONLY_VARIANT=13, CARDEKHO_ONLY_VARIANT=25
 ### i20 N Line
 
 Cardekho variants: https://www.cardekho.com/hyundai/i20-n-line/variants.htm
-Rows to review: 15
-Status mix: LOCAL_ONLY_VARIANT=2, CARDEKHO_ONLY_VARIANT=13
+Rows to review: 12
+Status mix: LOCAL_ONLY_VARIANT=1, CARDEKHO_ONLY_VARIANT=11
 
 - [ ] LOCAL_ONLY_VARIANT: local `i20 N Line 1.0 Turbo GDi DCT` (₹12,47,000) -> Cardekho `—` (—)
   Note: Local variant not found on current Cardekho variants feed
-- [ ] LOCAL_ONLY_VARIANT: local `i20 N Line 1.0 Turbo GDi MT` (₹9,21,500) -> Cardekho `—` (—)
-  Note: Local variant not found on current Cardekho variants feed
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `N6` (₹9,21,500)
-  Note: Current Cardekho variant not found locally
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `N6` (₹9,32,468)
-  Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `N6 DCT` (₹10,23,391)
   Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `N6 DCT Dual Tone` (₹10,37,111)
@@ -1525,20 +1422,10 @@ Status mix: LOCAL_ONLY_VARIANT=9, CARDEKHO_ONLY_VARIANT=48
 ### Verna
 
 Cardekho variants: https://www.cardekho.com/hyundai/verna/variants.htm
-Rows to review: 48
-Status mix: LOCAL_ONLY_VARIANT=9, CARDEKHO_ONLY_VARIANT=39
+Rows to review: 33
+Status mix: LOCAL_ONLY_VARIANT=4, CARDEKHO_ONLY_VARIANT=29
 
 - [ ] LOCAL_ONLY_VARIANT: local `EX` (₹10,79,500) -> Cardekho `—` (—)
-  Note: Local variant not found on current Cardekho variants feed
-- [ ] LOCAL_ONLY_VARIANT: local `HX10 Turbo CVT` (₹17,15,000) -> Cardekho `—` (—)
-  Note: Local variant not found on current Cardekho variants feed
-- [ ] LOCAL_ONLY_VARIANT: local `HX2 MT` (₹10,98,000) -> Cardekho `—` (—)
-  Note: Local variant not found on current Cardekho variants feed
-- [ ] LOCAL_ONLY_VARIANT: local `HX4 MT` (₹12,24,000) -> Cardekho `—` (—)
-  Note: Local variant not found on current Cardekho variants feed
-- [ ] LOCAL_ONLY_VARIANT: local `HX6 CVT` (₹14,40,000) -> Cardekho `—` (—)
-  Note: Local variant not found on current Cardekho variants feed
-- [ ] LOCAL_ONLY_VARIANT: local `HX6 MT` (₹13,19,000) -> Cardekho `—` (—)
   Note: Local variant not found on current Cardekho variants feed
 - [ ] LOCAL_ONLY_VARIANT: local `HX6 Plus CVT` (₹15,02,000) -> Cardekho `—` (—)
   Note: Local variant not found on current Cardekho variants feed
@@ -1546,35 +1433,15 @@ Status mix: LOCAL_ONLY_VARIANT=9, CARDEKHO_ONLY_VARIANT=39
   Note: Local variant not found on current Cardekho variants feed
 - [ ] LOCAL_ONLY_VARIANT: local `HX8 Turbo MT` (₹16,28,000) -> Cardekho `—` (—)
   Note: Local variant not found on current Cardekho variants feed
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `HX10 iVT` (₹17,15,400)
-  Note: Current Cardekho variant not found locally
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `HX10 iVT` (₹17,30,400)
-  Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `HX10 iVT DT` (₹17,30,400)
   Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `HX10 iVT DT` (₹17,62,400)
   Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `HX10 Turbo DCT DT` (₹18,40,400)
   Note: Current Cardekho variant not found locally
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `HX2` (₹10,98,400)
-  Note: Current Cardekho variant not found locally
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `HX2` (₹12,25,400)
-  Note: Current Cardekho variant not found locally
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `HX4` (₹12,25,400)
-  Note: Current Cardekho variant not found locally
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `HX4` (₹13,19,400)
-  Note: Current Cardekho variant not found locally
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `HX6` (₹13,19,400)
-  Note: Current Cardekho variant not found locally
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `HX6` (₹13,34,400)
-  Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `HX6 DT` (₹13,34,400)
   Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `HX6 DT` (₹13,81,400)
-  Note: Current Cardekho variant not found locally
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `HX6 iVT` (₹14,40,400)
-  Note: Current Cardekho variant not found locally
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `HX6 iVT` (₹14,55,400)
   Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `HX6 iVT DT` (₹14,55,400)
   Note: Current Cardekho variant not found locally
@@ -2388,8 +2255,8 @@ Status mix: LOCAL_ONLY_VARIANT=3, CARDEKHO_ONLY_VARIANT=6
 
 ## Land Rover
 
-Pending models: 4
-Pending rows: 23
+Pending models: 5
+Pending rows: 27
 
 ### Defender
 
@@ -2444,6 +2311,21 @@ Status mix: LOCAL_ONLY_VARIANT=1, CARDEKHO_ONLY_VARIANT=2
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Autobiography` (₹64,86,000)
   Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Autobiography` (₹64,86,000)
+  Note: Current Cardekho variant not found locally
+
+### Range Rover Sport
+
+Cardekho variants: https://www.cardekho.com/land-rover/range-rover-sport/variants.htm
+Rows to review: 4
+Status mix: CARDEKHO_ONLY_VARIANT=4
+
+- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `3.0l Autobiography Petrol` (₹1,59,90,000)
+  Note: Current Cardekho variant not found locally
+- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `3.0l Autobiography Petrol` (₹1,59,90,000)
+  Note: Current Cardekho variant not found locally
+- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Land Rover  3.0l Autobiography Diesel` (₹1,59,90,000)
+  Note: Current Cardekho variant not found locally
+- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Land Rover  3.0l Autobiography Diesel` (₹1,59,90,000)
   Note: Current Cardekho variant not found locally
 
 ### Range Rover Velar
@@ -2530,13 +2412,13 @@ Status mix: LOCAL_ONLY_VARIANT=3, CARDEKHO_ONLY_VARIANT=4
 ## Mahindra
 
 Pending models: 13
-Pending rows: 188
+Pending rows: 186
 
 ### BE 6
 
 Cardekho variants: https://www.cardekho.com/mahindra/be-6/variants.htm
-Rows to review: 50
-Status mix: LOCAL_ONLY_VARIANT=16, CARDEKHO_ONLY_VARIANT=34
+Rows to review: 48
+Status mix: LOCAL_ONLY_VARIANT=16, CARDEKHO_ONLY_VARIANT=32
 
 - [ ] LOCAL_ONLY_VARIANT: local `Pack One (Base)` (₹18,90,001) -> Cardekho `—` (—)
   Note: Local variant not found on current Cardekho variants feed
@@ -2604,15 +2486,11 @@ Status mix: LOCAL_ONLY_VARIANT=16, CARDEKHO_ONLY_VARIANT=34
   Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Pack Three 79kwh 7.2kw Charger` (₹27,40,000)
   Note: Current Cardekho variant not found locally
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Pack Three 79kwh 7.2kw Charger` (₹27,65,000)
-  Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Pack Three Select 11.2kw Charger` (₹25,25,000)
   Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Pack Three Select 11.2kw Charger` (₹26,90,000)
   Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Pack Three Select 7.2kw Charger` (₹25,00,000)
-  Note: Current Cardekho variant not found locally
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Pack Three Select 7.2kw Charger` (₹25,25,000)
   Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Pack Two` (₹21,90,001)
   Note: Current Cardekho variant not found locally
@@ -11030,13 +10908,13 @@ Status mix: LOCAL_ONLY_VARIANT=3, CARDEKHO_ONLY_VARIANT=6
 ## Renault
 
 Pending models: 4
-Pending rows: 98
+Pending rows: 94
 
 ### Duster
 
 Cardekho variants: https://www.cardekho.com/renault/duster/variants.htm
-Rows to review: 32
-Status mix: LOCAL_ONLY_VARIANT=3, CARDEKHO_ONLY_VARIANT=29
+Rows to review: 28
+Status mix: LOCAL_ONLY_VARIANT=3, CARDEKHO_ONLY_VARIANT=25
 
 - [ ] LOCAL_ONLY_VARIANT: local `Duster Journey TCe 100 MT` (₹10,49,000) -> Cardekho `—` (—)
   Note: Local variant not found on current Cardekho variants feed
@@ -11064,8 +10942,6 @@ Status mix: LOCAL_ONLY_VARIANT=3, CARDEKHO_ONLY_VARIANT=29
   Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Iconic 1.3 Turbo DT` (₹17,19,000)
   Note: Current Cardekho variant not found locally
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Iconic 1.3 Turbo DT` (₹18,49,000)
-  Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Iconic 1.3 Turbo DT DCT` (₹18,69,000)
   Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Iconic Launch Edition` (₹16,99,000)
@@ -11076,8 +10952,6 @@ Status mix: LOCAL_ONLY_VARIANT=3, CARDEKHO_ONLY_VARIANT=29
   Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Techno 1.0 Turbo` (₹13,49,000)
   Note: Current Cardekho variant not found locally
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Techno 1.0 Turbo` (₹14,49,000)
-  Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Techno 1.3 Turbo` (₹14,49,000)
   Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Techno 1.3 Turbo` (₹14,69,000)
@@ -11086,8 +10960,6 @@ Status mix: LOCAL_ONLY_VARIANT=3, CARDEKHO_ONLY_VARIANT=29
   Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Techno 1.3 Turbo DT` (₹14,69,000)
   Note: Current Cardekho variant not found locally
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Techno 1.3 Turbo DT` (₹15,29,000)
-  Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Techno 1.3 Turbo DT DCT` (₹16,09,000)
   Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Techno Plus 1.3 Turbo` (₹15,29,000)
@@ -11095,8 +10967,6 @@ Status mix: LOCAL_ONLY_VARIANT=3, CARDEKHO_ONLY_VARIANT=29
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Techno Plus 1.3 Turbo DCT` (₹16,69,000)
   Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Techno Plus 1.3 Turbo DT` (₹15,49,000)
-  Note: Current Cardekho variant not found locally
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Techno Plus 1.3 Turbo DT` (₹15,89,000)
   Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Techno Plus 1.3 Turbo DT DCT` (₹16,89,000)
   Note: Current Cardekho variant not found locally
@@ -11498,7 +11368,7 @@ Status mix: LOCAL_ONLY_VARIANT=3, CARDEKHO_ONLY_VARIANT=16
 ## Tata
 
 Pending models: 18
-Pending rows: 772
+Pending rows: 754
 
 ### Altroz
 
@@ -11983,8 +11853,8 @@ Status mix: LOCAL_ONLY_VARIANT=5, CARDEKHO_ONLY_VARIANT=64
 ### Harrier EV
 
 Cardekho variants: https://www.cardekho.com/tata/harrier-ev/variants.htm
-Rows to review: 43
-Status mix: LOCAL_ONLY_VARIANT=7, CARDEKHO_ONLY_VARIANT=36
+Rows to review: 39
+Status mix: LOCAL_ONLY_VARIANT=7, CARDEKHO_ONLY_VARIANT=32
 
 - [ ] LOCAL_ONLY_VARIANT: local `Harrier EV Adventure 65` (₹21,49,000) -> Cardekho `—` (—)
   Note: Local variant not found on current Cardekho variants feed
@@ -12026,8 +11896,6 @@ Status mix: LOCAL_ONLY_VARIANT=7, CARDEKHO_ONLY_VARIANT=36
   Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Empowered 75 Stealth` (₹28,24,000)
   Note: Current Cardekho variant not found locally
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Empowered 75 Stealth` (₹28,73,000)
-  Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Empowered 75 Stealth ACFC` (₹28,73,000)
   Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Empowered 75 Stealth ACFC` (₹28,99,000)
@@ -12038,11 +11906,7 @@ Status mix: LOCAL_ONLY_VARIANT=7, CARDEKHO_ONLY_VARIANT=36
   Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Empowered QWD 75 ACFC` (₹29,48,000)
   Note: Current Cardekho variant not found locally
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Empowered QWD 75 ACFC` (₹29,74,000)
-  Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Empowered QWD 75 Stealth` (₹29,74,000)
-  Note: Current Cardekho variant not found locally
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Empowered QWD 75 Stealth` (₹30,23,000)
   Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Empowered QWD 75 Stealth ACFC` (₹30,23,000)
   Note: Current Cardekho variant not found locally
@@ -12066,8 +11930,6 @@ Status mix: LOCAL_ONLY_VARIANT=7, CARDEKHO_ONLY_VARIANT=36
   Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Fearless Plus QWD 75` (₹26,49,000)
   Note: Current Cardekho variant not found locally
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Fearless Plus QWD 75` (₹26,98,000)
-  Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Fearless Plus QWD 75 ACFC` (₹26,98,000)
   Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Fearless Plus QWD 75 ACFC` (₹27,49,000)
@@ -12076,16 +11938,14 @@ Status mix: LOCAL_ONLY_VARIANT=7, CARDEKHO_ONLY_VARIANT=36
 ### Nexon
 
 Cardekho variants: https://www.cardekho.com/tata/nexon/variants.htm
-Rows to review: 144
-Status mix: LOCAL_ONLY_VARIANT=41, CARDEKHO_ONLY_VARIANT=103
+Rows to review: 135
+Status mix: LOCAL_ONLY_VARIANT=40, CARDEKHO_ONLY_VARIANT=95
 
 - [ ] LOCAL_ONLY_VARIANT: local `Nexon Creative` (₹10,50,000) -> Cardekho `—` (—)
   Note: Local variant not found on current Cardekho variants feed
 - [ ] LOCAL_ONLY_VARIANT: local `Nexon Creative AMT` (₹11,30,000) -> Cardekho `—` (—)
   Note: Local variant not found on current Cardekho variants feed
 - [ ] LOCAL_ONLY_VARIANT: local `Nexon Creative Diesel` (₹11,89,000) -> Cardekho `—` (—)
-  Note: Local variant not found on current Cardekho variants feed
-- [ ] LOCAL_ONLY_VARIANT: local `Nexon Creative Diesel AMT` (₹12,69,000) -> Cardekho `—` (—)
   Note: Local variant not found on current Cardekho variants feed
 - [ ] LOCAL_ONLY_VARIANT: local `Nexon Creative Plus DCT` (₹12,00,000) -> Cardekho `—` (—)
   Note: Local variant not found on current Cardekho variants feed
@@ -12175,10 +12035,6 @@ Status mix: LOCAL_ONLY_VARIANT=41, CARDEKHO_ONLY_VARIANT=103
   Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Creative Diesel` (₹11,25,190)
   Note: Current Cardekho variant not found locally
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Creative Diesel AMT` (₹11,84,990)
-  Note: Current Cardekho variant not found locally
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Creative Diesel AMT` (₹11,86,990)
-  Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Creative Plus PS Dark` (₹11,71,990)
   Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Creative Plus PS Dark` (₹11,84,990)
@@ -12202,8 +12058,6 @@ Status mix: LOCAL_ONLY_VARIANT=41, CARDEKHO_ONLY_VARIANT=103
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Creative Plus PS DT CNG` (₹12,34,990)
   Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Creative Plus PS DT DCA` (₹12,34,990)
-  Note: Current Cardekho variant not found locally
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Creative Plus PS DT DCA` (₹12,41,990)
   Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Creative Plus PS DT Diesel` (₹12,41,990)
   Note: Current Cardekho variant not found locally
@@ -12237,11 +12091,7 @@ Status mix: LOCAL_ONLY_VARIANT=41, CARDEKHO_ONLY_VARIANT=103
   Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Creative Plus S Dark Diesel` (₹11,86,990)
   Note: Current Cardekho variant not found locally
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Creative Plus S Dark Diesel` (₹12,14,990)
-  Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Creative Plus S Dark Diesel AMT` (₹12,51,990)
-  Note: Current Cardekho variant not found locally
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Creative Plus S Dark Diesel AMT` (₹12,53,290)
   Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Creative Plus S Diesel` (₹11,49,990)
   Note: Current Cardekho variant not found locally
@@ -12254,8 +12104,6 @@ Status mix: LOCAL_ONLY_VARIANT=41, CARDEKHO_ONLY_VARIANT=103
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Fearless Plus A PS Dark DCA` (₹14,01,990)
   Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Fearless Plus A PS DT DCA` (₹13,53,490)
-  Note: Current Cardekho variant not found locally
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Fearless Plus A PS DT DCA` (₹13,56,990)
   Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Fearless Plus A PS Red Dark DCA` (₹13,81,790)
   Note: Current Cardekho variant not found locally
@@ -12270,8 +12118,6 @@ Status mix: LOCAL_ONLY_VARIANT=41, CARDEKHO_ONLY_VARIANT=103
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Fearless Plus PS Dark Diesel AMT` (₹14,21,990)
   Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Fearless Plus PS DT` (₹13,36,990)
-  Note: Current Cardekho variant not found locally
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Fearless Plus PS DT` (₹13,41,990)
   Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Fearless Plus PS DT CNG` (₹13,08,190)
   Note: Current Cardekho variant not found locally
@@ -12296,8 +12142,6 @@ Status mix: LOCAL_ONLY_VARIANT=41, CARDEKHO_ONLY_VARIANT=103
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Fearless Plus PS Red Dark CNG` (₹13,44,790)
   Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Fearless Plus PS Red Dark Diesel` (₹13,52,290)
-  Note: Current Cardekho variant not found locally
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Fearless Plus PS Red Dark Diesel` (₹13,53,490)
   Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Fearless Plus PS Red Dark Diesel AMT` (₹14,15,290)
   Note: Current Cardekho variant not found locally
@@ -12777,11 +12621,9 @@ Status mix: LOCAL_ONLY_VARIANT=9, CARDEKHO_ONLY_VARIANT=54
 ### Sierra
 
 Cardekho variants: https://www.cardekho.com/tata/sierra/variants.htm
-Rows to review: 41
-Status mix: LOCAL_ONLY_VARIANT=6, CARDEKHO_ONLY_VARIANT=35
+Rows to review: 36
+Status mix: LOCAL_ONLY_VARIANT=5, CARDEKHO_ONLY_VARIANT=31
 
-- [ ] LOCAL_ONLY_VARIANT: local `Sierra Accomplished Plus Diesel AT` (₹21,29,000) -> Cardekho `—` (—)
-  Note: Local variant not found on current Cardekho variants feed
 - [ ] LOCAL_ONLY_VARIANT: local `Sierra Adventure` (₹15,29,000) -> Cardekho `—` (—)
   Note: Local variant not found on current Cardekho variants feed
 - [ ] LOCAL_ONLY_VARIANT: local `Sierra Pure` (₹12,99,000) -> Cardekho `—` (—)
@@ -12796,21 +12638,13 @@ Status mix: LOCAL_ONLY_VARIANT=6, CARDEKHO_ONLY_VARIANT=35
   Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Accomplished Diesel` (₹18,99,000)
   Note: Current Cardekho variant not found locally
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Accomplished Diesel` (₹19,99,000)
-  Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Accomplished Diesel AT` (₹19,99,000)
   Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Accomplished Plus Diesel` (₹20,29,000)
   Note: Current Cardekho variant not found locally
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Accomplished Plus Diesel` (₹20,99,000)
-  Note: Current Cardekho variant not found locally
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Accomplished Plus Diesel AT` (₹21,29,000)
-  Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Accomplished Plus Turbo` (₹20,99,000)
   Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Accomplished Turbo` (₹19,99,000)
-  Note: Current Cardekho variant not found locally
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Accomplished Turbo` (₹20,29,000)
   Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Adventure` (₹15,29,000)
   Note: Current Cardekho variant not found locally
@@ -13173,7 +13007,7 @@ Status mix: LOCAL_ONLY_VARIANT=4, CARDEKHO_ONLY_VARIANT=8
 ## Toyota
 
 Pending models: 10
-Pending rows: 149
+Pending rows: 147
 
 ### Fortuner
 
@@ -13480,18 +13314,18 @@ Status mix: LOCAL_ONLY_VARIANT=5, CARDEKHO_ONLY_VARIANT=23
 ### Urban Cruiser Hyryder
 
 Cardekho variants: https://www.cardekho.com/toyota/hyryder/variants.htm
-Rows to review: 20
-Status mix: LOCAL_ONLY_VARIANT=3, CARDEKHO_ONLY_VARIANT=17
+Rows to review: 18
+Status mix: LOCAL_ONLY_VARIANT=2, CARDEKHO_ONLY_VARIANT=16
 
 - [ ] LOCAL_ONLY_VARIANT: local `Urban Cruiser Hyryder E` (₹10,99,000) -> Cardekho `—` (—)
   Note: Local variant not found on current Cardekho variants feed
 - [ ] LOCAL_ONLY_VARIANT: local `Urban Cruiser Hyryder S CNG` (₹13,38,000) -> Cardekho `—` (—)
   Note: Local variant not found on current Cardekho variants feed
-- [ ] LOCAL_ONLY_VARIANT: local `Urban Cruiser Hyryder S HYBRID` (₹16,72,000) -> Cardekho `—` (—)
-  Note: Local variant not found on current Cardekho variants feed
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `E` (₹10,99,000)
   Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `E` (₹12,51,000)
+  Note: Current Cardekho variant not found locally
+- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `G CNG` (₹15,34,000)
   Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `G CNG` (₹15,39,000)
   Note: Current Cardekho variant not found locally
@@ -13501,23 +13335,19 @@ Status mix: LOCAL_ONLY_VARIANT=3, CARDEKHO_ONLY_VARIANT=17
   Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `S CNG` (₹13,77,000)
   Note: Current Cardekho variant not found locally
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `S HYBRID` (₹16,77,000)
-  Note: Current Cardekho variant not found locally
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `S HYBRID` (₹17,07,900)
-  Note: Current Cardekho variant not found locally
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Toyota Hyryder G Opt` (₹15,34,000)
-  Note: Current Cardekho variant not found locally
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Toyota Hyryder G Opt AT` (₹15,92,000)
+- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Toyota Hyryder G Opt HYBRID` (₹18,44,400)
   Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Toyota Hyryder G Opt HYBRID Dual Tone` (₹18,63,700)
   Note: Current Cardekho variant not found locally
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Toyota Hyryder V AWD AT` (₹18,44,400)
-  Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Toyota Hyryder V AWD Dual Tone AT` (₹18,47,900)
   Note: Current Cardekho variant not found locally
-- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Toyota Hyryder V Dual Tone` (₹16,02,000)
+- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Toyota Hyryder V Dual Tone` (₹15,92,000)
+  Note: Current Cardekho variant not found locally
+- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Toyota Hyryder V Dual Tone AT` (₹17,07,900)
   Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `Toyota Hyryder V HYBRID Dual Tone` (₹19,76,300)
+  Note: Current Cardekho variant not found locally
+- [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `V` (₹16,02,000)
   Note: Current Cardekho variant not found locally
 - [ ] CARDEKHO_ONLY_VARIANT: local `—` (—) -> Cardekho `V AT` (₹17,24,000)
   Note: Current Cardekho variant not found locally
