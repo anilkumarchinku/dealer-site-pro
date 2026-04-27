@@ -1,0 +1,28 @@
+{
+  "make": "Mercedes-Benz",
+  "model": "AMG E 53 Cabriolet",
+  "brandSlug": "mercedes-benz",
+  "modelSlug": "amg-e-53-cabriolet",
+  "sourceUrl": "https://www.cardekho.com/mercedes-benz/amg-e-53-cabriolet",
+  "scrapedAt": "2026-04-24T04:34:13.264Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 5,
+    "total": 5
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mercedes-benz/amg-e-53-cabriolet/colors/selenite-grey.avif",
+  "colorNames": [
+    "Selenite Grey",
+    "Spectral Blue Magno",
+    "Patagonia Red Bright",
+    "Obsidian Black",
+    "Opalite White Bright"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-e-53-cabriolet/colors/selenite-grey.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-e-53-cabriolet/colors/spectral-blue-magno.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-e-53-cabriolet/colors/patagonia-red-bright.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-e-53-cabriolet/colors/obsidian-black.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-e-53-cabriolet/colors/opalite-white-bright.avif"
+  ]
+}

@@ -23,6 +23,12 @@ function LoginForm() {
     const justRegistered = searchParams.get("registered") === "true";
     const redirectTo = searchParams.get("redirect") || null;
 
+    const safeRedirectTo = (() => {
+        if (!redirectTo) return null;
+        if (!redirectTo.startsWith("/") || redirectTo.startsWith("//")) return null;
+        return redirectTo;
+    })();
+
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [loading, setLoading] = useState(false);
@@ -79,7 +85,7 @@ function LoginForm() {
             }
 
             // Honor the ?redirect= param (e.g. ?redirect=%2Fadmin)
-            window.location.href = redirectTo ?? "/dashboard";
+            window.location.href = safeRedirectTo ?? "/dashboard";
         } catch (err) {
             const msg = err instanceof Error ? err.message : String(err);
             setError(msg || "Login failed");

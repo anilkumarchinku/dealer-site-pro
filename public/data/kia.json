@@ -69,8 +69,8 @@
     {
       "make": "Kia",
       "model": "Carens",
-      "variant_name": "Carens Premium Opt",
-      "ex_showroom_price": 1099000,
+      "variant_name": "Premium Opt",
+      "ex_showroom_price": 1099900,
       "hyderabad_on_road_price": 1355000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
@@ -128,8 +128,8 @@
     {
       "make": "Kia",
       "model": "Carens",
-      "variant_name": "Carens Premium Opt CNG",
-      "ex_showroom_price": 1177000,
+      "variant_name": "Premium Opt CNG",
+      "ex_showroom_price": 1177058,
       "hyderabad_on_road_price": 1506000,
       "fuel_type": "CNG",
       "transmission": "Manual",
@@ -248,7 +248,7 @@
     {
       "make": "Kia",
       "model": "Seltos",
-      "variant_name": "Seltos HTE",
+      "variant_name": "HTE",
       "ex_showroom_price": 1099000,
       "hyderabad_on_road_price": 1350000,
       "fuel_type": "Petrol",
@@ -303,7 +303,7 @@
     {
       "make": "Kia",
       "model": "Seltos",
-      "variant_name": "Seltos HTE Diesel",
+      "variant_name": "HTE Diesel",
       "ex_showroom_price": 1259000,
       "hyderabad_on_road_price": 1545000,
       "fuel_type": "Diesel",
@@ -360,7 +360,7 @@
     {
       "make": "Kia",
       "model": "Seltos",
-      "variant_name": "Seltos HTK",
+      "variant_name": "HTK",
       "ex_showroom_price": 1309000,
       "hyderabad_on_road_price": 1606000,
       "fuel_type": "Petrol",
@@ -415,7 +415,7 @@
     {
       "make": "Kia",
       "model": "Seltos",
-      "variant_name": "Seltos HTX",
+      "variant_name": "HTX",
       "ex_showroom_price": 1559000,
       "hyderabad_on_road_price": 1910000,
       "fuel_type": "Petrol",
@@ -470,7 +470,7 @@
     {
       "make": "Kia",
       "model": "Seltos",
-      "variant_name": "Seltos GTX A iVT",
+      "variant_name": "GTX A iVT",
       "ex_showroom_price": 1949000,
       "hyderabad_on_road_price": 2384000,
       "fuel_type": "Petrol",
@@ -525,7 +525,7 @@
     {
       "make": "Kia",
       "model": "Seltos",
-      "variant_name": "Seltos X-Line Diesel AT",
+      "variant_name": "X-Line Diesel AT",
       "ex_showroom_price": 1979000,
       "hyderabad_on_road_price": 2421000,
       "fuel_type": "Diesel",
@@ -582,8 +582,8 @@
     {
       "make": "Kia",
       "model": "Sonet",
-      "variant_name": "Sonet HTE",
-      "ex_showroom_price": 730000,
+      "variant_name": "HTE",
+      "ex_showroom_price": 730138,
       "hyderabad_on_road_price": 870000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
@@ -637,8 +637,8 @@
     {
       "make": "Kia",
       "model": "Sonet",
-      "variant_name": "Sonet HTK Plus",
-      "ex_showroom_price": 910000,
+      "variant_name": "HTK Plus",
+      "ex_showroom_price": 910125,
       "hyderabad_on_road_price": 1080000,
       "fuel_type": "Petrol",
       "transmission": "Manual",
@@ -692,8 +692,8 @@
     {
       "make": "Kia",
       "model": "Sonet",
-      "variant_name": "Sonet HTX Diesel",
-      "ex_showroom_price": 1125000,
+      "variant_name": "HTX Diesel",
+      "ex_showroom_price": 1124669,
       "hyderabad_on_road_price": 1387000,
       "fuel_type": "Diesel",
       "transmission": "Manual",
@@ -747,7 +747,7 @@
     {
       "make": "Kia",
       "model": "Sonet",
-      "variant_name": "Sonet GTX Plus Diesel AT",
+      "variant_name": "GTX Plus Diesel AT",
       "ex_showroom_price": 1400475,
       "hyderabad_on_road_price": 1717000,
       "fuel_type": "Diesel",

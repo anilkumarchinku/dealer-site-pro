@@ -1,0 +1,24 @@
+{
+  "make": "Skoda",
+  "model": "Superb",
+  "brandSlug": "skoda",
+  "modelSlug": "superb",
+  "sourceUrl": "https://www.cardekho.com/skoda/superb",
+  "scrapedAt": "2026-04-24T04:36:52.329Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 3,
+    "total": 3
+  },
+  "hero": "/data/brand-model-images/4w-galleries/skoda/superb/colors/rosso-brunello.avif",
+  "colorNames": [
+    "Rosso Brunello",
+    "Magic Black",
+    "Water World Green"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/skoda/superb/colors/rosso-brunello.avif",
+    "/data/brand-model-images/4w-galleries/skoda/superb/colors/magic-black.avif",
+    "/data/brand-model-images/4w-galleries/skoda/superb/colors/water-world-green.avif"
+  ]
+}

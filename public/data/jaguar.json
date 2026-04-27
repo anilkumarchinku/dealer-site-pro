@@ -53,9 +53,12 @@
       },
       {
         "variant_name": "Jaguar F-Pace 2.0 R-Dynamic S Diesel",
+        "variant_name_citation": "https://www.cardekho.com/overview/Jaguar_F-Pace/Jaguar_F-Pace_2.0_R-Dynamic_S_Diesel.htm",
         "pricing": {
           "ex_showroom_min": 7290000,
+          "ex_showroom_min_citation": "https://www.cardekho.com/overview/Jaguar_F-Pace/Jaguar_F-Pace_2.0_R-Dynamic_S_Diesel.htm",
           "ex_showroom_max": 7290000,
+          "ex_showroom_max_citation": "https://www.cardekho.com/overview/Jaguar_F-Pace/Jaguar_F-Pace_2.0_R-Dynamic_S_Diesel.htm",
           "on_road_hyderabad": 8985443
         },
         "powertrain": {
@@ -99,7 +102,9 @@
           {
             "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Jaguar/F-Pace/10644/1755774688332/front-left-side-47.jpg?imwidth=420&impolicy=resize"
           }
-        ]
+        ],
+        "source_url": "https://www.cardekho.com/overview/Jaguar_F-Pace/Jaguar_F-Pace_2.0_R-Dynamic_S_Diesel.htm",
+        "source_url_citation": "https://www.cardekho.com/overview/Jaguar_F-Pace/Jaguar_F-Pace_2.0_R-Dynamic_S_Diesel.htm"
       }
     ]
   }

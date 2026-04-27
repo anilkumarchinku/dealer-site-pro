@@ -61,6 +61,8 @@ async function setCachedSlug(hostname: string, slug: string): Promise<void> {
 export async function middleware(request: NextRequest) {
     const hostname = request.headers.get('host') || ''
     const pathname = request.nextUrl.pathname
+    const redirectTarget = `${pathname}${request.nextUrl.search}`
+    const hasAdminSession = Boolean(request.cookies.get(ADMIN_SESSION_COOKIE)?.value)
 
     // ── Handle CORS preflight for API routes ─────────────────
     if (pathname.startsWith('/api') && request.method === 'OPTIONS') {
@@ -154,7 +156,7 @@ export async function middleware(request: NextRequest) {
     }
 
     // ── Auth guard (only on main domain) ─────────────────────
-    if (pathname.startsWith('/admin/') && !request.cookies.get(ADMIN_SESSION_COOKIE)?.value) {
+    if (pathname.startsWith('/admin/') && !hasAdminSession) {
         return NextResponse.redirect(new URL('/admin', request.url))
     }
 
@@ -171,6 +173,7 @@ export async function middleware(request: NextRequest) {
     const response = NextResponse.next({
         request: { headers: request.headers },
     })
+    const isPreviewRoute = pathname.startsWith('/preview')
 
     const supabase = createServerClient(supabaseUrl, supabaseAnonKey, {
         cookies: {
@@ -196,8 +199,11 @@ export async function middleware(request: NextRequest) {
         // Supabase unreachable — block protected routes rather than fail-open
         const isProtectedOnFail = PROTECTED_PREFIXES.some(p => pathname.startsWith(p))
         if (isProtectedOnFail) {
+            if (isPreviewRoute && hasAdminSession) {
+                return response
+            }
             const loginUrl = new URL('/auth/login', request.url)
-            loginUrl.searchParams.set('redirect', pathname)
+            loginUrl.searchParams.set('redirect', redirectTarget)
             return NextResponse.redirect(loginUrl)
         }
         return response
@@ -206,10 +212,14 @@ export async function middleware(request: NextRequest) {
     const isProtected = PROTECTED_PREFIXES.some(p => pathname.startsWith(p))
     const isAuthPage  = AUTH_PAGES.some(p => pathname.startsWith(p))
 
+    if (isPreviewRoute && hasAdminSession) {
+        return response
+    }
+
     // Redirect to login if accessing protected route without session
     if (isProtected && !isLoggedIn) {
         const loginUrl = new URL('/auth/login', request.url)
-        loginUrl.searchParams.set('redirect', pathname)
+        loginUrl.searchParams.set('redirect', redirectTarget)
         return NextResponse.redirect(loginUrl)
     }
 

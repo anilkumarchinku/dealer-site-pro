@@ -99,9 +99,18 @@ function deriveSourceTokens(sourceUrl: string): { brandSlug: string; modelTokens
 const EXPLICIT_4W_GALLERY_ALIASES: Record<string, string[]> = {
     'bentley::continental gt': ['continental'],
     'bentley::continental gtc': ['continental'],
+    'bmw::m8': ['m8-coupe-competition'],
     'mahindra::xuv400': ['xuv400-ev'],
+    'mahindra::scorpio classic': ['scorpio'],
+    'maruti-suzuki::wagonr': ['wagon-r'],
     'hyundai::creta ev': ['creta-electric'],
     'mercedes-benz::eqg': ['g-class-electric'],
+    'mercedes-benz::amg gt coupe': ['amg-gt-4-door-coupe'],
+    'toyota::fortuner': ['Toyota_Fortuner'],
+    'toyota::urban cruiser hyryder': ['hyryder'],
+    'toyota::rumion': ['Toyota_Rumion'],
+    'vinfast::vf 6': ['vf6'],
+    'vinfast::vf 7': ['vf7'],
 }
 
 function getExplicitGalleryAliasTokens(make: string, model: string): string[] {

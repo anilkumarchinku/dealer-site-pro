@@ -177,13 +177,13 @@
       "make_citation": "https://www.cardekho.com/renault/kwid",
       "model": "Kwid",
       "model_citation": "https://www.cardekho.com/renault/kwid",
-      "variant_name": "Kwid Climber 1.0 AMT",
-      "variant_name_citation": "https://www.cardekho.com/renault/kwid/variants",
+      "variant_name": "1.0 CLIMBER AMT",
+      "variant_name_citation": "https://www.cardekho.com/overview/Renault_KWID/Renault_KWID_1.0_CLIMBER_AMT.htm",
       "ex_showroom_price": {
-        "min": 559000,
-        "min_citation": "https://www.cardekho.com/renault/kwid",
-        "max": 559000,
-        "max_citation": "https://www.cardekho.com/renault/kwid"
+        "min": 588200,
+        "min_citation": "https://www.cardekho.com/overview/Renault_KWID/Renault_KWID_1.0_CLIMBER_AMT.htm",
+        "max": 588200,
+        "max_citation": "https://www.cardekho.com/overview/Renault_KWID/Renault_KWID_1.0_CLIMBER_AMT.htm"
       },
       "fuel_type": "Petrol",
       "fuel_type_citation": "https://www.cardekho.com/renault/kwid",
@@ -257,8 +257,8 @@
       ],
       "availability_status": "on_sale",
       "availability_status_citation": "https://www.cardekho.com/renault/kwid",
-      "source_url": "https://www.cardekho.com/renault/kwid",
-      "source_url_citation": "https://www.cardekho.com/renault/kwid"
+      "source_url": "https://www.cardekho.com/overview/Renault_KWID/Renault_KWID_1.0_CLIMBER_AMT.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Renault_KWID/Renault_KWID_1.0_CLIMBER_AMT.htm"
     },
     {
       "make": "Renault",

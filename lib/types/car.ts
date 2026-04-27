@@ -23,6 +23,7 @@ export interface CarPricing {
         delhi?: number;
         mumbai?: number;
         bangalore?: number;
+        hyderabad?: number;
     };
     emi?: {
         monthly: number;      // Typical monthly EMI
@@ -89,6 +90,10 @@ export interface CarVariant {
     price: number;             // INR
     transmission: TransmissionType;
     fuelType: FuelType;
+    engineCc?: number | null;
+    exactOnRoad?: {
+        hyderabad?: number | null;
+    };
     keyFeatures: string[];     // Unique features of this variant
     isPopular?: boolean;       // Highlight popular variants
 }

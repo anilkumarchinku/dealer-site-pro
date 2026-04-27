@@ -7268,13 +7268,13 @@
       "make_citation": "https://www.cardekho.com/cars/Hyundai",
       "model": "Alcazar",
       "model_citation": "https://www.cardekho.com/cars/Hyundai",
-      "variant_name": "Platinum Diesel MT",
-      "variant_name_citation": "https://www.cardekho.com/hyundai/alcazar/specs",
+      "variant_name": "Platinum Diesel",
+      "variant_name_citation": "https://www.cardekho.com/hyundai/alcazar/variants",
       "ex_showroom_price": {
-        "min": 1956000,
-        "min_citation": "https://www.cardekho.com/hyundai/alcazar/specs",
-        "max": 1956000,
-        "max_citation": "https://www.cardekho.com/hyundai/alcazar/specs"
+        "min": 1892500,
+        "min_citation": "https://www.cardekho.com/hyundai/alcazar/variants",
+        "max": 1892500,
+        "max_citation": "https://www.cardekho.com/hyundai/alcazar/variants"
       },
       "hyderabad_on_road_price": 2425440,
       "hyderabad_on_road_price_citation": "https://www.cardekho.com/hyundai/alcazar/price-in-hyderabad",
@@ -14304,13 +14304,13 @@
       "make_citation": "https://www.cardekho.com/cars/Hyundai",
       "model": "Aura",
       "model_citation": "https://www.cardekho.com/cars/Hyundai",
-      "variant_name": "S MT",
-      "variant_name_citation": "https://www.cardekho.com/hyundai/aura/specs",
+      "variant_name": "S",
+      "variant_name_citation": "https://www.cardekho.com/overview/Hyundai_Aura/Hyundai_Aura_S.htm",
       "ex_showroom_price": {
-        "min": 675000,
-        "min_citation": "https://www.cardekho.com/hyundai/aura/specs",
-        "max": 675000,
-        "max_citation": "https://www.cardekho.com/hyundai/aura/specs"
+        "min": 685500,
+        "min_citation": "https://www.cardekho.com/overview/Hyundai_Aura/Hyundai_Aura_S.htm",
+        "max": 685500,
+        "max_citation": "https://www.cardekho.com/overview/Hyundai_Aura/Hyundai_Aura_S.htm"
       },
       "hyderabad_on_road_price": 837000,
       "hyderabad_on_road_price_citation": "https://www.cardekho.com/hyundai/aura/price-in-hyderabad",
@@ -14382,8 +14382,8 @@
       ],
       "availability_status": "on_sale",
       "availability_status_citation": "https://www.cardekho.com/hyundai/aura/specs",
-      "source_url": "https://www.cardekho.com/hyundai/aura/variants",
-      "source_url_citation": "https://www.cardekho.com/hyundai/aura/variants"
+      "source_url": "https://www.cardekho.com/overview/Hyundai_Aura/Hyundai_Aura_S.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Hyundai_Aura/Hyundai_Aura_S.htm"
     },
     {
       "make": "Hyundai",
@@ -14562,13 +14562,13 @@
       "make_citation": "https://www.cardekho.com/cars/Hyundai",
       "model": "Aura",
       "model_citation": "https://www.cardekho.com/cars/Hyundai",
-      "variant_name": "SX MT",
-      "variant_name_citation": "https://www.cardekho.com/hyundai/aura/specs",
+      "variant_name": "SX",
+      "variant_name_citation": "https://www.cardekho.com/overview/Hyundai_Aura/Hyundai_Aura_SX.htm",
       "ex_showroom_price": {
-        "min": 795000,
-        "min_citation": "https://www.cardekho.com/hyundai/aura/specs",
-        "max": 795000,
-        "max_citation": "https://www.cardekho.com/hyundai/aura/specs"
+        "min": 764000,
+        "min_citation": "https://www.cardekho.com/overview/Hyundai_Aura/Hyundai_Aura_SX.htm",
+        "max": 764000,
+        "max_citation": "https://www.cardekho.com/overview/Hyundai_Aura/Hyundai_Aura_SX.htm"
       },
       "hyderabad_on_road_price": 985800,
       "hyderabad_on_road_price_citation": "https://www.cardekho.com/hyundai/aura/price-in-hyderabad",
@@ -14640,21 +14640,21 @@
       ],
       "availability_status": "on_sale",
       "availability_status_citation": "https://www.cardekho.com/hyundai/aura/specs",
-      "source_url": "https://www.cardekho.com/hyundai/aura/variants",
-      "source_url_citation": "https://www.cardekho.com/hyundai/aura/variants"
+      "source_url": "https://www.cardekho.com/overview/Hyundai_Aura/Hyundai_Aura_SX.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Hyundai_Aura/Hyundai_Aura_SX.htm"
     },
     {
       "make": "Hyundai",
       "make_citation": "https://www.cardekho.com/cars/Hyundai",
       "model": "Aura",
       "model_citation": "https://www.cardekho.com/cars/Hyundai",
-      "variant_name": "SX (O) MT",
-      "variant_name_citation": "https://www.cardekho.com/hyundai/aura/specs",
+      "variant_name": "SX Option",
+      "variant_name_citation": "https://www.cardekho.com/overview/Hyundai_Aura/Hyundai_Aura_SX_Option.htm",
       "ex_showroom_price": {
-        "min": 845000,
-        "min_citation": "https://www.cardekho.com/hyundai/aura/specs",
-        "max": 845000,
-        "max_citation": "https://www.cardekho.com/hyundai/aura/specs"
+        "min": 809990,
+        "min_citation": "https://www.cardekho.com/overview/Hyundai_Aura/Hyundai_Aura_SX_Option.htm",
+        "max": 809990,
+        "max_citation": "https://www.cardekho.com/overview/Hyundai_Aura/Hyundai_Aura_SX_Option.htm"
       },
       "hyderabad_on_road_price": 1047800,
       "hyderabad_on_road_price_citation": "https://www.cardekho.com/hyundai/aura/price-in-hyderabad",
@@ -14726,8 +14726,8 @@
       ],
       "availability_status": "on_sale",
       "availability_status_citation": "https://www.cardekho.com/hyundai/aura/specs",
-      "source_url": "https://www.cardekho.com/hyundai/aura/variants",
-      "source_url_citation": "https://www.cardekho.com/hyundai/aura/variants"
+      "source_url": "https://www.cardekho.com/overview/Hyundai_Aura/Hyundai_Aura_SX_Option.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Hyundai_Aura/Hyundai_Aura_SX_Option.htm"
     },
     {
       "make": "Hyundai",
@@ -15395,12 +15395,12 @@
       "model": "Tucson",
       "model_citation": "https://www.cardekho.com/cars/Hyundai",
       "variant_name": "Signature Diesel AT",
-      "variant_name_citation": "https://www.cardekho.com/hyundai/tucson/specs",
+      "variant_name_citation": "https://www.cardekho.com/hyundai/tucson/variants",
       "ex_showroom_price": {
-        "min": 3500000,
-        "min_citation": "https://www.cardekho.com/hyundai/tucson/specs",
-        "max": 3500000,
-        "max_citation": "https://www.cardekho.com/hyundai/tucson/specs"
+        "min": 3349897,
+        "min_citation": "https://www.cardekho.com/hyundai/tucson/variants",
+        "max": 3349897,
+        "max_citation": "https://www.cardekho.com/hyundai/tucson/variants"
       },
       "hyderabad_on_road_price": 4340000,
       "hyderabad_on_road_price_citation": "https://www.cardekho.com/hyundai/tucson/price-in-hyderabad",

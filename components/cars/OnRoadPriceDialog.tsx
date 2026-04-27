@@ -34,6 +34,15 @@ interface OnRoadPriceDialogProps {
     open: boolean
     onOpenChange: (open: boolean) => void
     brandColor?: string
+    defaultVariantLabel?: string | null
+}
+
+function normalizeVariantLabel(value: string | null | undefined): string {
+    return String(value ?? '')
+        .toLowerCase()
+        .replace(/[^\w]+/g, ' ')
+        .replace(/\s+/g, ' ')
+        .trim()
 }
 
 export function OnRoadPriceDialog({
@@ -41,6 +50,7 @@ export function OnRoadPriceDialog({
     open,
     onOpenChange,
     brandColor = '#2563eb',
+    defaultVariantLabel = null,
 }: OnRoadPriceDialogProps) {
     const variantOptions = useMemo(() => (car ? buildCarOnRoadVariantOptions(car) : []), [car])
     const [stateCode, setStateCode] = useState<IndianStateCode>('DL')
@@ -49,13 +59,14 @@ export function OnRoadPriceDialog({
 
     useEffect(() => {
         if (!car) return
+        const targetVariant = normalizeVariantLabel(defaultVariantLabel || car.variant)
         const matchingVariant = variantOptions.find((variant) =>
-            variant.label.toLowerCase() === (car.variant || '').toLowerCase()
+            normalizeVariantLabel(variant.label) === targetVariant
         )
         setVariantId(matchingVariant?.id ?? '')
         setStateCode('DL')
         setFinanced(false)
-    }, [car, variantOptions])
+    }, [car, defaultVariantLabel, variantOptions])
 
     const activeVariant = useMemo(() => {
         if (variantOptions.length === 0) return null
@@ -71,6 +82,7 @@ export function OnRoadPriceDialog({
             stateCode,
             financed,
             exactInsurance: car.ownership?.insuranceCost?.comprehensive ?? null,
+            exactOnRoad: stateCode === 'TS' ? activeVariant.exactOnRoad : null,
         })
     }, [activeVariant, car, financed, stateCode])
 
@@ -167,6 +179,7 @@ export function OnRoadPriceDialog({
                             </p>
                             <p className="mt-2 text-xs opacity-80">
                                 Insurance is {breakdown?.insuranceSource === 'catalog' ? 'using catalog pricing' : 'estimated from standard inputs'}.
+                                {breakdown?.totalSource === 'catalog' ? ' Total uses stored Hyderabad on-road data.' : ''}
                             </p>
                         </div>
                     </div>

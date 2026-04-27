@@ -7,44 +7,53 @@ Scope:
 - Verification checks whether each model resolves to a local gallery in `public/data/brand-model-images/4w-galleries`.
 
 Totals:
-- Direct gallery mapping: `194`
-- Explicit alias gallery mapping: `4`
-- Missing gallery mapping: `29`
+- Direct gallery mapping: `205`
+- Explicit alias gallery mapping: `13`
+- Missing gallery mapping: `9`
 
 Explicit alias mappings now covered in code:
 - `Bentley Continental GT` -> `bentley/continental`
 - `Bentley Continental GTC` -> `bentley/continental`
+- `BMW M8` -> `bmw/m8-coupe-competition`
 - `Mahindra XUV400` -> `mahindra/xuv400-ev`
+- `Mahindra Scorpio Classic` -> `mahindra/scorpio`
+- `Maruti Suzuki WagonR` -> `maruti-suzuki/wagon-r`
 - `Hyundai Creta EV` -> `hyundai/creta-electric`
+- `Mercedes-Benz AMG GT Coupe` -> `mercedes-benz/amg-gt-4-door-coupe`
+- `Toyota Fortuner` -> `toyota/Toyota_Fortuner`
+- `Toyota Urban Cruiser Hyryder` -> `toyota/hyryder`
+- `Toyota Rumion` -> `toyota/Toyota_Rumion`
+- `VinFast VF 6` -> `vinfast/vf6`
+- `VinFast VF 7` -> `vinfast/vf7`
 
 Brands with missing gallery mapping:
 
 | Brand | Missing models |
 | --- | --- |
-| Audi | `A8 L`, `SQ8` |
-| BMW | `6 Series GT`, `M8`, `X4` |
-| BYD | `e6` |
+| BMW | `6 Series GT` |
 | Honda | `WR-V` |
 | Hyundai | `Prime HB`, `Prime SD` |
-| Mahindra | `Scorpio Classic`, `XUV300` |
-| Maruti Suzuki | `WagonR` |
-| Mercedes-Benz | `AMG CLE 53`, `AMG E 53 Cabriolet`, `AMG EQS`, `AMG GT Coupe`, `AMG S 63`, `CLE`, `CLE Cabriolet`, `V-Class` |
-| Skoda | `Octavia`, `Superb` |
-| Toyota | `Fortuner`, `Urban Cruiser Hyryder`, `Rumion` |
-| VinFast | `VF 6`, `VF 7`, `VF 8`, `VF 9` |
+| Mercedes-Benz | `AMG CLE 53`, `CLE`, `V-Class` |
+| VinFast | `VF 8`, `VF 9` |
 
 Brands fully covered in this audit:
 - `Aston Martin`
+- `Audi`
 - `Bentley`
+- `BYD`
 - `Jeep`
 - `Kia`
 - `Lamborghini`
 - `Land Rover`
 - `Lexus`
+- `Mahindra`
+- `Maruti Suzuki`
+- `Skoda`
 - `MG`
 - `Nissan`
 - `Porsche`
 - `Renault`
+- `Toyota`
 - `Volkswagen`
 - `Volvo`
 

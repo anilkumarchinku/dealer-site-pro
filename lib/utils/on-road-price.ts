@@ -35,6 +35,7 @@ export interface CarOnRoadVariantOption {
     exShowroom: number
     fuelType: string
     engineCc: number | null
+    exactOnRoad: number | null
 }
 
 export interface CarOnRoadPriceInput {
@@ -44,6 +45,7 @@ export interface CarOnRoadPriceInput {
     stateCode: IndianStateCode
     financed?: boolean
     exactInsurance?: number | null
+    exactOnRoad?: number | null
 }
 
 export interface CarOnRoadPriceBreakdown {
@@ -59,6 +61,7 @@ export interface CarOnRoadPriceBreakdown {
     total: number
     roadTaxPercent: number
     insuranceSource: 'catalog' | 'estimated'
+    totalSource: 'catalog' | 'estimated'
     stateCode: IndianStateCode
     stateName: string
 }
@@ -193,7 +196,7 @@ export function calculateCarOnRoadPrice(input: CarOnRoadPriceInput): CarOnRoadPr
           estimateOwnDamageInsurance(input.exShowroom, input.fuelType, input.stateCode)
     const tcs = input.exShowroom > 1000000 ? Math.round(input.exShowroom * 0.01) : 0
     const hypothecationFee = input.financed ? profile.hypothecationFee : 0
-    const total = input.exShowroom
+    const estimatedTotal = input.exShowroom
         + roadTax
         + profile.registrationFee
         + profile.smartCardFee
@@ -202,6 +205,7 @@ export function calculateCarOnRoadPrice(input: CarOnRoadPriceInput): CarOnRoadPr
         + insurance
         + tcs
         + hypothecationFee
+    const total = input.exactOnRoad && input.exactOnRoad > 0 ? input.exactOnRoad : estimatedTotal
 
     return {
         exShowroom: input.exShowroom,
@@ -216,6 +220,7 @@ export function calculateCarOnRoadPrice(input: CarOnRoadPriceInput): CarOnRoadPr
         total,
         roadTaxPercent,
         insuranceSource: input.exactInsurance && input.exactInsurance > 0 ? 'catalog' : 'estimated',
+        totalSource: input.exactOnRoad && input.exactOnRoad > 0 ? 'catalog' : 'estimated',
         stateCode: input.stateCode,
         stateName: profile.name,
     }
@@ -230,7 +235,8 @@ export function buildCarOnRoadVariantOptions(car: Car): CarOnRoadVariantOption[]
                 label: variant.name,
                 exShowroom: variant.price,
                 fuelType: variant.fuelType || car.engine.type,
-                engineCc: car.engine.displacement ?? null,
+                engineCc: variant.engineCc ?? car.engine.displacement ?? null,
+                exactOnRoad: variant.exactOnRoad?.hyderabad ?? null,
             }))
         if (options.length > 0) return options
     }
@@ -242,6 +248,7 @@ export function buildCarOnRoadVariantOptions(car: Car): CarOnRoadVariantOption[]
         exShowroom: fallbackPrice,
         fuelType: car.engine.type,
         engineCc: car.engine.displacement ?? null,
+        exactOnRoad: car.pricing.onRoad?.hyderabad ?? null,
     }]
 }
 

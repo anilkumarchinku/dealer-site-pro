@@ -373,8 +373,11 @@
       "make": "Bentley",
       "model": "Continental GTC",
       "variant_name": "Mulliner W12",
+      "variant_name_citation": "https://www.cardekho.com/overview/Bentley_Continental/Bentley_Continental_GTC_Mulliner_W12.htm",
       "ex_showroom_price_min": 84495434,
+      "ex_showroom_price_min_citation": "https://www.cardekho.com/overview/Bentley_Continental/Bentley_Continental_GTC_Mulliner_W12.htm",
       "ex_showroom_price_max": 84495434,
+      "ex_showroom_price_max_citation": "https://www.cardekho.com/overview/Bentley_Continental/Bentley_Continental_GTC_Mulliner_W12.htm",
       "fuel_type": "Petrol",
       "transmission": "Automatic",
       "engine_displacement": 5950,
@@ -401,7 +404,9 @@
         {
           "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Bentley/Continental/10473/1769060132454/front-left-side-47.jpg"
         }
-      ]
+      ],
+      "source_url": "https://www.cardekho.com/overview/Bentley_Continental/Bentley_Continental_GTC_Mulliner_W12.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Bentley_Continental/Bentley_Continental_GTC_Mulliner_W12.htm"
     }
   ]
 }

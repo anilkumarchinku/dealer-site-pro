@@ -5,13 +5,13 @@
       "make_citation": "https://www.cardekho.com/skoda/kylaq",
       "model": "Kylaq",
       "model_citation": "https://www.cardekho.com/skoda/kylaq",
-      "variant_name": "Kylaq Classic 1.0 TSI MT",
-      "variant_name_citation": "https://www.cardekho.com/skoda/kylaq/variants",
+      "variant_name": "Classic",
+      "variant_name_citation": "https://www.cardekho.com/overview/Skoda_Kylaq/Skoda_Kylaq_Classic.htm",
       "ex_showroom_price": {
         "min": 759000,
-        "min_citation": "https://www.cardekho.com/skoda/kylaq",
+        "min_citation": "https://www.cardekho.com/overview/Skoda_Kylaq/Skoda_Kylaq_Classic.htm",
         "max": 759000,
-        "max_citation": "https://www.cardekho.com/skoda/kylaq"
+        "max_citation": "https://www.cardekho.com/overview/Skoda_Kylaq/Skoda_Kylaq_Classic.htm"
       },
       "fuel_type": "Petrol",
       "fuel_type_citation": "https://www.cardekho.com/skoda/kylaq",
@@ -89,21 +89,21 @@
       ],
       "availability_status": "on_sale",
       "availability_status_citation": "https://www.cardekho.com/skoda/kylaq",
-      "source_url": "https://www.cardekho.com/skoda/kylaq",
-      "source_url_citation": "https://www.cardekho.com/skoda/kylaq"
+      "source_url": "https://www.cardekho.com/overview/Skoda_Kylaq/Skoda_Kylaq_Classic.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Skoda_Kylaq/Skoda_Kylaq_Classic.htm"
     },
     {
       "make": "Skoda",
       "make_citation": "https://www.cardekho.com/skoda/kylaq",
       "model": "Kylaq",
       "model_citation": "https://www.cardekho.com/skoda/kylaq",
-      "variant_name": "Kylaq Signature 1.0 TSI MT",
-      "variant_name_citation": "https://www.cardekho.com/skoda/kylaq/variants",
+      "variant_name": "Signature",
+      "variant_name_citation": "https://www.cardekho.com/overview/Skoda_Kylaq/Skoda_Kylaq_Signature.htm",
       "ex_showroom_price": {
-        "min": 899000,
-        "min_citation": "https://www.cardekho.com/skoda/kylaq/variants",
-        "max": 899000,
-        "max_citation": "https://www.cardekho.com/skoda/kylaq/variants"
+        "min": 943000,
+        "min_citation": "https://www.cardekho.com/overview/Skoda_Kylaq/Skoda_Kylaq_Signature.htm",
+        "max": 943000,
+        "max_citation": "https://www.cardekho.com/overview/Skoda_Kylaq/Skoda_Kylaq_Signature.htm"
       },
       "fuel_type": "Petrol",
       "fuel_type_citation": "https://www.cardekho.com/skoda/kylaq",
@@ -181,21 +181,21 @@
       ],
       "availability_status": "on_sale",
       "availability_status_citation": "https://www.cardekho.com/skoda/kylaq",
-      "source_url": "https://www.cardekho.com/skoda/kylaq",
-      "source_url_citation": "https://www.cardekho.com/skoda/kylaq"
+      "source_url": "https://www.cardekho.com/overview/Skoda_Kylaq/Skoda_Kylaq_Signature.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Skoda_Kylaq/Skoda_Kylaq_Signature.htm"
     },
     {
       "make": "Skoda",
       "make_citation": "https://www.cardekho.com/skoda/kylaq",
       "model": "Kylaq",
       "model_citation": "https://www.cardekho.com/skoda/kylaq",
-      "variant_name": "Kylaq Signature Plus 1.0 TSI AT",
-      "variant_name_citation": "https://www.cardekho.com/skoda/kylaq/variants",
+      "variant_name": "Signature Plus AT",
+      "variant_name_citation": "https://www.cardekho.com/overview/Skoda_Kylaq/Skoda_Kylaq_Signature_Plus_AT.htm",
       "ex_showroom_price": {
-        "min": 1099000,
-        "min_citation": "https://www.cardekho.com/skoda/kylaq/variants",
-        "max": 1099000,
-        "max_citation": "https://www.cardekho.com/skoda/kylaq/variants"
+        "min": 1177000,
+        "min_citation": "https://www.cardekho.com/overview/Skoda_Kylaq/Skoda_Kylaq_Signature_Plus_AT.htm",
+        "max": 1177000,
+        "max_citation": "https://www.cardekho.com/overview/Skoda_Kylaq/Skoda_Kylaq_Signature_Plus_AT.htm"
       },
       "fuel_type": "Petrol",
       "fuel_type_citation": "https://www.cardekho.com/skoda/kylaq",
@@ -273,21 +273,21 @@
       ],
       "availability_status": "on_sale",
       "availability_status_citation": "https://www.cardekho.com/skoda/kylaq",
-      "source_url": "https://www.cardekho.com/skoda/kylaq",
-      "source_url_citation": "https://www.cardekho.com/skoda/kylaq"
+      "source_url": "https://www.cardekho.com/overview/Skoda_Kylaq/Skoda_Kylaq_Signature_Plus_AT.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Skoda_Kylaq/Skoda_Kylaq_Signature_Plus_AT.htm"
     },
     {
       "make": "Skoda",
       "make_citation": "https://www.cardekho.com/skoda/kylaq",
       "model": "Kylaq",
       "model_citation": "https://www.cardekho.com/skoda/kylaq",
-      "variant_name": "Kylaq Prestige 1.0 TSI AT",
-      "variant_name_citation": "https://www.cardekho.com/skoda/kylaq/variants",
+      "variant_name": "Prestige AT",
+      "variant_name_citation": "https://www.cardekho.com/overview/Skoda_Kylaq/Skoda_Kylaq_Prestige_AT.htm",
       "ex_showroom_price": {
-        "min": 1249000,
-        "min_citation": "https://www.cardekho.com/skoda/kylaq/variants",
-        "max": 1249000,
-        "max_citation": "https://www.cardekho.com/skoda/kylaq/variants"
+        "min": 1275000,
+        "min_citation": "https://www.cardekho.com/overview/Skoda_Kylaq/Skoda_Kylaq_Prestige_AT.htm",
+        "max": 1275000,
+        "max_citation": "https://www.cardekho.com/overview/Skoda_Kylaq/Skoda_Kylaq_Prestige_AT.htm"
       },
       "fuel_type": "Petrol",
       "fuel_type_citation": "https://www.cardekho.com/skoda/kylaq",
@@ -369,8 +369,8 @@
       ],
       "availability_status": "on_sale",
       "availability_status_citation": "https://www.cardekho.com/skoda/kylaq",
-      "source_url": "https://www.cardekho.com/skoda/kylaq",
-      "source_url_citation": "https://www.cardekho.com/skoda/kylaq"
+      "source_url": "https://www.cardekho.com/overview/Skoda_Kylaq/Skoda_Kylaq_Prestige_AT.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Skoda_Kylaq/Skoda_Kylaq_Prestige_AT.htm"
     },
     {
       "make": "Skoda",
@@ -561,13 +561,13 @@
       "make_citation": "https://www.cardekho.com/skoda/kushaq",
       "model": "Kushaq",
       "model_citation": "https://www.cardekho.com/skoda/kushaq",
-      "variant_name": "Kushaq Prestige 1.5 TSI DSG",
-      "variant_name_citation": "https://www.cardekho.com/skoda/kushaq/variants",
+      "variant_name": "1.5L Prestige DSG",
+      "variant_name_citation": "https://www.cardekho.com/overview/Skoda_Kushaq_Facelift/Skoda_Kushaq_Facelift_1.5_DSG_Prestige.htm",
       "ex_showroom_price": {
-        "min": 1899000,
-        "min_citation": "https://www.cardekho.com/skoda/kushaq/variants",
-        "max": 1899000,
-        "max_citation": "https://www.cardekho.com/skoda/kushaq/variants"
+        "min": 1879000,
+        "min_citation": "https://www.cardekho.com/overview/Skoda_Kushaq_Facelift/Skoda_Kushaq_Facelift_1.5_DSG_Prestige.htm",
+        "max": 1879000,
+        "max_citation": "https://www.cardekho.com/overview/Skoda_Kushaq_Facelift/Skoda_Kushaq_Facelift_1.5_DSG_Prestige.htm"
       },
       "fuel_type": "Petrol",
       "fuel_type_citation": "https://www.cardekho.com/skoda/kushaq",
@@ -649,8 +649,8 @@
       ],
       "availability_status": "on_sale",
       "availability_status_citation": "https://www.cardekho.com/skoda/kushaq",
-      "source_url": "https://www.cardekho.com/skoda/kushaq",
-      "source_url_citation": "https://www.cardekho.com/skoda/kushaq"
+      "source_url": "https://www.cardekho.com/overview/Skoda_Kushaq_Facelift/Skoda_Kushaq_Facelift_1.5_DSG_Prestige.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Skoda_Kushaq_Facelift/Skoda_Kushaq_Facelift_1.5_DSG_Prestige.htm"
     },
     {
       "make": "Skoda",
@@ -1219,13 +1219,13 @@
       "make_citation": "https://www.cardekho.com/skoda/slavia",
       "model": "Slavia",
       "model_citation": "https://www.cardekho.com/skoda/slavia",
-      "variant_name": "Slavia Sportline 1.5 TSI DSG",
-      "variant_name_citation": "https://www.cardekho.com/skoda/slavia/variants",
+      "variant_name": "1.5L Sportline DSG",
+      "variant_name_citation": "https://www.cardekho.com/overview/Skoda_Slavia/Skoda_Slavia_1.5L_Sportline_DSG.htm",
       "ex_showroom_price": {
-        "min": 1799000,
-        "min_citation": "https://www.cardekho.com/skoda/slavia/variants",
-        "max": 1799000,
-        "max_citation": "https://www.cardekho.com/skoda/slavia/variants"
+        "min": 1619000,
+        "min_citation": "https://www.cardekho.com/overview/Skoda_Slavia/Skoda_Slavia_1.5L_Sportline_DSG.htm",
+        "max": 1619000,
+        "max_citation": "https://www.cardekho.com/overview/Skoda_Slavia/Skoda_Slavia_1.5L_Sportline_DSG.htm"
       },
       "fuel_type": "Petrol",
       "fuel_type_citation": "https://www.cardekho.com/skoda/slavia",
@@ -1311,8 +1311,8 @@
       ],
       "availability_status": "on_sale",
       "availability_status_citation": "https://www.cardekho.com/skoda/slavia",
-      "source_url": "https://www.cardekho.com/skoda/slavia",
-      "source_url_citation": "https://www.cardekho.com/skoda/slavia"
+      "source_url": "https://www.cardekho.com/overview/Skoda_Slavia/Skoda_Slavia_1.5L_Sportline_DSG.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Skoda_Slavia/Skoda_Slavia_1.5L_Sportline_DSG.htm"
     },
     {
       "make": "Skoda",
@@ -1419,13 +1419,13 @@
       "make_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
       "model": "Kodiaq",
       "model_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
-      "variant_name": "Kodiaq Lounge",
-      "variant_name_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
+      "variant_name": "Lounge",
+      "variant_name_citation": "https://www.cardekho.com/overview/Skoda_Kodiaq/Skoda_Kodiaq_Lounge.htm",
       "ex_showroom_price": {
         "min": 3999000,
-        "min_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
+        "min_citation": "https://www.cardekho.com/overview/Skoda_Kodiaq/Skoda_Kodiaq_Lounge.htm",
         "max": 3999000,
-        "max_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm"
+        "max_citation": "https://www.cardekho.com/overview/Skoda_Kodiaq/Skoda_Kodiaq_Lounge.htm"
       },
       "fuel_type": "Petrol",
       "fuel_type_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
@@ -1503,21 +1503,21 @@
       ],
       "availability_status": "on_sale",
       "availability_status_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
-      "source_url": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
-      "source_url_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm"
+      "source_url": "https://www.cardekho.com/overview/Skoda_Kodiaq/Skoda_Kodiaq_Lounge.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Skoda_Kodiaq/Skoda_Kodiaq_Lounge.htm"
     },
     {
       "make": "Skoda",
       "make_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
       "model": "Kodiaq",
       "model_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
-      "variant_name": "Kodiaq Sportline",
-      "variant_name_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
+      "variant_name": "Sportline",
+      "variant_name_citation": "https://www.cardekho.com/overview/Skoda_Kodiaq/Skoda_Kodiaq_Sportline.htm",
       "ex_showroom_price": {
-        "min": 4376000,
-        "min_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
-        "max": 4376000,
-        "max_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm"
+        "min": 4399000,
+        "min_citation": "https://www.cardekho.com/overview/Skoda_Kodiaq/Skoda_Kodiaq_Sportline.htm",
+        "max": 4399000,
+        "max_citation": "https://www.cardekho.com/overview/Skoda_Kodiaq/Skoda_Kodiaq_Sportline.htm"
       },
       "fuel_type": "Petrol",
       "fuel_type_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
@@ -1595,21 +1595,21 @@
       ],
       "availability_status": "on_sale",
       "availability_status_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
-      "source_url": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
-      "source_url_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm"
+      "source_url": "https://www.cardekho.com/overview/Skoda_Kodiaq/Skoda_Kodiaq_Sportline.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Skoda_Kodiaq/Skoda_Kodiaq_Sportline.htm"
     },
     {
       "make": "Skoda",
       "make_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
       "model": "Kodiaq",
       "model_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
-      "variant_name": "Kodiaq Selection L&K",
-      "variant_name_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
+      "variant_name": "Selection L&K",
+      "variant_name_citation": "https://www.cardekho.com/overview/Skoda_Kodiaq/Skoda_Kodiaq_Selection_L%26K.htm",
       "ex_showroom_price": {
-        "min": 4596000,
-        "min_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
-        "max": 4596000,
-        "max_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm"
+        "min": 4649000,
+        "min_citation": "https://www.cardekho.com/overview/Skoda_Kodiaq/Skoda_Kodiaq_Selection_L%26K.htm",
+        "max": 4649000,
+        "max_citation": "https://www.cardekho.com/overview/Skoda_Kodiaq/Skoda_Kodiaq_Selection_L%26K.htm"
       },
       "fuel_type": "Petrol",
       "fuel_type_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
@@ -1687,8 +1687,8 @@
       ],
       "availability_status": "on_sale",
       "availability_status_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
-      "source_url": "https://www.cardekho.com/skoda/kodiaq/variants.htm",
-      "source_url_citation": "https://www.cardekho.com/skoda/kodiaq/variants.htm"
+      "source_url": "https://www.cardekho.com/overview/Skoda_Kodiaq/Skoda_Kodiaq_Selection_L%26K.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Skoda_Kodiaq/Skoda_Kodiaq_Selection_L%26K.htm"
     }
   ]
 }

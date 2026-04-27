@@ -540,11 +540,14 @@ function selectUniqueColorPairs(values, sharedSeen) {
 function normalize4WSourceUrl(make, model, sourceUrl) {
   const manualMap = {
     'audi|a6': 'https://www.cardekho.com/carmodels/Audi/Audi_A6',
+    'audi|a8 l': 'https://www.cardekho.com/audi/a8-l',
+    'audi|sq8': 'https://www.cardekho.com/audi/sq8',
     'bmw|m4': 'https://www.cardekho.com/bmw/m4-competition',
     'bmw|m340i': 'https://www.cardekho.com/bmw/3-series-long-wheelbase',
     'bmw|3 series gran limousine': 'https://www.cardekho.com/bmw/3-series-long-wheelbase',
     'bmw|m8': 'https://www.cardekho.com/bmw/m8-coupe-competition',
     'bmw|6 series gt': 'https://www.cardekho.com/carmodels/BMW/BMW_6_Series',
+    'bmw|x4': 'https://www.cardekho.com/bmw/x4',
     'bmw|x6': 'https://www.cardekho.com/bmw/x6',
     'bmw|8 series gran coupe': 'https://www.cardekho.com/bmw/8-series',
     'bmw|3 series': 'https://www.cardekho.com/BMW/BMW_3_Series',
@@ -552,13 +555,30 @@ function normalize4WSourceUrl(make, model, sourceUrl) {
     'bmw|x5 m competition': 'https://www.cardekho.com/bmw/x5-m',
     'ferrari|purosangue': 'https://www.cardekho.com/ferrari/purosangue',
     'hyundai|creta ev': 'https://www.cardekho.com/hyundai/creta-electric',
+    'hyundai|prime hb': 'https://www.cardekho.com/hyundai/prime-hb',
+    'hyundai|prime sd': 'https://www.cardekho.com/hyundai/prime-sd',
     'mahindra|xuv400': 'https://www.cardekho.com/mahindra/xuv400-ev',
     'mahindra|xuv400 ev': 'https://www.cardekho.com/mahindra/xuv400-ev',
+    'mahindra|xuv300': 'https://www.cardekho.com/mahindra/xuv300',
+    'mahindra|scorpio classic': 'https://www.cardekho.com/mahindra/scorpio',
     'mahindra|xuv700': 'https://www.cardekho.com/mahindra/xuv700',
+    'byd|e6': 'https://www.cardekho.com/byd/e6',
+    'honda|wr-v': 'https://www.cardekho.com/honda/wr-v-2020-2023',
     'mercedes-benz|cla electric': 'https://www.cardekho.com/mercedes-benz/cla-electric',
+    'mercedes-benz|amg cle 53': 'https://www.cardekho.com/mercedes-benz/amg-cle-53',
+    'mercedes-benz|amg e 53 cabriolet': 'https://www.cardekho.com/mercedes-benz/amg-e-53-cabriolet',
+    'mercedes-benz|amg eqs': 'https://www.cardekho.com/mercedes-benz/amg-eqs',
+    'mercedes-benz|amg s 63': 'https://www.cardekho.com/mercedes-benz/amg-s-63',
+    'mercedes-benz|cle cabriolet': 'https://www.cardekho.com/mercedes-benz/cle-cabriolet',
+    'mercedes-benz|v-class': 'https://www.cardekho.com/mercedes-benz/v-class',
     'porsche|cayenne electric': 'https://www.cardekho.com/porsche/cayenne-electric',
+    'skoda|octavia': 'https://www.cardekho.com/skoda/octavia',
+    'skoda|superb': 'https://www.cardekho.com/skoda/superb',
     'toyota|fortuner': 'https://www.cardekho.com/Toyota/Toyota_Fortuner',
+    'toyota|urban cruiser hyryder': 'https://www.cardekho.com/toyota/hyryder',
     'toyota|rumion': 'https://www.cardekho.com/Toyota/Toyota_Rumion',
+    'vinfast|vf 8': 'https://www.cardekho.com/vinfast/vf8',
+    'vinfast|vf 9': 'https://www.cardekho.com/vinfast/vf9',
     'volkswagen|tayron r-line': 'https://www.cardekho.com/volkswagen/tayron-r-line',
     'tata motors|altroz': 'https://www.cardekho.com/tata/altroz',
     'tata motors|curvv ev': 'https://www.cardekho.com/tata/curvv-ev',
@@ -635,11 +655,14 @@ function getManual4WSourceUrl(make, model) {
   const key = `${String(make).toLowerCase()}|${String(model).toLowerCase()}`
   const manualMap = {
     'audi|a6': 'https://www.cardekho.com/carmodels/Audi/Audi_A6',
+    'audi|a8 l': 'https://www.cardekho.com/audi/a8-l',
+    'audi|sq8': 'https://www.cardekho.com/audi/sq8',
     'bmw|m4': 'https://www.cardekho.com/bmw/m4-competition',
     'bmw|m340i': 'https://www.cardekho.com/bmw/3-series-long-wheelbase',
     'bmw|3 series gran limousine': 'https://www.cardekho.com/bmw/3-series-long-wheelbase',
     'bmw|m8': 'https://www.cardekho.com/bmw/m8-coupe-competition',
     'bmw|6 series gt': 'https://www.cardekho.com/carmodels/BMW/BMW_6_Series',
+    'bmw|x4': 'https://www.cardekho.com/bmw/x4',
     'bmw|x6': 'https://www.cardekho.com/bmw/x6',
     'bmw|8 series gran coupe': 'https://www.cardekho.com/bmw/8-series',
     'bmw|3 series': 'https://www.cardekho.com/BMW/BMW_3_Series',
@@ -647,13 +670,30 @@ function getManual4WSourceUrl(make, model) {
     'bmw|x5 m competition': 'https://www.cardekho.com/bmw/x5-m',
     'ferrari|purosangue': 'https://www.cardekho.com/ferrari/purosangue',
     'hyundai|creta ev': 'https://www.cardekho.com/hyundai/creta-electric',
+    'hyundai|prime hb': 'https://www.cardekho.com/hyundai/prime-hb',
+    'hyundai|prime sd': 'https://www.cardekho.com/hyundai/prime-sd',
     'mahindra|xuv400': 'https://www.cardekho.com/mahindra/xuv400-ev',
     'mahindra|xuv400 ev': 'https://www.cardekho.com/mahindra/xuv400-ev',
+    'mahindra|xuv300': 'https://www.cardekho.com/mahindra/xuv300',
+    'mahindra|scorpio classic': 'https://www.cardekho.com/mahindra/scorpio',
     'mahindra|xuv700': 'https://www.cardekho.com/mahindra/xuv700',
+    'byd|e6': 'https://www.cardekho.com/byd/e6',
+    'honda|wr-v': 'https://www.cardekho.com/honda/wr-v-2020-2023',
     'mercedes-benz|cla electric': 'https://www.cardekho.com/mercedes-benz/cla-electric',
+    'mercedes-benz|amg cle 53': 'https://www.cardekho.com/mercedes-benz/amg-cle-53',
+    'mercedes-benz|amg e 53 cabriolet': 'https://www.cardekho.com/mercedes-benz/amg-e-53-cabriolet',
+    'mercedes-benz|amg eqs': 'https://www.cardekho.com/mercedes-benz/amg-eqs',
+    'mercedes-benz|amg s 63': 'https://www.cardekho.com/mercedes-benz/amg-s-63',
+    'mercedes-benz|cle cabriolet': 'https://www.cardekho.com/mercedes-benz/cle-cabriolet',
+    'mercedes-benz|v-class': 'https://www.cardekho.com/mercedes-benz/v-class',
     'porsche|cayenne electric': 'https://www.cardekho.com/porsche/cayenne-electric',
+    'skoda|octavia': 'https://www.cardekho.com/skoda/octavia',
+    'skoda|superb': 'https://www.cardekho.com/skoda/superb',
     'toyota|fortuner': 'https://www.cardekho.com/Toyota/Toyota_Fortuner',
+    'toyota|urban cruiser hyryder': 'https://www.cardekho.com/toyota/hyryder',
     'toyota|rumion': 'https://www.cardekho.com/Toyota/Toyota_Rumion',
+    'vinfast|vf 8': 'https://www.cardekho.com/vinfast/vf8',
+    'vinfast|vf 9': 'https://www.cardekho.com/vinfast/vf9',
     'volkswagen|tayron r-line': 'https://www.cardekho.com/volkswagen/tayron-r-line',
     'tata motors|altroz': 'https://www.cardekho.com/tata/altroz',
     'tata motors|curvv ev': 'https://www.cardekho.com/tata/curvv-ev',
@@ -829,6 +869,66 @@ function gather4WModelsFromGeneratedMeta() {
 function gatherManual4WModels() {
   return [
     {
+      make: 'Audi',
+      model: 'A8 L',
+      sourceUrl: 'https://www.cardekho.com/audi/a8-l',
+    },
+    {
+      make: 'Audi',
+      model: 'SQ8',
+      sourceUrl: 'https://www.cardekho.com/audi/sq8',
+    },
+    {
+      make: 'BMW',
+      model: '6 Series GT',
+      sourceUrl: 'https://www.cardekho.com/carmodels/BMW/BMW_6_Series',
+    },
+    {
+      make: 'BMW',
+      model: 'M8',
+      sourceUrl: 'https://www.cardekho.com/bmw/m8',
+    },
+    {
+      make: 'BMW',
+      model: 'X4',
+      sourceUrl: 'https://www.cardekho.com/bmw/x4',
+    },
+    {
+      make: 'BYD',
+      model: 'e6',
+      sourceUrl: 'https://www.cardekho.com/byd/e6',
+    },
+    {
+      make: 'Honda',
+      model: 'WR-V',
+      sourceUrl: 'https://www.cardekho.com/honda/wr-v-2020-2023',
+    },
+    {
+      make: 'Hyundai',
+      model: 'Prime HB',
+      sourceUrl: 'https://www.cardekho.com/hyundai/prime-hb',
+    },
+    {
+      make: 'Hyundai',
+      model: 'Prime SD',
+      sourceUrl: 'https://www.cardekho.com/hyundai/prime-sd',
+    },
+    {
+      make: 'Mahindra',
+      model: 'Scorpio Classic',
+      sourceUrl: 'https://www.cardekho.com/mahindra/scorpio',
+    },
+    {
+      make: 'Mahindra',
+      model: 'XUV300',
+      sourceUrl: 'https://www.cardekho.com/mahindra/xuv300',
+    },
+    {
+      make: 'Maruti Suzuki',
+      model: 'Wagon R',
+      sourceUrl: 'https://www.cardekho.com/maruti/wagon-r',
+    },
+    {
       make: 'BMW',
       model: 'X6',
       sourceUrl: 'https://www.cardekho.com/bmw/x6',
@@ -837,6 +937,46 @@ function gatherManual4WModels() {
       make: 'Mercedes-Benz',
       model: 'CLA Electric',
       sourceUrl: 'https://www.cardekho.com/mercedes-benz/cla-electric',
+    },
+    {
+      make: 'Mercedes-Benz',
+      model: 'AMG E 53 Cabriolet',
+      sourceUrl: 'https://www.cardekho.com/mercedes-benz/amg-e-53-cabriolet',
+    },
+    {
+      make: 'Mercedes-Benz',
+      model: 'AMG EQS',
+      sourceUrl: 'https://www.cardekho.com/mercedes-benz/amg-eqs',
+    },
+    {
+      make: 'Mercedes-Benz',
+      model: 'AMG GT Coupe',
+      sourceUrl: 'https://www.cardekho.com/mercedes-benz/amg-gt-coupe',
+    },
+    {
+      make: 'Mercedes-Benz',
+      model: 'AMG S 63',
+      sourceUrl: 'https://www.cardekho.com/mercedes-benz/amg-s-63',
+    },
+    {
+      make: 'Mercedes-Benz',
+      model: 'CLE Cabriolet',
+      sourceUrl: 'https://www.cardekho.com/mercedes-benz/cle-cabriolet',
+    },
+    {
+      make: 'Mercedes-Benz',
+      model: 'V-Class',
+      sourceUrl: 'https://www.cardekho.com/mercedes-benz/v-class',
+    },
+    {
+      make: 'Skoda',
+      model: 'Octavia',
+      sourceUrl: 'https://www.cardekho.com/skoda/octavia',
+    },
+    {
+      make: 'Skoda',
+      model: 'Superb',
+      sourceUrl: 'https://www.cardekho.com/skoda/superb',
     },
   ]
 }
@@ -1282,6 +1422,7 @@ function parseArgs() {
     limit: null,
     brand: '',
     model: '',
+    exactModel: '',
   }
 
   for (let index = 0; index < args.length; index += 1) {
@@ -1290,6 +1431,7 @@ function parseArgs() {
     if (arg === '--limit') options.limit = Number(args[index + 1] || 0) || null
     if (arg === '--brand') options.brand = String(args[index + 1] || '').toLowerCase()
     if (arg === '--model') options.model = String(args[index + 1] || '').toLowerCase()
+    if (arg === '--model-exact') options.exactModel = String(args[index + 1] || '').toLowerCase()
   }
 
   return options
@@ -1299,6 +1441,9 @@ function filterItems(items, options, brandKey = 'brand', modelKey = 'model') {
   let output = items
   if (options.brand) {
     output = output.filter((item) => String(item[brandKey]).toLowerCase().includes(options.brand))
+  }
+  if (options.exactModel) {
+    output = output.filter((item) => String(item[modelKey]).toLowerCase() === options.exactModel)
   }
   if (options.model) {
     output = output.filter((item) => String(item[modelKey]).toLowerCase().includes(options.model))

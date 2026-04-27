@@ -1,0 +1,24 @@
+{
+  "make": "BMW",
+  "model": "X4",
+  "brandSlug": "bmw",
+  "modelSlug": "x4",
+  "sourceUrl": "https://www.cardekho.com/bmw/x4",
+  "scrapedAt": "2026-04-24T04:31:42.520Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 3,
+    "total": 3
+  },
+  "hero": "/data/brand-model-images/4w-galleries/bmw/x4/colors/m-brooklyn-grey-metallic.avif",
+  "colorNames": [
+    "M Brooklyn Grey Metallic",
+    "Black Sapphire",
+    "BMW X4 M Brooklyn Grey Metallic"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/bmw/x4/colors/m-brooklyn-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x4/colors/black-sapphire.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x4/colors/bmw-x4-m-brooklyn-grey-metallic.avif"
+  ]
+}

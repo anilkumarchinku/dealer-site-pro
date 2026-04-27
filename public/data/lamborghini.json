@@ -324,7 +324,7 @@
       {
         "make": "Lamborghini",
         "model": "Urus",
-        "variant_name": "Urus S",
+        "variant_name": "S",
         "pricing": {
           "ex_showroom_min": 41800000,
           "ex_showroom_max": 41800000
@@ -390,10 +390,10 @@
       {
         "make": "Lamborghini",
         "model": "Urus",
-        "variant_name": "Urus Performante",
+        "variant_name": "Performante",
         "pricing": {
-          "ex_showroom_min": 45700001,
-          "ex_showroom_max": 45700001
+          "ex_showroom_min": 42200000,
+          "ex_showroom_max": 42200000
         },
         "powertrain": {
           "fuel": "Petrol",

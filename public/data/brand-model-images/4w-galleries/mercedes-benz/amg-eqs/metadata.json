@@ -1,0 +1,32 @@
+{
+  "make": "Mercedes-Benz",
+  "model": "AMG EQS",
+  "brandSlug": "mercedes-benz",
+  "modelSlug": "amg-eqs",
+  "sourceUrl": "https://www.cardekho.com/mercedes-benz/amg-eqs",
+  "scrapedAt": "2026-04-24T04:34:56.874Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 7,
+    "total": 7
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mercedes-benz/amg-eqs/colors/obsidian-black-metallic.avif",
+  "colorNames": [
+    "Obsidian Black Metallic",
+    "Designo Hyacinth Red Metallic",
+    "Designo Selenite Grey Magno",
+    "Graphite Grey Metallic",
+    "Nautic Blue Metallic",
+    "Designo Diamond White Metallic",
+    "Polar White Non Metallic"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-eqs/colors/obsidian-black-metallic.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-eqs/colors/designo-hyacinth-red-metallic.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-eqs/colors/designo-selenite-grey-magno.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-eqs/colors/graphite-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-eqs/colors/nautic-blue-metallic.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-eqs/colors/designo-diamond-white-metallic.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-eqs/colors/polar-white-non-metallic.avif"
+  ]
+}

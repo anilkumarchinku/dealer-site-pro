@@ -170,6 +170,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
 
     // Enquiry & Test Drive modal state
     const [onRoadOpen, setOnRoadOpen] = useState(false);
+    const [onRoadVariantLabel, setOnRoadVariantLabel] = useState<string | null>(null);
     const [enquiryOpen, setEnquiryOpen] = useState(false);
     const [testDriveOpen, setTestDriveOpen] = useState(false);
     const allImages = useMemo(
@@ -419,7 +420,14 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                                         className="w-full"
                                         size="lg"
                                         style={{ backgroundColor: brandColor, color: brandContrast }}
-                                        onClick={() => (isUsed ? setEnquiryOpen(true) : setOnRoadOpen(true))}
+                                        onClick={() => {
+                                            if (isUsed) {
+                                                setEnquiryOpen(true);
+                                                return;
+                                            }
+                                            setOnRoadVariantLabel(car.variant || car.variants?.[0]?.name || null);
+                                            setOnRoadOpen(true);
+                                        }}
                                     >
                                         {isUsed ? <MessageSquare className="w-4 h-4 mr-2" /> : <MapPin className="w-4 h-4 mr-2" />}
                                         {isUsed ? 'Send Enquiry' : 'Check On-Road Price'}
@@ -873,7 +881,15 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                                             <TableCell>{variant.fuelType}</TableCell>
                                             <TableCell>{variant.transmission}</TableCell>
                                             <TableCell className="text-right">
-                                                <Button variant="outline" size="sm" className={lightOutlineButtonClass}>
+                                                <Button
+                                                    variant="outline"
+                                                    size="sm"
+                                                    className={lightOutlineButtonClass}
+                                                    onClick={() => {
+                                                        setOnRoadVariantLabel(variant.name);
+                                                        setOnRoadOpen(true);
+                                                    }}
+                                                >
                                                     Get Price
                                                 </Button>
                                             </TableCell>
@@ -1262,6 +1278,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
             open={onRoadOpen}
             onOpenChange={setOnRoadOpen}
             brandColor={brandColor}
+            defaultVariantLabel={onRoadVariantLabel}
         />
 
         {/* Test Drive Modal */}

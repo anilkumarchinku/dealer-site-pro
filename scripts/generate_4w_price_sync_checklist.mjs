@@ -76,8 +76,16 @@ function statusPriority(status) {
 const raw = fs.readFileSync(INPUT_CSV, 'utf8')
 const rows = parseCsv(raw)
 const actionable = rows.filter((row) => row.Status && row.Status !== 'MATCH')
+const allByBrand = new Map()
 
 const grouped = new Map()
+
+for (const row of rows) {
+  const brand = row.Brand || 'Unknown Brand'
+  const bucket = allByBrand.get(brand) ?? []
+  bucket.push(row)
+  allByBrand.set(brand, bucket)
+}
 
 for (const row of actionable) {
   const brand = row.Brand || 'Unknown Brand'
@@ -94,6 +102,10 @@ for (const row of actionable) {
 }
 
 const brands = Array.from(grouped.keys()).sort((a, b) => a.localeCompare(b))
+const completedBrands = Array.from(allByBrand.entries())
+  .filter(([, brandRows]) => brandRows.length > 0 && brandRows.every((row) => !row.Status || row.Status === 'MATCH'))
+  .map(([brand]) => brand)
+  .sort((a, b) => a.localeCompare(b))
 const generatedAt = new Date().toISOString()
 
 const lines = [
@@ -112,8 +124,18 @@ const lines = [
   '',
   `Actionable rows: ${actionable.length}`,
   `Makes with pending work: ${brands.length}`,
+  `Completed makes: ${completedBrands.length}`,
   '',
 ]
+
+if (completedBrands.length) {
+  lines.push('## Completed Makes')
+  lines.push('')
+  for (const brand of completedBrands) {
+    lines.push(`- [x] ${brand}`)
+  }
+  lines.push('')
+}
 
 for (const brand of brands) {
   const brandEntry = grouped.get(brand)

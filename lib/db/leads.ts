@@ -58,8 +58,7 @@ export async function fetchLeads(
         .from("leads")
         .select("id, dealer_id, customer_name, customer_email, customer_phone, lead_type, vehicle_id, vehicle_interest, source, utm_source, message, status, created_at")
         .eq("dealer_id", dealerId)
-        .order("created_at", { ascending: false })
-        .limit(200);
+        .order("created_at", { ascending: false });
 
     if (error) {
         console.warn("[fetchLeads]", error.message);

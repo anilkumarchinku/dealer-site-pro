@@ -243,7 +243,7 @@
     {
       "make": "Maserati",
       "model": "GranTurismo",
-      "variant_name": "Modena",
+      "variant_name": "Maserati Gran Turismo 4.7 V8",
       "ex_showroom_price": 22500000,
       "fuel_type": "Petrol",
       "transmission": "Automatic (6-Speed)",
@@ -298,7 +298,8 @@
         }
       ],
       "availability_status": "on_sale",
-      "launch_year": 2023
+      "launch_year": 2023,
+      "source_url": "https://www.cardekho.com/overview/Maserati_Gran_Turismo/Maserati_Gran_Turismo_4.7_V8.htm"
     },
     {
       "make": "Maserati",

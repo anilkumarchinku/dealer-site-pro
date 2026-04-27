@@ -8,12 +8,12 @@ import { VehicleDetailGallery } from "@/components/two-wheelers/VehicleDetailGal
 import { EMICalculator } from "@/components/shared/EMICalculator"
 import { LeadFormModal } from "@/components/two-wheelers/LeadFormModal"
 import { BookingModal } from "@/components/two-wheelers/BookingModal"
-import { CityOnRoadPrice } from "@/components/two-wheelers/CityOnRoadPrice"
+import { OnRoadPriceDialog } from "@/components/two-wheelers/OnRoadPriceDialog"
 import { FullSpecsSection } from "@/components/two-wheelers/FullSpecsSection"
 import { SimilarVehicles } from "@/components/two-wheelers/SimilarVehicles"
 import { generateTemplateConfig } from "@/lib/templates"
 import type { TwoWheelerVehicle, TwoWheelerLeadType } from "@/lib/types/two-wheeler"
-import { ChevronLeft } from "lucide-react"
+import { ChevronLeft, MapPin } from "lucide-react"
 import Link from "next/link"
 import { useSitePrefix } from "@/lib/hooks/useSitePrefix"
 
@@ -39,6 +39,7 @@ export default function VehicleDetailPage() {
     const [leadOpen,    setLeadOpen]    = useState(false)
     const [bookingOpen, setBookingOpen] = useState(false)
     const [selectedColor, setSelectedColor] = useState("")
+    const [onRoadOpen, setOnRoadOpen] = useState(false)
 
     useEffect(() => {
         if (!slug || !id) return
@@ -374,13 +375,26 @@ export default function VehicleDetailPage() {
                     </section>
 
                     {/* On-Road Price */}
-                    <div className="mt-10 max-w-lg">
-                        <CityOnRoadPrice
-                            exShowroomPaise={vehicle.ex_showroom_price_paise}
-                            engineCc={vehicle.engine_cc}
-                            fuelType={vehicle.fuel_type}
-                        />
-                    </div>
+                    <section className="mt-10 max-w-2xl">
+                        <h2 className="text-xl font-bold mb-4">On-Road Price</h2>
+                        <div className="rounded-2xl border border-gray-200 bg-gray-50 p-5">
+                            <p className="text-sm text-muted-foreground">
+                                Select your state and bike variant to see the estimated on-road price above ex-showroom.
+                            </p>
+                            <p className="mt-2 text-xs text-muted-foreground">
+                                Includes state tax, insurance, handling and optional hypothecation.
+                            </p>
+                            <button
+                                type="button"
+                                onClick={() => setOnRoadOpen(true)}
+                                className="mt-4 inline-flex items-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+                                style={{ backgroundColor: brandColor }}
+                            >
+                                <MapPin className="w-4 h-4" />
+                                Open On-Road Calculator
+                            </button>
+                        </div>
+                    </section>
 
                     {/* Full Specifications */}
                     <FullSpecsSection vehicle={vehicle} />
@@ -413,6 +427,21 @@ export default function VehicleDetailPage() {
                                 bookingAmountPaise={BOOKING_AMOUNT}
                                 isOpen={bookingOpen}
                                 onClose={() => setBookingOpen(false)}
+                            />
+                            <OnRoadPriceDialog
+                                open={onRoadOpen}
+                                onOpenChange={setOnRoadOpen}
+                                brand={vehicle.brand}
+                                model={vehicle.model}
+                                defaultVariantLabel={vehicle.variant}
+                                exShowroomPaise={vehicle.ex_showroom_price_paise}
+                                fuelType={vehicle.fuel_type}
+                                engineCc={vehicle.engine_cc}
+                                variants={vehicle.all_variants?.map((variant) => ({
+                                    name: variant.name,
+                                    price: variant.price_paise > 0 ? String(variant.price_paise / 100) : '',
+                                }))}
+                                brandColor={brandColor}
                             />
                         </>
                     )}

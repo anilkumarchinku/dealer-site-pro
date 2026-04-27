@@ -417,9 +417,12 @@
       ]
     },
     {
-      "variant_name": "MU-X 4x2 AT",
+      "variant_name": "MU-X 4X2 AT",
+      "variant_name_citation": "https://www.cardekho.com/overview/Isuzu_MU-X/Isuzu_MU-X_4X2_AT.htm",
       "ex_showroom_price_min_inr": 3453240,
+      "ex_showroom_price_min_inr_citation": "https://www.cardekho.com/overview/Isuzu_MU-X/Isuzu_MU-X_4X2_AT.htm",
       "ex_showroom_price_max_inr": 3453240,
+      "ex_showroom_price_max_inr_citation": "https://www.cardekho.com/overview/Isuzu_MU-X/Isuzu_MU-X_4X2_AT.htm",
       "hyderabad_on_road_price_inr": 4081815,
       "fuel_type": "Diesel",
       "transmission": "Automatic",
@@ -460,7 +463,9 @@
         {
           "value": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Isuzu/MU-X/8652/1768896726832/front-left-side-47.jpg?tr=w-230"
         }
-      ]
+      ],
+      "source_url": "https://www.cardekho.com/overview/Isuzu_MU-X/Isuzu_MU-X_4X2_AT.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Isuzu_MU-X/Isuzu_MU-X_4X2_AT.htm"
     },
     {
       "variant_name": "MU-X 4x4 AT",

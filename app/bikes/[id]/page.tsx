@@ -20,10 +20,10 @@ import { Separator } from '@/components/ui/separator';
 import { Slider } from '@/components/ui/slider';
 import { Badge } from '@/components/ui/badge';
 import { getVehicleImageUrls, brandNameToId } from '@/lib/utils/brand-model-images';
+import { OnRoadPriceDialog } from '@/components/two-wheelers/OnRoadPriceDialog';
 import {
     ChevronRight,
     Share2,
-    Phone,
     Calendar,
     Fuel,
     Gauge,
@@ -113,6 +113,14 @@ function parsePriceToPaise(raw: string | null | undefined): number {
     return 0;
 }
 
+function normalizeVariantLabel(value: string | null | undefined): string {
+    return String(value ?? '')
+        .toLowerCase()
+        .replace(/[^\w]+/g, ' ')
+        .replace(/\s+/g, ' ')
+        .trim()
+}
+
 // ── Page Component ───────────────────────────────────────────────
 export default function BikeDetailPage({ params }: Props) {
     const { id } = use(params);
@@ -129,6 +137,7 @@ export default function BikeDetailPage({ params }: Props) {
     const [activeTab, setActiveTab] = useState('overview');
     const [isTabBarSticky, setIsTabBarSticky] = useState(false);
     const [selectedColorIdx, setSelectedColorIdx] = useState(0);
+    const [onRoadOpen, setOnRoadOpen] = useState(false);
 
     // EMI Calculator state
     const [emiPrice, setEmiPrice] = useState(100000);
@@ -347,8 +356,8 @@ export default function BikeDetailPage({ params }: Props) {
     // ── Derived values ───────────────────────────────────────────
     const fuelRaw = (bike.fuel_type ?? '').toLowerCase();
     const isElectric = fuelRaw === 'electric';
-    const bodyType = (bike.body_type ?? '').toLowerCase();
-    const vehicleType = isElectric ? 'Electric' : bodyType.includes('scooter') ? 'Scooter' : 'Motorcycle';
+    const rawVehicleType = String(bike.type ?? bike.body_type ?? '').toLowerCase();
+    const vehicleType = isElectric ? 'Electric' : rawVehicleType.includes('scooter') ? 'Scooter' : 'Motorcycle';
     const fuelLabel = isElectric ? 'Electric' : 'Petrol';
     const transmissionLabel = bike.transmission ?? (isElectric ? 'Automatic' : '--');
     const mileageKmpl = bike.mileage_kmpl ? parseFloat(bike.mileage_kmpl) : null;
@@ -358,9 +367,10 @@ export default function BikeDetailPage({ params }: Props) {
     const variant = displayVariant ? ` ${displayVariant}` : '';
 
     const detailVariants = Array.isArray(bike.variants) ? bike.variants : [];
+    const normalizedBikeVariant = normalizeVariantLabel(bike.variant);
     const currentVariantName = detailVariants.length > 0
-        ? (detailVariants.some((v: { name: string }) => v.name === bike.variant)
-            ? bike.variant
+        ? (detailVariants.some((v: { name: string }) => normalizeVariantLabel(v.name) === normalizedBikeVariant)
+            ? detailVariants.find((v: { name: string }) => normalizeVariantLabel(v.name) === normalizedBikeVariant)?.name
             : detailVariants[0]?.name)
         : null;
 
@@ -378,7 +388,7 @@ export default function BikeDetailPage({ params }: Props) {
                 engineOrBatteryLabel: bike.fuel_type === 'electric'
                     ? (bike.range_km ? `${bike.range_km} km range` : '--')
                     : (bike.engine_cc ? `${bike.engine_cc} cc` : '--'),
-                isCurrent: (v.name || '') === currentVariantName,
+                isCurrent: normalizeVariantLabel(v.name || '') === normalizeVariantLabel(currentVariantName),
             };
         })
         : variants.map((v) => ({
@@ -396,6 +406,10 @@ export default function BikeDetailPage({ params }: Props) {
     // Image fallback chain
     const brandId = brandNameToId(bike.make, '2w');
     const imageUrls = getVehicleImageUrls('2w', brandId, bike.model, bike.image_url);
+    const selectedColorImage = colorImages[selectedColorIdx]?.image ?? null;
+    const heroImageUrls = selectedColorImage
+        ? [selectedColorImage, ...imageUrls.filter((url) => url !== selectedColorImage)]
+        : imageUrls;
 
     // Features & safety from DB
     const features: string[] = bike.features ?? bike.key_features ?? [];
@@ -459,7 +473,7 @@ export default function BikeDetailPage({ params }: Props) {
                             {/* Main Image */}
                             <div className="relative aspect-[16/10] bg-gray-100 rounded-xl overflow-hidden">
                                 <BikeDetailHeroImage
-                                    imageUrls={imageUrls}
+                                    imageUrls={heroImageUrls}
                                     alt={`${bike.make} ${bike.model}${variant}`}
                                 />
                             </div>
@@ -518,8 +532,12 @@ export default function BikeDetailPage({ params }: Props) {
 
                                     {/* CTAs */}
                                     <div className="space-y-2.5">
-                                        <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white" size="lg">
-                                            <Phone className="w-4 h-4 mr-2" />
+                                        <Button
+                                            className="w-full bg-blue-600 hover:bg-blue-700 text-white"
+                                            size="lg"
+                                            onClick={() => setOnRoadOpen(true)}
+                                        >
+                                            <Calculator className="w-4 h-4 mr-2" />
                                             Check On-Road Price
                                         </Button>
                                         <div className="grid grid-cols-2 gap-2">
@@ -1094,6 +1112,18 @@ export default function BikeDetailPage({ params }: Props) {
                 </div>
             </div>
 
+            <OnRoadPriceDialog
+                open={onRoadOpen}
+                onOpenChange={setOnRoadOpen}
+                brand={bike.make}
+                model={bike.model}
+                defaultVariantLabel={displayVariant}
+                exShowroomPaise={bike.price_min_paise ?? 0}
+                fuelType={bike.fuel_type === 'electric' ? 'electric' : 'petrol'}
+                engineCc={bike.engine_cc}
+                variants={detailVariants}
+                brandColor="#2563eb"
+            />
             <SiteFooter />
         </>
     );

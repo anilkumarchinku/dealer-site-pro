@@ -1,0 +1,34 @@
+{
+  "make": "Audi",
+  "model": "SQ8",
+  "brandSlug": "audi",
+  "modelSlug": "sq8",
+  "sourceUrl": "https://www.cardekho.com/audi/sq8",
+  "scrapedAt": "2026-04-24T04:31:11.926Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 8,
+    "total": 8
+  },
+  "hero": "/data/brand-model-images/4w-galleries/audi/sq8/colors/daytona-grey-pearl-effect.avif",
+  "colorNames": [
+    "Daytona Grey Pearl Effect",
+    "Mythos Black Metallic",
+    "Waitomo Blue Metallic",
+    "Ascari Blue Metallic",
+    "Sakhir Gold Metallic",
+    "Chilli Red Mettalic",
+    "Glacier White Metallic",
+    "Satellite Silver Metallic"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/audi/sq8/colors/daytona-grey-pearl-effect.avif",
+    "/data/brand-model-images/4w-galleries/audi/sq8/colors/mythos-black-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/sq8/colors/waitomo-blue-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/sq8/colors/ascari-blue-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/sq8/colors/sakhir-gold-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/sq8/colors/chilli-red-mettalic.avif",
+    "/data/brand-model-images/4w-galleries/audi/sq8/colors/glacier-white-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/sq8/colors/satellite-silver-metallic.avif"
+  ]
+}

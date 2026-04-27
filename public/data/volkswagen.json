@@ -1145,13 +1145,13 @@
       "make_citation": "https://www.cardekho.com/volkswagen/tiguan",
       "model": "Tiguan R-Line",
       "model_citation": "https://www.cardekho.com/volkswagen/tiguan",
-      "variant_name": "Tiguan R-Line 2.0 TSI 7DCT",
-      "variant_name_citation": "https://www.cardekho.com/volkswagen/tiguan/variants",
+      "variant_name": "2.0L TSI",
+      "variant_name_citation": "https://www.cardekho.com/overview/Volkswagen_Tiguan_R-Line/Volkswagen_Tiguan_R-Line_2.0L_TSI.htm",
       "ex_showroom_price": {
         "min": 4573000,
-        "min_citation": "https://www.cardekho.com/volkswagen/tiguan",
+        "min_citation": "https://www.cardekho.com/overview/Volkswagen_Tiguan_R-Line/Volkswagen_Tiguan_R-Line_2.0L_TSI.htm",
         "max": 4573000,
-        "max_citation": "https://www.cardekho.com/volkswagen/tiguan"
+        "max_citation": "https://www.cardekho.com/overview/Volkswagen_Tiguan_R-Line/Volkswagen_Tiguan_R-Line_2.0L_TSI.htm"
       },
       "fuel_type": "Petrol",
       "fuel_type_citation": "https://www.cardekho.com/volkswagen/tiguan",
@@ -1237,8 +1237,8 @@
       ],
       "availability_status": "on_sale",
       "availability_status_citation": "https://www.cardekho.com/volkswagen/tiguan",
-      "source_url": "https://www.cardekho.com/volkswagen/tiguan",
-      "source_url_citation": "https://www.cardekho.com/volkswagen/tiguan"
+      "source_url": "https://www.cardekho.com/overview/Volkswagen_Tiguan_R-Line/Volkswagen_Tiguan_R-Line_2.0L_TSI.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Volkswagen_Tiguan_R-Line/Volkswagen_Tiguan_R-Line_2.0L_TSI.htm"
     },
     {
       "make": "Volkswagen",
@@ -1345,13 +1345,13 @@
       "make_citation": "https://www.cardekho.com/volkswagen/tayron",
       "model": "Tayron R-Line",
       "model_citation": "https://www.cardekho.com/volkswagen/tayron",
-      "variant_name": "Tayron R-Line 2.0 TSI 4MOTION DSG",
-      "variant_name_citation": "https://www.cardekho.com/volkswagen/tayron",
+      "variant_name": "2.0 TSI",
+      "variant_name_citation": "https://www.cardekho.com/overview/Volkswagen_Tayron_R-Line/Volkswagen_Tayron_R-Line_2.0_TSI.htm",
       "ex_showroom_price": {
         "min": 4699000,
-        "min_citation": "https://www.cardekho.com/volkswagen/tayron",
+        "min_citation": "https://www.cardekho.com/overview/Volkswagen_Tayron_R-Line/Volkswagen_Tayron_R-Line_2.0_TSI.htm",
         "max": 4699000,
-        "max_citation": "https://www.cardekho.com/volkswagen/tayron"
+        "max_citation": "https://www.cardekho.com/overview/Volkswagen_Tayron_R-Line/Volkswagen_Tayron_R-Line_2.0_TSI.htm"
       },
       "fuel_type": "Petrol",
       "fuel_type_citation": "https://www.cardekho.com/volkswagen/tayron",
@@ -1445,8 +1445,8 @@
       ],
       "availability_status": "on_sale",
       "availability_status_citation": "https://www.cardekho.com/volkswagen/tayron",
-      "source_url": "https://www.cardekho.com/volkswagen/tayron",
-      "source_url_citation": "https://www.cardekho.com/volkswagen/tayron"
+      "source_url": "https://www.cardekho.com/overview/Volkswagen_Tayron_R-Line/Volkswagen_Tayron_R-Line_2.0_TSI.htm",
+      "source_url_citation": "https://www.cardekho.com/overview/Volkswagen_Tayron_R-Line/Volkswagen_Tayron_R-Line_2.0_TSI.htm"
     }
   ]
 }

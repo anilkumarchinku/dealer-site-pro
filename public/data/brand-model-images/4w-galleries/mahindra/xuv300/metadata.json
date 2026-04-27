@@ -1,0 +1,40 @@
+{
+  "make": "Mahindra",
+  "model": "XUV300",
+  "brandSlug": "mahindra",
+  "modelSlug": "xuv300",
+  "sourceUrl": "https://www.cardekho.com/mahindra/xuv300",
+  "scrapedAt": "2026-04-24T04:33:04.488Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 11,
+    "total": 11
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mahindra/xuv300/colors/everest-white.avif",
+  "colorNames": [
+    "Everest White",
+    "Aquamarine",
+    "D'sat Silver",
+    "Everest White Black Roof",
+    "Red Rage",
+    "Dark Grey",
+    "Blazing Bronze",
+    "Blazing Bronze Dual Tone",
+    "Napoli Black Dual Tone",
+    "Napoli Black",
+    "Aquamarnine"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mahindra/xuv300/colors/everest-white.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xuv300/colors/aquamarine.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xuv300/colors/d-sat-silver.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xuv300/colors/everest-white-black-roof.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xuv300/colors/red-rage.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xuv300/colors/dark-grey.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xuv300/colors/blazing-bronze.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xuv300/colors/blazing-bronze-dual-tone.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xuv300/colors/napoli-black-dual-tone.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xuv300/colors/napoli-black.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/xuv300/colors/aquamarnine.avif"
+  ]
+}

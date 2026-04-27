@@ -329,7 +329,8 @@
       ]
     },
     {
-      "variant_name": "Maruti Grand Vitara Zeta",
+      "model": "Grand Vitara",
+      "variant_name": "Zeta",
       "variant_name_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
       "ex_showroom_price": 1370000,
       "ex_showroom_price_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
@@ -517,7 +518,8 @@
       ]
     },
     {
-      "variant_name": "Maruti Grand Vitara Zeta Opt",
+      "model": "Grand Vitara",
+      "variant_name": "Zeta Opt",
       "variant_name_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
       "ex_showroom_price": 1428000,
       "ex_showroom_price_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
@@ -669,7 +671,8 @@
       ]
     },
     {
-      "variant_name": "Maruti Grand Vitara Zeta CNG",
+      "model": "Grand Vitara",
+      "variant_name": "Zeta CNG",
       "variant_name_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
       "ex_showroom_price": 1460000,
       "ex_showroom_price_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
@@ -745,7 +748,8 @@
       ]
     },
     {
-      "variant_name": "Maruti Grand Vitara Zeta AT",
+      "model": "Grand Vitara",
+      "variant_name": "Zeta AT",
       "variant_name_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
       "ex_showroom_price": 1505000,
       "ex_showroom_price_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
@@ -1103,7 +1107,8 @@
       ]
     },
     {
-      "variant_name": "Maruti Grand Vitara Zeta Opt AT",
+      "model": "Grand Vitara",
+      "variant_name": "Zeta Opt AT",
       "variant_name_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
       "ex_showroom_price": 1563000,
       "ex_showroom_price_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
@@ -1349,7 +1354,8 @@
       ]
     },
     {
-      "variant_name": "Maruti Grand Vitara Alpha Opt DT",
+      "model": "Grand Vitara",
+      "variant_name": "Alpha Opt DT",
       "variant_name_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
       "ex_showroom_price": 1593000,
       "ex_showroom_price_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
@@ -1735,7 +1741,8 @@
       ]
     },
     {
-      "variant_name": "Maruti Grand Vitara Alpha Opt AT DT",
+      "model": "Grand Vitara",
+      "variant_name": "Alpha Opt AT DT",
       "variant_name_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
       "ex_showroom_price": 1728000,
       "ex_showroom_price_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
@@ -1963,7 +1970,8 @@
       ]
     },
     {
-      "variant_name": "Maruti Grand Vitara Zeta Plus Hybrid CVT DT",
+      "model": "Grand Vitara",
+      "variant_name": "Zeta Plus Hybrid CVT DT",
       "variant_name_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
       "ex_showroom_price": 1807000,
       "ex_showroom_price_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
@@ -2267,7 +2275,8 @@
       ]
     },
     {
-      "variant_name": "Maruti Grand Vitara Alpha AWD Opt AT DT",
+      "model": "Grand Vitara",
+      "variant_name": "Alpha AWD Opt AT DT",
       "variant_name_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
       "ex_showroom_price": 1873000,
       "ex_showroom_price_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
@@ -2419,7 +2428,8 @@
       ]
     },
     {
-      "variant_name": "Maruti Grand Vitara Alpha Plus Opt Hybrid CVT",
+      "model": "Grand Vitara",
+      "variant_name": "Alpha Plus Opt Hybrid CVT",
       "variant_name_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
       "ex_showroom_price": 1957000,
       "ex_showroom_price_citation": "https://www.cardekho.com/maruti/grand-vitara/variants.htm",
@@ -2571,8 +2581,9 @@
       ]
     },
     {
-      "variant_name": "Maruti Alto K10 STD",
-      "variant_name_citation": "https://www.cardekho.com/maruti/alto-k10/variants.htm",
+      "model": "Alto K10",
+      "variant_name": "STD",
+      "variant_name_citation": "https://www.cardekho.com/overview/Maruti_Alto_K10/Maruti_Alto_K10_STD.htm",
       "ex_showroom_price": 369900,
       "ex_showroom_price_citation": "https://www.cardekho.com/overview/Maruti_Alto_K10/Maruti_Alto_K10_STD.htm",
       "fuel_type": "Petrol",
@@ -2631,8 +2642,9 @@
       "hyderabad_on_road_price_citation": null
     },
     {
-      "variant_name": "Maruti Alto K10 VXI",
-      "variant_name_citation": "https://www.cardekho.com/maruti/alto-k10/variants.htm",
+      "model": "Alto K10",
+      "variant_name": "VXI",
+      "variant_name_citation": "https://www.cardekho.com/overview/Maruti_Alto_K10/Maruti_Alto_K10_VXI.htm",
       "ex_showroom_price": 449900,
       "ex_showroom_price_citation": "https://www.cardekho.com/overview/Maruti_Alto_K10/Maruti_Alto_K10_VXI.htm",
       "fuel_type": "Petrol",
@@ -2661,9 +2673,10 @@
       "hyderabad_on_road_price_citation": null
     },
     {
-      "variant_name": "Maruti Alto K10 VXI AT",
-      "variant_name_citation": "https://www.cardekho.com/maruti/alto-k10/variants.htm",
-      "ex_showroom_price": 481900,
+      "model": "Alto K10",
+      "variant_name": "VXI AT",
+      "variant_name_citation": "https://www.cardekho.com/overview/Maruti_Alto_K10/Maruti_Alto_K10_VXI_AT.htm",
+      "ex_showroom_price": 494900,
       "ex_showroom_price_citation": "https://www.cardekho.com/overview/Maruti_Alto_K10/Maruti_Alto_K10_VXI_AT.htm",
       "fuel_type": "Petrol",
       "fuel_type_citation": "https://www.cardekho.com/maruti/alto-k10/specs",
@@ -2691,8 +2704,9 @@
       "hyderabad_on_road_price_citation": null
     },
     {
-      "variant_name": "Maruti Alto K10 VXI Plus",
-      "variant_name_citation": "https://www.cardekho.com/maruti/alto-k10/variants.htm",
+      "model": "Alto K10",
+      "variant_name": "VXI Plus",
+      "variant_name_citation": "https://www.cardekho.com/overview/Maruti_Alto_K10/Maruti_Alto_K10_VXI_Plus.htm",
       "ex_showroom_price": 499900,
       "ex_showroom_price_citation": "https://www.cardekho.com/overview/Maruti_Alto_K10/Maruti_Alto_K10_VXI_Plus.htm",
       "fuel_type": "Petrol",
@@ -2721,8 +2735,9 @@
       "hyderabad_on_road_price_citation": null
     },
     {
-      "variant_name": "Maruti Alto K10 VXI Plus AT",
-      "variant_name_citation": "https://www.cardekho.com/maruti/alto-k10/variants.htm",
+      "model": "Alto K10",
+      "variant_name": "VXI Plus AT",
+      "variant_name_citation": "https://www.cardekho.com/overview/Maruti_Alto_K10/Maruti_Alto_K10_VXI_Plus_AT.htm",
       "ex_showroom_price": 544900,
       "ex_showroom_price_citation": "https://www.cardekho.com/overview/Maruti_Alto_K10/Maruti_Alto_K10_VXI_Plus_AT.htm",
       "fuel_type": "Petrol",
@@ -2751,8 +2766,9 @@
       "hyderabad_on_road_price_citation": null
     },
     {
-      "variant_name": "Maruti Alto K10 LXI S-CNG",
-      "variant_name_citation": "https://www.cardekho.com/maruti/alto-k10/variants.htm",
+      "model": "Alto K10",
+      "variant_name": "LXI S-CNG",
+      "variant_name_citation": "https://www.cardekho.com/overview/Maruti_Alto_K10/Maruti_Alto_K10_LXI_S-CNG.htm",
       "ex_showroom_price": 481900,
       "ex_showroom_price_citation": "https://www.cardekho.com/overview/Maruti_Alto_K10/Maruti_Alto_K10_LXI_S-CNG.htm",
       "fuel_type": "CNG",
@@ -2781,8 +2797,9 @@
       "hyderabad_on_road_price_citation": null
     },
     {
-      "variant_name": "Maruti Alto K10 VXI S-CNG",
-      "variant_name_citation": "https://www.cardekho.com/maruti/alto-k10/variants.htm",
+      "model": "Alto K10",
+      "variant_name": "VXI S-CNG",
+      "variant_name_citation": "https://www.cardekho.com/overview/Maruti_Alto_K10/Maruti_Alto_K10_VXI_S-CNG.htm",
       "ex_showroom_price": 531900,
       "ex_showroom_price_citation": "https://www.cardekho.com/overview/Maruti_Alto_K10/Maruti_Alto_K10_VXI_S-CNG.htm",
       "fuel_type": "CNG",
@@ -2811,7 +2828,8 @@
       "hyderabad_on_road_price_citation": null
     },
     {
-      "variant_name": "Maruti S-Presso STD",
+      "model": "S-Presso",
+      "variant_name": "STD",
       "variant_name_citation": "https://www.cardekho.com/maruti/s-presso/variants.htm",
       "ex_showroom_price": 349900,
       "ex_showroom_price_citation": "https://www.cardekho.com/overview/Maruti_S-Presso/Maruti_S-Presso_STD.htm",
@@ -2841,7 +2859,8 @@
       "hyderabad_on_road_price_citation": null
     },
     {
-      "variant_name": "Maruti S-Presso LXI",
+      "model": "S-Presso",
+      "variant_name": "LXi",
       "variant_name_citation": "https://www.cardekho.com/maruti/s-presso/variants.htm",
       "ex_showroom_price": 379900,
       "ex_showroom_price_citation": "https://www.cardekho.com/overview/Maruti_S-Presso/Maruti_S-Presso_LXI.htm",
@@ -2871,7 +2890,8 @@
       "hyderabad_on_road_price_citation": null
     },
     {
-      "variant_name": "Maruti S-Presso VXI",
+      "model": "S-Presso",
+      "variant_name": "VXI",
       "variant_name_citation": "https://www.cardekho.com/maruti/s-presso/variants.htm",
       "ex_showroom_price": 429900,
       "ex_showroom_price_citation": "https://www.cardekho.com/overview/Maruti_S-Presso/Maruti_S-Presso_VXI.htm",
@@ -2931,9 +2951,10 @@
       "hyderabad_on_road_price_citation": null
     },
     {
-      "variant_name": "Maruti S-Presso VXI Opt AT",
-      "variant_name_citation": "https://www.cardekho.com/maruti/s-presso/variants.htm",
-      "ex_showroom_price": 479900,
+      "model": "S-Presso",
+      "variant_name": "VXi Opt AT",
+      "variant_name_citation": "https://www.cardekho.com/overview/Maruti_S-Presso/Maruti_S-Presso_VXi_Opt_AT.htm",
+      "ex_showroom_price": 474900,
       "ex_showroom_price_citation": "https://www.cardekho.com/overview/Maruti_S-Presso/Maruti_S-Presso_VXI_Opt_AT.htm",
       "fuel_type": "Petrol",
       "fuel_type_citation": "https://www.cardekho.com/maruti/s-presso/specs",
@@ -2961,8 +2982,9 @@
       "hyderabad_on_road_price_citation": null
     },
     {
-      "variant_name": "Maruti S-Presso VXI Plus Opt AT",
-      "variant_name_citation": "https://www.cardekho.com/maruti/s-presso/variants.htm",
+      "model": "S-Presso",
+      "variant_name": "VXi Plus Opt AT",
+      "variant_name_citation": "https://www.cardekho.com/overview/Maruti_S-Presso/Maruti_S-Presso_VXi_Plus_Opt_AT.htm",
       "ex_showroom_price": 524900,
       "ex_showroom_price_citation": "https://www.cardekho.com/overview/Maruti_S-Presso/Maruti_S-Presso_VXI_Plus_Opt_AT.htm",
       "fuel_type": "Petrol",
@@ -2991,9 +3013,10 @@
       "hyderabad_on_road_price_citation": null
     },
     {
-      "variant_name": "Maruti S-Presso LXI CNG",
-      "variant_name_citation": "https://www.cardekho.com/maruti/s-presso/variants.htm",
-      "ex_showroom_price": 479900,
+      "model": "S-Presso",
+      "variant_name": "LXI CNG",
+      "variant_name_citation": "https://www.cardekho.com/overview/Maruti_S-Presso/Maruti_S-Presso_LXI_CNG.htm",
+      "ex_showroom_price": 461900,
       "ex_showroom_price_citation": "https://www.cardekho.com/overview/Maruti_S-Presso/Maruti_S-Presso_LXI_CNG.htm",
       "fuel_type": "CNG",
       "fuel_type_citation": "https://www.cardekho.com/overview/Maruti_S-Presso/Maruti_S-Presso_LXI_CNG.htm",
@@ -3021,9 +3044,10 @@
       "hyderabad_on_road_price_citation": null
     },
     {
-      "variant_name": "Maruti S-Presso VXI CNG",
-      "variant_name_citation": "https://www.cardekho.com/maruti/s-presso/variants.htm",
-      "ex_showroom_price": 524900,
+      "model": "S-Presso",
+      "variant_name": "VXI CNG",
+      "variant_name_citation": "https://www.cardekho.com/overview/Maruti_S-Presso/Maruti_S-Presso_VXI_CNG.htm",
+      "ex_showroom_price": 511900,
       "ex_showroom_price_citation": "https://www.cardekho.com/overview/Maruti_S-Presso/Maruti_S-Presso_VXI_CNG.htm",
       "fuel_type": "CNG",
       "fuel_type_citation": "https://www.cardekho.com/overview/Maruti_S-Presso/Maruti_S-Presso_VXI_CNG.htm",
@@ -3051,10 +3075,11 @@
       "hyderabad_on_road_price_citation": null
     },
     {
-      "variant_name": "Maruti Celerio LXI",
-      "variant_name_citation": "https://www.cardekho.com/maruti/celerio/variants.htm",
+      "model": "Celerio",
+      "variant_name": "LXI",
+      "variant_name_citation": "https://www.cardekho.com/overview/Maruti_Celerio/Maruti_Celerio_LXI.htm",
       "ex_showroom_price": 469900,
-      "ex_showroom_price_citation": "https://www.cardekho.com/maruti/celerio/variants.htm",
+      "ex_showroom_price_citation": "https://www.cardekho.com/overview/Maruti_Celerio/Maruti_Celerio_LXI.htm",
       "fuel_type": "Petrol",
       "fuel_type_citation": "https://www.cardekho.com/maruti/maruti-celerio-specifications.htm",
       "transmission": "Manual",
@@ -3261,10 +3286,11 @@
       "hyderabad_on_road_price_citation": null
     },
     {
-      "variant_name": "Maruti Celerio ZXI Plus AMT",
-      "variant_name_citation": "https://www.cardekho.com/maruti/celerio/variants.htm",
+      "model": "Celerio",
+      "variant_name": "ZXI Plus AMT",
+      "variant_name_citation": "https://www.cardekho.com/overview/Maruti_Celerio/Maruti_Celerio_ZXI_Plus_AMT.htm",
       "ex_showroom_price": 672900,
-      "ex_showroom_price_citation": "https://www.cardekho.com/maruti/celerio/variants.htm",
+      "ex_showroom_price_citation": "https://www.cardekho.com/overview/Maruti_Celerio/Maruti_Celerio_ZXI_Plus_AMT.htm",
       "fuel_type": "Petrol",
       "fuel_type_citation": "https://www.cardekho.com/maruti/maruti-celerio-specifications.htm",
       "transmission": "AMT",
@@ -3621,7 +3647,8 @@
       "hyderabad_on_road_price_citation": null
     },
     {
-      "variant_name": "Maruti Ignis Sigma",
+      "model": "Ignis",
+      "variant_name": "Sigma",
       "variant_name_citation": "https://www.cardekho.com/maruti/ignis/variants.htm",
       "ex_showroom_price": 535100,
       "ex_showroom_price_citation": "https://www.cardekho.com/maruti/ignis/variants.htm",
@@ -3801,10 +3828,11 @@
       "hyderabad_on_road_price_citation": null
     },
     {
-      "variant_name": "Maruti Ignis Alpha AMT",
-      "variant_name_citation": "https://www.cardekho.com/maruti/ignis/variants.htm",
-      "ex_showroom_price": 754700,
-      "ex_showroom_price_citation": "https://www.cardekho.com/maruti/ignis/variants.htm",
+      "model": "Ignis",
+      "variant_name": "Alpha AMT",
+      "variant_name_citation": "https://www.cardekho.com/overview/Maruti_Ignis/Maruti_Ignis_Alpha_AMT.htm",
+      "ex_showroom_price": 742000,
+      "ex_showroom_price_citation": "https://www.cardekho.com/overview/Maruti_Ignis/Maruti_Ignis_Alpha_AMT.htm",
       "fuel_type": "Petrol",
       "fuel_type_citation": "https://www.cardekho.com/maruti/ignis/specs",
       "transmission": "AMT",
@@ -3831,7 +3859,8 @@
       "hyderabad_on_road_price_citation": null
     },
     {
-      "variant_name": "Maruti Swift LXI",
+      "model": "Swift",
+      "variant_name": "LXi",
       "variant_name_citation": "https://www.cardekho.com/maruti/swift/variants.htm",
       "ex_showroom_price": 578900,
       "ex_showroom_price_citation": "https://www.cardekho.com/maruti/swift/variants.htm",
@@ -4371,10 +4400,11 @@
       "hyderabad_on_road_price_citation": null
     },
     {
-      "variant_name": "Maruti Baleno Sigma",
-      "variant_name_citation": "https://www.cardekho.com/maruti/baleno/variants.htm",
+      "model": "Baleno",
+      "variant_name": "Sigma",
+      "variant_name_citation": "https://www.cardekho.com/overview/Maruti_Baleno/Maruti_Baleno_Sigma.htm",
       "ex_showroom_price": 598900,
-      "ex_showroom_price_citation": "https://www.cardekho.com/maruti/baleno/variants.htm",
+      "ex_showroom_price_citation": "https://www.cardekho.com/overview/Maruti_Baleno/Maruti_Baleno_Sigma.htm",
       "fuel_type": "Petrol",
       "fuel_type_citation": "https://www.cardekho.com/maruti/baleno/specs",
       "transmission": "Manual",
@@ -4581,7 +4611,8 @@
       "hyderabad_on_road_price_citation": null
     },
     {
-      "variant_name": "Maruti Baleno Alpha",
+      "model": "Baleno",
+      "variant_name": "Alpha",
       "variant_name_citation": "https://www.cardekho.com/maruti/baleno/variants.htm",
       "ex_showroom_price": 859900,
       "ex_showroom_price_citation": "https://www.cardekho.com/maruti/baleno/variants.htm",
@@ -4611,10 +4642,11 @@
       "hyderabad_on_road_price_citation": null
     },
     {
-      "variant_name": "Maruti Baleno Alpha AMT",
-      "variant_name_citation": "https://www.cardekho.com/maruti/baleno/variants.htm",
+      "model": "Baleno",
+      "variant_name": "Alpha AMT",
+      "variant_name_citation": "https://www.cardekho.com/overview/Maruti_Baleno/Maruti_Baleno_Alpha_AMT.htm",
       "ex_showroom_price": 909900,
-      "ex_showroom_price_citation": "https://www.cardekho.com/maruti/baleno/variants.htm",
+      "ex_showroom_price_citation": "https://www.cardekho.com/overview/Maruti_Baleno/Maruti_Baleno_Alpha_AMT.htm",
       "fuel_type": "Petrol",
       "fuel_type_citation": "https://www.cardekho.com/maruti/baleno/specs",
       "transmission": "AMT",
@@ -4641,7 +4673,8 @@
       "hyderabad_on_road_price_citation": null
     },
     {
-      "variant_name": "Maruti Ciaz Sigma",
+      "model": "Ciaz",
+      "variant_name": "Sigma",
       "variant_name_citation": "https://www.cardekho.com/maruti/ciaz/variants.htm",
       "ex_showroom_price": 909000,
       "ex_showroom_price_citation": "https://www.cardekho.com/maruti/ciaz/variants.htm",
@@ -5631,7 +5664,8 @@
       "hyderabad_on_road_price_citation": null
     },
     {
-      "variant_name": "Maruti Ertiga LXI",
+      "model": "Ertiga",
+      "variant_name": "Lxi",
       "variant_name_citation": "https://www.cardekho.com/maruti/ertiga/variants.htm",
       "ex_showroom_price": 880000,
       "ex_showroom_price_citation": "https://www.cardekho.com/maruti/ertiga/variants.htm",
@@ -6111,7 +6145,8 @@
       "hyderabad_on_road_price_citation": null
     },
     {
-      "variant_name": "Maruti Jimny Zeta",
+      "model": "Jimny",
+      "variant_name": "Zeta",
       "variant_name_citation": "https://www.cardekho.com/maruti/jimny/variants.htm",
       "ex_showroom_price": 1231500,
       "ex_showroom_price_citation": "https://www.cardekho.com/maruti/jimny/variants.htm",
@@ -6381,10 +6416,11 @@
       "hyderabad_on_road_price_citation": null
     },
     {
-      "variant_name": "Maruti e Vitara Delta",
+      "model": "e Vitara",
+      "variant_name": "Delta",
       "variant_name_citation": "https://www.cardekho.com/maruti/e-vitara/variants.htm",
       "ex_showroom_price": 1599000,
-      "ex_showroom_price_citation": "https://www.cardekho.com/india-car-news/maruti-e-vitara-full-prices-out-starts-from-rs-1599-lakh-check-variantwise-prices-here-35669.htm",
+      "ex_showroom_price_citation": "https://www.cardekho.com/maruti/e-vitara/variants.htm",
       "fuel_type": "Electric",
       "fuel_type_citation": "https://www.cardekho.com/maruti/e-vitara/specs",
       "transmission": "Automatic",
@@ -6411,10 +6447,11 @@
       "hyderabad_on_road_price_citation": null
     },
     {
-      "variant_name": "Maruti e Vitara Zeta",
+      "model": "e Vitara",
+      "variant_name": "Zeta",
       "variant_name_citation": "https://www.cardekho.com/maruti/e-vitara/variants.htm",
       "ex_showroom_price": 1749000,
-      "ex_showroom_price_citation": "https://www.cardekho.com/india-car-news/maruti-e-vitara-full-prices-out-starts-from-rs-1599-lakh-check-variantwise-prices-here-35669.htm",
+      "ex_showroom_price_citation": "https://www.cardekho.com/maruti/e-vitara/variants.htm",
       "fuel_type": "Electric",
       "fuel_type_citation": "https://www.cardekho.com/maruti/e-vitara/specs",
       "transmission": "Automatic",
@@ -6441,10 +6478,11 @@
       "hyderabad_on_road_price_citation": null
     },
     {
-      "variant_name": "Maruti e Vitara Alpha",
+      "model": "e Vitara",
+      "variant_name": "Alpha",
       "variant_name_citation": "https://www.cardekho.com/maruti/e-vitara/variants.htm",
       "ex_showroom_price": 1979000,
-      "ex_showroom_price_citation": "https://www.cardekho.com/india-car-news/maruti-e-vitara-full-prices-out-starts-from-rs-1599-lakh-check-variantwise-prices-here-35669.htm",
+      "ex_showroom_price_citation": "https://www.cardekho.com/maruti/e-vitara/variants.htm",
       "fuel_type": "Electric",
       "fuel_type_citation": "https://www.cardekho.com/maruti/e-vitara/specs",
       "transmission": "Automatic",
@@ -6471,7 +6509,8 @@
       "hyderabad_on_road_price_citation": null
     },
     {
-      "variant_name": "Maruti e Vitara Alpha Dual Tone",
+      "model": "e Vitara",
+      "variant_name": "Alpha Dual Tone",
       "variant_name_citation": "https://www.cardekho.com/maruti/e-vitara/variants.htm",
       "ex_showroom_price": 2001000,
       "ex_showroom_price_citation": "https://www.cardekho.com/maruti/e-vitara/variants.htm",
@@ -6501,9 +6540,10 @@
       "hyderabad_on_road_price_citation": null
     },
     {
-      "variant_name": "Maruti Victoris LXI",
-      "variant_name_citation": "https://www.cardekho.com/maruti/victoris/variants.htm",
-      "ex_showroom_price": 1050000,
+      "model": "Victoris",
+      "variant_name": "LXI",
+      "variant_name_citation": "https://www.cardekho.com/overview/Maruti_Victoris/Maruti_Victoris_LXI.htm",
+      "ex_showroom_price": 1049900,
       "ex_showroom_price_citation": "https://www.cardekho.com/overview/Maruti_Victoris/Maruti_Victoris_LXI.htm",
       "fuel_type": "Petrol",
       "fuel_type_citation": "https://www.cardekho.com/maruti/victoris/specs",
@@ -6531,7 +6571,8 @@
       "hyderabad_on_road_price_citation": null
     },
     {
-      "variant_name": "Maruti Victoris VXI",
+      "model": "Victoris",
+      "variant_name": "VXI",
       "variant_name_citation": "https://www.cardekho.com/maruti/victoris/variants.htm",
       "ex_showroom_price": 1179900,
       "ex_showroom_price_citation": "https://www.cardekho.com/overview/Maruti_Victoris/Maruti_Victoris_VXI.htm",
@@ -6561,14 +6602,15 @@
       "hyderabad_on_road_price_citation": null
     },
     {
-      "variant_name": "Maruti Victoris VXI AT",
-      "variant_name_citation": "https://www.cardekho.com/maruti/victoris/variants.htm",
-      "ex_showroom_price": 1279900,
-      "ex_showroom_price_citation": "https://www.cardekho.com/overview/Maruti_Victoris/Maruti_Victoris_ZXI_AT.htm",
+      "model": "Victoris",
+      "variant_name": "VXI AT",
+      "variant_name_citation": "https://www.cardekho.com/overview/Maruti_Victoris/Maruti_Victoris_VXI_AT.htm",
+      "ex_showroom_price": 1335900,
+      "ex_showroom_price_citation": "https://www.cardekho.com/overview/Maruti_Victoris/Maruti_Victoris_VXI_AT.htm",
       "fuel_type": "Petrol",
       "fuel_type_citation": "https://www.cardekho.com/maruti/victoris/specs",
       "transmission": "Automatic",
-      "transmission_citation": "https://www.cardekho.com/overview/Maruti_Victoris/Maruti_Victoris_ZXI_AT.htm",
+      "transmission_citation": "https://www.cardekho.com/overview/Maruti_Victoris/Maruti_Victoris_VXI_AT.htm",
       "engine_displacement_cc": 1462,
       "engine_displacement_cc_citation": "https://www.cardekho.com/maruti/victoris/specs",
       "power_bhp": 101.64,
@@ -6591,7 +6633,8 @@
       "hyderabad_on_road_price_citation": null
     },
     {
-      "variant_name": "Maruti Victoris ZXI",
+      "model": "Victoris",
+      "variant_name": "ZXI",
       "variant_name_citation": "https://www.cardekho.com/maruti/victoris/variants.htm",
       "ex_showroom_price": 1356900,
       "ex_showroom_price_citation": "https://www.cardekho.com/overview/Maruti_Victoris/Maruti_Victoris_ZXI.htm",
@@ -6621,14 +6664,15 @@
       "hyderabad_on_road_price_citation": null
     },
     {
-      "variant_name": "Maruti Victoris ZXI AT",
-      "variant_name_citation": "https://www.cardekho.com/maruti/victoris/variants.htm",
-      "ex_showroom_price": 1456900,
-      "ex_showroom_price_citation": "https://www.cardekho.com/maruti/victoris/variants.htm",
+      "model": "Victoris",
+      "variant_name": "ZXI AT",
+      "variant_name_citation": "https://www.cardekho.com/overview/Maruti_Victoris/Maruti_Victoris_ZXI_AT.htm",
+      "ex_showroom_price": 1512900,
+      "ex_showroom_price_citation": "https://www.cardekho.com/overview/Maruti_Victoris/Maruti_Victoris_ZXI_AT.htm",
       "fuel_type": "Petrol",
       "fuel_type_citation": "https://www.cardekho.com/maruti/victoris/specs",
       "transmission": "Automatic",
-      "transmission_citation": "https://www.cardekho.com/maruti/victoris/specs",
+      "transmission_citation": "https://www.cardekho.com/overview/Maruti_Victoris/Maruti_Victoris_ZXI_AT.htm",
       "engine_displacement_cc": 1462,
       "engine_displacement_cc_citation": "https://www.cardekho.com/maruti/victoris/specs",
       "power_bhp": 101.64,
@@ -6651,10 +6695,11 @@
       "hyderabad_on_road_price_citation": null
     },
     {
-      "variant_name": "Maruti Victoris ZXI Plus",
-      "variant_name_citation": "https://www.cardekho.com/maruti/victoris/variants.htm",
-      "ex_showroom_price": 1556900,
-      "ex_showroom_price_citation": "https://www.cardekho.com/maruti/victoris/variants.htm",
+      "model": "Victoris",
+      "variant_name": "ZXI Plus",
+      "variant_name_citation": "https://www.cardekho.com/overview/Maruti_Victoris/Maruti_Victoris_ZXI_Plus.htm",
+      "ex_showroom_price": 1523900,
+      "ex_showroom_price_citation": "https://www.cardekho.com/overview/Maruti_Victoris/Maruti_Victoris_ZXI_Plus.htm",
       "fuel_type": "Petrol",
       "fuel_type_citation": "https://www.cardekho.com/maruti/victoris/specs",
       "transmission": "Manual",
@@ -6681,7 +6726,8 @@
       "hyderabad_on_road_price_citation": null
     },
     {
-      "variant_name": "Maruti Victoris ZXI Plus AT",
+      "model": "Victoris",
+      "variant_name": "ZXI Plus AT",
       "variant_name_citation": "https://www.cardekho.com/maruti/victoris/variants.htm",
       "ex_showroom_price": 1718900,
       "ex_showroom_price_citation": "https://www.cardekho.com/overview/Maruti_Victoris/Maruti_Victoris_ZXI_Plus_AT.htm",
@@ -6711,7 +6757,8 @@
       "hyderabad_on_road_price_citation": null
     },
     {
-      "variant_name": "Maruti Victoris VXI CNG",
+      "model": "Victoris",
+      "variant_name": "VXI CNG",
       "variant_name_citation": "https://www.cardekho.com/maruti/victoris/variants.htm",
       "ex_showroom_price": 1279900,
       "ex_showroom_price_citation": "https://www.cardekho.com/overview/Maruti_Victoris/Maruti_Victoris_VXI_CNG.htm",
@@ -6741,7 +6788,8 @@
       "hyderabad_on_road_price_citation": null
     },
     {
-      "variant_name": "Maruti Victoris ZXI CNG",
+      "model": "Victoris",
+      "variant_name": "ZXI CNG",
       "variant_name_citation": "https://www.cardekho.com/maruti/victoris/variants.htm",
       "ex_showroom_price": 1456900,
       "ex_showroom_price_citation": "https://www.cardekho.com/maruti/victoris/variants.htm",
@@ -6771,14 +6819,15 @@
       "hyderabad_on_road_price_citation": null
     },
     {
-      "variant_name": "Maruti Victoris VXI Strong Hybrid",
-      "variant_name_citation": "https://www.cardekho.com/maruti/victoris/variants.htm",
-      "ex_showroom_price": 1579900,
-      "ex_showroom_price_citation": "https://www.cardekho.com/maruti/victoris/variants.htm",
+      "model": "Victoris",
+      "variant_name": "VXI Strong Hybrid",
+      "variant_name_citation": "https://www.cardekho.com/overview/Maruti_Victoris/Maruti_Victoris_VXI_Strong_Hybrid.htm",
+      "ex_showroom_price": 1637900,
+      "ex_showroom_price_citation": "https://www.cardekho.com/overview/Maruti_Victoris/Maruti_Victoris_VXI_Strong_Hybrid.htm",
       "fuel_type": "Hybrid",
       "fuel_type_citation": "https://www.cardekho.com/maruti/victoris/specs",
       "transmission": "Automatic",
-      "transmission_citation": "https://www.cardekho.com/maruti/victoris/specs",
+      "transmission_citation": "https://www.cardekho.com/overview/Maruti_Victoris/Maruti_Victoris_VXI_Strong_Hybrid.htm",
       "engine_displacement_cc": 1490,
       "engine_displacement_cc_citation": "https://www.cardekho.com/maruti/victoris/specs",
       "power_bhp": 114.41,
@@ -6801,14 +6850,15 @@
       "hyderabad_on_road_price_citation": null
     },
     {
-      "variant_name": "Maruti Victoris ZXI Strong Hybrid",
-      "variant_name_citation": "https://www.cardekho.com/maruti/victoris/variants.htm",
-      "ex_showroom_price": 1699900,
-      "ex_showroom_price_citation": "https://www.cardekho.com/maruti/victoris/variants.htm",
+      "model": "Victoris",
+      "variant_name": "ZXI Strong Hybrid",
+      "variant_name_citation": "https://www.cardekho.com/overview/Maruti_Victoris/Maruti_Victoris_ZXI_Strong_Hybrid.htm",
+      "ex_showroom_price": 1779900,
+      "ex_showroom_price_citation": "https://www.cardekho.com/overview/Maruti_Victoris/Maruti_Victoris_ZXI_Strong_Hybrid.htm",
       "fuel_type": "Hybrid",
       "fuel_type_citation": "https://www.cardekho.com/maruti/victoris/specs",
       "transmission": "Automatic",
-      "transmission_citation": "https://www.cardekho.com/maruti/victoris/specs",
+      "transmission_citation": "https://www.cardekho.com/overview/Maruti_Victoris/Maruti_Victoris_ZXI_Strong_Hybrid.htm",
       "engine_displacement_cc": 1490,
       "engine_displacement_cc_citation": "https://www.cardekho.com/maruti/victoris/specs",
       "power_bhp": 114.41,
@@ -6831,14 +6881,15 @@
       "hyderabad_on_road_price_citation": null
     },
     {
-      "variant_name": "Maruti Victoris ZXI Plus Strong Hybrid",
-      "variant_name_citation": "https://www.cardekho.com/maruti/victoris/variants.htm",
-      "ex_showroom_price": 1899900,
-      "ex_showroom_price_citation": "https://www.cardekho.com/maruti/victoris/variants.htm",
+      "model": "Victoris",
+      "variant_name": "ZXI Plus Strong Hybrid",
+      "variant_name_citation": "https://www.cardekho.com/overview/Maruti_Victoris/Maruti_Victoris_ZXI_Plus_Strong_Hybrid.htm",
+      "ex_showroom_price": 1946900,
+      "ex_showroom_price_citation": "https://www.cardekho.com/overview/Maruti_Victoris/Maruti_Victoris_ZXI_Plus_Strong_Hybrid.htm",
       "fuel_type": "Hybrid",
       "fuel_type_citation": "https://www.cardekho.com/maruti/victoris/specs",
       "transmission": "Automatic",
-      "transmission_citation": "https://www.cardekho.com/maruti/victoris/specs",
+      "transmission_citation": "https://www.cardekho.com/overview/Maruti_Victoris/Maruti_Victoris_ZXI_Plus_Strong_Hybrid.htm",
       "engine_displacement_cc": 1490,
       "engine_displacement_cc_citation": "https://www.cardekho.com/maruti/victoris/specs",
       "power_bhp": 114.41,
@@ -6861,14 +6912,15 @@
       "hyderabad_on_road_price_citation": null
     },
     {
-      "variant_name": "Maruti Victoris ZXI Plus (O) Strong Hybrid",
-      "variant_name_citation": "https://www.cardekho.com/maruti/victoris/variants.htm",
-      "ex_showroom_price": 1999000,
-      "ex_showroom_price_citation": "https://www.cardekho.com/maruti/victoris/variants.htm",
+      "model": "Victoris",
+      "variant_name": "ZXI Plus (O) Strong Hybrid",
+      "variant_name_citation": "https://www.cardekho.com/overview/Maruti_Victoris/Maruti_Victoris_ZXI_Plus_(O)_Strong_Hybrid.htm",
+      "ex_showroom_price": 1998900,
+      "ex_showroom_price_citation": "https://www.cardekho.com/overview/Maruti_Victoris/Maruti_Victoris_ZXI_Plus_(O)_Strong_Hybrid.htm",
       "fuel_type": "Hybrid",
       "fuel_type_citation": "https://www.cardekho.com/maruti/victoris/specs",
       "transmission": "Automatic",
-      "transmission_citation": "https://www.cardekho.com/maruti/victoris/specs",
+      "transmission_citation": "https://www.cardekho.com/overview/Maruti_Victoris/Maruti_Victoris_ZXI_Plus_(O)_Strong_Hybrid.htm",
       "engine_displacement_cc": 1490,
       "engine_displacement_cc_citation": "https://www.cardekho.com/maruti/victoris/specs",
       "power_bhp": 114.41,
@@ -6891,10 +6943,11 @@
       "hyderabad_on_road_price_citation": null
     },
     {
-      "variant_name": "Maruti Alto Tour H1 Petrol",
-      "variant_name_citation": "https://www.cardekho.com/maruti/alto-tour-h1/variants.htm",
+      "model": "Alto Tour H1",
+      "variant_name": "Petrol",
+      "variant_name_citation": "https://www.cardekho.com/overview/Maruti_Alto_Tour_H1/Maruti_Alto_Tour_H1_Petrol.htm",
       "ex_showroom_price": 399900,
-      "ex_showroom_price_citation": "https://www.cardekho.com/maruti/alto-tour-h1/variants.htm",
+      "ex_showroom_price_citation": "https://www.cardekho.com/overview/Maruti_Alto_Tour_H1/Maruti_Alto_Tour_H1_Petrol.htm",
       "fuel_type": "Petrol",
       "fuel_type_citation": "https://www.cardekho.com/maruti/alto-tour-h1/specs",
       "transmission": "Manual",
@@ -6965,10 +7018,11 @@
       "hyderabad_on_road_price_citation": null
     },
     {
-      "variant_name": "Maruti Alto Tour H1 CNG",
-      "variant_name_citation": "https://www.cardekho.com/maruti/alto-tour-h1/variants.htm",
+      "model": "Alto Tour H1",
+      "variant_name": "CNG",
+      "variant_name_citation": "https://www.cardekho.com/overview/Maruti_Alto_Tour_H1/Maruti_Alto_Tour_H1_CNG.htm",
       "ex_showroom_price": 481900,
-      "ex_showroom_price_citation": "https://www.cardekho.com/maruti/alto-tour-h1/variants.htm",
+      "ex_showroom_price_citation": "https://www.cardekho.com/overview/Maruti_Alto_Tour_H1/Maruti_Alto_Tour_H1_CNG.htm",
       "fuel_type": "CNG",
       "fuel_type_citation": "https://www.cardekho.com/maruti/alto-tour-h1/specs",
       "transmission": "Manual",
@@ -7039,7 +7093,8 @@
       "hyderabad_on_road_price_citation": null
     },
     {
-      "variant_name": "Maruti Dzire Tour S STD",
+      "model": "Dzire Tour S",
+      "variant_name": "STD",
       "variant_name_citation": "https://www.cardekho.com/maruti/dzire-tour-s/variants.htm",
       "ex_showroom_price": 623800,
       "ex_showroom_price_citation": "https://www.cardekho.com/maruti/dzire-tour-s/variants.htm",
@@ -7113,7 +7168,8 @@
       "hyderabad_on_road_price_citation": null
     },
     {
-      "variant_name": "Maruti Dzire Tour S CNG",
+      "model": "Dzire Tour S",
+      "variant_name": "CNG",
       "variant_name_citation": "https://www.cardekho.com/maruti/dzire-tour-s/variants.htm",
       "ex_showroom_price": 709800,
       "ex_showroom_price_citation": "https://www.cardekho.com/maruti/dzire-tour-s/variants.htm",
@@ -7265,7 +7321,8 @@
       "hyderabad_on_road_price_citation": null
     },
     {
-      "variant_name": "Maruti Wagon R Tour H3 CNG",
+      "model": "Wagon R Tour",
+      "variant_name": "H3 CNG",
       "variant_name_citation": "https://www.cardekho.com/maruti/wagon-r-tour/variants.htm",
       "ex_showroom_price": 588900,
       "ex_showroom_price_citation": "https://www.cardekho.com/maruti/wagon-r-tour/variants.htm",
@@ -7343,7 +7400,8 @@
       "hyderabad_on_road_price_citation": null
     },
     {
-      "variant_name": "Maruti Ertiga Tour STD",
+      "model": "Ertiga Tour",
+      "variant_name": "STD",
       "variant_name_citation": "https://www.cardekho.com/maruti/ertiga-tour/variants.htm",
       "ex_showroom_price": 967820,
       "ex_showroom_price_citation": "https://www.cardekho.com/maruti/ertiga-tour/variants.htm",
@@ -7417,7 +7475,8 @@
       "hyderabad_on_road_price_citation": null
     },
     {
-      "variant_name": "Maruti Ertiga Tour STD CNG",
+      "model": "Ertiga Tour",
+      "variant_name": "STD CNG",
       "variant_name_citation": "https://www.cardekho.com/maruti/ertiga-tour/variants.htm",
       "ex_showroom_price": 1058820,
       "ex_showroom_price_citation": "https://www.cardekho.com/maruti/ertiga-tour/variants.htm",
@@ -7491,7 +7550,8 @@
       "hyderabad_on_road_price_citation": null
     },
     {
-      "variant_name": "Maruti Eeco Cargo STD",
+      "model": "Eeco Cargo",
+      "variant_name": "STD",
       "variant_name_citation": "https://www.cardekho.com/maruti/eeco-cargo/variants.htm",
       "ex_showroom_price": 538800,
       "ex_showroom_price_citation": "https://www.cardekho.com/maruti/eeco-cargo/variants.htm",
@@ -7627,7 +7687,8 @@
       "hyderabad_on_road_price_citation": null
     },
     {
-      "variant_name": "Maruti Eeco Cargo STD AC CNG",
+      "model": "Eeco Cargo",
+      "variant_name": "STD AC CNG",
       "variant_name_citation": "https://www.cardekho.com/maruti/eeco-cargo/variants.htm",
       "ex_showroom_price": 660500,
       "ex_showroom_price_citation": "https://www.cardekho.com/maruti/eeco-cargo/variants.htm",

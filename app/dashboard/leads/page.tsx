@@ -288,6 +288,11 @@ export default function LeadsPage() {
                                                         {formatLeadType(lead.type)}
                                                         {lead.vehicle_interest ? ` · ${lead.vehicle_interest}` : ""}
                                                     </p>
+                                                    {lead.message && (
+                                                        <p className="text-xs text-muted-foreground mb-2 line-clamp-2">
+                                                            {lead.message}
+                                                        </p>
+                                                    )}
                                                     <div className="flex items-center gap-4 text-xs text-muted-foreground">
                                                         <span className="flex items-center gap-1">
                                                             <Mail className="w-3 h-3" />{lead.email}

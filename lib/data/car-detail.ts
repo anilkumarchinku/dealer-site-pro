@@ -230,6 +230,11 @@ function buildVariants(entries: Record<string, unknown>[], carId: string, fallba
     const variants: Array<CarVariant | null> = entries.map((entry, index) => {
             const price = get4WPriceMinInr(entry)
             if (!price) return null
+            const exactOnRoad =
+                parsePrice(entry.hyderabad_on_road_price_inr) ??
+                parsePrice(entry.hyderabad_on_road_price)
+            const engineCc =
+                parseNumber(entry.engine_displacement_cc ?? entry.engine_displacement ?? entry.displacement)
 
             return {
                 id: `${carId}-variant-${index}`,
@@ -237,6 +242,8 @@ function buildVariants(entries: Record<string, unknown>[], carId: string, fallba
                 price,
                 transmission: String(entry.transmission ?? fallbackTransmission),
                 fuelType: String(entry.fuel_type ?? fallbackFuel),
+                engineCc,
+                exactOnRoad: exactOnRoad ? { hyderabad: exactOnRoad } : undefined,
                 keyFeatures: extractFeatureValues(entry.key_features).slice(0, 4),
                 isPopular: index === 0,
             } satisfies CarVariant
@@ -386,10 +393,12 @@ export async function hydrateCarWithJsonDetails(car: Car): Promise<Car> {
         : (CAR_MODEL_COLORS[`${car.make} ${car.model}`] ?? [])
 
     const baseHeroImage = car.images.hero
-    const hasLocalHero = baseHeroImage?.startsWith('/data/')
+    const scrapedColorImageSet = new Set(scrapedGallery?.colorImages ?? [])
+    const baseHeroIsLocalColor = Boolean(baseHeroImage && scrapedColorImageSet.has(baseHeroImage))
+    const hasLocalHero = Boolean(baseHeroImage?.startsWith('/data/')) && !baseHeroIsLocalColor
     const heroImage = hasLocalHero
         ? baseHeroImage
-        : (scrapedGallery?.hero || car.images.hero)
+        : (scrapedGallery?.exterior?.[0] || scrapedGallery?.hero || car.images.hero)
     const baseMergedExterior = scrapedGallery?.exterior?.length
         ? scrapedGallery.exterior
         : car.images.exterior
@@ -459,6 +468,13 @@ export async function hydrateCarWithJsonDetails(car: Car): Promise<Car> {
     const displacement = matchingVariants
         .map(entry => parseNumber(entry.engine_displacement_cc ?? entry.engine_displacement ?? entry.displacement))
         .find(value => value != null) ?? car.engine.displacement ?? null
+    const currentVariantEntry = matchingVariants.find((entry) => normalizeText(String(entry.variant_name ?? entry.variant ?? '')) === normalizeText(car.variant))
+        ?? matchingVariants[0]
+    const exactHyderabadOnRoad =
+        parsePrice(currentVariantEntry?.hyderabad_on_road_price_inr) ??
+        parsePrice(currentVariantEntry?.hyderabad_on_road_price) ??
+        car.pricing.onRoad?.hyderabad ??
+        null
     const seatingCapacity = matchingVariants
         .map(entry => parseNumber(entry.seating_capacity))
         .find(value => value != null) ?? car.dimensions.seatingCapacity ?? null
@@ -494,11 +510,10 @@ export async function hydrateCarWithJsonDetails(car: Car): Promise<Car> {
     const mergedColors = uniqueColors([...scrapedColors, ...jsonColors])
     const pricedHeroImage = hasLocalHero
         ? baseHeroImage
-        : (scrapedGallery?.hero || imageUrls[0] || car.images.hero)
+        : (scrapedGallery?.exterior?.[0] || scrapedGallery?.hero || imageUrls[0] || car.images.hero)
 
-    // Phase 1: only color images in gallery. Exterior/interior for phase 2.
-    const mergedExterior: string[] = []
-    const mergedInterior: string[] = []
+    const mergedExterior = baseMergedExterior
+    const mergedInterior = baseMergedInterior
     const mergedColorImages = scrapedGallery?.colorImages?.length
         ? scrapedGallery.colorImages
         : car.images.colors
@@ -536,7 +551,10 @@ export async function hydrateCarWithJsonDetails(car: Car): Promise<Car> {
                 max: priceValues.length > 0 ? Math.max(...priceValues) : car.pricing.exShowroom.max,
                 currency: 'INR',
             },
-            onRoad: car.pricing.onRoad,
+            onRoad: {
+                ...car.pricing.onRoad,
+                ...(exactHyderabadOnRoad ? { hyderabad: exactHyderabadOnRoad } : {}),
+            },
         },
         engine: {
             ...car.engine,

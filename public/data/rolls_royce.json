@@ -3,7 +3,7 @@
     {
       "make": "Rolls-Royce",
       "model": "Cullinan",
-      "variant_name": "Base",
+      "variant_name": "Series II",
       "ex_showroom_price": 105000000,
       "fuel_type": "Petrol",
       "transmission": "Automatic (8-Speed)",
@@ -63,7 +63,7 @@
     {
       "make": "Rolls-Royce",
       "model": "Cullinan",
-      "variant_name": "Black Badge",
+      "variant_name": "Black Badge Series II",
       "ex_showroom_price": 122500000,
       "fuel_type": "Petrol",
       "transmission": "Automatic (8-Speed)",
@@ -123,7 +123,7 @@
     {
       "make": "Rolls-Royce",
       "model": "Ghost Series II",
-      "variant_name": "Standard Wheelbase",
+      "variant_name": "Standard",
       "ex_showroom_price": 89500000,
       "fuel_type": "Petrol",
       "transmission": "Automatic (8-Speed)",
@@ -178,7 +178,8 @@
         }
       ],
       "availability_status": "on_sale",
-      "launch_year": 2021
+      "launch_year": 2021,
+      "source_url": "https://www.cardekho.com/overview/Rolls-Royce_Ghost_Series_II/Rolls-Royce_Ghost_Series_II_Standard.htm"
     },
     {
       "make": "Rolls-Royce",

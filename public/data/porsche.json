@@ -829,7 +829,7 @@
     {
       "make": "Porsche",
       "model": "Panamera",
-      "variant_name": "Panamera GTS",
+      "variant_name": "GTS",
       "ex_showroom_price": 23337000,
       "fuel_type": "Petrol",
       "transmission": "Automatic (8-Speed PDK)",
@@ -1360,7 +1360,7 @@
     {
       "make": "Porsche",
       "model": "Cayenne Coupe",
-      "variant_name": "Cayenne Coupe GTS",
+      "variant_name": "GTS",
       "ex_showroom_price": 19541000,
       "fuel_type": "Petrol",
       "transmission": "Automatic (8-Speed Tiptronic S)",

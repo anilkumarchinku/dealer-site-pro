@@ -302,9 +302,12 @@ export async function GET(request: NextRequest) {
 
         // --- Filters ---
         if (make) {
-            const makeLower = make.toLowerCase();
+            const allowedMakes = make
+                .split(',')
+                .map((value) => value.trim().toLowerCase())
+                .filter(Boolean);
             grouped = grouped.filter(
-                (v) => v.make.toLowerCase() === makeLower
+                (v) => allowedMakes.includes(v.make.toLowerCase())
             );
         }
 

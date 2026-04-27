@@ -1,0 +1,38 @@
+{
+  "make": "Audi",
+  "model": "A8 L",
+  "brandSlug": "audi",
+  "modelSlug": "a8-l",
+  "sourceUrl": "https://www.cardekho.com/audi/a8-l",
+  "scrapedAt": "2026-04-24T04:30:40.665Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 10,
+    "total": 10
+  },
+  "hero": "/data/brand-model-images/4w-galleries/audi/a8-l/colors/firmament-blue-metallic.avif",
+  "colorNames": [
+    "Firmament Blue Metallic",
+    "Manhattan Grey Metallic",
+    "Mythos Black Metallic",
+    "Floret Silver Metallic",
+    "Terra Gray Metallic",
+    "Glacier White Metallic",
+    "Myth Black Metallic",
+    "District Green Metallic",
+    "Vesuvius Gray Metallic",
+    "Manhattan Gray Metallic"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/audi/a8-l/colors/firmament-blue-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/a8-l/colors/manhattan-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/a8-l/colors/mythos-black-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/a8-l/colors/floret-silver-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/a8-l/colors/terra-gray-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/a8-l/colors/glacier-white-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/a8-l/colors/myth-black-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/a8-l/colors/district-green-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/a8-l/colors/vesuvius-gray-metallic.avif",
+    "/data/brand-model-images/4w-galleries/audi/a8-l/colors/manhattan-gray-metallic.avif"
+  ]
+}

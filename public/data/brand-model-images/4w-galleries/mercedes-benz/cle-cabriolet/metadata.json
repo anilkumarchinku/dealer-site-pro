@@ -1,0 +1,26 @@
+{
+  "make": "Mercedes-Benz",
+  "model": "CLE Cabriolet",
+  "brandSlug": "mercedes-benz",
+  "modelSlug": "cle-cabriolet",
+  "sourceUrl": "https://www.cardekho.com/mercedes-benz/cle-cabriolet",
+  "scrapedAt": "2026-04-24T04:36:00.329Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 4,
+    "total": 4
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mercedes-benz/cle-cabriolet/colors/spectral-blue.avif",
+  "colorNames": [
+    "Spectral Blue",
+    "High Tech Silver",
+    "Graphite Grey",
+    "Obsidian Black"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mercedes-benz/cle-cabriolet/colors/spectral-blue.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/cle-cabriolet/colors/high-tech-silver.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/cle-cabriolet/colors/graphite-grey.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/cle-cabriolet/colors/obsidian-black.avif"
+  ]
+}

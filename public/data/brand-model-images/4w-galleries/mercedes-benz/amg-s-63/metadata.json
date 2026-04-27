@@ -1,0 +1,36 @@
+{
+  "make": "Mercedes-Benz",
+  "model": "AMG S 63",
+  "brandSlug": "mercedes-benz",
+  "modelSlug": "amg-s-63",
+  "sourceUrl": "https://www.cardekho.com/mercedes-benz/amg-s-63",
+  "scrapedAt": "2026-04-24T04:35:35.058Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 9,
+    "total": 9
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mercedes-benz/amg-s-63/colors/selenite-grey.avif",
+  "colorNames": [
+    "Selenite Grey",
+    "High Tech Silver",
+    "Velvet Brown",
+    "Graphite Grey",
+    "Black",
+    "Verde Silver",
+    "Nautic Blue",
+    "Obsidian Black",
+    "Emerald Green"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-s-63/colors/selenite-grey.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-s-63/colors/high-tech-silver.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-s-63/colors/velvet-brown.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-s-63/colors/graphite-grey.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-s-63/colors/black.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-s-63/colors/verde-silver.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-s-63/colors/nautic-blue.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-s-63/colors/obsidian-black.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-s-63/colors/emerald-green.avif"
+  ]
+}

@@ -522,7 +522,20 @@ async function main() {
 
         try {
             const html = await fetchHtml(variantsUrl)
-            const currentVariants = extractCardekhoVariantsFromHtml(html, brandDisplayName(group.make), group.model)
+            let currentVariants = extractCardekhoVariantsFromHtml(html, brandDisplayName(group.make), group.model)
+
+            if (currentVariants.length === 0 && sourceUrl && sourceUrl.includes('/overview/') && group.entries.length === 1) {
+                try {
+                    const overviewHtml = await fetchHtml(sourceUrl)
+                    const overviewVariants = extractCardekhoVariantsFromHtml(overviewHtml, brandDisplayName(group.make), group.model)
+                    if (overviewVariants.length > 0) {
+                        currentVariants = overviewVariants
+                    }
+                } catch {
+                    // Keep the original no-price-parsed result when overview fallback fails.
+                }
+            }
+
             currentByGroup.set(groupKey, {
                 variantsUrl,
                 variants: currentVariants,

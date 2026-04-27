@@ -66,6 +66,23 @@ export async function POST(req: NextRequest) {
         const referer = req.headers.get('referer') || 'Direct/Unknown';
 
         const supabase = getSupabase();
+        const { data: dealerRow, error: dealerError } = await supabase
+            .from('dealers')
+            .select('id')
+            .eq('id', dealer_id)
+            .maybeSingle();
+
+        if (dealerError) {
+            throw dealerError;
+        }
+
+        if (!dealerRow?.id) {
+            return NextResponse.json(
+                { error: 'Invalid dealer selected for test drive booking.' },
+                { status: 400 }
+            );
+        }
+
         const vehicleId = await resolveVehicleId(supabase, car_id);
         const { data: lead, error: leadError } = await supabase
             .from('leads')
