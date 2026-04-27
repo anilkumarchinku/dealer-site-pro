@@ -44,6 +44,10 @@ const nextConfig: NextConfig = {
                 protocol: 'https',
                 hostname: 'storage.googleapis.com',
             },
+            {
+                protocol: 'https',
+                hostname: 'www.hyundai.com',
+            },
             // CardDekho CDN (4W/3W car catalog images)
             {
                 protocol: 'https',

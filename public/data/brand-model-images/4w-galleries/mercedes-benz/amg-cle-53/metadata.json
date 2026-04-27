@@ -1,0 +1,33 @@
+{
+  "make": "Mercedes-Benz",
+  "model": "AMG CLE 53",
+  "brandSlug": "mercedes-benz",
+  "modelSlug": "amg-cle-53",
+  "sourceUrl": "https://www.carwale.com/mercedes-benz-cars/amg-cle/colours/",
+  "scrapedAt": "2026-04-27T12:30:00.000Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 6,
+    "total": 6
+  },
+  "hero": "https://imgd.aeplcdn.com/1056x594/n/emljvgb_1862474.jpg?q=80&wm=1",
+  "exterior": [],
+  "interior": [],
+  "feature": [],
+  "colorNames": [
+    "Obsidian Black",
+    "Spectral Blue",
+    "Sun Yellow",
+    "Patagonia Red Metallic",
+    "Alpine Grey",
+    "Opalite White Bright"
+  ],
+  "colorImages": [
+    "https://imgd.aeplcdn.com/1056x594/n/emljvgb_1862474.jpg?q=80&wm=1",
+    "https://imgd.aeplcdn.com/1056x594/n/p5jjvgb_1862472.jpg?q=80&wm=1",
+    "https://imgd.aeplcdn.com/1056x594/n/oiijvgb_1862470.jpg?q=80&wm=1",
+    "https://imgd.aeplcdn.com/1056x594/n/08djvgb_1862464.jpg?q=80&wm=1",
+    "https://imgd.aeplcdn.com/1056x594/n/fsgjvgb_1862468.jpg?q=80&wm=1",
+    "https://imgd.aeplcdn.com/1056x594/n/cz9jvgb_1862466.jpg?q=80&wm=1"
+  ]
+}

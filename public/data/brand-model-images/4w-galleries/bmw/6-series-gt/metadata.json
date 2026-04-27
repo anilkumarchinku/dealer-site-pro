@@ -1,0 +1,44 @@
+{
+  "make": "BMW",
+  "model": "6 Series GT",
+  "brandSlug": "BMW",
+  "modelSlug": "BMW_6_Series",
+  "sourceUrl": "https://www.cardekho.com/carmodels/BMW/BMW_6_Series",
+  "scrapedAt": "2026-04-27T06:48:20.747Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 13,
+    "total": 13
+  },
+  "hero": "/data/brand-model-images/4w-galleries/bmw/6-series-gt/colors/jatoba.jpg",
+  "colorNames": [
+    "Jatoba",
+    "Cashmere Silver",
+    "Tanzanite Blue",
+    "Mediterranean Blue",
+    "Black",
+    "Glacier Silver",
+    "Black Sapphire",
+    "Melbourne Red",
+    "Alpine White",
+    "Bernina Grey Amber Effect",
+    "Mineral White",
+    "M Carbon Black Metallic",
+    "Royal Burgundy Red Brilliant Effect"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/bmw/6-series-gt/colors/jatoba.jpg",
+    "/data/brand-model-images/4w-galleries/bmw/6-series-gt/colors/cashmere-silver.jpg",
+    "/data/brand-model-images/4w-galleries/bmw/6-series-gt/colors/tanzanite-blue.avif",
+    "/data/brand-model-images/4w-galleries/bmw/6-series-gt/colors/mediterranean-blue.avif",
+    "/data/brand-model-images/4w-galleries/bmw/6-series-gt/colors/black.jpg",
+    "/data/brand-model-images/4w-galleries/bmw/6-series-gt/colors/glacier-silver.avif",
+    "/data/brand-model-images/4w-galleries/bmw/6-series-gt/colors/black-sapphire.jpg",
+    "/data/brand-model-images/4w-galleries/bmw/6-series-gt/colors/melbourne-red.jpg",
+    "/data/brand-model-images/4w-galleries/bmw/6-series-gt/colors/alpine-white.avif",
+    "/data/brand-model-images/4w-galleries/bmw/6-series-gt/colors/bernina-grey-amber-effect.avif",
+    "/data/brand-model-images/4w-galleries/bmw/6-series-gt/colors/mineral-white.jpg",
+    "/data/brand-model-images/4w-galleries/bmw/6-series-gt/colors/m-carbon-black-metallic.avif",
+    "/data/brand-model-images/4w-galleries/bmw/6-series-gt/colors/royal-burgundy-red-brilliant-effect.avif"
+  ]
+}

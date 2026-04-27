@@ -1,0 +1,27 @@
+{
+  "make": "Hyundai",
+  "model": "Prime HB",
+  "brandSlug": "hyundai",
+  "modelSlug": "prime-hb",
+  "sourceUrl": "https://www.hyundai.com/in/en/find-a-car/taxi/prime-hb",
+  "scrapedAt": "2026-04-27T12:30:00.000Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 3,
+    "total": 3
+  },
+  "hero": "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Aura/Color/polar-white.jpg",
+  "exterior": [],
+  "interior": [],
+  "feature": [],
+  "colorNames": [
+    "Atlas White",
+    "Tyfoon Silver",
+    "Titanium Black"
+  ],
+  "colorImages": [
+    "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Aura/Color/polar-white.jpg",
+    "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Aura/Color/typhoon-silver.jpg",
+    "https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/pre-booking/abyss-black.jpg"
+  ]
+}

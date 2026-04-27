@@ -3,6 +3,7 @@
 import fs from 'fs/promises'
 import path from 'path'
 import { readFileSync } from 'fs'
+import { execFileSync } from 'child_process'
 
 const ROOT = '/Users/anilkumarkolukulapalli/projects/cyepro/dealersite pro/dealer-site-pro'
 const PUBLIC_DIR = path.join(ROOT, 'public')
@@ -98,32 +99,63 @@ function canonicalImageKey(url) {
 }
 
 async function fetchText(url) {
-  const response = await fetch(url, {
-    headers: {
-      'user-agent': USER_AGENT,
-      'accept-language': 'en-IN,en;q=0.9',
-    },
-  })
+  try {
+    const response = await fetch(url, {
+      headers: {
+        'user-agent': USER_AGENT,
+        'accept-language': 'en-IN,en;q=0.9',
+      },
+    })
 
-  if (!response.ok) {
-    throw new Error(`HTTP ${response.status} for ${url}`)
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status} for ${url}`)
+    }
+
+    return response.text()
+  } catch {
+    const text = execFileSync('curl', ['-L', '-A', USER_AGENT, '-s', url], {
+      encoding: 'utf8',
+      maxBuffer: 10 * 1024 * 1024,
+    })
+    if (!text) {
+      throw new Error(`Empty response for ${url}`)
+    }
+    return text
   }
-
-  return response.text()
 }
 
 async function fetchTextWithStatus(url) {
-  const response = await fetch(url, {
-    headers: {
-      'user-agent': USER_AGENT,
-      'accept-language': 'en-IN,en;q=0.9',
-    },
-  })
+  try {
+    const response = await fetch(url, {
+      headers: {
+        'user-agent': USER_AGENT,
+        'accept-language': 'en-IN,en;q=0.9',
+      },
+    })
 
-  return {
-    ok: response.ok,
-    status: response.status,
-    text: await response.text(),
+    return {
+      ok: response.ok,
+      status: response.status,
+      text: await response.text(),
+    }
+  } catch {
+    try {
+      const text = execFileSync('curl', ['-L', '-A', USER_AGENT, '-s', url], {
+        encoding: 'utf8',
+        maxBuffer: 10 * 1024 * 1024,
+      })
+      return {
+        ok: Boolean(text),
+        status: text ? 200 : 0,
+        text,
+      }
+    } catch {
+      return {
+        ok: false,
+        status: 0,
+        text: '',
+      }
+    }
   }
 }
 
@@ -145,6 +177,22 @@ async function fetchBuffer(url) {
   return {
     contentType,
     buffer: Buffer.from(arrayBuffer),
+  }
+}
+
+function fetchBufferViaCurl(url) {
+  const buffer = execFileSync('curl', ['-L', '-A', USER_AGENT, '-s', url], {
+    encoding: 'buffer',
+    maxBuffer: 25 * 1024 * 1024,
+  })
+
+  if (!Buffer.isBuffer(buffer) || buffer.length === 0) {
+    throw new Error(`curl returned empty response for ${url}`)
+  }
+
+  return {
+    contentType: '',
+    buffer,
   }
 }
 
@@ -303,6 +351,7 @@ function buildModelLooseCandidates(brandSlug, modelSlug) {
     'bmw|6seriesgt': ['6series'],
     'volkswagen|tiguanrline': ['tiguan2025', 'tiguan'],
     'honda|amaze2ndgen': ['amaze'],
+    'honda|wrv20202023': ['wrv', 'wr-v'],
     'mini|cooperconvertible': ['convertible', 'cooperconvertible'],
     'mercedesbenz|maybacheqssuv': ['maybacheqs'],
   }
@@ -418,7 +467,13 @@ async function saveDownloadedImage(url, destWithoutExt) {
   let lastError = null
   for (const candidate of buildImageFallbackUrls(url)) {
     try {
-      const { buffer, contentType } = await fetchBuffer(candidate)
+      let downloaded
+      try {
+        downloaded = await fetchBuffer(candidate)
+      } catch {
+        downloaded = fetchBufferViaCurl(candidate)
+      }
+      const { buffer, contentType } = downloaded
       const extension = inferExtension(candidate, contentType)
       const finalPath = `${destWithoutExt}.${extension}`
       await ensureDir(path.dirname(finalPath))
@@ -1282,6 +1337,7 @@ async function scrape4WOne(modelEntry) {
   const modelKey = String(modelEntry.model || '').trim().toLowerCase()
   const overrideColorPageMap = {
     'audi|a6': 'https://www.cardekho.com/audi/audi-a6-colors.html',
+    'bmw|6 series gt': 'https://www.cardekho.com/bmw/bmw-6-series-colors.html',
     'mini|cooper convertible': 'https://www.cardekho.com/mini/mini-cooper-convertible-2015-2023-colors.html',
     'mercedes-benz|v-class extra lwb': 'https://www.cardekho.com/mercedes-benz/v-class-2019-2022/colors',
   }
@@ -1294,9 +1350,26 @@ async function scrape4WOne(modelEntry) {
     fetchText(colorsUrl).catch(() => ''),
   ])
   const popupBuckets = extract4WGalleryPopupBuckets(picturesHtml)
+  const manualColorPairMap = {
+    'bmw|6 series gt': [
+      ['Jatoba', 'https://stimg.cardekho.com/images/car-images/930x620/BMW/BMW-6-Series/Metallic-Jatoba.jpg'],
+      ['Cashmere Silver', 'https://stimg.cardekho.com/images/car-images/930x620/BMW/BMW-6-Series/Metallic-Cashmere-Silver.jpg'],
+      ['Tanzanite Blue', 'https://stimg.cardekho.com/images/car-images/930x620/BMW/6-Series/9939/1702871926009/224_Tanzanite-Blue_4b5679.jpg'],
+      ['Mediterranean Blue', 'https://stimg.cardekho.com/images/car-images/930x620/BMW/BMW-6-Series/6475/1542178924875/BMW-6-series-Mediterranean-blue-303f5e.jpg'],
+      ['Black', 'https://stimg.cardekho.com/images/car-images/930x620/BMW/BMW-6-Series/Non-metallic-Black.jpg'],
+      ['Glacier Silver', 'https://stimg.cardekho.com/images/car-images/930x620/BMW/BMW-6-Series/6475/1542178924875/BMW-6-series-Glacier-Silver-cccfd4.jpg'],
+      ['Black Sapphire', 'https://stimg.cardekho.com/images/car-images/930x620/BMW/BMW-6-Series/Metallic-Black-Sapphire.jpg'],
+      ['Melbourne Red', 'https://stimg.cardekho.com/images/car-images/930x620/BMW/BMW-6-Series/Metallic-Melbourne-Red.jpg'],
+      ['Alpine White', 'https://stimg.cardekho.com/images/car-images/930x620/BMW/BMW-6-Series/6475/1542178924875/BMW-6-series-Alpine-White-e6e6e6.jpg'],
+      ['Bernina Grey Amber Effect', 'https://stimg.cardekho.com/images/car-images/930x620/BMW/6-Series/9939/1702871926009/222_Bernina-Grey-Amber-Effect_434645.jpg'],
+      ['Mineral White', 'https://stimg.cardekho.com/images/car-images/930x620/BMW/BMW-6-Series/Metallic-Mineral-White.jpg'],
+      ['M Carbon Black Metallic', 'https://stimg.cardekho.com/images/car-images/930x620/BMW/6-Series/9939/1702871926009/223_M-Carbon-Black-Metallic_16151a.jpg'],
+      ['Royal Burgundy Red Brilliant Effect', 'https://stimg.cardekho.com/images/car-images/930x620/BMW/BMW-6-Series/6475/1552469097455/Royal-Burgundy-Red-Brilliant-Effect-352224.jpg'],
+    ].map(([name, image]) => ({ name, image })),
+  }
 
   const sharedImageKeys = new Set()
-  const colorPairs = selectUniqueColorPairs(
+  let colorPairs = selectUniqueColorPairs(
     filterColorPairsForModel(
       [
         ...popupBuckets.colors,
@@ -1315,6 +1388,9 @@ async function scrape4WOne(modelEntry) {
     ),
     sharedImageKeys
   )
+  if (colorPairs.length === 0 && manualColorPairMap[`${makeKey}|${modelKey}`]) {
+    colorPairs = selectUniqueColorPairs(manualColorPairMap[`${makeKey}|${modelKey}`], new Set())
+  }
 
   const brandDir = slugify(modelEntry.make || brandSlug)
   const modelDir = slugify(modelEntry.model || modelSlug)

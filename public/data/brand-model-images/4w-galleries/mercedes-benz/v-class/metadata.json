@@ -1,0 +1,31 @@
+{
+  "make": "Mercedes-Benz",
+  "model": "V-Class",
+  "brandSlug": "mercedes-benz",
+  "modelSlug": "v-class",
+  "sourceUrl": "https://www.carwale.com/mercedes-benz-cars/v-class/colours/",
+  "scrapedAt": "2026-04-27T12:30:00.000Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 5,
+    "total": 5
+  },
+  "hero": "https://imgd.aeplcdn.com/1056x594/n/holk5ib_1911104.png?q=80&wm=1",
+  "exterior": [],
+  "interior": [],
+  "feature": [],
+  "colorNames": [
+    "Sodalite Blue Metallic",
+    "Rock Crystal White Metallic",
+    "Obsidian Black Metallic",
+    "High-Tech Silver Metallic",
+    "Alpine Grey Metallic"
+  ],
+  "colorImages": [
+    "https://imgd.aeplcdn.com/1056x594/n/holk5ib_1911104.png?q=80&wm=1",
+    "https://imgd.aeplcdn.com/1056x594/n/hijk5ib_1911102.png?q=80&wm=1",
+    "https://imgd.aeplcdn.com/1056x594/n/nrik5ib_1911100.png?q=80&wm=1",
+    "https://imgd.aeplcdn.com/1056x594/n/iigk5ib_1911098.png?q=80&wm=1",
+    "https://imgd.aeplcdn.com/1056x594/n/3d9k5ib_1911096.png?q=80&wm=1"
+  ]
+}

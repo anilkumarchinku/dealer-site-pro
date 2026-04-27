@@ -1,0 +1,37 @@
+{
+  "make": "VinFast",
+  "model": "VF 8",
+  "brandSlug": "vinfast",
+  "modelSlug": "vf8",
+  "sourceUrl": "https://vinfastauto.com/vn_vi/bang-mau-xe-vf-8",
+  "scrapedAt": "2026-04-27T12:45:00.000Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 8,
+    "total": 8
+  },
+  "hero": "https://storage.googleapis.com/vinfast-data-01/mau-xe-vf-8-mau-brahminy-white%20(1)_1653637833.jpg",
+  "exterior": [],
+  "interior": [],
+  "feature": [],
+  "colorNames": [
+    "Brahminy White",
+    "Desat Silver",
+    "Crimson Red",
+    "Neptune Grey",
+    "Sunset Orange",
+    "Jet Black",
+    "VinFast Blue",
+    "Deep Ocean"
+  ],
+  "colorImages": [
+    "https://storage.googleapis.com/vinfast-data-01/mau-xe-vf-8-mau-brahminy-white%20(1)_1653637833.jpg",
+    "https://storage.googleapis.com/vinfast-data-01/mau-xe-vf-8-mau-desat-silver_1653638021.jpg",
+    "https://storage.googleapis.com/vinfast-data-01/mau-xe-vf-8-mau-crimson-red_1653643188.jpg",
+    "https://storage.googleapis.com/vinfast-data-01/mau-xe-vf-8-mau-neptune-grey_1653643213.jpg",
+    "https://storage.googleapis.com/vinfast-data-01/mau-xe-vf-8-mau-sunset-orange_1653643312.jpg",
+    "https://storage.googleapis.com/vinfast-data-01/mau-xe-vf-8-mau-jet-black_1653643344.jpg",
+    "https://storage.googleapis.com/vinfast-data-01/mau-xe-vf-8-mau-vinfast-blue_1653643430.jpg",
+    "https://storage.googleapis.com/vinfast-data-01/mau-xe-vf-8-1_1670322155.jpg"
+  ]
+}

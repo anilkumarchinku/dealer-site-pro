@@ -1,0 +1,34 @@
+{
+  "make": "Honda",
+  "model": "WR-V",
+  "brandSlug": "honda",
+  "modelSlug": "wr-v-2020-2023",
+  "sourceUrl": "https://www.cardekho.com/honda/wr-v-2020-2023",
+  "scrapedAt": "2026-04-27T06:20:24.864Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 8,
+    "total": 8
+  },
+  "hero": "/data/brand-model-images/4w-galleries/honda/wr-v/colors/rediant-red-metallic.avif",
+  "colorNames": [
+    "Rediant Red Metallic",
+    "Platinum White Pearl",
+    "Lunar Silver Metallic",
+    "Golden Brown Metallic",
+    "Meteoroid Grey Metallic",
+    "Radiant Red",
+    "White Orchid",
+    "Golden Brown"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/honda/wr-v/colors/rediant-red-metallic.avif",
+    "/data/brand-model-images/4w-galleries/honda/wr-v/colors/platinum-white-pearl.avif",
+    "/data/brand-model-images/4w-galleries/honda/wr-v/colors/lunar-silver-metallic.avif",
+    "/data/brand-model-images/4w-galleries/honda/wr-v/colors/golden-brown-metallic.avif",
+    "/data/brand-model-images/4w-galleries/honda/wr-v/colors/meteoroid-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/honda/wr-v/colors/radiant-red.avif",
+    "/data/brand-model-images/4w-galleries/honda/wr-v/colors/white-orchid.avif",
+    "/data/brand-model-images/4w-galleries/honda/wr-v/colors/golden-brown.avif"
+  ]
+}
