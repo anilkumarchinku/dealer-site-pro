@@ -41,8 +41,10 @@ import {
 import { BikeDetailHeroImage } from './BikeDetailHeroImage';
 
 // ── Types ────────────────────────────────────────────────────────
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-type BikeData = Record<string, any>;
+type BikeDetailVariant = {
+    name?: string;
+    price?: string;
+}
 
 interface BikeListItem {
     id: string;
@@ -53,11 +55,33 @@ interface BikeListItem {
     type: string;
     fuel_type: string;
     engine_cc: number | null;
-    mileage_kmpl: number | null;
+    mileage_kmpl: number | string | null;
     range_km: number | null;
     top_speed_kmph: number | null;
     price_min_paise: number;
     image_url: string | null;
+}
+
+type BikeData = BikeListItem & {
+    body_type?: string | null;
+    transmission?: string | null;
+    variants?: BikeDetailVariant[];
+    features?: string[];
+    key_features?: string[];
+    safety_features?: string[];
+    colors?: Array<string | { name: string; hex?: string }>;
+    battery_kwh?: number | null;
+    description?: string | null;
+    power?: string | null;
+    max_power?: string | null;
+    torque?: string | null;
+    charging_time_hours?: number | null;
+    fuel_system?: string | null;
+    fuel_tank_capacity?: number | null;
+    kerb_weight?: number | null;
+    seat_height?: number | null;
+    ground_clearance?: number | null;
+    wheelbase?: number | null;
 }
 
 interface BikeVariantRow {
@@ -360,7 +384,7 @@ export default function BikeDetailPage({ params }: Props) {
     const vehicleType = isElectric ? 'Electric' : rawVehicleType.includes('scooter') ? 'Scooter' : 'Motorcycle';
     const fuelLabel = isElectric ? 'Electric' : 'Petrol';
     const transmissionLabel = bike.transmission ?? (isElectric ? 'Automatic' : '--');
-    const mileageKmpl = bike.mileage_kmpl ? parseFloat(bike.mileage_kmpl) : null;
+    const mileageKmpl = bike.mileage_kmpl ? Number(bike.mileage_kmpl) : null;
     const displayVariant = bike.variant && bike.variant.trim().toLowerCase() !== bike.model.trim().toLowerCase()
         ? bike.variant
         : null;
@@ -369,13 +393,13 @@ export default function BikeDetailPage({ params }: Props) {
     const detailVariants = Array.isArray(bike.variants) ? bike.variants : [];
     const normalizedBikeVariant = normalizeVariantLabel(bike.variant);
     const currentVariantName = detailVariants.length > 0
-        ? (detailVariants.some((v: { name: string }) => normalizeVariantLabel(v.name) === normalizedBikeVariant)
-            ? detailVariants.find((v: { name: string }) => normalizeVariantLabel(v.name) === normalizedBikeVariant)?.name
+        ? (detailVariants.some((v) => normalizeVariantLabel(v.name ?? '') === normalizedBikeVariant)
+            ? detailVariants.find((v) => normalizeVariantLabel(v.name ?? '') === normalizedBikeVariant)?.name
             : detailVariants[0]?.name)
         : null;
 
     const variantRows: BikeVariantRow[] = detailVariants.length > 0
-        ? detailVariants.map((v: { name?: string; price?: string }, index: number) => {
+        ? detailVariants.map((v, index: number) => {
             const parsedPrice = parsePriceToPaise(v.price);
             const fallbackPrice = index === 0 ? (bike.price_min_paise ?? 0) : 0;
             const effectivePrice = parsedPrice > 0 ? parsedPrice : fallbackPrice;

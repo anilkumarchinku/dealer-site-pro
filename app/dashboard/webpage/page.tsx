@@ -55,8 +55,7 @@ export default function WebpagePage() {
                     .eq("user_id", user.id)
                     .eq("onboarding_complete", true)
                     .maybeSingle()
-                // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                const dealer = dealerRaw as any
+                const dealer = dealerRaw
                 if (!dealer?.slug) { setLoading(false); return }
 
                 // Fetch brands from dealer_brands
@@ -70,14 +69,17 @@ export default function WebpagePage() {
                 // Sync to store
                 setDealerId(dealer.id)
                 setDealerSlug(dealer.slug)
-                const vtype = dealer.vehicle_type ?? 'car'
+                const vtype =
+                    dealer.vehicle_type === 'two-wheeler' || dealer.vehicle_type === 'three-wheeler'
+                        ? dealer.vehicle_type
+                        : 'car'
                 setVehicleType(vtype)
                 const isNew  = dealer.sells_new_cars  ?? false
                 const isUsed = dealer.sells_used_cars ?? false
                 // Fallback: if boolean flags are missing, infer from vehicle_type
                 const has2W  = dealer.sells_two_wheelers   ?? (vtype === 'two-wheeler')
                 const has3W  = dealer.sells_three_wheelers ?? (vtype === 'three-wheeler')
-                const has4W  = dealer.sells_four_wheelers  ?? (vtype === 'car' || vtype === 'four-wheeler')
+                const has4W  = dealer.sells_four_wheelers  ?? (vtype === 'car')
                 setSellsNewCars(isNew)
                 setSellsUsedCars(isUsed)
                 setSellsTwoWheelers(has2W)

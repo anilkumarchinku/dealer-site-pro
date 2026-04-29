@@ -24,6 +24,26 @@ interface PropagationTrackerProps {
     onComplete: () => void;
 }
 
+type PropagationRecord = {
+    propagated: boolean;
+    current_values?: string[];
+}
+
+type PropagationStatus = {
+    overall: {
+        fully_propagated: boolean;
+        checks_passed: number;
+        total_checks: number;
+        percentage: number;
+    };
+    records: {
+        a_record: PropagationRecord;
+        www_record?: PropagationRecord;
+        txt_record: PropagationRecord;
+    };
+    estimated_time_remaining: string;
+}
+
 export function PropagationTracker({
     onboardingId,
     targetDomain,
@@ -31,7 +51,7 @@ export function PropagationTracker({
     onComplete
 }: PropagationTrackerProps) {
     const [isChecking, setIsChecking] = useState(false);
-    const [propagationStatus, setPropagationStatus] = useState<any>(null);
+    const [propagationStatus, setPropagationStatus] = useState<PropagationStatus | null>(null);
     const [autoCheckEnabled, setAutoCheckEnabled] = useState(false);
     const [checkCount, setCheckCount] = useState(0);
 
@@ -75,7 +95,7 @@ export function PropagationTracker({
         }
     };
 
-    const RecordStatus = ({ record, label }: { record: any; label: string }) => (
+    const RecordStatus = ({ record, label }: { record: PropagationRecord; label: string }) => (
         <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
             <div className="flex items-center gap-3">
                 {record.propagated ? (

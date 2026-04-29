@@ -1,52 +1,85 @@
-import { NextRequest, NextResponse } from 'next/server'
-import { requireAuth, getDealerForUser } from '@/lib/supabase-server'
-import { rateLimitOrNull } from '@/lib/utils/rate-limiter'
+import { NextRequest } from 'next/server'
 import {
     createThreeWheelerServiceBooking,
     getThreeWheelerServiceBookings,
     updateThreeWheelerServiceBookingStatus,
 } from '@/lib/db/three-wheelers'
-import type { ThreeWheelerServiceStatus } from '@/lib/types/three-wheeler'
+import type { ThreeWheelerServiceStatus, ThreeWheelerServiceType } from '@/lib/types/three-wheeler'
+import {
+    createVehicleServiceBookingRouteHandlers,
+} from '@/lib/services/vehicle-service-booking-route-service'
 
-export async function POST(request: NextRequest) {
-    const rateLimit = await rateLimitOrNull('thw_svc_create', request, 5, 10 * 60 * 1000)
-    if (rateLimit) return rateLimit
+type ThreeWheelerServiceBookingInput = {
+    dealer_id: string
+    customer_name: string
+    phone: string
+    service_type: ThreeWheelerServiceType
+    preferred_date: string
+    preferred_slot: string
+    vehicle_make: string | null
+    vehicle_model: string | null
+    vehicle_year: number | null
+    vehicle_reg_no: string | null
+    km_reading: number | null
+}
 
-    const body = await request.json().catch(() => null)
-    if (!body || !body.dealer_id || !body.customer_name || !body.phone || !body.service_type || !body.preferred_date || !body.preferred_slot) {
-        return NextResponse.json({ error: 'Required fields missing' }, { status: 400 })
+function formatError(error: unknown): string {
+    return String(error)
+}
+
+function asServiceBookingInput(body: unknown): ThreeWheelerServiceBookingInput | null {
+    const data = body as Partial<ThreeWheelerServiceBookingInput> | null
+    if (!data?.dealer_id || !data.customer_name || !data.phone || !data.service_type || !data.preferred_date || !data.preferred_slot) {
+        return null
     }
 
-    const result = await createThreeWheelerServiceBooking({ status: 'pending', ...body })
-    if (!result.success) return NextResponse.json({ error: result.error }, { status: 400 })
-    return NextResponse.json({ success: true, id: result.id }, { status: 201 })
+    return {
+        dealer_id: data.dealer_id,
+        customer_name: data.customer_name,
+        phone: data.phone,
+        service_type: data.service_type as ThreeWheelerServiceType,
+        preferred_date: data.preferred_date,
+        preferred_slot: data.preferred_slot,
+        vehicle_make: data.vehicle_make ?? null,
+        vehicle_model: data.vehicle_model ?? null,
+        vehicle_year: data.vehicle_year ?? null,
+        vehicle_reg_no: data.vehicle_reg_no ?? null,
+        km_reading: data.km_reading ?? null,
+    }
 }
 
-export async function GET(request: NextRequest) {
-    const { user, supabase, errorResponse } = await requireAuth()
-    if (errorResponse) return errorResponse
-    const dealer = await getDealerForUser(supabase, user.id)
-    if (!dealer) return NextResponse.json({ error: 'Dealer account not found' }, { status: 403 })
+const serviceBookingOptions = {
+    rateLimitKey: 'thw_svc_create',
+    invalidJsonMessage: 'Required fields missing',
+    parseBooking: (body: unknown) => {
+        const data = asServiceBookingInput(body)
+        return data
+            ? { success: true as const, data }
+            : { success: false as const, error: 'Required fields missing' }
+    },
+    formatParseError: formatError,
+    buildCreatePayload: (data: ThreeWheelerServiceBookingInput) => ({ status: 'pending' as const, ...data }),
+    createBooking: createThreeWheelerServiceBooking,
+    createErrorStatus: 400,
+    buildFilters: (searchParams: URLSearchParams) => {
+        const status = searchParams.get('status') as ThreeWheelerServiceStatus | null
+        return {
+            status: status ?? undefined,
+            page: Number(searchParams.get('page') ?? 1),
+            pageSize: Number(searchParams.get('pageSize') ?? 50),
+        }
+    },
+    getBookings: getThreeWheelerServiceBookings,
+    parsePatch: (body: unknown) => {
+        const { id, status } = (body ?? {}) as { id?: string; status?: ThreeWheelerServiceStatus }
+        return id && status
+            ? { success: true as const, data: { id, status } }
+            : { success: false as const, error: 'id and status required' }
+    },
+    updateBookingStatus: updateThreeWheelerServiceBookingStatus,
+} as const
 
-    const { searchParams } = new URL(request.url)
-    const status   = searchParams.get('status') as ThreeWheelerServiceStatus | null
-    const page     = Number(searchParams.get('page') ?? 1)
-    const pageSize = Number(searchParams.get('pageSize') ?? 50)
-
-    const result = await getThreeWheelerServiceBookings(dealer.id, { status: status ?? undefined, page, pageSize })
-    return NextResponse.json(result)
-}
-
-export async function PATCH(request: NextRequest) {
-    const { user, supabase, errorResponse } = await requireAuth()
-    if (errorResponse) return errorResponse
-    const dealer = await getDealerForUser(supabase, user.id)
-    if (!dealer) return NextResponse.json({ error: 'Dealer account not found' }, { status: 403 })
-
-    const { id, status } = await request.json()
-    if (!id || !status) return NextResponse.json({ error: 'id and status required' }, { status: 400 })
-
-    const result = await updateThreeWheelerServiceBookingStatus(id, dealer.id, status)
-    if (!result.success) return NextResponse.json({ error: result.error }, { status: 400 })
-    return NextResponse.json({ success: true })
-}
+const handlers = createVehicleServiceBookingRouteHandlers(serviceBookingOptions)
+export const POST = handlers.POST
+export const GET = handlers.GET
+export const PATCH = handlers.PATCH

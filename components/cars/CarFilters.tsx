@@ -28,9 +28,22 @@ import { FOUR_W_BODY_TYPES } from '@/lib/data/four-wheelers';
 
 interface CarFiltersProps {
     className?: string;
-    onFilterChange?: (filters: any) => void;
+    onFilterChange?: (filters: CarFilterState) => void;
     hideBrand?: boolean;
     showUsedCarFilters?: boolean;
+}
+
+export type CarFilterState = {
+    make: string[];
+    bodyType: string[];
+    fuelType: string[];
+    transmission: string[];
+    year: string[];
+    seating: string[];
+    color: string[];
+    owners: string[];
+    priceRange: { min: number; max: number };
+    kmRange: { min: number; max: number };
 }
 
 const PRICE_MAX_DEFAULT = 100_000_000; // ₹10 Cr

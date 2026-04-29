@@ -4,7 +4,27 @@
  */
 
 import { supabase } from '@/lib/supabase';
-import type { Car, CarFilters, CarSearchResult } from '@/lib/types/car';
+import type {
+    BodyType,
+    Car,
+    CarColor,
+    CarDimensions,
+    CarEngine,
+    CarFeatures,
+    CarFilters,
+    CarImages,
+    CarMeta,
+    CarOwnership,
+    CarPerformance,
+    CarPricing,
+    CarRating,
+    CarSearchResult,
+    CarTransmission,
+    CarVariant,
+    Segment,
+    TransmissionType,
+} from '@/lib/types/car';
+import type { Database } from '@/lib/database.types';
 import { searchCars, sortCars, calculateEMI } from '@/lib/utils/car-utils';
 import { CAR_MODEL_COLORS } from '@/lib/data/car-colors';
 import { get4WCardekhoModelMeta } from '@/lib/data/4w-cardekho-meta';
@@ -12,6 +32,52 @@ import { brandNameToId, getVehicleImageUrls } from '@/lib/utils/brand-model-imag
 
 // Table name in Supabase
 const CAR_TABLE = 'car_catalog';
+
+type DbCarCatalogRow = Database['public']['Tables']['car_catalog']['Row'];
+type CarCatalogServiceRow = Omit<DbCarCatalogRow, 'transmission'> & {
+    segment?: Segment | null;
+    price?: string | null;
+    pricing?: CarPricing | null;
+    engine?: CarEngine | null;
+    transmission: string | CarTransmission | null;
+    performance?: CarPerformance | null;
+    dimensions?: CarDimensions | null;
+    features?: CarFeatures | null;
+    images?: (CarImages & { _fallbackUrls?: string[] }) | null;
+    colors?: CarColor[] | null;
+    meta?: CarMeta | null;
+    rating?: CarRating | null;
+    variants?: CarVariant[] | null;
+    competitors?: Car['competitors'];
+    ownership?: CarOwnership | null;
+    fuel_types?: string[] | null;
+    transmissions?: string[] | null;
+    engine_power?: string | null;
+    engine_torque?: string | null;
+    fuel_efficiency?: number | null;
+    range_km?: number | null;
+    key_features?: string[] | null;
+    safety_features?: string[] | null;
+    scraped_at?: string | null;
+    popularity_score?: number | null;
+    source_url?: string | null;
+};
+type GroupedCarCatalogRow = CarCatalogServiceRow & {
+    fuel_types: string[];
+    transmissions: string[];
+    variant: string;
+    body_type: BodyType | string | null;
+};
+
+function toGroupedCarCatalogRow(row: CarCatalogServiceRow): GroupedCarCatalogRow {
+    return {
+        ...row,
+        body_type: get4WCardekhoModelMeta(row.make, row.model)?.bodyType ?? row.body_type ?? 'Other',
+        fuel_types: row.fuel_type ? [row.fuel_type] : [],
+        transmissions: typeof row.transmission === 'string' && row.transmission ? [row.transmission] : [],
+        variant: row.variant ?? '',
+    };
+}
 
 /**
  * Get all cars with optional filters
@@ -107,7 +173,7 @@ export async function getCarById(id: string): Promise<Car | null> {
 
     if (error || !data) return null;
 
-    return mapDbCarToCar(data);
+    return mapDbCarToCar(toGroupedCarCatalogRow(data));
 }
 
 /**
@@ -184,30 +250,26 @@ export async function getSimilarCars(carId: string, limit: number = 4): Promise<
  * Groups variant rows by (make, model), returning one row per model.
  * Aggregates: price range (min/max), fuel_types array, transmissions array.
  */
-function groupVariantsByModel(rows: any[]): any[] {
-    const modelMap = new Map<string, any>();
+function groupVariantsByModel(rows: CarCatalogServiceRow[]): GroupedCarCatalogRow[] {
+    const modelMap = new Map<string, GroupedCarCatalogRow>();
     for (const row of rows) {
         const key = `${row.make}|${row.model}`;
         const normalizedBodyType = get4WCardekhoModelMeta(row.make, row.model)?.bodyType ?? row.body_type ?? 'Other';
         if (!modelMap.has(key)) {
-            modelMap.set(key, {
-                ...row,
-                body_type: normalizedBodyType,
-                fuel_types: row.fuel_type ? [row.fuel_type] : [],
-                transmissions: row.transmission ? [row.transmission] : [],
-                variant: '',
-            });
+            modelMap.set(key, toGroupedCarCatalogRow({ ...row, body_type: normalizedBodyType }));
         } else {
             const existing = modelMap.get(key)!;
             const rowMin = row.price_min_paise ?? 0;
             const rowMax = row.price_max_paise ?? 0;
-            if (rowMin > 0 && (existing.price_min_paise === 0 || rowMin < existing.price_min_paise))
+            const existingMin = existing.price_min_paise ?? 0;
+            const existingMax = existing.price_max_paise ?? 0;
+            if (rowMin > 0 && (existingMin === 0 || rowMin < existingMin))
                 existing.price_min_paise = rowMin;
-            if (rowMax > existing.price_max_paise)
+            if (rowMax > existingMax)
                 existing.price_max_paise = rowMax;
             if (row.fuel_type && !existing.fuel_types.includes(row.fuel_type))
                 existing.fuel_types.push(row.fuel_type);
-            if (row.transmission && !existing.transmissions.includes(row.transmission))
+            if (typeof row.transmission === 'string' && row.transmission && !existing.transmissions.includes(row.transmission))
                 existing.transmissions.push(row.transmission);
             existing.body_type = existing.body_type || normalizedBodyType;
         }
@@ -219,7 +281,7 @@ function groupVariantsByModel(rows: any[]): any[] {
  * Helper to map DB result to Car interface.
  * Handles the flat car_catalog schema (price_min_paise / price_max_paise).
  */
-function mapDbCarToCar(dbCar: any): Car {
+function mapDbCarToCar(dbCar: GroupedCarCatalogRow): Car {
     // ── Pricing ──────────────────────────────────────────────────────────────
     // DB stores prices in paise (1 INR = 100 paise)
     const minPaise = dbCar.price_min_paise ?? 0;
@@ -233,14 +295,11 @@ function mapDbCarToCar(dbCar: any): Car {
         ? { monthly: emiMonthly, downPayment: Math.round((minINR ?? 0) * 0.2), tenure: 60 }
         : undefined;
 
-    const pricing = dbCar.pricing ?? {
+    const pricing: CarPricing = dbCar.pricing?.exShowroom ? { ...dbCar.pricing } : {
         exShowroom: { min: minINR, max: maxINR, currency: 'INR' as const },
         emi,
     };
-    // Ensure exShowroom always exists to avoid downstream crashes
-    if (!pricing.exShowroom) {
-        pricing.exShowroom = { min: minINR, max: maxINR, currency: 'INR' as const };
-    }
+
     // Backfill EMI if pricing came from JSONB but has no emi block
     if (!pricing.emi && emi) {
         pricing.emi = emi;
@@ -261,33 +320,33 @@ function mapDbCarToCar(dbCar: any): Car {
     const transmissionsArr: string[] =
         Array.isArray(dbCar.transmissions) && dbCar.transmissions.length > 0
             ? dbCar.transmissions
-            : (dbCar.transmission ? [dbCar.transmission] : []);
+            : (typeof dbCar.transmission === 'string' && dbCar.transmission ? [dbCar.transmission] : []);
     // Abbreviate "Automatic" → "Auto" so multi-option strings stay compact on the card
     const transmissionDisplay = transmissionsArr
         .map(t => t === 'Automatic' ? 'Auto' : t)
         .join(' / ') || null;
 
-    const transmissionObj = dbCar.transmission && typeof dbCar.transmission === 'object'
+    const transmissionObj: CarTransmission = dbCar.transmission && typeof dbCar.transmission === 'object'
         ? dbCar.transmission                          // already an object (JSONB schema)
-        : { type: transmissionDisplay };
+        : { type: transmissionDisplay as TransmissionType };
 
     // ── Engine ────────────────────────────────────────────────────────────────
     // DB has flat columns fuel_type, engine_cc, engine_power, engine_torque.
-    const engineObj = dbCar.engine ?? {
+    const engineObj: CarEngine = dbCar.engine ?? {
         type:         fuelTypeDisplay,
         displacement: dbCar.engine_cc ?? null,
-        power:        dbCar.engine_power ?? null,
-        torque:       dbCar.engine_torque ?? null,
+        power:        dbCar.engine_power ?? '',
+        torque:       dbCar.engine_torque ?? '',
     };
 
     // ── Performance ───────────────────────────────────────────────────────────
-    const performanceObj = dbCar.performance ?? {
+    const performanceObj: CarPerformance = dbCar.performance ?? {
         fuelEfficiency: dbCar.fuel_efficiency ?? null,
         range: dbCar.range_km ?? null,    // km — populated for EVs
     };
 
     // ── Dimensions ────────────────────────────────────────────────────────────
-    const dimensionsObj = dbCar.dimensions ?? {
+    const dimensionsObj: CarDimensions = dbCar.dimensions ?? {
         seatingCapacity: dbCar.seating_capacity ?? null,
     };
 
@@ -298,7 +357,7 @@ function mapDbCarToCar(dbCar: any): Car {
         variant:  dbCar.variant ?? '',
         year:     dbCar.year,
         bodyType: get4WCardekhoModelMeta(dbCar.make, dbCar.model)?.bodyType ?? dbCar.body_type ?? 'Other',
-        segment:  dbCar.segment ?? null,
+        segment:  (dbCar.segment ?? null) as Segment,
         vehicleCategory: '4w' as const,
         price:    minINR ? `₹${minINR.toLocaleString('en-IN')}` : (dbCar.price ?? undefined),
 

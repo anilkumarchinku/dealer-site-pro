@@ -33,6 +33,7 @@ import {
     ArrowRight,
 } from "lucide-react";
 import { dealerSiteHref } from "@/lib/utils/domain";
+import type { StyleTemplate } from "@/lib/types";
 
 const navGroups = [
     {
@@ -170,12 +171,10 @@ export default function DashboardLayout({
                 if (dealer.slug) setDealerSlug(dealer.slug);
                 setOnboardingComplete(dealer.onboarding_complete ?? false);
 
-                // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                const d = dealer as any;
-                const vType   = d.vehicle_type         as string | null;
-                const sells2w = d.sells_two_wheelers   ?? false;
-                const sells3w = d.sells_three_wheelers ?? false;
-                const sells4w = d.sells_four_wheelers  ?? false;
+                const vType   = dealer.vehicle_type         as string | null;
+                const sells2w = dealer.sells_two_wheelers   ?? false;
+                const sells3w = dealer.sells_three_wheelers ?? false;
+                const sells4w = dealer.sells_four_wheelers  ?? false;
                 setVehicleType(vType);
                 setSellsTwoWheelersL(sells2w);
                 setSellsThreeWheelersL(sells3w);
@@ -223,8 +222,7 @@ export default function DashboardLayout({
                     gstin:          dealer.gstin          ?? '',
                     sellsNewCars:   dealer.sells_new_cars,
                     sellsUsedCars:  dealer.sells_used_cars,
-                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                    styleTemplate:  (dealer.style_template as any) ?? 'family',
+                    styleTemplate:  (dealer.style_template as StyleTemplate | null) ?? 'family',
                     brands:         (brands?.map((b: { brand_name: string }) => b.brand_name) ?? []) as import('@/lib/types').Brand[],
                 });
             } catch {

@@ -13,8 +13,35 @@ interface Props {
     onClose:              () => void
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-type RazorpayConstructor = any
+type BookingOrderResponse = {
+    error?: string
+    mock?: boolean
+    keyId: string
+    amount: number
+    currency: string
+    orderId: string
+}
+
+type RazorpayPaymentResponse = {
+    razorpay_order_id: string
+    razorpay_payment_id: string
+    razorpay_signature: string
+}
+
+type RazorpayCheckoutOptions = {
+    key: string
+    amount: number
+    currency: string
+    order_id: string
+    name: string
+    description: string
+    prefill: { name: string; contact: string; email: string }
+    theme: { color: string }
+    handler: (response: RazorpayPaymentResponse) => Promise<void>
+    modal: { ondismiss: () => void }
+}
+
+type RazorpayConstructor = new (options: RazorpayCheckoutOptions) => { open: () => void }
 
 export function BookingModal({
     dealerId, vehicleId, usedVehicleId, vehicleName, bookingAmountPaise, isOpen, onClose
@@ -53,7 +80,7 @@ export function BookingModal({
                 }),
             })
 
-            const orderData = await res.json()
+            const orderData = await res.json() as BookingOrderResponse
             if (!res.ok) throw new Error(orderData.error ?? "Failed to create order")
 
             if (orderData.mock) {
@@ -67,8 +94,12 @@ export function BookingModal({
             document.head.appendChild(rzpScript)
 
             rzpScript.onload = () => {
-                // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                const RazorpayClass = (window as any).Razorpay as RazorpayConstructor
+                const RazorpayClass = (window as Window & { Razorpay?: RazorpayConstructor }).Razorpay
+                if (!RazorpayClass) {
+                    setError("Payment checkout failed to load. Please try again.")
+                    setLoading(false)
+                    return
+                }
                 const rzp = new RazorpayClass({
                     key:         orderData.keyId,
                     amount:      orderData.amount,
@@ -78,7 +109,7 @@ export function BookingModal({
                     description: vehicleName,
                     prefill:     { name, contact: phone, email },
                     theme:       { color: "#16a34a" },
-                    handler: async (response: { razorpay_order_id: string; razorpay_payment_id: string; razorpay_signature: string }) => {
+                    handler: async (response: RazorpayPaymentResponse) => {
                         const verifyRes = await fetch("/api/three-wheelers/booking/verify", {
                             method:  "POST",
                             headers: {

@@ -4,12 +4,12 @@ import { supabase, isSupabaseReady } from "@/lib/supabase";
 import { generateSlug, makeSlugUnique } from "@/lib/utils/slug";
 import { BASE_DOMAIN, USE_SUBDOMAIN } from "@/lib/utils/domain";
 import type { OnboardingData } from "@/lib/types";
+import type { Database } from "@/lib/database.types";
 import type { SupabaseClient } from "@supabase/supabase-js";
 
 /** Upload a base64 image to Supabase Storage and return the public URL, or null on failure */
 async function uploadBase64Image(
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    client: SupabaseClient<any, any, any>,
+    client: SupabaseClient<Database>,
     base64: string,
     dealerId: string,
     fieldName: 'logo' | 'hero'

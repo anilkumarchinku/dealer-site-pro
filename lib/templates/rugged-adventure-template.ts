@@ -17,8 +17,10 @@
 
 import type { TemplateConfig } from './template-styles';
 
-export const ruggedAdventureTemplate: TemplateConfig = {
-  id: 'adventure' as any, // Will extend TemplateStyle type
+type RuggedAdventureTemplateConfig = Omit<TemplateConfig, 'id'> & { id: 'adventure' };
+
+export const ruggedAdventureTemplate: RuggedAdventureTemplateConfig = {
+  id: 'adventure',
   name: 'Rugged & Adventure',
   icon: '🏔️',
   description: 'Outdoor-focused design for adventure and off-road brands',

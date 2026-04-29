@@ -10,12 +10,13 @@
 
 import fs from 'fs'
 import path from 'path'
+import { getRequiredEnv } from '@/lib/env'
+import { externalApiFetch } from '@/lib/services/external-api-fetch'
 
 const BASE = 'https://api.github.com'
 
 function headers() {
-    const token = process.env.GITHUB_TOKEN
-    if (!token) throw new Error('GITHUB_TOKEN env var is not set')
+    const token = getRequiredEnv('GITHUB_TOKEN')
     return {
         Authorization: `Bearer ${token}`,
         Accept: 'application/vnd.github+json',
@@ -25,27 +26,13 @@ function headers() {
 }
 
 async function ghFetch(path: string, init?: RequestInit) {
-    const controller = new AbortController()
-    const timeout = setTimeout(() => controller.abort(), 30_000)
-    try {
-        const res = await fetch(`${BASE}${path}`, {
-            ...init,
-            headers: headers(),
-            signal: controller.signal,
-        })
-        if (!res.ok) {
-            const body = await res.text()
-            throw new Error(`GitHub API ${path} → ${res.status}: ${body}`)
-        }
-        return res.json()
-    } catch (err) {
-        if ((err as Error).name === 'AbortError') {
-            throw new Error(`GitHub API ${path} timed out after 30s`)
-        }
-        throw err
-    } finally {
-        clearTimeout(timeout)
-    }
+    return externalApiFetch({
+        baseUrl: BASE,
+        providerName: 'GitHub',
+        path,
+        headers: headers(),
+        init,
+    })
 }
 
 // ── Types ─────────────────────────────────────────────────────────────────────
@@ -66,11 +53,8 @@ export interface GitHubRepo {
  * The template repo must have "Template repository" enabled on GitHub.
  */
 export async function createRepoFromTemplate(dealerSlug: string): Promise<GitHubRepo> {
-    const org = process.env.GITHUB_ORG
-    const templateRepo = process.env.GITHUB_TEMPLATE_REPO
-    if (!org || !templateRepo) {
-        throw new Error('GITHUB_ORG and GITHUB_TEMPLATE_REPO env vars must be set')
-    }
+    const org = getRequiredEnv('GITHUB_ORG')
+    const templateRepo = getRequiredEnv('GITHUB_TEMPLATE_REPO')
 
     const repoName = `dealer-${dealerSlug}`
 
@@ -93,8 +77,7 @@ export async function createRepoFromTemplate(dealerSlug: string): Promise<GitHub
  * Returns the repo data or null.
  */
 export async function getRepo(dealerSlug: string): Promise<GitHubRepo | null> {
-    const org = process.env.GITHUB_ORG
-    if (!org) throw new Error('GITHUB_ORG env var is not set')
+    const org = getRequiredEnv('GITHUB_ORG')
 
     try {
         const data = await ghFetch(`/repos/${org}/dealer-${dealerSlug}`)
@@ -131,8 +114,7 @@ export async function upsertFile(
     content: string | Buffer,
     commitMessage: string,
 ): Promise<void> {
-    const org = process.env.GITHUB_ORG
-    if (!org) throw new Error('GITHUB_ORG env var is not set')
+    const org = getRequiredEnv('GITHUB_ORG')
 
     const repoName = `dealer-${dealerSlug}`
     const sha = await getFileSha(org, repoName, filePath)
@@ -172,8 +154,7 @@ export async function pushDealerConfig(
  * Delete a dealer repo (used when a dealer account is deleted).
  */
 export async function deleteRepo(dealerSlug: string): Promise<void> {
-    const org = process.env.GITHUB_ORG
-    if (!org) throw new Error('GITHUB_ORG env var is not set')
+    const org = getRequiredEnv('GITHUB_ORG')
 
     await ghFetch(`/repos/${org}/dealer-${dealerSlug}`, { method: 'DELETE' })
 }

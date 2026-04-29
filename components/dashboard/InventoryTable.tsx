@@ -20,13 +20,14 @@ export function InventoryTable({ cars, onEdit, onDelete, onView }: InventoryTabl
     const sortedCars = [...cars].sort((a, b) => {
         if (!sortConfig) return 0;
 
-        let aValue: any = a[sortConfig.key as keyof Car];
-        let bValue: any = b[sortConfig.key as keyof Car];
+        const getSortValue = (car: Car): string | number => {
+            if (sortConfig.key === 'price') return car.pricing.exShowroom.min ?? 0;
+            const value = car[sortConfig.key as keyof Car];
+            return typeof value === 'number' || typeof value === 'string' ? value : '';
+        };
 
-        if (sortConfig.key === 'price') {
-            aValue = a.pricing.exShowroom.min;
-            bValue = b.pricing.exShowroom.min;
-        }
+        const aValue = getSortValue(a);
+        const bValue = getSortValue(b);
 
         if (aValue < bValue) return sortConfig.direction === 'asc' ? -1 : 1;
         if (aValue > bValue) return sortConfig.direction === 'asc' ? 1 : -1;

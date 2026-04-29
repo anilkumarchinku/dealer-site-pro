@@ -69,6 +69,12 @@ interface CarVariantInfo {
     hyderabad_on_road_price?: number;
 }
 
+type CarInfoBrandData = {
+    variants?: unknown;
+    car_variants?: unknown;
+    [key: string]: unknown;
+}
+
 function fmtPrice(inr?: number) {
     if (!inr) return '';
     return `₹${(inr / 100000).toFixed(2)} L`;
@@ -613,18 +619,18 @@ function VariantAccordionButton({
                 const data = await fetchCarInfoData();
                 if (data) {
                     const brandKey = make.toLowerCase().replace(/\s+/g, '_').replace(/-/g, '_');
-                    let bData: any = null;
+                    let bData: CarInfoBrandData | null = null;
                     for (const alias of [brandKey, brandKey.replace('_motors', ''), 'mercedes_benz', 'maruti_suzuki']) {
-                        if (data[alias]) { bData = data[alias]; break; }
+                        if (data[alias]) { bData = data[alias] as CarInfoBrandData; break; }
                     }
                     if (bData) {
                         const items: CarVariantInfo[] = [];
-                        if (bData.variants && Array.isArray(bData.variants)) items.push(...bData.variants);
-                        else if (bData.car_variants && Array.isArray(bData.car_variants)) items.push(...bData.car_variants);
+                        if (Array.isArray(bData.variants)) items.push(...(bData.variants as CarVariantInfo[]));
+                        else if (Array.isArray(bData.car_variants)) items.push(...(bData.car_variants as CarVariantInfo[]));
                         else {
                             for (const k of Object.keys(bData)) {
                                 const v = bData[k];
-                                if (v && typeof v === 'object' && v.model) items.push(v);
+                                if (v && typeof v === 'object' && 'model' in v) items.push(v as CarVariantInfo);
                             }
                         }
                         const modelNorm = model.toLowerCase().trim();

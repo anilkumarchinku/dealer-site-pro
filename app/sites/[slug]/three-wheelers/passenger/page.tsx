@@ -44,8 +44,7 @@ export default function PassengerAutoPage() {
         if (!slug) return
         supabase.from("dealers").select("id").eq("slug", slug).single()
             .then(({ data }) => {
-                // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                if (data) setDealer((data as any))
+                if (data) setDealer(data)
             })
     }, [slug])
 

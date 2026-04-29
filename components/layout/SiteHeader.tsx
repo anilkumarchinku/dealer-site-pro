@@ -69,10 +69,25 @@ const NAV_ITEMS = [
     { label: 'Sell Car', href: '/sell' },
 ];
 
+type HeaderSearchResult = Pick<CarType, 'id' | 'make' | 'model' | 'variant' | 'images' | 'pricing'> & {
+    _category: '4w' | '2w' | '3w';
+};
+
+type VehicleSearchPayload = {
+    id: string;
+    make?: string | null;
+    brand?: string | null;
+    model?: string | null;
+    variant?: string | null;
+    image_url?: string | null;
+    price_min_paise?: number | null;
+    ex_showroom_price_paise?: number | null;
+};
+
 export function SiteHeader() {
     const router = useRouter();
     const [searchQuery, setSearchQuery] = useState('');
-    const [searchResults, setSearchResults] = useState<CarType[]>([]);
+    const [searchResults, setSearchResults] = useState<HeaderSearchResult[]>([]);
     const [isSearchOpen, setIsSearchOpen] = useState(false);
     const [isSearching, setIsSearching] = useState(false);
     const [activeMegaMenu, setActiveMegaMenu] = useState<string | null>(null);
@@ -96,18 +111,15 @@ export function SiteHeader() {
                     fetch(`/api/bikes?q=${q}&pageSize=3`).then(r => r.json()).catch(() => null),
                     fetch(`/api/autos?q=${q}&pageSize=2`).then(r => r.json()).catch(() => null),
                 ]);
-                // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                const mapVehicle = (v: any, category: string) => ({
-                    id: v.id, make: v.make ?? '', model: v.model ?? '', variant: v.variant ?? '',
+                const mapVehicle = (v: VehicleSearchPayload, category: HeaderSearchResult['_category']): HeaderSearchResult => ({
+                    id: v.id, make: v.make ?? v.brand ?? '', model: v.model ?? '', variant: v.variant ?? '',
                     images: { hero: v.image_url ?? '', exterior: [] as string[], interior: [] as string[] },
-                    pricing: { exShowroom: { min: (v.price_min_paise ?? 0) / 100, max: null, currency: 'INR' as const } },
+                    pricing: { exShowroom: { min: ((v.price_min_paise ?? v.ex_showroom_price_paise) ?? 0) / 100, max: null, currency: 'INR' as const } },
                     _category: category,
                 });
-                const cars = (carsRes?.success ? carsRes.data.cars : []).map((c: CarType) => ({ ...c, _category: '4w' }));
-                // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                const bikes = (bikesRes?.success ? bikesRes.data.vehicles : []).map((b: any) => mapVehicle(b, '2w'));
-                // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                const autos = (autosRes?.success ? autosRes.data.vehicles : []).map((a: any) => mapVehicle(a, '3w'));
+                const cars: HeaderSearchResult[] = (carsRes?.success ? carsRes.data.cars : []).map((c: CarType) => ({ ...c, _category: '4w' }));
+                const bikes = ((bikesRes?.success ? bikesRes.data.vehicles : []) as VehicleSearchPayload[]).map((b) => mapVehicle(b, '2w'));
+                const autos = ((autosRes?.success ? autosRes.data.vehicles : []) as VehicleSearchPayload[]).map((a) => mapVehicle(a, '3w'));
                 setSearchResults([...cars, ...bikes, ...autos].slice(0, 8));
             } catch {
                 setSearchResults([]);
@@ -141,8 +153,7 @@ export function SiteHeader() {
         return () => document.removeEventListener('mousedown', handleClick);
     }, []);
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const handleSearchSelect = (result: any) => {
+    const handleSearchSelect = (result: HeaderSearchResult) => {
         setIsSearchOpen(false);
         setSearchQuery('');
         const category = result._category ?? '4w';
@@ -151,8 +162,8 @@ export function SiteHeader() {
         else router.push(`/cars/${result.id}`);
     };
 
-    const handleSearchSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
+    const handleSearchSubmit = (e?: React.FormEvent | React.MouseEvent) => {
+        e?.preventDefault();
         if (searchQuery.trim()) {
             setIsSearchOpen(false);
             const q = encodeURIComponent(searchQuery.trim());
@@ -228,7 +239,7 @@ export function SiteHeader() {
                                 ))}
                                 {searchQuery.trim() && !isSearching && (
                                     <button
-                                        onClick={handleSearchSubmit as any}
+                                        onClick={handleSearchSubmit}
                                         className="w-full flex items-center gap-2 px-4 py-2.5 text-sm text-primary hover:bg-muted/50 border-t"
                                     >
                                         <Search className="w-3.5 h-3.5" />

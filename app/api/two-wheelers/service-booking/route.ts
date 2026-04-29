@@ -4,91 +4,50 @@
  * PATCH                                   — Dealer: update booking status
  */
 
-import { NextRequest, NextResponse } from 'next/server'
-import { requireAuth, getDealerForUser } from '@/lib/supabase-server'
-import { rateLimitOrNull } from '@/lib/utils/rate-limiter'
-import {
-    createServiceBooking,
-    getServiceBookings,
-    updateServiceBookingStatus,
-} from '@/lib/db/two-wheelers'
+import { NextRequest } from 'next/server'
+import type { z } from 'zod'
+import { createServiceBooking, getServiceBookings, updateServiceBookingStatus } from '@/lib/db/two-wheelers'
 import type { ServiceBookingFilters, TwoWheelerServiceStatus } from '@/lib/types/two-wheeler'
-import { serviceBookingSchema, updateServiceStatusSchema, formatZodErrors } from '@/lib/validations/schemas'
+import { formatZodErrors, serviceBookingSchema, updateServiceStatusSchema } from '@/lib/validations/schemas'
+import {
+    createVehicleServiceBookingRouteHandlers,
+} from '@/lib/services/vehicle-service-booking-route-service'
 
-export async function POST(request: NextRequest) {
-    const rateLimit = await rateLimitOrNull('tw_service_booking', request, 5, 10 * 60 * 1000)
-    if (rateLimit) return rateLimit
-
-    const body = await request.json()
-
-    // ── Validate with Zod ───────────────────────────────────────────────
-    const parsed = serviceBookingSchema.safeParse(body)
-    if (!parsed.success) {
-        return NextResponse.json(
-            { error: formatZodErrors(parsed.error) },
-            { status: 400 }
-        )
-    }
-    const { dealer_id, customer_name, phone, service_type, preferred_date, preferred_slot } = parsed.data
-
-    const result = await createServiceBooking({
-        dealer_id,
-        customer_name,
-        phone,
-        vehicle_make:   parsed.data.vehicle_make  ?? null,
-        vehicle_model:  parsed.data.vehicle_model ?? null,
-        vehicle_year:   parsed.data.vehicle_year  ?? null,
-        km_reading:     parsed.data.km_reading    ?? null,
-        service_type,
-        preferred_date,
-        preferred_slot,
-    })
-
-    if (!result.success) {
-        return NextResponse.json({ error: result.error }, { status: 500 })
-    }
-    return NextResponse.json({ success: true, id: result.id }, { status: 201 })
+function formatError(error: unknown): string {
+    return formatZodErrors(error as z.ZodError)
 }
 
-export async function GET(request: NextRequest) {
-    const { user, supabase, errorResponse } = await requireAuth()
-    if (errorResponse) return errorResponse
+type ServiceBookingInput = z.infer<typeof serviceBookingSchema>
 
-    const dealer = await getDealerForUser(supabase, user.id)
-    if (!dealer) {
-        return NextResponse.json({ error: 'Dealer account not found' }, { status: 403 })
-    }
-
-    const { searchParams } = new URL(request.url)
-    const filters: ServiceBookingFilters = {
-        status:   searchParams.get('status')   as TwoWheelerServiceStatus ?? undefined,
-        page:     searchParams.get('page')     ? Number(searchParams.get('page'))   : 1,
+const serviceBookingOptions = {
+    rateLimitKey: 'tw_service_booking',
+    parseBooking: (body: unknown) => serviceBookingSchema.safeParse(body),
+    formatParseError: formatError,
+    buildCreatePayload: (data: ServiceBookingInput) => ({
+        dealer_id: data.dealer_id,
+        customer_name: data.customer_name,
+        phone: data.phone,
+        vehicle_make: data.vehicle_make ?? null,
+        vehicle_model: data.vehicle_model ?? null,
+        vehicle_year: data.vehicle_year ?? null,
+        km_reading: data.km_reading ?? null,
+        service_type: data.service_type,
+        preferred_date: data.preferred_date,
+        preferred_slot: data.preferred_slot,
+    }),
+    createBooking: createServiceBooking,
+    createErrorStatus: 500,
+    buildFilters: (searchParams: URLSearchParams): ServiceBookingFilters => ({
+        status: searchParams.get('status') as TwoWheelerServiceStatus ?? undefined,
+        page: searchParams.get('page') ? Number(searchParams.get('page')) : 1,
         pageSize: searchParams.get('pageSize') ? Number(searchParams.get('pageSize')) : 20,
-    }
+    }),
+    getBookings: getServiceBookings,
+    parsePatch: (body: unknown) => updateServiceStatusSchema.safeParse(body),
+    updateBookingStatus: updateServiceBookingStatus,
+} as const
 
-    const result = await getServiceBookings(dealer.id, filters)
-    return NextResponse.json(result)
-}
-
-export async function PATCH(request: NextRequest) {
-    const { user, supabase, errorResponse } = await requireAuth()
-    if (errorResponse) return errorResponse
-
-    const dealer = await getDealerForUser(supabase, user.id)
-    if (!dealer) {
-        return NextResponse.json({ error: 'Dealer account not found' }, { status: 403 })
-    }
-
-    const patchBody = await request.json()
-    const parsedPatch = updateServiceStatusSchema.safeParse(patchBody)
-    if (!parsedPatch.success) {
-        return NextResponse.json({ error: formatZodErrors(parsedPatch.error) }, { status: 400 })
-    }
-    const { id, status } = parsedPatch.data
-
-    const result = await updateServiceBookingStatus(id, dealer.id, status)
-    if (!result.success) {
-        return NextResponse.json({ error: result.error }, { status: 400 })
-    }
-    return NextResponse.json({ success: true })
-}
+const handlers = createVehicleServiceBookingRouteHandlers(serviceBookingOptions)
+export const POST = handlers.POST
+export const GET = handlers.GET
+export const PATCH = handlers.PATCH

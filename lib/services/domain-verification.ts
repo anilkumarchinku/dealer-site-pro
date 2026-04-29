@@ -6,6 +6,14 @@
 import crypto from 'crypto';
 import dns from 'dns/promises';
 
+function getErrorCode(error: unknown): string {
+    return error && typeof error === 'object' && 'code' in error ? String(error.code) : '';
+}
+
+function getErrorMessage(error: unknown): string {
+    return error instanceof Error ? error.message : String(error);
+}
+
 export interface VerificationToken {
     token: string;
     domain: string;
@@ -72,11 +80,12 @@ export class DomainVerificationService {
                 verified,
                 found_records: allRecords
             };
-        } catch (error: any) {
+        } catch (error: unknown) {
             console.error('❌ DNS TXT verification error:', error);
+            const code = getErrorCode(error);
 
             // Handle specific DNS errors
-            if (error.code === 'ENOTFOUND') {
+            if (code === 'ENOTFOUND') {
                 return {
                     verified: false,
                     found_records: [],
@@ -84,7 +93,7 @@ export class DomainVerificationService {
                 };
             }
 
-            if (error.code === 'ENODATA' || error.code === 'ENOTEXTUAL') {
+            if (code === 'ENODATA' || code === 'ENOTEXTUAL') {
                 return {
                     verified: false,
                     found_records: [],
@@ -95,7 +104,7 @@ export class DomainVerificationService {
             return {
                 verified: false,
                 found_records: [],
-                error: `DNS lookup failed: ${error.message}`
+                error: `DNS lookup failed: ${getErrorMessage(error)}`
             };
         }
     }
@@ -159,11 +168,11 @@ export class DomainVerificationService {
                 error: 'Verification file not found or token mismatch'
             };
 
-        } catch (error: any) {
+        } catch (error: unknown) {
             console.error('❌ HTML file verification error:', error);
             return {
                 verified: false,
-                error: `Failed to fetch verification file: ${error.message}`
+                error: `Failed to fetch verification file: ${getErrorMessage(error)}`
             };
         }
     }

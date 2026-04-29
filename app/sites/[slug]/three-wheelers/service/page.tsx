@@ -17,8 +17,7 @@ export default function ThreeWheelerServicePage() {
     useEffect(() => {
         if (!slug) return
         supabase.from("dealers").select("id").eq("slug", slug).single()
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            .then(({ data }) => { if (data) setDealerId((data as any).id) })
+            .then(({ data }) => { if (data) setDealerId(data.id) })
     }, [slug])
 
     const services = [

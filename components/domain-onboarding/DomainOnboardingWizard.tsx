@@ -8,7 +8,8 @@
 import { useState } from 'react';
 import { DomainInputForm } from './DomainInputForm';
 import { VerificationSelector } from './VerificationSelector';
-import { VerificationProgress } from './VerificationProgress';
+import { VerificationProgress, type VerificationInstructions } from './VerificationProgress';
+import type { DNSAnalysis } from './DNSAnalysisDisplay';
 import { Card, CardContent } from '@/components/ui/card';
 import { CheckCircle2, Circle, Loader2 } from 'lucide-react';
 
@@ -28,8 +29,8 @@ interface OnboardingState {
     registrar?: string;
     verification_token?: string;
     verification_method?: 'dns_txt' | 'html_file' | 'email';
-    verification_instructions?: any;
-    dns_analysis?: any;
+    verification_instructions?: VerificationInstructions;
+    dns_analysis?: DNSAnalysis;
 }
 
 export function DomainOnboardingWizard() {

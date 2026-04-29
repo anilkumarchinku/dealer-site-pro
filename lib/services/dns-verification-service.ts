@@ -4,6 +4,8 @@
  * Note: DNS resolution only works server-side, not in browser
  */
 
+import { env } from '@/lib/env'
+
 export interface DNSRecord {
     type: 'A' | 'CNAME' | 'TXT'
     name: string
@@ -31,7 +33,7 @@ export async function verifyCustomDomain(
     const records: DNSRecord[] = []
 
     // Expected values (replace with your actual Vercel IP or CNAME)
-    const EXPECTED_CNAME = process.env.NEXT_PUBLIC_CNAME_TARGET ?? 'cname.vercel-dns.com'
+    const EXPECTED_CNAME = env.cnameTarget
     const EXPECTED_A_RECORD = '76.76.21.21' // Vercel's IP (example)
 
     // Only run DNS verification on server-side
@@ -61,7 +63,7 @@ export async function verifyCustomDomain(
             const cnameResults = await dns.resolveCname(domain)
             cnameRecord.actualValue = cnameResults[0]
             cnameRecord.isVerified = cnameResults[0] === EXPECTED_CNAME
-        } catch (error: any) {
+        } catch {
             cnameRecord.error = 'CNAME record not found'
         }
 
@@ -79,7 +81,7 @@ export async function verifyCustomDomain(
             const aResults = await dns.resolve4(domain)
             aRecord.actualValue = aResults[0]
             aRecord.isVerified = aResults[0] === EXPECTED_A_RECORD
-        } catch (error: any) {
+        } catch {
             aRecord.error = 'A record not found'
         }
 
@@ -147,7 +149,7 @@ export function getDNSInstructions(domain: string): {
             {
                 type: 'CNAME',
                 name: 'www',
-                value: process.env.NEXT_PUBLIC_CNAME_TARGET ?? 'cname.vercel-dns.com',
+                value: env.cnameTarget,
                 ttl: 'Auto or 3600'
             }
         ],
@@ -155,7 +157,7 @@ export function getDNSInstructions(domain: string): {
             `Log in to your domain registrar (GoDaddy, Namecheap, etc.)`,
             `Navigate to DNS Management or DNS Settings`,
             `Add or update the A record for @ (root) to point to 76.76.21.21`,
-            `Add or update the CNAME record for www to point to ${process.env.NEXT_PUBLIC_CNAME_TARGET ?? 'cname.vercel-dns.com'}`,
+            `Add or update the CNAME record for www to point to ${env.cnameTarget}`,
             `Save your changes and wait 5-30 minutes for DNS to propagate`,
             `Come back here and click "Verify Domain" to complete setup`
         ]

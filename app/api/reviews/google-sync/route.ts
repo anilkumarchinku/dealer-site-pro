@@ -11,16 +11,12 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server'
-import { createClient } from '@supabase/supabase-js'
-import { requireAuth, requireDealerOwnership } from '@/lib/supabase-server'
+import { getOptionalEnv } from '@/lib/env'
+import { externalApiFetch } from '@/lib/services/external-api-fetch'
+import { createAdminClient, requireAuth, requireDealerOwnership } from '@/lib/supabase-server'
 
-const GOOGLE_API_KEY = process.env.GOOGLE_PLACES_API_KEY
-
-function getSupabase() {
-    return createClient(
-        process.env.NEXT_PUBLIC_SUPABASE_URL!,
-        process.env.SUPABASE_SERVICE_ROLE_KEY!
-    )
+function getGoogleApiKey() {
+    return getOptionalEnv('GOOGLE_PLACES_API_KEY')
 }
 
 // ── Extract Place ID from a Google Maps URL ───────────────────────────────────
@@ -40,9 +36,16 @@ function extractPlaceIdFromUrl(url: string): string | null {
 
 // ── Resolve place ID via Places Text Search ───────────────────────────────────
 async function findPlaceId(query: string): Promise<string | null> {
-    const url = `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=${encodeURIComponent(query)}&inputtype=textquery&fields=place_id&key=${GOOGLE_API_KEY}`
-    const res = await fetch(url)
-    const data = await res.json()
+    const apiKey = getGoogleApiKey()
+    if (!apiKey) return null
+
+    const data = await externalApiFetch<{ candidates?: { place_id?: string }[] }>({
+        baseUrl: 'https://maps.googleapis.com',
+        providerName: 'Google Places',
+        path: `/maps/api/place/findplacefromtext/json?input=${encodeURIComponent(query)}&inputtype=textquery&fields=place_id&key=${apiKey}`,
+        headers: {},
+        init: { method: 'GET' },
+    })
     return data?.candidates?.[0]?.place_id ?? null
 }
 
@@ -56,9 +59,20 @@ interface GoogleReview {
 }
 
 async function fetchGoogleReviews(placeId: string): Promise<GoogleReview[]> {
-    const url = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&fields=reviews,name,rating,user_ratings_total&language=en&key=${GOOGLE_API_KEY}`
-    const res = await fetch(url)
-    const data = await res.json()
+    const apiKey = getGoogleApiKey()
+    if (!apiKey) throw new Error('Google Places API key not configured on this server.')
+
+    const data = await externalApiFetch<{
+        status?: string
+        error_message?: string
+        result?: { reviews?: GoogleReview[] }
+    }>({
+        baseUrl: 'https://maps.googleapis.com',
+        providerName: 'Google Places',
+        path: `/maps/api/place/details/json?place_id=${placeId}&fields=reviews,name,rating,user_ratings_total&language=en&key=${apiKey}`,
+        headers: {},
+        init: { method: 'GET' },
+    })
 
     if (data.status !== 'OK') {
         throw new Error(`Places API error: ${data.status} — ${data.error_message ?? ''}`)
@@ -73,7 +87,7 @@ export async function POST(request: NextRequest) {
     const { user, supabase: authClient, errorResponse } = await requireAuth()
     if (errorResponse) return errorResponse
 
-    if (!GOOGLE_API_KEY) {
+    if (!getGoogleApiKey()) {
         return NextResponse.json(
             { error: 'Google Places API key not configured on this server.' },
             { status: 503 }
@@ -91,7 +105,7 @@ export async function POST(request: NextRequest) {
     const { errorResponse: ownershipError } = await requireDealerOwnership(authClient, user.id, dealer_id)
     if (ownershipError) return ownershipError
 
-    const supabase = getSupabase()
+    const supabase = createAdminClient()
 
     // ── 1. Verify dealer & get existing place_id ──────────────────────────────
     const { data: dealer, error: dealerErr } = await supabase

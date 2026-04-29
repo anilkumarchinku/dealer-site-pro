@@ -4,6 +4,7 @@
  */
 
 import { createClient } from '@supabase/supabase-js'
+import { getOptionalEnv } from '@/lib/env'
 import { sendOtpEmail } from './email-service'
 
 /**
@@ -11,8 +12,8 @@ import { sendOtpEmail } from './email-service'
  * Uses service role key — bypasses RLS on otp_codes table
  */
 function getAdminClient() {
-    const url = process.env.NEXT_PUBLIC_SUPABASE_URL
-    const key = process.env.SUPABASE_SERVICE_ROLE_KEY
+    const url = getOptionalEnv('NEXT_PUBLIC_SUPABASE_URL')
+    const key = getOptionalEnv('SUPABASE_SERVICE_ROLE_KEY')
     if (!url || !key) return null
     return createClient(url, key)
 }

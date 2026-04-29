@@ -66,6 +66,13 @@ interface CarVariant {
     hyderabad_on_road_price?: number;
 }
 
+function isCarVariant(value: unknown): value is CarVariant {
+    return !!value &&
+        typeof value === 'object' &&
+        !Array.isArray(value) &&
+        typeof (value as { model?: unknown }).model === 'string';
+}
+
 function formatPrice(inr?: number): string {
     if (!inr) return '';
     const lakhs = inr / 100000;
@@ -108,7 +115,7 @@ export function BrandModelAccordion({
             } else {
                 for (const k of Object.keys(bData)) {
                     const v = bData[k];
-                    if (v && typeof v === 'object' && v.model) items.push(v);
+                    if (isCarVariant(v)) items.push(v);
                 }
             }
 

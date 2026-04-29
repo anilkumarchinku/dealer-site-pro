@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server'
 import { requireAuth, requireDealerOwnership } from '@/lib/supabase-server'
+import { recordDomainDeploymentOperation } from '@/lib/services/domain-deployment-operation-service'
 import { removeDomainFromMainProject } from '@/lib/services/vercel-service'
 
 /**
@@ -26,6 +27,15 @@ export async function POST(request: Request) {
         const { errorResponse: ownerErr } = await requireDealerOwnership(supabase, user.id, dealerId)
         if (ownerErr) return ownerErr
 
+        await recordDomainDeploymentOperation({
+            dealerId,
+            domainId,
+            domain,
+            operation: 'custom_domain_remove',
+            status: 'started',
+            providerStep: 'database',
+        })
+
         // Delete from dealer_domains — scoped to both id + dealer_id for safety
         const { error: dbErr } = await supabase
             .from('dealer_domains')
@@ -34,15 +44,50 @@ export async function POST(request: Request) {
             .eq('dealer_id', dealerId)
 
         if (dbErr) {
+            await recordDomainDeploymentOperation({
+                dealerId,
+                domainId,
+                domain,
+                operation: 'custom_domain_remove',
+                status: 'failed',
+                providerStep: 'database',
+                error: dbErr,
+            })
             return NextResponse.json({ success: false, error: dbErr.message }, { status: 500 })
         }
 
         // Remove from Vercel — non-fatal if it fails
         try {
             await removeDomainFromMainProject(domain)
+            await recordDomainDeploymentOperation({
+                dealerId,
+                domainId,
+                domain,
+                operation: 'custom_domain_remove',
+                status: 'provider_succeeded',
+                providerStep: 'vercel',
+            })
         } catch (vercelErr) {
             console.warn('[remove-custom] Vercel removal failed (non-fatal):', vercelErr)
+            await recordDomainDeploymentOperation({
+                dealerId,
+                domainId,
+                domain,
+                operation: 'custom_domain_remove',
+                status: 'provider_failed',
+                providerStep: 'vercel',
+                error: vercelErr,
+            })
         }
+
+        await recordDomainDeploymentOperation({
+            dealerId,
+            domainId,
+            domain,
+            operation: 'custom_domain_remove',
+            status: 'completed',
+            providerStep: 'database',
+        })
 
         return NextResponse.json({ success: true })
 

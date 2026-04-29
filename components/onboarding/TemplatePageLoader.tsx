@@ -3,11 +3,11 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import './template-animations.css';
-import type { Brand, StyleTemplate } from '@/lib/types';
+import type { StyleTemplate } from '@/lib/types';
 import { automotiveBrands } from '@/lib/colors/automotive-brands';
 
 interface TemplatePageLoaderProps {
-  brand: Brand;
+  brand: string;
   template: StyleTemplate;
   onComplete?: () => void;
 }
@@ -137,7 +137,7 @@ export function TemplatePageLoader({ brand, template, onComplete }: TemplatePage
  * Hook to trigger page load animation
  * Use this in your preview pages
  */
-export function useTemplatePageAnimation(brand: Brand, template: StyleTemplate) {
+export function useTemplatePageAnimation(brand: string, template: StyleTemplate) {
   // Start with animation showing and content hidden
   const [showAnimation, setShowAnimation] = useState(true);
   const [isReady, setIsReady] = useState(false);

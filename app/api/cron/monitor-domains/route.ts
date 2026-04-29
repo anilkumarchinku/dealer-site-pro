@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server'
+import { getOptionalEnv } from '@/lib/env'
 import { monitorSSLCertificates, monitorDomainExpiry } from '@/lib/services/monitoring-service'
 
 /**
@@ -14,7 +15,7 @@ export async function GET(request: Request) {
     try {
         // Verify cron secret to prevent unauthorized access
         const authHeader = request.headers.get('authorization')
-        const cronSecret = process.env.CRON_SECRET
+        const cronSecret = getOptionalEnv('CRON_SECRET')
         if (!cronSecret) {
             console.error('[Cron] CRON_SECRET env var is not set')
             return NextResponse.json({ success: false, error: 'Cron not configured' }, { status: 503 })

@@ -16,30 +16,24 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server'
-import crypto from 'crypto'
+import { getOptionalEnv } from '@/lib/env'
 import { createAdminClient } from '@/lib/supabase-server'
+import { verifyRazorpayWebhookSignature } from '@/lib/services/razorpay-service'
+import {
+    claimWebhookEvent,
+    markWebhookEventFailed,
+    markWebhookEventProcessed,
+} from '@/lib/services/webhook-event-service'
 
-// ── In-process event deduplication ───────────────────────────────────────────
-// Keeps the last 500 event IDs in memory. Sufficient for a single serverless
-// instance. For multi-instance production, replace with a DB-backed table:
-//   CREATE TABLE webhook_events (event_id TEXT PRIMARY KEY, received_at TIMESTAMPTZ DEFAULT now());
+// Fallback dedupe for local/dev DBs that have not run the webhook_events
+// migration yet. Production dedupe is DB-backed through claimWebhookEvent().
 const processedEventIds = new Set<string>()
 const MAX_EVENT_CACHE = 500
-
-// Verify Razorpay webhook signature
-function verifyWebhookSignature(body: string, signature: string, secret: string): boolean {
-    if (!secret) return false
-    const expected = crypto
-        .createHmac('sha256', secret)
-        .update(body)
-        .digest('hex')
-    return crypto.timingSafeEqual(Buffer.from(expected), Buffer.from(signature))
-}
 
 export async function POST(request: NextRequest) {
     const rawBody = await request.text()
     const signature = request.headers.get('x-razorpay-signature') ?? ''
-    const webhookSecret = process.env.RAZORPAY_WEBHOOK_SECRET
+    const webhookSecret = getOptionalEnv('RAZORPAY_WEBHOOK_SECRET')
 
     if (!webhookSecret) {
         console.error('[Razorpay Webhook] RAZORPAY_WEBHOOK_SECRET is not configured')
@@ -47,7 +41,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Validate signature
-    if (!verifyWebhookSignature(rawBody, signature, webhookSecret)) {
+    if (!verifyRazorpayWebhookSignature(rawBody, signature, webhookSecret)) {
         console.error('[Razorpay Webhook] Invalid signature')
         return NextResponse.json({ error: 'Invalid signature' }, { status: 400 })
     }
@@ -65,8 +59,20 @@ export async function POST(request: NextRequest) {
 
     console.log('[Razorpay Webhook] Received event:', eventType, eventId ?? '(no event-id)')
 
-    // ── Idempotency: skip duplicate events within this instance ──────────────
-    if (eventId) {
+    const eventClaim = await claimWebhookEvent(supabase, {
+        provider: 'razorpay',
+        eventId,
+        eventType,
+        payload: event,
+    })
+
+    if (eventClaim.duplicate) {
+        console.log('[Razorpay Webhook] Duplicate event, skipping:', eventId)
+        return NextResponse.json({ received: true, duplicate: true })
+    }
+
+    // Fallback idempotency for local/dev DBs that have not run the migration yet.
+    if (!eventClaim.storageAvailable && eventId) {
         if (processedEventIds.has(eventId)) {
             console.log('[Razorpay Webhook] Duplicate event, skipping:', eventId)
             return NextResponse.json({ received: true, duplicate: true })
@@ -160,10 +166,16 @@ export async function POST(request: NextRequest) {
                 console.log('[Razorpay Webhook] Unhandled event type:', eventType)
         }
     } catch (err) {
+        if (eventClaim.storageAvailable) {
+            await markWebhookEventFailed(supabase, 'razorpay', eventId, err)
+        }
         console.error('[Razorpay Webhook] Error processing event:', eventType, err)
         // Return 500 so Razorpay retries the event — prevents silent data loss
         return NextResponse.json({ received: true, error: 'Processing error' }, { status: 500 })
     }
 
+    if (eventClaim.storageAvailable) {
+        await markWebhookEventProcessed(supabase, 'razorpay', eventId)
+    }
     return NextResponse.json({ received: true })
 }

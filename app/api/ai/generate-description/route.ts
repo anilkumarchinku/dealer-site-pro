@@ -19,6 +19,8 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server'
+import { getOptionalEnv } from '@/lib/env'
+import { ExternalApiError, externalApiFetch } from '@/lib/services/external-api-fetch'
 import { requireAuth } from '@/lib/supabase-server'
 import { rateLimitOrNull } from '@/lib/utils/rate-limiter'
 
@@ -50,7 +52,7 @@ export async function POST(request: NextRequest) {
     const rateLimit = await rateLimitOrNull('ai_description', request, 20, 60 * 60 * 1000)
     if (rateLimit) return rateLimit
 
-    const apiKey = process.env.ANTHROPIC_API_KEY
+    const apiKey = getOptionalEnv('ANTHROPIC_API_KEY')
     if (!apiKey) {
         return NextResponse.json(
             { error: 'AI description generation not available' },
@@ -110,33 +112,29 @@ STRICT RULES:
 - Name: ${carLabel}
 - Condition: ${conditionText}${fuel_type ? `\n- Fuel: ${fuel_type}` : ''}${transmission ? `\n- Transmission: ${transmission}` : ''}${color ? `\n- Colour: ${color}` : ''}${mileageText ? `\n- Odometer: ${mileageText}` : ''}${priceText ? `\n- Price: ${priceText}` : ''}${featuresText ? `\n- ${featuresText}` : ''}
 
-Write the description now:`
+    Write the description now:`
 
     try {
-        const res = await fetch('https://api.anthropic.com/v1/messages', {
-            method: 'POST',
+        const data = await externalApiFetch<{ content?: { text?: string }[] }>({
+            baseUrl: 'https://api.anthropic.com',
+            providerName: 'Anthropic',
+            path: '/v1/messages',
             headers: {
                 'Content-Type':      'application/json',
                 'x-api-key':         apiKey,
                 'anthropic-version': '2023-06-01',
             },
-            // AbortSignal timeout: give Claude 15s max before returning an error
-            signal: AbortSignal.timeout(15_000),
-            body: JSON.stringify({
-                model:      'claude-haiku-4-5-20251001',
-                max_tokens: 200,
-                system:     systemPrompt,
-                messages:   [{ role: 'user', content: userPrompt }],
-            }),
+            init: {
+                method: 'POST',
+                body: JSON.stringify({
+                    model:      'claude-haiku-4-5-20251001',
+                    max_tokens: 200,
+                    system:     systemPrompt,
+                    messages:   [{ role: 'user', content: userPrompt }],
+                }),
+            },
+            timeoutMs: 15_000,
         })
-
-        if (!res.ok) {
-            const err = await res.text()
-            console.error('[AI] Anthropic API error:', res.status, err)
-            return NextResponse.json({ error: 'AI generation failed. Please try again.' }, { status: 500 })
-        }
-
-        const data = await res.json()
         const raw  = data.content?.[0]?.text ?? ''
         const description = sanitizeOutput(raw)
 
@@ -146,6 +144,13 @@ Write the description now:`
 
         return NextResponse.json({ description })
     } catch (err) {
+        if (err instanceof ExternalApiError) {
+            if (!err.status) {
+                return NextResponse.json({ error: 'AI generation timed out. Please try again.' }, { status: 504 })
+            }
+            console.error('[AI] Anthropic API error:', err.status, err.bodyText ?? err.message)
+            return NextResponse.json({ error: 'AI generation failed. Please try again.' }, { status: 500 })
+        }
         if (err instanceof Error && err.name === 'TimeoutError') {
             return NextResponse.json({ error: 'AI generation timed out. Please try again.' }, { status: 504 })
         }

@@ -1,6 +1,7 @@
 import 'server-only'
 
 import { headers } from 'next/headers'
+import { getOptionalEnv } from '@/lib/env'
 
 function normalizeOrigin(value: string | null | undefined): string | null {
     if (!value) return null
@@ -22,9 +23,9 @@ export async function getRequestOrigin(): Promise<string | null> {
     }
 
     return normalizeOrigin(
-        process.env.NEXT_PUBLIC_APP_URL ??
-        process.env.NEXT_PUBLIC_SITE_URL ??
-        process.env.VERCEL_URL ??
+        getOptionalEnv('NEXT_PUBLIC_APP_URL') ??
+        getOptionalEnv('NEXT_PUBLIC_SITE_URL') ??
+        getOptionalEnv('VERCEL_URL') ??
         null
     )
 }

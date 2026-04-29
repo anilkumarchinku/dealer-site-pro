@@ -34,8 +34,7 @@ export default function UsedThreeWheelerDetailPage() {
                 supabase.from("dealers").select("id, phone").eq("slug", slug).single(),
                 fetch(`/api/three-wheelers/used/${id}`),
             ])
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            if (dealer) { setDealerId((dealer as any).id); setPhone((dealer as any).phone ?? "") }
+            if (dealer) { setDealerId(dealer.id); setPhone(dealer.phone ?? "") }
             if (vehicleRes.ok) setVehicle(await vehicleRes.json())
             setLoading(false)
         }

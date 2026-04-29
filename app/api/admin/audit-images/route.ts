@@ -7,6 +7,12 @@ type BrandModelsPayload = {
     threeWheelers?: Array<{ brand?: string; brandId?: string; models?: Record<string, string[]> | string[] }>
 }
 
+type BrandGroup = {
+    brand?: string
+    brandId?: string
+    models?: Record<string, string[]> | string[]
+}
+
 async function fetchJson<T>(origin: string, pathname: string): Promise<T | null> {
     try {
         const response = await fetch(`${origin}${pathname}`, { cache: 'no-store' })
@@ -34,6 +40,32 @@ async function resolveLiveImage(origin: string, urls: string[]): Promise<string 
     }
 
     return null
+}
+
+async function auditBrandGroup(
+    vehicleType: "2w" | "3w",
+    brandGroup: BrandGroup,
+    checkModel: (vehicleType: "2w" | "3w", brandId: string, model: string, originalBrand: string) => Promise<void>,
+) {
+    const originalBrand = brandGroup.brand ?? ''
+    const brandId = brandNameToId(brandGroup.brandId || originalBrand, vehicleType)
+    const modelsObj = brandGroup.models
+
+    if (Array.isArray(modelsObj)) {
+        for (const model of modelsObj) {
+            await checkModel(vehicleType, brandId, model, originalBrand)
+        }
+        return
+    }
+
+    if (modelsObj && typeof modelsObj === 'object') {
+        for (const models of Object.values(modelsObj)) {
+            if (!Array.isArray(models)) continue
+            for (const model of models) {
+                await checkModel(vehicleType, brandId, model, originalBrand)
+            }
+        }
+    }
 }
 
 export async function GET(request: Request) {
@@ -82,50 +114,14 @@ export async function GET(request: Request) {
         if (data.twoWheelers) {
             for (const brands of Object.values(data.twoWheelers)) {
                 for (const brandGroup of brands) {
-                    const originalBrand = brandGroup.brand ?? ''
-                    const brandId = brandNameToId(brandGroup.brandId || originalBrand, "2w")
-                    const modelsObj = brandGroup.models
-
-                    if (Array.isArray(modelsObj)) {
-                        for (const model of modelsObj) {
-                            await checkModel("2w", brandId, model, originalBrand)
-                        }
-                        continue
-                    }
-
-                    if (modelsObj && typeof modelsObj === 'object') {
-                        for (const models of Object.values(modelsObj)) {
-                            if (!Array.isArray(models)) continue
-                            for (const model of models) {
-                                await checkModel("2w", brandId, model, originalBrand)
-                            }
-                        }
-                    }
+                    await auditBrandGroup("2w", brandGroup, checkModel)
                 }
             }
         }
 
         if (Array.isArray(data.threeWheelers)) {
             for (const brandGroup of data.threeWheelers) {
-                const originalBrand = brandGroup.brand ?? ''
-                const brandId = brandNameToId(brandGroup.brandId || originalBrand, "3w")
-                const modelsObj = brandGroup.models
-
-                if (Array.isArray(modelsObj)) {
-                    for (const model of modelsObj) {
-                        await checkModel("3w", brandId, model, originalBrand)
-                    }
-                    continue
-                }
-
-                if (modelsObj && typeof modelsObj === 'object') {
-                    for (const models of Object.values(modelsObj)) {
-                        if (!Array.isArray(models)) continue
-                        for (const model of models) {
-                            await checkModel("3w", brandId, model, originalBrand)
-                        }
-                    }
-                }
+                await auditBrandGroup("3w", brandGroup, checkModel)
             }
         }
 

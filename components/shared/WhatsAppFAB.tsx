@@ -4,6 +4,11 @@ import { useEffect, useState } from "react"
 import { useParams } from "next/navigation"
 import { supabase } from "@/lib/supabase"
 
+type DealerContactRow = {
+    phone: string | null
+    whatsapp: string | null
+}
+
 function toWANumber(phone: string): string {
     const digits = phone.replace(/\D/g, "")
     if (digits.startsWith("91") && digits.length >= 12) return digits
@@ -21,13 +26,12 @@ export function WhatsAppFAB() {
         async function fetchPhone() {
             const { data } = await supabase
                 .from("dealers")
-                .select("phone, whatsapp_number")
+                .select("phone, whatsapp")
                 .eq("slug", slug)
                 .single()
             if (!data) return
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            const d = data as any
-            const number = d.whatsapp_number || d.phone
+            const d: DealerContactRow = data
+            const number = d.whatsapp || d.phone
             if (number) setPhone(number)
         }
         fetchPhone()

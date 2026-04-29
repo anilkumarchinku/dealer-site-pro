@@ -17,6 +17,8 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server'
+import { getOptionalEnv } from '@/lib/env'
+import { externalApiFetch } from '@/lib/services/external-api-fetch'
 import { requireAuth } from '@/lib/supabase-server'
 
 // Normalise RC: uppercase, remove spaces/hyphens
@@ -47,19 +49,49 @@ function mockResponse(rc: string) {
     }
 }
 
+type RapidorLookupResponse = {
+    owner_name?: string
+    ownerName?: string
+    registration_date?: string
+    regDate?: string
+    vehicle_class?: string
+    vehicleClass?: string
+    fuel_type?: string
+    fuelType?: string
+    maker?: string
+    model?: string
+    engine_number?: string
+    engineNumber?: string
+    chassis_number?: string
+    chassisNumber?: string
+    color?: string
+    insurance_upto?: string
+    insuranceUpto?: string
+    fitness_upto?: string
+    fitnessUpto?: string
+    state?: string
+    rto_name?: string
+    rtoName?: string
+    blacklisted?: boolean
+    noc_details?: string
+}
+
 // ── Rapidor API ───────────────────────────────────────────────────────────────
 async function rapidorLookup(rc: string): Promise<Record<string, unknown>> {
-    const apiKey = process.env.RAPIDOR_API_KEY!
-    const res = await fetch('https://api.rapidor.co/vehicle/rc-details', {
-        method: 'POST',
+    const apiKey = getOptionalEnv('RAPIDOR_API_KEY')!
+    const data = await externalApiFetch<RapidorLookupResponse>({
+        baseUrl: 'https://api.rapidor.co',
+        providerName: 'Rapidor',
+        path: '/vehicle/rc-details',
         headers: {
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${apiKey}`,
         },
-        body: JSON.stringify({ rc_number: rc }),
+        init: {
+            method: 'POST',
+            body: JSON.stringify({ rc_number: rc }),
+        },
     })
-    if (!res.ok) throw new Error(`Rapidor API ${res.status}`)
-    const data = await res.json()
     // Normalise Rapidor response to our shape
     return {
         rc_number:        rc,
@@ -96,12 +128,12 @@ export async function POST(request: NextRequest) {
         return NextResponse.json({ error: 'Invalid RC number format. Example: MH01AB1234' }, { status: 400 })
     }
 
-    const provider = process.env.RC_LOOKUP_PROVIDER ?? 'mock'
+    const provider = getOptionalEnv('RC_LOOKUP_PROVIDER') ?? 'mock'
 
     try {
         let result: Record<string, unknown>
 
-        if (provider === 'rapidor' && process.env.RAPIDOR_API_KEY) {
+        if (provider === 'rapidor' && getOptionalEnv('RAPIDOR_API_KEY')) {
             result = await rapidorLookup(rc)
         } else {
             // Fall back to mock

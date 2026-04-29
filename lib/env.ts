@@ -1,85 +1,176 @@
 /**
- * Environment variable validation.
- * Called once at server startup. Throws if a required variable is missing.
+ * Central environment access.
  *
- * Import this in your root server layout:
- *   import '@/lib/env'
+ * Server code should read env vars through this module so production-only
+ * required secrets fail in one predictable place instead of route-by-route.
  */
 
-// These must be present — without them the site cannot function at all
-const required = {
-    NEXT_PUBLIC_SUPABASE_URL:      process.env.NEXT_PUBLIC_SUPABASE_URL,
-    NEXT_PUBLIC_SUPABASE_ANON_KEY: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
-    SUPABASE_SERVICE_ROLE_KEY:     process.env.SUPABASE_SERVICE_ROLE_KEY,
-    NEXT_PUBLIC_RAZORPAY_KEY_ID:   process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
-    RAZORPAY_KEY_SECRET:           process.env.RAZORPAY_KEY_SECRET,
-    NEXT_PUBLIC_BASE_DOMAIN:       process.env.NEXT_PUBLIC_BASE_DOMAIN,
-}
+export type RequiredEnvKey =
+    | 'NEXT_PUBLIC_SUPABASE_URL'
+    | 'NEXT_PUBLIC_SUPABASE_ANON_KEY'
+    | 'SUPABASE_SERVICE_ROLE_KEY'
+    | 'NEXT_PUBLIC_RAZORPAY_KEY_ID'
+    | 'RAZORPAY_KEY_SECRET'
+    | 'RAZORPAY_WEBHOOK_SECRET'
+    | 'NEXT_PUBLIC_BASE_DOMAIN'
 
-// These are optional — missing values degrade a feature but don't crash the site
-const optional = {
-    RESEND_API_KEY:            process.env.RESEND_API_KEY,
-    SENTRY_DSN:                process.env.SENTRY_DSN,
-    UPSTASH_REDIS_REST_URL:    process.env.UPSTASH_REDIS_REST_URL,
-    UPSTASH_REDIS_REST_TOKEN:  process.env.UPSTASH_REDIS_REST_TOKEN,
-    NEXT_PUBLIC_SUPPORT_WHATSAPP: process.env.NEXT_PUBLIC_SUPPORT_WHATSAPP,
-}
+export type OptionalEnvKey =
+    | 'ADMIN_PASSWORD'
+    | 'ADMIN_SESSION_SECRET'
+    | 'ADMIN_USERNAME'
+    | 'ANTHROPIC_API_KEY'
+    | 'CLOUDFLARE_API_TOKEN'
+    | 'CLOUDFLARE_ACCOUNT_ID'
+    | 'CLOUDFLARE_ZONE_ID'
+    | 'CRON_SECRET'
+    | 'GITHUB_ORG'
+    | 'GITHUB_TEMPLATE_REPO'
+    | 'GITHUB_TOKEN'
+    | 'GODADDY_API_URL'
+    | 'GODADDY_API_KEY'
+    | 'GODADDY_API_SECRET'
+    | 'GOOGLE_PLACES_API_KEY'
+    | 'META_IG_USER_ID'
+    | 'META_PAGE_ACCESS_TOKEN'
+    | 'META_PAGE_ID'
+    | 'MSG91_AUTH_KEY'
+    | 'MSG91_LEAD_TEMPLATE_ID'
+    | 'MSG91_SENDER_ID'
+    | 'NEXT_PUBLIC_APP_URL'
+    | 'NEXT_PUBLIC_ADMIN_EMAILS'
+    | 'NEXT_PUBLIC_AUTO_APPROVE_REVIEWS'
+    | 'NEXT_PUBLIC_CNAME_TARGET'
+    | 'NEXT_PUBLIC_SITE_URL'
+    | 'NEXT_PUBLIC_SUPPORT_WHATSAPP'
+    | 'NEXT_PUBLIC_USE_SUBDOMAIN'
+    | 'RAPIDOR_API_KEY'
+    | 'RC_LOOKUP_PROVIDER'
+    | 'RAZORPAY_PREMIUM_PLAN_ID'
+    | 'RAZORPAY_PRO_PLAN_ID'
+    | 'RESEND_API_KEY'
+    | 'SENTRY_DSN'
+    | 'TWITTER_BEARER_TOKEN'
+    | 'TWITTER_API_KEY'
+    | 'TWITTER_API_SECRET'
+    | 'TWITTER_ACCESS_TOKEN'
+    | 'TWITTER_ACCESS_SECRET'
+    | 'UPSTASH_REDIS_REST_TOKEN'
+    | 'UPSTASH_REDIS_REST_URL'
+    | 'VERCEL_TEAM_ID'
+    | 'VERCEL_MAIN_PROJECT_ID'
+    | 'VERCEL_TOKEN'
+    | 'VERCEL_URL'
 
-const placeholders = [
+export type EnvKey = RequiredEnvKey | OptionalEnvKey
+
+export const requiredEnvKeys: readonly RequiredEnvKey[] = [
+    'NEXT_PUBLIC_SUPABASE_URL',
+    'NEXT_PUBLIC_SUPABASE_ANON_KEY',
+    'SUPABASE_SERVICE_ROLE_KEY',
+    'NEXT_PUBLIC_RAZORPAY_KEY_ID',
+    'RAZORPAY_KEY_SECRET',
+    'RAZORPAY_WEBHOOK_SECRET',
+    'NEXT_PUBLIC_BASE_DOMAIN',
+]
+
+export const optionalEnvKeys: readonly OptionalEnvKey[] = [
+    'RESEND_API_KEY',
+    'SENTRY_DSN',
+    'UPSTASH_REDIS_REST_URL',
+    'UPSTASH_REDIS_REST_TOKEN',
+    'NEXT_PUBLIC_SUPPORT_WHATSAPP',
+]
+
+const placeholderFragments = [
     'your-project-ref.supabase.co',
     'your_supabase_anon_key_here',
     'your_service_role_key_here',
     'your_razorpay_key_id',
     'your_razorpay_secret',
+    'your_razorpay_secret_key_here',
+    'your_',
+    'xxxxx',
 ]
 
-// Only validate in production at runtime — skip during build phase (NEXT_PHASE=phase-production-build)
-if (
-    process.env.NODE_ENV === 'production' &&
-    process.env.NEXT_PHASE !== 'phase-production-build'
-) {
+function rawEnv(key: EnvKey): string | undefined {
+    return process.env[key]
+}
+
+export function isPlaceholderEnvValue(value: string): boolean {
+    return (
+        value.startsWith('REVOKED') ||
+        placeholderFragments.some(fragment => value.includes(fragment))
+    )
+}
+
+export function getOptionalEnv(key: EnvKey): string | undefined {
+    const value = rawEnv(key)
+    return value && value.trim() ? value : undefined
+}
+
+export function getRequiredEnv(key: EnvKey): string {
+    const value = getOptionalEnv(key)
+    if (!value) {
+        throw new Error(`[ENV] ${key} env var is not set`)
+    }
+    if (isPlaceholderEnvValue(value)) {
+        throw new Error(`[ENV] ${key} is a placeholder value`)
+    }
+    return value
+}
+
+export function validateRequiredEnv(): { missing: string[]; placeholder: string[] } {
     const missing: string[] = []
     const placeholder: string[] = []
 
-    for (const [key, value] of Object.entries(required)) {
+    for (const key of requiredEnvKeys) {
+        const value = getOptionalEnv(key)
         if (!value) {
             missing.push(key)
-        } else if (placeholders.some(p => value.includes(p))) {
+        } else if (isPlaceholderEnvValue(value)) {
             placeholder.push(key)
         }
     }
 
-    if (missing.length > 0) {
-        console.error(
-            `[ENV] Missing required environment variables:\n  ${missing.join('\n  ')}\n` +
-            'Set these in your deployment environment. Related features will be disabled.'
-        )
+    return { missing, placeholder }
+}
+
+export function assertProductionEnv(): void {
+    if (
+        process.env.NODE_ENV !== 'production' ||
+        process.env.NEXT_PHASE === 'phase-production-build'
+    ) {
+        return
     }
 
-    if (placeholder.length > 0) {
-        console.error(
-            `[ENV] Placeholder values detected in production for:\n  ${placeholder.join('\n  ')}\n` +
-            'Replace with real credentials before deploying.'
-        )
-    }
+    const { missing, placeholder } = validateRequiredEnv()
+    const problems = [
+        ...missing.map(key => `${key} is missing`),
+        ...placeholder.map(key => `${key} is a placeholder value`),
+    ]
 
-    // Warn (don't throw) for optional vars — missing these degrades a feature but won't crash the site
-    for (const [key, value] of Object.entries(optional)) {
-        if (!value) {
-            console.warn(`[ENV] Optional env var ${key} is not set — related features will be disabled.`)
+    for (const key of optionalEnvKeys) {
+        if (!getOptionalEnv(key)) {
+            console.warn(`[ENV] Optional env var ${key} is not set - related features will be disabled.`)
         }
+    }
+
+    if (problems.length > 0) {
+        throw new Error(`[ENV] Production env validation failed:\n  ${problems.join('\n  ')}`)
     }
 }
 
+assertProductionEnv()
+
 export const env = {
-    supabaseUrl:      process.env.NEXT_PUBLIC_SUPABASE_URL    ?? '',
-    supabaseAnonKey:  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ?? '',
-    supabaseServiceKey: process.env.SUPABASE_SERVICE_ROLE_KEY ?? '',
-    razorpayKeyId:    process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID  ?? '',
-    razorpaySecret:   process.env.RAZORPAY_KEY_SECRET         ?? '',
-    resendApiKey:     process.env.RESEND_API_KEY              ?? '',
-    baseDomain:       process.env.NEXT_PUBLIC_BASE_DOMAIN     ?? 'localhost:3000',
-    webhookSecret:    process.env.RAZORPAY_WEBHOOK_SECRET     ?? '',
-    cnameTarget:      process.env.NEXT_PUBLIC_CNAME_TARGET    ?? 'cname.vercel-dns.com',
-    supportWhatsapp:  process.env.NEXT_PUBLIC_SUPPORT_WHATSAPP,
+    get supabaseUrl() { return getOptionalEnv('NEXT_PUBLIC_SUPABASE_URL') ?? '' },
+    get supabaseAnonKey() { return getOptionalEnv('NEXT_PUBLIC_SUPABASE_ANON_KEY') ?? '' },
+    get supabaseServiceKey() { return getOptionalEnv('SUPABASE_SERVICE_ROLE_KEY') ?? '' },
+    get razorpayKeyId() { return getOptionalEnv('NEXT_PUBLIC_RAZORPAY_KEY_ID') ?? '' },
+    get razorpaySecret() { return getOptionalEnv('RAZORPAY_KEY_SECRET') ?? '' },
+    get resendApiKey() { return getOptionalEnv('RESEND_API_KEY') ?? '' },
+    get baseDomain() { return getOptionalEnv('NEXT_PUBLIC_BASE_DOMAIN') ?? 'localhost:3000' },
+    get webhookSecret() { return getOptionalEnv('RAZORPAY_WEBHOOK_SECRET') ?? '' },
+    get cnameTarget() { return getOptionalEnv('NEXT_PUBLIC_CNAME_TARGET') ?? 'cname.vercel-dns.com' },
+    get supportWhatsapp() { return getOptionalEnv('NEXT_PUBLIC_SUPPORT_WHATSAPP') },
 }

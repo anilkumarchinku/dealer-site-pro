@@ -1,6 +1,7 @@
 "use client";
 
 import { supabase, isSupabaseReady } from "@/lib/supabase";
+import type { Database } from "@/lib/database.types";
 
 export interface DBVehicle {
     id: string;
@@ -101,16 +102,15 @@ export async function bulkAddVehicles(
 ): Promise<{ success: boolean; count: number; errors: string[] }> {
     if (!isSupabaseReady()) return { success: false, count: 0, errors: ["Supabase not configured"] };
 
-    const rows = payloads.map(p => ({
+    const rows: Database["public"]["Tables"]["vehicles"]["Insert"][] = payloads.map(p => ({
         ...p,
         features:   p.features  ?? [],
         condition:  p.condition ?? "used",
-        status:     "available",
+        status:     "available" as const,
         views: 0,
     }));
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const { data, error } = await supabase.from("vehicles").insert(rows as any).select("id");
+    const { data, error } = await supabase.from("vehicles").insert(rows).select("id");
 
     if (error) {
         console.error("[bulkAddVehicles]", error.message);

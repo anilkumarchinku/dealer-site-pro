@@ -12,21 +12,19 @@
  */
 
 import { NextResponse } from 'next/server'
+import { getOptionalEnv, getRequiredEnv } from '@/lib/env'
+import { recordDomainDeploymentOperation } from '@/lib/services/domain-deployment-operation-service'
 import { requireAuth, requireDealerOwnership } from '@/lib/supabase-server'
 
 /** Validate that required env vars are present and not placeholder values */
 function checkEnvVars(): string | null {
-    const required: Record<string, string | undefined> = {
-        GITHUB_TOKEN: process.env.GITHUB_TOKEN,
-        GITHUB_ORG: process.env.GITHUB_ORG,
-        GITHUB_TEMPLATE_REPO: process.env.GITHUB_TEMPLATE_REPO,
-        VERCEL_TOKEN: process.env.VERCEL_TOKEN,
-    }
-    for (const [key, val] of Object.entries(required)) {
-        if (!val) return `${key} env var is not set`
-        if (val.startsWith('REVOKED') || val.includes('xxxxx') || val === 'your_' + key.toLowerCase() + '_here') {
-            return `${key} is a placeholder value — please set a real token in .env`
-        }
+    try {
+        getRequiredEnv('GITHUB_TOKEN')
+        getRequiredEnv('GITHUB_ORG')
+        getRequiredEnv('GITHUB_TEMPLATE_REPO')
+        getRequiredEnv('VERCEL_TOKEN')
+    } catch (error) {
+        return error instanceof Error ? error.message.replace('[ENV] ', '') : 'Deployment env validation failed'
     }
     return null
 }
@@ -51,6 +49,13 @@ export async function POST(request: Request) {
         // ── Ownership: verify user owns this dealer ───────────────────────────
         const { errorResponse: ownerErr } = await requireDealerOwnership(supabase, user.id, dealerId)
         if (ownerErr) return ownerErr
+
+        await recordDomainDeploymentOperation({
+            dealerId,
+            operation: 'multi_tenant_deploy',
+            status: 'started',
+            providerStep: 'deployment',
+        })
 
         // ── 1. Load dealer data ───────────────────────────────────────────────
         const { data: dealer, error: dealerErr } = await supabase
@@ -88,11 +93,20 @@ export async function POST(request: Request) {
         // ── Deployment mode: ALL dealers use multi-tenant platform ──────────────
         // No standalone GitHub/Vercel repos — both new and used car dealers are
         // served from this shared Next.js app at /sites/[slug].
-        const baseDomain = process.env.NEXT_PUBLIC_BASE_DOMAIN ?? 'dealersitepro.com'
-        const useSubdomain = process.env.NEXT_PUBLIC_USE_SUBDOMAIN === 'true'
+        const baseDomain = getOptionalEnv('NEXT_PUBLIC_BASE_DOMAIN') ?? 'dealersitepro.com'
+        const useSubdomain = getOptionalEnv('NEXT_PUBLIC_USE_SUBDOMAIN') === 'true'
         const siteUrl = useSubdomain
             ? `https://${dealerSlug}.${baseDomain}`
             : `https://${baseDomain}/sites/${dealerSlug}`
+
+        await recordDomainDeploymentOperation({
+            dealerId,
+            domain: siteUrl,
+            operation: 'multi_tenant_deploy',
+            status: 'completed',
+            providerStep: 'deployment',
+            details: { deploymentMode: 'multi-tenant', siteUrl },
+        })
 
         return NextResponse.json({
             success: true,

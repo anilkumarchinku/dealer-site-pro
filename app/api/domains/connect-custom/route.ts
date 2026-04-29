@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server'
+import { recordDomainDeploymentOperation } from '@/lib/services/domain-deployment-operation-service'
 import { isValidDomain, verifyCustomDomain } from '@/lib/services/dns-verification-service'
 import { addDomainToProject, registerDomainOnMainProject } from '@/lib/services/vercel-service'
 import { requireAuth, requireDealerOwnership } from '@/lib/supabase-server'
@@ -38,6 +39,15 @@ export async function POST(request: Request) {
         const { errorResponse: ownerErr } = await requireDealerOwnership(supabase, user.id, dealerId)
         if (ownerErr) return ownerErr
 
+        await recordDomainDeploymentOperation({
+            dealerId,
+            domain: customDomain,
+            operation: 'custom_domain_connect',
+            status: 'started',
+            providerStep: 'database',
+            details: { templateId: templateId ?? null, siteSlug: siteSlug ?? null },
+        })
+
         // Default to 'family' template if not provided
         const template = templateId || 'family'
 
@@ -66,6 +76,15 @@ export async function POST(request: Request) {
 
         // If domain already belongs to this dealer, return success (idempotent)
         if (existingDomain && existingDomain.dealer_id === dealerId) {
+            await recordDomainDeploymentOperation({
+                dealerId,
+                domainId: existingDomain.id,
+                domain: customDomain,
+                operation: 'custom_domain_connect',
+                status: 'completed',
+                providerStep: 'database',
+                details: { idempotent: true },
+            })
             return NextResponse.json({
                 success: true,
                 domain: existingDomain,
@@ -92,6 +111,14 @@ export async function POST(request: Request) {
 
         if (error) {
             console.error('Error creating custom domain:', error)
+            await recordDomainDeploymentOperation({
+                dealerId,
+                domain: customDomain,
+                operation: 'custom_domain_connect',
+                status: 'failed',
+                providerStep: 'database',
+                error,
+            })
 
             // Provide more specific error messages
             let errorMessage = 'Failed to initiate domain connection'
@@ -139,8 +166,26 @@ export async function POST(request: Request) {
                 await addDomainToProject(slug, customDomain)
             }
             vercelRegistered = true
+            await recordDomainDeploymentOperation({
+                dealerId,
+                domainId: newDomain?.id,
+                domain: customDomain,
+                operation: 'custom_domain_connect',
+                status: 'provider_succeeded',
+                providerStep: 'vercel',
+                details: { target: isFirstHand ? 'main-project' : 'dealer-project' },
+            })
         } catch (vercelError) {
             console.error('Vercel domain registration failed (non-fatal):', vercelError)
+            await recordDomainDeploymentOperation({
+                dealerId,
+                domainId: newDomain?.id,
+                domain: customDomain,
+                operation: 'custom_domain_connect',
+                status: 'provider_failed',
+                providerStep: 'vercel',
+                error: vercelError,
+            })
         }
 
         // Auto-verify DNS immediately — if the dealer had DNS already pointing to us
@@ -160,10 +205,31 @@ export async function POST(request: Request) {
                         })
                         .eq('id', newDomain.id)
                     newDomain.status = 'active'
+                    await recordDomainDeploymentOperation({
+                        dealerId,
+                        domainId: newDomain.id,
+                        domain: customDomain,
+                        operation: 'custom_domain_connect',
+                        status: 'completed',
+                        providerStep: 'dns',
+                        details: { dnsVerified: true },
+                    })
                 }
             } catch {
                 // Non-fatal — DNS hasn't propagated yet. User can verify later.
             }
+        }
+
+        if (!vercelRegistered || newDomain?.status !== 'active') {
+            await recordDomainDeploymentOperation({
+                dealerId,
+                domainId: newDomain?.id,
+                domain: customDomain,
+                operation: 'custom_domain_connect',
+                status: 'provider_pending',
+                providerStep: vercelRegistered ? 'dns' : 'vercel',
+                details: { vercelRegistered, domainStatus: newDomain?.status ?? null },
+            })
         }
 
         return NextResponse.json({

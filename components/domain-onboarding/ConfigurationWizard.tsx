@@ -20,11 +20,35 @@ import {
 
 interface ConfigurationWizardProps {
     targetDomain: string;
-    dnsInstructions: any;
-    manualConfiguration: any;
-    cloudflareOption: any;
+    dnsInstructions: DNSInstructions;
+    manualConfiguration: ManualConfiguration;
+    cloudflareOption: CloudflareOption;
     registrar?: string;
     onContinue: () => void;
+}
+
+type DNSRecordInstruction = {
+    type: string;
+    name: string;
+    value: string;
+    ttl: string | number;
+    description: string;
+}
+
+type DNSInstructions = {
+    records_to_add: DNSRecordInstruction[];
+}
+
+type ManualConfiguration = {
+    registrar_specific_help: Record<string, string> & { other: string };
+    steps: string[];
+}
+
+type CloudflareOption = {
+    available: boolean;
+    benefits: string[];
+    nameservers: string[];
+    steps: string[];
 }
 
 export function ConfigurationWizard({
@@ -174,7 +198,7 @@ export function ConfigurationWizard({
                         </CardHeader>
                         <CardContent>
                             <div className="space-y-4">
-                                {dnsInstructions.records_to_add.map((record: any, idx: number) => (
+                                {dnsInstructions.records_to_add.map((record, idx) => (
                                     <div
                                         key={idx}
                                         className="border rounded-lg p-4 bg-gray-50 hover:bg-gray-100 transition-colors"

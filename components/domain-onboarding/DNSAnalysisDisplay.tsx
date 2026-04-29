@@ -20,8 +20,34 @@ import {
 } from 'lucide-react';
 
 interface DNSAnalysisDisplayProps {
-    analysis: any;
+    analysis: DNSAnalysis;
     onContinue: (route: 'full_domain' | 'subdomain') => void;
+}
+
+export type DeploymentRoute = 'full_domain' | 'subdomain';
+
+export type DNSAnalysis = {
+    domain: string;
+    dns_records: {
+        nameservers: string[];
+        a_records: string[];
+        mx_records: string[];
+        cname_records: Record<string, string>;
+        txt_records_count: number;
+    };
+    existing_services: {
+        has_active_website: boolean;
+        has_email: boolean;
+        using_cloudflare: boolean;
+    };
+    registrar: {
+        detected?: string | null;
+    };
+    recommendation: {
+        route: DeploymentRoute;
+        explanation: string;
+        warnings: string[];
+    };
 }
 
 export function DNSAnalysisDisplay({ analysis, onContinue }: DNSAnalysisDisplayProps) {
@@ -173,7 +199,7 @@ export function DNSAnalysisDisplay({ analysis, onContinue }: DNSAnalysisDisplayP
                             <div>
                                 <h4 className="font-semibold mb-2">CNAME Records</h4>
                                 <div className="pl-6 space-y-1">
-                                    {Object.entries(dns_records.cname_records).map(([subdomain, target]: [string, any]) => (
+                                    {Object.entries(dns_records.cname_records).map(([subdomain, target]) => (
                                         <p key={subdomain} className="text-sm font-mono text-gray-700">
                                             {subdomain} → {target}
                                         </p>

@@ -10,6 +10,28 @@ import { createClient } from '@supabase/supabase-js'
 import type { TwoWheelerVehicle } from '@/lib/types/two-wheeler'
 import type { ThreeWheelerVehicle } from '@/lib/types/three-wheeler'
 
+export type VehicleCatalogDbRow = {
+    id: string
+    make: string
+    model: string
+    variant: string | null
+    year: number | null
+    body_type: string | null
+    fuel_type: string | null
+    engine_cc: number | null
+    mileage_kmpl: number | string | null
+    range_km: number | null
+    top_speed_kmph: number | null
+    passenger_capacity: number | null
+    payload_kg: number | null
+    price_min_paise: number | null
+    image_url: string | null
+    popularity_score: number | null
+    is_active: boolean | null
+    created_at: string | null
+    updated_at: string | null
+}
+
 function getSupabase() {
     const url = process.env.NEXT_PUBLIC_SUPABASE_URL
     const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
@@ -111,8 +133,14 @@ function fuelTypeToTw(fuel: string | null): TwoWheelerVehicle['fuel_type'] {
     return 'petrol'
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-function twRowToVehicle(row: any, dealerId: string): TwoWheelerVehicle {
+function parseNullableNumber(value: number | string | null): number | null {
+    if (value === null) return null
+    if (typeof value === 'number') return Number.isFinite(value) ? value : null
+    const parsed = Number.parseFloat(value)
+    return Number.isFinite(parsed) ? parsed : null
+}
+
+export function twRowToVehicle(row: VehicleCatalogDbRow, dealerId: string): TwoWheelerVehicle {
     const fuel = fuelTypeToTw(row.fuel_type)
     const isElectric = fuel === 'electric'
     const bodyType = (row.body_type ?? '').toLowerCase()
@@ -133,7 +161,7 @@ function twRowToVehicle(row: any, dealerId: string): TwoWheelerVehicle {
         fuel_type:               fuel,
         max_power:               null,
         torque:                  null,
-        mileage_kmpl:            row.mileage_kmpl ? parseFloat(row.mileage_kmpl) : null,
+        mileage_kmpl:            parseNullableNumber(row.mileage_kmpl),
         range_km:                row.range_km ?? null,
         top_speed_kmph:          row.top_speed_kmph ?? null,
         transmission:            null,
@@ -159,8 +187,7 @@ function twRowToVehicle(row: any, dealerId: string): TwoWheelerVehicle {
     }
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-function thwRowToVehicle(row: any, dealerId: string): ThreeWheelerVehicle {
+export function thwRowToVehicle(row: VehicleCatalogDbRow, dealerId: string): ThreeWheelerVehicle {
     const fuelRaw = (row.fuel_type ?? '').toLowerCase()
     const fuel = (['petrol', 'diesel', 'cng', 'electric', 'lpg'].includes(fuelRaw) ? fuelRaw : 'petrol') as ThreeWheelerVehicle['fuel_type']
     const isElectric = fuel === 'electric'
@@ -189,7 +216,7 @@ function thwRowToVehicle(row: any, dealerId: string): ThreeWheelerVehicle {
         payload_kg:              row.payload_kg ?? null,
         passenger_capacity:      row.passenger_capacity ?? null,
         max_speed_kmph:          null,
-        mileage_kmpl:            row.mileage_kmpl ? parseFloat(row.mileage_kmpl) : null,
+        mileage_kmpl:            parseNullableNumber(row.mileage_kmpl),
         cng_mileage_km_per_kg:   null,
         permit_type:             null,
         gvw_kg:                  null,

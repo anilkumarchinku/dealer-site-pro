@@ -27,8 +27,7 @@ export default function ElectricThreeWheelerPage() {
         async function load() {
             const { data: d } = await supabase.from("dealers").select("id").eq("slug", slug).single()
             if (!d) { setLoading(false); return }
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            const dealer = d as any
+            const dealer = d
             setDealer(dealer)
 
             const res  = await fetch(`/api/three-wheelers?dealerId=${dealer.id}&type=electric&pageSize=20`)

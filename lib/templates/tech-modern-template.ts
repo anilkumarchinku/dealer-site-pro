@@ -17,8 +17,10 @@
 
 import type { TemplateConfig } from './template-styles';
 
-export const techModernTemplate: TemplateConfig = {
-  id: 'tech-modern' as any, // Will extend TemplateStyle type
+type TechModernTemplateConfig = Omit<TemplateConfig, 'id'> & { id: 'tech-modern' };
+
+export const techModernTemplate: TechModernTemplateConfig = {
+  id: 'tech-modern',
   name: 'Tech & Modern',
   icon: '🔌',
   description: 'Clean, futuristic design for electric and innovative brands',

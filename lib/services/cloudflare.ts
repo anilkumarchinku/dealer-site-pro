@@ -3,6 +3,9 @@
  * Automates DNS configuration, SSL provisioning, and CDN setup
  */
 
+import { getRequiredEnv } from '@/lib/env'
+import { externalApiFetch } from '@/lib/services/external-api-fetch'
+
 interface CloudflareConfig {
     apiToken: string;
     accountId: string;
@@ -15,6 +18,10 @@ interface DNSRecord {
     ttl?: number;
     proxied?: boolean;
     priority?: number;
+}
+
+interface CloudflareDNSRecord extends DNSRecord {
+    id: string;
 }
 
 interface Zone {
@@ -30,6 +37,18 @@ interface SSLStatus {
     expires_on?: string;
 }
 
+interface CloudflareCertificatePack {
+    status: SSLStatus['status'];
+    certificate_authority: string;
+    expires_on?: string;
+}
+
+type CloudflareResponse<TResult> = {
+    success?: boolean;
+    result?: TResult;
+    errors?: { message?: string }[];
+}
+
 export class CloudflareService {
     private apiToken: string;
     private accountId: string;
@@ -43,26 +62,29 @@ export class CloudflareService {
     /**
      * Make authenticated request to Cloudflare API
      */
-    private async request(
+    private async request<TResult>(
         endpoint: string,
         options: RequestInit = {}
-    ): Promise<any> {
-        const url = `${this.baseUrl}${endpoint}`;
-
-        const response = await fetch(url, {
-            ...options,
+    ): Promise<TResult> {
+        const data = await externalApiFetch<CloudflareResponse<TResult>>({
+            baseUrl: this.baseUrl,
+            providerName: 'Cloudflare',
+            path: endpoint,
             headers: {
                 'Authorization': `Bearer ${this.apiToken}`,
                 'Content-Type': 'application/json',
                 ...options.headers
-            }
+            },
+            init: options,
         });
 
-        const data = await response.json();
-
         if (!data.success) {
-            const errors = data.errors?.map((e: any) => e.message).join(', ');
+            const errors = data.errors?.map((e) => e.message).join(', ');
             throw new Error(`Cloudflare API error: ${errors || 'Unknown error'}`);
+        }
+
+        if (data.result === undefined) {
+            throw new Error('Cloudflare API error: Missing result');
         }
 
         return data.result;
@@ -74,7 +96,7 @@ export class CloudflareService {
     async createZone(domainName: string): Promise<Zone> {
         console.log(`📋 Creating Cloudflare zone for ${domainName}...`);
 
-        const result = await this.request('/zones', {
+        const result = await this.request<Zone>('/zones', {
             method: 'POST',
             body: JSON.stringify({
                 name: domainName,
@@ -100,7 +122,7 @@ export class CloudflareService {
      */
     async getZone(domainName: string): Promise<Zone | null> {
         try {
-            const zones = await this.request(`/zones?name=${domainName}`);
+            const zones = await this.request<Zone[]>(`/zones?name=${domainName}`);
 
             if (zones.length === 0) {
                 return null;
@@ -133,10 +155,10 @@ export class CloudflareService {
     async addDNSRecord(
         zoneId: string,
         record: DNSRecord
-    ): Promise<any> {
+    ): Promise<CloudflareDNSRecord> {
         console.log(`➕ Adding ${record.type} record: ${record.name} → ${record.content}`);
 
-        const result = await this.request(`/zones/${zoneId}/dns_records`, {
+        const result = await this.request<CloudflareDNSRecord>(`/zones/${zoneId}/dns_records`, {
             method: 'POST',
             body: JSON.stringify({
                 type: record.type,
@@ -155,8 +177,8 @@ export class CloudflareService {
     /**
      * List all DNS records for a zone
      */
-    async listDNSRecords(zoneId: string): Promise<any[]> {
-        const result = await this.request(`/zones/${zoneId}/dns_records`);
+    async listDNSRecords(zoneId: string): Promise<CloudflareDNSRecord[]> {
+        const result = await this.request<CloudflareDNSRecord[]>(`/zones/${zoneId}/dns_records`);
         return result;
     }
 
@@ -180,10 +202,10 @@ export class CloudflareService {
         zoneId: string,
         recordId: string,
         record: Partial<DNSRecord>
-    ): Promise<any> {
+    ): Promise<CloudflareDNSRecord> {
         console.log(`✏️ Updating DNS record: ${recordId}`);
 
-        const result = await this.request(`/zones/${zoneId}/dns_records/${recordId}`, {
+        const result = await this.request<CloudflareDNSRecord>(`/zones/${zoneId}/dns_records/${recordId}`, {
             method: 'PATCH',
             body: JSON.stringify(record)
         });
@@ -243,7 +265,7 @@ export class CloudflareService {
     async getSSLStatus(zoneId: string): Promise<SSLStatus> {
         console.log(`🔍 Checking SSL certificate status...`);
 
-        const result = await this.request(`/zones/${zoneId}/ssl/certificate_packs`);
+        const result = await this.request<CloudflareCertificatePack[]>(`/zones/${zoneId}/ssl/certificate_packs`);
 
         if (result.length === 0) {
             return {
@@ -320,7 +342,7 @@ export class CloudflareService {
     ): Promise<{
         zone: Zone;
         nameservers: string[];
-        records: any[];
+        records: CloudflareDNSRecord[];
     }> {
         console.log(`🚀 Starting full zone setup for ${domainName}...`);
 
@@ -328,7 +350,7 @@ export class CloudflareService {
         const zone = await this.createZone(domainName);
 
         // Step 2: Add DNS records
-        const addedRecords: any[] = [];
+        const addedRecords: CloudflareDNSRecord[] = [];
         for (const record of dnsRecords) {
             try {
                 const result = await this.addDNSRecord(zone.id, record);
@@ -405,10 +427,10 @@ export class CloudflareService {
     async getAnalytics(
         zoneId: string,
         since: Date = new Date(Date.now() - 24 * 60 * 60 * 1000)
-    ): Promise<any> {
+    ): Promise<unknown> {
         const sinceISO = since.toISOString();
 
-        const result = await this.request(
+        const result = await this.request<unknown>(
             `/zones/${zoneId}/analytics/dashboard?since=${sinceISO}`
         );
 
@@ -420,14 +442,8 @@ export class CloudflareService {
  * Factory function to create CloudflareService instance
  */
 export function createCloudflareService(): CloudflareService {
-    const apiToken = process.env.CLOUDFLARE_API_TOKEN;
-    const accountId = process.env.CLOUDFLARE_ACCOUNT_ID;
-
-    if (!apiToken || !accountId) {
-        throw new Error(
-            'Cloudflare credentials not configured. Set CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID in environment variables.'
-        );
-    }
+    const apiToken = getRequiredEnv('CLOUDFLARE_API_TOKEN');
+    const accountId = getRequiredEnv('CLOUDFLARE_ACCOUNT_ID');
 
     return new CloudflareService({
         apiToken,

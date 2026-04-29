@@ -267,7 +267,14 @@ export default function SettingsPage() {
             // Extract detailed error from diagnostics steps
             let detailedMessage = json.message || "";
             if (!json.success && json.diagnostics?.steps) {
-                const failedStep = json.diagnostics.steps.find((s: any) => s.status === "FAIL");
+                type DiagnosticStep = {
+                    status: string
+                    step?: string
+                    error?: string
+                    httpStatus?: number
+                    body?: string
+                }
+                const failedStep = (json.diagnostics.steps as DiagnosticStep[]).find((s) => s.status === "FAIL");
                 if (failedStep) {
                     detailedMessage = `Step "${failedStep.step}" failed: ${failedStep.error || JSON.stringify(failedStep)}`;
                     if (failedStep.httpStatus) detailedMessage += ` (HTTP ${failedStep.httpStatus})`;
@@ -437,8 +444,7 @@ export default function SettingsPage() {
     const handleSaveSegments = async () => {
         if (!dealerId) return;
         setSegmentSaving(true);
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        await (supabase as any)
+        await supabase
             .from("dealers")
             .update({
                 sells_two_wheelers:   sellsTwoWheelers,

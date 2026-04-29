@@ -15,7 +15,7 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server'
-import { createClient } from '@supabase/supabase-js'
+import { createAdminClient } from '@/lib/supabase-server'
 import { sendLeadSmsToDealer } from '@/lib/services/sms-service'
 import { forwardLeadToCyepro } from '@/lib/services/cyepro-service'
 
@@ -26,10 +26,7 @@ const UUID_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3
 
 // ── Supabase client with SERVICE ROLE key (server-side only — bypasses RLS) ──
 function getSupabase() {
-    return createClient(
-        process.env.NEXT_PUBLIC_SUPABASE_URL!,
-        process.env.SUPABASE_SERVICE_ROLE_KEY!
-    )
+    return createAdminClient()
 }
 
 async function resolveVehicleId(

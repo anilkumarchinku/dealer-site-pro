@@ -33,6 +33,7 @@ import { cn } from "@/lib/utils";
 import { automotiveBrands } from "@/lib/colors/automotive-brands";
 import { getAllCars } from "@/lib/services/car-service";
 import type { Car as CarType } from "@/lib/types/car";
+import type { Brand, StyleTemplate } from "@/lib/types";
 import { CarGrid } from "@/components/cars/CarGrid";
 import brandModelsData from "@/lib/data/brand-models.json";
 
@@ -433,8 +434,8 @@ export default function AdminDashboard() {
 
             // Wait for store update first
             updateData({
-                styleTemplate: selectedTemplate as any,
-                brands: [selectedBrand as any],
+                styleTemplate: selectedTemplate as StyleTemplate,
+                brands: [selectedBrand as Brand],
             });
 
             setDealerId(selectedDealer.id);

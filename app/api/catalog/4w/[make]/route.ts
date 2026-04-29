@@ -12,6 +12,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { get4WCardekhoBrandMeta, get4WCardekhoModelMeta } from '@/lib/data/4w-cardekho-meta'
 import { extract4WModelsFromJson, FOUR_W_BRANDS, normalize4WModelKey } from '@/lib/data/four-wheelers'
+import type { Database } from '@/lib/database.types'
 import { createAdminClient } from '@/lib/supabase-server'
 
 // Lightweight Car shape — enough for the preview hero card
@@ -35,6 +36,23 @@ interface PreviewCar {
     colors: []
     meta: { isAvailable: boolean }
     condition: 'new'
+}
+
+type CatalogRow = Pick<
+    Database['public']['Tables']['car_catalog']['Row'],
+    | 'id'
+    | 'make'
+    | 'model'
+    | 'year'
+    | 'body_type'
+    | 'fuel_type'
+    | 'transmission'
+    | 'seating_capacity'
+    | 'price_min_paise'
+    | 'price_max_paise'
+    | 'image_url'
+> & {
+    segment?: string | null
 }
 
 function find4WJsonKey(make: string): string | null {
@@ -130,10 +148,9 @@ async function getJsonFallbackCars(request: NextRequest, make: string): Promise<
         .map((model) => jsonModelToPreviewCar(make, model))
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-function rowToPreviewCar(row: any): PreviewCar {
-    const minPaise = (row.price_min_paise as number | null) ?? 0
-    const maxPaise = (row.price_max_paise as number | null) ?? 0
+function rowToPreviewCar(row: CatalogRow): PreviewCar {
+    const minPaise = row.price_min_paise ?? 0
+    const maxPaise = row.price_max_paise ?? 0
     const minINR = minPaise > 0 ? Math.round(minPaise / 100) : null
     const maxINR = maxPaise > 0 ? Math.round(maxPaise / 100) : null
 
@@ -143,25 +160,25 @@ function rowToPreviewCar(row: any): PreviewCar {
         model: String(row.model),
         variant: '',
         year: Number(row.year),
-        bodyType: (row.body_type as string | null) ?? null,
-        segment: (row.segment as string | null) ?? 'B',
+        bodyType: row.body_type ?? null,
+        segment: row.segment ?? 'B',
         vehicleCategory: '4w',
         price: minINR ? `₹${minINR.toLocaleString('en-IN')}` : undefined,
         pricing: {
             exShowroom: { min: minINR, max: maxINR, currency: 'INR' },
         },
         engine: {
-            type: (row.fuel_type as string | null) ?? 'Petrol',
+            type: row.fuel_type ?? 'Petrol',
             power: '—',
             torque: '—',
         },
-        transmission: { type: (row.transmission as string | null) ?? 'Manual' },
+        transmission: { type: row.transmission ?? 'Manual' },
         performance: {},
-        dimensions: { seatingCapacity: (row.seating_capacity as number | null) ?? 5 },
+        dimensions: { seatingCapacity: row.seating_capacity ?? 5 },
         features: { keyFeatures: [] },
         images: {
-            hero: (row.image_url as string | null) ?? null,
-            exterior: (row.image_url as string | null) ? [(row.image_url as string)] : [],
+            hero: row.image_url ?? null,
+            exterior: row.image_url ? [row.image_url] : [],
             interior: [],
         },
         colors: [],
@@ -171,10 +188,8 @@ function rowToPreviewCar(row: any): PreviewCar {
 }
 
 // Group raw rows by model — keep the row with the lowest price per model
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-function groupByModel(rows: any[]): any[] {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const map = new Map<string, any>()
+function groupByModel(rows: CatalogRow[]): CatalogRow[] {
+    const map = new Map<string, CatalogRow>()
     for (const row of rows) {
         const key = `${row.make}|${row.model}`
         if (!map.has(key)) {
@@ -213,7 +228,7 @@ export async function GET(
         .order('year', { ascending: false })
         .limit(100)
 
-    const makeRows = ((makeData ?? []) as unknown) as Array<Record<string, unknown>>
+    const makeRows = makeData ?? []
     const makeRowsHavePrice = makeRows.some((row) => {
         const priceMinPaise = row.price_min_paise
         return typeof priceMinPaise === 'number' && priceMinPaise > 0

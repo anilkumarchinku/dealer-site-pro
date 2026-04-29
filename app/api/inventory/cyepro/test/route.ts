@@ -6,6 +6,7 @@
  */
 
 import { NextResponse } from 'next/server'
+import { ExternalApiError, externalApiFetch } from '@/lib/services/external-api-fetch'
 import { requireAuth } from '@/lib/supabase-server'
 
 
@@ -13,8 +14,19 @@ const BASE_URL = 'https://api.cyepro.com'
 const SERVICE_ID = '460'
 const TIME_ZONE = 'Asia/Calcutta'
 
+type DiagnosticStep = Record<string, unknown>
+type CyeproDiagnosticResponse = {
+    vehicles?: Array<Record<string, unknown>>
+    data?: Array<Record<string, unknown>>
+    results?: Array<Record<string, unknown>>
+    content?: Array<Record<string, unknown>>
+    totalCount?: number
+    total?: number
+    totalElements?: number
+}
+
 export async function POST(request: Request) {
-    const diagnostics: Record<string, any> = {
+    const diagnostics: { timestamp: string; steps: DiagnosticStep[] } = {
         timestamp: new Date().toISOString(),
         steps: [],
     }
@@ -103,21 +115,40 @@ export async function POST(request: Request) {
             body: testBody,
         })
 
-        let res: Response
         const startTime = Date.now()
+        let rawData: CyeproDiagnosticResponse
         try {
-            res = await fetch(
-                `${BASE_URL}/dynamicForms/search/vehicles/filterQueryApi`,
-                {
+            rawData = await externalApiFetch<CyeproDiagnosticResponse>({
+                baseUrl: BASE_URL,
+                providerName: 'Cyepro',
+                path: '/dynamicForms/search/vehicles/filterQueryApi',
+                headers,
+                init: {
                     method: 'POST',
-                    headers,
                     body: JSON.stringify(testBody),
                     cache: 'no-store',
                 },
-            )
+            })
         } catch (fetchErr) {
             const duration = Date.now() - startTime
             const errMsg = fetchErr instanceof Error ? fetchErr.message : String(fetchErr)
+
+            if (fetchErr instanceof ExternalApiError && fetchErr.status) {
+                diagnostics.steps.push({
+                    step: 'api_response',
+                    status: 'FAIL',
+                    httpStatus: fetchErr.status,
+                    statusText: '',
+                    durationMs: duration,
+                })
+                diagnostics.steps.push({
+                    step: 'api_error_body',
+                    status: 'FAIL',
+                    body: (fetchErr.bodyText ?? '').substring(0, 500),
+                })
+                return NextResponse.json({ success: false, diagnostics })
+            }
+
             diagnostics.steps.push({
                 step: 'api_network_error',
                 status: 'FAIL',
@@ -141,24 +172,13 @@ export async function POST(request: Request) {
 
         diagnostics.steps.push({
             step: 'api_response',
-            status: res.ok ? 'OK' : 'FAIL',
-            httpStatus: res.status,
-            statusText: res.statusText,
+            status: 'OK',
+            httpStatus: 200,
+            statusText: 'OK',
             durationMs: duration,
         })
 
-        if (!res.ok) {
-            const errorBody = await res.text()
-            diagnostics.steps.push({
-                step: 'api_error_body',
-                status: 'FAIL',
-                body: errorBody.substring(0, 500),
-            })
-            return NextResponse.json({ success: false, diagnostics })
-        }
-
         // Step 5: Parse response
-        const rawData = await res.json()
         diagnostics.steps.push({
             step: 'parse_response',
             status: 'OK',

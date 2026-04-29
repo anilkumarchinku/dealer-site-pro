@@ -6,6 +6,8 @@
  * to prevent XSS in email clients that render HTML.
  */
 
+import { getOptionalEnv } from '@/lib/env'
+import { ExternalApiError, externalApiFetch } from '@/lib/services/external-api-fetch'
 import { logger } from '@/lib/utils/logger'
 
 // ── HTML escaping ───────────────────────────────────────────────────────────
@@ -28,7 +30,7 @@ interface SendEmailPayload {
 }
 
 async function sendEmail(payload: SendEmailPayload): Promise<{ success: boolean; error?: string }> {
-    const apiKey = process.env.RESEND_API_KEY
+    const apiKey = getOptionalEnv('RESEND_API_KEY')
 
     if (!apiKey) {
         // In development, log the email content so it's visible without a real key
@@ -41,26 +43,29 @@ async function sendEmail(payload: SendEmailPayload): Promise<{ success: boolean;
     }
 
     try {
-        const res = await fetch('https://api.resend.com/emails', {
-            method: 'POST',
+        await externalApiFetch({
+            baseUrl: 'https://api.resend.com',
+            providerName: 'Resend',
+            path: '/emails',
             headers: {
                 Authorization: `Bearer ${apiKey}`,
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({
-                from: 'DealerSite Pro <noreply@dealersitepro.com>',
-                ...payload,
-            }),
+            init: {
+                method: 'POST',
+                body: JSON.stringify({
+                    from: 'DealerSite Pro <noreply@dealersitepro.com>',
+                    ...payload,
+                }),
+            },
+            responseType: 'void',
         })
-
-        if (!res.ok) {
-            const body = await res.text()
-            throw new Error(`Resend API error ${res.status}: ${body}`)
-        }
 
         return { success: true }
     } catch (err) {
-        const msg = err instanceof Error ? err.message : String(err)
+        const msg = err instanceof ExternalApiError && err.status
+            ? `Resend API error ${err.status}: ${err.bodyText ?? ''}`
+            : err instanceof Error ? err.message : String(err)
         logger.error('[Email] Send failed:', msg)
         return { success: false, error: msg }
     }

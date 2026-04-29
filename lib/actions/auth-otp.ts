@@ -5,20 +5,33 @@
  * Handles OTP verification and user authentication
  */
 
-import { createClient } from "@supabase/supabase-js";
+import { createAdminClient } from "@/lib/supabase-server";
 import { verifyOtp, incrementOtpAttempt } from "@/lib/services/otp-service";
 
-const supabase = createClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.SUPABASE_SERVICE_ROLE_KEY!,
-    { auth: { persistSession: false } }
-);
+function getSupabase() {
+    return createAdminClient();
+}
+
+type AdminClient = ReturnType<typeof createAdminClient>;
+type AdminAuth = AdminClient["auth"]["admin"];
+type AdminAuthWithSession = AdminAuth & {
+    createSession?: (params: { user_id: string }) => Promise<{
+        data: { session: unknown | null };
+        error: Error | null;
+    }>;
+};
+
+function getAdminAuthWithSession(supabase: AdminClient): AdminAuthWithSession {
+    return supabase.auth.admin as unknown as AdminAuthWithSession;
+}
 
 export async function verifyOtpAndLogin(
     email: string,
     code: string
 ): Promise<{ success: boolean; error?: string; redirectTo?: string }> {
     try {
+        const supabase = getSupabase();
+
         // Verify OTP code
         const { success, error } = await verifyOtp(email, code, "login");
 
@@ -47,9 +60,8 @@ export async function verifyOtpAndLogin(
             return { success: false, error: "Could not fetch dealer information" };
         }
 
-        // Create a session by generating a JWT token
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        const { data: { session }, error: sessionError } = await (supabase.auth.admin as any)?.createSession?.({
+        // Create a session by generating a JWT token.
+        const { data: { session }, error: sessionError } = await getAdminAuthWithSession(supabase).createSession?.({
             user_id: user.id,
         }) || { data: { session: null }, error: new Error("Session creation failed") };
 
@@ -80,6 +92,8 @@ export async function verifyOtpAndRegister(
     }
 ): Promise<{ success: boolean; error?: string; redirectTo?: string; dealerId?: string }> {
     try {
+        const supabase = getSupabase();
+
         // Verify OTP code
         const { success, error } = await verifyOtp(email, code, "register");
 
@@ -114,10 +128,8 @@ export async function verifyOtpAndRegister(
             return { success: false, error: createError?.message || "Registration failed" };
         }
 
-        // Create session for the new user
-        // @ts-ignore – createSession exists at runtime but was removed from GoTrueAdminApi typings
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        const { data: { session }, error: sessionError } = await (supabase.auth.admin as any)?.createSession?.({
+        // Create session for the new user.
+        const { data: { session }, error: sessionError } = await getAdminAuthWithSession(supabase).createSession?.({
             user_id: user.id,
         }) || { data: { session: null }, error: new Error("Session creation failed") };
 

@@ -1,10 +1,16 @@
 /**
  * Razorpay Payment Service
  * Handles subscription payments for PRO (₹499/mo) and PREMIUM (₹999/mo) tiers.
- * Uses Razorpay REST API via fetch — no npm SDK required.
+ * Uses the shared Razorpay REST wrapper — no npm SDK required.
  */
 
-import { createHmac, timingSafeEqual } from 'crypto'
+import { getOptionalEnv } from '@/lib/env'
+import {
+    getRazorpayErrorMessage,
+    isRazorpayConfigured,
+    razorpayApiFetch,
+    verifySubscriptionPaymentSignature,
+} from '@/lib/services/razorpay-service'
 
 export interface CreateSubscriptionParams {
     dealerId: string
@@ -19,21 +25,6 @@ export interface SubscriptionResult {
     error?: string
 }
 
-function razorpayAuth(): string {
-    const keyId = process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID
-    const keySecret = process.env.RAZORPAY_KEY_SECRET
-    return Buffer.from(`${keyId}:${keySecret}`).toString('base64')
-}
-
-function isConfigured(): boolean {
-    const keyId = process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID
-    const keySecret = process.env.RAZORPAY_KEY_SECRET
-    return !!(
-        keyId && !keyId.includes('xxx') &&
-        keySecret && keySecret !== 'your_razorpay_secret_key_here'
-    )
-}
-
 /**
  * Creates a Razorpay subscription for PRO or PREMIUM tier.
  */
@@ -43,15 +34,15 @@ export async function createDomainSubscription(
     const { dealerId, tier, domainId } = params
 
     // MOCK MODE: when Razorpay credentials are not configured, return fake subscription data for testing
-    if (!isConfigured()) {
+    if (!isRazorpayConfigured()) {
         const mockId = `mock_sub_${Date.now()}`
         console.warn('[MOCK] Razorpay not configured — returning mock subscription:', mockId)
         return { success: true, subscriptionId: mockId, orderId: mockId }
     }
 
     const planIds: Record<string, string | undefined> = {
-        pro: process.env.RAZORPAY_PRO_PLAN_ID,
-        premium: process.env.RAZORPAY_PREMIUM_PLAN_ID,
+        pro: getOptionalEnv('RAZORPAY_PRO_PLAN_ID'),
+        premium: getOptionalEnv('RAZORPAY_PREMIUM_PLAN_ID'),
     }
 
     const planId = planIds[tier]
@@ -62,12 +53,8 @@ export async function createDomainSubscription(
     }
 
     try {
-        const response = await fetch('https://api.razorpay.com/v1/subscriptions', {
+        const data = await razorpayApiFetch<{ id: string }>('/subscriptions', {
             method: 'POST',
-            headers: {
-                'Authorization': `Basic ${razorpayAuth()}`,
-                'Content-Type': 'application/json',
-            },
             body: JSON.stringify({
                 plan_id: planId,
                 customer_notify: 1,
@@ -81,22 +68,15 @@ export async function createDomainSubscription(
             }),
         })
 
-        const data = await response.json()
-
-        if (!response.ok) {
-            const msg = data?.error?.description ?? 'Failed to create subscription'
-            console.error('Razorpay subscription error:', data)
-            return { success: false, error: msg }
-        }
-
         return {
             success: true,
             subscriptionId: data.id,
             orderId: data.id, // for subscriptions, orderId == subscriptionId
         }
     } catch (error) {
+        const msg = getRazorpayErrorMessage(error, 'Payment service unavailable. Please try again.')
         console.error('Error calling Razorpay API:', error)
-        return { success: false, error: 'Payment service unavailable. Please try again.' }
+        return { success: false, error: msg }
     }
 }
 
@@ -109,30 +89,7 @@ export function verifyPaymentSignature(
     subscriptionId: string,
     signature: string
 ): boolean {
-    const secret = process.env.RAZORPAY_KEY_SECRET
-    if (!secret || secret === 'your_razorpay_secret_key_here') {
-        if (process.env.NODE_ENV === 'production') {
-            console.error('[Payment] RAZORPAY_KEY_SECRET not configured in production — rejecting payment')
-            return false // fail-closed in production
-        }
-        console.warn('[Payment] RAZORPAY_KEY_SECRET not configured — skipping verification in dev')
-        return true
-    }
-
-    const generated = createHmac('sha256', secret)
-        .update(`${paymentId}|${subscriptionId}`)
-        .digest('hex')
-
-    // Use timing-safe comparison to prevent timing attacks
-    // Compare raw string buffers (not hex-decoded) to stay case-sensitive
-    try {
-        const a = Buffer.from(generated)
-        const b = Buffer.from(signature)
-        if (a.length !== b.length) return false
-        return timingSafeEqual(a, b)
-    } catch {
-        return false
-    }
+    return verifySubscriptionPaymentSignature(paymentId, subscriptionId, signature)
 }
 
 /** Expected prices in paise for each tier */

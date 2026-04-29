@@ -18,20 +18,19 @@
  */
 
 import { NextResponse }            from 'next/server'
-import { createClient }            from '@supabase/supabase-js'
+import { createRouteClient }       from '@/lib/supabase-server'
 import { getDeploymentStatus }     from '@/lib/services/vercel-service'
 
+type DeploymentStatus = 'queued' | 'building' | 'ready' | 'error' | 'cancelled'
+
 function getSupabase() {
-    return createClient(
-        process.env.NEXT_PUBLIC_SUPABASE_URL!,
-        process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
-    )
+    return createRouteClient()
 }
 
 // Maps Vercel deployment states to our simplified status
 function vercelStateToStatus(
     state: string,
-): 'queued' | 'building' | 'ready' | 'error' {
+): Exclude<DeploymentStatus, 'cancelled'> {
     switch (state) {
         case 'READY':    return 'ready'
         case 'ERROR':    return 'error'
@@ -76,7 +75,7 @@ export async function GET(
 
         // ── Path 1: Supabase record lookup (preferred) ─────────────────────────
         if (isSupabaseUUID(id)) {
-            const supabase = getSupabase()
+            const supabase = await getSupabase()
 
             const { data: record, error } = await supabase
                 .from('dealer_deployments')
@@ -96,7 +95,7 @@ export async function GET(
                 }
 
                 // Still building — check live Vercel status
-                let vercelStatus = record.status
+                let vercelStatus: DeploymentStatus = record.status
                 let progress     = 20
                 let errorMessage: string | null = null
 

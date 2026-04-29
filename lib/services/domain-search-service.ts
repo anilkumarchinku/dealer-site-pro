@@ -3,6 +3,9 @@
  * Real integration with GoDaddy Domain API for availability and pricing
  */
 
+import { getOptionalEnv } from '@/lib/env'
+import { ExternalApiError, externalApiFetch } from '@/lib/services/external-api-fetch'
+
 export interface DomainAvailability {
     domain: string
     available: boolean
@@ -17,19 +20,44 @@ export interface DomainAvailability {
  * GoDaddy API Configuration
  * Get your API keys from: https://developer.godaddy.com/keys
  */
-const GODADDY_API_KEY = process.env.GODADDY_API_KEY || ''
-const GODADDY_API_SECRET = process.env.GODADDY_API_SECRET || ''
-const GODADDY_BASE_URL = process.env.GODADDY_API_URL || 'https://api.godaddy.com'
+type GoDaddyConfig = {
+    apiKey: string
+    apiSecret: string
+    baseUrl: string
+    configured: boolean
+}
 
-// Use OTE (test) environment if no production keys
-const isProduction = GODADDY_API_KEY && GODADDY_API_SECRET
-const BASE_URL = isProduction ? GODADDY_BASE_URL : 'https://api.ote-godaddy.com'
+function getGoDaddyConfig(): GoDaddyConfig {
+    const apiKey = getOptionalEnv('GODADDY_API_KEY') ?? ''
+    const apiSecret = getOptionalEnv('GODADDY_API_SECRET') ?? ''
+    const configured = !!(apiKey && apiSecret)
+
+    return {
+        apiKey,
+        apiSecret,
+        configured,
+        baseUrl: configured
+            ? getOptionalEnv('GODADDY_API_URL') ?? 'https://api.godaddy.com'
+            : 'https://api.ote-godaddy.com',
+    }
+}
 
 /**
  * Creates authorization header for GoDaddy API
  */
-function getAuthHeader(): string {
-    return `sso-key ${GODADDY_API_KEY}:${GODADDY_API_SECRET}`
+function getAuthHeader(config: GoDaddyConfig): string {
+    return `sso-key ${config.apiKey}:${config.apiSecret}`
+}
+
+function getDefaultTldPricing(tld: string): number {
+    const defaultPricing: Record<string, number> = {
+        'com': 129900,    // ₹1299
+        'in': 69900,      // ₹699
+        'co.in': 69900,   // ₹699
+        'net': 149900,    // ₹1499
+        'org': 119900     // ₹1199
+    }
+    return defaultPricing[tld] || 99900 // Default ₹999
 }
 
 /**
@@ -40,29 +68,28 @@ async function checkDomainAvailability(domain: string): Promise<{
     definitive: boolean
     price?: number
 }> {
+    const config = getGoDaddyConfig()
+
     try {
         // If no API keys configured, fail explicitly — never return random results
-        if (!GODADDY_API_KEY || !GODADDY_API_SECRET) {
+        if (!config.configured) {
             throw new Error('Domain search is not configured. Please contact support.')
         }
 
-        const response = await fetch(
-            `${BASE_URL}/v1/domains/available?domain=${encodeURIComponent(domain)}`,
-            {
-                method: 'GET',
-                headers: {
-                    'Authorization': getAuthHeader(),
-                    'Accept': 'application/json'
-                }
-            }
-        )
-
-        if (!response.ok) {
-            console.error(`GoDaddy API error: ${response.status}`)
-            return { available: false, definitive: false }
-        }
-
-        const data = await response.json()
+        const data = await externalApiFetch<{
+            available?: boolean
+            definitive?: boolean
+            price?: number
+        }>({
+            baseUrl: config.baseUrl,
+            providerName: 'GoDaddy',
+            path: `/v1/domains/available?domain=${encodeURIComponent(domain)}`,
+            headers: {
+                'Authorization': getAuthHeader(config),
+                'Accept': 'application/json'
+            },
+            init: { method: 'GET' },
+        })
 
         return {
             available: data.available || false,
@@ -70,6 +97,9 @@ async function checkDomainAvailability(domain: string): Promise<{
             price: data.price // Price in micros (need to convert)
         }
     } catch (error) {
+        if (error instanceof ExternalApiError && error.status) {
+            console.error(`GoDaddy API error: ${error.status}`)
+        }
         console.error('Error checking domain availability:', error)
         return { available: false, definitive: false }
     }
@@ -79,39 +109,27 @@ async function checkDomainAvailability(domain: string): Promise<{
  * Gets pricing for a specific TLD
  */
 async function getTLDPricing(tld: string): Promise<number> {
+    const config = getGoDaddyConfig()
+
     try {
         // If no API keys, return default pricing
-        if (!GODADDY_API_KEY || !GODADDY_API_SECRET) {
-            // Default pricing in paise (₹)
-            const defaultPricing: Record<string, number> = {
-                'com': 129900,    // ₹1299
-                'in': 69900,      // ₹699
-                'co.in': 69900,   // ₹699
-                'net': 149900,    // ₹1499
-                'org': 119900     // ₹1199
-            }
-            return defaultPricing[tld] || 99900 // Default ₹999
+        if (!config.configured) {
+            return getDefaultTldPricing(tld)
         }
 
         // In production, fetch real pricing from GoDaddy
         // Note: GoDaddy pricing might be in USD, needs conversion to INR
-        const response = await fetch(
-            `${BASE_URL}/v1/domains/tlds`,
-            {
-                method: 'GET',
-                headers: {
-                    'Authorization': getAuthHeader(),
-                    'Accept': 'application/json'
-                }
-            }
-        )
-
-        if (!response.ok) {
-            throw new Error(`Failed to fetch TLD pricing: ${response.status}`)
-        }
-
-        const tlds = await response.json()
-        const tldData = tlds.find((t: any) => t.name === tld)
+        const tlds = await externalApiFetch<Array<{ name?: string; price?: number }>>({
+            baseUrl: config.baseUrl,
+            providerName: 'GoDaddy',
+            path: '/v1/domains/tlds',
+            headers: {
+                'Authorization': getAuthHeader(config),
+                'Accept': 'application/json'
+            },
+            init: { method: 'GET' },
+        })
+        const tldData = tlds.find((t) => t.name === tld)
 
         if (tldData && tldData.price) {
             // Convert USD to INR (approximate rate: 1 USD = 83 INR)
@@ -206,9 +224,11 @@ export async function purchaseDomain(
         country: string
     }
 ): Promise<{ success: boolean; orderId?: string; error?: string }> {
+    const config = getGoDaddyConfig()
+
     try {
         // If no API keys, return mock success
-        if (!GODADDY_API_KEY || !GODADDY_API_SECRET) {
+        if (!config.configured) {
             console.log('[GoDaddy] No API keys - returning mock purchase')
             return {
                 success: true,
@@ -249,35 +269,34 @@ export async function purchaseDomain(
             contactTech: purchaseData.contactAdmin
         }
 
-        const response = await fetch(
-            `${BASE_URL}/v1/domains/purchase`,
-            {
+        const result = await externalApiFetch<{ orderId?: string }>({
+            baseUrl: config.baseUrl,
+            providerName: 'GoDaddy',
+            path: '/v1/domains/purchase',
+            headers: {
+                'Authorization': getAuthHeader(config),
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            init: {
                 method: 'POST',
-                headers: {
-                    'Authorization': getAuthHeader(),
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                },
                 body: JSON.stringify(fullPurchaseData)
-            }
-        )
-
-        if (!response.ok) {
-            const errorData = await response.json()
-            console.error('GoDaddy purchase error:', errorData)
-            return {
-                success: false,
-                error: errorData.message || 'Domain purchase failed'
-            }
-        }
-
-        const result = await response.json()
+            },
+        })
 
         return {
             success: true,
             orderId: result.orderId || `GD-${Date.now()}`
         }
     } catch (error) {
+        if (error instanceof ExternalApiError) {
+            const errorData = error.bodyJson as { message?: string } | undefined
+            console.error('GoDaddy purchase error:', errorData ?? error.bodyText ?? error.message)
+            return {
+                success: false,
+                error: errorData?.message || 'Domain purchase failed'
+            }
+        }
         console.error('Error purchasing domain:', error)
         return {
             success: false,

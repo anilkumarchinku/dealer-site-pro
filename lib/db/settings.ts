@@ -37,6 +37,22 @@ export interface NotificationSettings {
     weekly_report: boolean;
 }
 
+type DynamicSettingsTable = {
+    select(columns: string): {
+        eq(column: string, value: unknown): {
+            single(): Promise<{ data: NotificationSettings | null; error: { message: string } | null }>
+        }
+    }
+    upsert(
+        payload: NotificationSettings & { dealer_id: string },
+        options: { onConflict: string }
+    ): Promise<{ error: { message: string } | null }>
+}
+
+function dynamicTable(table: string): DynamicSettingsTable {
+    return (supabase as unknown as { from(name: string): DynamicSettingsTable }).from(table)
+}
+
 // ── Fetch dealer profile by ID ────────────────────────────────
 export async function fetchDealerProfile(
     dealerId: string
@@ -116,9 +132,7 @@ export async function fetchNotificationSettings(
 ): Promise<NotificationSettings | null> {
     if (!isSupabaseReady()) return null;
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const { data, error } = await (supabase as any)
-        .from("notification_settings")
+    const { data, error } = await dynamicTable("notification_settings")
         .select("new_leads, test_drives, service_bookings, new_reviews, weekly_report")
         .eq("dealer_id", dealerId)
         .single();
@@ -137,9 +151,7 @@ export async function saveNotificationSettings(
 ): Promise<{ success: boolean; error?: string }> {
     if (!isSupabaseReady()) return { success: true };
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const { error } = await (supabase as any)
-        .from("notification_settings")
+    const { error } = await dynamicTable("notification_settings")
         .upsert({ dealer_id: dealerId, ...settings }, { onConflict: "dealer_id" });
 
     if (error) return { success: false, error: error.message };

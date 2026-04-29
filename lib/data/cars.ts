@@ -193,8 +193,35 @@ function getSupabase() {
     return createClient(url, key)
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-function catalogRowToCar(row: any): Car {
+type CarCatalogDbRow = {
+    id: string
+    make: string
+    model: string
+    variant: string | null
+    year: number | null
+    body_type: string | null
+    fuel_type: string | null
+    transmission: string | null
+    seating_capacity: number | null
+    price_min_paise: number | null
+    price_max_paise: number | null
+    fuel_efficiency?: string | null
+    mileage?: string | null
+    range_km?: number | null
+    image_url: string | null
+    source_url?: string | null
+    scraped_at?: string | null
+    is_active: boolean | null
+}
+
+function parseNullableNumber(value: string | number | null | undefined): number | null {
+    if (value == null) return null
+    if (typeof value === 'number') return Number.isFinite(value) ? value : null
+    const parsed = Number(value)
+    return Number.isFinite(parsed) ? parsed : null
+}
+
+function catalogRowToCar(row: CarCatalogDbRow): Car {
     const minPrice = Math.round((row.price_min_paise ?? 0) / 100)
     const maxPrice = Math.round((row.price_max_paise ?? 0) / 100)
     const normalizedBodyType = get4WCardekhoModelMeta(row.make, row.model)?.bodyType ?? row.body_type ?? 'Other'
@@ -223,7 +250,7 @@ function catalogRowToCar(row: any): Car {
             type: row.transmission ?? 'Manual',
         },
         performance: {
-            fuelEfficiency: row.fuel_efficiency ?? row.mileage ?? null,
+            fuelEfficiency: parseNullableNumber(row.fuel_efficiency ?? row.mileage),
             range: row.range_km ?? null,
         },
         dimensions: {

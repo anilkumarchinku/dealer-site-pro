@@ -12,13 +12,35 @@ interface Props {
     onSuccess: () => void
 }
 
+type ContactInfo = {
+    name: string
+    email: string
+    phone: string
+    address: string
+    city: string
+    state: string
+    postalCode: string
+    country: string
+}
+
+const CONTACT_FIELDS: Array<{
+    key: keyof Pick<ContactInfo, 'name' | 'email' | 'phone' | 'city'>
+    placeholder: string
+    type?: string
+}> = [
+    { key: 'name', placeholder: 'Full Name' },
+    { key: 'email', placeholder: 'Email', type: 'email' },
+    { key: 'phone', placeholder: 'Phone', type: 'tel' },
+    { key: 'city', placeholder: 'City' },
+]
+
 export default function PurchaseManagedDomainModal({ isOpen, onClose, dealerId, onSuccess }: Props) {
     const [step, setStep] = useState<'search' | 'contact' | 'confirm' | 'payment' | 'purchasing' | 'success'>('search')
     const [query, setQuery] = useState('')
     const [isSearching, setIsSearching] = useState(false)
     const [results, setResults] = useState<DomainAvailability[]>([])
     const [selectedDomain, setSelectedDomain] = useState<DomainAvailability | null>(null)
-    const [contactInfo, setContactInfo] = useState({
+    const [contactInfo, setContactInfo] = useState<ContactInfo>({
         name: '', email: '', phone: '',
         address: '', city: '', state: '', postalCode: '', country: 'IN',
     })
@@ -203,17 +225,12 @@ export default function PurchaseManagedDomainModal({ isOpen, onClose, dealerId, 
                             <h3 className="font-semibold">Contact Information (for WHOIS):</h3>
 
                             <div className="grid md:grid-cols-2 gap-4">
-                                {[
-                                    { key: 'name', placeholder: 'Full Name' },
-                                    { key: 'email', placeholder: 'Email', type: 'email' },
-                                    { key: 'phone', placeholder: 'Phone', type: 'tel' },
-                                    { key: 'city', placeholder: 'City' },
-                                ].map(({ key, placeholder, type = 'text' }) => (
+                                {CONTACT_FIELDS.map(({ key, placeholder, type = 'text' }) => (
                                     <input
                                         key={key}
                                         type={type}
                                         placeholder={placeholder}
-                                        value={(contactInfo as any)[key]}
+                                        value={contactInfo[key]}
                                         onChange={(e) => setContactInfo({ ...contactInfo, [key]: e.target.value })}
                                         className="px-4 py-2 border border-input bg-background rounded-xl focus:ring-2 focus:ring-violet-500 focus:outline-none"
                                     />

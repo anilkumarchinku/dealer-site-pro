@@ -30,11 +30,11 @@ const CATEGORY_BODY_TYPES: Record<string, string[]> = {
 
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
-
-const supabaseUrl   = process.env.NEXT_PUBLIC_SUPABASE_URL   ?? ''
-const supabaseAnon  = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ?? ''
+import { getOptionalEnv } from '@/lib/env'
 
 function getSupabase() {
+    const supabaseUrl = getOptionalEnv('NEXT_PUBLIC_SUPABASE_URL') ?? ''
+    const supabaseAnon = getOptionalEnv('NEXT_PUBLIC_SUPABASE_ANON_KEY') ?? ''
     if (!supabaseUrl || !supabaseAnon) return null
     return createClient(supabaseUrl, supabaseAnon)
 }

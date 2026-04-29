@@ -3,7 +3,15 @@
  * All functions use the admin client (bypasses RLS — auth enforced at API layer).
  */
 
-import { createAdminClient } from '@/lib/supabase-server'
+import {
+    DEFAULT_DB_PAGE_SIZE,
+    db,
+    dealerScopedActiveQuery,
+    getById,
+    insertAndReturnId,
+    runPagedQuery,
+    updateDealerScoped,
+} from '@/lib/db/query-helpers'
 import type {
     ThreeWheelerVehicle,
     ThreeWheelerUsedVehicle,
@@ -18,8 +26,7 @@ import type {
     ThreeWheelerServiceStatus,
 } from '@/lib/types/three-wheeler'
 
-const DEFAULT_PAGE_SIZE = 20
-const db = () => createAdminClient()
+const DEFAULT_PAGE_SIZE = DEFAULT_DB_PAGE_SIZE
 
 // ── New Inventory ─────────────────────────────────────────────
 
@@ -36,11 +43,7 @@ export async function getThreeWheelerVehicles(
         pageSize = DEFAULT_PAGE_SIZE,
     } = filters
 
-    let query = db()
-        .from('thw_vehicles')
-        .select('*', { count: 'exact' })
-        .eq('dealer_id', dealerId)
-        .eq('status', 'active')
+    let query = dealerScopedActiveQuery('thw_vehicles', dealerId)
 
     if (type)        query = query.eq('type', type)
     if (brand)       query = query.ilike('brand', `%${brand}%`)
@@ -62,40 +65,18 @@ export async function getThreeWheelerVehicles(
     const order = orderMap[sortBy] ?? orderMap.newest
     query = query.order(order.column, { ascending: order.asc })
 
-    const from = (page - 1) * pageSize
-    const { data, error, count } = await query.range(from, from + pageSize - 1)
-
-    if (error) {
-        console.error('[getThreeWheelerVehicles]', error.message)
-        return { vehicles: [], total: 0 }
-    }
-    return { vehicles: (data ?? []) as unknown as ThreeWheelerVehicle[], total: count ?? 0 }
+    return runPagedQuery<ThreeWheelerVehicle, 'vehicles'>(query, page, pageSize, 'vehicles', 'getThreeWheelerVehicles')
 }
 
 export async function getThreeWheelerVehicleById(id: string, dealerId?: string): Promise<ThreeWheelerVehicle | null> {
-    let query = db()
-        .from('thw_vehicles')
-        .select('*')
-        .eq('id', id)
-    if (dealerId) query = query.eq('dealer_id', dealerId)
-    const { data, error } = await query.single()
-    if (error) return null
-    return data as unknown as ThreeWheelerVehicle
+    return getById<ThreeWheelerVehicle>('thw_vehicles', id, dealerId)
 }
 
 export async function addThreeWheelerVehicle(
     dealerId: string,
     payload: Omit<ThreeWheelerVehiclePayload, 'dealer_id'>
 ): Promise<{ success: boolean; id?: string; error?: string }> {
-    const { data, error } = await db()
-        .from('thw_vehicles')
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        .insert({ ...payload, dealer_id: dealerId } as any)
-        .select('id')
-        .single()
-    if (error) return { success: false, error: error.message }
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    return { success: true, id: (data as any).id }
+    return insertAndReturnId('thw_vehicles', { ...payload, dealer_id: dealerId })
 }
 
 export async function updateThreeWheelerVehicle(
@@ -103,14 +84,7 @@ export async function updateThreeWheelerVehicle(
     dealerId: string,
     payload: Partial<ThreeWheelerVehiclePayload>
 ): Promise<{ success: boolean; error?: string }> {
-    const { error } = await db()
-        .from('thw_vehicles')
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        .update(payload as any)
-        .eq('id', id)
-        .eq('dealer_id', dealerId)
-    if (error) return { success: false, error: error.message }
-    return { success: true }
+    return updateDealerScoped('thw_vehicles', id, dealerId, payload)
 }
 
 export async function deleteThreeWheelerVehicle(
@@ -160,39 +134,18 @@ export async function getUsedThreeWheelers(
     const order = orderMap[sortBy] ?? orderMap.newest
     query = query.order(order.column, { ascending: order.asc })
 
-    const from = (page - 1) * pageSize
-    const { data, error, count } = await query.range(from, from + pageSize - 1)
-
-    if (error) {
-        console.error('[getUsedThreeWheelers]', error.message)
-        return { vehicles: [], total: 0 }
-    }
-    return { vehicles: (data ?? []) as ThreeWheelerUsedVehicle[], total: count ?? 0 }
+    return runPagedQuery<ThreeWheelerUsedVehicle, 'vehicles'>(query, page, pageSize, 'vehicles', 'getUsedThreeWheelers')
 }
 
 export async function getUsedThreeWheelerById(id: string, dealerId?: string): Promise<ThreeWheelerUsedVehicle | null> {
-    let query = db()
-        .from('thw_used_vehicles')
-        .select('*')
-        .eq('id', id)
-    if (dealerId) query = query.eq('dealer_id', dealerId)
-    const { data, error } = await query.single()
-    if (error) return null
-    return data as ThreeWheelerUsedVehicle
+    return getById<ThreeWheelerUsedVehicle>('thw_used_vehicles', id, dealerId)
 }
 
 export async function addUsedThreeWheeler(
     dealerId: string,
     payload: Omit<ThreeWheelerUsedVehiclePayload, 'dealer_id'>
 ): Promise<{ success: boolean; id?: string; error?: string }> {
-    const { data, error } = await db()
-        .from('thw_used_vehicles')
-        .insert({ ...payload, dealer_id: dealerId })
-        .select('id')
-        .single()
-    if (error) return { success: false, error: error.message }
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    return { success: true, id: (data as any).id }
+    return insertAndReturnId('thw_used_vehicles', { ...payload, dealer_id: dealerId })
 }
 
 export async function updateUsedThreeWheeler(
@@ -200,13 +153,7 @@ export async function updateUsedThreeWheeler(
     dealerId: string,
     payload: Partial<ThreeWheelerUsedVehiclePayload>
 ): Promise<{ success: boolean; error?: string }> {
-    const { error } = await db()
-        .from('thw_used_vehicles')
-        .update(payload)
-        .eq('id', id)
-        .eq('dealer_id', dealerId)
-    if (error) return { success: false, error: error.message }
-    return { success: true }
+    return updateDealerScoped('thw_used_vehicles', id, dealerId, payload)
 }
 
 export async function deleteUsedThreeWheeler(
@@ -221,14 +168,7 @@ export async function deleteUsedThreeWheeler(
 export async function createThreeWheelerLead(
     payload: Omit<ThreeWheelerLead, 'id' | 'created_at'>
 ): Promise<{ success: boolean; id?: string; error?: string }> {
-    const { data, error } = await db()
-        .from('thw_leads')
-        .insert(payload)
-        .select('id')
-        .single()
-    if (error) return { success: false, error: error.message }
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    return { success: true, id: (data as any).id }
+    return insertAndReturnId('thw_leads', payload)
 }
 
 export async function getThreeWheelerLeads(
@@ -244,14 +184,7 @@ export async function getThreeWheelerLeads(
 
     if (status) query = query.eq('status', status)
 
-    const from = (page - 1) * pageSize
-    const { data, error, count } = await query.range(from, from + pageSize - 1)
-
-    if (error) {
-        console.error('[getThreeWheelerLeads]', error.message)
-        return { leads: [], total: 0 }
-    }
-    return { leads: (data ?? []) as ThreeWheelerLead[], total: count ?? 0 }
+    return runPagedQuery<ThreeWheelerLead, 'leads'>(query, page, pageSize, 'leads', 'getThreeWheelerLeads')
 }
 
 export async function updateThreeWheelerLeadStatus(
@@ -259,13 +192,7 @@ export async function updateThreeWheelerLeadStatus(
     dealerId: string,
     status: ThreeWheelerLeadStatus
 ): Promise<{ success: boolean; error?: string }> {
-    const { error } = await db()
-        .from('thw_leads')
-        .update({ status })
-        .eq('id', id)
-        .eq('dealer_id', dealerId)
-    if (error) return { success: false, error: error.message }
-    return { success: true }
+    return updateDealerScoped('thw_leads', id, dealerId, { status })
 }
 
 // ── Service Bookings ──────────────────────────────────────────
@@ -273,14 +200,7 @@ export async function updateThreeWheelerLeadStatus(
 export async function createThreeWheelerServiceBooking(
     payload: Omit<ThreeWheelerServiceBooking, 'id' | 'created_at'>
 ): Promise<{ success: boolean; id?: string; error?: string }> {
-    const { data, error } = await db()
-        .from('thw_service_bookings')
-        .insert(payload)
-        .select('id')
-        .single()
-    if (error) return { success: false, error: error.message }
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    return { success: true, id: (data as any).id }
+    return insertAndReturnId('thw_service_bookings', payload)
 }
 
 export async function getThreeWheelerServiceBookings(
@@ -296,14 +216,7 @@ export async function getThreeWheelerServiceBookings(
 
     if (status) query = query.eq('status', status)
 
-    const from = (page - 1) * pageSize
-    const { data, error, count } = await query.range(from, from + pageSize - 1)
-
-    if (error) {
-        console.error('[getThreeWheelerServiceBookings]', error.message)
-        return { bookings: [], total: 0 }
-    }
-    return { bookings: (data ?? []) as ThreeWheelerServiceBooking[], total: count ?? 0 }
+    return runPagedQuery<ThreeWheelerServiceBooking, 'bookings'>(query, page, pageSize, 'bookings', 'getThreeWheelerServiceBookings')
 }
 
 export async function updateThreeWheelerServiceBookingStatus(
@@ -311,13 +224,7 @@ export async function updateThreeWheelerServiceBookingStatus(
     dealerId: string,
     status: ThreeWheelerServiceStatus
 ): Promise<{ success: boolean; error?: string }> {
-    const { error } = await db()
-        .from('thw_service_bookings')
-        .update({ status })
-        .eq('id', id)
-        .eq('dealer_id', dealerId)
-    if (error) return { success: false, error: error.message }
-    return { success: true }
+    return updateDealerScoped('thw_service_bookings', id, dealerId, { status })
 }
 
 // ── Payment Bookings ──────────────────────────────────────────
@@ -339,11 +246,11 @@ export async function createThreeWheelerBooking(
                 .select('*')
                 .eq('idempotency_key', payload.idempotency_key)
                 .single()
-            return { success: true, booking: existing as ThreeWheelerBooking }
+            return { success: true, booking: existing as unknown as ThreeWheelerBooking }
         }
         return { success: false, error: error.message }
     }
-    return { success: true, booking: data as ThreeWheelerBooking }
+    return { success: true, booking: data as unknown as ThreeWheelerBooking }
 }
 
 export async function updateThreeWheelerBookingPayment(
@@ -365,17 +272,11 @@ export async function getThreeWheelerBookings(
     page = 1,
     pageSize = DEFAULT_PAGE_SIZE
 ): Promise<{ bookings: ThreeWheelerBooking[]; total: number }> {
-    const from = (page - 1) * pageSize
-    const { data, error, count } = await db()
+    const query = db()
         .from('thw_bookings')
         .select('*', { count: 'exact' })
         .eq('dealer_id', dealerId)
         .order('created_at', { ascending: false })
-        .range(from, from + pageSize - 1)
 
-    if (error) {
-        console.error('[getThreeWheelerBookings]', error.message)
-        return { bookings: [], total: 0 }
-    }
-    return { bookings: (data ?? []) as ThreeWheelerBooking[], total: count ?? 0 }
+    return runPagedQuery<ThreeWheelerBooking, 'bookings'>(query, page, pageSize, 'bookings', 'getThreeWheelerBookings')
 }

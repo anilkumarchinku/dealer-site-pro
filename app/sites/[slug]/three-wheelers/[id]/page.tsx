@@ -11,7 +11,7 @@ import { EMICalculator } from "@/components/shared/EMICalculator"
 import { CityOnRoadPrice } from "@/components/three-wheelers/CityOnRoadPrice"
 import { FullSpecsSection } from "@/components/three-wheelers/FullSpecsSection"
 import { SimilarVehicles } from "@/components/three-wheelers/SimilarVehicles"
-import { generateTemplateConfig } from "@/lib/templates"
+import { generateTemplateConfig, type TemplateStyle } from "@/lib/templates"
 import type { ThreeWheelerVehicle, ThreeWheelerLeadType } from "@/lib/types/three-wheeler"
 import { ChevronLeft } from "lucide-react"
 import Link from "next/link"
@@ -51,8 +51,7 @@ export default function ThreeWheelerDetailPage() {
                 fetch(`/api/three-wheelers/${encodeURIComponent(id)}?slug=${encodeURIComponent(slug)}`),
             ])
             if (dealer) {
-                // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                const d = dealer as any
+                const d = dealer
                 setDealerId(d.id)
                 setDealerInfo({
                     logoUrl:       d.logo_url       ?? null,
@@ -70,8 +69,7 @@ export default function ThreeWheelerDetailPage() {
     const brandColor = useMemo(() => {
         if (!vehicle || !dealerInfo) return "#2563eb"
         try {
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            return generateTemplateConfig(vehicle.brand, dealerInfo.styleTemplate as any).brandColors.primary
+            return generateTemplateConfig(vehicle.brand, dealerInfo.styleTemplate as TemplateStyle).brandColors.primary
         } catch {
             return "#2563eb"
         }

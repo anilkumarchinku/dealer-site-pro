@@ -136,8 +136,7 @@ function AddVehicleTypeInner() {
                 is_primary:   i === 0,
                 vehicle_type: vehicleTypeVal,
             }))
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            const { error: brandErr } = await supabase.from("dealer_brands").insert(brandRows as any)
+            const { error: brandErr } = await supabase.from("dealer_brands").insert(brandRows)
             if (brandErr) throw brandErr
 
             // Update the correct segment flag on dealers row
@@ -145,8 +144,7 @@ function AddVehicleTypeInner() {
                 addType === "2w" ? { sells_two_wheelers:   true } :
                 addType === "3w" ? { sells_three_wheelers: true } :
                                    { sells_four_wheelers:  true }
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            const { error: dealerErr } = await (supabase as any)
+            const { error: dealerErr } = await supabase
                 .from("dealers")
                 .update(dealerUpdate)
                 .eq("id", dealerId)

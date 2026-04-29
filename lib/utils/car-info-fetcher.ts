@@ -28,29 +28,110 @@ export interface DetailedCarInfo {
     hyderabad_on_road_price?: number;
 }
 
-let carInfoCache: any = null;
-const brandFileCache: Record<string, any[]> = {};
+type FeatureEntry = string | { value?: string | null }
+type FeatureInput = string | FeatureEntry[]
+type ImageUrlEntry = { value: string }
+
+type MutableCarInfo = Partial<DetailedCarInfo> & {
+    [key: string]: unknown
+    ex_showroom_min?: number
+    ex_showroom_price_min?: number
+    ex_showroom_price?: number | string
+    ex_showroom_max?: number
+    ex_showroom_price_max?: number
+    ex_showroom_price_range?: number | string
+    hyderabad_on_road_price_inr?: number
+    default_hyderabad_on_road_price?: number | string
+    fuel?: string
+    displacement?: number
+    engine_displacement?: string
+    power?: string
+    torque?: string
+    mileage?: number | string
+    mileage_range?: string
+    boot_space?: number | string
+    ground_clearance?: number | string
+    length_mm?: number
+    width_mm?: number
+    height_mm?: number
+    pricing?: {
+        ex_showroom_min?: number
+        ex_showroom?: number
+        ex_showroom_price?: number
+        ex_showroom_max?: number
+        on_road_hyderabad?: number
+        hyderabad_on_road?: number
+    }
+    powertrain?: { fuel_type?: string; transmission?: string }
+    powertrain_details?: { fuel?: string; transmission?: string }
+    engine_specs?: { displacement?: string | number; power?: string | number; torque?: string | number }
+    image_urls?: ImageUrlEntry[]
+}
+
+type CarInfoData = Record<string, Record<string, unknown>>
+type BrandFileVariant = MutableCarInfo & { model?: string }
+type TwoWheelerVariant = {
+    name?: string
+    price?: string | number
+    price_paise?: number
+}
+type TwoWheelerVehicleInfo = {
+    make?: string
+    model?: string
+    fuel_type?: string
+    mileage?: string | number
+    range_km?: string | number
+    transmission?: string
+    engine_cc?: string | number
+    engine_displacement?: string | number
+    max_power?: string | number
+    max_torque?: string | number
+    torque?: string | number
+    features?: string[]
+    colors?: Array<{ hex?: string }>
+    year?: number
+    variants?: TwoWheelerVariant[]
+}
+type TwoWheelerBrandData = {
+    brand?: string
+    vehicles?: TwoWheelerVehicleInfo[]
+}
+
+function isRecord(value: unknown): value is Record<string, unknown> {
+    return !!value && typeof value === 'object' && !Array.isArray(value)
+}
+
+function hasModel(value: unknown): value is BrandFileVariant & { model: string } {
+    return isRecord(value) && typeof value.model === 'string'
+}
+
+function isImageUrlEntry(value: unknown): value is ImageUrlEntry {
+    return isRecord(value) && typeof value.value === 'string'
+}
+
+let carInfoCache: CarInfoData | null = null;
+const brandFileCache: Record<string, BrandFileVariant[]> = {};
 
 /** Load and flatten all variants from a brand-specific JSON file (e.g. /data/tata.json).
  *  These files have CardDekho image_urls that carInfo.json lacks. */
-async function loadBrandFileVariants(brandKey: string): Promise<any[]> {
+async function loadBrandFileVariants(brandKey: string): Promise<BrandFileVariant[]> {
     if (brandKey in brandFileCache) return brandFileCache[brandKey];
     try {
         const res = await fetch(`/data/${brandKey}.json`);
         if (!res.ok) { brandFileCache[brandKey] = []; return []; }
-        const raw = await res.json();
+        const raw: unknown = await res.json();
         // Format: array of arrays of variant objects, or object with numeric keys → arrays
-        const outer = Array.isArray(raw) ? raw : Object.values(raw);
-        const variants: any[] = [];
+        const outer = Array.isArray(raw) ? raw : isRecord(raw) ? Object.values(raw) : [];
+        const variants: BrandFileVariant[] = [];
         for (const outerItem of outer) {
             if (Array.isArray(outerItem)) {
                 for (const inner of outerItem) {
-                    if (Array.isArray(inner)) variants.push(...inner);
-                    else if (inner && inner.model) variants.push(inner);
+                    if (Array.isArray(inner)) variants.push(...inner.filter(hasModel));
+                    else if (hasModel(inner)) variants.push(inner);
                 }
-            } else if (outerItem && typeof outerItem === 'object') {
+            } else if (isRecord(outerItem)) {
                 for (const val of Object.values(outerItem)) {
-                    if (Array.isArray(val)) variants.push(...(val as any[]));
+                    if (Array.isArray(val)) variants.push(...val.filter(hasModel));
                 }
             }
         }
@@ -65,7 +146,7 @@ async function loadBrandFileVariants(brandKey: string): Promise<any[]> {
 /**
  * Fetch all car info data (with caching)
  */
-export async function fetchCarInfoData(): Promise<any> {
+export async function fetchCarInfoData(): Promise<CarInfoData | null> {
     if (carInfoCache) {
         return carInfoCache;
     }
@@ -78,7 +159,8 @@ export async function fetchCarInfoData(): Promise<any> {
             throw new Error(`Failed to fetch car info: ${response.status}`);
         }
 
-        carInfoCache = await response.json();
+        const raw: unknown = await response.json();
+        carInfoCache = isRecord(raw) ? raw as CarInfoData : null;
         return carInfoCache;
     } catch (error) {
         console.error('❌ Error fetching car info:', error);
@@ -100,20 +182,20 @@ export async function getDetailedCarInfo(
             const brandId = brandNameToId(make, '2w');
             const response = await fetch(`/data/2w/${brandId}.json`);
             if (response.ok) {
-                const data = await response.json();
-                if (data && data.vehicles) {
+                const data = await response.json() as TwoWheelerBrandData;
+                if (data && Array.isArray(data.vehicles)) {
                     const normalizedSearchModel = model.toLowerCase().trim();
 
                     // Find best match: prefer exact match, then longest matching model name
                     // (prevents "42" matching before "42 Bobber" when searching for "42 bobber")
-                    const candidates = (data.vehicles as any[]).filter((vh: any) => {
+                    const candidates = data.vehicles.filter((vh) => {
                         const m = (vh.model || '').toLowerCase().trim();
                         return m === normalizedSearchModel || m === normalizedSearchModel || normalizedSearchModel === m ||
                             (normalizedSearchModel.includes(m) && m.length > 3) ||
                             m.includes(normalizedSearchModel);
                     });
                     // Pick the candidate whose model name is closest in length to the search term
-                    const matchingVehicle = candidates.sort((a: any, b: any) => {
+                    const matchingVehicle = candidates.sort((a, b) => {
                         const aLen = (a.model || '').length;
                         const bLen = (b.model || '').length;
                         const searchLen = model.length;
@@ -121,14 +203,14 @@ export async function getDetailedCarInfo(
                     })[0] || null;
 
                     // Helper: strip unit suffix from a spec string, return just the number
-                    const parseNum = (val: any): number => {
+                    const parseNum = (val: unknown): number => {
                         if (typeof val === 'number') return val;
                         const s = String(val || '').replace(/[^\d.]/g, '');
                         return parseFloat(s) || 0;
                     };
 
                     // Helper: parse power — handles both "X bhp" and "X kW" (converts kW→bhp)
-                    const parsePower = (val: any): number => {
+                    const parsePower = (val: unknown): number => {
                         const str = String(val || '');
                         const num = parseNum(str);
                         if (!num) return 0;
@@ -136,17 +218,17 @@ export async function getDetailedCarInfo(
                         return num;
                     };
 
-                    if (matchingVehicle && matchingVehicle.variants && Array.isArray(matchingVehicle.variants)) {
+                    if (matchingVehicle && Array.isArray(matchingVehicle.variants)) {
                         const isEV = /electric/i.test(matchingVehicle.fuel_type || '');
                         const rawMileage = String(matchingVehicle.mileage || '').trim();
                         const mileageDisplay = rawMileage && rawMileage !== 'N/A'
                             ? rawMileage
-                            : (isEV ? (matchingVehicle.range_km || '') : '');
-                        return matchingVehicle.variants.map((v: any) => ({
+                            : (isEV ? String(matchingVehicle.range_km || '') : '');
+                        return matchingVehicle.variants.map((v) => ({
                             make: matchingVehicle.make || data.brand || make,
                             model: matchingVehicle.model || model,
-                            variant_name: v.name,
-                            ex_showroom_price_min_inr: typeof v.price === 'number' ? v.price : (v.price_paise ? Math.round(v.price_paise / 100) : parseInt((v.price||'').replace(/[^0-9]/g, '')) || 0),
+                            variant_name: v.name ?? '',
+                            ex_showroom_price_min_inr: typeof v.price === 'number' ? v.price : (v.price_paise ? Math.round(v.price_paise / 100) : parseInt(String(v.price || '').replace(/[^0-9]/g, '')) || 0),
                             fuel_type: isEV ? 'Electric' : 'Petrol',
                             transmission: matchingVehicle.transmission || 'Manual',
                             engine_displacement_cc: parseNum(matchingVehicle.engine_cc || matchingVehicle.engine_displacement),
@@ -156,7 +238,7 @@ export async function getDetailedCarInfo(
                             seating_capacity: 2,
                             key_features: matchingVehicle.features?.join(', ') || '',
                             safety_features: '',
-                            image_urls: matchingVehicle.colors?.map((c: any) => ({ value: c.hex })) || [],
+                            image_urls: matchingVehicle.colors?.map((c) => ({ value: c.hex ?? '' })) || [],
                             launch_year: matchingVehicle.year || undefined
                         }));
                     }
@@ -174,7 +256,7 @@ export async function getDetailedCarInfo(
 
     // Normalize brand key - handle hyphens, spaces, and common aliases
     const brandKey = make.toLowerCase().replace(/\s+/g, '_').replace(/-/g, '_');
-    let brandData = carData[brandKey] || null;
+    let brandData: Record<string, unknown> | null = carData[brandKey] || null;
     if (!brandData) {
         // Try common aliases
         const aliases = [
@@ -189,28 +271,26 @@ export async function getDetailedCarInfo(
     if (!brandData) return [];
 
     // Flatten the data structure - some brands have arrays, some have objects
-    let allCars: any[] = [];
+    let allCars: Array<BrandFileVariant & { model: string }> = [];
     for (const key in brandData) {
         const value = brandData[key];
         if (Array.isArray(value)) {
-            allCars = allCars.concat(value);
-        } else if (value && typeof value === 'object' && value.model) {
+            allCars = allCars.concat(value.filter(hasModel));
+        } else if (hasModel(value)) {
             allCars.push(value);
         }
     }
 
     // Filter by model name (exact match first, then partial match)
-    const matchingCars: DetailedCarInfo[] = [];
+    const matchingCars: Array<BrandFileVariant & { model: string }> = [];
     const normalizedSearchModel = model.toLowerCase().trim();
 
     for (const car of allCars) {
-        if (car && car.model) {
-            const normalizedCarModel = car.model.toLowerCase().trim();
-            if (normalizedCarModel === normalizedSearchModel) {
-                matchingCars.push(car);
-            } else if (normalizedCarModel.includes(normalizedSearchModel) || normalizedSearchModel.includes(normalizedCarModel)) {
-                matchingCars.push(car);
-            }
+        const normalizedCarModel = car.model.toLowerCase().trim();
+        if (normalizedCarModel === normalizedSearchModel) {
+            matchingCars.push(car);
+        } else if (normalizedCarModel.includes(normalizedSearchModel) || normalizedSearchModel.includes(normalizedCarModel)) {
+            matchingCars.push(car);
         }
     }
 
@@ -219,15 +299,13 @@ export async function getDetailedCarInfo(
     // Enrich image_urls from brand JSON files (they have CardDekho CDN images)
     const needsImages = result.some(r => !r.image_urls?.length);
     if (needsImages) {
-        const brandVariants = await loadBrandFileVariants(brandKey);
+        const brandVariants = (await loadBrandFileVariants(brandKey)).filter(hasModel);
         const modelMatch = brandVariants.find(v => {
-            const m = (v.model || '').toLowerCase();
+            const m = v.model.toLowerCase();
             return m === normalizedSearchModel || m.includes(normalizedSearchModel) || normalizedSearchModel.includes(m);
         });
-        if (modelMatch?.image_urls?.length > 0) {
-            const realImages = (modelMatch.image_urls as any[]).filter(
-                (u: any) => typeof u.value === 'string' && u.value.startsWith('http')
-            );
+        if (modelMatch && Array.isArray(modelMatch.image_urls) && modelMatch.image_urls.length > 0) {
+            const realImages = modelMatch.image_urls.filter(isImageUrlEntry).filter((u) => u.value.startsWith('http'));
             if (realImages.length > 0) {
                 result.forEach(r => { if (!r.image_urls?.length) r.image_urls = realImages; });
             }
@@ -241,8 +319,8 @@ export async function getDetailedCarInfo(
  * Normalize variant field names from different scraped formats to standard DetailedCarInfo fields.
  * Some brands use ex_showroom_min, displacement, fuel, power (string), etc.
  */
-function normalizeVariant(car: any): DetailedCarInfo {
-    const c = { ...car };
+function normalizeVariant(car: BrandFileVariant): DetailedCarInfo {
+    const c: MutableCarInfo = { ...car };
 
     // Price normalization
     if (c.ex_showroom_price_min_inr == null && c.ex_showroom_min != null) {
@@ -406,13 +484,13 @@ function normalizeVariant(car: any): DetailedCarInfo {
 /**
  * Parse key features - handles both string and array formats
  */
-export function parseKeyFeatures(features?: string | any[]): string[] {
+export function parseKeyFeatures(features?: FeatureInput): string[] {
     if (!features) return [];
 
     // If it's already an array (from carInfo.json with {value: "feature"} format)
     if (Array.isArray(features)) {
         return features
-            .map(f => typeof f === 'object' && f.value ? f.value : f)
+            .map(f => typeof f === 'object' ? f.value ?? '' : f)
             .filter(Boolean);
     }
 
@@ -427,13 +505,13 @@ export function parseKeyFeatures(features?: string | any[]): string[] {
 /**
  * Parse safety features - handles both string and array formats
  */
-export function parseSafetyFeatures(features?: string | any[]): string[] {
+export function parseSafetyFeatures(features?: FeatureInput): string[] {
     if (!features) return [];
 
     // If it's already an array (from carInfo.json with {value: "feature"} format)
     if (Array.isArray(features)) {
         return features
-            .map(f => typeof f === 'object' && f.value ? f.value : f)
+            .map(f => typeof f === 'object' ? f.value ?? '' : f)
             .filter(Boolean);
     }
 

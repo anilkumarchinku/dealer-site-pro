@@ -164,8 +164,7 @@ export async function fetchDealerBySlug(slug: string): Promise<DealerPublicData 
             const parentSlug = segments.slice(0, i).join('-')
             const parentDealer = await findDealerByExactSlug(supabase, parentSlug)
             if (parentDealer) {
-                // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                const vtype = (parentDealer as any).vehicle_type
+                const vtype = parentDealer.vehicle_type
                 if (vtype === 'two-wheeler' || vtype === 'three-wheeler') {
                     dealer = parentDealer
                     const brandSuffix = segments.slice(i).join('-')
@@ -247,7 +246,6 @@ export async function fetchDealerBySlug(slug: string): Promise<DealerPublicData 
         cyepro_api_key:  dealer.cyepro_api_key ?? null,
         logo_url:        dealer.logo_url       ?? null,
         hero_image_url:  dealer.hero_image_url ?? null,
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        vehicle_type:    (dealer as any).vehicle_type    ?? null,
+        vehicle_type:    dealer.vehicle_type    ?? null,
     }
 }

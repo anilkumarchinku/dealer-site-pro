@@ -26,6 +26,8 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server'
+import { getOptionalEnv } from '@/lib/env'
+import { ExternalApiError, externalApiFetch } from '@/lib/services/external-api-fetch'
 import { requireAuth, requireDealerOwnership } from '@/lib/supabase-server'
 
 interface PostBody {
@@ -52,13 +54,13 @@ function buildCaption(b: PostBody): string {
 
 // ── Facebook Page Post ────────────────────────────────────────────────────────
 async function postToFacebook(caption: string, imageUrl?: string): Promise<void> {
-    const pageId    = process.env.META_PAGE_ID
-    const pageToken = process.env.META_PAGE_ACCESS_TOKEN
+    const pageId    = getOptionalEnv('META_PAGE_ID')
+    const pageToken = getOptionalEnv('META_PAGE_ACCESS_TOKEN')
     if (!pageId || !pageToken) return
 
-    const endpoint = imageUrl
-        ? `https://graph.facebook.com/v18.0/${pageId}/photos`
-        : `https://graph.facebook.com/v18.0/${pageId}/feed`
+    const path = imageUrl
+        ? `/v18.0/${pageId}/photos`
+        : `/v18.0/${pageId}/feed`
 
     const body: Record<string, string> = {
         access_token: pageToken,
@@ -66,66 +68,113 @@ async function postToFacebook(caption: string, imageUrl?: string): Promise<void>
     }
     if (imageUrl) body.url = imageUrl
 
-    const res = await fetch(endpoint, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(body),
-    })
-    if (!res.ok) {
-        const err = await res.text()
-        console.error('[Social] Facebook post failed:', res.status, err)
+    try {
+        await externalApiFetch({
+            baseUrl: 'https://graph.facebook.com',
+            providerName: 'Meta',
+            path,
+            headers: { 'Content-Type': 'application/json' },
+            init: {
+                method: 'POST',
+                body: JSON.stringify(body),
+            },
+            responseType: 'void',
+        })
+    } catch (err) {
+        if (err instanceof ExternalApiError) {
+            console.error('[Social] Facebook post failed:', err.status, err.bodyText ?? err.message)
+            return
+        }
+        throw err
     }
 }
 
 // ── Instagram Business Post ───────────────────────────────────────────────────
 async function postToInstagram(caption: string, imageUrl?: string): Promise<void> {
-    const igUserId  = process.env.META_IG_USER_ID
-    const pageToken = process.env.META_PAGE_ACCESS_TOKEN
+    const igUserId  = getOptionalEnv('META_IG_USER_ID')
+    const pageToken = getOptionalEnv('META_PAGE_ACCESS_TOKEN')
     if (!igUserId || !pageToken || !imageUrl) return
 
     // Step 1: Create media container
-    const containerRes = await fetch(`https://graph.facebook.com/v18.0/${igUserId}/media`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-            image_url:    imageUrl,
-            caption,
-            access_token: pageToken,
-        }),
-    })
-    if (!containerRes.ok) { console.error('[Social] IG container failed'); return }
-    const { id: creationId } = await containerRes.json()
+    let creationId: string | undefined
+    try {
+        const media = await externalApiFetch<{ id?: string }>({
+            baseUrl: 'https://graph.facebook.com',
+            providerName: 'Meta',
+            path: `/v18.0/${igUserId}/media`,
+            headers: { 'Content-Type': 'application/json' },
+            init: {
+                method: 'POST',
+                body: JSON.stringify({
+                    image_url:    imageUrl,
+                    caption,
+                    access_token: pageToken,
+                }),
+            },
+        })
+        creationId = media.id
+    } catch {
+        console.error('[Social] IG container failed')
+        return
+    }
+
+    if (!creationId) {
+        console.error('[Social] IG container failed')
+        return
+    }
 
     // Step 2: Publish
-    const pubRes = await fetch(`https://graph.facebook.com/v18.0/${igUserId}/media_publish`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ creation_id: creationId, access_token: pageToken }),
-    })
-    if (!pubRes.ok) console.error('[Social] IG publish failed')
+    try {
+        await externalApiFetch({
+            baseUrl: 'https://graph.facebook.com',
+            providerName: 'Meta',
+            path: `/v18.0/${igUserId}/media_publish`,
+            headers: { 'Content-Type': 'application/json' },
+            init: {
+                method: 'POST',
+                body: JSON.stringify({ creation_id: creationId, access_token: pageToken }),
+            },
+            responseType: 'void',
+        })
+    } catch {
+        console.error('[Social] IG publish failed')
+    }
 }
 
 // ── Twitter/X Post ────────────────────────────────────────────────────────────
 async function postToTwitter(text: string): Promise<void> {
-    const bearerToken    = process.env.TWITTER_BEARER_TOKEN
-    const apiKey         = process.env.TWITTER_API_KEY
-    const apiSecret      = process.env.TWITTER_API_SECRET
-    const accessToken    = process.env.TWITTER_ACCESS_TOKEN
-    const accessSecret   = process.env.TWITTER_ACCESS_SECRET
+    const bearerToken    = getOptionalEnv('TWITTER_BEARER_TOKEN')
+    const apiKey         = getOptionalEnv('TWITTER_API_KEY')
+    const apiSecret      = getOptionalEnv('TWITTER_API_SECRET')
+    const accessToken    = getOptionalEnv('TWITTER_ACCESS_TOKEN')
+    const accessSecret   = getOptionalEnv('TWITTER_ACCESS_SECRET')
     if (!apiKey || !apiSecret || !accessToken || !accessSecret) return
 
     // OAuth 1.0a — simplified implementation using fetch
     // For production, use a proper OAuth library (e.g. 'oauth-1.0a')
     const tweet = text.length > 280 ? text.substring(0, 277) + '...' : text
-    const res = await fetch('https://api.twitter.com/2/tweets', {
-        method: 'POST',
-        headers: {
-            'Content-Type':  'application/json',
-            'Authorization': `Bearer ${bearerToken}`,  // App-only auth (read-only) — use OAuth 1.0a for posting
-        },
-        body: JSON.stringify({ text: tweet }),
-    })
-    if (!res.ok) console.error('[Social] Twitter post failed:', res.status)
+    try {
+        await externalApiFetch({
+            baseUrl: 'https://api.twitter.com',
+            providerName: 'Twitter',
+            path: '/2/tweets',
+            headers: {
+                'Content-Type':  'application/json',
+                'Authorization': `Bearer ${bearerToken}`,  // App-only auth (read-only) — use OAuth 1.0a for posting
+            },
+            init: {
+                method: 'POST',
+                body: JSON.stringify({ text: tweet }),
+            },
+            responseType: 'void',
+        })
+    } catch (err) {
+        if (err instanceof ExternalApiError) {
+            console.error('[Social] Twitter post failed:', err.status)
+            return
+        }
+        throw err
+    }
 }
 
 export async function POST(request: NextRequest) {
@@ -141,9 +190,9 @@ export async function POST(request: NextRequest) {
     if (ownershipError) return ownershipError
 
     // Only post if at least one platform is configured
-    const hasFB     = !!(process.env.META_PAGE_ID && process.env.META_PAGE_ACCESS_TOKEN)
-    const hasIG     = !!(process.env.META_IG_USER_ID && process.env.META_PAGE_ACCESS_TOKEN)
-    const hasTwitter = !!(process.env.TWITTER_API_KEY)
+    const hasFB     = !!(getOptionalEnv('META_PAGE_ID') && getOptionalEnv('META_PAGE_ACCESS_TOKEN'))
+    const hasIG     = !!(getOptionalEnv('META_IG_USER_ID') && getOptionalEnv('META_PAGE_ACCESS_TOKEN'))
+    const hasTwitter = !!getOptionalEnv('TWITTER_API_KEY')
 
     if (!hasFB && !hasIG && !hasTwitter) {
         return NextResponse.json({ success: true, skipped: true, message: 'No social platforms configured' })

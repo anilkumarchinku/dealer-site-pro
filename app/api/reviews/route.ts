@@ -11,16 +11,13 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server'
-import { createClient } from '@supabase/supabase-js'
-import { requireAuth } from '@/lib/supabase-server'
+import { getOptionalEnv } from '@/lib/env'
+import { createAdminClient, requireAuth } from '@/lib/supabase-server'
 import { rateLimitOrNull } from '@/lib/utils/rate-limiter'
 import { logger } from '@/lib/utils/logger'
 
 function getSupabase() {
-    return createClient(
-        process.env.NEXT_PUBLIC_SUPABASE_URL!,
-        process.env.SUPABASE_SERVICE_ROLE_KEY!
-    )
+    return createAdminClient()
 }
 
 // ── GET: fetch approved reviews for a dealer ─────────────────────────────────
@@ -44,11 +41,12 @@ export async function GET(request: NextRequest) {
         return NextResponse.json({ error: 'Failed to fetch reviews' }, { status: 500 })
     }
 
-    const avgRating = data.length
-        ? Math.round((data.reduce((s, r) => s + r.rating, 0) / data.length) * 10) / 10
+    const reviews = data ?? []
+    const avgRating = reviews.length
+        ? Math.round((reviews.reduce((s: number, r: { rating: number }) => s + r.rating, 0) / reviews.length) * 10) / 10
         : 0
 
-    return NextResponse.json({ reviews: data, avgRating, total: data.length })
+    return NextResponse.json({ reviews, avgRating, total: reviews.length })
 }
 
 // ── PATCH: approve a review (dealer dashboard) ───────────────────────────────
@@ -132,7 +130,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Auto-approve in dev / when env flag is set (for demo)
-    const autoApprove = process.env.NEXT_PUBLIC_AUTO_APPROVE_REVIEWS === 'true'
+    const autoApprove = getOptionalEnv('NEXT_PUBLIC_AUTO_APPROVE_REVIEWS') === 'true'
 
     const { error } = await supabase
         .from('dealer_reviews')

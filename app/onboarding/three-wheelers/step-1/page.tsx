@@ -156,8 +156,7 @@ export default function ThreeWheelerStep1Page() {
                 email:           formData.email,
                 gstin:           formData.gstin.toUpperCase(),
                 slug:            siteSlug,
-                // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                brands:          selectedBrands as any,
+                brands:          selectedBrands as unknown as import("@/lib/types").Brand[],
             });
             setStep(2);
             router.push("/onboarding/three-wheelers/step-2");

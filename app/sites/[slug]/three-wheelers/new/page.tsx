@@ -86,10 +86,8 @@ function threeWheelersToCars(vehicles: ThreeWheelerVehicle[]): Car[] {
         id: `${v.id}-v1`,
         name: v.variant || `${v.model} Standard`,
         price: priceINR ?? 0,
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        transmission: (v.transmission || 'Automatic') as any,
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        fuelType: fuelLabel as any,
+        transmission: v.transmission || 'Automatic',
+        fuelType: fuelLabel,
         keyFeatures: generate3WFeatures(v).slice(0, 3),
         isPopular: true,
       }],

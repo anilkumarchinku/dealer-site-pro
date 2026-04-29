@@ -7,17 +7,14 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
-import { createClient } from '@supabase/supabase-js';
+import { createAdminClient } from '@/lib/supabase-server';
 import { testDriveSchema, formatZodErrors } from '@/lib/validations/schemas';
 import { logger } from '@/lib/utils/logger';
 
 const UUID_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i
 
 function getSupabase() {
-    return createClient(
-        process.env.NEXT_PUBLIC_SUPABASE_URL!,
-        process.env.SUPABASE_SERVICE_ROLE_KEY!
-    );
+    return createAdminClient();
 }
 
 async function resolveVehicleId(

@@ -4,8 +4,17 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server';
-import type { CarFilters } from '@/lib/types/car';
+import type { BodyType, CarFilters, FuelType, Segment, TransmissionType } from '@/lib/types/car';
 import { getAllCars } from '@/lib/services/car-service';
+
+const carSortOptions = new Set<NonNullable<CarFilters['sortBy']>>([
+    'price_asc',
+    'price_desc',
+    'popularity',
+    'rating',
+    'launch_date',
+    'fuel_efficiency',
+])
 
 export async function GET(request: NextRequest) {
     try {
@@ -23,25 +32,25 @@ export async function GET(request: NextRequest) {
         // Body type filter
         const bodyType = searchParams.get('bodyType');
         if (bodyType) {
-            filters.bodyType = bodyType.split(',') as any;
+            filters.bodyType = bodyType.split(',') as BodyType[];
         }
 
         // Fuel type filter
         const fuelType = searchParams.get('fuelType');
         if (fuelType) {
-            filters.fuelType = fuelType.split(',') as any;
+            filters.fuelType = fuelType.split(',') as FuelType[];
         }
 
         // Transmission filter
         const transmission = searchParams.get('transmission');
         if (transmission) {
-            filters.transmission = transmission.split(',') as any;
+            filters.transmission = transmission.split(',') as TransmissionType[];
         }
 
         // Segment filter
         const segment = searchParams.get('segment');
         if (segment) {
-            filters.segment = segment.split(',') as any;
+            filters.segment = segment.split(',') as Segment[];
         }
 
         // Price range filter
@@ -68,8 +77,8 @@ export async function GET(request: NextRequest) {
 
         // Sorting
         const sortBy = searchParams.get('sortBy');
-        if (sortBy) {
-            filters.sortBy = sortBy as any;
+        if (sortBy && carSortOptions.has(sortBy as NonNullable<CarFilters['sortBy']>)) {
+            filters.sortBy = sortBy as NonNullable<CarFilters['sortBy']>;
         }
 
         // Pagination

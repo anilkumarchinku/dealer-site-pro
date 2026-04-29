@@ -1,6 +1,7 @@
 import { createHmac, timingSafeEqual } from "crypto"
 import { cookies } from "next/headers"
 import { NextResponse } from "next/server"
+import { getOptionalEnv } from "@/lib/env"
 
 export const ADMIN_SESSION_COOKIE = "dealer_site_admin_session"
 
@@ -15,22 +16,22 @@ function fromBase64Url(input: string): string {
 }
 
 function getSessionSecret(): string | null {
-    return process.env.ADMIN_SESSION_SECRET ?? process.env.ADMIN_PASSWORD ?? null
+    return getOptionalEnv("ADMIN_SESSION_SECRET") ?? getOptionalEnv("ADMIN_PASSWORD") ?? null
 }
 
 function getAllowedAdminEmails(): string[] {
-    return (process.env.NEXT_PUBLIC_ADMIN_EMAILS ?? "")
+    return (getOptionalEnv("NEXT_PUBLIC_ADMIN_EMAILS") ?? "")
         .split(",")
         .map((email) => email.trim().toLowerCase())
         .filter(Boolean)
 }
 
 export function getAdminUsername(): string {
-    return (process.env.ADMIN_USERNAME ?? "admin").trim()
+    return (getOptionalEnv("ADMIN_USERNAME") ?? "admin").trim()
 }
 
 export function validateAdminCredentials(username: string, password: string): boolean {
-    const configuredPassword = process.env.ADMIN_PASSWORD
+    const configuredPassword = getOptionalEnv("ADMIN_PASSWORD")
     if (!configuredPassword) return false
 
     const normalizedUsername = username.trim().toLowerCase()

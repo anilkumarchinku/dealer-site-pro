@@ -8,6 +8,7 @@
  */
 
 import type { Car, FuelType, TransmissionType } from '@/lib/types/car'
+import { ExternalApiError, externalApiFetch } from '@/lib/services/external-api-fetch'
 import { logger } from '@/lib/utils/logger'
 
 // ── Cyepro API types ──────────────────────────────────────────────────────────
@@ -56,11 +57,23 @@ export interface CyeproAggregations {
     years: { year: number; count: number }[]
 }
 
+type CyeproRawSearchResponse = Partial<CyeproSearchResponse> & {
+    data?: CyeproVehicle[]
+    results?: CyeproVehicle[]
+    content?: CyeproVehicle[]
+    total?: number
+    totalElements?: number
+    page?: number
+    size?: number
+}
+
 // ── Constants ─────────────────────────────────────────────────────────────────
 
 const BASE_URL    = 'https://api.cyepro.com'
 const SERVICE_ID  = '460'
 const TIME_ZONE   = 'Asia/Calcutta'
+const SEARCH_TIMEOUT_MS = 10_000
+const LEAD_TIMEOUT_MS = 5_000
 
 // Default search params for fetching all active inventory
 const DEFAULT_SEARCH: CyeproSearchBody = {
@@ -193,34 +206,18 @@ export async function fetchCyeproVehicles(
 
     try {
         logger.log('[Cyepro] Fetching vehicles...', { page: body.page, size: body.size })
-        const res = await fetch(
-            `${BASE_URL}/dynamicForms/search/vehicles/filterQueryApi`,
-            {
+        const rawData = await externalApiFetch<CyeproRawSearchResponse>({
+            baseUrl: BASE_URL,
+            providerName: 'Cyepro',
+            path: '/dynamicForms/search/vehicles/filterQueryApi',
+            headers: buildHeaders(apiKey),
+            init: {
                 method:  'POST',
-                headers: buildHeaders(apiKey),
                 body:    JSON.stringify(body),
                 cache:   'no-store',  // Don't cache — always fetch fresh data
-                signal:  AbortSignal.timeout(10_000),
             },
-        )
-
-        logger.log('[Cyepro] Response status:', res.status)
-
-        if (res.status === 401) {
-            logger.error('[Cyepro] Invalid API key (401)')
-            return null
-        }
-        if (res.status === 429) {
-            logger.error('[Cyepro] Rate limit reached (429)')
-            return null
-        }
-        if (!res.ok) {
-            const errorText = await res.text()
-            logger.error(`[Cyepro] Fetch failed: ${res.status}`, errorText)
-            return null
-        }
-
-        const rawData = await res.json()
+            timeoutMs: SEARCH_TIMEOUT_MS,
+        })
         logger.log('[Cyepro] Raw response keys:', Object.keys(rawData))
 
         // Handle different possible response formats from Cyepro API
@@ -238,6 +235,20 @@ export async function fetchCyeproVehicles(
         logger.log(`[Cyepro] Fetched ${data.vehicles.length} vehicles (total: ${data.totalCount})`)
         return data
     } catch (err) {
+        if (err instanceof ExternalApiError) {
+            if (err.status === 401) {
+                logger.error('[Cyepro] Invalid API key (401)')
+                return null
+            }
+            if (err.status === 429) {
+                logger.error('[Cyepro] Rate limit reached (429)')
+                return null
+            }
+            if (err.status) {
+                logger.error(`[Cyepro] Fetch failed: ${err.status}`, err.bodyText ?? err.message)
+                return null
+            }
+        }
         logger.error('[Cyepro] Network error:', err instanceof Error ? err.message : err)
         return null
     }
@@ -253,18 +264,17 @@ export async function fetchCyeproAggregations(
     if (!apiKey) return null
 
     try {
-        const res = await fetch(
-            `${BASE_URL}/dynamicForms/search/vehicles/aggregationsApi`,
-            {
+        return await externalApiFetch<CyeproAggregations>({
+            baseUrl: BASE_URL,
+            providerName: 'Cyepro',
+            path: '/dynamicForms/search/vehicles/aggregationsApi',
+            headers: buildHeaders(apiKey),
+            init: {
                 method:  'GET',
-                headers: buildHeaders(apiKey),
                 cache:   'no-store',
-                signal:  AbortSignal.timeout(10_000),
             },
-        )
-
-        if (!res.ok) return null
-        return (await res.json()) as CyeproAggregations
+            timeoutMs: SEARCH_TIMEOUT_MS,
+        })
     } catch {
         return null
     }
@@ -292,26 +302,31 @@ export async function forwardLeadToCyepro(
     if (!apiKey) return
 
     try {
-        const res = await fetch(`${BASE_URL}/dynamicForms/leads`, {
-            method:  'POST',
+        await externalApiFetch({
+            baseUrl: BASE_URL,
+            providerName: 'Cyepro',
+            path: '/dynamicForms/leads',
             headers: buildHeaders(apiKey),
-            body: JSON.stringify({
-                customerName:      payload.customerName,
-                customerMobile:    payload.customerPhone,
-                customerEmail:     payload.customerEmail ?? '',
-                vehicleInterest:   payload.vehicleName  ?? '',
-                remarks:           payload.message      ?? '',
-                leadSource:        payload.leadSource   ?? 'Website',
-            }),
-            signal:  AbortSignal.timeout(5_000),
+            init: {
+                method:  'POST',
+                body: JSON.stringify({
+                    customerName:      payload.customerName,
+                    customerMobile:    payload.customerPhone,
+                    customerEmail:     payload.customerEmail ?? '',
+                    vehicleInterest:   payload.vehicleName  ?? '',
+                    remarks:           payload.message      ?? '',
+                    leadSource:        payload.leadSource   ?? 'Website',
+                }),
+            },
+            timeoutMs: LEAD_TIMEOUT_MS,
         })
 
-        if (!res.ok) {
-            logger.warn(`[Cyepro] Lead forward failed: ${res.status}`)
-        } else {
-            logger.log('[Cyepro] Lead forwarded successfully')
-        }
+        logger.log('[Cyepro] Lead forwarded successfully')
     } catch (err) {
+        if (err instanceof ExternalApiError && err.status) {
+            logger.warn(`[Cyepro] Lead forward failed: ${err.status}`)
+            return
+        }
         logger.warn('[Cyepro] Lead forward error:', err instanceof Error ? err.message : err)
     }
 }

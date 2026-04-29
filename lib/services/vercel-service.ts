@@ -9,16 +9,18 @@
  *   GITHUB_ORG         — GitHub org/user (same as in github-service)
  */
 
+import { getOptionalEnv, getRequiredEnv } from '@/lib/env'
+import { externalApiFetch } from '@/lib/services/external-api-fetch'
+
 const BASE = 'https://api.vercel.com'
 
 function teamQuery() {
-    const teamId = process.env.VERCEL_TEAM_ID
+    const teamId = getOptionalEnv('VERCEL_TEAM_ID')
     return teamId ? `?teamId=${teamId}` : ''
 }
 
 function headers() {
-    const token = process.env.VERCEL_TOKEN
-    if (!token) throw new Error('VERCEL_TOKEN env var is not set')
+    const token = getRequiredEnv('VERCEL_TOKEN')
     return {
         Authorization: `Bearer ${token}`,
         'Content-Type': 'application/json',
@@ -26,27 +28,13 @@ function headers() {
 }
 
 async function vFetch(path: string, init?: RequestInit) {
-    const controller = new AbortController()
-    const timeout    = setTimeout(() => controller.abort(), 30_000)
-    try {
-        const res = await fetch(`${BASE}${path}`, {
-            ...init,
-            headers: headers(),
-            signal: controller.signal,
-        })
-        if (!res.ok) {
-            const body = await res.text()
-            throw new Error(`Vercel API ${path} → ${res.status}: ${body}`)
-        }
-        return res.json()
-    } catch (err) {
-        if ((err as Error).name === 'AbortError') {
-            throw new Error(`Vercel API ${path} timed out after 30s`)
-        }
-        throw err
-    } finally {
-        clearTimeout(timeout)
-    }
+    return externalApiFetch({
+        baseUrl: BASE,
+        providerName: 'Vercel',
+        path,
+        headers: headers(),
+        init,
+    })
 }
 
 // ── Types ─────────────────────────────────────────────────────────────────────
@@ -96,8 +84,7 @@ export async function createVercelProject(
         // Not found — create it
     }
 
-    const org = process.env.GITHUB_ORG
-    if (!org) throw new Error('GITHUB_ORG env var is not set')
+    const org = getRequiredEnv('GITHUB_ORG')
 
     const data = await vFetch(`/v10/projects${q}`, {
         method: 'POST',
@@ -167,8 +154,7 @@ export async function setProjectEnvVars(
  */
 export async function triggerDeployment(dealerSlug: string): Promise<VercelDeployment> {
     const q    = teamQuery()
-    const org  = process.env.GITHUB_ORG
-    if (!org) throw new Error('GITHUB_ORG env var is not set')
+    const org  = getRequiredEnv('GITHUB_ORG')
 
     const data = await vFetch(`/v13/deployments${q}`, {
         method: 'POST',
@@ -258,8 +244,7 @@ export async function deleteProject(dealerSlug: string): Promise<void> {
  */
 export async function registerDomainOnMainProject(domain: string): Promise<VercelDomain> {
     const q          = teamQuery()
-    const projectId  = process.env.VERCEL_MAIN_PROJECT_ID
-    if (!projectId) throw new Error('VERCEL_MAIN_PROJECT_ID env var is not set')
+    const projectId  = getRequiredEnv('VERCEL_MAIN_PROJECT_ID')
 
     const data = await vFetch(`/v10/projects/${projectId}/domains${q}`, {
         method: 'POST',
@@ -274,8 +259,7 @@ export async function registerDomainOnMainProject(domain: string): Promise<Verce
  */
 export async function removeDomainFromMainProject(domain: string): Promise<void> {
     const q         = teamQuery()
-    const projectId = process.env.VERCEL_MAIN_PROJECT_ID
-    if (!projectId) throw new Error('VERCEL_MAIN_PROJECT_ID env var is not set')
+    const projectId = getRequiredEnv('VERCEL_MAIN_PROJECT_ID')
 
     await vFetch(`/v10/projects/${projectId}/domains/${encodeURIComponent(domain)}${q}`, {
         method: 'DELETE',
@@ -292,13 +276,12 @@ export async function getDomainVerification(domain: string): Promise<{
     verification: { type: string; domain: string; value: string }[]
 }> {
     const q         = teamQuery()
-    const projectId = process.env.VERCEL_MAIN_PROJECT_ID
-    if (!projectId) throw new Error('VERCEL_MAIN_PROJECT_ID env var is not set')
+    const projectId = getRequiredEnv('VERCEL_MAIN_PROJECT_ID')
 
     const data = await vFetch(`/v10/projects/${projectId}/domains/${encodeURIComponent(domain)}${q}`)
     return {
         verified:     (data as { verified: boolean }).verified ?? false,
-        cname:        process.env.NEXT_PUBLIC_CNAME_TARGET ?? 'cname.vercel-dns.com',
+        cname:        getOptionalEnv('NEXT_PUBLIC_CNAME_TARGET') ?? 'cname.vercel-dns.com',
         verification: (data as { verification?: { type: string; domain: string; value: string }[] }).verification ?? [],
     }
 }

@@ -145,8 +145,7 @@ export default function DashboardPage() {
         try {
             await supabase.from("dealer_brands").delete().eq("dealer_id", dealerId);
             if (selectedBrands.length > 0) {
-                // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                await (supabase.from("dealer_brands") as any).insert(
+                await supabase.from("dealer_brands").insert(
                     selectedBrands.map((name, i) => ({
                         dealer_id:  dealerId,
                         brand_name: name,

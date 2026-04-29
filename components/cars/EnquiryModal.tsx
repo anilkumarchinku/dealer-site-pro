@@ -306,7 +306,7 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
                                 </div>
 
                                 {/* Mileage */}
-                                {(aggregatedSpecs?.mileages || detailedVariant?.mileage_kmpl_or_ev_range || (detailedVariant as any)?.mileage_kmpl || car.performance?.fuelEfficiency) && (
+                                {(aggregatedSpecs?.mileages || detailedVariant?.mileage_kmpl_or_ev_range || detailedVariant?.mileage_kmpl || car.performance?.fuelEfficiency) && (
                                     <div className="flex items-start gap-3 p-3 bg-white border border-gray-100 rounded-lg">
                                         <div className="w-10 h-10 rounded-lg bg-white shadow-sm flex items-center justify-center flex-shrink-0">
                                             <Zap className="w-5 h-5 text-amber-600" />
@@ -314,9 +314,9 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
                                         <div>
                                             <p className="text-xs text-gray-600 uppercase tracking-wide">Mileage</p>
                                             <p className="text-sm font-semibold text-gray-900">
-                                                {aggregatedSpecs?.mileages ? `${aggregatedSpecs.mileages} km/l` :
+                                                    {aggregatedSpecs?.mileages ? `${aggregatedSpecs.mileages} km/l` :
                                                     detailedVariant?.mileage_kmpl_or_ev_range ||
-                                                    ((detailedVariant as any)?.mileage_kmpl ? `${(detailedVariant as any).mileage_kmpl} km/l` : null) ||
+                                                    (detailedVariant?.mileage_kmpl ? `${detailedVariant.mileage_kmpl} km/l` : null) ||
                                                     (car.performance?.fuelEfficiency ? `${car.performance.fuelEfficiency} km/l` : '')}
                                             </p>
                                         </div>

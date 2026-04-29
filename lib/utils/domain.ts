@@ -8,8 +8,10 @@
  *                               "false" → {BASE_DOMAIN}/sites/{slug}  (default)
  */
 
-const BASE_DOMAIN   = process.env.NEXT_PUBLIC_BASE_DOMAIN   ?? 'dealersitepro.com'
-const USE_SUBDOMAIN = process.env.NEXT_PUBLIC_USE_SUBDOMAIN === 'true'
+import { getOptionalEnv } from '@/lib/env'
+
+const BASE_DOMAIN   = getOptionalEnv('NEXT_PUBLIC_BASE_DOMAIN') ?? 'dealersitepro.com'
+const USE_SUBDOMAIN = getOptionalEnv('NEXT_PUBLIC_USE_SUBDOMAIN') === 'true'
 
 /**
  * Returns the full dealer site URL for a given slug.

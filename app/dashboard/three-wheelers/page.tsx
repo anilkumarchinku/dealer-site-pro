@@ -66,8 +66,7 @@ export default function ThreeWheelersDashboardPage() {
             .eq("dealer_id", dealerId)
             .eq("vehicle_type", "3w")
             .order("is_primary", { ascending: false })
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            .then(({ data: rows }: { data: any[] | null }) => {
+            .then(({ data: rows }) => {
                 const names = rows?.map((r: { brand_name: string }) => r.brand_name) ?? []
                 setBrands(names)
             })
@@ -125,8 +124,7 @@ export default function ThreeWheelersDashboardPage() {
                 .eq("dealer_id", dealerId)
                 .eq("vehicle_type", "3w")
             if (selected.length > 0) {
-                // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                await (supabase.from("dealer_brands") as any).insert(
+                await supabase.from("dealer_brands").insert(
                     selected.map((name, i) => ({
                         dealer_id:    dealerId,
                         brand_name:   name,

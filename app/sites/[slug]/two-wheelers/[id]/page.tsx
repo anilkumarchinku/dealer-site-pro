@@ -11,7 +11,7 @@ import { BookingModal } from "@/components/two-wheelers/BookingModal"
 import { OnRoadPriceDialog } from "@/components/two-wheelers/OnRoadPriceDialog"
 import { FullSpecsSection } from "@/components/two-wheelers/FullSpecsSection"
 import { SimilarVehicles } from "@/components/two-wheelers/SimilarVehicles"
-import { generateTemplateConfig } from "@/lib/templates"
+import { generateTemplateConfig, type TemplateStyle } from "@/lib/templates"
 import type { TwoWheelerVehicle, TwoWheelerLeadType } from "@/lib/types/two-wheeler"
 import { ChevronLeft, MapPin } from "lucide-react"
 import Link from "next/link"
@@ -53,8 +53,7 @@ export default function VehicleDetailPage() {
                 fetch(`/api/two-wheelers/${encodeURIComponent(id)}?slug=${encodeURIComponent(slug)}`),
             ])
             if (dealer) {
-                // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                const d = dealer as any
+                const d = dealer
                 setDealerId(d.id)
                 setDealerInfo({
                     logoUrl:       d.logo_url       ?? null,
@@ -77,8 +76,7 @@ export default function VehicleDetailPage() {
     const brandColor = useMemo(() => {
         if (!vehicle || !dealerInfo) return "#2563eb"
         try {
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            return generateTemplateConfig(vehicle.brand, dealerInfo.styleTemplate as any).brandColors.primary
+            return generateTemplateConfig(vehicle.brand, dealerInfo.styleTemplate as TemplateStyle).brandColors.primary
         } catch {
             return "#2563eb"
         }

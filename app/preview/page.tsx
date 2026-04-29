@@ -44,6 +44,13 @@ import { brandNameToId } from "@/lib/utils/brand-model-images";
 import { brandToUrlSlug } from "@/lib/utils/domain";
 import { dedupeByBrandModel } from "@/lib/utils/listing-dedupe";
 
+type AutomotiveBrandConfig = {
+    primary: string
+    secondary?: string
+    gradient?: string
+    hover?: string
+}
+
 // Map 2W vehicles to the Car shape expected by 4W templates
 function twoWheelersToCars(vehicles: TwoWheelerVehicle[]): import("@/lib/types/car").Car[] {
     return vehicles.map(v => ({
@@ -84,10 +91,8 @@ function twoWheelersToCars(vehicles: TwoWheelerVehicle[]): import("@/lib/types/c
                 id: `${v.id}-var-${i}`,
                 name: av.name,
                 price: Math.round(av.price_paise / 100),
-                // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                transmission: (v.transmission || 'Manual') as any,
-                // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                fuelType: (v.fuel_type === 'electric' ? 'Electric' : 'Petrol') as any,
+                transmission: v.transmission || 'Manual',
+                fuelType: v.fuel_type === 'electric' ? 'Electric' : 'Petrol',
                 keyFeatures: v.features ?? [],
                 isPopular: i === 0,
             }))
@@ -159,7 +164,7 @@ function PreviewContent() {
     const templateId = (urlTemplate || data.styleTemplate || 'modern') as TemplateStyle;
 
     // Get brand-specific colors
-    const brandConfig = automotiveBrands[primaryBrand as keyof typeof automotiveBrands] as any || automotiveBrands['Toyota'];
+    const brandConfig = (automotiveBrands as unknown as Record<string, AutomotiveBrandConfig>)[primaryBrand] || automotiveBrands['Toyota'];
     const brandColors = {
         primary: brandConfig.primary,
         secondary: brandConfig.secondary || brandConfig.primary,
@@ -194,7 +199,7 @@ function PreviewContent() {
             : `/sites/${effectiveDealerSlug}`;
     }, [effectiveDealerSlug, is2W, is3W, urlBrand]);
 
-    const [displayCars, setDisplayCars] = useState<any[]>([]);
+    const [displayCars, setDisplayCars] = useState<Car[]>([]);
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
@@ -246,7 +251,7 @@ function PreviewContent() {
     }, [primaryBrand, dealerId, is2W, is3W]);
 
     // Page load animation
-    const { showAnimation, isReady } = useTemplatePageAnimation(primaryBrand as any, templateId);
+    const { showAnimation, isReady } = useTemplatePageAnimation(primaryBrand, templateId);
 
     // Preview banner state
     const [isBannerExpanded, setIsBannerExpanded] = useState(false);
@@ -367,7 +372,7 @@ function PreviewContent() {
             {/* Page Load Animation */}
             {showAnimation && (
                 <TemplatePageLoader
-                    brand={primaryBrand as any}
+                    brand={primaryBrand}
                     template={templateId}
                 />
             )}

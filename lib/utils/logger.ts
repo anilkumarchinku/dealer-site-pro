@@ -10,29 +10,25 @@ import * as Sentry from '@sentry/nextjs'
 
 const isProd = process.env.NODE_ENV === 'production'
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-function toError(args: any[]): Error | undefined {
+function toError(args: unknown[]): Error | undefined {
     const last = args[args.length - 1]
     if (last instanceof Error) return last
     return undefined
 }
 
 export const logger = {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    log: (...args: any[]) => {
+    log: (...args: unknown[]) => {
         if (!isProd) console.log(...args) // eslint-disable-line no-console
     },
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    warn: (...args: any[]) => {
+    warn: (...args: unknown[]) => {
         console.warn(...args) // eslint-disable-line no-console
         if (isProd) {
             Sentry.captureMessage(args.map(String).join(' '), 'warning')
         }
     },
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    error: (...args: any[]) => {
+    error: (...args: unknown[]) => {
         console.error(...args) // eslint-disable-line no-console
         if (isProd) {
             const err = toError(args)

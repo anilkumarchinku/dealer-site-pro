@@ -16,14 +16,15 @@
  */
 
 import { NextResponse } from 'next/server'
+import { getOptionalEnv } from '@/lib/env'
 
 // ── Redis path ─────────────────────────────────────────────────────────────────
 
 // Build the Redis client synchronously so it's ready on the very first request
 // (avoids the race condition where an async Promise hadn't resolved on cold start).
 function buildRedisRatelimit() {
-    const url   = process.env.UPSTASH_REDIS_REST_URL
-    const token = process.env.UPSTASH_REDIS_REST_TOKEN
+    const url   = getOptionalEnv('UPSTASH_REDIS_REST_URL')
+    const token = getOptionalEnv('UPSTASH_REDIS_REST_TOKEN')
     if (!url || !token) return null
 
     try {

@@ -5,7 +5,15 @@
  * and createRouteClient() for user-scoped reads.
  */
 
-import { createAdminClient } from '@/lib/supabase-server'
+import {
+    DEFAULT_DB_PAGE_SIZE,
+    db,
+    dealerScopedActiveQuery,
+    getById,
+    insertAndReturnId,
+    runPagedQuery,
+    updateDealerScoped,
+} from '@/lib/db/query-helpers'
 import type {
     TwoWheelerVehicle,
     TwoWheelerUsedVehicle,
@@ -28,11 +36,7 @@ import type {
 
 // ── Helpers ───────────────────────────────────────────────────
 
-function db() {
-    return createAdminClient()
-}
-
-const DEFAULT_PAGE_SIZE = 20
+const DEFAULT_PAGE_SIZE = DEFAULT_DB_PAGE_SIZE
 
 // ── tw_vehicles — New 2W Inventory ───────────────────────────
 
@@ -52,14 +56,7 @@ export async function getTwoWheelerVehicles(
         pageSize = DEFAULT_PAGE_SIZE,
     } = filters
 
-    const from = (page - 1) * pageSize
-    const to   = from + pageSize - 1
-
-    let query = db()
-        .from('tw_vehicles')
-        .select('*', { count: 'exact' })
-        .eq('dealer_id', dealerId)
-        .eq('status', 'active')
+    let query = dealerScopedActiveQuery('tw_vehicles', dealerId)
 
     if (type)        query = query.eq('type', type)
     if (brand)       query = query.ilike('brand', `%${brand}%`)
@@ -73,49 +70,21 @@ export async function getTwoWheelerVehicles(
     else if (sortBy === 'views') query = query.order('views', { ascending: false })
     else                         query = query.order('created_at', { ascending: false })
 
-    const { data, error, count } = await query.range(from, to)
-
-    if (error) {
-        console.error('[getTwoWheelerVehicles]', error.message)
-        return { vehicles: [], total: 0 }
-    }
-    return { vehicles: (data ?? []) as unknown as TwoWheelerVehicle[], total: count ?? 0 }
+    return runPagedQuery<TwoWheelerVehicle, 'vehicles'>(query, page, pageSize, 'vehicles', 'getTwoWheelerVehicles')
 }
 
 export async function getTwoWheelerVehicleById(
     id: string,
     dealerId?: string
 ): Promise<TwoWheelerVehicle | null> {
-    let query = db()
-        .from('tw_vehicles')
-        .select('*')
-        .eq('id', id)
-    if (dealerId) query = query.eq('dealer_id', dealerId)
-    const { data, error } = await query.single()
-
-    if (error) {
-        console.error('[getTwoWheelerVehicleById]', error.message)
-        return null
-    }
-    return data as unknown as TwoWheelerVehicle
+    return getById<TwoWheelerVehicle>('tw_vehicles', id, dealerId, 'getTwoWheelerVehicleById')
 }
 
 export async function addTwoWheelerVehicle(
     dealerId: string,
     payload: Omit<AddTwoWheelerVehiclePayload, 'dealer_id'>
 ): Promise<{ success: boolean; id?: string; error?: string }> {
-    const { data, error } = await db()
-        .from('tw_vehicles')
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        .insert({ ...payload, dealer_id: dealerId, status: 'active', views: 0 } as any)
-        .select('id')
-        .single()
-
-    if (error) {
-        console.error('[addTwoWheelerVehicle]', error.message)
-        return { success: false, error: error.message }
-    }
-    return { success: true, id: data.id }
+    return insertAndReturnId('tw_vehicles', { ...payload, dealer_id: dealerId, status: 'active', views: 0 }, 'addTwoWheelerVehicle')
 }
 
 export async function updateTwoWheelerVehicle(
@@ -123,35 +92,14 @@ export async function updateTwoWheelerVehicle(
     dealerId: string,
     payload: Partial<Omit<TwoWheelerVehicle, 'id' | 'dealer_id' | 'created_at' | 'updated_at'>>
 ): Promise<{ success: boolean; error?: string }> {
-    const { error } = await db()
-        .from('tw_vehicles')
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        .update(payload as any)
-        .eq('id', id)
-        .eq('dealer_id', dealerId)
-
-    if (error) {
-        console.error('[updateTwoWheelerVehicle]', error.message)
-        return { success: false, error: error.message }
-    }
-    return { success: true }
+    return updateDealerScoped('tw_vehicles', id, dealerId, payload, 'updateTwoWheelerVehicle')
 }
 
 export async function deleteTwoWheelerVehicle(
     id: string,
     dealerId: string
 ): Promise<{ success: boolean; error?: string }> {
-    const { error } = await db()
-        .from('tw_vehicles')
-        .update({ status: 'inactive' })
-        .eq('id', id)
-        .eq('dealer_id', dealerId)
-
-    if (error) {
-        console.error('[deleteTwoWheelerVehicle]', error.message)
-        return { success: false, error: error.message }
-    }
-    return { success: true }
+    return updateDealerScoped('tw_vehicles', id, dealerId, { status: 'inactive' }, 'deleteTwoWheelerVehicle')
 }
 
 export async function incrementTwoWheelerViews(id: string): Promise<void> {
@@ -177,9 +125,6 @@ export async function getUsedTwoWheelers(
         pageSize = DEFAULT_PAGE_SIZE,
     } = filters
 
-    const from = (page - 1) * pageSize
-    const to   = from + pageSize - 1
-
     let query = db()
         .from('tw_used_vehicles')
         .select('*', { count: 'exact' })
@@ -199,48 +144,21 @@ export async function getUsedTwoWheelers(
     else if (sortBy === 'km_asc')     query = query.order('km_driven', { ascending: true })
     else                              query = query.order('created_at', { ascending: false })
 
-    const { data, error, count } = await query.range(from, to)
-
-    if (error) {
-        console.error('[getUsedTwoWheelers]', error.message)
-        return { vehicles: [], total: 0 }
-    }
-    return { vehicles: (data ?? []) as TwoWheelerUsedVehicle[], total: count ?? 0 }
+    return runPagedQuery<TwoWheelerUsedVehicle, 'vehicles'>(query, page, pageSize, 'vehicles', 'getUsedTwoWheelers')
 }
 
 export async function getUsedTwoWheelerById(
     id: string,
     dealerId?: string
 ): Promise<TwoWheelerUsedVehicle | null> {
-    let query = db()
-        .from('tw_used_vehicles')
-        .select('*')
-        .eq('id', id)
-    if (dealerId) query = query.eq('dealer_id', dealerId)
-    const { data, error } = await query.single()
-
-    if (error) {
-        console.error('[getUsedTwoWheelerById]', error.message)
-        return null
-    }
-    return data as TwoWheelerUsedVehicle
+    return getById<TwoWheelerUsedVehicle>('tw_used_vehicles', id, dealerId, 'getUsedTwoWheelerById')
 }
 
 export async function addUsedTwoWheeler(
     dealerId: string,
     payload: Omit<AddTwoWheelerUsedVehiclePayload, 'dealer_id'>
 ): Promise<{ success: boolean; id?: string; error?: string }> {
-    const { data, error } = await db()
-        .from('tw_used_vehicles')
-        .insert({ ...payload, dealer_id: dealerId, status: 'available' })
-        .select('id')
-        .single()
-
-    if (error) {
-        console.error('[addUsedTwoWheeler]', error.message)
-        return { success: false, error: error.message }
-    }
-    return { success: true, id: data.id }
+    return insertAndReturnId('tw_used_vehicles', { ...payload, dealer_id: dealerId, status: 'available' }, 'addUsedTwoWheeler')
 }
 
 export async function updateUsedTwoWheeler(
@@ -248,34 +166,14 @@ export async function updateUsedTwoWheeler(
     dealerId: string,
     payload: Partial<Omit<TwoWheelerUsedVehicle, 'id' | 'dealer_id' | 'created_at' | 'updated_at'>>
 ): Promise<{ success: boolean; error?: string }> {
-    const { error } = await db()
-        .from('tw_used_vehicles')
-        .update(payload)
-        .eq('id', id)
-        .eq('dealer_id', dealerId)
-
-    if (error) {
-        console.error('[updateUsedTwoWheeler]', error.message)
-        return { success: false, error: error.message }
-    }
-    return { success: true }
+    return updateDealerScoped('tw_used_vehicles', id, dealerId, payload, 'updateUsedTwoWheeler')
 }
 
 export async function deleteUsedTwoWheeler(
     id: string,
     dealerId: string
 ): Promise<{ success: boolean; error?: string }> {
-    const { error } = await db()
-        .from('tw_used_vehicles')
-        .update({ status: 'sold' })
-        .eq('id', id)
-        .eq('dealer_id', dealerId)
-
-    if (error) {
-        console.error('[deleteUsedTwoWheeler]', error.message)
-        return { success: false, error: error.message }
-    }
-    return { success: true }
+    return updateDealerScoped('tw_used_vehicles', id, dealerId, { status: 'sold' }, 'deleteUsedTwoWheeler')
 }
 
 // ── tw_leads ──────────────────────────────────────────────────
@@ -283,17 +181,7 @@ export async function deleteUsedTwoWheeler(
 export async function createTwoWheelerLead(
     payload: CreateTwoWheelerLeadPayload
 ): Promise<{ success: boolean; id?: string; error?: string }> {
-    const { data, error } = await db()
-        .from('tw_leads')
-        .insert({ ...payload, status: 'new' })
-        .select('id')
-        .single()
-
-    if (error) {
-        console.error('[createTwoWheelerLead]', error.message)
-        return { success: false, error: error.message }
-    }
-    return { success: true, id: data.id }
+    return insertAndReturnId('tw_leads', { ...payload, status: 'new' }, 'createTwoWheelerLead')
 }
 
 export async function getTwoWheelerLeads(
@@ -301,8 +189,6 @@ export async function getTwoWheelerLeads(
     filters: TwoWheelerLeadFilters = {}
 ): Promise<{ leads: TwoWheelerLead[]; total: number }> {
     const { leadType, status, page = 1, pageSize = DEFAULT_PAGE_SIZE } = filters
-    const from = (page - 1) * pageSize
-    const to   = from + pageSize - 1
 
     let query = db()
         .from('tw_leads')
@@ -313,13 +199,7 @@ export async function getTwoWheelerLeads(
     if (leadType) query = query.eq('lead_type', leadType)
     if (status)   query = query.eq('status', status)
 
-    const { data, error, count } = await query.range(from, to)
-
-    if (error) {
-        console.error('[getTwoWheelerLeads]', error.message)
-        return { leads: [], total: 0 }
-    }
-    return { leads: (data ?? []) as TwoWheelerLead[], total: count ?? 0 }
+    return runPagedQuery<TwoWheelerLead, 'leads'>(query, page, pageSize, 'leads', 'getTwoWheelerLeads')
 }
 
 export async function updateTwoWheelerLeadStatus(
@@ -327,17 +207,7 @@ export async function updateTwoWheelerLeadStatus(
     dealerId: string,
     status: TwoWheelerLeadStatus
 ): Promise<{ success: boolean; error?: string }> {
-    const { error } = await db()
-        .from('tw_leads')
-        .update({ status })
-        .eq('id', id)
-        .eq('dealer_id', dealerId)
-
-    if (error) {
-        console.error('[updateTwoWheelerLeadStatus]', error.message)
-        return { success: false, error: error.message }
-    }
-    return { success: true }
+    return updateDealerScoped('tw_leads', id, dealerId, { status }, 'updateTwoWheelerLeadStatus')
 }
 
 // ── tw_service_bookings ───────────────────────────────────────
@@ -345,17 +215,7 @@ export async function updateTwoWheelerLeadStatus(
 export async function createServiceBooking(
     payload: CreateServiceBookingPayload
 ): Promise<{ success: boolean; id?: string; error?: string }> {
-    const { data, error } = await db()
-        .from('tw_service_bookings')
-        .insert({ ...payload, status: 'pending' })
-        .select('id')
-        .single()
-
-    if (error) {
-        console.error('[createServiceBooking]', error.message)
-        return { success: false, error: error.message }
-    }
-    return { success: true, id: data.id }
+    return insertAndReturnId('tw_service_bookings', { ...payload, status: 'pending' }, 'createServiceBooking')
 }
 
 export async function getServiceBookings(
@@ -363,8 +223,6 @@ export async function getServiceBookings(
     filters: ServiceBookingFilters = {}
 ): Promise<{ bookings: TwoWheelerServiceBooking[]; total: number }> {
     const { status, page = 1, pageSize = DEFAULT_PAGE_SIZE } = filters
-    const from = (page - 1) * pageSize
-    const to   = from + pageSize - 1
 
     let query = db()
         .from('tw_service_bookings')
@@ -374,13 +232,7 @@ export async function getServiceBookings(
 
     if (status) query = query.eq('status', status)
 
-    const { data, error, count } = await query.range(from, to)
-
-    if (error) {
-        console.error('[getServiceBookings]', error.message)
-        return { bookings: [], total: 0 }
-    }
-    return { bookings: (data ?? []) as TwoWheelerServiceBooking[], total: count ?? 0 }
+    return runPagedQuery<TwoWheelerServiceBooking, 'bookings'>(query, page, pageSize, 'bookings', 'getServiceBookings')
 }
 
 export async function updateServiceBookingStatus(
@@ -388,17 +240,7 @@ export async function updateServiceBookingStatus(
     dealerId: string,
     status: TwoWheelerServiceStatus
 ): Promise<{ success: boolean; error?: string }> {
-    const { error } = await db()
-        .from('tw_service_bookings')
-        .update({ status })
-        .eq('id', id)
-        .eq('dealer_id', dealerId)
-
-    if (error) {
-        console.error('[updateServiceBookingStatus]', error.message)
-        return { success: false, error: error.message }
-    }
-    return { success: true }
+    return updateDealerScoped('tw_service_bookings', id, dealerId, { status }, 'updateServiceBookingStatus')
 }
 
 // ── tw_bookings (Razorpay) ────────────────────────────────────
@@ -425,12 +267,12 @@ export async function createTwoWheelerBooking(
                 .select('id')
                 .eq('idempotency_key', payload.idempotency_key)
                 .single()
-            return { success: true, id: existing?.id }
+            return { success: true, id: typeof existing?.id === 'string' ? existing.id : undefined }
         }
         console.error('[createTwoWheelerBooking]', error.message)
         return { success: false, error: error.message }
     }
-    return { success: true, id: data.id }
+    return { success: true, id: typeof data?.id === 'string' ? data.id : undefined }
 }
 
 export async function updateTwoWheelerBookingPayment(
@@ -456,19 +298,11 @@ export async function getTwoWheelerBookings(
     page = 1,
     pageSize = DEFAULT_PAGE_SIZE
 ): Promise<{ bookings: TwoWheelerBooking[]; total: number }> {
-    const from = (page - 1) * pageSize
-    const to   = from + pageSize - 1
-
-    const { data, error, count } = await db()
+    const query = db()
         .from('tw_bookings')
         .select('*', { count: 'exact' })
         .eq('dealer_id', dealerId)
         .order('created_at', { ascending: false })
-        .range(from, to)
 
-    if (error) {
-        console.error('[getTwoWheelerBookings]', error.message)
-        return { bookings: [], total: 0 }
-    }
-    return { bookings: (data ?? []) as TwoWheelerBooking[], total: count ?? 0 }
+    return runPagedQuery<TwoWheelerBooking, 'bookings'>(query, page, pageSize, 'bookings', 'getTwoWheelerBookings')
 }

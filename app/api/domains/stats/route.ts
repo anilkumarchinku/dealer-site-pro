@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server'
 import { getMonitoringStats } from '@/lib/services/monitoring-service'
-import { requireAuth, getDealerForUser } from '@/lib/supabase-server'
+import { requireDealerForRoute } from '@/lib/services/dealer-route-auth-service'
 
 /**
  * GET /api/domains/stats
@@ -9,16 +9,10 @@ import { requireAuth, getDealerForUser } from '@/lib/supabase-server'
  */
 export async function GET() {
     try {
-        const { user, supabase, errorResponse } = await requireAuth()
+        const { dealer, errorResponse } = await requireDealerForRoute({
+            body: { success: false, error: 'Dealer account not found' },
+        })
         if (errorResponse) return errorResponse
-
-        const dealer = await getDealerForUser(supabase, user.id)
-        if (!dealer) {
-            return NextResponse.json(
-                { success: false, error: 'Dealer account not found' },
-                { status: 404 }
-            )
-        }
 
         const result = await getMonitoringStats(dealer.id)
 

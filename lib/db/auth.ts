@@ -27,6 +27,10 @@ export interface DealerProfile {
     onboarding_step: number;
 }
 
+type LegacyAuthAdmin = {
+    getUser?: (email: string) => Promise<{ data: { user: { id: string } | null } }>
+}
+
 // ── Register new user with OTP verification ──
 export async function registerUser(input: RegisterInput): Promise<AuthResult> {
     if (!isSupabaseReady()) return { success: false, error: "Supabase not configured" };
@@ -63,9 +67,8 @@ export async function confirmOtpAndAuthenticate(
         }
 
         // 2. Check if user exists in Supabase
-        // @ts-ignore – getUser by email existed in older auth-js typings
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        const { data: { user: existingUser } } = await (supabase.auth.admin as any)?.getUser?.(email) || { data: { user: null } };
+        const legacyAdmin = supabase.auth.admin as unknown as LegacyAuthAdmin
+        const { data: { user: existingUser } } = await legacyAdmin.getUser?.(email) || { data: { user: null } };
 
         if (purpose === 'register') {
             // 3a. Registration: create new user with temporary password

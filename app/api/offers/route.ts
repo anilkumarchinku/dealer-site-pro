@@ -1,12 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { createClient } from '@supabase/supabase-js'
-import { requireAuth } from '@/lib/supabase-server'
+import { createAdminClient, requireAuth } from '@/lib/supabase-server'
 
 function getServiceSupabase() {
-  return createClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.SUPABASE_SERVICE_ROLE_KEY!
-  )
+  return createAdminClient()
 }
 
 /** Resolve the dealer_id that belongs to the authenticated user. */

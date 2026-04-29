@@ -80,10 +80,8 @@ function twoWheelersToCars(vehicles: TwoWheelerVehicle[]): Car[] {
                     id: `${v.id}-v${i + 1}`,
                     name: av.name,
                     price: av.price_paise > 0 ? Math.round(av.price_paise / 100) : (priceINR ?? 0),
-                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                    transmission: (v.transmission || 'Manual') as any,
-                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                    fuelType: fuelLabel as any,
+                    transmission: v.transmission || 'Manual',
+                    fuelType: fuelLabel,
                     keyFeatures: generate2WFeatures(v).slice(0, 3),
                     isPopular: i === 0,
                 }))
@@ -91,10 +89,8 @@ function twoWheelersToCars(vehicles: TwoWheelerVehicle[]): Car[] {
                     id: `${v.id}-v1`,
                     name: v.variant || `${v.model} Standard`,
                     price: priceINR ?? 0,
-                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                    transmission: (v.transmission || 'Manual') as any,
-                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                    fuelType: fuelLabel as any,
+                    transmission: v.transmission || 'Manual',
+                    fuelType: fuelLabel,
                     keyFeatures: generate2WFeatures(v).slice(0, 3),
                     isPopular: true,
                 }],

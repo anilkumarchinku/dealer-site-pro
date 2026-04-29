@@ -9,6 +9,7 @@
  */
 
 import { NextResponse } from 'next/server'
+import { getOptionalEnv } from '@/lib/env'
 import { createAdminClient } from '@/lib/supabase-server'
 
 export const dynamic = 'force-dynamic'
@@ -18,9 +19,9 @@ export async function GET() {
     let httpStatus = 200
 
     // Check env vars
-    checks.supabase_url      = process.env.NEXT_PUBLIC_SUPABASE_URL      ? 'ok' : 'missing'
-    checks.supabase_anon_key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ? 'ok' : 'missing'
-    checks.razorpay_key      = process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID   ? 'ok' : 'missing'
+    checks.supabase_url      = getOptionalEnv('NEXT_PUBLIC_SUPABASE_URL')      ? 'ok' : 'missing'
+    checks.supabase_anon_key = getOptionalEnv('NEXT_PUBLIC_SUPABASE_ANON_KEY') ? 'ok' : 'missing'
+    checks.razorpay_key      = getOptionalEnv('NEXT_PUBLIC_RAZORPAY_KEY_ID')   ? 'ok' : 'missing'
 
     // Check live DB connectivity
     try {

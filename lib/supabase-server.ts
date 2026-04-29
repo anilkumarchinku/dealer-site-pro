@@ -8,6 +8,10 @@ import { createClient }       from '@supabase/supabase-js'
 import { cookies }            from 'next/headers'
 import { NextResponse }       from 'next/server'
 import type { Database }      from '@/lib/database.types'
+import { getRequiredEnv }     from '@/lib/env'
+
+export type AuthenticatedUser = { id: string; email?: string }
+export type RouteSupabaseClient = Awaited<ReturnType<typeof createRouteClient>>
 
 /**
  * Service-role client — bypasses RLS entirely.
@@ -15,8 +19,8 @@ import type { Database }      from '@/lib/database.types'
  */
 export function createAdminClient() {
     return createClient<Database>(
-        process.env.NEXT_PUBLIC_SUPABASE_URL!,
-        process.env.SUPABASE_SERVICE_ROLE_KEY!,
+        getRequiredEnv('NEXT_PUBLIC_SUPABASE_URL'),
+        getRequiredEnv('SUPABASE_SERVICE_ROLE_KEY'),
         { auth: { autoRefreshToken: false, persistSession: false } }
     )
 }
@@ -29,8 +33,8 @@ export async function createRouteClient() {
     const cookieStore = await cookies()
 
     return createServerClient<Database>(
-        process.env.NEXT_PUBLIC_SUPABASE_URL!,
-        process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+        getRequiredEnv('NEXT_PUBLIC_SUPABASE_URL'),
+        getRequiredEnv('NEXT_PUBLIC_SUPABASE_ANON_KEY'),
         {
             cookies: {
                 getAll() {
@@ -57,7 +61,7 @@ export async function createRouteClient() {
  *   if (errorResponse) return errorResponse
  */
 export async function requireAuth(): Promise<
-    | { user: { id: string; email?: string }; supabase: Awaited<ReturnType<typeof createRouteClient>>; errorResponse: null }
+    | { user: AuthenticatedUser; supabase: RouteSupabaseClient; errorResponse: null }
     | { user: null; supabase: null; errorResponse: NextResponse }
 > {
     const supabase = await createRouteClient()
@@ -82,7 +86,7 @@ export async function requireAuth(): Promise<
  * Returns the dealer row or a 403 response if ownership check fails.
  */
 export async function requireDealerOwnership(
-    supabase: Awaited<ReturnType<typeof createRouteClient>>,
+    supabase: RouteSupabaseClient,
     userId: string,
     dealerId: string
 ): Promise<
@@ -114,7 +118,7 @@ export async function requireDealerOwnership(
  * Use when the route should auto-detect the dealer from session (not accept dealer_id from client).
  */
 export async function getDealerForUser(
-    supabase: Awaited<ReturnType<typeof createRouteClient>>,
+    supabase: RouteSupabaseClient,
     userId: string
 ): Promise<{ id: string; slug: string | null } | null> {
     const { data } = await supabase

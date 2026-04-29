@@ -9,6 +9,9 @@
  *   4. Add MSG91_AUTH_KEY and MSG91_SENDER_ID to .env.local
  */
 
+import { getOptionalEnv } from '@/lib/env'
+import { ExternalApiError, externalApiFetch } from '@/lib/services/external-api-fetch'
+
 const MSG91_API_URL = 'https://api.msg91.com/api/v5/flow/'
 
 export interface LeadSmsParams {
@@ -35,9 +38,9 @@ function normalisePhone(phone: string): string {
  * Falls back gracefully if credentials are missing (dev / staging).
  */
 export async function sendLeadSmsToDealer(params: LeadSmsParams): Promise<void> {
-    const authKey  = process.env.MSG91_AUTH_KEY
-    const senderId = process.env.MSG91_SENDER_ID ?? 'DLRPRO'
-    const templateId = process.env.MSG91_LEAD_TEMPLATE_ID
+    const authKey  = getOptionalEnv('MSG91_AUTH_KEY')
+    const senderId = getOptionalEnv('MSG91_SENDER_ID') ?? 'DLRPRO'
+    const templateId = getOptionalEnv('MSG91_LEAD_TEMPLATE_ID')
 
     // Skip silently in dev if key not configured
     if (!authKey) {
@@ -67,19 +70,20 @@ export async function sendLeadSmsToDealer(params: LeadSmsParams): Promise<void> 
                 car_name:       carName ?? 'a vehicle',
             }
 
-            const res = await fetch(MSG91_API_URL, {
-                method:  'POST',
+            await externalApiFetch({
+                baseUrl: MSG91_API_URL.replace(/\/$/, ''),
+                providerName: 'MSG91',
+                path: '',
                 headers: {
                     'Content-Type':  'application/json',
                     'Authkey':       authKey,
                 },
-                body: JSON.stringify(payload),
+                init: {
+                    method:  'POST',
+                    body: JSON.stringify(payload),
+                },
+                responseType: 'text',
             })
-
-            if (!res.ok) {
-                const text = await res.text()
-                console.error('[SMS] MSG91 Flow error:', res.status, text)
-            }
         } else {
             // ── MSG91 Send OTP / plain SMS API (no template required) ─────────
             const url = new URL('https://api.msg91.com/api/sendhttp.php')
@@ -91,13 +95,21 @@ export async function sendLeadSmsToDealer(params: LeadSmsParams): Promise<void> 
             url.searchParams.set('country',  '91')
             url.searchParams.set('unicode',  '0')
 
-            const res = await fetch(url.toString())
-            if (!res.ok) {
-                const text = await res.text()
-                console.error('[SMS] MSG91 plain SMS error:', res.status, text)
-            }
+            await externalApiFetch({
+                baseUrl: url.origin,
+                providerName: 'MSG91',
+                path: `${url.pathname}${url.search}`,
+                headers: {},
+                init: { method: 'GET' },
+                responseType: 'text',
+            })
         }
     } catch (err) {
+        if (err instanceof ExternalApiError) {
+            const label = templateId ? 'Flow' : 'plain SMS'
+            console.error(`[SMS] MSG91 ${label} error:`, err.status, err.bodyText ?? err.message)
+            return
+        }
         // Never let SMS failure break the lead submission
         console.error('[SMS] Failed to send lead SMS:', err)
     }

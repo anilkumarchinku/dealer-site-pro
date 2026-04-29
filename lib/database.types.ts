@@ -132,6 +132,25 @@ export interface Database {
         Update: Partial<Database['public']['Tables']['dealer_site_configs']['Row']>
         Relationships: []
       }
+      dealer_offers: {
+        Row: {
+          id: string
+          dealer_id: string
+          title: string
+          description: string | null
+          tag: string | null
+          valid_until: string | null
+          is_active: boolean
+          created_at: string
+          updated_at: string
+        }
+        Insert: Partial<Database['public']['Tables']['dealer_offers']['Row']> & {
+          dealer_id: string
+          title: string
+        }
+        Update: Partial<Database['public']['Tables']['dealer_offers']['Row']>
+        Relationships: []
+      }
       dealer_domains: {
         Row: {
           id: string
@@ -380,6 +399,8 @@ export interface Database {
           review_text: string | null
           car_purchased: string | null
           is_approved: boolean
+          source: string
+          external_id: string | null
           created_at: string
         }
         Insert: Partial<Database['public']['Tables']['dealer_reviews']['Row']> & {
@@ -423,13 +444,15 @@ export interface Database {
         Row: {
           id: string
           dealer_id: string
-          domain_id: string | null
-          status: 'pending' | 'deploying' | 'ready' | 'failed'
-          vercel_deployment_id: string | null
-          vercel_url: string | null
-          site_url: string | null
           github_repo: string | null
+          vercel_project: string | null
+          vercel_deploy_id: string | null
+          domain: string | null
+          site_url: string | null
+          status: 'queued' | 'building' | 'ready' | 'error' | 'cancelled'
           is_current: boolean
+          version_number: number
+          commit_message: string | null
           error_message: string | null
           created_at: string
           updated_at: string
@@ -766,6 +789,7 @@ export interface Database {
           vehicle_make: string | null
           vehicle_model: string | null
           vehicle_year: number | null
+          vehicle_reg_no: string | null
           km_reading: number | null
           service_type: string
           preferred_date: string
@@ -848,6 +872,49 @@ export interface Database {
         Update: Partial<Database['public']['Tables']['payment_idempotency_log']['Row']>
         Relationships: []
       }
+      webhook_events: {
+        Row: {
+          id: string
+          provider: string
+          event_id: string
+          event_type: string
+          status: 'processing' | 'processed' | 'failed'
+          payload: Json | null
+          error_message: string | null
+          received_at: string
+          processed_at: string | null
+          created_at: string
+          updated_at: string
+        }
+        Insert: Partial<Database['public']['Tables']['webhook_events']['Row']> & {
+          provider: string
+          event_id: string
+          event_type: string
+        }
+        Update: Partial<Database['public']['Tables']['webhook_events']['Row']>
+        Relationships: []
+      }
+      domain_deployment_operation_events: {
+        Row: {
+          id: string
+          dealer_id: string | null
+          domain_id: string | null
+          domain: string | null
+          operation: 'custom_domain_connect' | 'custom_domain_remove' | 'multi_tenant_deploy'
+          status: 'started' | 'provider_pending' | 'provider_succeeded' | 'provider_failed' | 'completed' | 'failed'
+          provider_step: 'database' | 'vercel' | 'dns' | 'deployment'
+          details: Json | null
+          error_message: string | null
+          created_at: string
+        }
+        Insert: Partial<Database['public']['Tables']['domain_deployment_operation_events']['Row']> & {
+          operation: 'custom_domain_connect' | 'custom_domain_remove' | 'multi_tenant_deploy'
+          status: 'started' | 'provider_pending' | 'provider_succeeded' | 'provider_failed' | 'completed' | 'failed'
+          provider_step: 'database' | 'vercel' | 'dns' | 'deployment'
+        }
+        Update: Partial<Database['public']['Tables']['domain_deployment_operation_events']['Row']>
+        Relationships: []
+      }
       car_catalog: {
         Row: {
           id: string
@@ -924,6 +991,7 @@ export type DealerBrandRow           = Database['public']['Tables']['dealer_bran
 export type DealerServiceRow         = Database['public']['Tables']['dealer_services']['Row']
 export type DealerTemplateConfigRow  = Database['public']['Tables']['dealer_template_configs']['Row']
 export type DealerSiteConfigRow      = Database['public']['Tables']['dealer_site_configs']['Row']
+export type DealerOfferRow           = Database['public']['Tables']['dealer_offers']['Row']
 export type DealerDomainRow          = Database['public']['Tables']['dealer_domains']['Row']
 export type DomainRow                = Database['public']['Tables']['domains']['Row']
 export type DomainSubscriptionRow    = Database['public']['Tables']['domain_subscriptions']['Row']
@@ -934,3 +1002,5 @@ export type ReviewRow                = Database['public']['Tables']['reviews']['
 export type DealerReviewRow          = Database['public']['Tables']['dealer_reviews']['Row']
 export type AnalyticsDailyRow        = Database['public']['Tables']['analytics_daily']['Row']
 export type DealerDeploymentRow      = Database['public']['Tables']['dealer_deployments']['Row']
+export type WebhookEventRow          = Database['public']['Tables']['webhook_events']['Row']
+export type DomainDeploymentOperationEventRow = Database['public']['Tables']['domain_deployment_operation_events']['Row']
