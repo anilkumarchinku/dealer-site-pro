@@ -66,7 +66,7 @@ export function CityOnRoadPrice({ exShowroomPaise, fuelType }: Props) {
 
             <div className="space-y-2 text-sm">
                 <div className="flex justify-between py-1.5 border-b border-border/40">
-                    <span className="text-muted-foreground">Ex-Showroom</span>
+                    <span className="text-muted-foreground">Ex-Showroom*</span>
                     <span className="font-medium">₹{fmt(exShowroom)}</span>
                 </div>
                 <div className="flex justify-between py-1.5 border-b border-border/40">
@@ -82,7 +82,7 @@ export function CityOnRoadPrice({ exShowroomPaise, fuelType }: Props) {
                     <span className="font-medium">₹{fmt(HANDLING)}</span>
                 </div>
                 <div className="flex justify-between pt-2">
-                    <span className="font-semibold">Total On-Road</span>
+                    <span className="font-semibold">Total On-Road*</span>
                     <span className="font-bold text-primary text-base">₹{fmt(onRoad)}</span>
                 </div>
             </div>

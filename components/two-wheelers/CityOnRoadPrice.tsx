@@ -68,7 +68,7 @@ export function CityOnRoadPrice({ exShowroomPaise, engineCc, fuelType }: Props) 
 
             <div className="space-y-0">
                 {[
-                    { label: "Ex-Showroom",            value: fmt(exShowroom) },
+                    { label: "Ex-Showroom*",           value: fmt(exShowroom) },
                     { label: `RTO Registration (${rtoPct}%)`, value: fmt(rtoCharges) },
                     { label: "Insurance (5-yr)",        value: fmt(insurance) },
                     { label: "Handling & Logistics",   value: fmt(handling) },
@@ -80,7 +80,7 @@ export function CityOnRoadPrice({ exShowroomPaise, engineCc, fuelType }: Props) 
                 ))}
 
                 <div className="flex justify-between pt-3 mt-1">
-                    <span className="font-bold text-base">Total On-Road</span>
+                    <span className="font-bold text-base">Total On-Road*</span>
                     <span className="font-bold text-lg text-primary">{fmt(onRoad)}</span>
                 </div>
             </div>

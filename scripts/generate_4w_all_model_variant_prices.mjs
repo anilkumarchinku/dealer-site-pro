@@ -187,7 +187,7 @@ rows.sort((a, b) =>
   a.variant.localeCompare(b.variant),
 );
 
-const header = ["Make", "Model", "Variant", "Ex-Showroom INR", "Ex-Showroom Price"];
+const header = ["Make", "Model", "Variant", "Ex-Showroom INR*", "Ex-Showroom Price*"];
 const lines = [
   header.join(","),
   ...rows.map((row) =>

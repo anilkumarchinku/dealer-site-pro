@@ -66,7 +66,7 @@ export function OnRoadPriceCalculator() {
                     <Card>
                         <CardContent className="p-6 space-y-5">
                             <div>
-                                <Label className="text-sm font-medium mb-2 block">Ex-Showroom Price (₹)</Label>
+                                <Label className="text-sm font-medium mb-2 block">Ex-Showroom Price* (₹)</Label>
                                 <Input
                                     type="number"
                                     value={exShowroom}
@@ -141,7 +141,7 @@ export function OnRoadPriceCalculator() {
                                 <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
                                     <div>
                                         <p className="text-sm text-muted-foreground">{breakdown.stateName}</p>
-                                        <h3 className="text-xl font-semibold">Estimated On-Road Price</h3>
+                                        <h3 className="text-xl font-semibold">Estimated On-Road Price*</h3>
                                     </div>
                                     <div className="rounded-2xl bg-primary/10 px-5 py-4 text-right">
                                         <p className="text-xs text-muted-foreground uppercase tracking-wide">Total payable</p>
@@ -151,7 +151,7 @@ export function OnRoadPriceCalculator() {
 
                                 <div className="mt-6 space-y-3">
                                     {[
-                                        ['Ex-showroom price', breakdown.exShowroom],
+                                        ['Ex-showroom price*', breakdown.exShowroom],
                                         [`Road tax / registration (${breakdown.roadTaxPercent}%)`, breakdown.roadTax],
                                         ['Registration fee', breakdown.registrationFee],
                                         ['Smart card fee', breakdown.smartCardFee],
@@ -171,7 +171,7 @@ export function OnRoadPriceCalculator() {
                                 <Separator className="my-4" />
 
                                 <div className="flex justify-between">
-                                    <span className="font-semibold">On-Road Price</span>
+                                    <span className="font-semibold">On-Road Price*</span>
                                     <span className="text-lg font-bold text-primary">{formatInr(breakdown.total)}</span>
                                 </div>
                                 <p className="text-[10px] text-muted-foreground mt-4">

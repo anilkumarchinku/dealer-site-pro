@@ -359,13 +359,13 @@ export function BrandModelAccordion({
                                 {/* Price */}
                                 {selectedVariant.ex_showroom_price_min_inr && (
                                     <div>
-                                        <p className="text-xs text-gray-600 mb-1">Ex-Showroom Price</p>
+                                        <p className="text-xs text-gray-600 mb-1">Ex-Showroom Price*</p>
                                         <p className="text-2xl font-bold" style={{ color: brandColor }}>
                                             {formatPrice(selectedVariant.ex_showroom_price_min_inr)}
                                         </p>
                                         {selectedVariant.hyderabad_on_road_price && (
                                             <p className="text-xs text-gray-600 mt-1">
-                                                On-Road (Hyderabad): <span className="font-semibold text-gray-700">{formatPrice(selectedVariant.hyderabad_on_road_price)}</span>
+                                                On-Road* (Hyderabad): <span className="font-semibold text-gray-700">{formatPrice(selectedVariant.hyderabad_on_road_price)}</span>
                                             </p>
                                         )}
                                     </div>

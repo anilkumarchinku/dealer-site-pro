@@ -860,7 +860,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                                 <TableHeader>
                                     <TableRow className="bg-gray-100/40">
                                         <TableHead className="font-semibold">Variant</TableHead>
-                                        <TableHead className="font-semibold">Ex-Showroom Price</TableHead>
+                                        <TableHead className="font-semibold">Ex-Showroom Price*</TableHead>
                                         <TableHead className="font-semibold">Fuel</TableHead>
                                         <TableHead className="font-semibold">Transmission</TableHead>
                                         <TableHead className="font-semibold text-right">Action</TableHead>

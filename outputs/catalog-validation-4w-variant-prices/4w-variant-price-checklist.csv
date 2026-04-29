@@ -1,4 +1,4 @@
-Brand,Model,Local Variant,Local Ex-Showroom INR,Cardekho Variant,Cardekho Ex-Showroom INR,Delta INR,Status,Variants URL,Local Citation URL,Note
+Brand,Model,Local Variant,Local Ex-Showroom INR*,Cardekho Variant,Cardekho Ex-Showroom INR*,Delta INR,Status,Variants URL,Local Citation URL,Note
 Aston Martin,DB11,V8,38000000,V8,38000000,0,MATCH,https://www.cardekho.com/aston-martin/db11/variants.htm,,
 Aston Martin,DB12,V8,43408000,Coupe,43408000,0,MATCH,https://www.cardekho.com/aston-martin/db12/variants.htm,,
 Aston Martin,DB12,Volante,43408000,Coupe,43408000,0,MATCH,https://www.cardekho.com/aston-martin/db12/variants.htm,,

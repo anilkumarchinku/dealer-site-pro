@@ -444,7 +444,7 @@ export function CarCard({
                                 <span className="text-sm text-gray-600">– {maxPrice}</span>
                             )}
                         </div>
-                        <p className="text-sm text-gray-600">{isUsed ? 'Selling price' : 'Ex-showroom price'}</p>
+                        <p className="text-sm text-gray-600">{isUsed ? 'Selling price' : 'Ex-showroom price*'}</p>
 
                         {showEMI && car.pricing.emi && (
                             <Badge variant="secondary" className="mt-2 text-xs font-medium gap-1 h-6 px-2.5 rounded-full bg-gray-50 dark:bg-gray-50 border border-gray-200 dark:border-gray-200 text-gray-700 dark:text-gray-700" style={{ color: brandColor }}>
@@ -743,13 +743,13 @@ function VariantAccordionButton({
                                             {/* Price + badges */}
                                             <div className="flex items-end justify-between">
                                                 <div>
-                                                    <p className="text-[10px] text-gray-600">Ex-Showroom</p>
+                                                    <p className="text-[10px] text-gray-600">Ex-Showroom*</p>
                                                     <p className="text-xl font-bold" style={{ color: brandColor }}>
                                                         {fmtPrice(selected.ex_showroom_price_min_inr)}
                                                     </p>
                                                     {selected.hyderabad_on_road_price && (
                                                         <p className="text-[10px] text-gray-600 mt-0.5">
-                                                            On-Road (Hyd): <span className="font-semibold text-gray-900">{fmtPrice(selected.hyderabad_on_road_price)}</span>
+                                                            On-Road* (Hyd): <span className="font-semibold text-gray-900">{fmtPrice(selected.hyderabad_on_road_price)}</span>
                                                         </p>
                                                     )}
                                                 </div>

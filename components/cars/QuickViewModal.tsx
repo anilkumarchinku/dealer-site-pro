@@ -430,7 +430,7 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
                                                         </div>
                                                     </div>
                                                     <div className="text-right">
-                                                        <p className="text-[10px] uppercase tracking-widest text-gray-600">Ex-Showroom</p>
+                                                        <p className="text-[10px] uppercase tracking-widest text-gray-600">Ex-Showroom*</p>
                                                         <p className="text-2xl font-extrabold leading-tight" style={{ color: brandColor }}>
                                                             {fmtL(selVariant.ex_showroom_price_min_inr)}
                                                         </p>

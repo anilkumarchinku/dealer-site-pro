@@ -222,7 +222,7 @@ export function OnRoadPriceDialog({
 
                                 <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                                     {[
-                                        { label: 'Ex-showroom price', value: formatInr(breakdown.exShowroom), icon: Bike },
+                                        { label: 'Ex-showroom price*', value: formatInr(breakdown.exShowroom), icon: Bike },
                                         { label: `RTO / road tax (${breakdown.rtoPercent}%)`, value: formatInr(breakdown.rtoCharges), icon: FileText },
                                         { label: 'Insurance', value: formatInr(breakdown.insurance), icon: Shield },
                                         { label: 'Handling & logistics', value: formatInr(breakdown.handling), icon: Wallet },
@@ -243,7 +243,7 @@ export function OnRoadPriceDialog({
                                     </div>
                                     <div className="divide-y divide-gray-200">
                                         {[
-                                            ['Ex-showroom price', breakdown.exShowroom],
+                                            ['Ex-showroom price*', breakdown.exShowroom],
                                             [`RTO / road tax (${breakdown.rtoPercent}%)`, breakdown.rtoCharges],
                                             ['Insurance', breakdown.insurance],
                                             ['Handling & logistics', breakdown.handling],

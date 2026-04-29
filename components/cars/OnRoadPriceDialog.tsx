@@ -107,7 +107,7 @@ export function OnRoadPriceDialog({
                                 <MapPin className="h-3.5 w-3.5" />
                                 State-based estimate
                             </Badge>
-                            <h2 className="text-2xl font-bold text-gray-900">On-Road Price</h2>
+                            <h2 className="text-2xl font-bold text-gray-900">On-Road Price*</h2>
                             <p className="mt-2 text-sm text-gray-600">
                                 Pick the state and model variant to estimate the payable price above ex-showroom.
                             </p>
@@ -173,7 +173,7 @@ export function OnRoadPriceDialog({
                                 <CarIcon className="h-4 w-4" />
                                 {activeVariant?.label || car.model}
                             </div>
-                            <p className="mt-2 text-sm opacity-80">Ex-showroom</p>
+                            <p className="mt-2 text-sm opacity-80">Ex-showroom*</p>
                             <p className="text-3xl font-bold">
                                 {activeVariant ? formatInr(activeVariant.exShowroom) : '—'}
                             </p>
@@ -191,7 +191,7 @@ export function OnRoadPriceDialog({
                                     <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
                                         <div>
                                             <p className="text-sm text-gray-600">{breakdown.stateName}</p>
-                                            <h3 className="text-2xl font-bold text-gray-900">Estimated On-Road Price</h3>
+                                            <h3 className="text-2xl font-bold text-gray-900">Estimated On-Road Price*</h3>
                                         </div>
                                         <div className="rounded-2xl px-5 py-4 text-right" style={{ backgroundColor: `${brandColor}12` }}>
                                             <p className="text-xs uppercase tracking-wide text-gray-600">Total payable</p>
@@ -204,7 +204,7 @@ export function OnRoadPriceDialog({
 
                                 <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                                     {[
-                                        { label: 'Ex-showroom price', value: formatInr(breakdown.exShowroom), icon: CarIcon },
+                                        { label: 'Ex-showroom price*', value: formatInr(breakdown.exShowroom), icon: CarIcon },
                                         { label: `Road tax / RTO (${breakdown.roadTaxPercent}%)`, value: formatInr(breakdown.roadTax), icon: FileText },
                                         { label: 'Insurance', value: formatInr(breakdown.insurance), icon: Shield },
                                         { label: 'TCS', value: breakdown.tcs > 0 ? formatInr(breakdown.tcs) : 'Not applicable', icon: CreditCard },
@@ -225,7 +225,7 @@ export function OnRoadPriceDialog({
                                     </div>
                                     <div className="divide-y divide-gray-200">
                                         {[
-                                            ['Ex-showroom price', breakdown.exShowroom],
+                                            ['Ex-showroom price*', breakdown.exShowroom],
                                             [`Road tax / registration (${breakdown.roadTaxPercent}%)`, breakdown.roadTax],
                                             ['Registration fee', breakdown.registrationFee],
                                             ['Smart card fee', breakdown.smartCardFee],
@@ -241,7 +241,7 @@ export function OnRoadPriceDialog({
                                             </div>
                                         ))}
                                         <div className="flex items-center justify-between px-5 py-4 text-base font-bold">
-                                            <span>Total on-road price</span>
+                                            <span>Total on-road price*</span>
                                             <span style={{ color: brandColor }}>{formatInr(breakdown.total)}</span>
                                         </div>
                                     </div>

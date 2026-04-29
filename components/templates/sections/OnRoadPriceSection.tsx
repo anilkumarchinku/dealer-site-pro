@@ -51,7 +51,7 @@ export function OnRoadPriceSection({
     );
 
     const breakdown = [
-        { label: 'Ex-Showroom Price', amount: exShowroom },
+        { label: 'Ex-Showroom Price*', amount: exShowroom },
         { label: `RTO / Registration (${(rtoRate * 100).toFixed(0)}%)`, amount: rto },
         { label: 'Insurance (3.5%)', amount: insurance },
         ...(tcs > 0 ? [{ label: 'TCS (1%)', amount: tcs }] : []),
@@ -82,7 +82,7 @@ export function OnRoadPriceSection({
                     <div>
                         <div className="flex items-center justify-between mb-2">
                             <label className="text-sm font-semibold text-gray-700">
-                                Ex-Showroom Price
+                                Ex-Showroom Price*
                             </label>
                             <span className="text-base font-bold" style={{ color: brandColor }}>
                                 {formatLakhs(exShowroom)}
@@ -158,7 +158,7 @@ export function OnRoadPriceSection({
                         className="rounded-2xl px-6 py-5 text-white"
                         style={{ backgroundColor: brandColor }}
                     >
-                        <p className="text-sm font-medium opacity-80 mb-1">Total On-Road Price</p>
+                        <p className="text-sm font-medium opacity-80 mb-1">Total On-Road Price*</p>
                         <p className="text-3xl font-bold">{formatINR(total)}</p>
                         <p className="text-sm opacity-70 mt-1">{formatLakhs(total)}</p>
                     </div>
@@ -182,7 +182,7 @@ export function OnRoadPriceSection({
                                     </tr>
                                 ))}
                                 <tr className="border-t border-gray-200 font-bold">
-                                    <td className="px-4 py-3 text-gray-900">Total On-Road Price</td>
+                                    <td className="px-4 py-3 text-gray-900">Total On-Road Price*</td>
                                     <td className="px-4 py-3 text-right" style={{ color: brandColor }}>
                                         {formatINR(total)}
                                     </td>

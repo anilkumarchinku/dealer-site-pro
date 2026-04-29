@@ -170,9 +170,9 @@ for (const brand of brands) {
 
     for (const row of sortedRows) {
       const localVariant = row['Local Variant'] || '—'
-      const localPrice = row['Local Ex-Showroom INR'] ? `₹${Number(row['Local Ex-Showroom INR']).toLocaleString('en-IN')}` : '—'
+      const localPrice = row['Local Ex-Showroom INR*'] ? `₹${Number(row['Local Ex-Showroom INR*']).toLocaleString('en-IN')}` : '—'
       const cdVariant = row['Cardekho Variant'] || '—'
-      const cdPrice = row['Cardekho Ex-Showroom INR'] ? `₹${Number(row['Cardekho Ex-Showroom INR']).toLocaleString('en-IN')}` : '—'
+      const cdPrice = row['Cardekho Ex-Showroom INR*'] ? `₹${Number(row['Cardekho Ex-Showroom INR*']).toLocaleString('en-IN')}` : '—'
       const note = row.Note || ''
 
       lines.push(`- [ ] ${row.Status}: local \`${localVariant}\` (${localPrice}) -> Cardekho \`${cdVariant}\` (${cdPrice})`)

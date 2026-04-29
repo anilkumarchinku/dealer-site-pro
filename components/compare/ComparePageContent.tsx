@@ -44,7 +44,7 @@ interface CompareSpec {
 
 const COMPARE_SPECS: CompareSpec[] = [
     // Price
-    { label: 'Ex-Showroom Price', category: 'Price', getValue: (c) => formatPriceInLakhs(c.pricing.exShowroom.min), getNumeric: (c) => c.pricing.exShowroom.min, higherIsBetter: false },
+    { label: 'Ex-Showroom Price*', category: 'Price', getValue: (c) => formatPriceInLakhs(c.pricing.exShowroom.min), getNumeric: (c) => c.pricing.exShowroom.min, higherIsBetter: false },
     { label: 'Top Variant Price', category: 'Price', getValue: (c) => formatPriceInLakhs(c.pricing.exShowroom.max), getNumeric: (c) => c.pricing.exShowroom.max, higherIsBetter: false },
 
     // Engine
