@@ -9,10 +9,12 @@ export type RequiredEnvKey =
     | 'NEXT_PUBLIC_SUPABASE_URL'
     | 'NEXT_PUBLIC_SUPABASE_ANON_KEY'
     | 'SUPABASE_SERVICE_ROLE_KEY'
+    | 'NEXT_PUBLIC_BASE_DOMAIN'
+
+export type PaymentEnvKey =
     | 'NEXT_PUBLIC_RAZORPAY_KEY_ID'
     | 'RAZORPAY_KEY_SECRET'
     | 'RAZORPAY_WEBHOOK_SECRET'
-    | 'NEXT_PUBLIC_BASE_DOMAIN'
 
 export type OptionalEnvKey =
     | 'ADMIN_PASSWORD'
@@ -62,16 +64,19 @@ export type OptionalEnvKey =
     | 'VERCEL_TOKEN'
     | 'VERCEL_URL'
 
-export type EnvKey = RequiredEnvKey | OptionalEnvKey
+export type EnvKey = RequiredEnvKey | PaymentEnvKey | OptionalEnvKey
 
 export const requiredEnvKeys: readonly RequiredEnvKey[] = [
     'NEXT_PUBLIC_SUPABASE_URL',
     'NEXT_PUBLIC_SUPABASE_ANON_KEY',
     'SUPABASE_SERVICE_ROLE_KEY',
+    'NEXT_PUBLIC_BASE_DOMAIN',
+]
+
+export const paymentEnvKeys: readonly PaymentEnvKey[] = [
     'NEXT_PUBLIC_RAZORPAY_KEY_ID',
     'RAZORPAY_KEY_SECRET',
     'RAZORPAY_WEBHOOK_SECRET',
-    'NEXT_PUBLIC_BASE_DOMAIN',
 ]
 
 export const optionalEnvKeys: readonly OptionalEnvKey[] = [
@@ -123,11 +128,11 @@ export function getRequiredEnv(key: EnvKey): string {
     return value
 }
 
-export function validateRequiredEnv(): { missing: string[]; placeholder: string[] } {
+function validateEnvKeys(keys: readonly EnvKey[]): { missing: string[]; placeholder: string[] } {
     const missing: string[] = []
     const placeholder: string[] = []
 
-    for (const key of requiredEnvKeys) {
+    for (const key of keys) {
         const value = getOptionalEnv(key)
         if (!value) {
             missing.push(key)
@@ -137,6 +142,14 @@ export function validateRequiredEnv(): { missing: string[]; placeholder: string[
     }
 
     return { missing, placeholder }
+}
+
+export function validateRequiredEnv(): { missing: string[]; placeholder: string[] } {
+    return validateEnvKeys(requiredEnvKeys)
+}
+
+export function validatePaymentEnv(): { missing: string[]; placeholder: string[] } {
+    return validateEnvKeys(paymentEnvKeys)
 }
 
 export function assertProductionEnv(): void {

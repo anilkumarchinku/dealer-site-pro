@@ -3,6 +3,7 @@ import {
     env,
     getOptionalEnv,
     getRequiredEnv,
+    validatePaymentEnv,
     validateRequiredEnv,
 } from '@/lib/env'
 
@@ -61,7 +62,18 @@ describe('env helpers', () => {
         const result = validateRequiredEnv()
 
         expect(result.missing).toContain('NEXT_PUBLIC_SUPABASE_URL')
+        expect(result.missing).toContain('SUPABASE_SERVICE_ROLE_KEY')
+        expect(result.missing).not.toContain('RAZORPAY_WEBHOOK_SECRET')
+    })
+
+    it('tracks payment env separately from public runtime startup checks', () => {
+        process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID = 'your_razorpay_key_id'
+        process.env.RAZORPAY_KEY_SECRET = 'secret_live'
+
+        const result = validatePaymentEnv()
+
         expect(result.missing).toContain('RAZORPAY_WEBHOOK_SECRET')
+        expect(result.placeholder).toContain('NEXT_PUBLIC_RAZORPAY_KEY_ID')
     })
 
     it('accepts the Supabase publishable key as the public client key alias', () => {
@@ -76,6 +88,21 @@ describe('env helpers', () => {
         const warn = vi.spyOn(console, 'warn').mockImplementation(() => undefined)
 
         expect(() => assertProductionEnv()).toThrow('Production env validation failed')
+
+        warn.mockRestore()
+    })
+
+    it('does not block production startup for missing payment-only env values', () => {
+        vi.stubEnv('NODE_ENV', 'production')
+        process.env.NEXT_PUBLIC_SUPABASE_URL = 'https://demo.supabase.co'
+        process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY = 'anon_key'
+        process.env.SUPABASE_SERVICE_ROLE_KEY = 'service_role_key'
+        process.env.NEXT_PUBLIC_BASE_DOMAIN = 'indrav.in'
+        process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID = 'your_razorpay_key_id'
+        process.env.RAZORPAY_KEY_SECRET = 'your_razorpay_secret_key_here'
+        const warn = vi.spyOn(console, 'warn').mockImplementation(() => undefined)
+
+        expect(() => assertProductionEnv()).not.toThrow()
 
         warn.mockRestore()
     })

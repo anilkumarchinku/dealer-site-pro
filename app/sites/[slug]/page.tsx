@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { headers } from 'next/headers'
 import { redirect } from 'next/navigation'
 import { ModernTemplate } from '@/components/templates/ModernTemplate'
 import { LuxuryTemplate } from '@/components/templates/LuxuryTemplate'
@@ -11,6 +12,7 @@ import type { Car } from '@/lib/types/car'
 import type { DBVehicle } from '@/lib/db/vehicles'
 import type { Service } from '@/lib/types'
 import { dedupeByMakeModel, dedupeCaseInsensitiveStrings } from '@/lib/utils/listing-dedupe'
+import { publicDealerSitePath, publicVehicleHubPath, type VehicleHubSegment } from '@/lib/utils/public-site-routing'
 
 
 // Always render fresh — ensures DB changes (e.g. image URLs) take effect immediately.
@@ -82,11 +84,13 @@ function ComingSoon({ slug }: { slug: string }) {
 // ── Multi-Site Portal — shown for hybrid & multi-brand dealers on their main URL
 function MultiSitePortal({
     dealerName, location, phone, email, tagline, slug, brands, isHybrid,
-    sellsTwoWheelers, sellsThreeWheelers,
+    sellsTwoWheelers, sellsThreeWheelers, siteHrefForSlug, vehicleHubHref,
 }: {
     dealerName: string; location: string; phone: string; email: string;
     tagline?: string | null; slug: string; brands: string[]; isHybrid: boolean;
     sellsTwoWheelers: boolean; sellsThreeWheelers: boolean;
+    siteHrefForSlug: (siteSlug: string) => string;
+    vehicleHubHref: (segment: VehicleHubSegment) => string;
 }) {
     const attractiveLine = tagline ?? `Your Trusted Automobile Partner in ${location}`
 
@@ -102,7 +106,7 @@ function MultiSitePortal({
                 siteCards.push({
                     label: brand,
                     sublabel: 'New Cars · Authorised Dealer',
-                    href: `/${slug}-${brandSlug}`,
+                    href: siteHrefForSlug(`${slug}-${brandSlug}`),
                     color: 'blue',
                     emoji: '🚗',
                 })
@@ -113,7 +117,7 @@ function MultiSitePortal({
             siteCards.push({
                 label: 'New Cars',
                 sublabel: brands.length > 0 ? brands[0] : 'Brand New Vehicles',
-                href: `/${slug}-${brandSlug}`,
+                href: siteHrefForSlug(`${slug}-${brandSlug}`),
                 color: 'blue',
                 emoji: '🚗',
             })
@@ -121,7 +125,7 @@ function MultiSitePortal({
         siteCards.push({
             label: 'Pre-Owned Cars',
             sublabel: 'Certified Used Vehicles',
-            href: `/${slug}-used`,
+            href: siteHrefForSlug(`${slug}-used`),
             color: 'amber',
             emoji: '🛡️',
         })
@@ -132,7 +136,7 @@ function MultiSitePortal({
             siteCards.push({
                 label: brand,
                 sublabel: 'New Cars · Authorised Dealer',
-                href: `/${slug}-${brandSlug}`,
+                href: siteHrefForSlug(`${slug}-${brandSlug}`),
                 color: 'blue',
                 emoji: '✨',
             })
@@ -143,7 +147,7 @@ function MultiSitePortal({
         siteCards.push({
             label: '2-Wheelers',
             sublabel: 'Bikes · Scooters · Electric',
-            href: `/sites/${slug}/two-wheelers`,
+            href: vehicleHubHref('two-wheelers'),
             color: 'green',
             emoji: '🏍️',
         })
@@ -152,7 +156,7 @@ function MultiSitePortal({
         siteCards.push({
             label: '3-Wheelers',
             sublabel: 'Passenger · Cargo · Electric',
-            href: `/sites/${slug}/three-wheelers`,
+            href: vehicleHubHref('three-wheelers'),
             color: 'purple',
             emoji: '🛺',
         })
@@ -331,8 +335,8 @@ export async function generateMetadata({ params }: SitePageProps): Promise<Metad
 }
 
 // ── 2W / 3W discovery banner — appended below any car template ───────────────
-function VehicleSegmentsBanner({ slug, sellsTwoWheelers, sellsThreeWheelers }: {
-    slug: string; sellsTwoWheelers: boolean; sellsThreeWheelers: boolean
+function VehicleSegmentsBanner({ sellsTwoWheelers, sellsThreeWheelers, twoWheelerHref, threeWheelerHref }: {
+    sellsTwoWheelers: boolean; sellsThreeWheelers: boolean; twoWheelerHref: string; threeWheelerHref: string
 }) {
     if (!sellsTwoWheelers && !sellsThreeWheelers) return null
     return (
@@ -342,7 +346,7 @@ function VehicleSegmentsBanner({ slug, sellsTwoWheelers, sellsThreeWheelers }: {
             </div>
             <div className={`max-w-2xl mx-auto grid gap-4 ${sellsTwoWheelers && sellsThreeWheelers ? 'sm:grid-cols-2' : 'grid-cols-1 max-w-sm'}`}>
                 {sellsTwoWheelers && (
-                    <a href={`/sites/${slug}/two-wheelers`} className="group flex items-center gap-4 p-5 rounded-2xl border border-green-500/30 bg-green-500/5 hover:bg-green-500/10 transition-all">
+                    <a href={twoWheelerHref} className="group flex items-center gap-4 p-5 rounded-2xl border border-green-500/30 bg-green-500/5 hover:bg-green-500/10 transition-all">
                         <span className="text-4xl">🏍️</span>
                         <div className="text-left">
                             <p className="text-white font-bold">2-Wheelers</p>
@@ -352,7 +356,7 @@ function VehicleSegmentsBanner({ slug, sellsTwoWheelers, sellsThreeWheelers }: {
                     </a>
                 )}
                 {sellsThreeWheelers && (
-                    <a href={`/sites/${slug}/three-wheelers`} className="group flex items-center gap-4 p-5 rounded-2xl border border-purple-500/30 bg-purple-500/5 hover:bg-purple-500/10 transition-all">
+                    <a href={threeWheelerHref} className="group flex items-center gap-4 p-5 rounded-2xl border border-purple-500/30 bg-purple-500/5 hover:bg-purple-500/10 transition-all">
                         <span className="text-4xl">🛺</span>
                         <div className="text-left">
                             <p className="text-white font-bold">3-Wheelers</p>
@@ -431,15 +435,28 @@ export default async function SitePage({ params }: SitePageProps) {
     if (!dealer) return <ComingSoon slug={slug} />
 
     // ── Pure 2W/3W dealers → redirect to their vehicle hub ───────────────────
-    // Use a relative path (/two-wheelers) so it works correctly for both:
-    //   - Subdomain access: bhai-bhaii.indrav.in/ → bhai-bhaii.indrav.in/two-wheelers
-    //     (middleware rewrites /two-wheelers → /sites/bhai-bhaii/two-wheelers ✓)
-    //   - Direct access: /sites/bhai-bhaii → /sites/bhai-bhaii/two-wheelers ✓
+    // Keep direct main-domain access under /sites/{slug}; custom/subdomain
+    // hosts stay root-relative because middleware maps them back to /sites/{slug}.
+    const requestHeaders = await headers()
+    const host = requestHeaders.get('host') ?? ''
+    const baseDomain = process.env.NEXT_PUBLIC_BASE_DOMAIN ?? 'dealersitepro.com'
+    const siteHrefForSlug = (siteSlug: string) => publicDealerSitePath({
+        siteSlug,
+        host,
+        baseDomain,
+    })
+    const vehicleHubHref = (segment: VehicleHubSegment) => publicVehicleHubPath({
+        dealerSlug: dealer.slug,
+        segment,
+        host,
+        baseDomain,
+    })
+
     if (dealer.vehicle_type === 'two-wheeler') {
-        redirect(`/two-wheelers`)
+        redirect(vehicleHubHref('two-wheelers'))
     }
     if (dealer.vehicle_type === 'three-wheeler') {
-        redirect(`/three-wheelers`)
+        redirect(vehicleHubHref('three-wheelers'))
     }
 
     const { sells_new_cars, sells_used_cars, sells_two_wheelers, sells_three_wheelers, brandFilter, brands, vehicles, usedCarSite, cyepro_api_key, logo_url, hero_image_url } = dealer
@@ -463,6 +480,8 @@ export default async function SitePage({ params }: SitePageProps) {
                 isHybrid={isHybridDealer}
                 sellsTwoWheelers={sells_two_wheelers}
                 sellsThreeWheelers={sells_three_wheelers}
+                siteHrefForSlug={siteHrefForSlug}
+                vehicleHubHref={vehicleHubHref}
             />
         )
     }
@@ -576,9 +595,10 @@ export default async function SitePage({ params }: SitePageProps) {
 
     const segmentsBanner = (
         <VehicleSegmentsBanner
-            slug={dealer.slug}
             sellsTwoWheelers={sells_two_wheelers}
             sellsThreeWheelers={sells_three_wheelers}
+            twoWheelerHref={vehicleHubHref('two-wheelers')}
+            threeWheelerHref={vehicleHubHref('three-wheelers')}
         />
     )
 
