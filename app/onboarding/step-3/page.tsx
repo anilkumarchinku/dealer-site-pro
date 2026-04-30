@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, ArrowLeft, Check } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { Service } from "@/lib/types";
+import { validateOnboardingServices } from "@/lib/validations/onboarding";
 
 const SERVICES: { id: Service; icon: string; title: string; description: string }[] = [
     { id: "new_car_sales", icon: "🚗", title: "New Car Sales", description: "Sell brand new vehicles" },
@@ -76,8 +77,9 @@ export default function Step3Page() {
     };
 
     const handleNext = () => {
-        if (selectedServices.length === 0) {
-            setError("Please select at least one service");
+        const validationError = validateOnboardingServices(selectedServices);
+        if (validationError) {
+            setError(validationError);
             return;
         }
 

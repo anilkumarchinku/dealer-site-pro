@@ -45,7 +45,7 @@ export async function GET(request: Request) {
                 const meta = user.user_metadata ?? {}
                 const dealershipName = (meta.dealership_name as string | undefined) ?? ''
                 if (dealershipName) {
-                    await supabase.from('dealers').upsert(
+                    const { error: dealerError } = await supabase.from('dealers').upsert(
                         {
                             user_id: user.id,
                             dealership_name: dealershipName,
@@ -56,6 +56,11 @@ export async function GET(request: Request) {
                         },
                         { onConflict: 'user_id', ignoreDuplicates: true }
                     )
+                    if (dealerError) {
+                        console.error('[auth/callback] Dealer registration conflict:', dealerError.message)
+                        await supabase.auth.signOut()
+                        return NextResponse.redirect(`${origin}/auth/login?error=registration_conflict`)
+                    }
                 }
             }
 

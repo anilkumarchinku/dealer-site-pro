@@ -51,11 +51,12 @@ interface PhoneInputProps {
     disabled?: boolean
     required?: boolean
     id?: string
+    lockCountryCode?: boolean
 }
 
 export function PhoneInput({
     value, countryCode, onValueChange, onCountryCodeChange,
-    label, helperText, error, disabled, required, id,
+    label, helperText, error, disabled, required, id, lockCountryCode,
 }: PhoneInputProps) {
     const [dropdownOpen, setDropdownOpen] = useState(false)
     const selected = getCountryByCode(countryCode)
@@ -78,8 +79,10 @@ export function PhoneInput({
                 <div className="relative">
                     <button
                         type="button"
-                        onClick={() => setDropdownOpen(o => !o)}
-                        disabled={disabled}
+                        onClick={() => {
+                            if (!lockCountryCode) setDropdownOpen(o => !o)
+                        }}
+                        disabled={disabled || lockCountryCode}
                         className={cn(
                             "flex items-center gap-1 h-10 px-2.5 text-sm rounded-l-md border border-r-0 bg-muted/50 transition-colors",
                             "border-gray-200 dark:border-gray-600 hover:bg-muted",
@@ -91,7 +94,7 @@ export function PhoneInput({
                         <span className="font-mono text-xs text-muted-foreground">{selected.code}</span>
                         <ChevronDown className="w-3 h-3 text-muted-foreground" />
                     </button>
-                    {dropdownOpen && (
+                    {dropdownOpen && !lockCountryCode && (
                         <div className="absolute top-full left-0 z-50 mt-1 w-56 max-h-60 overflow-y-auto rounded-lg border border-border bg-background shadow-lg">
                             {COUNTRY_CODES.map(c => (
                                 <button
@@ -118,7 +121,7 @@ export function PhoneInput({
                     inputMode="numeric"
                     value={value}
                     onChange={e => handleNumberChange(e.target.value)}
-                    maxLength={selected.digits + 2}
+                    maxLength={lockCountryCode ? selected.digits : selected.digits + 2}
                     placeholder={`${"0".repeat(selected.digits).replace(/(.{5})/, "$1 ")}`}
                     disabled={disabled}
                     className={cn(

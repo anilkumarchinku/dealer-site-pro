@@ -3,13 +3,14 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useOnboardingStore } from "@/lib/store/onboarding-store";
 import { saveDealer } from "@/lib/actions/save-dealer";
-import { dealerSiteUrl, dealerSiteHref, BASE_DOMAIN } from "@/lib/utils/domain";
+import { dealerSiteUrl, dealerSiteHref } from "@/lib/utils/domain";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import {
-    CheckCircle, ArrowLeft, ArrowRight, Crown, Link as LinkIcon,
-    Sparkles, Globe, Shield, Zap, Loader2, AlertCircle, ExternalLink,
+    CheckCircle, ArrowLeft, ArrowRight, Link as LinkIcon,
+    Globe, Shield, Loader2, AlertCircle, ExternalLink,
 } from "lucide-react";
+import { validateOnboardingReadyForSave } from "@/lib/validations/onboarding";
 
 export default function Step6Page() {
     const router = useRouter();
@@ -27,6 +28,12 @@ export default function Step6Page() {
     }, [setStep]);
 
     const handleFinish = async () => {
+        const validationErrors = validateOnboardingReadyForSave(data);
+        if (validationErrors.length > 0) {
+            setSaveError(validationErrors[0]);
+            return;
+        }
+
         setSaving(true);
         setSaveError(null);
 
@@ -161,7 +168,7 @@ export default function Step6Page() {
                             <p className="text-sm text-muted-foreground">Dealership Name</p>
                             <p className="font-semibold text-foreground">{data.dealershipName}</p>
                             {data.tagline && (
-                                <p className="text-sm text-muted-foreground italic">"{data.tagline}"</p>
+                                <p className="text-sm text-muted-foreground italic">&quot;{data.tagline}&quot;</p>
                             )}
                         </div>
 
@@ -337,7 +344,7 @@ export default function Step6Page() {
                                     Connect My Domain
                                 </Button>
                                 <Button variant="link" className="h-auto text-muted-foreground text-xs" onClick={() => setShowUpgradeOptions(false)}>
-                                    No thanks, I'll use my free subdomain for now →
+                                    No thanks, I&apos;ll use my free subdomain for now →
                                 </Button>
                             </CardFooter>
                         </Card>

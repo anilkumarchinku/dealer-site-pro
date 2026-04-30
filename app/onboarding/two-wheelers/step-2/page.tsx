@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, ArrowLeft, Check, Eye, EyeOff } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { Service } from "@/lib/types";
+import { validateOnboardingServices } from "@/lib/validations/onboarding";
 
 const SERVICES: { id: Service; icon: string; title: string; description: string }[] = [
     { id: "new_car_sales",        icon: "🏍️", title: "New Bike Sales",         description: "Sell brand new bikes and scooters"          },
@@ -51,7 +52,8 @@ export default function TwoWheelerStep2Page() {
     };
 
     const handleNext = () => {
-        if (selectedServices.length === 0) { setError("Please select at least one service"); return; }
+        const validationError = validateOnboardingServices(selectedServices);
+        if (validationError) { setError(validationError); return; }
         updateData({ services: selectedServices, cyeproApiKey: cyeproKey.trim() || undefined });
         setStep(3);
         router.push("/onboarding/two-wheelers/step-3");

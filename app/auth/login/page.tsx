@@ -22,6 +22,7 @@ function LoginForm() {
     const searchParams = useSearchParams();
     const justRegistered = searchParams.get("registered") === "true";
     const redirectTo = searchParams.get("redirect") || null;
+    const callbackError = searchParams.get("error");
 
     const safeRedirectTo = (() => {
         if (!redirectTo) return null;
@@ -32,7 +33,11 @@ function LoginForm() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [loading, setLoading] = useState(false);
-    const [error, setError] = useState<string | null>(null);
+    const [error, setError] = useState<string | null>(
+        callbackError === "registration_conflict"
+            ? "This email or mobile number is already registered. Please login or use different details."
+            : null
+    );
 
     const handleLogin = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -164,7 +169,7 @@ function LoginForm() {
 
                     <div className="flex flex-col items-center gap-1.5">
                         <p className="text-center text-sm text-muted-foreground">
-                            Don't have an account?{" "}
+                            Don&apos;t have an account?{" "}
                             <Link href="/auth/register" className="font-medium text-blue-600 dark:text-blue-400 hover:underline">
                                 Create one free
                             </Link>

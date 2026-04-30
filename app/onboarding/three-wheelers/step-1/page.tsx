@@ -5,12 +5,16 @@ import { useOnboardingStore } from "@/lib/store/onboarding-store";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { PhoneInput, validatePhone } from "@/components/ui/phone-input";
+import { PhoneInput } from "@/components/ui/phone-input";
 import { ArrowRight, ArrowLeft, Loader2, CheckCircle, XCircle, Globe, Check, Search } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { BASE_DOMAIN, USE_SUBDOMAIN } from "@/lib/utils/domain";
+import {
+    formatOnboardingPhone,
+    toOnboardingPhoneInputValue,
+    validateOnboardingContactStep,
+} from "@/lib/validations/onboarding";
 
-const GSTIN_REGEX = /^[0-9]{2}[A-Z]{5}[0-9]{4}[A-Z]{1}[1-9A-Z]{1}Z[0-9A-Z]{1}$/;
 import brandData from "@/lib/data/brand-models.json";
 
 function toSlug(value: string) {
@@ -41,9 +45,9 @@ export default function ThreeWheelerStep1Page() {
         fullAddress:     data.fullAddress     || "",
         mapLink:         data.mapLink         || "",
         yearsInBusiness: data.yearsInBusiness?.toString() || "",
-        phone:           data.phone           || "",
+        phone:           toOnboardingPhoneInputValue(data.phone || ""),
         phoneCountryCode: "+91",
-        whatsapp:        data.whatsapp        || "",
+        whatsapp:        toOnboardingPhoneInputValue(data.whatsapp || ""),
         whatsappCountryCode: "+91",
         email:           data.email           || "",
         gstin:           data.gstin           || "",
@@ -109,23 +113,12 @@ export default function ThreeWheelerStep1Page() {
     };
 
     const validate = () => {
-        const e: Record<string, string> = {};
-        if (!formData.dealershipName.trim()) e.dealershipName = "Dealership name is required";
-        if (!formData.location.trim())       e.location       = "Location is required";
-        if (!formData.phone.trim()) {
-            e.phone = "Phone number is required";
-        } else {
-            const phoneCheck = validatePhone(formData.phone, formData.phoneCountryCode);
-            if (!phoneCheck.valid) e.phone = phoneCheck.error!;
-        }
-        if (!formData.email.trim())          e.email          = "Email is required";
-        else if (!/\S+@\S+\.\S+/.test(formData.email)) e.email = "Please enter a valid email";
-        if (formData.gstin.trim() && !GSTIN_REGEX.test(formData.gstin.trim().toUpperCase())) {
-            e.gstin = "Enter a valid 15-character GSTIN";
-        }
-        if (!siteSlug)                       e.siteSlug       = "Site name is required";
-        if (slugStatus === "taken")          e.siteSlug       = "This site name is already taken";
-        if (slugStatus === "invalid")        e.siteSlug       = slugError;
+        const { errors: e } = validateOnboardingContactStep({
+            ...formData,
+            siteSlug,
+            slugStatus,
+            slugError,
+        });
         setErrors(e);
         return Object.keys(e).length === 0;
     };
@@ -140,10 +133,8 @@ export default function ThreeWheelerStep1Page() {
         }
         setIsSubmitting(true);
         try {
-            const fullPhone = `${formData.phoneCountryCode}${formData.phone.replace(/\D/g, "")}`;
-            const fullWhatsapp = formData.whatsapp
-                ? `${formData.whatsappCountryCode}${formData.whatsapp.replace(/\D/g, "")}`
-                : fullPhone;
+            const fullPhone = formatOnboardingPhone(formData.phone);
+            const fullWhatsapp = formData.whatsapp ? formatOnboardingPhone(formData.whatsapp) : fullPhone;
             updateData({
                 dealershipName:  formData.dealershipName,
                 tagline:         formData.tagline,
@@ -153,7 +144,7 @@ export default function ThreeWheelerStep1Page() {
                 yearsInBusiness: formData.yearsInBusiness ? parseInt(formData.yearsInBusiness) : null,
                 phone:           fullPhone,
                 whatsapp:        fullWhatsapp,
-                email:           formData.email,
+                email:           formData.email.trim().toLowerCase(),
                 gstin:           formData.gstin.toUpperCase(),
                 slug:            siteSlug,
                 brands:          selectedBrands as unknown as import("@/lib/types").Brand[],
@@ -306,6 +297,7 @@ export default function ThreeWheelerStep1Page() {
                     onCountryCodeChange={c => setFormData(prev => ({ ...prev, phoneCountryCode: c }))}
                     error={errors.phone}
                     required
+                    lockCountryCode
                 />
 
                 <Input
@@ -356,6 +348,7 @@ export default function ThreeWheelerStep1Page() {
                     placeholder="https://maps.google.com/..."
                     value={formData.mapLink}
                     onChange={(e) => handleChange("mapLink", e.target.value)}
+                    error={errors.mapLink}
                 />
 
                 <PhoneInput
@@ -365,7 +358,9 @@ export default function ThreeWheelerStep1Page() {
                     countryCode={formData.whatsappCountryCode}
                     onValueChange={v => handleChange("whatsapp", v)}
                     onCountryCodeChange={c => setFormData(prev => ({ ...prev, whatsappCountryCode: c }))}
+                    error={errors.whatsapp}
                     helperText="For instant chat button on site"
+                    lockCountryCode
                 />
 
                 {/* Brand picker — for new and hybrid dealers */}
@@ -408,7 +403,11 @@ export default function ThreeWheelerStep1Page() {
                                             )}>
                                             {/* eslint-disable-next-line @next/next/no-img-element */}
                                             <img src={logoSrc(brand.brandId)} alt={brand.brand} className="w-10 h-10 object-contain"
-                                                onError={e => { e.currentTarget.style.display = "none"; (e.currentTarget.nextElementSibling as HTMLElement | null)?.style && ((e.currentTarget.nextElementSibling as HTMLElement).style.display = "flex"); }} />
+                                                onError={e => {
+                                                    e.currentTarget.style.display = "none";
+                                                    const fallback = e.currentTarget.nextElementSibling as HTMLElement | null;
+                                                    if (fallback) fallback.style.display = "flex";
+                                                }} />
                                             <span className="w-10 h-10 rounded-full bg-muted text-muted-foreground text-xs font-bold items-center justify-center hidden">{initials}</span>
                                             <span className="text-xs font-medium text-center leading-tight">{brand.brand}</span>
                                             {selected && <div className="absolute top-1 right-1 w-4 h-4 rounded-full bg-green-500 flex items-center justify-center"><Check className="w-2.5 h-2.5 text-white" /></div>}

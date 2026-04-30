@@ -6,11 +6,16 @@ import { useOnboardingStore } from "@/lib/store/onboarding-store";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { PhoneInput, validatePhone } from "@/components/ui/phone-input";
+import { PhoneInput } from "@/components/ui/phone-input";
 import { ArrowRight, Loader2, CheckCircle, XCircle, Globe, Edit3, Check, Building2, Car, ExternalLink } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { BASE_DOMAIN, USE_SUBDOMAIN } from "@/lib/utils/domain";
 import type { Brand } from "@/lib/types";
+import {
+    formatOnboardingPhone,
+    toOnboardingPhoneInputValue,
+    validateOnboardingContactStep,
+} from "@/lib/validations/onboarding";
 
 // Sanitize input into a URL-safe slug
 function toSlug(value: string) {
@@ -23,9 +28,6 @@ function toSlug(value: string) {
         .replace(/^-+|-+$/g, '')
         .substring(0, 63);
 }
-
-// GSTIN pattern: 2-digit state code + 10-char PAN + 1 entity code + 1 Z + 1 check digit
-const GSTIN_REGEX = /^[0-9]{2}[A-Z]{5}[0-9]{4}[A-Z]{1}[1-9A-Z]{1}Z[0-9A-Z]{1}$/;
 
 const BRANDS: { name: Brand; logo: string }[] = [
     { name: "Maruti Suzuki",  logo: "/assets/logos/maruti-suzuki.png" },
@@ -75,9 +77,9 @@ export default function Step1Page() {
         fullAddress:     data.fullAddress || "",
         mapLink:         data.mapLink || "",
         yearsInBusiness: data.yearsInBusiness?.toString() || "",
-        phone:           data.phone || "",
+        phone:           toOnboardingPhoneInputValue(data.phone || ""),
         phoneCountryCode: "+91",
-        whatsapp:        data.whatsapp || "",
+        whatsapp:        toOnboardingPhoneInputValue(data.whatsapp || ""),
         whatsappCountryCode: "+91",
         email:           data.email || "",
         gstin:           data.gstin || "",
@@ -100,7 +102,12 @@ export default function Step1Page() {
     // Multiple branches state (1st hand / hybrid only)
     const [hasMultipleBranches, setHasMultipleBranches] = useState(data.hasMultipleBranches || false);
     const [branches, setBranches] = useState(
-        data.branches || [{ city: "", state: "", address: "", phone: "", phoneCountryCode: "+91" }]
+        (data.branches?.length ? data.branches : [{ city: "", state: "", address: "", phone: "", phoneCountryCode: "+91" }])
+            .map((branch) => ({
+                ...branch,
+                phone:            toOnboardingPhoneInputValue(branch.phone || ""),
+                phoneCountryCode: "+91",
+            }))
     );
     const [branchErrors, setBranchErrors] = useState<Record<string, string>>({});
 
@@ -160,47 +167,16 @@ export default function Step1Page() {
     };
 
     const validate = () => {
-        const newErrors: Record<string, string> = {};
-        if (!formData.dealershipName.trim()) newErrors.dealershipName = "Dealership name is required";
-        if (!formData.location.trim())       newErrors.location       = "Location is required";
+        const { errors: newErrors, branchErrors: nextBranchErrors } = validateOnboardingContactStep({
+            ...formData,
+            siteSlug,
+            slugStatus,
+            slugError,
+            hasMultipleBranches,
+            branches,
+        });
 
-        // Phone validation with country code
-        if (!formData.phone.trim()) {
-            newErrors.phone = "Phone number is required";
-        } else {
-            const phoneCheck = validatePhone(formData.phone, formData.phoneCountryCode);
-            if (!phoneCheck.valid) newErrors.phone = phoneCheck.error!;
-        }
-
-        if (!formData.email.trim())          newErrors.email          = "Email is required";
-        else if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = "Please enter a valid email";
-
-        // GSTIN validation (optional but must be valid if provided)
-        if (formData.gstin.trim() && !GSTIN_REGEX.test(formData.gstin.trim().toUpperCase())) {
-            newErrors.gstin = "Enter a valid 15-character GSTIN";
-        }
-
-        if (!siteSlug)                       newErrors.siteSlug       = "Site name is required";
-        if (slugStatus === "taken")          newErrors.siteSlug       = "This site name is already taken";
-        if (slugStatus === "invalid")        newErrors.siteSlug       = slugError;
-
-        // Branch validation (when branches are enabled)
-        if (hasMultipleBranches) {
-            const bErrors: Record<string, string> = {};
-            branches.forEach((branch, idx) => {
-                if (!branch.city?.trim())    bErrors[`${idx}-city`]    = "City is required";
-                if (!branch.state?.trim())   bErrors[`${idx}-state`]   = "State is required";
-                if (!branch.address?.trim()) bErrors[`${idx}-address`] = "Address is required";
-                if (!branch.phone?.trim())   bErrors[`${idx}-phone`]   = "Phone is required";
-                else {
-                    const bPhoneCheck = validatePhone(branch.phone, branch.phoneCountryCode || "+91");
-                    if (!bPhoneCheck.valid)   bErrors[`${idx}-phone`]   = bPhoneCheck.error!;
-                }
-            });
-            setBranchErrors(bErrors);
-            if (Object.keys(bErrors).length > 0) newErrors._branches = "Please fix branch errors";
-        }
-
+        setBranchErrors(nextBranchErrors);
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
     };
@@ -218,10 +194,8 @@ export default function Step1Page() {
 
         setIsSubmitting(true);
         try {
-            const fullPhone = `${formData.phoneCountryCode}${formData.phone.replace(/\D/g, "")}`;
-            const fullWhatsapp = formData.whatsapp
-                ? `${formData.whatsappCountryCode}${formData.whatsapp.replace(/\D/g, "")}`
-                : fullPhone;
+            const fullPhone = formatOnboardingPhone(formData.phone);
+            const fullWhatsapp = formData.whatsapp ? formatOnboardingPhone(formData.whatsapp) : fullPhone;
 
             updateData({
                 dealershipName:  formData.dealershipName,
@@ -232,14 +206,14 @@ export default function Step1Page() {
                 yearsInBusiness: formData.yearsInBusiness ? parseInt(formData.yearsInBusiness) : null,
                 phone:           fullPhone,
                 whatsapp:        fullWhatsapp,
-                email:           formData.email,
+                email:           formData.email.trim().toLowerCase(),
                 gstin:           formData.gstin.toUpperCase(),
                 slug:            siteSlug,
                 hasMultipleBranches: hasMultipleBranches,
                 branches: hasMultipleBranches
                     ? branches.filter(b => b.city && b.address).map(b => ({
                         ...b,
-                        phone: b.phone ? `${b.phoneCountryCode || "+91"}${b.phone.replace(/\D/g, "")}` : "",
+                        phone: formatOnboardingPhone(b.phone || ""),
                     }))
                     : [],
                 ...(isFirstHand && {
@@ -545,6 +519,7 @@ export default function Step1Page() {
                                                 }}
                                                 error={branchErrors[`${idx}-phone`]}
                                                 required
+                                                lockCountryCode
                                             />
                                         </div>
                                     </div>
@@ -583,6 +558,7 @@ export default function Step1Page() {
                     onCountryCodeChange={c => setFormData(prev => ({ ...prev, phoneCountryCode: c }))}
                     error={errors.phone}
                     required
+                    lockCountryCode
                 />
 
                 <Input
@@ -634,11 +610,12 @@ export default function Step1Page() {
 
                     <Input
                         label="Google Maps Link (Optional)"
-                        placeholder="https://maps.google.com/..."
-                        value={formData.mapLink}
-                        onChange={(e) => handleChange("mapLink", e.target.value)}
-                        helperText="Paste your location's share link here"
-                    />
+                    placeholder="https://maps.google.com/..."
+                    value={formData.mapLink}
+                    onChange={(e) => handleChange("mapLink", e.target.value)}
+                    error={errors.mapLink}
+                    helperText="Paste your location's share link here"
+                />
                 </div>
 
                 {/* WhatsApp Number with country code */}
@@ -649,7 +626,9 @@ export default function Step1Page() {
                     countryCode={formData.whatsappCountryCode}
                     onValueChange={v => handleChange("whatsapp", v)}
                     onCountryCodeChange={c => setFormData(prev => ({ ...prev, whatsappCountryCode: c }))}
+                    error={errors.whatsapp}
                     helperText="For instant chat button on site"
+                    lockCountryCode
                 />
 
                 {/* ── OEM Brand Selection (1st hand + hybrid) ──────────────────── */}

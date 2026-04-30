@@ -7,11 +7,13 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { ArrowLeft, ArrowRight, LayoutTemplate, Type, Globe } from "lucide-react";
-
-function isValidUrl(value: string): boolean {
-    if (!value) return true; // empty is fine (optional)
-    try { new URL(value); return true; } catch { return false; }
-}
+import { SocialLinksFields } from "@/components/onboarding/SocialLinksFields";
+import {
+    getOptionalHttpUrlError,
+    hasValidationErrors,
+    type OnboardingSocialField,
+    validateTemplateSocialUrls,
+} from "@/lib/validations/onboarding";
 
 export default function Step5Page() {
     const router = useRouter();
@@ -37,24 +39,26 @@ export default function Step5Page() {
         return;
     }, [setStep]);
 
-    const SOCIAL_FIELDS = ['facebook', 'instagram', 'twitter', 'youtube', 'linkedin'] as const;
-
     // Update store when config changes
     const handleChange = (field: keyof typeof config, value: string) => {
         const newConfig = { ...config, [field]: value };
         setConfig(newConfig);
         updateData({ templateConfig: newConfig });
         // Validate URL fields on change
-        if (SOCIAL_FIELDS.includes(field as typeof SOCIAL_FIELDS[number])) {
+        if (['facebook', 'instagram', 'twitter', 'youtube', 'linkedin'].includes(field)) {
             setUrlErrors(prev => ({
                 ...prev,
-                [field]: value && !isValidUrl(value) ? "Enter a valid URL (e.g. https://facebook.com/yourpage)" : ""
+                [field]: getOptionalHttpUrlError(value, "Enter a valid URL starting with http:// or https://")
             }));
         }
     };
 
     const handleNext = () => {
-        // Validation could go here if needed
+        const nextUrlErrors = validateTemplateSocialUrls(config);
+        setUrlErrors(nextUrlErrors);
+        if (hasValidationErrors(nextUrlErrors)) return;
+
+        updateData({ templateConfig: config });
         setStep(6);
         router.push("/onboarding/step-6");
     };
@@ -153,34 +157,11 @@ export default function Step5Page() {
                         </div>
                     </div>
 
-                    {/* Social Links */}
-                    <div className="space-y-4 pt-4">
-                        <div className="flex items-center gap-2 text-sm font-semibold text-foreground border-b border-border pb-2">
-                            <Globe className="w-4 h-4" />
-                            Social Media Links (Optional)
-                        </div>
-                        <div className="grid gap-4 sm:grid-cols-2">
-                            {([
-                                { field: 'facebook' as const,  label: 'Facebook',  placeholder: 'https://facebook.com/yourshowroom' },
-                                { field: 'instagram' as const, label: 'Instagram', placeholder: 'https://instagram.com/yourshowroom' },
-                                { field: 'twitter' as const,   label: 'X / Twitter', placeholder: 'https://x.com/yourshowroom' },
-                                { field: 'youtube' as const,   label: 'YouTube',   placeholder: 'https://youtube.com/@yourshowroom' },
-                                { field: 'linkedin' as const,  label: 'LinkedIn',  placeholder: 'https://linkedin.com/company/yourshowroom' },
-                            ]).map(({ field, label, placeholder }) => (
-                                <div key={field} className="space-y-1">
-                                    <Label>{label}</Label>
-                                    <Input
-                                        placeholder={placeholder}
-                                        value={config[field]}
-                                        onChange={(e) => handleChange(field, e.target.value)}
-                                    />
-                                    {urlErrors[field] && (
-                                        <p className="text-xs text-destructive">{urlErrors[field]}</p>
-                                    )}
-                                </div>
-                            ))}
-                        </div>
-                    </div>
+                    <SocialLinksFields
+                        values={config}
+                        errors={urlErrors}
+                        onChange={(field: OnboardingSocialField, value: string) => handleChange(field, value)}
+                    />
 
                 </CardContent>
 
@@ -204,7 +185,7 @@ export default function Step5Page() {
                 <div>
                     <h4 className="font-semibold text-foreground">Pro Tip</h4>
                     <p className="text-sm text-muted-foreground">
-                        The "Preview" button in the top right corner shows your changes in real-time!
+                        The &quot;Preview&quot; button in the top right corner shows your changes in real-time!
                     </p>
                 </div>
             </div>

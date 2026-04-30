@@ -10,6 +10,7 @@ import {
     CheckCircle, ArrowLeft, ArrowRight, Globe, Shield,
     Loader2, AlertCircle, ExternalLink, Link as LinkIcon,
 } from "lucide-react";
+import { validateOnboardingReadyForSave } from "@/lib/validations/onboarding";
 
 export default function TwoWheelerStep5Page() {
     const router = useRouter();
@@ -25,6 +26,12 @@ export default function TwoWheelerStep5Page() {
     useEffect(() => { setVehicleType('two-wheeler'); }, [setVehicleType]);
 
     const handleFinish = async () => {
+        const validationErrors = validateOnboardingReadyForSave(data);
+        if (validationErrors.length > 0) {
+            setSaveError(validationErrors[0]);
+            return;
+        }
+
         setSaving(true);
         setSaveError(null);
         try {

@@ -6,10 +6,15 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { PasswordInput } from "@/components/ui/password-input";
-import { PhoneInput, validatePhone } from "@/components/ui/phone-input";
+import { PhoneInput } from "@/components/ui/phone-input";
 import { Loader2, AlertCircle, CheckCircle, Mail } from "lucide-react";
 import { useOnboardingStore } from "@/lib/store/onboarding-store";
 import { supabase } from "@/lib/supabase";
+import {
+    formatRegistrationPhone,
+    REGISTRATION_PASSWORD_MIN_LENGTH,
+    validateRegistrationMobileNumber,
+} from "@/lib/services/registration-availability-service";
 
 export default function RegisterPage() {
     const { updateData, reset } = useOnboardingStore();
@@ -33,14 +38,15 @@ export default function RegisterPage() {
 
     const validate = (): string | null => {
         if (!form.fullName.trim()) return "Full name is required";
-        if (!form.mobileNumber.trim()) return "Mobile number is required";
-        const phoneCheck = validatePhone(form.mobileNumber, form.mobileCountryCode);
-        if (!phoneCheck.valid) return phoneCheck.error!;
+        const phoneError = validateRegistrationMobileNumber(form.mobileNumber);
+        if (phoneError) return phoneError;
         if (!form.dealershipName.trim()) return "Dealership name is required";
         if (!form.email.trim()) return "Email is required";
         if (!/\S+@\S+\.\S+/.test(form.email)) return "Enter a valid email address";
         if (!form.password) return "Password is required";
-        if (form.password.length < 20) return "Password must be at least 20 characters";
+        if (form.password.length < REGISTRATION_PASSWORD_MIN_LENGTH) {
+            return `Password must be at least ${REGISTRATION_PASSWORD_MIN_LENGTH} characters`;
+        }
         if (form.password !== form.confirmPassword) return "Passwords do not match";
         if (!consentGiven) return "Please agree to the Privacy Policy and Terms of Service to continue";
         return null;
@@ -55,17 +61,33 @@ export default function RegisterPage() {
 
         setLoading(true);
         try {
-            const fullPhone = `${form.mobileCountryCode}${form.mobileNumber.replace(/\D/g, "")}`;
+            const email = form.email.trim().toLowerCase();
+            const fullPhone = formatRegistrationPhone(form.mobileNumber);
+
+            const availabilityResponse = await fetch("/api/auth/registration-availability", {
+                method:  "POST",
+                headers: { "Content-Type": "application/json" },
+                body:    JSON.stringify({
+                    email,
+                    mobileNumber: form.mobileNumber,
+                }),
+            });
+            const availability = await availabilityResponse.json().catch(() => null) as { error?: string } | null;
+
+            if (!availabilityResponse.ok) {
+                setError(availability?.error ?? "Could not validate registration details. Please try again.");
+                return;
+            }
 
             reset();
             updateData({
                 dealershipName: form.dealershipName.trim(),
                 phone: fullPhone,
-                email: form.email.trim().toLowerCase(),
+                email,
             });
 
             const { error: authError } = await supabase.auth.signUp({
-                email: form.email.trim().toLowerCase(),
+                email,
                 password: form.password,
                 options: {
                     emailRedirectTo: `${window.location.origin}/auth/callback?next=/auth/login`,
@@ -78,7 +100,11 @@ export default function RegisterPage() {
             });
 
             if (authError) {
-                setError(authError.message);
+                if (/already|registered|exists/i.test(authError.message)) {
+                    setError("This email is already registered. Please login instead.");
+                } else {
+                    setError(authError.message);
+                }
                 return;
             }
 
@@ -149,8 +175,10 @@ export default function RegisterPage() {
                             countryCode={form.mobileCountryCode}
                             onValueChange={v => update("mobileNumber", v)}
                             onCountryCodeChange={c => update("mobileCountryCode", c)}
+                            helperText="10 digits only"
                             disabled={loading}
                             required
+                            lockCountryCode
                         />
 
                         {/* Dealership Name */}
@@ -186,8 +214,8 @@ export default function RegisterPage() {
                             <Label htmlFor="password">Password</Label>
                             <PasswordInput
                                 id="password"
-                                placeholder="Min 20 characters"
-                                minLength={20}
+                                placeholder={`Min ${REGISTRATION_PASSWORD_MIN_LENGTH} characters`}
+                                minLength={REGISTRATION_PASSWORD_MIN_LENGTH}
                                 maxLength={128}
                                 value={form.password}
                                 onChange={e => update("password", e.target.value)}
@@ -202,7 +230,7 @@ export default function RegisterPage() {
                             <PasswordInput
                                 id="confirmPassword"
                                 placeholder="Re-enter password"
-                                minLength={20}
+                                minLength={REGISTRATION_PASSWORD_MIN_LENGTH}
                                 maxLength={128}
                                 value={form.confirmPassword}
                                 onChange={e => update("confirmPassword", e.target.value)}
