@@ -85,7 +85,8 @@ async function resolveVehicleBySlug<TVehicle extends VehicleLookup>(
     const catalogGroups = await Promise.all(
         brandsToShow.map(async (brand, brandIndex) => {
             const dbRows = await options.getCatalogFromDB(brand, dealer.id)
-            const source = dbRows.length > 0 ? dbRows : options.getFallbackCatalog(brand, dealer.id)
+            const fallbackRows = options.getFallbackCatalog(brand, dealer.id)
+            const source = [...dbRows, ...fallbackRows]
             return source.map((vehicle) => ({ ...vehicle, id: `${options.catalogPrefix}-${brandIndex}-${vehicle.id}` }))
         })
     )
