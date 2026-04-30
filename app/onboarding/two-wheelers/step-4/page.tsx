@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { ArrowLeft, ArrowRight, LayoutTemplate, Type, Globe } from "lucide-react";
 import { SocialLinksFields } from "@/components/onboarding/SocialLinksFields";
+import { WebsiteImageFields } from "@/components/onboarding/WebsiteImageFields";
 import { getPrefilledTemplateConfig } from "@/lib/onboarding/prefill";
 import {
     getOptionalHttpUrlError,
@@ -148,6 +149,13 @@ export default function TwoWheelerStep4Page() {
                             youtube:   "https://youtube.com/@yourbikeshop",
                             linkedin:  "https://linkedin.com/company/yourbikeshop",
                         }}
+                    />
+
+                    <WebsiteImageFields
+                        logoValue={data.brandLogo}
+                        heroValue={data.heroImage}
+                        onLogoChange={(value) => updateData({ brandLogo: value })}
+                        onHeroChange={(value) => updateData({ heroImage: value })}
                     />
                 </CardContent>
 

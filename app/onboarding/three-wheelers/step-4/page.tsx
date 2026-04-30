@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { ArrowLeft, ArrowRight, LayoutTemplate, Type, Globe } from "lucide-react";
 import { SocialLinksFields } from "@/components/onboarding/SocialLinksFields";
+import { WebsiteImageFields } from "@/components/onboarding/WebsiteImageFields";
 import { getPrefilledTemplateConfig } from "@/lib/onboarding/prefill";
 import {
     getOptionalHttpUrlError,
@@ -141,6 +142,13 @@ export default function ThreeWheelerStep4Page() {
                         values={config}
                         errors={urlErrors}
                         onChange={(field: OnboardingSocialField, value: string) => handleChange(field, value)}
+                    />
+
+                    <WebsiteImageFields
+                        logoValue={data.brandLogo}
+                        heroValue={data.heroImage}
+                        onLogoChange={(value) => updateData({ brandLogo: value })}
+                        onHeroChange={(value) => updateData({ heroImage: value })}
                     />
                 </CardContent>
 

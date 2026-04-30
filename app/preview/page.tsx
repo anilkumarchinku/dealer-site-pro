@@ -43,6 +43,7 @@ import type { ThreeWheelerVehicle } from "@/lib/types/three-wheeler";
 import { brandNameToId } from "@/lib/utils/brand-model-images";
 import { brandToUrlSlug } from "@/lib/utils/domain";
 import { dedupeByBrandModel } from "@/lib/utils/listing-dedupe";
+import { firstVehicleHeroImage } from "@/lib/utils/site-assets";
 
 type AutomotiveBrandConfig = {
     primary: string
@@ -320,8 +321,8 @@ function PreviewContent() {
             const brandId = brandNameToId(primaryBrand, '3w');
             return brandId ? `/data/brand-logos/${brandId}.png` : undefined;
         }
-        // 4W — use existing assets/logos path
-        return `/assets/logos/${primaryBrand.toLowerCase().replace(/\s+/g, '-')}.png`;
+        const brandId = brandNameToId(primaryBrand, '4w');
+        return brandId ? `/data/brand-logos/${brandId}.png` : undefined;
     })();
 
     // Render the appropriate template with brand-specific data
@@ -339,7 +340,8 @@ function PreviewContent() {
             previewMode: true,
             sellsNewCars: true,
             sellsUsedCars: false,
-            logoUrl: logoUrl,
+            logoUrl: data.brandLogo || logoUrl,
+            heroImageUrl: data.heroImage || firstVehicleHeroImage(displayCars),
             vehicleType: is3W ? '3w' as const : is2W ? '2w' as const : '4w' as const,
         };
 

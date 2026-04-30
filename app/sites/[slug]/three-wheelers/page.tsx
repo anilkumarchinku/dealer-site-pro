@@ -16,6 +16,7 @@ import type { Car } from "@/lib/types/car"
 import type { ThreeWheelerVehicle, ThreeWheelerUsedVehicle } from "@/lib/types/three-wheeler"
 import type { Service } from "@/lib/types"
 import { dedupeByBrandModel, dedupeCaseInsensitiveStrings } from "@/lib/utils/listing-dedupe"
+import { firstVehicleHeroImage } from "@/lib/utils/site-assets"
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -382,6 +383,7 @@ export default async function ThreeWheelersPage({ params }: Props) {
 
   const brandId = primaryBrand ? brandNameToId(primaryBrand, '3w') : null
   const brandLogoUrl = dealer.logo_url ?? (brandId ? `/data/brand-logos/${brandId}.png` : undefined)
+  const heroImageUrl = dealer.hero_image_url ?? firstVehicleHeroImage(cars)
 
   const contactInfo = {
     phone: dealer.phone,
@@ -415,7 +417,7 @@ export default async function ThreeWheelersPage({ params }: Props) {
     services:     (dealer.services ?? []) as Service[],
     workingHours: dealer.working_hours ?? null,
     logoUrl:      brandLogoUrl ?? undefined,
-    heroImageUrl: undefined,
+    heroImageUrl,
     sellsNewCars:  hasNew,
     sellsUsedCars: hasUsed,
     isVerified:    false,

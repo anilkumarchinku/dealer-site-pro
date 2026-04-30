@@ -13,6 +13,7 @@ import type { DBVehicle } from '@/lib/db/vehicles'
 import type { Service } from '@/lib/types'
 import { dedupeByMakeModel, dedupeCaseInsensitiveStrings } from '@/lib/utils/listing-dedupe'
 import { publicDealerSitePath, publicVehicleHubPath, type VehicleHubSegment } from '@/lib/utils/public-site-routing'
+import { brandLogoUrl, firstVehicleHeroImage } from '@/lib/utils/site-assets'
 
 
 // Always render fresh — ensures DB changes (e.g. image URLs) take effect immediately.
@@ -531,9 +532,8 @@ export default async function SitePage({ params }: SitePageProps) {
     // Fallback: brand logo from /data/brand-logos/<brand-id>.png
     const isUsedSite = templateSellsUsed && !templateSellsNew
     const brandName = isUsedSite ? 'Bentley' : (brandFilter ?? brands[0] ?? dealer.dealership_name)
-    // Pass dealer's uploaded logo if available; otherwise undefined so each template
-    // falls back to its own correct path (/assets/logos/<brand>.png for 4W).
-    const logoUrl = logo_url ?? undefined
+    const logoUrl = logo_url ?? brandLogoUrl(brandName, '4w')
+    const heroImageUrl = hero_image_url ?? firstVehicleHeroImage(cars)
 
     const contactInfo = {
         phone: dealer.phone,
@@ -568,7 +568,7 @@ export default async function SitePage({ params }: SitePageProps) {
         services: (dealer.services ?? []) as Service[],
         workingHours: dealer.working_hours ?? null,
         logoUrl,
-        heroImageUrl: hero_image_url ?? undefined,
+        heroImageUrl,
         sellsNewCars: templateSellsNew,
         sellsUsedCars: templateSellsUsed,
         isVerified: false,

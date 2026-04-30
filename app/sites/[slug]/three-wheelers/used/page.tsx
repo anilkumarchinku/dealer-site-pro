@@ -12,6 +12,7 @@ import { FamilyTemplate } from '@/components/templates/FamilyTemplate'
 import type { Car } from '@/lib/types/car'
 import type { ThreeWheelerUsedVehicle } from '@/lib/types/three-wheeler'
 import type { Service } from '@/lib/types'
+import { firstVehicleHeroImage } from '@/lib/utils/site-assets'
 
 interface Props {
     params: Promise<{ slug: string }>
@@ -135,6 +136,7 @@ export default async function UsedThreeWheelersPage({ params }: Props) {
     const primaryBrand = brands3w[0] ?? dealer.brands[0] ?? null
     const brandId = primaryBrand ? brandNameToId(primaryBrand, '3w') : null
     const brandLogoUrl = dealer.logo_url ?? (brandId ? `/data/brand-logos/${brandId}.png` : undefined)
+    const heroImageUrl = dealer.hero_image_url ?? firstVehicleHeroImage(cars)
 
     const contactInfo = {
         phone: dealer.phone,
@@ -168,7 +170,7 @@ export default async function UsedThreeWheelersPage({ params }: Props) {
         services:     (dealer.services ?? []) as Service[],
         workingHours: dealer.working_hours ?? null,
         logoUrl:      brandLogoUrl ?? undefined,
-        heroImageUrl: undefined,
+        heroImageUrl,
         sellsNewCars:  false,
         sellsUsedCars: true,
         isVerified:    false,
