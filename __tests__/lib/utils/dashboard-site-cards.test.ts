@@ -103,9 +103,49 @@ describe('dashboard site cards', () => {
         })
 
         expect(cards.map(card => card.slug)).toEqual([
-            'multi-motors/two-wheelers/new',
-            'multi-motors/three-wheelers/new',
-            'multi-motors',
+            'multi-motors-honda/two-wheelers/new',
+            'multi-motors-piaggio/three-wheelers/new',
+            'multi-motors-hyundai',
+        ])
+    })
+
+    it('uses a brand-specific editor page even for a single selected 2W brand', () => {
+        const cards = buildDashboardSiteCards({
+            slug: 'solo-bikes',
+            dealerName: 'Solo Bikes',
+            carBrands: [],
+            twoWheelerBrands: ['Aprilia India'],
+            threeWheelerBrands: [],
+            isNew: true,
+            isUsed: false,
+            vehicleType: 'two-wheeler',
+            has2W: true,
+            has3W: false,
+            has4W: false,
+        })
+
+        expect(cards.map(card => card.slug)).toEqual([
+            'solo-bikes-aprilia-india/two-wheelers/new',
+        ])
+    })
+
+    it('uses a brand-specific editor page even for a single selected 4W brand', () => {
+        const cards = buildDashboardSiteCards({
+            slug: 'solo-cars',
+            dealerName: 'Solo Cars',
+            carBrands: ['Mahindra'],
+            twoWheelerBrands: [],
+            threeWheelerBrands: [],
+            isNew: true,
+            isUsed: false,
+            vehicleType: 'car',
+            has2W: false,
+            has3W: false,
+            has4W: true,
+        })
+
+        expect(cards.map(card => card.slug)).toEqual([
+            'solo-cars-mahindra',
         ])
     })
 })

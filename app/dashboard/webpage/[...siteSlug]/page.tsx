@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useMemo } from "react"
 import { useParams, useRouter } from "next/navigation"
 import { useOnboardingStore } from "@/lib/store/onboarding-store"
 import { supabase } from "@/lib/supabase"
@@ -16,6 +16,7 @@ import {
 import { cn } from "@/lib/utils"
 import { useDashboardSiteOrigin } from "@/lib/hooks/use-dashboard-site-origin"
 import { dashboardSiteDisplayUrl, dashboardSiteHref, dashboardSitePath } from "@/lib/utils/dashboard-site-links"
+import { parseDashboardSiteEditorTarget } from "@/lib/utils/dashboard-site-editor"
 
 // ── Types ──────────────────────────────────────────────────────────────────────
 
@@ -49,21 +50,17 @@ export default function SiteEditorPage() {
         ? (params.siteSlug as string[]).join('/')
         : (params.siteSlug as string)
 
-    const { dealerId, dealerSlug, setDealerId, setDealerSlug } = useOnboardingStore()
-
-    // The brand-slug is whatever comes after "{dealerSlug}-" in the siteSlug.
-    // e.g. siteSlug="abhi-motors-tata", dealerSlug="abhi-motors" → brandSlug="tata"
-    // For the main site (siteSlug === dealerSlug) brandSlug is null.
-    const brandSlug: string | null =
-        dealerSlug && siteSlug !== dealerSlug && siteSlug.startsWith(dealerSlug + '-')
-            ? (() => {
-                const suffix = siteSlug.slice(dealerSlug.length + 1).split('/')[0]
-                return suffix === 'used' ? null : suffix
-            })()
-            : null
+    const { dealerId, dealerSlug: storeDealerSlug, setDealerId, setDealerSlug } = useOnboardingStore()
+    const [resolvedDealerSlug, setResolvedDealerSlug] = useState(storeDealerSlug ?? "")
+    const effectiveDealerSlug = storeDealerSlug || resolvedDealerSlug
+    const editorTarget = useMemo(
+        () => parseDashboardSiteEditorTarget(siteSlug, effectiveDealerSlug),
+        [siteSlug, effectiveDealerSlug]
+    )
+    const brandSlug = editorTarget.brandSlug
 
     const [device,       setDevice]       = useState<DeviceView>("desktop")
-    const [editOpen,     setEditOpen]     = useState(false)
+    const [editOpen,     setEditOpen]     = useState(true)
     const [saving,       setSaving]       = useState(false)
     const [saveOk,       setSaveOk]       = useState(false)
     const [iframeKey,    setIframeKey]    = useState(0)
@@ -79,21 +76,53 @@ export default function SiteEditorPage() {
         workingHours:  "",
     })
 
+    useEffect(() => {
+        if (storeDealerSlug) setResolvedDealerSlug(storeDealerSlug)
+    }, [storeDealerSlug])
+
     // ── Bootstrap: load dealer if store not yet populated ────────────────────
     useEffect(() => {
-        if (dealerId) { loadEditorData(dealerId); return }
-
         async function selfInit() {
             try {
-                const { data: { user } } = await supabase.auth.getUser()
-                if (!user) return
-                const { data: dealer } = await supabase
-                    .from("dealers")
-                    .select("id, slug")
-                    .eq("user_id", user.id)
-                    .maybeSingle()
-                if (dealer?.id)   { setDealerId(dealer.id);   await loadEditorData(dealer.id) }
-                if (dealer?.slug) setDealerSlug(dealer.slug)
+                let nextDealerId = dealerId
+                let nextDealerSlug = effectiveDealerSlug
+
+                if (nextDealerId && !nextDealerSlug) {
+                    const { data: dealer } = await supabase
+                        .from("dealers")
+                        .select("slug")
+                        .eq("id", nextDealerId)
+                        .maybeSingle()
+                    if (dealer?.slug) {
+                        nextDealerSlug = dealer.slug
+                        setResolvedDealerSlug(dealer.slug)
+                        setDealerSlug(dealer.slug)
+                    }
+                }
+
+                if (!nextDealerId) {
+                    const { data: { user } } = await supabase.auth.getUser()
+                    if (!user) return
+                    const { data: dealer } = await supabase
+                        .from("dealers")
+                        .select("id, slug")
+                        .eq("user_id", user.id)
+                        .maybeSingle()
+                    if (dealer?.id) {
+                        nextDealerId = dealer.id
+                        setDealerId(dealer.id)
+                    }
+                    if (dealer?.slug) {
+                        nextDealerSlug = dealer.slug
+                        setResolvedDealerSlug(dealer.slug)
+                        setDealerSlug(dealer.slug)
+                    }
+                }
+
+                if (nextDealerId) {
+                    const target = parseDashboardSiteEditorTarget(siteSlug, nextDealerSlug)
+                    await loadEditorData(nextDealerId, target.brandSlug)
+                }
             } finally {
                 setInitializing(false)
             }
@@ -104,21 +133,21 @@ export default function SiteEditorPage() {
     }, [])
 
     useEffect(() => {
-        if (dealerId) loadEditorData(dealerId)
+        if (dealerId) loadEditorData(dealerId, brandSlug)
         return;
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [dealerId, brandSlug])
 
-    async function loadEditorData(id: string) {
+    async function loadEditorData(id: string, targetBrandSlug = brandSlug) {
         setInitializing(true)
         try {
-            if (brandSlug) {
+            if (targetBrandSlug) {
                 // Brand-specific config from dealer_site_configs
                 const { data: siteConfig } = await supabase
                     .from("dealer_site_configs")
                     .select("style_template, hero_title, hero_subtitle, hero_cta_text, tagline, working_hours")
                     .eq("dealer_id", id)
-                    .eq("brand_slug", brandSlug)
+                    .eq("brand_slug", targetBrandSlug)
                     .maybeSingle()
 
                 // Fall back to main config for defaults
@@ -150,7 +179,10 @@ export default function SiteEditorPage() {
                     .eq("id", id)
                     .single()
 
-                if (dealer?.slug && !dealerSlug) setDealerSlug(dealer.slug)
+                if (dealer?.slug && !effectiveDealerSlug) {
+                    setResolvedDealerSlug(dealer.slug)
+                    setDealerSlug(dealer.slug)
+                }
 
                 const { data: tc } = await supabase
                     .from("dealer_template_configs")
@@ -254,11 +286,6 @@ export default function SiteEditorPage() {
     const liveUrl        = dashboardSitePath(siteSlug)
     const liveUrlDisplay = dashboardSiteDisplayUrl(siteSlug, siteOrigin)
 
-    // Brand label for the page heading
-    const brandLabel = brandSlug
-        ? brandSlug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')
-        : null
-
     return (
         <div className="space-y-6 animate-fade-in">
 
@@ -274,11 +301,11 @@ export default function SiteEditorPage() {
                         <ArrowLeft className="w-4 h-4" />
                         My Webpages
                     </Button>
-                    {brandLabel && (
+                    {editorTarget.pageLabel && (
                         <>
                             <span className="text-muted-foreground">/</span>
                             <span className="px-2.5 py-1 rounded-md bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wider">
-                                {brandLabel}
+                                {editorTarget.pageLabel}
                             </span>
                         </>
                     )}
@@ -286,7 +313,7 @@ export default function SiteEditorPage() {
 
                 <Button
                     onClick={handleSave}
-                    disabled={saving || !dealerId}
+                    disabled={saving || initializing || !dealerId}
                     size="lg"
                     className="gap-2 font-semibold bg-primary hover:bg-primary/90"
                 >

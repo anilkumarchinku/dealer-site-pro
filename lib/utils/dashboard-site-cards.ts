@@ -46,7 +46,7 @@ function buildNewSegmentCards(
     segmentPath: 'two-wheelers' | 'three-wheelers',
     segmentLabel: '2W' | '3W'
 ): DashboardSiteCard[] {
-    if (brands.length <= 1) {
+    if (brands.length === 0) {
         return [pathCard(`${slug}/${segmentPath}/new`, `New ${segmentLabel}`)]
     }
 
@@ -83,7 +83,7 @@ function buildCarCards(slug: string, brands: string[], isNew: boolean, isUsed: b
     if (isUsed && !isNew) {
         return [{ slug, brand: null, label: 'Pre-Owned Cars', isUsed: true, showLabel: true }]
     }
-    if (brands.length <= 1 && !isHybrid) {
+    if (brands.length === 0 && !isHybrid) {
         return [{ slug, brand: null, label: name || 'My Site' }]
     }
     if (isHybrid) {

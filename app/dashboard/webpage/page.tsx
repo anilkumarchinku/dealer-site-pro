@@ -23,11 +23,11 @@ type DealerBrandRow = {
 
 function brandsForType(rows: DealerBrandRow[], types: string[], fallback: string[]): string[] {
     const normalizedTypes = new Set(types.map(type => type.toLowerCase()))
-    const brands = rows
+    const brands = [...new Set(rows
         .filter(row => row.vehicle_type && normalizedTypes.has(row.vehicle_type.toLowerCase()))
-        .map(row => row.brand_name)
+        .map(row => row.brand_name))]
 
-    return brands.length > 0 ? brands : fallback
+    return brands.length > 0 ? brands : [...new Set(fallback)]
 }
 
 // ── Component ──────────────────────────────────────────────────────────────────
