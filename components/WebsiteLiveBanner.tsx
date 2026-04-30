@@ -10,7 +10,9 @@ import {
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { supabase } from '@/lib/supabase'
-import { dealerSiteHref, brandToUrlSlug } from '@/lib/utils/domain'
+import { brandToUrlSlug } from '@/lib/utils/domain'
+import { useDashboardSiteOrigin } from '@/lib/hooks/use-dashboard-site-origin'
+import { dashboardSiteDisplayUrl, dashboardSitePath } from '@/lib/utils/dashboard-site-links'
 
 interface Props {
     dealerId: string
@@ -37,6 +39,7 @@ export default function WebsiteLiveBanner({
     const [loading, setLoading] = useState(true)
     const [copiedUrl, setCopiedUrl] = useState(false)
     const [showDomainGuide, setShowDomainGuide] = useState(false)
+    const siteOrigin = useDashboardSiteOrigin()
 
     const isNewCarDealer = sellsNewCars && !sellsUsedCars
     const isUsedCarDealer = sellsUsedCars && !sellsNewCars
@@ -50,14 +53,14 @@ export default function WebsiteLiveBanner({
                 {
                     label: 'New Cars Site',
                     sublabel: brands[0] ?? 'New Cars',
-                    href: dealerSiteHref(`${slug}-${brandToUrlSlug(brands[0] ?? 'new')}`),
+                    href: dashboardSitePath(`${slug}-${brandToUrlSlug(brands[0] ?? 'new')}`),
                     color: 'blue' as const,
                     icon: '🚗',
                 },
                 {
                     label: 'Pre-Owned Site',
                     sublabel: 'Used Cars',
-                    href: dealerSiteHref(`${slug}-used`),
+                    href: dashboardSitePath(`${slug}-used`),
                     color: 'amber' as const,
                     icon: '🔁',
                 },
@@ -69,7 +72,7 @@ export default function WebsiteLiveBanner({
                 return brands.map(brand => ({
                     label: `${brand} Site`,
                     sublabel: 'New Cars',
-                    href: dealerSiteHref(`${slug}-${brandToUrlSlug(brand)}`),
+                    href: dashboardSitePath(`${slug}-${brandToUrlSlug(brand)}`),
                     color: 'blue' as const,
                     icon: '🚗',
                 }))
@@ -77,7 +80,7 @@ export default function WebsiteLiveBanner({
             return [{
                 label: 'New Cars Site',
                 sublabel: brands[0] ?? 'New Cars',
-                href: dealerSiteHref(brands.length === 1 ? `${slug}-${brandToUrlSlug(brands[0])}` : slug),
+                href: dashboardSitePath(brands.length === 1 ? `${slug}-${brandToUrlSlug(brands[0])}` : slug),
                 color: 'blue' as const,
                 icon: '🚗',
             }]
@@ -86,7 +89,7 @@ export default function WebsiteLiveBanner({
         return [{
             label: 'Pre-Owned Site',
             sublabel: 'Used Cars',
-            href: dealerSiteHref(slug),
+            href: dashboardSitePath(slug),
             color: 'amber' as const,
             icon: '🔁',
         }]
@@ -215,7 +218,7 @@ export default function WebsiteLiveBanner({
                                             <p className="text-sm font-semibold text-foreground truncate">{site.label}</p>
                                             <p className={`text-xs truncate ${c.text}`}>{site.sublabel}</p>
                                             <p className="text-xs text-muted-foreground font-mono truncate mt-0.5">
-                                                {site.href.replace('https://', '').replace('http://', '')}
+                                                {dashboardSiteDisplayUrl(site.href, siteOrigin)}
                                             </p>
                                         </div>
                                         <ExternalLink className={`w-4 h-4 flex-shrink-0 transition-colors ${c.btn}`} />

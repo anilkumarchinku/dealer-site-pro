@@ -7,7 +7,8 @@ import {
 } from 'lucide-react'
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog'
 import { Button } from '@/components/ui/button'
-import { dealerSiteHref, dealerSiteUrl } from '@/lib/utils/domain'
+import { useDashboardSiteOrigin } from '@/lib/hooks/use-dashboard-site-origin'
+import { dashboardSiteDisplayUrl, dashboardSiteHref, dashboardSitePath } from '@/lib/utils/dashboard-site-links'
 import ConnectCustomDomainModal from '@/components/ConnectCustomDomainModal'
 
 interface SiteInfo {
@@ -27,12 +28,13 @@ type SubModal = 'custom' | null
 export function SiteDomainModal({ site, dealerId, dealerName, onClose }: Props) {
     const [copied, setCopied] = useState(false)
     const [subModal, setSubModal] = useState<SubModal>(null)
+    const siteOrigin = useDashboardSiteOrigin()
 
-    const freeUrl = dealerSiteUrl(site.slug)
-    const freeUrlFull = dealerSiteHref(site.slug)
+    const freeUrl = dashboardSiteDisplayUrl(site.slug, siteOrigin)
+    const freeUrlPath = dashboardSitePath(site.slug)
 
     function handleCopy() {
-        navigator.clipboard.writeText(freeUrlFull)
+        navigator.clipboard.writeText(dashboardSiteHref(site.slug))
         setCopied(true)
         setTimeout(() => setCopied(false), 2000)
     }
@@ -84,7 +86,7 @@ export function SiteDomainModal({ site, dealerId, dealerName, onClose }: Props) 
 
                         <div className="flex items-center gap-2 mt-2">
                             <a
-                                href={freeUrlFull}
+                                href={freeUrlPath}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="flex-1 text-sm font-mono text-blue-500 hover:underline truncate"
@@ -101,7 +103,7 @@ export function SiteDomainModal({ site, dealerId, dealerName, onClose }: Props) 
                                     : <Copy className="w-3.5 h-3.5 text-muted-foreground" />}
                             </button>
                             <a
-                                href={freeUrlFull}
+                                href={freeUrlPath}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="shrink-0 p-1.5 rounded-lg hover:bg-muted transition-colors"

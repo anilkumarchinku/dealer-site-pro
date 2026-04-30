@@ -14,7 +14,8 @@ import {
     ArrowLeft,
 } from "lucide-react"
 import { cn } from "@/lib/utils"
-import { dealerSiteHref, dealerSiteUrl } from "@/lib/utils/domain"
+import { useDashboardSiteOrigin } from "@/lib/hooks/use-dashboard-site-origin"
+import { dashboardSiteDisplayUrl, dashboardSiteHref, dashboardSitePath } from "@/lib/utils/dashboard-site-links"
 
 // ── Types ──────────────────────────────────────────────────────────────────────
 
@@ -41,6 +42,7 @@ const TEMPLATES = [
 export default function SiteEditorPage() {
     const params    = useParams()
     const router    = useRouter()
+    const siteOrigin = useDashboardSiteOrigin()
     // [...siteSlug] catch-all gives an array — join into a path string
     // e.g. ["varun-motors", "two-wheelers"] → "varun-motors/two-wheelers"
     const siteSlug  = Array.isArray(params.siteSlug)
@@ -239,15 +241,15 @@ export default function SiteEditorPage() {
     }
 
     function handleCopyUrl() {
-        navigator.clipboard.writeText(dealerSiteHref(siteSlug))
+        navigator.clipboard.writeText(dashboardSiteHref(siteSlug))
         setCopied(true)
         setTimeout(() => setCopied(false), 2000)
     }
 
     // ── Derived ───────────────────────────────────────────────────────────────
-    const previewUrl     = `/sites/${siteSlug}`
-    const liveUrl        = dealerSiteHref(siteSlug)
-    const liveUrlDisplay = dealerSiteUrl(siteSlug)
+    const previewUrl     = dashboardSitePath(siteSlug)
+    const liveUrl        = dashboardSitePath(siteSlug)
+    const liveUrlDisplay = dashboardSiteDisplayUrl(siteSlug, siteOrigin)
 
     // Brand label for the page heading
     const brandLabel = brandSlug

@@ -4,7 +4,9 @@ import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
 import { useOnboardingStore } from "@/lib/store/onboarding-store"
 import { supabase } from "@/lib/supabase"
-import { brandToUrlSlug, dealerSiteUrl, dealerSiteHref } from "@/lib/utils/domain"
+import { brandToUrlSlug } from "@/lib/utils/domain"
+import { useDashboardSiteOrigin } from "@/lib/hooks/use-dashboard-site-origin"
+import { dashboardSiteDisplayUrl, dashboardSiteHref, dashboardSitePath } from "@/lib/utils/dashboard-site-links"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { SiteDomainModal } from "@/components/SiteDomainModal"
@@ -166,7 +168,7 @@ export default function WebpagePage() {
     }
 
     function handleCopy(slug: string) {
-        navigator.clipboard.writeText(dealerSiteHref(slug))
+        navigator.clipboard.writeText(dashboardSiteHref(slug))
         setCopied(slug)
         setTimeout(() => setCopied(null), 2000)
     }
@@ -247,9 +249,10 @@ interface SiteCardProps {
 const BENTLEY = { primary: '#003328', accent: '#B8962E' } as const
 
 function SiteCard({ site, isMulti, dealerName, copied, onCopy, onEdit, onDomain }: SiteCardProps) {
-    const liveUrl     = dealerSiteHref(site.slug)
-    const displayUrl  = dealerSiteUrl(site.slug)
-    const previewPath = site.previewPath ?? `/sites/${site.slug}`
+    const siteOrigin  = useDashboardSiteOrigin()
+    const liveUrl     = dashboardSitePath(site.slug)
+    const displayUrl  = dashboardSiteDisplayUrl(site.slug, siteOrigin)
+    const previewPath = site.previewPath ?? dashboardSitePath(site.slug)
     const isCopied    = copied === site.slug
     const [iframeLoaded, setIframeLoaded] = useState(false)
 
