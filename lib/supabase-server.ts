@@ -8,10 +8,32 @@ import { createClient }       from '@supabase/supabase-js'
 import { cookies }            from 'next/headers'
 import { NextResponse }       from 'next/server'
 import type { Database }      from '@/lib/database.types'
-import { getRequiredEnv }     from '@/lib/env'
+import { getOptionalEnv, getRequiredEnv } from '@/lib/env'
 
 export type AuthenticatedUser = { id: string; email?: string }
 export type RouteSupabaseClient = Awaited<ReturnType<typeof createRouteClient>>
+
+export function getSupabaseServerConfigError(): string | null {
+    const supabaseUrl = getOptionalEnv('NEXT_PUBLIC_SUPABASE_URL') ?? ''
+    const supabaseAnonKey = getOptionalEnv('NEXT_PUBLIC_SUPABASE_ANON_KEY') ?? ''
+
+    const isConfigured =
+        !!supabaseUrl &&
+        !!supabaseAnonKey &&
+        supabaseUrl !== 'https://your-project.supabase.co' &&
+        supabaseAnonKey !== 'your-anon-key-here' &&
+        !supabaseUrl.includes('placeholder')
+
+    if (!isConfigured) {
+        return 'Supabase is not configured. Please set NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY or NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY in your .env.local file.'
+    }
+
+    return null
+}
+
+export function isSupabaseServerReady(): boolean {
+    return getSupabaseServerConfigError() === null
+}
 
 /**
  * Service-role client — bypasses RLS entirely.

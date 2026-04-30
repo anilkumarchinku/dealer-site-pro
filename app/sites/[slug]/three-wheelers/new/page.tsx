@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import { fetchDealerBySlug } from "@/lib/db/dealers"
 import { getThreeWheelerVehicles } from "@/lib/db/three-wheelers"
 import { getThreeWheelerCatalog, THREE_WHEELER_BRANDS } from "@/lib/data/three-wheelers"
+import { getThreeWheelerCatalogFromDB } from "@/lib/data/catalog-db"
 import { notFound } from "next/navigation"
 import { createClient } from "@supabase/supabase-js"
-import { brandNameToId } from "@/lib/utils/brand-model-images"
 import { ModernTemplate } from "@/components/templates/ModernTemplate"
 import { LuxuryTemplate } from "@/components/templates/LuxuryTemplate"
 import { SportyTemplate } from "@/components/templates/SportyTemplate"
@@ -13,7 +13,8 @@ import type { Car } from "@/lib/types/car"
 import type { ThreeWheelerVehicle } from "@/lib/types/three-wheeler"
 import type { Service } from "@/lib/types"
 import { dedupeByBrandModel, dedupeCaseInsensitiveStrings } from "@/lib/utils/listing-dedupe"
-import { firstVehicleHeroImage } from "@/lib/utils/site-assets"
+import { brandLogoUrl as getBrandLogoUrl, firstVehicleHeroImage } from "@/lib/utils/site-assets"
+import { brandToUrlSlug } from "@/lib/utils/domain"
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -124,6 +125,9 @@ export default async function NewThreeWheelersPage({ params, searchParams }: Pro
   const dealer = await fetchDealerBySlug(slug)
   if (!dealer) notFound()
 
+  const hasSavedStockMode = dealer.sells_new_cars || dealer.sells_used_cars
+  if (!dealer.sells_new_cars && hasSavedStockMode) notFound()
+
   const { vehicles: dbVehicles } = await getThreeWheelerVehicles(dealer.id, { pageSize: 100, sortBy: 'views' })
 
   let dealer3wBrands: string[] = []
@@ -143,14 +147,20 @@ export default async function NewThreeWheelersPage({ params, searchParams }: Pro
     dealer3wBrands = dealer.brands.filter(b => THREE_WHEELER_BRANDS.includes(b))
   }
 
-  const allBrands = dedupeCaseInsensitiveStrings(dealer3wBrands.length > 0 ? dealer3wBrands : ALL_3W_BRANDS)
+  const dealerOwnBrands = dealer.brands.filter(b => THREE_WHEELER_BRANDS.includes(b))
+  const allBrands = dedupeCaseInsensitiveStrings(dealer3wBrands.length > 0
+    ? dealer3wBrands
+    : dealerOwnBrands.length > 0
+      ? dealerOwnBrands
+      : ALL_3W_BRANDS
+  )
 
   // Resolve the active brand filter:
   // Priority: dealer.brandFilter (from slug suffix) > ?brand= query param > show all
   const activeBrandFilter: string | null = dealer.brandFilter
     ?? (brandParam
         ? allBrands.find(b =>
-            b.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '') === brandParam
+            brandToUrlSlug(b) === brandParam
           ) ?? null
         : null)
 
@@ -167,9 +177,14 @@ export default async function NewThreeWheelersPage({ params, searchParams }: Pro
 
   const primaryBrand = brandsToShow[0] ?? null
 
-  const catalogVehicles = dedupeByBrandModel(brandsToShow.flatMap((brand, bi) =>
-    getThreeWheelerCatalog(brand, dealer.id).map(v => ({ ...v, id: `cat-3w-${bi}-${v.id}` }))
-  ))
+  const catalogResults = await Promise.all(
+    brandsToShow.map(async (brand, bi) => {
+      const dbRows = await getThreeWheelerCatalogFromDB(brand, dealer.id)
+      const fallbackRows = getThreeWheelerCatalog(brand, dealer.id)
+      return [...dbRows, ...fallbackRows].map(v => ({ ...v, id: `cat-3w-${bi}-${v.id}` }))
+    })
+  )
+  const catalogVehicles = dedupeByBrandModel(catalogResults.flat())
 
   const filteredDbVehicles = dedupeByBrandModel(activeBrandFilter
     ? dbVehicles.filter(v => v.brand.toLowerCase() === activeBrandFilter.toLowerCase())
@@ -182,8 +197,7 @@ export default async function NewThreeWheelersPage({ params, searchParams }: Pro
 
   const cars = threeWheelersToCars(vehicles)
 
-  const brandId = primaryBrand ? brandNameToId(primaryBrand, '3w') : null
-  const brandLogoUrl = dealer.logo_url ?? (brandId ? `/data/brand-logos/${brandId}.png` : undefined)
+  const logoUrl = dealer.logo_url ?? (primaryBrand ? getBrandLogoUrl(primaryBrand, '3w') ?? undefined : undefined)
   const heroImageUrl = dealer.hero_image_url ?? firstVehicleHeroImage(cars)
 
   const contactInfo = {
@@ -217,7 +231,7 @@ export default async function NewThreeWheelersPage({ params, searchParams }: Pro
     branches:     dealer.branches ?? undefined,
     services:     (dealer.services ?? []) as Service[],
     workingHours: dealer.working_hours ?? null,
-    logoUrl:      brandLogoUrl ?? undefined,
+    logoUrl:      logoUrl ?? undefined,
     heroImageUrl,
     sellsNewCars:  true,
     sellsUsedCars: false,

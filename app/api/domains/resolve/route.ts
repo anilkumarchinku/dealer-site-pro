@@ -9,17 +9,7 @@
  */
 
 import { NextResponse }  from 'next/server'
-import { createClient }  from '@supabase/supabase-js'
-import { getOptionalEnv, getRequiredEnv } from '@/lib/env'
-
-function getSupabase() {
-    const url = getRequiredEnv('NEXT_PUBLIC_SUPABASE_URL')
-    // Must use service role key — this endpoint has no user session so the anon
-    // key is blocked by RLS on dealer_domains. Service role bypasses RLS safely
-    // because this is a server-side edge function (key is never sent to browser).
-    const key = getOptionalEnv('SUPABASE_SERVICE_ROLE_KEY') ?? getRequiredEnv('NEXT_PUBLIC_SUPABASE_ANON_KEY')
-    return createClient(url, key)
-}
+import { createAdminClient } from '@/lib/supabase-server'
 
 export const runtime = 'edge'
 
@@ -38,7 +28,8 @@ export async function GET(request: Request) {
         return NextResponse.json({ error: 'Invalid domain format' }, { status: 400 })
     }
 
-    const supabase = getSupabase()
+    // This endpoint has no user session, and RLS blocks anon reads on dealer_domains.
+    const supabase = createAdminClient()
 
     // Look up by custom_domain in dealer_domains table
     // Use separate queries to avoid PostgREST filter injection via .or() string interpolation

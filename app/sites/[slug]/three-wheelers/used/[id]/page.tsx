@@ -2,12 +2,20 @@
 
 import { useEffect, useState } from "react"
 import { useParams } from "next/navigation"
-import { supabase } from "@/lib/supabase"
 import { LeadFormModal } from "@/components/three-wheelers/LeadFormModal"
 import type { ThreeWheelerUsedVehicle } from "@/lib/types/three-wheeler"
 import { ChevronLeft, CheckCircle, AlertCircle } from "lucide-react"
 import Link from "next/link"
 import { useSitePrefix } from "@/lib/hooks/useSitePrefix"
+
+type DealerDetailMetadata = {
+    id: string
+    phone: string
+}
+
+type UsedVehicleDetailPayload = ThreeWheelerUsedVehicle & {
+    _dealer?: DealerDetailMetadata
+}
 
 const GRADE_LABELS: Record<string, { label: string; color: string; bg: string }> = {
     A: { label: "Grade A — Excellent",  color: "text-green-700",  bg: "bg-green-100 border-green-300"  },
@@ -30,12 +38,16 @@ export default function UsedThreeWheelerDetailPage() {
     useEffect(() => {
         if (!slug || !id) return
         async function load() {
-            const [{ data: dealer }, vehicleRes] = await Promise.all([
-                supabase.from("dealers").select("id, phone").eq("slug", slug).single(),
-                fetch(`/api/three-wheelers/used/${id}`),
-            ])
-            if (dealer) { setDealerId(dealer.id); setPhone(dealer.phone ?? "") }
-            if (vehicleRes.ok) setVehicle(await vehicleRes.json())
+            const vehicleRes = await fetch(`/api/three-wheelers/used/${encodeURIComponent(id)}?slug=${encodeURIComponent(slug)}`)
+            if (vehicleRes.ok) {
+                const payload = await vehicleRes.json() as UsedVehicleDetailPayload
+                const { _dealer, ...vehicleData } = payload
+                setVehicle(vehicleData as ThreeWheelerUsedVehicle)
+                if (_dealer) {
+                    setDealerId(_dealer.id)
+                    setPhone(_dealer.phone ?? "")
+                }
+            }
             setLoading(false)
         }
         load()

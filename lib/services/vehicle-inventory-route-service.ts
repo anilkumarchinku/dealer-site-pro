@@ -15,6 +15,19 @@ type VehicleLookup = {
 
 type DealerVehicleType = 'two-wheeler' | 'three-wheeler'
 
+type DealerRouteMetadata = {
+    id: string
+    phone: string
+    logo_url: string | null
+    dealership_name: string
+    style_template: string
+}
+
+type DealerSlugResolution<TVehicle> = {
+    vehicle: TVehicle
+    dealer: DealerRouteMetadata
+}
+
 type VehicleDetailRouteOptions<TVehicle extends VehicleLookup, TUpdatePayload> = {
     vehicleType: DealerVehicleType
     catalogPrefix: string
@@ -37,9 +50,34 @@ type UsedVehicleCollectionOptions<TFilters, TCreatePayload> = {
 }
 
 type UsedVehicleDetailOptions<TVehicle, TUpdatePayload> = {
-    getVehicleById: (id: string) => Promise<TVehicle | null>
+    vehicleType: DealerVehicleType
+    getVehicleById: (id: string, dealerId?: string) => Promise<TVehicle | null>
     updateVehicle: (id: string, dealerId: string, body: TUpdatePayload) => Promise<{ success: boolean; error?: string }>
     deleteVehicle: (id: string, dealerId: string) => Promise<{ success: boolean; error?: string }>
+}
+
+function dealerRouteMetadata(dealer: NonNullable<Awaited<ReturnType<typeof fetchDealerBySlug>>>): DealerRouteMetadata {
+    return {
+        id:              dealer.id,
+        phone:           dealer.phone,
+        logo_url:        dealer.logo_url,
+        dealership_name: dealer.dealership_name,
+        style_template:  dealer.style_template,
+    }
+}
+
+function appendDealerMetadata<TVehicle>(vehicle: TVehicle, dealer: DealerRouteMetadata | null): TVehicle | (TVehicle & { _dealer: DealerRouteMetadata }) {
+    if (!dealer || typeof vehicle !== 'object' || vehicle === null) return vehicle as TVehicle
+    return { ...(vehicle as Record<string, unknown>), _dealer: dealer } as TVehicle & { _dealer: DealerRouteMetadata }
+}
+
+function dealerSupportsVehicleType(
+    dealer: NonNullable<Awaited<ReturnType<typeof fetchDealerBySlug>>>,
+    vehicleType: DealerVehicleType
+): boolean {
+    if (dealer.vehicle_type === vehicleType) return true
+    if (vehicleType === 'two-wheeler') return dealer.sells_two_wheelers
+    return dealer.sells_three_wheelers
 }
 
 function normalizeIdentifier(value: string, options: Pick<VehicleDetailRouteOptions<VehicleLookup, unknown>, 'catalogPrefix' | 'dbPrefix'>): string {
@@ -69,17 +107,17 @@ async function resolveVehicleBySlug<TVehicle extends VehicleLookup>(
     slug: string,
     identifier: string,
     options: VehicleDetailRouteOptions<TVehicle, unknown>
-): Promise<TVehicle | null> {
+): Promise<DealerSlugResolution<TVehicle> | null> {
     const dealer = await fetchDealerBySlug(slug)
-    if (!dealer || dealer.vehicle_type !== options.vehicleType) return null
+    if (!dealer || !dealerSupportsVehicleType(dealer, options.vehicleType)) return null
 
     const directVehicle = await options.getVehicleById(identifier, dealer.id)
-    if (directVehicle) return directVehicle
+    if (directVehicle) return { vehicle: directVehicle, dealer: dealerRouteMetadata(dealer) }
 
     const normalized = normalizeIdentifier(identifier, options)
     const { vehicles: dealerVehicles } = await options.getVehicles(dealer.id, { pageSize: 100, sortBy: 'newest' })
     const directMatch = dealerVehicles.find((vehicle) => getVehicleLookupSlugs(vehicle, options).includes(normalized))
-    if (directMatch) return directMatch
+    if (directMatch) return { vehicle: directMatch, dealer: dealerRouteMetadata(dealer) }
 
     const brandsToShow = dealer.brandFilter ? [dealer.brandFilter] : dealer.brands
     const catalogGroups = await Promise.all(
@@ -91,12 +129,14 @@ async function resolveVehicleBySlug<TVehicle extends VehicleLookup>(
         })
     )
 
-    return catalogGroups
+    const catalogMatch = catalogGroups
         .flat()
         .find((vehicle) =>
             normalizeIdentifier(vehicle.id, options) === normalized ||
             getVehicleLookupSlugs(vehicle, options).includes(normalized)
         ) ?? null
+
+    return catalogMatch ? { vehicle: catalogMatch, dealer: dealerRouteMetadata(dealer) } : null
 }
 
 async function updateDealerVehicle<TUpdatePayload>(
@@ -152,16 +192,25 @@ export function createVehicleDetailRouteHandlers<TVehicle extends VehicleLookup,
         GET: async (request: NextRequest, { params }: RouteParams) => {
             const { id } = await params
             const slug = request.nextUrl.searchParams.get('slug')
-            const vehicle = slug
+            const slugResolution = slug
                 ? await resolveVehicleBySlug(slug, id, options as VehicleDetailRouteOptions<TVehicle, unknown>)
-                : await options.getVehicleById(id)
+                : null
+            const dealerMetadata = slugResolution?.dealer ?? null
+            const vehicle = slug
+                ? slugResolution?.vehicle ?? null
+                : await (async () => {
+                    const { dealer, errorResponse } = await requireDealerAccount()
+                    if (errorResponse) return errorResponse
+                    return options.getVehicleById(id, dealer.id)
+                })()
+            if (vehicle instanceof NextResponse) return vehicle
             if (!vehicle) {
                 return NextResponse.json({ error: 'Vehicle not found' }, { status: 404 })
             }
 
             const hydratedVehicle = await options.hydrateVehicle(vehicle)
             if (vehicle.id === id) options.incrementViews(id).catch(() => {})
-            return NextResponse.json(hydratedVehicle)
+            return NextResponse.json(appendDealerMetadata(hydratedVehicle, dealerMetadata))
         },
         ...createDealerMutationHandlers(options.updateVehicle, options.deleteVehicle),
     }
@@ -202,13 +251,27 @@ export function createUsedVehicleDetailRouteHandlers<TVehicle, TUpdatePayload>(
     options: UsedVehicleDetailOptions<TVehicle, TUpdatePayload>
 ) {
     return {
-        GET: async (_request: NextRequest, { params }: RouteParams) => {
+        GET: async (request: NextRequest, { params }: RouteParams) => {
             const { id } = await params
-            const vehicle = await options.getVehicleById(id)
+            const slug = request.nextUrl.searchParams.get('slug')
+            let dealerMetadata: DealerRouteMetadata | null = null
+            const vehicle = slug
+                ? await (async () => {
+                    const dealer = await fetchDealerBySlug(slug)
+                    if (!dealer || !dealerSupportsVehicleType(dealer, options.vehicleType)) return null
+                    dealerMetadata = dealerRouteMetadata(dealer)
+                    return options.getVehicleById(id, dealer.id)
+                })()
+                : await (async () => {
+                    const { dealer, errorResponse } = await requireDealerAccount()
+                    if (errorResponse) return errorResponse
+                    return options.getVehicleById(id, dealer.id)
+                })()
+            if (vehicle instanceof NextResponse) return vehicle
             if (!vehicle) {
                 return NextResponse.json({ error: 'Vehicle not found' }, { status: 404 })
             }
-            return NextResponse.json(vehicle)
+            return NextResponse.json(appendDealerMetadata(vehicle, dealerMetadata))
         },
         ...createDealerMutationHandlers(options.updateVehicle, options.deleteVehicle),
     }

@@ -84,6 +84,13 @@ export function LuxuryTemplate({
         }
         return typeSuffix || '/cars';
     }, [pathname, vehicleType]);
+    const detailBasePath = useMemo(() => {
+        const isUsedVehiclePage = (vehicleType === '2w' || vehicleType === '3w')
+            && sellsUsedCars
+            && !sellsNewCars
+            && pathname.includes('/used');
+        return isUsedVehiclePage ? `${siteBase}/used` : siteBase;
+    }, [pathname, sellsNewCars, sellsUsedCars, siteBase, vehicleType]);
     const SERVICE_LABELS: Record<string, { label: string; icon: string }> = {
         new_car_sales: { label: vl.newVehicle, icon: '🚗' },
         used_car_sales: { label: vl.usedVehicle, icon: '🔄' },
@@ -327,10 +334,12 @@ export function LuxuryTemplate({
                             <h1 className="text-6xl md:text-8xl font-light tracking-tight mb-8 leading-tight text-gray-900">{heroTitle}</h1>
                             <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">{heroSubtitle}</p>
                             <div className="flex flex-wrap items-center justify-center gap-4">
-                                <Button size="lg" className="text-white" style={{ backgroundColor: brandAccent }} onClick={() => setActiveTab('inventory')}>
-                                    Explore Collection
-                                    <ArrowRight className="ml-2 w-5 h-5" />
-                                </Button>
+                                {showInventoryTab && (
+                                    <Button size="lg" className="text-white" style={{ backgroundColor: brandAccent }} onClick={() => setActiveTab('inventory')}>
+                                        Explore Collection
+                                        <ArrowRight className="ml-2 w-5 h-5" />
+                                    </Button>
+                                )}
                                 <Button size="lg" variant="outline" className="border-gray-300 bg-transparent text-gray-900 hover:bg-gray-100" asChild>
                                     <a href="#contact">Request Private Viewing</a>
                                 </Button>
@@ -375,7 +384,7 @@ export function LuxuryTemplate({
                                 <span className="text-sm tracking-widest uppercase" style={{ color: brandAccent }}>Curated Selection</span>
                                 <h2 className="text-5xl font-light mt-4 text-gray-900">Featured Collection</h2>
                             </div>
-                            <CarGrid cars={featuredCars} brandColor={brandAccent} light summaryOnly detailBasePath={siteBase} dealerPhone={contactInfo.phone} dealerId={dealerId} />
+                            <CarGrid cars={featuredCars} brandColor={brandAccent} light summaryOnly detailBasePath={detailBasePath} dealerPhone={contactInfo.phone} dealerId={dealerId} />
                             {showInventoryTab && (
                                 <div className="text-center mt-10">
                                     <Button variant="outline" className="border-gray-300 bg-transparent text-gray-900 hover:bg-gray-100" onClick={() => setActiveTab('inventory')}>
@@ -607,7 +616,7 @@ export function LuxuryTemplate({
                                     brandColor={brandAccent}
                                     light
                                     summaryOnly
-                                    detailBasePath={siteBase}
+                                    detailBasePath={detailBasePath}
                                     dealerPhone={contactInfo.phone}
                                     dealerId={dealerId}
                                 />

@@ -27,7 +27,9 @@ describe('site assets', () => {
     it('builds brand logo fallback URLs from display names', () => {
         expect(brandLogoUrl('Royal Enfield', '2w')).toBe('/data/brand-logos/royal-enfield.png')
         expect(brandLogoUrl('Lohia Auto', '3w')).toBe('/data/brand-logos/lohia-auto.png')
-        expect(brandLogoUrl('Tata Motors', '4w')).toBe('/data/brand-logos/tata.png')
+        expect(brandLogoUrl('Tata Motors', '4w')).toBe('/data/brand-logos/tata-motors.png')
+        expect(brandLogoUrl('Hop Electric', '2w')).toBe('/data/brand-logos/hop-electric.svg')
+        expect(brandLogoUrl('Okinawa Autotech', '2w')).toBe('/data/brand-logos/okinawa-autotech.webp')
     })
 
     it('uses the first non-placeholder vehicle hero image', () => {

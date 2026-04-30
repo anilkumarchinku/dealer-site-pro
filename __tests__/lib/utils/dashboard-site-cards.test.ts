@@ -47,6 +47,27 @@ describe('dashboard site cards', () => {
         ])
     })
 
+    it('keeps punctuation-heavy 3W brand slugs public-route friendly', () => {
+        const cards = buildDashboardSiteCards({
+            slug: 'fosha-auto-traders',
+            dealerName: 'Fosha Auto Traders',
+            carBrands: [],
+            twoWheelerBrands: [],
+            threeWheelerBrands: ['Bajaj Auto (3W)', 'Omega Seiki Mobility'],
+            isNew: true,
+            isUsed: false,
+            vehicleType: 'three-wheeler',
+            has2W: false,
+            has3W: true,
+            has4W: false,
+        })
+
+        expect(cards.map(card => card.slug)).toEqual([
+            'fosha-auto-traders-bajaj-auto-3w/three-wheelers/new',
+            'fosha-auto-traders-omega-seiki-mobility/three-wheelers/new',
+        ])
+    })
+
     it('keeps existing 4W hybrid cards compatible', () => {
         const cards = buildDashboardSiteCards({
             slug: 'lakshmi-motors',

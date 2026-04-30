@@ -2,6 +2,15 @@ import { NextResponse } from 'next/server'
 import { verifyCustomDomain } from '@/lib/services/dns-verification-service'
 import { requireAuth, requireDealerOwnership } from '@/lib/supabase-server'
 
+function normalizeDomain(value: string): string {
+    return value
+        .trim()
+        .toLowerCase()
+        .replace(/^https?:\/\//, '')
+        .replace(/^www\./, '')
+        .replace(/\/.*$/, '')
+}
+
 /**
  * POST /api/domains/verify-dns
  * Verifies DNS configuration for a custom domain
@@ -26,8 +35,32 @@ export async function POST(request: Request) {
         const { errorResponse: ownerErr } = await requireDealerOwnership(supabase, user.id, dealerId)
         if (ownerErr) return ownerErr
 
+        const { data: storedDomain, error: domainError } = await supabase
+            .from('dealer_domains')
+            .select('id, dealer_id, custom_domain, subdomain_url, subdomain')
+            .eq('id', domainId)
+            .eq('dealer_id', dealerId)
+            .single()
+
+        if (domainError || !storedDomain) {
+            return NextResponse.json(
+                { success: false, error: 'Domain not found or does not belong to your account' },
+                { status: 404 }
+            )
+        }
+
+        const storedDomainName = normalizeDomain(
+            storedDomain.custom_domain ?? storedDomain.subdomain_url ?? storedDomain.subdomain ?? ''
+        )
+        if (!storedDomainName || normalizeDomain(domain) !== storedDomainName) {
+            return NextResponse.json(
+                { success: false, error: 'Domain name does not match the stored domain record' },
+                { status: 400 }
+            )
+        }
+
         // Verify DNS
-        const verification = await verifyCustomDomain(domain)
+        const verification = await verifyCustomDomain(storedDomainName)
 
         // Save verification results to domain_verifications
         await supabase.from('domain_verifications').insert(
@@ -53,6 +86,7 @@ export async function POST(request: Request) {
                     last_checked_at: new Date().toISOString()
                 })
                 .eq('id', domainId)
+                .eq('dealer_id', dealerId)
         } else {
             await supabase
                 .from('dealer_domains')
@@ -62,6 +96,7 @@ export async function POST(request: Request) {
                     last_checked_at: new Date().toISOString()
                 })
                 .eq('id', domainId)
+                .eq('dealer_id', dealerId)
         }
 
         return NextResponse.json({

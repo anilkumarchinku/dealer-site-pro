@@ -9,12 +9,12 @@ import { requireDealerForRoute } from '@/lib/services/dealer-route-auth-service'
  */
 export async function GET() {
     try {
-        const { dealer, errorResponse } = await requireDealerForRoute({
+        const { dealer, supabase, errorResponse } = await requireDealerForRoute({
             body: { error: 'No dealer account found for this user' },
         })
         if (errorResponse) return errorResponse
 
-        const domains = await getDealerDomains(dealer.id)
+        const domains = await getDealerDomains(dealer.id, supabase)
 
         return NextResponse.json({ success: true, domains })
     } catch (error) {

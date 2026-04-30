@@ -57,6 +57,21 @@ export function brandToUrlSlug(brandName: string): string {
         .replace(/^-|-$/g, '')
 }
 
+function titleCaseBrandSlug(brandSlug: string): string {
+    return brandSlug
+        .split('-')
+        .filter(Boolean)
+        .map(w => w.charAt(0).toUpperCase() + w.slice(1))
+        .join(' ')
+}
+
+export function findBrandNameByUrlSlug(brands: string[], brandSlug: string): string | null {
+    const normalized = brandSlug.trim().toLowerCase()
+    if (!normalized) return null
+
+    return brands.find(brand => brandToUrlSlug(brand) === normalized) ?? null
+}
+
 // ── Types ────────────────────────────────────────────────────────────────────
 export interface DealerPublicData {
     id: string
@@ -94,7 +109,9 @@ export interface DealerPublicData {
 
 function getServerSupabase() {
     const url = process.env.NEXT_PUBLIC_SUPABASE_URL
-    const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ?? process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY
+    const key = process.env.SUPABASE_SERVICE_ROLE_KEY
+        ?? process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+        ?? process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY
     if (!url || !key || url.includes('placeholder')) return null
     return createClient(url, key)
 }
@@ -109,6 +126,20 @@ async function findDealerByExactSlug(supabase: SupabaseClient, slug: string) {
         .single()
     if (error || !data) return null
     return data
+}
+
+async function resolveDealerBrandFilterBySlug(
+    supabase: SupabaseClient,
+    dealerId: string,
+    brandSlug: string,
+): Promise<string | null> {
+    const { data, error } = await supabase
+        .from('dealer_brands')
+        .select('brand_name')
+        .eq('dealer_id', dealerId)
+
+    if (error || !data) return null
+    return findBrandNameByUrlSlug(data.map(row => row.brand_name), brandSlug)
 }
 
 /**
@@ -148,15 +179,15 @@ export async function fetchDealerBySlug(slug: string): Promise<DealerPublicData 
                 const parentDealer = await findDealerByExactSlug(supabase, parentSlug)
                 if (parentDealer) {
                     dealer = parentDealer
-                    brandFilter = brandName
+                    brandFilter = await resolveDealerBrandFilterBySlug(supabase, parentDealer.id, brandSlug) ?? brandName
                     break
                 }
             }
         }
     }
 
-    // ── 4. Dynamic fallback for 2W / 3W brand-suffix URLs ────────────────
-    // e.g. "3wv2-lohia-auto" → parent "3wv2" (three-wheeler) + brand "Lohia Auto"
+    // ── 4. Dynamic fallback for saved brand-suffix URLs ──────────────────
+    // e.g. "3wv2-lohia-auto" → parent "3wv2" + exact saved brand "Lohia Auto"
     // Tries shortest possible suffix first so it finds the longest valid parent.
     if (!dealer) {
         const segments = slug.split('-')
@@ -165,13 +196,17 @@ export async function fetchDealerBySlug(slug: string): Promise<DealerPublicData 
             const parentDealer = await findDealerByExactSlug(supabase, parentSlug)
             if (parentDealer) {
                 const vtype = parentDealer.vehicle_type
+                const brandSuffix = segments.slice(i).join('-')
+                const savedBrand = await resolveDealerBrandFilterBySlug(supabase, parentDealer.id, brandSuffix)
+                if (savedBrand) {
+                    dealer = parentDealer
+                    brandFilter = savedBrand
+                    break
+                }
+
                 if (vtype === 'two-wheeler' || vtype === 'three-wheeler') {
                     dealer = parentDealer
-                    const brandSuffix = segments.slice(i).join('-')
-                    brandFilter = brandSuffix
-                        .split('-')
-                        .map(w => w.charAt(0).toUpperCase() + w.slice(1))
-                        .join(' ')
+                    brandFilter = titleCaseBrandSlug(brandSuffix)
                     break
                 }
             }

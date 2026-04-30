@@ -111,6 +111,13 @@ export function SportyTemplate({
         }
         return typeSuffix || '/cars';
     }, [pathname, vehicleType]);
+    const detailBasePath = useMemo(() => {
+        const isUsedVehiclePage = (vehicleType === '2w' || vehicleType === '3w')
+            && sellsUsedCars
+            && !sellsNewCars
+            && pathname.includes('/used');
+        return isUsedVehiclePage ? `${siteBase}/used` : siteBase;
+    }, [pathname, sellsNewCars, sellsUsedCars, siteBase, vehicleType]);
     const SERVICE_LABELS: Record<string, { label: string; icon: string }> = {
         new_car_sales: { label: vl.newVehicle, icon: '🚗' },
         used_car_sales: { label: vl.usedVehicle, icon: '🔄' },
@@ -379,10 +386,12 @@ export function SportyTemplate({
                                 </h1>
                                 <p className="text-2xl text-gray-600 mb-8">{heroSubtitle}</p>
                                 <div className="flex flex-wrap gap-4">
-                                    <Button size="lg" className="text-white font-bold text-lg uppercase tracking-wider" style={{ backgroundColor: brandAccent }} onClick={() => setActiveTab('inventory')}>
-                                        EXPLORE
-                                        <ArrowRight className="ml-2 w-5 h-5" />
-                                    </Button>
+                                    {showInventoryTab && (
+                                        <Button size="lg" className="text-white font-bold text-lg uppercase tracking-wider" style={{ backgroundColor: brandAccent }} onClick={() => setActiveTab('inventory')}>
+                                            EXPLORE
+                                            <ArrowRight className="ml-2 w-5 h-5" />
+                                        </Button>
+                                    )}
                                     <Button size="lg" variant="outline" className="font-bold uppercase border-2 bg-transparent hover:bg-white/10" style={{ borderColor: brandAccent, color: brandAccent }} asChild>
                                         <a href="#contact">BOOK {vl.testDrive.toUpperCase()}</a>
                                     </Button>
@@ -455,7 +464,7 @@ export function SportyTemplate({
                                     </Button>
                                 )}
                             </div>
-                            <CarGrid cars={featuredCars} brandColor={brandAccent} light summaryOnly detailBasePath={siteBase} dealerPhone={contactInfo.phone} dealerId={dealerId} />
+                            <CarGrid cars={featuredCars} brandColor={brandAccent} light summaryOnly detailBasePath={detailBasePath} dealerPhone={contactInfo.phone} dealerId={dealerId} />
                         </div>
                     </section>
 
@@ -688,7 +697,7 @@ export function SportyTemplate({
                                     brandColor={brandAccent}
                                     light
                                     summaryOnly
-                                    detailBasePath={siteBase}
+                                    detailBasePath={detailBasePath}
                                     dealerPhone={contactInfo.phone}
                                     dealerId={dealerId}
                                 />

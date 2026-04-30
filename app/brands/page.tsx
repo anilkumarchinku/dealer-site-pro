@@ -1,27 +1,115 @@
 /**
  * All Brands Page — /brands
- * Grid of all car brands with model count and price range
+ * Grid of all 2W, 3W, and 4W brands with model count and price range
  */
 
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { getAllBrandsWithStats } from '@/lib/services/car-service';
+import { loadTwoWheelerCatalogVehicles } from '@/lib/services/two-wheeler-static-catalog';
+import { loadThreeWheelerCatalogVehicles } from '@/lib/services/three-wheeler-static-catalog';
 import { formatPriceInLakhs } from '@/lib/utils/car-utils';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { SiteHeader } from '@/components/layout/SiteHeader';
 import { SiteFooter } from '@/components/layout/SiteFooter';
-import { ChevronRight } from 'lucide-react';
+import { Bike, Car, ChevronRight, Truck } from 'lucide-react';
 import Image from 'next/image';
 import { getBrandLogo } from '@/lib/data/brand-logos';
+import { brandLogoUrl, type VehicleImageCategory } from '@/lib/utils/site-assets';
 
 export const metadata: Metadata = {
-    title: 'All Car Brands | DealerSite Pro',
-    description: 'Browse all car brands — Maruti Suzuki, Hyundai, Tata, Kia, BMW, Mercedes, and more.',
+    title: 'All Vehicle Brands | DealerSite Pro',
+    description: 'Browse two-wheeler, three-wheeler, and car brands in one place.',
 };
 
-export default async function BrandsPage() {
+type BrandDirectoryType = '2w' | '3w' | '4w';
+
+type BrandCard = {
+    name: string;
+    modelCount: number;
+    priceMin: number | null;
+    priceMax: number | null;
+    href: string;
+    logoUrl: string | null;
+};
+
+const BRAND_TYPES = [
+    { value: '2w', label: '2W', name: 'Two-Wheelers', icon: Bike },
+    { value: '3w', label: '3W', name: 'Three-Wheelers', icon: Truck },
+    { value: '4w', label: '4W', name: 'Cars', icon: Car },
+] satisfies Array<{
+    value: BrandDirectoryType;
+    label: string;
+    name: string;
+    icon: typeof Car;
+}>;
+
+function normalizeBrandType(value: string | undefined): BrandDirectoryType {
+    return value === '2w' || value === '3w' || value === '4w' ? value : '4w';
+}
+
+function buildStaticBrandCards(
+    vehicles: Array<{ make: string; model: string; price_min_paise: number }>,
+    category: VehicleImageCategory,
+    hrefBase: '/bikes' | '/autos'
+): BrandCard[] {
+    const brandMap = new Map<string, { models: Set<string>; priceMin: number; priceMax: number }>();
+
+    for (const vehicle of vehicles) {
+        const brand = vehicle.make.trim();
+        if (!brand) continue;
+
+        const current = brandMap.get(brand) ?? {
+            models: new Set<string>(),
+            priceMin: 0,
+            priceMax: 0,
+        };
+
+        current.models.add(vehicle.model);
+        const priceInr = vehicle.price_min_paise > 0 ? Math.round(vehicle.price_min_paise / 100) : 0;
+        if (priceInr > 0 && (current.priceMin === 0 || priceInr < current.priceMin)) current.priceMin = priceInr;
+        if (priceInr > current.priceMax) current.priceMax = priceInr;
+        brandMap.set(brand, current);
+    }
+
+    return Array.from(brandMap.entries())
+        .map(([name, stats]) => ({
+            name,
+            modelCount: stats.models.size,
+            priceMin: stats.priceMin || null,
+            priceMax: stats.priceMax || null,
+            href: `${hrefBase}?make=${encodeURIComponent(name)}`,
+            logoUrl: brandLogoUrl(name, category) ?? null,
+        }))
+        .sort((a, b) => b.modelCount - a.modelCount || a.name.localeCompare(b.name));
+}
+
+async function getBrandCards(type: BrandDirectoryType): Promise<BrandCard[]> {
+    if (type === '2w') {
+        return buildStaticBrandCards(loadTwoWheelerCatalogVehicles(), '2w', '/bikes');
+    }
+
+    if (type === '3w') {
+        return buildStaticBrandCards(loadThreeWheelerCatalogVehicles(), '3w', '/autos');
+    }
+
     const brands = await getAllBrandsWithStats();
+    return brands.map((brand) => ({
+        ...brand,
+        href: `/brands/${encodeURIComponent(brand.name)}`,
+        logoUrl: getBrandLogo(brand.name) ?? brandLogoUrl(brand.name, '4w') ?? null,
+    }));
+}
+
+type Props = {
+    searchParams?: Promise<{ type?: string }>;
+};
+
+export default async function BrandsPage({ searchParams }: Props) {
+    const selectedType = normalizeBrandType((await searchParams)?.type);
+    const selectedConfig = BRAND_TYPES.find((type) => type.value === selectedType) ?? BRAND_TYPES[2];
+    const brands = await getBrandCards(selectedType);
 
     return (
         <>
@@ -36,11 +124,36 @@ export default async function BrandsPage() {
                 </nav>
 
                 {/* Header */}
-                <div className="mb-8">
-                    <h1 className="text-3xl font-bold tracking-tight">All Car Brands</h1>
-                    <p className="text-sm text-muted-foreground mt-1">
-                        Explore {brands.length} car brands and find your perfect car
-                    </p>
+                <div className="mb-8 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+                    <div>
+                        <h1 className="text-3xl font-bold tracking-tight">All Vehicle Brands</h1>
+                        <p className="text-sm text-muted-foreground mt-1">
+                            Explore {brands.length} {selectedConfig.name.toLowerCase()} brands
+                        </p>
+                    </div>
+
+                    <div className="inline-grid grid-cols-3 rounded-lg border border-border bg-muted/40 p-1 w-full sm:w-auto">
+                        {BRAND_TYPES.map(({ value, label, name, icon: Icon }) => {
+                            const active = value === selectedType;
+                            return (
+                                <Link
+                                    key={value}
+                                    href={`/brands?type=${value}`}
+                                    className={[
+                                        'inline-flex items-center justify-center gap-2 rounded-md px-3 py-2 text-sm font-semibold transition-colors',
+                                        active
+                                            ? 'bg-background text-foreground shadow-sm'
+                                            : 'text-muted-foreground hover:text-foreground',
+                                    ].join(' ')}
+                                    aria-current={active ? 'page' : undefined}
+                                >
+                                    <Icon className="h-4 w-4" />
+                                    <span>{label}</span>
+                                    <span className="hidden md:inline text-xs font-medium opacity-70">{name}</span>
+                                </Link>
+                            );
+                        })}
+                    </div>
                 </div>
 
                 {/* Brand Grid */}
@@ -48,14 +161,14 @@ export default async function BrandsPage() {
                     {brands.map((brand) => (
                         <Link
                             key={brand.name}
-                            href={`/brands/${encodeURIComponent(brand.name)}`}
+                            href={brand.href}
                         >
                             <Card className="h-full hover:shadow-md hover:-translate-y-0.5 transition-all cursor-pointer group hover:bg-gradient-to-b hover:from-primary/5 hover:to-transparent">
                                 <CardContent className="p-4 text-center">
                                     {/* Brand Logo */}
                                     <div className="w-16 h-16 mx-auto mb-3 flex items-center justify-center">
-                                        {getBrandLogo(brand.name) ? (
-                                            <Image src={getBrandLogo(brand.name)!} alt={brand.name} width={56} height={56} unoptimized className="object-contain" />
+                                        {brand.logoUrl ? (
+                                            <Image src={brand.logoUrl} alt={brand.name} width={56} height={56} unoptimized className="object-contain" />
                                         ) : (
                                             <div className="w-14 h-14 rounded-full bg-muted/50 border border-border flex items-center justify-center group-hover:border-primary transition-colors">
                                                 <span className="text-primary text-xl font-bold">{brand.name.charAt(0)}</span>

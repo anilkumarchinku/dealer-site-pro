@@ -12,7 +12,7 @@
 
 import { NextRequest, NextResponse } from 'next/server'
 import { getOptionalEnv } from '@/lib/env'
-import { createAdminClient, requireAuth } from '@/lib/supabase-server'
+import { createAdminClient, requireAuth, requireDealerOwnership } from '@/lib/supabase-server'
 import { rateLimitOrNull } from '@/lib/utils/rate-limiter'
 import { logger } from '@/lib/utils/logger'
 
@@ -51,7 +51,7 @@ export async function GET(request: NextRequest) {
 
 // ── PATCH: approve a review (dealer dashboard) ───────────────────────────────
 export async function PATCH(request: NextRequest) {
-    const { errorResponse } = await requireAuth()
+    const { user, supabase: routeSupabase, errorResponse } = await requireAuth()
     if (errorResponse) return errorResponse
 
     const body = await request.json().catch(() => null)
@@ -61,6 +61,9 @@ export async function PATCH(request: NextRequest) {
     if (!review_id || !dealer_id) {
         return NextResponse.json({ error: 'review_id and dealer_id required' }, { status: 400 })
     }
+
+    const { errorResponse: ownerErr } = await requireDealerOwnership(routeSupabase, user.id, dealer_id)
+    if (ownerErr) return ownerErr
 
     const supabase = getSupabase()
 

@@ -1,7 +1,11 @@
 import { NextResponse } from 'next/server'
 import { createSubdomainForDealer } from '@/lib/services/domain-service'
-import { isSupabaseReady, getSupabaseConfigError } from '@/lib/supabase'
-import { requireAuth, requireDealerOwnership } from '@/lib/supabase-server'
+import {
+    getSupabaseServerConfigError,
+    isSupabaseServerReady,
+    requireAuth,
+    requireDealerOwnership,
+} from '@/lib/supabase-server'
 
 /**
  * POST /api/domains/create-subdomain
@@ -9,12 +13,9 @@ import { requireAuth, requireDealerOwnership } from '@/lib/supabase-server'
  */
 export async function POST(request: Request) {
     try {
-        const { user, supabase, errorResponse } = await requireAuth()
-        if (errorResponse) return errorResponse
-
         // Check if Supabase is configured
-        if (!isSupabaseReady()) {
-            const configError = getSupabaseConfigError()
+        if (!isSupabaseServerReady()) {
+            const configError = getSupabaseServerConfigError()
             console.error('Supabase not configured:', configError)
             return NextResponse.json(
                 {
@@ -25,6 +26,9 @@ export async function POST(request: Request) {
                 { status: 503 }
             )
         }
+
+        const { user, supabase, errorResponse } = await requireAuth()
+        if (errorResponse) return errorResponse
 
         const body = await request.json()
         const { dealerId, businessName, city } = body
@@ -44,7 +48,7 @@ export async function POST(request: Request) {
             dealerId,
             businessName,
             city
-        })
+        }, supabase)
 
         if (result.success) {
             return NextResponse.json({

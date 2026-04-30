@@ -101,6 +101,13 @@ export function FamilyTemplate({
         }
         return typeSuffix || '/cars';
     }, [pathname, vehicleType]);
+    const detailBasePath = useMemo(() => {
+        const isUsedVehiclePage = (vehicleType === '2w' || vehicleType === '3w')
+            && sellsUsedCars
+            && !sellsNewCars
+            && pathname.includes('/used');
+        return isUsedVehiclePage ? `${siteBase}/used` : siteBase;
+    }, [pathname, sellsNewCars, sellsUsedCars, siteBase, vehicleType]);
     const SERVICE_LABELS: Record<string, { label: string; icon: string; desc: string }> = {
         new_car_sales: { label: vl.newVehicle, icon: '🚗', desc: vl.newVehicleDesc },
         used_car_sales: { label: vl.usedVehicle, icon: '🔄', desc: 'Certified pre-owned at great prices' },
@@ -422,7 +429,7 @@ export function FamilyTemplate({
                                 </span>
                                 <h2 className="text-4xl font-bold mt-2">Family-Friendly Vehicles</h2>
                             </div>
-                            <CarGrid cars={featuredCars} brandColor={brandColors.primary} light summaryOnly detailBasePath={siteBase} dealerPhone={contactInfo.phone} dealerId={dealerId} />
+                            <CarGrid cars={featuredCars} brandColor={brandColors.primary} light summaryOnly detailBasePath={detailBasePath} dealerPhone={contactInfo.phone} dealerId={dealerId} />
                             {showInventoryTab && (
                                 <div className="text-center mt-8">
                                     <Button variant="outline" size="lg" className="rounded-full bg-white text-gray-700 border-gray-300 hover:bg-gray-100" onClick={() => setActiveTab('inventory')}>
@@ -685,7 +692,7 @@ export function FamilyTemplate({
                                     brandColor={brandColors.primary}
                                     light
                                     summaryOnly
-                                    detailBasePath={siteBase}
+                                    detailBasePath={detailBasePath}
                                     dealerPhone={contactInfo.phone}
                                     dealerId={dealerId}
                                 />

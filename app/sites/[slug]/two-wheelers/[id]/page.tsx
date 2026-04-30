@@ -3,7 +3,6 @@
 import { useEffect, useMemo, useState } from "react"
 import { useParams } from "next/navigation"
 import Image from "next/image"
-import { supabase } from "@/lib/supabase"
 import { VehicleDetailGallery } from "@/components/two-wheelers/VehicleDetailGallery"
 import { EMICalculator } from "@/components/shared/EMICalculator"
 import { LeadFormModal } from "@/components/two-wheelers/LeadFormModal"
@@ -12,12 +11,24 @@ import { OnRoadPriceDialog } from "@/components/two-wheelers/OnRoadPriceDialog"
 import { FullSpecsSection } from "@/components/two-wheelers/FullSpecsSection"
 import { SimilarVehicles } from "@/components/two-wheelers/SimilarVehicles"
 import { generateTemplateConfig, type TemplateStyle } from "@/lib/templates"
+import { brandLogoUrl } from "@/lib/utils/site-assets"
 import type { TwoWheelerVehicle, TwoWheelerLeadType } from "@/lib/types/two-wheeler"
 import { ChevronLeft, MapPin } from "lucide-react"
 import Link from "next/link"
 import { useSitePrefix } from "@/lib/hooks/useSitePrefix"
 
 const BOOKING_AMOUNT = 50000 // ₹500 booking token
+
+type DealerDetailMetadata = {
+    id: string
+    logo_url: string | null
+    dealership_name: string
+    style_template: string
+}
+
+type VehicleDetailPayload = TwoWheelerVehicle & {
+    _dealer?: DealerDetailMetadata
+}
 
 export default function VehicleDetailPage() {
     const params = useParams()
@@ -44,24 +55,20 @@ export default function VehicleDetailPage() {
     useEffect(() => {
         if (!slug || !id) return
         async function load() {
-            const [{ data: dealer }, vehicleRes] = await Promise.all([
-                supabase
-                    .from("dealers")
-                    .select("id, logo_url, dealership_name, style_template")
-                    .eq("slug", slug)
-                    .single(),
-                fetch(`/api/two-wheelers/${encodeURIComponent(id)}?slug=${encodeURIComponent(slug)}`),
-            ])
-            if (dealer) {
-                const d = dealer
-                setDealerId(d.id)
-                setDealerInfo({
-                    logoUrl:       d.logo_url       ?? null,
-                    dealerName:    d.dealership_name ?? '',
-                    styleTemplate: d.style_template  ?? 'modern',
-                })
+            const vehicleRes = await fetch(`/api/two-wheelers/${encodeURIComponent(id)}?slug=${encodeURIComponent(slug)}`)
+            if (vehicleRes.ok) {
+                const payload = await vehicleRes.json() as VehicleDetailPayload
+                const { _dealer, ...vehicleData } = payload
+                setVehicle(vehicleData as TwoWheelerVehicle)
+                if (_dealer) {
+                    setDealerId(_dealer.id)
+                    setDealerInfo({
+                        logoUrl:       _dealer.logo_url ?? null,
+                        dealerName:    _dealer.dealership_name ?? '',
+                        styleTemplate: _dealer.style_template ?? 'modern',
+                    })
+                }
             }
-            if (vehicleRes.ok) setVehicle(await vehicleRes.json())
             setLoading(false)
         }
         load()
@@ -85,7 +92,7 @@ export default function VehicleDetailPage() {
     // Logo: dealer-uploaded logo first, then brand logo as fallback
     const logoSrc = useMemo(() => {
         if (dealerInfo?.logoUrl) return dealerInfo.logoUrl
-        if (vehicle?.brand) return `/assets/logos/2w/${vehicle.brand.toLowerCase().replace(/\s+/g, '-')}.svg`
+        if (vehicle?.brand) return brandLogoUrl(vehicle.brand, '2w') ?? null
         return null
     }, [dealerInfo, vehicle])
 

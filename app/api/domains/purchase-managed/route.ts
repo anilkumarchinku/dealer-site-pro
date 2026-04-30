@@ -1,6 +1,5 @@
 import { NextResponse } from 'next/server'
 import { purchaseDomain } from '@/lib/services/domain-search-service'
-import { supabase } from '@/lib/supabase'
 import { requireAuth, requireDealerOwnership } from '@/lib/supabase-server'
 
 /**
@@ -36,7 +35,7 @@ export async function POST(request: Request) {
         }
 
         // Create domain record
-        const { data: newDomain, error: dbError } = await supabase
+        const { data: newDomain, error: dbError } = await authSupabase
             .from('domains')
             .insert({
                 dealer_id: dealerId,
@@ -53,7 +52,7 @@ export async function POST(request: Request) {
             .select()
             .single()
 
-        if (dbError) {
+        if (dbError || !newDomain) {
             console.error('Error creating managed domain:', dbError)
             return NextResponse.json(
                 { success: false, error: 'Failed to save domain' },
@@ -62,7 +61,7 @@ export async function POST(request: Request) {
         }
 
         // Un-set previous primary domain
-        await supabase
+        await authSupabase
             .from('domains')
             .update({ is_primary: false })
             .eq('dealer_id', dealerId)

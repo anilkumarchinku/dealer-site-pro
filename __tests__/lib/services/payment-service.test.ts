@@ -3,7 +3,7 @@
  * Tests for Razorpay subscription creation and verification
  */
 
-import { verifyPaymentSignature } from '@/lib/services/payment-service'
+import { createDomainSubscription, verifyPaymentSignature } from '@/lib/services/payment-service'
 import { createHmac } from 'crypto'
 
 // Mock Razorpay key
@@ -110,6 +110,27 @@ describe('Payment Service', () => {
             // Request with key X → Processes
             // Request with key Y → Processes independently
             // Request with key X again → Returns cached for key X
+        })
+    })
+
+    describe('createDomainSubscription', () => {
+        afterEach(() => {
+            vi.unstubAllEnvs()
+        })
+
+        it('does not return mock subscriptions in production when Razorpay is missing', async () => {
+            vi.stubEnv('NODE_ENV', 'production')
+            vi.stubEnv('NEXT_PUBLIC_RAZORPAY_KEY_ID', '')
+            vi.stubEnv('RAZORPAY_KEY_SECRET', '')
+
+            await expect(createDomainSubscription({
+                dealerId: 'dealer_1',
+                tier: 'pro',
+                domainId: 'domain_1',
+            })).resolves.toEqual({
+                success: false,
+                error: 'Payment service is not configured',
+            })
         })
     })
 

@@ -12,31 +12,12 @@
  */
 
 import { NextResponse } from 'next/server'
-import { getOptionalEnv, getRequiredEnv } from '@/lib/env'
+import { getOptionalEnv } from '@/lib/env'
 import { recordDomainDeploymentOperation } from '@/lib/services/domain-deployment-operation-service'
 import { requireAuth, requireDealerOwnership } from '@/lib/supabase-server'
 
-/** Validate that required env vars are present and not placeholder values */
-function checkEnvVars(): string | null {
-    try {
-        getRequiredEnv('GITHUB_TOKEN')
-        getRequiredEnv('GITHUB_ORG')
-        getRequiredEnv('GITHUB_TEMPLATE_REPO')
-        getRequiredEnv('VERCEL_TOKEN')
-    } catch (error) {
-        return error instanceof Error ? error.message.replace('[ENV] ', '') : 'Deployment env validation failed'
-    }
-    return null
-}
-
 export async function POST(request: Request) {
     try {
-        // ── Env vars: fail fast if tokens are missing or placeholders ─────────
-        const envError = checkEnvVars()
-        if (envError) {
-            return NextResponse.json({ error: envError }, { status: 500 })
-        }
-
         // ── Auth: require signed-in user ──────────────────────────────────────
         const { user, supabase, errorResponse: authErr } = await requireAuth()
         if (authErr) return authErr

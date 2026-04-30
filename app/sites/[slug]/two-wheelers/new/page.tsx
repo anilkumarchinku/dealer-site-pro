@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import { fetchDealerBySlug } from '@/lib/db/dealers'
 import { getTwoWheelerVehicles } from '@/lib/db/two-wheelers'
 import { getTwoWheelerCatalog, TWO_WHEELER_BRANDS } from '@/lib/data/two-wheelers'
+import { getTwoWheelerCatalogFromDB } from '@/lib/data/catalog-db'
 import { notFound } from 'next/navigation'
 import { createClient } from '@supabase/supabase-js'
-import { brandNameToId } from '@/lib/utils/brand-model-images'
 import { ModernTemplate } from '@/components/templates/ModernTemplate'
 import { LuxuryTemplate } from '@/components/templates/LuxuryTemplate'
 import { SportyTemplate } from '@/components/templates/SportyTemplate'
@@ -13,7 +13,8 @@ import type { Car } from '@/lib/types/car'
 import type { TwoWheelerVehicle } from '@/lib/types/two-wheeler'
 import type { Service } from '@/lib/types'
 import { dedupeByBrandModel, dedupeCaseInsensitiveStrings } from '@/lib/utils/listing-dedupe'
-import { firstVehicleHeroImage } from '@/lib/utils/site-assets'
+import { brandLogoUrl as getBrandLogoUrl, firstVehicleHeroImage } from '@/lib/utils/site-assets'
+import { brandToUrlSlug } from '@/lib/utils/domain'
 
 interface Props {
     params: Promise<{ slug: string }>
@@ -127,6 +128,9 @@ export default async function NewTwoWheelersPage({ params, searchParams }: Props
     const dealer = await fetchDealerBySlug(slug)
     if (!dealer) notFound()
 
+    const hasSavedStockMode = dealer.sells_new_cars || dealer.sells_used_cars
+    if (!dealer.sells_new_cars && hasSavedStockMode) notFound()
+
     const { vehicles: dbVehicles } = await getTwoWheelerVehicles(dealer.id, { pageSize: 100, sortBy: 'newest' })
 
     let dealer2wBrands: string[] = []
@@ -146,9 +150,12 @@ export default async function NewTwoWheelersPage({ params, searchParams }: Props
         dealer2wBrands = dealer.brands.filter(b => TWO_WHEELER_BRANDS.includes(b))
     }
 
+    const dealerOwnBrands = dealer.brands.filter(b => TWO_WHEELER_BRANDS.includes(b))
     const allBrands = dedupeCaseInsensitiveStrings(dealer2wBrands.length > 0
         ? dealer2wBrands
-        : TWO_WHEELER_BRANDS
+        : dealerOwnBrands.length > 0
+            ? dealerOwnBrands
+            : TWO_WHEELER_BRANDS
     )
 
     // Resolve the active brand filter:
@@ -156,7 +163,7 @@ export default async function NewTwoWheelersPage({ params, searchParams }: Props
     const activeBrandFilter: string | null = dealer.brandFilter
         ?? (brandParam
             ? allBrands.find(b =>
-                b.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '') === brandParam
+                brandToUrlSlug(b) === brandParam
               ) ?? null
             : null)
 
@@ -173,9 +180,14 @@ export default async function NewTwoWheelersPage({ params, searchParams }: Props
 
     const primaryBrand = brandsToShow[0] ?? null
 
-    const catalogVehicles = dedupeByBrandModel(brandsToShow.flatMap((brand, bi) =>
-        getTwoWheelerCatalog(brand, dealer.id).map(v => ({ ...v, id: `cat-2w-${bi}-${v.id}` }))
-    ))
+    const catalogResults = await Promise.all(
+        brandsToShow.map(async (brand, bi) => {
+            const dbRows = await getTwoWheelerCatalogFromDB(brand, dealer.id)
+            const fallbackRows = getTwoWheelerCatalog(brand, dealer.id)
+            return [...dbRows, ...fallbackRows].map(v => ({ ...v, id: `cat-2w-${bi}-${v.id}` }))
+        })
+    )
+    const catalogVehicles = dedupeByBrandModel(catalogResults.flat())
 
     const filteredDbVehicles = dedupeByBrandModel(activeBrandFilter
         ? dbVehicles.filter(v => v.brand.toLowerCase() === activeBrandFilter.toLowerCase())
@@ -188,8 +200,7 @@ export default async function NewTwoWheelersPage({ params, searchParams }: Props
 
     const cars = twoWheelersToCars(vehicles)
 
-    const brandId = primaryBrand ? brandNameToId(primaryBrand, '2w') : null
-    const brandLogoUrl = dealer.logo_url ?? (brandId ? `/data/brand-logos/${brandId}.png` : undefined)
+    const logoUrl = dealer.logo_url ?? (primaryBrand ? getBrandLogoUrl(primaryBrand, '2w') ?? undefined : undefined)
     const heroImageUrl = dealer.hero_image_url ?? firstVehicleHeroImage(cars)
 
     const contactInfo = {
@@ -223,7 +234,7 @@ export default async function NewTwoWheelersPage({ params, searchParams }: Props
         branches:     dealer.branches ?? undefined,
         services:     (dealer.services ?? []) as Service[],
         workingHours: dealer.working_hours ?? null,
-        logoUrl:      brandLogoUrl ?? undefined,
+        logoUrl:      logoUrl ?? undefined,
         heroImageUrl,
         sellsNewCars:  true,
         sellsUsedCars: false,

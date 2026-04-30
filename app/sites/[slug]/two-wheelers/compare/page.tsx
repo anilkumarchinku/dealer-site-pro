@@ -20,7 +20,7 @@ export default function ComparePage() {
 
     useEffect(() => {
         if (ids.length === 0) { setLoading(false); return }
-        Promise.all(ids.map(id => fetch(`/api/two-wheelers/${id}`).then(r => r.ok ? r.json() : null)))
+        Promise.all(ids.map(id => fetch(`/api/two-wheelers/${encodeURIComponent(id)}?slug=${encodeURIComponent(slug)}`).then(r => r.ok ? r.json() : null)))
             .then(results => {
                 setVehicles(results.filter(Boolean) as TwoWheelerVehicle[])
                 setLoading(false)

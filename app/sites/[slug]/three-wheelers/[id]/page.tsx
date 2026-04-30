@@ -3,7 +3,6 @@
 import { useEffect, useMemo, useState } from "react"
 import { useParams } from "next/navigation"
 import Image from "next/image"
-import { supabase } from "@/lib/supabase"
 import { VehicleDetailGallery } from "@/components/three-wheelers/VehicleDetailGallery"
 import { LeadFormModal } from "@/components/three-wheelers/LeadFormModal"
 import { BookingModal } from "@/components/three-wheelers/BookingModal"
@@ -12,12 +11,24 @@ import { CityOnRoadPrice } from "@/components/three-wheelers/CityOnRoadPrice"
 import { FullSpecsSection } from "@/components/three-wheelers/FullSpecsSection"
 import { SimilarVehicles } from "@/components/three-wheelers/SimilarVehicles"
 import { generateTemplateConfig, type TemplateStyle } from "@/lib/templates"
+import { brandLogoUrl } from "@/lib/utils/site-assets"
 import type { ThreeWheelerVehicle, ThreeWheelerLeadType } from "@/lib/types/three-wheeler"
 import { ChevronLeft } from "lucide-react"
 import Link from "next/link"
 import { useSitePrefix } from "@/lib/hooks/useSitePrefix"
 
 const BOOKING_AMOUNT = 50000 // ₹500 booking token
+
+type DealerDetailMetadata = {
+    id: string
+    logo_url: string | null
+    dealership_name: string
+    style_template: string
+}
+
+type VehicleDetailPayload = ThreeWheelerVehicle & {
+    _dealer?: DealerDetailMetadata
+}
 
 export default function ThreeWheelerDetailPage() {
     const params = useParams()
@@ -42,24 +53,20 @@ export default function ThreeWheelerDetailPage() {
     useEffect(() => {
         if (!slug || !id) return
         async function load() {
-            const [{ data: dealer }, vehicleRes] = await Promise.all([
-                supabase
-                    .from("dealers")
-                    .select("id, logo_url, dealership_name, style_template")
-                    .eq("slug", slug)
-                    .single(),
-                fetch(`/api/three-wheelers/${encodeURIComponent(id)}?slug=${encodeURIComponent(slug)}`),
-            ])
-            if (dealer) {
-                const d = dealer
-                setDealerId(d.id)
-                setDealerInfo({
-                    logoUrl:       d.logo_url       ?? null,
-                    dealerName:    d.dealership_name ?? '',
-                    styleTemplate: d.style_template  ?? 'modern',
-                })
+            const vehicleRes = await fetch(`/api/three-wheelers/${encodeURIComponent(id)}?slug=${encodeURIComponent(slug)}`)
+            if (vehicleRes.ok) {
+                const payload = await vehicleRes.json() as VehicleDetailPayload
+                const { _dealer, ...vehicleData } = payload
+                setVehicle(vehicleData as ThreeWheelerVehicle)
+                if (_dealer) {
+                    setDealerId(_dealer.id)
+                    setDealerInfo({
+                        logoUrl:       _dealer.logo_url ?? null,
+                        dealerName:    _dealer.dealership_name ?? '',
+                        styleTemplate: _dealer.style_template ?? 'modern',
+                    })
+                }
             }
-            if (vehicleRes.ok) setVehicle(await vehicleRes.json())
             setLoading(false)
         }
         load()
@@ -78,7 +85,7 @@ export default function ThreeWheelerDetailPage() {
     // Logo: dealer-uploaded logo first, then brand logo as fallback
     const logoSrc = useMemo(() => {
         if (dealerInfo?.logoUrl) return dealerInfo.logoUrl
-        if (vehicle?.brand) return `/assets/logos/2w/${vehicle.brand.toLowerCase().replace(/\s+/g, '-')}.svg`
+        if (vehicle?.brand) return brandLogoUrl(vehicle.brand, '3w') ?? null
         return null
     }, [dealerInfo, vehicle])
 

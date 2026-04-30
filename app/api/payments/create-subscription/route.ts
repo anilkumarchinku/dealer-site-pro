@@ -34,15 +34,25 @@ export async function POST(request: NextRequest) {
         const { errorResponse: ownerErr } = await requireDealerOwnership(supabase, user.id, dealerId)
         if (ownerErr) return ownerErr
 
-        // Verify the domain belongs to this dealer
-        const { data: domain } = await supabase
-            .from('domains')
+        // Verify the domain belongs to this dealer. Custom domains live in
+        // dealer_domains; keep a legacy fallback for older subdomain records.
+        const { data: dealerDomain } = await supabase
+            .from('dealer_domains')
             .select('id')
             .eq('id', domainId)
             .eq('dealer_id', dealerId)
             .single()
 
-        if (!domain) {
+        const { data: legacyDomain } = dealerDomain
+            ? { data: null }
+            : await supabase
+                .from('domains')
+                .select('id')
+                .eq('id', domainId)
+                .eq('dealer_id', dealerId)
+                .single()
+
+        if (!dealerDomain && !legacyDomain) {
             return NextResponse.json(
                 { success: false, error: 'Domain not found or does not belong to your account' },
                 { status: 403 }
@@ -59,7 +69,7 @@ export async function POST(request: NextRequest) {
         if (!subscriptionResult.success) {
             return NextResponse.json(
                 { success: false, error: subscriptionResult.error },
-                { status: 400 }
+                { status: subscriptionResult.error?.includes('configured') ? 503 : 400 }
             )
         }
 

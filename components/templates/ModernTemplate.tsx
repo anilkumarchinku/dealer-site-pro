@@ -109,6 +109,13 @@ export function ModernTemplate({
         }
         return typeSuffix || '/cars';
     }, [pathname, vehicleType]);
+    const detailBasePath = useMemo(() => {
+        const isUsedVehiclePage = (vehicleType === '2w' || vehicleType === '3w')
+            && sellsUsedCars
+            && !sellsNewCars
+            && pathname.includes('/used');
+        return isUsedVehiclePage ? `${siteBase}/used` : siteBase;
+    }, [pathname, sellsNewCars, sellsUsedCars, siteBase, vehicleType]);
     const SERVICE_LABELS: Record<string, { label: string; icon: string }> = {
         new_car_sales: { label: vl.newVehicle, icon: '🚗' },
         used_car_sales: { label: vl.usedVehicle, icon: '🔄' },
@@ -401,15 +408,17 @@ export function ModernTemplate({
                                     </h1>
                                     <p className="text-xl text-gray-600">{heroSubtitle}</p>
                                     <div className="flex flex-wrap gap-4">
-                                        <Button
-                                            size="lg"
-                                            className="text-white"
-                                            style={{ backgroundColor: brandColors.primary }}
-                                            onClick={() => setActiveTab('inventory')}
-                                        >
-                                            View Inventory
-                                            <ArrowRight className="ml-2 w-5 h-5" />
-                                        </Button>
+                                        {showInventoryTab && (
+                                            <Button
+                                                size="lg"
+                                                className="text-white"
+                                                style={{ backgroundColor: brandColors.primary }}
+                                                onClick={() => setActiveTab('inventory')}
+                                            >
+                                                View Inventory
+                                                <ArrowRight className="ml-2 w-5 h-5" />
+                                            </Button>
+                                        )}
                                         <Button
                                             size="lg"
                                             variant="outline"
@@ -540,7 +549,7 @@ export function ModernTemplate({
                                     </Button>
                                 )}
                             </div>
-                            <CarGrid cars={featuredCars} brandColor={brandColors.primary} light summaryOnly detailBasePath={siteBase} dealerPhone={contactInfo.phone} dealerId={dealerId} />
+                            <CarGrid cars={featuredCars} brandColor={brandColors.primary} light summaryOnly detailBasePath={detailBasePath} dealerPhone={contactInfo.phone} dealerId={dealerId} />
                         </div>
                     </section>
 
@@ -811,7 +820,7 @@ export function ModernTemplate({
                                     brandColor={brandColors.primary}
                                     light
                                     summaryOnly
-                                    detailBasePath={siteBase}
+                                    detailBasePath={detailBasePath}
                                     dealerPhone={contactInfo.phone}
                                     dealerId={dealerId}
                                 />

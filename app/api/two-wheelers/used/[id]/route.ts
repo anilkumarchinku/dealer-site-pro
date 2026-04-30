@@ -12,6 +12,7 @@ import {
 import { createUsedVehicleDetailRouteHandlers } from '@/lib/services/vehicle-inventory-route-service'
 
 const handlers = createUsedVehicleDetailRouteHandlers({
+    vehicleType: 'two-wheeler',
     getVehicleById: getUsedTwoWheelerById,
     updateVehicle: updateUsedTwoWheeler,
     deleteVehicle: deleteUsedTwoWheeler,

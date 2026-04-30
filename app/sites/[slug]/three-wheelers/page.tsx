@@ -7,7 +7,6 @@ import { getLocal3WImage } from "@/lib/data/cars"
 import { fetchCyeproInventoryAsCars } from "@/lib/services/cyepro-service"
 import { notFound } from "next/navigation"
 import { createClient } from "@supabase/supabase-js"
-import { brandNameToId } from "@/lib/utils/brand-model-images"
 import { ModernTemplate } from "@/components/templates/ModernTemplate"
 import { LuxuryTemplate } from "@/components/templates/LuxuryTemplate"
 import { SportyTemplate } from "@/components/templates/SportyTemplate"
@@ -16,7 +15,8 @@ import type { Car } from "@/lib/types/car"
 import type { ThreeWheelerVehicle, ThreeWheelerUsedVehicle } from "@/lib/types/three-wheeler"
 import type { Service } from "@/lib/types"
 import { dedupeByBrandModel, dedupeCaseInsensitiveStrings } from "@/lib/utils/listing-dedupe"
-import { firstVehicleHeroImage } from "@/lib/utils/site-assets"
+import { brandLogoUrl as getBrandLogoUrl, firstVehicleHeroImage } from "@/lib/utils/site-assets"
+import { brandToUrlSlug } from "@/lib/utils/domain"
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -166,7 +166,7 @@ function ThreeWheelerPortal({
   } else {
     // Multi-brand new-only: one card per brand, each with its own brand-filtered URL
     brands.forEach(brand => {
-      const brandSlug = brand.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')
+      const brandSlug = brandToUrlSlug(brand)
       siteCards.push({
         label: brand,
         sublabel: 'New Three-Wheelers · Authorised Dealer',
@@ -304,7 +304,13 @@ export default async function ThreeWheelersPage({ params }: Props) {
     dealer3wBrands = dealer.brands.filter(b => THREE_WHEELER_BRANDS.includes(b))
   }
 
-  const allBrands = dedupeCaseInsensitiveStrings(dealer3wBrands.length > 0 ? dealer3wBrands : ALL_3W_BRANDS)
+  const dealerOwnBrands = dealer.brands.filter(b => THREE_WHEELER_BRANDS.includes(b))
+  const allBrands = dedupeCaseInsensitiveStrings(dealer3wBrands.length > 0
+    ? dealer3wBrands
+    : dealerOwnBrands.length > 0
+      ? dealerOwnBrands
+      : ALL_3W_BRANDS
+  )
 
   // If accessed via a brand-specific slug (e.g. varun-group-bajaj-auto-3w),
   // restrict to that brand only; otherwise show all dealer brands.
@@ -348,12 +354,13 @@ export default async function ThreeWheelersPage({ params }: Props) {
   const usedCars = [...usedThreeWheelersToCars(usedVehicles), ...cyeproCars]
 
   const isUsedSite = dealer.usedCarSite === true
-  const hasNew  = !isUsedSite && newCars.length > 0
-  const hasUsed = usedCars.length > 0
-  const isHybrid = hasNew && hasUsed
+  const hasSavedStockMode = dealer.sells_new_cars || dealer.sells_used_cars
+  const selectedNew = dealer.sells_new_cars || !hasSavedStockMode
+  const selectedUsed = dealer.sells_used_cars
+  const isHybrid = selectedNew && selectedUsed
 
   // ── Multi-brand new-only OR hybrid → show portal so user picks section ──
-  const isMultiBrandNewOnly = hasNew && !hasUsed && brandsToShow.length > 1
+  const isMultiBrandNewOnly = selectedNew && !selectedUsed && brandsToShow.length > 1
   if (isHybrid || isMultiBrandNewOnly) {
     return (
       <ThreeWheelerPortal
@@ -368,7 +375,7 @@ export default async function ThreeWheelersPage({ params }: Props) {
     )
   }
 
-  const cars = isUsedSite ? usedCars : hasNew ? newCars : usedCars
+  const cars = isUsedSite ? usedCars : selectedNew ? newCars : usedCars
 
   // ── No inventory yet ──────────────────────────────────────────────────────
   if (cars.length === 0) {
@@ -381,8 +388,7 @@ export default async function ThreeWheelersPage({ params }: Props) {
     )
   }
 
-  const brandId = primaryBrand ? brandNameToId(primaryBrand, '3w') : null
-  const brandLogoUrl = dealer.logo_url ?? (brandId ? `/data/brand-logos/${brandId}.png` : undefined)
+  const logoUrl = dealer.logo_url ?? (primaryBrand ? getBrandLogoUrl(primaryBrand, '3w') ?? undefined : undefined)
   const heroImageUrl = dealer.hero_image_url ?? firstVehicleHeroImage(cars)
 
   const contactInfo = {
@@ -416,10 +422,10 @@ export default async function ThreeWheelersPage({ params }: Props) {
     branches:     dealer.branches ?? undefined,
     services:     (dealer.services ?? []) as Service[],
     workingHours: dealer.working_hours ?? null,
-    logoUrl:      brandLogoUrl ?? undefined,
+    logoUrl:      logoUrl ?? undefined,
     heroImageUrl,
-    sellsNewCars:  hasNew,
-    sellsUsedCars: hasUsed,
+    sellsNewCars:  selectedNew,
+    sellsUsedCars: selectedUsed,
     isVerified:    false,
     vehicleType:   '3w' as const,
   }

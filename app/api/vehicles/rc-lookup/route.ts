@@ -136,6 +136,12 @@ export async function POST(request: NextRequest) {
         if (provider === 'rapidor' && getOptionalEnv('RAPIDOR_API_KEY')) {
             result = await rapidorLookup(rc)
         } else {
+            if (process.env.NODE_ENV === 'production') {
+                return NextResponse.json(
+                    { error: 'RC lookup provider is not configured' },
+                    { status: 503 }
+                )
+            }
             // Fall back to mock
             result = mockResponse(rc)
         }

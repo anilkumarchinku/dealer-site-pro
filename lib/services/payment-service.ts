@@ -32,9 +32,13 @@ export async function createDomainSubscription(
     params: CreateSubscriptionParams
 ): Promise<SubscriptionResult> {
     const { dealerId, tier, domainId } = params
+    const production = process.env.NODE_ENV === 'production'
 
     // MOCK MODE: when Razorpay credentials are not configured, return fake subscription data for testing
     if (!isRazorpayConfigured()) {
+        if (production) {
+            return { success: false, error: 'Payment service is not configured' }
+        }
         const mockId = `mock_sub_${Date.now()}`
         console.warn('[MOCK] Razorpay not configured — returning mock subscription:', mockId)
         return { success: true, subscriptionId: mockId, orderId: mockId }
@@ -47,6 +51,9 @@ export async function createDomainSubscription(
 
     const planId = planIds[tier]
     if (!planId || planId.startsWith('plan_xxx')) {
+        if (production) {
+            return { success: false, error: 'Payment plan is not configured' }
+        }
         const mockId = `mock_sub_${Date.now()}`
         console.warn('[MOCK] Razorpay plan not configured — returning mock subscription:', mockId)
         return { success: true, subscriptionId: mockId, orderId: mockId }
