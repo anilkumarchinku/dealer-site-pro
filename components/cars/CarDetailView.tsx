@@ -35,8 +35,8 @@ import {
 import { Slider } from '@/components/ui/slider';
 import { getBrandLogo } from '@/lib/data/brand-logos';
 import { useSitePrefix } from '@/lib/hooks/useSitePrefix';
-import { getBrandColors } from '@/lib/colors/automotive-brands';
 import { getContrastText } from '@/lib/utils/color-contrast';
+import { resolveVehicleDetailAccent } from '@/lib/utils/site-theme';
 import {
     ChevronRight,
     Download,
@@ -164,6 +164,8 @@ const INSPECTION_CATEGORIES = [
 
 export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, dealerPhone }: CarDetailViewProps) {
     const sitePrefix = useSitePrefix(siteSlug ?? '');
+    const brandColor = resolveVehicleDetailAccent(car.make, Boolean(siteSlug));
+    const brandContrast = getContrastText(brandColor);
     const isUsed = car.condition === 'used' || car.condition === 'certified_pre_owned';
     const isCPO = car.condition === 'certified_pre_owned';
     const TABS = isUsed ? USED_CAR_TABS : NEW_CAR_TABS;
@@ -212,7 +214,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
         : (car.performance?.fuelEfficiency ? `${car.performance.fuelEfficiency} kmpl` : '');
     const keySpecs = [
         { icon: <Fuel className="w-5 h-5 text-emerald-600" />, label: 'Fuel Type', value: car.engine?.type || '' },
-        { icon: <Gauge className="w-5 h-5 text-blue-600" />, label: 'Transmission', value: car.transmission?.type || '' },
+        { icon: <Gauge className="w-5 h-5" style={{ color: brandColor }} />, label: 'Transmission', value: car.transmission?.type || '' },
         { icon: <Zap className="w-5 h-5 text-amber-600" />, label: isElectric ? 'Range' : 'Mileage', value: mileageOrRange },
         { icon: <Users className="w-5 h-5 text-purple-600" />, label: 'Seating', value: car.dimensions?.seatingCapacity ? `${car.dimensions.seatingCapacity} Seater` : '' },
         { icon: <Settings className="w-5 h-5 text-gray-600" />, label: isElectric ? 'Battery' : 'Engine', value: isElectric ? (car.engine?.batteryCapacity ? `${car.engine.batteryCapacity} kWh` : '') : (car.engine?.displacement ? `${car.engine.displacement} cc` : '') },
@@ -278,8 +280,6 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
         ? `${inventoryHref}?make=${encodeURIComponent(car.make)}`
         : `/cars?make=${encodeURIComponent(car.make)}`;
     const detailBasePath = siteSlug ? sitePrefix : undefined;
-    const brandColor = getBrandColors(car.make).primary ?? '#2563eb';
-    const brandContrast = getContrastText(brandColor);
     const lightCardClass = 'bg-white border border-slate-200 text-slate-900 shadow-[0_12px_30px_rgba(15,23,42,0.06)] dark:!bg-white dark:!border-slate-200 dark:!text-slate-900';
     const softCardClass = 'bg-slate-50 border border-slate-200 text-slate-900 shadow-none dark:!bg-slate-50 dark:!border-slate-200 dark:!text-slate-900';
     const lightTableRowHoverClass = 'hover:bg-slate-50';
@@ -357,9 +357,13 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                                     key={idx}
                                     onClick={() => setActiveImage(img)}
                                     className={`relative w-20 h-14 flex-shrink-0 rounded-lg overflow-hidden border-2 transition-all ${activeImage === img
-                                            ? 'border-blue-600 ring-1 ring-blue-600/30'
+                                            ? ''
                                             : 'border-transparent hover:border-muted-foreground/30'
                                         }`}
+                                    style={activeImage === img ? {
+                                        borderColor: brandColor,
+                                        boxShadow: `0 0 0 1px ${brandColor}4d`,
+                                    } : undefined}
                                 >
                                     <Image src={img} alt={`View ${idx + 1}`} fill unoptimized className="object-cover" />
                                 </button>
@@ -639,7 +643,10 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                                         <div className="absolute left-[9px] top-1 bottom-1 w-0.5 bg-border" />
 
                                         <div className="relative">
-                                            <div className="absolute -left-6 top-0 w-[18px] h-[18px] rounded-full bg-blue-600 border-2 border-white" />
+                                            <div
+                                                className="absolute -left-6 top-0 w-[18px] h-[18px] rounded-full border-2 border-white"
+                                                style={{ backgroundColor: brandColor }}
+                                            />
                                             <div>
                                                 <p className="text-sm font-semibold">Current Owner (You viewing)</p>
                                                 <p className="text-xs text-gray-600">Since {car.year ? car.year + 2 : 2023} - Present</p>
@@ -931,9 +938,10 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                                             key={color.name}
                                             onClick={() => setSelectedColor(color.name)}
                                             className={`flex flex-col items-center gap-1.5 p-2 rounded-lg transition-all ${selectedColor === color.name
-                                                    ? 'bg-gray-100 ring-2 ring-blue-600'
+                                                    ? 'bg-gray-100'
                                                     : 'hover:bg-gray-100/50'
                                                 }`}
+                                            style={selectedColor === color.name ? { boxShadow: `0 0 0 2px ${brandColor}` } : undefined}
                                         >
                                             <div
                                                 className="w-10 h-10 rounded-full border-2 border-gray-200 shadow-sm"
@@ -979,6 +987,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                                         step={50000}
                                         onChange={setEmiPrice}
                                         format={(v) => `₹${Math.round(v).toLocaleString('en-IN')}`}
+                                        accentColor={brandColor}
                                     />
                                     <EmiSlider
                                         label="Down Payment"
@@ -988,6 +997,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                                         step={10000}
                                         onChange={setEmiDown}
                                         format={(v) => `₹${Math.round(v).toLocaleString('en-IN')}`}
+                                        accentColor={brandColor}
                                     />
                                     <EmiSlider
                                         label="Loan Tenure"
@@ -997,6 +1007,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                                         step={6}
                                         onChange={setEmiTenure}
                                         format={(v) => `${v} months`}
+                                        accentColor={brandColor}
                                     />
                                     <EmiSlider
                                         label="Interest Rate"
@@ -1006,6 +1017,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                                         step={0.5}
                                         onChange={setEmiRate}
                                         format={(v) => `${v}% p.a.`}
+                                        accentColor={brandColor}
                                     />
                                 </div>
 
@@ -1329,7 +1341,7 @@ function FeatureGroup({ title, features, icon }: { title: string; features: stri
 }
 
 function EmiSlider({
-    label, value, min, max, step, onChange, format,
+    label, value, min, max, step, onChange, format, accentColor,
 }: {
     label: string;
     value: number;
@@ -1338,12 +1350,13 @@ function EmiSlider({
     step: number;
     onChange: (v: number) => void;
     format: (v: number) => string;
+    accentColor: string;
 }) {
     return (
         <div>
             <div className="flex justify-between items-center mb-2">
                 <label className="text-xs font-semibold uppercase tracking-wider text-gray-600">{label}</label>
-                <span className="text-sm font-bold text-blue-600">{format(value)}</span>
+                <span className="text-sm font-bold" style={{ color: accentColor }}>{format(value)}</span>
             </div>
             <Slider
                 value={[value]}
