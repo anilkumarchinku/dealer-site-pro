@@ -51,8 +51,7 @@ function normalizeBrandType(value: string | undefined): BrandDirectoryType {
 
 function buildStaticBrandCards(
     vehicles: Array<{ make: string; model: string; price_min_paise: number }>,
-    category: VehicleImageCategory,
-    hrefBase: '/bikes' | '/autos'
+    category: Extract<VehicleImageCategory, '2w' | '3w'>
 ): BrandCard[] {
     const brandMap = new Map<string, { models: Set<string>; priceMin: number; priceMax: number }>();
 
@@ -79,7 +78,7 @@ function buildStaticBrandCards(
             modelCount: stats.models.size,
             priceMin: stats.priceMin || null,
             priceMax: stats.priceMax || null,
-            href: `${hrefBase}?make=${encodeURIComponent(name)}`,
+            href: `/brands/${encodeURIComponent(name)}?type=${category}`,
             logoUrl: brandLogoUrl(name, category) ?? null,
         }))
         .sort((a, b) => b.modelCount - a.modelCount || a.name.localeCompare(b.name));
@@ -87,11 +86,11 @@ function buildStaticBrandCards(
 
 async function getBrandCards(type: BrandDirectoryType): Promise<BrandCard[]> {
     if (type === '2w') {
-        return buildStaticBrandCards(loadTwoWheelerCatalogVehicles(), '2w', '/bikes');
+        return buildStaticBrandCards(loadTwoWheelerCatalogVehicles(), '2w');
     }
 
     if (type === '3w') {
-        return buildStaticBrandCards(loadThreeWheelerCatalogVehicles(), '3w', '/autos');
+        return buildStaticBrandCards(loadThreeWheelerCatalogVehicles(), '3w');
     }
 
     const brands = await getAllBrandsWithStats();

@@ -33,10 +33,29 @@ interface BrandPageContentProps {
         priceMax: number | null;
         bodyTypes: string[];
     };
+    vehicleType?: '2w' | '3w' | '4w';
+    vehicleLabel?: string;
+    vehicleNoun?: string;
+    brandsHref?: string;
+    detailBasePath?: string;
+    brandLogoUrl?: string | null;
 }
 
-export function BrandPageContent({ brand, cars, brandInfo }: BrandPageContentProps) {
+export function BrandPageContent({
+    brand,
+    cars,
+    brandInfo,
+    vehicleLabel = 'Cars',
+    vehicleNoun = 'cars',
+    brandsHref = '/brands',
+    detailBasePath,
+    brandLogoUrl,
+}: BrandPageContentProps) {
     const [activeBodyType, setActiveBodyType] = useState('All');
+    const logoSrc = brandLogoUrl ?? getBrandLogo(brand);
+    const detailHref = (carId: string) => detailBasePath
+        ? `${detailBasePath.replace(/\/$/, '')}/${carId}`.replace(/^\/\//, '/')
+        : `/cars/${carId}`;
 
     // Get unique body types from actual car data
     const bodyTypes = useMemo(() => {
@@ -68,7 +87,7 @@ export function BrandPageContent({ brand, cars, brandInfo }: BrandPageContentPro
                     <nav className="flex items-center gap-1.5 text-sm text-muted-foreground mb-4">
                         <Link href="/" className="hover:text-foreground transition-colors">Home</Link>
                         <ChevronRight className="w-3.5 h-3.5" />
-                        <Link href="/brands" className="hover:text-foreground transition-colors">Brands</Link>
+                        <Link href={brandsHref} className="hover:text-foreground transition-colors">Brands</Link>
                         <ChevronRight className="w-3.5 h-3.5" />
                         <span className="text-foreground font-medium">{brand}</span>
                     </nav>
@@ -77,8 +96,8 @@ export function BrandPageContent({ brand, cars, brandInfo }: BrandPageContentPro
                         <div className="flex items-center gap-4">
                             {/* Brand Logo */}
                             <div className="w-16 h-16 flex items-center justify-center shrink-0">
-                                {getBrandLogo(brand) ? (
-                                    <Image src={getBrandLogo(brand)!} alt={brand} width={56} height={56} unoptimized className="object-contain" />
+                                {logoSrc ? (
+                                    <Image src={logoSrc} alt={brand} width={56} height={56} unoptimized className="object-contain" />
                                 ) : (
                                     <div className="w-14 h-14 rounded-xl bg-card border border-border flex items-center justify-center">
                                         <span className="text-primary text-2xl font-bold">{brand.charAt(0)}</span>
@@ -86,7 +105,7 @@ export function BrandPageContent({ brand, cars, brandInfo }: BrandPageContentPro
                                 )}
                             </div>
                             <div>
-                                <h1 className="text-2xl md:text-3xl font-bold">{brand} Cars</h1>
+                                <h1 className="text-2xl md:text-3xl font-bold">{brand} {vehicleLabel}</h1>
                                 <p className="text-muted-foreground text-sm mt-0.5">
                                     {brandInfo.modelCount} {brandInfo.modelCount === 1 ? 'Model' : 'Models'} available
                                 </p>
@@ -151,21 +170,21 @@ export function BrandPageContent({ brand, cars, brandInfo }: BrandPageContentPro
                 <div className="flex items-center justify-between mb-6">
                     <p className="text-sm text-muted-foreground">
                         Showing <span className="font-semibold text-foreground">{filteredCars.length}</span>
-                        {' '}{brand} {activeBodyType !== 'All' ? activeBodyType + ' ' : ''}cars
+                        {' '}{brand} {activeBodyType !== 'All' ? activeBodyType + ' ' : ''}{vehicleNoun}
                     </p>
                 </div>
 
                 {filteredCars.length > 0 ? (
                     <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
                         {filteredCars.map((car) => (
-                            <CarCard key={car.id} car={car} light />
+                            <CarCard key={car.id} car={car} light detailBasePath={detailBasePath} />
                         ))}
                     </div>
                 ) : (
                     <div className="text-center py-16">
                         <CarIcon className="w-12 h-12 text-muted-foreground mx-auto mb-3" />
                         <p className="text-muted-foreground">
-                            No {activeBodyType} models found for {brand}.
+                            No {activeBodyType} {vehicleNoun} found for {brand}.
                         </p>
                     </div>
                 )}
@@ -189,7 +208,7 @@ export function BrandPageContent({ brand, cars, brandInfo }: BrandPageContentPro
                                                 <div key={car.id}>
                                                     <div className="flex items-center justify-between mb-1.5">
                                                         <Link
-                                                            href={`/cars/${car.id}`}
+                                                            href={detailHref(car.id)}
                                                             className="text-sm font-semibold hover:text-primary transition-colors"
                                                         >
                                                             {car.model}
