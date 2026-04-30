@@ -40,6 +40,7 @@ export type OptionalEnvKey =
     | 'NEXT_PUBLIC_ADMIN_EMAILS'
     | 'NEXT_PUBLIC_AUTO_APPROVE_REVIEWS'
     | 'NEXT_PUBLIC_CNAME_TARGET'
+    | 'NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY'
     | 'NEXT_PUBLIC_SITE_URL'
     | 'NEXT_PUBLIC_SUPPORT_WHATSAPP'
     | 'NEXT_PUBLIC_USE_SUBDOMAIN'
@@ -93,6 +94,9 @@ const placeholderFragments = [
 ]
 
 function rawEnv(key: EnvKey): string | undefined {
+    if (key === 'NEXT_PUBLIC_SUPABASE_ANON_KEY') {
+        return process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ?? process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY
+    }
     return process.env[key]
 }
 
@@ -137,6 +141,7 @@ export function validateRequiredEnv(): { missing: string[]; placeholder: string[
 
 export function assertProductionEnv(): void {
     if (
+        typeof window !== 'undefined' ||
         process.env.NODE_ENV !== 'production' ||
         process.env.NEXT_PHASE === 'phase-production-build'
     ) {

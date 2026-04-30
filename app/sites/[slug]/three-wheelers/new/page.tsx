@@ -129,7 +129,7 @@ export default async function NewThreeWheelersPage({ params, searchParams }: Pro
   try {
     const supabase = createClient(
       process.env.NEXT_PUBLIC_SUPABASE_URL!,
-      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ?? process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY ?? ''
     )
     const { data } = await supabase
       .from('dealer_brands')
