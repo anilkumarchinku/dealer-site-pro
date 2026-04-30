@@ -34,6 +34,13 @@ import { formatPriceInLakhs } from '@/lib/utils/car-utils';
 import { getBrandLogo } from '@/lib/data/brand-logos';
 import { getContrastText } from '@/lib/utils/color-contrast';
 import { getVehicleImageUrls, brandNameToId } from '@/lib/utils/brand-model-images';
+import {
+    buildFallbackDetailedInfo,
+    buildDefaultKeyFeatures,
+    formatMileageOrRange,
+    isMeaningfulSpec,
+    mergeDetailedInfoWithFallback,
+} from '@/lib/utils/vehicle-detail-fallbacks';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 interface Props {
@@ -128,57 +135,21 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
             if (!open || !car) return;
             setLoading(true);
             try {
-                let info = await getDetailedCarInfo(car.make, car.model, car.vehicleCategory);
-                
-                // Fallback: use car.variants (populated from all_variants in twoWheelersToCars)
-                if (!info || info.length === 0) {
-                    if (car.variants && car.variants.length > 0) {
-                        // Use the full variant list from enrichment data
-                        info = car.variants.map(v => ({
-                            make: car.make,
-                            model: car.model,
-                            variant_name: v.name,
-                            ex_showroom_price_min_inr: v.price || 0,
-                            fuel_type: car.engine?.type || v.fuelType || 'Petrol',
-                            transmission: v.transmission || car.transmission?.type || 'Manual',
-                            engine_displacement_cc: car.engine?.displacement || 0,
-                            power_bhp: parseInt(car.engine?.power) || 0,
-                            torque_nm: parseInt(car.engine?.torque) || 0,
-                            mileage_kmpl_or_ev_range: String(car.performance?.fuelEfficiency || car.performance?.range || ''),
-                            seating_capacity: car.dimensions?.seatingCapacity || 2,
-                            key_features: car.features?.keyFeatures?.join(', ') || '',
-                            safety_features: car.features?.safetyFeatures?.join(', ') || '',
-                            image_urls: car.colors?.map(c => ({ value: c.hex })) || [],
-                            launch_year: car.year
-                        }));
-                    } else {
-                        // Last resort: single entry from the car's own spec data
-                        info = [{
-                            make: car.make,
-                            model: car.model,
-                            variant_name: car.variant || 'Standard',
-                            ex_showroom_price_min_inr: car.pricing.exShowroom.min || 0,
-                            fuel_type: car.engine?.type || 'Petrol',
-                            transmission: car.transmission?.type || 'Manual',
-                            engine_displacement_cc: car.engine?.displacement || 0,
-                            power_bhp: parseInt(car.engine?.power) || 0,
-                            torque_nm: parseInt(car.engine?.torque) || 0,
-                            mileage_kmpl_or_ev_range: String(car.performance?.fuelEfficiency || car.performance?.range || ''),
-                            seating_capacity: car.dimensions?.seatingCapacity || 2,
-                            key_features: car.features?.keyFeatures?.join(', ') || '',
-                            safety_features: car.features?.safetyFeatures?.join(', ') || '',
-                            image_urls: car.colors?.map(c => ({ value: c.hex })) || [],
-                            launch_year: car.year
-                        }];
-                    }
-                }
+                const info = mergeDetailedInfoWithFallback(
+                    await getDetailedCarInfo(car.make, car.model, car.vehicleCategory),
+                    car
+                );
 
                 if (isMounted) {
                     setDetailedInfo(info);
                     setSelVariant(info[0] ?? null);
                 }
             } catch (e) {
-                // Handle error
+                if (isMounted) {
+                    const fallback = buildFallbackDetailedInfo(car);
+                    setDetailedInfo(fallback);
+                    setSelVariant(fallback[0] ?? null);
+                }
             } finally {
                 if (isMounted) setLoading(false);
             }
@@ -214,6 +185,7 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
     // Features merged
     const match = detailedInfo.find(v => v.variant_name?.toLowerCase().includes(car.variant?.toLowerCase())) ?? detailedInfo[0];
     const keyFeatures = [...(car.features?.keyFeatures ?? []), ...parseKeyFeatures(match?.key_features)].filter((v, i, a) => a.indexOf(v) === i);
+    const displayKeyFeatures = keyFeatures.length > 0 ? keyFeatures : buildDefaultKeyFeatures(car);
     const safetyFeat = [...(car.features?.safetyFeatures ?? []), ...parseSafetyFeatures(match?.safety_features)].filter((v, i, a) => a.indexOf(v) === i);
     const comfortFeat = car.features?.comfortFeatures ?? [];
     const techFeat = car.features?.techFeatures ?? [];
@@ -328,23 +300,6 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
                                         <div className="w-4 h-4 border-2 border-gray-200 border-t-gray-500 rounded-full animate-spin" />
                                         Loading variants…
                                     </div>
-                                ) : detailedInfo.length === 0 ? (
-                                    <div className="text-center py-10 text-gray-600 text-sm">
-                                        No variant data available for this model.
-                                        {car.variants && car.variants.length > 0 && (
-                                            <div className="mt-4 space-y-2 text-left">
-                                                {car.variants.map(v => (
-                                                    <div key={v.id} className="flex items-center justify-between p-3 border border-gray-200 rounded-xl">
-                                                        <div>
-                                                            <p className="font-semibold text-gray-900 text-sm">{v.name}</p>
-                                                            <p className="text-xs text-gray-600">{v.fuelType} · {v.transmission}</p>
-                                                        </div>
-                                                        <p className="font-bold text-sm" style={{ color: brandColor }}>{fmtL(v.price)}</p>
-                                                    </div>
-                                                ))}
-                                            </div>
-                                        )}
-                                    </div>
                                 ) : (
                                     <>
                                         {/* Grouped by Fuel Type */}
@@ -443,7 +398,10 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
                                                         ['Engine', selVariant.engine_displacement_cc ? `${selVariant.engine_displacement_cc} cc` : selVariant.fuel_type === 'Electric' ? 'Electric' : null],
                                                         ['Power', selVariant.power_bhp ? `${selVariant.power_bhp} bhp` : null],
                                                         ['Torque', selVariant.torque_nm ? `${selVariant.torque_nm} Nm` : null],
-                                                        ['Mileage', selVariant.mileage_kmpl_or_ev_range ? String(selVariant.mileage_kmpl_or_ev_range) : selVariant.mileage_kmpl ? `${selVariant.mileage_kmpl} km/l` : null],
+                                                        ['Mileage', formatMileageOrRange(selVariant.mileage_kmpl_or_ev_range || selVariant.mileage_kmpl, {
+                                                            isElectric: /electric/i.test(selVariant.fuel_type),
+                                                            fallbackTopSpeed: car.performance?.topSpeed,
+                                                        })],
                                                         ['Seating', selVariant.seating_capacity ? `${selVariant.seating_capacity} seats` : null],
                                                         ['Boot', selVariant.boot_space_l ? `${selVariant.boot_space_l} L` : null],
                                                         ['Ground', selVariant.ground_clearance_mm ? `${selVariant.ground_clearance_mm} mm` : null],
@@ -494,8 +452,8 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
                                     <div className="grid grid-cols-3 gap-2">
                                         <SpecCard label="Fuel Type" value={car.engine?.type} />
                                         <SpecCard label="Displacement" value={car.engine?.displacement ? `${car.engine.displacement} cc` : null} />
-                                        <SpecCard label="Power" value={car.engine?.power} />
-                                        <SpecCard label="Torque" value={car.engine?.torque} />
+                                        <SpecCard label="Power" value={isMeaningfulSpec(car.engine?.power) ? car.engine.power : selVariant?.power_bhp ? `${selVariant.power_bhp} bhp` : null} />
+                                        <SpecCard label="Torque" value={isMeaningfulSpec(car.engine?.torque) ? car.engine.torque : selVariant?.torque_nm ? `${selVariant.torque_nm} Nm` : null} />
                                         <SpecCard label="Cylinders" value={car.engine?.cylinders ? String(car.engine.cylinders) : null} />
                                         <SpecCard label="Battery" value={car.engine?.batteryCapacity ? `${car.engine.batteryCapacity} kWh` : null} />
                                         <SpecCard label="Transmission" value={car.transmission?.type} />
@@ -510,9 +468,10 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
                                                     : null
                                               } />
                                             : <SpecCard label="Mileage" value={
-                                                car.performance?.fuelEfficiency ? `${car.performance.fuelEfficiency} km/l` :
-                                                selVariant?.mileage_kmpl ? `${selVariant.mileage_kmpl} km/l` :
-                                                selVariant?.mileage_kmpl_or_ev_range ? `${selVariant.mileage_kmpl_or_ev_range} km/l` : null
+                                                formatMileageOrRange(
+                                                    car.performance?.fuelEfficiency || selVariant?.mileage_kmpl || selVariant?.mileage_kmpl_or_ev_range,
+                                                    { fallbackTopSpeed: car.performance?.topSpeed }
+                                                )
                                               } />
                                         }
                                         <SpecCard label="Top Speed" value={car.performance?.topSpeed ? `${car.performance.topSpeed} km/h` : null} />
@@ -569,10 +528,10 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
 
                             {/* ── FEATURES ─────────────────────────────────── */}
                             <TabsContent value="features" className="mt-4 space-y-5">
-                                {keyFeatures.length > 0 && (
+                                {displayKeyFeatures.length > 0 && (
                                     <div className="space-y-2">
                                         <SectionHeading icon={<BadgeCheck className="w-3 h-3" />} label="Key Features" />
-                                        <div className="flex flex-wrap gap-1.5">{keyFeatures.map((f, i) => <Pill key={i} text={f} color="blue" />)}</div>
+                                        <div className="flex flex-wrap gap-1.5">{displayKeyFeatures.map((f, i) => <Pill key={i} text={f} color="blue" />)}</div>
                                     </div>
                                 )}
                                 {safetyFeat.length > 0 && (
@@ -611,7 +570,7 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
                                         </div>
                                     </>
                                 )}
-                                {!keyFeatures.length && !safetyFeat.length && !comfortFeat.length && !techFeat.length && !extFeat.length && (
+                                {!displayKeyFeatures.length && !safetyFeat.length && !comfortFeat.length && !techFeat.length && !extFeat.length && (
                                     <div className="flex flex-col items-center justify-center py-14 gap-3">
                                         <div className="w-14 h-14 rounded-2xl bg-gray-50 border border-gray-100 flex items-center justify-center">
                                             <BadgeCheck className="w-7 h-7 text-gray-300" />

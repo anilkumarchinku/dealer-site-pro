@@ -96,6 +96,42 @@ type TwoWheelerBrandData = {
     brand?: string
     vehicles?: TwoWheelerVehicleInfo[]
 }
+type ThreeWheelerVehicleInfo = {
+    model?: string
+    variant_name?: string
+    ex_showroom_price?: string | number
+    price?: string | number
+    mileage?: string | number
+    engine_details?: {
+        displacement?: string | number
+        max_power?: string | number
+        torque?: string | number
+        motor_type?: string
+    }
+    payload_features?: {
+        gross_vehicle_weight?: string
+        payload_capacity?: string
+    }
+    technical_specifications?: {
+        fuel_type?: string
+        transmission_type?: string
+        battery_capacity?: string
+        range?: string
+        top_speed?: string
+        seating_capacity?: string
+        body_type?: string
+        wheelbase?: string
+        [key: string]: string | undefined
+    }
+    dimensions?: Record<string, string | undefined>
+    vehicle_category?: string
+    features?: string[]
+    description?: string
+}
+type ThreeWheelerBrandData = {
+    brand?: string
+    vehicles?: ThreeWheelerVehicleInfo[]
+}
 
 function isRecord(value: unknown): value is Record<string, unknown> {
     return !!value && typeof value === 'object' && !Array.isArray(value)
@@ -111,6 +147,58 @@ function isImageUrlEntry(value: unknown): value is ImageUrlEntry {
 
 let carInfoCache: CarInfoData | null = null;
 const brandFileCache: Record<string, BrandFileVariant[]> = {};
+
+function parseVehicleInfoNumber(value: unknown): number {
+    if (typeof value === 'number') return Number.isFinite(value) ? value : 0;
+    const match = String(value ?? '').match(/([\d.]+)/);
+    return match ? parseFloat(match[1]) || 0 : 0;
+}
+
+function parseVehicleInfoPower(value: unknown): number {
+    const raw = String(value ?? '');
+    const number = parseVehicleInfoNumber(raw);
+    if (!number) return 0;
+    return /kw/i.test(raw) ? Math.round(number * 1.34102 * 10) / 10 : number;
+}
+
+function parseVehicleInfoPrice(value: unknown): number {
+    if (typeof value === 'number') return value;
+    const raw = String(value ?? '').replace(/[₹,\s]/g, '');
+    const lakh = raw.match(/^([\d.]+)lakh$/i);
+    if (lakh) return Math.round(parseFloat(lakh[1]) * 100000);
+    const crore = raw.match(/^([\d.]+)crore$/i);
+    if (crore) return Math.round(parseFloat(crore[1]) * 10000000);
+    return parseInt(raw.replace(/[^\d]/g, ''), 10) || 0;
+}
+
+function parsePassengerCount(value: unknown): number {
+    const raw = String(value ?? '');
+    const passengerMatch = raw.match(/(\d+)\s*(?:passenger|pax)/i);
+    if (passengerMatch) return parseInt(passengerMatch[1], 10);
+    const driverPlusMatch = raw.match(/driver\s*\+\s*(\d+)/i);
+    if (driverPlusMatch) return parseInt(driverPlusMatch[1], 10) + 1;
+    return parseVehicleInfoNumber(raw);
+}
+
+function deriveThreeWheelerModelName(vehicle: ThreeWheelerVehicleInfo): string {
+    return vehicle.model ?? vehicle.variant_name?.split('/')[0].trim() ?? 'Unknown';
+}
+
+function buildThreeWheelerFeatureString(vehicle: ThreeWheelerVehicleInfo): string {
+    const specs = vehicle.technical_specifications ?? {};
+    const payload = vehicle.payload_features ?? {};
+    return [
+        ...(vehicle.features ?? []),
+        vehicle.vehicle_category ? `${vehicle.vehicle_category} category` : '',
+        specs.fuel_type ? `${specs.fuel_type} powertrain` : '',
+        specs.transmission_type ? `${specs.transmission_type} transmission` : '',
+        specs.top_speed ? `${specs.top_speed} top speed` : '',
+        specs.seating_capacity ? `${specs.seating_capacity}` : '',
+        payload.payload_capacity ? `${payload.payload_capacity} payload` : '',
+        payload.gross_vehicle_weight ? `${payload.gross_vehicle_weight} GVW` : '',
+        specs.wheelbase ? `${specs.wheelbase} wheelbase` : '',
+    ].filter(Boolean).join(', ');
+}
 
 /** Load and flatten all variants from a brand-specific JSON file (e.g. /data/tata.json).
  *  These files have CardDekho image_urls that carInfo.json lacks. */
@@ -246,6 +334,57 @@ export async function getDetailedCarInfo(
             }
         } catch (e) {
             console.error('Failed to fetch 2w data in getDetailedCarInfo:', e);
+        }
+        return [];
+    }
+
+    if (vehicleCategory === '3w') {
+        try {
+            const { brandNameToId } = await import('./brand-model-images');
+            const brandId = brandNameToId(make, '3w');
+            const response = await fetch(`/data/3w/${brandId}.json`);
+            if (response.ok) {
+                const data = await response.json() as ThreeWheelerBrandData;
+                if (data && Array.isArray(data.vehicles)) {
+                    const normalizedSearchModel = model.toLowerCase().trim();
+                    const matchingVehicles = data.vehicles.filter((vehicle) => {
+                        const modelName = deriveThreeWheelerModelName(vehicle).toLowerCase().trim();
+                        return modelName === normalizedSearchModel ||
+                            modelName.includes(normalizedSearchModel) ||
+                            normalizedSearchModel.includes(modelName);
+                    });
+
+                    return matchingVehicles.map((vehicle) => {
+                        const specs = vehicle.technical_specifications ?? {};
+                        const isEV = /electric/i.test(specs.fuel_type ?? vehicle.vehicle_category ?? '');
+                        const mileageOrRange = isEV
+                            ? (specs.range || vehicle.mileage || '')
+                            : (vehicle.mileage || specs.range || '');
+
+                        return {
+                            make: data.brand || make,
+                            model: deriveThreeWheelerModelName(vehicle),
+                            variant_name: vehicle.variant_name || deriveThreeWheelerModelName(vehicle),
+                            ex_showroom_price_min_inr: parseVehicleInfoPrice(vehicle.ex_showroom_price ?? vehicle.price),
+                            fuel_type: isEV ? 'Electric' : (specs.fuel_type || 'Petrol'),
+                            transmission: specs.transmission_type || 'Manual',
+                            engine_displacement_cc: parseVehicleInfoNumber(vehicle.engine_details?.displacement),
+                            power_bhp: parseVehicleInfoPower(vehicle.engine_details?.max_power),
+                            torque_nm: parseVehicleInfoNumber(vehicle.engine_details?.torque),
+                            mileage_kmpl_or_ev_range: String(mileageOrRange || '').trim(),
+                            seating_capacity: parsePassengerCount(specs.seating_capacity),
+                            boot_space_l: parseVehicleInfoNumber(vehicle.payload_features?.payload_capacity) || undefined,
+                            ground_clearance_mm: parseVehicleInfoNumber(vehicle.dimensions?.ground_clearance) || undefined,
+                            key_features: buildThreeWheelerFeatureString(vehicle),
+                            safety_features: '',
+                            image_urls: [],
+                            launch_year: new Date().getFullYear(),
+                        };
+                    });
+                }
+            }
+        } catch (e) {
+            console.error('Failed to fetch 3w data in getDetailedCarInfo:', e);
         }
         return [];
     }

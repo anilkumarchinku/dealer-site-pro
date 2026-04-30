@@ -40,6 +40,13 @@ import { getBrandLogo } from '@/lib/data/brand-logos';
 import { getContrastText, getReadableAccent } from '@/lib/utils/color-contrast';
 import { validateLeadForm, type ValidationErrors } from '@/lib/validations/client';
 import { getVehicleImageUrls, brandNameToId } from '@/lib/utils/brand-model-images';
+import {
+    buildDefaultKeyFeatures,
+    buildFallbackDetailedInfo,
+    formatMileageOrRange,
+    isMeaningfulSpec,
+    mergeDetailedInfoWithFallback,
+} from '@/lib/utils/vehicle-detail-fallbacks';
 
 interface EnquiryModalProps {
     car: Car | null;
@@ -72,30 +79,11 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
         if (open && car) {
             getDetailedCarInfo(car.make, car.model, car.vehicleCategory)
                 .then((info) => {
-                    // Fallback for missing/corrupted JSON data: Use the grid's rigorous data!
-                    if (!info || info.length === 0) {
-                        info = [{
-                            make: car.make,
-                            model: car.model,
-                            variant_name: car.variant || 'Standard',
-                            ex_showroom_price_min_inr: car.pricing.exShowroom.min || 0,
-                            fuel_type: car.engine?.type || 'Petrol',
-                            transmission: car.transmission?.type || 'Manual',
-                            engine_displacement_cc: car.engine?.displacement || 0,
-                            power_bhp: parseInt(car.engine?.power) || 0,
-                            torque_nm: parseInt(car.engine?.torque) || 0,
-                            mileage_kmpl_or_ev_range: String(car.performance?.fuelEfficiency || car.performance?.range || ''),
-                            seating_capacity: car.dimensions?.seatingCapacity || 2,
-                            key_features: car.features?.keyFeatures?.join(', ') || '',
-                            safety_features: car.features?.safetyFeatures?.join(', ') || '',
-                            image_urls: car.colors?.map(c => ({ value: c.hex })) || [],
-                            launch_year: car.year
-                        }];
-                    }
-                    setDetailedInfo(info);
+                    setDetailedInfo(mergeDetailedInfoWithFallback(info, car));
                 })
                 .catch((error) => {
                     console.error('Error fetching detailed car info:', error);
+                    setDetailedInfo(buildFallbackDetailedInfo(car));
                 });
         }
         return;
@@ -164,13 +152,22 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
     ) || detailedInfo[0];
 
     // Aggregate specifications across all variants
+    const powerValues = detailedInfo.map(v => v.power_bhp).filter((value) => value > 0);
+    const minPower = powerValues.length ? Math.min(...powerValues) : null;
+    const maxPower = powerValues.length ? Math.max(...powerValues) : null;
+    const isElectric = /electric/i.test(detailedVariant?.fuel_type || car.engine?.type || '');
+    const mileageDisplay = formatMileageOrRange(
+        detailedVariant?.mileage_kmpl_or_ev_range || detailedVariant?.mileage_kmpl ||
+            (isElectric ? car.performance?.range : car.performance?.fuelEfficiency),
+        { isElectric, fallbackTopSpeed: car.performance?.topSpeed }
+    );
     const aggregatedSpecs = detailedInfo.length > 0 ? {
-        fuelTypes: [...new Set(detailedInfo.map(v => v.fuel_type).filter(Boolean))].join(' / '),
-        transmissions: [...new Set(detailedInfo.map(v => v.transmission).filter(Boolean))].map(t => t === 'Automatic' ? 'Auto' : t).join(' / '),
-        powerRange: detailedInfo.length > 1
-            ? `${Math.min(...detailedInfo.map(v => v.power_bhp))} - ${Math.max(...detailedInfo.map(v => v.power_bhp))} bhp`
-            : detailedVariant?.power_bhp ? `${detailedVariant.power_bhp} bhp` : null,
-        mileages: detailedVariant?.mileage_kmpl_or_ev_range || null,
+        fuelTypes: [...new Set(detailedInfo.map(v => v.fuel_type).filter(isMeaningfulSpec))].join(' / '),
+        transmissions: [...new Set(detailedInfo.map(v => v.transmission).filter(isMeaningfulSpec))].map(t => t === 'Automatic' ? 'Auto' : t).join(' / '),
+        powerRange: minPower && maxPower
+            ? minPower === maxPower ? `${minPower} bhp` : `${minPower} - ${maxPower} bhp`
+            : isMeaningfulSpec(car.engine.power) ? car.engine.power : null,
+        mileages: mileageDisplay,
     } : null;
 
     // Parse features from detailed info
@@ -181,11 +178,56 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
         ...(car.features?.keyFeatures || []),
         ...additionalKeyFeatures
     ].filter((v, i, a) => a.indexOf(v) === i); // Remove duplicates
+    const displayKeyFeatures = allKeyFeatures.length > 0 ? allKeyFeatures : buildDefaultKeyFeatures(car);
 
-    const priceRange = formatPriceInLakhs(car.pricing.exShowroom.min);
+    const priceRange = car.pricing.exShowroom.min
+        ? formatPriceInLakhs(car.pricing.exShowroom.min)
+        : car.price || 'Price on request';
     const maxPrice = formatPriceInLakhs(car.pricing.exShowroom.max);
+    const showMaxPrice = Boolean(
+        car.pricing.exShowroom.min &&
+        car.pricing.exShowroom.max &&
+        car.pricing.exShowroom.min !== car.pricing.exShowroom.max
+    );
     const brandAccent = getReadableAccent(brandColor);
     const brandContrast = getContrastText(brandColor);
+    const fuelDisplay = aggregatedSpecs?.fuelTypes || detailedVariant?.fuel_type || car.engine.type || 'Fuel type available on request';
+    const transmissionDisplay = aggregatedSpecs?.transmissions || detailedVariant?.transmission || car.transmission.type || 'Transmission details available';
+    const seatingDisplay = detailedVariant?.seating_capacity || car.dimensions?.seatingCapacity ||
+        (car.vehicleCategory === '2w' ? 2 : car.vehicleCategory === '3w' ? 4 : 5);
+    const engineDisplacement = detailedVariant?.engine_displacement_cc || car.engine.displacement;
+    const rangeOrMileageLabel = isElectric ? 'Range' : mileageDisplay.includes('top speed') ? 'Top Speed' : 'Mileage';
+    const additionalInfoItems = [
+        {
+            label: 'Power',
+            value: aggregatedSpecs?.powerRange,
+            icon: <Settings className="w-5 h-5 mx-auto mb-1 text-gray-600" />,
+        },
+        {
+            label: car.vehicleCategory === '3w' ? 'Payload' : 'Boot Space',
+            value: car.dimensions?.bootSpace
+                ? `${car.dimensions.bootSpace} ${car.vehicleCategory === '3w' ? 'kg' : 'L'}`
+                : detailedVariant?.boot_space_l
+                    ? `${detailedVariant.boot_space_l} L`
+                    : null,
+            icon: <Package className="w-5 h-5 mx-auto mb-1 text-gray-600" />,
+        },
+        {
+            label: 'Ground Clearance',
+            value: detailedVariant?.ground_clearance_mm ? `${detailedVariant.ground_clearance_mm}mm` : null,
+            icon: <Package className="w-5 h-5 mx-auto mb-1 text-gray-600" />,
+        },
+        {
+            label: 'Body Type',
+            value: car.bodyType,
+            icon: <Package className="w-5 h-5 mx-auto mb-1 text-gray-600" />,
+        },
+        {
+            label: 'Year',
+            value: car.year,
+            icon: <Calendar className="w-5 h-5 mx-auto mb-1 text-gray-600" />,
+        },
+    ].filter((item) => isMeaningfulSpec(item.value));
 
     return (
         <Dialog open={open} onOpenChange={onOpenChange}>
@@ -241,7 +283,7 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
                                 <p className="text-xs text-gray-600 uppercase tracking-wide mb-1">Price Range</p>
                                 <div className="flex items-baseline gap-2">
                                     <span className="text-3xl font-bold text-gray-900">{priceRange}</span>
-                                    {car.pricing.exShowroom.min !== car.pricing.exShowroom.max && (
+                                    {showMaxPrice && (
                                         <span className="text-lg text-gray-600">- {maxPrice}</span>
                                     )}
                                 </div>
@@ -269,11 +311,11 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
                                     <div>
                                         <p className="text-xs text-gray-600 uppercase tracking-wide">Fuel Type</p>
                                         <p className="text-sm font-semibold text-gray-900">
-                                            {aggregatedSpecs?.fuelTypes || detailedVariant?.fuel_type || car.engine.type}
+                                            {fuelDisplay}
                                         </p>
-                                        {(detailedVariant?.engine_displacement_cc || car.engine.displacement) && (
+                                        {engineDisplacement && (
                                             <p className="text-xs text-gray-600">
-                                                {detailedVariant?.engine_displacement_cc || car.engine.displacement}cc
+                                                {engineDisplacement}cc
                                             </p>
                                         )}
                                     </div>
@@ -287,7 +329,7 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
                                     <div>
                                         <p className="text-xs text-gray-600 uppercase tracking-wide">Transmission</p>
                                         <p className="text-sm font-semibold text-gray-900">
-                                            {aggregatedSpecs?.transmissions || detailedVariant?.transmission || car.transmission.type}
+                                            {transmissionDisplay}
                                         </p>
                                     </div>
                                 </div>
@@ -300,80 +342,45 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
                                     <div>
                                         <p className="text-xs text-gray-600 uppercase tracking-wide">Seating</p>
                                         <p className="text-sm font-semibold text-gray-900">
-                                            {detailedVariant?.seating_capacity || car.dimensions?.seatingCapacity || ''} Seats
+                                            {seatingDisplay} {seatingDisplay === 1 ? 'Seat' : 'Seats'}
                                         </p>
                                     </div>
                                 </div>
 
                                 {/* Mileage */}
-                                {(aggregatedSpecs?.mileages || detailedVariant?.mileage_kmpl_or_ev_range || detailedVariant?.mileage_kmpl || car.performance?.fuelEfficiency) && (
-                                    <div className="flex items-start gap-3 p-3 bg-white border border-gray-100 rounded-lg">
-                                        <div className="w-10 h-10 rounded-lg bg-white shadow-sm flex items-center justify-center flex-shrink-0">
-                                            <Zap className="w-5 h-5 text-amber-600" />
-                                        </div>
-                                        <div>
-                                            <p className="text-xs text-gray-600 uppercase tracking-wide">Mileage</p>
-                                            <p className="text-sm font-semibold text-gray-900">
-                                                    {aggregatedSpecs?.mileages ? `${aggregatedSpecs.mileages} km/l` :
-                                                    detailedVariant?.mileage_kmpl_or_ev_range ||
-                                                    (detailedVariant?.mileage_kmpl ? `${detailedVariant.mileage_kmpl} km/l` : null) ||
-                                                    (car.performance?.fuelEfficiency ? `${car.performance.fuelEfficiency} km/l` : '')}
-                                            </p>
-                                        </div>
+                                <div className="flex items-start gap-3 p-3 bg-white border border-gray-100 rounded-lg">
+                                    <div className="w-10 h-10 rounded-lg bg-white shadow-sm flex items-center justify-center flex-shrink-0">
+                                        <Zap className="w-5 h-5 text-amber-600" />
                                     </div>
-                                )}
+                                    <div>
+                                        <p className="text-xs text-gray-600 uppercase tracking-wide">{rangeOrMileageLabel}</p>
+                                        <p className="text-sm font-semibold text-gray-900">
+                                            {aggregatedSpecs?.mileages || 'Available on request'}
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
                         {/* Additional Info */}
-                        {(detailedVariant?.power_bhp || detailedVariant?.ground_clearance_mm || detailedVariant?.boot_space_l || car.engine.power !== 'TBD' || car.bodyType || car.year) && (
+                        {additionalInfoItems.length > 0 && (
                             <div className="grid grid-cols-3 gap-4 py-4 border-y">
-                                {(aggregatedSpecs?.powerRange || detailedVariant?.power_bhp || car.engine.power !== 'TBD') && (
-                                    <div className="text-center">
-                                        <Settings className="w-5 h-5 mx-auto mb-1 text-gray-600" />
-                                        <p className="text-xs text-gray-600">Power</p>
-                                        <p className="text-sm font-semibold text-gray-900">
-                                            {aggregatedSpecs?.powerRange || (detailedVariant?.power_bhp ? `${detailedVariant.power_bhp} bhp` : car.engine.power)}
-                                        </p>
+                                {additionalInfoItems.slice(0, 6).map((item) => (
+                                    <div key={item.label} className="text-center">
+                                        {item.icon}
+                                        <p className="text-xs text-gray-600">{item.label}</p>
+                                        <p className="text-sm font-semibold text-gray-900">{item.value}</p>
                                     </div>
-                                )}
-                                {detailedVariant?.ground_clearance_mm && (
-                                    <div className="text-center">
-                                        <Package className="w-5 h-5 mx-auto mb-1 text-gray-600" />
-                                        <p className="text-xs text-gray-600">Ground Clearance</p>
-                                        <p className="text-sm font-semibold text-gray-900">{detailedVariant.ground_clearance_mm}mm</p>
-                                    </div>
-                                )}
-                                {detailedVariant?.boot_space_l && (
-                                    <div className="text-center">
-                                        <Package className="w-5 h-5 mx-auto mb-1 text-gray-600" />
-                                        <p className="text-xs text-gray-600">Boot Space</p>
-                                        <p className="text-sm font-semibold text-gray-900">{detailedVariant.boot_space_l}L</p>
-                                    </div>
-                                )}
-                                {car.bodyType && (
-                                    <div className="text-center">
-                                        <Package className="w-5 h-5 mx-auto mb-1 text-gray-600" />
-                                        <p className="text-xs text-gray-600">Body Type</p>
-                                        <p className="text-sm font-semibold text-gray-900">{car.bodyType}</p>
-                                    </div>
-                                )}
-                                {car.year && (
-                                    <div className="text-center">
-                                        <Calendar className="w-5 h-5 mx-auto mb-1 text-gray-600" />
-                                        <p className="text-xs text-gray-600">Year</p>
-                                        <p className="text-sm font-semibold text-gray-900">{car.year}</p>
-                                    </div>
-                                )}
+                                ))}
                             </div>
                         )}
 
                         {/* Key Features */}
-                        {allKeyFeatures.length > 0 && (
+                        {displayKeyFeatures.length > 0 && (
                             <div>
                                 <h3 className="text-lg font-bold text-gray-900 mb-3">Key Features</h3>
                                 <div className="flex flex-wrap gap-2">
-                                    {allKeyFeatures.map((feature, idx) => (
+                                    {displayKeyFeatures.map((feature, idx) => (
                                         <Badge key={idx} variant="outline" className="text-xs px-3 py-1 bg-white dark:bg-white text-gray-700 dark:text-gray-700 border-gray-200 dark:border-gray-200">
                                             {feature}
                                         </Badge>
