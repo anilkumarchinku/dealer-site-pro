@@ -98,7 +98,7 @@ const nextConfig: NextConfig = {
                     "img-src 'self' data: blob: https://*.supabase.co https://*.cyepro.com https://lh3.googleusercontent.com https://images.unsplash.com https://storage.googleapis.com https://maps.googleapis.com https://*.cardekho.com https://*.aeplcdn.com https://*.bikedekho.com https://*.gaadi.com https://www.v3cars.com https://www.hyundai.com https://*.hyundai.com",
                     "font-src 'self' data:",
                     "connect-src 'self' https://*.supabase.co https://api.cyepro.com https://checkout.razorpay.com wss://*.supabase.co",
-                    "frame-src https://api.razorpay.com https://checkout.razorpay.com",
+                    "frame-src 'self' https://api.razorpay.com https://checkout.razorpay.com",
                     "media-src 'self' https://*.supabase.co",
                 ].join('; '),
             },
