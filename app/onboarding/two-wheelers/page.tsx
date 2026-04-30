@@ -7,6 +7,10 @@ import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { Sparkles, Building2, RefreshCw, ArrowRight, ArrowLeft, Bike } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { supabase, isSupabaseReady } from "@/lib/supabase";
+import {
+    getOnboardingAccountPrefill,
+    getOnboardingResetPrefill,
+} from "@/lib/onboarding/prefill";
 
 const DEALER_TYPES = [
     {
@@ -46,7 +50,7 @@ const colorStyles: Record<string, { border: string; bg: string; text: string; ba
 
 export default function TwoWheelerIndexPage() {
     const router = useRouter();
-    const { updateData, reset, setVehicleType } = useOnboardingStore();
+    const { data, updateData, reset, setVehicleType } = useOnboardingStore();
 
     // Guard: redirect already-completed users back to dashboard
     useEffect(() => {
@@ -55,18 +59,29 @@ export default function TwoWheelerIndexPage() {
             if (!user) return;
             supabase
                 .from('dealers')
-                .select('onboarding_complete')
+                .select('onboarding_complete, dealership_name, tagline, location, full_address, map_link, google_maps_url, years_in_business, phone, whatsapp, email, gstin, slug')
                 .eq('user_id', user.id)
                 .maybeSingle()
                 .then(({ data: dealer }) => {
-                    if (dealer?.onboarding_complete) router.replace('/dashboard');
+                    if (dealer?.onboarding_complete) {
+                        router.replace('/dashboard');
+                        return;
+                    }
+                    const prefill = getOnboardingAccountPrefill(data, {
+                        userEmail: user.email,
+                        metadata:  user.user_metadata,
+                        dealer,
+                    });
+                    if (Object.keys(prefill).length > 0) {
+                        updateData(prefill);
+                    }
                 });
         });
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const handleSelect = (category: "new" | "used" | "both") => {
-        reset();
+        reset(getOnboardingResetPrefill(data));
         setVehicleType('two-wheeler');
         if (category === "both") {
             updateData({ dealerCategory: "both", sellsNewCars: true, sellsUsedCars: true });

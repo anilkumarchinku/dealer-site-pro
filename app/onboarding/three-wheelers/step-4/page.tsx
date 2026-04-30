@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { ArrowLeft, ArrowRight, LayoutTemplate, Type, Globe } from "lucide-react";
 import { SocialLinksFields } from "@/components/onboarding/SocialLinksFields";
+import { getPrefilledTemplateConfig } from "@/lib/onboarding/prefill";
 import {
     getOptionalHttpUrlError,
     hasValidationErrors,
@@ -19,21 +20,14 @@ export default function ThreeWheelerStep4Page() {
     const router = useRouter();
     const { data, updateData, setStep } = useOnboardingStore();
 
-    const [config, setConfig] = useState({
-        heroTitle:     data.templateConfig?.heroTitle     || "",
-        heroSubtitle:  data.templateConfig?.heroSubtitle  || "",
-        heroCtaText:   data.templateConfig?.heroCtaText   || "View Our Vehicles",
-        featuresTitle: data.templateConfig?.featuresTitle || "Why Choose Us",
-        workingHours:  data.templateConfig?.workingHours  || "",
-        facebook:      data.templateConfig?.facebook      || "",
-        instagram:     data.templateConfig?.instagram     || "",
-        twitter:       data.templateConfig?.twitter       || "",
-        youtube:       data.templateConfig?.youtube       || "",
-        linkedin:      data.templateConfig?.linkedin      || "",
-    });
+    const [config, setConfig] = useState(() => getPrefilledTemplateConfig(data, "three-wheeler"));
     const [urlErrors, setUrlErrors] = useState<Record<string, string>>({});
 
     useEffect(() => { setStep(4); }, [setStep]);
+
+    useEffect(() => {
+        setConfig(getPrefilledTemplateConfig(data, "three-wheeler"));
+    }, [data]);
 
     const handleChange = (field: keyof typeof config, value: string) => {
         const newConfig = { ...config, [field]: value };

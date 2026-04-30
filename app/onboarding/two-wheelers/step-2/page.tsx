@@ -1,5 +1,5 @@
 "use client"
-import { useState, useEffect } from "react";
+import { useMemo, useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useOnboardingStore } from "@/lib/store/onboarding-store";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
@@ -31,18 +31,23 @@ export default function TwoWheelerStep2Page() {
     const isUsed = data.dealerCategory === 'used';
     const isBoth = data.dealerCategory === 'both';
 
-    const getDefaultServices = (): Service[] => {
+    const defaultServices = useMemo<Service[]>(() => {
         if (isBoth)  return ["new_car_sales", "used_car_sales", "service_maintenance", "financing", "trade_in"];
         if (isUsed)  return ["used_car_sales", "service_maintenance", "financing", "trade_in", "insurance"];
         return ["new_car_sales", "service_maintenance", "parts_accessories", "financing", "home_test_drives"];
-    };
+    }, [isBoth, isUsed]);
 
     const [selectedServices, setSelectedServices] = useState<Service[]>(
-        data.services?.length ? data.services : getDefaultServices()
+        data.services?.length ? data.services : defaultServices
     );
     const [error, setError] = useState("");
     const [cyeproKey, setCyeproKey] = useState(data.cyeproApiKey ?? "");
     const [showKey, setShowKey] = useState(false);
+
+    useEffect(() => {
+        setSelectedServices(data.services?.length ? data.services : defaultServices);
+        setCyeproKey(data.cyeproApiKey ?? "");
+    }, [data.services, data.cyeproApiKey, defaultServices]);
 
     const toggleService = (service: Service) => {
         setSelectedServices(prev =>

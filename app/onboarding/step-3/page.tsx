@@ -1,5 +1,5 @@
 "use client"
-import { useState, useEffect } from "react";
+import { useMemo, useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useOnboardingStore } from "@/lib/store/onboarding-store";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
@@ -34,7 +34,7 @@ export default function Step3Page() {
     const isBoth = data.dealerCategory === 'both';
 
     // Pre-select sensible defaults based on dealer type
-    const getDefaultServices = (): Service[] => {
+    const defaultServices = useMemo<Service[]>(() => {
         if (isBoth) {
             return [
                 "new_car_sales",
@@ -60,12 +60,16 @@ export default function Step3Page() {
             "parts_accessories",
             "trade_in",
         ];
-    };
+    }, [isBoth, isUsed]);
 
     const [selectedServices, setSelectedServices] = useState<Service[]>(
-        data.services?.length ? data.services : getDefaultServices()
+        data.services?.length ? data.services : defaultServices
     );
     const [error, setError] = useState("");
+
+    useEffect(() => {
+        setSelectedServices(data.services?.length ? data.services : defaultServices);
+    }, [data.services, defaultServices]);
 
     const toggleService = (service: Service) => {
         setSelectedServices(prev =>

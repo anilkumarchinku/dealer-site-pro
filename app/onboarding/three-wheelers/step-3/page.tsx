@@ -44,6 +44,9 @@ export default function ThreeWheelerStep3Page() {
     );
 
     useEffect(() => { setStep(3); }, [setStep]);
+    useEffect(() => {
+        setSelected((data.styleTemplate as StyleTemplate) || "luxury");
+    }, [data.styleTemplate]);
 
     const handleNext = () => {
         updateData({ styleTemplate: selected });

@@ -9,9 +9,9 @@ import { PhoneInput } from "@/components/ui/phone-input";
 import { ArrowRight, ArrowLeft, Loader2, CheckCircle, XCircle, Globe, Check, Search } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { BASE_DOMAIN, USE_SUBDOMAIN } from "@/lib/utils/domain";
+import { getOnboardingContactFormPrefill } from "@/lib/onboarding/prefill";
 import {
     formatOnboardingPhone,
-    toOnboardingPhoneInputValue,
     validateOnboardingContactStep,
 } from "@/lib/validations/onboarding";
 
@@ -45,20 +45,7 @@ export default function TwoWheelerStep1Page() {
     const isHybrid     = data.dealerCategory === 'both';
     const showBrands   = isNewDealer || isHybrid;
 
-    const [formData, setFormData] = useState({
-        dealershipName:  data.dealershipName  || "",
-        tagline:         data.tagline         || "",
-        location:        data.location        || "",
-        fullAddress:     data.fullAddress     || "",
-        mapLink:         data.mapLink         || "",
-        yearsInBusiness: data.yearsInBusiness?.toString() || "",
-        phone:           toOnboardingPhoneInputValue(data.phone || ""),
-        phoneCountryCode: "+91",
-        whatsapp:        toOnboardingPhoneInputValue(data.whatsapp || ""),
-        whatsappCountryCode: "+91",
-        email:           data.email           || "",
-        gstin:           data.gstin           || "",
-    });
+    const [formData, setFormData] = useState(() => getOnboardingContactFormPrefill(data));
 
     const [errors,       setErrors]       = useState<Record<string, string>>({});
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -74,6 +61,14 @@ export default function TwoWheelerStep1Page() {
     );
     const [brandError,  setBrandError]  = useState("");
     const [brandSearch, setBrandSearch] = useState("");
+
+    useEffect(() => {
+        const nextFormData = getOnboardingContactFormPrefill(data);
+        setFormData(nextFormData);
+        setSiteSlug(data.slug || (nextFormData.dealershipName ? toSlug(nextFormData.dealershipName) : ""));
+        setSlugEdited(Boolean(data.slug));
+        setSelectedBrands((data.brands as string[]) || []);
+    }, [data]);
 
     useEffect(() => {
         if (!slugEdited && formData.dealershipName) {

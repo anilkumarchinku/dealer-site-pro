@@ -9,6 +9,10 @@ import { Sparkles, Car, ArrowRight, Building2, RefreshCw } from "lucide-react";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { cn } from "@/lib/utils";
 import { supabase, isSupabaseReady } from "@/lib/supabase";
+import {
+    getOnboardingAccountPrefill,
+    getOnboardingResetPrefill,
+} from "@/lib/onboarding/prefill";
 
 // ── Vehicle category selector ─────────────────────────────────────────────
 const VEHICLE_CATEGORIES = [
@@ -364,7 +368,7 @@ const accentStyles: Record<string, { border: string; bg: string; text: string; b
 
 export default function OnboardingIndexPage() {
     const router = useRouter();
-    const { updateData, reset, setVehicleType } = useOnboardingStore();
+    const { data, updateData, reset, setVehicleType } = useOnboardingStore();
     const [vehicleCategory, setVehicleCategory] = useState<'car' | 'two-wheeler' | 'three-wheeler' | null>(null);
 
     // Guard: if the user already completed onboarding, send them to the dashboard.
@@ -376,12 +380,21 @@ export default function OnboardingIndexPage() {
             if (!user) return;
             supabase
                 .from('dealers')
-                .select('onboarding_complete')
+                .select('onboarding_complete, dealership_name, tagline, location, full_address, map_link, google_maps_url, years_in_business, phone, whatsapp, email, gstin, slug')
                 .eq('user_id', user.id)
                 .maybeSingle()
                 .then(({ data: dealer }) => {
                     if (dealer?.onboarding_complete) {
                         router.replace('/dashboard');
+                        return;
+                    }
+                    const prefill = getOnboardingAccountPrefill(data, {
+                        userEmail: user.email,
+                        metadata:  user.user_metadata,
+                        dealer,
+                    });
+                    if (Object.keys(prefill).length > 0) {
+                        updateData(prefill);
                     }
                 });
         });
@@ -389,7 +402,7 @@ export default function OnboardingIndexPage() {
     }, []);
 
     const handleVehicleCategory = (cat: 'car' | 'two-wheeler' | 'three-wheeler') => {
-        reset();
+        reset(getOnboardingResetPrefill(data));
         setVehicleType(cat);
         if (cat === 'two-wheeler') { router.push('/onboarding/two-wheelers'); return; }
         if (cat === 'three-wheeler') { router.push('/onboarding/three-wheelers'); return; }
@@ -397,7 +410,7 @@ export default function OnboardingIndexPage() {
     };
 
     const handleSelect = (category: "new" | "used" | "hybrid") => {
-        reset();
+        reset(getOnboardingResetPrefill(data));
         setVehicleType('car');
         if (category === "hybrid") {
             updateData({ dealerCategory: "both", sellsNewCars: true, sellsUsedCars: true });

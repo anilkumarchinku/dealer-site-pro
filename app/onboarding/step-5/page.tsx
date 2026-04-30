@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { ArrowLeft, ArrowRight, LayoutTemplate, Type, Globe } from "lucide-react";
 import { SocialLinksFields } from "@/components/onboarding/SocialLinksFields";
+import { getPrefilledTemplateConfig } from "@/lib/onboarding/prefill";
 import {
     getOptionalHttpUrlError,
     hasValidationErrors,
@@ -20,24 +21,17 @@ export default function Step5Page() {
     const { data, updateData, setStep } = useOnboardingStore();
 
     // Local state for form fields
-    const [config, setConfig] = useState({
-        heroTitle: data.templateConfig?.heroTitle || "",
-        heroSubtitle: data.templateConfig?.heroSubtitle || "",
-        heroCtaText: data.templateConfig?.heroCtaText || "View Inventory",
-        featuresTitle: data.templateConfig?.featuresTitle || "Why Choose Us",
-        workingHours: data.templateConfig?.workingHours || "",
-        facebook: data.templateConfig?.facebook || "",
-        instagram: data.templateConfig?.instagram || "",
-        twitter: data.templateConfig?.twitter || "",
-        youtube: data.templateConfig?.youtube || "",
-        linkedin: data.templateConfig?.linkedin || ""
-    });
+    const [config, setConfig] = useState(() => getPrefilledTemplateConfig(data, "car"));
     const [urlErrors, setUrlErrors] = useState<Record<string, string>>({});
 
     useEffect(() => {
         setStep(5);
         return;
     }, [setStep]);
+
+    useEffect(() => {
+        setConfig(getPrefilledTemplateConfig(data, "car"));
+    }, [data]);
 
     // Update store when config changes
     const handleChange = (field: keyof typeof config, value: string) => {

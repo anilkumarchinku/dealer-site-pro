@@ -34,7 +34,7 @@ interface OnboardingStore {
     setSellsFourWheelers:  (v: boolean) => void;
     setDealerId: (id: string) => void;
     setDealerSlug: (slug: string) => void;
-    reset: () => void;
+    reset: (prefill?: Partial<OnboardingData>) => void;
 
     // Computed
     isComplete: () => boolean;
@@ -82,6 +82,19 @@ const initialData: Partial<OnboardingData> = {
     },
 };
 
+const initialTemplateConfig: OnboardingData['templateConfig'] = {
+    heroTitle: '',
+    heroSubtitle: '',
+    heroCtaText: 'View Inventory',
+    featuresTitle: 'Why Choose Us',
+    facebook: '',
+    instagram: '',
+    twitter: '',
+    youtube: '',
+    linkedin: '',
+    workingHours: '',
+};
+
 export const useOnboardingStore = create<OnboardingStore>()(
     persist(
         (set, get) => ({
@@ -118,7 +131,23 @@ export const useOnboardingStore = create<OnboardingStore>()(
 
             setDealerSlug: (slug) => set({ dealerSlug: slug }),
 
-            reset: () => set({ currentStep: 1, data: initialData, vehicleType: 'car', sellsTwoWheelers: false, sellsThreeWheelers: false, sellsFourWheelers: false, dealerId: null, dealerSlug: null }),
+            reset: (prefill = {}) => set({
+                currentStep: 1,
+                data: {
+                    ...initialData,
+                    ...prefill,
+                    templateConfig: {
+                        ...initialTemplateConfig,
+                        ...prefill.templateConfig,
+                    },
+                },
+                vehicleType: 'car',
+                sellsTwoWheelers: false,
+                sellsThreeWheelers: false,
+                sellsFourWheelers: false,
+                dealerId: null,
+                dealerSlug: null,
+            }),
 
             isComplete: () => {
                 const { data } = get();

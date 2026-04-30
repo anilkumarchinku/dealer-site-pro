@@ -12,8 +12,11 @@ import { cn } from "@/lib/utils";
 import { BASE_DOMAIN, USE_SUBDOMAIN } from "@/lib/utils/domain";
 import type { Brand } from "@/lib/types";
 import {
+    getOnboardingBranchPrefill,
+    getOnboardingContactFormPrefill,
+} from "@/lib/onboarding/prefill";
+import {
     formatOnboardingPhone,
-    toOnboardingPhoneInputValue,
     validateOnboardingContactStep,
 } from "@/lib/validations/onboarding";
 
@@ -70,20 +73,7 @@ export default function Step1Page() {
     const isHybrid    = data.dealerCategory === 'both';
     const showBrandPicker = isFirstHand || isHybrid;
 
-    const [formData, setFormData] = useState({
-        dealershipName:  data.dealershipName || "",
-        tagline:         data.tagline || "",
-        location:        data.location || "",
-        fullAddress:     data.fullAddress || "",
-        mapLink:         data.mapLink || "",
-        yearsInBusiness: data.yearsInBusiness?.toString() || "",
-        phone:           toOnboardingPhoneInputValue(data.phone || ""),
-        phoneCountryCode: "+91",
-        whatsapp:        toOnboardingPhoneInputValue(data.whatsapp || ""),
-        whatsappCountryCode: "+91",
-        email:           data.email || "",
-        gstin:           data.gstin || "",
-    });
+    const [formData, setFormData] = useState(() => getOnboardingContactFormPrefill(data));
 
     const [errors,       setErrors]       = useState<Record<string, string>>({});
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -101,15 +91,18 @@ export default function Step1Page() {
 
     // Multiple branches state (1st hand / hybrid only)
     const [hasMultipleBranches, setHasMultipleBranches] = useState(data.hasMultipleBranches || false);
-    const [branches, setBranches] = useState(
-        (data.branches?.length ? data.branches : [{ city: "", state: "", address: "", phone: "", phoneCountryCode: "+91" }])
-            .map((branch) => ({
-                ...branch,
-                phone:            toOnboardingPhoneInputValue(branch.phone || ""),
-                phoneCountryCode: "+91",
-            }))
-    );
+    const [branches, setBranches] = useState(() => getOnboardingBranchPrefill(data.branches));
     const [branchErrors, setBranchErrors] = useState<Record<string, string>>({});
+
+    useEffect(() => {
+        const nextFormData = getOnboardingContactFormPrefill(data);
+        setFormData(nextFormData);
+        setSiteSlug(data.slug || (nextFormData.dealershipName ? toSlug(nextFormData.dealershipName) : ""));
+        setSlugEdited(Boolean(data.slug));
+        setSelectedBrands(data.brands || []);
+        setHasMultipleBranches(Boolean(data.hasMultipleBranches));
+        setBranches(getOnboardingBranchPrefill(data.branches));
+    }, [data]);
 
     // Auto-generate slug from dealership name
     useEffect(() => {
