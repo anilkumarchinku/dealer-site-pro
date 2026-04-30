@@ -13,6 +13,14 @@ import { getOptionalEnv } from '@/lib/env'
 const BASE_DOMAIN   = getOptionalEnv('NEXT_PUBLIC_BASE_DOMAIN') ?? 'dealersitepro.com'
 const USE_SUBDOMAIN = getOptionalEnv('NEXT_PUBLIC_USE_SUBDOMAIN') === 'true'
 
+export type DealerVehicleSiteType = 'car' | 'two-wheeler' | 'three-wheeler'
+
+export function dealerVehicleSiteSlug(slug: string, vehicleType: DealerVehicleSiteType): string {
+    if (vehicleType === 'two-wheeler') return `${slug}/two-wheelers`
+    if (vehicleType === 'three-wheeler') return `${slug}/three-wheelers`
+    return slug
+}
+
 /**
  * Returns the full dealer site URL for a given slug.
  *
@@ -41,6 +49,14 @@ export function dealerSiteUrl(slug: string): string {
 export function dealerSiteHref(slug: string): string {
     const base = BASE_DOMAIN.startsWith('localhost') ? 'http' : 'https'
     return `${base}://${dealerSiteUrl(slug)}`
+}
+
+export function dealerVehicleSiteUrl(slug: string, vehicleType: DealerVehicleSiteType): string {
+    return dealerSiteUrl(dealerVehicleSiteSlug(slug, vehicleType))
+}
+
+export function dealerVehicleSiteHref(slug: string, vehicleType: DealerVehicleSiteType): string {
+    return dealerSiteHref(dealerVehicleSiteSlug(slug, vehicleType))
 }
 
 export { BASE_DOMAIN, USE_SUBDOMAIN }

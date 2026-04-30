@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useOnboardingStore } from "@/lib/store/onboarding-store";
 import { saveDealer } from "@/lib/actions/save-dealer";
-import { dealerSiteUrl, dealerSiteHref } from "@/lib/utils/domain";
+import { dealerVehicleSiteUrl, dealerVehicleSiteHref } from "@/lib/utils/domain";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import {
@@ -14,7 +14,7 @@ import { validateOnboardingReadyForSave } from "@/lib/validations/onboarding";
 
 export default function ThreeWheelerStep5Page() {
     const router = useRouter();
-    const { data, setStep, dealerId, setDealerId, vehicleType, setVehicleType } = useOnboardingStore();
+    const { data, setStep, dealerId, setDealerId, setVehicleType } = useOnboardingStore();
     const [saving,       setSaving]       = useState(false);
     const [saveError,    setSaveError]    = useState<string | null>(null);
     const [showSuccess,  setShowSuccess]  = useState(false);
@@ -35,7 +35,7 @@ export default function ThreeWheelerStep5Page() {
         setSaving(true);
         setSaveError(null);
         try {
-            const result = await saveDealer(data, dealerId ?? undefined, vehicleType as 'three-wheeler');
+            const result = await saveDealer(data, dealerId ?? undefined, 'three-wheeler');
             if (result.success) {
                 if (result.dealerId) setDealerId(result.dealerId);
                 if (result.slug)     setLiveSiteSlug(result.slug);
@@ -50,15 +50,15 @@ export default function ThreeWheelerStep5Page() {
 
     const handleCopyUrl = () => {
         if (!liveSiteSlug) return;
-        navigator.clipboard.writeText(dealerSiteHref(liveSiteSlug)).then(() => {
+        navigator.clipboard.writeText(dealerVehicleSiteHref(liveSiteSlug, 'three-wheeler')).then(() => {
             setCopied(true);
             setTimeout(() => setCopied(false), 2000);
         });
     };
 
     if (showSuccess) {
-        const liveUrl  = liveSiteSlug ? dealerSiteUrl(liveSiteSlug) : null;
-        const liveHref = liveSiteSlug ? dealerSiteHref(liveSiteSlug) : null;
+        const liveUrl  = liveSiteSlug ? dealerVehicleSiteUrl(liveSiteSlug, 'three-wheeler') : null;
+        const liveHref = liveSiteSlug ? dealerVehicleSiteHref(liveSiteSlug, 'three-wheeler') : null;
         return (
             <div className="space-y-6 animate-fade-in flex flex-col items-center justify-center min-h-[60vh]">
                 <Card className="w-full max-w-lg">
@@ -191,7 +191,7 @@ export default function ThreeWheelerStep5Page() {
                                 <div className="flex-1">
                                     <h4 className="font-semibold text-foreground mb-1">Your FREE Website Domain</h4>
                                     <div className="rounded-lg px-3 py-2 border border-primary/30 bg-background font-mono text-sm text-primary break-all">
-                                        {dealerSiteUrl(data.slug || data.dealershipName?.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "") || "")}
+                                        {dealerVehicleSiteUrl(data.slug || data.dealershipName?.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "") || "", 'three-wheeler')}
                                     </div>
                                     <div className="mt-3 flex items-center gap-2 text-xs text-primary">
                                         <Shield className="w-4 h-4" />
