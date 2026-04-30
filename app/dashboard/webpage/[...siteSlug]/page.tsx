@@ -56,7 +56,10 @@ export default function SiteEditorPage() {
     // For the main site (siteSlug === dealerSlug) brandSlug is null.
     const brandSlug: string | null =
         dealerSlug && siteSlug !== dealerSlug && siteSlug.startsWith(dealerSlug + '-')
-            ? siteSlug.slice(dealerSlug.length + 1)
+            ? (() => {
+                const suffix = siteSlug.slice(dealerSlug.length + 1).split('/')[0]
+                return suffix === 'used' ? null : suffix
+            })()
             : null
 
     const [device,       setDevice]       = useState<DeviceView>("desktop")

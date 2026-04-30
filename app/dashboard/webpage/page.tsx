@@ -4,8 +4,8 @@ import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
 import { useOnboardingStore } from "@/lib/store/onboarding-store"
 import { supabase } from "@/lib/supabase"
-import { brandToUrlSlug } from "@/lib/utils/domain"
 import { useDashboardSiteOrigin } from "@/lib/hooks/use-dashboard-site-origin"
+import { buildDashboardSiteCards, type DashboardSiteCard } from "@/lib/utils/dashboard-site-cards"
 import { dashboardSiteDisplayUrl, dashboardSiteHref, dashboardSitePath } from "@/lib/utils/dashboard-site-links"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -16,33 +16,31 @@ import {
     Edit3, Loader2,
 } from "lucide-react"
 
-// ── Types ──────────────────────────────────────────────────────────────────────
+type DealerBrandRow = {
+    brand_name: string
+    vehicle_type: string | null
+}
 
-interface SiteCard {
-    /** Full URL slug, e.g. "abhi-motors-tata" or "abhi-motors-used" */
-    slug: string
-    /** Brand name for multi-OEM, or null for single-OEM / used-car dealer */
-    brand: string | null
-    /** Display label shown on the card */
-    label: string
-    /** True for the hybrid dealer's used-car sub-site */
-    isUsed?: boolean
-    /** Override preview iframe path (used for 2W/3W dealers) */
-    previewPath?: string
+function brandsForType(rows: DealerBrandRow[], types: string[], fallback: string[]): string[] {
+    const normalizedTypes = new Set(types.map(type => type.toLowerCase()))
+    const brands = rows
+        .filter(row => row.vehicle_type && normalizedTypes.has(row.vehicle_type.toLowerCase()))
+        .map(row => row.brand_name)
+
+    return brands.length > 0 ? brands : fallback
 }
 
 // ── Component ──────────────────────────────────────────────────────────────────
 
 export default function WebpagePage() {
     const router = useRouter()
-    const { dealerId, dealerSlug, setDealerId, setDealerSlug, setVehicleType, setSellsTwoWheelers, setSellsThreeWheelers, setSellsFourWheelers, data, vehicleType, sellsTwoWheelers, sellsThreeWheelers, sellsFourWheelers } = useOnboardingStore()
+    const { dealerId, setDealerId, setDealerSlug, setVehicleType, setSellsTwoWheelers, setSellsThreeWheelers, setSellsFourWheelers, data } = useOnboardingStore()
 
-    const [sites,           setSites]           = useState<SiteCard[]>([])
+    const [sites,           setSites]           = useState<DashboardSiteCard[]>([])
     const [loading,         setLoading]         = useState(true)
     const [copied,          setCopied]          = useState<string | null>(null)
-    const [domainSite,      setDomainSite]      = useState<SiteCard | null>(null)
-    const [sellsUsedCars,   setSellsUsedCars]   = useState(data.sellsUsedCars ?? false)
-    const [sellsNewCars,    setSellsNewCars]     = useState(data.sellsNewCars ?? true)
+    const [domainSite,      setDomainSite]      = useState<DashboardSiteCard | null>(null)
+    const [dealerName,      setDealerName]      = useState(data.dealershipName ?? "")
 
     // ── Always fetch fresh from DB on mount — avoids stale Zustand state ────
     useEffect(() => {
@@ -63,14 +61,16 @@ export default function WebpagePage() {
                 // Fetch brands from dealer_brands
                 const { data: brandsRaw } = await supabase
                     .from("dealer_brands")
-                    .select("brand_name")
+                    .select("brand_name, vehicle_type")
                     .eq("dealer_id", dealer.id)
                     .order("is_primary", { ascending: false })
-                const brands = brandsRaw?.map((b: { brand_name: string }) => b.brand_name) ?? []
+                const brandRows = (brandsRaw ?? []) as DealerBrandRow[]
+                const brands = brandRows.map(b => b.brand_name)
 
                 // Sync to store
                 setDealerId(dealer.id)
                 setDealerSlug(dealer.slug)
+                setDealerName(dealer.dealership_name)
                 const vtype =
                     dealer.vehicle_type === 'two-wheeler' || dealer.vehicle_type === 'three-wheeler'
                         ? dealer.vehicle_type
@@ -82,13 +82,28 @@ export default function WebpagePage() {
                 const has2W  = dealer.sells_two_wheelers   ?? (vtype === 'two-wheeler')
                 const has3W  = dealer.sells_three_wheelers ?? (vtype === 'three-wheeler')
                 const has4W  = dealer.sells_four_wheelers  ?? (vtype === 'car')
-                setSellsNewCars(isNew)
-                setSellsUsedCars(isUsed)
                 setSellsTwoWheelers(has2W)
                 setSellsThreeWheelers(has3W)
                 setSellsFourWheelers(has4W)
 
-                buildSiteCards(dealer.slug, brands, isNew, isUsed, vtype, has2W, has3W, has4W, dealer.dealership_name)
+                const activeSegmentCount = [has4W || vtype === 'car', has2W || vtype === 'two-wheeler', has3W || vtype === 'three-wheeler'].filter(Boolean).length
+                const carBrands = brandsForType(brandRows, ['cars', 'car', '4w'], activeSegmentCount === 1 ? brands : [])
+                const twoWheelerBrands = brandsForType(brandRows, ['2w', 'two-wheeler'], activeSegmentCount === 1 ? brands : [])
+                const threeWheelerBrands = brandsForType(brandRows, ['3w', 'three-wheeler'], activeSegmentCount === 1 ? brands : [])
+
+                setSites(buildDashboardSiteCards({
+                    slug: dealer.slug,
+                    dealerName: dealer.dealership_name,
+                    carBrands,
+                    twoWheelerBrands,
+                    threeWheelerBrands,
+                    isNew,
+                    isUsed,
+                    vehicleType: vtype,
+                    has2W,
+                    has3W,
+                    has4W,
+                }))
             } finally {
                 setLoading(false)
             }
@@ -97,75 +112,6 @@ export default function WebpagePage() {
         return;
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
-
-    function build2WCards(slug: string, brands: string[], name: string): SiteCard[] {
-        // For 2W: hybrid → single portal card; multi-brand new → single portal card
-        // The portal at /sites/{slug}/two-wheelers handles routing to new/used sub-pages
-        return [{
-            slug:        `${slug}/two-wheelers`,
-            brand:       null,
-            label:       name || "My 2W Site",
-            previewPath: `/sites/${slug}/two-wheelers`,
-        }]
-    }
-
-    function build3WCards(slug: string, brands: string[], name: string): SiteCard[] {
-        return [{
-            slug:        `${slug}/three-wheelers`,
-            brand:       null,
-            label:       name || "My 3W Site",
-            previewPath: `/sites/${slug}/three-wheelers`,
-        }]
-    }
-
-    function buildCarCards(slug: string, brands: string[], isNew: boolean, isUsed: boolean, name: string): SiteCard[] {
-        const isHybrid = isNew && isUsed
-        if (isUsed && !isNew) {
-            return [{ slug, brand: null, label: name || "My Site", isUsed: true }]
-        }
-        if (brands.length <= 1 && !isHybrid) {
-            return [{ slug, brand: null, label: name || "My Site" }]
-        }
-        if (isHybrid) {
-            const brandCards: SiteCard[] = brands.length > 0
-                ? brands.map(brand => ({ slug: `${slug}-${brandToUrlSlug(brand)}`, brand, label: brand }))
-                : [{ slug, brand: null, label: name || "My Site" }]
-            return [...brandCards, { slug: `${slug}-used`, brand: null, label: "Pre-Owned", isUsed: true }]
-        }
-        return brands.map(brand => ({ slug: `${slug}-${brandToUrlSlug(brand)}`, brand, label: brand }))
-    }
-
-    function buildSiteCards(slug: string, brands: string[], isNew: boolean, isUsed: boolean, vtype: string, has2W: boolean, has3W: boolean, has4W: boolean, name: string) {
-        const effectiveHasCars = vtype === 'car'           || has4W
-        const effectiveHas2W   = vtype === 'two-wheeler'   || has2W
-        const effectiveHas3W   = vtype === 'three-wheeler' || has3W
-
-        // ── Multi-segment dealer — combine all active site cards ─────────────
-        const isMultiSegment = [effectiveHasCars, effectiveHas2W, effectiveHas3W].filter(Boolean).length > 1
-        if (isMultiSegment) {
-            const allCards: SiteCard[] = []
-            if (effectiveHas2W)   allCards.push(...build2WCards(slug, brands, name))
-            if (effectiveHas3W)   allCards.push(...build3WCards(slug, brands, name))
-            if (effectiveHasCars) allCards.push(...buildCarCards(slug, brands, isNew, isUsed, name))
-            setSites(allCards)
-            return
-        }
-
-        // ── Pure 2W dealers ──────────────────────────────────────────────────
-        if (effectiveHas2W) {
-            setSites(build2WCards(slug, brands, name))
-            return
-        }
-
-        // ── Pure 3W dealers ──────────────────────────────────────────────────
-        if (effectiveHas3W) {
-            setSites(build3WCards(slug, brands, name))
-            return
-        }
-
-        // ── 4W / car dealers ─────────────────────────────────────────────────
-        setSites(buildCarCards(slug, brands, isNew, isUsed, name))
-    }
 
     function handleCopy(slug: string) {
         navigator.clipboard.writeText(dashboardSiteHref(slug))
@@ -193,7 +139,7 @@ export default function WebpagePage() {
                     <h1 className="text-2xl font-bold">My Webpages</h1>
                     <p className="text-muted-foreground text-sm mt-1">
                         {isMulti
-                            ? `${sites.length} brand-specific sites — each can have its own domain and design.`
+                            ? `${sites.length} webpages generated from your selected vehicle and stock types.`
                             : "Preview your dealer website, edit the design, or set up a custom domain."}
                     </p>
                 </div>
@@ -211,7 +157,7 @@ export default function WebpagePage() {
                         key={site.slug}
                         site={site}
                         isMulti={isMulti}
-                        dealerName={data.dealershipName ?? ""}
+                        dealerName={dealerName}
                         copied={copied}
                         onCopy={handleCopy}
                         onEdit={() => router.push(`/dashboard/webpage/${site.slug}`)}
@@ -225,7 +171,7 @@ export default function WebpagePage() {
                 <SiteDomainModal
                     site={domainSite}
                     dealerId={dealerId}
-                    dealerName={data.dealershipName ?? "Your Site"}
+                    dealerName={dealerName || "Your Site"}
                     onClose={() => setDomainSite(null)}
                 />
             )}
@@ -236,7 +182,7 @@ export default function WebpagePage() {
 // ── SiteCard sub-component ─────────────────────────────────────────────────────
 
 interface SiteCardProps {
-    site:       SiteCard
+    site:       DashboardSiteCard
     isMulti:    boolean
     dealerName: string
     copied:     string | null
@@ -268,7 +214,7 @@ function SiteCard({ site, isMulti, dealerName, copied, onCopy, onEdit, onDomain 
                             ? "bg-amber-500/10 text-amber-700 dark:text-amber-400 border border-amber-500/20"
                             : "bg-primary/10 text-primary"
                     )}>
-                        {site.isUsed ? "Pre-Owned / Used Cars" : site.label}
+                        {site.label}
                     </span>
                 </div>
             )}
@@ -308,10 +254,8 @@ function SiteCard({ site, isMulti, dealerName, copied, onCopy, onEdit, onDomain 
                 {/* Name + live URL */}
                 <div>
                     <p className="text-sm font-semibold leading-snug">
-                        {isMulti
-                            ? site.isUsed
-                                ? `${dealerName} — Pre-Owned`
-                                : `${dealerName} — ${site.label}`
+                        {isMulti || site.showLabel
+                            ? `${dealerName} — ${site.label}`
                             : dealerName}
                     </p>
                     <div className="flex items-center gap-1.5 mt-1.5">
