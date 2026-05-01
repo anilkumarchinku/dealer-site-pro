@@ -7,7 +7,7 @@ import { VehicleDetailGallery } from "@/components/two-wheelers/VehicleDetailGal
 import { EMICalculator } from "@/components/shared/EMICalculator"
 import { LeadFormModal } from "@/components/two-wheelers/LeadFormModal"
 import { BookingModal } from "@/components/two-wheelers/BookingModal"
-import { OnRoadPriceDialog } from "@/components/two-wheelers/OnRoadPriceDialog"
+import { OnRoadPriceDialog, type TwoWheelerOnRoadEnquiryDetails } from "@/components/two-wheelers/OnRoadPriceDialog"
 import { FullSpecsSection } from "@/components/two-wheelers/FullSpecsSection"
 import { SimilarVehicles } from "@/components/two-wheelers/SimilarVehicles"
 import { generateTemplateConfig, type TemplateStyle } from "@/lib/templates"
@@ -47,6 +47,7 @@ export default function VehicleDetailPage() {
 
     const [leadType,    setLeadType]    = useState<TwoWheelerLeadType>("test_ride")
     const [leadTitle,   setLeadTitle]   = useState("")
+    const [leadInitialMessage, setLeadInitialMessage] = useState("")
     const [leadOpen,    setLeadOpen]    = useState(false)
     const [bookingOpen, setBookingOpen] = useState(false)
     const [selectedColor, setSelectedColor] = useState("")
@@ -96,10 +97,31 @@ export default function VehicleDetailPage() {
         return null
     }, [dealerInfo, vehicle])
 
-    function openLead(type: TwoWheelerLeadType, title: string) {
+    function formatLeadAmount(amount: number) {
+        return `₹${Math.round(amount).toLocaleString("en-IN")}`
+    }
+
+    function openLead(type: TwoWheelerLeadType, title: string, initialMessage = "") {
         setLeadType(type)
         setLeadTitle(title)
+        setLeadInitialMessage(initialMessage)
         setLeadOpen(true)
+    }
+
+    function openOnRoadLead(details: TwoWheelerOnRoadEnquiryDetails) {
+        setOnRoadOpen(false)
+        openLead(
+            "best_price",
+            "Enquire On-Road Price",
+            [
+                `Interested in ${details.brand} ${details.model}.`,
+                `Variant: ${details.variantLabel}`,
+                `State: ${details.stateName}`,
+                `Estimated on-road price: ${formatLeadAmount(details.total)}`,
+                `Ex-showroom price: ${formatLeadAmount(details.exShowroom)}`,
+                details.financed ? "Finance: Yes" : "Finance: No",
+            ].join("\n")
+        )
     }
 
     // Compute these only when vehicle is loaded
@@ -420,8 +442,10 @@ export default function VehicleDetailPage() {
                             <LeadFormModal
                                 dealerId={dealerId}
                                 vehicleId={vehicle.id}
+                                vehicleName={`${vehicle.brand} ${vehicle.model}`}
                                 leadType={leadType}
                                 title={leadTitle}
+                                initialMessage={leadInitialMessage}
                                 isOpen={leadOpen}
                                 onClose={() => setLeadOpen(false)}
                             />
@@ -447,6 +471,8 @@ export default function VehicleDetailPage() {
                                     price: variant.price_paise > 0 ? String(variant.price_paise / 100) : '',
                                 }))}
                                 brandColor={brandColor}
+                                enquiryLabel="Enquire on this price"
+                                onEnquire={openOnRoadLead}
                             />
                         </>
                     )}

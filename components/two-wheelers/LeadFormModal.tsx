@@ -14,12 +14,13 @@ interface Props {
     usedVehicleId?: string
     leadType:      TwoWheelerLeadType
     title:         string
+    initialMessage?: string
     isOpen:        boolean
     onClose:       () => void
 }
 
 export function LeadFormModal({
-    dealerId, vehicleId, vehicleName, vehicleImage, usedVehicleId, leadType, title, isOpen, onClose
+    dealerId, vehicleId, vehicleName, vehicleImage, usedVehicleId, leadType, title, initialMessage, isOpen, onClose
 }: Props) {
     const [name,          setName]           = useState("")
     const [phone,         setPhone]          = useState("")
@@ -33,6 +34,12 @@ export function LeadFormModal({
     const [minDate,       setMinDate]        = useState("")
 
     useEffect(() => { setMinDate(new Date().toISOString().split("T")[0]) }, [])
+    useEffect(() => {
+        if (!isOpen) return
+        setMessage(initialMessage ?? "")
+        setError("")
+        setSubmitted(false)
+    }, [initialMessage, isOpen])
 
     if (!isOpen) return null
 

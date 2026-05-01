@@ -26,7 +26,7 @@ import {
     SelectValue,
 } from '@/components/ui/select'
 import { Badge } from '@/components/ui/badge'
-import { Bike, MapPin, Shield, FileText, Wallet, Info } from 'lucide-react'
+import { Bike, MapPin, Shield, FileText, Wallet, Info, Send } from 'lucide-react'
 
 interface RawVariant {
     name?: string
@@ -44,6 +44,19 @@ interface Props {
     engineCc: number | null
     variants?: RawVariant[]
     brandColor?: string
+    enquiryLabel?: string
+    onEnquire?: (details: TwoWheelerOnRoadEnquiryDetails) => void
+}
+
+export interface TwoWheelerOnRoadEnquiryDetails {
+    brand: string
+    model: string
+    variantLabel: string
+    stateCode: string
+    stateName: string
+    exShowroom: number
+    total: number
+    financed: boolean
 }
 
 function normalizeVariantLabel(value: string | null | undefined): string {
@@ -65,6 +78,8 @@ export function OnRoadPriceDialog({
     engineCc,
     variants = [],
     brandColor = '#2563eb',
+    enquiryLabel = 'Send Enquiry',
+    onEnquire,
 }: Props) {
     const normalizedFuelType: TwoWheelerFuelType = fuelType === 'electric' ? 'electric' : 'petrol'
     const variantOptions = useMemo<TwoWheelerOnRoadVariantOption[]>(() => {
@@ -117,6 +132,20 @@ export function OnRoadPriceDialog({
             financed,
         })
     }, [activeVariant, engineCc, financed, normalizedFuelType, stateCode])
+
+    function handleEnquiry() {
+        if (!activeVariant || !breakdown || !onEnquire) return
+        onEnquire({
+            brand,
+            model,
+            variantLabel: activeVariant.label,
+            stateCode: breakdown.stateCode,
+            stateName: breakdown.stateName,
+            exShowroom: breakdown.exShowroom,
+            total: breakdown.total,
+            financed,
+        })
+    }
 
     return (
         <Dialog open={open} onOpenChange={onOpenChange}>
@@ -272,10 +301,21 @@ export function OnRoadPriceDialog({
                                     </p>
                                 </div>
 
-                                <div className="flex justify-end">
+                                <div className="flex flex-col-reverse gap-3 sm:flex-row sm:justify-end">
                                     <Button variant="outline" onClick={() => onOpenChange(false)}>
                                         Close
                                     </Button>
+                                    {onEnquire && (
+                                        <Button
+                                            type="button"
+                                            onClick={handleEnquiry}
+                                            className="text-white hover:opacity-90"
+                                            style={{ backgroundColor: brandColor }}
+                                        >
+                                            <Send className="mr-2 h-4 w-4" />
+                                            {enquiryLabel}
+                                        </Button>
+                                    )}
                                 </div>
                             </div>
                         )}

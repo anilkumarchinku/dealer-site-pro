@@ -325,6 +325,11 @@ export default function BikeDetailPage({ params }: Props) {
         }
     }, [bike]);
 
+    const openDealerDiscovery = useCallback(() => {
+        setOnRoadOpen(false);
+        window.location.href = '/';
+    }, []);
+
     // ── Loading state ────────────────────────────────────────────
     if (loading) {
         return (
@@ -1155,6 +1160,8 @@ export default function BikeDetailPage({ params }: Props) {
                     price: variant.price_paise > 0 ? String(variant.price_paise / 100) : '',
                 }))}
                 brandColor="#2563eb"
+                enquiryLabel="Find a Dealer"
+                onEnquire={openDealerDiscovery}
             />
             <SiteFooter />
         </>
