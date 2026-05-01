@@ -35,12 +35,14 @@ function jsonRequest(body: unknown) {
 }
 
 function createConnectSupabaseMock() {
+    const inserts: unknown[] = []
     return {
         from: vi.fn((table: string) => {
             const builder = {
                 operation: '',
-                insert: vi.fn(() => {
+                insert: vi.fn((payload: unknown) => {
                     builder.operation = 'insert'
+                    inserts.push(payload)
                     return builder
                 }),
                 update: vi.fn(() => builder),
@@ -76,6 +78,7 @@ function createConnectSupabaseMock() {
             }
             return builder
         }),
+        inserts,
     }
 }
 
@@ -128,7 +131,7 @@ describe('domain provider failure behavior', () => {
 
         const response = await connectCustomDomain(jsonRequest({
             dealerId: 'dealer_1',
-            customDomain: 'dealer.example.com',
+            customDomain: 'HTTPS://WWW.Dealer.Example.com/path',
         }))
 
         await expect(response.json()).resolves.toMatchObject({
@@ -136,6 +139,10 @@ describe('domain provider failure behavior', () => {
             vercelRegistered: false,
         })
         expect(response.status).toBe(200)
+        expect(supabase.inserts[0]).toMatchObject({
+            custom_domain: 'dealer.example.com',
+        })
+        expect(addDomainToProject).toHaveBeenCalledWith('dealer-one', 'dealer.example.com')
         expect(recordDomainDeploymentOperation).toHaveBeenCalledWith(expect.objectContaining({
             operation: 'custom_domain_connect',
             status: 'provider_failed',

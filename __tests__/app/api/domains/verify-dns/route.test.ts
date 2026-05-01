@@ -1,12 +1,13 @@
 import { POST } from '@/app/api/domains/verify-dns/route'
 import { verifyCustomDomain } from '@/lib/services/dns-verification-service'
-import { requireAuth, requireDealerOwnership } from '@/lib/supabase-server'
+import { createAdminClient, requireAuth, requireDealerOwnership } from '@/lib/supabase-server'
 
 vi.mock('@/lib/services/dns-verification-service', () => ({
     verifyCustomDomain: vi.fn(),
 }))
 
 vi.mock('@/lib/supabase-server', () => ({
+    createAdminClient: vi.fn(),
     requireAuth: vi.fn(),
     requireDealerOwnership: vi.fn(),
 }))
@@ -54,11 +55,6 @@ function supabaseWithVerificationLogFailure() {
             error: null,
         })),
     }
-    const verificationBuilder = {
-        insert: vi.fn(async () => ({
-            error: { message: 'foreign key mismatch' },
-        })),
-    }
     const updateBuilder = {
         update: vi.fn(() => updateBuilder),
         eq: vi.fn(() => updateBuilder),
@@ -66,13 +62,11 @@ function supabaseWithVerificationLogFailure() {
 
     return {
         from: vi.fn((table: string) => {
-            if (table === 'domain_verifications') return verificationBuilder
             if (table === 'dealer_domains' && storedDomainBuilder.single.mock.calls.length === 0) {
                 return storedDomainBuilder
             }
             return updateBuilder
         }),
-        verificationBuilder,
         updateBuilder,
     }
 }
@@ -83,6 +77,11 @@ describe('POST /api/domains/verify-dns', () => {
         vi.mocked(requireDealerOwnership).mockResolvedValue({
             dealer: { id: 'dealer_1', slug: 'dealer' },
             errorResponse: null,
+        } as never)
+        vi.mocked(createAdminClient).mockReturnValue({
+            from: vi.fn(() => ({
+                insert: vi.fn(async () => ({ error: null })),
+            })),
         } as never)
     })
 
@@ -110,6 +109,12 @@ describe('POST /api/domains/verify-dns', () => {
 
     it('updates the domain status even when verification history logging fails', async () => {
         const supabase = supabaseWithVerificationLogFailure()
+        const adminInsert = vi.fn(async () => ({
+            error: { message: 'foreign key mismatch' },
+        }))
+        vi.mocked(createAdminClient).mockReturnValue({
+            from: vi.fn(() => ({ insert: adminInsert })),
+        } as never)
         vi.mocked(requireAuth).mockResolvedValue({
             user: { id: 'user_1' },
             supabase,
@@ -148,7 +153,7 @@ describe('POST /api/domains/verify-dns', () => {
             success: true,
             verification: { allVerified: true },
         })
-        expect(supabase.verificationBuilder.insert).toHaveBeenCalled()
+        expect(adminInsert).toHaveBeenCalled()
         expect(supabase.updateBuilder.update).toHaveBeenCalledWith(expect.objectContaining({
             status: 'active',
             dns_verified: true,

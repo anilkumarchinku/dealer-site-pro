@@ -22,6 +22,10 @@ export interface VerificationResult {
     message: string
 }
 
+function normalizeDnsValue(value: string): string {
+    return value.trim().toLowerCase().replace(/\.$/, '')
+}
+
 /**
  * Verifies that a custom domain points to our hosting
  * Checks both A and CNAME records
@@ -61,8 +65,8 @@ export async function verifyCustomDomain(
 
         try {
             const aResults = await dns.resolve4(rootDomain)
-            aRecord.actualValue = aResults[0]
-            aRecord.isVerified = aResults[0] === EXPECTED_A_RECORD
+            aRecord.actualValue = aResults.join(', ')
+            aRecord.isVerified = aResults.includes(EXPECTED_A_RECORD)
         } catch {
             aRecord.error = 'A record not found'
         }
@@ -78,8 +82,9 @@ export async function verifyCustomDomain(
 
         try {
             const cnameResults = await dns.resolveCname(wwwDomain)
-            cnameRecord.actualValue = cnameResults[0]
-            cnameRecord.isVerified = cnameResults[0] === EXPECTED_CNAME
+            cnameRecord.actualValue = cnameResults.join(', ')
+            const expectedCname = normalizeDnsValue(EXPECTED_CNAME)
+            cnameRecord.isVerified = cnameResults.some(result => normalizeDnsValue(result) === expectedCname)
         } catch {
             cnameRecord.error = 'CNAME record not found'
         }

@@ -291,7 +291,12 @@ export async function getDomainBySlug(slug: string): Promise<Domain | null> {
 export async function getDomainByName(domainName: string): Promise<Domain | null> {
     try {
         const db = getDomainClient()
-        const normalizedDomain = domainName.trim().toLowerCase().replace(/^https?:\/\//, '').replace(/\/.*$/, '')
+        const normalizedDomain = domainName
+            .trim()
+            .toLowerCase()
+            .replace(/^https?:\/\//, '')
+            .replace(/^www\./, '')
+            .replace(/\/.*$/, '')
         const { data: customDomain } = await db
             .from('dealer_domains')
             .select(DEALER_DOMAIN_SELECT)

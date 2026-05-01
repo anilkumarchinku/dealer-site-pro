@@ -17,8 +17,8 @@ describe('dns-verification-service', () => {
 
     it('requires both root A and www CNAME records to match the issued instructions', async () => {
         const cnameTarget = process.env.NEXT_PUBLIC_CNAME_TARGET ?? 'cname.vercel-dns.com'
-        mockedDns.resolve4.mockResolvedValue(['76.76.21.21'])
-        mockedDns.resolveCname.mockResolvedValue([cnameTarget])
+        mockedDns.resolve4.mockResolvedValue(['1.1.1.1', '76.76.21.21'])
+        mockedDns.resolveCname.mockResolvedValue([`${cnameTarget}.`])
 
         const result = await verifyCustomDomain('dealer.example.com')
 

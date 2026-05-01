@@ -14,6 +14,15 @@ const DNS_INSTRUCTIONS = {
     note: 'Add an A record for the root domain (@) and a CNAME for www. Both are required.',
 }
 
+function normalizeCustomDomain(value: string): string {
+    return value
+        .trim()
+        .toLowerCase()
+        .replace(/^https?:\/\//, '')
+        .replace(/^www\./, '')
+        .replace(/\/.*$/, '')
+}
+
 /**
  * POST /api/domains/connect-custom
  * Initiates custom domain connection (PRO tier)
@@ -27,8 +36,11 @@ export async function POST(request: Request) {
 
         const body = await request.json()
         const { dealerId, customDomain, templateId, siteSlug } = body
+        const normalizedCustomDomain = typeof customDomain === 'string'
+            ? normalizeCustomDomain(customDomain)
+            : ''
 
-        if (!dealerId || !customDomain) {
+        if (!dealerId || !normalizedCustomDomain) {
             return NextResponse.json(
                 { success: false, error: 'Dealer ID and custom domain are required' },
                 { status: 400 }
@@ -41,18 +53,15 @@ export async function POST(request: Request) {
 
         await recordDomainDeploymentOperation({
             dealerId,
-            domain: customDomain,
+            domain: normalizedCustomDomain,
             operation: 'custom_domain_connect',
             status: 'started',
             providerStep: 'database',
             details: { templateId: templateId ?? null, siteSlug: siteSlug ?? null },
         })
 
-        // Default to 'family' template if not provided
-        const template = templateId || 'family'
-
         // Validate domain format
-        const validation = isValidDomain(customDomain)
+        const validation = isValidDomain(normalizedCustomDomain)
         if (!validation.valid) {
             return NextResponse.json(
                 { success: false, error: validation.error },
@@ -64,7 +73,7 @@ export async function POST(request: Request) {
         const { data: existingDomain } = await supabase
             .from('dealer_domains')
             .select('id, dealer_id')
-            .eq('custom_domain', customDomain)
+            .eq('custom_domain', normalizedCustomDomain)
             .single()
 
         if (existingDomain && existingDomain.dealer_id !== dealerId) {
@@ -79,7 +88,7 @@ export async function POST(request: Request) {
             await recordDomainDeploymentOperation({
                 dealerId,
                 domainId: existingDomain.id,
-                domain: customDomain,
+                domain: normalizedCustomDomain,
                 operation: 'custom_domain_connect',
                 status: 'completed',
                 providerStep: 'database',
@@ -98,7 +107,7 @@ export async function POST(request: Request) {
             .from('dealer_domains')
             .insert({
                 dealer_id: dealerId,
-                custom_domain: customDomain,
+                custom_domain: normalizedCustomDomain,
                 domain_type: 'custom',
                 status: 'pending',
                 ssl_status: 'pending',
@@ -113,7 +122,7 @@ export async function POST(request: Request) {
             console.error('Error creating custom domain:', error)
             await recordDomainDeploymentOperation({
                 dealerId,
-                domain: customDomain,
+                domain: normalizedCustomDomain,
                 operation: 'custom_domain_connect',
                 status: 'failed',
                 providerStep: 'database',
@@ -159,17 +168,17 @@ export async function POST(request: Request) {
         let vercelRegistered = false
         try {
             if (isFirstHand) {
-                await registerDomainOnMainProject(customDomain)
+                await registerDomainOnMainProject(normalizedCustomDomain)
             } else {
                 const slug = dealerInfo?.slug
                 if (!slug) throw new Error('Dealer slug not found')
-                await addDomainToProject(slug, customDomain)
+                await addDomainToProject(slug, normalizedCustomDomain)
             }
             vercelRegistered = true
             await recordDomainDeploymentOperation({
                 dealerId,
                 domainId: newDomain?.id,
-                domain: customDomain,
+                domain: normalizedCustomDomain,
                 operation: 'custom_domain_connect',
                 status: 'provider_succeeded',
                 providerStep: 'vercel',
@@ -180,7 +189,7 @@ export async function POST(request: Request) {
             await recordDomainDeploymentOperation({
                 dealerId,
                 domainId: newDomain?.id,
-                domain: customDomain,
+                domain: normalizedCustomDomain,
                 operation: 'custom_domain_connect',
                 status: 'provider_failed',
                 providerStep: 'vercel',
@@ -193,7 +202,7 @@ export async function POST(request: Request) {
         // leaving it stuck in 'pending' indefinitely.
         if (vercelRegistered && newDomain) {
             try {
-                const verification = await verifyCustomDomain(customDomain)
+                const verification = await verifyCustomDomain(normalizedCustomDomain)
                 if (verification.allVerified) {
                     await supabase
                         .from('dealer_domains')
@@ -208,7 +217,7 @@ export async function POST(request: Request) {
                     await recordDomainDeploymentOperation({
                         dealerId,
                         domainId: newDomain.id,
-                        domain: customDomain,
+                        domain: normalizedCustomDomain,
                         operation: 'custom_domain_connect',
                         status: 'completed',
                         providerStep: 'dns',
@@ -224,7 +233,7 @@ export async function POST(request: Request) {
             await recordDomainDeploymentOperation({
                 dealerId,
                 domainId: newDomain?.id,
-                domain: customDomain,
+                domain: normalizedCustomDomain,
                 operation: 'custom_domain_connect',
                 status: 'provider_pending',
                 providerStep: vercelRegistered ? 'dns' : 'vercel',

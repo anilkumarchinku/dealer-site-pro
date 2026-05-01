@@ -2,6 +2,15 @@ import { NextResponse } from 'next/server'
 import { purchaseDomain } from '@/lib/services/domain-search-service'
 import { requireAuth, requireDealerOwnership } from '@/lib/supabase-server'
 
+function normalizeDomain(value: string): string {
+    return value
+        .trim()
+        .toLowerCase()
+        .replace(/^https?:\/\//, '')
+        .replace(/^www\./, '')
+        .replace(/\/.*$/, '')
+}
+
 /**
  * POST /api/domains/purchase-managed
  * Purchase and configure managed domain (PREMIUM tier)
@@ -13,8 +22,9 @@ export async function POST(request: Request) {
 
         const body = await request.json()
         const { dealerId, domain, contactInfo } = body
+        const normalizedDomain = typeof domain === 'string' ? normalizeDomain(domain) : ''
 
-        if (!dealerId || !domain || !contactInfo) {
+        if (!dealerId || !normalizedDomain || !contactInfo) {
             return NextResponse.json(
                 { success: false, error: 'Missing required fields' },
                 { status: 400 }
@@ -25,7 +35,7 @@ export async function POST(request: Request) {
         if (ownershipError) return ownershipError
 
         // Purchase domain via Cloudflare
-        const purchaseResult = await purchaseDomain(domain, contactInfo)
+        const purchaseResult = await purchaseDomain(normalizedDomain, contactInfo)
 
         if (!purchaseResult.success) {
             return NextResponse.json(
@@ -46,7 +56,7 @@ export async function POST(request: Request) {
             .from('dealer_domains')
             .insert({
                 dealer_id: dealerId,
-                custom_domain: domain,
+                custom_domain: normalizedDomain,
                 domain_type: 'managed',
                 status: 'active', // Auto-configured, no verification needed
                 ssl_status: 'provisioning',
@@ -78,8 +88,8 @@ export async function POST(request: Request) {
             .from('domains')
             .insert({
                 dealer_id: dealerId,
-                domain,
-                slug: domain.replace(/\./g, '-'),
+                domain: normalizedDomain,
+                slug: normalizedDomain.replace(/\./g, '-'),
                 type: 'managed',
                 status: 'active',
                 ssl_status: 'provisioning',

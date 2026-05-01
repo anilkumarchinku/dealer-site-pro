@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server'
 import { verifyCustomDomain } from '@/lib/services/dns-verification-service'
-import { requireAuth, requireDealerOwnership } from '@/lib/supabase-server'
+import { createAdminClient, requireAuth, requireDealerOwnership } from '@/lib/supabase-server'
 
 function normalizeDomain(value: string): string {
     return value
@@ -64,18 +64,25 @@ export async function POST(request: Request) {
 
         // Save verification results for dealer visibility/history. This is
         // useful, but must not block the actual domain status update.
-        const { error: verificationLogError } = await supabase.from('domain_verifications').insert(
-            verification.records.map(record => ({
-                domain_id: domainId,
-                record_type: record.type,
-                record_name: record.name,
-                expected_value: record.expectedValue,
-                actual_value: record.actualValue,
-                is_verified: record.isVerified,
-                error_message: record.error
-            }))
-        )
-        if (verificationLogError) {
+        const verificationRows = verification.records.map(record => ({
+            domain_id: domainId,
+            record_type: record.type,
+            record_name: record.name,
+            expected_value: record.expectedValue,
+            actual_value: record.actualValue,
+            is_verified: record.isVerified,
+            error_message: record.error
+        }))
+
+        try {
+            const adminSupabase = createAdminClient()
+            const { error: verificationLogError } = await adminSupabase
+                .from('domain_verifications')
+                .insert(verificationRows)
+            if (verificationLogError) {
+                console.warn('[verify-dns] Failed to record DNS verification history:', verificationLogError)
+            }
+        } catch (verificationLogError) {
             console.warn('[verify-dns] Failed to record DNS verification history:', verificationLogError)
         }
 
