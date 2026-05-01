@@ -20,6 +20,11 @@ import { Separator } from '@/components/ui/separator';
 import { Slider } from '@/components/ui/slider';
 import { Badge } from '@/components/ui/badge';
 import { getVehicleImageUrls, brandNameToId } from '@/lib/utils/brand-model-images';
+import {
+    defaultTwoWheelerVariantName,
+    normalizeTwoWheelerVariants,
+    type TwoWheelerVariantSource,
+} from '@/lib/utils/two-wheeler-variants';
 import { OnRoadPriceDialog } from '@/components/two-wheelers/OnRoadPriceDialog';
 import {
     ChevronRight,
@@ -41,10 +46,7 @@ import {
 import { BikeDetailHeroImage } from './BikeDetailHeroImage';
 
 // ── Types ────────────────────────────────────────────────────────
-type BikeDetailVariant = {
-    name?: string;
-    price?: string;
-}
+type BikeDetailVariant = TwoWheelerVariantSource
 
 interface BikeListItem {
     id: string;
@@ -117,24 +119,6 @@ function formatPricePaise(paise: number): string {
         return `\u20B9${(inr / 100000).toFixed(2)} Lakh`;
     }
     return `\u20B9${inr.toLocaleString('en-IN')}`;
-}
-
-function formatPriceINR(paise: number): string {
-    if (!paise || paise <= 0) return 'Price on request';
-    const inr = paise / 100;
-    return `\u20B9${inr.toLocaleString('en-IN')}`;
-}
-
-function parsePriceToPaise(raw: string | null | undefined): number {
-    if (!raw) return 0;
-    const cleaned = raw.replace(/[₹,\s]/g, '');
-    const lakhMatch = cleaned.match(/^([\d.]+)\s*[Ll]akh$/);
-    if (lakhMatch) return Math.round(parseFloat(lakhMatch[1]) * 100000 * 100);
-    const croreMatch = cleaned.match(/^([\d.]+)\s*[Cc]rore$/);
-    if (croreMatch) return Math.round(parseFloat(croreMatch[1]) * 10000000 * 100);
-    const num = parseFloat(cleaned);
-    if (!isNaN(num)) return Math.round(num * 100);
-    return 0;
 }
 
 function normalizeVariantLabel(value: string | null | undefined): string {
@@ -390,7 +374,16 @@ export default function BikeDetailPage({ params }: Props) {
         : null;
     const variant = displayVariant ? ` ${displayVariant}` : '';
 
-    const detailVariants = Array.isArray(bike.variants) ? bike.variants : [];
+    const detailVariants = normalizeTwoWheelerVariants(Array.isArray(bike.variants) ? bike.variants : []);
+    const fallbackDetailVariant = normalizeTwoWheelerVariants([], {
+        name: defaultTwoWheelerVariantName(bike.model, bike.variant),
+        price_paise: bike.price_min_paise ?? 0,
+    })[0];
+    const onRoadVariants = detailVariants.length > 0
+        ? detailVariants
+        : fallbackDetailVariant
+            ? [fallbackDetailVariant]
+            : [];
     const normalizedBikeVariant = normalizeVariantLabel(bike.variant);
     const currentVariantName = detailVariants.length > 0
         ? (detailVariants.some((v) => normalizeVariantLabel(v.name ?? '') === normalizedBikeVariant)
@@ -400,9 +393,8 @@ export default function BikeDetailPage({ params }: Props) {
 
     const variantRows: BikeVariantRow[] = detailVariants.length > 0
         ? detailVariants.map((v, index: number) => {
-            const parsedPrice = parsePriceToPaise(v.price);
             const fallbackPrice = index === 0 ? (bike.price_min_paise ?? 0) : 0;
-            const effectivePrice = parsedPrice > 0 ? parsedPrice : fallbackPrice;
+            const effectivePrice = v.price_paise > 0 ? v.price_paise : fallbackPrice;
 
             return {
                 key: `${v.name ?? 'variant'}-${index}`,
@@ -415,17 +407,30 @@ export default function BikeDetailPage({ params }: Props) {
                 isCurrent: normalizeVariantLabel(v.name || '') === normalizeVariantLabel(currentVariantName),
             };
         })
-        : variants.map((v) => ({
-            key: v.id,
-            name: `${v.model} ${v.variant || ''}`.trim(),
-            priceLabel: formatPricePaise(v.price_min_paise),
-            fuelLabel: v.fuel_type === 'electric' ? 'Electric' : 'Petrol',
-            engineOrBatteryLabel: v.fuel_type === 'electric'
-                ? (v.range_km ? `${v.range_km} km range` : '--')
-                : (v.engine_cc ? `${v.engine_cc} cc` : '--'),
-            isCurrent: v.id === id,
-            href: v.id !== id ? `/bikes/${v.id}` : undefined,
-        }));
+        : variants.length > 0
+            ? variants.map((v) => ({
+                key: v.id,
+                name: `${v.model} ${v.variant || ''}`.trim(),
+                priceLabel: formatPricePaise(v.price_min_paise),
+                fuelLabel: v.fuel_type === 'electric' ? 'Electric' : 'Petrol',
+                engineOrBatteryLabel: v.fuel_type === 'electric'
+                    ? (v.range_km ? `${v.range_km} km range` : '--')
+                    : (v.engine_cc ? `${v.engine_cc} cc` : '--'),
+                isCurrent: v.id === id,
+                href: v.id !== id ? `/bikes/${v.id}` : undefined,
+            }))
+            : fallbackDetailVariant
+                ? [{
+                    key: 'default-variant',
+                    name: fallbackDetailVariant.name,
+                    priceLabel: formatPricePaise(fallbackDetailVariant.price_paise),
+                    fuelLabel: bike.fuel_type === 'electric' ? 'Electric' : 'Petrol',
+                    engineOrBatteryLabel: bike.fuel_type === 'electric'
+                        ? (bike.range_km ? `${bike.range_km} km range` : '--')
+                        : (bike.engine_cc ? `${bike.engine_cc} cc` : '--'),
+                    isCurrent: true,
+                }]
+                : []
 
     // Image fallback chain
     const brandId = brandNameToId(bike.make, '2w');
@@ -1145,7 +1150,10 @@ export default function BikeDetailPage({ params }: Props) {
                 exShowroomPaise={bike.price_min_paise ?? 0}
                 fuelType={bike.fuel_type === 'electric' ? 'electric' : 'petrol'}
                 engineCc={bike.engine_cc}
-                variants={detailVariants}
+                variants={onRoadVariants.map((variant) => ({
+                    name: variant.name,
+                    price: variant.price_paise > 0 ? String(variant.price_paise / 100) : '',
+                }))}
                 brandColor="#2563eb"
             />
             <SiteFooter />

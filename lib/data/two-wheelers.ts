@@ -9,6 +9,7 @@ import brandData from '@/lib/data/brand-models.json'
 import { brandNameToId, modelToSlug } from '@/lib/utils/brand-model-images'
 import { getModelEnrichment } from '@/lib/data/2w-brand-data'
 import { TWO_WHEELER_MODEL_MILEAGE } from '@/lib/data/2w-model-mileage'
+import { defaultTwoWheelerVariantName, normalizeTwoWheelerVariants } from '@/lib/utils/two-wheeler-variants'
 import vehicleImageUrls from '@/public/data/vehicle-image-urls.json'
 
 const NOW = new Date().toISOString()
@@ -105,7 +106,10 @@ function buildTwoWheelerEntry(
         brochure_url:            null,
         bs6_compliant:           true,
         fame_subsidy_eligible:   fuelType === 'electric',
-        all_variants:            enrichment?.all_variants ?? [],
+        all_variants:            normalizeTwoWheelerVariants(enrichment?.all_variants, {
+            name: defaultTwoWheelerVariantName(model, enrichment?.variant),
+            price_paise: enrichment?.ex_showroom_price_paise ?? 0,
+        }),
         wheelbase_mm:            enrichment?.wheelbase_mm ?? null,
         length_mm:               enrichment?.length_mm ?? null,
         width_mm:                enrichment?.width_mm ?? null,

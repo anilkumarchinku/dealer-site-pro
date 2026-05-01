@@ -1,4 +1,5 @@
 import type { TwoWheelerVehicle } from "@/lib/types/two-wheeler"
+import { defaultTwoWheelerVariantName, normalizeTwoWheelerVariants } from "@/lib/utils/two-wheeler-variants"
 
 interface Props { vehicle: TwoWheelerVehicle }
 
@@ -29,6 +30,10 @@ interface SectionBlock {
 
 export function FullSpecsSection({ vehicle }: Props) {
     const isElectric = vehicle.fuel_type === "electric"
+    const visibleVariants = normalizeTwoWheelerVariants(vehicle.all_variants, {
+        name: defaultTwoWheelerVariantName(vehicle.model, vehicle.variant),
+        price_paise: vehicle.ex_showroom_price_paise,
+    })
 
     const sections: SectionBlock[] = [
         {
@@ -70,7 +75,7 @@ export function FullSpecsSection({ vehicle }: Props) {
         },
     ]
 
-    const hasVariants = vehicle.all_variants && vehicle.all_variants.length > 1
+    const hasVariants = visibleVariants.length > 0
 
     // Check if any section has at least one visible row
     const visibleSections = sections.filter(s =>
@@ -103,11 +108,13 @@ export function FullSpecsSection({ vehicle }: Props) {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {vehicle.all_variants!.map((v, i) => (
+                                    {visibleVariants.map((v, i) => (
                                         <tr key={i} className="border-b border-border/50 last:border-b-0">
                                             <td className="py-2.5 text-muted-foreground">{v.name}</td>
                                             <td className="py-2.5 font-medium text-right">
-                                                ₹{(v.price_paise / 100).toLocaleString("en-IN")}
+                                                {v.price_paise > 0
+                                                    ? `₹${(v.price_paise / 100).toLocaleString("en-IN")}`
+                                                    : "Price on request"}
                                             </td>
                                         </tr>
                                     ))}

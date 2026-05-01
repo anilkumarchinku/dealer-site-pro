@@ -57,6 +57,9 @@ describe('catalog DB row parsing', () => {
             is_featured: true,
             status: 'active',
         })
+        expect(vehicle.all_variants).toEqual([
+            { name: '450X Standard', price_paise: 14500000 },
+        ])
     })
 
     it('classifies petrol scooters from body type and defaults invalid mileage safely', () => {

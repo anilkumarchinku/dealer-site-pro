@@ -9,6 +9,7 @@ import 'server-only'
 import { createClient } from '@supabase/supabase-js'
 import type { TwoWheelerVehicle } from '@/lib/types/two-wheeler'
 import type { ThreeWheelerVehicle } from '@/lib/types/three-wheeler'
+import { defaultTwoWheelerVariantName, normalizeTwoWheelerVariants } from '@/lib/utils/two-wheeler-variants'
 
 export type VehicleCatalogDbRow = {
     id: string
@@ -176,6 +177,10 @@ export function twRowToVehicle(row: VehicleCatalogDbRow, dealerId: string): TwoW
         fame_subsidy_eligible:   isElectric,
         charging_time_hours:     null,
         battery_warranty_years:  null,
+        all_variants:            normalizeTwoWheelerVariants([], {
+            name: defaultTwoWheelerVariantName(row.model, row.variant),
+            price_paise: row.price_min_paise ?? 0,
+        }),
         description:             null,
         features:                [],
         video_url:               null,

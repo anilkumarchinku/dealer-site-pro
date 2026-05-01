@@ -6,6 +6,7 @@ import {
     modelToSlug,
 } from '@/lib/utils/brand-model-images'
 import { isDiscontinuedTwoWheeler } from '@/lib/utils/two-wheeler-source-status'
+import { defaultTwoWheelerVariantName, normalizeTwoWheelerVariants } from '@/lib/utils/two-wheeler-variants'
 import {
     parseBatteryKwh,
     parseMileage,
@@ -52,7 +53,7 @@ interface RawVehicle {
     source_section?: string
     description?: string
     features?: string[]
-    variants?: { name: string; price: string }[]
+    variants?: { name?: string; variant_name?: string; price?: string | number; price_paise?: number }[]
     colors?: { name: string; hex: string }[]
     technical_specifications?: Record<string, string | undefined>
     engine_details?: Record<string, string | undefined>
@@ -207,6 +208,10 @@ export function findTwoWheelerCatalogVehicleById(id: string) {
             if (isDiscontinuedTwoWheeler(vehicle.source_section)) return null
 
             const built = buildTwoWheelerBase(raw.brand, raw.brandId, vehicle, i, scooterModels, electricBrandIds)
+            const variants = normalizeTwoWheelerVariants(vehicle.variants, {
+                name: defaultTwoWheelerVariantName(built.model, built.variant),
+                price_paise: built.price_min_paise,
+            })
             return {
                 id: built.id,
                 make: built.make,
@@ -230,7 +235,10 @@ export function findTwoWheelerCatalogVehicleById(id: string) {
                 transmission: vehicle.transmission ?? null,
                 description: vehicle.description ?? null,
                 features: vehicle.features ?? [],
-                variants: vehicle.variants ?? [],
+                variants: variants.map((variant) => ({
+                    name: variant.name,
+                    price: variant.price_paise > 0 ? String(variant.price_paise / 100) : '',
+                })),
                 colors: vehicle.colors ?? [],
                 technical_specifications: vehicle.technical_specifications ?? {},
             }

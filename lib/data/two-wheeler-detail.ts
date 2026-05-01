@@ -4,6 +4,7 @@ import type { TwoWheelerVehicle } from '@/lib/types/two-wheeler'
 import { getModelEnrichment } from '@/lib/data/2w-brand-data'
 import { brandNameToId, getScrapedImageFallback } from '@/lib/utils/brand-model-images'
 import { fetchTwoWheelerColorGallery } from '@/lib/data/two-wheeler-gallery'
+import { defaultTwoWheelerVariantName, normalizeTwoWheelerVariants } from '@/lib/utils/two-wheeler-variants'
 
 function normalizeColorName(value: string): string {
     return value.toLowerCase().replace(/[^a-z0-9]+/g, '')
@@ -16,9 +17,21 @@ function uniqueStrings(values: string[]): string[] {
 export function hydrateTwoWheelerWithJson(vehicle: TwoWheelerVehicle): TwoWheelerVehicle {
     const brandId = brandNameToId(vehicle.brand, '2w')
     const enrichment = getModelEnrichment(brandId, vehicle.model)
-    if (!enrichment) return vehicle
+    const fallbackVariant = {
+        name: defaultTwoWheelerVariantName(vehicle.model, vehicle.variant),
+        price_paise: vehicle.ex_showroom_price_paise,
+    }
+    if (!enrichment) {
+        return {
+            ...vehicle,
+            all_variants: normalizeTwoWheelerVariants(vehicle.all_variants, fallbackVariant),
+        }
+    }
 
     const fallbackImage = getScrapedImageFallback('2w', brandId, vehicle.model)
+    const variantSource = vehicle.all_variants && vehicle.all_variants.length > 0
+        ? vehicle.all_variants
+        : enrichment.all_variants
 
     return {
         ...vehicle,
@@ -35,7 +48,7 @@ export function hydrateTwoWheelerWithJson(vehicle: TwoWheelerVehicle): TwoWheele
         images: vehicle.images.length > 0 ? vehicle.images : (fallbackImage ? [fallbackImage] : []),
         description: vehicle.description ?? enrichment.description ?? null,
         features: vehicle.features.length > 0 ? vehicle.features : enrichment.features,
-        all_variants: vehicle.all_variants && vehicle.all_variants.length > 0 ? vehicle.all_variants : enrichment.all_variants,
+        all_variants: normalizeTwoWheelerVariants(variantSource, fallbackVariant),
         wheelbase_mm: vehicle.wheelbase_mm ?? enrichment.wheelbase_mm ?? null,
         length_mm: vehicle.length_mm ?? enrichment.length_mm ?? null,
         width_mm: vehicle.width_mm ?? enrichment.width_mm ?? null,
