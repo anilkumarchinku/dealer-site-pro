@@ -29,9 +29,16 @@ export function hydrateTwoWheelerWithJson(vehicle: TwoWheelerVehicle): TwoWheele
     }
 
     const fallbackImage = getScrapedImageFallback('2w', brandId, vehicle.model)
-    const variantSource = vehicle.all_variants && vehicle.all_variants.length > 0
-        ? vehicle.all_variants
-        : enrichment.all_variants
+    const vehicleVariants = normalizeTwoWheelerVariants(vehicle.all_variants)
+    const enrichmentVariants = normalizeTwoWheelerVariants(enrichment.all_variants)
+    const hasGeneratedFallbackVariant =
+        vehicleVariants.length === 1 &&
+        vehicleVariants[0].name === fallbackVariant.name &&
+        vehicleVariants[0].price_paise === fallbackVariant.price_paise
+    const variantSource = enrichmentVariants.length > 0 &&
+        (hasGeneratedFallbackVariant || enrichmentVariants.length > vehicleVariants.length)
+        ? enrichmentVariants
+        : vehicleVariants
 
     return {
         ...vehicle,

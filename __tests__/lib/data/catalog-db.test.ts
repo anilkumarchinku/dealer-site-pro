@@ -1,8 +1,41 @@
+import { vi } from 'vitest'
 import {
     thwRowToVehicle,
     twRowToVehicle,
     type VehicleCatalogDbRow,
 } from '@/lib/data/catalog-db'
+import { hydrateTwoWheelerWithJson } from '@/lib/data/two-wheeler-detail'
+
+vi.mock('@/lib/data/two-wheeler-gallery', () => ({
+    fetchTwoWheelerColorGallery: vi.fn(),
+}))
+
+vi.mock('@/lib/data/2w-brand-data', () => ({
+    getModelEnrichment: vi.fn(() => ({
+        engine_cc: null,
+        mileage_kmpl: null,
+        top_speed_kmph: 90,
+        ex_showroom_price_paise: 14690700,
+        range_km: 126,
+        battery_kwh: null,
+        colors: [],
+        features: [],
+        description: null,
+        max_power: '6.4 kW',
+        torque: '26 Nm',
+        variant: '450X',
+        all_variants: [
+            { name: '450X 2.9 kWh', price_paise: 14690700 },
+            { name: '450X 3.7 kWh', price_paise: 15740300 },
+        ],
+        stock_status: 'available',
+        transmission: 'Automatic',
+        wheelbase_mm: null,
+        length_mm: null,
+        width_mm: null,
+        height_mm: null,
+    })),
+}))
 
 function catalogRow(overrides: Partial<VehicleCatalogDbRow>): VehicleCatalogDbRow {
     return {
@@ -59,6 +92,18 @@ describe('catalog DB row parsing', () => {
         })
         expect(vehicle.all_variants).toEqual([
             { name: '450X Standard', price_paise: 14500000 },
+        ])
+    })
+
+    it('hydrates DB fallback variants with richer two-wheeler JSON variants', () => {
+        const vehicle = twRowToVehicle(catalogRow({
+            fuel_type: 'Electric',
+            price_min_paise: 14500000,
+        }), 'dealer-1')
+
+        expect(hydrateTwoWheelerWithJson(vehicle).all_variants).toEqual([
+            { name: '450X 2.9 kWh', price_paise: 14690700 },
+            { name: '450X 3.7 kWh', price_paise: 15740300 },
         ])
     })
 
