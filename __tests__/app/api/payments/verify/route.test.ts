@@ -201,6 +201,49 @@ describe('POST /api/payments/verify', () => {
         expect(supabase.updates).toEqual([])
     })
 
+    it('uses the admin client for idempotency reads and writes', async () => {
+        const routeSupabase = createSupabaseMock()
+        const adminSupabase = createSupabaseMock()
+        vi.mocked(createRouteClient).mockResolvedValue(routeSupabase.client as never)
+        vi.mocked(createAdminClient).mockReturnValue(adminSupabase.client as never)
+        vi.mocked(verifyPaymentSignature).mockReturnValue(true)
+
+        const response = await POST(paymentRequest(validBody()))
+
+        expect(response.status).toBe(200)
+        await expect(response.json()).resolves.toEqual({
+            success: true,
+            message: 'Payment verified and subscription activated',
+        })
+        expect(adminSupabase.client.from).toHaveBeenCalledWith('payment_idempotency_log')
+        expect(adminSupabase.client.from.mock.calls.filter(([table]) => table === 'payment_idempotency_log')).toHaveLength(2)
+        expect(routeSupabase.client.from).not.toHaveBeenCalledWith('payment_idempotency_log')
+        expect(routeSupabase.updates).toEqual([
+            {
+                table: 'domain_subscriptions',
+                payload: { status: 'active' },
+            },
+            {
+                table: 'dealer_domains',
+                payload: { status: 'active' },
+            },
+        ])
+        expect(adminSupabase.inserts).toEqual([
+            {
+                table: 'payment_idempotency_log',
+                payload: expect.objectContaining({
+                    idempotency_key: 'idem_1',
+                    payment_id: 'pay_1',
+                    subscription_id: 'sub_1',
+                    response: {
+                        success: true,
+                        message: 'Payment verified and subscription activated',
+                    },
+                }),
+            },
+        ])
+    })
+
     it('does not process payments when the idempotency check fails', async () => {
         const supabase = createSupabaseMock({
             existingRecordError: { message: 'database unavailable' },

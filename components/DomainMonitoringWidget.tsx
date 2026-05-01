@@ -26,7 +26,7 @@ export default function DomainMonitoringWidget({ dealerId }: { dealerId: string 
 
     async function fetchStats() {
         try {
-            const response = await fetch(`/api/domains/stats?dealer_id=${dealerId}`)
+            const response = await fetch('/api/domains/stats')
             const data = await response.json()
 
             if (data.success) {

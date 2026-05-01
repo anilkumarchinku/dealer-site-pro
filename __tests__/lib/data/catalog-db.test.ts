@@ -1,5 +1,6 @@
 import { vi } from 'vitest'
 import {
+    resolveThwCatalogMake,
     thwRowToVehicle,
     twRowToVehicle,
     type VehicleCatalogDbRow,
@@ -63,6 +64,10 @@ function catalogRow(overrides: Partial<VehicleCatalogDbRow>): VehicleCatalogDbRo
 }
 
 describe('catalog DB row parsing', () => {
+    it('normalizes punctuation-light three-wheeler brand slugs to catalog makes', () => {
+        expect(resolveThwCatalogMake('Bajaj Auto 3w')).toBe('Bajaj')
+    })
+
     it('maps electric two-wheeler catalog rows without losing pricing or media fields', () => {
         const vehicle = twRowToVehicle(catalogRow({
             fuel_type: 'Electric',

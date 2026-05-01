@@ -9,7 +9,7 @@
  */
 
 import { NextResponse } from 'next/server'
-import { getOptionalEnv } from '@/lib/env'
+import { getOptionalEnv, type EnvKey } from '@/lib/env'
 import { createAdminClient } from '@/lib/supabase-server'
 
 export const dynamic = 'force-dynamic'
@@ -18,10 +18,21 @@ export async function GET() {
     const checks: Record<string, string> = {}
     let httpStatus = 200
 
-    // Check env vars
-    checks.supabase_url      = getOptionalEnv('NEXT_PUBLIC_SUPABASE_URL')      ? 'ok' : 'missing'
-    checks.supabase_anon_key = getOptionalEnv('NEXT_PUBLIC_SUPABASE_ANON_KEY') ? 'ok' : 'missing'
-    checks.razorpay_key      = getOptionalEnv('NEXT_PUBLIC_RAZORPAY_KEY_ID')   ? 'ok' : 'missing'
+    const envChecks: Array<[string, EnvKey]> = [
+        ['supabase_url', 'NEXT_PUBLIC_SUPABASE_URL'],
+        ['supabase_anon_key', 'NEXT_PUBLIC_SUPABASE_ANON_KEY'],
+        ['supabase_service_role', 'SUPABASE_SERVICE_ROLE_KEY'],
+        ['base_domain', 'NEXT_PUBLIC_BASE_DOMAIN'],
+        ['razorpay_key', 'NEXT_PUBLIC_RAZORPAY_KEY_ID'],
+        ['razorpay_secret', 'RAZORPAY_KEY_SECRET'],
+        ['razorpay_webhook_secret', 'RAZORPAY_WEBHOOK_SECRET'],
+        ['vercel_token', 'VERCEL_TOKEN'],
+        ['vercel_main_project', 'VERCEL_MAIN_PROJECT_ID'],
+    ]
+
+    for (const [label, key] of envChecks) {
+        checks[label] = getOptionalEnv(key) ? 'ok' : 'missing'
+    }
 
     // Check live DB connectivity
     try {

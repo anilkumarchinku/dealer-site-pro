@@ -361,7 +361,7 @@ export default function SettingsPage() {
         const res = await fetch("/api/domains/verify-dns", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ domainId, domain: savedDomain }),
+            body: JSON.stringify({ domainId, domain: savedDomain, dealerId }),
         });
         const json = await res.json();
         setVerifying(false);

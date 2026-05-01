@@ -83,7 +83,7 @@ export default function ConnectCustomDomainModal({ isOpen, onClose, dealerId, si
             const response = await fetch('/api/domains/verify-dns', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ domainId, domain }),
+                body: JSON.stringify({ domainId, domain, dealerId }),
             })
             const result = await response.json()
 

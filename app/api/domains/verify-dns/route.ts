@@ -62,8 +62,9 @@ export async function POST(request: Request) {
         // Verify DNS
         const verification = await verifyCustomDomain(storedDomainName)
 
-        // Save verification results to domain_verifications
-        await supabase.from('domain_verifications').insert(
+        // Save verification results for dealer visibility/history. This is
+        // useful, but must not block the actual domain status update.
+        const { error: verificationLogError } = await supabase.from('domain_verifications').insert(
             verification.records.map(record => ({
                 domain_id: domainId,
                 record_type: record.type,
@@ -74,6 +75,9 @@ export async function POST(request: Request) {
                 error_message: record.error
             }))
         )
+        if (verificationLogError) {
+            console.warn('[verify-dns] Failed to record DNS verification history:', verificationLogError)
+        }
 
         // Update dealer_domains status
         if (verification.allVerified) {

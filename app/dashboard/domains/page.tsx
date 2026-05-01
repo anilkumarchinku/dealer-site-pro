@@ -70,7 +70,7 @@ export default function DomainSettingsPage() {
     async function fetchDomains() {
         if (!dealerId) return
         try {
-            const response = await fetch(`/api/domains?dealer_id=${dealerId}`)
+            const response = await fetch('/api/domains')
             const data = await response.json()
             if (data.success) {
                 setDomains(data.domains)
@@ -92,6 +92,7 @@ export default function DomainSettingsPage() {
                 body: JSON.stringify({
                     domainId: pendingCustomDomain.id,
                     domain: pendingCustomDomain.domain,
+                    dealerId,
                 }),
             })
             if (response.ok) {

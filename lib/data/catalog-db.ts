@@ -106,21 +106,34 @@ const THW_MAKE_MAP: Record<string, string> = {
     'Greaves Electric Mobility': 'Greaves',
 }
 
-function resolveTwMake(brand: string): string {
+function normalizeBrandText(value: string): string {
+    return value
+        .toLowerCase()
+        .replace(/&/g, 'and')
+        .replace(/[^a-z0-9]+/g, ' ')
+        .replace(/\s+/g, ' ')
+        .trim()
+}
+
+export function resolveTwCatalogMake(brand: string): string {
     if (TW_MAKE_MAP[brand]) return TW_MAKE_MAP[brand]
+    const normalizedBrand = normalizeBrandText(brand)
     // Fallback: try partial match
     for (const [key, val] of Object.entries(TW_MAKE_MAP)) {
-        if (key.toLowerCase().includes(brand.toLowerCase()) || brand.toLowerCase().includes(key.toLowerCase())) {
+        const normalizedKey = normalizeBrandText(key)
+        if (normalizedKey.includes(normalizedBrand) || normalizedBrand.includes(normalizedKey)) {
             return val
         }
     }
     return brand
 }
 
-function resolveThwMake(brand: string): string {
+export function resolveThwCatalogMake(brand: string): string {
     if (THW_MAKE_MAP[brand]) return THW_MAKE_MAP[brand]
+    const normalizedBrand = normalizeBrandText(brand)
     for (const [key, val] of Object.entries(THW_MAKE_MAP)) {
-        if (key.toLowerCase().includes(brand.toLowerCase()) || brand.toLowerCase().includes(key.toLowerCase())) {
+        const normalizedKey = normalizeBrandText(key)
+        if (normalizedKey.includes(normalizedBrand) || normalizedBrand.includes(normalizedKey)) {
             return val
         }
     }
@@ -256,7 +269,7 @@ export async function getTwoWheelerCatalogFromDB(
     const supabase = getSupabase()
     if (!supabase) return []
 
-    const dbMake = resolveTwMake(brand)
+    const dbMake = resolveTwCatalogMake(brand)
 
     const { data, error } = await supabase
         .from('tw_catalog')
@@ -271,6 +284,24 @@ export async function getTwoWheelerCatalogFromDB(
     return data.map(row => twRowToVehicle(row, dealerId))
 }
 
+export async function getTwoWheelerCatalogVehicleById(
+    id: string,
+    dealerId: string
+): Promise<TwoWheelerVehicle | null> {
+    const supabase = getSupabase()
+    if (!supabase) return null
+
+    const { data, error } = await supabase
+        .from('tw_catalog')
+        .select('*')
+        .eq('id', id)
+        .eq('is_active', true)
+        .maybeSingle()
+
+    if (error || !data) return null
+    return twRowToVehicle(data, dealerId)
+}
+
 /**
  * Fetch 3W catalog for a brand from thw_catalog table.
  */
@@ -281,7 +312,7 @@ export async function getThreeWheelerCatalogFromDB(
     const supabase = getSupabase()
     if (!supabase) return []
 
-    const dbMake = resolveThwMake(brand)
+    const dbMake = resolveThwCatalogMake(brand)
 
     const { data, error } = await supabase
         .from('thw_catalog')
@@ -294,4 +325,22 @@ export async function getThreeWheelerCatalogFromDB(
 
     if (error || !data) return []
     return data.map(row => thwRowToVehicle(row, dealerId))
+}
+
+export async function getThreeWheelerCatalogVehicleById(
+    id: string,
+    dealerId: string
+): Promise<ThreeWheelerVehicle | null> {
+    const supabase = getSupabase()
+    if (!supabase) return null
+
+    const { data, error } = await supabase
+        .from('thw_catalog')
+        .select('*')
+        .eq('id', id)
+        .eq('is_active', true)
+        .maybeSingle()
+
+    if (error || !data) return null
+    return thwRowToVehicle(data, dealerId)
 }

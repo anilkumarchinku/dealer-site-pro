@@ -109,12 +109,24 @@ export default function WebsiteLiveBanner({
                     .maybeSingle()
                 setDeployment(dep ?? null)
 
-                // Check for custom domain (for checklist)
-                const { data: doms } = await supabase
-                    .from('domains')
-                    .select('type')
-                    .eq('dealer_id', dealerId)
-                if (doms) setHasCustomDomain(doms.some(d => d.type === 'custom' || d.type === 'managed'))
+                // Check for custom domain (for checklist), preferring the
+                // current routing table and falling back to legacy records.
+                const [{ data: dealerDomains }, { data: legacyDomains }] = await Promise.all([
+                    supabase
+                        .from('dealer_domains')
+                        .select('domain_type, custom_domain')
+                        .eq('dealer_id', dealerId),
+                    supabase
+                        .from('domains')
+                        .select('type')
+                        .eq('dealer_id', dealerId),
+                ])
+                setHasCustomDomain(
+                    (dealerDomains ?? []).some(d =>
+                        !!d.custom_domain && (d.domain_type === 'custom' || d.domain_type === 'managed')
+                    ) ||
+                    (legacyDomains ?? []).some(d => d.type === 'custom' || d.type === 'managed')
+                )
             } finally {
                 setLoading(false)
             }

@@ -2,7 +2,7 @@ import { POST as connectCustomDomain } from '@/app/api/domains/connect-custom/ro
 import { POST as removeCustomDomain } from '@/app/api/domains/remove-custom/route'
 import { recordDomainDeploymentOperation } from '@/lib/services/domain-deployment-operation-service'
 import { isValidDomain } from '@/lib/services/dns-verification-service'
-import { addDomainToProject, removeDomainFromMainProject } from '@/lib/services/vercel-service'
+import { addDomainToProject, removeDomainFromMainProject, removeDomainFromProject } from '@/lib/services/vercel-service'
 import { requireAuth, requireDealerOwnership } from '@/lib/supabase-server'
 
 vi.mock('@/lib/supabase-server', () => ({
@@ -23,6 +23,7 @@ vi.mock('@/lib/services/vercel-service', () => ({
     addDomainToProject: vi.fn(),
     registerDomainOnMainProject: vi.fn(),
     removeDomainFromMainProject: vi.fn(),
+    removeDomainFromProject: vi.fn(),
 }))
 
 function jsonRequest(body: unknown) {
@@ -80,11 +81,25 @@ function createConnectSupabaseMock() {
 
 function createRemoveSupabaseMock(dbError: { message: string } | null = null) {
     return {
-        from: vi.fn(() => {
+        from: vi.fn((table: string) => {
             const builder = {
                 error: dbError,
+                select: vi.fn(() => builder),
                 delete: vi.fn(() => builder),
                 eq: vi.fn(() => builder),
+                single: vi.fn(async () => {
+                    if (table === 'dealers') {
+                        return {
+                            data: {
+                                sells_new_cars: false,
+                                sells_used_cars: true,
+                                slug: 'dealer-one',
+                            },
+                            error: null,
+                        }
+                    }
+                    return { data: null, error: null }
+                }),
             }
             return builder
         }),
@@ -135,7 +150,7 @@ describe('domain provider failure behavior', () => {
             supabase: supabase as never,
             errorResponse: null,
         })
-        vi.mocked(removeDomainFromMainProject).mockRejectedValue(new Error('Vercel unavailable'))
+        vi.mocked(removeDomainFromProject).mockRejectedValue(new Error('Vercel unavailable'))
 
         const response = await removeCustomDomain(jsonRequest({
             dealerId: 'dealer_1',
@@ -145,10 +160,54 @@ describe('domain provider failure behavior', () => {
 
         await expect(response.json()).resolves.toEqual({ success: true })
         expect(response.status).toBe(200)
+        expect(removeDomainFromProject).toHaveBeenCalledWith('dealer-one', 'dealer.example.com')
+        expect(removeDomainFromMainProject).not.toHaveBeenCalled()
         expect(recordDomainDeploymentOperation).toHaveBeenCalledWith(expect.objectContaining({
             operation: 'custom_domain_remove',
             status: 'provider_failed',
             providerStep: 'vercel',
         }))
+    })
+
+    it('removes first-hand dealer custom domains from the main Vercel project', async () => {
+        const supabase = {
+            from: vi.fn((table: string) => {
+                const builder = {
+                    select: vi.fn(() => builder),
+                    delete: vi.fn(() => builder),
+                    eq: vi.fn(() => builder),
+                    single: vi.fn(async () => {
+                        if (table === 'dealers') {
+                            return {
+                                data: {
+                                    sells_new_cars: true,
+                                    sells_used_cars: false,
+                                    slug: 'dealer-one',
+                                },
+                                error: null,
+                            }
+                        }
+                        return { data: null, error: null }
+                    }),
+                }
+                return builder
+            }),
+        }
+        vi.mocked(requireAuth).mockResolvedValue({
+            user: { id: 'user_1' },
+            supabase: supabase as never,
+            errorResponse: null,
+        })
+
+        const response = await removeCustomDomain(jsonRequest({
+            dealerId: 'dealer_1',
+            domainId: 'domain_1',
+            domain: 'dealer.example.com',
+        }))
+
+        await expect(response.json()).resolves.toEqual({ success: true })
+        expect(response.status).toBe(200)
+        expect(removeDomainFromMainProject).toHaveBeenCalledWith('dealer.example.com')
+        expect(removeDomainFromProject).not.toHaveBeenCalled()
     })
 })

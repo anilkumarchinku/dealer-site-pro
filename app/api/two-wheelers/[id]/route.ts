@@ -11,16 +11,37 @@ import {
     incrementTwoWheelerViews,
     updateTwoWheelerVehicle,
 } from '@/lib/db/two-wheelers'
-import { getTwoWheelerCatalog } from '@/lib/data/two-wheelers'
-import { getTwoWheelerCatalogFromDB } from '@/lib/data/catalog-db'
+import { getTwoWheelerCatalog, TWO_WHEELER_BRANDS } from '@/lib/data/two-wheelers'
+import { getTwoWheelerCatalogFromDB, getTwoWheelerCatalogVehicleById } from '@/lib/data/catalog-db'
 import { hydrateTwoWheelerDetail } from '@/lib/data/two-wheeler-detail'
 import { createVehicleDetailRouteHandlers } from '@/lib/services/vehicle-inventory-route-service'
+
+function sourceCatalogId(id: string): string | null {
+    return id.match(/^cat-2w-\d+-(.+)$/)?.[1] ?? null
+}
+
+async function getTwoWheelerDetailVehicleById(id: string, dealerId?: string) {
+    const inventoryVehicle = await getTwoWheelerVehicleById(id, dealerId)
+    if (inventoryVehicle || !dealerId) return inventoryVehicle
+
+    const catalogId = sourceCatalogId(id)
+    if (!catalogId) return null
+
+    const dbCatalogVehicle = await getTwoWheelerCatalogVehicleById(catalogId, dealerId)
+    if (dbCatalogVehicle) return { ...dbCatalogVehicle, id }
+
+    const fallbackCatalogVehicle = TWO_WHEELER_BRANDS
+        .flatMap((brand) => getTwoWheelerCatalog(brand, dealerId))
+        .find((vehicle) => vehicle.id === catalogId)
+
+    return fallbackCatalogVehicle ? { ...fallbackCatalogVehicle, id } : null
+}
 
 const handlers = createVehicleDetailRouteHandlers({
     vehicleType: 'two-wheeler',
     catalogPrefix: 'cat-2w',
     dbPrefix: 'tw-',
-    getVehicleById: getTwoWheelerVehicleById,
+    getVehicleById: getTwoWheelerDetailVehicleById,
     getVehicles: getTwoWheelerVehicles,
     getCatalogFromDB: getTwoWheelerCatalogFromDB,
     getFallbackCatalog: getTwoWheelerCatalog,

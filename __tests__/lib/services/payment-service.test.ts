@@ -132,6 +132,23 @@ describe('Payment Service', () => {
                 error: 'Payment service is not configured',
             })
         })
+
+        it('does not return mock subscriptions in production when plan IDs are missing', async () => {
+            vi.stubEnv('NODE_ENV', 'production')
+            vi.stubEnv('NEXT_PUBLIC_RAZORPAY_KEY_ID', 'rzp_live_test_key')
+            vi.stubEnv('RAZORPAY_KEY_SECRET', 'live_secret_key')
+            vi.stubEnv('RAZORPAY_PRO_PLAN_ID', '')
+            vi.stubEnv('RAZORPAY_PREMIUM_PLAN_ID', '')
+
+            await expect(createDomainSubscription({
+                dealerId: 'dealer_1',
+                tier: 'pro',
+                domainId: 'domain_1',
+            })).resolves.toEqual({
+                success: false,
+                error: 'Payment plan is not configured',
+            })
+        })
     })
 
     describe('Signature Verification Edge Cases', () => {

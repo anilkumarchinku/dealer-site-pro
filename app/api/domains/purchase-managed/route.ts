@@ -34,19 +34,27 @@ export async function POST(request: Request) {
             )
         }
 
-        // Create domain record
+        const expiresAt = new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString()
+
+        // Make the managed domain primary in the canonical routing table.
+        await authSupabase
+            .from('dealer_domains')
+            .update({ is_primary: false })
+            .eq('dealer_id', dealerId)
+
         const { data: newDomain, error: dbError } = await authSupabase
-            .from('domains')
+            .from('dealer_domains')
             .insert({
                 dealer_id: dealerId,
-                domain,
-                slug: domain.replace(/\./g, '-'),
-                type: 'managed',
+                custom_domain: domain,
+                domain_type: 'managed',
                 status: 'active', // Auto-configured, no verification needed
                 ssl_status: 'provisioning',
                 is_primary: true, // Make primary by default
+                dns_verified: true,
+                dns_verified_at: new Date().toISOString(),
                 registrar: 'cloudflare',
-                registration_expires_at: new Date(Date.now() + 365 * 24 * 60 * 60 * 1000).toISOString(), // 1 year
+                registration_expires_at: expiresAt,
                 auto_renew: true
             })
             .select()
@@ -60,12 +68,31 @@ export async function POST(request: Request) {
             )
         }
 
-        // Un-set previous primary domain
+        // Keep legacy dashboard-facing records compatible for older code paths.
         await authSupabase
             .from('domains')
             .update({ is_primary: false })
             .eq('dealer_id', dealerId)
-            .neq('id', newDomain.id)
+
+        const { error: legacyError } = await authSupabase
+            .from('domains')
+            .insert({
+                dealer_id: dealerId,
+                domain,
+                slug: domain.replace(/\./g, '-'),
+                type: 'managed',
+                status: 'active',
+                ssl_status: 'provisioning',
+                is_primary: true,
+                dns_verified_at: new Date().toISOString(),
+                registrar: 'cloudflare',
+                registration_expires_at: expiresAt,
+                auto_renew: true
+            })
+
+        if (legacyError) {
+            console.warn('Managed domain saved to dealer_domains but legacy domains sync failed:', legacyError)
+        }
 
         return NextResponse.json({
             success: true,

@@ -22,14 +22,21 @@ function patchRequest(body: unknown) {
     })
 }
 
-function createReviewAdminMock() {
+type ReviewAdminOptions = {
+    review?: { id: string; dealer_id: string } | null
+    reviewError?: { message: string } | null
+}
+
+function createReviewAdminMock(options: ReviewAdminOptions = {}) {
     const updates: unknown[] = []
     const builder = {
         select: vi.fn(() => builder),
         eq: vi.fn(() => builder),
         single: vi.fn(async () => ({
-            data: { id: 'review_1', dealer_id: 'dealer_1' },
-            error: null,
+            data: options.review === undefined
+                ? { id: 'review_1', dealer_id: 'dealer_1' }
+                : options.review,
+            error: options.reviewError ?? null,
         })),
         update: vi.fn((payload: unknown) => {
             updates.push(payload)
@@ -68,7 +75,32 @@ describe('PATCH /api/reviews', () => {
         }))
 
         expect(response.status).toBe(403)
+        expect(requireDealerOwnership).toHaveBeenCalledWith(
+            expect.anything(),
+            'user_1',
+            'dealer_1'
+        )
         expect(createAdminClient).not.toHaveBeenCalled()
+    })
+
+    it('does not approve a review outside the owned dealer', async () => {
+        const admin = createReviewAdminMock({ review: null })
+        vi.mocked(createAdminClient).mockReturnValue(admin.client as never)
+        vi.mocked(requireDealerOwnership).mockResolvedValue({
+            dealer: { id: 'dealer_1', slug: 'dealer' },
+            errorResponse: null,
+        } as never)
+
+        const response = await PATCH(patchRequest({
+            review_id: 'review_2',
+            dealer_id: 'dealer_1',
+        }))
+
+        expect(response.status).toBe(404)
+        await expect(response.json()).resolves.toEqual({
+            error: 'Review not found or access denied',
+        })
+        expect(admin.updates).toEqual([])
     })
 
     it('allows the owning dealer to approve their own review', async () => {

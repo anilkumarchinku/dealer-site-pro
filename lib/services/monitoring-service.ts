@@ -5,6 +5,7 @@
 
 import { createAdminClient } from '@/lib/supabase-server'
 import { sendDomainExpiryWarning } from './email-service'
+import { getDealerDomains } from './domain-service'
 
 export interface SSLStatus {
     domain: string
@@ -171,28 +172,23 @@ export async function monitorDomainExpiry() {
 export async function getMonitoringStats(dealerId: string) {
     const supabase = createAdminClient()
     try {
-        const { data: domains, error } = await supabase
-            .from('domains')
-            .select('*')
-            .eq('dealer_id', dealerId)
-
-        if (error) throw error
+        const domains = await getDealerDomains(dealerId, supabase)
 
         const stats = {
-            totalDomains: domains?.length || 0,
-            activeDomains: domains?.filter(d => d.status === 'active').length || 0,
-            sslHealthy: domains?.filter(d => d.ssl_status === 'active').length || 0,
-            expiringDomains: domains?.filter(d => {
+            totalDomains: domains.length,
+            activeDomains: domains.filter(d => d.status === 'active').length,
+            sslHealthy: domains.filter(d => d.ssl_status === 'active').length,
+            expiringDomains: domains.filter(d => {
                 if (!d.registration_expires_at) return false
                 const daysUntil = Math.floor(
                     (new Date(d.registration_expires_at).getTime() - Date.now()) / (1000 * 60 * 60 * 24)
                 )
                 return daysUntil <= 30
-            }).length || 0,
+            }).length,
             domainsByType: {
-                subdomain: domains?.filter(d => d.type === 'subdomain').length || 0,
-                custom: domains?.filter(d => d.type === 'custom').length || 0,
-                managed: domains?.filter(d => d.type === 'managed').length || 0
+                subdomain: domains.filter(d => d.type === 'subdomain').length,
+                custom: domains.filter(d => d.type === 'custom').length,
+                managed: domains.filter(d => d.type === 'managed').length
             }
         }
 

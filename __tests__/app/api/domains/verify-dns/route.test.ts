@@ -39,6 +39,44 @@ function supabaseWithStoredDomain(customDomain: string) {
     }
 }
 
+function supabaseWithVerificationLogFailure() {
+    const storedDomainBuilder = {
+        select: vi.fn(() => storedDomainBuilder),
+        eq: vi.fn(() => storedDomainBuilder),
+        single: vi.fn(async () => ({
+            data: {
+                id: 'domain_1',
+                dealer_id: 'dealer_1',
+                custom_domain: 'dealer.example.com',
+                subdomain_url: null,
+                subdomain: null,
+            },
+            error: null,
+        })),
+    }
+    const verificationBuilder = {
+        insert: vi.fn(async () => ({
+            error: { message: 'foreign key mismatch' },
+        })),
+    }
+    const updateBuilder = {
+        update: vi.fn(() => updateBuilder),
+        eq: vi.fn(() => updateBuilder),
+    }
+
+    return {
+        from: vi.fn((table: string) => {
+            if (table === 'domain_verifications') return verificationBuilder
+            if (table === 'dealer_domains' && storedDomainBuilder.single.mock.calls.length === 0) {
+                return storedDomainBuilder
+            }
+            return updateBuilder
+        }),
+        verificationBuilder,
+        updateBuilder,
+    }
+}
+
 describe('POST /api/domains/verify-dns', () => {
     beforeEach(() => {
         vi.clearAllMocks()
@@ -68,5 +106,52 @@ describe('POST /api/domains/verify-dns', () => {
             error: 'Domain name does not match the stored domain record',
         })
         expect(verifyCustomDomain).not.toHaveBeenCalled()
+    })
+
+    it('updates the domain status even when verification history logging fails', async () => {
+        const supabase = supabaseWithVerificationLogFailure()
+        vi.mocked(requireAuth).mockResolvedValue({
+            user: { id: 'user_1' },
+            supabase,
+            errorResponse: null,
+        } as never)
+        vi.mocked(verifyCustomDomain).mockResolvedValue({
+            success: true,
+            allVerified: true,
+            message: 'Domain verified successfully!',
+            records: [
+                {
+                    type: 'A',
+                    name: 'dealer.example.com',
+                    expectedValue: '76.76.21.21',
+                    actualValue: '76.76.21.21',
+                    isVerified: true,
+                },
+                {
+                    type: 'CNAME',
+                    name: 'www.dealer.example.com',
+                    expectedValue: 'cname.vercel-dns.com',
+                    actualValue: 'cname.vercel-dns.com',
+                    isVerified: true,
+                },
+            ],
+        })
+
+        const response = await POST(dnsRequest({
+            domainId: 'domain_1',
+            dealerId: 'dealer_1',
+            domain: 'dealer.example.com',
+        }))
+
+        expect(response.status).toBe(200)
+        await expect(response.json()).resolves.toMatchObject({
+            success: true,
+            verification: { allVerified: true },
+        })
+        expect(supabase.verificationBuilder.insert).toHaveBeenCalled()
+        expect(supabase.updateBuilder.update).toHaveBeenCalledWith(expect.objectContaining({
+            status: 'active',
+            dns_verified: true,
+        }))
     })
 })

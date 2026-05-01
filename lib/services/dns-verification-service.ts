@@ -32,9 +32,10 @@ export async function verifyCustomDomain(
 ): Promise<VerificationResult> {
     const records: DNSRecord[] = []
 
-    // Expected values (replace with your actual Vercel IP or CNAME)
     const EXPECTED_CNAME = env.cnameTarget
-    const EXPECTED_A_RECORD = '76.76.21.21' // Vercel's IP (example)
+    const EXPECTED_A_RECORD = '76.76.21.21'
+    const rootDomain = domain.replace(/^www\./, '')
+    const wwwDomain = `www.${rootDomain}`
 
     // Only run DNS verification on server-side
     if (typeof window !== 'undefined') {
@@ -51,34 +52,15 @@ export async function verifyCustomDomain(
         // eslint-disable-next-line @typescript-eslint/no-require-imports
         const dns = (await import(/* webpackIgnore: true */ 'dns/promises')).default
 
-        // Check CNAME for root domain
-        const cnameRecord: DNSRecord = {
-            type: 'CNAME',
-            name: domain,
-            expectedValue: EXPECTED_CNAME,
-            isVerified: false
-        }
-
-        try {
-            const cnameResults = await dns.resolveCname(domain)
-            cnameRecord.actualValue = cnameResults[0]
-            cnameRecord.isVerified = cnameResults[0] === EXPECTED_CNAME
-        } catch {
-            cnameRecord.error = 'CNAME record not found'
-        }
-
-        records.push(cnameRecord)
-
-        // Check A record as alternative
         const aRecord: DNSRecord = {
             type: 'A',
-            name: domain,
+            name: rootDomain,
             expectedValue: EXPECTED_A_RECORD,
             isVerified: false
         }
 
         try {
-            const aResults = await dns.resolve4(domain)
+            const aResults = await dns.resolve4(rootDomain)
             aRecord.actualValue = aResults[0]
             aRecord.isVerified = aResults[0] === EXPECTED_A_RECORD
         } catch {
@@ -87,8 +69,24 @@ export async function verifyCustomDomain(
 
         records.push(aRecord)
 
-        // Domain is verified if either CNAME or A record is correct
-        const allVerified = cnameRecord.isVerified || aRecord.isVerified
+        const cnameRecord: DNSRecord = {
+            type: 'CNAME',
+            name: wwwDomain,
+            expectedValue: EXPECTED_CNAME,
+            isVerified: false
+        }
+
+        try {
+            const cnameResults = await dns.resolveCname(wwwDomain)
+            cnameRecord.actualValue = cnameResults[0]
+            cnameRecord.isVerified = cnameResults[0] === EXPECTED_CNAME
+        } catch {
+            cnameRecord.error = 'CNAME record not found'
+        }
+
+        records.push(cnameRecord)
+
+        const allVerified = aRecord.isVerified && cnameRecord.isVerified
 
         return {
             success: true,
