@@ -519,7 +519,7 @@ export default function WelcomeClient({ cars }: WelcomeClientProps) {
                                 { name: 'Hero MotoCorp', logo: '/assets/logos/2w/hero-motocorp.svg' },
                                 { name: 'Bajaj Auto',    logo: '/assets/logos/2w/bajaj-auto.svg' },
                                 { name: 'TVS Motor',     logo: '/assets/logos/2w/tvs-motor.svg' },
-                                { name: 'Honda',         logo: '/assets/logos/2w/honda-motorcycles.svg' },
+                                { name: 'Honda',         logo: '/data/brand-logos/honda-hmsi.png' },
                                 { name: 'Yamaha',        logo: '/assets/logos/2w/yamaha.svg' },
                                 { name: 'KTM',           logo: '/assets/logos/2w/ktm.svg' },
                                 { name: 'Suzuki',        logo: '/assets/logos/2w/suzuki-motorcycle.svg' },
@@ -567,18 +567,26 @@ export default function WelcomeClient({ cars }: WelcomeClientProps) {
                         </div>
                         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
                             {[
-                                { name: 'Bajaj Qute',     make: 'Bajaj Auto (3W)', desc: 'Passenger Auto',  emoji: '🛺', color: 'bg-blue-500/8' },
-                                { name: 'TVS King',       make: 'TVS King',        desc: 'Cargo & Passenger', emoji: '🛺', color: 'bg-red-500/8' },
-                                { name: 'Mahindra Treo',  make: 'Mahindra (3W)',   desc: 'Electric Auto',   emoji: '⚡', color: 'bg-green-500/8' },
-                                { name: 'Piaggio Ape',    make: 'Piaggio Ape',     desc: 'Cargo Vehicle',   emoji: '🚛', color: 'bg-amber-500/8' },
-                                { name: 'Atul Gemini',    make: 'Atul Auto',       desc: 'E-Rickshaw',      emoji: '🔋', color: 'bg-purple-500/8' },
+                                { name: 'Bajaj Qute',     make: 'Bajaj Auto (3W)', desc: 'Passenger Auto',    logo: '/data/brand-logos/bajaj-auto-3w.png', color: 'bg-blue-500/8' },
+                                { name: 'TVS King',       make: 'TVS King',        desc: 'Cargo & Passenger', logo: '/data/brand-logos/tvs-king.png',      color: 'bg-red-500/8' },
+                                { name: 'Mahindra Treo',  make: 'Mahindra (3W)',   desc: 'Electric Auto',     logo: '/data/brand-logos/mahindra-3w.png', color: 'bg-green-500/8' },
+                                { name: 'Piaggio Ape',    make: 'Piaggio Ape',     desc: 'Cargo Vehicle',     logo: '/data/brand-logos/piaggio-ape.png', color: 'bg-amber-500/8' },
+                                { name: 'Atul Gemini',    make: 'Atul Auto',       desc: 'E-Rickshaw',        logo: '/data/brand-logos/atul-auto.png',   color: 'bg-purple-500/8' },
                             ].map((v) => (
                                 <Link
                                     key={v.name}
                                     href={`/autos?make=${encodeURIComponent(v.make)}`}
                                     className={`flex flex-col items-center gap-2 p-4 ${v.color} rounded-xl border border-border hover:shadow-md hover:-translate-y-0.5 transition-all text-center group`}
                                 >
-                                    <span className="text-3xl">{v.emoji}</span>
+                                    <div className="relative h-10 w-10">
+                                        <Image
+                                            src={v.logo}
+                                            alt={v.make}
+                                            fill
+                                            unoptimized
+                                            className="object-contain"
+                                        />
+                                    </div>
                                     <p className="text-sm font-semibold text-foreground">{v.name}</p>
                                     <p className="text-xs text-muted-foreground">{v.desc}</p>
                                 </Link>
