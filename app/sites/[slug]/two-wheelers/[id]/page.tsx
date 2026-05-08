@@ -90,10 +90,15 @@ export default function VehicleDetailPage() {
         }
     }, [vehicle, dealerInfo])
 
-    // Logo: dealer-uploaded logo first, then brand logo as fallback
+    // Logo: Honda 2W should always use the dedicated 2W brand logo; others keep dealer-first branding.
     const logoSrc = useMemo(() => {
+        const brandSrc = vehicle?.brand ? (brandLogoUrl(vehicle.brand, '2w') ?? null) : null
+        const normalizedBrand = vehicle?.brand?.toLowerCase().trim()
+        if (normalizedBrand === "honda" || normalizedBrand === "honda motorcycle & scooter india") {
+            return brandSrc ?? dealerInfo?.logoUrl ?? null
+        }
         if (dealerInfo?.logoUrl) return dealerInfo.logoUrl
-        if (vehicle?.brand) return brandLogoUrl(vehicle.brand, '2w') ?? null
+        if (brandSrc) return brandSrc
         return null
     }, [dealerInfo, vehicle])
 

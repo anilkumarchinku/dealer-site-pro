@@ -265,7 +265,8 @@ const BRAND_NAME_TO_ID: Record<string, string> = {}
 const KNOWN_SVG_LOGOS: Record<string, string> = {
     "royal enfield": "/assets/logos/2w/royal-enfield.svg",
     "hero motocorp": "/assets/logos/2w/hero-motocorp.svg",
-    "honda motorcycle & scooter india": "/assets/logos/2w/honda-motorcycles.svg",
+    "honda motorcycle & scooter india": "/data/brand-logos/honda-hmsi.png",
+    "honda": "/data/brand-logos/honda-hmsi.png",
     "tvs motor company": "/assets/logos/2w/tvs-motor.svg",
     "bajaj auto": "/assets/logos/2w/bajaj-auto.svg",
     "yamaha india": "/assets/logos/2w/yamaha.svg",
@@ -289,6 +290,11 @@ const KNOWN_SVG_LOGOS: Record<string, string> = {
 function getBrandLogoSrc(brand: string | null): string {
     if (!brand) return ""
     return KNOWN_SVG_LOGOS[brand.toLowerCase().trim()] ?? ""
+}
+
+function shouldPreferBrandLogo(brand: string | null): boolean {
+    const normalized = brand?.toLowerCase().trim()
+    return normalized === "honda" || normalized === "honda motorcycle & scooter india"
 }
 
 /**
@@ -341,6 +347,10 @@ export function TwoWheelerTemplate({
 }: Props) {
     const theme = getBrandTheme(primaryBrand)
     const prefix = useSitePrefix(slug)
+    const primaryBrandLogo = getBrandLogoSrc(primaryBrand)
+    const headerLogoSrc = shouldPreferBrandLogo(primaryBrand)
+        ? (primaryBrandLogo || logoUrl || "")
+        : (logoUrl || primaryBrandLogo || "")
 
     const [isScrolled, setIsScrolled] = useState(false)
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -401,9 +411,9 @@ export function TwoWheelerTemplate({
                         {/* Brand logo + name */}
                         <div className="flex min-w-0 shrink-0 items-center gap-3">
                             <div className="relative w-9 h-9 shrink-0 rounded-lg overflow-hidden flex items-center justify-center bg-white/10">
-                                {(logoUrl || getBrandLogoSrc(primaryBrand)) ? (
+                                {headerLogoSrc ? (
                                     <Image
-                                        src={logoUrl || getBrandLogoSrc(primaryBrand)}
+                                        src={headerLogoSrc}
                                         alt={primaryBrand ?? dealerName}
                                         fill
                                         className="object-contain"
@@ -828,9 +838,9 @@ export function TwoWheelerTemplate({
                     {/* Brand row */}
                     <div className="flex items-center gap-4 mb-6 pb-6 border-b border-gray-100">
                         <div className="relative w-12 h-12 shrink-0 rounded-xl overflow-hidden border border-gray-200 bg-white flex items-center justify-center">
-                            {(logoUrl || getBrandLogoSrc(primaryBrand)) ? (
+                            {headerLogoSrc ? (
                                 <Image
-                                    src={logoUrl || getBrandLogoSrc(primaryBrand)}
+                                    src={headerLogoSrc}
                                     alt={primaryBrand ?? dealerName}
                                     fill
                                     className="object-contain p-1"
