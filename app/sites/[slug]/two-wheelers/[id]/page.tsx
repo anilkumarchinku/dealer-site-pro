@@ -372,23 +372,38 @@ export default function VehicleDetailPage() {
                     {vehicle.colors.length > 0 && (
                         <section className="mt-8">
                             <h2 className="text-xl font-bold mb-3">Available Colors</h2>
-                            <div className="flex flex-wrap gap-3">
-                                {vehicle.colors.map(color => (
-                                    <button
-                                        key={color.name}
-                                        type="button"
-                                        onClick={() => setSelectedColor(color.name)}
-                                        className="flex items-center gap-2 rounded-xl border-2 px-3 py-2 transition-all"
-                                        style={
-                                            selectedColor === color.name
-                                                ? { borderColor: brandColor, backgroundColor: `${brandColor}0d` }
-                                                : { borderColor: '#e5e7eb', backgroundColor: 'white' }
-                                        }
-                                    >
-                                        <span className="h-5 w-5 rounded-full border border-gray-200" style={{ backgroundColor: color.hex }} />
-                                        <span className="text-sm font-medium">{color.name}</span>
-                                    </button>
-                                ))}
+                            <div className="grid gap-5 lg:grid-cols-[minmax(0,320px)_minmax(0,1fr)] lg:items-start">
+                                <div className="flex flex-wrap gap-3">
+                                    {vehicle.colors.map(color => (
+                                        <button
+                                            key={color.name}
+                                            type="button"
+                                            onClick={() => setSelectedColor(color.name)}
+                                            className="flex items-center gap-2 rounded-xl border-2 px-3 py-2 transition-all"
+                                            style={
+                                                selectedColor === color.name
+                                                    ? { borderColor: brandColor, backgroundColor: `${brandColor}0d` }
+                                                    : { borderColor: '#e5e7eb', backgroundColor: 'white' }
+                                            }
+                                        >
+                                            <span className="h-5 w-5 rounded-full border border-gray-200" style={{ backgroundColor: color.hex }} />
+                                            <span className="text-sm font-medium">{color.name}</span>
+                                        </button>
+                                    ))}
+                                </div>
+                                {selectedColorImage && (
+                                    <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
+                                        <div className="relative aspect-[4/3] w-full">
+                                            <Image
+                                                src={selectedColorImage}
+                                                alt={`${vehicle.brand} ${vehicle.model} in ${selectedColor}`}
+                                                fill
+                                                className="object-contain"
+                                                sizes="(max-width: 1024px) 100vw, 50vw"
+                                            />
+                                        </div>
+                                    </div>
+                                )}
                             </div>
                             {selectedColor && (
                                 <p className="mt-3 text-sm text-muted-foreground">

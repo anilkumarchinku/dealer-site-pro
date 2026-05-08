@@ -7,7 +7,10 @@ import { fetchTwoWheelerColorGallery } from '@/lib/data/two-wheeler-gallery'
 import { defaultTwoWheelerVariantName, normalizeTwoWheelerVariants } from '@/lib/utils/two-wheeler-variants'
 
 function normalizeColorName(value: string): string {
-    return value.toLowerCase().replace(/[^a-z0-9]+/g, '')
+    return value
+        .toLowerCase()
+        .replace(/\b-?\s*obd\s*[- ]?\s*\d*\b/g, '')
+        .replace(/[^a-z0-9]+/g, '')
 }
 
 function uniqueStrings(values: string[]): string[] {
