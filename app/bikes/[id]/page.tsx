@@ -19,7 +19,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import { Slider } from '@/components/ui/slider';
 import { Badge } from '@/components/ui/badge';
-import { getVehicleImageUrls, brandNameToId } from '@/lib/utils/brand-model-images';
+import { getVehicleImageUrls, brandNameToId, modelToSlug } from '@/lib/utils/brand-model-images';
 import {
     defaultTwoWheelerVariantName,
     normalizeTwoWheelerVariants,
@@ -98,6 +98,19 @@ interface BikeVariantRow {
 
 interface Props {
     params: Promise<{ id: string }>;
+}
+
+function buildTwoWColorMetadataSlugCandidates(model: string): string[] {
+    const base = modelToSlug(model);
+    return Array.from(new Set([
+        base,
+        base.replace(/-20$/g, ''),
+        base.replace(/-202\d$/g, ''),
+        base.replace(/-fi/g, ''),
+        base.replace(/-v(\d)$/g, '-$1'),
+        base.replace(/-xc$/g, '-x'),
+        base.replace(/-x$/g, '-xc'),
+    ].filter(Boolean)));
 }
 
 // ── Tab definitions ──────────────────────────────────────────────
@@ -236,18 +249,24 @@ export default function BikeDetailPage({ params }: Props) {
         async function fetchColors() {
             try {
                 const brandId = brandNameToId(bike!.make, '2w');
-                const modelSlug = bike!.model.toLowerCase().replace(/\./g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-                const metadataUrl = `/data/brand-model-images/2w-colors/${brandId}/${modelSlug}/metadata.json`;
-                const res = await fetch(metadataUrl);
-                if (!res.ok) return;
-                const meta = await res.json();
-                const colors = (meta.colors ?? []).map((c: { name: string; image: string }) => ({
-                    name: c.name,
-                    image: c.image,
-                }));
-                if (colors.length > 0) {
-                    setColorImages(colors);
-                    setSelectedColorIdx(0);
+                const slugCandidates = buildTwoWColorMetadataSlugCandidates(bike!.model);
+
+                for (const modelSlug of slugCandidates) {
+                    const metadataUrl = `/data/brand-model-images/2w-colors/${brandId}/${modelSlug}/metadata.json`;
+                    const res = await fetch(metadataUrl);
+                    if (!res.ok) continue;
+
+                    const meta = await res.json();
+                    const colors = (meta.colors ?? []).map((c: { name: string; image: string }) => ({
+                        name: c.name,
+                        image: c.image,
+                    }));
+
+                    if (colors.length > 0) {
+                        setColorImages(colors);
+                        setSelectedColorIdx(0);
+                        return;
+                    }
                 }
             } catch {
                 // silently fail — no color gallery for this model
