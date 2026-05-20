@@ -1,0 +1,26 @@
+{
+  "make": "Mahindra",
+  "model": "Scorpio Classic",
+  "brandSlug": "mahindra",
+  "modelSlug": "scorpio",
+  "sourceUrl": "https://www.cardekho.com/mahindra/scorpio",
+  "scrapedAt": "2026-05-20T08:55:31.561Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 4,
+    "total": 4
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mahindra/scorpio-classic/colors/everest-white.avif",
+  "colorNames": [
+    "Everest White",
+    "Galaxy Grey",
+    "Diamond White",
+    "Stealth Black"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mahindra/scorpio-classic/colors/everest-white.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/scorpio-classic/colors/galaxy-grey.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/scorpio-classic/colors/diamond-white.avif",
+    "/data/brand-model-images/4w-galleries/mahindra/scorpio-classic/colors/stealth-black.avif"
+  ]
+}
