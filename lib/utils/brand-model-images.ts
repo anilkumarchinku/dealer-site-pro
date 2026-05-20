@@ -34,10 +34,25 @@ const FOUR_W_GALLERY_ALIASES: Record<string, string> = {
     "vinfast/vf-7": "vinfast/vf7",
 };
 
+const FOUR_W_COLOR_HERO_FALLBACKS = Object.fromEntries(
+    Object.entries(fourWColorHeroFallbacks as Record<string, string>).map(([key, value]) => [
+        key.toLowerCase(),
+        value,
+    ])
+);
+
+function normalize4WGalleryUrl(url: string, brandId: string): string {
+    return url.replace(
+        /^\/data\/brand-model-images\/4w-galleries\/[^/]+\//,
+        `/data/brand-model-images/4w-galleries/${brandId}/`
+    );
+}
+
 function get4WColorHeroFallback(brandId: string, model: string): string | null {
-    const key = `${brandId}/${modelToSlug(model)}`;
-    const manifest = fourWColorHeroFallbacks as Record<string, string>;
-    return manifest[key] ?? manifest[FOUR_W_GALLERY_ALIASES[key] ?? ""] ?? null;
+    const key = `${brandId}/${modelToSlug(model)}`.toLowerCase();
+    const aliasKey = (FOUR_W_GALLERY_ALIASES[key] ?? "").toLowerCase();
+    const rawUrl = FOUR_W_COLOR_HERO_FALLBACKS[key] ?? FOUR_W_COLOR_HERO_FALLBACKS[aliasKey] ?? null;
+    return rawUrl ? normalize4WGalleryUrl(rawUrl, brandId) : null;
 }
 
 function get2WColorHeroFallback(brandId: string, model: string): string | null {
@@ -169,9 +184,9 @@ export function getVehicleImageUrls(
     return [...new Set([
         ...(vehicleCategory === "4w"
             ? [
-                preferredColorHero,
-                normalizedPrimary,
                 ...curatedAssets,
+                normalizedPrimary,
+                preferredColorHero,
                 ...(normalizedPrimary?.startsWith("/assets/") ? [normalizedPrimary] : []),
                 ...scrapedAssets,
             ]
