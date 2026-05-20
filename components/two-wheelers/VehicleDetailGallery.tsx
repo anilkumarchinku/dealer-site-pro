@@ -74,22 +74,6 @@ export function VehicleDetailGallery({ images, alt, brand, model }: Props) {
                 )}
             </div>
 
-            {/* Thumbnails */}
-            {displayImages.length > 1 && (
-                <div className="flex gap-2 overflow-x-auto pb-1">
-                    {displayImages.map((img, i) => (
-                        <button
-                            key={i}
-                            onClick={() => setActive(i)}
-                            className={`shrink-0 w-16 h-14 rounded-lg overflow-hidden border-2 transition-colors ${i === active ? "border-primary" : "border-border"
-                                }`}
-                        >
-                            {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img src={img} alt={`${alt} ${i + 1}`} className="w-full h-full object-cover" />
-                        </button>
-                    ))}
-                </div>
-            )}
         </div>
     )
 }

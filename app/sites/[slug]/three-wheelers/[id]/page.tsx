@@ -16,6 +16,7 @@ import type { ThreeWheelerVehicle, ThreeWheelerLeadType } from "@/lib/types/thre
 import { ChevronLeft } from "lucide-react"
 import Link from "next/link"
 import { useSitePrefix } from "@/lib/hooks/useSitePrefix"
+import { resolveVehicleColorHex } from "@/lib/utils/resolve-vehicle-color"
 
 const BOOKING_AMOUNT = 50000 // ₹500 booking token
 
@@ -344,7 +345,10 @@ export default function ThreeWheelerDetailPage() {
                                         className="flex items-center gap-2 rounded-xl border px-3 py-2"
                                         style={{ borderColor: `${brandColor}40`, backgroundColor: `${brandColor}08` }}
                                     >
-                                        <span className="h-5 w-5 rounded-full border border-gray-200" style={{ backgroundColor: color.hex }} />
+                                        <span
+                                            className="h-5 w-5 rounded-full border border-gray-200"
+                                            style={{ backgroundColor: color.hex || resolveVehicleColorHex(color.name) }}
+                                        />
                                         <span className="text-sm font-medium">{color.name}</span>
                                     </div>
                                 ))}

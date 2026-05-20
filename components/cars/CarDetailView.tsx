@@ -162,6 +162,33 @@ const INSPECTION_CATEGORIES = [
     },
 ];
 
+function deriveSwatchHex(name: string, fallback?: string) {
+    if (fallback && fallback.trim()) return fallback;
+    const normalized = name.toLowerCase();
+    if (normalized.includes('white')) return '#F5F5F5';
+    if (normalized.includes('black')) return '#1A1A1A';
+    if (normalized.includes('silver')) return '#C0C0C0';
+    if (normalized.includes('grey') || normalized.includes('gray')) return '#808080';
+    if (normalized.includes('red') || normalized.includes('maroon')) return '#C00000';
+    if (normalized.includes('blue') || normalized.includes('navy')) return '#1E40AF';
+    if (normalized.includes('green') || normalized.includes('olive')) return '#2E7D32';
+    if (normalized.includes('yellow') || normalized.includes('gold')) return '#D4AF37';
+    if (normalized.includes('orange') || normalized.includes('bronze') || normalized.includes('copper')) return '#C26A2D';
+    if (normalized.includes('brown') || normalized.includes('beige') || normalized.includes('mocha')) return '#8B6B4A';
+    if (normalized.includes('purple') || normalized.includes('violet')) return '#6D28D9';
+    return '#9CA3AF';
+}
+
+function isLightSwatch(hex: string) {
+    const normalized = hex.replace('#', '');
+    if (!/^[0-9a-fA-F]{6}$/.test(normalized)) return false;
+    const red = parseInt(normalized.slice(0, 2), 16);
+    const green = parseInt(normalized.slice(2, 4), 16);
+    const blue = parseInt(normalized.slice(4, 6), 16);
+    const luminance = (0.299 * red) + (0.587 * green) + (0.114 * blue);
+    return luminance > 210;
+}
+
 export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, dealerPhone }: CarDetailViewProps) {
     const sitePrefix = useSitePrefix(siteSlug ?? '');
     const brandColor = resolveVehicleDetailAccent(car.make, Boolean(siteSlug));
@@ -350,25 +377,6 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                             </button>
                         </div>
 
-                        {/* Thumbnails */}
-                        <div className="flex gap-2 overflow-x-auto pb-1">
-                            {allImages.map((img, idx) => (
-                                <button
-                                    key={idx}
-                                    onClick={() => setActiveImage(img)}
-                                    className={`relative w-20 h-14 flex-shrink-0 rounded-lg overflow-hidden border-2 transition-all ${activeImage === img
-                                            ? ''
-                                            : 'border-transparent hover:border-muted-foreground/30'
-                                        }`}
-                                    style={activeImage === img ? {
-                                        borderColor: brandColor,
-                                        boxShadow: `0 0 0 1px ${brandColor}4d`,
-                                    } : undefined}
-                                >
-                                    <Image src={img} alt={`View ${idx + 1}`} fill unoptimized className="object-cover" />
-                                </button>
-                            ))}
-                        </div>
                     </div>
 
                     {/* Price Summary Card */}
@@ -933,29 +941,47 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                                     </div>
                                 )}
                                 <div className="flex flex-wrap gap-3 mb-4">
-                                    {car.colors.map((color) => (
-                                        <button
-                                            key={color.name}
-                                            onClick={() => setSelectedColor(color.name)}
-                                            className={`flex flex-col items-center gap-1.5 p-2 rounded-lg transition-all ${selectedColor === color.name
-                                                    ? 'bg-gray-100'
-                                                    : 'hover:bg-gray-100/50'
-                                                }`}
-                                            style={selectedColor === color.name ? { boxShadow: `0 0 0 2px ${brandColor}` } : undefined}
-                                        >
-                                            <div
-                                                className="w-10 h-10 rounded-full border-2 border-gray-200 shadow-sm"
-                                                style={{ backgroundColor: color.hex }}
-                                            />
-                                            <span className="text-xs font-medium">{color.name}</span>
-                                            {color.extraCost > 0 && (
-                                                <span className="text-[10px] text-gray-600">+₹{color.extraCost.toLocaleString()}</span>
-                                            )}
-                                        </button>
-                                    ))}
+                                    {car.colors.map((color) => {
+                                        const swatchHex = deriveSwatchHex(color.name, color.hex);
+                                        const lightSwatch = isLightSwatch(swatchHex);
+
+                                        return (
+                                            <button
+                                                key={color.name}
+                                                onClick={() => setSelectedColor(color.name)}
+                                                className={`flex items-center gap-3 rounded-xl border px-3 py-2 text-left transition-all ${selectedColor === color.name
+                                                        ? 'bg-gray-100 border-transparent'
+                                                        : 'border-slate-200 hover:bg-gray-100/50'
+                                                    }`}
+                                                style={selectedColor === color.name ? { boxShadow: `0 0 0 2px ${brandColor}` } : undefined}
+                                            >
+                                                <div
+                                                    className="h-9 w-9 rounded-full border-2 shadow-sm shrink-0"
+                                                    style={{
+                                                        backgroundColor: swatchHex,
+                                                        borderColor: lightSwatch ? '#CBD5E1' : 'rgba(255,255,255,0.75)',
+                                                    }}
+                                                />
+                                                <div className="min-w-0">
+                                                    <span className="block text-sm font-medium text-gray-900">{color.name}</span>
+                                                    <div className="flex flex-wrap items-center gap-1.5 text-[11px] text-gray-600">
+                                                        {color.type && <span>{color.type}</span>}
+                                                        {color.extraCost > 0 && <span>+₹{color.extraCost.toLocaleString()}</span>}
+                                                    </div>
+                                                </div>
+                                            </button>
+                                        );
+                                    })}
                                 </div>
                                 {selectedColor && (
-                                    <p className="text-sm text-gray-600">
+                                    <p className="flex items-center gap-2 text-sm text-gray-600">
+                                        <span
+                                            className="h-3.5 w-3.5 rounded-full border border-slate-300 shrink-0"
+                                            style={{ backgroundColor: deriveSwatchHex(
+                                                selectedColor,
+                                                car.colors.find(c => c.name === selectedColor)?.hex,
+                                            ) }}
+                                        />
                                         Selected: <span className="font-medium text-gray-900">{selectedColor}</span>
                                         {car.colors.find(c => c.name === selectedColor)?.type && (
                                             <> ({car.colors.find(c => c.name === selectedColor)?.type})</>

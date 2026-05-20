@@ -16,6 +16,7 @@ import type { TwoWheelerVehicle, TwoWheelerLeadType } from "@/lib/types/two-whee
 import { ChevronLeft, MapPin } from "lucide-react"
 import Link from "next/link"
 import { useSitePrefix } from "@/lib/hooks/useSitePrefix"
+import { resolveVehicleColorHex } from "@/lib/utils/resolve-vehicle-color"
 
 const BOOKING_AMOUNT = 50000 // ₹500 booking token
 
@@ -386,7 +387,10 @@ export default function VehicleDetailPage() {
                                                     : { borderColor: '#e5e7eb', backgroundColor: 'white' }
                                             }
                                         >
-                                            <span className="h-5 w-5 rounded-full border border-gray-200" style={{ backgroundColor: color.hex }} />
+                                            <span
+                                                className="h-5 w-5 rounded-full border border-gray-200"
+                                                style={{ backgroundColor: color.hex || resolveVehicleColorHex(color.name) }}
+                                            />
                                             <span className="text-sm font-medium">{color.name}</span>
                                         </button>
                                     ))}

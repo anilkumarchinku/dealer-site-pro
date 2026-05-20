@@ -20,6 +20,7 @@ import { Separator } from '@/components/ui/separator';
 import { Slider } from '@/components/ui/slider';
 import { Badge } from '@/components/ui/badge';
 import { getVehicleImageUrls, brandNameToId, modelToSlug } from '@/lib/utils/brand-model-images';
+import { resolveVehicleColorHex } from '@/lib/utils/resolve-vehicle-color';
 import {
     defaultTwoWheelerVariantName,
     normalizeTwoWheelerVariants,
@@ -905,16 +906,10 @@ export default function BikeDetailPage({ params }: Props) {
                                                         : 'bg-gray-50 hover:bg-gray-100'
                                                 }`}
                                             >
-                                                {color.image ? (
-                                                    <div className="relative w-10 h-10 rounded-full overflow-hidden border-2 border-gray-200 shadow-sm">
-                                                        <Image src={color.image} alt={color.name} fill unoptimized className="object-cover" />
-                                                    </div>
-                                                ) : (
-                                                    <div
-                                                        className="w-10 h-10 rounded-full border-2 border-gray-200 shadow-sm"
-                                                        style={{ backgroundColor: colorNameToHex(color.name) }}
-                                                    />
-                                                )}
+                                                <div
+                                                    className="w-10 h-10 rounded-full border-2 border-gray-200 shadow-sm"
+                                                    style={{ backgroundColor: apiColorHexMap[color.name] || colorNameToHex(color.name) }}
+                                                />
                                                 <span className="text-xs font-medium text-gray-900 max-w-[80px] text-center leading-tight">
                                                     {color.name}
                                                 </span>
@@ -1232,50 +1227,5 @@ function EmiSlider({
  * Falls back to a neutral gray if the colour name is unknown.
  */
 function colorNameToHex(name: string): string {
-    const map: Record<string, string> = {
-        'red': '#DC2626',
-        'blue': '#2563EB',
-        'black': '#1F2937',
-        'white': '#F9FAFB',
-        'silver': '#9CA3AF',
-        'grey': '#6B7280',
-        'gray': '#6B7280',
-        'green': '#16A34A',
-        'yellow': '#EAB308',
-        'orange': '#EA580C',
-        'brown': '#92400E',
-        'gold': '#D97706',
-        'purple': '#9333EA',
-        'pink': '#EC4899',
-        'beige': '#D4C5A9',
-        'maroon': '#7F1D1D',
-        'navy': '#1E3A5F',
-        'teal': '#0D9488',
-        'cyan': '#06B6D4',
-        'bronze': '#CD7F32',
-        'matte black': '#111827',
-        'pearl white': '#F8FAFC',
-        'metallic silver': '#C0C0C0',
-        'candy red': '#E11D48',
-        'midnight blue': '#1E3A5F',
-        'racing red': '#DC2626',
-        'gloss black': '#0F172A',
-        'titanium grey': '#78716C',
-        'sapphire blue': '#1D4ED8',
-        'cosmic black': '#0F0F0F',
-        'sunrise red': '#EF4444',
-        'pearl sparkling black': '#1C1917',
-        'matte grey': '#4B5563',
-        'matte blue': '#1E40AF',
-    };
-
-    const lower = name.toLowerCase().trim();
-    if (map[lower]) return map[lower];
-
-    // Try partial match
-    for (const [key, hex] of Object.entries(map)) {
-        if (lower.includes(key) || key.includes(lower)) return hex;
-    }
-
-    return '#9CA3AF'; // fallback gray
+    return resolveVehicleColorHex(name);
 }
