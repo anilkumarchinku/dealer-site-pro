@@ -4,6 +4,7 @@ import type { Car, CarVariant } from '@/lib/types/car'
 import { CAR_MODEL_COLORS } from '@/lib/data/car-colors'
 import { fetchCardekhoGallery } from '@/lib/data/cardekho-gallery'
 import { get4WPriceMaxInr, get4WPriceMinInr } from '@/lib/data/four-wheelers'
+import { brandNameToId, getVehicleImageUrls } from '@/lib/utils/brand-model-images'
 import { getRequestOrigin } from '@/lib/utils/request-origin'
 
 const MAKE_TO_JSON: Record<string, string> = {
@@ -81,6 +82,21 @@ function extractFeatureValues(input: unknown): string[] {
             return ''
         })
         .filter(Boolean)
+}
+
+function extractStructuredFeatures(
+    entry: Record<string, unknown>,
+): { key: string[]; safety: string[] } {
+    const features = entry.features
+    if (!features || typeof features !== 'object' || Array.isArray(features)) {
+        return { key: [], safety: [] }
+    }
+
+    const record = features as Record<string, unknown>
+    return {
+        key: extractFeatureValues(record.key ?? record.key_features ?? record.features),
+        safety: extractFeatureValues(record.safety ?? record.safety_features),
+    }
 }
 
 function uniqueStrings(values: string[]): string[] {
@@ -197,12 +213,16 @@ async function getBrandVariants(make: string): Promise<Record<string, unknown>[]
 async function getMatchingModelVariants(make: string, model: string): Promise<Record<string, unknown>[]> {
     const normalizedModel = normalizeText(model)
     const variants = await getBrandVariants(make)
+    const exactMatches = variants.filter(entry => {
+        const entryModel = normalizeText(String(entry.model ?? entry.model_name ?? ''))
+        return entryModel === normalizedModel
+    })
+    if (exactMatches.length > 0) return exactMatches
 
     return variants.filter(entry => {
         const entryModel = normalizeText(String(entry.model ?? entry.model_name ?? ''))
         if (entryModel) {
-            return entryModel === normalizedModel ||
-                entryModel.includes(normalizedModel) ||
+            return entryModel.includes(normalizedModel) ||
                 normalizedModel.includes(entryModel)
         }
         // No model field — match against variant_name (e.g. "V-Cross 4x2 Z AT" matches model "V Cross")
@@ -227,7 +247,10 @@ function inferAirbags(values: string[]): number {
 }
 
 function buildVariants(entries: Record<string, unknown>[], carId: string, fallbackFuel: string, fallbackTransmission: string): CarVariant[] {
-    const variants: Array<CarVariant | null> = entries.map((entry, index) => {
+    const variantEntries = entries.filter((entry) => Boolean(entry.variant_name ?? entry.variant))
+    const sourceEntries = variantEntries.length > 0 ? variantEntries : entries
+
+    const variants: Array<CarVariant | null> = sourceEntries.map((entry, index) => {
             const price = get4WPriceMinInr(entry)
             if (!price) return null
             const exactOnRoad =
@@ -375,6 +398,15 @@ function colorsFromNames(
         .filter((color): color is HydratedColor => Boolean(color))
 }
 
+function isStableLocal4WHero(url: string | null | undefined): url is string {
+    if (!url) return false
+    if (url.startsWith('/assets/cars/')) return true
+    if (url.startsWith('/data/brand-model-images/4w/') && !url.startsWith('/data/brand-model-images/4w-galleries/')) {
+        return true
+    }
+    return false
+}
+
 export async function hydrateCarWithJsonDetails(car: Car): Promise<Car> {
     if (!car.make || !car.model) return car
 
@@ -392,13 +424,18 @@ export async function hydrateCarWithJsonDetails(car: Car): Promise<Car> {
         ? car.colors
         : (CAR_MODEL_COLORS[`${car.make} ${car.model}`] ?? [])
 
+    const local4WHeroCandidate = car.vehicleCategory === '4w'
+        ? getVehicleImageUrls('4w', brandNameToId(car.make, '4w'), car.model, car.images.hero)
+            .find((url) => isStableLocal4WHero(url))
+        : null
     const baseHeroImage = car.images.hero
     const scrapedColorImageSet = new Set(scrapedGallery?.colorImages ?? [])
     const baseHeroIsLocalColor = Boolean(baseHeroImage && scrapedColorImageSet.has(baseHeroImage))
-    const hasLocalHero = Boolean(baseHeroImage?.startsWith('/data/')) && !baseHeroIsLocalColor
+    const hasLocalHero = isStableLocal4WHero(local4WHeroCandidate ?? baseHeroImage) && !baseHeroIsLocalColor
+    const preferredLocalHero = local4WHeroCandidate ?? (hasLocalHero ? baseHeroImage : null)
     const heroImage = hasLocalHero
-        ? baseHeroImage
-        : (scrapedGallery?.exterior?.[0] || scrapedGallery?.hero || car.images.hero)
+        ? preferredLocalHero
+        : (scrapedGallery?.exterior?.[0] || preferredLocalHero || scrapedGallery?.hero || car.images.hero)
     const baseMergedExterior = scrapedGallery?.exterior?.length
         ? scrapedGallery.exterior
         : car.images.exterior
@@ -447,8 +484,15 @@ export async function hydrateCarWithJsonDetails(car: Car): Promise<Car> {
         .filter((value): value is number => value != null)
     const fuelTypes = uniqueStrings(matchingVariants.map(entry => String(entry.fuel_type ?? entry.fuel ?? '')).filter(Boolean))
     const transmissions = uniqueStrings(matchingVariants.map(entry => String(entry.transmission ?? '')).filter(Boolean))
-    const keyFeatures = uniqueStrings(matchingVariants.flatMap(entry => extractFeatureValues(entry.key_features)))
-    const safetyFeatures = uniqueStrings(matchingVariants.flatMap(entry => extractFeatureValues(entry.safety_features)))
+    const structuredFeatures = matchingVariants.map(extractStructuredFeatures)
+    const keyFeatures = uniqueStrings([
+        ...matchingVariants.flatMap(entry => extractFeatureValues(entry.key_features)),
+        ...structuredFeatures.flatMap(entry => entry.key),
+    ])
+    const safetyFeatures = uniqueStrings([
+        ...matchingVariants.flatMap(entry => extractFeatureValues(entry.safety_features)),
+        ...structuredFeatures.flatMap(entry => entry.safety),
+    ])
     const allFeatureCopy = uniqueStrings([...keyFeatures, ...safetyFeatures])
     const imageUrls = uniqueStrings(
         matchingVariants.flatMap(entry => {
@@ -509,8 +553,8 @@ export async function hydrateCarWithJsonDetails(car: Car): Promise<Car> {
     const jsonColors = uniqueColors(matchingVariants.flatMap(extractColors))
     const mergedColors = uniqueColors([...scrapedColors, ...jsonColors])
     const pricedHeroImage = hasLocalHero
-        ? baseHeroImage
-        : (scrapedGallery?.exterior?.[0] || scrapedGallery?.hero || imageUrls[0] || car.images.hero)
+        ? preferredLocalHero
+        : (scrapedGallery?.exterior?.[0] || preferredLocalHero || scrapedGallery?.hero || imageUrls[0] || car.images.hero)
 
     const mergedExterior = baseMergedExterior
     const mergedInterior = baseMergedInterior
@@ -533,14 +577,6 @@ export async function hydrateCarWithJsonDetails(car: Car): Promise<Car> {
     ].filter(Boolean) as string[]
     const dedupedExterior = removeMatchingUrl(mergedExteriorWithFeatures, heroBlockList)
     const dedupedInterior = removeMatchingUrl(mergedInterior, [pricedHeroImage, ...dedupedExterior])
-
-    // Include color images in the gallery so users see more than just the hero.
-    // Local gallery color images (from 4w-galleries/{brand}/{model}/colors/) are
-    // reliable and model-specific — add them as additional gallery views.
-    const localColorImages = (mergedColorImages ?? []).filter(url => url.startsWith('/data/'))
-    const galleryExterior = localColorImages.length > 0
-        ? uniqueStrings([...dedupedExterior, ...localColorImages])
-        : dedupedExterior
 
     return {
         ...car,
@@ -605,7 +641,7 @@ export async function hydrateCarWithJsonDetails(car: Car): Promise<Car> {
         },
         images: {
             hero: pricedHeroImage,
-            exterior: galleryExterior,
+            exterior: dedupedExterior,
             interior: dedupedInterior,
             colors: uniqueStrings(mergedColorImages ?? []),
         },
