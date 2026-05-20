@@ -455,14 +455,17 @@ export async function hydrateCarWithJsonDetails(car: Car): Promise<Car> {
         scrapedGallery?.exterior?.[0],
     ].filter(Boolean) as string[]
     const baseDedupedExterior = removeMatchingUrl(baseMergedExteriorWithFeatures, baseHeroBlockList)
-    const baseDedupedInterior = removeMatchingUrl(baseMergedInterior, [heroImage, ...baseDedupedExterior])
+    const baseDedupedInterior = removeMatchingUrl(
+        baseMergedInterior,
+        [heroImage, ...baseDedupedExterior].filter(Boolean) as string[]
+    )
     const mergedColorsWithoutJson = scrapedColors.length > 0 ? scrapedColors : fallbackColors
 
     if (matchingVariants.length === 0) {
         return {
             ...car,
             images: {
-                hero: heroImage,
+                hero: heroImage ?? car.images.hero,
                 exterior: baseDedupedExterior,
                 interior: baseDedupedInterior,
                 colors: uniqueStrings(baseMergedColorImages ?? []),
@@ -576,7 +579,10 @@ export async function hydrateCarWithJsonDetails(car: Car): Promise<Car> {
         imageUrls[1],
     ].filter(Boolean) as string[]
     const dedupedExterior = removeMatchingUrl(mergedExteriorWithFeatures, heroBlockList)
-    const dedupedInterior = removeMatchingUrl(mergedInterior, [pricedHeroImage, ...dedupedExterior])
+    const dedupedInterior = removeMatchingUrl(
+        mergedInterior,
+        [pricedHeroImage, ...dedupedExterior].filter(Boolean) as string[]
+    )
 
     return {
         ...car,
@@ -640,7 +646,7 @@ export async function hydrateCarWithJsonDetails(car: Car): Promise<Car> {
             ncapRating: car.safety?.ncapRating,
         },
         images: {
-            hero: pricedHeroImage,
+            hero: pricedHeroImage ?? heroImage ?? car.images.hero,
             exterior: dedupedExterior,
             interior: dedupedInterior,
             colors: uniqueStrings(mergedColorImages ?? []),
