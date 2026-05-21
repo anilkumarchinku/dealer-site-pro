@@ -20,11 +20,19 @@ const IMAGE_EXTENSIONS = ["jpg", "png", "webp"] as const;
 const FOUR_W_GALLERY_ALIASES: Record<string, string> = {
     "bentley/continental-gt": "bentley/continental",
     "bentley/continental-gtc": "bentley/continental",
+    "bmw/m340i": "bmw/m340i",
+    "bmw/3-series-long-wheelbase": "bmw/m340i",
     "bmw/m8": "bmw/m8-coupe-competition",
+    "aston-martin/dbs-superleggera": "aston-martin/vanquish",
     "mahindra/xuv400": "mahindra/xuv400-ev",
     "mahindra/scorpio-classic": "mahindra/scorpio",
     "maruti-suzuki/wagonr": "maruti-suzuki/wagon-r",
     "hyundai/creta-ev": "hyundai/creta-electric",
+    "hyundai/prime-hb": "hyundai/prime-hb",
+    "hyundai/prime-sd": "hyundai/prime-sd",
+    "mercedes-benz/amg-cle-53": "mercedes-benz/amg-cle-53",
+    "mercedes-benz/cle": "mercedes-benz/cle",
+    "mercedes-benz/v-class": "mercedes-benz/v-class",
     "mercedes-benz/eqg": "mercedes-benz/g-class-electric",
     "mercedes-benz/amg-gt-coupe": "mercedes-benz/amg-gt-4-door-coupe",
     "toyota/fortuner": "toyota/Toyota_Fortuner",
@@ -32,6 +40,8 @@ const FOUR_W_GALLERY_ALIASES: Record<string, string> = {
     "toyota/rumion": "toyota/Toyota_Rumion",
     "vinfast/vf-6": "vinfast/vf6",
     "vinfast/vf-7": "vinfast/vf7",
+    "vinfast/vf-8": "vinfast/vf8",
+    "vinfast/vf-9": "vinfast/vf9",
 };
 
 const FOUR_W_COLOR_HERO_FALLBACKS = Object.fromEntries(
@@ -55,10 +65,29 @@ function get4WColorHeroFallback(brandId: string, model: string): string | null {
     return rawUrl ? normalize4WGalleryUrl(rawUrl, brandId) : null;
 }
 
+export function build2WColorMetadataSlugCandidates(model: string): string[] {
+    const base = modelToSlug(model);
+    return Array.from(new Set([
+        base,
+        base.replace(/-20$/g, ""),
+        base.replace(/-202\d$/g, ""),
+        base.replace(/-fi/g, ""),
+        base.replace(/-v(\d)$/g, "-$1"),
+        base.replace(/-xc$/g, "-x"),
+        base.replace(/-x$/g, "-xc"),
+        base.replace(/-plus$/g, ""),
+        base.replace(/-/g, ""),
+        base.replace(/^pulsar-/, ""),
+    ].filter(Boolean)));
+}
+
 function get2WColorHeroFallback(brandId: string, model: string): string | null {
-    const key = `${brandId}/${modelToSlug(model)}`;
     const manifest = twoWColorHeroFallbacks as Record<string, string>;
-    return manifest[key] ?? null;
+    for (const modelSlug of build2WColorMetadataSlugCandidates(model)) {
+        const fallback = manifest[`${brandId}/${modelSlug}`];
+        if (fallback) return fallback;
+    }
+    return null;
 }
 
 /** Convert a model name to the file-system slug used during scraping */
@@ -230,6 +259,7 @@ export function getScrapedImageFallback(
  */
 const BRAND_FOLDER_MAP_2W: Record<string, string> = {
     "royal enfield": "royal-enfield",
+    "hero": "hero-motocorp",
     "hero motocorp": "hero-motocorp",
     "honda motorcycle & scooter india": "honda-hmsi",
     "honda": "honda-hmsi",
@@ -263,6 +293,7 @@ const BRAND_FOLDER_MAP_2W: Record<string, string> = {
     "simple energy": "simple-energy",
     "matter": "matter-ev",
     "okaya ev (opg mobility)": "okaya-ev",
+    "okaya ev": "okaya-ev",
     "okaya": "okaya-ev",
     "odysse electric": "odysse-electric",
     "odysse": "odysse-electric",
@@ -278,6 +309,7 @@ const BRAND_FOLDER_MAP_2W: Record<string, string> = {
     "benelli": "benelli-india",
     "bmw motorrad india": "bmw-motorrad-india",
     "bmw motorrad": "bmw-motorrad-india",
+    "bmw": "bmw-motorrad-india",
     "cfmoto india": "cfmoto-india",
     "cfmoto": "cfmoto-india",
     "ducati india": "ducati-india",
@@ -320,6 +352,7 @@ const BRAND_FOLDER_MAP_2W: Record<string, string> = {
     "zontes": "zontes-india",
     "bsa motorcycles": "bsa",
     "qj motor india": "qj-motor-india",
+    "qj motor": "qj-motor-india",
     "bgauss": "bgauss",
     "battre electric": "battre-ev",
     "ivoomi": "ivoomi-energy",
