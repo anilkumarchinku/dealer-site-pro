@@ -1,0 +1,25 @@
+{
+  "category": "2w",
+  "brand": "Indian",
+  "brandId": "indian-motorcycle",
+  "model": "Chief Dark Horse",
+  "modelSlug": "chief-dark-horse",
+  "sourceUrl": "https://www.bikewale.com/indian-bikes/chief-dark-horse/colours/",
+  "hero": "/data/brand-model-images/2w-colors/indian-motorcycle/chief-dark-horse/alumina-jade-smoke.avif",
+  "count": 3,
+  "colors": [
+    {
+      "name": "Alumina Jade Smoke",
+      "image": "/data/brand-model-images/2w-colors/indian-motorcycle/chief-dark-horse/alumina-jade-smoke.avif"
+    },
+    {
+      "name": "Stealth gray",
+      "image": "/data/brand-model-images/2w-colors/indian-motorcycle/chief-dark-horse/stealth-gray.avif"
+    },
+    {
+      "name": "Black Smoke",
+      "image": "/data/brand-model-images/2w-colors/indian-motorcycle/chief-dark-horse/black-smoke.avif"
+    }
+  ],
+  "downloadedAt": "2026-05-21T16:28:51.115Z"
+}

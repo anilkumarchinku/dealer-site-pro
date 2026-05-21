@@ -1,0 +1,14 @@
+{
+  "make": "Kabira Mobility",
+  "model": "Hermes 75",
+  "source": "local model image fallback; BikeWale colour page unavailable",
+  "updatedAt": "2026-05-21T16:36:47.303Z",
+  "colors": [
+    {
+      "name": "White",
+      "type": "Solid",
+      "hex": "#F5F5F0",
+      "image": "/data/brand-model-images/2w/kabira-mobility/hermes-75.jpg"
+    }
+  ]
+}

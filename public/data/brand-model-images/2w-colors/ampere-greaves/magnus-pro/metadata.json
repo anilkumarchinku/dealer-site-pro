@@ -1,0 +1,29 @@
+{
+  "category": "2w",
+  "brand": "Ampere",
+  "brandId": "ampere-greaves",
+  "model": "Magnus Pro",
+  "modelSlug": "magnus-pro",
+  "sourceUrl": "https://www.bikewale.com/ampere-bikes/magnus/colours/",
+  "hero": "/data/brand-model-images/2w-colors/ampere-greaves/magnus-pro/matcha-green.png",
+  "count": 4,
+  "colors": [
+    {
+      "name": "Matcha Green",
+      "image": "/data/brand-model-images/2w-colors/ampere-greaves/magnus-pro/matcha-green.png"
+    },
+    {
+      "name": "Ocean Blue",
+      "image": "/data/brand-model-images/2w-colors/ampere-greaves/magnus-pro/ocean-blue.png"
+    },
+    {
+      "name": "Mystic Mauve",
+      "image": "/data/brand-model-images/2w-colors/ampere-greaves/magnus-pro/mystic-mauve.png"
+    },
+    {
+      "name": "Butter Yellow",
+      "image": "/data/brand-model-images/2w-colors/ampere-greaves/magnus-pro/butter-yellow.png"
+    }
+  ],
+  "downloadedAt": "2026-05-21T16:28:15.866Z"
+}

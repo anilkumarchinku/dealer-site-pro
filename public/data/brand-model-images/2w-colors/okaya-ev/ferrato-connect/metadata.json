@@ -1,0 +1,32 @@
+{
+  "make": "Okaya EV",
+  "model": "Ferrato Connect",
+  "source": "local model image fallback; BikeWale colour page unavailable",
+  "updatedAt": "2026-05-21T16:36:47.321Z",
+  "colors": [
+    {
+      "name": "Ocean Blue",
+      "type": "Solid",
+      "hex": "#1A4A8B",
+      "image": "/data/brand-model-images/2w/okaya-ev/okaya-ev-ferrato-connect.jpg"
+    },
+    {
+      "name": "Pearlescent White",
+      "type": "Solid",
+      "hex": "#F5F5F0",
+      "image": "/data/brand-model-images/2w/okaya-ev/okaya-ev-ferrato-connect.jpg"
+    },
+    {
+      "name": "Matte Black",
+      "type": "Solid",
+      "hex": "#1A1A1A",
+      "image": "/data/brand-model-images/2w/okaya-ev/okaya-ev-ferrato-connect.jpg"
+    },
+    {
+      "name": "Cherry Red",
+      "type": "Solid",
+      "hex": "#C41E3A",
+      "image": "/data/brand-model-images/2w/okaya-ev/okaya-ev-ferrato-connect.jpg"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "category": "2w",
+  "brand": "Aprilia",
+  "brandId": "aprilia-india",
+  "model": "SXR 160",
+  "modelSlug": "sxr-160",
+  "sourceUrl": "https://www.bikewale.com/aprilia-bikes/sxr-160/colours/",
+  "hero": "/data/brand-model-images/2w-colors/aprilia-india/sxr-160/white.avif",
+  "count": 4,
+  "colors": [
+    {
+      "name": "White",
+      "image": "/data/brand-model-images/2w-colors/aprilia-india/sxr-160/white.avif"
+    },
+    {
+      "name": "Red",
+      "image": "/data/brand-model-images/2w-colors/aprilia-india/sxr-160/red.avif"
+    },
+    {
+      "name": "Blue",
+      "image": "/data/brand-model-images/2w-colors/aprilia-india/sxr-160/blue.avif"
+    },
+    {
+      "name": "Black",
+      "image": "/data/brand-model-images/2w-colors/aprilia-india/sxr-160/black.avif"
+    }
+  ],
+  "downloadedAt": "2026-05-21T16:28:25.363Z"
+}

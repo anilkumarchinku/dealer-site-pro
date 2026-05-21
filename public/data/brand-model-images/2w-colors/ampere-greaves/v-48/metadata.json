@@ -1,0 +1,25 @@
+{
+  "category": "2w",
+  "brand": "Ampere",
+  "brandId": "ampere-greaves",
+  "model": "V 48",
+  "modelSlug": "v-48",
+  "sourceUrl": "https://www.bikewale.com/ampere-bikes/v-48/colours/",
+  "hero": "/data/brand-model-images/2w-colors/ampere-greaves/v-48/purple.avif",
+  "count": 3,
+  "colors": [
+    {
+      "name": "Purple",
+      "image": "/data/brand-model-images/2w-colors/ampere-greaves/v-48/purple.avif"
+    },
+    {
+      "name": "Blue",
+      "image": "/data/brand-model-images/2w-colors/ampere-greaves/v-48/blue.avif"
+    },
+    {
+      "name": "Red",
+      "image": "/data/brand-model-images/2w-colors/ampere-greaves/v-48/red.avif"
+    }
+  ],
+  "downloadedAt": "2026-05-21T16:28:14.150Z"
+}

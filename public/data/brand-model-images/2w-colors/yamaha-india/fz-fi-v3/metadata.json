@@ -1,0 +1,23 @@
+{
+  "brand": "Yamaha",
+  "model": "FZ FI V3",
+  "brandId": "yamaha-india",
+  "makeSlug": "yamaha-bikes",
+  "modelSlug": "fz-fi-v3",
+  "sourceUrl": "https://www.bikewale.com/yamaha-bikes/fz/colours/",
+  "scrapedAt": "2026-04-23T10:20:54.719Z",
+  "count": 2,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/kfi0bhb_1864810.avif?q=100",
+  "colors": [
+    {
+      "name": "Matte Cyan",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/fz/matte-cyan.avif"
+    },
+    {
+      "name": "Metallic Black",
+      "image": "/data/brand-model-images/2w-colors/yamaha-india/fz/metallic-black.avif"
+    }
+  ],
+  "aliasOf": "yamaha-india/fz",
+  "generatedAliasAt": "2026-05-21T07:34:29.717Z"
+}

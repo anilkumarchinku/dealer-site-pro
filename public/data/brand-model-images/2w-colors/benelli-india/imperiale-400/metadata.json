@@ -1,0 +1,25 @@
+{
+  "category": "2w",
+  "brand": "Benelli",
+  "brandId": "benelli-india",
+  "model": "Imperiale 400",
+  "modelSlug": "imperiale-400",
+  "sourceUrl": "https://www.bikewale.com/benelli-bikes/imperiale-400/colours/",
+  "hero": "/data/brand-model-images/2w-colors/benelli-india/imperiale-400/silver.avif",
+  "count": 3,
+  "colors": [
+    {
+      "name": "Silver",
+      "image": "/data/brand-model-images/2w-colors/benelli-india/imperiale-400/silver.avif"
+    },
+    {
+      "name": "Red",
+      "image": "/data/brand-model-images/2w-colors/benelli-india/imperiale-400/red.avif"
+    },
+    {
+      "name": "Black",
+      "image": "/data/brand-model-images/2w-colors/benelli-india/imperiale-400/black.avif"
+    }
+  ],
+  "downloadedAt": "2026-05-21T16:28:37.753Z"
+}

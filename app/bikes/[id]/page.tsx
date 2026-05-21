@@ -111,7 +111,33 @@ function buildTwoWColorMetadataSlugCandidates(model: string): string[] {
         base.replace(/-v(\d)$/g, '-$1'),
         base.replace(/-xc$/g, '-x'),
         base.replace(/-x$/g, '-xc'),
+        base.replace(/-plus$/g, ''),
+        base.replace(/-/g, ''),
+        base.replace(/^pulsar-/, ''),
     ].filter(Boolean)));
+}
+
+function normalizeTwoWColorImagePath(
+    image: string | null | undefined,
+    brandId: string,
+    modelSlug: string
+): string | null {
+    if (!image) return null;
+    const cleanImage = image.trim();
+    if (!cleanImage) return null;
+
+    if (cleanImage.startsWith('/data/brand-model-images/2w-colors/')) {
+        return cleanImage;
+    }
+
+    if (/^https?:\/\//i.test(cleanImage)) {
+        return cleanImage;
+    }
+
+    const fileName = cleanImage.split('/').filter(Boolean).pop();
+    if (!fileName) return null;
+
+    return `/data/brand-model-images/2w-colors/${brandId}/${modelSlug}/${fileName}`;
 }
 
 // ── Tab definitions ──────────────────────────────────────────────
@@ -258,10 +284,12 @@ export default function BikeDetailPage({ params }: Props) {
                     if (!res.ok) continue;
 
                     const meta = await res.json();
-                    const colors = (meta.colors ?? []).map((c: { name: string; image: string }) => ({
-                        name: c.name,
-                        image: c.image,
-                    }));
+                    const colors = (meta.colors ?? [])
+                        .map((c: { name?: string; image?: string; file?: string }) => ({
+                            name: c.name?.trim() ?? '',
+                            image: normalizeTwoWColorImagePath(c.image ?? c.file, brandId, modelSlug) ?? '',
+                        }))
+                        .filter((color: { name: string; image: string }) => color.name && color.image);
 
                     if (colors.length > 0) {
                         setColorImages(colors);

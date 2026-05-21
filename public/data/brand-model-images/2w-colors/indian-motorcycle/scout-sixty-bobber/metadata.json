@@ -1,0 +1,17 @@
+{
+  "category": "2w",
+  "brand": "Indian",
+  "brandId": "indian-motorcycle",
+  "model": "Scout Sixty Bobber",
+  "modelSlug": "scout-sixty-bobber",
+  "sourceUrl": "https://www.bikewale.com/indian-bikes/scout-sixty-bobber/colours/",
+  "hero": "/data/brand-model-images/2w-colors/indian-motorcycle/scout-sixty-bobber/black-metallic.avif",
+  "count": 1,
+  "colors": [
+    {
+      "name": "Black Metallic",
+      "image": "/data/brand-model-images/2w-colors/indian-motorcycle/scout-sixty-bobber/black-metallic.avif"
+    }
+  ],
+  "downloadedAt": "2026-05-21T16:28:51.585Z"
+}

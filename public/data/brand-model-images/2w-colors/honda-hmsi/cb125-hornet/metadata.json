@@ -1,0 +1,34 @@
+{
+  "brand": "Honda Motorcycle & Scooter India",
+  "model": "CB125 Hornet",
+  "brandId": "honda-hmsi",
+  "makeSlug": "honda-bikes",
+  "modelSlug": "cb125-hornet",
+  "sourceUrl": "https://www.bikewale.com/honda-bikes/cb-125-hornet/colours/",
+  "scrapedAt": "2026-04-23T10:20:35.695Z",
+  "count": 4,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/idj6qgb_1855482.jpg?q=100",
+  "colors": [
+    {
+      "name": "Pearl Siren Blue with Sports Red",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/cb-125-hornet/pearl-siren-blue-with-sports-red.avif"
+    },
+    {
+      "name": "Pearl Siren Blue with Athletic Blue Metallic",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/cb-125-hornet/pearl-siren-blue-with-athletic-blue-metallic.avif"
+    },
+    {
+      "name": "Pearl Igneous Black",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/cb-125-hornet/pearl-igneous-black.avif"
+    },
+    {
+      "name": "Pearl Siren Blue with Lemon Ice Yellow",
+      "image": "/data/brand-model-images/2w-colors/honda-hmsi/cb-125-hornet/pearl-siren-blue-with-lemon-ice-yellow.avif"
+    }
+  ],
+  "aliasOf": {
+    "model": "CB125 Hornet",
+    "modelSlug": "cb-125-hornet",
+    "metadata": "/data/brand-model-images/2w-colors/honda-hmsi/cb-125-hornet/metadata.json"
+  }
+}

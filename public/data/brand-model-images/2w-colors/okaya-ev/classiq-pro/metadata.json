@@ -1,0 +1,47 @@
+{
+  "brand": "Okaya EV",
+  "model": "Classiq Pro",
+  "brandId": "okaya-ev",
+  "makeSlug": "opg-mobility-bikes",
+  "modelSlug": "classiq-pro",
+  "sourceUrl": "https://www.bikewale.com/opg-mobility-bikes/classiq/colours/",
+  "scrapedAt": "2026-04-23T10:22:33.825Z",
+  "count": 8,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/okaya-select-model-white-1663137837681.jpg?q=100",
+  "colors": [
+    {
+      "name": "White",
+      "image": "/data/brand-model-images/2w-colors/opg-mobility/classiq/white.avif"
+    },
+    {
+      "name": "Black",
+      "image": "/data/brand-model-images/2w-colors/opg-mobility/classiq/black.avif"
+    },
+    {
+      "name": "Blue",
+      "image": "/data/brand-model-images/2w-colors/opg-mobility/classiq/blue.avif"
+    },
+    {
+      "name": "Coffee",
+      "image": "/data/brand-model-images/2w-colors/opg-mobility/classiq/coffee.avif"
+    },
+    {
+      "name": "Green",
+      "image": "/data/brand-model-images/2w-colors/opg-mobility/classiq/green.avif"
+    },
+    {
+      "name": "Grey",
+      "image": "/data/brand-model-images/2w-colors/opg-mobility/classiq/grey.avif"
+    },
+    {
+      "name": "Red",
+      "image": "/data/brand-model-images/2w-colors/opg-mobility/classiq/red.avif"
+    },
+    {
+      "name": "Silver",
+      "image": "/data/brand-model-images/2w-colors/opg-mobility/classiq/silver.avif"
+    }
+  ],
+  "aliasOf": "opg-mobility/classiq",
+  "generatedAliasAt": "2026-05-21T07:34:29.716Z"
+}

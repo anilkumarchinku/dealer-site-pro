@@ -4,7 +4,7 @@ import { cache } from 'react'
 import fs from 'fs'
 import path from 'path'
 
-import { brandNameToId, modelToSlug } from '@/lib/utils/brand-model-images'
+import { brandNameToId, build2WColorMetadataSlugCandidates, modelToSlug } from '@/lib/utils/brand-model-images'
 
 interface BikeWaleColorImage {
     name: string
@@ -14,6 +14,15 @@ interface BikeWaleColorImage {
 interface BikeWaleColorGallery {
     hero: string | null
     colors: BikeWaleColorImage[]
+}
+
+interface LocalColorMetadata {
+    hero?: string | null
+    colors?: Array<{
+        name?: string | null
+        image?: string | null
+        file?: string | null
+    }>
 }
 
 const USER_AGENT = 'Mozilla/5.0'
@@ -167,22 +176,97 @@ function extractColorGalleryFromJsonLd(html: string): BikeWaleColorGallery | nul
 }
 
 function localColorImageUrl(brandId: string, model: string, colorName: string): string | null {
-    const modelSlug = modelToSlug(model)
     const colorSlug = modelToSlug(colorName)
-    const baseDir = path.join(
-        process.cwd(),
-        'public',
-        'data',
-        'brand-model-images',
-        '2w-colors',
-        brandId,
-        modelSlug
-    )
+    const modelSlugs = build2WColorMetadataSlugCandidates(model)
 
-    for (const extension of IMAGE_EXTENSIONS) {
-        const filePath = path.join(baseDir, `${colorSlug}.${extension}`)
-        if (fs.existsSync(filePath)) {
-            return `/data/brand-model-images/2w-colors/${brandId}/${modelSlug}/${colorSlug}.${extension}`
+    for (const modelSlug of modelSlugs) {
+        const baseDir = path.join(
+            process.cwd(),
+            'public',
+            'data',
+            'brand-model-images',
+            '2w-colors',
+            brandId,
+            modelSlug
+        )
+
+        for (const extension of IMAGE_EXTENSIONS) {
+            const filePath = path.join(baseDir, `${colorSlug}.${extension}`)
+            if (fs.existsSync(filePath)) {
+                return `/data/brand-model-images/2w-colors/${brandId}/${modelSlug}/${colorSlug}.${extension}`
+            }
+        }
+    }
+
+    return null
+}
+
+function normalizeLocalColorImageUrl(
+    image: string | null | undefined,
+    brandId: string,
+    modelSlug: string
+): string | null {
+    if (!image) return null
+    const cleanImage = image.trim()
+    if (!cleanImage) return null
+
+    if (cleanImage.startsWith('/data/brand-model-images/2w-colors/')) {
+        return cleanImage
+    }
+
+    if (/^https?:\/\//i.test(cleanImage)) {
+        return cleanImage
+    }
+
+    const fileName = cleanImage.split('/').filter(Boolean).pop()
+    if (!fileName) return null
+
+    return `/data/brand-model-images/2w-colors/${brandId}/${modelSlug}/${fileName}`
+}
+
+function localPublicFileExists(publicUrl: string): boolean {
+    if (!publicUrl.startsWith('/data/')) return true
+
+    const filePath = path.join(process.cwd(), 'public', publicUrl.replace(/^\//, ''))
+    return fs.existsSync(filePath)
+}
+
+function loadLocalColorGallery(brandId: string, model: string): BikeWaleColorGallery | null {
+    for (const modelSlug of build2WColorMetadataSlugCandidates(model)) {
+        const metadataPath = path.join(
+            process.cwd(),
+            'public',
+            'data',
+            'brand-model-images',
+            '2w-colors',
+            brandId,
+            modelSlug,
+            'metadata.json'
+        )
+
+        if (!fs.existsSync(metadataPath)) continue
+
+        try {
+            const metadata = JSON.parse(fs.readFileSync(metadataPath, 'utf8')) as LocalColorMetadata
+            const colors = (metadata.colors ?? [])
+                .map(color => {
+                    const image = normalizeLocalColorImageUrl(color.image ?? color.file, brandId, modelSlug)
+                    return {
+                        name: color.name?.trim() ?? '',
+                        image: image ?? '',
+                    }
+                })
+                .filter(color => color.name && color.image && localPublicFileExists(color.image))
+
+            if (colors.length === 0) continue
+
+            const hero = normalizeLocalColorImageUrl(metadata.hero, brandId, modelSlug)
+            return {
+                hero: hero && localPublicFileExists(hero) ? hero : colors[0]?.image ?? null,
+                colors,
+            }
+        } catch {
+            // Ignore malformed local metadata and continue to other candidates.
         }
     }
 
@@ -240,6 +324,9 @@ export const fetchTwoWheelerColorGallery = cache(async (
     model: string
 ): Promise<BikeWaleColorGallery | null> => {
     const brandId = brandNameToId(brand, '2w')
+    const localGallery = loadLocalColorGallery(brandId, model)
+    if (localGallery) return localGallery
+
     const modelUrl = await resolveBikeWaleModelPath(brandId, brand, model)
     if (!modelUrl) return null
 

@@ -1,0 +1,29 @@
+{
+  "category": "2w",
+  "brand": "Indian",
+  "brandId": "indian-motorcycle",
+  "model": "Chief Bobber Dark Horse",
+  "modelSlug": "chief-bobber-dark-horse",
+  "sourceUrl": "https://www.bikewale.com/indian-bikes/chief-bobber-dark-horse/colours/",
+  "hero": "/data/brand-model-images/2w-colors/indian-motorcycle/chief-bobber-dark-horse/copper-smoke.png",
+  "count": 4,
+  "colors": [
+    {
+      "name": "Copper Smoke",
+      "image": "/data/brand-model-images/2w-colors/indian-motorcycle/chief-bobber-dark-horse/copper-smoke.png"
+    },
+    {
+      "name": "Silver Quartz Smoke",
+      "image": "/data/brand-model-images/2w-colors/indian-motorcycle/chief-bobber-dark-horse/silver-quartz-smoke.png"
+    },
+    {
+      "name": "Titanium Smoke",
+      "image": "/data/brand-model-images/2w-colors/indian-motorcycle/chief-bobber-dark-horse/titanium-smoke.avif"
+    },
+    {
+      "name": "Black Smoke",
+      "image": "/data/brand-model-images/2w-colors/indian-motorcycle/chief-bobber-dark-horse/black-smoke.avif"
+    }
+  ],
+  "downloadedAt": "2026-05-21T16:28:53.748Z"
+}

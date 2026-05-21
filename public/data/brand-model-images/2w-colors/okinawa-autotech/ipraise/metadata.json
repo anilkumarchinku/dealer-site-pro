@@ -1,0 +1,42 @@
+{
+  "brand": "Okinawa Autotech",
+  "model": "iPraise+",
+  "brandId": "okinawa-autotech",
+  "makeSlug": "okinawa-bikes",
+  "modelSlug": "ipraise",
+  "sourceUrl": "https://www.bikewale.com/okinawa-bikes/i-praise/colours/",
+  "scrapedAt": "2026-04-23T10:22:07.673Z",
+  "count": 6,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/okinawa-select-model-black-1689835990627.png?q=100",
+  "colors": [
+    {
+      "name": "Black",
+      "image": "/data/brand-model-images/2w-colors/okinawa-autotech/i-praise/black.png"
+    },
+    {
+      "name": "Red",
+      "image": "/data/brand-model-images/2w-colors/okinawa-autotech/i-praise/red.png"
+    },
+    {
+      "name": "Ocean Blue",
+      "image": "/data/brand-model-images/2w-colors/okinawa-autotech/i-praise/ocean-blue.png"
+    },
+    {
+      "name": "Electric Green",
+      "image": "/data/brand-model-images/2w-colors/okinawa-autotech/i-praise/electric-green.png"
+    },
+    {
+      "name": "Mauve Purple",
+      "image": "/data/brand-model-images/2w-colors/okinawa-autotech/i-praise/mauve-purple.png"
+    },
+    {
+      "name": "Liquid Metal",
+      "image": "/data/brand-model-images/2w-colors/okinawa-autotech/i-praise/liquid-metal.png"
+    }
+  ],
+  "aliasOf": {
+    "model": "iPraise+",
+    "modelSlug": "i-praise",
+    "metadata": "/data/brand-model-images/2w-colors/okinawa-autotech/i-praise/metadata.json"
+  }
+}

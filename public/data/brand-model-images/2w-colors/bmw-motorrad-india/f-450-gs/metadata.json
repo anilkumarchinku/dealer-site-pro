@@ -1,0 +1,25 @@
+{
+  "category": "2w",
+  "brand": "BMW",
+  "brandId": "bmw-motorrad-india",
+  "model": "F 450 GS",
+  "modelSlug": "f-450-gs",
+  "sourceUrl": "https://www.bikewale.com/bmw-bikes/f-450-gs/colours/",
+  "hero": "/data/brand-model-images/2w-colors/bmw-motorrad-india/f-450-gs/cosmic-black-standard.png",
+  "count": 3,
+  "colors": [
+    {
+      "name": "Cosmic Black - Standard",
+      "image": "/data/brand-model-images/2w-colors/bmw-motorrad-india/f-450-gs/cosmic-black-standard.png"
+    },
+    {
+      "name": "Racing Blue Metallic",
+      "image": "/data/brand-model-images/2w-colors/bmw-motorrad-india/f-450-gs/racing-blue-metallic.png"
+    },
+    {
+      "name": "Cosmic Black - Exclusive",
+      "image": "/data/brand-model-images/2w-colors/bmw-motorrad-india/f-450-gs/cosmic-black-exclusive.png"
+    }
+  ],
+  "downloadedAt": "2026-05-21T16:28:39.230Z"
+}

@@ -1,0 +1,29 @@
+{
+  "brand": "BMW",
+  "model": "R 1250 RT",
+  "brandId": "bmw-motorrad-india",
+  "makeSlug": "bmw-bikes",
+  "modelSlug": "r1250rt",
+  "sourceUrl": "https://www.bikewale.com/bmw-bikes/r1250rt/colours/",
+  "scrapedAt": "2026-05-21T12:30:05.208Z",
+  "count": 4,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/bmw-select-model-mineral-white-metallic-1676977282740.png?q=100",
+  "colors": [
+    {
+      "name": "Mineral White metallic",
+      "image": "/data/brand-model-images/2w-colors/bmw-motorrad-india/r1250rt/mineral-white-metallic.png"
+    },
+    {
+      "name": "Alpine White",
+      "image": "/data/brand-model-images/2w-colors/bmw-motorrad-india/r1250rt/alpine-white.png"
+    },
+    {
+      "name": "Style Sport",
+      "image": "/data/brand-model-images/2w-colors/bmw-motorrad-india/r1250rt/style-sport.png"
+    },
+    {
+      "name": "Style Triple Black",
+      "image": "/data/brand-model-images/2w-colors/bmw-motorrad-india/r1250rt/style-triple-black.avif"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "brand": "Bajaj",
+  "model": "Pulsar RS 200",
+  "brandId": "bajaj-auto",
+  "makeSlug": "bajaj-bikes",
+  "modelSlug": "rs-200",
+  "sourceUrl": "https://www.bikewale.com/bajaj-bikes/rs-200/colours/",
+  "scrapedAt": "2026-05-21T12:21:28.763Z",
+  "count": 3,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/k6nj39b_1807577.jpg?q=100",
+  "colors": [
+    {
+      "name": "Active Satin Black",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/rs-200/active-satin-black.avif"
+    },
+    {
+      "name": "Pearl Metallic White",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/rs-200/pearl-metallic-white.avif"
+    },
+    {
+      "name": "Glossy Racing Red",
+      "image": "/data/brand-model-images/2w-colors/bajaj-auto/rs-200/glossy-racing-red.avif"
+    }
+  ]
+}

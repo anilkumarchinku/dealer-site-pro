@@ -1,0 +1,29 @@
+{
+  "category": "2w",
+  "brand": "Ampere",
+  "brandId": "ampere-greaves",
+  "model": "Reo Elite",
+  "modelSlug": "reo-elite",
+  "sourceUrl": "https://www.bikewale.com/ampere-bikes/reo/colours/",
+  "hero": "/data/brand-model-images/2w-colors/ampere-greaves/reo-elite/black-eighty.avif",
+  "count": 4,
+  "colors": [
+    {
+      "name": "Black - Eighty",
+      "image": "/data/brand-model-images/2w-colors/ampere-greaves/reo-elite/black-eighty.avif"
+    },
+    {
+      "name": "White - Eighty",
+      "image": "/data/brand-model-images/2w-colors/ampere-greaves/reo-elite/white-eighty.avif"
+    },
+    {
+      "name": "Red - Eighty",
+      "image": "/data/brand-model-images/2w-colors/ampere-greaves/reo-elite/red-eighty.avif"
+    },
+    {
+      "name": "Blue - Eighty",
+      "image": "/data/brand-model-images/2w-colors/ampere-greaves/reo-elite/blue-eighty.avif"
+    }
+  ],
+  "downloadedAt": "2026-05-21T16:28:13.415Z"
+}

@@ -1,0 +1,17 @@
+{
+  "category": "2w",
+  "brand": "Vespa",
+  "brandId": "vespa-india",
+  "model": "Officina 8",
+  "modelSlug": "officina-8",
+  "sourceUrl": "https://www.bikewale.com/vespa-bikes/officina-8/colours/",
+  "hero": "/data/brand-model-images/2w-colors/vespa-india/officina-8/matte-metallic-blue.avif",
+  "count": 1,
+  "colors": [
+    {
+      "name": "Matte Metallic Blue",
+      "image": "/data/brand-model-images/2w-colors/vespa-india/officina-8/matte-metallic-blue.avif"
+    }
+  ],
+  "downloadedAt": "2026-05-21T16:29:18.982Z"
+}

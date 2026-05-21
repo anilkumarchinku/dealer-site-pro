@@ -1,0 +1,32 @@
+{
+  "make": "Kabira Mobility",
+  "model": "KM4000",
+  "source": "local model image fallback; BikeWale colour page unavailable",
+  "updatedAt": "2026-05-21T16:36:47.307Z",
+  "colors": [
+    {
+      "name": "Matte Black",
+      "type": "Solid",
+      "hex": "#1A1A1A",
+      "image": "/data/brand-model-images/2w/kabira-mobility/km4000.jpg"
+    },
+    {
+      "name": "Pearl White",
+      "type": "Solid",
+      "hex": "#F5F5F0",
+      "image": "/data/brand-model-images/2w/kabira-mobility/km4000.jpg"
+    },
+    {
+      "name": "Electric Blue",
+      "type": "Solid",
+      "hex": "#1A4A8B",
+      "image": "/data/brand-model-images/2w/kabira-mobility/km4000.jpg"
+    },
+    {
+      "name": "Racing Red",
+      "type": "Solid",
+      "hex": "#C41E3A",
+      "image": "/data/brand-model-images/2w/kabira-mobility/km4000.jpg"
+    }
+  ]
+}

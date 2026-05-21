@@ -1,0 +1,21 @@
+{
+  "category": "2w",
+  "brand": "CFMoto",
+  "brandId": "cfmoto-india",
+  "model": "650NK",
+  "modelSlug": "650nk",
+  "sourceUrl": "https://www.bikewale.com/cfmoto-bikes/650nk/colours/",
+  "hero": "/data/brand-model-images/2w-colors/cfmoto-india/650nk/grey.avif",
+  "count": 2,
+  "colors": [
+    {
+      "name": "Grey",
+      "image": "/data/brand-model-images/2w-colors/cfmoto-india/650nk/grey.avif"
+    },
+    {
+      "name": "Blue",
+      "image": "/data/brand-model-images/2w-colors/cfmoto-india/650nk/blue.avif"
+    }
+  ],
+  "downloadedAt": "2026-05-21T16:28:44.300Z"
+}

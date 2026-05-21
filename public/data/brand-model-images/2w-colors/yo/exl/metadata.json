@@ -1,0 +1,25 @@
+{
+  "category": "2w",
+  "brand": "Yo",
+  "brandId": "yo",
+  "model": "EXL",
+  "modelSlug": "exl",
+  "sourceUrl": "https://www.bikewale.com/yo-bikes/exl/colours/",
+  "hero": "/data/brand-model-images/2w-colors/yo/exl/metallic-grey.avif",
+  "count": 3,
+  "colors": [
+    {
+      "name": "Metallic Grey",
+      "image": "/data/brand-model-images/2w-colors/yo/exl/metallic-grey.avif"
+    },
+    {
+      "name": "Metallic Black",
+      "image": "/data/brand-model-images/2w-colors/yo/exl/metallic-black.avif"
+    },
+    {
+      "name": "Red",
+      "image": "/data/brand-model-images/2w-colors/yo/exl/red.avif"
+    }
+  ],
+  "downloadedAt": "2026-05-21T16:29:19.833Z"
+}

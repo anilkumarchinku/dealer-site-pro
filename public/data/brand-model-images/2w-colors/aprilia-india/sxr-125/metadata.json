@@ -1,0 +1,29 @@
+{
+  "category": "2w",
+  "brand": "Aprilia",
+  "brandId": "aprilia-india",
+  "model": "SXR 125",
+  "modelSlug": "sxr-125",
+  "sourceUrl": "https://www.bikewale.com/aprilia-bikes/sxr-125/colours/",
+  "hero": "/data/brand-model-images/2w-colors/aprilia-india/sxr-125/white.avif",
+  "count": 4,
+  "colors": [
+    {
+      "name": "White",
+      "image": "/data/brand-model-images/2w-colors/aprilia-india/sxr-125/white.avif"
+    },
+    {
+      "name": "Red",
+      "image": "/data/brand-model-images/2w-colors/aprilia-india/sxr-125/red.avif"
+    },
+    {
+      "name": "Blue",
+      "image": "/data/brand-model-images/2w-colors/aprilia-india/sxr-125/blue.avif"
+    },
+    {
+      "name": "Black",
+      "image": "/data/brand-model-images/2w-colors/aprilia-india/sxr-125/black.avif"
+    }
+  ],
+  "downloadedAt": "2026-05-21T16:28:32.173Z"
+}

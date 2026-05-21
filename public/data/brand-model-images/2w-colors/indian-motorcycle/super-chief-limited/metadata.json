@@ -1,0 +1,25 @@
+{
+  "category": "2w",
+  "brand": "Indian",
+  "brandId": "indian-motorcycle",
+  "model": "Super Chief Limited",
+  "modelSlug": "super-chief-limited",
+  "sourceUrl": "https://www.bikewale.com/indian-bikes/super-chief-limited/colours/",
+  "hero": "/data/brand-model-images/2w-colors/indian-motorcycle/super-chief-limited/stryker-red-metallic.png",
+  "count": 3,
+  "colors": [
+    {
+      "name": "Stryker Red Metallic",
+      "image": "/data/brand-model-images/2w-colors/indian-motorcycle/super-chief-limited/stryker-red-metallic.png"
+    },
+    {
+      "name": "Silver Quartz Metallic",
+      "image": "/data/brand-model-images/2w-colors/indian-motorcycle/super-chief-limited/silver-quartz-metallic.png"
+    },
+    {
+      "name": "Black Metallic",
+      "image": "/data/brand-model-images/2w-colors/indian-motorcycle/super-chief-limited/black-metallic.avif"
+    }
+  ],
+  "downloadedAt": "2026-05-21T16:28:56.670Z"
+}

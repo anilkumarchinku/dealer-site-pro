@@ -1,0 +1,17 @@
+{
+  "category": "2w",
+  "brand": "BSA",
+  "brandId": "bsa",
+  "model": "Thunderbolt",
+  "modelSlug": "thunderbolt",
+  "sourceUrl": "https://www.bikewale.com/bsa-bikes/thunderbolt/colours/",
+  "hero": "/data/brand-model-images/2w-colors/bsa/thunderbolt/yellow-and-silver.avif",
+  "count": 1,
+  "colors": [
+    {
+      "name": "Yellow and Silver",
+      "image": "/data/brand-model-images/2w-colors/bsa/thunderbolt/yellow-and-silver.avif"
+    }
+  ],
+  "downloadedAt": "2026-05-21T16:28:39.852Z"
+}

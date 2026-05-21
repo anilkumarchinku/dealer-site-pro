@@ -1,0 +1,25 @@
+{
+  "category": "2w",
+  "brand": "Aprilia",
+  "brandId": "aprilia-india",
+  "model": "SR 175",
+  "modelSlug": "sr-175",
+  "sourceUrl": "https://www.bikewale.com/aprilia-bikes/sr-175/colours/",
+  "hero": "/data/brand-model-images/2w-colors/aprilia-india/sr-175/glossy-tech-white.avif",
+  "count": 3,
+  "colors": [
+    {
+      "name": "Glossy Tech White",
+      "image": "/data/brand-model-images/2w-colors/aprilia-india/sr-175/glossy-tech-white.avif"
+    },
+    {
+      "name": "Matte Prismatic Dark",
+      "image": "/data/brand-model-images/2w-colors/aprilia-india/sr-175/matte-prismatic-dark.avif"
+    },
+    {
+      "name": "GP Replica Edition",
+      "image": "/data/brand-model-images/2w-colors/aprilia-india/sr-175/gp-replica-edition.avif"
+    }
+  ],
+  "downloadedAt": "2026-05-21T16:28:22.790Z"
+}

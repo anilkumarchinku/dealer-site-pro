@@ -1,0 +1,21 @@
+{
+  "category": "2w",
+  "brand": "CFMoto",
+  "brandId": "cfmoto-india",
+  "model": "650GT",
+  "modelSlug": "650gt",
+  "sourceUrl": "https://www.bikewale.com/cfmoto-bikes/650gt/colours/",
+  "hero": "/data/brand-model-images/2w-colors/cfmoto-india/650gt/black.avif",
+  "count": 2,
+  "colors": [
+    {
+      "name": "Black",
+      "image": "/data/brand-model-images/2w-colors/cfmoto-india/650gt/black.avif"
+    },
+    {
+      "name": "White",
+      "image": "/data/brand-model-images/2w-colors/cfmoto-india/650gt/white.avif"
+    }
+  ],
+  "downloadedAt": "2026-05-21T16:28:47.177Z"
+}

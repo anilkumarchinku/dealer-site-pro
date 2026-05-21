@@ -1,0 +1,17 @@
+{
+  "category": "2w",
+  "brand": "CFMoto",
+  "brandId": "cfmoto-india",
+  "model": "450 MT",
+  "modelSlug": "450-mt",
+  "sourceUrl": "https://www.bikewale.com/cfmoto-bikes/450-mt/colours/",
+  "hero": "/data/brand-model-images/2w-colors/cfmoto-india/450-mt/blue-and-white.avif",
+  "count": 1,
+  "colors": [
+    {
+      "name": "Blue and White",
+      "image": "/data/brand-model-images/2w-colors/cfmoto-india/450-mt/blue-and-white.avif"
+    }
+  ],
+  "downloadedAt": "2026-05-21T16:28:41.126Z"
+}

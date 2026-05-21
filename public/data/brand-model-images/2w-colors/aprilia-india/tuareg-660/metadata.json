@@ -1,0 +1,25 @@
+{
+  "category": "2w",
+  "brand": "Aprilia",
+  "brandId": "aprilia-india",
+  "model": "Tuareg 660",
+  "modelSlug": "tuareg-660",
+  "sourceUrl": "https://www.bikewale.com/aprilia-bikes/tuareg-660/colours/",
+  "hero": "/data/brand-model-images/2w-colors/aprilia-india/tuareg-660/canyon-sand.png",
+  "count": 3,
+  "colors": [
+    {
+      "name": "Canyon Sand",
+      "image": "/data/brand-model-images/2w-colors/aprilia-india/tuareg-660/canyon-sand.png"
+    },
+    {
+      "name": "Atreides Black",
+      "image": "/data/brand-model-images/2w-colors/aprilia-india/tuareg-660/atreides-black.png"
+    },
+    {
+      "name": "Dakar Podium",
+      "image": "/data/brand-model-images/2w-colors/aprilia-india/tuareg-660/dakar-podium.png"
+    }
+  ],
+  "downloadedAt": "2026-05-21T16:28:27.542Z"
+}

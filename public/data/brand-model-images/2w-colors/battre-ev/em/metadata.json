@@ -1,0 +1,32 @@
+{
+  "make": "Battre Electric",
+  "model": "EM",
+  "source": "local model image fallback; BikeWale colour page unavailable",
+  "updatedAt": "2026-05-21T16:36:47.296Z",
+  "colors": [
+    {
+      "name": "Gloss Black",
+      "type": "Solid",
+      "hex": null,
+      "image": "/data/brand-model-images/2w/battre-ev/battre-electric-em.jpg"
+    },
+    {
+      "name": "Ivory White",
+      "type": "Solid",
+      "hex": null,
+      "image": "/data/brand-model-images/2w/battre-ev/battre-electric-em.jpg"
+    },
+    {
+      "name": "Marine Blue",
+      "type": "Solid",
+      "hex": null,
+      "image": "/data/brand-model-images/2w/battre-ev/battre-electric-em.jpg"
+    },
+    {
+      "name": "Burgundy Red",
+      "type": "Solid",
+      "hex": null,
+      "image": "/data/brand-model-images/2w/battre-ev/battre-electric-em.jpg"
+    }
+  ]
+}

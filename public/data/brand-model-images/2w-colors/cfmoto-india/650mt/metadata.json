@@ -1,0 +1,21 @@
+{
+  "category": "2w",
+  "brand": "CFMoto",
+  "brandId": "cfmoto-india",
+  "model": "650MT",
+  "modelSlug": "650mt",
+  "sourceUrl": "https://www.bikewale.com/cfmoto-bikes/650mt/colours/",
+  "hero": "/data/brand-model-images/2w-colors/cfmoto-india/650mt/grey.avif",
+  "count": 2,
+  "colors": [
+    {
+      "name": "Grey",
+      "image": "/data/brand-model-images/2w-colors/cfmoto-india/650mt/grey.avif"
+    },
+    {
+      "name": "Blue",
+      "image": "/data/brand-model-images/2w-colors/cfmoto-india/650mt/blue.avif"
+    }
+  ],
+  "downloadedAt": "2026-05-21T16:28:45.356Z"
+}

@@ -1,0 +1,41 @@
+{
+  "category": "2w",
+  "brand": "Vespa",
+  "brandId": "vespa-india",
+  "model": "ZX 125",
+  "modelSlug": "zx-125",
+  "sourceUrl": "https://www.bikewale.com/vespa-bikes/zx-125/colours/",
+  "hero": "/data/brand-model-images/2w-colors/vespa-india/zx-125/yellow.avif",
+  "count": 7,
+  "colors": [
+    {
+      "name": "Yellow",
+      "image": "/data/brand-model-images/2w-colors/vespa-india/zx-125/yellow.avif"
+    },
+    {
+      "name": "Glossy Red",
+      "image": "/data/brand-model-images/2w-colors/vespa-india/zx-125/glossy-red.avif"
+    },
+    {
+      "name": "Vibrant Red",
+      "image": "/data/brand-model-images/2w-colors/vespa-india/zx-125/vibrant-red.avif"
+    },
+    {
+      "name": "Pearl White",
+      "image": "/data/brand-model-images/2w-colors/vespa-india/zx-125/pearl-white.avif"
+    },
+    {
+      "name": "Matt Black",
+      "image": "/data/brand-model-images/2w-colors/vespa-india/zx-125/matt-black.avif"
+    },
+    {
+      "name": "Grey",
+      "image": "/data/brand-model-images/2w-colors/vespa-india/zx-125/grey.avif"
+    },
+    {
+      "name": "Azure Blue",
+      "image": "/data/brand-model-images/2w-colors/vespa-india/zx-125/azure-blue.avif"
+    }
+  ],
+  "downloadedAt": "2026-05-21T16:29:16.561Z"
+}

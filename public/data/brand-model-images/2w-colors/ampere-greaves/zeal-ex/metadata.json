@@ -1,0 +1,17 @@
+{
+  "category": "2w",
+  "brand": "Ampere",
+  "brandId": "ampere-greaves",
+  "model": "Zeal EX",
+  "modelSlug": "zeal-ex",
+  "sourceUrl": "https://www.bikewale.com/ampere-bikes/zeal-ex/colours/",
+  "hero": "/data/brand-model-images/2w-colors/ampere-greaves/zeal-ex/blue.avif",
+  "count": 1,
+  "colors": [
+    {
+      "name": "Blue",
+      "image": "/data/brand-model-images/2w-colors/ampere-greaves/zeal-ex/blue.avif"
+    }
+  ],
+  "downloadedAt": "2026-05-21T16:28:11.726Z"
+}

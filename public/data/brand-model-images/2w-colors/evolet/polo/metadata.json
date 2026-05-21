@@ -1,0 +1,17 @@
+{
+  "category": "2w",
+  "brand": "Evolet",
+  "brandId": "evolet",
+  "model": "Polo",
+  "modelSlug": "polo",
+  "sourceUrl": "https://www.bikewale.com/evolet-bikes/polo/colours/",
+  "hero": "/data/brand-model-images/2w-colors/evolet/polo/white.avif",
+  "count": 1,
+  "colors": [
+    {
+      "name": "White",
+      "image": "/data/brand-model-images/2w-colors/evolet/polo/white.avif"
+    }
+  ],
+  "downloadedAt": "2026-05-21T16:28:47.746Z"
+}

@@ -1,0 +1,29 @@
+{
+  "category": "2w",
+  "brand": "Ampere",
+  "brandId": "ampere-greaves",
+  "model": "Magnus LT",
+  "modelSlug": "magnus-lt",
+  "sourceUrl": "https://www.bikewale.com/ampere-bikes/magnus/colours/",
+  "hero": "/data/brand-model-images/2w-colors/ampere-greaves/magnus-lt/matcha-green.png",
+  "count": 4,
+  "colors": [
+    {
+      "name": "Matcha Green",
+      "image": "/data/brand-model-images/2w-colors/ampere-greaves/magnus-lt/matcha-green.png"
+    },
+    {
+      "name": "Ocean Blue",
+      "image": "/data/brand-model-images/2w-colors/ampere-greaves/magnus-lt/ocean-blue.png"
+    },
+    {
+      "name": "Mystic Mauve",
+      "image": "/data/brand-model-images/2w-colors/ampere-greaves/magnus-lt/mystic-mauve.png"
+    },
+    {
+      "name": "Butter Yellow",
+      "image": "/data/brand-model-images/2w-colors/ampere-greaves/magnus-lt/butter-yellow.png"
+    }
+  ],
+  "downloadedAt": "2026-05-21T16:28:19.253Z"
+}

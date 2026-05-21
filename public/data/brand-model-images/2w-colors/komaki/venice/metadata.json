@@ -1,0 +1,38 @@
+{
+  "make": "Komaki",
+  "model": "Venice",
+  "source": "local model image fallback; BikeWale colour page unavailable",
+  "updatedAt": "2026-05-21T16:36:47.320Z",
+  "colors": [
+    {
+      "name": "Matte Grey",
+      "type": "Solid",
+      "hex": "#888888",
+      "image": "/data/brand-model-images/2w/komaki/komaki-venice.jpg"
+    },
+    {
+      "name": "Pearl White",
+      "type": "Solid",
+      "hex": "#F5F5F0",
+      "image": "/data/brand-model-images/2w/komaki/komaki-venice.jpg"
+    },
+    {
+      "name": "Glossy Black",
+      "type": "Solid",
+      "hex": "#888888",
+      "image": "/data/brand-model-images/2w/komaki/komaki-venice.jpg"
+    },
+    {
+      "name": "Red",
+      "type": "Solid",
+      "hex": "#C41E3A",
+      "image": "/data/brand-model-images/2w/komaki/komaki-venice.jpg"
+    },
+    {
+      "name": "Sky Blue",
+      "type": "Solid",
+      "hex": "#888888",
+      "image": "/data/brand-model-images/2w/komaki/komaki-venice.jpg"
+    }
+  ]
+}

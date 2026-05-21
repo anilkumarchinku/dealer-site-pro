@@ -1,0 +1,29 @@
+{
+  "category": "2w",
+  "brand": "Yo",
+  "brandId": "yo",
+  "model": "Xplor",
+  "modelSlug": "xplor",
+  "sourceUrl": "https://www.bikewale.com/yo-bikes/xplor/colours/",
+  "hero": "/data/brand-model-images/2w-colors/yo/xplor/white.avif",
+  "count": 4,
+  "colors": [
+    {
+      "name": "White",
+      "image": "/data/brand-model-images/2w-colors/yo/xplor/white.avif"
+    },
+    {
+      "name": "Black",
+      "image": "/data/brand-model-images/2w-colors/yo/xplor/black.avif"
+    },
+    {
+      "name": "Red",
+      "image": "/data/brand-model-images/2w-colors/yo/xplor/red.avif"
+    },
+    {
+      "name": "Blue",
+      "image": "/data/brand-model-images/2w-colors/yo/xplor/blue.avif"
+    }
+  ],
+  "downloadedAt": "2026-05-21T16:29:20.748Z"
+}

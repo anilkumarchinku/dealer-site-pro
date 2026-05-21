@@ -1,0 +1,17 @@
+{
+  "category": "2w",
+  "brand": "Indian",
+  "brandId": "indian-motorcycle",
+  "model": "Scout Sixty Classic",
+  "modelSlug": "scout-sixty-classic",
+  "sourceUrl": "https://www.bikewale.com/indian-bikes/scout-sixty-classic/colours/",
+  "hero": "/data/brand-model-images/2w-colors/indian-motorcycle/scout-sixty-classic/frost-silver.avif",
+  "count": 1,
+  "colors": [
+    {
+      "name": "Frost Silver",
+      "image": "/data/brand-model-images/2w-colors/indian-motorcycle/scout-sixty-classic/frost-silver.avif"
+    }
+  ],
+  "downloadedAt": "2026-05-21T16:28:54.201Z"
+}

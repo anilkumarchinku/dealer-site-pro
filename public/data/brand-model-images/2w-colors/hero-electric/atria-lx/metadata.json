@@ -1,0 +1,26 @@
+{
+  "brand": "Hero Electric",
+  "model": "Atria LX",
+  "brandId": "hero-electric",
+  "makeSlug": "heroelectric-bikes",
+  "modelSlug": "atria-lx",
+  "sourceUrl": "https://www.bikewale.com/heroelectric-bikes/atria/colours/",
+  "scrapedAt": "2026-04-23T10:22:27.006Z",
+  "count": 2,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/bw/models/colors/hero-electric-select-model-red-1620729269913.jpg?q=100",
+  "colors": [
+    {
+      "name": "Red",
+      "image": "/data/brand-model-images/2w-colors/hero-electric/atria/red.avif"
+    },
+    {
+      "name": "Grey",
+      "image": "/data/brand-model-images/2w-colors/hero-electric/atria/grey.avif"
+    }
+  ],
+  "aliasOf": {
+    "model": "Atria LX",
+    "modelSlug": "atria",
+    "metadata": "/data/brand-model-images/2w-colors/hero-electric/atria/metadata.json"
+  }
+}

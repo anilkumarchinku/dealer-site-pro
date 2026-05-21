@@ -1,0 +1,26 @@
+{
+  "make": "Yulu",
+  "model": "Bike D",
+  "source": "local model image fallback; BikeWale colour page unavailable",
+  "updatedAt": "2026-05-21T16:36:47.321Z",
+  "colors": [
+    {
+      "name": "Red",
+      "type": "Solid",
+      "hex": "#C41E3A",
+      "image": "/data/brand-model-images/2w/yulu/yulu-bike-d.jpg"
+    },
+    {
+      "name": "White",
+      "type": "Solid",
+      "hex": "#F5F5F0",
+      "image": "/data/brand-model-images/2w/yulu/yulu-bike-d.jpg"
+    },
+    {
+      "name": "Black",
+      "type": "Solid",
+      "hex": "#1A1A1A",
+      "image": "/data/brand-model-images/2w/yulu/yulu-bike-d.jpg"
+    }
+  ]
+}

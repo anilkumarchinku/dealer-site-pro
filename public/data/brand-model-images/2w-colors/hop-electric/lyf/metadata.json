@@ -1,0 +1,29 @@
+{
+  "category": "2w",
+  "brand": "Hop Electric",
+  "brandId": "hop-electric",
+  "model": "LYF",
+  "modelSlug": "lyf",
+  "sourceUrl": "https://www.bikewale.com/hop-electric-bikes/lyf/colours/",
+  "hero": "/data/brand-model-images/2w-colors/hop-electric/lyf/silver.avif",
+  "count": 4,
+  "colors": [
+    {
+      "name": "Silver",
+      "image": "/data/brand-model-images/2w-colors/hop-electric/lyf/silver.avif"
+    },
+    {
+      "name": "Red",
+      "image": "/data/brand-model-images/2w-colors/hop-electric/lyf/red.avif"
+    },
+    {
+      "name": "Blue",
+      "image": "/data/brand-model-images/2w-colors/hop-electric/lyf/blue.avif"
+    },
+    {
+      "name": "Black",
+      "image": "/data/brand-model-images/2w-colors/hop-electric/lyf/black.avif"
+    }
+  ],
+  "downloadedAt": "2026-05-21T16:28:49.689Z"
+}

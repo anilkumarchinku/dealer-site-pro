@@ -1,0 +1,21 @@
+{
+  "brand": "OLA Electric",
+  "model": "S1 Z Plus",
+  "brandId": "ola-electric",
+  "makeSlug": "ola-bikes",
+  "modelSlug": "s1-z",
+  "sourceUrl": "https://www.bikewale.com/ola-bikes/s1-z/colours/",
+  "scrapedAt": "2026-05-21T12:34:47.159Z",
+  "count": 2,
+  "hero": "https://imgd.aeplcdn.com/1280x720/n/vsta69b_1799155.jpg?q=100",
+  "colors": [
+    {
+      "name": "White - Standard",
+      "image": "/data/brand-model-images/2w-colors/ola-electric/s1-z/white-standard.avif"
+    },
+    {
+      "name": "White - Plus",
+      "image": "/data/brand-model-images/2w-colors/ola-electric/s1-z/white-plus.avif"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "category": "2w",
+  "brand": "Ampere",
+  "brandId": "ampere-greaves",
+  "model": "Primus",
+  "modelSlug": "primus",
+  "sourceUrl": "https://www.bikewale.com/ampere-bikes/primus/colours/",
+  "hero": "/data/brand-model-images/2w-colors/ampere-greaves/primus/buck-black.png",
+  "count": 4,
+  "colors": [
+    {
+      "name": "Buck Black",
+      "image": "/data/brand-model-images/2w-colors/ampere-greaves/primus/buck-black.png"
+    },
+    {
+      "name": "Himalayan White",
+      "image": "/data/brand-model-images/2w-colors/ampere-greaves/primus/himalayan-white.png"
+    },
+    {
+      "name": "Havelock Blue",
+      "image": "/data/brand-model-images/2w-colors/ampere-greaves/primus/havelock-blue.png"
+    },
+    {
+      "name": "Royal Orange",
+      "image": "/data/brand-model-images/2w-colors/ampere-greaves/primus/royal-orange.png"
+    }
+  ],
+  "downloadedAt": "2026-05-21T16:28:18.828Z"
+}
