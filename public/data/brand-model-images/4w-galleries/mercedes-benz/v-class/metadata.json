@@ -10,7 +10,7 @@
     "colors": 5,
     "total": 5
   },
-  "hero": "https://imgd.aeplcdn.com/1056x594/n/holk5ib_1911104.png?q=80&wm=1",
+  "hero": "/data/brand-model-images/4w-galleries/mercedes-benz/v-class/colors/sodalite-blue-metallic.png",
   "exterior": [],
   "interior": [],
   "feature": [],
@@ -22,10 +22,10 @@
     "Alpine Grey Metallic"
   ],
   "colorImages": [
-    "https://imgd.aeplcdn.com/1056x594/n/holk5ib_1911104.png?q=80&wm=1",
-    "https://imgd.aeplcdn.com/1056x594/n/hijk5ib_1911102.png?q=80&wm=1",
-    "https://imgd.aeplcdn.com/1056x594/n/nrik5ib_1911100.png?q=80&wm=1",
-    "https://imgd.aeplcdn.com/1056x594/n/iigk5ib_1911098.png?q=80&wm=1",
-    "https://imgd.aeplcdn.com/1056x594/n/3d9k5ib_1911096.png?q=80&wm=1"
+    "/data/brand-model-images/4w-galleries/mercedes-benz/v-class/colors/sodalite-blue-metallic.png",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/v-class/colors/rock-crystal-white-metallic.png",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/v-class/colors/obsidian-black-metallic.png",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/v-class/colors/high-tech-silver-metallic.png",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/v-class/colors/alpine-grey-metallic.png"
   ]
 }

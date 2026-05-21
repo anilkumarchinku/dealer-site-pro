@@ -10,7 +10,7 @@
     "colors": 6,
     "total": 6
   },
-  "hero": "https://imgd.aeplcdn.com/1056x594/n/emljvgb_1862474.jpg?q=80&wm=1",
+  "hero": "/data/brand-model-images/4w-galleries/mercedes-benz/amg-cle-53/colors/obsidian-black.jpg",
   "exterior": [],
   "interior": [],
   "feature": [],
@@ -23,11 +23,11 @@
     "Opalite White Bright"
   ],
   "colorImages": [
-    "https://imgd.aeplcdn.com/1056x594/n/emljvgb_1862474.jpg?q=80&wm=1",
-    "https://imgd.aeplcdn.com/1056x594/n/p5jjvgb_1862472.jpg?q=80&wm=1",
-    "https://imgd.aeplcdn.com/1056x594/n/oiijvgb_1862470.jpg?q=80&wm=1",
-    "https://imgd.aeplcdn.com/1056x594/n/08djvgb_1862464.jpg?q=80&wm=1",
-    "https://imgd.aeplcdn.com/1056x594/n/fsgjvgb_1862468.jpg?q=80&wm=1",
-    "https://imgd.aeplcdn.com/1056x594/n/cz9jvgb_1862466.jpg?q=80&wm=1"
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-cle-53/colors/obsidian-black.jpg",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-cle-53/colors/spectral-blue.jpg",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-cle-53/colors/sun-yellow.jpg",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-cle-53/colors/patagonia-red-metallic.jpg",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-cle-53/colors/alpine-grey.jpg",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-cle-53/colors/opalite-white-bright.jpg"
   ]
 }

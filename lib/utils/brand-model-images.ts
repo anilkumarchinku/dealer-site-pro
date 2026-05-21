@@ -87,8 +87,8 @@ export function getScrapedImageUrls(
     if (vehicleCategory === "4w") {
         const base = `/data/brand-model-images/4w/${brandId}/${slug}`;
         const urls = [
-            get4WColorHeroFallback(brandId, model),
             ...IMAGE_EXTENSIONS.map((ext) => `${base}.${ext}`),
+            get4WColorHeroFallback(brandId, model),
         ].filter((url): url is string => Boolean(url));
         // Fallback: strip common suffixes (tour, cargo, gen, edition) to
         // try the base model image (e.g. "wagon-r-tour" → "wagon-r")
@@ -181,22 +181,34 @@ export function getVehicleImageUrls(
             ? get4WColorHeroFallback(brandId, model)
             : null;
 
-    return [...new Set([
-        ...(vehicleCategory === "4w"
-            ? [
+    if (vehicleCategory === "4w") {
+        const localRepoAssets = scrapedAssets.filter((url) =>
+            url.startsWith('/data/brand-model-images/4w/')
+        );
+        const remoteFallbackAssets = scrapedAssets.filter((url) =>
+            !url.startsWith('/data/brand-model-images/4w/')
+        );
+
+        return [...new Set([
+            ...[
                 ...curatedAssets,
+                ...localRepoAssets,
                 normalizedPrimary,
                 preferredColorHero,
                 ...(normalizedPrimary?.startsWith("/assets/") ? [normalizedPrimary] : []),
-                ...scrapedAssets,
-            ]
-            : [
-                preferredColorHero,
-                normalizedPrimary,
-                ...scrapedAssets,
-                ...curatedAssets,
-            ]),
-    ].filter((url): url is string => Boolean(url)))];
+                ...remoteFallbackAssets,
+            ].filter((url): url is string => Boolean(url)),
+        ])];
+    }
+
+    return [...new Set([
+        ...[
+            preferredColorHero,
+            normalizedPrimary,
+            ...scrapedAssets,
+            ...curatedAssets,
+        ].filter((url): url is string => Boolean(url)),
+    ])];
 }
 
 /**

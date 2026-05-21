@@ -21,6 +21,21 @@ interface GalleryLookupOptions {
     model?: string
 }
 
+function normalizeLocalGalleryAssetUrl(url: string, publicBase: string): string {
+    if (!url.startsWith('/data/brand-model-images/4w-galleries/')) return url
+
+    const parts = url.split('/').filter(Boolean)
+    const galleryIndex = parts.indexOf('4w-galleries')
+    if (galleryIndex < 0 || parts.length <= galleryIndex + 3) return url
+
+    const tail = parts.slice(galleryIndex + 3).join('/')
+    return `${publicBase}/${tail}`.replace(/\/+/g, '/')
+}
+
+function normalizeLocalGalleryAssetUrls(values: string[] | undefined, publicBase: string): string[] {
+    return (values ?? []).map((value) => normalizeLocalGalleryAssetUrl(value, publicBase))
+}
+
 function slugify(value: string): string {
     return String(value || '')
         .toLowerCase()
@@ -235,18 +250,22 @@ function buildLocalGalleryCandidates(sourceUrl: string, options?: GalleryLookupO
 async function loadLocalGallery(sourceUrl: string, options?: GalleryLookupOptions): Promise<CardekhoGalleryData | null> {
     for (const candidate of buildLocalGalleryCandidates(sourceUrl, options)) {
         try {
+            const publicPath = candidate.split(`${path.sep}public${path.sep}`)[1]
+            const publicBase = publicPath
+                ? `/${publicPath.split(path.sep).join('/').replace(/\/metadata\.json$/, '')}`
+                : null
             const metadata = JSON.parse(
                 await fs.readFile(candidate, 'utf8')
             ) as Partial<CardekhoGalleryData> & { sourceUrl?: string }
 
             return {
                 sourceUrl: metadata.sourceUrl ?? sourceUrl,
-                hero: metadata.hero ?? null,
-                exterior: metadata.exterior ?? [],
-                interior: metadata.interior ?? [],
+                hero: publicBase && metadata.hero ? normalizeLocalGalleryAssetUrl(metadata.hero, publicBase) : metadata.hero ?? null,
+                exterior: publicBase ? normalizeLocalGalleryAssetUrls(metadata.exterior, publicBase) : metadata.exterior ?? [],
+                interior: publicBase ? normalizeLocalGalleryAssetUrls(metadata.interior, publicBase) : metadata.interior ?? [],
                 colorNames: metadata.colorNames ?? [],
-                colorImages: metadata.colorImages ?? [],
-                feature: metadata.feature ?? [],
+                colorImages: publicBase ? normalizeLocalGalleryAssetUrls(metadata.colorImages, publicBase) : metadata.colorImages ?? [],
+                feature: publicBase ? normalizeLocalGalleryAssetUrls(metadata.feature, publicBase) : metadata.feature ?? [],
             }
         } catch {
             continue
@@ -267,14 +286,15 @@ async function loadLocalGallery(sourceUrl: string, options?: GalleryLookupOption
             if (!response.ok) continue
 
             const metadata = await response.json() as Partial<CardekhoGalleryData> & { sourceUrl?: string }
+            const normalizedBase = `/${publicPath.split(path.sep).join('/').replace(/\/metadata\.json$/, '')}`
             return {
                 sourceUrl: metadata.sourceUrl ?? sourceUrl,
-                hero: metadata.hero ?? null,
-                exterior: metadata.exterior ?? [],
-                interior: metadata.interior ?? [],
+                hero: metadata.hero ? normalizeLocalGalleryAssetUrl(metadata.hero, normalizedBase) : null,
+                exterior: normalizeLocalGalleryAssetUrls(metadata.exterior, normalizedBase),
+                interior: normalizeLocalGalleryAssetUrls(metadata.interior, normalizedBase),
                 colorNames: metadata.colorNames ?? [],
-                colorImages: metadata.colorImages ?? [],
-                feature: metadata.feature ?? [],
+                colorImages: normalizeLocalGalleryAssetUrls(metadata.colorImages, normalizedBase),
+                feature: normalizeLocalGalleryAssetUrls(metadata.feature, normalizedBase),
             }
         } catch {
             continue

@@ -10,7 +10,7 @@
     "colors": 8,
     "total": 8
   },
-  "hero": "https://storage.googleapis.com/vinfast-data-01/mau-xe-vf-9-mau-trang-brahminy-white_1656467107.jpg",
+  "hero": "/data/brand-model-images/4w-galleries/vinfast/vf9/colors/deep-ocean.jpg",
   "exterior": [],
   "interior": [],
   "feature": [],
@@ -25,13 +25,13 @@
     "Sunset Orange"
   ],
   "colorImages": [
-    "https://storage.googleapis.com/vinfast-data-01/mau-xe-vf-9-xanh-la-deep-ocean_1656466981.jpg",
-    "https://storage.googleapis.com/vinfast-data-01/mau-xe-vf-9-mau-do-crimson-red_1656467010.jpg",
-    "https://storage.googleapis.com/vinfast-data-01/mau-xe-vf-9-blue_1656467051.jpg",
-    "https://storage.googleapis.com/vinfast-data-01/mau-xe-vf-9-jet-black_1656467075.jpg",
-    "https://storage.googleapis.com/vinfast-data-01/mau-xe-vf-9-mau-trang-brahminy-white_1656467107.jpg",
-    "https://storage.googleapis.com/vinfast-data-01/mau-xe-vf-9-neptune-grey_1656467197.jpg",
-    "https://storage.googleapis.com/vinfast-data-01/mau-xe-vf-9-mau-bac-desat-silver_1656467223.jpg",
-    "https://storage.googleapis.com/vinfast-data-01/mau-xe-vf-9-mau-cam-sunset-orange_1656467251.jpg"
+    "/data/brand-model-images/4w-galleries/vinfast/vf9/colors/deep-ocean.jpg",
+    "/data/brand-model-images/4w-galleries/vinfast/vf9/colors/crimson-red.jpg",
+    "/data/brand-model-images/4w-galleries/vinfast/vf9/colors/vinfast-blue.jpg",
+    "/data/brand-model-images/4w-galleries/vinfast/vf9/colors/jet-black.jpg",
+    "/data/brand-model-images/4w-galleries/vinfast/vf9/colors/brahminy-white.jpg",
+    "/data/brand-model-images/4w-galleries/vinfast/vf9/colors/neptune-grey.jpg",
+    "/data/brand-model-images/4w-galleries/vinfast/vf9/colors/desat-silver.jpg",
+    "/data/brand-model-images/4w-galleries/vinfast/vf9/colors/sunset-orange.jpg"
   ]
 }
