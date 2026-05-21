@@ -247,6 +247,11 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
         { icon: <Settings className="w-5 h-5 text-gray-600" />, label: isElectric ? 'Battery' : 'Engine', value: isElectric ? (car.engine?.batteryCapacity ? `${car.engine.batteryCapacity} kWh` : '') : (car.engine?.displacement ? `${car.engine.displacement} cc` : '') },
         { icon: <Shield className="w-5 h-5 text-red-600" />, label: 'Safety', value: car.safety?.ncapRating?.stars ? `${car.safety.ncapRating.stars} Star` : `${car.safety?.airbags || 0} Airbags` },
     ].filter(s => s.value);
+    const selectedColorIndex = car.colors?.findIndex(color => color.name === selectedColor) ?? -1;
+    const selectedColorData = selectedColorIndex >= 0 ? car.colors?.[selectedColorIndex] : undefined;
+    const selectedColorImage = (
+        selectedColorIndex >= 0 ? car.images.colors?.[selectedColorIndex] : undefined
+    ) ?? selectedColorData?.image;
 
     // Sticky tab bar detection
     useEffect(() => {
@@ -929,10 +934,10 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                     {car.colors && car.colors.length > 0 ? (
                         <Card className={lightCardClass}>
                             <CardContent className="p-6">
-                                {car.colors.find(c => c.name === selectedColor)?.image && (
+                                {selectedColorImage && (
                                     <div className="relative mb-6 aspect-[16/9] w-full overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
                                         <Image
-                                            src={car.colors.find(c => c.name === selectedColor)?.image || ''}
+                                            src={selectedColorImage}
                                             alt={`${car.make} ${car.model} in ${selectedColor}`}
                                             fill
                                             unoptimized

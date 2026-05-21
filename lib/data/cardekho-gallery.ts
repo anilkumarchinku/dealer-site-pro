@@ -281,7 +281,7 @@ async function loadLocalGallery(sourceUrl: string, options?: GalleryLookupOption
 
         try {
             const response = await fetch(`${origin}/${publicPath.split(path.sep).join('/')}`, {
-                next: { revalidate: 60 * 60 * 24 },
+                cache: 'no-store',
             })
             if (!response.ok) continue
 
