@@ -8,6 +8,7 @@
  */
 
 import type { Car, FuelType, TransmissionType } from '@/lib/types/car'
+import { getOptionalEnv } from '@/lib/env'
 import { ExternalApiError, externalApiFetch } from '@/lib/services/external-api-fetch'
 import { logger } from '@/lib/utils/logger'
 
@@ -77,7 +78,8 @@ type CyeproRawSearchResponse = Partial<CyeproSearchResponse> & {
 
 // ── Constants ─────────────────────────────────────────────────────────────────
 
-const BASE_URL    = 'https://api.cyepro.com'
+const DEFAULT_BASE_URL = 'https://api.cyepro.com'
+const BASE_URL    = normaliseBaseUrl(getOptionalEnv('CYEPRO_API_BASE_URL') ?? DEFAULT_BASE_URL)
 const SERVICE_ID  = '460'
 const TIME_ZONE   = 'Asia/Calcutta'
 const SEARCH_TIMEOUT_MS = 10_000
@@ -101,6 +103,14 @@ const DEFAULT_SEARCH: CyeproSearchBody = {
 }
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
+
+function normaliseBaseUrl(value: string): string {
+    return value.trim().replace(/\/+$/, '')
+}
+
+export function getCyeproApiBaseUrl(): string {
+    return BASE_URL
+}
 
 function buildHeaders(apiKey: string): HeadersInit {
     return {

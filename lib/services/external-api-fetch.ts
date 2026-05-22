@@ -35,6 +35,19 @@ async function readBody(res: Response): Promise<{ text: string; json?: unknown }
     }
 }
 
+function errorMessageWithCause(error: unknown): string {
+    if (!(error instanceof Error)) return String(error)
+
+    const cause = (error as Error & { cause?: unknown }).cause
+    if (!cause) return error.message
+
+    if (cause instanceof Error) {
+        return `${error.message}: ${cause.message}`
+    }
+
+    return `${error.message}: ${String(cause)}`
+}
+
 export async function externalApiFetch<T = unknown>({
     baseUrl,
     providerName,
@@ -83,7 +96,14 @@ export async function externalApiFetch<T = unknown>({
                 path
             )
         }
-        throw err
+        if (err instanceof ExternalApiError) {
+            throw err
+        }
+        throw new ExternalApiError(
+            `${providerName} API ${path} network error: ${errorMessageWithCause(err)}`,
+            providerName,
+            path
+        )
     } finally {
         clearTimeout(timeout)
     }

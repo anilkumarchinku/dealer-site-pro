@@ -25,6 +25,7 @@ export type OptionalEnvKey =
     | 'CLOUDFLARE_ACCOUNT_ID'
     | 'CLOUDFLARE_ZONE_ID'
     | 'CRON_SECRET'
+    | 'CYEPRO_API_BASE_URL'
     | 'GITHUB_ORG'
     | 'GITHUB_TEMPLATE_REPO'
     | 'GITHUB_TOKEN'

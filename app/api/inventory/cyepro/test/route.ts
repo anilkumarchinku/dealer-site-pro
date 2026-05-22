@@ -7,11 +7,10 @@
 
 import { NextResponse } from 'next/server'
 import { ExternalApiError, externalApiFetch } from '@/lib/services/external-api-fetch'
-import { getCyeproNumericValue, getCyeproVehicleArray } from '@/lib/services/cyepro-service'
+import { getCyeproApiBaseUrl, getCyeproNumericValue, getCyeproVehicleArray } from '@/lib/services/cyepro-service'
 import { requireAuth } from '@/lib/supabase-server'
 
 
-const BASE_URL = 'https://api.cyepro.com'
 const SERVICE_ID = '460'
 const TIME_ZONE = 'Asia/Calcutta'
 
@@ -111,7 +110,7 @@ export async function POST(request: Request) {
         diagnostics.steps.push({
             step: 'api_request',
             status: 'SENDING',
-            url: `${BASE_URL}/dynamicForms/search/vehicles/filterQueryApi`,
+            url: `${getCyeproApiBaseUrl()}/dynamicForms/search/vehicles/filterQueryApi`,
             headers: { ...headers, 'API-KEY': `${dealer.cyepro_api_key.substring(0, 8)}...` },
             body: testBody,
         })
@@ -120,7 +119,7 @@ export async function POST(request: Request) {
         let rawData: CyeproDiagnosticResponse
         try {
             rawData = await externalApiFetch<CyeproDiagnosticResponse>({
-                baseUrl: BASE_URL,
+                baseUrl: getCyeproApiBaseUrl(),
                 providerName: 'Cyepro',
                 path: '/dynamicForms/search/vehicles/filterQueryApi',
                 headers,
