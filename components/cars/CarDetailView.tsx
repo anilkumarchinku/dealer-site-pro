@@ -447,10 +447,24 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
 
                                 {/* CTAs */}
                                 <div className="space-y-2.5">
+                                    {dealerId && !isUsed && (
+                                        <Button
+                                            className="w-full"
+                                            size="lg"
+                                            style={{ backgroundColor: brandColor, color: brandContrast }}
+                                            onClick={() => setEnquiryOpen(true)}
+                                        >
+                                            <MessageSquare className="w-4 h-4 mr-2" />
+                                            Enquire Now
+                                        </Button>
+                                    )}
                                     <Button
                                         className="w-full"
                                         size="lg"
-                                        style={{ backgroundColor: brandColor, color: brandContrast }}
+                                        variant={dealerId && !isUsed ? 'outline' : 'default'}
+                                        style={dealerId && !isUsed
+                                            ? { borderColor: brandColor, color: brandColor, backgroundColor: '#ffffff' }
+                                            : { backgroundColor: brandColor, color: brandContrast }}
                                         onClick={() => {
                                             if (isUsed) {
                                                 setEnquiryOpen(true);
