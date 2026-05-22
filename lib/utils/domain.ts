@@ -5,13 +5,42 @@
  *   NEXT_PUBLIC_BASE_DOMAIN   — base hostname, e.g. "your-project.vercel.app"
  *                               or "dealersitepro.com"
  *   NEXT_PUBLIC_USE_SUBDOMAIN — "true"  → {slug}.{BASE_DOMAIN}
- *                               "false" → {BASE_DOMAIN}/sites/{slug}  (default)
+ *                               "false" → {BASE_DOMAIN}/sites/{slug}
+ *                               unset   → subdomain on public domains, path on localhost/Vercel preview
  */
 
 import { getOptionalEnv } from '@/lib/env'
 
-const BASE_DOMAIN   = getOptionalEnv('NEXT_PUBLIC_BASE_DOMAIN') ?? 'dealersitepro.com'
-const USE_SUBDOMAIN = getOptionalEnv('NEXT_PUBLIC_USE_SUBDOMAIN') === 'true'
+const BASE_DOMAIN = getOptionalEnv('NEXT_PUBLIC_BASE_DOMAIN') ?? 'dealersitepro.com'
+const configuredUseSubdomain = getOptionalEnv('NEXT_PUBLIC_USE_SUBDOMAIN')
+
+function normalizeBaseDomain(value: string): string {
+    return value
+        .trim()
+        .toLowerCase()
+        .replace(/^https?:\/\//, '')
+        .replace(/\/.*$/, '')
+}
+
+function canUsePublicSubdomains(baseDomain: string): boolean {
+    const host = normalizeBaseDomain(baseDomain)
+    return !(
+        host.startsWith('localhost') ||
+        host.startsWith('127.0.0.1') ||
+        host.endsWith('.vercel.app')
+    )
+}
+
+function normalizeDealerSiteSlug(slug: string): string {
+    const trimmed = slug.trim().replace(/^\/+/, '')
+    return trimmed.startsWith('sites/') ? trimmed.slice('sites/'.length) : trimmed
+}
+
+const normalizedBaseDomain = normalizeBaseDomain(BASE_DOMAIN)
+const USE_SUBDOMAIN =
+    configuredUseSubdomain === 'true' ||
+    normalizedBaseDomain === 'indrav.in' ||
+    (configuredUseSubdomain !== 'false' && canUsePublicSubdomains(BASE_DOMAIN))
 
 export type DealerVehicleSiteType = 'car' | 'two-wheeler' | 'three-wheeler'
 
@@ -31,18 +60,25 @@ export function dealerVehicleSiteSlug(slug: string, vehicleType: DealerVehicleSi
  *   dealerSiteUrl("abc-motors")  →  "abc-motors.dealersitepro.com"
  */
 export function dealerSiteUrl(slug: string): string {
+    const normalizedSlug = normalizeDealerSiteSlug(slug)
     if (USE_SUBDOMAIN) {
-        // slug may contain a path suffix, e.g. "varun-motors/two-wheelers"
+        // Slug may contain a path suffix, e.g. "varun-motors/two-wheelers".
         // Split so the subdomain is just "varun-motors" and path is "/two-wheelers"
-        const slashIdx = slug.indexOf('/')
+        const slashIdx = normalizedSlug.indexOf('/')
         if (slashIdx !== -1) {
-            const subdomain = slug.slice(0, slashIdx)
-            const path      = slug.slice(slashIdx) // already starts with /
+            const subdomain = normalizedSlug.slice(0, slashIdx)
+            const path      = normalizedSlug.slice(slashIdx) // already starts with /
             return `${subdomain}.${BASE_DOMAIN}${path}`
         }
-        return `${slug}.${BASE_DOMAIN}`
+        return `${normalizedSlug}.${BASE_DOMAIN}`
     }
-    return `${BASE_DOMAIN}/sites/${slug}`
+    return `${BASE_DOMAIN}/sites/${normalizedSlug}`
+}
+
+/** Internal route used for same-origin previews and middleware rewrites. */
+export function dealerSitePath(slug: string): string {
+    const normalizedSlug = normalizeDealerSiteSlug(slug)
+    return normalizedSlug ? `/sites/${normalizedSlug}` : '/sites'
 }
 
 /** Full https:// URL */

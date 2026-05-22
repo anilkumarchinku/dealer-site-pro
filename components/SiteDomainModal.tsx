@@ -8,7 +8,7 @@ import {
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog'
 import { Button } from '@/components/ui/button'
 import { useDashboardSiteOrigin } from '@/lib/hooks/use-dashboard-site-origin'
-import { dashboardSiteDisplayUrl, dashboardSiteHref, dashboardSitePath } from '@/lib/utils/dashboard-site-links'
+import { dashboardSiteDisplayUrl, dashboardSiteHref } from '@/lib/utils/dashboard-site-links'
 import ConnectCustomDomainModal from '@/components/ConnectCustomDomainModal'
 
 interface SiteInfo {
@@ -31,7 +31,7 @@ export function SiteDomainModal({ site, dealerId, dealerName, onClose }: Props) 
     const siteOrigin = useDashboardSiteOrigin()
 
     const freeUrl = dashboardSiteDisplayUrl(site.slug, siteOrigin)
-    const freeUrlPath = dashboardSitePath(site.slug)
+    const freeUrlHref = dashboardSiteHref(site.slug, siteOrigin)
 
     function handleCopy() {
         navigator.clipboard.writeText(dashboardSiteHref(site.slug))
@@ -86,7 +86,7 @@ export function SiteDomainModal({ site, dealerId, dealerName, onClose }: Props) 
 
                         <div className="flex items-center gap-2 mt-2">
                             <a
-                                href={freeUrlPath}
+                                href={freeUrlHref}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="flex-1 text-sm font-mono text-blue-500 hover:underline truncate"
@@ -103,7 +103,7 @@ export function SiteDomainModal({ site, dealerId, dealerName, onClose }: Props) 
                                     : <Copy className="w-3.5 h-3.5 text-muted-foreground" />}
                             </button>
                             <a
-                                href={freeUrlPath}
+                                href={freeUrlHref}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="shrink-0 p-1.5 rounded-lg hover:bg-muted transition-colors"

@@ -8,7 +8,7 @@ const ADMIN_SESSION_COOKIE = 'dealer_site_admin_session'
 
 // Base domain from env (e.g. "your-project.vercel.app" or "dealersitepro.com")
 const BASE_DOMAIN = process.env.NEXT_PUBLIC_BASE_DOMAIN ?? 'dealersitepro.com'
-const USE_SUBDOMAIN = process.env.NEXT_PUBLIC_USE_SUBDOMAIN === 'true'
+const CONFIGURED_USE_SUBDOMAIN = process.env.NEXT_PUBLIC_USE_SUBDOMAIN
 
 // ── Domain cache (shared across all instances via Upstash, local Map as fallback) ──
 // Local Map is still kept as L1 cache to avoid a Redis round-trip on every request
@@ -60,6 +60,8 @@ async function setCachedSlug(hostname: string, slug: string): Promise<void> {
 
 export async function middleware(request: NextRequest) {
     const hostname = request.headers.get('host') || ''
+    const requestHostname = hostname.toLowerCase().replace(/:\d+$/, '')
+    const baseHostname = BASE_DOMAIN.toLowerCase().replace(/^https?:\/\//, '').replace(/\/.*$/, '').replace(/:\d+$/, '')
     const pathname = request.nextUrl.pathname
     const redirectTarget = `${pathname}${request.nextUrl.search}`
     const hasAdminSession = Boolean(request.cookies.get(ADMIN_SESSION_COOKIE)?.value)
@@ -103,11 +105,39 @@ export async function middleware(request: NextRequest) {
     // Always treat the configured BASE_DOMAIN, localhost, and all
     // *.vercel.app URLs as the "main" domain — never as dealer subdomains.
     const isMainDomain =
-        hostname === BASE_DOMAIN ||
-        hostname === `www.${BASE_DOMAIN}` ||
-        hostname.startsWith('localhost') ||
-        hostname.startsWith('127.0.0.1') ||
-        hostname.endsWith('.vercel.app')   // Vercel preview/production deployments
+        requestHostname === baseHostname ||
+        requestHostname === `www.${baseHostname}` ||
+        requestHostname.startsWith('localhost') ||
+        requestHostname.startsWith('127.0.0.1') ||
+        requestHostname.endsWith('.vercel.app')   // Vercel preview/production deployments
+
+    const shouldUsePublicSubdomains =
+        CONFIGURED_USE_SUBDOMAIN === 'true' ||
+        baseHostname === 'indrav.in' ||
+        (CONFIGURED_USE_SUBDOMAIN !== 'false' &&
+            !baseHostname.startsWith('localhost') &&
+            !baseHostname.startsWith('127.0.0.1') &&
+            !baseHostname.endsWith('.vercel.app'))
+
+    // Public visits should land on client-slug-first URLs, e.g.
+    // indrav.in/sites/lakshmi-motors-audi -> lakshmi-motors-audi.indrav.in.
+    // Same-origin dashboard iframes keep /sites/{slug} so previews still render.
+    if (
+        shouldUsePublicSubdomains &&
+        (requestHostname === baseHostname || requestHostname === `www.${baseHostname}`) &&
+        pathname.startsWith('/sites/') &&
+        request.headers.get('sec-fetch-dest') !== 'iframe'
+    ) {
+        const [, siteSlug, ...restPath] = pathname.split('/').filter(Boolean)
+        if (siteSlug && !siteSlug.startsWith('__')) {
+            const url = request.nextUrl.clone()
+            url.protocol = 'https:'
+            url.hostname = `${siteSlug}.${baseHostname}`
+            url.port = ''
+            url.pathname = restPath.length ? `/${restPath.join('/')}` : '/'
+            return NextResponse.redirect(url, 308)
+        }
+    }
 
     // ── Subdomain / custom domain routing ────────────────────
     // Handles both slug.indrav.in subdomains AND custom domains (ganeshmotor.com).

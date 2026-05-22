@@ -10,6 +10,7 @@ import {
     Loader2, RefreshCw, ExternalLink, Clock, Zap, Store
 } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { dealerSiteHref } from "@/lib/utils/domain"
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 
@@ -74,13 +75,7 @@ export default function DeploymentPage() {
                 // All dealers use the multi-tenant platform
                 setIsFirstHand(true)
                 if (data.slug) {
-                    const baseDomain = process.env.NEXT_PUBLIC_BASE_DOMAIN ?? 'dealersitepro.com'
-                    const useSubdomain = process.env.NEXT_PUBLIC_USE_SUBDOMAIN === 'true'
-                    setMultiTenantUrl(
-                        useSubdomain
-                            ? `https://${data.slug}.${baseDomain}`
-                            : `https://${baseDomain}/sites/${data.slug}`
-                    )
+                    setMultiTenantUrl(dealerSiteHref(data.slug))
                 }
             } finally {
                 setDealerLoading(false)

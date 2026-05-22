@@ -196,7 +196,7 @@ const BENTLEY = { primary: '#003328', accent: '#B8962E' } as const
 
 function SiteCard({ site, isMulti, dealerName, copied, onCopy, onEdit, onDomain }: SiteCardProps) {
     const siteOrigin  = useDashboardSiteOrigin()
-    const liveUrl     = dashboardSitePath(site.slug)
+    const liveUrl     = dashboardSiteHref(site.slug, siteOrigin)
     const displayUrl  = dashboardSiteDisplayUrl(site.slug, siteOrigin)
     const previewPath = site.previewPath ?? dashboardSitePath(site.slug)
     const isCopied    = copied === site.slug

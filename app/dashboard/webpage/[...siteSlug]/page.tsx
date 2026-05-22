@@ -283,7 +283,7 @@ export default function SiteEditorPage() {
 
     // ── Derived ───────────────────────────────────────────────────────────────
     const previewUrl     = dashboardSitePath(siteSlug)
-    const liveUrl        = dashboardSitePath(siteSlug)
+    const liveUrl        = dashboardSiteHref(siteSlug, siteOrigin)
     const liveUrlDisplay = dashboardSiteDisplayUrl(siteSlug, siteOrigin)
 
     return (

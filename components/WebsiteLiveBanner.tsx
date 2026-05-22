@@ -12,7 +12,7 @@ import { Card, CardContent } from '@/components/ui/card'
 import { supabase } from '@/lib/supabase'
 import { brandToUrlSlug } from '@/lib/utils/domain'
 import { useDashboardSiteOrigin } from '@/lib/hooks/use-dashboard-site-origin'
-import { dashboardSiteDisplayUrl, dashboardSitePath } from '@/lib/utils/dashboard-site-links'
+import { dashboardSiteDisplayUrl, dashboardSiteHref } from '@/lib/utils/dashboard-site-links'
 
 interface Props {
     dealerId: string
@@ -53,14 +53,14 @@ export default function WebsiteLiveBanner({
                 {
                     label: 'New Cars Site',
                     sublabel: brands[0] ?? 'New Cars',
-                    href: dashboardSitePath(`${slug}-${brandToUrlSlug(brands[0] ?? 'new')}`),
+                    href: dashboardSiteHref(`${slug}-${brandToUrlSlug(brands[0] ?? 'new')}`, siteOrigin),
                     color: 'blue' as const,
                     icon: '🚗',
                 },
                 {
                     label: 'Pre-Owned Site',
                     sublabel: 'Used Cars',
-                    href: dashboardSitePath(`${slug}-used`),
+                    href: dashboardSiteHref(`${slug}-used`, siteOrigin),
                     color: 'amber' as const,
                     icon: '🔁',
                 },
@@ -72,7 +72,7 @@ export default function WebsiteLiveBanner({
                 return brands.map(brand => ({
                     label: `${brand} Site`,
                     sublabel: 'New Cars',
-                    href: dashboardSitePath(`${slug}-${brandToUrlSlug(brand)}`),
+                    href: dashboardSiteHref(`${slug}-${brandToUrlSlug(brand)}`, siteOrigin),
                     color: 'blue' as const,
                     icon: '🚗',
                 }))
@@ -80,7 +80,7 @@ export default function WebsiteLiveBanner({
             return [{
                 label: 'New Cars Site',
                 sublabel: brands[0] ?? 'New Cars',
-                href: dashboardSitePath(brands.length === 1 ? `${slug}-${brandToUrlSlug(brands[0])}` : slug),
+                href: dashboardSiteHref(brands.length === 1 ? `${slug}-${brandToUrlSlug(brands[0])}` : slug, siteOrigin),
                 color: 'blue' as const,
                 icon: '🚗',
             }]
@@ -89,7 +89,7 @@ export default function WebsiteLiveBanner({
         return [{
             label: 'Pre-Owned Site',
             sublabel: 'Used Cars',
-            href: dashboardSitePath(slug),
+            href: dashboardSiteHref(slug, siteOrigin),
             color: 'amber' as const,
             icon: '🔁',
         }]

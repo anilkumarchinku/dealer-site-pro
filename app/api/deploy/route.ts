@@ -12,9 +12,9 @@
  */
 
 import { NextResponse } from 'next/server'
-import { getOptionalEnv } from '@/lib/env'
 import { recordDomainDeploymentOperation } from '@/lib/services/domain-deployment-operation-service'
 import { requireAuth, requireDealerOwnership } from '@/lib/supabase-server'
+import { dealerSiteHref } from '@/lib/utils/domain'
 
 export async function POST(request: Request) {
     try {
@@ -74,11 +74,7 @@ export async function POST(request: Request) {
         // ── Deployment mode: ALL dealers use multi-tenant platform ──────────────
         // No standalone GitHub/Vercel repos — both new and used car dealers are
         // served from this shared Next.js app at /sites/[slug].
-        const baseDomain = getOptionalEnv('NEXT_PUBLIC_BASE_DOMAIN') ?? 'dealersitepro.com'
-        const useSubdomain = getOptionalEnv('NEXT_PUBLIC_USE_SUBDOMAIN') === 'true'
-        const siteUrl = useSubdomain
-            ? `https://${dealerSlug}.${baseDomain}`
-            : `https://${baseDomain}/sites/${dealerSlug}`
+        const siteUrl = dealerSiteHref(dealerSlug)
 
         await recordDomainDeploymentOperation({
             dealerId,

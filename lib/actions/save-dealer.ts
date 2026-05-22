@@ -2,7 +2,7 @@
 
 import { supabase, isSupabaseReady } from "@/lib/supabase";
 import { generateSlug, makeSlugUnique } from "@/lib/utils/slug";
-import { BASE_DOMAIN, USE_SUBDOMAIN } from "@/lib/utils/domain";
+import { dealerSiteUrl } from "@/lib/utils/domain";
 import type { OnboardingData } from "@/lib/types";
 import type { Database } from "@/lib/database.types";
 import type { SupabaseClient } from "@supabase/supabase-js";
@@ -307,9 +307,7 @@ export async function saveDealer(
         }
 
         // ── Auto-register free subdomain domain record ──────────
-        const subdomainValue = USE_SUBDOMAIN
-            ? `${slug}.${BASE_DOMAIN}`
-            : `${BASE_DOMAIN}/sites/${slug}`
+        const subdomainValue = dealerSiteUrl(slug)
 
         const { error: domainErr } = await supabase
             .from('domains')
