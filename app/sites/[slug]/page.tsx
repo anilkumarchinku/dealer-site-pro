@@ -533,7 +533,10 @@ export default async function SitePage({ params }: SitePageProps) {
     const isUsedSite = templateSellsUsed && !templateSellsNew
     const brandName = isUsedSite ? 'Bentley' : (brandFilter ?? brands[0] ?? dealer.dealership_name)
     const logoUrl = logo_url ?? brandLogoUrl(brandName, '4w')
-    const heroImageUrl = hero_image_url ?? firstVehicleHeroImage(cars)
+    const inventoryHeroImage = firstVehicleHeroImage(cars)
+    const heroImageUrl = brandFilter
+        ? inventoryHeroImage
+        : hero_image_url ?? inventoryHeroImage
 
     const contactInfo = {
         phone: dealer.phone,
