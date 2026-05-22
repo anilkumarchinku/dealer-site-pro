@@ -1,0 +1,23 @@
+{
+  "make": "Bugatti",
+  "model": "Divo",
+  "brandSlug": "bugatti",
+  "modelSlug": "divo",
+  "sourceUrl": "https://www.cardekho.com/bugatti/bugatti-divo",
+  "scrapedAt": "2026-05-22T08:00:00.000Z",
+  "mode": "fallback-color-image",
+  "counts": {
+    "colors": 1,
+    "total": 1
+  },
+  "hero": "https://stimg.cardekho.com/images/carexteriorimages/630x420/Bugatti/Bugatti-Divo/6528/1550827902051/front-left-side-47.jpg",
+  "exterior": [],
+  "interior": [],
+  "colorNames": [
+    "Default"
+  ],
+  "colorImages": [
+    "https://stimg.cardekho.com/images/carexteriorimages/630x420/Bugatti/Bugatti-Divo/6528/1550827902051/front-left-side-47.jpg"
+  ],
+  "feature": []
+}
