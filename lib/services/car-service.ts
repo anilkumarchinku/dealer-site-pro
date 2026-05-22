@@ -3,8 +3,6 @@
  * Business logic for car data operations using Supabase
  */
 
-import fs from 'fs';
-import path from 'path';
 import { supabase } from '@/lib/supabase';
 import type {
     BodyType,
@@ -31,6 +29,7 @@ import { searchCars, sortCars, calculateEMI } from '@/lib/utils/car-utils';
 import { CAR_MODEL_COLORS } from '@/lib/data/car-colors';
 import { get4WCardekhoModelMeta } from '@/lib/data/4w-cardekho-meta';
 import { brandNameToId, getVehicleImageUrls } from '@/lib/utils/brand-model-images';
+import vehicleImageUrls from '@/public/data/vehicle-image-urls.json';
 
 // Table name in Supabase
 const CAR_TABLE = 'car_catalog';
@@ -88,8 +87,14 @@ function isUsableImageUrl(value: string | null | undefined): value is string {
 
 function localPublicImageExists(url: string): boolean {
     if (!url.startsWith('/')) return false;
-    const cleanPath = url.split(/[?#]/)[0];
-    return fs.existsSync(path.join(process.cwd(), 'public', cleanPath));
+    const cleanPath = url.split(/[?#]/)[0].replace(/^\//, '');
+    if (cleanPath.startsWith('data/brand-model-images/4w-galleries/')) return true;
+
+    const key = cleanPath
+        .replace(/^data\/brand-model-images\//, '')
+        .replace(/^assets\/cars\//, '4w/');
+
+    return key in (vehicleImageUrls as Record<string, string>);
 }
 
 function chooseFallbackHero(fallbackUrls: string[]): string | null {
