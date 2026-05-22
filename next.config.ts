@@ -44,6 +44,11 @@ const nextConfig: NextConfig = {
                 protocol: 'https',
                 hostname: 'storage.googleapis.com',
             },
+            // Cyepro DMS vehicle photos are served from S3 bucket hosts.
+            {
+                protocol: 'https',
+                hostname: '*.amazonaws.com',
+            },
             {
                 protocol: 'https',
                 hostname: 'www.hyundai.com',
@@ -95,7 +100,7 @@ const nextConfig: NextConfig = {
                     // Razorpay checkout runs in an iframe (frame-src below), not inline.
                     "script-src 'self' 'unsafe-inline' https://checkout.razorpay.com",
                     "style-src 'self' 'unsafe-inline'",
-                    "img-src 'self' data: blob: https://*.supabase.co https://*.cyepro.com https://lh3.googleusercontent.com https://images.unsplash.com https://storage.googleapis.com https://maps.googleapis.com https://*.cardekho.com https://*.aeplcdn.com https://*.bikedekho.com https://*.gaadi.com https://www.v3cars.com https://www.hyundai.com https://*.hyundai.com",
+                    "img-src 'self' data: blob: https://*.supabase.co https://*.cyepro.com https://*.amazonaws.com https://lh3.googleusercontent.com https://images.unsplash.com https://storage.googleapis.com https://maps.googleapis.com https://*.cardekho.com https://*.aeplcdn.com https://*.bikedekho.com https://*.gaadi.com https://www.v3cars.com https://www.hyundai.com https://*.hyundai.com",
                     "font-src 'self' data:",
                     "connect-src 'self' https://*.supabase.co https://api.cyepro.com https://checkout.razorpay.com wss://*.supabase.co",
                     "frame-src 'self' https://api.razorpay.com https://checkout.razorpay.com",

@@ -26,6 +26,7 @@ export interface CyeproVehicle {
     transmission: string
     location: string
     imageUrl: string
+    centralImgsVideosRes?: Array<Record<string, unknown>> | null
     variant: string
     color: string
     regNumber: string
@@ -206,9 +207,32 @@ function normaliseTransmission(tx: string): TransmissionType {
     return 'Manual'
 }
 
+function normaliseCyeproImageUrl(value: unknown): string | null {
+    if (typeof value !== 'string') return null
+    const trimmed = value.trim()
+    if (!trimmed || !/^https?:\/\//i.test(trimmed)) return null
+    return encodeURI(trimmed)
+}
+
+function getCyeproVehicleImageUrls(v: CyeproVehicle): string[] {
+    const urls = [
+        normaliseCyeproImageUrl(v.imageUrl),
+        ...((v.centralImgsVideosRes ?? []).flatMap(item => [
+            normaliseCyeproImageUrl(item.imageUrl),
+            normaliseCyeproImageUrl(item.url),
+            normaliseCyeproImageUrl(item.fileUrl),
+            normaliseCyeproImageUrl(item.mediaUrl),
+        ])),
+    ].filter((url): url is string => Boolean(url))
+
+    return [...new Set(urls)]
+}
+
 // ── Mapper: CyeproVehicle → Car ───────────────────────────────────────────────
 
 export function mapCyeproVehicleToCar(v: CyeproVehicle): Car {
+    const imageUrls = getCyeproVehicleImageUrls(v)
+
     return {
         id:       String(v.id),
         make:     v.make     ?? 'Unknown',
@@ -252,8 +276,8 @@ export function mapCyeproVehicleToCar(v: CyeproVehicle): Car {
         },
 
         images: {
-            hero:     v.imageUrl || '/placeholder-car.jpg',
-            exterior: v.imageUrl ? [v.imageUrl] : [],
+            hero:     imageUrls[0] || '/placeholder-car.jpg',
+            exterior: imageUrls,
             interior: [],
         },
 
