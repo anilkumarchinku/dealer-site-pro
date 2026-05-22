@@ -58,13 +58,21 @@ export interface CyeproAggregations {
 }
 
 type CyeproRawSearchResponse = Partial<CyeproSearchResponse> & {
-    data?: CyeproVehicle[]
+    data?: CyeproVehicle[] | Partial<CyeproSearchResponse> & {
+        data?: CyeproVehicle[]
+        results?: CyeproVehicle[]
+        content?: CyeproVehicle[]
+        total?: number
+        totalElements?: number
+    }
     results?: CyeproVehicle[]
     content?: CyeproVehicle[]
     total?: number
     totalElements?: number
     page?: number
     size?: number
+    result?: Partial<CyeproSearchResponse>
+    response?: Partial<CyeproSearchResponse>
 }
 
 // ── Constants ─────────────────────────────────────────────────────────────────
@@ -101,6 +109,47 @@ function buildHeaders(apiKey: string): HeadersInit {
         'SERVICE-TYPE-ID': SERVICE_ID,
         'timeZone':        TIME_ZONE,
     }
+}
+
+function isRecord(value: unknown): value is Record<string, unknown> {
+    return typeof value === 'object' && value !== null
+}
+
+export function getCyeproVehicleArray(source: unknown): CyeproVehicle[] {
+    if (Array.isArray(source)) return source as CyeproVehicle[]
+    if (!isRecord(source)) return []
+
+    const candidates = [
+        source.vehicles,
+        source.data,
+        source.results,
+        source.content,
+        isRecord(source.data) ? source.data.vehicles : undefined,
+        isRecord(source.data) ? source.data.data : undefined,
+        isRecord(source.data) ? source.data.results : undefined,
+        isRecord(source.data) ? source.data.content : undefined,
+        isRecord(source.result) ? source.result.vehicles : undefined,
+        isRecord(source.response) ? source.response.vehicles : undefined,
+    ]
+
+    return (candidates.find(Array.isArray) ?? []) as CyeproVehicle[]
+}
+
+export function getCyeproNumericValue(source: unknown, keys: string[]): number | undefined {
+    if (!isRecord(source)) return undefined
+
+    for (const key of keys) {
+        const value = source[key]
+        if (typeof value === 'number') return value
+    }
+
+    for (const nestedKey of ['data', 'result', 'response']) {
+        const nested = source[nestedKey]
+        const value = getCyeproNumericValue(nested, keys)
+        if (typeof value === 'number') return value
+    }
+
+    return undefined
 }
 
 /** Format INR price for display — e.g. 850000 → "₹8.50 Lakh" */
@@ -222,16 +271,18 @@ export async function fetchCyeproVehicles(
         })
         logger.log('[Cyepro] Raw response keys:', Object.keys(rawData))
 
-        // Handle different possible response formats from Cyepro API
-        const vehicles = rawData.vehicles ?? rawData.data ?? rawData.results ?? rawData.content ?? []
-        const totalCount = rawData.totalCount ?? rawData.total ?? rawData.totalElements ?? vehicles.length
+        // Handle different possible response formats from Cyepro API.
+        // Some accounts return vehicles at the top level, while others wrap
+        // them in data/result/response objects.
+        const vehicles = getCyeproVehicleArray(rawData)
+        const totalCount = getCyeproNumericValue(rawData, ['totalCount', 'total', 'totalElements']) ?? vehicles.length
 
         const data: CyeproSearchResponse = {
             vehicles,
             totalCount,
-            pageNumber:  rawData.pageNumber  ?? rawData.page     ?? body.page,
-            pageSize:    rawData.pageSize    ?? rawData.size     ?? body.size,
-            totalPages:  rawData.totalPages  ?? Math.ceil(totalCount / body.size) ?? 1,
+            pageNumber:  getCyeproNumericValue(rawData, ['pageNumber', 'page']) ?? body.page,
+            pageSize:    getCyeproNumericValue(rawData, ['pageSize', 'size']) ?? body.size,
+            totalPages:  getCyeproNumericValue(rawData, ['totalPages']) ?? Math.ceil(totalCount / body.size) ?? 1,
         }
 
         logger.log(`[Cyepro] Fetched ${data.vehicles.length} vehicles (total: ${data.totalCount})`)

@@ -7,6 +7,7 @@
 
 import { NextResponse } from 'next/server'
 import { ExternalApiError, externalApiFetch } from '@/lib/services/external-api-fetch'
+import { getCyeproNumericValue, getCyeproVehicleArray } from '@/lib/services/cyepro-service'
 import { requireAuth } from '@/lib/supabase-server'
 
 
@@ -17,7 +18,7 @@ const TIME_ZONE = 'Asia/Calcutta'
 type DiagnosticStep = Record<string, unknown>
 type CyeproDiagnosticResponse = {
     vehicles?: Array<Record<string, unknown>>
-    data?: Array<Record<string, unknown>>
+    data?: unknown
     results?: Array<Record<string, unknown>>
     content?: Array<Record<string, unknown>>
     totalCount?: number
@@ -187,8 +188,8 @@ export async function POST(request: Request) {
         })
 
         // Step 6: Check vehicle data
-        const vehicles = rawData.vehicles ?? rawData.data ?? rawData.results ?? rawData.content ?? []
-        const totalCount = rawData.totalCount ?? rawData.total ?? rawData.totalElements ?? vehicles.length
+        const vehicles = getCyeproVehicleArray(rawData)
+        const totalCount = getCyeproNumericValue(rawData, ['totalCount', 'total', 'totalElements']) ?? vehicles.length
 
         diagnostics.steps.push({
             step: 'vehicle_data',
@@ -199,7 +200,7 @@ export async function POST(request: Request) {
                 id: vehicles[0].id,
                 make: vehicles[0].make,
                 model: vehicles[0].model,
-                keys: Object.keys(vehicles[0]),
+                keys: Object.keys(vehicles[0] as object),
             } : null,
         })
 
