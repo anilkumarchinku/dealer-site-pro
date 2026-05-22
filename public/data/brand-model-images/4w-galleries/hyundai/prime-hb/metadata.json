@@ -3,25 +3,25 @@
   "model": "Prime HB",
   "brandSlug": "hyundai",
   "modelSlug": "prime-hb",
-  "sourceUrl": "https://www.hyundai.com/in/en/find-a-car/taxi/prime-hb",
-  "scrapedAt": "2026-04-27T12:30:00.000Z",
+  "sourceUrl": "https://www.cardekho.com/hyundai/prime-hb",
+  "scrapedAt": "2026-05-22T06:52:57.902Z",
   "mode": "colors-only",
   "counts": {
     "colors": 3,
     "total": 3
   },
-  "hero": "/data/brand-model-images/4w-galleries/hyundai/prime-hb/colors/atlas-white.avif",
+  "hero": "/data/brand-model-images/4w-galleries/hyundai/prime-hb/colors/typhoon-silver.avif",
   "exterior": [],
   "interior": [],
   "feature": [],
   "colorNames": [
-    "Atlas White",
     "Typhoon Silver",
-    "Titanium Black"
+    "Atlas White",
+    "Abyss Black"
   ],
   "colorImages": [
-    "/data/brand-model-images/4w-galleries/hyundai/prime-hb/colors/atlas-white.avif",
     "/data/brand-model-images/4w-galleries/hyundai/prime-hb/colors/typhoon-silver.avif",
-    "/data/brand-model-images/4w-galleries/hyundai/prime-hb/colors/titanium-black.avif"
+    "/data/brand-model-images/4w-galleries/hyundai/prime-hb/colors/atlas-white.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/prime-hb/colors/abyss-black.avif"
   ]
 }

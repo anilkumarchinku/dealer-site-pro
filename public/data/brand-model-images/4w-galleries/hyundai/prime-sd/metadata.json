@@ -3,25 +3,25 @@
   "model": "Prime SD",
   "brandSlug": "hyundai",
   "modelSlug": "prime-sd",
-  "sourceUrl": "https://www.hyundai.com/in/en/find-a-car/taxi/prime-sd",
-  "scrapedAt": "2026-04-27T12:30:00.000Z",
+  "sourceUrl": "https://www.cardekho.com/hyundai/prime-sd",
+  "scrapedAt": "2026-05-22T06:53:03.748Z",
   "mode": "colors-only",
   "counts": {
     "colors": 3,
     "total": 3
   },
-  "hero": "/data/brand-model-images/4w-galleries/hyundai/prime-sd/colors/atlas-white.avif",
+  "hero": "/data/brand-model-images/4w-galleries/hyundai/prime-sd/colors/typhoon-silver.avif",
   "exterior": [],
   "interior": [],
   "feature": [],
   "colorNames": [
-    "Atlas White",
     "Typhoon Silver",
-    "Titanium Black"
+    "Atlas White",
+    "Abyss Black"
   ],
   "colorImages": [
-    "/data/brand-model-images/4w-galleries/hyundai/prime-sd/colors/atlas-white.avif",
     "/data/brand-model-images/4w-galleries/hyundai/prime-sd/colors/typhoon-silver.avif",
-    "/data/brand-model-images/4w-galleries/hyundai/prime-sd/colors/titanium-black.avif"
+    "/data/brand-model-images/4w-galleries/hyundai/prime-sd/colors/atlas-white.avif",
+    "/data/brand-model-images/4w-galleries/hyundai/prime-sd/colors/abyss-black.avif"
   ]
 }
