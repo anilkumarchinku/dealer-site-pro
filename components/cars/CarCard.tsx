@@ -6,7 +6,7 @@
 
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, type MouseEvent } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { cn } from '@/lib/utils';
@@ -112,6 +112,7 @@ export function CarCard({
     showEMI = true,
     summaryOnly = false,
     onViewDetails,
+    onCompare,
     className,
     brandColor = '#2563eb',
     light,
@@ -127,6 +128,33 @@ export function CarCard({
     const [aggregatedSpecs, setAggregatedSpecs] = useState<ReturnType<typeof formatSpecsForDisplay>>(null);
     const { addCar, removeCar, isSelected } = useCompareStore();
     const inCompare = isSelected(car.id);
+
+    const toggleCompare = (event: MouseEvent) => {
+        event.stopPropagation();
+        if (inCompare) {
+            removeCar(car.id);
+            return;
+        }
+        addCar(car);
+        onCompare?.(car.id);
+    };
+
+    const compareButtonStyle = inCompare
+        ? { backgroundColor: brandColor, color: getContrastText(brandColor), borderColor: brandColor }
+        : { backgroundColor: 'rgba(255,255,255,0.95)', color: brandColor, borderColor: 'rgba(229,231,235,0.9)' };
+
+    const compareIconButton = (
+        <button
+            type="button"
+            onClick={toggleCompare}
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full border shadow-md backdrop-blur transition-all hover:-translate-y-0.5 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
+            style={compareButtonStyle}
+            title={inCompare ? 'Remove from compare' : 'Add to compare'}
+            aria-label={inCompare ? 'Remove from compare' : 'Add to compare'}
+        >
+            <GitCompare className="h-4 w-4" />
+        </button>
+    );
 
     useEffect(() => {
         const fetchSpecs = async () => {
@@ -274,7 +302,8 @@ export function CarCard({
                             </div>
                         )}
 
-                        <div className="absolute top-2 right-2 z-10">
+                        <div className="absolute top-2 right-2 z-10 flex gap-2">
+                            {compareIconButton}
                             <WishlistButton carId={car.id} />
                         </div>
 
@@ -377,7 +406,8 @@ export function CarCard({
                     })()}
 
                     {/* Wishlist heart — top-right */}
-                    <div className="absolute top-2 right-2 z-10">
+                    <div className="absolute top-2 right-2 z-10 flex gap-2">
+                        {compareIconButton}
                         <WishlistButton carId={car.id} />
                     </div>
 
@@ -528,7 +558,7 @@ export function CarCard({
                             style={inCompare
                                 ? { backgroundColor: brandColor, color: getContrastText(brandColor), borderColor: brandColor }
                                 : { borderColor: brandColor, color: brandColor }}
-                            onClick={(e) => { e.stopPropagation(); inCompare ? removeCar(car.id) : addCar(car); }}
+                            onClick={toggleCompare}
                             title={inCompare ? 'Remove from compare' : 'Add to compare'}
                         >
                             <GitCompare className="w-3.5 h-3.5" />
