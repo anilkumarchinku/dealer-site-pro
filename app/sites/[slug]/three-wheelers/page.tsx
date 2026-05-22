@@ -16,7 +16,7 @@ import type { ThreeWheelerVehicle, ThreeWheelerUsedVehicle } from "@/lib/types/t
 import type { Service } from "@/lib/types"
 import { dedupeByBrandModel, dedupeCaseInsensitiveStrings } from "@/lib/utils/listing-dedupe"
 import { brandLogoUrl as getBrandLogoUrl, firstVehicleHeroImage } from "@/lib/utils/site-assets"
-import { brandToUrlSlug } from "@/lib/utils/domain"
+import { brandToUrlSlug, dealerSiteHref } from "@/lib/utils/domain"
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -272,7 +272,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description,
     openGraph: { title, description, type: 'website', siteName: dealer.dealership_name, locale: 'en_IN' },
     robots: { index: true, follow: true },
-    alternates: { canonical: `https://${dealer.slug}.dealersitepro.com/three-wheelers` },
+    alternates: { canonical: dealerSiteHref(`${dealer.slug}/three-wheelers`) },
   }
 }
 

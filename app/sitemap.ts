@@ -1,7 +1,8 @@
 import type { MetadataRoute } from 'next'
 import { createClient } from '@supabase/supabase-js'
+import { dealerSiteHref } from '@/lib/utils/domain'
 
-const BASE_URL = process.env.NEXT_PUBLIC_APP_URL ?? 'https://dealersitepro.com'
+const BASE_URL = process.env.NEXT_PUBLIC_APP_URL ?? 'https://indrav.in'
 
 async function getAllDealerSlugs(): Promise<string[]> {
     const url = process.env.NEXT_PUBLIC_SUPABASE_URL
@@ -16,7 +17,9 @@ async function getAllDealerSlugs(): Promise<string[]> {
         .select('slug')
         .eq('onboarding_complete', true)
 
-    return (data ?? []).map((d: { slug: string }) => d.slug)
+    return (data ?? [])
+        .map((d: { slug: string | null }) => d.slug?.trim())
+        .filter((slug): slug is string => Boolean(slug))
 }
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -35,7 +38,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ]
 
     const dealerRoutes: MetadataRoute.Sitemap = slugs.map(slug => ({
-        url: `https://${slug}.dealersitepro.com`,
+        url: dealerSiteHref(slug),
         lastModified: new Date(),
         changeFrequency: 'daily' as const,
         priority: 0.8,

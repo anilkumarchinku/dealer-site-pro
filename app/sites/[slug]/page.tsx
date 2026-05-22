@@ -14,6 +14,7 @@ import type { Service } from '@/lib/types'
 import { dedupeByMakeModel, dedupeCaseInsensitiveStrings } from '@/lib/utils/listing-dedupe'
 import { publicDealerSitePath, publicVehicleHubPath, type VehicleHubSegment } from '@/lib/utils/public-site-routing'
 import { brandLogoUrl, firstVehicleHeroImage } from '@/lib/utils/site-assets'
+import { BASE_DOMAIN, dealerSiteHref } from '@/lib/utils/domain'
 
 
 // Always render fresh — ensures DB changes (e.g. image URLs) take effect immediately.
@@ -330,7 +331,7 @@ export async function generateMetadata({ params }: SitePageProps): Promise<Metad
             follow: true,
         },
         alternates: {
-            canonical: `https://${dealer.slug}.dealersitepro.com`,
+            canonical: dealerSiteHref(dealer.slug),
         },
     }
 }
@@ -378,7 +379,7 @@ function buildAutoDealerSchema(dealer: NonNullable<Awaited<ReturnType<typeof fet
         '@type': 'AutoDealer',
         name: dealer.dealership_name,
         description: dealer.tagline ?? `${dealer.dealership_name} — trusted car dealership in ${dealer.location}`,
-        url: `https://${dealer.slug}.dealersitepro.com`,
+        url: dealerSiteHref(dealer.slug),
         telephone: dealer.phone,
         email: dealer.email,
         address: {
@@ -413,7 +414,7 @@ function buildCarListingSchema(cars: import('@/lib/types/car').Car[], dealerName
                 fuelType: car.engine?.type,
                 vehicleTransmission: car.transmission?.type,
                 numberOfForwardGears: car.transmission?.gears,
-                url: `https://${dealerSlug}.dealersitepro.com`,
+                url: dealerSiteHref(dealerSlug),
                 offers: car.pricing?.exShowroom?.min ? {
                     '@type': 'Offer',
                     priceCurrency: 'INR',
@@ -440,7 +441,7 @@ export default async function SitePage({ params }: SitePageProps) {
     // hosts stay root-relative because middleware maps them back to /sites/{slug}.
     const requestHeaders = await headers()
     const host = requestHeaders.get('host') ?? ''
-    const baseDomain = process.env.NEXT_PUBLIC_BASE_DOMAIN ?? 'dealersitepro.com'
+    const baseDomain = BASE_DOMAIN
     const siteHrefForSlug = (siteSlug: string) => publicDealerSitePath({
         siteSlug,
         host,

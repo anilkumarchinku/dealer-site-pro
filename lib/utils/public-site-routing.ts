@@ -12,7 +12,7 @@ function normalizeHostname(value: string): string {
     return normalizeDomain(value).replace(/:\d+$/, '')
 }
 
-export function isMainDealerHost(host: string, baseDomain = 'dealersitepro.com'): boolean {
+export function isMainDealerHost(host: string, baseDomain = 'indrav.in'): boolean {
     const hostname = normalizeHostname(host)
     const baseHostname = normalizeHostname(baseDomain)
 
@@ -28,7 +28,7 @@ export function isMainDealerHost(host: string, baseDomain = 'dealersitepro.com')
 export function publicDealerSitePath({
     siteSlug,
     host,
-    baseDomain = 'dealersitepro.com',
+    baseDomain = 'indrav.in',
 }: {
     siteSlug: string
     host: string

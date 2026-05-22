@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation'
 import { headers } from 'next/headers'
 import { fetchDealerBySlug } from '@/lib/db/dealers'
 import { LegalShell, PrivacyContent } from '@/components/legal'
+import { BASE_DOMAIN } from '@/lib/utils/domain'
 
 interface Props { params: Promise<{ slug: string }> }
 
@@ -19,7 +20,6 @@ export default async function PrivacyPage({ params }: Props) {
 
     const hdrs = await headers()
     const host = hdrs.get('host') ?? ''
-    const BASE_DOMAIN = process.env.NEXT_PUBLIC_BASE_DOMAIN ?? 'dealersitepro.com'
     const isMainDomain = host === BASE_DOMAIN || host === `www.${BASE_DOMAIN}` || host.startsWith('localhost') || host.endsWith('.vercel.app')
     const siteHref = isMainDomain ? `/sites/${slug}` : '/'
 

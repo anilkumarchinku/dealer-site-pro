@@ -3,16 +3,13 @@
  *
  * Reads two env vars:
  *   NEXT_PUBLIC_BASE_DOMAIN   — base hostname, e.g. "your-project.vercel.app"
- *                               or "dealersitepro.com"
+ *                               or "indrav.in"
  *   NEXT_PUBLIC_USE_SUBDOMAIN — "true"  → {slug}.{BASE_DOMAIN}
  *                               "false" → {BASE_DOMAIN}/sites/{slug}
  *                               unset   → subdomain on public domains, path on localhost/Vercel preview
  */
 
 import { getOptionalEnv } from '@/lib/env'
-
-const BASE_DOMAIN = getOptionalEnv('NEXT_PUBLIC_BASE_DOMAIN') ?? 'dealersitepro.com'
-const configuredUseSubdomain = getOptionalEnv('NEXT_PUBLIC_USE_SUBDOMAIN')
 
 function normalizeBaseDomain(value: string): string {
     return value
@@ -21,6 +18,14 @@ function normalizeBaseDomain(value: string): string {
         .replace(/^https?:\/\//, '')
         .replace(/\/.*$/, '')
 }
+
+function resolvePublicBaseDomain(value: string | undefined): string {
+    const normalized = normalizeBaseDomain(value ?? 'indrav.in')
+    return normalized === 'dealersitepro.com' ? 'indrav.in' : normalized
+}
+
+const BASE_DOMAIN = resolvePublicBaseDomain(getOptionalEnv('NEXT_PUBLIC_BASE_DOMAIN'))
+const configuredUseSubdomain = getOptionalEnv('NEXT_PUBLIC_USE_SUBDOMAIN')
 
 function canUsePublicSubdomains(baseDomain: string): boolean {
     const host = normalizeBaseDomain(baseDomain)
@@ -56,8 +61,8 @@ export function dealerVehicleSiteSlug(slug: string, vehicleType: DealerVehicleSi
  * Examples (BASE_DOMAIN=your-project.vercel.app, USE_SUBDOMAIN=false):
  *   dealerSiteUrl("abc-motors")  →  "your-project.vercel.app/sites/abc-motors"
  *
- * Examples (BASE_DOMAIN=dealersitepro.com, USE_SUBDOMAIN=true):
- *   dealerSiteUrl("abc-motors")  →  "abc-motors.dealersitepro.com"
+ * Examples (BASE_DOMAIN=indrav.in, USE_SUBDOMAIN=true):
+ *   dealerSiteUrl("abc-motors")  →  "abc-motors.indrav.in"
  */
 export function dealerSiteUrl(slug: string): string {
     const normalizedSlug = normalizeDealerSiteSlug(slug)

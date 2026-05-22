@@ -131,13 +131,13 @@ export function validateSlug(slug: string): { valid: boolean; error?: string } {
  * Generates subdomain URL from slug
  * 
  * @param slug - Dealer's slug
- * @param baseDomain - Base domain (default: dealersitepro.com)
+ * @param baseDomain - Base domain (default: indrav.in)
  * @returns Full subdomain URL
  * 
  * @example
- * getSubdomainUrl("abc-motors") // "abc-motors.dealersitepro.com"
+ * getSubdomainUrl("abc-motors") // "abc-motors.indrav.in"
  */
-export function getSubdomainUrl(slug: string, baseDomain = 'dealersitepro.com'): string {
+export function getSubdomainUrl(slug: string, baseDomain = 'indrav.in'): string {
     return `${slug}.${baseDomain}`
 }
 
@@ -145,14 +145,14 @@ export function getSubdomainUrl(slug: string, baseDomain = 'dealersitepro.com'):
  * Extracts slug from subdomain URL
  * 
  * @param hostname - Full hostname
- * @param baseDomain - Base domain (default: dealersitepro.com)
+ * @param baseDomain - Base domain (default: indrav.in)
  * @returns Slug or null if not a valid subdomain
  * 
  * @example
- * extractSlugFromHostname("abc-motors.dealersitepro.com") // "abc-motors"
+ * extractSlugFromHostname("abc-motors.indrav.in") // "abc-motors"
  * extractSlugFromHostname("www.abcmotors.com") // null
  */
-export function extractSlugFromHostname(hostname: string, baseDomain = 'dealersitepro.com'): string | null {
+export function extractSlugFromHostname(hostname: string, baseDomain = 'indrav.in'): string | null {
     const suffix = `.${baseDomain}`
 
     if (!hostname.endsWith(suffix)) {

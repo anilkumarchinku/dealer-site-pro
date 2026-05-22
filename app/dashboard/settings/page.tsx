@@ -23,6 +23,7 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { supabase } from "@/lib/supabase";
 import { updateDealerProfile, saveNotificationSettings } from "@/lib/db/settings";
+import { BASE_DOMAIN } from "@/lib/utils/domain";
 
 const NOTIFICATION_CONFIG: Record<string, { label: string; description: string }> = {
     newLeads:        { label: "New Leads",        description: "Get notified when a new lead comes in" },
@@ -1518,8 +1519,8 @@ export default function SettingsPage() {
                         <CardContent className="space-y-3">
                             <div className="px-3 py-2.5 rounded-xl bg-muted/30 text-xs text-muted-foreground font-mono truncate">
                                 {data.subdomain
-                                    ? `${data.subdomain}.dealersitepro.com`
-                                    : "subdomain.dealersitepro.com"}
+                                    ? `${data.subdomain}.${BASE_DOMAIN}`
+                                    : `subdomain.${BASE_DOMAIN}`}
                             </div>
                             <Link href={previewSlug ? `/preview?slug=${encodeURIComponent(previewSlug)}` : "/preview"} className="block">
                                 <Button variant="outline" size="sm" className="w-full gap-2">

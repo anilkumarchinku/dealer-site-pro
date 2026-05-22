@@ -13,6 +13,7 @@ import type { Car } from '@/lib/types/car'
 import type { ThreeWheelerUsedVehicle } from '@/lib/types/three-wheeler'
 import type { Service } from '@/lib/types'
 import { firstVehicleHeroImage } from '@/lib/utils/site-assets'
+import { dealerSiteHref } from '@/lib/utils/domain'
 
 interface Props {
     params: Promise<{ slug: string }>
@@ -101,7 +102,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         description,
         openGraph: { title, description, type: 'website', siteName: dealer.dealership_name, locale: 'en_IN' },
         robots: { index: true, follow: true },
-        alternates: { canonical: `https://${dealer.slug}.dealersitepro.com/three-wheelers/used` },
+        alternates: { canonical: dealerSiteHref(`${dealer.slug}/three-wheelers/used`) },
     }
 }
 

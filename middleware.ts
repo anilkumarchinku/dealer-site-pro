@@ -6,8 +6,16 @@ const PROTECTED_PREFIXES = ['/dashboard', '/onboarding', '/preview']
 const AUTH_PAGES       = ['/auth/login', '/auth/register']
 const ADMIN_SESSION_COOKIE = 'dealer_site_admin_session'
 
-// Base domain from env (e.g. "your-project.vercel.app" or "dealersitepro.com")
-const BASE_DOMAIN = process.env.NEXT_PUBLIC_BASE_DOMAIN ?? 'dealersitepro.com'
+// Base domain from env (e.g. "your-project.vercel.app" or "indrav.in")
+const configuredBaseDomain = process.env.NEXT_PUBLIC_BASE_DOMAIN ?? 'indrav.in'
+const normalizedConfiguredBaseDomain = configuredBaseDomain
+    .toLowerCase()
+    .replace(/^https?:\/\//, '')
+    .replace(/\/.*$/, '')
+    .replace(/:\d+$/, '')
+const BASE_DOMAIN = normalizedConfiguredBaseDomain === 'dealersitepro.com'
+    ? 'indrav.in'
+    : normalizedConfiguredBaseDomain
 const CONFIGURED_USE_SUBDOMAIN = process.env.NEXT_PUBLIC_USE_SUBDOMAIN
 
 // ── Domain cache (shared across all instances via Upstash, local Map as fallback) ──
@@ -70,7 +78,7 @@ export async function middleware(request: NextRequest) {
     if (pathname.startsWith('/api') && request.method === 'OPTIONS') {
         // Get allowed origins from env, default to base domain patterns
         const origin = request.headers.get('origin') ?? ''
-        const baseDomain = process.env.NEXT_PUBLIC_BASE_DOMAIN ?? 'localhost:3000'
+        const baseDomain = BASE_DOMAIN
         const allowedOrigins = [
             `https://${baseDomain}`,
             `http://localhost:3000`,
