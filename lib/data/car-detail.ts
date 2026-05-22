@@ -407,6 +407,11 @@ function isStableLocal4WHero(url: string | null | undefined): url is string {
     return false
 }
 
+function withImageFallbackUrls(images: Car['images'], sourceImages: Car['images']): Car['images'] {
+    const fallbackUrls = (sourceImages as typeof sourceImages & { _fallbackUrls?: string[] })._fallbackUrls
+    return fallbackUrls?.length ? { ...images, _fallbackUrls: fallbackUrls } as Car['images'] : images
+}
+
 export async function hydrateCarWithJsonDetails(car: Car): Promise<Car> {
     if (!car.make || !car.model) return car
 
@@ -464,12 +469,12 @@ export async function hydrateCarWithJsonDetails(car: Car): Promise<Car> {
     if (matchingVariants.length === 0) {
         return {
             ...car,
-            images: {
+            images: withImageFallbackUrls({
                 hero: heroImage ?? car.images.hero,
                 exterior: baseDedupedExterior,
                 interior: baseDedupedInterior,
                 colors: uniqueStrings(baseMergedColorImages ?? []),
-            },
+            }, car.images),
             colors: mergedColorsWithoutJson,
             meta: {
                 ...car.meta,
@@ -645,12 +650,12 @@ export async function hydrateCarWithJsonDetails(car: Car): Promise<Car> {
             rearCamera: safetyFeatures.some(feature => /rear camera|360/i.test(feature)) || car.safety?.rearCamera,
             ncapRating: car.safety?.ncapRating,
         },
-        images: {
+        images: withImageFallbackUrls({
             hero: pricedHeroImage ?? heroImage ?? car.images.hero,
             exterior: dedupedExterior,
             interior: dedupedInterior,
             colors: uniqueStrings(mergedColorImages ?? []),
-        },
+        }, car.images),
         colors: mergedColors.length > 0 ? mergedColors : fallbackColors,
         variants: variantEntries.length > 0 ? variantEntries : car.variants,
         meta: {

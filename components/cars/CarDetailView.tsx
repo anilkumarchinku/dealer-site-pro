@@ -202,12 +202,22 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
     const [onRoadVariantLabel, setOnRoadVariantLabel] = useState<string | null>(null);
     const [enquiryOpen, setEnquiryOpen] = useState(false);
     const [testDriveOpen, setTestDriveOpen] = useState(false);
-    const allImages = useMemo(
-        () => Array.from(
-            new Set([car.images.hero, ...car.images.exterior, ...car.images.interior].filter(Boolean))
-        ),
-        [car.images.hero, car.images.exterior, car.images.interior]
-    );
+    const allImages = useMemo(() => {
+        const fallbackUrls = ((car.images as unknown as Record<string, unknown>)?._fallbackUrls as string[] | undefined) ?? [];
+        const colorImages = car.images.colors ?? [];
+        const primaryImages = [
+            car.images.hero,
+            ...car.images.exterior,
+            ...car.images.interior,
+        ].filter(Boolean);
+        const fallbackImages = [
+            ...primaryImages,
+            ...fallbackUrls,
+            ...colorImages,
+        ].filter(Boolean);
+
+        return Array.from(new Set(fallbackImages.length > 0 ? fallbackImages : colorImages.filter(Boolean)));
+    }, [car.images.hero, car.images.exterior, car.images.interior, car.images.colors]);
 
     const [activeImage, setActiveImage] = useState<string | null>(allImages[0] ?? car.images.hero);
     const [activeTab, setActiveTab] = useState('overview');

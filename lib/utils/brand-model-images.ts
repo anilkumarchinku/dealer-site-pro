@@ -58,11 +58,28 @@ function normalize4WGalleryUrl(url: string, brandId: string): string {
     );
 }
 
+function get4WModelSlugCandidates(brandId: string, model: string): string[] {
+    const slug = modelToSlug(model);
+    const brandSlug = brandId.toLowerCase();
+    const candidates = [slug];
+
+    if (slug.startsWith(`${brandSlug}-`)) {
+        candidates.push(slug.slice(brandSlug.length + 1));
+    } else {
+        candidates.push(`${brandSlug}-${slug}`);
+    }
+
+    return Array.from(new Set(candidates.filter(Boolean)));
+}
+
 function get4WColorHeroFallback(brandId: string, model: string): string | null {
-    const key = `${brandId}/${modelToSlug(model)}`.toLowerCase();
-    const aliasKey = (FOUR_W_GALLERY_ALIASES[key] ?? "").toLowerCase();
-    const rawUrl = FOUR_W_COLOR_HERO_FALLBACKS[key] ?? FOUR_W_COLOR_HERO_FALLBACKS[aliasKey] ?? null;
-    return rawUrl ? normalize4WGalleryUrl(rawUrl, brandId) : null;
+    for (const modelSlug of get4WModelSlugCandidates(brandId, model)) {
+        const key = `${brandId}/${modelSlug}`.toLowerCase();
+        const aliasKey = (FOUR_W_GALLERY_ALIASES[key] ?? "").toLowerCase();
+        const rawUrl = FOUR_W_COLOR_HERO_FALLBACKS[key] ?? FOUR_W_COLOR_HERO_FALLBACKS[aliasKey] ?? null;
+        if (rawUrl) return normalize4WGalleryUrl(rawUrl, brandId);
+    }
+    return null;
 }
 
 export function build2WColorMetadataSlugCandidates(model: string): string[] {
@@ -114,21 +131,26 @@ export function getScrapedImageUrls(
 ): string[] {
     const slug = modelToSlug(model);
     if (vehicleCategory === "4w") {
-        const base = `/data/brand-model-images/4w/${brandId}/${slug}`;
-        const urls = [
-            ...IMAGE_EXTENSIONS.map((ext) => `${base}.${ext}`),
-            get4WColorHeroFallback(brandId, model),
-        ].filter((url): url is string => Boolean(url));
+        const urls: string[] = [];
+        for (const modelSlug of get4WModelSlugCandidates(brandId, model)) {
+            const base = `/data/brand-model-images/4w/${brandId}/${modelSlug}`;
+            IMAGE_EXTENSIONS.forEach((ext) => urls.push(`${base}.${ext}`));
+        }
+        const colorHero = get4WColorHeroFallback(brandId, model);
+        if (colorHero) urls.push(colorHero);
+
         // Fallback: strip common suffixes (tour, cargo, gen, edition) to
         // try the base model image (e.g. "wagon-r-tour" → "wagon-r")
-        const baseSlug = slug
-            .replace(/-(tour|cargo|edition|facelift|gen|2nd-gen|3rd-gen)$/i, "")
-            .replace(/-\d+(st|nd|rd|th)-gen$/i, "");
-        if (baseSlug !== slug) {
-            const fallback = `/data/brand-model-images/4w/${brandId}/${baseSlug}`;
-            IMAGE_EXTENSIONS.forEach((ext) => urls.push(`${fallback}.${ext}`));
+        for (const modelSlug of get4WModelSlugCandidates(brandId, model)) {
+            const baseSlug = modelSlug
+                .replace(/-(tour|cargo|edition|facelift|gen|2nd-gen|3rd-gen)$/i, "")
+                .replace(/-\d+(st|nd|rd|th)-gen$/i, "");
+            if (baseSlug !== modelSlug) {
+                const fallback = `/data/brand-model-images/4w/${brandId}/${baseSlug}`;
+                IMAGE_EXTENSIONS.forEach((ext) => urls.push(`${fallback}.${ext}`));
+            }
         }
-        return urls;
+        return Array.from(new Set(urls));
     }
     // 2W and 3W: try local files first, then Supabase storage
     const localBase = `/data/brand-model-images/${vehicleCategory}/${brandId}/${slug}`;
@@ -188,11 +210,12 @@ export function getAppAssetImageUrls(
     brandId: string,
     model: string
 ): string[] {
-    const slug = modelToSlug(model);
     if (vehicleCategory !== "4w") return [];
 
-    const base = `/assets/cars/${brandId}/${slug}`;
-    return IMAGE_EXTENSIONS.map((ext) => `${base}.${ext}`);
+    return get4WModelSlugCandidates(brandId, model).flatMap((slug) => {
+        const base = `/assets/cars/${brandId}/${slug}`;
+        return IMAGE_EXTENSIONS.map((ext) => `${base}.${ext}`);
+    });
 }
 
 export function getVehicleImageUrls(

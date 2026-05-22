@@ -3,6 +3,8 @@
  * Business logic for car data operations using Supabase
  */
 
+import fs from 'fs';
+import path from 'path';
 import { supabase } from '@/lib/supabase';
 import type {
     BodyType,
@@ -68,6 +70,71 @@ type GroupedCarCatalogRow = CarCatalogServiceRow & {
     variant: string;
     body_type: BodyType | string | null;
 };
+
+function uniqueImageUrls(values: Array<string | null | undefined>): string[] {
+    return Array.from(new Set(
+        values
+            .map((value) => String(value ?? '').trim())
+            .filter(Boolean)
+    ));
+}
+
+function isUsableImageUrl(value: string | null | undefined): value is string {
+    const url = String(value ?? '').trim();
+    if (!url) return false;
+    if (/no[-_\s]?image|placeholder|blank/i.test(url)) return false;
+    return true;
+}
+
+function localPublicImageExists(url: string): boolean {
+    if (!url.startsWith('/')) return false;
+    const cleanPath = url.split(/[?#]/)[0];
+    return fs.existsSync(path.join(process.cwd(), 'public', cleanPath));
+}
+
+function chooseFallbackHero(fallbackUrls: string[]): string | null {
+    return fallbackUrls.find((url) => isUsableImageUrl(url) && localPublicImageExists(url))
+        ?? fallbackUrls.find((url) => isUsableImageUrl(url) && !url.startsWith('/'))
+        ?? fallbackUrls.find(isUsableImageUrl)
+        ?? null;
+}
+
+function isLoadableImageUrl(value: string | null | undefined): value is string {
+    if (!isUsableImageUrl(value)) return false;
+    return !value.startsWith('/') || localPublicImageExists(value);
+}
+
+function buildCarImages(dbCar: GroupedCarCatalogRow): CarImages & { _fallbackUrls?: string[] } {
+    const fallbackUrls = getVehicleImageUrls(
+        '4w',
+        brandNameToId(dbCar.make, '4w'),
+        dbCar.model,
+        dbCar.image_url
+    );
+    const dbImages = dbCar.images;
+    const dbHero = isLoadableImageUrl(dbImages?.hero) ? dbImages.hero : null;
+    const fallbackHero = chooseFallbackHero(fallbackUrls);
+    const hero = dbHero ?? fallbackHero ?? '';
+    const dbExterior = Array.isArray(dbImages?.exterior) ? dbImages.exterior.filter(isUsableImageUrl) : [];
+    const dbInterior = Array.isArray(dbImages?.interior) ? dbImages.interior.filter(isUsableImageUrl) : [];
+    const dbColors = Array.isArray(dbImages?.colors) ? dbImages.colors.filter(isUsableImageUrl) : [];
+
+    return {
+        hero,
+        exterior: uniqueImageUrls([
+            ...dbExterior,
+            ...(hero ? [hero] : []),
+        ]),
+        interior: uniqueImageUrls(dbInterior),
+        colors: uniqueImageUrls(dbColors),
+        _fallbackUrls: uniqueImageUrls([
+            ...fallbackUrls,
+            dbHero,
+            ...dbExterior,
+            ...dbColors,
+        ]),
+    };
+}
 
 function toGroupedCarCatalogRow(row: CarCatalogServiceRow): GroupedCarCatalogRow {
     return {
@@ -370,21 +437,7 @@ function mapDbCarToCar(dbCar: GroupedCarCatalogRow): Car {
             keyFeatures:     Array.isArray(dbCar.key_features)    ? dbCar.key_features    : [],
             safetyFeatures:  Array.isArray(dbCar.safety_features) ? dbCar.safety_features : [],
         },
-        images:       dbCar.images ?? (() => {
-            // Build candidate list for fallback cycling (curated → DB URL → scraped)
-            const allUrls = getVehicleImageUrls('4w', brandNameToId(dbCar.make, '4w'), dbCar.model, dbCar.image_url);
-            const hero = allUrls[0] ?? null;
-            // exterior: only store the hero for gallery display.
-            // The full candidate list (allUrls) is used by SimilarCarCard's
-            // onError cycling but should NOT populate gallery thumbnails
-            // (non-existent URLs render as blank thumbnails).
-            return {
-                hero,
-                exterior: hero ? [hero] : [],
-                interior: [],
-                _fallbackUrls: allUrls, // used by SimilarCarCard onError
-            };
-        })(),
+        images:       buildCarImages(dbCar),
         colors: (() => {
             // Use DB colors if they exist and are non-empty
             if (Array.isArray(dbCar.colors) && dbCar.colors.length > 0) return dbCar.colors;
