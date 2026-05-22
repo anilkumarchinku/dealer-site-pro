@@ -1,0 +1,32 @@
+{
+  "make": "Mercedes-Benz",
+  "model": "GLC Coupe",
+  "brandSlug": "mercedes-benz",
+  "modelSlug": "glc-coupe",
+  "sourceUrl": "https://www.cardekho.com/mercedes-benz/glc-coupe",
+  "scrapedAt": "2026-05-21T12:27:32.317Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 7,
+    "total": 7
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mercedes-benz/glc-coupe/colors/spectral-blue.avif",
+  "colorNames": [
+    "Spectral Blue",
+    "Gray",
+    "Graphite Grey",
+    "Polar White",
+    "Designo Hyacinth Red Metallic",
+    "Mojave Silver",
+    "Obsidian Black"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mercedes-benz/glc-coupe/colors/spectral-blue.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/glc-coupe/colors/gray.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/glc-coupe/colors/graphite-grey.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/glc-coupe/colors/polar-white.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/glc-coupe/colors/designo-hyacinth-red-metallic.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/glc-coupe/colors/mojave-silver.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/glc-coupe/colors/obsidian-black.avif"
+  ]
+}

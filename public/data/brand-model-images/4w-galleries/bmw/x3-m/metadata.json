@@ -1,0 +1,22 @@
+{
+  "make": "BMW",
+  "model": "X3 M",
+  "brandSlug": "bmw",
+  "modelSlug": "x3-m",
+  "sourceUrl": "https://www.cardekho.com/bmw/x3-m",
+  "scrapedAt": "2026-05-21T12:29:04.877Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 2,
+    "total": 2
+  },
+  "hero": "/data/brand-model-images/4w-galleries/bmw/x3-m/colors/silver.avif",
+  "colorNames": [
+    "Silver",
+    "White"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/bmw/x3-m/colors/silver.avif",
+    "/data/brand-model-images/4w-galleries/bmw/x3-m/colors/white.avif"
+  ]
+}

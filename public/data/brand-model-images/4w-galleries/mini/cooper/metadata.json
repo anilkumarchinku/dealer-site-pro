@@ -1,0 +1,24 @@
+{
+  "make": "MINI",
+  "model": "Cooper",
+  "brandSlug": "mini",
+  "modelSlug": "cooper",
+  "sourceUrl": "https://www.cardekho.com/mini/cooper",
+  "scrapedAt": "2026-05-21T12:27:29.973Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 3,
+    "total": 3
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mini/cooper/colors/ice-blue.avif",
+  "colorNames": [
+    "Ice Blue",
+    "Chili Red",
+    "Pepper White"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mini/cooper/colors/ice-blue.avif",
+    "/data/brand-model-images/4w-galleries/mini/cooper/colors/chili-red.avif",
+    "/data/brand-model-images/4w-galleries/mini/cooper/colors/pepper-white.avif"
+  ]
+}

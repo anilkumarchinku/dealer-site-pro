@@ -1,0 +1,20 @@
+{
+  "make": "Bugatti",
+  "model": "Chiron",
+  "brandSlug": "bugatti",
+  "modelSlug": "chiron",
+  "sourceUrl": "https://www.cardekho.com/bugatti/chiron",
+  "scrapedAt": "2026-05-21T12:22:27.361Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 1,
+    "total": 1
+  },
+  "hero": "/data/brand-model-images/4w-galleries/bugatti/chiron/colors/white.avif",
+  "colorNames": [
+    "White"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/bugatti/chiron/colors/white.avif"
+  ]
+}

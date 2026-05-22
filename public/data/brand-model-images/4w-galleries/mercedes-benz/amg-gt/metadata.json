@@ -1,0 +1,46 @@
+{
+  "make": "Mercedes-Benz",
+  "model": "AMG GT",
+  "brandSlug": "mercedes-benz",
+  "modelSlug": "amg-gt",
+  "sourceUrl": "https://www.cardekho.com/mercedes-benz/amg-gt",
+  "scrapedAt": "2026-05-21T12:27:35.390Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 14,
+    "total": 14
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mercedes-benz/amg-gt/colors/amg-solarbeam.avif",
+  "colorNames": [
+    "Amg Solarbeam",
+    "Designo Hyacinth Red Metallic",
+    "Designo Selenite Grey Magno",
+    "Fire Opal",
+    "Brilliant Blue Metallic",
+    "Magnetite Black Metallic",
+    "Green Hell Mangno",
+    "Designo Diamond White Bright",
+    "Jupiter Red",
+    "Selenite Grey Metallic",
+    "Designo Brilliant Blue Magno",
+    "Designo Iridium Silver Magno",
+    "Solarbeam",
+    "Iridium Silver Metallic"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-gt/colors/amg-solarbeam.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-gt/colors/designo-hyacinth-red-metallic.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-gt/colors/designo-selenite-grey-magno.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-gt/colors/fire-opal.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-gt/colors/brilliant-blue-metallic.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-gt/colors/magnetite-black-metallic.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-gt/colors/green-hell-mangno.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-gt/colors/designo-diamond-white-bright.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-gt/colors/jupiter-red.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-gt/colors/selenite-grey-metallic.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-gt/colors/designo-brilliant-blue-magno.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-gt/colors/designo-iridium-silver-magno.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-gt/colors/solarbeam.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-gt/colors/iridium-silver-metallic.avif"
+  ]
+}

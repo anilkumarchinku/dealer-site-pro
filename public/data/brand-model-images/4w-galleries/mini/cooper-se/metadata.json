@@ -1,0 +1,26 @@
+{
+  "make": "MINI",
+  "model": "Cooper SE",
+  "brandSlug": "mini",
+  "modelSlug": "cooper-se",
+  "sourceUrl": "https://www.cardekho.com/mini/cooper-se",
+  "scrapedAt": "2026-05-21T12:29:04.930Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 4,
+    "total": 4
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mini/cooper-se/colors/moonwalk-grey.avif",
+  "colorNames": [
+    "Moonwalk Grey",
+    "White Silver",
+    "British Racing Green",
+    "Midnight Black"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mini/cooper-se/colors/moonwalk-grey.avif",
+    "/data/brand-model-images/4w-galleries/mini/cooper-se/colors/white-silver.avif",
+    "/data/brand-model-images/4w-galleries/mini/cooper-se/colors/british-racing-green.avif",
+    "/data/brand-model-images/4w-galleries/mini/cooper-se/colors/midnight-black.avif"
+  ]
+}

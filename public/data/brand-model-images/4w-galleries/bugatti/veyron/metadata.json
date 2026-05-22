@@ -1,0 +1,38 @@
+{
+  "make": "Bugatti",
+  "model": "Veyron",
+  "brandSlug": "bugatti",
+  "modelSlug": "veyron",
+  "sourceUrl": "https://www.cardekho.com/bugatti/veyron",
+  "scrapedAt": "2026-05-21T12:22:34.355Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 10,
+    "total": 10
+  },
+  "hero": "/data/brand-model-images/4w-galleries/bugatti/veyron/colors/light-blue.avif",
+  "colorNames": [
+    "Light Blue",
+    "Pearl",
+    "Black-M",
+    "Polar",
+    "Beige Gold-M",
+    "Light Blue Green",
+    "Mocca Brown",
+    "Black Blue-M",
+    "Lemon",
+    "Light Red"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/bugatti/veyron/colors/light-blue.avif",
+    "/data/brand-model-images/4w-galleries/bugatti/veyron/colors/pearl.avif",
+    "/data/brand-model-images/4w-galleries/bugatti/veyron/colors/black-m.avif",
+    "/data/brand-model-images/4w-galleries/bugatti/veyron/colors/polar.avif",
+    "/data/brand-model-images/4w-galleries/bugatti/veyron/colors/beige-gold-m.avif",
+    "/data/brand-model-images/4w-galleries/bugatti/veyron/colors/light-blue-green.avif",
+    "/data/brand-model-images/4w-galleries/bugatti/veyron/colors/mocca-brown.avif",
+    "/data/brand-model-images/4w-galleries/bugatti/veyron/colors/black-blue-m.avif",
+    "/data/brand-model-images/4w-galleries/bugatti/veyron/colors/lemon.avif",
+    "/data/brand-model-images/4w-galleries/bugatti/veyron/colors/light-red.avif"
+  ]
+}

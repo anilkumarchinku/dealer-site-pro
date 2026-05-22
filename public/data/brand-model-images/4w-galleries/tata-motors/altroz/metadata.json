@@ -1,0 +1,34 @@
+{
+  "make": "Tata Motors",
+  "model": "Altroz",
+  "brandSlug": "tata",
+  "modelSlug": "altroz",
+  "sourceUrl": "https://www.cardekho.com/tata/altroz",
+  "scrapedAt": "2026-05-21T12:29:05.402Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 8,
+    "total": 8
+  },
+  "hero": "/data/brand-model-images/4w-galleries/tata-motors/altroz/colors/ember-glow.avif",
+  "colorNames": [
+    "Ember Glow",
+    "Pristine White",
+    "Pure Grey",
+    "Dune GLow",
+    "Royal Blue",
+    "Ember Glow 9f3620",
+    "Dune GLow Aea498",
+    "Tata Altroz"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/tata-motors/altroz/colors/ember-glow.avif",
+    "/data/brand-model-images/4w-galleries/tata-motors/altroz/colors/pristine-white.avif",
+    "/data/brand-model-images/4w-galleries/tata-motors/altroz/colors/pure-grey.avif",
+    "/data/brand-model-images/4w-galleries/tata-motors/altroz/colors/dune-glow.avif",
+    "/data/brand-model-images/4w-galleries/tata-motors/altroz/colors/royal-blue.avif",
+    "/data/brand-model-images/4w-galleries/tata-motors/altroz/colors/ember-glow-9f3620.avif",
+    "/data/brand-model-images/4w-galleries/tata-motors/altroz/colors/dune-glow-aea498.avif",
+    "/data/brand-model-images/4w-galleries/tata-motors/altroz/colors/tata-altroz.avif"
+  ]
+}

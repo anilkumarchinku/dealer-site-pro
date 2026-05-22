@@ -1,0 +1,30 @@
+{
+  "make": "Mercedes-Benz",
+  "model": "AMG GLA 35",
+  "brandSlug": "mercedes-benz",
+  "modelSlug": "amg-gla-35",
+  "sourceUrl": "https://www.cardekho.com/mercedes-benz/amg-gla-35",
+  "scrapedAt": "2026-05-21T12:27:32.317Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 6,
+    "total": 6
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mercedes-benz/amg-gla-35/colors/mountain-grey.avif",
+  "colorNames": [
+    "Mountain Grey",
+    "Iridium Silver",
+    "Polar White",
+    "Denim Blue",
+    "Designo Patagonia Red",
+    "Cosmos Black"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-gla-35/colors/mountain-grey.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-gla-35/colors/iridium-silver.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-gla-35/colors/polar-white.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-gla-35/colors/denim-blue.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-gla-35/colors/designo-patagonia-red.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/amg-gla-35/colors/cosmos-black.avif"
+  ]
+}

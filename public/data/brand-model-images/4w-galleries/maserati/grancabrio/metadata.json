@@ -1,0 +1,48 @@
+{
+  "make": "Maserati",
+  "model": "GranCabrio",
+  "brandSlug": "maserati",
+  "modelSlug": "gran-cabrio",
+  "sourceUrl": "https://www.cardekho.com/maserati/gran-cabrio",
+  "scrapedAt": "2026-05-21T12:24:09.052Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 15,
+    "total": 15
+  },
+  "hero": "/data/brand-model-images/4w-galleries/maserati/grancabrio/colors/nero-carbonio-metallic.avif",
+  "colorNames": [
+    "Nero Carbonio Metallic",
+    "Grigio Alfieri",
+    "Gray",
+    "Bordeaux Pontevecchino",
+    "Blu Sofisticato",
+    "Italian Racing Red",
+    "Bianco Eldorado",
+    "Nero",
+    "Grigio Touring",
+    "Lava Grey",
+    "White",
+    "Rosso Trionfale",
+    "Yellow",
+    "Granite Grey",
+    "Blu Nettuno"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/maserati/grancabrio/colors/nero-carbonio-metallic.avif",
+    "/data/brand-model-images/4w-galleries/maserati/grancabrio/colors/grigio-alfieri.avif",
+    "/data/brand-model-images/4w-galleries/maserati/grancabrio/colors/gray.avif",
+    "/data/brand-model-images/4w-galleries/maserati/grancabrio/colors/bordeaux-pontevecchino.avif",
+    "/data/brand-model-images/4w-galleries/maserati/grancabrio/colors/blu-sofisticato.avif",
+    "/data/brand-model-images/4w-galleries/maserati/grancabrio/colors/italian-racing-red.avif",
+    "/data/brand-model-images/4w-galleries/maserati/grancabrio/colors/bianco-eldorado.avif",
+    "/data/brand-model-images/4w-galleries/maserati/grancabrio/colors/nero.avif",
+    "/data/brand-model-images/4w-galleries/maserati/grancabrio/colors/grigio-touring.avif",
+    "/data/brand-model-images/4w-galleries/maserati/grancabrio/colors/lava-grey.avif",
+    "/data/brand-model-images/4w-galleries/maserati/grancabrio/colors/white.avif",
+    "/data/brand-model-images/4w-galleries/maserati/grancabrio/colors/rosso-trionfale.avif",
+    "/data/brand-model-images/4w-galleries/maserati/grancabrio/colors/yellow.avif",
+    "/data/brand-model-images/4w-galleries/maserati/grancabrio/colors/granite-grey.avif",
+    "/data/brand-model-images/4w-galleries/maserati/grancabrio/colors/blu-nettuno.avif"
+  ]
+}

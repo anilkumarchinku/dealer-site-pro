@@ -1,0 +1,22 @@
+{
+  "make": "Maruti Suzuki",
+  "model": "Super Carry",
+  "brandSlug": "maruti",
+  "modelSlug": "super-carry",
+  "sourceUrl": "https://www.cardekho.com/maruti/super-carry",
+  "scrapedAt": "2026-05-21T12:24:02.925Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 2,
+    "total": 2
+  },
+  "hero": "/data/brand-model-images/4w-galleries/maruti-suzuki/super-carry/colors/silky-silver.avif",
+  "colorNames": [
+    "Silky Silver",
+    "Solid White"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/maruti-suzuki/super-carry/colors/silky-silver.avif",
+    "/data/brand-model-images/4w-galleries/maruti-suzuki/super-carry/colors/solid-white.avif"
+  ]
+}

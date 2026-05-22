@@ -1,0 +1,28 @@
+{
+  "make": "Mercedes-Benz",
+  "model": "A-Class Limousine",
+  "brandSlug": "mercedes-benz",
+  "modelSlug": "a-class-limousine",
+  "sourceUrl": "https://www.cardekho.com/mercedes-benz/a-class-limousine",
+  "scrapedAt": "2026-05-21T12:25:44.227Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 5,
+    "total": 5
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mercedes-benz/a-class-limousine/colors/spectral-blue.avif",
+  "colorNames": [
+    "Spectral Blue",
+    "Mountain Grey",
+    "High Tech Silver",
+    "Polar White",
+    "Cosmos Black"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mercedes-benz/a-class-limousine/colors/spectral-blue.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/a-class-limousine/colors/mountain-grey.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/a-class-limousine/colors/high-tech-silver.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/a-class-limousine/colors/polar-white.avif",
+    "/data/brand-model-images/4w-galleries/mercedes-benz/a-class-limousine/colors/cosmos-black.avif"
+  ]
+}

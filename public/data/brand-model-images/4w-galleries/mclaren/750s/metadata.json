@@ -1,0 +1,28 @@
+{
+  "make": "McLaren",
+  "model": "750S",
+  "brandSlug": "mclaren",
+  "modelSlug": "750s",
+  "sourceUrl": "https://www.cardekho.com/mclaren/750s",
+  "scrapedAt": "2026-05-21T12:25:45.536Z",
+  "mode": "colors-only",
+  "counts": {
+    "colors": 5,
+    "total": 5
+  },
+  "hero": "/data/brand-model-images/4w-galleries/mclaren/750s/colors/silica-white.avif",
+  "colorNames": [
+    "Silica White",
+    "Onyx Black",
+    "Aurora Blue",
+    "Anthracite",
+    "Orange"
+  ],
+  "colorImages": [
+    "/data/brand-model-images/4w-galleries/mclaren/750s/colors/silica-white.avif",
+    "/data/brand-model-images/4w-galleries/mclaren/750s/colors/onyx-black.avif",
+    "/data/brand-model-images/4w-galleries/mclaren/750s/colors/aurora-blue.avif",
+    "/data/brand-model-images/4w-galleries/mclaren/750s/colors/anthracite.avif",
+    "/data/brand-model-images/4w-galleries/mclaren/750s/colors/orange.avif"
+  ]
+}
