@@ -224,6 +224,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
     const [isTabBarSticky, setIsTabBarSticky] = useState(false);
     const [selectedColor, setSelectedColor] = useState(car.colors?.[0]?.name || '');
     const [isFavorite, setIsFavorite] = useState(false);
+    const [failedColorImages, setFailedColorImages] = useState<Record<string, boolean>>({});
 
     // EMI Calculator state
     const [emiPrice, setEmiPrice] = useState(car.pricing.exShowroom.min || 1000000);
@@ -259,9 +260,12 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
     ].filter(s => s.value);
     const selectedColorIndex = car.colors?.findIndex(color => color.name === selectedColor) ?? -1;
     const selectedColorData = selectedColorIndex >= 0 ? car.colors?.[selectedColorIndex] : undefined;
-    const selectedColorImage = (
+    const selectedColorSource = (
         selectedColorIndex >= 0 ? car.images.colors?.[selectedColorIndex] : undefined
     ) ?? selectedColorData?.image;
+    const selectedColorImage = selectedColorSource && !failedColorImages[selectedColorSource]
+        ? selectedColorSource
+        : undefined;
 
     // Sticky tab bar detection
     useEffect(() => {
@@ -944,15 +948,27 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                     {car.colors && car.colors.length > 0 ? (
                         <Card className={lightCardClass}>
                             <CardContent className="p-6">
-                                {selectedColorImage && (
+                                {selectedColorSource && (
                                     <div className="relative mb-6 aspect-[16/9] w-full overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
-                                        <Image
-                                            src={selectedColorImage}
-                                            alt={`${car.make} ${car.model} in ${selectedColor}`}
-                                            fill
-                                            unoptimized
-                                            className="object-contain"
-                                        />
+                                        {selectedColorImage ? (
+                                            <Image
+                                                src={selectedColorImage}
+                                                alt={`${car.make} ${car.model} in ${selectedColor}`}
+                                                fill
+                                                unoptimized
+                                                className="object-contain"
+                                                onError={() => {
+                                                    setFailedColorImages(prev => ({
+                                                        ...prev,
+                                                        [selectedColorImage]: true,
+                                                    }));
+                                                }}
+                                            />
+                                        ) : (
+                                            <div className="flex h-full w-full items-center justify-center px-4 text-center text-sm text-gray-600">
+                                                Image not available for {selectedColor}
+                                            </div>
+                                        )}
                                     </div>
                                 )}
                                 <div className="flex flex-wrap gap-3 mb-4">
