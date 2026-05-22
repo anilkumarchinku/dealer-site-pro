@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { fetchDealerBySlug } from '@/lib/db/dealers'
 import { getUsedThreeWheelers } from '@/lib/db/three-wheelers'
 import { THREE_WHEELER_BRANDS } from '@/lib/data/three-wheelers'
-import { fetchCyeproInventoryAsCars } from '@/lib/services/cyepro-service'
+import { fetchAllCyeproInventoryAsCars } from '@/lib/services/cyepro-service'
 import { notFound } from 'next/navigation'
 import { brandNameToId } from '@/lib/utils/brand-model-images'
 import { ModernTemplate } from '@/components/templates/ModernTemplate'
@@ -88,7 +88,7 @@ export default async function UsedThreeWheelersPage({ params }: Props) {
 
     // Merge Cyepro used inventory if dealer has API key
     const cyeproCars = dealer.cyepro_api_key
-        ? (await fetchCyeproInventoryAsCars(dealer.cyepro_api_key)).map(c => ({ ...c, vehicleCategory: '3w' as const }))
+        ? (await fetchAllCyeproInventoryAsCars(dealer.cyepro_api_key)).map(c => ({ ...c, vehicleCategory: '3w' as const }))
         : []
 
     const cars = [...usedThreeWheelersToCars(usedVehicles), ...cyeproCars]

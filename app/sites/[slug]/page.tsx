@@ -7,7 +7,7 @@ import { SportyTemplate } from '@/components/templates/SportyTemplate'
 import { FamilyTemplate } from '@/components/templates/FamilyTemplate'
 import { allCars, getCarsByMake } from '@/lib/data/cars'
 import { fetchDealerBySlug } from '@/lib/db/dealers'
-import { fetchCyeproInventoryAsCars } from '@/lib/services/cyepro-service'
+import { fetchAllCyeproInventoryAsCars } from '@/lib/services/cyepro-service'
 import type { Car } from '@/lib/types/car'
 import type { DBVehicle } from '@/lib/db/vehicles'
 import type { Service } from '@/lib/types'
@@ -514,7 +514,7 @@ export default async function SitePage({ params }: SitePageProps) {
     } else {
         // USED-CAR site — used-only dealer OR hybrid "-used" sub-site
         const cyeproCars = cyepro_api_key
-            ? await fetchCyeproInventoryAsCars(cyepro_api_key, { size: 30 })
+            ? await fetchAllCyeproInventoryAsCars(cyepro_api_key)
             : []
 
         if (cyeproCars.length > 0) {

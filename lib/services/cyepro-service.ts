@@ -74,6 +74,8 @@ const SERVICE_ID  = '460'
 const TIME_ZONE   = 'Asia/Calcutta'
 const SEARCH_TIMEOUT_MS = 10_000
 const LEAD_TIMEOUT_MS = 5_000
+const DEFAULT_FETCH_ALL_PAGE_SIZE = 100
+const DEFAULT_FETCH_ALL_MAX_VEHICLES = 500
 
 // Default search params for fetching all active inventory
 const DEFAULT_SEARCH: CyeproSearchBody = {
@@ -255,6 +257,59 @@ export async function fetchCyeproVehicles(
 }
 
 /**
+ * Fetch every available Cyepro inventory page for generated public websites.
+ *
+ * The Cyepro endpoint is paginated. A single request only returns `size` rows,
+ * so public dealer sites must walk the pages to avoid hiding vehicles after
+ * the first page. `maxVehicles` is a guardrail against accidental huge loops.
+ */
+export async function fetchAllCyeproVehicles(
+    apiKey: string,
+    options: Partial<CyeproSearchBody> = {},
+    maxVehicles = DEFAULT_FETCH_ALL_MAX_VEHICLES,
+): Promise<CyeproSearchResponse | null> {
+    const pageSize = Math.min(
+        Math.max(options.size ?? DEFAULT_FETCH_ALL_PAGE_SIZE, 1),
+        DEFAULT_FETCH_ALL_PAGE_SIZE,
+    )
+
+    const firstPage = await fetchCyeproVehicles(apiKey, {
+        ...options,
+        page: 1,
+        size: pageSize,
+    })
+
+    if (!firstPage) return null
+    if (!firstPage.vehicles.length || firstPage.totalPages <= 1) return firstPage
+
+    const vehicles = [...firstPage.vehicles]
+    const totalPages = Math.min(
+        firstPage.totalPages,
+        Math.ceil(maxVehicles / pageSize),
+    )
+
+    for (let page = (firstPage.pageNumber || 1) + 1; page <= totalPages; page += 1) {
+        if (vehicles.length >= maxVehicles) break
+
+        const nextPage = await fetchCyeproVehicles(apiKey, {
+            ...options,
+            page,
+            size: pageSize,
+        })
+
+        if (!nextPage?.vehicles.length) break
+        vehicles.push(...nextPage.vehicles)
+    }
+
+    return {
+        ...firstPage,
+        vehicles: vehicles.slice(0, maxVehicles),
+        pageNumber: 1,
+        pageSize,
+    }
+}
+
+/**
  * Fetch aggregations (counts by make/model/year) for building filter UI.
  * Returns null on failure.
  */
@@ -340,6 +395,16 @@ export async function fetchCyeproInventoryAsCars(
     options: Partial<CyeproSearchBody> = {},
 ): Promise<Car[]> {
     const response = await fetchCyeproVehicles(apiKey, options)
+    if (!response || !response.vehicles?.length) return []
+    return response.vehicles.map(mapCyeproVehicleToCar)
+}
+
+export async function fetchAllCyeproInventoryAsCars(
+    apiKey: string,
+    options: Partial<CyeproSearchBody> = {},
+    maxVehicles?: number,
+): Promise<Car[]> {
+    const response = await fetchAllCyeproVehicles(apiKey, options, maxVehicles)
     if (!response || !response.vehicles?.length) return []
     return response.vehicles.map(mapCyeproVehicleToCar)
 }

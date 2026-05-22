@@ -5,15 +5,15 @@
  * Keeps the dealer's API key on the server — never exposed to browsers.
  *
  * Request body:
- *   { dealerId: string, page?: number, size?: number, filters?: {...} }
+ *   { dealerId: string, page?: number, size?: number, fetchAll?: boolean, maxVehicles?: number }
  *
  * Returns mapped Car[] + pagination metadata.
  */
 
 import { NextResponse } from 'next/server'
 import { requireAuth } from '@/lib/supabase-server'
-import { createRouteClient } from '@/lib/supabase-server'
 import {
+    fetchAllCyeproVehicles,
     fetchCyeproVehicles,
     mapCyeproVehicleToCar,
     type CyeproSearchBody,
@@ -35,6 +35,8 @@ export async function POST(request: Request) {
             yearMin, yearMax,
             kmDrivenMax,
             sortBy, order,
+            fetchAll = false,
+            maxVehicles,
         } = body
 
         if (!dealerId) {
@@ -74,7 +76,10 @@ export async function POST(request: Request) {
         }
 
         // ── Call Cyepro API ───────────────────────────────────────────────────
-        const cyeproRes = await fetchCyeproVehicles(dealer.cyepro_api_key, searchParams)
+        const maxVehicleCount = typeof maxVehicles === 'number' ? maxVehicles : undefined
+        const cyeproRes = fetchAll
+            ? await fetchAllCyeproVehicles(dealer.cyepro_api_key, searchParams, maxVehicleCount)
+            : await fetchCyeproVehicles(dealer.cyepro_api_key, searchParams)
 
         if (!cyeproRes) {
             return NextResponse.json(

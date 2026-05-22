@@ -3,7 +3,7 @@ import { CarDetailView } from '@/components/cars/CarDetailView';
 import { allCars, getCarsByMake } from '@/lib/data/cars';
 import { hydrateCarWithJsonDetails } from '@/lib/data/car-detail';
 import { fetchDealerBySlug } from '@/lib/db/dealers';
-import { fetchCyeproInventoryAsCars } from '@/lib/services/cyepro-service';
+import { fetchAllCyeproInventoryAsCars } from '@/lib/services/cyepro-service';
 import type { Car } from '@/lib/types/car';
 import type { DBVehicle } from '@/lib/db/vehicles';
 import { dedupeByMakeModel, dedupeCaseInsensitiveStrings } from '@/lib/utils/listing-dedupe';
@@ -80,7 +80,7 @@ export default async function SiteCarDetailPage({ params }: SiteCarDetailPagePro
         })));
     } else {
         const cyeproCars = cyepro_api_key
-            ? await fetchCyeproInventoryAsCars(cyepro_api_key, { size: 30 })
+            ? await fetchAllCyeproInventoryAsCars(cyepro_api_key)
             : [];
 
         if (cyeproCars.length > 0) {

@@ -4,7 +4,7 @@ import { getTwoWheelerVehicles, getUsedTwoWheelers } from '@/lib/db/two-wheelers
 import { getTwoWheelerCatalog, TWO_WHEELER_BRANDS } from '@/lib/data/two-wheelers'
 import { getTwoWheelerCatalogFromDB } from '@/lib/data/catalog-db'
 import { getLocal2WImage } from '@/lib/data/cars'
-import { fetchCyeproInventoryAsCars } from '@/lib/services/cyepro-service'
+import { fetchAllCyeproInventoryAsCars } from '@/lib/services/cyepro-service'
 import { notFound } from 'next/navigation'
 import { createClient } from '@supabase/supabase-js'
 import { ModernTemplate } from '@/components/templates/ModernTemplate'
@@ -371,7 +371,7 @@ export default async function TwoWheelersPage({ params }: Props) {
 
     // Merge Cyepro used inventory if dealer has API key
     const cyeproCars = dealer.cyepro_api_key
-        ? (await fetchCyeproInventoryAsCars(dealer.cyepro_api_key)).map(c => ({ ...c, vehicleCategory: '2w' as const }))
+        ? (await fetchAllCyeproInventoryAsCars(dealer.cyepro_api_key)).map(c => ({ ...c, vehicleCategory: '2w' as const }))
         : []
 
     const newCars  = twoWheelersToCars(vehicles)
