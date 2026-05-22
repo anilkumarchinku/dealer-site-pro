@@ -36,6 +36,7 @@ export default function VehicleDetailPage() {
     const slug   = params.slug as string
     const id     = params.id   as string
     const prefix = useSitePrefix(slug)
+    const listingHref = `${prefix}/two-wheelers`
 
     const [vehicle,    setVehicle]    = useState<TwoWheelerVehicle | null>(null)
     const [dealerId,   setDealerId]   = useState<string | null>(null)
@@ -152,7 +153,7 @@ export default function VehicleDetailPage() {
                 <div className="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between gap-4">
                     {/* Back link — LEFT */}
                     <Link
-                        href={prefix || "/"}
+                        href={listingHref}
                         className="inline-flex items-center gap-1 text-sm text-gray-500 hover:text-gray-900 shrink-0 transition-colors"
                     >
                         <ChevronLeft className="w-4 h-4" />
@@ -161,7 +162,7 @@ export default function VehicleDetailPage() {
 
                     {/* Logo + dealer name — RIGHT → navigates home */}
                     <Link
-                        href={prefix || "/"}
+                        href={listingHref}
                         className="flex items-center gap-2.5 hover:opacity-80 transition-opacity min-w-0"
                     >
                         <span className="font-semibold text-gray-900 text-sm truncate max-w-[160px] sm:max-w-xs">
