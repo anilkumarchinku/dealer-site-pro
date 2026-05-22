@@ -92,8 +92,9 @@ export async function POST(request: Request) {
             priceMin: 0,
             priceMax: 100_000_000,
             yearMin: 1970,
-            yearMax: new Date().getFullYear() + 1,
+            yearMax: 2025,
             vehicleStatusIds: [],
+            vehicleTypeList: [],
             kmDrivenMax: 9_999_999,
             daysFilter: null,
             sortBy: null,
@@ -101,6 +102,10 @@ export async function POST(request: Request) {
         }
 
         const headers = {
+            'Accept': '*/*',
+            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0',
+            'Referer': 'https://www.cyepro.com/',
+            'Origin': 'https://www.cyepro.com',
             'Content-Type': 'application/json',
             'API-KEY': dealer.cyepro_api_key,
             'SERVICE-TYPE-ID': SERVICE_ID,

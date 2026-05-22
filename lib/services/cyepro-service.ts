@@ -2,7 +2,8 @@
  * Cyepro Vehicle Inventory API Service
  *
  * Server-side only — API key is never exposed to the browser.
- * Base URL  : https://api.cyepro.com
+ * Base URL  : https://mock-api.cyepro.com by default; override with
+ *             CYEPRO_API_BASE_URL for salesapp/dev/prod hosts.
  * Auth      : API-KEY header
  * Service ID: 460
  */
@@ -38,6 +39,7 @@ export interface CyeproSearchBody {
     yearMin: number
     yearMax: number
     vehicleStatusIds: number[]
+    vehicleTypeList: string[]
     kmDrivenMax: number
     daysFilter: null
     sortBy: null | string
@@ -78,7 +80,7 @@ type CyeproRawSearchResponse = Partial<CyeproSearchResponse> & {
 
 // ── Constants ─────────────────────────────────────────────────────────────────
 
-const DEFAULT_BASE_URL = 'https://api.cyepro.com'
+const DEFAULT_BASE_URL = 'https://mock-api.cyepro.com'
 const BASE_URL    = normaliseBaseUrl(getOptionalEnv('CYEPRO_API_BASE_URL') ?? DEFAULT_BASE_URL)
 const SEARCH_PATH = normalisePath(getOptionalEnv('CYEPRO_SEARCH_PATH') ?? '/dynamicForms/search/vehicles/filterQueryApi')
 const AGGREGATIONS_PATH = normalisePath(getOptionalEnv('CYEPRO_AGGREGATIONS_PATH') ?? '/dynamicForms/search/vehicles/aggregationsApi')
@@ -96,8 +98,9 @@ const DEFAULT_SEARCH: CyeproSearchBody = {
     priceMin:         0,
     priceMax:         100_000_000,
     yearMin:          1970,
-    yearMax:          new Date().getFullYear() + 1,
+    yearMax:          2025,
     vehicleStatusIds: [],
+    vehicleTypeList:  [],
     kmDrivenMax:      9_999_999,
     daysFilter:       null,
     sortBy:           null,
@@ -125,6 +128,10 @@ export function getCyeproSearchPath(): string {
 
 function buildHeaders(apiKey: string): HeadersInit {
     return {
+        'Accept':          '*/*',
+        'User-Agent':      'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0',
+        'Referer':         'https://www.cyepro.com/',
+        'Origin':          'https://www.cyepro.com',
         'Content-Type':    'application/json',
         'API-KEY':         apiKey,
         'SERVICE-TYPE-ID': SERVICE_ID,
