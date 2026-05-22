@@ -27,7 +27,6 @@ import CompareBar from '@/components/cars/CompareBar';
 import { WishlistDrawer } from '@/components/ui/WishlistDrawer';
 import { EVSection } from '@/components/ui/EVSection';
 import { generateTemplateConfig } from '@/lib/templates';
-import { getBrandHeroImage } from '@/lib/utils/brand-hero';
 import { getContrastText } from '@/lib/utils/color-contrast';
 import {
     ArrowRight,
@@ -356,7 +355,7 @@ export function FamilyTemplate({
                                 </div>
                                 <div className="relative h-96 rounded-3xl overflow-hidden shadow-2xl">
                                     {(() => {
-                                        const heroSrc = heroImageUrl || getBrandHeroImage(brandName, vehicleType);
+                                        const heroSrc = heroImageUrl;
                                         return heroSrc
                                             ? <Image src={heroSrc} alt={`${brandName} Family`} fill className="object-cover" priority />
                                             : <div className="w-full h-full" style={{ background: `linear-gradient(135deg, ${brandColors.primary}33, ${brandColors.primary}11)` }} />;

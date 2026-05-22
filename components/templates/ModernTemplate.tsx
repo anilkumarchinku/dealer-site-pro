@@ -27,7 +27,6 @@ import CompareBar from '@/components/cars/CompareBar';
 import { WishlistDrawer } from '@/components/ui/WishlistDrawer';
 import { EVSection } from '@/components/ui/EVSection';
 import { generateTemplateConfig } from '@/lib/templates';
-import { getBrandHeroImage } from '@/lib/utils/brand-hero';
 import { getContrastText } from '@/lib/utils/color-contrast';
 import { getScrapedImageUrls, brandNameToId } from '@/lib/utils/brand-model-images';
 import {
@@ -385,7 +384,7 @@ export function ModernTemplate({
                     <section className="relative min-h-[85vh] flex items-center bg-white overflow-hidden">
                         <div className="absolute inset-0">
                             {(() => {
-                                const heroSrc = heroImageUrl || getBrandHeroImage(brandName, vehicleType);
+                                const heroSrc = heroImageUrl;
                                 return heroSrc
                                     ? <Image src={heroSrc} alt={`${brandName} Hero`} fill className="object-cover opacity-20" priority />
                                     : null;

@@ -27,7 +27,6 @@ import CompareBar from '@/components/cars/CompareBar';
 import { WishlistDrawer } from '@/components/ui/WishlistDrawer';
 import { EVSection } from '@/components/ui/EVSection';
 import { generateTemplateConfig } from '@/lib/templates';
-import { getBrandHeroImage } from '@/lib/utils/brand-hero';
 import { getContrastText } from '@/lib/utils/color-contrast';
 import { ArrowRight, Phone, MapPin, Mail, Award, ShieldCheck, Star, ChevronRight, Crown, Clock, MessageSquare, CheckCircle2, Send, Menu, X } from 'lucide-react';
 import { useState, useEffect, useMemo } from 'react';
@@ -315,7 +314,7 @@ export function LuxuryTemplate({
                     <section className="relative min-h-screen flex items-center">
                         <div className="absolute inset-0">
                             {(() => {
-                                const heroSrc = heroImageUrl || getBrandHeroImage(brandName, vehicleType);
+                                const heroSrc = heroImageUrl;
                                 return heroSrc
                                     ? <Image src={heroSrc} alt={`${brandName} Luxury`} fill className="object-cover opacity-35" priority />
                                     : null;
