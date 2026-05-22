@@ -2,7 +2,7 @@
  * Cyepro Vehicle Inventory API Service
  *
  * Server-side only — API key is never exposed to the browser.
- * Base URL  : https://salesapp-api.cyepro.com
+ * Base URL  : https://api.cyepro.com
  * Auth      : API-KEY header
  * Service ID: 460
  */
@@ -78,10 +78,10 @@ type CyeproRawSearchResponse = Partial<CyeproSearchResponse> & {
 
 // ── Constants ─────────────────────────────────────────────────────────────────
 
-const DEFAULT_BASE_URL = 'https://salesapp-api.cyepro.com'
+const DEFAULT_BASE_URL = 'https://api.cyepro.com'
 const BASE_URL    = normaliseBaseUrl(getOptionalEnv('CYEPRO_API_BASE_URL') ?? DEFAULT_BASE_URL)
-const SEARCH_PATH = normalisePath(getOptionalEnv('CYEPRO_SEARCH_PATH') ?? '/dynamicForms/search/vehicles/filterQuery')
-const AGGREGATIONS_PATH = normalisePath(getOptionalEnv('CYEPRO_AGGREGATIONS_PATH') ?? '/dynamicForms/search/vehicles/aggregations')
+const SEARCH_PATH = normalisePath(getOptionalEnv('CYEPRO_SEARCH_PATH') ?? '/dynamicForms/search/vehicles/filterQueryApi')
+const AGGREGATIONS_PATH = normalisePath(getOptionalEnv('CYEPRO_AGGREGATIONS_PATH') ?? '/dynamicForms/search/vehicles/aggregationsApi')
 const SERVICE_ID  = '460'
 const TIME_ZONE   = 'Asia/Calcutta'
 const SEARCH_TIMEOUT_MS = 10_000
@@ -127,7 +127,6 @@ function buildHeaders(apiKey: string): HeadersInit {
     return {
         'Content-Type':    'application/json',
         'API-KEY':         apiKey,
-        'Authorization':   apiKey.startsWith('Bearer ') ? apiKey : `Bearer ${apiKey}`,
         'SERVICE-TYPE-ID': SERVICE_ID,
         'timeZone':        TIME_ZONE,
     }

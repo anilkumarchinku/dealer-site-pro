@@ -164,7 +164,7 @@ export async function POST(request: Request) {
             })
             return NextResponse.json({
                 success: false,
-                message: `Cannot reach api.cyepro.com: ${errMsg}`,
+                message: `Cannot reach ${getCyeproApiBaseUrl()}: ${errMsg}`,
                 diagnostics,
             })
         }
