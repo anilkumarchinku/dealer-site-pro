@@ -21,6 +21,7 @@ import { Separator } from '@/components/ui/separator';
 
 import { EnquiryModal } from './EnquiryModal';
 import { TestDriveModal } from './TestDriveModal';
+import { UsedVehicleDetailModal } from './UsedVehicleDetailModal';
 import { WishlistButton } from '@/components/ui/WishlistButton';
 import {
     Fuel,
@@ -123,6 +124,7 @@ export function CarCard({
     const router = useRouter();
     const [isEnquiryModalOpen, setIsEnquiryModalOpen] = useState(false);
     const [isTestDriveOpen, setIsTestDriveOpen] = useState(false);
+    const [isUsedDetailsOpen, setIsUsedDetailsOpen] = useState(false);
     const [imgError, setImgError] = useState(false);
     const [scrapedIdx, setScrapedIdx] = useState(0);
     const [aggregatedSpecs, setAggregatedSpecs] = useState<ReturnType<typeof formatSpecsForDisplay>>(null);
@@ -240,6 +242,10 @@ export function CarCard({
     const handleEnquireNow = () => setIsEnquiryModalOpen(true);
     const handleViewDetails = (e?: React.MouseEvent) => {
         e?.stopPropagation();
+        if (isUsed) {
+            setIsUsedDetailsOpen(true);
+            return;
+        }
         if (onViewDetails) {
             onViewDetails(car.id);
             return;
@@ -259,6 +265,36 @@ export function CarCard({
     const cardDisplayUrl = shouldPreferResolvedImages
         ? (cardImageUrls[scrapedIdx] || null)
         : car.images.hero;
+
+    const cardModals = (
+        <>
+            <UsedVehicleDetailModal
+                car={car}
+                open={isUsedDetailsOpen}
+                onOpenChange={setIsUsedDetailsOpen}
+                onContactDealer={handleEnquireNow}
+                resolvedImageSrc={cardDisplayUrl}
+            />
+            <EnquiryModal
+                car={car}
+                open={isEnquiryModalOpen}
+                onOpenChange={setIsEnquiryModalOpen}
+                brandColor={brandColor}
+                dealerId={dealerId}
+                dealerPhone={dealerPhone}
+                resolvedImageSrc={cardDisplayUrl}
+            />
+            {dealerId && (
+                <TestDriveModal
+                    car={car}
+                    dealerId={dealerId}
+                    open={isTestDriveOpen}
+                    onOpenChange={setIsTestDriveOpen}
+                    brandColor={brandColor}
+                />
+            )}
+        </>
+    );
 
     if (summaryOnly) {
         return (
@@ -346,6 +382,7 @@ export function CarCard({
                         </div>
                     </CardContent>
                 </Card>
+                {cardModals}
             </>
         );
     }
@@ -574,23 +611,7 @@ export function CarCard({
             </Card>
 
             {/* Modals */}
-            <EnquiryModal
-                car={car}
-                open={isEnquiryModalOpen}
-                onOpenChange={setIsEnquiryModalOpen}
-                brandColor={brandColor}
-                dealerPhone={dealerPhone}
-                resolvedImageSrc={cardDisplayUrl}
-            />
-            {dealerId && (
-                <TestDriveModal
-                    car={car}
-                    dealerId={dealerId}
-                    open={isTestDriveOpen}
-                    onOpenChange={setIsTestDriveOpen}
-                    brandColor={brandColor}
-                />
-            )}
+            {cardModals}
         </>
     );
 }
