@@ -361,7 +361,7 @@ export function CarCard({
                             </h3>
                             <div className="mt-4">
                                 <p className="text-3xl font-black tracking-tight text-gray-900">{priceRange}</p>
-                                <p className="mt-1 text-sm text-gray-600">Ex-showroom price</p>
+                                <p className="mt-1 text-sm text-gray-600">{isUsed ? 'Price' : 'Ex-showroom price'}</p>
                             </div>
                         </div>
 
@@ -517,7 +517,7 @@ export function CarCard({
                                 <span className="text-sm text-gray-600">– {maxPrice}</span>
                             )}
                         </div>
-                        <p className="text-sm text-gray-600">{isUsed ? 'Selling price' : 'Ex-showroom price*'}</p>
+                        <p className="text-sm text-gray-600">{isUsed ? 'Price' : 'Ex-showroom price*'}</p>
 
                         {showEMI && car.pricing.emi && (
                             <Badge variant="secondary" className="mt-2 text-xs font-medium gap-1 h-6 px-2.5 rounded-full bg-gray-50 dark:bg-gray-50 border border-gray-200 dark:border-gray-200 text-gray-700 dark:text-gray-700" style={{ color: brandColor }}>
