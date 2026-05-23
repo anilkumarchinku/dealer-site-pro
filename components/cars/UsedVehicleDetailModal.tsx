@@ -47,6 +47,9 @@ function getKmDriven(car: Car): string {
 }
 
 function getUsedPrice(car: Car): string {
+    if (typeof car.offer?.price === 'number' && car.offer.price > 0) {
+        return car.offer.price < 100000 ? formatPrice(car.offer.price) : formatPriceInLakhs(car.offer.price);
+    }
     const price = car.pricing?.exShowroom?.min;
     if (typeof price === 'number' && price > 0) {
         return price < 100000 ? formatPrice(price) : formatPriceInLakhs(price);
@@ -91,6 +94,8 @@ export function UsedVehicleDetailModal({
     const variant = car.variant || `${car.make} ${car.model}`;
     const year = car.year ? String(car.year) : 'Year available on request';
     const accent = USED_VEHICLE_ACCENT;
+    const originalPrice = car.offer?.originalPrice ?? car.pricing?.exShowroom?.min ?? null;
+    const hasOffer = typeof car.offer?.price === 'number' && car.offer.price > 0 && originalPrice != null && car.offer.price < originalPrice;
 
     const specs = [
         { label: 'Kilometers Driven', value: getKmDriven(car), icon: Gauge },
@@ -147,6 +152,16 @@ export function UsedVehicleDetailModal({
                         <p className="text-5xl font-black tracking-tight sm:text-6xl" style={{ color: accent }}>
                             {getUsedPrice(car)}
                         </p>
+                        {hasOffer && (
+                            <p className="mt-2 text-lg font-semibold text-white/45 line-through">
+                                {originalPrice < 100000 ? formatPrice(originalPrice) : formatPriceInLakhs(originalPrice)}
+                            </p>
+                        )}
+                        {hasOffer && (
+                            <p className="mt-1 text-sm font-semibold" style={{ color: accent }}>
+                                {car.offer?.label || 'Offer price'}
+                            </p>
+                        )}
                         <p className="mt-3 text-xl font-semibold text-white/70 sm:text-2xl">
                             {variant}
                         </p>

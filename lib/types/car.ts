@@ -154,6 +154,7 @@ export interface CarOwnership {
 export interface CarMeta {
     lastUpdated?: string;       // ISO date string
     dataSource?: string;       // e.g., "CarDekho", "Official"
+    sourceVehicleId?: string;   // Original inventory id for external/manual stock overrides
     isAvailable?: boolean;      // Currently in production
     isDiscontinued?: boolean;
     launchDate?: string;       // ISO date string
@@ -224,6 +225,14 @@ export interface Car {
 
     // Vehicle category — used to show category-specific specs in cards
     vehicleCategory?: '2w' | '3w' | '4w';
+
+    // Temporary display offer for pre-owned listings. Original pricing stays intact.
+    offer?: {
+        price: number;
+        originalPrice: number | null;
+        label?: string;
+        validUntil?: string;
+    };
 }
 
 /**

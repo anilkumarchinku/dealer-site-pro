@@ -119,6 +119,9 @@ export interface ThreeWheelerUsedVehicle {
     passenger_capacity:         number | null
 
     price_paise:    number
+    offer_price_paise?: number | null
+    offer_label?:       string | null
+    offer_valid_until?: string | null
     negotiable:     boolean
     images:         string[]
     description:    string | null

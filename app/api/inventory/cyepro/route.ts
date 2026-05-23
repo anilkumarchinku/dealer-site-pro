@@ -18,6 +18,7 @@ import {
     mapCyeproVehicleToCar,
     type CyeproSearchBody,
 } from '@/lib/services/cyepro-service'
+import { applyUsedVehiclePriceOffersToCars, fetchActiveUsedVehiclePriceOffers } from '@/lib/services/used-vehicle-price-offers'
 
 
 export async function POST(request: Request) {
@@ -89,7 +90,10 @@ export async function POST(request: Request) {
         }
 
         // ── Map to Car type ───────────────────────────────────────────────────
-        const cars = cyeproRes.vehicles.map(mapCyeproVehicleToCar)
+        const cars = applyUsedVehiclePriceOffersToCars(
+            cyeproRes.vehicles.map(mapCyeproVehicleToCar),
+            await fetchActiveUsedVehiclePriceOffers(dealerId)
+        )
 
         return NextResponse.json({
             success: true,

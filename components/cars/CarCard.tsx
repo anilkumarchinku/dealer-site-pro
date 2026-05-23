@@ -175,11 +175,19 @@ export function CarCard({
     const isUsed = car.condition === 'used' || car.condition === 'certified_pre_owned';
 
     const exShowroom = car.pricing?.exShowroom ?? { min: null, max: null };
-    const priceRange = exShowroom.min != null
-        ? formatPriceInLakhs(exShowroom.min)
+    const hasOfferPrice = isUsed &&
+        typeof car.offer?.price === 'number' &&
+        car.offer.price > 0 &&
+        (exShowroom.min == null || car.offer.price < exShowroom.min);
+    const displayMinPrice = hasOfferPrice ? car.offer!.price : exShowroom.min;
+    const priceRange = displayMinPrice != null
+        ? formatPriceInLakhs(displayMinPrice)
         : (car.price || 'Price on request');
+    const originalPriceRange = hasOfferPrice && exShowroom.min != null
+        ? formatPriceInLakhs(exShowroom.min)
+        : null;
     const maxPrice = formatPriceInLakhs(exShowroom.max);
-    const hasPriceRange = exShowroom.min !== exShowroom.max && exShowroom.max;
+    const hasPriceRange = !hasOfferPrice && exShowroom.min !== exShowroom.max && exShowroom.max;
 
     // Resolved specs — always show 4 items for consistent grid
     const fuelDisplay = aggregatedSpecs?.fuelsDisplay ||
@@ -360,8 +368,18 @@ export function CarCard({
                                 {car.model}
                             </h3>
                             <div className="mt-4">
-                                <p className="text-3xl font-black tracking-tight text-gray-900">{priceRange}</p>
+                                <div className="flex flex-wrap items-baseline gap-2">
+                                    <p className="text-3xl font-black tracking-tight text-gray-900">{priceRange}</p>
+                                    {originalPriceRange && (
+                                        <span className="text-sm font-semibold text-gray-500 line-through">{originalPriceRange}</span>
+                                    )}
+                                </div>
                                 <p className="mt-1 text-sm text-gray-600">{isUsed ? 'Price' : 'Ex-showroom price'}</p>
+                                {hasOfferPrice && (
+                                    <p className="mt-1 text-xs font-semibold" style={{ color: brandColor }}>
+                                        {car.offer?.label || 'Offer price'}
+                                    </p>
+                                )}
                             </div>
                         </div>
 
@@ -513,11 +531,21 @@ export function CarCard({
                             <span className="text-[1.75rem] font-bold tracking-tight text-gray-900">
                                 {priceRange}
                             </span>
+                            {originalPriceRange && (
+                                <span className="text-sm font-semibold text-gray-500 line-through">
+                                    {originalPriceRange}
+                                </span>
+                            )}
                             {hasPriceRange && (
                                 <span className="text-sm text-gray-600">– {maxPrice}</span>
                             )}
                         </div>
                         <p className="text-sm text-gray-600">{isUsed ? 'Price' : 'Ex-showroom price*'}</p>
+                        {hasOfferPrice && (
+                            <p className="mt-1 text-xs font-semibold" style={{ color: brandColor }}>
+                                {car.offer?.label || 'Offer price'}
+                            </p>
+                        )}
 
                         {showEMI && car.pricing.emi && (
                             <Badge variant="secondary" className="mt-2 text-xs font-medium gap-1 h-6 px-2.5 rounded-full bg-gray-50 dark:bg-gray-50 border border-gray-200 dark:border-gray-200 text-gray-700 dark:text-gray-700" style={{ color: brandColor }}>

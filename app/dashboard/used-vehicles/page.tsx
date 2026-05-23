@@ -5,13 +5,58 @@ import Link from "next/link"
 import { useOnboardingStore } from "@/lib/store/onboarding-store"
 import {
     Bike, Truck, Plus, RefreshCw, TrendingUp,
-    Car, Settings, ArrowRight, Package
+    Car, Settings, ArrowRight, Package, Tag, Save, X, Loader2
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { fetchVehicles } from "@/lib/db/vehicles"
+import type { Car as SiteCar } from "@/lib/types/car"
+import type { DBVehicle } from "@/lib/db/vehicles"
+import type { TwoWheelerUsedVehicle } from "@/lib/types/two-wheeler"
+import type { ThreeWheelerUsedVehicle } from "@/lib/types/three-wheeler"
 
 interface UsedStats {
     twoWheeler:   { total: number; loading: boolean }
     threeWheeler: { total: number; loading: boolean }
+}
+
+type OfferCategory = "2w" | "3w" | "4w"
+type OfferSourceType = "manual" | "cyepro"
+
+interface PriceOffer {
+    vehicle_category: OfferCategory
+    source_type: OfferSourceType
+    source_vehicle_id: string
+    offer_price_paise: number
+    offer_label?: string | null
+    valid_until?: string | null
+}
+
+interface OfferVehicle {
+    key: string
+    category: OfferCategory
+    sourceType: OfferSourceType
+    sourceVehicleId: string
+    title: string
+    subtitle: string
+    originalPricePaise: number
+    currentOfferPricePaise: number | null
+}
+
+function offerKey(category: OfferCategory, sourceType: OfferSourceType, sourceVehicleId: string) {
+    return `${category}:${sourceType}:${sourceVehicleId}`
+}
+
+function formatPaise(value: number) {
+    return `₹${Math.round(value / 100).toLocaleString("en-IN")}`
+}
+
+function priceInputFromPaise(value?: number | null) {
+    return typeof value === "number" && value > 0 ? String(Math.round(value / 100)) : ""
+}
+
+function parseRupeesToPaise(value: string) {
+    const amount = Number(value)
+    return Number.isFinite(amount) && amount >= 0 ? Math.round(amount * 100) : null
 }
 
 export default function UsedVehiclesPage() {
@@ -22,6 +67,12 @@ export default function UsedVehiclesPage() {
         threeWheeler: { total: 0, loading: true },
     })
     const [cyeproConnected, setCyeproConnected] = useState(false)
+    const [offerVehicles, setOfferVehicles] = useState<OfferVehicle[]>([])
+    const [offerInputs, setOfferInputs] = useState<Record<string, string>>({})
+    const [offersLoading, setOffersLoading] = useState(false)
+    const [savingKey, setSavingKey] = useState<string | null>(null)
+    const [offerMessage, setOfferMessage] = useState("")
+    const [bulkDiscount, setBulkDiscount] = useState("")
 
     const loadStats = useCallback(async () => {
         if (!dealerId) return
@@ -53,7 +104,195 @@ export default function UsedVehiclesPage() {
         }
     }, [dealerId])
 
-    useEffect(() => { loadStats() }, [loadStats])
+    const loadOfferVehicles = useCallback(async () => {
+        if (!dealerId) return
+
+        setOffersLoading(true)
+        setOfferMessage("")
+
+        const [offersRes, twRes, thwRes, manualRes, cyeproRes] = await Promise.allSettled([
+            fetch("/api/used-vehicle-price-offers").then(r => r.json()),
+            fetch(`/api/two-wheelers/used?dealerId=${dealerId}&pageSize=100`).then(r => r.json()),
+            fetch(`/api/three-wheelers/used?dealerId=${dealerId}&pageSize=100`).then(r => r.json()),
+            fetchVehicles(dealerId, 1, 100),
+            fetch("/api/inventory/cyepro", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ dealerId, fetchAll: true, maxVehicles: 100, size: 50 }),
+            }).then(r => r.ok ? r.json() : { cars: [] }),
+        ])
+
+        const offers: PriceOffer[] = offersRes.status === "fulfilled" ? (offersRes.value.offers ?? []) : []
+        const offerMap = new Map(offers.map((offer) => [
+            offerKey(offer.vehicle_category, offer.source_type, offer.source_vehicle_id),
+            offer,
+        ]))
+
+        const vehicles: OfferVehicle[] = []
+
+        if (manualRes.status === "fulfilled") {
+            const manualVehicles = manualRes.value.vehicles as DBVehicle[]
+            manualVehicles
+                .filter((vehicle) => vehicle.condition === "used" || vehicle.condition === "certified_pre_owned")
+                .forEach((vehicle) => {
+                    const key = offerKey("4w", "manual", vehicle.id)
+                    vehicles.push({
+                        key,
+                        category: "4w",
+                        sourceType: "manual",
+                        sourceVehicleId: vehicle.id,
+                        title: `${vehicle.make} ${vehicle.model}`,
+                        subtitle: [vehicle.variant, vehicle.year, "Manual 4W"].filter(Boolean).join(" · "),
+                        originalPricePaise: vehicle.price_paise,
+                        currentOfferPricePaise: offerMap.get(key)?.offer_price_paise ?? null,
+                    })
+                })
+        }
+
+        if (cyeproRes.status === "fulfilled") {
+            const cyeproCars = (cyeproRes.value.cars ?? []) as SiteCar[]
+            cyeproCars.forEach((car) => {
+                const sourceVehicleId = car.meta?.sourceVehicleId ?? car.id
+                const key = offerKey("4w", "cyepro", sourceVehicleId)
+                const price = car.pricing?.exShowroom?.min
+                if (typeof price !== "number" || price <= 0) return
+                vehicles.push({
+                    key,
+                    category: "4w",
+                    sourceType: "cyepro",
+                    sourceVehicleId,
+                    title: `${car.make} ${car.model}`,
+                    subtitle: [car.variant, car.year, "Cyepro 4W"].filter(Boolean).join(" · "),
+                    originalPricePaise: Math.round(price * 100),
+                    currentOfferPricePaise: offerMap.get(key)?.offer_price_paise ?? null,
+                })
+            })
+        }
+
+        if (twRes.status === "fulfilled") {
+            const twoWheelers = (twRes.value.vehicles ?? []) as TwoWheelerUsedVehicle[]
+            twoWheelers.forEach((vehicle) => {
+                const key = offerKey("2w", "manual", vehicle.id)
+                vehicles.push({
+                    key,
+                    category: "2w",
+                    sourceType: "manual",
+                    sourceVehicleId: vehicle.id,
+                    title: `${vehicle.brand} ${vehicle.model}`,
+                    subtitle: [vehicle.variant, vehicle.year, "Used 2W"].filter(Boolean).join(" · "),
+                    originalPricePaise: vehicle.price_paise,
+                    currentOfferPricePaise: offerMap.get(key)?.offer_price_paise ?? vehicle.offer_price_paise ?? null,
+                })
+            })
+        }
+
+        if (thwRes.status === "fulfilled") {
+            const threeWheelers = (thwRes.value.vehicles ?? []) as ThreeWheelerUsedVehicle[]
+            threeWheelers.forEach((vehicle) => {
+                const key = offerKey("3w", "manual", vehicle.id)
+                vehicles.push({
+                    key,
+                    category: "3w",
+                    sourceType: "manual",
+                    sourceVehicleId: vehicle.id,
+                    title: `${vehicle.brand} ${vehicle.model}`,
+                    subtitle: [vehicle.variant, vehicle.year, "Used 3W"].filter(Boolean).join(" · "),
+                    originalPricePaise: vehicle.price_paise,
+                    currentOfferPricePaise: offerMap.get(key)?.offer_price_paise ?? vehicle.offer_price_paise ?? null,
+                })
+            })
+        }
+
+        const uniqueVehicles = Array.from(new Map(vehicles.map(vehicle => [vehicle.key, vehicle])).values())
+        setOfferVehicles(uniqueVehicles)
+        setOfferInputs(Object.fromEntries(uniqueVehicles.map(vehicle => [
+            vehicle.key,
+            priceInputFromPaise(vehicle.currentOfferPricePaise),
+        ])))
+        setOffersLoading(false)
+    }, [dealerId])
+
+    useEffect(() => {
+        loadStats()
+        loadOfferVehicles()
+    }, [loadStats, loadOfferVehicles])
+
+    const saveOffer = async (vehicle: OfferVehicle) => {
+        const offerPricePaise = parseRupeesToPaise(offerInputs[vehicle.key] ?? "")
+        if (offerPricePaise == null || offerPricePaise <= 0) {
+            setOfferMessage("Enter a valid offer price first.")
+            return false
+        }
+        if (offerPricePaise >= vehicle.originalPricePaise) {
+            setOfferMessage("Offer price should be less than the current price.")
+            return false
+        }
+
+        setSavingKey(vehicle.key)
+        const res = await fetch("/api/used-vehicle-price-offers", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                vehicle_category: vehicle.category,
+                source_type: vehicle.sourceType,
+                source_vehicle_id: vehicle.sourceVehicleId,
+                offer_price_paise: offerPricePaise,
+                offer_label: "Offer price",
+            }),
+        })
+        setSavingKey(null)
+
+        if (!res.ok) {
+            const data = await res.json().catch(() => null)
+            setOfferMessage(data?.error ?? "Could not save offer price.")
+            return false
+        }
+
+        setOfferVehicles(prev => prev.map(item =>
+            item.key === vehicle.key ? { ...item, currentOfferPricePaise: offerPricePaise } : item
+        ))
+        setOfferMessage("Offer price saved. It will show on the generated pre-owned website cards.")
+        return true
+    }
+
+    const clearOffer = async (vehicle: OfferVehicle) => {
+        setSavingKey(vehicle.key)
+        const params = new URLSearchParams({
+            vehicle_category: vehicle.category,
+            source_type: vehicle.sourceType,
+            source_vehicle_id: vehicle.sourceVehicleId,
+        })
+        const res = await fetch(`/api/used-vehicle-price-offers?${params.toString()}`, { method: "DELETE" })
+        setSavingKey(null)
+
+        if (!res.ok) {
+            const data = await res.json().catch(() => null)
+            setOfferMessage(data?.error ?? "Could not clear offer price.")
+            return
+        }
+
+        setOfferInputs(prev => ({ ...prev, [vehicle.key]: "" }))
+        setOfferVehicles(prev => prev.map(item =>
+            item.key === vehicle.key ? { ...item, currentOfferPricePaise: null } : item
+        ))
+        setOfferMessage("Offer price cleared.")
+    }
+
+    const applyBulkDiscount = () => {
+        const percent = Number(bulkDiscount)
+        if (!Number.isFinite(percent) || percent <= 0 || percent >= 100) {
+            setOfferMessage("Enter a discount percentage between 1 and 99.")
+            return
+        }
+        setOfferInputs(prev => ({
+            ...prev,
+            ...Object.fromEntries(offerVehicles.map(vehicle => [
+                vehicle.key,
+                String(Math.max(0, Math.round((vehicle.originalPricePaise * (100 - percent)) / 10000))),
+            ])),
+        }))
+        setOfferMessage(`${percent}% discount filled for visible used vehicles. Save the rows you want to publish.`)
+    }
 
     const totalUsed = stats.twoWheeler.total + stats.threeWheeler.total
     const isLoading = stats.twoWheeler.loading || stats.threeWheeler.loading
@@ -68,7 +307,7 @@ export default function UsedVehiclesPage() {
                         {isLoading ? "Loading stock..." : `${totalUsed} vehicle${totalUsed !== 1 ? "s" : ""} in stock across all categories`}
                     </p>
                 </div>
-                <Button variant="outline" size="sm" onClick={loadStats} disabled={isLoading}>
+                <Button variant="outline" size="sm" onClick={() => { loadStats(); loadOfferVehicles(); }} disabled={isLoading || offersLoading}>
                     <RefreshCw className={`w-4 h-4 mr-2 ${isLoading ? "animate-spin" : ""}`} />
                     Refresh
                 </Button>
@@ -151,6 +390,112 @@ export default function UsedVehiclesPage() {
                         </div>
                         <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:translate-x-0.5 transition-transform" />
                     </Link>
+                </div>
+            </div>
+
+            {/* Used Price Offers */}
+            <div className="rounded-2xl border border-border bg-card overflow-hidden">
+                <div className="p-5 border-b border-border flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+                    <div className="flex items-start gap-3">
+                        <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
+                            <Tag className="w-5 h-5 text-primary" />
+                        </div>
+                        <div>
+                            <h2 className="font-semibold text-base">Used Vehicle Offer Prices</h2>
+                            <p className="text-xs text-muted-foreground mt-1">
+                                Add a discounted display price for pre-owned cards without changing the original inventory price.
+                            </p>
+                        </div>
+                    </div>
+                    <div className="flex flex-col sm:flex-row gap-2">
+                        <input
+                            type="number"
+                            min="1"
+                            max="99"
+                            value={bulkDiscount}
+                            onChange={e => setBulkDiscount(e.target.value)}
+                            placeholder="Discount %"
+                            className="h-10 w-full sm:w-32 rounded-lg border border-input bg-background px-3 text-sm"
+                        />
+                        <Button type="button" variant="outline" size="sm" onClick={applyBulkDiscount} disabled={offerVehicles.length === 0}>
+                            Fill All
+                        </Button>
+                    </div>
+                </div>
+
+                {offerMessage && (
+                    <div className="px-5 py-3 border-b border-border text-sm text-muted-foreground">
+                        {offerMessage}
+                    </div>
+                )}
+
+                <div className="max-h-[520px] overflow-auto">
+                    {offersLoading ? (
+                        <div className="p-8 flex items-center justify-center text-sm text-muted-foreground">
+                            <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                            Loading used stock offers...
+                        </div>
+                    ) : offerVehicles.length === 0 ? (
+                        <div className="p-8 text-center text-sm text-muted-foreground">
+                            No used vehicles found yet. Add used stock or connect Cyepro to create card offers.
+                        </div>
+                    ) : (
+                        <div className="divide-y divide-border">
+                            {offerVehicles.map((vehicle) => {
+                                const saving = savingKey === vehicle.key
+                                const hasOffer = typeof vehicle.currentOfferPricePaise === "number" && vehicle.currentOfferPricePaise > 0
+                                return (
+                                    <div key={vehicle.key} className="grid gap-3 p-4 lg:grid-cols-[1.5fr_140px_180px_170px] lg:items-center">
+                                        <div className="min-w-0">
+                                            <div className="flex flex-wrap items-center gap-2">
+                                                <p className="font-semibold text-sm truncate">{vehicle.title}</p>
+                                                <span className="rounded-full bg-muted px-2 py-0.5 text-[11px] font-medium uppercase text-muted-foreground">
+                                                    {vehicle.category} · {vehicle.sourceType}
+                                                </span>
+                                                {hasOffer && (
+                                                    <span className="rounded-full bg-primary/10 px-2 py-0.5 text-[11px] font-semibold text-primary">
+                                                        Offer live
+                                                    </span>
+                                                )}
+                                            </div>
+                                            <p className="text-xs text-muted-foreground mt-1 truncate">{vehicle.subtitle}</p>
+                                        </div>
+
+                                        <div>
+                                            <p className="text-[11px] uppercase tracking-widest text-muted-foreground/70">Current</p>
+                                            <p className="font-semibold text-sm">{formatPaise(vehicle.originalPricePaise)}</p>
+                                        </div>
+
+                                        <label className="block">
+                                            <span className="text-[11px] uppercase tracking-widest text-muted-foreground/70">Offer Price</span>
+                                            <div className="mt-1 flex h-10 items-center rounded-lg border border-input bg-background px-3">
+                                                <span className="text-sm text-muted-foreground">₹</span>
+                                                <input
+                                                    type="number"
+                                                    min="0"
+                                                    value={offerInputs[vehicle.key] ?? ""}
+                                                    onChange={e => setOfferInputs(prev => ({ ...prev, [vehicle.key]: e.target.value }))}
+                                                    className="h-full min-w-0 flex-1 bg-transparent pl-1 text-sm outline-none"
+                                                    placeholder="Offer"
+                                                />
+                                            </div>
+                                        </label>
+
+                                        <div className="flex gap-2 lg:justify-end">
+                                            <Button type="button" size="sm" onClick={() => saveOffer(vehicle)} disabled={saving}>
+                                                {saving ? <Loader2 className="w-4 h-4 mr-2 animate-spin" /> : <Save className="w-4 h-4 mr-2" />}
+                                                Save
+                                            </Button>
+                                            <Button type="button" size="sm" variant="outline" onClick={() => clearOffer(vehicle)} disabled={saving || !hasOffer}>
+                                                <X className="w-4 h-4 mr-2" />
+                                                Clear
+                                            </Button>
+                                        </div>
+                                    </div>
+                                )
+                            })}
+                        </div>
+                    )}
                 </div>
             </div>
 

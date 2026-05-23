@@ -283,10 +283,13 @@ export function mapCyeproVehicleToCar(v: CyeproVehicle): Car {
 
         meta: {
             viewCount: 0,
+            dataSource: 'Cyepro',
+            sourceVehicleId: String(v.id),
         },
 
         price: formatPrice(v.customerSellingPrice),
         condition: 'used' as const,
+        vehicleCategory: '4w',
     }
 }
 

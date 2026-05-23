@@ -8,6 +8,7 @@ import { FamilyTemplate } from '@/components/templates/FamilyTemplate'
 import { allCars, getCarsByMake } from '@/lib/data/cars'
 import { fetchDealerBySlug } from '@/lib/db/dealers'
 import { fetchAllCyeproInventoryAsCars } from '@/lib/services/cyepro-service'
+import { applyUsedVehiclePriceOffersToCars, fetchActiveUsedVehiclePriceOffers } from '@/lib/services/used-vehicle-price-offers'
 import type { Car } from '@/lib/types/car'
 import type { DBVehicle } from '@/lib/db/vehicles'
 import type { Service } from '@/lib/types'
@@ -53,9 +54,10 @@ function dbVehiclesToCars(vehicles: DBVehicle[]): Car[] {
         dimensions: { seatingCapacity: 5 },
         features: { keyFeatures: v.features ?? [] },
         images: { hero: '/placeholder-car.jpg', exterior: [], interior: [] },
-        meta: { viewCount: v.views },
+        meta: { viewCount: v.views, dataSource: 'manual', sourceVehicleId: v.id },
         price: `₹${(v.price_paise / 100).toLocaleString('en-IN')}`,
         condition: v.condition,
+        vehicleCategory: '4w',
     }))
 }
 
@@ -524,6 +526,10 @@ export default async function SitePage({ params }: SitePageProps) {
         } else {
             cars = []
         }
+        cars = applyUsedVehiclePriceOffersToCars(
+            cars,
+            await fetchActiveUsedVehiclePriceOffers(dealer.id)
+        )
         templateSellsNew = false
         templateSellsUsed = true
     }

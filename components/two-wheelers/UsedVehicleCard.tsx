@@ -18,7 +18,9 @@ const GRADE_COLORS = {
 
 export function UsedVehicleCard({ vehicle, slug, onLead }: Props) {
     const prefix = useSitePrefix(slug)
-    const price = (vehicle.price_paise / 100).toLocaleString("en-IN")
+    const hasOffer = typeof vehicle.offer_price_paise === "number" && vehicle.offer_price_paise > 0 && vehicle.offer_price_paise < vehicle.price_paise
+    const price = ((hasOffer ? vehicle.offer_price_paise! : vehicle.price_paise) / 100).toLocaleString("en-IN")
+    const originalPrice = (vehicle.price_paise / 100).toLocaleString("en-IN")
 
     return (
         <div className="bg-card border border-border rounded-2xl overflow-hidden hover:shadow-md transition-shadow group">
@@ -62,8 +64,14 @@ export function UsedVehicleCard({ vehicle, slug, onLead }: Props) {
 
                 <div className="flex items-baseline gap-1 mt-3">
                     <p className="text-lg font-bold text-primary">₹{price}</p>
+                    {hasOffer && (
+                        <span className="text-xs text-muted-foreground line-through">₹{originalPrice}</span>
+                    )}
                     {vehicle.negotiable && <span className="text-xs text-muted-foreground">(negotiable)</span>}
                 </div>
+                {hasOffer && (
+                    <p className="mt-1 text-xs font-medium text-primary">{vehicle.offer_label || "Offer price"}</p>
+                )}
 
                 <div className="flex gap-2 mt-4">
                     <button

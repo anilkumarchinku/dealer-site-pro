@@ -25,6 +25,10 @@ import type {
     ThreeWheelerLeadStatus,
     ThreeWheelerServiceStatus,
 } from '@/lib/types/three-wheeler'
+import {
+    applyUsedVehiclePriceOffersToRecords,
+    fetchActiveUsedVehiclePriceOffers,
+} from '@/lib/services/used-vehicle-price-offers'
 
 const DEFAULT_PAGE_SIZE = DEFAULT_DB_PAGE_SIZE
 
@@ -134,11 +138,19 @@ export async function getUsedThreeWheelers(
     const order = orderMap[sortBy] ?? orderMap.newest
     query = query.order(order.column, { ascending: order.asc })
 
-    return runPagedQuery<ThreeWheelerUsedVehicle, 'vehicles'>(query, page, pageSize, 'vehicles', 'getUsedThreeWheelers')
+    const result = await runPagedQuery<ThreeWheelerUsedVehicle, 'vehicles'>(query, page, pageSize, 'vehicles', 'getUsedThreeWheelers')
+    const offers = await fetchActiveUsedVehiclePriceOffers(dealerId)
+    return {
+        ...result,
+        vehicles: applyUsedVehiclePriceOffersToRecords(result.vehicles, offers, '3w'),
+    }
 }
 
 export async function getUsedThreeWheelerById(id: string, dealerId?: string): Promise<ThreeWheelerUsedVehicle | null> {
-    return getById<ThreeWheelerUsedVehicle>('thw_used_vehicles', id, dealerId)
+    const vehicle = await getById<ThreeWheelerUsedVehicle>('thw_used_vehicles', id, dealerId)
+    if (!vehicle || !dealerId) return vehicle
+    const offers = await fetchActiveUsedVehiclePriceOffers(dealerId)
+    return applyUsedVehiclePriceOffersToRecords([vehicle], offers, '3w')[0] ?? vehicle
 }
 
 export async function addUsedThreeWheeler(

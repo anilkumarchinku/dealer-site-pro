@@ -33,6 +33,10 @@ import type {
     TwoWheelerServiceStatus,
     TwoWheelerBookingStatus,
 } from '@/lib/types/two-wheeler'
+import {
+    applyUsedVehiclePriceOffersToRecords,
+    fetchActiveUsedVehiclePriceOffers,
+} from '@/lib/services/used-vehicle-price-offers'
 
 // ── Helpers ───────────────────────────────────────────────────
 
@@ -144,14 +148,22 @@ export async function getUsedTwoWheelers(
     else if (sortBy === 'km_asc')     query = query.order('km_driven', { ascending: true })
     else                              query = query.order('created_at', { ascending: false })
 
-    return runPagedQuery<TwoWheelerUsedVehicle, 'vehicles'>(query, page, pageSize, 'vehicles', 'getUsedTwoWheelers')
+    const result = await runPagedQuery<TwoWheelerUsedVehicle, 'vehicles'>(query, page, pageSize, 'vehicles', 'getUsedTwoWheelers')
+    const offers = await fetchActiveUsedVehiclePriceOffers(dealerId)
+    return {
+        ...result,
+        vehicles: applyUsedVehiclePriceOffersToRecords(result.vehicles, offers, '2w'),
+    }
 }
 
 export async function getUsedTwoWheelerById(
     id: string,
     dealerId?: string
 ): Promise<TwoWheelerUsedVehicle | null> {
-    return getById<TwoWheelerUsedVehicle>('tw_used_vehicles', id, dealerId, 'getUsedTwoWheelerById')
+    const vehicle = await getById<TwoWheelerUsedVehicle>('tw_used_vehicles', id, dealerId, 'getUsedTwoWheelerById')
+    if (!vehicle || !dealerId) return vehicle
+    const offers = await fetchActiveUsedVehiclePriceOffers(dealerId)
+    return applyUsedVehiclePriceOffersToRecords([vehicle], offers, '2w')[0] ?? vehicle
 }
 
 export async function addUsedTwoWheeler(
