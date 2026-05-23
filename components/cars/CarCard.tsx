@@ -248,12 +248,21 @@ export function CarCard({
         : `/cars/${car.id}`;
 
     const handleEnquireNow = () => setIsEnquiryModalOpen(true);
-    const handleViewDetails = (e?: React.MouseEvent) => {
+    const handleOpenQuickCard = (e?: React.MouseEvent) => {
         e?.stopPropagation();
         if (isUsed) {
             setIsUsedDetailsOpen(true);
             return;
         }
+        if (onViewDetails) {
+            onViewDetails(car.id);
+            return;
+        }
+        router.push(detailHref);
+    };
+
+    const handleViewDetails = (e?: React.MouseEvent) => {
+        e?.stopPropagation();
         if (onViewDetails) {
             onViewDetails(car.id);
             return;
@@ -310,12 +319,14 @@ export function CarCard({
             <>
                 <Card
                     className={cn(
-                        'group relative flex h-full cursor-pointer flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white text-gray-900 transition-all duration-300 hover:-translate-y-1 hover:border-gray-300 hover:shadow-xl',
+                        'group relative flex h-full flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white text-gray-900 transition-all duration-300 hover:-translate-y-1 hover:border-gray-300 hover:shadow-xl',
                         className
                     )}
-                    onClick={handleViewDetails}
                 >
-                    <div className="relative aspect-[16/10] overflow-hidden bg-white">
+                    <div
+                        className="relative aspect-[16/10] cursor-pointer overflow-hidden bg-white"
+                        onClick={handleOpenQuickCard}
+                    >
                         {cardDisplayUrl ? (
                             <Image
                                 src={cardDisplayUrl}
@@ -410,16 +421,18 @@ export function CarCard({
         <>
             <Card
                 className={cn(
-                    'group relative flex flex-col overflow-hidden transition-all duration-300 cursor-pointer h-full',
+                    'group relative flex flex-col overflow-hidden transition-all duration-300 h-full',
                     'bg-white dark:bg-white border border-gray-200 dark:border-gray-200 text-gray-900 dark:text-gray-900 hover:border-gray-300 dark:hover:border-gray-300',
                     'hover:shadow-xl hover:-translate-y-1',
                     'rounded-2xl',
                     className
                 )}
-                onClick={handleViewDetails}
             >
                 {/* ── Image ── */}
-                <div className="relative aspect-[16/10] overflow-hidden bg-white">
+                <div
+                    className="relative aspect-[16/10] cursor-pointer overflow-hidden bg-white"
+                    onClick={handleOpenQuickCard}
+                >
                     {(() => {
                         const fallbackUrls = cardImageUrls;
                         const displayUrl = shouldPreferResolvedImages
@@ -487,11 +500,11 @@ export function CarCard({
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
                         <button
-                            onClick={handleViewDetails}
+                            onClick={handleOpenQuickCard}
                             className="flex items-center gap-1.5 bg-white/95 text-gray-900 backdrop-blur-sm text-xs font-semibold px-4 py-2 rounded-full shadow-md hover:bg-white hover:shadow-lg transition-all scale-95 group-hover:scale-100"
                         >
                             <Eye className="w-3.5 h-3.5" />
-                            View Details
+                            Quick View
                         </button>
                     </div>
                 </div>
