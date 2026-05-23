@@ -12,6 +12,7 @@ import {
     DialogTitle,
 } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
+import { getContrastText } from '@/lib/utils/color-contrast';
 import {
     Calendar,
     Fuel,
@@ -28,9 +29,8 @@ interface UsedVehicleDetailModalProps {
     onOpenChange: (open: boolean) => void;
     onContactDealer: () => void;
     resolvedImageSrc?: string | null;
+    brandColor?: string;
 }
-
-const USED_VEHICLE_ACCENT = '#f64f86';
 
 function getFeatureValue(car: Car, matcher: RegExp): string | null {
     const features = car.features?.keyFeatures ?? [];
@@ -63,6 +63,7 @@ export function UsedVehicleDetailModal({
     onOpenChange,
     onContactDealer,
     resolvedImageSrc,
+    brandColor = '#111827',
 }: UsedVehicleDetailModalProps) {
     const [imageIndex, setImageIndex] = useState(0);
 
@@ -93,7 +94,8 @@ export function UsedVehicleDetailModal({
     const transmission = car.transmission?.type || 'Available on request';
     const variant = car.variant || `${car.make} ${car.model}`;
     const year = car.year ? String(car.year) : 'Year available on request';
-    const accent = USED_VEHICLE_ACCENT;
+    const accent = brandColor;
+    const contrast = getContrastText(accent);
     const originalPrice = car.offer?.originalPrice ?? car.pricing?.exShowroom?.min ?? null;
     const hasOffer = typeof car.offer?.price === 'number' && car.offer.price > 0 && originalPrice != null && car.offer.price < originalPrice;
 
@@ -113,7 +115,7 @@ export function UsedVehicleDetailModal({
 
     return (
         <Dialog open={open} onOpenChange={onOpenChange}>
-            <DialogContent className="max-w-5xl border border-white/20 bg-[#0b0c10] p-4 text-white shadow-2xl sm:rounded-[28px] sm:p-8">
+            <DialogContent className="max-h-[92vh] max-w-5xl overflow-y-auto border border-gray-200 bg-white p-0 text-gray-950 shadow-2xl sm:rounded-3xl">
                 <DialogTitle className="sr-only">
                     {car.make} {car.model} details
                 </DialogTitle>
@@ -121,8 +123,8 @@ export function UsedVehicleDetailModal({
                     Used vehicle details with image, price, specifications, and contact action.
                 </DialogDescription>
 
-                <div className="space-y-7">
-                    <div className="relative overflow-hidden rounded-2xl bg-[#15161c]">
+                <div className="space-y-6 p-5 sm:p-8">
+                    <div className="relative overflow-hidden rounded-2xl bg-gray-100">
                         {heroImage ? (
                             <Image
                                 src={heroImage}
@@ -130,57 +132,64 @@ export function UsedVehicleDetailModal({
                                 width={1200}
                                 height={620}
                                 unoptimized
-                                className="h-[240px] w-full object-cover sm:h-[380px]"
+                                className="h-[240px] w-full object-cover sm:h-[360px]"
                                 onError={() => setImageIndex((current) => current + 1)}
                             />
                         ) : (
-                            <div className="flex h-[240px] items-center justify-center text-lg font-semibold text-white/60 sm:h-[380px]">
+                            <div className="flex h-[240px] items-center justify-center text-lg font-semibold text-gray-500 sm:h-[360px]">
                                 No image available
                             </div>
                         )}
                         {car.year && (
                             <div
-                                className="absolute right-5 top-5 rounded-full px-6 py-3 text-2xl font-black text-white shadow-lg"
-                                style={{ backgroundColor: accent }}
+                                className="absolute right-4 top-4 rounded-full px-4 py-2 text-sm font-bold shadow-lg sm:px-5 sm:text-base"
+                                style={{ backgroundColor: accent, color: contrast }}
                             >
                                 {car.year}
                             </div>
                         )}
                     </div>
 
-                    <div className="text-center">
-                        <p className="text-5xl font-black tracking-tight sm:text-6xl" style={{ color: accent }}>
-                            {getUsedPrice(car)}
-                        </p>
-                        {hasOffer && (
-                            <p className="mt-2 text-lg font-semibold text-white/45 line-through">
-                                {originalPrice < 100000 ? formatPrice(originalPrice) : formatPriceInLakhs(originalPrice)}
+                    <div className="grid gap-4 border-b border-gray-200 pb-6 sm:grid-cols-[1fr_auto] sm:items-end">
+                        <div>
+                            <p className="text-xs font-semibold uppercase tracking-[0.22em]" style={{ color: accent }}>
+                                {car.make}
                             </p>
-                        )}
-                        {hasOffer && (
-                            <p className="mt-1 text-sm font-semibold" style={{ color: accent }}>
-                                {car.offer?.label || 'Offer price'}
+                            <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-950 sm:text-4xl">
+                                {car.model}
+                            </h2>
+                            <p className="mt-2 text-base text-gray-600 sm:text-lg">
+                                {variant}
                             </p>
-                        )}
-                        <p className="mt-3 text-xl font-semibold text-white/70 sm:text-2xl">
-                            {variant}
-                        </p>
-                    </div>
+                        </div>
 
-                    <div className="h-px bg-white/35" />
+                        <div className="sm:text-right">
+                            <p className="text-4xl font-black tracking-tight sm:text-5xl" style={{ color: accent }}>
+                                {getUsedPrice(car)}
+                            </p>
+                            {hasOffer && (
+                                <p className="mt-1 text-base font-semibold text-gray-400 line-through">
+                                    {originalPrice < 100000 ? formatPrice(originalPrice) : formatPriceInLakhs(originalPrice)}
+                                </p>
+                            )}
+                            <p className="mt-1 text-sm text-gray-600">
+                                {hasOffer ? (car.offer?.label || 'Offer price') : 'Price'}
+                            </p>
+                        </div>
+                    </div>
 
                     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                         {specs.map(({ label, value, icon: Icon }) => (
-                            <div key={label} className="flex items-center gap-5 rounded-2xl bg-white/[0.035] p-5">
+                            <div key={label} className="flex items-center gap-4 rounded-2xl border border-gray-200 bg-gray-50 p-4 sm:p-5">
                                 <div
-                                    className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full"
-                                    style={{ backgroundColor: `${accent}2b`, color: accent }}
+                                    className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full"
+                                    style={{ backgroundColor: `${accent}14`, color: accent }}
                                 >
-                                    <Icon className="h-7 w-7" />
+                                    <Icon className="h-6 w-6" />
                                 </div>
                                 <div className="min-w-0">
-                                    <p className="text-lg text-white/70">{label}</p>
-                                    <p className="truncate text-2xl font-bold text-white" title={value}>
+                                    <p className="text-sm text-gray-500">{label}</p>
+                                    <p className="truncate text-xl font-bold text-gray-950" title={value}>
                                         {value}
                                     </p>
                                 </div>
@@ -188,12 +197,10 @@ export function UsedVehicleDetailModal({
                         ))}
                     </div>
 
-                    <div className="h-px bg-white/35" />
-
                     <Button
                         type="button"
-                        className="h-16 w-full rounded-2xl text-xl font-bold text-white hover:opacity-95"
-                        style={{ backgroundColor: accent }}
+                        className="h-14 w-full rounded-xl text-base font-bold hover:opacity-95"
+                        style={{ backgroundColor: accent, color: contrast }}
                         onClick={handleContactDealer}
                     >
                         <Send className="mr-2 h-5 w-5" />

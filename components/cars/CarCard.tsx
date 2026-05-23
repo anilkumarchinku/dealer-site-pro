@@ -282,6 +282,7 @@ export function CarCard({
                 onOpenChange={setIsUsedDetailsOpen}
                 onContactDealer={handleEnquireNow}
                 resolvedImageSrc={cardDisplayUrl}
+                brandColor={brandColor}
             />
             <EnquiryModal
                 car={car}
