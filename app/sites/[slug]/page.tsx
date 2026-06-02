@@ -28,7 +28,14 @@ interface SitePageProps {
 
 // ── Convert DB vehicles → Car shape the templates expect ─────────────────────
 function dbVehiclesToCars(vehicles: DBVehicle[]): Car[] {
-    return vehicles.map(v => ({
+    return vehicles.map(v => {
+        const keyFeatures = [
+            ...(v.features ?? []),
+            v.mileage_km ? `${v.mileage_km.toLocaleString('en-IN')} km driven` : null,
+            v.color ? `Colour: ${v.color}` : null,
+        ].filter((item): item is string => Boolean(item))
+
+        return {
         id: v.id,
         make: v.make,
         model: v.model,
@@ -51,10 +58,12 @@ function dbVehiclesToCars(vehicles: DBVehicle[]): Car[] {
         transmission: {
             type: (v.transmission ?? 'Manual') as Car['transmission']['type'],
         },
-        performance: {},
+        performance: {
+            range: v.mileage_km,
+        },
         dimensions: { seatingCapacity: 5 },
-        features: { keyFeatures: v.features ?? [] },
-        images: { hero: '/placeholder-car.jpg', exterior: [], interior: [] },
+        features: { keyFeatures },
+        images: { hero: v.image_url ?? '/placeholder-car.jpg', exterior: v.image_url ? [v.image_url] : [], interior: [] },
         meta: {
             viewCount: v.views,
             dataSource: 'manual',
@@ -70,8 +79,10 @@ function dbVehiclesToCars(vehicles: DBVehicle[]): Car[] {
         },
         price: `₹${(v.price_paise / 100).toLocaleString('en-IN')}`,
         condition: v.condition,
+        video_url: v.video_url,
         vehicleCategory: '4w',
-    }))
+        }
+    })
 }
 
 // ── Coming Soon page ──────────────────────────────────────────────────────────

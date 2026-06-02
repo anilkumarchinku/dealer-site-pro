@@ -226,6 +226,21 @@ export default function AddVehiclePage() {
         setIsSaving(true);
         setSaveError(null);
         try {
+            let imageUrl: string | undefined;
+            if (images[0]) {
+                const uploadData = new FormData();
+                uploadData.append("file", images[0]);
+                const uploadRes = await fetch("/api/vehicles/upload-image", {
+                    method: "POST",
+                    body: uploadData,
+                });
+                const uploadJson = await uploadRes.json();
+                if (!uploadRes.ok) {
+                    throw new Error(uploadJson.error ?? "Failed to upload vehicle photo");
+                }
+                imageUrl = uploadJson.url;
+            }
+
             const result = await addVehicle({
                 dealer_id:    dealerId,
                 vin:          formData.vin,
@@ -241,6 +256,8 @@ export default function AddVehiclePage() {
                 fuel_type:    formData.fuel_type,
                 features:     formData.features,
                 description:  formData.description,
+                image_url:    imageUrl,
+                video_url:    toYouTubeEmbed(formData.video_url) ?? (formData.video_url || undefined),
                 meta_title:       formData.meta_title,
                 meta_description: formData.meta_description,
                 insurance_status: deriveInsuranceStatus(formData.insurance_valid_until, formData.insurance_status),
@@ -266,6 +283,7 @@ export default function AddVehiclePage() {
                         price_text: priceText,
                         fuel_type:  formData.fuel_type || undefined,
                         color:      formData.color || undefined,
+                        image_url:   imageUrl,
                     }),
                 }).catch(() => { /* social post failure is non-fatal */ })
                 router.push('/dashboard/inventory');

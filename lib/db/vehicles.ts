@@ -20,6 +20,8 @@ export interface DBVehicle {
     fuel_type?: string;
     features: string[];
     description?: string;
+    image_url?: string;
+    video_url?: string;
     meta_title?: string;
     meta_description?: string;
     insurance_status?: "unknown" | "active" | "expired" | "expiring_soon";
@@ -49,6 +51,8 @@ export interface AddVehiclePayload {
     fuel_type?: string;
     features?: string[];
     description?: string;
+    image_url?: string;
+    video_url?: string;
     meta_title?: string;
     meta_description?: string;
     insurance_status?: "unknown" | "active" | "expired" | "expiring_soon";
