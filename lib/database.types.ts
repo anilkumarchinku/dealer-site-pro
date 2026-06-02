@@ -271,6 +271,7 @@ export interface Database {
           leads_count: number
           is_featured: boolean
           image_url: string | null
+          image_urls: string[]
           created_at: string
           updated_at: string
         }

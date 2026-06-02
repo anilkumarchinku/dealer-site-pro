@@ -21,6 +21,7 @@ export interface DBVehicle {
     features: string[];
     description?: string;
     image_url?: string;
+    image_urls?: string[];
     video_url?: string;
     meta_title?: string;
     meta_description?: string;
@@ -52,6 +53,7 @@ export interface AddVehiclePayload {
     features?: string[];
     description?: string;
     image_url?: string;
+    image_urls?: string[];
     video_url?: string;
     meta_title?: string;
     meta_description?: string;
