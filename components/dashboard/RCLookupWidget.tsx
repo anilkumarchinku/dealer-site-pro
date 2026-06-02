@@ -120,7 +120,7 @@ export function RCLookupWidget() {
                         {data._demo && (
                             <div className="text-xs text-amber-700 bg-amber-50 border border-amber-200 rounded-lg px-3 py-2 flex items-center gap-2">
                                 <AlertCircle className="w-3.5 h-3.5 shrink-0" />
-                                Demo data — configure RAPIDOR_API_KEY for live results
+                                Demo data - configure Surepass env vars for live results
                             </div>
                         )}
 
