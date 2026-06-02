@@ -507,7 +507,7 @@ export function FamilyTemplate({
 
                     {/* Service Booking */}
                     <div id="service-section">
-                        <ServiceBookingSection brandColor={brandColors.primary} dealerId={dealerId} dealerName={dealerName} vehicleType={vehicleType} />
+                        <ServiceBookingSection brandColor={brandColors.primary} dealerId={dealerId} dealerName={dealerName} vehicleType={vehicleType} branches={branches} />
                     </div>
 
                     {/* FAQ Section */}

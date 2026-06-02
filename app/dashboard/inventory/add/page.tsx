@@ -18,6 +18,7 @@ const FEATURES = [
 
 interface FormData {
     vin: string;
+    registration_number: string;
     make: string;
     model: string;
     variant: string;
@@ -29,6 +30,12 @@ interface FormData {
     fuel_type: string;
     features: string[];
     description: string;
+    meta_title: string;
+    meta_description: string;
+    insurance_status: "unknown" | "active" | "expired" | "expiring_soon";
+    insurance_provider: string;
+    insurance_valid_until: string;
+    insurance_quote_url: string;
     video_url: string;
     condition: "new" | "used" | "certified_pre_owned";
 }
@@ -38,6 +45,17 @@ function toYouTubeEmbed(url: string): string | null {
     if (!url) return null
     const match = url.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|shorts\/|embed\/))([a-zA-Z0-9_-]{11})/)
     return match ? `https://www.youtube.com/embed/${match[1]}` : null
+}
+
+function deriveInsuranceStatus(validUntil: string, fallback: FormData["insurance_status"]): FormData["insurance_status"] {
+    if (!validUntil) return fallback;
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const expiry = new Date(`${validUntil}T00:00:00`);
+    const daysUntilExpiry = Math.ceil((expiry.getTime() - today.getTime()) / 86400000);
+    if (daysUntilExpiry < 0) return "expired";
+    if (daysUntilExpiry <= 30) return "expiring_soon";
+    return "active";
 }
 
 export default function AddVehiclePage() {
@@ -50,6 +68,7 @@ export default function AddVehiclePage() {
     // IMPORTANT: All hooks must be declared before any early returns
     const [formData, setFormData] = useState<FormData>({
         vin: "",
+        registration_number: "",
         make: "",
         model: "",
         variant: "",
@@ -61,6 +80,12 @@ export default function AddVehiclePage() {
         fuel_type: "Petrol",
         features: [],
         description: "",
+        meta_title: "",
+        meta_description: "",
+        insurance_status: "unknown",
+        insurance_provider: "",
+        insurance_valid_until: "",
+        insurance_quote_url: "",
         video_url: "",
         condition: "used",
     });
@@ -175,6 +200,23 @@ export default function AddVehiclePage() {
         }
     };
 
+    const generateSeoMeta = () => {
+        if (!formData.make || !formData.model) {
+            setSaveError('Please enter Make and Model before generating SEO metadata.');
+            return;
+        }
+        const vehicleName = [formData.year, formData.make, formData.model, formData.variant].filter(Boolean).join(' ');
+        const location = data.location ? ` in ${data.location}` : '';
+        const priceText = formData.price_paise
+            ? ` at ₹${Number(formData.price_paise).toLocaleString('en-IN')}`
+            : '';
+        setFormData(prev => ({
+            ...prev,
+            meta_title: `${vehicleName} for Sale${location} | ${data.dealershipName || 'DealerSite Pro'}`.slice(0, 70),
+            meta_description: `Explore ${vehicleName}${priceText}${location}. View price, fuel type, transmission, kilometers, features and contact ${data.dealershipName || 'the dealer'} for a test drive.`.slice(0, 160),
+        }));
+    };
+
     const handleSave = async () => {
         if (!dealerId) { setSaveError("Dealer ID not found"); return; }
         if (!formData.make || !formData.model) {
@@ -187,8 +229,10 @@ export default function AddVehiclePage() {
             const result = await addVehicle({
                 dealer_id:    dealerId,
                 vin:          formData.vin,
+                registration_number: formData.registration_number.trim().toUpperCase() || undefined,
                 make:         formData.make,
                 model:        formData.model,
+                variant:      formData.variant,
                 year:         parseInt(formData.year) || new Date().getFullYear(),
                 price_paise:  Math.round((parseFloat(formData.price_paise) || 0) * 100),
                 mileage_km:   parseInt(formData.mileage_km) || 0,
@@ -197,6 +241,13 @@ export default function AddVehiclePage() {
                 fuel_type:    formData.fuel_type,
                 features:     formData.features,
                 description:  formData.description,
+                meta_title:       formData.meta_title,
+                meta_description: formData.meta_description,
+                insurance_status: deriveInsuranceStatus(formData.insurance_valid_until, formData.insurance_status),
+                insurance_provider: formData.insurance_provider || undefined,
+                insurance_valid_until: formData.insurance_valid_until || undefined,
+                insurance_quote_url: formData.insurance_quote_url || undefined,
+                insurance_last_checked_at: formData.insurance_valid_until ? new Date().toISOString() : undefined,
                 condition:    formData.condition,
             });
             if (result.success) {
@@ -333,13 +384,13 @@ export default function AddVehiclePage() {
                     </CardContent>
                 </Card>
 
-                {/* VIN Section */}
+                {/* Identification Section */}
                 <Card>
                     <CardHeader>
                         <CardTitle>Vehicle Identification</CardTitle>
-                        <CardDescription>Enter VIN to auto-fill make, model, and year</CardDescription>
+                        <CardDescription>Enter VIN for decoding and number plate for public listing display</CardDescription>
                     </CardHeader>
-                    <CardContent>
+                    <CardContent className="space-y-4">
                         <div>
                             <label className="block text-sm font-medium mb-2">VIN <span className="text-muted-foreground font-normal">(optional)</span></label>
                             <div className="flex gap-2">
@@ -362,6 +413,16 @@ export default function AddVehiclePage() {
                                     )}
                                 </Button>
                             </div>
+                        </div>
+                        <div>
+                            <label className="block text-sm font-medium mb-2">Registration Number / Number Plate <span className="text-muted-foreground font-normal">(optional)</span></label>
+                            <Input
+                                value={formData.registration_number}
+                                onChange={(e) => handleChange('registration_number', e.target.value.toUpperCase())}
+                                placeholder="e.g. TS09AB1234"
+                                disabled={isSaving}
+                                className="font-mono tracking-wide"
+                            />
                         </div>
                     </CardContent>
                 </Card>
@@ -577,6 +638,113 @@ export default function AddVehiclePage() {
                             className="w-full px-3 py-2.5 border border-gray-200 rounded-xl text-sm min-h-[120px] resize-none bg-white text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-gray-400 focus:ring-1 focus:ring-gray-200"
                         />
                         <p className="text-xs text-muted-foreground mt-2">{formData.description.length}/500 characters</p>
+                    </CardContent>
+                </Card>
+
+                {/* Insurance */}
+                <Card>
+                    <CardHeader>
+                        <CardTitle>Insurance</CardTitle>
+                        <CardDescription>Track policy status and add a partner quote link for this listing</CardDescription>
+                    </CardHeader>
+                    <CardContent className="space-y-4">
+                        <div className="grid grid-cols-2 gap-4">
+                            <div>
+                                <label className="block text-sm font-medium mb-2">Status</label>
+                                <select
+                                    value={formData.insurance_status}
+                                    onChange={(e) => handleChange('insurance_status', e.target.value)}
+                                    disabled={isSaving}
+                                    className="w-full px-3 py-2 border border-gray-200 rounded-md text-sm bg-white text-gray-900 focus:outline-none focus:border-gray-400 focus:ring-1 focus:ring-gray-200"
+                                >
+                                    <option value="unknown">Unknown</option>
+                                    <option value="active">Active</option>
+                                    <option value="expiring_soon">Expiring Soon</option>
+                                    <option value="expired">Expired</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label className="block text-sm font-medium mb-2">Valid Until</label>
+                                <Input
+                                    type="date"
+                                    value={formData.insurance_valid_until}
+                                    onChange={(e) => handleChange('insurance_valid_until', e.target.value)}
+                                    disabled={isSaving}
+                                />
+                            </div>
+                            <div>
+                                <label className="block text-sm font-medium mb-2">Insurer</label>
+                                <Input
+                                    value={formData.insurance_provider}
+                                    onChange={(e) => handleChange('insurance_provider', e.target.value)}
+                                    placeholder="e.g., ICICI Lombard"
+                                    disabled={isSaving}
+                                />
+                            </div>
+                            <div>
+                                <label className="block text-sm font-medium mb-2">Quote Comparison URL</label>
+                                <Input
+                                    type="url"
+                                    value={formData.insurance_quote_url}
+                                    onChange={(e) => handleChange('insurance_quote_url', e.target.value)}
+                                    placeholder="https://partner.example.com/quote"
+                                    disabled={isSaving}
+                                />
+                            </div>
+                        </div>
+                        {formData.insurance_valid_until && (
+                            <p className="text-xs text-muted-foreground">
+                                Saved status will be {deriveInsuranceStatus(formData.insurance_valid_until, formData.insurance_status).replace(/_/g, ' ')} based on the expiry date.
+                            </p>
+                        )}
+                    </CardContent>
+                </Card>
+
+                {/* SEO Metadata */}
+                <Card>
+                    <CardHeader>
+                        <div className="flex items-start justify-between gap-3">
+                            <div>
+                                <CardTitle>SEO Metadata</CardTitle>
+                                <CardDescription>Customize the title and description shown by search engines for this listing</CardDescription>
+                            </div>
+                            <Button
+                                type="button"
+                                variant="outline"
+                                size="sm"
+                                onClick={generateSeoMeta}
+                                disabled={isSaving}
+                                className="gap-1.5 shrink-0"
+                            >
+                                <Sparkles className="w-3.5 h-3.5" />
+                                Auto-generate
+                            </Button>
+                        </div>
+                    </CardHeader>
+                    <CardContent className="space-y-4">
+                        <div>
+                            <label className="block text-sm font-medium mb-2">Meta Title</label>
+                            <Input
+                                value={formData.meta_title}
+                                onChange={(e) => handleChange('meta_title', e.target.value)}
+                                placeholder="2022 Maruti Suzuki Swift for Sale in Hyderabad"
+                                maxLength={70}
+                                disabled={isSaving}
+                            />
+                            <p className="text-xs text-muted-foreground mt-1">{formData.meta_title.length}/70 characters</p>
+                        </div>
+                        <div>
+                            <label className="block text-sm font-medium mb-2">Meta Description</label>
+                            <textarea
+                                value={formData.meta_description}
+                                onChange={(e) => handleChange('meta_description', e.target.value)}
+                                placeholder="Explore price, fuel type, transmission, kilometers and contact the dealer for a test drive."
+                                maxLength={160}
+                                disabled={isSaving}
+                                className="w-full px-3 py-2.5 border border-gray-200 rounded-xl text-sm min-h-[90px] resize-none bg-white text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-gray-400 focus:ring-1 focus:ring-gray-200"
+                            />
+                            <p className="text-xs text-muted-foreground mt-1">{formData.meta_description.length}/160 characters</p>
+                        </div>
                     </CardContent>
                 </Card>
 

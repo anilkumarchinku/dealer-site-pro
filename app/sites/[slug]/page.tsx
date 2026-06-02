@@ -5,6 +5,7 @@ import { ModernTemplate } from '@/components/templates/ModernTemplate'
 import { LuxuryTemplate } from '@/components/templates/LuxuryTemplate'
 import { SportyTemplate } from '@/components/templates/SportyTemplate'
 import { FamilyTemplate } from '@/components/templates/FamilyTemplate'
+import { PushPreferenceCenter } from '@/components/PushPreferenceCenter'
 import { allCars, getCarsByMake } from '@/lib/data/cars'
 import { fetchDealerBySlug } from '@/lib/db/dealers'
 import { fetchAllCyeproInventoryAsCars } from '@/lib/services/cyepro-service'
@@ -54,7 +55,19 @@ function dbVehiclesToCars(vehicles: DBVehicle[]): Car[] {
         dimensions: { seatingCapacity: 5 },
         features: { keyFeatures: v.features ?? [] },
         images: { hero: '/placeholder-car.jpg', exterior: [], interior: [] },
-        meta: { viewCount: v.views, dataSource: 'manual', sourceVehicleId: v.id },
+        meta: {
+            viewCount: v.views,
+            dataSource: 'manual',
+            sourceVehicleId: v.id,
+            registrationNumber: v.registration_number,
+            insurance: {
+                status: v.insurance_status ?? 'unknown',
+                provider: v.insurance_provider,
+                validUntil: v.insurance_valid_until,
+                quoteUrl: v.insurance_quote_url,
+                lastCheckedAt: v.insurance_last_checked_at,
+            },
+        },
         price: `₹${(v.price_paise / 100).toLocaleString('en-IN')}`,
         condition: v.condition,
         vehicleCategory: '4w',
@@ -611,18 +624,35 @@ export default async function SitePage({ params }: SitePageProps) {
             threeWheelerHref={vehicleHubHref('three-wheelers')}
         />
     )
+    const customerPanelLink = (
+        <section className="border-t border-slate-200 bg-slate-50 px-4 py-8">
+            <div className="mx-auto flex max-w-5xl flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                <div>
+                    <h2 className="text-lg font-semibold text-slate-900">Customer Panel</h2>
+                    <p className="mt-1 text-sm text-slate-600">View your test drives, sell requests, showroom details, arrivals, and current offers.</p>
+                </div>
+                <a
+                    href={`${siteHrefForSlug(slug).replace(/\/$/, '')}/user`}
+                    className="inline-flex h-10 shrink-0 items-center justify-center rounded-md bg-slate-950 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-slate-800"
+                >
+                    Open My Panel
+                </a>
+            </div>
+        </section>
+    )
+    const pushPreferenceCenter = <PushPreferenceCenter dealerId={dealer.id} />
 
     // ── Render the chosen template ────────────────────────────────────────────
     switch (dealer.style_template) {
         case 'luxury':
-            return <>{jsonLdScripts}<LuxuryTemplate  {...sharedProps} config={{ heroTitle, heroSubtitle, tagline: taglines.luxury }} />{segmentsBanner}</>
+            return <>{jsonLdScripts}<LuxuryTemplate  {...sharedProps} config={{ heroTitle, heroSubtitle, tagline: taglines.luxury }} />{customerPanelLink}{pushPreferenceCenter}{segmentsBanner}</>
         case 'sporty':
-            return <>{jsonLdScripts}<SportyTemplate  {...sharedProps} config={{ heroTitle, heroSubtitle, tagline: taglines.sporty }} />{segmentsBanner}</>
+            return <>{jsonLdScripts}<SportyTemplate  {...sharedProps} config={{ heroTitle, heroSubtitle, tagline: taglines.sporty }} />{customerPanelLink}{pushPreferenceCenter}{segmentsBanner}</>
         case 'family':
-            return <>{jsonLdScripts}<FamilyTemplate  {...sharedProps} config={{ heroTitle, heroSubtitle, tagline: taglines.family }} />{segmentsBanner}</>
+            return <>{jsonLdScripts}<FamilyTemplate  {...sharedProps} config={{ heroTitle, heroSubtitle, tagline: taglines.family }} />{customerPanelLink}{pushPreferenceCenter}{segmentsBanner}</>
         case 'modern':
         case 'professional':
         default:
-            return <>{jsonLdScripts}<ModernTemplate  {...sharedProps} config={{ heroTitle, heroSubtitle }} />{segmentsBanner}</>
+            return <>{jsonLdScripts}<ModernTemplate  {...sharedProps} config={{ heroTitle, heroSubtitle }} />{customerPanelLink}{pushPreferenceCenter}{segmentsBanner}</>
     }
 }

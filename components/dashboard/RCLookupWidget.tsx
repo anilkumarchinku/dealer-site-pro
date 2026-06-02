@@ -22,12 +22,18 @@ interface RCData {
     chassis_number?: string;
     color?: string;
     insurance_upto?: string;
+    insurance_company?: string;
     fitness_upto?: string;
+    rc_validity_upto?: string;
+    owner_count?: number;
+    challan_count?: number;
+    challan_status?: string;
     state?: string;
     rto?: string;
     blacklisted?: boolean;
     noc_details?: string;
     _demo?: boolean;
+    _cache?: 'redis' | 'memory';
 }
 
 function InfoRow({ label, value, highlight }: { label: string; value?: string; highlight?: boolean }) {
@@ -59,7 +65,7 @@ export function RCLookupWidget() {
             });
             const json = await res.json();
             if (!res.ok) throw new Error(json.error ?? 'Lookup failed');
-            setData(json.data);
+            setData({ ...json.data, _cache: json.data?._cache ?? (json.cached ? 'redis' : undefined) });
             setStatus('done');
         } catch (err) {
             setError(err instanceof Error ? err.message : 'Lookup failed');
@@ -118,6 +124,13 @@ export function RCLookupWidget() {
                             </div>
                         )}
 
+                        {data._cache && (
+                            <div className="text-xs text-blue-700 bg-blue-50 border border-blue-200 rounded-lg px-3 py-2 flex items-center gap-2">
+                                <CheckCircle2 className="w-3.5 h-3.5 shrink-0" />
+                                Served from 24-hour RC lookup cache
+                            </div>
+                        )}
+
                         {/* Status banner */}
                         <div className={`flex items-center gap-2 rounded-xl p-3 ${data.blacklisted ? 'bg-red-50 border border-red-200' : 'bg-emerald-50 border border-emerald-200'}`}>
                             {data.blacklisted
@@ -151,8 +164,12 @@ export function RCLookupWidget() {
                                 <div className="bg-gray-50 rounded-xl p-3 space-y-1">
                                     <InfoRow label="Owner Name"      value={data.owner_name} />
                                     <InfoRow label="Registration Date" value={data.registration_date} />
+                                    <InfoRow label="Owner Count" value={data.owner_count ? String(data.owner_count) : undefined} />
                                     <InfoRow label="Insurance Valid Upto" value={data.insurance_upto} />
+                                    <InfoRow label="Insurer" value={data.insurance_company} />
                                     <InfoRow label="Fitness Valid Upto" value={data.fitness_upto} />
+                                    <InfoRow label="RC Validity" value={data.rc_validity_upto} />
+                                    <InfoRow label="e-Challan" value={data.challan_status ?? (data.challan_count != null ? `${data.challan_count} pending challan(s)` : undefined)} highlight={(data.challan_count ?? 0) > 0} />
                                     <InfoRow label="NOC Details"     value={data.noc_details} />
                                     <InfoRow label="Engine No."      value={data.engine_number} />
                                     <InfoRow label="Chassis No."     value={data.chassis_number} />

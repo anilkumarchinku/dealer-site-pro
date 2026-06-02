@@ -112,6 +112,33 @@ export const leadSchema = z.object({
 
 export type LeadInput = z.infer<typeof leadSchema>
 
+export const sellRequestSchema = z.object({
+    dealer_id:             uuid.optional().nullable(),
+    seller_name:           personName,
+    seller_phone:          indianPhone,
+    seller_email:          optionalEmail,
+    make:                  z.string().trim().min(1, 'Brand is required').max(100),
+    model:                 z.string().trim().max(100).optional().nullable(),
+    variant:               z.string().trim().max(100).optional().nullable(),
+    year:                  z.number().int().min(1990).max(new Date().getFullYear() + 1),
+    fuel_type:             z.string().trim().min(1, 'Fuel type is required').max(50),
+    transmission:          z.string().trim().max(50).optional().nullable(),
+    registration_number:   z.string().trim().max(20).optional().nullable(),
+    mileage_km:            z.number().int().min(0).max(500_000),
+    owner_count:           z.string().trim().max(20).optional().nullable(),
+    expected_price_paise:  z.number().int().min(0).max(500_000_000).optional().nullable(),
+    city:                  z.string().trim().max(100).optional().nullable(),
+    address:               z.string().trim().max(500).optional().nullable(),
+    preferred_date:        dateString.optional().nullable(),
+    preferred_slot:        z.string().trim().max(50).optional().nullable(),
+    estimated_low_paise:   z.number().int().min(0).max(500_000_000).optional().nullable(),
+    estimated_high_paise:  z.number().int().min(0).max(500_000_000).optional().nullable(),
+    photo_urls:            z.array(z.string().trim().url('Invalid photo URL').max(2000)).max(12).optional().default([]),
+    notes:                 message,
+})
+
+export type SellRequestInput = z.infer<typeof sellRequestSchema>
+
 // ── Test drive schema ───────────────────────────────────────────
 
 export const testDriveSchema = z.object({
@@ -202,6 +229,39 @@ export const serviceBookingSchema = z.object({
 })
 
 export type ServiceBookingInput = z.infer<typeof serviceBookingSchema>
+
+export const CAR_SERVICE_TYPES = [
+    'periodic_service', 'ac_service', 'tyre_alignment', 'accident_repair', 'inspection', 'battery', 'insurance_claim'
+] as const
+
+export const CAR_SERVICE_STATUSES = ['pending', 'confirmed', 'assigned', 'completed', 'cancelled'] as const
+
+export const carServiceBookingSchema = z.object({
+    dealer_id:          uuid,
+    customer_name:      personName,
+    phone:              indianPhone,
+    email:              optionalEmail,
+    vehicle_reg_no:     z.string().trim().max(20).optional().nullable(),
+    vehicle_make:       z.string().trim().max(100).optional().nullable(),
+    vehicle_model:      z.string().trim().max(100).optional().nullable(),
+    vehicle_year:       z.number().int().min(1990).max(new Date().getFullYear() + 1).optional().nullable(),
+    km_reading:         z.number().int().min(0).max(500_000).optional().nullable(),
+    service_type:       z.enum(CAR_SERVICE_TYPES),
+    preferred_date:     dateString,
+    preferred_slot:     z.string().trim().min(1, 'Time slot is required').max(50),
+    service_location:   z.string().trim().max(150).optional().nullable(),
+    notes:              message,
+})
+
+export type CarServiceBookingInput = z.infer<typeof carServiceBookingSchema>
+
+export const updateCarServiceStatusSchema = z.object({
+    id:               uuid,
+    status:           z.enum(CAR_SERVICE_STATUSES),
+    assigned_partner: z.string().trim().max(150).optional().nullable(),
+    referral_url:     z.string().trim().url('Invalid referral URL').max(2000).optional().nullable().or(z.literal('')),
+    admin_notes:      z.string().trim().max(1000).optional().nullable(),
+})
 
 // ── Payment schema ──────────────────────────────────────────────
 

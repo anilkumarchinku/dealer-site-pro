@@ -41,6 +41,34 @@ export function EmiCalculatorPageContent() {
                 {/* Calculator */}
                 <div className="mb-12">
                     <EmiCalculator brandColor="#2563eb" theme="light" />
+                    <div className="mt-5 grid gap-4 md:grid-cols-2">
+                        <Link
+                            href="/api/finance/precheck?source=emi-calculator"
+                            target="_blank"
+                            className="rounded-lg border border-blue-200 bg-blue-50 p-4 transition-colors hover:bg-blue-100"
+                        >
+                            <p className="flex items-center gap-2 text-sm font-semibold text-blue-900">
+                                <CreditCard className="h-4 w-4" />
+                                Loan eligibility pre-check
+                            </p>
+                            <p className="mt-1 text-xs leading-relaxed text-blue-800/80">
+                                Continue to the configured finance partner for a quick pre-check after estimating your EMI.
+                            </p>
+                        </Link>
+                        <Link
+                            href="/api/fastag/recharge?source=emi-calculator"
+                            target="_blank"
+                            className="rounded-lg border border-emerald-200 bg-emerald-50 p-4 transition-colors hover:bg-emerald-100"
+                        >
+                            <p className="flex items-center gap-2 text-sm font-semibold text-emerald-900">
+                                <CreditCard className="h-4 w-4" />
+                                FASTag recharge
+                            </p>
+                            <p className="mt-1 text-xs leading-relaxed text-emerald-800/80">
+                                Open the configured FASTag recharge partner for wallet top-up or vehicle handover readiness.
+                            </p>
+                        </Link>
+                    </div>
                 </div>
 
                 {/* How EMI is Calculated */}

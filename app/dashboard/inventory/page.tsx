@@ -6,8 +6,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { cn } from "@/lib/utils";
-import { Search, Plus, Car, CheckCircle, LayoutGrid, Building2, Loader2, Sparkles, RefreshCw, Upload } from "lucide-react";
-import { fetchVehicles, deleteVehicle, type DBVehicle } from "@/lib/db/vehicles";
+import { Search, Plus, Car, CheckCircle, LayoutGrid, Building2, Loader2, Sparkles, RefreshCw, Upload, ShieldCheck, AlertTriangle } from "lucide-react";
+import { fetchVehicles, deleteVehicle, updateVehicleStatus, type DBVehicle } from "@/lib/db/vehicles";
 import { useOnboardingStore } from "@/lib/store/onboarding-store";
 import BulkUploadModal from "@/components/BulkUploadModal";
 import { RCLookupWidget } from "@/components/dashboard/RCLookupWidget";
@@ -22,6 +22,25 @@ const STAT_CONFIG = [
 ];
 
 type ConditionTab = "all" | "new" | "used";
+
+function getInsuranceBadge(vehicle: DBVehicle) {
+    const expiry = vehicle.insurance_valid_until ? new Date(`${vehicle.insurance_valid_until}T00:00:00`) : null;
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    if (expiry && expiry.getTime() < today.getTime()) {
+        return { label: "Expired", cls: "bg-red-500/10 text-red-600 border-red-500/20", icon: AlertTriangle };
+    }
+    if (vehicle.insurance_status === "expired") {
+        return { label: "Expired", cls: "bg-red-500/10 text-red-600 border-red-500/20", icon: AlertTriangle };
+    }
+    if (vehicle.insurance_status === "expiring_soon") {
+        return { label: "Expiring Soon", cls: "bg-amber-500/10 text-amber-600 border-amber-500/20", icon: AlertTriangle };
+    }
+    if (vehicle.insurance_status === "active") {
+        return { label: "Active", cls: "bg-emerald-500/10 text-emerald-600 border-emerald-500/20", icon: ShieldCheck };
+    }
+    return { label: "Unknown", cls: "bg-muted text-muted-foreground border-border", icon: ShieldCheck };
+}
 
 export default function InventoryPage() {
     const { dealerId, data } = useOnboardingStore();
@@ -59,7 +78,11 @@ export default function InventoryPage() {
     // ── Search + category filtering ───────────────────────────
     const filteredDB = tabFiltered.filter(v => {
         const q = searchQuery.toLowerCase();
-        const matchesSearch = v.make.toLowerCase().includes(q) || v.model.toLowerCase().includes(q);
+        const matchesSearch =
+            v.make.toLowerCase().includes(q)
+            || v.model.toLowerCase().includes(q)
+            || (v.variant ?? "").toLowerCase().includes(q)
+            || (v.registration_number ?? "").toLowerCase().includes(q);
         const matchesCategory = filterCategory === "all" || v.body_type === filterCategory;
         return matchesSearch && matchesCategory;
     });
@@ -79,6 +102,14 @@ export default function InventoryPage() {
     const handleDeleteDB = async (id: string) => {
         await deleteVehicle(id);
         setDbVehicles(prev => prev.filter(v => v.id !== id));
+    };
+
+    const handleMarkSold = async (id: string) => {
+        if (!dealerId) return;
+        const result = await updateVehicleStatus(id, dealerId, "sold");
+        if (result.success) {
+            setDbVehicles(prev => prev.map(v => v.id === id ? { ...v, status: "sold" } : v));
+        }
     };
 
     return (
@@ -264,6 +295,7 @@ export default function InventoryPage() {
                 <DBVehicleTable
                     vehicles={filteredDB}
                     onDelete={handleDeleteDB}
+                    onMarkSold={handleMarkSold}
                     showCondition={isHybrid}
                 />
             )}
@@ -282,10 +314,12 @@ export default function InventoryPage() {
 function DBVehicleTable({
     vehicles,
     onDelete,
+    onMarkSold,
     showCondition = false,
 }: {
     vehicles: DBVehicle[];
     onDelete: (id: string) => void;
+    onMarkSold: (id: string) => void;
     showCondition?: boolean;
 }) {
     const formatPrice = (paise: number) =>
@@ -306,6 +340,7 @@ function DBVehicleTable({
                         <TableHead>Price</TableHead>
                         <TableHead>Year</TableHead>
                         <TableHead>Type</TableHead>
+                        <TableHead>Insurance</TableHead>
                         {showCondition && <TableHead>Condition</TableHead>}
                         <TableHead>Status</TableHead>
                         <TableHead className="text-right">Actions</TableHead>
@@ -314,17 +349,37 @@ function DBVehicleTable({
                 <TableBody>
                     {vehicles.map(v => {
                         const badge = conditionBadge(v.condition);
+                        const insuranceBadge = getInsuranceBadge(v);
+                        const InsuranceIcon = insuranceBadge.icon;
                         return (
                             <TableRow key={v.id}>
                                 <TableCell>
                                     <div className="font-semibold text-foreground">{v.make} {v.model}</div>
                                     {v.variant && <div className="text-xs text-muted-foreground">{v.variant}</div>}
+                                    {v.registration_number && (
+                                        <div className="mt-1 font-mono text-[11px] uppercase tracking-wide text-muted-foreground">
+                                            Plate {v.registration_number}
+                                        </div>
+                                    )}
                                 </TableCell>
                                 <TableCell className="font-medium">
                                     {formatPrice(v.price_paise)}
                                 </TableCell>
                                 <TableCell className="text-muted-foreground">{v.year}</TableCell>
                                 <TableCell className="text-muted-foreground">{v.body_type ?? "—"}</TableCell>
+                                <TableCell>
+                                    <div className="space-y-1">
+                                        <Badge className={cn("border text-xs gap-1", insuranceBadge.cls)} variant="outline">
+                                            <InsuranceIcon className="h-3 w-3" />
+                                            {insuranceBadge.label}
+                                        </Badge>
+                                        {v.insurance_valid_until && (
+                                            <div className="text-[11px] text-muted-foreground">
+                                                Until {new Date(v.insurance_valid_until).toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric" })}
+                                            </div>
+                                        )}
+                                    </div>
+                                </TableCell>
                                 {showCondition && (
                                     <TableCell>
                                         <Badge className={cn("border text-xs", badge.cls)} variant="outline">
@@ -338,21 +393,36 @@ function DBVehicleTable({
                                     </Badge>
                                 </TableCell>
                                 <TableCell className="text-right">
-                                    <Button
-                                        variant="ghost"
-                                        size="sm"
-                                        className="h-8 px-3 text-xs text-destructive hover:bg-destructive/10"
-                                        onClick={() => onDelete(v.id)}
-                                    >
-                                        Remove
-                                    </Button>
+                                    <div className="flex justify-end gap-1">
+                                        <Button asChild variant="ghost" size="sm" className="h-8 px-3 text-xs">
+                                            <Link href={`/dashboard/inventory/${v.id}/edit`}>Edit</Link>
+                                        </Button>
+                                        {v.status !== "sold" && (
+                                            <Button
+                                                variant="ghost"
+                                                size="sm"
+                                                className="h-8 px-3 text-xs"
+                                                onClick={() => onMarkSold(v.id)}
+                                            >
+                                                Sold
+                                            </Button>
+                                        )}
+                                        <Button
+                                            variant="ghost"
+                                            size="sm"
+                                            className="h-8 px-3 text-xs text-destructive hover:bg-destructive/10"
+                                            onClick={() => onDelete(v.id)}
+                                        >
+                                            Remove
+                                        </Button>
+                                    </div>
                                 </TableCell>
                             </TableRow>
                         );
                     })}
                     {vehicles.length === 0 && (
                         <TableRow>
-                            <TableCell colSpan={showCondition ? 7 : 6} className="py-8 text-center text-muted-foreground">
+                            <TableCell colSpan={showCondition ? 8 : 7} className="py-8 text-center text-muted-foreground">
                                 No vehicles match your search.
                             </TableCell>
                         </TableRow>

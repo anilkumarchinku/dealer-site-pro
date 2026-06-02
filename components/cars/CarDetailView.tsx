@@ -16,6 +16,7 @@ import { Badge } from '@/components/ui/badge';
 import { EnquiryModal } from '@/components/cars/EnquiryModal';
 import { OnRoadPriceDialog } from '@/components/cars/OnRoadPriceDialog';
 import { TestDriveModal } from '@/components/cars/TestDriveModal';
+import { ReviewsSection } from '@/components/ui/ReviewsSection';
 import { Card, CardContent } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import {
@@ -189,6 +190,34 @@ function isLightSwatch(hex: string) {
     return luminance > 210;
 }
 
+function formatInsuranceDate(value?: string) {
+    if (!value) return null;
+    const date = new Date(value);
+    if (Number.isNaN(date.getTime())) return null;
+    return date.toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
+}
+
+function getInsuranceDisplay(status?: string, validUntil?: string) {
+    const normalized = status ?? 'unknown';
+    const expiry = validUntil ? new Date(`${validUntil}T00:00:00`) : null;
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    if (expiry && expiry.getTime() < today.getTime()) {
+        return { label: 'Expired', className: 'border-red-500/30 bg-red-500/10 text-red-600', icon: AlertTriangle };
+    }
+    if (normalized === 'expired') {
+        return { label: 'Expired', className: 'border-red-500/30 bg-red-500/10 text-red-600', icon: AlertTriangle };
+    }
+    if (normalized === 'expiring_soon') {
+        return { label: 'Expiring Soon', className: 'border-amber-500/30 bg-amber-500/10 text-amber-600', icon: AlertTriangle };
+    }
+    if (normalized === 'active') {
+        return { label: 'Active', className: 'border-emerald-500/30 bg-emerald-500/10 text-emerald-600', icon: ShieldCheck };
+    }
+    return { label: 'Not Checked', className: 'border-slate-300 bg-slate-100 text-slate-600', icon: Shield };
+}
+
 export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, dealerPhone }: CarDetailViewProps) {
     const sitePrefix = useSitePrefix(siteSlug ?? '');
     const brandColor = resolveVehicleDetailAccent(car.make, Boolean(siteSlug));
@@ -321,6 +350,9 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
         };
     };
     const emiResult = calcEmi();
+    const vehicleLabel = [car.year, car.make, car.model, car.variant].filter(Boolean).join(' ');
+    const financePrecheckHref = `/api/finance/precheck?vehicle=${encodeURIComponent(vehicleLabel)}&amount=${encodeURIComponent(String(emiResult?.loan ?? Math.max(0, emiPrice - emiDown)))}`;
+    const fastagRechargeHref = `/api/fastag/recharge?vehicle=${encodeURIComponent(vehicleLabel)}`;
     const inventoryHref = siteSlug ? (sitePrefix || '/') : '/cars';
     const makeHref = siteSlug
         ? `${inventoryHref}?make=${encodeURIComponent(car.make)}`
@@ -331,6 +363,11 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
     const lightTableRowHoverClass = 'hover:bg-slate-50';
     const lightOutlineButtonClass = 'border-slate-200 bg-white text-slate-900 hover:bg-slate-50 dark:!border-slate-200 dark:!bg-white dark:!text-slate-900 dark:hover:!bg-slate-50';
     const lightGhostButtonClass = 'text-slate-600 hover:bg-slate-100 hover:text-slate-900 dark:!text-slate-600 dark:hover:!bg-slate-100 dark:hover:!text-slate-900';
+    const insurance = car.meta?.insurance;
+    const registrationNumber = car.meta?.registrationNumber?.trim();
+    const insuranceDisplay = getInsuranceDisplay(insurance?.status, insurance?.validUntil);
+    const InsuranceIcon = insuranceDisplay.icon;
+    const insuranceValidUntil = formatInsuranceDate(insurance?.validUntil);
 
     return (<>
         <div className="min-h-screen bg-white text-slate-900 [color-scheme:light] dark:!bg-white dark:!text-slate-900">
@@ -410,6 +447,12 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                                         )}
                                         {car.make} {car.model}
                                     </h1>
+                                    {registrationNumber && (
+                                        <div className="mt-2 inline-flex items-center gap-1.5 rounded-md border border-slate-300 bg-slate-50 px-2.5 py-1 font-mono text-xs font-semibold uppercase tracking-wide text-slate-700">
+                                            <FileText className="h-3.5 w-3.5" />
+                                            {registrationNumber}
+                                        </div>
+                                    )}
                                     <p className="text-sm text-gray-600">{car.variant} {car.year && `• ${car.year}`}</p>
                                 </div>
 
@@ -591,6 +634,61 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                         ))}
                     </div>
 
+                    {registrationNumber && (
+                        <Card className={`${lightCardClass} mb-8`}>
+                            <CardContent className="p-5">
+                                <div className="flex items-start gap-3">
+                                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-slate-100">
+                                        <FileText className="h-5 w-5 text-slate-700" />
+                                    </div>
+                                    <div>
+                                        <h3 className="text-base font-semibold">Registration Number</h3>
+                                        <p className="mt-1 font-mono text-lg font-semibold uppercase tracking-wide text-gray-900">{registrationNumber}</p>
+                                    </div>
+                                </div>
+                            </CardContent>
+                        </Card>
+                    )}
+
+                    {(insurance?.status || insurance?.provider || insurance?.validUntil || insurance?.quoteUrl) && (
+                        <Card className={`${lightCardClass} mb-8`}>
+                            <CardContent className="p-5">
+                                <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+                                    <div className="flex items-start gap-3">
+                                        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-slate-100">
+                                            <InsuranceIcon className="h-5 w-5 text-slate-700" />
+                                        </div>
+                                        <div>
+                                            <div className="flex flex-wrap items-center gap-2">
+                                                <h3 className="text-base font-semibold">Insurance Status</h3>
+                                                <Badge variant="outline" className={insuranceDisplay.className}>
+                                                    {insuranceDisplay.label}
+                                                </Badge>
+                                            </div>
+                                            <div className="mt-2 grid gap-1 text-sm text-gray-600 sm:grid-cols-2">
+                                                {insurance?.provider && <p>Insurer: <span className="font-medium text-gray-900">{insurance.provider}</span></p>}
+                                                {insuranceValidUntil && <p>Valid until: <span className="font-medium text-gray-900">{insuranceValidUntil}</span></p>}
+                                                {insurance?.lastCheckedAt && (
+                                                    <p className="sm:col-span-2">
+                                                        Last checked: <span className="font-medium text-gray-900">{formatInsuranceDate(insurance.lastCheckedAt)}</span>
+                                                    </p>
+                                                )}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {insurance?.quoteUrl && (
+                                        <Button asChild variant="outline" className={`${lightOutlineButtonClass} shrink-0`}>
+                                            <a href={insurance.quoteUrl} target="_blank" rel="noreferrer">
+                                                <Shield className="mr-2 h-4 w-4" />
+                                                Compare Insurance Quotes
+                                            </a>
+                                        </Button>
+                                    )}
+                                </div>
+                            </CardContent>
+                        </Card>
+                    )}
+
                     {/* Pros & Cons removed — auto-generated data was unreliable */}
                 </section>
 
@@ -716,7 +814,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                                     </h3>
                                     <div className="space-y-3">
                                         {[
-                                            { label: 'Registration Certificate (RC)', status: true, icon: <FileText className="w-4 h-4" /> },
+                                            { label: registrationNumber ? `Registration Certificate (RC): ${registrationNumber}` : 'Registration Certificate (RC)', status: true, icon: <FileText className="w-4 h-4" /> },
                                             { label: 'Insurance Valid', status: true, icon: <Shield className="w-4 h-4" /> },
                                             { label: 'Pollution Certificate', status: true, icon: <CheckCircle2 className="w-4 h-4" /> },
                                             { label: 'Service Records Available', status: true, icon: <Wrench className="w-4 h-4" /> },
@@ -1151,6 +1249,40 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                                     )}
                                 </div>
                             </div>
+                            <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                                <div className="rounded-xl border border-blue-100 bg-blue-50/70 p-4">
+                                    <div className="flex items-start gap-3">
+                                        <BadgeCheck className="mt-0.5 h-5 w-5 text-blue-600" />
+                                        <div className="min-w-0">
+                                            <p className="text-sm font-semibold text-slate-900">Loan eligibility pre-check</p>
+                                            <p className="mt-1 text-xs leading-relaxed text-slate-600">
+                                                Send the calculated loan amount to the configured finance partner for a quick eligibility check.
+                                            </p>
+                                            <Button asChild size="sm" className="mt-3" style={{ backgroundColor: brandColor, color: brandContrast }}>
+                                                <a href={financePrecheckHref} target="_blank" rel="noreferrer">
+                                                    Check eligibility
+                                                </a>
+                                            </Button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="rounded-xl border border-emerald-100 bg-emerald-50/70 p-4">
+                                    <div className="flex items-start gap-3">
+                                        <ShieldCheck className="mt-0.5 h-5 w-5 text-emerald-600" />
+                                        <div className="min-w-0">
+                                            <p className="text-sm font-semibold text-slate-900">FASTag recharge</p>
+                                            <p className="mt-1 text-xs leading-relaxed text-slate-600">
+                                                Open the configured FASTag partner flow for recharge or wallet top-up before delivery.
+                                            </p>
+                                            <Button asChild size="sm" variant="outline" className={`mt-3 ${lightOutlineButtonClass}`}>
+                                                <a href={fastagRechargeHref} target="_blank" rel="noreferrer">
+                                                    Recharge FASTag
+                                                </a>
+                                            </Button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </CardContent>
                     </Card>
                 </section>
@@ -1322,6 +1454,10 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                 </section>
 
                 {/* ──────── SIMILAR CARS ──────── */}
+                {dealerId && (
+                    <ReviewsSection dealerId={dealerId} brandColor={brandColor} variant="light" />
+                )}
+
                 {similarCars.length > 0 && (
                     <section>
                         <div className="flex items-center justify-between mb-6">

@@ -5,9 +5,9 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { Star, ThumbsUp, Reply, ExternalLink, MessageSquare, CheckCircle, Clock, Loader2, ShieldCheck } from "lucide-react";
+import { Star, ThumbsUp, Reply, ExternalLink, MessageSquare, CheckCircle, Clock, Loader2, ShieldCheck, XCircle, Flag } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { fetchReviews, fetchPendingReviews, respondToReview, approveReview, computeReviewStats, type DBReview } from "@/lib/db/reviews";
+import { fetchReviews, fetchPendingReviews, fetchFlaggedReviews, fetchRejectedReviews, respondToReview, approveReview, rejectReview, flagReview, computeReviewStats, type DBReview } from "@/lib/db/reviews";
 import { useOnboardingStore } from "@/lib/store/onboarding-store";
 import { toast } from "@/lib/utils/toast";
 
@@ -16,10 +16,13 @@ export default function ReviewsPage() {
     const { dealerId } = useOnboardingStore();
     const [reviews, setReviews] = useState<DBReview[]>([]);
     const [pendingReviews, setPendingReviews] = useState<DBReview[]>([]);
+    const [flaggedReviews, setFlaggedReviews] = useState<DBReview[]>([]);
+    const [rejectedReviews, setRejectedReviews] = useState<DBReview[]>([]);
     const [loading, setLoading] = useState(false);
     const [respondingTo, setRespondingTo] = useState<string | null>(null);
     const [responseText, setResponseText] = useState("");
     const [approvingId, setApprovingId] = useState<string | null>(null);
+    const [moderatingId, setModeratingId] = useState<string | null>(null);
 
     useEffect(() => {
         if (!dealerId) return;
@@ -27,10 +30,14 @@ export default function ReviewsPage() {
         Promise.all([
             fetchReviews(dealerId),
             fetchPendingReviews(dealerId),
+            fetchFlaggedReviews(dealerId),
+            fetchRejectedReviews(dealerId),
         ])
-            .then(([published, pending]) => {
+            .then(([published, pending, flagged, rejected]) => {
                 setReviews(published);
                 setPendingReviews(pending);
+                setFlaggedReviews(flagged);
+                setRejectedReviews(rejected);
             })
             .finally(() => setLoading(false));
         return;
@@ -40,33 +47,59 @@ export default function ReviewsPage() {
 
     const stats = computeReviewStats(displayReviews);
     const pendingCount = pendingReviews.length;
+    const flaggedCount = flaggedReviews.length;
+    const rejectedCount = rejectedReviews.length;
 
     const handleRespond = async (reviewId: string) => {
-        if (!responseText.trim()) return;
-        const result = await respondToReview(reviewId, responseText);
+        if (!dealerId || !responseText.trim()) return;
+        const result = await respondToReview(dealerId, reviewId, responseText);
         if (result.success) {
             setReviews(prev => prev.map(r =>
-                r.id === reviewId ? { ...r, dealer_response: responseText } : r
+                r.id === reviewId ? { ...r, dealer_response: responseText, admin_reply: responseText } : r
             ));
+            setPendingReviews(prev => prev.filter(r => r.id !== reviewId));
+            setFlaggedReviews(prev => prev.filter(r => r.id !== reviewId));
             setRespondingTo(null);
             setResponseText("");
         }
     };
 
     const handleApprove = async (reviewId: string) => {
+        if (!dealerId) return;
         setApprovingId(reviewId);
-        const result = await approveReview(reviewId);
+        const result = await approveReview(dealerId, reviewId);
         if (result.success) {
-            const approved = pendingReviews.find(r => r.id === reviewId);
+            const approved = pendingReviews.find(r => r.id === reviewId) ?? flaggedReviews.find(r => r.id === reviewId) ?? rejectedReviews.find(r => r.id === reviewId);
             if (approved) {
                 setPendingReviews(prev => prev.filter(r => r.id !== reviewId));
-                setReviews(prev => [{ ...approved, status: "published", is_published: true }, ...prev]);
+                setFlaggedReviews(prev => prev.filter(r => r.id !== reviewId));
+                setRejectedReviews(prev => prev.filter(r => r.id !== reviewId));
+                setReviews(prev => [{ ...approved, status: "approved", moderation_status: "approved", is_approved: true, is_published: true }, ...prev]);
             }
             toast.success("Review approved and published");
         } else {
             toast.error("Failed to approve review");
         }
         setApprovingId(null);
+    };
+
+    const handleModerate = async (review: DBReview, action: "reject" | "flag") => {
+        if (!dealerId) return;
+        setModeratingId(review.id);
+        const result = action === "reject"
+            ? await rejectReview(dealerId, review.id)
+            : await flagReview(dealerId, review.id);
+
+        if (result.success) {
+            setPendingReviews(prev => prev.filter(r => r.id !== review.id));
+            setReviews(prev => prev.filter(r => r.id !== review.id));
+            setFlaggedReviews(prev => action === "flag" ? [{ ...review, moderation_status: "flagged", status: "flagged", is_approved: false }, ...prev.filter(r => r.id !== review.id)] : prev.filter(r => r.id !== review.id));
+            setRejectedReviews(prev => action === "reject" ? [{ ...review, moderation_status: "rejected", status: "rejected", is_approved: false }, ...prev.filter(r => r.id !== review.id)] : prev.filter(r => r.id !== review.id));
+            toast.success(action === "reject" ? "Review rejected" : "Review flagged");
+        } else {
+            toast.error("Failed to update review");
+        }
+        setModeratingId(null);
     };
 
     const formatDate = (dateStr: string) => {
@@ -132,6 +165,25 @@ export default function ReviewsPage() {
                             : <ShieldCheck className="w-3.5 h-3.5 mr-1" />
                         }
                         Approve
+                    </Button>
+                    <Button
+                        size="sm"
+                        variant="outline"
+                        onClick={() => handleModerate(review, "flag")}
+                        disabled={moderatingId === review.id}
+                    >
+                        <Flag className="w-3.5 h-3.5 mr-1" />
+                        Flag
+                    </Button>
+                    <Button
+                        size="sm"
+                        variant="outline"
+                        onClick={() => handleModerate(review, "reject")}
+                        disabled={moderatingId === review.id}
+                        className="text-red-600 hover:text-red-700"
+                    >
+                        <XCircle className="w-3.5 h-3.5 mr-1" />
+                        Reject
                     </Button>
                 </div>
             ) : (
@@ -280,6 +332,22 @@ export default function ReviewsPage() {
                                     </span>
                                 )}
                             </TabsTrigger>
+                            <TabsTrigger value="flagged">
+                                Flagged
+                                {flaggedCount > 0 && (
+                                    <span className="ml-1.5 px-1.5 py-0.5 rounded-full bg-red-500/10 text-red-600 text-xs font-semibold">
+                                        {flaggedCount}
+                                    </span>
+                                )}
+                            </TabsTrigger>
+                            <TabsTrigger value="rejected">
+                                Rejected
+                                {rejectedCount > 0 && (
+                                    <span className="ml-1.5 px-1.5 py-0.5 rounded-full bg-muted text-muted-foreground text-xs font-semibold">
+                                        {rejectedCount}
+                                    </span>
+                                )}
+                            </TabsTrigger>
                         </TabsList>
 
                         <TabsContent value="published" className="space-y-4 mt-4">
@@ -313,6 +381,40 @@ export default function ReviewsPage() {
                                 </div>
                             ) : (
                                 pendingReviews.map((review) => renderReviewCard(review, true))
+                            )}
+                        </TabsContent>
+
+                        <TabsContent value="flagged" className="space-y-4 mt-4">
+                            {loading ? (
+                                <div className="flex items-center justify-center py-12 gap-2 text-muted-foreground">
+                                    <Loader2 className="w-5 h-5 animate-spin" />
+                                    <span className="text-sm">Loading reviewsâ€¦</span>
+                                </div>
+                            ) : flaggedReviews.length === 0 ? (
+                                <div className="text-center py-12 text-muted-foreground">
+                                    <Flag className="w-10 h-10 mx-auto mb-3 opacity-30" />
+                                    <p className="font-medium">No flagged reviews</p>
+                                    <p className="text-sm mt-1">Reviews needing additional moderation will appear here</p>
+                                </div>
+                            ) : (
+                                flaggedReviews.map((review) => renderReviewCard(review, true))
+                            )}
+                        </TabsContent>
+
+                        <TabsContent value="rejected" className="space-y-4 mt-4">
+                            {loading ? (
+                                <div className="flex items-center justify-center py-12 gap-2 text-muted-foreground">
+                                    <Loader2 className="w-5 h-5 animate-spin" />
+                                    <span className="text-sm">Loading reviewsâ€¦</span>
+                                </div>
+                            ) : rejectedReviews.length === 0 ? (
+                                <div className="text-center py-12 text-muted-foreground">
+                                    <XCircle className="w-10 h-10 mx-auto mb-3 opacity-30" />
+                                    <p className="font-medium">No rejected reviews</p>
+                                    <p className="text-sm mt-1">Rejected reviews are retained here for audit</p>
+                                </div>
+                            ) : (
+                                rejectedReviews.map((review) => renderReviewCard(review, true))
                             )}
                         </TabsContent>
                     </Tabs>

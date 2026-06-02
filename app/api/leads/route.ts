@@ -18,6 +18,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { createAdminClient } from '@/lib/supabase-server'
 import { sendLeadSmsToDealer } from '@/lib/services/sms-service'
 import { forwardLeadToCyepro } from '@/lib/services/cyepro-service'
+import { sendLeadNotificationEmail } from '@/lib/services/email-service'
 
 import { logger } from '@/lib/utils/logger'
 import { leadSchema, formatZodErrors } from '@/lib/validations/schemas'
@@ -95,7 +96,7 @@ export async function POST(request: NextRequest) {
         // ── Verify dealer_id exists and is active (prevent phantom leads) ─────
         const { data: dealer, error: dealerErr } = await supabase
             .from('dealers')
-            .select('id, dealership_name, phone, cyepro_api_key')
+            .select('id, dealership_name, phone, email, cyepro_api_key')
             .eq('id', dealer_id)
             .single()
 
@@ -143,6 +144,19 @@ export async function POST(request: NextRequest) {
         }
 
         // ── SMS notification to dealer (fire-and-forget) ──────────────────────
+        if (dealer.email) {
+            sendLeadNotificationEmail({
+                to: dealer.email,
+                dealerName: dealer.dealership_name,
+                customerName: name.trim(),
+                customerPhone: phone.trim(),
+                customerEmail: email?.trim(),
+                vehicleName: car_name?.trim(),
+                message: message?.trim(),
+                leadSource: safeSource,
+            }).catch(() => { /* already logged inside */ })
+        }
+
         if (dealer.phone) {
             sendLeadSmsToDealer({
                 dealerPhone: dealer.phone,

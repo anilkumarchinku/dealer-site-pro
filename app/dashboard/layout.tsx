@@ -31,6 +31,7 @@ import {
     BookOpen,
     AlertCircle,
     ArrowRight,
+    ShieldCheck,
 } from "lucide-react";
 import { dealerSiteHref } from "@/lib/utils/domain";
 import type { StyleTemplate } from "@/lib/types";
@@ -46,6 +47,10 @@ const navGroups = [
         label: "Manage",
         items: [
             { name: "Leads",       href: "/dashboard/leads",         icon: Users        },
+            { name: "Sell Requests", href: "/dashboard/sell-requests", icon: RefreshCw },
+            { name: "Service",     href: "/dashboard/service",       icon: Settings     },
+            { name: "Insurance",   href: "/dashboard/insurance",     icon: ShieldCheck  },
+            { name: "Push",        href: "/dashboard/push-notifications", icon: Bell    },
             { name: "Inventory",   href: "/dashboard/inventory",     icon: Car          },
             { name: "Add Vehicle", href: "/dashboard/inventory/add", icon: Plus         },
             { name: "Messages",    href: "/dashboard/messages",      icon: MessageSquare },

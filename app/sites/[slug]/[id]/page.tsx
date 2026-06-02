@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation';
+import type { Metadata } from 'next';
 import { CarDetailView } from '@/components/cars/CarDetailView';
 import { allCars, getCarsByMake } from '@/lib/data/cars';
 import { hydrateCarWithJsonDetails } from '@/lib/data/car-detail';
@@ -12,6 +13,14 @@ export const dynamic = 'force-dynamic';
 
 interface SiteCarDetailPageProps {
     params: Promise<{ slug: string; id: string }>;
+}
+
+function fallbackMetaTitle(carName: string, dealerName: string, location: string) {
+    return `${carName} for Sale in ${location} | ${dealerName}`.slice(0, 70);
+}
+
+function fallbackMetaDescription(carName: string, dealerName: string, location: string) {
+    return `View ${carName} price, specs, fuel type, transmission, images and enquiry options at ${dealerName} in ${location}.`.slice(0, 160);
 }
 
 function dbVehiclesToCars(vehicles: DBVehicle[]): Car[] {
@@ -42,10 +51,76 @@ function dbVehiclesToCars(vehicles: DBVehicle[]): Car[] {
         dimensions: { seatingCapacity: 5 },
         features: { keyFeatures: v.features ?? [] },
         images: { hero: '/placeholder-car.jpg', exterior: [], interior: [] },
-        meta: { viewCount: v.views },
+        meta: {
+            viewCount: v.views,
+            dataSource: 'manual',
+            sourceVehicleId: v.id,
+            registrationNumber: v.registration_number,
+            insurance: {
+                status: v.insurance_status ?? 'unknown',
+                provider: v.insurance_provider,
+                validUntil: v.insurance_valid_until,
+                quoteUrl: v.insurance_quote_url,
+                lastCheckedAt: v.insurance_last_checked_at,
+            },
+        },
         price: `₹${(v.price_paise / 100).toLocaleString('en-IN')}`,
         condition: v.condition,
+        vehicleCategory: '4w',
     }));
+}
+
+export async function generateMetadata({ params }: SiteCarDetailPageProps): Promise<Metadata> {
+    const { slug, id } = await params;
+    const dealer = await fetchDealerBySlug(slug);
+
+    if (!dealer) {
+        return {
+            title: 'Vehicle Details | DealerSite Pro',
+            description: 'Vehicle listing details powered by DealerSite Pro.',
+        };
+    }
+
+    const manualVehicle = dealer.vehicles.find(vehicle => vehicle.id === id);
+    if (manualVehicle) {
+        const carName = [manualVehicle.year, manualVehicle.make, manualVehicle.model, manualVehicle.variant].filter(Boolean).join(' ');
+        return {
+            title: manualVehicle.meta_title || fallbackMetaTitle(carName, dealer.dealership_name, dealer.location),
+            description: manualVehicle.meta_description || fallbackMetaDescription(carName, dealer.dealership_name, dealer.location),
+            openGraph: {
+                title: manualVehicle.meta_title || fallbackMetaTitle(carName, dealer.dealership_name, dealer.location),
+                description: manualVehicle.meta_description || fallbackMetaDescription(carName, dealer.dealership_name, dealer.location),
+                type: 'website',
+                siteName: dealer.dealership_name,
+                locale: 'en_IN',
+            },
+            twitter: {
+                card: 'summary',
+                title: manualVehicle.meta_title || fallbackMetaTitle(carName, dealer.dealership_name, dealer.location),
+                description: manualVehicle.meta_description || fallbackMetaDescription(carName, dealer.dealership_name, dealer.location),
+            },
+            robots: { index: true, follow: true },
+        };
+    }
+
+    const catalog = dealer.brandFilter
+        ? await getCarsByMake(dealer.brandFilter)
+        : (await Promise.all(dedupeCaseInsensitiveStrings(dealer.brands).map(brand => getCarsByMake(brand)))).flat();
+    const catalogCar = catalog.find(car => car.id === id) ?? allCars.find(car => car.id === id);
+
+    if (!catalogCar) {
+        return {
+            title: `${dealer.dealership_name} Vehicle | ${dealer.location}`,
+            description: `Browse vehicle details and contact ${dealer.dealership_name} in ${dealer.location}.`,
+        };
+    }
+
+    const carName = [catalogCar.year, catalogCar.make, catalogCar.model, catalogCar.variant].filter(Boolean).join(' ');
+    return {
+        title: fallbackMetaTitle(carName, dealer.dealership_name, dealer.location),
+        description: fallbackMetaDescription(carName, dealer.dealership_name, dealer.location),
+        robots: { index: true, follow: true },
+    };
 }
 
 export default async function SiteCarDetailPage({ params }: SiteCarDetailPageProps) {

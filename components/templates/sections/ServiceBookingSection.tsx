@@ -8,6 +8,7 @@ interface ServiceBookingSectionProps {
     dealerId?: string;
     dealerName: string;
     vehicleType?: '2w' | '3w' | '4w';
+    branches?: Array<{ city?: string; address?: string; phone?: string }>;
 }
 
 function getServiceTypes(vehicleType?: '2w' | '3w' | '4w'): string[] {
@@ -32,6 +33,12 @@ interface FormState {
     time: string;
     name: string;
     phone: string;
+    email: string;
+    vehicleMake: string;
+    vehicleModel: string;
+    kmReading: string;
+    location: string;
+    notes: string;
 }
 
 export function ServiceBookingSection({
@@ -39,8 +46,19 @@ export function ServiceBookingSection({
     dealerId,
     dealerName,
     vehicleType,
+    branches = [],
 }: ServiceBookingSectionProps) {
     const serviceTypes = getServiceTypes(vehicleType);
+    const serviceLocations = [
+        ...(branches.length > 0
+            ? branches.slice(0, 4).map((branch, index) => ({
+                name: branch.city ? `${dealerName} ${branch.city}` : `${dealerName} Branch ${index + 1}`,
+                meta: branch.address || branch.phone || 'Showroom and service touchpoint',
+            }))
+            : []),
+        { name: `${dealerName} Main Workshop`, meta: 'Showroom service desk' },
+        { name: 'Partner Service Hub', meta: 'Referral assignment available' },
+    ];
 
     const [selectedService, setSelectedService] = useState(serviceTypes[0]);
     const [form, setForm] = useState<FormState>({
@@ -49,6 +67,12 @@ export function ServiceBookingSection({
         time: TIME_SLOTS[0].value,
         name: '',
         phone: '',
+        email: '',
+        vehicleMake: '',
+        vehicleModel: '',
+        kmReading: '',
+        location: '',
+        notes: '',
     });
     const [submitting, setSubmitting] = useState(false);
     const [submitted, setSubmitted] = useState(false);
@@ -60,20 +84,62 @@ export function ServiceBookingSection({
 
     async function handleSubmit(e: React.FormEvent) {
         e.preventDefault();
+        if (!dealerId) {
+            setError('Dealer account is not ready. Please call the showroom directly.');
+            return;
+        }
         setSubmitting(true);
         setError('');
         try {
-            const message = `Service Request: ${selectedService}. Vehicle: ${form.regNumber}. Preferred: ${form.date} at ${form.time}.`;
-            const res = await fetch('/api/leads', {
+            const carServiceTypeMap: Record<string, string> = {
+                'Periodic Service': 'periodic_service',
+                'AC Service': 'ac_service',
+                'Tyre & Alignment': 'tyre_alignment',
+                'Accident Repair': 'accident_repair',
+            };
+            const vehicleServiceTypeMap: Record<string, string> = {
+                'Periodic Service': 'general_service',
+                'Oil Change': 'oil_change',
+                'Tyre Check': 'tyre',
+                'Breakdown Repair': 'repair',
+                'CNG Kit Service': 'general_service',
+                'Body Repair': 'repair',
+            };
+            const endpoint = vehicleType === '2w'
+                ? '/api/two-wheelers/service-booking'
+                : vehicleType === '3w'
+                    ? '/api/three-wheelers/service-booking'
+                    : '/api/car-service-bookings';
+
+            const basePayload = {
+                dealer_id: dealerId,
+                customer_name: form.name,
+                phone: form.phone,
+                vehicle_make: form.vehicleMake || undefined,
+                vehicle_model: form.vehicleModel || undefined,
+                km_reading: form.kmReading ? Number(form.kmReading) : undefined,
+                preferred_date: form.date,
+                preferred_slot: form.time,
+            };
+            const payload = vehicleType === '2w' || vehicleType === '3w'
+                ? {
+                    ...basePayload,
+                    service_type: vehicleServiceTypeMap[selectedService] ?? 'general_service',
+                    ...(vehicleType === '3w' ? { vehicle_reg_no: form.regNumber || undefined } : {}),
+                }
+                : {
+                    ...basePayload,
+                    email: form.email,
+                    vehicle_reg_no: form.regNumber || undefined,
+                    service_type: carServiceTypeMap[selectedService] ?? 'periodic_service',
+                    service_location: form.location || undefined,
+                    notes: form.notes,
+                };
+
+            const res = await fetch(endpoint, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    dealer_id: dealerId,
-                    name: form.name,
-                    phone: form.phone,
-                    message,
-                    lead_source: 'service_booking',
-                }),
+                body: JSON.stringify(payload),
             });
             if (!res.ok) throw new Error('Submission failed');
             setSubmitted(true);
@@ -140,6 +206,32 @@ export function ServiceBookingSection({
                             })}
                         </div>
 
+                        <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-3">
+                            {[
+                                { tier: 'Basic', price: 'From ₹1,999', detail: 'Oil, filters, diagnostics' },
+                                { tier: 'Premium', price: 'From ₹4,999', detail: 'Full inspection and AC check' },
+                                { tier: 'Repair', price: 'Quote based', detail: 'Body, tyre, battery, insurance claim' },
+                            ].map((item) => (
+                                <div key={item.tier} className="rounded-xl border border-gray-200 bg-white p-4">
+                                    <p className="text-xs font-semibold uppercase tracking-widest" style={{ color: brandColor }}>{item.tier}</p>
+                                    <p className="mt-1 text-lg font-bold text-gray-900">{item.price}</p>
+                                    <p className="mt-1 text-xs text-gray-600">{item.detail}</p>
+                                </div>
+                            ))}
+                        </div>
+
+                        <div className="mt-8 rounded-2xl border border-gray-200 bg-white p-5">
+                            <h3 className="font-bold text-gray-900">Service Locations</h3>
+                            <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                                {serviceLocations.slice(0, 4).map((location) => (
+                                    <div key={location.name} className="rounded-xl bg-gray-50 p-3">
+                                        <p className="text-sm font-semibold text-gray-900">{location.name}</p>
+                                        <p className="text-xs text-gray-600">{location.meta}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
                         {/* Why book with us */}
                         <div className="mt-8 space-y-3">
                             {[
@@ -194,8 +286,49 @@ export function ServiceBookingSection({
 
                                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                         <div>
-                                            <label className="block text-sm font-medium text-gray-700 mb-1.5">
-                                                Preferred Date <span className="text-red-500">*</span>
+                                            <label className="block text-sm font-medium text-gray-700 mb-1.5">Vehicle Make</label>
+                                            <input
+                                                type="text"
+                                                name="vehicleMake"
+                                                value={form.vehicleMake}
+                                                onChange={handleChange}
+                                                placeholder="e.g. Maruti Suzuki"
+                                                className="w-full rounded-xl border border-gray-200 px-4 py-2.5 text-sm text-gray-800 focus:outline-none focus:ring-2"
+                                                style={{ ['--tw-ring-color' as string]: brandColor }}
+                                            />
+                                        </div>
+                                        <div>
+                                            <label className="block text-sm font-medium text-gray-700 mb-1.5">Vehicle Model</label>
+                                            <input
+                                                type="text"
+                                                name="vehicleModel"
+                                                value={form.vehicleModel}
+                                                onChange={handleChange}
+                                                placeholder="e.g. Swift"
+                                                className="w-full rounded-xl border border-gray-200 px-4 py-2.5 text-sm text-gray-800 focus:outline-none focus:ring-2"
+                                                style={{ ['--tw-ring-color' as string]: brandColor }}
+                                            />
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <label className="block text-sm font-medium text-gray-700 mb-1.5">KM Reading</label>
+                                        <input
+                                            type="number"
+                                            name="kmReading"
+                                            min="0"
+                                            value={form.kmReading}
+                                            onChange={handleChange}
+                                            placeholder="Current odometer reading"
+                                            className="w-full rounded-xl border border-gray-200 px-4 py-2.5 text-sm text-gray-800 focus:outline-none focus:ring-2"
+                                            style={{ ['--tw-ring-color' as string]: brandColor }}
+                                        />
+                                    </div>
+
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                                            Preferred Date <span className="text-red-500">*</span>
                                             </label>
                                             <input
                                                 type="date"
@@ -230,6 +363,24 @@ export function ServiceBookingSection({
 
                                     <div>
                                         <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                                            Service Location
+                                        </label>
+                                        <select
+                                            name="location"
+                                            value={form.location}
+                                            onChange={handleChange}
+                                            className="w-full rounded-xl border border-gray-200 bg-white px-4 py-2.5 text-sm text-gray-800 focus:outline-none focus:ring-2"
+                                            style={{ ['--tw-ring-color' as string]: brandColor }}
+                                        >
+                                            <option value="">Assign nearest location</option>
+                                            {serviceLocations.map((location) => (
+                                                <option key={location.name} value={location.name}>{location.name}</option>
+                                            ))}
+                                        </select>
+                                    </div>
+
+                                    <div>
+                                        <label className="block text-sm font-medium text-gray-700 mb-1.5">
                                             Your Name <span className="text-red-500">*</span>
                                         </label>
                                         <input
@@ -255,6 +406,36 @@ export function ServiceBookingSection({
                                             value={form.phone}
                                             onChange={handleChange}
                                             placeholder="10-digit mobile number"
+                                            className="w-full rounded-xl border border-gray-200 px-4 py-2.5 text-sm text-gray-800 focus:outline-none focus:ring-2"
+                                            style={{ ['--tw-ring-color' as string]: brandColor }}
+                                        />
+                                    </div>
+
+                                    <div>
+                                        <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                                            Email
+                                        </label>
+                                        <input
+                                            type="email"
+                                            name="email"
+                                            value={form.email}
+                                            onChange={handleChange}
+                                            placeholder="you@example.com"
+                                            className="w-full rounded-xl border border-gray-200 px-4 py-2.5 text-sm text-gray-800 focus:outline-none focus:ring-2"
+                                            style={{ ['--tw-ring-color' as string]: brandColor }}
+                                        />
+                                    </div>
+
+                                    <div>
+                                        <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                                            Preferred Location / Notes
+                                        </label>
+                                        <textarea
+                                            name="notes"
+                                            rows={3}
+                                            value={form.notes}
+                                            onChange={(event) => setForm((prev) => ({ ...prev, notes: event.target.value }))}
+                                            placeholder="Preferred hub, pickup request, service concern"
                                             className="w-full rounded-xl border border-gray-200 px-4 py-2.5 text-sm text-gray-800 focus:outline-none focus:ring-2"
                                             style={{ ['--tw-ring-color' as string]: brandColor }}
                                         />

@@ -166,6 +166,7 @@ export async function POST(request: NextRequest) {
         review_text:    r.text?.slice(0, 500) || null,
         car_purchased:  null,
         is_approved:    true,
+        moderation_status: 'approved',
         source:         'google',
         external_id:    `${placeId}_${r.time}_${i}`,  // unique per review
         created_at:     new Date(r.time * 1000).toISOString(),

@@ -16,6 +16,7 @@ interface Props {
 interface ParsedRow {
     make: string
     model: string
+    registration_number?: string
     year: number
     price_paise: number
     mileage_km?: number
@@ -27,18 +28,34 @@ interface ParsedRow {
     _error?: string
 }
 
-const EXPECTED_HEADERS = ['make', 'model', 'year', 'price', 'mileage', 'color', 'transmission', 'fuel_type', 'condition']
+const EXPECTED_HEADERS = ['make', 'model', 'registration_number', 'year', 'price', 'mileage', 'color', 'transmission', 'fuel_type', 'condition']
 
 function parseCSV(text: string): ParsedRow[] {
     const lines = text.trim().split('\n').filter(l => l.trim())
     if (lines.length < 2) return []
 
-    // skip header row
-    const dataLines = lines[0].toLowerCase().includes('make') ? lines.slice(1) : lines
+    const hasHeader = lines[0].toLowerCase().includes('make')
+    const headers = hasHeader
+        ? lines[0].split(',').map(c => c.trim().replace(/^"|"$/g, '').toLowerCase())
+        : EXPECTED_HEADERS
+    const dataLines = hasHeader ? lines.slice(1) : lines
+    const valueFor = (cols: string[], name: string, legacyIndex: number) => {
+        const headerIndex = headers.indexOf(name)
+        return cols[headerIndex >= 0 ? headerIndex : legacyIndex]
+    }
 
-    return dataLines.map((line, i) => {
+    return dataLines.map((line) => {
         const cols = line.split(',').map(c => c.trim().replace(/^"|"$/g, ''))
-        const [make, model, yearStr, priceStr, mileageStr, color, transmission, fuel_type, condition] = cols
+        const make = valueFor(cols, 'make', 0)
+        const model = valueFor(cols, 'model', 1)
+        const registrationNumber = valueFor(cols, 'registration_number', -1)
+        const yearStr = valueFor(cols, 'year', 2)
+        const priceStr = valueFor(cols, 'price', 3)
+        const mileageStr = valueFor(cols, 'mileage', 4)
+        const color = valueFor(cols, 'color', 5)
+        const transmission = valueFor(cols, 'transmission', 6)
+        const fuel_type = valueFor(cols, 'fuel_type', 7)
+        const condition = valueFor(cols, 'condition', 8)
         const errors: string[] = []
 
         if (!make) errors.push('make missing')
@@ -56,6 +73,7 @@ function parseCSV(text: string): ParsedRow[] {
         return {
             make: make ?? '',
             model: model ?? '',
+            registration_number: registrationNumber?.trim().toUpperCase() || undefined,
             year,
             price_paise: Math.round(price * 100),
             mileage_km: mileageStr ? parseInt(mileageStr) || undefined : undefined,
@@ -69,10 +87,10 @@ function parseCSV(text: string): ParsedRow[] {
     })
 }
 
-const SAMPLE_CSV = `make,model,year,price,mileage,color,transmission,fuel_type,condition
-Maruti Suzuki,Swift,2022,650000,25000,Red,Manual,Petrol,used
-Honda,City,2021,900000,35000,White,Automatic,Petrol,used
-Hyundai,Creta,2020,1100000,42000,Blue,Automatic,Diesel,certified_pre_owned`
+const SAMPLE_CSV = `make,model,registration_number,year,price,mileage,color,transmission,fuel_type,condition
+Maruti Suzuki,Swift,TS09AB1234,2022,650000,25000,Red,Manual,Petrol,used
+Honda,City,TS10CD5678,2021,900000,35000,White,Automatic,Petrol,used
+Hyundai,Creta,TS11EF9012,2020,1100000,42000,Blue,Automatic,Diesel,certified_pre_owned`
 
 export default function BulkUploadModal({ isOpen, onClose, dealerId, onSuccess }: Props) {
     const [rows, setRows] = useState<ParsedRow[]>([])
@@ -115,6 +133,7 @@ export default function BulkUploadModal({ isOpen, onClose, dealerId, onSuccess }
             dealer_id: dealerId,
             make: r.make,
             model: r.model,
+            registration_number: r.registration_number,
             year: r.year,
             price_paise: r.price_paise,
             mileage_km: r.mileage_km,

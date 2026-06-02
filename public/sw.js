@@ -87,12 +87,25 @@ self.addEventListener('fetch', (event) => {
 // ── Push Notifications (future) ───────────────────────────────────────────────
 self.addEventListener('push', (event) => {
     if (!event.data) return;
-    const { title, body, icon } = event.data.json();
+    const { title, body, icon, url } = event.data.json();
     event.waitUntil(
         self.registration.showNotification(title, {
             body,
             icon: icon || '/favicon.svg',
             badge: '/favicon.svg',
+            data: { url: url || '/' },
+        })
+    );
+});
+
+self.addEventListener('notificationclick', (event) => {
+    event.notification.close();
+    const url = event.notification.data?.url || '/';
+    event.waitUntil(
+        self.clients.matchAll({ type: 'window', includeUncontrolled: true }).then(clients => {
+            const existing = clients.find(client => client.url.includes(url));
+            if (existing) return existing.focus();
+            return self.clients.openWindow(url);
         })
     );
 });

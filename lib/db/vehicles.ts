@@ -7,6 +7,7 @@ export interface DBVehicle {
     id: string;
     dealer_id: string;
     vin?: string;
+    registration_number?: string;
     make: string;
     model: string;
     variant?: string;
@@ -19,6 +20,13 @@ export interface DBVehicle {
     fuel_type?: string;
     features: string[];
     description?: string;
+    meta_title?: string;
+    meta_description?: string;
+    insurance_status?: "unknown" | "active" | "expired" | "expiring_soon";
+    insurance_provider?: string;
+    insurance_valid_until?: string;
+    insurance_quote_url?: string;
+    insurance_last_checked_at?: string;
     condition: "new" | "used" | "certified_pre_owned";
     status: "available" | "reserved" | "sold" | "inactive";
     views: number;
@@ -28,6 +36,7 @@ export interface DBVehicle {
 export interface AddVehiclePayload {
     dealer_id: string;
     vin?: string;
+    registration_number?: string;
     make: string;
     model: string;
     variant?: string;
@@ -40,8 +49,19 @@ export interface AddVehiclePayload {
     fuel_type?: string;
     features?: string[];
     description?: string;
+    meta_title?: string;
+    meta_description?: string;
+    insurance_status?: "unknown" | "active" | "expired" | "expiring_soon";
+    insurance_provider?: string;
+    insurance_valid_until?: string;
+    insurance_quote_url?: string;
+    insurance_last_checked_at?: string;
     condition?: "new" | "used" | "certified_pre_owned";
 }
+
+export type UpdateVehiclePayload = Partial<Omit<AddVehiclePayload, "dealer_id">> & {
+    status?: DBVehicle["status"];
+};
 
 // ── Fetch vehicles for a dealer with pagination ───────────────
 export async function fetchVehicles(
@@ -67,6 +87,27 @@ export async function fetchVehicles(
         return { vehicles: [], total: 0 };
     }
     return { vehicles: (data ?? []) as unknown as DBVehicle[], total: count ?? 0 };
+}
+
+export async function fetchVehicleById(
+    dealerId: string,
+    id: string
+): Promise<{ vehicle: DBVehicle | null; error?: string }> {
+    if (!isSupabaseReady()) return { vehicle: null, error: "Supabase not configured" };
+
+    const { data, error } = await supabase
+        .from("vehicles")
+        .select("*")
+        .eq("dealer_id", dealerId)
+        .eq("id", id)
+        .maybeSingle();
+
+    if (error) {
+        console.error("[fetchVehicleById]", error.message);
+        return { vehicle: null, error: error.message };
+    }
+
+    return { vehicle: data as unknown as DBVehicle | null };
 }
 
 // ── Add a single vehicle ─────────────────────────────────────
@@ -117,6 +158,35 @@ export async function bulkAddVehicles(
         return { success: false, count: 0, errors: [error.message] };
     }
     return { success: true, count: data?.length ?? 0, errors: [] };
+}
+
+export async function updateVehicle(
+    id: string,
+    dealerId: string,
+    payload: UpdateVehiclePayload
+): Promise<{ success: boolean; error?: string }> {
+    if (!isSupabaseReady()) return { success: false, error: "Supabase not configured" };
+
+    const { error } = await supabase
+        .from("vehicles")
+        .update(payload as Database["public"]["Tables"]["vehicles"]["Update"])
+        .eq("id", id)
+        .eq("dealer_id", dealerId);
+
+    if (error) {
+        console.error("[updateVehicle]", error.message);
+        return { success: false, error: error.message };
+    }
+
+    return { success: true };
+}
+
+export async function updateVehicleStatus(
+    id: string,
+    dealerId: string,
+    status: DBVehicle["status"]
+): Promise<{ success: boolean; error?: string }> {
+    return updateVehicle(id, dealerId, { status });
 }
 
 // ── Delete a vehicle ─────────────────────────────────────────

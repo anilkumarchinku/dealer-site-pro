@@ -155,6 +155,7 @@ export interface CarMeta {
     lastUpdated?: string;       // ISO date string
     dataSource?: string;       // e.g., "CarDekho", "Official"
     sourceVehicleId?: string;   // Original inventory id for external/manual stock overrides
+    registrationNumber?: string;
     isAvailable?: boolean;      // Currently in production
     isDiscontinued?: boolean;
     launchDate?: string;       // ISO date string
@@ -163,6 +164,13 @@ export interface CarMeta {
     compareCount?: number;
     scrapedAt?: string;
     sourceUrl?: string;
+    insurance?: {
+        status?: 'unknown' | 'active' | 'expired' | 'expiring_soon';
+        provider?: string;
+        validUntil?: string;
+        quoteUrl?: string;
+        lastCheckedAt?: string;
+    };
 }
 
 /**

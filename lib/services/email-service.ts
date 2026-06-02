@@ -73,6 +73,95 @@ async function sendEmail(payload: SendEmailPayload): Promise<{ success: boolean;
 
 // ── Shared types ─────────────────────────────────────────────────────────────
 
+export async function sendLeadNotificationEmail(params: {
+    to: string
+    dealerName: string
+    customerName: string
+    customerPhone: string
+    customerEmail?: string
+    vehicleName?: string
+    message?: string
+    leadSource?: string
+}) {
+    const vehicle = params.vehicleName ? `<li><strong>Vehicle:</strong> ${esc(params.vehicleName)}</li>` : ''
+    const email = params.customerEmail ? `<li><strong>Email:</strong> ${esc(params.customerEmail)}</li>` : ''
+    const message = params.message ? `<p><strong>Message:</strong><br/>${esc(params.message)}</p>` : ''
+
+    return sendEmail({
+        to: params.to,
+        subject: `New ${params.leadSource ?? 'buyer'} inquiry - ${params.dealerName}`,
+        html: `<!DOCTYPE html>
+<html>
+<body style="font-family:Arial,sans-serif;line-height:1.6;color:#333;max-width:600px;margin:0 auto;padding:20px">
+  <h2>New buyer inquiry</h2>
+  <p>A customer submitted an inquiry on <strong>${esc(params.dealerName)}</strong>.</p>
+  <ul>
+    <li><strong>Name:</strong> ${esc(params.customerName)}</li>
+    <li><strong>Phone:</strong> ${esc(params.customerPhone)}</li>
+    ${email}
+    ${vehicle}
+    <li><strong>Source:</strong> ${esc(params.leadSource ?? 'website')}</li>
+  </ul>
+  ${message}
+  <p>Follow up from the Leads dashboard or contact the customer directly.</p>
+</body>
+</html>`,
+    })
+}
+
+export async function sendSellRequestNotificationEmail(params: {
+    to: string
+    sellerName: string
+    sellerPhone: string
+    sellerEmail?: string
+    vehicleName: string
+    city?: string
+}) {
+    const email = params.sellerEmail ? `<li><strong>Email:</strong> ${esc(params.sellerEmail)}</li>` : ''
+    const city = params.city ? `<li><strong>City:</strong> ${esc(params.city)}</li>` : ''
+
+    return sendEmail({
+        to: params.to,
+        subject: `New sell request - ${params.vehicleName}`,
+        html: `<!DOCTYPE html>
+<html>
+<body style="font-family:Arial,sans-serif;line-height:1.6;color:#333;max-width:600px;margin:0 auto;padding:20px">
+  <h2>New sell request</h2>
+  <p>A seller submitted a vehicle for admin review.</p>
+  <ul>
+    <li><strong>Seller:</strong> ${esc(params.sellerName)}</li>
+    <li><strong>Phone:</strong> ${esc(params.sellerPhone)}</li>
+    ${email}
+    <li><strong>Vehicle:</strong> ${esc(params.vehicleName)}</li>
+    ${city}
+  </ul>
+  <p>Review it from the Sell Requests dashboard.</p>
+</body>
+</html>`,
+    })
+}
+
+export async function sendSellRequestConfirmationEmail(params: {
+    to: string
+    sellerName: string
+    vehicleName: string
+}) {
+    return sendEmail({
+        to: params.to,
+        subject: `We received your ${params.vehicleName} sell request`,
+        html: `<!DOCTYPE html>
+<html>
+<body style="font-family:Arial,sans-serif;line-height:1.6;color:#333;max-width:600px;margin:0 auto;padding:20px">
+  <h2>Sell request received</h2>
+  <p>Hi ${esc(params.sellerName)},</p>
+  <p>We received your request to sell <strong>${esc(params.vehicleName)}</strong>.</p>
+  <p>The dealership team will review your details and contact you for the next step. If the listing is approved, it can be made live by the admin.</p>
+  <p>Best regards,<br/><strong>DealerSite Pro</strong></p>
+</body>
+</html>`,
+    })
+}
+
 export interface EmailParams {
     to: string
     dealerName: string

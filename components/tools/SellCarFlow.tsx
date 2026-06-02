@@ -7,13 +7,13 @@
 
 'use client';
 
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
 import {
     Select,
@@ -36,6 +36,8 @@ import {
     ArrowRight,
     ArrowLeft,
     Sparkles,
+    Loader2,
+    AlertCircle,
 } from 'lucide-react';
 import { CAR_MAKES } from '@/lib/data/cars-static';
 
@@ -68,6 +70,8 @@ function estimateValue(originalPrice: number, year: number, kmDriven: number, ow
 }
 
 export function SellCarFlow() {
+    const searchParams = useSearchParams();
+    const dealerId = searchParams.get('dealerId');
     const [step, setStep] = useState(1);
 
     // Step 1: Car Details
@@ -82,9 +86,19 @@ export function SellCarFlow() {
     // Step 2: Schedule
     const [city, setCity] = useState('');
     const [address, setAddress] = useState('');
+    const [sellerName, setSellerName] = useState('');
     const [phoneNumber, setPhone] = useState('');
+    const [sellerEmail, setSellerEmail] = useState('');
+    const [registrationNumber, setRegistrationNumber] = useState('');
+    const [transmission, setTransmission] = useState('Manual');
+    const [variant, setVariant] = useState('');
+    const [photoLinks, setPhotoLinks] = useState('');
+    const [notes, setNotes] = useState('');
     const [selectedDate, setSelectedDate] = useState('');
     const [selectedSlot, setSelectedSlot] = useState('');
+    const [submitStatus, setSubmitStatus] = useState<'idle' | 'submitting' | 'submitted' | 'error'>('idle');
+    const [submitError, setSubmitError] = useState('');
+    const [requestId, setRequestId] = useState('');
 
     const valuation = estimateValue(originalPrice, Number(year), kmDriven, owners, fuelType);
 
@@ -99,7 +113,58 @@ export function SellCarFlow() {
     });
 
     const canProceedStep1 = brand && year && originalPrice > 0 && kmDriven >= 0;
-    const canProceedStep2 = city && address && phoneNumber && selectedDate && selectedSlot;
+    const canProceedStep2 = sellerName && phoneNumber && city && address && selectedDate && selectedSlot;
+    const photoUrls = useMemo(() => photoLinks
+        .split(/\r?\n|,/)
+        .map(link => link.trim())
+        .filter(Boolean), [photoLinks]);
+
+    const submitSellRequest = async () => {
+        if (!canProceedStep2 || submitStatus === 'submitting') return;
+
+        setSubmitStatus('submitting');
+        setSubmitError('');
+
+        const res = await fetch('/api/sell-requests', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                dealer_id: dealerId,
+                seller_name: sellerName,
+                seller_phone: phoneNumber,
+                seller_email: sellerEmail,
+                make: brand,
+                model,
+                variant,
+                year: Number(year),
+                fuel_type: fuelType,
+                transmission,
+                registration_number: registrationNumber,
+                mileage_km: kmDriven,
+                owner_count: owners,
+                expected_price_paise: Math.round(originalPrice * 100),
+                city,
+                address,
+                preferred_date: selectedDate,
+                preferred_slot: selectedSlot,
+                estimated_low_paise: Math.round(valuation.low * 100),
+                estimated_high_paise: Math.round(valuation.high * 100),
+                photo_urls: photoUrls,
+                notes,
+            }),
+        });
+
+        const data = await res.json().catch(() => null);
+        if (!res.ok) {
+            setSubmitStatus('error');
+            setSubmitError(data?.error ?? 'Could not submit your request. Please try again.');
+            return;
+        }
+
+        setRequestId(data.requestId ?? '');
+        setSubmitStatus('submitted');
+        setStep(3);
+    };
 
     return (
         <div className="bg-background min-h-screen">
@@ -177,6 +242,15 @@ export function SellCarFlow() {
                                     />
                                 </div>
 
+                                <div>
+                                    <Label className="text-sm font-medium mb-2 block">Variant</Label>
+                                    <Input
+                                        placeholder="e.g. VXi, SX, ZX"
+                                        value={variant}
+                                        onChange={(e) => setVariant(e.target.value)}
+                                    />
+                                </div>
+
                                 <div className="grid grid-cols-2 gap-4">
                                     <div>
                                         <Label className="text-sm font-medium mb-2 block">Year</Label>
@@ -199,6 +273,29 @@ export function SellCarFlow() {
                                                 ))}
                                             </SelectContent>
                                         </Select>
+                                    </div>
+                                </div>
+
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <Label className="text-sm font-medium mb-2 block">Transmission</Label>
+                                        <Select value={transmission} onValueChange={setTransmission}>
+                                            <SelectTrigger><SelectValue /></SelectTrigger>
+                                            <SelectContent>
+                                                {['Manual', 'Automatic', 'AMT', 'CVT', 'DCT'].map((t) => (
+                                                    <SelectItem key={t} value={t}>{t}</SelectItem>
+                                                ))}
+                                            </SelectContent>
+                                        </Select>
+                                    </div>
+                                    <div>
+                                        <Label className="text-sm font-medium mb-2 block">Number Plate</Label>
+                                        <Input
+                                            placeholder="e.g. TS09AB1234"
+                                            value={registrationNumber}
+                                            onChange={(e) => setRegistrationNumber(e.target.value.toUpperCase())}
+                                            maxLength={20}
+                                        />
                                     </div>
                                 </div>
 
@@ -298,7 +395,38 @@ export function SellCarFlow() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <Card>
                             <CardContent className="p-6 space-y-4">
-                                <h3 className="text-base font-semibold">Schedule Free Inspection</h3>
+                                <h3 className="text-base font-semibold">Contact & Inspection Details</h3>
+
+                                <div>
+                                    <Label className="text-sm font-medium mb-2 block">Name</Label>
+                                    <Input
+                                        placeholder="Your name"
+                                        value={sellerName}
+                                        onChange={(e) => setSellerName(e.target.value)}
+                                    />
+                                </div>
+
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <Label className="text-sm font-medium mb-2 block">Phone Number</Label>
+                                        <Input
+                                            type="tel"
+                                            placeholder="10 digit mobile number"
+                                            value={phoneNumber}
+                                            onChange={(e) => setPhone(e.target.value.replace(/\D/g, '').slice(0, 10))}
+                                            maxLength={10}
+                                        />
+                                    </div>
+                                    <div>
+                                        <Label className="text-sm font-medium mb-2 block">Email</Label>
+                                        <Input
+                                            type="email"
+                                            placeholder="you@example.com"
+                                            value={sellerEmail}
+                                            onChange={(e) => setSellerEmail(e.target.value)}
+                                        />
+                                    </div>
+                                </div>
 
                                 <div>
                                     <Label className="text-sm font-medium mb-2 block">City</Label>
@@ -318,17 +446,6 @@ export function SellCarFlow() {
                                         placeholder="Enter your full address"
                                         value={address}
                                         onChange={(e) => setAddress(e.target.value)}
-                                    />
-                                </div>
-
-                                <div>
-                                    <Label className="text-sm font-medium mb-2 block">Phone Number</Label>
-                                    <Input
-                                        type="tel"
-                                        placeholder="Enter your mobile number"
-                                        value={phoneNumber}
-                                        onChange={(e) => setPhone(e.target.value)}
-                                        maxLength={10}
                                     />
                                 </div>
 
@@ -369,6 +486,28 @@ export function SellCarFlow() {
                                             </button>
                                         ))}
                                     </div>
+                                </div>
+
+                                <div>
+                                    <Label className="text-sm font-medium mb-2 block">Photo Links</Label>
+                                    <textarea
+                                        rows={3}
+                                        placeholder="Paste image links, one per line"
+                                        value={photoLinks}
+                                        onChange={(e) => setPhotoLinks(e.target.value)}
+                                        className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
+                                    />
+                                </div>
+
+                                <div>
+                                    <Label className="text-sm font-medium mb-2 block">Notes</Label>
+                                    <textarea
+                                        rows={3}
+                                        placeholder="Service history, condition, loan, insurance, or anything the buyer should know"
+                                        value={notes}
+                                        onChange={(e) => setNotes(e.target.value)}
+                                        className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
+                                    />
                                 </div>
                             </CardContent>
                         </Card>
@@ -412,12 +551,19 @@ export function SellCarFlow() {
                                 </Button>
                                 <Button
                                     className="flex-1"
-                                    disabled={!canProceedStep2}
-                                    onClick={() => setStep(3)}
+                                    disabled={!canProceedStep2 || submitStatus === 'submitting'}
+                                    onClick={submitSellRequest}
                                 >
-                                    Confirm <ArrowRight className="w-4 h-4 ml-1" />
+                                    {submitStatus === 'submitting' ? <Loader2 className="w-4 h-4 mr-1 animate-spin" /> : null}
+                                    Submit <ArrowRight className="w-4 h-4 ml-1" />
                                 </Button>
                             </div>
+                            {submitStatus === 'error' && (
+                                <div className="flex items-start gap-2 rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-700">
+                                    <AlertCircle className="mt-0.5 h-4 w-4 shrink-0" />
+                                    <span>{submitError}</span>
+                                </div>
+                            )}
                         </div>
                     </div>
                 )}
@@ -431,10 +577,15 @@ export function SellCarFlow() {
                                     <Check className="w-8 h-8 text-emerald-500" />
                                 </div>
 
-                                <h2 className="text-2xl font-bold mb-2">Inspection Scheduled!</h2>
+                                <h2 className="text-2xl font-bold mb-2">Sell Request Submitted!</h2>
                                 <p className="text-muted-foreground mb-6">
-                                    Our expert will visit you for a free car inspection.
+                                    The admin team will review the details and contact you offline.
                                 </p>
+                                {requestId && (
+                                    <p className="mb-6 rounded-lg bg-muted px-3 py-2 text-xs text-muted-foreground">
+                                        Request ID: {requestId}
+                                    </p>
+                                )}
 
                                 <Card className="bg-muted/30 mb-6">
                                     <CardContent className="p-5 text-left space-y-3">
@@ -463,6 +614,13 @@ export function SellCarFlow() {
                                             <span className="text-muted-foreground">Phone:</span>
                                             <span className="font-medium">{phoneNumber}</span>
                                         </div>
+                                        {registrationNumber && (
+                                            <div className="flex items-center gap-2 text-sm">
+                                                <Car className="w-4 h-4 text-muted-foreground" />
+                                                <span className="text-muted-foreground">Plate:</span>
+                                                <span className="font-medium">{registrationNumber}</span>
+                                            </div>
+                                        )}
                                         <Separator />
                                         <div className="flex items-center justify-between">
                                             <span className="text-sm font-semibold">Estimated Offer</span>
@@ -475,10 +633,10 @@ export function SellCarFlow() {
                                     <h4 className="text-sm font-semibold">What happens next?</h4>
                                     <div className="space-y-2.5">
                                         {[
-                                            'Our expert will inspect your car at the scheduled time',
-                                            'You will receive a final offer within 30 minutes of inspection',
-                                            'Accept the offer and get paid within 24 hours',
-                                            'We handle all paperwork including RC transfer',
+                                            'Admin reviews your car details and photos',
+                                            'A team member contacts you to verify condition and pricing',
+                                            'If approved, the listing can be published from the dashboard',
+                                            'You receive an offline confirmation from the team',
                                         ].map((text, i) => (
                                             <div key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
                                                 <div className="w-5 h-5 rounded-full bg-primary/10 text-primary flex items-center justify-center text-[10px] font-bold shrink-0 mt-0.5">

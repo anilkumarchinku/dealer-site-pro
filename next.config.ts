@@ -8,6 +8,7 @@ const nextConfig: NextConfig = {
     typescript: {
         ignoreBuildErrors: false,
     },
+    outputFileTracingRoot: process.cwd(),
     // Exclude large static image directories from serverless function bundles.
     // These are served by Vercel's CDN as static assets — they must NOT be
     // traced into the function, or it blows past the 300 MB limit.

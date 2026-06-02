@@ -454,7 +454,7 @@ export function LuxuryTemplate({
 
                     {/* Service Booking */}
                     <div id="service-section">
-                        <ServiceBookingSection brandColor={brandAccent} dealerId={dealerId} dealerName={dealerName} vehicleType={vehicleType} />
+                        <ServiceBookingSection brandColor={brandAccent} dealerId={dealerId} dealerName={dealerName} vehicleType={vehicleType} branches={branches} />
                     </div>
 
                     {/* FAQ Section */}

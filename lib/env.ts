@@ -34,6 +34,8 @@ export type OptionalEnvKey =
     | 'GODADDY_API_URL'
     | 'GODADDY_API_KEY'
     | 'GODADDY_API_SECRET'
+    | 'FASTAG_RECHARGE_URL'
+    | 'FINANCE_PRECHECK_URL'
     | 'GOOGLE_PLACES_API_KEY'
     | 'META_IG_USER_ID'
     | 'META_PAGE_ACCESS_TOKEN'
@@ -49,6 +51,7 @@ export type OptionalEnvKey =
     | 'NEXT_PUBLIC_SITE_URL'
     | 'NEXT_PUBLIC_SUPPORT_WHATSAPP'
     | 'NEXT_PUBLIC_USE_SUBDOMAIN'
+    | 'NEXT_PUBLIC_VAPID_PUBLIC_KEY'
     | 'RAPIDOR_API_KEY'
     | 'RC_LOOKUP_PROVIDER'
     | 'RAZORPAY_PREMIUM_PLAN_ID'
@@ -62,6 +65,8 @@ export type OptionalEnvKey =
     | 'TWITTER_ACCESS_SECRET'
     | 'UPSTASH_REDIS_REST_TOKEN'
     | 'UPSTASH_REDIS_REST_URL'
+    | 'VAPID_PRIVATE_KEY'
+    | 'VAPID_SUBJECT'
     | 'VERCEL_TEAM_ID'
     | 'VERCEL_MAIN_PROJECT_ID'
     | 'VERCEL_TOKEN'
@@ -194,4 +199,6 @@ export const env = {
     get webhookSecret() { return getOptionalEnv('RAZORPAY_WEBHOOK_SECRET') ?? '' },
     get cnameTarget() { return getOptionalEnv('NEXT_PUBLIC_CNAME_TARGET') ?? 'cname.vercel-dns.com' },
     get supportWhatsapp() { return getOptionalEnv('NEXT_PUBLIC_SUPPORT_WHATSAPP') },
+    get financePrecheckUrl() { return getOptionalEnv('FINANCE_PRECHECK_URL') },
+    get fastagRechargeUrl() { return getOptionalEnv('FASTAG_RECHARGE_URL') },
 }

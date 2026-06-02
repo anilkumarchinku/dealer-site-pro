@@ -258,6 +258,13 @@ export interface Database {
           engine_cc: number | null
           features: string[]
           description: string | null
+          meta_title: string | null
+          meta_description: string | null
+          insurance_status: 'unknown' | 'active' | 'expired' | 'expiring_soon' | null
+          insurance_provider: string | null
+          insurance_valid_until: string | null
+          insurance_quote_url: string | null
+          insurance_last_checked_at: string | null
           condition: 'new' | 'used' | 'certified_pre_owned'
           status: 'available' | 'reserved' | 'sold' | 'inactive'
           views: number

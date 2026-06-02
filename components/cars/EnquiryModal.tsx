@@ -66,6 +66,7 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
         name: '',
         email: '',
         phone: '',
+        preferredDate: '',
         message: '',
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -99,6 +100,10 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
 
         try {
             if (!dealerId) throw new Error('Dealer not found');
+            const messageParts = [
+                formData.preferredDate ? `Preferred test drive date: ${formData.preferredDate}` : '',
+                formData.message.trim(),
+            ].filter(Boolean);
             const res = await fetch('/api/leads', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -107,7 +112,7 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
                     name: formData.name.trim(),
                     phone: formData.phone.trim(),
                     email: formData.email.trim() || undefined,
-                    message: formData.message.trim() || undefined,
+                    message: messageParts.join('\n\n') || undefined,
                     car_id: car?.id ?? undefined,
                     car_name: car ? `${car.make} ${car.model}` : undefined,
                     lead_source: 'car_enquiry',
@@ -129,7 +134,7 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
         // Reset after 3 seconds
         setTimeout(() => {
             setIsSubmitted(false);
-            setFormData({ name: '', email: '', phone: '', message: '' });
+            setFormData({ name: '', email: '', phone: '', preferredDate: '', message: '' });
             setFormErrors({});
             onOpenChange(false);
         }, 3000);
@@ -518,6 +523,16 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
                                             required
                                         />
                                         {formErrors.email && <p className="text-xs text-red-500 mt-1">{formErrors.email}</p>}
+                                    </div>
+                                    <div>
+                                        <Label htmlFor="preferredDate">Preferred Test Drive Date (Optional)</Label>
+                                        <Input
+                                            id="preferredDate"
+                                            appearance="light"
+                                            type="date"
+                                            value={formData.preferredDate}
+                                            onChange={(e) => setFormData({ ...formData, preferredDate: e.target.value })}
+                                        />
                                     </div>
                                     <div>
                                         <Label htmlFor="message">Message (Optional)</Label>

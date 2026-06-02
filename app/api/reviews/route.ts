@@ -17,22 +17,65 @@ import { rateLimitOrNull } from '@/lib/utils/rate-limiter'
 import { logger } from '@/lib/utils/logger'
 
 function getSupabase() {
-    return createAdminClient()
+    // dealer_reviews moderation columns are added by a new migration; generated DB types may lag locally.
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    return createAdminClient() as any
+}
+
+const REVIEW_STATUSES = ['pending', 'approved', 'rejected', 'flagged'] as const
+type ReviewStatus = typeof REVIEW_STATUSES[number]
+
+function isReviewStatus(value: string): value is ReviewStatus {
+    return (REVIEW_STATUSES as readonly string[]).includes(value)
 }
 
 // ── GET: fetch approved reviews for a dealer ─────────────────────────────────
 export async function GET(request: NextRequest) {
     const dealerId = request.nextUrl.searchParams.get('dealer_id')
+    const status = request.nextUrl.searchParams.get('status')
     if (!dealerId) {
         return NextResponse.json({ error: 'dealer_id required' }, { status: 400 })
+    }
+
+    if (status) {
+        if (status !== 'all' && !isReviewStatus(status)) {
+            return NextResponse.json({ error: 'Invalid status' }, { status: 400 })
+        }
+
+        const { user, supabase: routeSupabase, errorResponse } = await requireAuth()
+        if (errorResponse) return errorResponse
+
+        const { errorResponse: ownerErr } = await requireDealerOwnership(routeSupabase, user.id, dealerId)
+        if (ownerErr) return ownerErr
+
+        const supabase = getSupabase()
+        let query = supabase
+            .from('dealer_reviews')
+            .select('id, dealer_id, reviewer_name, reviewer_phone, rating, review_text, car_purchased, is_approved, moderation_status, admin_reply, replied_at, created_at, updated_at, source')
+            .eq('dealer_id', dealerId)
+            .order('created_at', { ascending: false })
+            .limit(100)
+
+        if (status !== 'all') {
+            query = query.eq('moderation_status', status)
+        }
+
+        const { data, error } = await query
+        if (error) {
+            logger.error('Reviews moderation fetch error:', error)
+            return NextResponse.json({ error: 'Failed to fetch reviews' }, { status: 500 })
+        }
+
+        return NextResponse.json({ reviews: data ?? [] })
     }
 
     const supabase = getSupabase()
     const { data, error } = await supabase
         .from('dealer_reviews')
-        .select('id, reviewer_name, rating, review_text, car_purchased, created_at, source')
+        .select('id, reviewer_name, rating, review_text, car_purchased, created_at, source, admin_reply')
         .eq('dealer_id', dealerId)
         .eq('is_approved', true)
+        .eq('moderation_status', 'approved')
         .order('created_at', { ascending: false })
         .limit(20)
 
@@ -57,9 +100,12 @@ export async function PATCH(request: NextRequest) {
     const body = await request.json().catch(() => null)
     if (!body) return NextResponse.json({ error: 'Invalid JSON' }, { status: 400 })
 
-    const { review_id, dealer_id } = body
+    const { review_id, dealer_id, action, admin_reply } = body
     if (!review_id || !dealer_id) {
         return NextResponse.json({ error: 'review_id and dealer_id required' }, { status: 400 })
+    }
+    if (!['approve', 'reject', 'flag', 'respond'].includes(action)) {
+        return NextResponse.json({ error: 'Invalid action' }, { status: 400 })
     }
 
     const { errorResponse: ownerErr } = await requireDealerOwnership(routeSupabase, user.id, dealer_id)
@@ -81,7 +127,13 @@ export async function PATCH(request: NextRequest) {
 
     const { error } = await supabase
         .from('dealer_reviews')
-        .update({ is_approved: true })
+        .update({
+            is_approved: action === 'approve' || action === 'respond',
+            moderation_status: action === 'approve' || action === 'respond' ? 'approved' : action === 'reject' ? 'rejected' : 'flagged',
+            admin_reply: typeof admin_reply === 'string' ? admin_reply.trim().slice(0, 1000) : undefined,
+            replied_at: typeof admin_reply === 'string' && admin_reply.trim() ? new Date().toISOString() : undefined,
+            updated_at: new Date().toISOString(),
+        })
         .eq('id', review_id)
 
     if (error) {
@@ -144,6 +196,7 @@ export async function POST(request: NextRequest) {
             review_text: review_text?.trim() ?? null,
             car_purchased: car_purchased?.trim() ?? null,
             is_approved: autoApprove,
+            moderation_status: autoApprove ? 'approved' : 'pending',
         })
 
     if (error) {

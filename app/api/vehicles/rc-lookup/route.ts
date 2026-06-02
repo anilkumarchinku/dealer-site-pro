@@ -21,9 +21,61 @@ import { getOptionalEnv } from '@/lib/env'
 import { externalApiFetch } from '@/lib/services/external-api-fetch'
 import { requireAuth } from '@/lib/supabase-server'
 
+const RC_CACHE_TTL_SECONDS = 60 * 60 * 24
+const memoryCache = new Map<string, { expiresAt: number; value: Record<string, unknown> }>()
+
 // Normalise RC: uppercase, remove spaces/hyphens
 function normaliseRC(rc: string): string {
     return rc.toUpperCase().replace(/[\s\-]/g, '')
+}
+
+function buildRedisClient() {
+    const url = getOptionalEnv('UPSTASH_REDIS_REST_URL')
+    const token = getOptionalEnv('UPSTASH_REDIS_REST_TOKEN')
+    if (!url || !token) return null
+
+    try {
+        // eslint-disable-next-line @typescript-eslint/no-require-imports
+        const { Redis } = require('@upstash/redis')
+        return new Redis({ url, token }) as {
+            get: <T>(key: string) => Promise<T | null>
+            set: (key: string, value: unknown, options?: { ex?: number }) => Promise<unknown>
+        }
+    } catch {
+        return null
+    }
+}
+
+const redis = buildRedisClient()
+
+async function getCachedLookup(rc: string) {
+    const key = `rc-lookup:${rc}`
+
+    if (redis) {
+        const cached = await redis.get<Record<string, unknown>>(key)
+        if (cached) return { ...cached, _cache: 'redis' }
+        return null
+    }
+
+    const cached = memoryCache.get(key)
+    if (!cached) return null
+    if (cached.expiresAt < Date.now()) {
+        memoryCache.delete(key)
+        return null
+    }
+    return { ...cached.value, _cache: 'memory' }
+}
+
+async function setCachedLookup(rc: string, value: Record<string, unknown>) {
+    const key = `rc-lookup:${rc}`
+    if (redis) {
+        await redis.set(key, value, { ex: RC_CACHE_TTL_SECONDS })
+        return
+    }
+    memoryCache.set(key, {
+        value,
+        expiresAt: Date.now() + RC_CACHE_TTL_SECONDS * 1000,
+    })
 }
 
 // ── Mock response for development/demo ───────────────────────────────────────
@@ -40,7 +92,12 @@ function mockResponse(rc: string) {
         chassis_number:   'MA3FJEB1S00000001',
         color:            'Red',
         insurance_upto:   new Date(now.getFullYear() + 1, 0, 1).toLocaleDateString('en-IN'),
+        insurance_company:'Sample Insurance Co.',
         fitness_upto:     new Date(now.getFullYear() + 5, 0, 1).toLocaleDateString('en-IN'),
+        rc_validity_upto:  new Date(now.getFullYear() + 5, 0, 1).toLocaleDateString('en-IN'),
+        owner_count:       1,
+        challan_count:     0,
+        challan_status:    'No pending challans found',
         state:            'Maharashtra',
         rto:              'Mumbai Central',
         blacklisted:      false,
@@ -67,8 +124,18 @@ type RapidorLookupResponse = {
     color?: string
     insurance_upto?: string
     insuranceUpto?: string
+    insurance_company?: string
+    insuranceCompany?: string
     fitness_upto?: string
     fitnessUpto?: string
+    rc_validity_upto?: string
+    rcValidityUpto?: string
+    owner_count?: number
+    ownerCount?: number
+    challan_count?: number
+    challanCount?: number
+    challan_status?: string
+    challanStatus?: string
     state?: string
     rto_name?: string
     rtoName?: string
@@ -104,7 +171,12 @@ async function rapidorLookup(rc: string): Promise<Record<string, unknown>> {
         chassis_number:   data.chassis_number ?? data.chassisNumber,
         color:            data.color,
         insurance_upto:   data.insurance_upto ?? data.insuranceUpto,
+        insurance_company:data.insurance_company ?? data.insuranceCompany,
         fitness_upto:     data.fitness_upto ?? data.fitnessUpto,
+        rc_validity_upto:  data.rc_validity_upto ?? data.rcValidityUpto,
+        owner_count:       data.owner_count ?? data.ownerCount,
+        challan_count:     data.challan_count ?? data.challanCount,
+        challan_status:    data.challan_status ?? data.challanStatus,
         state:            data.state,
         rto:              data.rto_name ?? data.rtoName,
         blacklisted:      data.blacklisted ?? false,
@@ -131,6 +203,11 @@ export async function POST(request: NextRequest) {
     const provider = getOptionalEnv('RC_LOOKUP_PROVIDER') ?? 'mock'
 
     try {
+        const cached = await getCachedLookup(rc)
+        if (cached) {
+            return NextResponse.json({ success: true, data: cached, cached: true, ttl_seconds: RC_CACHE_TTL_SECONDS })
+        }
+
         let result: Record<string, unknown>
 
         if (provider === 'rapidor' && getOptionalEnv('RAPIDOR_API_KEY')) {
@@ -146,7 +223,9 @@ export async function POST(request: NextRequest) {
             result = mockResponse(rc)
         }
 
-        return NextResponse.json({ success: true, data: result })
+        await setCachedLookup(rc, result)
+
+        return NextResponse.json({ success: true, data: result, cached: false, ttl_seconds: RC_CACHE_TTL_SECONDS })
     } catch (err) {
         console.error('RC lookup error:', err)
         return NextResponse.json({ error: 'RC lookup failed. Please try again.' }, { status: 500 })

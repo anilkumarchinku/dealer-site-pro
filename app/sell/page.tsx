@@ -4,6 +4,7 @@
  */
 
 import { Metadata } from 'next';
+import { Suspense } from 'react';
 import { SellCarFlow } from '@/components/tools/SellCarFlow';
 import { SiteHeader } from '@/components/layout/SiteHeader';
 import { SiteFooter } from '@/components/layout/SiteFooter';
@@ -17,7 +18,9 @@ export default function SellCarPage() {
     return (
         <>
             <SiteHeader />
-            <SellCarFlow />
+            <Suspense fallback={null}>
+                <SellCarFlow />
+            </Suspense>
             <SiteFooter />
         </>
     );
