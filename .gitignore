@@ -12,15 +12,6 @@ build
 # Dealer template dist — has its own .git, managed separately
 dealer-custom-site-dist/
 
-# Environment variables — NEVER commit these
-.env
-.env.local
-.env*.local
-.env.backup
-.env.development.local
-.env.test.local
-.env.production.local
-
 
 # System files
 .DS_Store
