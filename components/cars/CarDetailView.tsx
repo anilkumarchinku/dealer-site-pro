@@ -1490,6 +1490,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
             brandColor={brandColor}
             dealerId={dealerId}
             dealerPhone={dealerPhone}
+            resolvedImageSrc={activeImage}
         />
 
         <OnRoadPriceDialog

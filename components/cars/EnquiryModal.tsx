@@ -5,7 +5,7 @@
 
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import type { Car } from '@/lib/types/car';
@@ -90,6 +90,34 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
         return;
     }, [open, car]);
 
+    useEffect(() => {
+        if (open) setHeroImgIdx(0);
+    }, [open, car?.id, resolvedImageSrc]);
+
+    const heroFallbackList = useMemo(() => {
+        if (!car) return [];
+
+        const uploadedImages = [
+            resolvedImageSrc,
+            car.images.hero,
+            ...car.images.exterior,
+            ...car.images.interior,
+            ...(car.images.colors ?? []),
+        ];
+
+        const catalogFallbacks = getVehicleImageUrls(
+            car.vehicleCategory as '2w' | '3w' | '4w',
+            brandNameToId(car.make, car.vehicleCategory as '2w' | '3w' | '4w'),
+            car.model,
+            car.images.hero,
+        );
+
+        return [...uploadedImages, ...catalogFallbacks]
+            .filter((src): src is string => Boolean(src?.trim()))
+            .filter((src) => !src.includes('/placeholder-car'))
+            .filter((src, index, list) => list.indexOf(src) === index);
+    }, [car, resolvedImageSrc]);
+
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         const errors = validateLeadForm(formData);
@@ -142,13 +170,7 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
 
     if (!car) return null;
 
-    // Build image fallback list: resolvedImageSrc (local scraped) → scraped jpg/png → hero CDN
-    const heroFallbackList = getVehicleImageUrls(
-        car.vehicleCategory as '2w' | '3w' | '4w',
-        brandNameToId(car.make, car.vehicleCategory as '2w' | '3w' | '4w'),
-        car.model,
-        resolvedImageSrc ?? car.images.hero,
-    );
+    // Uploaded DB gallery images must win; catalog guesses are only fallbacks.
     const heroSrc = heroFallbackList[heroImgIdx] ?? null;
 
     // Get the first detailed variant that matches
