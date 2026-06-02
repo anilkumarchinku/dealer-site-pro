@@ -247,6 +247,8 @@ export const carServiceBookingSchema = z.object({
     vehicle_year:       z.number().int().min(1990).max(new Date().getFullYear() + 1).optional().nullable(),
     km_reading:         z.number().int().min(0).max(500_000).optional().nullable(),
     service_type:       z.enum(CAR_SERVICE_TYPES),
+    service_center_id:  uuid.optional().nullable(),
+    service_pricing_tier_id: uuid.optional().nullable(),
     preferred_date:     dateString,
     preferred_slot:     z.string().trim().min(1, 'Time slot is required').max(50),
     service_location:   z.string().trim().max(150).optional().nullable(),
