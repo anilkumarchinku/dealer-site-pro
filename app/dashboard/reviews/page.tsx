@@ -5,9 +5,9 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { Star, ThumbsUp, Reply, ExternalLink, MessageSquare, CheckCircle, Clock, Loader2, ShieldCheck, XCircle, Flag } from "lucide-react";
+import { ArrowDown, ArrowUp, Eye, EyeOff, Star, ThumbsUp, Reply, ExternalLink, MessageSquare, CheckCircle, Clock, Loader2, ShieldCheck, XCircle, Flag } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { fetchReviews, fetchPendingReviews, fetchFlaggedReviews, fetchRejectedReviews, respondToReview, approveReview, rejectReview, flagReview, computeReviewStats, type DBReview } from "@/lib/db/reviews";
+import { fetchReviews, fetchPendingReviews, fetchFlaggedReviews, fetchRejectedReviews, respondToReview, approveReview, rejectReview, flagReview, curateReview, computeReviewStats, type DBReview } from "@/lib/db/reviews";
 import { useOnboardingStore } from "@/lib/store/onboarding-store";
 import { toast } from "@/lib/utils/toast";
 
@@ -23,6 +23,7 @@ export default function ReviewsPage() {
     const [responseText, setResponseText] = useState("");
     const [approvingId, setApprovingId] = useState<string | null>(null);
     const [moderatingId, setModeratingId] = useState<string | null>(null);
+    const [curatingId, setCuratingId] = useState<string | null>(null);
 
     useEffect(() => {
         if (!dealerId) return;
@@ -81,6 +82,44 @@ export default function ReviewsPage() {
             toast.error("Failed to approve review");
         }
         setApprovingId(null);
+    };
+
+    const handleToggleTestimonial = async (review: DBReview) => {
+        if (!dealerId) return;
+        setCuratingId(review.id);
+        const nextVisible = !review.show_on_homepage;
+        const result = await curateReview(dealerId, review.id, { show_on_homepage: nextVisible });
+        if (result.success) {
+            setReviews(prev => prev.map(r => r.id === review.id ? { ...r, show_on_homepage: nextVisible } : r));
+            toast.success(nextVisible ? "Testimonial shown on website" : "Testimonial hidden from website");
+        } else {
+            toast.error("Failed to update testimonial visibility");
+        }
+        setCuratingId(null);
+    };
+
+    const handleMoveTestimonial = async (review: DBReview, direction: "up" | "down") => {
+        if (!dealerId) return;
+        const currentIndex = reviews.findIndex(r => r.id === review.id);
+        const targetIndex = direction === "up" ? currentIndex - 1 : currentIndex + 1;
+        if (currentIndex < 0 || targetIndex < 0 || targetIndex >= reviews.length) return;
+
+        const reordered = [...reviews];
+        const [moved] = reordered.splice(currentIndex, 1);
+        reordered.splice(targetIndex, 0, moved);
+        const withOrder = reordered.map((item, index) => ({ ...item, display_order: index }));
+
+        setCuratingId(review.id);
+        const results = await Promise.all(withOrder.map(item =>
+            curateReview(dealerId, item.id, { display_order: item.display_order })
+        ));
+        if (results.every(result => result.success)) {
+            setReviews(withOrder);
+            toast.success("Testimonial order updated");
+        } else {
+            toast.error("Failed to update testimonial order");
+        }
+        setCuratingId(null);
     };
 
     const handleModerate = async (review: DBReview, action: "reject" | "flag") => {
@@ -187,8 +226,48 @@ export default function ReviewsPage() {
                     </Button>
                 </div>
             ) : (
-                /* Reply inline form */
-                respondingTo === review.id ? (
+                <div className="space-y-3">
+                    {review.status === "approved" && (
+                        <div className="flex flex-wrap items-center gap-2">
+                            <Button
+                                variant="outline"
+                                size="sm"
+                                onClick={() => handleToggleTestimonial(review)}
+                                disabled={curatingId === review.id}
+                            >
+                                {review.show_on_homepage ? (
+                                    <><EyeOff className="w-4 h-4 mr-2" />Hide from Website</>
+                                ) : (
+                                    <><Eye className="w-4 h-4 mr-2" />Show on Website</>
+                                )}
+                            </Button>
+                            <Button
+                                variant="outline"
+                                size="sm"
+                                onClick={() => handleMoveTestimonial(review, "up")}
+                                disabled={curatingId === review.id || reviews.findIndex(r => r.id === review.id) === 0}
+                            >
+                                <ArrowUp className="w-4 h-4 mr-2" />Up
+                            </Button>
+                            <Button
+                                variant="outline"
+                                size="sm"
+                                onClick={() => handleMoveTestimonial(review, "down")}
+                                disabled={curatingId === review.id || reviews.findIndex(r => r.id === review.id) === reviews.length - 1}
+                            >
+                                <ArrowDown className="w-4 h-4 mr-2" />Down
+                            </Button>
+                            <Badge variant="outline" className={cn(
+                                "text-xs",
+                                review.show_on_homepage
+                                    ? "bg-emerald-500/10 text-emerald-600 border-emerald-500/20"
+                                    : "bg-muted text-muted-foreground"
+                            )}>
+                                {review.show_on_homepage ? "Shown in testimonials" : "Hidden from testimonials"}
+                            </Badge>
+                        </div>
+                    )}
+                    {respondingTo === review.id ? (
                     <div className="space-y-2">
                         <Textarea
                             value={responseText}
@@ -221,7 +300,8 @@ export default function ReviewsPage() {
                             </Button>
                         )}
                     </div>
-                )
+                    )}
+                </div>
             )}
         </div>
     );

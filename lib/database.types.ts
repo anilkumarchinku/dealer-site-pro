@@ -407,6 +407,8 @@ export interface Database {
           review_text: string | null
           car_purchased: string | null
           is_approved: boolean
+          show_on_homepage: boolean
+          display_order: number
           source: string
           external_id: string | null
           created_at: string

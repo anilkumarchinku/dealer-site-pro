@@ -51,8 +51,9 @@ export async function GET(request: NextRequest) {
         const supabase = getSupabase()
         let query = supabase
             .from('dealer_reviews')
-            .select('id, dealer_id, reviewer_name, reviewer_phone, rating, review_text, car_purchased, is_approved, moderation_status, admin_reply, replied_at, created_at, updated_at, source')
+            .select('id, dealer_id, reviewer_name, reviewer_phone, rating, review_text, car_purchased, is_approved, show_on_homepage, display_order, moderation_status, admin_reply, replied_at, created_at, updated_at, source')
             .eq('dealer_id', dealerId)
+            .order('display_order', { ascending: true })
             .order('created_at', { ascending: false })
             .limit(100)
 
@@ -72,10 +73,12 @@ export async function GET(request: NextRequest) {
     const supabase = getSupabase()
     const { data, error } = await supabase
         .from('dealer_reviews')
-        .select('id, reviewer_name, rating, review_text, car_purchased, created_at, source, admin_reply')
+        .select('id, reviewer_name, rating, review_text, car_purchased, created_at, source, admin_reply, display_order')
         .eq('dealer_id', dealerId)
         .eq('is_approved', true)
         .eq('moderation_status', 'approved')
+        .eq('show_on_homepage', true)
+        .order('display_order', { ascending: true })
         .order('created_at', { ascending: false })
         .limit(20)
 
@@ -100,11 +103,11 @@ export async function PATCH(request: NextRequest) {
     const body = await request.json().catch(() => null)
     if (!body) return NextResponse.json({ error: 'Invalid JSON' }, { status: 400 })
 
-    const { review_id, dealer_id, action, admin_reply } = body
+    const { review_id, dealer_id, action, admin_reply, show_on_homepage, display_order } = body
     if (!review_id || !dealer_id) {
         return NextResponse.json({ error: 'review_id and dealer_id required' }, { status: 400 })
     }
-    if (!['approve', 'reject', 'flag', 'respond'].includes(action)) {
+    if (!['approve', 'reject', 'flag', 'respond', 'curate'].includes(action)) {
         return NextResponse.json({ error: 'Invalid action' }, { status: 400 })
     }
 
@@ -125,23 +128,41 @@ export async function PATCH(request: NextRequest) {
         return NextResponse.json({ error: 'Review not found or access denied' }, { status: 404 })
     }
 
-    const { error } = await supabase
+    const updatePayload: Record<string, unknown> = {
+        updated_at: new Date().toISOString(),
+    }
+
+    if (action === 'curate') {
+        if (typeof show_on_homepage === 'boolean') {
+            updatePayload.show_on_homepage = show_on_homepage
+        }
+        if (typeof display_order === 'number' && Number.isInteger(display_order)) {
+            updatePayload.display_order = Math.max(0, display_order)
+        }
+    } else {
+        updatePayload.is_approved = action === 'approve' || action === 'respond'
+        updatePayload.moderation_status = action === 'approve' || action === 'respond' ? 'approved' : action === 'reject' ? 'rejected' : 'flagged'
+        if (action === 'approve') updatePayload.show_on_homepage = true
+        if (action === 'reject' || action === 'flag') updatePayload.show_on_homepage = false
+        if (typeof admin_reply === 'string') {
+            updatePayload.admin_reply = admin_reply.trim().slice(0, 1000)
+            if (admin_reply.trim()) updatePayload.replied_at = new Date().toISOString()
+        }
+    }
+
+    const { data: updatedReview, error } = await supabase
         .from('dealer_reviews')
-        .update({
-            is_approved: action === 'approve' || action === 'respond',
-            moderation_status: action === 'approve' || action === 'respond' ? 'approved' : action === 'reject' ? 'rejected' : 'flagged',
-            admin_reply: typeof admin_reply === 'string' ? admin_reply.trim().slice(0, 1000) : undefined,
-            replied_at: typeof admin_reply === 'string' && admin_reply.trim() ? new Date().toISOString() : undefined,
-            updated_at: new Date().toISOString(),
-        })
+        .update(updatePayload)
         .eq('id', review_id)
+        .select('id, dealer_id, reviewer_name, reviewer_phone, rating, review_text, car_purchased, is_approved, show_on_homepage, display_order, moderation_status, admin_reply, replied_at, created_at, updated_at, source')
+        .single()
 
     if (error) {
         logger.error('Review approve error:', error)
         return NextResponse.json({ error: 'Failed to approve review' }, { status: 500 })
     }
 
-    return NextResponse.json({ success: true })
+    return NextResponse.json({ success: true, review: updatedReview })
 }
 
 // ── POST: submit a new review ────────────────────────────────────────────────
