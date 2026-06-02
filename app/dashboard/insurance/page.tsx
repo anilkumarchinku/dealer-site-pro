@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { RCLookupWidget } from "@/components/dashboard/RCLookupWidget";
 import { fetchVehicles, type DBVehicle } from "@/lib/db/vehicles";
 import { useOnboardingStore } from "@/lib/store/onboarding-store";
 import { cn } from "@/lib/utils";
@@ -61,6 +62,8 @@ export default function InsuranceDashboardPage() {
                 <h1 className="text-2xl font-bold">Insurance</h1>
                 <p className="text-muted-foreground">Review expired, expiring, and unchecked policy status for 4W listings.</p>
             </div>
+
+            <RCLookupWidget />
 
             <div className="grid gap-4 md:grid-cols-3">
                 <Card>
