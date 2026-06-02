@@ -57,10 +57,10 @@ export function ReviewsSection({ dealerId }: Props) {
     return (
         <section className="mt-12 pt-8 border-t border-border">
             <div className="flex items-center gap-3 mb-6">
-                <h2 className="text-xl font-bold">Customer Reviews</h2>
+                <h2 className="text-xl font-bold">Customer Testimonials</h2>
                 <span className="text-2xl font-bold text-amber-500">{avgRating}</span>
                 <Stars rating={Math.round(avgRating)} />
-                <span className="text-sm text-muted-foreground">({total} reviews)</span>
+                <span className="text-sm text-muted-foreground">({total} feedback{total !== 1 ? 's' : ''})</span>
             </div>
             <div className="grid sm:grid-cols-3 gap-4">
                 {top3.map(review => (

@@ -167,9 +167,9 @@ export function ReviewsSection({ dealerId, brandColor = '#2563eb', variant = 'li
                 <div>
                     <div className="flex items-center gap-2 mb-1">
                         <MessageSquare className="w-5 h-5" style={{ color: brandColor }} />
-                        <span className="text-sm font-semibold uppercase tracking-wider" style={{ color: brandColor }}>Customer Reviews</span>
+                        <span className="text-sm font-semibold uppercase tracking-wider" style={{ color: brandColor }}>Customer Testimonials</span>
                     </div>
-                    <h2 className={`text-3xl font-bold ${headingColor}`}>What Buyers Say</h2>
+                    <h2 className={`text-3xl font-bold ${headingColor}`}>What Customers Say</h2>
                     {total > 0 && (
                         <div className="flex items-center gap-2 mt-2">
                             <StarRow value={Math.round(avgRating)} />
@@ -184,7 +184,7 @@ export function ReviewsSection({ dealerId, brandColor = '#2563eb', variant = 'li
                     style={{ backgroundColor: brandColor }}
                 >
                     <ThumbsUp className="w-4 h-4" />
-                    Write a Review
+                    Rate Our Service
                 </Button>
             </div>
 
@@ -199,7 +199,7 @@ export function ReviewsSection({ dealerId, brandColor = '#2563eb', variant = 'li
                         </div>
                     ) : (
                         <form onSubmit={handleSubmit} className="space-y-4">
-                            <h3 className={`font-bold text-lg mb-4 ${headingColor}`}>Share Your Experience</h3>
+                            <h3 className={`font-bold text-lg mb-4 ${headingColor}`}>Share Your Service Experience</h3>
 
                             <div className="grid sm:grid-cols-2 gap-4">
                                 <div>
@@ -213,29 +213,29 @@ export function ReviewsSection({ dealerId, brandColor = '#2563eb', variant = 'li
                                     />
                                 </div>
                                 <div>
-                                    <label className={`block text-xs font-semibold mb-1.5 ${labelCls}`}>Car Purchased (optional)</label>
+                                    <label className={`block text-xs font-semibold mb-1.5 ${labelCls}`}>Service or Vehicle (optional)</label>
                                     <input
                                         type="text"
                                         value={form.car}
                                         onChange={e => setForm({ ...form, car: e.target.value })}
-                                        placeholder="e.g. Maruti Swift VXi"
+                                        placeholder="e.g. Sales support, service visit, Swift VXi"
                                         className={`w-full px-3.5 py-2.5 rounded-xl border text-sm focus:outline-none focus:ring-1 ${inputCls}`}
                                     />
                                 </div>
                             </div>
 
                             <div>
-                                <label className={`block text-xs font-semibold mb-2 ${labelCls}`}>Rating *</label>
+                                <label className={`block text-xs font-semibold mb-2 ${labelCls}`}>Service Rating *</label>
                                 <StarRow value={form.rating} interactive onSelect={n => setForm({ ...form, rating: n })} />
                             </div>
 
                             <div>
-                                <label className={`block text-xs font-semibold mb-1.5 ${labelCls}`}>Your Review (optional)</label>
+                                <label className={`block text-xs font-semibold mb-1.5 ${labelCls}`}>Your Feedback (optional)</label>
                                 <textarea
                                     rows={3}
                                     value={form.text}
                                     onChange={e => setForm({ ...form, text: e.target.value })}
-                                    placeholder="Tell others about your experience..."
+                                    placeholder="Tell others about your service experience..."
                                     maxLength={500}
                                     className={`w-full px-3.5 py-2.5 rounded-xl border text-sm focus:outline-none focus:ring-1 resize-none ${inputCls}`}
                                 />
@@ -250,7 +250,7 @@ export function ReviewsSection({ dealerId, brandColor = '#2563eb', variant = 'li
                                 <Button type="submit" disabled={submitStatus === 'loading'} className="gap-2" style={{ backgroundColor: brandColor }}>
                                     {submitStatus === 'loading'
                                         ? <span className="flex items-center gap-2"><div className="w-4 h-4 border-2 border-white/40 border-t-white rounded-full animate-spin" />Submitting...</span>
-                                        : <><Send className="w-4 h-4" />Submit Review</>
+                                        : <><Send className="w-4 h-4" />Submit Feedback</>
                                     }
                                 </Button>
                                 <Button type="button" variant="ghost" onClick={() => setShowForm(false)}>Cancel</Button>

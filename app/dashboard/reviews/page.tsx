@@ -229,8 +229,8 @@ export default function ReviewsPage() {
     return (
         <div className="space-y-6 animate-fade-in">
             <div>
-                <h1 className="text-2xl font-bold">Reviews</h1>
-                <p className="text-muted-foreground">Manage and respond to customer reviews</p>
+                <h1 className="text-2xl font-bold">Customer Feedback</h1>
+                <p className="text-muted-foreground">Approve service ratings and testimonials before they appear on the website</p>
             </div>
 
             {/* Stats */}
@@ -269,7 +269,7 @@ export default function ReviewsPage() {
                             </div>
                         </div>
                         <div className="space-y-1">
-                            <p className="text-sm text-muted-foreground">Total Reviews</p>
+                            <p className="text-sm text-muted-foreground">Published Feedback</p>
                             <p className="text-3xl font-bold">{loading ? <Loader2 className="w-6 h-6 animate-spin text-muted-foreground" /> : stats.total}</p>
                         </div>
                     </CardContent>
@@ -306,7 +306,7 @@ export default function ReviewsPage() {
             <Card variant="glass">
                 <CardHeader className="flex-row items-center justify-between">
                     <div>
-                        <CardTitle>Reviews</CardTitle>
+                        <CardTitle>Feedback Moderation</CardTitle>
                     </div>
                     <Button variant="outline" size="sm">
                         <ExternalLink className="w-4 h-4 mr-2" />
@@ -359,8 +359,8 @@ export default function ReviewsPage() {
                             ) : displayReviews.length === 0 ? (
                                 <div className="text-center py-12 text-muted-foreground">
                                     <MessageSquare className="w-10 h-10 mx-auto mb-3 opacity-30" />
-                                    <p className="font-medium">No reviews yet</p>
-                                    <p className="text-sm mt-1">Customer reviews will appear here</p>
+                                    <p className="font-medium">No published feedback yet</p>
+                                    <p className="text-sm mt-1">Approved customer testimonials will appear here</p>
                                 </div>
                             ) : (
                                 displayReviews.map((review) => renderReviewCard(review, false))
@@ -376,8 +376,8 @@ export default function ReviewsPage() {
                             ) : pendingReviews.length === 0 ? (
                                 <div className="text-center py-12 text-muted-foreground">
                                     <ShieldCheck className="w-10 h-10 mx-auto mb-3 opacity-30" />
-                                    <p className="font-medium">No pending reviews</p>
-                                    <p className="text-sm mt-1">New customer reviews awaiting approval will appear here</p>
+                                    <p className="font-medium">No pending feedback</p>
+                                    <p className="text-sm mt-1">New service ratings awaiting approval will appear here</p>
                                 </div>
                             ) : (
                                 pendingReviews.map((review) => renderReviewCard(review, true))
