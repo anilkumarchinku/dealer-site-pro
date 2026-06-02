@@ -11,6 +11,8 @@ export interface DBReview {
     review_text?: string | null;
     car_purchased?: string | null;
     is_approved: boolean;
+    show_on_homepage: boolean;
+    display_order: number;
     moderation_status: ReviewModerationStatus;
     admin_reply?: string | null;
     replied_at?: string | null;
@@ -37,6 +39,8 @@ function normalize(row: Partial<DBReview>): DBReview {
         review_text: row.review_text ?? null,
         car_purchased: row.car_purchased ?? null,
         is_approved: row.is_approved ?? moderation === "approved",
+        show_on_homepage: row.show_on_homepage ?? true,
+        display_order: row.display_order ?? 0,
         moderation_status: moderation,
         admin_reply: row.admin_reply ?? row.dealer_response ?? null,
         replied_at: row.replied_at ?? null,
@@ -82,6 +86,31 @@ async function moderateReview(
     if (!res.ok) {
         const data = await res.json().catch(() => null) as { error?: string } | null;
         return { success: false, error: data?.error ?? "Failed to update review" };
+    }
+
+    return { success: true };
+}
+
+export async function curateReview(
+    dealerId: string,
+    reviewId: string,
+    updates: { show_on_homepage?: boolean; display_order?: number }
+): Promise<{ success: boolean; error?: string }> {
+    const res = await fetch("/api/reviews", {
+        method: "PATCH",
+        credentials: "include",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+            dealer_id: dealerId,
+            review_id: reviewId,
+            action: "curate",
+            ...updates,
+        }),
+    });
+
+    if (!res.ok) {
+        const data = await res.json().catch(() => null) as { error?: string } | null;
+        return { success: false, error: data?.error ?? "Failed to update testimonial settings" };
     }
 
     return { success: true };
