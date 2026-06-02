@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
-import { ArrowLeft, Loader2, Save, BadgeCheck } from "lucide-react";
+import { ArrowLeft, Loader2, Save, BadgeCheck, ImagePlus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -62,6 +62,7 @@ export default function EditVehiclePage() {
         status: "available" as DBVehicle["status"],
         features: "",
         description: "",
+        image_url: "",
         meta_title: "",
         meta_description: "",
         insurance_status: "unknown" as InsuranceStatus,
@@ -69,6 +70,8 @@ export default function EditVehiclePage() {
         insurance_valid_until: "",
         insurance_quote_url: "",
     });
+    const [imageFile, setImageFile] = useState<File | null>(null);
+    const [imagePreview, setImagePreview] = useState("");
 
     useEffect(() => {
         if (!dealerId || !id) return;
@@ -95,6 +98,7 @@ export default function EditVehiclePage() {
                     status: vehicle.status,
                     features: (vehicle.features ?? []).join("\n"),
                     description: vehicle.description ?? "",
+                    image_url: vehicle.image_url ?? "",
                     meta_title: vehicle.meta_title ?? "",
                     meta_description: vehicle.meta_description ?? "",
                     insurance_status: vehicle.insurance_status ?? "unknown",
@@ -102,6 +106,7 @@ export default function EditVehiclePage() {
                     insurance_valid_until: toDateInput(vehicle.insurance_valid_until),
                     insurance_quote_url: vehicle.insurance_quote_url ?? "",
                 });
+                setImagePreview(vehicle.image_url ?? "");
             })
             .catch(err => setError(err instanceof Error ? err.message : "Failed to load vehicle"))
             .finally(() => setLoading(false));
@@ -111,11 +116,38 @@ export default function EditVehiclePage() {
         setForm(prev => ({ ...prev, [field]: value }));
     }
 
+    function handleImageChange(e: React.ChangeEvent<HTMLInputElement>) {
+        const file = e.target.files?.[0];
+        if (!file) return;
+        setImageFile(file);
+        const reader = new FileReader();
+        reader.onload = event => setImagePreview(String(event.target?.result ?? ""));
+        reader.readAsDataURL(file);
+        e.target.value = "";
+    }
+
     async function handleSubmit(e: React.FormEvent) {
         e.preventDefault();
         if (!dealerId || !vehicle) return;
         setSaving(true);
         setError("");
+
+        let imageUrl = form.image_url || undefined;
+        if (imageFile) {
+            const uploadData = new FormData();
+            uploadData.append("file", imageFile);
+            const uploadRes = await fetch("/api/vehicles/upload-image", {
+                method: "POST",
+                body: uploadData,
+            });
+            const uploadJson = await uploadRes.json();
+            if (!uploadRes.ok) {
+                setSaving(false);
+                setError(uploadJson.error ?? "Failed to upload vehicle photo");
+                return;
+            }
+            imageUrl = uploadJson.url;
+        }
 
         const result = await updateVehicle(vehicle.id, dealerId, {
             vin: form.vin.trim() || undefined,
@@ -134,6 +166,7 @@ export default function EditVehiclePage() {
             status: form.status,
             features: form.features.split("\n").map(item => item.trim()).filter(Boolean),
             description: form.description.trim() || undefined,
+            image_url: imageUrl,
             meta_title: form.meta_title.trim() || undefined,
             meta_description: form.meta_description.trim() || undefined,
             insurance_status: deriveInsuranceStatus(form.insurance_valid_until, form.insurance_status),
@@ -192,6 +225,30 @@ export default function EditVehiclePage() {
             </div>
 
             {error && <div className="rounded-xl border border-red-200 bg-red-50 p-3 text-sm text-red-700">{error}</div>}
+
+            <Card>
+                <CardHeader>
+                    <CardTitle>Main Photo</CardTitle>
+                    <CardDescription>This photo is shown on the buyer-facing inventory card and detail popup.</CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                    {imagePreview ? (
+                        <div className="relative aspect-video overflow-hidden rounded-xl border border-border bg-muted">
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img src={imagePreview} alt="Vehicle preview" className="h-full w-full object-cover" />
+                        </div>
+                    ) : (
+                        <div className="flex aspect-video items-center justify-center rounded-xl border border-dashed border-border bg-muted text-sm text-muted-foreground">
+                            No image uploaded
+                        </div>
+                    )}
+                    <label className="inline-flex h-10 cursor-pointer items-center gap-2 rounded-md border border-input bg-background px-4 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground">
+                        <ImagePlus className="h-4 w-4" />
+                        {imagePreview ? "Replace Photo" : "Upload Photo"}
+                        <input type="file" accept="image/*" className="hidden" onChange={handleImageChange} disabled={saving} />
+                    </label>
+                </CardContent>
+            </Card>
 
             <Card>
                 <CardHeader>
