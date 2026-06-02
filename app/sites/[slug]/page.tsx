@@ -532,13 +532,10 @@ export default async function SitePage({ params }: SitePageProps) {
             ? await fetchAllCyeproInventoryAsCars(cyepro_api_key)
             : []
 
-        if (cyeproCars.length > 0) {
-            cars = cyeproCars
-        } else if (vehicles.length > 0) {
-            cars = dbVehiclesToCars(vehicles)
-        } else {
-            cars = []
-        }
+        cars = dedupeByMakeModel([
+            ...dbVehiclesToCars(vehicles),
+            ...cyeproCars,
+        ])
         cars = applyUsedVehiclePriceOffersToCars(
             cars,
             await fetchActiveUsedVehiclePriceOffers(dealer.id)
