@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { cn } from "@/lib/utils"
-import { CheckCircle, Clock, IndianRupee, Loader2, Phone, RefreshCw, Search, XCircle } from "lucide-react"
+import { CheckCircle, Clock, ExternalLink, IndianRupee, Loader2, Phone, RefreshCw, Search, XCircle } from "lucide-react"
 
 type SellRequestStatus = "new" | "reviewing" | "contacted" | "approved" | "rejected" | "listed"
 
@@ -32,6 +32,7 @@ interface SellRequest {
     photo_urls: string[]
     notes: string | null
     status: SellRequestStatus
+    approved_vehicle_id: string | null
     created_at: string
 }
 
@@ -62,7 +63,7 @@ export default function SellRequestsPage() {
     const [loading, setLoading] = useState(false)
     const [savingId, setSavingId] = useState("")
     const [query, setQuery] = useState("")
-    const [status, setStatus] = useState<SellRequestStatus | "all">("all")
+    const [status, setStatus] = useState<SellRequestStatus | "all">("new")
 
     const loadRequests = async () => {
         setLoading(true)
@@ -86,8 +87,11 @@ export default function SellRequestsPage() {
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ id: request.id, status: nextStatus }),
         })
+        const data = await res.json().catch(() => null)
         if (res.ok) {
-            setRequests(prev => prev.map(item => item.id === request.id ? { ...item, status: nextStatus } : item))
+            setRequests(prev => prev.map(item => item.id === request.id
+                ? { ...item, ...(data?.request ?? {}), status: data?.request?.status ?? nextStatus }
+                : item))
         }
         setSavingId("")
     }
@@ -97,7 +101,7 @@ export default function SellRequestsPage() {
             <div className="flex items-center justify-between">
                 <div>
                     <h1 className="text-2xl font-bold">Sell Requests</h1>
-                    <p className="text-sm text-muted-foreground">Review seller-submitted cars before contacting or approving them.</p>
+                    <p className="text-sm text-muted-foreground">Review seller-submitted cars, then approve them into live inventory.</p>
                 </div>
                 <Button variant="outline" size="sm" onClick={loadRequests} disabled={loading}>
                     {loading ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <RefreshCw className="mr-2 h-4 w-4" />}
@@ -115,7 +119,9 @@ export default function SellRequestsPage() {
                         <SelectTrigger className="w-full sm:w-44"><SelectValue /></SelectTrigger>
                         <SelectContent>
                             <SelectItem value="all">All statuses</SelectItem>
+                            <SelectItem value="new">Pending approval</SelectItem>
                             {Object.keys(statusStyles).map(item => (
+                                item === "new" ? null :
                                 <SelectItem key={item} value={item}>{item}</SelectItem>
                             ))}
                         </SelectContent>
@@ -165,9 +171,18 @@ export default function SellRequestsPage() {
                                 <Button size="sm" variant="outline" disabled={savingId === request.id} onClick={() => updateStatus(request, "contacted")}>
                                     <Phone className="mr-2 h-4 w-4" />Contacted
                                 </Button>
-                                <Button size="sm" disabled={savingId === request.id} onClick={() => updateStatus(request, "approved")}>
-                                    <CheckCircle className="mr-2 h-4 w-4" />Approve
-                                </Button>
+                                {request.status === "listed" && request.approved_vehicle_id ? (
+                                    <Button asChild size="sm" variant="outline">
+                                        <a href={`/dashboard/inventory/${request.approved_vehicle_id}/edit`}>
+                                            <ExternalLink className="mr-2 h-4 w-4" />Edit Listing
+                                        </a>
+                                    </Button>
+                                ) : (
+                                    <Button size="sm" disabled={savingId === request.id} onClick={() => updateStatus(request, "listed")}>
+                                        {savingId === request.id ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <CheckCircle className="mr-2 h-4 w-4" />}
+                                        Approve & List
+                                    </Button>
+                                )}
                                 <Button size="sm" variant="outline" disabled={savingId === request.id} onClick={() => updateStatus(request, "rejected")}>
                                     <XCircle className="mr-2 h-4 w-4" />Reject
                                 </Button>
