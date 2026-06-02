@@ -11,6 +11,17 @@ import { Search, AlertCircle, CheckCircle2, Car, FileText, Shield, Loader2 } fro
 import { Button } from '@/components/ui/button';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
 
+interface ChallanData {
+    challan_number?: string;
+    offense_details?: string;
+    challan_place?: string | null;
+    challan_date?: string;
+    state?: string;
+    amount?: number | string;
+    challan_status?: string | null;
+    court_challan?: boolean | null;
+}
+
 interface RCData {
     rc_number: string;
     owner_name?: string;
@@ -32,6 +43,7 @@ interface RCData {
     rto?: string;
     blacklisted?: boolean;
     noc_details?: string;
+    challans?: ChallanData[];
     _demo?: boolean;
     _cache?: 'redis' | 'memory';
 }
@@ -51,11 +63,13 @@ export function RCLookupWidget() {
     const [status, setStatus] = useState<'idle' | 'loading' | 'done' | 'error'>('idle');
     const [data, setData] = useState<RCData | null>(null);
     const [error, setError] = useState('');
+    const [showChallans, setShowChallans] = useState(false);
 
     const handleLookup = async (e: React.FormEvent) => {
         e.preventDefault();
         setError('');
         setData(null);
+        setShowChallans(false);
         setStatus('loading');
         try {
             const res = await fetch('/api/vehicles/rc-lookup', {
@@ -176,6 +190,57 @@ export function RCLookupWidget() {
                                 </div>
                             </div>
                         </div>
+
+                        {data.challan_status && (
+                            <div className="rounded-xl border border-gray-200 bg-white p-3">
+                                <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                                    <div>
+                                        <p className="text-xs font-semibold uppercase tracking-wider text-gray-500">Challan Check</p>
+                                        <p className={`text-sm font-semibold ${(data.challan_count ?? 0) > 0 ? 'text-red-600' : 'text-emerald-700'}`}>
+                                            {data.challan_status}
+                                        </p>
+                                    </div>
+                                    {data.challans && data.challans.length > 0 && (
+                                        <Button
+                                            type="button"
+                                            variant="outline"
+                                            size="sm"
+                                            onClick={() => setShowChallans(prev => !prev)}
+                                        >
+                                            {showChallans ? 'Hide Challan Details' : 'Check Details'}
+                                        </Button>
+                                    )}
+                                </div>
+
+                                {showChallans && data.challans && data.challans.length > 0 && (
+                                    <div className="mt-3 space-y-2">
+                                        {data.challans.map((challan, index) => (
+                                            <div key={`${challan.challan_number ?? index}`} className="rounded-lg border border-gray-100 bg-gray-50 p-3">
+                                                <div className="flex items-start justify-between gap-3">
+                                                    <div>
+                                                        <p className="text-xs text-gray-500">Challan No.</p>
+                                                        <p className="text-sm font-semibold text-gray-900">{challan.challan_number ?? `Record ${index + 1}`}</p>
+                                                    </div>
+                                                    <div className="text-right">
+                                                        <p className="text-xs text-gray-500">Amount</p>
+                                                        <p className="text-sm font-semibold text-gray-900">{challan.amount ? `Rs ${challan.amount}` : 'N/A'}</p>
+                                                    </div>
+                                                </div>
+                                                <div className="mt-2 grid gap-2 text-xs text-gray-600 sm:grid-cols-2">
+                                                    <p><span className="font-medium text-gray-800">Status:</span> {challan.challan_status ?? 'Pending'}</p>
+                                                    <p><span className="font-medium text-gray-800">Date:</span> {challan.challan_date ?? 'N/A'}</p>
+                                                    <p><span className="font-medium text-gray-800">State:</span> {challan.state ?? 'N/A'}</p>
+                                                    <p><span className="font-medium text-gray-800">Court:</span> {challan.court_challan ? 'Yes' : 'No'}</p>
+                                                </div>
+                                                {challan.offense_details && (
+                                                    <p className="mt-2 text-xs text-gray-700">{challan.offense_details}</p>
+                                                )}
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
+                            </div>
+                        )}
                     </div>
                 )}
             </CardContent>
