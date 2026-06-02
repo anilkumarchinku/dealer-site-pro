@@ -34,6 +34,8 @@ interface RCData {
     color?: string;
     insurance_upto?: string;
     insurance_company?: string;
+    insurance_policy_number?: string;
+    insurance_policy_type?: string;
     fitness_upto?: string;
     rc_validity_upto?: string;
     owner_count?: number;
@@ -181,6 +183,8 @@ export function RCLookupWidget() {
                                     <InfoRow label="Owner Count" value={data.owner_count ? String(data.owner_count) : undefined} />
                                     <InfoRow label="Insurance Valid Upto" value={data.insurance_upto} />
                                     <InfoRow label="Insurer" value={data.insurance_company} />
+                                    <InfoRow label="Policy Number" value={data.insurance_policy_number} />
+                                    <InfoRow label="Policy Type" value={data.insurance_policy_type} />
                                     <InfoRow label="Fitness Valid Upto" value={data.fitness_upto} />
                                     <InfoRow label="RC Validity" value={data.rc_validity_upto} />
                                     <InfoRow label="e-Challan" value={data.challan_status ?? (data.challan_count != null ? `${data.challan_count} pending challan(s)` : undefined)} highlight={(data.challan_count ?? 0) > 0} />
