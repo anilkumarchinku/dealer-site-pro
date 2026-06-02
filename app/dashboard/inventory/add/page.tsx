@@ -16,6 +16,8 @@ const FEATURES = [
     "Cruise Control", "Lane Assist", "Parking Sensors", "Ventilated Seats",
 ];
 
+const MAX_VEHICLE_IMAGES = 10;
+
 interface FormData {
     vin: string;
     registration_number: string;
@@ -112,7 +114,7 @@ export default function AddVehiclePage() {
     const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
         const files = Array.from(e.target.files ?? []);
         if (!files.length) return;
-        const remaining = 5 - images.length;
+        const remaining = MAX_VEHICLE_IMAGES - images.length;
         const toAdd = files.slice(0, remaining);
         setImages(prev => [...prev, ...toAdd]);
         toAdd.forEach(file => {
@@ -226,10 +228,10 @@ export default function AddVehiclePage() {
         setIsSaving(true);
         setSaveError(null);
         try {
-            let imageUrl: string | undefined;
-            if (images[0]) {
+            const imageUrls: string[] = [];
+            for (const image of images) {
                 const uploadData = new FormData();
-                uploadData.append("file", images[0]);
+                uploadData.append("file", image);
                 const uploadRes = await fetch("/api/vehicles/upload-image", {
                     method: "POST",
                     body: uploadData,
@@ -238,8 +240,9 @@ export default function AddVehiclePage() {
                 if (!uploadRes.ok) {
                     throw new Error(uploadJson.error ?? "Failed to upload vehicle photo");
                 }
-                imageUrl = uploadJson.url;
+                imageUrls.push(uploadJson.url);
             }
+            const imageUrl = imageUrls[0];
 
             const result = await addVehicle({
                 dealer_id:    dealerId,
@@ -257,6 +260,7 @@ export default function AddVehiclePage() {
                 features:     formData.features,
                 description:  formData.description,
                 image_url:    imageUrl,
+                image_urls:   imageUrls,
                 video_url:    toYouTubeEmbed(formData.video_url) ?? (formData.video_url || undefined),
                 meta_title:       formData.meta_title,
                 meta_description: formData.meta_description,
@@ -349,7 +353,7 @@ export default function AddVehiclePage() {
                         </CardTitle>
                         <CardDescription>
                             Add photos to attract more buyers — listings with photos get 4× more enquiries
-                            <span className="ml-1 text-xs">({images.length}/5)</span>
+                            <span className="ml-1 text-xs">({images.length}/{MAX_VEHICLE_IMAGES})</span>
                         </CardDescription>
                     </CardHeader>
                     <CardContent>
@@ -374,7 +378,7 @@ export default function AddVehiclePage() {
                                     )}
                                 </div>
                             ))}
-                            {images.length < 5 && (
+                            {images.length < MAX_VEHICLE_IMAGES && (
                                 <button
                                     type="button"
                                     onClick={() => fileInputRef.current?.click()}
@@ -396,7 +400,7 @@ export default function AddVehiclePage() {
                         />
                         {images.length === 0 && (
                             <p className="text-xs text-muted-foreground mt-3 text-center">
-                                JPG, PNG, WEBP · Max 5 photos · First photo will be the main listing image
+                                JPG, PNG, WEBP · Max {MAX_VEHICLE_IMAGES} photos · First photo will be the main listing image
                             </p>
                         )}
                     </CardContent>

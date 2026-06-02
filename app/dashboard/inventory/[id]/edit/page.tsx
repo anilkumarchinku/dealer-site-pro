@@ -18,6 +18,7 @@ const FUEL_TYPES = ["Petrol", "Diesel", "CNG", "Electric", "Hybrid", "LPG"];
 const CONDITIONS: DBVehicle["condition"][] = ["new", "used", "certified_pre_owned"];
 const STATUSES: DBVehicle["status"][] = ["available", "reserved", "sold", "inactive"];
 const INSURANCE_STATUSES: InsuranceStatus[] = ["unknown", "active", "expiring_soon", "expired"];
+const MAX_VEHICLE_IMAGES = 10;
 
 function deriveInsuranceStatus(validUntil: string, fallback: InsuranceStatus): InsuranceStatus {
     if (!validUntil) return fallback;
@@ -70,8 +71,9 @@ export default function EditVehiclePage() {
         insurance_valid_until: "",
         insurance_quote_url: "",
     });
-    const [imageFile, setImageFile] = useState<File | null>(null);
-    const [imagePreview, setImagePreview] = useState("");
+    const [existingImageUrls, setExistingImageUrls] = useState<string[]>([]);
+    const [newImages, setNewImages] = useState<File[]>([]);
+    const [newImagePreviews, setNewImagePreviews] = useState<string[]>([]);
 
     useEffect(() => {
         if (!dealerId || !id) return;
@@ -106,7 +108,9 @@ export default function EditVehiclePage() {
                     insurance_valid_until: toDateInput(vehicle.insurance_valid_until),
                     insurance_quote_url: vehicle.insurance_quote_url ?? "",
                 });
-                setImagePreview(vehicle.image_url ?? "");
+                setExistingImageUrls([...(vehicle.image_urls ?? []), vehicle.image_url ?? ""].filter((url, index, urls): url is string => Boolean(url) && urls.indexOf(url) === index));
+                setNewImages([]);
+                setNewImagePreviews([]);
             })
             .catch(err => setError(err instanceof Error ? err.message : "Failed to load vehicle"))
             .finally(() => setLoading(false));
@@ -117,13 +121,26 @@ export default function EditVehiclePage() {
     }
 
     function handleImageChange(e: React.ChangeEvent<HTMLInputElement>) {
-        const file = e.target.files?.[0];
-        if (!file) return;
-        setImageFile(file);
-        const reader = new FileReader();
-        reader.onload = event => setImagePreview(String(event.target?.result ?? ""));
-        reader.readAsDataURL(file);
+        const files = Array.from(e.target.files ?? []);
+        if (!files.length) return;
+        const remaining = MAX_VEHICLE_IMAGES - existingImageUrls.length - newImages.length;
+        const toAdd = files.slice(0, Math.max(remaining, 0));
+        setNewImages(prev => [...prev, ...toAdd]);
+        toAdd.forEach(file => {
+            const reader = new FileReader();
+            reader.onload = event => setNewImagePreviews(prev => [...prev, String(event.target?.result ?? "")]);
+            reader.readAsDataURL(file);
+        });
         e.target.value = "";
+    }
+
+    function removeExistingImage(index: number) {
+        setExistingImageUrls(prev => prev.filter((_, i) => i !== index));
+    }
+
+    function removeNewImage(index: number) {
+        setNewImages(prev => prev.filter((_, i) => i !== index));
+        setNewImagePreviews(prev => prev.filter((_, i) => i !== index));
     }
 
     async function handleSubmit(e: React.FormEvent) {
@@ -132,10 +149,10 @@ export default function EditVehiclePage() {
         setSaving(true);
         setError("");
 
-        let imageUrl = form.image_url || undefined;
-        if (imageFile) {
+        const uploadedUrls: string[] = [];
+        for (const image of newImages) {
             const uploadData = new FormData();
-            uploadData.append("file", imageFile);
+            uploadData.append("file", image);
             const uploadRes = await fetch("/api/vehicles/upload-image", {
                 method: "POST",
                 body: uploadData,
@@ -146,8 +163,10 @@ export default function EditVehiclePage() {
                 setError(uploadJson.error ?? "Failed to upload vehicle photo");
                 return;
             }
-            imageUrl = uploadJson.url;
+            uploadedUrls.push(uploadJson.url);
         }
+        const imageUrls = [...existingImageUrls, ...uploadedUrls].slice(0, MAX_VEHICLE_IMAGES);
+        const imageUrl = imageUrls[0];
 
         const result = await updateVehicle(vehicle.id, dealerId, {
             vin: form.vin.trim() || undefined,
@@ -167,6 +186,7 @@ export default function EditVehiclePage() {
             features: form.features.split("\n").map(item => item.trim()).filter(Boolean),
             description: form.description.trim() || undefined,
             image_url: imageUrl,
+            image_urls: imageUrls,
             meta_title: form.meta_title.trim() || undefined,
             meta_description: form.meta_description.trim() || undefined,
             insurance_status: deriveInsuranceStatus(form.insurance_valid_until, form.insurance_status),
@@ -228,24 +248,37 @@ export default function EditVehiclePage() {
 
             <Card>
                 <CardHeader>
-                    <CardTitle>Main Photo</CardTitle>
-                    <CardDescription>This photo is shown on the buyer-facing inventory card and detail popup.</CardDescription>
+                    <CardTitle>Vehicle Photos</CardTitle>
+                    <CardDescription>Upload up to {MAX_VEHICLE_IMAGES} photos. The first photo is shown on the buyer-facing inventory card.</CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                    {imagePreview ? (
-                        <div className="relative aspect-video overflow-hidden rounded-xl border border-border bg-muted">
-                            {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img src={imagePreview} alt="Vehicle preview" className="h-full w-full object-cover" />
-                        </div>
-                    ) : (
-                        <div className="flex aspect-video items-center justify-center rounded-xl border border-dashed border-border bg-muted text-sm text-muted-foreground">
-                            No image uploaded
-                        </div>
-                    )}
+                    <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+                        {existingImageUrls.map((url, index) => (
+                            <div key={url} className="relative aspect-square overflow-hidden rounded-xl border border-border bg-muted">
+                                {/* eslint-disable-next-line @next/next/no-img-element */}
+                                <img src={url} alt={`Vehicle photo ${index + 1}`} className="h-full w-full object-cover" />
+                                {index === 0 && <span className="absolute bottom-1 left-1 rounded bg-black/70 px-1.5 py-0.5 text-[10px] font-medium text-white">Main</span>}
+                                <button type="button" onClick={() => removeExistingImage(index)} className="absolute right-1 top-1 rounded-full bg-white px-2 py-0.5 text-xs font-semibold text-red-600 shadow">Remove</button>
+                            </div>
+                        ))}
+                        {newImagePreviews.map((src, index) => (
+                            <div key={`${src}-${index}`} className="relative aspect-square overflow-hidden rounded-xl border border-border bg-muted">
+                                {/* eslint-disable-next-line @next/next/no-img-element */}
+                                <img src={src} alt={`New vehicle photo ${index + 1}`} className="h-full w-full object-cover" />
+                                {existingImageUrls.length === 0 && index === 0 && <span className="absolute bottom-1 left-1 rounded bg-black/70 px-1.5 py-0.5 text-[10px] font-medium text-white">Main</span>}
+                                <button type="button" onClick={() => removeNewImage(index)} className="absolute right-1 top-1 rounded-full bg-white px-2 py-0.5 text-xs font-semibold text-red-600 shadow">Remove</button>
+                            </div>
+                        ))}
+                        {existingImageUrls.length + newImages.length === 0 && (
+                            <div className="col-span-full flex aspect-video items-center justify-center rounded-xl border border-dashed border-border bg-muted text-sm text-muted-foreground">
+                                No images uploaded
+                            </div>
+                        )}
+                    </div>
                     <label className="inline-flex h-10 cursor-pointer items-center gap-2 rounded-md border border-input bg-background px-4 py-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground">
                         <ImagePlus className="h-4 w-4" />
-                        {imagePreview ? "Replace Photo" : "Upload Photo"}
-                        <input type="file" accept="image/*" className="hidden" onChange={handleImageChange} disabled={saving} />
+                        Add Photos ({existingImageUrls.length + newImages.length}/{MAX_VEHICLE_IMAGES})
+                        <input type="file" accept="image/*" multiple className="hidden" onChange={handleImageChange} disabled={saving || existingImageUrls.length + newImages.length >= MAX_VEHICLE_IMAGES} />
                     </label>
                 </CardContent>
             </Card>

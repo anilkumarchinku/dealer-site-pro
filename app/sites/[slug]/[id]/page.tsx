@@ -25,6 +25,8 @@ function fallbackMetaDescription(carName: string, dealerName: string, location: 
 
 function dbVehiclesToCars(vehicles: DBVehicle[]): Car[] {
     return vehicles.map(v => {
+        const imageUrls = [v.image_url, ...(v.image_urls ?? [])]
+            .filter((url, index, urls): url is string => Boolean(url) && urls.indexOf(url) === index);
         const keyFeatures = [
             ...(v.features ?? []),
             v.mileage_km ? `${v.mileage_km.toLocaleString('en-IN')} km driven` : null,
@@ -59,7 +61,7 @@ function dbVehiclesToCars(vehicles: DBVehicle[]): Car[] {
         },
         dimensions: { seatingCapacity: 5 },
         features: { keyFeatures },
-        images: { hero: v.image_url ?? '/placeholder-car.jpg', exterior: v.image_url ? [v.image_url] : [], interior: [] },
+        images: { hero: imageUrls[0] ?? '/placeholder-car.jpg', exterior: imageUrls, interior: [] },
         meta: {
             viewCount: v.views,
             dataSource: 'manual',
