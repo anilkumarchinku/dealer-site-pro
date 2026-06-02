@@ -158,13 +158,10 @@ export default async function SiteCarDetailPage({ params }: SiteCarDetailPagePro
             ? await fetchAllCyeproInventoryAsCars(cyepro_api_key)
             : [];
 
-        if (cyeproCars.length > 0) {
-            cars = cyeproCars;
-        } else if (vehicles.length > 0) {
-            cars = dbVehiclesToCars(vehicles);
-        } else {
-            cars = [];
-        }
+        cars = dedupeByMakeModel([
+            ...dbVehiclesToCars(vehicles),
+            ...cyeproCars,
+        ]);
     }
 
     const selectedCar = cars.find(item => item.id === id);
