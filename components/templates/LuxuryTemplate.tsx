@@ -51,6 +51,7 @@ interface LuxuryTemplateProps {
     sellsNewCars?: boolean;
     sellsUsedCars?: boolean;
     branches?: Array<{ city: string; address: string; phone?: string }>;
+    serviceCenters?: Array<{ id: string; name: string; address?: string; city?: string; phone?: string }>;
     isVerified?: boolean;
     vehicleType?: '2w' | '3w' | '4w';
 }
@@ -70,6 +71,7 @@ export function LuxuryTemplate({
     sellsNewCars = false,
     sellsUsedCars = false,
     branches,
+    serviceCenters,
     isVerified = false,
     vehicleType,
 }: LuxuryTemplateProps) {
@@ -454,7 +456,7 @@ export function LuxuryTemplate({
 
                     {/* Service Booking */}
                     <div id="service-section">
-                        <ServiceBookingSection brandColor={brandAccent} dealerId={dealerId} dealerName={dealerName} vehicleType={vehicleType} branches={branches} />
+                        <ServiceBookingSection brandColor={brandAccent} dealerId={dealerId} dealerName={dealerName} vehicleType={vehicleType} branches={branches} serviceCenters={serviceCenters} />
                     </div>
 
                     {/* FAQ Section */}

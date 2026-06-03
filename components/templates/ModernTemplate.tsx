@@ -76,6 +76,7 @@ interface ModernTemplateProps {
     sellsNewCars?: boolean;
     sellsUsedCars?: boolean;
     branches?: Array<{ city: string; address: string; phone?: string }>;
+    serviceCenters?: Array<{ id: string; name: string; address?: string; city?: string; phone?: string }>;
     isVerified?: boolean;
     vehicleType?: '2w' | '3w' | '4w';
 }
@@ -95,6 +96,7 @@ export function ModernTemplate({
     sellsNewCars = false,
     sellsUsedCars = false,
     branches,
+    serviceCenters,
     isVerified = false,
     vehicleType,
 }: ModernTemplateProps) {
@@ -627,7 +629,7 @@ export function ModernTemplate({
 
                     {/* Service Booking */}
                     <div id="service-section">
-                        <ServiceBookingSection brandColor={brandColors.primary} dealerId={dealerId} dealerName={dealerName} vehicleType={vehicleType} branches={branches} />
+                        <ServiceBookingSection brandColor={brandColors.primary} dealerId={dealerId} dealerName={dealerName} vehicleType={vehicleType} branches={branches} serviceCenters={serviceCenters} />
                     </div>
 
                     {/* FAQ Section */}

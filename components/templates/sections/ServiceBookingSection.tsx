@@ -3,12 +3,21 @@
 import { useState } from 'react';
 import { CheckCircle2, Wrench } from 'lucide-react';
 
+interface ServiceCenter {
+    id: string;
+    name: string;
+    address?: string;
+    city?: string;
+    phone?: string;
+}
+
 interface ServiceBookingSectionProps {
     brandColor: string;
     dealerId?: string;
     dealerName: string;
     vehicleType?: '2w' | '3w' | '4w';
     branches?: Array<{ city?: string; address?: string; phone?: string }>;
+    serviceCenters?: ServiceCenter[]; // Real service centers from database
 }
 
 function getServiceTypes(vehicleType?: '2w' | '3w' | '4w'): string[] {
@@ -47,18 +56,25 @@ export function ServiceBookingSection({
     dealerName,
     vehicleType,
     branches = [],
+    serviceCenters = [],
 }: ServiceBookingSectionProps) {
     const serviceTypes = getServiceTypes(vehicleType);
-    const serviceLocations = [
-        ...(branches.length > 0
-            ? branches.slice(0, 4).map((branch, index) => ({
-                name: branch.city ? `${dealerName} ${branch.city}` : `${dealerName} Branch ${index + 1}`,
-                meta: branch.address || branch.phone || 'Showroom and service touchpoint',
-            }))
-            : []),
-        { name: `${dealerName} Main Workshop`, meta: 'Showroom service desk' },
-        { name: 'Partner Service Hub', meta: 'Referral assignment available' },
-    ];
+
+    // Use real service centers from database first, then fall back to branches
+    const serviceLocations = serviceCenters.length > 0
+        ? serviceCenters.map((center) => ({
+            name: center.name,
+            meta: center.address || center.city || center.phone || 'Service center',
+        }))
+        : branches.length > 0
+        ? branches.slice(0, 4).map((branch, index) => ({
+            name: branch.city ? `${dealerName} ${branch.city}` : `${dealerName} Branch ${index + 1}`,
+            meta: branch.address || branch.phone || 'Showroom and service touchpoint',
+        }))
+        : [
+            // Fallback only if no service centers or branches configured
+            { name: `${dealerName} Service Center`, meta: 'Contact dealer for location details' },
+        ];
 
     const [selectedService, setSelectedService] = useState(serviceTypes[0]);
     const [form, setForm] = useState<FormState>({
