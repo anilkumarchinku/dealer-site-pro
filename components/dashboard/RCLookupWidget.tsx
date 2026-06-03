@@ -7,7 +7,8 @@
 'use client';
 
 import { useState } from 'react';
-import { Search, AlertCircle, CheckCircle2, Car, FileText, Shield, Loader2 } from 'lucide-react';
+import { useRouter } from 'next/navigation';
+import { Search, AlertCircle, CheckCircle2, Car, FileText, Shield, Loader2, Plus } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
 
@@ -61,17 +62,21 @@ function InfoRow({ label, value, highlight }: { label: string; value?: string; h
 }
 
 export function RCLookupWidget() {
+    const router = useRouter();
     const [rc, setRc] = useState('');
     const [status, setStatus] = useState<'idle' | 'loading' | 'done' | 'error'>('idle');
     const [data, setData] = useState<RCData | null>(null);
     const [error, setError] = useState('');
     const [showChallans, setShowChallans] = useState(false);
+    const [isAddingToInventory, setIsAddingToInventory] = useState(false);
+    const [addToInventorySuccess, setAddToInventorySuccess] = useState(false);
 
     const handleLookup = async (e: React.FormEvent) => {
         e.preventDefault();
         setError('');
         setData(null);
         setShowChallans(false);
+        setAddToInventorySuccess(false);
         setStatus('loading');
         try {
             const res = await fetch('/api/vehicles/rc-lookup', {
@@ -86,6 +91,42 @@ export function RCLookupWidget() {
         } catch (err) {
             setError(err instanceof Error ? err.message : 'Lookup failed');
             setStatus('error');
+        }
+    };
+
+    const handleAddToInventory = async () => {
+        if (!data) return;
+
+        setIsAddingToInventory(true);
+        setError('');
+
+        try {
+            const res = await fetch('/api/vehicles/create-draft', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ rcData: data }),
+            });
+
+            const json = await res.json();
+
+            if (!res.ok) {
+                // Handle duplicate error specially
+                if (res.status === 409 && json.vehicleId) {
+                    throw new Error('This vehicle is already in your inventory');
+                }
+                throw new Error(json.error ?? 'Failed to add to inventory');
+            }
+
+            setAddToInventorySuccess(true);
+
+            // Redirect to Add Vehicle form with the draft ID after 1 second
+            setTimeout(() => {
+                router.push(`/dashboard/inventory/add?vehicleId=${json.vehicleId}`);
+            }, 1000);
+        } catch (err) {
+            setError(err instanceof Error ? err.message : 'Failed to add to inventory');
+        } finally {
+            setIsAddingToInventory(false);
         }
     };
 
@@ -154,6 +195,33 @@ export function RCLookupWidget() {
                                 : <><CheckCircle2 className="w-5 h-5 text-emerald-600" /><span className="text-sm font-semibold text-emerald-700">Vehicle is clear — not blacklisted</span></>
                             }
                         </div>
+
+                        {/* Add to Inventory button */}
+                        {addToInventorySuccess ? (
+                            <div className="flex items-center gap-2 text-sm text-emerald-600 bg-emerald-50 rounded-xl p-3 border border-emerald-200">
+                                <CheckCircle2 className="w-4 h-4 shrink-0" />
+                                Draft created! Redirecting to complete details...
+                            </div>
+                        ) : (
+                            <Button
+                                onClick={handleAddToInventory}
+                                disabled={isAddingToInventory || data.blacklisted}
+                                className={`w-full gap-2 ${data.blacklisted ? 'opacity-50 cursor-not-allowed' : ''}`}
+                                variant={data.blacklisted ? 'destructive' : 'default'}
+                            >
+                                {isAddingToInventory ? (
+                                    <>
+                                        <Loader2 className="w-4 h-4 animate-spin" />
+                                        Adding to Inventory...
+                                    </>
+                                ) : (
+                                    <>
+                                        <Plus className="w-4 h-4" />
+                                        {data.blacklisted ? 'Cannot Add Blacklisted Vehicle' : 'Add to Inventory'}
+                                    </>
+                                )}
+                            </Button>
+                        )}
 
                         {/* Vehicle info */}
                         <div className="grid md:grid-cols-2 gap-4">

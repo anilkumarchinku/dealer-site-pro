@@ -31,7 +31,7 @@ export interface DBVehicle {
     insurance_quote_url?: string;
     insurance_last_checked_at?: string;
     condition: "new" | "used" | "certified_pre_owned";
-    status: "available" | "reserved" | "sold" | "inactive";
+    status: "available" | "reserved" | "sold" | "inactive" | "draft";
     views: number;
     created_at: string;
 }
@@ -63,6 +63,7 @@ export interface AddVehiclePayload {
     insurance_quote_url?: string;
     insurance_last_checked_at?: string;
     condition?: "new" | "used" | "certified_pre_owned";
+    status?: "available" | "draft"; // Optional: defaults to "available" if not specified
 }
 
 export type UpdateVehiclePayload = Partial<Omit<AddVehiclePayload, "dealer_id">> & {
@@ -130,7 +131,7 @@ export async function addVehicle(
             ...payload,
             features:  payload.features ?? [],
             condition: payload.condition ?? "used",
-            status:    "available",
+            status:    payload.status ?? "available",
             views: 0,
         })
         .select("id")

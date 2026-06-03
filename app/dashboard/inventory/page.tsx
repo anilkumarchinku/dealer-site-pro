@@ -11,6 +11,7 @@ import { fetchVehicles, deleteVehicle, updateVehicleStatus, type DBVehicle } fro
 import { useOnboardingStore } from "@/lib/store/onboarding-store";
 import BulkUploadModal from "@/components/BulkUploadModal";
 import { RCLookupWidget } from "@/components/dashboard/RCLookupWidget";
+import { ApiUsageWidget } from "@/components/dashboard/ApiUsageWidget";
 import { Badge } from "@/components/ui/badge";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 
@@ -53,6 +54,7 @@ export default function InventoryPage() {
     const [searchQuery, setSearchQuery] = useState("");
     const [filterCategory, setFilterCategory] = useState<string>("all");
     const [activeTab, setActiveTab] = useState<ConditionTab>("all");
+    const [showDrafts, setShowDrafts] = useState(true);
 
     // DB vehicles (added by dealer via form)
     const [dbVehicles, setDbVehicles] = useState<DBVehicle[]>([]);
@@ -75,7 +77,7 @@ export default function InventoryPage() {
         return true;
     });
 
-    // ── Search + category filtering ───────────────────────────
+    // ── Search + category + draft filtering ───────────────────────────
     const filteredDB = tabFiltered.filter(v => {
         const q = searchQuery.toLowerCase();
         const matchesSearch =
@@ -84,7 +86,8 @@ export default function InventoryPage() {
             || (v.variant ?? "").toLowerCase().includes(q)
             || (v.registration_number ?? "").toLowerCase().includes(q);
         const matchesCategory = filterCategory === "all" || v.body_type === filterCategory;
-        return matchesSearch && matchesCategory;
+        const matchesDraft = showDrafts || v.status !== "draft";
+        return matchesSearch && matchesCategory && matchesDraft;
     });
 
     const categories = Array.from(new Set(tabFiltered.map(v => v.body_type).filter(Boolean)));
@@ -174,6 +177,18 @@ export default function InventoryPage() {
                     )}
                 </div>
             </div>
+
+            {/* RC Lookup & Usage Tracking */}
+            {(data.sellsUsedCars || data.sellsNewCars) && (
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    <div className="lg:col-span-2">
+                        <RCLookupWidget />
+                    </div>
+                    <div>
+                        <ApiUsageWidget />
+                    </div>
+                </div>
+            )}
 
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -268,6 +283,14 @@ export default function InventoryPage() {
                                 ))}
                             </SelectContent>
                         </Select>
+
+                        <Button
+                            variant={showDrafts ? "default" : "outline"}
+                            onClick={() => setShowDrafts(!showDrafts)}
+                            className="gap-2"
+                        >
+                            {showDrafts ? "Hide Drafts" : "Show Drafts"}
+                        </Button>
                     </div>
                 </CardContent>
             </Card>
@@ -303,9 +326,6 @@ export default function InventoryPage() {
             <p className="text-xs text-muted-foreground text-center">
                 Showing {filteredDB.length} of {dbVehicles.length} vehicles
             </p>
-
-            {/* RC Lookup */}
-            {(data.sellsUsedCars || data.sellsNewCars) && <RCLookupWidget />}
         </div>
     );
 }
@@ -388,33 +408,59 @@ function DBVehicleTable({
                                     </TableCell>
                                 )}
                                 <TableCell>
-                                    <Badge className="bg-green-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20 capitalize" variant="outline">
-                                        {v.status}
-                                    </Badge>
+                                    {v.status === "draft" ? (
+                                        <Badge className="bg-amber-500/10 text-amber-600 border-amber-500/20" variant="outline">
+                                            Draft (Incomplete)
+                                        </Badge>
+                                    ) : (
+                                        <Badge className="bg-green-500/10 text-emerald-600 dark:text-emerald-400 border-emerald-500/20 capitalize" variant="outline">
+                                            {v.status}
+                                        </Badge>
+                                    )}
                                 </TableCell>
                                 <TableCell className="text-right">
                                     <div className="flex justify-end gap-1">
-                                        <Button asChild variant="ghost" size="sm" className="h-8 px-3 text-xs">
-                                            <Link href={`/dashboard/inventory/${v.id}/edit`}>Edit</Link>
-                                        </Button>
-                                        {v.status !== "sold" && (
-                                            <Button
-                                                variant="ghost"
-                                                size="sm"
-                                                className="h-8 px-3 text-xs"
-                                                onClick={() => onMarkSold(v.id)}
-                                            >
-                                                Sold
-                                            </Button>
+                                        {v.status === "draft" ? (
+                                            <>
+                                                <Button asChild variant="ghost" size="sm" className="h-8 px-3 text-xs">
+                                                    <Link href={`/dashboard/inventory/add?vehicleId=${v.id}`}>
+                                                        Complete
+                                                    </Link>
+                                                </Button>
+                                                <Button
+                                                    variant="ghost"
+                                                    size="sm"
+                                                    className="h-8 px-3 text-xs text-destructive hover:bg-destructive/10"
+                                                    onClick={() => onDelete(v.id)}
+                                                >
+                                                    Delete
+                                                </Button>
+                                            </>
+                                        ) : (
+                                            <>
+                                                <Button asChild variant="ghost" size="sm" className="h-8 px-3 text-xs">
+                                                    <Link href={`/dashboard/inventory/${v.id}/edit`}>Edit</Link>
+                                                </Button>
+                                                {v.status !== "sold" && (
+                                                    <Button
+                                                        variant="ghost"
+                                                        size="sm"
+                                                        className="h-8 px-3 text-xs"
+                                                        onClick={() => onMarkSold(v.id)}
+                                                    >
+                                                        Sold
+                                                    </Button>
+                                                )}
+                                                <Button
+                                                    variant="ghost"
+                                                    size="sm"
+                                                    className="h-8 px-3 text-xs text-destructive hover:bg-destructive/10"
+                                                    onClick={() => onDelete(v.id)}
+                                                >
+                                                    Remove
+                                                </Button>
+                                            </>
                                         )}
-                                        <Button
-                                            variant="ghost"
-                                            size="sm"
-                                            className="h-8 px-3 text-xs text-destructive hover:bg-destructive/10"
-                                            onClick={() => onDelete(v.id)}
-                                        >
-                                            Remove
-                                        </Button>
                                     </div>
                                 </TableCell>
                             </TableRow>

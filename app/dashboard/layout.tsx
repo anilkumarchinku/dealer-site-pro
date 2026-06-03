@@ -52,7 +52,6 @@ const navGroups = [
             { name: "Insurance",   href: "/dashboard/insurance",     icon: ShieldCheck  },
             { name: "Push",        href: "/dashboard/push-notifications", icon: Bell    },
             { name: "Inventory",   href: "/dashboard/inventory",     icon: Car          },
-            { name: "Add Vehicle", href: "/dashboard/inventory/add", icon: Plus         },
             { name: "Messages",    href: "/dashboard/messages",      icon: MessageSquare },
         ],
     },

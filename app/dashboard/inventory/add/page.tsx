@@ -1,12 +1,12 @@
 "use client"
-import { useState, useRef } from "react";
-import { useRouter } from "next/navigation";
+import { useState, useRef, useEffect } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Upload, Sparkles, Check, Loader2, Car, ImagePlus, X, Camera, Youtube } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { addVehicle } from "@/lib/db/vehicles";
+import { addVehicle, fetchVehicleById, updateVehicle } from "@/lib/db/vehicles";
 import { useOnboardingStore } from "@/lib/store/onboarding-store";
 
 const FEATURES = [
@@ -62,12 +62,15 @@ function deriveInsuranceStatus(validUntil: string, fallback: FormData["insurance
 
 export default function AddVehiclePage() {
     const router = useRouter();
+    const searchParams = useSearchParams();
+    const vehicleId = searchParams.get('vehicleId');
     const { dealerId, data } = useOnboardingStore();
     const isHybrid    = data.sellsNewCars && data.sellsUsedCars;
     const isFirstHand = data.sellsNewCars && !data.sellsUsedCars;
     const fileInputRef = useRef<HTMLInputElement>(null);
 
     // IMPORTANT: All hooks must be declared before any early returns
+    const [isDraftMode, setIsDraftMode] = useState(false);
     const [formData, setFormData] = useState<FormData>({
         vin: "",
         registration_number: "",
@@ -97,6 +100,53 @@ export default function AddVehiclePage() {
     const [isAIGenerating, setIsAIGenerating] = useState(false);
     const [isSaving, setIsSaving]     = useState(false);
     const [saveError, setSaveError]   = useState<string | null>(null);
+
+    // Load draft vehicle data if vehicleId is present
+    useEffect(() => {
+        if (!vehicleId || !dealerId) return;
+
+        const loadDraft = async () => {
+            const { vehicle, error } = await fetchVehicleById(dealerId, vehicleId);
+
+            if (error || !vehicle) {
+                setSaveError('Failed to load draft vehicle');
+                return;
+            }
+
+            if (vehicle.status !== 'draft') {
+                setSaveError('This vehicle is not a draft');
+                return;
+            }
+
+            // Pre-populate form with draft data
+            setIsDraftMode(true);
+            setFormData({
+                vin: vehicle.vin || '',
+                registration_number: vehicle.registration_number || '',
+                make: vehicle.make,
+                model: vehicle.model,
+                variant: vehicle.variant || '',
+                year: vehicle.year.toString(),
+                price_paise: '', // Leave empty for dealer to fill
+                mileage_km: vehicle.mileage_km?.toString() || '',
+                color: vehicle.color || '',
+                transmission: vehicle.transmission || 'Automatic',
+                fuel_type: vehicle.fuel_type || 'Petrol',
+                features: vehicle.features || [],
+                description: vehicle.description || '',
+                meta_title: vehicle.meta_title || '',
+                meta_description: vehicle.meta_description || '',
+                insurance_status: vehicle.insurance_status || 'unknown',
+                insurance_provider: vehicle.insurance_provider || '',
+                insurance_valid_until: vehicle.insurance_valid_until || '',
+                insurance_quote_url: vehicle.insurance_quote_url || '',
+                video_url: vehicle.video_url || '',
+                condition: vehicle.condition,
+            });
+        };
+
+        loadDraft();
+    }, [vehicleId, dealerId]);
 
     const handleChange = (field: keyof FormData, value: string) => {
         setFormData(prev => ({ ...prev, [field]: value }));
@@ -244,7 +294,8 @@ export default function AddVehiclePage() {
             }
             const imageUrl = imageUrls[0];
 
-            const result = await addVehicle({
+            // Prepare vehicle data
+            const vehicleData = {
                 dealer_id:    dealerId,
                 vin:          formData.vin,
                 registration_number: formData.registration_number.trim().toUpperCase() || undefined,
@@ -270,7 +321,16 @@ export default function AddVehiclePage() {
                 insurance_quote_url: formData.insurance_quote_url || undefined,
                 insurance_last_checked_at: formData.insurance_valid_until ? new Date().toISOString() : undefined,
                 condition:    formData.condition,
-            });
+            };
+
+            // Update draft or create new vehicle
+            const result = isDraftMode && vehicleId
+                ? await updateVehicle(vehicleId, dealerId, {
+                      ...vehicleData,
+                      status: "available", // Change from draft to available
+                  })
+                : await addVehicle(vehicleData);
+
             if (result.success) {
                 // Fire-and-forget social post (non-blocking)
                 const carName = [formData.year, formData.make, formData.model, formData.variant].filter(Boolean).join(' ')
@@ -332,8 +392,10 @@ export default function AddVehiclePage() {
                         <ArrowLeft className="w-5 h-5" />
                     </Button>
                     <div>
-                        <h1 className="text-2xl font-bold">Add Vehicle</h1>
-                        <p className="text-muted-foreground text-sm">Add a new vehicle to your inventory</p>
+                        <h1 className="text-2xl font-bold">{isDraftMode ? 'Complete Vehicle Details' : 'Add Vehicle'}</h1>
+                        <p className="text-muted-foreground text-sm">
+                            {isDraftMode ? 'Fill in the missing details to publish this vehicle' : 'Add a new vehicle to your inventory'}
+                        </p>
                     </div>
                 </div>
 
@@ -820,6 +882,8 @@ export default function AddVehiclePage() {
                     >
                         {isSaving ? (
                             <><Loader2 className="w-4 h-4 mr-2 animate-spin" />Saving...</>
+                        ) : isDraftMode ? (
+                            <><Upload className="w-4 h-4 mr-2" />Publish Vehicle</>
                         ) : (
                             <><Upload className="w-4 h-4 mr-2" />Add Vehicle to Inventory</>
                         )}

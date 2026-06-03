@@ -17,7 +17,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { getOptionalEnv } from '@/lib/env'
 import { ExternalApiError, externalApiFetch } from '@/lib/services/external-api-fetch'
-import { requireAuth, type RouteSupabaseClient } from '@/lib/supabase-server'
+import { requireAuth, type RouteSupabaseClient, createAdminClient } from '@/lib/supabase-server'
+import { logApiUsage } from '@/lib/db/credits'
 
 const RC_CACHE_TTL_SECONDS = 60 * 60 * 24
 const memoryCache = new Map<string, { expiresAt: number; value: Record<string, unknown> }>()
@@ -220,9 +221,24 @@ async function surepassEdgeFunctionLookup(
     return data.data
 }
 
+/** Get dealer ID from authenticated user */
+async function getDealerIdForUser(userId: string): Promise<string | null> {
+    const supabase = createAdminClient()
+    const { data } = await supabase
+        .from('dealers')
+        .select('id')
+        .eq('user_id', userId)
+        .single()
+    return data?.id ?? null
+}
+
 export async function POST(request: NextRequest) {
     const auth = await requireAuth()
     if (auth.errorResponse) return auth.errorResponse
+
+    // Get dealer ID for usage tracking
+    const dealerId = await getDealerIdForUser(auth.user.id)
+    const ipAddress = request.headers.get('x-forwarded-for') || request.headers.get('x-real-ip') || 'unknown'
 
     const body = await request.json().catch(() => null)
     if (!body?.rc) {
@@ -242,6 +258,7 @@ export async function POST(request: NextRequest) {
     try {
         const cached = await getCachedLookup(rc)
         if (cached) {
+            // Don't charge for cached results
             return NextResponse.json({ success: true, data: cached, cached: true, ttl_seconds: RC_CACHE_TTL_SECONDS })
         }
 
@@ -263,9 +280,37 @@ export async function POST(request: NextRequest) {
 
         await setCachedLookup(rc, result)
 
+        // ✅ Log successful usage (₹3 for Plan 1)
+        if (dealerId) {
+            await logApiUsage({
+                dealerId,
+                apiType: 'rc_verification',
+                requestParams: { rc },
+                responseSuccess: true,
+                ipAddress,
+            }).catch(err => {
+                console.error('[RC Lookup] Failed to log usage:', err)
+                // Don't fail the request if logging fails
+            })
+        }
+
         return NextResponse.json({ success: true, data: result, cached: false, ttl_seconds: RC_CACHE_TTL_SECONDS })
     } catch (err) {
         console.error('RC lookup error:', err)
+
+        // ❌ Log failed usage (still charged because provider was called)
+        if (dealerId) {
+            await logApiUsage({
+                dealerId,
+                apiType: 'rc_verification',
+                requestParams: { rc },
+                responseSuccess: false,
+                errorMessage: err instanceof Error ? err.message : 'Unknown error',
+                ipAddress,
+            }).catch(logErr => {
+                console.error('[RC Lookup] Failed to log error usage:', logErr)
+            })
+        }
 
         if (err instanceof ExternalApiError) {
             const safeMessage = err.status === 401
