@@ -1,5 +1,5 @@
 "use client"
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -60,7 +60,7 @@ function deriveInsuranceStatus(validUntil: string, fallback: FormData["insurance
     return "active";
 }
 
-export default function AddVehiclePage() {
+function AddVehiclePageContent() {
     const router = useRouter();
     const searchParams = useSearchParams();
     const vehicleId = searchParams.get('vehicleId');
@@ -891,5 +891,18 @@ export default function AddVehiclePage() {
                 </div>
             </div>
         </div>
+    );
+}
+
+// Wrap in Suspense to handle useSearchParams
+export default function AddVehiclePage() {
+    return (
+        <Suspense fallback={
+            <div className="flex items-center justify-center min-h-screen">
+                <Loader2 className="w-8 h-8 animate-spin text-primary" />
+            </div>
+        }>
+            <AddVehiclePageContent />
+        </Suspense>
     );
 }
