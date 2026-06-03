@@ -17,7 +17,7 @@
 
 import { NextRequest, NextResponse } from 'next/server'
 import { getOptionalEnv } from '@/lib/env'
-import { externalApiFetch } from '@/lib/services/external-api-fetch'
+import { ExternalApiError, externalApiFetch } from '@/lib/services/external-api-fetch'
 import { requireAuth } from '@/lib/supabase-server'
 
 const RC_CACHE_TTL_SECONDS = 60 * 60 * 24
@@ -308,24 +308,34 @@ async function surepassLookup(rc: string): Promise<Record<string, unknown>> {
         }
     }
 
-    const challanPayload = await externalApiFetch<SurepassEnvelope>({
-        baseUrl,
-        providerName: 'Surepass',
-        path: challanPath,
-        headers: {
-            'Content-Type': 'application/json',
-            Authorization: `Bearer ${token}`,
-        },
-        init: {
-            method: 'POST',
-            body: JSON.stringify({
-                rc_number: rc,
-                chassis_number: chassisNumber,
-                engine_number: engineNumber,
-                state_only: false,
-            }),
-        },
-    })
+    let challanPayload: SurepassEnvelope
+    try {
+        challanPayload = await externalApiFetch<SurepassEnvelope>({
+            baseUrl,
+            providerName: 'Surepass',
+            path: challanPath,
+            headers: {
+                'Content-Type': 'application/json',
+                Authorization: `Bearer ${token}`,
+            },
+            init: {
+                method: 'POST',
+                body: JSON.stringify({
+                    rc_number: rc,
+                    chassis_number: chassisNumber,
+                    engine_number: engineNumber,
+                    state_only: false,
+                }),
+            },
+        })
+    } catch (err) {
+        console.error('Surepass challan lookup error:', err)
+        return {
+            ...result,
+            challan_status: 'Challan lookup unavailable',
+            challan_error: err instanceof ExternalApiError ? err.status ?? 'provider_error' : 'provider_error',
+        }
+    }
 
     if (challanPayload.success === false) {
         return {
@@ -430,6 +440,26 @@ export async function POST(request: NextRequest) {
         return NextResponse.json({ success: true, data: result, cached: false, ttl_seconds: RC_CACHE_TTL_SECONDS })
     } catch (err) {
         console.error('RC lookup error:', err)
+
+        if (err instanceof ExternalApiError) {
+            const safeMessage = err.status === 401
+                ? 'Surepass authentication failed. Check SUREPASS_API_TOKEN; the sandbox token may be expired.'
+                : err.status === 403
+                    ? 'Surepass access denied for this API. Check sandbox permissions for RC Full.'
+                    : err.status === 422
+                        ? 'Surepass rejected the RC number format or sandbox test data.'
+                        : 'Surepass RC lookup failed. Check provider configuration and try again.'
+
+            return NextResponse.json(
+                {
+                    error: safeMessage,
+                    provider: err.providerName,
+                    provider_status: err.status ?? null,
+                },
+                { status: 502 }
+            )
+        }
+
         return NextResponse.json({ error: 'RC lookup failed. Please try again.' }, { status: 500 })
     }
 }
