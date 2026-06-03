@@ -1,7 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npx supabase:*)"
+      "Bash(npx supabase:*)",
+      "mcp__claude_ai_SupaBase__list_projects",
+      "mcp__claude_ai_SupaBase__execute_sql"
     ]
   }
 }

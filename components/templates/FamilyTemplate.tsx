@@ -68,6 +68,7 @@ interface FamilyTemplateProps {
     sellsNewCars?: boolean;
     sellsUsedCars?: boolean;
     branches?: Array<{ city: string; address: string; phone?: string }>;
+    serviceCenters?: Array<{ id: string; name: string; address?: string; city?: string; phone?: string }>;
     isVerified?: boolean;
     vehicleType?: '2w' | '3w' | '4w';
 }
@@ -87,6 +88,7 @@ export function FamilyTemplate({
     sellsNewCars = false,
     sellsUsedCars = false,
     branches,
+    serviceCenters,
     isVerified = false,
     vehicleType,
 }: FamilyTemplateProps) {
@@ -507,7 +509,7 @@ export function FamilyTemplate({
 
                     {/* Service Booking */}
                     <div id="service-section">
-                        <ServiceBookingSection brandColor={brandColors.primary} dealerId={dealerId} dealerName={dealerName} vehicleType={vehicleType} branches={branches} />
+                        <ServiceBookingSection brandColor={brandColors.primary} dealerId={dealerId} dealerName={dealerName} vehicleType={vehicleType} branches={branches} serviceCenters={serviceCenters} />
                     </div>
 
                     {/* FAQ Section */}

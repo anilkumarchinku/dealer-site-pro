@@ -90,6 +90,7 @@ export interface DealerPublicData {
     brands: string[]
     vehicles: DBVehicle[]
     branches?: Array<{ city: string; address: string; phone?: string }> | null
+    service_centers?: Array<{ id: string; name: string; address?: string; city?: string; phone?: string }> | null
     hero_title: string | null
     hero_subtitle: string | null
     hero_cta_text: string | null
@@ -219,7 +220,7 @@ export async function fetchDealerBySlug(slug: string): Promise<DealerPublicData 
     // For brand-specific sites, also try dealer_site_configs for per-brand overrides
     const brandSlugForConfig = brandFilter ? brandToUrlSlug(brandFilter) : null
 
-    const [brandsResult, mainConfigResult, siteConfigResult, vehiclesResult, servicesResult] = await Promise.all([
+    const [brandsResult, mainConfigResult, siteConfigResult, vehiclesResult, servicesResult, serviceCentersResult] = await Promise.all([
         supabase
             .from('dealer_brands')
             .select('brand_name')
@@ -249,6 +250,12 @@ export async function fetchDealerBySlug(slug: string): Promise<DealerPublicData 
             .select('service_name')
             .eq('dealer_id', dealer.id)
             .eq('is_active', true),
+        supabase
+            .from('service_centers')
+            .select('id, name, address, city, phone')
+            .eq('dealer_id', dealer.id)
+            .eq('is_active', true)
+            .order('display_order', { ascending: true }),
     ])
 
     // Brand-specific config takes priority over the shared main config
@@ -271,6 +278,7 @@ export async function fetchDealerBySlug(slug: string): Promise<DealerPublicData 
         brands:          brandsResult.data?.map(b => b.brand_name) ?? [],
         vehicles:        (vehiclesResult.data ?? []) as DBVehicle[],
         branches:        dealer.branches ?? null,
+        service_centers: serviceCentersResult.data ?? null,
         hero_title:      cfg?.hero_title ?? null,
         hero_subtitle:   cfg?.hero_subtitle ?? null,
         hero_cta_text:   cfg?.hero_cta_text ?? null,
