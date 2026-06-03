@@ -63,7 +63,7 @@ export interface AddVehiclePayload {
     insurance_quote_url?: string;
     insurance_last_checked_at?: string;
     condition?: "new" | "used" | "certified_pre_owned";
-    status?: "available" | "draft"; // Optional: defaults to "available" if not specified
+    status?: DBVehicle["status"]; // Optional: defaults to "available" if not specified
 }
 
 export type UpdateVehiclePayload = Partial<Omit<AddVehiclePayload, "dealer_id">> & {
