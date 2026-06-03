@@ -266,7 +266,7 @@ export interface Database {
           insurance_quote_url: string | null
           insurance_last_checked_at: string | null
           condition: 'new' | 'used' | 'certified_pre_owned'
-          status: 'available' | 'reserved' | 'sold' | 'inactive'
+          status: 'available' | 'reserved' | 'sold' | 'inactive' | 'draft'
           views: number
           leads_count: number
           is_featured: boolean
