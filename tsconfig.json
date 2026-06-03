@@ -48,6 +48,7 @@
   ],
   "exclude": [
     "node_modules",
-    "dealer-custom-site-dist"
+    "dealer-custom-site-dist",
+    "supabase/functions"
   ]
 }
