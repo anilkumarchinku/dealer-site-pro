@@ -40,6 +40,7 @@ import Link from "next/link";
 import { CarGrid } from "@/components/cars/CarGrid";
 import { Car as CarType } from "@/lib/types/car";
 import { getBrandLogo } from "@/lib/data/brand-logos";
+import { getVehicleImageUrls, brandNameToId } from "@/lib/utils/brand-model-images";
 
 interface WelcomeClientProps {
     cars: CarType[];
@@ -320,17 +321,27 @@ export default function WelcomeClient({ cars }: WelcomeClientProps) {
 
                                         {/* Mini Car Cards */}
                                         <div className="grid grid-cols-3 gap-3">
-                                            {cars.slice(0, 3).map((car, i) => (
-                                                <div key={i} className="bg-muted/50 rounded-lg p-2 border border-border">
-                                                    <div className="aspect-video bg-muted rounded mb-2 overflow-hidden relative">
-                                                        {car.images.hero && (
-                                                            <Image src={car.images.hero} alt={car.model} fill unoptimized className="object-cover" />
-                                                        )}
+                                            {cars.slice(0, 3).map((car, i) => {
+                                                const category = (car.vehicleCategory ?? '4w') as '2w' | '3w' | '4w';
+                                                const resolvedUrls = getVehicleImageUrls(
+                                                    category,
+                                                    brandNameToId(car.make, category),
+                                                    car.model,
+                                                    car.images.hero,
+                                                );
+                                                const displayUrl = resolvedUrls[0] || car.images.hero;
+                                                return (
+                                                    <div key={i} className="bg-muted/50 rounded-lg p-2 border border-border">
+                                                        <div className="aspect-video bg-muted rounded mb-2 overflow-hidden relative">
+                                                            {displayUrl && (
+                                                                <Image src={displayUrl} alt={car.model} fill unoptimized className="object-cover" />
+                                                            )}
+                                                        </div>
+                                                        <p className="text-xs font-medium truncate text-foreground">{car.model}</p>
+                                                        <p className="text-xs text-muted-foreground font-semibold">₹{((car.pricing.exShowroom.min ?? 0) / 100000).toFixed(1)}L</p>
                                                     </div>
-                                                    <p className="text-xs font-medium truncate text-foreground">{car.model}</p>
-                                                    <p className="text-xs text-muted-foreground font-semibold">₹{((car.pricing.exShowroom.min ?? 0) / 100000).toFixed(1)}L</p>
-                                                </div>
-                                            ))}
+                                                );
+                                            })}
                                         </div>
                                     </div>
                                 </div>
