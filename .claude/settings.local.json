@@ -3,7 +3,14 @@
     "allow": [
       "Bash(npx supabase:*)",
       "mcp__claude_ai_SupaBase__list_projects",
-      "mcp__claude_ai_SupaBase__execute_sql"
+      "mcp__claude_ai_SupaBase__execute_sql",
+      "mcp__claude_ai_SupaBase__list_migrations",
+      "Bash(where:*)",
+      "Bash(npx --help:*)",
+      "Bash(pip --version:*)",
+      "Bash(pip3:*)",
+      "Bash(pip install:*)",
+      "Bash(python:*)"
     ]
   }
 }
