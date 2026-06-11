@@ -119,15 +119,15 @@ export default function Step2InventoryPage() {
                         I use Cyepro
                     </h2>
                     <p className="text-sm text-muted-foreground leading-relaxed">
-                        You already have a Cyepro account. Connect your API key and your live inventory
-                        will sync automatically to your website.
+                        You already have a Cyepro account. Connect your API key so website leads land
+                        in your Cyepro CRM, and live inventory can sync automatically where enabled.
                     </p>
 
                     <ul className="mt-4 space-y-1.5">
                         {[
-                            "Live, real-time stock sync",
+                            "Website leads go to your Cyepro CRM",
+                            "Live, real-time stock sync where enabled",
                             "No manual uploads needed",
-                            "Auto-updates when sold",
                         ].map(f => (
                             <li key={f} className="flex items-center gap-2 text-xs text-muted-foreground">
                                 <CheckCircle2 className="w-3.5 h-3.5 flex-shrink-0 text-amber-600" />
@@ -219,7 +219,7 @@ export default function Step2InventoryPage() {
                             Enter your Cyepro API Key
                         </h3>
                         <p className="text-xs text-muted-foreground">
-                            Find this in your Cyepro dashboard under Settings → API Access.
+                            This same key sends generated website leads to your Cyepro CRM account.
                             It&apos;s stored securely and never exposed to visitors.
                         </p>
                     </div>

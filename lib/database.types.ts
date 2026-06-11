@@ -306,6 +306,10 @@ export interface Database {
           follow_up_date: string | null
           contacted_at: string | null
           converted_at: string | null
+          cyepro_sync_status: 'pending' | 'synced' | 'failed' | 'skipped'
+          cyepro_synced_at: string | null
+          cyepro_error: string | null
+          cyepro_lead_id: string | null
           created_at: string
           updated_at: string
         }

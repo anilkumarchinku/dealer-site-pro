@@ -18,7 +18,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { createAdminClient } from '@/lib/supabase-server'
 import { sendLeadSmsToDealer } from '@/lib/services/sms-service'
 import { forwardLeadToCyepro } from '@/lib/services/cyepro-service'
-import { sendLeadNotificationEmail } from '@/lib/services/email-service'
+import { sendLeadConfirmationEmail, sendLeadNotificationEmail } from '@/lib/services/email-service'
 
 import { logger } from '@/lib/utils/logger'
 import { leadSchema, formatZodErrors } from '@/lib/validations/schemas'
@@ -52,6 +52,52 @@ async function resolveVehicleId(
 
     const vehicleRow = data as { id: string } | null
     return vehicleRow?.id ?? null
+}
+
+async function markCyeproSyncResult(
+    leadId: string,
+    dealerApiKey: string | null,
+    payload: {
+        customerName: string
+        customerPhone: string
+        customerEmail?: string
+        vehicleName?: string
+        message?: string
+        leadSource?: string
+    }
+) {
+    const supabase = getSupabase()
+
+    if (!dealerApiKey) {
+        const { error } = await supabase
+            .from('leads')
+            .update({
+                cyepro_sync_status: 'skipped',
+                cyepro_error: 'Dealer has no Cyepro API key configured',
+            })
+            .eq('id', leadId)
+
+        if (error) logger.warn('Cyepro sync status update failed:', error.message)
+        return
+    }
+
+    const result = await forwardLeadToCyepro(dealerApiKey, payload)
+    const { error } = await supabase
+        .from('leads')
+        .update(result.success
+            ? {
+                cyepro_sync_status: 'synced',
+                cyepro_synced_at: new Date().toISOString(),
+                cyepro_error: null,
+                cyepro_lead_id: result.cyeproLeadId ?? null,
+            }
+            : {
+                cyepro_sync_status: 'failed',
+                cyepro_error: result.error.slice(0, 1000),
+            })
+        .eq('id', leadId)
+
+    if (error) logger.warn('Cyepro sync status update failed:', error.message)
 }
 
 
@@ -154,6 +200,16 @@ export async function POST(request: NextRequest) {
                 vehicleName: car_name?.trim(),
                 message: message?.trim(),
                 leadSource: safeSource,
+                replyTo: email?.trim() || undefined,
+            }).catch(() => { /* already logged inside */ })
+        }
+
+        if (email?.trim()) {
+            sendLeadConfirmationEmail({
+                to: email.trim(),
+                dealerName: dealer.dealership_name,
+                customerName: name.trim(),
+                vehicleName: car_name?.trim(),
             }).catch(() => { /* already logged inside */ })
         }
 
@@ -169,16 +225,18 @@ export async function POST(request: NextRequest) {
         }
 
         // ── Forward to Cyepro CRM if dealer has API key (fire-and-forget) ─────
-        if (dealer.cyepro_api_key) {
-            forwardLeadToCyepro(dealer.cyepro_api_key, {
+        markCyeproSyncResult(
+            data.id,
+            dealer.cyepro_api_key,
+            {
                 customerName:  name.trim(),
                 customerPhone: phone.trim(),
                 customerEmail: email?.trim(),
                 vehicleName:   car_name?.trim(),
                 message:       message?.trim(),
                 leadSource:    safeSource,
-            }).catch(() => { /* already logged inside */ })
-        }
+            }
+        ).catch(() => { /* already logged inside */ })
 
         return NextResponse.json({ success: true, leadId: data.id })
     } catch (err) {

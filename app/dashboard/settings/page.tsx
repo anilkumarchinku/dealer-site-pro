@@ -771,8 +771,8 @@ export default function SettingsPage() {
                         </CardHeader>
                         <CardContent className="space-y-4">
 
-                            {/* Cyepro — only for used / hybrid dealers (2W, 3W, 4W) */}
-                            {sellsUsedCars && <div className="rounded-xl border border-border bg-muted/20 overflow-hidden">
+                            {/* Cyepro — same dealer key powers inventory sync and CRM lead delivery */}
+                            <div className="rounded-xl border border-border bg-muted/20 overflow-hidden">
 
                                 {/* Header row */}
                                 <div className="flex items-center gap-3 px-4 py-4">
@@ -781,7 +781,7 @@ export default function SettingsPage() {
                                     </div>
                                     <div className="flex-1 min-w-0">
                                         <div className="flex items-center gap-2">
-                                            <p className="text-sm font-semibold">Cyepro Inventory</p>
+                                            <p className="text-sm font-semibold">Cyepro CRM & Inventory</p>
                                             {cyeproConnected
                                                 ? <Badge variant="outline" className="gap-1 text-emerald-600 bg-green-500/10 border-emerald-500/20">
                                                     <CheckCircle2 className="w-3 h-3" /> Connected
@@ -792,7 +792,7 @@ export default function SettingsPage() {
                                             }
                                         </div>
                                         <p className="text-xs text-muted-foreground mt-0.5">
-                                            Sync your live used-car stock from api.cyepro.com
+                                            Send website leads to your Cyepro CRM account and sync stock where enabled.
                                         </p>
                                     </div>
                                 </div>
@@ -896,7 +896,7 @@ export default function SettingsPage() {
                                         Once connected, your used-car website will automatically show live inventory.
                                     </p>
                                 </div>
-                            </div>}
+                            </div>
 
                         </CardContent>
                     </Card>

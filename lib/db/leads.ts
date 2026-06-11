@@ -5,6 +5,7 @@ import { supabase, isSupabaseReady } from "@/lib/supabase";
 export type LeadType = "inquiry" | "test_drive" | "quote" | "service" | "trade_in" | "financing";
 export type LeadPriority = "hot" | "warm" | "cold";
 export type LeadStatus = "new" | "contacted" | "qualified" | "converted" | "lost";
+export type CyeproSyncStatus = "pending" | "synced" | "failed" | "skipped";
 
 export interface ExternalLead {
     id: string;
@@ -17,6 +18,8 @@ export interface ExternalLead {
     message?: string;
     priority: LeadPriority;
     status: LeadStatus;
+    cyepro_sync_status?: CyeproSyncStatus;
+    cyepro_error?: string;
     source: string;
     created_at: string;
     updated_at: string;
@@ -56,7 +59,7 @@ export async function fetchLeads(
 
     const { data, error } = await supabase
         .from("leads")
-        .select("id, dealer_id, customer_name, customer_email, customer_phone, lead_type, vehicle_id, vehicle_interest, source, utm_source, message, status, created_at")
+        .select("id, dealer_id, customer_name, customer_email, customer_phone, lead_type, vehicle_id, vehicle_interest, source, utm_source, message, status, cyepro_sync_status, cyepro_error, created_at")
         .eq("dealer_id", dealerId)
         .order("created_at", { ascending: false });
 
@@ -78,6 +81,8 @@ export async function fetchLeads(
         utm_source: string | null;
         message: string | null;
         status: string;
+        cyepro_sync_status?: CyeproSyncStatus | null;
+        cyepro_error?: string | null;
         created_at: string;
     }) => ({
         id: row.id,
@@ -91,6 +96,8 @@ export async function fetchLeads(
         priority: derivePriority(row.created_at),
         source: row.utm_source ?? row.source ?? "Website",
         status: (row.status as LeadStatus) ?? "new",
+        cyepro_sync_status: row.cyepro_sync_status ?? undefined,
+        cyepro_error: row.cyepro_error ?? undefined,
         created_at: row.created_at,
         updated_at: row.created_at,
     }));

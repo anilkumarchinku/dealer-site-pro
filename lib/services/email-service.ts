@@ -27,15 +27,17 @@ interface SendEmailPayload {
     to: string
     subject: string
     html: string
+    replyTo?: string
 }
 
 async function sendEmail(payload: SendEmailPayload): Promise<{ success: boolean; error?: string }> {
     const apiKey = getOptionalEnv('RESEND_API_KEY')
+    const { replyTo, ...emailPayload } = payload
 
     if (!apiKey) {
         // In development, log the email content so it's visible without a real key
         if (process.env.NODE_ENV !== 'production') {
-            logger.log(`[Email:DEV] To: ${payload.to} | Subject: ${payload.subject}`)
+            logger.log(`[Email:DEV] To: ${emailPayload.to} | Subject: ${emailPayload.subject}`)
             return { success: true }
         }
         logger.error('[Email] RESEND_API_KEY is not configured — email not sent')
@@ -54,8 +56,9 @@ async function sendEmail(payload: SendEmailPayload): Promise<{ success: boolean;
             init: {
                 method: 'POST',
                 body: JSON.stringify({
-                    from: 'DealerSite Pro <noreply@dealersitepro.com>',
-                    ...payload,
+                    from: getOptionalEnv('EMAIL_FROM') ?? 'DealerSite Pro <noreply@dealersitepro.com>',
+                    ...emailPayload,
+                    ...(replyTo ? { reply_to: replyTo } : {}),
                 }),
             },
             responseType: 'void',
@@ -82,6 +85,7 @@ export async function sendLeadNotificationEmail(params: {
     vehicleName?: string
     message?: string
     leadSource?: string
+    replyTo?: string
 }) {
     const vehicle = params.vehicleName ? `<li><strong>Vehicle:</strong> ${esc(params.vehicleName)}</li>` : ''
     const email = params.customerEmail ? `<li><strong>Email:</strong> ${esc(params.customerEmail)}</li>` : ''
@@ -90,6 +94,7 @@ export async function sendLeadNotificationEmail(params: {
     return sendEmail({
         to: params.to,
         subject: `New ${params.leadSource ?? 'buyer'} inquiry - ${params.dealerName}`,
+        replyTo: params.replyTo,
         html: `<!DOCTYPE html>
 <html>
 <body style="font-family:Arial,sans-serif;line-height:1.6;color:#333;max-width:600px;margin:0 auto;padding:20px">
@@ -109,6 +114,32 @@ export async function sendLeadNotificationEmail(params: {
     })
 }
 
+export async function sendLeadConfirmationEmail(params: {
+    to: string
+    dealerName: string
+    customerName: string
+    vehicleName?: string
+}) {
+    const vehicle = params.vehicleName
+        ? ` about <strong>${esc(params.vehicleName)}</strong>`
+        : ''
+
+    return sendEmail({
+        to: params.to,
+        subject: `We received your inquiry - ${params.dealerName}`,
+        html: `<!DOCTYPE html>
+<html>
+<body style="font-family:Arial,sans-serif;line-height:1.6;color:#333;max-width:600px;margin:0 auto;padding:20px">
+  <h2>Inquiry received</h2>
+  <p>Hi ${esc(params.customerName)},</p>
+  <p>Your inquiry${vehicle} has been sent to <strong>${esc(params.dealerName)}</strong>.</p>
+  <p>The dealership team will contact you soon.</p>
+  <p>Best regards,<br/><strong>DealerSite Pro</strong></p>
+</body>
+</html>`,
+    })
+}
+
 export async function sendSellRequestNotificationEmail(params: {
     to: string
     sellerName: string
@@ -116,6 +147,7 @@ export async function sendSellRequestNotificationEmail(params: {
     sellerEmail?: string
     vehicleName: string
     city?: string
+    replyTo?: string
 }) {
     const email = params.sellerEmail ? `<li><strong>Email:</strong> ${esc(params.sellerEmail)}</li>` : ''
     const city = params.city ? `<li><strong>City:</strong> ${esc(params.city)}</li>` : ''
@@ -123,6 +155,7 @@ export async function sendSellRequestNotificationEmail(params: {
     return sendEmail({
         to: params.to,
         subject: `New sell request - ${params.vehicleName}`,
+        replyTo: params.replyTo,
         html: `<!DOCTYPE html>
 <html>
 <body style="font-family:Arial,sans-serif;line-height:1.6;color:#333;max-width:600px;margin:0 auto;padding:20px">
@@ -136,6 +169,148 @@ export async function sendSellRequestNotificationEmail(params: {
     ${city}
   </ul>
   <p>Review it from the Sell Requests dashboard.</p>
+</body>
+</html>`,
+    })
+}
+
+export async function sendTestDriveNotificationEmail(params: {
+    to: string
+    dealerName: string
+    customerName: string
+    customerPhone: string
+    customerEmail?: string
+    vehicleName?: string
+    preferredDate: string
+    preferredTime: string
+    vehicleType?: '2w' | '3w' | '4w'
+    replyTo?: string
+}) {
+    const label = params.vehicleType === '2w'
+        ? 'test ride'
+        : params.vehicleType === '3w'
+            ? 'trial run'
+            : 'test drive'
+    const email = params.customerEmail ? `<li><strong>Email:</strong> ${esc(params.customerEmail)}</li>` : ''
+    const vehicle = params.vehicleName ? `<li><strong>Vehicle:</strong> ${esc(params.vehicleName)}</li>` : ''
+
+    return sendEmail({
+        to: params.to,
+        subject: `New ${label} booking - ${params.dealerName}`,
+        replyTo: params.replyTo,
+        html: `<!DOCTYPE html>
+<html>
+<body style="font-family:Arial,sans-serif;line-height:1.6;color:#333;max-width:600px;margin:0 auto;padding:20px">
+  <h2>New ${esc(label)} booking</h2>
+  <p>A customer requested a ${esc(label)} on <strong>${esc(params.dealerName)}</strong>.</p>
+  <ul>
+    <li><strong>Name:</strong> ${esc(params.customerName)}</li>
+    <li><strong>Phone:</strong> ${esc(params.customerPhone)}</li>
+    ${email}
+    ${vehicle}
+    <li><strong>Preferred:</strong> ${esc(params.preferredDate)} at ${esc(params.preferredTime)}</li>
+  </ul>
+  <p>Follow up from the Leads dashboard or contact the customer directly.</p>
+</body>
+</html>`,
+    })
+}
+
+export async function sendTestDriveConfirmationEmail(params: {
+    to: string
+    dealerName: string
+    customerName: string
+    vehicleName?: string
+    preferredDate: string
+    preferredTime: string
+    vehicleType?: '2w' | '3w' | '4w'
+}) {
+    const label = params.vehicleType === '2w'
+        ? 'test ride'
+        : params.vehicleType === '3w'
+            ? 'trial run'
+            : 'test drive'
+    const vehicle = params.vehicleName ? ` for <strong>${esc(params.vehicleName)}</strong>` : ''
+
+    return sendEmail({
+        to: params.to,
+        subject: `Your ${label} request was received - ${params.dealerName}`,
+        html: `<!DOCTYPE html>
+<html>
+<body style="font-family:Arial,sans-serif;line-height:1.6;color:#333;max-width:600px;margin:0 auto;padding:20px">
+  <h2>${esc(label[0].toUpperCase() + label.slice(1))} request received</h2>
+  <p>Hi ${esc(params.customerName)},</p>
+  <p>Your ${esc(label)} request${vehicle} has been sent to <strong>${esc(params.dealerName)}</strong>.</p>
+  <p>Preferred slot: <strong>${esc(params.preferredDate)} at ${esc(params.preferredTime)}</strong>.</p>
+  <p>The dealership team will contact you soon to confirm availability.</p>
+</body>
+</html>`,
+    })
+}
+
+export async function sendCarServiceBookingNotificationEmail(params: {
+    to: string
+    dealerName: string
+    customerName: string
+    customerPhone: string
+    customerEmail?: string
+    vehicleRegNo?: string
+    vehicleName?: string
+    serviceType: string
+    preferredDate: string
+    preferredSlot: string
+    notes?: string
+    replyTo?: string
+}) {
+    const email = params.customerEmail ? `<li><strong>Email:</strong> ${esc(params.customerEmail)}</li>` : ''
+    const vehicle = params.vehicleName ? `<li><strong>Vehicle:</strong> ${esc(params.vehicleName)}</li>` : ''
+    const regNo = params.vehicleRegNo ? `<li><strong>Registration:</strong> ${esc(params.vehicleRegNo)}</li>` : ''
+    const notes = params.notes ? `<p><strong>Notes:</strong><br/>${esc(params.notes)}</p>` : ''
+
+    return sendEmail({
+        to: params.to,
+        subject: `New service booking - ${params.dealerName}`,
+        replyTo: params.replyTo,
+        html: `<!DOCTYPE html>
+<html>
+<body style="font-family:Arial,sans-serif;line-height:1.6;color:#333;max-width:600px;margin:0 auto;padding:20px">
+  <h2>New service booking</h2>
+  <p>A customer requested service on <strong>${esc(params.dealerName)}</strong>.</p>
+  <ul>
+    <li><strong>Name:</strong> ${esc(params.customerName)}</li>
+    <li><strong>Phone:</strong> ${esc(params.customerPhone)}</li>
+    ${email}
+    ${vehicle}
+    ${regNo}
+    <li><strong>Service:</strong> ${esc(params.serviceType)}</li>
+    <li><strong>Preferred:</strong> ${esc(params.preferredDate)} at ${esc(params.preferredSlot)}</li>
+  </ul>
+  ${notes}
+  <p>Follow up from the Service Bookings dashboard or contact the customer directly.</p>
+</body>
+</html>`,
+    })
+}
+
+export async function sendCarServiceBookingConfirmationEmail(params: {
+    to: string
+    dealerName: string
+    customerName: string
+    serviceType: string
+    preferredDate: string
+    preferredSlot: string
+}) {
+    return sendEmail({
+        to: params.to,
+        subject: `Your service request was received - ${params.dealerName}`,
+        html: `<!DOCTYPE html>
+<html>
+<body style="font-family:Arial,sans-serif;line-height:1.6;color:#333;max-width:600px;margin:0 auto;padding:20px">
+  <h2>Service request received</h2>
+  <p>Hi ${esc(params.customerName)},</p>
+  <p>Your <strong>${esc(params.serviceType)}</strong> request has been sent to <strong>${esc(params.dealerName)}</strong>.</p>
+  <p>Preferred slot: <strong>${esc(params.preferredDate)} at ${esc(params.preferredSlot)}</strong>.</p>
+  <p>The dealership team will contact you soon to confirm the booking.</p>
 </body>
 </html>`,
     })

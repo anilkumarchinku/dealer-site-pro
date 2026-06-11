@@ -1,6 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createAdminClient, getDealerForUser, requireAuth } from '@/lib/supabase-server'
 import {
+    sendCarServiceBookingConfirmationEmail,
+    sendCarServiceBookingNotificationEmail,
+} from '@/lib/services/email-service'
+import {
     carServiceBookingSchema,
     formatZodErrors,
     updateCarServiceStatusSchema,
@@ -12,6 +16,13 @@ function getSupabase() {
     // car_service_bookings is added by this feature's migration; generated DB types may lag locally.
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     return createAdminClient() as any
+}
+
+function formatServiceType(type: string) {
+    return type
+        .split('_')
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(' ')
 }
 
 export async function POST(request: NextRequest) {
@@ -31,7 +42,7 @@ export async function POST(request: NextRequest) {
 
     const { data: dealer, error: dealerError } = await supabase
         .from('dealers')
-        .select('id')
+        .select('id, dealership_name, email')
         .eq('id', input.dealer_id)
         .maybeSingle()
 
@@ -56,6 +67,41 @@ export async function POST(request: NextRequest) {
     if (error) {
         logger.error('Car service booking insert error:', error)
         return NextResponse.json({ error: 'Failed to create service booking' }, { status: 500 })
+    }
+
+    const dealerName = dealer.dealership_name || 'the dealership'
+    const serviceType = formatServiceType(input.service_type)
+    const vehicleName = [input.vehicle_make, input.vehicle_model]
+        .map(value => value?.trim())
+        .filter(Boolean)
+        .join(' ')
+
+    if (dealer.email) {
+        sendCarServiceBookingNotificationEmail({
+            to: dealer.email,
+            dealerName,
+            customerName: input.customer_name,
+            customerPhone: input.phone,
+            customerEmail: input.email || undefined,
+            vehicleRegNo: input.vehicle_reg_no || undefined,
+            vehicleName: vehicleName || undefined,
+            serviceType,
+            preferredDate: input.preferred_date,
+            preferredSlot: input.preferred_slot,
+            notes: input.notes || undefined,
+            replyTo: input.email || undefined,
+        }).catch(() => { /* already logged inside */ })
+    }
+
+    if (input.email) {
+        sendCarServiceBookingConfirmationEmail({
+            to: input.email,
+            dealerName,
+            customerName: input.customer_name,
+            serviceType,
+            preferredDate: input.preferred_date,
+            preferredSlot: input.preferred_slot,
+        }).catch(() => { /* already logged inside */ })
     }
 
     return NextResponse.json({ success: true, id: data.id }, { status: 201 })

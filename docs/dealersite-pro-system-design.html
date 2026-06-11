@@ -1,0 +1,572 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DealerSite Pro - Overall System Design</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 18mm 16mm;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #142033;
+      background: #ffffff;
+      line-height: 1.45;
+    }
+
+    h1, h2, h3, p { margin: 0; }
+
+    .cover {
+      min-height: 930px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 8px 0 0;
+      page-break-after: always;
+    }
+
+    .brand-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      border-bottom: 1px solid #dbe3ef;
+      padding-bottom: 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: 0.01em;
+      color: #0f172a;
+    }
+
+    .mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      background: #0f172a;
+      color: white;
+      font-weight: 900;
+      font-size: 19px;
+    }
+
+    .date {
+      color: #64748b;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 700;
+    }
+
+    .hero {
+      padding: 82px 0 48px;
+    }
+
+    .eyebrow {
+      color: #be123c;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-size: 12px;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: 56px;
+      line-height: 0.98;
+      letter-spacing: -0.03em;
+      max-width: 760px;
+      color: #0f172a;
+    }
+
+    .subtitle {
+      margin-top: 24px;
+      max-width: 690px;
+      font-size: 19px;
+      color: #475569;
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 54px;
+    }
+
+    .summary-card {
+      border: 1px solid #dbe3ef;
+      border-radius: 14px;
+      padding: 18px;
+      background: #f8fafc;
+      min-height: 118px;
+    }
+
+    .summary-card strong {
+      display: block;
+      font-size: 14px;
+      color: #0f172a;
+      margin-bottom: 8px;
+    }
+
+    .summary-card span {
+      font-size: 12.5px;
+      color: #64748b;
+    }
+
+    .footer-note {
+      border-top: 1px solid #dbe3ef;
+      padding-top: 18px;
+      color: #64748b;
+      font-size: 12px;
+    }
+
+    section {
+      page-break-inside: avoid;
+      margin-bottom: 26px;
+    }
+
+    h2 {
+      font-size: 24px;
+      letter-spacing: -0.02em;
+      color: #0f172a;
+      padding-bottom: 9px;
+      border-bottom: 2px solid #e2e8f0;
+      margin-bottom: 14px;
+    }
+
+    h3 {
+      font-size: 15px;
+      color: #0f172a;
+      margin-bottom: 7px;
+    }
+
+    .lead {
+      color: #475569;
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+
+    .diagram {
+      border: 1px solid #cbd5e1;
+      border-radius: 16px;
+      padding: 18px;
+      background: #f8fafc;
+      page-break-inside: avoid;
+    }
+
+    .diagram-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1.15fr 1fr;
+      gap: 12px;
+      align-items: stretch;
+    }
+
+    .lane {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .lane-title {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #64748b;
+      font-weight: 800;
+      margin-bottom: 2px;
+    }
+
+    .box {
+      border: 1px solid #cbd5e1;
+      background: white;
+      border-radius: 12px;
+      padding: 12px;
+      min-height: 58px;
+      box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+    }
+
+    .box strong {
+      display: block;
+      color: #0f172a;
+      font-size: 13px;
+      margin-bottom: 4px;
+    }
+
+    .box span {
+      display: block;
+      color: #64748b;
+      font-size: 11.5px;
+    }
+
+    .primary { border-color: #e11d48; }
+    .primary strong { color: #be123c; }
+    .blue { border-color: #2563eb; }
+    .blue strong { color: #1d4ed8; }
+    .green { border-color: #059669; }
+    .green strong { color: #047857; }
+
+    .flow {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .flow-step {
+      border: 1px solid #dbe3ef;
+      border-radius: 12px;
+      padding: 12px;
+      background: white;
+      font-size: 11.5px;
+      color: #475569;
+      min-height: 82px;
+    }
+
+    .flow-step b {
+      display: block;
+      color: #0f172a;
+      font-size: 12.5px;
+      margin-bottom: 5px;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .three-col {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .panel {
+      border: 1px solid #dbe3ef;
+      border-radius: 14px;
+      padding: 15px;
+      background: #ffffff;
+      page-break-inside: avoid;
+    }
+
+    .panel p, .panel li {
+      color: #475569;
+      font-size: 12.5px;
+    }
+
+    ul {
+      padding-left: 17px;
+      margin: 8px 0 0;
+    }
+
+    li { margin: 3px 0; }
+
+    .table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border-radius: 14px;
+      font-size: 12px;
+    }
+
+    .table th {
+      background: #0f172a;
+      color: white;
+      text-align: left;
+      padding: 10px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .table td {
+      border: 1px solid #dbe3ef;
+      padding: 9px 10px;
+      vertical-align: top;
+      color: #475569;
+    }
+
+    .table td:first-child {
+      color: #0f172a;
+      font-weight: 700;
+      width: 31%;
+    }
+
+    .stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .pill {
+      border: 1px solid #dbe3ef;
+      border-radius: 999px;
+      padding: 7px 10px;
+      font-size: 12px;
+      color: #334155;
+      background: #f8fafc;
+      font-weight: 650;
+    }
+
+    .page-break {
+      page-break-before: always;
+    }
+
+    .small-note {
+      font-size: 11.5px;
+      color: #64748b;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+  <main class="cover">
+    <div>
+      <div class="brand-row">
+        <div class="brand"><div class="mark">D</div><div>DealerSite Pro</div></div>
+        <div class="date">System Design · 2026</div>
+      </div>
+
+      <div class="hero">
+        <div class="eyebrow">Overall Architecture</div>
+        <h1>Multi-Tenant Dealer Website Platform</h1>
+        <p class="subtitle">
+          DealerSite Pro powers onboarding, dashboards, inventory, public dealer websites, leads,
+          payments, reviews, domains, and deployment from one shared SaaS application.
+        </p>
+
+        <div class="summary-grid">
+          <div class="summary-card">
+            <strong>One App, Many Dealer Sites</strong>
+            <span>Dashboard and public websites are served by a single Next.js codebase.</span>
+          </div>
+          <div class="summary-card">
+            <strong>Supabase as Core Backend</strong>
+            <span>Auth, PostgreSQL data, row-level security, and image storage live in Supabase.</span>
+          </div>
+          <div class="summary-card">
+            <strong>Integrations Around the Core</strong>
+            <span>Razorpay, Vercel, Cloudflare, Cyepro API, Sentry, Upstash, Git and GitHub.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="footer-note">
+      Prepared for sharing: high-level system design, module breakdown, data model, flows, and technology stack.
+    </p>
+  </main>
+
+  <section>
+    <h2>1. System Purpose</h2>
+    <p class="lead">
+      DealerSite Pro is a multi-tenant SaaS platform for vehicle dealerships. Dealers can onboard,
+      configure a website, add inventory, manage leads, connect domains, accept bookings or payments,
+      and publish a public website without maintaining a separate codebase per dealer.
+    </p>
+    <div class="flow">
+      <div class="flow-step"><b>Dealer Signs Up</b>Supabase Auth creates the user and links the dealer account.</div>
+      <div class="flow-step"><b>Onboarding</b>Dealer profile, brands, services, templates, and inventory source are collected.</div>
+      <div class="flow-step"><b>Dashboard</b>Dealer manages stock, leads, model cards, webpage content, domains, and reviews.</div>
+      <div class="flow-step"><b>Public Website</b>Slug or domain resolves to dealer config and renders selected templates.</div>
+      <div class="flow-step"><b>Customer Actions</b>Leads, messages, test drives, bookings, and inquiries flow back to the dashboard.</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>2. High-Level Architecture</h2>
+    <div class="diagram">
+      <div class="diagram-grid">
+        <div class="lane">
+          <div class="lane-title">Users</div>
+          <div class="box primary"><strong>Dealer / Admin</strong><span>Uses dashboard for setup and operations.</span></div>
+          <div class="box"><strong>Customer</strong><span>Browses public dealer websites and submits leads.</span></div>
+        </div>
+        <div class="lane">
+          <div class="lane-title">Application</div>
+          <div class="box primary"><strong>Next.js App</strong><span>Dashboard, public websites, SSR, client UI.</span></div>
+          <div class="box"><strong>API Routes</strong><span>Auth checks, writes, uploads, payments, domains.</span></div>
+          <div class="box"><strong>Templates</strong><span>Family, Luxury, Modern, Sporty dealer websites.</span></div>
+        </div>
+        <div class="lane">
+          <div class="lane-title">Core Backend</div>
+          <div class="box green"><strong>Supabase Auth</strong><span>User sessions and dealer ownership.</span></div>
+          <div class="box green"><strong>PostgreSQL DB</strong><span>Dealers, vehicles, leads, domains, reviews.</span></div>
+          <div class="box green"><strong>Supabase Storage</strong><span>Dealer logos, hero images, vehicle photos.</span></div>
+        </div>
+        <div class="lane">
+          <div class="lane-title">External Services</div>
+          <div class="box blue"><strong>Razorpay</strong><span>Payments, bookings, subscriptions, webhooks.</span></div>
+          <div class="box blue"><strong>Vercel / Cloudflare</strong><span>Hosting, domains, DNS automation.</span></div>
+          <div class="box blue"><strong>Cyepro / Catalogs</strong><span>Inventory sync and catalog image sources.</span></div>
+          <div class="box blue"><strong>Sentry / Upstash</strong><span>Monitoring and rate limiting.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>3. Core Modules</h2>
+    <div class="three-col">
+      <div class="panel">
+        <h3>Auth & Dealer Account</h3>
+        <p>Supabase Auth manages users. Dealer records are linked to authenticated users and protected through ownership checks and RLS.</p>
+      </div>
+      <div class="panel">
+        <h3>Onboarding</h3>
+        <p>Collects vehicle category, dealership profile, brands, services, website style, images, domains, and inventory source.</p>
+      </div>
+      <div class="panel">
+        <h3>Dashboard</h3>
+        <p>Operational control center for inventory, model cards, leads, messages, reviews, analytics, webpage editing, and settings.</p>
+      </div>
+      <div class="panel">
+        <h3>Public Dealer Website</h3>
+        <p>Resolves dealer by slug or domain, fetches live configuration, and renders the selected template with inventory and lead CTAs.</p>
+      </div>
+      <div class="panel">
+        <h3>Inventory</h3>
+        <p>Supports manual add, bulk CSV upload, uploaded images, Cyepro inventory sync, and catalog-backed new vehicle pages.</p>
+      </div>
+      <div class="panel">
+        <h3>Domains & Deployment</h3>
+        <p>Supports free subdomains, custom domains, DNS verification, Vercel domain registration, and Cloudflare automation.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-break">
+    <h2>4. Main Request Flows</h2>
+    <div class="two-col">
+      <div class="panel">
+        <h3>Dashboard Save Flow</h3>
+        <ul>
+          <li>Dealer opens dashboard page.</li>
+          <li>Next.js loads state and fetches dealer data from Supabase.</li>
+          <li>User edits inventory, website design, model cards, or settings.</li>
+          <li>API/client write validates dealer ownership.</li>
+          <li>Supabase updates data and public pages render latest data.</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>Public Website Flow</h3>
+        <ul>
+          <li>Customer visits slug or custom domain.</li>
+          <li>App resolves dealer and site configuration.</li>
+          <li>Inventory comes from manual stock, Cyepro, or static catalog.</li>
+          <li>Selected template renders the public website.</li>
+          <li>Lead, call, WhatsApp, test drive, and booking actions are tracked.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>5. Data Model</h2>
+    <table class="table">
+      <thead>
+        <tr><th>Table / Area</th><th>Purpose</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>dealers</td><td>Main dealer profile, slug, contact details, template selection, vehicle segment flags, onboarding status.</td></tr>
+        <tr><td>dealer_brands</td><td>Brands sold by the dealer, including primary brand and vehicle type mapping.</td></tr>
+        <tr><td>dealer_services</td><td>Services enabled on public websites such as finance, exchange, service booking, insurance, and test drives.</td></tr>
+        <tr><td>dealer_template_configs</td><td>Main website copy and operational configuration: hero title, subtitle, CTA, social URLs, working hours.</td></tr>
+        <tr><td>dealer_site_configs</td><td>Brand-specific template overrides for multi-OEM dealer websites.</td></tr>
+        <tr><td>vehicles / vehicle_photos</td><td>Manual and bulk-uploaded four-wheeler stock plus linked photos for cards and detail pages.</td></tr>
+        <tr><td>tw_vehicles / tw_used_vehicles</td><td>Two-wheeler new and used inventory.</td></tr>
+        <tr><td>thw_vehicles / thw_used_vehicles</td><td>Three-wheeler new and used inventory.</td></tr>
+        <tr><td>leads / messages / reviews</td><td>Customer communication, inquiry tracking, and review visibility.</td></tr>
+        <tr><td>domains / domain_onboardings</td><td>Free subdomains, custom domain setup, DNS verification, and propagation status.</td></tr>
+        <tr><td>payments / subscriptions / webhook_events</td><td>Razorpay payment flows and idempotent webhook processing.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>6. Technology Stack</h2>
+    <div class="stack">
+      <span class="pill">Next.js 15</span>
+      <span class="pill">React 18</span>
+      <span class="pill">TypeScript</span>
+      <span class="pill">Tailwind CSS</span>
+      <span class="pill">Radix UI</span>
+      <span class="pill">shadcn-style UI</span>
+      <span class="pill">Zustand</span>
+      <span class="pill">Supabase</span>
+      <span class="pill">PostgreSQL</span>
+      <span class="pill">Supabase Storage</span>
+      <span class="pill">Razorpay</span>
+      <span class="pill">Vercel</span>
+      <span class="pill">Cloudflare</span>
+      <span class="pill">Sentry</span>
+      <span class="pill">Upstash Redis</span>
+      <span class="pill">Git / GitHub</span>
+      <span class="pill">Vitest</span>
+      <span class="pill">Puppeteer</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>7. Security, Reliability, and Operations</h2>
+    <div class="two-col">
+      <div class="panel">
+        <h3>Security Controls</h3>
+        <ul>
+          <li>Supabase Auth for dealer login.</li>
+          <li>Dealer ownership validation before sensitive writes.</li>
+          <li>Supabase RLS policies for table access.</li>
+          <li>Razorpay webhook signature verification.</li>
+          <li>Content Security Policy and security headers in Next.js config.</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>Reliability Controls</h3>
+        <ul>
+          <li>Sentry for server and client error monitoring.</li>
+          <li>Upstash rate limiting for sensitive APIs.</li>
+          <li>Idempotency for payment and webhook flows.</li>
+          <li>Vercel deployment history and rollback support via Git/GitHub.</li>
+          <li>Dynamic rendering for public dealer pages that need fresh inventory.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>8. Deployment Architecture</h2>
+    <div class="flow">
+      <div class="flow-step"><b>Local Development</b>Code changes are made in the project workspace.</div>
+      <div class="flow-step"><b>Git</b>Changes are tracked with commits and branches.</div>
+      <div class="flow-step"><b>GitHub</b>Repository stores source, PR history, and collaboration workflow.</div>
+      <div class="flow-step"><b>Vercel</b>Builds and deploys the Next.js application.</div>
+      <div class="flow-step"><b>Production</b>Dealers and customers access dashboard and websites through live URLs.</div>
+    </div>
+    <p class="small-note">
+      Supabase remains the shared backend across deployments, while public sites are resolved dynamically by slug or domain.
+    </p>
+  </section>
+
+  <section>
+    <h2>9. Summary</h2>
+    <p class="lead">
+      The system is designed as a single multi-tenant SaaS application. The same Next.js codebase powers
+      onboarding, dealer operations, and public dealer websites. Supabase is the source of truth for identity,
+      data, and assets. External services such as Razorpay, Vercel, Cloudflare, Cyepro, Sentry, Upstash,
+      Git, and GitHub provide payments, deployment, domains, inventory integration, monitoring, protection,
+      and engineering workflow.
+    </p>
+  </section>
+</body>
+</html>
