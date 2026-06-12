@@ -190,14 +190,15 @@ export default function DeploymentPage() {
     if (isFirstHand) {
         return (
             <div className="space-y-6 animate-fade-in">
-                <div>
-                    <h1 className="text-2xl font-bold">Your Site</h1>
+                <div className="rounded-2xl border border-border/70 bg-card/90 p-5 shadow-sm dark:bg-card/80 sm:p-6">
+                    <p className="mb-2 text-[11px] font-black uppercase tracking-[0.24em] text-blue-600 dark:text-blue-300">Launch</p>
+                    <h1 className="text-2xl font-black tracking-tight sm:text-3xl">Your Site</h1>
                     <p className="text-muted-foreground">
                         Your site runs on our shared platform — no separate deployment needed.
                     </p>
                 </div>
 
-                <Card variant="glass">
+                <Card variant="glass" className="rounded-2xl border-border/70 bg-card/90 shadow-sm dark:bg-card/80">
                     <CardHeader>
                         <CardTitle className="flex items-center gap-2">
                             <Store className="w-5 h-5 text-green-500" />
@@ -261,8 +262,9 @@ export default function DeploymentPage() {
     return (
         <div className="space-y-6 animate-fade-in">
             {/* Header */}
-            <div>
-                <h1 className="text-2xl font-bold">Deploy Your Site</h1>
+            <div className="rounded-2xl border border-border/70 bg-card/90 p-5 shadow-sm dark:bg-card/80 sm:p-6">
+                <p className="mb-2 text-[11px] font-black uppercase tracking-[0.24em] text-blue-600 dark:text-blue-300">Standalone launch</p>
+                <h1 className="text-2xl font-black tracking-tight sm:text-3xl">Deploy Your Site</h1>
                 <p className="text-muted-foreground">
                     Your site gets its own private GitHub repo and Vercel deployment — fully isolated and customisable.
                 </p>
@@ -270,7 +272,7 @@ export default function DeploymentPage() {
 
             {/* Stat cards */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <Card className="hover:shadow-lg transition-all duration-300">
+                <Card className="rounded-2xl border-border/70 bg-card/90 shadow-sm transition-colors hover:border-blue-200 dark:bg-card/80 dark:hover:border-blue-500/30">
                     <CardContent className="p-6">
                         <div className="mb-4">
                             <div className="p-3 rounded-xl w-fit bg-primary/10">
@@ -284,7 +286,7 @@ export default function DeploymentPage() {
                     </CardContent>
                 </Card>
 
-                <Card className="hover:shadow-lg transition-all duration-300">
+                <Card className="rounded-2xl border-border/70 bg-card/90 shadow-sm transition-colors hover:border-blue-200 dark:bg-card/80 dark:hover:border-blue-500/30">
                     <CardContent className="p-6">
                         <div className="mb-4">
                             <div className="p-3 rounded-xl w-fit bg-violet-500/10">
@@ -303,7 +305,7 @@ export default function DeploymentPage() {
                     </CardContent>
                 </Card>
 
-                <Card className="hover:shadow-lg transition-all duration-300">
+                <Card className="rounded-2xl border-border/70 bg-card/90 shadow-sm transition-colors hover:border-blue-200 dark:bg-card/80 dark:hover:border-blue-500/30">
                     <CardContent className="p-6">
                         <div className="mb-4">
                             <div className="p-3 rounded-xl w-fit bg-green-500/10">
@@ -329,7 +331,7 @@ export default function DeploymentPage() {
             </div>
 
             {/* Main deploy card */}
-            <Card variant="glass">
+            <Card variant="glass" className="rounded-2xl border-border/70 bg-card/90 shadow-sm dark:bg-card/80">
                 <CardHeader>
                     <CardTitle className="flex items-center gap-2">
                         <Rocket className="w-5 h-5" />

@@ -24,6 +24,7 @@ import Link from "next/link";
 import { supabase } from "@/lib/supabase";
 import { updateDealerProfile, saveNotificationSettings } from "@/lib/db/settings";
 import { BASE_DOMAIN } from "@/lib/utils/domain";
+import { PremiumPageHeader } from "@/components/dashboard/premium-ui";
 
 const NOTIFICATION_CONFIG: Record<string, { label: string; description: string }> = {
     newLeads:        { label: "New Leads",        description: "Get notified when a new lead comes in" },
@@ -507,25 +508,32 @@ export default function SettingsPage() {
 
     return (
         <div className="space-y-6 animate-fade-in">
-            {/* Page Header */}
-            <div className="flex items-center justify-between">
-                <div>
-                    <h1 className="text-2xl font-bold">Settings</h1>
-                    <p className="text-muted-foreground">Manage your dealership settings and preferences</p>
-                </div>
+            <PremiumPageHeader
+                eyebrow="Workspace"
+                title="Dealership settings"
+                description="Manage business profile, vehicle segments, brand assets, domains, integrations, notifications, and account safety from one place."
+                actions={
                 <Button
                     onClick={handleSave}
                     className={cn(
-                        "gap-2 transition-all duration-300",
+                        "h-11 rounded-xl gap-2 transition-all duration-300",
                         saved
                             ? "bg-emerald-600 hover:bg-emerald-700"
-                            : "bg-primary hover:bg-primary/90"
+                            : "bg-blue-600 hover:bg-blue-700"
                     )}
                 >
                     <Save className="w-4 h-4" />
                     {saved ? "Saved!" : "Save Changes"}
                 </Button>
-            </div>
+                }
+            >
+                <div className="flex flex-wrap gap-2">
+                    <span className="rounded-full border border-border bg-background px-3 py-1 text-xs font-bold text-muted-foreground">Profile</span>
+                    <span className="rounded-full border border-border bg-background px-3 py-1 text-xs font-bold text-muted-foreground">Branding</span>
+                    <span className="rounded-full border border-border bg-background px-3 py-1 text-xs font-bold text-muted-foreground">Domains</span>
+                    <span className="rounded-full border border-border bg-background px-3 py-1 text-xs font-bold text-muted-foreground">Integrations</span>
+                </div>
+            </PremiumPageHeader>
 
             {/* Two-column layout */}
             <div className="grid grid-cols-1 xl:grid-cols-3 gap-6 items-start">
@@ -534,7 +542,7 @@ export default function SettingsPage() {
                 <div className="xl:col-span-2 space-y-6">
 
                     {/* Business Information */}
-                    <Card variant="glass">
+                    <Card variant="glass" className="rounded-2xl border-border/70 bg-card/90 shadow-sm dark:bg-card/80">
                         <CardHeader>
                             <CardTitle className="flex items-center gap-2.5 text-lg">
                                 <div className="p-2 rounded-lg bg-primary/10">
@@ -639,7 +647,7 @@ export default function SettingsPage() {
                         ];
 
                         return (
-                            <Card variant="glass">
+                            <Card variant="glass" className="rounded-2xl border-border/70 bg-card/90 shadow-sm dark:bg-card/80">
                                 <CardHeader>
                                     <CardTitle className="flex items-center gap-2.5 text-lg">
                                         <div className="p-2 rounded-lg bg-blue-500/10">
@@ -713,7 +721,7 @@ export default function SettingsPage() {
                     })()}
 
                     {/* Notification Preferences */}
-                    <Card variant="glass">
+                    <Card variant="glass" className="rounded-2xl border-border/70 bg-card/90 shadow-sm dark:bg-card/80">
                         <CardHeader>
                             <CardTitle className="flex items-center gap-2.5 text-lg">
                                 <div className="p-2 rounded-lg bg-amber-500/10">
@@ -760,7 +768,7 @@ export default function SettingsPage() {
                     </Card>
 
                     {/* ── Integrations ── */}
-                    <Card variant="glass">
+                    <Card variant="glass" className="rounded-2xl border-border/70 bg-card/90 shadow-sm dark:bg-card/80">
                         <CardHeader>
                             <CardTitle className="flex items-center gap-2.5 text-lg">
                                 <div className="p-2 rounded-lg bg-green-500/10">
@@ -902,7 +910,7 @@ export default function SettingsPage() {
                     </Card>
 
                     {/* ── Custom Domain ── */}
-                    <Card variant="glass">
+                    <Card variant="glass" className="rounded-2xl border-border/70 bg-card/90 shadow-sm dark:bg-card/80">
                         <CardHeader>
                             <CardTitle className="flex items-center gap-2.5 text-lg">
                                 <div className="p-2 rounded-lg bg-primary/10">
@@ -1121,7 +1129,7 @@ export default function SettingsPage() {
                     </Card>
 
                     {/* ── Brand Assets — only for 2nd hand / used car dealers ── */}
-                    {sellsUsedCars && <Card variant="glass">
+                    {sellsUsedCars && <Card variant="glass" className="rounded-2xl border-border/70 bg-card/90 shadow-sm dark:bg-card/80">
                         <CardHeader>
                             <CardTitle className="flex items-center gap-2.5 text-lg">
                                 <div className="p-2 rounded-lg bg-amber-500/10">
@@ -1250,7 +1258,7 @@ export default function SettingsPage() {
                     </Card>}
 
                     {/* Website Style */}
-                    <Card variant="glass">
+                    <Card variant="glass" className="rounded-2xl border-border/70 bg-card/90 shadow-sm dark:bg-card/80">
                         <CardHeader>
                             <CardTitle className="flex items-center gap-2.5 text-lg">
                                 <div className="p-2 rounded-lg bg-violet-500/10">
@@ -1278,7 +1286,7 @@ export default function SettingsPage() {
                     </Card>
 
                     {/* ── Google Reviews ── */}
-                    <Card variant="glass">
+                    <Card variant="glass" className="rounded-2xl border-border/70 bg-card/90 shadow-sm dark:bg-card/80">
                         <CardHeader>
                             <CardTitle className="flex items-center gap-2.5 text-lg">
                                 <div className="p-2 rounded-lg bg-amber-500/10">
@@ -1358,7 +1366,7 @@ export default function SettingsPage() {
                     </Card>
 
                     {/* Danger Zone */}
-                    <Card variant="glass" className="border-destructive/20">
+                    <Card variant="glass" className="rounded-2xl border-destructive/20 bg-card/90 shadow-sm dark:bg-card/80">
                         <CardHeader>
                             <CardTitle className="flex items-center gap-2.5 text-lg text-destructive">
                                 <div className="p-2 rounded-lg bg-destructive/10">
@@ -1450,7 +1458,7 @@ export default function SettingsPage() {
                 <div className="space-y-4">
 
                     {/* Profile Summary */}
-                    <Card variant="glass">
+                    <Card variant="glass" className="rounded-2xl border-border/70 bg-card/90 shadow-sm dark:bg-card/80">
                         <CardHeader>
                             <CardTitle className="text-base">Dealership Profile</CardTitle>
                         </CardHeader>
@@ -1488,7 +1496,7 @@ export default function SettingsPage() {
                     </Card>
 
                     {/* Dashboard Theme */}
-                    <Card variant="glass">
+                    <Card variant="glass" className="rounded-2xl border-border/70 bg-card/90 shadow-sm dark:bg-card/80">
                         <CardHeader>
                             <CardTitle className="text-base">Dashboard Theme</CardTitle>
                         </CardHeader>
@@ -1512,7 +1520,7 @@ export default function SettingsPage() {
                     </Card>
 
                     {/* Website URL */}
-                    <Card variant="glass">
+                    <Card variant="glass" className="rounded-2xl border-border/70 bg-card/90 shadow-sm dark:bg-card/80">
                         <CardHeader>
                             <CardTitle className="text-base">Your Website</CardTitle>
                         </CardHeader>
@@ -1532,7 +1540,7 @@ export default function SettingsPage() {
                     </Card>
 
                     {/* App Info */}
-                    <Card variant="glass">
+                    <Card variant="glass" className="rounded-2xl border-border/70 bg-card/90 shadow-sm dark:bg-card/80">
                         <CardContent className="pt-6">
                             <div className="flex items-start gap-2.5 text-xs text-muted-foreground">
                                 <Info className="w-3.5 h-3.5 mt-0.5 flex-shrink-0" />

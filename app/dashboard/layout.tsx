@@ -32,6 +32,8 @@ import {
     AlertCircle,
     ArrowRight,
     ShieldCheck,
+    Menu,
+    X,
 } from "lucide-react";
 import { dealerSiteHref } from "@/lib/utils/domain";
 import type { StyleTemplate } from "@/lib/types";
@@ -125,6 +127,7 @@ export default function DashboardLayout({
     const [sellsTwoWheelers,   setSellsTwoWheelersL]   = useState(false);
     const [sellsThreeWheelers, setSellsThreeWheelersL] = useState(false);
     const [sellsFourWheelers,  setSellsFourWheelersL]  = useState(false);
+    const [mobileNavOpen,      setMobileNavOpen]       = useState(false);
 
     // On every mount: verify the user has completed onboarding.
     // The early-exit on data.dealershipName was intentionally removed —
@@ -245,16 +248,34 @@ export default function DashboardLayout({
     };
 
     return (
-        <div className="min-h-screen">
+        <div className="min-h-screen bg-[#F6F9FD] text-foreground dark:bg-[#07111F]">
             {/* Sidebar */}
-            <aside className="fixed left-0 top-0 bottom-0 w-64 bg-card/50 backdrop-blur-xl border-r border-border flex flex-col z-50">
-                {/* Logo with Hover Transition */}
-                <div className="p-6 border-b border-border relative">
-                    <BrandLogo />
+            {mobileNavOpen && (
+                <button
+                    type="button"
+                    aria-label="Close navigation"
+                    className="fixed inset-0 z-40 bg-slate-950/45 lg:hidden"
+                    onClick={() => setMobileNavOpen(false)}
+                />
+            )}
+            <aside className={cn(
+                "fixed bottom-0 left-0 top-0 z-50 flex w-64 flex-col border-r border-white/10 bg-[#071A3D] text-white shadow-[18px_0_50px_rgba(7,20,47,0.12)] transition-transform duration-200 lg:translate-x-0",
+                mobileNavOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"
+            )}>
+                <div className="relative flex items-center justify-between border-b border-white/10 p-5">
+                    <BrandLogo className="[&>span]:text-white" />
+                    <Button
+                        variant="ghost"
+                        size="icon"
+                        className="h-9 w-9 text-slate-300 hover:bg-white/10 hover:text-white lg:hidden"
+                        onClick={() => setMobileNavOpen(false)}
+                    >
+                        <X className="h-5 w-5" />
+                    </Button>
                 </div>
 
                 {/* Navigation */}
-                <nav className="flex-1 p-4 overflow-y-auto space-y-4">
+                <nav className="flex-1 space-y-5 overflow-y-auto p-4">
                     {navGroups.filter(group => {
                         const hasCars = vehicleType === 'car'           || sellsFourWheelers;
                         const has2W   = vehicleType === 'two-wheeler'   || sellsTwoWheelers;
@@ -266,10 +287,10 @@ export default function DashboardLayout({
                         return true; // Main, Insights, My Website, Configure always visible
                     }).map((group) => (
                         <div key={group.label}>
-                            <p className="px-4 mb-1 text-[10px] font-semibold uppercase tracking-widest text-muted-foreground/50">
+                            <p className="mb-2 px-3 text-[10px] font-black uppercase tracking-[0.22em] text-slate-500">
                                 {group.label}
                             </p>
-                            <div className="space-y-0.5">
+                            <div className="space-y-1">
                                 {group.items.map((item) => {
                                     const isActive = pathname === item.href ||
                                         (item.href !== "/dashboard" && pathname.startsWith(item.href));
@@ -280,7 +301,7 @@ export default function DashboardLayout({
                                                 key={item.name}
                                                 href="/dashboard/inventory/add"
                                                 title="Only hybrid & used-car dealers can add vehicles"
-                                                className="flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-medium opacity-40 cursor-not-allowed text-muted-foreground pointer-events-none"
+                                                className="flex pointer-events-none cursor-not-allowed items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-semibold text-slate-500 opacity-50"
                                             >
                                                 <item.icon className="w-5 h-5 shrink-0" />
                                                 {item.name}
@@ -291,11 +312,12 @@ export default function DashboardLayout({
                                         <Link
                                             key={item.name}
                                             href={item.href}
+                                            onClick={() => setMobileNavOpen(false)}
                                             className={cn(
-                                                "flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-medium transition-all",
+                                                "flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-semibold transition-all",
                                                 isActive
-                                                    ? "bg-primary/10 text-primary border border-primary/20"
-                                                    : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
+                                                    ? "border border-white/10 bg-white/10 text-white shadow-sm"
+                                                    : "text-slate-300 hover:bg-white/10 hover:text-white"
                                             )}
                                         >
                                             <item.icon className="w-5 h-5 shrink-0" />
@@ -309,41 +331,61 @@ export default function DashboardLayout({
                 </nav>
 
                 {/* Dealer Info */}
-                <div className="p-4 border-t border-border">
-                    <div className="flex items-center gap-3 p-3 rounded-xl bg-muted/30">
-                        <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-primary-foreground font-bold">
+                <div className="border-t border-white/10 p-4">
+                    <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/10 p-3">
+                        <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-600 font-black text-white">
                             {data.dealershipName?.charAt(0) || "D"}
                         </div>
                         <div className="flex-1 min-w-0">
-                            <p className="text-sm font-semibold truncate">
+                            <p className="truncate text-sm font-black text-white">
                                 {data.dealershipName || "Your Dealership"}
                             </p>
-                            <p className="text-xs text-muted-foreground truncate">
+                            <p className="truncate text-xs text-slate-400">
                                 {data.location || "Location"}
                             </p>
                         </div>
-                        <ChevronDown className="w-4 h-4 text-muted-foreground" />
+                        <ChevronDown className="w-4 h-4 text-slate-400" />
                     </div>
                 </div>
             </aside>
 
             {/* Main Content */}
-            <div className="pl-64">
+            <div className="lg:pl-64">
                 {/* Top Bar */}
-                <header className="h-16 border-b border-border bg-card/50 backdrop-blur-xl sticky top-0 z-40">
-                    <div className="h-full px-6 flex items-center justify-between">
-                        <div>
-                            <h1 className="text-lg font-semibold">
+                <header className="sticky top-0 z-40 border-b border-border/70 bg-white/85 backdrop-blur-xl dark:bg-[#0B182B]/85">
+                    <div className="flex h-[72px] items-center justify-between gap-3 px-4 sm:px-6">
+                        <div className="flex min-w-0 items-center gap-3">
+                            <Button
+                                variant="outline"
+                                size="icon"
+                                className="h-9 w-9 shrink-0 lg:hidden"
+                                onClick={() => setMobileNavOpen(true)}
+                                aria-label="Open navigation"
+                            >
+                                <Menu className="h-4 w-4" />
+                            </Button>
+                            <div className="min-w-0">
+                            <p className="text-[10px] font-black uppercase tracking-[0.22em] text-blue-600 dark:text-blue-300">
+                                Dealer Dashboard
+                            </p>
+                            <h1 className="mt-0.5 truncate text-lg font-black tracking-tight">
                                 {navigation.find(n => pathname === n.href ||
                                     (n.href !== "/dashboard" && pathname.startsWith(n.href)))?.name || "Dashboard"}
                             </h1>
+                            </div>
                         </div>
-                        <div className="flex items-center gap-3">
+                        <div className="flex shrink-0 items-center gap-2 sm:gap-3">
                             {/* Theme toggle */}
                             <ThemeToggle />
 
                             {/* Notifications */}
-                            <Button variant="outline" size="icon" className="relative w-9 h-9" title={unreadCount > 0 ? `${unreadCount} unread message${unreadCount > 1 ? 's' : ''}` : "No new notifications"}>
+                            <Button
+                                variant="outline"
+                                size="icon"
+                                className="relative h-9 w-9"
+                                title={unreadCount > 0 ? `${unreadCount} unread message${unreadCount > 1 ? 's' : ''}` : "No new notifications"}
+                                aria-label={unreadCount > 0 ? `${unreadCount} unread message${unreadCount > 1 ? 's' : ''}` : "No new notifications"}
+                            >
                                 <Bell className="w-4 h-4 text-muted-foreground" />
                                 {unreadCount > 0 && (
                                     <span className="absolute -top-1 -right-1 min-w-[16px] h-4 px-1 bg-destructive text-white text-[10px] font-bold rounded-full flex items-center justify-center">
@@ -359,10 +401,11 @@ export default function DashboardLayout({
                                 variant="ghost"
                                 size="sm"
                                 onClick={handleSignOut}
+                                aria-label="Sign out"
                                 className="gap-2 text-muted-foreground hover:text-foreground"
                             >
                                 <LogOut className="w-4 h-4" />
-                                Sign Out
+                                <span className="hidden sm:inline">Sign Out</span>
                             </Button>
                         </div>
                     </div>
@@ -390,7 +433,7 @@ export default function DashboardLayout({
                 )}
 
                 {/* Page Content */}
-                <main className="p-6">
+                <main className="p-4 sm:p-6 lg:p-8">
                     {children}
                 </main>
             </div>
