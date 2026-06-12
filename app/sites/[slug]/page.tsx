@@ -331,7 +331,7 @@ export async function generateMetadata({ params }: SitePageProps): Promise<Metad
         .map(s => s.replace(/_/g, ' '))
         .join(', ')
 
-    const faviconUrl = dealer.logo_url ?? '/favicon.svg'
+    const faviconUrl = dealer.logo_url ?? '/dealersite-pro-shield.png'
 
     return {
         title,

@@ -245,8 +245,9 @@ export default function Step1Page() {
         : null;
 
     return (
-        <Card className="animate-fade-in">
-            <CardHeader>
+        <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_300px]">
+        <Card className="animate-fade-in rounded-lg border-[#D8E0EA] bg-white p-0 shadow-[0_14px_42px_rgba(7,20,54,0.07)]">
+            <CardHeader className="border-b border-[#E3E9F2] p-6">
                 {/* ── Dealer type badge ── */}
                 <div className="mb-3">
                     <span className={cn(
@@ -280,7 +281,7 @@ export default function Step1Page() {
                 </CardDescription>
             </CardHeader>
 
-            <CardContent className="space-y-6">
+            <CardContent className="space-y-6 p-6">
                 {/* Dealership Name */}
                 <Input
                     label="Dealership Name"
@@ -714,11 +715,15 @@ export default function Step1Page() {
                 )}
             </CardContent>
 
-            <CardFooter className="justify-end">
+            <CardFooter className="justify-between px-6 pb-6">
+                <Button variant="outline" type="button" onClick={() => router.push("/onboarding")} className="border-[#D8E0EA]">
+                    Back
+                </Button>
                 <Button
                     type="button"
                     onClick={handleNext}
                     disabled={isSubmitting || slugStatus === "checking" || slugStatus === "taken" || slugStatus === "invalid"}
+                    className="bg-[#155EEF] font-black text-white hover:bg-[#0F4FD3]"
                 >
                     {isSubmitting || slugStatus === "checking" ? (
                         <>
@@ -734,5 +739,33 @@ export default function Step1Page() {
                 </Button>
             </CardFooter>
         </Card>
+        <aside className="space-y-4">
+            <div className="rounded-lg border border-[#D8E0EA] bg-[#F7F9FC] p-5">
+                <h2 className="text-sm font-black text-[#071436]">Quick tips</h2>
+                <div className="mt-4 space-y-3">
+                    {[
+                        "Use your real business name",
+                        "Add the correct city for local SEO",
+                        "You can connect your own domain later",
+                    ].map((tip) => (
+                        <p key={tip} className="flex gap-2 text-sm font-medium leading-6 text-[#35445C]">
+                            <CheckCircle className="mt-1 h-4 w-4 shrink-0 text-[#16A34A]" />
+                            {tip}
+                        </p>
+                    ))}
+                </div>
+            </div>
+
+            <div className="rounded-lg border border-[#D8E0EA] bg-white p-5 shadow-[0_14px_42px_rgba(7,20,54,0.06)]">
+                <p className="text-xs font-black uppercase tracking-[0.16em] text-[#155EEF]">Website URL</p>
+                <p className="mt-3 break-all text-sm font-black text-[#071436]">
+                    {previewUrl || "https://kumarmotors.dealersitepro.in"}
+                </p>
+                <p className="mt-2 text-xs font-medium leading-5 text-[#62708A]">
+                    This preview updates as you edit the dealership name.
+                </p>
+            </div>
+        </aside>
+        </div>
     );
 }

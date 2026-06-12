@@ -8,8 +8,8 @@ export const metadata: Metadata = {
     title: "DealerSite Pro - Professional Dealership Websites",
     description: "Get a professional dealership website in 10 minutes. Free subdomain included. Custom domain available on upgrade.",
     icons: {
-        icon: "/favicon.svg",
-        apple: "/favicon.svg",
+        icon: "/dealersite-pro-shield.png",
+        apple: "/dealersite-pro-shield.png",
     },
     manifest: "/manifest.json",
     appleWebApp: {

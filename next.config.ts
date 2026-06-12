@@ -83,6 +83,9 @@ const nextConfig: NextConfig = {
     },
     // Security headers
     async headers() {
+        const scriptSrc = process.env.NODE_ENV === 'production'
+            ? "script-src 'self' 'unsafe-inline' https://checkout.razorpay.com"
+            : "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://checkout.razorpay.com"
         const securityHeaders = [
             { key: 'X-Content-Type-Options', value: 'nosniff' },
             { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
@@ -99,7 +102,7 @@ const nextConfig: NextConfig = {
                     "default-src 'self'",
                     // unsafe-eval removed — not needed in production Next.js builds.
                     // Razorpay checkout runs in an iframe (frame-src below), not inline.
-                    "script-src 'self' 'unsafe-inline' https://checkout.razorpay.com",
+                    scriptSrc,
                     "style-src 'self' 'unsafe-inline'",
                     "img-src 'self' data: blob: https://*.supabase.co https://*.cyepro.com https://*.amazonaws.com https://lh3.googleusercontent.com https://images.unsplash.com https://storage.googleapis.com https://maps.googleapis.com https://*.cardekho.com https://*.aeplcdn.com https://*.bikedekho.com https://*.gaadi.com https://www.v3cars.com https://www.hyundai.com https://*.hyundai.com",
                     "font-src 'self' data:",

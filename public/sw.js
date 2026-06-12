@@ -10,6 +10,7 @@
 
 const CACHE_NAME = 'dsp-v1';
 const OFFLINE_URL = '/dashboard';
+const IS_LOCAL_DEV = ['localhost', '127.0.0.1', '::1'].includes(location.hostname);
 
 // App shell assets to pre-cache on install
 const PRECACHE_ASSETS = [
@@ -20,6 +21,22 @@ const PRECACHE_ASSETS = [
 ];
 
 // ── Install: pre-cache shell ──────────────────────────────────────────────────
+if (IS_LOCAL_DEV) {
+    self.addEventListener('install', () => {
+        self.skipWaiting();
+    });
+
+    self.addEventListener('activate', (event) => {
+        event.waitUntil((async () => {
+            const keys = await caches.keys();
+            await Promise.all(keys.map(key => caches.delete(key)));
+            await self.registration.unregister();
+            const clients = await self.clients.matchAll({ type: 'window', includeUncontrolled: true });
+            await Promise.all(clients.map(client => client.navigate(client.url)));
+        })());
+    });
+} else {
+
 self.addEventListener('install', (event) => {
     event.waitUntil(
         caches.open(CACHE_NAME).then(cache => cache.addAll(PRECACHE_ASSETS))
@@ -109,3 +126,4 @@ self.addEventListener('notificationclick', (event) => {
         })
     );
 });
+}

@@ -98,6 +98,11 @@ export default function ThreeWheelerIndexPage() {
             {/* Header */}
             <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
                 <div className="container flex h-16 items-center justify-between px-8">
+                    <div className="flex items-center gap-4">
+                        <Button variant="ghost" size="sm" onClick={() => router.push("/onboarding")}>
+                            <ArrowLeft className="w-4 h-4 mr-2" />
+                            Back
+                        </Button>
                     <button
                         onClick={() => router.push("/")}
                         className="flex items-center gap-3 hover:opacity-70 transition-opacity"
@@ -107,12 +112,9 @@ export default function ThreeWheelerIndexPage() {
                         </div>
                         <span className="text-lg font-semibold text-foreground">DealerSite Pro</span>
                     </button>
+                    </div>
                     <div className="flex items-center gap-2">
                         <ThemeToggle />
-                        <Button variant="ghost" size="sm" onClick={() => router.push("/onboarding")}>
-                            <ArrowLeft className="w-4 h-4 mr-2" />
-                            Back
-                        </Button>
                     </div>
                 </div>
             </header>
