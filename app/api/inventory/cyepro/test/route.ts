@@ -160,7 +160,7 @@ export async function POST(request: Request) {
                 error: errMsg,
                 durationMs: duration,
                 hint: errMsg.includes('ENOTFOUND') || errMsg.includes('getaddrinfo')
-                    ? 'DNS resolution failed — api.cyepro.com may not exist or is unreachable'
+                    ? `DNS resolution failed — ${getCyeproApiBaseUrl()} may not exist or is unreachable`
                     : errMsg.includes('ECONNREFUSED')
                         ? 'Connection refused — the API server is not accepting connections'
                         : errMsg.includes('ETIMEDOUT') || errMsg.includes('timeout')

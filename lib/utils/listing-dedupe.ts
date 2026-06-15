@@ -40,3 +40,18 @@ export function dedupeByBrandModel<T extends { brand?: string | null; model?: st
 export function dedupeByMakeModel<T extends { make?: string | null; model?: string | null }>(items: T[]): T[] {
     return dedupeByKey(items, item => `${item.make ?? ''}__${item.model ?? ''}`)
 }
+
+export function dedupeInventoryCars<
+    T extends {
+        id?: string | null
+        make?: string | null
+        model?: string | null
+        meta?: { dataSource?: string | null; sourceVehicleId?: string | null } | null
+    }
+>(items: T[]): T[] {
+    return dedupeByKey(items, item => {
+        const source = item.meta?.dataSource ?? 'manual'
+        const sourceVehicleId = item.meta?.sourceVehicleId ?? item.id
+        return `${source}__${sourceVehicleId ?? ''}__${item.id ?? ''}`
+    })
+}

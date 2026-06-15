@@ -13,7 +13,7 @@ import { applyUsedVehiclePriceOffersToCars, fetchActiveUsedVehiclePriceOffers } 
 import type { Car } from '@/lib/types/car'
 import type { DBVehicle } from '@/lib/db/vehicles'
 import type { Service } from '@/lib/types'
-import { dedupeByMakeModel, dedupeCaseInsensitiveStrings } from '@/lib/utils/listing-dedupe'
+import { dedupeByMakeModel, dedupeCaseInsensitiveStrings, dedupeInventoryCars } from '@/lib/utils/listing-dedupe'
 import { publicDealerSitePath, publicVehicleHubPath, type VehicleHubSegment } from '@/lib/utils/public-site-routing'
 import { brandLogoUrl, firstVehicleHeroImage } from '@/lib/utils/site-assets'
 import { BASE_DOMAIN, dealerSiteHref } from '@/lib/utils/domain'
@@ -545,7 +545,7 @@ export default async function SitePage({ params }: SitePageProps) {
             ? await fetchAllCyeproInventoryAsCars(cyepro_api_key)
             : []
 
-        cars = dedupeByMakeModel([
+        cars = dedupeInventoryCars([
             ...dbVehiclesToCars(vehicles),
             ...cyeproCars,
         ])
