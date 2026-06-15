@@ -52,7 +52,11 @@ export default function UsedVehicleDetailPage() {
     if (loading) return <div className="min-h-screen flex items-center justify-center text-muted-foreground animate-pulse">Loading...</div>
     if (!vehicle) return <div className="min-h-screen flex items-center justify-center">Vehicle not found</div>
 
-    const priceF = (vehicle.price_paise / 100).toLocaleString("en-IN")
+    const hasOffer = typeof vehicle.offer_price_paise === "number" &&
+        vehicle.offer_price_paise > 0 &&
+        vehicle.offer_price_paise < vehicle.price_paise
+    const priceF = ((hasOffer ? vehicle.offer_price_paise! : vehicle.price_paise) / 100).toLocaleString("en-IN")
+    const originalPriceF = (vehicle.price_paise / 100).toLocaleString("en-IN")
 
     const rcLabel: Record<string, { label: string; color: string }> = {
         clear:          { label: "Clear RC",          color: "text-green-600"  },
@@ -99,7 +103,15 @@ export default function UsedVehicleDetailPage() {
 
                     {/* Price */}
                     <div className="bg-primary/5 border border-primary/20 rounded-xl p-4">
-                        <p className="text-3xl font-bold text-primary">₹{priceF}</p>
+                        <div className="flex flex-wrap items-baseline gap-2">
+                            <p className="text-3xl font-bold text-primary">₹{priceF}</p>
+                            {hasOffer && (
+                                <span className="text-sm text-muted-foreground line-through">₹{originalPriceF}</span>
+                            )}
+                        </div>
+                        {hasOffer && (
+                            <p className="text-xs font-medium text-primary mt-1">{vehicle.offer_label || "Offer price"}</p>
+                        )}
                         {vehicle.negotiable && (
                             <p className="text-xs text-green-600 font-medium mt-1">Price is negotiable</p>
                         )}

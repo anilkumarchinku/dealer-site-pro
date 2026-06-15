@@ -26,6 +26,7 @@ export function LeadFormModal({
     const [email,         setEmail]         = useState("")
     const [preferredDate, setPreferredDate] = useState("")
     const [message,       setMessage]       = useState("")
+    const [offerPrice,    setOfferPrice]    = useState("")
     const [fleetSize,     setFleetSize]     = useState("")
     const [submitting,    setSubmitting]    = useState(false)
     const [submitted,     setSubmitted]     = useState(false)
@@ -61,6 +62,7 @@ export function LeadFormModal({
                     email:           email         || null,
                     preferred_date:  preferredDate || null,
                     message:         message       || null,
+                    offer_price_paise: offerPrice ? Math.round(Number(offerPrice) * 100) : null,
                     fleet_size:      fleetSize     ? Number(fleetSize) : null,
                 }),
             })
@@ -139,6 +141,12 @@ export function LeadFormModal({
                             <div>
                                 <label className="text-sm font-medium">Fleet Size (units needed)</label>
                                 <input value={fleetSize} onChange={e => setFleetSize(e.target.value)} type="number" min={1} placeholder="e.g. 5" className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm" />
+                            </div>
+                        )}
+                        {(leadType === "best_price" || leadType === "offer" || leadType === "exchange") && (
+                            <div>
+                                <label className="text-sm font-medium">Your Offer Price (₹)</label>
+                                <input value={offerPrice} onChange={e => setOfferPrice(e.target.value)} type="number" min={0} placeholder="Optional" className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm" />
                             </div>
                         )}
                         <div>
