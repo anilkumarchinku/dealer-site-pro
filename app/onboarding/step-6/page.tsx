@@ -1,21 +1,29 @@
-"use client"
+"use client";
+
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { useOnboardingStore } from "@/lib/store/onboarding-store";
-import { saveDealer } from "@/lib/actions/save-dealer";
-import { dealerSiteUrl, dealerSiteHref } from "@/lib/utils/domain";
-import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import {
-    CheckCircle, ArrowLeft, ArrowRight, Link as LinkIcon,
-    Globe, Shield, Loader2, AlertCircle, ExternalLink,
+    AlertCircle,
+    ArrowRight,
+    CheckCircle,
+    Copy,
+    ExternalLink,
+    Globe2,
+    Loader2,
+    Rocket,
+    ShieldCheck,
 } from "lucide-react";
+
+import { DealerPreviewCard, LaunchChecklist } from "@/components/onboarding/flow-shell";
+import { Button } from "@/components/ui/button";
+import { saveDealer } from "@/lib/actions/save-dealer";
+import { useOnboardingStore } from "@/lib/store/onboarding-store";
+import { dealerSiteHref, dealerSiteUrl } from "@/lib/utils/domain";
 import { validateOnboardingReadyForSave } from "@/lib/validations/onboarding";
 
 export default function Step6Page() {
     const router = useRouter();
     const { data, setStep, dealerId, setDealerId } = useOnboardingStore();
-    const [showUpgradeOptions, setShowUpgradeOptions] = useState(true);
     const [saving, setSaving] = useState(false);
     const [saveError, setSaveError] = useState<string | null>(null);
     const [showSuccess, setShowSuccess] = useState(false);
@@ -26,6 +34,12 @@ export default function Step6Page() {
         setStep(6);
         return;
     }, [setStep]);
+
+    const fallbackSlug = data.slug || data.dealershipName?.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "") || "";
+    const displaySlug = liveSiteSlug || fallbackSlug;
+    const displayUrl = dealerSiteUrl(displaySlug);
+    const displayHref = dealerSiteHref(displaySlug);
+    const uploadedCount = data.uploadedVehicles?.length ?? 0;
 
     const handleFinish = async () => {
         const validationErrors = validateOnboardingReadyForSave(data);
@@ -51,306 +65,124 @@ export default function Step6Page() {
         }
     };
 
-    const handleBack = () => {
-        router.push("/onboarding/step-5");
-    };
-
     const handleCopyUrl = () => {
-        if (!liveSiteSlug) return;
-        navigator.clipboard.writeText(dealerSiteHref(liveSiteSlug)).then(() => {
+        if (!displaySlug) return;
+        navigator.clipboard.writeText(displayHref).then(() => {
             setCopied(true);
             setTimeout(() => setCopied(false), 2000);
         });
     };
 
     if (showSuccess && liveSiteSlug) {
-        const liveUrl = dealerSiteUrl(liveSiteSlug);
-        const liveHref = dealerSiteHref(liveSiteSlug);
         return (
-            <div className="space-y-6 animate-fade-in flex flex-col items-center justify-center min-h-[60vh]">
-                <Card className="w-full max-w-lg">
-                    <CardContent className="p-8 text-center space-y-6">
-                        {/* Big check icon */}
-                        <div className="flex justify-center">
-                            <div className="p-4 rounded-full bg-green-500/10">
-                                <CheckCircle className="w-16 h-16 text-green-500" />
-                            </div>
-                        </div>
+            <div className="mx-auto max-w-3xl py-8 text-center">
+                <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-emerald-50">
+                    <CheckCircle className="h-11 w-11 text-emerald-600" />
+                </div>
+                <h1 className="mt-6 text-4xl font-black tracking-[-0.04em] text-[#071436]">
+                    Your dealership website is live.
+                </h1>
+                <p className="mx-auto mt-3 max-w-xl text-sm font-medium leading-6 text-[#62708A]">
+                    Customers can now find {data.dealershipName || "your dealership"} online.
+                </p>
 
-                        {/* Title & subtitle */}
-                        <div className="space-y-2">
-                            <h1 className="text-2xl font-bold text-foreground">
-                                Your Dealership Website is Live!
-                            </h1>
-                            <p className="text-muted-foreground">
-                                Congratulations! Customers can now find{" "}
-                                <span className="font-semibold text-foreground">
-                                    {data.dealershipName}
-                                </span>{" "}
-                                online.
-                            </p>
-                        </div>
+                <div className="mx-auto mt-6 flex max-w-xl items-center gap-2 rounded-lg border border-[#D8E0EA] bg-[#F7F9FC] p-3 text-left">
+                    <Globe2 className="h-5 w-5 shrink-0 text-[#155EEF]" />
+                    <span className="flex-1 break-all font-mono text-sm font-black text-[#071436]">{displayUrl}</span>
+                    <Button variant="outline" size="sm" onClick={handleCopyUrl} className="border-[#D8E0EA]">
+                        <Copy className="mr-2 h-4 w-4" />
+                        {copied ? "Copied" : "Copy"}
+                    </Button>
+                </div>
 
-                        {/* Live URL box with copy */}
-                        <div className="space-y-2">
-                            <p className="text-sm text-muted-foreground text-left">Your live site URL</p>
-                            <div className="flex items-center gap-2 rounded-xl border border-border bg-muted px-4 py-3">
-                                <span className="flex-1 font-mono text-sm text-foreground break-all text-left">
-                                    {liveUrl}
-                                </span>
-                                <Button
-                                    variant="ghost"
-                                    size="sm"
-                                    className="shrink-0 text-muted-foreground hover:text-foreground"
-                                    onClick={handleCopyUrl}
-                                >
-                                    {copied ? "Copied!" : "Copy"}
-                                </Button>
-                            </div>
-                        </div>
-
-                        {/* 3 checklist items */}
-                        <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
-                            {[
-                                "Free SSL included",
-                                "Live in seconds",
-                                "No setup required",
-                            ].map((item) => (
-                                <div key={item} className="flex items-center gap-1.5 text-sm text-muted-foreground">
-                                    <CheckCircle className="w-4 h-4 text-green-500 shrink-0" />
-                                    <span>{item}</span>
-                                </div>
-                            ))}
-                        </div>
-
-                        {/* CTA buttons */}
-                        <div className="flex flex-col sm:flex-row gap-3 pt-2">
-                            <Button
-                                variant="outline"
-                                className="flex-1 gap-2 rounded-xl"
-                                onClick={() => window.open(liveHref, "_blank")}
-                            >
-                                <ExternalLink className="w-4 h-4" />
-                                Preview Your Site
-                            </Button>
-                            <Button
-                                className="flex-1 gap-2 rounded-xl"
-                                onClick={() => router.push("/dashboard")}
-                            >
-                                Go to Dashboard
-                                <ArrowRight className="w-4 h-4" />
-                            </Button>
-                        </div>
-                    </CardContent>
-                </Card>
+                <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row">
+                    <Button variant="outline" className="h-12 rounded-md border-[#D8E0EA] px-6 font-black" onClick={() => window.open(displayHref, "_blank")}>
+                        <ExternalLink className="mr-2 h-4 w-4" />
+                        Preview Website
+                    </Button>
+                    <Button className="h-12 rounded-md bg-[#155EEF] px-6 font-black text-white hover:bg-[#0F4FD3]" onClick={() => router.push("/dashboard")}>
+                        Go to Dashboard
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                </div>
             </div>
         );
     }
 
     return (
-        <div className="space-y-6 animate-fade-in">
-            {/* Main Review Card */}
-            <Card>
-                <CardHeader>
-                    <CardTitle className="flex items-center gap-2">
-                        <CheckCircle className="w-6 h-6 text-green-500" />
-                        Review Your Information
-                    </CardTitle>
-                    <CardDescription>
-                        Everything looks good! Review your details below.
-                    </CardDescription>
-                </CardHeader>
+        <div className="space-y-7">
+            <div>
+                <p className="text-sm font-black uppercase tracking-[0.18em] text-[#155EEF]">Launch</p>
+                <h1 className="mt-3 text-3xl font-black tracking-[-0.03em] text-[#071436]">
+                    Review and launch your website
+                </h1>
+                <p className="mt-2 max-w-2xl text-sm font-medium leading-6 text-[#62708A]">
+                    Everything looks good. You are ready to go live.
+                </p>
+            </div>
 
-                <CardContent className="space-y-6">
-                    {/* Dealership Info */}
-                    <div className="grid grid-cols-2 gap-4">
-                        <div className="col-span-2">
-                            <p className="text-sm text-muted-foreground">Dealership Name</p>
-                            <p className="font-semibold text-foreground">{data.dealershipName}</p>
-                            {data.tagline && (
-                                <p className="text-sm text-muted-foreground italic">&quot;{data.tagline}&quot;</p>
-                            )}
-                        </div>
+            <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_340px]">
+                <section>
+                    <DealerPreviewCard
+                        dealerName={data.dealershipName}
+                        slug={displaySlug}
+                        phone={data.phone}
+                        city={data.location}
+                    />
+                </section>
 
-                        <div className="col-span-2 md:col-span-1">
-                            <p className="text-sm text-muted-foreground">Email</p>
-                            <p className="font-semibold text-foreground">{data.email}</p>
-                        </div>
-                        <div className="col-span-2 md:col-span-1">
-                            <p className="text-sm text-muted-foreground">Phone</p>
-                            <p className="font-semibold text-foreground">{data.phone}</p>
-                            {data.whatsapp && (
-                                <p className="text-xs text-green-600 dark:text-green-400 flex items-center gap-1 mt-0.5">
-                                    <span className="w-2 h-2 rounded-full bg-green-500 inline-block"></span>
-                                    WhatsApp: {data.whatsapp}
-                                </p>
-                            )}
-                        </div>
-
-                        <div className="col-span-2">
-                            <p className="text-sm text-muted-foreground">Location</p>
-                            <p className="font-semibold text-foreground">{data.location}</p>
-                            {data.fullAddress && (
-                                <p className="text-sm text-muted-foreground mt-1 whitespace-pre-wrap">{data.fullAddress}</p>
-                            )}
-                        </div>
-
-                        {data.gstin && (
-                            <div className="col-span-2 md:col-span-1">
-                                <p className="text-sm text-muted-foreground">GSTIN</p>
-                                <p className="font-mono text-sm text-foreground">{data.gstin}</p>
-                            </div>
-                        )}
-
-                        {data.templateConfig?.workingHours && (
-                            <div className="col-span-2 md:col-span-1">
-                                <p className="text-sm text-muted-foreground">Hours</p>
-                                <p className="text-sm text-foreground">{data.templateConfig.workingHours}</p>
-                            </div>
-                        )}
-                    </div>
-
-                    {data.brands && data.brands.length > 0 && (
-                        <div className="border-t border-border pt-4">
-                            <p className="text-sm text-muted-foreground mb-2">Authorized Brands</p>
-                            <div className="flex flex-wrap gap-2">
-                                {data.brands.map((brand) => (
-                                    <span
-                                        key={brand}
-                                        className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full border border-primary/20"
-                                    >
-                                        {brand}
-                                    </span>
-                                ))}
-                            </div>
-                        </div>
-                    )}
-
-                    <div className="border-t border-border pt-4">
-                        <p className="text-sm text-muted-foreground mb-1">Website Template</p>
-                        <p className="font-semibold capitalize text-foreground">{data.styleTemplate} Style</p>
-                    </div>
-
-                    {/* FREE Subdomain Info */}
-                    <div className="border-t border-border pt-4">
-                        <div className="rounded-xl p-4 border border-primary/20 bg-primary/5">
-                            <div className="flex items-start gap-3">
-                                <Globe className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                                <div className="flex-1">
-                                    <h4 className="font-semibold text-foreground mb-1">Your FREE Website Domain</h4>
-                                    <p className="text-sm text-muted-foreground mb-2">
-                                        Your dealer website will be live at:
-                                    </p>
-                                    <div className="rounded-lg px-3 py-2 border border-primary/30 bg-background font-mono text-sm text-primary break-all">
-                                        {dealerSiteUrl(data.slug || data.dealershipName?.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "") || "")}
-                                    </div>
-                                    <p className="text-xs text-muted-foreground mt-1">
-                                        Preview — final URL confirmed after you click &ldquo;Complete Setup&rdquo;
-                                    </p>
-                                    <div className="mt-3 flex items-center gap-2 text-xs text-primary">
-                                        <Shield className="w-4 h-4" />
-                                        <span>Free SSL certificate included · No setup required</span>
-                                    </div>
-                                </div>
-                            </div>
+                <aside className="space-y-4">
+                    <div className="rounded-lg border border-[#D8E0EA] bg-white p-5 shadow-[0_14px_42px_rgba(7,20,54,0.07)]">
+                        <h2 className="text-base font-black text-[#071436]">Your Website</h2>
+                        <a href={displayHref} target="_blank" rel="noreferrer" className="mt-3 block break-all text-sm font-black text-[#155EEF] hover:underline">
+                            {displayUrl}
+                        </a>
+                        <div className="mt-5 rounded-md border border-emerald-200 bg-emerald-50 p-3">
+                            <p className="flex items-center gap-2 text-sm font-black text-emerald-700">
+                                <CheckCircle className="h-4 w-4" />
+                                Domain status
+                            </p>
+                            <p className="mt-1 text-xs font-semibold text-emerald-700">Connected</p>
                         </div>
                     </div>
 
-                    {/* Save error */}
-                    {saveError && (
-                        <div className="flex items-center gap-2.5 px-4 py-3 rounded-xl bg-destructive/10 border border-destructive/20 text-sm text-destructive">
-                            <AlertCircle className="w-4 h-4 flex-shrink-0" />
-                            <span>{saveError}</span>
-                        </div>
-                    )}
-                </CardContent>
+                    <LaunchChecklist uploadedCount={uploadedCount} />
 
-                <CardFooter className="justify-between">
-                    <Button variant="ghost" onClick={handleBack} disabled={saving}>
-                        <ArrowLeft className="mr-2 w-4 h-4" />
-                        Back
-                    </Button>
-                    <Button
-                        onClick={handleFinish}
-                        size="lg"
-                        className="px-8 gap-2"
-                        disabled={saving}
-                    >
-                        {saving ? (
-                            <>
-                                <Loader2 className="w-4 h-4 animate-spin" />
-                                Saving…
-                            </>
-                        ) : (
-                            "Complete Setup & Go to Dashboard"
-                        )}
-                    </Button>
-                </CardFooter>
-            </Card>
-
-            {/* Domain Upgrade Offers */}
-            {showUpgradeOptions && (
-                <div className="space-y-4">
-                    <div className="text-center">
-                        <h3 className="text-2xl font-bold text-foreground mb-2">
-                            Want a Professional Domain?
-                        </h3>
-                        <p className="text-muted-foreground">
-                            Upgrade your website with a custom domain for better branding and credibility
+                    <div className="rounded-lg border border-[#D8E0EA] bg-[#F7F9FC] p-5">
+                        <p className="flex items-center gap-2 text-sm font-black text-[#071436]">
+                            <ShieldCheck className="h-4 w-4 text-[#16A34A]" />
+                            Free SSL and SEO basics included
                         </p>
                     </div>
+                </aside>
+            </div>
 
-                    <div className="max-w-md mx-auto">
-                        {/* PRO Tier */}
-                        <Card className="border-2 border-primary/30 hover:border-primary/60 transition-colors relative overflow-hidden">
-                            <div className="absolute top-0 right-0 bg-primary text-primary-foreground text-xs font-bold px-3 py-1 rounded-bl-lg">
-                                POPULAR
-                            </div>
-                            <CardHeader>
-                                <div className="flex items-center gap-2 mb-2">
-                                    <LinkIcon className="w-6 h-6 text-primary" />
-                                    <CardTitle className="text-xl">PRO Tier</CardTitle>
-                                </div>
-                                <CardDescription className="text-lg font-semibold text-foreground">
-                                    ₹499/month
-                                </CardDescription>
-                            </CardHeader>
-                            <CardContent className="space-y-4">
-                                <p className="font-medium text-foreground">Connect Your Own Domain</p>
-                                <p className="text-sm text-muted-foreground">
-                                    Already have a domain? Connect it to your DealerSite Pro website with easy DNS setup.
-                                </p>
-                                <div className="space-y-2">
-                                    {[
-                                        "Use your existing domain (e.g. mydealer.com)",
-                                        "Free SSL certificate (HTTPS)",
-                                        "Step-by-step DNS setup guide",
-                                        "Professional email setup support",
-                                    ].map((item) => (
-                                        <div key={item} className="flex items-start gap-2 text-sm">
-                                            <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
-                                            <span className="text-muted-foreground">{item}</span>
-                                        </div>
-                                    ))}
-                                </div>
-                                <div className="rounded-xl p-3 border border-primary/20 bg-primary/5">
-                                    <p className="text-xs text-primary font-medium">
-                                        Perfect if you already own a domain
-                                    </p>
-                                </div>
-                            </CardContent>
-                            <CardFooter className="flex-col gap-2">
-                                <Button className="w-full" onClick={() => router.push("/dashboard/domains")}>
-                                    Connect My Domain
-                                </Button>
-                                <Button variant="link" className="h-auto text-muted-foreground text-xs" onClick={() => setShowUpgradeOptions(false)}>
-                                    No thanks, I&apos;ll use my free subdomain for now →
-                                </Button>
-                            </CardFooter>
-                        </Card>
-                    </div>
+            {saveError && (
+                <div className="flex items-center gap-2.5 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm font-semibold text-red-600">
+                    <AlertCircle className="h-4 w-4 shrink-0" />
+                    <span>{saveError}</span>
                 </div>
             )}
+
+            <div className="flex items-center justify-end pt-2">
+                <Button
+                    onClick={handleFinish}
+                    className="h-12 rounded-md bg-[#16A34A] px-7 font-black text-white hover:bg-[#15803D]"
+                    disabled={saving}
+                >
+                    {saving ? (
+                        <>
+                            <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                            Publishing
+                        </>
+                    ) : (
+                        <>
+                            <Rocket className="mr-2 h-4 w-4" />
+                            Publish Website
+                        </>
+                    )}
+                </Button>
+            </div>
         </div>
     );
 }

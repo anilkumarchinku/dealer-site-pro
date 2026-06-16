@@ -375,7 +375,7 @@ function AddVehiclePageContent() {
                 <p className="text-sm text-muted-foreground max-w-md mb-8">
                     As a new-car dealer, your brand catalog is managed automatically — no manual inventory needed.
                 </p>
-                <Button onClick={() => router.back()} className="gap-2">
+                <Button onClick={() => router.push('/dashboard/inventory')} className="gap-2">
                     <ArrowLeft className="w-4 h-4" />
                     Go Back
                 </Button>
@@ -384,18 +384,27 @@ function AddVehiclePageContent() {
     }
 
     return (
-        <div className="py-4">
-            <div className="max-w-2xl mx-auto space-y-6">
+        <div className="pb-8">
+            <div className="mx-auto max-w-4xl space-y-6">
                 {/* Header */}
-                <div className="flex items-center gap-4">
-                    <Button variant="ghost" size="icon" onClick={() => router.back()} className="rounded-xl">
+                <div className="rounded-2xl border border-border/70 bg-card/90 p-5 shadow-sm dark:bg-card/80 sm:p-6">
+                    <div className="flex items-start gap-4">
+                    <Button
+                        variant="ghost"
+                        size="icon"
+                        onClick={() => router.push('/dashboard/inventory')}
+                        className="rounded-xl"
+                        aria-label="Back to inventory"
+                    >
                         <ArrowLeft className="w-5 h-5" />
                     </Button>
                     <div>
-                        <h1 className="text-2xl font-bold">{isDraftMode ? 'Complete Vehicle Details' : 'Add Vehicle'}</h1>
-                        <p className="text-muted-foreground text-sm">
+                        <p className="mb-2 text-[11px] font-black uppercase tracking-[0.24em] text-blue-600 dark:text-blue-300">Inventory setup</p>
+                        <h1 className="text-2xl font-black tracking-tight sm:text-3xl">{isDraftMode ? 'Complete Vehicle Details' : 'Add Vehicle'}</h1>
+                        <p className="mt-2 max-w-2xl text-muted-foreground text-sm leading-6">
                             {isDraftMode ? 'Fill in the missing details to publish this vehicle' : 'Add a new vehicle to your inventory'}
                         </p>
+                    </div>
                     </div>
                 </div>
 
@@ -407,7 +416,7 @@ function AddVehiclePageContent() {
                 )}
 
                 {/* Photo Upload */}
-                <Card>
+                <Card className="rounded-2xl border-border/70 bg-card/90 shadow-sm dark:bg-card/80">
                     <CardHeader>
                         <CardTitle className="flex items-center gap-2">
                             <Camera className="w-5 h-5 text-muted-foreground" />
@@ -469,7 +478,7 @@ function AddVehiclePageContent() {
                 </Card>
 
                 {/* Identification Section */}
-                <Card>
+                <Card className="rounded-2xl border-border/70 bg-card/90 shadow-sm dark:bg-card/80">
                     <CardHeader>
                         <CardTitle>Vehicle Identification</CardTitle>
                         <CardDescription>Enter VIN for decoding and number plate for public listing display</CardDescription>
@@ -512,7 +521,7 @@ function AddVehiclePageContent() {
                 </Card>
 
                 {/* Basic Details */}
-                <Card>
+                <Card className="rounded-2xl border-border/70 bg-card/90 shadow-sm dark:bg-card/80">
                     <CardHeader>
                         <CardTitle>Basic Details</CardTitle>
                     </CardHeader>
@@ -581,7 +590,7 @@ function AddVehiclePageContent() {
                 </Card>
 
                 {/* Specifications */}
-                <Card>
+                <Card className="rounded-2xl border-border/70 bg-card/90 shadow-sm dark:bg-card/80">
                     <CardHeader>
                         <CardTitle>Specifications</CardTitle>
                     </CardHeader>
@@ -648,7 +657,7 @@ function AddVehiclePageContent() {
                 </Card>
 
                 {/* Features */}
-                <Card>
+                <Card className="rounded-2xl border-border/70 bg-card/90 shadow-sm dark:bg-card/80">
                     <CardHeader>
                         <CardTitle>Features & Highlights</CardTitle>
                         <CardDescription>
@@ -690,7 +699,7 @@ function AddVehiclePageContent() {
                 </Card>
 
                 {/* Description */}
-                <Card>
+                <Card className="rounded-2xl border-border/70 bg-card/90 shadow-sm dark:bg-card/80">
                     <CardHeader>
                         <div className="flex items-start justify-between gap-3">
                             <div>
@@ -726,7 +735,7 @@ function AddVehiclePageContent() {
                 </Card>
 
                 {/* Insurance */}
-                <Card>
+                <Card className="rounded-2xl border-border/70 bg-card/90 shadow-sm dark:bg-card/80">
                     <CardHeader>
                         <CardTitle>Insurance</CardTitle>
                         <CardDescription>Track policy status and add a partner quote link for this listing</CardDescription>
@@ -785,7 +794,7 @@ function AddVehiclePageContent() {
                 </Card>
 
                 {/* SEO Metadata */}
-                <Card>
+                <Card className="rounded-2xl border-border/70 bg-card/90 shadow-sm dark:bg-card/80">
                     <CardHeader>
                         <div className="flex items-start justify-between gap-3">
                             <div>
@@ -833,7 +842,7 @@ function AddVehiclePageContent() {
                 </Card>
 
                 {/* Video Walkaround */}
-                <Card>
+                <Card className="rounded-2xl border-border/70 bg-card/90 shadow-sm dark:bg-card/80">
                     <CardHeader>
                         <CardTitle className="flex items-center gap-2">
                             <Youtube className="w-5 h-5 text-red-500" />
@@ -869,7 +878,7 @@ function AddVehiclePageContent() {
                 <div className="flex gap-3 pb-8">
                     <Button
                         variant="outline"
-                        onClick={() => router.back()}
+                        onClick={() => router.push('/dashboard/inventory')}
                         disabled={isSaving}
                         className="px-6"
                     >

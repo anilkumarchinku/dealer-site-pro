@@ -1,35 +1,101 @@
+"use client";
+
 import Link from "next/link";
-import { ThemeToggle } from "@/components/ui/theme-toggle";
+import { usePathname } from "next/navigation";
+import { Bell, Car, ShieldCheck } from "lucide-react";
+
 import BrandLogo from "@/components/BrandLogo";
+import { OnboardingLogo } from "@/components/onboarding/flow-shell";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 export default function AuthLayout({ children }: { children: React.ReactNode }) {
+    const pathname = usePathname();
+    const isRegister = pathname === "/auth/register";
+
+    if (!isRegister) {
+        return (
+            <div className="relative min-h-screen overflow-hidden bg-[#F6F9FD] text-[#07142F] dark:bg-[#071A3D] dark:text-white">
+                <div className="absolute right-4 top-4 z-20">
+                    <ThemeToggle />
+                </div>
+
+                <div className="grid min-h-screen lg:grid-cols-[0.92fr_1.08fr]">
+                    <section className="relative hidden overflow-hidden bg-[#071A3D] px-10 py-12 text-white lg:flex lg:flex-col lg:justify-between xl:px-16">
+                        <div className="relative z-10">
+                            <BrandLogo className="[&>span]:text-white" />
+                        </div>
+
+                        <div className="relative z-10 max-w-xl">
+                            <p className="mb-4 text-xs font-black uppercase tracking-[0.26em] text-blue-300">
+                                Dealer workspace
+                            </p>
+                            <h1 className="text-5xl font-black leading-[0.98] tracking-tight xl:text-6xl">
+                                Manage your website, stock, and leads from one place.
+                            </h1>
+                            <p className="mt-6 max-w-md text-lg leading-8 text-slate-300">
+                                Sign in to continue building your dealership website, track enquiries, and keep every listing up to date.
+                            </p>
+                        </div>
+
+                        <div className="relative z-10 grid gap-3">
+                            {[
+                                { icon: ShieldCheck, label: "Secure dealer account" },
+                                { icon: Bell,        label: "Lead and message alerts" },
+                                { icon: Car,         label: "Cars, bikes, and autos supported" },
+                            ].map((item) => (
+                                <div key={item.label} className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/10 px-4 py-3 text-sm font-semibold text-slate-100">
+                                    <item.icon className="h-4 w-4 text-blue-300" />
+                                    {item.label}
+                                </div>
+                            ))}
+                        </div>
+                    </section>
+
+                    <section className="flex min-h-screen flex-col items-center justify-center px-4 py-10 sm:px-8">
+                        <div className="mb-8 lg:hidden">
+                            <OnboardingLogo />
+                        </div>
+
+                        <div className="w-full max-w-md">
+                            {children}
+                        </div>
+
+                        <p className="mt-8 max-w-md text-center text-xs leading-5 text-[#62708A] dark:text-slate-400">
+                            By continuing you agree to our{" "}
+                            <Link href="/terms" className="font-semibold text-[#155EEF] hover:underline dark:text-blue-300">
+                                Terms of Service
+                            </Link>
+                            {" "}and{" "}
+                            <Link href="/privacy" className="font-semibold text-[#155EEF] hover:underline dark:text-blue-300">
+                                Privacy Policy
+                            </Link>
+                        </p>
+                    </section>
+                </div>
+            </div>
+        );
+    }
+
     return (
-        <div className="min-h-screen bg-background relative">
-            {/* Theme toggle — top right corner */}
-            <div className="absolute top-4 right-4">
+        <div className="relative min-h-screen bg-white">
+            <div className="absolute right-4 top-4 z-20">
                 <ThemeToggle />
             </div>
 
-            {/* Background blobs */}
-            <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500/5 rounded-full blur-[120px] pointer-events-none" />
-            <div className="absolute bottom-0 right-0 w-80 h-80 bg-indigo-500/5 rounded-full blur-[100px] pointer-events-none" />
-
-            <div className="relative min-h-screen flex flex-col items-center justify-center p-4">
-                {/* Logo */}
-                <div className="mb-8">
-                    <BrandLogo size="sm" />
-                </div>
-
-                {/* Card */}
-                <div className="w-full max-w-md">
+            <div className="relative flex min-h-screen flex-col items-center justify-center">
+                <div className="w-full">
                     {children}
                 </div>
 
-                <p className="mt-8 text-xs text-muted-foreground text-center">
+                <p className="mt-8 text-center text-xs text-[#62708A]">
                     By continuing you agree to our{" "}
-                    <Link href="/terms" className="underline hover:text-foreground">Terms of Service</Link>
+                    <Link href="/terms" className="font-semibold text-[#155EEF] hover:underline">
+                        Terms of Service
+                    </Link>
                     {" "}and{" "}
-                    <Link href="/privacy" className="underline hover:text-foreground">Privacy Policy</Link>
+                    <Link href="/privacy" className="font-semibold text-[#155EEF] hover:underline">
+                        Privacy Policy
+                    </Link>
                 </p>
             </div>
         </div>

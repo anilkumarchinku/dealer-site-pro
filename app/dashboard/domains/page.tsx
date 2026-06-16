@@ -8,6 +8,7 @@ import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/com
 import ConnectCustomDomainModal from '@/components/ConnectCustomDomainModal'
 import DomainMonitoringWidget from '@/components/DomainMonitoringWidget'
 import { useOnboardingStore } from '@/lib/store/onboarding-store'
+import { PremiumPageHeader } from '@/components/dashboard/premium-ui'
 
 interface Domain {
     id: string
@@ -118,18 +119,24 @@ export default function DomainSettingsPage() {
 
     return (
         <div className="space-y-6 animate-fade-in">
-            {/* Header */}
-            <div>
-                <h1 className="text-2xl font-bold">Domain Settings</h1>
-                <p className="text-muted-foreground">Manage your website's domain and hosting</p>
-            </div>
+            <PremiumPageHeader
+                eyebrow="Website"
+                title="Domain manager"
+                description="Manage your free subdomain, custom domain, DNS verification, SSL status, and hosting health."
+                actions={
+                    <Button onClick={() => setShowConnectModal(true)} className="h-11 rounded-xl gap-2 bg-blue-600 hover:bg-blue-700">
+                        <Globe className="h-4 w-4" />
+                        Connect Domain
+                    </Button>
+                }
+            />
 
             {/* Monitoring Widget */}
             {dealerId && <DomainMonitoringWidget dealerId={dealerId} />}
 
             {/* Current Domain */}
             {loading ? (
-                <Card variant="glass">
+                <Card variant="glass" className="rounded-2xl border-border/70 bg-card/90 shadow-sm dark:bg-card/80">
                     <CardContent className="py-8">
                         <div className="animate-pulse space-y-3">
                             <div className="h-4 bg-muted rounded w-1/4"></div>
@@ -138,7 +145,7 @@ export default function DomainSettingsPage() {
                     </CardContent>
                 </Card>
             ) : primaryDomain ? (
-                <Card variant="glass">
+                <Card variant="glass" className="rounded-2xl border-border/70 bg-card/90 shadow-sm dark:bg-card/80">
                     <CardHeader>
                         <CardTitle className="flex items-center gap-2">
                             <Globe className="w-5 h-5 text-primary" />
@@ -179,7 +186,7 @@ export default function DomainSettingsPage() {
                     </CardContent>
                 </Card>
             ) : (
-                <Card variant="glass" className="border-amber-500/20">
+                <Card variant="glass" className="rounded-2xl border-amber-500/20 bg-card/90 shadow-sm dark:bg-card/80">
                     <CardContent className="py-6">
                         <p className="text-amber-400">
                             No domain found. Please complete onboarding to get your free subdomain.
@@ -190,7 +197,7 @@ export default function DomainSettingsPage() {
 
             {/* All Domains List */}
             {!loading && customDomains.length > 0 && (
-                <Card variant="glass">
+                <Card variant="glass" className="rounded-2xl border-border/70 bg-card/90 shadow-sm dark:bg-card/80">
                     <CardHeader>
                         <CardTitle className="flex items-center gap-2">
                             <Globe className="w-5 h-5 text-violet-500" />
@@ -216,7 +223,7 @@ export default function DomainSettingsPage() {
 
             {/* DNS Setup Instructions — shown when a custom domain is pending/verifying */}
             {!loading && pendingCustomDomain && (
-                <Card variant="glass">
+                <Card variant="glass" className="rounded-2xl border-border/70 bg-card/90 shadow-sm dark:bg-card/80">
                     <CardHeader>
                         <CardTitle className="flex items-center gap-2">
                             <Globe className="w-5 h-5" />
@@ -336,7 +343,7 @@ export default function DomainSettingsPage() {
 
             {/* Connect Custom Domain CTA — shown when no custom domain exists yet */}
             {!loading && !hasCustomDomain && (
-                <Card className="border-dashed border-2 hover:border-primary/50 transition-colors">
+                <Card className="rounded-2xl border-dashed border-2 border-border/80 bg-card/90 shadow-sm transition-colors hover:border-primary/50 dark:bg-card/80">
                     <CardContent className="p-8 text-center">
                         <Globe className="w-12 h-12 mx-auto mb-4 text-muted-foreground" />
                         <h3 className="font-bold text-lg mb-2">Connect Your Domain</h3>
@@ -363,7 +370,7 @@ export default function DomainSettingsPage() {
 
                 <div className="max-w-md">
                     {/* PRO Plan */}
-                    <Card variant="glass" className="border-primary/30 hover:border-primary/50 transition-colors">
+                    <Card variant="glass" className="rounded-2xl border-primary/30 bg-card/90 shadow-sm transition-colors hover:border-primary/50 dark:bg-card/80">
                         <CardContent className="pt-6">
                             <div className="flex items-center gap-3 mb-4">
                                 <div className="p-2.5 rounded-xl bg-primary/10">
@@ -408,7 +415,7 @@ export default function DomainSettingsPage() {
             </div>
 
             {/* Domain status legend */}
-            <Card variant="glass">
+            <Card variant="glass" className="rounded-2xl border-border/70 bg-card/90 shadow-sm dark:bg-card/80">
                 <CardHeader>
                     <CardTitle className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">
                         Domain Status Guide
@@ -437,7 +444,7 @@ export default function DomainSettingsPage() {
             </Card>
 
             {/* FAQ */}
-            <Card variant="glass">
+            <Card variant="glass" className="rounded-2xl border-border/70 bg-card/90 shadow-sm dark:bg-card/80">
                 <CardHeader>
                     <CardTitle className="flex items-center gap-2">
                         <HelpCircle className="w-5 h-5 text-amber-500" />
