@@ -1,5 +1,5 @@
 import { getLatestCars } from "@/lib/services/car-service";
-import WelcomeClient from "./welcome-client";
+import WelcomeClient from "./welcome-client-v2";
 import type { Car } from "@/lib/types/car";
 
 export default async function WelcomePage() {

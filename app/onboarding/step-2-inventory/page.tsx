@@ -1,286 +1,236 @@
-"use client"
-import { useState, useEffect } from "react"
-import { useRouter } from "next/navigation"
-import { useOnboardingStore } from "@/lib/store/onboarding-store"
-import { Button } from "@/components/ui/button"
-import {
-    ArrowRight, ArrowLeft, Eye, EyeOff,
-    CheckCircle2, Zap, Database, ChevronRight,
-} from "lucide-react"
-import { cn } from "@/lib/utils"
-import type { InventorySource } from "@/lib/types"
+"use client";
 
-// ── Bentley prestige palette (same as used-car site) ─────────────────────────
-const BENTLEY = { primary: '#003328', accent: '#B8962E' }
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
+import {
+    ArrowLeft,
+    ArrowRight,
+    CheckCircle2,
+    Eye,
+    EyeOff,
+    FileUp,
+    PlusCircle,
+    Rocket,
+    Zap,
+} from "lucide-react";
+
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import { useOnboardingStore } from "@/lib/store/onboarding-store";
+import type { InventorySource } from "@/lib/types";
+
+type InventoryMode = "manual" | "upload" | "cyepro";
+
+const options = [
+    {
+        id: "manual" as const,
+        title: "Add Manually",
+        caption: "Add vehicles one by one, or in bulk later.",
+        badge: null,
+        icon: PlusCircle,
+    },
+    {
+        id: "upload" as const,
+        title: "Upload Catalog",
+        caption: "Upload Excel or CSV file of your inventory.",
+        badge: null,
+        icon: FileUp,
+    },
+    {
+        id: "cyepro" as const,
+        title: "Cyepro Sync",
+        caption: "Website leads land in your Cyepro CRM, with live inventory sync where enabled.",
+        badge: "Recommended",
+        icon: Rocket,
+    },
+];
 
 export default function Step2InventoryPage() {
-    const router  = useRouter()
-    const { data, updateData, setStep } = useOnboardingStore()
+    const router = useRouter();
+    const { data, updateData, setStep } = useOnboardingStore();
 
-    const [selected,    setSelected]    = useState<InventorySource | null>(
-        data.inventorySource ?? null
-    )
-    const [apiKey,      setApiKey]      = useState(data.cyeproApiKey ?? "")
-    const [showKey,     setShowKey]     = useState(false)
-    const [keyError,    setKeyError]    = useState("")
+    const [mode, setMode] = useState<InventoryMode | null>(
+        data.inventorySource === "cyepro" ? "cyepro" :
+        data.inventorySource === "own" ? "upload" :
+        null
+    );
+    const [selected, setSelected] = useState<InventorySource | null>(data.inventorySource ?? null);
+    const [apiKey, setApiKey] = useState(data.cyeproApiKey ?? "");
+    const [showKey, setShowKey] = useState(false);
+    const [keyError, setKeyError] = useState("");
 
-    useEffect(() => { setStep(2) }, [setStep])
+    useEffect(() => { setStep(2); }, [setStep]);
 
-    // ── Navigation ────────────────────────────────────────────────────────────
-    const handleBack = () => router.push("/onboarding/step-2-used")
+    const handleBack = () => router.push("/onboarding/step-2-used");
+
+    const selectMode = (nextMode: InventoryMode) => {
+        setMode(nextMode);
+        setSelected(nextMode === "cyepro" ? "cyepro" : "own");
+        setKeyError("");
+    };
 
     const handleContinue = () => {
-        if (selected === "cyepro") {
+        if (mode === "cyepro") {
             if (!apiKey.trim()) {
-                setKeyError("Please enter your Cyepro API key to continue")
-                return
+                setKeyError("Please enter your Cyepro API key to continue");
+                return;
             }
-            updateData({ inventorySource: "cyepro", cyeproApiKey: apiKey.trim() })
-            setStep(3)
-            router.push("/onboarding/step-3")
-        } else if (selected === "own") {
-            updateData({ inventorySource: "own" })
-            router.push("/onboarding/step-2-inventory/bulk-upload")
+            updateData({ inventorySource: "cyepro", cyeproApiKey: apiKey.trim() });
+            setStep(3);
+            router.push("/onboarding/step-3");
+            return;
         }
-    }
+
+        if (mode === "manual") {
+            updateData({ inventorySource: "own" });
+            setStep(3);
+            router.push("/onboarding/step-3");
+            return;
+        }
+
+        if (mode === "upload" || selected === "own") {
+            updateData({ inventorySource: "own" });
+            router.push("/onboarding/step-2-inventory/bulk-upload");
+        }
+    };
 
     const handleSkip = () => {
-        updateData({ inventorySource: undefined, cyeproApiKey: undefined })
-        setStep(3)
-        router.push("/onboarding/step-3")
-    }
+        updateData({ inventorySource: undefined, cyeproApiKey: undefined });
+        setStep(3);
+        router.push("/onboarding/step-3");
+    };
 
     return (
-        <div className="space-y-8 animate-fade-in">
-
-            {/* ── Heading ── */}
-            <div className="space-y-2">
-                <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
-                    Step 2 of 5 — Inventory
-                </p>
-                <h1 className="text-2xl font-bold tracking-tight">
-                    How do you manage your vehicle stock?
+        <div className="space-y-6">
+            <div>
+                <p className="text-sm font-black uppercase tracking-[0.18em] text-[#155EEF]">Inventory Setup</p>
+                <h1 className="mt-3 text-3xl font-black tracking-[-0.03em] text-[#071436]">
+                    Add your inventory
                 </h1>
-                <p className="text-muted-foreground text-sm leading-relaxed max-w-xl">
-                    We&apos;ll connect your inventory to your website so buyers see live, up-to-date listings.
-                    Choose the option that fits your business.
+                <p className="mt-2 max-w-2xl text-sm font-medium leading-6 text-[#62708A]">
+                    Choose how you want to add vehicles to your website. You can change this later from the dashboard.
                 </p>
             </div>
 
-            {/* ── Option cards ── */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-
-                {/* ── Option 1: Cyepro ── */}
-                <button
-                    onClick={() => { setSelected("cyepro"); setKeyError("") }}
-                    className={cn(
-                        "group relative text-left rounded-2xl border-2 p-6 transition-all duration-200",
-                        "focus:outline-none focus-visible:ring-2 focus-visible:ring-ring",
-                        "active:scale-[0.98]",
-                        selected === "cyepro"
-                            ? "border-amber-500/60"
-                            : "border-border hover:border-amber-400/50"
-                    )}
-                    style={selected === "cyepro"
-                        ? { background: `${BENTLEY.primary}08` }
-                        : undefined}
-                >
-                    {/* Selected check */}
-                    {selected === "cyepro" && (
-                        <div className="absolute top-4 right-4">
-                            <CheckCircle2 className="w-5 h-5 text-amber-600" />
-                        </div>
-                    )}
-
-                    {/* Icon */}
-                    <div
-                        className="w-14 h-14 rounded-2xl flex items-center justify-center mb-5 border"
-                        style={{
-                            background:   `${BENTLEY.primary}15`,
-                            borderColor:  `${BENTLEY.accent}30`,
-                        }}
-                    >
-                        <Zap className="w-6 h-6" style={{ color: BENTLEY.accent }} />
-                    </div>
-
-                    {/* Badge */}
-                    <span
-                        className="inline-block text-xs font-semibold px-2.5 py-1 rounded-full mb-3 border"
-                        style={{
-                            background:  `${BENTLEY.accent}15`,
-                            color:       BENTLEY.primary,
-                            borderColor: `${BENTLEY.accent}30`,
-                        }}
-                    >
-                        Cyepro Connected
-                    </span>
-
-                    <h2 className="text-lg font-bold mb-2" style={{ color: BENTLEY.primary }}>
-                        I use Cyepro
-                    </h2>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
-                        You already have a Cyepro account. Connect your API key so website leads land
-                        in your Cyepro CRM, and live inventory can sync automatically where enabled.
-                    </p>
-
-                    <ul className="mt-4 space-y-1.5">
-                        {[
-                            "Website leads go to your Cyepro CRM",
-                            "Live, real-time stock sync where enabled",
-                            "No manual uploads needed",
-                        ].map(f => (
-                            <li key={f} className="flex items-center gap-2 text-xs text-muted-foreground">
-                                <CheckCircle2 className="w-3.5 h-3.5 flex-shrink-0 text-amber-600" />
-                                {f}
-                            </li>
-                        ))}
-                    </ul>
-
-                    <div
-                        className={cn(
-                            "mt-5 flex items-center gap-1.5 text-sm font-semibold transition-all",
-                            "group-hover:gap-3"
-                        )}
-                        style={{ color: BENTLEY.primary }}
-                    >
-                        Connect Cyepro
-                        <ChevronRight className="w-4 h-4" />
-                    </div>
-                </button>
-
-                {/* ── Option 2: Own inventory ── */}
-                <button
-                    onClick={() => { setSelected("own"); setKeyError("") }}
-                    className={cn(
-                        "group relative text-left rounded-2xl border-2 p-6 transition-all duration-200",
-                        "focus:outline-none focus-visible:ring-2 focus-visible:ring-ring",
-                        "active:scale-[0.98]",
-                        selected === "own"
-                            ? "border-blue-500/60 bg-blue-500/5"
-                            : "border-border hover:border-blue-500/40"
-                    )}
-                >
-                    {/* Selected check */}
-                    {selected === "own" && (
-                        <div className="absolute top-4 right-4">
-                            <CheckCircle2 className="w-5 h-5 text-blue-500" />
-                        </div>
-                    )}
-
-                    {/* Icon */}
-                    <div className="w-14 h-14 rounded-2xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center mb-5">
-                        <Database className="w-6 h-6 text-blue-500" />
-                    </div>
-
-                    {/* Badge */}
-                    <span className="inline-block text-xs font-semibold px-2.5 py-1 rounded-full mb-3 bg-blue-500/10 text-blue-600 border border-blue-500/20">
-                        Manual Upload
-                    </span>
-
-                    <h2 className="text-lg font-bold mb-2 text-blue-600">
-                        My Own Inventory
-                    </h2>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
-                        No Cyepro account? No problem. Upload your vehicles from a spreadsheet —
-                        we&apos;ll guide you through it step by step.
-                    </p>
-
-                    <ul className="mt-4 space-y-1.5">
-                        {[
-                            "Upload from Excel / CSV",
-                            "Simple column mapping",
-                            "Add more vehicles anytime",
-                        ].map(f => (
-                            <li key={f} className="flex items-center gap-2 text-xs text-muted-foreground">
-                                <CheckCircle2 className="w-3.5 h-3.5 flex-shrink-0 text-blue-500" />
-                                {f}
-                            </li>
-                        ))}
-                    </ul>
-
-                    <div className={cn(
-                        "mt-5 flex items-center gap-1.5 text-sm font-semibold text-blue-600 transition-all",
-                        "group-hover:gap-3"
-                    )}>
-                        Set up bulk upload
-                        <ChevronRight className="w-4 h-4" />
-                    </div>
-                </button>
+            <div className="grid gap-4 lg:grid-cols-3">
+                {options.map((option) => {
+                    const active = mode === option.id;
+                    return (
+                        <button
+                            key={option.id}
+                            type="button"
+                            onClick={() => selectMode(option.id)}
+                            className={cn(
+                                "relative rounded-lg border bg-white p-5 text-left shadow-[0_14px_42px_rgba(7,20,54,0.05)] transition hover:-translate-y-0.5 hover:border-[#155EEF] hover:shadow-[0_18px_52px_rgba(7,20,54,0.10)] focus:outline-none focus:ring-2 focus:ring-[#155EEF]",
+                                active ? "border-[#155EEF] bg-[#F5F8FF]" : "border-[#D8E0EA]"
+                            )}
+                        >
+                            {active && (
+                                <CheckCircle2 className="absolute right-4 top-4 h-5 w-5 text-[#155EEF]" />
+                            )}
+                            <div className="flex h-12 w-12 items-center justify-center rounded-md border border-[#CFE0FF] bg-[#EEF4FF] text-[#155EEF]">
+                                <option.icon className="h-6 w-6" />
+                            </div>
+                            <div className="mt-4 flex items-center gap-2">
+                                <h2 className="text-base font-black text-[#071436]">{option.title}</h2>
+                                {option.badge && (
+                                    <span className="rounded-full bg-emerald-50 px-2 py-1 text-[10px] font-black uppercase tracking-[0.12em] text-emerald-700">
+                                        {option.badge}
+                                    </span>
+                                )}
+                            </div>
+                            <p className="mt-2 text-sm font-medium leading-6 text-[#62708A]">{option.caption}</p>
+                        </button>
+                    );
+                })}
             </div>
 
-            {/* ── Cyepro API key input (expands when selected) ── */}
-            {selected === "cyepro" && (
-                <div
-                    className="rounded-2xl border-2 p-6 space-y-4 animate-fade-in"
-                    style={{ borderColor: `${BENTLEY.accent}40`, background: `${BENTLEY.primary}06` }}
-                >
-                    <div>
-                        <h3 className="text-sm font-semibold mb-1" style={{ color: BENTLEY.primary }}>
-                            Enter your Cyepro API Key
-                        </h3>
-                        <p className="text-xs text-muted-foreground">
-                            This same key sends generated website leads to your Cyepro CRM account.
-                            It&apos;s stored securely and never exposed to visitors.
-                        </p>
+            {mode === "cyepro" && (
+                <div className="rounded-lg border border-[#D8E0EA] bg-[#F7F9FC] p-5">
+                    <div className="flex items-start gap-3">
+                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-white text-[#155EEF]">
+                            <Zap className="h-5 w-5" />
+                        </div>
+                        <div className="flex-1">
+                            <h3 className="text-sm font-black text-[#071436]">Enter your Cyepro API Key</h3>
+                            <p className="mt-1 text-xs font-medium leading-5 text-[#62708A]">
+                                This same key sends generated website leads to your Cyepro CRM account. Find it in your Cyepro dashboard under Settings, API Access.
+                            </p>
+                            <div className="relative mt-4">
+                                <input
+                                    type={showKey ? "text" : "password"}
+                                    value={apiKey}
+                                    onChange={(event) => { setApiKey(event.target.value); setKeyError(""); }}
+                                    placeholder="Paste your Cyepro API key here"
+                                    className={cn(
+                                        "h-11 w-full rounded-md border bg-white px-4 pr-11 text-sm font-mono text-[#071436] outline-none focus:ring-2 focus:ring-[#155EEF]",
+                                        keyError ? "border-red-400" : "border-[#D8E0EA]"
+                                    )}
+                                />
+                                <button
+                                    type="button"
+                                    onClick={() => setShowKey((value) => !value)}
+                                    className="absolute right-3 top-1/2 -translate-y-1/2 text-[#62708A] hover:text-[#071436]"
+                                >
+                                    {showKey ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+                                </button>
+                            </div>
+                            {keyError && <p className="mt-2 text-xs font-semibold text-red-600">{keyError}</p>}
+                        </div>
                     </div>
-
-                    <div className="relative">
-                        <input
-                            type={showKey ? "text" : "password"}
-                            value={apiKey}
-                            onChange={(e) => { setApiKey(e.target.value); setKeyError("") }}
-                            placeholder="Paste your Cyepro API key here…"
-                            className={cn(
-                                "w-full h-11 text-sm font-mono rounded-xl border px-4 pr-11",
-                                "bg-background focus:outline-none focus:ring-2 focus:ring-ring",
-                                keyError ? "border-destructive" : "border-input"
-                            )}
-                        />
-                        <button
-                            type="button"
-                            onClick={() => setShowKey(v => !v)}
-                            className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
-                        >
-                            {showKey ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
-                        </button>
-                    </div>
-
-                    {keyError && (
-                        <p className="text-xs text-destructive">{keyError}</p>
-                    )}
-
-                    <p className="text-xs text-muted-foreground">
-                        Required headers that will be sent automatically:
-                        <span className="font-mono ml-1 text-foreground">SERVICE-TYPE-ID: 460 · timeZone: Asia/Calcutta</span>
-                    </p>
                 </div>
             )}
 
-            {/* ── Footer actions ── */}
+            <div className="rounded-lg border border-[#D8E0EA] bg-white p-5">
+                <div className="mb-4 flex items-center justify-between">
+                    <h2 className="text-sm font-black text-[#071436]">Inventory Preview</h2>
+                    <span className="text-xs font-bold text-[#62708A]">Sample rows</span>
+                </div>
+                <div className="overflow-hidden rounded-md border border-[#E3E9F2]">
+                    <div className="grid grid-cols-4 bg-[#F7F9FC] px-4 py-3 text-xs font-black text-[#62708A]">
+                        <span>Vehicle</span>
+                        <span>Year</span>
+                        <span>Price</span>
+                        <span>Status</span>
+                    </div>
+                    {[
+                        ["Maruti Swift", "2024", "Rs 6,45,000", "Active"],
+                        ["Hero Splendor Plus", "2024", "Rs 78,900", "Active"],
+                        ["Bajaj Maxima Z", "2024", "Rs 2,45,000", "Active"],
+                    ].map((row) => (
+                        <div key={row[0]} className="grid grid-cols-4 border-t border-[#E3E9F2] px-4 py-3 text-sm font-semibold text-[#35445C]">
+                            <span>{row[0]}</span>
+                            <span>{row[1]}</span>
+                            <span>{row[2]}</span>
+                            <span className="flex items-center gap-2 text-emerald-700">
+                                <span className="h-2 w-2 rounded-full bg-emerald-500" />
+                                {row[3]}
+                            </span>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
             <div className="flex items-center justify-between pt-2">
-                <Button variant="ghost" onClick={handleBack}>
-                    <ArrowLeft className="mr-2 w-4 h-4" />
+                <Button variant="outline" onClick={handleBack} className="border-[#D8E0EA]">
+                    <ArrowLeft className="mr-2 h-4 w-4" />
                     Back
                 </Button>
 
                 <div className="flex items-center gap-3">
-                    <Button
-                        variant="ghost"
-                        className="text-muted-foreground text-sm"
-                        onClick={handleSkip}
-                    >
+                    <Button variant="ghost" className="text-[#62708A]" onClick={handleSkip}>
                         Skip for now
                     </Button>
-
-                    {selected && (
-                        <Button onClick={handleContinue} className="gap-2">
-                            {selected === "own" ? "Set Up Upload" : "Connect & Continue"}
-                            <ArrowRight className="w-4 h-4" />
-                        </Button>
-                    )}
+                    <Button
+                        onClick={handleContinue}
+                        disabled={!mode}
+                        className="h-11 rounded-md bg-[#155EEF] px-6 font-black text-white hover:bg-[#0F4FD3]"
+                    >
+                        {mode === "upload" ? "Set Up Upload" : mode === "cyepro" ? "Connect & Continue" : "Save & Continue"}
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
                 </div>
             </div>
-
         </div>
-    )
+    );
 }

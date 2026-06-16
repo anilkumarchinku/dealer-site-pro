@@ -186,14 +186,15 @@ export default function DashboardPage() {
     ];
 
     return (
-        <div className="space-y-8 pb-8 animate-fade-in">
+        <div className="space-y-6 pb-8 animate-fade-in">
             {/* Welcome */}
-            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+            <div className="relative overflow-hidden rounded-2xl border border-border/70 bg-card/90 p-5 shadow-sm dark:bg-card/80 sm:p-6 flex flex-col lg:flex-row lg:items-start lg:justify-between gap-5">
                 <div>
-                    <h1 className="text-2xl font-bold text-foreground">
-                        Welcome back, {data.dealershipName || "Dealer"}!
+                    <p className="mb-2 text-[11px] font-black uppercase tracking-[0.24em] text-blue-600 dark:text-blue-300">Today</p>
+                    <h1 className="text-2xl sm:text-3xl font-black tracking-tight text-foreground">
+                        Welcome back, {data.dealershipName || "Dealer"}
                     </h1>
-                    <p className="text-muted-foreground">Here's what's happening with your dealership today.</p>
+                    <p className="mt-2 max-w-2xl text-sm sm:text-base leading-6 text-muted-foreground">Track leads, inventory, website health, and the next actions that keep your dealership moving.</p>
                     {data.brands && data.brands.length > 0 && (
                         <div className="flex items-center gap-2 mt-2 flex-wrap">
                             <span className="text-sm text-muted-foreground">Brands:</span>
@@ -219,7 +220,7 @@ export default function DashboardPage() {
                         <div className="relative">
                             <Button
                                 variant="outline"
-                                className="gap-2"
+                                className="h-11 rounded-xl gap-2"
                                 onClick={() => setShowBrandPicker(v => !v)}
                             >
                                 <Eye className="w-4 h-4" />
@@ -253,7 +254,7 @@ export default function DashboardPage() {
                         </div>
                     ) : (
                         <Link href={`/preview?brand=${encodeURIComponent(primaryBrand)}&template=${data.styleTemplate || "modern"}${previewSlug ? `&slug=${encodeURIComponent(previewSlug)}` : ''}`}>
-                            <Button variant="outline" className="gap-2">
+                            <Button variant="outline" className="h-11 rounded-xl gap-2">
                                 <Eye className="w-4 h-4" />
                                 View Website
                             </Button>
@@ -261,7 +262,7 @@ export default function DashboardPage() {
                     )}
                     {!isFirstHand && (
                         <Link href="/dashboard/inventory/add">
-                            <Button className="gap-2">
+                            <Button className="h-11 rounded-xl gap-2 bg-blue-600 hover:bg-blue-700">
                                 <Plus className="w-4 h-4" />
                                 Add Vehicle
                             </Button>
@@ -271,16 +272,16 @@ export default function DashboardPage() {
             </div>
 
             {/* ── Info & Brands ─────────────────────────────────────────── */}
-            <div className="bg-card border border-border rounded-xl p-6">
+            <div className="bg-card/90 dark:bg-card/80 border border-border/70 rounded-2xl p-5 sm:p-6 shadow-sm">
                 <div className="flex items-center justify-between mb-4">
                     <div>
-                        <h2 className="font-semibold text-base">Info &amp; Brands</h2>
+                        <h2 className="font-black text-lg tracking-tight">Info &amp; Brands</h2>
                         <p className="text-xs text-muted-foreground mt-0.5">
                             {data.dealershipName || "Your dealership"} · {data.location || ""}
                         </p>
                     </div>
                     {!editingBrands && (
-                        <Button size="sm" variant="outline" onClick={() => { setSelectedBrands(data.brands ?? []); setBrandSearch(""); setEditingBrands(true); }}>
+                        <Button size="sm" variant="outline" className="rounded-xl" onClick={() => { setSelectedBrands(data.brands ?? []); setBrandSearch(""); setEditingBrands(true); }}>
                             <Pencil className="w-3.5 h-3.5 mr-1.5" />
                             {(data.brands?.length ?? 0) === 0 ? "Select Brands" : "Edit Brands"}
                         </Button>
@@ -365,17 +366,20 @@ export default function DashboardPage() {
             )}
 
             {/* Stats */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 {STATS.map((stat, i) => (
-                    <Card key={i} className="hover:shadow-lg transition-all duration-300">
-                        <CardContent className="p-6">
-                            <div className="mb-4">
-                                <div className={cn("p-3 rounded-xl w-fit", COLOR[stat.color].bg)}>
+                    <Card key={i} className="rounded-2xl border-border/70 bg-card/90 p-0 shadow-sm transition-colors hover:border-blue-200 dark:bg-card/80 dark:hover:border-blue-500/30">
+                        <CardContent className="p-5">
+                            <div className="mb-5 flex items-center justify-between">
+                                <div className={cn("p-3 rounded-xl w-fit shadow-sm", COLOR[stat.color].bg)}>
                                     <stat.icon className={cn("w-6 h-6", COLOR[stat.color].text)} />
                                 </div>
+                                <span className="rounded-full border border-border bg-background px-2.5 py-1 text-[11px] font-bold text-muted-foreground">
+                                    30 days
+                                </span>
                             </div>
                             <p className="text-sm text-muted-foreground">{stat.label}</p>
-                            <p className="text-3xl font-bold">
+                            <p className="mt-1 text-3xl font-black tracking-tight">
                                 {statsLoading
                                     ? <Loader2 className="w-6 h-6 animate-spin text-muted-foreground" />
                                     : stat.value !== null ? fmt(stat.value) : "—"
@@ -389,24 +393,24 @@ export default function DashboardPage() {
             {/* Main Content */}
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                 {/* Recent Leads */}
-                <Card className="lg:col-span-2">
-                    <CardHeader className="flex-row items-center justify-between pb-4">
+                <Card className="lg:col-span-2 rounded-2xl border-border/70 bg-card/90 p-0 shadow-sm dark:bg-card/80">
+                    <CardHeader className="flex-row items-center justify-between border-b border-border/70 p-5 pb-5">
                         <div className="flex items-center gap-3">
                             <div className="p-2 rounded-lg bg-green-500/10">
                                 <Users className="w-5 h-5 text-green-500" />
                             </div>
                             <div>
-                                <CardTitle className="text-lg">Recent Leads</CardTitle>
+                                <CardTitle className="text-lg font-black tracking-tight">Recent Leads</CardTitle>
                                 <p className="text-sm text-muted-foreground">Latest inquiries from customers</p>
                             </div>
                         </div>
                         <Link href="/dashboard/leads">
-                            <Button variant="ghost" size="sm" className="gap-1">
+                            <Button variant="ghost" size="sm" className="gap-1 rounded-xl">
                                 View All <ArrowRight className="w-4 h-4" />
                             </Button>
                         </Link>
                     </CardHeader>
-                    <CardContent>
+                    <CardContent className="p-5">
                         {leadsLoading ? (
                             <div className="space-y-4">
                                 {[...Array(3)].map((_, i) => (
@@ -467,19 +471,19 @@ export default function DashboardPage() {
                 {/* Right column */}
                 <div className="space-y-6">
                     {/* Quick Actions */}
-                    <Card>
-                        <CardHeader className="pb-4">
+                    <Card className="rounded-2xl border-border/70 bg-card/90 p-0 shadow-sm dark:bg-card/80">
+                        <CardHeader className="border-b border-border/70 p-5 pb-5">
                             <div className="flex items-center gap-3">
                                 <div className="p-2 rounded-lg bg-violet-500/10">
                                     <Zap className="w-5 h-5 text-violet-500" />
                                 </div>
-                                <CardTitle className="text-lg">Quick Actions</CardTitle>
+                                <CardTitle className="text-lg font-black tracking-tight">Quick Actions</CardTitle>
                             </div>
                         </CardHeader>
-                        <CardContent className="grid grid-cols-2 gap-3">
+                        <CardContent className="grid grid-cols-2 gap-3 p-5">
                             {QUICK_ACTIONS.filter(a => !(isFirstHand && a.href === "/dashboard/inventory/add")).map((action, i) => (
                                 <Link key={i} href={action.href}>
-                                    <Button variant="outline" className="w-full h-auto py-4 flex-col gap-2 hover:bg-muted/50">
+                                    <Button variant="outline" className="w-full h-auto rounded-xl py-4 flex-col gap-2 hover:bg-muted/50">
                                         <div className={cn("p-2 rounded-lg", COLOR[action.color as keyof typeof COLOR].bg)}>
                                             <action.icon className={cn("w-5 h-5", COLOR[action.color as keyof typeof COLOR].text)} />
                                         </div>
@@ -502,19 +506,19 @@ export default function DashboardPage() {
                     />
 
                     {/* Top Vehicles */}
-                    <Card>
-                        <CardHeader className="pb-4">
+                    <Card className="rounded-2xl border-border/70 bg-card/90 p-0 shadow-sm dark:bg-card/80">
+                        <CardHeader className="border-b border-border/70 p-5 pb-5">
                             <div className="flex items-center gap-3">
                                 <div className="p-2 rounded-lg bg-primary/10">
                                     <Car className="w-5 h-5 text-primary" />
                                 </div>
                                 <div>
-                                    <CardTitle className="text-lg">Top Vehicles</CardTitle>
+                                    <CardTitle className="text-lg font-black tracking-tight">Top Vehicles</CardTitle>
                                     <p className="text-sm text-muted-foreground">Most viewed this month</p>
                                 </div>
                             </div>
                         </CardHeader>
-                        <CardContent>
+                        <CardContent className="p-5">
                             {leadsLoading ? (
                                 <div className="flex items-center justify-center py-4 text-muted-foreground">
                                     <Loader2 className="w-4 h-4 animate-spin" />

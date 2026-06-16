@@ -9,9 +9,9 @@
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "/favicon.svg",
-      "type": "image/svg+xml",
-      "sizes": "any",
+      "src": "/dealersite-pro-shield.png",
+      "type": "image/png",
+      "sizes": "100x96",
       "purpose": "any maskable"
     },
     {

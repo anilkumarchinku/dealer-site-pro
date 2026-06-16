@@ -14,6 +14,7 @@ import { RCLookupWidget } from "@/components/dashboard/RCLookupWidget";
 import { ApiUsageWidget } from "@/components/dashboard/ApiUsageWidget";
 import { Badge } from "@/components/ui/badge";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { PremiumEmptyState, PremiumPageHeader } from "@/components/dashboard/premium-ui";
 
 const STAT_CONFIG = [
     { label: "Total Stock",  icon: Car,        bg: "bg-primary/10",    text: "text-primary" },
@@ -127,17 +128,14 @@ export default function InventoryPage() {
                 />
             )}
 
-            {/* Header */}
-            <div className="flex items-center justify-between">
-                <div>
-                    <h1 className="text-2xl font-bold">Vehicle Inventory</h1>
-                    <p className="text-muted-foreground">
-                        {isHybrid
-                            ? "Manage your new and pre-owned stock"
-                            : "Manage your dealership's stock"}
-                    </p>
-                </div>
-                <div className="flex items-center gap-2">
+            <PremiumPageHeader
+                eyebrow="Catalog"
+                title="Vehicle Inventory"
+                description={isHybrid
+                    ? "Manage new and pre-owned stock across your public website and dealer dashboard."
+                    : "Manage dealership stock, listing status, insurance details, and buyer-ready catalog data."}
+                actions={
+                    <>
                     {dealerId && (
                         <Button
                             variant="ghost"
@@ -145,7 +143,7 @@ export default function InventoryPage() {
                             onClick={load}
                             disabled={loading}
                             title="Refresh"
-                            className="text-muted-foreground"
+                            className="rounded-xl text-muted-foreground"
                         >
                             {loading
                                 ? <Loader2 className="w-4 h-4 animate-spin" />
@@ -156,27 +154,40 @@ export default function InventoryPage() {
                         <>
                             <Button
                                 variant="outline"
-                                className="gap-2"
+                                className="h-11 rounded-xl gap-2"
                                 onClick={() => setShowBulkUpload(true)}
                             >
                                 <Upload className="w-4 h-4" />
                                 Bulk Upload
                             </Button>
                             <Link href="/dashboard/inventory/add">
-                                <Button className="gap-2 bg-primary hover:bg-primary/90">
+                                <Button className="h-11 rounded-xl gap-2 bg-blue-600 hover:bg-blue-700">
                                     <Plus className="w-4 h-4" />
                                     Add Vehicle
                                 </Button>
                             </Link>
                         </>
                     ) : (
-                        <Button disabled className="gap-2 opacity-40 cursor-not-allowed" title="Only hybrid & used-car dealers can add vehicles">
+                        <Button disabled className="h-11 rounded-xl gap-2 opacity-40 cursor-not-allowed" title="Only hybrid & used-car dealers can add vehicles">
                             <Plus className="w-4 h-4" />
                             Add Vehicle
                         </Button>
                     )}
+                    </>
+                }
+            >
+                <div className="flex flex-wrap gap-2">
+                    <span className="rounded-full border border-border bg-background px-3 py-1 text-xs font-bold text-muted-foreground">
+                        {dbVehicles.length} total
+                    </span>
+                    <span className="rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-xs font-bold text-emerald-700 dark:border-emerald-500/20 dark:bg-emerald-500/10 dark:text-emerald-300">
+                        {dbVehicles.filter(v => v.status === "available").length} live
+                    </span>
+                    <span className="rounded-full border border-amber-200 bg-amber-50 px-3 py-1 text-xs font-bold text-amber-700 dark:border-amber-500/20 dark:bg-amber-500/10 dark:text-amber-300">
+                        {dbVehicles.filter(v => v.status === "draft").length} drafts
+                    </span>
                 </div>
-            </div>
+            </PremiumPageHeader>
 
             {/* RC Lookup & Usage Tracking */}
             {(data.sellsUsedCars || data.sellsNewCars) && (
@@ -193,16 +204,19 @@ export default function InventoryPage() {
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 {STAT_CONFIG.map((stat, index) => (
-                    <Card key={index} className="hover:shadow-lg transition-all duration-300">
-                        <CardContent className="p-6">
-                            <div className="mb-4">
-                                <div className={`p-3 rounded-xl w-fit ${stat.bg}`}>
+                    <Card key={index} className="rounded-2xl border-border/70 bg-card/90 p-0 shadow-sm transition-colors hover:border-blue-200 dark:bg-card/80 dark:hover:border-blue-500/30">
+                        <CardContent className="p-5">
+                            <div className="mb-5 flex items-center justify-between">
+                                <div className={`p-3 rounded-xl w-fit shadow-sm ${stat.bg}`}>
                                     <stat.icon className={`w-6 h-6 ${stat.text}`} />
                                 </div>
+                                <span className="rounded-full border border-border bg-background px-2.5 py-1 text-[11px] font-bold text-muted-foreground">
+                                    Stock
+                                </span>
                             </div>
                             <div className="space-y-1">
                                 <p className="text-sm text-muted-foreground">{stat.label}</p>
-                                <p className="text-3xl font-bold">
+                                <p className="text-3xl font-black tracking-tight">
                                     {loading ? <Loader2 className="w-6 h-6 animate-spin text-muted-foreground" /> : statValues[index]}
                                 </p>
                             </div>
@@ -258,7 +272,7 @@ export default function InventoryPage() {
             )}
 
             {/* Filters */}
-            <Card variant="glass">
+            <Card variant="glass" className="rounded-2xl border-border/70 bg-card/90 p-0 shadow-sm dark:bg-card/80">
                 <CardContent className="p-4">
                     <div className="flex flex-col md:flex-row gap-4">
                         <div className="flex-1 relative">
@@ -302,18 +316,21 @@ export default function InventoryPage() {
                     <span className="text-sm">Loading inventory…</span>
                 </div>
             ) : dbVehicles.length === 0 ? (
-                <Card variant="glass">
-                    <CardContent className="py-16 text-center text-muted-foreground">
-                        <Car className="w-10 h-10 mx-auto mb-3 opacity-30" />
-                        <p className="font-medium">No vehicles added yet</p>
-                        <p className="text-sm mt-1">Click &quot;Add Vehicle&quot; to add your first listing</p>
-                        {isHybrid && (
-                            <p className="text-xs mt-2 text-violet-500">
-                                Tip: Use the condition field to mark each vehicle as New or Used
-                            </p>
-                        )}
-                    </CardContent>
-                </Card>
+                <PremiumEmptyState
+                    icon={Car}
+                    title="No vehicles added yet"
+                    description={isHybrid
+                        ? "Add your first listing and use the condition field to mark each vehicle as new or used."
+                        : "Add your first listing so customers can discover it on your dealer website."}
+                    action={canAddVehicles && (
+                        <Link href="/dashboard/inventory/add">
+                            <Button className="rounded-xl bg-blue-600 hover:bg-blue-700">
+                                <Plus className="mr-2 h-4 w-4" />
+                                Add Vehicle
+                            </Button>
+                        </Link>
+                    )}
+                />
             ) : (
                 <DBVehicleTable
                     vehicles={filteredDB}
@@ -352,7 +369,7 @@ function DBVehicleTable({
     };
 
     return (
-        <div className="w-full overflow-auto rounded-xl border border-border bg-card shadow-sm">
+        <div className="w-full overflow-auto rounded-2xl border border-border/70 bg-card/90 shadow-sm dark:bg-card/80">
             <Table>
                 <TableHeader>
                     <TableRow className="bg-muted/50 hover:bg-muted/50">

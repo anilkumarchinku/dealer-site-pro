@@ -170,7 +170,7 @@ function AddVehicleTypeInner() {
 
     return (
         <div className="max-w-2xl mx-auto py-8 px-4 space-y-6 animate-fade-in">
-            <Button variant="ghost" size="sm" onClick={() => router.back()} className="gap-1.5">
+            <Button variant="ghost" size="sm" onClick={() => router.push("/dashboard/settings")} className="gap-1.5">
                 <ArrowLeft className="w-4 h-4" />
                 Back to Settings
             </Button>
@@ -257,7 +257,7 @@ function AddVehicleTypeInner() {
                 </CardContent>
 
                 <CardFooter className="justify-end gap-3">
-                    <Button variant="outline" onClick={() => router.back()} disabled={saving}>
+                    <Button variant="outline" onClick={() => router.push("/dashboard/settings")} disabled={saving}>
                         Cancel
                     </Button>
                     <Button onClick={handleSave} disabled={saving || selectedBrands.length === 0}>
