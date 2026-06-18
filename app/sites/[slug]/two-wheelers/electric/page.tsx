@@ -4,8 +4,9 @@ import { useEffect, useState, useCallback } from "react"
 import { useParams } from "next/navigation"
 import { supabase } from "@/lib/supabase"
 import { VehicleCard } from "@/components/two-wheelers/VehicleCard"
+import { CompareBar } from "@/components/two-wheelers/CompareBar"
 import { LeadFormModal } from "@/components/two-wheelers/LeadFormModal"
-import type { TwoWheelerVehicle, TwoWheelerFilters } from "@/lib/types/two-wheeler"
+import type { TwoWheelerCompareItem, TwoWheelerVehicle, TwoWheelerFilters } from "@/lib/types/two-wheeler"
 
 export default function ElectricTwoWheelersPage() {
     const params = useParams()
@@ -16,6 +17,7 @@ export default function ElectricTwoWheelersPage() {
     const [loading,  setLoading]   = useState(true)
     const [filters,  setFilters]   = useState<TwoWheelerFilters>({ fuelType: "electric", sortBy: "newest", page: 1, pageSize: 12 })
     const [leadVehicleId, setLeadVehicleId] = useState<string | null>(null)
+    const [compareItems, setCompareItems] = useState<TwoWheelerCompareItem[]>([])
     const [search, setSearch] = useState("")
 
     useEffect(() => {
@@ -45,6 +47,14 @@ export default function ElectricTwoWheelersPage() {
         v.brand.toLowerCase().includes(search.toLowerCase()) ||
         v.model.toLowerCase().includes(search.toLowerCase())
     )
+
+    function toggleCompare(vehicle: TwoWheelerVehicle) {
+        setCompareItems(prev => {
+            if (prev.some(item => item.id === vehicle.id)) return prev.filter(item => item.id !== vehicle.id)
+            if (prev.length >= 3) return prev
+            return [...prev, { id: vehicle.id, brand: vehicle.brand, model: vehicle.model, image: vehicle.images[0] ?? null }]
+        })
+    }
 
     return (
         <div className="min-h-screen">
@@ -103,11 +113,18 @@ export default function ElectricTwoWheelersPage() {
                 ) : (
                     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                         {filtered.map(v => (
-                            <VehicleCard key={v.id} vehicle={v} slug={slug} onLead={vid => setLeadVehicleId(vid)} />
+                            <VehicleCard key={v.id} vehicle={v} slug={slug} onLead={vid => setLeadVehicleId(vid)} onCompare={toggleCompare} />
                         ))}
                     </div>
                 )}
             </div>
+
+            <CompareBar
+                items={compareItems}
+                slug={slug}
+                onRemove={id => setCompareItems(prev => prev.filter(item => item.id !== id))}
+                onClear={() => setCompareItems([])}
+            />
 
             {dealerId && (
                 <LeadFormModal

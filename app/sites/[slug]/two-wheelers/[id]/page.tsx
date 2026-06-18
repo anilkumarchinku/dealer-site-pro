@@ -36,7 +36,7 @@ export default function VehicleDetailPage() {
     const slug   = params.slug as string
     const id     = params.id   as string
     const prefix = useSitePrefix(slug)
-    const listingHref = `${prefix}/two-wheelers`
+    const listingHref = `${prefix}/two-wheelers/new`
 
     const [vehicle,    setVehicle]    = useState<TwoWheelerVehicle | null>(null)
     const [dealerId,   setDealerId]   = useState<string | null>(null)

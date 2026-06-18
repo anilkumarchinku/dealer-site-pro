@@ -169,7 +169,7 @@ export default async function SiteCarDetailPage({ params }: SiteCarDetailPagePro
         })));
     } else {
         const cyeproCars = cyepro_api_key
-            ? await fetchAllCyeproInventoryAsCars(cyepro_api_key)
+            ? await fetchAllCyeproInventoryAsCars(cyepro_api_key, {}, undefined, '4w')
             : [];
 
         cars = dedupeInventoryCars([

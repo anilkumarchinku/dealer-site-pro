@@ -63,7 +63,7 @@ describe('organized provider integrations', () => {
         await expect(fetchCyeproVehicles('bad-key')).resolves.toBeNull()
     })
 
-    it('keeps Cyepro lead forwarding non-blocking on provider failure', async () => {
+    it('returns a failed Cyepro lead sync result on provider failure', async () => {
         vi.mocked(global.fetch).mockResolvedValue(
             new Response(JSON.stringify({ message: 'failed' }), { status: 500 })
         )
@@ -72,7 +72,11 @@ describe('organized provider integrations', () => {
             customerName: 'Asha',
             customerPhone: '9999999999',
             leadSource: 'Website',
-        })).resolves.toBeUndefined()
+        })).resolves.toMatchObject({
+            success: false,
+            status: 500,
+            error: '{"message":"failed"}',
+        })
     })
 
     it('skips SMS provider when MSG91 auth key is missing', async () => {

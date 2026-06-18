@@ -72,6 +72,7 @@ describe('PATCH /api/reviews', () => {
         const response = await PATCH(patchRequest({
             review_id: 'review_1',
             dealer_id: 'dealer_1',
+            action: 'approve',
         }))
 
         expect(response.status).toBe(403)
@@ -94,6 +95,7 @@ describe('PATCH /api/reviews', () => {
         const response = await PATCH(patchRequest({
             review_id: 'review_2',
             dealer_id: 'dealer_1',
+            action: 'approve',
         }))
 
         expect(response.status).toBe(404)
@@ -114,15 +116,24 @@ describe('PATCH /api/reviews', () => {
         const response = await PATCH(patchRequest({
             review_id: 'review_1',
             dealer_id: 'dealer_1',
+            action: 'approve',
         }))
 
         expect(response.status).toBe(200)
-        await expect(response.json()).resolves.toEqual({ success: true })
+        await expect(response.json()).resolves.toEqual({
+            success: true,
+            review: { id: 'review_1', dealer_id: 'dealer_1' },
+        })
         expect(requireDealerOwnership).toHaveBeenCalledWith(
             expect.anything(),
             'user_1',
             'dealer_1'
         )
-        expect(admin.updates).toEqual([{ is_approved: true }])
+        expect(admin.updates).toEqual([expect.objectContaining({
+            is_approved: true,
+            moderation_status: 'approved',
+            show_on_homepage: true,
+            updated_at: expect.any(String),
+        })])
     })
 })

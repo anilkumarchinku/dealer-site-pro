@@ -17,8 +17,11 @@ import { logger } from '@/lib/utils/logger'
 
 export interface CyeproVehicle {
     id: number
+    makeId?: number | null
     make: string
+    modelId?: number | null
     model: string
+    varientId?: number | null
     vehicleManufactureYear: number
     customerSellingPrice: number
     kiloMeters: number
@@ -30,6 +33,11 @@ export interface CyeproVehicle {
     variant: string
     color: string
     regNumber: string
+    bodyType?: string | null
+    bodyTypeId?: number | null
+    seatingCapacity?: number | null
+    vehicleCategoryId?: number | null
+    vehicleType?: string | null
 }
 
 export interface CyeproSearchBody {
@@ -85,8 +93,10 @@ const DEFAULT_BASE_URL = 'https://mock-api.cyepro.com'
 const BASE_URL    = normaliseBaseUrl(getOptionalEnv('CYEPRO_API_BASE_URL') ?? DEFAULT_BASE_URL)
 const SEARCH_PATH = normalisePath(getOptionalEnv('CYEPRO_SEARCH_PATH') ?? '/dynamicForms/search/vehicles/filterQueryApi')
 const AGGREGATIONS_PATH = normalisePath(getOptionalEnv('CYEPRO_AGGREGATIONS_PATH') ?? '/dynamicForms/search/vehicles/aggregationsApi')
+const LEAD_PATH = normalisePath(getOptionalEnv('CYEPRO_LEAD_PATH') ?? '/dynamicForms/leads')
 const SERVICE_ID  = '460'
 const TIME_ZONE   = 'Asia/Calcutta'
+const CURRENT_YEAR = new Date().getFullYear()
 const SEARCH_TIMEOUT_MS = 10_000
 const LEAD_TIMEOUT_MS = 5_000
 const DEFAULT_FETCH_ALL_PAGE_SIZE = 100
@@ -99,7 +109,7 @@ const DEFAULT_SEARCH: CyeproSearchBody = {
     priceMin:         0,
     priceMax:         100_000_000,
     yearMin:          1970,
-    yearMax:          2025,
+    yearMax:          Math.max(2025, CURRENT_YEAR),
     vehicleStatusIds: [],
     vehicleTypeList:  [],
     kmDrivenMax:      9_999_999,
@@ -126,6 +136,12 @@ export function getCyeproApiBaseUrl(): string {
 export function getCyeproSearchPath(): string {
     return SEARCH_PATH
 }
+
+export function getCyeproLeadPath(): string {
+    return LEAD_PATH
+}
+
+export type CyeproVehicleCategory = '2w' | '3w' | '4w' | 'all'
 
 function buildHeaders(apiKey: string): HeadersInit {
     return {
@@ -228,9 +244,90 @@ function getCyeproVehicleImageUrls(v: CyeproVehicle): string[] {
     return [...new Set(urls)]
 }
 
+function envList(key: 'CYEPRO_2W_VEHICLE_TYPE_LIST' | 'CYEPRO_3W_VEHICLE_TYPE_LIST' | 'CYEPRO_4W_VEHICLE_TYPE_LIST'): string[] {
+    return (getOptionalEnv(key) ?? '')
+        .split(',')
+        .map(value => value.trim())
+        .filter(Boolean)
+}
+
+export function getCyeproCategorySearchOptions(category: CyeproVehicleCategory): Partial<CyeproSearchBody> {
+    if (category === '2w') {
+        const vehicleTypeList = envList('CYEPRO_2W_VEHICLE_TYPE_LIST')
+        return vehicleTypeList.length > 0 ? { vehicleTypeList } : {}
+    }
+    if (category === '3w') {
+        const vehicleTypeList = envList('CYEPRO_3W_VEHICLE_TYPE_LIST')
+        return vehicleTypeList.length > 0 ? { vehicleTypeList } : {}
+    }
+    if (category === '4w') {
+        const vehicleTypeList = envList('CYEPRO_4W_VEHICLE_TYPE_LIST')
+        return vehicleTypeList.length > 0 ? { vehicleTypeList } : {}
+    }
+    return {}
+}
+
+function categorySearchText(v: CyeproVehicle): string {
+    return [
+        v.make,
+        v.model,
+        v.variant,
+        v.bodyType,
+        v.vehicleType,
+    ].filter(Boolean).join(' ').toLowerCase()
+}
+
+function hasAnyPattern(text: string, patterns: RegExp[]): boolean {
+    return patterns.some(pattern => pattern.test(text))
+}
+
+const TWO_WHEELER_PATTERNS = [
+    /\b(2w|two[-\s]?wheeler|bike|motorcycle|scooter|scooty|moped)\b/i,
+    /\b(duke|pulsar|apache|splendor|shine|activa|jupiter|access|ntorq|aether|ather|chetak|vida|revolt)\b/i,
+]
+
+const THREE_WHEELER_PATTERNS = [
+    /\b(3w|three[-\s]?wheeler|auto[-\s]?rickshaw|rickshaw|e[-\s]?rickshaw|tuk[-\s]?tuk)\b/i,
+    /\b(cargo auto|passenger auto|loader|ape|treo|alfa|atul|bajaj re|piaggio ape)\b/i,
+]
+
+const FOUR_WHEELER_BODY_PATTERNS = [
+    /\b(hatchback|sedan|suv|muv|mpv|coupe|convertible|pickup|van|wagon)\b/i,
+]
+
+export function inferCyeproVehicleCategory(v: CyeproVehicle): Exclude<CyeproVehicleCategory, 'all'> | 'unknown' {
+    const text = categorySearchText(v)
+
+    if (hasAnyPattern(text, THREE_WHEELER_PATTERNS)) return '3w'
+    if (hasAnyPattern(text, TWO_WHEELER_PATTERNS)) return '2w'
+
+    if (typeof v.seatingCapacity === 'number' && v.seatingCapacity >= 4) return '4w'
+    if (hasAnyPattern(text, FOUR_WHEELER_BODY_PATTERNS)) return '4w'
+
+    return 'unknown'
+}
+
+export function isCyeproVehicleInCategory(v: CyeproVehicle, category: CyeproVehicleCategory): boolean {
+    if (category === 'all') return true
+
+    const inferred = inferCyeproVehicleCategory(v)
+    if (category === '4w') return inferred !== '2w' && inferred !== '3w'
+    return inferred === category
+}
+
+function filterCyeproVehiclesByCategory(
+    vehicles: CyeproVehicle[],
+    category: CyeproVehicleCategory = 'all',
+): CyeproVehicle[] {
+    return vehicles.filter(vehicle => isCyeproVehicleInCategory(vehicle, category))
+}
+
 // ── Mapper: CyeproVehicle → Car ───────────────────────────────────────────────
 
-export function mapCyeproVehicleToCar(v: CyeproVehicle): Car {
+export function mapCyeproVehicleToCar(
+    v: CyeproVehicle,
+    vehicleCategory: Exclude<CyeproVehicleCategory, 'all'> = '4w',
+): Car {
     const imageUrls = getCyeproVehicleImageUrls(v)
 
     return {
@@ -263,7 +360,7 @@ export function mapCyeproVehicleToCar(v: CyeproVehicle): Car {
         performance: {},
 
         dimensions: {
-            seatingCapacity: 5,
+            seatingCapacity: v.seatingCapacity ?? 5,
         },
 
         features: {
@@ -285,11 +382,12 @@ export function mapCyeproVehicleToCar(v: CyeproVehicle): Car {
             viewCount: 0,
             dataSource: 'Cyepro',
             sourceVehicleId: String(v.id),
+            registrationNumber: v.regNumber ?? undefined,
         },
 
         price: formatPrice(v.customerSellingPrice),
         condition: 'used' as const,
-        vehicleCategory: '4w',
+        vehicleCategory,
     }
 }
 
@@ -489,7 +587,7 @@ export async function forwardLeadToCyepro(
         const response = await externalApiFetch({
             baseUrl: BASE_URL,
             providerName: 'Cyepro',
-            path: '/dynamicForms/leads',
+            path: LEAD_PATH,
             headers: buildHeaders(apiKey),
             init: {
                 method:  'POST',
@@ -529,18 +627,34 @@ export async function forwardLeadToCyepro(
 export async function fetchCyeproInventoryAsCars(
     apiKey: string,
     options: Partial<CyeproSearchBody> = {},
+    vehicleCategory: CyeproVehicleCategory = 'all',
 ): Promise<Car[]> {
-    const response = await fetchCyeproVehicles(apiKey, options)
+    const response = await fetchCyeproVehicles(apiKey, {
+        ...getCyeproCategorySearchOptions(vehicleCategory),
+        ...options,
+    })
     if (!response || !response.vehicles?.length) return []
-    return response.vehicles.map(mapCyeproVehicleToCar)
+    return filterCyeproVehiclesByCategory(response.vehicles, vehicleCategory)
+        .map(vehicle => mapCyeproVehicleToCar(
+            vehicle,
+            vehicleCategory === '2w' || vehicleCategory === '3w' ? vehicleCategory : '4w',
+        ))
 }
 
 export async function fetchAllCyeproInventoryAsCars(
     apiKey: string,
     options: Partial<CyeproSearchBody> = {},
     maxVehicles?: number,
+    vehicleCategory: CyeproVehicleCategory = 'all',
 ): Promise<Car[]> {
-    const response = await fetchAllCyeproVehicles(apiKey, options, maxVehicles)
+    const response = await fetchAllCyeproVehicles(apiKey, {
+        ...getCyeproCategorySearchOptions(vehicleCategory),
+        ...options,
+    }, maxVehicles)
     if (!response || !response.vehicles?.length) return []
-    return response.vehicles.map(mapCyeproVehicleToCar)
+    return filterCyeproVehiclesByCategory(response.vehicles, vehicleCategory)
+        .map(vehicle => mapCyeproVehicleToCar(
+            vehicle,
+            vehicleCategory === '2w' || vehicleCategory === '3w' ? vehicleCategory : '4w',
+        ))
 }

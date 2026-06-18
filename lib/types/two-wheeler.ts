@@ -154,6 +154,10 @@ export interface TwoWheelerLead {
     preferred_date:     string | null   // ISO date
     message:            string | null
     offer_price_paise:  number | null
+    cyepro_sync_status?: 'pending' | 'synced' | 'failed' | 'skipped'
+    cyepro_synced_at?:  string | null
+    cyepro_error?:      string | null
+    cyepro_lead_id?:    string | null
 
     status:             TwoWheelerLeadStatus
 
