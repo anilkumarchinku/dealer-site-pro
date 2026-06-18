@@ -255,9 +255,23 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
     const [isFavorite, setIsFavorite] = useState(false);
     const [failedColorImages, setFailedColorImages] = useState<Record<string, boolean>>({});
 
+    // Price formatting
+    const exShowroom = car.pricing?.exShowroom ?? { min: null, max: null };
+    const hasOfferPrice = isUsed &&
+        typeof car.offer?.price === 'number' &&
+        car.offer.price > 0 &&
+        (exShowroom.min == null || car.offer.price < exShowroom.min);
+    const effectivePrice = hasOfferPrice ? car.offer!.price : exShowroom.min;
+    const priceDisplay = formatPriceInLakhs(effectivePrice);
+    const maxPriceDisplay = formatPriceInLakhs(exShowroom.max);
+    const hasPriceRange = !hasOfferPrice && exShowroom.min !== exShowroom.max && exShowroom.max;
+    const originalPriceDisplay = hasOfferPrice && exShowroom.min != null
+        ? formatPriceInLakhs(exShowroom.min)
+        : null;
+
     // EMI Calculator state
-    const [emiPrice, setEmiPrice] = useState(car.pricing.exShowroom.min || 1000000);
-    const [emiDown, setEmiDown] = useState(Math.round((car.pricing.exShowroom.min || 1000000) * 0.2));
+    const [emiPrice, setEmiPrice] = useState(effectivePrice || 1000000);
+    const [emiDown, setEmiDown] = useState(Math.round((effectivePrice || 1000000) * 0.2));
     const [emiTenure, setEmiTenure] = useState(60);
     const [emiRate, setEmiRate] = useState(9.5);
 
@@ -267,12 +281,6 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
     useEffect(() => {
         setActiveImage(allImages[0] ?? car.images.hero);
     }, [car.images.hero, allImages]);
-
-    // Price formatting
-    const exShowroom = car.pricing?.exShowroom ?? { min: null, max: null };
-    const priceDisplay = formatPriceInLakhs(exShowroom.min);
-    const maxPriceDisplay = formatPriceInLakhs(exShowroom.max);
-    const hasPriceRange = exShowroom.min !== exShowroom.max && exShowroom.max;
 
     // Key specs
     const isElectric = /electric/i.test(car.engine?.type ?? '');
@@ -464,7 +472,17 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                                             <span className="text-sm text-gray-600">- {maxPriceDisplay}</span>
                                         )}
                                     </div>
-                                    <p className="text-xs text-gray-600 mt-0.5">Ex-showroom Price</p>
+                                    {originalPriceDisplay && (
+                                        <p className="mt-1 text-sm font-semibold text-gray-400 line-through">
+                                            {originalPriceDisplay}
+                                        </p>
+                                    )}
+                                    <p className="text-xs text-gray-600 mt-0.5">{isUsed ? 'Price' : 'Ex-showroom Price'}</p>
+                                    {hasOfferPrice && (
+                                        <p className="mt-1 text-xs font-semibold" style={{ color: brandColor }}>
+                                            {car.offer?.label || 'Offer price'}
+                                        </p>
+                                    )}
                                     {car.pricing.emi && (
                                         <Badge variant="secondary" className="mt-2 text-xs gap-1" style={{ color: brandColor }}>
                                             <TrendingUp className="w-3 h-3" />
@@ -1006,7 +1024,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                                 <TableHeader>
                                     <TableRow className="bg-gray-100/40">
                                         <TableHead className="font-semibold">Variant</TableHead>
-                                        <TableHead className="font-semibold">Ex-Showroom Price*</TableHead>
+                                        <TableHead className="font-semibold">{isUsed ? 'Price' : 'Ex-Showroom Price*'}</TableHead>
                                         <TableHead className="font-semibold">Fuel</TableHead>
                                         <TableHead className="font-semibold">Transmission</TableHead>
                                         <TableHead className="font-semibold text-right">Action</TableHead>
@@ -1387,9 +1405,18 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                                         What is the price of {car.make} {car.model}?
                                     </AccordionTrigger>
                                     <AccordionContent className="text-sm text-gray-600">
-                                        The {car.make} {car.model} price starts at {priceDisplay}
-                                        {hasPriceRange && ` and goes up to ${maxPriceDisplay}`} (ex-showroom).
-                                        The actual on-road price may vary depending on your city, registration charges, and insurance.
+                                        {isUsed ? (
+                                            <>
+                                                The {car.make} {car.model} price is {priceDisplay}.
+                                                Contact the dealer for the latest availability, final offer, transfer charges, and inspection details.
+                                            </>
+                                        ) : (
+                                            <>
+                                                The {car.make} {car.model} price starts at {priceDisplay}
+                                                {hasPriceRange && ` and goes up to ${maxPriceDisplay}`} (ex-showroom).
+                                                The actual on-road price may vary depending on your city, registration charges, and insurance.
+                                            </>
+                                        )}
                                     </AccordionContent>
                                 </AccordionItem>
                                 <AccordionItem value="mileage">

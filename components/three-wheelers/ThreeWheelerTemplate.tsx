@@ -13,8 +13,9 @@ import { WhatsAppButton } from "@/components/ui/WhatsAppButton"
 import { EmiCalculator } from "@/components/ui/EmiCalculator"
 import { ReviewsSection } from "@/components/ui/ReviewsSection"
 import { VehicleCard } from "@/components/three-wheelers/VehicleCard"
+import { CompareBar } from "@/components/three-wheelers/CompareBar"
 import { LeadFormModal } from "@/components/three-wheelers/LeadFormModal"
-import type { ThreeWheelerVehicle } from "@/lib/types/three-wheeler"
+import type { ThreeWheelerCompareItem, ThreeWheelerVehicle } from "@/lib/types/three-wheeler"
 import { useSitePrefix } from "@/lib/hooks/useSitePrefix"
 import brandModelsData from "@/lib/data/brand-models.json"
 
@@ -159,6 +160,7 @@ export function ThreeWheelerTemplate({
     const [activeTab, setActiveTab] = useState<"home" | "inventory">("home")
     const [leadVehicleId,   setLeadVehicleId]   = useState<string | null>(null)
     const [leadVehicleName, setLeadVehicleName] = useState<string | undefined>(undefined)
+    const [compareItems, setCompareItems] = useState<ThreeWheelerCompareItem[]>([])
 
     // Contact form state
     const [formData, setFormData] = useState({ name: "", phone: "", email: "", message: "" })
@@ -169,6 +171,21 @@ export function ThreeWheelerTemplate({
         window.addEventListener("scroll", onScroll)
         return () => window.removeEventListener("scroll", onScroll)
     }, [])
+
+    function toggleCompare(vehicle: ThreeWheelerVehicle) {
+        setCompareItems(prev => {
+            if (prev.some(item => item.id === vehicle.id)) {
+                return prev.filter(item => item.id !== vehicle.id)
+            }
+            if (prev.length >= 3) return prev
+            return [...prev, {
+                id: vehicle.id,
+                brand: vehicle.brand,
+                model: vehicle.model,
+                image: vehicle.images[0] ?? null,
+            }]
+        })
+    }
 
     const title    = heroTitle    || `${primaryBrand ? `Authorised ${primaryBrand} Dealer` : dealerName}`
     const subtitle = heroSubtitle || tagline || `Your trusted 3-Wheeler destination in ${location}`
@@ -509,6 +526,7 @@ export function ThreeWheelerTemplate({
                                         brandColor={accent}
                                         summaryOnly
                                         onLead={vid => { setLeadVehicleId(vid); setLeadVehicleName(vehicles.find(v => v.id === vid) ? `${vehicles.find(v => v.id === vid)!.brand} ${vehicles.find(v => v.id === vid)!.model}` : undefined) }}
+                                        onCompare={toggleCompare}
                                     />
                                 ))}
                             </div>
@@ -759,6 +777,7 @@ export function ThreeWheelerTemplate({
                                         slug={slug}
                                         brandColor={accent}
                                         onLead={vid => { setLeadVehicleId(vid); setLeadVehicleName(vehicles.find(v => v.id === vid) ? `${vehicles.find(v => v.id === vid)!.brand} ${vehicles.find(v => v.id === vid)!.model}` : undefined) }}
+                                        onCompare={toggleCompare}
                                     />
                                 ))}
                             </div>
@@ -870,6 +889,13 @@ export function ThreeWheelerTemplate({
 
             {/* ── Floating WhatsApp ──────────────────────────────────────────── */}
             <WhatsAppButton phone={phone} />
+
+            <CompareBar
+                items={compareItems}
+                slug={slug}
+                onRemove={id => setCompareItems(prev => prev.filter(item => item.id !== id))}
+                onClear={() => setCompareItems([])}
+            />
 
             {/* ── Lead Modal ────────────────────────────────────────────────── */}
             <LeadFormModal

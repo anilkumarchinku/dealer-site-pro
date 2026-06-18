@@ -6,9 +6,10 @@ import { supabase } from "@/lib/supabase"
 import { VehicleCard } from "@/components/two-wheelers/VehicleCard"
 import { FilterSidebar } from "@/components/two-wheelers/FilterSidebar"
 import { MobileFilterDrawer } from "@/components/two-wheelers/MobileFilterDrawer"
+import { CompareBar } from "@/components/two-wheelers/CompareBar"
 import { LeadFormModal } from "@/components/two-wheelers/LeadFormModal"
 import { ReviewsSection } from "@/components/shared/ReviewsSection"
-import type { TwoWheelerVehicle, TwoWheelerFilters } from "@/lib/types/two-wheeler"
+import type { TwoWheelerCompareItem, TwoWheelerVehicle, TwoWheelerFilters } from "@/lib/types/two-wheeler"
 
 export default function ScootersListingPage() {
     const params       = useParams()
@@ -31,6 +32,7 @@ export default function ScootersListingPage() {
         pageSize:  12,
     }))
     const [leadVehicleId, setLeadVehicleId] = useState<string | null>(null)
+    const [compareItems, setCompareItems] = useState<TwoWheelerCompareItem[]>([])
     const [brands, setBrands] = useState<string[]>([])
     const [search, setSearch] = useState("")
     const [filterOpen, setFilterOpen] = useState(false)
@@ -78,6 +80,14 @@ export default function ScootersListingPage() {
         v.brand.toLowerCase().includes(search.toLowerCase()) ||
         v.model.toLowerCase().includes(search.toLowerCase())
     )
+
+    function toggleCompare(vehicle: TwoWheelerVehicle) {
+        setCompareItems(prev => {
+            if (prev.some(item => item.id === vehicle.id)) return prev.filter(item => item.id !== vehicle.id)
+            if (prev.length >= 3) return prev
+            return [...prev, { id: vehicle.id, brand: vehicle.brand, model: vehicle.model, image: vehicle.images[0] ?? null }]
+        })
+    }
 
     return (
         <div className="min-h-screen max-w-6xl mx-auto px-4 py-8">
@@ -131,7 +141,7 @@ export default function ScootersListingPage() {
                     ) : (
                         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                             {filtered.map(v => (
-                                <VehicleCard key={v.id} vehicle={v} slug={slug} onLead={vid => setLeadVehicleId(vid)} />
+                                <VehicleCard key={v.id} vehicle={v} slug={slug} onLead={vid => setLeadVehicleId(vid)} onCompare={toggleCompare} />
                             ))}
                         </div>
                     )}
@@ -146,6 +156,13 @@ export default function ScootersListingPage() {
                     onClose={() => setFilterOpen(false)}
                 />
             )}
+
+            <CompareBar
+                items={compareItems}
+                slug={slug}
+                onRemove={id => setCompareItems(prev => prev.filter(item => item.id !== id))}
+                onClear={() => setCompareItems([])}
+            />
 
             {dealerId && (
                 <LeadFormModal

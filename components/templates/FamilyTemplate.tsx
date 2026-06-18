@@ -28,6 +28,7 @@ import { WishlistDrawer } from '@/components/ui/WishlistDrawer';
 import { EVSection } from '@/components/ui/EVSection';
 import { generateTemplateConfig } from '@/lib/templates';
 import { getContrastText } from '@/lib/utils/color-contrast';
+import { buildTemplateDetailBasePath, buildTemplateSiteBase } from '@/lib/utils/template-site-paths';
 import {
     ArrowRight,
     Phone,
@@ -94,21 +95,13 @@ export function FamilyTemplate({
 }: FamilyTemplateProps) {
     const vl = getVehicleLabels(vehicleType);
     const pathname = usePathname();
-    const siteBase = useMemo(() => {
-        const typeSuffix = vehicleType === '2w' ? '/two-wheelers' : vehicleType === '3w' ? '/three-wheelers' : '';
-        if (pathname.startsWith('/sites/')) {
-            const slugPart = pathname.split('/')[2] ?? '';
-            return `/sites/${slugPart}${typeSuffix}`;
-        }
-        return typeSuffix || '/cars';
-    }, [pathname, vehicleType]);
-    const detailBasePath = useMemo(() => {
-        const isUsedVehiclePage = (vehicleType === '2w' || vehicleType === '3w')
-            && sellsUsedCars
-            && !sellsNewCars
-            && pathname.includes('/used');
-        return isUsedVehiclePage ? `${siteBase}/used` : siteBase;
-    }, [pathname, sellsNewCars, sellsUsedCars, siteBase, vehicleType]);
+    const siteBase = useMemo(() => buildTemplateSiteBase(pathname, vehicleType), [pathname, vehicleType]);
+    const detailBasePath = useMemo(() => buildTemplateDetailBasePath({
+        pathname,
+        vehicleType,
+        sellsNewCars,
+        sellsUsedCars,
+    }), [pathname, sellsNewCars, sellsUsedCars, vehicleType]);
     const SERVICE_LABELS: Record<string, { label: string; icon: string; desc: string }> = {
         new_car_sales: { label: vl.newVehicle, icon: '🚗', desc: vl.newVehicleDesc },
         used_car_sales: { label: vl.usedVehicle, icon: '🔄', desc: 'Certified pre-owned at great prices' },

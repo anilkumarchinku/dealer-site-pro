@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createAdminClient } from '@/lib/supabase-server'
 import { forwardLeadToCyepro } from '@/lib/services/cyepro-service'
+import { logger } from '@/lib/utils/logger'
 import {
     readRouteJson,
     requireDealerAccount,
@@ -11,6 +12,7 @@ import {
 type LeadCreateResult = { success: boolean; id?: string; error?: string }
 type LeadUpdateResult = { success: boolean; error?: string }
 type VehicleLeadTable = 'tw_leads' | 'thw_leads'
+type CyeproSyncStatus = 'pending' | 'synced' | 'failed' | 'skipped'
 
 type LeadData = {
     dealer_id: string
@@ -53,6 +55,15 @@ type LeadRouteOptions<TLead extends LeadData, TFilters, TStatus extends string, 
     updateLeadStatus: (id: string, dealerId: string, status: TStatus) => Promise<LeadUpdateResult>
 }
 
+type CyeproLeadPayload = {
+    customerName: string
+    customerPhone: string
+    customerEmail?: string
+    vehicleName?: string
+    message?: string
+    leadSource?: string
+}
+
 export function buildVehicleLeadPayload<TLead extends LeadData, TExtra extends object = Record<string, never>>(
     data: TLead,
     extraPayload?: TExtra
@@ -74,6 +85,58 @@ export function buildVehicleLeadPayload<TLead extends LeadData, TExtra extends o
 
 function getServiceSupabase() {
     return createAdminClient()
+}
+
+async function updateVehicleLeadCyeproStatus(
+    table: VehicleLeadTable,
+    leadId: string,
+    update: {
+        cyepro_sync_status: CyeproSyncStatus
+        cyepro_synced_at?: string | null
+        cyepro_error?: string | null
+        cyepro_lead_id?: string | null
+    }
+) {
+    const { error } = await getServiceSupabase()
+        .from(table)
+        .update(update)
+        .eq('id', leadId)
+
+    if (error) logger.warn(`[${table}] Cyepro sync status update failed:`, error.message)
+}
+
+async function markVehicleLeadCyeproSyncResult(
+    table: VehicleLeadTable,
+    leadId: string | undefined,
+    dealerApiKey: string | null | undefined,
+    payload: CyeproLeadPayload
+) {
+    if (!leadId) return
+
+    if (!dealerApiKey) {
+        await updateVehicleLeadCyeproStatus(table, leadId, {
+            cyepro_sync_status: 'skipped',
+            cyepro_error: 'Dealer has no Cyepro API key configured',
+        })
+        return
+    }
+
+    const result = await forwardLeadToCyepro(dealerApiKey, payload)
+    await updateVehicleLeadCyeproStatus(
+        table,
+        leadId,
+        result.success
+            ? {
+                cyepro_sync_status: 'synced',
+                cyepro_synced_at: new Date().toISOString(),
+                cyepro_error: null,
+                cyepro_lead_id: result.cyeproLeadId ?? null,
+            }
+            : {
+                cyepro_sync_status: 'failed',
+                cyepro_error: result.error.slice(0, 1000),
+            }
+    )
 }
 
 export async function createVehicleLead<TLead extends LeadData, TFilters, TStatus extends string, TCreatePayload>(
@@ -119,16 +182,19 @@ export async function createVehicleLead<TLead extends LeadData, TFilters, TStatu
         .eq('id', data.dealer_id)
         .single()
 
-    if (dealer?.cyepro_api_key) {
-        forwardLeadToCyepro(dealer.cyepro_api_key, {
+    markVehicleLeadCyeproSyncResult(
+        options.leadTable,
+        result.id,
+        dealer?.cyepro_api_key,
+        {
             customerName: data.name,
             customerPhone: data.phone,
             customerEmail: data.email ?? undefined,
             vehicleName: data.vehicle_name ?? undefined,
             message: data.message ?? undefined,
             leadSource: data.lead_type,
-        }).catch(() => { /* already logged inside */ })
-    }
+        }
+    ).catch(() => { /* already logged inside */ })
 
     return NextResponse.json({ success: true, id: result.id }, { status: 201 })
 }

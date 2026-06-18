@@ -205,6 +205,7 @@ export const thwLeadSchema = z.object({
     preferred_date:    dateString.optional().nullable(),
     message:           message,
     offer_price_paise: z.number().int().min(0).max(10_000_000).optional().nullable(),
+    fleet_size:        z.number().int().min(1).max(10_000).optional().nullable(),
 })
 
 export type ThwLeadInput = z.infer<typeof thwLeadSchema>

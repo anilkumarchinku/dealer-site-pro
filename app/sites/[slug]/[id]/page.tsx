@@ -5,9 +5,10 @@ import { allCars, getCarsByMake } from '@/lib/data/cars';
 import { hydrateCarWithJsonDetails } from '@/lib/data/car-detail';
 import { fetchDealerBySlug } from '@/lib/db/dealers';
 import { fetchAllCyeproInventoryAsCars } from '@/lib/services/cyepro-service';
+import { applyUsedVehiclePriceOffersToCars, fetchActiveUsedVehiclePriceOffers } from '@/lib/services/used-vehicle-price-offers';
 import type { Car } from '@/lib/types/car';
 import type { DBVehicle } from '@/lib/db/vehicles';
-import { dedupeByMakeModel, dedupeCaseInsensitiveStrings } from '@/lib/utils/listing-dedupe';
+import { dedupeByMakeModel, dedupeCaseInsensitiveStrings, dedupeInventoryCars } from '@/lib/utils/listing-dedupe';
 
 export const dynamic = 'force-dynamic';
 
@@ -168,13 +169,17 @@ export default async function SiteCarDetailPage({ params }: SiteCarDetailPagePro
         })));
     } else {
         const cyeproCars = cyepro_api_key
-            ? await fetchAllCyeproInventoryAsCars(cyepro_api_key)
+            ? await fetchAllCyeproInventoryAsCars(cyepro_api_key, {}, undefined, '4w')
             : [];
 
-        cars = dedupeByMakeModel([
+        cars = dedupeInventoryCars([
             ...dbVehiclesToCars(vehicles),
             ...cyeproCars,
         ]);
+        cars = applyUsedVehiclePriceOffersToCars(
+            cars,
+            await fetchActiveUsedVehiclePriceOffers(dealer.id)
+        );
     }
 
     const selectedCar = cars.find(item => item.id === id);

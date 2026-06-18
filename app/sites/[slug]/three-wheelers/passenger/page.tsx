@@ -6,9 +6,10 @@ import { supabase } from "@/lib/supabase"
 import { VehicleCard } from "@/components/three-wheelers/VehicleCard"
 import { FilterSidebar } from "@/components/three-wheelers/FilterSidebar"
 import { MobileFilterDrawer } from "@/components/three-wheelers/MobileFilterDrawer"
+import { CompareBar } from "@/components/three-wheelers/CompareBar"
 import { LeadFormModal } from "@/components/three-wheelers/LeadFormModal"
 import { ReviewsSection } from "@/components/shared/ReviewsSection"
-import type { ThreeWheelerVehicle, ThreeWheelerFilters } from "@/lib/types/three-wheeler"
+import type { ThreeWheelerCompareItem, ThreeWheelerVehicle, ThreeWheelerFilters } from "@/lib/types/three-wheeler"
 import Link from "next/link"
 import { ChevronLeft } from "lucide-react"
 import { useSitePrefix } from "@/lib/hooks/useSitePrefix"
@@ -38,6 +39,7 @@ export default function PassengerAutoPage() {
     const [brands, setBrands]         = useState<string[]>([])
     const [filterOpen, setFilterOpen] = useState(false)
     const [leadVehicleId, setLeadVehicleId] = useState<string | null>(null)
+    const [compareItems, setCompareItems] = useState<ThreeWheelerCompareItem[]>([])
     const [search, setSearch]         = useState("")
 
     useEffect(() => {
@@ -84,6 +86,14 @@ export default function PassengerAutoPage() {
         v.brand.toLowerCase().includes(search.toLowerCase()) ||
         v.model.toLowerCase().includes(search.toLowerCase())
     )
+
+    function toggleCompare(vehicle: ThreeWheelerVehicle) {
+        setCompareItems(prev => {
+            if (prev.some(item => item.id === vehicle.id)) return prev.filter(item => item.id !== vehicle.id)
+            if (prev.length >= 3) return prev
+            return [...prev, { id: vehicle.id, brand: vehicle.brand, model: vehicle.model, image: vehicle.images[0] ?? null }]
+        })
+    }
 
     if (!dealer && !loading) return <div className="min-h-screen flex items-center justify-center">Dealer not found</div>
 
@@ -156,7 +166,7 @@ export default function PassengerAutoPage() {
                         <>
                             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
                                 {filtered.map(v => (
-                                    <VehicleCard key={v.id} vehicle={v} slug={slug} onLead={vid => setLeadVehicleId(vid)} />
+                                    <VehicleCard key={v.id} vehicle={v} slug={slug} onLead={vid => setLeadVehicleId(vid)} onCompare={toggleCompare} />
                                 ))}
                             </div>
                             {/* Pagination */}
@@ -193,6 +203,13 @@ export default function PassengerAutoPage() {
                     onClose={() => setFilterOpen(false)}
                 />
             )}
+
+            <CompareBar
+                items={compareItems}
+                slug={slug}
+                onRemove={id => setCompareItems(prev => prev.filter(item => item.id !== id))}
+                onClear={() => setCompareItems([])}
+            />
 
             {dealer && (
                 <LeadFormModal

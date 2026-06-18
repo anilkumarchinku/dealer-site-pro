@@ -5,8 +5,11 @@
  *   NEXT_PUBLIC_BASE_DOMAIN   — base hostname, e.g. "your-project.vercel.app"
  *                               or "indrav.in"
  *   NEXT_PUBLIC_USE_SUBDOMAIN — "true"  → {slug}.{BASE_DOMAIN}
- *                               "false" → {BASE_DOMAIN}/sites/{slug}
+ *                               "false" → {BASE_DOMAIN}/sites/{slug}, except indrav.in
  *                               unset   → subdomain on public domains, path on localhost/Vercel preview
+ *
+ * indrav.in is the hosted public domain and always uses slug-first public URLs
+ * so copied links match the live dealer-site domain pattern.
  */
 
 import { getOptionalEnv } from '@/lib/env'
