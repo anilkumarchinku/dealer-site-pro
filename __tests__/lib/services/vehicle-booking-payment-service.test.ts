@@ -5,6 +5,7 @@ import {
     createVehicleBookingOrder,
     verifyVehicleBookingPayment,
 } from '@/lib/services/vehicle-booking-payment-service'
+import { getConfiguredBookingAmountPaise } from '@/lib/services/booking-amount-config-service'
 import { rateLimitOrNull } from '@/lib/utils/rate-limiter'
 
 vi.mock('@/lib/supabase-server', () => ({
@@ -13,6 +14,10 @@ vi.mock('@/lib/supabase-server', () => ({
 
 vi.mock('@/lib/utils/rate-limiter', () => ({
     rateLimitOrNull: vi.fn(),
+}))
+
+vi.mock('@/lib/services/booking-amount-config-service', () => ({
+    getConfiguredBookingAmountPaise: vi.fn(),
 }))
 
 function request(body: unknown, idempotencyKey = 'idem_1') {
@@ -43,6 +48,7 @@ describe('vehicle-booking-payment-service', () => {
     beforeEach(() => {
         vi.clearAllMocks()
         vi.mocked(rateLimitOrNull).mockResolvedValue(null)
+        vi.mocked(getConfiguredBookingAmountPaise).mockResolvedValue(null)
         delete process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID
         delete process.env.RAZORPAY_KEY_SECRET
     })
@@ -73,6 +79,35 @@ describe('vehicle-booking-payment-service', () => {
             dealer_id: 'dealer_1',
             idempotency_key: 'idem_1',
         }))
+    })
+
+    it('uses configured dealer booking amount instead of the client supplied amount', async () => {
+        vi.mocked(getConfiguredBookingAmountPaise).mockResolvedValue(75_000)
+        const createBooking = vi.fn(async () => ({ success: true, id: 'booking_1' }))
+
+        const response = await createVehicleBookingOrder(request({
+            dealer_id: 'dealer_1',
+            vehicle_id: 'vehicle_1',
+            customer_name: 'Asha',
+            phone: '9999999999',
+            booking_amount_paise: 50_000,
+        }), {
+            rateLimitKey: 'tw_booking_create',
+            logPrefix: 'Booking',
+            vehicleCategory: '2w',
+            createBooking,
+        })
+
+        expect(response.status).toBe(200)
+        await expect(response.json()).resolves.toMatchObject({
+            success: true,
+            amount: 75_000,
+            mock: true,
+        })
+        expect(createBooking).toHaveBeenCalledWith(expect.objectContaining({
+            booking_amount_paise: 75_000,
+        }))
+        expect(getConfiguredBookingAmountPaise).toHaveBeenCalledWith('dealer_1', '2w')
     })
 
     it('returns idempotent success when booking payment was already marked paid', async () => {

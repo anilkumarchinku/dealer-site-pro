@@ -9,6 +9,7 @@ import { Label } from "@/components/ui/label";
 import { Loader2, AlertCircle, CheckCircle, LogIn, Mail, Lock } from "lucide-react";
 import { supabase } from "@/lib/supabase";
 import { isValidEmail } from "@/lib/validations/client";
+import { isPlatformAdminAppMetadata } from "@/lib/utils/platform-admin";
 
 export default function LoginPage() {
     return (
@@ -76,6 +77,20 @@ function LoginForm() {
             // Route users to onboarding if setup isn't complete, otherwise to dashboard.
             const user = signInData?.user;
             if (user) {
+                if (isPlatformAdminAppMetadata(user.app_metadata)) {
+                    window.location.href = safeRedirectTo ?? "/admin";
+                    return;
+                }
+
+                const adminSession = await fetch("/api/admin/session", { cache: "no-store" })
+                    .then((res) => res.ok ? res.json() : null)
+                    .catch(() => null) as { authenticated?: boolean; source?: string } | null;
+
+                if (adminSession?.authenticated && adminSession.source === "platform") {
+                    window.location.href = safeRedirectTo ?? "/admin";
+                    return;
+                }
+
                 const { data: dealer } = await supabase
                     .from("dealers")
                     .select("id, onboarding_complete")

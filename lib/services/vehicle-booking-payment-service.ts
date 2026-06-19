@@ -7,6 +7,10 @@ import {
     razorpayApiFetch,
     verifyBookingPaymentSignature,
 } from '@/lib/services/razorpay-service'
+import {
+    getConfiguredBookingAmountPaise,
+    type BookingVehicleCategory,
+} from '@/lib/services/booking-amount-config-service'
 import { rateLimitOrNull } from '@/lib/utils/rate-limiter'
 
 type BookingStatus = 'paid' | 'failed'
@@ -34,6 +38,7 @@ type CreateOrderOptions = {
     rateLimitKey: string
     logPrefix: string
     createBooking: (payload: BookingPayload) => Promise<BookingCreateResult>
+    vehicleCategory?: BookingVehicleCategory
 }
 
 type VerifyPaymentOptions = {
@@ -66,6 +71,12 @@ async function prepareIdempotentRequest(request: NextRequest, rateLimitKey: stri
     return readIdempotencyKey(request)
 }
 
+function normalizeBookingAmount(value: unknown): number | null {
+    const amount = Number(value)
+    if (!Number.isFinite(amount) || amount <= 0) return null
+    return Math.round(amount)
+}
+
 export async function createVehicleBookingOrder(
     request: NextRequest,
     options: CreateOrderOptions
@@ -76,16 +87,29 @@ export async function createVehicleBookingOrder(
     const body = await request.json()
     const { dealer_id, vehicle_id, used_vehicle_id, customer_name, phone, email, booking_amount_paise } = body
 
-    if (!dealer_id || !customer_name || !phone || !booking_amount_paise) {
+    if (!dealer_id || !customer_name || !phone) {
         return NextResponse.json(
-            { error: 'dealer_id, customer_name, phone, and booking_amount_paise are required' },
+            { error: 'dealer_id, customer_name, and phone are required' },
+            { status: 400 }
+        )
+    }
+
+    const requestedBookingAmountPaise = normalizeBookingAmount(booking_amount_paise)
+    const configuredBookingAmountPaise = options.vehicleCategory
+        ? await getConfiguredBookingAmountPaise(dealer_id, options.vehicleCategory)
+        : null
+    const effectiveBookingAmountPaise = configuredBookingAmountPaise ?? requestedBookingAmountPaise
+
+    if (!effectiveBookingAmountPaise) {
+        return NextResponse.json(
+            { error: 'booking_amount_paise is required when no dealer booking amount is configured' },
             { status: 400 }
         )
     }
 
     const MIN_BOOKING_PAISE = 50_000
     const MAX_BOOKING_PAISE = 10_00_000
-    if (booking_amount_paise < MIN_BOOKING_PAISE || booking_amount_paise > MAX_BOOKING_PAISE) {
+    if (effectiveBookingAmountPaise < MIN_BOOKING_PAISE || effectiveBookingAmountPaise > MAX_BOOKING_PAISE) {
         return NextResponse.json(
             { error: `Booking amount must be between ₹500 and ₹10,000` },
             { status: 400 }
@@ -99,7 +123,7 @@ export async function createVehicleBookingOrder(
         customer_name,
         phone,
         email: email ?? null,
-        booking_amount_paise,
+        booking_amount_paise: effectiveBookingAmountPaise,
         idempotency_key: idempotencyKey,
     }
 
@@ -120,7 +144,7 @@ export async function createVehicleBookingOrder(
             success: true,
             orderId: mockOrderId,
             bookingId,
-            amount: booking_amount_paise,
+            amount: effectiveBookingAmountPaise,
             currency: 'INR',
             keyId: getRazorpayKeyId() ?? 'mock_key',
             mock: true,
@@ -131,7 +155,7 @@ export async function createVehicleBookingOrder(
         const data = await razorpayApiFetch<{ id: string; amount: number; currency: string }>('/orders', {
             method: 'POST',
             body: JSON.stringify({
-                amount: booking_amount_paise,
+                amount: effectiveBookingAmountPaise,
                 currency: 'INR',
                 receipt: bookingId,
                 notes: {

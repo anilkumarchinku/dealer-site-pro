@@ -2,7 +2,7 @@ import { POST as connectCustomDomain } from '@/app/api/domains/connect-custom/ro
 import { POST as removeCustomDomain } from '@/app/api/domains/remove-custom/route'
 import { recordDomainDeploymentOperation } from '@/lib/services/domain-deployment-operation-service'
 import { isValidDomain } from '@/lib/services/dns-verification-service'
-import { addDomainToProject, removeDomainFromMainProject, removeDomainFromProject } from '@/lib/services/vercel-service'
+import { addDomainToProject, registerDomainOnMainProject, removeDomainFromMainProject, removeDomainFromProject } from '@/lib/services/vercel-service'
 import { requireAuth, requireDealerOwnership } from '@/lib/supabase-server'
 
 vi.mock('@/lib/supabase-server', () => ({
@@ -127,7 +127,7 @@ describe('domain provider failure behavior', () => {
             supabase: supabase as never,
             errorResponse: null,
         })
-        vi.mocked(addDomainToProject).mockRejectedValue(new Error('Vercel unavailable'))
+        vi.mocked(registerDomainOnMainProject).mockRejectedValue(new Error('Vercel unavailable'))
 
         const response = await connectCustomDomain(jsonRequest({
             dealerId: 'dealer_1',
@@ -142,7 +142,8 @@ describe('domain provider failure behavior', () => {
         expect(supabase.inserts[0]).toMatchObject({
             custom_domain: 'dealer.example.com',
         })
-        expect(addDomainToProject).toHaveBeenCalledWith('dealer-one', 'dealer.example.com')
+        expect(registerDomainOnMainProject).toHaveBeenCalledWith('dealer.example.com')
+        expect(addDomainToProject).not.toHaveBeenCalled()
         expect(recordDomainDeploymentOperation).toHaveBeenCalledWith(expect.objectContaining({
             operation: 'custom_domain_connect',
             status: 'provider_failed',
@@ -157,7 +158,7 @@ describe('domain provider failure behavior', () => {
             supabase: supabase as never,
             errorResponse: null,
         })
-        vi.mocked(removeDomainFromProject).mockRejectedValue(new Error('Vercel unavailable'))
+        vi.mocked(removeDomainFromMainProject).mockRejectedValue(new Error('Vercel unavailable'))
 
         const response = await removeCustomDomain(jsonRequest({
             dealerId: 'dealer_1',
@@ -167,8 +168,8 @@ describe('domain provider failure behavior', () => {
 
         await expect(response.json()).resolves.toEqual({ success: true })
         expect(response.status).toBe(200)
-        expect(removeDomainFromProject).toHaveBeenCalledWith('dealer-one', 'dealer.example.com')
-        expect(removeDomainFromMainProject).not.toHaveBeenCalled()
+        expect(removeDomainFromMainProject).toHaveBeenCalledWith('dealer.example.com')
+        expect(removeDomainFromProject).not.toHaveBeenCalled()
         expect(recordDomainDeploymentOperation).toHaveBeenCalledWith(expect.objectContaining({
             operation: 'custom_domain_remove',
             status: 'provider_failed',
@@ -176,7 +177,7 @@ describe('domain provider failure behavior', () => {
         }))
     })
 
-    it('removes first-hand dealer custom domains from the main Vercel project', async () => {
+    it('removes every dealer custom domain from the main Vercel project', async () => {
         const supabase = {
             from: vi.fn((table: string) => {
                 const builder = {

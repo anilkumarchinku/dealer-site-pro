@@ -1,5 +1,6 @@
 import { purchaseDomain, searchDomains } from '@/lib/services/domain-search-service'
 import {
+    clearCyeproSearchCache,
     fetchCyeproVehicles,
     forwardLeadToCyepro,
 } from '@/lib/services/cyepro-service'
@@ -10,6 +11,7 @@ const originalFetch = global.fetch
 describe('organized provider integrations', () => {
     beforeEach(() => {
         vi.clearAllMocks()
+        clearCyeproSearchCache()
         global.fetch = vi.fn()
         delete process.env.GODADDY_API_KEY
         delete process.env.GODADDY_API_SECRET
@@ -20,6 +22,7 @@ describe('organized provider integrations', () => {
 
     afterEach(() => {
         global.fetch = originalFetch
+        vi.useRealTimers()
         vi.restoreAllMocks()
     })
 
@@ -61,6 +64,46 @@ describe('organized provider integrations', () => {
         )
 
         await expect(fetchCyeproVehicles('bad-key')).resolves.toBeNull()
+    })
+
+    it('returns stale Cyepro inventory when a later provider call fails', async () => {
+        vi.useFakeTimers()
+        vi.setSystemTime(0)
+        vi.mocked(global.fetch).mockResolvedValueOnce(
+            new Response(JSON.stringify({
+                vehicles: [{
+                    id: 1,
+                    make: 'Honda',
+                    model: 'Activa',
+                    vehicleManufactureYear: 2024,
+                    customerSellingPrice: 90000,
+                    kiloMeters: 120,
+                    fuel: 'Petrol',
+                    transmission: 'Automatic',
+                    location: 'Hyderabad',
+                    imageUrl: '',
+                    variant: 'STD',
+                    color: 'White',
+                    regNumber: 'TS01AB1234',
+                }],
+                totalCount: 1,
+                pageNumber: 1,
+                pageSize: 30,
+                totalPages: 1,
+            }), { status: 200 })
+        )
+
+        const first = await fetchCyeproVehicles('api-key')
+        expect(first?.vehicles).toHaveLength(1)
+
+        vi.setSystemTime(70_000)
+        vi.mocked(global.fetch).mockResolvedValueOnce(
+            new Response(JSON.stringify({ message: 'failed' }), { status: 500 })
+        )
+
+        const fallback = await fetchCyeproVehicles('api-key')
+        expect(fallback?.vehicles).toHaveLength(1)
+        expect(vi.mocked(global.fetch)).toHaveBeenCalledTimes(2)
     })
 
     it('returns a failed Cyepro lead sync result on provider failure', async () => {

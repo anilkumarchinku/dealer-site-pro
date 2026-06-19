@@ -99,6 +99,8 @@ const TIME_ZONE   = 'Asia/Calcutta'
 const CURRENT_YEAR = new Date().getFullYear()
 const SEARCH_TIMEOUT_MS = 10_000
 const LEAD_TIMEOUT_MS = 5_000
+const SEARCH_CACHE_TTL_MS = Number(getOptionalEnv('CYEPRO_SEARCH_CACHE_TTL_MS') ?? 60_000)
+const SEARCH_STALE_FALLBACK_MS = 10 * 60_000
 const DEFAULT_FETCH_ALL_PAGE_SIZE = 100
 const DEFAULT_FETCH_ALL_MAX_VEHICLES = 500
 
@@ -118,6 +120,14 @@ const DEFAULT_SEARCH: CyeproSearchBody = {
     order:            'asc',
 }
 
+type CyeproSearchCacheEntry = {
+    response: CyeproSearchResponse
+    expiresAt: number
+    staleUntil: number
+}
+
+const cyeproSearchCache = new Map<string, CyeproSearchCacheEntry>()
+
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
 function normaliseBaseUrl(value: string): string {
@@ -127,6 +137,50 @@ function normaliseBaseUrl(value: string): string {
 function normalisePath(value: string): string {
     const path = value.trim()
     return path.startsWith('/') ? path : `/${path}`
+}
+
+function cloneCyeproSearchResponse(response: CyeproSearchResponse): CyeproSearchResponse {
+    return {
+        ...response,
+        vehicles: [...response.vehicles],
+    }
+}
+
+function getCyeproSearchCacheKey(apiKey: string, body: CyeproSearchBody): string {
+    return JSON.stringify([apiKey, body])
+}
+
+function readCyeproSearchCache(cacheKey: string, includeStale = false): CyeproSearchResponse | null {
+    const entry = cyeproSearchCache.get(cacheKey)
+    if (!entry) return null
+
+    const now = Date.now()
+    if (entry.expiresAt > now || (includeStale && entry.staleUntil > now)) {
+        return cloneCyeproSearchResponse(entry.response)
+    }
+
+    if (!includeStale && entry.staleUntil > now) {
+        return null
+    }
+
+    cyeproSearchCache.delete(cacheKey)
+    return null
+}
+
+function writeCyeproSearchCache(cacheKey: string, response: CyeproSearchResponse): void {
+    const ttlMs = Number.isFinite(SEARCH_CACHE_TTL_MS) && SEARCH_CACHE_TTL_MS > 0
+        ? SEARCH_CACHE_TTL_MS
+        : 60_000
+    const now = Date.now()
+    cyeproSearchCache.set(cacheKey, {
+        response: cloneCyeproSearchResponse(response),
+        expiresAt: now + ttlMs,
+        staleUntil: now + ttlMs + SEARCH_STALE_FALLBACK_MS,
+    })
+}
+
+export function clearCyeproSearchCache(): void {
+    cyeproSearchCache.clear()
 }
 
 export function getCyeproApiBaseUrl(): string {
@@ -407,6 +461,9 @@ export async function fetchCyeproVehicles(
     }
 
     const body: CyeproSearchBody = { ...DEFAULT_SEARCH, ...options }
+    const cacheKey = getCyeproSearchCacheKey(apiKey, body)
+    const cached = readCyeproSearchCache(cacheKey)
+    if (cached) return cached
 
     try {
         logger.log('[Cyepro] Fetching vehicles...', { page: body.page, size: body.size })
@@ -439,6 +496,7 @@ export async function fetchCyeproVehicles(
         }
 
         logger.log(`[Cyepro] Fetched ${data.vehicles.length} vehicles (total: ${data.totalCount})`)
+        writeCyeproSearchCache(cacheKey, data)
         return data
     } catch (err) {
         if (err instanceof ExternalApiError) {
@@ -448,15 +506,15 @@ export async function fetchCyeproVehicles(
             }
             if (err.status === 429) {
                 logger.error('[Cyepro] Rate limit reached (429)')
-                return null
+                return readCyeproSearchCache(cacheKey, true)
             }
             if (err.status) {
                 logger.error(`[Cyepro] Fetch failed: ${err.status}`, err.bodyText ?? err.message)
-                return null
+                return readCyeproSearchCache(cacheKey, true)
             }
         }
         logger.error('[Cyepro] Network error:', err instanceof Error ? err.message : err)
-        return null
+        return readCyeproSearchCache(cacheKey, true)
     }
 }
 
