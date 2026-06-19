@@ -10,6 +10,16 @@ vi.mock('@/lib/services/external-api-fetch', async () => {
     }
 })
 
+// The route now requires an authenticated user (createRouteClient/cookies()),
+// which isn't available in the test request scope — mock auth to pass.
+vi.mock('@/lib/supabase-server', async () => {
+    const actual = await vi.importActual<typeof import('@/lib/supabase-server')>('@/lib/supabase-server')
+    return {
+        ...actual,
+        requireAuth: vi.fn().mockResolvedValue({ user: { id: 'test-user' }, supabase: null, errorResponse: null }),
+    }
+})
+
 function vinRequest(body: unknown) {
     return new NextRequest('https://example.com/api/vehicles/decode-vin', {
         method:  'POST',
