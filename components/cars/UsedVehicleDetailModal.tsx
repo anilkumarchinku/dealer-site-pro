@@ -132,7 +132,7 @@ export function UsedVehicleDetailModal({
                                 width={1200}
                                 height={620}
                                 unoptimized
-                                className="h-[240px] w-full object-cover sm:h-[360px]"
+                                className="h-[240px] w-full object-contain sm:h-[360px]"
                                 onError={() => setImageIndex((current) => current + 1)}
                             />
                         ) : (

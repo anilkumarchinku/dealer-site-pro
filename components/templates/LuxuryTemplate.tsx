@@ -30,6 +30,7 @@ import { Reveal } from '@/components/ui/Reveal';
 import { FadeInImage } from '@/components/ui/FadeInImage';
 import { generateTemplateConfig } from '@/lib/templates';
 import { getContrastText } from '@/lib/utils/color-contrast';
+import { buildTemplateDetailBasePath, buildTemplateSiteBase } from '@/lib/utils/template-site-paths';
 import { ArrowRight, Phone, MapPin, Mail, Award, ShieldCheck, Star, ChevronRight, Crown, Clock, MessageSquare, CheckCircle2, Send, Menu, X } from 'lucide-react';
 import { useState, useEffect, useMemo } from 'react';
 import { usePathname } from 'next/navigation';
@@ -79,21 +80,13 @@ export function LuxuryTemplate({
 }: LuxuryTemplateProps) {
     const vl = getVehicleLabels(vehicleType);
     const pathname = usePathname();
-    const siteBase = useMemo(() => {
-        const typeSuffix = vehicleType === '2w' ? '/two-wheelers' : vehicleType === '3w' ? '/three-wheelers' : '';
-        if (pathname.startsWith('/sites/')) {
-            const slugPart = pathname.split('/')[2] ?? '';
-            return `/sites/${slugPart}${typeSuffix}`;
-        }
-        return typeSuffix || '/cars';
-    }, [pathname, vehicleType]);
-    const detailBasePath = useMemo(() => {
-        const isUsedVehiclePage = (vehicleType === '2w' || vehicleType === '3w')
-            && sellsUsedCars
-            && !sellsNewCars
-            && pathname.includes('/used');
-        return isUsedVehiclePage ? `${siteBase}/used` : siteBase;
-    }, [pathname, sellsNewCars, sellsUsedCars, siteBase, vehicleType]);
+    const siteBase = useMemo(() => buildTemplateSiteBase(pathname, vehicleType), [pathname, vehicleType]);
+    const detailBasePath = useMemo(() => buildTemplateDetailBasePath({
+        pathname,
+        vehicleType,
+        sellsNewCars,
+        sellsUsedCars,
+    }), [pathname, sellsNewCars, sellsUsedCars, vehicleType]);
     const SERVICE_LABELS: Record<string, { label: string; icon: string }> = {
         new_car_sales: { label: vl.newVehicle, icon: '🚗' },
         used_car_sales: { label: vl.usedVehicle, icon: '🔄' },

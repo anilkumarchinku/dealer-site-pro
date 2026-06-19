@@ -39,7 +39,7 @@ const options = [
     {
         id: "cyepro" as const,
         title: "Cyepro Sync",
-        caption: "Sync live inventory from Cyepro DMS.",
+        caption: "Website leads land in your Cyepro CRM, with live inventory sync where enabled.",
         badge: "Recommended",
         icon: Rocket,
     },
@@ -154,7 +154,7 @@ export default function Step2InventoryPage() {
                         <div className="flex-1">
                             <h3 className="text-sm font-black text-[#071436]">Enter your Cyepro API Key</h3>
                             <p className="mt-1 text-xs font-medium leading-5 text-[#62708A]">
-                                Find this in your Cyepro dashboard under Settings, API Access.
+                                This same key sends generated website leads to your Cyepro CRM account. Find it in your Cyepro dashboard under Settings, API Access.
                             </p>
                             <div className="relative mt-4">
                                 <input

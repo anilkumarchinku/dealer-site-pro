@@ -28,10 +28,15 @@ import {
     Globe,
     TrendingUp,
     LogOut,
+    Building2,
+    Database,
+    CreditCard,
+    Activity,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { automotiveBrands } from "@/lib/colors/automotive-brands";
 import { getAllCars } from "@/lib/services/car-service";
+import { supabase } from "@/lib/supabase";
 import type { Car as CarType } from "@/lib/types/car";
 import type { Brand, StyleTemplate } from "@/lib/types";
 import { CarGrid } from "@/components/cars/CarGrid";
@@ -48,6 +53,57 @@ type AdminDealerOption = {
     brands: string[];
     vehicleType: string | null;
     onboardingComplete: boolean;
+};
+
+type AdminInsights = {
+    auth: {
+        users: number | null;
+    };
+    dealers: {
+        total: number;
+        active: number;
+        onboardingComplete: number;
+        createdLast30Days: number;
+        cyeproEnabled: number;
+        byVehicleType: Record<string, number>;
+        sellFlags: {
+            fourWheelers: number;
+            twoWheelers: number;
+            threeWheelers: number;
+            newCars: number;
+            usedCars: number;
+        };
+    };
+    domains: {
+        canonicalRows: number;
+        legacyRows: number;
+        customRows: number;
+        customActive: number;
+        customPending: number;
+        dnsVerified: number;
+        canonicalByStatus: Record<string, number>;
+        legacyByStatus: Record<string, number>;
+    };
+    inventory: {
+        carCatalog: number;
+        twoWheelerCatalog: number;
+        threeWheelerCatalog: number;
+        fourWheelerDealerVehicles: number;
+        twoWheelerDealerVehicles: number;
+        threeWheelerDealerVehicles: number;
+    };
+    activity: {
+        leads: number;
+        twoWheelerLeads: number;
+        threeWheelerLeads: number;
+        twoWheelerBookings: number;
+        threeWheelerBookings: number;
+    };
+    billing: {
+        domainSubscriptions: number;
+        paymentTransactions: number;
+        webhookEvents: number;
+    };
 };
 
 const TEMPLATES = [
@@ -249,6 +305,8 @@ export default function AdminDashboard() {
     const [dealersLoading, setDealersLoading] = useState(false);
     const [dealerError, setDealerError] = useState('');
     const [launchError, setLaunchError] = useState('');
+    const [insights, setInsights] = useState<AdminInsights | null>(null);
+    const [insightsError, setInsightsError] = useState('');
 
     // ── Step 1: Check whether an admin session cookie already exists ─────────
     useEffect(() => {
@@ -277,6 +335,7 @@ export default function AdminDashboard() {
 
     const handleLogout = async () => {
         await fetch('/api/admin/session', { method: 'DELETE' });
+        await supabase.auth.signOut().catch(() => undefined);
         setIsAuthenticated(false);
         setPasswordInput('');
         setPasswordError('');
@@ -316,6 +375,38 @@ export default function AdminDashboard() {
             if (isMounted) setCars(res.cars);
         });
         return () => { isMounted = false; };
+    }, [isAuthenticated])
+
+    useEffect(() => {
+        if (!isAuthenticated) {
+            setInsights(null);
+            setInsightsError('');
+            return;
+        }
+
+        let isMounted = true;
+        setInsightsError('');
+
+        fetch("/api/admin/insights")
+            .then(async (res) => {
+                const json = await res.json();
+                if (!isMounted) return;
+                if (!res.ok) {
+                    setInsights(null);
+                    setInsightsError(json.error ?? "Failed to load platform insights");
+                    return;
+                }
+                setInsights(json as AdminInsights);
+            })
+            .catch(() => {
+                if (!isMounted) return;
+                setInsights(null);
+                setInsightsError("Failed to load platform insights");
+            });
+
+        return () => {
+            isMounted = false;
+        };
     }, [isAuthenticated])
 
     useEffect(() => {
@@ -500,6 +591,12 @@ export default function AdminDashboard() {
         : BRAND_CATEGORIES.find(cat => cat.name === activeCategory)?.brands || [];
 
     const selectedTemplateData = TEMPLATES.find(t => t.id === selectedTemplate);
+    const quickStats = [
+        { label: "Dealers", value: insights ? insights.dealers.total.toString() : "...", icon: Building2, color: "blue" },
+        { label: "Onboarded", value: insights ? insights.dealers.onboardingComplete.toString() : "...", icon: TrendingUp, color: "emerald" },
+        { label: "Cyepro", value: insights ? insights.dealers.cyeproEnabled.toString() : "...", icon: Database, color: "violet" },
+        { label: "Custom Domains", value: insights ? insights.domains.customRows.toString() : "...", icon: Globe, color: "amber" },
+    ];
 
     return (
         <div className="min-h-screen bg-muted/30">
@@ -569,12 +666,7 @@ export default function AdminDashboard() {
             <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
                 {/* Quick Stats */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    {[
-                        { label: "Templates", value: "4", icon: LayoutTemplate, color: "blue" },
-                        { label: "Brands", value: ALL_BRANDS.length.toString(), icon: Car, color: "emerald" },
-                        { label: "Categories", value: BRAND_CATEGORIES.length.toString(), icon: Globe, color: "violet" },
-                        { label: "Active", value: "1", icon: TrendingUp, color: "amber" },
-                    ].map((stat, i) => (
+                    {quickStats.map((stat, i) => (
                         <Card key={i} className="p-4 border-0 shadow-sm hover:shadow-md transition-shadow">
                             <div className="flex items-center gap-3">
                                 <div className={cn(
@@ -594,6 +686,71 @@ export default function AdminDashboard() {
                         </Card>
                     ))}
                 </div>
+
+                {(insights || insightsError) && (
+                    <section>
+                        <Card className="p-6 border-0 shadow-sm">
+                            <div className="flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
+                                <div>
+                                    <h2 className="text-xl font-semibold text-foreground">Platform Insights</h2>
+                                    <p className="text-sm text-muted-foreground">
+                                        Aggregate usage across all dealers. Customer details and API keys are not shown here.
+                                    </p>
+                                </div>
+                                {insights?.auth.users != null && (
+                                    <p className="text-sm text-muted-foreground">{insights.auth.users} auth users</p>
+                                )}
+                            </div>
+
+                            {insightsError ? (
+                                <p className="mt-4 rounded-lg border border-destructive/20 bg-destructive/5 px-4 py-3 text-sm text-destructive">
+                                    {insightsError}
+                                </p>
+                            ) : insights ? (
+                                <div className="mt-5 grid gap-4 md:grid-cols-3">
+                                    <div className="rounded-xl border border-border bg-background p-4">
+                                        <div className="mb-3 flex items-center gap-2 text-sm font-semibold">
+                                            <Building2 className="h-4 w-4 text-blue-600" />
+                                            Dealers
+                                        </div>
+                                        <div className="grid grid-cols-2 gap-3 text-sm">
+                                            <p><span className="text-muted-foreground">Active</span><br /><strong>{insights.dealers.active}</strong></p>
+                                            <p><span className="text-muted-foreground">Last 30 days</span><br /><strong>{insights.dealers.createdLast30Days}</strong></p>
+                                            <p><span className="text-muted-foreground">4W</span><br /><strong>{insights.dealers.sellFlags.fourWheelers}</strong></p>
+                                            <p><span className="text-muted-foreground">2W / 3W</span><br /><strong>{insights.dealers.sellFlags.twoWheelers} / {insights.dealers.sellFlags.threeWheelers}</strong></p>
+                                        </div>
+                                    </div>
+
+                                    <div className="rounded-xl border border-border bg-background p-4">
+                                        <div className="mb-3 flex items-center gap-2 text-sm font-semibold">
+                                            <Activity className="h-4 w-4 text-emerald-600" />
+                                            Activity
+                                        </div>
+                                        <div className="grid grid-cols-2 gap-3 text-sm">
+                                            <p><span className="text-muted-foreground">Leads</span><br /><strong>{insights.activity.leads}</strong></p>
+                                            <p><span className="text-muted-foreground">2W leads</span><br /><strong>{insights.activity.twoWheelerLeads}</strong></p>
+                                            <p><span className="text-muted-foreground">2W bookings</span><br /><strong>{insights.activity.twoWheelerBookings}</strong></p>
+                                            <p><span className="text-muted-foreground">3W bookings</span><br /><strong>{insights.activity.threeWheelerBookings}</strong></p>
+                                        </div>
+                                    </div>
+
+                                    <div className="rounded-xl border border-border bg-background p-4">
+                                        <div className="mb-3 flex items-center gap-2 text-sm font-semibold">
+                                            <CreditCard className="h-4 w-4 text-amber-600" />
+                                            Domains & Billing
+                                        </div>
+                                        <div className="grid grid-cols-2 gap-3 text-sm">
+                                            <p><span className="text-muted-foreground">Custom active</span><br /><strong>{insights.domains.customActive}</strong></p>
+                                            <p><span className="text-muted-foreground">Custom pending</span><br /><strong>{insights.domains.customPending}</strong></p>
+                                            <p><span className="text-muted-foreground">Subscriptions</span><br /><strong>{insights.billing.domainSubscriptions}</strong></p>
+                                            <p><span className="text-muted-foreground">Payments</span><br /><strong>{insights.billing.paymentTransactions}</strong></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            ) : null}
+                        </Card>
+                    </section>
+                )}
 
                 <section>
                     <Card className="p-6 border-0 shadow-sm">

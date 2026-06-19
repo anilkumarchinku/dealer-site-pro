@@ -1,13 +1,14 @@
 import { NextRequest } from 'next/server'
 import { POST } from '@/app/api/vehicles/rc-lookup/route'
 import { externalApiFetch } from '@/lib/services/external-api-fetch'
-import { requireAuth } from '@/lib/supabase-server'
+import { createAdminClient, requireAuth } from '@/lib/supabase-server'
 
 vi.mock('@/lib/services/external-api-fetch', () => ({
     externalApiFetch: vi.fn(),
 }))
 
 vi.mock('@/lib/supabase-server', () => ({
+    createAdminClient: vi.fn(),
     requireAuth: vi.fn(),
 }))
 
@@ -22,6 +23,14 @@ function rcRequest(rc: string) {
 describe('POST /api/vehicles/rc-lookup', () => {
     beforeEach(() => {
         vi.clearAllMocks()
+        const dealerBuilder = {
+            select: vi.fn(() => dealerBuilder),
+            eq: vi.fn(() => dealerBuilder),
+            single: vi.fn(async () => ({ data: null, error: null })),
+        }
+        vi.mocked(createAdminClient).mockReturnValue({
+            from: vi.fn(() => dealerBuilder),
+        } as never)
         vi.mocked(requireAuth).mockResolvedValue({
             user: { id: 'user_1' },
             supabase: { functions: { invoke: vi.fn() } },

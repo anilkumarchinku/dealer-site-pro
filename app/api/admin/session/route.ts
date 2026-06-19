@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server"
 
+import { createRouteClient } from "@/lib/supabase-server"
 import {
     buildAdminSessionCookie,
     buildClearedAdminSessionCookie,
@@ -14,6 +15,9 @@ export async function GET() {
     return NextResponse.json({
         authenticated: Boolean(session),
         username: session?.username ?? null,
+        source: session?.source ?? null,
+        email: session?.email ?? null,
+        name: session?.name ?? null,
     })
 }
 
@@ -38,6 +42,12 @@ export async function POST(request: Request) {
 
 export async function DELETE() {
     const response = NextResponse.json({ success: true })
+    try {
+        const supabase = await createRouteClient()
+        await supabase.auth.signOut()
+    } catch {
+        // Legacy admin sessions do not require a Supabase session.
+    }
     response.cookies.set(buildClearedAdminSessionCookie())
     return response
 }

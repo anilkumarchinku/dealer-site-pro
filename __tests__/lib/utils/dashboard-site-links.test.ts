@@ -10,7 +10,7 @@ describe('dashboard site links', () => {
     it('builds absolute copy URLs from the active browser origin', () => {
         const siteOrigin = { origin: 'https://indrav.in', host: 'indrav.in' }
 
-        expect(dashboardSiteHref('lakshmi-motors-bmw', siteOrigin)).toBe('https://indrav.in/sites/lakshmi-motors-bmw')
-        expect(dashboardSiteDisplayUrl('lakshmi-motors-bmw', siteOrigin)).toBe('indrav.in/sites/lakshmi-motors-bmw')
+        expect(dashboardSiteHref('lakshmi-motors-bmw', siteOrigin)).toBe('https://lakshmi-motors-bmw.indrav.in')
+        expect(dashboardSiteDisplayUrl('lakshmi-motors-bmw', siteOrigin)).toBe('lakshmi-motors-bmw.indrav.in')
     })
 })

@@ -1,5 +1,10 @@
 import { describe, expect, it } from 'vitest'
-import { brandLogoUrl, firstVehicleHeroImage } from '@/lib/utils/site-assets'
+import {
+    brandLogoUrl,
+    firstVehicleHeroImage,
+    isDealerUploadedHero,
+    resolveDealerHeroImage,
+} from '@/lib/utils/site-assets'
 import type { Car } from '@/lib/types/car'
 
 function carWithImages(hero: string, exterior: string[] = []): Car {
@@ -43,5 +48,31 @@ describe('site assets', () => {
         expect(firstVehicleHeroImage([
             carWithImages('/placeholder-car.jpg', ['/fallback.jpg']),
         ])).toBe('/fallback.jpg')
+    })
+
+    it('does not use generated catalog images as dealer uploaded hero images', () => {
+        expect(isDealerUploadedHero('/data/brand-model-images/4w/bmw/6-series.jpg')).toBe(false)
+        expect(isDealerUploadedHero('https://images.unsplash.com/photo-vehicle')).toBe(false)
+        expect(isDealerUploadedHero('https://llsvbyeumrfngjvbedbz.supabase.co/storage/v1/object/public/dealer-assets/dealers/dealer-1/hero.jpg')).toBe(true)
+        expect(isDealerUploadedHero('data:image/png;base64,abc')).toBe(true)
+    })
+
+    it('prefers dealer-uploaded hero images but falls back to inventory images', () => {
+        const inventoryHero = '/data/brand-model-images/4w/audi/a4.jpg'
+
+        expect(resolveDealerHeroImage({
+            uploadedHeroImage: 'https://llsvbyeumrfngjvbedbz.supabase.co/storage/v1/object/public/dealer-assets/dealers/dealer-1/hero.jpg',
+            inventoryHeroImage: inventoryHero,
+        })).toBe('https://llsvbyeumrfngjvbedbz.supabase.co/storage/v1/object/public/dealer-assets/dealers/dealer-1/hero.jpg')
+
+        expect(resolveDealerHeroImage({
+            uploadedHeroImage: '/data/brand-model-images/4w/bmw/6-series.jpg',
+            inventoryHeroImage: inventoryHero,
+        })).toBe(inventoryHero)
+
+        expect(resolveDealerHeroImage({
+            uploadedHeroImage: '/placeholder-car.jpg',
+            inventoryHeroImage: '/placeholder.png',
+        })).toBeUndefined()
     })
 })

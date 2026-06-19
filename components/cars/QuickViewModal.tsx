@@ -178,9 +178,16 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
     ].filter((u): u is string => !!u && u !== '/placeholder-car.jpg'))];
 
     const mainImage = activeImage ?? fallbackList[imgIdx] ?? null;
-    const priceStart = formatPriceInLakhs(car.pricing.exShowroom.min);
+    const isUsed = car.condition === 'used' || car.condition === 'certified_pre_owned';
+    const basePrice = car.pricing.exShowroom.min;
+    const hasOfferPrice = isUsed &&
+        typeof car.offer?.price === 'number' &&
+        car.offer.price > 0 &&
+        (basePrice == null || car.offer.price < basePrice);
+    const priceStart = formatPriceInLakhs(hasOfferPrice ? car.offer!.price : basePrice);
     const priceEnd = formatPriceInLakhs(car.pricing.exShowroom.max);
-    const hasRange = car.pricing.exShowroom.min !== car.pricing.exShowroom.max;
+    const hasRange = !hasOfferPrice && car.pricing.exShowroom.min !== car.pricing.exShowroom.max;
+    const originalPrice = hasOfferPrice && basePrice != null ? formatPriceInLakhs(basePrice) : null;
 
     // Features merged
     const match = detailedInfo.find(v => v.variant_name?.toLowerCase().includes(car.variant?.toLowerCase())) ?? detailedInfo[0];
@@ -223,11 +230,19 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
 
                             {/* Price block */}
                             <div className="text-right shrink-0">
-                                <p className="text-[10px] uppercase tracking-widest text-gray-600">Ex-showroom</p>
+                                <p className="text-[10px] uppercase tracking-widest text-gray-600">{isUsed ? 'Price' : 'Ex-showroom'}</p>
                                 <p className="text-xl font-extrabold text-gray-900">
                                     {priceStart}
                                     {hasRange && <span className="text-sm font-normal text-gray-600"> – {priceEnd}</span>}
                                 </p>
+                                {originalPrice && (
+                                    <p className="text-xs font-semibold text-gray-400 line-through">{originalPrice}</p>
+                                )}
+                                {hasOfferPrice && (
+                                    <p className="text-[11px] font-semibold" style={{ color: brandColor }}>
+                                        {car.offer?.label || 'Offer price'}
+                                    </p>
+                                )}
                             </div>
                         </div>
 
@@ -385,9 +400,9 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
                                                         </div>
                                                     </div>
                                                     <div className="text-right">
-                                                        <p className="text-[10px] uppercase tracking-widest text-gray-600">Ex-Showroom*</p>
+                                                        <p className="text-[10px] uppercase tracking-widest text-gray-600">{isUsed ? 'Price' : 'Ex-Showroom*'}</p>
                                                         <p className="text-2xl font-extrabold leading-tight" style={{ color: brandColor }}>
-                                                            {fmtL(selVariant.ex_showroom_price_min_inr)}
+                                                            {isUsed ? priceStart : fmtL(selVariant.ex_showroom_price_min_inr)}
                                                         </p>
                                                     </div>
                                                 </div>

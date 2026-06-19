@@ -2,10 +2,20 @@ import { createHash, createHmac, timingSafeEqual } from "crypto"
 import { cookies } from "next/headers"
 import { NextResponse } from "next/server"
 import { getOptionalEnv } from "@/lib/env"
+import { createAdminClient, createRouteClient } from "@/lib/supabase-server"
+import { getMetadataString, isPlatformAdminAppMetadata } from "@/lib/utils/platform-admin"
 
 export const ADMIN_SESSION_COOKIE = "dealer_site_admin_session"
 
 const ADMIN_SESSION_TTL_SECONDS = 60 * 60 * 12
+
+export type AdminSession = {
+    username: string
+    source: "legacy" | "platform"
+    userId?: string
+    email?: string
+    name?: string
+}
 
 function toBase64Url(input: string): string {
     return Buffer.from(input, "utf8").toString("base64url")
@@ -92,13 +102,66 @@ export function verifyAdminSessionToken(token?: string | null): { username: stri
     }
 }
 
-export async function getAdminSession() {
+async function getLegacyAdminSession(): Promise<AdminSession | null> {
     const cookieStore = await cookies()
-    return verifyAdminSessionToken(cookieStore.get(ADMIN_SESSION_COOKIE)?.value)
+    const session = verifyAdminSessionToken(cookieStore.get(ADMIN_SESSION_COOKIE)?.value)
+    return session ? { ...session, source: "legacy" } : null
+}
+
+async function getPlatformAdminSession(): Promise<AdminSession | null> {
+    try {
+        const supabase = await createRouteClient()
+        const { data: { user }, error } = await supabase.auth.getUser()
+
+        if (error || !user) return null
+
+        const email = user.email?.trim().toLowerCase() ?? null
+        const name =
+            getMetadataString(user.user_metadata, "full_name") ??
+            getMetadataString(user.user_metadata, "name") ??
+            getMetadataString(user.app_metadata, "name")
+
+        if (isPlatformAdminAppMetadata(user.app_metadata)) {
+            return {
+                username: email ?? user.id,
+                source: "platform",
+                userId: user.id,
+                email: email ?? undefined,
+                name: name ?? undefined,
+            }
+        }
+
+        // platform_admins is introduced by the production-hardening migration;
+        // generated DB types can lag until the migration is applied and types are regenerated.
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const admin = createAdminClient() as any
+        const { data: platformAdmin, error: platformError } = await admin
+            .from("platform_admins")
+            .select("user_id, email, full_name, is_active")
+            .eq("user_id", user.id)
+            .eq("is_active", true)
+            .maybeSingle()
+
+        if (platformError || !platformAdmin) return null
+
+        return {
+            username: platformAdmin.email ?? email ?? user.id,
+            source: "platform",
+            userId: platformAdmin.user_id ?? user.id,
+            email: platformAdmin.email ?? email ?? undefined,
+            name: platformAdmin.full_name ?? name ?? undefined,
+        }
+    } catch {
+        return null
+    }
+}
+
+export async function getAdminSession(): Promise<AdminSession | null> {
+    return (await getLegacyAdminSession()) ?? (await getPlatformAdminSession())
 }
 
 export async function requireAdminSession(): Promise<
-    | { session: { username: string }; errorResponse: null }
+    | { session: AdminSession; errorResponse: null }
     | { session: null; errorResponse: NextResponse }
 > {
     const session = await getAdminSession()

@@ -12,7 +12,7 @@ import { FamilyTemplate } from '@/components/templates/FamilyTemplate'
 import type { Car } from '@/lib/types/car'
 import type { TwoWheelerUsedVehicle } from '@/lib/types/two-wheeler'
 import type { Service } from '@/lib/types'
-import { firstVehicleHeroImage } from '@/lib/utils/site-assets'
+import { firstVehicleHeroImage, resolveDealerHeroImage } from '@/lib/utils/site-assets'
 import { dealerSiteHref } from '@/lib/utils/domain'
 
 interface Props {
@@ -20,41 +20,56 @@ interface Props {
 }
 
 function usedTwoWheelersToCars(vehicles: TwoWheelerUsedVehicle[]): Car[] {
-    return vehicles.map(v => ({
-        id: v.id,
-        make: v.brand,
-        model: v.model,
-        variant: `${v.km_driven.toLocaleString('en-IN')} km · ${v.no_of_owners} owner${v.no_of_owners > 1 ? 's' : ''}`,
-        year: v.year,
-        bodyType: v.type === 'scooter' ? 'Scooter' : v.type === 'electric' ? 'Electric' : 'Bike',
-        segment: 'B' as Car['segment'],
-        pricing: {
-            exShowroom: {
-                min: Math.round(v.price_paise / 100),
-                max: Math.round(v.price_paise / 100),
-                currency: 'INR' as const,
+    return vehicles.map(v => {
+        const basePrice = Math.round(v.price_paise / 100)
+        const offerPrice = typeof v.offer_price_paise === 'number' && v.offer_price_paise > 0 && v.offer_price_paise < v.price_paise
+            ? Math.round(v.offer_price_paise / 100)
+            : null
+
+        return {
+            id: v.id,
+            make: v.brand,
+            model: v.model,
+            variant: `${v.km_driven.toLocaleString('en-IN')} km · ${v.no_of_owners} owner${v.no_of_owners > 1 ? 's' : ''}`,
+            year: v.year,
+            bodyType: v.type === 'scooter' ? 'Scooter' : v.type === 'electric' ? 'Electric' : 'Bike',
+            segment: 'B' as Car['segment'],
+            pricing: {
+                exShowroom: {
+                    min: basePrice,
+                    max: basePrice,
+                    currency: 'INR' as const,
+                },
             },
-        },
-        engine: {
-            type: v.fuel_type === 'electric' ? 'Electric' : 'Petrol',
-            displacement: null,
-            power: '—',
-            torque: '—',
-        },
-        transmission: { type: 'Manual' },
-        performance: {},
-        dimensions: { seatingCapacity: 2 },
-        features: { keyFeatures: [] },
-        images: {
-            hero: v.images?.[0] ?? '',
-            exterior: v.images ?? [],
-            interior: [],
-        },
-        meta: { viewCount: 0 },
-        price: `₹${(v.price_paise / 100).toLocaleString('en-IN')}`,
-        condition: v.certified_pre_owned ? 'certified_pre_owned' as const : 'used' as const,
-        vehicleCategory: '2w' as const,
-    }))
+            engine: {
+                type: v.fuel_type === 'electric' ? 'Electric' : 'Petrol',
+                displacement: null,
+                power: '—',
+                torque: '—',
+            },
+            transmission: { type: 'Manual' },
+            performance: {},
+            dimensions: { seatingCapacity: 2 },
+            features: { keyFeatures: [] },
+            images: {
+                hero: v.images?.[0] ?? '',
+                exterior: v.images ?? [],
+                interior: [],
+            },
+            meta: { viewCount: 0, sourceVehicleId: v.id },
+            price: `₹${(offerPrice ?? basePrice).toLocaleString('en-IN')}`,
+            offer: offerPrice
+                ? {
+                    price: offerPrice,
+                    originalPrice: basePrice,
+                    label: v.offer_label ?? 'Offer price',
+                    validUntil: v.offer_valid_until ?? undefined,
+                }
+                : undefined,
+            condition: v.certified_pre_owned ? 'certified_pre_owned' as const : 'used' as const,
+            vehicleCategory: '2w' as const,
+        }
+    })
 }
 
 // ── Metadata ──────────────────────────────────────────────────────────────────
@@ -86,7 +101,7 @@ export default async function UsedTwoWheelersPage({ params }: Props) {
 
     // Merge Cyepro used inventory if dealer has API key
     const cyeproCars = dealer.cyepro_api_key
-        ? (await fetchAllCyeproInventoryAsCars(dealer.cyepro_api_key)).map(c => ({ ...c, vehicleCategory: '2w' as const }))
+        ? await fetchAllCyeproInventoryAsCars(dealer.cyepro_api_key, {}, undefined, '2w')
         : []
 
     const cars = [...usedTwoWheelersToCars(usedVehicles), ...cyeproCars]
@@ -95,7 +110,10 @@ export default async function UsedTwoWheelersPage({ params }: Props) {
     const primaryBrand = brands2w[0] ?? dealer.brands[0] ?? null
     const brandId = primaryBrand ? brandNameToId(primaryBrand, '2w') : null
     const brandLogoUrl = dealer.logo_url ?? (brandId ? `/data/brand-logos/${brandId}.png` : undefined)
-    const heroImageUrl = dealer.hero_image_url ?? firstVehicleHeroImage(cars)
+    const heroImageUrl = resolveDealerHeroImage({
+        uploadedHeroImage: dealer.hero_image_url,
+        inventoryHeroImage: firstVehicleHeroImage(cars),
+    })
 
     const contactInfo = {
         phone: dealer.phone,

@@ -9,8 +9,9 @@ import {
     Phone, MapPin, Mail, Menu, X, ArrowRight,
     Bike, Zap, RotateCcw, Wrench, CreditCard, ChevronRight,
 } from "lucide-react"
-import type { TwoWheelerVehicle } from "@/lib/types/two-wheeler"
+import type { TwoWheelerCompareItem, TwoWheelerVehicle } from "@/lib/types/two-wheeler"
 import { VehicleCard } from "@/components/two-wheelers/VehicleCard"
+import { CompareBar } from "@/components/two-wheelers/CompareBar"
 import { LeadFormModal } from "@/components/two-wheelers/LeadFormModal"
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton"
 import { useSitePrefix } from "@/lib/hooks/useSitePrefix"
@@ -358,6 +359,7 @@ export function TwoWheelerTemplate({
     const [leadVehicleName, setLeadVehicleName] = useState<string | undefined>(undefined)
     const [leadType, setLeadType] = useState<"best_price" | "test_ride">("best_price")
     const [heroVehicleIdx, setHeroVehicleIdx] = useState(0)
+    const [compareItems, setCompareItems] = useState<TwoWheelerCompareItem[]>([])
 
     // Scroll handler — nav goes solid like ModernTemplate
     useEffect(() => {
@@ -365,6 +367,21 @@ export function TwoWheelerTemplate({
         window.addEventListener("scroll", onScroll)
         return () => window.removeEventListener("scroll", onScroll)
     }, [])
+
+    function toggleCompare(vehicle: TwoWheelerVehicle) {
+        setCompareItems(prev => {
+            if (prev.some(item => item.id === vehicle.id)) {
+                return prev.filter(item => item.id !== vehicle.id)
+            }
+            if (prev.length >= 3) return prev
+            return [...prev, {
+                id: vehicle.id,
+                brand: vehicle.brand,
+                model: vehicle.model,
+                image: vehicle.images[0] ?? null,
+            }]
+        })
+    }
 
     // Auto-rotate hero vehicle
     useEffect(() => {
@@ -700,7 +717,7 @@ export function TwoWheelerTemplate({
                                                         brandColor={brandTheme.accent}
                                                         summaryOnly
                                                         onLead={vid => { setLeadType("best_price"); setLeadVehicleId(vid); setLeadVehicleName(`${v.brand} ${v.model}`) }}
-                                                        onCompare={undefined}
+                                                        onCompare={toggleCompare}
                                                     />
                                                 ))}
                                             </div>
@@ -722,7 +739,7 @@ export function TwoWheelerTemplate({
                                     brandColor={theme.accent}
                                     summaryOnly
                                     onLead={vid => { setLeadType("best_price"); setLeadVehicleId(vid); setLeadVehicleName(vehicles.find(x => x.id === vid) ? `${vehicles.find(x => x.id === vid)!.brand} ${vehicles.find(x => x.id === vid)!.model}` : undefined) }}
-                                    onCompare={undefined}
+                                    onCompare={toggleCompare}
                                 />
                             ))}
                         </div>
@@ -866,6 +883,13 @@ export function TwoWheelerTemplate({
 
             {/* ── WhatsApp floating button ──────────────────────────────────── */}
             <WhatsAppButton phone={phone} message={`Hi ${dealerName}, I'm interested in your 2-Wheeler inventory.`} />
+
+            <CompareBar
+                items={compareItems}
+                slug={slug}
+                onRemove={id => setCompareItems(prev => prev.filter(item => item.id !== id))}
+                onClear={() => setCompareItems([])}
+            />
 
             {/* ── Lead modal ────────────────────────────────────────────────── */}
             <LeadFormModal

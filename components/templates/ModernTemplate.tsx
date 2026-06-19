@@ -32,6 +32,7 @@ import { EVSection } from '@/components/ui/EVSection';
 import { generateTemplateConfig } from '@/lib/templates';
 import { getContrastText } from '@/lib/utils/color-contrast';
 import { getScrapedImageUrls, brandNameToId } from '@/lib/utils/brand-model-images';
+import { buildTemplateDetailBasePath, buildTemplateSiteBase } from '@/lib/utils/template-site-paths';
 import {
     ArrowRight,
     Phone,
@@ -105,21 +106,13 @@ export function ModernTemplate({
 }: ModernTemplateProps) {
     const vl = getVehicleLabels(vehicleType);
     const pathname = usePathname();
-    const siteBase = useMemo(() => {
-        const typeSuffix = vehicleType === '2w' ? '/two-wheelers' : vehicleType === '3w' ? '/three-wheelers' : '';
-        if (pathname.startsWith('/sites/')) {
-            const slugPart = pathname.split('/')[2] ?? '';
-            return `/sites/${slugPart}${typeSuffix}`;
-        }
-        return typeSuffix || '/cars';
-    }, [pathname, vehicleType]);
-    const detailBasePath = useMemo(() => {
-        const isUsedVehiclePage = (vehicleType === '2w' || vehicleType === '3w')
-            && sellsUsedCars
-            && !sellsNewCars
-            && pathname.includes('/used');
-        return isUsedVehiclePage ? `${siteBase}/used` : siteBase;
-    }, [pathname, sellsNewCars, sellsUsedCars, siteBase, vehicleType]);
+    const siteBase = useMemo(() => buildTemplateSiteBase(pathname, vehicleType), [pathname, vehicleType]);
+    const detailBasePath = useMemo(() => buildTemplateDetailBasePath({
+        pathname,
+        vehicleType,
+        sellsNewCars,
+        sellsUsedCars,
+    }), [pathname, sellsNewCars, sellsUsedCars, vehicleType]);
     const SERVICE_LABELS: Record<string, { label: string; icon: string }> = {
         new_car_sales: { label: vl.newVehicle, icon: '🚗' },
         used_car_sales: { label: vl.usedVehicle, icon: '🔄' },

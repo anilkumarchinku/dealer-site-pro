@@ -15,7 +15,10 @@ import { requireAuth } from '@/lib/supabase-server'
 import {
     fetchAllCyeproVehicles,
     fetchCyeproVehicles,
+    getCyeproCategorySearchOptions,
+    isCyeproVehicleInCategory,
     mapCyeproVehicleToCar,
+    type CyeproVehicleCategory,
     type CyeproSearchBody,
 } from '@/lib/services/cyepro-service'
 import { applyUsedVehiclePriceOffersToCars, fetchActiveUsedVehiclePriceOffers } from '@/lib/services/used-vehicle-price-offers'
@@ -38,11 +41,16 @@ export async function POST(request: Request) {
             sortBy, order,
             fetchAll = false,
             maxVehicles,
+            vehicleCategory = 'all',
         } = body
 
         if (!dealerId) {
             return NextResponse.json({ error: 'dealerId is required' }, { status: 400 })
         }
+
+        const category: CyeproVehicleCategory = ['2w', '3w', '4w', 'all'].includes(vehicleCategory)
+            ? vehicleCategory
+            : 'all'
 
         // ── Fetch dealer's Cyepro API key ─────────────────────────────────────
         const { data: dealer, error: dealerErr } = await supabase
@@ -65,6 +73,7 @@ export async function POST(request: Request) {
 
         // ── Build search params ───────────────────────────────────────────────
         const searchParams: Partial<CyeproSearchBody> = {
+            ...getCyeproCategorySearchOptions(category),
             page,
             size,
             ...(priceMin != null && { priceMin }),
@@ -90,15 +99,17 @@ export async function POST(request: Request) {
         }
 
         // ── Map to Car type ───────────────────────────────────────────────────
+        const filteredVehicles = cyeproRes.vehicles.filter(vehicle => isCyeproVehicleInCategory(vehicle, category))
+        const mappedCategory = category === '2w' || category === '3w' ? category : '4w'
         const cars = applyUsedVehiclePriceOffersToCars(
-            cyeproRes.vehicles.map(mapCyeproVehicleToCar),
+            filteredVehicles.map(vehicle => mapCyeproVehicleToCar(vehicle, mappedCategory)),
             await fetchActiveUsedVehiclePriceOffers(dealerId)
         )
 
         return NextResponse.json({
             success: true,
             cars,
-            totalCount: cyeproRes.totalCount,
+            totalCount: category === 'all' ? cyeproRes.totalCount : filteredVehicles.length,
             pageNumber: cyeproRes.pageNumber,
             pageSize: cyeproRes.pageSize,
             totalPages: cyeproRes.totalPages,
