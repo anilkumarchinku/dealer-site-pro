@@ -161,6 +161,22 @@ export async function POST(request: NextRequest) {
             'whatsapp': 'inquiry',
             'phone': 'inquiry',
             'price_alert': 'inquiry',
+            // EnquireSidebar service tile selections
+            'home_test_drives': 'test_drive',
+            'financing': 'inquiry',
+            'parts_accessories': 'inquiry',
+            'trade_in': 'inquiry',
+            'insurance': 'inquiry',
+            'service_maintenance': 'inquiry',
+            'express_service': 'inquiry',
+            'extended_warranties': 'inquiry',
+            'fleet_sales': 'inquiry',
+            'buy_accessories': 'inquiry',
+            'new_car_sales': 'inquiry',
+            'used_car_sales': 'inquiry',
+            // Exchange / finance section forms
+            'exchange': 'inquiry',
+            'finance_inquiry': 'inquiry',
         }
 
         const vehicleId = await resolveVehicleId(supabase, car_id)

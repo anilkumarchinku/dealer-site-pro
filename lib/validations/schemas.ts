@@ -96,7 +96,13 @@ export const timeString = z
 // ── Lead schemas ────────────────────────────────────────────────
 
 export const VALID_LEAD_SOURCES = [
-    'contact_form', 'car_enquiry', 'test_drive', 'whatsapp', 'phone', 'price_alert'
+    'contact_form', 'car_enquiry', 'test_drive', 'whatsapp', 'phone', 'price_alert',
+    // Service IDs sent by EnquireSidebar when a service tile is selected
+    'home_test_drives', 'financing', 'parts_accessories', 'trade_in', 'insurance',
+    'service_maintenance', 'express_service', 'extended_warranties', 'fleet_sales',
+    'buy_accessories', 'new_car_sales', 'used_car_sales',
+    // Exchange / finance section forms
+    'exchange', 'finance_inquiry',
 ] as const
 
 export const leadSchema = z.object({
