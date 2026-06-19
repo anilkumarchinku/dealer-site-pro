@@ -7,7 +7,7 @@
 
 import { NextResponse } from 'next/server'
 import { ExternalApiError, externalApiFetch } from '@/lib/services/external-api-fetch'
-import { getCyeproApiBaseUrl, getCyeproNumericValue, getCyeproSearchPath, getCyeproVehicleArray } from '@/lib/services/cyepro-service'
+import { getCyeproApiBaseUrl, getCyeproNumericValue, getCyeproSearchPaths, getCyeproVehicleArray } from '@/lib/services/cyepro-service'
 import { requireAuth } from '@/lib/supabase-server'
 
 
@@ -92,7 +92,7 @@ export async function POST(request: Request) {
             priceMin: 0,
             priceMax: 100_000_000,
             yearMin: 1970,
-            yearMax: 2025,
+            yearMax: new Date().getFullYear() + 1,
             vehicleStatusIds: [],
             vehicleTypeList: [],
             kmDrivenMax: 9_999_999,
@@ -102,43 +102,91 @@ export async function POST(request: Request) {
         }
 
         const headers = {
-            'Accept': '*/*',
-            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0',
-            'Referer': 'https://www.cyepro.com/',
-            'Origin': 'https://www.cyepro.com',
             'Content-Type': 'application/json',
             'API-KEY': dealer.cyepro_api_key,
             'SERVICE-TYPE-ID': SERVICE_ID,
             'timeZone': TIME_ZONE,
         }
+        const searchPaths = getCyeproSearchPaths()
 
         diagnostics.steps.push({
             step: 'api_request',
             status: 'SENDING',
-            url: `${getCyeproApiBaseUrl()}${getCyeproSearchPath()}`,
+            url: `${getCyeproApiBaseUrl()}${searchPaths[0]}`,
+            fallbackUrls: searchPaths.slice(1).map(path => `${getCyeproApiBaseUrl()}${path}`),
             headers: { ...headers, 'API-KEY': `${dealer.cyepro_api_key.substring(0, 8)}...` },
             body: testBody,
         })
 
         const startTime = Date.now()
-        let rawData: CyeproDiagnosticResponse
+        let rawData: CyeproDiagnosticResponse | null = null
+        let successfulPath = searchPaths[0]
+        let lastHttpError: ExternalApiError | null = null
         try {
-            rawData = await externalApiFetch<CyeproDiagnosticResponse>({
-                baseUrl: getCyeproApiBaseUrl(),
-                providerName: 'Cyepro',
-                path: getCyeproSearchPath(),
-                headers,
-                init: {
-                    method: 'POST',
-                    body: JSON.stringify(testBody),
-                    cache: 'no-store',
-                },
-            })
+            for (const path of searchPaths) {
+                try {
+                    rawData = await externalApiFetch<CyeproDiagnosticResponse>({
+                        baseUrl: getCyeproApiBaseUrl(),
+                        providerName: 'Cyepro',
+                        path,
+                        headers,
+                        init: {
+                            method: 'POST',
+                            body: JSON.stringify(testBody),
+                            cache: 'no-store',
+                        },
+                    })
+                    successfulPath = path
+                    lastHttpError = null
+                    break
+                } catch (err) {
+                    if (err instanceof ExternalApiError && err.status === 404) {
+                        lastHttpError = err
+                        diagnostics.steps.push({
+                            step: 'api_response',
+                            status: 'RETRY',
+                            httpStatus: err.status,
+                            path,
+                            durationMs: Date.now() - startTime,
+                        })
+                        continue
+                    }
+
+                    throw err
+                }
+            }
+
+            if (!rawData) {
+                throw lastHttpError ?? new ExternalApiError('Cyepro inventory endpoint returned no data', 'Cyepro', successfulPath)
+            }
         } catch (fetchErr) {
             const duration = Date.now() - startTime
             const errMsg = fetchErr instanceof Error ? fetchErr.message : String(fetchErr)
 
             if (fetchErr instanceof ExternalApiError && fetchErr.status) {
+                if (fetchErr.status === 404) {
+                    diagnostics.steps.push({
+                        step: 'api_response',
+                        status: 'WARN',
+                        httpStatus: fetchErr.status,
+                        statusText: '',
+                        durationMs: duration,
+                        error: 'Cyepro inventory search endpoint was not found for this API host.',
+                    })
+                    diagnostics.steps.push({
+                        step: 'api_error_body',
+                        status: 'WARN',
+                        body: (fetchErr.bodyText ?? '').substring(0, 500),
+                    })
+
+                    return NextResponse.json({
+                        success: true,
+                        inventoryAvailable: false,
+                        message: 'Cyepro CRM key is saved. Inventory search is not available on this Cyepro API host, so live stock sync may stay empty.',
+                        diagnostics,
+                    })
+                }
+
                 diagnostics.steps.push({
                     step: 'api_response',
                     status: 'FAIL',
@@ -181,6 +229,7 @@ export async function POST(request: Request) {
             httpStatus: 200,
             statusText: 'OK',
             durationMs: duration,
+            path: successfulPath,
         })
 
         // Step 5: Parse response

@@ -81,7 +81,7 @@ type CyeproRawSearchResponse = Partial<CyeproSearchResponse> & {
 
 // ── Constants ─────────────────────────────────────────────────────────────────
 
-const DEFAULT_BASE_URL = 'https://mock-api.cyepro.com'
+const DEFAULT_BASE_URL = 'https://api.cyepro.com'
 const BASE_URL    = normaliseBaseUrl(getOptionalEnv('CYEPRO_API_BASE_URL') ?? DEFAULT_BASE_URL)
 const SEARCH_PATH = normalisePath(getOptionalEnv('CYEPRO_SEARCH_PATH') ?? '/dynamicForms/search/vehicles/filterQueryApi')
 const AGGREGATIONS_PATH = normalisePath(getOptionalEnv('CYEPRO_AGGREGATIONS_PATH') ?? '/dynamicForms/search/vehicles/aggregationsApi')
@@ -99,7 +99,7 @@ const DEFAULT_SEARCH: CyeproSearchBody = {
     priceMin:         0,
     priceMax:         100_000_000,
     yearMin:          1970,
-    yearMax:          2025,
+    yearMax:          new Date().getFullYear() + 1,
     vehicleStatusIds: [],
     vehicleTypeList:  [],
     kmDrivenMax:      9_999_999,
@@ -127,12 +127,27 @@ export function getCyeproSearchPath(): string {
     return SEARCH_PATH
 }
 
+function withLegacyPathFallback(path: string): string[] {
+    const paths = [normalisePath(path)]
+    const withoutApiSuffix = paths[0].replace(/Api$/i, '')
+
+    if (withoutApiSuffix !== paths[0]) {
+        paths.push(withoutApiSuffix)
+    }
+
+    return [...new Set(paths)]
+}
+
+export function getCyeproSearchPaths(): string[] {
+    return withLegacyPathFallback(SEARCH_PATH)
+}
+
+function getCyeproAggregationPaths(): string[] {
+    return withLegacyPathFallback(AGGREGATIONS_PATH)
+}
+
 function buildHeaders(apiKey: string): HeadersInit {
     return {
-        'Accept':          '*/*',
-        'User-Agent':      'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:150.0) Gecko/20100101 Firefox/150.0',
-        'Referer':         'https://www.cyepro.com/',
-        'Origin':          'https://www.cyepro.com',
         'Content-Type':    'application/json',
         'API-KEY':         apiKey,
         'SERVICE-TYPE-ID': SERVICE_ID,
@@ -312,18 +327,36 @@ export async function fetchCyeproVehicles(
 
     try {
         logger.log('[Cyepro] Fetching vehicles...', { page: body.page, size: body.size })
-        const rawData = await externalApiFetch<CyeproRawSearchResponse>({
-            baseUrl: BASE_URL,
-            providerName: 'Cyepro',
-            path: SEARCH_PATH,
-            headers: buildHeaders(apiKey),
-            init: {
-                method:  'POST',
-                body:    JSON.stringify(body),
-                cache:   'no-store',  // Don't cache — always fetch fresh data
-            },
-            timeoutMs: SEARCH_TIMEOUT_MS,
-        })
+        let rawData: CyeproRawSearchResponse | null = null
+        let lastError: ExternalApiError | null = null
+
+        for (const path of getCyeproSearchPaths()) {
+            try {
+                rawData = await externalApiFetch<CyeproRawSearchResponse>({
+                    baseUrl: BASE_URL,
+                    providerName: 'Cyepro',
+                    path,
+                    headers: buildHeaders(apiKey),
+                    init: {
+                        method:  'POST',
+                        body:    JSON.stringify(body),
+                        cache:   'no-store',  // Don't cache — always fetch fresh data
+                    },
+                    timeoutMs: SEARCH_TIMEOUT_MS,
+                })
+                break
+            } catch (err) {
+                if (err instanceof ExternalApiError && err.status === 404) {
+                    lastError = err
+                    continue
+                }
+                throw err
+            }
+        }
+
+        if (!rawData) {
+            throw lastError ?? new ExternalApiError('Cyepro inventory endpoint returned no data', 'Cyepro', SEARCH_PATH)
+        }
         logger.log('[Cyepro] Raw response keys:', Object.keys(rawData))
 
         // Handle different possible response formats from Cyepro API.
@@ -425,17 +458,28 @@ export async function fetchCyeproAggregations(
     if (!apiKey) return null
 
     try {
-        return await externalApiFetch<CyeproAggregations>({
-            baseUrl: BASE_URL,
-            providerName: 'Cyepro',
-            path: AGGREGATIONS_PATH,
-            headers: buildHeaders(apiKey),
-            init: {
-                method:  'GET',
-                cache:   'no-store',
-            },
-            timeoutMs: SEARCH_TIMEOUT_MS,
-        })
+        for (const path of getCyeproAggregationPaths()) {
+            try {
+                return await externalApiFetch<CyeproAggregations>({
+                    baseUrl: BASE_URL,
+                    providerName: 'Cyepro',
+                    path,
+                    headers: buildHeaders(apiKey),
+                    init: {
+                        method:  'GET',
+                        cache:   'no-store',
+                    },
+                    timeoutMs: SEARCH_TIMEOUT_MS,
+                })
+            } catch (err) {
+                if (err instanceof ExternalApiError && err.status === 404) {
+                    continue
+                }
+                throw err
+            }
+        }
+
+        return null
     } catch {
         return null
     }
