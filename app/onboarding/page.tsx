@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { ArrowRight, Bike, Car, CheckCircle2, ShieldCheck, Store, Truck } from "lucide-react";
 
@@ -110,14 +110,60 @@ export default function OnboardingIndexPage() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    const handleSelect = (option: (typeof typeOptions)[number]) => {
+    // Multi-select: dealers can pick any combination of the four (e.g. Cars + Used,
+    // Two-Wheelers + Used, all four). "Used Vehicles" is a category modifier, not a
+    // separate vehicle type — combining it with a type means new AND used.
+    const [selected, setSelected] = useState<Set<string>>(new Set());
+
+    const toggle = (id: string) => {
+        setSelected((prev) => {
+            const next = new Set(prev);
+            if (next.has(id)) next.delete(id);
+            else next.add(id);
+            return next;
+        });
+    };
+
+    // The four cards map to separate per-type onboarding flows. With multiple types
+    // selected we route into ONE primary flow (Cars/Used → cars, then Two-, then
+    // Three-Wheelers) and carry the rest in the sells-X flags the later steps read.
+    const primaryRoute: Record<"car" | "two-wheeler" | "three-wheeler", string> = {
+        car: "/onboarding/step-1",
+        "two-wheeler": "/onboarding/two-wheelers/step-1",
+        "three-wheeler": "/onboarding/three-wheelers/step-1",
+    };
+
+    const handleContinue = () => {
+        if (selected.size === 0) return;
+        const has = (id: string) => selected.has(id);
+
+        const hasUsed = has("used");
+        const hasNewType = has("cars") || has("two-wheelers") || has("three-wheelers");
+        const sellsFour = has("cars") || has("used"); // "used" defaults to the cars (4W) context
+        const sellsTwo = has("two-wheelers");
+        const sellsThree = has("three-wheelers");
+
+        // Primary vehicle type drives which flow we enter next.
+        const primary: "car" | "two-wheeler" | "three-wheeler" =
+            has("cars") || has("used")
+                ? "car"
+                : has("two-wheelers")
+                    ? "two-wheeler"
+                    : "three-wheeler";
+
+        const dealerCategory = hasUsed && hasNewType ? "both" : hasUsed ? "used" : "new";
+
         reset(getOnboardingResetPrefill(data));
-        setVehicleType(option.vehicleType);
-        setSellsFourWheelers(option.vehicleType === "car");
-        setSellsTwoWheelers(option.vehicleType === "two-wheeler");
-        setSellsThreeWheelers(option.vehicleType === "three-wheeler");
-        updateData(option.data);
-        router.push(option.route);
+        setVehicleType(primary);
+        setSellsFourWheelers(sellsFour);
+        setSellsTwoWheelers(sellsTwo);
+        setSellsThreeWheelers(sellsThree);
+        updateData({
+            dealerCategory,
+            sellsNewCars: hasNewType,
+            sellsUsedCars: hasUsed,
+        });
+        router.push(primaryRoute[primary]);
     };
 
     return (
@@ -138,27 +184,42 @@ export default function OnboardingIndexPage() {
                                 What type of business do you run?
                             </h1>
                             <p className="mt-2 max-w-xl text-sm font-medium leading-5 text-[#62708A]">
-                                Select the category that best describes your dealership. We will tailor the website setup around it.
+                                Select all that apply — you can combine types (e.g. Cars + Used Vehicles). We will tailor the website setup around your choices.
                             </p>
 
                             <div className="mt-5 grid flex-1 auto-rows-fr gap-3 sm:grid-cols-2">
-                                {typeOptions.map((option) => (
-                                    <button
-                                        key={option.id}
-                                        type="button"
-                                        onClick={() => handleSelect(option)}
-                                        className="group relative flex min-h-[150px] flex-col items-center justify-center rounded-lg border border-[#D8E0EA] bg-white p-4 text-center shadow-[0_10px_28px_rgba(7,20,54,0.04)] transition hover:-translate-y-0.5 hover:border-[#155EEF] hover:shadow-[0_16px_42px_rgba(7,20,54,0.08)] focus:outline-none focus:ring-2 focus:ring-[#155EEF]"
-                                    >
-                                        <span className={cn("mx-auto flex h-12 w-12 items-center justify-center rounded-full border", toneClasses[option.tone])}>
-                                            <option.icon className="h-6 w-6" />
-                                        </span>
-                                        <h2 className="mt-3 text-[15px] font-black text-[#071436]">{option.title}</h2>
-                                        <p className="mx-auto mt-1.5 max-w-[220px] text-xs font-medium leading-5 text-[#62708A]">{option.description}</p>
-                                        <span className="absolute right-3 top-3 flex h-5 w-5 items-center justify-center rounded-full border border-[#D8E0EA] text-transparent transition group-hover:border-[#155EEF] group-hover:bg-[#155EEF] group-hover:text-white">
-                                            <CheckCircle2 className="h-3.5 w-3.5" />
-                                        </span>
-                                    </button>
-                                ))}
+                                {typeOptions.map((option) => {
+                                    const isSelected = selected.has(option.id);
+                                    return (
+                                        <button
+                                            key={option.id}
+                                            type="button"
+                                            role="checkbox"
+                                            aria-checked={isSelected}
+                                            onClick={() => toggle(option.id)}
+                                            className={cn(
+                                                "group relative flex min-h-[150px] flex-col items-center justify-center rounded-lg border p-4 text-center shadow-[0_10px_28px_rgba(7,20,54,0.04)] transition hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-[#155EEF]",
+                                                isSelected
+                                                    ? "border-[#155EEF] bg-[#F5F8FF] shadow-[0_16px_42px_rgba(7,20,54,0.08)]"
+                                                    : "border-[#D8E0EA] bg-white hover:border-[#155EEF] hover:shadow-[0_16px_42px_rgba(7,20,54,0.08)]"
+                                            )}
+                                        >
+                                            <span className={cn("mx-auto flex h-12 w-12 items-center justify-center rounded-full border", toneClasses[option.tone])}>
+                                                <option.icon className="h-6 w-6" />
+                                            </span>
+                                            <h2 className="mt-3 text-[15px] font-black text-[#071436]">{option.title}</h2>
+                                            <p className="mx-auto mt-1.5 max-w-[220px] text-xs font-medium leading-5 text-[#62708A]">{option.description}</p>
+                                            <span className={cn(
+                                                "absolute right-3 top-3 flex h-5 w-5 items-center justify-center rounded-full border transition",
+                                                isSelected
+                                                    ? "border-[#155EEF] bg-[#155EEF] text-white"
+                                                    : "border-[#D8E0EA] text-transparent group-hover:border-[#155EEF] group-hover:bg-[#155EEF] group-hover:text-white"
+                                            )}>
+                                                <CheckCircle2 className="h-3.5 w-3.5" />
+                                            </span>
+                                        </button>
+                                    );
+                                })}
                             </div>
 
                             <div className="mt-4 flex flex-wrap items-center gap-2 text-[11px] font-bold text-[#62708A]">
@@ -171,16 +232,27 @@ export default function OnboardingIndexPage() {
                                     Change or add vehicle types later
                                 </span>
                             </div>
+
+                            <Button
+                                type="button"
+                                className="mt-4 h-11 w-full rounded-md bg-[#155EEF] text-sm font-black text-white hover:bg-[#0F4FD3] disabled:cursor-not-allowed disabled:opacity-50 lg:hidden"
+                                onClick={handleContinue}
+                                disabled={selected.size === 0}
+                            >
+                                Continue{selected.size > 0 ? ` (${selected.size})` : ""}
+                                <ArrowRight className="ml-2 h-4 w-4" />
+                            </Button>
                         </section>
 
                         <aside className="hidden min-h-0 lg:flex lg:flex-col">
                             <DealerPreviewCard className="min-h-0 flex-1" />
                             <Button
                                 type="button"
-                                className="mt-3 h-10 w-full rounded-md bg-[#155EEF] text-sm font-black text-white hover:bg-[#0F4FD3]"
-                                onClick={() => handleSelect(typeOptions[0])}
+                                className="mt-3 h-10 w-full rounded-md bg-[#155EEF] text-sm font-black text-white hover:bg-[#0F4FD3] disabled:cursor-not-allowed disabled:opacity-50"
+                                onClick={handleContinue}
+                                disabled={selected.size === 0}
                             >
-                                Start with cars
+                                {selected.size === 0 ? "Select to continue" : `Continue (${selected.size})`}
                                 <ArrowRight className="ml-2 h-4 w-4" />
                             </Button>
                         </aside>
