@@ -47,7 +47,7 @@ function ScoreRing({ score, size = 80 }: { score: number; size?: number }) {
 
     return (
         <svg width={size} height={size} style={{ transform: 'rotate(-90deg)' }}>
-            <circle cx={size / 2} cy={size / 2} r={r} fill="none" stroke="#e5e7eb" strokeWidth={8} />
+            <circle cx={size / 2} cy={size / 2} r={r} fill="none" className="stroke-muted" strokeWidth={8} />
             <circle
                 cx={size / 2} cy={size / 2} r={r} fill="none"
                 stroke={color} strokeWidth={8}

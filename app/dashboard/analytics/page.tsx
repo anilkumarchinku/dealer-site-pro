@@ -10,6 +10,7 @@ import { isSupabaseReady } from "@/lib/supabase";
 import { Reveal } from "@/components/ui/Reveal";
 import { CountUp } from "@/components/ui/CountUp";
 import { Skeleton } from "@/components/ui/skeleton";
+import { PremiumPageHeader } from "@/components/dashboard/premium-ui";
 import { formatCompactNumber as fmt } from "@/lib/utils/format";
 
 
@@ -83,20 +84,19 @@ export default function AnalyticsPage() {
     return (
         <div className="space-y-6 animate-fade-in">
             {/* Header */}
-            <div className="flex items-center justify-between">
-                <div>
-                    <h1 className="text-2xl font-bold">Analytics</h1>
-                    <p className="text-muted-foreground">Track your website performance and visitor behavior</p>
-                </div>
-                {!useDB && (
+            <PremiumPageHeader
+                eyebrow="Insights"
+                title="Analytics"
+                description="Track your website performance and visitor behavior"
+                actions={!useDB && (
                     <span className="text-xs text-amber-600 dark:text-amber-400 bg-amber-500/10 border border-amber-500/20 px-2.5 py-1 rounded-full font-medium">
                         Demo data
                     </span>
                 )}
-            </div>
+            />
 
             {/* Date Range */}
-            <Card variant="glass">
+            <Card variant="glass" className="rounded-2xl border-border/70 bg-card/90 shadow-sm dark:bg-card/80">
                 <CardContent className="py-3">
                     <div className="flex items-center justify-between">
                         <div className="flex items-center gap-2">
@@ -125,8 +125,8 @@ export default function AnalyticsPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 {STATS.map((stat, index) => (
                     <Reveal key={index} direction="up" delay={index * 80} className="h-full">
-                        <Card className="stat-card hover-lift h-full transition-all duration-300">
-                            <CardContent className="p-6">
+                        <Card className="stat-card hover-lift h-full rounded-2xl border-border/70 bg-card/90 shadow-sm transition-all duration-300 dark:bg-card/80">
+                            <CardContent className="p-5">
                                 <div className="flex items-start justify-between mb-4">
                                     <div className={cn("p-3 rounded-xl", stat.bg)}>
                                         <stat.icon className={cn("w-6 h-6", stat.text)} />
@@ -138,7 +138,7 @@ export default function AnalyticsPage() {
                                     {stat.value === null ? (
                                         <Skeleton className="mt-1 h-8 w-20" />
                                     ) : (
-                                        <p className="text-3xl font-bold">
+                                        <p className="text-3xl font-black tracking-tight">
                                             <CountUp value={stat.value} />
                                         </p>
                                     )}
@@ -152,9 +152,9 @@ export default function AnalyticsPage() {
             {/* Charts Row */}
             <Reveal className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 {/* Daily Visitors Bar Chart */}
-                <Card variant="glass">
+                <Card variant="glass" className="rounded-2xl border-border/70 bg-card/90 shadow-sm dark:bg-card/80">
                     <CardHeader>
-                        <CardTitle>Daily Visitors</CardTitle>
+                        <CardTitle className="font-black tracking-tight">Daily Visitors</CardTitle>
                     </CardHeader>
                     <CardContent>
                         {loading ? (
@@ -186,9 +186,9 @@ export default function AnalyticsPage() {
                 </Card>
 
                 {/* Traffic Sources */}
-                <Card variant="glass">
+                <Card variant="glass" className="rounded-2xl border-border/70 bg-card/90 shadow-sm dark:bg-card/80">
                     <CardHeader>
-                        <CardTitle>Traffic Sources</CardTitle>
+                        <CardTitle className="font-black tracking-tight">Traffic Sources</CardTitle>
                     </CardHeader>
                     <CardContent className="space-y-4">
                         {trafficSources.map((source, index) => (
@@ -214,9 +214,9 @@ export default function AnalyticsPage() {
             {/* Bottom Row: Top Pages + Top Vehicles */}
             <Reveal delay={100} className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 {/* Top Pages */}
-                <Card variant="glass">
+                <Card variant="glass" className="rounded-2xl border-border/70 bg-card/90 shadow-sm dark:bg-card/80">
                     <CardHeader>
-                        <CardTitle>Top Pages</CardTitle>
+                        <CardTitle className="font-black tracking-tight">Top Pages</CardTitle>
                     </CardHeader>
                     <CardContent>
                         <div className="space-y-4">
@@ -239,9 +239,9 @@ export default function AnalyticsPage() {
                 </Card>
 
                 {/* Top Vehicles */}
-                <Card variant="glass">
+                <Card variant="glass" className="rounded-2xl border-border/70 bg-card/90 shadow-sm dark:bg-card/80">
                     <CardHeader>
-                        <CardTitle>Top Performing Vehicles</CardTitle>
+                        <CardTitle className="font-black tracking-tight">Top Performing Vehicles</CardTitle>
                     </CardHeader>
                     <CardContent>
                         {loading ? (

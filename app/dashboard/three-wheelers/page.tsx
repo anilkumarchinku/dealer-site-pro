@@ -6,6 +6,7 @@ import { supabase } from "@/lib/supabase"
 import { useOnboardingStore } from "@/lib/store/onboarding-store"
 import { Truck, ListFilter, Wrench, CreditCard, Plus, TrendingUp, Users, Check, Pencil, X, Loader2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { PremiumPageHeader } from "@/components/dashboard/premium-ui"
 import brandData from "@/lib/data/brand-models.json"
 import type { Brand } from "@/lib/types"
 
@@ -162,24 +163,25 @@ export default function ThreeWheelersDashboardPage() {
 
     return (
         <div className="space-y-6">
-            <div className="flex items-center justify-between">
-                <div>
-                    <h1 className="text-2xl font-bold">3-Wheeler Dashboard</h1>
-                    <p className="text-muted-foreground text-sm mt-1">Manage your 3W inventory, leads, and bookings</p>
-                </div>
-                <Button asChild>
-                    <Link href="/dashboard/three-wheelers/inventory/add">
-                        <Plus className="w-4 h-4 mr-2" />
-                        Add Vehicle
-                    </Link>
-                </Button>
-            </div>
+            <PremiumPageHeader
+                eyebrow="Three-Wheelers"
+                title="3-Wheeler Dashboard"
+                description="Manage your 3W inventory, leads, and bookings"
+                actions={
+                    <Button asChild className="h-11 rounded-xl gap-2">
+                        <Link href="/dashboard/three-wheelers/inventory/add">
+                            <Plus className="w-4 h-4" />
+                            Add Vehicle
+                        </Link>
+                    </Button>
+                }
+            />
 
             {/* ── Info & Brands ─────────────────────────────────────────────── */}
-            <div className="bg-card border border-border rounded-xl p-5">
+            <div className="rounded-2xl border border-border/70 bg-card/90 p-5 shadow-sm dark:bg-card/80">
                 <div className="flex items-center justify-between mb-4">
                     <div>
-                        <h2 className="font-semibold text-base">Info &amp; Brands</h2>
+                        <h2 className="font-black tracking-tight text-base">Info &amp; Brands</h2>
                         <p className="text-xs text-muted-foreground mt-0.5">
                             {data.dealershipName || "Your dealership"} · {data.location || ""}
                         </p>
@@ -267,13 +269,15 @@ export default function ThreeWheelersDashboardPage() {
                     <Link
                         key={card.label}
                         href={card.href}
-                        className="bg-card border border-border rounded-xl p-4 flex flex-col gap-2 hover:border-primary/40 transition-colors"
+                        className="rounded-2xl border border-border/70 bg-card/90 p-4 shadow-sm dark:bg-card/80 flex flex-col gap-2 hover:border-primary/40 transition-colors"
                     >
                         <div className="flex items-center justify-between">
                             <p className="text-xs text-muted-foreground">{card.label}</p>
-                            <card.icon className="w-4 h-4 text-muted-foreground" />
+                            <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                                <card.icon className="w-4 h-4" />
+                            </span>
                         </div>
-                        <p className="text-2xl font-bold">
+                        <p className="text-2xl font-black tracking-tight">
                             {loading ? <span className="animate-pulse">—</span> : card.value}
                         </p>
                     </Link>
@@ -282,7 +286,7 @@ export default function ThreeWheelersDashboardPage() {
 
             {/* Quick Actions */}
             <div>
-                <h2 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-3">Quick Actions</h2>
+                <h2 className="text-sm font-black text-muted-foreground uppercase tracking-wider mb-3">Quick Actions</h2>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                     {quickActions.map((action) => (
                         <Button key={action.label} variant="outline" asChild className="h-12 justify-start gap-2">
@@ -299,41 +303,41 @@ export default function ThreeWheelersDashboardPage() {
             <div className="grid md:grid-cols-2 gap-4">
                 <Link
                     href="/dashboard/three-wheelers/inventory"
-                    className="bg-card border border-border rounded-xl p-5 hover:border-primary/40 transition-colors"
+                    className="rounded-2xl border border-border/70 bg-card/90 p-5 shadow-sm dark:bg-card/80 hover:border-primary/40 transition-colors"
                 >
                     <div className="flex items-center gap-3 mb-2">
                         <Truck className="w-5 h-5 text-primary" />
-                        <h3 className="font-semibold">New Inventory</h3>
+                        <h3 className="font-black tracking-tight">New Inventory</h3>
                     </div>
                     <p className="text-sm text-muted-foreground">Manage passenger autos, cargo 3W, electric, and school vans.</p>
                 </Link>
                 <Link
                     href="/dashboard/three-wheelers/used"
-                    className="bg-card border border-border rounded-xl p-5 hover:border-primary/40 transition-colors"
+                    className="rounded-2xl border border-border/70 bg-card/90 p-5 shadow-sm dark:bg-card/80 hover:border-primary/40 transition-colors"
                 >
                     <div className="flex items-center gap-3 mb-2">
                         <ListFilter className="w-5 h-5 text-primary" />
-                        <h3 className="font-semibold">Used Stock</h3>
+                        <h3 className="font-black tracking-tight">Used Stock</h3>
                     </div>
                     <p className="text-sm text-muted-foreground">Pre-owned 3W vehicles with condition grading and permit details.</p>
                 </Link>
                 <Link
                     href="/dashboard/three-wheelers/leads"
-                    className="bg-card border border-border rounded-xl p-5 hover:border-primary/40 transition-colors"
+                    className="rounded-2xl border border-border/70 bg-card/90 p-5 shadow-sm dark:bg-card/80 hover:border-primary/40 transition-colors"
                 >
                     <div className="flex items-center gap-3 mb-2">
                         <Users className="w-5 h-5 text-primary" />
-                        <h3 className="font-semibold">Leads & Enquiries</h3>
+                        <h3 className="font-black tracking-tight">Leads & Enquiries</h3>
                     </div>
                     <p className="text-sm text-muted-foreground">Demo requests, best price queries, fleet and finance enquiries.</p>
                 </Link>
                 <Link
                     href="/dashboard/three-wheelers/service"
-                    className="bg-card border border-border rounded-xl p-5 hover:border-primary/40 transition-colors"
+                    className="rounded-2xl border border-border/70 bg-card/90 p-5 shadow-sm dark:bg-card/80 hover:border-primary/40 transition-colors"
                 >
                     <div className="flex items-center gap-3 mb-2">
                         <Wrench className="w-5 h-5 text-primary" />
-                        <h3 className="font-semibold">Service Bookings</h3>
+                        <h3 className="font-black tracking-tight">Service Bookings</h3>
                     </div>
                     <p className="text-sm text-muted-foreground">Manage workshop appointments including CNG kit and body work.</p>
                 </Link>

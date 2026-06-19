@@ -13,6 +13,7 @@ import {
     type DBMessage,
 } from "@/lib/db/messages";
 import { useOnboardingStore } from "@/lib/store/onboarding-store";
+import { PremiumPageHeader } from "@/components/dashboard/premium-ui";
 import { timeAgo } from "@/lib/utils/format";
 
 
@@ -79,42 +80,39 @@ export default function MessagesPage() {
     return (
         <div className="space-y-6 animate-fade-in">
             {/* Header */}
-            <div className="flex items-center justify-between">
-                <div>
-                    <h1 className="text-2xl font-bold">Messages</h1>
-                    <p className="text-muted-foreground">Customer messages and inquiries</p>
-                </div>
-                <div className="flex items-center gap-3">
-                    {dealerId && (
-                        <Button
-                            variant="ghost"
-                            size="icon"
-                            onClick={load}
-                            disabled={loading}
-                            title="Refresh"
-                            className="text-muted-foreground"
-                        >
-                            {loading
-                                ? <Loader2 className="w-4 h-4 animate-spin" />
-                                : <RefreshCw className="w-4 h-4" />
-                            }
-                        </Button>
-                    )}
-                </div>
-            </div>
+            <PremiumPageHeader
+                eyebrow="Inbox"
+                title="Messages"
+                description="Customer messages and inquiries"
+                actions={dealerId && (
+                    <Button
+                        variant="ghost"
+                        size="icon"
+                        onClick={load}
+                        disabled={loading}
+                        title="Refresh"
+                        className="text-muted-foreground"
+                    >
+                        {loading
+                            ? <Loader2 className="w-4 h-4 animate-spin" />
+                            : <RefreshCw className="w-4 h-4" />
+                        }
+                    </Button>
+                )}
+            />
 
             {/* Stat Cards */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 {STATS.map((s, i) => (
-                    <Card key={i} className="hover:shadow-lg transition-all duration-300">
-                        <CardContent className="p-6">
+                    <Card key={i} className="rounded-2xl border-border/70 bg-card/90 shadow-sm transition-all duration-300 hover:shadow-lg dark:bg-card/80">
+                        <CardContent className="p-5">
                             <div className="mb-4">
                                 <div className={cn("p-3 rounded-xl w-fit", s.bg)}>
                                     <s.icon className={cn("w-6 h-6", s.text)} />
                                 </div>
                             </div>
                             <p className="text-sm text-muted-foreground">{s.label}</p>
-                            <p className="text-3xl font-bold">{s.value}</p>
+                            <p className="text-3xl font-black tracking-tight">{s.value}</p>
                         </CardContent>
                     </Card>
                 ))}
@@ -125,7 +123,7 @@ export default function MessagesPage() {
                 {/* Message list */}
                 <div className="space-y-3">
                     {/* Search */}
-                    <Card variant="glass">
+                    <Card variant="glass" className="rounded-2xl border-border/70 bg-card/90 shadow-sm dark:bg-card/80">
                         <CardContent className="py-3">
                             <div className="relative">
                                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
@@ -140,21 +138,21 @@ export default function MessagesPage() {
                     </Card>
 
                     {loading ? (
-                        <Card variant="glass">
+                        <Card variant="glass" className="rounded-2xl border-border/70 bg-card/90 shadow-sm dark:bg-card/80">
                             <CardContent className="py-12 flex items-center justify-center gap-2 text-muted-foreground">
                                 <Loader2 className="w-5 h-5 animate-spin" />
                                 <span className="text-sm">Loading messages…</span>
                             </CardContent>
                         </Card>
                     ) : displayMessages.length === 0 ? (
-                        <Card variant="glass">
+                        <Card variant="glass" className="rounded-2xl border-border/70 bg-card/90 shadow-sm dark:bg-card/80">
                             <CardContent className="py-16 text-center text-muted-foreground">
                                 <MessageSquare className="w-12 h-12 mx-auto mb-3 opacity-30" />
                                 <p className="text-sm">{search ? "No messages match your search" : "No messages yet"}</p>
                             </CardContent>
                         </Card>
                     ) : (
-                        <Card variant="glass">
+                        <Card variant="glass" className="rounded-2xl border-border/70 bg-card/90 shadow-sm dark:bg-card/80">
                             <CardContent className="p-0">
                                 <div className="divide-y divide-border">
                                     {displayMessages.map(msg => (
@@ -225,11 +223,11 @@ export default function MessagesPage() {
                 {/* Message detail */}
                 <div>
                     {selected ? (
-                        <Card variant="glass" className="h-full">
-                            <CardContent className="p-6 space-y-4">
+                        <Card variant="glass" className="h-full rounded-2xl border-border/70 bg-card/90 shadow-sm dark:bg-card/80">
+                            <CardContent className="p-5 space-y-4">
                                 {/* Sender info */}
                                 <div className="space-y-1">
-                                    <h2 className="text-lg font-semibold">{selected.subject || "(No subject)"}</h2>
+                                    <h2 className="text-lg font-black tracking-tight">{selected.subject || "(No subject)"}</h2>
                                     <div className="flex items-center gap-4 text-sm text-muted-foreground flex-wrap">
                                         <span className="font-medium text-foreground">{selected.sender_name}</span>
                                         {selected.sender_email && (
@@ -257,7 +255,7 @@ export default function MessagesPage() {
                             </CardContent>
                         </Card>
                     ) : (
-                        <Card variant="glass" className="h-full">
+                        <Card variant="glass" className="h-full rounded-2xl border-border/70 bg-card/90 shadow-sm dark:bg-card/80">
                             <CardContent className="py-24 text-center text-muted-foreground">
                                 <MessageSquare className="w-12 h-12 mx-auto mb-3 opacity-20" />
                                 <p className="text-sm">Select a message to read</p>

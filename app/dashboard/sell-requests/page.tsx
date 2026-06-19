@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { cn } from "@/lib/utils"
 import { CheckCircle, Clock, ExternalLink, IndianRupee, Loader2, Phone, RefreshCw, Search, XCircle } from "lucide-react"
+import { PremiumPageHeader } from "@/components/dashboard/premium-ui"
 import { timeAgo } from "@/lib/utils/format"
 
 type SellRequestStatus = "new" | "reviewing" | "contacted" | "approved" | "rejected" | "listed"
@@ -38,12 +39,12 @@ interface SellRequest {
 }
 
 const statusStyles: Record<SellRequestStatus, string> = {
-    new: "bg-green-50 text-green-700 border-green-200",
-    reviewing: "bg-blue-50 text-blue-700 border-blue-200",
-    contacted: "bg-amber-50 text-amber-700 border-amber-200",
-    approved: "bg-emerald-50 text-emerald-700 border-emerald-200",
-    rejected: "bg-red-50 text-red-700 border-red-200",
-    listed: "bg-purple-50 text-purple-700 border-purple-200",
+    new: "bg-green-50 text-green-700 border-green-200 dark:bg-green-500/10 dark:text-green-300 dark:border-green-500/20",
+    reviewing: "bg-blue-50 text-blue-700 border-blue-200 dark:bg-blue-500/10 dark:text-blue-300 dark:border-blue-500/20",
+    contacted: "bg-amber-50 text-amber-700 border-amber-200 dark:bg-amber-500/10 dark:text-amber-300 dark:border-amber-500/20",
+    approved: "bg-emerald-50 text-emerald-700 border-emerald-200 dark:bg-emerald-500/10 dark:text-emerald-300 dark:border-emerald-500/20",
+    rejected: "bg-red-50 text-red-700 border-red-200 dark:bg-red-500/10 dark:text-red-300 dark:border-red-500/20",
+    listed: "bg-purple-50 text-purple-700 border-purple-200 dark:bg-purple-500/10 dark:text-purple-300 dark:border-purple-500/20",
 }
 
 function formatMoney(low: number | null, high: number | null) {
@@ -91,18 +92,19 @@ export default function SellRequestsPage() {
 
     return (
         <div className="space-y-6">
-            <div className="flex items-center justify-between">
-                <div>
-                    <h1 className="text-2xl font-bold">Sell Requests</h1>
-                    <p className="text-sm text-muted-foreground">Review seller-submitted cars, then approve them into live inventory.</p>
-                </div>
-                <Button variant="outline" size="sm" onClick={loadRequests} disabled={loading}>
-                    {loading ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <RefreshCw className="mr-2 h-4 w-4" />}
-                    Refresh
-                </Button>
-            </div>
+            <PremiumPageHeader
+                eyebrow="Acquisitions"
+                title="Sell Requests"
+                description="Review seller-submitted cars, then approve them into live inventory."
+                actions={
+                    <Button variant="outline" size="sm" onClick={loadRequests} disabled={loading}>
+                        {loading ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <RefreshCw className="mr-2 h-4 w-4" />}
+                        Refresh
+                    </Button>
+                }
+            />
 
-            <Card>
+            <Card className="rounded-2xl border-border/70 bg-card/90 shadow-sm dark:bg-card/80">
                 <CardContent className="flex flex-col gap-3 p-4 sm:flex-row">
                     <div className="relative flex-1">
                         <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
@@ -124,15 +126,15 @@ export default function SellRequestsPage() {
 
             <div className="space-y-3">
                 {loading ? (
-                    <Card><CardContent className="p-8 text-center text-sm text-muted-foreground">Loading sell requests...</CardContent></Card>
+                    <Card className="rounded-2xl border-border/70 bg-card/90 shadow-sm dark:bg-card/80"><CardContent className="p-8 text-center text-sm text-muted-foreground">Loading sell requests...</CardContent></Card>
                 ) : filtered.length === 0 ? (
-                    <Card><CardContent className="p-8 text-center text-sm text-muted-foreground">No sell requests found.</CardContent></Card>
+                    <Card className="rounded-2xl border-border/70 bg-card/90 shadow-sm dark:bg-card/80"><CardContent className="p-8 text-center text-sm text-muted-foreground">No sell requests found.</CardContent></Card>
                 ) : filtered.map(request => (
-                    <Card key={request.id}>
+                    <Card key={request.id} className="rounded-2xl border-border/70 bg-card/90 shadow-sm dark:bg-card/80">
                         <CardContent className="grid gap-4 p-4 lg:grid-cols-[1fr_auto]">
                             <div className="min-w-0 space-y-3">
                                 <div className="flex flex-wrap items-center gap-2">
-                                    <h2 className="font-semibold">{request.make} {request.model} {request.variant}</h2>
+                                    <h2 className="font-black tracking-tight">{request.make} {request.model} {request.variant}</h2>
                                     <span className={cn("rounded-full border px-2 py-0.5 text-xs font-medium capitalize", statusStyles[request.status])}>
                                         {request.status}
                                     </span>

@@ -363,10 +363,10 @@ export function SellCarFlow() {
                                     <h4 className="text-sm font-semibold mb-3">Why sell with us?</h4>
                                     <div className="space-y-3">
                                         {[
-                                            { icon: <ShieldCheck className="w-4 h-4 text-emerald-500" />, text: 'Free doorstep inspection' },
-                                            { icon: <Banknote className="w-4 h-4 text-blue-500" />, text: 'Best price guarantee' },
-                                            { icon: <Clock className="w-4 h-4 text-amber-500" />, text: 'Payment within 24 hours' },
-                                            { icon: <Car className="w-4 h-4 text-purple-500" />, text: 'Free RC transfer assistance' },
+                                            { icon: <ShieldCheck className="w-4 h-4 text-emerald-500 dark:text-emerald-400" />, text: 'Free doorstep inspection' },
+                                            { icon: <Banknote className="w-4 h-4 text-blue-500 dark:text-blue-400" />, text: 'Best price guarantee' },
+                                            { icon: <Clock className="w-4 h-4 text-amber-500 dark:text-amber-400" />, text: 'Payment within 24 hours' },
+                                            { icon: <Car className="w-4 h-4 text-purple-500 dark:text-purple-400" />, text: 'Free RC transfer assistance' },
                                         ].map((item, i) => (
                                             <div key={i} className="flex items-center gap-2.5 text-sm">
                                                 {item.icon}
@@ -559,7 +559,7 @@ export function SellCarFlow() {
                                 </Button>
                             </div>
                             {submitStatus === 'error' && (
-                                <div className="flex items-start gap-2 rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-700">
+                                <div className="flex items-start gap-2 rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-700 dark:border-red-500/30 dark:bg-red-500/10 dark:text-red-300">
                                     <AlertCircle className="mt-0.5 h-4 w-4 shrink-0" />
                                     <span>{submitError}</span>
                                 </div>
@@ -574,7 +574,7 @@ export function SellCarFlow() {
                         <Card className="border-primary/20">
                             <CardContent className="p-8 text-center">
                                 <div className="w-16 h-16 rounded-full bg-emerald-500/10 flex items-center justify-center mx-auto mb-4">
-                                    <Check className="w-8 h-8 text-emerald-500" />
+                                    <Check className="w-8 h-8 text-emerald-500 dark:text-emerald-400" />
                                 </div>
 
                                 <h2 className="text-2xl font-bold mb-2">Sell Request Submitted!</h2>

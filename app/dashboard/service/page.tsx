@@ -71,11 +71,11 @@ interface ServiceCenterReview {
 const STATUSES: CarServiceStatus[] = ["pending", "confirmed", "assigned", "completed", "cancelled"]
 
 const STATUS_COLORS: Record<CarServiceStatus, string> = {
-    pending: "bg-yellow-100 text-yellow-700",
-    confirmed: "bg-blue-100 text-blue-700",
-    assigned: "bg-purple-100 text-purple-700",
-    completed: "bg-green-100 text-green-700",
-    cancelled: "bg-gray-100 text-gray-700",
+    pending: "bg-yellow-100 text-yellow-700 dark:bg-yellow-500/10 dark:text-yellow-300",
+    confirmed: "bg-blue-100 text-blue-700 dark:bg-blue-500/10 dark:text-blue-300",
+    assigned: "bg-purple-100 text-purple-700 dark:bg-purple-500/10 dark:text-purple-300",
+    completed: "bg-green-100 text-green-700 dark:bg-green-500/10 dark:text-green-300",
+    cancelled: "bg-gray-100 text-gray-700 dark:bg-gray-500/10 dark:text-gray-300",
 }
 
 function label(value: string) {

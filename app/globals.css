@@ -73,6 +73,11 @@
     --info: 217 91% 60%;
     --info-foreground: 0 0% 100%;
 
+    /* Brand layer — public dealer sites can override --brand per dealer at runtime
+       (defaults to the primary token so it always resolves). */
+    --brand: var(--primary);
+    --brand-foreground: var(--primary-foreground);
+
     /* Brand Accent Colors */
     --blue: 217 91% 60%;
     --blue-foreground: 0 0% 100%;

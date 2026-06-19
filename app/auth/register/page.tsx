@@ -124,7 +124,7 @@ export default function RegisterPage() {
     };
 
     return (
-        <BrowserFrame className="min-h-screen w-full max-w-none rounded-none border-0 shadow-none" contentClassName="bg-white">
+        <BrowserFrame className="min-h-screen w-full max-w-none rounded-none border-0 shadow-none" contentClassName="bg-background dark:bg-[#071A3D]">
             <FlowTopBar />
             <div className="grid lg:grid-cols-[390px_1fr]">
                 <div className="hidden lg:block">
@@ -134,31 +134,31 @@ export default function RegisterPage() {
                 <div className="px-5 py-8 sm:px-10 lg:px-12">
                     <div className="mx-auto max-w-xl">
                         <div className="mb-7">
-                            <p className="text-sm font-black uppercase tracking-[0.18em] text-[#155EEF]">02 Register</p>
-                            <h1 className="mt-3 text-3xl font-black tracking-[-0.03em] text-[#071436]">
+                            <p className="text-sm font-black uppercase tracking-[0.18em] text-[#155EEF] dark:text-blue-300">02 Register</p>
+                            <h1 className="mt-3 text-3xl font-black tracking-[-0.03em] text-foreground">
                                 Create your account
                             </h1>
-                            <p className="mt-2 text-sm font-medium leading-6 text-[#62708A]">
+                            <p className="mt-2 text-sm font-medium leading-6 text-muted-foreground">
                                 Start building your dealership website today.
                             </p>
                         </div>
 
                         {sent ? (
-                            <div className="rounded-lg border border-emerald-200 bg-emerald-50 p-5">
-                                <div className="flex items-center gap-3 text-sm font-semibold text-emerald-700">
+                            <div className="rounded-xl border border-emerald-500/20 bg-emerald-500/10 p-5">
+                                <div className="flex items-center gap-3 text-sm font-semibold text-emerald-600 dark:text-emerald-400">
                                     <CheckCircle className="h-5 w-5 shrink-0" />
                                     Verification email sent to <strong>{form.email}</strong>
                                 </div>
-                                <p className="mt-4 text-sm leading-6 text-[#35445C]">
+                                <p className="mt-4 text-sm leading-6 text-muted-foreground">
                                     Please check your email and click the verification link. Once verified, you can{" "}
-                                    <Link href="/auth/login" className="font-black text-[#155EEF] hover:underline">
+                                    <Link href="/auth/login" className="font-black text-[#155EEF] hover:underline dark:text-blue-300">
                                         log in with your email and password
                                     </Link>.
                                 </p>
                                 <button
                                     type="button"
                                     onClick={() => { setSent(false); setError(null); }}
-                                    className="mt-4 text-sm font-black text-[#155EEF] hover:underline"
+                                    className="mt-4 text-sm font-black text-[#155EEF] hover:underline dark:text-blue-300"
                                 >
                                     Did not receive it? Try again
                                 </button>
@@ -173,7 +173,6 @@ export default function RegisterPage() {
                                     value={form.fullName}
                                     onChange={(event) => update("fullName", event.target.value)}
                                     disabled={loading}
-                                    appearance="light"
                                 />
 
                                 <PhoneInput
@@ -197,7 +196,6 @@ export default function RegisterPage() {
                                     value={form.dealershipName}
                                     onChange={(event) => update("dealershipName", event.target.value)}
                                     disabled={loading}
-                                    appearance="light"
                                 />
 
                                 <Input
@@ -209,7 +207,6 @@ export default function RegisterPage() {
                                     value={form.email}
                                     onChange={(event) => update("email", event.target.value)}
                                     disabled={loading}
-                                    appearance="light"
                                 />
 
                                 <div className="grid gap-4 sm:grid-cols-2">
@@ -240,14 +237,14 @@ export default function RegisterPage() {
                                     </div>
                                 </div>
 
-                                <div className="grid gap-2 text-xs font-semibold text-[#35445C] sm:grid-cols-3">
-                                    <span className="flex items-center gap-2"><CheckCircle className="h-3.5 w-3.5 text-[#16A34A]" /> 8+ characters</span>
-                                    <span className="flex items-center gap-2"><CheckCircle className="h-3.5 w-3.5 text-[#16A34A]" /> 1 number</span>
-                                    <span className="flex items-center gap-2"><CheckCircle className="h-3.5 w-3.5 text-[#16A34A]" /> 1 special character</span>
+                                <div className="grid gap-2 text-xs font-semibold text-muted-foreground sm:grid-cols-3">
+                                    <span className="flex items-center gap-2"><CheckCircle className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400" /> 8+ characters</span>
+                                    <span className="flex items-center gap-2"><CheckCircle className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400" /> 1 number</span>
+                                    <span className="flex items-center gap-2"><CheckCircle className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400" /> 1 special character</span>
                                 </div>
 
                                 {error && (
-                                    <div className="flex items-center gap-2.5 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm font-semibold text-red-600">
+                                    <div className="flex items-center gap-2.5 rounded-xl border border-red-500/20 bg-red-500/10 px-4 py-3 text-sm font-semibold text-red-600 dark:text-red-400">
                                         <AlertCircle className="h-4 w-4 shrink-0" />
                                         <span>{error}</span>
                                     </div>
@@ -260,19 +257,19 @@ export default function RegisterPage() {
                                         checked={consentGiven}
                                         onChange={(event) => setConsentGiven(event.target.checked)}
                                         disabled={loading}
-                                        className="mt-0.5 h-4 w-4 shrink-0 cursor-pointer rounded border-[#CAD5E2] accent-[#155EEF]"
+                                        className="mt-0.5 h-4 w-4 shrink-0 cursor-pointer rounded border-border accent-[#155EEF]"
                                     />
-                                    <label htmlFor="consent" className="cursor-pointer text-xs font-medium leading-relaxed text-[#62708A]">
+                                    <label htmlFor="consent" className="cursor-pointer text-xs font-medium leading-relaxed text-muted-foreground">
                                         I agree to the{" "}
-                                        <Link href="/terms" className="font-bold text-[#155EEF] hover:underline">Terms of Service</Link>
+                                        <Link href="/terms" className="font-bold text-[#155EEF] hover:underline dark:text-blue-300">Terms of Service</Link>
                                         {" "}and{" "}
-                                        <Link href="/privacy" className="font-bold text-[#155EEF] hover:underline">Privacy Policy</Link>.
+                                        <Link href="/privacy" className="font-bold text-[#155EEF] hover:underline dark:text-blue-300">Privacy Policy</Link>.
                                     </label>
                                 </div>
 
                                 <Button
                                     type="submit"
-                                    className="h-12 w-full rounded-md bg-[#155EEF] text-sm font-black text-white hover:bg-[#0F4FD3]"
+                                    className="h-12 w-full rounded-xl bg-[#155EEF] text-sm font-black text-white hover:bg-[#0E4CD8]"
                                     disabled={loading || !consentGiven}
                                 >
                                     {loading ? (
@@ -282,9 +279,9 @@ export default function RegisterPage() {
                                     )}
                                 </Button>
 
-                                <p className="text-center text-sm font-medium text-[#62708A]">
+                                <p className="text-center text-sm font-medium text-muted-foreground">
                                     Already have an account?{" "}
-                                    <Link href="/auth/login" className="font-black text-[#155EEF] hover:underline">
+                                    <Link href="/auth/login" className="font-black text-[#155EEF] hover:underline dark:text-blue-300">
                                         Login
                                     </Link>
                                 </p>
