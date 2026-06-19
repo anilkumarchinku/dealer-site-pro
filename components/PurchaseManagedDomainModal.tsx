@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { X, Search, Loader2, Check, AlertCircle, Crown, CreditCard } from 'lucide-react'
-import { openRazorpayCheckout, verifyPaymentWithBackend, generateIdempotencyKey, type RazorpaySuccessResponse } from '@/lib/utils/razorpay'
+import { generateIdempotencyKey } from '@/lib/utils/razorpay'
 import type { DomainAvailability } from '@/lib/services/domain-search-service'
 
 interface Props {

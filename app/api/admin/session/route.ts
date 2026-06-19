@@ -7,6 +7,7 @@ import {
     getAdminSession,
     validateAdminCredentials,
 } from "@/lib/utils/admin-session"
+import { rateLimitOrNull } from "@/lib/utils/rate-limiter"
 
 export async function GET() {
     const session = await getAdminSession()
@@ -17,6 +18,9 @@ export async function GET() {
 }
 
 export async function POST(request: Request) {
+    const limited = await rateLimitOrNull("admin_login", request, 5, 15 * 60 * 1000)
+    if (limited) return limited
+
     const { username, password } = await request.json()
 
     if (typeof username !== "string" || typeof password !== "string") {

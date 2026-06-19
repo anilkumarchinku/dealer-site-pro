@@ -13,7 +13,6 @@ import type { TwoWheelerVehicle } from "@/lib/types/two-wheeler"
 import { VehicleCard } from "@/components/two-wheelers/VehicleCard"
 import { LeadFormModal } from "@/components/two-wheelers/LeadFormModal"
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton"
-import { getScrapedImageUrls, brandNameToId } from "@/lib/utils/brand-model-images"
 import { useSitePrefix } from "@/lib/hooks/useSitePrefix"
 
 // ── Brand color themes — keyed by EXACT brand name stored in DB ───────────────
@@ -460,6 +459,7 @@ export function TwoWheelerTemplate({
                                     }`}
                                 onClick={() => setMobileMenuOpen(o => !o)}
                                 aria-label="Menu"
+                                aria-expanded={mobileMenuOpen}
                             >
                                 {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
                             </button>

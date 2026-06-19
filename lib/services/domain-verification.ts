@@ -5,6 +5,8 @@
 
 import crypto from 'crypto';
 import dns from 'dns/promises';
+import { isPubliclyRoutableHost } from '@/lib/utils/ssrf-guard';
+import { logger } from '@/lib/utils/logger';
 
 function getErrorCode(error: unknown): string {
     return error && typeof error === 'object' && 'code' in error ? String(error.code) : '';
@@ -58,7 +60,7 @@ export class DomainVerificationService {
         error?: string;
     }> {
         try {
-            console.log(`🔍 Checking DNS TXT records for ${domain}`);
+            logger.log(`🔍 Checking DNS TXT records for ${domain}`);
 
             // Remove protocol and www if present
             const cleanDomain = domain.replace(/^(https?:\/\/)?(www\.)?/, '');
@@ -69,7 +71,7 @@ export class DomainVerificationService {
             // Flatten array of arrays
             const allRecords = txtRecords.flat();
 
-            console.log(`📝 Found ${allRecords.length} TXT records`);
+            logger.log(`📝 Found ${allRecords.length} TXT records`);
 
             // Check if our verification token exists
             const verified = allRecords.some(record =>
@@ -81,7 +83,7 @@ export class DomainVerificationService {
                 found_records: allRecords
             };
         } catch (error: unknown) {
-            console.error('❌ DNS TXT verification error:', error);
+            logger.error('❌ DNS TXT verification error:', error);
             const code = getErrorCode(error);
 
             // Handle specific DNS errors
@@ -118,10 +120,15 @@ export class DomainVerificationService {
         error?: string;
     }> {
         try {
-            console.log(`🔍 Checking HTML verification file for ${domain}`);
+            logger.log(`🔍 Checking HTML verification file for ${domain}`);
 
             // Clean domain
             const cleanDomain = domain.replace(/^(https?:\/\/)?(www\.)?/, '');
+
+            // SSRF guard: never fetch internal/private/loopback hosts
+            if (!(await isPubliclyRoutableHost(cleanDomain))) {
+                return { verified: false, error: 'Domain is not publicly reachable' };
+            }
 
             // Try both HTTP and HTTPS
             const urls = [
@@ -133,13 +140,14 @@ export class DomainVerificationService {
 
             for (const url of urls) {
                 try {
-                    console.log(`📡 Fetching: ${url}`);
+                    logger.log(`📡 Fetching: ${url}`);
 
                     const response = await fetch(url, {
                         method: 'GET',
                         headers: {
                             'User-Agent': 'DealerSite-Verification-Bot/1.0'
                         },
+                        redirect: 'manual',
                         signal: AbortSignal.timeout(10000) // 10 second timeout
                     });
 
@@ -150,7 +158,7 @@ export class DomainVerificationService {
                         const verified = content.includes(expectedToken);
 
                         if (verified) {
-                            console.log(`✅ Verification successful via ${url}`);
+                            logger.log(`✅ Verification successful via ${url}`);
                             return {
                                 verified: true,
                                 content
@@ -169,7 +177,7 @@ export class DomainVerificationService {
             };
 
         } catch (error: unknown) {
-            console.error('❌ HTML file verification error:', error);
+            logger.error('❌ HTML file verification error:', error);
             return {
                 verified: false,
                 error: `Failed to fetch verification file: ${getErrorMessage(error)}`

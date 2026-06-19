@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { externalApiFetch, ExternalApiError } from '@/lib/services/external-api-fetch'
+import { requireAuth } from '@/lib/supabase-server'
+import { rateLimitOrNull } from '@/lib/utils/rate-limiter'
 
 type VpicDecodeResponse = {
     Results?: Array<{
@@ -26,6 +28,12 @@ function normalizeFuelType(value: string | undefined): string | undefined {
 }
 
 export async function POST(request: NextRequest) {
+    const limited = await rateLimitOrNull('decode_vin', request, 20, 3_600_000)
+    if (limited) return limited
+
+    const { errorResponse } = await requireAuth()
+    if (errorResponse) return errorResponse
+
     const body = await request.json().catch(() => null) as { vin?: string } | null
     const vin = body?.vin?.trim().toUpperCase()
 

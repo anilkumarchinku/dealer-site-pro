@@ -19,6 +19,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { getOptionalEnv } from '@/lib/env'
 import { createAdminClient } from '@/lib/supabase-server'
 import { verifyRazorpayWebhookSignature } from '@/lib/services/razorpay-service'
+import { logger } from '@/lib/utils/logger'
 import {
     claimWebhookEvent,
     markWebhookEventFailed,
@@ -36,13 +37,13 @@ export async function POST(request: NextRequest) {
     const webhookSecret = getOptionalEnv('RAZORPAY_WEBHOOK_SECRET')
 
     if (!webhookSecret) {
-        console.error('[Razorpay Webhook] RAZORPAY_WEBHOOK_SECRET is not configured')
+        logger.error('[Razorpay Webhook] RAZORPAY_WEBHOOK_SECRET is not configured')
         return NextResponse.json({ error: 'Webhook not configured' }, { status: 500 })
     }
 
     // Validate signature
     if (!verifyRazorpayWebhookSignature(rawBody, signature, webhookSecret)) {
-        console.error('[Razorpay Webhook] Invalid signature')
+        logger.error('[Razorpay Webhook] Invalid signature')
         return NextResponse.json({ error: 'Invalid signature' }, { status: 400 })
     }
 
@@ -57,7 +58,7 @@ export async function POST(request: NextRequest) {
     const eventType = event.event
     const eventId   = request.headers.get('x-razorpay-event-id')
 
-    console.log('[Razorpay Webhook] Received event:', eventType, eventId ?? '(no event-id)')
+    logger.log('[Razorpay Webhook] Received event:', eventType, eventId ?? '(no event-id)')
 
     const eventClaim = await claimWebhookEvent(supabase, {
         provider: 'razorpay',
@@ -67,14 +68,14 @@ export async function POST(request: NextRequest) {
     })
 
     if (eventClaim.duplicate) {
-        console.log('[Razorpay Webhook] Duplicate event, skipping:', eventId)
+        logger.log('[Razorpay Webhook] Duplicate event, skipping:', eventId)
         return NextResponse.json({ received: true, duplicate: true })
     }
 
     // Fallback idempotency for local/dev DBs that have not run the migration yet.
     if (!eventClaim.storageAvailable && eventId) {
         if (processedEventIds.has(eventId)) {
-            console.log('[Razorpay Webhook] Duplicate event, skipping:', eventId)
+            logger.log('[Razorpay Webhook] Duplicate event, skipping:', eventId)
             return NextResponse.json({ received: true, duplicate: true })
         }
         // Evict oldest entries when cache is full
@@ -108,7 +109,7 @@ export async function POST(request: NextRequest) {
                         .update({ status: 'active' })
                         .eq('id', activatedSub.domain_id)
                 }
-                console.log('[Razorpay Webhook] Subscription activated:', sub.id)
+                logger.log('[Razorpay Webhook] Subscription activated:', sub.id)
                 break
             }
 
@@ -123,7 +124,7 @@ export async function POST(request: NextRequest) {
                         current_period_end:   (sub.current_end   as string | undefined) ?? null,
                     })
                     .eq('razorpay_subscription_id', sub.id as string)
-                console.log('[Razorpay Webhook] Subscription renewed:', sub.id)
+                logger.log('[Razorpay Webhook] Subscription renewed:', sub.id)
                 break
             }
 
@@ -147,7 +148,7 @@ export async function POST(request: NextRequest) {
                         .update({ status: 'suspended' })
                         .eq('id', dbSub.domain_id)
                 }
-                console.log('[Razorpay Webhook] Subscription cancelled:', sub.id)
+                logger.log('[Razorpay Webhook] Subscription cancelled:', sub.id)
                 break
             }
 
@@ -158,18 +159,18 @@ export async function POST(request: NextRequest) {
                     .from('domain_subscriptions')
                     .update({ status: 'past_due' })
                     .eq('razorpay_subscription_id', payment.subscription_id as string)
-                console.log('[Razorpay Webhook] Payment failed for subscription:', payment.subscription_id)
+                logger.log('[Razorpay Webhook] Payment failed for subscription:', payment.subscription_id)
                 break
             }
 
             default:
-                console.log('[Razorpay Webhook] Unhandled event type:', eventType)
+                logger.log('[Razorpay Webhook] Unhandled event type:', eventType)
         }
     } catch (err) {
         if (eventClaim.storageAvailable) {
             await markWebhookEventFailed(supabase, 'razorpay', eventId, err)
         }
-        console.error('[Razorpay Webhook] Error processing event:', eventType, err)
+        logger.error('[Razorpay Webhook] Error processing event:', eventType, err)
         // Return 500 so Razorpay retries the event — prevents silent data loss
         return NextResponse.json({ received: true, error: 'Processing error' }, { status: 500 })
     }

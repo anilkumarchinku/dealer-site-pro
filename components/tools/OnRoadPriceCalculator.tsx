@@ -19,7 +19,7 @@ import {
     SelectValue,
 } from '@/components/ui/select';
 import { Checkbox } from '@/components/ui/checkbox';
-import { ChevronRight, MapPin, Calculator, Info, Car, FileText, Shield, Percent, CreditCard } from 'lucide-react';
+import { ChevronRight, MapPin, Info, Car, FileText, Shield, Percent, CreditCard } from 'lucide-react';
 import {
     calculateCarOnRoadPrice,
     formatInr,

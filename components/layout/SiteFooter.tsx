@@ -3,7 +3,6 @@
  */
 
 import Link from 'next/link';
-import { Calculator, Star, Mail, Phone, MapPin } from 'lucide-react';
 import { Separator } from '@/components/ui/separator';
 import BrandLogo from '@/components/BrandLogo';
 import { FOUR_W_BODY_TYPES } from '@/lib/data/four-wheelers';

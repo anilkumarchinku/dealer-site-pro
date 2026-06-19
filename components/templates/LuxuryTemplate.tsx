@@ -26,6 +26,8 @@ import { VideoSection } from '@/components/templates/sections/VideoSection';
 import CompareBar from '@/components/cars/CompareBar';
 import { WishlistDrawer } from '@/components/ui/WishlistDrawer';
 import { EVSection } from '@/components/ui/EVSection';
+import { Reveal } from '@/components/ui/Reveal';
+import { FadeInImage } from '@/components/ui/FadeInImage';
 import { generateTemplateConfig } from '@/lib/templates';
 import { getContrastText } from '@/lib/utils/color-contrast';
 import { ArrowRight, Phone, MapPin, Mail, Award, ShieldCheck, Star, ChevronRight, Crown, Clock, MessageSquare, CheckCircle2, Send, Menu, X } from 'lucide-react';
@@ -244,6 +246,7 @@ export function LuxuryTemplate({
                                 className="xl:hidden p-2 rounded-lg text-gray-900 transition-colors hover:bg-gray-100"
                                 onClick={() => setMobileMenuOpen(o => !o)}
                                 aria-label="Toggle navigation menu"
+                                aria-expanded={mobileMenuOpen}
                             >
                                 {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
                             </button>
@@ -251,7 +254,7 @@ export function LuxuryTemplate({
                     </div>
                     {/* Mobile menu */}
                     {mobileMenuOpen && (
-                        <div className="md:hidden border-t border-gray-200 bg-white/95 backdrop-blur-lg">
+                        <div className="xl:hidden border-t border-gray-200 bg-white/95 backdrop-blur-lg animate-fade-in-down">
                             <div className="px-4 py-3 space-y-1">
                                 <button
                                     onClick={() => { setActiveTab('home'); setMobileMenuOpen(false); }}
@@ -314,29 +317,29 @@ export function LuxuryTemplate({
                 <>
                     {/* Hero */}
                     <section className="relative min-h-screen flex items-center">
-                        <div className="absolute inset-0">
+                        <div className="absolute inset-0 animate-scale-in">
                             {(() => {
                                 const heroSrc = heroImageUrl;
                                 return heroSrc
-                                    ? <Image src={heroSrc} alt={`${brandName} Luxury`} fill className="object-cover opacity-35" priority />
+                                    ? <FadeInImage src={heroSrc} alt={`${brandName} Luxury`} fill className="object-cover opacity-35" priority />
                                     : null;
                             })()}
                             <div className="absolute inset-0 bg-gradient-to-t from-white via-white/60 to-white/80" />
                         </div>
                         <div className="relative z-10 max-w-7xl mx-auto px-4 py-32 text-center">
-                            <p className="text-sm tracking-widest uppercase mb-4" style={{ color: brandAccent }}>{tagline}</p>
-                            <div className="flex flex-wrap items-center justify-center gap-2 mb-6">
+                            <p className="text-sm tracking-widest uppercase mb-4 animate-fade-in-up" style={{ color: brandAccent }}>{tagline}</p>
+                            <div className="flex flex-wrap items-center justify-center gap-2 mb-6 animate-fade-in-up animate-delay-100">
                                 <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gray-200 bg-gray-50">
                                     <Crown className="w-3.5 h-3.5 text-gray-600" />
                                     <span className="text-sm font-light tracking-widest text-gray-600">{dealerName}</span>
                                 </div>
                                 {isVerified && <VerifiedBadge variant="hero" />}
                             </div>
-                            <h1 className="text-6xl md:text-8xl font-light tracking-tight mb-8 leading-tight text-gray-900">{heroTitle}</h1>
-                            <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">{heroSubtitle}</p>
-                            <div className="flex flex-wrap items-center justify-center gap-4">
+                            <h1 className="text-6xl md:text-8xl font-light tracking-tight mb-8 leading-tight text-gray-900 animate-fade-in-up animate-delay-200">{heroTitle}</h1>
+                            <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto animate-fade-in-up animate-delay-300">{heroSubtitle}</p>
+                            <div className="flex flex-wrap items-center justify-center gap-4 animate-fade-in-up animate-delay-400">
                                 {showInventoryTab && (
-                                    <Button size="lg" className="text-white" style={{ backgroundColor: brandAccent }} onClick={() => setActiveTab('inventory')}>
+                                    <Button size="lg" className="text-white animate-pulse-glow" style={{ backgroundColor: brandAccent }} onClick={() => setActiveTab('inventory')}>
                                         Explore Collection
                                         <ArrowRight className="ml-2 w-5 h-5" />
                                     </Button>
@@ -355,22 +358,24 @@ export function LuxuryTemplate({
                     {serviceList.length > 0 && (
                         <section className="py-16 bg-gray-50">
                             <div className="max-w-7xl mx-auto px-4">
-                                <div className="text-center mb-10">
+                                <Reveal className="text-center mb-10">
                                     <span className="text-sm tracking-widest uppercase" style={{ color: brandAccent }}>Our Services</span>
                                     <h2 className="text-3xl font-light mt-2">What We Offer</h2>
-                                </div>
+                                </Reveal>
                                 <div className="flex flex-wrap justify-center gap-3">
-                                    {serviceList.map((svc) => {
+                                    {serviceList.map((svc, i) => {
                                         const meta = SERVICE_LABELS[svc as string] ?? { label: svc as string, icon: '🚘' };
                                         return (
-                                            <div
+                                            <Reveal
                                                 key={svc as string}
-                                                className="flex items-center gap-2 px-5 py-2.5 rounded-full border text-sm tracking-wide"
+                                                direction="up"
+                                                delay={(i % 6) * 70}
+                                                className="group flex items-center gap-2 px-5 py-2.5 rounded-full border text-sm tracking-wide hover-lift"
                                                 style={{ borderColor: `${brandAccent}60`, color: brandAccent, backgroundColor: `${brandAccent}10` }}
                                             >
-                                                <span>{meta.icon}</span>
+                                                <span className="transition-transform duration-300 group-hover:scale-110">{meta.icon}</span>
                                                 <span>{meta.label}</span>
-                                            </div>
+                                            </Reveal>
                                         );
                                     })}
                                 </div>
@@ -381,10 +386,10 @@ export function LuxuryTemplate({
                     {/* Featured Collection */}
                     <section className="py-24 bg-white">
                         <div className="max-w-7xl mx-auto px-4">
-                            <div className="text-center mb-16">
+                            <Reveal className="text-center mb-16">
                                 <span className="text-sm tracking-widest uppercase" style={{ color: brandAccent }}>Curated Selection</span>
                                 <h2 className="text-5xl font-light mt-4 text-gray-900">Featured Collection</h2>
-                            </div>
+                            </Reveal>
                             <CarGrid cars={featuredCars} brandColor={brandAccent} light summaryOnly detailBasePath={detailBasePath} dealerPhone={contactInfo.phone} dealerId={dealerId} />
                             {showInventoryTab && (
                                 <div className="text-center mt-10">
@@ -400,18 +405,20 @@ export function LuxuryTemplate({
                     {/* The Difference */}
                     <section className="py-24">
                         <div className="max-w-7xl mx-auto px-4">
-                            <h2 className="text-5xl font-light text-center mb-16">The Difference</h2>
+                            <Reveal className="text-center mb-16">
+                                <h2 className="text-5xl font-light">The Difference</h2>
+                            </Reveal>
                             <div className="grid md:grid-cols-3 gap-12">
                                 {[
                                     { icon: ShieldCheck, title: 'Certified Excellence', desc: 'Every detail perfected' },
                                     { icon: Award, title: 'Unmatched Service', desc: 'White-glove experience' },
                                     { icon: Star, title: 'Premium Selection', desc: 'Curated for perfection' },
                                 ].map((f, i) => (
-                                    <div key={i} className="text-center">
-                                        <f.icon className="w-12 h-12 mx-auto mb-6" style={{ color: brandAccent }} />
+                                    <Reveal key={i} direction="up" delay={i * 80} className="group text-center">
+                                        <f.icon className="w-12 h-12 mx-auto mb-6 transition-transform duration-300 group-hover:scale-110" style={{ color: brandAccent }} />
                                         <h3 className="text-2xl font-light mb-4">{f.title}</h3>
                                         <p className="text-gray-600">{f.desc}</p>
-                                    </div>
+                                    </Reveal>
                                 ))}
                             </div>
                         </div>
@@ -420,11 +427,11 @@ export function LuxuryTemplate({
                     {/* EMI Calculator */}
                     <section className="py-24">
                         <div className="max-w-4xl mx-auto px-4">
-                            <div className="text-center mb-10">
+                            <Reveal className="text-center mb-10">
                                 <span className="text-sm tracking-widest uppercase" style={{ color: brandAccent }}>Finance</span>
                                 <h2 className="text-5xl font-light mt-4">EMI Calculator</h2>
                                 <p className="text-gray-600 mt-3">Plan your investment with precision</p>
-                            </div>
+                            </Reveal>
                             <EmiCalculator brandColor={brandAccent} theme="light" />
                         </div>
                     </section>
@@ -470,7 +477,7 @@ export function LuxuryTemplate({
                         <div className="max-w-7xl mx-auto px-4">
                             <div className="grid lg:grid-cols-2 gap-16 items-start">
                                 {/* Info */}
-                                <div>
+                                <Reveal direction="right">
                                     <span className="text-sm tracking-widest uppercase" style={{ color: brandAccent }}>Contact</span>
                                     <h2 className="text-5xl font-light mt-4 mb-6 text-gray-900">Request a Callback</h2>
                                     <p className="text-gray-600 mb-8 text-lg">
@@ -496,10 +503,10 @@ export function LuxuryTemplate({
                                             </div>
                                         )}
                                     </div>
-                                </div>
+                                </Reveal>
 
                                 {/* Form */}
-                                <div className="border border-gray-200 rounded-2xl p-8 bg-white shadow-sm">
+                                <Reveal direction="left" delay={100} className="border border-gray-200 rounded-2xl p-8 bg-white shadow-sm hover-lift">
                                     {formStatus === 'sent' ? (
                                         <div className="text-center py-12">
                                             <CheckCircle2 className="w-16 h-16 mx-auto mb-4" style={{ color: brandAccent }} />
@@ -569,7 +576,7 @@ export function LuxuryTemplate({
                                             </Button>
                                         </form>
                                     )}
-                                </div>
+                                </Reveal>
                             </div>
                         </div>
                     </section>
@@ -578,10 +585,10 @@ export function LuxuryTemplate({
 
             {/* Inventory Tab */}
             {showInventoryTab && activeTab === 'inventory' && (
-                <div className="pt-24 pb-12 min-h-screen">
+                <div className="pt-24 pb-12 min-h-screen animate-fade-in">
                     <div className="max-w-7xl mx-auto px-4">
                         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12">
-                            <h1 className="text-5xl font-light">Our Collection</h1>
+                            <Reveal as="h1" className="text-5xl font-light">Our Collection</Reveal>
                             {isHybrid && (
                                 <div className="flex items-center gap-1 p-1 rounded-lg border border-gray-200 w-fit">
                                     {([

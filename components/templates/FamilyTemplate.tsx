@@ -50,6 +50,9 @@ import { useState, useEffect, useMemo } from 'react';
 import { usePathname } from 'next/navigation';
 import { EnquireSidebar } from '@/components/cars/EnquireSidebar';
 import { EmiCalculator } from '@/components/ui/EmiCalculator';
+import { Reveal } from '@/components/ui/Reveal';
+import { CountUp } from '@/components/ui/CountUp';
+import { FadeInImage } from '@/components/ui/FadeInImage';
 import type { Service } from '@/lib/types';
 import { getVehicleLabels } from '@/lib/utils/vehicle-labels';
 
@@ -259,6 +262,7 @@ export function FamilyTemplate({
                                 className="xl:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors"
                                 onClick={() => setMobileMenuOpen(o => !o)}
                                 aria-label="Toggle navigation menu"
+                                aria-expanded={mobileMenuOpen}
                             >
                                 {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
                             </button>
@@ -266,7 +270,7 @@ export function FamilyTemplate({
                     </div>
                     {/* Mobile menu */}
                     {mobileMenuOpen && (
-                        <div className="md:hidden border-t border-gray-100 bg-white shadow-lg">
+                        <div className="xl:hidden border-t border-gray-100 bg-white shadow-lg animate-fade-in-down">
                             <div className="px-4 py-3 space-y-1">
                                 <button
                                     onClick={() => { setActiveTab('home'); setMobileMenuOpen(false); }}
@@ -326,13 +330,13 @@ export function FamilyTemplate({
             />
 
             {activeTab === 'home' && (
-                <>
+                <div className="animate-fade-in">
                     {/* Hero */}
                     <section className="relative pt-24 pb-16 bg-gradient-to-br from-gray-50 to-white">
                         <div className="max-w-7xl mx-auto px-4">
                             <div className="grid lg:grid-cols-2 gap-12 items-center">
                                 <div className="space-y-6">
-                                    <div className="flex flex-wrap items-center gap-3">
+                                    <div className="flex flex-wrap items-center gap-3 animate-fade-in-up animate-delay-100">
                                         <div className="inline-block px-4 py-2 rounded-full text-sm font-semibold" style={{ backgroundColor: `${brandColors.primary}20`, color: brandColors.primary }}>
                                             {tagline}
                                         </div>
@@ -341,25 +345,25 @@ export function FamilyTemplate({
                                         </div>
                                         {isVerified && <VerifiedBadge variant="hero" />}
                                     </div>
-                                    <h1 className="text-5xl md:text-6xl font-bold leading-tight">{heroTitle}</h1>
-                                    <p className="text-xl text-gray-600">{heroSubtitle}</p>
-                                    <div className="flex flex-wrap gap-4">
+                                    <h1 className="text-5xl md:text-6xl font-bold leading-tight animate-fade-in-up animate-delay-100">{heroTitle}</h1>
+                                    <p className="text-xl text-gray-600 animate-fade-in-up animate-delay-200">{heroSubtitle}</p>
+                                    <div className="flex flex-wrap gap-4 animate-fade-in-up animate-delay-300">
                                         {showInventoryTab && (
-                                            <Button size="lg" className="rounded-full text-white" style={{ backgroundColor: brandColors.primary }} onClick={() => setActiveTab('inventory')}>
+                                            <Button size="lg" className="rounded-full text-white hover-lift" style={{ backgroundColor: brandColors.primary }} onClick={() => setActiveTab('inventory')}>
                                                 {vl.browseCTA}
                                                 <ArrowRight className="ml-2 w-5 h-5" />
                                             </Button>
                                         )}
-                                        <Button size="lg" variant="outline" className="rounded-full bg-white" style={{ borderColor: brandColors.primary, color: brandColors.primary }} asChild>
+                                        <Button size="lg" variant="outline" className="rounded-full bg-white hover-lift" style={{ borderColor: brandColors.primary, color: brandColors.primary }} asChild>
                                             <a href="#contact">Talk to Our Team</a>
                                         </Button>
                                     </div>
                                 </div>
-                                <div className="relative h-96 rounded-3xl overflow-hidden shadow-2xl">
+                                <div className="relative h-96 rounded-3xl overflow-hidden shadow-2xl animate-scale-in">
                                     {(() => {
                                         const heroSrc = heroImageUrl;
                                         return heroSrc
-                                            ? <Image src={heroSrc} alt={`${brandName} Family`} fill className="object-cover" priority />
+                                            ? <FadeInImage src={heroSrc} alt={`${brandName} Family`} fill className="object-cover" priority />
                                             : <div className="w-full h-full" style={{ background: `linear-gradient(135deg, ${brandColors.primary}33, ${brandColors.primary}11)` }} />;
                                     })()}
                                 </div>
@@ -370,22 +374,22 @@ export function FamilyTemplate({
                     {/* Stats */}
                     <section className="py-16 border-y border-gray-200">
                         <div className="max-w-7xl mx-auto px-4">
-                            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+                            <Reveal className="grid grid-cols-2 md:grid-cols-4 gap-8">
                                 {[
                                     { icon: Users, value: '10k+', label: 'Happy Families' },
                                     { icon: Star, value: '4.9', label: 'Customer Rating' },
                                     { icon: Shield, value: '100%', label: 'Satisfaction' },
                                     { icon: CheckCircle2, value: '500+', label: 'Vehicles' },
                                 ].map((stat, i) => (
-                                    <div key={i} className="text-center">
-                                        <div className="w-12 h-12 mx-auto mb-3 rounded-full flex items-center justify-center" style={{ backgroundColor: `${brandColors.primary}20` }}>
+                                    <div key={i} className="group text-center">
+                                        <div className="w-12 h-12 mx-auto mb-3 rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-110" style={{ backgroundColor: `${brandColors.primary}20` }}>
                                             <stat.icon className="w-6 h-6" style={{ color: brandColors.primary }} />
                                         </div>
-                                        <p className="text-3xl font-bold">{stat.value}</p>
+                                        <p className="text-3xl font-bold"><CountUp value={stat.value} /></p>
                                         <p className="text-sm text-gray-600">{stat.label}</p>
                                     </div>
                                 ))}
-                            </div>
+                            </Reveal>
                         </div>
                     </section>
 
@@ -393,27 +397,29 @@ export function FamilyTemplate({
                     {serviceList.length > 0 && (
                         <section className="py-16 bg-gray-50">
                             <div className="max-w-7xl mx-auto px-4">
-                                <div className="text-center mb-10">
+                                <Reveal className="text-center mb-10">
                                     <span className="font-semibold uppercase tracking-wider text-sm" style={{ color: brandColors.primary }}>
                                         What We Offer
                                     </span>
                                     <h2 className="text-3xl font-bold mt-2">Services for Your Family</h2>
-                                </div>
+                                </Reveal>
                                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                                    {serviceList.map((svc) => {
+                                    {serviceList.map((svc, i) => {
                                         const meta = SERVICE_LABELS[svc as string] ?? { label: svc as string, icon: '🚘', desc: 'Premium service for you' };
                                         return (
-                                            <div
+                                            <Reveal
                                                 key={svc as string}
-                                                className="flex items-start gap-4 p-5 bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow border"
+                                                direction="up"
+                                                delay={(i % 6) * 70}
+                                                className="group flex items-start gap-4 p-5 bg-white rounded-2xl shadow-sm hover-lift border"
                                                 style={{ borderColor: `${brandColors.primary}20` }}
                                             >
-                                                <span className="text-3xl">{meta.icon}</span>
+                                                <span className="text-3xl transition-transform duration-300 group-hover:scale-110">{meta.icon}</span>
                                                 <div>
                                                     <p className="font-bold text-gray-900">{meta.label}</p>
                                                     <p className="text-sm text-gray-600 mt-0.5">{meta.desc}</p>
                                                 </div>
-                                            </div>
+                                            </Reveal>
                                         );
                                     })}
                                 </div>
@@ -424,12 +430,12 @@ export function FamilyTemplate({
                     {/* Featured Cars */}
                     <section className="py-20 bg-gray-50">
                         <div className="max-w-7xl mx-auto px-4">
-                            <div className="text-center mb-12">
+                            <Reveal className="text-center mb-12">
                                 <span className="font-semibold uppercase tracking-wider text-sm" style={{ color: brandColors.primary }}>
                                     Our Collection
                                 </span>
                                 <h2 className="text-4xl font-bold mt-2">Family-Friendly Vehicles</h2>
-                            </div>
+                            </Reveal>
                             <CarGrid cars={featuredCars} brandColor={brandColors.primary} light summaryOnly detailBasePath={detailBasePath} dealerPhone={contactInfo.phone} dealerId={dealerId} />
                             {showInventoryTab && (
                                 <div className="text-center mt-8">
@@ -445,13 +451,13 @@ export function FamilyTemplate({
                     {/* EMI Calculator */}
                     <section className="py-16 bg-white">
                         <div className="max-w-4xl mx-auto px-4">
-                            <div className="text-center mb-8">
+                            <Reveal className="text-center mb-8">
                                 <span className="font-semibold uppercase tracking-wider text-sm" style={{ color: brandColors.primary }}>
                                     Finance Tool
                                 </span>
                                 <h2 className="text-3xl font-bold mt-2">EMI Calculator</h2>
                                 <p className="text-gray-600 mt-2">Plan your budget with real inputs — price, down payment, tenure &amp; rate</p>
-                            </div>
+                            </Reveal>
                             <EmiCalculator brandColor={brandColors.primary} theme="light" />
                         </div>
                     </section>
@@ -459,7 +465,7 @@ export function FamilyTemplate({
                     {/* Why Families Choose Us */}
                     <section className="py-20">
                         <div className="max-w-7xl mx-auto px-4">
-                            <h2 className="text-4xl font-bold text-center mb-16">Why Families Choose Us</h2>
+                            <Reveal as="h2" className="text-4xl font-bold text-center mb-16">Why Families Choose Us</Reveal>
                             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                                 {[
                                     { icon: Shield, title: 'Safety First', desc: 'Every car thoroughly inspected' },
@@ -467,13 +473,13 @@ export function FamilyTemplate({
                                     { icon: Heart, title: 'Family Service', desc: 'We treat you like family' },
                                     { icon: CheckCircle2, title: 'Easy Finance', desc: 'Flexible payment options' },
                                 ].map((f, i) => (
-                                    <div key={i} className="p-6 rounded-2xl bg-gray-50 hover:shadow-lg transition-shadow">
-                                        <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4" style={{ backgroundColor: `${brandColors.primary}20` }}>
+                                    <Reveal key={i} direction="up" delay={(i % 6) * 70} className="group p-6 rounded-2xl bg-gray-50 hover-lift hover-scale">
+                                        <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110" style={{ backgroundColor: `${brandColors.primary}20` }}>
                                             <f.icon className="w-6 h-6" style={{ color: brandColors.primary }} />
                                         </div>
                                         <h3 className="text-xl font-bold mb-2">{f.title}</h3>
                                         <p className="text-gray-600">{f.desc}</p>
-                                    </div>
+                                    </Reveal>
                                 ))}
                             </div>
                         </div>
@@ -523,7 +529,7 @@ export function FamilyTemplate({
                         <div className="max-w-7xl mx-auto px-4">
                             <div className="grid lg:grid-cols-2 gap-12 items-start">
                                 {/* Info */}
-                                <div>
+                                <Reveal direction="left">
                                     <span className="font-semibold uppercase tracking-wider text-sm" style={{ color: brandColors.primary }}>
                                         We&apos;re Here to Help
                                     </span>
@@ -571,13 +577,13 @@ export function FamilyTemplate({
                                             />
                                         </div>
                                     )}
-                                </div>
+                                </Reveal>
 
                                 {/* Form */}
-                                <div className="bg-white rounded-2xl shadow-xl p-8">
+                                <Reveal direction="right" className="bg-white rounded-2xl shadow-xl p-8">
                                     {formStatus === 'sent' ? (
-                                        <div className="text-center py-10">
-                                            <Heart className="w-16 h-16 mx-auto mb-4" style={{ color: brandColors.primary }} />
+                                        <div className="text-center py-10 animate-fade-in">
+                                            <Heart className="w-16 h-16 mx-auto mb-4 animate-bounce-subtle" style={{ color: brandColors.primary }} />
                                             <h3 className="text-2xl font-bold mb-2">Thank You!</h3>
                                             <p className="text-gray-600">Our team will get back to you soon. We can&apos;t wait to help your family find the perfect {vl.familyVehicle}!</p>
                                         </div>
@@ -632,7 +638,7 @@ export function FamilyTemplate({
                                             <Button
                                                 type="submit"
                                                 disabled={formStatus === 'sending'}
-                                                className="w-full text-white py-3 rounded-xl font-semibold"
+                                                className="w-full text-white py-3 rounded-xl font-semibold hover-lift"
                                                 style={{ backgroundColor: brandColors.primary }}
                                             >
                                                 {formStatus === 'sending' ? 'Sending...' : (
@@ -644,16 +650,16 @@ export function FamilyTemplate({
                                             </Button>
                                         </form>
                                     )}
-                                </div>
+                                </Reveal>
                             </div>
                         </div>
                     </section>
-                </>
+                </div>
             )}
 
             {/* Inventory Tab */}
             {showInventoryTab && activeTab === 'inventory' && (
-                <div className="pt-24 pb-12 bg-gray-50 min-h-screen">
+                <div className="pt-24 pb-12 bg-gray-50 min-h-screen animate-fade-in">
                     <div className="max-w-7xl mx-auto px-4">
                         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
                             <h1 className="text-4xl font-bold">Our Inventory</h1>

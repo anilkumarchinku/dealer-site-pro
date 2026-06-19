@@ -8,6 +8,7 @@
 
 import { useState, useEffect, type MouseEvent } from 'react';
 import Image from 'next/image';
+import { FadeInImage } from '@/components/ui/FadeInImage';
 import { useRouter } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import type { Car } from '@/lib/types/car';
@@ -32,7 +33,6 @@ import {
     Send,
     Eye,
     ShieldCheck,
-    MapPin,
     Calendar,
     ChevronDown,
     ChevronUp,
@@ -328,7 +328,7 @@ export function CarCard({
                         onClick={handleOpenQuickCard}
                     >
                         {cardDisplayUrl ? (
-                            <Image
+                            <FadeInImage
                                 src={cardDisplayUrl}
                                 alt={`${car.make} ${car.model}`}
                                 fill
@@ -441,7 +441,7 @@ export function CarCard({
 
                         if (displayUrl) {
                             return (
-                                <Image
+                                <FadeInImage
                                     src={displayUrl}
                                     alt={`${car.make} ${car.model}`}
                                     fill

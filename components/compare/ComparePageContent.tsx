@@ -12,20 +12,13 @@ import { Car } from '@/lib/types/car';
 import { formatPriceInLakhs } from '@/lib/utils/car-utils';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
-import { Separator } from '@/components/ui/separator';
 import {
     ChevronRight,
     Plus,
     X,
     Search,
     Trophy,
-    Fuel,
-    Gauge,
-    Users,
-    Shield,
-    Zap,
     Car as CarIcon,
     ArrowRight,
 } from 'lucide-react';

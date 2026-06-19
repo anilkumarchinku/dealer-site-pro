@@ -51,8 +51,6 @@ import {
     Heart,
     Star,
     Check,
-    X,
-    ChevronLeft,
     Calculator,
     Car as CarIcon,
     Palette,

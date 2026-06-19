@@ -27,7 +27,6 @@ import {
     Box,
     MoveVertical,
     Send,
-    X,
     BadgeCheck,
     Settings,
 } from 'lucide-react';

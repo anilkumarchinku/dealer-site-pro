@@ -13,11 +13,9 @@ import {
     LayoutDashboard,
     Users,
     Car,
-    Plus,
     BarChart3,
     MessageSquare,
     Settings,
-    Globe,
     HelpCircle,
     Bell,
     LogOut,
@@ -35,7 +33,6 @@ import {
     Menu,
     X,
 } from "lucide-react";
-import { dealerSiteHref } from "@/lib/utils/domain";
 import type { StyleTemplate } from "@/lib/types";
 
 const navGroups = [
@@ -119,7 +116,7 @@ export default function DashboardLayout({
 }) {
     const pathname = usePathname();
     const router   = useRouter();
-    const { data, updateData, setDealerId, setDealerSlug, dealerSlug, setSellsTwoWheelers, setSellsThreeWheelers, setSellsFourWheelers } = useOnboardingStore();
+    const { data, updateData, setDealerId, setDealerSlug, dealerSlug, setSellsTwoWheelers, setSellsThreeWheelers, setSellsFourWheelers, reset } = useOnboardingStore();
     const isFirstHand = data.sellsNewCars && !data.sellsUsedCars;
     const [unreadCount,        setUnreadCount]         = useState(0);
     const [onboardingComplete, setOnboardingComplete]  = useState(true);
@@ -174,6 +171,14 @@ export default function DashboardLayout({
                     return;
                 }
 
+                // Account-switch guard: if a different dealer is cached locally
+                // (e.g. a previous user signed in on this browser), clear the stale
+                // store before repopulating so we never show another account's data.
+                const cachedDealerId = useOnboardingStore.getState().dealerId;
+                if (cachedDealerId && cachedDealerId !== dealer.id) {
+                    reset();
+                }
+
                 setDealerId(dealer.id);
                 if (dealer.slug) setDealerSlug(dealer.slug);
                 setOnboardingComplete(dealer.onboarding_complete ?? false);
@@ -209,9 +214,8 @@ export default function DashboardLayout({
                     .eq('is_archived', false);
                 setUnreadCount(count ?? 0);
 
-                // Store already populated — skip the extra brands query
-                if (data.dealershipName) return;
-
+                // Always reconcile the displayed profile to the authenticated dealer
+                // (closure `data` is stale here, so we cannot safely early-return on it).
                 const { data: brands } = await supabase
                     .from('dealer_brands')
                     .select('brand_name')

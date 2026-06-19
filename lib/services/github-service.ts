@@ -12,6 +12,7 @@ import fs from 'fs'
 import path from 'path'
 import { getRequiredEnv } from '@/lib/env'
 import { externalApiFetch } from '@/lib/services/external-api-fetch'
+import { logger } from '@/lib/utils/logger'
 
 const BASE = 'https://api.github.com'
 
@@ -202,9 +203,9 @@ export async function syncDirectory(
                     content,
                     `chore: sync ${relPath} [auto]`
                 )
-                console.log(`Synced ${relPath}`)
+                logger.log(`Synced ${relPath}`)
             } catch (err) {
-                console.error(`Failed to sync ${relPath}:`, err)
+                logger.error(`Failed to sync ${relPath}:`, err)
             }
         }
     }

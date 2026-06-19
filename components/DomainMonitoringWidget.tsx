@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Activity, TrendingUp, Shield, AlertTriangle, CheckCircle2, Globe } from 'lucide-react'
+import { Activity, Shield, AlertTriangle, CheckCircle2, Globe } from 'lucide-react'
 
 interface MonitoringStats {
     totalDomains: number

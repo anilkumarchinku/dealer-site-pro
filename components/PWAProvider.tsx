@@ -7,6 +7,7 @@
 'use client';
 
 import { useEffect } from 'react';
+import { logger } from '@/lib/utils/logger';
 
 export function PWAProvider() {
     useEffect(() => {
@@ -16,14 +17,14 @@ export function PWAProvider() {
             navigator.serviceWorker.getRegistrations()
                 .then(registrations => Promise.all(registrations.map(registration => registration.unregister())))
                 .catch(err => {
-                    console.warn('[SW] Development cleanup failed:', err);
+                    logger.warn('[SW] Development cleanup failed:', err);
                 });
 
             if ('caches' in window) {
                 caches.keys()
                     .then(keys => Promise.all(keys.map(key => caches.delete(key))))
                     .catch(err => {
-                        console.warn('[SW] Cache cleanup failed:', err);
+                        logger.warn('[SW] Cache cleanup failed:', err);
                     });
             }
 
@@ -33,10 +34,10 @@ export function PWAProvider() {
         navigator.serviceWorker
             .register('/sw.js', { scope: '/' })
             .then(reg => {
-                console.log('[SW] Registered:', reg.scope);
+                logger.log('[SW] Registered:', reg.scope);
             })
             .catch(err => {
-                console.warn('[SW] Registration failed:', err);
+                logger.warn('[SW] Registration failed:', err);
             });
     }, []);
 

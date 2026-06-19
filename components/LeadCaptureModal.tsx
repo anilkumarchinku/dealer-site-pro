@@ -5,7 +5,7 @@
 "use client"
 
 import { useState, useEffect } from 'react';
-import { X, Phone, Mail, MessageSquare, Calendar, Fuel, Gauge, Users, Settings2, Car, Palette, Zap, Shield, Award } from 'lucide-react';
+import { X, Phone, Settings2, Zap, Shield } from 'lucide-react';
 import type { CarModel } from '@/lib/data/car-models';
 
 interface LeadCaptureModalProps {

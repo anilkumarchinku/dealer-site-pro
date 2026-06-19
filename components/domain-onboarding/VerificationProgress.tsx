@@ -8,7 +8,7 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { CheckCircle2, XCircle, Loader2, Clock, AlertCircle } from 'lucide-react';
+import { CheckCircle2, Loader2, Clock, AlertCircle } from 'lucide-react';
 
 export type VerificationInstructions = Record<string, string | number | boolean | null>
 

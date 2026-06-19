@@ -4,6 +4,7 @@
  */
 
 import { createCloudflareService } from './cloudflare';
+import { logger } from '@/lib/utils/logger';
 
 interface DeploymentConfig {
     onboardingId: string;
@@ -76,7 +77,7 @@ export class DeploymentOrchestrator {
             }
         }
 
-        console.log(`${this.getStepEmoji(status)} ${stepName}: ${status}${message ? ` - ${message}` : ''}`);
+        logger.log(`${this.getStepEmoji(status)} ${stepName}: ${status}${message ? ` - ${message}` : ''}`);
     }
 
     /**
@@ -141,7 +142,7 @@ export class DeploymentOrchestrator {
         // TODO: Run schema creation scripts
         // TODO: Set up user permissions
 
-        console.log('Database schema created successfully');
+        logger.log('Database schema created successfully');
     }
 
     /**
@@ -154,7 +155,7 @@ export class DeploymentOrchestrator {
         // TODO: Set correct file permissions
         // TODO: Configure environment variables
 
-        console.log('Website files deployed successfully');
+        logger.log('Website files deployed successfully');
     }
 
     /**
@@ -208,9 +209,9 @@ export class DeploymentOrchestrator {
                 await cloudflare.addDNSRecord(zoneId, record);
             }
 
-            console.log('CDN configured successfully');
+            logger.log('CDN configured successfully');
         } catch (error) {
-            console.warn('Cloudflare configuration skipped:', error);
+            logger.warn('Cloudflare configuration skipped:', error);
             // Continue without Cloudflare if it fails
         }
     }
@@ -232,7 +233,7 @@ export class DeploymentOrchestrator {
                 while (attempts < 12) { // 2 minutes max
                     const sslStatus = await cloudflare.getSSLStatus(zoneId);
                     if (sslStatus.status === 'active') {
-                        console.log('SSL certificate provisioned successfully');
+                        logger.log('SSL certificate provisioned successfully');
                         return;
                     }
                     await new Promise(resolve => setTimeout(resolve, 10000)); // Wait 10 seconds
@@ -242,7 +243,7 @@ export class DeploymentOrchestrator {
                 throw new Error('SSL provisioning timeout');
             }
         } catch (error) {
-            console.warn('SSL provisioning skipped:', error);
+            logger.warn('SSL provisioning skipped:', error);
             // Continue without SSL if it fails
         }
     }
@@ -256,7 +257,7 @@ export class DeploymentOrchestrator {
         // TODO: Seed initial data
         // TODO: Verify migration success
 
-        console.log('Database migrations completed successfully');
+        logger.log('Database migrations completed successfully');
     }
 
     /**
@@ -268,7 +269,7 @@ export class DeploymentOrchestrator {
         // TODO: Send credentials to dealer via email
         // TODO: Create initial dealer profile
 
-        console.log('Admin account created successfully');
+        logger.log('Admin account created successfully');
     }
 
     /**
@@ -282,7 +283,7 @@ export class DeploymentOrchestrator {
         // TODO: Test contact form
         // TODO: Run Lighthouse audit
 
-        console.log('Automated tests passed successfully');
+        logger.log('Automated tests passed successfully');
     }
 
     /**
@@ -291,7 +292,7 @@ export class DeploymentOrchestrator {
     private async updateDNSToProduction(): Promise<void> {
         // This step is only needed if using staging first
         // For now, DNS is already configured in step 4
-        console.log('DNS already pointing to production');
+        logger.log('DNS already pointing to production');
     }
 
     /**
@@ -314,7 +315,7 @@ export class DeploymentOrchestrator {
                 throw new Error(`Website returned status ${response.status}`);
             }
 
-            console.log(`✅ Website verified at ${websiteUrl}`);
+            logger.log(`✅ Website verified at ${websiteUrl}`);
         } catch (error) {
             throw new Error(`Failed to verify website at ${websiteUrl}: ${error}`);
         }
@@ -324,8 +325,8 @@ export class DeploymentOrchestrator {
      * Execute complete deployment pipeline
      */
     async deploy(): Promise<DeploymentResult> {
-        console.log('🚀 Starting deployment orchestration...');
-        console.log(`📋 Config: ${this.config.domain} (${this.config.deploymentRoute})`);
+        logger.log('🚀 Starting deployment orchestration...');
+        logger.log(`📋 Config: ${this.config.domain} (${this.config.deploymentRoute})`);
 
         const stepOperations = [
             { name: 'Validate configuration', fn: () => this.validateConfiguration() },
@@ -345,7 +346,7 @@ export class DeploymentOrchestrator {
             const success = await this.executeStep(step.name, step.fn);
 
             if (!success) {
-                console.error(`❌ Deployment failed at step: ${step.name}`);
+                logger.error(`❌ Deployment failed at step: ${step.name}`);
                 return {
                     success: false,
                     steps: this.steps,
@@ -358,8 +359,8 @@ export class DeploymentOrchestrator {
             ? `${this.config.subdomain}.${this.config.domain}`
             : this.config.domain;
 
-        console.log('🎉 Deployment completed successfully!');
-        console.log(`🌐 Website URL: https://${targetDomain}`);
+        logger.log('🎉 Deployment completed successfully!');
+        logger.log(`🌐 Website URL: https://${targetDomain}`);
 
         return {
             success: true,
@@ -391,7 +392,7 @@ export class DeploymentOrchestrator {
      * Rollback deployment
      */
     async rollback(): Promise<void> {
-        console.log('🔄 Starting deployment rollback...');
+        logger.log('🔄 Starting deployment rollback...');
 
         // TODO: Remove DNS records
         // TODO: Delete database
@@ -399,7 +400,7 @@ export class DeploymentOrchestrator {
         // TODO: Clear CDN cache
         // TODO: Update onboarding status
 
-        console.log('✅ Rollback completed');
+        logger.log('✅ Rollback completed');
     }
 }
 

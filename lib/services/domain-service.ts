@@ -7,6 +7,7 @@ import type { DealerDomainRow, Database } from '@/lib/database.types'
 import type { Domain } from '../supabase'
 import { createAdminClient, type RouteSupabaseClient } from '@/lib/supabase-server'
 import { generateSlug, makeSlugUnique, validateSlug, getSubdomainUrl } from '../utils/slug'
+import { logger } from '@/lib/utils/logger'
 
 type DomainSupabaseClient = Pick<ReturnType<typeof createAdminClient> | RouteSupabaseClient, 'from'>
 
@@ -190,7 +191,7 @@ export async function createSubdomainForDealer(
             .single()
 
         if (routingError) {
-            console.error('Error creating dealer_domains subdomain:', routingError)
+            logger.error('Error creating dealer_domains subdomain:', routingError)
         }
 
         if (routingDomain) {
@@ -202,7 +203,7 @@ export async function createSubdomainForDealer(
                 .single()
 
             if (legacyCompatError) {
-                console.error('Error creating compatibility domain:', legacyCompatError)
+                logger.error('Error creating compatibility domain:', legacyCompatError)
             }
 
             return {
@@ -219,7 +220,7 @@ export async function createSubdomainForDealer(
             .single()
 
         if (error) {
-            console.error('Error creating subdomain:', error)
+            logger.error('Error creating subdomain:', error)
             return {
                 success: false,
                 error: 'Failed to create subdomain. Please try again.'
@@ -231,7 +232,7 @@ export async function createSubdomainForDealer(
             domain: newDomain as unknown as Domain
         }
     } catch (error) {
-        console.error('Unexpected error in createSubdomainForDealer:', error)
+        logger.error('Unexpected error in createSubdomainForDealer:', error)
         return {
             success: false,
             error: 'An unexpected error occurred'
@@ -280,7 +281,7 @@ export async function getDomainBySlug(slug: string): Promise<Domain | null> {
 
         return data as unknown as Domain
     } catch (error) {
-        console.error('Error getting domain by slug:', error)
+        logger.error('Error getting domain by slug:', error)
         return null
     }
 }
@@ -332,7 +333,7 @@ export async function getDomainByName(domainName: string): Promise<Domain | null
 
         return data as unknown as Domain
     } catch (error) {
-        console.error('Error getting domain by name:', error)
+        logger.error('Error getting domain by name:', error)
         return null
     }
 }
@@ -362,12 +363,12 @@ export async function getDealerDomains(
         ])
 
         if (legacyResult.error && routingResult.error) {
-            console.error('Error getting dealer domains:', legacyResult.error, routingResult.error)
+            logger.error('Error getting dealer domains:', legacyResult.error, routingResult.error)
             return []
         }
 
-        if (legacyResult.error) console.error('Error getting legacy domains:', legacyResult.error)
-        if (routingResult.error) console.error('Error getting dealer_domains:', routingResult.error)
+        if (legacyResult.error) logger.error('Error getting legacy domains:', legacyResult.error)
+        if (routingResult.error) logger.error('Error getting dealer_domains:', routingResult.error)
 
         const routingDomains = ((routingResult.data || []) as unknown as DealerDomainRow[]).map(mapDealerDomain)
         const seenDomains = new Set(routingDomains.map(domain => domain.domain.toLowerCase()))
@@ -379,7 +380,7 @@ export async function getDealerDomains(
             return new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
         })
     } catch (error) {
-        console.error('Unexpected error in getDealerDomains:', error)
+        logger.error('Unexpected error in getDealerDomains:', error)
         return []
     }
 }
@@ -414,7 +415,7 @@ export async function getPrimaryDomain(dealerId: string): Promise<Domain | null>
 
         return legacyDomain as unknown as Domain
     } catch (error) {
-        console.error('Error getting primary domain:', error)
+        logger.error('Error getting primary domain:', error)
         return null
     }
 }
@@ -476,7 +477,7 @@ export async function updateDomainStatus(
 
         return !routingResult.error || !legacyResult.error
     } catch (error) {
-        console.error('Error updating domain status:', error)
+        logger.error('Error updating domain status:', error)
         return false
     }
 }
@@ -525,7 +526,7 @@ export async function setPrimaryDomain(
 
         return { success: true }
     } catch (error) {
-        console.error('Error setting primary domain:', error)
+        logger.error('Error setting primary domain:', error)
         return {
             success: false,
             error: 'An unexpected error occurred'

@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
 import { getOptionalEnv } from '@/lib/env'
 import { monitorSSLCertificates, monitorDomainExpiry } from '@/lib/services/monitoring-service'
+import { logger } from '@/lib/utils/logger'
 
 /**
  * GET /api/cron/monitor-domains
@@ -17,7 +18,7 @@ export async function GET(request: Request) {
         const authHeader = request.headers.get('authorization')
         const cronSecret = getOptionalEnv('CRON_SECRET')
         if (!cronSecret) {
-            console.error('[Cron] CRON_SECRET env var is not set')
+            logger.error('[Cron] CRON_SECRET env var is not set')
             return NextResponse.json({ success: false, error: 'Cron not configured' }, { status: 503 })
         }
 
@@ -28,7 +29,7 @@ export async function GET(request: Request) {
             )
         }
 
-        console.log('[Cron] Running domain monitoring...')
+        logger.log('[Cron] Running domain monitoring...')
 
         // Check SSL certificates
         const sslResults = await monitorSSLCertificates()
@@ -43,7 +44,7 @@ export async function GET(request: Request) {
             expiry: expiryResults
         })
     } catch (error) {
-        console.error('Cron job error:', error)
+        logger.error('Cron job error:', error)
         return NextResponse.json(
             { success: false, error: 'Internal server error' },
             { status: 500 }

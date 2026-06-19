@@ -22,6 +22,7 @@ import { sendLeadConfirmationEmail, sendLeadNotificationEmail } from '@/lib/serv
 
 import { logger } from '@/lib/utils/logger'
 import { leadSchema, formatZodErrors } from '@/lib/validations/schemas'
+import { rateLimitOrNull } from '@/lib/utils/rate-limiter'
 
 const UUID_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i
 
@@ -103,6 +104,7 @@ async function markCyeproSyncResult(
 
 export async function POST(request: NextRequest) {
     try {
+        const limited = await rateLimitOrNull("lead_create", request, 5, 60000); if (limited) return limited;
         const body = await request.json()
 
         // Extract referer to know which exact website this lead came from

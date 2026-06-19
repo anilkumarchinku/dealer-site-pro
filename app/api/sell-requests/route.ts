@@ -4,6 +4,7 @@ import { formatZodErrors, sellRequestSchema } from '@/lib/validations/schemas'
 import { logger } from '@/lib/utils/logger'
 import { getOptionalEnv } from '@/lib/env'
 import { sendSellRequestConfirmationEmail, sendSellRequestNotificationEmail } from '@/lib/services/email-service'
+import { rateLimitOrNull } from '@/lib/utils/rate-limiter'
 
 const SELL_REQUEST_STATUSES = ['new', 'reviewing', 'contacted', 'approved', 'rejected', 'listed'] as const
 type SellRequestStatus = typeof SELL_REQUEST_STATUSES[number]
@@ -135,6 +136,7 @@ export async function GET() {
 }
 
 export async function POST(request: NextRequest) {
+    const limited = await rateLimitOrNull("sell_request_create", request, 5, 60000); if (limited) return limited;
     const body = await request.json().catch(() => null)
     if (!body) return NextResponse.json({ error: 'Invalid JSON' }, { status: 400 })
 

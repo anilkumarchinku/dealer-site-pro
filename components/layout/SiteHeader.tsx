@@ -11,19 +11,14 @@ import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Badge } from '@/components/ui/badge';
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import { Separator } from '@/components/ui/separator';
 import {
     Search,
     Menu,
-    X,
     ChevronDown,
     Car,
-    Fuel,
-    Calculator,
     Star,
-    TrendingUp,
     ArrowRight,
     Bike,
 } from 'lucide-react';

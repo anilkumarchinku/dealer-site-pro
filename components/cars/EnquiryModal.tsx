@@ -14,7 +14,6 @@ import {
     Dialog,
     DialogContent,
     DialogDescription,
-    DialogHeader,
     DialogTitle,
 } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
@@ -34,7 +33,6 @@ import {
     CheckCircle,
     MapPin,
 } from 'lucide-react';
-import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
 import { formatPriceInLakhs } from '@/lib/utils/car-utils';
 import { getBrandLogo } from '@/lib/data/brand-logos';
 import { getContrastText, getReadableAccent } from '@/lib/utils/color-contrast';

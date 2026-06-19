@@ -16,6 +16,10 @@ import type { Brand } from "@/lib/types";
 import { fetchAnalyticsSummary, fetchTopVehicles, type TopVehicle } from "@/lib/db/analytics";
 import { fetchLeads, type ExternalLead } from "@/lib/db/leads";
 import { DealerScorecard } from "@/components/dashboard/DealerScorecard";
+import { Reveal } from "@/components/ui/Reveal";
+import { CountUp } from "@/components/ui/CountUp";
+import { Skeleton } from "@/components/ui/skeleton";
+import { timeAgo, formatCompactNumber as fmt, titleCaseFromSnake as formatType } from "@/lib/utils/format";
 
 const CAR_BRANDS: { name: Brand; logo: string }[] = [
     { name: "Maruti Suzuki",  logo: "/assets/logos/maruti-suzuki.png" },
@@ -115,28 +119,30 @@ export default function DashboardPage() {
 
     useEffect(() => {
         if (!isSupabaseReady() || !dealerId) return;
+        let cancelled = false;
 
         setStatsLoading(true);
         fetchAnalyticsSummary(dealerId, 30)
             .then(s => {
-                if (s) {
-                    setVisitors(s.visitors);
-                    setLeadsCount(s.leads);
-                    setTestDrives(s.testDrives);
-                }
+                if (cancelled || !s) return;
+                setVisitors(s.visitors);
+                setLeadsCount(s.leads);
+                setTestDrives(s.testDrives);
             })
             .catch(() => {})
-            .finally(() => setStatsLoading(false));
+            .finally(() => { if (!cancelled) setStatsLoading(false); });
 
         setLeadsLoading(true);
         Promise.all([
             fetchLeads(dealerId),
             fetchTopVehicles(dealerId, 4),
         ]).then(([leads, vehicles]) => {
+            if (cancelled) return;
             setRecentLeads(leads.slice(0, 4));
             setTopVehicles(vehicles);
-        }).catch(() => {}).finally(() => setLeadsLoading(false));
-        return;
+        }).catch(() => {}).finally(() => { if (!cancelled) setLeadsLoading(false); });
+
+        return () => { cancelled = true; };
     }, [dealerId]);
 
     async function saveCarBrands() {
@@ -160,23 +166,6 @@ export default function DashboardPage() {
         }
     }
 
-    const fmt = (n: number) => n >= 1000 ? `${(n / 1000).toFixed(1)}k` : String(n);
-
-    const timeAgo = (iso: string): string => {
-        if (!iso) return "";
-        const diff = Date.now() - new Date(iso).getTime();
-        const mins = Math.floor(diff / 60000);
-        if (mins < 1) return "just now";
-        if (mins < 60) return `${mins}m ago`;
-        const hrs = Math.floor(mins / 60);
-        if (hrs < 24) return `${hrs}h ago`;
-        const days = Math.floor(hrs / 24);
-        if (days < 7) return `${days}d ago`;
-        return new Date(iso).toLocaleDateString("en-IN", { day: "numeric", month: "short" });
-    };
-
-    const formatType = (type: string) =>
-        type.split("_").map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
 
     const STATS = [
         { label: "Total Visitors", value: visitors,   icon: Eye,      color: "blue"    as const },
@@ -368,25 +357,28 @@ export default function DashboardPage() {
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 {STATS.map((stat, i) => (
-                    <Card key={i} className="rounded-2xl border-border/70 bg-card/90 p-0 shadow-sm transition-colors hover:border-blue-200 dark:bg-card/80 dark:hover:border-blue-500/30">
-                        <CardContent className="p-5">
-                            <div className="mb-5 flex items-center justify-between">
-                                <div className={cn("p-3 rounded-xl w-fit shadow-sm", COLOR[stat.color].bg)}>
-                                    <stat.icon className={cn("w-6 h-6", COLOR[stat.color].text)} />
+                    <Reveal key={i} direction="up" delay={i * 80} className="h-full">
+                        <Card className="stat-card hover-lift h-full rounded-2xl border-border/70 bg-card/90 p-0 shadow-sm transition-colors hover:border-blue-200 dark:bg-card/80 dark:hover:border-blue-500/30">
+                            <CardContent className="p-5">
+                                <div className="mb-5 flex items-center justify-between">
+                                    <div className={cn("p-3 rounded-xl w-fit shadow-sm", COLOR[stat.color].bg)}>
+                                        <stat.icon className={cn("w-6 h-6", COLOR[stat.color].text)} />
+                                    </div>
+                                    <span className="rounded-full border border-border bg-background px-2.5 py-1 text-[11px] font-bold text-muted-foreground">
+                                        30 days
+                                    </span>
                                 </div>
-                                <span className="rounded-full border border-border bg-background px-2.5 py-1 text-[11px] font-bold text-muted-foreground">
-                                    30 days
-                                </span>
-                            </div>
-                            <p className="text-sm text-muted-foreground">{stat.label}</p>
-                            <p className="mt-1 text-3xl font-black tracking-tight">
-                                {statsLoading
-                                    ? <Loader2 className="w-6 h-6 animate-spin text-muted-foreground" />
-                                    : stat.value !== null ? fmt(stat.value) : "—"
-                                }
-                            </p>
-                        </CardContent>
-                    </Card>
+                                <p className="text-sm text-muted-foreground">{stat.label}</p>
+                                {statsLoading ? (
+                                    <Skeleton className="mt-2 h-8 w-20" />
+                                ) : (
+                                    <p className="mt-1 text-3xl font-black tracking-tight">
+                                        {stat.value !== null ? <CountUp value={fmt(stat.value)} /> : "—"}
+                                    </p>
+                                )}
+                            </CardContent>
+                        </Card>
+                    </Reveal>
                 ))}
             </div>
 
@@ -414,12 +406,12 @@ export default function DashboardPage() {
                         {leadsLoading ? (
                             <div className="space-y-4">
                                 {[...Array(3)].map((_, i) => (
-                                    <div key={i} className="flex items-start gap-4 p-4 rounded-xl bg-muted/30 animate-pulse">
-                                        <div className="w-12 h-12 rounded-full bg-muted shrink-0" />
+                                    <div key={i} className="flex items-start gap-4 p-4 rounded-xl bg-muted/30">
+                                        <Skeleton className="w-12 h-12 rounded-full shrink-0" />
                                         <div className="flex-1 space-y-2 pt-1">
-                                            <div className="h-3.5 bg-muted rounded-full w-1/3" />
-                                            <div className="h-3 bg-muted rounded-full w-1/2" />
-                                            <div className="h-3 bg-muted rounded-full w-2/3" />
+                                            <Skeleton className="h-3.5 rounded-full w-1/3" />
+                                            <Skeleton className="h-3 rounded-full w-1/2" />
+                                            <Skeleton className="h-3 rounded-full w-2/3" />
                                         </div>
                                     </div>
                                 ))}

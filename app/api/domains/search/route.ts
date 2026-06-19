@@ -1,12 +1,14 @@
 import { NextResponse } from 'next/server'
 import { searchDomains } from '@/lib/services/domain-search-service'
 import { requireAuth } from '@/lib/supabase-server'
+import { rateLimitOrNull } from '@/lib/utils/rate-limiter'
 
 /**
  * GET /api/domains/search?query=abcmotors
  * Search for available domains (PREMIUM tier)
  */
 export async function GET(request: Request) {
+    const limited = await rateLimitOrNull("domain_search", request, 30, 60000); if (limited) return limited;
     // Auth: only authenticated dealers can search domains
     const { errorResponse } = await requireAuth()
     if (errorResponse) return errorResponse

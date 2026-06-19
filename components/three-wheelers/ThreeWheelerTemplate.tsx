@@ -284,6 +284,7 @@ export function ThreeWheelerTemplate({
                                 className={`xl:hidden p-2 rounded-lg transition-colors ${isScrolled ? "text-gray-900 hover:bg-gray-100" : "text-white hover:bg-white/10"}`}
                                 onClick={() => setMobileMenuOpen(o => !o)}
                                 aria-label="Toggle menu"
+                                aria-expanded={mobileMenuOpen}
                             >
                                 {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
                             </button>

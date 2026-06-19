@@ -1,10 +1,10 @@
 'use client'
 
 import { useState } from 'react'
-import { X, Globe, Copy, Check, AlertCircle, Loader2, Palette, CreditCard } from 'lucide-react'
+import { Globe, Copy, Check, AlertCircle, Loader2, Palette, CreditCard } from 'lucide-react'
 import { getDNSInstructions } from '@/lib/services/dns-verification-service'
 import { allTemplates, TemplateStyle } from '@/lib/templates/template-styles'
-import { openRazorpayCheckout, verifyPaymentWithBackend, generateIdempotencyKey, type RazorpaySuccessResponse } from '@/lib/utils/razorpay'
+import { generateIdempotencyKey } from '@/lib/utils/razorpay'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog'

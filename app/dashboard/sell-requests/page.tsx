@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { cn } from "@/lib/utils"
 import { CheckCircle, Clock, ExternalLink, IndianRupee, Loader2, Phone, RefreshCw, Search, XCircle } from "lucide-react"
+import { timeAgo } from "@/lib/utils/format"
 
 type SellRequestStatus = "new" | "reviewing" | "contacted" | "approved" | "rejected" | "listed"
 
@@ -48,14 +49,6 @@ const statusStyles: Record<SellRequestStatus, string> = {
 function formatMoney(low: number | null, high: number | null) {
     if (!low || !high) return "Estimate pending"
     return `₹${Math.round(low / 100).toLocaleString("en-IN")} - ₹${Math.round(high / 100).toLocaleString("en-IN")}`
-}
-
-function timeAgo(iso: string) {
-    const diff = Date.now() - new Date(iso).getTime()
-    const hours = Math.floor(diff / 36e5)
-    if (hours < 1) return "just now"
-    if (hours < 24) return `${hours}h ago`
-    return `${Math.floor(hours / 24)}d ago`
 }
 
 export default function SellRequestsPage() {

@@ -83,7 +83,7 @@ export function LeadFormModal({
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
             <div className="absolute inset-0 bg-black/50" onClick={onClose} />
-            <div className="relative bg-card border border-border rounded-2xl shadow-2xl w-full max-w-md overflow-hidden">
+            <div role="dialog" aria-modal="true" aria-label={title} className="relative bg-card border border-border rounded-2xl shadow-2xl w-full max-w-md overflow-hidden">
                 {/* Image */}
                 {vehicleImage && (
                     <div className="relative h-40 bg-gray-100 w-full">

@@ -24,7 +24,6 @@ import {
     Filter,
     ChevronLeft,
     ChevronRight,
-    ChevronDown,
     X,
     Fuel,
     Zap,

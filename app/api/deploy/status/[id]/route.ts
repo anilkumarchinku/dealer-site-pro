@@ -18,14 +18,10 @@
  */
 
 import { NextResponse }            from 'next/server'
-import { createRouteClient }       from '@/lib/supabase-server'
+import { requireAuth, getDealerForUser } from '@/lib/supabase-server'
 import { getDeploymentStatus }     from '@/lib/services/vercel-service'
 
 type DeploymentStatus = 'queued' | 'building' | 'ready' | 'error' | 'cancelled'
-
-function getSupabase() {
-    return createRouteClient()
-}
 
 // Maps Vercel deployment states to our simplified status
 function vercelStateToStatus(
@@ -73,14 +69,21 @@ export async function GET(
             )
         }
 
+        // ── Auth + dealer ownership ────────────────────────────────────────────
+        const { user, supabase, errorResponse } = await requireAuth()
+        if (errorResponse) return errorResponse
+        const dealer = await getDealerForUser(supabase, user.id)
+        if (!dealer) {
+            return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
+        }
+
         // ── Path 1: Supabase record lookup (preferred) ─────────────────────────
         if (isSupabaseUUID(id)) {
-            const supabase = await getSupabase()
-
             const { data: record, error } = await supabase
                 .from('dealer_deployments')
                 .select('*')
                 .eq('id', id)
+                .eq('dealer_id', dealer.id)
                 .single()
 
             if (!error && record) {
@@ -146,8 +149,18 @@ export async function GET(
             }
         }
 
-        // ── Path 2: Vercel deployment UID fallback ─────────────────────────────
-        // Supabase record not found (or ID is a Vercel UID) — query Vercel directly
+        // ── Path 2: Vercel deployment UID fallback (must be owned by this dealer) ─
+        const { data: owned } = await supabase
+            .from('dealer_deployments')
+            .select('id')
+            .eq('vercel_deploy_id', id)
+            .eq('dealer_id', dealer.id)
+            .maybeSingle()
+
+        if (!owned) {
+            return NextResponse.json({ error: 'Deployment not found' }, { status: 404 })
+        }
+
         try {
             const deployment = await getDeploymentStatus(id)
             const status     = vercelStateToStatus(deployment.state)

@@ -14,6 +14,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { getOptionalEnv } from '@/lib/env'
 import { externalApiFetch } from '@/lib/services/external-api-fetch'
 import { createAdminClient, requireAuth, requireDealerOwnership } from '@/lib/supabase-server'
+import { rateLimitOrNull } from '@/lib/utils/rate-limiter'
 
 function getGoogleApiKey() {
     return getOptionalEnv('GOOGLE_PLACES_API_KEY')
@@ -83,6 +84,7 @@ async function fetchGoogleReviews(placeId: string): Promise<GoogleReview[]> {
 
 // ── POST handler ──────────────────────────────────────────────────────────────
 export async function POST(request: NextRequest) {
+    const limited = await rateLimitOrNull("google_sync", request, 10, 3600000); if (limited) return limited;
     // Auth: only authenticated dealers can trigger Google sync
     const { user, supabase: authClient, errorResponse } = await requireAuth()
     if (errorResponse) return errorResponse

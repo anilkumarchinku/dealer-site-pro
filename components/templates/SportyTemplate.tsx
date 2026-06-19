@@ -54,6 +54,9 @@ import { EnquireSidebar } from '@/components/cars/EnquireSidebar';
 import { EmiCalculator } from '@/components/ui/EmiCalculator';
 import type { Service } from '@/lib/types';
 import { getVehicleLabels } from '@/lib/utils/vehicle-labels';
+import { Reveal } from '@/components/ui/Reveal';
+import { CountUp } from '@/components/ui/CountUp';
+import { FadeInImage } from '@/components/ui/FadeInImage';
 
 interface SportyTemplateProps {
     brandName: string;
@@ -286,6 +289,7 @@ export function SportyTemplate({
                                 className="xl:hidden p-2 rounded-lg text-gray-900 transition-colors hover:bg-gray-100"
                                 onClick={() => setMobileMenuOpen(o => !o)}
                                 aria-label="Toggle navigation menu"
+                                aria-expanded={mobileMenuOpen}
                             >
                                 {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
                             </button>
@@ -293,7 +297,7 @@ export function SportyTemplate({
                     </div>
                     {/* Mobile menu */}
                     {mobileMenuOpen && (
-                        <div className="md:hidden border-t border-gray-200 bg-white/95 backdrop-blur-lg">
+                        <div className="xl:hidden border-t border-gray-200 bg-white/95 backdrop-blur-lg animate-fade-in-down">
                             <div className="px-4 py-3 space-y-1">
                                 <button
                                     onClick={() => { setActiveTab('home'); setMobileMenuOpen(false); }}
@@ -354,14 +358,14 @@ export function SportyTemplate({
 
             {/* Home Tab */}
             {activeTab === 'home' && (
-                <>
+                <div className="animate-fade-in">
                     {/* Hero Section */}
                     <section className="relative min-h-screen flex items-center overflow-hidden">
-                        <div className="absolute inset-0">
+                        <div className="absolute inset-0 animate-scale-in">
                             {(() => {
                                 const heroSrc = heroImageUrl;
                                 return heroSrc
-                                    ? <Image src={heroSrc} alt={`${brandName} Hero`} fill className="object-cover opacity-30" priority />
+                                    ? <FadeInImage src={heroSrc} alt={`${brandName} Hero`} fill className="object-cover opacity-30" priority />
                                     : null;
                             })()}
                             <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-transparent" />
@@ -369,7 +373,7 @@ export function SportyTemplate({
                         </div>
                         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
                             <div className="max-w-3xl">
-                                <div className="flex flex-wrap items-center gap-3 mb-4">
+                                <div className="flex flex-wrap items-center gap-3 mb-4 animate-fade-in-up">
                                     <div className="inline-block px-4 py-2 rounded-md font-bold text-sm uppercase tracking-wider" style={{ backgroundColor: `${brandAccent}15`, borderLeft: `4px solid ${brandAccent}`, color: brandAccent }}>
                                         {tagline}
                                     </div>
@@ -378,22 +382,22 @@ export function SportyTemplate({
                                     </div>
                                     {isVerified && <VerifiedBadge variant="hero" />}
                                 </div>
-                                <h1 className="text-6xl md:text-8xl font-black leading-none mb-6 tracking-tight text-gray-900">
+                                <h1 className="text-6xl md:text-8xl font-black leading-none mb-6 tracking-tight text-gray-900 animate-fade-in-up animate-delay-100">
                                     {heroTitle.split(' ').map((word, i) => (
                                         <span key={i} className={i === heroTitle.split(' ').length - 1 ? 'block' : ''} style={i === heroTitle.split(' ').length - 1 ? { color: brandAccent } : {}}>
                                             {word}{' '}
                                         </span>
                                     ))}
                                 </h1>
-                                <p className="text-2xl text-gray-600 mb-8">{heroSubtitle}</p>
-                                <div className="flex flex-wrap gap-4">
+                                <p className="text-2xl text-gray-600 mb-8 animate-fade-in-up animate-delay-200">{heroSubtitle}</p>
+                                <div className="flex flex-wrap gap-4 animate-fade-in-up animate-delay-300">
                                     {showInventoryTab && (
-                                        <Button size="lg" className="text-white font-bold text-lg uppercase tracking-wider" style={{ backgroundColor: brandAccent }} onClick={() => setActiveTab('inventory')}>
+                                        <Button size="lg" className="text-white font-bold text-lg uppercase tracking-wider hover-glow hover-scale" style={{ backgroundColor: brandAccent }} onClick={() => setActiveTab('inventory')}>
                                             EXPLORE
                                             <ArrowRight className="ml-2 w-5 h-5" />
                                         </Button>
                                     )}
-                                    <Button size="lg" variant="outline" className="font-bold uppercase border-2 bg-transparent hover:bg-white/10" style={{ borderColor: brandAccent, color: brandAccent }} asChild>
+                                    <Button size="lg" variant="outline" className="font-bold uppercase border-2 bg-transparent hover:bg-white/10 hover-scale" style={{ borderColor: brandAccent, color: brandAccent }} asChild>
                                         <a href="#contact">BOOK {vl.testDrive.toUpperCase()}</a>
                                     </Button>
                                 </div>
@@ -404,20 +408,20 @@ export function SportyTemplate({
                     {/* Stats */}
                     <section className="py-16 border-y" style={{ borderColor: `${brandAccent}33` }}>
                         <div className="max-w-7xl mx-auto px-4">
-                            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+                            <Reveal className="grid grid-cols-2 md:grid-cols-4 gap-8">
                                 {[
                                     { icon: Gauge, value: '0-100', label: 'KM/H IN 3.2S' },
                                     { icon: Zap, value: '500+', label: 'HORSEPOWER' },
                                     { icon: Timer, value: '10k+', label: 'SATISFIED RIDERS' },
                                     { icon: Flame, value: '4.9★', label: 'PERFORMANCE RATING' },
                                 ].map((stat, i) => (
-                                    <div key={i} className="text-center">
-                                        <stat.icon className="w-10 h-10 mx-auto mb-3" style={{ color: brandAccent }} />
-                                        <p className="text-4xl font-black mb-1" style={{ color: brandAccent }}>{stat.value}</p>
+                                    <div key={i} className="group text-center">
+                                        <stat.icon className="w-10 h-10 mx-auto mb-3 transition-transform duration-300 group-hover:scale-110" style={{ color: brandAccent }} />
+                                        <p className="text-4xl font-black mb-1" style={{ color: brandAccent }}><CountUp value={stat.value} /></p>
                                         <p className="text-xs uppercase tracking-wider text-gray-600">{stat.label}</p>
                                     </div>
                                 ))}
-                            </div>
+                            </Reveal>
                         </div>
                     </section>
 
@@ -425,22 +429,24 @@ export function SportyTemplate({
                     {serviceList.length > 0 && (
                         <section className="py-16 border-b border-gray-200">
                             <div className="max-w-7xl mx-auto px-4">
-                                <div className="mb-10">
+                                <Reveal className="mb-10">
                                     <span className="font-black text-sm uppercase tracking-widest" style={{ color: brandAccent }}>WHAT WE DO</span>
                                     <h2 className="text-4xl font-black mt-2 uppercase">Our Services</h2>
-                                </div>
+                                </Reveal>
                                 <div className="flex flex-wrap gap-3">
-                                    {serviceList.map((svc) => {
+                                    {serviceList.map((svc, i) => {
                                         const meta = SERVICE_LABELS[svc as string] ?? { label: svc as string, icon: '🚘' };
                                         return (
-                                            <div
+                                            <Reveal
                                                 key={svc as string}
-                                                className="flex items-center gap-2 px-4 py-2.5 rounded-md border-2 font-bold text-sm uppercase tracking-wide transition-colors"
+                                                direction="up"
+                                                delay={(i % 6) * 70}
+                                                className="group flex items-center gap-2 px-4 py-2.5 rounded-md border-2 font-bold text-sm uppercase tracking-wide hover-lift"
                                                 style={{ borderColor: brandAccent, color: brandAccent, backgroundColor: `${brandAccent}15` }}
                                             >
-                                                <span>{meta.icon}</span>
+                                                <span className="transition-transform duration-300 group-hover:scale-110">{meta.icon}</span>
                                                 <span>{meta.label}</span>
-                                            </div>
+                                            </Reveal>
                                         );
                                     })}
                                 </div>
@@ -451,7 +457,7 @@ export function SportyTemplate({
                     {/* Featured Cars */}
                     <section className="py-20">
                         <div className="max-w-7xl mx-auto px-4">
-                            <div className="flex justify-between items-end mb-12">
+                            <Reveal className="flex justify-between items-end mb-12">
                                 <div>
                                     <span className="font-black text-sm uppercase tracking-widest" style={{ color: brandAccent }}>
                                         PERFORMANCE LINEUP
@@ -459,12 +465,12 @@ export function SportyTemplate({
                                     <h2 className="text-5xl font-black mt-2">FEATURED BEASTS</h2>
                                 </div>
                                 {showInventoryTab && (
-                                    <Button variant="outline" className="border-2 font-bold uppercase bg-transparent" style={{ borderColor: brandAccent, color: brandAccent }} onClick={() => setActiveTab('inventory')}>
+                                    <Button variant="outline" className="border-2 font-bold uppercase bg-transparent hover-scale" style={{ borderColor: brandAccent, color: brandAccent }} onClick={() => setActiveTab('inventory')}>
                                         VIEW ALL
                                         <ChevronRight className="ml-1 w-4 h-4" />
                                     </Button>
                                 )}
-                            </div>
+                            </Reveal>
                             <CarGrid cars={featuredCars} brandColor={brandAccent} light summaryOnly detailBasePath={detailBasePath} dealerPhone={contactInfo.phone} dealerId={dealerId} />
                         </div>
                     </section>
@@ -475,7 +481,9 @@ export function SportyTemplate({
                     {/* Why Choose Us */}
                     <section className="py-20 border-t border-gray-200">
                         <div className="max-w-7xl mx-auto px-4">
-                            <h2 className="text-5xl font-black text-center mb-16 text-gray-900">THE EDGE</h2>
+                            <Reveal className="text-center mb-16">
+                                <h2 className="text-5xl font-black text-gray-900">THE EDGE</h2>
+                            </Reveal>
                             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                                 {[
                                     { icon: Shield, title: 'CERTIFIED', desc: 'Performance Verified' },
@@ -483,11 +491,11 @@ export function SportyTemplate({
                                     { icon: TrendingUp, title: 'TOP SPEED', desc: 'Maximum Performance' },
                                     { icon: Flame, title: 'UNLEASHED', desc: 'Pure Power' },
                                 ].map((feature, i) => (
-                                    <div key={i} className="p-6 rounded-lg border-2 border-gray-200 hover:bg-gray-50 transition-colors">
-                                        <feature.icon className="w-10 h-10 mb-4" style={{ color: brandAccent }} />
+                                    <Reveal key={i} direction="up" delay={(i % 6) * 70} className="group p-6 rounded-lg border-2 border-gray-200 hover:bg-gray-50 hover-lift">
+                                        <feature.icon className="w-10 h-10 mb-4 transition-transform duration-300 group-hover:scale-110" style={{ color: brandAccent }} />
                                         <h3 className="text-xl font-black mb-2 uppercase text-gray-900">{feature.title}</h3>
                                         <p className="text-gray-600">{feature.desc}</p>
-                                    </div>
+                                    </Reveal>
                                 ))}
                             </div>
                         </div>
@@ -496,13 +504,13 @@ export function SportyTemplate({
                     {/* EMI Calculator */}
                     <section className="py-20 border-t border-gray-200">
                         <div className="max-w-4xl mx-auto px-4">
-                            <div className="mb-10">
+                            <Reveal className="mb-10">
                                 <span className="font-black text-sm uppercase tracking-widest" style={{ color: brandAccent }}>
                                     FINANCE
                                 </span>
                                 <h2 className="text-5xl font-black mt-2 text-gray-900">EMI CALCULATOR</h2>
                                 <p className="text-gray-600 mt-2">Know your numbers before you race to the showroom</p>
-                            </div>
+                            </Reveal>
                             <EmiCalculator brandColor={brandAccent} theme="light" />
                         </div>
                     </section>
@@ -548,7 +556,7 @@ export function SportyTemplate({
                         <div className="max-w-7xl mx-auto px-4">
                             <div className="grid lg:grid-cols-2 gap-12 items-start">
                                 {/* Info */}
-                                <div>
+                                <Reveal direction="right">
                                     <span className="font-black text-sm uppercase tracking-widest" style={{ color: brandAccent }}>GET IN TOUCH</span>
                                     <h2 className="text-5xl font-black mt-2 mb-6 uppercase text-gray-900">Book a {vl.testDrive}</h2>
                                     <p className="text-gray-600 mb-8 text-lg">
@@ -574,10 +582,10 @@ export function SportyTemplate({
                                             </div>
                                         )}
                                     </div>
-                                </div>
+                                </Reveal>
 
                                 {/* Form */}
-                                <div className="rounded-lg border-2 border-gray-200 p-8 bg-white shadow-sm">
+                                <Reveal direction="left" delay={100} className="rounded-lg border-2 border-gray-200 p-8 bg-white shadow-sm">
                                     {formStatus === 'sent' ? (
                                         <div className="text-center py-10">
                                             <CheckCircle2 className="w-16 h-16 mx-auto mb-4" style={{ color: brandAccent }} />
@@ -635,7 +643,7 @@ export function SportyTemplate({
                                             <Button
                                                 type="submit"
                                                 disabled={formStatus === 'sending'}
-                                                className="w-full text-white py-3 rounded-md font-black uppercase tracking-wider"
+                                                className="w-full text-white py-3 rounded-md font-black uppercase tracking-wider hover-glow"
                                                 style={{ backgroundColor: brandAccent }}
                                             >
                                                 {formStatus === 'sending' ? 'SUBMITTING...' : (
@@ -647,16 +655,16 @@ export function SportyTemplate({
                                             </Button>
                                         </form>
                                     )}
-                                </div>
+                                </Reveal>
                             </div>
                         </div>
                     </section>
-                </>
+                </div>
             )}
 
             {/* Inventory Tab */}
             {showInventoryTab && activeTab === 'inventory' && (
-                <div className="pt-20 pb-12 min-h-screen">
+                <div className="pt-20 pb-12 min-h-screen animate-fade-in">
                     <div className="max-w-7xl mx-auto px-4">
                         <div className="mb-8 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
                             <div>

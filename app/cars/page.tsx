@@ -21,7 +21,7 @@ import {
     SelectTrigger,
     SelectValue,
 } from '@/components/ui/select';
-import { Filter, LayoutGrid, List, ChevronLeft, ChevronRight, X } from 'lucide-react';
+import { Filter, ChevronLeft, ChevronRight, X } from 'lucide-react';
 import {
     Sheet,
     SheetContent,

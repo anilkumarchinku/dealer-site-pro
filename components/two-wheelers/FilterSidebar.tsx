@@ -1,6 +1,6 @@
 "use client"
 
-import type { TwoWheelerFilters, TwoWheelerType, TwoWheelerFuelType, TwoWheelerStockStatus } from "@/lib/types/two-wheeler"
+import type { TwoWheelerFilters, TwoWheelerType, TwoWheelerFuelType } from "@/lib/types/two-wheeler"
 
 interface Props {
     filters:   TwoWheelerFilters

@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import Image from "next/image"
+import { FadeInImage } from "@/components/ui/FadeInImage"
 import Link from "next/link"
 import { Fuel, Zap, Gauge, ChevronRight, Send, Eye, Heart, TrendingUp, GitCompare, Calendar } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -78,17 +78,19 @@ export function VehicleCard({ vehicle, slug, dealerId, brandColor = "#1f2937", s
                 href={`${prefix}/two-wheelers/${vehicle.id}`}
                 className="group relative flex h-full flex-col overflow-hidden rounded-xl border border-gray-200 bg-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
             >
-                <div className="relative h-44 overflow-hidden bg-gray-50">
+                <div className="relative aspect-[16/10] overflow-hidden bg-gray-50">
                     {!imgFailed ? (
-                        // eslint-disable-next-line @next/next/no-img-element
-                        <img
+                        <FadeInImage
                             src={imgSrc}
                             alt={`${vehicle.brand} ${vehicle.model}`}
-                            className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105"
+                            fill
+                            unoptimized
+                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                            className="object-contain transition-transform duration-500 group-hover:scale-105"
                             onError={handleImgError}
                         />
                     ) : (
-                        <div className="flex h-full items-center justify-center text-sm text-gray-600">🏍️</div>
+                        <div className="flex h-full items-center justify-center text-4xl text-gray-600">🏍️</div>
                     )}
 
                     <button
@@ -147,17 +149,19 @@ export function VehicleCard({ vehicle, slug, dealerId, brandColor = "#1f2937", s
         <div className="group relative flex flex-col bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 cursor-pointer h-full">
 
             {/* Image */}
-            <div className="relative h-44 bg-gray-50 overflow-hidden">
+            <div className="relative aspect-[16/10] bg-gray-50 overflow-hidden">
                 {!imgFailed ? (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
+                    <FadeInImage
                         src={imgSrc}
                         alt={`${vehicle.brand} ${vehicle.model}`}
-                        className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                        fill
+                        unoptimized
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        className="object-contain group-hover:scale-105 transition-transform duration-500"
                         onError={handleImgError}
                     />
                 ) : (
-                    <div className="flex items-center justify-center h-full text-gray-600 text-sm">🏍️</div>
+                    <div className="flex items-center justify-center h-full text-4xl text-gray-600">🏍️</div>
                 )}
 
                 {/* Badges */}

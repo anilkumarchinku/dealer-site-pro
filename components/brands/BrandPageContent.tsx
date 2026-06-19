@@ -11,13 +11,10 @@ import { formatPriceInLakhs } from '@/lib/utils/car-utils';
 import { CarCard } from '@/components/cars/CarCard';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Separator } from '@/components/ui/separator';
 import {
     ChevronRight,
     Car as CarIcon,
     TrendingUp,
-    Gauge,
-    Fuel,
     ArrowUp,
 } from 'lucide-react';
 import Image from 'next/image';

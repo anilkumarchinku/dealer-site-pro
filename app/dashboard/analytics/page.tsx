@@ -7,6 +7,10 @@ import { cn } from "@/lib/utils";
 import { fetchAnalyticsSummary, fetchTopVehicles, type AnalyticsSummary, type TopVehicle } from "@/lib/db/analytics";
 import { useOnboardingStore } from "@/lib/store/onboarding-store";
 import { isSupabaseReady } from "@/lib/supabase";
+import { Reveal } from "@/components/ui/Reveal";
+import { CountUp } from "@/components/ui/CountUp";
+import { Skeleton } from "@/components/ui/skeleton";
+import { formatCompactNumber as fmt } from "@/lib/utils/format";
 
 
 const DATE_RANGE_DAYS: Record<string, number> = {
@@ -25,19 +29,21 @@ export default function AnalyticsPage() {
     useEffect(() => {
         if (!useDB) return;
         const days = DATE_RANGE_DAYS[dateRange] ?? 30;
+        let cancelled = false;
         setLoading(true);
         Promise.all([
             fetchAnalyticsSummary(dealerId!, days),
             fetchTopVehicles(dealerId!, 5),
         ]).then(([s, tv]) => {
+            if (cancelled) return;   // a newer date-range request superseded this one
             setSummary(s);
             setTopVehicles(tv);
-        }).finally(() => setLoading(false));
-        return;
+        }).finally(() => {
+            if (!cancelled) setLoading(false);
+        });
+        return () => { cancelled = true; };
     }, [dealerId, dateRange, useDB]);
 
-    // Format large numbers
-    const fmt = (n: number) => n >= 1000 ? `${(n / 1000).toFixed(1)}k` : String(n);
 
     // Derived display values — all zero/empty when no data loaded
     const data = summary;
@@ -118,29 +124,33 @@ export default function AnalyticsPage() {
             {/* Stats Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 {STATS.map((stat, index) => (
-                    <Card key={index} className="hover:shadow-lg transition-all duration-300">
-                        <CardContent className="p-6">
-                            <div className="flex items-start justify-between mb-4">
-                                <div className={cn("p-3 rounded-xl", stat.bg)}>
-                                    <stat.icon className={cn("w-6 h-6", stat.text)} />
+                    <Reveal key={index} direction="up" delay={index * 80} className="h-full">
+                        <Card className="stat-card hover-lift h-full transition-all duration-300">
+                            <CardContent className="p-6">
+                                <div className="flex items-start justify-between mb-4">
+                                    <div className={cn("p-3 rounded-xl", stat.bg)}>
+                                        <stat.icon className={cn("w-6 h-6", stat.text)} />
+                                    </div>
+                                    <TrendingUp className="w-4 h-4 text-green-500" />
                                 </div>
-                                <TrendingUp className="w-4 h-4 text-green-500" />
-                            </div>
-                            <div className="space-y-1">
-                                <p className="text-sm text-muted-foreground">{stat.label}</p>
-                                <p className="text-3xl font-bold">
-                                    {stat.value === null
-                                        ? <Loader2 className="w-6 h-6 animate-spin text-muted-foreground" />
-                                        : stat.value}
-                                </p>
-                            </div>
-                        </CardContent>
-                    </Card>
+                                <div className="space-y-1">
+                                    <p className="text-sm text-muted-foreground">{stat.label}</p>
+                                    {stat.value === null ? (
+                                        <Skeleton className="mt-1 h-8 w-20" />
+                                    ) : (
+                                        <p className="text-3xl font-bold">
+                                            <CountUp value={stat.value} />
+                                        </p>
+                                    )}
+                                </div>
+                            </CardContent>
+                        </Card>
+                    </Reveal>
                 ))}
             </div>
 
             {/* Charts Row */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <Reveal className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 {/* Daily Visitors Bar Chart */}
                 <Card variant="glass">
                     <CardHeader>
@@ -148,10 +158,7 @@ export default function AnalyticsPage() {
                     </CardHeader>
                     <CardContent>
                         {loading ? (
-                            <div className="h-64 flex items-center justify-center text-muted-foreground gap-2">
-                                <Loader2 className="w-5 h-5 animate-spin" />
-                                <span className="text-sm">Loading…</span>
-                            </div>
+                            <Skeleton className="h-64 w-full rounded-md" />
                         ) : rows.length === 0 ? (
                             <div className="h-64 flex items-center justify-center text-muted-foreground">
                                 <p className="text-sm">No visitor data yet</p>
@@ -202,10 +209,10 @@ export default function AnalyticsPage() {
                         ))}
                     </CardContent>
                 </Card>
-            </div>
+            </Reveal>
 
             {/* Bottom Row: Top Pages + Top Vehicles */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <Reveal delay={100} className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 {/* Top Pages */}
                 <Card variant="glass">
                     <CardHeader>
@@ -269,7 +276,7 @@ export default function AnalyticsPage() {
                         )}
                     </CardContent>
                 </Card>
-            </div>
+            </Reveal>
         </div>
     );
 }

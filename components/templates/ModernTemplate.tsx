@@ -6,6 +6,7 @@
 'use client';
 
 import Image from 'next/image';
+import { FadeInImage } from '@/components/ui/FadeInImage';
 import { Car } from '@/lib/types/car';
 import { CarGrid } from '@/components/cars/CarGrid';
 import { CarFilters } from '@/components/cars/CarFilters';
@@ -22,6 +23,8 @@ import { TrustBadgesSection } from '@/components/templates/sections/TrustBadgesS
 import { ServiceBookingSection } from '@/components/templates/sections/ServiceBookingSection';
 import { VideoSection } from '@/components/templates/sections/VideoSection';
 import { StickyEnquiryBar } from '@/components/ui/StickyEnquiryBar';
+import { Reveal } from '@/components/ui/Reveal';
+import { CountUp } from '@/components/ui/CountUp';
 import { DealerChatbot } from '@/components/chatbot/DealerChatbot';
 import CompareBar from '@/components/cars/CompareBar';
 import { WishlistDrawer } from '@/components/ui/WishlistDrawer';
@@ -313,6 +316,7 @@ export function ModernTemplate({
                                 className="xl:hidden p-2 rounded-lg transition-colors text-gray-900"
                                 onClick={() => setMobileMenuOpen(o => !o)}
                                 aria-label="Toggle navigation menu"
+                                aria-expanded={mobileMenuOpen}
                             >
                                 {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
                             </button>
@@ -320,7 +324,7 @@ export function ModernTemplate({
                     </div>
                     {/* Mobile menu */}
                     {mobileMenuOpen && (
-                        <div className="md:hidden border-t border-gray-100 bg-white">
+                        <div className="xl:hidden border-t border-gray-100 bg-white animate-fade-in-down">
                             <div className="px-4 py-3 space-y-1">
                                 <button
                                     onClick={() => { setActiveTab('home'); setMobileMenuOpen(false); }}
@@ -381,7 +385,7 @@ export function ModernTemplate({
 
             {/* Home Tab */}
             {activeTab === 'home' && (
-                <>
+                <div className="animate-fade-in">
                     {/* Hero Section */}
                     <section className="relative min-h-[85vh] flex items-center bg-white overflow-hidden">
                         <div className="absolute inset-0">
@@ -398,17 +402,17 @@ export function ModernTemplate({
                             <div className="grid lg:grid-cols-2 gap-12 items-center">
                                 {/* Text */}
                                 <div className="text-gray-900 space-y-6">
-                                    <div className="flex flex-wrap items-center gap-2">
+                                    <div className="flex flex-wrap items-center gap-2 animate-fade-in-up">
                                         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gray-200 bg-gray-50">
                                             <span className="text-sm font-medium text-gray-600">{dealerName}</span>
                                         </div>
                                         {isVerified && <VerifiedBadge variant="hero" />}
                                     </div>
-                                    <h1 className="text-5xl md:text-6xl font-bold leading-tight text-gray-900">
+                                    <h1 className="text-5xl md:text-6xl font-bold leading-tight text-gray-900 animate-fade-in-up animate-delay-100">
                                         {heroTitle}
                                     </h1>
-                                    <p className="text-xl text-gray-600">{heroSubtitle}</p>
-                                    <div className="flex flex-wrap gap-4">
+                                    <p className="text-xl text-gray-600 animate-fade-in-up animate-delay-200">{heroSubtitle}</p>
+                                    <div className="flex flex-wrap gap-4 animate-fade-in-up animate-delay-300">
                                         {showInventoryTab && (
                                             <Button
                                                 size="lg"
@@ -433,7 +437,7 @@ export function ModernTemplate({
 
                                 {/* Featured Car Card */}
                                 {featuredCars.length > 0 && (() => {
-                                    const heroCar = featuredCars[activeCarIndex];
+                                    const heroCar = featuredCars[activeCarIndex % featuredCars.length];
                                     const cat = heroCar.vehicleCategory as '2w' | '3w' | undefined;
                                     const scrapedSrc = (cat === '2w' || cat === '3w')
                                         ? getScrapedImageUrls(cat, brandNameToId(heroCar.make, cat), heroCar.model)[0]
@@ -443,11 +447,14 @@ export function ModernTemplate({
                                         ? heroCar.pricing.exShowroom.min.toLocaleString('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 })
                                         : (heroCar.price || 'Price on request');
                                     return (
-                                        <div className="hidden lg:block">
-                                            <div className="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden">
+                                        <div className="hidden lg:block animate-scale-in animate-delay-300">
+                                            <div
+                                                key={activeCarIndex}
+                                                className="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden hover-lift animate-fade-in"
+                                            >
                                                 <div className="aspect-video relative bg-gray-50">
                                                     {heroSrc ? (
-                                                        <Image
+                                                        <FadeInImage
                                                             src={heroSrc}
                                                             alt={heroCar.model}
                                                             fill
@@ -477,32 +484,37 @@ export function ModernTemplate({
 
                     {/* Stats Section */}
                     <section className="relative -mt-16 z-20 max-w-6xl mx-auto px-4">
-                        <div className="bg-white rounded-2xl shadow-2xl p-8 grid grid-cols-2 md:grid-cols-4 gap-8">
+                        <Reveal
+                            direction="up"
+                            className="bg-white rounded-2xl shadow-2xl p-8 grid grid-cols-2 md:grid-cols-4 gap-8"
+                        >
                             {[
                                 { value: '500+', label: 'Vehicles', icon: CarIcon },
                                 { value: '10k+', label: 'Customers', icon: Users },
                                 { value: '15+', label: 'Years', icon: Award },
                                 { value: '4.9', label: 'Rating', icon: Star },
                             ].map((stat, i) => (
-                                <div key={i} className="text-center">
+                                <div key={i} className="group text-center">
                                     <div
-                                        className="w-12 h-12 mx-auto mb-3 rounded-xl flex items-center justify-center"
+                                        className="w-12 h-12 mx-auto mb-3 rounded-xl flex items-center justify-center transition-transform duration-300 group-hover:scale-110"
                                         style={{ backgroundColor: `${brandColors.primary}20` }}
                                     >
                                         <stat.icon className="w-6 h-6" style={{ color: brandColors.primary }} />
                                     </div>
-                                    <p className="text-3xl font-bold text-gray-900">{stat.value}</p>
+                                    <p className="text-3xl font-bold text-gray-900">
+                                        <CountUp value={stat.value} />
+                                    </p>
                                     <p className="text-sm text-gray-600">{stat.label}</p>
                                 </div>
                             ))}
-                        </div>
+                        </Reveal>
                     </section>
 
                     {/* Services Section */}
                     {serviceList.length > 0 && (
                         <section className="py-16 bg-white">
                             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                                <div className="text-center mb-10">
+                                <Reveal className="text-center mb-10">
                                     <span
                                         className="font-semibold text-sm uppercase tracking-wider"
                                         style={{ color: brandColors.primary }}
@@ -510,19 +522,21 @@ export function ModernTemplate({
                                         What We Offer
                                     </span>
                                     <h2 className="text-3xl font-bold text-gray-900 mt-2">Our Services</h2>
-                                </div>
+                                </Reveal>
                                 <div className="flex flex-wrap justify-center gap-4">
-                                    {serviceList.map((svc) => {
+                                    {serviceList.map((svc, i) => {
                                         const meta = SERVICE_LABELS[svc as string] ?? { label: svc as string, icon: '🚘' };
                                         return (
-                                            <div
+                                            <Reveal
                                                 key={svc as string}
-                                                className="flex items-center gap-3 px-5 py-3 rounded-xl border bg-gray-50 hover:shadow-md transition-shadow"
+                                                direction="up"
+                                                delay={(i % 6) * 70}
+                                                className="group flex items-center gap-3 px-5 py-3 rounded-xl border bg-gray-50 hover-lift"
                                                 style={{ borderColor: `${brandColors.primary}30` }}
                                             >
-                                                <span className="text-2xl">{meta.icon}</span>
+                                                <span className="text-2xl transition-transform duration-300 group-hover:scale-110">{meta.icon}</span>
                                                 <span className="font-semibold text-gray-800">{meta.label}</span>
-                                            </div>
+                                            </Reveal>
                                         );
                                     })}
                                 </div>
@@ -533,7 +547,7 @@ export function ModernTemplate({
                     {/* Featured Cars */}
                     <section className="py-20 bg-gray-50">
                         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                            <div className="flex justify-between items-end mb-12">
+                            <Reveal className="flex justify-between items-end mb-12">
                                 <div>
                                     <span
                                         className="font-semibold text-sm uppercase tracking-wider"
@@ -549,7 +563,7 @@ export function ModernTemplate({
                                         <ChevronRight className="ml-1 w-4 h-4" />
                                     </Button>
                                 )}
-                            </div>
+                            </Reveal>
                             <CarGrid cars={featuredCars} brandColor={brandColors.primary} light summaryOnly detailBasePath={detailBasePath} dealerPhone={contactInfo.phone} dealerId={dealerId} />
                         </div>
                     </section>
@@ -560,9 +574,9 @@ export function ModernTemplate({
                     {/* Why Choose Us */}
                     <section className="py-20 bg-white">
                         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                            <div className="text-center mb-12">
+                            <Reveal className="text-center mb-12">
                                 <h2 className="text-4xl font-bold text-gray-900">Why Choose Us</h2>
-                            </div>
+                            </Reveal>
                             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                                 {[
                                     { icon: Shield, title: 'Certified Quality', desc: '150-point inspection' },
@@ -570,16 +584,16 @@ export function ModernTemplate({
                                     { icon: Clock, title: 'Fast Delivery', desc: '24-48 hours' },
                                     { icon: CheckCircle2, title: 'Easy Financing', desc: 'Instant approval' },
                                 ].map((feature, i) => (
-                                    <div key={i} className="p-6 rounded-xl bg-gray-50 hover:shadow-lg transition-shadow">
+                                    <Reveal key={i} direction="up" delay={i * 80} className="group p-6 rounded-xl bg-gray-50 hover-lift">
                                         <div
-                                            className="w-12 h-12 rounded-xl flex items-center justify-center mb-4"
+                                            className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110"
                                             style={{ backgroundColor: `${brandColors.primary}20` }}
                                         >
                                             <feature.icon className="w-6 h-6" style={{ color: brandColors.primary }} />
                                         </div>
                                         <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
                                         <p className="text-gray-600">{feature.desc}</p>
-                                    </div>
+                                    </Reveal>
                                 ))}
                             </div>
                         </div>
@@ -588,7 +602,7 @@ export function ModernTemplate({
                     {/* EMI Calculator */}
                     <section className="py-20 bg-white">
                         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                            <div className="text-center mb-10">
+                            <Reveal className="text-center mb-10">
                                 <span
                                     className="font-semibold text-sm uppercase tracking-wider"
                                     style={{ color: brandColors.primary }}
@@ -597,15 +611,19 @@ export function ModernTemplate({
                                 </span>
                                 <h2 className="text-4xl font-bold text-gray-900 mt-2">EMI Calculator</h2>
                                 <p className="text-gray-600 mt-2">Enter your details to estimate your monthly payment</p>
-                            </div>
-                            <EmiCalculator brandColor={brandColors.primary} theme="light" />
+                            </Reveal>
+                            <Reveal direction="up" delay={100}>
+                                <EmiCalculator brandColor={brandColors.primary} theme="light" />
+                            </Reveal>
                         </div>
                     </section>
 
                     {/* Customer Reviews */}
                     <section className="py-16 bg-white">
                         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                            <ReviewsSection dealerId={dealerId} brandColor={brandColors.primary} variant="light" />
+                            <Reveal>
+                                <ReviewsSection dealerId={dealerId} brandColor={brandColors.primary} variant="light" />
+                            </Reveal>
                         </div>
                     </section>
 
@@ -643,7 +661,7 @@ export function ModernTemplate({
                         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                             <div className="grid lg:grid-cols-2 gap-12 items-start">
                                 {/* Left — info */}
-                                <div>
+                                <Reveal direction="right">
                                     <span
                                         className="font-semibold text-sm uppercase tracking-wider"
                                         style={{ color: brandColors.primary }}
@@ -694,12 +712,12 @@ export function ModernTemplate({
                                             />
                                         </div>
                                     )}
-                                </div>
+                                </Reveal>
 
                                 {/* Right — form */}
-                                <div className="bg-white rounded-2xl shadow-xl p-8">
+                                <Reveal direction="left" delay={100} className="bg-white rounded-2xl shadow-xl p-8">
                                     {formStatus === 'sent' ? (
-                                        <div className="text-center py-10">
+                                        <div className="text-center py-10 animate-scale-in">
                                             <CheckCircle2 className="w-16 h-16 mx-auto mb-4" style={{ color: brandColors.primary }} />
                                             <h3 className="text-2xl font-bold text-gray-900 mb-2">Thank You!</h3>
                                             <p className="text-gray-600">We&apos;ll be in touch with you shortly.</p>
@@ -770,16 +788,16 @@ export function ModernTemplate({
                                             </Button>
                                         </form>
                                     )}
-                                </div>
+                                </Reveal>
                             </div>
                         </div>
                     </section>
-                </>
+                </div>
             )}
 
             {/* Inventory Tab */}
             {showInventoryTab && activeTab === 'inventory' && (
-                <div className="pt-20 pb-12 bg-gray-50 min-h-screen">
+                <div className="pt-20 pb-12 bg-gray-50 min-h-screen animate-fade-in">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="mb-8 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
                             <div>

@@ -15,6 +15,9 @@ import { ApiUsageWidget } from "@/components/dashboard/ApiUsageWidget";
 import { Badge } from "@/components/ui/badge";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { PremiumEmptyState, PremiumPageHeader } from "@/components/dashboard/premium-ui";
+import { Reveal } from "@/components/ui/Reveal";
+import { CountUp } from "@/components/ui/CountUp";
+import { Skeleton } from "@/components/ui/skeleton";
 
 const STAT_CONFIG = [
     { label: "Total Stock",  icon: Car,        bg: "bg-primary/10",    text: "text-primary" },
@@ -204,24 +207,30 @@ export default function InventoryPage() {
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 {STAT_CONFIG.map((stat, index) => (
-                    <Card key={index} className="rounded-2xl border-border/70 bg-card/90 p-0 shadow-sm transition-colors hover:border-blue-200 dark:bg-card/80 dark:hover:border-blue-500/30">
-                        <CardContent className="p-5">
-                            <div className="mb-5 flex items-center justify-between">
-                                <div className={`p-3 rounded-xl w-fit shadow-sm ${stat.bg}`}>
-                                    <stat.icon className={`w-6 h-6 ${stat.text}`} />
+                    <Reveal key={index} direction="up" delay={index * 80} className="h-full">
+                        <Card className="stat-card hover-lift h-full rounded-2xl border-border/70 bg-card/90 p-0 shadow-sm transition-colors hover:border-blue-200 dark:bg-card/80 dark:hover:border-blue-500/30">
+                            <CardContent className="p-5">
+                                <div className="mb-5 flex items-center justify-between">
+                                    <div className={`p-3 rounded-xl w-fit shadow-sm ${stat.bg}`}>
+                                        <stat.icon className={`w-6 h-6 ${stat.text}`} />
+                                    </div>
+                                    <span className="rounded-full border border-border bg-background px-2.5 py-1 text-[11px] font-bold text-muted-foreground">
+                                        Stock
+                                    </span>
                                 </div>
-                                <span className="rounded-full border border-border bg-background px-2.5 py-1 text-[11px] font-bold text-muted-foreground">
-                                    Stock
-                                </span>
-                            </div>
-                            <div className="space-y-1">
-                                <p className="text-sm text-muted-foreground">{stat.label}</p>
-                                <p className="text-3xl font-black tracking-tight">
-                                    {loading ? <Loader2 className="w-6 h-6 animate-spin text-muted-foreground" /> : statValues[index]}
-                                </p>
-                            </div>
-                        </CardContent>
-                    </Card>
+                                <div className="space-y-1">
+                                    <p className="text-sm text-muted-foreground">{stat.label}</p>
+                                    {loading ? (
+                                        <Skeleton className="mt-1 h-8 w-16" />
+                                    ) : (
+                                        <p className="text-3xl font-black tracking-tight">
+                                            <CountUp value={String(statValues[index])} />
+                                        </p>
+                                    )}
+                                </div>
+                            </CardContent>
+                        </Card>
+                    </Reveal>
                 ))}
             </div>
 
@@ -311,9 +320,16 @@ export default function InventoryPage() {
 
             {/* Inventory Table */}
             {loading ? (
-                <div className="flex items-center justify-center py-16 text-muted-foreground gap-2">
-                    <Loader2 className="w-5 h-5 animate-spin" />
-                    <span className="text-sm">Loading inventory…</span>
+                <div className="w-full overflow-hidden rounded-2xl border border-border/70 bg-card/90 shadow-sm dark:bg-card/80">
+                    {[...Array(5)].map((_, i) => (
+                        <div key={i} className="flex items-center gap-4 border-b border-border/50 p-4 last:border-0">
+                            <Skeleton className="h-10 w-10 shrink-0 rounded-lg" />
+                            <Skeleton className="h-4 flex-1" />
+                            <Skeleton className="h-4 w-20" />
+                            <Skeleton className="h-4 w-16" />
+                            <Skeleton className="h-6 w-20 rounded-full" />
+                        </div>
+                    ))}
                 </div>
             ) : dbVehicles.length === 0 ? (
                 <PremiumEmptyState
@@ -384,12 +400,12 @@ function DBVehicleTable({
                     </TableRow>
                 </TableHeader>
                 <TableBody>
-                    {vehicles.map(v => {
+                    {vehicles.map((v, idx) => {
                         const badge = conditionBadge(v.condition);
                         const insuranceBadge = getInsuranceBadge(v);
                         const InsuranceIcon = insuranceBadge.icon;
                         return (
-                            <TableRow key={v.id}>
+                            <TableRow key={v.id} className="animate-fade-in" style={{ animationDelay: `${(idx % 12) * 35}ms` }}>
                                 <TableCell>
                                     <div className="font-semibold text-foreground">{v.make} {v.model}</div>
                                     {v.variant && <div className="text-xs text-muted-foreground">{v.variant}</div>}

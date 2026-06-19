@@ -19,6 +19,7 @@ import { getOptionalEnv } from '@/lib/env'
 import { ExternalApiError, externalApiFetch } from '@/lib/services/external-api-fetch'
 import { requireAuth, type RouteSupabaseClient, createAdminClient } from '@/lib/supabase-server'
 import { logApiUsage } from '@/lib/db/credits'
+import { rateLimitOrNull } from '@/lib/utils/rate-limiter'
 
 const RC_CACHE_TTL_SECONDS = 60 * 60 * 24
 const memoryCache = new Map<string, { expiresAt: number; value: Record<string, unknown> }>()
@@ -233,6 +234,7 @@ async function getDealerIdForUser(userId: string): Promise<string | null> {
 }
 
 export async function POST(request: NextRequest) {
+    const limited = await rateLimitOrNull("rc_lookup", request, 30, 3600000); if (limited) return limited;
     const auth = await requireAuth()
     if (auth.errorResponse) return auth.errorResponse
 

@@ -6,6 +6,7 @@
 import { createAdminClient } from '@/lib/supabase-server'
 import { sendDomainExpiryWarning } from './email-service'
 import { getDealerDomains } from './domain-service'
+import { logger } from '@/lib/utils/logger'
 
 export interface SSLStatus {
     domain: string
@@ -35,7 +36,7 @@ export async function checkSSLCertificate(domain: string): Promise<SSLStatus> {
             daysUntilExpiry: 90
         }
     } catch (error) {
-        console.error(`SSL check failed for ${domain}:`, error)
+        logger.error(`SSL check failed for ${domain}:`, error)
         return {
             domain,
             isValid: false
@@ -58,7 +59,7 @@ export async function monitorSSLCertificates() {
             .in('ssl_status', ['active', 'provisioning'])
 
         if (error) {
-            console.error('Error fetching domains for SSL monitoring:', error)
+            logger.error('Error fetching domains for SSL monitoring:', error)
             return { success: false, error }
         }
 
@@ -94,7 +95,7 @@ export async function monitorSSLCertificates() {
 
         return { success: true, results }
     } catch (error) {
-        console.error('SSL monitoring error:', error)
+        logger.error('SSL monitoring error:', error)
         return { success: false, error }
     }
 }
@@ -115,7 +116,7 @@ export async function monitorDomainExpiry() {
         const domains = rawDomains as unknown as Array<{ id: string; domain: string; dealer_id: string; registration_expires_at: string | null; type: string; auto_renew: boolean; dealer: { email: string | null; dealership_name: string } }> | null
 
         if (error) {
-            console.error('Error fetching domains for expiry monitoring:', error)
+            logger.error('Error fetching domains for expiry monitoring:', error)
             return { success: false, error }
         }
 
@@ -147,7 +148,7 @@ export async function monitorDomainExpiry() {
             // Auto-renew if managed domain and auto_renew is enabled
             if (domain.type === 'managed' && domain.auto_renew && daysUntilExpiry <= 30) {
                 // Trigger renewal via Cloudflare API
-                console.warn(`Auto-renewing managed domain: ${domain.domain}`)
+                logger.warn(`Auto-renewing managed domain: ${domain.domain}`)
 
                 // Update expiry date (add 1 year)
                 await supabase
@@ -161,7 +162,7 @@ export async function monitorDomainExpiry() {
 
         return { success: true, warnings }
     } catch (error) {
-        console.error('Domain expiry monitoring error:', error)
+        logger.error('Domain expiry monitoring error:', error)
         return { success: false, error }
     }
 }
@@ -194,7 +195,7 @@ export async function getMonitoringStats(dealerId: string) {
 
         return { success: true, stats }
     } catch (error) {
-        console.error('Error getting monitoring stats:', error)
+        logger.error('Error getting monitoring stats:', error)
         return { success: false, error }
     }
 }

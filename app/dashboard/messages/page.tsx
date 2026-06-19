@@ -13,18 +13,8 @@ import {
     type DBMessage,
 } from "@/lib/db/messages";
 import { useOnboardingStore } from "@/lib/store/onboarding-store";
+import { timeAgo } from "@/lib/utils/format";
 
-
-function timeAgo(iso: string): string {
-    const diff = Date.now() - new Date(iso).getTime();
-    const mins = Math.floor(diff / 60000);
-    if (mins < 60) return `${mins}m ago`;
-    const hrs = Math.floor(mins / 60);
-    if (hrs < 24) return `${hrs}h ago`;
-    const days = Math.floor(hrs / 24);
-    if (days < 7) return `${days}d ago`;
-    return new Date(iso).toLocaleDateString("en-IN", { day: "numeric", month: "short" });
-}
 
 export default function MessagesPage() {
     const { dealerId } = useOnboardingStore();

@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 import { createAdminClient } from '@/lib/supabase-server'
+import { rateLimitOrNull } from '@/lib/utils/rate-limiter'
 
 const lookupSchema = z.object({
     slug: z.string().min(1),
@@ -18,12 +19,16 @@ function normalizePhone(value?: string) {
 function contactOrFilter(phone?: string, email?: string, phoneColumn = 'customer_phone', emailColumn = 'customer_email') {
     const clauses: string[] = []
     const digits = normalizePhone(phone)
-    if (digits) clauses.push(`${phoneColumn}.ilike.%${digits}%`)
+    // Require a full 10-digit number — short inputs would scan/enumerate many customers
+    if (digits.length === 10) clauses.push(`${phoneColumn}.ilike.%${digits}%`)
     if (email?.trim()) clauses.push(`${emailColumn}.ilike.${email.trim().toLowerCase()}`)
     return clauses.join(',')
 }
 
 export async function POST(request: NextRequest) {
+    const limited = await rateLimitOrNull('customer_panel', request, 10, 60_000)
+    if (limited) return limited
+
     const body = await request.json().catch(() => null)
     const parsed = lookupSchema.safeParse(body)
     if (!parsed.success) {

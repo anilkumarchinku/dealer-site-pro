@@ -14,7 +14,7 @@ import { createAdminClient } from '@/lib/supabase-server'
 
 export const dynamic = 'force-dynamic'
 
-export async function GET() {
+export async function GET(request: Request) {
     const checks: Record<string, string> = {}
     let httpStatus = 200
 
@@ -38,8 +38,8 @@ export async function GET() {
     try {
         const supabase = createAdminClient()
         const { error } = await supabase.from('dealers').select('id').limit(1)
-        checks.db = error ? `error: ${error.message}` : 'ok'
-    } catch (e) {
+        checks.db = error ? 'error' : 'ok'
+    } catch {
         checks.db = 'unreachable'
         httpStatus = 503
     }
@@ -47,13 +47,20 @@ export async function GET() {
     const allOk = Object.values(checks).every(v => v === 'ok')
     if (!allOk) httpStatus = 503
 
+    // Only expose the detailed config/DB check map to authorized callers (CRON_SECRET).
+    // Anonymous uptime monitors still get the overall status + correct HTTP code.
+    const cronSecret = getOptionalEnv('CRON_SECRET')
+    const authorized = !!cronSecret && request.headers.get('authorization') === `Bearer ${cronSecret}`
+
     return NextResponse.json(
-        {
-            status:  allOk ? 'ok' : 'degraded',
-            checks,
-            ts:      Date.now(),
-            version: process.env.npm_package_version ?? '0.1.0',
-        },
+        authorized
+            ? {
+                status:  allOk ? 'ok' : 'degraded',
+                checks,
+                ts:      Date.now(),
+                version: process.env.npm_package_version ?? '0.1.0',
+            }
+            : { status: allOk ? 'ok' : 'degraded', ts: Date.now() },
         { status: httpStatus }
     )
 }

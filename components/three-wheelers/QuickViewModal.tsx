@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Image from "next/image"
-import { X, Fuel, Zap, Gauge, Palette, Settings, Shield, Info, Users, Package } from "lucide-react"
+import { X, Zap, Palette, Settings, Shield, Info } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import type { ThreeWheelerVehicle } from "@/lib/types/three-wheeler"
 
@@ -53,7 +53,7 @@ export function QuickViewModal({ vehicle, open, onClose, brandColor = "#1f2937",
 
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm" onClick={onClose}>
-            <div className="w-full max-w-lg bg-white rounded-2xl shadow-2xl overflow-hidden max-h-[90vh] flex flex-col" onClick={e => e.stopPropagation()}>
+            <div role="dialog" aria-modal="true" aria-label="Vehicle quick view" className="w-full max-w-lg bg-white rounded-2xl shadow-2xl overflow-hidden max-h-[90vh] flex flex-col" onClick={e => e.stopPropagation()}>
                 {/* Header with image */}
                 <div className="relative h-52 bg-gray-50 shrink-0">
                     {imgSrc
