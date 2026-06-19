@@ -28,6 +28,7 @@ export type OptionalEnvKey =
     | 'CYEPRO_API_BASE_URL'
     | 'CYEPRO_AGGREGATIONS_PATH'
     | 'CYEPRO_SEARCH_PATH'
+    | 'EMAIL_FROM'
     | 'GITHUB_ORG'
     | 'GITHUB_TEMPLATE_REPO'
     | 'GITHUB_TOKEN'
@@ -94,6 +95,7 @@ export const paymentEnvKeys: readonly PaymentEnvKey[] = [
 
 export const optionalEnvKeys: readonly OptionalEnvKey[] = [
     'RESEND_API_KEY',
+    'EMAIL_FROM',
     'SENTRY_DSN',
     'UPSTASH_REDIS_REST_URL',
     'UPSTASH_REDIS_REST_TOKEN',

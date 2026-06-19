@@ -149,7 +149,7 @@ export async function POST(request: NextRequest) {
         ?.split(',')
         .map(email => email.trim())
         .find(Boolean)
-    let notificationEmail = fallbackAdminEmail
+    let notificationEmail = input.dealer_id ? undefined : fallbackAdminEmail
 
     if (input.dealer_id) {
         const { data: dealer, error: dealerError } = await supabase
@@ -161,7 +161,7 @@ export async function POST(request: NextRequest) {
         if (dealerError || !dealer) {
             return NextResponse.json({ error: 'Invalid dealer' }, { status: 400 })
         }
-        notificationEmail = dealer.email || notificationEmail
+        notificationEmail = dealer.email || undefined
     }
 
     const { data, error } = await supabase
@@ -207,6 +207,7 @@ export async function POST(request: NextRequest) {
             sellerEmail: input.seller_email || undefined,
             vehicleName,
             city: input.city || undefined,
+            replyTo: input.seller_email || undefined,
         }).catch(() => { /* already logged inside */ })
     }
 

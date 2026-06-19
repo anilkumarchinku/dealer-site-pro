@@ -51,6 +51,13 @@ const statusConfig: Record<string, { bg: string; text: string; label: string }> 
     lost: { bg: "bg-muted", text: "text-muted-foreground", label: "Lost" },
 };
 
+const cyeproSyncConfig: Record<string, { bg: string; text: string; label: string }> = {
+    pending: { bg: "bg-amber-50", text: "text-amber-700", label: "CRM pending" },
+    synced: { bg: "bg-emerald-50", text: "text-emerald-700", label: "CRM synced" },
+    failed: { bg: "bg-red-50", text: "text-red-700", label: "CRM failed" },
+    skipped: { bg: "bg-slate-100", text: "text-slate-600", label: "CRM skipped" },
+};
+
 const PAGE_SIZE = 20;
 
 export default function LeadsPage() {
@@ -260,6 +267,7 @@ export default function LeadsPage() {
                                     {pagedLeads.map((lead) => {
                                         const pc = priorityConfig[lead.priority as keyof typeof priorityConfig] ?? priorityConfig.cold;
                                         const sc = statusConfig[lead.status] ?? statusConfig.new;
+                                        const cc = lead.cyepro_sync_status ? cyeproSyncConfig[lead.cyepro_sync_status] : null;
                                         const initials = lead.name.split(" ").map(w => w[0]).join("").slice(0, 2).toUpperCase();
                                         const isDone = lead.status === "contacted" || lead.status === "converted";
                                         return (
@@ -292,6 +300,14 @@ export default function LeadsPage() {
                                                         )}>
                                                             {sc.label}
                                                         </span>
+                                                        {cc && (
+                                                            <span
+                                                                className={cn("px-2 py-0.5 rounded-full text-xs font-medium", cc.bg, cc.text)}
+                                                                title={lead.cyepro_error || cc.label}
+                                                            >
+                                                                {cc.label}
+                                                            </span>
+                                                        )}
                                                     </div>
                                                     <p className="text-sm text-muted-foreground mb-1">
                                                         {formatLeadType(lead.type)}

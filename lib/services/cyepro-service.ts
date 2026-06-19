@@ -452,18 +452,41 @@ export interface CyeproLeadPayload {
     leadSource?:   string
 }
 
+export type CyeproLeadForwardResult =
+    | { success: true; cyeproLeadId?: string }
+    | { success: false; error: string; status?: number }
+
+function getCyeproLeadId(response: unknown): string | undefined {
+    if (!isRecord(response)) return undefined
+
+    const candidates = [
+        response.id,
+        response.leadId,
+        response.lead_id,
+        response.data,
+        isRecord(response.data) ? response.data.id : undefined,
+        isRecord(response.data) ? response.data.leadId : undefined,
+        isRecord(response.data) ? response.data.lead_id : undefined,
+        isRecord(response.result) ? response.result.id : undefined,
+        isRecord(response.result) ? response.result.leadId : undefined,
+    ]
+
+    const value = candidates.find(candidate => typeof candidate === 'string' || typeof candidate === 'number')
+    return value == null ? undefined : String(value)
+}
+
 /**
  * Forward a website lead to Cyepro CRM.
- * Fire-and-forget — call with `.catch(() => {})` to avoid blocking the response.
+ * Returns a sync result so callers can persist whether the CRM accepted the lead.
  */
 export async function forwardLeadToCyepro(
     apiKey:  string,
     payload: CyeproLeadPayload,
-): Promise<void> {
-    if (!apiKey) return
+): Promise<CyeproLeadForwardResult> {
+    if (!apiKey) return { success: false, error: 'Cyepro API key is missing' }
 
     try {
-        await externalApiFetch({
+        const response = await externalApiFetch({
             baseUrl: BASE_URL,
             providerName: 'Cyepro',
             path: '/dynamicForms/leads',
@@ -483,12 +506,19 @@ export async function forwardLeadToCyepro(
         })
 
         logger.log('[Cyepro] Lead forwarded successfully')
+        return { success: true, cyeproLeadId: getCyeproLeadId(response) }
     } catch (err) {
         if (err instanceof ExternalApiError && err.status) {
             logger.warn(`[Cyepro] Lead forward failed: ${err.status}`)
-            return
+            return {
+                success: false,
+                status: err.status,
+                error: err.bodyText ?? err.message,
+            }
         }
-        logger.warn('[Cyepro] Lead forward error:', err instanceof Error ? err.message : err)
+        const error = err instanceof Error ? err.message : String(err)
+        logger.warn('[Cyepro] Lead forward error:', error)
+        return { success: false, error }
     }
 }
 

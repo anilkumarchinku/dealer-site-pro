@@ -8,6 +8,7 @@
 
 import { NextRequest, NextResponse } from 'next/server';
 import { createAdminClient } from '@/lib/supabase-server';
+import { sendTestDriveConfirmationEmail, sendTestDriveNotificationEmail } from '@/lib/services/email-service';
 import { testDriveSchema, formatZodErrors } from '@/lib/validations/schemas';
 import { logger } from '@/lib/utils/logger';
 
@@ -65,7 +66,7 @@ export async function POST(req: NextRequest) {
         const supabase = getSupabase();
         const { data: dealerRow, error: dealerError } = await supabase
             .from('dealers')
-            .select('id')
+            .select('id, dealership_name, email')
             .eq('id', dealer_id)
             .maybeSingle();
 
@@ -136,6 +137,34 @@ export async function POST(req: NextRequest) {
             }
 
             throw bookingError;
+        }
+
+        const dealerName = dealerRow.dealership_name || 'the dealership';
+        if (dealerRow.email) {
+            sendTestDriveNotificationEmail({
+                to: dealerRow.email,
+                dealerName,
+                customerName: name.trim(),
+                customerPhone: phone.trim(),
+                customerEmail: email?.trim(),
+                vehicleName: car_name?.trim(),
+                preferredDate: preferred_date,
+                preferredTime: preferred_time,
+                vehicleType: vehicle_type,
+                replyTo: email?.trim() || undefined,
+            }).catch(() => { /* already logged inside */ });
+        }
+
+        if (email?.trim()) {
+            sendTestDriveConfirmationEmail({
+                to: email.trim(),
+                dealerName,
+                customerName: name.trim(),
+                vehicleName: car_name?.trim(),
+                preferredDate: preferred_date,
+                preferredTime: preferred_time,
+                vehicleType: vehicle_type,
+            }).catch(() => { /* already logged inside */ });
         }
 
         return NextResponse.json(

@@ -7,7 +7,7 @@ import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter }
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { PhoneInput } from "@/components/ui/phone-input";
-import { ArrowRight, Loader2, CheckCircle, XCircle, Globe, Edit3, Check, Building2, Car, ExternalLink } from "lucide-react";
+import { ArrowRight, Loader2, CheckCircle, XCircle, Globe, Edit3, Check, Building2, Car, ExternalLink, Eye, EyeOff } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { BASE_DOMAIN, USE_SUBDOMAIN } from "@/lib/utils/domain";
 import type { Brand } from "@/lib/types";
@@ -88,6 +88,9 @@ export default function Step1Page() {
     // OEM brand state (1st hand only)
     const [selectedBrands, setSelectedBrands] = useState<Brand[]>(data.brands || []);
     const [brandError,     setBrandError]     = useState("");
+    const [cyeproKey,      setCyeproKey]      = useState(data.cyeproApiKey ?? "");
+    const [showCyeproKey,  setShowCyeproKey]  = useState(false);
+    const [cyeproError,    setCyeproError]    = useState("");
 
     // Multiple branches state (1st hand / hybrid only)
     const [hasMultipleBranches, setHasMultipleBranches] = useState(data.hasMultipleBranches || false);
@@ -100,6 +103,7 @@ export default function Step1Page() {
         setSiteSlug(data.slug || (nextFormData.dealershipName ? toSlug(nextFormData.dealershipName) : ""));
         setSlugEdited(Boolean(data.slug));
         setSelectedBrands(data.brands || []);
+        setCyeproKey(data.cyeproApiKey ?? "");
         setHasMultipleBranches(Boolean(data.hasMultipleBranches));
         setBranches(getOnboardingBranchPrefill(data.branches));
     }, [data]);
@@ -185,6 +189,12 @@ export default function Step1Page() {
             return;
         }
 
+        if (showBrandPicker && !cyeproKey.trim()) {
+            setCyeproError("Please enter your Cyepro API key so website leads can reach your CRM");
+            document.getElementById("cyepro-section")?.scrollIntoView({ behavior: "smooth", block: "center" });
+            return;
+        }
+
         setIsSubmitting(true);
         try {
             const fullPhone = formatOnboardingPhone(formData.phone);
@@ -202,6 +212,7 @@ export default function Step1Page() {
                 email:           formData.email.trim().toLowerCase(),
                 gstin:           formData.gstin.toUpperCase(),
                 slug:            siteSlug,
+                cyeproApiKey:     cyeproKey.trim() || undefined,
                 hasMultipleBranches: hasMultipleBranches,
                 branches: hasMultipleBranches
                     ? branches.filter(b => b.city && b.address).map(b => ({
@@ -624,6 +635,48 @@ export default function Step1Page() {
                     helperText="For instant chat button on site"
                     lockCountryCode
                 />
+
+                {/* ── Cyepro CRM key for new/hybrid 4W dealers ─────────────── */}
+                {showBrandPicker && (
+                    <div id="cyepro-section" className="rounded-xl border border-blue-200 bg-blue-50/70 dark:border-blue-900 dark:bg-blue-950/20 p-4 space-y-3">
+                        <div>
+                            <label className="text-sm font-semibold text-gray-800 dark:text-gray-100">
+                                Cyepro API Key <span className="text-red-500">*</span>
+                            </label>
+                            <p className="text-xs text-muted-foreground mt-1">
+                                This same key sends generated website leads to the dealer&apos;s specific Cyepro CRM account.
+                            </p>
+                        </div>
+                        <div className="relative">
+                            <input
+                                type={showCyeproKey ? "text" : "password"}
+                                value={cyeproKey}
+                                onChange={(e) => {
+                                    setCyeproKey(e.target.value);
+                                    setCyeproError("");
+                                }}
+                                placeholder="Paste your Cyepro API key here"
+                                className={cn(
+                                    "w-full px-3 py-2 pr-10 text-sm font-mono rounded-md border bg-background focus:outline-none focus:ring-2 focus:ring-ring",
+                                    cyeproError ? "border-red-500" : "border-input"
+                                )}
+                            />
+                            <button
+                                type="button"
+                                onClick={() => setShowCyeproKey(v => !v)}
+                                className="absolute right-2 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
+                            >
+                                {showCyeproKey ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                            </button>
+                        </div>
+                        {cyeproError && (
+                            <p className="text-xs text-red-500 flex items-center gap-1.5">
+                                <XCircle className="w-3.5 h-3.5" />
+                                {cyeproError}
+                            </p>
+                        )}
+                    </div>
+                )}
 
                 {/* ── OEM Brand Selection (1st hand + hybrid) ──────────────────── */}
                 {showBrandPicker && (
