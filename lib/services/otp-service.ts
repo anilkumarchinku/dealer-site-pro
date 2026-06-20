@@ -8,6 +8,14 @@ import { createClient } from '@supabase/supabase-js'
 import { getOptionalEnv } from '@/lib/env'
 import { sendOtpEmail } from './email-service'
 
+/**
+ * Purposes an OTP code can be issued for. `customer_panel` gates the public
+ * customer self-service panel (proof the caller owns the email before any PII
+ * is returned). The `otp_codes.purpose` column is plain text, so adding a value
+ * here needs no DB migration.
+ */
+export type OtpPurpose = 'login' | 'register' | 'customer_panel'
+
 /** Constant-time comparison of two short strings (the OTP codes). */
 function codesMatch(a: string, b: string): boolean {
     const bufA = Buffer.from(a)
@@ -47,7 +55,7 @@ function generateOtpCode(): string {
  */
 export async function sendOtp(
     email: string,
-    purpose: 'login' | 'register'
+    purpose: OtpPurpose
 ): Promise<{ success: boolean; error?: string }> {
     const admin = getAdminClient()
     if (!admin) return { success: false, error: 'OTP service not configured' }
@@ -76,10 +84,17 @@ export async function sendOtp(
         if (insertError) throw insertError
 
         // Send email with OTP
-        const subject = purpose === 'login' ? 'Sign In to DealerSite Pro' : 'Verify Your Email'
+        const heading =
+            purpose === 'login' ? 'Your Sign-In Code'
+            : purpose === 'customer_panel' ? 'Your Verification Code'
+            : 'Verify Your Email'
+        const subject =
+            purpose === 'login' ? 'Sign In to DealerSite Pro'
+            : purpose === 'customer_panel' ? 'Your DealerSite Pro Verification Code'
+            : 'Verify Your Email'
         const html = `
             <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-                <h2>${purpose === 'login' ? 'Your Sign-In Code' : 'Verify Your Email'}</h2>
+                <h2>${heading}</h2>
                 <p>Your verification code is:</p>
                 <div style="background: #f5f5f5; padding: 20px; border-radius: 8px; text-align: center; margin: 20px 0;">
                     <code style="font-size: 32px; font-weight: bold; letter-spacing: 8px; color: #0066cc;">${code}</code>
@@ -110,7 +125,7 @@ export async function sendOtp(
 export async function verifyOtp(
     email: string,
     code: string,
-    purpose: 'login' | 'register'
+    purpose: OtpPurpose
 ): Promise<{ success: boolean; email?: string; error?: string }> {
     const admin = getAdminClient()
     if (!admin) return { success: false, error: 'OTP service not configured' }
@@ -255,7 +270,7 @@ async function registerFailedAttempt(otpId: string, knownAttempts: number): Prom
 export async function incrementOtpAttempt(
     _email: string,
     _code: string,
-    _purpose: 'login' | 'register'
+    _purpose: OtpPurpose
 ): Promise<void> {
     // No-op: see verifyOtp / registerFailedAttempt.
     void _email

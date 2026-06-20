@@ -96,29 +96,65 @@ export default function CustomerPanelPage() {
     const slug = params.slug as string;
     const [phone, setPhone] = useState("");
     const [email, setEmail] = useState("");
+    const [code, setCode] = useState("");
+    const [stage, setStage] = useState<"request" | "verify">("request");
+    const [info, setInfo] = useState("");
     const [data, setData] = useState<PanelData | null>(null);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState("");
 
-    const lookup = async (e: React.FormEvent) => {
+    // Step 1: send a one-time code to the customer's email to prove ownership.
+    const sendCode = async (e: React.FormEvent) => {
         e.preventDefault();
         setLoading(true);
         setError("");
+        setInfo("");
         setData(null);
         try {
             const res = await fetch("/api/customer-panel", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ slug, phone, email }),
+                body: JSON.stringify({ step: "send-otp", slug, email }),
             });
             const json = await res.json();
-            if (!res.ok) throw new Error(json.error ?? "Could not load your panel");
-            setData(json);
+            if (!res.ok) throw new Error(json.error ?? "Could not send verification code");
+            setStage("verify");
+            setInfo(json.message ?? "We sent a 6-digit code to your email.");
         } catch (err) {
-            setError(err instanceof Error ? err.message : "Could not load your panel");
+            setError(err instanceof Error ? err.message : "Could not send verification code");
         } finally {
             setLoading(false);
         }
+    };
+
+    // Step 2: verify the code; PII is only returned on success.
+    const verifyCode = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setLoading(true);
+        setError("");
+        try {
+            const res = await fetch("/api/customer-panel", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ step: "verify", slug, email, code, phone }),
+            });
+            const json = await res.json();
+            if (!res.ok) throw new Error(json.error ?? "Could not verify code");
+            setData(json);
+            setInfo("");
+        } catch (err) {
+            setError(err instanceof Error ? err.message : "Could not verify code");
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    const resetFlow = () => {
+        setStage("request");
+        setCode("");
+        setError("");
+        setInfo("");
+        setData(null);
     };
 
     return (
@@ -138,21 +174,51 @@ export default function CustomerPanelPage() {
                             </CardTitle>
                         </CardHeader>
                         <CardContent>
-                            <form onSubmit={lookup} className="space-y-4">
-                                <div>
-                                    <label className="mb-2 block text-sm font-medium">Phone</label>
-                                    <Input value={phone} onChange={e => setPhone(e.target.value)} placeholder="10-digit mobile number" />
-                                </div>
-                                <div>
-                                    <label className="mb-2 block text-sm font-medium">Email</label>
-                                    <Input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="you@example.com" />
-                                </div>
-                                {error && <p className="text-sm text-red-600">{error}</p>}
-                                <Button type="submit" disabled={loading || (!phone.trim() && !email.trim())} className="w-full gap-2">
-                                    {loading ? <Loader2 className="h-4 w-4 animate-spin" /> : <Search className="h-4 w-4" />}
-                                    View My Details
-                                </Button>
-                            </form>
+                            {stage === "request" ? (
+                                <form onSubmit={sendCode} className="space-y-4">
+                                    <p className="text-sm text-slate-500">
+                                        Verify your email to view your activity. We&apos;ll send a one-time code to confirm it&apos;s you.
+                                    </p>
+                                    <div>
+                                        <label className="mb-2 block text-sm font-medium">Email</label>
+                                        <Input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="you@example.com" autoComplete="email" />
+                                    </div>
+                                    <div>
+                                        <label className="mb-2 block text-sm font-medium">Phone <span className="font-normal text-slate-400">(optional)</span></label>
+                                        <Input value={phone} onChange={e => setPhone(e.target.value)} placeholder="10-digit mobile number" autoComplete="tel" />
+                                        <p className="mt-1 text-xs text-slate-400">Also match records under this number.</p>
+                                    </div>
+                                    {error && <p className="text-sm text-red-600">{error}</p>}
+                                    <Button type="submit" disabled={loading || !email.trim()} className="w-full gap-2">
+                                        {loading ? <Loader2 className="h-4 w-4 animate-spin" /> : <Search className="h-4 w-4" />}
+                                        Send Verification Code
+                                    </Button>
+                                </form>
+                            ) : (
+                                <form onSubmit={verifyCode} className="space-y-4">
+                                    {info && <p className="text-sm text-emerald-600">{info}</p>}
+                                    <div>
+                                        <label className="mb-2 block text-sm font-medium">6-digit code</label>
+                                        <Input
+                                            value={code}
+                                            onChange={e => setCode(e.target.value.replace(/\D/g, "").slice(0, 6))}
+                                            placeholder="123456"
+                                            inputMode="numeric"
+                                            autoComplete="one-time-code"
+                                            maxLength={6}
+                                        />
+                                        <p className="mt-1 text-xs text-slate-400">Sent to {email}</p>
+                                    </div>
+                                    {error && <p className="text-sm text-red-600">{error}</p>}
+                                    <Button type="submit" disabled={loading || code.length !== 6} className="w-full gap-2">
+                                        {loading ? <Loader2 className="h-4 w-4 animate-spin" /> : <User className="h-4 w-4" />}
+                                        Verify &amp; View My Details
+                                    </Button>
+                                    <Button type="button" variant="ghost" onClick={resetFlow} className="w-full" disabled={loading}>
+                                        Use a different email
+                                    </Button>
+                                </form>
+                            )}
                         </CardContent>
                     </Card>
 

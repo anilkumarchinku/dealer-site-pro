@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 import { createAdminClient } from '@/lib/supabase-server'
+import { rateLimitOrNull } from '@/lib/utils/rate-limiter'
 
 const pushSubscriptionSchema = z.object({
     dealer_id: z.string().uuid(),
@@ -20,6 +21,7 @@ const unsubscribeSchema = z.object({
 })
 
 export async function POST(request: NextRequest) {
+    const limited = await rateLimitOrNull('push_subscribe', request, 20, 60_000); if (limited) return limited;
     const body = await request.json().catch(() => null)
     const parsed = pushSubscriptionSchema.safeParse(body)
     if (!parsed.success) {
@@ -61,6 +63,7 @@ export async function POST(request: NextRequest) {
 }
 
 export async function DELETE(request: NextRequest) {
+    const limited = await rateLimitOrNull('push_unsubscribe', request, 20, 60_000); if (limited) return limited;
     const body = await request.json().catch(() => null)
     const parsed = unsubscribeSchema.safeParse(body)
     if (!parsed.success) {

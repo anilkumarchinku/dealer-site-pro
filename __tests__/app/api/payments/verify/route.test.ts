@@ -1,17 +1,34 @@
-import { NextRequest } from 'next/server'
+import { NextRequest, NextResponse } from 'next/server'
 import { POST } from '@/app/api/payments/verify/route'
-import { verifyPaymentSignature } from '@/lib/services/payment-service'
-import { createAdminClient, createRouteClient, requireAuth } from '@/lib/supabase-server'
+import { PLAN_PRICES_PAISE, verifyPaymentSignature } from '@/lib/services/payment-service'
+import {
+    createAdminClient,
+    createRouteClient,
+    requireAuth,
+    requireDealerOwnership,
+} from '@/lib/supabase-server'
+import { fetchRazorpayPayment } from '@/lib/services/razorpay-service'
 import { rateLimitOrNull } from '@/lib/utils/rate-limiter'
 
-vi.mock('@/lib/services/payment-service', () => ({
-    verifyPaymentSignature: vi.fn(),
-}))
+vi.mock('@/lib/services/payment-service', async () => {
+    const actual = await vi.importActual<typeof import('@/lib/services/payment-service')>(
+        '@/lib/services/payment-service'
+    )
+    return {
+        ...actual,
+        verifyPaymentSignature: vi.fn(),
+    }
+})
 
 vi.mock('@/lib/supabase-server', () => ({
     createAdminClient: vi.fn(),
     createRouteClient: vi.fn(),
     requireAuth: vi.fn(),
+    requireDealerOwnership: vi.fn(),
+}))
+
+vi.mock('@/lib/services/razorpay-service', () => ({
+    fetchRazorpayPayment: vi.fn(),
 }))
 
 vi.mock('@/lib/utils/rate-limiter', () => ({
@@ -22,9 +39,31 @@ type IdempotencyRecord = {
     response: unknown
 } | null
 
+type SubscriptionRow = {
+    id: string
+    dealer_id: string
+    domain_id: string | null
+    plan: string | null
+    tier: string | null
+    razorpay_subscription_id: string
+} | null
+
 type SupabaseOptions = {
     existingRecord?: IdempotencyRecord
     existingRecordError?: { message: string } | null
+    // The row returned by the domain_subscriptions ownership/amount lookup (the
+    // first `.single()` before any update). Defaults to a valid owned "pro" row.
+    subscriptionRow?: SubscriptionRow
+    subscriptionLookupError?: { message: string } | null
+}
+
+const DEFAULT_SUBSCRIPTION_ROW: SubscriptionRow = {
+    id: 'dsub_1',
+    dealer_id: 'dealer_1',
+    domain_id: 'domain_1',
+    plan: 'pro',
+    tier: 'pro',
+    razorpay_subscription_id: 'sub_1',
 }
 
 function paymentRequest(body: unknown, idempotencyKey = 'idem_1') {
@@ -47,9 +86,23 @@ function validBody() {
     }
 }
 
+function capturedPayment(amount = PLAN_PRICES_PAISE.pro) {
+    return {
+        id: 'pay_1',
+        status: 'captured',
+        amount,
+        currency: 'INR',
+    }
+}
+
 function createSupabaseMock(options: SupabaseOptions = {}) {
     const inserts: { table: string; payload: Record<string, unknown> }[] = []
     const updates: { table: string; payload: Record<string, unknown> }[] = []
+
+    const hasSubscriptionRowOption = 'subscriptionRow' in options
+    const subscriptionRow = hasSubscriptionRowOption
+        ? options.subscriptionRow ?? null
+        : DEFAULT_SUBSCRIPTION_ROW
 
     const client = {
         from: vi.fn((table: string) => {
@@ -78,8 +131,16 @@ function createSupabaseMock(options: SupabaseOptions = {}) {
                     return { data: null, error: null }
                 }),
                 single: vi.fn(async () => {
-                    if (table === 'domain_subscriptions' && builder.operation === 'update') {
-                        return { data: { domain_id: 'domain_1' }, error: null }
+                    if (table === 'domain_subscriptions') {
+                        // After an .update() the route re-selects the activated row.
+                        if (builder.operation === 'update') {
+                            return { data: { domain_id: 'domain_1' }, error: null }
+                        }
+                        // Otherwise this is the ownership/amount lookup.
+                        return {
+                            data: subscriptionRow,
+                            error: options.subscriptionLookupError ?? null,
+                        }
                     }
                     return { data: null, error: null }
                 }),
@@ -103,6 +164,13 @@ describe('POST /api/payments/verify', () => {
             errorResponse: null,
         } as never)
         vi.mocked(rateLimitOrNull).mockResolvedValue(null)
+        // Default: caller owns the dealer behind the subscription.
+        vi.mocked(requireDealerOwnership).mockResolvedValue({
+            dealer: { id: 'dealer_1', slug: 'dealer-1' },
+            errorResponse: null,
+        } as never)
+        // Default: provider confirms a captured payment for the pro plan price.
+        vi.mocked(fetchRazorpayPayment).mockResolvedValue(capturedPayment() as never)
     })
 
     it('returns cached failure for duplicate invalid signature attempts', async () => {
@@ -199,6 +267,98 @@ describe('POST /api/payments/verify', () => {
             },
         ])
         expect(supabase.updates).toEqual([])
+        // A bad signature must never reach ownership or provider checks.
+        expect(requireDealerOwnership).not.toHaveBeenCalled()
+        expect(fetchRazorpayPayment).not.toHaveBeenCalled()
+    })
+
+    it('returns 404 when the subscription row does not exist', async () => {
+        const supabase = createSupabaseMock({ subscriptionRow: null })
+        vi.mocked(createRouteClient).mockResolvedValue(supabase.client as never)
+        vi.mocked(createAdminClient).mockReturnValue(supabase.client as never)
+        vi.mocked(verifyPaymentSignature).mockReturnValue(true)
+
+        const response = await POST(paymentRequest(validBody()))
+
+        expect(response.status).toBe(404)
+        await expect(response.json()).resolves.toEqual({
+            success: false,
+            error: 'Subscription not found',
+        })
+        expect(requireDealerOwnership).not.toHaveBeenCalled()
+        expect(fetchRazorpayPayment).not.toHaveBeenCalled()
+        expect(supabase.updates).toEqual([])
+    })
+
+    it('returns 403 when the caller does not own the subscription dealer', async () => {
+        const supabase = createSupabaseMock()
+        vi.mocked(createRouteClient).mockResolvedValue(supabase.client as never)
+        vi.mocked(createAdminClient).mockReturnValue(supabase.client as never)
+        vi.mocked(verifyPaymentSignature).mockReturnValue(true)
+        vi.mocked(requireDealerOwnership).mockResolvedValue({
+            dealer: null,
+            errorResponse: NextResponse.json(
+                { error: 'Forbidden — you do not own this dealer account' },
+                { status: 403 }
+            ),
+        } as never)
+
+        const response = await POST(paymentRequest(validBody()))
+
+        expect(response.status).toBe(403)
+        await expect(response.json()).resolves.toEqual({
+            error: 'Forbidden — you do not own this dealer account',
+        })
+        expect(requireDealerOwnership).toHaveBeenCalledWith(
+            supabase.client,
+            'user_1',
+            'dealer_1'
+        )
+        // Ownership failure happens before the provider amount check and any write.
+        expect(fetchRazorpayPayment).not.toHaveBeenCalled()
+        expect(supabase.updates).toEqual([])
+        expect(supabase.inserts).toEqual([])
+    })
+
+    it('returns 400 when the captured amount does not match the plan price', async () => {
+        const supabase = createSupabaseMock()
+        vi.mocked(createRouteClient).mockResolvedValue(supabase.client as never)
+        vi.mocked(createAdminClient).mockReturnValue(supabase.client as never)
+        vi.mocked(verifyPaymentSignature).mockReturnValue(true)
+        vi.mocked(fetchRazorpayPayment).mockResolvedValue(
+            capturedPayment(PLAN_PRICES_PAISE.pro - 1) as never
+        )
+
+        const response = await POST(paymentRequest(validBody()))
+
+        expect(response.status).toBe(400)
+        await expect(response.json()).resolves.toEqual({
+            success: false,
+            error: 'Payment amount does not match the plan price',
+        })
+        expect(fetchRazorpayPayment).toHaveBeenCalledWith('pay_1')
+        // No activation when the amount is wrong.
+        expect(supabase.updates).toEqual([])
+    })
+
+    it('returns 400 when the payment has not been captured', async () => {
+        const supabase = createSupabaseMock()
+        vi.mocked(createRouteClient).mockResolvedValue(supabase.client as never)
+        vi.mocked(createAdminClient).mockReturnValue(supabase.client as never)
+        vi.mocked(verifyPaymentSignature).mockReturnValue(true)
+        vi.mocked(fetchRazorpayPayment).mockResolvedValue({
+            ...capturedPayment(),
+            status: 'authorized',
+        } as never)
+
+        const response = await POST(paymentRequest(validBody()))
+
+        expect(response.status).toBe(400)
+        await expect(response.json()).resolves.toEqual({
+            success: false,
+            error: 'Payment has not been captured',
+        })
+        expect(supabase.updates).toEqual([])
     })
 
     it('uses the admin client for idempotency reads and writes', async () => {
@@ -215,6 +375,13 @@ describe('POST /api/payments/verify', () => {
             success: true,
             message: 'Payment verified and subscription activated',
         })
+        // Ownership + captured-amount checks ran against the (priced) pro plan.
+        expect(requireDealerOwnership).toHaveBeenCalledWith(
+            routeSupabase.client,
+            'user_1',
+            'dealer_1'
+        )
+        expect(fetchRazorpayPayment).toHaveBeenCalledWith('pay_1')
         expect(adminSupabase.client.from).toHaveBeenCalledWith('payment_idempotency_log')
         expect(adminSupabase.client.from.mock.calls.filter(([table]) => table === 'payment_idempotency_log')).toHaveLength(2)
         expect(routeSupabase.client.from).not.toHaveBeenCalledWith('payment_idempotency_log')

@@ -3,89 +3,145 @@ import { createHash } from 'crypto'
 import { z } from 'zod'
 import { createAdminClient } from '@/lib/supabase-server'
 import { rateLimitOrNull, checkRateLimit } from '@/lib/utils/rate-limiter'
+import { sendOtp, verifyOtp } from '@/lib/services/otp-service'
 
-const lookupSchema = z.object({
+// ─────────────────────────────────────────────────────────────────────────────
+// SECURITY — OTP-GATED CUSTOMER PANEL
+//
+// This endpoint returns a customer's leads, test-drives and sell-requests (PII —
+// names, phone numbers, emails, vehicle interest, messages). Previously it did so
+// given ONLY a PUBLIC dealer slug + an UNVERIFIED phone/email, so anyone who knew
+// (or guessed) a contact could enumerate that person's activity.
+//
+// PII is now gated behind an email OTP challenge that proves the caller owns the
+// email the records are tied to:
+//   step "send-otp" → emails a 6-digit code (reuses lib/services/otp-service).
+//   step "verify"   → verifies the code and, ONLY on success, returns PII matched
+//                     on the VERIFIED email (+ optional phone) for that dealer.
+//
+// We deliberately match PII on the verified EMAIL only (never on an unverified
+// phone alone) so a caller cannot supply a victim's phone next to their own
+// verified email and exfiltrate the victim's phone-only records.
+// ─────────────────────────────────────────────────────────────────────────────
+
+const OTP_PURPOSE = 'customer_panel' as const
+
+const sendOtpSchema = z.object({
+    step: z.literal('send-otp'),
     slug: z.string().min(1),
-    phone: z.string().optional(),
-    email: z.string().email().optional().or(z.literal('')),
-}).refine(data => Boolean(data.phone?.trim() || data.email?.trim()), {
-    message: 'Phone or email is required',
+    email: z.string().trim().email('A valid email is required to verify your identity').max(254),
 })
+
+const verifySchema = z.object({
+    step: z.literal('verify'),
+    slug: z.string().min(1),
+    email: z.string().trim().email('A valid email is required to verify your identity').max(254),
+    code: z.string().trim().regex(/^\d{6}$/, 'Enter the 6-digit code from your email'),
+    // Optional extra phone the verified user wants matched against their records.
+    phone: z.string().optional(),
+})
+
+const requestSchema = z.discriminatedUnion('step', [sendOtpSchema, verifySchema])
 
 function normalizePhone(value?: string) {
     const digits = value?.replace(/\D/g, '') ?? ''
     return digits.length > 10 ? digits.slice(-10) : digits
 }
 
-function contactOrFilter(phone?: string, email?: string, phoneColumn = 'customer_phone', emailColumn = 'customer_email') {
+function identifierKey(value: string) {
+    return createHash('sha256').update(value.trim().toLowerCase()).digest('hex')
+}
+
+function contactOrFilter(email: string, phone?: string, emailColumn = 'customer_email', phoneColumn = 'customer_phone') {
     const clauses: string[] = []
+    // PII is keyed to the VERIFIED email. The phone is only an additional match
+    // for records the same verified user also owns.
+    clauses.push(`${emailColumn}.ilike.${email.trim().toLowerCase()}`)
     const digits = normalizePhone(phone)
-    // Require a full 10-digit number — short inputs would scan/enumerate many customers
     if (digits.length === 10) clauses.push(`${phoneColumn}.ilike.%${digits}%`)
-    if (email?.trim()) clauses.push(`${emailColumn}.ilike.${email.trim().toLowerCase()}`)
     return clauses.join(',')
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// !!! SECURITY — REQUIRED FOLLOW-UP: OTP VERIFICATION BEFORE RETURNING PII !!!
-//
-// This endpoint returns a customer's leads, test-drives and sell-requests (PII —
-// names, phone numbers, emails, vehicle interest, messages) given ONLY a PUBLIC
-// dealer slug + an unverified phone/email. There is NO proof the caller actually
-// owns that phone/email, so anyone who knows (or guesses) a customer's number can
-// enumerate their activity. The rate limiting below only THROTTLES enumeration; it
-// does NOT authorize the caller.
-//
-// The correct fix is an OTP challenge: send a one-time code to the supplied
-// phone/email and require the caller to submit a valid code before any PII is
-// returned. That is a client + server flow change and is intentionally NOT
-// implemented here. DO NOT broaden what this endpoint returns until OTP gating
-// (or equivalent proof-of-ownership) is in place.
-// ─────────────────────────────────────────────────────────────────────────────
-export async function POST(request: NextRequest) {
-    const limited = await rateLimitOrNull('customer_panel', request, 10, 60_000)
-    if (limited) return limited
-
-    const body = await request.json().catch(() => null)
-    const parsed = lookupSchema.safeParse(body)
-    if (!parsed.success) {
-        return NextResponse.json({ error: parsed.error.issues[0]?.message ?? 'Invalid lookup payload' }, { status: 400 })
-    }
-
-    const { slug, phone, email } = parsed.data
-
-    // SECURITY: throttle per IDENTIFIER (phone/email), not just per IP. Without this an
-    // attacker rotating IPs (or behind shared NAT exhausting the IP budget) could enumerate
-    // a single customer's PII across many requests. We key the limiter on a salt-free SHA-256
-    // of the normalized identifier so the raw PII is never used as a store key. This is a
-    // STOP-GAP that slows enumeration — it is NOT a substitute for the OTP gating described
-    // above.
-    const identifier = `${normalizePhone(phone)}|${(email ?? '').trim().toLowerCase()}`
-    const identifierKey = createHash('sha256').update(identifier).digest('hex')
-    // 5 lookups per identifier per 10 minutes.
-    const idLimit = checkRateLimit('customer_panel_identifier', identifierKey, 5, 10 * 60_000)
-    if (!idLimit.allowed) {
-        return NextResponse.json(
-            { error: 'Too many lookups for this contact. Please try again later.' },
-            { status: 429, headers: { 'Retry-After': String(Math.ceil(idLimit.retryAfterMs / 1000)) } }
-        )
-    }
-
+async function loadDealer(slug: string) {
     const admin = createAdminClient() as any
-
-    const { data: dealer, error: dealerError } = await admin
+    const { data, error } = await admin
         .from('dealers')
         .select('id, slug, dealership_name, location, full_address, phone, whatsapp, email, branches, tagline')
         .eq('slug', slug)
         .maybeSingle()
+    if (error || !data) return null
+    return data
+}
 
-    if (dealerError || !dealer) {
+export async function POST(request: NextRequest) {
+    // Per-IP throttle on every call to the endpoint.
+    const limited = await rateLimitOrNull('customer_panel', request, 10, 60_000)
+    if (limited) return limited
+
+    const body = await request.json().catch(() => null)
+    const parsed = requestSchema.safeParse(body)
+    if (!parsed.success) {
+        return NextResponse.json({ error: parsed.error.issues[0]?.message ?? 'Invalid request' }, { status: 400 })
+    }
+
+    // ── Step 1: send OTP to the supplied email ───────────────────────────────
+    if (parsed.data.step === 'send-otp') {
+        const { slug, email } = parsed.data
+
+        // Throttle OTP sends per email so the panel can't be used to spam codes
+        // at an address (or to enumerate via timing). 3 sends per 10 minutes.
+        const sendLimit = checkRateLimit('customer_panel_send_otp', identifierKey(email), 3, 10 * 60_000)
+        if (!sendLimit.allowed) {
+            return NextResponse.json(
+                { error: 'Too many code requests for this email. Please try again later.' },
+                { status: 429, headers: { 'Retry-After': String(Math.ceil(sendLimit.retryAfterMs / 1000)) } }
+            )
+        }
+
+        const dealer = await loadDealer(slug)
+        if (!dealer) {
+            return NextResponse.json({ error: 'Dealer not found' }, { status: 404 })
+        }
+
+        const result = await sendOtp(email.trim().toLowerCase(), OTP_PURPOSE)
+        if (!result.success) {
+            return NextResponse.json({ error: result.error || 'Could not send verification code' }, { status: 500 })
+        }
+
+        return NextResponse.json({
+            step: 'otp-sent',
+            message: `We sent a 6-digit verification code to ${email}. It expires in 10 minutes.`,
+        })
+    }
+
+    // ── Step 2: verify OTP, then return PII scoped to the verified email ──────
+    const { slug, email, code, phone } = parsed.data
+    const verifiedEmail = email.trim().toLowerCase()
+
+    // Throttle verify attempts per email at the edge too (the OTP service also
+    // enforces a per-code attempt lockout). 10 verify calls per 10 minutes.
+    const verifyLimit = checkRateLimit('customer_panel_verify', identifierKey(verifiedEmail), 10, 10 * 60_000)
+    if (!verifyLimit.allowed) {
+        return NextResponse.json(
+            { error: 'Too many attempts for this email. Please try again later.' },
+            { status: 429, headers: { 'Retry-After': String(Math.ceil(verifyLimit.retryAfterMs / 1000)) } }
+        )
+    }
+
+    const verification = await verifyOtp(verifiedEmail, code, OTP_PURPOSE)
+    if (!verification.success) {
+        return NextResponse.json({ error: verification.error || 'Invalid or expired code' }, { status: 401 })
+    }
+
+    const dealer = await loadDealer(slug)
+    if (!dealer) {
         return NextResponse.json({ error: 'Dealer not found' }, { status: 404 })
     }
 
+    const admin = createAdminClient() as any
     const today = new Date().toISOString().slice(0, 10)
-    const customerFilter = contactOrFilter(phone, email)
-    const sellerFilter = contactOrFilter(phone, email, 'seller_phone', 'seller_email')
+    const customerFilter = contactOrFilter(verifiedEmail, phone)
+    const sellerFilter = contactOrFilter(verifiedEmail, phone, 'seller_email', 'seller_phone')
 
     const [leadsResult, testDrivesResult, sellRequestsResult, vehiclesResult, offersResult] = await Promise.all([
         admin
@@ -131,6 +187,7 @@ export async function POST(request: NextRequest) {
     }
 
     return NextResponse.json({
+        step: 'verified',
         dealer,
         history: {
             inquiries: leadsResult.data ?? [],
