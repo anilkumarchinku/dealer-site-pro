@@ -21,6 +21,8 @@ import {
     Heart,
     LayoutTemplate,
     LogIn,
+    Mail,
+    MapPin,
     Menu,
     MessageSquare,
     Moon,
@@ -644,15 +646,18 @@ function PremiumQuickViewModal({ car, onClose }: { car: PremiumInventoryItem | n
 
 function PremiumCarCard({ car, onQuickView }: { car: PremiumInventoryItem; onQuickView: (car: PremiumInventoryItem) => void }) {
     const primarySpecs = car.specs.slice(0, 4);
+    // Autos use object-contain (taller vehicles must not be cropped); cars/bikes
+    // use object-cover (edge-to-edge).
     const imageClassName = car.category === "Auto"
         ? "object-contain p-3"
         : "object-cover";
 
-    // Autos render object-contain (taller vehicles must not be cropped) and their
-    // source images are on white — so the Auto media sits on white to blend them
-    // instead of showing a white "box" on a tinted backdrop. Cars/bikes use
-    // object-cover, so their image fills the area and this backdrop is never seen.
-    const mediaBgClass = car.category === "Auto" ? "bg-white dark:bg-slate-800" : "bg-[#F2F6FB] dark:bg-slate-800";
+    // Uniform grey backdrop for every category. Source photos have mixed
+    // backgrounds (some studio-grey, some pure white cutouts), so `mix-blend-multiply`
+    // blends any light/white image background INTO this grey in light mode — giving a
+    // consistent grey across cars, bikes, and autos with no white "box". Dark mode
+    // falls back to normal blend (multiply would swallow dark vehicle parts).
+    const mediaBgClass = "bg-[#F2F6FB] dark:bg-slate-800";
 
     return (
         <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#D8E0EA] bg-white p-4 shadow-[0_18px_48px_rgba(7,20,54,0.09)] transition duration-300 hover:-translate-y-1 hover:border-[#B8C7DA] hover:shadow-[0_28px_70px_rgba(7,20,54,0.14)] dark:border-slate-800 dark:bg-slate-900">
@@ -682,7 +687,7 @@ function PremiumCarCard({ car, onQuickView }: { car: PremiumInventoryItem; onQui
                         alt={`${car.brand} ${car.model}`}
                         fill
                         unoptimized
-                        className={`${imageClassName} transition duration-500 group-hover:scale-[1.035]`}
+                        className={`${imageClassName} mix-blend-multiply dark:mix-blend-normal transition duration-500 group-hover:scale-[1.035]`}
                     />
                 </div>
             </div>
@@ -1036,20 +1041,30 @@ export default function WelcomeClient({ cars: _cars }: WelcomeClientProps) {
 
             <main>
                 <section className="mx-auto grid max-w-[1536px] items-center gap-8 px-5 pb-12 pt-12 sm:px-8 lg:grid-cols-[0.9fr_1.42fr] lg:gap-9 lg:px-10 lg:pb-7 lg:pt-10">
-                    <div className="flex flex-col lg:pt-4">
-                        <h1 className="max-w-[620px] text-5xl font-black leading-[1.04] tracking-[-0.035em] text-slate-950 dark:text-white sm:text-6xl lg:text-[60px]">
-                            Create your dealership website in <span className="text-blue-600">10 minutes</span>
+                    <div className="flex flex-col lg:pt-2">
+                        {/* Eyebrow badge */}
+                        <div className="mb-5 inline-flex w-fit items-center gap-2 rounded-full border border-blue-100 bg-blue-50 px-3.5 py-1.5 text-xs font-extrabold uppercase tracking-[0.08em] text-blue-700 dark:border-blue-500/20 dark:bg-blue-500/10 dark:text-blue-300">
+                            <Rocket className="h-3.5 w-3.5" />
+                            No code · Free subdomain · Go live today
+                        </div>
+
+                        <h1 className="max-w-[620px] text-5xl font-black leading-[1.03] tracking-[-0.035em] text-slate-950 dark:text-white sm:text-6xl lg:text-[60px]">
+                            Create your dealership website in{" "}
+                            <span className="relative whitespace-nowrap text-blue-600">
+                                10 minutes
+                                <span aria-hidden className="absolute -bottom-1 left-0 h-[6px] w-full rounded-full bg-blue-600/15" />
+                            </span>
                         </h1>
-                        <p className="mt-5 max-w-[610px] text-lg font-medium leading-8 text-slate-600 dark:text-slate-300">
-                            No coding. No agency. Add your vehicles, collect enquiries, and go live on your own dealer website.
+                        <p className="mt-6 max-w-[600px] text-lg font-medium leading-8 text-slate-600 dark:text-slate-300">
+                            No coding. No agency. Add your vehicles, collect enquiries, and go live on your own branded website — for cars, bikes, and autos.
                         </p>
 
-                        <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-                            <Button onClick={primaryAction.onClick} className="h-[52px] rounded-lg bg-blue-600 px-7 text-base font-extrabold hover:bg-blue-700">
+                        <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+                            <Button onClick={primaryAction.onClick} className="group h-[54px] rounded-xl bg-blue-600 px-8 text-base font-extrabold shadow-[0_14px_30px_rgba(37,99,235,0.28)] transition-all hover:bg-blue-700 hover:shadow-[0_18px_40px_rgba(37,99,235,0.36)]">
                                 {primaryAction.label}
-                                <ArrowRight className="ml-2 h-5 w-5" />
+                                <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-200 group-hover:translate-x-1" />
                             </Button>
-                            <Button variant="outline" asChild className="h-[52px] rounded-lg border-blue-200 px-7 text-base font-extrabold text-blue-700 hover:bg-blue-50">
+                            <Button variant="outline" asChild className="h-[54px] rounded-xl border-slate-200 px-7 text-base font-extrabold text-slate-800 transition-colors hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700 dark:border-slate-700 dark:text-slate-200 dark:hover:bg-blue-500/10">
                                 <a href="https://lakshmi-motors-audi.indrav.in/" target="_blank" rel="noopener noreferrer">
                                     See Sample Website
                                     <ExternalLink className="ml-2 h-4 w-4" />
@@ -1057,13 +1072,18 @@ export default function WelcomeClient({ cars: _cars }: WelcomeClientProps) {
                             </Button>
                         </div>
 
-                        <div className="mt-8 flex max-w-[650px] flex-wrap gap-4">
+                        <p className="mt-4 flex items-center gap-2 text-sm font-semibold text-slate-500 dark:text-slate-400">
+                            <Check className="h-4 w-4 shrink-0 text-green-600 dark:text-green-400" />
+                            Free to start — no credit card required
+                        </p>
+
+                        <div className="mt-8 flex flex-wrap gap-2.5">
                             {heroProof.map((item) => (
-                                <div key={item.title} className="flex min-w-[170px] flex-1 items-center gap-3">
-                                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-green-50 text-green-700 dark:bg-green-500/10 dark:text-green-300">
-                                        <item.icon className="h-5 w-5" />
-                                    </div>
-                                    <p className="text-sm font-bold leading-snug text-slate-700 dark:text-slate-300">{item.title}</p>
+                                <div key={item.title} className="inline-flex items-center gap-2.5 rounded-full border border-slate-200 bg-white px-4 py-2.5 text-sm font-bold text-slate-700 shadow-[0_2px_10px_rgba(7,20,54,0.04)] dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300">
+                                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-green-50 text-green-700 dark:bg-green-500/10 dark:text-green-300">
+                                        <item.icon className="h-3.5 w-3.5" />
+                                    </span>
+                                    {item.title}
                                 </div>
                             ))}
                         </div>
@@ -1225,15 +1245,71 @@ export default function WelcomeClient({ cars: _cars }: WelcomeClientProps) {
                 </section>
             </main>
 
-            <footer className="border-t border-slate-200 py-10 dark:border-slate-800 dark:bg-slate-950">
-                <div className="mx-auto flex max-w-[1180px] flex-col items-center justify-between gap-6 px-5 sm:px-8 md:flex-row">
-                    <Logo />
-                    <div className="flex flex-wrap justify-center gap-6 text-sm font-bold text-slate-600 dark:text-slate-300">
-                        <Link href="/privacy" className="hover:text-blue-700 dark:hover:text-blue-300">Privacy</Link>
-                        <Link href="/terms" className="hover:text-blue-700 dark:hover:text-blue-300">Terms</Link>
-                        <Link href="mailto:support@dealersitepro.com" className="hover:text-blue-700 dark:hover:text-blue-300">Contact</Link>
+            <footer className="border-t border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-950">
+                <div className="mx-auto max-w-[1180px] px-5 sm:px-8">
+                    {/* Top — brand + link columns */}
+                    <div className="grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-[1.6fr_1fr_1fr_1fr]">
+                        {/* Brand */}
+                        <div className="max-w-xs">
+                            <Logo />
+                            <p className="mt-4 text-sm leading-6 text-slate-600 dark:text-slate-400">
+                                Professional dealership websites in minutes — for cars, bikes, and autos. No coding, no agency.
+                            </p>
+                            <div className="mt-5 flex flex-col gap-2 text-sm">
+                                <a href="mailto:sales@dealersitepro.com" className="inline-flex items-center gap-2 text-slate-600 transition hover:text-blue-700 dark:text-slate-400 dark:hover:text-blue-300">
+                                    <Mail className="h-4 w-4" /> sales@dealersitepro.com
+                                </a>
+                                <span className="inline-flex items-center gap-2 text-slate-600 dark:text-slate-400">
+                                    <MapPin className="h-4 w-4" /> Made in India 🇮🇳
+                                </span>
+                            </div>
+                        </div>
+
+                        {/* Product */}
+                        <div>
+                            <h3 className="text-xs font-black uppercase tracking-[0.18em] text-slate-900 dark:text-white">Product</h3>
+                            <ul className="mt-4 space-y-3 text-sm font-medium text-slate-600 dark:text-slate-400">
+                                <li><a href="#how-it-works" className="transition hover:text-blue-700 dark:hover:text-blue-300">How it works</a></li>
+                                <li><a href="#inventory-style" className="transition hover:text-blue-700 dark:hover:text-blue-300">Inventory experience</a></li>
+                                <li><a href="#examples" className="transition hover:text-blue-700 dark:hover:text-blue-300">Examples</a></li>
+                                <li><a href="#pricing" className="transition hover:text-blue-700 dark:hover:text-blue-300">Pricing</a></li>
+                            </ul>
+                        </div>
+
+                        {/* Browse */}
+                        <div>
+                            <h3 className="text-xs font-black uppercase tracking-[0.18em] text-slate-900 dark:text-white">Browse</h3>
+                            <ul className="mt-4 space-y-3 text-sm font-medium text-slate-600 dark:text-slate-400">
+                                <li><Link href="/cars" className="transition hover:text-blue-700 dark:hover:text-blue-300">Cars</Link></li>
+                                <li><Link href="/bikes" className="transition hover:text-blue-700 dark:hover:text-blue-300">Bikes</Link></li>
+                                <li><Link href="/autos" className="transition hover:text-blue-700 dark:hover:text-blue-300">Autos</Link></li>
+                                <li><Link href="/brands" className="transition hover:text-blue-700 dark:hover:text-blue-300">Brands</Link></li>
+                            </ul>
+                        </div>
+
+                        {/* Get started */}
+                        <div>
+                            <h3 className="text-xs font-black uppercase tracking-[0.18em] text-slate-900 dark:text-white">Get started</h3>
+                            <ul className="mt-4 space-y-3 text-sm font-medium text-slate-600 dark:text-slate-400">
+                                <li><Link href="/onboarding" className="transition hover:text-blue-700 dark:hover:text-blue-300">Create your site</Link></li>
+                                <li><Link href="/auth/login" className="transition hover:text-blue-700 dark:hover:text-blue-300">Sign in</Link></li>
+                                <li><a href="mailto:sales@dealersitepro.com" className="transition hover:text-blue-700 dark:hover:text-blue-300">Talk to sales</a></li>
+                                <li><a href="mailto:support@dealersitepro.com" className="transition hover:text-blue-700 dark:hover:text-blue-300">Support</a></li>
+                            </ul>
+                        </div>
                     </div>
-                    <p className="text-sm font-medium text-slate-500 dark:text-slate-400">&copy; {new Date().getFullYear()} DealerSite Pro</p>
+
+                    {/* Bottom bar */}
+                    <div className="flex flex-col items-center justify-between gap-4 border-t border-slate-200 py-6 dark:border-slate-800 sm:flex-row">
+                        <p className="text-sm font-medium text-slate-500 dark:text-slate-400">
+                            &copy; {new Date().getFullYear()} DealerSite Pro. All rights reserved.
+                        </p>
+                        <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm font-medium text-slate-500 dark:text-slate-400">
+                            <Link href="/privacy" className="transition hover:text-blue-700 dark:hover:text-blue-300">Privacy</Link>
+                            <Link href="/terms" className="transition hover:text-blue-700 dark:hover:text-blue-300">Terms</Link>
+                            <a href="mailto:support@dealersitepro.com" className="transition hover:text-blue-700 dark:hover:text-blue-300">Contact</a>
+                        </div>
+                    </div>
                 </div>
             </footer>
         </div>
