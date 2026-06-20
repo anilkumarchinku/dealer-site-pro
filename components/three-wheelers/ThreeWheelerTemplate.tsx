@@ -17,6 +17,7 @@ import { CompareBar } from "@/components/three-wheelers/CompareBar"
 import { LeadFormModal } from "@/components/three-wheelers/LeadFormModal"
 import type { ThreeWheelerCompareItem, ThreeWheelerVehicle } from "@/lib/types/three-wheeler"
 import { useSitePrefix } from "@/lib/hooks/useSitePrefix"
+import { normalizeLeadPhone } from "@/lib/validations/lead"
 import brandModelsData from "@/lib/data/brand-models.json"
 
 // ── Build brandName → brandId map from brand-models.json (same as onboarding) ─
@@ -213,10 +214,10 @@ export function ThreeWheelerTemplate({
                 body: JSON.stringify({
                     dealer_id: dealerId,
                     name: formData.name,
-                    phone: formData.phone,
+                    phone: normalizeLeadPhone(formData.phone),
                     email: formData.email,
                     message: formData.message,
-                    lead_type: "enquiry",
+                    lead_type: "callback",
                 }),
             })
             setFormStatus(res.ok ? "sent" : "error")

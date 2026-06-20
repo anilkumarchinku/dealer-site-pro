@@ -17,6 +17,7 @@ import type { Car } from '@/lib/types/car';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import { formatPriceInLakhs } from '@/lib/utils/car-utils';
+import { normalizeLeadPhone } from '@/lib/validations/lead';
 
 interface WishlistDrawerProps {
     cars: Car[];   // all dealer cars — we filter by wishlist IDs
@@ -27,6 +28,7 @@ interface WishlistDrawerProps {
 export function WishlistDrawer({ cars, dealerId, brandColor = '#2563eb' }: WishlistDrawerProps) {
     const [open, setOpen] = useState(false);
     const [alertEmail, setAlertEmail] = useState('');
+    const [alertPhone, setAlertPhone] = useState('');
     const [alertStatus, setAlertStatus] = useState<'idle' | 'loading' | 'done' | 'error'>('idle');
     const { items, remove, clear, savedCarData, hydrate } = useWishlistStore();
     const [mounted, setMounted] = useState(false);
@@ -78,6 +80,15 @@ export function WishlistDrawer({ cars, dealerId, brandColor = '#2563eb' }: Wishl
 
     const handleAlertSignup = async (e: React.FormEvent) => {
         e.preventDefault();
+        // The API requires a valid Indian mobile (10 digits, starts 6-9) and a
+        // name of at least 2 chars — derive a safe name from the email local part.
+        const normalizedPhone = normalizeLeadPhone(alertPhone);
+        if (!/^[6-9]\d{9}$/.test(normalizedPhone)) {
+            setAlertStatus('error');
+            return;
+        }
+        const localPart = alertEmail.split('@')[0];
+        const name = localPart.length >= 2 ? localPart : 'Price Alert';
         setAlertStatus('loading');
         try {
             const carNames = savedCars.map(c => `${c.make} ${c.model}`).join(', ');
@@ -86,8 +97,8 @@ export function WishlistDrawer({ cars, dealerId, brandColor = '#2563eb' }: Wishl
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     dealer_id:   dealerId,
-                    name:        alertEmail.split('@')[0],
-                    phone:       '0000000000',
+                    name,
+                    phone:       normalizedPhone,
                     email:       alertEmail,
                     message:     `Price drop alert request for: ${carNames}`,
                     lead_source: 'price_alert',
@@ -177,17 +188,26 @@ export function WishlistDrawer({ cars, dealerId, brandColor = '#2563eb' }: Wishl
                                 You&apos;re subscribed! We&apos;ll email you if any price drops.
                             </p>
                         ) : (
-                            <form onSubmit={handleAlertSignup} className="flex gap-2">
+                            <form onSubmit={handleAlertSignup} className="space-y-2">
                                 <input
                                     type="email" required
                                     value={alertEmail}
                                     onChange={e => setAlertEmail(e.target.value)}
                                     placeholder="your@email.com"
-                                    className="flex-1 px-3 py-2 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-gray-400 text-gray-900 bg-white placeholder:text-gray-600"
+                                    className="w-full px-3 py-2 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-gray-400 text-gray-900 bg-white placeholder:text-gray-600"
                                 />
-                                <Button type="submit" size="sm" disabled={alertStatus === 'loading'} style={{ backgroundColor: brandColor }}>
-                                    <Send className="w-3.5 h-3.5" />
-                                </Button>
+                                <div className="flex gap-2">
+                                    <input
+                                        type="tel" required
+                                        value={alertPhone}
+                                        onChange={e => setAlertPhone(e.target.value)}
+                                        placeholder="10-digit mobile number"
+                                        className="flex-1 px-3 py-2 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-gray-400 text-gray-900 bg-white placeholder:text-gray-600"
+                                    />
+                                    <Button type="submit" size="sm" disabled={alertStatus === 'loading'} style={{ backgroundColor: brandColor }}>
+                                        <Send className="w-3.5 h-3.5" />
+                                    </Button>
+                                </div>
                             </form>
                         )}
                         {alertStatus === 'error' && <p className="text-xs text-red-500 mt-1">Failed to subscribe. Please try again.</p>}

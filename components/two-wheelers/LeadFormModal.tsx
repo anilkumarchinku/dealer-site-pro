@@ -5,6 +5,7 @@ import Image from "next/image"
 import type { TwoWheelerLeadType } from "@/lib/types/two-wheeler"
 import { X } from "lucide-react"
 import { validateLeadForm } from "@/lib/validations/client"
+import { normalizeLeadPhone } from "@/lib/validations/lead"
 
 interface Props {
     dealerId:      string
@@ -45,7 +46,8 @@ export function LeadFormModal({
 
     async function handleSubmit(e: React.FormEvent) {
         e.preventDefault()
-        const validationErrors = validateLeadForm({ name, phone, email: email || undefined })
+        const normalizedPhone = normalizeLeadPhone(phone)
+        const validationErrors = validateLeadForm({ name, phone: normalizedPhone, email: email || undefined })
         if (Object.keys(validationErrors).length > 0) {
             setError(Object.values(validationErrors).join('. '))
             return
@@ -64,7 +66,7 @@ export function LeadFormModal({
                     used_vehicle_id:   usedVehicleId    ?? null,
                     lead_type:         leadType,
                     name,
-                    phone,
+                    phone:             normalizedPhone,
                     email:             email          || null,
                     preferred_date:    preferredDate  || null,
                     message:           message        || null,

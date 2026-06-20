@@ -3,6 +3,7 @@
 
 import { useState, useEffect } from 'react';
 import { X, Phone, Settings2, Zap, Shield } from 'lucide-react';
+import { normalizeLeadPhone } from '@/lib/validations/lead';
 
 /**
  * Shape this modal actually reads. Broader than the slim `CarModel` in
@@ -127,10 +128,11 @@ export default function LeadCaptureModal({ isOpen, onClose, car, dealerId, brand
             newErrors.fullName = 'Name must be at least 2 characters';
         }
 
-        // Phone validation (Indian format)
+        // Phone validation (Indian format) — normalize first so +91 / dashes /
+        // internal spaces are accepted, matching what we POST to the API.
         if (!formData.phone.trim()) {
             newErrors.phone = 'Phone number is required';
-        } else if (!/^[6-9]\d{9}$/.test(formData.phone.replace(/\s/g, ''))) {
+        } else if (!/^[6-9]\d{9}$/.test(normalizeLeadPhone(formData.phone))) {
             newErrors.phone = 'Enter a valid 10-digit Indian mobile number';
         }
 
@@ -162,7 +164,7 @@ export default function LeadCaptureModal({ isOpen, onClose, car, dealerId, brand
                 body: JSON.stringify({
                     dealer_id: dealerId,
                     name: formData.fullName.trim(),
-                    phone: formData.phone.trim(),
+                    phone: normalizeLeadPhone(formData.phone),
                     email: formData.email.trim() || undefined,
                     message: formData.message.trim() || undefined,
                     car_id: car?.id ?? undefined,

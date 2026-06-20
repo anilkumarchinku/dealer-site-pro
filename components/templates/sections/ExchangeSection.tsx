@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { CheckCircle2, ArrowLeftRight } from 'lucide-react';
+import { normalizeLeadPhone } from '@/lib/validations/lead';
 
 interface ExchangeSectionProps {
     brandColor: string;
@@ -79,7 +80,7 @@ export function ExchangeSection({
                 body: JSON.stringify({
                     dealer_id: dealerId,
                     name: form.name,
-                    phone: form.phone,
+                    phone: normalizeLeadPhone(form.phone),
                     lead_source: 'exchange',
                     message,
                 }),

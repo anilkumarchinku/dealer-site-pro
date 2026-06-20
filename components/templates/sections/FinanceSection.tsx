@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { CheckCircle2, Zap, Home, Landmark } from 'lucide-react';
 import { getContrastText } from '@/lib/utils/color-contrast';
+import { normalizeLeadPhone } from '@/lib/validations/lead';
 
 interface FinanceSectionProps {
     brandColor: string;
@@ -64,7 +65,7 @@ export function FinanceSection({ brandColor, dealerId, dealerName }: FinanceSect
                 body: JSON.stringify({
                     dealer_id: dealerId,
                     name: form.name,
-                    phone: form.phone,
+                    phone: normalizeLeadPhone(form.phone),
                     message: `Finance inquiry. Loan amount needed: ${form.loanAmount}.`,
                     lead_source: 'finance_inquiry',
                 }),
