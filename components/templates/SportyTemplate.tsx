@@ -48,6 +48,12 @@ import {
     Send,
     Menu,
     X,
+    Car as CarIcon,
+    RefreshCw,
+    Wallet,
+    Wrench,
+    Cog,
+    LifeBuoy,
 } from 'lucide-react';
 import { useState, useEffect, useMemo } from 'react';
 import { usePathname } from 'next/navigation';
@@ -118,17 +124,17 @@ export function SportyTemplate({
         sellsNewCars,
         sellsUsedCars,
     }), [pathname, sellsNewCars, sellsUsedCars, vehicleType]);
-    const SERVICE_LABELS: Record<string, { label: string; icon: string }> = {
-        new_car_sales: { label: vl.newVehicle, icon: '🚗' },
-        used_car_sales: { label: vl.usedVehicle, icon: '🔄' },
-        financing: { label: 'Finance & EMI', icon: '💰' },
-        service_maintenance: { label: 'Service & Repairs', icon: '🔧' },
-        parts_accessories: { label: 'Parts & Accessories', icon: '⚙️' },
-        test_drive: { label: vl.testDrive, icon: '🏎️' },
-        insurance: { label: 'Insurance', icon: '🛡️' },
-        extended_warranty: { label: 'Extended Warranty', icon: '✅' },
-        roadside_assistance: { label: 'Roadside Assist', icon: '🆘' },
-        car_exchange: { label: vl.exchange, icon: '🔃' },
+    const SERVICE_LABELS: Record<string, { label: string; icon: typeof Gauge }> = {
+        new_car_sales: { label: vl.newVehicle, icon: CarIcon },
+        used_car_sales: { label: vl.usedVehicle, icon: RefreshCw },
+        financing: { label: 'Finance & EMI', icon: Wallet },
+        service_maintenance: { label: 'Service & Repairs', icon: Wrench },
+        parts_accessories: { label: 'Parts & Accessories', icon: Cog },
+        test_drive: { label: vl.testDrive, icon: Gauge },
+        insurance: { label: 'Insurance', icon: Shield },
+        extended_warranty: { label: 'Extended Warranty', icon: CheckCircle2 },
+        roadside_assistance: { label: 'Roadside Assist', icon: LifeBuoy },
+        car_exchange: { label: vl.exchange, icon: RefreshCw },
     };
     const isHybrid = sellsNewCars && sellsUsedCars;
     const [activeTab, setActiveTab] = useState<'inventory' | 'home'>('home');
@@ -376,11 +382,14 @@ export function SportyTemplate({
                             {(() => {
                                 const heroSrc = heroImageUrl;
                                 return heroSrc
-                                    ? <FadeInImage src={heroSrc} alt={`${brandName} Hero`} fill className="object-cover opacity-30" priority />
+                                    ? <FadeInImage src={heroSrc} alt={`${brandName} Hero`} fill className="object-cover" priority />
                                     : null;
                             })()}
-                            <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-transparent" />
-                            <div className="absolute inset-0" style={{ background: `linear-gradient(135deg, rgba(255,255,255,0.9) 0%, ${brandAccent}15 100%)` }} />
+                            {/* Bold readable scrim: left stays solid behind the headline, the machine
+                                reveals on the right. Near-solid on mobile so text keeps contrast. */}
+                            <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-white/40 lg:to-transparent" />
+                            {/* Subtle brand wash for sporty character, kept light on the text side */}
+                            <div className="absolute inset-0" style={{ background: `linear-gradient(135deg, rgba(255,255,255,0.6) 0%, ${brandAccent}1a 100%)` }} />
                         </div>
                         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
                             <div className="max-w-3xl">
@@ -443,7 +452,8 @@ export function SportyTemplate({
                                 </Reveal>
                                 <div className="flex flex-wrap gap-3">
                                     {serviceList.map((svc, i) => {
-                                        const meta = SERVICE_LABELS[svc as string] ?? { label: svc as string, icon: '🚘' };
+                                        const meta = SERVICE_LABELS[svc as string] ?? { label: svc as string, icon: CarIcon };
+                                        const Icon = meta.icon;
                                         return (
                                             <Reveal
                                                 key={svc as string}
@@ -452,7 +462,7 @@ export function SportyTemplate({
                                                 className="group flex items-center gap-2 px-4 py-2.5 rounded-md border-2 font-bold text-sm uppercase tracking-wide hover-lift"
                                                 style={{ borderColor: brandAccent, color: brandAccent, backgroundColor: `${brandAccent}15` }}
                                             >
-                                                <span className="transition-transform duration-300 group-hover:scale-110">{meta.icon}</span>
+                                                <Icon className="w-4 h-4 shrink-0 transition-transform duration-300 group-hover:scale-110" aria-hidden="true" />
                                                 <span>{meta.label}</span>
                                             </Reveal>
                                         );
@@ -611,7 +621,7 @@ export function SportyTemplate({
                                                     value={formData.name}
                                                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                                                     aria-invalid={!!formErrors.name}
-                                                    className={`w-full px-4 py-3 rounded-xl border bg-white text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 ${formErrors.name ? 'border-red-500' : 'border-gray-200'}`}
+                                                    className={`w-full px-4 py-3 rounded-xl border bg-white text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus-visible:ring-offset-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900 ${formErrors.name ? 'border-red-500' : 'border-gray-200'}`}
                                                     style={{ '--tw-ring-color': brandAccent } as React.CSSProperties}
                                                     placeholder="Full name"
                                                 />
@@ -626,7 +636,7 @@ export function SportyTemplate({
                                                     value={formData.phone}
                                                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                                                     aria-invalid={!!formErrors.phone}
-                                                    className={`w-full px-4 py-3 rounded-xl border bg-white text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 ${formErrors.phone ? 'border-red-500' : 'border-gray-200'}`}
+                                                    className={`w-full px-4 py-3 rounded-xl border bg-white text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus-visible:ring-offset-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900 ${formErrors.phone ? 'border-red-500' : 'border-gray-200'}`}
                                                     style={{ '--tw-ring-color': brandAccent } as React.CSSProperties}
                                                     placeholder="10-digit mobile number"
                                                 />
@@ -639,7 +649,7 @@ export function SportyTemplate({
                                                     value={formData.email}
                                                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                                                     aria-invalid={!!formErrors.email}
-                                                    className={`w-full px-4 py-3 rounded-xl border bg-white text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 ${formErrors.email ? 'border-red-500' : 'border-gray-200'}`}
+                                                    className={`w-full px-4 py-3 rounded-xl border bg-white text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus-visible:ring-offset-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900 ${formErrors.email ? 'border-red-500' : 'border-gray-200'}`}
                                                     style={{ '--tw-ring-color': brandAccent } as React.CSSProperties}
                                                     placeholder="your@email.com"
                                                 />
@@ -651,7 +661,7 @@ export function SportyTemplate({
                                                     rows={4}
                                                     value={formData.message}
                                                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                                                    className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 resize-none"
+                                                    className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus-visible:ring-offset-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900 resize-none"
                                                     style={{ '--tw-ring-color': brandAccent } as React.CSSProperties}
                                                     placeholder={vl.testDrivePlaceholder}
                                                 />

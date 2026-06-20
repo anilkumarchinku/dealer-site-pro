@@ -224,17 +224,20 @@ export function ServiceBookingSection({
 
                         <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-3">
                             {[
-                                { tier: 'Basic', price: 'From ₹1,999', detail: 'Oil, filters, diagnostics' },
-                                { tier: 'Premium', price: 'From ₹4,999', detail: 'Full inspection and AC check' },
-                                { tier: 'Repair', price: 'Quote based', detail: 'Body, tyre, battery, insurance claim' },
+                                { tier: 'Basic', detail: 'Oil, filters, diagnostics' },
+                                { tier: 'Premium', detail: 'Full inspection and AC check' },
+                                { tier: 'Repair', detail: 'Body, tyre, battery, insurance claim' },
                             ].map((item) => (
                                 <div key={item.tier} className="rounded-xl border border-gray-200 bg-white p-4">
                                     <p className="text-xs font-semibold uppercase tracking-widest" style={{ color: brandColor }}>{item.tier}</p>
-                                    <p className="mt-1 text-lg font-bold text-gray-900">{item.price}</p>
+                                    <p className="mt-1 text-sm font-semibold text-gray-900">Quote on request</p>
                                     <p className="mt-1 text-xs text-gray-600">{item.detail}</p>
                                 </div>
                             ))}
                         </div>
+                        <p className="mt-3 text-xs text-gray-500">
+                            Prices vary by vehicle and condition — book below for an exact estimate.
+                        </p>
 
                         <div className="mt-8 rounded-2xl border border-gray-200 bg-white p-5">
                             <h3 className="font-bold text-gray-900">Service Locations</h3>

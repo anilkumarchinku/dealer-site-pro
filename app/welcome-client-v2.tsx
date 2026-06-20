@@ -349,11 +349,11 @@ const premiumInventory = [
     {
         category: "Auto",
         brand: "Piaggio",
-        model: "Ape Auto Plus",
+        model: "Ape Auto Classic",
         variant: "City passenger auto",
         price: "\u20B92.85 Lakh",
         emi: "EMI \u20B94,782/mo",
-        image: "/data/brand-model-images/3w/piaggio-ape/auto-plus.jpg",
+        image: "/data/brand-model-images/3w/piaggio-ape/auto-classic.jpg",
         accent: "bg-sky-600",
         specs: [
             { label: "Fuel", value: "CNG", icon: Fuel, color: "text-emerald-600" },
@@ -648,9 +648,15 @@ function PremiumCarCard({ car, onQuickView }: { car: PremiumInventoryItem; onQui
         ? "object-contain p-3"
         : "object-cover";
 
+    // Autos render object-contain (taller vehicles must not be cropped) and their
+    // source images are on white — so the Auto media sits on white to blend them
+    // instead of showing a white "box" on a tinted backdrop. Cars/bikes use
+    // object-cover, so their image fills the area and this backdrop is never seen.
+    const mediaBgClass = car.category === "Auto" ? "bg-white dark:bg-slate-800" : "bg-[#F2F6FB] dark:bg-slate-800";
+
     return (
         <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#D8E0EA] bg-white p-4 shadow-[0_18px_48px_rgba(7,20,54,0.09)] transition duration-300 hover:-translate-y-1 hover:border-[#B8C7DA] hover:shadow-[0_28px_70px_rgba(7,20,54,0.14)] dark:border-slate-800 dark:bg-slate-900">
-            <div className="group/media relative overflow-hidden rounded-xl bg-[#F2F6FB] dark:bg-slate-800">
+            <div className={`group/media relative overflow-hidden rounded-xl ${mediaBgClass}`}>
                 <div className="absolute right-3 top-3 z-10 flex gap-2">
                     <button aria-label={`Compare ${car.model}`} className="flex h-10 w-10 items-center justify-center rounded-full border border-white bg-white text-[#155EEF] shadow-[0_10px_22px_rgba(7,20,54,0.13)] transition hover:-translate-y-0.5 hover:bg-[#EEF4FF]">
                         <ExternalLink className="h-[18px] w-[18px]" />

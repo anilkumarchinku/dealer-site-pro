@@ -210,7 +210,7 @@ export function CarValuationTool() {
                     </Card>
 
                     {/* Result */}
-                    <div>
+                    <div aria-live="polite">
                         {showResult && result ? (
                             <Card className="h-full">
                                 <CardContent className="p-6 flex flex-col h-full">

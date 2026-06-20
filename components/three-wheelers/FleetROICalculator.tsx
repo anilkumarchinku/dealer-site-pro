@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useMemo } from "react"
+import { TrendingUp, MinusCircle, AlertTriangle } from "lucide-react"
 
 interface ROIInputs {
     vehiclePrice: number
@@ -114,6 +115,15 @@ export function FleetROICalculator() {
             : paybackMonths <= 24
             ? "text-green-600"
             : "text-amber-500"
+
+    // Text + icon status so the indicator isn't conveyed by color alone (a11y).
+    // Mirrors the same thresholds used for `paybackColor`.
+    const paybackStatus =
+        paybackMonths === null
+            ? { label: "Not profitable", Icon: AlertTriangle }
+            : paybackMonths <= 24
+            ? { label: "Strong ROI", Icon: TrendingUp }
+            : { label: "Moderate", Icon: MinusCircle }
 
     const showGoodTip = paybackMonths !== null && paybackMonths <= 12
     const showBadTip = monthlyProfit <= 0 || (paybackMonths !== null && paybackMonths > 36)
@@ -256,10 +266,16 @@ export function FleetROICalculator() {
                     </div>
 
                     {/* Payback Period */}
-                    <div className="flex justify-between items-center py-2">
+                    <div className="flex justify-between items-center py-2 gap-3">
                         <span className="text-sm text-muted-foreground">Payback Period</span>
-                        <span className={`font-semibold ${paybackColor}`}>
-                            {paybackMonths !== null ? `${paybackMonths} months` : "Not profitable"}
+                        <span className={`flex items-center gap-1.5 font-semibold text-right ${paybackColor}`}>
+                            <paybackStatus.Icon className="w-4 h-4 shrink-0" aria-hidden="true" />
+                            <span>
+                                {paybackMonths !== null ? `${paybackMonths} months` : "Not profitable"}
+                                <span className="ml-1.5 text-xs font-medium opacity-90">
+                                    ({paybackStatus.label})
+                                </span>
+                            </span>
                         </span>
                     </div>
                 </div>

@@ -40,6 +40,7 @@ import {
     Gauge,
     Zap,
     Bike,
+    Loader2,
 } from 'lucide-react';
 import { getVehicleImageUrls, brandNameToId } from '@/lib/utils/brand-model-images';
 
@@ -374,6 +375,8 @@ function BikesContent() {
     const searchParams = useSearchParams();
     const [bikes, setBikes] = useState<BikeVehicle[]>([]);
     const [loading, setLoading] = useState(true);
+    // First fetch shows the skeleton; later refetches dim the grid + show an inline spinner.
+    const [hasLoadedOnce, setHasLoadedOnce] = useState(false);
     const [totalCount, setTotalCount] = useState(0);
     const [currentPage, setCurrentPage] = useState(1);
     const [totalPages, setTotalPages] = useState(1);
@@ -419,11 +422,16 @@ function BikesContent() {
                 console.error('Failed to fetch bikes', error);
             } finally {
                 setLoading(false);
+                setHasLoadedOnce(true);
             }
         };
 
         fetchBikes();
     }, [searchParams, makeParam, typeParam, minPriceParam, maxPriceParam, sortBy]);
+
+    // Skeleton only on the very first load; refetches dim the existing grid instead.
+    const showSkeleton = loading && !hasLoadedOnce;
+    const isRefetching = loading && hasLoadedOnce;
 
     const updateParams = useCallback(
         (updates: Record<string, string | null>) => {
@@ -567,15 +575,20 @@ function BikesContent() {
                         </div>
 
                         {/* Result count */}
-                        {!loading && (
-                            <p className="text-sm text-muted-foreground">
-                                <span className="font-semibold text-foreground">
-                                    {totalCount.toLocaleString()}
-                                </span>{' '}
-                                Bikes found
-                                {filterChips.length > 0 && (
-                                    <span className="text-muted-foreground"> matching filters</span>
-                                )}
+                        {!showSkeleton && (
+                            <p className="flex items-center gap-2 text-sm text-muted-foreground" aria-live="polite">
+                                {isRefetching ? (
+                                    <Loader2 className="w-3.5 h-3.5 animate-spin text-primary" aria-hidden="true" />
+                                ) : null}
+                                <span>
+                                    <span className="font-semibold text-foreground">
+                                        {totalCount.toLocaleString()}
+                                    </span>{' '}
+                                    Bikes found
+                                    {filterChips.length > 0 && (
+                                        <span className="text-muted-foreground"> matching filters</span>
+                                    )}
+                                </span>
                             </p>
                         )}
                     </div>
@@ -624,7 +637,7 @@ function BikesContent() {
                 )}
 
                 {/* Bike Grid or Skeleton */}
-                {loading ? (
+                {showSkeleton ? (
                     <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
                         {Array.from({ length: 6 }).map((_, i) => (
                             <BikeCardSkeleton key={i} />
@@ -643,7 +656,11 @@ function BikesContent() {
                     </div>
                 ) : (
                     <>
-                        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                        {/* Dim + block interaction while a refetch is in flight */}
+                        <div
+                            className={`grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 transition-opacity duration-200 ${isRefetching ? 'opacity-50 pointer-events-none' : ''}`}
+                            aria-busy={isRefetching}
+                        >
                             {bikes.map((bike) => (
                                 <BikeCard key={bike.id} bike={bike} />
                             ))}
@@ -652,19 +669,6 @@ function BikesContent() {
                         {/* Pagination */}
                         {totalPages > 1 && (
                             <div className="mt-8 space-y-4">
-                                {currentPage < totalPages && (
-                                    <div className="flex justify-center">
-                                        <Button
-                                            variant="outline"
-                                            size="lg"
-                                            className="px-8"
-                                            onClick={() => handlePageChange(currentPage + 1)}
-                                        >
-                                            Load More Bikes
-                                        </Button>
-                                    </div>
-                                )}
-
                                 <div className="flex items-center justify-center gap-2">
                                     <Button
                                         variant="outline"

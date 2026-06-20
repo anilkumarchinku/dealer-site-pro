@@ -559,7 +559,35 @@ export default function BikeDetailPage({ params }: Props) {
                                 />
                             </div>
 
-                            {/* Gallery thumbnails removed — 2W catalog only has one reliable hero image per model */}
+                            {/* Colour thumbnail strip — swaps the hero image. Hidden when no colour gallery exists. */}
+                            {colorImages.length > 1 && (
+                                <div className="flex gap-2 overflow-x-auto no-scrollbar pb-1" role="group" aria-label="Colour options">
+                                    {colorImages.map((color, idx) => (
+                                        <button
+                                            key={`${color.name}-${idx}`}
+                                            type="button"
+                                            onClick={() => setSelectedColorIdx(idx)}
+                                            aria-label={`Show ${bike.make} ${bike.model} in ${color.name}`}
+                                            aria-pressed={selectedColorIdx === idx}
+                                            title={color.name}
+                                            className={`relative aspect-[16/10] w-24 shrink-0 overflow-hidden rounded-lg border bg-gray-50 transition-all ${
+                                                selectedColorIdx === idx
+                                                    ? 'border-blue-600 ring-2 ring-blue-600/40'
+                                                    : 'border-gray-200 hover:border-gray-400'
+                                            }`}
+                                        >
+                                            <Image
+                                                src={color.image}
+                                                alt={`${bike.make} ${bike.model} in ${color.name}`}
+                                                fill
+                                                unoptimized
+                                                sizes="96px"
+                                                className="object-contain"
+                                            />
+                                        </button>
+                                    ))}
+                                </div>
+                            )}
                         </div>
 
                         {/* Price Summary Card */}
@@ -996,6 +1024,7 @@ export default function BikeDetailPage({ params }: Props) {
                                             max={3000000}
                                             step={5000}
                                             onChange={setEmiPrice}
+                                            unit="\u20B9"
                                             format={(v) => `\u20B9${Math.round(v).toLocaleString('en-IN')}`}
                                         />
                                         <EmiSlider
@@ -1005,6 +1034,7 @@ export default function BikeDetailPage({ params }: Props) {
                                             max={Math.max(emiPrice - 5000, 0)}
                                             step={5000}
                                             onChange={setEmiDown}
+                                            unit="\u20B9"
                                             format={(v) => `\u20B9${Math.round(v).toLocaleString('en-IN')}`}
                                         />
                                         <EmiSlider
@@ -1014,6 +1044,7 @@ export default function BikeDetailPage({ params }: Props) {
                                             max={60}
                                             step={6}
                                             onChange={setEmiTenure}
+                                            unit="months"
                                             format={(v) => `${v} months`}
                                         />
                                         <EmiSlider
@@ -1023,12 +1054,13 @@ export default function BikeDetailPage({ params }: Props) {
                                             max={24}
                                             step={0.5}
                                             onChange={setEmiRate}
+                                            unit="% p.a."
                                             format={(v) => `${v}% p.a.`}
                                         />
                                     </div>
 
                                     {/* Result */}
-                                    <div>
+                                    <div aria-live="polite">
                                         {emiResult ? (
                                             <Card className="bg-gray-50 border border-gray-200 h-full">
                                                 <CardContent className="p-6 flex flex-col h-full">
@@ -1216,7 +1248,7 @@ function SpecRow({ label, value, last }: { label: string; value: string; last?: 
 }
 
 function EmiSlider({
-    label, value, min, max, step, onChange, format,
+    label, value, min, max, step, onChange, format, unit,
 }: {
     label: string;
     value: number;
@@ -1225,12 +1257,33 @@ function EmiSlider({
     step: number;
     onChange: (v: number) => void;
     format: (v: number) => string;
+    unit?: string;
 }) {
+    // Clamp typed values into the valid slider range so the two controls stay in sync.
+    const clamp = (v: number) => Math.min(max, Math.max(min, v));
+
     return (
         <div>
-            <div className="flex justify-between items-center mb-2">
+            <div className="flex justify-between items-center mb-2 gap-2">
                 <label className="text-xs font-semibold uppercase tracking-wider text-gray-700">{label}</label>
-                <span className="text-sm font-bold text-blue-600">{format(value)}</span>
+                <div className="flex items-center gap-1">
+                    <input
+                        type="number"
+                        value={value}
+                        min={min}
+                        max={max}
+                        step={step}
+                        aria-label={label}
+                        onChange={(e) => {
+                            const raw = e.target.value;
+                            if (raw === '') return;
+                            onChange(clamp(Number(raw)));
+                        }}
+                        onBlur={(e) => onChange(clamp(Number(e.target.value) || min))}
+                        className="w-24 rounded-md border border-gray-200 px-2 py-1 text-right text-sm font-bold text-blue-600 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                    />
+                    {unit && <span className="text-xs text-gray-700 whitespace-nowrap">{unit}</span>}
+                </div>
             </div>
             <Slider
                 value={[value]}
@@ -1239,6 +1292,7 @@ function EmiSlider({
                 step={step}
                 onValueChange={([v]) => onChange(v)}
             />
+            <p className="mt-1 text-[11px] text-gray-700">{format(value)}</p>
         </div>
     );
 }

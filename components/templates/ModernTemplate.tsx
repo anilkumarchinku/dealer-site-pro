@@ -49,6 +49,14 @@ import {
     Menu,
     X,
     Send,
+    RefreshCw,
+    Wallet,
+    Wrench,
+    Cog,
+    Gauge,
+    LifeBuoy,
+    Bike,
+    Truck,
 } from 'lucide-react';
 import { useState, useEffect, useMemo } from 'react';
 import { usePathname } from 'next/navigation';
@@ -115,23 +123,25 @@ export function ModernTemplate({
         sellsNewCars,
         sellsUsedCars,
     }), [pathname, sellsNewCars, sellsUsedCars, vehicleType]);
-    const SERVICE_LABELS: Record<string, { label: string; icon: string }> = {
-        new_car_sales: { label: vl.newVehicle, icon: '🚗' },
-        used_car_sales: { label: vl.usedVehicle, icon: '🔄' },
-        financing: { label: 'Finance & EMI', icon: '💰' },
-        service_maintenance: { label: 'Service & Repairs', icon: '🔧' },
-        parts_accessories: { label: 'Parts & Accessories', icon: '⚙️' },
-        test_drive: { label: vl.testDrive, icon: '🏎️' },
-        insurance: { label: 'Insurance', icon: '🛡️' },
-        extended_warranty: { label: 'Extended Warranty', icon: '✅' },
-        roadside_assistance: { label: 'Roadside Assist', icon: '🆘' },
-        car_exchange: { label: vl.exchange, icon: '🔃' },
+    const SERVICE_LABELS: Record<string, { label: string; icon: typeof CarIcon }> = {
+        new_car_sales: { label: vl.newVehicle, icon: CarIcon },
+        used_car_sales: { label: vl.usedVehicle, icon: RefreshCw },
+        financing: { label: 'Finance & EMI', icon: Wallet },
+        service_maintenance: { label: 'Service & Repairs', icon: Wrench },
+        parts_accessories: { label: 'Parts & Accessories', icon: Cog },
+        test_drive: { label: vl.testDrive, icon: Gauge },
+        insurance: { label: 'Insurance', icon: Shield },
+        extended_warranty: { label: 'Extended Warranty', icon: CheckCircle2 },
+        roadside_assistance: { label: 'Roadside Assist', icon: LifeBuoy },
+        car_exchange: { label: vl.exchange, icon: RefreshCw },
     };
     const isHybrid = sellsNewCars && sellsUsedCars;
     const [activeTab, setActiveTab] = useState<'inventory' | 'home'>('home');
     const [inventoryTab, setInventoryTab] = useState<'all' | 'new' | 'used'>('all');
     const [isScrolled, setIsScrolled] = useState(false);
     const [activeCarIndex, setActiveCarIndex] = useState(0);
+    const [heroPaused, setHeroPaused] = useState(false);
+    const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
     const [enquireSidebarOpen, setEnquireSidebarOpen] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [navEMIOpen, setNavEMIOpen] = useState(false);
@@ -191,14 +201,32 @@ export function ModernTemplate({
         navigateTo(sectionId);
     };
 
-    // Rotate featured car
+    // Number of cards the hero rotates through (mirrors the index modulo below)
+    const heroRotationCount = Math.min(featuredCars.length, 3);
+
+    // Track the user's reduced-motion preference — never auto-rotate when set.
     useEffect(() => {
-        if (featuredCars.length === 0) return;
+        const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
+        const update = () => setPrefersReducedMotion(mq.matches);
+        update();
+        mq.addEventListener('change', update);
+        return () => mq.removeEventListener('change', update);
+    }, []);
+
+    // Rotate featured car — gated by reduced-motion and pause-on-hover/focus.
+    useEffect(() => {
+        if (heroRotationCount <= 1) return;
+        if (prefersReducedMotion || heroPaused) return;
         const interval = setInterval(() => {
-            setActiveCarIndex((prev) => (prev + 1) % Math.min(featuredCars.length, 3));
+            setActiveCarIndex((prev) => (prev + 1) % heroRotationCount);
         }, 5000);
         return () => clearInterval(interval);
-    }, [featuredCars.length]);
+    }, [heroRotationCount, prefersReducedMotion, heroPaused]);
+
+    const goToHeroCard = (index: number) =>
+        setActiveCarIndex(((index % heroRotationCount) + heroRotationCount) % heroRotationCount);
+    const nextHeroCard = () => goToHeroCard(activeCarIndex + 1);
+    const prevHeroCard = () => goToHeroCard(activeCarIndex - 1);
 
     const heroTitle = customConfig?.heroTitle || 'Find Your Perfect Drive';
     const heroSubtitle = customConfig?.heroSubtitle || 'Explore our premium collection of certified vehicles';
@@ -403,10 +431,13 @@ export function ModernTemplate({
                             {(() => {
                                 const heroSrc = heroImageUrl;
                                 return heroSrc
-                                    ? <Image src={heroSrc} alt={`${brandName} Hero`} fill className="object-cover opacity-20" priority />
+                                    ? <Image src={heroSrc} alt={`${brandName} Hero`} fill className="object-cover" priority />
                                     : null;
                             })()}
-                            <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent" />
+                            {/* Readable scrim: keep the left (headline) bright while the vehicle stays
+                                clearly visible on the right. On mobile the gradient is near-solid so
+                                text over the image keeps contrast. */}
+                            <div className="absolute inset-0 bg-gradient-to-r from-white via-white/85 to-white/30 lg:to-transparent" />
                         </div>
 
                         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -457,34 +488,92 @@ export function ModernTemplate({
                                     const heroPrice = heroCar.pricing.exShowroom.min != null
                                         ? heroCar.pricing.exShowroom.min.toLocaleString('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 })
                                         : (heroCar.price || 'Price on request');
+                                    const showHeroControls = heroRotationCount > 1;
                                     return (
-                                        <div className="hidden lg:block animate-scale-in animate-delay-300">
-                                            <div
-                                                key={activeCarIndex}
-                                                className="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden hover-lift animate-fade-in"
-                                            >
-                                                <div className="aspect-video relative bg-gray-50">
-                                                    {heroSrc ? (
-                                                        <FadeInImage
-                                                            src={heroSrc}
-                                                            alt={heroCar.model}
-                                                            fill
-                                                            className="object-cover"
-                                                        />
-                                                    ) : (
-                                                        <div className="flex items-center justify-center h-full text-5xl">
-                                                            {cat === '2w' ? '🏍️' : cat === '3w' ? '🛺' : '🚗'}
+                                        <div
+                                            className="hidden lg:block animate-scale-in animate-delay-300"
+                                            role="group"
+                                            aria-roledescription="carousel"
+                                            aria-label="Featured vehicles"
+                                            onMouseEnter={() => setHeroPaused(true)}
+                                            onMouseLeave={() => setHeroPaused(false)}
+                                            onFocusCapture={() => setHeroPaused(true)}
+                                            onBlurCapture={() => setHeroPaused(false)}
+                                        >
+                                            <div className="relative">
+                                                <div
+                                                    key={activeCarIndex}
+                                                    className="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden hover-lift animate-fade-in"
+                                                >
+                                                    <div className="aspect-video relative bg-gray-50">
+                                                        {heroSrc ? (
+                                                            <FadeInImage
+                                                                src={heroSrc}
+                                                                alt={heroCar.model}
+                                                                fill
+                                                                className="object-cover"
+                                                            />
+                                                        ) : (
+                                                            <div className="flex items-center justify-center h-full text-gray-300">
+                                                                {(() => {
+                                                                    const PlaceholderIcon = cat === '2w' ? Bike : cat === '3w' ? Truck : CarIcon;
+                                                                    return <PlaceholderIcon className="w-16 h-16" aria-hidden="true" />;
+                                                                })()}
+                                                            </div>
+                                                        )}
+                                                    </div>
+                                                    <div className="p-6">
+                                                        <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                                                            {heroCar.make}{' '}{heroCar.model}
+                                                        </h3>
+                                                        <p className="text-3xl font-bold" style={{ color: brandColors.primary }}>
+                                                            {heroPrice}
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                                {showHeroControls && (
+                                                    <>
+                                                        {/* Prev / Next */}
+                                                        <button
+                                                            type="button"
+                                                            onClick={prevHeroCard}
+                                                            aria-label="Previous featured vehicle"
+                                                            className="absolute left-3 top-1/3 -translate-y-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-gray-700 shadow-md transition-colors hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900"
+                                                        >
+                                                            <ChevronRight className="w-5 h-5 rotate-180" aria-hidden="true" />
+                                                        </button>
+                                                        <button
+                                                            type="button"
+                                                            onClick={nextHeroCard}
+                                                            aria-label="Next featured vehicle"
+                                                            className="absolute right-3 top-1/3 -translate-y-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-gray-700 shadow-md transition-colors hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900"
+                                                        >
+                                                            <ChevronRight className="w-5 h-5" aria-hidden="true" />
+                                                        </button>
+
+                                                        {/* Dot indicators */}
+                                                        <div className="mt-4 flex items-center justify-center gap-2">
+                                                            {Array.from({ length: heroRotationCount }).map((_, i) => {
+                                                                const isActive = i === activeCarIndex % heroRotationCount;
+                                                                return (
+                                                                    <button
+                                                                        key={i}
+                                                                        type="button"
+                                                                        onClick={() => goToHeroCard(i)}
+                                                                        aria-label={`Show featured vehicle ${i + 1} of ${heroRotationCount}`}
+                                                                        aria-current={isActive}
+                                                                        className="h-2.5 rounded-full transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900"
+                                                                        style={{
+                                                                            width: isActive ? '1.5rem' : '0.625rem',
+                                                                            backgroundColor: isActive ? brandColors.primary : '#d1d5db',
+                                                                        }}
+                                                                    />
+                                                                );
+                                                            })}
                                                         </div>
-                                                    )}
-                                                </div>
-                                                <div className="p-6">
-                                                    <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                                                        {heroCar.make}{' '}{heroCar.model}
-                                                    </h3>
-                                                    <p className="text-3xl font-bold" style={{ color: brandColors.primary }}>
-                                                        {heroPrice}
-                                                    </p>
-                                                </div>
+                                                    </>
+                                                )}
                                             </div>
                                         </div>
                                     );
@@ -533,7 +622,8 @@ export function ModernTemplate({
                                 </Reveal>
                                 <div className="flex flex-wrap justify-center gap-4">
                                     {serviceList.map((svc, i) => {
-                                        const meta = SERVICE_LABELS[svc as string] ?? { label: svc as string, icon: '🚘' };
+                                        const meta = SERVICE_LABELS[svc as string] ?? { label: svc as string, icon: CarIcon };
+                                        const Icon = meta.icon;
                                         return (
                                             <Reveal
                                                 key={svc as string}
@@ -542,7 +632,7 @@ export function ModernTemplate({
                                                 className="group flex items-center gap-3 px-5 py-3 rounded-xl border bg-gray-50 hover-lift"
                                                 style={{ borderColor: `${brandColors.primary}30` }}
                                             >
-                                                <span className="text-2xl transition-transform duration-300 group-hover:scale-110">{meta.icon}</span>
+                                                <Icon className="w-6 h-6 shrink-0 transition-transform duration-300 group-hover:scale-110" style={{ color: brandColors.primary }} aria-hidden="true" />
                                                 <span className="font-semibold text-gray-800">{meta.label}</span>
                                             </Reveal>
                                         );
@@ -741,7 +831,7 @@ export function ModernTemplate({
                                                     value={formData.name}
                                                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                                                     aria-invalid={!!formErrors.name}
-                                                    className={`w-full px-4 py-3 rounded-xl border bg-white text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 ${formErrors.name ? 'border-red-500' : 'border-gray-200'}`}
+                                                    className={`w-full px-4 py-3 rounded-xl border bg-white text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus-visible:ring-offset-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900 ${formErrors.name ? 'border-red-500' : 'border-gray-200'}`}
                                                     style={{ '--tw-ring-color': brandColors.primary } as React.CSSProperties}
                                                     placeholder="Your full name"
                                                 />
@@ -756,7 +846,7 @@ export function ModernTemplate({
                                                     value={formData.phone}
                                                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                                                     aria-invalid={!!formErrors.phone}
-                                                    className={`w-full px-4 py-3 rounded-xl border bg-white text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 ${formErrors.phone ? 'border-red-500' : 'border-gray-200'}`}
+                                                    className={`w-full px-4 py-3 rounded-xl border bg-white text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus-visible:ring-offset-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900 ${formErrors.phone ? 'border-red-500' : 'border-gray-200'}`}
                                                     style={{ '--tw-ring-color': brandColors.primary } as React.CSSProperties}
                                                     placeholder="10-digit mobile number"
                                                 />
@@ -769,7 +859,7 @@ export function ModernTemplate({
                                                     value={formData.email}
                                                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                                                     aria-invalid={!!formErrors.email}
-                                                    className={`w-full px-4 py-3 rounded-xl border bg-white text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 ${formErrors.email ? 'border-red-500' : 'border-gray-200'}`}
+                                                    className={`w-full px-4 py-3 rounded-xl border bg-white text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus-visible:ring-offset-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900 ${formErrors.email ? 'border-red-500' : 'border-gray-200'}`}
                                                     style={{ '--tw-ring-color': brandColors.primary } as React.CSSProperties}
                                                     placeholder="your@email.com"
                                                 />
@@ -781,7 +871,7 @@ export function ModernTemplate({
                                                     rows={4}
                                                     value={formData.message}
                                                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                                                    className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 resize-none"
+                                                    className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus-visible:ring-offset-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900 resize-none"
                                                     style={{ '--tw-ring-color': brandColors.primary } as React.CSSProperties}
                                                     placeholder="What vehicle are you interested in?"
                                                 />

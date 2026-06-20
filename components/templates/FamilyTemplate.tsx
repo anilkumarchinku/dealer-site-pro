@@ -46,6 +46,13 @@ import {
     Send,
     Menu,
     X,
+    Car as CarIcon,
+    RefreshCw,
+    Wallet,
+    Wrench,
+    Cog,
+    Gauge,
+    LifeBuoy,
 } from 'lucide-react';
 import { useState, useEffect, useMemo } from 'react';
 import { usePathname } from 'next/navigation';
@@ -108,17 +115,17 @@ export function FamilyTemplate({
         sellsNewCars,
         sellsUsedCars,
     }), [pathname, sellsNewCars, sellsUsedCars, vehicleType]);
-    const SERVICE_LABELS: Record<string, { label: string; icon: string; desc: string }> = {
-        new_car_sales: { label: vl.newVehicle, icon: '🚗', desc: vl.newVehicleDesc },
-        used_car_sales: { label: vl.usedVehicle, icon: '🔄', desc: 'Certified pre-owned at great prices' },
-        financing: { label: 'Finance & EMI', icon: '💰', desc: 'Easy monthly plans for every budget' },
-        service_maintenance: { label: 'Service & Repairs', icon: '🔧', desc: 'Expert care for your vehicle' },
-        parts_accessories: { label: 'Parts & Accessories', icon: '⚙️', desc: 'Genuine parts for all makes' },
-        test_drive: { label: vl.testDrive, icon: '🏎️', desc: vl.testDriveDesc },
-        insurance: { label: 'Insurance', icon: '🛡️', desc: 'Complete vehicle protection plans' },
-        extended_warranty: { label: 'Extended Warranty', icon: '✅', desc: 'Peace of mind, guaranteed' },
-        roadside_assistance: { label: 'Roadside Assist', icon: '🆘', desc: '24/7 support wherever you are' },
-        car_exchange: { label: vl.exchange, icon: '🔃', desc: vl.exchangeDesc },
+    const SERVICE_LABELS: Record<string, { label: string; icon: typeof CarIcon; desc: string }> = {
+        new_car_sales: { label: vl.newVehicle, icon: CarIcon, desc: vl.newVehicleDesc },
+        used_car_sales: { label: vl.usedVehicle, icon: RefreshCw, desc: 'Certified pre-owned at great prices' },
+        financing: { label: 'Finance & EMI', icon: Wallet, desc: 'Easy monthly plans for every budget' },
+        service_maintenance: { label: 'Service & Repairs', icon: Wrench, desc: 'Expert care for your vehicle' },
+        parts_accessories: { label: 'Parts & Accessories', icon: Cog, desc: 'Genuine parts for all makes' },
+        test_drive: { label: vl.testDrive, icon: Gauge, desc: vl.testDriveDesc },
+        insurance: { label: 'Insurance', icon: Shield, desc: 'Complete vehicle protection plans' },
+        extended_warranty: { label: 'Extended Warranty', icon: CheckCircle2, desc: 'Peace of mind, guaranteed' },
+        roadside_assistance: { label: 'Roadside Assist', icon: LifeBuoy, desc: '24/7 support wherever you are' },
+        car_exchange: { label: vl.exchange, icon: RefreshCw, desc: vl.exchangeDesc },
     };
     const isHybrid = sellsNewCars && sellsUsedCars;
     const [activeTab, setActiveTab] = useState<'inventory' | 'home'>('home');
@@ -413,7 +420,8 @@ export function FamilyTemplate({
                                 </Reveal>
                                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                                     {serviceList.map((svc, i) => {
-                                        const meta = SERVICE_LABELS[svc as string] ?? { label: svc as string, icon: '🚘', desc: 'Premium service for you' };
+                                        const meta = SERVICE_LABELS[svc as string] ?? { label: svc as string, icon: CarIcon, desc: 'Premium service for you' };
+                                        const Icon = meta.icon;
                                         return (
                                             <Reveal
                                                 key={svc as string}
@@ -422,7 +430,12 @@ export function FamilyTemplate({
                                                 className="group flex items-start gap-4 p-5 bg-white rounded-2xl shadow-sm hover-lift border"
                                                 style={{ borderColor: `${brandColors.primary}20` }}
                                             >
-                                                <span className="text-3xl transition-transform duration-300 group-hover:scale-110">{meta.icon}</span>
+                                                <div
+                                                    className="w-12 h-12 shrink-0 rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-110"
+                                                    style={{ backgroundColor: `${brandColors.primary}20` }}
+                                                >
+                                                    <Icon className="w-6 h-6" style={{ color: brandColors.primary }} aria-hidden="true" />
+                                                </div>
                                                 <div>
                                                     <p className="font-bold text-gray-900">{meta.label}</p>
                                                     <p className="text-sm text-gray-600 mt-0.5">{meta.desc}</p>
@@ -606,7 +619,7 @@ export function FamilyTemplate({
                                                     value={formData.name}
                                                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                                                     aria-invalid={!!formErrors.name}
-                                                    className={`w-full px-4 py-3 rounded-xl border bg-white text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 ${formErrors.name ? 'border-red-500' : 'border-gray-200'}`}
+                                                    className={`w-full px-4 py-3 rounded-xl border bg-white text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus-visible:ring-offset-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900 ${formErrors.name ? 'border-red-500' : 'border-gray-200'}`}
                                                     style={{ '--tw-ring-color': brandColors.primary } as React.CSSProperties}
                                                     placeholder="Full name"
                                                 />
@@ -621,7 +634,7 @@ export function FamilyTemplate({
                                                     value={formData.phone}
                                                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                                                     aria-invalid={!!formErrors.phone}
-                                                    className={`w-full px-4 py-3 rounded-xl border bg-white text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 ${formErrors.phone ? 'border-red-500' : 'border-gray-200'}`}
+                                                    className={`w-full px-4 py-3 rounded-xl border bg-white text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus-visible:ring-offset-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900 ${formErrors.phone ? 'border-red-500' : 'border-gray-200'}`}
                                                     style={{ '--tw-ring-color': brandColors.primary } as React.CSSProperties}
                                                     placeholder="10-digit mobile number"
                                                 />
@@ -634,7 +647,7 @@ export function FamilyTemplate({
                                                     value={formData.email}
                                                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                                                     aria-invalid={!!formErrors.email}
-                                                    className={`w-full px-4 py-3 rounded-xl border bg-white text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 ${formErrors.email ? 'border-red-500' : 'border-gray-200'}`}
+                                                    className={`w-full px-4 py-3 rounded-xl border bg-white text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus-visible:ring-offset-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900 ${formErrors.email ? 'border-red-500' : 'border-gray-200'}`}
                                                     style={{ '--tw-ring-color': brandColors.primary } as React.CSSProperties}
                                                     placeholder="your@email.com"
                                                 />
@@ -646,7 +659,7 @@ export function FamilyTemplate({
                                                     rows={4}
                                                     value={formData.message}
                                                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                                                    className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 resize-none"
+                                                    className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus-visible:ring-offset-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900 resize-none"
                                                     style={{ '--tw-ring-color': brandColors.primary } as React.CSSProperties}
                                                     placeholder={`Which ${vl.familyVehicle} are you looking for? Any specific requirements?`}
                                                 />

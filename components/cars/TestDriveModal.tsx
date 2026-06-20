@@ -5,7 +5,7 @@
 
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect, useId, useRef } from 'react';
 import Image from 'next/image';
 import type { Car } from '@/lib/types/car';
 import {
@@ -102,6 +102,59 @@ export function TestDriveModal({
     const [status, setStatus] = useState<Status>('idle');
     const [errorMsg, setErrorMsg] = useState('');
 
+    const titleId = useId();
+    const dialogRef = useRef<HTMLDivElement>(null);
+    const previouslyFocused = useRef<HTMLElement | null>(null);
+    // Keep the latest close handler accessible to the keydown listener without re-binding it.
+    const closeRef = useRef<() => void>(() => onOpenChange(false));
+
+    // Accessibility: focus trap, focus restore, and Esc-to-close for this hand-rolled modal.
+    useEffect(() => {
+        if (!open) return;
+        previouslyFocused.current = document.activeElement as HTMLElement | null;
+        const focusTimer = window.setTimeout(() => {
+            const dialog = dialogRef.current;
+            if (!dialog) return;
+            const focusable = dialog.querySelector<HTMLElement>(
+                'input:not([disabled]), button:not([disabled]), [href], select, textarea, [tabindex]:not([tabindex="-1"])'
+            );
+            (focusable ?? dialog).focus();
+        }, 0);
+
+        const handleKeyDown = (e: KeyboardEvent) => {
+            if (e.key === 'Escape') {
+                e.stopPropagation();
+                closeRef.current();
+                return;
+            }
+            if (e.key !== 'Tab') return;
+            const dialog = dialogRef.current;
+            if (!dialog) return;
+            const focusable = Array.from(
+                dialog.querySelectorAll<HTMLElement>(
+                    'input, button, [href], select, textarea, [tabindex]:not([tabindex="-1"])'
+                )
+            ).filter(el => !el.hasAttribute('disabled') && el.offsetParent !== null);
+            if (focusable.length === 0) return;
+            const first = focusable[0];
+            const last = focusable[focusable.length - 1];
+            if (e.shiftKey && document.activeElement === first) {
+                e.preventDefault();
+                last.focus();
+            } else if (!e.shiftKey && document.activeElement === last) {
+                e.preventDefault();
+                first.focus();
+            }
+        };
+
+        document.addEventListener('keydown', handleKeyDown);
+        return () => {
+            window.clearTimeout(focusTimer);
+            document.removeEventListener('keydown', handleKeyDown);
+            previouslyFocused.current?.focus?.();
+        };
+    }, [open]);
+
     const dateTiles = useMemo(() => buildDateTiles(10), []);
     const carLabel = `${car.make} ${car.model}${car.variant ? ' · ' + car.variant : ''}`;
     const verb = testDriveVerb(vehicleType ?? car.vehicleCategory as '2w' | '3w' | undefined);
@@ -121,6 +174,7 @@ export function TestDriveModal({
             setErrorMsg('');
         }, 300);
     };
+    closeRef.current = handleClose;
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -175,6 +229,11 @@ export function TestDriveModal({
             onClick={handleClose}
         >
             <div
+                ref={dialogRef}
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby={titleId}
+                tabIndex={-1}
                 className="w-full max-w-md bg-white rounded-2xl shadow-2xl overflow-hidden"
                 onClick={e => e.stopPropagation()}
             >
@@ -198,6 +257,7 @@ export function TestDriveModal({
                         {step > 1 && step < 4 && (
                             <button
                                 onClick={() => setStep(s => (s - 1) as Step)}
+                                aria-label="Go back"
                                 className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition-colors mr-1"
                             >
                                 <ChevronLeft className="w-4 h-4 text-gray-600" />
@@ -211,11 +271,12 @@ export function TestDriveModal({
                             <p className="text-[10px] font-bold uppercase tracking-widest" style={{ color: brandAccent }}>
                                 Book {verb}
                             </p>
-                            <p className="text-xs font-semibold text-gray-700 leading-tight line-clamp-1">{carLabel}</p>
+                            <p id={titleId} className="text-xs font-semibold text-gray-700 leading-tight line-clamp-1">{carLabel}</p>
                         </div>
                     </div>
                     <button
                         onClick={handleClose}
+                        aria-label="Close"
                         className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition-colors"
                     >
                         <X className="w-4 h-4 text-gray-600" />

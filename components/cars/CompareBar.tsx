@@ -21,6 +21,7 @@ export default function CompareBar({ brandColor = '#2563eb' }: CompareBarProps) 
 
     const emptySlots = MAX_SLOTS - selectedCars.length;
     const canCompare = selectedCars.length >= 2;
+    const needed = 2 - selectedCars.length;
 
     return (
         <>
@@ -85,16 +86,24 @@ export default function CompareBar({ brandColor = '#2563eb' }: CompareBarProps) 
 
                 {/* Actions */}
                 <div className="flex items-center gap-2">
-                    <button
-                        onClick={() => setModalOpen(true)}
-                        disabled={!canCompare}
-                        style={canCompare ? { backgroundColor: brandColor } : undefined}
-                        className="flex items-center gap-1.5 px-3 py-2 rounded-xl text-sm font-semibold text-white
-                                   transition-opacity disabled:opacity-40 disabled:cursor-not-allowed disabled:bg-gray-400"
-                    >
-                        <GitCompare className="w-4 h-4" />
-                        Compare Now
-                    </button>
+                    <div className="flex flex-col items-stretch gap-0.5">
+                        <button
+                            onClick={() => setModalOpen(true)}
+                            disabled={!canCompare}
+                            aria-describedby={!canCompare ? 'compare-hint' : undefined}
+                            style={canCompare ? { backgroundColor: brandColor } : undefined}
+                            className="flex items-center gap-1.5 px-3 py-2 rounded-xl text-sm font-semibold text-white
+                                       transition-opacity disabled:opacity-40 disabled:cursor-not-allowed disabled:bg-gray-400"
+                        >
+                            <GitCompare className="w-4 h-4" />
+                            Compare Now
+                        </button>
+                        {!canCompare && (
+                            <p id="compare-hint" className="text-[10px] text-gray-600 text-center leading-tight">
+                                Add {needed} more to compare
+                            </p>
+                        )}
+                    </div>
 
                     <button
                         onClick={clearCars}

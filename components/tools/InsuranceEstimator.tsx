@@ -214,6 +214,12 @@ export function InsuranceEstimator() {
                                         ))}
                                     </SelectContent>
                                 </Select>
+                                {city === 'Delhi' && (
+                                    <p className="mt-1.5 flex items-start gap-1 text-xs text-amber-600">
+                                        <Info className="mt-0.5 h-3 w-3 shrink-0" aria-hidden="true" />
+                                        <span>Estimated for <strong>Delhi</strong> by default — pick your city above for an accurate zone-based premium.</span>
+                                    </p>
+                                )}
                             </div>
 
                             <div className="flex items-center gap-3 p-3 bg-muted/30 rounded-lg">
@@ -247,7 +253,7 @@ export function InsuranceEstimator() {
                     </Card>
 
                     {/* Results */}
-                    <div className="space-y-4">
+                    <div className="space-y-4" aria-live="polite">
                         {showResult ? (
                             <>
                                 {/* IDV */}

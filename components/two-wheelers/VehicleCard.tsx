@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { FadeInImage } from "@/components/ui/FadeInImage"
 import Link from "next/link"
-import { Fuel, Zap, Gauge, ChevronRight, Send, Eye, Heart, TrendingUp, GitCompare, Calendar } from "lucide-react"
+import { Fuel, Zap, Gauge, ChevronRight, Send, Eye, Heart, TrendingUp, GitCompare, Calendar, Bike } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import type { TwoWheelerVehicle } from "@/lib/types/two-wheeler"
 import { getScrapedImageUrls, brandNameToId } from "@/lib/utils/brand-model-images"
@@ -19,6 +19,24 @@ interface Props {
     summaryOnly?: boolean
     onLead?:    (vehicleId: string) => void
     onCompare?: (vehicle: TwoWheelerVehicle) => void
+}
+
+/**
+ * Consistent "no image available" placeholder — neutral muted tile with a
+ * lucide icon and an accessible (visually-hidden) label, matching the
+ * treatment used across all vehicle cards.
+ */
+function NoImagePlaceholder() {
+    return (
+        <div
+            role="img"
+            aria-label="No image available"
+            className="flex h-full w-full items-center justify-center bg-gray-100 border-b border-gray-200"
+        >
+            <Bike className="h-10 w-10 text-gray-400" strokeWidth={1.5} aria-hidden="true" />
+            <span className="sr-only">No image available</span>
+        </div>
+    )
 }
 
 function SpecItem({ icon, label, value }: { icon: React.ReactNode; label: string; value: string }) {
@@ -90,7 +108,7 @@ export function VehicleCard({ vehicle, slug, dealerId, brandColor = "#1f2937", s
                             onError={handleImgError}
                         />
                     ) : (
-                        <div className="flex h-full items-center justify-center text-4xl text-gray-600">🏍️</div>
+                        <NoImagePlaceholder />
                     )}
 
                     <button
@@ -161,7 +179,7 @@ export function VehicleCard({ vehicle, slug, dealerId, brandColor = "#1f2937", s
                         onError={handleImgError}
                     />
                 ) : (
-                    <div className="flex items-center justify-center h-full text-4xl text-gray-600">🏍️</div>
+                    <NoImagePlaceholder />
                 )}
 
                 {/* Badges */}

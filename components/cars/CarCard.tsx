@@ -6,7 +6,7 @@
 
 'use client';
 
-import { useState, useEffect, type MouseEvent } from 'react';
+import { useState, useEffect, useId, useRef, type MouseEvent } from 'react';
 import Image from 'next/image';
 import { FadeInImage } from '@/components/ui/FadeInImage';
 import { useRouter } from 'next/navigation';
@@ -42,6 +42,10 @@ import {
     BadgeCheck,
     Info,
     GitCompare,
+    X,
+    Car as CarIcon,
+    Bike,
+    Truck,
 } from 'lucide-react';
 import { getBrandLogo } from '@/lib/data/brand-logos';
 import { getContrastText } from '@/lib/utils/color-contrast';
@@ -86,6 +90,25 @@ function fuelChipClass(fuel?: string) {
     if (fuel === 'Diesel') return 'bg-amber-500/15  text-amber-400  border-amber-500/30';
     if (fuel === 'CNG') return 'bg-teal-500/15   text-teal-400   border-teal-500/30';
     return 'bg-blue-500/15   text-blue-400   border-blue-500/30';
+}
+
+/**
+ * Consistent "no image available" placeholder shared across all vehicle cards.
+ * Neutral muted tile with a category-appropriate lucide icon and an
+ * accessible (visually-hidden) label — no oversized emoji.
+ */
+function NoImagePlaceholder({ category }: { category?: '2w' | '3w' | '4w' }) {
+    const Icon = category === '2w' ? Bike : category === '3w' ? Truck : CarIcon;
+    return (
+        <div
+            role="img"
+            aria-label="No image available"
+            className="flex h-full w-full items-center justify-center bg-gray-100 border-b border-gray-200"
+        >
+            <Icon className="h-10 w-10 text-gray-400" strokeWidth={1.5} aria-hidden="true" />
+            <span className="sr-only">No image available</span>
+        </div>
+    );
 }
 
 interface CarCardProps {
@@ -351,11 +374,7 @@ export function CarCard({
                                 }}
                             />
                         ) : (
-                            <div className="flex h-full items-center justify-center bg-white border-b border-gray-100">
-                                <span className="text-4xl">
-                                    {car.vehicleCategory === '2w' ? '🏍️' : car.vehicleCategory === '3w' ? '🛺' : '🚗'}
-                                </span>
-                            </div>
+                            <NoImagePlaceholder category={car.vehicleCategory as '2w' | '3w' | '4w'} />
                         )}
 
                         <div className="absolute top-2 right-2 z-10 flex gap-2">
@@ -466,11 +485,7 @@ export function CarCard({
                             );
                         }
                         return (
-                            <div className="flex items-center justify-center h-full bg-white border-b border-gray-100">
-                                <span className="text-4xl">
-                                    {car.vehicleCategory === '2w' ? '🏍️' : car.vehicleCategory === '3w' ? '🛺' : '🚗'}
-                                </span>
-                            </div>
+                            <NoImagePlaceholder category={car.vehicleCategory as '2w' | '3w' | '4w'} />
                         );
                     })()}
 
@@ -627,20 +642,9 @@ export function CarCard({
                             style={{ borderColor: brandColor, color: brandColor }}
                             onClick={handleViewDetails}
                             title="View Details"
+                            aria-label="View Details"
                         >
                             <Info className="w-3.5 h-3.5" />
-                        </Button>
-                        <Button
-                            size="sm"
-                            variant="outline"
-                            className="shrink-0 gap-1 text-xs h-11 px-3 rounded-xl font-medium bg-white dark:bg-white hover:bg-gray-50 dark:hover:bg-gray-50"
-                            style={inCompare
-                                ? { backgroundColor: brandColor, color: getContrastText(brandColor), borderColor: brandColor }
-                                : { borderColor: brandColor, color: brandColor }}
-                            onClick={toggleCompare}
-                            title={inCompare ? 'Remove from compare' : 'Add to compare'}
-                        >
-                            <GitCompare className="w-3.5 h-3.5" />
                         </Button>
                     </div>
                 </CardContent>
@@ -703,6 +707,56 @@ function VariantAccordionButton({
     const [loading, setLoading] = useState(false);
     const [selected, setSelected] = useState<CarVariantInfo | null>(null);
     const logoSrc = getBrandLogo(make);
+    const popupTitleId = useId();
+    const popupRef = useRef<HTMLDivElement>(null);
+    const previouslyFocused = useRef<HTMLElement | null>(null);
+
+    // Accessibility for the hand-rolled popup: focus trap, focus restore, Esc-to-close.
+    useEffect(() => {
+        if (!open || loading) return;
+        previouslyFocused.current = document.activeElement as HTMLElement | null;
+        const focusTimer = window.setTimeout(() => {
+            const dialog = popupRef.current;
+            if (!dialog) return;
+            const focusable = dialog.querySelector<HTMLElement>(
+                'input, button, [href], select, textarea, [tabindex]:not([tabindex="-1"])'
+            );
+            (focusable ?? dialog).focus();
+        }, 0);
+
+        const handleKeyDown = (e: KeyboardEvent) => {
+            if (e.key === 'Escape') {
+                e.stopPropagation();
+                setOpen(false);
+                return;
+            }
+            if (e.key !== 'Tab') return;
+            const dialog = popupRef.current;
+            if (!dialog) return;
+            const focusable = Array.from(
+                dialog.querySelectorAll<HTMLElement>(
+                    'input, button, [href], select, textarea, [tabindex]:not([tabindex="-1"])'
+                )
+            ).filter(el => !el.hasAttribute('disabled') && el.offsetParent !== null);
+            if (focusable.length === 0) return;
+            const first = focusable[0];
+            const last = focusable[focusable.length - 1];
+            if (e.shiftKey && document.activeElement === first) {
+                e.preventDefault();
+                last.focus();
+            } else if (!e.shiftKey && document.activeElement === last) {
+                e.preventDefault();
+                first.focus();
+            }
+        };
+
+        document.addEventListener('keydown', handleKeyDown);
+        return () => {
+            window.clearTimeout(focusTimer);
+            document.removeEventListener('keydown', handleKeyDown);
+            previouslyFocused.current?.focus?.();
+        };
+    }, [open, loading]);
 
     const handleToggle = async (e: React.MouseEvent) => {
         e.stopPropagation();
@@ -766,6 +820,11 @@ function VariantAccordionButton({
                     onClick={e => { e.stopPropagation(); setOpen(false); }}
                 >
                     <div
+                        ref={popupRef}
+                        role="dialog"
+                        aria-modal="true"
+                        aria-labelledby={popupTitleId}
+                        tabIndex={-1}
                         className="w-full max-w-lg bg-white rounded-2xl border border-gray-200 shadow-2xl overflow-hidden max-h-[90vh] flex flex-col"
                         onClick={e => e.stopPropagation()}
                     >
@@ -777,7 +836,7 @@ function VariantAccordionButton({
                                 {logoSrc && <Image src={logoSrc} alt={make} width={20} height={20} unoptimized className="object-contain" />}
                                 <div>
                                     <p className="text-[10px] font-semibold uppercase tracking-widest" style={{ color: brandColor }}>{make}</p>
-                                    <p className="text-sm font-bold text-gray-900 leading-tight">{model}</p>
+                                    <p id={popupTitleId} className="text-sm font-bold text-gray-900 leading-tight">{model}</p>
                                 </div>
                             </div>
                             <div className="flex items-center gap-2">
@@ -786,9 +845,10 @@ function VariantAccordionButton({
                                 </Badge>
                                 <button
                                     onClick={e => { e.stopPropagation(); setOpen(false); }}
+                                    aria-label="Close"
                                     className="w-7 h-7 rounded-full bg-gray-100 text-gray-600 flex items-center justify-center hover:bg-gray-200 transition-colors"
                                 >
-                                    <ChevronDown className="w-4 h-4" />
+                                    <X className="w-4 h-4" />
                                 </button>
                             </div>
                         </div>

@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useId, useRef, useState } from "react"
 import { X } from "lucide-react"
 
 interface Props {
@@ -52,6 +52,63 @@ export function BookingModal({
     const [loading, setLoading] = useState(false)
     const [success, setSuccess] = useState(false)
     const [error,   setError]   = useState("")
+
+    const fieldId = useId()
+    const nameId  = `${fieldId}-name`
+    const phoneId = `${fieldId}-phone`
+    const emailId = `${fieldId}-email`
+    const titleId = `${fieldId}-title`
+
+    const dialogRef         = useRef<HTMLDivElement>(null)
+    const previouslyFocused = useRef<HTMLElement | null>(null)
+
+    // Restore focus to the trigger and close on Escape; trap Tab within the dialog.
+    useEffect(() => {
+        if (!isOpen) return
+        previouslyFocused.current = document.activeElement as HTMLElement | null
+        // Focus the first interactive element inside the dialog on open.
+        const focusTimer = window.setTimeout(() => {
+            const dialog = dialogRef.current
+            if (!dialog) return
+            const focusable = dialog.querySelector<HTMLElement>(
+                'input, button, [href], select, textarea, [tabindex]:not([tabindex="-1"])'
+            )
+            focusable?.focus()
+        }, 0)
+
+        const handleKeyDown = (e: KeyboardEvent) => {
+            if (e.key === "Escape") {
+                e.stopPropagation()
+                onClose()
+                return
+            }
+            if (e.key !== "Tab") return
+            const dialog = dialogRef.current
+            if (!dialog) return
+            const focusable = Array.from(
+                dialog.querySelectorAll<HTMLElement>(
+                    'input, button, [href], select, textarea, [tabindex]:not([tabindex="-1"])'
+                )
+            ).filter(el => !el.hasAttribute("disabled") && el.offsetParent !== null)
+            if (focusable.length === 0) return
+            const first = focusable[0]
+            const last = focusable[focusable.length - 1]
+            if (e.shiftKey && document.activeElement === first) {
+                e.preventDefault()
+                last.focus()
+            } else if (!e.shiftKey && document.activeElement === last) {
+                e.preventDefault()
+                first.focus()
+            }
+        }
+
+        document.addEventListener("keydown", handleKeyDown)
+        return () => {
+            window.clearTimeout(focusTimer)
+            document.removeEventListener("keydown", handleKeyDown)
+            previouslyFocused.current?.focus?.()
+        }
+    }, [isOpen, onClose])
 
     if (!isOpen) return null
 
@@ -139,10 +196,16 @@ export function BookingModal({
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
             <div className="absolute inset-0 bg-black/50" onClick={onClose} />
-            <div className="relative bg-card border border-border rounded-2xl shadow-2xl w-full max-w-sm p-6 space-y-5">
+            <div
+                ref={dialogRef}
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby={titleId}
+                className="relative bg-card border border-border rounded-2xl shadow-2xl w-full max-w-sm p-6 space-y-5"
+            >
                 <div className="flex items-center justify-between">
-                    <h2 className="font-semibold text-lg">Book Now</h2>
-                    <button onClick={onClose}><X className="w-5 h-5 text-muted-foreground" /></button>
+                    <h2 id={titleId} className="font-semibold text-lg">Book Now</h2>
+                    <button onClick={onClose} aria-label="Close"><X className="w-5 h-5 text-muted-foreground" /></button>
                 </div>
 
                 {success ? (
@@ -167,16 +230,16 @@ export function BookingModal({
 
                         <div className="space-y-3">
                             <div>
-                                <label className="text-sm font-medium">Name *</label>
-                                <input value={name} onChange={e => setName(e.target.value)} className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm" placeholder="Your name" />
+                                <label htmlFor={nameId} className="text-sm font-medium">Name *</label>
+                                <input id={nameId} required aria-required="true" value={name} onChange={e => setName(e.target.value)} className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm" placeholder="Your name" />
                             </div>
                             <div>
-                                <label className="text-sm font-medium">Phone *</label>
-                                <input value={phone} onChange={e => setPhone(e.target.value)} type="tel" className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm" placeholder="Mobile number" />
+                                <label htmlFor={phoneId} className="text-sm font-medium">Phone *</label>
+                                <input id={phoneId} required aria-required="true" value={phone} onChange={e => setPhone(e.target.value)} type="tel" className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm" placeholder="Mobile number" />
                             </div>
                             <div>
-                                <label className="text-sm font-medium">Email</label>
-                                <input value={email} onChange={e => setEmail(e.target.value)} type="email" className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm" placeholder="Optional" />
+                                <label htmlFor={emailId} className="text-sm font-medium">Email</label>
+                                <input id={emailId} value={email} onChange={e => setEmail(e.target.value)} type="email" className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm" placeholder="Optional" />
                             </div>
                         </div>
 

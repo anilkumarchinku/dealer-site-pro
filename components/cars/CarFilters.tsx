@@ -13,6 +13,7 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { Label } from '@/components/ui/label';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Separator } from '@/components/ui/separator';
 import {
@@ -23,7 +24,7 @@ import {
 } from '@/components/ui/accordion';
 import { cn } from '@/lib/utils';
 import { formatPriceInLakhs } from '@/lib/utils/car-utils';
-import { X } from 'lucide-react';
+import { X, Search } from 'lucide-react';
 import { FOUR_W_BODY_TYPES } from '@/lib/data/four-wheelers';
 
 interface CarFiltersProps {
@@ -67,6 +68,7 @@ export function CarFilters({ className, onFilterChange, hideBrand = false, showU
     const [selectedOwners, setSelectedOwners] = useState<string[]>([]);
     const [kmRange, setKmRange] = useState<[number, number]>([0, KM_MAX_DEFAULT]);
     const [availableMakes, setAvailableMakes] = useState<string[]>([]);
+    const [makeQuery, setMakeQuery] = useState('');
 
     useEffect(() => {
         fetch('/api/brands')
@@ -202,6 +204,11 @@ export function CarFilters({ className, onFilterChange, hideBrand = false, showU
         setArray(array.includes(item) ? array.filter(i => i !== item) : [...array, item]);
     };
 
+    const normalizedMakeQuery = makeQuery.trim().toLowerCase();
+    const filteredMakes = normalizedMakeQuery
+        ? availableMakes.filter((make) => make.toLowerCase().includes(normalizedMakeQuery))
+        : availableMakes;
+
     const totalActive = selectedMakes.length + selectedBodyTypes.length + selectedFuelTypes.length + selectedTransmissions.length +
         selectedYears.length + selectedSeating.length + selectedColors.length + selectedOwners.length +
         (priceRange[0] > 0 || priceRange[1] < PRICE_MAX_DEFAULT ? 1 : 0) +
@@ -292,18 +299,44 @@ export function CarFilters({ className, onFilterChange, hideBrand = false, showU
                                 </span>
                             </AccordionTrigger>
                             <AccordionContent className="pb-4">
+                                {/* Type-ahead brand search */}
+                                <div className="relative mb-3">
+                                    <Search className="pointer-events-none absolute left-2.5 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-gray-400" />
+                                    <Input
+                                        type="text"
+                                        value={makeQuery}
+                                        onChange={(e) => setMakeQuery(e.target.value)}
+                                        placeholder="Search brands"
+                                        aria-label="Search brands"
+                                        className="h-9 pl-8 pr-8 text-sm"
+                                    />
+                                    {makeQuery && (
+                                        <button
+                                            type="button"
+                                            onClick={() => setMakeQuery('')}
+                                            aria-label="Clear brand search"
+                                            className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full p-0.5 text-gray-400 hover:bg-gray-100 hover:text-gray-700"
+                                        >
+                                            <X className="h-3.5 w-3.5" />
+                                        </button>
+                                    )}
+                                </div>
                                 <ScrollArea className="h-48 pr-3">
                                     <div className="space-y-2.5">
-                                        {availableMakes.map((make) => (
-                                            <div key={make} className="flex items-center gap-2">
-                                                <Checkbox
-                                                    id={`make-${make}`}
-                                                    checked={selectedMakes.includes(make)}
-                                                    onCheckedChange={() => toggleItem(make, selectedMakes, setSelectedMakes)}
-                                                />
-                                                <Label htmlFor={`make-${make}`} className="text-sm font-normal cursor-pointer">{make}</Label>
-                                            </div>
-                                        ))}
+                                        {filteredMakes.length > 0 ? (
+                                            filteredMakes.map((make) => (
+                                                <div key={make} className="flex items-center gap-2">
+                                                    <Checkbox
+                                                        id={`make-${make}`}
+                                                        checked={selectedMakes.includes(make)}
+                                                        onCheckedChange={() => toggleItem(make, selectedMakes, setSelectedMakes)}
+                                                    />
+                                                    <Label htmlFor={`make-${make}`} className="text-sm font-normal cursor-pointer">{make}</Label>
+                                                </div>
+                                            ))
+                                        ) : (
+                                            <p className="text-sm text-gray-500 py-2">No brands match &quot;{makeQuery}&quot;</p>
+                                        )}
                                     </div>
                                 </ScrollArea>
                             </AccordionContent>
