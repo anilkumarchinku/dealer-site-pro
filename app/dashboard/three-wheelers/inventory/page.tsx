@@ -5,6 +5,8 @@ import Link from "next/link"
 import { useOnboardingStore } from "@/lib/store/onboarding-store"
 import { Plus, Pencil, Trash2, Eye } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { confirm } from "@/components/ui/confirm-dialog"
+import { toast } from "@/lib/utils/toast"
 import type { ThreeWheelerVehicle } from "@/lib/types/three-wheeler"
 import { getScrapedImageFallback, brandNameToId } from "@/lib/utils/brand-model-images"
 
@@ -29,9 +31,23 @@ export default function ThreeWheelerInventoryPage() {
 
     useEffect(() => { load() }, [load])
 
-    async function handleDelete(id: string) {
-        if (!confirm("Remove this vehicle from your inventory?")) return
-        await fetch(`/api/three-wheelers/${id}`, { method: "DELETE" })
+    async function handleDelete(vehicle: ThreeWheelerVehicle) {
+        const name = `${vehicle.brand} ${vehicle.model}`.trim()
+        const ok = await confirm({
+            title: "Remove this vehicle?",
+            description: `"${name}" will be removed from your inventory and your public website. You can re-add it later.`,
+            confirmText: "Remove vehicle",
+            destructive: true,
+        })
+        if (!ok) return
+
+        const res = await fetch(`/api/three-wheelers/${vehicle.id}`, { method: "DELETE" })
+        if (!res.ok) {
+            const data = await res.json().catch(() => null)
+            toast.error(data?.error ?? "Couldn't remove the vehicle. Please try again.")
+            return
+        }
+        toast.success("Vehicle removed.")
         load()
     }
 
@@ -93,7 +109,7 @@ export default function ThreeWheelerInventoryPage() {
                                             <Pencil className="w-3 h-3 mr-1" /> Edit
                                         </Link>
                                     </Button>
-                                    <Button variant="outline" size="sm" className="text-destructive hover:text-destructive" onClick={() => handleDelete(v.id)}>
+                                    <Button variant="outline" size="sm" className="text-destructive hover:text-destructive" title="Remove vehicle" aria-label={`Remove ${v.brand} ${v.model}`} onClick={() => handleDelete(v)}>
                                         <Trash2 className="w-3 h-3" />
                                     </Button>
                                     <span className="text-xs text-muted-foreground ml-auto flex items-center gap-1">

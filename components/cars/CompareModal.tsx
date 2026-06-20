@@ -10,6 +10,7 @@ import {
     DialogClose,
 } from '@/components/ui/dialog';
 import { useCompareStore } from '@/lib/store/compare-store';
+import { resolveCarImage } from '@/lib/utils/car-image';
 import { Car } from '@/lib/types/car';
 
 interface CompareModalProps {
@@ -130,11 +131,12 @@ export default function CompareModal({ open, onOpenChange, brandColor }: Compare
                                         <div className="flex flex-col items-center gap-2">
                                             <div className="relative w-full h-24 rounded-xl overflow-hidden bg-gray-100">
                                                 <Image
-                                                    src={car.images.hero}
+                                                    src={resolveCarImage(car)}
                                                     alt={`${car.make} ${car.model}`}
                                                     fill
                                                     className="object-cover"
                                                     sizes="(max-width: 640px) 45vw, 240px"
+                                                    unoptimized
                                                 />
                                             </div>
                                             <div className="text-center">

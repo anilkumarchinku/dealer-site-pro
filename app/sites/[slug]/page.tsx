@@ -606,6 +606,7 @@ export default async function SitePage({ params }: SitePageProps) {
         heroImageUrl,
         sellsNewCars: templateSellsNew,
         sellsUsedCars: templateSellsUsed,
+        socialLinks: dealer.social,
         isVerified: false,
     }
 

@@ -18,6 +18,8 @@ import { PremiumEmptyState, PremiumPageHeader } from "@/components/dashboard/pre
 import { Reveal } from "@/components/ui/Reveal";
 import { CountUp } from "@/components/ui/CountUp";
 import { Skeleton } from "@/components/ui/skeleton";
+import { confirm } from "@/components/ui/confirm-dialog";
+import { toast } from "@/lib/utils/toast";
 
 const STAT_CONFIG = [
     { label: "Total Stock",  icon: Car,        bg: "bg-primary/10",    text: "text-primary" },
@@ -107,16 +109,34 @@ export default function InventoryPage() {
     ];
 
     const handleDeleteDB = async (id: string) => {
-        await deleteVehicle(id);
+        const vehicle = dbVehicles.find(v => v.id === id);
+        const name = vehicle ? `${vehicle.make} ${vehicle.model}`.trim() : "this listing";
+        const ok = await confirm({
+            title: "Remove this listing?",
+            description: `"${name}" will be removed from your public website. You can re-add it later, but it will no longer appear to customers.`,
+            confirmText: "Remove listing",
+            destructive: true,
+        });
+        if (!ok) return;
+
+        const result = await deleteVehicle(id);
+        if (!result.success) {
+            toast.error(result.error ?? "Couldn't remove the listing. Please try again.");
+            return;
+        }
         setDbVehicles(prev => prev.filter(v => v.id !== id));
+        toast.success("Listing removed.");
     };
 
     const handleMarkSold = async (id: string) => {
         if (!dealerId) return;
         const result = await updateVehicleStatus(id, dealerId, "sold");
-        if (result.success) {
-            setDbVehicles(prev => prev.map(v => v.id === id ? { ...v, status: "sold" } : v));
+        if (!result.success) {
+            toast.error(result.error ?? "Couldn't mark the vehicle as sold. Please try again.");
+            return;
         }
+        setDbVehicles(prev => prev.map(v => v.id === id ? { ...v, status: "sold" } : v));
+        toast.success("Marked as sold.");
     };
 
     return (

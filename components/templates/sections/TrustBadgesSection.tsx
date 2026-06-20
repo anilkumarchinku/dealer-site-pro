@@ -1,6 +1,6 @@
 'use client';
 
-import { Shield, Users, Star, Settings, CheckCircle2, Award } from 'lucide-react';
+import { Shield, Settings, CheckCircle2, Wrench, IndianRupee, LifeBuoy } from 'lucide-react';
 
 interface TrustBadgesSectionProps {
     brandColor: string;
@@ -14,21 +14,19 @@ interface Badge {
     subtitle: string;
 }
 
+// Trust statements describe what the dealership offers — they are deliberately
+// non-numeric value props, NOT fabricated metrics (no invented customer counts,
+// star ratings, or certifications a dealer never earned).
 const BADGES: Badge[] = [
     {
         icon: Shield,
         title: 'Authorised Dealer',
-        subtitle: 'Official brand authorized dealer',
+        subtitle: 'Genuine vehicles from authorised brands',
     },
     {
-        icon: Users,
-        title: '10,000+ Happy Customers',
-        subtitle: 'Trusted by thousands across the region',
-    },
-    {
-        icon: Star,
-        title: '5-Star Rated',
-        subtitle: 'Top-rated on Google & Justdial',
+        icon: CheckCircle2,
+        title: 'Genuine Spare Parts',
+        subtitle: 'Only original manufacturer parts',
     },
     {
         icon: Settings,
@@ -36,26 +34,21 @@ const BADGES: Badge[] = [
         subtitle: 'Brand-certified service experts',
     },
     {
-        icon: CheckCircle2,
+        icon: IndianRupee,
         title: 'Transparent Pricing',
-        subtitle: 'No hidden charges, ever',
+        subtitle: 'Clear quotes with no hidden charges',
     },
     {
-        icon: Award,
-        title: 'ISO Certified',
-        subtitle: 'Quality assured processes',
+        icon: Wrench,
+        title: 'Expert Service',
+        subtitle: 'Maintenance, repairs and tune-ups',
+    },
+    {
+        icon: LifeBuoy,
+        title: 'Dedicated Support',
+        subtitle: "We're here before and after your purchase",
     },
 ];
-
-function StarRating() {
-    return (
-        <div className="flex items-center gap-0.5">
-            {Array.from({ length: 5 }).map((_, i) => (
-                <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-            ))}
-        </div>
-    );
-}
 
 export function TrustBadgesSection({
     brandColor,
@@ -85,7 +78,6 @@ export function TrustBadgesSection({
                 <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-4">
                     {BADGES.map((badge) => {
                         const Icon = badge.icon;
-                        const isStarRated = badge.title === '5-Star Rated';
                         return (
                             <div
                                 key={badge.title}
@@ -103,9 +95,6 @@ export function TrustBadgesSection({
                                 <h3 className="font-bold text-gray-900 text-sm leading-snug">
                                     {badge.title}
                                 </h3>
-
-                                {/* Star rendering for the 5-star card */}
-                                {isStarRated && <StarRating />}
 
                                 {/* Subtitle */}
                                 <p className="text-xs text-gray-600 leading-relaxed">

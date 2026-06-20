@@ -1,10 +1,10 @@
 "use client"
-import { useMemo, useState, useEffect } from "react";
+import { useMemo, useRef, useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useOnboardingStore } from "@/lib/store/onboarding-store";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, ArrowLeft, Check, Eye, EyeOff } from "lucide-react";
+import { ArrowRight, ArrowLeft, Check, Eye, EyeOff, AlertCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { Service } from "@/lib/types";
 import { validateOnboardingServices } from "@/lib/validations/onboarding";
@@ -43,6 +43,7 @@ export default function TwoWheelerStep2Page() {
     const [error, setError] = useState("");
     const [cyeproKey, setCyeproKey] = useState(data.cyeproApiKey ?? "");
     const [showKey, setShowKey] = useState(false);
+    const servicesRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         setSelectedServices(data.services?.length ? data.services : defaultServices);
@@ -56,9 +57,21 @@ export default function TwoWheelerStep2Page() {
         setError("");
     };
 
+    const selectAll = () => { setSelectedServices(SERVICES.map(s => s.id)); setError(""); };
+    const clearAll = () => setSelectedServices([]);
+
     const handleNext = () => {
         const validationError = validateOnboardingServices(selectedServices);
-        if (validationError) { setError(validationError); return; }
+        if (validationError) {
+            setError(validationError);
+            // Pull the user to the field that needs action: scroll it into view,
+            // highlight it, and move focus there.
+            requestAnimationFrame(() => {
+                servicesRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+                servicesRef.current?.querySelector<HTMLButtonElement>("button")?.focus();
+            });
+            return;
+        }
         updateData({ services: selectedServices, cyeproApiKey: cyeproKey.trim() || undefined });
         setStep(3);
         router.push("/onboarding/two-wheelers/step-3");
@@ -80,44 +93,74 @@ export default function TwoWheelerStep2Page() {
             </CardHeader>
 
             <CardContent className="space-y-6">
-                <p className="text-sm text-muted-foreground">Check all that apply:</p>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    {SERVICES.map((service) => (
-                        <button
-                            key={service.id}
-                            onClick={() => toggleService(service.id)}
-                            className={cn(
-                                "p-4 rounded-lg border-2 text-left transition-colors flex items-start gap-3",
-                                selectedServices.includes(service.id)
-                                    ? "border-primary bg-primary/5"
-                                    : "border-input hover:bg-accent"
-                            )}
-                        >
-                            <div className={cn(
-                                "w-5 h-5 rounded flex items-center justify-center flex-shrink-0 mt-0.5",
-                                selectedServices.includes(service.id) ? "bg-primary" : "bg-muted"
-                            )}>
-                                {selectedServices.includes(service.id) && <Check className="w-3 h-3 text-primary-foreground" />}
-                            </div>
-                            <div className="flex-1 min-w-0">
-                                <div className="flex items-center gap-2">
-                                    <span>{service.icon}</span>
-                                    <span className="font-medium text-sm">{service.title}</span>
-                                </div>
-                                <p className="text-xs text-muted-foreground mt-0.5 truncate">
-                                    {service.description}
-                                </p>
-                            </div>
-                        </button>
-                    ))}
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                    <p className="text-sm text-muted-foreground">Check all that apply</p>
+                    <div className="flex items-center gap-3 text-xs font-medium">
+                        <button type="button" onClick={selectAll} className="text-primary hover:underline">Select all</button>
+                        <span className="text-border">•</span>
+                        <button type="button" onClick={clearAll} className="text-muted-foreground hover:text-foreground hover:underline">Clear</button>
+                    </div>
                 </div>
 
-                <p className="text-sm text-muted-foreground">
-                    Selected: <strong>{selectedServices.length} services</strong>
-                </p>
+                <div
+                    ref={servicesRef}
+                    aria-invalid={!!error}
+                    className={cn(
+                        "grid grid-cols-1 sm:grid-cols-2 gap-3 rounded-xl transition-shadow",
+                        error && "p-1 ring-2 ring-destructive ring-offset-2"
+                    )}
+                >
+                    {SERVICES.map((service, i) => {
+                        const isSel = selectedServices.includes(service.id);
+                        return (
+                            <button
+                                key={service.id}
+                                type="button"
+                                onClick={() => toggleService(service.id)}
+                                aria-pressed={isSel}
+                                style={{ animationDelay: `${Math.min(i, 8) * 40}ms` }}
+                                className={cn(
+                                    "group flex items-start gap-3 rounded-xl border-2 p-4 text-left transition-all animate-fade-in-up",
+                                    "hover:-translate-y-0.5 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
+                                    isSel
+                                        ? "border-primary bg-primary/5 shadow-sm"
+                                        : "border-input hover:border-primary/40 hover:bg-accent"
+                                )}
+                            >
+                                <div className={cn(
+                                    "mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-md transition-colors",
+                                    isSel ? "bg-primary" : "bg-muted group-hover:bg-primary/20"
+                                )}>
+                                    {isSel && <Check className="h-3 w-3 text-primary-foreground" />}
+                                </div>
+                                <div className="min-w-0 flex-1">
+                                    <div className="flex items-center gap-2">
+                                        <span className="text-lg leading-none">{service.icon}</span>
+                                        <span className="text-sm font-semibold">{service.title}</span>
+                                    </div>
+                                    <p className="mt-0.5 text-xs text-muted-foreground">
+                                        {service.description}
+                                    </p>
+                                </div>
+                            </button>
+                        );
+                    })}
+                </div>
 
-                {error && <p className="text-sm text-destructive">{error}</p>}
+                <span className="inline-flex w-fit items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
+                    {selectedServices.length} selected
+                </span>
+
+                {error && (
+                    <div
+                        role="alert"
+                        aria-live="assertive"
+                        className="flex items-center gap-2 rounded-lg border border-destructive/30 bg-destructive/10 px-3 py-2 text-sm font-medium text-destructive animate-fade-in"
+                    >
+                        <AlertCircle className="h-4 w-4 shrink-0" />
+                        {error}
+                    </div>
+                )}
 
                 {/* ── Cyepro integration — same key for CRM leads and stock sync ── */}
                 <div className="border rounded-lg p-4 space-y-3 bg-muted/30">

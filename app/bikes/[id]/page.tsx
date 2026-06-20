@@ -30,7 +30,6 @@ import { OnRoadPriceDialog } from '@/components/two-wheelers/OnRoadPriceDialog';
 import {
     ChevronRight,
     Share2,
-    Calendar,
     Fuel,
     Gauge,
     Zap,
@@ -622,17 +621,11 @@ export default function BikeDetailPage({ params }: Props) {
                                             <Calculator className="w-4 h-4 mr-2" />
                                             Check On-Road Price
                                         </Button>
-                                        <div className="grid grid-cols-2 gap-2">
-                                            <Button variant="outline" size="sm" className="border-gray-200 text-gray-900 hover:bg-gray-50">
-                                                <Calendar className="w-3.5 h-3.5 mr-1.5" />
-                                                Test Ride
-                                            </Button>
-                                            <Button variant="outline" size="sm" className="border-gray-200 text-gray-900 hover:bg-gray-50"
-                                                onClick={handleShare}>
-                                                <Share2 className="w-3.5 h-3.5 mr-1.5" />
-                                                Share
-                                            </Button>
-                                        </div>
+                                        <Button variant="outline" size="sm" className="w-full border-gray-200 text-gray-900 hover:bg-gray-50"
+                                            onClick={handleShare}>
+                                            <Share2 className="w-3.5 h-3.5 mr-1.5" />
+                                            Share
+                                        </Button>
                                     </div>
                                 </CardContent>
                             </Card>

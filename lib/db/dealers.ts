@@ -95,6 +95,14 @@ export interface DealerPublicData {
     hero_subtitle: string | null
     hero_cta_text: string | null
     working_hours: string | null
+    /** Social profile URLs (from dealer_template_configs); null when not set. */
+    social: {
+        facebook: string | null
+        instagram: string | null
+        youtube: string | null
+        twitter: string | null
+        linkedin: string | null
+    }
     services: string[] | null
     /** Set when the URL was a brand-specific slug, e.g. "abhi-motors-tata" */
     brandFilter: string | null
@@ -227,7 +235,7 @@ export async function fetchDealerBySlug(slug: string): Promise<DealerPublicData 
             .eq('dealer_id', dealer.id),
         supabase
             .from('dealer_template_configs')
-            .select('hero_title, hero_subtitle, hero_cta_text, working_hours')
+            .select('hero_title, hero_subtitle, hero_cta_text, working_hours, facebook_url, instagram_url, youtube_url, twitter_url, linkedin_url')
             .eq('dealer_id', dealer.id)
             .single(),
         // Only query dealer_site_configs when rendering a brand-specific page
@@ -260,6 +268,8 @@ export async function fetchDealerBySlug(slug: string): Promise<DealerPublicData 
 
     // Brand-specific config takes priority over the shared main config
     const cfg = siteConfigResult.data ?? mainConfigResult.data
+    // Social links live only on the main template config (not per-brand site configs).
+    const mainConfig = mainConfigResult.data
 
     return {
         id:              dealer.id,
@@ -283,6 +293,13 @@ export async function fetchDealerBySlug(slug: string): Promise<DealerPublicData 
         hero_subtitle:   cfg?.hero_subtitle ?? null,
         hero_cta_text:   cfg?.hero_cta_text ?? null,
         working_hours:   cfg?.working_hours ?? null,
+        social: {
+            facebook:  mainConfig?.facebook_url  ?? null,
+            instagram: mainConfig?.instagram_url ?? null,
+            youtube:   mainConfig?.youtube_url   ?? null,
+            twitter:   mainConfig?.twitter_url   ?? null,
+            linkedin:  mainConfig?.linkedin_url  ?? null,
+        },
         services:        servicesResult.data?.map(s => s.service_name) ?? null,
         brandFilter,
         usedCarSite,

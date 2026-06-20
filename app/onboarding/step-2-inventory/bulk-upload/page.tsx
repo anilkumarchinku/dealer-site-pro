@@ -194,7 +194,7 @@ export default function BulkUploadPage() {
             {/* Heading */}
             <div className="space-y-1">
                 <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
-                    Step 2 of 5 — Bulk Upload
+                    Bulk Upload
                 </p>
                 <h1 className="text-2xl font-bold tracking-tight">Upload Your Vehicle Stock</h1>
                 <p className="text-sm text-muted-foreground">

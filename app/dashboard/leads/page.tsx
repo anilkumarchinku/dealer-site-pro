@@ -64,9 +64,13 @@ export default function LeadsPage() {
     useEffect(() => { loadLeads(); }, [dealerId]); // eslint-disable-line
 
     const handleMarkContacted = async (id: string) => {
-        await updateLeadStatus(id, "contacted");
+        const result = await updateLeadStatus(id, "contacted");
+        if (!result.success) {
+            toast.error(result.error ?? "Couldn't update the lead. Please try again.");
+            return;
+        }
         setApiLeads(prev => prev.map(l => l.id === id ? { ...l, status: "contacted" as const } : l));
-        toast.success("Lead updated");
+        toast.success("Lead marked as contacted.");
     };
 
     const filteredLeads = apiLeads.filter(lead => {

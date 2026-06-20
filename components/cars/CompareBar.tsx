@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { X, Plus, GitCompare } from 'lucide-react';
 import { useCompareStore } from '@/lib/store/compare-store';
+import { resolveCarImage } from '@/lib/utils/car-image';
 import CompareModal from './CompareModal';
 
 const MAX_SLOTS = 3;
@@ -38,11 +39,12 @@ export default function CompareBar({ brandColor = '#2563eb' }: CompareBarProps) 
                         >
                             <div className="relative w-14 h-10 rounded-lg overflow-hidden border border-gray-200 bg-gray-50">
                                 <Image
-                                    src={car.images.hero}
+                                    src={resolveCarImage(car)}
                                     alt={`${car.make} ${car.model}`}
                                     fill
                                     className="object-cover"
                                     sizes="56px"
+                                    unoptimized
                                 />
                             </div>
                             <p className="mt-0.5 text-[10px] text-gray-600 text-center leading-tight max-w-full truncate">

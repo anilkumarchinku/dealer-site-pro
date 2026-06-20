@@ -30,10 +30,6 @@ export default function TwoWheelerOnboardingLayout({
     const stepMatch = pathname.match(/step-(\d+)/);
     const stepNum = stepMatch ? parseInt(stepMatch[1]) : 1;
 
-    if (stepNum === 3) {
-        return <>{children}</>;
-    }
-
     const visibleStep =
         stepNum <= 1 ? 2 :
         stepNum >= 5 ? 4 :

@@ -13,42 +13,38 @@ interface OffersSectionProps {
 function getOffers(vehicleType?: '2w' | '3w' | '4w') {
     const exchangeDesc =
         vehicleType === '2w'
-            ? 'Get up to ₹30,000 exchange bonus on your old bike/scooter. T&C apply.'
+            ? 'Trade in your old bike or scooter and get a fair value towards your new ride.'
             : vehicleType === '3w'
-            ? 'Get up to ₹30,000 exchange bonus on your old auto/cargo vehicle. T&C apply.'
-            : 'Get up to ₹30,000 exchange bonus on your old vehicle. T&C apply.';
+            ? 'Trade in your old auto or cargo vehicle and get a fair value towards your new one.'
+            : 'Trade in your old vehicle and get a fair value towards your new one.';
 
-    const emiDesc =
-        vehicleType === '2w'
-            ? 'Zero processing fee on loans. EMI starting ₹999/month.'
-            : vehicleType === '3w'
-            ? 'Zero processing fee on loans. EMI starting ₹1,999/month.'
-            : 'Zero processing fee on loans. EMI starting ₹3,999/month.';
-
+    // Generic, non-committal value props — we don't advertise specific rates,
+    // amounts, or schemes the dealer hasn't actually authored. Each card invites
+    // the buyer to enquire for current details.
     return [
         {
             icon: ArrowLeftRight,
-            title: 'Exchange Bonus',
+            title: 'Exchange Your Vehicle',
             description: exchangeDesc,
-            badge: 'Limited Time',
+            badge: 'Exchange',
         },
         {
             icon: Shield,
-            title: 'Free Insurance',
-            description: '1-year comprehensive insurance FREE on all new vehicles purchased this month.',
-            badge: 'This Month',
+            title: 'Insurance Assistance',
+            description: 'We help you get your vehicle insured through trusted partners.',
+            badge: 'Insurance',
         },
         {
             icon: BadgePercent,
             title: 'Easy Finance',
-            description: emiDesc,
-            badge: 'Bank Offer',
+            description: 'Flexible EMI and loan options to suit your budget — ask us about plans.',
+            badge: 'Finance',
         },
         {
             icon: Users,
-            title: 'Corporate Discount',
-            description: 'Special pricing for government employees, teachers & defence personnel.',
-            badge: 'Special',
+            title: 'Corporate & Fleet',
+            description: 'Buying for a business or fleet? Talk to us about tailored options.',
+            badge: 'Corporate',
         },
     ];
 }
@@ -81,13 +77,13 @@ export function OffersSection({
                         className="text-sm font-semibold uppercase tracking-widest"
                         style={{ color: brandColor }}
                     >
-                        Exclusive Offers
+                        How We Help
                     </span>
                     <h2 className="mt-2 text-3xl md:text-4xl font-bold text-gray-900">
-                        This Month&apos;s Schemes
+                        Offers &amp; Assistance
                     </h2>
                     <p className="mt-3 text-gray-600 max-w-xl mx-auto">
-                        Take advantage of these limited-time deals available exclusively at {dealerName}.
+                        From exchange to finance, {dealerName} makes buying simple. Contact us for current offers and details.
                     </p>
                 </div>
 

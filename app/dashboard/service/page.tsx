@@ -4,6 +4,12 @@ import { useCallback, useEffect, useState } from "react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import { toast } from "@/lib/utils/toast"
+
+async function readError(res: Response, fallback: string): Promise<string> {
+    const data = await res.json().catch(() => null)
+    return data?.error ?? fallback
+}
 
 type CarServiceStatus = "pending" | "confirmed" | "assigned" | "completed" | "cancelled"
 
@@ -149,19 +155,27 @@ export default function CarServicePage() {
 
     async function updateBooking(booking: CarServiceBooking, status: CarServiceStatus) {
         setSavingId(booking.id)
-        await fetch("/api/car-service-bookings", {
-            method: "PATCH",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-                id: booking.id,
-                status,
-                assigned_partner: partnerInputs[booking.id] || null,
-                referral_url: referralInputs[booking.id] || null,
-                admin_notes: notesInputs[booking.id] || null,
-            }),
-        })
-        setSavingId("")
-        load()
+        try {
+            const res = await fetch("/api/car-service-bookings", {
+                method: "PATCH",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    id: booking.id,
+                    status,
+                    assigned_partner: partnerInputs[booking.id] || null,
+                    referral_url: referralInputs[booking.id] || null,
+                    admin_notes: notesInputs[booking.id] || null,
+                }),
+            })
+            if (!res.ok) {
+                toast.error(await readError(res, "Couldn't update the booking. Please try again."))
+                return
+            }
+            toast.success("Booking updated.")
+            await load()
+        } finally {
+            setSavingId("")
+        }
     }
 
     async function uploadCenterImages(files: FileList | null) {
@@ -184,26 +198,43 @@ export default function CarServicePage() {
 
     async function saveCenter() {
         setSavingConfig(true)
-        await fetch("/api/service-centers", {
-            method: centerForm.id ? "PATCH" : "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(centerForm),
-        })
-        setCenterForm({ id: "", name: "", address: "", city: "", phone: "", maps_url: "", referral_url: "", working_hours: "", description: "", image_urls: [], is_active: true })
-        setSavingConfig(false)
-        load()
+        try {
+            const res = await fetch("/api/service-centers", {
+                method: centerForm.id ? "PATCH" : "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(centerForm),
+            })
+            if (!res.ok) {
+                // Keep the form populated so the operator doesn't lose their input.
+                toast.error(await readError(res, "Couldn't save the service center. Please try again."))
+                return
+            }
+            toast.success(centerForm.id ? "Service center updated." : "Service center added.")
+            setCenterForm({ id: "", name: "", address: "", city: "", phone: "", maps_url: "", referral_url: "", working_hours: "", description: "", image_urls: [], is_active: true })
+            await load()
+        } finally {
+            setSavingConfig(false)
+        }
     }
 
     async function saveTier() {
         setSavingConfig(true)
-        await fetch("/api/service-centers", {
-            method: tierForm.id ? "PATCH" : "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ ...tierForm, type: "tier" }),
-        })
-        setTierForm({ id: "", service_center_id: "", name: "", description: "", price_inr: "", duration: "", is_active: true })
-        setSavingConfig(false)
-        load()
+        try {
+            const res = await fetch("/api/service-centers", {
+                method: tierForm.id ? "PATCH" : "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ ...tierForm, type: "tier" }),
+            })
+            if (!res.ok) {
+                toast.error(await readError(res, "Couldn't save the service price. Please try again."))
+                return
+            }
+            toast.success(tierForm.id ? "Service price updated." : "Service price added.")
+            setTierForm({ id: "", service_center_id: "", name: "", description: "", price_inr: "", duration: "", is_active: true })
+            await load()
+        } finally {
+            setSavingConfig(false)
+        }
     }
 
     function editCenter(center: ServiceCenter) {
@@ -235,12 +266,17 @@ export default function CarServicePage() {
     }
 
     async function moderateServiceReview(review: ServiceCenterReview, action: "approve" | "reject" | "flag") {
-        await fetch("/api/service-center-reviews", {
+        const res = await fetch("/api/service-center-reviews", {
             method: "PATCH",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ id: review.id, action }),
         })
-        load()
+        if (!res.ok) {
+            toast.error(await readError(res, "Couldn't update the review. Please try again."))
+            return
+        }
+        toast.success(`Review ${action === "approve" ? "approved" : action === "reject" ? "rejected" : "flagged"}.`)
+        await load()
     }
 
     return (

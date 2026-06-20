@@ -156,9 +156,6 @@ export default function Step5Page() {
                                 Fine tune the text, links, images, and operating details before the final review.
                             </CardDescription>
                         </div>
-                        <div className="w-fit rounded-full border border-[#CFE0FF] bg-white px-4 py-2 text-sm font-black text-[#155EEF] shadow-[0_10px_24px_rgba(21,94,239,0.08)]">
-                            Step 5 of 6
-                        </div>
                     </div>
                 </CardHeader>
 

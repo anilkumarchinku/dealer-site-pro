@@ -3,8 +3,10 @@
 import { useEffect, useState, useCallback } from "react"
 import Link from "next/link"
 import { useOnboardingStore } from "@/lib/store/onboarding-store"
-import { Plus, Pencil, Trash2 } from "lucide-react"
+import { Plus, Pencil, CheckCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { confirm } from "@/components/ui/confirm-dialog"
+import { toast } from "@/lib/utils/toast"
 import type { ThreeWheelerUsedVehicle } from "@/lib/types/three-wheeler"
 
 const GRADE_COLORS: Record<string, string> = {
@@ -34,9 +36,22 @@ export default function UsedThreeWheelersPage() {
 
     useEffect(() => { load() }, [load])
 
-    async function handleDelete(id: string) {
-        if (!confirm("Mark this vehicle as sold?")) return
-        await fetch(`/api/three-wheelers/used/${id}`, { method: "DELETE" })
+    async function handleMarkSold(vehicle: ThreeWheelerUsedVehicle) {
+        const name = `${vehicle.brand} ${vehicle.model}`.trim()
+        const ok = await confirm({
+            title: "Mark this vehicle as sold?",
+            description: `"${name}" will be marked as sold and removed from your active used-stock listing.`,
+            confirmText: "Mark as sold",
+        })
+        if (!ok) return
+
+        const res = await fetch(`/api/three-wheelers/used/${vehicle.id}`, { method: "DELETE" })
+        if (!res.ok) {
+            const data = await res.json().catch(() => null)
+            toast.error(data?.error ?? "Couldn't update the vehicle. Please try again.")
+            return
+        }
+        toast.success("Marked as sold.")
         load()
     }
 
@@ -105,8 +120,8 @@ export default function UsedThreeWheelersPage() {
                                                     <Pencil className="w-3 h-3" />
                                                 </Link>
                                             </Button>
-                                            <Button variant="outline" size="sm" className="text-destructive hover:text-destructive" onClick={() => handleDelete(v.id)}>
-                                                <Trash2 className="w-3 h-3" />
+                                            <Button variant="outline" size="sm" title="Mark as sold" aria-label={`Mark ${v.brand} ${v.model} as sold`} onClick={() => handleMarkSold(v)}>
+                                                <CheckCircle className="w-3 h-3" />
                                             </Button>
                                         </div>
                                     </td>

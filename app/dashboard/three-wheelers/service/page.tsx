@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useCallback } from "react"
 import { useOnboardingStore } from "@/lib/store/onboarding-store"
+import { toast } from "@/lib/utils/toast"
 import type { ThreeWheelerServiceBooking, ThreeWheelerServiceStatus } from "@/lib/types/three-wheeler"
 
 const STATUS_COLORS: Record<ThreeWheelerServiceStatus, string> = {
@@ -38,11 +39,17 @@ export default function ThreeWheelerServicePage() {
     useEffect(() => { load() }, [load])
 
     async function updateStatus(id: string, status: ThreeWheelerServiceStatus) {
-        await fetch("/api/three-wheelers/service-booking", {
+        const res = await fetch("/api/three-wheelers/service-booking", {
             method:  "PATCH",
             headers: { "Content-Type": "application/json" },
             body:    JSON.stringify({ id, status }),
         })
+        if (!res.ok) {
+            const data = await res.json().catch(() => null)
+            toast.error(data?.error ?? "Couldn't update the booking. Please try again.")
+            return
+        }
+        toast.success("Booking updated.")
         load()
     }
 

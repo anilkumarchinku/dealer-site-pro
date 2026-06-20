@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useCallback } from "react"
 import { useOnboardingStore } from "@/lib/store/onboarding-store"
+import { toast } from "@/lib/utils/toast"
 import type { TwoWheelerLead, TwoWheelerLeadStatus } from "@/lib/types/two-wheeler"
 
 const STATUS_COLORS: Record<TwoWheelerLeadStatus, string> = {
@@ -38,11 +39,17 @@ export default function TwoWheelerLeadsPage() {
     useEffect(() => { load() }, [load])
 
     async function updateStatus(id: string, status: TwoWheelerLeadStatus) {
-        await fetch("/api/two-wheelers/leads", {
+        const res = await fetch("/api/two-wheelers/leads", {
             method:  "PATCH",
             headers: { "Content-Type": "application/json" },
             body:    JSON.stringify({ id, status }),
         })
+        if (!res.ok) {
+            const data = await res.json().catch(() => null)
+            toast.error(data?.error ?? "Couldn't update the lead. Please try again.")
+            return
+        }
+        toast.success("Lead updated.")
         load()
     }
 

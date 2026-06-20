@@ -21,7 +21,7 @@ import {
     SelectTrigger,
     SelectValue,
 } from '@/components/ui/select';
-import { Filter, ChevronLeft, ChevronRight, X } from 'lucide-react';
+import { Filter, ChevronLeft, ChevronRight, X, SearchX } from 'lucide-react';
 import {
     Sheet,
     SheetContent,
@@ -267,6 +267,23 @@ function CarsContent() {
                         {Array.from({ length: 6 }).map((_, i) => (
                             <CarCardSkeleton key={i} />
                         ))}
+                    </div>
+                ) : cars.length === 0 ? (
+                    <div className="text-center py-20 px-4">
+                        <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-muted">
+                            <SearchX className="h-7 w-7 text-muted-foreground" />
+                        </div>
+                        <p className="text-lg font-semibold text-foreground">No cars match your filters</p>
+                        <p className="mt-1 text-sm text-muted-foreground">
+                            {filterChips.length > 0
+                                ? "Try widening your search — or clear your filters to see everything."
+                                : "There are no cars to show right now. Please check back soon."}
+                        </p>
+                        {filterChips.length > 0 && (
+                            <Button onClick={clearAllFilters} className="mt-5">
+                                Clear all filters
+                            </Button>
+                        )}
                     </div>
                 ) : (
                     <>
