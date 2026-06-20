@@ -488,9 +488,10 @@ export function DealerChatbot(props: DealerChatbotProps) {
             {/* ── Floating bubble ── */}
             <button
                 onClick={() => setOpen(o => !o)}
-                className="fixed bottom-20 md:bottom-6 right-6 z-50 w-14 h-14 rounded-full flex items-center justify-center text-white shadow-lg hover:scale-110 transition-all duration-200"
+                className="fixed bottom-20 md:bottom-6 right-6 z-40 w-14 h-14 rounded-full flex items-center justify-center text-white shadow-lg hover:scale-110 transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
                 style={{ backgroundColor: brandColor }}
-                aria-label="Open chat"
+                aria-label={open ? "Close chat" : "Open chat"}
+                aria-expanded={open}
             >
                 {open ? (
                     <X className="w-6 h-6" />
