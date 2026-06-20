@@ -22,6 +22,7 @@ import type { Service } from '@/lib/types';
 import { getContrastText, getReadableAccent } from '@/lib/utils/color-contrast';
 import { getVehicleLabels } from '@/lib/utils/vehicle-labels';
 import { validateLeadForm } from '@/lib/validations/client';
+import { normalizeLeadPhone } from '@/lib/validations/lead';
 import {
     Car,
     CreditCard,
@@ -183,6 +184,8 @@ export function EnquireSidebar({
 }: EnquireSidebarProps) {
     const [selectedService, setSelectedService] = useState<Service | null>(null);
     const [submitted, setSubmitted] = useState(false);
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [errorMsg, setErrorMsg] = useState('');
     const [form, setForm] = useState({
         name: '',
         phone: '',
@@ -242,11 +245,18 @@ export function EnquireSidebar({
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        const validationErrors = validateLeadForm(form);
+        // In-flight guard: prevent a second POST while the first is pending.
+        if (isSubmitting) return;
+
+        // Normalize the phone (drops +91 / spaces) so the suggested "+91 …" placeholder validates.
+        const normalizedPhone = normalizeLeadPhone(form.phone);
+        const validationErrors = validateLeadForm({ ...form, phone: normalizedPhone });
         if (Object.keys(validationErrors).length > 0) {
-            alert(Object.values(validationErrors).join('. '));
+            setErrorMsg(Object.values(validationErrors).join('. '));
             return;
         }
+        setErrorMsg('');
+        setIsSubmitting(true);
 
         try {
             const res = await fetch('/api/leads', {
@@ -255,7 +265,7 @@ export function EnquireSidebar({
                 body: JSON.stringify({
                     dealer_id: dealerId,
                     name: form.name.trim(),
-                    phone: form.phone.trim(),
+                    phone: normalizedPhone,
                     message: form.message.trim() || undefined,
                     car_id: carId || undefined,
                     car_name: carName || undefined,
@@ -270,11 +280,13 @@ export function EnquireSidebar({
                 const errMsg = errBody?.error || (res.status === 429
                     ? 'Too many requests. Please wait a few minutes and try again.'
                     : 'Something went wrong. Please try again or call us directly.');
-                alert(errMsg);
+                setErrorMsg(errMsg);
             }
         } catch (err) {
             console.error('Enquiry submission error:', err);
-            alert('Network error. Please check your connection and try again.');
+            setErrorMsg('Network error. Please check your connection and try again.');
+        } finally {
+            setIsSubmitting(false);
         }
     };
 
@@ -284,6 +296,8 @@ export function EnquireSidebar({
         setTimeout(() => {
             setSubmitted(false);
             setSelectedService(null);
+            setErrorMsg('');
+            setIsSubmitting(false);
             setForm({ name: '', phone: '', preferredTime: '', message: '' });
         }, 300);
     };
@@ -466,15 +480,28 @@ export function EnquireSidebar({
                                 />
                             </div>
 
+                            {errorMsg && (
+                                <p className="text-xs text-red-600 bg-red-50 px-3 py-2 rounded-lg">{errorMsg}</p>
+                            )}
+
                             <Button
                                 type="submit"
                                 className="w-full font-semibold h-11 transition-all"
                                 style={{ backgroundColor: brandColor, color: brandContrast }}
-                                disabled={!form.name || !form.phone}
+                                disabled={!form.name || !form.phone || isSubmitting}
                             >
-                                <Phone className="w-4 h-4 mr-2" />
-                                Request Callback
-                                <ChevronRight className="w-4 h-4 ml-1" />
+                                {isSubmitting ? (
+                                    <>
+                                        <div className="w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin mr-2" />
+                                        Sending…
+                                    </>
+                                ) : (
+                                    <>
+                                        <Phone className="w-4 h-4 mr-2" />
+                                        Request Callback
+                                        <ChevronRight className="w-4 h-4 ml-1" />
+                                    </>
+                                )}
                             </Button>
 
                             {contactPhone && (

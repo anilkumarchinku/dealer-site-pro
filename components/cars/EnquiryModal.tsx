@@ -5,7 +5,7 @@
 
 'use client';
 
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import type { Car } from '@/lib/types/car';
@@ -37,6 +37,7 @@ import { formatPriceInLakhs } from '@/lib/utils/car-utils';
 import { getBrandLogo } from '@/lib/data/brand-logos';
 import { getContrastText, getReadableAccent } from '@/lib/utils/color-contrast';
 import { validateLeadForm, type ValidationErrors } from '@/lib/validations/client';
+import { normalizeLeadPhone } from '@/lib/validations/lead';
 import { getVehicleImageUrls, brandNameToId } from '@/lib/utils/brand-model-images';
 import {
     buildDefaultKeyFeatures,
@@ -72,6 +73,8 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
     const [formErrors, setFormErrors] = useState<ValidationErrors>({});
     const [detailedInfo, setDetailedInfo] = useState<DetailedCarInfo[]>([]);
     const [heroImgIdx, setHeroImgIdx] = useState(0);
+    // Holds the post-success auto-close timer so a quick reopen can cancel the stale timer.
+    const successTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
     // Fetch detailed car info when modal opens
     useEffect(() => {
@@ -91,6 +94,21 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
     useEffect(() => {
         if (open) setHeroImgIdx(0);
     }, [open, car?.id, resolvedImageSrc]);
+
+    // Cancel any pending success auto-close timer when the modal closes or unmounts,
+    // so reopening within the 3s window doesn't get closed by the stale timer.
+    useEffect(() => {
+        if (!open && successTimerRef.current) {
+            clearTimeout(successTimerRef.current);
+            successTimerRef.current = null;
+        }
+        return () => {
+            if (successTimerRef.current) {
+                clearTimeout(successTimerRef.current);
+                successTimerRef.current = null;
+            }
+        };
+    }, [open]);
 
     const heroFallbackList = useMemo(() => {
         if (!car) return [];
@@ -118,7 +136,9 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        const errors = validateLeadForm(formData);
+        // Normalize the phone (drops +91 / spaces) so the suggested "+91 …" placeholder validates.
+        const normalizedPhone = normalizeLeadPhone(formData.phone);
+        const errors = validateLeadForm({ ...formData, phone: normalizedPhone });
         setFormErrors(errors);
         if (Object.keys(errors).length > 0) return;
 
@@ -136,7 +156,7 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
                 body: JSON.stringify({
                     dealer_id: dealerId,
                     name: formData.name.trim(),
-                    phone: formData.phone.trim(),
+                    phone: normalizedPhone,
                     email: formData.email.trim() || undefined,
                     message: messageParts.join('\n\n') || undefined,
                     car_id: car?.id ?? undefined,
@@ -157,8 +177,10 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
         setIsSubmitting(false);
         setIsSubmitted(true);
 
-        // Reset after 3 seconds
-        setTimeout(() => {
+        // Reset + close after 3 seconds. Store the id so a quick reopen can cancel it.
+        if (successTimerRef.current) clearTimeout(successTimerRef.current);
+        successTimerRef.current = setTimeout(() => {
+            successTimerRef.current = null;
             setIsSubmitted(false);
             setFormData({ name: '', email: '', phone: '', preferredDate: '', message: '' });
             setFormErrors({});

@@ -176,20 +176,13 @@ export default function CompareModal({ open, onOpenChange, brandColor }: Compare
                                         {row.label}
                                     </td>
 
-                                    {/* Car values */}
+                                    {/* Car values — one cell per selected car, matching the header columns */}
                                     {selectedCars.map((car) => (
                                         <td
                                             key={car.id}
                                             className="py-3 px-4 text-sm text-gray-800 text-center font-medium"
                                         >
                                             {row.getValue(car)}
-                                        </td>
-                                    ))}
-
-                                    {/* Empty placeholder cells for missing cars */}
-                                    {Array.from({ length: 3 - selectedCars.length }).map((_, i) => (
-                                        <td key={`empty-${i}`} className="py-3 px-4 text-center text-gray-300">
-                                            —
                                         </td>
                                     ))}
                                 </tr>

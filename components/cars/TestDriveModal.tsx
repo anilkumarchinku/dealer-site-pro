@@ -70,7 +70,13 @@ function buildDateTiles(count = 10) {
 }
 
 function toDateStr(date: Date) {
-    return date.toISOString().split('T')[0];
+    // Build the YYYY-MM-DD from LOCAL date parts. Using toISOString() converts to UTC,
+    // which shifts the day back for evening bookings in IST (off-by-one). Local parts keep
+    // the submitted preferred_date in sync with the tile the user actually tapped.
+    const y = date.getFullYear();
+    const m = String(date.getMonth() + 1).padStart(2, '0');
+    const d = String(date.getDate()).padStart(2, '0');
+    return `${y}-${m}-${d}`;
 }
 
 function formatDisplayDate(dateStr: string) {
