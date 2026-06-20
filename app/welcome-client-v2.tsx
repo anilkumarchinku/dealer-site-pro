@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useEffect, useState, type MouseEvent } from "react";
+import { useEffect, useState, type MouseEvent, type ReactNode } from "react";
 import {
     ArrowRight,
     Bike,
@@ -17,6 +17,7 @@ import {
     FileText,
     Fuel,
     Gauge,
+    GitCompare,
     Globe2,
     Heart,
     LayoutTemplate,
@@ -38,6 +39,10 @@ import {
     X,
     Zap,
 } from "lucide-react";
+import { toast } from "@/lib/utils/toast";
+import { useWishlistStore } from "@/lib/store/wishlist-store";
+import { supabase } from "@/lib/supabase";
+import { createPortal } from "react-dom";
 
 import { Button } from "@/components/ui/button";
 import { getBrandLogo } from "@/lib/data/brand-logos";
@@ -555,12 +560,41 @@ function SetupStrip() {
     );
 }
 
+/**
+ * Renders modal content into <body> so it escapes the page's stacking context
+ * (the sticky header + card buttons would otherwise paint over it). Returns
+ * null on the server where document is unavailable.
+ */
+function ModalPortal({ children }: { children: ReactNode }) {
+    if (typeof document === "undefined") return null;
+    return createPortal(children, document.body);
+}
+
+/**
+ * Live Supabase auth status for the marketing landing — reflects the real
+ * session cookie and updates on sign in/out. The static nav button alone
+ * can't tell us whether the visitor is actually signed in.
+ */
+function useAuthStatus() {
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
+    useEffect(() => {
+        let active = true;
+        supabase.auth.getUser().then(({ data }) => { if (active) setIsAuthenticated(!!data.user); });
+        const { data: sub } = supabase.auth.onAuthStateChange((_event, session) => {
+            setIsAuthenticated(!!session?.user);
+        });
+        return () => { active = false; sub.subscription.unsubscribe(); };
+    }, []);
+    return isAuthenticated;
+}
+
 function PremiumQuickViewModal({ car, onClose }: { car: PremiumInventoryItem | null; onClose: () => void }) {
     if (!car) {
         return null;
     }
 
     return (
+        <ModalPortal>
         <div
             className="fixed inset-0 z-[100] flex items-center justify-center bg-slate-950/65 px-4 py-6 backdrop-blur-sm"
             role="dialog"
@@ -641,33 +675,62 @@ function PremiumQuickViewModal({ car, onClose }: { car: PremiumInventoryItem | n
                 </div>
             </div>
         </div>
+        </ModalPortal>
     );
 }
 
-function PremiumCarCard({ car, onQuickView }: { car: PremiumInventoryItem; onQuickView: (car: PremiumInventoryItem) => void }) {
+function PremiumCarCard({ car, onQuickView, isAuthenticated, isCompared, onToggleCompare }: { car: PremiumInventoryItem; onQuickView: (car: PremiumInventoryItem) => void; isAuthenticated: boolean; isCompared: boolean; onToggleCompare: (car: PremiumInventoryItem) => void }) {
     const primarySpecs = car.specs.slice(0, 4);
+
+    // Stable per-vehicle key for the persisted favourites store (demo cards have no DB id).
+    const carId = `premium-${car.brand}-${car.model}`.toLowerCase().replace(/\s+/g, "-");
+    const saved = useWishlistStore((s) => s.items.includes(carId));
+    const toggleSaved = useWishlistStore((s) => s.toggle);
+
+    const handleSave = () => {
+        if (!isAuthenticated) { toast.info("Please sign in to add to favourites", { action: { label: "Sign in", href: "/auth/login" } }); return; }
+        toast.success(saved ? `${car.model} removed from favourites` : `${car.model} saved to favourites`);
+        toggleSaved(carId);
+    };
+
+    const handleCompare = () => {
+        if (!isAuthenticated) { toast.info("Please sign in to compare vehicles", { action: { label: "Sign in", href: "/auth/login" } }); return; }
+        onToggleCompare(car);
+    };
     // Autos use object-contain (taller vehicles must not be cropped); cars/bikes
     // use object-cover (edge-to-edge).
     const imageClassName = car.category === "Auto"
         ? "object-contain p-3"
         : "object-cover";
 
-    // Uniform grey backdrop for every category. Source photos have mixed
-    // backgrounds (some studio-grey, some pure white cutouts), so `mix-blend-multiply`
-    // blends any light/white image background INTO this grey in light mode — giving a
-    // consistent grey across cars, bikes, and autos with no white "box". Dark mode
-    // falls back to normal blend (multiply would swallow dark vehicle parts).
-    const mediaBgClass = "bg-[#F2F6FB] dark:bg-slate-800";
+    // Light photo tile in BOTH themes. Source photos have mixed backgrounds
+    // (studio-grey + pure-white cutouts); mix-blend-multiply blends any light/white
+    // image background INTO this tile for a consistent grey across cars/bikes/autos.
+    // The tile stays light in dark mode too (the card chrome around it is dark) —
+    // a dark tile would render the white image backgrounds as glaring boxes.
+    const mediaBgClass = "bg-[#F2F6FB] dark:bg-[#E9EEF5]";
 
     return (
         <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-[#D8E0EA] bg-white p-4 shadow-[0_18px_48px_rgba(7,20,54,0.09)] transition duration-300 hover:-translate-y-1 hover:border-[#B8C7DA] hover:shadow-[0_28px_70px_rgba(7,20,54,0.14)] dark:border-slate-800 dark:bg-slate-900">
             <div className={`group/media relative overflow-hidden rounded-xl ${mediaBgClass}`}>
                 <div className="absolute right-3 top-3 z-10 flex gap-2">
-                    <button aria-label={`Compare ${car.model}`} className="flex h-10 w-10 items-center justify-center rounded-full border border-white bg-white text-[#155EEF] shadow-[0_10px_22px_rgba(7,20,54,0.13)] transition hover:-translate-y-0.5 hover:bg-[#EEF4FF]">
-                        <ExternalLink className="h-[18px] w-[18px]" />
+                    <button
+                        type="button"
+                        onClick={handleCompare}
+                        aria-label={`Compare ${car.model}`}
+                        aria-pressed={isCompared}
+                        className={`flex h-10 w-10 items-center justify-center rounded-full border border-white shadow-[0_10px_22px_rgba(7,20,54,0.13)] transition hover:-translate-y-0.5 ${isCompared ? "bg-[#155EEF] text-white" : "bg-white text-[#155EEF] hover:bg-[#EEF4FF]"}`}
+                    >
+                        <GitCompare className="h-[18px] w-[18px]" />
                     </button>
-                    <button aria-label={`Save ${car.model}`} className="flex h-10 w-10 items-center justify-center rounded-full border border-white bg-white text-slate-400 shadow-[0_10px_22px_rgba(7,20,54,0.13)] transition hover:-translate-y-0.5 hover:bg-[#EEF4FF] hover:text-[#155EEF]">
-                        <Heart className="h-[18px] w-[18px]" />
+                    <button
+                        type="button"
+                        onClick={handleSave}
+                        aria-label={saved ? `Remove ${car.model} from favourites` : `Save ${car.model} to favourites`}
+                        aria-pressed={saved}
+                        className="flex h-10 w-10 items-center justify-center rounded-full border border-white bg-white text-slate-400 shadow-[0_10px_22px_rgba(7,20,54,0.13)] transition hover:-translate-y-0.5 hover:bg-[#EEF4FF] hover:text-[#155EEF]"
+                    >
+                        <Heart className={`h-[18px] w-[18px] ${saved ? "fill-red-500 text-red-500" : ""}`} />
                     </button>
                 </div>
                 <button
@@ -687,7 +750,7 @@ function PremiumCarCard({ car, onQuickView }: { car: PremiumInventoryItem; onQui
                         alt={`${car.brand} ${car.model}`}
                         fill
                         unoptimized
-                        className={`${imageClassName} mix-blend-multiply dark:mix-blend-normal transition duration-500 group-hover:scale-[1.035]`}
+                        className={`${imageClassName} mix-blend-multiply transition duration-500 group-hover:scale-[1.035]`}
                     />
                 </div>
             </div>
@@ -736,8 +799,134 @@ function PremiumCarCard({ car, onQuickView }: { car: PremiumInventoryItem; onQui
     );
 }
 
+function PremiumCompareModal({ cars, onClose }: { cars: PremiumInventoryItem[]; onClose: () => void }) {
+    if (cars.length < 2) return null;
+
+    // Build spec rows from the union of labels, carrying each spec's icon/colour
+    // and flagging rows where the two cars differ (so we can spotlight them).
+    const labels: string[] = [];
+    cars.forEach((c) => c.specs.forEach((s) => { if (!labels.includes(s.label)) labels.push(s.label); }));
+    const rows = labels.map((label) => {
+        const perCar = cars.map((c) => c.specs.find((s) => s.label === label));
+        const meta = perCar.find(Boolean)!;
+        const values = perCar.map((s) => s?.value ?? "—");
+        return { label, Icon: meta.icon, color: meta.color, values, differs: new Set(values).size > 1 };
+    });
+
+    return (
+        <ModalPortal>
+        <div
+            className="fixed inset-0 z-[110] flex items-center justify-center bg-slate-950/70 px-4 py-6 backdrop-blur-sm"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Compare vehicles"
+            onClick={onClose}
+        >
+            <div
+                className="max-h-[90vh] w-full max-w-3xl overflow-y-auto rounded-2xl border border-white/20 bg-white shadow-[0_32px_100px_rgba(7,20,54,0.34)] dark:border-slate-700 dark:bg-slate-900"
+                onClick={(event) => event.stopPropagation()}
+            >
+                {/* Header */}
+                <div className="flex items-center justify-between gap-4 border-b border-[#E6ECF3] px-6 py-5 dark:border-slate-800">
+                    <div>
+                        <h3 className="text-xl font-black tracking-[-0.02em] text-[#071436] dark:text-white">Compare vehicles</h3>
+                        <p className="mt-0.5 flex items-center gap-1.5 text-sm font-medium text-[#62708A] dark:text-slate-400">
+                            <span className="inline-block h-2 w-2 rounded-full bg-[#155EEF]" />
+                            Differences are highlighted in blue
+                        </p>
+                    </div>
+                    <button
+                        type="button"
+                        aria-label="Close comparison"
+                        onClick={onClose}
+                        className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#E6ECF3] text-[#35445C] transition hover:bg-[#F7F9FC] dark:border-slate-700 dark:text-slate-200 dark:hover:bg-slate-800"
+                    >
+                        <X className="h-5 w-5" />
+                    </button>
+                </div>
+
+                {/* Hero cards with a VS badge */}
+                <div className="relative grid grid-cols-2 gap-px bg-[#E6ECF3] dark:bg-slate-800">
+                    {cars.map((car) => (
+                        <div key={`hero-${car.model}`} className="bg-white p-5 dark:bg-slate-900">
+                            <div className="relative h-36 overflow-hidden rounded-xl bg-[#F2F6FB] dark:bg-[#E9EEF5]">
+                                <span className="absolute left-2 top-2 z-10 inline-flex items-center gap-1.5 rounded-md bg-white/95 px-2 py-1 text-[10px] font-black uppercase tracking-wider text-[#071436] shadow-[0_6px_16px_rgba(7,20,54,0.12)]">
+                                    <span className={`h-2 w-2 rounded-sm ${car.accent}`} /> {car.category}
+                                </span>
+                                <Image src={car.image} alt={`${car.brand} ${car.model}`} fill unoptimized className="object-contain p-2 mix-blend-multiply" />
+                            </div>
+                            <p className="mt-4 text-[11px] font-black uppercase tracking-[0.26em] text-[#155EEF]">{car.brand}</p>
+                            <h4 className="mt-1 text-lg font-black leading-tight text-[#071436] dark:text-white">{car.model}</h4>
+                            <div className="mt-2 flex flex-wrap items-end gap-2">
+                                <p className="text-2xl font-black leading-none tracking-[-0.04em] text-[#071436] dark:text-white">{car.price}</p>
+                                {car.comparePrice && <p className="text-xs font-semibold text-[#8A97AA] line-through">{car.comparePrice}</p>}
+                            </div>
+                            <span className="mt-3 inline-flex items-center gap-1.5 rounded-md border border-[#CFE0FF] bg-[#EEF4FF] px-2.5 py-1 text-xs font-bold text-[#155EEF] dark:border-blue-500/30 dark:bg-blue-500/10 dark:text-blue-300">
+                                <ArrowRight className="h-3.5 w-3.5 -rotate-45" /> {car.emi}
+                            </span>
+                        </div>
+                    ))}
+                    <div className="pointer-events-none absolute left-1/2 top-[92px] z-10 -translate-x-1/2 -translate-y-1/2">
+                        <span className="flex h-11 w-11 items-center justify-center rounded-full border-4 border-white bg-[#071436] text-xs font-black text-white shadow-[0_10px_24px_rgba(7,20,54,0.35)] dark:border-slate-900">VS</span>
+                    </div>
+                </div>
+
+                {/* Spec rows: [icon + label] [car A] [car B], differences spotlighted */}
+                <div className="divide-y divide-[#EEF2F7] dark:divide-slate-800">
+                    {rows.map((row) => (
+                        <div key={row.label} className="grid grid-cols-[1.1fr_1fr_1fr] items-center gap-2 px-6 py-3.5 transition-colors hover:bg-[#F7F9FC] dark:hover:bg-slate-800/50">
+                            <div className="flex items-center gap-2.5">
+                                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#F2F6FB] dark:bg-slate-800">
+                                    <row.Icon className={`h-4 w-4 ${row.color}`} />
+                                </span>
+                                <span className="text-[11px] font-bold uppercase tracking-wider text-[#62708A] dark:text-slate-400">{row.label}</span>
+                            </div>
+                            {row.values.map((value, i) => (
+                                <span
+                                    key={i}
+                                    className={`text-center text-sm font-black ${row.differs ? "text-[#155EEF] dark:text-blue-300" : "text-[#071436] dark:text-white"}`}
+                                >
+                                    {value}
+                                </span>
+                            ))}
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </div>
+        </ModalPortal>
+    );
+}
+
 function PremiumInventorySection() {
     const [quickViewCar, setQuickViewCar] = useState<PremiumInventoryItem | null>(null);
+    const [compareModels, setCompareModels] = useState<string[]>([]);
+    const [compareOpen, setCompareOpen] = useState(false);
+    const isAuthenticated = useAuthStatus();
+
+    // Compare flow: first pick prompts for a second, the second opens the
+    // side-by-side comparison. Toasts/opens are computed OUTSIDE setState so
+    // React Strict Mode's double-invoked updater can't fire them twice.
+    const toggleCompare = (car: PremiumInventoryItem) => {
+        if (compareModels.includes(car.model)) {
+            setCompareModels((list) => list.filter((m) => m !== car.model));
+            return;
+        }
+        if (compareModels.length >= 2) {
+            toast.info("Compare two at a time — remove one to swap.");
+            return;
+        }
+        const next = [...compareModels, car.model];
+        setCompareModels(next);
+        if (next.length === 1) {
+            toast.info("Select another vehicle to compare");
+        } else if (next.length === 2) {
+            setCompareOpen(true);
+        }
+    };
+
+    const compareCars = premiumInventory.filter((c) => compareModels.includes(c.model));
+    const closeCompare = () => { setCompareOpen(false); setCompareModels([]); };
 
     return (
         <section id="inventory-style" className="bg-[#F7F9FC] py-20 dark:bg-slate-950">
@@ -756,11 +945,39 @@ function PremiumInventorySection() {
 
                 <div className="grid gap-6 lg:grid-cols-3">
                     {premiumInventory.map((car) => (
-                        <PremiumCarCard key={car.model} car={car} onQuickView={setQuickViewCar} />
+                        <PremiumCarCard
+                            key={car.model}
+                            car={car}
+                            onQuickView={setQuickViewCar}
+                            isAuthenticated={isAuthenticated}
+                            isCompared={compareModels.includes(car.model)}
+                            onToggleCompare={toggleCompare}
+                        />
                     ))}
                 </div>
             </div>
+
             <PremiumQuickViewModal car={quickViewCar} onClose={() => setQuickViewCar(null)} />
+            {compareOpen && <PremiumCompareModal cars={compareCars} onClose={closeCompare} />}
+
+            {compareModels.length > 0 && !compareOpen && (
+                <ModalPortal>
+                    <div className="fixed bottom-6 left-1/2 z-[120] flex -translate-x-1/2 items-center gap-3 rounded-full bg-[#071436] px-6 py-3 text-white shadow-[0_24px_60px_rgba(7,20,54,0.45)] ring-1 ring-white/15 dark:bg-slate-800 dark:ring-white/20">
+                        <span className="text-sm font-bold text-white">
+                            {compareModels.length === 1 ? "1 selected — pick one more to compare" : `${compareModels.length} vehicles selected`}
+                        </span>
+                        {compareModels.length >= 2 && (
+                            <Button onClick={() => setCompareOpen(true)} className="h-9 rounded-full bg-[#155EEF] px-4 text-sm font-black text-white hover:bg-[#0F4FD3]">
+                                Compare
+                            </Button>
+                        )}
+                        <span className="h-5 w-px bg-white/25" aria-hidden="true" />
+                        <button type="button" onClick={() => setCompareModels([])} className="rounded-full text-sm font-bold text-slate-200 transition hover:text-white">
+                            Clear
+                        </button>
+                    </div>
+                </ModalPortal>
+            )}
         </section>
     );
 }
@@ -768,16 +985,36 @@ function PremiumInventorySection() {
 function BrandTile({ name, logo }: { name: string; logo: string | null }) {
     return (
         <Link href="/brands" className="group flex flex-col items-center gap-4 rounded-xl p-3 transition hover:bg-white hover:shadow-[0_16px_40px_rgba(7,20,54,0.08)] dark:hover:bg-slate-900">
-            <div className="flex h-16 w-24 items-center justify-center">
+            {/* Light logo chip in both themes — brand logos are designed for light
+                backgrounds, so this renders every logo consistently (no white boxes
+                from opaque-bg PNGs, no low contrast on the dark section). */}
+            <div className="flex h-16 w-24 items-center justify-center rounded-xl border border-slate-200 bg-white px-3 dark:border-slate-700">
                 {logo ? (
-                    <Image src={logo} alt={name} width={96} height={64} unoptimized className="max-h-14 w-auto object-contain transition group-hover:scale-105" />
+                    <Image src={logo} alt={name} width={96} height={64} unoptimized className="max-h-12 w-auto object-contain transition group-hover:scale-105" />
                 ) : (
-                    <span className="flex h-14 w-14 items-center justify-center rounded-full bg-[#EEF4FF] text-lg font-black text-[#155EEF]">
+                    <span className="flex h-12 w-12 items-center justify-center rounded-full bg-[#EEF4FF] text-lg font-black text-[#155EEF]">
                         {name.slice(0, 2).toUpperCase()}
                     </span>
                 )}
             </div>
             <span className="text-sm font-semibold text-[#35445C] dark:text-slate-300">{name}</span>
+        </Link>
+    );
+}
+
+// Clean brand tile for the bikes/autos sections — mirrors the cars BrandTile
+// (logo chip + name) so all three "browse by brand" rows read consistently.
+// Optional caption is used by autos, where the per-model descriptor varies.
+function BeyondBrandTile({ name, logo, href, caption }: { name: string; logo: string; href: string; caption?: string }) {
+    return (
+        <Link href={href} className="group flex flex-col items-center gap-4 rounded-xl p-3 text-center transition hover:bg-white hover:shadow-[0_16px_40px_rgba(7,20,54,0.08)] dark:hover:bg-slate-900">
+            <div className="flex h-16 w-24 items-center justify-center rounded-xl border border-slate-200 bg-white px-3 dark:border-slate-700">
+                <Image src={logo} alt={name} width={96} height={64} unoptimized className="max-h-12 w-auto object-contain transition group-hover:scale-105" />
+            </div>
+            <div>
+                <span className="block text-sm font-semibold text-[#35445C] dark:text-slate-300">{name}</span>
+                {caption && <span className="mt-0.5 block text-xs font-medium text-[#62708A] dark:text-slate-400">{caption}</span>}
+            </div>
         </Link>
     );
 }
@@ -890,29 +1127,14 @@ function BeyondCarsSection() {
                             </Link>
                         </div>
 
-                        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+                        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5">
                             {twoWheelerBrands.map((brand) => (
-                                <Link
-                                    key={brand.name}
-                                    href="/bikes"
-                                    className="group rounded-xl border border-[#D8E0EA] bg-white p-5 transition hover:-translate-y-1 hover:shadow-[0_18px_45px_rgba(7,20,54,0.10)] dark:border-slate-800 dark:bg-slate-900 dark:hover:border-slate-700"
-                                >
-                                    <div className="flex items-start justify-between gap-4">
-                                        <div className="flex h-14 w-14 items-center justify-center rounded-xl border border-[#D8E0EA] bg-white dark:border-slate-700 dark:bg-slate-950">
-                                            <Image src={brand.logo} alt={brand.name} width={72} height={44} unoptimized className="max-h-10 w-auto object-contain" />
-                                        </div>
-                                        <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-orange-50 text-orange-600 dark:bg-orange-500/10 dark:text-orange-300">
-                                            <Bike className="h-4 w-4" />
-                                        </div>
-                                    </div>
-                                    <h4 className="mt-5 text-lg font-extrabold text-[#071436] dark:text-white">{brand.name}</h4>
-                                    <p className="mt-2 text-sm font-medium leading-6 text-[#62708A] dark:text-slate-400">Bike, scooter or EV brand</p>
-                                </Link>
+                                <BeyondBrandTile key={brand.name} name={brand.name} logo={brand.logo} href="/bikes" />
                             ))}
                         </div>
                     </div>
 
-                    <div className="rounded-2xl border border-emerald-100 bg-emerald-50/40 p-5 dark:border-emerald-500/15 dark:bg-emerald-500/5">
+                    <div>
                         <div className="mb-4 flex items-center justify-between gap-4">
                             <div className="flex items-center gap-3">
                                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-100 text-emerald-700 dark:bg-emerald-500/10 dark:text-emerald-300">
@@ -929,24 +1151,9 @@ function BeyondCarsSection() {
                             </Link>
                         </div>
 
-                        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+                        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5">
                             {threeWheelerModels.map((model) => (
-                                <Link
-                                    key={model.name}
-                                    href="/autos"
-                                    className="group rounded-xl border border-[#D8E0EA] bg-white p-5 transition hover:-translate-y-1 hover:shadow-[0_18px_45px_rgba(7,20,54,0.10)] dark:border-slate-800 dark:bg-slate-900 dark:hover:border-slate-700"
-                                >
-                                    <div className="flex items-start justify-between gap-4">
-                                        <div className="flex h-14 w-14 items-center justify-center rounded-xl border border-[#D8E0EA] bg-white dark:border-slate-700 dark:bg-slate-950">
-                                            <Image src={model.logo} alt={model.name} width={72} height={44} unoptimized className="max-h-10 w-auto object-contain" />
-                                        </div>
-                                        <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-emerald-50 text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-300">
-                                            <Truck className="h-4 w-4" />
-                                        </div>
-                                    </div>
-                                    <h4 className="mt-5 text-lg font-extrabold text-[#071436] dark:text-white">{model.name}</h4>
-                                    <p className="mt-2 text-sm font-medium leading-6 text-[#62708A] dark:text-slate-400">{model.caption}</p>
-                                </Link>
+                                <BeyondBrandTile key={model.name} name={model.name} logo={model.logo} href="/autos" caption={model.caption} />
                             ))}
                         </div>
                     </div>
@@ -973,6 +1180,11 @@ export default function WelcomeClient({ cars: _cars }: WelcomeClientProps) {
 
     const handleContinue = () => router.push("/onboarding");
     const handleDashboard = () => router.push("/dashboard");
+    const isAuthenticated = useAuthStatus();
+    const handleSignOut = async () => {
+        await supabase.auth.signOut();
+        router.refresh();
+    };
 
     const primaryAction = mounted && isComplete()
         ? { label: "Go to Dashboard", onClick: handleDashboard }
@@ -996,15 +1208,31 @@ export default function WelcomeClient({ cars: _cars }: WelcomeClientProps) {
 
                     <div className="hidden items-center gap-3 lg:flex">
                         <LandingThemeToggle className="h-11 w-11 border-slate-200 bg-white text-slate-950 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100" />
-                        <Link href="/auth/login">
-                            <Button variant="outline" className="h-11 gap-2 border-slate-200 px-5 text-slate-950 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100 dark:hover:bg-slate-800">
-                                <LogIn className="h-4 w-4" />
-                                Sign In
-                            </Button>
-                        </Link>
-                        <Button onClick={handleStart} className="h-11 bg-blue-600 px-6 font-bold hover:bg-blue-700">
-                            Start Free
-                        </Button>
+                        {isAuthenticated ? (
+                            <>
+                                <Link href="/dashboard">
+                                    <Button variant="outline" className="h-11 gap-2 border-slate-200 px-5 text-slate-950 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100 dark:hover:bg-slate-800">
+                                        <LayoutTemplate className="h-4 w-4" />
+                                        Dashboard
+                                    </Button>
+                                </Link>
+                                <Button onClick={handleSignOut} className="h-11 bg-blue-600 px-6 font-bold hover:bg-blue-700">
+                                    Sign Out
+                                </Button>
+                            </>
+                        ) : (
+                            <>
+                                <Link href="/auth/login">
+                                    <Button variant="outline" className="h-11 gap-2 border-slate-200 px-5 text-slate-950 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100 dark:hover:bg-slate-800">
+                                        <LogIn className="h-4 w-4" />
+                                        Sign In
+                                    </Button>
+                                </Link>
+                                <Button onClick={handleStart} className="h-11 bg-blue-600 px-6 font-bold hover:bg-blue-700">
+                                    Start Free
+                                </Button>
+                            </>
+                        )}
                     </div>
 
                     <div className="flex items-center gap-2 lg:hidden">
@@ -1029,10 +1257,21 @@ export default function WelcomeClient({ cars: _cars }: WelcomeClientProps) {
                             ))}
                             <div className="mt-2 grid grid-cols-[auto_1fr_1fr] gap-3">
                                 <LandingThemeToggle className="h-10 w-10 border-slate-200 bg-white dark:border-slate-700 dark:bg-slate-900" />
-                                <Link href="/auth/login">
-                                    <Button variant="outline" className="w-full dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100">Sign In</Button>
-                                </Link>
-                                <Button onClick={handleStart} className="w-full bg-blue-600 hover:bg-blue-700">Start Free</Button>
+                                {isAuthenticated ? (
+                                    <>
+                                        <Link href="/dashboard">
+                                            <Button variant="outline" className="w-full dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100">Dashboard</Button>
+                                        </Link>
+                                        <Button onClick={handleSignOut} className="w-full bg-blue-600 hover:bg-blue-700">Sign Out</Button>
+                                    </>
+                                ) : (
+                                    <>
+                                        <Link href="/auth/login">
+                                            <Button variant="outline" className="w-full dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100">Sign In</Button>
+                                        </Link>
+                                        <Button onClick={handleStart} className="w-full bg-blue-600 hover:bg-blue-700">Start Free</Button>
+                                    </>
+                                )}
                             </div>
                         </div>
                     </div>
@@ -1040,52 +1279,81 @@ export default function WelcomeClient({ cars: _cars }: WelcomeClientProps) {
             </header>
 
             <main>
-                <section className="mx-auto grid max-w-[1536px] items-center gap-8 px-5 pb-12 pt-12 sm:px-8 lg:grid-cols-[0.9fr_1.42fr] lg:gap-9 lg:px-10 lg:pb-7 lg:pt-10">
-                    <div className="flex flex-col lg:pt-2">
-                        {/* Eyebrow badge */}
-                        <div className="mb-5 inline-flex w-fit items-center gap-2 rounded-full border border-blue-100 bg-blue-50 px-3.5 py-1.5 text-xs font-extrabold uppercase tracking-[0.08em] text-blue-700 dark:border-blue-500/20 dark:bg-blue-500/10 dark:text-blue-300">
-                            <Rocket className="h-3.5 w-3.5" />
-                            No code · Free subdomain · Go live today
-                        </div>
+                <section className="mx-auto grid max-w-[1400px] items-start gap-8 px-5 pb-12 pt-12 sm:px-8 lg:grid-cols-[1fr_1.1fr] lg:gap-10 lg:px-10 lg:pb-7 lg:pt-10">
+                    <div className="relative flex flex-col lg:pt-2">
+                        {/* Subtle on-brand glow (decorative, behind text) */}
+                        <div aria-hidden className="pointer-events-none absolute left-0 top-10 h-56 w-56 rounded-full bg-blue-400/15 blur-3xl dark:bg-blue-500/10" />
 
-                        <h1 className="max-w-[620px] text-5xl font-black leading-[1.03] tracking-[-0.035em] text-slate-950 dark:text-white sm:text-6xl lg:text-[60px]">
+                        <h1 className="relative max-w-[680px] text-5xl font-black leading-[1.02] tracking-[-0.04em] text-slate-950 dark:text-white sm:text-6xl lg:text-[62px]">
                             Create your dealership website in{" "}
-                            <span className="relative whitespace-nowrap text-blue-600">
+                            <span className="relative inline-block whitespace-nowrap text-blue-600">
                                 10 minutes
-                                <span aria-hidden className="absolute -bottom-1 left-0 h-[6px] w-full rounded-full bg-blue-600/15" />
+                                {/* hand-drawn highlighter swoosh */}
+                                <svg
+                                    aria-hidden
+                                    viewBox="0 0 300 16"
+                                    preserveAspectRatio="none"
+                                    className="absolute -bottom-2 left-0 h-3 w-full text-blue-500/40 dark:text-blue-400/40"
+                                >
+                                    <path d="M4 11 C 70 3, 150 3, 296 8" fill="none" stroke="currentColor" strokeWidth="6" strokeLinecap="round" />
+                                </svg>
                             </span>
                         </h1>
-                        <p className="mt-6 max-w-[600px] text-lg font-medium leading-8 text-slate-600 dark:text-slate-300">
-                            No coding. No agency. Add your vehicles, collect enquiries, and go live on your own branded website — for cars, bikes, and autos.
-                        </p>
 
-                        <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
-                            <Button onClick={primaryAction.onClick} className="group h-[54px] rounded-xl bg-blue-600 px-8 text-base font-extrabold shadow-[0_14px_30px_rgba(37,99,235,0.28)] transition-all hover:bg-blue-700 hover:shadow-[0_18px_40px_rgba(37,99,235,0.36)]">
+                        <div className="relative mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+                            <Button onClick={primaryAction.onClick} className="group h-[56px] rounded-xl bg-blue-600 px-8 text-base font-extrabold text-white shadow-[0_16px_36px_rgba(37,99,235,0.30)] transition-all hover:bg-blue-700 hover:shadow-[0_20px_46px_rgba(37,99,235,0.40)]">
                                 {primaryAction.label}
                                 <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-200 group-hover:translate-x-1" />
                             </Button>
-                            <Button variant="outline" asChild className="h-[54px] rounded-xl border-slate-200 px-7 text-base font-extrabold text-slate-800 transition-colors hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700 dark:border-slate-700 dark:text-slate-200 dark:hover:bg-blue-500/10">
+                            <Button variant="outline" asChild className="group h-[56px] rounded-xl border-slate-200 px-7 text-base font-extrabold text-slate-800 transition-colors hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700 dark:border-slate-700 dark:text-slate-200 dark:hover:bg-blue-500/10">
                                 <a href="https://lakshmi-motors-audi.indrav.in/" target="_blank" rel="noopener noreferrer">
                                     See Sample Website
-                                    <ExternalLink className="ml-2 h-4 w-4" />
+                                    <ExternalLink className="ml-2 h-4 w-4 transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
                                 </a>
                             </Button>
                         </div>
 
-                        <p className="mt-4 flex items-center gap-2 text-sm font-semibold text-slate-500 dark:text-slate-400">
-                            <Check className="h-4 w-4 shrink-0 text-green-600 dark:text-green-400" />
-                            Free to start — no credit card required
-                        </p>
-
-                        <div className="mt-8 flex flex-wrap gap-2.5">
+                        <div className="relative mt-9 flex flex-wrap gap-2.5">
                             {heroProof.map((item) => (
-                                <div key={item.title} className="inline-flex items-center gap-2.5 rounded-full border border-slate-200 bg-white px-4 py-2.5 text-sm font-bold text-slate-700 shadow-[0_2px_10px_rgba(7,20,54,0.04)] dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300">
+                                <div key={item.title} className="inline-flex items-center gap-2.5 rounded-full border border-slate-200 bg-white px-4 py-2.5 text-sm font-bold text-slate-700 shadow-[0_2px_10px_rgba(7,20,54,0.04)] transition hover:-translate-y-0.5 hover:border-blue-200 hover:shadow-[0_8px_20px_rgba(37,99,235,0.10)] dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300">
                                     <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-green-50 text-green-700 dark:bg-green-500/10 dark:text-green-300">
                                         <item.icon className="h-3.5 w-3.5" />
                                     </span>
                                     {item.title}
                                 </div>
                             ))}
+                        </div>
+
+                        {/* Works with leading brands — fills the column + adds credibility */}
+                        <div className="relative mt-10">
+                            <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-slate-400 dark:text-slate-500">
+                                Works with leading brands
+                            </p>
+                            <div className="mt-4 flex flex-wrap items-center gap-2.5">
+                                {[
+                                    { name: "Maruti Suzuki", logo: "/data/brand-logos/maruti-suzuki.png" },
+                                    { name: "Hyundai", logo: "/data/brand-logos/hyundai.png" },
+                                    { name: "Tata Motors", logo: "/data/brand-logos/tata-motors.png" },
+                                    { name: "Mahindra", logo: "/data/brand-logos/mahindra.png" },
+                                    { name: "Hero MotoCorp", logo: "/data/brand-logos/hero-motocorp.png" },
+                                    { name: "Bajaj Auto", logo: "/data/brand-logos/bajaj-auto.png" },
+                                    { name: "TVS Motor", logo: "/data/brand-logos/tvs-motor.png" },
+                                ].map((b) => (
+                                    <div
+                                        key={b.name}
+                                        className="flex h-11 items-center justify-center rounded-lg border border-slate-200 bg-white px-3 shadow-[0_1px_4px_rgba(7,20,54,0.05)] dark:border-slate-700"
+                                    >
+                                        <Image
+                                            src={b.logo}
+                                            alt={b.name}
+                                            width={80}
+                                            height={28}
+                                            unoptimized
+                                            className="h-6 w-auto max-w-[80px] object-contain opacity-80 grayscale transition hover:opacity-100 hover:grayscale-0"
+                                        />
+                                    </div>
+                                ))}
+                            </div>
                         </div>
                     </div>
 

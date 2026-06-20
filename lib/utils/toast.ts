@@ -5,6 +5,11 @@
 
 type ToastVariant = "success" | "error" | "info" | "warning";
 
+/** Optional inline call-to-action rendered as a link button inside the toast. */
+interface ToastOptions {
+    action?: { label: string; href: string };
+}
+
 interface VariantStyle {
     light: { bg: string; color: string; border: string; dot: string };
     dark: { bg: string; color: string; border: string; dot: string };
@@ -44,7 +49,7 @@ function reposition() {
     }
 }
 
-function show(message: string, variant: ToastVariant) {
+function show(message: string, variant: ToastVariant, options?: ToastOptions) {
     if (typeof document === "undefined") return;
 
     const isDark = document.documentElement.classList.contains("dark");
@@ -86,7 +91,33 @@ function show(message: string, variant: ToastVariant) {
     ].join(";");
 
     el.appendChild(dot);
-    el.appendChild(document.createTextNode(message));
+
+    const text = document.createElement("span");
+    text.textContent = message;
+    text.style.cssText = "flex:1";
+    el.appendChild(text);
+
+    // Optional inline action (e.g. "Sign in") rendered as a small link button.
+    if (options?.action) {
+        const link = document.createElement("a");
+        link.href = options.action.href;
+        link.textContent = options.action.label;
+        link.style.cssText = [
+            "flex-shrink:0",
+            "margin-left:4px",
+            "padding:5px 12px",
+            "border-radius:8px",
+            "font-weight:700",
+            "font-size:13px",
+            "text-decoration:none",
+            "white-space:nowrap",
+            `color:${palette.dot}`,
+            `border:1px solid ${palette.border}`,
+        ].join(";");
+        link.addEventListener("click", (e) => e.stopPropagation());
+        el.appendChild(link);
+    }
+
     document.body.appendChild(el);
     active.push(el);
     reposition();
@@ -112,8 +143,8 @@ function show(message: string, variant: ToastVariant) {
 }
 
 export const toast = {
-    success: (message: string) => show(message, "success"),
-    error:   (message: string) => show(message, "error"),
-    info:    (message: string) => show(message, "info"),
-    warning: (message: string) => show(message, "warning"),
+    success: (message: string, options?: ToastOptions) => show(message, "success", options),
+    error:   (message: string, options?: ToastOptions) => show(message, "error", options),
+    info:    (message: string, options?: ToastOptions) => show(message, "info", options),
+    warning: (message: string, options?: ToastOptions) => show(message, "warning", options),
 };
