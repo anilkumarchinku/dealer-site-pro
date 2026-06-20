@@ -712,7 +712,7 @@ export function LuxuryTemplate({
                         </div>
                         <div>
                             <span className="text-2xl font-light tracking-widest block text-gray-900">{dealerName}</span>
-                            <span className="text-sm text-gray-600">Curating excellence since {new Date().getFullYear()}</span>
+                            <span className="text-sm text-gray-600">{tagline}</span>
                         </div>
                     </div>
 

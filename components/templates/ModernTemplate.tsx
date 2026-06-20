@@ -702,10 +702,10 @@ export function ModernTemplate({
                             </Reveal>
                             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                                 {[
-                                    { icon: Shield, title: 'Certified Quality', desc: '150-point inspection' },
-                                    { icon: Award, title: 'Best Prices', desc: 'Transparent pricing' },
-                                    { icon: Clock, title: 'Fast Delivery', desc: '24-48 hours' },
-                                    { icon: CheckCircle2, title: 'Easy Financing', desc: 'Instant approval' },
+                                    { icon: Shield, title: 'Trusted Dealer', desc: 'Verified, transparent service' },
+                                    { icon: Award, title: 'Fair Pricing', desc: 'Clear, upfront pricing' },
+                                    { icon: Clock, title: 'Easy Process', desc: 'Simple, hassle-free buying' },
+                                    { icon: CheckCircle2, title: 'Finance Options', desc: 'Flexible payment plans' },
                                 ].map((feature, i) => (
                                     <Reveal key={i} direction="up" delay={i * 80} className="group p-6 rounded-xl bg-gray-50 hover-lift">
                                         <div

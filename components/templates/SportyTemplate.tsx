@@ -861,7 +861,7 @@ export function SportyTemplate({
                                 )}
                                 {/* Google Maps Embed */}
                                 {contactInfo.address && (
-                                    <div className="mt-4 rounded-lg overflow-hidden border border-gray-700 h-40">
+                                    <div className="mt-4 rounded-lg overflow-hidden border border-gray-200 h-40">
                                         <iframe
                                             src={`https://maps.google.com/maps?q=${encodeURIComponent(contactInfo.address)}&output=embed`}
                                             className="w-full h-full"
