@@ -5,6 +5,7 @@ import { headers } from 'next/headers'
 import { fetchDealerBySlug } from '@/lib/db/dealers'
 import { getBrandColors } from '@/lib/colors/automotive-brands'
 import { BASE_DOMAIN } from '@/lib/utils/domain'
+import { ContactMessageForm } from '@/components/sites/ContactMessageForm'
 
 interface Props { params: Promise<{ slug: string }> }
 
@@ -126,6 +127,9 @@ export default async function ContactPage({ params }: Props) {
                             }
                         />
                     </div>
+
+                    {/* Send a message — writes to the dealer's Messages inbox */}
+                    <ContactMessageForm dealerId={dealer.id} brandColor={brandColor} />
 
                     {/* Working hours */}
                     {dealer.working_hours && (
