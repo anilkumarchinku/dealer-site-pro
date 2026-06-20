@@ -19,8 +19,8 @@ export default function ResetPage() {
     }, [router]);
 
     return (
-        <main className="flex min-h-screen items-center justify-center bg-[#F6F9FD] px-4 py-10 text-[#07142F]">
-            <section className="grid w-full max-w-5xl overflow-hidden rounded-3xl border border-[#D8E2F0] bg-white shadow-[0_24px_90px_rgba(7,20,47,0.12)] lg:grid-cols-[0.95fr_1.05fr]">
+        <main className="flex min-h-screen items-center justify-center bg-muted px-4 py-10 text-foreground">
+            <section className="grid w-full max-w-5xl overflow-hidden rounded-3xl border border-border bg-card shadow-[0_24px_90px_rgba(7,20,47,0.12)] lg:grid-cols-[0.95fr_1.05fr]">
                 <div className="bg-[#071A3D] p-8 text-white sm:p-10">
                     <BrandLogo className="[&>span]:text-white" />
                     <div className="mt-16 max-w-md">
@@ -38,11 +38,11 @@ export default function ResetPage() {
                 </div>
 
                 <div className="flex flex-col justify-center p-8 sm:p-10">
-                    <div className="mb-8 flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-50 text-[#155EEF]">
+                    <div className="mb-8 flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10 text-primary">
                         <Loader2 className="h-8 w-8 animate-spin" />
                     </div>
-                    <h2 className="text-3xl font-black tracking-tight">Preparing a clean onboarding session</h2>
-                    <p className="mt-3 text-base leading-7 text-[#60708A]">
+                    <h2 className="text-3xl font-black tracking-tight text-foreground">Preparing a clean onboarding session</h2>
+                    <p className="mt-3 text-base leading-7 text-muted-foreground">
                         You will be redirected automatically in a moment.
                     </p>
 
@@ -52,14 +52,14 @@ export default function ResetPage() {
                             { icon: ShieldCheck, label: "Backend data stays protected" },
                             { icon: CheckCircle2, label: "Redirecting to setup" },
                         ].map((item) => (
-                            <div key={item.label} className="flex items-center gap-3 rounded-2xl border border-[#DDE6F2] bg-[#F8FBFF] px-4 py-3 text-sm font-bold text-[#24324A]">
-                                <item.icon className="h-4 w-4 text-[#155EEF]" />
+                            <div key={item.label} className="flex items-center gap-3 rounded-2xl border border-border bg-muted px-4 py-3 text-sm font-bold text-foreground">
+                                <item.icon className="h-4 w-4 text-primary" />
                                 {item.label}
                             </div>
                         ))}
                     </div>
 
-                    <div className="mt-8 inline-flex items-center gap-2 text-sm font-black text-[#155EEF]">
+                    <div className="mt-8 inline-flex items-center gap-2 text-sm font-black text-primary">
                         Going to onboarding
                         <ArrowRight className="h-4 w-4" />
                     </div>

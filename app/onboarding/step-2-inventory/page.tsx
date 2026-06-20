@@ -119,6 +119,7 @@ export default function Step2InventoryPage() {
                         <button
                             key={option.id}
                             type="button"
+                            aria-pressed={active}
                             onClick={() => selectMode(option.id)}
                             className={cn(
                                 "relative rounded-lg border bg-white p-5 text-left shadow-[0_14px_42px_rgba(7,20,54,0.05)] transition hover:-translate-y-0.5 hover:border-[#155EEF] hover:shadow-[0_18px_52px_rgba(7,20,54,0.10)] focus:outline-none focus:ring-2 focus:ring-[#155EEF]",
@@ -144,6 +145,13 @@ export default function Step2InventoryPage() {
                     );
                 })}
             </div>
+
+            {/* Announce the current selection for screen readers (cards convey it via colour/check otherwise). */}
+            <p className="sr-only" role="status" aria-live="polite">
+                {mode
+                    ? `${options.find((option) => option.id === mode)?.title ?? ""} selected`
+                    : "No inventory method selected"}
+            </p>
 
             {mode === "cyepro" && (
                 <div className="rounded-lg border border-[#D8E0EA] bg-[#F7F9FC] p-5">

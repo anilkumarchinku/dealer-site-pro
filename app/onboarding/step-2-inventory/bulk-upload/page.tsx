@@ -27,6 +27,9 @@ const CSV_EXAMPLE = [
 
 const CSV_TEMPLATE = [CSV_HEADERS.join(","), CSV_EXAMPLE].join("\n")
 
+// Max vehicles accepted per upload (matches the advertised limit in the UI copy).
+const MAX_ROWS = 500
+
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
 /** Parse a single CSV line, handling quoted fields */
@@ -141,6 +144,19 @@ export default function BulkUploadPage() {
         reader.onload = (e) => {
             const text = e.target?.result as string
             const { rows: parsed, errors } = parseCSV(text)
+
+            // Enforce the advertised 500-vehicle cap: keep the first 500 valid rows
+            // and tell the dealer the rest were skipped so the copy stays honest.
+            if (parsed.length > MAX_ROWS) {
+                const trimmed = parsed.slice(0, MAX_ROWS)
+                setRows(trimmed)
+                setParseErrors([
+                    `Only the first ${MAX_ROWS} vehicles were kept — your file has ${parsed.length} valid rows, which is over the ${MAX_ROWS}-vehicle limit. Upload the rest in a second file.`,
+                    ...errors,
+                ])
+                return
+            }
+
             setRows(parsed)
             setParseErrors(errors)
         }
@@ -168,16 +184,15 @@ export default function BulkUploadPage() {
     }
 
     // ── Save & continue ───────────────────────────────────────────────────────
-    const handleSave = async () => {
+    const handleSave = () => {
         setSaving(true)
-        // Store uploaded vehicles in Zustand (persisted to localStorage)
-        // They will be saved to the DB when the dealer completes step-6
+        // Store the parsed vehicles in Zustand (persisted to localStorage only).
+        // Nothing is written to the database here — the rows are saved to the DB
+        // when the dealer completes step-6.
         updateData({
             inventorySource:  "own",
             uploadedVehicles: rows,
         })
-        await new Promise(r => setTimeout(r, 400)) // brief save animation
-        setSaving(false)
         setStep(3)
         router.push("/onboarding/step-3")
     }
@@ -234,12 +249,21 @@ export default function BulkUploadPage() {
             {/* Upload area */}
             {!hasFile ? (
                 <div
+                    role="button"
+                    tabIndex={0}
+                    aria-label="Upload CSV file. Click, press Enter, or drag and drop a CSV file here."
                     onDragOver={(e) => { e.preventDefault(); setIsDragging(true) }}
                     onDragLeave={() => setIsDragging(false)}
                     onDrop={handleDrop}
                     onClick={() => fileInputRef.current?.click()}
+                    onKeyDown={(e) => {
+                        if (e.key === "Enter" || e.key === " ") {
+                            e.preventDefault()
+                            fileInputRef.current?.click()
+                        }
+                    }}
                     className={cn(
-                        "flex flex-col items-center justify-center gap-4 p-12 rounded-2xl border-2 border-dashed cursor-pointer transition-all duration-200",
+                        "flex flex-col items-center justify-center gap-4 p-12 rounded-2xl border-2 border-dashed cursor-pointer transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2",
                         isDragging
                             ? "border-blue-500/60 bg-blue-500/5 scale-[1.01]"
                             : "border-border hover:border-blue-400/50 hover:bg-muted/30"
@@ -283,7 +307,9 @@ export default function BulkUploadPage() {
                         </p>
                     </div>
                     <button
+                        type="button"
                         onClick={clearFile}
+                        aria-label="Remove uploaded file"
                         className="p-1.5 rounded-lg hover:bg-muted text-muted-foreground hover:text-foreground transition-colors"
                     >
                         <X className="w-4 h-4" />

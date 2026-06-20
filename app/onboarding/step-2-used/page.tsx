@@ -455,6 +455,8 @@ export default function Step2UsedPage() {
                                 <p className="text-xs text-muted-foreground">Looking great! You can replace it below.</p>
                             </div>
                             <button
+                                type="button"
+                                aria-label="Remove uploaded logo"
                                 onClick={() => { setLogoPreview(""); if (fileInputRef.current) fileInputRef.current.value = ""; }}
                                 className="p-1.5 rounded-lg hover:bg-muted transition-colors text-muted-foreground hover:text-foreground"
                             >
@@ -463,12 +465,21 @@ export default function Step2UsedPage() {
                         </div>
                     ) : (
                         <div
+                            role="button"
+                            tabIndex={0}
+                            aria-label="Upload your logo. Click, press Enter, or drag and drop an image file here."
                             onDragOver={(e) => { e.preventDefault(); setIsDragging(true); }}
                             onDragLeave={() => setIsDragging(false)}
                             onDrop={handleDrop}
                             onClick={() => fileInputRef.current?.click()}
+                            onKeyDown={(e) => {
+                                if (e.key === "Enter" || e.key === " ") {
+                                    e.preventDefault();
+                                    fileInputRef.current?.click();
+                                }
+                            }}
                             className={cn(
-                                "flex flex-col items-center justify-center gap-3 p-8 rounded-xl border-2 border-dashed cursor-pointer transition-all duration-200",
+                                "flex flex-col items-center justify-center gap-3 p-8 rounded-xl border-2 border-dashed cursor-pointer transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:ring-offset-2",
                                 isDragging
                                     ? "border-amber-500/60 bg-amber-500/5"
                                     : "border-border hover:border-amber-400/50 hover:bg-muted/30"
@@ -528,6 +539,8 @@ export default function Step2UsedPage() {
                                 <p className="text-xs text-muted-foreground">Looking great! You can replace it below.</p>
                             </div>
                             <button
+                                type="button"
+                                aria-label="Remove uploaded hero image"
                                 onClick={() => { setHeroPreview(""); if (heroInputRef.current) heroInputRef.current.value = ""; }}
                                 className="p-1.5 rounded-lg hover:bg-muted transition-colors text-muted-foreground hover:text-foreground"
                             >
@@ -536,12 +549,21 @@ export default function Step2UsedPage() {
                         </div>
                     ) : (
                         <div
+                            role="button"
+                            tabIndex={0}
+                            aria-label="Upload your hero image. Click, press Enter, or drag and drop an image file here."
                             onDragOver={(e) => { e.preventDefault(); setIsHeroDragging(true); }}
                             onDragLeave={() => setIsHeroDragging(false)}
                             onDrop={handleHeroDrop}
                             onClick={() => heroInputRef.current?.click()}
+                            onKeyDown={(e) => {
+                                if (e.key === "Enter" || e.key === " ") {
+                                    e.preventDefault();
+                                    heroInputRef.current?.click();
+                                }
+                            }}
                             className={cn(
-                                "flex flex-col items-center justify-center gap-3 p-8 rounded-xl border-2 border-dashed cursor-pointer transition-all duration-200",
+                                "flex flex-col items-center justify-center gap-3 p-8 rounded-xl border-2 border-dashed cursor-pointer transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:ring-offset-2",
                                 isHeroDragging
                                     ? "border-amber-500/60 bg-amber-500/5"
                                     : "border-border hover:border-amber-400/50 hover:bg-muted/30"

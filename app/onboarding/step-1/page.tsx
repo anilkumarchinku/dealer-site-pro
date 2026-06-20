@@ -163,6 +163,55 @@ export default function Step1Page() {
         setBrandError("");
     };
 
+    // Scroll to and focus an element (mirrors the focus-first-error pattern used elsewhere)
+    const focusElement = (el: HTMLElement | null) => {
+        if (!el) return;
+        requestAnimationFrame(() => {
+            el.scrollIntoView({ behavior: "smooth", block: "center" });
+            el.focus();
+        });
+    };
+
+    // Given per-field errors, find and focus the first invalid field in visual order.
+    // Returns true if a field was focused.
+    const focusFirstError = (
+        fieldErrors: Record<string, string>,
+        nextBranchErrors: Record<string, string>
+    ): boolean => {
+        // Ordered to match the on-screen field order.
+        const fieldOrder = [
+            "dealershipName",
+            "siteSlug",
+            "location",
+            "phone",
+            "email",
+            "gstin",
+            "mapLink",
+            "whatsapp",
+        ];
+
+        for (const field of fieldOrder) {
+            if (!fieldErrors[field]) continue;
+            const el = document.getElementById(`step1-${field}`);
+            if (el) {
+                focusElement(el);
+                return true;
+            }
+        }
+
+        // Branch errors come after the basic fields; focus the first errored branch input.
+        const firstBranchKey = Object.keys(nextBranchErrors)[0];
+        if (firstBranchKey) {
+            const el = document.getElementById(`step1-branch-${firstBranchKey}`);
+            if (el) {
+                focusElement(el);
+                return true;
+            }
+        }
+
+        return false;
+    };
+
     const validate = () => {
         const { errors: newErrors, branchErrors: nextBranchErrors } = validateOnboardingContactStep({
             ...formData,
@@ -175,7 +224,12 @@ export default function Step1Page() {
 
         setBranchErrors(nextBranchErrors);
         setErrors(newErrors);
-        return Object.keys(newErrors).length === 0;
+
+        if (Object.keys(newErrors).length > 0) {
+            focusFirstError(newErrors, nextBranchErrors);
+            return false;
+        }
+        return true;
     };
 
     const handleNext = async () => {
@@ -191,7 +245,7 @@ export default function Step1Page() {
 
         if (showBrandPicker && !cyeproKey.trim()) {
             setCyeproError("Please enter your Cyepro API key so website leads can reach your CRM");
-            document.getElementById("cyepro-section")?.scrollIntoView({ behavior: "smooth", block: "center" });
+            focusElement(document.getElementById("step1-cyeproKey"));
             return;
         }
 
@@ -295,6 +349,7 @@ export default function Step1Page() {
             <CardContent className="space-y-6 p-6">
                 {/* Dealership Name */}
                 <Input
+                    id="step1-dealershipName"
                     label="Dealership Name"
                     placeholder="Kumar Motors"
                     maxLength={50}
@@ -326,6 +381,7 @@ export default function Step1Page() {
                                 </span>
                             )}
                             <input
+                                id="step1-siteSlug"
                                 type="text"
                                 value={siteSlug}
                                 onChange={(e) => handleSlugChange(e.target.value)}
@@ -402,6 +458,7 @@ export default function Step1Page() {
                 )}
 
                 <Input
+                    id="step1-location"
                     label="Location"
                     placeholder="Mumbai, Maharashtra"
                     maxLength={200}
@@ -451,6 +508,7 @@ export default function Step1Page() {
                                         <div className="grid grid-cols-2 gap-2">
                                             <div>
                                                 <input
+                                                    id={`step1-branch-${idx}-city`}
                                                     type="text"
                                                     placeholder="City *"
                                                     maxLength={50}
@@ -469,6 +527,7 @@ export default function Step1Page() {
                                             </div>
                                             <div>
                                                 <input
+                                                    id={`step1-branch-${idx}-state`}
                                                     type="text"
                                                     placeholder="State *"
                                                     maxLength={50}
@@ -488,6 +547,7 @@ export default function Step1Page() {
                                         </div>
                                         <div>
                                             <textarea
+                                                id={`step1-branch-${idx}-address`}
                                                 placeholder="Full address * (e.g., 123 Main St, Mumbai, MH 400001)"
                                                 maxLength={150}
                                                 value={branch.address}
@@ -510,6 +570,7 @@ export default function Step1Page() {
                                         </div>
                                         <div>
                                             <PhoneInput
+                                                id={`step1-branch-${idx}-phone`}
                                                 value={branch.phone || ""}
                                                 countryCode={branch.phoneCountryCode || "+91"}
                                                 onValueChange={(v) => {
@@ -555,7 +616,7 @@ export default function Step1Page() {
 
                 {/* Phone Number with country code */}
                 <PhoneInput
-                    id="phone"
+                    id="step1-phone"
                     label="Phone Number"
                     value={formData.phone}
                     countryCode={formData.phoneCountryCode}
@@ -567,6 +628,7 @@ export default function Step1Page() {
                 />
 
                 <Input
+                    id="step1-email"
                     label="Email"
                     placeholder="info@kumarmotors.in"
                     type="email"
@@ -587,6 +649,7 @@ export default function Step1Page() {
                         helperText={`A short slogan (${formData.tagline.length}/50)`}
                     />
                     <Input
+                        id="step1-gstin"
                         label="GSTIN (Optional)"
                         placeholder="22AAAAA0000A1Z5"
                         maxLength={15}
@@ -614,6 +677,7 @@ export default function Step1Page() {
                     </div>
 
                     <Input
+                        id="step1-mapLink"
                         label="Google Maps Link (Optional)"
                     placeholder="https://maps.google.com/..."
                     value={formData.mapLink}
@@ -625,7 +689,7 @@ export default function Step1Page() {
 
                 {/* WhatsApp Number with country code */}
                 <PhoneInput
-                    id="whatsapp"
+                    id="step1-whatsapp"
                     label="WhatsApp Number (Optional)"
                     value={formData.whatsapp}
                     countryCode={formData.whatsappCountryCode}
@@ -649,6 +713,7 @@ export default function Step1Page() {
                         </div>
                         <div className="relative">
                             <input
+                                id="step1-cyeproKey"
                                 type={showCyeproKey ? "text" : "password"}
                                 value={cyeproKey}
                                 onChange={(e) => {

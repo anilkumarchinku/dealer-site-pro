@@ -6,7 +6,8 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Loader2, AlertCircle, CheckCircle, LogIn, Mail, Lock } from "lucide-react";
+import { Alert } from "@/components/ui/alert";
+import { Loader2, LogIn, Mail, Lock } from "lucide-react";
 import { supabase } from "@/lib/supabase";
 import { isValidEmail } from "@/lib/validations/client";
 import { isPlatformAdminAppMetadata } from "@/lib/utils/platform-admin";
@@ -115,9 +116,9 @@ function LoginForm() {
     };
 
     return (
-        <Card className="rounded-2xl border border-[#D8E2F0] bg-white p-0 shadow-[0_24px_80px_rgba(7,20,47,0.12)] dark:border-white/10 dark:bg-white/[0.06]">
-            <CardHeader className="border-b border-[#E2E8F2] px-7 py-6 text-left dark:border-white/10">
-                <p className="text-[11px] font-black uppercase tracking-[0.24em] text-[#155EEF] dark:text-blue-300">
+        <Card className="rounded-2xl border border-border bg-card p-0 shadow-[0_24px_80px_rgba(7,20,47,0.12)]">
+            <CardHeader className="border-b border-border px-7 py-6 text-left">
+                <p className="text-[11px] font-black uppercase tracking-[0.24em] text-primary">
                     Secure Login
                 </p>
                 <CardTitle className="mt-2 text-3xl font-black tracking-tight">Welcome back</CardTitle>
@@ -129,10 +130,7 @@ function LoginForm() {
 
                     {/* Registration success banner */}
                     {justRegistered && (
-                        <div className="flex items-center gap-2.5 px-4 py-3 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-sm text-emerald-600 dark:text-emerald-400">
-                            <CheckCircle className="w-4 h-4 shrink-0" />
-                            <span>Email verified! You can now sign in.</span>
-                        </div>
+                        <Alert variant="success">Email verified! You can now sign in.</Alert>
                     )}
 
                     {/* Email */}
@@ -172,17 +170,12 @@ function LoginForm() {
                     </div>
 
                     {/* Error */}
-                    {error && (
-                        <div className="flex items-center gap-2.5 px-4 py-3 rounded-xl bg-red-500/10 border border-red-500/20 text-sm text-red-600 dark:text-red-400">
-                            <AlertCircle className="w-4 h-4 shrink-0" />
-                            <span>{error}</span>
-                        </div>
-                    )}
+                    {error && <Alert variant="error">{error}</Alert>}
 
                     {/* Submit */}
                     <Button
                         type="submit"
-                        className="h-12 w-full rounded-xl bg-[#155EEF] text-base font-black hover:bg-[#0E4CD8]"
+                        className="h-12 w-full rounded-xl text-base font-black"
                         size="lg"
                         disabled={loading}
                     >
@@ -196,7 +189,7 @@ function LoginForm() {
                     <div className="flex flex-col items-center gap-2 border-t border-border pt-5">
                         <p className="text-center text-sm text-muted-foreground">
                             Don&apos;t have an account?{" "}
-                            <Link href="/auth/register" className="font-medium text-blue-600 dark:text-blue-400 hover:underline">
+                            <Link href="/auth/register" className="font-medium text-primary hover:underline">
                                 Create one free
                             </Link>
                         </p>

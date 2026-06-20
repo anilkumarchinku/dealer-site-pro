@@ -14,7 +14,7 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
 
     if (!isRegister) {
         return (
-            <div className="relative min-h-screen overflow-hidden bg-[#F6F9FD] text-[#07142F] dark:bg-[#071A3D] dark:text-white">
+            <div className="relative min-h-screen overflow-hidden bg-muted text-foreground">
                 <div className="absolute right-4 top-4 z-20">
                     <ThemeToggle />
                 </div>
@@ -60,13 +60,13 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
                             {children}
                         </div>
 
-                        <p className="mt-8 max-w-md text-center text-xs leading-5 text-[#62708A] dark:text-slate-400">
+                        <p className="mt-8 max-w-md text-center text-xs leading-5 text-muted-foreground">
                             By continuing you agree to our{" "}
-                            <Link href="/terms" className="font-semibold text-[#155EEF] hover:underline dark:text-blue-300">
+                            <Link href="/terms" className="font-semibold text-primary hover:underline">
                                 Terms of Service
                             </Link>
                             {" "}and{" "}
-                            <Link href="/privacy" className="font-semibold text-[#155EEF] hover:underline dark:text-blue-300">
+                            <Link href="/privacy" className="font-semibold text-primary hover:underline">
                                 Privacy Policy
                             </Link>
                         </p>
@@ -77,7 +77,7 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
     }
 
     return (
-        <div className="relative min-h-screen bg-white">
+        <div className="relative min-h-screen bg-background">
             <div className="absolute right-4 top-4 z-20">
                 <ThemeToggle />
             </div>
@@ -87,13 +87,13 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
                     {children}
                 </div>
 
-                <p className="mt-8 text-center text-xs text-[#62708A]">
+                <p className="mt-8 text-center text-xs text-muted-foreground">
                     By continuing you agree to our{" "}
-                    <Link href="/terms" className="font-semibold text-[#155EEF] hover:underline">
+                    <Link href="/terms" className="font-semibold text-primary hover:underline">
                         Terms of Service
                     </Link>
                     {" "}and{" "}
-                    <Link href="/privacy" className="font-semibold text-[#155EEF] hover:underline">
+                    <Link href="/privacy" className="font-semibold text-primary hover:underline">
                         Privacy Policy
                     </Link>
                 </p>
