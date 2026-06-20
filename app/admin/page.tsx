@@ -272,7 +272,7 @@ function BrandLogo({ brandName }: { brandName: string }) {
     }
 
     return (
-        <div className="w-12 h-12 relative flex items-center justify-center">
+        <div className="w-12 h-12 relative flex items-center justify-center rounded-lg bg-white border border-slate-200 dark:border-slate-700 p-1.5">
             <img
                 key={srcs[idx]}
                 src={srcs[idx]}

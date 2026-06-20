@@ -91,10 +91,12 @@ export function BrandPageContent({
 
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                         <div className="flex items-center gap-4">
-                            {/* Brand Logo */}
+                            {/* Brand Logo — light chip so logos with baked-in white/opaque backgrounds render correctly in dark mode */}
                             <div className="w-16 h-16 flex items-center justify-center shrink-0">
                                 {logoSrc ? (
-                                    <Image src={logoSrc} alt={brand} width={56} height={56} unoptimized className="object-contain" />
+                                    <div className="w-16 h-16 rounded-xl bg-white border border-slate-200 dark:border-slate-700 flex items-center justify-center p-2">
+                                        <Image src={logoSrc} alt={brand} width={56} height={56} unoptimized className="object-contain" />
+                                    </div>
                                 ) : (
                                     <div className="w-14 h-14 rounded-xl bg-card border border-border flex items-center justify-center">
                                         <span className="text-primary text-2xl font-bold">{brand.charAt(0)}</span>

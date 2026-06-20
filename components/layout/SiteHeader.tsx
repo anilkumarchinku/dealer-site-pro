@@ -224,7 +224,9 @@ export function SiteHeader() {
                                         <div className="flex-1 min-w-0">
                                             <p className="text-sm font-medium truncate flex items-center gap-1.5">
                                                 {getBrandLogo(car.make) && (
-                                                    <Image src={getBrandLogo(car.make)!} alt={car.make} width={16} height={16} unoptimized className="object-contain shrink-0" />
+                                                    <span className="inline-flex items-center justify-center rounded bg-white border border-slate-200 dark:border-slate-700 p-0.5 shrink-0">
+                                                        <Image src={getBrandLogo(car.make)!} alt={car.make} width={16} height={16} unoptimized className="object-contain" />
+                                                    </span>
                                                 )}
                                                 {car.make} {car.model}
                                             </p>
@@ -313,7 +315,9 @@ export function SiteHeader() {
                                                 className="flex items-center gap-2 px-3 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted rounded-md transition-colors"
                                             >
                                                 {getBrandLogo(brand) ? (
-                                                    <Image src={getBrandLogo(brand)!} alt={brand} width={18} height={18} unoptimized className="object-contain" />
+                                                    <span className="inline-flex items-center justify-center rounded bg-white border border-slate-200 dark:border-slate-700 p-0.5 shrink-0">
+                                                        <Image src={getBrandLogo(brand)!} alt={brand} width={18} height={18} unoptimized className="object-contain" />
+                                                    </span>
                                                 ) : (
                                                     <span className="w-[18px] h-[18px] rounded-full bg-muted text-[9px] font-bold flex items-center justify-center">{brand.charAt(0)}</span>
                                                 )}
@@ -361,7 +365,9 @@ export function SiteHeader() {
                                             onClick={() => setActiveMegaMenu(null)}
                                         >
                                             {getBrandLogo(brand) ? (
-                                                <Image src={getBrandLogo(brand)!} alt={brand} width={20} height={20} unoptimized className="object-contain" />
+                                                <span className="inline-flex items-center justify-center rounded bg-white border border-slate-200 dark:border-slate-700 p-0.5 shrink-0">
+                                                    <Image src={getBrandLogo(brand)!} alt={brand} width={20} height={20} unoptimized className="object-contain" />
+                                                </span>
                                             ) : (
                                                 <span className="w-5 h-5 rounded-full bg-muted text-[10px] font-bold flex items-center justify-center">{brand.charAt(0)}</span>
                                             )}
@@ -468,7 +474,9 @@ export function SiteHeader() {
                                 >
                                     <span className="font-medium flex items-center gap-1.5">
                                         {getBrandLogo(car.make) && (
-                                            <Image src={getBrandLogo(car.make)!} alt={car.make} width={16} height={16} unoptimized className="object-contain shrink-0" />
+                                            <span className="inline-flex items-center justify-center rounded bg-white border border-slate-200 dark:border-slate-700 p-0.5 shrink-0">
+                                                <Image src={getBrandLogo(car.make)!} alt={car.make} width={16} height={16} unoptimized className="object-contain" />
+                                            </span>
                                         )}
                                         {car.make} {car.model}
                                     </span>

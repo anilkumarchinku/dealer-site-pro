@@ -223,7 +223,7 @@ function AddVehicleTypeInner() {
                                     <img
                                         src={logoSrc(brand.brandId)}
                                         alt={brand.brand}
-                                        className="w-10 h-10 object-contain"
+                                        className="w-10 h-10 object-contain rounded-lg bg-white border border-slate-200 dark:border-slate-700 p-1"
                                         onError={e => {
                                             e.currentTarget.style.display = "none";
                                             (e.currentTarget.nextElementSibling as HTMLElement | null)?.style &&

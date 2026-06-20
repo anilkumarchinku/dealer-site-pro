@@ -164,10 +164,12 @@ export default async function BrandsPage({ searchParams }: Props) {
                         >
                             <Card className="h-full hover:shadow-md hover:-translate-y-0.5 transition-all cursor-pointer group hover:bg-gradient-to-b hover:from-primary/5 hover:to-transparent">
                                 <CardContent className="p-4 text-center">
-                                    {/* Brand Logo */}
+                                    {/* Brand Logo — light chip so logos with baked-in white/opaque backgrounds render correctly in dark mode */}
                                     <div className="w-16 h-16 mx-auto mb-3 flex items-center justify-center">
                                         {brand.logoUrl ? (
-                                            <Image src={brand.logoUrl} alt={brand.name} width={56} height={56} unoptimized className="object-contain" />
+                                            <div className="w-16 h-16 rounded-xl bg-white border border-slate-200 dark:border-slate-700 flex items-center justify-center p-2">
+                                                <Image src={brand.logoUrl} alt={brand.name} width={56} height={56} unoptimized className="object-contain" />
+                                            </div>
                                         ) : (
                                             <div className="w-14 h-14 rounded-full bg-muted/50 border border-border flex items-center justify-center group-hover:border-primary transition-colors">
                                                 <span className="text-primary text-xl font-bold">{brand.name.charAt(0)}</span>

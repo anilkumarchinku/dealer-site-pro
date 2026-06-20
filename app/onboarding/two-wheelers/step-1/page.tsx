@@ -412,7 +412,7 @@ export default function TwoWheelerStep1Page() {
                                                                 selected ? "border-orange-500 bg-orange-500/5" : "border-input"
                                                             )}>
                                                             {/* eslint-disable-next-line @next/next/no-img-element */}
-                                                            <img src={logoSrc(brand.brandId)} alt={brand.brand} className="w-10 h-10 object-contain"
+                                                            <img src={logoSrc(brand.brandId)} alt={brand.brand} className="w-10 h-10 object-contain rounded-lg bg-white border border-slate-200 dark:border-slate-700 p-1"
                                                                 onError={e => {
                                                                     e.currentTarget.style.display = "none";
                                                                     const fallback = e.currentTarget.nextElementSibling as HTMLElement | null;
@@ -440,7 +440,7 @@ export default function TwoWheelerStep1Page() {
                                                                 selected ? "border-orange-500 bg-orange-500/5" : "border-input"
                                                             )}>
                                                             {/* eslint-disable-next-line @next/next/no-img-element */}
-                                                            <img src={logoSrc(brand.brandId)} alt={brand.brand} className="w-10 h-10 object-contain"
+                                                            <img src={logoSrc(brand.brandId)} alt={brand.brand} className="w-10 h-10 object-contain rounded-lg bg-white border border-slate-200 dark:border-slate-700 p-1"
                                                                 onError={e => {
                                                                     e.currentTarget.style.display = "none";
                                                                     const fallback = e.currentTarget.nextElementSibling as HTMLElement | null;

@@ -167,7 +167,7 @@ function CatalogCard({ m, brandColor }: { m: CatalogModel; brandColor: string })
                         <img
                             src={`/data/brand-logos/${m.brandId}.png`}
                             alt=""
-                            className="w-4 h-4 object-contain"
+                            className="w-5 h-5 object-contain rounded bg-white border border-slate-200 dark:border-slate-700 p-0.5"
                             onError={(e) => { (e.target as HTMLImageElement).style.display = "none" }}
                         />
                         <p className="text-[11px] font-semibold uppercase tracking-wider" style={{ color: brandColor }}>
