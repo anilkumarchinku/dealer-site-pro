@@ -66,6 +66,25 @@ import type { Service } from '@/lib/types';
 import { getVehicleLabels } from '@/lib/utils/vehicle-labels';
 import { validateLeadForm, hasLeadFormErrors, normalizeLeadPhone, type LeadFormErrors } from '@/lib/validations/lead';
 
+// A car's engine.type / transmission.type can be a joined string (e.g.
+// "Petrol / Diesel" or "Manual / Auto"). Split on " / " so a multi-value car
+// matches any selected option, and normalize the Auto/Automatic alias both ways.
+function normalizeTransmission(value: string): string {
+    const v = value.trim().toLowerCase();
+    if (v === 'auto' || v === 'automatic') return 'automatic';
+    return v;
+}
+
+function matchesFuel(carFuel: string, selected: string[]): boolean {
+    const carValues = carFuel.split(' / ').map(s => s.trim().toLowerCase());
+    return selected.some(sel => carValues.includes(sel.trim().toLowerCase()));
+}
+
+function matchesTransmission(carTransmission: string, selected: string[]): boolean {
+    const carValues = carTransmission.split(' / ').map(normalizeTransmission);
+    return selected.some(sel => carValues.includes(normalizeTransmission(sel)));
+}
+
 interface ModernTemplateProps {
     brandName: string;
     dealerName: string;
@@ -178,8 +197,8 @@ export function ModernTemplate({
         const { make, bodyType, fuelType, transmission, year, seating, priceRange } = activeFilters;
         if (make?.length) result = result.filter(c => make.includes(c.make));
         if (bodyType?.length) result = result.filter(c => bodyType.includes(c.bodyType));
-        if (fuelType?.length) result = result.filter(c => fuelType.includes(c.engine.type));
-        if (transmission?.length) result = result.filter(c => transmission.includes(c.transmission.type));
+        if (fuelType?.length) result = result.filter(c => matchesFuel(c.engine.type, fuelType));
+        if (transmission?.length) result = result.filter(c => matchesTransmission(c.transmission.type, transmission));
         if (year?.length) result = result.filter(c => year.includes(c.year.toString()));
         if (seating?.length) result = result.filter(c => seating.includes(String(c.dimensions?.seatingCapacity ?? '')));
         if (priceRange) result = result.filter(c => {
@@ -273,6 +292,13 @@ export function ModernTemplate({
 
     return (
         <div className="min-h-screen bg-white font-sans text-gray-900">
+            {/* Skip to main content — first focusable element for keyboard/AT users */}
+            <a
+                href="#main-content"
+                className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:text-gray-900 focus:shadow-lg focus:outline focus:outline-2 focus:outline-gray-900"
+            >
+                Skip to main content
+            </a>
             {/* Navigation */}
             <nav
                 className={`fixed ${previewMode ? 'top-12' : 'top-0'} left-0 right-0 z-50 transition-all duration-300 bg-white ${isScrolled ? 'shadow-lg' : 'shadow-sm border-b border-gray-100'}`}
@@ -341,8 +367,8 @@ export function ModernTemplate({
                                 Enquire Now
                             </Button>
                             <Button
-                                className="px-4 text-white shadow-lg lg:px-5"
-                                style={{ backgroundColor: brandColors.primary }}
+                                className="px-4 shadow-lg lg:px-5"
+                                style={{ backgroundColor: brandColors.primary, color: getContrastText(brandColors.primary) }}
                                 asChild
                             >
                                 <a href={`tel:${contactInfo.phone}`}>
@@ -397,8 +423,8 @@ export function ModernTemplate({
                                 <button onClick={() => mobileNavigateTo('trust-section')} className="block w-full text-left px-3 py-2.5 rounded-lg font-medium transition-colors text-gray-900 hover:bg-gray-100">Trust Us</button>
                                 <div className="pt-2 border-t border-gray-200">
                                     <Button
-                                        className="w-full text-white"
-                                        style={{ backgroundColor: brandColors.primary }}
+                                        className="w-full"
+                                        style={{ backgroundColor: brandColors.primary, color: getContrastText(brandColors.primary) }}
                                         onClick={() => { setEnquireSidebarOpen(true); setMobileMenuOpen(false); }}
                                     >
                                         <MessageSquare className="w-4 h-4 mr-2" />
@@ -424,7 +450,7 @@ export function ModernTemplate({
 
             {/* Home Tab */}
             {activeTab === 'home' && (
-                <div className="animate-fade-in">
+                <div id="main-content" tabIndex={-1} className="animate-fade-in">
                     {/* Hero Section */}
                     <section className="relative min-h-[85vh] flex items-center bg-white overflow-hidden">
                         <div className="absolute inset-0">
@@ -458,8 +484,7 @@ export function ModernTemplate({
                                         {showInventoryTab && (
                                             <Button
                                                 size="lg"
-                                                className="text-white"
-                                                style={{ backgroundColor: brandColors.primary }}
+                                                style={{ backgroundColor: brandColors.primary, color: getContrastText(brandColors.primary) }}
                                                 onClick={() => setActiveTab('inventory')}
                                             >
                                                 View Inventory
@@ -491,7 +516,7 @@ export function ModernTemplate({
                                     const showHeroControls = heroRotationCount > 1;
                                     return (
                                         <div
-                                            className="hidden lg:block animate-scale-in animate-delay-300"
+                                            className="mt-4 max-w-md mx-auto w-full lg:mt-0 lg:max-w-none animate-scale-in animate-delay-300"
                                             role="group"
                                             aria-roledescription="carousel"
                                             aria-label="Featured vehicles"
@@ -898,8 +923,8 @@ export function ModernTemplate({
                                             <Button
                                                 type="submit"
                                                 disabled={formStatus === 'sending'}
-                                                className="w-full text-white py-3 rounded-xl font-semibold"
-                                                style={{ backgroundColor: brandColors.primary }}
+                                                className="w-full py-3 rounded-xl font-semibold"
+                                                style={{ backgroundColor: brandColors.primary, color: getContrastText(brandColors.primary) }}
                                             >
                                                 {formStatus === 'sending' ? (
                                                     'Sending...'
@@ -921,7 +946,7 @@ export function ModernTemplate({
 
             {/* Inventory Tab */}
             {showInventoryTab && activeTab === 'inventory' && (
-                <div className="pt-20 pb-12 bg-gray-50 min-h-screen animate-fade-in">
+                <div id="main-content" tabIndex={-1} className="pt-20 pb-12 bg-gray-50 min-h-screen animate-fade-in">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="mb-8 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
                             <div>

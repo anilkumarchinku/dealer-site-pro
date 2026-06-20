@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { CheckCircle2, Zap, Home, Landmark } from 'lucide-react';
+import { getContrastText } from '@/lib/utils/color-contrast';
 
 interface FinanceSectionProps {
     brandColor: string;
@@ -43,6 +44,10 @@ export function FinanceSection({ brandColor, dealerId, dealerName }: FinanceSect
     const [submitting, setSubmitting] = useState(false);
     const [submitted, setSubmitted] = useState(false);
     const [error, setError] = useState('');
+
+    // Readable text color for surfaces filled with the brand color (light brands
+    // like yellow/lime need dark text, not white).
+    const onBrandText = getContrastText(brandColor);
 
     function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) {
         setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -94,14 +99,14 @@ export function FinanceSection({ brandColor, dealerId, dealerName }: FinanceSect
 
                 {/* Finance highlights */}
                 <div
-                    className="rounded-2xl p-6 md:p-8 mb-10 text-white"
-                    style={{ backgroundColor: brandColor }}
+                    className="rounded-2xl p-6 md:p-8 mb-10"
+                    style={{ backgroundColor: brandColor, color: onBrandText }}
                 >
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
                         {FINANCE_HIGHLIGHTS.map((highlight) => (
                             <div key={highlight} className="flex flex-col items-center gap-2">
-                                <CheckCircle2 className="w-5 h-5 opacity-80" aria-hidden="true" />
-                                <p className="text-sm font-medium opacity-90">{highlight}</p>
+                                <CheckCircle2 className="w-5 h-5" aria-hidden="true" />
+                                <p className="text-sm font-medium">{highlight}</p>
                             </div>
                         ))}
                     </div>
@@ -221,8 +226,8 @@ export function FinanceSection({ brandColor, dealerId, dealerName }: FinanceSect
                                     <button
                                         type="submit"
                                         disabled={submitting}
-                                        className="w-full py-3 rounded-xl text-white font-semibold text-sm hover:opacity-90 transition-opacity disabled:opacity-60"
-                                        style={{ backgroundColor: brandColor }}
+                                        className="w-full py-3 rounded-xl font-semibold text-sm hover:opacity-90 transition-opacity disabled:opacity-60"
+                                        style={{ backgroundColor: brandColor, color: onBrandText }}
                                     >
                                         {submitting ? 'Submitting…' : 'Get Finance Options'}
                                     </button>

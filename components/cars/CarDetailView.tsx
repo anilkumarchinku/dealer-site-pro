@@ -63,12 +63,8 @@ import {
     MapPin,
     ShieldCheck,
     ClipboardCheck,
-    History,
-    Wrench,
     FileText,
     AlertTriangle,
-    CheckCircle2,
-    CircleDot,
     BadgeCheck,
     RotateCcw,
 } from 'lucide-react';
@@ -92,10 +88,12 @@ const NEW_CAR_TABS = [
     { id: 'faqs', label: 'FAQs', icon: HelpCircle },
 ];
 
+// NOTE: "Inspection Report" and "Car History" tabs were removed because the
+// underlying sections rendered hardcoded fiction (fake scores, ownership
+// timeline, service records) identically for every vehicle. Re-add these tabs
+// when the Car schema carries real per-vehicle inspection / history data.
 const USED_CAR_TABS = [
     { id: 'overview', label: 'Overview', icon: Info },
-    { id: 'inspection', label: 'Inspection Report', icon: ClipboardCheck },
-    { id: 'history', label: 'Car History', icon: History },
     { id: 'specs', label: 'Specifications', icon: Settings },
     { id: 'features', label: 'Features', icon: Check },
     { id: 'colors', label: 'Colours', icon: Palette },
@@ -103,63 +101,10 @@ const USED_CAR_TABS = [
     { id: 'faqs', label: 'FAQs', icon: HelpCircle },
 ];
 
-const INSPECTION_CATEGORIES = [
-    {
-        name: 'Exterior',
-        icon: <CarIcon className="w-4 h-4" />,
-        items: [
-            { name: 'Body Panels', status: 'good' as const },
-            { name: 'Paint Condition', status: 'good' as const },
-            { name: 'Headlights & Taillights', status: 'good' as const },
-            { name: 'Windshield', status: 'good' as const },
-            { name: 'Side Mirrors', status: 'good' as const },
-            { name: 'Bumpers', status: 'fair' as const },
-        ],
-    },
-    {
-        name: 'Interior',
-        icon: <Users className="w-4 h-4" />,
-        items: [
-            { name: 'Seats & Upholstery', status: 'good' as const },
-            { name: 'Dashboard & Controls', status: 'good' as const },
-            { name: 'AC & Climate', status: 'good' as const },
-            { name: 'Infotainment System', status: 'good' as const },
-            { name: 'Steering Wheel', status: 'good' as const },
-        ],
-    },
-    {
-        name: 'Engine & Mechanical',
-        icon: <Settings className="w-4 h-4" />,
-        items: [
-            { name: 'Engine Condition', status: 'good' as const },
-            { name: 'Transmission', status: 'good' as const },
-            { name: 'Suspension', status: 'good' as const },
-            { name: 'Brakes', status: 'fair' as const },
-            { name: 'Exhaust System', status: 'good' as const },
-        ],
-    },
-    {
-        name: 'Tyres & Wheels',
-        icon: <CircleDot className="w-4 h-4" />,
-        items: [
-            { name: 'Front Left Tyre', status: 'good' as const },
-            { name: 'Front Right Tyre', status: 'good' as const },
-            { name: 'Rear Left Tyre', status: 'fair' as const },
-            { name: 'Rear Right Tyre', status: 'fair' as const },
-            { name: 'Spare Tyre', status: 'good' as const },
-        ],
-    },
-    {
-        name: 'Electricals',
-        icon: <Zap className="w-4 h-4" />,
-        items: [
-            { name: 'Battery', status: 'good' as const },
-            { name: 'Wiring Harness', status: 'good' as const },
-            { name: 'Power Windows', status: 'good' as const },
-            { name: 'Central Locking', status: 'good' as const },
-        ],
-    },
-];
+// NOTE: A static INSPECTION_CATEGORIES list previously rendered an identical,
+// fabricated checkpoint breakdown for every used car. It was removed along with
+// the Inspection Report section. Wire this to real per-vehicle inspection data
+// (e.g. a car.inspection field) before reintroducing it.
 
 function deriveSwatchHex(name: string, fallback?: string) {
     if (fallback && fallback.trim()) return fallback;
@@ -708,193 +653,23 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                     {/* Pros & Cons removed — auto-generated data was unreliable */}
                 </section>
 
-                {/* ──────── INSPECTION REPORT (Used Cars Only) ──────── */}
-                {isUsed && (
-                    <section ref={el => { sectionRefs.current['inspection'] = el; }} id="inspection">
-                        <h2 className="text-2xl font-bold mb-6">Inspection Report</h2>
-
-                        {/* Overall Score */}
-                        <Card className={`${lightCardClass} mb-6`}>
-                            <CardContent className="p-6">
-                                <div className="flex flex-col sm:flex-row items-center gap-6">
-                                    <div className="text-center">
-                                        <div className="w-24 h-24 rounded-full bg-emerald-500/10 flex items-center justify-center">
-                                            <span className="text-3xl font-bold text-emerald-500">4.2</span>
-                                        </div>
-                                        <p className="text-xs text-gray-600 mt-2">out of 5.0</p>
-                                    </div>
-                                    <div className="flex-1">
-                                        <h3 className="text-lg font-semibold mb-1">Overall Condition: Good</h3>
-                                        <p className="text-sm text-gray-600 mb-3">
-                                            Inspected on {new Date(Date.now() - 7 * 86400000).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })} by a certified mechanic.
-                                            This vehicle passed 186 out of 200+ quality checkpoints.
-                                        </p>
-                                        <div className="flex flex-wrap gap-2">
-                                            <Badge className="bg-emerald-500/10 text-emerald-500 hover:bg-emerald-500/10">No Accidents</Badge>
-                                            <Badge className="bg-emerald-500/10 text-emerald-500 hover:bg-emerald-500/10">No Flood Damage</Badge>
-                                            <Badge className="bg-emerald-500/10 text-emerald-500 hover:bg-emerald-500/10">Original Paint</Badge>
-                                            <Badge className="bg-amber-500/10 text-amber-500 hover:bg-amber-500/10">Minor Scratches</Badge>
-                                        </div>
-                                    </div>
-                                </div>
-                            </CardContent>
-                        </Card>
-
-                        {/* Category Breakdown */}
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                            {INSPECTION_CATEGORIES.map((cat) => {
-                                const goodCount = cat.items.filter(i => i.status === 'good').length;
-                                const total = cat.items.length;
-                                return (
-                                    <Card key={cat.name} className={lightCardClass}>
-                                        <CardContent className="p-5">
-                                            <div className="flex items-center justify-between mb-3">
-                                                <h4 className="text-sm font-semibold flex items-center gap-2">
-                                                    {cat.icon} {cat.name}
-                                                </h4>
-                                                <Badge variant="outline" className="text-[10px]">
-                                                    {goodCount}/{total} Good
-                                                </Badge>
-                                            </div>
-                                            <div className="space-y-2">
-                                                {cat.items.map((item) => (
-                                                    <div key={item.name} className="flex items-center justify-between text-sm">
-                                                        <span className="text-gray-600">{item.name}</span>
-                                                        <span className={`text-xs font-medium flex items-center gap-1 ${item.status === 'good' ? 'text-emerald-600' : item.status === 'fair' ? 'text-amber-600' : 'text-red-600'
-                                                            }`}>
-                                                            {item.status === 'good' && <CheckCircle2 className="w-3.5 h-3.5" />}
-                                                            {item.status === 'fair' && <AlertTriangle className="w-3.5 h-3.5" />}
-                                                            {item.status === 'good' ? 'Good' : item.status === 'fair' ? 'Fair' : 'Needs Repair'}
-                                                        </span>
-                                                    </div>
-                                                ))}
-                                            </div>
-                                        </CardContent>
-                                    </Card>
-                                );
-                            })}
-                        </div>
-
-                        <p className="text-[10px] text-gray-600 mt-4">
-                            * Inspection report is based on assessment at the time of listing. Vehicle condition may change over time.
-                        </p>
-                    </section>
-                )}
-
-                {/* ──────── CAR HISTORY (Used Cars Only) ──────── */}
-                {isUsed && (
-                    <section ref={el => { sectionRefs.current['history'] = el; }} id="history">
-                        <h2 className="text-2xl font-bold mb-6">Car History</h2>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            {/* Ownership Timeline */}
-                            <Card className={lightCardClass}>
-                                <CardContent className="p-5">
-                                    <h3 className="text-base font-semibold mb-4 flex items-center gap-2">
-                                        <Users className="w-4 h-4 text-gray-600" />
-                                        Ownership History
-                                    </h3>
-                                    <div className="relative pl-6 space-y-6">
-                                        {/* Timeline line */}
-                                        <div className="absolute left-[9px] top-1 bottom-1 w-0.5 bg-border" />
-
-                                        <div className="relative">
-                                            <div
-                                                className="absolute -left-6 top-0 w-[18px] h-[18px] rounded-full border-2 border-white"
-                                                style={{ backgroundColor: brandColor }}
-                                            />
-                                            <div>
-                                                <p className="text-sm font-semibold">Current Owner (You viewing)</p>
-                                                <p className="text-xs text-gray-600">Since {car.year ? car.year + 2 : 2023} - Present</p>
-                                                <p className="text-xs text-gray-600 mt-1">Individual • Metro City</p>
-                                            </div>
-                                        </div>
-
-                                        <div className="relative">
-                                            <div className="absolute -left-6 top-0 w-[18px] h-[18px] rounded-full bg-gray-100 border-2 border-white" />
-                                            <div>
-                                                <p className="text-sm font-semibold">1st Owner</p>
-                                                <p className="text-xs text-gray-600">{car.year || 2020} - {car.year ? car.year + 2 : 2022}</p>
-                                                <p className="text-xs text-gray-600 mt-1">Individual • Metro City</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </CardContent>
-                            </Card>
-
-                            {/* Service & Documents */}
-                            <Card className={lightCardClass}>
-                                <CardContent className="p-5">
-                                    <h3 className="text-base font-semibold mb-4 flex items-center gap-2">
-                                        <FileText className="w-4 h-4 text-gray-600" />
-                                        Documents & Service
-                                    </h3>
-                                    <div className="space-y-3">
-                                        {[
-                                            { label: registrationNumber ? `Registration Certificate (RC): ${registrationNumber}` : 'Registration Certificate (RC)', status: true, icon: <FileText className="w-4 h-4" /> },
-                                            { label: 'Insurance Valid', status: true, icon: <Shield className="w-4 h-4" /> },
-                                            { label: 'Pollution Certificate', status: true, icon: <CheckCircle2 className="w-4 h-4" /> },
-                                            { label: 'Service Records Available', status: true, icon: <Wrench className="w-4 h-4" /> },
-                                            { label: 'No Accident History', status: true, icon: <ShieldCheck className="w-4 h-4" /> },
-                                            { label: 'No Loan / Hypothecation', status: true, icon: <BadgeCheck className="w-4 h-4" /> },
-                                        ].map((doc) => (
-                                            <div key={doc.label} className="flex items-center justify-between p-2.5 bg-gray-100/30 rounded-lg">
-                                                <div className="flex items-center gap-2.5 text-sm">
-                                                    <span className="text-gray-600">{doc.icon}</span>
-                                                    {doc.label}
-                                                </div>
-                                                <Badge
-                                                    variant="outline"
-                                                    className={doc.status
-                                                        ? 'border-emerald-500/30 text-emerald-500 bg-emerald-500/10'
-                                                        : 'border-red-500/30 text-red-500 bg-red-500/10'
-                                                    }
-                                                >
-                                                    {doc.status ? 'Verified' : 'Pending'}
-                                                </Badge>
-                                            </div>
-                                        ))}
-                                    </div>
-                                </CardContent>
-                            </Card>
-
-                            {/* Service History */}
-                            <Card className={`${lightCardClass} md:col-span-2`}>
-                                <CardContent className="p-5">
-                                    <h3 className="text-base font-semibold mb-4 flex items-center gap-2">
-                                        <Wrench className="w-4 h-4 text-gray-600" />
-                                        Service History
-                                    </h3>
-                                    <Table>
-                                        <TableHeader>
-                                            <TableRow className="bg-gray-100/30">
-                                                <TableHead className="text-xs font-semibold">Date</TableHead>
-                                                <TableHead className="text-xs font-semibold">KM Reading</TableHead>
-                                                <TableHead className="text-xs font-semibold">Service Type</TableHead>
-                                                <TableHead className="text-xs font-semibold">Service Center</TableHead>
-                                            </TableRow>
-                                        </TableHeader>
-                                        <TableBody>
-                                            {[
-                                                { date: 'Nov 2025', km: '42,000', type: 'Regular Service', center: 'Authorized Service Center' },
-                                                { date: 'May 2025', km: '35,000', type: 'Regular Service + Brake Pad', center: 'Authorized Service Center' },
-                                                { date: 'Nov 2024', km: '27,000', type: 'Regular Service', center: 'Authorized Service Center' },
-                                                { date: 'May 2024', km: '18,000', type: 'Regular Service + Tyre Rotation', center: 'Authorized Service Center' },
-                                                { date: 'Nov 2023', km: '10,000', type: 'First Free Service', center: 'Authorized Service Center' },
-                                            ].map((s, i) => (
-                                                <TableRow key={i}>
-                                                    <TableCell className="text-sm">{s.date}</TableCell>
-                                                    <TableCell className="text-sm">{s.km} km</TableCell>
-                                                    <TableCell className="text-sm">{s.type}</TableCell>
-                                                    <TableCell className="text-sm text-gray-600">{s.center}</TableCell>
-                                                </TableRow>
-                                            ))}
-                                        </TableBody>
-                                    </Table>
-                                </CardContent>
-                            </Card>
-                        </div>
-                    </section>
-                )}
+                {/*
+                  ──────── INSPECTION REPORT & CAR HISTORY (Used Cars) — REMOVED ────────
+                  These sections previously rendered fabricated, identical content for
+                  every used vehicle:
+                    - an inspection score ("4.2" / "186 of 200+ checkpoints") and a
+                      static per-category checkpoint breakdown,
+                    - unconditional "No Accidents" / "No Flood Damage" / "Original Paint"
+                      badges,
+                    - a fake ownership timeline ("Current Owner", "1st Owner", "Metro City"),
+                    - an invented multi-row service history table.
+                  The Car schema has no fields backing any of this, so the blocks are
+                  hidden rather than shown as fiction. Re-introduce them (with their tabs)
+                  only when real per-vehicle data exists, e.g. a `car.inspection` /
+                  `car.history` field — drive each row from that data and hide when absent.
+                  Verified ownership info that IS real (registration number, insurance
+                  status) is already surfaced in the Overview section above.
+                */}
 
                 {/* ──────── SPECIFICATIONS ──────── */}
                 <section ref={el => { sectionRefs.current['specs'] = el; }} id="specs">

@@ -65,6 +65,25 @@ import type { Service } from '@/lib/types';
 import { getVehicleLabels } from '@/lib/utils/vehicle-labels';
 import { validateLeadForm, hasLeadFormErrors, normalizeLeadPhone, type LeadFormErrors } from '@/lib/validations/lead';
 
+// A car's engine.type / transmission.type can be a joined string (e.g.
+// "Petrol / Diesel" or "Manual / Auto"). Split on " / " so a multi-value car
+// matches any selected option, and normalize the Auto/Automatic alias both ways.
+function normalizeTransmission(value: string): string {
+    const v = value.trim().toLowerCase();
+    if (v === 'auto' || v === 'automatic') return 'automatic';
+    return v;
+}
+
+function matchesFuel(carFuel: string, selected: string[]): boolean {
+    const carValues = carFuel.split(' / ').map(s => s.trim().toLowerCase());
+    return selected.some(sel => carValues.includes(sel.trim().toLowerCase()));
+}
+
+function matchesTransmission(carTransmission: string, selected: string[]): boolean {
+    const carValues = carTransmission.split(' / ').map(normalizeTransmission);
+    return selected.some(sel => carValues.includes(normalizeTransmission(sel)));
+}
+
 interface FamilyTemplateProps {
     brandName: string;
     dealerName: string;
@@ -163,8 +182,8 @@ export function FamilyTemplate({
         const { make, bodyType, fuelType, transmission, year, seating, priceRange } = activeFilters;
         if (make?.length) result = result.filter(c => make.includes(c.make));
         if (bodyType?.length) result = result.filter(c => bodyType.includes(c.bodyType));
-        if (fuelType?.length) result = result.filter(c => fuelType.includes(c.engine.type));
-        if (transmission?.length) result = result.filter(c => transmission.includes(c.transmission.type));
+        if (fuelType?.length) result = result.filter(c => matchesFuel(c.engine.type, fuelType));
+        if (transmission?.length) result = result.filter(c => matchesTransmission(c.transmission.type, transmission));
         if (year?.length) result = result.filter(c => year.includes(c.year.toString()));
         if (seating?.length) result = result.filter(c => seating.includes(String(c.dimensions?.seatingCapacity ?? '')));
         if (priceRange) result = result.filter(c => {
@@ -230,6 +249,13 @@ export function FamilyTemplate({
 
     return (
         <div className="min-h-screen bg-white text-gray-900 font-sans">
+            {/* Skip to main content — first focusable element for keyboard/AT users */}
+            <a
+                href="#main-content"
+                className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:text-gray-900 focus:shadow-lg focus:outline focus:outline-2 focus:outline-gray-900"
+            >
+                Skip to main content
+            </a>
             <nav className={`fixed ${previewMode ? 'top-12' : 'top-0'} left-0 right-0 z-50 transition-all ${isScrolled ? 'bg-white shadow-md' : 'bg-white/95'}`}>
                 <div className="max-w-7xl mx-auto px-4 py-4">
                     <div className="flex items-center justify-between gap-4">
@@ -269,7 +295,7 @@ export function FamilyTemplate({
                                 <MessageSquare className="w-4 h-4 mr-2" />
                                 Enquire Now
                             </Button>
-                            <Button className="rounded-full px-4 text-white lg:px-5" style={{ backgroundColor: brandColors.primary }} asChild>
+                            <Button className="rounded-full px-4 lg:px-5" style={{ backgroundColor: brandColors.primary, color: getContrastText(brandColors.primary) }} asChild>
                                 <a href={`tel:${contactInfo.phone}`}>
                                     <Phone className="w-4 h-4 mr-2" />
                                     Call Us
@@ -322,8 +348,8 @@ export function FamilyTemplate({
                                 <button onClick={() => mobileNavigateTo('trust-section')} className="block w-full text-left px-3 py-2.5 rounded-xl font-medium text-gray-900 hover:bg-gray-50 transition-colors">Trust Us</button>
                                 <div className="pt-2 border-t border-gray-100">
                                     <Button
-                                        className="w-full rounded-full text-white"
-                                        style={{ backgroundColor: brandColors.primary }}
+                                        className="w-full rounded-full"
+                                        style={{ backgroundColor: brandColors.primary, color: getContrastText(brandColors.primary) }}
                                         onClick={() => { setEnquireSidebarOpen(true); setMobileMenuOpen(false); }}
                                     >
                                         <MessageSquare className="w-4 h-4 mr-2" />
@@ -348,7 +374,7 @@ export function FamilyTemplate({
             />
 
             {activeTab === 'home' && (
-                <div className="animate-fade-in">
+                <div id="main-content" tabIndex={-1} className="animate-fade-in">
                     {/* Hero */}
                     <section className="relative pt-24 pb-16 bg-gradient-to-br from-gray-50 to-white">
                         <div className="max-w-7xl mx-auto px-4">
@@ -367,7 +393,7 @@ export function FamilyTemplate({
                                     <p className="text-xl text-gray-600 animate-fade-in-up animate-delay-200">{heroSubtitle}</p>
                                     <div className="flex flex-wrap gap-4 animate-fade-in-up animate-delay-300">
                                         {showInventoryTab && (
-                                            <Button size="lg" className="rounded-full text-white hover-lift" style={{ backgroundColor: brandColors.primary }} onClick={() => setActiveTab('inventory')}>
+                                            <Button size="lg" className="rounded-full hover-lift" style={{ backgroundColor: brandColors.primary, color: getContrastText(brandColors.primary) }} onClick={() => setActiveTab('inventory')}>
                                                 {vl.browseCTA}
                                                 <ArrowRight className="ml-2 w-5 h-5" />
                                             </Button>
@@ -686,8 +712,8 @@ export function FamilyTemplate({
                                             <Button
                                                 type="submit"
                                                 disabled={formStatus === 'sending'}
-                                                className="w-full text-white py-3 rounded-xl font-semibold hover-lift"
-                                                style={{ backgroundColor: brandColors.primary }}
+                                                className="w-full py-3 rounded-xl font-semibold hover-lift"
+                                                style={{ backgroundColor: brandColors.primary, color: getContrastText(brandColors.primary) }}
                                             >
                                                 {formStatus === 'sending' ? 'Sending...' : (
                                                     <>
@@ -707,7 +733,7 @@ export function FamilyTemplate({
 
             {/* Inventory Tab */}
             {showInventoryTab && activeTab === 'inventory' && (
-                <div className="pt-24 pb-12 bg-gray-50 min-h-screen animate-fade-in">
+                <div id="main-content" tabIndex={-1} className="pt-24 pb-12 bg-gray-50 min-h-screen animate-fade-in">
                     <div className="max-w-7xl mx-auto px-4">
                         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
                             <h1 className="text-4xl font-bold">Our Inventory</h1>

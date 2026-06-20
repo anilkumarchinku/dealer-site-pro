@@ -83,11 +83,10 @@ function testDriveWord(vt?: '2w' | '3w' | '4w') {
     return 'test drive';
 }
 
-function emiStart(vt?: '2w' | '3w' | '4w') {
-    if (vt === '2w') return '₹999/month';
-    if (vt === '3w') return '₹1,999/month';
-    return '₹3,999/month';
-}
+// NOTE: A previous `emiStart()` helper returned hardcoded EMI figures
+// (e.g. "₹999/month") presented as the dealer's real finance terms. It was
+// removed because those amounts were fabricated. The finance response now
+// points users to the EMI calculator / dealer for real figures.
 
 // ── Response builder ──────────────────────────────────────────────────────────
 
@@ -126,7 +125,7 @@ function buildResponse(intent: Intent, info: DealerInfo): Message[] {
 
         case 'price':
             return [botMsg(
-                `Our ${vw} prices start from ₹50,000 onwards, varying by brand, model, and variant. For the exact ex-showroom and on-road price in your city, please share the model name or call us directly.`,
+                `Prices vary by ${vw} brand, model, and variant. For the exact ex-showroom and on-road price in your city, please share the model name or contact the dealer directly.`,
                 ['Get Exact Price', 'EMI Options', 'Current Offers', 'Call Now']
             )];
 
@@ -161,7 +160,7 @@ function buildResponse(intent: Intent, info: DealerInfo): Message[] {
 
         case 'offers':
             return [botMsg(
-                `🎉 Current offers at ${info.dealerName}:\n\n• 🔄 **Exchange Bonus** — Up to ₹30,000 on your old ${vw}\n• 🛡️ **Free Insurance** — 1-year comprehensive insurance on new purchases\n• 💳 **Zero Processing Fee** — On loans above ₹1 lakh\n• 🏢 **Corporate Discount** — For govt employees & defence personnel\n\nOffers valid this month. T&C apply.`,
+                `🎉 ${info.dealerName} runs offers on exchange, finance, and seasonal deals from time to time. Offers change often and vary by ${vw} model, so please contact us for the current offers and the best price for the model you're interested in.`,
                 ['Exchange My Old Vehicle', 'EMI Options', 'Call for Best Price']
             )];
 
@@ -179,7 +178,7 @@ function buildResponse(intent: Intent, info: DealerInfo): Message[] {
 
         case 'finance':
             return [botMsg(
-                `💰 We offer flexible finance options:\n\n• **EMI starting:** ${emiStart(vt)}\n• **Down payment:** As low as 10%\n• **Tenure:** Up to 84 months\n• **Banks:** HDFC, ICICI, SBI, Axis, Kotak\n• **Rate of interest:** From 8.5% p.a.\n\nUse the EMI Calculator on our website for exact figures!`,
+                `💰 We can help arrange flexible finance options with EMI, down payment, and tenure choices to suit your budget. Interest rates, eligible banks, and exact figures depend on the lender and your profile — use the EMI Calculator on our website for an estimate, or contact us to discuss the current finance options for your chosen ${vw}.`,
                 ['Calculate EMI', 'Apply for Loan', 'Current Offers', 'Call Now']
             )];
 
@@ -265,6 +264,11 @@ export function DealerChatbot(props: DealerChatbotProps) {
     const [unread, setUnread] = useState(1); // show 1 on first load
     const bottomRef = useRef<HTMLDivElement>(null);
     const inputRef = useRef<HTMLInputElement>(null);
+    const panelRef = useRef<HTMLDivElement>(null);
+    const toggleRef = useRef<HTMLButtonElement>(null);
+    // Tracks whether the panel was previously open so we only restore focus to
+    // the toggle button when it actually closes (not on first mount).
+    const wasOpenRef = useRef(false);
 
     // ── Welcome message on mount ──────────────────────────────────────────────
     useEffect(() => {
@@ -281,12 +285,32 @@ export function DealerChatbot(props: DealerChatbotProps) {
         bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
     }, [messages]);
 
-    // ── Focus input when opened ───────────────────────────────────────────────
+    // ── Focus management on open/close ────────────────────────────────────────
     useEffect(() => {
         if (open) {
             setUnread(0);
+            // Move focus into the dialog, then settle on the input shortly after.
+            panelRef.current?.focus();
             setTimeout(() => inputRef.current?.focus(), 100);
+            wasOpenRef.current = true;
+        } else if (wasOpenRef.current) {
+            // Restore focus to the toggle button only when closing an open panel.
+            toggleRef.current?.focus();
+            wasOpenRef.current = false;
         }
+    }, [open]);
+
+    // ── Escape closes the chat window ─────────────────────────────────────────
+    useEffect(() => {
+        if (!open) return;
+        const onKeyDown = (e: KeyboardEvent) => {
+            if (e.key === 'Escape') {
+                e.stopPropagation();
+                setOpen(false);
+            }
+        };
+        document.addEventListener('keydown', onKeyDown);
+        return () => document.removeEventListener('keydown', onKeyDown);
     }, [open]);
 
     const addBotResponse = useCallback((intent: Intent) => {
@@ -323,7 +347,12 @@ export function DealerChatbot(props: DealerChatbotProps) {
             {/* ── Chat window ── */}
             {open && (
                 <div
-                    className="fixed bottom-36 md:bottom-24 right-6 z-50 w-[340px] sm:w-[360px] flex flex-col bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden"
+                    ref={panelRef}
+                    role="dialog"
+                    aria-modal="true"
+                    aria-label={`Chat with ${props.dealerName} virtual assistant`}
+                    tabIndex={-1}
+                    className="fixed bottom-36 md:bottom-24 right-6 z-50 w-[340px] sm:w-[360px] flex flex-col bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden focus:outline-none"
                     style={{ height: '500px', maxHeight: 'calc(100vh - 120px)' }}
                 >
                     {/* Header */}
@@ -345,12 +374,14 @@ export function DealerChatbot(props: DealerChatbotProps) {
                                 href={`tel:${phone}`}
                                 className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/30 transition-colors"
                                 title="Call Us"
+                                aria-label={`Call ${props.dealerName}`}
                             >
                                 <PhoneCall className="w-4 h-4 text-white" />
                             </a>
                             <button
                                 onClick={() => setOpen(false)}
                                 className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/30 transition-colors"
+                                aria-label="Minimize chat"
                             >
                                 <ChevronDown className="w-4 h-4 text-white" />
                             </button>
@@ -487,6 +518,7 @@ export function DealerChatbot(props: DealerChatbotProps) {
 
             {/* ── Floating bubble ── */}
             <button
+                ref={toggleRef}
                 onClick={() => setOpen(o => !o)}
                 className="fixed bottom-20 md:bottom-6 right-6 z-40 w-14 h-14 rounded-full flex items-center justify-center text-white shadow-lg hover:scale-110 transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
                 style={{ backgroundColor: brandColor }}
