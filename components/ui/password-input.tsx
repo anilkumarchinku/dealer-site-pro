@@ -17,7 +17,7 @@ const PasswordInput = forwardRef<HTMLInputElement, PasswordInputProps>(
         return (
             <div className="w-full space-y-2">
                 {label && (
-                    <label className="text-sm font-medium leading-none text-gray-700 dark:text-gray-200">
+                    <label className="text-sm font-medium leading-none text-foreground">
                         {label}
                         {props.required && <span className="text-red-500 ml-1">*</span>}
                     </label>
@@ -28,9 +28,9 @@ const PasswordInput = forwardRef<HTMLInputElement, PasswordInputProps>(
                         type={visible ? "text" : "password"}
                         className={cn(
                             "flex h-10 w-full px-3 py-2 pr-10 text-sm rounded-md border transition-colors",
-                            "border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100",
-                            "ring-offset-white dark:ring-offset-gray-900 placeholder:text-gray-400 dark:placeholder:text-gray-500",
-                            "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:ring-offset-2",
+                            "border-input bg-background text-foreground",
+                            "ring-offset-background placeholder:text-muted-foreground",
+                            "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
                             "disabled:cursor-not-allowed disabled:opacity-50",
                             error && "border-red-500 focus-visible:ring-red-500",
                             className,
@@ -48,7 +48,7 @@ const PasswordInput = forwardRef<HTMLInputElement, PasswordInputProps>(
                     </button>
                 </div>
                 {helperText && !error && (
-                    <p className="text-[0.8rem] text-gray-500 dark:text-gray-400">{helperText}</p>
+                    <p className="text-[0.8rem] text-muted-foreground">{helperText}</p>
                 )}
                 {error && (
                     <p className="text-[0.8rem] font-medium text-red-500">{error}</p>
