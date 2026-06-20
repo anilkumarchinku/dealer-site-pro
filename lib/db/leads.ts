@@ -103,17 +103,33 @@ export async function fetchLeads(
     }));
 }
 
+// SECURITY: `db()`/service-role bypasses RLS, so dealer_id scoping here is the ONLY
+// tenant boundary. Without it any dealer could mutate another dealer's lead status by
+// guessing/enumerating a lead id (IDOR). `dealerId` is optional ONLY for backward
+// compatibility with existing callers that have not yet been updated; when provided we
+// scope the mutation by dealer_id.
+// TODO(security): make `dealerId` REQUIRED once all callers pass it. Known caller that
+// must be updated (outside this file's ownership):
+//   app/dashboard/leads/page.tsx:67 → updateLeadStatus(id, "contacted")
+//     ➜  updateLeadStatus(id, "contacted", dealerId)
 export async function updateLeadStatus(
     leadId: string,
-    status: LeadStatus
+    status: LeadStatus,
+    dealerId?: string
 ): Promise<{ success: boolean; error?: string }> {
     if (!isSupabaseReady()) return { success: false, error: "Supabase not configured" };
 
-    const { error } = await supabase
+    let query = supabase
         .from("leads")
         // @ts-ignore - Supabase type inference issue with the leads table
         .update({ status, updated_at: new Date().toISOString() })
         .eq("id", leadId);
+
+    if (dealerId) {
+        query = query.eq("dealer_id", dealerId);
+    }
+
+    const { error } = await query;
 
     if (error) {
         console.warn("[updateLeadStatus]", error.message);

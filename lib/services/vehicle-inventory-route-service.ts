@@ -4,6 +4,9 @@ import { modelToSlug } from '@/lib/utils/brand-model-images'
 import { rateLimitOrNull } from '@/lib/utils/rate-limiter'
 import { requireDealerAccount } from '@/lib/services/vehicle-route-service-utils'
 
+// RFC 4122 UUID matcher used to validate client-supplied dealer ids on public endpoints.
+const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i
+
 type RouteParams = { params: Promise<{ id: string }> }
 
 type VehicleLookup = {
@@ -225,6 +228,16 @@ export function createUsedVehicleCollectionRouteHandlers<TFilters, TCreatePayloa
             const dealerId = searchParams.get('dealerId')
             if (!dealerId) {
                 return NextResponse.json({ error: 'dealerId is required' }, { status: 400 })
+            }
+
+            // SECURITY: this is a PUBLIC endpoint and `dealerId` is client-supplied. The
+            // underlying query only filters by dealer_id + status, with no auth, so a
+            // malformed/injected value could be passed straight into the DB query. Validate
+            // that it is a well-formed UUID before querying and reject anything else with a
+            // 400. The endpoint stays public (used-vehicle listings are public), and the
+            // existing status filter (e.g. `.neq('status','sold')`) is preserved by callers.
+            if (!UUID_RE.test(dealerId)) {
+                return NextResponse.json({ error: 'Invalid dealerId' }, { status: 400 })
             }
 
             const result = await options.getVehicles(dealerId, options.buildFilters(searchParams))

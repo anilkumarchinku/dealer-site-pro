@@ -44,6 +44,42 @@ export interface SaveDealerResult {
 }
 
 /**
+ * Client-safe slug-availability check used as a TOCTOU guard immediately before writing.
+ *
+ * NOTE: this intentionally mirrors lib/services/domain-service.ts `isSlugAvailable`, including
+ * the previously-missing authoritative `dealers.slug` check. We do NOT import that function here
+ * because it transitively pulls in `@/lib/supabase-server` (which uses `next/headers`) and this
+ * module is a "use client" module — importing it would break the client build. Keep the two
+ * checks in sync.
+ *
+ * Recommend adding a DB UNIQUE index on `dealers.slug` (+ dealer_domains.subdomain/site_slug) so
+ * uniqueness is enforced atomically and this app-level guard becomes a UX nicety rather than the
+ * only protection. (Migration handled separately.)
+ */
+async function isSlugAvailableClient(slug: string, excludeDealerId?: string): Promise<boolean> {
+    try {
+        const [legacyResult, routingSubResult, routingSiteResult, dealerResult] = await Promise.all([
+            supabase.from("domains").select("slug").eq("slug", slug).maybeSingle(),
+            supabase.from("dealer_domains").select("subdomain").eq("subdomain", slug).maybeSingle(),
+            supabase.from("dealer_domains").select("site_slug").eq("site_slug", slug).maybeSingle(),
+            // Authoritative routing column — the site routes from dealers.slug.
+            supabase.from("dealers").select("id, slug").eq("slug", slug).maybeSingle(),
+        ]);
+
+        const dealerRow = dealerResult.data as { id?: string } | null;
+        const dealerConflict = Boolean(
+            dealerRow && (!excludeDealerId || dealerRow.id !== excludeDealerId)
+        );
+
+        return !legacyResult.data && !routingSubResult.data && !routingSiteResult.data && !dealerConflict;
+    } catch {
+        // Fail OPEN on unexpected query errors so a transient DB hiccup doesn't block onboarding;
+        // the DB unique constraint (recommended above) is the real backstop.
+        return true;
+    }
+}
+
+/**
  * Saves the complete onboarding data to Supabase.
  * Inserts: dealers, dealer_brands, dealer_services, dealer_template_configs
  *
@@ -143,12 +179,28 @@ export async function saveDealer(
                 .from("dealers").select("slug").eq("id", existingDealerId).maybeSingle();
             const finalSlug = slug || cur?.slug || slug;
 
-            const { error } = await supabase
+            // SECURITY/CORRECTNESS (TOCTOU guard): re-validate slug availability immediately
+            // before writing, excluding THIS dealer's own row (so re-saving an unchanged slug
+            // is allowed). The slug may have been picked much earlier (step-1), so another
+            // dealer could have claimed it in the meantime. Recommend a DB UNIQUE index on
+            // dealers.slug to make this atomic — see isSlugAvailableClient() note.
+            if (!(await isSlugAvailableClient(finalSlug, existingDealerId))) {
+                return { success: false, error: 'This site name is already taken. Please choose a different one.' };
+            }
+
+            const { data: updatedRows, error } = await supabase
                 .from("dealers")
                 .update({ ...dealerPayload, slug: finalSlug, subdomain: finalSlug })
-                .eq("id", existingDealerId);
+                .eq("id", existingDealerId)
+                .select("id");
 
             if (error) throw error;
+            // 0 rows changed ⇒ a tampered/non-existent id was supplied. Previously this
+            // silently "succeeded" (returned success with a dealerId that was never written).
+            // Fail closed. (Ownership is additionally enforced above when a user is present.)
+            if (!updatedRows || updatedRows.length === 0) {
+                throw new Error('Dealer not found or update not permitted');
+            }
         } else {
             // existingDealerId is missing (Zustand wiped by page-refresh).
             // The DB trigger may have already created a stub dealer row for this user,
@@ -162,16 +214,34 @@ export async function saveDealer(
 
                 if (stubDealer) {
                     // Row exists — update it in place, prefer user-picked slug
-                    const finalSlug = slug || stubDealer.slug;
-                    const { error } = await supabase
+                    const finalSlug = slug || stubDealer.slug || "";
+
+                    // TOCTOU guard — re-validate availability before writing, excluding this
+                    // dealer's own (stub) row.
+                    if (!(await isSlugAvailableClient(finalSlug, stubDealer.id))) {
+                        return { success: false, error: 'This site name is already taken. Please choose a different one.' };
+                    }
+
+                    const { data: updatedRows, error } = await supabase
                         .from("dealers")
                         .update({ ...dealerPayload, slug: finalSlug, subdomain: finalSlug })
-                        .eq("id", stubDealer.id);
+                        .eq("id", stubDealer.id)
+                        .eq("user_id", user.id)
+                        .select("id");
 
                     if (error) throw error;
+                    // 0 rows changed ⇒ stub no longer owned by this user. Fail closed.
+                    if (!updatedRows || updatedRows.length === 0) {
+                        throw new Error('Dealer not found or update not permitted');
+                    }
                     dealerId = stubDealer.id;
                 } else {
-                    // Truly new — insert with slug
+                    // Truly new — insert with slug.
+                    // TOCTOU guard — re-validate availability immediately before inserting.
+                    if (!(await isSlugAvailableClient(slug))) {
+                        return { success: false, error: 'This site name is already taken. Please choose a different one.' };
+                    }
+
                     const { data: inserted, error } = await supabase
                         .from("dealers")
                         .insert({ ...dealerPayload, user_id: user.id })
@@ -183,6 +253,11 @@ export async function saveDealer(
                 }
             } else {
                 // No auth session — insert without user_id (graceful fallback, will fail at DB level without auth)
+                // TOCTOU guard — re-validate availability immediately before inserting.
+                if (!(await isSlugAvailableClient(slug))) {
+                    return { success: false, error: 'This site name is already taken. Please choose a different one.' };
+                }
+
                 const { data: inserted, error } = await supabase
                     .from("dealers")
                     .insert({ ...dealerPayload, user_id: '' })

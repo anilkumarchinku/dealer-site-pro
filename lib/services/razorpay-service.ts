@@ -47,22 +47,39 @@ export function verifyRazorpaySignature(message: string, signature: string, secr
     }
 }
 
+/**
+ * Whether the explicit, opt-in fake/dev payment path is allowed.
+ *
+ * SECURITY: This must NEVER be keyed on NODE_ENV alone — Vercel preview /
+ * staging / CI all run with NODE_ENV !== 'production', so keying on it there
+ * would silently accept unsigned payment callbacks. The bypass is only allowed
+ * when an operator explicitly sets ALLOW_FAKE_PAYMENTS=1 AND the secret is
+ * genuinely absent. Otherwise we always fail closed.
+ */
+function fakePaymentsExplicitlyAllowed(): boolean {
+    return process.env.ALLOW_FAKE_PAYMENTS === '1'
+}
+
+function razorpaySecretIsAbsent(secret: string | undefined): boolean {
+    return !secret || secret === 'your_razorpay_secret_key_here'
+}
+
 export function verifySubscriptionPaymentSignature(
     paymentId: string,
     subscriptionId: string,
     signature: string
 ): boolean {
     const secret = getRazorpaySecret()
-    if (!secret || secret === 'your_razorpay_secret_key_here') {
-        if (process.env.NODE_ENV === 'production') {
-            console.error('[Payment] RAZORPAY_KEY_SECRET not configured in production - rejecting payment')
-            return false
+    if (razorpaySecretIsAbsent(secret)) {
+        if (fakePaymentsExplicitlyAllowed()) {
+            console.warn('[Payment] RAZORPAY_KEY_SECRET not configured - ALLOW_FAKE_PAYMENTS=1, skipping verification')
+            return true
         }
-        console.warn('[Payment] RAZORPAY_KEY_SECRET not configured - skipping verification in dev')
-        return true
+        console.error('[Payment] RAZORPAY_KEY_SECRET not configured - rejecting payment (fail closed)')
+        return false
     }
 
-    return verifyRazorpaySignature(`${paymentId}|${subscriptionId}`, signature, secret)
+    return verifyRazorpaySignature(`${paymentId}|${subscriptionId}`, signature, secret as string)
 }
 
 export function verifyBookingPaymentSignature(
@@ -72,16 +89,16 @@ export function verifyBookingPaymentSignature(
     logPrefix: string
 ): boolean {
     const secret = getRazorpaySecret()
-    if (!secret || secret === 'your_razorpay_secret_key_here') {
-        if (process.env.NODE_ENV === 'production') {
-            console.error(`[${logPrefix}/verify] RAZORPAY_KEY_SECRET not configured - rejecting`)
-            return false
+    if (razorpaySecretIsAbsent(secret)) {
+        if (fakePaymentsExplicitlyAllowed()) {
+            console.warn(`[${logPrefix}/verify] RAZORPAY_KEY_SECRET not configured - ALLOW_FAKE_PAYMENTS=1, skipping signature check`)
+            return true
         }
-        console.warn(`[${logPrefix}/verify] Skipping signature check in dev`)
-        return true
+        console.error(`[${logPrefix}/verify] RAZORPAY_KEY_SECRET not configured - rejecting (fail closed)`)
+        return false
     }
 
-    return verifyRazorpaySignature(`${orderId}|${paymentId}`, signature, secret)
+    return verifyRazorpaySignature(`${orderId}|${paymentId}`, signature, secret as string)
 }
 
 export function verifyRazorpayWebhookSignature(body: string, signature: string, secret: string): boolean {
@@ -99,6 +116,48 @@ export async function razorpayApiFetch<T = RazorpayJson>(path: string, init?: Re
         },
         init,
         timeoutMs: RAZORPAY_TIMEOUT_MS,
+    })
+}
+
+/**
+ * Captured/authorized payment as returned by the Razorpay API.
+ * Amounts are in paise. `status` is 'created' | 'authorized' | 'captured' | 'refunded' | 'failed'.
+ */
+export interface RazorpayPayment {
+    id: string
+    status: string
+    amount: number
+    currency: string
+    order_id?: string | null
+    invoice_id?: string | null
+}
+
+/**
+ * Fetches a payment from Razorpay (server-side, authenticated via key id/secret).
+ * Use this to independently confirm the captured amount/status before granting
+ * paid features — never trust client-supplied amounts.
+ */
+export async function fetchRazorpayPayment(paymentId: string): Promise<RazorpayPayment> {
+    return razorpayApiFetch<RazorpayPayment>(`/payments/${encodeURIComponent(paymentId)}`, {
+        method: 'GET',
+    })
+}
+
+/**
+ * A Razorpay subscription as returned by the API. For subscription billing the
+ * latest charge is exposed via the linked invoice; we read the subscription to
+ * confirm it is active/charged.
+ */
+export interface RazorpaySubscription {
+    id: string
+    status: string
+    plan_id?: string
+    paid_count?: number
+}
+
+export async function fetchRazorpaySubscription(subscriptionId: string): Promise<RazorpaySubscription> {
+    return razorpayApiFetch<RazorpaySubscription>(`/subscriptions/${encodeURIComponent(subscriptionId)}`, {
+        method: 'GET',
     })
 }
 

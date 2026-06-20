@@ -52,7 +52,7 @@ export default function MessagesPage() {
         if (!msg.is_read) {
             const updated = messages.map(m => m.id === msg.id ? { ...m, is_read: true } : m);
             setMessages(updated);
-            if (dealerId) await markMessageRead(msg.id);
+            if (dealerId) await markMessageRead(msg.id, dealerId);
         }
     };
 
@@ -61,14 +61,14 @@ export default function MessagesPage() {
         const newVal = !msg.is_starred;
         setMessages(prev => prev.map(m => m.id === msg.id ? { ...m, is_starred: newVal } : m));
         if (selected?.id === msg.id) setSelected(prev => prev ? { ...prev, is_starred: newVal } : null);
-        if (dealerId) await toggleMessageStar(msg.id, newVal);
+        if (dealerId) await toggleMessageStar(msg.id, newVal, dealerId);
     };
 
     const handleArchive = async (e: React.MouseEvent, msgId: string) => {
         e.stopPropagation();
         setMessages(prev => prev.filter(m => m.id !== msgId));
         if (selected?.id === msgId) setSelected(null);
-        if (dealerId) await archiveMessage(msgId);
+        if (dealerId) await archiveMessage(msgId, dealerId);
     };
 
     const STATS = [

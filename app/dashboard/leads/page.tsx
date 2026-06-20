@@ -64,7 +64,7 @@ export default function LeadsPage() {
     useEffect(() => { loadLeads(); }, [dealerId]); // eslint-disable-line
 
     const handleMarkContacted = async (id: string) => {
-        const result = await updateLeadStatus(id, "contacted");
+        const result = await updateLeadStatus(id, "contacted", dealerId ?? undefined);
         if (!result.success) {
             toast.error(result.error ?? "Couldn't update the lead. Please try again.");
             return;

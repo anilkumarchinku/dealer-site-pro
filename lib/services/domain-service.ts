@@ -421,15 +421,29 @@ export async function getPrimaryDomain(dealerId: string): Promise<Domain | null>
 }
 
 /**
- * Checks if a slug is available
+ * Checks if a slug is available.
+ *
+ * SECURITY/CORRECTNESS: the site routes from `dealers.slug` (and save-dealer.ts WRITES that
+ * column), so availability MUST include `dealers.slug` — otherwise two dealers can end up with
+ * the same routing slug and one dealer's site/data can be served under the other's URL.
+ * Previously this only checked `domains`/`dealer_domains`, missing the authoritative column.
+ *
+ * `excludeDealerId` lets an editing dealer keep their own current slug (so re-saving without
+ * changing the slug doesn't report it as taken).
+ *
+ * NOTE (follow-up): there is no DB UNIQUE constraint on `dealers.slug`, so this check is a
+ * TOCTOU-prone application guard, not a hard guarantee. Recommend adding a unique index on
+ * `dealers.slug` (and `dealer_domains.subdomain` / `dealer_domains.site_slug`) via migration
+ * to make uniqueness atomic at the database level. (Migration is handled separately.)
  */
 export async function isSlugAvailable(
     slug: string,
-    supabase?: DomainSupabaseClient
+    supabase?: DomainSupabaseClient,
+    excludeDealerId?: string
 ): Promise<boolean> {
     try {
         const db = getDomainClient(supabase)
-        const [legacyResult, routingResult, siteResult] = await Promise.all([
+        const [legacyResult, routingResult, siteResult, dealerResult] = await Promise.all([
             db
                 .from('domains')
                 .select('slug')
@@ -445,9 +459,21 @@ export async function isSlugAvailable(
                 .select('site_slug')
                 .eq('site_slug', slug)
                 .single(),
+            // Authoritative routing column — the site routes from dealers.slug.
+            db
+                .from('dealers')
+                .select('id, slug')
+                .eq('slug', slug)
+                .single(),
         ])
 
-        return !legacyResult.data && !routingResult.data && !siteResult.data
+        // A matching dealers.slug only conflicts if it belongs to a DIFFERENT dealer.
+        const dealerRow = dealerResult.data as { id?: string; slug?: string } | null
+        const dealerConflict = Boolean(
+            dealerRow && (!excludeDealerId || dealerRow.id !== excludeDealerId)
+        )
+
+        return !legacyResult.data && !routingResult.data && !siteResult.data && !dealerConflict
     } catch (error) {
         // If no data found, slug is available
         return true

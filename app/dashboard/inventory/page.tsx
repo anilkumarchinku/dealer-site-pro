@@ -146,7 +146,7 @@ export default function InventoryPage() {
         });
         if (!ok) return;
 
-        const result = await deleteVehicle(id);
+        const result = await deleteVehicle(id, dealerId ?? undefined);
         if (!result.success) {
             toast.error(result.error ?? "Couldn't remove the listing. Please try again.");
             return;

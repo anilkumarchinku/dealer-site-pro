@@ -1,7 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { createHash } from 'crypto'
 import { z } from 'zod'
 import { createAdminClient } from '@/lib/supabase-server'
-import { rateLimitOrNull } from '@/lib/utils/rate-limiter'
+import { rateLimitOrNull, checkRateLimit } from '@/lib/utils/rate-limiter'
 
 const lookupSchema = z.object({
     slug: z.string().min(1),
@@ -25,6 +26,22 @@ function contactOrFilter(phone?: string, email?: string, phoneColumn = 'customer
     return clauses.join(',')
 }
 
+// ─────────────────────────────────────────────────────────────────────────────
+// !!! SECURITY — REQUIRED FOLLOW-UP: OTP VERIFICATION BEFORE RETURNING PII !!!
+//
+// This endpoint returns a customer's leads, test-drives and sell-requests (PII —
+// names, phone numbers, emails, vehicle interest, messages) given ONLY a PUBLIC
+// dealer slug + an unverified phone/email. There is NO proof the caller actually
+// owns that phone/email, so anyone who knows (or guesses) a customer's number can
+// enumerate their activity. The rate limiting below only THROTTLES enumeration; it
+// does NOT authorize the caller.
+//
+// The correct fix is an OTP challenge: send a one-time code to the supplied
+// phone/email and require the caller to submit a valid code before any PII is
+// returned. That is a client + server flow change and is intentionally NOT
+// implemented here. DO NOT broaden what this endpoint returns until OTP gating
+// (or equivalent proof-of-ownership) is in place.
+// ─────────────────────────────────────────────────────────────────────────────
 export async function POST(request: NextRequest) {
     const limited = await rateLimitOrNull('customer_panel', request, 10, 60_000)
     if (limited) return limited
@@ -36,6 +53,24 @@ export async function POST(request: NextRequest) {
     }
 
     const { slug, phone, email } = parsed.data
+
+    // SECURITY: throttle per IDENTIFIER (phone/email), not just per IP. Without this an
+    // attacker rotating IPs (or behind shared NAT exhausting the IP budget) could enumerate
+    // a single customer's PII across many requests. We key the limiter on a salt-free SHA-256
+    // of the normalized identifier so the raw PII is never used as a store key. This is a
+    // STOP-GAP that slows enumeration — it is NOT a substitute for the OTP gating described
+    // above.
+    const identifier = `${normalizePhone(phone)}|${(email ?? '').trim().toLowerCase()}`
+    const identifierKey = createHash('sha256').update(identifier).digest('hex')
+    // 5 lookups per identifier per 10 minutes.
+    const idLimit = checkRateLimit('customer_panel_identifier', identifierKey, 5, 10 * 60_000)
+    if (!idLimit.allowed) {
+        return NextResponse.json(
+            { error: 'Too many lookups for this contact. Please try again later.' },
+            { status: 429, headers: { 'Retry-After': String(Math.ceil(idLimit.retryAfterMs / 1000)) } }
+        )
+    }
+
     const admin = createAdminClient() as any
 
     const { data: dealer, error: dealerError } = await admin

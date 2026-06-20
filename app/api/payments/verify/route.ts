@@ -1,9 +1,22 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { verifyPaymentSignature } from '@/lib/services/payment-service'
-import { createAdminClient, createRouteClient, requireAuth } from '@/lib/supabase-server'
+import { PLAN_PRICES_PAISE, verifyPaymentSignature } from '@/lib/services/payment-service'
+import { fetchRazorpayPayment } from '@/lib/services/razorpay-service'
+import { createAdminClient, createRouteClient, requireAuth, requireDealerOwnership } from '@/lib/supabase-server'
 import { rateLimitOrNull } from '@/lib/utils/rate-limiter'
 import { logger } from '@/lib/utils/logger'
 import type { Json } from '@/lib/database.types'
+
+/** Razorpay payment statuses that mean the money was actually collected. */
+const CAPTURED_STATUSES = new Set(['captured', 'paid'])
+
+/** Resolves the priced tier for a subscription row, or null if it isn't a paid tier. */
+function resolvePaidTier(
+    subscription: { tier: string | null; plan: string | null }
+): 'pro' | 'premium' | null {
+    const candidate = subscription.tier ?? subscription.plan
+    if (candidate === 'pro' || candidate === 'premium') return candidate
+    return null
+}
 
 interface PaymentVerifyRequest {
     orderId: string
@@ -69,7 +82,7 @@ function paymentResponseJson(response: PaymentVerifyResponse): Json {
  */
 export async function POST(request: NextRequest): Promise<NextResponse<PaymentVerifyResponse>> {
     // Auth: only authenticated users can verify payments
-    const { errorResponse: authError } = await requireAuth()
+    const { user, errorResponse: authError } = await requireAuth()
     if (authError) return authError as NextResponse<PaymentVerifyResponse>
 
     // Rate limit: max 10 payment verifications per IP per hour
@@ -80,10 +93,20 @@ export async function POST(request: NextRequest): Promise<NextResponse<PaymentVe
         const body = (await request.json()) as PaymentVerifyRequest
         const { orderId, paymentId, signature, subscriptionId } = body
 
-        // Validate required fields
+        // Validate required fields. subscriptionId is required: it is part of the
+        // signed message (payment_id|subscription_id) and identifies the row we
+        // activate. An empty/missing id must never fall back to a blank match.
         if (!orderId || !paymentId || !signature) {
             return NextResponse.json(
                 { success: false, error: 'Missing payment verification details' },
+                { status: 400 }
+            )
+        }
+
+        const trimmedSubscriptionId = typeof subscriptionId === 'string' ? subscriptionId.trim() : ''
+        if (!trimmedSubscriptionId) {
+            return NextResponse.json(
+                { success: false, error: 'Missing subscription identifier' },
                 { status: 400 }
             )
         }
@@ -146,7 +169,7 @@ export async function POST(request: NextRequest): Promise<NextResponse<PaymentVe
 
         // ── SIGNATURE VERIFICATION ───────────────────────────────
         // Verify signature — Razorpay signs subscriptions as payment_id|subscription_id
-        const isValid = verifyPaymentSignature(paymentId, subscriptionId ?? orderId, signature)
+        const isValid = verifyPaymentSignature(paymentId, trimmedSubscriptionId, signature)
 
         if (!isValid) {
             const failureResponse: PaymentVerifyResponse = {
@@ -169,11 +192,109 @@ export async function POST(request: NextRequest): Promise<NextResponse<PaymentVe
             )
         }
 
+        // ── OWNERSHIP CHECK ──────────────────────────────────────
+        // A valid signature only proves Razorpay signed THIS payment for THIS
+        // subscription id. It does NOT prove the caller owns the subscription,
+        // nor that the captured amount matches the plan price. Load the row and
+        // verify both before activating anything. Failures here are not cached as
+        // idempotent outcomes — they are caller/environment errors, not a final
+        // verdict on the payment.
+        const { data: subscriptionRow, error: subscriptionLookupError } = await supabase
+            .from('domain_subscriptions')
+            .select('id, dealer_id, domain_id, plan, tier, razorpay_subscription_id')
+            .eq('razorpay_subscription_id', trimmedSubscriptionId)
+            .single()
+
+        if (subscriptionLookupError || !subscriptionRow) {
+            logger.error('Subscription not found for verification:', subscriptionLookupError)
+            return NextResponse.json(
+                { success: false, error: 'Subscription not found' },
+                { status: 404 }
+            )
+        }
+
+        // Confirm the authenticated user owns the dealer that the subscription
+        // belongs to. requireDealerOwnership returns a 403 NextResponse otherwise.
+        const { errorResponse: ownershipError } = await requireDealerOwnership(
+            supabase,
+            user.id,
+            subscriptionRow.dealer_id
+        )
+        if (ownershipError) {
+            logger.error('Payment verify ownership check failed', {
+                userId: user.id,
+                dealerId: subscriptionRow.dealer_id,
+                subscriptionId: trimmedSubscriptionId,
+            })
+            return ownershipError as NextResponse<PaymentVerifyResponse>
+        }
+
+        // ── AMOUNT / CAPTURE CHECK ───────────────────────────────
+        // Independently fetch the payment from Razorpay and assert it was
+        // actually captured for the exact plan price. This blocks tampering where
+        // a real-but-cheaper/uncaptured payment is replayed against a paid plan.
+        //
+        // The explicit ALLOW_FAKE_PAYMENTS=1 dev/mock path (mock_sub_* ids, no
+        // live Razorpay) is the only case that skips the live amount check.
+        const isMockSubscription =
+            process.env.ALLOW_FAKE_PAYMENTS === '1' && trimmedSubscriptionId.startsWith('mock_sub_')
+
+        if (!isMockSubscription) {
+            const plan = resolvePaidTier(subscriptionRow)
+            if (!plan) {
+                logger.error('Subscription has no priced tier during verification:', {
+                    subscriptionId: trimmedSubscriptionId,
+                    plan: subscriptionRow.plan,
+                    tier: subscriptionRow.tier,
+                })
+                return NextResponse.json(
+                    { success: false, error: 'Subscription plan is not eligible for verification' },
+                    { status: 400 }
+                )
+            }
+
+            const expectedAmount = PLAN_PRICES_PAISE[plan]
+
+            try {
+                const payment = await fetchRazorpayPayment(paymentId)
+
+                if (!CAPTURED_STATUSES.has((payment.status ?? '').toLowerCase())) {
+                    logger.error('Razorpay payment not captured during verification:', {
+                        paymentId,
+                        status: payment.status,
+                    })
+                    return NextResponse.json(
+                        { success: false, error: 'Payment has not been captured' },
+                        { status: 400 }
+                    )
+                }
+
+                if (payment.amount !== expectedAmount) {
+                    logger.error('Razorpay payment amount mismatch during verification:', {
+                        paymentId,
+                        plan,
+                        expectedAmount,
+                        actualAmount: payment.amount,
+                    })
+                    return NextResponse.json(
+                        { success: false, error: 'Payment amount does not match the plan price' },
+                        { status: 400 }
+                    )
+                }
+            } catch (paymentFetchError) {
+                logger.error('Failed to fetch Razorpay payment during verification:', paymentFetchError)
+                return NextResponse.json(
+                    { success: false, error: 'Could not confirm payment with provider' },
+                    { status: 502 }
+                )
+            }
+        }
+
         // ── UPDATE SUBSCRIPTION ──────────────────────────────────
         const { data: subscription, error: updateError } = await supabase
             .from('domain_subscriptions')
             .update({ status: 'active' })
-            .eq('razorpay_subscription_id', subscriptionId ?? '')
+            .eq('razorpay_subscription_id', trimmedSubscriptionId)
             .select()
             .single()
 

@@ -32,11 +32,15 @@ export async function createDomainSubscription(
     params: CreateSubscriptionParams
 ): Promise<SubscriptionResult> {
     const { dealerId, tier, domainId } = params
-    const production = process.env.NODE_ENV === 'production'
 
-    // MOCK MODE: when Razorpay credentials are not configured, return fake subscription data for testing
+    // MOCK MODE is an explicit opt-in only. It must NOT be keyed on NODE_ENV:
+    // Vercel preview/staging/CI all run with NODE_ENV !== 'production', so keying
+    // the mock path on that would hand out fake subscriptions in those
+    // environments. Require ALLOW_FAKE_PAYMENTS=1; otherwise fail closed.
+    const allowMock = process.env.ALLOW_FAKE_PAYMENTS === '1'
+
     if (!isRazorpayConfigured()) {
-        if (production) {
+        if (!allowMock) {
             return { success: false, error: 'Payment service is not configured' }
         }
         const mockId = `mock_sub_${Date.now()}`
@@ -51,7 +55,7 @@ export async function createDomainSubscription(
 
     const planId = planIds[tier]
     if (!planId || planId.startsWith('plan_xxx')) {
-        if (production) {
+        if (!allowMock) {
             return { success: false, error: 'Payment plan is not configured' }
         }
         const mockId = `mock_sub_${Date.now()}`
