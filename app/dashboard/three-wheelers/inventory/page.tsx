@@ -10,17 +10,22 @@ import { toast } from "@/lib/utils/toast"
 import type { ThreeWheelerVehicle } from "@/lib/types/three-wheeler"
 import { getScrapedImageFallback, brandNameToId } from "@/lib/utils/brand-model-images"
 
+const PAGE_SIZE = 50
+
 export default function ThreeWheelerInventoryPage() {
     const { dealerId } = useOnboardingStore()
     const [vehicles, setVehicles] = useState<ThreeWheelerVehicle[]>([])
     const [total, setTotal] = useState(0)
+    const [page, setPage] = useState(1)
     const [loading, setLoading] = useState(true)
+    const [loadingMore, setLoadingMore] = useState(false)
 
     const load = useCallback(async () => {
         if (!dealerId) return
         setLoading(true)
+        setPage(1)
         try {
-            const res = await fetch(`/api/three-wheelers?dealerId=${dealerId}&pageSize=50`)
+            const res = await fetch(`/api/three-wheelers?dealerId=${dealerId}&page=1&pageSize=${PAGE_SIZE}`)
             const data = await res.json()
             setVehicles(data.vehicles ?? [])
             setTotal(data.total ?? 0)
@@ -29,7 +34,28 @@ export default function ThreeWheelerInventoryPage() {
         }
     }, [dealerId])
 
+    const loadMore = useCallback(async () => {
+        if (!dealerId || loadingMore) return
+        const nextPage = page + 1
+        setLoadingMore(true)
+        try {
+            const res = await fetch(`/api/three-wheelers?dealerId=${dealerId}&page=${nextPage}&pageSize=${PAGE_SIZE}`)
+            const data = await res.json()
+            const incoming: ThreeWheelerVehicle[] = data.vehicles ?? []
+            setVehicles(prev => {
+                const seen = new Set(prev.map(v => v.id))
+                return [...prev, ...incoming.filter(v => !seen.has(v.id))]
+            })
+            setTotal(data.total ?? total)
+            setPage(nextPage)
+        } finally {
+            setLoadingMore(false)
+        }
+    }, [dealerId, loadingMore, page, total])
+
     useEffect(() => { load() }, [load])
+
+    const hasMore = vehicles.length < total
 
     async function handleDelete(vehicle: ThreeWheelerVehicle) {
         const name = `${vehicle.brand} ${vehicle.model}`.trim()
@@ -78,6 +104,7 @@ export default function ThreeWheelerInventoryPage() {
                     <Button asChild><Link href="/dashboard/three-wheelers/inventory/add">Add Vehicle</Link></Button>
                 </div>
             ) : (
+                <>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                     {vehicles.map((v) => (
                         <div key={v.id} className="bg-card border border-border rounded-xl overflow-hidden">
@@ -120,6 +147,14 @@ export default function ThreeWheelerInventoryPage() {
                         </div>
                     ))}
                 </div>
+                {hasMore && (
+                    <div className="flex justify-center">
+                        <Button variant="outline" onClick={loadMore} disabled={loadingMore}>
+                            {loadingMore ? "Loading..." : `Load more (${total - vehicles.length} remaining)`}
+                        </Button>
+                    </div>
+                )}
+                </>
             )}
         </div>
     )

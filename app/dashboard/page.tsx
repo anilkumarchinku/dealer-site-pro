@@ -15,6 +15,7 @@ import { isSupabaseReady, supabase } from "@/lib/supabase";
 import type { Brand } from "@/lib/types";
 import { fetchAnalyticsSummary, fetchTopVehicles, type TopVehicle } from "@/lib/db/analytics";
 import { fetchLeads, type ExternalLead } from "@/lib/db/leads";
+import { fetchVehicles } from "@/lib/db/vehicles";
 import { DealerScorecard } from "@/components/dashboard/DealerScorecard";
 import { Reveal } from "@/components/ui/Reveal";
 import { CountUp } from "@/components/ui/CountUp";
@@ -88,10 +89,12 @@ export default function DashboardPage() {
     const [brandSearch, setBrandSearch] = useState("");
 
     const [statsLoading, setStatsLoading] = useState(false);
+    const [inventoryLoading, setInventoryLoading] = useState(false);
     const [leadsLoading, setLeadsLoading] = useState(false);
     const [visitors, setVisitors]         = useState<number | null>(null);
     const [leadsCount, setLeadsCount]     = useState<number | null>(null);
     const [testDrives, setTestDrives]     = useState<number | null>(null);
+    const [inventoryCount, setInventoryCount] = useState<number | null>(null);
     const [recentLeads, setRecentLeads]   = useState<ExternalLead[]>([]);
     const [topVehicles, setTopVehicles]   = useState<TopVehicle[]>([]);
 
@@ -142,6 +145,13 @@ export default function DashboardPage() {
             setTopVehicles(vehicles);
         }).catch(() => {}).finally(() => { if (!cancelled) setLeadsLoading(false); });
 
+        // Inventory count — only the total is needed, so request a single row.
+        setInventoryLoading(true);
+        fetchVehicles(dealerId, 1, 1)
+            .then(({ total }) => { if (!cancelled) setInventoryCount(total); })
+            .catch(() => {})
+            .finally(() => { if (!cancelled) setInventoryLoading(false); });
+
         return () => { cancelled = true; };
     }, [dealerId]);
 
@@ -168,10 +178,10 @@ export default function DashboardPage() {
 
 
     const STATS = [
-        { label: "Total Visitors", value: visitors,   icon: Eye,      color: "blue"    as const },
-        { label: "Active Leads",   value: leadsCount, icon: Users,    color: "emerald" as const },
-        { label: "Test Drives",    value: testDrives, icon: Calendar, color: "violet"  as const },
-        { label: "Inventory",      value: null,       icon: Car,      color: "amber"   as const },
+        { label: "Total Visitors", value: visitors,       icon: Eye,      color: "blue"    as const, loading: statsLoading     },
+        { label: "Active Leads",   value: leadsCount,     icon: Users,    color: "emerald" as const, loading: statsLoading     },
+        { label: "Test Drives",    value: testDrives,     icon: Calendar, color: "violet"  as const, loading: statsLoading     },
+        { label: "Inventory",      value: inventoryCount, icon: Car,      color: "amber"   as const, loading: inventoryLoading },
     ];
 
     return (
@@ -369,7 +379,7 @@ export default function DashboardPage() {
                                     </span>
                                 </div>
                                 <p className="text-sm text-muted-foreground">{stat.label}</p>
-                                {statsLoading ? (
+                                {stat.loading ? (
                                     <Skeleton className="mt-2 h-8 w-20" />
                                 ) : (
                                     <p className="mt-1 text-3xl font-black tracking-tight">

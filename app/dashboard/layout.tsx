@@ -85,9 +85,10 @@ const navGroups = [
     {
         label: "2nd Hand",
         items: [
+            // "Used 2W"/"Used 3W" removed — they were exact-href duplicates of the
+            // "2W Used"/"3W Used" links under the 2-Wheeler / 3-Wheeler groups,
+            // which made active-state highlighting ambiguous.
             { name: "Used Overview", href: "/dashboard/used-vehicles",           icon: RefreshCw },
-            { name: "Used 2W",       href: "/dashboard/two-wheelers/used",       icon: Bike      },
-            { name: "Used 3W",       href: "/dashboard/three-wheelers/used",     icon: Truck     },
         ],
     },
     {
@@ -253,6 +254,13 @@ export default function DashboardLayout({
 
     return (
         <div className="min-h-screen bg-[#F6F9FD] text-foreground dark:bg-[#07111F]">
+            {/* Skip to main content — first focusable element for keyboard users */}
+            <a
+                href="#main-content"
+                className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-xl focus:bg-blue-600 focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-300"
+            >
+                Skip to main content
+            </a>
             {/* Sidebar */}
             {mobileNavOpen && (
                 <button
@@ -437,7 +445,7 @@ export default function DashboardLayout({
                 )}
 
                 {/* Page Content */}
-                <main className="p-4 sm:p-6 lg:p-8">
+                <main id="main-content" tabIndex={-1} className="p-4 sm:p-6 lg:p-8 focus:outline-none">
                     {children}
                 </main>
             </div>

@@ -68,6 +68,8 @@ function AddVehiclePageContent() {
     const isHybrid    = data.sellsNewCars && data.sellsUsedCars;
     const isFirstHand = data.sellsNewCars && !data.sellsUsedCars;
     const fileInputRef = useRef<HTMLInputElement>(null);
+    const makeRef  = useRef<HTMLInputElement>(null);
+    const modelRef = useRef<HTMLInputElement>(null);
 
     // IMPORTANT: All hooks must be declared before any early returns
     const [isDraftMode, setIsDraftMode] = useState(false);
@@ -100,6 +102,7 @@ function AddVehiclePageContent() {
     const [isAIGenerating, setIsAIGenerating] = useState(false);
     const [isSaving, setIsSaving]     = useState(false);
     const [saveError, setSaveError]   = useState<string | null>(null);
+    const [fieldErrors, setFieldErrors] = useState<{ make?: string; model?: string }>({});
 
     // Load draft vehicle data if vehicleId is present
     useEffect(() => {
@@ -150,6 +153,10 @@ function AddVehiclePageContent() {
 
     const handleChange = (field: keyof FormData, value: string) => {
         setFormData(prev => ({ ...prev, [field]: value }));
+        // Clear inline error for this field as the dealer corrects it
+        if (field === "make" || field === "model") {
+            setFieldErrors(prev => (prev[field] ? { ...prev, [field]: undefined } : prev));
+        }
     };
 
     const toggleFeature = (feature: string) => {
@@ -271,10 +278,21 @@ function AddVehiclePageContent() {
 
     const handleSave = async () => {
         if (!dealerId) { setSaveError("Dealer ID not found"); return; }
-        if (!formData.make || !formData.model) {
-            setSaveError("Please fill in make and model");
+
+        // ── Inline per-field validation for required fields ──────
+        const errors: { make?: string; model?: string } = {};
+        if (!formData.make.trim())  errors.make  = "Make is required";
+        if (!formData.model.trim()) errors.model = "Model is required";
+        setFieldErrors(errors);
+        if (errors.make || errors.model) {
+            setSaveError("Please fill in the highlighted required fields.");
+            // Scroll/focus the FIRST invalid field
+            const firstInvalidRef = errors.make ? makeRef : modelRef;
+            firstInvalidRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+            firstInvalidRef.current?.focus({ preventScroll: true });
             return;
         }
+
         setIsSaving(true);
         setSaveError(null);
         try {
@@ -530,20 +548,28 @@ function AddVehiclePageContent() {
                             <div>
                                 <label className="block text-sm font-medium mb-2">Make <span className="text-red-500">*</span></label>
                                 <Input
+                                    ref={makeRef}
                                     value={formData.make}
                                     onChange={(e) => handleChange('make', e.target.value)}
                                     placeholder="e.g., Maruti Suzuki"
                                     disabled={isSaving}
+                                    aria-invalid={!!fieldErrors.make}
+                                    className={cn(fieldErrors.make && "border-red-500 focus-visible:ring-red-500")}
                                 />
+                                {fieldErrors.make && <p className="mt-1 text-xs text-red-600">{fieldErrors.make}</p>}
                             </div>
                             <div>
                                 <label className="block text-sm font-medium mb-2">Model <span className="text-red-500">*</span></label>
                                 <Input
+                                    ref={modelRef}
                                     value={formData.model}
                                     onChange={(e) => handleChange('model', e.target.value)}
                                     placeholder="e.g., Swift"
                                     disabled={isSaving}
+                                    aria-invalid={!!fieldErrors.model}
+                                    className={cn(fieldErrors.model && "border-red-500 focus-visible:ring-red-500")}
                                 />
+                                {fieldErrors.model && <p className="mt-1 text-xs text-red-600">{fieldErrors.model}</p>}
                             </div>
                             <div>
                                 <label className="block text-sm font-medium mb-2">Variant / Trim</label>
@@ -612,7 +638,7 @@ function AddVehiclePageContent() {
                                     value={formData.transmission}
                                     onChange={(e) => handleChange('transmission', e.target.value)}
                                     disabled={isSaving}
-                                    className="w-full px-3 py-2 border border-gray-200 rounded-md text-sm bg-white text-gray-900 focus:outline-none focus:border-gray-400 focus:ring-1 focus:ring-gray-200"
+                                    className="w-full px-3 py-2 border border-input rounded-md text-sm bg-background text-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                                 >
                                     <option>Automatic</option>
                                     <option>Manual</option>
@@ -627,7 +653,7 @@ function AddVehiclePageContent() {
                                     value={formData.fuel_type}
                                     onChange={(e) => handleChange('fuel_type', e.target.value)}
                                     disabled={isSaving}
-                                    className="w-full px-3 py-2 border border-gray-200 rounded-md text-sm bg-white text-gray-900 focus:outline-none focus:border-gray-400 focus:ring-1 focus:ring-gray-200"
+                                    className="w-full px-3 py-2 border border-input rounded-md text-sm bg-background text-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                                 >
                                     <option>Petrol</option>
                                     <option>Diesel</option>
@@ -644,7 +670,7 @@ function AddVehiclePageContent() {
                                         value={formData.condition}
                                         onChange={(e) => handleChange('condition', e.target.value as FormData["condition"])}
                                         disabled={isSaving}
-                                        className="w-full px-3 py-2 border border-gray-200 rounded-md text-sm bg-white text-gray-900 focus:outline-none focus:border-gray-400 focus:ring-1 focus:ring-gray-200"
+                                        className="w-full px-3 py-2 border border-input rounded-md text-sm bg-background text-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                                     >
                                         <option value="new">New</option>
                                         <option value="used">Used</option>
@@ -681,12 +707,12 @@ function AddVehiclePageContent() {
                                             "flex items-center gap-2 p-3 rounded-xl border-2 text-sm font-medium transition-all text-left",
                                             selected
                                                 ? "border-primary bg-primary/5 text-primary"
-                                                : "border-gray-200 hover:border-primary/40 text-gray-700 hover:bg-gray-50"
+                                                : "border-input hover:border-primary/40 text-foreground hover:bg-muted/50"
                                         )}
                                     >
                                         <div className={cn(
                                             "w-4 h-4 rounded-full border-2 flex items-center justify-center shrink-0 transition-colors",
-                                            selected ? "border-primary bg-primary" : "border-gray-300"
+                                            selected ? "border-primary bg-primary" : "border-input"
                                         )}>
                                             {selected && <Check className="w-2.5 h-2.5 text-white" />}
                                         </div>
@@ -728,7 +754,7 @@ function AddVehiclePageContent() {
                             onChange={(e) => handleChange('description', e.target.value)}
                             placeholder="Describe the vehicle — or click &quot;Generate with AI&quot; to auto-write a description..."
                             disabled={isSaving || isAIGenerating}
-                            className="w-full px-3 py-2.5 border border-gray-200 rounded-xl text-sm min-h-[120px] resize-none bg-white text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-gray-400 focus:ring-1 focus:ring-gray-200"
+                            className="w-full px-3 py-2.5 border border-input rounded-xl text-sm min-h-[120px] resize-none bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                         />
                         <p className="text-xs text-muted-foreground mt-2">{formData.description.length}/500 characters</p>
                     </CardContent>
@@ -748,7 +774,7 @@ function AddVehiclePageContent() {
                                     value={formData.insurance_status}
                                     onChange={(e) => handleChange('insurance_status', e.target.value)}
                                     disabled={isSaving}
-                                    className="w-full px-3 py-2 border border-gray-200 rounded-md text-sm bg-white text-gray-900 focus:outline-none focus:border-gray-400 focus:ring-1 focus:ring-gray-200"
+                                    className="w-full px-3 py-2 border border-input rounded-md text-sm bg-background text-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                                 >
                                     <option value="unknown">Unknown</option>
                                     <option value="active">Active</option>
@@ -834,7 +860,7 @@ function AddVehiclePageContent() {
                                 placeholder="Explore price, fuel type, transmission, kilometers and contact the dealer for a test drive."
                                 maxLength={160}
                                 disabled={isSaving}
-                                className="w-full px-3 py-2.5 border border-gray-200 rounded-xl text-sm min-h-[90px] resize-none bg-white text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-gray-400 focus:ring-1 focus:ring-gray-200"
+                                className="w-full px-3 py-2.5 border border-input rounded-xl text-sm min-h-[90px] resize-none bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                             />
                             <p className="text-xs text-muted-foreground mt-1">{formData.meta_description.length}/160 characters</p>
                         </div>

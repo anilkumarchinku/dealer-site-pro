@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
-import { ArrowLeft, Loader2, Save, BadgeCheck, ImagePlus } from "lucide-react";
+import { ArrowLeft, Loader2, Save, BadgeCheck, ImagePlus, Youtube } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -19,6 +19,13 @@ const CONDITIONS: DBVehicle["condition"][] = ["new", "used", "certified_pre_owne
 const STATUSES: DBVehicle["status"][] = ["available", "reserved", "sold", "inactive"];
 const INSURANCE_STATUSES: InsuranceStatus[] = ["unknown", "active", "expiring_soon", "expired"];
 const MAX_VEHICLE_IMAGES = 10;
+
+/** Convert any YouTube URL to an embed URL */
+function toYouTubeEmbed(url: string): string | null {
+    if (!url) return null;
+    const match = url.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|shorts\/|embed\/))([a-zA-Z0-9_-]{11})/);
+    return match ? `https://www.youtube.com/embed/${match[1]}` : null;
+}
 
 function deriveInsuranceStatus(validUntil: string, fallback: InsuranceStatus): InsuranceStatus {
     if (!validUntil) return fallback;
@@ -64,6 +71,7 @@ export default function EditVehiclePage() {
         features: "",
         description: "",
         image_url: "",
+        video_url: "",
         meta_title: "",
         meta_description: "",
         insurance_status: "unknown" as InsuranceStatus,
@@ -101,6 +109,7 @@ export default function EditVehiclePage() {
                     features: (vehicle.features ?? []).join("\n"),
                     description: vehicle.description ?? "",
                     image_url: vehicle.image_url ?? "",
+                    video_url: vehicle.video_url ?? "",
                     meta_title: vehicle.meta_title ?? "",
                     meta_description: vehicle.meta_description ?? "",
                     insurance_status: vehicle.insurance_status ?? "unknown",
@@ -187,6 +196,9 @@ export default function EditVehiclePage() {
             description: form.description.trim() || undefined,
             image_url: imageUrl,
             image_urls: imageUrls,
+            video_url: form.video_url.trim()
+                ? (toYouTubeEmbed(form.video_url.trim()) ?? form.video_url.trim())
+                : undefined,
             meta_title: form.meta_title.trim() || undefined,
             meta_description: form.meta_description.trim() || undefined,
             insurance_status: deriveInsuranceStatus(form.insurance_valid_until, form.insurance_status),
@@ -322,6 +334,31 @@ export default function EditVehiclePage() {
                         <label className="mb-2 block text-sm font-medium">Description</label>
                         <textarea value={form.description} onChange={e => set("description", e.target.value)} className="min-h-[120px] w-full rounded-xl border border-input bg-background px-3 py-2 text-sm" />
                     </div>
+                </CardContent>
+            </Card>
+
+            <Card className="rounded-2xl border-border/70 bg-card/90 shadow-sm dark:bg-card/80">
+                <CardHeader>
+                    <CardTitle className="flex items-center gap-2">
+                        <Youtube className="h-5 w-5 text-red-500" />
+                        Video Walkaround
+                        <span className="ml-1 text-xs font-normal text-muted-foreground">(optional)</span>
+                    </CardTitle>
+                    <CardDescription>Listings with a video get more enquiries — paste your YouTube link.</CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-3">
+                    <Field label="YouTube URL" type="url" value={form.video_url} onChange={value => set("video_url", value)} />
+                    {toYouTubeEmbed(form.video_url) && (
+                        <div className="aspect-video overflow-hidden rounded-xl border border-border">
+                            <iframe
+                                src={toYouTubeEmbed(form.video_url)!}
+                                className="h-full w-full"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                                title="Vehicle walkaround video"
+                            />
+                        </div>
+                    )}
                 </CardContent>
             </Card>
 

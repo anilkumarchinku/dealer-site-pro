@@ -63,16 +63,43 @@ export default function InventoryPage() {
     const [showDrafts, setShowDrafts] = useState(true);
 
     // DB vehicles (added by dealer via form)
+    const PAGE_SIZE = 50;
     const [dbVehicles, setDbVehicles] = useState<DBVehicle[]>([]);
+    const [total, setTotal] = useState(0);
+    const [page, setPage] = useState(1);
     const [loading, setLoading] = useState(false);
+    const [loadingMore, setLoadingMore] = useState(false);
 
     const load = () => {
         if (!dealerId) return;
         setLoading(true);
-        fetchVehicles(dealerId, 1, 50)
-            .then(({ vehicles }) => setDbVehicles(vehicles))
+        setPage(1);
+        fetchVehicles(dealerId, 1, PAGE_SIZE)
+            .then(({ vehicles, total }) => {
+                setDbVehicles(vehicles);
+                setTotal(total);
+            })
             .finally(() => setLoading(false));
     };
+
+    const loadMore = () => {
+        if (!dealerId || loadingMore) return;
+        const nextPage = page + 1;
+        setLoadingMore(true);
+        fetchVehicles(dealerId, nextPage, PAGE_SIZE)
+            .then(({ vehicles, total }) => {
+                // Append new page, de-duplicating by id in case of overlap
+                setDbVehicles(prev => {
+                    const seen = new Set(prev.map(v => v.id));
+                    return [...prev, ...vehicles.filter(v => !seen.has(v.id))];
+                });
+                setTotal(total);
+                setPage(nextPage);
+            })
+            .finally(() => setLoadingMore(false));
+    };
+
+    const hasMore = dbVehicles.length < total;
 
     useEffect(() => { load(); }, [dealerId]); // eslint-disable-line
 
@@ -102,7 +129,7 @@ export default function InventoryPage() {
     const newCount  = dbVehicles.filter(v => v.condition === "new").length;
     const usedCount = dbVehicles.filter(v => v.condition !== "new").length;
     const statValues = [
-        dbVehicles.length,
+        total || dbVehicles.length,
         dbVehicles.filter(v => v.status === "available").length,
         Array.from(new Set(dbVehicles.map(v => v.body_type).filter(Boolean))).length,
         new Set(dbVehicles.map(v => v.make)).size,
@@ -201,7 +228,7 @@ export default function InventoryPage() {
             >
                 <div className="flex flex-wrap gap-2">
                     <span className="rounded-full border border-border bg-background px-3 py-1 text-xs font-bold text-muted-foreground">
-                        {dbVehicles.length} total
+                        {total} total
                     </span>
                     <span className="rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-xs font-bold text-emerald-700 dark:border-emerald-500/20 dark:bg-emerald-500/10 dark:text-emerald-300">
                         {dbVehicles.filter(v => v.status === "available").length} live
@@ -376,8 +403,26 @@ export default function InventoryPage() {
                 />
             )}
 
+            {/* Load more */}
+            {!loading && hasMore && (
+                <div className="flex justify-center">
+                    <Button
+                        variant="outline"
+                        onClick={loadMore}
+                        disabled={loadingMore}
+                        className="h-11 rounded-xl gap-2"
+                    >
+                        {loadingMore ? (
+                            <><Loader2 className="w-4 h-4 animate-spin" />Loading...</>
+                        ) : (
+                            <>Load more ({total - dbVehicles.length} remaining)</>
+                        )}
+                    </Button>
+                </div>
+            )}
+
             <p className="text-xs text-muted-foreground text-center">
-                Showing {filteredDB.length} of {dbVehicles.length} vehicles
+                Showing {filteredDB.length} of {total || dbVehicles.length} vehicles
             </p>
         </div>
     );
