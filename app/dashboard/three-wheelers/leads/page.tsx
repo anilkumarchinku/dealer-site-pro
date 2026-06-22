@@ -6,10 +6,10 @@ import { toast } from "@/lib/utils/toast"
 import type { ThreeWheelerLead, ThreeWheelerLeadStatus } from "@/lib/types/three-wheeler"
 
 const STATUS_COLORS: Record<ThreeWheelerLeadStatus, string> = {
-    new:       "bg-blue-100 text-blue-700",
-    contacted: "bg-yellow-100 text-yellow-700",
-    converted: "bg-green-100 text-green-700",
-    lost:      "bg-gray-100 text-gray-700",
+    new:       "bg-blue-100 text-blue-700 dark:bg-blue-500/15 dark:text-blue-300",
+    contacted: "bg-yellow-100 text-yellow-700 dark:bg-yellow-500/15 dark:text-yellow-300",
+    converted: "bg-green-100 text-green-700 dark:bg-green-500/15 dark:text-green-300",
+    lost:      "bg-gray-100 text-gray-700 dark:bg-gray-500/15 dark:text-gray-300",
 }
 
 const STATUSES: ThreeWheelerLeadStatus[] = ["new", "contacted", "converted", "lost"]
@@ -19,18 +19,23 @@ export default function ThreeWheelerLeadsPage() {
     const [leads, setLeads]           = useState<ThreeWheelerLead[]>([])
     const [total, setTotal]           = useState(0)
     const [loading, setLoading]       = useState(true)
+    const [error, setError]           = useState(false)
     const [filterStatus, setFilterStatus] = useState<string>("")
 
     const load = useCallback(async () => {
         if (!dealerId) return
         setLoading(true)
+        setError(false)
         try {
             const params = new URLSearchParams({ pageSize: "50" })
             if (filterStatus) params.set("status", filterStatus)
             const res  = await fetch(`/api/three-wheelers/leads?${params}`)
+            if (!res.ok) throw new Error("Failed to load leads")
             const data = await res.json()
             setLeads(data.leads ?? [])
             setTotal(data.total ?? 0)
+        } catch {
+            setError(true)
         } finally {
             setLoading(false)
         }
@@ -76,6 +81,17 @@ export default function ThreeWheelerLeadsPage() {
             {loading ? (
                 <div className="space-y-3">
                     {[...Array(5)].map((_, i) => <div key={i} className="h-16 rounded-xl bg-muted/30 animate-pulse" />)}
+                </div>
+            ) : error ? (
+                <div className="text-center py-20 text-muted-foreground">
+                    <p className="text-lg font-medium">Couldn&apos;t load leads</p>
+                    <p className="text-sm mt-1">Please check your connection and try again.</p>
+                    <button
+                        onClick={() => load()}
+                        className="mt-4 px-4 py-1.5 text-sm rounded-lg border border-border hover:bg-muted/30"
+                    >
+                        Retry
+                    </button>
                 </div>
             ) : leads.length === 0 ? (
                 <div className="text-center py-20 text-muted-foreground">

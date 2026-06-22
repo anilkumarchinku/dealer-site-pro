@@ -6,10 +6,10 @@ import { toast } from "@/lib/utils/toast"
 import type { ThreeWheelerServiceBooking, ThreeWheelerServiceStatus } from "@/lib/types/three-wheeler"
 
 const STATUS_COLORS: Record<ThreeWheelerServiceStatus, string> = {
-    pending:   "bg-yellow-100 text-yellow-700",
-    confirmed: "bg-blue-100 text-blue-700",
-    completed: "bg-green-100 text-green-700",
-    cancelled: "bg-gray-100 text-gray-700",
+    pending:   "bg-yellow-100 text-yellow-700 dark:bg-yellow-500/15 dark:text-yellow-300",
+    confirmed: "bg-blue-100 text-blue-700 dark:bg-blue-500/15 dark:text-blue-300",
+    completed: "bg-green-100 text-green-700 dark:bg-green-500/15 dark:text-green-300",
+    cancelled: "bg-gray-100 text-gray-700 dark:bg-gray-500/15 dark:text-gray-300",
 }
 
 const STATUSES: ThreeWheelerServiceStatus[] = ["pending", "confirmed", "completed", "cancelled"]
@@ -19,18 +19,23 @@ export default function ThreeWheelerServicePage() {
     const [bookings, setBookings]         = useState<ThreeWheelerServiceBooking[]>([])
     const [total, setTotal]               = useState(0)
     const [loading, setLoading]           = useState(true)
+    const [error, setError]               = useState(false)
     const [filterStatus, setFilterStatus] = useState<string>("pending")
 
     const load = useCallback(async () => {
         if (!dealerId) return
         setLoading(true)
+        setError(false)
         try {
             const params = new URLSearchParams({ pageSize: "50" })
             if (filterStatus) params.set("status", filterStatus)
             const res  = await fetch(`/api/three-wheelers/service-booking?${params}`)
+            if (!res.ok) throw new Error("Failed to load bookings")
             const data = await res.json()
             setBookings(data.bookings ?? [])
             setTotal(data.total ?? 0)
+        } catch {
+            setError(true)
         } finally {
             setLoading(false)
         }
@@ -76,6 +81,17 @@ export default function ThreeWheelerServicePage() {
             {loading ? (
                 <div className="space-y-3">
                     {[...Array(5)].map((_, i) => <div key={i} className="h-16 rounded-xl bg-muted/30 animate-pulse" />)}
+                </div>
+            ) : error ? (
+                <div className="text-center py-20 text-muted-foreground">
+                    <p className="text-lg font-medium">Couldn&apos;t load bookings</p>
+                    <p className="text-sm mt-1">Please check your connection and try again.</p>
+                    <button
+                        onClick={() => load()}
+                        className="mt-4 px-4 py-1.5 text-sm rounded-lg border border-border hover:bg-muted/30"
+                    >
+                        Retry
+                    </button>
                 </div>
             ) : bookings.length === 0 ? (
                 <div className="text-center py-20 text-muted-foreground">

@@ -9,6 +9,7 @@ import { ArrowDown, ArrowUp, Eye, EyeOff, Star, ThumbsUp, Reply, ExternalLink, M
 import { cn } from "@/lib/utils";
 import { fetchReviews, fetchPendingReviews, fetchFlaggedReviews, fetchRejectedReviews, respondToReview, approveReview, rejectReview, flagReview, curateReview, computeReviewStats, type DBReview } from "@/lib/db/reviews";
 import { useOnboardingStore } from "@/lib/store/onboarding-store";
+import { isSupabaseReady, supabase } from "@/lib/supabase";
 import { PremiumPageHeader } from "@/components/dashboard/premium-ui";
 import { toast } from "@/lib/utils/toast";
 
@@ -25,6 +26,7 @@ export default function ReviewsPage() {
     const [approvingId, setApprovingId] = useState<string | null>(null);
     const [moderatingId, setModeratingId] = useState<string | null>(null);
     const [curatingId, setCuratingId] = useState<string | null>(null);
+    const [googleUrl, setGoogleUrl] = useState<string | null>(null);
 
     useEffect(() => {
         if (!dealerId) return;
@@ -42,6 +44,15 @@ export default function ReviewsPage() {
                 setRejectedReviews(rejected);
             })
             .finally(() => setLoading(false));
+
+        if (isSupabaseReady()) {
+            supabase
+                .from("dealers")
+                .select("google_maps_url")
+                .eq("id", dealerId)
+                .maybeSingle()
+                .then(({ data: d }) => setGoogleUrl(d?.google_maps_url ?? null));
+        }
         return;
     }, [dealerId]);
 
@@ -390,10 +401,14 @@ export default function ReviewsPage() {
                     <div>
                         <CardTitle className="font-black tracking-tight">Feedback Moderation</CardTitle>
                     </div>
-                    <Button variant="outline" size="sm">
-                        <ExternalLink className="w-4 h-4 mr-2" />
-                        View on Google
-                    </Button>
+                    {googleUrl && (
+                        <Button variant="outline" size="sm" asChild>
+                            <a href={googleUrl} target="_blank" rel="noopener noreferrer">
+                                <ExternalLink className="w-4 h-4 mr-2" />
+                                View on Google
+                            </a>
+                        </Button>
+                    )}
                 </CardHeader>
                 <CardContent className="space-y-4">
                     <Tabs defaultValue="published">

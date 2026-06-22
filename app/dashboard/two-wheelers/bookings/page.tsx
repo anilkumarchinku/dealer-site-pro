@@ -4,26 +4,30 @@ import { useEffect, useState, useCallback } from "react"
 import type { TwoWheelerBooking, TwoWheelerBookingStatus } from "@/lib/types/two-wheeler"
 
 const STATUS_COLORS: Record<TwoWheelerBookingStatus, string> = {
-    pending:  "bg-yellow-100 text-yellow-700",
-    paid:     "bg-green-100 text-green-700",
-    failed:   "bg-red-100 text-red-700",
-    refunded: "bg-gray-100 text-gray-700",
+    pending:  "bg-yellow-100 text-yellow-700 dark:bg-yellow-500/15 dark:text-yellow-300",
+    paid:     "bg-green-100 text-green-700 dark:bg-green-500/15 dark:text-green-300",
+    failed:   "bg-red-100 text-red-700 dark:bg-red-500/15 dark:text-red-300",
+    refunded: "bg-gray-100 text-gray-700 dark:bg-gray-500/15 dark:text-gray-300",
 }
 
 export default function TwoWheelerBookingsPage() {
     const [bookings, setBookings] = useState<TwoWheelerBooking[]>([])
     const [total,   setTotal]     = useState(0)
     const [loading, setLoading]   = useState(true)
+    const [error,   setError]     = useState(false)
     const [page,    setPage]      = useState(1)
 
     const load = useCallback(async () => {
         setLoading(true)
+        setError(false)
         try {
             const res  = await fetch(`/api/two-wheelers/bookings?page=${page}&pageSize=20`)
-            if (!res.ok) return
+            if (!res.ok) throw new Error("Failed to load bookings")
             const data = await res.json()
             setBookings(data.bookings ?? [])
             setTotal(data.total ?? 0)
+        } catch {
+            setError(true)
         } finally {
             setLoading(false)
         }
@@ -43,6 +47,17 @@ export default function TwoWheelerBookingsPage() {
             {loading ? (
                 <div className="space-y-3">
                     {[...Array(5)].map((_, i) => <div key={i} className="h-16 rounded-xl bg-muted/30 animate-pulse" />)}
+                </div>
+            ) : error ? (
+                <div className="text-center py-20 text-muted-foreground">
+                    <p className="text-lg font-medium">Couldn&apos;t load bookings</p>
+                    <p className="text-sm mt-1">Please check your connection and try again.</p>
+                    <button
+                        onClick={() => load()}
+                        className="mt-4 px-4 py-1.5 text-sm rounded-lg border border-border hover:bg-muted/30"
+                    >
+                        Retry
+                    </button>
                 </div>
             ) : bookings.length === 0 ? (
                 <div className="text-center py-20 text-muted-foreground">

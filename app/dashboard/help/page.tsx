@@ -1,5 +1,5 @@
 "use client"
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import {
@@ -9,65 +9,89 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { useOnboardingStore } from "@/lib/store/onboarding-store";
+import { isSupabaseReady, supabase } from "@/lib/supabase";
+import { fetchVehicles } from "@/lib/db/vehicles";
+import { fetchLeads } from "@/lib/db/leads";
 
 const QUICK_LINKS = [
-    { icon: Car,      label: "Add a Vehicle",    href: "/dashboard/inventory/add", color: "bg-blue-50 text-blue-600"   },
-    { icon: Users,    label: "View Leads",        href: "/dashboard/leads",          color: "bg-green-50 text-green-600"  },
-    { icon: Globe,    label: "My Website",        href: "/dashboard/webpage",        color: "bg-violet-50 text-violet-600"},
-    { icon: BarChart3,label: "Analytics",         href: "/dashboard/analytics",      color: "bg-amber-50 text-amber-600"  },
-    { icon: Settings, label: "Settings",          href: "/dashboard/settings",       color: "bg-gray-100 text-gray-600"   },
+    { icon: Car,      label: "Add a Vehicle",    href: "/dashboard/inventory/add", color: "bg-blue-50 text-blue-600 dark:bg-blue-500/15 dark:text-blue-300"      },
+    { icon: Users,    label: "View Leads",        href: "/dashboard/leads",          color: "bg-green-50 text-green-600 dark:bg-green-500/15 dark:text-green-300"  },
+    { icon: Globe,    label: "My Website",        href: "/dashboard/webpage",        color: "bg-violet-50 text-violet-600 dark:bg-violet-500/15 dark:text-violet-300"},
+    { icon: BarChart3,label: "Analytics",         href: "/dashboard/analytics",      color: "bg-amber-50 text-amber-600 dark:bg-amber-500/15 dark:text-amber-300"  },
+    { icon: Settings, label: "Settings",          href: "/dashboard/settings",       color: "bg-gray-100 text-gray-600 dark:bg-gray-500/15 dark:text-gray-300"     },
 ];
 
-const GETTING_STARTED = [
-    {
-        step: 1,
-        title: "Your website is live",
-        desc: "Your dealership site is deployed and accessible via your unique URL. Share it with customers!",
-        done: true,
-        href: "/dashboard/webpage",
-        cta: "View Website",
-    },
-    {
-        step: 2,
-        title: "Upload your logo & hero image",
-        desc: "Go to Settings → Branding to upload your dealership logo and a hero background photo.",
-        done: false,
-        href: "/dashboard/settings",
-        cta: "Go to Settings",
-    },
-    {
-        step: 3,
-        title: "Add your inventory",
-        desc: "List the vehicles you sell — prices, features, photos. The more you add, the more enquiries you get.",
-        done: false,
-        href: "/dashboard/inventory/add",
-        cta: "Add Vehicle",
-    },
-    {
-        step: 4,
-        title: "Share your site link",
-        desc: "Copy your site URL from My Webpage and share on WhatsApp, Google Business, and social media.",
-        done: false,
-        href: "/dashboard/webpage",
-        cta: "Get Your Link",
-    },
-    {
-        step: 5,
-        title: "Respond to leads fast",
-        desc: "When customers enquire, you'll see them in Leads. Hot leads are time-sensitive — respond within the hour!",
-        done: false,
-        href: "/dashboard/leads",
-        cta: "View Leads",
-    },
-    {
-        step: 6,
-        title: "Connect a custom domain",
-        desc: "Give your site a professional address like www.yourshowroom.com from the Domains section.",
-        done: false,
-        href: "/dashboard/domains",
-        cta: "Connect Domain",
-    },
-];
+interface ChecklistSignals {
+    siteLive: boolean;
+    hasBranding: boolean;
+    hasInventory: boolean;
+    hasLeads: boolean;
+    hasCustomDomain: boolean;
+}
+
+interface ChecklistItem {
+    step: number;
+    title: string;
+    desc: string;
+    /** undefined = completion can't be verified — render as an action, never a fake checkmark */
+    done?: boolean;
+    href: string;
+    cta: string;
+}
+
+function buildGettingStarted(s: ChecklistSignals): ChecklistItem[] {
+    return [
+        {
+            step: 1,
+            title: "Your website is live",
+            desc: "Your dealership site is deployed and accessible via your unique URL. Share it with customers!",
+            done: s.siteLive,
+            href: "/dashboard/webpage",
+            cta: "View Website",
+        },
+        {
+            step: 2,
+            title: "Upload your logo & hero image",
+            desc: "Go to Settings → Branding to upload your dealership logo and a hero background photo.",
+            done: s.hasBranding,
+            href: "/dashboard/settings",
+            cta: "Go to Settings",
+        },
+        {
+            step: 3,
+            title: "Add your inventory",
+            desc: "List the vehicles you sell — prices, features, photos. The more you add, the more enquiries you get.",
+            done: s.hasInventory,
+            href: "/dashboard/inventory/add",
+            cta: "Add Vehicle",
+        },
+        {
+            step: 4,
+            // Sharing can't be tracked — leave done undefined so it always shows as an action, never a fake tick.
+            title: "Share your site link",
+            desc: "Copy your site URL from My Webpage and share on WhatsApp, Google Business, and social media.",
+            href: "/dashboard/webpage",
+            cta: "Get Your Link",
+        },
+        {
+            step: 5,
+            title: "Respond to leads fast",
+            desc: "When customers enquire, you'll see them in Leads. Hot leads are time-sensitive — respond within the hour!",
+            done: s.hasLeads,
+            href: "/dashboard/leads",
+            cta: "View Leads",
+        },
+        {
+            step: 6,
+            title: "Connect a custom domain",
+            desc: "Give your site a professional address like www.yourshowroom.com from the Domains section.",
+            done: s.hasCustomDomain,
+            href: "/dashboard/domains",
+            cta: "Connect Domain",
+        },
+    ];
+}
 
 const FAQS: { q: string; a: string }[] = [
     {
@@ -125,6 +149,43 @@ const TIPS = [
 
 export default function HelpPage() {
     const [openFaq, setOpenFaq] = useState<number | null>(null);
+    const { data, dealerId, dealerSlug } = useOnboardingStore();
+
+    // Real signals fetched on mount — drives the Getting Started checklist honestly.
+    const [hasInventory, setHasInventory] = useState<boolean | null>(null);
+    const [hasLeads, setHasLeads]         = useState<boolean | null>(null);
+    const [hasCustomDomain, setHasCustomDomain] = useState<boolean | null>(null);
+
+    useEffect(() => {
+        if (!isSupabaseReady() || !dealerId) return;
+        let cancelled = false;
+
+        fetchVehicles(dealerId, 1, 1)
+            .then(({ total }) => { if (!cancelled) setHasInventory(total > 0); })
+            .catch(() => {});
+
+        fetchLeads(dealerId)
+            .then(leads => { if (!cancelled) setHasLeads(leads.length > 0); })
+            .catch(() => {});
+
+        supabase
+            .from("dealers")
+            .select("custom_domain")
+            .eq("id", dealerId)
+            .maybeSingle()
+            .then(({ data: d }) => { if (!cancelled) setHasCustomDomain(!!d?.custom_domain); });
+
+        return () => { cancelled = true; };
+    }, [dealerId]);
+
+    const gettingStarted = buildGettingStarted({
+        // Site is live once the dealer has a public slug.
+        siteLive: !!(dealerSlug ?? data.slug),
+        hasBranding: !!(data.logo || data.brandLogo || data.heroImage),
+        hasInventory: hasInventory ?? false,
+        hasLeads: hasLeads ?? false,
+        hasCustomDomain: hasCustomDomain ?? false,
+    });
 
     return (
         <div className="space-y-8 animate-fade-in pb-8">
@@ -169,7 +230,7 @@ export default function HelpPage() {
                         </div>
                     </div>
                     <div className="space-y-2">
-                        {GETTING_STARTED.map((item) => (
+                        {gettingStarted.map((item) => (
                             <div
                                 key={item.step}
                                 className={cn(
@@ -228,8 +289,8 @@ export default function HelpPage() {
                 <a href="mailto:support@cyepro.com">
                     <Card variant="glass" className="h-full hover:bg-muted/30 transition-all hover:shadow-md cursor-pointer group">
                         <CardContent className="py-6 text-center">
-                            <div className="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
-                                <Mail className="w-6 h-6 text-blue-600" />
+                            <div className="w-12 h-12 rounded-2xl bg-blue-50 dark:bg-blue-500/15 flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+                                <Mail className="w-6 h-6 text-blue-600 dark:text-blue-300" />
                             </div>
                             <h3 className="font-semibold mb-1">Email Support</h3>
                             <p className="text-sm text-muted-foreground mb-2">Response within 24 hours</p>
@@ -241,8 +302,8 @@ export default function HelpPage() {
                 <a href={`https://wa.me/${process.env.NEXT_PUBLIC_SUPPORT_WHATSAPP}`} target="_blank" rel="noopener noreferrer">
                     <Card variant="glass" className="h-full hover:bg-muted/30 transition-all hover:shadow-md cursor-pointer group">
                         <CardContent className="py-6 text-center">
-                            <div className="w-12 h-12 rounded-2xl bg-green-50 flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
-                                <MessageCircle className="w-6 h-6 text-green-600" />
+                            <div className="w-12 h-12 rounded-2xl bg-green-50 dark:bg-green-500/15 flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+                                <MessageCircle className="w-6 h-6 text-green-600 dark:text-green-300" />
                             </div>
                             <h3 className="font-semibold mb-1">WhatsApp Support</h3>
                             <p className="text-sm text-muted-foreground mb-2">Mon–Sat, 9 AM–7 PM IST</p>
@@ -253,8 +314,8 @@ export default function HelpPage() {
                 )}
                 <Card variant="glass" className="h-full bg-gradient-to-br from-violet-500/5 to-blue-500/5 border-violet-200/40">
                     <CardContent className="py-6 text-center">
-                        <div className="w-12 h-12 rounded-2xl bg-violet-50 flex items-center justify-center mx-auto mb-3">
-                            <Shield className="w-6 h-6 text-violet-600" />
+                        <div className="w-12 h-12 rounded-2xl bg-violet-50 dark:bg-violet-500/15 flex items-center justify-center mx-auto mb-3">
+                            <Shield className="w-6 h-6 text-violet-600 dark:text-violet-300" />
                         </div>
                         <h3 className="font-semibold mb-1">System Status</h3>
                         <p className="text-sm text-muted-foreground mb-2">Live infrastructure status</p>

@@ -16,6 +16,7 @@ import type { Brand } from "@/lib/types";
 import { fetchAnalyticsSummary, fetchTopVehicles, type TopVehicle } from "@/lib/db/analytics";
 import { fetchLeads, type ExternalLead } from "@/lib/db/leads";
 import { fetchVehicles } from "@/lib/db/vehicles";
+import { fetchReviews, computeReviewStats } from "@/lib/db/reviews";
 import { DealerScorecard } from "@/components/dashboard/DealerScorecard";
 import { Reveal } from "@/components/ui/Reveal";
 import { CountUp } from "@/components/ui/CountUp";
@@ -97,6 +98,8 @@ export default function DashboardPage() {
     const [inventoryCount, setInventoryCount] = useState<number | null>(null);
     const [recentLeads, setRecentLeads]   = useState<ExternalLead[]>([]);
     const [topVehicles, setTopVehicles]   = useState<TopVehicle[]>([]);
+    const [avgRating, setAvgRating]       = useState(0);
+    const [reviewCount, setReviewCount]   = useState(0);
 
     // Safety net: if dealerId is missing from local store (new device / cleared cache),
     // fetch it from DB. If user has no dealer record at all, send them to onboarding.
@@ -151,6 +154,16 @@ export default function DashboardPage() {
             .then(({ total }) => { if (!cancelled) setInventoryCount(total); })
             .catch(() => {})
             .finally(() => { if (!cancelled) setInventoryLoading(false); });
+
+        // Review stats — drives the real Customer Reviews pillar in the scorecard.
+        fetchReviews(dealerId)
+            .then(reviews => {
+                if (cancelled) return;
+                const stats = computeReviewStats(reviews);
+                setAvgRating(stats.avgRating);
+                setReviewCount(stats.total);
+            })
+            .catch(() => {});
 
         return () => { cancelled = true; };
     }, [dealerId]);
@@ -499,11 +512,10 @@ export default function DashboardPage() {
                     {/* Performance Scorecard */}
                     <DealerScorecard
                         dealerId={dealerId ?? ''}
-                        inventoryCount={topVehicles.length}
+                        inventoryCount={inventoryCount ?? 0}
                         leadsCount={leadsCount ?? 0}
-                        isVerified={false}
-                        avgRating={0}
-                        reviewCount={0}
+                        avgRating={avgRating}
+                        reviewCount={reviewCount}
                         profileComplete={!!(data.dealershipName && data.phone && data.email)}
                     />
 

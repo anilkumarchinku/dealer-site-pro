@@ -123,9 +123,9 @@ export default function ThreeWheelerInventoryPage() {
                                             ₹{(v.ex_showroom_price_paise / 100).toLocaleString("en-IN")}
                                         </p>
                                     </div>
-                                    <span className={`text-xs px-2 py-0.5 rounded-full ${v.stock_status === "available" ? "bg-green-100 text-green-700" :
-                                            v.stock_status === "booking_open" ? "bg-blue-100 text-blue-700" :
-                                                "bg-gray-100 text-gray-700"
+                                    <span className={`text-xs px-2 py-0.5 rounded-full ${v.stock_status === "available" ? "bg-green-100 text-green-700 dark:bg-green-500/15 dark:text-green-300" :
+                                            v.stock_status === "booking_open" ? "bg-blue-100 text-blue-700 dark:bg-blue-500/15 dark:text-blue-300" :
+                                                "bg-gray-100 text-gray-700 dark:bg-gray-500/15 dark:text-gray-300"
                                         }`}>
                                         {v.stock_status.replace("_", " ")}
                                     </span>
