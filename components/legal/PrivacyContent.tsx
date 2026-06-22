@@ -12,6 +12,15 @@ export function PrivacyContent({ dealerName, location, email, phone }: PrivacyCo
             <h1 className="text-3xl font-bold text-gray-900 mb-2">Privacy Policy</h1>
             <p className="text-sm text-gray-600 mb-8">Last updated: {today}</p>
 
+            <div className="not-prose mb-8 rounded-xl border border-amber-200 bg-amber-50 p-4">
+                <p className="text-sm text-amber-900 font-semibold mb-1">Template notice</p>
+                <p className="text-sm text-amber-800">
+                    This is a general-purpose privacy policy template provided for convenience only. It is
+                    not legal advice and may not reflect {dealerName}&apos;s actual data practices or obligations
+                    under applicable law. Please review, customise, and replace this text before relying on it.
+                </p>
+            </div>
+
             <p className="text-gray-600 mb-6">
                 {dealerName} (&quot;we&quot;, &quot;our&quot;, &quot;us&quot;) is committed to protecting your privacy.
                 This Privacy Policy explains how we collect, use, and safeguard your personal information
@@ -23,7 +32,7 @@ export function PrivacyContent({ dealerName, location, email, phone }: PrivacyCo
                 <ul>
                     <li><strong>Contact information:</strong> Name, phone number, email address, and postal address.</li>
                     <li><strong>Vehicle preferences:</strong> The type, model, and brand of vehicle you are interested in.</li>
-                    <li><strong>Financial information:</strong> Income details if you apply for financing (shared directly with partner lenders).</li>
+                    <li><strong>Financial information:</strong> Income details if you apply for financing, used only as needed to process your application.</li>
                     <li><strong>Identity documents:</strong> Driving licence and government ID for test rides.</li>
                     <li><strong>Usage data:</strong> Browser type, IP address, and pages visited on our website (collected automatically).</li>
                 </ul>
@@ -42,20 +51,26 @@ export function PrivacyContent({ dealerName, location, email, phone }: PrivacyCo
             </Section>
 
             <Section title="3. Sharing Your Information">
-                <p>We do not sell your personal information. We may share it only in the following cases:</p>
+                <p>We may share your personal information with third parties only where appropriate, which may include:</p>
                 <ul>
-                    <li><strong>Partner lenders/insurers:</strong> To process your financing or insurance application, with your consent.</li>
-                    <li><strong>Vehicle manufacturers:</strong> For warranty registration and service records.</li>
+                    <li><strong>Lenders or insurers:</strong> To process a financing or insurance application, with your consent.</li>
+                    <li><strong>Vehicle manufacturers:</strong> For warranty registration and service records, where applicable.</li>
                     <li><strong>Legal requirements:</strong> When required by law, court order, or government authority.</li>
                     <li><strong>Business transfer:</strong> In the event of a merger or acquisition, your data may be transferred to the successor entity.</li>
                 </ul>
+                <p className="text-sm text-gray-500">
+                    [Dealer to confirm: the specific parties your data is shared with, and whether any data is
+                    sold or shared for advertising. Do not state more than your actual practices allow.]
+                </p>
             </Section>
 
             <Section title="4. Data Retention">
                 <p>
                     We retain your personal information only as long as necessary to fulfil the purposes described
-                    in this policy or as required by applicable law (typically 7 years for financial transaction records
-                    as per Indian regulations).
+                    in this policy or as otherwise required by applicable law.
+                </p>
+                <p className="text-sm text-gray-500">
+                    [Dealer to confirm any specific retention periods that apply to your records.]
                 </p>
             </Section>
 

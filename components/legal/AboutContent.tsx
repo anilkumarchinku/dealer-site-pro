@@ -47,10 +47,9 @@ export function AboutContent({
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">Who We Are</h2>
                 <p className="text-gray-600 leading-relaxed">
                     {dealerName} is a trusted {vehicleWord} dealership based in {location}.
-                    We are dedicated to helping our customers find the perfect {vehicleWord} — whether they are
-                    looking for a brand-new model or a quality pre-owned one. Our team is committed to
-                    transparency, honest pricing, and an exceptional customer experience from the moment
-                    you walk into our showroom.
+                    We are dedicated to helping our customers find the right {vehicleWord} for their needs.
+                    Our team is committed to transparency, honest pricing, and an exceptional customer
+                    experience from the moment you walk into our showroom.
                 </p>
             </div>
 

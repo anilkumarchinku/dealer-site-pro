@@ -13,6 +13,15 @@ export function TermsContent({ dealerName, location, email, phone, vehicleWord }
             <h1 className="text-3xl font-bold text-gray-900 mb-2">Terms &amp; Conditions</h1>
             <p className="text-sm text-gray-600 mb-8">Last updated: {today}</p>
 
+            <div className="not-prose mb-8 rounded-xl border border-amber-200 bg-amber-50 p-4">
+                <p className="text-sm text-amber-900 font-semibold mb-1">Template notice</p>
+                <p className="text-sm text-amber-800">
+                    These are general-purpose terms provided as a starting template only. They are not legal
+                    advice and have not been tailored to {dealerName}&apos;s actual policies. Please review,
+                    customise, and replace this text before relying on it.
+                </p>
+            </div>
+
             <p className="text-gray-600 mb-6">
                 Welcome to <strong>{dealerName}</strong>, located in {location}. By visiting our showroom, using our website,
                 or engaging our services, you agree to the following terms and conditions. Please read them carefully.
@@ -38,14 +47,26 @@ export function TermsContent({ dealerName, location, email, phone, vehicleWord }
                 <ul>
                     <li>Test rides / test drives are subject to availability and dealership scheduling.</li>
                     <li>A valid driving licence and one additional government-issued photo ID are mandatory before a test ride.</li>
-                    <li>You are solely responsible for your safety and adherence to all traffic laws during a test ride.</li>
-                    <li>{dealerName} will not be liable for any damage, accident, or injury occurring during a test ride.</li>
+                    <li>You are expected to drive safely and to follow all applicable traffic laws during a test ride.</li>
+                    <li>
+                        Responsibility for damage, accident, or injury during a test ride will be determined in
+                        accordance with applicable law and any separate test-ride agreement you sign.
+                        <span className="block text-sm text-gray-500 mt-1">
+                            [Dealer to set out the actual liability terms that apply to test rides.]
+                        </span>
+                    </li>
                 </ul>
             </Section>
 
             <Section title="4. Bookings and Payments">
                 <ul>
-                    <li>Any booking amount paid is non-refundable unless the {vehicleWord} is unavailable or the dealership cancels the booking.</li>
+                    <li>
+                        Booking and refund terms (including any amount payable and the conditions for a refund)
+                        will be confirmed in writing at the time of booking.
+                        <span className="block text-sm text-gray-500 mt-1">
+                            [Dealer to specify the actual booking and refund policy.]
+                        </span>
+                    </li>
                     <li>Full payment or financing approval must be completed before {vehicleWord} delivery.</li>
                     <li>All prices are exclusive of applicable taxes, registration charges, insurance, and other statutory levies unless explicitly stated.</li>
                     <li>Finance and loan arrangements are subject to lender approval. {dealerName} does not guarantee financing approval.</li>
@@ -70,9 +91,12 @@ export function TermsContent({ dealerName, location, email, phone, vehicleWord }
 
             <Section title="7. Limitation of Liability">
                 <p>
-                    To the fullest extent permitted by applicable law, {dealerName} shall not be liable for any indirect,
-                    incidental, special, or consequential damages arising from the use of our services or {vehicleWord}s.
-                    Our total liability shall not exceed the amount paid by you for the relevant transaction.
+                    Our liability to you is limited to the extent permitted by applicable law. Nothing in these
+                    terms excludes any liability that cannot lawfully be excluded.
+                </p>
+                <p className="text-sm text-gray-500">
+                    [Dealer to set out any specific limitation of liability, reviewed against applicable law before
+                    use. Avoid stating exclusions or caps that have not been confirmed and may not be enforceable.]
                 </p>
             </Section>
 
