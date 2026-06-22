@@ -28,6 +28,20 @@ export interface RCData {
     rto?: string;
     blacklisted?: boolean;
     noc_details?: string;
+    rc_status?: string;
+    tax_upto?: string;
+    financer?: string;
+    body_type?: string;
+    seating_capacity?: string | number;
+    challans?: Array<{
+        challan_number?: string;
+        offense_details?: string;
+        challan_place?: string | null;
+        challan_date?: string;
+        amount?: number | string;
+        challan_status?: string | null;
+        state?: string;
+    }>;
 }
 
 /**
@@ -83,10 +97,23 @@ export function parseMakeModel(makeModel: string): { make: string; model: string
  * Returns null for invalid dates
  */
 export function parseIndianDate(dateStr: string): string | null {
-    if (!dateStr) return null;
+    const trimmed = dateStr?.trim();
+    if (!trimmed) return null;
+
+    const isoMatch = trimmed.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+    if (isoMatch) {
+        const [, year, month, day] = isoMatch;
+        const y = parseInt(year, 10);
+        const m = parseInt(month, 10);
+        const d = parseInt(day, 10);
+        if (d < 1 || d > 31 || m < 1 || m > 12 || y < 1900 || y > 2100) {
+            return null;
+        }
+        return `${year}-${month}-${day}`;
+    }
 
     // Handle DD/MM/YYYY or DD-MM-YYYY
-    const parts = dateStr.split(/[/-]/);
+    const parts = trimmed.split(/[/-]/);
     if (parts.length !== 3) return null;
 
     const [day, month, year] = parts;

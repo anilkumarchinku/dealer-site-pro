@@ -1,17 +1,32 @@
 "use client"
 
 import { useEffect, useMemo, useState } from "react"
-import { Search, Car, Bike, Truck, Send, Eye, Fuel, Zap, Info } from "lucide-react"
+import { Search, Car, Bike, Truck, Send, Eye, Fuel, Zap, Info, Plus, Loader2, AlertCircle, CheckCircle2 } from "lucide-react"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
-import type { CatalogModel } from "@/lib/types/catalog"
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog"
+import { Label } from "@/components/ui/label"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import type { CatalogBrand, CatalogCategory, CatalogModel } from "@/lib/types/catalog"
 import type { Car as CarType } from "@/lib/types/car"
 import { QuickViewModal } from "@/components/cars/QuickViewModal"
 import { EnquiryModal } from "@/components/cars/EnquiryModal"
 import { getContrastText } from "@/lib/utils/color-contrast"
 import { getVehicleImageUrls } from "@/lib/utils/brand-model-images"
 
-type CategoryKey = "4w" | "2w" | "3w"
+type CategoryKey = CatalogCategory
+
+type AddModelForm = {
+    category: CategoryKey
+    brand: string
+    model: string
+    variant: string
+    year: string
+    fuelType: string
+    bodyType: string
+    price: string
+    imageUrl: string
+}
 
 // ── Brand accent colours ────────────────────────────────────────────────────
 
@@ -104,6 +119,7 @@ function CatalogCard({ m, brandColor }: { m: CatalogModel; brandColor: string })
         [m.brandId, m.category, m.imageUrl, m.model],
     )
     const resolvedImageSrc = imageCandidates[fallbackIdx] ?? null
+    const logoId = m.logoId ?? m.brandId
 
     return (
         <>
@@ -165,7 +181,7 @@ function CatalogCard({ m, brandColor }: { m: CatalogModel; brandColor: string })
                     <div className="flex items-center gap-1.5 mb-0.5">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
-                            src={`/data/brand-logos/${m.brandId}.png`}
+                            src={`/data/brand-logos/${logoId}.png`}
                             alt=""
                             className="w-4 h-4 object-contain"
                             onError={(e) => { (e.target as HTMLImageElement).style.display = "none" }}
@@ -256,37 +272,56 @@ function CatalogCard({ m, brandColor }: { m: CatalogModel; brandColor: string })
 function BrandSection({
     brand,
     brandId,
+    logoId,
     models,
+    category,
+    onAddModel,
 }: {
     brand: string
     brandId: string
+    logoId?: string | null
     models: CatalogModel[]
+    category: CategoryKey
+    onAddModel: () => void
 }) {
     const color = getBrandColor(brandId)
     return (
         <div className="space-y-3">
-            <div className="flex items-center gap-2.5">
+            <div className="flex flex-wrap items-center gap-2.5">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                    src={`/data/brand-logos/${brandId}.png`}
+                    src={`/data/brand-logos/${logoId ?? brandId}.png`}
                     alt=""
                     className="w-7 h-7 object-contain rounded bg-white border border-gray-100 p-0.5 shrink-0"
                     onError={(e) => { (e.target as HTMLImageElement).style.display = "none" }}
                 />
-                <h3 className="text-sm font-bold text-gray-800">{brand}</h3>
-                <span className="text-xs text-gray-400 bg-white border border-gray-200 px-2 py-0.5 rounded-full shrink-0">
+                <h3 className="text-sm font-bold text-gray-800 dark:text-slate-100">{brand}</h3>
+                <span className="text-[10px] uppercase tracking-wide text-gray-400 bg-white border border-gray-200 px-2 py-0.5 rounded-full shrink-0 dark:bg-slate-950 dark:border-slate-800 dark:text-slate-400">
+                    {category.toUpperCase()}
+                </span>
+                <span className="text-xs text-gray-400 bg-white border border-gray-200 px-2 py-0.5 rounded-full shrink-0 dark:bg-slate-950 dark:border-slate-800 dark:text-slate-400">
                     {models.length}
                 </span>
-                <div className="flex-1 h-px bg-gray-200" />
+                <div className="min-w-10 flex-1 h-px bg-gray-200 dark:bg-slate-800" />
+                <Button size="sm" variant="outline" className="h-8 gap-1.5 bg-transparent" onClick={onAddModel}>
+                    <Plus className="h-3.5 w-3.5" />
+                    Add Model
+                </Button>
             </div>
 
-            <div className="flex gap-4 overflow-x-auto pb-3 -mx-1 px-1">
-                {models.map((m) => (
-                    <div key={m.id} className="w-56 shrink-0">
-                        <CatalogCard m={m} brandColor={color} />
-                    </div>
-                ))}
-            </div>
+            {models.length === 0 ? (
+                <div className="rounded-xl border border-dashed border-gray-300 bg-white/70 p-6 text-sm text-gray-500 dark:border-slate-800 dark:bg-slate-950/60 dark:text-slate-400">
+                    No models are linked to this OEM yet. Add the released model to make it available in the catalog.
+                </div>
+            ) : (
+                <div className="flex gap-4 overflow-x-auto pb-3 -mx-1 px-1">
+                    {models.map((m) => (
+                        <div key={m.id} className="w-56 shrink-0">
+                            <CatalogCard m={m} brandColor={color} />
+                        </div>
+                    ))}
+                </div>
+            )}
         </div>
     )
 }
@@ -303,11 +338,212 @@ const TABS = [
     { key: "3w" as CategoryKey, label: "3-Wheeler", Icon: Truck, cls: "bg-amber-600 border-amber-600 text-white" },
 ]
 
+function normalizeCatalogKey(value: string) {
+    return value.toLowerCase().replace(/[^a-z0-9]+/g, " ").replace(/\s+/g, " ").trim()
+}
+
+function modelIdentity(model: Pick<CatalogModel, "category" | "brand" | "model">) {
+    return `${model.category}:${normalizeCatalogKey(model.brand)}:${normalizeCatalogKey(model.model)}`
+}
+
+function blankAddModelForm(category: CategoryKey, brand = ""): AddModelForm {
+    return {
+        category,
+        brand,
+        model: "",
+        variant: "",
+        year: String(new Date().getFullYear()),
+        fuelType: "",
+        bodyType: "",
+        price: "",
+        imageUrl: "",
+    }
+}
+
+function AddModelDialog({
+    open,
+    onOpenChange,
+    form,
+    setForm,
+    brands,
+    saving,
+    error,
+    success,
+    onSubmit,
+}: {
+    open: boolean
+    onOpenChange: (open: boolean) => void
+    form: AddModelForm
+    setForm: (updater: AddModelForm | ((current: AddModelForm) => AddModelForm)) => void
+    brands: CatalogBrand[]
+    saving: boolean
+    error: string | null
+    success: string | null
+    onSubmit: () => void
+}) {
+    const categoryBrands = brands.filter((brand) => brand.category === form.category)
+
+    function updateCategory(category: CategoryKey) {
+        const firstBrand = brands.find((brand) => brand.category === category)
+        setForm((current) => ({
+            ...current,
+            category,
+            brand: firstBrand?.brand ?? "",
+        }))
+    }
+
+    return (
+        <Dialog open={open} onOpenChange={onOpenChange}>
+            <DialogContent className="max-w-2xl">
+                <DialogHeader>
+                    <DialogTitle>Add OEM Model</DialogTitle>
+                    <DialogDescription>
+                        Add a newly released model under one of your selected OEMs.
+                    </DialogDescription>
+                </DialogHeader>
+
+                <div className="grid gap-4 sm:grid-cols-2">
+                    <div className="space-y-2">
+                        <Label>Vehicle Category</Label>
+                        <Select value={form.category} onValueChange={(value) => updateCategory(value as CategoryKey)}>
+                            <SelectTrigger>
+                                <SelectValue />
+                            </SelectTrigger>
+                            <SelectContent>
+                                {TABS.map((tab) => (
+                                    <SelectItem key={tab.key} value={tab.key}>
+                                        {tab.label}
+                                    </SelectItem>
+                                ))}
+                            </SelectContent>
+                        </Select>
+                    </div>
+
+                    <div className="space-y-2">
+                        <Label>OEM</Label>
+                        <Select
+                            value={form.brand}
+                            onValueChange={(brand) => setForm((current) => ({ ...current, brand }))}
+                            disabled={categoryBrands.length === 0}
+                        >
+                            <SelectTrigger>
+                                <SelectValue placeholder="Select OEM" />
+                            </SelectTrigger>
+                            <SelectContent>
+                                {categoryBrands.map((brand) => (
+                                    <SelectItem key={`${brand.category}-${brand.brand}`} value={brand.brand}>
+                                        {brand.brand}
+                                    </SelectItem>
+                                ))}
+                            </SelectContent>
+                        </Select>
+                    </div>
+
+                    <div className="space-y-2">
+                        <Label>Model Name</Label>
+                        <Input
+                            value={form.model}
+                            onChange={(event) => setForm((current) => ({ ...current, model: event.target.value }))}
+                            placeholder="e.g. Curvv EV, Xoom 160"
+                        />
+                    </div>
+
+                    <div className="space-y-2">
+                        <Label>Variant</Label>
+                        <Input
+                            value={form.variant}
+                            onChange={(event) => setForm((current) => ({ ...current, variant: event.target.value }))}
+                            placeholder="Optional"
+                        />
+                    </div>
+
+                    <div className="space-y-2">
+                        <Label>Year</Label>
+                        <Input
+                            value={form.year}
+                            onChange={(event) => setForm((current) => ({ ...current, year: event.target.value }))}
+                            inputMode="numeric"
+                            placeholder="2026"
+                        />
+                    </div>
+
+                    <div className="space-y-2">
+                        <Label>Fuel Type</Label>
+                        <Input
+                            value={form.fuelType}
+                            onChange={(event) => setForm((current) => ({ ...current, fuelType: event.target.value }))}
+                            placeholder="Petrol, Diesel, Electric"
+                        />
+                    </div>
+
+                    <div className="space-y-2">
+                        <Label>Body Type</Label>
+                        <Input
+                            value={form.bodyType}
+                            onChange={(event) => setForm((current) => ({ ...current, bodyType: event.target.value }))}
+                            placeholder="SUV, Scooter, Passenger"
+                        />
+                    </div>
+
+                    <div className="space-y-2">
+                        <Label>Ex-showroom Price (Rs.)</Label>
+                        <Input
+                            value={form.price}
+                            onChange={(event) => setForm((current) => ({ ...current, price: event.target.value }))}
+                            inputMode="numeric"
+                            placeholder="750000"
+                        />
+                    </div>
+
+                    <div className="space-y-2 sm:col-span-2">
+                        <Label>Image URL</Label>
+                        <Input
+                            value={form.imageUrl}
+                            onChange={(event) => setForm((current) => ({ ...current, imageUrl: event.target.value }))}
+                            placeholder="https://..."
+                        />
+                    </div>
+                </div>
+
+                {error && (
+                    <div className="flex items-start gap-2 rounded-lg border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-700 dark:border-red-900/60 dark:bg-red-950/40 dark:text-red-300">
+                        <AlertCircle className="mt-0.5 h-4 w-4 shrink-0" />
+                        {error}
+                    </div>
+                )}
+
+                {success && (
+                    <div className="flex items-start gap-2 rounded-lg border border-emerald-200 bg-emerald-50 px-3 py-2 text-sm text-emerald-700 dark:border-emerald-900/60 dark:bg-emerald-950/40 dark:text-emerald-300">
+                        <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0" />
+                        {success}
+                    </div>
+                )}
+
+                <DialogFooter>
+                    <Button variant="outline" onClick={() => onOpenChange(false)} disabled={saving}>
+                        Cancel
+                    </Button>
+                    <Button onClick={onSubmit} disabled={saving || !form.brand || !form.model.trim()}>
+                        {saving ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <Plus className="mr-2 h-4 w-4" />}
+                        Save Model
+                    </Button>
+                </DialogFooter>
+            </DialogContent>
+        </Dialog>
+    )
+}
+
 export function CatalogClient({ models: initialModels }: Props) {
     const [models, setModels] = useState<CatalogModel[]>(initialModels ?? [])
+    const [brands, setBrands] = useState<CatalogBrand[]>([])
     const [isLoading, setIsLoading] = useState(!initialModels)
     const [activeTab, setActiveTab] = useState<CategoryKey>("4w")
     const [search, setSearch]       = useState("")
+    const [addOpen, setAddOpen] = useState(false)
+    const [addForm, setAddForm] = useState<AddModelForm>(() => blankAddModelForm("4w"))
+    const [savingModel, setSavingModel] = useState(false)
+    const [addError, setAddError] = useState<string | null>(null)
+    const [addSuccess, setAddSuccess] = useState<string | null>(null)
 
     useEffect(() => {
         if (initialModels) {
@@ -320,16 +556,18 @@ export function CatalogClient({ models: initialModels }: Props) {
 
         const loadCatalog = async () => {
             try {
-                const response = await fetch('/api/admin/catalog', { cache: 'no-store' })
+                const response = await fetch('/api/dashboard/catalog', { cache: 'no-store' })
                 if (!response.ok) throw new Error('Failed to load catalog')
 
-                const payload = await response.json() as { models?: CatalogModel[] }
+                const payload = await response.json() as { models?: CatalogModel[]; brands?: CatalogBrand[] }
                 if (!cancelled) {
                     setModels(Array.isArray(payload.models) ? payload.models : [])
+                    setBrands(Array.isArray(payload.brands) ? payload.brands : [])
                 }
             } catch {
                 if (!cancelled) {
                     setModels([])
+                    setBrands([])
                 }
             } finally {
                 if (!cancelled) {
@@ -351,28 +589,112 @@ export function CatalogClient({ models: initialModels }: Props) {
         "3w": models.filter((m) => m.category === "3w").length,
     }), [models])
 
-    const brandGroups = useMemo(() => {
+    const brandSections = useMemo(() => {
         const q = search.toLowerCase().trim()
-        const filtered = models.filter((m) => {
-            if (m.category !== activeTab) return false
-            if (!q) return true
-            return m.model.toLowerCase().includes(q) || m.brand.toLowerCase().includes(q)
-        })
-        const map = new Map<string, { brand: string; brandId: string; models: CatalogModel[] }>()
-        for (const m of filtered) {
-            if (!map.has(m.brand)) map.set(m.brand, { brand: m.brand, brandId: m.brandId, models: [] })
-            map.get(m.brand)!.models.push(m)
+        return brands
+            .filter((brand) => brand.category === activeTab)
+            .map((brand) => {
+                const brandModels = models.filter((model) =>
+                    model.category === brand.category &&
+                    normalizeCatalogKey(model.brand) === normalizeCatalogKey(brand.brand)
+                )
+                const brandMatches = !q || brand.brand.toLowerCase().includes(q)
+                const filteredModels = brandModels.filter((model) =>
+                    !q || brandMatches || model.model.toLowerCase().includes(q)
+                )
+
+                if (q && !brandMatches && filteredModels.length === 0) return null
+
+                return {
+                    ...brand,
+                    models: filteredModels,
+                }
+            })
+            .filter((section): section is CatalogBrand & { models: CatalogModel[] } => Boolean(section))
+    }, [models, brands, activeTab, search])
+
+    const selectedCount = brands.length
+    const activeCategoryBrands = brands.filter((brand) => brand.category === activeTab)
+
+    function openAddModel(brand?: CatalogBrand) {
+        const targetBrand =
+            brand ??
+            activeCategoryBrands[0] ??
+            brands[0] ??
+            null
+
+        if (!targetBrand) return
+
+        setAddError(null)
+        setAddSuccess(null)
+        setAddForm(blankAddModelForm(targetBrand.category, targetBrand.brand))
+        setAddOpen(true)
+    }
+
+    async function saveModel() {
+        setAddError(null)
+        setAddSuccess(null)
+
+        if (!addForm.brand || !addForm.model.trim()) {
+            setAddError("Choose an OEM and enter a model name.")
+            return
         }
-        return Array.from(map.values())
-    }, [models, activeTab, search])
+
+        setSavingModel(true)
+        try {
+            const response = await fetch("/api/dashboard/catalog", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    category: addForm.category,
+                    brand: addForm.brand,
+                    model: addForm.model,
+                    variant: addForm.variant || null,
+                    year: addForm.year || null,
+                    fuelType: addForm.fuelType || null,
+                    bodyType: addForm.bodyType || null,
+                    price: addForm.price || null,
+                    imageUrl: addForm.imageUrl || null,
+                }),
+            })
+            const payload = await response.json().catch(() => null) as { model?: CatalogModel; error?: string } | null
+            if (!response.ok || !payload?.model) {
+                throw new Error(payload?.error ?? "Failed to save model")
+            }
+
+            setModels((current) => {
+                const identity = modelIdentity(payload.model!)
+                const exists = current.some((model) => modelIdentity(model) === identity)
+                if (exists) {
+                    return current.map((model) => modelIdentity(model) === identity ? payload.model! : model)
+                }
+                return [...current, payload.model!]
+            })
+            setActiveTab(payload.model.category)
+            setAddSuccess(`${payload.model.brand} ${payload.model.model} saved.`)
+            setTimeout(() => setAddOpen(false), 700)
+        } catch (error) {
+            setAddError(error instanceof Error ? error.message : "Failed to save model")
+        } finally {
+            setSavingModel(false)
+        }
+    }
 
     return (
         <div className="min-h-screen bg-gray-50 dark:bg-slate-950">
             <div className="p-6 space-y-5 max-w-screen-2xl mx-auto">
                 {/* Header */}
-                <div>
-                    <h1 className="text-2xl font-bold text-gray-900 dark:text-slate-100">Vehicle Catalog</h1>
-                    <p className="text-sm text-gray-500 dark:text-slate-400 mt-0.5">{models.length} models across all brands</p>
+                <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+                    <div>
+                        <h1 className="text-2xl font-bold text-gray-900 dark:text-slate-100">Vehicle Catalog</h1>
+                        <p className="text-sm text-gray-500 dark:text-slate-400 mt-0.5">
+                            {selectedCount} selected OEMs, {models.length} models
+                        </p>
+                    </div>
+                    <Button className="w-full gap-2 sm:w-auto" onClick={() => openAddModel()} disabled={brands.length === 0}>
+                        <Plus className="h-4 w-4" />
+                        Add Model
+                    </Button>
                 </div>
 
                 {/* Tabs */}

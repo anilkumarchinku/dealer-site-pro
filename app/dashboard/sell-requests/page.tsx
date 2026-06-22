@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { cn } from "@/lib/utils"
 import { deriveInsuranceStatus, parseIndianDate, parseMakeModel, type RCData } from "@/lib/utils/rc-mapper"
-import { AlertCircle, CheckCircle, Clock, ExternalLink, FileSearch, IndianRupee, Loader2, Phone, RefreshCw, Search, ShieldCheck, XCircle } from "lucide-react"
+import { AlertCircle, Camera, CheckCircle, Clock, ExternalLink, FileSearch, IndianRupee, Loader2, Phone, RefreshCw, Search, ShieldCheck, XCircle } from "lucide-react"
 
 type SellRequestStatus = "new" | "reviewing" | "contacted" | "approved" | "rejected" | "listed"
 type FieldSource = "seller" | "rc"
@@ -126,6 +126,45 @@ function detailChip(label: string, value: string | null | undefined) {
     return <span className="rounded-full border px-2 py-1">{label}: {value}</span>
 }
 
+function VehiclePhotos({ urls }: { urls: string[] | null }) {
+    const photoUrls = (urls ?? []).filter(Boolean)
+
+    if (photoUrls.length === 0) {
+        return (
+            <div className="flex h-24 w-full items-center justify-center rounded-xl border border-dashed border-border/80 bg-muted/20 text-xs text-muted-foreground sm:w-40">
+                <div className="text-center">
+                    <Camera className="mx-auto mb-1 h-5 w-5" />
+                    No photos
+                </div>
+            </div>
+        )
+    }
+
+    return (
+        <div className="flex max-w-full gap-2 overflow-x-auto pb-1">
+            {photoUrls.slice(0, 8).map((url, index) => (
+                <a
+                    key={`${url}-${index}`}
+                    href={url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group relative h-24 w-32 shrink-0 overflow-hidden rounded-xl border border-border bg-muted"
+                    title={`Open photo ${index + 1}`}
+                >
+                    <img
+                        src={url}
+                        alt={`Seller vehicle photo ${index + 1}`}
+                        className="h-full w-full object-cover transition-transform group-hover:scale-105"
+                    />
+                    <span className="absolute bottom-1 right-1 rounded bg-black/70 px-1.5 py-0.5 text-[10px] font-medium text-white">
+                        {index + 1}/{photoUrls.length}
+                    </span>
+                </a>
+            ))}
+        </div>
+    )
+}
+
 function cleanDisplayValue(value: unknown) {
     if (value === undefined || value === null) return null
     if (typeof value === "number") return Number.isFinite(value) ? String(value) : null
@@ -141,9 +180,21 @@ function displayValue(value: string | number | null) {
     return cleanDisplayValue(value) ?? "Not provided"
 }
 
-function formatDateValue(value: string | null | undefined) {
-    if (!value) return null
-    return value
+function formatDateValue(value: string | number | null | undefined) {
+    return cleanDisplayValue(value)
+}
+
+function InfoRow({ label, value, highlight = false }: { label: string; value: string | number | null | undefined; highlight?: boolean }) {
+    const display = cleanDisplayValue(value)
+    if (!display) return null
+    return (
+        <div className="flex justify-between gap-3 border-b border-border/60 py-2 last:border-0">
+            <span className="text-xs text-muted-foreground">{label}</span>
+            <span className={cn("max-w-[65%] text-right text-xs font-semibold", highlight ? "text-red-500" : "text-foreground")}>
+                {display}
+            </span>
+        </div>
+    )
 }
 
 function ownerCountLabel(value: number | undefined) {
@@ -224,6 +275,7 @@ export default function SellRequestsPage() {
     const [status, setStatus] = useState<SellRequestStatus | "all">("new")
     const [listingPrices, setListingPrices] = useState<Record<string, string>>({})
     const [rcLookups, setRcLookups] = useState<Record<string, RCLookupState>>({})
+    const [rcInputs, setRcInputs] = useState<Record<string, string>>({})
     const [fieldChoices, setFieldChoices] = useState<Record<string, FieldChoiceMap>>({})
 
     const loadRequests = async () => {
@@ -284,14 +336,17 @@ export default function SellRequestsPage() {
     }
 
     const lookupRegistration = async (request: SellRequest) => {
-        if (!request.registration_number) return
+        const rc = (rcInputs[request.id] ?? request.registration_number ?? "")
+            .toUpperCase()
+            .replace(/[\s-]/g, "")
+        if (!rc) return
 
         setRcLookups(prev => ({ ...prev, [request.id]: { status: "loading" } }))
 
         const res = await fetch("/api/vehicles/rc-lookup", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ rc: request.registration_number }),
+            body: JSON.stringify({ rc }),
         })
         const data = await res.json().catch(() => null)
 
@@ -431,6 +486,67 @@ export default function SellRequestsPage() {
                     {detailChip("RC validity", state.data.rc_validity_upto)}
                     {detailChip("Fitness", state.data.fitness_upto)}
                 </div>
+
+                <div className="grid gap-3 lg:grid-cols-2">
+                    <div className="rounded-xl border bg-background p-3">
+                        <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-muted-foreground">Vehicle</p>
+                        <InfoRow label="RC Number" value={state.data.rc_number} />
+                        <InfoRow label="Make & Model" value={state.data.make_model} />
+                        <InfoRow label="Vehicle Class" value={state.data.vehicle_class} />
+                        <InfoRow label="Fuel Type" value={state.data.fuel_type} />
+                        <InfoRow label="Colour" value={state.data.color} />
+                        <InfoRow label="Body Type" value={state.data.body_type} />
+                        <InfoRow label="Seating" value={state.data.seating_capacity} />
+                        <InfoRow label="State / RTO" value={state.data.rto ? `${state.data.rto}${state.data.state ? `, ${state.data.state}` : ""}` : state.data.state} />
+                    </div>
+
+                    <div className="rounded-xl border bg-background p-3">
+                        <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-muted-foreground">Registration & Insurance</p>
+                        <InfoRow label="Owner Name" value={state.data.owner_name} />
+                        <InfoRow label="Registration Date" value={state.data.registration_date} />
+                        <InfoRow label="Owner Count" value={state.data.owner_count} />
+                        <InfoRow label="RC Status" value={state.data.rc_status} />
+                        <InfoRow label="Tax Upto" value={state.data.tax_upto} />
+                        <InfoRow label="Insurance Valid Upto" value={state.data.insurance_upto} />
+                        <InfoRow label="Insurer" value={state.data.insurance_company} />
+                        <InfoRow label="Fitness Valid Upto" value={state.data.fitness_upto} />
+                        <InfoRow label="RC Validity" value={state.data.rc_validity_upto} />
+                        <InfoRow label="Financer" value={state.data.financer} />
+                        <InfoRow label="e-Challan" value={state.data.challan_status ?? (state.data.challan_count != null ? `${state.data.challan_count} pending challan(s)` : null)} highlight={(state.data.challan_count ?? 0) > 0} />
+                        <InfoRow label="NOC Details" value={state.data.noc_details} />
+                        <InfoRow label="Engine No." value={state.data.engine_number} />
+                        <InfoRow label="Chassis No." value={state.data.chassis_number} />
+                    </div>
+                </div>
+
+                {state.data.challans?.length ? (
+                    <div className="rounded-xl border bg-background p-3">
+                        <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-muted-foreground">Challan Details</p>
+                        <div className="space-y-2">
+                            {state.data.challans.slice(0, 5).map((challan, index) => (
+                                <div key={`${challan.challan_number ?? index}`} className="rounded-lg border bg-muted/20 p-3 text-xs">
+                                    <div className="flex items-start justify-between gap-3">
+                                        <div>
+                                            <p className="text-muted-foreground">Challan No.</p>
+                                            <p className="font-semibold">{challan.challan_number ?? `Record ${index + 1}`}</p>
+                                        </div>
+                                        <div className="text-right">
+                                            <p className="text-muted-foreground">Amount</p>
+                                            <p className="font-semibold">{challan.amount ? `Rs. ${challan.amount}` : "N/A"}</p>
+                                        </div>
+                                    </div>
+                                    <div className="mt-2 grid gap-1 sm:grid-cols-2">
+                                        <p><span className="text-muted-foreground">Status:</span> {challan.challan_status ?? "N/A"}</p>
+                                        <p><span className="text-muted-foreground">Date:</span> {challan.challan_date ?? "N/A"}</p>
+                                        <p><span className="text-muted-foreground">State:</span> {challan.state ?? "N/A"}</p>
+                                        <p><span className="text-muted-foreground">Place:</span> {challan.challan_place ?? "N/A"}</p>
+                                    </div>
+                                    {challan.offense_details && <p className="mt-2 text-muted-foreground">{challan.offense_details}</p>}
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                ) : null}
             </div>
         )
     }
@@ -492,6 +608,8 @@ export default function SellRequestsPage() {
                                     <span>{request.city ?? "City N/A"} {request.preferred_date ? `/ ${request.preferred_date}` : ""}</span>
                                 </div>
 
+                                <VehiclePhotos urls={request.photo_urls} />
+
                                 <div className="flex flex-wrap gap-2 text-xs text-muted-foreground">
                                     {detailChip("Body", request.body_type)}
                                     {detailChip("Colour", request.color)}
@@ -549,17 +667,27 @@ export default function SellRequestsPage() {
                             </div>
 
                             <div className="flex flex-wrap items-center gap-2 xl:flex-col xl:items-stretch">
+                                <Input
+                                    value={rcInputs[request.id] ?? request.registration_number ?? ""}
+                                    onChange={event => setRcInputs(prev => ({
+                                        ...prev,
+                                        [request.id]: event.target.value.toUpperCase().replace(/\s/g, ""),
+                                    }))}
+                                    placeholder="RC number"
+                                    className="h-9 min-w-40 text-sm uppercase"
+                                    maxLength={12}
+                                />
                                 <Button
                                     size="sm"
                                     variant="outline"
-                                    disabled={!request.registration_number || rcLookups[request.id]?.status === "loading"}
+                                    disabled={!(rcInputs[request.id] ?? request.registration_number)?.trim() || rcLookups[request.id]?.status === "loading"}
                                     onClick={() => lookupRegistration(request)}
                                 >
                                     {rcLookups[request.id]?.status === "loading"
                                         ? <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                                         : <FileSearch className="mr-2 h-4 w-4" />
                                     }
-                                    {request.registration_number ? "Verify RC" : "No plate"}
+                                    Verify RC
                                 </Button>
                                 <Button size="sm" variant="outline" disabled={savingId === request.id} onClick={() => updateStatus(request, "contacted")}>
                                     <Phone className="mr-2 h-4 w-4" />Contacted
