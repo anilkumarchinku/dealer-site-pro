@@ -6,7 +6,6 @@
 
 import { NextRequest, NextResponse } from 'next/server';
 import { createAdminClient, requireAuth } from '@/lib/supabase-server';
-import { addVehicle } from '@/lib/db/vehicles';
 import {
     validateRCDataForDraft,
     mapRCToVehiclePayload,
@@ -97,24 +96,32 @@ export async function POST(request: NextRequest) {
     // 6. Map RC data to vehicle payload
     const vehiclePayload = mapRCToVehiclePayload(rcData, dealerId);
 
-    // 7. Create draft vehicle (price_paise defaults to 0 for drafts)
-    const result = await addVehicle({
-        ...vehiclePayload,
-        price_paise: 0, // Dealer must set price
-        status: 'draft',
-    });
+    // 7. Create draft vehicle using admin client (bypasses RLS — auth enforced above)
+    const supabase = getServiceSupabase();
+    const { data, error } = await supabase
+        .from('vehicles')
+        .insert({
+            ...vehiclePayload,
+            price_paise: 0,
+            status: 'draft' as const,
+            features: vehiclePayload.features ?? [],
+            condition: vehiclePayload.condition ?? 'used',
+            views: 0,
+        })
+        .select('id')
+        .single();
 
-    if (!result.success) {
-        console.error('[create-draft] Failed to create vehicle:', result.error);
+    if (error || !data) {
+        console.error('[create-draft] Failed to create vehicle:', error?.message);
         return NextResponse.json(
-            { error: result.error || 'Failed to create draft vehicle' },
+            { error: error?.message || 'Failed to create draft vehicle' },
             { status: 500 }
         );
     }
 
     return NextResponse.json({
         success: true,
-        vehicleId: result.id,
+        vehicleId: data.id,
         message: 'Draft vehicle created successfully',
     });
 }

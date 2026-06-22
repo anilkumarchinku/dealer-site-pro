@@ -191,12 +191,6 @@ export default function DashboardPage() {
                 if (insertError) throw insertError;
             }
 
-            const { error: dealerError } = await supabase
-                .from("dealers")
-                .update({ brands: selectedBrands })
-                .eq("id", dealerId);
-            if (dealerError) throw dealerError;
-
             updateData({ brands: selectedBrands });
             setEditingBrands(false);
         } finally {

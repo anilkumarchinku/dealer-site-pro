@@ -244,6 +244,44 @@ export function validateRCDataForDraft(rcData: RCData): { valid: boolean; error?
     return { valid: true };
 }
 
+const VALID_FUEL_TYPES: Record<string, string> = {
+    petrol: 'Petrol',
+    diesel: 'Diesel',
+    cng: 'CNG',
+    electric: 'Electric',
+    hybrid: 'Hybrid',
+    lpg: 'LPG',
+    'petrol+cng': 'CNG',
+    'cng+petrol': 'CNG',
+    'petrol+lpg': 'LPG',
+    'lpg+petrol': 'LPG',
+    ev: 'Electric',
+    'battery electric': 'Electric',
+};
+
+function normalizeFuelType(raw: string | undefined): string | undefined {
+    if (!raw) return undefined;
+    return VALID_FUEL_TYPES[raw.toLowerCase().trim()] ?? undefined;
+}
+
+const VALID_BODY_TYPES: Record<string, string> = {
+    sedan: 'Sedan',
+    hatchback: 'Hatchback',
+    suv: 'SUV',
+    muv: 'MUV',
+    coupe: 'Coupe',
+    convertible: 'Convertible',
+    pickup: 'Pickup',
+    van: 'Van',
+    wagon: 'Wagon',
+    crossover: 'Crossover',
+};
+
+function normalizeBodyType(raw: string | undefined): string | undefined {
+    if (!raw) return undefined;
+    return VALID_BODY_TYPES[raw.toLowerCase().trim()] ?? undefined;
+}
+
 /**
  * Map RC lookup data to vehicle payload for draft creation
  * Only maps available fields - dealer must fill in missing info
@@ -265,15 +303,16 @@ export function mapRCToVehiclePayload(
         model,
         year,
         color: rcData.color || undefined,
-        fuel_type: rcData.fuel_type || undefined,
+        fuel_type: normalizeFuelType(rcData.fuel_type),
+        body_type: normalizeBodyType(rcData.body_type),
         insurance_provider: rcData.insurance_company || undefined,
         insurance_valid_until: insuranceValidUntil || undefined,
         insurance_status: insuranceValidUntil
             ? deriveInsuranceStatus(insuranceValidUntil)
             : "unknown",
         insurance_last_checked_at: new Date().toISOString(),
-        condition: "used", // RC lookup implies used vehicle
-        status: "draft", // Mark as draft - requires dealer completion
+        condition: "used",
+        status: "draft",
         features: [],
     };
 }
