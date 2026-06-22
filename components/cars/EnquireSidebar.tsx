@@ -162,6 +162,9 @@ interface EnquireSidebarProps {
     contactPhone?: string;
     /** Controls vehicle-aware label overrides */
     vehicleType?: '2w' | '3w' | '4w';
+    /** Optional vehicle context — when opened from a car/vehicle detail page */
+    carId?: string;
+    carName?: string;
 }
 
 // ── Component ─────────────────────────────────────────────────────────────────
@@ -175,6 +178,8 @@ export function EnquireSidebar({
     services,
     contactPhone,
     vehicleType,
+    carId,
+    carName,
 }: EnquireSidebarProps) {
     const [selectedService, setSelectedService] = useState<Service | null>(null);
     const [submitted, setSubmitted] = useState(false);
@@ -252,6 +257,8 @@ export function EnquireSidebar({
                     name: form.name.trim(),
                     phone: form.phone.trim(),
                     message: form.message.trim() || undefined,
+                    car_id: carId || undefined,
+                    car_name: carName || undefined,
                     lead_source: selectedService || 'contact_form',
                 }),
             });

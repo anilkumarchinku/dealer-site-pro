@@ -6,9 +6,10 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Loader2, AlertCircle, CheckCircle, LogIn } from "lucide-react";
+import { Loader2, AlertCircle, CheckCircle, LogIn, Mail, Lock } from "lucide-react";
 import { supabase } from "@/lib/supabase";
 import { isValidEmail } from "@/lib/validations/client";
+import { isPlatformAdminAppMetadata } from "@/lib/utils/platform-admin";
 
 export default function LoginPage() {
     return (
@@ -76,6 +77,20 @@ function LoginForm() {
             // Route users to onboarding if setup isn't complete, otherwise to dashboard.
             const user = signInData?.user;
             if (user) {
+                if (isPlatformAdminAppMetadata(user.app_metadata)) {
+                    window.location.href = safeRedirectTo ?? "/admin";
+                    return;
+                }
+
+                const adminSession = await fetch("/api/admin/session", { cache: "no-store" })
+                    .then((res) => res.ok ? res.json() : null)
+                    .catch(() => null) as { authenticated?: boolean; source?: string } | null;
+
+                if (adminSession?.authenticated && adminSession.source === "platform") {
+                    window.location.href = safeRedirectTo ?? "/admin";
+                    return;
+                }
+
                 const { data: dealer } = await supabase
                     .from("dealers")
                     .select("id, onboarding_complete")
@@ -100,14 +115,17 @@ function LoginForm() {
     };
 
     return (
-        <Card>
-            <CardHeader className="text-center pb-2">
-                <CardTitle className="text-2xl">Welcome back</CardTitle>
-                <CardDescription>Sign in to your dealership dashboard</CardDescription>
+        <Card className="rounded-2xl border border-[#D8E2F0] bg-white p-0 shadow-[0_24px_80px_rgba(7,20,47,0.12)] dark:border-white/10 dark:bg-white/[0.06]">
+            <CardHeader className="border-b border-[#E2E8F2] px-7 py-6 text-left dark:border-white/10">
+                <p className="text-[11px] font-black uppercase tracking-[0.24em] text-[#155EEF] dark:text-blue-300">
+                    Secure Login
+                </p>
+                <CardTitle className="mt-2 text-3xl font-black tracking-tight">Welcome back</CardTitle>
+                <CardDescription className="text-base">Sign in to your dealership dashboard</CardDescription>
             </CardHeader>
 
-            <CardContent className="pt-4">
-                <form onSubmit={handleLogin} className="space-y-4">
+            <CardContent className="px-7 py-6">
+                <form onSubmit={handleLogin} className="space-y-5">
 
                     {/* Registration success banner */}
                     {justRegistered && (
@@ -120,29 +138,37 @@ function LoginForm() {
                     {/* Email */}
                     <div className="space-y-1.5">
                         <Label htmlFor="email">Email Address</Label>
-                        <Input
-                            id="email"
-                            type="email"
-                            placeholder="rajesh@rammotors.in"
-                            value={email}
-                            onChange={e => setEmail(e.target.value)}
-                            autoComplete="email"
-                            disabled={loading}
-                        />
+                        <div className="relative">
+                            <Mail className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+                            <Input
+                                id="email"
+                                type="email"
+                                placeholder="rajesh@rammotors.in"
+                                value={email}
+                                onChange={e => setEmail(e.target.value)}
+                                autoComplete="email"
+                                disabled={loading}
+                                className="h-12 rounded-xl pl-10"
+                            />
+                        </div>
                     </div>
 
                     {/* Password */}
                     <div className="space-y-1.5">
                         <Label htmlFor="password">Password</Label>
-                        <Input
-                            id="password"
-                            type="password"
-                            placeholder="Enter your password"
-                            value={password}
-                            onChange={e => setPassword(e.target.value)}
-                            autoComplete="current-password"
-                            disabled={loading}
-                        />
+                        <div className="relative">
+                            <Lock className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+                            <Input
+                                id="password"
+                                type="password"
+                                placeholder="Enter your password"
+                                value={password}
+                                onChange={e => setPassword(e.target.value)}
+                                autoComplete="current-password"
+                                disabled={loading}
+                                className="h-12 rounded-xl pl-10"
+                            />
+                        </div>
                     </div>
 
                     {/* Error */}
@@ -156,7 +182,7 @@ function LoginForm() {
                     {/* Submit */}
                     <Button
                         type="submit"
-                        className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
+                        className="h-12 w-full rounded-xl bg-[#155EEF] text-base font-black hover:bg-[#0E4CD8]"
                         size="lg"
                         disabled={loading}
                     >
@@ -167,7 +193,7 @@ function LoginForm() {
                         )}
                     </Button>
 
-                    <div className="flex flex-col items-center gap-1.5">
+                    <div className="flex flex-col items-center gap-2 border-t border-border pt-5">
                         <p className="text-center text-sm text-muted-foreground">
                             Don&apos;t have an account?{" "}
                             <Link href="/auth/register" className="font-medium text-blue-600 dark:text-blue-400 hover:underline">

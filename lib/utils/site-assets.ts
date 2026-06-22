@@ -23,12 +23,46 @@ export function brandLogoUrl(brandName: string | null | undefined, category: Veh
 export function firstVehicleHeroImage(cars: Car[]): string | undefined {
     const hero = cars.find(car => {
         const src = car.images?.hero
-        return src && src !== '/placeholder-car.jpg'
+        return isUsableSiteImage(src)
     })?.images.hero
 
     if (hero) return hero
 
     return cars
         .flatMap(car => car.images?.exterior ?? [])
-        .find(src => src && src !== '/placeholder-car.jpg')
+        .find(isUsableSiteImage)
+}
+
+export function isUsableSiteImage(src: string | null | undefined): src is string {
+    if (!src?.trim()) return false
+    return ![
+        '/placeholder-car.jpg',
+        '/placeholder.svg',
+        '/placeholder.png',
+    ].includes(src.trim())
+}
+
+export function isDealerUploadedHero(src: string | null | undefined): boolean {
+    if (!isUsableSiteImage(src)) return false
+
+    const normalized = src.trim().toLowerCase()
+    return (
+        normalized.startsWith('data:image/') ||
+        normalized.includes('/storage/v1/object/public/dealer-assets/') ||
+        normalized.includes('/storage/v1/object/public/vehicle-images/dealer-assets/') ||
+        normalized.includes('/dealer-assets/dealers/') ||
+        normalized.includes('/vehicle-images/dealer-assets/')
+    )
+}
+
+export function resolveDealerHeroImage({
+    uploadedHeroImage,
+    inventoryHeroImage,
+}: {
+    uploadedHeroImage?: string | null
+    inventoryHeroImage?: string | null
+}): string | undefined {
+    const uploaded = uploadedHeroImage?.trim()
+    if (isDealerUploadedHero(uploaded)) return uploaded
+    return isUsableSiteImage(inventoryHeroImage) ? inventoryHeroImage.trim() : undefined
 }

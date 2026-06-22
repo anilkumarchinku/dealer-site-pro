@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
 import { requireAuth, requireDealerOwnership } from '@/lib/supabase-server'
 import { recordDomainDeploymentOperation } from '@/lib/services/domain-deployment-operation-service'
-import { removeDomainFromMainProject, removeDomainFromProject } from '@/lib/services/vercel-service'
+import { removeDomainFromMainProject } from '@/lib/services/vercel-service'
 
 /**
  * POST /api/domains/remove-custom
@@ -36,12 +36,6 @@ export async function POST(request: Request) {
             providerStep: 'database',
         })
 
-        const { data: dealerInfo } = await supabase
-            .from('dealers')
-            .select('sells_new_cars, sells_used_cars, slug')
-            .eq('id', dealerId)
-            .single()
-
         // Delete from dealer_domains — scoped to both id + dealer_id for safety
         const { error: dbErr } = await supabase
             .from('dealer_domains')
@@ -64,14 +58,7 @@ export async function POST(request: Request) {
 
         // Remove from Vercel — non-fatal if it fails
         try {
-            const isFirstHand = dealerInfo?.sells_new_cars === true && dealerInfo?.sells_used_cars === false
-            if (isFirstHand) {
-                await removeDomainFromMainProject(domain)
-            } else {
-                const slug = dealerInfo?.slug
-                if (!slug) throw new Error('Dealer slug not found')
-                await removeDomainFromProject(slug, domain)
-            }
+            await removeDomainFromMainProject(domain)
             await recordDomainDeploymentOperation({
                 dealerId,
                 domainId,

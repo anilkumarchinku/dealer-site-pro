@@ -4,8 +4,9 @@ import { useEffect, useState } from "react"
 import { useParams } from "next/navigation"
 import { supabase } from "@/lib/supabase"
 import { VehicleCard } from "@/components/three-wheelers/VehicleCard"
+import { CompareBar } from "@/components/three-wheelers/CompareBar"
 import { LeadFormModal } from "@/components/three-wheelers/LeadFormModal"
-import type { ThreeWheelerVehicle } from "@/lib/types/three-wheeler"
+import type { ThreeWheelerCompareItem, ThreeWheelerVehicle } from "@/lib/types/three-wheeler"
 import Link from "next/link"
 import { ChevronLeft } from "lucide-react"
 import { useSitePrefix } from "@/lib/hooks/useSitePrefix"
@@ -20,6 +21,7 @@ export default function ElectricThreeWheelerPage() {
     const [total, setTotal]     = useState(0)
     const [loading, setLoading] = useState(true)
     const [leadVehicleId, setLeadVehicleId] = useState<string | null>(null)
+    const [compareItems, setCompareItems] = useState<ThreeWheelerCompareItem[]>([])
     const [search, setSearch]   = useState("")
 
     useEffect(() => {
@@ -41,6 +43,14 @@ export default function ElectricThreeWheelerPage() {
 
     if (loading) return <div className="min-h-screen flex items-center justify-center text-muted-foreground">Loading...</div>
     if (!dealer) return <div className="min-h-screen flex items-center justify-center">Dealer not found</div>
+
+    function toggleCompare(vehicle: ThreeWheelerVehicle) {
+        setCompareItems(prev => {
+            if (prev.some(item => item.id === vehicle.id)) return prev.filter(item => item.id !== vehicle.id)
+            if (prev.length >= 3) return prev
+            return [...prev, { id: vehicle.id, brand: vehicle.brand, model: vehicle.model, image: vehicle.images[0] ?? null }]
+        })
+    }
 
     return (
         <div className="min-h-screen max-w-5xl mx-auto px-4 py-8">
@@ -95,13 +105,20 @@ export default function ElectricThreeWheelerPage() {
                         ) : (
                             <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5">
                                 {filtered.map(v => (
-                                    <VehicleCard key={v.id} vehicle={v} slug={slug} onLead={vid => setLeadVehicleId(vid)} />
+                                    <VehicleCard key={v.id} vehicle={v} slug={slug} onLead={vid => setLeadVehicleId(vid)} onCompare={toggleCompare} />
                                 ))}
                             </div>
                         )}
                     </>
                 )
             })()}
+
+            <CompareBar
+                items={compareItems}
+                slug={slug}
+                onRemove={id => setCompareItems(prev => prev.filter(item => item.id !== id))}
+                onClear={() => setCompareItems([])}
+            />
 
             {dealer && (
                 <LeadFormModal

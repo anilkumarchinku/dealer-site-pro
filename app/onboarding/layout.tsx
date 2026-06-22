@@ -1,24 +1,20 @@
-"use client"
-import { useRouter, usePathname } from "next/navigation";
-import { Progress } from "@/components/ui/progress";
-import { Button } from "@/components/ui/button";
-import { ThemeToggle } from "@/components/ui/theme-toggle";
-import { Car, X } from "lucide-react";
-import { useOnboardingStore } from "@/lib/store/onboarding-store";
+"use client";
 
-/**
- * Onboarding Layout
- *
- * Routes:
- *   /onboarding           – Dealer type picker (no progress bar, own header)
- *   /onboarding/step-1    – Business info  (step 1)
- *   /onboarding/step-2    – Brands (new dealers, step 2)
- *   /onboarding/step-2-used – Branding/logo (used dealers, step 2)
- *   /onboarding/step-3    – Services (step 3)
- *   /onboarding/step-4    – Template selector (own dark layout)
- *   /onboarding/step-5    – Customise text (step 4 visible)
- *   /onboarding/step-6    – Review & complete (step 5 visible)
- */
+import { usePathname, useRouter } from "next/navigation";
+import { ArrowLeft } from "lucide-react";
+
+import { BrowserFrame, coreFlowSteps, FlowStepper, FlowTopBar } from "@/components/onboarding/flow-shell";
+
+function getBackHref(pathname: string) {
+    if (pathname.includes("/bulk-upload")) return "/onboarding/step-2-inventory";
+    if (pathname.includes("step-6")) return "/onboarding/step-2-inventory";
+    if (pathname.includes("step-5")) return "/onboarding/step-4";
+    if (pathname.includes("step-4")) return "/onboarding/step-3";
+    if (pathname.includes("step-3")) return "/onboarding/step-2-inventory";
+    if (pathname.includes("step-2")) return "/onboarding/step-1";
+    return "/onboarding";
+}
+
 export default function OnboardingLayout({
     children,
 }: {
@@ -26,14 +22,11 @@ export default function OnboardingLayout({
 }) {
     const router = useRouter();
     const pathname = usePathname();
-    const isUsedCarDealer = useOnboardingStore((s) => s.isUsedCarDealer());
 
-    // ── Index page: has its own full-page layout ───────────────────────────
     if (pathname === "/onboarding" || pathname === "/onboarding/") {
         return <>{children}</>;
     }
 
-    // ── Two/three-wheeler routes: they have their own child layout ──────────
     if (
         pathname.startsWith("/onboarding/two-wheelers") ||
         pathname.startsWith("/onboarding/three-wheelers")
@@ -41,94 +34,39 @@ export default function OnboardingLayout({
         return <>{children}</>;
     }
 
-    // ── Step 4 (template selector): own dark theme ─────────────────────────
     const stepMatch = pathname.match(/step-(\d+)/);
     const stepNum = stepMatch ? parseInt(stepMatch[1]) : 1;
 
-    if (stepNum === 4) {
-        return <>{children}</>;
-    }
-
-    // ── Progress mapping ───────────────────────────────────────────────────
-    //  Visible steps depend on dealer type:
-    //
-    //  New dealers  : Info | Brands | Services | Customize | Review  (5 steps)
-    //  Used dealers : Info | Branding | Services | Customize | Review (5 steps)
-    //
-    //  Step 4 (template selector) is hidden; steps 5 & 6 map to 4 & 5.
-
-    let progressStep: number;
-    let totalSteps: number;
-    let progressLabels: string[];
-
-    if (isUsedCarDealer) {
-        // 2nd hand: 5 steps — Info | Brand & Stock | Services | Customise | Review
-        totalSteps = 5;
-        progressLabels = ["Your Info", "Brand & Stock", "Services", "Customise", "Review"];
-        if (pathname.includes("step-2-used") || pathname.includes("step-2-inventory")) {
-            progressStep = 2;
-        } else if (stepNum === 3) {
-            progressStep = 3;
-        } else if (stepNum > 4) {
-            progressStep = stepNum - 1; // step-5 → 4, step-6 → 5
-        } else {
-            progressStep = stepNum;
-        }
-    } else {
-        // 1st hand: 4 steps — Info & Brands | Services | Customise | Review
-        // (brands captured inside step-1, step-2 URL is skipped entirely)
-        totalSteps = 4;
-        progressLabels = ["Your Info & Brands", "Services", "Customise", "Review"];
-        if (stepNum === 1)      progressStep = 1;
-        else if (stepNum === 3) progressStep = 2;
-        else if (stepNum === 5) progressStep = 3;
-        else if (stepNum === 6) progressStep = 4;
-        else                    progressStep = 1;
-    }
+    const visibleStep =
+        stepNum <= 1 ? 2 :
+        pathname.includes("step-2") || stepNum === 3 || stepNum === 4 || stepNum === 5 ? 3 :
+        stepNum >= 6 ? 4 :
+        2;
 
     return (
-        <div className="min-h-screen flex flex-col bg-background">
-            {/* Header */}
-            <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-                <div className="container flex h-16 items-center justify-between px-8">
+        <div className="min-h-screen bg-white">
+            <BrowserFrame className="min-h-screen w-full max-w-none rounded-none border-0 shadow-none" contentClassName="bg-white">
+                <FlowTopBar
+                    onBack={() => router.push(getBackHref(pathname))}
+                    onExit={() => router.push("/")}
+                />
+
+                <main className="px-5 py-6 sm:px-8 lg:px-10">
                     <button
-                        onClick={() => router.push("/")}
-                        className="flex items-center gap-3 hover:opacity-70 transition-opacity"
+                        type="button"
+                        onClick={() => router.push(getBackHref(pathname))}
+                        aria-label="Go back"
+                        className="mb-3 inline-flex h-10 w-fit shrink-0 items-center justify-center gap-1.5 rounded-md border border-[#D8E0EA] bg-white px-3 text-sm font-black text-[#35445C] transition hover:border-[#155EEF] hover:bg-[#F5F8FF] hover:text-[#155EEF] focus:outline-none focus:ring-2 focus:ring-[#155EEF]"
                     >
-                        <div className="w-9 h-9 rounded-lg bg-primary flex items-center justify-center">
-                            <Car className="w-5 h-5 text-primary-foreground" />
-                        </div>
-                        <span className="text-lg font-semibold">DealerSite Pro</span>
+                        <ArrowLeft className="h-4 w-4" />
+                        Back
                     </button>
-
-                    <div className="flex items-center gap-2">
-                        <ThemeToggle />
-                        <Button variant="ghost" size="sm" onClick={() => router.push("/")}>
-                            <X className="w-4 h-4 mr-2" />
-                            Exit
-                        </Button>
+                    <FlowStepper steps={coreFlowSteps} currentStep={visibleStep} />
+                    <div className="mt-7">
+                        {children}
                     </div>
-                </div>
-            </header>
-
-            {/* Progress */}
-            <div className="container max-w-3xl mx-auto w-full px-8 pt-12 pb-8">
-                <Progress currentStep={progressStep} totalSteps={totalSteps} labels={progressLabels} />
-            </div>
-
-            {/* Main Content */}
-            <main className="flex-1 container max-w-3xl mx-auto px-8 pb-12">
-                {children}
-            </main>
-
-            {/* Footer */}
-            <footer className="border-t py-6 px-8">
-                <div className="container max-w-3xl mx-auto">
-                    <p className="text-xs text-muted-foreground text-center">
-                        Need help? Contact our support team at support@dealersitepro.com
-                    </p>
-                </div>
-            </footer>
+                </main>
+            </BrowserFrame>
         </div>
     );
 }

@@ -7,8 +7,8 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { cn } from "@/lib/utils";
 import { Search, Filter, Mail, Phone, CheckCircle, Loader2, RefreshCw, Clock, TrendingUp, Globe, Inbox, ChevronLeft, ChevronRight } from "lucide-react";
 import { fetchLeads, updateLeadStatus, type ExternalLead } from "@/lib/db/leads";
-import { useOnboardingStore } from "@/lib/store/onboarding-store";
 import { toast } from "@/lib/utils/toast";
+import { PremiumEmptyState, PremiumPageHeader } from "@/components/dashboard/premium-ui";
 
 function timeAgo(iso: string): string {
     if (!iso) return "";
@@ -60,7 +60,6 @@ const cyeproSyncConfig: Record<string, { bg: string; text: string; label: string
 const PAGE_SIZE = 20;
 
 export default function LeadsPage() {
-    const { dealerId } = useOnboardingStore();
     const [searchQuery, setSearchQuery] = useState("");
     const [filterPriority, setFilterPriority] = useState<string>("all");
     const [filterStatus, setFilterStatus] = useState<string>("all");
@@ -69,17 +68,20 @@ export default function LeadsPage() {
     const [page, setPage] = useState(1);
 
     const loadLeads = () => {
-        if (!dealerId) return;
         setLoading(true);
-        fetchLeads(dealerId)
+        fetchLeads()
             .then(data => setApiLeads(data))
             .finally(() => setLoading(false));
     };
 
-    useEffect(() => { loadLeads(); }, [dealerId]); // eslint-disable-line
+    useEffect(() => { loadLeads(); }, []); // eslint-disable-line
 
     const handleMarkContacted = async (id: string) => {
-        await updateLeadStatus(id, "contacted");
+        const result = await updateLeadStatus(id, "contacted");
+        if (!result.success) {
+            toast.error(result.error ?? "Failed to update lead");
+            return;
+        }
         setApiLeads(prev => prev.map(l => l.id === id ? { ...l, status: "contacted" as const } : l));
         toast.success("Lead updated");
     };
@@ -108,13 +110,12 @@ export default function LeadsPage() {
 
     return (
         <div className="space-y-6 animate-fade-in">
-            {/* Header */}
-            <div className="flex items-center justify-between">
-                <div>
-                    <h1 className="text-2xl font-bold">Leads</h1>
-                    <p className="text-muted-foreground">Manage and follow up with customer inquiries</p>
-                </div>
-                <div className="flex items-center gap-3">
+            <PremiumPageHeader
+                eyebrow="CRM"
+                title="Lead inbox"
+                description="Prioritize enquiries by intent, source, status, and the next action needed from your team."
+                actions={
+                    <div className="flex items-center gap-3">
                     <div className="flex items-center gap-2">
                         {hotCount > 0 && (
                             <span className="px-3 py-1.5 rounded-full bg-red-50 text-red-600 border border-red-200 font-medium text-xs">
@@ -128,23 +129,34 @@ export default function LeadsPage() {
                         )}
                         <span className="text-sm text-muted-foreground">{apiLeads.length} total</span>
                     </div>
-                    {dealerId && (
-                        <Button
-                            variant="ghost"
-                            size="icon"
-                            onClick={loadLeads}
-                            disabled={loading}
-                            title="Refresh leads"
-                            className="text-muted-foreground"
-                        >
-                            {loading
-                                ? <Loader2 className="w-4 h-4 animate-spin" />
-                                : <RefreshCw className="w-4 h-4" />
-                            }
-                        </Button>
-                    )}
+                    <Button
+                        variant="ghost"
+                        size="icon"
+                        onClick={loadLeads}
+                        disabled={loading}
+                        title="Refresh leads"
+                        className="rounded-xl text-muted-foreground"
+                    >
+                        {loading
+                            ? <Loader2 className="w-4 h-4 animate-spin" />
+                            : <RefreshCw className="w-4 h-4" />
+                        }
+                    </Button>
                 </div>
-            </div>
+                }
+            >
+                <div className="flex flex-wrap gap-2">
+                    <span className="rounded-full border border-border bg-background px-3 py-1 text-xs font-bold text-muted-foreground">
+                        {apiLeads.length} total
+                    </span>
+                    <span className="rounded-full border border-red-200 bg-red-50 px-3 py-1 text-xs font-bold text-red-700 dark:border-red-500/20 dark:bg-red-500/10 dark:text-red-300">
+                        {hotCount} hot
+                    </span>
+                    <span className="rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-xs font-bold text-emerald-700 dark:border-emerald-500/20 dark:bg-emerald-500/10 dark:text-emerald-300">
+                        {newCount} new
+                    </span>
+                </div>
+            </PremiumPageHeader>
 
             {/* Summary Stat Chips */}
             {apiLeads.length > 0 && (
@@ -165,8 +177,8 @@ export default function LeadsPage() {
             )}
 
             {/* Filters */}
-            <Card variant="glass">
-                <CardContent className="py-4">
+            <Card variant="glass" className="rounded-2xl border-border/70 bg-card/90 p-0 shadow-sm dark:bg-card/80">
+                <CardContent className="px-4 py-4">
                     <div className="flex flex-wrap items-center gap-4">
                         <div className="flex-1 min-w-[200px]">
                             <div className="relative">
@@ -221,7 +233,7 @@ export default function LeadsPage() {
             </Card>
 
             {/* Leads List */}
-            <Card variant="glass">
+            <Card variant="glass" className="rounded-2xl border-border/70 bg-card/90 p-0 shadow-sm dark:bg-card/80">
                 <CardContent className="p-0">
                     {loading ? (
                         <div className="divide-y divide-border">
@@ -238,18 +250,14 @@ export default function LeadsPage() {
                             ))}
                         </div>
                     ) : filteredLeads.length === 0 ? (
-                        <div className="text-center py-16 text-muted-foreground">
-                            <Inbox className="w-10 h-10 mx-auto mb-3 opacity-30" />
-                            <p className="font-medium">
-                                {isFiltered
-                                    ? "No leads match your filters"
-                                    : "No leads yet"}
-                            </p>
-                            <p className="text-sm mt-1">
-                                {isFiltered
-                                    ? "Try adjusting your search or filters"
-                                    : "When customers submit enquiries from your website, they'll appear here."}
-                            </p>
+                        <div className="p-5">
+                            <PremiumEmptyState
+                                icon={Inbox}
+                                title={isFiltered ? "No leads match your filters" : "No leads yet"}
+                                description={isFiltered
+                                    ? "Try adjusting your search, priority, or status filters."
+                                    : "When customers submit enquiries from your website, they will appear here."}
+                            />
                         </div>
                     ) : (
                         <>

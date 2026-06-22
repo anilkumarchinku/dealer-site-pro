@@ -16,6 +16,7 @@ import { ReviewsSection } from '@/components/ui/ReviewsSection';
 import { OffersSection } from '@/components/templates/sections/OffersSection';
 import { FAQSection } from '@/components/templates/sections/FAQSection';
 import { ExchangeSection } from '@/components/templates/sections/ExchangeSection';
+import { SellVehicleSection } from '@/components/templates/sections/SellVehicleSection';
 import { NavEMIModal } from '@/components/ui/NavEMIModal';
 import { FinanceSection } from '@/components/templates/sections/FinanceSection';
 import { TrustBadgesSection } from '@/components/templates/sections/TrustBadgesSection';
@@ -29,6 +30,7 @@ import { EVSection } from '@/components/ui/EVSection';
 import { generateTemplateConfig } from '@/lib/templates';
 import { getContrastText } from '@/lib/utils/color-contrast';
 import { getScrapedImageUrls, brandNameToId } from '@/lib/utils/brand-model-images';
+import { buildTemplateDetailBasePath, buildTemplateSiteBase } from '@/lib/utils/template-site-paths';
 import {
     ArrowRight,
     Phone,
@@ -79,6 +81,7 @@ interface ModernTemplateProps {
     serviceCenters?: Array<{ id: string; name: string; address?: string; city?: string; phone?: string }>;
     isVerified?: boolean;
     vehicleType?: '2w' | '3w' | '4w';
+    sellVehicleHref?: string;
 }
 
 export function ModernTemplate({
@@ -99,24 +102,17 @@ export function ModernTemplate({
     serviceCenters,
     isVerified = false,
     vehicleType,
+    sellVehicleHref,
 }: ModernTemplateProps) {
     const vl = getVehicleLabels(vehicleType);
     const pathname = usePathname();
-    const siteBase = useMemo(() => {
-        const typeSuffix = vehicleType === '2w' ? '/two-wheelers' : vehicleType === '3w' ? '/three-wheelers' : '';
-        if (pathname.startsWith('/sites/')) {
-            const slugPart = pathname.split('/')[2] ?? '';
-            return `/sites/${slugPart}${typeSuffix}`;
-        }
-        return typeSuffix || '/cars';
-    }, [pathname, vehicleType]);
-    const detailBasePath = useMemo(() => {
-        const isUsedVehiclePage = (vehicleType === '2w' || vehicleType === '3w')
-            && sellsUsedCars
-            && !sellsNewCars
-            && pathname.includes('/used');
-        return isUsedVehiclePage ? `${siteBase}/used` : siteBase;
-    }, [pathname, sellsNewCars, sellsUsedCars, siteBase, vehicleType]);
+    const siteBase = useMemo(() => buildTemplateSiteBase(pathname, vehicleType), [pathname, vehicleType]);
+    const detailBasePath = useMemo(() => buildTemplateDetailBasePath({
+        pathname,
+        vehicleType,
+        sellsNewCars,
+        sellsUsedCars,
+    }), [pathname, sellsNewCars, sellsUsedCars, vehicleType]);
     const SERVICE_LABELS: Record<string, { label: string; icon: string }> = {
         new_car_sales: { label: vl.newVehicle, icon: '🚗' },
         used_car_sales: { label: vl.usedVehicle, icon: '🔄' },
@@ -290,6 +286,15 @@ export function ModernTemplate({
                         {/* CTA Buttons */}
                         <div className="flex shrink-0 items-center gap-2">
                             <WishlistDrawer cars={cars} dealerId={dealerId} brandColor={brandColors.primary} />
+                            {sellVehicleHref && (
+                                <Button
+                                    variant="outline"
+                                    className="hidden bg-transparent px-4 text-gray-700 border-gray-300 hover:bg-gray-100 lg:flex"
+                                    asChild
+                                >
+                                    <a href={sellVehicleHref}>Sell Your Car</a>
+                                </Button>
+                            )}
                             <Button
                                 variant="outline"
                                 className="hidden bg-transparent px-4 text-gray-700 border-gray-300 hover:bg-gray-100 lg:flex"
@@ -320,7 +325,7 @@ export function ModernTemplate({
                     </div>
                     {/* Mobile menu */}
                     {mobileMenuOpen && (
-                        <div className="md:hidden border-t border-gray-100 bg-white">
+                        <div className="xl:hidden border-t border-gray-100 bg-white">
                             <div className="px-4 py-3 space-y-1">
                                 <button
                                     onClick={() => { setActiveTab('home'); setMobileMenuOpen(false); }}
@@ -352,6 +357,11 @@ export function ModernTemplate({
                                 <button onClick={() => mobileNavigateTo('finance-section')} className="block w-full text-left px-3 py-2.5 rounded-lg font-medium transition-colors text-gray-900 hover:bg-gray-100">Finance</button>
                                 <button onClick={() => mobileNavigateTo('service-section')} className="block w-full text-left px-3 py-2.5 rounded-lg font-medium transition-colors text-gray-900 hover:bg-gray-100">Service</button>
                                 <button onClick={() => mobileNavigateTo('trust-section')} className="block w-full text-left px-3 py-2.5 rounded-lg font-medium transition-colors text-gray-900 hover:bg-gray-100">Trust Us</button>
+                                {sellVehicleHref && (
+                                    <a href={sellVehicleHref} className="block w-full px-3 py-2.5 rounded-lg font-medium transition-colors text-gray-900 hover:bg-gray-100">
+                                        Sell Your Car
+                                    </a>
+                                )}
                                 <div className="pt-2 border-t border-gray-200">
                                     <Button
                                         className="w-full text-white"
@@ -830,6 +840,8 @@ export function ModernTemplate({
                     </div>
                 </div>
             )}
+
+            <SellVehicleSection dealerName={dealerName} sellHref={sellVehicleHref} brandColor={brandColors.primary} />
 
             {/* Footer */}
             <footer className="bg-gray-50 text-gray-900 py-12 border-t border-gray-200">

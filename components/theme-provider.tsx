@@ -21,8 +21,8 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
     // On mount: read from localStorage, fall back to system preference
     useEffect(() => {
-        const stored = localStorage.getItem('dealer-theme') as Theme | null
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+        const stored = safeGetTheme()
+        const prefersDark = window.matchMedia?.('(prefers-color-scheme: dark)').matches
         const initial: Theme = stored ?? (prefersDark ? 'dark' : 'light')
         applyTheme(initial)
         setThemeState(initial)
@@ -36,7 +36,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
         } else {
             root.classList.remove('dark')
         }
-        localStorage.setItem('dealer-theme', next)
+        safeSetTheme(next)
     }
 
     function setTheme(next: Theme) {
@@ -56,3 +56,19 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 }
 
 export const useTheme = () => useContext(ThemeContext)
+
+function safeGetTheme(): Theme | null {
+    try {
+        return window.localStorage?.getItem('dealer-theme') as Theme | null
+    } catch {
+        return null
+    }
+}
+
+function safeSetTheme(theme: Theme) {
+    try {
+        window.localStorage?.setItem('dealer-theme', theme)
+    } catch {
+        // Theme still applies to the current document even when storage is unavailable.
+    }
+}

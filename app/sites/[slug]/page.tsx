@@ -13,9 +13,9 @@ import { applyUsedVehiclePriceOffersToCars, fetchActiveUsedVehiclePriceOffers } 
 import type { Car } from '@/lib/types/car'
 import type { DBVehicle } from '@/lib/db/vehicles'
 import type { Service } from '@/lib/types'
-import { dedupeByMakeModel, dedupeCaseInsensitiveStrings } from '@/lib/utils/listing-dedupe'
-import { publicDealerSitePath, publicVehicleHubPath, type VehicleHubSegment } from '@/lib/utils/public-site-routing'
-import { brandLogoUrl, firstVehicleHeroImage } from '@/lib/utils/site-assets'
+import { dedupeByMakeModel, dedupeCaseInsensitiveStrings, dedupeInventoryCars } from '@/lib/utils/listing-dedupe'
+import { isMainDealerHost, publicDealerSitePath, publicVehicleHubPath, type VehicleHubSegment } from '@/lib/utils/public-site-routing'
+import { brandLogoUrl, firstVehicleHeroImage, resolveDealerHeroImage } from '@/lib/utils/site-assets'
 import { BASE_DOMAIN, dealerSiteHref } from '@/lib/utils/domain'
 
 
@@ -331,7 +331,7 @@ export async function generateMetadata({ params }: SitePageProps): Promise<Metad
         .map(s => s.replace(/_/g, ' '))
         .join(', ')
 
-    const faviconUrl = dealer.logo_url ?? '/favicon.svg'
+    const faviconUrl = dealer.logo_url ?? '/dealersite-pro-shield.png'
 
     return {
         title,
@@ -542,10 +542,10 @@ export default async function SitePage({ params }: SitePageProps) {
     } else {
         // USED-CAR site — used-only dealer OR hybrid "-used" sub-site
         const cyeproCars = cyepro_api_key
-            ? await fetchAllCyeproInventoryAsCars(cyepro_api_key)
+            ? await fetchAllCyeproInventoryAsCars(cyepro_api_key, {}, undefined, '4w')
             : []
 
-        cars = dedupeByMakeModel([
+        cars = dedupeInventoryCars([
             ...dbVehiclesToCars(vehicles),
             ...cyeproCars,
         ])
@@ -561,18 +561,24 @@ export default async function SitePage({ params }: SitePageProps) {
     // Dealer's uploaded logo always takes priority.
     // Fallback: brand logo from /data/brand-logos/<brand-id>.png
     const isUsedSite = templateSellsUsed && !templateSellsNew
-    const brandName = isUsedSite ? 'Bentley' : (brandFilter ?? brands[0] ?? dealer.dealership_name)
+    const brandName = isUsedSite ? (brands[0] ?? dealer.dealership_name) : (brandFilter ?? brands[0] ?? dealer.dealership_name)
     const logoUrl = logo_url ?? brandLogoUrl(brandName, '4w')
     const inventoryHeroImage = firstVehicleHeroImage(cars)
-    const heroImageUrl = brandFilter
-        ? inventoryHeroImage
-        : hero_image_url ?? inventoryHeroImage
+    const heroImageUrl = resolveDealerHeroImage({
+        uploadedHeroImage: hero_image_url,
+        inventoryHeroImage,
+    })
 
     const contactInfo = {
         phone: dealer.phone,
         email: dealer.email,
         address: dealer.full_address ?? dealer.location,
     }
+    const sellVehicleHref = isUsedSite
+        ? isMainDealerHost(host, baseDomain)
+            ? `${siteHrefForSlug(slug).replace(/\/$/, '')}/sell`
+            : '/sell'
+        : undefined
 
     // ── Hero text ─────────────────────────────────────────────────────────────
     const heroDefaults: Record<string, { title: string; subtitle: string }> = {
@@ -606,6 +612,7 @@ export default async function SitePage({ params }: SitePageProps) {
         sellsNewCars: templateSellsNew,
         sellsUsedCars: templateSellsUsed,
         isVerified: false,
+        sellVehicleHref,
     }
 
     // ── JSON-LD structured data ───────────────────────────────────────────────

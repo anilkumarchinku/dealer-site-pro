@@ -20,7 +20,7 @@ const leadOptions = {
     parseLead: (body: unknown) => thwLeadSchema.safeParse(body),
     formatParseError: formatError,
     buildCreatePayload: (data: ThreeWheelerLeadInput) => buildVehicleLeadPayload(data, {
-        fleet_size: null,
+        fleet_size: data.fleet_size ?? null,
         status: 'new' as const,
     }),
     createLead: createThreeWheelerLead,

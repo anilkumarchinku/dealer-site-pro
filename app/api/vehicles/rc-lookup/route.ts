@@ -223,13 +223,18 @@ async function surepassEdgeFunctionLookup(
 
 /** Get dealer ID from authenticated user */
 async function getDealerIdForUser(userId: string): Promise<string | null> {
-    const supabase = createAdminClient()
-    const { data } = await supabase
-        .from('dealers')
-        .select('id')
-        .eq('user_id', userId)
-        .single()
-    return data?.id ?? null
+    try {
+        const supabase = createAdminClient()
+        const { data } = await supabase
+            .from('dealers')
+            .select('id')
+            .eq('user_id', userId)
+            .single()
+        return data?.id ?? null
+    } catch (err) {
+        console.warn('[RC Lookup] Dealer lookup skipped:', err instanceof Error ? err.message : err)
+        return null
+    }
 }
 
 export async function POST(request: NextRequest) {

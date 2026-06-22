@@ -13,7 +13,7 @@ import type { Car } from "@/lib/types/car"
 import type { ThreeWheelerVehicle } from "@/lib/types/three-wheeler"
 import type { Service } from "@/lib/types"
 import { dedupeByBrandModel, dedupeCaseInsensitiveStrings } from "@/lib/utils/listing-dedupe"
-import { brandLogoUrl as getBrandLogoUrl, firstVehicleHeroImage } from "@/lib/utils/site-assets"
+import { brandLogoUrl as getBrandLogoUrl, firstVehicleHeroImage, resolveDealerHeroImage } from "@/lib/utils/site-assets"
 import { brandToUrlSlug } from "@/lib/utils/domain"
 
 interface Props {
@@ -198,7 +198,10 @@ export default async function NewThreeWheelersPage({ params, searchParams }: Pro
   const cars = threeWheelersToCars(vehicles)
 
   const logoUrl = dealer.logo_url ?? (primaryBrand ? getBrandLogoUrl(primaryBrand, '3w') ?? undefined : undefined)
-  const heroImageUrl = dealer.hero_image_url ?? firstVehicleHeroImage(cars)
+  const heroImageUrl = resolveDealerHeroImage({
+    uploadedHeroImage: dealer.hero_image_url,
+    inventoryHeroImage: firstVehicleHeroImage(cars),
+  })
 
   const contactInfo = {
     phone: dealer.phone,

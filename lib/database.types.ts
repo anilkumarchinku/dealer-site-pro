@@ -46,6 +46,10 @@ export interface Database {
           cyepro_api_key: string | null
           branches: Json | null
           vehicle_type: string | null
+          booking_amount_paise: number
+          four_wheeler_booking_amount_paise: number
+          two_wheeler_booking_amount_paise: number
+          three_wheeler_booking_amount_paise: number
           brands: string[] | null
           created_at: string
           updated_at: string
@@ -617,6 +621,10 @@ export interface Database {
           preferred_date: string | null
           message: string | null
           offer_price_paise: number | null
+          cyepro_sync_status: 'pending' | 'synced' | 'failed' | 'skipped'
+          cyepro_synced_at: string | null
+          cyepro_error: string | null
+          cyepro_lead_id: string | null
           status: string
           created_at: string
         }
@@ -782,6 +790,12 @@ export interface Database {
           email: string | null
           preferred_date: string | null
           message: string | null
+          offer_price_paise: number | null
+          fleet_size: number | null
+          cyepro_sync_status: 'pending' | 'synced' | 'failed' | 'skipped'
+          cyepro_synced_at: string | null
+          cyepro_error: string | null
+          cyepro_lead_id: string | null
           status: string
           created_at: string
         }

@@ -25,6 +25,13 @@ type CyeproDiagnosticResponse = {
     totalElements?: number
 }
 
+type CyeproDiagnosticResult = {
+    success: boolean
+    message?: string
+    hasApiKey?: boolean
+    diagnostics: { timestamp: string; steps: DiagnosticStep[] }
+}
+
 export async function POST(request: Request) {
     const diagnostics: { timestamp: string; steps: DiagnosticStep[] } = {
         timestamp: new Date().toISOString(),
@@ -82,7 +89,12 @@ export async function POST(request: Request) {
                 status: 'FAIL',
                 error: 'No Cyepro API key configured. Go to Settings → Integrations.',
             })
-            return NextResponse.json({ success: false, diagnostics })
+            return NextResponse.json({
+                success: false,
+                hasApiKey: false,
+                message: 'No Cyepro API key configured. Go to Settings → Integrations.',
+                diagnostics,
+            } satisfies CyeproDiagnosticResult)
         }
 
         // Step 4: Test the Cyepro API with a minimal request
@@ -208,7 +220,7 @@ export async function POST(request: Request) {
                 error: errMsg,
                 durationMs: duration,
                 hint: errMsg.includes('ENOTFOUND') || errMsg.includes('getaddrinfo')
-                    ? 'DNS resolution failed — api.cyepro.com may not exist or is unreachable'
+                    ? `DNS resolution failed — ${getCyeproApiBaseUrl()} may not exist or is unreachable`
                     : errMsg.includes('ECONNREFUSED')
                         ? 'Connection refused — the API server is not accepting connections'
                         : errMsg.includes('ETIMEDOUT') || errMsg.includes('timeout')
@@ -217,9 +229,10 @@ export async function POST(request: Request) {
             })
             return NextResponse.json({
                 success: false,
+                hasApiKey: true,
                 message: `Cannot reach ${getCyeproApiBaseUrl()}: ${errMsg}`,
                 diagnostics,
-            })
+            } satisfies CyeproDiagnosticResult)
         }
         const duration = Date.now() - startTime
 
@@ -259,11 +272,12 @@ export async function POST(request: Request) {
 
         return NextResponse.json({
             success: vehicles.length > 0,
+            hasApiKey: true,
             message: vehicles.length > 0
                 ? `Connected! Found ${totalCount} vehicles.`
                 : 'API connected but no vehicles found. Check if your Cyepro account has inventory.',
             diagnostics,
-        })
+        } satisfies CyeproDiagnosticResult)
 
     } catch (error) {
         diagnostics.steps.push({
@@ -271,6 +285,6 @@ export async function POST(request: Request) {
             status: 'FAIL',
             error: error instanceof Error ? error.message : String(error),
         })
-        return NextResponse.json({ success: false, diagnostics }, { status: 500 })
+        return NextResponse.json({ success: false, diagnostics } satisfies CyeproDiagnosticResult, { status: 500 })
     }
 }

@@ -96,7 +96,13 @@ export const timeString = z
 // ── Lead schemas ────────────────────────────────────────────────
 
 export const VALID_LEAD_SOURCES = [
-    'contact_form', 'car_enquiry', 'test_drive', 'whatsapp', 'phone', 'price_alert'
+    'contact_form', 'car_enquiry', 'test_drive', 'whatsapp', 'phone', 'price_alert',
+    // Service IDs sent by EnquireSidebar when a service tile is selected
+    'home_test_drives', 'financing', 'parts_accessories', 'trade_in', 'insurance',
+    'service_maintenance', 'express_service', 'extended_warranties', 'fleet_sales',
+    'buy_accessories', 'new_car_sales', 'used_car_sales',
+    // Exchange / finance section forms
+    'exchange', 'finance_inquiry',
 ] as const
 
 export const leadSchema = z.object({
@@ -124,9 +130,13 @@ export const sellRequestSchema = z.object({
     fuel_type:             z.string().trim().min(1, 'Fuel type is required').max(50),
     transmission:          z.string().trim().max(50).optional().nullable(),
     registration_number:   z.string().trim().max(20).optional().nullable(),
+    vin:                   z.string().trim().max(50).optional().nullable(),
     mileage_km:            z.number().int().min(0).max(500_000),
     owner_count:           z.string().trim().max(20).optional().nullable(),
     expected_price_paise:  z.number().int().min(0).max(500_000_000).optional().nullable(),
+    color:                 z.string().trim().max(50).optional().nullable(),
+    body_type:             z.string().trim().max(50).optional().nullable(),
+    features:              z.array(z.string().trim().min(1).max(80)).max(30).optional().default([]),
     city:                  z.string().trim().max(100).optional().nullable(),
     address:               z.string().trim().max(500).optional().nullable(),
     preferred_date:        dateString.optional().nullable(),
@@ -134,6 +144,16 @@ export const sellRequestSchema = z.object({
     estimated_low_paise:   z.number().int().min(0).max(500_000_000).optional().nullable(),
     estimated_high_paise:  z.number().int().min(0).max(500_000_000).optional().nullable(),
     photo_urls:            z.array(z.string().trim().url('Invalid photo URL').max(2000)).max(12).optional().default([]),
+    insurance_status:      z.enum(['unknown', 'active', 'expired', 'expiring_soon']).optional().default('unknown'),
+    insurance_provider:    z.string().trim().max(100).optional().nullable(),
+    insurance_valid_until: dateString.optional().nullable(),
+    insurance_quote_url:   safeUrl,
+    video_url:             safeUrl,
+    accident_history:      z.enum(['unknown', 'none', 'minor', 'major']).optional().nullable(),
+    flood_damage:          z.boolean().optional().nullable(),
+    service_history_available: z.boolean().optional().nullable(),
+    rc_available:          z.boolean().optional().nullable(),
+    loan_active:           z.boolean().optional().nullable(),
     notes:                 message,
 })
 
@@ -205,6 +225,7 @@ export const thwLeadSchema = z.object({
     preferred_date:    dateString.optional().nullable(),
     message:           message,
     offer_price_paise: z.number().int().min(0).max(10_000_000).optional().nullable(),
+    fleet_size:        z.number().int().min(1).max(10_000).optional().nullable(),
 })
 
 export type ThwLeadInput = z.infer<typeof thwLeadSchema>

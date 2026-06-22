@@ -85,7 +85,11 @@ export default function UsedVehiclesPage() {
         const [tw, thw, settings] = await Promise.allSettled([
             fetch(`/api/two-wheelers/used?dealerId=${dealerId}&pageSize=1`).then(r => r.json()),
             fetch(`/api/three-wheelers/used?dealerId=${dealerId}&pageSize=1`).then(r => r.json()),
-            fetch(`/api/inventory/cyepro/test`).then(r => r.json()),
+            fetch(`/api/inventory/cyepro/test`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ dealerId }),
+            }).then(r => r.json()),
         ])
 
         setStats({
@@ -100,7 +104,7 @@ export default function UsedVehiclesPage() {
         })
 
         if (settings.status === 'fulfilled') {
-            setCyeproConnected(settings.value.hasApiKey === true)
+            setCyeproConnected(settings.value.hasApiKey === true || settings.value.success === true)
         }
     }, [dealerId])
 
@@ -118,7 +122,7 @@ export default function UsedVehiclesPage() {
             fetch("/api/inventory/cyepro", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ dealerId, fetchAll: true, maxVehicles: 100, size: 50 }),
+                body: JSON.stringify({ dealerId, fetchAll: true, maxVehicles: 100, size: 50, vehicleCategory: "4w" }),
             }).then(r => r.ok ? r.json() : { cars: [] }),
         ])
 

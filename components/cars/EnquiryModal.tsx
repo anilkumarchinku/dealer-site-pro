@@ -170,6 +170,8 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
 
     if (!car) return null;
 
+    const isUsed = car.condition === 'used' || car.condition === 'certified_pre_owned';
+
     // Uploaded DB gallery images must win; catalog guesses are only fallbacks.
     const heroSrc = heroFallbackList[heroImgIdx] ?? null;
 
@@ -307,14 +309,14 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
                         {/* Price */}
                         <div className="flex items-baseline gap-3 pb-4 border-b">
                             <div>
-                                <p className="text-xs text-gray-600 uppercase tracking-wide mb-1">Price Range</p>
+                                <p className="text-xs text-gray-600 uppercase tracking-wide mb-1">{isUsed ? 'Price' : 'Price Range'}</p>
                                 <div className="flex items-baseline gap-2">
                                     <span className="text-3xl font-bold text-gray-900">{priceRange}</span>
                                     {showMaxPrice && (
                                         <span className="text-lg text-gray-600">- {maxPrice}</span>
                                     )}
                                 </div>
-                                <p className="text-xs text-gray-600 mt-1">Ex-showroom price</p>
+                                <p className="text-xs text-gray-600 mt-1">{isUsed ? 'Price' : 'Ex-showroom price'}</p>
                             </div>
                             {car.pricing.emi && (
                                 <div className="ml-auto text-right">

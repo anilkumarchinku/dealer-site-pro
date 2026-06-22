@@ -11,6 +11,7 @@ export async function POST(request: NextRequest) {
     return createVehicleBookingOrder(request, {
         rateLimitKey: 'thw_booking_create',
         logPrefix: 'thw_booking',
+        vehicleCategory: '3w',
         createBooking: (payload) => createThreeWheelerBooking({
             ...payload,
             status: 'pending',

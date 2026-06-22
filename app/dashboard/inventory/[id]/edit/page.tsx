@@ -227,18 +227,19 @@ export default function EditVehiclePage() {
     }
 
     return (
-        <form onSubmit={handleSubmit} className="mx-auto max-w-3xl space-y-6">
-            <div className="flex items-center justify-between gap-4">
+        <form onSubmit={handleSubmit} className="mx-auto max-w-4xl space-y-6 pb-8">
+            <div className="rounded-2xl border border-border/70 bg-card/90 p-5 shadow-sm dark:bg-card/80 sm:p-6 flex items-start justify-between gap-4">
                 <div className="flex items-center gap-3">
-                    <Button variant="ghost" size="icon" asChild>
-                        <Link href="/dashboard/inventory"><ArrowLeft className="h-4 w-4" /></Link>
+                    <Button variant="ghost" size="icon" asChild className="rounded-xl">
+                        <Link href="/dashboard/inventory" aria-label="Back to inventory"><ArrowLeft className="h-4 w-4" /></Link>
                     </Button>
                     <div>
-                        <h1 className="text-2xl font-bold">Edit Vehicle</h1>
-                        <p className="text-sm text-muted-foreground">Update listing details, SEO, insurance, and stock status.</p>
+                        <p className="mb-2 text-[11px] font-black uppercase tracking-[0.24em] text-blue-600 dark:text-blue-300">Inventory editor</p>
+                        <h1 className="text-2xl font-black tracking-tight sm:text-3xl">Edit Vehicle</h1>
+                        <p className="mt-2 max-w-2xl text-sm leading-6 text-muted-foreground">Update listing details, SEO, insurance, and stock status.</p>
                     </div>
                 </div>
-                <Button type="button" variant="outline" disabled={saving || !vehicle || form.status === "sold"} onClick={markSold} className="gap-2">
+                <Button type="button" variant="outline" disabled={saving || !vehicle || form.status === "sold"} onClick={markSold} className="rounded-xl gap-2">
                     <BadgeCheck className="h-4 w-4" />
                     Mark Sold
                 </Button>
@@ -246,7 +247,7 @@ export default function EditVehiclePage() {
 
             {error && <div className="rounded-xl border border-red-200 bg-red-50 p-3 text-sm text-red-700">{error}</div>}
 
-            <Card>
+            <Card className="rounded-2xl border-border/70 bg-card/90 shadow-sm dark:bg-card/80">
                 <CardHeader>
                     <CardTitle>Vehicle Photos</CardTitle>
                     <CardDescription>Upload up to {MAX_VEHICLE_IMAGES} photos. The first photo is shown on the buyer-facing inventory card.</CardDescription>
@@ -283,7 +284,7 @@ export default function EditVehiclePage() {
                 </CardContent>
             </Card>
 
-            <Card>
+            <Card className="rounded-2xl border-border/70 bg-card/90 shadow-sm dark:bg-card/80">
                 <CardHeader>
                     <CardTitle>Basic Details</CardTitle>
                     <CardDescription>Core inventory fields shown on the public listing.</CardDescription>
@@ -308,7 +309,7 @@ export default function EditVehiclePage() {
                 </CardContent>
             </Card>
 
-            <Card>
+            <Card className="rounded-2xl border-border/70 bg-card/90 shadow-sm dark:bg-card/80">
                 <CardHeader>
                     <CardTitle>Content</CardTitle>
                 </CardHeader>
@@ -324,7 +325,7 @@ export default function EditVehiclePage() {
                 </CardContent>
             </Card>
 
-            <Card>
+            <Card className="rounded-2xl border-border/70 bg-card/90 shadow-sm dark:bg-card/80">
                 <CardHeader>
                     <CardTitle>Insurance</CardTitle>
                 </CardHeader>
@@ -336,7 +337,7 @@ export default function EditVehiclePage() {
                 </CardContent>
             </Card>
 
-            <Card>
+            <Card className="rounded-2xl border-border/70 bg-card/90 shadow-sm dark:bg-card/80">
                 <CardHeader>
                     <CardTitle>SEO Metadata</CardTitle>
                 </CardHeader>

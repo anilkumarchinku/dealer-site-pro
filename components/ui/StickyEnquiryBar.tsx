@@ -64,7 +64,7 @@ export function StickyEnquiryBar({
             }}
         >
             <div className="bg-white pb-4 pt-2 px-2">
-                <div className="grid grid-cols-4 gap-1.5">
+                <div className={`grid gap-1.5 ${onTestDrive ? 'grid-cols-4' : 'grid-cols-3'}`}>
                     {/* Call */}
                     <a
                         href={`tel:${phone}`}
@@ -85,15 +85,16 @@ export function StickyEnquiryBar({
                         <span className="text-[11px] font-medium text-gray-700">WhatsApp</span>
                     </a>
 
-                    {/* Test Drive */}
-                    <button
-                        onClick={onTestDrive}
-                        type="button"
-                        className="flex flex-col items-center justify-center gap-1 py-2.5 rounded-xl bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 active:scale-95 transition-transform"
-                    >
-                        <Calendar className="w-5 h-5" />
-                        <span className="text-[11px] font-medium">{testDriveLabel}</span>
-                    </button>
+                    {onTestDrive && (
+                        <button
+                            onClick={onTestDrive}
+                            type="button"
+                            className="flex flex-col items-center justify-center gap-1 py-2.5 rounded-xl bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 active:scale-95 transition-transform"
+                        >
+                            <Calendar className="w-5 h-5" />
+                            <span className="text-[11px] font-medium">{testDriveLabel}</span>
+                        </button>
+                    )}
 
                     {/* Enquire — brand color */}
                     <a

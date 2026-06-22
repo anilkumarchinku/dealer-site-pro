@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
 import { recordDomainDeploymentOperation } from '@/lib/services/domain-deployment-operation-service'
 import { isValidDomain, verifyCustomDomain } from '@/lib/services/dns-verification-service'
-import { addDomainToProject, registerDomainOnMainProject } from '@/lib/services/vercel-service'
+import { registerDomainOnMainProject } from '@/lib/services/vercel-service'
 import { requireAuth, requireDealerOwnership } from '@/lib/supabase-server'
 
 // Correct DNS records for Vercel custom domains.
@@ -152,28 +152,11 @@ export async function POST(request: Request) {
             )
         }
 
-        // ── Fetch dealer type to decide which Vercel project to register on ──
-        const { data: dealerInfo } = await supabase
-            .from('dealers')
-            .select('sells_new_cars, sells_used_cars, slug')
-            .eq('id', dealerId)
-            .single()
-
-        // 1st hand (new cars only) → main multi-tenant project
-        // 2nd hand / hybrid        → their individual Vercel project
-        const isFirstHand = dealerInfo?.sells_new_cars === true && dealerInfo?.sells_used_cars === false
-
-        // Attempt to register domain on the appropriate Vercel project.
+        // Attempt to register domain on the shared multi-tenant Vercel project.
         // Errors here are non-fatal — domain is already saved in DB.
         let vercelRegistered = false
         try {
-            if (isFirstHand) {
-                await registerDomainOnMainProject(normalizedCustomDomain)
-            } else {
-                const slug = dealerInfo?.slug
-                if (!slug) throw new Error('Dealer slug not found')
-                await addDomainToProject(slug, normalizedCustomDomain)
-            }
+            await registerDomainOnMainProject(normalizedCustomDomain)
             vercelRegistered = true
             await recordDomainDeploymentOperation({
                 dealerId,
@@ -182,7 +165,7 @@ export async function POST(request: Request) {
                 operation: 'custom_domain_connect',
                 status: 'provider_succeeded',
                 providerStep: 'vercel',
-                details: { target: isFirstHand ? 'main-project' : 'dealer-project' },
+                details: { target: 'main-project' },
             })
         } catch (vercelError) {
             console.error('Vercel domain registration failed (non-fatal):', vercelError)

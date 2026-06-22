@@ -98,21 +98,23 @@ export default function TwoWheelerIndexPage() {
             {/* Header */}
             <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
                 <div className="container flex h-16 items-center justify-between px-8">
-                    <button
-                        onClick={() => router.push("/")}
-                        className="flex items-center gap-3 hover:opacity-70 transition-opacity"
-                    >
-                        <div className="w-9 h-9 rounded-lg bg-primary flex items-center justify-center">
-                            <Bike className="w-5 h-5 text-primary-foreground" />
-                        </div>
-                        <span className="text-lg font-semibold text-foreground">DealerSite Pro</span>
-                    </button>
-                    <div className="flex items-center gap-2">
-                        <ThemeToggle />
+                    <div className="flex items-center gap-4">
                         <Button variant="ghost" size="sm" onClick={() => router.push("/onboarding")}>
                             <ArrowLeft className="w-4 h-4 mr-2" />
                             Back
                         </Button>
+                        <button
+                            onClick={() => router.push("/")}
+                            className="flex items-center gap-3 hover:opacity-70 transition-opacity"
+                        >
+                            <div className="w-9 h-9 rounded-lg bg-primary flex items-center justify-center">
+                                <Bike className="w-5 h-5 text-primary-foreground" />
+                            </div>
+                            <span className="text-lg font-semibold text-foreground">DealerSite Pro</span>
+                        </button>
+                    </div>
+                    <div className="flex items-center gap-2">
+                        <ThemeToggle />
                     </div>
                 </div>
             </header>
