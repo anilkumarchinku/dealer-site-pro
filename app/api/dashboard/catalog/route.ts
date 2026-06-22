@@ -208,20 +208,38 @@ function dedupeBrands(brands: CatalogBrand[]): CatalogBrand[] {
     return result
 }
 
+function rowsToCatalogBrands(rows: DealerBrandRow[] | null | undefined): CatalogBrand[] {
+    return (rows ?? [])
+        .map((row) => resolveCatalogBrand(row.brand_name, row.vehicle_type))
+        .filter((brand): brand is CatalogBrand => Boolean(brand))
+}
+
+async function loadPublicDealerBrandRows(supabase: RouteSupabaseClient, dealerId: string): Promise<DealerBrandRow[]> {
+    const client = supabase as unknown as { from: (table: string) => any }
+    const { data, error } = await client
+        .from('public_dealer_site_brands')
+        .select('brand_name, is_primary, vehicle_type')
+        .eq('dealer_id', dealerId)
+        .order('is_primary', { ascending: false })
+        .order('brand_name', { ascending: true })
+
+    if (error || !data) return []
+    return data as DealerBrandRow[]
+}
+
 async function loadSelectedBrands(supabase: RouteSupabaseClient, dealer: DealerProfileRow): Promise<CatalogBrand[]> {
-    const { data: rows } = await supabase
+    const { data: rows, error } = await supabase
         .from('dealer_brands')
         .select('brand_name, is_primary, vehicle_type')
         .eq('dealer_id', dealer.id)
         .order('is_primary', { ascending: false })
         .order('brand_name', { ascending: true })
 
-    const explicitRows = (rows ?? []) as DealerBrandRow[]
-    const selected = explicitRows
-        .map((row) => resolveCatalogBrand(row.brand_name, row.vehicle_type))
-        .filter((brand): brand is CatalogBrand => Boolean(brand))
-
+    const selected = rowsToCatalogBrands(error ? [] : rows as DealerBrandRow[])
     if (selected.length > 0) return dedupeBrands(selected)
+
+    const publicSelected = rowsToCatalogBrands(await loadPublicDealerBrandRows(supabase, dealer.id))
+    if (publicSelected.length > 0) return dedupeBrands(publicSelected)
 
     const fallback = (dealer.brands ?? [])
         .map((brand) => resolveCatalogBrand(brand))

@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { cn } from "@/lib/utils"
-import { deriveInsuranceStatus, parseIndianDate, parseMakeModel, type RCData } from "@/lib/utils/rc-mapper"
+import { deriveInsuranceStatus, getChallanSummary, parseIndianDate, parseMakeModel, type RCData } from "@/lib/utils/rc-mapper"
 import { AlertCircle, Camera, CheckCircle, Clock, ExternalLink, FileSearch, IndianRupee, Loader2, Phone, RefreshCw, Search, ShieldCheck, XCircle } from "lucide-react"
 
 type SellRequestStatus = "new" | "reviewing" | "contacted" | "approved" | "rejected" | "listed"
@@ -413,6 +413,7 @@ export default function SellRequestsPage() {
 
         const fields = buildComparisonFields(request, state.data)
         const choices = fieldChoices[request.id] ?? {}
+        const challanSummary = getChallanSummary(state.data)
 
         return (
             <div className="space-y-3 rounded-xl border bg-muted/20 p-3">
@@ -480,7 +481,7 @@ export default function SellRequestsPage() {
                     {detailChip("Owner", state.data.owner_name)}
                     {detailChip("RTO", state.data.rto)}
                     {detailChip("State", state.data.state)}
-                    {detailChip("Challan", state.data.challan_status ?? (state.data.challan_count != null ? `${state.data.challan_count} pending` : null))}
+                    {detailChip("Challan", challanSummary.status)}
                     {detailChip("Engine", state.data.engine_number)}
                     {detailChip("Class", state.data.vehicle_class)}
                     {detailChip("RC validity", state.data.rc_validity_upto)}
@@ -512,7 +513,7 @@ export default function SellRequestsPage() {
                         <InfoRow label="Fitness Valid Upto" value={state.data.fitness_upto} />
                         <InfoRow label="RC Validity" value={state.data.rc_validity_upto} />
                         <InfoRow label="Financer" value={state.data.financer} />
-                        <InfoRow label="e-Challan" value={state.data.challan_status ?? (state.data.challan_count != null ? `${state.data.challan_count} pending challan(s)` : null)} highlight={(state.data.challan_count ?? 0) > 0} />
+                        <InfoRow label="e-Challan" value={challanSummary.status} highlight={challanSummary.hasPending} />
                         <InfoRow label="NOC Details" value={state.data.noc_details} />
                         <InfoRow label="Engine No." value={state.data.engine_number} />
                         <InfoRow label="Chassis No." value={state.data.chassis_number} />

@@ -5,6 +5,18 @@
 
 import type { DBVehicle, AddVehiclePayload } from "@/lib/db/vehicles";
 
+export interface RCChallan {
+    challan_number?: string;
+    offense_details?: string;
+    challan_place?: string | null;
+    challan_date?: string;
+    amount?: number | string | null;
+    challan_status?: string | null;
+    status?: string | null;
+    state?: string;
+    court_challan?: boolean | null;
+}
+
 export interface RCData {
     rc_number: string;
     owner_name?: string;
@@ -33,15 +45,7 @@ export interface RCData {
     financer?: string;
     body_type?: string;
     seating_capacity?: string | number;
-    challans?: Array<{
-        challan_number?: string;
-        offense_details?: string;
-        challan_place?: string | null;
-        challan_date?: string;
-        amount?: number | string;
-        challan_status?: string | null;
-        state?: string;
-    }>;
+    challans?: RCChallan[];
 }
 
 /**
@@ -148,6 +152,65 @@ export function deriveInsuranceStatus(
     if (daysUntilExpiry < 0) return "expired";
     if (daysUntilExpiry <= 30) return "expiring_soon";
     return "active";
+}
+
+function parseChallanAmount(value: RCChallan["amount"]): number {
+    if (typeof value === "number") return Number.isFinite(value) ? value : 0;
+    if (typeof value !== "string") return 0;
+
+    const parsed = Number(value.replace(/[^0-9.]/g, ""));
+    return Number.isFinite(parsed) ? parsed : 0;
+}
+
+export function isPendingChallan(challan: RCChallan): boolean {
+    const status = String(challan.challan_status ?? challan.status ?? "").toLowerCase();
+
+    if (status.includes("not paid") || status.includes("unpaid") || status.includes("pending")) {
+        return true;
+    }
+
+    if (status.includes("paid") || status.includes("closed") || status.includes("disposed")) {
+        return false;
+    }
+
+    return parseChallanAmount(challan.amount) > 0;
+}
+
+export function getChallanSummary(rcData: {
+    challans?: RCChallan[] | null;
+    challan_count?: number | null;
+    challan_status?: string | null;
+}) {
+    const challans = Array.isArray(rcData.challans) ? rcData.challans : [];
+
+    if (challans.length > 0) {
+        const pendingCount = challans.filter(isPendingChallan).length;
+        const status = pendingCount > 0
+            ? `${pendingCount} pending challan${pendingCount === 1 ? "" : "s"} found`
+            : `${challans.length} challan record${challans.length === 1 ? "" : "s"} found, none pending`;
+
+        return {
+            status,
+            pendingCount,
+            recordCount: challans.length,
+            hasPending: pendingCount > 0,
+            hasRecords: true,
+        };
+    }
+
+    const pendingCount = typeof rcData.challan_count === "number" ? rcData.challan_count : 0;
+
+    return {
+        status: rcData.challan_status ?? (
+            rcData.challan_count != null
+                ? `${pendingCount} pending challan${pendingCount === 1 ? "" : "s"}`
+                : undefined
+        ),
+        pendingCount,
+        recordCount: 0,
+        hasPending: pendingCount > 0,
+        hasRecords: false,
+    };
 }
 
 /**

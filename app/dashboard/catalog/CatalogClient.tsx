@@ -542,6 +542,7 @@ export function CatalogClient({ models: initialModels }: Props) {
     const [addOpen, setAddOpen] = useState(false)
     const [addForm, setAddForm] = useState<AddModelForm>(() => blankAddModelForm("4w"))
     const [savingModel, setSavingModel] = useState(false)
+    const [loadError, setLoadError] = useState<string | null>(null)
     const [addError, setAddError] = useState<string | null>(null)
     const [addSuccess, setAddSuccess] = useState<string | null>(null)
 
@@ -555,17 +556,19 @@ export function CatalogClient({ models: initialModels }: Props) {
         let cancelled = false
 
         const loadCatalog = async () => {
+            setLoadError(null)
             try {
                 const response = await fetch('/api/dashboard/catalog', { cache: 'no-store' })
-                if (!response.ok) throw new Error('Failed to load catalog')
+                const payload = await response.json().catch(() => null) as { models?: CatalogModel[]; brands?: CatalogBrand[]; error?: string } | null
+                if (!response.ok) throw new Error(payload?.error ?? 'Failed to load catalog')
 
-                const payload = await response.json() as { models?: CatalogModel[]; brands?: CatalogBrand[] }
                 if (!cancelled) {
-                    setModels(Array.isArray(payload.models) ? payload.models : [])
-                    setBrands(Array.isArray(payload.brands) ? payload.brands : [])
+                    setModels(Array.isArray(payload?.models) ? payload.models : [])
+                    setBrands(Array.isArray(payload?.brands) ? payload.brands : [])
                 }
-            } catch {
+            } catch (error) {
                 if (!cancelled) {
+                    setLoadError(error instanceof Error ? error.message : "Failed to load catalog")
                     setModels([])
                     setBrands([])
                 }
@@ -742,8 +745,25 @@ export function CatalogClient({ models: initialModels }: Props) {
                     </div>
                 )}
 
+                {!isLoading && loadError && (
+                    <div className="rounded-2xl border border-red-200 bg-red-50 px-6 py-5 text-sm text-red-700 shadow-sm dark:border-red-900/60 dark:bg-red-950/40 dark:text-red-300">
+                        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                            <div className="flex items-start gap-2">
+                                <AlertCircle className="mt-0.5 h-4 w-4 shrink-0" />
+                                <div>
+                                    <p className="font-semibold">Catalog could not load.</p>
+                                    <p className="mt-1">{loadError}</p>
+                                </div>
+                            </div>
+                            <Button type="button" variant="outline" size="sm" onClick={() => window.location.reload()}>
+                                Retry
+                            </Button>
+                        </div>
+                    </div>
+                )}
+
                 {/* Brand sections */}
-                {!isLoading && brandSections.length === 0 ? (
+                {!isLoading && !loadError && brandSections.length === 0 ? (
                     <div className="rounded-2xl border border-dashed border-gray-300 bg-white px-6 py-12 text-center shadow-sm dark:border-slate-800 dark:bg-slate-950">
                         <p className="text-sm font-semibold text-gray-700 dark:text-slate-200">
                             {brands.length === 0
@@ -756,7 +776,7 @@ export function CatalogClient({ models: initialModels }: Props) {
                             Select OEMs from onboarding or the category dashboard, then add any newly released models here.
                         </p>
                     </div>
-                ) : (
+                ) : !isLoading && !loadError ? (
                     <div className="space-y-10">
                         {brandSections.map((g) => (
                             <BrandSection
@@ -770,7 +790,7 @@ export function CatalogClient({ models: initialModels }: Props) {
                             />
                         ))}
                     </div>
-                )}
+                ) : null}
             </div>
             <AddModelDialog
                 open={addOpen}
