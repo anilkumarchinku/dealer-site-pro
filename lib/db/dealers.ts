@@ -231,7 +231,7 @@ export async function fetchDealerBySlug(slug: string): Promise<DealerPublicData 
     const [brandsResult, mainConfigResult, siteConfigResult, vehiclesResult, servicesResult, serviceCentersResult] = await Promise.all([
         supabase
             .from('dealer_brands')
-            .select('brand_name')
+            .select('brand_name, vehicle_type')
             .eq('dealer_id', dealer.id),
         supabase
             .from('dealer_template_configs')
@@ -285,7 +285,9 @@ export async function fetchDealerBySlug(slug: string): Promise<DealerPublicData 
         sells_used_cars:      dealer.sells_used_cars      ?? false,
         sells_two_wheelers:   dealer.sells_two_wheelers   ?? false,
         sells_three_wheelers: dealer.sells_three_wheelers ?? false,
-        brands:          brandsResult.data?.map(b => b.brand_name) ?? [],
+        brands:          brandsResult.data
+            ?.filter(b => b.vehicle_type === 'cars' || b.vehicle_type == null)
+            .map(b => b.brand_name) ?? [],
         vehicles:        (vehiclesResult.data ?? []) as DBVehicle[],
         branches:        dealer.branches ?? null,
         service_centers: serviceCentersResult.data ?? null,
