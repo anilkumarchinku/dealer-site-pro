@@ -15,7 +15,11 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server'
-import { createAdminClient, getDealerForUser, requireAuth } from '@/lib/supabase-server'
+import {
+    createAdminClient,
+    getDealerForUser,
+    requireAuth,
+} from '@/lib/supabase-server'
 import { sendLeadSmsToDealer } from '@/lib/services/sms-service'
 import { forwardLeadToCyepro } from '@/lib/services/cyepro-service'
 import { sendLeadConfirmationEmail, sendLeadNotificationEmail } from '@/lib/services/email-service'
@@ -34,6 +38,15 @@ function getSupabase() {
 
 function isLeadStatus(value: unknown): value is LeadStatus {
     return typeof value === 'string' && LEAD_STATUSES.includes(value as LeadStatus)
+}
+
+function routeError(message: string, detail?: unknown) {
+    return NextResponse.json(
+        process.env.NODE_ENV === 'production' || detail === undefined
+            ? { error: message }
+            : { error: message, detail },
+        { status: 500 }
+    )
 }
 
 async function resolveVehicleId(
@@ -116,22 +129,26 @@ export async function GET() {
             return NextResponse.json({ error: 'Dealer account not found' }, { status: 404 })
         }
 
-        const supabase = getSupabase()
-        const { data, error } = await supabase
+        const { data, error } = await routeSupabase
             .from('leads')
-            .select('id, dealer_id, customer_name, customer_email, customer_phone, lead_type, vehicle_id, vehicle_interest, source, utm_source, message, status, cyepro_sync_status, cyepro_error, created_at, updated_at')
+            .select('id, dealer_id, customer_name, customer_email, customer_phone, lead_type, vehicle_id, vehicle_interest, source, utm_source, message, status, created_at, updated_at')
             .eq('dealer_id', dealer.id)
             .order('created_at', { ascending: false })
 
         if (error) {
             logger.error('Lead fetch error:', error.message)
-            return NextResponse.json({ error: 'Failed to fetch leads' }, { status: 500 })
+            return routeError('Failed to fetch leads', {
+                message: error.message,
+                code: error.code,
+                details: error.details,
+                hint: error.hint,
+            })
         }
 
         return NextResponse.json({ leads: data ?? [] })
     } catch (err) {
         logger.error('Lead API fetch error:', err)
-        return NextResponse.json({ error: 'Internal error' }, { status: 500 })
+        return routeError('Internal error', err instanceof Error ? err.message : String(err))
     }
 }
 
@@ -155,8 +172,7 @@ export async function PATCH(request: NextRequest) {
             return NextResponse.json({ error: 'Valid id and status are required' }, { status: 400 })
         }
 
-        const supabase = getSupabase()
-        const { data, error } = await supabase
+        const { data, error } = await routeSupabase
             .from('leads')
             .update({
                 status: body.status,
@@ -169,7 +185,12 @@ export async function PATCH(request: NextRequest) {
 
         if (error) {
             logger.error('Lead status update error:', error.message)
-            return NextResponse.json({ error: 'Failed to update lead' }, { status: 500 })
+            return routeError('Failed to update lead', {
+                message: error.message,
+                code: error.code,
+                details: error.details,
+                hint: error.hint,
+            })
         }
 
         if (!data) {
@@ -179,7 +200,7 @@ export async function PATCH(request: NextRequest) {
         return NextResponse.json({ success: true })
     } catch (err) {
         logger.error('Lead API update error:', err)
-        return NextResponse.json({ error: 'Internal error' }, { status: 500 })
+        return routeError('Internal error', err instanceof Error ? err.message : String(err))
     }
 }
 
