@@ -25,7 +25,7 @@ function getFAQs(vehicleType?: '2w' | '3w' | '4w'): FAQItem[] {
             {
                 question: 'Can I book a test ride online?',
                 answer:
-                    'Yes! Use the "Book Test Ride" button on any bike card. Our executive will contact you within 1 hour to schedule a slot at your preferred time.',
+                    'Yes! Use the "Book Test Ride" button on any bike card. Our team will get back to you to schedule a slot at your preferred time.',
             },
             {
                 question: 'What would the EMI be on a two-wheeler loan?',
@@ -45,7 +45,7 @@ function getFAQs(vehicleType?: '2w' | '3w' | '4w'): FAQItem[] {
             {
                 question: 'How long does RTO registration take?',
                 answer:
-                    'Typically 7–14 working days after purchase. We handle all paperwork and RTO formalities on your behalf.',
+                    'Timelines vary by RTO and location. We handle all paperwork and RTO formalities on your behalf — contact us for current processing times.',
             },
         ];
     }
@@ -70,12 +70,12 @@ function getFAQs(vehicleType?: '2w' | '3w' | '4w'): FAQItem[] {
             {
                 question: 'Do you offer fleet discounts?',
                 answer:
-                    'Yes, for purchases of 3 or more vehicles, we offer special fleet pricing. Contact our commercial team for customized quotes.',
+                    'We offer tailored options for bulk and fleet purchases. Contact our commercial team for a customized quote.',
             },
             {
                 question: 'What is the warranty on new three-wheelers?',
                 answer:
-                    'Standard manufacturer warranty of 1–3 years depending on brand and model. Extended warranty plans also available.',
+                    'New vehicles come with the standard manufacturer warranty, which varies by brand and model. Extended warranty plans may also be available — contact us for details.',
             },
             {
                 question: 'How do I book a trial run?',
@@ -95,7 +95,7 @@ function getFAQs(vehicleType?: '2w' | '3w' | '4w'): FAQItem[] {
         {
             question: 'Can I book a test drive at home?',
             answer:
-                'Yes, we offer home test drives! Use the "Book Test Drive" button on any car card. Our team will call within 1 hour to confirm a time slot convenient to you.',
+                'Yes, we offer home test drives! Use the "Book Test Drive" button on any car card. Our team will get back to you to confirm a time slot convenient to you.',
         },
         {
             question: 'What is the on-road price vs ex-showroom price?',
@@ -105,7 +105,7 @@ function getFAQs(vehicleType?: '2w' | '3w' | '4w'): FAQItem[] {
         {
             question: 'How long does car delivery take?',
             answer:
-                'For in-stock models, delivery can happen within 3–7 working days after payment. For specific colors or variants, it may take 2–4 weeks.',
+                'Delivery timelines depend on the model, variant, and colour you choose and on stock availability. Contact us for the expected timeline on the vehicle you want.',
         },
         {
             question: 'Do you have exchange or trade-in facility?',

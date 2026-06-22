@@ -14,6 +14,7 @@ import { useState } from 'react';
 import { Zap, MapPin, IndianRupee, ChevronDown, ChevronUp } from 'lucide-react';
 import type { Car } from '@/lib/types/car';
 import { Button } from '@/components/ui/button';
+import { getContrastText } from '@/lib/utils/color-contrast';
 
 // Known electric brands — used to gate EV charging map display
 const ELECTRIC_BRAND_KEYWORDS = [
@@ -40,20 +41,6 @@ interface EVSectionProps {
      *  shown if at least one brand is an electric brand. */
     brands?: string[];
 }
-
-// Popular EV models with range data (km)
-const EV_RANGE_DB: Record<string, number> = {
-    'Tata Nexon EV': 465,
-    'Tata Tiago EV': 315,
-    'Tata Punch EV': 421,
-    'MG ZS EV': 461,
-    'Hyundai Creta EV': 473,
-    'Hyundai Ioniq 5': 631,
-    'Kia EV6': 708,
-    'BYD Atto 3': 521,
-    'Mahindra XEV 9e': 656,
-    'Ola S1 Pro': 181,  // scooter
-};
 
 // FAME-II & top state incentives
 const INCENTIVES = [
@@ -215,12 +202,18 @@ export function EVSection({ cars, contactInfo, brandColor = '#10b981', brands }:
                     </div>
                 )}
 
-                {/* EV Cars CTA */}
+                {/* EV Cars CTA — links to the contact section (no inventory anchor exists) */}
                 <div className="text-center">
                     <p className="text-gray-600 text-sm mb-3">We have {evCars.length} electric vehicle{evCars.length !== 1 ? 's' : ''} in stock</p>
-                    <Button style={{ backgroundColor: brandColor }} className="gap-2 text-white">
-                        <Zap className="w-4 h-4" />
-                        View EV Inventory
+                    <Button
+                        asChild
+                        style={{ backgroundColor: brandColor, color: getContrastText(brandColor) }}
+                        className="gap-2"
+                    >
+                        <a href="#contact">
+                            <Zap className="w-4 h-4" />
+                            Enquire About EVs
+                        </a>
                     </Button>
                 </div>
             </div>

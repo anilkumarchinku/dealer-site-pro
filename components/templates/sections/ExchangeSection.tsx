@@ -1,8 +1,9 @@
 'use client';
 
-import { useState } from 'react';
+import { useId, useState } from 'react';
 import { CheckCircle2, ArrowLeftRight } from 'lucide-react';
 import { normalizeLeadPhone } from '@/lib/validations/lead';
+import { getContrastText } from '@/lib/utils/color-contrast';
 
 interface ExchangeSectionProps {
     brandColor: string;
@@ -21,7 +22,9 @@ interface ExchangeFormData {
     phone: string;
 }
 
-const YEAR_OPTIONS = Array.from({ length: 10 }, (_, i) => String(2024 - i));
+const YEAR_OPTIONS = Array.from({ length: 10 }, (_, i) =>
+    String(new Date().getFullYear() - i),
+);
 
 const KM_OPTIONS = [
     'Under 10,000 km',
@@ -46,6 +49,21 @@ export function ExchangeSection({
     vehicleType,
 }: ExchangeSectionProps) {
     const vehicleLabel = getVehicleLabel(vehicleType);
+
+    // Readable text color for the brand-filled CTA (light brands need dark text).
+    const onBrandText = getContrastText(brandColor);
+
+    // Stable, unique ids so each label is programmatically tied to its input.
+    const fieldId = useId();
+    const ids = {
+        make: `${fieldId}-make`,
+        model: `${fieldId}-model`,
+        year: `${fieldId}-year`,
+        kmDriven: `${fieldId}-km`,
+        condition: `${fieldId}-condition`,
+        name: `${fieldId}-name`,
+        phone: `${fieldId}-phone`,
+    };
 
     const [form, setForm] = useState<ExchangeFormData>({
         make: '',
@@ -126,8 +144,8 @@ export function ExchangeSection({
                         <ul className="mt-8 space-y-4">
                             {[
                                 'Free vehicle evaluation',
-                                'Instant price estimate',
-                                'Best market rates guaranteed',
+                                'Quick price estimate',
+                                'Fair, competitive exchange value',
                             ].map((benefit) => (
                                 <li key={benefit} className="flex items-center gap-3">
                                     <CheckCircle2
@@ -170,7 +188,7 @@ export function ExchangeSection({
                                 </div>
                                 <h3 className="text-xl font-bold text-gray-900">Request Received!</h3>
                                 <p className="text-gray-600 text-sm max-w-xs">
-                                    We&apos;ll call with your estimate within 2 hours!
+                                    We&apos;ll get back to you with your estimate soon.
                                 </p>
                             </div>
                         ) : (
@@ -179,12 +197,13 @@ export function ExchangeSection({
                                     Get Exchange Value
                                 </h3>
 
-                                <div className="grid grid-cols-2 gap-4">
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                     <div>
-                                        <label className="block text-xs font-medium text-gray-600 mb-1">
+                                        <label htmlFor={ids.make} className="block text-xs font-medium text-gray-600 mb-1">
                                             Vehicle Make
                                         </label>
                                         <input
+                                            id={ids.make}
                                             name="make"
                                             value={form.make}
                                             onChange={handleChange}
@@ -196,10 +215,11 @@ export function ExchangeSection({
                                         />
                                     </div>
                                     <div>
-                                        <label className="block text-xs font-medium text-gray-600 mb-1">
+                                        <label htmlFor={ids.model} className="block text-xs font-medium text-gray-600 mb-1">
                                             Vehicle Model
                                         </label>
                                         <input
+                                            id={ids.model}
                                             name="model"
                                             value={form.model}
                                             onChange={handleChange}
@@ -209,12 +229,13 @@ export function ExchangeSection({
                                     </div>
                                 </div>
 
-                                <div className="grid grid-cols-2 gap-4">
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                     <div>
-                                        <label className="block text-xs font-medium text-gray-600 mb-1">
+                                        <label htmlFor={ids.year} className="block text-xs font-medium text-gray-600 mb-1">
                                             Year
                                         </label>
                                         <select
+                                            id={ids.year}
                                             name="year"
                                             value={form.year}
                                             onChange={handleChange}
@@ -229,10 +250,11 @@ export function ExchangeSection({
                                         </select>
                                     </div>
                                     <div>
-                                        <label className="block text-xs font-medium text-gray-600 mb-1">
+                                        <label htmlFor={ids.kmDriven} className="block text-xs font-medium text-gray-600 mb-1">
                                             KM Driven
                                         </label>
                                         <select
+                                            id={ids.kmDriven}
                                             name="kmDriven"
                                             value={form.kmDriven}
                                             onChange={handleChange}
@@ -249,10 +271,11 @@ export function ExchangeSection({
                                 </div>
 
                                 <div>
-                                    <label className="block text-xs font-medium text-gray-600 mb-1">
+                                    <label htmlFor={ids.condition} className="block text-xs font-medium text-gray-600 mb-1">
                                         Condition
                                     </label>
                                     <select
+                                        id={ids.condition}
                                         name="condition"
                                         value={form.condition}
                                         onChange={handleChange}
@@ -270,10 +293,11 @@ export function ExchangeSection({
                                 <hr className="border-gray-100" />
 
                                 <div>
-                                    <label className="block text-xs font-medium text-gray-600 mb-1">
+                                    <label htmlFor={ids.name} className="block text-xs font-medium text-gray-600 mb-1">
                                         Your Name <span className="text-red-500">*</span>
                                     </label>
                                     <input
+                                        id={ids.name}
                                         name="name"
                                         value={form.name}
                                         onChange={handleChange}
@@ -284,10 +308,11 @@ export function ExchangeSection({
                                 </div>
 
                                 <div>
-                                    <label className="block text-xs font-medium text-gray-600 mb-1">
+                                    <label htmlFor={ids.phone} className="block text-xs font-medium text-gray-600 mb-1">
                                         Phone Number <span className="text-red-500">*</span>
                                     </label>
                                     <input
+                                        id={ids.phone}
                                         name="phone"
                                         value={form.phone}
                                         onChange={handleChange}
@@ -307,8 +332,8 @@ export function ExchangeSection({
                                 <button
                                     type="submit"
                                     disabled={submitting}
-                                    className="w-full py-3.5 rounded-xl text-white font-semibold text-sm transition-opacity hover:opacity-90 disabled:opacity-60"
-                                    style={{ backgroundColor: brandColor }}
+                                    className="w-full py-3.5 rounded-xl font-semibold text-sm transition-opacity hover:opacity-90 disabled:opacity-60"
+                                    style={{ backgroundColor: brandColor, color: onBrandText }}
                                 >
                                     {submitting ? 'Submitting…' : 'Get Exchange Value'}
                                 </button>

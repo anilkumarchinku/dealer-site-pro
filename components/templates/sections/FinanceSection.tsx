@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useId, useState } from 'react';
 import { CheckCircle2, Zap, Home, Landmark } from 'lucide-react';
 import { getContrastText } from '@/lib/utils/color-contrast';
 import { normalizeLeadPhone } from '@/lib/validations/lead';
@@ -49,6 +49,14 @@ export function FinanceSection({ brandColor, dealerId, dealerName }: FinanceSect
     // Readable text color for surfaces filled with the brand color (light brands
     // like yellow/lime need dark text, not white).
     const onBrandText = getContrastText(brandColor);
+
+    // Stable, unique ids so each label is programmatically tied to its input.
+    const fieldId = useId();
+    const ids = {
+        name: `${fieldId}-name`,
+        phone: `${fieldId}-phone`,
+        loanAmount: `${fieldId}-loan`,
+    };
 
     function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) {
         setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -176,10 +184,11 @@ export function FinanceSection({ brandColor, dealerId, dealerName }: FinanceSect
                                 <h3 className="text-lg font-bold text-gray-900 mb-5">Apply for Finance</h3>
                                 <form onSubmit={handleSubmit} className="space-y-4">
                                     <div>
-                                        <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                                        <label htmlFor={ids.name} className="block text-sm font-medium text-gray-700 mb-1.5">
                                             Your Name <span className="text-red-500">*</span>
                                         </label>
                                         <input
+                                            id={ids.name}
                                             type="text"
                                             name="name"
                                             required
@@ -191,10 +200,11 @@ export function FinanceSection({ brandColor, dealerId, dealerName }: FinanceSect
                                         />
                                     </div>
                                     <div>
-                                        <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                                        <label htmlFor={ids.phone} className="block text-sm font-medium text-gray-700 mb-1.5">
                                             Phone Number <span className="text-red-500">*</span>
                                         </label>
                                         <input
+                                            id={ids.phone}
                                             type="tel"
                                             name="phone"
                                             required
@@ -206,10 +216,11 @@ export function FinanceSection({ brandColor, dealerId, dealerName }: FinanceSect
                                         />
                                     </div>
                                     <div>
-                                        <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                                        <label htmlFor={ids.loanAmount} className="block text-sm font-medium text-gray-700 mb-1.5">
                                             Loan Amount Needed
                                         </label>
                                         <select
+                                            id={ids.loanAmount}
                                             name="loanAmount"
                                             value={form.loanAmount}
                                             onChange={handleChange}

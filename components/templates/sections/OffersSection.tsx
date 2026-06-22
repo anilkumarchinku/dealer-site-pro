@@ -1,6 +1,7 @@
 'use client';
 
 import { ArrowLeftRight, Shield, BadgePercent, Users, PhoneCall } from 'lucide-react';
+import { getContrastText } from '@/lib/utils/color-contrast';
 
 interface OffersSectionProps {
     brandColor: string;
@@ -57,6 +58,9 @@ export function OffersSection({
     dealerWhatsapp,
 }: OffersSectionProps) {
     const offers = getOffers(vehicleType);
+
+    // Readable text color for the brand-filled CTA (light brands need dark text).
+    const onBrandText = getContrastText(brandColor);
 
     function getEnquireHref() {
         if (dealerWhatsapp) {
@@ -143,8 +147,8 @@ export function OffersSection({
                 <div className="text-center">
                     <a
                         href={`tel:${dealerPhone}`}
-                        className="inline-flex items-center gap-2 px-8 py-4 rounded-full text-white font-semibold text-base shadow-lg hover:opacity-90 transition-opacity"
-                        style={{ backgroundColor: brandColor }}
+                        className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-base shadow-lg hover:opacity-90 transition-opacity"
+                        style={{ backgroundColor: brandColor, color: onBrandText }}
                     >
                         <PhoneCall className="w-5 h-5" />
                         Get Best Price Today

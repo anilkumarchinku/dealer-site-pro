@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import { PhoneCall, Calculator } from 'lucide-react';
+import { getContrastText } from '@/lib/utils/color-contrast';
 
 interface OnRoadPriceSectionProps {
     brandColor: string;
@@ -37,6 +38,9 @@ export function OnRoadPriceSection({
     dealerPhone,
 }: OnRoadPriceSectionProps) {
     const range = getPriceRange(vehicleType);
+
+    // Readable text color for the brand-filled total box / CTA.
+    const onBrandText = getContrastText(brandColor);
 
     const [exShowroom, setExShowroom] = useState(range.defaultVal);
     const [rtoRate, setRtoRate] = useState(0.09);
@@ -155,12 +159,16 @@ export function OnRoadPriceSection({
 
                     {/* Total box */}
                     <div
-                        className="rounded-2xl px-6 py-5 text-white"
-                        style={{ backgroundColor: brandColor }}
+                        className="rounded-2xl px-6 py-5"
+                        style={{ backgroundColor: brandColor, color: onBrandText }}
                     >
                         <p className="text-sm font-medium opacity-80 mb-1">Total On-Road Price*</p>
                         <p className="text-3xl font-bold">{formatINR(total)}</p>
                         <p className="text-sm opacity-70 mt-1">{formatLakhs(total)}</p>
+                        <p className="text-xs opacity-80 mt-3">
+                            * This is an indicative estimate, not a quote. Actual taxes, insurance,
+                            handling and other charges vary — contact the dealer for an exact on-road price.
+                        </p>
                     </div>
 
                     {/* Breakdown table */}
@@ -196,8 +204,8 @@ export function OnRoadPriceSection({
                         <div className="text-center">
                             <a
                                 href={`tel:${dealerPhone}`}
-                                className="inline-flex items-center gap-2 px-8 py-4 rounded-full text-white font-semibold text-base shadow-lg hover:opacity-90 transition-opacity"
-                                style={{ backgroundColor: brandColor }}
+                                className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-base shadow-lg hover:opacity-90 transition-opacity"
+                                style={{ backgroundColor: brandColor, color: onBrandText }}
                             >
                                 <PhoneCall className="w-5 h-5" />
                                 Get Exact On-Road Price

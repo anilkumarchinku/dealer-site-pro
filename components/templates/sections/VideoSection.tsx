@@ -1,6 +1,7 @@
 'use client';
 
-import { Play, Eye, Tv2, UserCheck } from 'lucide-react';
+import { MapPin } from 'lucide-react';
+import { getContrastText } from '@/lib/utils/color-contrast';
 
 interface VideoSectionProps {
     brandColor: string;
@@ -8,12 +9,6 @@ interface VideoSectionProps {
     brandName: string;
     vehicleType?: '2w' | '3w' | '4w';
 }
-
-const STATS = [
-    { icon: Eye, label: '360° Walkaround' },
-    { icon: Tv2, label: 'Live Demo Available' },
-    { icon: UserCheck, label: 'Expert Guidance' },
-];
 
 function extractYouTubeId(url: string): string | null {
     // Handles:
@@ -81,59 +76,25 @@ export function VideoSection({
         );
     }
 
-    // Promotional static fallback
+    // No video supplied — show a simple, honest visit CTA instead of a fake
+    // play button or invented "360° Walkaround" / "Live Demo" claims.
+    const onBrandText = getContrastText(brandColor);
     return (
         <section className="py-20 bg-gradient-to-b from-white via-gray-50 to-white">
-            <div className="max-w-5xl mx-auto px-4 text-center">
-                {/* Play button */}
-                <div className="flex justify-center mb-8">
-                    <div className="relative">
-                        {/* Outer glow ring */}
-                        <div
-                            className="w-24 h-24 rounded-full flex items-center justify-center shadow-[0_18px_45px_rgba(37,99,235,0.24)]"
-                            style={{ background: `linear-gradient(135deg, ${brandColor}, #111827)` }}
-                        >
-                            <Play className="w-10 h-10 text-white fill-white ml-1" />
-                        </div>
-                        {/* Pulse ring */}
-                        <span
-                            className="absolute inset-0 rounded-full animate-ping opacity-30"
-                            style={{ backgroundColor: '#FF0000' }}
-                        />
-                    </div>
-                </div>
-
-                {/* Title */}
+            <div className="max-w-3xl mx-auto px-4 text-center">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                    See {brandName} in Action
+                    See {brandName} in Person
                 </h2>
                 <p className="text-gray-600 max-w-xl mx-auto text-base mb-10">
-                    Visit our showroom for a live demo — experience the power firsthand
+                    Visit our showroom to explore the lineup and take a closer look.
                 </p>
 
-                {/* Stats */}
-                <div className="flex flex-wrap justify-center gap-6 mb-12">
-                    {STATS.map((stat) => {
-                        const Icon = stat.icon;
-                        return (
-                            <div
-                                key={stat.label}
-                                className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-gray-200 bg-white text-gray-700 text-sm font-medium shadow-sm"
-                            >
-                                <Icon className="w-4 h-4" style={{ color: brandColor }} />
-                                {stat.label}
-                            </div>
-                        );
-                    })}
-                </div>
-
-                {/* CTA */}
                 <a
                     href="#contact"
-                    className="inline-flex items-center gap-2 px-8 py-4 rounded-full text-white font-semibold text-base shadow-lg hover:opacity-90 transition-opacity"
-                    style={{ backgroundColor: brandColor }}
+                    className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-base shadow-lg hover:opacity-90 transition-opacity"
+                    style={{ backgroundColor: brandColor, color: onBrandText }}
                 >
-                    <Play className="w-5 h-5 fill-white" />
+                    <MapPin className="w-5 h-5" />
                     Book a Showroom Visit
                 </a>
             </div>
