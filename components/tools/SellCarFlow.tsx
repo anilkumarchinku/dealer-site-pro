@@ -37,7 +37,6 @@ import {
     AlertCircle,
     FileText,
 } from 'lucide-react';
-import { CAR_MAKES } from '@/lib/data/cars-static';
 
 const CURRENT_YEAR = new Date().getFullYear();
 const YEARS = Array.from({ length: 20 }, (_, i) => String(CURRENT_YEAR - i));
@@ -77,6 +76,18 @@ const CITIES = [
     'Delhi', 'Mumbai', 'Bangalore', 'Hyderabad', 'Chennai',
     'Kolkata', 'Pune', 'Ahmedabad', 'Jaipur', 'Lucknow',
 ];
+
+const lightFormRootClass = [
+    'min-h-screen bg-white text-slate-950 [color-scheme:light]',
+    '[&_label]:!text-slate-800',
+    '[&_input]:!border-slate-300 [&_input]:!bg-white [&_input]:!text-slate-950 [&_input]:!shadow-sm',
+    '[&_input::placeholder]:!text-slate-500',
+    '[&_textarea]:!border-slate-300 [&_textarea]:!bg-white [&_textarea]:!text-slate-950 [&_textarea]:!shadow-sm',
+    '[&_textarea::placeholder]:!text-slate-500',
+].join(' ');
+
+const lightSelectTriggerClass = 'border-slate-300 bg-white text-slate-950 shadow-sm dark:border-slate-300 dark:bg-white dark:text-slate-950 dark:ring-offset-white';
+const lightSelectContentClass = 'border-slate-200 bg-white text-slate-950 dark:border-slate-200 dark:bg-white dark:text-slate-950';
 
 type SellCarFlowProps = {
     initialDealerId?: string | null;
@@ -243,7 +254,7 @@ export function SellCarFlow({
     };
 
     return (
-        <div className="min-h-screen bg-background">
+        <div className={lightFormRootClass}>
             <div className="mx-auto max-w-5xl px-4 py-8 sm:px-6 lg:px-8">
                 <nav className="mb-6 flex items-center gap-1.5 text-sm text-muted-foreground">
                     <Link href={returnHref} className="transition-colors hover:text-foreground">Home</Link>
@@ -295,14 +306,7 @@ export function SellCarFlow({
                                     <div className="grid gap-4 sm:grid-cols-2">
                                         <div>
                                             <Label className="mb-2 block text-sm font-medium">Brand</Label>
-                                            <Select value={brand} onValueChange={setBrand}>
-                                                <SelectTrigger><SelectValue placeholder="Select brand" /></SelectTrigger>
-                                                <SelectContent>
-                                                    {CAR_MAKES.map(make => (
-                                                        <SelectItem key={make} value={make}>{make}</SelectItem>
-                                                    ))}
-                                                </SelectContent>
-                                            </Select>
+                                            <Input placeholder="Maruti Suzuki, Hyundai, Tata" value={brand} onChange={e => setBrand(e.target.value)} />
                                         </div>
                                         <div>
                                             <Label className="mb-2 block text-sm font-medium">Model</Label>
@@ -318,8 +322,8 @@ export function SellCarFlow({
                                         <div>
                                             <Label className="mb-2 block text-sm font-medium">Year</Label>
                                             <Select value={year} onValueChange={setYear}>
-                                                <SelectTrigger><SelectValue /></SelectTrigger>
-                                                <SelectContent>
+                                                <SelectTrigger className={lightSelectTriggerClass}><SelectValue /></SelectTrigger>
+                                                <SelectContent className={lightSelectContentClass}>
                                                     {YEARS.map(item => <SelectItem key={item} value={item}>{item}</SelectItem>)}
                                                 </SelectContent>
                                             </Select>
@@ -327,8 +331,8 @@ export function SellCarFlow({
                                         <div>
                                             <Label className="mb-2 block text-sm font-medium">Body Type</Label>
                                             <Select value={bodyType} onValueChange={setBodyType}>
-                                                <SelectTrigger><SelectValue /></SelectTrigger>
-                                                <SelectContent>
+                                                <SelectTrigger className={lightSelectTriggerClass}><SelectValue /></SelectTrigger>
+                                                <SelectContent className={lightSelectContentClass}>
                                                     {BODY_TYPES.map(item => <SelectItem key={item} value={item}>{item}</SelectItem>)}
                                                 </SelectContent>
                                             </Select>
@@ -350,8 +354,8 @@ export function SellCarFlow({
                                         <div>
                                             <Label className="mb-2 block text-sm font-medium">Fuel Type</Label>
                                             <Select value={fuelType} onValueChange={setFuelType}>
-                                                <SelectTrigger><SelectValue /></SelectTrigger>
-                                                <SelectContent>
+                                                <SelectTrigger className={lightSelectTriggerClass}><SelectValue /></SelectTrigger>
+                                                <SelectContent className={lightSelectContentClass}>
                                                     {FUEL_TYPES.map(item => <SelectItem key={item} value={item}>{item}</SelectItem>)}
                                                 </SelectContent>
                                             </Select>
@@ -359,8 +363,8 @@ export function SellCarFlow({
                                         <div>
                                             <Label className="mb-2 block text-sm font-medium">Transmission</Label>
                                             <Select value={transmission} onValueChange={setTransmission}>
-                                                <SelectTrigger><SelectValue /></SelectTrigger>
-                                                <SelectContent>
+                                                <SelectTrigger className={lightSelectTriggerClass}><SelectValue /></SelectTrigger>
+                                                <SelectContent className={lightSelectContentClass}>
                                                     {TRANSMISSIONS.map(item => <SelectItem key={item} value={item}>{item}</SelectItem>)}
                                                 </SelectContent>
                                             </Select>
@@ -426,8 +430,8 @@ export function SellCarFlow({
                                         <div>
                                             <Label className="mb-2 block text-sm font-medium">Number of Owners</Label>
                                             <Select value={owners} onValueChange={setOwners}>
-                                                <SelectTrigger><SelectValue /></SelectTrigger>
-                                                <SelectContent>
+                                                <SelectTrigger className={lightSelectTriggerClass}><SelectValue /></SelectTrigger>
+                                                <SelectContent className={lightSelectContentClass}>
                                                     {OWNERS.map(item => (
                                                         <SelectItem key={item} value={item}>{item} Owner</SelectItem>
                                                     ))}
@@ -537,8 +541,8 @@ export function SellCarFlow({
                                         <div>
                                             <Label className="mb-2 block text-sm font-medium">City</Label>
                                             <Select value={city} onValueChange={setCity}>
-                                                <SelectTrigger><SelectValue placeholder="Select city" /></SelectTrigger>
-                                                <SelectContent>
+                                                <SelectTrigger className={lightSelectTriggerClass}><SelectValue placeholder="Select city" /></SelectTrigger>
+                                                <SelectContent className={lightSelectContentClass}>
                                                     {CITIES.map(item => <SelectItem key={item} value={item}>{item}</SelectItem>)}
                                                 </SelectContent>
                                             </Select>
@@ -601,8 +605,8 @@ export function SellCarFlow({
                                         <div>
                                             <Label className="mb-2 block text-sm font-medium">Insurance Status</Label>
                                             <Select value={insuranceStatus} onValueChange={value => setInsuranceStatus(value as typeof insuranceStatus)}>
-                                                <SelectTrigger><SelectValue /></SelectTrigger>
-                                                <SelectContent>
+                                                <SelectTrigger className={lightSelectTriggerClass}><SelectValue /></SelectTrigger>
+                                                <SelectContent className={lightSelectContentClass}>
                                                     {INSURANCE_STATUSES.map(item => <SelectItem key={item.value} value={item.value}>{item.label}</SelectItem>)}
                                                 </SelectContent>
                                             </Select>
@@ -627,8 +631,8 @@ export function SellCarFlow({
                                     <div>
                                         <Label className="mb-2 block text-sm font-medium">Accident History</Label>
                                         <Select value={accidentHistory} onValueChange={value => setAccidentHistory(value as typeof accidentHistory)}>
-                                            <SelectTrigger><SelectValue /></SelectTrigger>
-                                            <SelectContent>
+                                            <SelectTrigger className={lightSelectTriggerClass}><SelectValue /></SelectTrigger>
+                                            <SelectContent className={lightSelectContentClass}>
                                                 {ACCIDENT_HISTORY.map(item => <SelectItem key={item.value} value={item.value}>{item.label}</SelectItem>)}
                                             </SelectContent>
                                         </Select>

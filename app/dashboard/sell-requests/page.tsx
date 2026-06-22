@@ -6,9 +6,39 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { cn } from "@/lib/utils"
-import { CheckCircle, Clock, ExternalLink, IndianRupee, Loader2, Phone, RefreshCw, Search, XCircle } from "lucide-react"
+import { deriveInsuranceStatus, parseIndianDate, parseMakeModel, type RCData } from "@/lib/utils/rc-mapper"
+import { AlertCircle, CheckCircle, Clock, ExternalLink, FileSearch, IndianRupee, Loader2, Phone, RefreshCw, Search, ShieldCheck, XCircle } from "lucide-react"
 
 type SellRequestStatus = "new" | "reviewing" | "contacted" | "approved" | "rejected" | "listed"
+type FieldSource = "seller" | "rc"
+type ListingOverrideKey =
+    | "make"
+    | "model"
+    | "year"
+    | "fuel_type"
+    | "color"
+    | "registration_number"
+    | "vin"
+    | "owner_count"
+    | "insurance_provider"
+    | "insurance_valid_until"
+    | "insurance_status"
+
+type ListingOverrides = Partial<Record<ListingOverrideKey, string | number>>
+type FieldChoiceMap = Partial<Record<ListingOverrideKey, FieldSource>>
+type RCLookupState =
+    | { status: "idle" }
+    | { status: "loading" }
+    | { status: "done"; data: RCData & { _demo?: boolean; _cache?: "redis" | "memory" } }
+    | { status: "error"; error: string }
+
+interface ComparisonField {
+    key: ListingOverrideKey
+    label: string
+    sellerValue: string | number | null
+    rcValue: string | number | null
+    helper?: string
+}
 
 interface SellRequest {
     id: string
@@ -96,6 +126,96 @@ function detailChip(label: string, value: string | null | undefined) {
     return <span className="rounded-full border px-2 py-1">{label}: {value}</span>
 }
 
+function cleanDisplayValue(value: unknown) {
+    if (value === undefined || value === null) return null
+    if (typeof value === "number") return Number.isFinite(value) ? String(value) : null
+    const text = String(value).trim()
+    return text || null
+}
+
+function hasDisplayValue(value: string | number | null) {
+    return cleanDisplayValue(value) !== null
+}
+
+function displayValue(value: string | number | null) {
+    return cleanDisplayValue(value) ?? "Not provided"
+}
+
+function formatDateValue(value: string | null | undefined) {
+    if (!value) return null
+    return value
+}
+
+function ownerCountLabel(value: number | undefined) {
+    if (!value || !Number.isFinite(value) || value < 1) return null
+    if (value === 1) return "1st"
+    if (value === 2) return "2nd"
+    if (value === 3) return "3rd"
+    return `${value}th+`
+}
+
+function extractRcYear(rcData: RCData) {
+    const isoDate = parseIndianDate(rcData.registration_date ?? "")
+    if (!isoDate) return null
+    const year = Number(isoDate.slice(0, 4))
+    return Number.isFinite(year) ? year : null
+}
+
+function getRcListingValues(rcData: RCData): ListingOverrides {
+    const makeModel = rcData.make_model ? parseMakeModel(rcData.make_model) : null
+    const insuranceValidUntil = parseIndianDate(rcData.insurance_upto ?? "")
+
+    return {
+        make: cleanDisplayValue(makeModel?.make) ?? undefined,
+        model: cleanDisplayValue(makeModel?.model) ?? undefined,
+        year: extractRcYear(rcData) ?? undefined,
+        fuel_type: cleanDisplayValue(rcData.fuel_type) ?? undefined,
+        color: cleanDisplayValue(rcData.color) ?? undefined,
+        registration_number: cleanDisplayValue(rcData.rc_number)?.toUpperCase() ?? undefined,
+        vin: cleanDisplayValue(rcData.chassis_number) ?? undefined,
+        owner_count: ownerCountLabel(rcData.owner_count) ?? undefined,
+        insurance_provider: cleanDisplayValue(rcData.insurance_company) ?? undefined,
+        insurance_valid_until: insuranceValidUntil ?? undefined,
+        insurance_status: insuranceValidUntil ? deriveInsuranceStatus(insuranceValidUntil) : undefined,
+    }
+}
+
+function buildComparisonFields(request: SellRequest, rcData: RCData): ComparisonField[] {
+    const rc = getRcListingValues(rcData)
+    const fields: ComparisonField[] = [
+        { key: "make", label: "Make", sellerValue: request.make, rcValue: rc.make ?? null },
+        { key: "model", label: "Model", sellerValue: request.model, rcValue: rc.model ?? null },
+        { key: "year", label: "Year", sellerValue: request.year, rcValue: rc.year ?? null, helper: "RC year is derived from registration date." },
+        { key: "fuel_type", label: "Fuel", sellerValue: request.fuel_type, rcValue: rc.fuel_type ?? null },
+        { key: "color", label: "Colour", sellerValue: request.color, rcValue: rc.color ?? null },
+        { key: "registration_number", label: "Number plate", sellerValue: request.registration_number, rcValue: rc.registration_number ?? null },
+        { key: "vin", label: "VIN / Chassis", sellerValue: request.vin, rcValue: rc.vin ?? null },
+        { key: "owner_count", label: "Owner count", sellerValue: request.owner_count, rcValue: rc.owner_count ?? null },
+        { key: "insurance_provider", label: "Insurer", sellerValue: request.insurance_provider, rcValue: rc.insurance_provider ?? null },
+        { key: "insurance_valid_until", label: "Insurance valid until", sellerValue: formatDateValue(request.insurance_valid_until), rcValue: rc.insurance_valid_until ?? null },
+        { key: "insurance_status", label: "Insurance status", sellerValue: request.insurance_status, rcValue: rc.insurance_status ?? null },
+    ]
+
+    return fields.filter(field => hasDisplayValue(field.sellerValue) || hasDisplayValue(field.rcValue))
+}
+
+function defaultFieldChoice(field: ComparisonField): FieldSource {
+    return !hasDisplayValue(field.sellerValue) && hasDisplayValue(field.rcValue) ? "rc" : "seller"
+}
+
+function buildListingOverrides(request: SellRequest, rcData: RCData, choices: FieldChoiceMap | undefined): ListingOverrides | undefined {
+    const overrides: ListingOverrides = {}
+
+    for (const field of buildComparisonFields(request, rcData)) {
+        const source = choices?.[field.key] ?? defaultFieldChoice(field)
+        if (source === "rc" && hasDisplayValue(field.rcValue)) {
+            overrides[field.key] = field.rcValue as string | number
+        }
+    }
+
+    return Object.keys(overrides).length > 0 ? overrides : undefined
+}
+
 export default function SellRequestsPage() {
     const [requests, setRequests] = useState<SellRequest[]>([])
     const [loading, setLoading] = useState(false)
@@ -103,6 +223,8 @@ export default function SellRequestsPage() {
     const [query, setQuery] = useState("")
     const [status, setStatus] = useState<SellRequestStatus | "all">("new")
     const [listingPrices, setListingPrices] = useState<Record<string, string>>({})
+    const [rcLookups, setRcLookups] = useState<Record<string, RCLookupState>>({})
+    const [fieldChoices, setFieldChoices] = useState<Record<string, FieldChoiceMap>>({})
 
     const loadRequests = async () => {
         setLoading(true)
@@ -132,6 +254,10 @@ export default function SellRequestsPage() {
         const listingPricePaise = nextStatus === "listed" && listingPrice
             ? Math.round(Number(listingPrice) * 100)
             : undefined
+        const rcState = rcLookups[request.id]
+        const listingOverrides = nextStatus === "listed" && rcState?.status === "done"
+            ? buildListingOverrides(request, rcState.data, fieldChoices[request.id])
+            : undefined
 
         const res = await fetch("/api/sell-requests", {
             method: "PATCH",
@@ -140,6 +266,7 @@ export default function SellRequestsPage() {
                 id: request.id,
                 status: nextStatus,
                 listing_price_paise: Number.isFinite(listingPricePaise) ? listingPricePaise : undefined,
+                listing_overrides: listingOverrides,
             }),
         })
         const data = await res.json().catch(() => null)
@@ -154,6 +281,158 @@ export default function SellRequestsPage() {
             })
         }
         setSavingId("")
+    }
+
+    const lookupRegistration = async (request: SellRequest) => {
+        if (!request.registration_number) return
+
+        setRcLookups(prev => ({ ...prev, [request.id]: { status: "loading" } }))
+
+        const res = await fetch("/api/vehicles/rc-lookup", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ rc: request.registration_number }),
+        })
+        const data = await res.json().catch(() => null)
+
+        if (!res.ok || !data?.success) {
+            setRcLookups(prev => ({
+                ...prev,
+                [request.id]: { status: "error", error: data?.error ?? "RC lookup failed" },
+            }))
+            return
+        }
+
+        setRcLookups(prev => ({
+            ...prev,
+            [request.id]: {
+                status: "done",
+                data: {
+                    ...(data.data ?? {}),
+                    _cache: data.data?._cache ?? (data.cached ? "redis" : undefined),
+                },
+            },
+        }))
+    }
+
+    const setFieldChoice = (requestId: string, field: ListingOverrideKey, source: FieldSource) => {
+        setFieldChoices(prev => ({
+            ...prev,
+            [requestId]: {
+                ...(prev[requestId] ?? {}),
+                [field]: source,
+            },
+        }))
+    }
+
+    const setAllFieldChoices = (request: SellRequest, rcData: RCData, source: FieldSource) => {
+        const nextChoices: FieldChoiceMap = {}
+        for (const field of buildComparisonFields(request, rcData)) {
+            if (source === "rc" && !hasDisplayValue(field.rcValue)) continue
+            nextChoices[field.key] = source
+        }
+        setFieldChoices(prev => ({ ...prev, [request.id]: nextChoices }))
+    }
+
+    const renderRcComparison = (request: SellRequest) => {
+        const state = rcLookups[request.id]
+        if (!state || state.status === "idle") return null
+
+        if (state.status === "loading") {
+            return (
+                <div className="flex items-center gap-2 rounded-xl border bg-muted/30 p-3 text-sm text-muted-foreground">
+                    <Loader2 className="h-4 w-4 animate-spin" />
+                    Checking registration details...
+                </div>
+            )
+        }
+
+        if (state.status === "error") {
+            return (
+                <div className="flex items-start gap-2 rounded-xl border border-red-200 bg-red-50 p-3 text-sm text-red-700">
+                    <AlertCircle className="mt-0.5 h-4 w-4 shrink-0" />
+                    <span>{state.error}</span>
+                </div>
+            )
+        }
+
+        const fields = buildComparisonFields(request, state.data)
+        const choices = fieldChoices[request.id] ?? {}
+
+        return (
+            <div className="space-y-3 rounded-xl border bg-muted/20 p-3">
+                <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                    <div>
+                        <div className="flex items-center gap-2">
+                            <ShieldCheck className="h-4 w-4 text-emerald-500" />
+                            <h3 className="text-sm font-semibold">Registration details comparison</h3>
+                        </div>
+                        <p className="mt-1 text-xs text-muted-foreground">
+                            Choose the source that should be copied to the public inventory listing.
+                        </p>
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                        {state.data._demo && <span className="rounded-full border border-amber-200 bg-amber-50 px-2 py-1 text-xs text-amber-700">Demo data</span>}
+                        {state.data._cache && <span className="rounded-full border border-blue-200 bg-blue-50 px-2 py-1 text-xs text-blue-700">Cached</span>}
+                        <Button type="button" variant="outline" size="sm" onClick={() => setAllFieldChoices(request, state.data, "seller")}>
+                            Use seller
+                        </Button>
+                        <Button type="button" variant="outline" size="sm" onClick={() => setAllFieldChoices(request, state.data, "rc")}>
+                            Use RC
+                        </Button>
+                    </div>
+                </div>
+
+                {state.data.blacklisted && (
+                    <div className="flex items-start gap-2 rounded-lg border border-red-200 bg-red-50 p-2 text-xs text-red-700">
+                        <AlertCircle className="mt-0.5 h-3.5 w-3.5 shrink-0" />
+                        RC lookup says this vehicle is blacklisted. Verify before listing.
+                    </div>
+                )}
+
+                <div className="grid gap-2">
+                    {fields.map(field => {
+                        const selected = choices[field.key] ?? defaultFieldChoice(field)
+                        const rcAvailable = hasDisplayValue(field.rcValue)
+                        return (
+                            <div key={field.key} className="grid gap-2 rounded-lg border bg-background p-3 text-sm lg:grid-cols-[140px_1fr_1fr_140px]">
+                                <div>
+                                    <p className="font-medium">{field.label}</p>
+                                    {field.helper && <p className="mt-1 text-[11px] text-muted-foreground">{field.helper}</p>}
+                                </div>
+                                <div className={cn("rounded-md border px-3 py-2", selected === "seller" ? "border-primary bg-primary/5" : "bg-muted/20")}>
+                                    <p className="mb-1 text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">Seller</p>
+                                    <p className="break-words font-medium">{displayValue(field.sellerValue)}</p>
+                                </div>
+                                <div className={cn("rounded-md border px-3 py-2", selected === "rc" ? "border-primary bg-primary/5" : "bg-muted/20", !rcAvailable && "opacity-60")}>
+                                    <p className="mb-1 text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">RC lookup</p>
+                                    <p className="break-words font-medium">{displayValue(field.rcValue)}</p>
+                                </div>
+                                <div className="flex items-center gap-2 lg:flex-col lg:items-stretch">
+                                    <Button type="button" size="sm" variant={selected === "seller" ? "default" : "outline"} onClick={() => setFieldChoice(request.id, field.key, "seller")}>
+                                        Seller
+                                    </Button>
+                                    <Button type="button" size="sm" variant={selected === "rc" ? "default" : "outline"} disabled={!rcAvailable} onClick={() => setFieldChoice(request.id, field.key, "rc")}>
+                                        RC
+                                    </Button>
+                                </div>
+                            </div>
+                        )
+                    })}
+                </div>
+
+                <div className="grid gap-2 text-xs text-muted-foreground sm:grid-cols-2 xl:grid-cols-4">
+                    {detailChip("Owner", state.data.owner_name)}
+                    {detailChip("RTO", state.data.rto)}
+                    {detailChip("State", state.data.state)}
+                    {detailChip("Challan", state.data.challan_status ?? (state.data.challan_count != null ? `${state.data.challan_count} pending` : null))}
+                    {detailChip("Engine", state.data.engine_number)}
+                    {detailChip("Class", state.data.vehicle_class)}
+                    {detailChip("RC validity", state.data.rc_validity_upto)}
+                    {detailChip("Fitness", state.data.fitness_upto)}
+                </div>
+            </div>
+        )
     }
 
     return (
@@ -265,9 +544,23 @@ export default function SellRequestsPage() {
                                         </a>
                                     )}
                                 </div>
+
+                                {renderRcComparison(request)}
                             </div>
 
                             <div className="flex flex-wrap items-center gap-2 xl:flex-col xl:items-stretch">
+                                <Button
+                                    size="sm"
+                                    variant="outline"
+                                    disabled={!request.registration_number || rcLookups[request.id]?.status === "loading"}
+                                    onClick={() => lookupRegistration(request)}
+                                >
+                                    {rcLookups[request.id]?.status === "loading"
+                                        ? <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                                        : <FileSearch className="mr-2 h-4 w-4" />
+                                    }
+                                    {request.registration_number ? "Verify RC" : "No plate"}
+                                </Button>
                                 <Button size="sm" variant="outline" disabled={savingId === request.id} onClick={() => updateStatus(request, "contacted")}>
                                     <Phone className="mr-2 h-4 w-4" />Contacted
                                 </Button>

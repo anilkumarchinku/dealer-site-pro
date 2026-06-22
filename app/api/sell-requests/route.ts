@@ -9,6 +9,19 @@ import { sendSellRequestConfirmationEmail, sendSellRequestNotificationEmail } fr
 const SELL_REQUEST_STATUSES = ['new', 'reviewing', 'contacted', 'approved', 'rejected', 'listed'] as const
 type SellRequestStatus = typeof SELL_REQUEST_STATUSES[number]
 type InsuranceStatus = 'unknown' | 'active' | 'expired' | 'expiring_soon'
+type ListingOverrides = Partial<{
+    make: string
+    model: string
+    year: number
+    fuel_type: string
+    color: string
+    registration_number: string
+    vin: string
+    owner_count: string
+    insurance_provider: string
+    insurance_valid_until: string
+    insurance_status: InsuranceStatus
+}>
 
 type SellRequestRow = {
     id: string
@@ -97,10 +110,11 @@ function buildVehicleDescription(request: SellRequestRow) {
     ].filter(Boolean).join('\n\n')
 }
 
-function buildVehicleFeatures(request: SellRequestRow) {
+function buildVehicleFeatures(request: SellRequestRow, overrides?: ListingOverrides) {
+    const ownerCount = cleanText(overrides?.owner_count) ?? request.owner_count
     const sellerFeatures = cleanArray(request.features)
     const reviewFeatures = [
-        request.owner_count ? `${request.owner_count} owner` : null,
+        ownerCount ? `${ownerCount} owner` : null,
         request.city ? `Location: ${request.city}` : null,
         request.preferred_date ? `Inspection requested: ${request.preferred_date}` : null,
         request.accident_history ? `Accident history: ${request.accident_history}` : null,
@@ -132,11 +146,80 @@ function parseListingPricePaise(value: unknown) {
     return { value: Math.round(parsed), error: null }
 }
 
+function cleanOverrideText(value: unknown, maxLength: number) {
+    if (typeof value !== 'string') return undefined
+    const text = value.trim()
+    if (!text) return undefined
+    return text.slice(0, maxLength)
+}
+
+function normalizeListingOverrides(value: unknown) {
+    if (value === undefined || value === null) {
+        return { value: undefined as ListingOverrides | undefined, error: null as string | null }
+    }
+    if (typeof value !== 'object' || Array.isArray(value)) {
+        return { value: undefined, error: 'Invalid listing field selections' }
+    }
+
+    const input = value as Record<string, unknown>
+    const overrides: ListingOverrides = {}
+    const currentYear = new Date().getFullYear() + 1
+
+    const make = cleanOverrideText(input.make, 100)
+    if (make) overrides.make = make
+
+    const model = cleanOverrideText(input.model, 100)
+    if (model) overrides.model = model
+
+    if (input.year !== undefined && input.year !== null && input.year !== '') {
+        const year = typeof input.year === 'number' ? input.year : Number(input.year)
+        if (!Number.isInteger(year) || year < 1990 || year > currentYear) {
+            return { value: undefined, error: 'Invalid selected year' }
+        }
+        overrides.year = year
+    }
+
+    const fuelType = cleanOverrideText(input.fuel_type, 50)
+    if (fuelType) overrides.fuel_type = fuelType
+
+    const color = cleanOverrideText(input.color, 50)
+    if (color) overrides.color = color
+
+    const registrationNumber = cleanOverrideText(input.registration_number, 20)
+    if (registrationNumber) overrides.registration_number = registrationNumber.toUpperCase()
+
+    const vin = cleanOverrideText(input.vin, 50)
+    if (vin) overrides.vin = vin.toUpperCase()
+
+    const ownerCount = cleanOverrideText(input.owner_count, 20)
+    if (ownerCount) overrides.owner_count = ownerCount
+
+    const insuranceProvider = cleanOverrideText(input.insurance_provider, 100)
+    if (insuranceProvider) overrides.insurance_provider = insuranceProvider
+
+    const insuranceValidUntil = cleanOverrideText(input.insurance_valid_until, 10)
+    if (insuranceValidUntil) overrides.insurance_valid_until = insuranceValidUntil
+
+    const insuranceStatus = cleanOverrideText(input.insurance_status, 20)
+    if (insuranceStatus) {
+        if (!['unknown', 'active', 'expired', 'expiring_soon'].includes(insuranceStatus)) {
+            return { value: undefined, error: 'Invalid selected insurance status' }
+        }
+        overrides.insurance_status = insuranceStatus as InsuranceStatus
+    }
+
+    return {
+        value: Object.keys(overrides).length > 0 ? overrides : undefined,
+        error: null,
+    }
+}
+
 async function listSellRequestVehicle(
     supabase: DbClient,
     request: SellRequestRow,
     dealerId: string,
     listingPricePaise?: number,
+    listingOverrides?: ListingOverrides,
 ) {
     if (request.approved_vehicle_id) {
         return request.approved_vehicle_id
@@ -151,28 +234,28 @@ async function listSellRequestVehicle(
         .from('vehicles')
         .insert({
             dealer_id: request.dealer_id ?? dealerId,
-            vin: cleanText(request.vin),
-            registration_number: cleanText(request.registration_number)?.toUpperCase(),
-            make: request.make,
-            model: cleanText(request.model) ?? 'Model pending',
+            vin: cleanText(listingOverrides?.vin) ?? cleanText(request.vin),
+            registration_number: (cleanText(listingOverrides?.registration_number) ?? cleanText(request.registration_number))?.toUpperCase(),
+            make: cleanText(listingOverrides?.make) ?? request.make,
+            model: cleanText(listingOverrides?.model) ?? cleanText(request.model) ?? 'Model pending',
             variant: cleanText(request.variant),
-            year: request.year,
+            year: listingOverrides?.year ?? request.year,
             price_paise: pricePaise,
             mileage_km: request.mileage_km,
-            color: cleanText(request.color),
+            color: cleanText(listingOverrides?.color) ?? cleanText(request.color),
             body_type: cleanText(request.body_type),
-            fuel_type: cleanText(request.fuel_type),
+            fuel_type: cleanText(listingOverrides?.fuel_type) ?? cleanText(request.fuel_type),
             transmission: cleanText(request.transmission),
-            features: buildVehicleFeatures(request),
+            features: buildVehicleFeatures(request, listingOverrides),
             description: buildVehicleDescription(request),
             image_url: imageUrls[0] ?? null,
             image_urls: imageUrls,
-            insurance_status: request.insurance_status ?? 'unknown',
-            insurance_provider: cleanText(request.insurance_provider),
-            insurance_valid_until: request.insurance_valid_until,
+            insurance_status: listingOverrides?.insurance_status ?? request.insurance_status ?? 'unknown',
+            insurance_provider: cleanText(listingOverrides?.insurance_provider) ?? cleanText(request.insurance_provider),
+            insurance_valid_until: listingOverrides?.insurance_valid_until ?? request.insurance_valid_until,
             insurance_quote_url: cleanText(request.insurance_quote_url),
             video_url: cleanText(request.video_url),
-            insurance_last_checked_at: request.insurance_valid_until ? new Date().toISOString() : null,
+            insurance_last_checked_at: (listingOverrides?.insurance_valid_until ?? request.insurance_valid_until) ? new Date().toISOString() : null,
             condition: 'used',
             status: 'available',
             views: 0,
@@ -322,6 +405,10 @@ export async function PATCH(request: NextRequest) {
     if (listingPriceError) {
         return NextResponse.json({ error: listingPriceError }, { status: 400 })
     }
+    const { value: listingOverrides, error: listingOverridesError } = normalizeListingOverrides(body.listing_overrides)
+    if (listingOverridesError) {
+        return NextResponse.json({ error: listingOverridesError }, { status: 400 })
+    }
 
     const nextStatus = body.status as SellRequestStatus
     const adminNotes = typeof body.admin_notes === 'string' ? body.admin_notes.slice(0, 1000) : null
@@ -352,6 +439,7 @@ export async function PATCH(request: NextRequest) {
                 sellRequest as SellRequestRow,
                 dealer.id,
                 listingPricePaise,
+                listingOverrides,
             )
         } catch (error) {
             logger.error('Sell request vehicle listing error:', error)
