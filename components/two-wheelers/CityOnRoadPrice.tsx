@@ -85,7 +85,12 @@ export function CityOnRoadPrice({ exShowroomPaise, engineCc, fuelType }: Props) 
                 </div>
             </div>
 
-            <p className="text-xs text-muted-foreground mt-4">
+            <p className="mt-3 rounded-lg bg-amber-50 border border-amber-200 px-3 py-2 text-xs font-medium text-amber-800">
+                Indicative estimate only — not a quote. Insurance, RTO and handling charges
+                vary by city, variant and provider. Contact the dealer for an exact on-road price.
+            </p>
+
+            <p className="text-xs text-muted-foreground mt-2">
                 * Approximate. Actual charges may vary by city and insurance provider.
             </p>
         </div>

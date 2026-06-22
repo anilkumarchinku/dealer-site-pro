@@ -7,6 +7,7 @@ import { Fuel, Zap, Gauge, ChevronRight, Send, Eye, Heart, TrendingUp, GitCompar
 import { Button } from "@/components/ui/button"
 import type { TwoWheelerVehicle } from "@/lib/types/two-wheeler"
 import { getScrapedImageUrls, brandNameToId } from "@/lib/utils/brand-model-images"
+import { getContrastText } from "@/lib/utils/color-contrast"
 import { useSitePrefix } from "@/lib/hooks/useSitePrefix"
 import { QuickViewModal } from "./QuickViewModal"
 import { LeadFormModal } from "./LeadFormModal"
@@ -90,6 +91,11 @@ export function VehicleCard({ vehicle, slug, dealerId, brandColor = "#1f2937", s
     const engineValue = vehicle.engine_cc ? `${vehicle.engine_cc} cc` : "—"
     const typeLabel = vehicle.type.charAt(0).toUpperCase() + vehicle.type.slice(1)
 
+    // Readable text color for branded CTAs (handles light brand colors on the light site).
+    const ctaTextColor = getContrastText(brandColor)
+    // Primary CTAs depend on a working lead handler — hide them when absent so there are no dead buttons.
+    const canLead = typeof onLead === "function"
+
     if (summaryOnly) {
         return (
             <Link
@@ -150,14 +156,13 @@ export function VehicleCard({ vehicle, slug, dealerId, brandColor = "#1f2937", s
                         </div>
                     </div>
 
-                    <Button
-                        size="sm"
-                        className="mt-auto w-full text-white"
-                        style={{ backgroundColor: brandColor }}
+                    <span
+                        className="mt-auto inline-flex h-9 w-full items-center justify-center rounded-md px-3 text-sm font-medium transition-opacity group-hover:opacity-90"
+                        style={{ backgroundColor: brandColor, color: ctaTextColor }}
                     >
                         <Eye className="mr-2 h-4 w-4" />
                         View Details
-                    </Button>
+                    </span>
                 </div>
             </Link>
         )
@@ -303,28 +308,34 @@ export function VehicleCard({ vehicle, slug, dealerId, brandColor = "#1f2937", s
                     </div>
                 )}
 
-                {/* CTA buttons */}
-                <div className="flex gap-2 mt-auto">
-                    <Button
-                        size="sm"
-                        className="flex-1 text-white"
-                        style={{ backgroundColor: brandColor }}
-                        onClick={() => onLead?.(vehicle.id)}
-                    >
-                        <Send className="w-3.5 h-3.5 mr-1.5" />
-                        Enquire
-                    </Button>
-                    <Button
-                        size="sm"
-                        variant="outline"
-                        className="bg-white"
-                        style={{ borderColor: brandColor, color: brandColor }}
-                        onClick={(e) => { e.stopPropagation(); setTestRideOpen(true) }}
-                    >
-                        <Calendar className="w-3.5 h-3.5 mr-1" />
-                        {vehicle.type === "scooter" || vehicle.type === "electric" ? "Test Ride" : "Test Ride"}
-                    </Button>
-                </div>
+                {/* CTA buttons — hidden when their handler/dealerId is absent (no dead buttons) */}
+                {(canLead || dealerId) && (
+                    <div className="flex gap-2 mt-auto">
+                        {canLead && (
+                            <Button
+                                size="sm"
+                                className="flex-1"
+                                style={{ backgroundColor: brandColor, color: ctaTextColor }}
+                                onClick={() => onLead?.(vehicle.id)}
+                            >
+                                <Send className="w-3.5 h-3.5 mr-1.5" />
+                                Enquire
+                            </Button>
+                        )}
+                        {dealerId && (
+                            <Button
+                                size="sm"
+                                variant="outline"
+                                className="bg-white"
+                                style={{ borderColor: brandColor, color: brandColor }}
+                                onClick={(e) => { e.stopPropagation(); setTestRideOpen(true) }}
+                            >
+                                <Calendar className="w-3.5 h-3.5 mr-1" />
+                                Test Ride
+                            </Button>
+                        )}
+                    </div>
+                )}
 
                 {/* Compare + Info row */}
                 <div className="flex items-center gap-2 mt-2">

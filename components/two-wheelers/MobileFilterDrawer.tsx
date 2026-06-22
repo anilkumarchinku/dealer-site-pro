@@ -1,5 +1,6 @@
 "use client"
 
+import { useEffect, useId, useRef } from "react"
 import type { TwoWheelerFilters, TwoWheelerType, TwoWheelerFuelType } from "@/lib/types/two-wheeler"
 
 interface Props {
@@ -30,6 +31,59 @@ const PRICE_RANGES = [
 ]
 
 export function MobileFilterDrawer({ filters, onChange, brands = [], onClose }: Props) {
+    const dialogRef         = useRef<HTMLDivElement>(null)
+    const previouslyFocused = useRef<HTMLElement | null>(null)
+    const titleId           = useId()
+
+    // Trap focus, close on Escape, lock body scroll, restore focus on unmount.
+    useEffect(() => {
+        previouslyFocused.current = document.activeElement as HTMLElement | null
+        const prevOverflow = document.body.style.overflow
+        document.body.style.overflow = "hidden"
+        const focusTimer = window.setTimeout(() => {
+            const dialog = dialogRef.current
+            if (!dialog) return
+            const focusable = dialog.querySelector<HTMLElement>(
+                'input, button, [href], select, textarea, [tabindex]:not([tabindex="-1"])'
+            )
+            focusable?.focus()
+        }, 0)
+
+        const handleKeyDown = (e: KeyboardEvent) => {
+            if (e.key === "Escape") {
+                e.stopPropagation()
+                onClose()
+                return
+            }
+            if (e.key !== "Tab") return
+            const dialog = dialogRef.current
+            if (!dialog) return
+            const focusable = Array.from(
+                dialog.querySelectorAll<HTMLElement>(
+                    'input, button, [href], select, textarea, [tabindex]:not([tabindex="-1"])'
+                )
+            ).filter(el => !el.hasAttribute("disabled") && el.offsetParent !== null)
+            if (focusable.length === 0) return
+            const first = focusable[0]
+            const last = focusable[focusable.length - 1]
+            if (e.shiftKey && document.activeElement === first) {
+                e.preventDefault()
+                last.focus()
+            } else if (!e.shiftKey && document.activeElement === last) {
+                e.preventDefault()
+                first.focus()
+            }
+        }
+
+        document.addEventListener("keydown", handleKeyDown)
+        return () => {
+            window.clearTimeout(focusTimer)
+            document.removeEventListener("keydown", handleKeyDown)
+            document.body.style.overflow = prevOverflow
+            previouslyFocused.current?.focus?.()
+        }
+    }, [onClose])
+
     function toggle<T>(field: keyof TwoWheelerFilters, value: T) {
         onChange({
             ...filters,
@@ -44,11 +98,17 @@ export function MobileFilterDrawer({ filters, onChange, brands = [], onClose }: 
             <div className="absolute inset-0 bg-black/40" onClick={onClose} />
 
             {/* Sheet */}
-            <div className="absolute bottom-0 left-0 right-0 bg-background rounded-t-2xl shadow-2xl max-h-[80vh] overflow-y-auto">
+            <div
+                ref={dialogRef}
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby={titleId}
+                className="absolute bottom-0 left-0 right-0 bg-background rounded-t-2xl shadow-2xl max-h-[80vh] overflow-y-auto"
+            >
                 {/* Header */}
                 <div className="flex items-center justify-between p-4 border-b border-border">
-                    <h2 className="font-semibold text-base">Filters</h2>
-                    <button onClick={onClose} className="p-1 rounded-lg hover:bg-muted">✕</button>
+                    <h2 id={titleId} className="font-semibold text-base">Filters</h2>
+                    <button onClick={onClose} aria-label="Close filters" className="p-1 rounded-lg hover:bg-muted">✕</button>
                 </div>
 
                 {/* Filter content */}
