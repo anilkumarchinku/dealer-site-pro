@@ -1,6 +1,6 @@
 export default function DomainNotFound() {
     return (
-        <div className="min-h-screen bg-background flex items-center justify-center px-6">
+        <div className="dealer-site-surface min-h-screen bg-background flex items-center justify-center px-6">
             <div className="text-center max-w-md">
                 <div className="w-20 h-20 rounded-2xl bg-amber-500/10 flex items-center justify-center mx-auto mb-6 border border-amber-500/20">
                     <svg className="w-10 h-10 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
