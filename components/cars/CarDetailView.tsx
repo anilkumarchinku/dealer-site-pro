@@ -38,9 +38,9 @@ import { getBrandLogo } from '@/lib/data/brand-logos';
 import { useSitePrefix } from '@/lib/hooks/useSitePrefix';
 import { getContrastText } from '@/lib/utils/color-contrast';
 import { resolveVehicleDetailAccent } from '@/lib/utils/site-theme';
+import { useWishlistStore } from '@/lib/store/wishlist-store';
 import {
     ChevronRight,
-    Download,
     Share2,
     Calendar,
     Shield,
@@ -62,11 +62,9 @@ import {
     TrendingUp,
     MapPin,
     ShieldCheck,
-    ClipboardCheck,
     FileText,
     AlertTriangle,
     BadgeCheck,
-    RotateCcw,
 } from 'lucide-react';
 
 interface CarDetailViewProps {
@@ -195,7 +193,11 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
     const [activeTab, setActiveTab] = useState('overview');
     const [isTabBarSticky, setIsTabBarSticky] = useState(false);
     const [selectedColor, setSelectedColor] = useState(car.colors?.[0]?.name || '');
-    const [isFavorite, setIsFavorite] = useState(false);
+    // Wishlist is backed by the persisted store (same source as the cards + WishlistDrawer).
+    // Subscribe to `items` so the heart re-renders when toggled.
+    const wishlistItems = useWishlistStore((s) => s.items);
+    const toggleWishlist = useWishlistStore((s) => s.toggle);
+    const isFavorite = wishlistItems.includes(car.id);
     const [failedColorImages, setFailedColorImages] = useState<Record<string, boolean>>({});
 
     // Price formatting
@@ -305,6 +307,9 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
     const financePrecheckHref = `/api/finance/precheck?vehicle=${encodeURIComponent(vehicleLabel)}&amount=${encodeURIComponent(String(emiResult?.loan ?? Math.max(0, emiPrice - emiDown)))}`;
     const fastagRechargeHref = `/api/fastag/recharge?vehicle=${encodeURIComponent(vehicleLabel)}`;
     const inventoryHref = siteSlug ? (sitePrefix || '/') : '/cars';
+    // Distinct cars-inventory listing (the breadcrumb "Cars" crumb), separate
+    // from the site root used by the "Home" crumb so the two aren't duplicates.
+    const carsHref = siteSlug ? `${sitePrefix}/cars` : '/cars';
     const makeHref = siteSlug
         ? `${inventoryHref}?make=${encodeURIComponent(car.make)}`
         : `/cars?make=${encodeURIComponent(car.make)}`;
@@ -328,7 +333,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                     <nav className="flex items-center gap-1.5 text-sm text-gray-600">
                         <Link href={inventoryHref} className="hover:text-gray-900 transition-colors">Home</Link>
                         <ChevronRight className="w-3.5 h-3.5" />
-                        <Link href={inventoryHref} className="hover:text-gray-900 transition-colors">Cars</Link>
+                        <Link href={carsHref} className="hover:text-gray-900 transition-colors">Cars</Link>
                         <ChevronRight className="w-3.5 h-3.5" />
                         <Link href={makeHref} className="hover:text-gray-900 transition-colors">{car.make}</Link>
                         <ChevronRight className="w-3.5 h-3.5" />
@@ -375,9 +380,11 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                                 {activeImage ? allImages.indexOf(activeImage) + 1 : 0}/{allImages.length}
                             </div>
 
-                            {/* Favorite */}
+                            {/* Favorite — persisted to the wishlist store (shows in WishlistDrawer) */}
                             <button
-                                onClick={() => setIsFavorite(!isFavorite)}
+                                onClick={() => toggleWishlist(car.id)}
+                                aria-label={isFavorite ? 'Remove from wishlist' : 'Save to wishlist'}
+                                aria-pressed={isFavorite}
                                 className="absolute top-3 right-3 w-9 h-9 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-sm hover:bg-white transition-colors"
                             >
                                 <Heart className={`w-4.5 h-4.5 ${isFavorite ? 'fill-red-500 text-red-500' : 'text-gray-600'}`} />
@@ -489,8 +496,8 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                                         </Button>
                                         <Button variant="outline" size="sm" className={lightOutlineButtonClass}
                                             onClick={() => setEnquiryOpen(true)}>
-                                            <Download className="w-3.5 h-3.5 mr-1.5" />
-                                            Brochure
+                                            <Info className="w-3.5 h-3.5 mr-1.5" />
+                                            Request details
                                         </Button>
                                     </div>
                                     <Button variant="ghost" size="sm" className={`w-full ${lightGhostButtonClass}`}
@@ -556,23 +563,21 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                                         <p className="text-sm text-emerald-600">
                                             {isCPO
                                                 ? 'This car has been thoroughly inspected and comes with manufacturer-backed warranty.'
-                                                : 'This car has passed our 200+ point quality inspection.'}
+                                                : 'This pre-owned car has been inspected and verified by the dealer.'}
                                         </p>
                                     </div>
                                 </div>
-                                <div className="flex flex-wrap gap-2 sm:ml-auto">
-                                    <Badge variant="outline" className="bg-emerald-500/10 border-emerald-500/30 text-emerald-500 gap-1">
-                                        <ClipboardCheck className="w-3 h-3" /> 200+ Point Check
-                                    </Badge>
-                                    {isCPO && (
+                                {/* Only render a guarantee badge backed by real per-vehicle
+                                    warranty data. The former "200+ Point Check" / "7-Day Return"
+                                    / hardcoded "1 Year Warranty" badges were fabricated (no schema
+                                    field) and identical for every car, so they were removed. */}
+                                {car.ownership?.warranty?.standard && (
+                                    <div className="flex flex-wrap gap-2 sm:ml-auto">
                                         <Badge variant="outline" className="bg-blue-500/10 border-blue-500/30 text-blue-500 gap-1">
-                                            <BadgeCheck className="w-3 h-3" /> 1 Year Warranty
+                                            <BadgeCheck className="w-3 h-3" /> {car.ownership.warranty.standard} Warranty
                                         </Badge>
-                                    )}
-                                    <Badge variant="outline" className="bg-purple-500/10 border-purple-500/30 text-purple-500 gap-1">
-                                        <RotateCcw className="w-3 h-3" /> 7-Day Return
-                                    </Badge>
-                                </div>
+                                    </div>
+                                )}
                             </div>
                         </CardContent>
                     </Card>
@@ -1162,7 +1167,19 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                         <Card className={`${lightCardClass} p-8 text-center`}>
                             <MessageSquare className="w-10 h-10 text-gray-600 mx-auto mb-3" />
                             <p className="text-gray-600">No reviews available yet. Be the first to review!</p>
-                            <Button variant="outline" className={`mt-4 ${lightOutlineButtonClass}`}>Write a Review</Button>
+                            {/* Only offer the CTA when a real review form exists (rendered below
+                                via ReviewsSection, gated on dealerId). Scroll the buyer to it. */}
+                            {dealerId && (
+                                <Button
+                                    variant="outline"
+                                    className={`mt-4 ${lightOutlineButtonClass}`}
+                                    onClick={() => {
+                                        document.getElementById('dealer-reviews')?.scrollIntoView({ behavior: 'smooth' });
+                                    }}
+                                >
+                                    Write a Review
+                                </Button>
+                            )}
                         </Card>
                     )}
                 </section>
@@ -1255,7 +1272,9 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
 
                 {/* ──────── SIMILAR CARS ──────── */}
                 {dealerId && (
-                    <ReviewsSection dealerId={dealerId} brandColor={brandColor} variant="light" />
+                    <div id="dealer-reviews">
+                        <ReviewsSection dealerId={dealerId} brandColor={brandColor} variant="light" />
+                    </div>
                 )}
 
                 {similarCars.length > 0 && (

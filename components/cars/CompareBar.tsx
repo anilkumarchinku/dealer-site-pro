@@ -11,9 +11,13 @@ const MAX_SLOTS = 3;
 
 interface CompareBarProps {
     brandColor?: string;
+    /** Dealer ID — forwarded to the enquiry modal so leads can be saved */
+    dealerId?: string;
+    /** Dealer phone — enables WhatsApp quick-connect in the enquiry modal */
+    dealerPhone?: string;
 }
 
-export default function CompareBar({ brandColor = '#2563eb' }: CompareBarProps) {
+export default function CompareBar({ brandColor = '#2563eb', dealerId, dealerPhone }: CompareBarProps) {
     const { selectedCars, removeCar, clearCars } = useCompareStore();
     const [modalOpen, setModalOpen] = useState(false);
 
@@ -120,6 +124,8 @@ export default function CompareBar({ brandColor = '#2563eb' }: CompareBarProps) 
                 open={modalOpen}
                 onOpenChange={setModalOpen}
                 brandColor={brandColor}
+                dealerId={dealerId}
+                dealerPhone={dealerPhone}
             />
         </>
     );

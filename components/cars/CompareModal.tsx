@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import Image from 'next/image';
 import { X } from 'lucide-react';
 import {
@@ -11,12 +12,18 @@ import {
 } from '@/components/ui/dialog';
 import { useCompareStore } from '@/lib/store/compare-store';
 import { resolveCarImage } from '@/lib/utils/car-image';
+import { getContrastText } from '@/lib/utils/color-contrast';
 import { Car } from '@/lib/types/car';
+import { EnquiryModal } from './EnquiryModal';
 
 interface CompareModalProps {
     open: boolean;
     onOpenChange: (open: boolean) => void;
     brandColor: string;
+    /** Dealer ID — required for the enquiry form to save a lead */
+    dealerId?: string;
+    /** Dealer phone — enables WhatsApp quick-connect in the enquiry modal */
+    dealerPhone?: string;
 }
 
 interface CompareRow {
@@ -85,18 +92,19 @@ const COMPARE_ROWS: CompareRow[] = [
     },
 ];
 
-export default function CompareModal({ open, onOpenChange, brandColor }: CompareModalProps) {
+export default function CompareModal({ open, onOpenChange, brandColor, dealerId, dealerPhone }: CompareModalProps) {
     const { selectedCars } = useCompareStore();
+    const [enquiryCar, setEnquiryCar] = useState<Car | null>(null);
 
     const handleEnquire = (car: Car) => {
-        // Dispatch a custom event so the host page can open its enquiry modal
-        window.dispatchEvent(
-            new CustomEvent('dsp:enquire', { detail: { carId: car.id } })
-        );
+        // Open the real enquiry modal for the chosen car, and close the compare modal
+        // so the two dialogs don't stack.
+        setEnquiryCar(car);
         onOpenChange(false);
     };
 
     return (
+        <>
         <Dialog open={open} onOpenChange={onOpenChange}>
             <DialogContent
                 className="!max-w-[95vw] w-full sm:!max-w-4xl p-0 overflow-hidden"
@@ -149,8 +157,8 @@ export default function CompareModal({ open, onOpenChange, brandColor }: Compare
                                             </div>
                                             <button
                                                 onClick={() => handleEnquire(car)}
-                                                style={{ backgroundColor: brandColor }}
-                                                className="w-full py-1.5 px-3 rounded-lg text-xs font-semibold text-white
+                                                style={{ backgroundColor: brandColor, color: getContrastText(brandColor) }}
+                                                className="w-full py-1.5 px-3 rounded-lg text-xs font-semibold
                                                            hover:opacity-90 transition-opacity"
                                             >
                                                 Enquire
@@ -192,5 +200,16 @@ export default function CompareModal({ open, onOpenChange, brandColor }: Compare
                 </div>
             </DialogContent>
         </Dialog>
+
+        {/* Real enquiry flow — replaces the former dead 'dsp:enquire' event */}
+        <EnquiryModal
+            car={enquiryCar}
+            open={enquiryCar !== null}
+            onOpenChange={(o) => { if (!o) setEnquiryCar(null); }}
+            brandColor={brandColor}
+            dealerId={dealerId}
+            dealerPhone={dealerPhone}
+        />
+        </>
     );
 }
