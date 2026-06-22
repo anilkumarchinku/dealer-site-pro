@@ -7,7 +7,6 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { cn } from "@/lib/utils";
 import { Search, Filter, Mail, Phone, CheckCircle, Loader2, RefreshCw, Clock, TrendingUp, Globe, Inbox, ChevronLeft, ChevronRight } from "lucide-react";
 import { fetchLeads, updateLeadStatus, type ExternalLead } from "@/lib/db/leads";
-import { useOnboardingStore } from "@/lib/store/onboarding-store";
 import { toast } from "@/lib/utils/toast";
 import { PremiumEmptyState, PremiumPageHeader } from "@/components/dashboard/premium-ui";
 
@@ -61,7 +60,6 @@ const cyeproSyncConfig: Record<string, { bg: string; text: string; label: string
 const PAGE_SIZE = 20;
 
 export default function LeadsPage() {
-    const { dealerId } = useOnboardingStore();
     const [searchQuery, setSearchQuery] = useState("");
     const [filterPriority, setFilterPriority] = useState<string>("all");
     const [filterStatus, setFilterStatus] = useState<string>("all");
@@ -70,17 +68,20 @@ export default function LeadsPage() {
     const [page, setPage] = useState(1);
 
     const loadLeads = () => {
-        if (!dealerId) return;
         setLoading(true);
-        fetchLeads(dealerId)
+        fetchLeads()
             .then(data => setApiLeads(data))
             .finally(() => setLoading(false));
     };
 
-    useEffect(() => { loadLeads(); }, [dealerId]); // eslint-disable-line
+    useEffect(() => { loadLeads(); }, []); // eslint-disable-line
 
     const handleMarkContacted = async (id: string) => {
-        await updateLeadStatus(id, "contacted");
+        const result = await updateLeadStatus(id, "contacted");
+        if (!result.success) {
+            toast.error(result.error ?? "Failed to update lead");
+            return;
+        }
         setApiLeads(prev => prev.map(l => l.id === id ? { ...l, status: "contacted" as const } : l));
         toast.success("Lead updated");
     };
@@ -128,21 +129,19 @@ export default function LeadsPage() {
                         )}
                         <span className="text-sm text-muted-foreground">{apiLeads.length} total</span>
                     </div>
-                    {dealerId && (
-                        <Button
-                            variant="ghost"
-                            size="icon"
-                            onClick={loadLeads}
-                            disabled={loading}
-                            title="Refresh leads"
-                            className="rounded-xl text-muted-foreground"
-                        >
-                            {loading
-                                ? <Loader2 className="w-4 h-4 animate-spin" />
-                                : <RefreshCw className="w-4 h-4" />
-                            }
-                        </Button>
-                    )}
+                    <Button
+                        variant="ghost"
+                        size="icon"
+                        onClick={loadLeads}
+                        disabled={loading}
+                        title="Refresh leads"
+                        className="rounded-xl text-muted-foreground"
+                    >
+                        {loading
+                            ? <Loader2 className="w-4 h-4 animate-spin" />
+                            : <RefreshCw className="w-4 h-4" />
+                        }
+                    </Button>
                 </div>
                 }
             >
