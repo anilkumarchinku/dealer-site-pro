@@ -189,6 +189,47 @@ type SurepassFunctionResponse = {
     provider_status?: number | string | null
 }
 
+type ChallanRecord = {
+    amount?: number | string | null
+    challan_status?: string | null
+    status?: string | null
+    court_challan?: boolean | null
+}
+
+function parseAmount(value: unknown): number {
+    if (typeof value === 'number') return Number.isFinite(value) ? value : 0
+    if (typeof value !== 'string') return 0
+    const parsed = Number(value.replace(/[^0-9.]/g, ''))
+    return Number.isFinite(parsed) ? parsed : 0
+}
+
+function isPendingChallan(challan: ChallanRecord): boolean {
+    const status = String(challan.challan_status ?? challan.status ?? '').toLowerCase()
+    if (status.includes('not paid') || status.includes('unpaid') || status.includes('pending')) return true
+    if (status.includes('paid') || status.includes('closed') || status.includes('disposed')) return false
+    return parseAmount(challan.amount) > 0
+}
+
+function normalizeChallanSummary(result: Record<string, unknown>): Record<string, unknown> {
+    const challans = Array.isArray(result.challans)
+        ? (result.challans as ChallanRecord[])
+        : []
+
+    if (challans.length === 0) return result
+
+    const pendingCount = challans.filter(isPendingChallan).length
+    const challanStatus = pendingCount > 0
+        ? `${pendingCount} pending challan${pendingCount === 1 ? '' : 's'} found`
+        : `${challans.length} challan record${challans.length === 1 ? '' : 's'} found, none pending`
+
+    return {
+        ...result,
+        challan_count: pendingCount,
+        challan_status: challanStatus,
+        challan_record_count: challans.length,
+    }
+}
+
 async function surepassEdgeFunctionLookup(
     supabase: RouteSupabaseClient,
     rc: string
@@ -218,7 +259,7 @@ async function surepassEdgeFunctionLookup(
         )
     }
 
-    return data.data
+    return normalizeChallanSummary(data.data)
 }
 
 /** Get dealer ID from authenticated user */
@@ -264,7 +305,7 @@ export async function POST(request: NextRequest) {
         const cached = await getCachedLookup(rc)
         if (cached) {
             // Don't charge for cached results
-            return NextResponse.json({ success: true, data: cached, cached: true, ttl_seconds: RC_CACHE_TTL_SECONDS })
+            return NextResponse.json({ success: true, data: normalizeChallanSummary(cached), cached: true, ttl_seconds: RC_CACHE_TTL_SECONDS })
         }
 
         let result: Record<string, unknown>
@@ -272,7 +313,7 @@ export async function POST(request: NextRequest) {
         if (provider === 'surepass' || provider === 'surpass') {
             result = await surepassEdgeFunctionLookup(auth.supabase, rc)
         } else if (provider === 'rapidor' && getOptionalEnv('RAPIDOR_API_KEY')) {
-            result = await rapidorLookup(rc)
+            result = normalizeChallanSummary(await rapidorLookup(rc))
         } else {
             if (process.env.NODE_ENV === 'production') {
                 return NextResponse.json(
@@ -280,7 +321,7 @@ export async function POST(request: NextRequest) {
                     { status: 503 }
                 )
             }
-            result = mockResponse(rc)
+            result = normalizeChallanSummary(mockResponse(rc))
         }
 
         await setCachedLookup(rc, result)

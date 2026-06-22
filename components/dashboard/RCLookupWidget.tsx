@@ -279,7 +279,7 @@ export function RCLookupWidget() {
                                             size="sm"
                                             onClick={() => setShowChallans(prev => !prev)}
                                         >
-                                            {showChallans ? 'Hide Challan Details' : 'Check Details'}
+                                            {showChallans ? 'Hide Challan Details' : 'View Challan Details'}
                                         </Button>
                                     )}
                                 </div>

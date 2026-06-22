@@ -103,4 +103,45 @@ describe('POST /api/vehicles/rc-lookup', () => {
         })
         expect(externalApiFetch).not.toHaveBeenCalled()
     })
+
+    it('derives pending challan status from Surepass challan records when the summary is contradictory', async () => {
+        vi.stubEnv('NODE_ENV', 'production')
+        vi.stubEnv('RC_LOOKUP_PROVIDER', 'surepass')
+
+        const invoke = vi.fn().mockResolvedValue({
+            error: null,
+            data: {
+                success: true,
+                data: {
+                    rc_number: 'TS08EB9048',
+                    owner_name: 'Test Owner',
+                    make_model: 'HERO MOTOCORP LTD KARIZMA BSIII',
+                    challan_count: 0,
+                    challan_status: 'No pending challans found',
+                    challans: [
+                        {
+                            challan_number: 'HYD25EC151027634',
+                            challan_status: 'Not Paid',
+                            amount: 100,
+                        },
+                    ],
+                },
+            },
+        })
+        vi.mocked(requireAuth).mockResolvedValue({
+            user: { id: 'user_1' },
+            supabase: { functions: { invoke } },
+            errorResponse: null,
+        } as never)
+
+        const response = await POST(rcRequest('TS08EB9048'))
+        const body = await response.json()
+
+        expect(response.status).toBe(200)
+        expect(body.data).toMatchObject({
+            challan_count: 1,
+            challan_status: '1 pending challan found',
+            challan_record_count: 1,
+        })
+    })
 })
