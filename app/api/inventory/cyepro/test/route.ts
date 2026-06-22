@@ -7,7 +7,7 @@
 
 import { NextResponse } from 'next/server'
 import { ExternalApiError, externalApiFetch } from '@/lib/services/external-api-fetch'
-import { getCyeproApiBaseUrl, getCyeproNumericValue, getCyeproSearchPaths, getCyeproVehicleArray } from '@/lib/services/cyepro-service'
+import { buildCyeproSearchRequestBody, getCyeproApiBaseUrl, getCyeproNumericValue, getCyeproSearchPaths, getCyeproVehicleArray } from '@/lib/services/cyepro-service'
 import { requireAuth } from '@/lib/supabase-server'
 
 
@@ -98,7 +98,7 @@ export async function POST(request: Request) {
         }
 
         // Step 4: Test the Cyepro API with a minimal request
-        const testBody = {
+        const testBody = buildCyeproSearchRequestBody({
             page: 1,
             size: 5,
             priceMin: 0,
@@ -106,12 +106,8 @@ export async function POST(request: Request) {
             yearMin: 1970,
             yearMax: new Date().getFullYear() + 1,
             vehicleStatusIds: [],
-            vehicleTypeList: [],
             kmDrivenMax: 9_999_999,
-            daysFilter: null,
-            sortBy: null,
-            order: 'asc' as const,
-        }
+        })
 
         const headers = {
             'Content-Type': 'application/json',

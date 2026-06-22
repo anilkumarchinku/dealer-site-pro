@@ -461,7 +461,7 @@ export default async function SitePage({ params }: SitePageProps) {
     if (!slug) return <ComingSoon slug="this-site" />
 
     // ── Fetch real dealer data ────────────────────────────────────────────────
-    const dealer = await fetchDealerBySlug(slug)
+    const dealer = await fetchDealerBySlug(slug, { includePrivate: true })
     if (!dealer) return <ComingSoon slug={slug} />
 
     // ── Pure 2W/3W dealers → redirect to their vehicle hub ───────────────────

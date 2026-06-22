@@ -4,8 +4,11 @@
  * NO "use client" — this runs only on the server
  */
 
+import { createServerClient } from '@supabase/ssr'
 import { createClient, type SupabaseClient } from '@supabase/supabase-js'
+import { cookies } from 'next/headers'
 import type { DBVehicle } from './vehicles'
+import { getOptionalEnv, isPlaceholderEnvValue } from '@/lib/env'
 
 // ── Known brand slug patterns (longest first for correct suffix matching) ───
 // Maps URL slug suffix → canonical brand name used in getCarsByMake()
@@ -108,17 +111,117 @@ export interface DealerPublicData {
     vehicle_type: string | null
 }
 
+export type FetchDealerBySlugOptions = {
+    /**
+     * Include server-only private fields such as cyepro_api_key.
+     * Keep false for ordinary public pages; enable only where the server must
+     * call dealer-scoped providers and will not pass the secret to client props.
+     */
+    includePrivate?: boolean
+}
+
+function getSupabaseUrl(): string | undefined {
+    const url = getOptionalEnv('NEXT_PUBLIC_SUPABASE_URL')
+    return url && !url.includes('placeholder') ? url : undefined
+}
+
+function getSupabaseAnonKey(): string | undefined {
+    return getOptionalEnv('NEXT_PUBLIC_SUPABASE_ANON_KEY')
+        ?? getOptionalEnv('NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY')
+}
+
 function getServerSupabase() {
-    const url = process.env.NEXT_PUBLIC_SUPABASE_URL
-    const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
-        ?? process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY
-    if (!url || !key || url.includes('placeholder')) return null
+    const url = getSupabaseUrl()
+    const key = getSupabaseAnonKey()
+    if (!url || !key) return null
     return createClient(url, key, {
         auth: {
             autoRefreshToken: false,
             persistSession: false,
         },
     })
+}
+
+async function getAuthenticatedServerSupabase() {
+    const url = getSupabaseUrl()
+    const key = getSupabaseAnonKey()
+    if (!url || !key) return null
+
+    const cookieStore = await cookies()
+
+    return createServerClient(url, key, {
+        cookies: {
+            getAll() {
+                return cookieStore.getAll()
+            },
+            setAll() {
+                // Public site rendering only needs to read any existing owner
+                // session. Cookie writes are not available from all server contexts.
+            },
+        },
+    })
+}
+
+function getPrivateServerSupabase() {
+    const url = getSupabaseUrl()
+    const key = getOptionalEnv('SUPABASE_SERVICE_ROLE_KEY')
+    if (!url || !key || isPlaceholderEnvValue(key)) return null
+
+    return createClient(url, key, {
+        auth: {
+            autoRefreshToken: false,
+            persistSession: false,
+        },
+    })
+}
+
+function normalizePrivateApiKey(value: unknown): string | null {
+    return typeof value === 'string' && value.trim() ? value.trim() : null
+}
+
+async function fetchDealerCyeproApiKeyForAuthenticatedOwner(dealerId: string): Promise<string | null> {
+    try {
+        const supabase = await getAuthenticatedServerSupabase()
+        if (!supabase) return null
+
+        const { data: { user } } = await supabase.auth.getUser()
+        if (!user) return null
+
+        const { data, error } = await supabase
+            .from('dealers')
+            .select('cyepro_api_key')
+            .eq('id', dealerId)
+            .eq('user_id', user.id)
+            .maybeSingle()
+
+        if (error) return null
+        return normalizePrivateApiKey(data?.cyepro_api_key)
+    } catch {
+        return null
+    }
+}
+
+async function fetchDealerCyeproApiKeyWithServerSecret(dealerId: string): Promise<string | null> {
+    try {
+        const supabase = getPrivateServerSupabase()
+        if (!supabase) return null
+
+        const { data, error } = await supabase
+            .from('dealers')
+            .select('cyepro_api_key')
+            .eq('id', dealerId)
+            .maybeSingle()
+
+        if (error) return null
+        return normalizePrivateApiKey(data?.cyepro_api_key)
+    } catch {
+        return null
+    }
+}
+
+async function fetchDealerCyeproApiKey(dealerId: string): Promise<string | null> {
+    return await fetchDealerCyeproApiKeyForAuthenticatedOwner(dealerId)
+        ?? await fetchDealerCyeproApiKeyWithServerSecret(dealerId)
 }
 
 /** Try to resolve a dealer row directly by its main slug */
@@ -155,7 +258,10 @@ async function resolveDealerBrandFilterBySlug(
  *
  * Returns null if the dealer doesn't exist or hasn't completed onboarding.
  */
-export async function fetchDealerBySlug(slug: string): Promise<DealerPublicData | null> {
+export async function fetchDealerBySlug(
+    slug: string,
+    options: FetchDealerBySlugOptions = {},
+): Promise<DealerPublicData | null> {
     const supabase = getServerSupabase()
     if (!supabase) return null
 
@@ -223,7 +329,7 @@ export async function fetchDealerBySlug(slug: string): Promise<DealerPublicData 
     // For brand-specific sites, also try dealer_site_configs for per-brand overrides
     const brandSlugForConfig = brandFilter ? brandToUrlSlug(brandFilter) : null
 
-    const [brandsResult, mainConfigResult, siteConfigResult, vehiclesResult, servicesResult, serviceCentersResult] = await Promise.all([
+    const [brandsResult, mainConfigResult, siteConfigResult, vehiclesResult, servicesResult, serviceCentersResult, cyeproApiKey] = await Promise.all([
         supabase
             .from('public_dealer_site_brands')
             .select('brand_name')
@@ -257,6 +363,7 @@ export async function fetchDealerBySlug(slug: string): Promise<DealerPublicData 
             .select('id, name, address, city, phone')
             .eq('dealer_id', dealer.id)
             .order('display_order', { ascending: true }),
+        options.includePrivate ? fetchDealerCyeproApiKey(dealer.id) : Promise.resolve(null),
     ])
 
     // Brand-specific config takes priority over the shared main config
@@ -287,7 +394,7 @@ export async function fetchDealerBySlug(slug: string): Promise<DealerPublicData 
         services:        servicesResult.data?.map(s => s.service_name) ?? null,
         brandFilter,
         usedCarSite,
-        cyepro_api_key:  null,
+        cyepro_api_key:  cyeproApiKey,
         logo_url:        dealer.logo_url       ?? null,
         hero_image_url:  dealer.hero_image_url ?? null,
         vehicle_type:    dealer.vehicle_type    ?? null,
