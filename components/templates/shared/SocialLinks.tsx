@@ -57,7 +57,7 @@ export function SocialLinks({ facebook, instagram, youtube, whatsapp, className 
                     rel="noopener noreferrer"
                     aria-label={link.label}
                     title={link.label}
-                    className={cn('w-9 h-9 rounded-full flex items-center justify-center bg-gray-100 text-gray-600 transition-colors', link.hover)}
+                    className={cn('w-10 h-10 rounded-full flex items-center justify-center bg-gray-100 text-gray-600 transition-colors', link.hover)}
                 >
                     {link.icon}
                 </a>

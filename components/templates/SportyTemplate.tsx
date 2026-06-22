@@ -314,8 +314,9 @@ export function SportyTemplate({
                         <div className="flex shrink-0 items-center gap-2">
                             <WishlistDrawer cars={cars} dealerId={dealerId} brandColor={brandAccent} />
                             <Button
-                                className="hidden px-4 font-bold lg:flex"
-                                style={{ backgroundColor: `${brandAccent}cc`, color: getContrastText(brandAccent) }}
+                                variant="outline"
+                                className="hidden px-4 font-bold lg:flex border-2 bg-transparent"
+                                style={{ borderColor: brandAccent, color: brandAccent }}
                                 onClick={() => setEnquireSidebarOpen(true)}
                             >
                                 <MessageSquare className="w-4 h-4 mr-2" />
@@ -428,7 +429,7 @@ export function SportyTemplate({
                                     </div>
                                     {isVerified && <VerifiedBadge variant="hero" />}
                                 </div>
-                                <h1 className="text-6xl md:text-8xl font-black leading-none mb-6 tracking-tight text-gray-900 animate-fade-in-up animate-delay-100">
+                                <h1 className="text-4xl sm:text-6xl md:text-8xl font-black leading-none mb-6 tracking-tight text-gray-900 animate-fade-in-up animate-delay-100">
                                     {heroTitle.split(' ').map((word, i) => (
                                         <span key={i} className={i === heroTitle.split(' ').length - 1 ? 'block' : ''} style={i === heroTitle.split(' ').length - 1 ? { color: brandAccent } : {}}>
                                             {word}{' '}
@@ -930,7 +931,7 @@ export function SportyTemplate({
 
             <NavEMIModal open={navEMIOpen} onOpenChange={setNavEMIOpen} brandColor={brandAccent} cars={cars} />
 
-            <CompareBar brandColor={brandAccent} />
+            <CompareBar brandColor={brandAccent} dealerId={dealerId} dealerPhone={contactInfo.phone} />
 
             {/* Sticky Mobile Bar */}
             <StickyEnquiryBar phone={contactInfo.phone} brandColor={brandAccent} vehicleType={vehicleType} />

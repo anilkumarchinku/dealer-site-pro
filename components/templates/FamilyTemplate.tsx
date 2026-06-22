@@ -883,7 +883,7 @@ export function FamilyTemplate({
             </footer>
 
             <NavEMIModal open={navEMIOpen} onOpenChange={setNavEMIOpen} brandColor={brandColors.primary} cars={cars} />
-            <CompareBar brandColor={brandColors.primary} />
+            <CompareBar brandColor={brandColors.primary} dealerId={dealerId} dealerPhone={contactInfo.phone} />
 
             {/* Sticky Mobile Bar */}
             <StickyEnquiryBar phone={contactInfo.phone} brandColor={brandColors.primary} vehicleType={vehicleType} />

@@ -369,7 +369,7 @@ export function LuxuryTemplate({
                                 </div>
                                 {isVerified && <VerifiedBadge variant="hero" />}
                             </div>
-                            <h1 className="text-6xl md:text-8xl font-light tracking-tight mb-8 leading-tight text-gray-900 animate-fade-in-up animate-delay-200">{heroTitle}</h1>
+                            <h1 className="text-4xl sm:text-5xl md:text-8xl font-light tracking-tight mb-8 leading-tight text-gray-900 animate-fade-in-up animate-delay-200">{heroTitle}</h1>
                             <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto animate-fade-in-up animate-delay-300">{heroSubtitle}</p>
                             <div className="flex flex-wrap items-center justify-center gap-4 animate-fade-in-up animate-delay-400">
                                 {showInventoryTab && (
@@ -796,7 +796,7 @@ export function LuxuryTemplate({
             </footer>
 
             <NavEMIModal open={navEMIOpen} onOpenChange={setNavEMIOpen} brandColor={brandAccent} cars={cars} />
-            <CompareBar brandColor={brandAccent} />
+            <CompareBar brandColor={brandAccent} dealerId={dealerId} dealerPhone={contactInfo.phone} />
 
             {/* Sticky Mobile Bar */}
             <StickyEnquiryBar phone={contactInfo.phone} brandColor={brandAccent} vehicleType={vehicleType} />
