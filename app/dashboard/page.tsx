@@ -172,16 +172,31 @@ export default function DashboardPage() {
         if (!dealerId) return;
         setSavingBrands(true);
         try {
-            await supabase.from("dealer_brands").delete().eq("dealer_id", dealerId);
+            const { error: deleteError } = await supabase
+                .from("dealer_brands")
+                .delete()
+                .eq("dealer_id", dealerId)
+                .or("vehicle_type.is.null,vehicle_type.in.(cars,car,4w)");
+            if (deleteError) throw deleteError;
+
             if (selectedBrands.length > 0) {
-                await supabase.from("dealer_brands").insert(
+                const { error: insertError } = await supabase.from("dealer_brands").insert(
                     selectedBrands.map((name, i) => ({
                         dealer_id:  dealerId,
                         brand_name: name,
                         is_primary: i === 0,
+                        vehicle_type: "cars",
                     }))
                 );
+                if (insertError) throw insertError;
             }
+
+            const { error: dealerError } = await supabase
+                .from("dealers")
+                .update({ brands: selectedBrands })
+                .eq("id", dealerId);
+            if (dealerError) throw dealerError;
+
             updateData({ brands: selectedBrands });
             setEditingBrands(false);
         } finally {

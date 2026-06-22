@@ -2,8 +2,8 @@
  * Cyepro Vehicle Inventory API Service
  *
  * Server-side only — API key is never exposed to the browser.
- * Base URL  : https://mock-api.cyepro.com by default; override with
- *             CYEPRO_API_BASE_URL for salesapp/dev/prod hosts.
+ * Base URL  : https://api.cyepro.com by default; override with
+ *             CYEPRO_API_BASE_URL for dev/proxy hosts.
  * Auth      : API-KEY header
  * Service ID: 460
  */
@@ -48,11 +48,11 @@ export interface CyeproSearchBody {
     yearMin: number
     yearMax: number
     vehicleStatusIds: number[]
-    vehicleTypeList: string[]
     kmDrivenMax: number
-    daysFilter: null
-    sortBy: null | string
-    order: 'asc' | 'desc'
+    vehicleTypeList?: string[]
+    daysFilter?: null | number | string
+    sortBy?: null | string
+    order?: 'asc' | 'desc'
 }
 
 export interface CyeproSearchResponse {
@@ -111,13 +111,9 @@ const DEFAULT_SEARCH: CyeproSearchBody = {
     priceMin:         0,
     priceMax:         100_000_000,
     yearMin:          1970,
-    yearMax:          new Date().getFullYear() + 1,
+    yearMax:          CURRENT_YEAR + 1,
     vehicleStatusIds: [],
-    vehicleTypeList:  [],
     kmDrivenMax:      9_999_999,
-    daysFilter:       null,
-    sortBy:           null,
-    order:            'asc',
 }
 
 type CyeproSearchCacheEntry = {
@@ -148,6 +144,25 @@ function cloneCyeproSearchResponse(response: CyeproSearchResponse): CyeproSearch
 
 function getCyeproSearchCacheKey(apiKey: string, body: CyeproSearchBody): string {
     return JSON.stringify([apiKey, body])
+}
+
+export function buildCyeproSearchRequestBody(body: CyeproSearchBody): CyeproSearchBody {
+    const requestBody: CyeproSearchBody = { ...body }
+
+    if (!requestBody.vehicleTypeList?.length) {
+        delete requestBody.vehicleTypeList
+    }
+    if (requestBody.daysFilter == null) {
+        delete requestBody.daysFilter
+    }
+    if (requestBody.sortBy == null || requestBody.sortBy.trim() === '') {
+        delete requestBody.sortBy
+    }
+    if (!requestBody.order) {
+        delete requestBody.order
+    }
+
+    return requestBody
 }
 
 function readCyeproSearchCache(cacheKey: string, includeStale = false): CyeproSearchResponse | null {
@@ -475,7 +490,7 @@ export async function fetchCyeproVehicles(
         return null
     }
 
-    const body: CyeproSearchBody = { ...DEFAULT_SEARCH, ...options }
+    const body = buildCyeproSearchRequestBody({ ...DEFAULT_SEARCH, ...options })
     const cacheKey = getCyeproSearchCacheKey(apiKey, body)
     const cached = readCyeproSearchCache(cacheKey)
     if (cached) return cached

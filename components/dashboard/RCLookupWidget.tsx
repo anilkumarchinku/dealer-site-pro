@@ -11,6 +11,7 @@ import { useRouter } from 'next/navigation';
 import { Search, AlertCircle, CheckCircle2, Car, FileText, Shield, Loader2, Plus } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
+import { getChallanSummary } from '@/lib/utils/rc-mapper';
 
 interface ChallanData {
     challan_number?: string;
@@ -70,6 +71,7 @@ export function RCLookupWidget() {
     const [showChallans, setShowChallans] = useState(false);
     const [isAddingToInventory, setIsAddingToInventory] = useState(false);
     const [addToInventorySuccess, setAddToInventorySuccess] = useState(false);
+    const challanSummary = data ? getChallanSummary(data) : null;
 
     const handleLookup = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -255,7 +257,7 @@ export function RCLookupWidget() {
                                     <InfoRow label="Policy Type" value={data.insurance_policy_type} />
                                     <InfoRow label="Fitness Valid Upto" value={data.fitness_upto} />
                                     <InfoRow label="RC Validity" value={data.rc_validity_upto} />
-                                    <InfoRow label="e-Challan" value={data.challan_status ?? (data.challan_count != null ? `${data.challan_count} pending challan(s)` : undefined)} highlight={(data.challan_count ?? 0) > 0} />
+                                    <InfoRow label="e-Challan" value={challanSummary?.status} highlight={challanSummary?.hasPending} />
                                     <InfoRow label="NOC Details"     value={data.noc_details} />
                                     <InfoRow label="Engine No."      value={data.engine_number} />
                                     <InfoRow label="Chassis No."     value={data.chassis_number} />
@@ -263,23 +265,23 @@ export function RCLookupWidget() {
                             </div>
                         </div>
 
-                        {data.challan_status && (
+                        {challanSummary?.status && (
                             <div className="rounded-xl border border-gray-200 bg-white p-3">
                                 <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                                     <div>
                                         <p className="text-xs font-semibold uppercase tracking-wider text-gray-500">Challan Check</p>
-                                        <p className={`text-sm font-semibold ${(data.challan_count ?? 0) > 0 ? 'text-red-600' : 'text-emerald-700'}`}>
-                                            {data.challan_status}
+                                        <p className={`text-sm font-semibold ${challanSummary.hasPending ? 'text-red-600' : 'text-emerald-700'}`}>
+                                            {challanSummary.status}
                                         </p>
                                     </div>
-                                    {data.challans && data.challans.length > 0 && (
+                                    {challanSummary.hasRecords && (
                                         <Button
                                             type="button"
                                             variant="outline"
                                             size="sm"
                                             onClick={() => setShowChallans(prev => !prev)}
                                         >
-                                            {showChallans ? 'Hide Challan Details' : 'Check Details'}
+                                            {showChallans ? 'Hide Challan Details' : 'View Challan Details'}
                                         </Button>
                                     )}
                                 </div>

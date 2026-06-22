@@ -1,7 +1,5 @@
 "use client";
 
-import { supabase, isSupabaseReady } from "@/lib/supabase";
-
 export type LeadType = "inquiry" | "test_drive" | "quote" | "service" | "trade_in" | "financing";
 export type LeadPriority = "hot" | "warm" | "cold";
 export type LeadStatus = "new" | "contacted" | "qualified" | "converted" | "lost";
@@ -31,6 +29,25 @@ export interface LeadFilters {
     search?: string;
 }
 
+type LeadApiRow = {
+    id: string;
+    dealer_id: string;
+    customer_name: string;
+    customer_email: string | null;
+    customer_phone: string;
+    lead_type: string | null;
+    vehicle_id: string | null;
+    vehicle_interest: string | null;
+    source: string | null;
+    utm_source: string | null;
+    message: string | null;
+    status: string;
+    cyepro_sync_status?: CyeproSyncStatus | null;
+    cyepro_error?: string | null;
+    created_at: string;
+    updated_at?: string | null;
+};
+
 // Derive priority from lead age (hot < 24h, warm < 7d, cold otherwise)
 function derivePriority(createdAt: string): LeadPriority {
     const ageMs = Date.now() - new Date(createdAt).getTime();
@@ -43,48 +60,29 @@ function derivePriority(createdAt: string): LeadPriority {
 function mapLeadSource(source: string | null): LeadType {
     switch (source) {
         case "test_drive": return "test_drive";
+        case "quote": return "quote";
+        case "service": return "service";
+        case "trade_in": return "trade_in";
+        case "financing": return "financing";
+        case "inquiry": return "inquiry";
         case "car_enquiry": return "inquiry";
         case "whatsapp": return "inquiry";
         case "phone": return "inquiry";
-        case "quote": return "quote";
         default: return "inquiry";
     }
 }
 
-export async function fetchLeads(
-    dealerId: string,
-    _filters?: LeadFilters
-): Promise<ExternalLead[]> {
-    if (!isSupabaseReady()) return [];
-
-    const { data, error } = await supabase
-        .from("leads")
-        .select("id, dealer_id, customer_name, customer_email, customer_phone, lead_type, vehicle_id, vehicle_interest, source, utm_source, message, status, cyepro_sync_status, cyepro_error, created_at")
-        .eq("dealer_id", dealerId)
-        .order("created_at", { ascending: false });
-
-    if (error) {
-        console.warn("[fetchLeads]", error.message);
-        return [];
+async function readApiError(response: Response): Promise<string> {
+    try {
+        const payload = await response.json() as { error?: string };
+        return payload.error || response.statusText;
+    } catch {
+        return response.statusText;
     }
+}
 
-    return (data ?? []).map((row: {
-        id: string;
-        dealer_id: string;
-        customer_name: string;
-        customer_email: string | null;
-        customer_phone: string;
-        lead_type: string | null;
-        vehicle_id: string | null;
-        vehicle_interest: string | null;
-        source: string | null;
-        utm_source: string | null;
-        message: string | null;
-        status: string;
-        cyepro_sync_status?: CyeproSyncStatus | null;
-        cyepro_error?: string | null;
-        created_at: string;
-    }) => ({
+function mapLeadRow(row: LeadApiRow): ExternalLead {
+    return {
         id: row.id,
         dealer_id: row.dealer_id,
         name: row.customer_name,
@@ -99,41 +97,53 @@ export async function fetchLeads(
         cyepro_sync_status: row.cyepro_sync_status ?? undefined,
         cyepro_error: row.cyepro_error ?? undefined,
         created_at: row.created_at,
-        updated_at: row.created_at,
-    }));
+        updated_at: row.updated_at ?? row.created_at,
+    };
 }
 
-// SECURITY: `db()`/service-role bypasses RLS, so dealer_id scoping here is the ONLY
-// tenant boundary. Without it any dealer could mutate another dealer's lead status by
-// guessing/enumerating a lead id (IDOR). `dealerId` is optional ONLY for backward
-// compatibility with existing callers that have not yet been updated; when provided we
-// scope the mutation by dealer_id.
-// TODO(security): make `dealerId` REQUIRED once all callers pass it. Known caller that
-// must be updated (outside this file's ownership):
-//   app/dashboard/leads/page.tsx:67 → updateLeadStatus(id, "contacted")
-//     ➜  updateLeadStatus(id, "contacted", dealerId)
+export async function fetchLeads(
+    _dealerId?: string,
+    _filters?: LeadFilters
+): Promise<ExternalLead[]> {
+    const response = await fetch("/api/leads", {
+        cache: "no-store",
+        credentials: "include",
+    });
+
+    if (!response.ok) {
+        console.warn("[fetchLeads]", await readApiError(response));
+        return [];
+    }
+
+    const payload = await response.json() as { leads?: LeadApiRow[] };
+    return (payload.leads ?? []).map(mapLeadRow);
+}
+
+// SECURITY: mutations go through the /api/leads PATCH route, which authenticates
+// the caller and scopes the update by the session's dealer on the server. That
+// server-side scoping is the real tenant boundary that prevents one dealer from
+// mutating another dealer's lead status by guessing/enumerating a lead id (IDOR).
+// `dealerId` is forwarded when provided so the server can additionally assert the
+// lead belongs to the expected dealer; it stays optional for backward compatibility
+// with callers that have not yet been updated to pass it.
 export async function updateLeadStatus(
     leadId: string,
     status: LeadStatus,
     dealerId?: string
 ): Promise<{ success: boolean; error?: string }> {
-    if (!isSupabaseReady()) return { success: false, error: "Supabase not configured" };
+    const response = await fetch("/api/leads", {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        credentials: "include",
+        body: JSON.stringify(
+            dealerId ? { id: leadId, status, dealer_id: dealerId } : { id: leadId, status }
+        ),
+    });
 
-    let query = supabase
-        .from("leads")
-        // @ts-ignore - Supabase type inference issue with the leads table
-        .update({ status, updated_at: new Date().toISOString() })
-        .eq("id", leadId);
-
-    if (dealerId) {
-        query = query.eq("dealer_id", dealerId);
-    }
-
-    const { error } = await query;
-
-    if (error) {
-        console.warn("[updateLeadStatus]", error.message);
-        return { success: false, error: error.message };
+    if (!response.ok) {
+        const error = await readApiError(response);
+        console.warn("[updateLeadStatus]", error);
+        return { success: false, error };
     }
 
     return { success: true };

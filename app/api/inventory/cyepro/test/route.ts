@@ -7,7 +7,7 @@
 
 import { NextResponse } from 'next/server'
 import { ExternalApiError, externalApiFetch } from '@/lib/services/external-api-fetch'
-import { getCyeproApiBaseUrl, getCyeproNumericValue, getCyeproSearchPaths, getCyeproVehicleArray } from '@/lib/services/cyepro-service'
+import { buildCyeproSearchRequestBody, getCyeproApiBaseUrl, getCyeproNumericValue, getCyeproSearchPaths, getCyeproVehicleArray } from '@/lib/services/cyepro-service'
 import { requireAuth } from '@/lib/supabase-server'
 
 
@@ -105,7 +105,7 @@ export async function POST(request: Request) {
         }
 
         // Step 4: Test the Cyepro API with a minimal request
-        const testBody = {
+        const testBody = buildCyeproSearchRequestBody({
             page: 1,
             size: 5,
             priceMin: 0,
@@ -113,12 +113,8 @@ export async function POST(request: Request) {
             yearMin: 1970,
             yearMax: new Date().getFullYear() + 1,
             vehicleStatusIds: [],
-            vehicleTypeList: [],
             kmDrivenMax: 9_999_999,
-            daysFilter: null,
-            sortBy: null,
-            order: 'asc' as const,
-        }
+        })
 
         const headers = {
             'Content-Type': 'application/json',
@@ -132,6 +128,11 @@ export async function POST(request: Request) {
             step: 'api_request',
             status: 'SENDING',
             pathsToTry: searchPaths.length,
+            url: `${getCyeproApiBaseUrl()}${searchPaths[0]}`,
+            fallbackUrls: searchPaths.slice(1).map(path => `${getCyeproApiBaseUrl()}${path}`),
+            // SECURITY: never echo the full API key — mask all but the first 8 chars.
+            headers: { ...headers, 'API-KEY': `${dealer.cyepro_api_key.substring(0, 8)}...` },
+            body: testBody,
         })
 
         const startTime = Date.now()

@@ -145,18 +145,18 @@ function getInsuranceDisplay(status?: string, validUntil?: string) {
     today.setHours(0, 0, 0, 0);
 
     if (expiry && expiry.getTime() < today.getTime()) {
-        return { label: 'Expired', className: 'border-red-500/30 bg-red-500/10 text-red-600', icon: AlertTriangle };
+        return { label: 'Expired', className: 'border-red-300 bg-red-50 text-red-800 dark:!border-red-300 dark:!bg-red-50 dark:!text-red-800', icon: AlertTriangle };
     }
     if (normalized === 'expired') {
-        return { label: 'Expired', className: 'border-red-500/30 bg-red-500/10 text-red-600', icon: AlertTriangle };
+        return { label: 'Expired', className: 'border-red-300 bg-red-50 text-red-800 dark:!border-red-300 dark:!bg-red-50 dark:!text-red-800', icon: AlertTriangle };
     }
     if (normalized === 'expiring_soon') {
-        return { label: 'Expiring Soon', className: 'border-amber-500/30 bg-amber-500/10 text-amber-600', icon: AlertTriangle };
+        return { label: 'Expiring Soon', className: 'border-amber-300 bg-amber-50 text-amber-800 dark:!border-amber-300 dark:!bg-amber-50 dark:!text-amber-800', icon: AlertTriangle };
     }
     if (normalized === 'active') {
-        return { label: 'Active', className: 'border-emerald-500/30 bg-emerald-500/10 text-emerald-600', icon: ShieldCheck };
+        return { label: 'Active', className: 'border-emerald-300 bg-emerald-50 text-emerald-800 dark:!border-emerald-300 dark:!bg-emerald-50 dark:!text-emerald-800', icon: ShieldCheck };
     }
-    return { label: 'Not Checked', className: 'border-slate-300 bg-slate-100 text-slate-600', icon: Shield };
+    return { label: 'Not Checked', className: 'border-slate-300 bg-slate-100 text-slate-800 dark:!border-slate-300 dark:!bg-slate-100 dark:!text-slate-800', icon: Shield };
 }
 
 export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, dealerPhone }: CarDetailViewProps) {
@@ -319,6 +319,11 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
     const lightTableRowHoverClass = 'hover:bg-slate-50';
     const lightOutlineButtonClass = 'border-slate-200 bg-white text-slate-900 hover:bg-slate-50 dark:!border-slate-200 dark:!bg-white dark:!text-slate-900 dark:hover:!bg-slate-50';
     const lightGhostButtonClass = 'text-slate-600 hover:bg-slate-100 hover:text-slate-900 dark:!text-slate-600 dark:hover:!bg-slate-100 dark:hover:!text-slate-900';
+    const neutralBadgeClass = 'border-slate-300 bg-white text-slate-800 hover:bg-slate-50 dark:!border-slate-300 dark:!bg-white dark:!text-slate-800 dark:hover:!bg-slate-50';
+    const successBadgeClass = 'border-emerald-300 bg-emerald-50 text-emerald-800 hover:bg-emerald-50 dark:!border-emerald-300 dark:!bg-emerald-50 dark:!text-emerald-800 dark:hover:!bg-emerald-50';
+    const infoBadgeClass = 'border-blue-300 bg-blue-50 text-blue-800 hover:bg-blue-50 dark:!border-blue-300 dark:!bg-blue-50 dark:!text-blue-800 dark:hover:!bg-blue-50';
+    const returnBadgeClass = 'border-violet-300 bg-violet-50 text-violet-800 hover:bg-violet-50 dark:!border-violet-300 dark:!bg-violet-50 dark:!text-violet-800 dark:hover:!bg-violet-50';
+    const warningBadgeClass = 'border-amber-300 bg-amber-50 text-amber-800 hover:bg-amber-50 dark:!border-amber-300 dark:!bg-amber-50 dark:!text-amber-800 dark:hover:!bg-amber-50';
     const insurance = car.meta?.insurance;
     const registrationNumber = car.meta?.registrationNumber?.trim();
     const insuranceDisplay = getInsuranceDisplay(insurance?.status, insurance?.validUntil);
@@ -549,18 +554,18 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
 
                 {/* ──────── USED CAR TRUST BANNER ──────── */}
                 {isUsed && (
-                    <Card className="border-emerald-500/20 bg-emerald-500/5">
+                    <Card className="border-emerald-200 bg-emerald-50">
                         <CardContent className="p-5">
                             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
                                 <div className="flex items-center gap-3">
-                                    <div className="w-12 h-12 rounded-full bg-emerald-500/10 flex items-center justify-center shrink-0">
-                                        <ShieldCheck className="w-6 h-6 text-emerald-500" />
+                                    <div className="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center shrink-0">
+                                        <ShieldCheck className="w-6 h-6 text-emerald-700" />
                                     </div>
                                     <div>
-                                        <h3 className="text-base font-semibold text-emerald-600">
+                                        <h3 className="text-base font-semibold text-emerald-800">
                                             {isCPO ? 'Certified Pre-Owned' : 'Inspected & Verified'}
                                         </h3>
-                                        <p className="text-sm text-emerald-600">
+                                        <p className="text-sm text-emerald-700">
                                             {isCPO
                                                 ? 'This car has been thoroughly inspected and comes with manufacturer-backed warranty.'
                                                 : 'This pre-owned car has been inspected and verified by the dealer.'}
@@ -771,16 +776,16 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                     <h2 className="text-2xl font-bold mb-6">{car.make} {car.model} Features</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                         {car.features?.keyFeatures && car.features.keyFeatures.length > 0 && (
-                            <FeatureGroup title="Key Features" features={car.features.keyFeatures} icon={<Star className="w-4 h-4 text-amber-500" />} />
+                            <FeatureGroup title="Key Features" features={car.features.keyFeatures} icon={<Star className="w-4 h-4 text-amber-700" />} />
                         )}
                         {car.features?.safetyFeatures && car.features.safetyFeatures.length > 0 && (
                             <FeatureGroup title="Safety" features={car.features.safetyFeatures} icon={<Shield className="w-4 h-4 text-red-500" />} />
                         )}
                         {car.features?.comfortFeatures && car.features.comfortFeatures.length > 0 && (
-                            <FeatureGroup title="Comfort & Convenience" features={car.features.comfortFeatures} icon={<Users className="w-4 h-4 text-purple-500" />} />
+                            <FeatureGroup title="Comfort & Convenience" features={car.features.comfortFeatures} icon={<Users className="w-4 h-4 text-violet-700" />} />
                         )}
                         {car.features?.techFeatures && car.features.techFeatures.length > 0 && (
-                            <FeatureGroup title="Technology & Infotainment" features={car.features.techFeatures} icon={<Zap className="w-4 h-4 text-blue-500" />} />
+                            <FeatureGroup title="Technology & Infotainment" features={car.features.techFeatures} icon={<Zap className="w-4 h-4 text-blue-700" />} />
                         )}
                         {car.features?.exteriorFeatures && car.features.exteriorFeatures.length > 0 && (
                             <FeatureGroup title="Exterior" features={car.features.exteriorFeatures} icon={<CarIcon className="w-4 h-4 text-green-500" />} />
@@ -1357,7 +1362,7 @@ function FeatureGroup({ title, features, icon }: { title: string; features: stri
                 <ul className="space-y-2">
                     {features.map((feat, i) => (
                         <li key={i} className="flex items-start gap-2 text-sm">
-                            <Check className="w-3.5 h-3.5 mt-0.5 text-emerald-500 shrink-0" />
+                            <Check className="w-3.5 h-3.5 mt-0.5 text-emerald-700 shrink-0" />
                             <span className="text-gray-600">{feat}</span>
                         </li>
                     ))}

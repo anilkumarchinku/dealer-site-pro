@@ -16,6 +16,7 @@ import { ReviewsSection } from '@/components/ui/ReviewsSection';
 import { OffersSection } from '@/components/templates/sections/OffersSection';
 import { FAQSection } from '@/components/templates/sections/FAQSection';
 import { ExchangeSection } from '@/components/templates/sections/ExchangeSection';
+import { SellVehicleSection } from '@/components/templates/sections/SellVehicleSection';
 import { StickyEnquiryBar } from '@/components/ui/StickyEnquiryBar';
 import { DealerChatbot } from '@/components/chatbot/DealerChatbot';
 import { NavEMIModal } from '@/components/ui/NavEMIModal';
@@ -112,6 +113,7 @@ interface SportyTemplateProps {
     isVerified?: boolean;
     vehicleType?: '2w' | '3w' | '4w';
     socialLinks?: { facebook: string | null; instagram: string | null; youtube: string | null };
+    sellVehicleHref?: string;
 }
 
 export function SportyTemplate({
@@ -133,6 +135,7 @@ export function SportyTemplate({
     isVerified = false,
     vehicleType,
     socialLinks,
+    sellVehicleHref,
 }: SportyTemplateProps) {
     const vl = getVehicleLabels(vehicleType);
     const pathname = usePathname();
@@ -313,6 +316,15 @@ export function SportyTemplate({
                         </div>
                         <div className="flex shrink-0 items-center gap-2">
                             <WishlistDrawer cars={cars} dealerId={dealerId} brandColor={brandAccent} />
+                            {sellVehicleHref && (
+                                <Button
+                                    className="hidden px-4 text-white font-bold lg:flex"
+                                    style={{ backgroundColor: `${brandAccent}cc` }}
+                                    asChild
+                                >
+                                    <a href={sellVehicleHref}>SELL YOUR CAR</a>
+                                </Button>
+                            )}
                             <Button
                                 variant="outline"
                                 className="hidden px-4 font-bold lg:flex border-2 bg-transparent"
@@ -373,6 +385,11 @@ export function SportyTemplate({
                                 <button onClick={() => mobileNavigateTo('finance-section')} className="block w-full text-left px-3 py-2.5 rounded-lg font-bold uppercase text-sm tracking-wider text-gray-900 hover:bg-gray-100 transition-colors">Finance</button>
                                 <button onClick={() => mobileNavigateTo('service-section')} className="block w-full text-left px-3 py-2.5 rounded-lg font-bold uppercase text-sm tracking-wider text-gray-900 hover:bg-gray-100 transition-colors">Service</button>
                                 <button onClick={() => mobileNavigateTo('trust-section')} className="block w-full text-left px-3 py-2.5 rounded-lg font-bold uppercase text-sm tracking-wider text-gray-900 hover:bg-gray-100 transition-colors">Trust Us</button>
+                                {sellVehicleHref && (
+                                    <a href={sellVehicleHref} className="block w-full px-3 py-2.5 rounded-lg font-bold uppercase text-sm tracking-wider text-gray-900 hover:bg-gray-100 transition-colors">
+                                        Sell Your Car
+                                    </a>
+                                )}
                                 <div className="pt-2 border-t border-gray-200">
                                     <Button
                                         className="w-full font-bold uppercase"
@@ -817,6 +834,8 @@ export function SportyTemplate({
                     </div>
                 </div>
             )}
+
+            <SellVehicleSection dealerName={dealerName} sellHref={sellVehicleHref} brandColor={brandAccent} />
 
             {/* Footer */}
             <footer className="border-t border-gray-200 py-12 bg-gray-50">

@@ -94,7 +94,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function UsedTwoWheelersPage({ params }: Props) {
     const { slug } = await params
 
-    const dealer = await fetchDealerBySlug(slug)
+    const dealer = await fetchDealerBySlug(slug, { includePrivate: true })
     if (!dealer) notFound()
 
     const { vehicles: usedVehicles } = await getUsedTwoWheelers(dealer.id, { pageSize: 100, sortBy: 'newest' })

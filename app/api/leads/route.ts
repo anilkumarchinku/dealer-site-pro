@@ -15,7 +15,11 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server'
-import { createAdminClient } from '@/lib/supabase-server'
+import {
+    createAdminClient,
+    getDealerForUser,
+    requireAuth,
+} from '@/lib/supabase-server'
 import { sendLeadSmsToDealer } from '@/lib/services/sms-service'
 import { forwardLeadToCyepro } from '@/lib/services/cyepro-service'
 import { sendLeadConfirmationEmail, sendLeadNotificationEmail } from '@/lib/services/email-service'
@@ -25,10 +29,25 @@ import { leadSchema, formatZodErrors } from '@/lib/validations/schemas'
 import { rateLimitOrNull } from '@/lib/utils/rate-limiter'
 
 const UUID_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i
+const LEAD_STATUSES = ['new', 'contacted', 'qualified', 'converted', 'lost'] as const
+type LeadStatus = typeof LEAD_STATUSES[number]
 
 // ── Supabase client with SERVICE ROLE key (server-side only — bypasses RLS) ──
 function getSupabase() {
     return createAdminClient()
+}
+
+function isLeadStatus(value: unknown): value is LeadStatus {
+    return typeof value === 'string' && LEAD_STATUSES.includes(value as LeadStatus)
+}
+
+function routeError(message: string, detail?: unknown) {
+    return NextResponse.json(
+        process.env.NODE_ENV === 'production' || detail === undefined
+            ? { error: message }
+            : { error: message, detail },
+        { status: 500 }
+    )
 }
 
 async function resolveVehicleId(
@@ -99,6 +118,91 @@ async function markCyeproSyncResult(
         .eq('id', leadId)
 
     if (error) logger.warn('Cyepro sync status update failed:', error.message)
+}
+
+export async function GET() {
+    try {
+        const { user, supabase: routeSupabase, errorResponse } = await requireAuth()
+        if (errorResponse) return errorResponse
+
+        const dealer = await getDealerForUser(routeSupabase, user.id)
+        if (!dealer) {
+            return NextResponse.json({ error: 'Dealer account not found' }, { status: 404 })
+        }
+
+        const { data, error } = await routeSupabase
+            .from('leads')
+            .select('id, dealer_id, customer_name, customer_email, customer_phone, lead_type, vehicle_id, vehicle_interest, source, utm_source, message, status, created_at, updated_at')
+            .eq('dealer_id', dealer.id)
+            .order('created_at', { ascending: false })
+
+        if (error) {
+            logger.error('Lead fetch error:', error.message)
+            return routeError('Failed to fetch leads', {
+                message: error.message,
+                code: error.code,
+                details: error.details,
+                hint: error.hint,
+            })
+        }
+
+        return NextResponse.json({ leads: data ?? [] })
+    } catch (err) {
+        logger.error('Lead API fetch error:', err)
+        return routeError('Internal error', err instanceof Error ? err.message : String(err))
+    }
+}
+
+export async function PATCH(request: NextRequest) {
+    try {
+        const { user, supabase: routeSupabase, errorResponse } = await requireAuth()
+        if (errorResponse) return errorResponse
+
+        const dealer = await getDealerForUser(routeSupabase, user.id)
+        if (!dealer) {
+            return NextResponse.json({ error: 'Dealer account not found' }, { status: 404 })
+        }
+
+        const body = await request.json().catch(() => null)
+        if (!body) {
+            return NextResponse.json({ error: 'Invalid JSON' }, { status: 400 })
+        }
+
+        const id = typeof body.id === 'string' ? body.id.trim() : ''
+        if (!UUID_PATTERN.test(id) || !isLeadStatus(body.status)) {
+            return NextResponse.json({ error: 'Valid id and status are required' }, { status: 400 })
+        }
+
+        const { data, error } = await routeSupabase
+            .from('leads')
+            .update({
+                status: body.status,
+                updated_at: new Date().toISOString(),
+            })
+            .eq('id', id)
+            .eq('dealer_id', dealer.id)
+            .select('id')
+            .maybeSingle()
+
+        if (error) {
+            logger.error('Lead status update error:', error.message)
+            return routeError('Failed to update lead', {
+                message: error.message,
+                code: error.code,
+                details: error.details,
+                hint: error.hint,
+            })
+        }
+
+        if (!data) {
+            return NextResponse.json({ error: 'Lead not found' }, { status: 404 })
+        }
+
+        return NextResponse.json({ success: true })
+    } catch (err) {
+        logger.error('Lead API update error:', err)
+        return routeError('Internal error', err instanceof Error ? err.message : String(err))
+    }
 }
 
 

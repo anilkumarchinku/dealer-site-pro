@@ -140,7 +140,7 @@ export async function generateMetadata({ params }: SiteCarDetailPageProps): Prom
 export default async function SiteCarDetailPage({ params }: SiteCarDetailPageProps) {
     const { slug, id } = await params;
 
-    const dealer = await fetchDealerBySlug(slug);
+    const dealer = await fetchDealerBySlug(slug, { includePrivate: true });
     if (!dealer) notFound();
 
     if (dealer.vehicle_type === 'two-wheeler' || dealer.vehicle_type === 'three-wheeler') {

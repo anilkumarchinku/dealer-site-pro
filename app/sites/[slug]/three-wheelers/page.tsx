@@ -294,7 +294,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 // ── Page ──────────────────────────────────────────────────────────────────────
 export default async function ThreeWheelersPage({ params }: Props) {
   const { slug } = await params
-  const dealer = await fetchDealerBySlug(slug)
+  const dealer = await fetchDealerBySlug(slug, { includePrivate: true })
   if (!dealer) notFound()
 
   const [{ vehicles: dbVehicles }, { vehicles: usedVehicles }] = await Promise.all([
