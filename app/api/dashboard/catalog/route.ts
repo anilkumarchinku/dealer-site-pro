@@ -391,12 +391,13 @@ async function loadStaticPayload(category: Extract<CatalogCategory, '2w' | '3w'>
 async function load2WStaticModels(brand: CatalogBrand): Promise<CatalogModel[]> {
     const raw = await loadStaticPayload('2w', brand)
     const vehicles = raw?.vehicles ?? []
+    const models: CatalogModel[] = []
 
-    return mergeModels(vehicles.map((vehicle) => {
+    for (const vehicle of vehicles) {
         const model = String(vehicle.model ?? vehicle.variant_name ?? '').trim()
-        if (!model) return null
+        if (!model) continue
 
-        return {
+        models.push({
             id: `2w-${brand.brandId}-${modelToSlug(model)}`,
             brand: brand.brand,
             brandId: brand.brandId,
@@ -406,20 +407,23 @@ async function load2WStaticModels(brand: CatalogBrand): Promise<CatalogModel[]> 
             price: cleanPriceString(vehicle.price),
             fuelType: vehicle.fuel_type ? String(vehicle.fuel_type) : null,
             category: '2w',
-        } satisfies CatalogModel
-    }).filter((model): model is CatalogModel => Boolean(model)))
+        })
+    }
+
+    return mergeModels(models)
 }
 
 async function load3WStaticModels(brand: CatalogBrand): Promise<CatalogModel[]> {
     const raw = await loadStaticPayload('3w', brand)
     const vehicles = raw?.vehicles ?? []
+    const models: CatalogModel[] = []
 
-    return mergeModels(vehicles.map((vehicle) => {
+    for (const vehicle of vehicles) {
         const model = String(vehicle.variant_name ?? vehicle.model ?? '').split('/')[0].trim()
-        if (!model) return null
+        if (!model) continue
         const technical = vehicle.technical_specifications as Record<string, unknown> | undefined
 
-        return {
+        models.push({
             id: `3w-${brand.brandId}-${modelToSlug(model)}`,
             brand: brand.brand,
             brandId: brand.brandId,
@@ -429,8 +433,10 @@ async function load3WStaticModels(brand: CatalogBrand): Promise<CatalogModel[]> 
             price: cleanPriceString(vehicle.ex_showroom_price),
             fuelType: technical?.fuel_type ? String(technical.fuel_type) : null,
             category: '3w',
-        } satisfies CatalogModel
-    }).filter((model): model is CatalogModel => Boolean(model)))
+        })
+    }
+
+    return mergeModels(models)
 }
 
 async function loadDbModels(supabase: SupabaseTableClient, brand: CatalogBrand): Promise<CatalogModel[]> {

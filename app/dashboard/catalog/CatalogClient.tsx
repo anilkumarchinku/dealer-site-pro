@@ -719,14 +719,21 @@ export function CatalogClient({ models: initialModels }: Props) {
                 </div>
 
                 {/* Search */}
-                <div className="relative max-w-xs">
-                    <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" />
-                    <Input
-                        placeholder="Search brand or model…"
-                        value={search}
-                        onChange={(e) => setSearch(e.target.value)}
-                        className="pl-9 bg-white dark:bg-slate-900 dark:border-slate-800 dark:text-slate-100 dark:placeholder:text-slate-500"
-                    />
+                <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
+                    <div className="relative max-w-xs">
+                        <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" />
+                        <Input
+                            placeholder="Search brand or model..."
+                            value={search}
+                            onChange={(e) => setSearch(e.target.value)}
+                            className="pl-9 bg-white dark:bg-slate-900 dark:border-slate-800 dark:text-slate-100 dark:placeholder:text-slate-500"
+                        />
+                    </div>
+                    {!isLoading && activeCategoryBrands.length > 0 && (
+                        <p className="text-xs text-gray-500 dark:text-slate-400">
+                            Showing {activeCategoryBrands.length} selected OEM{activeCategoryBrands.length === 1 ? "" : "s"} in this category.
+                        </p>
+                    )}
                 </div>
 
                 {isLoading && (
@@ -736,23 +743,46 @@ export function CatalogClient({ models: initialModels }: Props) {
                 )}
 
                 {/* Brand sections */}
-                {!isLoading && brandGroups.length === 0 ? (
-                    <p className="text-sm text-gray-400 dark:text-slate-500 py-12 text-center">
-                        {search ? `No results for "${search}"` : "No models found."}
-                    </p>
+                {!isLoading && brandSections.length === 0 ? (
+                    <div className="rounded-2xl border border-dashed border-gray-300 bg-white px-6 py-12 text-center shadow-sm dark:border-slate-800 dark:bg-slate-950">
+                        <p className="text-sm font-semibold text-gray-700 dark:text-slate-200">
+                            {brands.length === 0
+                                ? "No OEMs selected for this dealer."
+                                : search
+                                    ? `No results for "${search}"`
+                                    : "No OEMs selected in this category."}
+                        </p>
+                        <p className="mt-2 text-sm text-gray-500 dark:text-slate-400">
+                            Select OEMs from onboarding or the category dashboard, then add any newly released models here.
+                        </p>
+                    </div>
                 ) : (
                     <div className="space-y-10">
-                        {brandGroups.map((g) => (
+                        {brandSections.map((g) => (
                             <BrandSection
-                                key={g.brand}
+                                key={`${g.category}-${g.brand}`}
                                 brand={g.brand}
                                 brandId={g.brandId}
+                                logoId={g.logoId}
+                                category={g.category}
                                 models={g.models}
+                                onAddModel={() => openAddModel(g)}
                             />
                         ))}
                     </div>
                 )}
             </div>
+            <AddModelDialog
+                open={addOpen}
+                onOpenChange={setAddOpen}
+                form={addForm}
+                setForm={setAddForm}
+                brands={brands}
+                saving={savingModel}
+                error={addError}
+                success={addSuccess}
+                onSubmit={saveModel}
+            />
         </div>
     )
 }
