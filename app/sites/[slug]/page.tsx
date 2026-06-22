@@ -14,7 +14,7 @@ import type { Car } from '@/lib/types/car'
 import type { DBVehicle } from '@/lib/db/vehicles'
 import type { Service } from '@/lib/types'
 import { dedupeByMakeModel, dedupeCaseInsensitiveStrings, dedupeInventoryCars } from '@/lib/utils/listing-dedupe'
-import { publicDealerSitePath, publicVehicleHubPath, type VehicleHubSegment } from '@/lib/utils/public-site-routing'
+import { isMainDealerHost, publicDealerSitePath, publicVehicleHubPath, type VehicleHubSegment } from '@/lib/utils/public-site-routing'
 import { brandLogoUrl, firstVehicleHeroImage, resolveDealerHeroImage } from '@/lib/utils/site-assets'
 import { BASE_DOMAIN, dealerSiteHref } from '@/lib/utils/domain'
 
@@ -574,6 +574,11 @@ export default async function SitePage({ params }: SitePageProps) {
         email: dealer.email,
         address: dealer.full_address ?? dealer.location,
     }
+    const sellVehicleHref = isUsedSite
+        ? isMainDealerHost(host, baseDomain)
+            ? `${siteHrefForSlug(slug).replace(/\/$/, '')}/sell`
+            : '/sell'
+        : undefined
 
     // ── Hero text ─────────────────────────────────────────────────────────────
     const heroDefaults: Record<string, { title: string; subtitle: string }> = {
@@ -607,6 +612,7 @@ export default async function SitePage({ params }: SitePageProps) {
         sellsNewCars: templateSellsNew,
         sellsUsedCars: templateSellsUsed,
         isVerified: false,
+        sellVehicleHref,
     }
 
     // ── JSON-LD structured data ───────────────────────────────────────────────
