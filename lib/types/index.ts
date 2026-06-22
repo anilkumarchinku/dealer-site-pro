@@ -108,6 +108,11 @@ export interface OnboardingData {
     sellsNewCars: boolean;
     sellsUsedCars: boolean;
     brands: Brand[];
+    brands2w?: string[];
+    brands3w?: string[];
+    sellsFourWheelers?: boolean;
+    sellsTwoWheelers?: boolean;
+    sellsThreeWheelers?: boolean;
     inventorySystem: InventorySystem | null;
 
     // Step 3: Services

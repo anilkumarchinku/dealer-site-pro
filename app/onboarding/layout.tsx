@@ -51,7 +51,7 @@ export default function OnboardingLayout({
                     onExit={() => router.push("/")}
                 />
 
-                <main className="px-5 py-6 sm:px-8 lg:px-10">
+                <main className="mx-auto max-w-7xl px-5 py-6 sm:px-8 lg:px-10">
                     <button
                         type="button"
                         onClick={() => router.push(getBackHref(pathname))}

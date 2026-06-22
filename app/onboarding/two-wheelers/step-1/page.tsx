@@ -37,6 +37,9 @@ const TWO_WHEELER_BRANDS: BrandEntry[] = [
     ...(brandData.twoWheelers.electric    as { brandId: string; brand: string }[]).map(b => ({ ...b, electric: true  })),
 ];
 
+// 3W brand list — reused when a 2W-primary dealer also sells three-wheelers.
+const THREE_WHEELER_BRANDS = (brandData.threeWheelers as { brandId: string; brand: string }[]);
+
 export default function TwoWheelerStep1Page() {
     const router = useRouter();
     const { data, updateData, setStep } = useOnboardingStore();
@@ -57,17 +60,23 @@ export default function TwoWheelerStep1Page() {
     const checkRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
     const [selectedBrands, setSelectedBrands] = useState<string[]>(
-        (data.brands as string[]) || []
+        data.brands2w || []
     );
     const [brandError,  setBrandError]  = useState("");
     const [brandSearch, setBrandSearch] = useState("");
+
+    // Secondary 3W brand picker — shown when this 2W-primary dealer also sells 3W.
+    const showThreeWheelers = Boolean(data.sellsThreeWheelers);
+    const [selectedBrands3w, setSelectedBrands3w] = useState<string[]>(data.brands3w || []);
+    const [brand3wSearch, setBrand3wSearch] = useState("");
 
     useEffect(() => {
         const nextFormData = getOnboardingContactFormPrefill(data);
         setFormData(nextFormData);
         setSiteSlug(data.slug || (nextFormData.dealershipName ? toSlug(nextFormData.dealershipName) : ""));
         setSlugEdited(Boolean(data.slug));
-        setSelectedBrands((data.brands as string[]) || []);
+        setSelectedBrands(data.brands2w || []);
+        setSelectedBrands3w(data.brands3w || []);
     }, [data]);
 
     useEffect(() => {
@@ -114,6 +123,12 @@ export default function TwoWheelerStep1Page() {
         setBrandError("");
     };
 
+    const toggleBrand3w = (brand: string) => {
+        setSelectedBrands3w(prev =>
+            prev.includes(brand) ? prev.filter(b => b !== brand) : [...prev, brand]
+        );
+    };
+
     const validate = () => {
         const { errors: e } = validateOnboardingContactStep({
             ...formData,
@@ -149,7 +164,9 @@ export default function TwoWheelerStep1Page() {
                 email:           formData.email.trim().toLowerCase(),
                 gstin:           formData.gstin.toUpperCase(),
                 slug:            siteSlug,
-                brands:          selectedBrands as unknown as import("@/lib/types").Brand[],
+                brands2w:        selectedBrands,
+                // Secondary 3W selection (optional; only relevant when sellsThreeWheelers).
+                ...(showThreeWheelers && { brands3w: selectedBrands3w }),
             });
             setStep(2);
             router.push("/onboarding/two-wheelers/step-2");
@@ -268,52 +285,59 @@ export default function TwoWheelerStep1Page() {
                     </div>
                 )}
 
-                <Input
-                    label="Location"
-                    placeholder="Mumbai, Maharashtra"
-                    maxLength={200}
-                    value={formData.location}
-                    onChange={(e) => handleChange("location", e.target.value)}
-                    error={errors.location}
-                    helperText={`What city are you in? (${formData.location.length}/200)`}
-                    required
-                />
+                {/* Location + Years in Business */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <Input
+                        label="Location"
+                        placeholder="Mumbai, Maharashtra"
+                        maxLength={200}
+                        value={formData.location}
+                        onChange={(e) => handleChange("location", e.target.value)}
+                        error={errors.location}
+                        helperText={`What city are you in? (${formData.location.length}/200)`}
+                        required
+                    />
 
-                <Input
-                    label="Years in Business"
-                    placeholder="5"
-                    type="text"
-                    inputMode="numeric"
-                    maxLength={3}
-                    value={formData.yearsInBusiness}
-                    onChange={(e) => handleChange("yearsInBusiness", e.target.value.replace(/\D/g, "").slice(0, 3))}
-                    helperText="How long have you been open? (Leave blank if new)"
-                />
+                    <Input
+                        label="Years in Business"
+                        placeholder="5"
+                        type="text"
+                        inputMode="numeric"
+                        maxLength={3}
+                        value={formData.yearsInBusiness}
+                        onChange={(e) => handleChange("yearsInBusiness", e.target.value.replace(/\D/g, "").slice(0, 3))}
+                        helperText="How long have you been open? (Leave blank if new)"
+                    />
+                </div>
 
-                <PhoneInput
-                    id="phone"
-                    label="Phone Number"
-                    value={formData.phone}
-                    countryCode={formData.phoneCountryCode}
-                    onValueChange={v => handleChange("phone", v)}
-                    onCountryCodeChange={c => setFormData(prev => ({ ...prev, phoneCountryCode: c }))}
-                    error={errors.phone}
-                    required
-                    lockCountryCode
-                />
+                {/* Phone Number + Email */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <PhoneInput
+                        id="phone"
+                        label="Phone Number"
+                        value={formData.phone}
+                        countryCode={formData.phoneCountryCode}
+                        onValueChange={v => handleChange("phone", v)}
+                        onCountryCodeChange={c => setFormData(prev => ({ ...prev, phoneCountryCode: c }))}
+                        error={errors.phone}
+                        required
+                        lockCountryCode
+                    />
 
-                <Input
-                    label="Email"
-                    placeholder="info@kumarbikes.in"
-                    type="email"
-                    maxLength={100}
-                    value={formData.email}
-                    onChange={(e) => handleChange("email", e.target.value)}
-                    error={errors.email}
-                    required
-                />
+                    <Input
+                        label="Email"
+                        placeholder="info@kumarbikes.in"
+                        type="email"
+                        maxLength={100}
+                        value={formData.email}
+                        onChange={(e) => handleChange("email", e.target.value)}
+                        error={errors.email}
+                        required
+                    />
+                </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {/* Tagline + GSTIN */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                     <Input
                         label="Tagline (Optional)"
                         placeholder="Ride Your Dream"
@@ -345,26 +369,29 @@ export default function TwoWheelerStep1Page() {
                     />
                 </div>
 
-                <Input
-                    label="Google Maps Link (Optional)"
-                    placeholder="https://maps.google.com/..."
-                    value={formData.mapLink}
-                    onChange={(e) => handleChange("mapLink", e.target.value)}
-                    error={errors.mapLink}
-                    helperText="Paste your location's share link here"
-                />
+                {/* Google Maps Link + WhatsApp */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <Input
+                        label="Google Maps Link (Optional)"
+                        placeholder="https://maps.google.com/..."
+                        value={formData.mapLink}
+                        onChange={(e) => handleChange("mapLink", e.target.value)}
+                        error={errors.mapLink}
+                        helperText="Paste your location's share link here"
+                    />
 
-                <PhoneInput
-                    id="whatsapp"
-                    label="WhatsApp Number (Optional)"
-                    value={formData.whatsapp}
-                    countryCode={formData.whatsappCountryCode}
-                    onValueChange={v => handleChange("whatsapp", v)}
-                    onCountryCodeChange={c => setFormData(prev => ({ ...prev, whatsappCountryCode: c }))}
-                    error={errors.whatsapp}
-                    helperText="For instant chat button on site"
-                    lockCountryCode
-                />
+                    <PhoneInput
+                        id="whatsapp"
+                        label="WhatsApp Number (Optional)"
+                        value={formData.whatsapp}
+                        countryCode={formData.whatsappCountryCode}
+                        onValueChange={v => handleChange("whatsapp", v)}
+                        onCountryCodeChange={c => setFormData(prev => ({ ...prev, whatsappCountryCode: c }))}
+                        error={errors.whatsapp}
+                        helperText="For instant chat button on site"
+                        lockCountryCode
+                    />
+                </div>
 
                 {/* Brand picker — for new and hybrid dealers */}
                 {showBrands && (
@@ -475,6 +502,73 @@ export default function TwoWheelerStep1Page() {
                             <p className="text-sm text-destructive flex items-center gap-1.5">
                                 <XCircle className="w-4 h-4 flex-shrink-0" />
                                 {brandError}
+                            </p>
+                        )}
+                    </div>
+                )}
+
+                {/* Secondary 3W brand picker — for 2W-primary dealers who also sell 3W (optional) */}
+                {showBrands && showThreeWheelers && (
+                    <div id="brand-section-3w" className="border-t border-border pt-6 space-y-4">
+                        <div>
+                            <h3 className="text-base font-semibold flex items-center gap-2">
+                                <span className="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold bg-green-500/10 border border-green-500/20 text-green-600">
+                                    3W
+                                </span>
+                                Which three-wheeler brands do you sell?
+                            </h3>
+                            <p className="text-sm text-muted-foreground mt-1">
+                                Optional — select any three-wheeler brands you also sell
+                            </p>
+                        </div>
+
+                        {/* Search */}
+                        <div className="relative">
+                            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+                            <input
+                                type="text"
+                                placeholder="Search brands..."
+                                value={brand3wSearch}
+                                onChange={e => setBrand3wSearch(e.target.value)}
+                                className="w-full pl-9 pr-3 py-2 text-sm rounded-lg border border-input bg-background focus:outline-none focus:ring-2 focus:ring-ring"
+                            />
+                        </div>
+
+                        <div className="grid grid-cols-3 sm:grid-cols-4 gap-3">
+                            {THREE_WHEELER_BRANDS
+                                .filter(b => b.brand.toLowerCase().includes(brand3wSearch.toLowerCase()))
+                                .map(brand => {
+                                    const selected = selectedBrands3w.includes(brand.brand);
+                                    const initials = brand.brand.split(" ").map((w: string) => w[0]).join("").substring(0, 2).toUpperCase();
+                                    return (
+                                        <button key={brand.brandId} type="button" onClick={() => toggleBrand3w(brand.brand)}
+                                            className={cn("p-3 rounded-xl border-2 flex flex-col items-center gap-2 transition-all hover:bg-accent relative",
+                                                selected ? "border-green-500 bg-green-500/5" : "border-input"
+                                            )}>
+                                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                                            <img src={logoSrc(brand.brandId)} alt={brand.brand} className="w-10 h-10 object-contain rounded-lg bg-white border border-slate-200 dark:border-slate-700 p-1"
+                                                onError={e => {
+                                                    e.currentTarget.style.display = "none";
+                                                    const fallback = e.currentTarget.nextElementSibling as HTMLElement | null;
+                                                    if (fallback) fallback.style.display = "flex";
+                                                }} />
+                                            <span className="w-10 h-10 rounded-full bg-muted text-muted-foreground text-xs font-bold items-center justify-center hidden">{initials}</span>
+                                            <span className="text-xs font-medium text-center leading-tight">{brand.brand}</span>
+                                            {selected && <div className="absolute top-1 right-1 w-4 h-4 rounded-full bg-green-500 flex items-center justify-center"><Check className="w-2.5 h-2.5 text-white" /></div>}
+                                        </button>
+                                    );
+                                })}
+                        </div>
+
+                        {selectedBrands3w.length > 0 && (
+                            <p className="text-sm text-muted-foreground">
+                                Selected:{" "}
+                                <strong className="text-foreground">
+                                    {selectedBrands3w.length} brand{selectedBrands3w.length > 1 ? "s" : ""}
+                                </strong>
+                                {selectedBrands3w.length <= 3 && (
+                                    <span> ({selectedBrands3w.join(", ")})</span>
+                                )}
                             </p>
                         )}
                     </div>

@@ -9,6 +9,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ArrowLeft, Upload, X, CheckCircle2, Palette, ImageIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { getContrastText } from "@/lib/utils/color-contrast";
 
 // ─── Colour Presets ─────────────────────────────────────────────────────────
 const PRESETS: {
@@ -81,9 +82,9 @@ export default function Step2UsedPage() {
         data.brandColor || PRESETS[0].primary
     );
     const [customAccent, setCustomAccent] = useState<string>(
-        PRESETS[0].accent
+        data.brandAccentColor || PRESETS[0].accent
     );
-    const [useCustom, setUseCustom] = useState(false);
+    const [useCustom, setUseCustom] = useState(data.brandColorPreset === 'custom');
     const [colorError, setColorError] = useState("");
     const [accentError, setAccentError] = useState("");
 
@@ -186,9 +187,10 @@ export default function Step2UsedPage() {
             if (hasError) return;
         }
 
-        const finalColor = useCustom ? customColor : PRESETS.find(p => p.id === selectedPreset)!.primary;
-        const finalAccent = useCustom ? customAccent : PRESETS.find(p => p.id === selectedPreset)!.accent;
-        const finalPreset = useCustom ? "custom" : selectedPreset;
+        const presetMatch = PRESETS.find(p => p.id === selectedPreset);
+        const finalColor = useCustom ? customColor : (presetMatch?.primary ?? customColor);
+        const finalAccent = useCustom ? customAccent : (presetMatch?.accent ?? customAccent);
+        const finalPreset = useCustom || !presetMatch ? "custom" : selectedPreset;
 
         updateData({
             // For hybrid: keep sellsNewCars: true and brands already set in step-1
@@ -258,19 +260,19 @@ export default function Step2UsedPage() {
                                 </div>
                             ) : (
                                 <div className="w-10 h-10 rounded-xl bg-white/15 flex items-center justify-center">
-                                    <ImageIcon className="w-5 h-5 text-white/60" />
+                                    <ImageIcon className="w-5 h-5" style={{ color: getContrastText(previewPrimary), opacity: 0.6 }} />
                                 </div>
                             )}
                             <div>
-                                <p className="text-white font-bold text-sm leading-tight">
+                                <p className="font-bold text-sm leading-tight" style={{ color: getContrastText(previewPrimary) }}>
                                     {data.dealershipName || "Your Dealership"}
                                 </p>
-                                <p className="text-white/60 text-xs">Premium Pre-Owned Vehicles</p>
+                                <p className="text-xs" style={{ color: getContrastText(previewPrimary), opacity: 0.7 }}>Premium Pre-Owned Vehicles</p>
                             </div>
                         </div>
                         <div
                             className="text-xs font-semibold px-3 py-1.5 rounded-full"
-                            style={{ background: previewAccent, color: previewPrimary }}
+                            style={{ background: previewAccent, color: getContrastText(previewAccent) }}
                         >
                             View Inventory
                         </div>

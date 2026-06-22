@@ -43,7 +43,7 @@ export default function ThreeWheelerOnboardingLayout({
                     onBack={() => router.push(getBackHref(pathname))}
                     onExit={() => router.push("/")}
                 />
-                <main className="px-5 py-7 sm:px-8 lg:px-10">
+                <main className="mx-auto max-w-7xl px-5 py-7 sm:px-8 lg:px-10">
                     <FlowStepper steps={coreFlowSteps} currentStep={visibleStep} />
                     <div className="mt-8">
                         {children}

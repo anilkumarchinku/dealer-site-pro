@@ -19,6 +19,7 @@ import {
     formatOnboardingPhone,
     validateOnboardingContactStep,
 } from "@/lib/validations/onboarding";
+import brandData from "@/lib/data/brand-models.json";
 
 // Sanitize input into a URL-safe slug
 function toSlug(value: string) {
@@ -65,6 +66,21 @@ const BRANDS: { name: Brand; logo: string }[] = [
     { name: "MINI",           logo: "/assets/logos/mini.png" },
 ];
 
+// Secondary 2W/3W brand lists — reused when a cars-primary dealer also sells those types.
+const LOGO_EXT: Record<string, string> = {
+    "hop-electric": "svg", "okinawa-autotech": "webp",
+};
+function logoSrc(brandId: string) {
+    return `/data/brand-logos/${brandId}.${LOGO_EXT[brandId] ?? "png"}`;
+}
+
+type TwoWheelerBrandEntry = { brandId: string; brand: string; electric: boolean };
+const TWO_WHEELER_BRANDS: TwoWheelerBrandEntry[] = [
+    ...(brandData.twoWheelers.traditional as { brandId: string; brand: string }[]).map(b => ({ ...b, electric: false })),
+    ...(brandData.twoWheelers.electric    as { brandId: string; brand: string }[]).map(b => ({ ...b, electric: true  })),
+];
+const THREE_WHEELER_BRANDS = (brandData.threeWheelers as { brandId: string; brand: string }[]);
+
 export default function Step1Page() {
     const router = useRouter();
     const { data, updateData, setStep } = useOnboardingStore();
@@ -92,6 +108,14 @@ export default function Step1Page() {
     const [showCyeproKey,  setShowCyeproKey]  = useState(false);
     const [cyeproError,    setCyeproError]    = useState("");
 
+    // Secondary 2W/3W brand pickers — for cars-primary dealers who also sell those types (optional).
+    const showTwoWheelers   = Boolean(data.sellsTwoWheelers);
+    const showThreeWheelers = Boolean(data.sellsThreeWheelers);
+    const [selectedBrands2w, setSelectedBrands2w] = useState<string[]>(data.brands2w || []);
+    const [selectedBrands3w, setSelectedBrands3w] = useState<string[]>(data.brands3w || []);
+    const [brand2wSearch, setBrand2wSearch] = useState("");
+    const [brand3wSearch, setBrand3wSearch] = useState("");
+
     // Multiple branches state (1st hand / hybrid only)
     const [hasMultipleBranches, setHasMultipleBranches] = useState(data.hasMultipleBranches || false);
     const [branches, setBranches] = useState(() => getOnboardingBranchPrefill(data.branches));
@@ -103,6 +127,8 @@ export default function Step1Page() {
         setSiteSlug(data.slug || (nextFormData.dealershipName ? toSlug(nextFormData.dealershipName) : ""));
         setSlugEdited(Boolean(data.slug));
         setSelectedBrands(data.brands || []);
+        setSelectedBrands2w(data.brands2w || []);
+        setSelectedBrands3w(data.brands3w || []);
         setCyeproKey(data.cyeproApiKey ?? "");
         setHasMultipleBranches(Boolean(data.hasMultipleBranches));
         setBranches(getOnboardingBranchPrefill(data.branches));
@@ -161,6 +187,18 @@ export default function Step1Page() {
             prev.includes(brand) ? prev.filter(b => b !== brand) : [...prev, brand]
         );
         setBrandError("");
+    };
+
+    const toggleBrand2w = (brand: string) => {
+        setSelectedBrands2w(prev =>
+            prev.includes(brand) ? prev.filter(b => b !== brand) : [...prev, brand]
+        );
+    };
+
+    const toggleBrand3w = (brand: string) => {
+        setSelectedBrands3w(prev =>
+            prev.includes(brand) ? prev.filter(b => b !== brand) : [...prev, brand]
+        );
     };
 
     // Scroll to and focus an element (mirrors the focus-first-error pattern used elsewhere)
@@ -284,6 +322,9 @@ export default function Step1Page() {
                     sellsNewCars:  true,
                     sellsUsedCars: true,
                 }),
+                // Secondary 2W/3W selections (optional; only relevant when those flags are set).
+                ...(showTwoWheelers   && { brands2w: selectedBrands2w }),
+                ...(showThreeWheelers && { brands3w: selectedBrands3w }),
             });
             setStep(2);
 
@@ -310,7 +351,36 @@ export default function Step1Page() {
         : null;
 
     return (
-        <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_300px]">
+        <div className="space-y-6">
+            {/* Two info cards across the top of the page */}
+            <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+                <div className="rounded-lg border border-[#D8E0EA] bg-[#F7F9FC] p-5">
+                    <h2 className="text-sm font-black text-[#071436]">Quick tips</h2>
+                    <div className="mt-4 space-y-3">
+                        {[
+                            "Use your real business name",
+                            "Add the correct city for local SEO",
+                            "You can connect your own domain later",
+                        ].map((tip) => (
+                            <p key={tip} className="flex gap-2 text-sm font-medium leading-6 text-[#35445C]">
+                                <CheckCircle className="mt-1 h-4 w-4 shrink-0 text-[#16A34A]" />
+                                {tip}
+                            </p>
+                        ))}
+                    </div>
+                </div>
+
+                <div className="rounded-lg border border-[#D8E0EA] bg-white p-5 shadow-[0_14px_42px_rgba(7,20,54,0.06)]">
+                    <p className="text-xs font-black uppercase tracking-[0.16em] text-[#155EEF]">Website URL</p>
+                    <p className="mt-3 break-all text-sm font-black text-[#071436]">
+                        {previewUrl || "https://kumarmotors.dealersitepro.in"}
+                    </p>
+                    <p className="mt-2 text-xs font-medium leading-5 text-[#62708A]">
+                        This preview updates as you edit the dealership name.
+                    </p>
+                </div>
+            </div>
+
         <Card className="animate-fade-in rounded-lg border-[#D8E0EA] bg-white p-0 shadow-[0_14px_42px_rgba(7,20,54,0.07)]">
             <CardHeader className="border-b border-[#E3E9F2] p-6">
                 {/* ── Dealer type badge ── */}
@@ -347,18 +417,32 @@ export default function Step1Page() {
             </CardHeader>
 
             <CardContent className="space-y-6 p-6">
-                {/* Dealership Name */}
-                <Input
-                    id="step1-dealershipName"
-                    label="Dealership Name"
-                    placeholder="Kumar Motors"
-                    maxLength={50}
-                    value={formData.dealershipName}
-                    onChange={(e) => handleChange("dealershipName", e.target.value)}
-                    error={errors.dealershipName}
-                    helperText={`What's your business called? (${formData.dealershipName.length}/50)`}
-                    required
-                />
+                {/* Dealership Name + Location */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <Input
+                        id="step1-dealershipName"
+                        label="Dealership Name"
+                        placeholder="Kumar Motors"
+                        maxLength={50}
+                        value={formData.dealershipName}
+                        onChange={(e) => handleChange("dealershipName", e.target.value)}
+                        error={errors.dealershipName}
+                        helperText={`What's your business called? (${formData.dealershipName.length}/50)`}
+                        required
+                    />
+
+                    <Input
+                        id="step1-location"
+                        label="Location"
+                        placeholder="Mumbai, Maharashtra"
+                        maxLength={200}
+                        value={formData.location}
+                        onChange={(e) => handleChange("location", e.target.value)}
+                        error={errors.location}
+                        helperText={`What city are you in? (${formData.location.length}/200)`}
+                        required
+                    />
+                </div>
 
                 {/* Site Name / Slug Picker — always visible when dealership name is set */}
                 {(siteSlug || formData.dealershipName.trim()) && (
@@ -456,18 +540,6 @@ export default function Step1Page() {
                         )}
                     </div>
                 )}
-
-                <Input
-                    id="step1-location"
-                    label="Location"
-                    placeholder="Mumbai, Maharashtra"
-                    maxLength={200}
-                    value={formData.location}
-                    onChange={(e) => handleChange("location", e.target.value)}
-                    error={errors.location}
-                    helperText={`What city are you in? (${formData.location.length}/200)`}
-                    required
-                />
 
                 {/* Multiple Branches Section (1st Hand & Hybrid only) */}
                 {showBrandPicker && (
@@ -603,50 +675,45 @@ export default function Step1Page() {
                     </div>
                 )}
 
-                <Input
-                    label="Years in Business"
-                    placeholder="10"
-                    type="text"
-                    inputMode="numeric"
-                    maxLength={3}
-                    value={formData.yearsInBusiness}
-                    onChange={(e) => handleChange("yearsInBusiness", e.target.value.replace(/\D/g, "").slice(0, 3))}
-                    helperText="How long have you been open? (Leave blank if new)"
-                />
+                {/* Phone Number + Email */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    {/* Phone Number with country code */}
+                    <PhoneInput
+                        id="step1-phone"
+                        label="Phone Number"
+                        value={formData.phone}
+                        countryCode={formData.phoneCountryCode}
+                        onValueChange={v => handleChange("phone", v)}
+                        onCountryCodeChange={c => setFormData(prev => ({ ...prev, phoneCountryCode: c }))}
+                        error={errors.phone}
+                        required
+                        lockCountryCode
+                    />
 
-                {/* Phone Number with country code */}
-                <PhoneInput
-                    id="step1-phone"
-                    label="Phone Number"
-                    value={formData.phone}
-                    countryCode={formData.phoneCountryCode}
-                    onValueChange={v => handleChange("phone", v)}
-                    onCountryCodeChange={c => setFormData(prev => ({ ...prev, phoneCountryCode: c }))}
-                    error={errors.phone}
-                    required
-                    lockCountryCode
-                />
-
-                <Input
-                    id="step1-email"
-                    label="Email"
-                    placeholder="info@kumarmotors.in"
-                    type="email"
-                    maxLength={100}
-                    value={formData.email}
-                    onChange={(e) => handleChange("email", e.target.value)}
-                    error={errors.email}
-                    required
-                />
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <Input
-                        label="Tagline (Optional)"
-                        placeholder="Driven by Trust"
-                        maxLength={50}
-                        value={formData.tagline}
-                        onChange={(e) => handleChange("tagline", e.target.value)}
-                        helperText={`A short slogan (${formData.tagline.length}/50)`}
+                        id="step1-email"
+                        label="Email"
+                        placeholder="info@kumarmotors.in"
+                        type="email"
+                        maxLength={100}
+                        value={formData.email}
+                        onChange={(e) => handleChange("email", e.target.value)}
+                        error={errors.email}
+                        required
+                    />
+                </div>
+
+                {/* Years in Business + GSTIN */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <Input
+                        label="Years in Business"
+                        placeholder="10"
+                        type="text"
+                        inputMode="numeric"
+                        maxLength={3}
+                        value={formData.yearsInBusiness}
+                        onChange={(e) => handleChange("yearsInBusiness", e.target.value.replace(/\D/g, "").slice(0, 3))}
+                        helperText="How long have you been open? (Leave blank if new)"
                     />
                     <Input
                         id="step1-gstin"
@@ -657,6 +724,30 @@ export default function Step1Page() {
                         onChange={(e) => handleChange("gstin", e.target.value.toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, 15))}
                         error={errors.gstin}
                         helperText="15 alphanumeric characters"
+                    />
+                </div>
+
+                {/* Tagline + WhatsApp */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <Input
+                        label="Tagline (Optional)"
+                        placeholder="Driven by Trust"
+                        maxLength={50}
+                        value={formData.tagline}
+                        onChange={(e) => handleChange("tagline", e.target.value)}
+                        helperText={`A short slogan (${formData.tagline.length}/50)`}
+                    />
+                    {/* WhatsApp Number with country code */}
+                    <PhoneInput
+                        id="step1-whatsapp"
+                        label="WhatsApp Number (Optional)"
+                        value={formData.whatsapp}
+                        countryCode={formData.whatsappCountryCode}
+                        onValueChange={v => handleChange("whatsapp", v)}
+                        onCountryCodeChange={c => setFormData(prev => ({ ...prev, whatsappCountryCode: c }))}
+                        error={errors.whatsapp}
+                        helperText="For instant chat button on site"
+                        lockCountryCode
                     />
                 </div>
 
@@ -686,19 +777,6 @@ export default function Step1Page() {
                     helperText="Paste your location's share link here"
                 />
                 </div>
-
-                {/* WhatsApp Number with country code */}
-                <PhoneInput
-                    id="step1-whatsapp"
-                    label="WhatsApp Number (Optional)"
-                    value={formData.whatsapp}
-                    countryCode={formData.whatsappCountryCode}
-                    onValueChange={v => handleChange("whatsapp", v)}
-                    onCountryCodeChange={c => setFormData(prev => ({ ...prev, whatsappCountryCode: c }))}
-                    error={errors.whatsapp}
-                    helperText="For instant chat button on site"
-                    lockCountryCode
-                />
 
                 {/* ── Cyepro CRM key for new/hybrid 4W dealers ─────────────── */}
                 {showBrandPicker && (
@@ -831,6 +909,136 @@ export default function Step1Page() {
                         )}
                     </div>
                 )}
+
+                {/* ── Secondary 2W Brand Selection (cars-primary dealer who also sells 2W) ── */}
+                {showBrandPicker && showTwoWheelers && (
+                    <div id="brand-section-2w" className="border-t border-border pt-6 space-y-4">
+                        <div>
+                            <h3 className="text-base font-semibold flex items-center gap-2">
+                                <span className="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold bg-indigo-500/10 border border-indigo-500/20 text-indigo-600">
+                                    2W
+                                </span>
+                                Which two-wheeler brands do you sell?
+                            </h3>
+                            <p className="text-sm text-muted-foreground mt-1">
+                                Optional — select any two-wheeler brands you also sell
+                            </p>
+                        </div>
+
+                        <div className="relative">
+                            <input
+                                type="text"
+                                placeholder="Search brands..."
+                                value={brand2wSearch}
+                                onChange={e => setBrand2wSearch(e.target.value)}
+                                className="w-full px-3 py-2 text-sm rounded-lg border border-input bg-background focus:outline-none focus:ring-2 focus:ring-ring"
+                            />
+                        </div>
+
+                        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-3">
+                            {TWO_WHEELER_BRANDS
+                                .filter(b => b.brand.toLowerCase().includes(brand2wSearch.toLowerCase()))
+                                .map(brand => {
+                                    const selected = selectedBrands2w.includes(brand.brand);
+                                    const initials = brand.brand.split(" ").map((w: string) => w[0]).join("").substring(0, 2).toUpperCase();
+                                    return (
+                                        <button key={brand.brandId} type="button" onClick={() => toggleBrand2w(brand.brand)}
+                                            className={cn("p-3 rounded-xl border-2 flex flex-col items-center gap-2 transition-all hover:bg-accent relative",
+                                                selected ? "border-indigo-500 bg-indigo-500/5" : "border-input"
+                                            )}>
+                                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                                            <img src={logoSrc(brand.brandId)} alt={brand.brand} className="w-10 h-10 object-contain rounded-lg bg-white border border-slate-200 dark:border-slate-700 p-1"
+                                                onError={e => {
+                                                    e.currentTarget.style.display = "none";
+                                                    const fallback = e.currentTarget.nextElementSibling as HTMLElement | null;
+                                                    if (fallback) fallback.style.display = "flex";
+                                                }} />
+                                            <span className="w-10 h-10 rounded-full bg-muted text-muted-foreground text-xs font-bold items-center justify-center hidden">{initials}</span>
+                                            <span className="text-xs font-medium text-center leading-tight">{brand.brand}</span>
+                                            {selected && <div className="absolute top-1 right-1 w-4 h-4 rounded-full bg-indigo-500 flex items-center justify-center"><Check className="w-2.5 h-2.5 text-white" /></div>}
+                                        </button>
+                                    );
+                                })}
+                        </div>
+
+                        {selectedBrands2w.length > 0 && (
+                            <p className="text-sm text-muted-foreground">
+                                Selected:{" "}
+                                <strong className="text-foreground">
+                                    {selectedBrands2w.length} brand{selectedBrands2w.length > 1 ? "s" : ""}
+                                </strong>
+                                {selectedBrands2w.length <= 3 && (
+                                    <span> ({selectedBrands2w.join(", ")})</span>
+                                )}
+                            </p>
+                        )}
+                    </div>
+                )}
+
+                {/* ── Secondary 3W Brand Selection (cars-primary dealer who also sells 3W) ── */}
+                {showBrandPicker && showThreeWheelers && (
+                    <div id="brand-section-3w" className="border-t border-border pt-6 space-y-4">
+                        <div>
+                            <h3 className="text-base font-semibold flex items-center gap-2">
+                                <span className="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold bg-green-500/10 border border-green-500/20 text-green-600">
+                                    3W
+                                </span>
+                                Which three-wheeler brands do you sell?
+                            </h3>
+                            <p className="text-sm text-muted-foreground mt-1">
+                                Optional — select any three-wheeler brands you also sell
+                            </p>
+                        </div>
+
+                        <div className="relative">
+                            <input
+                                type="text"
+                                placeholder="Search brands..."
+                                value={brand3wSearch}
+                                onChange={e => setBrand3wSearch(e.target.value)}
+                                className="w-full px-3 py-2 text-sm rounded-lg border border-input bg-background focus:outline-none focus:ring-2 focus:ring-ring"
+                            />
+                        </div>
+
+                        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-3">
+                            {THREE_WHEELER_BRANDS
+                                .filter(b => b.brand.toLowerCase().includes(brand3wSearch.toLowerCase()))
+                                .map(brand => {
+                                    const selected = selectedBrands3w.includes(brand.brand);
+                                    const initials = brand.brand.split(" ").map((w: string) => w[0]).join("").substring(0, 2).toUpperCase();
+                                    return (
+                                        <button key={brand.brandId} type="button" onClick={() => toggleBrand3w(brand.brand)}
+                                            className={cn("p-3 rounded-xl border-2 flex flex-col items-center gap-2 transition-all hover:bg-accent relative",
+                                                selected ? "border-green-500 bg-green-500/5" : "border-input"
+                                            )}>
+                                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                                            <img src={logoSrc(brand.brandId)} alt={brand.brand} className="w-10 h-10 object-contain rounded-lg bg-white border border-slate-200 dark:border-slate-700 p-1"
+                                                onError={e => {
+                                                    e.currentTarget.style.display = "none";
+                                                    const fallback = e.currentTarget.nextElementSibling as HTMLElement | null;
+                                                    if (fallback) fallback.style.display = "flex";
+                                                }} />
+                                            <span className="w-10 h-10 rounded-full bg-muted text-muted-foreground text-xs font-bold items-center justify-center hidden">{initials}</span>
+                                            <span className="text-xs font-medium text-center leading-tight">{brand.brand}</span>
+                                            {selected && <div className="absolute top-1 right-1 w-4 h-4 rounded-full bg-green-500 flex items-center justify-center"><Check className="w-2.5 h-2.5 text-white" /></div>}
+                                        </button>
+                                    );
+                                })}
+                        </div>
+
+                        {selectedBrands3w.length > 0 && (
+                            <p className="text-sm text-muted-foreground">
+                                Selected:{" "}
+                                <strong className="text-foreground">
+                                    {selectedBrands3w.length} brand{selectedBrands3w.length > 1 ? "s" : ""}
+                                </strong>
+                                {selectedBrands3w.length <= 3 && (
+                                    <span> ({selectedBrands3w.join(", ")})</span>
+                                )}
+                            </p>
+                        )}
+                    </div>
+                )}
             </CardContent>
 
             <CardFooter className="justify-between px-6 pb-6">
@@ -857,33 +1065,6 @@ export default function Step1Page() {
                 </Button>
             </CardFooter>
         </Card>
-        <aside className="space-y-4">
-            <div className="rounded-lg border border-[#D8E0EA] bg-[#F7F9FC] p-5">
-                <h2 className="text-sm font-black text-[#071436]">Quick tips</h2>
-                <div className="mt-4 space-y-3">
-                    {[
-                        "Use your real business name",
-                        "Add the correct city for local SEO",
-                        "You can connect your own domain later",
-                    ].map((tip) => (
-                        <p key={tip} className="flex gap-2 text-sm font-medium leading-6 text-[#35445C]">
-                            <CheckCircle className="mt-1 h-4 w-4 shrink-0 text-[#16A34A]" />
-                            {tip}
-                        </p>
-                    ))}
-                </div>
-            </div>
-
-            <div className="rounded-lg border border-[#D8E0EA] bg-white p-5 shadow-[0_14px_42px_rgba(7,20,54,0.06)]">
-                <p className="text-xs font-black uppercase tracking-[0.16em] text-[#155EEF]">Website URL</p>
-                <p className="mt-3 break-all text-sm font-black text-[#071436]">
-                    {previewUrl || "https://kumarmotors.dealersitepro.in"}
-                </p>
-                <p className="mt-2 text-xs font-medium leading-5 text-[#62708A]">
-                    This preview updates as you edit the dealership name.
-                </p>
-            </div>
-        </aside>
         </div>
     );
 }

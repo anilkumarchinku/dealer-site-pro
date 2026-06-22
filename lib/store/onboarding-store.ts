@@ -56,6 +56,11 @@ const initialData: Partial<OnboardingData> = {
     sellsNewCars: false,
     sellsUsedCars: false,
     brands: [],
+    brands2w: [],
+    brands3w: [],
+    sellsFourWheelers: false,
+    sellsTwoWheelers: false,
+    sellsThreeWheelers: false,
     inventorySystem: null,
     services: [],
     styleTemplate: 'family',
@@ -198,6 +203,20 @@ export const useOnboardingStore = create<OnboardingStore>()(
         }),
         {
             name: 'dealersite-onboarding',
+            // Heavy base64 fields (logo, hero image, bulk-upload payloads) are kept
+            // in memory only — persisting them to localStorage can exceed the ~5MB
+            // quota, making the persist write throw and silently break the step that
+            // sets them (e.g. the Continue button after uploading a logo + hero).
+            // They survive in-session and are uploaded to Storage on final save.
+            partialize: (state) => ({
+                ...state,
+                data: {
+                    ...state.data,
+                    brandLogo: undefined,
+                    heroImage: undefined,
+                    uploadedVehicles: undefined,
+                },
+            }),
         }
     )
 );

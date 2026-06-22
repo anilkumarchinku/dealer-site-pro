@@ -50,7 +50,7 @@ export default function ThreeWheelerStep1Page() {
     const checkRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
     const [selectedBrands, setSelectedBrands] = useState<string[]>(
-        (data.brands as string[]) || []
+        data.brands3w || []
     );
     const [brandError,  setBrandError]  = useState("");
     const [brandSearch, setBrandSearch] = useState("");
@@ -60,7 +60,7 @@ export default function ThreeWheelerStep1Page() {
         setFormData(nextFormData);
         setSiteSlug(data.slug || (nextFormData.dealershipName ? toSlug(nextFormData.dealershipName) : ""));
         setSlugEdited(Boolean(data.slug));
-        setSelectedBrands((data.brands as string[]) || []);
+        setSelectedBrands(data.brands3w || []);
     }, [data]);
 
     useEffect(() => {
@@ -142,7 +142,7 @@ export default function ThreeWheelerStep1Page() {
                 email:           formData.email.trim().toLowerCase(),
                 gstin:           formData.gstin.toUpperCase(),
                 slug:            siteSlug,
-                brands:          selectedBrands as unknown as import("@/lib/types").Brand[],
+                brands3w:        selectedBrands,
             });
             setStep(2);
             router.push("/onboarding/three-wheelers/step-2");
@@ -261,52 +261,59 @@ export default function ThreeWheelerStep1Page() {
                     </div>
                 )}
 
-                <Input
-                    label="Location"
-                    placeholder="Mumbai, Maharashtra"
-                    maxLength={200}
-                    value={formData.location}
-                    onChange={(e) => handleChange("location", e.target.value)}
-                    error={errors.location}
-                    helperText={`What city are you in? (${formData.location.length}/200)`}
-                    required
-                />
+                {/* Location + Years in Business */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <Input
+                        label="Location"
+                        placeholder="Mumbai, Maharashtra"
+                        maxLength={200}
+                        value={formData.location}
+                        onChange={(e) => handleChange("location", e.target.value)}
+                        error={errors.location}
+                        helperText={`What city are you in? (${formData.location.length}/200)`}
+                        required
+                    />
 
-                <Input
-                    label="Years in Business"
-                    placeholder="5"
-                    type="text"
-                    inputMode="numeric"
-                    maxLength={3}
-                    value={formData.yearsInBusiness}
-                    onChange={(e) => handleChange("yearsInBusiness", e.target.value.replace(/\D/g, "").slice(0, 3))}
-                    helperText="How long have you been open? (Leave blank if new)"
-                />
+                    <Input
+                        label="Years in Business"
+                        placeholder="5"
+                        type="text"
+                        inputMode="numeric"
+                        maxLength={3}
+                        value={formData.yearsInBusiness}
+                        onChange={(e) => handleChange("yearsInBusiness", e.target.value.replace(/\D/g, "").slice(0, 3))}
+                        helperText="How long have you been open? (Leave blank if new)"
+                    />
+                </div>
 
-                <PhoneInput
-                    id="phone"
-                    label="Phone Number"
-                    value={formData.phone}
-                    countryCode={formData.phoneCountryCode}
-                    onValueChange={v => handleChange("phone", v)}
-                    onCountryCodeChange={c => setFormData(prev => ({ ...prev, phoneCountryCode: c }))}
-                    error={errors.phone}
-                    required
-                    lockCountryCode
-                />
+                {/* Phone Number + Email */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <PhoneInput
+                        id="phone"
+                        label="Phone Number"
+                        value={formData.phone}
+                        countryCode={formData.phoneCountryCode}
+                        onValueChange={v => handleChange("phone", v)}
+                        onCountryCodeChange={c => setFormData(prev => ({ ...prev, phoneCountryCode: c }))}
+                        error={errors.phone}
+                        required
+                        lockCountryCode
+                    />
 
-                <Input
-                    label="Email"
-                    placeholder="info@kumarauto.in"
-                    type="email"
-                    maxLength={100}
-                    value={formData.email}
-                    onChange={(e) => handleChange("email", e.target.value)}
-                    error={errors.email}
-                    required
-                />
+                    <Input
+                        label="Email"
+                        placeholder="info@kumarauto.in"
+                        type="email"
+                        maxLength={100}
+                        value={formData.email}
+                        onChange={(e) => handleChange("email", e.target.value)}
+                        error={errors.email}
+                        required
+                    />
+                </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {/* Tagline + GSTIN */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                     <Input
                         label="Tagline (Optional)"
                         placeholder="Your Reliable Auto Partner"
@@ -338,25 +345,28 @@ export default function ThreeWheelerStep1Page() {
                     />
                 </div>
 
-                <Input
-                    label="Google Maps Link (Optional)"
-                    placeholder="https://maps.google.com/..."
-                    value={formData.mapLink}
-                    onChange={(e) => handleChange("mapLink", e.target.value)}
-                    error={errors.mapLink}
-                />
+                {/* Google Maps Link + WhatsApp */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <Input
+                        label="Google Maps Link (Optional)"
+                        placeholder="https://maps.google.com/..."
+                        value={formData.mapLink}
+                        onChange={(e) => handleChange("mapLink", e.target.value)}
+                        error={errors.mapLink}
+                    />
 
-                <PhoneInput
-                    id="whatsapp"
-                    label="WhatsApp Number (Optional)"
-                    value={formData.whatsapp}
-                    countryCode={formData.whatsappCountryCode}
-                    onValueChange={v => handleChange("whatsapp", v)}
-                    onCountryCodeChange={c => setFormData(prev => ({ ...prev, whatsappCountryCode: c }))}
-                    error={errors.whatsapp}
-                    helperText="For instant chat button on site"
-                    lockCountryCode
-                />
+                    <PhoneInput
+                        id="whatsapp"
+                        label="WhatsApp Number (Optional)"
+                        value={formData.whatsapp}
+                        countryCode={formData.whatsappCountryCode}
+                        onValueChange={v => handleChange("whatsapp", v)}
+                        onCountryCodeChange={c => setFormData(prev => ({ ...prev, whatsappCountryCode: c }))}
+                        error={errors.whatsapp}
+                        helperText="For instant chat button on site"
+                        lockCountryCode
+                    />
+                </div>
 
                 {/* Brand picker — for new and hybrid dealers */}
                 {showBrands && (
