@@ -19,7 +19,6 @@ type DealerBrandRow = {
 
 type DealerProfileRow = {
     id: string
-    brands: string[] | null
 }
 
 type BrandModelMeta = {
@@ -239,13 +238,7 @@ async function loadSelectedBrands(supabase: RouteSupabaseClient, dealer: DealerP
     if (selected.length > 0) return dedupeBrands(selected)
 
     const publicSelected = rowsToCatalogBrands(await loadPublicDealerBrandRows(supabase, dealer.id))
-    if (publicSelected.length > 0) return dedupeBrands(publicSelected)
-
-    const fallback = (dealer.brands ?? [])
-        .map((brand) => resolveCatalogBrand(brand))
-        .filter((brand): brand is CatalogBrand => Boolean(brand))
-
-    return dedupeBrands(fallback)
+    return dedupeBrands(publicSelected)
 }
 
 async function readPublicJson<T>(pathname: string): Promise<T | null> {
@@ -510,20 +503,9 @@ async function loadDealerContext() {
         }
     }
 
-    const { data: dealer, error } = await supabase
-        .from('dealers')
-        .select('id, brands')
-        .eq('id', dealerRef.id)
-        .single()
-
-    if (error || !dealer) {
-        return {
-            errorResponse: NextResponse.json({ error: 'Dealer profile not found' }, { status: 404 }),
-        }
-    }
-
-    const selectedBrands = await loadSelectedBrands(supabase, dealer as DealerProfileRow)
-    return { user, supabase, dealer: dealer as DealerProfileRow, selectedBrands, errorResponse: null }
+    const dealer: DealerProfileRow = { id: dealerRef.id }
+    const selectedBrands = await loadSelectedBrands(supabase, dealer)
+    return { user, supabase, dealer, selectedBrands, errorResponse: null }
 }
 
 export async function GET() {
