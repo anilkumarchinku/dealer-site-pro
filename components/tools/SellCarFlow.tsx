@@ -36,9 +36,13 @@ import {
     Loader2,
     AlertCircle,
     FileText,
+    ImagePlus,
+    X,
 } from 'lucide-react';
+import { CAR_MAKES } from '@/lib/data/cars-static';
 
 const CURRENT_YEAR = new Date().getFullYear();
+const OTHER_MAKE_VALUE = '__other_make__';
 const YEARS = Array.from({ length: 20 }, (_, i) => String(CURRENT_YEAR - i));
 const FUEL_TYPES = ['Petrol', 'Diesel', 'CNG', 'Electric', 'Hybrid'];
 const TRANSMISSIONS = ['Manual', 'Automatic', 'AMT', 'CVT', 'DCT'];
@@ -86,8 +90,10 @@ const lightFormRootClass = [
     '[&_textarea::placeholder]:!text-slate-500',
 ].join(' ');
 
-const lightSelectTriggerClass = 'border-slate-300 bg-white text-slate-950 shadow-sm dark:border-slate-300 dark:bg-white dark:text-slate-950 dark:ring-offset-white';
-const lightSelectContentClass = 'border-slate-200 bg-white text-slate-950 dark:border-slate-200 dark:bg-white dark:text-slate-950';
+const lightSelectTriggerClass = '!border-slate-300 !bg-white !text-slate-950 shadow-sm dark:!border-slate-300 dark:!bg-white dark:!text-slate-950 dark:!ring-offset-white';
+const lightSelectContentClass = 'max-h-72 !border-slate-200 !bg-white !text-slate-950 dark:!border-slate-200 dark:!bg-white dark:!text-slate-950';
+const lightTextareaClass = 'w-full rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm text-slate-950 shadow-sm outline-none placeholder:text-slate-500 focus:border-slate-400 focus:ring-2 focus:ring-slate-200';
+const lightChoiceClass = 'border-slate-300 bg-white text-slate-900 hover:border-slate-400 hover:bg-slate-50';
 
 type SellCarFlowProps = {
     initialDealerId?: string | null;
@@ -120,6 +126,12 @@ function parseLinks(value: string) {
         .filter(Boolean);
 }
 
+type PendingPhoto = {
+    id: string;
+    file: File;
+    previewUrl: string;
+};
+
 export function SellCarFlow({
     initialDealerId,
     dealerName,
@@ -131,6 +143,7 @@ export function SellCarFlow({
     const [step, setStep] = useState(1);
 
     const [brand, setBrand] = useState('');
+    const [makeMode, setMakeMode] = useState<'known' | 'other'>('known');
     const [model, setModel] = useState('');
     const [variant, setVariant] = useState('');
     const [year, setYear] = useState(String(CURRENT_YEAR - 3));
@@ -163,6 +176,9 @@ export function SellCarFlow({
     const [rcAvailable, setRcAvailable] = useState(true);
     const [loanActive, setLoanActive] = useState(false);
     const [photoLinks, setPhotoLinks] = useState('');
+    const [pendingPhotos, setPendingPhotos] = useState<PendingPhoto[]>([]);
+    const [uploadedPhotoUrls, setUploadedPhotoUrls] = useState<string[]>([]);
+    const [uploadingPhotos, setUploadingPhotos] = useState(false);
     const [videoUrl, setVideoUrl] = useState('');
     const [notes, setNotes] = useState('');
     const [submitStatus, setSubmitStatus] = useState<'idle' | 'submitting' | 'submitted' | 'error'>('idle');
@@ -171,7 +187,7 @@ export function SellCarFlow({
 
     const valuation = estimateValue(originalPrice, Number(year), kmDriven, owners, fuelType);
     const sellerExpectedPrice = expectedPrice > 0 ? expectedPrice : valuation.mid;
-    const photoUrls = useMemo(() => parseLinks(photoLinks).slice(0, 12), [photoLinks]);
+    const photoUrls = useMemo(() => [...uploadedPhotoUrls, ...parseLinks(photoLinks)].slice(0, 12), [photoLinks, uploadedPhotoUrls]);
     const pageTitle = dealerName ? `Sell your car to ${dealerName}` : 'Sell Your Car';
 
     const dates = useMemo(() => Array.from({ length: 7 }, (_, i) => {
@@ -186,17 +202,108 @@ export function SellCarFlow({
     const canProceedStep1 = Boolean(brand && model && year && originalPrice > 0 && kmDriven >= 0);
     const canProceedStep2 = Boolean(sellerName && phoneNumber.length === 10 && city && address && selectedDate && selectedSlot);
 
+    const handleMakeChange = (value: string) => {
+        if (value === OTHER_MAKE_VALUE) {
+            setMakeMode('other');
+            setBrand('');
+            return;
+        }
+
+        setMakeMode('known');
+        setBrand(value);
+    };
+
     const toggleFeature = (feature: string) => {
         setSelectedFeatures(prev => prev.includes(feature)
             ? prev.filter(item => item !== feature)
             : [...prev, feature]);
     };
 
+    const addPendingPhotos = (files: FileList | null) => {
+        if (!files?.length) return;
+
+        const slotsLeft = Math.max(0, 12 - uploadedPhotoUrls.length - pendingPhotos.length - parseLinks(photoLinks).length);
+        if (slotsLeft === 0) {
+            setSubmitError('You can attach up to 12 vehicle photos.');
+            return;
+        }
+
+        const nextPhotos = Array.from(files)
+            .filter(file => file.type.startsWith('image/'))
+            .slice(0, slotsLeft)
+            .map(file => ({
+                id: `${file.name}-${file.size}-${crypto.randomUUID()}`,
+                file,
+                previewUrl: URL.createObjectURL(file),
+            }));
+
+        if (!nextPhotos.length) {
+            setSubmitError('Please choose image files only.');
+            return;
+        }
+
+        setSubmitError('');
+        setPendingPhotos(prev => [...prev, ...nextPhotos]);
+    };
+
+    const removePendingPhoto = (id: string) => {
+        setPendingPhotos(prev => {
+            const photo = prev.find(item => item.id === id);
+            if (photo) URL.revokeObjectURL(photo.previewUrl);
+            return prev.filter(item => item.id !== id);
+        });
+    };
+
+    const uploadPendingPhotos = async () => {
+        if (pendingPhotos.length === 0) return [] as string[];
+
+        setUploadingPhotos(true);
+        const uploadedUrls: string[] = [];
+
+        try {
+            for (const photo of pendingPhotos) {
+                const formData = new FormData();
+                formData.append('file', photo.file);
+                if (dealerId) formData.append('dealer_id', dealerId);
+
+                const res = await fetch('/api/sell-requests/upload-image', {
+                    method: 'POST',
+                    body: formData,
+                });
+                const data = await res.json().catch(() => null);
+
+                if (!res.ok || !data?.url) {
+                    throw new Error(data?.error ?? 'Could not upload one of the vehicle photos.');
+                }
+
+                uploadedUrls.push(data.url);
+            }
+
+            setUploadedPhotoUrls(prev => [...prev, ...uploadedUrls].slice(0, 12));
+            pendingPhotos.forEach(photo => URL.revokeObjectURL(photo.previewUrl));
+            setPendingPhotos([]);
+            return uploadedUrls;
+        } finally {
+            setUploadingPhotos(false);
+        }
+    };
+
     const submitSellRequest = async () => {
-        if (!canProceedStep2 || submitStatus === 'submitting') return;
+        if (!canProceedStep2 || submitStatus === 'submitting' || uploadingPhotos) return;
 
         setSubmitStatus('submitting');
         setSubmitError('');
+
+        let submittedPhotoUrls = photoUrls;
+
+        try {
+            const newlyUploadedUrls = await uploadPendingPhotos();
+            submittedPhotoUrls = [...uploadedPhotoUrls, ...newlyUploadedUrls, ...parseLinks(photoLinks)].slice(0, 12);
+        } catch (error) {
+            setSubmitStatus('error');
+            setSubmitError(error instanceof Error ? error.message : 'Could not upload vehicle photos.');
+            return;
+        }
 
         const res = await fetch('/api/sell-requests', {
             method: 'POST',
@@ -226,7 +333,7 @@ export function SellCarFlow({
                 preferred_slot: selectedSlot,
                 estimated_low_paise: Math.round(valuation.low * 100),
                 estimated_high_paise: Math.round(valuation.high * 100),
-                photo_urls: photoUrls,
+                photo_urls: submittedPhotoUrls,
                 insurance_status: insuranceStatus,
                 insurance_provider: insuranceProvider,
                 insurance_valid_until: insuranceValidUntil,
@@ -306,18 +413,40 @@ export function SellCarFlow({
                                     <div className="grid gap-4 sm:grid-cols-2">
                                         <div>
                                             <Label className="mb-2 block text-sm font-medium">Brand</Label>
-                                            <Input placeholder="Maruti Suzuki, Hyundai, Tata" value={brand} onChange={e => setBrand(e.target.value)} />
+                                            <Select
+                                                value={makeMode === 'other' ? OTHER_MAKE_VALUE : brand || undefined}
+                                                onValueChange={handleMakeChange}
+                                            >
+                                                <SelectTrigger className={lightSelectTriggerClass}>
+                                                    <SelectValue placeholder="Choose make" />
+                                                </SelectTrigger>
+                                                <SelectContent className={lightSelectContentClass}>
+                                                    {CAR_MAKES.map(make => (
+                                                        <SelectItem key={make} value={make}>{make}</SelectItem>
+                                                    ))}
+                                                    <SelectItem value={OTHER_MAKE_VALUE}>Other - enter manually</SelectItem>
+                                                </SelectContent>
+                                            </Select>
+                                            {makeMode === 'other' && (
+                                                <Input
+                                                    appearance="light"
+                                                    className="mt-2"
+                                                    placeholder="Enter make"
+                                                    value={brand}
+                                                    onChange={e => setBrand(e.target.value)}
+                                                />
+                                            )}
                                         </div>
                                         <div>
                                             <Label className="mb-2 block text-sm font-medium">Model</Label>
-                                            <Input placeholder="Swift, Creta, Nexon" value={model} onChange={e => setModel(e.target.value)} />
+                                            <Input appearance="light" placeholder="Swift, Creta, Nexon" value={model} onChange={e => setModel(e.target.value)} />
                                         </div>
                                     </div>
 
                                     <div className="grid gap-4 sm:grid-cols-3">
                                         <div>
                                             <Label className="mb-2 block text-sm font-medium">Variant</Label>
-                                            <Input placeholder="VXi, SX, ZX" value={variant} onChange={e => setVariant(e.target.value)} />
+                                            <Input appearance="light" placeholder="VXi, SX, ZX" value={variant} onChange={e => setVariant(e.target.value)} />
                                         </div>
                                         <div>
                                             <Label className="mb-2 block text-sm font-medium">Year</Label>
@@ -342,11 +471,11 @@ export function SellCarFlow({
                                     <div className="grid gap-4 sm:grid-cols-2">
                                         <div>
                                             <Label className="mb-2 block text-sm font-medium">Colour</Label>
-                                            <Input placeholder="White, Grey, Red" value={color} onChange={e => setColor(e.target.value)} />
+                                            <Input appearance="light" placeholder="White, Grey, Red" value={color} onChange={e => setColor(e.target.value)} />
                                         </div>
                                         <div>
                                             <Label className="mb-2 block text-sm font-medium">VIN / Chassis Number</Label>
-                                            <Input placeholder="Optional" value={vin} onChange={e => setVin(e.target.value.toUpperCase())} maxLength={50} />
+                                            <Input appearance="light" placeholder="Optional" value={vin} onChange={e => setVin(e.target.value.toUpperCase())} maxLength={50} />
                                         </div>
                                     </div>
 
@@ -371,7 +500,7 @@ export function SellCarFlow({
                                         </div>
                                         <div>
                                             <Label className="mb-2 block text-sm font-medium">Number Plate</Label>
-                                            <Input
+                                            <Input appearance="light"
                                                 placeholder="TS09AB1234"
                                                 value={registrationNumber}
                                                 onChange={e => setRegistrationNumber(e.target.value.toUpperCase())}
@@ -389,7 +518,7 @@ export function SellCarFlow({
                                     <div className="grid gap-4 sm:grid-cols-2">
                                         <div>
                                             <Label className="mb-2 block text-sm font-medium">Approx original/new price (Rs.)</Label>
-                                            <Input
+                                            <Input appearance="light"
                                                 type="number"
                                                 value={originalPrice || ''}
                                                 onChange={e => setOriginalPrice(Number(e.target.value))}
@@ -401,7 +530,7 @@ export function SellCarFlow({
                                         </div>
                                         <div>
                                             <Label className="mb-2 block text-sm font-medium">Expected selling price (Rs.)</Label>
-                                            <Input
+                                            <Input appearance="light"
                                                 type="number"
                                                 placeholder={`Suggested Rs. ${toIN(valuation.mid)}`}
                                                 value={expectedPrice || ''}
@@ -417,7 +546,7 @@ export function SellCarFlow({
                                     <div className="grid gap-4 sm:grid-cols-2">
                                         <div>
                                             <Label className="mb-2 block text-sm font-medium">Kilometers Driven</Label>
-                                            <Input
+                                            <Input appearance="light"
                                                 type="number"
                                                 value={kmDriven || ''}
                                                 onChange={e => setKmDriven(Number(e.target.value))}
@@ -444,7 +573,7 @@ export function SellCarFlow({
                                         <Label className="mb-3 block text-sm font-medium">Key Features</Label>
                                         <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
                                             {FEATURE_OPTIONS.map(feature => (
-                                                <label key={feature} className="flex items-center gap-2 rounded-md border border-border px-3 py-2 text-sm">
+                                                <label key={feature} className={`flex items-center gap-2 rounded-md border px-3 py-2 text-sm ${lightChoiceClass}`}>
                                                     <input
                                                         type="checkbox"
                                                         checked={selectedFeatures.includes(feature)}
@@ -519,11 +648,11 @@ export function SellCarFlow({
                                     <div className="grid gap-4 sm:grid-cols-2">
                                         <div>
                                             <Label className="mb-2 block text-sm font-medium">Name</Label>
-                                            <Input placeholder="Your name" value={sellerName} onChange={e => setSellerName(e.target.value)} />
+                                            <Input appearance="light" placeholder="Your name" value={sellerName} onChange={e => setSellerName(e.target.value)} />
                                         </div>
                                         <div>
                                             <Label className="mb-2 block text-sm font-medium">Phone Number</Label>
-                                            <Input
+                                            <Input appearance="light"
                                                 type="tel"
                                                 placeholder="10 digit mobile number"
                                                 value={phoneNumber}
@@ -536,7 +665,7 @@ export function SellCarFlow({
                                     <div className="grid gap-4 sm:grid-cols-2">
                                         <div>
                                             <Label className="mb-2 block text-sm font-medium">Email</Label>
-                                            <Input type="email" placeholder="you@example.com" value={sellerEmail} onChange={e => setSellerEmail(e.target.value)} />
+                                            <Input appearance="light" type="email" placeholder="you@example.com" value={sellerEmail} onChange={e => setSellerEmail(e.target.value)} />
                                         </div>
                                         <div>
                                             <Label className="mb-2 block text-sm font-medium">City</Label>
@@ -551,7 +680,7 @@ export function SellCarFlow({
 
                                     <div>
                                         <Label className="mb-2 block text-sm font-medium">Inspection Address</Label>
-                                        <Input placeholder="Full address" value={address} onChange={e => setAddress(e.target.value)} />
+                                        <Input appearance="light" placeholder="Full address" value={address} onChange={e => setAddress(e.target.value)} />
                                     </div>
 
                                     <div>
@@ -565,7 +694,7 @@ export function SellCarFlow({
                                                     className={`rounded-lg border p-2.5 text-center text-xs font-medium transition-all ${
                                                         selectedDate === item.value
                                                             ? 'border-primary bg-primary/10 text-primary'
-                                                            : 'border-border hover:border-primary/50'
+                                                            : lightChoiceClass
                                                     }`}
                                                 >
                                                     {item.label}
@@ -585,7 +714,7 @@ export function SellCarFlow({
                                                     className={`rounded-lg border p-2.5 text-center text-xs font-medium transition-all ${
                                                         selectedSlot === slot
                                                             ? 'border-primary bg-primary/10 text-primary'
-                                                            : 'border-border hover:border-primary/50'
+                                                            : lightChoiceClass
                                                     }`}
                                                 >
                                                     <Clock className="mr-1 inline h-3 w-3" />
@@ -613,18 +742,18 @@ export function SellCarFlow({
                                         </div>
                                         <div>
                                             <Label className="mb-2 block text-sm font-medium">Insurance Provider</Label>
-                                            <Input placeholder="Optional" value={insuranceProvider} onChange={e => setInsuranceProvider(e.target.value)} />
+                                            <Input appearance="light" placeholder="Optional" value={insuranceProvider} onChange={e => setInsuranceProvider(e.target.value)} />
                                         </div>
                                     </div>
 
                                     <div className="grid gap-4 sm:grid-cols-2">
                                         <div>
                                             <Label className="mb-2 block text-sm font-medium">Insurance Valid Until</Label>
-                                            <Input type="date" value={insuranceValidUntil} onChange={e => setInsuranceValidUntil(e.target.value)} />
+                                            <Input appearance="light" type="date" value={insuranceValidUntil} onChange={e => setInsuranceValidUntil(e.target.value)} />
                                         </div>
                                         <div>
                                             <Label className="mb-2 block text-sm font-medium">Insurance / Quote Link</Label>
-                                            <Input placeholder="https://..." value={insuranceQuoteUrl} onChange={e => setInsuranceQuoteUrl(e.target.value)} />
+                                            <Input appearance="light" placeholder="https://..." value={insuranceQuoteUrl} onChange={e => setInsuranceQuoteUrl(e.target.value)} />
                                         </div>
                                     </div>
 
@@ -645,7 +774,7 @@ export function SellCarFlow({
                                             { label: 'Active loan on vehicle', checked: loanActive, onChange: setLoanActive },
                                             { label: 'Flood damage reported', checked: floodDamage, onChange: setFloodDamage },
                                         ].map(item => (
-                                            <label key={item.label} className="flex items-center gap-2 rounded-md border border-border px-3 py-2 text-sm">
+                                            <label key={item.label} className={`flex items-center gap-2 rounded-md border px-3 py-2 text-sm ${lightChoiceClass}`}>
                                                 <input
                                                     type="checkbox"
                                                     checked={item.checked}
@@ -658,26 +787,70 @@ export function SellCarFlow({
                                     </div>
 
                                     <div className="grid gap-4 sm:grid-cols-2">
-                                        <div>
-                                            <Label className="mb-2 block text-sm font-medium">Photo Links</Label>
-                                            <textarea
-                                                rows={4}
-                                                placeholder="Paste image links, one per line"
-                                                value={photoLinks}
-                                                onChange={e => setPhotoLinks(e.target.value)}
-                                                className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
-                                            />
+                                        <div className="space-y-3">
+                                            <div>
+                                                <Label className="mb-2 block text-sm font-medium">Vehicle Photos</Label>
+                                                <label className="flex min-h-32 cursor-pointer flex-col items-center justify-center rounded-xl border border-dashed border-slate-300 bg-white px-4 py-5 text-center text-sm text-slate-700 shadow-sm transition-colors hover:border-slate-400 hover:bg-slate-50">
+                                                    <ImagePlus className="mb-2 h-6 w-6 text-slate-500" />
+                                                    <span className="font-semibold">Upload photos</span>
+                                                    <span className="mt-1 text-xs text-slate-500">JPG, PNG, WebP, AVIF. Up to 12 photos.</span>
+                                                    <input
+                                                        type="file"
+                                                        accept="image/jpeg,image/png,image/webp,image/avif"
+                                                        multiple
+                                                        className="sr-only"
+                                                        onChange={event => {
+                                                            addPendingPhotos(event.target.files);
+                                                            event.currentTarget.value = '';
+                                                        }}
+                                                    />
+                                                </label>
+                                            </div>
+
+                                            {(pendingPhotos.length > 0 || uploadedPhotoUrls.length > 0) && (
+                                                <div className="grid grid-cols-3 gap-2">
+                                                    {uploadedPhotoUrls.map(url => (
+                                                        <div key={url} className="relative aspect-square overflow-hidden rounded-lg border border-slate-200 bg-slate-50">
+                                                            <img src={url} alt="Uploaded vehicle" className="h-full w-full object-cover" />
+                                                        </div>
+                                                    ))}
+                                                    {pendingPhotos.map(photo => (
+                                                        <div key={photo.id} className="relative aspect-square overflow-hidden rounded-lg border border-slate-200 bg-slate-50">
+                                                            <img src={photo.previewUrl} alt={photo.file.name} className="h-full w-full object-cover" />
+                                                            <button
+                                                                type="button"
+                                                                onClick={() => removePendingPhoto(photo.id)}
+                                                                className="absolute right-1 top-1 rounded-full bg-black/70 p-1 text-white"
+                                                                aria-label={`Remove ${photo.file.name}`}
+                                                            >
+                                                                <X className="h-3 w-3" />
+                                                            </button>
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                            )}
+
+                                            <div>
+                                                <Label className="mb-2 block text-sm font-medium">Additional Photo Links</Label>
+                                                <textarea
+                                                    rows={3}
+                                                    placeholder="Optional image links, one per line"
+                                                    value={photoLinks}
+                                                    onChange={e => setPhotoLinks(e.target.value)}
+                                                    className={lightTextareaClass}
+                                                />
+                                            </div>
                                         </div>
                                         <div>
                                             <Label className="mb-2 block text-sm font-medium">Walkaround Video Link</Label>
-                                            <Input placeholder="https://..." value={videoUrl} onChange={e => setVideoUrl(e.target.value)} />
+                                            <Input appearance="light" placeholder="https://..." value={videoUrl} onChange={e => setVideoUrl(e.target.value)} />
                                             <Label className="mb-2 mt-4 block text-sm font-medium">Notes</Label>
                                             <textarea
                                                 rows={3}
                                                 placeholder="Service, tyre, battery, dent, repaint, or other details"
                                                 value={notes}
                                                 onChange={e => setNotes(e.target.value)}
-                                                className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
+                                                className={lightTextareaClass}
                                             />
                                         </div>
                                     </div>
@@ -719,9 +892,9 @@ export function SellCarFlow({
                                 <Button variant="outline" className="flex-1" onClick={() => setStep(1)}>
                                     <ArrowLeft className="mr-1 h-4 w-4" /> Back
                                 </Button>
-                                <Button className="flex-1" disabled={!canProceedStep2 || submitStatus === 'submitting'} onClick={submitSellRequest}>
-                                    {submitStatus === 'submitting' ? <Loader2 className="mr-1 h-4 w-4 animate-spin" /> : null}
-                                    Submit <ArrowRight className="ml-1 h-4 w-4" />
+                                <Button className="flex-1" disabled={!canProceedStep2 || submitStatus === 'submitting' || uploadingPhotos} onClick={submitSellRequest}>
+                                    {submitStatus === 'submitting' || uploadingPhotos ? <Loader2 className="mr-1 h-4 w-4 animate-spin" /> : null}
+                                    {uploadingPhotos ? 'Uploading...' : 'Submit'} <ArrowRight className="ml-1 h-4 w-4" />
                                 </Button>
                             </div>
 
