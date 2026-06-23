@@ -5,10 +5,12 @@ import { useRouter } from "next/navigation";
 import {
     ArrowLeft,
     ArrowRight,
+    Check,
     CheckCircle2,
     Eye,
     EyeOff,
     FileUp,
+    Minus,
     PlusCircle,
     Rocket,
     Zap,
@@ -152,6 +154,47 @@ export default function Step2InventoryPage() {
                     ? `${options.find((option) => option.id === mode)?.title ?? ""} selected`
                     : "No inventory method selected"}
             </p>
+
+            {mode === "cyepro" && (
+                <div className="rounded-lg border border-emerald-200 bg-emerald-50/40 p-5">
+                    <div className="flex flex-wrap items-center gap-2">
+                        <span className="rounded-full bg-emerald-100 px-2 py-1 text-[10px] font-black uppercase tracking-[0.12em] text-emerald-700">
+                            Recommended
+                        </span>
+                        <h3 className="text-sm font-black text-[#071436]">Why dealers choose Cyepro Sync</h3>
+                    </div>
+                    <p className="mt-1 text-xs font-medium leading-5 text-[#62708A]">
+                        How Cyepro Sync compares with adding and updating stock yourself.
+                    </p>
+
+                    <div className="mt-4 overflow-hidden rounded-md border border-[#E3E9F2] bg-white">
+                        <div className="grid grid-cols-[1.3fr_1fr_1fr] gap-2 border-b border-[#E3E9F2] bg-[#F7F9FC] px-4 py-2.5 text-[11px] font-black uppercase tracking-[0.06em]">
+                            <span className="text-[#62708A]" />
+                            <span className="text-center text-[#155EEF]">Cyepro Sync</span>
+                            <span className="text-center text-[#62708A]">Add it yourself</span>
+                        </div>
+                        {[
+                            { label: "Website leads", cyepro: "Land in your CRM automatically", manual: "You follow up by hand" },
+                            { label: "Stock updates", cyepro: "Live sync, where enabled", manual: "Re-upload to update" },
+                            { label: "New vehicles", cyepro: "Appear on the site automatically", manual: "Add or upload each one" },
+                            { label: "Sold vehicles", cyepro: "Removed automatically", manual: "Remove manually" },
+                            { label: "Setup effort", cyepro: "One-time API key", manual: "Ongoing uploads" },
+                        ].map((row) => (
+                            <div key={row.label} className="grid grid-cols-[1.3fr_1fr_1fr] items-start gap-2 border-t border-[#F0F3F8] px-4 py-3 text-xs">
+                                <span className="font-bold text-[#071436]">{row.label}</span>
+                                <span className="flex items-start gap-1.5 font-semibold text-emerald-700">
+                                    <Check className="mt-0.5 h-3.5 w-3.5 shrink-0" />
+                                    <span>{row.cyepro}</span>
+                                </span>
+                                <span className="flex items-start gap-1.5 font-medium text-[#62708A]">
+                                    <Minus className="mt-0.5 h-3.5 w-3.5 shrink-0 text-[#A4B0C2]" />
+                                    <span>{row.manual}</span>
+                                </span>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            )}
 
             {mode === "cyepro" && (
                 <div className="rounded-lg border border-[#D8E0EA] bg-[#F7F9FC] p-5">

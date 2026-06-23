@@ -180,9 +180,11 @@ export default function TwoWheelerStep1Page() {
     const urlPrefix = USE_SUBDOMAIN ? null             : `${BASE_DOMAIN}/sites/`;
     const urlSuffix = USE_SUBDOMAIN ? `.${BASE_DOMAIN}` : null;
 
-    const dealerLabel = isHybrid ? "New + Used 2W Dealer"
-        : isNewDealer  ? "New Bike Dealer"
-        : "Pre-Owned Bike Dealer";
+    // Include 3W (Autos) in the label when this 2W-primary dealer also sells three-wheelers.
+    const vehicleTypesLabel = showThreeWheelers ? "Bikes & Autos" : "Bikes";
+    const dealerLabel = isHybrid ? `New + Pre-Owned ${vehicleTypesLabel} Dealer`
+        : isNewDealer  ? `New ${vehicleTypesLabel} Dealer`
+        : `Pre-Owned ${vehicleTypesLabel} Dealer`;
 
     return (
         <Card className="animate-fade-in">
@@ -194,7 +196,7 @@ export default function TwoWheelerStep1Page() {
                 </div>
                 <CardTitle>Tell us about your dealership</CardTitle>
                 <CardDescription>
-                    We&apos;ll use this to build your two-wheeler dealership website.
+                    We&apos;ll use this to build your {showThreeWheelers ? "two- and three-wheeler" : "two-wheeler"} dealership website.
                 </CardDescription>
             </CardHeader>
 

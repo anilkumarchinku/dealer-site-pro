@@ -111,6 +111,18 @@ export default function Step1Page() {
     // Secondary 2W/3W brand pickers — for cars-primary dealers who also sell those types (optional).
     const showTwoWheelers   = Boolean(data.sellsTwoWheelers);
     const showThreeWheelers = Boolean(data.sellsThreeWheelers);
+
+    // Human-readable label of every vehicle type this dealer sells, for the header
+    // badge/description. Cars (4W) is always present on this flow; 2W/3W are added
+    // when selected — e.g. "Cars", "Cars & Bikes", "Cars, Bikes & Autos".
+    const vehicleKinds = [
+        "Cars",
+        showTwoWheelers ? "Bikes" : null,
+        showThreeWheelers ? "Autos" : null,
+    ].filter(Boolean) as string[];
+    const vehicleTypesLabel = vehicleKinds.length <= 1
+        ? vehicleKinds[0]
+        : `${vehicleKinds.slice(0, -1).join(", ")} & ${vehicleKinds[vehicleKinds.length - 1]}`;
     const [selectedBrands2w, setSelectedBrands2w] = useState<string[]>(data.brands2w || []);
     const [selectedBrands3w, setSelectedBrands3w] = useState<string[]>(data.brands3w || []);
     const [brand2wSearch, setBrand2wSearch] = useState("");
@@ -281,11 +293,8 @@ export default function Step1Page() {
             return;
         }
 
-        if (showBrandPicker && !cyeproKey.trim()) {
-            setCyeproError("Please enter your Cyepro API key so website leads can reach your CRM");
-            focusElement(document.getElementById("step1-cyeproKey"));
-            return;
-        }
+        // Cyepro API key is optional — a dealer without a Cyepro CRM can still finish
+        // onboarding and add the key later from dashboard Settings.
 
         setIsSubmitting(true);
         try {
@@ -399,20 +408,20 @@ export default function Step1Page() {
                                 ? <Building2 className="w-3.5 h-3.5" />
                                 : <Car className="w-3.5 h-3.5" />}
                         {isHybrid
-                            ? "Hybrid Dealer — New + Pre-Owned Cars"
+                            ? `Hybrid Dealer — New + Pre-Owned ${vehicleTypesLabel}`
                             : isFirstHand
-                                ? "1st Hand Dealer — Authorised New Car Dealership"
-                                : "2nd Hand Dealer — Pre-Owned Cars"}
+                                ? `1st Hand Dealer — Authorised New ${vehicleTypesLabel}`
+                                : `2nd Hand Dealer — Pre-Owned ${vehicleTypesLabel}`}
                     </span>
                 </div>
 
                 <CardTitle>Tell us about your dealership</CardTitle>
                 <CardDescription>
                     {isHybrid
-                        ? "We'll build you a combined website showcasing both your new OEM models and pre-owned stock"
+                        ? `We'll build you a combined website showcasing both your new and pre-owned ${vehicleTypesLabel.toLowerCase()}`
                         : isFirstHand
-                            ? "We'll use this to build your authorised dealership website with OEM brand pages"
-                            : "We'll use this to create your premium pre-owned car website"}
+                            ? `We'll use this to build your authorised dealership website for new ${vehicleTypesLabel.toLowerCase()}`
+                            : `We'll use this to create your premium pre-owned ${vehicleTypesLabel.toLowerCase()} website`}
                 </CardDescription>
             </CardHeader>
 
@@ -783,10 +792,10 @@ export default function Step1Page() {
                     <div id="cyepro-section" className="rounded-xl border border-blue-200 bg-blue-50/70 dark:border-blue-900 dark:bg-blue-950/20 p-4 space-y-3">
                         <div>
                             <label className="text-sm font-semibold text-gray-800 dark:text-gray-100">
-                                Cyepro API Key <span className="text-red-500">*</span>
+                                Cyepro API Key <span className="text-xs font-normal text-muted-foreground">(Optional)</span>
                             </label>
                             <p className="text-xs text-muted-foreground mt-1">
-                                This same key sends generated website leads to the dealer&apos;s specific Cyepro CRM account.
+                                This key sends generated website leads to the dealer&apos;s specific Cyepro CRM account. You can add or update it later from Settings.
                             </p>
                         </div>
                         <div className="relative">
