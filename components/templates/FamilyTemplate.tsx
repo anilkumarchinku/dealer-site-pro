@@ -24,6 +24,7 @@ import { FinanceSection } from '@/components/templates/sections/FinanceSection';
 import { TrustBadgesSection } from '@/components/templates/sections/TrustBadgesSection';
 import { ServiceBookingSection } from '@/components/templates/sections/ServiceBookingSection';
 import { VideoSection } from '@/components/templates/sections/VideoSection';
+import { SocialLinks } from '@/components/templates/shared/SocialLinks';
 import CompareBar from '@/components/cars/CompareBar';
 import { WishlistDrawer } from '@/components/ui/WishlistDrawer';
 import { EVSection } from '@/components/ui/EVSection';
@@ -37,7 +38,6 @@ import {
     Mail,
     Shield,
     Heart,
-    Star,
     Users,
     CheckCircle2,
     ChevronRight,
@@ -47,13 +47,43 @@ import {
     Send,
     Menu,
     X,
+    Car as CarIcon,
+    RefreshCw,
+    Wallet,
+    Wrench,
+    Cog,
+    Gauge,
+    LifeBuoy,
 } from 'lucide-react';
 import { useState, useEffect, useMemo } from 'react';
 import { usePathname } from 'next/navigation';
 import { EnquireSidebar } from '@/components/cars/EnquireSidebar';
 import { EmiCalculator } from '@/components/ui/EmiCalculator';
+import { Reveal } from '@/components/ui/Reveal';
+import { CountUp } from '@/components/ui/CountUp';
+import { FadeInImage } from '@/components/ui/FadeInImage';
 import type { Service } from '@/lib/types';
 import { getVehicleLabels } from '@/lib/utils/vehicle-labels';
+import { validateLeadForm, hasLeadFormErrors, normalizeLeadPhone, type LeadFormErrors } from '@/lib/validations/lead';
+
+// A car's engine.type / transmission.type can be a joined string (e.g.
+// "Petrol / Diesel" or "Manual / Auto"). Split on " / " so a multi-value car
+// matches any selected option, and normalize the Auto/Automatic alias both ways.
+function normalizeTransmission(value: string): string {
+    const v = value.trim().toLowerCase();
+    if (v === 'auto' || v === 'automatic') return 'automatic';
+    return v;
+}
+
+function matchesFuel(carFuel: string, selected: string[]): boolean {
+    const carValues = carFuel.split(' / ').map(s => s.trim().toLowerCase());
+    return selected.some(sel => carValues.includes(sel.trim().toLowerCase()));
+}
+
+function matchesTransmission(carTransmission: string, selected: string[]): boolean {
+    const carValues = carTransmission.split(' / ').map(normalizeTransmission);
+    return selected.some(sel => carValues.includes(normalizeTransmission(sel)));
+}
 
 interface FamilyTemplateProps {
     brandName: string;
@@ -73,6 +103,7 @@ interface FamilyTemplateProps {
     serviceCenters?: Array<{ id: string; name: string; address?: string; city?: string; phone?: string }>;
     isVerified?: boolean;
     vehicleType?: '2w' | '3w' | '4w';
+    socialLinks?: { facebook: string | null; instagram: string | null; youtube: string | null };
     sellVehicleHref?: string;
 }
 
@@ -94,6 +125,7 @@ export function FamilyTemplate({
     serviceCenters,
     isVerified = false,
     vehicleType,
+    socialLinks,
     sellVehicleHref,
 }: FamilyTemplateProps) {
     const vl = getVehicleLabels(vehicleType);
@@ -105,17 +137,17 @@ export function FamilyTemplate({
         sellsNewCars,
         sellsUsedCars,
     }), [pathname, sellsNewCars, sellsUsedCars, vehicleType]);
-    const SERVICE_LABELS: Record<string, { label: string; icon: string; desc: string }> = {
-        new_car_sales: { label: vl.newVehicle, icon: '🚗', desc: vl.newVehicleDesc },
-        used_car_sales: { label: vl.usedVehicle, icon: '🔄', desc: 'Certified pre-owned at great prices' },
-        financing: { label: 'Finance & EMI', icon: '💰', desc: 'Easy monthly plans for every budget' },
-        service_maintenance: { label: 'Service & Repairs', icon: '🔧', desc: 'Expert care for your vehicle' },
-        parts_accessories: { label: 'Parts & Accessories', icon: '⚙️', desc: 'Genuine parts for all makes' },
-        test_drive: { label: vl.testDrive, icon: '🏎️', desc: vl.testDriveDesc },
-        insurance: { label: 'Insurance', icon: '🛡️', desc: 'Complete vehicle protection plans' },
-        extended_warranty: { label: 'Extended Warranty', icon: '✅', desc: 'Peace of mind, guaranteed' },
-        roadside_assistance: { label: 'Roadside Assist', icon: '🆘', desc: '24/7 support wherever you are' },
-        car_exchange: { label: vl.exchange, icon: '🔃', desc: vl.exchangeDesc },
+    const SERVICE_LABELS: Record<string, { label: string; icon: typeof CarIcon; desc: string }> = {
+        new_car_sales: { label: vl.newVehicle, icon: CarIcon, desc: vl.newVehicleDesc },
+        used_car_sales: { label: vl.usedVehicle, icon: RefreshCw, desc: 'Certified pre-owned at great prices' },
+        financing: { label: 'Finance & EMI', icon: Wallet, desc: 'Easy monthly plans for every budget' },
+        service_maintenance: { label: 'Service & Repairs', icon: Wrench, desc: 'Expert care for your vehicle' },
+        parts_accessories: { label: 'Parts & Accessories', icon: Cog, desc: 'Genuine parts for all makes' },
+        test_drive: { label: vl.testDrive, icon: Gauge, desc: vl.testDriveDesc },
+        insurance: { label: 'Insurance', icon: Shield, desc: 'Complete vehicle protection plans' },
+        extended_warranty: { label: 'Extended Warranty', icon: CheckCircle2, desc: 'Peace of mind, guaranteed' },
+        roadside_assistance: { label: 'Roadside Assist', icon: LifeBuoy, desc: '24/7 support wherever you are' },
+        car_exchange: { label: vl.exchange, icon: RefreshCw, desc: vl.exchangeDesc },
     };
     const isHybrid = sellsNewCars && sellsUsedCars;
     const [activeTab, setActiveTab] = useState<'inventory' | 'home'>('home');
@@ -133,6 +165,8 @@ export function FamilyTemplate({
     // Lead form state
     const [formData, setFormData] = useState({ name: '', phone: '', email: '', message: '' });
     const [formStatus, setFormStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
+    const [formErrors, setFormErrors] = useState<LeadFormErrors>({});
+    const [consent, setConsent] = useState(false);
 
     const config = generateTemplateConfig(brandName, 'family');
     const { brandColors } = config;
@@ -151,8 +185,8 @@ export function FamilyTemplate({
         const { make, bodyType, fuelType, transmission, year, seating, priceRange } = activeFilters;
         if (make?.length) result = result.filter(c => make.includes(c.make));
         if (bodyType?.length) result = result.filter(c => bodyType.includes(c.bodyType));
-        if (fuelType?.length) result = result.filter(c => fuelType.includes(c.engine.type));
-        if (transmission?.length) result = result.filter(c => transmission.includes(c.transmission.type));
+        if (fuelType?.length) result = result.filter(c => matchesFuel(c.engine.type, fuelType));
+        if (transmission?.length) result = result.filter(c => matchesTransmission(c.transmission.type, transmission));
         if (year?.length) result = result.filter(c => year.includes(c.year.toString()));
         if (seating?.length) result = result.filter(c => seating.includes(String(c.dimensions?.seatingCapacity ?? '')));
         if (priceRange) result = result.filter(c => {
@@ -179,7 +213,12 @@ export function FamilyTemplate({
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        if (!formData.name || !formData.phone) return;
+        const errors = validateLeadForm({ name: formData.name, phone: formData.phone, email: formData.email, consent });
+        if (hasLeadFormErrors(errors)) {
+            setFormErrors(errors);
+            return;
+        }
+        setFormErrors({});
         setFormStatus('sending');
         try {
             const res = await fetch('/api/leads', {
@@ -187,9 +226,9 @@ export function FamilyTemplate({
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     dealer_id: dealerId,
-                    name: formData.name,
-                    phone: formData.phone,
-                    email: formData.email,
+                    name: formData.name.trim(),
+                    phone: normalizeLeadPhone(formData.phone),
+                    email: formData.email.trim(),
                     message: formData.message,
                     lead_source: 'contact_form',
                 }),
@@ -203,8 +242,23 @@ export function FamilyTemplate({
     const serviceList = services && services.length > 0 ? services : [];
     const showInventoryTab = vehicleType !== '2w' && vehicleType !== '3w';
 
+    // Real dealer data only — no fabricated "happy families" / ratings.
+    const uniqueBrandCount = new Set(cars.map(c => c.make)).size;
+    const heroStats = [
+        cars.length > 0 && { icon: CheckCircle2, value: `${cars.length}`, label: cars.length === 1 ? 'Vehicle' : 'Vehicles' },
+        uniqueBrandCount > 0 && { icon: Shield, value: `${uniqueBrandCount}`, label: uniqueBrandCount === 1 ? 'Brand' : 'Brands' },
+        serviceList.length > 0 && { icon: Users, value: `${serviceList.length}`, label: serviceList.length === 1 ? 'Service' : 'Services' },
+    ].filter(Boolean) as { icon: typeof Users; value: string; label: string }[];
+
     return (
         <div className="min-h-screen bg-white text-gray-900 font-sans">
+            {/* Skip to main content — first focusable element for keyboard/AT users */}
+            <a
+                href="#main-content"
+                className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:text-gray-900 focus:shadow-lg focus:outline focus:outline-2 focus:outline-gray-900"
+            >
+                Skip to main content
+            </a>
             <nav className={`fixed ${previewMode ? 'top-12' : 'top-0'} left-0 right-0 z-50 transition-all ${isScrolled ? 'bg-white shadow-md' : 'bg-white/95'}`}>
                 <div className="max-w-7xl mx-auto px-4 py-4">
                     <div className="flex items-center justify-between gap-4">
@@ -254,7 +308,7 @@ export function FamilyTemplate({
                                 <MessageSquare className="w-4 h-4 mr-2" />
                                 Enquire Now
                             </Button>
-                            <Button className="rounded-full px-4 text-white lg:px-5" style={{ backgroundColor: brandColors.primary }} asChild>
+                            <Button className="rounded-full px-4 lg:px-5" style={{ backgroundColor: brandColors.primary, color: getContrastText(brandColors.primary) }} asChild>
                                 <a href={`tel:${contactInfo.phone}`}>
                                     <Phone className="w-4 h-4 mr-2" />
                                     Call Us
@@ -265,6 +319,7 @@ export function FamilyTemplate({
                                 className="xl:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors"
                                 onClick={() => setMobileMenuOpen(o => !o)}
                                 aria-label="Toggle navigation menu"
+                                aria-expanded={mobileMenuOpen}
                             >
                                 {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
                             </button>
@@ -272,7 +327,7 @@ export function FamilyTemplate({
                     </div>
                     {/* Mobile menu */}
                     {mobileMenuOpen && (
-                        <div className="xl:hidden border-t border-gray-100 bg-white shadow-lg">
+                        <div className="xl:hidden border-t border-gray-100 bg-white shadow-lg animate-fade-in-down">
                             <div className="px-4 py-3 space-y-1">
                                 <button
                                     onClick={() => { setActiveTab('home'); setMobileMenuOpen(false); }}
@@ -311,8 +366,8 @@ export function FamilyTemplate({
                                 )}
                                 <div className="pt-2 border-t border-gray-100">
                                     <Button
-                                        className="w-full rounded-full text-white"
-                                        style={{ backgroundColor: brandColors.primary }}
+                                        className="w-full rounded-full"
+                                        style={{ backgroundColor: brandColors.primary, color: getContrastText(brandColors.primary) }}
                                         onClick={() => { setEnquireSidebarOpen(true); setMobileMenuOpen(false); }}
                                     >
                                         <MessageSquare className="w-4 h-4 mr-2" />
@@ -337,13 +392,13 @@ export function FamilyTemplate({
             />
 
             {activeTab === 'home' && (
-                <>
+                <div id="main-content" tabIndex={-1} className="animate-fade-in">
                     {/* Hero */}
                     <section className="relative pt-24 pb-16 bg-gradient-to-br from-gray-50 to-white">
                         <div className="max-w-7xl mx-auto px-4">
                             <div className="grid lg:grid-cols-2 gap-12 items-center">
                                 <div className="space-y-6">
-                                    <div className="flex flex-wrap items-center gap-3">
+                                    <div className="flex flex-wrap items-center gap-3 animate-fade-in-up animate-delay-100">
                                         <div className="inline-block px-4 py-2 rounded-full text-sm font-semibold" style={{ backgroundColor: `${brandColors.primary}20`, color: brandColors.primary }}>
                                             {tagline}
                                         </div>
@@ -352,25 +407,25 @@ export function FamilyTemplate({
                                         </div>
                                         {isVerified && <VerifiedBadge variant="hero" />}
                                     </div>
-                                    <h1 className="text-5xl md:text-6xl font-bold leading-tight">{heroTitle}</h1>
-                                    <p className="text-xl text-gray-600">{heroSubtitle}</p>
-                                    <div className="flex flex-wrap gap-4">
+                                    <h1 className="text-5xl md:text-6xl font-bold leading-tight animate-fade-in-up animate-delay-100">{heroTitle}</h1>
+                                    <p className="text-xl text-gray-600 animate-fade-in-up animate-delay-200">{heroSubtitle}</p>
+                                    <div className="flex flex-wrap gap-4 animate-fade-in-up animate-delay-300">
                                         {showInventoryTab && (
-                                            <Button size="lg" className="rounded-full text-white" style={{ backgroundColor: brandColors.primary }} onClick={() => setActiveTab('inventory')}>
+                                            <Button size="lg" className="rounded-full hover-lift" style={{ backgroundColor: brandColors.primary, color: getContrastText(brandColors.primary) }} onClick={() => setActiveTab('inventory')}>
                                                 {vl.browseCTA}
                                                 <ArrowRight className="ml-2 w-5 h-5" />
                                             </Button>
                                         )}
-                                        <Button size="lg" variant="outline" className="rounded-full bg-white" style={{ borderColor: brandColors.primary, color: brandColors.primary }} asChild>
+                                        <Button size="lg" variant="outline" className="rounded-full bg-white hover-lift" style={{ borderColor: brandColors.primary, color: brandColors.primary }} asChild>
                                             <a href="#contact">Talk to Our Team</a>
                                         </Button>
                                     </div>
                                 </div>
-                                <div className="relative h-96 rounded-3xl overflow-hidden shadow-2xl">
+                                <div className="relative h-96 rounded-3xl overflow-hidden shadow-2xl animate-scale-in">
                                     {(() => {
                                         const heroSrc = heroImageUrl;
                                         return heroSrc
-                                            ? <Image src={heroSrc} alt={`${brandName} Family`} fill className="object-cover" priority />
+                                            ? <FadeInImage src={heroSrc} alt={`${brandName} Family`} fill className="object-cover" priority />
                                             : <div className="w-full h-full" style={{ background: `linear-gradient(135deg, ${brandColors.primary}33, ${brandColors.primary}11)` }} />;
                                     })()}
                                 </div>
@@ -378,53 +433,58 @@ export function FamilyTemplate({
                         </div>
                     </section>
 
-                    {/* Stats */}
-                    <section className="py-16 border-y border-gray-200">
-                        <div className="max-w-7xl mx-auto px-4">
-                            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                                {[
-                                    { icon: Users, value: '10k+', label: 'Happy Families' },
-                                    { icon: Star, value: '4.9', label: 'Customer Rating' },
-                                    { icon: Shield, value: '100%', label: 'Satisfaction' },
-                                    { icon: CheckCircle2, value: '500+', label: 'Vehicles' },
-                                ].map((stat, i) => (
-                                    <div key={i} className="text-center">
-                                        <div className="w-12 h-12 mx-auto mb-3 rounded-full flex items-center justify-center" style={{ backgroundColor: `${brandColors.primary}20` }}>
-                                            <stat.icon className="w-6 h-6" style={{ color: brandColors.primary }} />
+                    {/* Stats — real dealer data only */}
+                    {heroStats.length > 0 && (
+                        <section className="py-16 border-y border-gray-200">
+                            <div className="max-w-7xl mx-auto px-4">
+                                <Reveal className={`grid gap-8 ${heroStats.length === 1 ? 'grid-cols-1' : heroStats.length === 2 ? 'grid-cols-2' : 'grid-cols-3'}`}>
+                                    {heroStats.map((stat, i) => (
+                                        <div key={i} className="group text-center">
+                                            <div className="w-12 h-12 mx-auto mb-3 rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-110" style={{ backgroundColor: `${brandColors.primary}20` }}>
+                                                <stat.icon className="w-6 h-6" style={{ color: brandColors.primary }} />
+                                            </div>
+                                            <p className="text-3xl font-bold"><CountUp value={stat.value} /></p>
+                                            <p className="text-sm text-gray-600">{stat.label}</p>
                                         </div>
-                                        <p className="text-3xl font-bold">{stat.value}</p>
-                                        <p className="text-sm text-gray-600">{stat.label}</p>
-                                    </div>
-                                ))}
+                                    ))}
+                                </Reveal>
                             </div>
-                        </div>
-                    </section>
+                        </section>
+                    )}
 
                     {/* Services — family-friendly cards */}
                     {serviceList.length > 0 && (
                         <section className="py-16 bg-gray-50">
                             <div className="max-w-7xl mx-auto px-4">
-                                <div className="text-center mb-10">
+                                <Reveal className="text-center mb-10">
                                     <span className="font-semibold uppercase tracking-wider text-sm" style={{ color: brandColors.primary }}>
                                         What We Offer
                                     </span>
                                     <h2 className="text-3xl font-bold mt-2">Services for Your Family</h2>
-                                </div>
+                                </Reveal>
                                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                                    {serviceList.map((svc) => {
-                                        const meta = SERVICE_LABELS[svc as string] ?? { label: svc as string, icon: '🚘', desc: 'Premium service for you' };
+                                    {serviceList.map((svc, i) => {
+                                        const meta = SERVICE_LABELS[svc as string] ?? { label: svc as string, icon: CarIcon, desc: 'Premium service for you' };
+                                        const Icon = meta.icon;
                                         return (
-                                            <div
+                                            <Reveal
                                                 key={svc as string}
-                                                className="flex items-start gap-4 p-5 bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow border"
+                                                direction="up"
+                                                delay={(i % 6) * 70}
+                                                className="group flex items-start gap-4 p-5 bg-white rounded-2xl shadow-sm hover-lift border"
                                                 style={{ borderColor: `${brandColors.primary}20` }}
                                             >
-                                                <span className="text-3xl">{meta.icon}</span>
+                                                <div
+                                                    className="w-12 h-12 shrink-0 rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-110"
+                                                    style={{ backgroundColor: `${brandColors.primary}20` }}
+                                                >
+                                                    <Icon className="w-6 h-6" style={{ color: brandColors.primary }} aria-hidden="true" />
+                                                </div>
                                                 <div>
                                                     <p className="font-bold text-gray-900">{meta.label}</p>
                                                     <p className="text-sm text-gray-600 mt-0.5">{meta.desc}</p>
                                                 </div>
-                                            </div>
+                                            </Reveal>
                                         );
                                     })}
                                 </div>
@@ -435,12 +495,12 @@ export function FamilyTemplate({
                     {/* Featured Cars */}
                     <section className="py-20 bg-gray-50">
                         <div className="max-w-7xl mx-auto px-4">
-                            <div className="text-center mb-12">
+                            <Reveal className="text-center mb-12">
                                 <span className="font-semibold uppercase tracking-wider text-sm" style={{ color: brandColors.primary }}>
                                     Our Collection
                                 </span>
                                 <h2 className="text-4xl font-bold mt-2">Family-Friendly Vehicles</h2>
-                            </div>
+                            </Reveal>
                             <CarGrid cars={featuredCars} brandColor={brandColors.primary} light summaryOnly detailBasePath={detailBasePath} dealerPhone={contactInfo.phone} dealerId={dealerId} />
                             {showInventoryTab && (
                                 <div className="text-center mt-8">
@@ -456,13 +516,13 @@ export function FamilyTemplate({
                     {/* EMI Calculator */}
                     <section className="py-16 bg-white">
                         <div className="max-w-4xl mx-auto px-4">
-                            <div className="text-center mb-8">
+                            <Reveal className="text-center mb-8">
                                 <span className="font-semibold uppercase tracking-wider text-sm" style={{ color: brandColors.primary }}>
                                     Finance Tool
                                 </span>
                                 <h2 className="text-3xl font-bold mt-2">EMI Calculator</h2>
                                 <p className="text-gray-600 mt-2">Plan your budget with real inputs — price, down payment, tenure &amp; rate</p>
-                            </div>
+                            </Reveal>
                             <EmiCalculator brandColor={brandColors.primary} theme="light" />
                         </div>
                     </section>
@@ -470,7 +530,7 @@ export function FamilyTemplate({
                     {/* Why Families Choose Us */}
                     <section className="py-20">
                         <div className="max-w-7xl mx-auto px-4">
-                            <h2 className="text-4xl font-bold text-center mb-16">Why Families Choose Us</h2>
+                            <Reveal as="h2" className="text-4xl font-bold text-center mb-16">Why Families Choose Us</Reveal>
                             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                                 {[
                                     { icon: Shield, title: 'Safety First', desc: 'Every car thoroughly inspected' },
@@ -478,13 +538,13 @@ export function FamilyTemplate({
                                     { icon: Heart, title: 'Family Service', desc: 'We treat you like family' },
                                     { icon: CheckCircle2, title: 'Easy Finance', desc: 'Flexible payment options' },
                                 ].map((f, i) => (
-                                    <div key={i} className="p-6 rounded-2xl bg-gray-50 hover:shadow-lg transition-shadow">
-                                        <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4" style={{ backgroundColor: `${brandColors.primary}20` }}>
+                                    <Reveal key={i} direction="up" delay={(i % 6) * 70} className="group p-6 rounded-2xl bg-gray-50 hover-lift hover-scale">
+                                        <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110" style={{ backgroundColor: `${brandColors.primary}20` }}>
                                             <f.icon className="w-6 h-6" style={{ color: brandColors.primary }} />
                                         </div>
                                         <h3 className="text-xl font-bold mb-2">{f.title}</h3>
                                         <p className="text-gray-600">{f.desc}</p>
-                                    </div>
+                                    </Reveal>
                                 ))}
                             </div>
                         </div>
@@ -534,7 +594,7 @@ export function FamilyTemplate({
                         <div className="max-w-7xl mx-auto px-4">
                             <div className="grid lg:grid-cols-2 gap-12 items-start">
                                 {/* Info */}
-                                <div>
+                                <Reveal direction="left">
                                     <span className="font-semibold uppercase tracking-wider text-sm" style={{ color: brandColors.primary }}>
                                         We&apos;re Here to Help
                                     </span>
@@ -582,13 +642,13 @@ export function FamilyTemplate({
                                             />
                                         </div>
                                     )}
-                                </div>
+                                </Reveal>
 
                                 {/* Form */}
-                                <div className="bg-white rounded-2xl shadow-xl p-8">
+                                <Reveal direction="right" className="bg-white rounded-2xl shadow-xl p-8">
                                     {formStatus === 'sent' ? (
-                                        <div className="text-center py-10">
-                                            <Heart className="w-16 h-16 mx-auto mb-4" style={{ color: brandColors.primary }} />
+                                        <div className="text-center py-10 animate-fade-in">
+                                            <Heart className="w-16 h-16 mx-auto mb-4 animate-bounce-subtle" style={{ color: brandColors.primary }} />
                                             <h3 className="text-2xl font-bold mb-2">Thank You!</h3>
                                             <p className="text-gray-600">Our team will get back to you soon. We can&apos;t wait to help your family find the perfect {vl.familyVehicle}!</p>
                                         </div>
@@ -602,20 +662,27 @@ export function FamilyTemplate({
                                                     required
                                                     value={formData.name}
                                                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                                                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-gray-400 focus:ring-1 focus:ring-gray-200 text-gray-900 bg-gray-50 placeholder:text-gray-400"
+                                                    aria-invalid={!!formErrors.name}
+                                                    className={`w-full px-4 py-3 rounded-xl border bg-white text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus-visible:ring-offset-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900 ${formErrors.name ? 'border-red-500' : 'border-gray-200'}`}
+                                                    style={{ '--tw-ring-color': brandColors.primary } as React.CSSProperties}
                                                     placeholder="Full name"
                                                 />
+                                                {formErrors.name && <p className="mt-1 text-xs text-red-600">{formErrors.name}</p>}
                                             </div>
                                             <div>
                                                 <label className="block text-sm font-medium text-gray-700 mb-1">Phone Number *</label>
                                                 <input
                                                     type="tel"
                                                     required
+                                                    inputMode="tel"
                                                     value={formData.phone}
                                                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                                                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-gray-400 focus:ring-1 focus:ring-gray-200 text-gray-900 bg-gray-50 placeholder:text-gray-400"
-                                                    placeholder="Your phone number"
+                                                    aria-invalid={!!formErrors.phone}
+                                                    className={`w-full px-4 py-3 rounded-xl border bg-white text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus-visible:ring-offset-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900 ${formErrors.phone ? 'border-red-500' : 'border-gray-200'}`}
+                                                    style={{ '--tw-ring-color': brandColors.primary } as React.CSSProperties}
+                                                    placeholder="10-digit mobile number"
                                                 />
+                                                {formErrors.phone && <p className="mt-1 text-xs text-red-600">{formErrors.phone}</p>}
                                             </div>
                                             <div>
                                                 <label className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
@@ -623,9 +690,12 @@ export function FamilyTemplate({
                                                     type="email"
                                                     value={formData.email}
                                                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                                                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-gray-400 focus:ring-1 focus:ring-gray-200 text-gray-900 bg-gray-50 placeholder:text-gray-400"
+                                                    aria-invalid={!!formErrors.email}
+                                                    className={`w-full px-4 py-3 rounded-xl border bg-white text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus-visible:ring-offset-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900 ${formErrors.email ? 'border-red-500' : 'border-gray-200'}`}
+                                                    style={{ '--tw-ring-color': brandColors.primary } as React.CSSProperties}
                                                     placeholder="your@email.com"
                                                 />
+                                                {formErrors.email && <p className="mt-1 text-xs text-red-600">{formErrors.email}</p>}
                                             </div>
                                             <div>
                                                 <label className="block text-sm font-medium text-gray-700 mb-1">Message</label>
@@ -633,9 +703,26 @@ export function FamilyTemplate({
                                                     rows={4}
                                                     value={formData.message}
                                                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                                                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-gray-400 focus:ring-1 focus:ring-gray-200 text-gray-900 bg-gray-50 resize-none placeholder:text-gray-400"
+                                                    className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus-visible:ring-offset-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900 resize-none"
+                                                    style={{ '--tw-ring-color': brandColors.primary } as React.CSSProperties}
                                                     placeholder={`Which ${vl.familyVehicle} are you looking for? Any specific requirements?`}
                                                 />
+                                            </div>
+                                            <div>
+                                                <label className="flex items-start gap-2 text-xs text-gray-600">
+                                                    <input
+                                                        type="checkbox"
+                                                        checked={consent}
+                                                        onChange={(e) => { setConsent(e.target.checked); if (e.target.checked) setFormErrors(prev => ({ ...prev, consent: undefined })); }}
+                                                        aria-invalid={!!formErrors.consent}
+                                                        className="mt-0.5 h-4 w-4 shrink-0 rounded border-gray-300"
+                                                    />
+                                                    <span>
+                                                        I agree to be contacted about my enquiry and accept the{' '}
+                                                        <a href={`${siteBase}/privacy`} target="_blank" rel="noopener noreferrer" className="underline" style={{ color: brandColors.primary }}>Privacy Policy</a>.
+                                                    </span>
+                                                </label>
+                                                {formErrors.consent && <p className="mt-1 text-xs text-red-600">{formErrors.consent}</p>}
                                             </div>
                                             {formStatus === 'error' && (
                                                 <p className="text-red-600 text-sm">Something went wrong. Please try again or call us directly.</p>
@@ -643,8 +730,8 @@ export function FamilyTemplate({
                                             <Button
                                                 type="submit"
                                                 disabled={formStatus === 'sending'}
-                                                className="w-full text-white py-3 rounded-xl font-semibold"
-                                                style={{ backgroundColor: brandColors.primary }}
+                                                className="w-full py-3 rounded-xl font-semibold hover-lift"
+                                                style={{ backgroundColor: brandColors.primary, color: getContrastText(brandColors.primary) }}
                                             >
                                                 {formStatus === 'sending' ? 'Sending...' : (
                                                     <>
@@ -655,16 +742,16 @@ export function FamilyTemplate({
                                             </Button>
                                         </form>
                                     )}
-                                </div>
+                                </Reveal>
                             </div>
                         </div>
                     </section>
-                </>
+                </div>
             )}
 
             {/* Inventory Tab */}
             {showInventoryTab && activeTab === 'inventory' && (
-                <div className="pt-24 pb-12 bg-gray-50 min-h-screen">
+                <div id="main-content" tabIndex={-1} className="pt-24 pb-12 bg-gray-50 min-h-screen animate-fade-in">
                     <div className="max-w-7xl mx-auto px-4">
                         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
                             <h1 className="text-4xl font-bold">Our Inventory</h1>
@@ -727,7 +814,6 @@ export function FamilyTemplate({
                                 fill
                                 className="object-contain"
                                 sizes="48px"
-                                style={{ filter: 'saturate(1.4) brightness(1.05) drop-shadow(0 4px 10px rgba(0,0,0,0.25)) drop-shadow(0 1px 3px rgba(0,0,0,0.15))' }}
                                 onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
                             />
                         </div>
@@ -807,20 +893,7 @@ export function FamilyTemplate({
                             <h4 className="font-bold text-lg mb-4">{dealerName}</h4>
                             <p className="text-gray-600">Your trusted partner for family-friendly vehicles. We&apos;re here to help you find the perfect {vl.familyVehicle}.</p>
                             {/* Social Media Links */}
-                            <div className="flex gap-3 mt-4">
-                                <a href="#" aria-label="Facebook" className="w-9 h-9 rounded-full flex items-center justify-center bg-gray-100 hover:bg-blue-100 text-gray-600 hover:text-blue-600 transition-colors">
-                                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
-                                </a>
-                                <a href="#" aria-label="Instagram" className="w-9 h-9 rounded-full flex items-center justify-center bg-gray-100 hover:bg-pink-100 text-gray-600 hover:text-pink-600 transition-colors">
-                                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path fill="white" d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="white" strokeWidth="2" strokeLinecap="round"/></svg>
-                                </a>
-                                <a href="#" aria-label="YouTube" className="w-9 h-9 rounded-full flex items-center justify-center bg-gray-100 hover:bg-red-100 text-gray-600 hover:text-red-600 transition-colors">
-                                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon fill="white" points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
-                                </a>
-                                <a href="#" aria-label="WhatsApp" className="w-9 h-9 rounded-full flex items-center justify-center bg-gray-100 hover:bg-green-100 text-gray-600 hover:text-green-600 transition-colors">
-                                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                                </a>
-                            </div>
+                            <SocialLinks className="mt-4" facebook={socialLinks?.facebook} instagram={socialLinks?.instagram} youtube={socialLinks?.youtube} />
                         </div>
                     </div>
                     <div className="border-t border-gray-200 mt-8 pt-8 text-center text-gray-600">
@@ -830,7 +903,7 @@ export function FamilyTemplate({
             </footer>
 
             <NavEMIModal open={navEMIOpen} onOpenChange={setNavEMIOpen} brandColor={brandColors.primary} cars={cars} />
-            <CompareBar brandColor={brandColors.primary} />
+            <CompareBar brandColor={brandColors.primary} dealerId={dealerId} dealerPhone={contactInfo.phone} />
 
             {/* Sticky Mobile Bar */}
             <StickyEnquiryBar phone={contactInfo.phone} brandColor={brandColors.primary} vehicleType={vehicleType} />

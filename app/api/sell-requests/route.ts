@@ -5,6 +5,7 @@ import { formatZodErrors, sellRequestSchema } from '@/lib/validations/schemas'
 import { logger } from '@/lib/utils/logger'
 import { getOptionalEnv } from '@/lib/env'
 import { sendSellRequestConfirmationEmail, sendSellRequestNotificationEmail } from '@/lib/services/email-service'
+import { rateLimitOrNull } from '@/lib/utils/rate-limiter'
 
 const SELL_REQUEST_STATUSES = ['new', 'reviewing', 'contacted', 'approved', 'rejected', 'listed'] as const
 type SellRequestStatus = typeof SELL_REQUEST_STATUSES[number]
@@ -292,6 +293,7 @@ export async function GET() {
 }
 
 export async function POST(request: NextRequest) {
+    const limited = await rateLimitOrNull("sell_request_create", request, 5, 60000); if (limited) return limited;
     const body = await request.json().catch(() => null)
     if (!body) return NextResponse.json({ error: 'Invalid JSON' }, { status: 400 })
 
@@ -412,6 +414,10 @@ export async function PATCH(request: NextRequest) {
 
     const nextStatus = body.status as SellRequestStatus
     const adminNotes = typeof body.admin_notes === 'string' ? body.admin_notes.slice(0, 1000) : null
+    // SECURITY: sell_requests is a SHARED POOL — unclaimed rows have dealer_id IS NULL and
+    // any dealer may claim one. service-role bypasses RLS, so dealer_id scoping here is the
+    // ONLY tenant boundary. Read only rows that are unclaimed OR already owned by this dealer
+    // (a request already claimed by ANOTHER dealer must be invisible/unmutable here).
     const { data: sellRequest, error: readError } = await db(routeSupabase)
         .from('sell_requests')
         .select('*')
@@ -447,21 +453,36 @@ export async function PATCH(request: NextRequest) {
         }
     }
 
+    // SECURITY (atomic claim): scope the UPDATE to rows that are STILL unclaimed or owned by
+    // this dealer, and set dealer_id = caller to claim it in the same statement. This closes
+    // the claim race: if another dealer claimed the row between our read and write, the
+    // `.or(...)` filter matches zero rows (`.maybeSingle()` then yields null), so we never
+    // mutate a request already owned by someone else. We never overwrite an existing owner
+    // with our id because the filter excludes rows owned by other dealers.
     const { data: updatedRequest, error } = await db(routeSupabase)
         .from('sell_requests')
         .update({
             status: finalStatus,
             admin_notes: adminNotes,
             approved_vehicle_id: vehicleId,
+            dealer_id: dealer.id,
         })
         .eq('id', body.id)
         .or(`dealer_id.eq.${dealer.id},dealer_id.is.null`)
         .select('*')
-        .single()
+        .maybeSingle()
 
     if (error) {
         logger.error('Sell request update error:', error)
         return NextResponse.json({ error: 'Failed to update sell request' }, { status: 500 })
+    }
+
+    // Zero rows updated ⇒ another dealer claimed this request in the race window. Fail closed.
+    if (!updatedRequest) {
+        return NextResponse.json(
+            { error: 'This request has already been claimed by another dealer.' },
+            { status: 409 }
+        )
     }
 
     return NextResponse.json({ success: true, request: updatedRequest, vehicleId })

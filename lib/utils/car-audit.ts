@@ -3,7 +3,7 @@
  * Verifies all cars follow the same specification display pattern
  */
 
-import { getAggregatedCarSpecs, formatSpecsForDisplay } from './car-specs-aggregator'
+import { getAggregatedCarSpecs } from './car-specs-aggregator'
 
 export interface CarAuditResult {
     make: string

@@ -152,11 +152,11 @@ export default function TwoWheelerStep5Page() {
                         </div>
                     </div>
 
-                    {data.brands && data.brands.length > 0 && (
+                    {data.brands2w && data.brands2w.length > 0 && (
                         <div className="border-t border-border pt-4">
                             <p className="text-sm text-muted-foreground mb-2">Brands</p>
                             <div className="flex flex-wrap gap-2">
-                                {data.brands.map((brand) => (
+                                {data.brands2w.map((brand) => (
                                     <span key={brand} className="px-3 py-1 bg-orange-500/10 text-orange-700 dark:text-orange-400 text-sm rounded-full border border-orange-500/20">
                                         {brand}
                                     </span>

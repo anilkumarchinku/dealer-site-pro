@@ -5,6 +5,7 @@
 
 import { getOptionalEnv } from '@/lib/env'
 import { ExternalApiError, externalApiFetch } from '@/lib/services/external-api-fetch'
+import { logger } from '@/lib/utils/logger'
 
 export interface DomainAvailability {
     domain: string
@@ -98,9 +99,9 @@ async function checkDomainAvailability(domain: string): Promise<{
         }
     } catch (error) {
         if (error instanceof ExternalApiError && error.status) {
-            console.error(`GoDaddy API error: ${error.status}`)
+            logger.error(`GoDaddy API error: ${error.status}`)
         }
-        console.error('Error checking domain availability:', error)
+        logger.error('Error checking domain availability:', error)
         return { available: false, definitive: false }
     }
 }
@@ -142,7 +143,7 @@ async function getTLDPricing(tld: string): Promise<number> {
         // Fallback pricing if TLD not found
         return 99900 // ₹999
     } catch (error) {
-        console.error(`Error fetching TLD pricing for .${tld}:`, error)
+        logger.error(`Error fetching TLD pricing for .${tld}:`, error)
         return 99900
     }
 }
@@ -188,7 +189,7 @@ export async function searchDomains(query: string): Promise<DomainAvailability[]
                 period: 1 // 1 year registration
             }
         } catch (error) {
-            console.error(`Error checking ${domain}:`, error)
+            logger.error(`Error checking ${domain}:`, error)
             // Return unavailable on error
             return {
                 domain,
@@ -229,7 +230,7 @@ export async function purchaseDomain(
     try {
         // If no API keys, return mock success
         if (!config.configured) {
-            console.log('[GoDaddy] No API keys - returning mock purchase')
+            logger.log('[GoDaddy] No API keys - returning mock purchase')
             return {
                 success: true,
                 orderId: `MOCK-${Date.now()}`
@@ -291,13 +292,13 @@ export async function purchaseDomain(
     } catch (error) {
         if (error instanceof ExternalApiError) {
             const errorData = error.bodyJson as { message?: string } | undefined
-            console.error('GoDaddy purchase error:', errorData ?? error.bodyText ?? error.message)
+            logger.error('GoDaddy purchase error:', errorData ?? error.bodyText ?? error.message)
             return {
                 success: false,
                 error: errorData?.message || 'Domain purchase failed'
             }
         }
-        console.error('Error purchasing domain:', error)
+        logger.error('Error purchasing domain:', error)
         return {
             success: false,
             error: 'Failed to purchase domain. Please try again.'

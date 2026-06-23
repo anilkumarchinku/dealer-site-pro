@@ -25,9 +25,9 @@ import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import {
-    Fuel, Gauge, Users, Zap, Settings, Box, MoveVertical,
-    Shield, ShieldCheck, Star, Send, TrendingUp, Package,
-    Wrench, CheckCircle2, Palette, ChevronRight, Calendar,
+    Fuel, Users, Settings, Box,
+    Shield, Star, Send, TrendingUp, Package,
+    Wrench, CheckCircle2, Palette, ChevronRight,
     BadgeCheck, Info,
 } from 'lucide-react';
 import { formatPriceInLakhs } from '@/lib/utils/car-utils';

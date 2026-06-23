@@ -33,6 +33,13 @@ type CyeproDiagnosticResult = {
 }
 
 export async function POST(request: Request) {
+    // SECURITY: This diagnostic endpoint echoes upstream request/response
+    // details that are useful only during development. Never expose it in
+    // production — behave as if the route does not exist.
+    if (process.env.NODE_ENV === 'production') {
+        return new NextResponse(null, { status: 404 })
+    }
+
     const diagnostics: { timestamp: string; steps: DiagnosticStep[] } = {
         timestamp: new Date().toISOString(),
         steps: [],
@@ -120,8 +127,10 @@ export async function POST(request: Request) {
         diagnostics.steps.push({
             step: 'api_request',
             status: 'SENDING',
+            pathsToTry: searchPaths.length,
             url: `${getCyeproApiBaseUrl()}${searchPaths[0]}`,
             fallbackUrls: searchPaths.slice(1).map(path => `${getCyeproApiBaseUrl()}${path}`),
+            // SECURITY: never echo the full API key — mask all but the first 8 chars.
             headers: { ...headers, 'API-KEY': `${dealer.cyepro_api_key.substring(0, 8)}...` },
             body: testBody,
         })

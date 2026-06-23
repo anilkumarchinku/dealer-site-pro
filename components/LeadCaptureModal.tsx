@@ -1,17 +1,48 @@
-// Legacy component, not currently in active use
-// This file contains TypeScript issues but is marked for future refactoring
-// @ts-nocheck
-/* eslint-disable @typescript-eslint/no-explicit-any */
+// Legacy component, not currently in active use, but kept type-safe.
 "use client"
 
 import { useState, useEffect } from 'react';
-import { X, Phone, Mail, MessageSquare, Calendar, Fuel, Gauge, Users, Settings2, Car, Palette, Zap, Shield, Award } from 'lucide-react';
-import type { CarModel } from '@/lib/data/car-models';
+import { X, Phone, Settings2, Zap, Shield } from 'lucide-react';
+import { normalizeLeadPhone } from '@/lib/validations/lead';
+
+/**
+ * Shape this modal actually reads. Broader than the slim `CarModel` in
+ * lib/data/car-models.ts (which models `specs.engine` as a string and lacks
+ * body_type/variant/dimensions), so we type the prop against what the JSX uses.
+ * All extra fields are optional since legacy data may omit them.
+ */
+interface LeadCaptureCar {
+    id: string;
+    brand: string;
+    name: string;
+    model?: string;
+    body_type?: string;
+    variant?: string;
+    price?: string;
+    imageUrl?: string;
+    features?: string[];
+    seating?: number | string;
+    mileage?: string;
+    transmission?: string[];
+    specs?: {
+        engine?: {
+            type?: string;
+            displacement?: string | number;
+            power?: string;
+            torque?: string;
+        };
+        dimensions?: {
+            fuelTankCapacity?: string | number;
+            groundClearance?: string | number;
+            bootSpace?: string | number;
+        };
+    };
+}
 
 interface LeadCaptureModalProps {
     isOpen: boolean;
     onClose: () => void;
-    car: CarModel | null;
+    car: LeadCaptureCar | null;
     dealerId: string;
     brandColors: {
         primary: string;
@@ -40,6 +71,7 @@ export default function LeadCaptureModal({ isOpen, onClose, car, dealerId, brand
     });
 
     const [errors, setErrors] = useState<Partial<Record<keyof FormData, string>>>({});
+    const [submitError, setSubmitError] = useState('');
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSuccess, setIsSuccess] = useState(false);
 
@@ -56,6 +88,7 @@ export default function LeadCaptureModal({ isOpen, onClose, car, dealerId, brand
                     testDriveInterest: false,
                 });
                 setErrors({});
+                setSubmitError('');
                 setIsSuccess(false);
             }, 300);
         }
@@ -95,10 +128,11 @@ export default function LeadCaptureModal({ isOpen, onClose, car, dealerId, brand
             newErrors.fullName = 'Name must be at least 2 characters';
         }
 
-        // Phone validation (Indian format)
+        // Phone validation (Indian format) — normalize first so +91 / dashes /
+        // internal spaces are accepted, matching what we POST to the API.
         if (!formData.phone.trim()) {
             newErrors.phone = 'Phone number is required';
-        } else if (!/^[6-9]\d{9}$/.test(formData.phone.replace(/\s/g, ''))) {
+        } else if (!/^[6-9]\d{9}$/.test(normalizeLeadPhone(formData.phone))) {
             newErrors.phone = 'Enter a valid 10-digit Indian mobile number';
         }
 
@@ -120,6 +154,7 @@ export default function LeadCaptureModal({ isOpen, onClose, car, dealerId, brand
             return;
         }
 
+        setSubmitError('');
         setIsSubmitting(true);
 
         try {
@@ -129,7 +164,7 @@ export default function LeadCaptureModal({ isOpen, onClose, car, dealerId, brand
                 body: JSON.stringify({
                     dealer_id: dealerId,
                     name: formData.fullName.trim(),
-                    phone: formData.phone.trim(),
+                    phone: normalizeLeadPhone(formData.phone),
                     email: formData.email.trim() || undefined,
                     message: formData.message.trim() || undefined,
                     car_id: car?.id ?? undefined,
@@ -141,13 +176,13 @@ export default function LeadCaptureModal({ isOpen, onClose, car, dealerId, brand
             if (res.ok) {
                 setIsSuccess(true);
             } else {
-                const body = await res.json().catch(() => ({}));
-                console.error('Lead submission failed:', body.error || res.statusText);
-                alert('Something went wrong. Please try again or call us directly.');
+                const body = await res.json().catch(() => ({} as { error?: string }));
+                console.error('Lead submission failed:', body?.error || res.statusText);
+                setSubmitError('Something went wrong. Please try again or call us directly.');
             }
         } catch (err) {
             console.error('Lead submission error:', err);
-            alert('Network error. Please check your connection and try again.');
+            setSubmitError('Network error. Please check your connection and try again.');
         } finally {
             setIsSubmitting(false);
         }
@@ -202,19 +237,20 @@ export default function LeadCaptureModal({ isOpen, onClose, car, dealerId, brand
                                 <p className="text-sm font-medium tracking-widest uppercase text-gray-300 mb-1">{car.brand}</p>
                                 <h2 className="text-4xl font-bold mb-2">{car.name}</h2>
                                 <div className="flex items-center gap-3 text-sm">
-                                    <span className="px-3 py-1 bg-white/20 backdrop-blur-md rounded-md border border-white/10">
-                                        {/* @ts-expect-error Legacy component */}
-                                        {(car as any).body_type || car.model}
-                                    </span>
-                                    {(car as any).variant && (
+                                    {(car.body_type || car.model) && (
                                         <span className="px-3 py-1 bg-white/20 backdrop-blur-md rounded-md border border-white/10">
-                                            {(car as any).variant}
+                                            {car.body_type || car.model}
+                                        </span>
+                                    )}
+                                    {car.variant && (
+                                        <span className="px-3 py-1 bg-white/20 backdrop-blur-md rounded-md border border-white/10">
+                                            {car.variant}
                                         </span>
                                     )}
                                 </div>
                             </div>
                             <div className="text-right">
-                                <div className="text-3xl font-bold text-white">{(car as any).price}</div>
+                                <div className="text-3xl font-bold text-white">{car.price}</div>
                                 <p className="text-sm text-gray-300 mt-1">*Ex-showroom Price</p>
                             </div>
                         </div>
@@ -226,7 +262,7 @@ export default function LeadCaptureModal({ isOpen, onClose, car, dealerId, brand
                     <div className="mb-8">
                         <h3 className="text-xs font-bold text-gray-600 uppercase tracking-widest mb-3">Key Features</h3>
                         <div className="flex flex-wrap gap-2">
-                            {(car as any).features.map((feature, idx) => (
+                            {(car.features ?? []).map((feature, idx) => (
                                 <span
                                     key={idx}
                                     className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium border"
@@ -241,7 +277,7 @@ export default function LeadCaptureModal({ isOpen, onClose, car, dealerId, brand
                                 </span>
                             ))}
                             {/* Add some standard features if specific ones are missing, to pad the UI */}
-                            {(car as any).features.length < 3 && (
+                            {(car.features?.length ?? 0) < 3 && (
                                 <>
                                     <span className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium border border-gray-100 bg-gray-50 text-gray-600">
                                         <Shield className="w-3.5 h-3.5" /> Dual Airbags
@@ -300,7 +336,7 @@ export default function LeadCaptureModal({ isOpen, onClose, car, dealerId, brand
                                     <div className="p-5 space-y-4">
                                         <div className="flex justify-between items-center border-b border-gray-50 pb-2 last:border-0 last:pb-0">
                                             <span className="text-sm text-gray-600">Gearbox</span>
-                                            <span className="text-sm font-medium text-gray-900">{car.transmission.join(' / ')}</span>
+                                            <span className="text-sm font-medium text-gray-900">{car.transmission?.length ? car.transmission.join(' / ') : 'N/A'}</span>
                                         </div>
                                         <div className="flex justify-between items-center border-b border-gray-50 pb-2 last:border-0 last:pb-0">
                                             <span className="text-sm text-gray-600">Seating Capacity</span>
@@ -397,6 +433,10 @@ export default function LeadCaptureModal({ isOpen, onClose, car, dealerId, brand
                                             {errors.email && <p className="mt-1 text-xs text-red-500">{errors.email}</p>}
                                         </div>
                                     </div>
+
+                                    {submitError && (
+                                        <p className="text-sm text-red-600 bg-red-50 px-3 py-2 rounded-lg">{submitError}</p>
+                                    )}
 
                                     <button
                                         type="submit"

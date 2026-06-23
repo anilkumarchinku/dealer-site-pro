@@ -7,6 +7,11 @@ import { cn } from "@/lib/utils";
 import { fetchAnalyticsSummary, fetchTopVehicles, type AnalyticsSummary, type TopVehicle } from "@/lib/db/analytics";
 import { useOnboardingStore } from "@/lib/store/onboarding-store";
 import { isSupabaseReady } from "@/lib/supabase";
+import { Reveal } from "@/components/ui/Reveal";
+import { CountUp } from "@/components/ui/CountUp";
+import { Skeleton } from "@/components/ui/skeleton";
+import { PremiumPageHeader } from "@/components/dashboard/premium-ui";
+import { formatCompactNumber as fmt } from "@/lib/utils/format";
 
 
 const DATE_RANGE_DAYS: Record<string, number> = {
@@ -25,19 +30,21 @@ export default function AnalyticsPage() {
     useEffect(() => {
         if (!useDB) return;
         const days = DATE_RANGE_DAYS[dateRange] ?? 30;
+        let cancelled = false;
         setLoading(true);
         Promise.all([
             fetchAnalyticsSummary(dealerId!, days),
             fetchTopVehicles(dealerId!, 5),
         ]).then(([s, tv]) => {
+            if (cancelled) return;   // a newer date-range request superseded this one
             setSummary(s);
             setTopVehicles(tv);
-        }).finally(() => setLoading(false));
-        return;
+        }).finally(() => {
+            if (!cancelled) setLoading(false);
+        });
+        return () => { cancelled = true; };
     }, [dealerId, dateRange, useDB]);
 
-    // Format large numbers
-    const fmt = (n: number) => n >= 1000 ? `${(n / 1000).toFixed(1)}k` : String(n);
 
     // Derived display values — all zero/empty when no data loaded
     const data = summary;
@@ -77,20 +84,19 @@ export default function AnalyticsPage() {
     return (
         <div className="space-y-6 animate-fade-in">
             {/* Header */}
-            <div className="flex items-center justify-between">
-                <div>
-                    <h1 className="text-2xl font-bold">Analytics</h1>
-                    <p className="text-muted-foreground">Track your website performance and visitor behavior</p>
-                </div>
-                {!useDB && (
+            <PremiumPageHeader
+                eyebrow="Insights"
+                title="Analytics"
+                description="Track your website performance and visitor behavior"
+                actions={!useDB && (
                     <span className="text-xs text-amber-600 dark:text-amber-400 bg-amber-500/10 border border-amber-500/20 px-2.5 py-1 rounded-full font-medium">
                         Demo data
                     </span>
                 )}
-            </div>
+            />
 
             {/* Date Range */}
-            <Card variant="glass">
+            <Card variant="glass" className="rounded-2xl border-border/70 bg-card/90 shadow-sm dark:bg-card/80">
                 <CardContent className="py-3">
                     <div className="flex items-center justify-between">
                         <div className="flex items-center gap-2">
@@ -118,40 +124,41 @@ export default function AnalyticsPage() {
             {/* Stats Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 {STATS.map((stat, index) => (
-                    <Card key={index} className="hover:shadow-lg transition-all duration-300">
-                        <CardContent className="p-6">
-                            <div className="flex items-start justify-between mb-4">
-                                <div className={cn("p-3 rounded-xl", stat.bg)}>
-                                    <stat.icon className={cn("w-6 h-6", stat.text)} />
+                    <Reveal key={index} direction="up" delay={index * 80} className="h-full">
+                        <Card className="stat-card hover-lift h-full rounded-2xl border-border/70 bg-card/90 shadow-sm transition-all duration-300 dark:bg-card/80">
+                            <CardContent className="p-5">
+                                <div className="flex items-start justify-between mb-4">
+                                    <div className={cn("p-3 rounded-xl", stat.bg)}>
+                                        <stat.icon className={cn("w-6 h-6", stat.text)} />
+                                    </div>
+                                    <TrendingUp className="w-4 h-4 text-green-500" />
                                 </div>
-                                <TrendingUp className="w-4 h-4 text-green-500" />
-                            </div>
-                            <div className="space-y-1">
-                                <p className="text-sm text-muted-foreground">{stat.label}</p>
-                                <p className="text-3xl font-bold">
-                                    {stat.value === null
-                                        ? <Loader2 className="w-6 h-6 animate-spin text-muted-foreground" />
-                                        : stat.value}
-                                </p>
-                            </div>
-                        </CardContent>
-                    </Card>
+                                <div className="space-y-1">
+                                    <p className="text-sm text-muted-foreground">{stat.label}</p>
+                                    {stat.value === null ? (
+                                        <Skeleton className="mt-1 h-8 w-20" />
+                                    ) : (
+                                        <p className="text-3xl font-black tracking-tight">
+                                            <CountUp value={stat.value} />
+                                        </p>
+                                    )}
+                                </div>
+                            </CardContent>
+                        </Card>
+                    </Reveal>
                 ))}
             </div>
 
             {/* Charts Row */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <Reveal className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 {/* Daily Visitors Bar Chart */}
-                <Card variant="glass">
+                <Card variant="glass" className="rounded-2xl border-border/70 bg-card/90 shadow-sm dark:bg-card/80">
                     <CardHeader>
-                        <CardTitle>Daily Visitors</CardTitle>
+                        <CardTitle className="font-black tracking-tight">Daily Visitors</CardTitle>
                     </CardHeader>
                     <CardContent>
                         {loading ? (
-                            <div className="h-64 flex items-center justify-center text-muted-foreground gap-2">
-                                <Loader2 className="w-5 h-5 animate-spin" />
-                                <span className="text-sm">Loading…</span>
-                            </div>
+                            <Skeleton className="h-64 w-full rounded-md" />
                         ) : rows.length === 0 ? (
                             <div className="h-64 flex items-center justify-center text-muted-foreground">
                                 <p className="text-sm">No visitor data yet</p>
@@ -179,9 +186,9 @@ export default function AnalyticsPage() {
                 </Card>
 
                 {/* Traffic Sources */}
-                <Card variant="glass">
+                <Card variant="glass" className="rounded-2xl border-border/70 bg-card/90 shadow-sm dark:bg-card/80">
                     <CardHeader>
-                        <CardTitle>Traffic Sources</CardTitle>
+                        <CardTitle className="font-black tracking-tight">Traffic Sources</CardTitle>
                     </CardHeader>
                     <CardContent className="space-y-4">
                         {trafficSources.map((source, index) => (
@@ -202,14 +209,14 @@ export default function AnalyticsPage() {
                         ))}
                     </CardContent>
                 </Card>
-            </div>
+            </Reveal>
 
             {/* Bottom Row: Top Pages + Top Vehicles */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <Reveal delay={100} className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 {/* Top Pages */}
-                <Card variant="glass">
+                <Card variant="glass" className="rounded-2xl border-border/70 bg-card/90 shadow-sm dark:bg-card/80">
                     <CardHeader>
-                        <CardTitle>Top Pages</CardTitle>
+                        <CardTitle className="font-black tracking-tight">Top Pages</CardTitle>
                     </CardHeader>
                     <CardContent>
                         <div className="space-y-4">
@@ -232,9 +239,9 @@ export default function AnalyticsPage() {
                 </Card>
 
                 {/* Top Vehicles */}
-                <Card variant="glass">
+                <Card variant="glass" className="rounded-2xl border-border/70 bg-card/90 shadow-sm dark:bg-card/80">
                     <CardHeader>
-                        <CardTitle>Top Performing Vehicles</CardTitle>
+                        <CardTitle className="font-black tracking-tight">Top Performing Vehicles</CardTitle>
                     </CardHeader>
                     <CardContent>
                         {loading ? (
@@ -269,7 +276,7 @@ export default function AnalyticsPage() {
                         )}
                     </CardContent>
                 </Card>
-            </div>
+            </Reveal>
         </div>
     );
 }

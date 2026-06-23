@@ -78,7 +78,7 @@ export async function verifyOtpAndLogin(
     } catch (error) {
         const msg = error instanceof Error ? error.message : String(error);
         console.error("[Auth OTP] Login failed:", msg);
-        return { success: false, error: msg };
+        return { success: false, error: "Login failed. Please try again or contact support." };
     }
 }
 
@@ -145,6 +145,6 @@ export async function verifyOtpAndRegister(
     } catch (error) {
         const msg = error instanceof Error ? error.message : String(error);
         console.error("[Auth OTP] Register failed:", msg);
-        return { success: false, error: msg };
+        return { success: false, error: "Registration failed. Please try again or contact support." };
     }
 }

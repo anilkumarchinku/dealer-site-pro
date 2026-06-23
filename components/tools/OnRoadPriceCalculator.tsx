@@ -19,7 +19,7 @@ import {
     SelectValue,
 } from '@/components/ui/select';
 import { Checkbox } from '@/components/ui/checkbox';
-import { ChevronRight, MapPin, Calculator, Info, Car, FileText, Shield, Percent, CreditCard } from 'lucide-react';
+import { ChevronRight, MapPin, Info, Car, FileText, Shield, Percent, CreditCard } from 'lucide-react';
 import {
     calculateCarOnRoadPrice,
     formatInr,
@@ -90,6 +90,12 @@ export function OnRoadPriceCalculator() {
                                         ))}
                                     </SelectContent>
                                 </Select>
+                                {stateCode === 'DL' && (
+                                    <p className="mt-1.5 flex items-start gap-1 text-xs text-amber-600">
+                                        <Info className="mt-0.5 h-3 w-3 shrink-0" aria-hidden="true" />
+                                        <span>Prices shown for <strong>{breakdown.stateName}</strong> by default — change the state above for your city&apos;s road tax.</span>
+                                    </p>
+                                )}
                             </div>
 
                             <div>
@@ -137,7 +143,7 @@ export function OnRoadPriceCalculator() {
 
                     <div className="space-y-6">
                         <Card>
-                            <CardContent className="p-6">
+                            <CardContent className="p-6" aria-live="polite">
                                 <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
                                     <div>
                                         <p className="text-sm text-muted-foreground">{breakdown.stateName}</p>

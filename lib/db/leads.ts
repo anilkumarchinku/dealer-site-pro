@@ -119,15 +119,25 @@ export async function fetchLeads(
     return (payload.leads ?? []).map(mapLeadRow);
 }
 
+// SECURITY: mutations go through the /api/leads PATCH route, which authenticates
+// the caller and scopes the update by the session's dealer on the server. That
+// server-side scoping is the real tenant boundary that prevents one dealer from
+// mutating another dealer's lead status by guessing/enumerating a lead id (IDOR).
+// `dealerId` is forwarded when provided so the server can additionally assert the
+// lead belongs to the expected dealer; it stays optional for backward compatibility
+// with callers that have not yet been updated to pass it.
 export async function updateLeadStatus(
     leadId: string,
-    status: LeadStatus
+    status: LeadStatus,
+    dealerId?: string
 ): Promise<{ success: boolean; error?: string }> {
     const response = await fetch("/api/leads", {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         credentials: "include",
-        body: JSON.stringify({ id: leadId, status }),
+        body: JSON.stringify(
+            dealerId ? { id: leadId, status, dealer_id: dealerId } : { id: leadId, status }
+        ),
     });
 
     if (!response.ok) {

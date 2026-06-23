@@ -43,12 +43,14 @@ export function VehicleDetailGallery({ images, alt, brand, model }: Props) {
                     <>
                         <button
                             onClick={prev}
+                            aria-label="Previous image"
                             className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/30 backdrop-blur flex items-center justify-center text-white hover:bg-black/50"
                         >
                             <ChevronLeft className="w-5 h-5" />
                         </button>
                         <button
                             onClick={next}
+                            aria-label="Next image"
                             className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/30 backdrop-blur flex items-center justify-center text-white hover:bg-black/50"
                         >
                             <ChevronRight className="w-5 h-5" />
@@ -58,6 +60,8 @@ export function VehicleDetailGallery({ images, alt, brand, model }: Props) {
                                 <button
                                     key={i}
                                     onClick={() => setActive(i)}
+                                    aria-label={`Go to image ${i + 1}`}
+                                    aria-current={i === active}
                                     className={`w-2 h-2 rounded-full transition-colors ${i === active ? "bg-white" : "bg-white/50"}`}
                                 />
                             ))}

@@ -21,7 +21,7 @@ import {
     SelectTrigger,
     SelectValue,
 } from '@/components/ui/select';
-import { Filter, LayoutGrid, List, ChevronLeft, ChevronRight, X } from 'lucide-react';
+import { Filter, ChevronLeft, ChevronRight, X, SearchX, Loader2 } from 'lucide-react';
 import {
     Sheet,
     SheetContent,
@@ -61,6 +61,9 @@ function CarsContent() {
     const searchParams = useSearchParams();
     const [cars, setCars] = useState<Car[]>([]);
     const [loading, setLoading] = useState(true);
+    // Tracks whether this is the very first fetch (show skeleton) vs a
+    // subsequent filter/page refetch (dim the existing grid + inline spinner).
+    const [hasLoadedOnce, setHasLoadedOnce] = useState(false);
     const [totalCount, setTotalCount] = useState(0);
     const [currentPage, setCurrentPage] = useState(1);
     const [totalPages, setTotalPages] = useState(1);
@@ -84,12 +87,17 @@ function CarsContent() {
                 console.error('Failed to fetch cars', error);
             } finally {
                 setLoading(false);
+                setHasLoadedOnce(true);
             }
         };
 
         fetchCars();
         return;
     }, [searchParams]);
+
+    // Skeleton only on the very first load; refetches dim the existing grid instead.
+    const showSkeleton = loading && !hasLoadedOnce;
+    const isRefetching = loading && hasLoadedOnce;
 
     const handleSortChange = (value: string) => {
         const params = new URLSearchParams(searchParams.toString());
@@ -207,13 +215,18 @@ function CarsContent() {
                         </div>
 
                         {/* Result count */}
-                        {!loading && (
-                            <p className="text-sm text-muted-foreground">
-                                <span className="font-semibold text-foreground">{totalCount.toLocaleString()}</span>
-                                {' '}Cars found
-                                {filterChips.length > 0 && (
-                                    <span className="text-muted-foreground"> matching filters</span>
-                                )}
+                        {!showSkeleton && (
+                            <p className="flex items-center gap-2 text-sm text-muted-foreground" aria-live="polite">
+                                {isRefetching ? (
+                                    <Loader2 className="w-3.5 h-3.5 animate-spin text-primary" aria-hidden="true" />
+                                ) : null}
+                                <span>
+                                    <span className="font-semibold text-foreground">{totalCount.toLocaleString()}</span>
+                                    {' '}Cars found
+                                    {filterChips.length > 0 && (
+                                        <span className="text-muted-foreground"> matching filters</span>
+                                    )}
+                                </span>
                             </p>
                         )}
                     </div>
@@ -262,33 +275,42 @@ function CarsContent() {
                 )}
 
                 {/* Car Grid or Skeleton */}
-                {loading ? (
+                {showSkeleton ? (
                     <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
                         {Array.from({ length: 6 }).map((_, i) => (
                             <CarCardSkeleton key={i} />
                         ))}
                     </div>
+                ) : cars.length === 0 ? (
+                    <div className="text-center py-20 px-4">
+                        <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-muted">
+                            <SearchX className="h-7 w-7 text-muted-foreground" />
+                        </div>
+                        <p className="text-lg font-semibold text-foreground">No cars match your filters</p>
+                        <p className="mt-1 text-sm text-muted-foreground">
+                            {filterChips.length > 0
+                                ? "Try widening your search — or clear your filters to see everything."
+                                : "There are no cars to show right now. Please check back soon."}
+                        </p>
+                        {filterChips.length > 0 && (
+                            <Button onClick={clearAllFilters} className="mt-5">
+                                Clear all filters
+                            </Button>
+                        )}
+                    </div>
                 ) : (
                     <>
-                        <CarGrid cars={cars} light />
+                        {/* Dim + block interaction while a refetch is in flight */}
+                        <div
+                            className={isRefetching ? 'opacity-50 pointer-events-none transition-opacity duration-200' : 'transition-opacity duration-200'}
+                            aria-busy={isRefetching}
+                        >
+                            <CarGrid cars={cars} light />
+                        </div>
 
-                        {/* Load More + Pagination */}
+                        {/* Pagination */}
                         {totalPages > 1 && (
                             <div className="mt-8 space-y-4">
-                                {/* Load More Button */}
-                                {currentPage < totalPages && (
-                                    <div className="flex justify-center">
-                                        <Button
-                                            variant="outline"
-                                            size="lg"
-                                            className="px-8"
-                                            onClick={() => handlePageChange(currentPage + 1)}
-                                        >
-                                            Load More Cars
-                                        </Button>
-                                    </div>
-                                )}
-
                                 {/* Page Navigation */}
                                 <div className="flex items-center justify-center gap-2">
                                     <Button

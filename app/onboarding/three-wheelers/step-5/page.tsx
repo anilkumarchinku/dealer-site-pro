@@ -152,11 +152,11 @@ export default function ThreeWheelerStep5Page() {
                         </div>
                     </div>
 
-                    {data.brands && data.brands.length > 0 && (
+                    {data.brands3w && data.brands3w.length > 0 && (
                         <div className="border-t border-border pt-4">
                             <p className="text-sm text-muted-foreground mb-2">Brands</p>
                             <div className="flex flex-wrap gap-2">
-                                {data.brands.map((brand) => (
+                                {data.brands3w.map((brand) => (
                                     <span key={brand} className="px-3 py-1 bg-green-500/10 text-green-700 dark:text-green-400 text-sm rounded-full border border-green-500/20">
                                         {brand}
                                     </span>

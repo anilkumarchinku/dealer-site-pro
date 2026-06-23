@@ -11,6 +11,7 @@
 
 import { getOptionalEnv } from '@/lib/env'
 import { ExternalApiError, externalApiFetch } from '@/lib/services/external-api-fetch'
+import { logger } from '@/lib/utils/logger'
 
 const MSG91_API_URL = 'https://api.msg91.com/api/v5/flow/'
 
@@ -44,7 +45,7 @@ export async function sendLeadSmsToDealer(params: LeadSmsParams): Promise<void> 
 
     // Skip silently in dev if key not configured
     if (!authKey) {
-        console.log('[SMS] MSG91_AUTH_KEY not set — skipping SMS notification')
+        logger.log('[SMS] MSG91_AUTH_KEY not set — skipping SMS notification')
         return
     }
 
@@ -107,10 +108,10 @@ export async function sendLeadSmsToDealer(params: LeadSmsParams): Promise<void> 
     } catch (err) {
         if (err instanceof ExternalApiError) {
             const label = templateId ? 'Flow' : 'plain SMS'
-            console.error(`[SMS] MSG91 ${label} error:`, err.status, err.bodyText ?? err.message)
+            logger.error(`[SMS] MSG91 ${label} error:`, err.status, err.bodyText ?? err.message)
             return
         }
         // Never let SMS failure break the lead submission
-        console.error('[SMS] Failed to send lead SMS:', err)
+        logger.error('[SMS] Failed to send lead SMS:', err)
     }
 }

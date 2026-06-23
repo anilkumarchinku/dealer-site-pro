@@ -13,11 +13,9 @@ import {
     LayoutDashboard,
     Users,
     Car,
-    Plus,
     BarChart3,
     MessageSquare,
     Settings,
-    Globe,
     HelpCircle,
     Bell,
     LogOut,
@@ -35,7 +33,6 @@ import {
     Menu,
     X,
 } from "lucide-react";
-import { dealerSiteHref } from "@/lib/utils/domain";
 import type { StyleTemplate } from "@/lib/types";
 
 const navGroups = [
@@ -88,9 +85,10 @@ const navGroups = [
     {
         label: "2nd Hand",
         items: [
+            // "Used 2W"/"Used 3W" removed — they were exact-href duplicates of the
+            // "2W Used"/"3W Used" links under the 2-Wheeler / 3-Wheeler groups,
+            // which made active-state highlighting ambiguous.
             { name: "Used Overview", href: "/dashboard/used-vehicles",           icon: RefreshCw },
-            { name: "Used 2W",       href: "/dashboard/two-wheelers/used",       icon: Bike      },
-            { name: "Used 3W",       href: "/dashboard/three-wheelers/used",     icon: Truck     },
         ],
     },
     {
@@ -119,7 +117,7 @@ export default function DashboardLayout({
 }) {
     const pathname = usePathname();
     const router   = useRouter();
-    const { data, updateData, setDealerId, setDealerSlug, dealerSlug, setSellsTwoWheelers, setSellsThreeWheelers, setSellsFourWheelers } = useOnboardingStore();
+    const { data, updateData, setDealerId, setDealerSlug, dealerSlug, setSellsTwoWheelers, setSellsThreeWheelers, setSellsFourWheelers, reset } = useOnboardingStore();
     const isFirstHand = data.sellsNewCars && !data.sellsUsedCars;
     const [unreadCount,        setUnreadCount]         = useState(0);
     const [onboardingComplete, setOnboardingComplete]  = useState(true);
@@ -174,6 +172,14 @@ export default function DashboardLayout({
                     return;
                 }
 
+                // Account-switch guard: if a different dealer is cached locally
+                // (e.g. a previous user signed in on this browser), clear the stale
+                // store before repopulating so we never show another account's data.
+                const cachedDealerId = useOnboardingStore.getState().dealerId;
+                if (cachedDealerId && cachedDealerId !== dealer.id) {
+                    reset();
+                }
+
                 setDealerId(dealer.id);
                 if (dealer.slug) setDealerSlug(dealer.slug);
                 setOnboardingComplete(dealer.onboarding_complete ?? false);
@@ -209,9 +215,8 @@ export default function DashboardLayout({
                     .eq('is_archived', false);
                 setUnreadCount(count ?? 0);
 
-                // Store already populated — skip the extra brands query
-                if (data.dealershipName) return;
-
+                // Always reconcile the displayed profile to the authenticated dealer
+                // (closure `data` is stale here, so we cannot safely early-return on it).
                 const { data: brands } = await supabase
                     .from('dealer_brands')
                     .select('brand_name')
@@ -249,6 +254,13 @@ export default function DashboardLayout({
 
     return (
         <div className="min-h-screen bg-[#F6F9FD] text-foreground dark:bg-[#07111F]">
+            {/* Skip to main content — first focusable element for keyboard users */}
+            <a
+                href="#main-content"
+                className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-xl focus:bg-blue-600 focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-300"
+            >
+                Skip to main content
+            </a>
             {/* Sidebar */}
             {mobileNavOpen && (
                 <button
@@ -433,7 +445,7 @@ export default function DashboardLayout({
                 )}
 
                 {/* Page Content */}
-                <main className="p-4 sm:p-6 lg:p-8">
+                <main id="main-content" tabIndex={-1} className="p-4 sm:p-6 lg:p-8 focus:outline-none">
                     {children}
                 </main>
             </div>

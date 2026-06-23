@@ -3,9 +3,9 @@ import { useState, useEffect } from "react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { Badge } from "@/components/ui/badge"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { useOnboardingStore } from "@/lib/store/onboarding-store"
+import { PremiumPageHeader } from "@/components/dashboard/premium-ui"
 import { Loader2, Plus, Trash2, Tag } from "lucide-react"
 
 interface OfferRow {
@@ -20,13 +20,13 @@ interface OfferRow {
 const TAG_OPTIONS = ["Finance", "Exchange", "Service", "Electric", "Offer", "Referral", "Seasonal"]
 
 const TAG_COLORS: Record<string, string> = {
-  Finance:  'bg-green-100 text-green-700',
-  Exchange: 'bg-blue-100 text-blue-700',
-  Service:  'bg-purple-100 text-purple-700',
-  Electric: 'bg-yellow-100 text-yellow-700',
-  Offer:    'bg-orange-100 text-orange-700',
-  Referral: 'bg-red-100 text-red-700',
-  Seasonal: 'bg-pink-100 text-pink-700',
+  Finance:  'bg-green-100 text-green-700 dark:bg-green-500/15 dark:text-green-300',
+  Exchange: 'bg-blue-100 text-blue-700 dark:bg-blue-500/15 dark:text-blue-300',
+  Service:  'bg-purple-100 text-purple-700 dark:bg-purple-500/15 dark:text-purple-300',
+  Electric: 'bg-yellow-100 text-yellow-700 dark:bg-yellow-500/15 dark:text-yellow-300',
+  Offer:    'bg-orange-100 text-orange-700 dark:bg-orange-500/15 dark:text-orange-300',
+  Referral: 'bg-red-100 text-red-700 dark:bg-red-500/15 dark:text-red-300',
+  Seasonal: 'bg-pink-100 text-pink-700 dark:bg-pink-500/15 dark:text-pink-300',
 }
 
 export default function OffersPage() {
@@ -71,27 +71,28 @@ export default function OffersPage() {
   return (
     <div className="space-y-6 animate-fade-in">
       {/* Header */}
-      <div className="flex items-center justify-between">
-        <div>
-          <h1 className="text-2xl font-bold">Offers &amp; Schemes</h1>
-          <p className="text-muted-foreground">Manage special offers shown on your dealer site</p>
-        </div>
-        <Button
-          onClick={() => setAdding(v => !v)}
-          variant={adding ? "outline" : "default"}
-          size="sm"
-          className="gap-1.5"
-        >
-          <Plus className="w-4 h-4" />
-          {adding ? "Cancel" : "Add New Offer"}
-        </Button>
-      </div>
+      <PremiumPageHeader
+        eyebrow="Promotions"
+        title="Offers & Schemes"
+        description="Manage special offers shown on your dealer site"
+        actions={
+          <Button
+            onClick={() => setAdding(v => !v)}
+            variant={adding ? "outline" : "default"}
+            size="sm"
+            className="gap-1.5"
+          >
+            <Plus className="w-4 h-4" />
+            {adding ? "Cancel" : "Add New Offer"}
+          </Button>
+        }
+      />
 
       {/* Add Offer Form */}
       {adding && (
-        <Card variant="glass">
+        <Card variant="glass" className="rounded-2xl border-border/70 bg-card/90 shadow-sm dark:bg-card/80">
           <CardHeader>
-            <CardTitle className="text-base">New Offer</CardTitle>
+            <CardTitle className="text-base font-black tracking-tight">New Offer</CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
             <div>
@@ -150,9 +151,9 @@ export default function OffersPage() {
       )}
 
       {/* Offers List */}
-      <Card variant="glass">
+      <Card variant="glass" className="rounded-2xl border-border/70 bg-card/90 shadow-sm dark:bg-card/80">
         <CardHeader>
-          <CardTitle className="text-base flex items-center gap-2">
+          <CardTitle className="text-base font-black tracking-tight flex items-center gap-2">
             <Tag className="w-4 h-4" />
             Active Offers
             {offers.length > 0 && (
@@ -179,7 +180,7 @@ export default function OffersPage() {
                   <div className="flex-1 min-w-0 space-y-1">
                     <div className="flex items-center gap-2 flex-wrap">
                       {offer.tag && (
-                        <span className={`inline-block text-xs font-semibold px-2 py-0.5 rounded-full ${TAG_COLORS[offer.tag] ?? 'bg-gray-100 text-gray-700'}`}>
+                        <span className={`inline-block text-xs font-semibold px-2 py-0.5 rounded-full ${TAG_COLORS[offer.tag] ?? 'bg-muted text-muted-foreground'}`}>
                           {offer.tag}
                         </span>
                       )}

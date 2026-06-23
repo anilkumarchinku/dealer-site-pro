@@ -9,6 +9,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ArrowLeft, Upload, X, CheckCircle2, Palette, ImageIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { getContrastText } from "@/lib/utils/color-contrast";
 
 // ─── Colour Presets ─────────────────────────────────────────────────────────
 const PRESETS: {
@@ -81,9 +82,9 @@ export default function Step2UsedPage() {
         data.brandColor || PRESETS[0].primary
     );
     const [customAccent, setCustomAccent] = useState<string>(
-        PRESETS[0].accent
+        data.brandAccentColor || PRESETS[0].accent
     );
-    const [useCustom, setUseCustom] = useState(false);
+    const [useCustom, setUseCustom] = useState(data.brandColorPreset === 'custom');
     const [colorError, setColorError] = useState("");
     const [accentError, setAccentError] = useState("");
 
@@ -186,9 +187,10 @@ export default function Step2UsedPage() {
             if (hasError) return;
         }
 
-        const finalColor = useCustom ? customColor : PRESETS.find(p => p.id === selectedPreset)!.primary;
-        const finalAccent = useCustom ? customAccent : PRESETS.find(p => p.id === selectedPreset)!.accent;
-        const finalPreset = useCustom ? "custom" : selectedPreset;
+        const presetMatch = PRESETS.find(p => p.id === selectedPreset);
+        const finalColor = useCustom ? customColor : (presetMatch?.primary ?? customColor);
+        const finalAccent = useCustom ? customAccent : (presetMatch?.accent ?? customAccent);
+        const finalPreset = useCustom || !presetMatch ? "custom" : selectedPreset;
 
         updateData({
             // For hybrid: keep sellsNewCars: true and brands already set in step-1
@@ -258,19 +260,19 @@ export default function Step2UsedPage() {
                                 </div>
                             ) : (
                                 <div className="w-10 h-10 rounded-xl bg-white/15 flex items-center justify-center">
-                                    <ImageIcon className="w-5 h-5 text-white/60" />
+                                    <ImageIcon className="w-5 h-5" style={{ color: getContrastText(previewPrimary), opacity: 0.6 }} />
                                 </div>
                             )}
                             <div>
-                                <p className="text-white font-bold text-sm leading-tight">
+                                <p className="font-bold text-sm leading-tight" style={{ color: getContrastText(previewPrimary) }}>
                                     {data.dealershipName || "Your Dealership"}
                                 </p>
-                                <p className="text-white/60 text-xs">Premium Pre-Owned Vehicles</p>
+                                <p className="text-xs" style={{ color: getContrastText(previewPrimary), opacity: 0.7 }}>Premium Pre-Owned Vehicles</p>
                             </div>
                         </div>
                         <div
                             className="text-xs font-semibold px-3 py-1.5 rounded-full"
-                            style={{ background: previewAccent, color: previewPrimary }}
+                            style={{ background: previewAccent, color: getContrastText(previewAccent) }}
                         >
                             View Inventory
                         </div>
@@ -455,6 +457,8 @@ export default function Step2UsedPage() {
                                 <p className="text-xs text-muted-foreground">Looking great! You can replace it below.</p>
                             </div>
                             <button
+                                type="button"
+                                aria-label="Remove uploaded logo"
                                 onClick={() => { setLogoPreview(""); if (fileInputRef.current) fileInputRef.current.value = ""; }}
                                 className="p-1.5 rounded-lg hover:bg-muted transition-colors text-muted-foreground hover:text-foreground"
                             >
@@ -463,12 +467,21 @@ export default function Step2UsedPage() {
                         </div>
                     ) : (
                         <div
+                            role="button"
+                            tabIndex={0}
+                            aria-label="Upload your logo. Click, press Enter, or drag and drop an image file here."
                             onDragOver={(e) => { e.preventDefault(); setIsDragging(true); }}
                             onDragLeave={() => setIsDragging(false)}
                             onDrop={handleDrop}
                             onClick={() => fileInputRef.current?.click()}
+                            onKeyDown={(e) => {
+                                if (e.key === "Enter" || e.key === " ") {
+                                    e.preventDefault();
+                                    fileInputRef.current?.click();
+                                }
+                            }}
                             className={cn(
-                                "flex flex-col items-center justify-center gap-3 p-8 rounded-xl border-2 border-dashed cursor-pointer transition-all duration-200",
+                                "flex flex-col items-center justify-center gap-3 p-8 rounded-xl border-2 border-dashed cursor-pointer transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:ring-offset-2",
                                 isDragging
                                     ? "border-amber-500/60 bg-amber-500/5"
                                     : "border-border hover:border-amber-400/50 hover:bg-muted/30"
@@ -528,6 +541,8 @@ export default function Step2UsedPage() {
                                 <p className="text-xs text-muted-foreground">Looking great! You can replace it below.</p>
                             </div>
                             <button
+                                type="button"
+                                aria-label="Remove uploaded hero image"
                                 onClick={() => { setHeroPreview(""); if (heroInputRef.current) heroInputRef.current.value = ""; }}
                                 className="p-1.5 rounded-lg hover:bg-muted transition-colors text-muted-foreground hover:text-foreground"
                             >
@@ -536,12 +551,21 @@ export default function Step2UsedPage() {
                         </div>
                     ) : (
                         <div
+                            role="button"
+                            tabIndex={0}
+                            aria-label="Upload your hero image. Click, press Enter, or drag and drop an image file here."
                             onDragOver={(e) => { e.preventDefault(); setIsHeroDragging(true); }}
                             onDragLeave={() => setIsHeroDragging(false)}
                             onDrop={handleHeroDrop}
                             onClick={() => heroInputRef.current?.click()}
+                            onKeyDown={(e) => {
+                                if (e.key === "Enter" || e.key === " ") {
+                                    e.preventDefault();
+                                    heroInputRef.current?.click();
+                                }
+                            }}
                             className={cn(
-                                "flex flex-col items-center justify-center gap-3 p-8 rounded-xl border-2 border-dashed cursor-pointer transition-all duration-200",
+                                "flex flex-col items-center justify-center gap-3 p-8 rounded-xl border-2 border-dashed cursor-pointer transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:ring-offset-2",
                                 isHeroDragging
                                     ? "border-amber-500/60 bg-amber-500/5"
                                     : "border-border hover:border-amber-400/50 hover:bg-muted/30"

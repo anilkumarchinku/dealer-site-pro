@@ -21,7 +21,6 @@ import {
     ExternalLink,
     Settings,
     Eye,
-    Palette,
     LayoutTemplate,
     ChevronDown,
     Car as CarIcon,

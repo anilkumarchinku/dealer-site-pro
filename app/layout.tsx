@@ -22,6 +22,20 @@ export const metadata: Metadata = {
     },
 };
 
+// Applied before first paint so dark-mode users never see a light flash (FOUC).
+// Must mirror ThemeProvider: storage key `dealer-theme`, fall back to system.
+const themeInitScript = `
+(function(){
+  try {
+    var t = localStorage.getItem('dealer-theme');
+    if (t !== 'dark' && t !== 'light') {
+      t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    if (t === 'dark') document.documentElement.classList.add('dark');
+  } catch (e) {}
+})();
+`;
+
 export default function RootLayout({
     children,
 }: {
@@ -29,6 +43,9 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en" suppressHydrationWarning>
+            <head>
+                <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+            </head>
             <body className="font-sans antialiased">
                 <PWAProvider />
                 <ThemeProvider>

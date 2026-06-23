@@ -208,7 +208,7 @@ export default function AddTwoWheelerVehiclePage() {
                                     <>
                                         {/* eslint-disable-next-line @next/next/no-img-element */}
                                         <img src={`/data/brand-logos/${selectedBrandData.brandId}.${LOGO_EXT[selectedBrandData.brandId] ?? "png"}`}
-                                            alt="" className="w-5 h-5 object-contain"
+                                            alt="" className="w-5 h-5 object-contain rounded bg-white border border-slate-200 dark:border-slate-700 p-0.5"
                                             onError={e => { e.currentTarget.style.display = "none" }} />
                                         <span className="truncate">{selectedBrandData.brand}</span>
                                     </>
@@ -229,7 +229,7 @@ export default function AddTwoWheelerVehiclePage() {
                                                 className="w-full flex items-center gap-2 px-3 py-2 text-sm hover:bg-accent text-left">
                                                 {/* eslint-disable-next-line @next/next/no-img-element */}
                                                 <img src={`/data/brand-logos/${b.brandId}.${LOGO_EXT[b.brandId] ?? "png"}`}
-                                                    alt="" className="w-5 h-5 object-contain shrink-0"
+                                                    alt="" className="w-5 h-5 object-contain shrink-0 rounded bg-white border border-slate-200 dark:border-slate-700 p-0.5"
                                                     onError={e => { e.currentTarget.style.display = "none" }} />
                                                 <span>{b.brand}</span>
                                             </button>

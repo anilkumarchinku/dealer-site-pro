@@ -6,6 +6,7 @@ import {
     AlertCircle,
     ArrowRight,
     CheckCircle,
+    Clock,
     Copy,
     ExternalLink,
     Globe2,
@@ -137,16 +138,31 @@ export default function Step6Page() {
                         <a href={displayHref} target="_blank" rel="noreferrer" className="mt-3 block break-all text-sm font-black text-[#155EEF] hover:underline">
                             {displayUrl}
                         </a>
-                        <div className="mt-5 rounded-md border border-emerald-200 bg-emerald-50 p-3">
-                            <p className="flex items-center gap-2 text-sm font-black text-emerald-700">
-                                <CheckCircle className="h-4 w-4" />
-                                Domain status
-                            </p>
-                            <p className="mt-1 text-xs font-semibold text-emerald-700">Connected</p>
-                        </div>
+                        {showSuccess ? (
+                            <div className="mt-5 rounded-md border border-emerald-200 bg-emerald-50 p-3">
+                                <p className="flex items-center gap-2 text-sm font-black text-emerald-700">
+                                    <CheckCircle className="h-4 w-4" />
+                                    Domain status
+                                </p>
+                                <p className="mt-1 text-xs font-semibold text-emerald-700">Connected</p>
+                            </div>
+                        ) : (
+                            <div className="mt-5 rounded-md border border-[#D8E0EA] bg-[#F7F9FC] p-3">
+                                <p className="flex items-center gap-2 text-sm font-black text-[#62708A]">
+                                    <Clock className="h-4 w-4" />
+                                    Domain status
+                                </p>
+                                <p className="mt-1 text-xs font-semibold text-[#62708A]">Pending — connects on publish</p>
+                            </div>
+                        )}
                     </div>
 
-                    <LaunchChecklist uploadedCount={uploadedCount} />
+                    <LaunchChecklist
+                        uploadedCount={uploadedCount}
+                        hasDealerDetails={Boolean(data.dealershipName?.trim() && data.location?.trim())}
+                        hasContactDetails={Boolean(data.phone?.trim() && data.email?.trim())}
+                        published={showSuccess}
+                    />
 
                     <div className="rounded-lg border border-[#D8E0EA] bg-[#F7F9FC] p-5">
                         <p className="flex items-center gap-2 text-sm font-black text-[#071436]">

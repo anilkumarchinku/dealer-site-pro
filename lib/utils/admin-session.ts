@@ -1,4 +1,4 @@
-import { createHmac, timingSafeEqual } from "crypto"
+import { createHash, createHmac, timingSafeEqual } from "crypto"
 import { cookies } from "next/headers"
 import { NextResponse } from "next/server"
 import { getOptionalEnv } from "@/lib/env"
@@ -51,7 +51,12 @@ export function validateAdminCredentials(username: string, password: string): bo
         normalizedUsername === configuredUsername.toLowerCase() ||
         allowedEmails.includes(normalizedUsername)
 
-    return matchesIdentity && password === configuredPassword
+    if (!matchesIdentity) return false
+
+    // Constant-time password comparison — hash both to equal-length buffers first
+    const provided = createHash("sha256").update(password).digest()
+    const expected = createHash("sha256").update(configuredPassword).digest()
+    return timingSafeEqual(provided, expected)
 }
 
 export function createAdminSessionToken(username: string): string {

@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useRef } from 'react'
-import { X, Upload, FileText, CheckCircle, AlertCircle, Loader2, Download } from 'lucide-react'
+import { Upload, FileText, CheckCircle, AlertCircle, Loader2, Download } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog'
 import { bulkAddVehicles } from '@/lib/db/vehicles'

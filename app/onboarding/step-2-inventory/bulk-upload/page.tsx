@@ -19,13 +19,15 @@ const CSV_HEADERS = [
     "transmission", "color", "reg_number",
 ]
 
-const CSV_EXAMPLE = [
-    "Maruti Suzuki,Swift,VXi,2020,450000,35000,Petrol,Manual,Red,KA01AB1234",
-    "Honda City,City,SV CVT,2019,780000,42000,Petrol,Automatic,White,MH02XY5678",
-    "Hyundai Creta,Creta,SX,2021,1050000,28000,Diesel,Manual,Blue,TN09CD9012",
-].join("\n")
+// Example rows for the downloadable template (filled-in sample vehicles).
+const EXAMPLE_ROWS: (string | number)[][] = [
+    ["Maruti Suzuki", "Swift", "VXi", 2020, 450000, 35000, "Petrol", "Manual", "Red", "KA01AB1234"],
+    ["Honda", "City", "SV CVT", 2019, 780000, 42000, "Petrol", "Automatic", "White", "MH02XY5678"],
+    ["Hyundai", "Creta", "SX", 2021, 1050000, 28000, "Diesel", "Manual", "Blue", "TN09CD9012"],
+]
 
-const CSV_TEMPLATE = [CSV_HEADERS.join(","), CSV_EXAMPLE].join("\n")
+// Max vehicles accepted per upload (matches the advertised limit in the UI copy).
+const MAX_ROWS = 500
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
@@ -93,12 +95,22 @@ function parseCSV(text: string): { rows: VehicleUploadRow[]; errors: string[] } 
     return { rows, errors }
 }
 
-function downloadTemplate() {
-    const blob = new Blob([CSV_TEMPLATE], { type: "text/csv" })
+async function downloadTemplate() {
+    // xlsx (SheetJS) is imported lazily so it never ships in the main bundle.
+    const XLSX = await import("xlsx")
+    const ws = XLSX.utils.aoa_to_sheet([CSV_HEADERS, ...EXAMPLE_ROWS])
+    // Sensible column widths so the template is readable in Excel.
+    ws["!cols"] = CSV_HEADERS.map((h) => ({ wch: Math.max(h.length + 2, 12) }))
+    const wb = XLSX.utils.book_new()
+    XLSX.utils.book_append_sheet(wb, ws, "Inventory")
+    // Explicit Blob download (more reliable in the browser than writeFile, which
+    // relies on environment detection / a node fs shim).
+    const buf  = XLSX.write(wb, { bookType: "xlsx", type: "array" }) as ArrayBuffer
+    const blob = new Blob([buf], { type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" })
     const url  = URL.createObjectURL(blob)
     const a    = document.createElement("a")
     a.href     = url
-    a.download = "vehicle-upload-template.csv"
+    a.download = "vehicle-upload-template.xlsx"
     a.click()
     URL.revokeObjectURL(url)
 }
@@ -127,8 +139,11 @@ export default function BulkUploadPage() {
 
     // ── File processing ───────────────────────────────────────────────────────
     const processFile = useCallback((file: File) => {
-        if (!file.name.endsWith(".csv") && file.type !== "text/csv") {
-            setParseErrors(["Please upload a .csv file"])
+        const lower   = file.name.toLowerCase()
+        const isCsv   = lower.endsWith(".csv") || file.type === "text/csv"
+        const isExcel = lower.endsWith(".xlsx") || lower.endsWith(".xls")
+        if (!isCsv && !isExcel) {
+            setParseErrors(["Please upload an Excel (.xlsx, .xls) or .csv file"])
             return
         }
         if (file.size > 2 * 1024 * 1024) {
@@ -137,14 +152,41 @@ export default function BulkUploadPage() {
         }
 
         setFileName(file.name)
-        const reader = new FileReader()
-        reader.onload = (e) => {
-            const text = e.target?.result as string
+
+        // Shared: parse CSV text, enforce the advertised 500-vehicle cap, and surface
+        // any row errors. Excel files are converted to CSV first so we reuse one parser.
+        const ingest = (text: string) => {
             const { rows: parsed, errors } = parseCSV(text)
+            if (parsed.length > MAX_ROWS) {
+                const trimmed = parsed.slice(0, MAX_ROWS)
+                setRows(trimmed)
+                setParseErrors([
+                    `Only the first ${MAX_ROWS} vehicles were kept — your file has ${parsed.length} valid rows, which is over the ${MAX_ROWS}-vehicle limit. Upload the rest in a second file.`,
+                    ...errors,
+                ])
+                return
+            }
             setRows(parsed)
             setParseErrors(errors)
         }
-        reader.readAsText(file)
+
+        const reader = new FileReader()
+        if (isExcel) {
+            reader.onload = async (e) => {
+                try {
+                    const XLSX  = await import("xlsx")
+                    const wb    = XLSX.read(new Uint8Array(e.target?.result as ArrayBuffer), { type: "array" })
+                    const sheet = wb.Sheets[wb.SheetNames[0]]
+                    ingest(XLSX.utils.sheet_to_csv(sheet))
+                } catch {
+                    setParseErrors(["Couldn't read that Excel file. Please try again, or use the CSV template."])
+                }
+            }
+            reader.readAsArrayBuffer(file)
+        } else {
+            reader.onload = (e) => ingest(e.target?.result as string)
+            reader.readAsText(file)
+        }
         return;
     }, [])
 
@@ -168,16 +210,15 @@ export default function BulkUploadPage() {
     }
 
     // ── Save & continue ───────────────────────────────────────────────────────
-    const handleSave = async () => {
+    const handleSave = () => {
         setSaving(true)
-        // Store uploaded vehicles in Zustand (persisted to localStorage)
-        // They will be saved to the DB when the dealer completes step-6
+        // Store the parsed vehicles in Zustand (persisted to localStorage only).
+        // Nothing is written to the database here — the rows are saved to the DB
+        // when the dealer completes step-6.
         updateData({
             inventorySource:  "own",
             uploadedVehicles: rows,
         })
-        await new Promise(r => setTimeout(r, 400)) // brief save animation
-        setSaving(false)
         setStep(3)
         router.push("/onboarding/step-3")
     }
@@ -194,7 +235,7 @@ export default function BulkUploadPage() {
             {/* Heading */}
             <div className="space-y-1">
                 <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
-                    Step 2 of 5 — Bulk Upload
+                    Bulk Upload
                 </p>
                 <h1 className="text-2xl font-bold tracking-tight">Upload Your Vehicle Stock</h1>
                 <p className="text-sm text-muted-foreground">
@@ -212,7 +253,7 @@ export default function BulkUploadPage() {
                                 <FileText className="w-5 h-5 text-blue-500" />
                             </div>
                             <div className="min-w-0">
-                                <p className="text-sm font-semibold">vehicle-upload-template.csv</p>
+                                <p className="text-sm font-semibold">vehicle-upload-template.xlsx</p>
                                 <p className="text-xs text-muted-foreground">
                                     Columns: {CSV_HEADERS.join(", ")}
                                 </p>
@@ -225,7 +266,7 @@ export default function BulkUploadPage() {
                             className="gap-2 shrink-0"
                         >
                             <Download className="w-4 h-4" />
-                            Download Template
+                            Download Excel Template
                         </Button>
                     </div>
                 </CardContent>
@@ -234,12 +275,21 @@ export default function BulkUploadPage() {
             {/* Upload area */}
             {!hasFile ? (
                 <div
+                    role="button"
+                    tabIndex={0}
+                    aria-label="Upload Excel or CSV file. Click, press Enter, or drag and drop a file here."
                     onDragOver={(e) => { e.preventDefault(); setIsDragging(true) }}
                     onDragLeave={() => setIsDragging(false)}
                     onDrop={handleDrop}
                     onClick={() => fileInputRef.current?.click()}
+                    onKeyDown={(e) => {
+                        if (e.key === "Enter" || e.key === " ") {
+                            e.preventDefault()
+                            fileInputRef.current?.click()
+                        }
+                    }}
                     className={cn(
-                        "flex flex-col items-center justify-center gap-4 p-12 rounded-2xl border-2 border-dashed cursor-pointer transition-all duration-200",
+                        "flex flex-col items-center justify-center gap-4 p-12 rounded-2xl border-2 border-dashed cursor-pointer transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2",
                         isDragging
                             ? "border-blue-500/60 bg-blue-500/5 scale-[1.01]"
                             : "border-border hover:border-blue-400/50 hover:bg-muted/30"
@@ -253,10 +303,10 @@ export default function BulkUploadPage() {
                     </div>
                     <div className="text-center">
                         <p className="text-base font-semibold">
-                            {isDragging ? "Drop your CSV here!" : "Click or drag & drop your CSV"}
+                            {isDragging ? "Drop your file here!" : "Click or drag & drop your Excel or CSV"}
                         </p>
                         <p className="text-sm text-muted-foreground mt-1">
-                            CSV files only · Max 2 MB · Up to 500 vehicles
+                            Excel (.xlsx) or CSV · Max 2 MB · Up to 500 vehicles
                         </p>
                     </div>
                 </div>
@@ -283,7 +333,9 @@ export default function BulkUploadPage() {
                         </p>
                     </div>
                     <button
+                        type="button"
                         onClick={clearFile}
+                        aria-label="Remove uploaded file"
                         className="p-1.5 rounded-lg hover:bg-muted text-muted-foreground hover:text-foreground transition-colors"
                     >
                         <X className="w-4 h-4" />
@@ -294,7 +346,7 @@ export default function BulkUploadPage() {
             <input
                 ref={fileInputRef}
                 type="file"
-                accept=".csv,text/csv"
+                accept=".xlsx,.xls,.csv,text/csv,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel"
                 onChange={handleFileInput}
                 className="hidden"
             />

@@ -19,9 +19,19 @@ export default function Step4Page() {
     const handleNext = (selectedTemplate?: TemplateStyle) => {
         // Validate combination before proceeding
         const primaryBrand = data.brands?.[0] as Brand;
-        const template = selectedTemplate || (data.styleTemplate as TemplateStyle);
+        // Require an explicit selection (or a fall-back to the smart recommendation)
+        // before advancing — never continue with an empty template.
+        const template =
+            selectedTemplate ||
+            (data.styleTemplate as TemplateStyle) ||
+            (recommendation?.template as TemplateStyle);
 
-        if (primaryBrand && template) {
+        if (!template) {
+            setShowBlockedWarning(false);
+            return;
+        }
+
+        if (primaryBrand) {
             const validation = validateCombination(primaryBrand, template);
 
             // Block if combination is not allowed
@@ -32,9 +42,7 @@ export default function Step4Page() {
         }
 
         // Proceed to next step
-        if (template) {
-            updateData({ styleTemplate: template });
-        }
+        updateData({ styleTemplate: template });
         setStep(5);
         router.push("/onboarding/step-5");
     };

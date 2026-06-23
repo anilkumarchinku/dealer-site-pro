@@ -1,10 +1,11 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import Image from "next/image"
 import type { ThreeWheelerLeadType } from "@/lib/types/three-wheeler"
 import { X } from "lucide-react"
 import { validateLeadForm } from "@/lib/validations/client"
+import { normalizeLeadPhone } from "@/lib/validations/lead"
 
 interface Props {
     dealerId:       string
@@ -33,13 +34,64 @@ export function LeadFormModal({
     const [error,         setError]         = useState("")
     const [minDate,       setMinDate]       = useState("")
 
+    const dialogRef         = useRef<HTMLDivElement>(null)
+    const previouslyFocused = useRef<HTMLElement | null>(null)
+
     useEffect(() => { setMinDate(new Date().toISOString().split("T")[0]) }, [])
+
+    // Restore focus to the trigger and close on Escape; trap Tab within the dialog.
+    useEffect(() => {
+        if (!isOpen) return
+        previouslyFocused.current = document.activeElement as HTMLElement | null
+        const focusTimer = window.setTimeout(() => {
+            const dialog = dialogRef.current
+            if (!dialog) return
+            const focusable = dialog.querySelector<HTMLElement>(
+                'input, button, [href], select, textarea, [tabindex]:not([tabindex="-1"])'
+            )
+            focusable?.focus()
+        }, 0)
+
+        const handleKeyDown = (e: KeyboardEvent) => {
+            if (e.key === "Escape") {
+                e.stopPropagation()
+                onClose()
+                return
+            }
+            if (e.key !== "Tab") return
+            const dialog = dialogRef.current
+            if (!dialog) return
+            const focusable = Array.from(
+                dialog.querySelectorAll<HTMLElement>(
+                    'input, button, [href], select, textarea, [tabindex]:not([tabindex="-1"])'
+                )
+            ).filter(el => !el.hasAttribute("disabled") && el.offsetParent !== null)
+            if (focusable.length === 0) return
+            const first = focusable[0]
+            const last = focusable[focusable.length - 1]
+            if (e.shiftKey && document.activeElement === first) {
+                e.preventDefault()
+                last.focus()
+            } else if (!e.shiftKey && document.activeElement === last) {
+                e.preventDefault()
+                first.focus()
+            }
+        }
+
+        document.addEventListener("keydown", handleKeyDown)
+        return () => {
+            window.clearTimeout(focusTimer)
+            document.removeEventListener("keydown", handleKeyDown)
+            previouslyFocused.current?.focus?.()
+        }
+    }, [isOpen, onClose])
 
     if (!isOpen) return null
 
     async function handleSubmit(e: React.FormEvent) {
         e.preventDefault()
-        const validationErrors = validateLeadForm({ name, phone, email: email || undefined })
+        const normalizedPhone = normalizeLeadPhone(phone)
+        const validationErrors = validateLeadForm({ name, phone: normalizedPhone, email: email || undefined })
         if (Object.keys(validationErrors).length > 0) {
             setError(Object.values(validationErrors).join('. '))
             return
@@ -58,7 +110,7 @@ export function LeadFormModal({
                     used_vehicle_id: usedVehicleId  ?? null,
                     lead_type:       leadType,
                     name,
-                    phone,
+                    phone:           normalizedPhone,
                     email:           email         || null,
                     preferred_date:  preferredDate || null,
                     message:         message       || null,
@@ -85,7 +137,7 @@ export function LeadFormModal({
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
             <div className="absolute inset-0 bg-black/50" onClick={onClose} />
-            <div className="relative bg-card border border-border rounded-2xl shadow-2xl w-full max-w-md overflow-hidden">
+            <div ref={dialogRef} role="dialog" aria-modal="true" aria-label={title} className="relative bg-card border border-border rounded-2xl shadow-2xl w-full max-w-md overflow-hidden">
                 {/* Image */}
                 {vehicleImage && (
                     <div className="relative h-40 bg-gray-100 w-full">
@@ -103,7 +155,7 @@ export function LeadFormModal({
                 <div className="p-6 space-y-5">
                     <div className="flex items-center justify-between">
                         <h2 className="text-lg font-semibold">{title}</h2>
-                        <button onClick={onClose} className="text-muted-foreground hover:text-foreground"><X className="w-5 h-5" /></button>
+                        <button onClick={onClose} aria-label="Close" className="text-muted-foreground hover:text-foreground"><X className="w-5 h-5" /></button>
                     </div>
 
                     {submitted ? (

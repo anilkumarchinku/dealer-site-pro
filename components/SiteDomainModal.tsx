@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import {
-    X, Globe, Copy, Check, ExternalLink,
+    Globe, Copy, Check, ExternalLink,
     Link2, ChevronRight,
 } from 'lucide-react'
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog'

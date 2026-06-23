@@ -1,6 +1,8 @@
 import { notFound } from 'next/navigation'
 import { fetchDealerBySlug } from '@/lib/db/dealers'
+import { getBrandColors } from '@/lib/colors/automotive-brands'
 import { LegalShell, ContactContent } from '@/components/legal'
+import { ContactMessageForm } from '@/components/sites/ContactMessageForm'
 
 interface Props { params: Promise<{ slug: string }> }
 
@@ -16,6 +18,9 @@ export default async function ThreeWheelerContactPage({ params }: Props) {
     const dealer = await fetchDealerBySlug(slug)
     if (!dealer) notFound()
 
+    const brandName = dealer.brandFilter ?? dealer.brands[0] ?? dealer.dealership_name
+    const brandColor = getBrandColors(brandName).primary
+
     return (
         <LegalShell dealerName={dealer.dealership_name} logoUrl={dealer.logo_url} siteHref={`/sites/${slug}/three-wheelers`}>
             <ContactContent
@@ -26,6 +31,9 @@ export default async function ThreeWheelerContactPage({ params }: Props) {
                 email={dealer.email}
                 workingHours={dealer.working_hours}
             />
+            <div className="mt-8">
+                <ContactMessageForm dealerId={dealer.id} brandColor={brandColor} />
+            </div>
         </LegalShell>
     )
 }

@@ -4,15 +4,20 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { X, Plus, GitCompare } from 'lucide-react';
 import { useCompareStore } from '@/lib/store/compare-store';
+import { resolveCarImage } from '@/lib/utils/car-image';
 import CompareModal from './CompareModal';
 
 const MAX_SLOTS = 3;
 
 interface CompareBarProps {
     brandColor?: string;
+    /** Dealer ID — forwarded to the enquiry modal so leads can be saved */
+    dealerId?: string;
+    /** Dealer phone — enables WhatsApp quick-connect in the enquiry modal */
+    dealerPhone?: string;
 }
 
-export default function CompareBar({ brandColor = '#2563eb' }: CompareBarProps) {
+export default function CompareBar({ brandColor = '#2563eb', dealerId, dealerPhone }: CompareBarProps) {
     const { selectedCars, removeCar, clearCars } = useCompareStore();
     const [modalOpen, setModalOpen] = useState(false);
 
@@ -20,6 +25,7 @@ export default function CompareBar({ brandColor = '#2563eb' }: CompareBarProps) 
 
     const emptySlots = MAX_SLOTS - selectedCars.length;
     const canCompare = selectedCars.length >= 2;
+    const needed = 2 - selectedCars.length;
 
     return (
         <>
@@ -38,11 +44,12 @@ export default function CompareBar({ brandColor = '#2563eb' }: CompareBarProps) 
                         >
                             <div className="relative w-14 h-10 rounded-lg overflow-hidden border border-gray-200 bg-gray-50">
                                 <Image
-                                    src={car.images.hero}
+                                    src={resolveCarImage(car)}
                                     alt={`${car.make} ${car.model}`}
                                     fill
                                     className="object-cover"
                                     sizes="56px"
+                                    unoptimized
                                 />
                             </div>
                             <p className="mt-0.5 text-[10px] text-gray-600 text-center leading-tight max-w-full truncate">
@@ -83,16 +90,24 @@ export default function CompareBar({ brandColor = '#2563eb' }: CompareBarProps) 
 
                 {/* Actions */}
                 <div className="flex items-center gap-2">
-                    <button
-                        onClick={() => setModalOpen(true)}
-                        disabled={!canCompare}
-                        style={canCompare ? { backgroundColor: brandColor } : undefined}
-                        className="flex items-center gap-1.5 px-3 py-2 rounded-xl text-sm font-semibold text-white
-                                   transition-opacity disabled:opacity-40 disabled:cursor-not-allowed disabled:bg-gray-400"
-                    >
-                        <GitCompare className="w-4 h-4" />
-                        Compare Now
-                    </button>
+                    <div className="flex flex-col items-stretch gap-0.5">
+                        <button
+                            onClick={() => setModalOpen(true)}
+                            disabled={!canCompare}
+                            aria-describedby={!canCompare ? 'compare-hint' : undefined}
+                            style={canCompare ? { backgroundColor: brandColor } : undefined}
+                            className="flex items-center gap-1.5 px-3 py-2 rounded-xl text-sm font-semibold text-white
+                                       transition-opacity disabled:opacity-40 disabled:cursor-not-allowed disabled:bg-gray-400"
+                        >
+                            <GitCompare className="w-4 h-4" />
+                            Compare Now
+                        </button>
+                        {!canCompare && (
+                            <p id="compare-hint" className="text-[10px] text-gray-600 text-center leading-tight">
+                                Add {needed} more to compare
+                            </p>
+                        )}
+                    </div>
 
                     <button
                         onClick={clearCars}
@@ -109,6 +124,8 @@ export default function CompareBar({ brandColor = '#2563eb' }: CompareBarProps) 
                 open={modalOpen}
                 onOpenChange={setModalOpen}
                 brandColor={brandColor}
+                dealerId={dealerId}
+                dealerPhone={dealerPhone}
             />
         </>
     );

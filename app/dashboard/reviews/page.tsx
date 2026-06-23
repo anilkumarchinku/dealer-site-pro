@@ -9,6 +9,8 @@ import { ArrowDown, ArrowUp, Eye, EyeOff, Star, ThumbsUp, Reply, ExternalLink, M
 import { cn } from "@/lib/utils";
 import { fetchReviews, fetchPendingReviews, fetchFlaggedReviews, fetchRejectedReviews, respondToReview, approveReview, rejectReview, flagReview, curateReview, computeReviewStats, type DBReview } from "@/lib/db/reviews";
 import { useOnboardingStore } from "@/lib/store/onboarding-store";
+import { isSupabaseReady, supabase } from "@/lib/supabase";
+import { PremiumPageHeader } from "@/components/dashboard/premium-ui";
 import { toast } from "@/lib/utils/toast";
 
 
@@ -24,6 +26,7 @@ export default function ReviewsPage() {
     const [approvingId, setApprovingId] = useState<string | null>(null);
     const [moderatingId, setModeratingId] = useState<string | null>(null);
     const [curatingId, setCuratingId] = useState<string | null>(null);
+    const [googleUrl, setGoogleUrl] = useState<string | null>(null);
 
     useEffect(() => {
         if (!dealerId) return;
@@ -41,6 +44,15 @@ export default function ReviewsPage() {
                 setRejectedReviews(rejected);
             })
             .finally(() => setLoading(false));
+
+        if (isSupabaseReady()) {
+            supabase
+                .from("dealers")
+                .select("google_maps_url")
+                .eq("id", dealerId)
+                .maybeSingle()
+                .then(({ data: d }) => setGoogleUrl(d?.google_maps_url ?? null));
+        }
         return;
     }, [dealerId]);
 
@@ -308,15 +320,16 @@ export default function ReviewsPage() {
 
     return (
         <div className="space-y-6 animate-fade-in">
-            <div>
-                <h1 className="text-2xl font-bold">Customer Feedback</h1>
-                <p className="text-muted-foreground">Approve service ratings and testimonials before they appear on the website</p>
-            </div>
+            <PremiumPageHeader
+                eyebrow="Reputation"
+                title="Customer Feedback"
+                description="Approve service ratings and testimonials before they appear on the website"
+            />
 
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                <Card className="hover:shadow-lg transition-all duration-300">
-                    <CardContent className="p-6">
+                <Card className="rounded-2xl border-border/70 bg-card/90 shadow-sm transition-all duration-300 hover:shadow-lg dark:bg-card/80">
+                    <CardContent className="p-5">
                         <div className="mb-4">
                             <div className="p-3 rounded-xl w-fit bg-amber-500/10">
                                 <Star className="w-6 h-6 text-amber-500" />
@@ -324,7 +337,7 @@ export default function ReviewsPage() {
                         </div>
                         <div className="space-y-1">
                             <p className="text-sm text-muted-foreground">Average Rating</p>
-                            <p className="text-3xl font-bold">{loading ? "—" : stats.avgRating || "—"}</p>
+                            <p className="text-3xl font-black tracking-tight">{loading ? "—" : stats.avgRating || "—"}</p>
                             {!loading && stats.avgRating > 0 && (
                                 <div className="flex items-center gap-0.5 mt-1">
                                     {[1, 2, 3, 4, 5].map((star) => (
@@ -341,8 +354,8 @@ export default function ReviewsPage() {
                         </div>
                     </CardContent>
                 </Card>
-                <Card className="hover:shadow-lg transition-all duration-300">
-                    <CardContent className="p-6">
+                <Card className="rounded-2xl border-border/70 bg-card/90 shadow-sm transition-all duration-300 hover:shadow-lg dark:bg-card/80">
+                    <CardContent className="p-5">
                         <div className="mb-4">
                             <div className="p-3 rounded-xl w-fit bg-primary/10">
                                 <MessageSquare className="w-6 h-6 text-primary" />
@@ -350,12 +363,12 @@ export default function ReviewsPage() {
                         </div>
                         <div className="space-y-1">
                             <p className="text-sm text-muted-foreground">Published Feedback</p>
-                            <p className="text-3xl font-bold">{loading ? <Loader2 className="w-6 h-6 animate-spin text-muted-foreground" /> : stats.total}</p>
+                            <p className="text-3xl font-black tracking-tight">{loading ? <Loader2 className="w-6 h-6 animate-spin text-muted-foreground" /> : stats.total}</p>
                         </div>
                     </CardContent>
                 </Card>
-                <Card className="hover:shadow-lg transition-all duration-300">
-                    <CardContent className="p-6">
+                <Card className="rounded-2xl border-border/70 bg-card/90 shadow-sm transition-all duration-300 hover:shadow-lg dark:bg-card/80">
+                    <CardContent className="p-5">
                         <div className="mb-4">
                             <div className="p-3 rounded-xl w-fit bg-green-500/10">
                                 <CheckCircle className="w-6 h-6 text-green-500" />
@@ -363,12 +376,12 @@ export default function ReviewsPage() {
                         </div>
                         <div className="space-y-1">
                             <p className="text-sm text-muted-foreground">Responded</p>
-                            <p className="text-3xl font-bold">{loading ? "—" : stats.responded}</p>
+                            <p className="text-3xl font-black tracking-tight">{loading ? "—" : stats.responded}</p>
                         </div>
                     </CardContent>
                 </Card>
-                <Card className="hover:shadow-lg transition-all duration-300">
-                    <CardContent className="p-6">
+                <Card className="rounded-2xl border-border/70 bg-card/90 shadow-sm transition-all duration-300 hover:shadow-lg dark:bg-card/80">
+                    <CardContent className="p-5">
                         <div className="mb-4">
                             <div className="p-3 rounded-xl w-fit bg-violet-500/10">
                                 <Clock className="w-6 h-6 text-violet-500" />
@@ -376,22 +389,26 @@ export default function ReviewsPage() {
                         </div>
                         <div className="space-y-1">
                             <p className="text-sm text-muted-foreground">Awaiting Approval</p>
-                            <p className="text-3xl font-bold">{loading ? "—" : pendingCount}</p>
+                            <p className="text-3xl font-black tracking-tight">{loading ? "—" : pendingCount}</p>
                         </div>
                     </CardContent>
                 </Card>
             </div>
 
             {/* Reviews Tabs */}
-            <Card variant="glass">
+            <Card variant="glass" className="rounded-2xl border-border/70 bg-card/90 shadow-sm dark:bg-card/80">
                 <CardHeader className="flex-row items-center justify-between">
                     <div>
-                        <CardTitle>Feedback Moderation</CardTitle>
+                        <CardTitle className="font-black tracking-tight">Feedback Moderation</CardTitle>
                     </div>
-                    <Button variant="outline" size="sm">
-                        <ExternalLink className="w-4 h-4 mr-2" />
-                        View on Google
-                    </Button>
+                    {googleUrl && (
+                        <Button variant="outline" size="sm" asChild>
+                            <a href={googleUrl} target="_blank" rel="noopener noreferrer">
+                                <ExternalLink className="w-4 h-4 mr-2" />
+                                View on Google
+                            </a>
+                        </Button>
+                    )}
                 </CardHeader>
                 <CardContent className="space-y-4">
                     <Tabs defaultValue="published">

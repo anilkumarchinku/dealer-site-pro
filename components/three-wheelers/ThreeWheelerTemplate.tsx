@@ -5,7 +5,7 @@ import Image from "next/image"
 import Link from "next/link"
 import {
     Phone, Mail, MapPin, Clock, Menu, X, ArrowRight,
-    ChevronRight, Shield, Star, Award, CheckCircle2, Send,
+    ChevronRight, Shield, CheckCircle2, Send,
     MessageSquare, Zap, Package, Users, Wrench, CreditCard,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -17,6 +17,8 @@ import { CompareBar } from "@/components/three-wheelers/CompareBar"
 import { LeadFormModal } from "@/components/three-wheelers/LeadFormModal"
 import type { ThreeWheelerCompareItem, ThreeWheelerVehicle } from "@/lib/types/three-wheeler"
 import { useSitePrefix } from "@/lib/hooks/useSitePrefix"
+import { getContrastText } from "@/lib/utils/color-contrast"
+import { normalizeLeadPhone } from "@/lib/validations/lead"
 import brandModelsData from "@/lib/data/brand-models.json"
 
 // ── Build brandName → brandId map from brand-models.json (same as onboarding) ─
@@ -187,6 +189,10 @@ export function ThreeWheelerTemplate({
         })
     }
 
+    // Inventory tab has no dark hero behind the nav, so force a solid (white/dark)
+    // nav there regardless of scroll — otherwise white-on-white text is invisible.
+    const solidNav = isScrolled || activeTab === "inventory"
+
     const title    = heroTitle    || `${primaryBrand ? `Authorised ${primaryBrand} Dealer` : dealerName}`
     const subtitle = heroSubtitle || tagline || `Your trusted 3-Wheeler destination in ${location}`
 
@@ -213,10 +219,10 @@ export function ThreeWheelerTemplate({
                 body: JSON.stringify({
                     dealer_id: dealerId,
                     name: formData.name,
-                    phone: formData.phone,
+                    phone: normalizeLeadPhone(formData.phone),
                     email: formData.email,
                     message: formData.message,
-                    lead_type: "enquiry",
+                    lead_type: "callback",
                 }),
             })
             setFormStatus(res.ok ? "sent" : "error")
@@ -229,7 +235,7 @@ export function ThreeWheelerTemplate({
         <div className="min-h-screen bg-white text-gray-900">
 
             {/* ── Sticky Navbar ─────────────────────────────────────────────── */}
-            <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-white/95 backdrop-blur-lg shadow-sm" : "bg-transparent"}`}>
+            <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${solidNav ? "bg-white/95 backdrop-blur-lg shadow-sm" : "bg-transparent"}`}>
                 <div className="max-w-7xl mx-auto px-4 py-3">
                     <div className="flex items-center justify-between gap-4">
                         {/* Logo + Name */}
@@ -247,7 +253,7 @@ export function ThreeWheelerTemplate({
                                     {primaryBrand.slice(0, 2).toUpperCase()}
                                 </div>
                             ) : null}
-                            <span className={`max-w-[170px] text-base font-semibold leading-tight tracking-wide xl:max-w-none xl:text-lg ${isScrolled ? "text-gray-900" : "text-white"}`}>
+                            <span className={`max-w-[170px] text-base font-semibold leading-tight tracking-wide xl:max-w-none xl:text-lg ${solidNav ? "text-gray-900" : "text-white"}`}>
                                 {dealerName}
                             </span>
                         </button>
@@ -261,7 +267,7 @@ export function ThreeWheelerTemplate({
                                 <button
                                     key={tab}
                                     onClick={() => setActiveTab(tab)}
-                                    className={`whitespace-nowrap text-sm font-medium transition-colors ${isScrolled ? "text-gray-600 hover:text-gray-900" : "text-white/80 hover:text-white"}`}
+                                    className={`whitespace-nowrap text-sm font-medium transition-colors ${solidNav ? "text-gray-600 hover:text-gray-900" : "text-white/80 hover:text-white"}`}
                                     style={activeTab === tab ? { color: accent } : {}}
                                 >
                                     {label}
@@ -269,7 +275,7 @@ export function ThreeWheelerTemplate({
                             ))}
                             <a
                                 href="#contact"
-                                className={`whitespace-nowrap text-sm font-medium transition-colors ${isScrolled ? "text-gray-600 hover:text-gray-900" : "text-white/80 hover:text-white"}`}
+                                className={`whitespace-nowrap text-sm font-medium transition-colors ${solidNav ? "text-gray-600 hover:text-gray-900" : "text-white/80 hover:text-white"}`}
                             >
                                 Contact
                             </a>
@@ -280,7 +286,7 @@ export function ThreeWheelerTemplate({
                             <Button
                                 variant="outline"
                                 size="sm"
-                                className={`hidden whitespace-nowrap lg:flex ${isScrolled ? "border-gray-300 text-gray-900 hover:bg-gray-100" : "border-white/40 text-white bg-white/10 hover:bg-white/20"}`}
+                                className={`hidden whitespace-nowrap lg:flex ${solidNav ? "border-gray-300 text-gray-900 hover:bg-gray-100" : "border-white/40 text-white bg-white/10 hover:bg-white/20"}`}
                                 onClick={() => { setActiveTab("home"); document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" }) }}
                             >
                                 <MessageSquare className="w-4 h-4 mr-1.5" />
@@ -288,8 +294,8 @@ export function ThreeWheelerTemplate({
                             </Button>
                             <Button
                                 size="sm"
-                                className="whitespace-nowrap text-white"
-                                style={{ backgroundColor: accent }}
+                                className="whitespace-nowrap"
+                                style={{ backgroundColor: accent, color: getContrastText(accent) }}
                                 asChild
                             >
                                 <a href={`tel:${phone}`}>
@@ -298,9 +304,10 @@ export function ThreeWheelerTemplate({
                                 </a>
                             </Button>
                             <button
-                                className={`xl:hidden p-2 rounded-lg transition-colors ${isScrolled ? "text-gray-900 hover:bg-gray-100" : "text-white hover:bg-white/10"}`}
+                                className={`xl:hidden p-2 rounded-lg transition-colors ${solidNav ? "text-gray-900 hover:bg-gray-100" : "text-white hover:bg-white/10"}`}
                                 onClick={() => setMobileMenuOpen(o => !o)}
                                 aria-label="Toggle menu"
+                                aria-expanded={mobileMenuOpen}
                             >
                                 {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
                             </button>
@@ -309,7 +316,7 @@ export function ThreeWheelerTemplate({
 
                     {/* Mobile menu */}
                     {mobileMenuOpen && (
-                        <div className="xl:hidden mt-3 border-t border-white/20 pt-3 space-y-1">
+                        <div className={`xl:hidden mt-3 border-t pt-3 space-y-1 ${solidNav ? "border-gray-200" : "border-white/20"}`}>
                             {[
                                 { label: "Home",      action: () => { setActiveTab("home");      setMobileMenuOpen(false) } },
                                 { label: "Inventory", action: () => { setActiveTab("inventory"); setMobileMenuOpen(false) } },
@@ -318,7 +325,7 @@ export function ThreeWheelerTemplate({
                                 <button
                                     key={label}
                                     onClick={action}
-                                    className={`block w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium ${isScrolled ? "text-gray-900 hover:bg-gray-100" : "text-white hover:bg-white/10"}`}
+                                    className={`block w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium ${solidNav ? "text-gray-900 hover:bg-gray-100" : "text-white hover:bg-white/10"}`}
                                 >
                                     {label}
                                 </button>
@@ -374,7 +381,7 @@ export function ThreeWheelerTemplate({
                                 </div>
                             )}
 
-                            <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight mb-6">
+                            <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold text-white leading-tight mb-6">
                                 {title}
                             </h1>
                             <p className="text-xl text-white/70 max-w-2xl mx-auto mb-10">
@@ -405,8 +412,8 @@ export function ThreeWheelerTemplate({
                             <div className="flex flex-wrap items-center justify-center gap-3">
                                 <Button
                                     size="lg"
-                                    className="text-white font-semibold px-8"
-                                    style={{ backgroundColor: accent }}
+                                    className="font-semibold px-8"
+                                    style={{ backgroundColor: accent, color: getContrastText(accent) }}
                                     onClick={() => setActiveTab("inventory")}
                                 >
                                     Browse All Vehicles
@@ -582,20 +589,19 @@ export function ThreeWheelerTemplate({
                         <EmiCalculator brandColor={accent} theme="light" />
                     </section>
 
-                    {/* Trust Badges */}
+                    {/* Trust Badges — generic, verifiable claims only (no fabricated stats) */}
                     <section className="bg-white py-12 border-t border-gray-100">
                         <div className="max-w-7xl mx-auto px-4">
                             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
                                 {[
-                                    { Icon: Award,        stat: "500+",    label: "Vehicles Sold" },
-                                    { Icon: Star,         stat: "4.8★",   label: "Customer Rating" },
-                                    { Icon: Shield,       stat: "100%",   label: "Genuine Parts" },
-                                    { Icon: CheckCircle2, stat: "10+ Yrs", label: "In Business" },
-                                ].map(({ Icon, stat, label }) => (
+                                    { Icon: Shield,       label: "Genuine Parts" },
+                                    { Icon: Wrench,       label: "Expert Service" },
+                                    { Icon: CreditCard,   label: "Easy Finance" },
+                                    { Icon: CheckCircle2, label: "Permit Assistance" },
+                                ].map(({ Icon, label }) => (
                                     <div key={label} className="flex flex-col items-center gap-2">
                                         <Icon className="w-8 h-8" style={{ color: accent }} />
-                                        <p className="text-2xl font-bold text-gray-900">{stat}</p>
-                                        <p className="text-sm text-gray-600">{label}</p>
+                                        <p className="text-base font-semibold text-gray-900">{label}</p>
                                     </div>
                                 ))}
                             </div>
@@ -711,8 +717,8 @@ export function ThreeWheelerTemplate({
                                             <Button
                                                 type="submit"
                                                 disabled={formStatus === "sending"}
-                                                className="w-full text-white py-3 font-semibold rounded-xl"
-                                                style={{ backgroundColor: accent }}
+                                                className="w-full py-3 font-semibold rounded-xl"
+                                                style={{ backgroundColor: accent, color: getContrastText(accent) }}
                                             >
                                                 {formStatus === "sending" ? "Sending..." : (
                                                     <>
@@ -786,7 +792,7 @@ export function ThreeWheelerTemplate({
                                 <p className="text-5xl mb-4">🛺</p>
                                 <p className="text-xl font-semibold text-gray-600">Stock coming soon</p>
                                 <p className="mt-2">Call us to check current availability</p>
-                                <Button className="mt-6 text-white" style={{ backgroundColor: accent }} asChild>
+                                <Button className="mt-6" style={{ backgroundColor: accent, color: getContrastText(accent) }} asChild>
                                     <a href={`tel:${phone}`}><Phone className="w-4 h-4 mr-2" />Call {phone}</a>
                                 </Button>
                             </div>

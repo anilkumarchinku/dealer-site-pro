@@ -19,6 +19,8 @@ import { getOptionalEnv } from '@/lib/env'
 import { ExternalApiError, externalApiFetch } from '@/lib/services/external-api-fetch'
 import { requireAuth, type RouteSupabaseClient, createAdminClient } from '@/lib/supabase-server'
 import { logApiUsage } from '@/lib/db/credits'
+import { rateLimitOrNull } from '@/lib/utils/rate-limiter'
+import { logger } from '@/lib/utils/logger'
 
 const RC_CACHE_TTL_SECONDS = 60 * 60 * 24
 const memoryCache = new Map<string, { expiresAt: number; value: Record<string, unknown> }>()
@@ -279,6 +281,7 @@ async function getDealerIdForUser(userId: string): Promise<string | null> {
 }
 
 export async function POST(request: NextRequest) {
+    const limited = await rateLimitOrNull("rc_lookup", request, 30, 3600000); if (limited) return limited;
     const auth = await requireAuth()
     if (auth.errorResponse) return auth.errorResponse
 
@@ -359,20 +362,25 @@ export async function POST(request: NextRequest) {
         }
 
         if (err instanceof ExternalApiError) {
-            const safeMessage = err.status === 401
-                ? 'Surepass authentication failed. Check SUREPASS_API_TOKEN; the sandbox token may be expired.'
-                : err.status === 403
-                    ? 'Surepass access denied for this API. Check sandbox permissions for RC Full.'
-                    : err.status === 422
-                        ? 'Surepass rejected the RC number format or sandbox test data.'
-                        : 'Surepass RC lookup failed. Check provider configuration and try again.'
+            // Log the provider name / upstream status server-side only. These
+            // reveal which third-party we use and hint at credential/config
+            // problems, so they must never reach the client.
+            logger.error('[RC Lookup] Provider error', {
+                provider: err.providerName,
+                providerStatus: err.status ?? null,
+                rc,
+            })
+
+            // Client-facing message is generic for every upstream failure mode
+            // (401/403/422/etc.) — a 422 may be a genuine bad RC, the rest are
+            // transient/config issues, all expressed without leaking provider
+            // internals.
+            const clientMessage = err.status === 422
+                ? 'We could not find details for this RC number. Please check it and try again.'
+                : 'RC lookup is temporarily unavailable. Please try again later.'
 
             return NextResponse.json(
-                {
-                    error: safeMessage,
-                    provider: err.providerName,
-                    provider_status: err.status ?? null,
-                },
+                { error: clientMessage },
                 { status: 502 }
             )
         }

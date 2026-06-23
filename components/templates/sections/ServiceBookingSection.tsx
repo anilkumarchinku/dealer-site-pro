@@ -1,7 +1,8 @@
 'use client';
 
-import { useState } from 'react';
+import { useId, useState } from 'react';
 import { CheckCircle2, Wrench } from 'lucide-react';
+import { getContrastText } from '@/lib/utils/color-contrast';
 
 interface ServiceCenter {
     id: string;
@@ -59,6 +60,25 @@ export function ServiceBookingSection({
     serviceCenters = [],
 }: ServiceBookingSectionProps) {
     const serviceTypes = getServiceTypes(vehicleType);
+
+    // Readable text color for the brand-filled CTA (light brands need dark text).
+    const onBrandText = getContrastText(brandColor);
+
+    // Stable, unique ids so each label is programmatically tied to its input.
+    const fieldId = useId();
+    const ids = {
+        regNumber: `${fieldId}-reg`,
+        vehicleMake: `${fieldId}-make`,
+        vehicleModel: `${fieldId}-model`,
+        kmReading: `${fieldId}-km`,
+        date: `${fieldId}-date`,
+        time: `${fieldId}-time`,
+        location: `${fieldId}-location`,
+        name: `${fieldId}-name`,
+        phone: `${fieldId}-phone`,
+        email: `${fieldId}-email`,
+        notes: `${fieldId}-notes`,
+    };
 
     // Use real service centers from database first, then fall back to branches
     const serviceLocations = serviceCenters.length > 0
@@ -222,19 +242,25 @@ export function ServiceBookingSection({
                             })}
                         </div>
 
-                        <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-3">
+                        <p className="mt-8 text-xs font-semibold uppercase tracking-widest text-gray-500">
+                            Examples of what we cover
+                        </p>
+                        <div className="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-3">
                             {[
-                                { tier: 'Basic', price: 'From ₹1,999', detail: 'Oil, filters, diagnostics' },
-                                { tier: 'Premium', price: 'From ₹4,999', detail: 'Full inspection and AC check' },
-                                { tier: 'Repair', price: 'Quote based', detail: 'Body, tyre, battery, insurance claim' },
+                                { tier: 'Routine', detail: 'Oil, filters, diagnostics' },
+                                { tier: 'Detailed', detail: 'Full inspection and AC check' },
+                                { tier: 'Repair', detail: 'Body, tyre, battery, insurance claim' },
                             ].map((item) => (
                                 <div key={item.tier} className="rounded-xl border border-gray-200 bg-white p-4">
                                     <p className="text-xs font-semibold uppercase tracking-widest" style={{ color: brandColor }}>{item.tier}</p>
-                                    <p className="mt-1 text-lg font-bold text-gray-900">{item.price}</p>
+                                    <p className="mt-1 text-sm font-semibold text-gray-900">Quote on request</p>
                                     <p className="mt-1 text-xs text-gray-600">{item.detail}</p>
                                 </div>
                             ))}
                         </div>
+                        <p className="mt-3 text-xs text-gray-500">
+                            These are example categories, not a fixed menu. Prices vary by vehicle and condition — book below for an exact estimate.
+                        </p>
 
                         <div className="mt-8 rounded-2xl border border-gray-200 bg-white p-5">
                             <h3 className="font-bold text-gray-900">Service Locations</h3>
@@ -286,10 +312,11 @@ export function ServiceBookingSection({
                                 </h3>
                                 <form onSubmit={handleSubmit} className="space-y-4">
                                     <div>
-                                        <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                                        <label htmlFor={ids.regNumber} className="block text-sm font-medium text-gray-700 mb-1.5">
                                             Vehicle Registration Number
                                         </label>
                                         <input
+                                            id={ids.regNumber}
                                             type="text"
                                             name="regNumber"
                                             value={form.regNumber}
@@ -302,8 +329,9 @@ export function ServiceBookingSection({
 
                                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                         <div>
-                                            <label className="block text-sm font-medium text-gray-700 mb-1.5">Vehicle Make</label>
+                                            <label htmlFor={ids.vehicleMake} className="block text-sm font-medium text-gray-700 mb-1.5">Vehicle Make</label>
                                             <input
+                                                id={ids.vehicleMake}
                                                 type="text"
                                                 name="vehicleMake"
                                                 value={form.vehicleMake}
@@ -314,8 +342,9 @@ export function ServiceBookingSection({
                                             />
                                         </div>
                                         <div>
-                                            <label className="block text-sm font-medium text-gray-700 mb-1.5">Vehicle Model</label>
+                                            <label htmlFor={ids.vehicleModel} className="block text-sm font-medium text-gray-700 mb-1.5">Vehicle Model</label>
                                             <input
+                                                id={ids.vehicleModel}
                                                 type="text"
                                                 name="vehicleModel"
                                                 value={form.vehicleModel}
@@ -328,8 +357,9 @@ export function ServiceBookingSection({
                                     </div>
 
                                     <div>
-                                        <label className="block text-sm font-medium text-gray-700 mb-1.5">KM Reading</label>
+                                        <label htmlFor={ids.kmReading} className="block text-sm font-medium text-gray-700 mb-1.5">KM Reading</label>
                                         <input
+                                            id={ids.kmReading}
                                             type="number"
                                             name="kmReading"
                                             min="0"
@@ -343,10 +373,11 @@ export function ServiceBookingSection({
 
                                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                     <div>
-                                        <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                                        <label htmlFor={ids.date} className="block text-sm font-medium text-gray-700 mb-1.5">
                                             Preferred Date <span className="text-red-500">*</span>
                                             </label>
                                             <input
+                                                id={ids.date}
                                                 type="date"
                                                 name="date"
                                                 required
@@ -358,10 +389,11 @@ export function ServiceBookingSection({
                                             />
                                         </div>
                                         <div>
-                                            <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                                            <label htmlFor={ids.time} className="block text-sm font-medium text-gray-700 mb-1.5">
                                                 Preferred Time
                                             </label>
                                             <select
+                                                id={ids.time}
                                                 name="time"
                                                 value={form.time}
                                                 onChange={handleChange}
@@ -378,10 +410,11 @@ export function ServiceBookingSection({
                                     </div>
 
                                     <div>
-                                        <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                                        <label htmlFor={ids.location} className="block text-sm font-medium text-gray-700 mb-1.5">
                                             Service Location
                                         </label>
                                         <select
+                                            id={ids.location}
                                             name="location"
                                             value={form.location}
                                             onChange={handleChange}
@@ -396,10 +429,11 @@ export function ServiceBookingSection({
                                     </div>
 
                                     <div>
-                                        <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                                        <label htmlFor={ids.name} className="block text-sm font-medium text-gray-700 mb-1.5">
                                             Your Name <span className="text-red-500">*</span>
                                         </label>
                                         <input
+                                            id={ids.name}
                                             type="text"
                                             name="name"
                                             required
@@ -412,10 +446,11 @@ export function ServiceBookingSection({
                                     </div>
 
                                     <div>
-                                        <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                                        <label htmlFor={ids.phone} className="block text-sm font-medium text-gray-700 mb-1.5">
                                             Phone Number <span className="text-red-500">*</span>
                                         </label>
                                         <input
+                                            id={ids.phone}
                                             type="tel"
                                             name="phone"
                                             required
@@ -428,10 +463,11 @@ export function ServiceBookingSection({
                                     </div>
 
                                     <div>
-                                        <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                                        <label htmlFor={ids.email} className="block text-sm font-medium text-gray-700 mb-1.5">
                                             Email
                                         </label>
                                         <input
+                                            id={ids.email}
                                             type="email"
                                             name="email"
                                             value={form.email}
@@ -443,10 +479,11 @@ export function ServiceBookingSection({
                                     </div>
 
                                     <div>
-                                        <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                                        <label htmlFor={ids.notes} className="block text-sm font-medium text-gray-700 mb-1.5">
                                             Preferred Location / Notes
                                         </label>
                                         <textarea
+                                            id={ids.notes}
                                             name="notes"
                                             rows={3}
                                             value={form.notes}
@@ -464,8 +501,8 @@ export function ServiceBookingSection({
                                     <button
                                         type="submit"
                                         disabled={submitting}
-                                        className="w-full py-3 rounded-xl text-white font-semibold text-sm hover:opacity-90 transition-opacity disabled:opacity-60"
-                                        style={{ backgroundColor: brandColor }}
+                                        className="w-full py-3 rounded-xl font-semibold text-sm hover:opacity-90 transition-opacity disabled:opacity-60"
+                                        style={{ backgroundColor: brandColor, color: onBrandText }}
                                     >
                                         {submitting ? 'Booking…' : 'Book Service Appointment'}
                                     </button>

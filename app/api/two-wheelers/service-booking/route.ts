@@ -4,7 +4,6 @@
  * PATCH                                   — Dealer: update booking status
  */
 
-import { NextRequest } from 'next/server'
 import type { z } from 'zod'
 import { createServiceBooking, getServiceBookings, updateServiceBookingStatus } from '@/lib/db/two-wheelers'
 import type { ServiceBookingFilters, TwoWheelerServiceStatus } from '@/lib/types/two-wheeler'

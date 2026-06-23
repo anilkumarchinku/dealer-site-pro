@@ -197,16 +197,31 @@ export async function updateVehicleStatus(
 }
 
 // ── Delete a vehicle ─────────────────────────────────────────
+// SECURITY: `db()`/service-role bypasses RLS, so dealer_id scoping here is the ONLY
+// tenant boundary. Without it any dealer could soft-delete another dealer's vehicle
+// by guessing/enumerating an id (IDOR). `dealerId` is optional ONLY for backward
+// compatibility with existing callers that have not yet been updated; when provided
+// we scope the mutation by dealer_id.
+// TODO(security): make `dealerId` REQUIRED once all callers pass it. Known caller that
+// must be updated (outside this file's ownership):
+//   app/dashboard/inventory/page.tsx:149 → deleteVehicle(id)  ➜  deleteVehicle(id, dealerId)
 export async function deleteVehicle(
-    id: string
+    id: string,
+    dealerId?: string
 ): Promise<{ success: boolean; error?: string }> {
     if (!isSupabaseReady()) return { success: false, error: "Supabase not configured" };
 
-    // Soft delete — set status to inactive
-    const { error } = await supabase
+    // Soft delete — set status to inactive, scoped to the owning dealer.
+    let query = supabase
         .from("vehicles")
         .update({ status: "inactive" })
         .eq("id", id);
+
+    if (dealerId) {
+        query = query.eq("dealer_id", dealerId);
+    }
+
+    const { error } = await query;
 
     if (error) return { success: false, error: error.message };
     return { success: true };

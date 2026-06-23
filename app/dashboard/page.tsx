@@ -15,7 +15,13 @@ import { isSupabaseReady, supabase } from "@/lib/supabase";
 import type { Brand } from "@/lib/types";
 import { fetchAnalyticsSummary, fetchTopVehicles, type TopVehicle } from "@/lib/db/analytics";
 import { fetchLeads, type ExternalLead } from "@/lib/db/leads";
+import { fetchVehicles } from "@/lib/db/vehicles";
+import { fetchReviews, computeReviewStats } from "@/lib/db/reviews";
 import { DealerScorecard } from "@/components/dashboard/DealerScorecard";
+import { Reveal } from "@/components/ui/Reveal";
+import { CountUp } from "@/components/ui/CountUp";
+import { Skeleton } from "@/components/ui/skeleton";
+import { timeAgo, formatCompactNumber as fmt, titleCaseFromSnake as formatType } from "@/lib/utils/format";
 
 const CAR_BRANDS: { name: Brand; logo: string }[] = [
     { name: "Maruti Suzuki",  logo: "/assets/logos/maruti-suzuki.png" },
@@ -84,12 +90,16 @@ export default function DashboardPage() {
     const [brandSearch, setBrandSearch] = useState("");
 
     const [statsLoading, setStatsLoading] = useState(false);
+    const [inventoryLoading, setInventoryLoading] = useState(false);
     const [leadsLoading, setLeadsLoading] = useState(false);
     const [visitors, setVisitors]         = useState<number | null>(null);
     const [leadsCount, setLeadsCount]     = useState<number | null>(null);
     const [testDrives, setTestDrives]     = useState<number | null>(null);
+    const [inventoryCount, setInventoryCount] = useState<number | null>(null);
     const [recentLeads, setRecentLeads]   = useState<ExternalLead[]>([]);
     const [topVehicles, setTopVehicles]   = useState<TopVehicle[]>([]);
+    const [avgRating, setAvgRating]       = useState(0);
+    const [reviewCount, setReviewCount]   = useState(0);
 
     // Safety net: if dealerId is missing from local store (new device / cleared cache),
     // fetch it from DB. If user has no dealer record at all, send them to onboarding.
@@ -115,28 +125,47 @@ export default function DashboardPage() {
 
     useEffect(() => {
         if (!isSupabaseReady() || !dealerId) return;
+        let cancelled = false;
 
         setStatsLoading(true);
         fetchAnalyticsSummary(dealerId, 30)
             .then(s => {
-                if (s) {
-                    setVisitors(s.visitors);
-                    setLeadsCount(s.leads);
-                    setTestDrives(s.testDrives);
-                }
+                if (cancelled || !s) return;
+                setVisitors(s.visitors);
+                setLeadsCount(s.leads);
+                setTestDrives(s.testDrives);
             })
             .catch(() => {})
-            .finally(() => setStatsLoading(false));
+            .finally(() => { if (!cancelled) setStatsLoading(false); });
 
         setLeadsLoading(true);
         Promise.all([
             fetchLeads(dealerId),
             fetchTopVehicles(dealerId, 4),
         ]).then(([leads, vehicles]) => {
+            if (cancelled) return;
             setRecentLeads(leads.slice(0, 4));
             setTopVehicles(vehicles);
-        }).catch(() => {}).finally(() => setLeadsLoading(false));
-        return;
+        }).catch(() => {}).finally(() => { if (!cancelled) setLeadsLoading(false); });
+
+        // Inventory count — only the total is needed, so request a single row.
+        setInventoryLoading(true);
+        fetchVehicles(dealerId, 1, 1)
+            .then(({ total }) => { if (!cancelled) setInventoryCount(total); })
+            .catch(() => {})
+            .finally(() => { if (!cancelled) setInventoryLoading(false); });
+
+        // Review stats — drives the real Customer Reviews pillar in the scorecard.
+        fetchReviews(dealerId)
+            .then(reviews => {
+                if (cancelled) return;
+                const stats = computeReviewStats(reviews);
+                setAvgRating(stats.avgRating);
+                setReviewCount(stats.total);
+            })
+            .catch(() => {});
+
+        return () => { cancelled = true; };
     }, [dealerId]);
 
     async function saveCarBrands() {
@@ -169,29 +198,12 @@ export default function DashboardPage() {
         }
     }
 
-    const fmt = (n: number) => n >= 1000 ? `${(n / 1000).toFixed(1)}k` : String(n);
-
-    const timeAgo = (iso: string): string => {
-        if (!iso) return "";
-        const diff = Date.now() - new Date(iso).getTime();
-        const mins = Math.floor(diff / 60000);
-        if (mins < 1) return "just now";
-        if (mins < 60) return `${mins}m ago`;
-        const hrs = Math.floor(mins / 60);
-        if (hrs < 24) return `${hrs}h ago`;
-        const days = Math.floor(hrs / 24);
-        if (days < 7) return `${days}d ago`;
-        return new Date(iso).toLocaleDateString("en-IN", { day: "numeric", month: "short" });
-    };
-
-    const formatType = (type: string) =>
-        type.split("_").map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
 
     const STATS = [
-        { label: "Total Visitors", value: visitors,   icon: Eye,      color: "blue"    as const },
-        { label: "Active Leads",   value: leadsCount, icon: Users,    color: "emerald" as const },
-        { label: "Test Drives",    value: testDrives, icon: Calendar, color: "violet"  as const },
-        { label: "Inventory",      value: null,       icon: Car,      color: "amber"   as const },
+        { label: "Total Visitors", value: visitors,       icon: Eye,      color: "blue"    as const, loading: statsLoading     },
+        { label: "Active Leads",   value: leadsCount,     icon: Users,    color: "emerald" as const, loading: statsLoading     },
+        { label: "Test Drives",    value: testDrives,     icon: Calendar, color: "violet"  as const, loading: statsLoading     },
+        { label: "Inventory",      value: inventoryCount, icon: Car,      color: "amber"   as const, loading: inventoryLoading },
     ];
 
     return (
@@ -377,25 +389,28 @@ export default function DashboardPage() {
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 {STATS.map((stat, i) => (
-                    <Card key={i} className="rounded-2xl border-border/70 bg-card/90 p-0 shadow-sm transition-colors hover:border-blue-200 dark:bg-card/80 dark:hover:border-blue-500/30">
-                        <CardContent className="p-5">
-                            <div className="mb-5 flex items-center justify-between">
-                                <div className={cn("p-3 rounded-xl w-fit shadow-sm", COLOR[stat.color].bg)}>
-                                    <stat.icon className={cn("w-6 h-6", COLOR[stat.color].text)} />
+                    <Reveal key={i} direction="up" delay={i * 80} className="h-full">
+                        <Card className="stat-card hover-lift h-full rounded-2xl border-border/70 bg-card/90 p-0 shadow-sm transition-colors hover:border-blue-200 dark:bg-card/80 dark:hover:border-blue-500/30">
+                            <CardContent className="p-5">
+                                <div className="mb-5 flex items-center justify-between">
+                                    <div className={cn("p-3 rounded-xl w-fit shadow-sm", COLOR[stat.color].bg)}>
+                                        <stat.icon className={cn("w-6 h-6", COLOR[stat.color].text)} />
+                                    </div>
+                                    <span className="rounded-full border border-border bg-background px-2.5 py-1 text-[11px] font-bold text-muted-foreground">
+                                        30 days
+                                    </span>
                                 </div>
-                                <span className="rounded-full border border-border bg-background px-2.5 py-1 text-[11px] font-bold text-muted-foreground">
-                                    30 days
-                                </span>
-                            </div>
-                            <p className="text-sm text-muted-foreground">{stat.label}</p>
-                            <p className="mt-1 text-3xl font-black tracking-tight">
-                                {statsLoading
-                                    ? <Loader2 className="w-6 h-6 animate-spin text-muted-foreground" />
-                                    : stat.value !== null ? fmt(stat.value) : "—"
-                                }
-                            </p>
-                        </CardContent>
-                    </Card>
+                                <p className="text-sm text-muted-foreground">{stat.label}</p>
+                                {stat.loading ? (
+                                    <Skeleton className="mt-2 h-8 w-20" />
+                                ) : (
+                                    <p className="mt-1 text-3xl font-black tracking-tight">
+                                        {stat.value !== null ? <CountUp value={fmt(stat.value)} /> : "—"}
+                                    </p>
+                                )}
+                            </CardContent>
+                        </Card>
+                    </Reveal>
                 ))}
             </div>
 
@@ -423,12 +438,12 @@ export default function DashboardPage() {
                         {leadsLoading ? (
                             <div className="space-y-4">
                                 {[...Array(3)].map((_, i) => (
-                                    <div key={i} className="flex items-start gap-4 p-4 rounded-xl bg-muted/30 animate-pulse">
-                                        <div className="w-12 h-12 rounded-full bg-muted shrink-0" />
+                                    <div key={i} className="flex items-start gap-4 p-4 rounded-xl bg-muted/30">
+                                        <Skeleton className="w-12 h-12 rounded-full shrink-0" />
                                         <div className="flex-1 space-y-2 pt-1">
-                                            <div className="h-3.5 bg-muted rounded-full w-1/3" />
-                                            <div className="h-3 bg-muted rounded-full w-1/2" />
-                                            <div className="h-3 bg-muted rounded-full w-2/3" />
+                                            <Skeleton className="h-3.5 rounded-full w-1/3" />
+                                            <Skeleton className="h-3 rounded-full w-1/2" />
+                                            <Skeleton className="h-3 rounded-full w-2/3" />
                                         </div>
                                     </div>
                                 ))}
@@ -506,11 +521,10 @@ export default function DashboardPage() {
                     {/* Performance Scorecard */}
                     <DealerScorecard
                         dealerId={dealerId ?? ''}
-                        inventoryCount={topVehicles.length}
+                        inventoryCount={inventoryCount ?? 0}
                         leadsCount={leadsCount ?? 0}
-                        isVerified={false}
-                        avgRating={0}
-                        reviewCount={0}
+                        avgRating={avgRating}
+                        reviewCount={reviewCount}
                         profileComplete={!!(data.dealershipName && data.phone && data.email)}
                     />
 

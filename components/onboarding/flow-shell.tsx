@@ -9,6 +9,7 @@ import {
     Car,
     Check,
     CheckCircle2,
+    Circle,
     Globe2,
     Headphones,
     ShieldCheck,
@@ -229,13 +230,37 @@ export function DealerPreviewCard({ dealerName, slug, phone, city, className }: 
     );
 }
 
-export function LaunchChecklist({ uploadedCount = 0 }: { uploadedCount?: number }) {
-    const items = [
-        "Dealer details added",
-        uploadedCount > 0 ? `Inventory uploaded (${uploadedCount} vehicles)` : "Inventory setup ready",
-        "Contact details verified",
-        "Website pages ready",
-        "SEO basics configured",
+type LaunchChecklistProps = {
+    uploadedCount?: number;
+    hasDealerDetails?: boolean;
+    hasContactDetails?: boolean;
+    /** True once the site has been published, so post-publish items can flip to done. */
+    published?: boolean;
+};
+
+export function LaunchChecklist({
+    uploadedCount = 0,
+    hasDealerDetails = false,
+    hasContactDetails = false,
+    published = false,
+}: LaunchChecklistProps) {
+    // Each item carries its own completion state so we don't show a green check
+    // for things that aren't actually verified yet (e.g. before publish).
+    const items: { label: string; done: boolean }[] = [
+        { label: "Dealer details added", done: hasDealerDetails },
+        {
+            label: uploadedCount > 0 ? `Inventory uploaded (${uploadedCount} vehicles)` : "Inventory setup",
+            done: uploadedCount > 0,
+        },
+        { label: "Contact details added", done: hasContactDetails },
+        {
+            label: published ? "Website pages ready" : "Website pages — generated on publish",
+            done: published,
+        },
+        {
+            label: published ? "SEO basics configured" : "SEO basics — applied on publish",
+            done: published,
+        },
     ];
 
     return (
@@ -243,9 +268,19 @@ export function LaunchChecklist({ uploadedCount = 0 }: { uploadedCount?: number 
             <h3 className="text-base font-black text-[#071436]">Launch Checklist</h3>
             <div className="mt-4 space-y-3">
                 {items.map((item) => (
-                    <div key={item} className="flex items-center gap-3 text-sm font-semibold text-[#35445C]">
-                        <CheckCircle2 className="h-4 w-4 shrink-0 text-[#16A34A]" />
-                        {item}
+                    <div
+                        key={item.label}
+                        className={cn(
+                            "flex items-center gap-3 text-sm font-semibold",
+                            item.done ? "text-[#35445C]" : "text-[#8A97AA]"
+                        )}
+                    >
+                        {item.done ? (
+                            <CheckCircle2 className="h-4 w-4 shrink-0 text-[#16A34A]" />
+                        ) : (
+                            <Circle className="h-4 w-4 shrink-0 text-[#B6C0D0]" />
+                        )}
+                        {item.label}
                     </div>
                 ))}
             </div>

@@ -35,6 +35,20 @@ export async function POST(request: NextRequest) {
     } catch (error) {
         const msg = error instanceof Error ? error.message : String(error)
         console.error('[/api/auth/registration-availability] Error:', msg)
+
+        // A missing/placeholder env var (e.g. SUPABASE_SERVICE_ROLE_KEY) is a server
+        // *configuration* problem, not a transient failure. getRequiredEnv throws
+        // messages prefixed with "[ENV]". Surface those as 503 so the real cause is
+        // not masked behind a generic "try again" message (which silently hid a
+        // missing service-role key — see Gotchas). The full message is logged above;
+        // the client message intentionally omits the key name.
+        if (msg.startsWith('[ENV]')) {
+            return NextResponse.json(
+                { available: false, error: 'Registration is temporarily unavailable due to a server configuration issue. Please try again later.' },
+                { status: 503 }
+            )
+        }
+
         return NextResponse.json(
             { available: false, error: 'Could not validate registration details. Please try again.' },
             { status: 500 }

@@ -33,6 +33,21 @@ import {
 const inputClassName =
     "h-12 rounded-lg border-[#D8E0EA] bg-white px-4 text-base font-medium text-[#071436] shadow-[0_8px_22px_rgba(7,20,54,0.03)] placeholder:text-[#8A97AA] focus-visible:ring-[#155EEF]";
 
+// Maps the stored style-template id to the friendly name the user picked in the
+// style selector, so the summary never shows the raw id (e.g. "luxury").
+const TEMPLATE_DISPLAY_NAMES: Record<string, string> = {
+    luxury: "Modern",
+    family: "Classic",
+    sporty: "Sporty",
+    professional: "Professional",
+    modern: "Modern",
+};
+
+function getTemplateDisplayName(templateId?: string): string {
+    if (!templateId) return "Not selected";
+    return TEMPLATE_DISPLAY_NAMES[templateId] ?? templateId;
+}
+
 function SectionPanel({
     icon: Icon,
     eyebrow,
@@ -156,9 +171,6 @@ export default function Step5Page() {
                                 Fine tune the text, links, images, and operating details before the final review.
                             </CardDescription>
                         </div>
-                        <div className="w-fit rounded-full border border-[#CFE0FF] bg-white px-4 py-2 text-sm font-black text-[#155EEF] shadow-[0_10px_24px_rgba(21,94,239,0.08)]">
-                            Step 5 of 6
-                        </div>
                     </div>
                 </CardHeader>
 
@@ -279,6 +291,7 @@ export default function Step5Page() {
 
                                 <div className="mt-5 space-y-3">
                                     {[
+                                        `Style: ${getTemplateDisplayName(data.styleTemplate)}`,
                                         "Hero copy ready",
                                         config.featuresTitle ? "Feature title added" : "Feature title uses default",
                                         config.workingHours ? "Business hours added" : "Business hours optional",

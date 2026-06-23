@@ -5,20 +5,27 @@ import Link from "next/link"
 import { useOnboardingStore } from "@/lib/store/onboarding-store"
 import { Plus, Pencil, Trash2, Eye } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { confirm } from "@/components/ui/confirm-dialog"
+import { toast } from "@/lib/utils/toast"
 import type { ThreeWheelerVehicle } from "@/lib/types/three-wheeler"
 import { getScrapedImageFallback, brandNameToId } from "@/lib/utils/brand-model-images"
+
+const PAGE_SIZE = 50
 
 export default function ThreeWheelerInventoryPage() {
     const { dealerId } = useOnboardingStore()
     const [vehicles, setVehicles] = useState<ThreeWheelerVehicle[]>([])
     const [total, setTotal] = useState(0)
+    const [page, setPage] = useState(1)
     const [loading, setLoading] = useState(true)
+    const [loadingMore, setLoadingMore] = useState(false)
 
     const load = useCallback(async () => {
         if (!dealerId) return
         setLoading(true)
+        setPage(1)
         try {
-            const res = await fetch(`/api/three-wheelers?dealerId=${dealerId}&pageSize=50`)
+            const res = await fetch(`/api/three-wheelers?dealerId=${dealerId}&page=1&pageSize=${PAGE_SIZE}`)
             const data = await res.json()
             setVehicles(data.vehicles ?? [])
             setTotal(data.total ?? 0)
@@ -27,11 +34,46 @@ export default function ThreeWheelerInventoryPage() {
         }
     }, [dealerId])
 
+    const loadMore = useCallback(async () => {
+        if (!dealerId || loadingMore) return
+        const nextPage = page + 1
+        setLoadingMore(true)
+        try {
+            const res = await fetch(`/api/three-wheelers?dealerId=${dealerId}&page=${nextPage}&pageSize=${PAGE_SIZE}`)
+            const data = await res.json()
+            const incoming: ThreeWheelerVehicle[] = data.vehicles ?? []
+            setVehicles(prev => {
+                const seen = new Set(prev.map(v => v.id))
+                return [...prev, ...incoming.filter(v => !seen.has(v.id))]
+            })
+            setTotal(data.total ?? total)
+            setPage(nextPage)
+        } finally {
+            setLoadingMore(false)
+        }
+    }, [dealerId, loadingMore, page, total])
+
     useEffect(() => { load() }, [load])
 
-    async function handleDelete(id: string) {
-        if (!confirm("Remove this vehicle from your inventory?")) return
-        await fetch(`/api/three-wheelers/${id}`, { method: "DELETE" })
+    const hasMore = vehicles.length < total
+
+    async function handleDelete(vehicle: ThreeWheelerVehicle) {
+        const name = `${vehicle.brand} ${vehicle.model}`.trim()
+        const ok = await confirm({
+            title: "Remove this vehicle?",
+            description: `"${name}" will be removed from your inventory and your public website. You can re-add it later.`,
+            confirmText: "Remove vehicle",
+            destructive: true,
+        })
+        if (!ok) return
+
+        const res = await fetch(`/api/three-wheelers/${vehicle.id}`, { method: "DELETE" })
+        if (!res.ok) {
+            const data = await res.json().catch(() => null)
+            toast.error(data?.error ?? "Couldn't remove the vehicle. Please try again.")
+            return
+        }
+        toast.success("Vehicle removed.")
         load()
     }
 
@@ -62,6 +104,7 @@ export default function ThreeWheelerInventoryPage() {
                     <Button asChild><Link href="/dashboard/three-wheelers/inventory/add">Add Vehicle</Link></Button>
                 </div>
             ) : (
+                <>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                     {vehicles.map((v) => (
                         <div key={v.id} className="bg-card border border-border rounded-xl overflow-hidden">
@@ -80,9 +123,9 @@ export default function ThreeWheelerInventoryPage() {
                                             ₹{(v.ex_showroom_price_paise / 100).toLocaleString("en-IN")}
                                         </p>
                                     </div>
-                                    <span className={`text-xs px-2 py-0.5 rounded-full ${v.stock_status === "available" ? "bg-green-100 text-green-700" :
-                                            v.stock_status === "booking_open" ? "bg-blue-100 text-blue-700" :
-                                                "bg-gray-100 text-gray-700"
+                                    <span className={`text-xs px-2 py-0.5 rounded-full ${v.stock_status === "available" ? "bg-green-100 text-green-700 dark:bg-green-500/15 dark:text-green-300" :
+                                            v.stock_status === "booking_open" ? "bg-blue-100 text-blue-700 dark:bg-blue-500/15 dark:text-blue-300" :
+                                                "bg-gray-100 text-gray-700 dark:bg-gray-500/15 dark:text-gray-300"
                                         }`}>
                                         {v.stock_status.replace("_", " ")}
                                     </span>
@@ -93,7 +136,7 @@ export default function ThreeWheelerInventoryPage() {
                                             <Pencil className="w-3 h-3 mr-1" /> Edit
                                         </Link>
                                     </Button>
-                                    <Button variant="outline" size="sm" className="text-destructive hover:text-destructive" onClick={() => handleDelete(v.id)}>
+                                    <Button variant="outline" size="sm" className="text-destructive hover:text-destructive" title="Remove vehicle" aria-label={`Remove ${v.brand} ${v.model}`} onClick={() => handleDelete(v)}>
                                         <Trash2 className="w-3 h-3" />
                                     </Button>
                                     <span className="text-xs text-muted-foreground ml-auto flex items-center gap-1">
@@ -104,6 +147,14 @@ export default function ThreeWheelerInventoryPage() {
                         </div>
                     ))}
                 </div>
+                {hasMore && (
+                    <div className="flex justify-center">
+                        <Button variant="outline" onClick={loadMore} disabled={loadingMore}>
+                            {loadingMore ? "Loading..." : `Load more (${total - vehicles.length} remaining)`}
+                        </Button>
+                    </div>
+                )}
+                </>
             )}
         </div>
     )

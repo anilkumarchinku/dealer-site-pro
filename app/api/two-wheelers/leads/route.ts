@@ -12,6 +12,7 @@ import {
     buildVehicleLeadPayload,
     createVehicleLeadRouteHandlers,
 } from '@/lib/services/vehicle-lead-route-service'
+import { rateLimitOrNull } from '@/lib/utils/rate-limiter'
 
 function formatError(error: unknown): string {
     return formatZodErrors(error as z.ZodError)
@@ -36,6 +37,9 @@ const leadOptions = {
 } as const
 
 const handlers = createVehicleLeadRouteHandlers(leadOptions)
-export const POST = handlers.POST
+export async function POST(request: NextRequest) {
+    const limited = await rateLimitOrNull("vehicle_lead_create_2w", request, 5, 60000); if (limited) return limited;
+    return handlers.POST(request)
+}
 export const GET = handlers.GET
 export const PATCH = handlers.PATCH

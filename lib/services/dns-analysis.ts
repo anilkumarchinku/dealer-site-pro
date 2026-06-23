@@ -5,6 +5,8 @@
 
 import dns from 'dns/promises';
 import { DNSAnalysis, DeploymentRoute } from '../types/domain-onboarding';
+import { isPubliclyRoutableHost } from '@/lib/utils/ssrf-guard';
+import { logger } from '@/lib/utils/logger';
 
 export interface DNSScanResult extends DNSAnalysis {
     recommended_route: DeploymentRoute;
@@ -17,7 +19,7 @@ export class DNSAnalysisService {
      * Perform comprehensive DNS scan
      */
     static async scanDomain(domain: string): Promise<DNSScanResult> {
-        console.log(`🔬 Starting DNS scan for ${domain}`);
+        logger.log(`🔬 Starting DNS scan for ${domain}`);
 
         const cleanDomain = domain.replace(/^(https?:\/\/)?(www\.)?/, '');
 
@@ -51,8 +53,8 @@ export class DNSAnalysisService {
         // Determine recommendation
         const recommendation = this.determineRoute(analysis);
 
-        console.log(`✅ DNS scan complete for ${domain}`);
-        console.log(`📊 Recommendation: ${recommendation.recommended_route}`);
+        logger.log(`✅ DNS scan complete for ${domain}`);
+        logger.log(`📊 Recommendation: ${recommendation.recommended_route}`);
 
         return {
             ...analysis,
@@ -66,10 +68,10 @@ export class DNSAnalysisService {
     private static async getNameservers(domain: string): Promise<string[]> {
         try {
             const ns = await dns.resolveNs(domain);
-            console.log(`📡 Nameservers: ${ns.join(', ')}`);
+            logger.log(`📡 Nameservers: ${ns.join(', ')}`);
             return ns;
         } catch (error) {
-            console.log(`⚠️ Could not resolve nameservers`);
+            logger.log(`⚠️ Could not resolve nameservers`);
             return [];
         }
     }
@@ -80,10 +82,10 @@ export class DNSAnalysisService {
     private static async getARecords(domain: string): Promise<string[]> {
         try {
             const addresses = await dns.resolve4(domain);
-            console.log(`🌐 A Records: ${addresses.join(', ')}`);
+            logger.log(`🌐 A Records: ${addresses.join(', ')}`);
             return addresses;
         } catch (error) {
-            console.log(`⚠️ No A records found`);
+            logger.log(`⚠️ No A records found`);
             return [];
         }
     }
@@ -95,10 +97,10 @@ export class DNSAnalysisService {
         try {
             const mx = await dns.resolveMx(domain);
             const exchanges = mx.map(record => record.exchange);
-            console.log(`📧 MX Records: ${exchanges.join(', ')}`);
+            logger.log(`📧 MX Records: ${exchanges.join(', ')}`);
             return exchanges;
         } catch (error) {
-            console.log(`⚠️ No MX records found`);
+            logger.log(`⚠️ No MX records found`);
             return [];
         }
     }
@@ -110,10 +112,10 @@ export class DNSAnalysisService {
         try {
             const txt = await dns.resolveTxt(domain);
             const flattened = txt.flat();
-            console.log(`📝 TXT Records: ${flattened.length} found`);
+            logger.log(`📝 TXT Records: ${flattened.length} found`);
             return flattened;
         } catch (error) {
-            console.log(`⚠️ No TXT records found`);
+            logger.log(`⚠️ No TXT records found`);
             return [];
         }
     }
@@ -130,7 +132,7 @@ export class DNSAnalysisService {
                 const cname = await dns.resolveCname(`${subdomain}.${domain}`);
                 if (cname && cname.length > 0) {
                     cnameRecords[subdomain] = cname[0];
-                    console.log(`🔗 CNAME: ${subdomain}.${domain} → ${cname[0]}`);
+                    logger.log(`🔗 CNAME: ${subdomain}.${domain} → ${cname[0]}`);
                 }
             } catch (error) {
                 // Subdomain doesn't have CNAME, skip
@@ -144,6 +146,10 @@ export class DNSAnalysisService {
      * Check if domain has an active website
      */
     private static async checkActiveWebsite(domain: string): Promise<boolean> {
+        if (!(await isPubliclyRoutableHost(domain))) {
+            return false;
+        }
+
         const urls = [
             `https://${domain}`,
             `http://${domain}`,
@@ -155,11 +161,12 @@ export class DNSAnalysisService {
             try {
                 const response = await fetch(url, {
                     method: 'HEAD',
+                    redirect: 'manual',
                     signal: AbortSignal.timeout(5000)
                 });
 
                 if (response.ok) {
-                    console.log(`✅ Active website detected at ${url}`);
+                    logger.log(`✅ Active website detected at ${url}`);
                     return true;
                 }
             } catch (error) {
@@ -168,7 +175,7 @@ export class DNSAnalysisService {
             }
         }
 
-        console.log(`⚠️ No active website detected`);
+        logger.log(`⚠️ No active website detected`);
         return false;
     }
 

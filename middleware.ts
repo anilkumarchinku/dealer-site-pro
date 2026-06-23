@@ -151,6 +151,19 @@ export async function middleware(request: NextRequest) {
     // Handles both slug.indrav.in subdomains AND custom domains (ganeshmotor.com).
     // Runs for any host that is not the main domain.
     if (!isMainDomain) {
+        // App routes live ONLY on the main domain — a dealer subdomain (or custom
+        // domain) serves the public customer site. Redirect these to the base domain
+        // instead of rewriting to /sites/{slug}/… (which 404s, e.g.
+        // sohan-motors.indrav.in/dashboard → indrav.in/dashboard).
+        const APP_ONLY_PREFIXES = ['/dashboard', '/onboarding', '/preview', '/auth', '/admin']
+        if (APP_ONLY_PREFIXES.some(p => pathname === p || pathname.startsWith(`${p}/`))) {
+            const target = new URL(request.url)
+            target.protocol = 'https:'
+            target.hostname = baseHostname
+            target.port = ''
+            return NextResponse.redirect(target, 307)
+        }
+
         // 1. Fast path: subdomain-style slug (e.g. ganesh.indrav.in → "ganesh")
         const slug = extractSlugFromHostname(hostname, BASE_DOMAIN)
         if (slug) {

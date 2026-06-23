@@ -14,7 +14,6 @@ import { VehicleCard } from "@/components/two-wheelers/VehicleCard"
 import { CompareBar } from "@/components/two-wheelers/CompareBar"
 import { LeadFormModal } from "@/components/two-wheelers/LeadFormModal"
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton"
-import { getScrapedImageUrls, brandNameToId } from "@/lib/utils/brand-model-images"
 import { useSitePrefix } from "@/lib/hooks/useSitePrefix"
 
 // ── Brand color themes — keyed by EXACT brand name stored in DB ───────────────
@@ -477,6 +476,7 @@ export function TwoWheelerTemplate({
                                     }`}
                                 onClick={() => setMobileMenuOpen(o => !o)}
                                 aria-label="Menu"
+                                aria-expanded={mobileMenuOpen}
                             >
                                 {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
                             </button>
@@ -539,7 +539,7 @@ export function TwoWheelerTemplate({
 
                             <p className="text-white/60 text-base max-w-md">
                                 Your trusted 2-Wheeler destination — bikes, scooters & electric vehicles.
-                                {vehicles.length > 0 && ` ${vehicles.length}+ models in stock.`}
+                                {vehicles.length > 0 && ` ${vehicles.length} model${vehicles.length === 1 ? "" : "s"} in stock.`}
                             </p>
 
                             <div className="flex flex-wrap gap-3 pt-2">
@@ -566,8 +566,8 @@ export function TwoWheelerTemplate({
                             {/* Quick stats */}
                             <div className="flex flex-wrap gap-6 pt-4 border-t border-white/10">
                                 {[
-                                    { label: "Models", value: `${vehicles.length}+` },
-                                    { label: "Brands", value: `${new Set(vehicles.map(v => v.brand)).size}+` },
+                                    { label: "Models", value: `${vehicles.length}` },
+                                    { label: "Brands", value: `${new Set(vehicles.map(v => v.brand)).size}` },
                                     { label: "Service", value: "Expert" },
                                 ].map(s => (
                                     <div key={s.label} className="text-center">
@@ -759,7 +759,7 @@ export function TwoWheelerTemplate({
                     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                         {[
                             { Icon: Wrench, title: "Expert Service", text: "Factory-trained technicians for all 2W brands" },
-                            { Icon: CreditCard, title: "Easy Finance", text: "EMI starting ₹999/month — HDFC, Bajaj & more" },
+                            { Icon: CreditCard, title: "Easy Finance", text: "Easy EMI options available to suit your budget" },
                             { Icon: RotateCcw, title: "Exchange Offer", text: "Best exchange value for your old bike or scooter" },
                             ...(tabCounts.electric > 0 ? [{ Icon: Zap, title: "EV Specialists", text: "Test rides & charging demos for electric models" }] : []),
                         ].map(s => (

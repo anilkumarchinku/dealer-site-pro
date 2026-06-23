@@ -5,6 +5,7 @@
  */
 
 import { env } from '@/lib/env'
+import { logger } from '@/lib/utils/logger'
 
 export interface DNSRecord {
     type: 'A' | 'CNAME' | 'TXT'
@@ -102,7 +103,7 @@ export async function verifyCustomDomain(
                 : 'DNS records not configured correctly. Please update your DNS settings.'
         }
     } catch (error) {
-        console.error('DNS verification error:', error)
+        logger.error('DNS verification error:', error)
         return {
             success: false,
             records,

@@ -272,11 +272,11 @@ export default function AutoDetailPage() {
     // ── Loading state ───────────────────────────────────────────
     if (loading) {
         return (
-            <div className="min-h-screen bg-gray-50">
+            <div className="min-h-screen bg-background">
                 <SiteHeader />
                 <div className="flex items-center justify-center py-32">
-                    <Loader2 className="w-8 h-8 animate-spin text-gray-400" />
-                    <span className="ml-3 text-gray-500 text-lg">Loading vehicle details...</span>
+                    <Loader2 className="w-8 h-8 animate-spin text-muted-foreground" />
+                    <span className="ml-3 text-muted-foreground text-lg">Loading vehicle details...</span>
                 </div>
                 <SiteFooter />
             </div>
@@ -286,15 +286,15 @@ export default function AutoDetailPage() {
     // ── Error / not found ───────────────────────────────────────
     if (error || !vehicle) {
         return (
-            <div className="min-h-screen bg-gray-50">
+            <div className="min-h-screen bg-background">
                 <SiteHeader />
                 <div className="max-w-7xl mx-auto px-4 py-32 text-center">
                     <p className="text-6xl mb-4">🛺</p>
-                    <h1 className="text-2xl font-bold text-gray-900 mb-2">Auto Not Found</h1>
-                    <p className="text-gray-600 mb-6">{error || 'The vehicle you are looking for does not exist.'}</p>
+                    <h1 className="text-2xl font-bold text-foreground mb-2">Auto Not Found</h1>
+                    <p className="text-muted-foreground mb-6">{error || 'The vehicle you are looking for does not exist.'}</p>
                     <Link
                         href="/autos"
-                        className="inline-flex items-center gap-2 rounded-lg bg-gray-900 text-white text-sm font-semibold px-6 py-3 hover:bg-gray-800 transition-colors"
+                        className="inline-flex items-center gap-2 rounded-lg bg-primary text-primary-foreground text-sm font-semibold px-6 py-3 hover:opacity-90 transition-opacity"
                     >
                         Browse All Autos
                     </Link>
@@ -328,24 +328,24 @@ export default function AutoDetailPage() {
     if (vehicle.body_type) capacitySpecs.push({ label: 'Body Type', value: vehicle.body_type });
 
     return (
-        <div className="min-h-screen bg-gray-50">
+        <div className="min-h-screen bg-background">
             <SiteHeader />
 
             <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
                 {/* ── Breadcrumb ─────────────────────────────────────── */}
-                <nav className="flex items-center gap-2 text-sm text-gray-500 mb-6">
-                    <Link href="/" className="hover:text-gray-700 transition-colors">Home</Link>
+                <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-6">
+                    <Link href="/" className="hover:text-foreground transition-colors">Home</Link>
                     <ChevronRight className="w-3.5 h-3.5" />
-                    <Link href="/autos" className="hover:text-gray-700 transition-colors">Autos</Link>
+                    <Link href="/autos" className="hover:text-foreground transition-colors">Autos</Link>
                     <ChevronRight className="w-3.5 h-3.5" />
                     <Link
                         href={`/autos?make=${encodeURIComponent(vehicle.make)}`}
-                        className="hover:text-gray-700 transition-colors"
+                        className="hover:text-foreground transition-colors"
                     >
                         {vehicle.make}
                     </Link>
                     <ChevronRight className="w-3.5 h-3.5" />
-                    <span className="text-gray-900 font-medium">{vehicle.model}</span>
+                    <span className="text-foreground font-medium">{vehicle.model}</span>
                 </nav>
 
                 {/* ══════════════════════════════════════════════════════
@@ -353,7 +353,7 @@ export default function AutoDetailPage() {
                    ══════════════════════════════════════════════════════ */}
                 <section className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
                     {/* Hero Image */}
-                    <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden">
+                    <div className="bg-card border border-border rounded-2xl overflow-hidden">
                         <HeroImage imageUrls={imageUrls} alt={title} />
                     </div>
 
@@ -362,35 +362,35 @@ export default function AutoDetailPage() {
                         {/* Type badges */}
                         <div>
                             <div className="flex items-center gap-2 mb-3">
-                                <span className="inline-flex items-center gap-1 bg-gray-100 text-gray-700 text-xs font-semibold px-2.5 py-1 rounded-full">
+                                <span className="inline-flex items-center gap-1 bg-muted text-muted-foreground text-xs font-semibold px-2.5 py-1 rounded-full">
                                     <span>🛺</span> {typeLabel}
                                 </span>
                                 {isElectric && (
-                                    <span className="inline-flex items-center gap-1 bg-emerald-50 text-emerald-700 text-xs font-semibold px-2.5 py-1 rounded-full">
+                                    <span className="inline-flex items-center gap-1 bg-emerald-50 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-400 text-xs font-semibold px-2.5 py-1 rounded-full">
                                         <Zap className="w-3 h-3" /> Electric
                                     </span>
                                 )}
                             </div>
 
                             {/* Title */}
-                            <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 leading-tight">
+                            <h1 className="text-2xl sm:text-3xl font-bold text-foreground leading-tight">
                                 {vehicle.make} {vehicle.model}
                             </h1>
                             {vehicle.variant && (
-                                <p className="text-base text-gray-600 mt-1">{vehicle.variant}</p>
+                                <p className="text-base text-muted-foreground mt-1">{vehicle.variant}</p>
                             )}
 
                             {/* Price */}
                             <div className="mt-4 mb-6">
                                 {(vehicle.price_min_paise ?? 0) > 0 ? (
                                     <>
-                                        <p className="text-3xl font-bold text-gray-900">
+                                        <p className="text-3xl font-bold text-foreground">
                                             {formatPrice(vehicle.price_min_paise!)}
                                         </p>
-                                        <p className="text-sm text-gray-500 mt-0.5">Ex-showroom price</p>
+                                        <p className="text-sm text-muted-foreground mt-0.5">Ex-showroom price</p>
                                     </>
                                 ) : (
-                                    <p className="text-xl font-semibold text-gray-500 italic">
+                                    <p className="text-xl font-semibold text-muted-foreground italic">
                                         Price on request
                                     </p>
                                 )}
@@ -429,7 +429,7 @@ export default function AutoDetailPage() {
                                 ) : null}
                                 {vehicle.transmission && (
                                     <QuickSpec
-                                        icon={<Settings className="w-4 h-4 text-gray-600" />}
+                                        icon={<Settings className="w-4 h-4 text-muted-foreground" />}
                                         label="Transmission"
                                         value={vehicle.transmission}
                                     />
@@ -441,14 +441,14 @@ export default function AutoDetailPage() {
                         <div className="flex items-center gap-3">
                             <Link
                                 href="/autos"
-                                className="inline-flex items-center justify-center gap-2 rounded-lg bg-gray-900 text-white text-sm font-semibold px-6 py-3 hover:bg-gray-800 transition-colors"
+                                className="inline-flex items-center justify-center gap-2 rounded-lg bg-primary text-primary-foreground text-sm font-semibold px-6 py-3 hover:opacity-90 transition-opacity"
                             >
                                 <MapPin className="w-4 h-4" />
                                 Find a Dealer
                             </Link>
                             <button
                                 onClick={handleShare}
-                                className="inline-flex items-center justify-center gap-2 rounded-lg border border-gray-300 bg-white text-gray-700 text-sm font-semibold px-5 py-3 hover:bg-gray-50 transition-colors"
+                                className="inline-flex items-center justify-center gap-2 rounded-lg border border-border bg-card text-foreground text-sm font-semibold px-5 py-3 hover:bg-muted transition-colors"
                             >
                                 <Share2 className="w-4 h-4" />
                                 Share
@@ -460,8 +460,8 @@ export default function AutoDetailPage() {
                 {/* ══════════════════════════════════════════════════════
                     SECTION 2: OVERVIEW — Quick Spec Grid
                    ══════════════════════════════════════════════════════ */}
-                <section className="bg-white border border-gray-200 rounded-2xl p-6 sm:p-8 mb-8">
-                    <h2 className="text-xl font-bold text-gray-900 mb-6">
+                <section className="bg-card border border-border rounded-2xl p-6 sm:p-8 mb-8">
+                    <h2 className="text-xl font-bold text-foreground mb-6">
                         {vehicle.make} {vehicle.model} Overview
                     </h2>
                     <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
@@ -496,7 +496,7 @@ export default function AutoDetailPage() {
                             <OverviewCard
                                 label="Transmission"
                                 value={vehicle.transmission}
-                                icon={<Settings className="w-5 h-5 text-gray-600" />}
+                                icon={<Settings className="w-5 h-5 text-muted-foreground" />}
                             />
                         )}
                         {/* Type card removed — not useful for users */}
@@ -504,8 +504,8 @@ export default function AutoDetailPage() {
 
                     {/* Description if available */}
                     {vehicle.description && (
-                        <div className="mt-6 pt-6 border-t border-gray-100">
-                            <p className="text-sm text-gray-700 leading-relaxed whitespace-pre-line">
+                        <div className="mt-6 pt-6 border-t border-border">
+                            <p className="text-sm text-muted-foreground leading-relaxed whitespace-pre-line">
                                 {vehicle.description}
                             </p>
                         </div>
@@ -515,16 +515,16 @@ export default function AutoDetailPage() {
                 {/* ══════════════════════════════════════════════════════
                     SECTION 3: SPECIFICATIONS — Full Spec Tables
                    ══════════════════════════════════════════════════════ */}
-                <section className="bg-white border border-gray-200 rounded-2xl p-6 sm:p-8 mb-8">
-                    <h2 className="text-xl font-bold text-gray-900 mb-6">
+                <section className="bg-card border border-border rounded-2xl p-6 sm:p-8 mb-8">
+                    <h2 className="text-xl font-bold text-foreground mb-6">
                         {vehicle.make} {vehicle.model} Specifications
                     </h2>
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                         {/* Engine & Transmission */}
                         {engineSpecs.length > 0 && (
                             <div>
-                                <h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-4 flex items-center gap-2">
-                                    <Settings className="w-4 h-4 text-gray-500" />
+                                <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider mb-4 flex items-center gap-2">
+                                    <Settings className="w-4 h-4 text-muted-foreground" />
                                     Engine & Transmission
                                 </h3>
                                 <div className="space-y-0">
@@ -538,8 +538,8 @@ export default function AutoDetailPage() {
                         {/* Performance */}
                         {performanceSpecs.length > 0 && (
                             <div>
-                                <h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-4 flex items-center gap-2">
-                                    <Gauge className="w-4 h-4 text-gray-500" />
+                                <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider mb-4 flex items-center gap-2">
+                                    <Gauge className="w-4 h-4 text-muted-foreground" />
                                     Performance
                                 </h3>
                                 <div className="space-y-0">
@@ -553,8 +553,8 @@ export default function AutoDetailPage() {
                         {/* Capacity & Dimensions */}
                         {capacitySpecs.length > 0 && (
                             <div>
-                                <h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-4 flex items-center gap-2">
-                                    <Package className="w-4 h-4 text-gray-500" />
+                                <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider mb-4 flex items-center gap-2">
+                                    <Package className="w-4 h-4 text-muted-foreground" />
                                     Capacity & Dimensions
                                 </h3>
                                 <div className="space-y-0">
@@ -571,15 +571,15 @@ export default function AutoDetailPage() {
                     SECTION 4: FEATURES — Key Features List
                    ══════════════════════════════════════════════════════ */}
                 {features.length > 0 && (
-                    <section className="bg-white border border-gray-200 rounded-2xl p-6 sm:p-8 mb-8">
-                        <h2 className="text-xl font-bold text-gray-900 mb-6">
+                    <section className="bg-card border border-border rounded-2xl p-6 sm:p-8 mb-8">
+                        <h2 className="text-xl font-bold text-foreground mb-6">
                             {vehicle.make} {vehicle.model} Key Features
                         </h2>
                         <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                             {features.map((feature, idx) => (
                                 <li
                                     key={idx}
-                                    className="flex items-start gap-2.5 text-sm text-gray-700 bg-gray-50 rounded-xl px-4 py-3"
+                                    className="flex items-start gap-2.5 text-sm text-muted-foreground bg-muted rounded-xl px-4 py-3"
                                 >
                                     <CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 shrink-0" />
                                     <span>{feature}</span>
@@ -592,57 +592,57 @@ export default function AutoDetailPage() {
                 {/* ══════════════════════════════════════════════════════
                     SECTION 5: VARIANTS & PRICE
                    ══════════════════════════════════════════════════════ */}
-                <section className="bg-white border border-gray-200 rounded-2xl p-6 sm:p-8 mb-8">
-                    <h2 className="text-xl font-bold text-gray-900 mb-6">
+                <section className="bg-card border border-border rounded-2xl p-6 sm:p-8 mb-8">
+                    <h2 className="text-xl font-bold text-foreground mb-6">
                         {vehicle.make} {vehicle.model} Variants & Price
                     </h2>
                     {variants.length > 0 ? (
                         <div className="overflow-x-auto">
                             <table className="w-full text-sm">
                                 <thead>
-                                    <tr className="border-b border-gray-200 bg-gray-50/60">
-                                        <th className="text-left py-3 px-4 font-semibold text-gray-700">Variant</th>
-                                        <th className="text-left py-3 px-4 font-semibold text-gray-700">Ex-Showroom Price</th>
-                                        <th className="text-left py-3 px-4 font-semibold text-gray-700">Fuel</th>
-                                        <th className="text-left py-3 px-4 font-semibold text-gray-700">Power</th>
-                                        <th className="text-right py-3 px-4 font-semibold text-gray-700">Action</th>
+                                    <tr className="border-b border-border bg-muted/60">
+                                        <th className="text-left py-3 px-4 font-semibold text-muted-foreground">Variant</th>
+                                        <th className="text-left py-3 px-4 font-semibold text-muted-foreground">Ex-Showroom Price</th>
+                                        <th className="text-left py-3 px-4 font-semibold text-muted-foreground">Fuel</th>
+                                        <th className="text-left py-3 px-4 font-semibold text-muted-foreground">Power</th>
+                                        <th className="text-right py-3 px-4 font-semibold text-muted-foreground">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     {variants.map((v) => (
                                         <tr
                                             key={v.id}
-                                            className={`border-b border-gray-100 hover:bg-gray-50 transition-colors ${v.id === vehicle.id ? 'bg-blue-50/40' : ''}`}
+                                            className={`border-b border-border hover:bg-muted transition-colors ${v.id === vehicle.id ? 'bg-primary/5' : ''}`}
                                         >
                                             <td className="py-3 px-4">
-                                                <span className="font-medium text-gray-900">
+                                                <span className="font-medium text-foreground">
                                                     {v.variant || vehicle.model}
                                                 </span>
                                                 {v.id === vehicle.id && (
-                                                    <span className="ml-2 inline-flex items-center bg-blue-100 text-blue-700 text-[10px] font-semibold px-1.5 py-0.5 rounded">
+                                                    <span className="ml-2 inline-flex items-center bg-primary/10 text-primary text-[10px] font-semibold px-1.5 py-0.5 rounded">
                                                         Current
                                                     </span>
                                                 )}
                                             </td>
-                                            <td className="py-3 px-4 font-semibold text-gray-900">
+                                            <td className="py-3 px-4 font-semibold text-foreground">
                                                 {formatPrice(v.price_min_paise)}
                                             </td>
-                                            <td className="py-3 px-4 text-gray-700">
+                                            <td className="py-3 px-4 text-muted-foreground">
                                                 {parseFuelType(v.fuel_type)}
                                             </td>
-                                            <td className="py-3 px-4 text-gray-600">
+                                            <td className="py-3 px-4 text-muted-foreground">
                                                 {v.max_power || '-'}
                                             </td>
                                             <td className="py-3 px-4 text-right">
                                                 {v.id !== vehicle.id ? (
                                                     <Link
                                                         href={`/autos/${v.id}`}
-                                                        className="inline-flex items-center text-xs font-semibold text-gray-700 border border-gray-300 rounded-lg px-3 py-1.5 hover:bg-gray-100 transition-colors"
+                                                        className="inline-flex items-center text-xs font-semibold text-foreground border border-border rounded-lg px-3 py-1.5 hover:bg-muted transition-colors"
                                                     >
                                                         View
                                                     </Link>
                                                 ) : (
-                                                    <span className="text-xs text-gray-400">Viewing</span>
+                                                    <span className="text-xs text-muted-foreground">Viewing</span>
                                                 )}
                                             </td>
                                         </tr>
@@ -651,7 +651,7 @@ export default function AutoDetailPage() {
                             </table>
                         </div>
                     ) : (
-                        <p className="text-sm text-gray-500 text-center py-8">
+                        <p className="text-sm text-muted-foreground text-center py-8">
                             Only one variant available for this model.
                         </p>
                     )}
@@ -660,8 +660,8 @@ export default function AutoDetailPage() {
                 {/* ══════════════════════════════════════════════════════
                     SECTION 6: EMI CALCULATOR
                    ══════════════════════════════════════════════════════ */}
-                <section className="bg-white border border-gray-200 rounded-2xl p-6 sm:p-8 mb-8">
-                    <h2 className="text-xl font-bold text-gray-900 mb-6">
+                <section className="bg-card border border-border rounded-2xl p-6 sm:p-8 mb-8">
+                    <h2 className="text-xl font-bold text-foreground mb-6">
                         {vehicle.make} {vehicle.model} EMI Calculator
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -708,56 +708,56 @@ export default function AutoDetailPage() {
                         {/* Result */}
                         <div>
                             {emiResult ? (
-                                <div className="bg-gray-50 rounded-2xl p-6 h-full flex flex-col">
-                                    <div className="text-center pb-4 mb-4 border-b border-gray-200">
-                                        <p className="text-xs font-semibold uppercase tracking-wider text-gray-600 mb-1">Monthly EMI</p>
-                                        <p className="text-4xl font-bold text-gray-900">
+                                <div className="bg-muted rounded-2xl p-6 h-full flex flex-col">
+                                    <div className="text-center pb-4 mb-4 border-b border-border">
+                                        <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">Monthly EMI</p>
+                                        <p className="text-4xl font-bold text-foreground">
                                             ₹{emiResult.emi.toLocaleString('en-IN')}
                                         </p>
-                                        <p className="text-xs text-gray-500 mt-1">per month for {emiTenure} months</p>
+                                        <p className="text-xs text-muted-foreground mt-1">per month for {emiTenure} months</p>
                                     </div>
                                     <div className="space-y-3 flex-1">
                                         <div className="flex justify-between text-sm">
-                                            <span className="text-gray-600">Loan Amount</span>
-                                            <span className="font-semibold text-gray-900">₹{emiResult.loan.toLocaleString('en-IN')}</span>
+                                            <span className="text-muted-foreground">Loan Amount</span>
+                                            <span className="font-semibold text-foreground">₹{emiResult.loan.toLocaleString('en-IN')}</span>
                                         </div>
                                         <div className="flex justify-between text-sm">
-                                            <span className="text-gray-600">Total Interest</span>
-                                            <span className="font-semibold text-gray-900">₹{emiResult.interest.toLocaleString('en-IN')}</span>
+                                            <span className="text-muted-foreground">Total Interest</span>
+                                            <span className="font-semibold text-foreground">₹{emiResult.interest.toLocaleString('en-IN')}</span>
                                         </div>
-                                        <div className="border-t border-gray-200 pt-3">
+                                        <div className="border-t border-border pt-3">
                                             <div className="flex justify-between text-sm">
-                                                <span className="font-semibold text-gray-700">Total Payable</span>
-                                                <span className="font-bold text-gray-900">₹{emiResult.total.toLocaleString('en-IN')}</span>
+                                                <span className="font-semibold text-muted-foreground">Total Payable</span>
+                                                <span className="font-bold text-foreground">₹{emiResult.total.toLocaleString('en-IN')}</span>
                                             </div>
                                         </div>
                                     </div>
                                     {/* Principal vs Interest bar */}
                                     <div className="mt-4">
                                         <div className="flex justify-between text-[11px] mb-1">
-                                            <span className="text-gray-600">
+                                            <span className="text-muted-foreground">
                                                 Principal {Math.round((emiResult.loan / emiResult.total) * 100)}%
                                             </span>
-                                            <span className="text-gray-600">
+                                            <span className="text-muted-foreground">
                                                 Interest {Math.round((emiResult.interest / emiResult.total) * 100)}%
                                             </span>
                                         </div>
-                                        <div className="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
+                                        <div className="w-full h-2 bg-border rounded-full overflow-hidden">
                                             <div
-                                                className="h-full bg-gray-900 rounded-full transition-all"
+                                                className="h-full bg-primary rounded-full transition-all"
                                                 style={{ width: `${(emiResult.loan / emiResult.total) * 100}%` }}
                                             />
                                         </div>
                                     </div>
-                                    <p className="text-[10px] text-gray-500 mt-3">
+                                    <p className="text-[10px] text-muted-foreground mt-3">
                                         * Indicative EMI. Actual values may vary based on lender terms.
                                     </p>
                                 </div>
                             ) : (
-                                <div className="bg-gray-50 rounded-2xl flex h-full items-center justify-center p-6">
+                                <div className="bg-muted rounded-2xl flex h-full items-center justify-center p-6">
                                     <div className="text-center">
-                                        <Calculator className="w-10 h-10 text-gray-400 mx-auto mb-3" />
-                                        <p className="text-sm text-gray-500">Adjust sliders to calculate EMI</p>
+                                        <Calculator className="w-10 h-10 text-muted-foreground mx-auto mb-3" />
+                                        <p className="text-sm text-muted-foreground">Adjust sliders to calculate EMI</p>
                                     </div>
                                 </div>
                             )}
@@ -771,12 +771,12 @@ export default function AutoDetailPage() {
                 {similarAutos.length > 0 && (
                     <section className="mb-8">
                         <div className="flex items-center justify-between mb-6">
-                            <h2 className="text-xl font-bold text-gray-900">
+                            <h2 className="text-xl font-bold text-foreground">
                                 Similar {vehicle.make} Autos
                             </h2>
                             <Link
                                 href={`/autos?make=${encodeURIComponent(vehicle.make)}`}
-                                className="text-sm font-medium text-gray-700 hover:text-gray-900 hover:underline transition-colors"
+                                className="text-sm font-medium text-muted-foreground hover:text-foreground hover:underline transition-colors"
                             >
                                 View All
                             </Link>
@@ -790,16 +790,16 @@ export default function AutoDetailPage() {
                 )}
 
                 {/* ── Bottom CTA ────────────────────────────────────── */}
-                <section className="bg-gray-900 rounded-2xl p-8 text-center mb-8">
-                    <h2 className="text-xl font-bold text-white mb-2">
+                <section className="bg-primary rounded-2xl p-8 text-center mb-8">
+                    <h2 className="text-xl font-bold text-primary-foreground mb-2">
                         Interested in the {vehicle.make} {vehicle.model}?
                     </h2>
-                    <p className="text-gray-300 text-sm mb-5">
+                    <p className="text-primary-foreground/80 text-sm mb-5">
                         Find an authorized dealer near you for the best prices and offers.
                     </p>
                     <Link
                         href="/autos"
-                        className="inline-flex items-center justify-center gap-2 rounded-lg bg-white text-gray-900 text-sm font-semibold px-6 py-3 hover:bg-gray-100 transition-colors"
+                        className="inline-flex items-center justify-center gap-2 rounded-lg bg-background text-foreground text-sm font-semibold px-6 py-3 hover:bg-muted transition-colors"
                     >
                         <MapPin className="w-4 h-4" />
                         Find a Dealer
@@ -824,13 +824,13 @@ function QuickSpec({
     value: string;
 }) {
     return (
-        <div className="flex items-center gap-3 bg-gray-50 rounded-xl px-4 py-3">
+        <div className="flex items-center gap-3 bg-muted rounded-xl px-4 py-3">
             <div className="shrink-0">{icon}</div>
             <div>
-                <p className="text-[11px] text-gray-500 font-medium uppercase tracking-wider">
+                <p className="text-[11px] text-muted-foreground font-medium uppercase tracking-wider">
                     {label}
                 </p>
-                <p className="text-sm font-semibold text-gray-900">{value}</p>
+                <p className="text-sm font-semibold text-foreground">{value}</p>
             </div>
         </div>
     );
@@ -846,11 +846,11 @@ function OverviewCard({
     icon: React.ReactNode;
 }) {
     return (
-        <div className="flex flex-col items-center text-center bg-gray-50 rounded-xl px-3 py-4 gap-2">
+        <div className="flex flex-col items-center text-center bg-muted rounded-xl px-3 py-4 gap-2">
             <div>{icon}</div>
             <div>
-                <p className="text-xs text-gray-500 font-medium">{label}</p>
-                <p className="text-sm font-bold text-gray-900 mt-0.5">{value}</p>
+                <p className="text-xs text-muted-foreground font-medium">{label}</p>
+                <p className="text-sm font-bold text-foreground mt-0.5">{value}</p>
             </div>
         </div>
     );
@@ -858,9 +858,9 @@ function OverviewCard({
 
 function SpecRow({ label, value }: { label: string; value: string }) {
     return (
-        <div className="flex justify-between items-center py-2.5 border-b border-gray-100">
-            <span className="text-sm text-gray-500">{label}</span>
-            <span className="text-sm font-medium text-gray-900">{value}</span>
+        <div className="flex justify-between items-center py-2.5 border-b border-border">
+            <span className="text-sm text-muted-foreground">{label}</span>
+            <span className="text-sm font-medium text-foreground">{value}</span>
         </div>
     );
 }
@@ -886,10 +886,10 @@ function EmiSlider({
     return (
         <div>
             <div className="flex justify-between items-center mb-2">
-                <label className="text-xs font-semibold uppercase tracking-wider text-gray-600">
+                <label className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
                     {label}
                 </label>
-                <span className="text-sm font-bold text-gray-900">{format(value)}</span>
+                <span className="text-sm font-bold text-foreground">{format(value)}</span>
             </div>
             <input
                 type="range"
@@ -898,7 +898,7 @@ function EmiSlider({
                 step={step}
                 value={value}
                 onChange={(e) => onChange(Number(e.target.value))}
-                className="w-full h-2 bg-gray-200 rounded-full appearance-none cursor-pointer accent-gray-900"
+                className="w-full h-2 bg-muted rounded-full appearance-none cursor-pointer accent-primary"
             />
         </div>
     );
@@ -910,9 +910,9 @@ function SimilarAutoCard({ auto }: { auto: VariantItem }) {
     return (
         <Link
             href={`/autos/${auto.id}`}
-            className="group overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+            className="group overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
         >
-            <div className="relative aspect-[16/10] bg-gray-50">
+            <div className="relative aspect-[16/10] bg-muted">
                 {!imgFailed && auto.image_url ? (
                     <Image
                         src={auto.image_url}
@@ -930,16 +930,16 @@ function SimilarAutoCard({ auto }: { auto: VariantItem }) {
                 )}
             </div>
             <div className="p-4">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.15em] text-gray-500">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.15em] text-muted-foreground">
                     {auto.make}
                 </p>
-                <h3 className="mt-1 line-clamp-1 text-lg font-bold text-gray-900">
+                <h3 className="mt-1 line-clamp-1 text-lg font-bold text-foreground">
                     {auto.model}
                 </h3>
-                <p className="mt-2 text-base font-semibold text-gray-900">
+                <p className="mt-2 text-base font-semibold text-foreground">
                     {formatPrice(auto.price_min_paise)}
                 </p>
-                <div className="mt-3 inline-flex items-center rounded-lg bg-gray-900 text-white px-4 py-2 text-sm font-semibold transition-opacity group-hover:opacity-90">
+                <div className="mt-3 inline-flex items-center rounded-lg bg-primary text-primary-foreground px-4 py-2 text-sm font-semibold transition-opacity group-hover:opacity-90">
                     View Details
                 </div>
             </div>
@@ -954,14 +954,14 @@ function HeroImage({ imageUrls, alt }: { imageUrls: string[]; alt: string }) {
 
     if (failed || imageUrls.length === 0) {
         return (
-            <div className="aspect-[16/10] flex items-center justify-center bg-gray-50">
+            <div className="aspect-[16/10] flex items-center justify-center bg-muted">
                 <span className="text-7xl">🛺</span>
             </div>
         );
     }
 
     return (
-        <div className="relative aspect-[16/10] bg-gray-50">
+        <div className="relative aspect-[16/10] bg-muted">
             <Image
                 src={imageUrls[idx]}
                 alt={alt}

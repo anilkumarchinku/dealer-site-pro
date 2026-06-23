@@ -9,23 +9,7 @@ import { Search, Filter, Mail, Phone, CheckCircle, Loader2, RefreshCw, Clock, Tr
 import { fetchLeads, updateLeadStatus, type ExternalLead } from "@/lib/db/leads";
 import { toast } from "@/lib/utils/toast";
 import { PremiumEmptyState, PremiumPageHeader } from "@/components/dashboard/premium-ui";
-
-function timeAgo(iso: string): string {
-    if (!iso) return "";
-    const diff = Date.now() - new Date(iso).getTime();
-    const mins = Math.floor(diff / 60000);
-    if (mins < 1) return "just now";
-    if (mins < 60) return `${mins}m ago`;
-    const hrs = Math.floor(mins / 60);
-    if (hrs < 24) return `${hrs}h ago`;
-    const days = Math.floor(hrs / 24);
-    if (days < 7) return `${days}d ago`;
-    return new Date(iso).toLocaleDateString("en-IN", { day: "numeric", month: "short" });
-}
-
-function formatLeadType(type: string): string {
-    return type.split("_").map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
-}
+import { timeAgo, titleCaseFromSnake as formatLeadType } from "@/lib/utils/format";
 
 function formatSourceUrl(url: string): string {
     if (!url) return "";
@@ -37,24 +21,24 @@ function formatSourceUrl(url: string): string {
 }
 
 const priorityConfig = {
-    hot: { bg: "bg-red-50", text: "text-red-600", border: "border-red-200", dot: "bg-red-500", label: "HOT" },
-    warm: { bg: "bg-amber-50", text: "text-amber-600", border: "border-amber-200", dot: "bg-amber-500", label: "WARM" },
-    cold: { bg: "bg-blue-50", text: "text-blue-600", border: "border-blue-200", dot: "bg-blue-500", label: "COLD" },
+    hot: { bg: "bg-red-50 dark:bg-red-500/10", text: "text-red-600 dark:text-red-300", border: "border-red-200 dark:border-red-500/20", dot: "bg-red-500", label: "HOT" },
+    warm: { bg: "bg-amber-50 dark:bg-amber-500/10", text: "text-amber-600 dark:text-amber-300", border: "border-amber-200 dark:border-amber-500/20", dot: "bg-amber-500", label: "WARM" },
+    cold: { bg: "bg-blue-50 dark:bg-blue-500/10", text: "text-blue-600 dark:text-blue-300", border: "border-blue-200 dark:border-blue-500/20", dot: "bg-blue-500", label: "COLD" },
 };
 
 const statusConfig: Record<string, { bg: string; text: string; label: string }> = {
-    new: { bg: "bg-green-50", text: "text-green-700", label: "New" },
-    contacted: { bg: "bg-blue-50", text: "text-blue-700", label: "Contacted" },
-    qualified: { bg: "bg-purple-50", text: "text-purple-700", label: "Qualified" },
-    converted: { bg: "bg-emerald-50", text: "text-emerald-700", label: "Converted" },
+    new: { bg: "bg-green-50 dark:bg-green-500/10", text: "text-green-700 dark:text-green-300", label: "New" },
+    contacted: { bg: "bg-blue-50 dark:bg-blue-500/10", text: "text-blue-700 dark:text-blue-300", label: "Contacted" },
+    qualified: { bg: "bg-purple-50 dark:bg-purple-500/10", text: "text-purple-700 dark:text-purple-300", label: "Qualified" },
+    converted: { bg: "bg-emerald-50 dark:bg-emerald-500/10", text: "text-emerald-700 dark:text-emerald-300", label: "Converted" },
     lost: { bg: "bg-muted", text: "text-muted-foreground", label: "Lost" },
 };
 
 const cyeproSyncConfig: Record<string, { bg: string; text: string; label: string }> = {
-    pending: { bg: "bg-amber-50", text: "text-amber-700", label: "CRM pending" },
-    synced: { bg: "bg-emerald-50", text: "text-emerald-700", label: "CRM synced" },
-    failed: { bg: "bg-red-50", text: "text-red-700", label: "CRM failed" },
-    skipped: { bg: "bg-slate-100", text: "text-slate-600", label: "CRM skipped" },
+    pending: { bg: "bg-amber-50 dark:bg-amber-500/10", text: "text-amber-700 dark:text-amber-300", label: "CRM pending" },
+    synced: { bg: "bg-emerald-50 dark:bg-emerald-500/10", text: "text-emerald-700 dark:text-emerald-300", label: "CRM synced" },
+    failed: { bg: "bg-red-50 dark:bg-red-500/10", text: "text-red-700 dark:text-red-300", label: "CRM failed" },
+    skipped: { bg: "bg-slate-100 dark:bg-slate-500/10", text: "text-slate-600 dark:text-slate-300", label: "CRM skipped" },
 };
 
 const PAGE_SIZE = 20;
@@ -77,13 +61,15 @@ export default function LeadsPage() {
     useEffect(() => { loadLeads(); }, []); // eslint-disable-line
 
     const handleMarkContacted = async (id: string) => {
+        // Dealer scoping is enforced server-side by the /api/leads PATCH route
+        // (auth + RLS), so no dealerId needs to be threaded through the client.
         const result = await updateLeadStatus(id, "contacted");
         if (!result.success) {
-            toast.error(result.error ?? "Failed to update lead");
+            toast.error(result.error ?? "Couldn't update the lead. Please try again.");
             return;
         }
         setApiLeads(prev => prev.map(l => l.id === id ? { ...l, status: "contacted" as const } : l));
-        toast.success("Lead updated");
+        toast.success("Lead marked as contacted.");
     };
 
     const filteredLeads = apiLeads.filter(lead => {

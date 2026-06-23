@@ -214,6 +214,12 @@ export function InsuranceEstimator() {
                                         ))}
                                     </SelectContent>
                                 </Select>
+                                {city === 'Delhi' && (
+                                    <p className="mt-1.5 flex items-start gap-1 text-xs text-amber-600">
+                                        <Info className="mt-0.5 h-3 w-3 shrink-0" aria-hidden="true" />
+                                        <span>Estimated for <strong>Delhi</strong> by default — pick your city above for an accurate zone-based premium.</span>
+                                    </p>
+                                )}
                             </div>
 
                             <div className="flex items-center gap-3 p-3 bg-muted/30 rounded-lg">
@@ -247,7 +253,7 @@ export function InsuranceEstimator() {
                     </Card>
 
                     {/* Results */}
-                    <div className="space-y-4">
+                    <div className="space-y-4" aria-live="polite">
                         {showResult ? (
                             <>
                                 {/* IDV */}
@@ -271,19 +277,19 @@ export function InsuranceEstimator() {
                                             <div className="flex items-start justify-between mb-3">
                                                 <div>
                                                     <h3 className="text-base font-semibold flex items-center gap-2">
-                                                        <Shield className="w-4 h-4 text-blue-500" />
+                                                        <Shield className="w-4 h-4 text-blue-500 dark:text-blue-400" />
                                                         Third-Party Only
                                                     </h3>
                                                     <p className="text-xs text-muted-foreground mt-0.5">Mandatory by law</p>
                                                 </div>
                                                 <div className="text-right">
-                                                    <p className="text-xl font-bold text-blue-500">₹{toIN(result.tpPremium)}</p>
+                                                    <p className="text-xl font-bold text-blue-500 dark:text-blue-400">₹{toIN(result.tpPremium)}</p>
                                                     <p className="text-[10px] text-muted-foreground">incl. GST</p>
                                                 </div>
                                             </div>
                                             <div className="space-y-1.5 text-sm text-muted-foreground">
-                                                <div className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-emerald-500" /> Covers damage to others</div>
-                                                <div className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-emerald-500" /> Personal accident cover</div>
+                                                <div className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-emerald-500 dark:text-emerald-400" /> Covers damage to others</div>
+                                                <div className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-emerald-500 dark:text-emerald-400" /> Personal accident cover</div>
                                             </div>
                                         </CardContent>
                                     </Card>
@@ -305,10 +311,10 @@ export function InsuranceEstimator() {
                                                 </div>
                                             </div>
                                             <div className="space-y-1.5 text-sm text-muted-foreground">
-                                                <div className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-emerald-500" /> Everything in Third-Party</div>
-                                                <div className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-emerald-500" /> Own damage protection</div>
-                                                <div className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-emerald-500" /> Theft coverage</div>
-                                                <div className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-emerald-500" /> Natural disaster coverage</div>
+                                                <div className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-emerald-500 dark:text-emerald-400" /> Everything in Third-Party</div>
+                                                <div className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-emerald-500 dark:text-emerald-400" /> Own damage protection</div>
+                                                <div className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-emerald-500 dark:text-emerald-400" /> Theft coverage</div>
+                                                <div className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-emerald-500 dark:text-emerald-400" /> Natural disaster coverage</div>
                                             </div>
                                             <Badge variant="secondary" className="mt-3 text-[10px]">
                                                 <Star className="w-3 h-3 mr-1" /> Most Popular
@@ -322,22 +328,22 @@ export function InsuranceEstimator() {
                                             <div className="flex items-start justify-between mb-3">
                                                 <div>
                                                     <h3 className="text-base font-semibold flex items-center gap-2">
-                                                        <ShieldCheck className="w-4 h-4 text-emerald-500" />
+                                                        <ShieldCheck className="w-4 h-4 text-emerald-500 dark:text-emerald-400" />
                                                         Comprehensive + Add-ons
                                                     </h3>
                                                     <p className="text-xs text-muted-foreground mt-0.5">Maximum protection</p>
                                                 </div>
                                                 <div className="text-right">
-                                                    <p className="text-xl font-bold text-emerald-500">₹{toIN(result.comprehensiveFull)}</p>
+                                                    <p className="text-xl font-bold text-emerald-500 dark:text-emerald-400">₹{toIN(result.comprehensiveFull)}</p>
                                                     <p className="text-[10px] text-muted-foreground">incl. GST</p>
                                                 </div>
                                             </div>
                                             <div className="space-y-1.5 text-sm text-muted-foreground">
-                                                <div className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-emerald-500" /> Everything in Comprehensive</div>
-                                                <div className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-emerald-500" /> Zero Depreciation</div>
-                                                <div className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-emerald-500" /> Engine Protection</div>
-                                                <div className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-emerald-500" /> Roadside Assistance</div>
-                                                <div className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-emerald-500" /> Return to Invoice</div>
+                                                <div className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-emerald-500 dark:text-emerald-400" /> Everything in Comprehensive</div>
+                                                <div className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-emerald-500 dark:text-emerald-400" /> Zero Depreciation</div>
+                                                <div className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-emerald-500 dark:text-emerald-400" /> Engine Protection</div>
+                                                <div className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-emerald-500 dark:text-emerald-400" /> Roadside Assistance</div>
+                                                <div className="flex items-center gap-1.5"><Check className="w-3.5 h-3.5 text-emerald-500 dark:text-emerald-400" /> Return to Invoice</div>
                                             </div>
                                         </CardContent>
                                     </Card>

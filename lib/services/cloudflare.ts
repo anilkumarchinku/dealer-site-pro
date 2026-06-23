@@ -5,6 +5,7 @@
 
 import { getRequiredEnv } from '@/lib/env'
 import { externalApiFetch } from '@/lib/services/external-api-fetch'
+import { logger } from '@/lib/utils/logger'
 
 interface CloudflareConfig {
     apiToken: string;
@@ -94,7 +95,7 @@ export class CloudflareService {
      * Create a new zone (domain) in Cloudflare
      */
     async createZone(domainName: string): Promise<Zone> {
-        console.log(`📋 Creating Cloudflare zone for ${domainName}...`);
+        logger.log(`📋 Creating Cloudflare zone for ${domainName}...`);
 
         const result = await this.request<Zone>('/zones', {
             method: 'POST',
@@ -106,8 +107,8 @@ export class CloudflareService {
             })
         });
 
-        console.log(`✅ Zone created: ${result.id}`);
-        console.log(`📡 Nameservers: ${result.name_servers.join(', ')}`);
+        logger.log(`✅ Zone created: ${result.id}`);
+        logger.log(`📡 Nameservers: ${result.name_servers.join(', ')}`);
 
         return {
             id: result.id,
@@ -136,7 +137,7 @@ export class CloudflareService {
                 name_servers: zone.name_servers
             };
         } catch (error) {
-            console.error('Error fetching zone:', error);
+            logger.error('Error fetching zone:', error);
             return null;
         }
     }
@@ -156,7 +157,7 @@ export class CloudflareService {
         zoneId: string,
         record: DNSRecord
     ): Promise<CloudflareDNSRecord> {
-        console.log(`➕ Adding ${record.type} record: ${record.name} → ${record.content}`);
+        logger.log(`➕ Adding ${record.type} record: ${record.name} → ${record.content}`);
 
         const result = await this.request<CloudflareDNSRecord>(`/zones/${zoneId}/dns_records`, {
             method: 'POST',
@@ -170,7 +171,7 @@ export class CloudflareService {
             })
         });
 
-        console.log(`✅ DNS record added: ${result.id}`);
+        logger.log(`✅ DNS record added: ${result.id}`);
         return result;
     }
 
@@ -186,13 +187,13 @@ export class CloudflareService {
      * Delete DNS record
      */
     async deleteDNSRecord(zoneId: string, recordId: string): Promise<void> {
-        console.log(`🗑️ Deleting DNS record: ${recordId}`);
+        logger.log(`🗑️ Deleting DNS record: ${recordId}`);
 
         await this.request(`/zones/${zoneId}/dns_records/${recordId}`, {
             method: 'DELETE'
         });
 
-        console.log(`✅ DNS record deleted`);
+        logger.log(`✅ DNS record deleted`);
     }
 
     /**
@@ -203,14 +204,14 @@ export class CloudflareService {
         recordId: string,
         record: Partial<DNSRecord>
     ): Promise<CloudflareDNSRecord> {
-        console.log(`✏️ Updating DNS record: ${recordId}`);
+        logger.log(`✏️ Updating DNS record: ${recordId}`);
 
         const result = await this.request<CloudflareDNSRecord>(`/zones/${zoneId}/dns_records/${recordId}`, {
             method: 'PATCH',
             body: JSON.stringify(record)
         });
 
-        console.log(`✅ DNS record updated`);
+        logger.log(`✅ DNS record updated`);
         return result;
     }
 
@@ -221,49 +222,49 @@ export class CloudflareService {
         zoneId: string,
         mode: 'off' | 'flexible' | 'full' | 'strict' = 'full'
     ): Promise<void> {
-        console.log(`🔒 Configuring SSL mode: ${mode}`);
+        logger.log(`🔒 Configuring SSL mode: ${mode}`);
 
         await this.request(`/zones/${zoneId}/settings/ssl`, {
             method: 'PATCH',
             body: JSON.stringify({ value: mode })
         });
 
-        console.log(`✅ SSL configured`);
+        logger.log(`✅ SSL configured`);
     }
 
     /**
      * Enable Always Use HTTPS
      */
     async enableAlwaysHTTPS(zoneId: string): Promise<void> {
-        console.log(`🔒 Enabling Always Use HTTPS...`);
+        logger.log(`🔒 Enabling Always Use HTTPS...`);
 
         await this.request(`/zones/${zoneId}/settings/always_use_https`, {
             method: 'PATCH',
             body: JSON.stringify({ value: 'on' })
         });
 
-        console.log(`✅ Always Use HTTPS enabled`);
+        logger.log(`✅ Always Use HTTPS enabled`);
     }
 
     /**
      * Enable Automatic HTTPS Rewrites
      */
     async enableAutoHTTPSRewrites(zoneId: string): Promise<void> {
-        console.log(`🔧 Enabling Automatic HTTPS Rewrites...`);
+        logger.log(`🔧 Enabling Automatic HTTPS Rewrites...`);
 
         await this.request(`/zones/${zoneId}/settings/automatic_https_rewrites`, {
             method: 'PATCH',
             body: JSON.stringify({ value: 'on' })
         });
 
-        console.log(`✅ Automatic HTTPS Rewrites enabled`);
+        logger.log(`✅ Automatic HTTPS Rewrites enabled`);
     }
 
     /**
      * Get SSL certificate status
      */
     async getSSLStatus(zoneId: string): Promise<SSLStatus> {
-        console.log(`🔍 Checking SSL certificate status...`);
+        logger.log(`🔍 Checking SSL certificate status...`);
 
         const result = await this.request<CloudflareCertificatePack[]>(`/zones/${zoneId}/ssl/certificate_packs`);
 
@@ -286,7 +287,7 @@ export class CloudflareService {
      * Configure caching rules
      */
     async configureCaching(zoneId: string): Promise<void> {
-        console.log(`⚡ Configuring caching rules...`);
+        logger.log(`⚡ Configuring caching rules...`);
 
         // Set cache level to aggressive
         await this.request(`/zones/${zoneId}/settings/cache_level`, {
@@ -300,23 +301,23 @@ export class CloudflareService {
             body: JSON.stringify({ value: 14400 }) // 4 hours
         });
 
-        console.log(`✅ Caching configured`);
+        logger.log(`✅ Caching configured`);
     }
 
     /**
      * Enable security features
      */
     async enableSecurityFeatures(zoneId: string): Promise<void> {
-        console.log(`🛡️ Enabling security features...`);
+        logger.log(`🛡️ Enabling security features...`);
 
         // Enable WAF (Web Application Firewall) if available
         try {
             await this.request(`/zones/${zoneId}/firewall/waf/packages`, {
                 method: 'GET'
             });
-            console.log(`✅ WAF already configured`);
+            logger.log(`✅ WAF already configured`);
         } catch (error) {
-            console.log(`ℹ️ WAF not available on this plan`);
+            logger.log(`ℹ️ WAF not available on this plan`);
         }
 
         // Enable Bot Fight Mode (free plan)
@@ -325,12 +326,12 @@ export class CloudflareService {
                 method: 'PATCH',
                 body: JSON.stringify({ value: 'on' })
             });
-            console.log(`✅ Bot Fight Mode enabled`);
+            logger.log(`✅ Bot Fight Mode enabled`);
         } catch (error) {
-            console.log(`ℹ️ Bot Fight Mode not available`);
+            logger.log(`ℹ️ Bot Fight Mode not available`);
         }
 
-        console.log(`✅ Security features configured`);
+        logger.log(`✅ Security features configured`);
     }
 
     /**
@@ -344,7 +345,7 @@ export class CloudflareService {
         nameservers: string[];
         records: CloudflareDNSRecord[];
     }> {
-        console.log(`🚀 Starting full zone setup for ${domainName}...`);
+        logger.log(`🚀 Starting full zone setup for ${domainName}...`);
 
         // Step 1: Create zone
         const zone = await this.createZone(domainName);
@@ -356,7 +357,7 @@ export class CloudflareService {
                 const result = await this.addDNSRecord(zone.id, record);
                 addedRecords.push(result);
             } catch (error) {
-                console.error(`Failed to add record ${record.name}:`, error);
+                logger.error(`Failed to add record ${record.name}:`, error);
             }
         }
 
@@ -371,9 +372,9 @@ export class CloudflareService {
         // Step 5: Enable security features
         await this.enableSecurityFeatures(zone.id);
 
-        console.log(`✅ Full zone setup complete!`);
-        console.log(`📋 Next step: Update nameservers at registrar to:`);
-        zone.name_servers.forEach(ns => console.log(`   - ${ns}`));
+        logger.log(`✅ Full zone setup complete!`);
+        logger.log(`📋 Next step: Update nameservers at registrar to:`);
+        zone.name_servers.forEach(ns => logger.log(`   - ${ns}`));
 
         return {
             zone,
@@ -411,14 +412,14 @@ export class CloudflareService {
      * Purge cache for entire zone
      */
     async purgeCache(zoneId: string): Promise<void> {
-        console.log(`🗑️ Purging cache for zone...`);
+        logger.log(`🗑️ Purging cache for zone...`);
 
         await this.request(`/zones/${zoneId}/purge_cache`, {
             method: 'POST',
             body: JSON.stringify({ purge_everything: true })
         });
 
-        console.log(`✅ Cache purged`);
+        logger.log(`✅ Cache purged`);
     }
 
     /**

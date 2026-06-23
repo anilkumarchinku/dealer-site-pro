@@ -1,7 +1,9 @@
 'use client';
 
-import { useState } from 'react';
-import { CheckCircle2, Zap, Home, Percent } from 'lucide-react';
+import { useId, useState } from 'react';
+import { CheckCircle2, Zap, Home, Landmark } from 'lucide-react';
+import { getContrastText } from '@/lib/utils/color-contrast';
+import { normalizeLeadPhone } from '@/lib/validations/lead';
 
 interface FinanceSectionProps {
     brandColor: string;
@@ -9,13 +11,14 @@ interface FinanceSectionProps {
     dealerName: string;
 }
 
-const BANKS = [
-    { name: 'SBI', color: '#1a3c8f' },
-    { name: 'HDFC Bank', color: '#dc2626' },
-    { name: 'ICICI Bank', color: '#ea580c' },
-    { name: 'Axis Bank', color: '#7c3aed' },
-    { name: 'Kotak Mahindra', color: '#c8102e' },
-    { name: 'Bajaj Finserv', color: '#2563eb' },
+// Generic value props describing the kinds of financing we help arrange.
+// We deliberately avoid naming specific banks as confirmed tie-ups or quoting
+// fixed rates — actual partners and terms vary, so we invite the buyer to enquire.
+const FINANCE_HIGHLIGHTS = [
+    'Loans through leading banks & NBFCs',
+    'Competitive interest rates',
+    'High on-road funding available',
+    'Flexible tenure options',
 ];
 
 const LOAN_AMOUNT_OPTIONS = [
@@ -26,9 +29,9 @@ const LOAN_AMOUNT_OPTIONS = [
 ];
 
 const BENEFITS = [
-    { icon: Zap, title: 'Zero Down Payment', subtitle: 'Drive home today without any upfront payment' },
-    { icon: CheckCircle2, title: 'Instant Approval', subtitle: 'Get loan approval within minutes, not days' },
-    { icon: Home, title: 'Doorstep Service', subtitle: 'Our finance executive visits you at home' },
+    { icon: Zap, title: 'Low Down Payment Options', subtitle: 'Ask about minimal-upfront plans that may be available' },
+    { icon: CheckCircle2, title: 'Quick Processing', subtitle: 'We help move your application along as fast as possible' },
+    { icon: Home, title: 'Doorstep Assistance', subtitle: 'Our finance executive can help you with paperwork' },
 ];
 
 interface FormState {
@@ -42,6 +45,18 @@ export function FinanceSection({ brandColor, dealerId, dealerName }: FinanceSect
     const [submitting, setSubmitting] = useState(false);
     const [submitted, setSubmitted] = useState(false);
     const [error, setError] = useState('');
+
+    // Readable text color for surfaces filled with the brand color (light brands
+    // like yellow/lime need dark text, not white).
+    const onBrandText = getContrastText(brandColor);
+
+    // Stable, unique ids so each label is programmatically tied to its input.
+    const fieldId = useId();
+    const ids = {
+        name: `${fieldId}-name`,
+        phone: `${fieldId}-phone`,
+        loanAmount: `${fieldId}-loan`,
+    };
 
     function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) {
         setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -58,7 +73,7 @@ export function FinanceSection({ brandColor, dealerId, dealerName }: FinanceSect
                 body: JSON.stringify({
                     dealer_id: dealerId,
                     name: form.name,
-                    phone: form.phone,
+                    phone: normalizeLeadPhone(form.phone),
                     message: `Finance inquiry. Loan amount needed: ${form.loanAmount}.`,
                     lead_source: 'finance_inquiry',
                 }),
@@ -87,50 +102,36 @@ export function FinanceSection({ brandColor, dealerId, dealerName }: FinanceSect
                         Finance Made Easy
                     </h2>
                     <p className="mt-3 text-gray-600 max-w-xl mx-auto">
-                        Get the best financing options from India&apos;s top lenders, available at {dealerName}.
+                        {dealerName} helps you arrange financing through leading banks and NBFCs. Rates and terms are indicative — contact us for current options.
                     </p>
                 </div>
 
                 {/* Finance highlights */}
                 <div
-                    className="rounded-2xl p-6 md:p-8 mb-10 text-white"
-                    style={{ backgroundColor: brandColor }}
+                    className="rounded-2xl p-6 md:p-8 mb-10"
+                    style={{ backgroundColor: brandColor, color: onBrandText }}
                 >
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
-                        <div>
-                            <div className="flex items-center justify-center gap-2 mb-1">
-                                <Percent className="w-5 h-5 opacity-80" />
-                                <span className="text-2xl font-bold">8.5%</span>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+                        {FINANCE_HIGHLIGHTS.map((highlight) => (
+                            <div key={highlight} className="flex flex-col items-center gap-2">
+                                <CheckCircle2 className="w-5 h-5" aria-hidden="true" />
+                                <p className="text-sm font-medium">{highlight}</p>
                             </div>
-                            <p className="text-sm opacity-80">Interest rates from 8.5% p.a.</p>
-                        </div>
-                        <div>
-                            <p className="text-2xl font-bold mb-1">100%</p>
-                            <p className="text-sm opacity-80">Up to 100% on-road funding</p>
-                        </div>
-                        <div>
-                            <p className="text-2xl font-bold mb-1">12–84</p>
-                            <p className="text-sm opacity-80">Flexible tenure: 12–84 months</p>
-                        </div>
+                        ))}
                     </div>
                 </div>
 
-                {/* Partner banks */}
+                {/* Finance partners — generic, not named tie-ups */}
                 <div className="mb-10">
-                    <p className="text-center text-xs font-semibold uppercase tracking-widest text-gray-600 mb-5">
-                        Finance Partners
-                    </p>
-                    <div className="flex flex-wrap justify-center gap-3">
-                        {BANKS.map((bank) => (
-                            <span
-                                key={bank.name}
-                                className="inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold text-white shadow-sm"
-                                style={{ backgroundColor: bank.color }}
-                            >
-                                {bank.name}
-                            </span>
-                        ))}
+                    <div className="flex items-center justify-center gap-2 mb-5">
+                        <Landmark className="w-4 h-4" style={{ color: brandColor }} aria-hidden="true" />
+                        <p className="text-xs font-semibold uppercase tracking-widest text-gray-600">
+                            Financing Through Leading Banks &amp; NBFCs
+                        </p>
                     </div>
+                    <p className="text-center text-sm text-gray-600 max-w-lg mx-auto">
+                        We work with a range of lenders to find a plan that suits you. Ask us which options are currently available for your purchase.
+                    </p>
                 </div>
 
                 {/* Benefits + Form */}
@@ -175,7 +176,7 @@ export function FinanceSection({ brandColor, dealerId, dealerName }: FinanceSect
                                 </div>
                                 <h3 className="text-xl font-bold text-gray-900">Thank You!</h3>
                                 <p className="text-gray-600 max-w-xs">
-                                    Our finance team will call you within 24 hours to discuss the best loan options for you.
+                                    Our finance team will call you shortly to discuss the loan options available for you.
                                 </p>
                             </div>
                         ) : (
@@ -183,10 +184,11 @@ export function FinanceSection({ brandColor, dealerId, dealerName }: FinanceSect
                                 <h3 className="text-lg font-bold text-gray-900 mb-5">Apply for Finance</h3>
                                 <form onSubmit={handleSubmit} className="space-y-4">
                                     <div>
-                                        <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                                        <label htmlFor={ids.name} className="block text-sm font-medium text-gray-700 mb-1.5">
                                             Your Name <span className="text-red-500">*</span>
                                         </label>
                                         <input
+                                            id={ids.name}
                                             type="text"
                                             name="name"
                                             required
@@ -198,10 +200,11 @@ export function FinanceSection({ brandColor, dealerId, dealerName }: FinanceSect
                                         />
                                     </div>
                                     <div>
-                                        <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                                        <label htmlFor={ids.phone} className="block text-sm font-medium text-gray-700 mb-1.5">
                                             Phone Number <span className="text-red-500">*</span>
                                         </label>
                                         <input
+                                            id={ids.phone}
                                             type="tel"
                                             name="phone"
                                             required
@@ -213,10 +216,11 @@ export function FinanceSection({ brandColor, dealerId, dealerName }: FinanceSect
                                         />
                                     </div>
                                     <div>
-                                        <label className="block text-sm font-medium text-gray-700 mb-1.5">
+                                        <label htmlFor={ids.loanAmount} className="block text-sm font-medium text-gray-700 mb-1.5">
                                             Loan Amount Needed
                                         </label>
                                         <select
+                                            id={ids.loanAmount}
                                             name="loanAmount"
                                             value={form.loanAmount}
                                             onChange={handleChange}
@@ -234,8 +238,8 @@ export function FinanceSection({ brandColor, dealerId, dealerName }: FinanceSect
                                     <button
                                         type="submit"
                                         disabled={submitting}
-                                        className="w-full py-3 rounded-xl text-white font-semibold text-sm hover:opacity-90 transition-opacity disabled:opacity-60"
-                                        style={{ backgroundColor: brandColor }}
+                                        className="w-full py-3 rounded-xl font-semibold text-sm hover:opacity-90 transition-opacity disabled:opacity-60"
+                                        style={{ backgroundColor: brandColor, color: onBrandText }}
                                     >
                                         {submitting ? 'Submitting…' : 'Get Finance Options'}
                                     </button>

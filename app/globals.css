@@ -73,6 +73,11 @@
     --info: 217 91% 60%;
     --info-foreground: 0 0% 100%;
 
+    /* Brand layer — public dealer sites can override --brand per dealer at runtime
+       (defaults to the primary token so it always resolves). */
+    --brand: var(--primary);
+    --brand-foreground: var(--primary-foreground);
+
     /* Brand Accent Colors */
     --blue: 217 91% 60%;
     --blue-foreground: 0 0% 100%;
@@ -266,6 +271,14 @@
 
 html {
     scroll-behavior: smooth;
+    /* Offset anchor jumps so target content clears the fixed/sticky headers (nav is ~4rem tall) */
+    scroll-padding-top: 5rem;
+}
+
+/* Smooth + contained scrolling for internal scroll regions (dropdowns, sidebars, dialogs) */
+.smooth-scroll {
+    scroll-behavior: smooth;
+    overscroll-behavior: contain;
 }
 
 body {
@@ -575,6 +588,47 @@ body {
 }
 
 /* ============================================
+   Scroll Reveal System
+   Elements start hidden; the useScrollReveal hook
+   adds `.revealed` when they enter the viewport.
+   ============================================ */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(24px);
+    transition:
+        opacity var(--transition-slower) ease-out,
+        transform var(--transition-slower) ease-out;
+    will-change: opacity, transform;
+}
+
+.reveal-on-scroll.reveal-up    { transform: translateY(24px); }
+.reveal-on-scroll.reveal-down  { transform: translateY(-24px); }
+.reveal-on-scroll.reveal-left  { transform: translateX(24px); }
+.reveal-on-scroll.reveal-right { transform: translateX(-24px); }
+.reveal-on-scroll.reveal-scale { transform: scale(0.96); }
+
+.reveal-on-scroll.revealed {
+    opacity: 1;
+    transform: none;
+}
+
+/* Image fade-in: paired with FadeInImage, which adds `.is-loaded` once decoded.
+   Uses an animation (not a transition) so it never overrides a co-located
+   `transition-transform` (e.g. hover-zoom) on the same element. */
+@keyframes img-fade-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.img-fade-in {
+    opacity: 0;
+}
+
+.img-fade-in.is-loaded {
+    animation: img-fade-in var(--transition-slow) ease-in forwards;
+}
+
+/* ============================================
    Utility Classes
    ============================================ */
 
@@ -711,6 +765,16 @@ body {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
+    }
+
+    /* Never leave scroll-reveal / fade-in content hidden when motion is reduced */
+    .reveal-on-scroll {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    .img-fade-in {
+        opacity: 1 !important;
     }
 }
 

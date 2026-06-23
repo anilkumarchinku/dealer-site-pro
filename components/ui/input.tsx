@@ -17,7 +17,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
         return (
             <div className="w-full space-y-2">
                 {label && (
-                    <label className="text-sm font-medium leading-none text-gray-700 dark:text-gray-200 peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+                    <label className="text-sm font-medium leading-none text-foreground peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
                         {label}
                         {props.required && <span className="text-red-500 ml-1">*</span>}
                     </label>
@@ -30,7 +30,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
                         "file:border-0 file:bg-transparent file:text-sm file:font-medium",
                         appearance === "light"
                             ? "rounded-xl border border-gray-300 bg-white text-gray-900 shadow-sm placeholder:text-gray-500 caret-gray-900 [color-scheme:light] ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 focus-visible:ring-offset-2 focus-visible:border-gray-400"
-                            : "rounded-md border border-gray-200 bg-white text-gray-900 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-100 ring-offset-white dark:ring-offset-gray-900 placeholder:text-gray-400 dark:placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:ring-offset-2",
+                            : "rounded-md border border-input bg-background text-foreground ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
                         "disabled:cursor-not-allowed disabled:opacity-50",
                         error && "border-red-500 focus-visible:ring-red-500",
                         className
@@ -38,7 +38,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
                     {...props}
                 />
                 {helperText && !error && (
-                    <p className="text-[0.8rem] text-gray-600 dark:text-gray-300">
+                    <p className="text-[0.8rem] text-muted-foreground">
                         {helperText}
                     </p>
                 )}

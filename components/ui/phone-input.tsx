@@ -69,7 +69,7 @@ export function PhoneInput({
     return (
         <div className="w-full space-y-2">
             {label && (
-                <label className="text-sm font-medium leading-none text-gray-700 dark:text-gray-200">
+                <label className="text-sm font-medium leading-none text-foreground">
                     {label}
                     {required && <span className="text-red-500 ml-1">*</span>}
                 </label>
@@ -85,7 +85,7 @@ export function PhoneInput({
                         disabled={disabled || lockCountryCode}
                         className={cn(
                             "flex items-center gap-1 h-10 px-2.5 text-sm rounded-l-md border border-r-0 bg-muted/50 transition-colors",
-                            "border-gray-200 dark:border-gray-600 hover:bg-muted",
+                            "border-input hover:bg-muted",
                             "disabled:cursor-not-allowed disabled:opacity-50",
                             error && "border-red-500",
                         )}
@@ -95,7 +95,7 @@ export function PhoneInput({
                         <ChevronDown className="w-3 h-3 text-muted-foreground" />
                     </button>
                     {dropdownOpen && !lockCountryCode && (
-                        <div className="absolute top-full left-0 z-50 mt-1 w-56 max-h-60 overflow-y-auto rounded-lg border border-border bg-background shadow-lg">
+                        <div className="absolute top-full left-0 z-50 mt-1 w-56 max-h-60 overflow-y-auto rounded-lg border border-border bg-popover text-popover-foreground shadow-lg">
                             {COUNTRY_CODES.map(c => (
                                 <button
                                     key={c.code}
@@ -126,16 +126,16 @@ export function PhoneInput({
                     disabled={disabled}
                     className={cn(
                         "flex-1 h-10 px-3 py-2 text-sm rounded-r-md border transition-colors",
-                        "border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100",
-                        "placeholder:text-gray-400 dark:placeholder:text-gray-500",
-                        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:ring-offset-2",
+                        "border-input bg-background text-foreground",
+                        "ring-offset-background placeholder:text-muted-foreground",
+                        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
                         "disabled:cursor-not-allowed disabled:opacity-50",
                         error && "border-red-500 focus-visible:ring-red-500",
                     )}
                 />
             </div>
             {helperText && !error && (
-                <p className="text-[0.8rem] text-gray-500 dark:text-gray-400">{helperText}</p>
+                <p className="text-[0.8rem] text-muted-foreground">{helperText}</p>
             )}
             {error && (
                 <p className="text-[0.8rem] font-medium text-red-500">{error}</p>

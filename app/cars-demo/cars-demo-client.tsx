@@ -4,6 +4,7 @@ import type { Car } from '@/lib/types/car';
 import { CarGrid } from '@/components/cars/CarGrid';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { logger } from '@/lib/utils/logger';
 
 interface CarsDemoClientProps {
     initialCars: Car[];
@@ -13,13 +14,13 @@ export default function CarsDemoClient({ initialCars }: CarsDemoClientProps) {
     const [cars] = useState<Car[]>(initialCars);
 
     const handleViewDetails = (carId: string) => {
-        console.log('View details for car:', carId);
+        logger.log('View details for car:', carId);
         // Navigate to car detail page
         // router.push(`/cars/${carId}`);
     };
 
     const handleCompare = (carId: string) => {
-        console.log('Add to compare:', carId);
+        logger.log('Add to compare:', carId);
         // Add to comparison list
     };
 

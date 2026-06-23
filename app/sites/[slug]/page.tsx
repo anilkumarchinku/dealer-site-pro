@@ -6,7 +6,7 @@ import { LuxuryTemplate } from '@/components/templates/LuxuryTemplate'
 import { SportyTemplate } from '@/components/templates/SportyTemplate'
 import { FamilyTemplate } from '@/components/templates/FamilyTemplate'
 import { PushPreferenceCenter } from '@/components/PushPreferenceCenter'
-import { allCars, getCarsByMake } from '@/lib/data/cars'
+import { getCarsByMake } from '@/lib/data/cars'
 import { fetchDealerBySlug } from '@/lib/db/dealers'
 import { fetchAllCyeproInventoryAsCars } from '@/lib/services/cyepro-service'
 import { applyUsedVehiclePriceOffersToCars, fetchActiveUsedVehiclePriceOffers } from '@/lib/services/used-vehicle-price-offers'
@@ -90,21 +90,21 @@ function dbVehiclesToCars(vehicles: DBVehicle[]): Car[] {
 // ── Coming Soon page ──────────────────────────────────────────────────────────
 function ComingSoon({ slug }: { slug: string }) {
     return (
-        <div className="min-h-screen bg-gray-950 flex items-center justify-center">
+        <div className="min-h-screen bg-gray-50 flex items-center justify-center">
             <div className="text-center px-6">
                 <div className="w-20 h-20 rounded-2xl bg-blue-500/10 flex items-center justify-center mx-auto mb-6 border border-blue-500/20">
-                    <svg className="w-10 h-10 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="w-10 h-10 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
                             d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                     </svg>
                 </div>
-                <h1 className="text-4xl font-bold text-white mb-3">Coming Soon</h1>
-                <p className="text-gray-400 text-lg mb-2">
-                    <span className="text-blue-400 font-semibold">{slug}</span> is setting up their dealership website.
+                <h1 className="text-4xl font-bold text-gray-900 mb-3">Coming Soon</h1>
+                <p className="text-gray-600 text-lg mb-2">
+                    <span className="text-blue-600 font-semibold">{slug}</span> is setting up their dealership website.
                 </p>
                 <p className="text-gray-500 text-sm">Check back soon — it will be ready shortly!</p>
-                <div className="mt-8 text-xs text-gray-600">
-                    Powered by <span className="text-blue-500 font-semibold">DealerSite Pro</span>
+                <div className="mt-8 text-xs text-gray-400">
+                    Powered by <span className="text-blue-600 font-semibold">DealerSite Pro</span>
                 </div>
             </div>
         </div>
@@ -193,26 +193,26 @@ function MultiSitePortal({
     }
 
     const colorMap: Record<string, { border: string; bg: string; text: string; btn: string }> = {
-        blue:   { border: 'border-blue-500/30',   bg: 'bg-blue-500/5',   text: 'text-blue-400',   btn: 'bg-blue-500 hover:bg-blue-600'   },
-        amber:  { border: 'border-amber-500/30',  bg: 'bg-amber-500/5',  text: 'text-amber-400',  btn: 'bg-amber-500 hover:bg-amber-600'  },
-        green:  { border: 'border-green-500/30',  bg: 'bg-green-500/5',  text: 'text-green-400',  btn: 'bg-green-500 hover:bg-green-600'  },
-        purple: { border: 'border-purple-500/30', bg: 'bg-purple-500/5', text: 'text-purple-400', btn: 'bg-purple-500 hover:bg-purple-600' },
+        blue:   { border: 'border-blue-200',   bg: 'bg-blue-50',   text: 'text-blue-600',   btn: 'bg-blue-500 hover:bg-blue-600'   },
+        amber:  { border: 'border-amber-200',  bg: 'bg-amber-50',  text: 'text-amber-600',  btn: 'bg-amber-500 hover:bg-amber-600'  },
+        green:  { border: 'border-green-200',  bg: 'bg-green-50',  text: 'text-green-600',  btn: 'bg-green-500 hover:bg-green-600'  },
+        purple: { border: 'border-purple-200', bg: 'bg-purple-50', text: 'text-purple-600', btn: 'bg-purple-500 hover:bg-purple-600' },
     }
 
     return (
-        <div className="min-h-screen bg-gray-950 flex flex-col items-center justify-center px-4 py-12">
+        <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center px-4 py-12">
             <div className="w-full max-w-2xl">
 
                 {/* ── Hero section ── */}
                 <div className="text-center mb-10">
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-semibold mb-4 uppercase tracking-wide">
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-600 text-xs font-semibold mb-4 uppercase tracking-wide">
                         Authorised Dealership
                     </div>
-                    <h1 className="text-4xl sm:text-5xl font-extrabold text-white mb-3 tracking-tight">
+                    <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-3 tracking-tight">
                         {dealerName}
                     </h1>
-                    <p className="text-gray-400 text-base mb-4">{location}</p>
-                    <p className="text-lg text-gray-300 font-medium max-w-md mx-auto leading-relaxed">
+                    <p className="text-gray-500 text-base mb-4">{location}</p>
+                    <p className="text-lg text-gray-600 font-medium max-w-md mx-auto leading-relaxed">
                         {attractiveLine}
                     </p>
                 </div>
@@ -230,7 +230,7 @@ function MultiSitePortal({
                                 <div className="flex items-center gap-3">
                                     <span className="text-3xl">{card.emoji}</span>
                                     <div>
-                                        <p className="text-white font-bold text-base">{card.label}</p>
+                                        <p className="text-gray-900 font-bold text-base">{card.label}</p>
                                         <p className={`text-xs mt-0.5 ${c.text}`}>{card.sublabel}</p>
                                     </div>
                                 </div>
@@ -243,8 +243,8 @@ function MultiSitePortal({
                 </div>
 
                 {/* ── Contact Sales section ── */}
-                <div className="bg-white/5 border border-white/10 rounded-2xl p-6 text-center">
-                    <p className="text-gray-400 text-sm mb-4 font-medium">Need help choosing? Talk to our sales team</p>
+                <div className="bg-white border border-gray-200 rounded-2xl p-6 text-center shadow-sm">
+                    <p className="text-gray-600 text-sm mb-4 font-medium">Need help choosing? Talk to our sales team</p>
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
                         <a
                             href={`tel:${phone}`}
@@ -258,7 +258,7 @@ function MultiSitePortal({
                         </a>
                         <a
                             href={`mailto:${email}`}
-                            className="flex items-center gap-2 px-6 py-3 rounded-xl border border-white/20 hover:bg-white/10 text-gray-300 text-sm font-semibold transition-colors w-full sm:w-auto justify-center"
+                            className="flex items-center gap-2 px-6 py-3 rounded-xl border border-gray-300 hover:bg-gray-50 text-gray-700 text-sm font-semibold transition-colors w-full sm:w-auto justify-center"
                         >
                             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
@@ -269,8 +269,8 @@ function MultiSitePortal({
                     </div>
                 </div>
 
-                <p className="text-center mt-8 text-xs text-gray-700">
-                    Powered by <span className="text-blue-500 font-semibold">DealerSite Pro</span>
+                <p className="text-center mt-8 text-xs text-gray-400">
+                    Powered by <span className="text-blue-600 font-semibold">DealerSite Pro</span>
                 </p>
             </div>
         </div>
@@ -280,31 +280,31 @@ function MultiSitePortal({
 // ── No Stock page — for used-only dealers with no inventory yet ───────────────
 function NoStockPage({ dealerName, phone, email }: { dealerName: string; phone: string; email: string }) {
     return (
-        <div className="min-h-screen bg-gray-950 flex items-center justify-center">
+        <div className="min-h-screen bg-gray-50 flex items-center justify-center">
             <div className="text-center px-6 max-w-md">
                 <div className="w-20 h-20 rounded-2xl bg-amber-500/10 flex items-center justify-center mx-auto mb-6 border border-amber-500/20">
-                    <svg className="w-10 h-10 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="w-10 h-10 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
                             d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" />
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
                             d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10l2 2h10l2-2z" />
                     </svg>
                 </div>
-                <h1 className="text-3xl font-bold text-white mb-2">{dealerName}</h1>
-                <p className="text-amber-400 font-semibold mb-3">Stock Update Coming Soon</p>
-                <p className="text-gray-400 text-sm mb-6">
+                <h1 className="text-3xl font-bold text-gray-900 mb-2">{dealerName}</h1>
+                <p className="text-amber-600 font-semibold mb-3">Inventory Coming Soon</p>
+                <p className="text-gray-600 text-sm mb-6">
                     Our inventory is being updated. Contact us directly for available vehicles.
                 </p>
                 <div className="space-y-2">
-                    <a href={`tel:${phone}`} className="flex items-center justify-center gap-2 text-blue-400 hover:text-blue-300 text-sm">
+                    <a href={`tel:${phone}`} className="flex items-center justify-center gap-2 text-blue-600 hover:text-blue-700 text-sm">
                         📞 {phone}
                     </a>
-                    <a href={`mailto:${email}`} className="flex items-center justify-center gap-2 text-blue-400 hover:text-blue-300 text-sm">
+                    <a href={`mailto:${email}`} className="flex items-center justify-center gap-2 text-blue-600 hover:text-blue-700 text-sm">
                         ✉️ {email}
                     </a>
                 </div>
-                <div className="mt-10 text-xs text-gray-600">
-                    Powered by <span className="text-blue-500 font-semibold">DealerSite Pro</span>
+                <div className="mt-10 text-xs text-gray-400">
+                    Powered by <span className="text-blue-600 font-semibold">DealerSite Pro</span>
                 </div>
             </div>
         </div>
@@ -370,28 +370,28 @@ function VehicleSegmentsBanner({ sellsTwoWheelers, sellsThreeWheelers, twoWheele
 }) {
     if (!sellsTwoWheelers && !sellsThreeWheelers) return null
     return (
-        <div className="bg-gray-950 border-t border-white/10 py-10 px-4">
+        <div className="bg-gray-50 border-t border-gray-200 py-10 px-4">
             <div className="max-w-4xl mx-auto text-center mb-6">
-                <p className="text-gray-400 text-sm uppercase tracking-widest font-semibold">Also Available At Our Dealership</p>
+                <p className="text-gray-500 text-sm uppercase tracking-widest font-semibold">Also Available At Our Dealership</p>
             </div>
             <div className={`max-w-2xl mx-auto grid gap-4 ${sellsTwoWheelers && sellsThreeWheelers ? 'sm:grid-cols-2' : 'grid-cols-1 max-w-sm'}`}>
                 {sellsTwoWheelers && (
-                    <a href={twoWheelerHref} className="group flex items-center gap-4 p-5 rounded-2xl border border-green-500/30 bg-green-500/5 hover:bg-green-500/10 transition-all">
+                    <a href={twoWheelerHref} className="group flex items-center gap-4 p-5 rounded-2xl border border-green-200 bg-green-50 hover:bg-green-100 transition-all">
                         <span className="text-4xl">🏍️</span>
                         <div className="text-left">
-                            <p className="text-white font-bold">2-Wheelers</p>
-                            <p className="text-green-400 text-xs mt-0.5">Bikes · Scooters · Electric</p>
-                            <p className="text-green-400 text-xs group-hover:underline mt-1">Browse →</p>
+                            <p className="text-gray-900 font-bold">2-Wheelers</p>
+                            <p className="text-green-600 text-xs mt-0.5">Bikes · Scooters · Electric</p>
+                            <p className="text-green-600 text-xs group-hover:underline mt-1">Browse →</p>
                         </div>
                     </a>
                 )}
                 {sellsThreeWheelers && (
-                    <a href={threeWheelerHref} className="group flex items-center gap-4 p-5 rounded-2xl border border-purple-500/30 bg-purple-500/5 hover:bg-purple-500/10 transition-all">
+                    <a href={threeWheelerHref} className="group flex items-center gap-4 p-5 rounded-2xl border border-purple-200 bg-purple-50 hover:bg-purple-100 transition-all">
                         <span className="text-4xl">🛺</span>
                         <div className="text-left">
-                            <p className="text-white font-bold">3-Wheelers</p>
-                            <p className="text-purple-400 text-xs mt-0.5">Passenger · Cargo · Electric</p>
-                            <p className="text-purple-400 text-xs group-hover:underline mt-1">Browse →</p>
+                            <p className="text-gray-900 font-bold">3-Wheelers</p>
+                            <p className="text-purple-600 text-xs mt-0.5">Passenger · Cargo · Electric</p>
+                            <p className="text-purple-600 text-xs group-hover:underline mt-1">Browse →</p>
                         </div>
                     </a>
                 )}
@@ -533,9 +533,9 @@ export default async function SitePage({ params }: SitePageProps) {
         const catalog = brandFilter
             ? await getCarsByMake(brandFilter)
             : (await Promise.all(uniqueBrands.map(b => getCarsByMake(b)))).flat()
-        cars = dedupeByMakeModel((catalog.length > 0 ? catalog : allCars.slice(0, 16))
-            .map(c => ({ ...c, condition: 'new' as const }))
-        )
+        // No sample/placeholder fallback — an empty catalog means this dealer
+        // genuinely has no listings, which we surface via NoStockPage below.
+        cars = dedupeByMakeModel(catalog.map(c => ({ ...c, condition: 'new' as const })))
         templateSellsNew = true
         templateSellsUsed = false
 
@@ -580,6 +580,19 @@ export default async function SitePage({ params }: SitePageProps) {
             : '/sell'
         : undefined
 
+    // ── Genuine empty inventory ───────────────────────────────────────────────
+    // No catalog/listings for this dealer → show an honest "coming soon" state
+    // with their contact CTA, instead of seeding sample cars they don't sell.
+    if (cars.length === 0) {
+        return (
+            <NoStockPage
+                dealerName={dealer.dealership_name}
+                phone={dealer.phone}
+                email={dealer.email}
+            />
+        )
+    }
+
     // ── Hero text ─────────────────────────────────────────────────────────────
     const heroDefaults: Record<string, { title: string; subtitle: string }> = {
         luxury: { title: 'THE ART OF PERFORMANCE', subtitle: 'Experience automotive excellence with our curated collection' },
@@ -611,6 +624,7 @@ export default async function SitePage({ params }: SitePageProps) {
         heroImageUrl,
         sellsNewCars: templateSellsNew,
         sellsUsedCars: templateSellsUsed,
+        socialLinks: dealer.social,
         isVerified: false,
         sellVehicleHref,
     }

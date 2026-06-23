@@ -3,15 +3,19 @@
 import { useEffect, useState, useCallback } from "react"
 import Link from "next/link"
 import { useOnboardingStore } from "@/lib/store/onboarding-store"
-import { Plus, Pencil, Trash2 } from "lucide-react"
+import { Plus, Pencil, CheckCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { confirm } from "@/components/ui/confirm-dialog"
+import { toast } from "@/lib/utils/toast"
 import type { TwoWheelerUsedVehicle } from "@/lib/types/two-wheeler"
 
 const GRADE_COLORS: Record<string, string> = {
-    A: "bg-green-100 text-green-700",
-    B: "bg-yellow-100 text-yellow-700",
-    C: "bg-orange-100 text-orange-700",
+    A: "bg-green-100 text-green-700 dark:bg-green-500/15 dark:text-green-300",
+    B: "bg-yellow-100 text-yellow-700 dark:bg-yellow-500/15 dark:text-yellow-300",
+    C: "bg-orange-100 text-orange-700 dark:bg-orange-500/15 dark:text-orange-300",
 }
+
+const GRADE_FALLBACK = "bg-gray-100 text-gray-700 dark:bg-gray-500/15 dark:text-gray-300"
 
 export default function UsedTwoWheelersPage() {
     const { dealerId } = useOnboardingStore()
@@ -34,9 +38,22 @@ export default function UsedTwoWheelersPage() {
 
     useEffect(() => { load() }, [load])
 
-    async function handleDelete(id: string) {
-        if (!confirm("Mark this vehicle as sold?")) return
-        await fetch(`/api/two-wheelers/used/${id}`, { method: "DELETE" })
+    async function handleMarkSold(vehicle: TwoWheelerUsedVehicle) {
+        const name = `${vehicle.brand} ${vehicle.model}`.trim()
+        const ok = await confirm({
+            title: "Mark this vehicle as sold?",
+            description: `"${name}" will be marked as sold and removed from your active used-stock listing.`,
+            confirmText: "Mark as sold",
+        })
+        if (!ok) return
+
+        const res = await fetch(`/api/two-wheelers/used/${vehicle.id}`, { method: "DELETE" })
+        if (!res.ok) {
+            const data = await res.json().catch(() => null)
+            toast.error(data?.error ?? "Couldn't update the vehicle. Please try again.")
+            return
+        }
+        toast.success("Marked as sold.")
         load()
     }
 
@@ -85,7 +102,7 @@ export default function UsedTwoWheelersPage() {
                                     <td className="px-4 py-3 text-muted-foreground">{v.km_driven.toLocaleString("en-IN")}</td>
                                     <td className="px-4 py-3">
                                         {v.condition_grade ? (
-                                            <span className={`px-2 py-0.5 rounded-full text-xs font-medium ${GRADE_COLORS[v.condition_grade]}`}>
+                                            <span className={`px-2 py-0.5 rounded-full text-xs font-medium ${GRADE_COLORS[v.condition_grade] ?? GRADE_FALLBACK}`}>
                                                 Grade {v.condition_grade}
                                             </span>
                                         ) : "—"}
@@ -93,9 +110,9 @@ export default function UsedTwoWheelersPage() {
                                     <td className="px-4 py-3 font-medium text-primary">₹{(v.price_paise / 100).toLocaleString("en-IN")}</td>
                                     <td className="px-4 py-3">
                                         <span className={`px-2 py-0.5 rounded-full text-xs ${
-                                            v.status === "available" ? "bg-green-100 text-green-700" :
-                                            v.status === "reserved"  ? "bg-blue-100 text-blue-700"  :
-                                                                       "bg-gray-100 text-gray-700"
+                                            v.status === "available" ? "bg-green-100 text-green-700 dark:bg-green-500/15 dark:text-green-300" :
+                                            v.status === "reserved"  ? "bg-blue-100 text-blue-700 dark:bg-blue-500/15 dark:text-blue-300"  :
+                                                                       "bg-gray-100 text-gray-700 dark:bg-gray-500/15 dark:text-gray-300"
                                         }`}>{v.status}</span>
                                     </td>
                                     <td className="px-4 py-3">
@@ -105,8 +122,8 @@ export default function UsedTwoWheelersPage() {
                                                     <Pencil className="w-3 h-3" />
                                                 </Link>
                                             </Button>
-                                            <Button variant="outline" size="sm" className="text-destructive hover:text-destructive" onClick={() => handleDelete(v.id)}>
-                                                <Trash2 className="w-3 h-3" />
+                                            <Button variant="outline" size="sm" title="Mark as sold" aria-label={`Mark ${v.brand} ${v.model} as sold`} onClick={() => handleMarkSold(v)}>
+                                                <CheckCircle className="w-3 h-3" />
                                             </Button>
                                         </div>
                                     </td>

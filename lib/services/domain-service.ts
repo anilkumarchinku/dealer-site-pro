@@ -7,6 +7,7 @@ import type { DealerDomainRow, Database } from '@/lib/database.types'
 import type { Domain } from '../supabase'
 import { createAdminClient, type RouteSupabaseClient } from '@/lib/supabase-server'
 import { generateSlug, makeSlugUnique, validateSlug, getSubdomainUrl } from '../utils/slug'
+import { logger } from '@/lib/utils/logger'
 
 type DomainSupabaseClient = Pick<ReturnType<typeof createAdminClient> | RouteSupabaseClient, 'from'>
 
@@ -190,7 +191,7 @@ export async function createSubdomainForDealer(
             .single()
 
         if (routingError) {
-            console.error('Error creating dealer_domains subdomain:', routingError)
+            logger.error('Error creating dealer_domains subdomain:', routingError)
         }
 
         if (routingDomain) {
@@ -202,7 +203,7 @@ export async function createSubdomainForDealer(
                 .single()
 
             if (legacyCompatError) {
-                console.error('Error creating compatibility domain:', legacyCompatError)
+                logger.error('Error creating compatibility domain:', legacyCompatError)
             }
 
             return {
@@ -219,7 +220,7 @@ export async function createSubdomainForDealer(
             .single()
 
         if (error) {
-            console.error('Error creating subdomain:', error)
+            logger.error('Error creating subdomain:', error)
             return {
                 success: false,
                 error: 'Failed to create subdomain. Please try again.'
@@ -231,7 +232,7 @@ export async function createSubdomainForDealer(
             domain: newDomain as unknown as Domain
         }
     } catch (error) {
-        console.error('Unexpected error in createSubdomainForDealer:', error)
+        logger.error('Unexpected error in createSubdomainForDealer:', error)
         return {
             success: false,
             error: 'An unexpected error occurred'
@@ -280,7 +281,7 @@ export async function getDomainBySlug(slug: string): Promise<Domain | null> {
 
         return data as unknown as Domain
     } catch (error) {
-        console.error('Error getting domain by slug:', error)
+        logger.error('Error getting domain by slug:', error)
         return null
     }
 }
@@ -332,7 +333,7 @@ export async function getDomainByName(domainName: string): Promise<Domain | null
 
         return data as unknown as Domain
     } catch (error) {
-        console.error('Error getting domain by name:', error)
+        logger.error('Error getting domain by name:', error)
         return null
     }
 }
@@ -362,12 +363,12 @@ export async function getDealerDomains(
         ])
 
         if (legacyResult.error && routingResult.error) {
-            console.error('Error getting dealer domains:', legacyResult.error, routingResult.error)
+            logger.error('Error getting dealer domains:', legacyResult.error, routingResult.error)
             return []
         }
 
-        if (legacyResult.error) console.error('Error getting legacy domains:', legacyResult.error)
-        if (routingResult.error) console.error('Error getting dealer_domains:', routingResult.error)
+        if (legacyResult.error) logger.error('Error getting legacy domains:', legacyResult.error)
+        if (routingResult.error) logger.error('Error getting dealer_domains:', routingResult.error)
 
         const routingDomains = ((routingResult.data || []) as unknown as DealerDomainRow[]).map(mapDealerDomain)
         const seenDomains = new Set(routingDomains.map(domain => domain.domain.toLowerCase()))
@@ -379,7 +380,7 @@ export async function getDealerDomains(
             return new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
         })
     } catch (error) {
-        console.error('Unexpected error in getDealerDomains:', error)
+        logger.error('Unexpected error in getDealerDomains:', error)
         return []
     }
 }
@@ -414,21 +415,35 @@ export async function getPrimaryDomain(dealerId: string): Promise<Domain | null>
 
         return legacyDomain as unknown as Domain
     } catch (error) {
-        console.error('Error getting primary domain:', error)
+        logger.error('Error getting primary domain:', error)
         return null
     }
 }
 
 /**
- * Checks if a slug is available
+ * Checks if a slug is available.
+ *
+ * SECURITY/CORRECTNESS: the site routes from `dealers.slug` (and save-dealer.ts WRITES that
+ * column), so availability MUST include `dealers.slug` — otherwise two dealers can end up with
+ * the same routing slug and one dealer's site/data can be served under the other's URL.
+ * Previously this only checked `domains`/`dealer_domains`, missing the authoritative column.
+ *
+ * `excludeDealerId` lets an editing dealer keep their own current slug (so re-saving without
+ * changing the slug doesn't report it as taken).
+ *
+ * NOTE (follow-up): there is no DB UNIQUE constraint on `dealers.slug`, so this check is a
+ * TOCTOU-prone application guard, not a hard guarantee. Recommend adding a unique index on
+ * `dealers.slug` (and `dealer_domains.subdomain` / `dealer_domains.site_slug`) via migration
+ * to make uniqueness atomic at the database level. (Migration is handled separately.)
  */
 export async function isSlugAvailable(
     slug: string,
-    supabase?: DomainSupabaseClient
+    supabase?: DomainSupabaseClient,
+    excludeDealerId?: string
 ): Promise<boolean> {
     try {
         const db = getDomainClient(supabase)
-        const [legacyResult, routingResult, siteResult] = await Promise.all([
+        const [legacyResult, routingResult, siteResult, dealerResult] = await Promise.all([
             db
                 .from('domains')
                 .select('slug')
@@ -444,9 +459,21 @@ export async function isSlugAvailable(
                 .select('site_slug')
                 .eq('site_slug', slug)
                 .single(),
+            // Authoritative routing column — the site routes from dealers.slug.
+            db
+                .from('dealers')
+                .select('id, slug')
+                .eq('slug', slug)
+                .single(),
         ])
 
-        return !legacyResult.data && !routingResult.data && !siteResult.data
+        // A matching dealers.slug only conflicts if it belongs to a DIFFERENT dealer.
+        const dealerRow = dealerResult.data as { id?: string; slug?: string } | null
+        const dealerConflict = Boolean(
+            dealerRow && (!excludeDealerId || dealerRow.id !== excludeDealerId)
+        )
+
+        return !legacyResult.data && !routingResult.data && !siteResult.data && !dealerConflict
     } catch (error) {
         // If no data found, slug is available
         return true
@@ -476,7 +503,7 @@ export async function updateDomainStatus(
 
         return !routingResult.error || !legacyResult.error
     } catch (error) {
-        console.error('Error updating domain status:', error)
+        logger.error('Error updating domain status:', error)
         return false
     }
 }
@@ -525,7 +552,7 @@ export async function setPrimaryDomain(
 
         return { success: true }
     } catch (error) {
-        console.error('Error setting primary domain:', error)
+        logger.error('Error setting primary domain:', error)
         return {
             success: false,
             error: 'An unexpected error occurred'

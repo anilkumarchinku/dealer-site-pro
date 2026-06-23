@@ -29,6 +29,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { getOptionalEnv } from '@/lib/env'
 import { ExternalApiError, externalApiFetch } from '@/lib/services/external-api-fetch'
 import { requireAuth, requireDealerOwnership } from '@/lib/supabase-server'
+import { rateLimitOrNull } from '@/lib/utils/rate-limiter'
 
 interface PostBody {
     dealer_id: string
@@ -178,6 +179,7 @@ async function postToTwitter(text: string): Promise<void> {
 }
 
 export async function POST(request: NextRequest) {
+    const limited = await rateLimitOrNull("social_post", request, 30, 3600000); if (limited) return limited;
     const { user, supabase, errorResponse } = await requireAuth()
     if (errorResponse) return errorResponse
 

@@ -8,6 +8,7 @@
 import { CarCard } from './CarCard';
 import type { Car } from '@/lib/types/car';
 import { cn } from '@/lib/utils';
+import { Reveal } from '@/components/ui/Reveal';
 
 interface CarGridProps {
     cars: Car[];
@@ -27,6 +28,8 @@ interface CarGridProps {
     dealerPhone?: string;
     /** Dealer ID — enables test drive booking modal */
     dealerId?: string;
+    /** Staggered scroll-reveal entrance for cards (default true). Set false to render statically. */
+    animate?: boolean;
 }
 
 export function CarGrid({
@@ -43,6 +46,7 @@ export function CarGrid({
     detailBasePath,
     dealerPhone,
     dealerId,
+    animate = true,
 }: CarGridProps) {
     if (cars.length === 0) {
         return (
@@ -61,22 +65,30 @@ export function CarGrid({
                 className
             )}
         >
-            {cars.map((car) => (
-                <CarCard
-                    key={car.id}
-                    car={car}
-                    variant={variant}
-                    showEMI={showEMI}
-                    summaryOnly={summaryOnly}
-                    onViewDetails={onViewDetails}
-                    onCompare={onCompare}
-                    brandColor={brandColor}
-                    light={light}
-                    detailBasePath={detailBasePath}
-                    dealerPhone={dealerPhone}
-                    dealerId={dealerId}
-                />
-            ))}
+            {cars.map((car, index) => {
+                const card = (
+                    <CarCard
+                        car={car}
+                        variant={variant}
+                        showEMI={showEMI}
+                        summaryOnly={summaryOnly}
+                        onViewDetails={onViewDetails}
+                        onCompare={onCompare}
+                        brandColor={brandColor}
+                        light={light}
+                        detailBasePath={detailBasePath}
+                        dealerPhone={dealerPhone}
+                        dealerId={dealerId}
+                    />
+                );
+                if (!animate) return <div key={car.id} className="h-full">{card}</div>;
+                return (
+                    // Gentle cascade that repeats every 8 cards so long lists never wait seconds
+                    <Reveal key={car.id} className="h-full" delay={(index % 8) * 60}>
+                        {card}
+                    </Reveal>
+                );
+            })}
         </div>
     );
 }

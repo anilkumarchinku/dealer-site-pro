@@ -47,7 +47,7 @@ function ScoreRing({ score, size = 80 }: { score: number; size?: number }) {
 
     return (
         <svg width={size} height={size} style={{ transform: 'rotate(-90deg)' }}>
-            <circle cx={size / 2} cy={size / 2} r={r} fill="none" stroke="#e5e7eb" strokeWidth={8} />
+            <circle cx={size / 2} cy={size / 2} r={r} fill="none" className="stroke-muted" strokeWidth={8} />
             <circle
                 cx={size / 2} cy={size / 2} r={r} fill="none"
                 stroke={color} strokeWidth={8}
@@ -101,7 +101,7 @@ function PillarRow({ icon, label, score, max, tip }: PillarRowProps) {
 export function DealerScorecard({
     inventoryCount = 0,
     leadsCount = 0,
-    isVerified = false,
+    isVerified,
     avgRating = 0,
     reviewCount = 0,
     profileComplete = false,
@@ -127,10 +127,16 @@ export function DealerScorecard({
     // Profile: simple heuristic passed in
     const profileScore = profileComplete ? 20 : 10;
 
-    // Verification: binary
+    // Verification: binary. When isVerified is undefined the dealer's verification
+    // status is unknown — omit the pillar entirely rather than show a wrong 0.
+    const showVerification = isVerified !== undefined;
     const verScore = isVerified ? 15 : 0;
 
-    const total = inventoryScore + leadScore + reviewScore + profileScore + verScore;
+    // Sum only the pillars we can actually measure, then normalise to 0–100 so the
+    // grade thresholds stay meaningful even when the verification pillar is hidden.
+    const rawTotal = inventoryScore + leadScore + reviewScore + profileScore + (showVerification ? verScore : 0);
+    const maxTotal = 85 + (showVerification ? 15 : 0);
+    const total = Math.round((rawTotal / maxTotal) * 100);
 
     const grade = total >= 90 ? 'A+' : total >= 80 ? 'A' : total >= 70 ? 'B' : total >= 60 ? 'C' : 'D';
     const gradeLabel = total >= 80 ? 'Excellent' : total >= 60 ? 'Good' : total >= 40 ? 'Needs Work' : 'Getting Started';
@@ -197,11 +203,13 @@ export function DealerScorecard({
                         label="Profile Completeness" score={profileScore} max={20}
                         tip="Fill in your dealership name, address, phone, email, logo, and working hours."
                     />
-                    <PillarRow
-                        icon={<ShieldCheck className="w-4 h-4" />}
-                        label="DealerSite Verified" score={verScore} max={15}
-                        tip="Complete the Verified Dealer checklist to earn the badge and 15 bonus points."
-                    />
+                    {showVerification && (
+                        <PillarRow
+                            icon={<ShieldCheck className="w-4 h-4" />}
+                            label="DealerSite Verified" score={verScore} max={15}
+                            tip="Complete the Verified Dealer checklist to earn the badge and 15 bonus points."
+                        />
+                    )}
                 </div>
             )}
         </div>

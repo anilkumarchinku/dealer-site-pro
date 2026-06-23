@@ -11,6 +11,7 @@ import { createAdminClient } from '@/lib/supabase-server';
 import { sendTestDriveConfirmationEmail, sendTestDriveNotificationEmail } from '@/lib/services/email-service';
 import { testDriveSchema, formatZodErrors } from '@/lib/validations/schemas';
 import { logger } from '@/lib/utils/logger';
+import { rateLimitOrNull } from '@/lib/utils/rate-limiter';
 
 const UUID_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i
 
@@ -44,6 +45,7 @@ async function resolveVehicleId(
 
 export async function POST(req: NextRequest) {
     try {
+        const limited = await rateLimitOrNull("test_drive_create", req, 5, 60000); if (limited) return limited;
         const body = await req.json();
 
         // ── Validate with Zod ───────────────────────────────────────────────

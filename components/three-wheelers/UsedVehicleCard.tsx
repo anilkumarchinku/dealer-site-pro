@@ -1,6 +1,9 @@
 "use client"
 
+import { useState } from "react"
 import Link from "next/link"
+import { Truck } from "lucide-react"
+import { FadeInImage } from "@/components/ui/FadeInImage"
 import type { ThreeWheelerUsedVehicle } from "@/lib/types/three-wheeler"
 import { useSitePrefix } from "@/lib/hooks/useSitePrefix"
 
@@ -16,8 +19,26 @@ const GRADE_COLORS = {
     C: "bg-orange-100 text-orange-700 border-orange-300",
 }
 
+/**
+ * Consistent "no image available" placeholder — matches the treatment used
+ * across all three-wheeler cards (see VehicleCard).
+ */
+function NoImagePlaceholder() {
+    return (
+        <div
+            role="img"
+            aria-label="No image available"
+            className="flex h-full w-full items-center justify-center bg-gray-100 border-b border-gray-200"
+        >
+            <Truck className="h-10 w-10 text-gray-400" strokeWidth={1.5} aria-hidden="true" />
+            <span className="sr-only">No image available</span>
+        </div>
+    )
+}
+
 export function UsedVehicleCard({ vehicle, slug, onLead }: Props) {
     const prefix = useSitePrefix(slug)
+    const [imgFailed, setImgFailed] = useState(false)
     const hasOffer = typeof vehicle.offer_price_paise === "number" && vehicle.offer_price_paise > 0 && vehicle.offer_price_paise < vehicle.price_paise
     const price = ((hasOffer ? vehicle.offer_price_paise! : vehicle.price_paise) / 100).toLocaleString("en-IN")
     const originalPrice = (vehicle.price_paise / 100).toLocaleString("en-IN")
@@ -25,16 +46,19 @@ export function UsedVehicleCard({ vehicle, slug, onLead }: Props) {
     return (
         <div className="bg-card border border-border rounded-2xl overflow-hidden hover:shadow-md transition-shadow group">
             {/* Image */}
-            <div className="relative h-44 bg-muted/30 overflow-hidden">
-                {vehicle.images[0] ? (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
+            <div className="relative aspect-[16/10] bg-gray-50 overflow-hidden">
+                {vehicle.images[0] && !imgFailed ? (
+                    <FadeInImage
                         src={vehicle.images[0]}
                         alt={`${vehicle.brand} ${vehicle.model}`}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        fill
+                        unoptimized
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        className="object-contain group-hover:scale-105 transition-transform duration-300"
+                        onError={() => setImgFailed(true)}
                     />
                 ) : (
-                    <div className="flex items-center justify-center h-full text-muted-foreground text-sm">No Image</div>
+                    <NoImagePlaceholder />
                 )}
                 {vehicle.certified_pre_owned && (
                     <div className="absolute top-3 left-3">
@@ -77,12 +101,14 @@ export function UsedVehicleCard({ vehicle, slug, onLead }: Props) {
                 )}
 
                 <div className="flex gap-2 mt-4">
-                    <button
-                        onClick={() => onLead?.(vehicle.id)}
-                        className="flex-1 bg-primary text-primary-foreground text-sm font-medium rounded-lg px-3 py-2 hover:opacity-90 transition-opacity"
-                    >
-                        Make an Offer
-                    </button>
+                    {onLead && (
+                        <button
+                            onClick={() => onLead(vehicle.id)}
+                            className="flex-1 bg-primary text-primary-foreground text-sm font-medium rounded-lg px-3 py-2 hover:opacity-90 transition-opacity"
+                        >
+                            Make an Offer
+                        </button>
+                    )}
                     <Link
                         href={`${prefix}/three-wheelers/used/${vehicle.id}`}
                         className="flex-1 border border-border text-sm font-medium rounded-lg px-3 py-2 text-center hover:bg-muted/50 transition-colors"

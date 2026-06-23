@@ -72,7 +72,12 @@ SELECT
     c.hero_title,
     c.hero_subtitle,
     c.hero_cta_text,
-    c.working_hours
+    c.working_hours,
+    c.facebook_url,
+    c.instagram_url,
+    c.youtube_url,
+    c.twitter_url,
+    c.linkedin_url
 FROM public.dealer_template_configs c
 JOIN public.dealers d ON d.id = c.dealer_id
 WHERE d.onboarding_complete = true

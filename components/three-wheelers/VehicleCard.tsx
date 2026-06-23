@@ -2,10 +2,12 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { Fuel, Zap, Users, Package, Send, ChevronRight, Eye, Heart, TrendingUp, GitCompare, Calendar } from "lucide-react"
+import { FadeInImage } from "@/components/ui/FadeInImage"
+import { Fuel, Zap, Users, Send, ChevronRight, Eye, Heart, TrendingUp, GitCompare, Calendar, Truck } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import type { ThreeWheelerVehicle } from "@/lib/types/three-wheeler"
 import { brandNameToId } from "@/lib/utils/brand-model-images"
+import { getContrastText } from "@/lib/utils/color-contrast"
 import { useSitePrefix } from "@/lib/hooks/useSitePrefix"
 import { QuickViewModal } from "./QuickViewModal"
 import { LeadFormModal } from "./LeadFormModal"
@@ -18,6 +20,24 @@ interface Props {
     summaryOnly?: boolean
     onLead?:    (vehicleId: string) => void
     onCompare?: (vehicle: ThreeWheelerVehicle) => void
+}
+
+/**
+ * Consistent "no image available" placeholder — neutral muted tile with a
+ * lucide icon and an accessible (visually-hidden) label, matching the
+ * treatment used across all vehicle cards.
+ */
+function NoImagePlaceholder() {
+    return (
+        <div
+            role="img"
+            aria-label="No image available"
+            className="flex h-full w-full items-center justify-center bg-gray-100 border-b border-gray-200"
+        >
+            <Truck className="h-10 w-10 text-gray-400" strokeWidth={1.5} aria-hidden="true" />
+            <span className="sr-only">No image available</span>
+        </div>
+    )
 }
 
 function SpecItem({ icon, label, value }: { icon: React.ReactNode; label: string; value: string }) {
@@ -78,23 +98,30 @@ export function VehicleCard({ vehicle, slug, dealerId, brandColor = "#1f2937", s
 
     const typeLabel = vehicle.type.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase())
 
+    // Readable text color for branded CTAs (handles light brand colors on the light site).
+    const ctaTextColor = getContrastText(brandColor)
+    // Primary CTAs depend on a working lead handler — hide them when absent so there are no dead buttons.
+    const canLead = typeof onLead === "function"
+
     if (summaryOnly) {
         return (
             <Link
                 href={`${prefix}/three-wheelers/${vehicle.id}`}
                 className="group relative flex h-full flex-col overflow-hidden rounded-xl border border-gray-200 bg-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
             >
-                <div className="relative h-44 overflow-hidden bg-gray-50">
+                <div className="relative aspect-[16/10] overflow-hidden bg-gray-50">
                     {!imgFailed && imgSrc ? (
-                        // eslint-disable-next-line @next/next/no-img-element
-                        <img
+                        <FadeInImage
                             src={imgSrc}
                             alt={`${vehicle.brand} ${vehicle.model}`}
-                            className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105"
+                            fill
+                            unoptimized
+                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                            className="object-contain transition-transform duration-500 group-hover:scale-105"
                             onError={handleImgError}
                         />
                     ) : (
-                        <div className="flex h-full items-center justify-center text-sm text-gray-600">🛺</div>
+                        <NoImagePlaceholder />
                     )}
 
                     <button
@@ -132,14 +159,13 @@ export function VehicleCard({ vehicle, slug, dealerId, brandColor = "#1f2937", s
                         </div>
                     </div>
 
-                    <Button
-                        size="sm"
-                        className="mt-auto w-full text-white"
-                        style={{ backgroundColor: brandColor }}
+                    <span
+                        className="mt-auto inline-flex h-9 w-full items-center justify-center rounded-md px-3 text-sm font-medium transition-opacity group-hover:opacity-90"
+                        style={{ backgroundColor: brandColor, color: ctaTextColor }}
                     >
                         <Eye className="mr-2 h-4 w-4" />
                         View Details
-                    </Button>
+                    </span>
                 </div>
             </Link>
         )
@@ -149,17 +175,19 @@ export function VehicleCard({ vehicle, slug, dealerId, brandColor = "#1f2937", s
         <div className="group relative flex flex-col bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 cursor-pointer h-full">
 
             {/* Image */}
-            <div className="relative h-44 bg-gray-50 overflow-hidden">
+            <div className="relative aspect-[16/10] bg-gray-50 overflow-hidden">
                 {!imgFailed && imgSrc ? (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
+                    <FadeInImage
                         src={imgSrc}
                         alt={`${vehicle.brand} ${vehicle.model}`}
-                        className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                        fill
+                        unoptimized
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        className="object-contain group-hover:scale-105 transition-transform duration-500"
                         onError={handleImgError}
                     />
                 ) : (
-                    <div className="flex items-center justify-center h-full text-gray-600 text-sm">🛺</div>
+                    <NoImagePlaceholder />
                 )}
 
                 {/* Badges */}
@@ -270,28 +298,34 @@ export function VehicleCard({ vehicle, slug, dealerId, brandColor = "#1f2937", s
                     </div>
                 )}
 
-                {/* CTA buttons */}
-                <div className="flex gap-2 mt-auto">
-                    <Button
-                        size="sm"
-                        className="flex-1 text-white"
-                        style={{ backgroundColor: brandColor }}
-                        onClick={() => onLead?.(vehicle.id)}
-                    >
-                        <Send className="w-3.5 h-3.5 mr-1.5" />
-                        Enquire
-                    </Button>
-                    <Button
-                        size="sm"
-                        variant="outline"
-                        className="bg-white"
-                        style={{ borderColor: brandColor, color: brandColor }}
-                        onClick={(e) => { e.stopPropagation(); setTrialOpen(true) }}
-                    >
-                        <Calendar className="w-3.5 h-3.5 mr-1" />
-                        Trial Run
-                    </Button>
-                </div>
+                {/* CTA buttons — hidden when their handler/dealerId is absent (no dead buttons) */}
+                {(canLead || dealerId) && (
+                    <div className="flex gap-2 mt-auto">
+                        {canLead && (
+                            <Button
+                                size="sm"
+                                className="flex-1"
+                                style={{ backgroundColor: brandColor, color: ctaTextColor }}
+                                onClick={() => onLead?.(vehicle.id)}
+                            >
+                                <Send className="w-3.5 h-3.5 mr-1.5" />
+                                Enquire
+                            </Button>
+                        )}
+                        {dealerId && (
+                            <Button
+                                size="sm"
+                                variant="outline"
+                                className="bg-white"
+                                style={{ borderColor: brandColor, color: brandColor }}
+                                onClick={(e) => { e.stopPropagation(); setTrialOpen(true) }}
+                            >
+                                <Calendar className="w-3.5 h-3.5 mr-1" />
+                                Trial Run
+                            </Button>
+                        )}
+                    </div>
+                )}
 
                 {/* Compare + Info row */}
                 <div className="flex items-center gap-2 mt-2">

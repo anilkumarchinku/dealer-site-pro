@@ -1,9 +1,10 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
-import { X, Fuel, Zap, Gauge, Palette, Settings, Shield, Info, ChevronRight } from "lucide-react"
+import { X, Zap, Palette, Settings, Shield, Info } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { getContrastText } from "@/lib/utils/color-contrast"
 import type { TwoWheelerVehicle } from "@/lib/types/two-wheeler"
 
 interface Props {
@@ -19,6 +20,56 @@ type Tab = "overview" | "specs" | "colors" | "features"
 
 export function QuickViewModal({ vehicle, open, onClose, brandColor = "#1f2937", onLead, imgSrc: imgSrcProp }: Props) {
     const [tab, setTab] = useState<Tab>("overview")
+
+    const dialogRef         = useRef<HTMLDivElement>(null)
+    const previouslyFocused = useRef<HTMLElement | null>(null)
+
+    // Restore focus to the trigger and close on Escape; trap Tab within the dialog.
+    useEffect(() => {
+        if (!open) return
+        previouslyFocused.current = document.activeElement as HTMLElement | null
+        const focusTimer = window.setTimeout(() => {
+            const dialog = dialogRef.current
+            if (!dialog) return
+            const focusable = dialog.querySelector<HTMLElement>(
+                'input, button, [href], select, textarea, [tabindex]:not([tabindex="-1"])'
+            )
+            focusable?.focus()
+        }, 0)
+
+        const handleKeyDown = (e: KeyboardEvent) => {
+            if (e.key === "Escape") {
+                e.stopPropagation()
+                onClose()
+                return
+            }
+            if (e.key !== "Tab") return
+            const dialog = dialogRef.current
+            if (!dialog) return
+            const focusable = Array.from(
+                dialog.querySelectorAll<HTMLElement>(
+                    'input, button, [href], select, textarea, [tabindex]:not([tabindex="-1"])'
+                )
+            ).filter(el => !el.hasAttribute("disabled") && el.offsetParent !== null)
+            if (focusable.length === 0) return
+            const first = focusable[0]
+            const last = focusable[focusable.length - 1]
+            if (e.shiftKey && document.activeElement === first) {
+                e.preventDefault()
+                last.focus()
+            } else if (!e.shiftKey && document.activeElement === last) {
+                e.preventDefault()
+                first.focus()
+            }
+        }
+
+        document.addEventListener("keydown", handleKeyDown)
+        return () => {
+            window.clearTimeout(focusTimer)
+            document.removeEventListener("keydown", handleKeyDown)
+            previouslyFocused.current?.focus?.()
+        }
+    }, [open, onClose])
 
     if (!open) return null
 
@@ -53,6 +104,10 @@ export function QuickViewModal({ vehicle, open, onClose, brandColor = "#1f2937",
             onClick={onClose}
         >
             <div
+                ref={dialogRef}
+                role="dialog"
+                aria-modal="true"
+                aria-label="Vehicle quick view"
                 className="w-full max-w-lg bg-white rounded-2xl shadow-2xl overflow-hidden max-h-[90vh] flex flex-col"
                 onClick={e => e.stopPropagation()}
             >
@@ -73,6 +128,7 @@ export function QuickViewModal({ vehicle, open, onClose, brandColor = "#1f2937",
                     )}
                     <button
                         onClick={onClose}
+                        aria-label="Close"
                         className="absolute top-3 right-3 w-8 h-8 rounded-full bg-black/50 text-white flex items-center justify-center hover:bg-black/70 transition-colors"
                     >
                         <X className="w-4 h-4" />
@@ -118,7 +174,7 @@ export function QuickViewModal({ vehicle, open, onClose, brandColor = "#1f2937",
                             className={`flex items-center gap-1 px-3 py-2.5 text-xs font-medium transition-colors border-b-2 ${
                                 tab === t.key
                                     ? "border-current text-gray-900"
-                                    : "border-transparent text-gray-600 hover:text-gray-600"
+                                    : "border-transparent text-gray-600 hover:text-gray-900"
                             }`}
                             style={tab === t.key ? { color: brandColor, borderColor: brandColor } : undefined}
                         >
@@ -273,7 +329,7 @@ export function QuickViewModal({ vehicle, open, onClose, brandColor = "#1f2937",
                     </Button>
                     <Button
                         className="flex-1 h-10 font-semibold text-sm shadow-sm"
-                        style={{ backgroundColor: brandColor, color: '#fff' }}
+                        style={{ backgroundColor: brandColor, color: getContrastText(brandColor) }}
                         onClick={() => { onLead?.(vehicle.id); onClose() }}
                     >
                         Get Best Price
