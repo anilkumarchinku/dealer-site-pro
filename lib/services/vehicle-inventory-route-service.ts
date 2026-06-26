@@ -88,6 +88,7 @@ function normalizeIdentifier(value: string, options: Pick<VehicleDetailRouteOpti
         .toLowerCase()
         .replace(new RegExp(`^${options.catalogPrefix}-\\d+-`), '')
         .replace(new RegExp(`^${options.dbPrefix}`), '')
+        .replace(/-v\d+$/, '')
         .trim()
 }
 

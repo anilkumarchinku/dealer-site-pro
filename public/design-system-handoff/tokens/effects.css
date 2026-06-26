@@ -1,0 +1,42 @@
+/* DealerSite Pro — Radii, borders, shadows, motion */
+:root {
+  /* Corner radii — generous, rounded, premium-soft */
+  --radius-xs:  6px;
+  --radius-sm:  10px;
+  --radius-md:  14px;
+  --radius-lg:  20px;
+  --radius-xl:  28px;
+  --radius-2xl: 36px;
+  --radius-3xl: 48px;   /* large hero canvas panel */
+  --radius-full: 999px;
+
+  /* Border widths */
+  --border-1: 1px;
+  --border-2: 2px;
+
+  /* Shadows — soft, warm-tinted, layered. Editorial depth, never heavy. */
+  --shadow-xs:  0 1px 2px rgba(38, 36, 31, 0.05);
+  --shadow-sm:  0 2px 6px rgba(38, 36, 31, 0.06), 0 1px 2px rgba(38, 36, 31, 0.04);
+  --shadow-md:  0 8px 22px -8px rgba(38, 36, 31, 0.14), 0 2px 6px -2px rgba(38, 36, 31, 0.06);
+  --shadow-lg:  0 24px 50px -16px rgba(11, 14, 18, 0.22), 0 8px 18px -8px rgba(38, 36, 31, 0.10);
+  --shadow-xl:  0 48px 96px -28px rgba(11, 14, 18, 0.34), 0 16px 36px -16px rgba(11, 14, 18, 0.16);
+
+  /* Float — for layered preview cards / device mockup on the stage */
+  --shadow-float: 0 40px 90px -30px rgba(7, 9, 12, 0.55), 0 12px 30px -12px rgba(7, 9, 12, 0.35);
+
+  /* Hairline inset on dark surfaces */
+  --shadow-inset-dark: inset 0 1px 0 rgba(255, 253, 247, 0.05);
+
+  /* Focus ring */
+  --ring-width: 3px;
+  --ring-color: rgba(34, 36, 40, 0.35);
+
+  /* Motion — smooth, premium, slight ease-out rise (Linear/Vercel feel) */
+  --ease-out:    cubic-bezier(0.22, 1, 0.36, 1);   /* @kind other */
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);   /* @kind other */
+  --ease-spring: cubic-bezier(0.34, 1.4, 0.5, 1);  /* @kind other */
+  --dur-fast:  140ms;   /* @kind other */
+  --dur-base:  260ms;   /* @kind other */
+  --dur-slow:  520ms;   /* @kind other */
+  --dur-reveal: 720ms;  /* @kind other */
+}

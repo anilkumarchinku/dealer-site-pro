@@ -1,0 +1,8 @@
+/* DealerSite Pro — Webfonts
+ * Display:  Archivo (grotesque, wide weights for headlines)
+ * Body:     Manrope (clean, modern humanist sans)
+ * Mono:     JetBrains Mono (specs, VINs, prices, code)
+ * NOTE: Sourced from Google Fonts. No brand font files were supplied —
+ * flag to user if a licensed display face should replace Archivo.
+ */
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap');

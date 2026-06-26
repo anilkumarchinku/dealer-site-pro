@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
 import { recordDomainDeploymentOperation } from '@/lib/services/domain-deployment-operation-service'
 import { isValidDomain, verifyCustomDomain } from '@/lib/services/dns-verification-service'
+import { requireActiveProDomainSubscription } from '@/lib/services/pro-domain-subscription-service'
 import { registerDomainOnMainProject } from '@/lib/services/vercel-service'
 import { requireAuth, requireDealerOwnership } from '@/lib/supabase-server'
 
@@ -72,9 +73,9 @@ export async function POST(request: Request) {
         // Check if domain already exists for a DIFFERENT dealer
         const { data: existingDomain } = await supabase
             .from('dealer_domains')
-            .select('id, dealer_id')
+            .select('id, dealer_id, custom_domain, subdomain_url, subdomain, domain_type, status, ssl_status, is_primary, dns_verified, site_slug, created_at, updated_at')
             .eq('custom_domain', normalizedCustomDomain)
-            .single()
+            .maybeSingle()
 
         if (existingDomain && existingDomain.dealer_id !== dealerId) {
             return NextResponse.json(
@@ -83,95 +84,48 @@ export async function POST(request: Request) {
             )
         }
 
-        // If domain already belongs to this dealer, return success (idempotent)
-        if (existingDomain && existingDomain.dealer_id === dealerId) {
-            await recordDomainDeploymentOperation({
-                dealerId,
-                domainId: existingDomain.id,
-                domain: normalizedCustomDomain,
-                operation: 'custom_domain_connect',
-                status: 'completed',
-                providerStep: 'database',
-                details: { idempotent: true },
-            })
-            return NextResponse.json({
-                success: true,
-                domain: existingDomain,
-                dns: DNS_INSTRUCTIONS,
-                vercelRegistered: false,
-            })
-        }
-
-        // Create domain record with pending status
-        const { data: newDomain, error } = await supabase
-            .from('dealer_domains')
-            .insert({
-                dealer_id: dealerId,
-                custom_domain: normalizedCustomDomain,
-                domain_type: 'custom',
-                status: 'pending',
-                ssl_status: 'pending',
-                is_primary: false,
-                dns_verified: false,
-                site_slug: siteSlug ?? null,
-            })
-            .select()
-            .single()
-
-        if (error) {
-            console.error('Error creating custom domain:', error)
-            await recordDomainDeploymentOperation({
-                dealerId,
-                domain: normalizedCustomDomain,
-                operation: 'custom_domain_connect',
-                status: 'failed',
-                providerStep: 'database',
-                error,
-            })
-
-            // Provide more specific error messages
-            let errorMessage = 'Failed to initiate domain connection'
-
-            if (error.message?.includes('relation') || error.message?.includes('does not exist')) {
-                errorMessage = 'Database table not found. Please run database migrations.'
-            } else if (error.message?.includes('permission') || error.message?.includes('policy')) {
-                errorMessage = 'Database permission denied. Please check RLS policies.'
-            } else if (error.message?.includes('unique')) {
-                errorMessage = 'This domain is already registered.'
-            } else if (error.code === 'PGRST116') {
-                errorMessage = 'Database connection failed. Please check your Supabase configuration.'
-            }
-
+        if (!existingDomain) {
             return NextResponse.json(
                 {
                     success: false,
-                    error: errorMessage,
-                    details: process.env.NODE_ENV === 'development' ? error.message : undefined
+                    requiresPayment: true,
+                    error: 'Start the ₹499/month PRO payment before connecting this custom domain.',
                 },
-                { status: 500 }
+                { status: 402 }
             )
         }
 
-        // Attempt to register domain on the shared multi-tenant Vercel project.
-        // Errors here are non-fatal — domain is already saved in DB.
+        const { error: subscriptionError } = await requireActiveProDomainSubscription(
+            supabase,
+            dealerId,
+            existingDomain.id
+        )
+
+        if (subscriptionError) {
+            return NextResponse.json(
+                { success: false, requiresPayment: true, error: subscriptionError },
+                { status: 402 }
+            )
+        }
+
         let vercelRegistered = false
         try {
             await registerDomainOnMainProject(normalizedCustomDomain)
             vercelRegistered = true
             await recordDomainDeploymentOperation({
                 dealerId,
-                domainId: newDomain?.id,
+                domainId: existingDomain.id,
                 domain: normalizedCustomDomain,
                 operation: 'custom_domain_connect',
                 status: 'provider_succeeded',
                 providerStep: 'vercel',
-                details: { target: 'main-project' },
+                details: { target: 'main-project', idempotent: true },
             })
         } catch (vercelError) {
             console.error('Vercel domain registration failed (non-fatal):', vercelError)
             await recordDomainDeploymentOperation({
                 dealerId,
-                domainId: newDomain?.id,
+                domainId: existingDomain.id,
                 domain: normalizedCustomDomain,
                 operation: 'custom_domain_connect',
                 status: 'provider_failed',
@@ -180,10 +134,16 @@ export async function POST(request: Request) {
             })
         }
 
-        // Auto-verify DNS immediately — if the dealer had DNS already pointing to us
-        // (e.g. set up before connecting), we activate the domain right away instead of
-        // leaving it stuck in 'pending' indefinitely.
-        if (vercelRegistered && newDomain) {
+        if (siteSlug && existingDomain.site_slug !== siteSlug) {
+            await supabase
+                .from('dealer_domains')
+                .update({ site_slug: siteSlug })
+                .eq('id', existingDomain.id)
+                .eq('dealer_id', dealerId)
+            existingDomain.site_slug = siteSlug
+        }
+
+        if (vercelRegistered) {
             try {
                 const verification = await verifyCustomDomain(normalizedCustomDomain)
                 if (verification.allVerified) {
@@ -191,42 +151,34 @@ export async function POST(request: Request) {
                         .from('dealer_domains')
                         .update({
                             status: 'active',
+                            ssl_status: 'provisioning',
                             dns_verified: true,
                             dns_verified_at: new Date().toISOString(),
                             last_checked_at: new Date().toISOString(),
                         })
-                        .eq('id', newDomain.id)
-                    newDomain.status = 'active'
-                    await recordDomainDeploymentOperation({
-                        dealerId,
-                        domainId: newDomain.id,
-                        domain: normalizedCustomDomain,
-                        operation: 'custom_domain_connect',
-                        status: 'completed',
-                        providerStep: 'dns',
-                        details: { dnsVerified: true },
-                    })
+                        .eq('id', existingDomain.id)
+                        .eq('dealer_id', dealerId)
+
+                    existingDomain.status = 'active'
+                    existingDomain.ssl_status = 'provisioning'
                 }
             } catch {
-                // Non-fatal — DNS hasn't propagated yet. User can verify later.
+                // DNS can still be pending; the dashboard verify button handles retries.
             }
         }
 
-        if (!vercelRegistered || newDomain?.status !== 'active') {
-            await recordDomainDeploymentOperation({
-                dealerId,
-                domainId: newDomain?.id,
-                domain: normalizedCustomDomain,
-                operation: 'custom_domain_connect',
-                status: 'provider_pending',
-                providerStep: vercelRegistered ? 'dns' : 'vercel',
-                details: { vercelRegistered, domainStatus: newDomain?.status ?? null },
-            })
-        }
-
+        await recordDomainDeploymentOperation({
+            dealerId,
+            domainId: existingDomain.id,
+            domain: normalizedCustomDomain,
+            operation: 'custom_domain_connect',
+            status: existingDomain.status === 'active' ? 'completed' : 'provider_pending',
+            providerStep: existingDomain.status === 'active' ? 'dns' : 'dns',
+            details: { idempotent: true, vercelRegistered },
+        })
         return NextResponse.json({
             success: true,
-            domain: newDomain,
+            domain: existingDomain,
             dns: DNS_INSTRUCTIONS,
             vercelRegistered,
         })

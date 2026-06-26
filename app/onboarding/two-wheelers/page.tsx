@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import { useOnboardingStore } from "@/lib/store/onboarding-store";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
+import { coreFlowSteps, FlowStepper } from "@/components/onboarding/flow-shell";
 import { Sparkles, Building2, RefreshCw, ArrowRight, ArrowLeft, Bike } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { supabase, isSupabaseReady } from "@/lib/supabase";
@@ -50,7 +51,15 @@ const colorStyles: Record<string, { border: string; bg: string; text: string; ba
 
 export default function TwoWheelerIndexPage() {
     const router = useRouter();
-    const { data, updateData, reset, setVehicleType } = useOnboardingStore();
+    const {
+        data,
+        updateData,
+        reset,
+        setVehicleType,
+        setSellsFourWheelers,
+        setSellsTwoWheelers,
+        setSellsThreeWheelers,
+    } = useOnboardingStore();
 
     // Guard: redirect already-completed users back to dashboard
     useEffect(() => {
@@ -81,15 +90,22 @@ export default function TwoWheelerIndexPage() {
     }, []);
 
     const handleSelect = (category: "new" | "used" | "both") => {
+        const sellsNew = category === "new" || category === "both";
+        const sellsUsed = category === "used" || category === "both";
+
         reset(getOnboardingResetPrefill(data));
         setVehicleType('two-wheeler');
-        if (category === "both") {
-            updateData({ dealerCategory: "both", sellsNewCars: true, sellsUsedCars: true });
-        } else if (category === "new") {
-            updateData({ dealerCategory: "new", sellsNewCars: true, sellsUsedCars: false });
-        } else {
-            updateData({ dealerCategory: "used", sellsNewCars: false, sellsUsedCars: true });
-        }
+        setSellsFourWheelers(false);
+        setSellsTwoWheelers(true);
+        setSellsThreeWheelers(false);
+        updateData({
+            dealerCategory: category,
+            sellsNewCars: sellsNew,
+            sellsUsedCars: sellsUsed,
+            sellsFourWheelers: false,
+            sellsTwoWheelers: true,
+            sellsThreeWheelers: false,
+        });
         router.push("/onboarding/two-wheelers/step-1");
     };
 
@@ -121,6 +137,8 @@ export default function TwoWheelerIndexPage() {
 
             <main className="flex-1 flex flex-col items-center justify-center px-4 py-16">
                 <div className="w-full max-w-3xl mx-auto space-y-10">
+                    <FlowStepper steps={coreFlowSteps} currentStep={1} />
+
                     {/* Hero */}
                     <div className="text-center space-y-4">
                         <div className="inline-flex items-center gap-2 text-xs font-medium px-3 py-1.5 rounded-full bg-primary/10 text-primary border border-primary/20">

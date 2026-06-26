@@ -4,6 +4,8 @@
  */
 
 import { Metadata } from 'next';
+import fs from 'node:fs';
+import path from 'node:path';
 import Link from 'next/link';
 import { getAllBrandsWithStats } from '@/lib/services/car-service';
 import { loadTwoWheelerCatalogVehicles } from '@/lib/services/two-wheeler-static-catalog';
@@ -49,6 +51,15 @@ function normalizeBrandType(value: string | undefined): BrandDirectoryType {
     return value === '2w' || value === '3w' || value === '4w' ? value : '4w';
 }
 
+function existingPublicAsset(assetPath: string | null | undefined): string | null {
+    if (!assetPath) return null;
+    if (!assetPath.startsWith('/')) return assetPath;
+
+    const cleanPath = assetPath.split('?')[0].replace(/^\/+/, '');
+    const filePath = path.join(process.cwd(), 'public', cleanPath);
+    return fs.existsSync(filePath) ? assetPath : null;
+}
+
 function buildStaticBrandCards(
     vehicles: Array<{ make: string; model: string; price_min_paise: number }>,
     category: Extract<VehicleImageCategory, '2w' | '3w'>
@@ -79,7 +90,7 @@ function buildStaticBrandCards(
             priceMin: stats.priceMin || null,
             priceMax: stats.priceMax || null,
             href: `/brands/${encodeURIComponent(name)}?type=${category}`,
-            logoUrl: brandLogoUrl(name, category) ?? null,
+            logoUrl: existingPublicAsset(brandLogoUrl(name, category)),
         }))
         .sort((a, b) => b.modelCount - a.modelCount || a.name.localeCompare(b.name));
 }
@@ -97,7 +108,7 @@ async function getBrandCards(type: BrandDirectoryType): Promise<BrandCard[]> {
     return brands.map((brand) => ({
         ...brand,
         href: `/brands/${encodeURIComponent(brand.name)}`,
-        logoUrl: getBrandLogo(brand.name) ?? brandLogoUrl(brand.name, '4w') ?? null,
+        logoUrl: existingPublicAsset(getBrandLogo(brand.name) ?? brandLogoUrl(brand.name, '4w')),
     }));
 }
 

@@ -22,10 +22,14 @@ import {
     Car as CarIcon,
     ArrowRight,
 } from 'lucide-react';
-import { getBrandLogo } from '@/lib/data/brand-logos';
 import { getVehicleImageUrls, brandNameToId } from '@/lib/utils/brand-model-images';
+import { brandLogoUrl } from '@/lib/utils/site-assets';
 
 const MAX_COMPARE = 4;
+
+function getVehicleBrandLogo(car: Car): string | undefined {
+    return brandLogoUrl(car.make, car.vehicleCategory ?? '4w');
+}
 
 interface CompareSpec {
     label: string;
@@ -254,9 +258,9 @@ export function ComparePageContent() {
                                             />
                                         </div>
                                         <div className="flex items-center justify-center gap-1">
-                                            {getBrandLogo(car.make) && (
+                                            {getVehicleBrandLogo(car) && (
                                                 <span className="inline-flex items-center justify-center rounded bg-white border border-slate-200 dark:border-slate-700 p-0.5 shrink-0">
-                                                    <Image src={getBrandLogo(car.make)!} alt={car.make} width={14} height={14} unoptimized className="object-contain" />
+                                                    <Image src={getVehicleBrandLogo(car)!} alt={car.make} width={14} height={14} unoptimized className="object-contain" />
                                                 </span>
                                             )}
                                             <p className="text-xs text-muted-foreground">{car.make}</p>
@@ -318,9 +322,9 @@ export function ComparePageContent() {
                                             </div>
                                             <div className="flex-1 min-w-0">
                                                 <p className="text-sm font-medium flex items-center gap-1.5">
-                                                    {getBrandLogo(car.make) && (
+                                                    {getVehicleBrandLogo(car) && (
                                                         <span className="inline-flex items-center justify-center rounded bg-white border border-slate-200 dark:border-slate-700 p-0.5 shrink-0">
-                                                            <Image src={getBrandLogo(car.make)!} alt={car.make} width={16} height={16} unoptimized className="object-contain" />
+                                                            <Image src={getVehicleBrandLogo(car)!} alt={car.make} width={16} height={16} unoptimized className="object-contain" />
                                                         </span>
                                                     )}
                                                     {car.make} {car.model}

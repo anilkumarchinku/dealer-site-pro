@@ -5,6 +5,7 @@
 
 'use client';
 
+import Link from 'next/link';
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -255,22 +256,22 @@ export function ConfigurationWizard({
                                 <div className="flex-grow">
                                     <h4 className="font-semibold text-blue-900 mb-2">Need Help?</h4>
                                     <div className="space-y-2">
-                                        <a
-                                            href="#"
+                                        <Link
+                                            href="/dashboard/help"
                                             className="flex items-center gap-2 text-sm text-blue-700 hover:underline"
                                         >
                                             <Video className="w-4 h-4" />
-                                            Watch video tutorial
+                                            Open domain help
                                             <ExternalLink className="w-3 h-3" />
-                                        </a>
-                                        <a
-                                            href="#"
+                                        </Link>
+                                        <Link
+                                            href="/dashboard/domains"
                                             className="flex items-center gap-2 text-sm text-blue-700 hover:underline"
                                         >
                                             <FileText className="w-4 h-4" />
-                                            View detailed guide
+                                            View domain setup
                                             <ExternalLink className="w-3 h-3" />
-                                        </a>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>

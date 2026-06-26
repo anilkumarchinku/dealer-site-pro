@@ -15,7 +15,7 @@ import type { Car } from '@/lib/types/car'
 import type { TwoWheelerVehicle, TwoWheelerUsedVehicle } from '@/lib/types/two-wheeler'
 import type { Service } from '@/lib/types'
 import { dedupeByBrandModel, dedupeCaseInsensitiveStrings } from '@/lib/utils/listing-dedupe'
-import { brandLogoUrl as getBrandLogoUrl, firstVehicleHeroImage, resolveDealerHeroImage } from '@/lib/utils/site-assets'
+import { brandLogoUrl as getBrandLogoUrl, firstVehicleHeroImage, resolveDealerHeroImage, resolveDealerLogoImage } from '@/lib/utils/site-assets'
 import { brandToUrlSlug, dealerSiteHref } from '@/lib/utils/domain'
 
 interface Props {
@@ -427,7 +427,11 @@ export default async function TwoWheelersPage({ params }: Props) {
         )
     }
 
-    const logoUrl = dealer.logo_url ?? (primaryBrand ? getBrandLogoUrl(primaryBrand, '2w') ?? undefined : undefined)
+    const logoUrl = resolveDealerLogoImage({
+        uploadedLogo: dealer.logo_url,
+        fallbackLogo: primaryBrand ? getBrandLogoUrl(primaryBrand, '2w') : undefined,
+        preferFallbackLogo: true,
+    })
     const heroImageUrl = resolveDealerHeroImage({
         uploadedHeroImage: dealer.hero_image_url,
         inventoryHeroImage: firstVehicleHeroImage(cars),
@@ -436,6 +440,7 @@ export default async function TwoWheelersPage({ params }: Props) {
     const contactInfo = {
         phone: dealer.phone,
         email: dealer.email ?? '',
+        city: dealer.location,
         address: dealer.full_address ?? dealer.location,
     }
 

@@ -150,6 +150,123 @@ const TABS = [
     { id: 'similar', label: 'Similar Bikes', icon: Bike },
 ];
 
+function BikeDetailLandingThemeStyles() {
+    return (
+        <style>{`
+            .bike-detail-landing-theme {
+                --background: 48 100% 98%;
+                --foreground: 220 24% 6%;
+                --card: 48 100% 98%;
+                --card-foreground: 220 24% 6%;
+                --muted: 38 32% 93%;
+                --muted-foreground: 36 7% 45%;
+                --border: 36 25% 83%;
+                --input: 36 25% 83%;
+                --primary: 34 46% 44%;
+                --primary-foreground: 48 100% 98%;
+                --ring: 34 46% 44%;
+                background:
+                    radial-gradient(circle at 12% 6%, rgb(199 154 91 / 0.12), transparent 28%),
+                    linear-gradient(180deg, #F5F1EA 0%, #FFFDF7 42%, #F4EFE6 100%);
+                color: #0B0E12;
+            }
+
+            .bike-detail-landing-theme .bg-white {
+                background-color: #FFFDF7 !important;
+            }
+
+            .bike-detail-landing-theme .bg-gray-50,
+            .bike-detail-landing-theme .bg-gray-100,
+            .bike-detail-landing-theme .hover\\:bg-gray-50:hover,
+            .bike-detail-landing-theme .hover\\:bg-gray-100:hover {
+                background-color: #F4EFE6 !important;
+            }
+
+            .bike-detail-landing-theme .text-gray-900 {
+                color: #0B0E12 !important;
+            }
+
+            .bike-detail-landing-theme .text-gray-700,
+            .bike-detail-landing-theme .text-muted-foreground {
+                color: #756F66 !important;
+            }
+
+            .bike-detail-landing-theme .text-gray-400 {
+                color: #A59D92 !important;
+            }
+
+            .bike-detail-landing-theme .text-blue-600,
+            .bike-detail-landing-theme .text-amber-500,
+            .bike-detail-landing-theme .text-red-500,
+            .bike-detail-landing-theme .text-indigo-600 {
+                color: #A8793A !important;
+            }
+
+            .bike-detail-landing-theme .text-blue-500,
+            .bike-detail-landing-theme .text-orange-500,
+            .bike-detail-landing-theme .text-amber-600 {
+                color: #C79A5B !important;
+            }
+
+            .bike-detail-landing-theme .text-emerald-500,
+            .bike-detail-landing-theme .text-emerald-600 {
+                color: #2E7D50 !important;
+            }
+
+            .bike-detail-landing-theme .border-gray-100,
+            .bike-detail-landing-theme .border-gray-200,
+            .bike-detail-landing-theme .hover\\:border-gray-400:hover {
+                border-color: #DED6CA !important;
+            }
+
+            .bike-detail-landing-theme .border-blue-600 {
+                border-color: #A8793A !important;
+            }
+
+            .bike-detail-landing-theme .bg-blue-600,
+            .bike-detail-landing-theme .hover\\:bg-blue-700:hover {
+                background-color: #0B0E12 !important;
+                color: #FFFDF7 !important;
+            }
+
+            .bike-detail-landing-theme .bg-blue-50 {
+                background-color: rgb(199 154 91 / 0.14) !important;
+            }
+
+            .bike-detail-landing-theme .ring-blue-600,
+            .bike-detail-landing-theme .focus\\:ring-blue-500:focus {
+                --tw-ring-color: #A8793A !important;
+            }
+
+            .bike-detail-landing-theme .ring-blue-600\\/40 {
+                --tw-ring-color: rgb(168 121 58 / 0.4) !important;
+            }
+
+            .bike-detail-landing-theme .focus\\:border-blue-500:focus {
+                border-color: #A8793A !important;
+            }
+
+            .bike-detail-landing-theme .shadow-md,
+            .bike-detail-landing-theme .shadow-sm,
+            .bike-detail-landing-theme .hover\\:shadow-lg:hover {
+                box-shadow: 0 18px 42px -32px rgb(11 14 18 / 0.5) !important;
+            }
+
+            .bike-detail-landing-theme [data-slot="badge"],
+            .bike-detail-landing-theme .bg-secondary {
+                border: 1px solid rgb(222 214 202 / 0.9);
+                background-color: rgb(244 239 230 / 0.9) !important;
+                color: #0B0E12 !important;
+            }
+
+            .bike-detail-landing-theme input,
+            .bike-detail-landing-theme button {
+                outline-color: #A8793A;
+            }
+        `}</style>
+    );
+}
+
 // ── Helpers ──────────────────────────────────────────────────────
 function formatPricePaise(paise: number): string {
     if (!paise || paise <= 0) return 'Price on request';
@@ -166,6 +283,22 @@ function normalizeVariantLabel(value: string | null | undefined): string {
         .replace(/[^\w]+/g, ' ')
         .replace(/\s+/g, ' ')
         .trim()
+}
+
+function copyTextFallback(value: string): boolean {
+    const textarea = document.createElement('textarea');
+    textarea.value = value;
+    textarea.setAttribute('readonly', '');
+    textarea.style.position = 'fixed';
+    textarea.style.opacity = '0';
+    document.body.appendChild(textarea);
+    textarea.select();
+
+    try {
+        return document.execCommand('copy');
+    } finally {
+        document.body.removeChild(textarea);
+    }
 }
 
 // ── Page Component ───────────────────────────────────────────────
@@ -185,6 +318,8 @@ export default function BikeDetailPage({ params }: Props) {
     const [isTabBarSticky, setIsTabBarSticky] = useState(false);
     const [selectedColorIdx, setSelectedColorIdx] = useState(0);
     const [onRoadOpen, setOnRoadOpen] = useState(false);
+    const [shareStatus, setShareStatus] = useState<string | null>(null);
+    const [shareFallbackUrl, setShareFallbackUrl] = useState<string | null>(null);
 
     // EMI Calculator state
     const [emiPrice, setEmiPrice] = useState(100000);
@@ -360,16 +495,49 @@ export default function BikeDetailPage({ params }: Props) {
     const emiResult = calcEmi();
 
     // ── Share handler ────────────────────────────────────────────
-    const handleShare = useCallback(() => {
-        if (typeof navigator !== 'undefined' && navigator.share) {
-            navigator.share({
-                title: bike ? `${bike.make} ${bike.model}` : 'Bike Details',
-                url: window.location.href,
-            });
-        } else if (typeof navigator !== 'undefined') {
-            navigator.clipboard.writeText(window.location.href);
-            alert('Link copied to clipboard!');
+    useEffect(() => {
+        if (!shareStatus) return undefined;
+        if (shareStatus === 'Copy manually') return undefined;
+
+        const timer = window.setTimeout(() => setShareStatus(null), 2200);
+        return () => window.clearTimeout(timer);
+    }, [shareStatus]);
+
+    const handleShare = useCallback(async () => {
+        const sharePayload = {
+            title: bike ? `${bike.make} ${bike.model}` : 'Bike Details',
+            url: window.location.href,
+        };
+        setShareFallbackUrl(null);
+
+        if (typeof navigator !== 'undefined' && navigator.clipboard) {
+            try {
+                setShareStatus('Link copied');
+                await navigator.clipboard.writeText(window.location.href);
+                return;
+            } catch {
+                if (copyTextFallback(window.location.href)) return;
+                setShareStatus('Copy unavailable');
+                // Fall through to native share when clipboard access is unavailable.
+            }
         }
+
+        if (typeof navigator !== 'undefined' && navigator.share) {
+            try {
+                await navigator.share(sharePayload);
+                setShareStatus('Shared');
+                setShareFallbackUrl(null);
+                return;
+            } catch (error) {
+                if ((error as { name?: string })?.name === 'AbortError') {
+                    setShareStatus('Share cancelled');
+                    return;
+                }
+            }
+        }
+
+        setShareStatus('Copy manually');
+        setShareFallbackUrl(window.location.href);
     }, [bike]);
 
     const openDealerDiscovery = useCallback(() => {
@@ -381,8 +549,9 @@ export default function BikeDetailPage({ params }: Props) {
     if (loading) {
         return (
             <>
+                <BikeDetailLandingThemeStyles />
                 <SiteHeader />
-                <main className="min-h-screen bg-white flex items-center justify-center">
+                <main className="bike-detail-landing-theme min-h-screen flex items-center justify-center">
                     <div className="text-center">
                         <Loader2 className="w-8 h-8 animate-spin text-gray-700 mx-auto mb-3" />
                         <p className="text-gray-700">Loading bike details...</p>
@@ -397,8 +566,9 @@ export default function BikeDetailPage({ params }: Props) {
     if (error || !bike) {
         return (
             <>
+                <BikeDetailLandingThemeStyles />
                 <SiteHeader />
-                <main className="min-h-screen bg-white flex items-center justify-center">
+                <main className="bike-detail-landing-theme min-h-screen flex items-center justify-center">
                     <div className="text-center">
                         <Bike className="w-12 h-12 text-gray-400 mx-auto mb-3" />
                         <h1 className="text-xl font-bold text-gray-900 mb-2">Bike Not Found</h1>
@@ -523,9 +693,10 @@ export default function BikeDetailPage({ params }: Props) {
 
     return (
         <>
+            <BikeDetailLandingThemeStyles />
             <SiteHeader />
 
-            <div className="min-h-screen bg-white text-gray-900">
+            <div className="bike-detail-landing-theme min-h-screen text-gray-900">
                 {/* ── Breadcrumb ── */}
                 <div className="bg-gray-50 border-b border-gray-200">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
@@ -652,8 +823,17 @@ export default function BikeDetailPage({ params }: Props) {
                                         <Button variant="outline" size="sm" className="w-full border-gray-200 text-gray-900 hover:bg-gray-50"
                                             onClick={handleShare}>
                                             <Share2 className="w-3.5 h-3.5 mr-1.5" />
-                                            Share
+                                            {shareStatus ?? 'Share'}
                                         </Button>
+                                        {shareFallbackUrl && (
+                                            <input
+                                                aria-label="Share link"
+                                                className="w-full rounded-md border border-gray-200 bg-gray-50 px-3 py-2 text-xs text-gray-700"
+                                                readOnly
+                                                value={shareFallbackUrl}
+                                                onFocus={(event) => event.currentTarget.select()}
+                                            />
+                                        )}
                                     </div>
                                 </CardContent>
                             </Card>
@@ -1226,7 +1406,7 @@ export default function BikeDetailPage({ params }: Props) {
                     name: variant.name,
                     price: variant.price_paise > 0 ? String(variant.price_paise / 100) : '',
                 }))}
-                brandColor="#2563eb"
+                brandColor="#A8793A"
                 enquiryLabel="Find a Dealer"
                 onEnquire={openDealerDiscovery}
             />

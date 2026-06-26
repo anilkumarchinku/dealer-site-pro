@@ -23,8 +23,8 @@ export default function BrandLogo({ className = "", showText = true, size = "md"
                 priority
             />
             {showText && (
-                <span className={cn("font-black tracking-tight text-foreground", textSize)}>
-                    DealerSite <span className="text-blue-600 dark:text-blue-400">Pro</span>
+                <span className={cn("font-black tracking-tight text-current", textSize)}>
+                    DealerSite <span className="text-[#C79A5B]">Pro</span>
                 </span>
             )}
         </Link>

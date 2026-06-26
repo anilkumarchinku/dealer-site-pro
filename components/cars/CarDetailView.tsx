@@ -1,5 +1,5 @@
 /**
- * Car Detail View — CarDekho/Cars24 Style
+ * Car Detail View
  * Comprehensive detail page with sticky tabs, image gallery,
  * specs, features, EMI calculator, reviews, FAQs, and more.
  */
@@ -34,11 +34,11 @@ import {
     TableRow,
 } from '@/components/ui/table';
 import { Slider } from '@/components/ui/slider';
-import { getBrandLogo } from '@/lib/data/brand-logos';
 import { useSitePrefix } from '@/lib/hooks/useSitePrefix';
 import { getContrastText } from '@/lib/utils/color-contrast';
 import { resolveVehicleDetailAccent } from '@/lib/utils/site-theme';
 import { useWishlistStore } from '@/lib/store/wishlist-store';
+import { brandLogoUrl } from '@/lib/utils/site-assets';
 import {
     ChevronRight,
     Share2,
@@ -159,10 +159,27 @@ function getInsuranceDisplay(status?: string, validUntil?: string) {
     return { label: 'Not Checked', className: 'border-slate-300 bg-slate-100 text-slate-800 dark:!border-slate-300 dark:!bg-slate-100 dark:!text-slate-800', icon: Shield };
 }
 
+function copyTextFallback(value: string): boolean {
+    const textarea = document.createElement('textarea');
+    textarea.value = value;
+    textarea.setAttribute('readonly', '');
+    textarea.style.position = 'fixed';
+    textarea.style.opacity = '0';
+    document.body.appendChild(textarea);
+    textarea.select();
+
+    try {
+        return document.execCommand('copy');
+    } finally {
+        document.body.removeChild(textarea);
+    }
+}
+
 export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, dealerPhone }: CarDetailViewProps) {
     const sitePrefix = useSitePrefix(siteSlug ?? '');
     const brandColor = resolveVehicleDetailAccent(car.make, Boolean(siteSlug));
     const brandContrast = getContrastText(brandColor);
+    const logoSrc = brandLogoUrl(car.make, car.vehicleCategory ?? '4w');
     const isUsed = car.condition === 'used' || car.condition === 'certified_pre_owned';
     const isCPO = car.condition === 'certified_pre_owned';
     const TABS = isUsed ? USED_CAR_TABS : NEW_CAR_TABS;
@@ -172,6 +189,8 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
     const [onRoadVariantLabel, setOnRoadVariantLabel] = useState<string | null>(null);
     const [enquiryOpen, setEnquiryOpen] = useState(false);
     const [testDriveOpen, setTestDriveOpen] = useState(false);
+    const [shareStatus, setShareStatus] = useState<string | null>(null);
+    const [shareFallbackUrl, setShareFallbackUrl] = useState<string | null>(null);
     const allImages = useMemo(() => {
         const fallbackUrls = ((car.images as unknown as Record<string, unknown>)?._fallbackUrls as string[] | undefined) ?? [];
         const colorImages = car.images.colors ?? [];
@@ -226,6 +245,14 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
     useEffect(() => {
         setActiveImage(allImages[0] ?? car.images.hero);
     }, [car.images.hero, allImages]);
+
+    useEffect(() => {
+        if (!shareStatus) return undefined;
+        if (shareStatus === 'Copy manually') return undefined;
+
+        const timer = window.setTimeout(() => setShareStatus(null), 2200);
+        return () => window.clearTimeout(timer);
+    }, [shareStatus]);
 
     // Key specs
     const isElectric = /electric/i.test(car.engine?.type ?? '');
@@ -286,6 +313,43 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
             const y = el.getBoundingClientRect().top + window.scrollY - 120;
             window.scrollTo({ top: y, behavior: 'smooth' });
         }
+    };
+
+    const handleShare = async () => {
+        const sharePayload = {
+            title: `${car.make} ${car.model}`,
+            url: window.location.href,
+        };
+        setShareFallbackUrl(null);
+
+        if (navigator.clipboard) {
+            try {
+                setShareStatus('Link copied');
+                await navigator.clipboard.writeText(window.location.href);
+                return;
+            } catch {
+                if (copyTextFallback(window.location.href)) return;
+                setShareStatus('Copy unavailable');
+                // Fall through to native share when clipboard access is unavailable.
+            }
+        }
+
+        if (navigator.share) {
+            try {
+                await navigator.share(sharePayload);
+                setShareStatus('Shared');
+                setShareFallbackUrl(null);
+                return;
+            } catch (error) {
+                if ((error as { name?: string })?.name === 'AbortError') {
+                    setShareStatus('Share cancelled');
+                    return;
+                }
+            }
+        }
+
+        setShareStatus('Copy manually');
+        setShareFallbackUrl(window.location.href);
     };
 
     // EMI calculation
@@ -405,8 +469,8 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                                 {/* Title */}
                                 <div className="mb-3">
                                     <h1 className="text-xl font-bold text-gray-900 flex items-center gap-2">
-                                        {getBrandLogo(car.make) && (
-                                            <Image src={getBrandLogo(car.make)!} alt={car.make} width={24} height={24} className="object-contain" />
+                                        {logoSrc && (
+                                            <Image src={logoSrc} alt={car.make} width={24} height={24} className="object-contain" />
                                         )}
                                         {car.make} {car.model}
                                     </h1>
@@ -506,17 +570,19 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                                         </Button>
                                     </div>
                                     <Button variant="ghost" size="sm" className={`w-full ${lightGhostButtonClass}`}
-                                        onClick={() => {
-                                            if (navigator.share) {
-                                                navigator.share({ title: `${car.make} ${car.model}`, url: window.location.href });
-                                            } else {
-                                                navigator.clipboard.writeText(window.location.href);
-                                                alert('Link copied to clipboard!');
-                                            }
-                                        }}>
+                                        onClick={handleShare}>
                                         <Share2 className="w-3.5 h-3.5 mr-1.5" />
-                                        Share
+                                        {shareStatus ?? 'Share'}
                                     </Button>
+                                    {shareFallbackUrl && (
+                                        <input
+                                            aria-label="Share link"
+                                            className="w-full rounded-md border border-slate-200 bg-slate-50 px-3 py-2 text-xs text-slate-700"
+                                            readOnly
+                                            value={shareFallbackUrl}
+                                            onFocus={(event) => event.currentTarget.select()}
+                                        />
+                                    )}
                                 </div>
                             </CardContent>
                         </Card>

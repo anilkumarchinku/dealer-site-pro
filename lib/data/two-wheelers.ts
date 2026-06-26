@@ -398,6 +398,16 @@ const HONDA: CatalogEntry[] = [
         images: [], brochure_url: null, description: 'Versatile middleweight adventure tourer.', features: ['Dual Channel ABS', 'Assist & Slipper Clutch', 'LED Headlamp', 'Windscreen'], status: 'active',
     },
     {
+        brand: 'Honda Motorcycle & Scooter India', model: 'NX500', variant: 'E-Clutch',
+        type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
+        engine_cc: 471, mileage_kmpl: 20, range_km: null, top_speed_kmph: 170,
+        battery_kwh: null, charging_time_hours: null, battery_warranty_years: null,
+        ex_showroom_price_paise: 74390000, on_road_price_paise: 85500000, emi_starting_paise: 3058600,
+        stock_status: 'booking_open', bs6_compliant: true, fame_subsidy_eligible: false,
+        colors: [{ name: 'Pearl Horizon White', hex: '#F5F5F5' }, { name: 'Matte Gunpowder Black Metallic', hex: '#2C2C2C' }, { name: 'Grand Prix Red', hex: '#B00020' }],
+        images: [], brochure_url: null, description: 'Middleweight adventure tourer with Honda E-Clutch, TFT display, HSTC, dual-channel ABS, and a smooth 471cc parallel-twin engine.', features: ['Honda E-Clutch', 'TFT Display', 'Honda Selectable Torque Control', 'Dual Channel ABS', 'LED Lighting', 'Assist & Slipper Clutch'], status: 'active',
+    },
+    {
         brand: 'Honda Motorcycle & Scooter India', model: 'CB650R', variant: 'Standard',
         type: 'bike', fuel_type: 'petrol', year: CURRENT_YEAR,
         engine_cc: 648, mileage_kmpl: 22, range_km: null, top_speed_kmph: 188,

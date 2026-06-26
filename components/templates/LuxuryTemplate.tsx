@@ -24,6 +24,7 @@ import { FinanceSection } from '@/components/templates/sections/FinanceSection';
 import { TrustBadgesSection } from '@/components/templates/sections/TrustBadgesSection';
 import { ServiceBookingSection } from '@/components/templates/sections/ServiceBookingSection';
 import { SocialLinks } from '@/components/templates/shared/SocialLinks';
+import { getTemplateServiceMeta } from '@/components/templates/shared/service-meta';
 import { VideoSection } from '@/components/templates/sections/VideoSection';
 import CompareBar from '@/components/cars/CompareBar';
 import { WishlistDrawer } from '@/components/ui/WishlistDrawer';
@@ -33,7 +34,7 @@ import { FadeInImage } from '@/components/ui/FadeInImage';
 import { generateTemplateConfig } from '@/lib/templates';
 import { getContrastText } from '@/lib/utils/color-contrast';
 import { buildTemplateDetailBasePath, buildTemplateSiteBase } from '@/lib/utils/template-site-paths';
-import { ArrowRight, Phone, MapPin, Mail, Award, ShieldCheck, Star, ChevronRight, Crown, Clock, MessageSquare, CheckCircle2, Send, Menu, X, Car as CarIcon, RefreshCw, Wallet, Wrench, Cog, Gauge, LifeBuoy } from 'lucide-react';
+import { ArrowRight, Phone, MapPin, Mail, Award, ShieldCheck, Star, ChevronRight, Crown, Clock, MessageSquare, CheckCircle2, Send, Menu, X, Car as CarIcon } from 'lucide-react';
 import { useState, useEffect, useMemo } from 'react';
 import { usePathname } from 'next/navigation';
 import { EnquireSidebar } from '@/components/cars/EnquireSidebar';
@@ -79,7 +80,7 @@ interface LuxuryTemplateProps {
     serviceCenters?: Array<{ id: string; name: string; address?: string; city?: string; phone?: string }>;
     isVerified?: boolean;
     vehicleType?: '2w' | '3w' | '4w';
-    socialLinks?: { facebook: string | null; instagram: string | null; youtube: string | null };
+    socialLinks?: { facebook: string | null; instagram: string | null; twitter?: string | null; youtube: string | null; linkedin?: string | null };
     sellVehicleHref?: string;
 }
 
@@ -113,18 +114,6 @@ export function LuxuryTemplate({
         sellsNewCars,
         sellsUsedCars,
     }), [pathname, sellsNewCars, sellsUsedCars, vehicleType]);
-    const SERVICE_LABELS: Record<string, { label: string; icon: typeof CarIcon }> = {
-        new_car_sales: { label: vl.newVehicle, icon: CarIcon },
-        used_car_sales: { label: vl.usedVehicle, icon: RefreshCw },
-        financing: { label: 'Finance & EMI', icon: Wallet },
-        service_maintenance: { label: 'Service & Repairs', icon: Wrench },
-        parts_accessories: { label: 'Parts & Accessories', icon: Cog },
-        test_drive: { label: vl.testDrive, icon: Gauge },
-        insurance: { label: 'Insurance', icon: ShieldCheck },
-        extended_warranty: { label: 'Extended Warranty', icon: CheckCircle2 },
-        roadside_assistance: { label: 'Roadside Assist', icon: LifeBuoy },
-        car_exchange: { label: vl.exchange, icon: RefreshCw },
-    };
     const isHybrid = sellsNewCars && sellsUsedCars;
     const [activeTab, setActiveTab] = useState<'inventory' | 'home'>('home');
     const [inventoryTab, setInventoryTab] = useState<'all' | 'new' | 'used'>('all');
@@ -235,14 +224,20 @@ export function LuxuryTemplate({
                     <div className="flex items-center justify-between gap-4">
                         <div className="flex min-w-0 shrink-0 items-center gap-3 cursor-pointer" onClick={() => setActiveTab('home')}>
                             <div className="relative w-10 h-10">
-                                <Image
-                                    src={logoUrl || `/assets/logos/${brandName.toLowerCase().replace(/\s+/g, '-')}.png`}
-                                    alt={logoUrl ? dealerName : brandName}
-                                    fill
-                                    className="object-contain"
-                                    sizes="40px"
-                                    onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
-                                />
+                                {logoUrl ? (
+                                    <Image
+                                        src={logoUrl}
+                                        alt={dealerName}
+                                        fill
+                                        className="object-contain"
+                                        sizes="40px"
+                                        onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
+                                    />
+                                ) : (
+                                    <span className="flex h-full w-full items-center justify-center rounded-lg bg-gray-900 text-sm font-bold text-white">
+                                        {dealerName.charAt(0).toUpperCase()}
+                                    </span>
+                                )}
                             </div>
                             <span className="max-w-[190px] text-lg font-light leading-tight tracking-wide text-gray-900 xl:max-w-none xl:text-2xl xl:tracking-widest">{dealerName}</span>
                         </div>
@@ -277,13 +272,15 @@ export function LuxuryTemplate({
                                 <MessageSquare className="w-4 h-4 mr-2" />
                                 Enquire Now
                             </Button>
-                            <Button variant="outline" className="border-gray-300 bg-transparent px-4 text-gray-900 hover:bg-gray-100 lg:px-5" asChild>
+                            <Button variant="outline" className="hidden border-gray-300 bg-transparent px-4 text-gray-900 hover:bg-gray-100 sm:inline-flex lg:px-5" asChild>
                                 <a href={`tel:${contactInfo.phone}`}>
                                     <Phone className="w-4 h-4 mr-2" />
                                     Call
                                 </a>
                             </Button>
-                            <WhatsAppButton phone={contactInfo.phone} variant="nav" />
+                            <span className="hidden sm:inline-flex">
+                                <WhatsAppButton phone={contactInfo.phone} variant="nav" />
+                            </span>
                             <button
                                 className="xl:hidden p-2 rounded-lg text-gray-900 transition-colors hover:bg-gray-100"
                                 onClick={() => setMobileMenuOpen(o => !o)}
@@ -368,7 +365,7 @@ export function LuxuryTemplate({
                             {(() => {
                                 const heroSrc = heroImageUrl;
                                 return heroSrc
-                                    ? <FadeInImage src={heroSrc} alt={`${brandName} Luxury`} fill className="object-cover" priority />
+                                    ? <FadeInImage src={heroSrc} alt={`${brandName} Luxury`} fill className="object-cover" sizes="100vw" priority />
                                     : null;
                             })()}
                             {/* Soft luxury scrim: keep the centred headline readable (brighter centre)
@@ -415,7 +412,7 @@ export function LuxuryTemplate({
                                 </Reveal>
                                 <div className="flex flex-wrap justify-center gap-3">
                                     {serviceList.map((svc, i) => {
-                                        const meta = SERVICE_LABELS[svc as string] ?? { label: svc as string, icon: CarIcon };
+                                        const meta = getTemplateServiceMeta(svc as string, vehicleType);
                                         const Icon = meta.icon;
                                         return (
                                             <Reveal
@@ -720,14 +717,20 @@ export function LuxuryTemplate({
                 <div className="max-w-7xl mx-auto px-4">
                     <div className="flex items-center mb-8 pb-6 border-b border-gray-200">
                         <div className="relative w-12 h-12 mr-3">
-                            <Image
-                                src={logoUrl || `/assets/logos/${brandName.toLowerCase().replace(/\s+/g, '-')}.png`}
-                                alt={logoUrl ? dealerName : brandName}
-                                fill
-                                className="object-contain"
-                                sizes="48px"
-                                onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
-                            />
+                            {logoUrl ? (
+                                <Image
+                                    src={logoUrl}
+                                    alt={dealerName}
+                                    fill
+                                    className="object-contain"
+                                    sizes="48px"
+                                    onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
+                                />
+                            ) : (
+                                <span className="flex h-full w-full items-center justify-center rounded-lg bg-gray-900 text-base font-bold text-white">
+                                    {dealerName.charAt(0).toUpperCase()}
+                                </span>
+                            )}
                         </div>
                         <div>
                             <span className="text-2xl font-light tracking-widest block text-gray-900">{dealerName}</span>
@@ -805,7 +808,13 @@ export function LuxuryTemplate({
                             <h4 className="text-gray-900 font-light text-lg mb-4">{dealerName}</h4>
                             <p>Curating excellence in automotive luxury.</p>
                             {/* Social Media Links */}
-                            <SocialLinks facebook={socialLinks?.facebook} instagram={socialLinks?.instagram} youtube={socialLinks?.youtube} />
+                            <SocialLinks
+                                facebook={socialLinks?.facebook}
+                                instagram={socialLinks?.instagram}
+                                twitter={socialLinks?.twitter}
+                                youtube={socialLinks?.youtube}
+                                linkedin={socialLinks?.linkedin}
+                            />
                         </div>
                     </div>
                     <div className="border-t border-gray-200 mt-8 pt-8 text-center text-gray-500">

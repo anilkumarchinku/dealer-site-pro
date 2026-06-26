@@ -4,7 +4,12 @@ import { useState } from 'react'
 import { Globe, Copy, Check, AlertCircle, Loader2, Palette, CreditCard } from 'lucide-react'
 import { getDNSInstructions } from '@/lib/services/dns-verification-service'
 import { allTemplates, TemplateStyle } from '@/lib/templates/template-styles'
-import { generateIdempotencyKey } from '@/lib/utils/razorpay'
+import {
+    generateIdempotencyKey,
+    openRazorpayCheckout,
+    verifyPaymentWithBackend,
+    type RazorpaySuccessResponse,
+} from '@/lib/utils/razorpay'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog'
@@ -19,6 +24,12 @@ interface Props {
 
 type Step = 'enter-domain' | 'select-template' | 'payment' | 'dns-instructions' | 'verifying' | 'success' | 'failed'
 
+type DomainApiRow = {
+    id: string
+    status?: string
+    ssl_status?: string
+}
+
 export default function ConnectCustomDomainModal({ isOpen, onClose, dealerId, siteSlug, onSuccess }: Props) {
     const [step, setStep] = useState<Step>('enter-domain')
     const [domain, setDomain] = useState('')
@@ -27,6 +38,7 @@ export default function ConnectCustomDomainModal({ isOpen, onClose, dealerId, si
     const [error, setError] = useState('')
     const [copiedIndex, setCopiedIndex] = useState<number | null>(null)
     const [isLoading, setIsLoading] = useState(false)
+    const [paymentMessage, setPaymentMessage] = useState('')
     const [idempotencyKey] = useState(() => generateIdempotencyKey())
 
     if (!isOpen) return null
@@ -44,34 +56,115 @@ export default function ConnectCustomDomainModal({ isOpen, onClose, dealerId, si
         setStep('select-template')
     }
 
-    // Skip payment for now — go directly to DNS instructions
+    const prepareDomainForPayment = async (): Promise<DomainApiRow | null> => {
+        const response = await fetch('/api/domains/prepare-custom', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ dealerId, customDomain: domain, siteSlug }),
+        })
+        const data = await response.json()
+
+        if (!data.success || !data.domain?.id) {
+            setError(data.error || 'Failed to prepare domain')
+            return null
+        }
+
+        setDomainId(data.domain.id)
+        return data.domain as DomainApiRow
+    }
+
+    const registerPaidDomain = async (preparedDomainId: string) => {
+        const domainRes = await fetch('/api/domains/connect-custom', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ dealerId, customDomain: domain, templateId: selectedTemplate, siteSlug }),
+        })
+        const domainData = await domainRes.json()
+
+        if (!domainData.success || !domainData.domain?.id) {
+            setError(domainData.error || 'Failed to register domain')
+            setStep('select-template')
+            setIsLoading(false)
+            return
+        }
+
+        setDomainId(domainData.domain.id ?? preparedDomainId)
+        setPaymentMessage('')
+        setStep('dns-instructions')
+        setIsLoading(false)
+    }
+
+    const handlePaymentSuccess = async (
+        response: RazorpaySuccessResponse,
+        preparedDomainId: string
+    ) => {
+        setPaymentMessage('Verifying payment...')
+        const verification = await verifyPaymentWithBackend(response, idempotencyKey)
+
+        if (!verification.success) {
+            setError(verification.error || 'Payment verification failed')
+            setStep('select-template')
+            setIsLoading(false)
+            return
+        }
+
+        setPaymentMessage('Activating custom domain...')
+        await registerPaidDomain(preparedDomainId)
+    }
+
     const handleProceedToPayment = async () => {
         setError('')
         setIsLoading(true)
 
         try {
-            // Create domain record (pending status)
-            const domainRes = await fetch('/api/domains/connect-custom', {
+            const preparedDomain = await prepareDomainForPayment()
+            if (!preparedDomain) {
+                setIsLoading(false)
+                return
+            }
+
+            setStep('payment')
+            setPaymentMessage('Creating PRO subscription...')
+
+            const subscriptionRes = await fetch('/api/payments/create-subscription', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ dealerId, customDomain: domain, templateId: selectedTemplate, siteSlug }),
+                body: JSON.stringify({ dealerId, tier: 'pro', domainId: preparedDomain.id }),
             })
-            const domainData = await domainRes.json()
+            const subscriptionData = await subscriptionRes.json()
 
-            if (!domainData.success) {
-                setError(domainData.error || 'Failed to register domain')
+            if (!subscriptionData.success || !subscriptionData.subscriptionId) {
+                setError(subscriptionData.error || 'Failed to create PRO subscription')
                 setStep('select-template')
                 setIsLoading(false)
                 return
             }
 
-            setDomainId(domainData.domain.id)
-            setStep('dns-instructions')
-            setIsLoading(false)
+            if (subscriptionData.alreadyActive) {
+                setPaymentMessage('PRO is already active. Connecting domain...')
+                await registerPaidDomain(preparedDomain.id)
+                return
+            }
+
+            setPaymentMessage('Complete the Razorpay popup to continue.')
+            await openRazorpayCheckout({
+                subscriptionId: subscriptionData.subscriptionId,
+                tier: 'pro',
+                onSuccess: (razorpayResponse) => {
+                    void handlePaymentSuccess(razorpayResponse, preparedDomain.id)
+                },
+                onFailure: ({ error }) => {
+                    setError(error)
+                    setStep('select-template')
+                    setIsLoading(false)
+                    setPaymentMessage('')
+                },
+            })
         } catch {
-            setError('Failed to register domain. Please try again.')
+            setError('Failed to start PRO payment. Please try again.')
             setStep('select-template')
             setIsLoading(false)
+            setPaymentMessage('')
         }
     }
 
@@ -116,6 +209,7 @@ export default function ConnectCustomDomainModal({ isOpen, onClose, dealerId, si
         setDomainId('')
         setError('')
         setIsLoading(false)
+        setPaymentMessage('')
         onClose()
     }
 
@@ -177,6 +271,18 @@ export default function ConnectCustomDomainModal({ isOpen, onClose, dealerId, si
                                 </p>
                             </div>
 
+                            <div className="rounded-xl border border-amber-500/20 bg-amber-500/10 p-4">
+                                <div className="flex items-start gap-3">
+                                    <CreditCard className="mt-0.5 h-5 w-5 text-amber-600" />
+                                    <div>
+                                        <p className="text-sm font-semibold text-foreground">PRO plan required</p>
+                                        <p className="mt-1 text-xs text-muted-foreground">
+                                            ₹499/month unlocks custom domain setup, DNS guidance, SSL provisioning, and email setup support.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
                             <div className="grid grid-cols-2 gap-3">
                                 {allTemplates.map((template) => (
                                     <button
@@ -222,7 +328,7 @@ export default function ConnectCustomDomainModal({ isOpen, onClose, dealerId, si
                                             Processing...
                                         </>
                                     ) : (
-                                        "Connect Domain"
+                                        "Start PRO Payment"
                                     )}
                                 </Button>
                             </div>
@@ -233,9 +339,9 @@ export default function ConnectCustomDomainModal({ isOpen, onClose, dealerId, si
                     {step === 'payment' && (
                         <div className="py-12 text-center">
                             <CreditCard className="w-16 h-16 text-blue-500 mx-auto mb-4" />
-                            <h3 className="text-lg font-semibold text-foreground mb-2">Complete Payment</h3>
+                            <h3 className="text-lg font-semibold text-foreground mb-2">Complete PRO Payment</h3>
                             <p className="text-muted-foreground">
-                                Complete the payment in the Razorpay popup to continue.
+                                {paymentMessage || 'Complete the payment in the Razorpay popup to continue.'}
                             </p>
                             <p className="text-xs text-muted-foreground mt-2">
                                 Do not close this window.
@@ -248,7 +354,7 @@ export default function ConnectCustomDomainModal({ isOpen, onClose, dealerId, si
                         <div className="space-y-6">
                             <div className="bg-emerald-500/10 border border-emerald-500/20 rounded-xl p-4">
                                 <p className="text-sm text-emerald-600 dark:text-emerald-400 font-semibold mb-1">
-                                    ✅ Payment successful! Now configure DNS.
+                                    PRO active. Now configure DNS.
                                 </p>
                                 <p className="text-xs text-muted-foreground">
                                     Domain: <strong className="text-foreground">{domain}</strong>
@@ -326,9 +432,9 @@ export default function ConnectCustomDomainModal({ isOpen, onClose, dealerId, si
                             <div className="w-16 h-16 bg-emerald-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
                                 <Check className="w-8 h-8 text-emerald-500" />
                             </div>
-                            <h3 className="text-lg font-semibold mb-2">Domain Connected! 🎉</h3>
+                            <h3 className="text-lg font-semibold mb-2">Domain Connected</h3>
                             <p className="text-muted-foreground">
-                                Your custom domain is live. SSL is being provisioned automatically.
+                                DNS is verified. SSL is now provisioning automatically.
                             </p>
                         </div>
                     )}

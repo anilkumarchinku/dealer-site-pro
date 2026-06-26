@@ -13,15 +13,21 @@ import type { Car } from "@/lib/types/car"
 import type { ThreeWheelerVehicle } from "@/lib/types/three-wheeler"
 import type { Service } from "@/lib/types"
 import { dedupeByBrandModel, dedupeCaseInsensitiveStrings } from "@/lib/utils/listing-dedupe"
-import { brandLogoUrl as getBrandLogoUrl, firstVehicleHeroImage, resolveDealerHeroImage } from "@/lib/utils/site-assets"
+import { brandLogoUrl as getBrandLogoUrl, firstVehicleHeroImage, resolveDealerHeroImage, resolveDealerLogoImage } from "@/lib/utils/site-assets"
 import { brandToUrlSlug } from "@/lib/utils/domain"
 
 interface Props {
   params: Promise<{ slug: string }>
-  searchParams: Promise<{ brand?: string }>
+  searchParams: Promise<{ brand?: string; category?: string }>
 }
 
 const ALL_3W_BRANDS = THREE_WHEELER_BRANDS
+
+const CATEGORY_FILTERS: Record<string, (vehicle: ThreeWheelerVehicle) => boolean> = {
+  passenger: vehicle => vehicle.type === 'passenger' || vehicle.body_type?.toLowerCase().includes('passenger') === true,
+  cargo: vehicle => vehicle.type === 'cargo' || vehicle.body_type?.toLowerCase().includes('cargo') === true,
+  electric: vehicle => vehicle.fuel_type === 'electric',
+}
 
 function generate3WFeatures(v: ThreeWheelerVehicle): string[] {
   const f: string[] = []
@@ -120,7 +126,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function NewThreeWheelersPage({ params, searchParams }: Props) {
   const { slug } = await params
-  const { brand: brandParam } = await searchParams
+  const { brand: brandParam, category: categoryParam } = await searchParams
 
   const dealer = await fetchDealerBySlug(slug)
   if (!dealer) notFound()
@@ -194,20 +200,28 @@ export default async function NewThreeWheelersPage({ params, searchParams }: Pro
   const dbKeys = new Set(filteredDbVehicles.map(v => `${v.brand}__${v.model}`))
   const catalogExtra = catalogVehicles.filter(v => !dbKeys.has(`${v.brand}__${v.model}`))
   const vehicles = dedupeByBrandModel([...filteredDbVehicles, ...catalogExtra])
+  const normalizedCategory = categoryParam?.toLowerCase()
+  const categoryFilter = normalizedCategory ? CATEGORY_FILTERS[normalizedCategory] : undefined
+  const visibleVehicles = categoryFilter ? vehicles.filter(categoryFilter) : vehicles
 
-  const cars = threeWheelersToCars(vehicles)
+  const cars = threeWheelersToCars(visibleVehicles)
 
-  const logoUrl = dealer.logo_url ?? (primaryBrand ? getBrandLogoUrl(primaryBrand, '3w') ?? undefined : undefined)
+  const logoUrl = resolveDealerLogoImage({
+    uploadedLogo: dealer.logo_url,
+    fallbackLogo: primaryBrand ? getBrandLogoUrl(primaryBrand, '3w') : undefined,
+    preferFallbackLogo: true,
+  })
   const heroImageUrl = resolveDealerHeroImage({
     uploadedHeroImage: dealer.hero_image_url,
     inventoryHeroImage: firstVehicleHeroImage(cars),
   })
 
-  const contactInfo = {
-    phone: dealer.phone,
-    email: dealer.email ?? '',
-    address: dealer.full_address ?? dealer.location,
-  }
+    const contactInfo = {
+        phone: dealer.phone,
+        email: dealer.email ?? '',
+        city: dealer.location,
+        address: dealer.full_address ?? dealer.location,
+    }
 
   const heroDefaults: Record<string, { title: string; subtitle: string }> = {
     luxury:  { title: 'THE POWER OF THREE WHEELS',          subtitle: 'Premium three-wheelers for every commercial need' },

@@ -465,6 +465,50 @@ export async function sendDNSInstructionsEmail(
     })
 }
 
+export async function sendDomainEmailSupportRequestEmail(params: {
+    dealerName: string
+    dealerEmail?: string | null
+    domain: string
+    mxStatus: 'found' | 'missing' | 'error' | 'not_checked'
+    mxRecords: Array<{ exchange: string; priority: number }>
+    notes?: string
+}) {
+    const to = getOptionalEnv('DOMAIN_SUPPORT_EMAIL') ??
+        getOptionalEnv('SUPPORT_EMAIL') ??
+        'support@dealersitepro.com'
+    const mxRows = params.mxRecords.length > 0
+        ? params.mxRecords
+            .map(record => `<li>${esc(record.exchange)} (priority ${record.priority})</li>`)
+            .join('')
+        : '<li>No MX records detected</li>'
+    const notes = params.notes
+        ? `<p><strong>Dealer notes:</strong><br/>${esc(params.notes)}</p>`
+        : ''
+
+    return sendEmail({
+        to,
+        replyTo: params.dealerEmail ?? undefined,
+        subject: `Email setup support request - ${params.domain}`,
+        html: `<!DOCTYPE html>
+<html>
+<body style="font-family:Arial,sans-serif;line-height:1.6;color:#333;max-width:640px;margin:0 auto;padding:20px">
+  <h2>Professional Email Setup Support Request</h2>
+  <p>A dealer requested help preserving or setting up email for a custom domain.</p>
+  <ul>
+    <li><strong>Dealer:</strong> ${esc(params.dealerName)}</li>
+    <li><strong>Dealer email:</strong> ${esc(params.dealerEmail ?? 'Not provided')}</li>
+    <li><strong>Domain:</strong> ${esc(params.domain)}</li>
+    <li><strong>MX status:</strong> ${esc(params.mxStatus)}</li>
+  </ul>
+  <p><strong>Detected MX records:</strong></p>
+  <ul>${mxRows}</ul>
+  ${notes}
+  <p>Next step: help the dealer keep existing MX records, or guide them through Google Workspace/Zoho setup.</p>
+</body>
+</html>`,
+    })
+}
+
 // ── 3. Domain verified ────────────────────────────────────────────────────────
 
 export async function sendDomainVerifiedEmail(params: EmailParams) {

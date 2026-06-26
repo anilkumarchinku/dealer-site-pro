@@ -144,7 +144,7 @@ export default function Step5Page() {
         if (hasValidationErrors(nextUrlErrors)) return;
 
         updateData({ templateConfig: config });
-        setStep(6);
+        setStep(5);
         router.push("/onboarding/step-6");
     };
 
@@ -284,9 +284,9 @@ export default function Step5Page() {
                                     <p className="mt-3 text-sm font-medium leading-6 text-[#62708A]">
                                         {config.heroSubtitle || "Trusted vehicles, transparent pricing, and easy finance."}
                                     </p>
-                                    <button className="mt-5 inline-flex h-11 items-center justify-center rounded-md bg-[#155EEF] px-5 text-sm font-black text-white">
+                                    <span className="mt-5 inline-flex h-11 items-center justify-center rounded-md bg-[#155EEF] px-5 text-sm font-black text-white" aria-hidden="true">
                                         {config.heroCtaText || "View Inventory"}
-                                    </button>
+                                    </span>
                                 </div>
 
                                 <div className="mt-5 space-y-3">

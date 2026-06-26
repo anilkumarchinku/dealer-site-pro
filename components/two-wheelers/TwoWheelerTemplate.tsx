@@ -653,7 +653,7 @@ export function TwoWheelerTemplate({
             <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
                     <div>
-                        <h2 className="text-2xl font-bold text-gray-900">Our Inventory</h2>
+                        <h2 className="text-2xl font-bold text-gray-900">Inventory</h2>
                         <p className="text-gray-600 text-sm mt-1">{vehicles.length} models available</p>
                     </div>
 

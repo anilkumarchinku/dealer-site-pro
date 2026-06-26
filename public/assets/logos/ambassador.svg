@@ -1,0 +1,7 @@
+<svg width="128" height="96" viewBox="0 0 128 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="1" y="1" width="126" height="94" rx="24" fill="#FFFDF7" stroke="#E7DED0" stroke-width="2"/>
+  <circle cx="64" cy="43" r="25" fill="#B27B2F" opacity="0.12"/>
+  <path d="M42 59L53.2 29H61.2L72.4 59H63.9L62.2 53.8H52.1L50.4 59H42ZM54 47.4H60.3L57.2 37.4L54 47.4Z" fill="#B27B2F"/>
+  <path d="M74 59V29H82.2L89.5 42.1L96.8 29H105V59H96.9V42.3L91.8 51.4H87.1L82.1 42.3V59H74Z" fill="#0B0E12"/>
+  <text x="64" y="79" text-anchor="middle" fill="#776F65" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="700" letter-spacing="1.6">AMBASSADOR</text>
+</svg>

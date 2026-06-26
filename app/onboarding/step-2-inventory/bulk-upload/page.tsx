@@ -214,9 +214,10 @@ export default function BulkUploadPage() {
         setSaving(true)
         // Store the parsed vehicles in Zustand (persisted to localStorage only).
         // Nothing is written to the database here — the rows are saved to the DB
-        // when the dealer completes step-6.
+        // when the dealer completes the launch step.
         updateData({
             inventorySource:  "own",
+            inventoryEntryMode: "upload",
             uploadedVehicles: rows,
         })
         setStep(3)

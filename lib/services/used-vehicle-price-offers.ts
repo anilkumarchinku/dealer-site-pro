@@ -57,6 +57,11 @@ function getOfferClient(): OfferTableClient {
     return createAdminClient() as unknown as OfferTableClient
 }
 
+function isMissingOfferTableError(error: { message: string; code?: string } | null): boolean {
+    if (!error) return false
+    return error.code === 'PGRST205' || /used_vehicle_price_offers/i.test(error.message) && /schema cache|does not exist|could not find/i.test(error.message)
+}
+
 export async function fetchActiveUsedVehiclePriceOffers(dealerId: string): Promise<UsedVehiclePriceOffer[]> {
     const today = new Date().toISOString().slice(0, 10)
     const { data, error } = await getOfferClient()
@@ -68,6 +73,7 @@ export async function fetchActiveUsedVehiclePriceOffers(dealerId: string): Promi
         .order('updated_at', { ascending: false })
 
     if (error) {
+        if (isMissingOfferTableError(error)) return []
         console.warn('[used_vehicle_price_offers] read failed:', error.message)
         return []
     }

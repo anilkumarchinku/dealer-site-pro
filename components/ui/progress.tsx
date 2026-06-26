@@ -26,7 +26,7 @@ export function Progress({ currentStep, totalSteps = 5, labels }: ProgressProps)
 
                 {/* Active Line */}
                 <div
-                    className="absolute top-4 left-0 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full transition-all duration-500"
+                    className="absolute top-4 left-0 h-1 rounded-full bg-primary transition-all duration-500"
                     style={{ width: `${((currentStep - 1) / (totalSteps - 1)) * 100}%` }}
                 />
 
@@ -42,8 +42,8 @@ export function Progress({ currentStep, totalSteps = 5, labels }: ProgressProps)
                                 <div
                                     className={cn(
                                         "w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold transition-all duration-300",
-                                        isComplete && "bg-gradient-to-r from-blue-600 to-indigo-600 text-white",
-                                        isCurrent && "bg-gradient-to-r from-blue-600 to-indigo-600 text-white ring-4 ring-blue-500/30",
+                                        isComplete && "bg-primary text-primary-foreground",
+                                        isCurrent && "bg-primary text-primary-foreground ring-4 ring-primary/20",
                                         !isComplete && !isCurrent && "bg-gray-200 dark:bg-gray-700 text-gray-500 dark:text-gray-400"
                                     )}
                                 >

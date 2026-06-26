@@ -182,8 +182,34 @@ export function validateOnboardingReadyForSave(data: Partial<OnboardingData>): s
     if (!data.slug?.trim()) errors.push('Site URL is required before completing setup.')
     if (!data.services?.length) errors.push('Please select at least one service before completing setup.')
     if (!data.styleTemplate) errors.push('Please select a website style before completing setup.')
-    if ((data.sellsNewCars || data.dealerCategory === 'new' || data.dealerCategory === 'both') && !data.brands?.length) {
-        errors.push('Please select at least one authorised brand before completing setup.')
+    const needsAuthorisedBrands =
+        data.sellsNewCars ||
+        data.dealerCategory === 'new' ||
+        data.dealerCategory === 'both'
+
+    if (needsAuthorisedBrands) {
+        const hasExplicitVehicleSegments = Boolean(
+            data.sellsFourWheelers ||
+            data.sellsTwoWheelers ||
+            data.sellsThreeWheelers
+        )
+        const needsCarBrands = data.sellsFourWheelers || (!hasExplicitVehicleSegments && data.sellsNewCars)
+
+        if (needsCarBrands && !data.brands?.length) {
+            errors.push('Please select at least one authorised car brand before completing setup.')
+        }
+
+        if (data.sellsTwoWheelers && !data.brands2w?.length) {
+            errors.push('Please select at least one authorised two-wheeler brand before completing setup.')
+        }
+
+        if (data.sellsThreeWheelers && !data.brands3w?.length) {
+            errors.push('Please select at least one authorised three-wheeler brand before completing setup.')
+        }
+
+        if (!needsCarBrands && !data.sellsTwoWheelers && !data.sellsThreeWheelers && !data.brands?.length) {
+            errors.push('Please select at least one authorised brand before completing setup.')
+        }
     }
 
     const socialErrors = validateTemplateSocialUrls(data.templateConfig ?? {})

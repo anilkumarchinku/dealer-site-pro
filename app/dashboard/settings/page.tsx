@@ -1383,7 +1383,7 @@ export default function SettingsPage() {
                                         Clear all settings and start your website setup over
                                     </p>
                                 </div>
-                                <Button variant="destructive" size="sm">Reset</Button>
+                                <Button variant="destructive" size="sm" onClick={() => router.push("/reset")}>Reset</Button>
                             </div>
 
                             {/* Delete Account */}

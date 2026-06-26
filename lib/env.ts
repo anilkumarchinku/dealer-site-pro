@@ -33,6 +33,7 @@ export type OptionalEnvKey =
     | 'CYEPRO_2W_VEHICLE_TYPE_LIST'
     | 'CYEPRO_3W_VEHICLE_TYPE_LIST'
     | 'CYEPRO_4W_VEHICLE_TYPE_LIST'
+    | 'DOMAIN_SUPPORT_EMAIL'
     | 'EMAIL_FROM'
     | 'GITHUB_ORG'
     | 'GITHUB_TEMPLATE_REPO'
@@ -69,6 +70,7 @@ export type OptionalEnvKey =
     | 'SUREPASS_BEARER_TOKEN'
     | 'SUREPASS_CHALLAN_PATH'
     | 'SUREPASS_RC_PATH'
+    | 'SUPPORT_EMAIL'
     | 'TWITTER_BEARER_TOKEN'
     | 'TWITTER_API_KEY'
     | 'TWITTER_API_SECRET'
@@ -101,6 +103,8 @@ export const paymentEnvKeys: readonly PaymentEnvKey[] = [
 export const optionalEnvKeys: readonly OptionalEnvKey[] = [
     'RESEND_API_KEY',
     'EMAIL_FROM',
+    'DOMAIN_SUPPORT_EMAIL',
+    'SUPPORT_EMAIL',
     'SENTRY_DSN',
     'UPSTASH_REDIS_REST_URL',
     'UPSTASH_REDIS_REST_TOKEN',

@@ -24,7 +24,11 @@ export default function TwoWheelerOnboardingLayout({
         pathname === "/onboarding/two-wheelers" ||
         pathname === "/onboarding/two-wheelers/"
     ) {
-        return <>{children}</>;
+        return (
+            <div className="dsp-app-skin dsp-onboarding-skin min-h-screen">
+                {children}
+            </div>
+        );
     }
 
     const stepMatch = pathname.match(/step-(\d+)/);
@@ -32,12 +36,14 @@ export default function TwoWheelerOnboardingLayout({
 
     const visibleStep =
         stepNum <= 1 ? 2 :
-        stepNum >= 5 ? 4 :
-        3;
+        stepNum === 2 ? 3 :
+        stepNum === 3 || stepNum === 4 ? 4 :
+        stepNum >= 5 ? 5 :
+        2;
 
     return (
-        <div className="min-h-screen bg-white">
-            <BrowserFrame className="min-h-screen w-full max-w-none rounded-none border-0 shadow-none" contentClassName="bg-white">
+        <div className="dsp-app-skin dsp-onboarding-skin min-h-screen">
+            <BrowserFrame className="min-h-screen w-full max-w-none rounded-none border-0 shadow-none" contentClassName="dsp-onboarding-canvas min-h-screen">
                 <FlowTopBar
                     showBack
                     onBack={() => router.push(getBackHref(pathname))}

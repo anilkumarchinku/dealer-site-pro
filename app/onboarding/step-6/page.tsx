@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 
 import { DealerPreviewCard, LaunchChecklist } from "@/components/onboarding/flow-shell";
+import { OnboardingReviewSummary } from "@/components/onboarding/OnboardingReviewSummary";
 import { Button } from "@/components/ui/button";
 import { saveDealer } from "@/lib/actions/save-dealer";
 import { useOnboardingStore } from "@/lib/store/onboarding-store";
@@ -123,13 +124,23 @@ export default function Step6Page() {
             </div>
 
             <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_340px]">
-                <section>
+                <section className="space-y-5">
                     <DealerPreviewCard
                         dealerName={data.dealershipName}
                         slug={displaySlug}
                         phone={data.phone}
                         city={data.location}
                     />
+
+                    <div className="rounded-lg border border-[#D8E0EA] bg-white p-5 shadow-[0_14px_42px_rgba(7,20,54,0.07)]">
+                        <div className="mb-5">
+                            <h2 className="text-xl font-black tracking-[-0.02em] text-[#071436]">Review Your Information</h2>
+                            <p className="mt-1 text-sm font-medium text-[#62708A]">
+                                Confirm every detail before publishing your dealership website.
+                            </p>
+                        </div>
+                        <OnboardingReviewSummary data={data} vehicleType="car" />
+                    </div>
                 </section>
 
                 <aside className="space-y-4">
@@ -161,6 +172,7 @@ export default function Step6Page() {
                         uploadedCount={uploadedCount}
                         hasDealerDetails={Boolean(data.dealershipName?.trim() && data.location?.trim())}
                         hasContactDetails={Boolean(data.phone?.trim() && data.email?.trim())}
+                        hasInventorySetup={Boolean(data.inventorySource || data.inventoryEntryMode || data.cyeproApiKey || uploadedCount > 0)}
                         published={showSuccess}
                     />
 

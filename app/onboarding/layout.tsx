@@ -7,7 +7,7 @@ import { BrowserFrame, coreFlowSteps, FlowStepper, FlowTopBar } from "@/componen
 
 function getBackHref(pathname: string) {
     if (pathname.includes("/bulk-upload")) return "/onboarding/step-2-inventory";
-    if (pathname.includes("step-6")) return "/onboarding/step-2-inventory";
+    if (pathname.includes("step-6")) return "/onboarding/step-5";
     if (pathname.includes("step-5")) return "/onboarding/step-4";
     if (pathname.includes("step-4")) return "/onboarding/step-3";
     if (pathname.includes("step-3")) return "/onboarding/step-2-inventory";
@@ -24,14 +24,22 @@ export default function OnboardingLayout({
     const pathname = usePathname();
 
     if (pathname === "/onboarding" || pathname === "/onboarding/") {
-        return <>{children}</>;
+        return (
+            <div className="dsp-app-skin dsp-onboarding-skin min-h-screen">
+                {children}
+            </div>
+        );
     }
 
     if (
         pathname.startsWith("/onboarding/two-wheelers") ||
         pathname.startsWith("/onboarding/three-wheelers")
     ) {
-        return <>{children}</>;
+        return (
+            <div className="dsp-app-skin dsp-onboarding-skin min-h-screen">
+                {children}
+            </div>
+        );
     }
 
     const stepMatch = pathname.match(/step-(\d+)/);
@@ -39,13 +47,14 @@ export default function OnboardingLayout({
 
     const visibleStep =
         stepNum <= 1 ? 2 :
-        pathname.includes("step-2") || stepNum === 3 || stepNum === 4 || stepNum === 5 ? 3 :
-        stepNum >= 6 ? 4 :
+        pathname.includes("step-2") || stepNum === 3 ? 3 :
+        stepNum === 4 || stepNum === 5 ? 4 :
+        stepNum >= 6 ? 5 :
         2;
 
     return (
-        <div className="min-h-screen bg-white">
-            <BrowserFrame className="min-h-screen w-full max-w-none rounded-none border-0 shadow-none" contentClassName="bg-white">
+        <div className="dsp-app-skin dsp-onboarding-skin min-h-screen">
+            <BrowserFrame className="min-h-screen w-full max-w-none rounded-none border-0 shadow-none" contentClassName="dsp-onboarding-canvas min-h-screen">
                 <FlowTopBar
                     onBack={() => router.push(getBackHref(pathname))}
                     onExit={() => router.push("/")}

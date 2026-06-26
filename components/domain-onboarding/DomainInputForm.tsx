@@ -5,6 +5,7 @@
 
 'use client';
 
+import Link from 'next/link';
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -188,9 +189,9 @@ export function DomainInputForm({ onSubmit, isLoading = false }: DomainInputForm
                     {/* Help Text */}
                     <div className="text-center text-sm text-gray-500">
                         Don't have a domain yet?{' '}
-                        <a href="#" className="text-blue-600 hover:underline">
+                        <Link href="/dashboard/domains" className="text-blue-600 hover:underline">
                             Buy one now
-                        </a>
+                        </Link>
                     </div>
                 </form>
             </CardContent>

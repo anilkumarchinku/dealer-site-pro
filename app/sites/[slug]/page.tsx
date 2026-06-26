@@ -15,7 +15,7 @@ import type { DBVehicle } from '@/lib/db/vehicles'
 import type { Service } from '@/lib/types'
 import { dedupeByMakeModel, dedupeCaseInsensitiveStrings, dedupeInventoryCars } from '@/lib/utils/listing-dedupe'
 import { isMainDealerHost, publicDealerSitePath, publicVehicleHubPath, type VehicleHubSegment } from '@/lib/utils/public-site-routing'
-import { brandLogoUrl, firstVehicleHeroImage, resolveDealerHeroImage } from '@/lib/utils/site-assets'
+import { brandLogoUrl, firstVehicleHeroImage, resolveDealerHeroImage, resolveDealerLogoImage } from '@/lib/utils/site-assets'
 import { BASE_DOMAIN, dealerSiteHref } from '@/lib/utils/domain'
 
 
@@ -331,7 +331,10 @@ export async function generateMetadata({ params }: SitePageProps): Promise<Metad
         .map(s => s.replace(/_/g, ' '))
         .join(', ')
 
-    const faviconUrl = dealer.logo_url ?? '/dealersite-pro-shield.png'
+    const faviconUrl = resolveDealerLogoImage({
+        uploadedLogo: dealer.logo_url,
+        fallbackLogo: '/dealersite-pro-shield.png',
+    }) ?? '/dealersite-pro-shield.png'
 
     return {
         title,
@@ -562,7 +565,11 @@ export default async function SitePage({ params }: SitePageProps) {
     // Fallback: brand logo from /data/brand-logos/<brand-id>.png
     const isUsedSite = templateSellsUsed && !templateSellsNew
     const brandName = isUsedSite ? (brands[0] ?? dealer.dealership_name) : (brandFilter ?? brands[0] ?? dealer.dealership_name)
-    const logoUrl = logo_url ?? brandLogoUrl(brandName, '4w')
+    const logoUrl = resolveDealerLogoImage({
+        uploadedLogo: logo_url,
+        fallbackLogo: brandLogoUrl(brandName, '4w'),
+        preferFallbackLogo: true,
+    })
     const inventoryHeroImage = firstVehicleHeroImage(cars)
     const heroImageUrl = resolveDealerHeroImage({
         uploadedHeroImage: hero_image_url,
@@ -572,6 +579,7 @@ export default async function SitePage({ params }: SitePageProps) {
     const contactInfo = {
         phone: dealer.phone,
         email: dealer.email,
+        city: dealer.location,
         address: dealer.full_address ?? dealer.location,
     }
     const sellVehicleHref = isUsedSite

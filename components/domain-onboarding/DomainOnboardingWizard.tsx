@@ -5,13 +5,14 @@
 
 'use client';
 
+import Link from 'next/link';
 import { useState } from 'react';
 import { DomainInputForm } from './DomainInputForm';
 import { VerificationSelector } from './VerificationSelector';
 import { VerificationProgress, type VerificationInstructions } from './VerificationProgress';
 import type { DNSAnalysis } from './DNSAnalysisDisplay';
 import { Card, CardContent } from '@/components/ui/card';
-import { CheckCircle2, Circle, Loader2 } from 'lucide-react';
+import { AlertCircle, CheckCircle2, Circle, Loader2 } from 'lucide-react';
 
 type OnboardingStep =
     | 'domain_input'
@@ -37,6 +38,7 @@ export function DomainOnboardingWizard() {
     const [currentStep, setCurrentStep] = useState<OnboardingStep>('domain_input');
     const [state, setState] = useState<OnboardingState>({});
     const [isLoading, setIsLoading] = useState(false);
+    const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
     const steps = [
         { id: 'domain_input', label: 'Enter Domain', number: 1 },
@@ -53,16 +55,13 @@ export function DomainOnboardingWizard() {
         access_level: 'full' | 'limited';
     }) => {
         setIsLoading(true);
+        setErrorMessage(null);
 
         try {
-            // Call start-onboarding API
             const response = await fetch('/api/domain/start-onboarding', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    ...data,
-                    user_id: 'demo-user-123' // TODO: Get from auth
-                })
+                body: JSON.stringify(data)
             });
 
             const result = await response.json();
@@ -77,11 +76,11 @@ export function DomainOnboardingWizard() {
                 });
                 setCurrentStep('verification_method');
             } else {
-                alert(result.error || 'Failed to start onboarding');
+                setErrorMessage(result.error || 'Failed to start onboarding');
             }
         } catch (error) {
             console.error('Error starting onboarding:', error);
-            alert('Failed to start onboarding. Please try again.');
+            setErrorMessage('Failed to start onboarding. Please try again.');
         } finally {
             setIsLoading(false);
         }
@@ -89,9 +88,9 @@ export function DomainOnboardingWizard() {
 
     const handleMethodSelected = async (method: 'dns_txt' | 'html_file' | 'email') => {
         setIsLoading(true);
+        setErrorMessage(null);
 
         try {
-            // Call verify-ownership API
             const response = await fetch('/api/domain/verify-ownership', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -111,11 +110,11 @@ export function DomainOnboardingWizard() {
                 });
                 setCurrentStep('verification_progress');
             } else {
-                alert(result.error || 'Failed to start verification');
+                setErrorMessage(result.error || 'Failed to start verification');
             }
         } catch (error) {
             console.error('Error starting verification:', error);
-            alert('Failed to start verification. Please try again.');
+            setErrorMessage('Failed to start verification. Please try again.');
         } finally {
             setIsLoading(false);
         }
@@ -123,6 +122,7 @@ export function DomainOnboardingWizard() {
 
     const handleVerified = async () => {
         setIsLoading(true);
+        setErrorMessage(null);
         setCurrentStep('dns_analysis');
 
         try {
@@ -142,12 +142,12 @@ export function DomainOnboardingWizard() {
                     setIsLoading(false);
                 }, 2000);
             } else {
-                alert(result.error || 'Failed to analyze DNS');
+                setErrorMessage(result.error || 'Failed to analyze DNS');
                 setIsLoading(false);
             }
         } catch (error) {
             console.error('Error analyzing DNS:', error);
-            alert('Failed to analyze DNS. Please try again.');
+            setErrorMessage('Failed to analyze DNS. Please try again.');
             setIsLoading(false);
         }
     };
@@ -216,6 +216,18 @@ export function DomainOnboardingWizard() {
                         </div>
                     </CardContent>
                 </Card>
+
+                {errorMessage && (
+                    <Card className="mb-6 border-red-200 bg-red-50">
+                        <CardContent className="flex items-start gap-3 p-4 text-red-800">
+                            <AlertCircle className="mt-0.5 h-5 w-5 shrink-0" />
+                            <div>
+                                <p className="font-semibold">Domain setup needs attention</p>
+                                <p className="mt-1 text-sm">{errorMessage}</p>
+                            </div>
+                        </CardContent>
+                    </Card>
+                )}
 
                 {/* Step Content */}
                 <div className="mt-8">
@@ -302,9 +314,20 @@ export function DomainOnboardingWizard() {
                                     </div>
                                 )}
 
-                                <p className="text-sm text-gray-600">
-                                    The next steps for DNS configuration and deployment will be available soon!
-                                </p>
+                                <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-center">
+                                    <Link
+                                        href="/dashboard/domains"
+                                        className="inline-flex min-h-11 items-center justify-center rounded-lg bg-gray-950 px-5 text-sm font-semibold text-white transition hover:bg-gray-800"
+                                    >
+                                        Open Domain Dashboard
+                                    </Link>
+                                    <Link
+                                        href="/dashboard/settings"
+                                        className="inline-flex min-h-11 items-center justify-center rounded-lg border border-gray-300 bg-white px-5 text-sm font-semibold text-gray-900 transition hover:bg-gray-50"
+                                    >
+                                        Review Website Settings
+                                    </Link>
+                                </div>
                             </CardContent>
                         </Card>
                     )}

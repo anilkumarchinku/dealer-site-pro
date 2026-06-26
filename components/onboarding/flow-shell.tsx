@@ -123,7 +123,7 @@ export function FlowTopBar({
 
 export function FlowStepper({ steps, currentStep }: { steps: FlowStep[]; currentStep: number }) {
     return (
-        <div className="rounded-lg border border-[#E3E9F2] bg-white px-3 py-2 sm:px-4">
+        <div className="rounded-lg border border-[#E7E0D7] bg-[#FFFDF7] px-3 py-2 shadow-[0_12px_34px_rgba(11,14,18,0.05)] sm:px-4">
             <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
                 {steps.map((step, index) => {
                     const stepNumber = index + 1;
@@ -136,22 +136,22 @@ export function FlowStepper({ steps, currentStep }: { steps: FlowStep[]; current
                                 <span
                                     className={cn(
                                         "flex h-7 w-7 shrink-0 items-center justify-center rounded-full border text-xs font-black transition",
-                                        complete && "border-[#16A34A] bg-[#16A34A] text-white",
-                                        active && "border-[#155EEF] bg-[#155EEF] text-white shadow-[0_0_0_4px_rgba(21,94,239,0.12)]",
-                                        !complete && !active && "border-[#D8E0EA] bg-white text-[#8A97AA]"
+                                        complete && "border-[#2E8B5A] bg-[#2E8B5A] text-white",
+                                        active && "border-[#0B0E12] bg-[#0B0E12] text-white shadow-[0_0_0_4px_rgba(168,121,58,0.18)]",
+                                        !complete && !active && "border-[#E7E0D7] bg-[#FFFDF7] text-[#A39E94]"
                                     )}
                                 >
                                     {complete ? <Check className="h-4 w-4" /> : stepNumber}
                                 </span>
                                 <span className="min-w-0">
-                                    <span className={cn("block truncate text-[11px] font-black sm:text-xs", active ? "text-[#155EEF]" : complete ? "text-[#16A34A]" : "text-[#62708A]")}>
+                                    <span className={cn("block truncate text-[11px] font-black sm:text-xs", active ? "text-[#A8793A]" : complete ? "text-[#2E8B5A]" : "text-[#6F6A61]")}>
                                         {step.label}
                                     </span>
-                                    {step.caption && <span className="block truncate text-[11px] font-medium text-[#8A97AA]">{step.caption}</span>}
+                                    {step.caption && <span className="block truncate text-[11px] font-medium text-[#A39E94]">{step.caption}</span>}
                                 </span>
                             </div>
                             {index < steps.length - 1 && (
-                                <span className={cn("hidden h-px min-w-8 flex-1 sm:block", stepNumber < currentStep ? "bg-[#16A34A]" : "bg-[#D8E0EA]")} />
+                                <span className={cn("hidden h-px min-w-8 flex-1 sm:block", stepNumber < currentStep ? "bg-[#2E8B5A]" : "bg-[#E7E0D7]")} />
                             )}
                         </div>
                     );
@@ -164,7 +164,8 @@ export function FlowStepper({ steps, currentStep }: { steps: FlowStep[]; current
 export const coreFlowSteps: FlowStep[] = [
     { label: "Choose Type" },
     { label: "Dealer Details" },
-    { label: "Inventory Setup" },
+    { label: "Inventory & Services" },
+    { label: "Website Design" },
     { label: "Launch" },
 ];
 
@@ -191,9 +192,9 @@ export function DealerPreviewCard({ dealerName, slug, phone, city, className }: 
                     <p className="mt-3 max-w-xs text-[13px] font-medium leading-5 text-white/75">
                         Cars, bikes, and autos from trusted local dealers. Best prices, easy finance.
                     </p>
-                    <button className="mt-5 rounded-md bg-[#155EEF] px-4 py-2.5 text-xs font-black text-white">
+                    <span className="mt-5 inline-flex rounded-md bg-[#155EEF] px-4 py-2.5 text-xs font-black text-white" aria-hidden="true">
                         View Inventory
-                    </button>
+                    </span>
                 </div>
                 <div className="relative min-h-[230px] bg-gradient-to-r from-[#223047] to-[#E8EDF4]">
                     <Image
@@ -234,6 +235,7 @@ type LaunchChecklistProps = {
     uploadedCount?: number;
     hasDealerDetails?: boolean;
     hasContactDetails?: boolean;
+    hasInventorySetup?: boolean;
     /** True once the site has been published, so post-publish items can flip to done. */
     published?: boolean;
 };
@@ -242,6 +244,7 @@ export function LaunchChecklist({
     uploadedCount = 0,
     hasDealerDetails = false,
     hasContactDetails = false,
+    hasInventorySetup = false,
     published = false,
 }: LaunchChecklistProps) {
     // Each item carries its own completion state so we don't show a green check
@@ -250,7 +253,7 @@ export function LaunchChecklist({
         { label: "Dealer details added", done: hasDealerDetails },
         {
             label: uploadedCount > 0 ? `Inventory uploaded (${uploadedCount} vehicles)` : "Inventory setup",
-            done: uploadedCount > 0,
+            done: hasInventorySetup || uploadedCount > 0,
         },
         { label: "Contact details added", done: hasContactDetails },
         {

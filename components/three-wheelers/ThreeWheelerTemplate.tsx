@@ -747,7 +747,7 @@ export function ThreeWheelerTemplate({
                                     {primaryBrand || "All Brands"}
                                 </span>
                                 <h1 className="text-4xl font-bold mt-1 text-gray-900">
-                                    Our Inventory
+                                    Inventory
                                     <span className="ml-3 text-lg font-normal text-gray-600">({vehicles.length} vehicles)</span>
                                 </h1>
                             </div>

@@ -92,6 +92,7 @@ export async function POST(request: Request) {
                 .from('dealer_domains')
                 .update({
                     status: 'active',
+                    ssl_status: 'provisioning',
                     dns_verified: true,
                     dns_verified_at: new Date().toISOString(),
                     last_checked_at: new Date().toISOString()
@@ -103,6 +104,7 @@ export async function POST(request: Request) {
                 .from('dealer_domains')
                 .update({
                     status: 'pending',
+                    ssl_status: 'pending',
                     dns_verified: false,
                     last_checked_at: new Date().toISOString()
                 })

@@ -39,10 +39,9 @@ import { getThreeWheelerCatalog, THREE_WHEELER_BRANDS } from "@/lib/data/three-w
 import { VINFAST_CARS } from "@/lib/data/vinfast-catalog";
 import type { TwoWheelerVehicle } from "@/lib/types/two-wheeler";
 import type { ThreeWheelerVehicle } from "@/lib/types/three-wheeler";
-import { brandNameToId } from "@/lib/utils/brand-model-images";
 import { brandToUrlSlug } from "@/lib/utils/domain";
 import { dedupeByBrandModel } from "@/lib/utils/listing-dedupe";
-import { firstVehicleHeroImage } from "@/lib/utils/site-assets";
+import { brandLogoUrl, firstVehicleHeroImage } from "@/lib/utils/site-assets";
 
 type AutomotiveBrandConfig = {
     primary: string
@@ -313,15 +312,12 @@ function PreviewContent() {
     // Compute logo URL based on vehicle category
     const logoUrl = (() => {
         if (is2W) {
-            const brandId = brandNameToId(primaryBrand, '2w');
-            return brandId ? `/data/brand-logos/${brandId}.png` : undefined;
+            return brandLogoUrl(primaryBrand, '2w');
         }
         if (is3W) {
-            const brandId = brandNameToId(primaryBrand, '3w');
-            return brandId ? `/data/brand-logos/${brandId}.png` : undefined;
+            return brandLogoUrl(primaryBrand, '3w');
         }
-        const brandId = brandNameToId(primaryBrand, '4w');
-        return brandId ? `/data/brand-logos/${brandId}.png` : undefined;
+        return brandLogoUrl(primaryBrand, '4w');
     })();
 
     // Render the appropriate template with brand-specific data
@@ -339,7 +335,7 @@ function PreviewContent() {
             previewMode: true,
             sellsNewCars: true,
             sellsUsedCars: false,
-            logoUrl: data.brandLogo || logoUrl,
+            logoUrl: logoUrl || data.brandLogo,
             heroImageUrl: data.heroImage || firstVehicleHeroImage(displayCars),
             vehicleType: is3W ? '3w' as const : is2W ? '2w' as const : '4w' as const,
         };

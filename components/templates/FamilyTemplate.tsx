@@ -25,6 +25,7 @@ import { TrustBadgesSection } from '@/components/templates/sections/TrustBadgesS
 import { ServiceBookingSection } from '@/components/templates/sections/ServiceBookingSection';
 import { VideoSection } from '@/components/templates/sections/VideoSection';
 import { SocialLinks } from '@/components/templates/shared/SocialLinks';
+import { getTemplateServiceMeta } from '@/components/templates/shared/service-meta';
 import CompareBar from '@/components/cars/CompareBar';
 import { WishlistDrawer } from '@/components/ui/WishlistDrawer';
 import { EVSection } from '@/components/ui/EVSection';
@@ -48,12 +49,6 @@ import {
     Menu,
     X,
     Car as CarIcon,
-    RefreshCw,
-    Wallet,
-    Wrench,
-    Cog,
-    Gauge,
-    LifeBuoy,
 } from 'lucide-react';
 import { useState, useEffect, useMemo } from 'react';
 import { usePathname } from 'next/navigation';
@@ -103,7 +98,7 @@ interface FamilyTemplateProps {
     serviceCenters?: Array<{ id: string; name: string; address?: string; city?: string; phone?: string }>;
     isVerified?: boolean;
     vehicleType?: '2w' | '3w' | '4w';
-    socialLinks?: { facebook: string | null; instagram: string | null; youtube: string | null };
+    socialLinks?: { facebook: string | null; instagram: string | null; twitter?: string | null; youtube: string | null; linkedin?: string | null };
     sellVehicleHref?: string;
 }
 
@@ -137,18 +132,6 @@ export function FamilyTemplate({
         sellsNewCars,
         sellsUsedCars,
     }), [pathname, sellsNewCars, sellsUsedCars, vehicleType]);
-    const SERVICE_LABELS: Record<string, { label: string; icon: typeof CarIcon; desc: string }> = {
-        new_car_sales: { label: vl.newVehicle, icon: CarIcon, desc: vl.newVehicleDesc },
-        used_car_sales: { label: vl.usedVehicle, icon: RefreshCw, desc: 'Certified pre-owned at great prices' },
-        financing: { label: 'Finance & EMI', icon: Wallet, desc: 'Easy monthly plans for every budget' },
-        service_maintenance: { label: 'Service & Repairs', icon: Wrench, desc: 'Expert care for your vehicle' },
-        parts_accessories: { label: 'Parts & Accessories', icon: Cog, desc: 'Genuine parts for all makes' },
-        test_drive: { label: vl.testDrive, icon: Gauge, desc: vl.testDriveDesc },
-        insurance: { label: 'Insurance', icon: Shield, desc: 'Complete vehicle protection plans' },
-        extended_warranty: { label: 'Extended Warranty', icon: CheckCircle2, desc: 'Peace of mind, guaranteed' },
-        roadside_assistance: { label: 'Roadside Assist', icon: LifeBuoy, desc: '24/7 support wherever you are' },
-        car_exchange: { label: vl.exchange, icon: RefreshCw, desc: vl.exchangeDesc },
-    };
     const isHybrid = sellsNewCars && sellsUsedCars;
     const [activeTab, setActiveTab] = useState<'inventory' | 'home'>('home');
     const [inventoryTab, setInventoryTab] = useState<'all' | 'new' | 'used'>('all');
@@ -264,14 +247,20 @@ export function FamilyTemplate({
                     <div className="flex items-center justify-between gap-4">
                         <div className="flex min-w-0 shrink-0 items-center gap-3 cursor-pointer" onClick={() => setActiveTab('home')}>
                             <div className="relative w-10 h-10">
-                                <Image
-                                    src={logoUrl || `/assets/logos/${brandName.toLowerCase().replace(/\s+/g, '-')}.png`}
-                                    alt={logoUrl ? dealerName : brandName}
-                                    fill
-                                    className="object-contain"
-                                    sizes="40px"
-                                    onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
-                                />
+                                {logoUrl ? (
+                                    <Image
+                                        src={logoUrl}
+                                        alt={dealerName}
+                                        fill
+                                        className="object-contain"
+                                        sizes="40px"
+                                        onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
+                                    />
+                                ) : (
+                                    <span className="flex h-full w-full items-center justify-center rounded-lg bg-gray-900 text-sm font-bold text-white">
+                                        {dealerName.charAt(0).toUpperCase()}
+                                    </span>
+                                )}
                             </div>
                             <span className="max-w-[180px] text-lg font-semibold leading-tight text-gray-900 xl:max-w-none xl:text-xl">{dealerName}</span>
                         </div>
@@ -308,13 +297,15 @@ export function FamilyTemplate({
                                 <MessageSquare className="w-4 h-4 mr-2" />
                                 Enquire Now
                             </Button>
-                            <Button className="rounded-full px-4 lg:px-5" style={{ backgroundColor: brandColors.primary, color: getContrastText(brandColors.primary) }} asChild>
+                            <Button className="hidden rounded-full px-4 sm:inline-flex lg:px-5" style={{ backgroundColor: brandColors.primary, color: getContrastText(brandColors.primary) }} asChild>
                                 <a href={`tel:${contactInfo.phone}`}>
                                     <Phone className="w-4 h-4 mr-2" />
                                     Call Us
                                 </a>
                             </Button>
-                            <WhatsAppButton phone={contactInfo.phone} variant="nav" />
+                            <span className="hidden sm:inline-flex">
+                                <WhatsAppButton phone={contactInfo.phone} variant="nav" />
+                            </span>
                             <button
                                 className="xl:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors"
                                 onClick={() => setMobileMenuOpen(o => !o)}
@@ -425,7 +416,7 @@ export function FamilyTemplate({
                                     {(() => {
                                         const heroSrc = heroImageUrl;
                                         return heroSrc
-                                            ? <FadeInImage src={heroSrc} alt={`${brandName} Family`} fill className="object-cover" priority />
+                                            ? <FadeInImage src={heroSrc} alt={`${brandName} Family`} fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" priority />
                                             : <div className="w-full h-full" style={{ background: `linear-gradient(135deg, ${brandColors.primary}33, ${brandColors.primary}11)` }} />;
                                     })()}
                                 </div>
@@ -464,7 +455,7 @@ export function FamilyTemplate({
                                 </Reveal>
                                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                                     {serviceList.map((svc, i) => {
-                                        const meta = SERVICE_LABELS[svc as string] ?? { label: svc as string, icon: CarIcon, desc: 'Premium service for you' };
+                                        const meta = getTemplateServiceMeta(svc as string, vehicleType);
                                         const Icon = meta.icon;
                                         return (
                                             <Reveal
@@ -754,7 +745,7 @@ export function FamilyTemplate({
                 <div id="main-content" tabIndex={-1} className="pt-24 pb-12 bg-gray-50 min-h-screen animate-fade-in">
                     <div className="max-w-7xl mx-auto px-4">
                         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
-                            <h1 className="text-4xl font-bold">Our Inventory</h1>
+                            <h1 className="text-4xl font-bold">Inventory</h1>
                             {/* Hybrid inventory tabs */}
                             {isHybrid && (
                                 <div className="flex items-center gap-1 p-1 bg-white rounded-xl border border-gray-200 shadow-sm w-fit">
@@ -808,14 +799,20 @@ export function FamilyTemplate({
                 <div className="max-w-7xl mx-auto px-4">
                     <div className="flex items-center mb-8 pb-6 border-b border-gray-200">
                         <div className="relative w-12 h-12 mr-3">
-                            <Image
-                                src={logoUrl || `/assets/logos/${brandName.toLowerCase().replace(/\s+/g, '-')}.png`}
-                                alt={logoUrl ? dealerName : brandName}
-                                fill
-                                className="object-contain"
-                                sizes="48px"
-                                onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
-                            />
+                            {logoUrl ? (
+                                <Image
+                                    src={logoUrl}
+                                    alt={dealerName}
+                                    fill
+                                    className="object-contain"
+                                    sizes="48px"
+                                    onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
+                                />
+                            ) : (
+                                <span className="flex h-full w-full items-center justify-center rounded-lg bg-gray-900 text-base font-bold text-white">
+                                    {dealerName.charAt(0).toUpperCase()}
+                                </span>
+                            )}
                         </div>
                         <div>
                             <span className="text-2xl font-bold block">{dealerName}</span>
@@ -893,7 +890,14 @@ export function FamilyTemplate({
                             <h4 className="font-bold text-lg mb-4">{dealerName}</h4>
                             <p className="text-gray-600">Your trusted partner for family-friendly vehicles. We&apos;re here to help you find the perfect {vl.familyVehicle}.</p>
                             {/* Social Media Links */}
-                            <SocialLinks className="mt-4" facebook={socialLinks?.facebook} instagram={socialLinks?.instagram} youtube={socialLinks?.youtube} />
+                            <SocialLinks
+                                className="mt-4"
+                                facebook={socialLinks?.facebook}
+                                instagram={socialLinks?.instagram}
+                                twitter={socialLinks?.twitter}
+                                youtube={socialLinks?.youtube}
+                                linkedin={socialLinks?.linkedin}
+                            />
                         </div>
                     </div>
                     <div className="border-t border-gray-200 mt-8 pt-8 text-center text-gray-600">

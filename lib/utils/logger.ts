@@ -6,9 +6,32 @@
  * logger.error → console + Sentry captureException in production
  */
 
-import * as Sentry from '@sentry/nextjs'
-
 const isProd = process.env.NODE_ENV === 'production'
+const importRuntimeModule = new Function(
+    'specifier',
+    'return import(specifier)'
+) as (specifier: string) => Promise<typeof import('@sentry/nextjs')>
+
+function reportToSentry(
+    kind: 'message' | 'exception',
+    payload: string | Error,
+    level?: 'warning' | 'error'
+) {
+    if (!isProd) return
+
+    void importRuntimeModule('@sentry/nextjs')
+        .then((Sentry) => {
+            if (kind === 'exception' && payload instanceof Error) {
+                Sentry.captureException(payload)
+                return
+            }
+
+            Sentry.captureMessage(String(payload), level)
+        })
+        .catch(() => {
+            // Logging must never break a public page render.
+        })
+}
 
 function toError(args: unknown[]): Error | undefined {
     const last = args[args.length - 1]
@@ -23,20 +46,16 @@ export const logger = {
 
     warn: (...args: unknown[]) => {
         console.warn(...args) // eslint-disable-line no-console
-        if (isProd) {
-            Sentry.captureMessage(args.map(String).join(' '), 'warning')
-        }
+        reportToSentry('message', args.map(String).join(' '), 'warning')
     },
 
     error: (...args: unknown[]) => {
         console.error(...args) // eslint-disable-line no-console
-        if (isProd) {
-            const err = toError(args)
-            if (err) {
-                Sentry.captureException(err)
-            } else {
-                Sentry.captureMessage(args.map(String).join(' '), 'error')
-            }
-        }
+        const err = toError(args)
+        reportToSentry(
+            err ? 'exception' : 'message',
+            err ?? args.map(String).join(' '),
+            'error'
+        )
     },
 }

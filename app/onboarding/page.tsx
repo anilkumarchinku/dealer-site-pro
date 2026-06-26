@@ -126,9 +126,10 @@ export default function OnboardingIndexPage() {
         setSellsThreeWheelers(has3w);
         updateData({
             dealerCategory: condition,
-            // The new/used car flags only apply when cars (4W) are selected.
-            sellsNewCars: has4w ? sellsNew : false,
-            sellsUsedCars: has4w ? sellsUsed : false,
+            // These DB columns are legacy-named "cars", but shared public
+            // templates use them as the dealer's new/used stock mode.
+            sellsNewCars: sellsNew,
+            sellsUsedCars: sellsUsed,
             // Mirror the store-root segment flags into `data` so saveDealer can read them.
             sellsFourWheelers: has4w,
             sellsTwoWheelers: has2w,
@@ -140,8 +141,8 @@ export default function OnboardingIndexPage() {
     const conditionTitle = condition ? conditionOptions.find((c) => c.id === condition)?.title : null;
 
     return (
-        <div className="min-h-screen bg-white lg:h-dvh lg:overflow-hidden">
-            <BrowserFrame className="min-h-screen w-full max-w-none rounded-none border-0 shadow-none lg:h-full lg:min-h-0" contentClassName="flex min-h-screen flex-col bg-white lg:h-full lg:min-h-0">
+        <div className="dsp-onboarding-canvas min-h-screen lg:h-dvh lg:overflow-hidden">
+            <BrowserFrame className="min-h-screen w-full max-w-none rounded-none border-0 shadow-none lg:h-full lg:min-h-0" contentClassName="dsp-onboarding-canvas flex min-h-screen flex-col lg:h-full lg:min-h-0">
                 <FlowTopBar
                     showBack
                     onBack={() => (phase === "types" ? setPhase("condition") : router.push("/"))}

@@ -525,6 +525,10 @@ export async function fetchCyeproVehicles(
         }
 
         if (!rawData) {
+            if (lastError?.status === 404) {
+                logger.log('[Cyepro] Inventory endpoint not available for this account')
+                return readCyeproSearchCache(cacheKey, true)
+            }
             throw lastError ?? new ExternalApiError('Cyepro inventory endpoint returned no data', 'Cyepro', SEARCH_PATH)
         }
         logger.log('[Cyepro] Raw response keys:', Object.keys(rawData))
@@ -554,6 +558,10 @@ export async function fetchCyeproVehicles(
             }
             if (err.status === 429) {
                 logger.error('[Cyepro] Rate limit reached (429)')
+                return readCyeproSearchCache(cacheKey, true)
+            }
+            if (err.status === 404) {
+                logger.log('[Cyepro] Inventory endpoint not available for this account')
                 return readCyeproSearchCache(cacheKey, true)
             }
             if (err.status) {

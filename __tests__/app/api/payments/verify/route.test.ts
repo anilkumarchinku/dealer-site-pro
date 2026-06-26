@@ -373,7 +373,7 @@ describe('POST /api/payments/verify', () => {
         expect(response.status).toBe(200)
         await expect(response.json()).resolves.toEqual({
             success: true,
-            message: 'Payment verified and subscription activated',
+            message: 'Payment verified and PRO custom domain access activated',
         })
         // Ownership + captured-amount checks ran against the (priced) pro plan.
         expect(requireDealerOwnership).toHaveBeenCalledWith(
@@ -392,7 +392,10 @@ describe('POST /api/payments/verify', () => {
             },
             {
                 table: 'dealer_domains',
-                payload: { status: 'active' },
+                payload: expect.objectContaining({
+                    status: 'pending',
+                    ssl_status: 'pending',
+                }),
             },
         ])
         expect(adminSupabase.inserts).toEqual([
@@ -404,7 +407,7 @@ describe('POST /api/payments/verify', () => {
                     subscription_id: 'sub_1',
                     response: {
                         success: true,
-                        message: 'Payment verified and subscription activated',
+                        message: 'Payment verified and PRO custom domain access activated',
                     },
                 }),
             },

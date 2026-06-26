@@ -37,10 +37,14 @@ function createSupabaseMock() {
                 insertPayload: null as unknown,
                 select: vi.fn(() => builder),
                 eq: vi.fn(() => builder),
+                in: vi.fn(() => builder),
+                order: vi.fn(() => builder),
+                limit: vi.fn(() => builder),
                 insert: vi.fn((payload: unknown) => {
                     builder.insertPayload = payload
                     return builder
                 }),
+                maybeSingle: vi.fn(async () => ({ data: null, error: null })),
                 single: vi.fn(async () => {
                     if (table === 'dealer_domains') {
                         return { data: { id: DOMAIN_ID }, error: null }

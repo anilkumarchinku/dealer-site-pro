@@ -194,7 +194,7 @@ function LoginForm() {
                             </Link>
                         </p>
                         <Link
-                            href="/reset"
+                            href="/auth/forgot-password"
                             className="text-sm text-muted-foreground hover:text-foreground hover:underline"
                         >
                             Forgot your password?

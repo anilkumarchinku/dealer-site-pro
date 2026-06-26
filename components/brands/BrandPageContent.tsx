@@ -66,6 +66,10 @@ export function BrandPageContent({
         return cars.filter(c => c.bodyType === activeBodyType);
     }, [cars, activeBodyType]);
 
+    const carsByStartingPrice = useMemo(() => {
+        return [...cars].sort((a, b) => (a.pricing.exShowroom.min || 0) - (b.pricing.exShowroom.min || 0));
+    }, [cars]);
+
     // Price stats
     const cheapest = cars.reduce((min, c) =>
         (c.pricing.exShowroom.min && (!min || c.pricing.exShowroom.min < min)) ? c.pricing.exShowroom.min : min
@@ -195,8 +199,7 @@ export function BrandPageContent({
                         <Card>
                             <CardContent className="p-5">
                                 <div className="space-y-4">
-                                    {cars
-                                        .sort((a, b) => (a.pricing.exShowroom.min || 0) - (b.pricing.exShowroom.min || 0))
+                                    {carsByStartingPrice
                                         .map((car) => {
                                             const min = car.pricing.exShowroom.min || 0;
                                             const max = car.pricing.exShowroom.max || min;

@@ -10,13 +10,11 @@ import {
     Check,
     CircleDollarSign,
     ClipboardCheck,
-    Cog,
     Hammer,
     Home,
     PhoneCall,
     RefreshCw,
     ShieldCheck,
-    ShoppingBag,
     Wrench,
     Zap,
     type LucideIcon,
@@ -34,7 +32,6 @@ const SERVICES: { id: Service; icon: LucideIcon; title: string; description: str
     { id: "used_car_sales", icon: Car, title: "Used Car Sales", description: "Sell pre-owned vehicles" },
     { id: "financing", icon: CircleDollarSign, title: "Financing & Leasing", description: "Help customers finance their purchase" },
     { id: "service_maintenance", icon: Wrench, title: "Service & Maintenance", description: "Provide car repairs and upkeep" },
-    { id: "parts_accessories", icon: Cog, title: "Parts & Accessories", description: "Sell genuine parts and add-ons" },
     { id: "body_shop", icon: Hammer, title: "Body Shop & Collision", description: "Collision repair and bodywork" },
     { id: "express_service", icon: Zap, title: "Express Service", description: "Quick oil changes and basic services" },
     { id: "insurance", icon: ClipboardCheck, title: "Insurance Services", description: "Help with auto insurance" },
@@ -43,7 +40,6 @@ const SERVICES: { id: Service; icon: LucideIcon; title: string; description: str
     { id: "extended_warranties", icon: ShieldCheck, title: "Extended Warranties", description: "Offer additional protection plans" },
     { id: "trade_in", icon: RefreshCw, title: "Trade-In Appraisals", description: "Accept trade-in vehicles" },
     { id: "get_callback", icon: PhoneCall, title: "Get Call Back", description: "Request a call from our team" },
-    { id: "buy_accessories", icon: ShoppingBag, title: "Buy Accessories", description: "Shop for official car accessories" },
 ];
 
 export default function Step3Page() {
@@ -60,7 +56,7 @@ export default function Step3Page() {
         if (isUsed) {
             return ["used_car_sales", "financing", "trade_in", "service_maintenance", "insurance"];
         }
-        return ["new_car_sales", "financing", "service_maintenance", "parts_accessories", "trade_in"];
+        return ["new_car_sales", "financing", "service_maintenance", "trade_in"];
     }, [isBoth, isUsed]);
 
     const [selectedServices, setSelectedServices] = useState<Service[]>(
@@ -92,12 +88,7 @@ export default function Step3Page() {
     };
 
     const handleBack = () => {
-        if (data.dealerCategory === "both" || data.dealerCategory === "used") {
-            router.push("/onboarding/step-2-inventory");
-            return;
-        }
-
-        router.push("/onboarding/step-1");
+        router.push("/onboarding/step-2-inventory");
     };
 
     useEffect(() => {

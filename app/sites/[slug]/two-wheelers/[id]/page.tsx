@@ -92,16 +92,11 @@ export default function VehicleDetailPage() {
         }
     }, [vehicle, dealerInfo])
 
-    // Logo: Honda 2W should always use the dedicated 2W brand logo; others keep dealer-first branding.
+    // Model pages should use category-specific brand marks when the same OEM
+    // has different identities across 2W/3W/4W.
     const logoSrc = useMemo(() => {
         const brandSrc = vehicle?.brand ? (brandLogoUrl(vehicle.brand, '2w') ?? null) : null
-        const normalizedBrand = vehicle?.brand?.toLowerCase().trim()
-        if (normalizedBrand === "honda" || normalizedBrand === "honda motorcycle & scooter india") {
-            return brandSrc ?? dealerInfo?.logoUrl ?? null
-        }
-        if (dealerInfo?.logoUrl) return dealerInfo.logoUrl
-        if (brandSrc) return brandSrc
-        return null
+        return brandSrc ?? dealerInfo?.logoUrl ?? null
     }, [dealerInfo, vehicle])
 
     function formatLeadAmount(amount: number) {

@@ -17,7 +17,7 @@ import { hydrateTwoWheelerDetail } from '@/lib/data/two-wheeler-detail'
 import { createVehicleDetailRouteHandlers } from '@/lib/services/vehicle-inventory-route-service'
 
 function sourceCatalogId(id: string): string | null {
-    return id.match(/^cat-2w-\d+-(.+)$/)?.[1] ?? null
+    return id.match(/^cat-2w-\d+-(.+)$/)?.[1]?.replace(/-v\d+$/, '') ?? null
 }
 
 async function getTwoWheelerDetailVehicleById(id: string, dealerId?: string) {

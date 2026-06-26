@@ -28,7 +28,7 @@ import type { Database } from '@/lib/database.types';
 import { searchCars, sortCars, calculateEMI } from '@/lib/utils/car-utils';
 import { CAR_MODEL_COLORS } from '@/lib/data/car-colors';
 import { get4WCardekhoModelMeta } from '@/lib/data/4w-cardekho-meta';
-import { brandNameToId, getVehicleImageUrls } from '@/lib/utils/brand-model-images';
+import { brandNameToId, getVehicleImageUrls, modelToSlug } from '@/lib/utils/brand-model-images';
 import vehicleImageUrls from '@/public/data/vehicle-image-urls.json';
 
 // Table name in Supabase
@@ -142,13 +142,48 @@ function buildCarImages(dbCar: GroupedCarCatalogRow): CarImages & { _fallbackUrl
 }
 
 function toGroupedCarCatalogRow(row: CarCatalogServiceRow): GroupedCarCatalogRow {
+    const normalizedRow = withNormalized4wCatalogPrices(row);
+    return {
+        ...normalizedRow,
+        body_type: get4WCardekhoModelMeta(normalizedRow.make, normalizedRow.model)?.bodyType ?? normalizedRow.body_type ?? 'Other',
+        fuel_types: normalizedRow.fuel_type ? [normalizedRow.fuel_type] : [],
+        transmissions: typeof normalizedRow.transmission === 'string' && normalizedRow.transmission ? [normalizedRow.transmission] : [],
+        variant: normalizedRow.variant ?? '',
+    };
+}
+
+function normalize4wCatalogPricePaise(pricePaise: number | null | undefined): number | null {
+    if (!pricePaise || pricePaise <= 0) return null;
+
+    // Some imported luxury 4W rows arrived 100x above paise scale.
+    // Normal rows are untouched; impossible values are normalized once.
+    return pricePaise > 50_000_000_000 ? Math.round(pricePaise / 100) : pricePaise;
+}
+
+function withNormalized4wCatalogPrices<T extends { price_min_paise?: number | null; price_max_paise?: number | null }>(row: T): T {
     return {
         ...row,
-        body_type: get4WCardekhoModelMeta(row.make, row.model)?.bodyType ?? row.body_type ?? 'Other',
-        fuel_types: row.fuel_type ? [row.fuel_type] : [],
-        transmissions: typeof row.transmission === 'string' && row.transmission ? [row.transmission] : [],
-        variant: row.variant ?? '',
+        price_min_paise: normalize4wCatalogPricePaise(row.price_min_paise),
+        price_max_paise: normalize4wCatalogPricePaise(row.price_max_paise),
     };
+}
+
+function safeSlug(value: string): string {
+    try {
+        return modelToSlug(decodeURIComponent(value));
+    } catch {
+        return modelToSlug(value);
+    }
+}
+
+function carSlugCandidates(row: Pick<CarCatalogServiceRow, 'id' | 'make' | 'model' | 'variant'>): string[] {
+    return Array.from(new Set([
+        safeSlug(row.id),
+        modelToSlug(row.model),
+        modelToSlug(`${row.make} ${row.model}`),
+        row.variant ? modelToSlug(`${row.model} ${row.variant}`) : '',
+        row.variant ? modelToSlug(`${row.make} ${row.model} ${row.variant}`) : '',
+    ].filter(Boolean)));
 }
 
 /**
@@ -243,9 +278,23 @@ export async function getCarById(id: string): Promise<Car | null> {
         .eq('id', id)
         .single();
 
-    if (error || !data) return null;
+    if (!error && data) {
+        return mapDbCarToCar(toGroupedCarCatalogRow(data));
+    }
 
-    return mapDbCarToCar(toGroupedCarCatalogRow(data));
+    const targetSlug = safeSlug(id);
+    const { data: fallbackData, error: fallbackError } = await supabase
+        .from(CAR_TABLE)
+        .select('*')
+        .eq('is_active', true)
+        .range(0, 1200);
+
+    if (fallbackError || !fallbackData) return null;
+
+    const fallbackRow = groupVariantsByModel(fallbackData)
+        .find((row) => carSlugCandidates(row).includes(targetSlug));
+
+    return fallbackRow ? mapDbCarToCar(fallbackRow) : null;
 }
 
 /**
@@ -325,24 +374,25 @@ export async function getSimilarCars(carId: string, limit: number = 4): Promise<
 function groupVariantsByModel(rows: CarCatalogServiceRow[]): GroupedCarCatalogRow[] {
     const modelMap = new Map<string, GroupedCarCatalogRow>();
     for (const row of rows) {
-        const key = `${row.make}|${row.model}`;
-        const normalizedBodyType = get4WCardekhoModelMeta(row.make, row.model)?.bodyType ?? row.body_type ?? 'Other';
+        const normalizedRow = withNormalized4wCatalogPrices(row);
+        const key = `${normalizedRow.make}|${normalizedRow.model}`;
+        const normalizedBodyType = get4WCardekhoModelMeta(normalizedRow.make, normalizedRow.model)?.bodyType ?? normalizedRow.body_type ?? 'Other';
         if (!modelMap.has(key)) {
-            modelMap.set(key, toGroupedCarCatalogRow({ ...row, body_type: normalizedBodyType }));
+            modelMap.set(key, toGroupedCarCatalogRow({ ...normalizedRow, body_type: normalizedBodyType }));
         } else {
             const existing = modelMap.get(key)!;
-            const rowMin = row.price_min_paise ?? 0;
-            const rowMax = row.price_max_paise ?? 0;
+            const rowMin = normalizedRow.price_min_paise ?? 0;
+            const rowMax = normalizedRow.price_max_paise ?? 0;
             const existingMin = existing.price_min_paise ?? 0;
             const existingMax = existing.price_max_paise ?? 0;
             if (rowMin > 0 && (existingMin === 0 || rowMin < existingMin))
                 existing.price_min_paise = rowMin;
             if (rowMax > existingMax)
                 existing.price_max_paise = rowMax;
-            if (row.fuel_type && !existing.fuel_types.includes(row.fuel_type))
-                existing.fuel_types.push(row.fuel_type);
-            if (typeof row.transmission === 'string' && row.transmission && !existing.transmissions.includes(row.transmission))
-                existing.transmissions.push(row.transmission);
+            if (normalizedRow.fuel_type && !existing.fuel_types.includes(normalizedRow.fuel_type))
+                existing.fuel_types.push(normalizedRow.fuel_type);
+            if (typeof normalizedRow.transmission === 'string' && normalizedRow.transmission && !existing.transmissions.includes(normalizedRow.transmission))
+                existing.transmissions.push(normalizedRow.transmission);
             existing.body_type = existing.body_type || normalizedBodyType;
         }
     }

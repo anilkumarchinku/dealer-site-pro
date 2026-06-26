@@ -5,8 +5,7 @@
 
 'use client';
 
-import { Suspense, useState, useEffect, useCallback } from 'react';
-import { useRouter, useSearchParams } from 'next/navigation';
+import { useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { SiteHeader } from '@/components/layout/SiteHeader';
@@ -29,7 +28,6 @@ import {
     Zap,
     Users,
     Package,
-    Loader2,
 } from 'lucide-react';
 import {
     Sheet,
@@ -77,6 +75,49 @@ const SORT_OPTIONS = [
     { value: 'price_high', label: 'Price: High to Low' },
     { value: 'newest', label: 'Newest First' },
 ];
+
+type AutosQueryState = {
+    selectedBrand: string;
+    selectedType: string;
+    sortBy: string;
+    searchQuery: string;
+    page: number;
+};
+
+const DEFAULT_AUTOS_QUERY: AutosQueryState = {
+    selectedBrand: '',
+    selectedType: 'all',
+    sortBy: 'popular',
+    searchQuery: '',
+    page: 1,
+};
+
+function readAutosQuery(): AutosQueryState {
+    if (typeof window === 'undefined') return DEFAULT_AUTOS_QUERY;
+
+    const params = new URLSearchParams(window.location.search);
+    const parsedPage = Number(params.get('page') || '1');
+
+    return {
+        selectedBrand: params.get('make') || '',
+        selectedType: params.get('type') || 'all',
+        sortBy: params.get('sortBy') || 'popular',
+        searchQuery: params.get('q') || '',
+        page: Number.isFinite(parsedPage) && parsedPage > 0 ? parsedPage : 1,
+    };
+}
+
+function writeAutosQuery(next: AutosQueryState) {
+    const params = new URLSearchParams();
+    if (next.selectedBrand) params.set('make', next.selectedBrand);
+    if (next.selectedType !== 'all') params.set('type', next.selectedType);
+    if (next.sortBy !== 'popular') params.set('sortBy', next.sortBy);
+    if (next.searchQuery) params.set('q', next.searchQuery);
+    if (next.page > 1) params.set('page', String(next.page));
+
+    const query = params.toString();
+    window.history.pushState(null, '', query ? `/autos?${query}` : '/autos');
+}
 
 interface AutoVehicle {
     id: string;
@@ -346,33 +387,45 @@ function FilterSidebar({
 }
 
 function AutosContent() {
-    const router = useRouter();
-    const searchParams = useSearchParams();
+    const [queryState, setQueryState] = useState<AutosQueryState>(DEFAULT_AUTOS_QUERY);
     const [vehicles, setVehicles] = useState<AutoVehicle[]>([]);
     const [loading, setLoading] = useState(true);
     const [totalCount, setTotalCount] = useState(0);
-    const [currentPage, setCurrentPage] = useState(1);
     const [totalPages, setTotalPages] = useState(1);
 
-    const selectedBrand = searchParams.get('make') || '';
-    const selectedType = searchParams.get('type') || 'all';
-    const sortBy = searchParams.get('sortBy') || 'popular';
-    const searchQuery = searchParams.get('q') || '';
+    const selectedBrand = queryState.selectedBrand;
+    const selectedType = queryState.selectedType;
+    const sortBy = queryState.sortBy;
+    const searchQuery = queryState.searchQuery;
+    const currentPage = queryState.page;
 
     const updateParams = useCallback(
         (updates: Record<string, string>) => {
-            const params = new URLSearchParams(searchParams.toString());
-            for (const [key, value] of Object.entries(updates)) {
-                if (value === '' || value === 'all') {
-                    params.delete(key);
-                } else {
-                    params.set(key, value);
+            setQueryState((prev) => {
+                const next = { ...prev };
+                for (const [key, value] of Object.entries(updates)) {
+                    if (key === 'make') next.selectedBrand = value;
+                    if (key === 'type') next.selectedType = value || 'all';
+                    if (key === 'sortBy') next.sortBy = value || 'popular';
+                    if (key === 'q') next.searchQuery = value;
+                    if (key === 'page') {
+                        const parsedPage = Number(value || '1');
+                        next.page = Number.isFinite(parsedPage) && parsedPage > 0 ? parsedPage : 1;
+                    }
                 }
-            }
-            router.push(`/autos?${params.toString()}`);
+                writeAutosQuery(next);
+                return next;
+            });
         },
-        [router, searchParams]
+        []
     );
+
+    useEffect(() => {
+        const syncFromUrl = () => setQueryState(readAutosQuery());
+        syncFromUrl();
+        window.addEventListener('popstate', syncFromUrl);
+        return () => window.removeEventListener('popstate', syncFromUrl);
+    }, []);
 
     useEffect(() => {
         const fetchAutos = async () => {
@@ -391,7 +444,6 @@ function AutosContent() {
                 if (data.success) {
                     setVehicles(data.data.vehicles);
                     setTotalCount(data.data.total);
-                    setCurrentPage(data.data.page);
                     setTotalPages(data.data.totalPages);
                 }
             } catch {
@@ -404,13 +456,11 @@ function AutosContent() {
     }, [selectedBrand, selectedType, sortBy, currentPage, searchQuery]);
 
     const handleBrandChange = (brand: string) => {
-        setCurrentPage(1);
-        updateParams({ make: brand, page: '' });
+        updateParams({ make: brand, page: '1' });
     };
 
     const handleTypeChange = (type: string) => {
-        setCurrentPage(1);
-        updateParams({ type, page: '' });
+        updateParams({ type, page: '1' });
     };
 
     const handleSortChange = (sort: string) => {
@@ -418,12 +468,11 @@ function AutosContent() {
     };
 
     const handleClearFilters = () => {
-        setCurrentPage(1);
-        router.push('/autos');
+        setQueryState(DEFAULT_AUTOS_QUERY);
+        window.history.pushState(null, '', '/autos');
     };
 
     const handlePageChange = (newPage: number) => {
-        setCurrentPage(newPage);
         updateParams({ page: String(newPage) });
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
@@ -432,235 +481,227 @@ function AutosContent() {
         (selectedBrand ? 1 : 0) + (selectedType !== 'all' ? 1 : 0);
 
     return (
-        <div className="min-h-screen bg-background">
-            <SiteHeader />
-
-            <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-                {/* Breadcrumb */}
-                <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-4">
-                    <Link href="/" className="hover:text-foreground transition-colors">
-                        Home
-                    </Link>
-                    <ChevronRight className="w-3.5 h-3.5" />
-                    <span className="text-foreground font-medium">Autos</span>
-                </nav>
-
-                {/* Title */}
-                <div className="mb-6">
-                    <h1 className="text-2xl sm:text-3xl font-bold text-foreground">
-                        Autos & Three-Wheelers
-                    </h1>
-                    <p className="text-muted-foreground mt-1">
-                        Browse auto-rickshaws, e-autos, and cargo three-wheelers from top brands in India
-                    </p>
-                </div>
-
-                <div className="flex gap-6">
-                    {/* Sidebar - Desktop */}
-                    <aside className="hidden lg:block w-60 shrink-0">
-                        <div className="bg-card rounded-xl border border-border p-4 sticky top-20">
-                            <h3 className="text-sm font-semibold text-foreground mb-4 flex items-center gap-2">
-                                <Filter className="w-4 h-4" /> Filters
-                                {activeFilterCount > 0 && (
-                                    <Badge variant="secondary" className="text-[10px] h-5">
-                                        {activeFilterCount}
-                                    </Badge>
-                                )}
-                            </h3>
-                            <FilterSidebar
-                                selectedBrand={selectedBrand}
-                                selectedType={selectedType}
-                                onBrandChange={handleBrandChange}
-                                onTypeChange={handleTypeChange}
-                                onClear={handleClearFilters}
-                            />
-                        </div>
-                    </aside>
-
-                    {/* Main content */}
-                    <div className="flex-1 min-w-0">
-                        {/* Top bar: count + sort + mobile filter */}
-                        <div className="flex items-center justify-between mb-4 gap-3">
-                            <p className="text-sm text-muted-foreground">
-                                {loading ? (
-                                    'Loading...'
-                                ) : (
-                                    <>
-                                        <span className="font-semibold text-foreground">{totalCount}</span>{' '}
-                                        {totalCount === 1 ? 'vehicle' : 'vehicles'} found
-                                    </>
-                                )}
-                            </p>
-
-                            <div className="flex items-center gap-2">
-                                {/* Sort */}
-                                <Select value={sortBy} onValueChange={handleSortChange}>
-                                    <SelectTrigger className="w-[160px] h-9 text-sm">
-                                        <SelectValue placeholder="Sort by" />
-                                    </SelectTrigger>
-                                    <SelectContent>
-                                        {SORT_OPTIONS.map((opt) => (
-                                            <SelectItem key={opt.value} value={opt.value}>
-                                                {opt.label}
-                                            </SelectItem>
-                                        ))}
-                                    </SelectContent>
-                                </Select>
-
-                                {/* Mobile filter trigger */}
-                                <Sheet>
-                                    <SheetTrigger asChild>
-                                        <Button variant="outline" size="sm" className="lg:hidden h-9">
-                                            <Filter className="w-4 h-4 mr-1.5" />
-                                            Filters
-                                            {activeFilterCount > 0 && (
-                                                <Badge variant="secondary" className="ml-1.5 text-[10px] h-4">
-                                                    {activeFilterCount}
-                                                </Badge>
-                                            )}
-                                        </Button>
-                                    </SheetTrigger>
-                                    <SheetContent side="left" className="w-80">
-                                        <SheetHeader>
-                                            <SheetTitle>Filters</SheetTitle>
-                                            <SheetDescription>
-                                                Filter three-wheelers by brand and type
-                                            </SheetDescription>
-                                        </SheetHeader>
-                                        <div className="mt-6">
-                                            <FilterSidebar
-                                                selectedBrand={selectedBrand}
-                                                selectedType={selectedType}
-                                                onBrandChange={handleBrandChange}
-                                                onTypeChange={handleTypeChange}
-                                                onClear={handleClearFilters}
-                                            />
-                                        </div>
-                                    </SheetContent>
-                                </Sheet>
-                            </div>
-                        </div>
-
-                        {/* Active filter badges */}
+        <div className="flex gap-6">
+            {/* Sidebar - Desktop */}
+            <aside className="hidden lg:block w-60 shrink-0">
+                <div className="bg-card rounded-xl border border-border p-4 sticky top-20">
+                    <h3 className="text-sm font-semibold text-foreground mb-4 flex items-center gap-2">
+                        <Filter className="w-4 h-4" /> Filters
                         {activeFilterCount > 0 && (
-                            <div className="flex flex-wrap gap-2 mb-4">
-                                {selectedBrand && (
-                                    <Badge
-                                        variant="secondary"
-                                        className="flex items-center gap-1 cursor-pointer hover:bg-muted/80"
-                                        onClick={() => handleBrandChange('')}
-                                    >
-                                        {selectedBrand}
-                                        <X className="w-3 h-3" />
-                                    </Badge>
-                                )}
-                                {selectedType !== 'all' && (
-                                    <Badge
-                                        variant="secondary"
-                                        className="flex items-center gap-1 cursor-pointer hover:bg-muted/80"
-                                        onClick={() => handleTypeChange('all')}
-                                    >
-                                        {selectedType.charAt(0).toUpperCase() + selectedType.slice(1)}
-                                        <X className="w-3 h-3" />
-                                    </Badge>
-                                )}
-                            </div>
+                            <Badge variant="secondary" className="text-[10px] h-5">
+                                {activeFilterCount}
+                            </Badge>
                         )}
+                    </h3>
+                    <FilterSidebar
+                        selectedBrand={selectedBrand}
+                        selectedType={selectedType}
+                        onBrandChange={handleBrandChange}
+                        onTypeChange={handleTypeChange}
+                        onClear={handleClearFilters}
+                    />
+                </div>
+            </aside>
 
-                        {/* Vehicle grid */}
+            {/* Main content */}
+            <div className="flex-1 min-w-0">
+                {/* Top bar: count + sort + mobile filter */}
+                <div className="flex items-center justify-between mb-4 gap-3">
+                    <p className="text-sm text-muted-foreground">
                         {loading ? (
-                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                                {Array.from({ length: 6 }).map((_, i) => (
-                                    <AutoCardSkeleton key={i} />
-                                ))}
-                            </div>
-                        ) : vehicles.length === 0 ? (
-                            <div className="text-center py-16">
-                                <span className="text-5xl mb-4 block">🛺</span>
-                                <h3 className="text-lg font-semibold text-foreground mb-1">
-                                    No vehicles found
-                                </h3>
-                                <p className="text-muted-foreground text-sm mb-4">
-                                    Try adjusting your filters or clearing them
-                                </p>
-                                <Button variant="outline" size="sm" onClick={handleClearFilters}>
-                                    Clear all filters
-                                </Button>
-                            </div>
+                            'Loading...'
                         ) : (
-                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                                {vehicles.map((v) => (
-                                    <AutoCard key={v.id} vehicle={v} />
+                            <>
+                                <span className="font-semibold text-foreground">{totalCount}</span>{' '}
+                                {totalCount === 1 ? 'vehicle' : 'vehicles'} found
+                            </>
+                        )}
+                    </p>
+
+                    <div className="flex items-center gap-2">
+                        {/* Sort */}
+                        <Select value={sortBy} onValueChange={handleSortChange}>
+                            <SelectTrigger className="w-[160px] h-9 text-sm">
+                                <SelectValue placeholder="Sort by" />
+                            </SelectTrigger>
+                            <SelectContent>
+                                {SORT_OPTIONS.map((opt) => (
+                                    <SelectItem key={opt.value} value={opt.value}>
+                                        {opt.label}
+                                    </SelectItem>
                                 ))}
-                            </div>
-                        )}
+                            </SelectContent>
+                        </Select>
 
-                        {/* Pagination */}
-                        {totalPages > 1 && (
-                            <div className="flex items-center justify-center gap-2 mt-8">
-                                <Button
-                                    variant="outline"
-                                    size="sm"
-                                    disabled={currentPage <= 1}
-                                    onClick={() => handlePageChange(currentPage - 1)}
-                                >
-                                    <ChevronLeft className="w-4 h-4" />
+                        {/* Mobile filter trigger */}
+                        <Sheet>
+                            <SheetTrigger asChild>
+                                <Button variant="outline" size="sm" className="lg:hidden h-9">
+                                    <Filter className="w-4 h-4 mr-1.5" />
+                                    Filters
+                                    {activeFilterCount > 0 && (
+                                        <Badge variant="secondary" className="ml-1.5 text-[10px] h-4">
+                                            {activeFilterCount}
+                                        </Badge>
+                                    )}
                                 </Button>
-
-                                {Array.from({ length: totalPages }, (_, i) => i + 1)
-                                    .filter((p) => {
-                                        // Show first, last, and pages near current
-                                        return p === 1 || p === totalPages || Math.abs(p - currentPage) <= 2;
-                                    })
-                                    .map((p, idx, arr) => {
-                                        const prev = arr[idx - 1];
-                                        const showEllipsis = prev && p - prev > 1;
-                                        return (
-                                            <span key={p} className="flex items-center gap-1">
-                                                {showEllipsis && (
-                                                    <span className="text-muted-foreground px-1">...</span>
-                                                )}
-                                                <Button
-                                                    variant={p === currentPage ? 'default' : 'outline'}
-                                                    size="sm"
-                                                    className="min-w-[36px]"
-                                                    onClick={() => handlePageChange(p)}
-                                                >
-                                                    {p}
-                                                </Button>
-                                            </span>
-                                        );
-                                    })}
-
-                                <Button
-                                    variant="outline"
-                                    size="sm"
-                                    disabled={currentPage >= totalPages}
-                                    onClick={() => handlePageChange(currentPage + 1)}
-                                >
-                                    <ChevronRight className="w-4 h-4" />
-                                </Button>
-                            </div>
-                        )}
+                            </SheetTrigger>
+                            <SheetContent side="left" className="w-80">
+                                <SheetHeader>
+                                    <SheetTitle>Filters</SheetTitle>
+                                    <SheetDescription>
+                                        Filter three-wheelers by brand and type
+                                    </SheetDescription>
+                                </SheetHeader>
+                                <div className="mt-6">
+                                    <FilterSidebar
+                                        selectedBrand={selectedBrand}
+                                        selectedType={selectedType}
+                                        onBrandChange={handleBrandChange}
+                                        onTypeChange={handleTypeChange}
+                                        onClear={handleClearFilters}
+                                    />
+                                </div>
+                            </SheetContent>
+                        </Sheet>
                     </div>
                 </div>
-            </main>
 
-            <SiteFooter />
+                {/* Active filter badges */}
+                {activeFilterCount > 0 && (
+                    <div className="flex flex-wrap gap-2 mb-4">
+                        {selectedBrand && (
+                            <Badge
+                                variant="secondary"
+                                className="flex items-center gap-1 cursor-pointer hover:bg-muted/80"
+                                onClick={() => handleBrandChange('')}
+                            >
+                                {selectedBrand}
+                                <X className="w-3 h-3" />
+                            </Badge>
+                        )}
+                        {selectedType !== 'all' && (
+                            <Badge
+                                variant="secondary"
+                                className="flex items-center gap-1 cursor-pointer hover:bg-muted/80"
+                                onClick={() => handleTypeChange('all')}
+                            >
+                                {selectedType.charAt(0).toUpperCase() + selectedType.slice(1)}
+                                <X className="w-3 h-3" />
+                            </Badge>
+                        )}
+                    </div>
+                )}
+
+                {/* Vehicle grid */}
+                {loading ? (
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                        {Array.from({ length: 6 }).map((_, i) => (
+                            <AutoCardSkeleton key={i} />
+                        ))}
+                    </div>
+                ) : vehicles.length === 0 ? (
+                    <div className="text-center py-16">
+                        <span className="text-5xl mb-4 block">🛺</span>
+                        <h3 className="text-lg font-semibold text-foreground mb-1">
+                            No vehicles found
+                        </h3>
+                        <p className="text-muted-foreground text-sm mb-4">
+                            Try adjusting your filters or clearing them
+                        </p>
+                        <Button variant="outline" size="sm" onClick={handleClearFilters}>
+                            Clear all filters
+                        </Button>
+                    </div>
+                ) : (
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                        {vehicles.map((v) => (
+                            <AutoCard key={v.id} vehicle={v} />
+                        ))}
+                    </div>
+                )}
+
+                {/* Pagination */}
+                {totalPages > 1 && (
+                    <div className="flex items-center justify-center gap-2 mt-8">
+                        <Button
+                            variant="outline"
+                            size="sm"
+                            disabled={currentPage <= 1}
+                            onClick={() => handlePageChange(currentPage - 1)}
+                        >
+                            <ChevronLeft className="w-4 h-4" />
+                        </Button>
+
+                        {Array.from({ length: totalPages }, (_, i) => i + 1)
+                            .filter((p) => {
+                                // Show first, last, and pages near current
+                                return p === 1 || p === totalPages || Math.abs(p - currentPage) <= 2;
+                            })
+                            .map((p, idx, arr) => {
+                                const prev = arr[idx - 1];
+                                const showEllipsis = prev && p - prev > 1;
+                                return (
+                                    <span key={p} className="flex items-center gap-1">
+                                        {showEllipsis && (
+                                            <span className="text-muted-foreground px-1">...</span>
+                                        )}
+                                        <Button
+                                            variant={p === currentPage ? 'default' : 'outline'}
+                                            size="sm"
+                                            className="min-w-[36px]"
+                                            onClick={() => handlePageChange(p)}
+                                        >
+                                            {p}
+                                        </Button>
+                                    </span>
+                                );
+                            })}
+
+                        <Button
+                            variant="outline"
+                            size="sm"
+                            disabled={currentPage >= totalPages}
+                            onClick={() => handlePageChange(currentPage + 1)}
+                        >
+                            <ChevronRight className="w-4 h-4" />
+                        </Button>
+                    </div>
+                )}
+            </div>
         </div>
     );
 }
 
 export default function AutosPage() {
     return (
-        <Suspense
-            fallback={
-                <div className="min-h-screen flex items-center justify-center bg-background">
-                    <Loader2 className="w-8 h-8 animate-spin text-muted-foreground" />
-                </div>
-            }
-        >
-            <AutosContent />
-        </Suspense>
+        <>
+            <SiteHeader />
+            <div className="min-h-screen bg-background">
+                <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+                    {/* Breadcrumb */}
+                    <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-4">
+                        <Link href="/" className="hover:text-foreground transition-colors">
+                            Home
+                        </Link>
+                        <ChevronRight className="w-3.5 h-3.5" />
+                        <span className="text-foreground font-medium">Autos</span>
+                    </nav>
+
+                    {/* Title */}
+                    <div className="mb-6">
+                        <h1 className="text-2xl sm:text-3xl font-bold text-foreground">
+                            Autos & Three-Wheelers
+                        </h1>
+                        <p className="text-muted-foreground mt-1">
+                            Browse auto-rickshaws, e-autos, and cargo three-wheelers from top brands in India
+                        </p>
+                    </div>
+
+                    <AutosContent />
+                </main>
+            </div>
+            <SiteFooter />
+        </>
     );
 }

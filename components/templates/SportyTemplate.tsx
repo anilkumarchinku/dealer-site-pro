@@ -28,6 +28,7 @@ import CompareBar from '@/components/cars/CompareBar';
 import { WishlistDrawer } from '@/components/ui/WishlistDrawer';
 import { EVSection } from '@/components/ui/EVSection';
 import { SocialLinks } from '@/components/templates/shared/SocialLinks';
+import { getTemplateServiceMeta } from '@/components/templates/shared/service-meta';
 import { generateTemplateConfig } from '@/lib/templates';
 import { getContrastText } from '@/lib/utils/color-contrast';
 import { buildTemplateDetailBasePath, buildTemplateSiteBase } from '@/lib/utils/template-site-paths';
@@ -50,11 +51,6 @@ import {
     Menu,
     X,
     Car as CarIcon,
-    RefreshCw,
-    Wallet,
-    Wrench,
-    Cog,
-    LifeBuoy,
 } from 'lucide-react';
 import { useState, useEffect, useMemo } from 'react';
 import { usePathname } from 'next/navigation';
@@ -112,7 +108,7 @@ interface SportyTemplateProps {
     serviceCenters?: Array<{ id: string; name: string; address?: string; city?: string; phone?: string }>;
     isVerified?: boolean;
     vehicleType?: '2w' | '3w' | '4w';
-    socialLinks?: { facebook: string | null; instagram: string | null; youtube: string | null };
+    socialLinks?: { facebook: string | null; instagram: string | null; twitter?: string | null; youtube: string | null; linkedin?: string | null };
     sellVehicleHref?: string;
 }
 
@@ -146,18 +142,6 @@ export function SportyTemplate({
         sellsNewCars,
         sellsUsedCars,
     }), [pathname, sellsNewCars, sellsUsedCars, vehicleType]);
-    const SERVICE_LABELS: Record<string, { label: string; icon: typeof Gauge }> = {
-        new_car_sales: { label: vl.newVehicle, icon: CarIcon },
-        used_car_sales: { label: vl.usedVehicle, icon: RefreshCw },
-        financing: { label: 'Finance & EMI', icon: Wallet },
-        service_maintenance: { label: 'Service & Repairs', icon: Wrench },
-        parts_accessories: { label: 'Parts & Accessories', icon: Cog },
-        test_drive: { label: vl.testDrive, icon: Gauge },
-        insurance: { label: 'Insurance', icon: Shield },
-        extended_warranty: { label: 'Extended Warranty', icon: CheckCircle2 },
-        roadside_assistance: { label: 'Roadside Assist', icon: LifeBuoy },
-        car_exchange: { label: vl.exchange, icon: RefreshCw },
-    };
     const isHybrid = sellsNewCars && sellsUsedCars;
     const [activeTab, setActiveTab] = useState<'inventory' | 'home'>('home');
     const [inventoryTab, setInventoryTab] = useState<'all' | 'new' | 'used'>('all');
@@ -277,14 +261,20 @@ export function SportyTemplate({
                     <div className="flex items-center justify-between gap-4 h-16">
                         <div className="flex min-w-0 shrink-0 items-center cursor-pointer" onClick={() => setActiveTab('home')}>
                             <div className="relative w-10 h-10 mr-3 shrink-0">
-                                <Image
-                                    src={logoUrl || `/assets/logos/${brandName.toLowerCase().replace(/\s+/g, '-')}.png`}
-                                    alt={logoUrl ? dealerName : brandName}
-                                    fill
-                                    className="object-contain"
-                                    sizes="40px"
-                                    onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
-                                />
+                                {logoUrl ? (
+                                    <Image
+                                        src={logoUrl}
+                                        alt={dealerName}
+                                        fill
+                                        className="object-contain"
+                                        sizes="40px"
+                                        onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
+                                    />
+                                ) : (
+                                    <span className="flex h-full w-full items-center justify-center rounded-lg bg-gray-900 text-sm font-bold text-white">
+                                        {dealerName.charAt(0).toUpperCase()}
+                                    </span>
+                                )}
                             </div>
                             <span className="max-w-[180px] text-lg font-bold leading-tight text-gray-900 xl:max-w-none xl:text-xl">{dealerName}</span>
                         </div>
@@ -334,13 +324,15 @@ export function SportyTemplate({
                                 <MessageSquare className="w-4 h-4 mr-2" />
                                 ENQUIRE
                             </Button>
-                            <Button className="px-4 font-bold lg:px-5" style={{ backgroundColor: brandAccent, color: getContrastText(brandAccent) }} asChild>
+                            <Button className="hidden px-4 font-bold sm:inline-flex lg:px-5" style={{ backgroundColor: brandAccent, color: getContrastText(brandAccent) }} asChild>
                                 <a href={`tel:${contactInfo.phone}`}>
                                     <Phone className="w-4 h-4 mr-2" />
                                     CALL NOW
                                 </a>
                             </Button>
-                            <WhatsAppButton phone={contactInfo.phone} variant="nav" />
+                            <span className="hidden sm:inline-flex">
+                                <WhatsAppButton phone={contactInfo.phone} variant="nav" />
+                            </span>
                             <button
                                 className="xl:hidden p-2 rounded-lg text-gray-900 transition-colors hover:bg-gray-100"
                                 onClick={() => setMobileMenuOpen(o => !o)}
@@ -426,7 +418,7 @@ export function SportyTemplate({
                             {(() => {
                                 const heroSrc = heroImageUrl;
                                 return heroSrc
-                                    ? <FadeInImage src={heroSrc} alt={`${brandName} Hero`} fill className="object-cover" priority />
+                                    ? <FadeInImage src={heroSrc} alt={`${brandName} Hero`} fill className="object-cover" sizes="100vw" priority />
                                     : null;
                             })()}
                             {/* Bold readable scrim: left stays solid behind the headline, the machine
@@ -480,7 +472,7 @@ export function SportyTemplate({
                                             <div className="rounded-lg border-2 border-gray-200 bg-white shadow-sm overflow-hidden">
                                                 <div className="aspect-video relative bg-gray-50">
                                                     {heroSrc ? (
-                                                        <FadeInImage src={heroSrc} alt={heroCar.model} fill className="object-cover" />
+                                                        <FadeInImage src={heroSrc} alt={heroCar.model} fill className="object-cover" sizes="(max-width: 1024px) 100vw, 420px" />
                                                     ) : (
                                                         <div className="flex items-center justify-center h-full text-gray-300">
                                                             <CarIcon className="w-14 h-14" aria-hidden="true" />
@@ -526,7 +518,7 @@ export function SportyTemplate({
                                 </Reveal>
                                 <div className="flex flex-wrap gap-3">
                                     {serviceList.map((svc, i) => {
-                                        const meta = SERVICE_LABELS[svc as string] ?? { label: svc as string, icon: CarIcon };
+                                        const meta = getTemplateServiceMeta(svc as string, vehicleType);
                                         const Icon = meta.icon;
                                         return (
                                             <Reveal
@@ -842,14 +834,20 @@ export function SportyTemplate({
                 <div className="max-w-7xl mx-auto px-4">
                     <div className="flex items-center mb-8 pb-6 border-b border-gray-200">
                         <div className="relative w-12 h-12 mr-3">
-                            <Image
-                                src={logoUrl || `/assets/logos/${brandName.toLowerCase().replace(/\s+/g, '-')}.png`}
-                                alt={logoUrl ? dealerName : brandName}
-                                fill
-                                className="object-contain"
-                                sizes="48px"
-                                onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
-                            />
+                            {logoUrl ? (
+                                <Image
+                                    src={logoUrl}
+                                    alt={dealerName}
+                                    fill
+                                    className="object-contain"
+                                    sizes="48px"
+                                    onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
+                                />
+                            ) : (
+                                <span className="flex h-full w-full items-center justify-center rounded-lg bg-gray-900 text-base font-bold text-white">
+                                    {dealerName.charAt(0).toUpperCase()}
+                                </span>
+                            )}
                         </div>
                         <div>
                             <span className="text-2xl font-black block text-gray-900">{dealerName}</span>
@@ -939,7 +937,14 @@ export function SportyTemplate({
                             <h4 className="text-lg font-black uppercase mb-4 text-gray-900">{dealerName}</h4>
                             <p className="text-gray-600">Performance vehicles for those who demand the best. Experience the thrill.</p>
                             {/* Social Media Links */}
-                            <SocialLinks className="mt-4" facebook={socialLinks?.facebook} instagram={socialLinks?.instagram} youtube={socialLinks?.youtube} />
+                            <SocialLinks
+                                className="mt-4"
+                                facebook={socialLinks?.facebook}
+                                instagram={socialLinks?.instagram}
+                                twitter={socialLinks?.twitter}
+                                youtube={socialLinks?.youtube}
+                                linkedin={socialLinks?.linkedin}
+                            />
                         </div>
                     </div>
                     <div className="border-t border-gray-200 mt-8 pt-8 text-center text-gray-500">

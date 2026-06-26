@@ -241,6 +241,28 @@ export interface Database {
         Update: Partial<Database['public']['Tables']['domain_subscriptions']['Row']>
         Relationships: []
       }
+      domain_email_support_requests: {
+        Row: {
+          id: string
+          dealer_id: string
+          domain_id: string | null
+          domain: string
+          requester_user_id: string | null
+          requester_email: string | null
+          mx_status: 'not_checked' | 'found' | 'missing' | 'error'
+          mx_records: Json
+          notes: string | null
+          status: 'open' | 'in_progress' | 'resolved' | 'closed'
+          created_at: string
+          updated_at: string
+        }
+        Insert: Partial<Database['public']['Tables']['domain_email_support_requests']['Row']> & {
+          dealer_id: string
+          domain: string
+        }
+        Update: Partial<Database['public']['Tables']['domain_email_support_requests']['Row']>
+        Relationships: []
+      }
       vehicles: {
         Row: {
           id: string
@@ -1022,6 +1044,7 @@ export type DealerOfferRow           = Database['public']['Tables']['dealer_offe
 export type DealerDomainRow          = Database['public']['Tables']['dealer_domains']['Row']
 export type DomainRow                = Database['public']['Tables']['domains']['Row']
 export type DomainSubscriptionRow    = Database['public']['Tables']['domain_subscriptions']['Row']
+export type DomainEmailSupportRequestRow = Database['public']['Tables']['domain_email_support_requests']['Row']
 export type VehicleRow               = Database['public']['Tables']['vehicles']['Row']
 export type LeadRow                  = Database['public']['Tables']['leads']['Row']
 export type MessageRow               = Database['public']['Tables']['messages']['Row']

@@ -15,6 +15,7 @@ import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
 import { VerifiedBadge } from '@/components/ui/VerifiedBadge';
 import { ReviewsSection } from '@/components/ui/ReviewsSection';
 import { SocialLinks } from '@/components/templates/shared/SocialLinks';
+import { getTemplateServiceMeta } from '@/components/templates/shared/service-meta';
 import { OffersSection } from '@/components/templates/sections/OffersSection';
 import { FAQSection } from '@/components/templates/sections/FAQSection';
 import { ExchangeSection } from '@/components/templates/sections/ExchangeSection';
@@ -50,12 +51,6 @@ import {
     Menu,
     X,
     Send,
-    RefreshCw,
-    Wallet,
-    Wrench,
-    Cog,
-    Gauge,
-    LifeBuoy,
     Bike,
     Truck,
 } from 'lucide-react';
@@ -111,7 +106,7 @@ interface ModernTemplateProps {
     serviceCenters?: Array<{ id: string; name: string; address?: string; city?: string; phone?: string }>;
     isVerified?: boolean;
     vehicleType?: '2w' | '3w' | '4w';
-    socialLinks?: { facebook: string | null; instagram: string | null; youtube: string | null };
+    socialLinks?: { facebook: string | null; instagram: string | null; twitter?: string | null; youtube: string | null; linkedin?: string | null };
     sellVehicleHref?: string;
 }
 
@@ -145,18 +140,6 @@ export function ModernTemplate({
         sellsNewCars,
         sellsUsedCars,
     }), [pathname, sellsNewCars, sellsUsedCars, vehicleType]);
-    const SERVICE_LABELS: Record<string, { label: string; icon: typeof CarIcon }> = {
-        new_car_sales: { label: vl.newVehicle, icon: CarIcon },
-        used_car_sales: { label: vl.usedVehicle, icon: RefreshCw },
-        financing: { label: 'Finance & EMI', icon: Wallet },
-        service_maintenance: { label: 'Service & Repairs', icon: Wrench },
-        parts_accessories: { label: 'Parts & Accessories', icon: Cog },
-        test_drive: { label: vl.testDrive, icon: Gauge },
-        insurance: { label: 'Insurance', icon: Shield },
-        extended_warranty: { label: 'Extended Warranty', icon: CheckCircle2 },
-        roadside_assistance: { label: 'Roadside Assist', icon: LifeBuoy },
-        car_exchange: { label: vl.exchange, icon: RefreshCw },
-    };
     const isHybrid = sellsNewCars && sellsUsedCars;
     const [activeTab, setActiveTab] = useState<'inventory' | 'home'>('home');
     const [inventoryTab, setInventoryTab] = useState<'all' | 'new' | 'used'>('all');
@@ -311,14 +294,20 @@ export function ModernTemplate({
                         {/* Logo */}
                         <div className="flex min-w-0 shrink-0 items-center cursor-pointer" onClick={() => setActiveTab('home')}>
                             <div className="relative w-10 h-10 mr-3 shrink-0">
-                                <Image
-                                    src={logoUrl || `/assets/logos/${brandName.toLowerCase().replace(/\s+/g, '-')}.png`}
-                                    alt={logoUrl ? dealerName : brandName}
-                                    fill
-                                    className="object-contain transition-all duration-300"
-                                    sizes="40px"
-                                    onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
-                                />
+                                {logoUrl ? (
+                                    <Image
+                                        src={logoUrl}
+                                        alt={dealerName}
+                                        fill
+                                        className="object-contain transition-all duration-300"
+                                        sizes="40px"
+                                        onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
+                                    />
+                                ) : (
+                                    <span className="flex h-full w-full items-center justify-center rounded-lg bg-gray-900 text-sm font-bold text-white">
+                                        {dealerName.charAt(0).toUpperCase()}
+                                    </span>
+                                )}
                             </div>
                             <span className="max-w-[180px] text-lg font-bold leading-tight text-gray-900 xl:max-w-none xl:text-xl">
                                 {dealerName}
@@ -379,7 +368,7 @@ export function ModernTemplate({
                                 Enquire Now
                             </Button>
                             <Button
-                                className="px-4 shadow-lg lg:px-5"
+                                className="hidden px-4 shadow-lg sm:inline-flex lg:px-5"
                                 style={{ backgroundColor: brandColors.primary, color: getContrastText(brandColors.primary) }}
                                 asChild
                             >
@@ -388,7 +377,9 @@ export function ModernTemplate({
                                     Call Now
                                 </a>
                             </Button>
-                            <WhatsAppButton phone={contactInfo.phone} variant="nav" />
+                            <span className="hidden sm:inline-flex">
+                                <WhatsAppButton phone={contactInfo.phone} variant="nav" />
+                            </span>
                             <button
                                 className="xl:hidden p-2 rounded-lg transition-colors text-gray-900"
                                 onClick={() => setMobileMenuOpen(o => !o)}
@@ -474,7 +465,7 @@ export function ModernTemplate({
                             {(() => {
                                 const heroSrc = heroImageUrl;
                                 return heroSrc
-                                    ? <Image src={heroSrc} alt={`${brandName} Hero`} fill className="object-cover" priority />
+                                    ? <Image src={heroSrc} alt={`${brandName} Hero`} fill className="object-cover" sizes="100vw" priority />
                                     : null;
                             })()}
                             {/* Readable scrim: keep the left (headline) bright while the vehicle stays
@@ -554,6 +545,7 @@ export function ModernTemplate({
                                                                 alt={heroCar.model}
                                                                 fill
                                                                 className="object-cover"
+                                                                sizes="(max-width: 1024px) 100vw, 420px"
                                                             />
                                                         ) : (
                                                             <div className="flex items-center justify-center h-full text-gray-300">
@@ -664,7 +656,7 @@ export function ModernTemplate({
                                 </Reveal>
                                 <div className="flex flex-wrap justify-center gap-4">
                                     {serviceList.map((svc, i) => {
-                                        const meta = SERVICE_LABELS[svc as string] ?? { label: svc as string, icon: CarIcon };
+                                        const meta = getTemplateServiceMeta(svc as string, vehicleType);
                                         const Icon = meta.icon;
                                         return (
                                             <Reveal
@@ -967,7 +959,7 @@ export function ModernTemplate({
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="mb-8 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
                             <div>
-                                <h1 className="text-4xl font-bold text-gray-900">Our Inventory</h1>
+                                <h1 className="text-4xl font-bold text-gray-900">Inventory</h1>
                                 <p className="text-gray-600 mt-2">Browse {cars.length}+ quality vehicles</p>
                             </div>
                             {isHybrid && (
@@ -1023,14 +1015,20 @@ export function ModernTemplate({
                     {/* Brand Logo */}
                     <div className="flex items-center mb-8 pb-6 border-b border-gray-200">
                         <div className="relative w-12 h-12 mr-3">
-                            <Image
-                                src={logoUrl || `/assets/logos/${brandName.toLowerCase().replace(/\s+/g, '-')}.png`}
-                                alt={logoUrl ? dealerName : brandName}
-                                fill
-                                className="object-contain"
-                                sizes="48px"
-                                onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
-                            />
+                            {logoUrl ? (
+                                <Image
+                                    src={logoUrl}
+                                    alt={dealerName}
+                                    fill
+                                    className="object-contain"
+                                    sizes="48px"
+                                    onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
+                                />
+                            ) : (
+                                <span className="flex h-full w-full items-center justify-center rounded-lg bg-gray-900 text-base font-bold text-white">
+                                    {dealerName.charAt(0).toUpperCase()}
+                                </span>
+                            )}
                         </div>
                         <div>
                             <span className="text-2xl font-bold block text-gray-900">{dealerName}</span>
@@ -1115,7 +1113,13 @@ export function ModernTemplate({
                                 satisfaction.
                             </p>
                             {/* Social Media Links */}
-                            <SocialLinks facebook={socialLinks?.facebook} instagram={socialLinks?.instagram} youtube={socialLinks?.youtube} />
+                            <SocialLinks
+                                facebook={socialLinks?.facebook}
+                                instagram={socialLinks?.instagram}
+                                twitter={socialLinks?.twitter}
+                                youtube={socialLinks?.youtube}
+                                linkedin={socialLinks?.linkedin}
+                            />
                         </div>
                     </div>
                     <div className="border-t border-gray-200 mt-8 pt-8 text-center text-gray-500">

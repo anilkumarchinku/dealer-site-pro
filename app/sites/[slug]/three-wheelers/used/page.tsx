@@ -4,7 +4,6 @@ import { getUsedThreeWheelers } from '@/lib/db/three-wheelers'
 import { THREE_WHEELER_BRANDS } from '@/lib/data/three-wheelers'
 import { fetchAllCyeproInventoryAsCars } from '@/lib/services/cyepro-service'
 import { notFound } from 'next/navigation'
-import { brandNameToId } from '@/lib/utils/brand-model-images'
 import { ModernTemplate } from '@/components/templates/ModernTemplate'
 import { LuxuryTemplate } from '@/components/templates/LuxuryTemplate'
 import { SportyTemplate } from '@/components/templates/SportyTemplate'
@@ -12,7 +11,7 @@ import { FamilyTemplate } from '@/components/templates/FamilyTemplate'
 import type { Car } from '@/lib/types/car'
 import type { ThreeWheelerUsedVehicle } from '@/lib/types/three-wheeler'
 import type { Service } from '@/lib/types'
-import { firstVehicleHeroImage, resolveDealerHeroImage } from '@/lib/utils/site-assets'
+import { brandLogoUrl as getBrandLogoUrl, firstVehicleHeroImage, resolveDealerHeroImage, resolveDealerLogoImage } from '@/lib/utils/site-assets'
 import { dealerSiteHref } from '@/lib/utils/domain'
 
 interface Props {
@@ -110,8 +109,11 @@ export default async function UsedThreeWheelersPage({ params }: Props) {
 
     const brands3w = dealer.brands.filter(b => THREE_WHEELER_BRANDS.includes(b))
     const primaryBrand = brands3w[0] ?? dealer.brands[0] ?? null
-    const brandId = primaryBrand ? brandNameToId(primaryBrand, '3w') : null
-    const brandLogoUrl = dealer.logo_url ?? (brandId ? `/data/brand-logos/${brandId}.png` : undefined)
+    const logoUrl = resolveDealerLogoImage({
+        uploadedLogo: dealer.logo_url,
+        fallbackLogo: primaryBrand ? getBrandLogoUrl(primaryBrand, '3w') : undefined,
+        preferFallbackLogo: true,
+    })
     const heroImageUrl = resolveDealerHeroImage({
         uploadedHeroImage: dealer.hero_image_url,
         inventoryHeroImage: firstVehicleHeroImage(cars),
@@ -120,6 +122,7 @@ export default async function UsedThreeWheelersPage({ params }: Props) {
     const contactInfo = {
         phone: dealer.phone,
         email: dealer.email ?? '',
+        city: dealer.location,
         address: dealer.full_address ?? dealer.location,
     }
 
@@ -148,7 +151,7 @@ export default async function UsedThreeWheelersPage({ params }: Props) {
         branches:     dealer.branches ?? undefined,
         services:     (dealer.services ?? []) as Service[],
         workingHours: dealer.working_hours ?? null,
-        logoUrl:      brandLogoUrl ?? undefined,
+        logoUrl:      logoUrl ?? undefined,
         heroImageUrl,
         sellsNewCars:  false,
         sellsUsedCars: true,

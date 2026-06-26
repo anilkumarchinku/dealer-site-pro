@@ -203,10 +203,11 @@ function buildThreeWheelerFeatureString(vehicle: ThreeWheelerVehicleInfo): strin
 /** Load and flatten all variants from a brand-specific JSON file (e.g. /data/tata.json).
  *  These files have CardDekho image_urls that carInfo.json lacks. */
 async function loadBrandFileVariants(brandKey: string): Promise<BrandFileVariant[]> {
-    if (brandKey in brandFileCache) return brandFileCache[brandKey];
+    const resolvedBrandKey = brandKey === 'tata_motors' ? 'tata' : brandKey;
+    if (resolvedBrandKey in brandFileCache) return brandFileCache[resolvedBrandKey];
     try {
-        const res = await fetch(`/data/${brandKey}.json`);
-        if (!res.ok) { brandFileCache[brandKey] = []; return []; }
+        const res = await fetch(`/data/${resolvedBrandKey}.json`);
+        if (!res.ok) { brandFileCache[resolvedBrandKey] = []; return []; }
         const raw: unknown = await res.json();
         // Format: array of arrays of variant objects, or object with numeric keys → arrays
         const outer = Array.isArray(raw) ? raw : isRecord(raw) ? Object.values(raw) : [];
@@ -223,10 +224,10 @@ async function loadBrandFileVariants(brandKey: string): Promise<BrandFileVariant
                 }
             }
         }
-        brandFileCache[brandKey] = variants;
+        brandFileCache[resolvedBrandKey] = variants;
         return variants;
     } catch {
-        brandFileCache[brandKey] = [];
+        brandFileCache[resolvedBrandKey] = [];
         return [];
     }
 }

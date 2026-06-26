@@ -338,7 +338,7 @@ export default function Step1Page() {
             setStep(2);
 
             if (isFirstHand) {
-                router.push("/onboarding/step-3");
+                router.push("/onboarding/step-2-inventory");
             } else {
                 router.push("/onboarding/step-2-used");
             }

@@ -6,8 +6,9 @@ import { saveDealer } from "@/lib/actions/save-dealer";
 import { dealerVehicleSiteUrl, dealerVehicleSiteHref } from "@/lib/utils/domain";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { OnboardingReviewSummary } from "@/components/onboarding/OnboardingReviewSummary";
 import {
-    CheckCircle, ArrowLeft, ArrowRight, Globe, Shield,
+    CheckCircle, ArrowLeft, ArrowRight,
     Loader2, AlertCircle, ExternalLink, Link as LinkIcon,
 } from "lucide-react";
 import { validateOnboardingReadyForSave } from "@/lib/validations/onboarding";
@@ -132,75 +133,7 @@ export default function ThreeWheelerStep5Page() {
                 </CardHeader>
 
                 <CardContent className="space-y-6">
-                    <div className="grid grid-cols-2 gap-4">
-                        <div className="col-span-2">
-                            <p className="text-sm text-muted-foreground">Dealership Name</p>
-                            <p className="font-semibold text-foreground">{data.dealershipName}</p>
-                            {data.tagline && <p className="text-sm text-muted-foreground italic">&ldquo;{data.tagline}&rdquo;</p>}
-                        </div>
-                        <div className="col-span-2 md:col-span-1">
-                            <p className="text-sm text-muted-foreground">Email</p>
-                            <p className="font-semibold text-foreground">{data.email}</p>
-                        </div>
-                        <div className="col-span-2 md:col-span-1">
-                            <p className="text-sm text-muted-foreground">Phone</p>
-                            <p className="font-semibold text-foreground">{data.phone}</p>
-                        </div>
-                        <div className="col-span-2">
-                            <p className="text-sm text-muted-foreground">Location</p>
-                            <p className="font-semibold text-foreground">{data.location}</p>
-                        </div>
-                    </div>
-
-                    {data.brands3w && data.brands3w.length > 0 && (
-                        <div className="border-t border-border pt-4">
-                            <p className="text-sm text-muted-foreground mb-2">Brands</p>
-                            <div className="flex flex-wrap gap-2">
-                                {data.brands3w.map((brand) => (
-                                    <span key={brand} className="px-3 py-1 bg-green-500/10 text-green-700 dark:text-green-400 text-sm rounded-full border border-green-500/20">
-                                        {brand}
-                                    </span>
-                                ))}
-                            </div>
-                        </div>
-                    )}
-
-                    {data.services && data.services.length > 0 && (
-                        <div className="border-t border-border pt-4">
-                            <p className="text-sm text-muted-foreground mb-2">Services ({data.services.length})</p>
-                            <div className="flex flex-wrap gap-1.5">
-                                {data.services.map((s) => (
-                                    <span key={s} className="px-2 py-0.5 bg-muted text-muted-foreground text-xs rounded-full border border-border">
-                                        {s.replace(/_/g, ' ')}
-                                    </span>
-                                ))}
-                            </div>
-                        </div>
-                    )}
-
-                    <div className="border-t border-border pt-4">
-                        <p className="text-sm text-muted-foreground mb-1">Website Template</p>
-                        <p className="font-semibold capitalize text-foreground">{data.styleTemplate} Style</p>
-                    </div>
-
-                    {/* FREE Subdomain */}
-                    <div className="border-t border-border pt-4">
-                        <div className="rounded-xl p-4 border border-primary/20 bg-primary/5">
-                            <div className="flex items-start gap-3">
-                                <Globe className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                                <div className="flex-1">
-                                    <h4 className="font-semibold text-foreground mb-1">Your FREE Website Domain</h4>
-                                    <div className="rounded-lg px-3 py-2 border border-primary/30 bg-background font-mono text-sm text-primary break-all">
-                                        {dealerVehicleSiteUrl(data.slug || data.dealershipName?.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "") || "", 'three-wheeler')}
-                                    </div>
-                                    <div className="mt-3 flex items-center gap-2 text-xs text-primary">
-                                        <Shield className="w-4 h-4" />
-                                        <span>Free SSL certificate included · No setup required</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <OnboardingReviewSummary data={data} vehicleType="three-wheeler" />
 
                     {saveError && (
                         <div className="flex items-center gap-2.5 px-4 py-3 rounded-xl bg-destructive/10 border border-destructive/20 text-sm text-destructive">

@@ -1,10 +1,11 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Globe, Lock, CheckCircle, ArrowRight, Zap, HelpCircle, Copy, RefreshCw, XCircle, Clock } from 'lucide-react'
+import { Globe, Lock, CheckCircle, ArrowRight, Zap, HelpCircle, Copy, RefreshCw, XCircle, Clock, Mail } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card'
+import { Textarea } from '@/components/ui/textarea'
 import ConnectCustomDomainModal from '@/components/ConnectCustomDomainModal'
 import DomainMonitoringWidget from '@/components/DomainMonitoringWidget'
 import { useOnboardingStore } from '@/lib/store/onboarding-store'
@@ -21,37 +22,58 @@ interface Domain {
     created_at: string
 }
 
-function StatusBadge({ status }: { status: string }) {
-    switch (status) {
-        case 'active':
-            return (
-                <Badge variant="outline" className="gap-1.5 bg-green-500/10 text-green-600 border-emerald-500/20">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                    Active + SSL
-                </Badge>
-            )
-        case 'verifying':
-            return (
-                <Badge variant="outline" className="gap-1.5 bg-primary/10 text-primary border-primary/20">
-                    <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" />
-                    Verifying
-                </Badge>
-            )
-        case 'failed':
-            return (
-                <Badge variant="outline" className="gap-1.5 bg-destructive/10 text-destructive border-destructive/20">
-                    <span className="w-1.5 h-1.5 rounded-full bg-red-500" />
-                    Failed
-                </Badge>
-            )
-        default:
-            return (
-                <Badge variant="outline" className="gap-1.5 bg-amber-500/10 text-amber-600 border-amber-500/20">
-                    <span className="w-1.5 h-1.5 rounded-full bg-amber-500" />
-                    Pending DNS
-                </Badge>
-            )
+type ProStatus = {
+    active: boolean
+    pricePaise: number
+    plan: string
+    status: string
+}
+
+type MxRecord = {
+    exchange: string
+    priority: number
+}
+
+type MxResult = {
+    hasMx: boolean
+    records: MxRecord[]
+    message: string
+} | null
+
+function StatusBadge({ status, sslStatus }: { status: string; sslStatus: string }) {
+    if (status === 'failed' || sslStatus === 'failed') {
+        return (
+            <Badge variant="outline" className="gap-1.5 bg-destructive/10 text-destructive border-destructive/20">
+                <span className="w-1.5 h-1.5 rounded-full bg-red-500" />
+                Failed
+            </Badge>
+        )
     }
+
+    if (status === 'active' && sslStatus === 'active') {
+        return (
+            <Badge variant="outline" className="gap-1.5 bg-green-500/10 text-green-600 border-emerald-500/20">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                HTTPS active
+            </Badge>
+        )
+    }
+
+    if (status === 'active' && sslStatus === 'provisioning') {
+        return (
+            <Badge variant="outline" className="gap-1.5 bg-primary/10 text-primary border-primary/20">
+                <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" />
+                SSL provisioning
+            </Badge>
+        )
+    }
+
+    return (
+        <Badge variant="outline" className="gap-1.5 bg-amber-500/10 text-amber-600 border-amber-500/20">
+            <span className="w-1.5 h-1.5 rounded-full bg-amber-500" />
+            DNS pending
+        </Badge>
+    )
 }
 
 export default function DomainSettingsPage() {
@@ -60,16 +82,24 @@ export default function DomainSettingsPage() {
     const [verifying, setVerifying] = useState(false)
     const [copiedCname, setCopiedCname] = useState(false)
     const [showConnectModal, setShowConnectModal] = useState(false)
+    const [proStatus, setProStatus] = useState<ProStatus | null>(null)
+    const [mxChecking, setMxChecking] = useState(false)
+    const [mxResult, setMxResult] = useState<MxResult>(null)
+    const [emailSupportSending, setEmailSupportSending] = useState(false)
+    const [emailSupportMessage, setEmailSupportMessage] = useState('')
+    const [emailSupportNotes, setEmailSupportNotes] = useState('')
+    const [sslCheckingDomainId, setSslCheckingDomainId] = useState<string | null>(null)
+    const [sslCheckMessage, setSslCheckMessage] = useState('')
 
     const { dealerId } = useOnboardingStore()
 
     useEffect(() => {
-        if (dealerId) fetchDomains()
+        fetchDomains()
+        fetchProStatus()
         return;
     }, [dealerId])
 
     async function fetchDomains() {
-        if (!dealerId) return
         try {
             const response = await fetch('/api/domains')
             const data = await response.json()
@@ -80,6 +110,18 @@ export default function DomainSettingsPage() {
             console.error('Error fetching domains:', error)
         } finally {
             setLoading(false)
+        }
+    }
+
+    async function fetchProStatus() {
+        try {
+            const response = await fetch('/api/domains/pro-status')
+            const data = await response.json()
+            if (data.success) {
+                setProStatus(data.pro)
+            }
+        } catch (error) {
+            console.error('Error fetching PRO status:', error)
         }
     }
 
@@ -112,10 +154,98 @@ export default function DomainSettingsPage() {
         setTimeout(() => setCopiedCname(false), 2000)
     }
 
+    async function handleCheckEmailRecords(domain: Domain) {
+        if (!dealerId) return
+        setMxChecking(true)
+        setEmailSupportMessage('')
+        try {
+            const response = await fetch('/api/domains/check-email-records', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ domainId: domain.id, domain: domain.domain, dealerId }),
+            })
+            const data = await response.json()
+            if (data.success) {
+                setMxResult({
+                    hasMx: data.hasMx,
+                    records: data.records ?? [],
+                    message: data.message,
+                })
+            } else {
+                setEmailSupportMessage(data.error || 'Could not check email records.')
+            }
+        } catch {
+            setEmailSupportMessage('Could not check email records.')
+        } finally {
+            setMxChecking(false)
+        }
+    }
+
+    async function handleRequestEmailSupport(domain: Domain) {
+        if (!dealerId) return
+        setEmailSupportSending(true)
+        setEmailSupportMessage('')
+        try {
+            const response = await fetch('/api/domains/email-support', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    domainId: domain.id,
+                    domain: domain.domain,
+                    dealerId,
+                    notes: emailSupportNotes,
+                }),
+            })
+            const data = await response.json()
+            if (data.success) {
+                setEmailSupportMessage(data.message)
+                setMxResult({
+                    hasMx: data.mxStatus === 'found',
+                    records: data.mxRecords ?? [],
+                    message: data.mxStatus === 'found'
+                        ? 'MX records found. Our team will help you preserve them.'
+                        : 'No MX records found. Our team will help you set them up.',
+                })
+            } else {
+                setEmailSupportMessage(data.error || 'Could not send support request.')
+            }
+        } catch {
+            setEmailSupportMessage('Could not send support request.')
+        } finally {
+            setEmailSupportSending(false)
+        }
+    }
+
+    async function handleCheckSSL(domain: Domain) {
+        if (!dealerId) return
+        setSslCheckingDomainId(domain.id)
+        setSslCheckMessage('')
+        try {
+            const response = await fetch('/api/domains/check-ssl', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ domainId: domain.id, domain: domain.domain, dealerId }),
+            })
+            const data = await response.json()
+            if (data.success) {
+                setSslCheckMessage(data.message)
+                await fetchDomains()
+            } else {
+                setSslCheckMessage(data.error || 'Could not check SSL status.')
+            }
+        } catch {
+            setSslCheckMessage('Could not check SSL status.')
+        } finally {
+            setSslCheckingDomainId(null)
+        }
+    }
+
     const primaryDomain = domains.find(d => d.is_primary)
     const customDomains = domains.filter(d => d.type === 'custom' || d.type === 'managed')
     const hasCustomDomain = customDomains.length > 0
     const pendingCustomDomain = customDomains.find(d => d.status === 'pending' || d.status === 'verifying')
+    const emailSupportDomain = customDomains[0] ?? null
+    const proPrice = proStatus ? `₹${(proStatus.pricePaise / 100).toLocaleString('en-IN')}/month` : '₹499/month'
 
     return (
         <div className="space-y-6 animate-fade-in">
@@ -124,7 +254,11 @@ export default function DomainSettingsPage() {
                 title="Domain manager"
                 description="Manage your free subdomain, custom domain, DNS verification, SSL status, and hosting health."
                 actions={
-                    <Button onClick={() => setShowConnectModal(true)} className="h-11 rounded-xl gap-2 bg-blue-600 hover:bg-blue-700">
+                    <Button
+                        onClick={() => setShowConnectModal(true)}
+                        disabled={!dealerId}
+                        className="h-11 rounded-xl gap-2 bg-blue-600 hover:bg-blue-700"
+                    >
                         <Globe className="h-4 w-4" />
                         Connect Domain
                     </Button>
@@ -168,7 +302,13 @@ export default function DomainSettingsPage() {
                             <div className="flex items-center gap-2">
                                 <Lock className="w-4 h-4 text-green-500" />
                                 <span className="text-muted-foreground">
-                                    SSL: <strong className="text-green-500">Secure (HTTPS)</strong>
+                                    SSL: <strong className={primaryDomain.ssl_status === 'active' ? 'text-green-500' : 'text-amber-500'}>
+                                        {primaryDomain.ssl_status === 'active'
+                                            ? 'HTTPS active'
+                                            : primaryDomain.ssl_status === 'provisioning'
+                                                ? 'SSL provisioning'
+                                                : 'Pending'}
+                                    </strong>
                                 </span>
                             </div>
                             <div className="flex items-center gap-2">
@@ -208,15 +348,37 @@ export default function DomainSettingsPage() {
                         {customDomains.map((d) => (
                             <div
                                 key={d.id}
-                                className="flex items-center justify-between p-4 rounded-xl border border-border bg-muted/30"
+                                className="flex flex-col gap-3 p-4 rounded-xl border border-border bg-muted/30 sm:flex-row sm:items-center sm:justify-between"
                             >
                                 <div>
                                     <p className="font-mono font-semibold">{d.domain}</p>
-                                    <p className="text-xs text-muted-foreground capitalize mt-0.5">{d.type} domain</p>
+                                    <p className="text-xs text-muted-foreground capitalize mt-0.5">
+                                        {d.type} domain · SSL {d.ssl_status}
+                                    </p>
                                 </div>
-                                <StatusBadge status={d.status} />
+                                <div className="flex flex-wrap items-center gap-2">
+                                    <StatusBadge status={d.status} sslStatus={d.ssl_status} />
+                                    <Button
+                                        type="button"
+                                        variant="outline"
+                                        size="sm"
+                                        onClick={() => handleCheckSSL(d)}
+                                        disabled={sslCheckingDomainId === d.id || !dealerId}
+                                        className="gap-2"
+                                    >
+                                        {sslCheckingDomainId === d.id ? (
+                                            <RefreshCw className="w-3.5 h-3.5 animate-spin" />
+                                        ) : (
+                                            <Lock className="w-3.5 h-3.5" />
+                                        )}
+                                        Check SSL
+                                    </Button>
+                                </div>
                             </div>
                         ))}
+                        {sslCheckMessage && (
+                            <p className="text-sm text-muted-foreground">{sslCheckMessage}</p>
+                        )}
                     </CardContent>
                 </Card>
             )}
@@ -341,6 +503,86 @@ export default function DomainSettingsPage() {
                 </Card>
             )}
 
+            {!loading && emailSupportDomain && (
+                <Card variant="glass" className="rounded-2xl border-border/70 bg-card/90 shadow-sm dark:bg-card/80">
+                    <CardHeader>
+                        <CardTitle className="flex items-center gap-2">
+                            <Mail className="w-5 h-5 text-primary" />
+                            Professional Email Setup
+                        </CardTitle>
+                        <CardDescription>
+                            Check existing MX records before changing DNS, then request help if you want us to preserve or set up email.
+                        </CardDescription>
+                    </CardHeader>
+                    <CardContent className="space-y-4">
+                        <div className="rounded-xl border border-amber-500/20 bg-amber-500/10 p-4 text-sm text-muted-foreground">
+                            Keep existing MX records if you already use Google Workspace, Zoho, Microsoft 365, or another mail provider.
+                            Website DNS uses A/CNAME records; email usually depends on MX records.
+                        </div>
+
+                        {mxResult && (
+                            <div className={`rounded-xl border p-4 text-sm ${mxResult.hasMx
+                                ? 'border-emerald-500/20 bg-emerald-500/10 text-emerald-700 dark:text-emerald-300'
+                                : 'border-amber-500/20 bg-amber-500/10 text-amber-700 dark:text-amber-300'
+                                }`}>
+                                <p className="font-semibold">{mxResult.message}</p>
+                                {mxResult.records.length > 0 && (
+                                    <ul className="mt-2 space-y-1 font-mono text-xs">
+                                        {mxResult.records.map((record) => (
+                                            <li key={`${record.exchange}-${record.priority}`}>
+                                                {record.exchange} · priority {record.priority}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                )}
+                            </div>
+                        )}
+
+                        <Textarea
+                            value={emailSupportNotes}
+                            onChange={(event) => setEmailSupportNotes(event.target.value)}
+                            maxLength={1000}
+                            rows={3}
+                            placeholder="Optional notes, current email provider, or what help you need"
+                        />
+
+                        {emailSupportMessage && (
+                            <p className="text-sm text-muted-foreground">{emailSupportMessage}</p>
+                        )}
+
+                        <div className="flex flex-col gap-3 sm:flex-row">
+                            <Button
+                                type="button"
+                                variant="outline"
+                                onClick={() => handleCheckEmailRecords(emailSupportDomain)}
+                                disabled={mxChecking || !dealerId}
+                                className="gap-2"
+                            >
+                                {mxChecking ? (
+                                    <RefreshCw className="w-4 h-4 animate-spin" />
+                                ) : (
+                                    <Mail className="w-4 h-4" />
+                                )}
+                                Check MX Records
+                            </Button>
+                            <Button
+                                type="button"
+                                onClick={() => handleRequestEmailSupport(emailSupportDomain)}
+                                disabled={emailSupportSending || !dealerId}
+                                className="gap-2 bg-primary hover:bg-primary/90"
+                            >
+                                {emailSupportSending ? (
+                                    <RefreshCw className="w-4 h-4 animate-spin" />
+                                ) : (
+                                    <HelpCircle className="w-4 h-4" />
+                                )}
+                                Request Email Support
+                            </Button>
+                        </div>
+                    </CardContent>
+                </Card>
+            )}
+
             {/* Connect Custom Domain CTA — shown when no custom domain exists yet */}
             {!loading && !hasCustomDomain && (
                 <Card className="rounded-2xl border-dashed border-2 border-border/80 bg-card/90 shadow-sm transition-colors hover:border-primary/50 dark:bg-card/80">
@@ -352,6 +594,7 @@ export default function DomainSettingsPage() {
                         </p>
                         <Button
                             onClick={() => setShowConnectModal(true)}
+                            disabled={!dealerId}
                             className="bg-primary hover:bg-primary/90"
                         >
                             Connect Domain
@@ -377,23 +620,29 @@ export default function DomainSettingsPage() {
                                     <Zap className="w-6 h-6 text-primary" />
                                 </div>
                                 <div>
-                                    <h3 className="text-xl font-bold">PRO</h3>
+                                    <div className="flex items-center gap-2">
+                                        <h3 className="text-xl font-bold">PRO</h3>
+                                        <Badge variant="outline" className={proStatus?.active ? 'border-emerald-500/30 bg-emerald-500/10 text-emerald-600' : 'border-amber-500/30 bg-amber-500/10 text-amber-600'}>
+                                            {proStatus?.active ? 'Active' : proStatus?.status === 'trialing' ? 'Payment pending' : 'Not active'}
+                                        </Badge>
+                                    </div>
                                     <p className="text-2xl font-bold text-blue-400">
-                                        PRO<span className="text-sm font-normal text-muted-foreground"> — Custom Domain</span>
+                                        {proPrice}<span className="text-sm font-normal text-muted-foreground"> — Custom Domain</span>
                                     </p>
                                 </div>
                             </div>
 
                             <p className="text-muted-foreground text-sm mb-4">
-                                Already have a domain? Connect it to your DealerSite Pro website.
+                                Pay for PRO, connect your own domain, then verify DNS and SSL from this dashboard.
                             </p>
 
                             <ul className="space-y-2.5 mb-6">
                                 {[
-                                    'Use your own domain (abcmotors.com)',
-                                    'Free SSL certificate',
+                                    'Use your existing domain (abcmotors.com)',
+                                    'Free SSL certificate with HTTPS status',
                                     'Keep your subdomain as backup',
-                                    'Easy DNS setup guide',
+                                    'Step-by-step DNS setup guide',
+                                    'Professional email setup support',
                                 ].map((item) => (
                                     <li key={item} className="flex items-start gap-2">
                                         <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
@@ -404,9 +653,10 @@ export default function DomainSettingsPage() {
 
                             <Button
                                 onClick={() => setShowConnectModal(true)}
+                                disabled={!dealerId}
                                 className="w-full gap-2 bg-primary hover:bg-primary/90"
                             >
-                                Connect My Domain
+                                {proStatus?.active ? 'Connect My Domain' : 'Activate PRO & Connect Domain'}
                                 <ArrowRight className="w-4 h-4" />
                             </Button>
                         </CardContent>
@@ -425,15 +675,15 @@ export default function DomainSettingsPage() {
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm">
                         <div className="flex items-center gap-2">
                             <span className="w-2 h-2 rounded-full bg-amber-500" />
-                            <span className="text-muted-foreground">Pending DNS — awaiting CNAME</span>
+                            <span className="text-muted-foreground">DNS pending — awaiting A/CNAME</span>
                         </div>
                         <div className="flex items-center gap-2">
                             <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />
-                            <span className="text-muted-foreground">Verifying — DNS check in progress</span>
+                            <span className="text-muted-foreground">SSL provisioning — HTTPS is being issued</span>
                         </div>
                         <div className="flex items-center gap-2">
                             <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                            <span className="text-muted-foreground">Active + SSL — fully working</span>
+                            <span className="text-muted-foreground">HTTPS active — fully working</span>
                         </div>
                         <div className="flex items-center gap-2">
                             <XCircle className="w-3.5 h-3.5 text-destructive" />
@@ -478,8 +728,11 @@ export default function DomainSettingsPage() {
             <ConnectCustomDomainModal
                 isOpen={showConnectModal}
                 onClose={() => setShowConnectModal(false)}
-                dealerId={dealerId!}
-                onSuccess={fetchDomains}
+                dealerId={dealerId ?? ''}
+                onSuccess={() => {
+                    fetchDomains()
+                    fetchProStatus()
+                }}
             />
         </div>
     )

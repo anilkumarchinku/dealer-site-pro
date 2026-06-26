@@ -102,11 +102,15 @@ export async function POST(request: NextRequest) {
                     .select('domain_id')
                     .single()
 
-                // Also mark the domain as active
+                // Payment activates PRO. DNS verification still controls domain live status.
                 if (activatedSub?.domain_id) {
                     await supabase
                         .from('dealer_domains')
-                        .update({ status: 'active' })
+                        .update({
+                            status: 'pending',
+                            ssl_status: 'pending',
+                            last_checked_at: new Date().toISOString(),
+                        })
                         .eq('id', activatedSub.domain_id)
                 }
                 logger.log('[Razorpay Webhook] Subscription activated:', sub.id)

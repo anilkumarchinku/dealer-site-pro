@@ -48,6 +48,45 @@ function createConnectSupabaseMock() {
                 update: vi.fn(() => builder),
                 select: vi.fn(() => builder),
                 eq: vi.fn(() => builder),
+                in: vi.fn(() => builder),
+                order: vi.fn(() => builder),
+                limit: vi.fn(() => builder),
+                maybeSingle: vi.fn(async () => {
+                    if (table === 'dealer_domains') {
+                        return {
+                            data: {
+                                id: 'domain_1',
+                                dealer_id: 'dealer_1',
+                                custom_domain: 'dealer.example.com',
+                                domain_type: 'custom',
+                                status: 'pending',
+                                ssl_status: 'pending',
+                                is_primary: false,
+                                dns_verified: false,
+                                site_slug: null,
+                                created_at: '2026-06-24T00:00:00.000Z',
+                                updated_at: '2026-06-24T00:00:00.000Z',
+                            },
+                            error: null,
+                        }
+                    }
+                    if (table === 'domain_subscriptions') {
+                        return {
+                            data: {
+                                id: 'sub_1',
+                                dealer_id: 'dealer_1',
+                                domain_id: 'domain_1',
+                                plan: 'pro',
+                                tier: 'pro',
+                                status: 'active',
+                                current_period_end: '2026-07-24T00:00:00.000Z',
+                                razorpay_subscription_id: 'sub_rzp_1',
+                            },
+                            error: null,
+                        }
+                    }
+                    return { data: null, error: null }
+                }),
                 single: vi.fn(async () => {
                     if (table === 'dealer_domains' && builder.operation === 'insert') {
                         return {
@@ -120,7 +159,7 @@ describe('domain provider failure behavior', () => {
         vi.mocked(isValidDomain).mockReturnValue({ valid: true })
     })
 
-    it('keeps connect-custom successful when Vercel registration fails after DB save', async () => {
+    it('keeps connect-custom successful when Vercel registration fails after PRO is active', async () => {
         const supabase = createConnectSupabaseMock()
         vi.mocked(requireAuth).mockResolvedValue({
             user: { id: 'user_1' },
@@ -139,9 +178,7 @@ describe('domain provider failure behavior', () => {
             vercelRegistered: false,
         })
         expect(response.status).toBe(200)
-        expect(supabase.inserts[0]).toMatchObject({
-            custom_domain: 'dealer.example.com',
-        })
+        expect(supabase.inserts).toEqual([])
         expect(registerDomainOnMainProject).toHaveBeenCalledWith('dealer.example.com')
         expect(addDomainToProject).not.toHaveBeenCalled()
         expect(recordDomainDeploymentOperation).toHaveBeenCalledWith(expect.objectContaining({

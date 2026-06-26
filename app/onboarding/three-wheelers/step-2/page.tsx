@@ -2,6 +2,7 @@
 import { useMemo, useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useOnboardingStore } from "@/lib/store/onboarding-store";
+import { CyeproApiBenefits } from "@/components/onboarding/CyeproApiBenefits";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ArrowLeft, Check, Eye, EyeOff } from "lucide-react";
@@ -13,7 +14,6 @@ const SERVICES: { id: Service; icon: string; title: string; description: string 
     { id: "new_car_sales",        icon: "🛺", title: "New 3W Sales",            description: "Sell new passenger autos and cargo vehicles" },
     { id: "used_car_sales",       icon: "🔄", title: "Used 3W Sales",           description: "Sell pre-owned three-wheelers"               },
     { id: "service_maintenance",  icon: "🔧", title: "Service & Maintenance",   description: "Auto repairs, engine and upkeep"             },
-    { id: "parts_accessories",    icon: "⚙️", title: "Parts & Accessories",     description: "Genuine spare parts and body accessories"   },
     { id: "financing",            icon: "💰", title: "Financing & EMI",         description: "Easy loan and EMI options for buyers"        },
     { id: "insurance",            icon: "📋", title: "Insurance Services",      description: "Commercial vehicle insurance assistance"     },
     { id: "trade_in",             icon: "🔄", title: "Exchange / Trade-In",     description: "Accept old vehicles as part-exchange"        },
@@ -34,7 +34,7 @@ export default function ThreeWheelerStep2Page() {
     const defaultServices = useMemo<Service[]>(() => {
         if (isBoth)  return ["new_car_sales", "used_car_sales", "service_maintenance", "financing", "trade_in"];
         if (isUsed)  return ["used_car_sales", "service_maintenance", "financing", "trade_in", "insurance"];
-        return ["new_car_sales", "service_maintenance", "parts_accessories", "financing", "fleet_sales"];
+        return ["new_car_sales", "service_maintenance", "financing", "fleet_sales"];
     }, [isBoth, isUsed]);
 
     const [selectedServices, setSelectedServices] = useState<Service[]>(
@@ -120,29 +120,34 @@ export default function ThreeWheelerStep2Page() {
                 {error && <p className="text-sm text-destructive">{error}</p>}
 
                 {/* ── Cyepro integration — same key for CRM leads and stock sync ── */}
-                <div className="border rounded-lg p-4 space-y-3 bg-muted/30">
-                    <div>
-                        <p className="text-sm font-semibold">Cyepro CRM & Inventory <span className="text-muted-foreground font-normal">(recommended)</span></p>
-                        <p className="text-xs text-muted-foreground mt-0.5">
-                            Paste your Cyepro API key so generated website leads land in your Cyepro CRM account.
-                            The same key can sync inventory where enabled.
-                        </p>
-                    </div>
-                    <div className="relative">
-                        <input
-                            type={showKey ? "text" : "password"}
-                            value={cyeproKey}
-                            onChange={e => setCyeproKey(e.target.value)}
-                            placeholder="Paste your Cyepro API key here"
-                            className="w-full px-3 py-2 pr-10 text-sm border rounded-md bg-background focus:outline-none focus:ring-1 focus:ring-ring"
-                        />
-                        <button
-                            type="button"
-                            onClick={() => setShowKey(s => !s)}
-                            className="absolute right-2 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
-                        >
-                            {showKey ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
-                        </button>
+                <div className="rounded-lg border bg-muted/30 p-4">
+                    <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_420px]">
+                        <div className="space-y-3">
+                            <div>
+                                <p className="text-sm font-semibold">Cyepro CRM & Inventory <span className="text-muted-foreground font-normal">(recommended)</span></p>
+                                <p className="mt-0.5 text-xs text-muted-foreground">
+                                    Paste your Cyepro API key so generated website leads land in your Cyepro CRM account.
+                                    The same key can sync inventory where enabled.
+                                </p>
+                            </div>
+                            <div className="relative">
+                                <input
+                                    type={showKey ? "text" : "password"}
+                                    value={cyeproKey}
+                                    onChange={e => setCyeproKey(e.target.value)}
+                                    placeholder="Paste your Cyepro API key here"
+                                    className="w-full rounded-md border bg-background px-3 py-2 pr-10 text-sm focus:outline-none focus:ring-1 focus:ring-ring"
+                                />
+                                <button
+                                    type="button"
+                                    onClick={() => setShowKey(s => !s)}
+                                    className="absolute right-2 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
+                                >
+                                    {showKey ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+                                </button>
+                            </div>
+                        </div>
+                        <CyeproApiBenefits />
                     </div>
                 </div>
             </CardContent>

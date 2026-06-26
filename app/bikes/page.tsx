@@ -79,7 +79,7 @@ const ELECTRIC_BRANDS = [
     'Okinawa', 'Tork Motors', 'Ultraviolette', 'Simple Energy',
 ];
 
-const ALL_BRANDS = [...TRADITIONAL_BRANDS, ...ELECTRIC_BRANDS];
+const ALL_BRANDS = Array.from(new Set([...TRADITIONAL_BRANDS, ...ELECTRIC_BRANDS]));
 
 const TYPE_OPTIONS = [
     { value: 'bike', label: 'Bike' },

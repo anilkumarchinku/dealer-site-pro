@@ -208,9 +208,9 @@ describe('Payment API Integration', () => {
             // Expected: 200 success, subscription status updated to 'active'
         })
 
-        it('should activate domain when subscription is verified', async () => {
+        it('should unlock domain setup when subscription is verified', async () => {
             // Mock test
-            // Expected: domain status updated to 'active'
+            // Expected: subscription active; domain remains pending until DNS verification
         })
 
         it('should log payment verification to audit trail', async () => {

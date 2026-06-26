@@ -141,6 +141,7 @@ export interface OnboardingData {
 
     // Inventory source for used-car dealers
     inventorySource?: InventorySource;
+    inventoryEntryMode?: 'manual' | 'upload' | 'cyepro';
     cyeproApiKey?:    string;
 
     // Vehicles uploaded via CSV bulk upload (saved to DB in step-6)

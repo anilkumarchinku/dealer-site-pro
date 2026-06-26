@@ -612,6 +612,13 @@ body {
     transform: none;
 }
 
+@media (max-width: 640px) {
+    .reveal-on-scroll.reveal-left,
+    .reveal-on-scroll.reveal-right {
+        transform: translateY(24px);
+    }
+}
+
 /* Image fade-in: paired with FadeInImage, which adds `.is-loaded` once decoded.
    Uses an animation (not a transition) so it never overrides a co-located
    `transition-transform` (e.g. hover-zoom) on the same element. */
@@ -753,6 +760,271 @@ body {
 
 .stat-card:hover::before {
     opacity: 1;
+}
+
+/* ============================================
+   Landing System Skin
+   Applies the design-system landing palette to
+   onboarding and dashboard product surfaces.
+   ============================================ */
+.dsp-app-skin {
+    color-scheme: light;
+    --dsp-ink-950: #07090C;
+    --dsp-ink-900: #0B0E12;
+    --dsp-ink-800: #171717;
+    --dsp-text: #111111;
+    --dsp-muted: #6F6A61;
+    --dsp-faint: #A39E94;
+    --dsp-page: #F5F1EA;
+    --dsp-paper: #FBF8F1;
+    --dsp-card: #FFFDF7;
+    --dsp-line: #E7E0D7;
+    --dsp-line-strong: #C7C1B6;
+    --dsp-accent: #A8793A;
+    --dsp-accent-soft: #C79A5B;
+    --dsp-success: #2E8B5A;
+    --dsp-danger: #C7453E;
+
+    --background: 35 36% 94%;
+    --foreground: 0 0% 7%;
+    --card: 45 100% 98%;
+    --card-foreground: 0 0% 7%;
+    --muted: 39 56% 96%;
+    --muted-foreground: 36 7% 41%;
+    --border: 34 29% 87%;
+    --input: 34 29% 87%;
+    --ring: 34 49% 44%;
+    --accent: 39 56% 96%;
+    --accent-foreground: 0 0% 7%;
+    --secondary: 39 56% 96%;
+    --secondary-foreground: 0 0% 7%;
+    --primary: 214 24% 6%;
+    --primary-foreground: 45 100% 98%;
+    --popover: 45 100% 98%;
+    --popover-foreground: 0 0% 7%;
+    --success: 146 50% 36%;
+    --destructive: 3 53% 51%;
+    --info: 34 49% 44%;
+    --bg-gradient-end: 35 36% 94%;
+
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at 50% -16%, rgba(199, 154, 91, 0.18), transparent 34rem),
+        linear-gradient(180deg, var(--dsp-card) 0%, var(--dsp-page) 100%);
+    color: var(--dsp-text);
+}
+
+.dsp-onboarding-canvas {
+    background:
+        radial-gradient(circle at 85% 10%, rgba(199, 154, 91, 0.12), transparent 24rem),
+        linear-gradient(180deg, var(--dsp-card) 0%, var(--dsp-page) 100%);
+}
+
+.dsp-app-skin header,
+.dsp-app-skin footer {
+    border-color: var(--dsp-line) !important;
+}
+
+.dsp-app-skin .card-elevated,
+.dsp-app-skin .card-interactive,
+.dsp-app-skin .dashboard-card,
+.dsp-app-skin [class~="bg-card"],
+.dsp-app-skin [class~="bg-white"] {
+    border-color: var(--dsp-line) !important;
+}
+
+.dsp-app-skin .card-elevated,
+.dsp-app-skin .card-interactive,
+.dsp-app-skin [class~="shadow-sm"],
+.dsp-app-skin [class*="shadow-[0_14px"],
+.dsp-app-skin [class*="shadow-[0_18px"],
+.dsp-app-skin [class*="shadow-[0_20px"] {
+    box-shadow: 0 18px 55px rgba(11, 14, 18, 0.08) !important;
+}
+
+.dsp-app-skin input,
+.dsp-app-skin textarea,
+.dsp-app-skin select {
+    background-color: var(--dsp-card);
+    border-color: var(--dsp-line);
+    color: var(--dsp-text);
+}
+
+.dsp-app-skin input:focus,
+.dsp-app-skin input:focus-visible,
+.dsp-app-skin textarea:focus,
+.dsp-app-skin textarea:focus-visible,
+.dsp-app-skin select:focus,
+.dsp-app-skin select:focus-visible {
+    border-color: var(--dsp-accent);
+    box-shadow: 0 0 0 3px rgba(168, 121, 58, 0.16);
+}
+
+.dsp-app-skin [class~="text-[#155EEF]"],
+.dsp-app-skin [class~="text-blue-300"],
+.dsp-app-skin [class~="text-blue-400"],
+.dsp-app-skin [class~="text-blue-500"],
+.dsp-app-skin [class~="text-blue-600"],
+.dsp-app-skin [class~="text-blue-700"],
+.dsp-app-skin [class~="text-indigo-500"],
+.dsp-app-skin [class~="text-indigo-600"],
+.dsp-app-skin [class~="text-indigo-700"],
+.dsp-app-skin [class~="text-violet-500"],
+.dsp-app-skin [class~="text-violet-600"],
+.dsp-app-skin [class~="text-violet-700"] {
+    color: var(--dsp-accent) !important;
+}
+
+.dsp-app-skin [class~="text-[#071436]"],
+.dsp-app-skin [class~="text-[#35445C]"] {
+    color: var(--dsp-text) !important;
+}
+
+.dsp-app-skin [class~="text-[#62708A]"],
+.dsp-app-skin [class~="text-[#8A97AA]"] {
+    color: var(--dsp-muted) !important;
+}
+
+.dsp-app-skin [class~="bg-[#155EEF]"],
+.dsp-app-skin [class~="bg-[#071436]"],
+.dsp-app-skin [class~="bg-[#071A3D]"],
+.dsp-app-skin [class~="bg-blue-500"],
+.dsp-app-skin [class~="bg-blue-600"],
+.dsp-app-skin [class~="bg-indigo-500"],
+.dsp-app-skin [class~="bg-indigo-600"],
+.dsp-app-skin [class~="bg-violet-500"],
+.dsp-app-skin [class~="bg-violet-600"] {
+    background-color: var(--dsp-ink-900) !important;
+}
+
+.dsp-app-skin [class~="bg-[#F5F8FF]"],
+.dsp-app-skin [class~="bg-[#EEF4FF]"],
+.dsp-app-skin [class~="bg-[#F7F9FC]"],
+.dsp-app-skin [class~="bg-blue-50"],
+.dsp-app-skin [class~="bg-indigo-50"],
+.dsp-app-skin [class~="bg-violet-50"],
+.dsp-app-skin [class~="bg-blue-500/5"],
+.dsp-app-skin [class~="bg-blue-500/10"],
+.dsp-app-skin [class~="bg-blue-500/15"],
+.dsp-app-skin [class~="bg-indigo-500/5"],
+.dsp-app-skin [class~="bg-indigo-500/10"],
+.dsp-app-skin [class~="bg-violet-500/5"],
+.dsp-app-skin [class~="bg-violet-500/10"] {
+    background-color: var(--dsp-paper) !important;
+}
+
+.dsp-app-skin [class~="border-[#155EEF]"],
+.dsp-app-skin [class~="border-[#CFE0FF]"],
+.dsp-app-skin [class~="border-blue-200"],
+.dsp-app-skin [class~="border-blue-300"],
+.dsp-app-skin [class~="border-blue-400"],
+.dsp-app-skin [class~="border-blue-500"],
+.dsp-app-skin [class~="border-indigo-200"],
+.dsp-app-skin [class~="border-indigo-500"],
+.dsp-app-skin [class~="border-violet-200"],
+.dsp-app-skin [class~="border-violet-500"] {
+    border-color: var(--dsp-accent-soft) !important;
+}
+
+.dsp-app-skin [class~="border-[#D8E0EA]"],
+.dsp-app-skin [class~="border-[#CAD5E2]"],
+.dsp-app-skin [class~="border-[#E3E9F2]"] {
+    border-color: var(--dsp-line) !important;
+}
+
+.dsp-app-skin [class~="hover:border-[#155EEF]"]:hover,
+.dsp-app-skin [class~="hover:text-[#155EEF]"]:hover,
+.dsp-app-skin [class~="hover:text-blue-700"]:hover {
+    border-color: var(--dsp-accent) !important;
+    color: var(--dsp-accent) !important;
+}
+
+.dsp-app-skin [class~="hover:bg-[#155EEF]"]:hover,
+.dsp-app-skin [class~="hover:bg-[#0F4FD3]"]:hover,
+.dsp-app-skin [class~="hover:bg-blue-700"]:hover {
+    background-color: var(--dsp-ink-800) !important;
+}
+
+.dsp-app-skin [class~="focus:ring-[#155EEF]"]:focus,
+.dsp-app-skin [class~="focus-visible:ring-[#155EEF]"]:focus-visible,
+.dsp-app-skin [class~="focus-visible:ring-blue-500"]:focus-visible,
+.dsp-app-skin [class~="ring-blue-500/30"] {
+    --tw-ring-color: rgba(168, 121, 58, 0.24) !important;
+}
+
+.dsp-app-skin .gradient-primary,
+.dsp-app-skin .gradient-blue-indigo,
+.dsp-app-skin .text-gradient-primary,
+.dsp-app-skin [class~="from-blue-600"],
+.dsp-app-skin [class~="from-blue-500"],
+.dsp-app-skin [class~="from-indigo-600"],
+.dsp-app-skin [class~="from-violet-500"] {
+    --tw-gradient-from: var(--dsp-ink-900) var(--tw-gradient-from-position) !important;
+    --tw-gradient-to: rgba(11, 14, 18, 0) var(--tw-gradient-to-position) !important;
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+}
+
+.dsp-app-skin [class~="to-indigo-600"],
+.dsp-app-skin [class~="to-blue-400"],
+.dsp-app-skin [class~="to-blue-500"],
+.dsp-app-skin [class~="to-violet-500"],
+.dsp-app-skin [class~="to-indigo-500"] {
+    --tw-gradient-to: var(--dsp-accent) var(--tw-gradient-to-position) !important;
+}
+
+.dsp-app-skin [class~="from-slate-900"],
+.dsp-app-skin [class~="to-slate-800"],
+.dsp-app-skin [class~="to-gray-900"] {
+    --tw-gradient-from: var(--dsp-ink-900) var(--tw-gradient-from-position) !important;
+    --tw-gradient-to: var(--dsp-ink-800) var(--tw-gradient-to-position) !important;
+}
+
+.dsp-onboarding-skin .glass {
+    background: rgba(255, 253, 247, 0.86);
+    border-color: rgba(231, 224, 215, 0.85);
+}
+
+.dsp-onboarding-skin .rounded-2xl {
+    border-radius: 0.75rem;
+}
+
+.dsp-dashboard-skin {
+    background:
+        radial-gradient(circle at 72% -14%, rgba(199, 154, 91, 0.14), transparent 34rem),
+        linear-gradient(180deg, var(--dsp-card) 0%, var(--dsp-page) 100%);
+}
+
+.dsp-dashboard-skin aside {
+    background:
+        radial-gradient(circle at 50% 0%, rgba(199, 154, 91, 0.14), transparent 14rem),
+        linear-gradient(180deg, var(--dsp-ink-900) 0%, var(--dsp-ink-950) 100%) !important;
+}
+
+.dsp-dashboard-skin aside [class~="bg-white/10"] {
+    background-color: rgba(255, 253, 247, 0.08) !important;
+}
+
+.dsp-dashboard-skin aside [class~="text-slate-300"],
+.dsp-dashboard-skin aside [class~="text-slate-400"] {
+    color: rgba(255, 253, 247, 0.68) !important;
+}
+
+.dsp-dashboard-skin aside [class~="text-slate-500"] {
+    color: rgba(199, 154, 91, 0.72) !important;
+}
+
+.dsp-dashboard-skin header {
+    background: rgba(255, 253, 247, 0.88) !important;
+    border-color: rgba(231, 224, 215, 0.9) !important;
+}
+
+.dsp-dashboard-skin main {
+    background:
+        linear-gradient(180deg, rgba(255, 253, 247, 0.58) 0%, rgba(245, 241, 234, 0.74) 100%);
+}
+
+.dsp-dashboard-skin table thead {
+    background-color: var(--dsp-paper);
 }
 
 /* ============================================

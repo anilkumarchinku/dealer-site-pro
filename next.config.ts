@@ -83,9 +83,11 @@ const nextConfig: NextConfig = {
     },
     // Security headers
     async headers() {
-        const scriptSrc = process.env.NODE_ENV === 'production'
-            ? "script-src 'self' 'unsafe-inline' https://checkout.razorpay.com"
-            : "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://checkout.razorpay.com"
+        const scriptSrc = [
+            "script-src 'self' 'unsafe-inline' 'unsafe-eval'",
+            'https://checkout.razorpay.com',
+            'https://unpkg.com',
+        ].join(' ')
         const securityHeaders = [
             { key: 'X-Content-Type-Options', value: 'nosniff' },
             { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
@@ -100,14 +102,14 @@ const nextConfig: NextConfig = {
                 key: 'Content-Security-Policy',
                 value: [
                     "default-src 'self'",
-                    // unsafe-eval removed — not needed in production Next.js builds.
-                    // Razorpay checkout runs in an iframe (frame-src below), not inline.
+                    // The design-system landing handoff loads React/Babel from unpkg
+                    // until it is ported into compiled Next.js components.
                     scriptSrc,
-                    "style-src 'self' 'unsafe-inline'",
+                    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
                     "img-src 'self' data: blob: https://*.supabase.co https://*.cyepro.com https://*.amazonaws.com https://lh3.googleusercontent.com https://images.unsplash.com https://storage.googleapis.com https://maps.googleapis.com https://*.cardekho.com https://*.aeplcdn.com https://*.bikedekho.com https://*.gaadi.com https://www.v3cars.com https://www.hyundai.com https://*.hyundai.com",
-                    "font-src 'self' data:",
+                    "font-src 'self' data: https://fonts.gstatic.com",
                     "connect-src 'self' https://*.supabase.co https://*.cyepro.com https://checkout.razorpay.com wss://*.supabase.co",
-                    "frame-src 'self' https://api.razorpay.com https://checkout.razorpay.com",
+                    "frame-src 'self' https://api.razorpay.com https://checkout.razorpay.com https://www.google.com https://maps.google.com",
                     "media-src 'self' https://*.supabase.co",
                 ].join('; '),
             },

@@ -116,6 +116,16 @@ function buildBrandInfo(name: string, cars: Car[]): BrandInfo {
     };
 }
 
+function staticBrandMatches(
+    vehicleMake: string,
+    requestedBrand: string,
+    type: Extract<BrandDirectoryType, '2w' | '3w'>
+): boolean {
+    const vehicleKey = brandNameToId(vehicleMake, type);
+    const requestedKey = brandNameToId(requestedBrand, type);
+    return vehicleKey === requestedKey;
+}
+
 function twoWheelerBodyType(vehicle: ProcessedTwoWheeler): string {
     if (vehicle.type === 'electric') return 'Electric';
     if (vehicle.type === 'scooter') return 'Scooter';
@@ -253,7 +263,7 @@ async function loadBrandPageData(brand: string, type: BrandDirectoryType): Promi
     if (type === '2w') {
         const vehicles = pickLowestPricedByModel(
             loadTwoWheelerCatalogVehicles().filter(
-                (vehicle) => vehicle.make.toLowerCase() === brand.toLowerCase()
+                (vehicle) => staticBrandMatches(vehicle.make, brand, '2w')
             )
         );
         const cars = vehicles.map(twoWheelerToCar);
@@ -267,7 +277,7 @@ async function loadBrandPageData(brand: string, type: BrandDirectoryType): Promi
     if (type === '3w') {
         const vehicles = pickLowestPricedByModel(
             loadThreeWheelerCatalogVehicles().filter(
-                (vehicle) => vehicle.make.toLowerCase() === brand.toLowerCase()
+                (vehicle) => staticBrandMatches(vehicle.make, brand, '3w')
             )
         );
         const cars = vehicles.map(threeWheelerToCar);

@@ -13,12 +13,20 @@ import type { Car } from '@/lib/types/car'
 import type { TwoWheelerVehicle } from '@/lib/types/two-wheeler'
 import type { Service } from '@/lib/types'
 import { dedupeByBrandModel, dedupeCaseInsensitiveStrings } from '@/lib/utils/listing-dedupe'
-import { brandLogoUrl as getBrandLogoUrl, firstVehicleHeroImage, resolveDealerHeroImage } from '@/lib/utils/site-assets'
+import { brandLogoUrl as getBrandLogoUrl, firstVehicleHeroImage, resolveDealerHeroImage, resolveDealerLogoImage } from '@/lib/utils/site-assets'
 import { brandToUrlSlug } from '@/lib/utils/domain'
 
 interface Props {
     params: Promise<{ slug: string }>
-    searchParams: Promise<{ brand?: string }>
+    searchParams: Promise<{ brand?: string; category?: string }>
+}
+
+const CATEGORY_FILTERS: Record<string, (vehicle: TwoWheelerVehicle) => boolean> = {
+    bike: vehicle => vehicle.type === 'bike',
+    bikes: vehicle => vehicle.type === 'bike',
+    scooter: vehicle => vehicle.type === 'scooter',
+    scooters: vehicle => vehicle.type === 'scooter',
+    electric: vehicle => vehicle.fuel_type === 'electric' || vehicle.type === 'electric',
 }
 
 function generate2WFeatures(v: TwoWheelerVehicle): string[] {
@@ -123,7 +131,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function NewTwoWheelersPage({ params, searchParams }: Props) {
     const { slug } = await params
-    const { brand: brandParam } = await searchParams
+    const { brand: brandParam, category: categoryParam } = await searchParams
 
     const dealer = await fetchDealerBySlug(slug)
     if (!dealer) notFound()
@@ -197,10 +205,17 @@ export default async function NewTwoWheelersPage({ params, searchParams }: Props
     const dbKeys = new Set(filteredDbVehicles.map(v => `${v.brand}__${v.model}`))
     const catalogExtra = catalogVehicles.filter(v => !dbKeys.has(`${v.brand}__${v.model}`))
     const vehicles = dedupeByBrandModel([...filteredDbVehicles, ...catalogExtra])
+    const normalizedCategory = categoryParam?.toLowerCase()
+    const categoryFilter = normalizedCategory ? CATEGORY_FILTERS[normalizedCategory] : undefined
+    const visibleVehicles = categoryFilter ? vehicles.filter(categoryFilter) : vehicles
 
-    const cars = twoWheelersToCars(vehicles)
+    const cars = twoWheelersToCars(visibleVehicles)
 
-    const logoUrl = dealer.logo_url ?? (primaryBrand ? getBrandLogoUrl(primaryBrand, '2w') ?? undefined : undefined)
+    const logoUrl = resolveDealerLogoImage({
+        uploadedLogo: dealer.logo_url,
+        fallbackLogo: primaryBrand ? getBrandLogoUrl(primaryBrand, '2w') : undefined,
+        preferFallbackLogo: true,
+    })
     const heroImageUrl = resolveDealerHeroImage({
         uploadedHeroImage: dealer.hero_image_url,
         inventoryHeroImage: firstVehicleHeroImage(cars),
@@ -209,6 +224,7 @@ export default async function NewTwoWheelersPage({ params, searchParams }: Props
     const contactInfo = {
         phone: dealer.phone,
         email: dealer.email ?? '',
+        city: dealer.location,
         address: dealer.full_address ?? dealer.location,
     }
 

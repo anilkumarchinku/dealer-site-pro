@@ -5,7 +5,7 @@ import { getThreeWheelerCatalog, THREE_WHEELER_BRANDS } from "@/lib/data/three-w
 import { getThreeWheelerCatalogFromDB } from "@/lib/data/catalog-db"
 import { getLocal3WImage } from "@/lib/data/cars"
 import { fetchAllCyeproInventoryAsCars } from "@/lib/services/cyepro-service"
-import { notFound } from "next/navigation"
+import { notFound, redirect } from "next/navigation"
 import { createClient } from "@supabase/supabase-js"
 import { ModernTemplate } from "@/components/templates/ModernTemplate"
 import { LuxuryTemplate } from "@/components/templates/LuxuryTemplate"
@@ -15,7 +15,7 @@ import type { Car } from "@/lib/types/car"
 import type { ThreeWheelerVehicle, ThreeWheelerUsedVehicle } from "@/lib/types/three-wheeler"
 import type { Service } from "@/lib/types"
 import { dedupeByBrandModel, dedupeCaseInsensitiveStrings } from "@/lib/utils/listing-dedupe"
-import { brandLogoUrl as getBrandLogoUrl, firstVehicleHeroImage, resolveDealerHeroImage } from "@/lib/utils/site-assets"
+import { brandLogoUrl as getBrandLogoUrl, firstVehicleHeroImage, resolveDealerHeroImage, resolveDealerLogoImage } from "@/lib/utils/site-assets"
 import { brandToUrlSlug, dealerSiteHref } from "@/lib/utils/domain"
 
 interface Props {
@@ -390,30 +390,33 @@ export default async function ThreeWheelersPage({ params }: Props) {
     )
   }
 
-  const cars = isUsedSite ? usedCars : selectedNew ? newCars : usedCars
+  const cars = isUsedSite
+    ? (usedCars.length > 0 ? usedCars : newCars)
+    : selectedNew
+      ? newCars
+      : (usedCars.length > 0 ? usedCars : newCars)
 
   // ── No inventory yet ──────────────────────────────────────────────────────
   if (cars.length === 0) {
-    return (
-      <NoStockPage
-        dealerName={dealer.dealership_name}
-        phone={dealer.phone}
-        email={dealer.email ?? ''}
-      />
-    )
+    redirect(`/sites/${dealer.slug}/three-wheelers/new`)
   }
 
-  const logoUrl = dealer.logo_url ?? (primaryBrand ? getBrandLogoUrl(primaryBrand, '3w') ?? undefined : undefined)
+  const logoUrl = resolveDealerLogoImage({
+    uploadedLogo: dealer.logo_url,
+    fallbackLogo: primaryBrand ? getBrandLogoUrl(primaryBrand, '3w') : undefined,
+    preferFallbackLogo: true,
+  })
   const heroImageUrl = resolveDealerHeroImage({
     uploadedHeroImage: dealer.hero_image_url,
     inventoryHeroImage: firstVehicleHeroImage(cars),
   })
 
-  const contactInfo = {
-    phone: dealer.phone,
-    email: dealer.email ?? '',
-    address: dealer.full_address ?? dealer.location,
-  }
+    const contactInfo = {
+        phone: dealer.phone,
+        email: dealer.email ?? '',
+        city: dealer.location,
+        address: dealer.full_address ?? dealer.location,
+    }
 
   const heroDefaults: Record<string, { title: string; subtitle: string }> = {
     luxury:  { title: 'THE POWER OF THREE WHEELS',          subtitle: 'Premium three-wheelers for every commercial need' },

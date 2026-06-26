@@ -5,18 +5,17 @@ import { useRouter } from "next/navigation";
 import {
     ArrowLeft,
     ArrowRight,
-    Check,
     CheckCircle2,
     Eye,
     EyeOff,
     FileUp,
-    Minus,
     PlusCircle,
     Rocket,
     Zap,
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { CyeproApiBenefits } from "@/components/onboarding/CyeproApiBenefits";
 import { cn } from "@/lib/utils";
 import { useOnboardingStore } from "@/lib/store/onboarding-store";
 import type { InventorySource } from "@/lib/types";
@@ -52,8 +51,10 @@ export default function Step2InventoryPage() {
     const { data, updateData, setStep } = useOnboardingStore();
 
     const [mode, setMode] = useState<InventoryMode | null>(
+        data.inventoryEntryMode ? data.inventoryEntryMode :
         data.inventorySource === "cyepro" ? "cyepro" :
-        data.inventorySource === "own" ? "upload" :
+        data.inventorySource === "own" && data.uploadedVehicles?.length ? "upload" :
+        data.inventorySource === "own" ? "manual" :
         null
     );
     const [selected, setSelected] = useState<InventorySource | null>(data.inventorySource ?? null);
@@ -63,7 +64,14 @@ export default function Step2InventoryPage() {
 
     useEffect(() => { setStep(2); }, [setStep]);
 
-    const handleBack = () => router.push("/onboarding/step-2-used");
+    const handleBack = () => {
+        if (data.dealerCategory === "used" || data.dealerCategory === "both") {
+            router.push("/onboarding/step-2-used");
+            return;
+        }
+
+        router.push("/onboarding/step-1");
+    };
 
     const selectMode = (nextMode: InventoryMode) => {
         setMode(nextMode);
@@ -77,27 +85,27 @@ export default function Step2InventoryPage() {
                 setKeyError("Please enter your Cyepro API key to continue");
                 return;
             }
-            updateData({ inventorySource: "cyepro", cyeproApiKey: apiKey.trim() });
+            updateData({ inventorySource: "cyepro", inventoryEntryMode: "cyepro", cyeproApiKey: apiKey.trim() });
             setStep(3);
             router.push("/onboarding/step-3");
             return;
         }
 
         if (mode === "manual") {
-            updateData({ inventorySource: "own" });
+            updateData({ inventorySource: "own", inventoryEntryMode: "manual" });
             setStep(3);
             router.push("/onboarding/step-3");
             return;
         }
 
         if (mode === "upload" || selected === "own") {
-            updateData({ inventorySource: "own" });
+            updateData({ inventorySource: "own", inventoryEntryMode: "upload" });
             router.push("/onboarding/step-2-inventory/bulk-upload");
         }
     };
 
     const handleSkip = () => {
-        updateData({ inventorySource: undefined, cyeproApiKey: undefined });
+        updateData({ inventorySource: undefined, inventoryEntryMode: undefined, cyeproApiKey: undefined });
         setStep(3);
         router.push("/onboarding/step-3");
     };
@@ -156,78 +164,43 @@ export default function Step2InventoryPage() {
             </p>
 
             {mode === "cyepro" && (
-                <div className="rounded-lg border border-emerald-200 bg-emerald-50/40 p-5">
-                    <div className="flex flex-wrap items-center gap-2">
-                        <span className="rounded-full bg-emerald-100 px-2 py-1 text-[10px] font-black uppercase tracking-[0.12em] text-emerald-700">
-                            Recommended
-                        </span>
-                        <h3 className="text-sm font-black text-[#071436]">Why dealers choose Cyepro Sync</h3>
-                    </div>
-                    <p className="mt-1 text-xs font-medium leading-5 text-[#62708A]">
-                        How Cyepro Sync compares with adding and updating stock yourself.
-                    </p>
-
-                    <div className="mt-4 overflow-hidden rounded-md border border-[#E3E9F2] bg-white">
-                        <div className="grid grid-cols-[1.3fr_1fr_1fr] gap-2 border-b border-[#E3E9F2] bg-[#F7F9FC] px-4 py-2.5 text-[11px] font-black uppercase tracking-[0.06em]">
-                            <span className="text-[#62708A]" />
-                            <span className="text-center text-[#155EEF]">Cyepro Sync</span>
-                            <span className="text-center text-[#62708A]">Add it yourself</span>
-                        </div>
-                        {[
-                            { label: "Website leads", cyepro: "Land in your CRM automatically", manual: "You follow up by hand" },
-                            { label: "Stock updates", cyepro: "Live sync, where enabled", manual: "Re-upload to update" },
-                            { label: "New vehicles", cyepro: "Appear on the site automatically", manual: "Add or upload each one" },
-                            { label: "Sold vehicles", cyepro: "Removed automatically", manual: "Remove manually" },
-                            { label: "Setup effort", cyepro: "One-time API key", manual: "Ongoing uploads" },
-                        ].map((row) => (
-                            <div key={row.label} className="grid grid-cols-[1.3fr_1fr_1fr] items-start gap-2 border-t border-[#F0F3F8] px-4 py-3 text-xs">
-                                <span className="font-bold text-[#071436]">{row.label}</span>
-                                <span className="flex items-start gap-1.5 font-semibold text-emerald-700">
-                                    <Check className="mt-0.5 h-3.5 w-3.5 shrink-0" />
-                                    <span>{row.cyepro}</span>
-                                </span>
-                                <span className="flex items-start gap-1.5 font-medium text-[#62708A]">
-                                    <Minus className="mt-0.5 h-3.5 w-3.5 shrink-0 text-[#A4B0C2]" />
-                                    <span>{row.manual}</span>
-                                </span>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            )}
-
-            {mode === "cyepro" && (
                 <div className="rounded-lg border border-[#D8E0EA] bg-[#F7F9FC] p-5">
-                    <div className="flex items-start gap-3">
-                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-white text-[#155EEF]">
-                            <Zap className="h-5 w-5" />
-                        </div>
-                        <div className="flex-1">
-                            <h3 className="text-sm font-black text-[#071436]">Enter your Cyepro API Key</h3>
-                            <p className="mt-1 text-xs font-medium leading-5 text-[#62708A]">
-                                This same key sends generated website leads to your Cyepro CRM account. Find it in your Cyepro dashboard under Settings, API Access.
-                            </p>
-                            <div className="relative mt-4">
-                                <input
-                                    type={showKey ? "text" : "password"}
-                                    value={apiKey}
-                                    onChange={(event) => { setApiKey(event.target.value); setKeyError(""); }}
-                                    placeholder="Paste your Cyepro API key here"
-                                    className={cn(
-                                        "h-11 w-full rounded-md border bg-white px-4 pr-11 text-sm font-mono text-[#071436] outline-none focus:ring-2 focus:ring-[#155EEF]",
-                                        keyError ? "border-red-400" : "border-[#D8E0EA]"
-                                    )}
-                                />
-                                <button
-                                    type="button"
-                                    onClick={() => setShowKey((value) => !value)}
-                                    className="absolute right-3 top-1/2 -translate-y-1/2 text-[#62708A] hover:text-[#071436]"
-                                >
-                                    {showKey ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
-                                </button>
+                    <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_420px]">
+                        <div className="flex items-start gap-3">
+                            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-white text-[#155EEF]">
+                                <Zap className="h-5 w-5" />
                             </div>
-                            {keyError && <p className="mt-2 text-xs font-semibold text-red-600">{keyError}</p>}
+                            <div className="flex-1">
+                                <span className="rounded-full bg-emerald-100 px-2 py-1 text-[10px] font-black uppercase tracking-[0.12em] text-emerald-700">
+                                    Recommended
+                                </span>
+                                <h3 className="mt-3 text-sm font-black text-[#071436]">Enter your Cyepro API key</h3>
+                                <p className="mt-1 text-xs font-medium leading-5 text-[#62708A]">
+                                    Paste the API key from Cyepro Settings, API Access. This securely connects CRM leads and inventory sync where enabled.
+                                </p>
+                                <div className="relative mt-4">
+                                    <input
+                                        type={showKey ? "text" : "password"}
+                                        value={apiKey}
+                                        onChange={(event) => { setApiKey(event.target.value); setKeyError(""); }}
+                                        placeholder="Paste your Cyepro API key here"
+                                        className={cn(
+                                            "h-11 w-full rounded-md border bg-white px-4 pr-11 text-sm font-mono text-[#071436] outline-none focus:ring-2 focus:ring-[#155EEF]",
+                                            keyError ? "border-red-400" : "border-[#D8E0EA]"
+                                        )}
+                                    />
+                                    <button
+                                        type="button"
+                                        onClick={() => setShowKey((value) => !value)}
+                                        className="absolute right-3 top-1/2 -translate-y-1/2 text-[#62708A] hover:text-[#071436]"
+                                    >
+                                        {showKey ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+                                    </button>
+                                </div>
+                                {keyError && <p className="mt-2 text-xs font-semibold text-red-600">{keyError}</p>}
+                            </div>
                         </div>
+                        <CyeproApiBenefits />
                     </div>
                 </div>
             )}

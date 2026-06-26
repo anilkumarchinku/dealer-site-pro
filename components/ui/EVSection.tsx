@@ -162,7 +162,7 @@ export function EVSection({ cars, contactInfo, brandColor = '#10b981', brands }:
         ? hasElectricBrand(brands)
         : evCars.length > 0
 
-    const city = contactInfo.city ?? contactInfo.address ?? 'India';
+    const city = contactInfo.city?.trim() || contactInfo.address?.trim() || 'India';
     const mapQuery = `EV charging station near ${city}`;
 
     return (

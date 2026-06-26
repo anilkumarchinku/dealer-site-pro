@@ -1,0 +1,80 @@
+/* DealerSite Pro — Color tokens
+ * Brand vibe: premium editorial. Warm cream canvases on a deep-black outer
+ * stage, near-black ink type, restrained warm-gray neutrals. Black is the
+ * accent — primary CTAs are solid ink on cream (Apple/Linear discipline).
+ * Palette locked by brand spec.
+ */
+:root {
+  /* ---- Ink (deep blacks — outer stage, type, primary CTA) ---- */
+  --ink-950: #07090C;
+  --ink-900: #0B0E12;  /* deep black — outer background */
+  --ink-800: #171717;  /* soft black — dark cards/panels */
+  --ink-700: #222428;
+  --ink-600: #2E3136;
+  --text-ink: #111111; /* text black */
+
+  /* ---- Cream (warm paper — hero canvas, sections, cards) ---- */
+  --cream-50:  #FFFDF7;  /* card white */
+  --cream-100: #FBF8F1;
+  --cream-200: #F5F1EA;  /* warm cream — primary canvas */
+  --cream-300: #EFE9DF;
+  --cream-400: #E7E0D7;  /* border */
+
+  /* ---- Stone (warm neutral grays) ---- */
+  --stone-300: #C7C1B6;
+  --stone-400: #A39E94;
+  --stone-500: #6F6A61;  /* muted gray */
+  --stone-600: #57534B;
+  --stone-700: #3A3833;
+  --stone-800: #26241F;
+
+  /* ---- Support: subtle warm bronze (sparing highlights, badges) ---- */
+  --bronze-400: #C79A5B;
+  --bronze-500: #A8793A;
+
+  /* ---- Semantic feedback ---- */
+  --green-500: #2E8B5A;
+  --red-500:   #C7453E;
+  --white: #FFFFFF;
+
+  /* ===================== SEMANTIC ALIASES ===================== */
+  /* Surfaces */
+  --surface-stage:   var(--ink-900);   /* deep outer background */
+  --surface-canvas:  var(--cream-200); /* warm hero/section panel */
+  --surface-page:    var(--cream-100);
+  --surface-card:    var(--cream-50);  /* card white */
+  --surface-card-warm: var(--cream-100);
+  --surface-dark:    var(--ink-800);   /* dark cards on dark sections */
+  --surface-dark-raised: var(--ink-700);
+
+  /* Text */
+  --text-strong:  var(--text-ink);
+  --text-body:    var(--stone-600);
+  --text-muted:   var(--stone-500);
+  --text-faint:   var(--stone-400);
+  --text-on-dark: var(--cream-50);
+  --text-on-dark-muted: var(--stone-400);
+  --text-on-ink-cta: var(--cream-50);
+  --text-link:    var(--text-ink);
+
+  /* Brand — black is the primary action color */
+  --brand:        var(--ink-900);
+  --brand-hover:  var(--ink-800);
+  --brand-press:  var(--ink-950);
+  --accent:       var(--bronze-500);
+  --accent-soft:  var(--bronze-400);
+
+  /* Borders / lines */
+  --border-subtle:  var(--cream-300);
+  --border-default: var(--cream-400);
+  --border-strong:  var(--stone-300);
+  --border-inverse: rgba(255, 253, 247, 0.14);
+
+  /* Focus ring */
+  --ring: var(--ink-700);
+
+  /* Semantic */
+  --success: var(--green-500);
+  --danger:  var(--red-500);
+  --warning: var(--bronze-500);
+}

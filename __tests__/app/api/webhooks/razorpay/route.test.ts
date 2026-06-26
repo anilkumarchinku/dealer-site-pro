@@ -107,7 +107,7 @@ describe('POST /api/webhooks/razorpay', () => {
         expect(supabase.updates.some(update => update.table === 'domain_subscriptions')).toBe(false)
     })
 
-    it('activates subscriptions and domains', async () => {
+    it('activates subscriptions and leaves domains pending DNS', async () => {
         const supabase = createSupabaseMock({ subscriptionDomainId: 'domain_1' })
         vi.mocked(createAdminClient).mockReturnValue(supabase.client as never)
 
@@ -132,7 +132,10 @@ describe('POST /api/webhooks/razorpay', () => {
             }),
             expect.objectContaining({
                 table: 'dealer_domains',
-                payload: { status: 'active' },
+                payload: expect.objectContaining({
+                    status: 'pending',
+                    ssl_status: 'pending',
+                }),
             }),
             expect.objectContaining({
                 table: 'webhook_events',

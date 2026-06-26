@@ -17,6 +17,66 @@ const SUPABASE_STORAGE_URL =
 
 const IMAGE_EXTENSIONS = ["jpg", "png", "webp"] as const;
 
+const BAD_IMAGE_URL_MARKERS = [
+    "bikedekho-logo",
+    "bike-dekho-logo",
+    "cardekho-logo",
+    "image-not-available",
+    "no-image",
+    "no_image",
+    "not-available",
+    "placeholder",
+    "coming-soon",
+];
+
+const BAD_IMAGE_PATHS = new Set([
+    "/data/brand-model-images/2w/battre-ev/battre-electric-em.jpg",
+    "/data/brand-model-images/2w/battre-ev/battre-electric-one.jpg",
+    "/data/brand-model-images/2w/battre-ev/battre-electric-smart.jpg",
+    "/data/brand-model-images/2w/battre-ev/battre-electric-yelo.jpg",
+    "/data/brand-model-images/2w/battre-ev/yelo.jpg",
+    "/data/brand-model-images/2w/bgauss/bg-ruv-350.jpg",
+    "/data/brand-model-images/2w/bgauss/c12.jpg",
+    "/data/brand-model-images/2w/bounce-infinity/infinity-e1.jpg",
+    "/data/brand-model-images/2w/evolet/pony.jpg",
+    "/data/brand-model-images/2w/ferrato/disruptor.jpg",
+    "/data/brand-model-images/2w/joy-e-bike/gen-nxt.jpg",
+    "/data/brand-model-images/2w/kinetic/dx.jpg",
+    "/data/brand-model-images/2w/kinetic/kinetic-dx.jpg",
+    "/data/brand-model-images/2w/okaya-ev/classiq-pro.jpg",
+    "/data/brand-model-images/2w/okaya-ev/ferrato-connect.jpg",
+    "/data/brand-model-images/2w/okaya-ev/hunk-h1.jpg",
+    "/data/brand-model-images/2w/okaya-ev/okaya-ev-classiq-pro.jpg",
+    "/data/brand-model-images/2w/okaya-ev/okaya-ev-faast-f4.jpg",
+    "/data/brand-model-images/2w/okaya-ev/okaya-ev-ferrato-connect.jpg",
+    "/data/brand-model-images/2w/okaya-ev/okaya-ev-hunk-h1.jpg",
+    "/data/brand-model-images/2w/opg-mobility/faast-f3.jpg",
+    "/data/brand-model-images/2w/pure-ev/ecodryft.jpg",
+    "/data/brand-model-images/2w/raptee/t30.jpg",
+    "/data/brand-model-images/2w/river-ev/indie.jpg",
+    "/data/brand-model-images/2w/simple-energy/one-gen-2.jpg",
+    "/data/brand-model-images/2w/simple-energy/one-s-gen-2.jpg",
+    "/data/brand-model-images/2w/simple-energy/ones-gen-2.jpg",
+    "/data/brand-model-images/2w/vespa-india/s-125.jpg",
+    "/data/brand-model-images/2w/vespa-india/s-150.jpg",
+    "/data/brand-model-images/2w/vlf/mobster.jpg",
+    "/data/brand-model-images/2w/yo/drift.jpg",
+    "/data/brand-model-images/2w/yo/yo-drift.jpg",
+    "/data/brand-model-images/2w/yulu/bike-d.jpg",
+    "/data/brand-model-images/2w/yulu/miracle-gr.jpg",
+    "/data/brand-model-images/2w/yulu/yulu-bike-d.jpg",
+    "/data/brand-model-images/2w/yulu/yulu-miracle-gr.jpg",
+]);
+
+const TWO_W_CLEAN_HERO_OVERRIDES: Record<string, string> = {
+    "pure-ev/ecodryft": "https://imgd.aeplcdn.com/1280x720/n/ov5ateb_1777553.png?q=100",
+    "bounce-infinity/infinity-e1": "/data/brand-model-images/2w/bounce-infinity/e1.jpg",
+};
+
+const TWO_W_MODEL_IMAGE_ALIASES: Record<string, string[]> = {
+    "bounce-infinity/infinity-e1": ["e1", "e1-plus"],
+};
+
 const FOUR_W_GALLERY_ALIASES: Record<string, string> = {
     "bentley/continental-gt": "bentley/continental",
     "bentley/continental-gtc": "bentley/continental",
@@ -101,10 +161,25 @@ export function build2WColorMetadataSlugCandidates(model: string): string[] {
 function get2WColorHeroFallback(brandId: string, model: string): string | null {
     const manifest = twoWColorHeroFallbacks as Record<string, string>;
     for (const modelSlug of build2WColorMetadataSlugCandidates(model)) {
+        const override = TWO_W_CLEAN_HERO_OVERRIDES[`${brandId}/${modelSlug}`];
+        if (override) return override;
+
         const fallback = manifest[`${brandId}/${modelSlug}`];
-        if (fallback) return fallback;
+        // The scraped 2W color dataset contains many AVIF files saved with a
+        // .png extension, which the browser receives as image/png and rejects.
+        if (fallback && !fallback.endsWith(".png")) return fallback;
     }
     return null;
+}
+
+export function isUsableVehicleImageUrl(url: string | null | undefined): url is string {
+    if (!url || url === "/placeholder-car.jpg") return false;
+
+    const normalized = url.toLowerCase();
+    const pathOnly = normalized.split("?")[0];
+    if (BAD_IMAGE_PATHS.has(pathOnly)) return false;
+
+    return !BAD_IMAGE_URL_MARKERS.some((marker) => normalized.includes(marker));
 }
 
 /** Convert a model name to the file-system slug used during scraping */
@@ -152,14 +227,21 @@ export function getScrapedImageUrls(
         }
         return Array.from(new Set(urls));
     }
-    // 2W and 3W: try local files first, then Supabase storage
-    const localBase = `/data/brand-model-images/${vehicleCategory}/${brandId}/${slug}`;
+    // 2W and 3W: try clean color/model files first, then Supabase storage.
+    // Some scraped files are provider logos or promo collages, so known-bad
+    // slugs are replaced by verified model-photo aliases before fallback.
+    const cleanHero = vehicleCategory === "2w" ? get2WColorHeroFallback(brandId, model) : null;
+    const aliasKey = `${brandId}/${slug}`;
+    const localSlugs = vehicleCategory === "2w" && TWO_W_MODEL_IMAGE_ALIASES[aliasKey]
+        ? TWO_W_MODEL_IMAGE_ALIASES[aliasKey]
+        : [slug];
     const urls = [
-        ...(vehicleCategory === "2w"
-            ? [get2WColorHeroFallback(brandId, model)]
-            : []),
-        ...IMAGE_EXTENSIONS.map((ext) => `${localBase}.${ext}`),
-    ].filter((url): url is string => Boolean(url));
+        cleanHero,
+        ...localSlugs.flatMap((localSlug) => {
+            const localBase = `/data/brand-model-images/${vehicleCategory}/${brandId}/${localSlug}`;
+            return IMAGE_EXTENSIONS.map((ext) => `${localBase}.${ext}`);
+        }),
+    ].filter(isUsableVehicleImageUrl);
 
     if (vehicleCategory === "3w") {
         // 3W JSON models have variant suffixes and brand prefixes that don't match image filenames.
@@ -194,13 +276,19 @@ export function getScrapedImageUrls(
 
         const dir3w = `/data/brand-model-images/3w/${brandId}`;
         for (const fb of fallbackSlugs) {
-            IMAGE_EXTENSIONS.forEach((ext) => urls.push(`${dir3w}/${fb}.${ext}`));
+            IMAGE_EXTENSIONS.forEach((ext) => {
+                const url = `${dir3w}/${fb}.${ext}`;
+                if (isUsableVehicleImageUrl(url)) urls.push(url);
+            });
         }
     }
 
     // Supabase storage as final fallback
     const supaBase = `${SUPABASE_STORAGE_URL}/${vehicleCategory}/${brandId}/${slug}`;
-    IMAGE_EXTENSIONS.forEach((ext) => urls.push(`${supaBase}.${ext}`));
+    IMAGE_EXTENSIONS.forEach((ext) => {
+        const url = `${supaBase}.${ext}`;
+        if (isUsableVehicleImageUrl(url)) urls.push(url);
+    });
 
     return urls;
 }
@@ -226,7 +314,7 @@ export function getVehicleImageUrls(
 ): string[] {
     const curatedAssets = getAppAssetImageUrls(vehicleCategory, brandId, model);
     const scrapedAssets = getScrapedImageUrls(vehicleCategory, brandId, model);
-    const normalizedPrimary = primaryImage && primaryImage !== "/placeholder-car.jpg" ? primaryImage : null;
+    const normalizedPrimary = isUsableVehicleImageUrl(primaryImage) ? primaryImage : null;
     const preferredColorHero = vehicleCategory === "2w"
         ? get2WColorHeroFallback(brandId, model)
         : vehicleCategory === "4w"
@@ -249,17 +337,17 @@ export function getVehicleImageUrls(
                 preferredColorHero,
                 ...(normalizedPrimary?.startsWith("/assets/") ? [normalizedPrimary] : []),
                 ...remoteFallbackAssets,
-            ].filter((url): url is string => Boolean(url)),
+            ].filter(isUsableVehicleImageUrl),
         ])];
     }
 
     return [...new Set([
         ...[
             preferredColorHero,
-            normalizedPrimary,
             ...scrapedAssets,
             ...curatedAssets,
-        ].filter((url): url is string => Boolean(url)),
+            normalizedPrimary,
+        ].filter(isUsableVehicleImageUrl),
     ])];
 }
 
@@ -272,7 +360,7 @@ export function getScrapedImageFallback(
     brandId: string,
     model: string
 ): string {
-    return getScrapedImageUrls(vehicleCategory, brandId, model)[0];
+    return getScrapedImageUrls(vehicleCategory, brandId, model).find(isUsableVehicleImageUrl) ?? "/placeholder-car.jpg";
 }
 
 /**

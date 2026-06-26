@@ -3,7 +3,7 @@ import { persist } from 'zustand/middleware';
 import type { OnboardingData, DealerType } from '@/lib/types';
 
 interface OnboardingStore {
-    // Current step (1-5)
+    // Current route step (car flow uses 1-6; 2W/3W use 1-5)
     currentStep: number;
 
     // Form data
@@ -71,6 +71,7 @@ const initialData: Partial<OnboardingData> = {
     brandColorPreset: undefined,
     brandLogo: undefined,
     inventorySource: undefined,
+    inventoryEntryMode: undefined,
     cyeproApiKey: undefined,
     uploadedVehicles: undefined,
     templateConfig: {
@@ -115,7 +116,7 @@ export const useOnboardingStore = create<OnboardingStore>()(
             setStep: (step) => set({ currentStep: step }),
 
             nextStep: () => set((state) => ({
-                currentStep: Math.min(state.currentStep + 1, 5)
+                currentStep: Math.min(state.currentStep + 1, 6)
             })),
 
             prevStep: () => set((state) => ({

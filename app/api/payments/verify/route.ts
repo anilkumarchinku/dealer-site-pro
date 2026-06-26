@@ -310,7 +310,11 @@ export async function POST(request: NextRequest): Promise<NextResponse<PaymentVe
         if (subscription?.domain_id) {
             const { error: domainError } = await supabase
                 .from('dealer_domains')
-                .update({ status: 'active' })
+                .update({
+                    status: 'pending',
+                    ssl_status: 'pending',
+                    last_checked_at: new Date().toISOString(),
+                })
                 .eq('id', subscription.domain_id)
             if (domainError) logger.error('Failed to update domain status:', domainError)
         }
@@ -318,7 +322,7 @@ export async function POST(request: NextRequest): Promise<NextResponse<PaymentVe
         // ── LOG SUCCESSFUL VERIFICATION ──────────────────────────
         const successResponse: PaymentVerifyResponse = {
             success: true,
-            message: 'Payment verified and subscription activated',
+            message: 'Payment verified and PRO custom domain access activated',
         }
 
         const { error: logError } = await paymentLogDb

@@ -1,0 +1,41 @@
+/* DealerSite Pro — Typography tokens */
+:root {
+  /* Families */
+  --font-display: 'Archivo', system-ui, sans-serif;
+  --font-body:    'Manrope', system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', ui-monospace, monospace;
+
+  /* Type scale (1.25 major-third-ish, tuned for marketing) */
+  --text-xs:   0.75rem;   /* 12 */
+  --text-sm:   0.875rem;  /* 14 */
+  --text-base: 1rem;      /* 16 */
+  --text-lg:   1.125rem;  /* 18 */
+  --text-xl:   1.375rem;  /* 22 */
+  --text-2xl:  1.75rem;   /* 28 */
+  --text-3xl:  2.25rem;   /* 36 */
+  --text-4xl:  3rem;      /* 48 */
+  --text-5xl:  3.75rem;   /* 60 */
+  --text-6xl:  4.75rem;   /* 76 */
+  --text-7xl:  6rem;      /* 96 */
+
+  /* Weights */
+  --weight-regular: 400;
+  --weight-medium:  500;
+  --weight-semibold: 600;
+  --weight-bold:    700;
+  --weight-extrabold: 800;
+  --weight-black:   900;
+
+  /* Line heights */
+  --leading-tight:  1.04;
+  --leading-snug:   1.18;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.65;
+
+  /* Letter spacing */
+  --tracking-tight:  -0.03em;
+  --tracking-snug:   -0.015em;
+  --tracking-normal: 0;
+  --tracking-wide:   0.02em;
+  --tracking-caps:   0.08em;  /* eyebrow / overline labels */
+}

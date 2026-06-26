@@ -14,7 +14,7 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
 
     if (!isRegister) {
         return (
-            <div className="relative min-h-screen overflow-hidden bg-muted text-foreground">
+            <div className="dsp-app-skin dsp-onboarding-skin relative min-h-screen overflow-hidden bg-muted text-foreground">
                 <div className="absolute right-4 top-4 z-20">
                     <ThemeToggle />
                 </div>
@@ -77,7 +77,7 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
     }
 
     return (
-        <div className="relative min-h-screen bg-background">
+        <div className="dsp-app-skin dsp-onboarding-skin relative min-h-screen bg-background">
             {/* No floating ThemeToggle here: the register page renders FlowTopBar (a
                 full-width, fixed-light header), so a floating toggle would overlap it.
                 The register screen is part of the light onboarding flow. */}

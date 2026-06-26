@@ -97,7 +97,8 @@ export async function saveDealer(
             return { success: false, error: 'Database not configured. Please contact support.' }
         }
         // Dev-only no-op — lets UI be tested without a real Supabase instance
-        return { success: true }
+        const slug = data.slug || generateSlug(data.dealershipName || "dealer")
+        return { success: true, slug }
     }
 
     try {

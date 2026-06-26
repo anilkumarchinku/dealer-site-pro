@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createDomainSubscription } from '@/lib/services/payment-service'
+import { PRO_DOMAIN_PRICE_PAISE } from '@/lib/services/pro-domain-subscription-service'
 import { requireAuth, requireDealerOwnership } from '@/lib/supabase-server'
 import { rateLimitOrNull } from '@/lib/utils/rate-limiter'
 import { createSubscriptionSchema, formatZodErrors } from '@/lib/validations/schemas'
@@ -59,6 +60,34 @@ export async function POST(request: NextRequest) {
             )
         }
 
+        const { data: existingSubscription, error: existingSubscriptionError } = await supabase
+            .from('domain_subscriptions')
+            .select('id, dealer_id, domain_id, plan, tier, status, razorpay_subscription_id, current_period_end')
+            .eq('dealer_id', dealerId)
+            .eq('domain_id', domainId)
+            .in('status', ['trialing', 'active', 'past_due'])
+            .order('created_at', { ascending: false })
+            .limit(1)
+            .maybeSingle()
+
+        if (existingSubscriptionError) {
+            console.error('Error checking existing subscription:', existingSubscriptionError)
+            return NextResponse.json(
+                { success: false, error: 'Failed to check subscription status' },
+                { status: 500 }
+            )
+        }
+
+        if (existingSubscription?.razorpay_subscription_id) {
+            return NextResponse.json({
+                success: true,
+                subscription: existingSubscription,
+                orderId: existingSubscription.razorpay_subscription_id,
+                subscriptionId: existingSubscription.razorpay_subscription_id,
+                alreadyActive: existingSubscription.status === 'active',
+            })
+        }
+
         // Create Razorpay subscription
         const subscriptionResult = await createDomainSubscription({
             dealerId,
@@ -80,8 +109,11 @@ export async function POST(request: NextRequest) {
                 domain_id: domainId,
                 dealer_id: dealerId,
                 plan: tier,
+                tier,
+                price_paise: tier === 'pro' ? PRO_DOMAIN_PRICE_PAISE : 99900,
                 status: 'trialing',
                 razorpay_subscription_id: subscriptionResult.subscriptionId,
+                razorpay_order_id: subscriptionResult.orderId,
                 current_period_start: new Date().toISOString(),
                 current_period_end: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString()
             })

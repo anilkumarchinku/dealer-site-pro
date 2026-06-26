@@ -219,9 +219,16 @@ export default function DashboardLayout({
                 // (closure `data` is stale here, so we cannot safely early-return on it).
                 const { data: brands } = await supabase
                     .from('dealer_brands')
-                    .select('brand_name')
+                    .select('brand_name, vehicle_type')
                     .eq('dealer_id', dealer.id)
                     .order('is_primary', { ascending: false });
+                const brandRows = (brands ?? []) as Array<{ brand_name: string; vehicle_type: string | null }>;
+                const brandNamesFor = (types: string[]) => brandRows
+                    .filter((brand) => {
+                        const type = brand.vehicle_type?.toLowerCase() ?? null;
+                        return type ? types.includes(type) : types.includes('cars');
+                    })
+                    .map((brand) => brand.brand_name);
 
                 updateData({
                     dealershipName: dealer.dealership_name,
@@ -235,7 +242,12 @@ export default function DashboardLayout({
                     sellsNewCars:   dealer.sells_new_cars,
                     sellsUsedCars:  dealer.sells_used_cars,
                     styleTemplate:  (dealer.style_template as StyleTemplate | null) ?? 'family',
-                    brands:         (brands?.map((b: { brand_name: string }) => b.brand_name) ?? []) as import('@/lib/types').Brand[],
+                    brands:         brandNamesFor(['cars', 'car', '4w']) as import('@/lib/types').Brand[],
+                    brands2w:       brandNamesFor(['2w']),
+                    brands3w:       brandNamesFor(['3w']),
+                    sellsTwoWheelers: sells2w,
+                    sellsThreeWheelers: sells3w,
+                    sellsFourWheelers: sells4w,
                 });
             } catch {
                 // Silently fail — dashboard still works without DB data
@@ -253,7 +265,7 @@ export default function DashboardLayout({
     };
 
     return (
-        <div className="min-h-screen bg-[#F6F9FD] text-foreground dark:bg-[#07111F]">
+        <div className="dsp-app-skin dsp-dashboard-skin min-h-screen text-foreground">
             {/* Skip to main content — first focusable element for keyboard users */}
             <a
                 href="#main-content"
@@ -345,7 +357,7 @@ export default function DashboardLayout({
                 {/* Dealer Info */}
                 <div className="border-t border-white/10 p-4">
                     <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/10 p-3">
-                        <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-600 font-black text-white">
+                        <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#A8793A] font-black text-white">
                             {data.dealershipName?.charAt(0) || "D"}
                         </div>
                         <div className="flex-1 min-w-0">
@@ -364,7 +376,7 @@ export default function DashboardLayout({
             {/* Main Content */}
             <div className="lg:pl-64">
                 {/* Top Bar */}
-                <header className="sticky top-0 z-40 border-b border-border/70 bg-white/85 backdrop-blur-xl dark:bg-[#0B182B]/85">
+                <header className="sticky top-0 z-40 border-b border-border/70 bg-white/85 backdrop-blur-xl">
                     <div className="flex h-[72px] items-center justify-between gap-3 px-4 sm:px-6">
                         <div className="flex min-w-0 items-center gap-3">
                             <Button
@@ -377,13 +389,13 @@ export default function DashboardLayout({
                                 <Menu className="h-4 w-4" />
                             </Button>
                             <div className="min-w-0">
-                            <p className="text-[10px] font-black uppercase tracking-[0.22em] text-blue-600 dark:text-blue-300">
-                                Dealer Dashboard
-                            </p>
-                            <h1 className="mt-0.5 truncate text-lg font-black tracking-tight">
-                                {navigation.find(n => pathname === n.href ||
-                                    (n.href !== "/dashboard" && pathname.startsWith(n.href)))?.name || "Dashboard"}
-                            </h1>
+                                <p className="text-[10px] font-black uppercase tracking-[0.22em] text-[#A8793A]">
+                                    Dealer Dashboard
+                                </p>
+                                <h1 className="mt-0.5 truncate text-lg font-black tracking-tight">
+                                    {navigation.find(n => pathname === n.href ||
+                                        (n.href !== "/dashboard" && pathname.startsWith(n.href)))?.name || "Dashboard"}
+                                </h1>
                             </div>
                         </div>
                         <div className="flex shrink-0 items-center gap-2 sm:gap-3">
@@ -397,6 +409,7 @@ export default function DashboardLayout({
                                 className="relative h-9 w-9"
                                 title={unreadCount > 0 ? `${unreadCount} unread message${unreadCount > 1 ? 's' : ''}` : "No new notifications"}
                                 aria-label={unreadCount > 0 ? `${unreadCount} unread message${unreadCount > 1 ? 's' : ''}` : "No new notifications"}
+                                onClick={() => router.push("/dashboard/messages")}
                             >
                                 <Bell className="w-4 h-4 text-muted-foreground" />
                                 {unreadCount > 0 && (

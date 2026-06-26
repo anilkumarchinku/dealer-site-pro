@@ -84,11 +84,11 @@ export default function ThreeWheelerDetailPage() {
         }
     }, [vehicle, dealerInfo])
 
-    // Logo: dealer-uploaded logo first, then brand logo as fallback
+    // Model pages should use category-specific brand marks when the same OEM
+    // has different identities across 2W/3W/4W.
     const logoSrc = useMemo(() => {
-        if (dealerInfo?.logoUrl) return dealerInfo.logoUrl
         if (vehicle?.brand) return brandLogoUrl(vehicle.brand, '3w') ?? null
-        return null
+        return dealerInfo?.logoUrl ?? null
     }, [dealerInfo, vehicle])
 
     function openLead(type: ThreeWheelerLeadType, title: string) {

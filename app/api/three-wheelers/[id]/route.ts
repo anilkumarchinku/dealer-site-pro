@@ -17,7 +17,7 @@ import { hydrateThreeWheelerWithJson } from '@/lib/data/three-wheeler-detail'
 import { createVehicleDetailRouteHandlers } from '@/lib/services/vehicle-inventory-route-service'
 
 function sourceCatalogId(id: string): string | null {
-    return id.match(/^cat-3w-\d+-(.+)$/)?.[1] ?? null
+    return id.match(/^cat-3w-\d+-(.+)$/)?.[1]?.replace(/-v\d+$/, '') ?? null
 }
 
 async function getThreeWheelerDetailVehicleById(id: string, dealerId?: string) {

@@ -33,7 +33,6 @@ export async function getAggregatedCarSpecs(make: string, model: string): Promis
         const variants = await getDetailedCarInfo(make, model)
 
         if (!variants || variants.length === 0) {
-            console.warn(`No variants found for ${make} ${model}`)
             return null
         }
 
@@ -111,8 +110,7 @@ export async function getAggregatedCarSpecs(make: string, model: string): Promis
             variants,
             summary
         }
-    } catch (error) {
-        console.error(`Error aggregating specs for ${make} ${model}:`, error)
+    } catch {
         return null
     }
 }
