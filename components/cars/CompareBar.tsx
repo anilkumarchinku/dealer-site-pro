@@ -17,7 +17,7 @@ interface CompareBarProps {
     dealerPhone?: string;
 }
 
-export default function CompareBar({ brandColor = '#2563eb', dealerId, dealerPhone }: CompareBarProps) {
+export default function CompareBar({ brandColor = '#A8793A', dealerId, dealerPhone }: CompareBarProps) {
     const { selectedCars, removeCar, clearCars } = useCompareStore();
     const [modalOpen, setModalOpen] = useState(false);
 

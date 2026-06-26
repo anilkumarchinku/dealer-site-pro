@@ -82,7 +82,7 @@ export function BrandModelAccordion({
     brandKey,
     brandDisplay,
     brandHeroImage,
-    brandColor = '#2563eb',
+    brandColor = '#A8793A',
     className,
     light,
 }: BrandModelAccordionProps) {

@@ -4,9 +4,12 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
 import { cn } from "@/lib/utils";
-import { Search, Filter, Mail, Phone, CheckCircle, Loader2, RefreshCw, Clock, TrendingUp, Globe, Inbox, ChevronLeft, ChevronRight } from "lucide-react";
-import { fetchLeads, updateLeadStatus, type ExternalLead } from "@/lib/db/leads";
+import { Search, Filter, Mail, Phone, CheckCircle, Loader2, RefreshCw, Clock, TrendingUp, Globe, Inbox, ChevronLeft, ChevronRight, Plus, PhoneCall, CalendarClock, UserPlus } from "lucide-react";
+import { fetchLeads, createWalkInLead, patchLead, type ExternalLead } from "@/lib/db/leads";
 import { toast } from "@/lib/utils/toast";
 import { PremiumEmptyState, PremiumPageHeader } from "@/components/dashboard/premium-ui";
 import { timeAgo, titleCaseFromSnake as formatLeadType } from "@/lib/utils/format";
@@ -18,6 +21,29 @@ function formatSourceUrl(url: string): string {
     } catch {
         return url;
     }
+}
+
+// Local YYYY-MM-DD for the user's timezone (follow_up_date is a plain date)
+function todayISO(): string {
+    const d = new Date();
+    return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+}
+function isoDaysFromNow(days: number): string {
+    const d = new Date();
+    d.setDate(d.getDate() + days);
+    return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+}
+const isOpenLead = (l: ExternalLead) =>
+    l.status !== "contacted" && l.status !== "converted" && l.status !== "lost";
+// A follow-up is "due" when its date is today or earlier and the lead is still open.
+function isFollowUpDue(l: ExternalLead): boolean {
+    return Boolean(l.follow_up_date) && isOpenLead(l) && (l.follow_up_date as string) <= todayISO();
+}
+function followUpLabel(date: string): { text: string; overdue: boolean; due: boolean } {
+    const today = todayISO();
+    if (date < today) return { text: `Overdue · ${date}`, overdue: true, due: true };
+    if (date === today) return { text: "Due today", overdue: false, due: true };
+    return { text: `Follow up ${date}`, overdue: false, due: false };
 }
 
 const priorityConfig = {
@@ -50,6 +76,17 @@ export default function LeadsPage() {
     const [apiLeads, setApiLeads] = useState<ExternalLead[]>([]);
     const [loading, setLoading] = useState(false);
     const [page, setPage] = useState(1);
+    const [view, setView] = useState<"all" | "walkin" | "followup">("all");
+
+    // Add walk-in lead dialog
+    const [showAdd, setShowAdd] = useState(false);
+    const [saving, setSaving] = useState(false);
+    const emptyForm = {
+        customer_name: "", customer_phone: "", customer_email: "",
+        vehicle_interest: "", priority: "warm" as "hot" | "warm" | "cold",
+        follow_up_date: isoDaysFromNow(2), notes: "",
+    };
+    const [form, setForm] = useState(emptyForm);
 
     const loadLeads = () => {
         setLoading(true);
@@ -60,26 +97,72 @@ export default function LeadsPage() {
 
     useEffect(() => { loadLeads(); }, []); // eslint-disable-line
 
-    const handleMarkContacted = async (id: string) => {
-        // Dealer scoping is enforced server-side by the /api/leads PATCH route
-        // (auth + RLS), so no dealerId needs to be threaded through the client.
-        const result = await updateLeadStatus(id, "contacted");
+    // "He called the customer" — records contacted_at + flips status to contacted.
+    const handleMarkCalled = async (id: string) => {
+        const result = await patchLead(id, { mark_called: true });
         if (!result.success) {
             toast.error(result.error ?? "Couldn't update the lead. Please try again.");
             return;
         }
-        setApiLeads(prev => prev.map(l => l.id === id ? { ...l, status: "contacted" as const } : l));
-        toast.success("Lead marked as contacted.");
+        const now = new Date().toISOString();
+        setApiLeads(prev => prev.map(l => l.id === id ? { ...l, status: "contacted" as const, contacted_at: now } : l));
+        toast.success("Marked as called ✓");
     };
 
+    // Snooze a follow-up by N days (re-schedules the reminder).
+    const handleSnooze = async (id: string, days: number) => {
+        const next = isoDaysFromNow(days);
+        const result = await patchLead(id, { follow_up_date: next });
+        if (!result.success) {
+            toast.error(result.error ?? "Couldn't reschedule. Please try again.");
+            return;
+        }
+        setApiLeads(prev => prev.map(l => l.id === id ? { ...l, follow_up_date: next } : l));
+        toast.success(`Follow-up moved to ${next}`);
+    };
+
+    const handleAddWalkIn = async () => {
+        if (!form.customer_name.trim() || !form.customer_phone.trim()) {
+            toast.error("Name and phone are required.");
+            return;
+        }
+        setSaving(true);
+        const result = await createWalkInLead({
+            customer_name: form.customer_name.trim(),
+            customer_phone: form.customer_phone.trim(),
+            customer_email: form.customer_email.trim() || undefined,
+            vehicle_interest: form.vehicle_interest.trim() || undefined,
+            priority: form.priority,
+            follow_up_date: form.follow_up_date || null,
+            notes: form.notes.trim() || undefined,
+        });
+        setSaving(false);
+        if (!result.success) {
+            toast.error(result.error ?? "Couldn't add the lead. Please try again.");
+            return;
+        }
+        toast.success("Walk-in lead added ✓");
+        setShowAdd(false);
+        setForm(emptyForm);
+        loadLeads();
+        setView("walkin");
+    };
+
+    const followUpDueCount = apiLeads.filter(isFollowUpDue).length;
+    const walkInCount = apiLeads.filter(l => l.source === "walk_in").length;
+
     const filteredLeads = apiLeads.filter(lead => {
+        const matchesView =
+            view === "all" ? true :
+            view === "walkin" ? lead.source === "walk_in" :
+            isFollowUpDue(lead);
         const matchesSearch =
             lead.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
             lead.email.toLowerCase().includes(searchQuery.toLowerCase()) ||
             (lead.vehicle_interest ?? "").toLowerCase().includes(searchQuery.toLowerCase());
         const matchesPriority = filterPriority === "all" || lead.priority === filterPriority;
         const matchesStatus = filterStatus === "all" || lead.status === filterStatus;
-        return matchesSearch && matchesPriority && matchesStatus;
+        return matchesView && matchesSearch && matchesPriority && matchesStatus;
     });
 
     const totalFiltered = filteredLeads.length;
@@ -115,6 +198,9 @@ export default function LeadsPage() {
                         )}
                         <span className="text-sm text-muted-foreground">{apiLeads.length} total</span>
                     </div>
+                    <Button onClick={() => setShowAdd(true)} className="rounded-xl gap-2">
+                        <Plus className="w-4 h-4" /> Add walk-in lead
+                    </Button>
                     <Button
                         variant="ghost"
                         size="icon"
@@ -160,6 +246,52 @@ export default function LeadsPage() {
                         </div>
                     ))}
                 </div>
+            )}
+
+            {/* View tabs */}
+            <div className="flex flex-wrap items-center gap-2">
+                {([
+                    { key: "all", label: "All leads", icon: Inbox, count: apiLeads.length },
+                    { key: "walkin", label: "Walk-ins", icon: UserPlus, count: walkInCount },
+                    { key: "followup", label: "Follow-ups due", icon: CalendarClock, count: followUpDueCount },
+                ] as const).map((t) => {
+                    const active = view === t.key;
+                    const alert = t.key === "followup" && t.count > 0;
+                    return (
+                        <button
+                            key={t.key}
+                            onClick={() => { setView(t.key); setPage(1); }}
+                            className={cn(
+                                "inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-sm font-medium border transition",
+                                active
+                                    ? "bg-foreground text-background border-foreground"
+                                    : "bg-card text-muted-foreground border-border hover:text-foreground"
+                            )}
+                        >
+                            <t.icon className="w-4 h-4" />
+                            {t.label}
+                            {t.count > 0 && (
+                                <span className={cn(
+                                    "px-1.5 py-0.5 rounded-full text-xs font-bold",
+                                    active ? "bg-background/20" : alert ? "bg-red-100 text-red-600" : "bg-muted text-muted-foreground"
+                                )}>
+                                    {t.count}
+                                </span>
+                            )}
+                        </button>
+                    );
+                })}
+            </div>
+
+            {/* Follow-up reminder banner */}
+            {followUpDueCount > 0 && view !== "followup" && (
+                <button
+                    onClick={() => { setView("followup"); setPage(1); }}
+                    className="w-full flex items-center gap-3 p-3 rounded-2xl border border-amber-300 bg-amber-50 text-amber-800 text-sm font-medium dark:border-amber-500/30 dark:bg-amber-500/10 dark:text-amber-200 hover:bg-amber-100 transition text-left"
+                >
+                    <CalendarClock className="w-5 h-5 shrink-0" />
+                    {followUpDueCount} lead{followUpDueCount > 1 ? "s" : ""} need a follow-up call today. Click to review →
+                </button>
             )}
 
             {/* Filters */}
@@ -238,11 +370,18 @@ export default function LeadsPage() {
                     ) : filteredLeads.length === 0 ? (
                         <div className="p-5">
                             <PremiumEmptyState
-                                icon={Inbox}
-                                title={isFiltered ? "No leads match your filters" : "No leads yet"}
-                                description={isFiltered
-                                    ? "Try adjusting your search, priority, or status filters."
-                                    : "When customers submit enquiries from your website, they will appear here."}
+                                icon={view === "followup" ? CalendarClock : view === "walkin" ? UserPlus : Inbox}
+                                title={
+                                    view === "followup" ? "No follow-ups due"
+                                        : view === "walkin" ? "No walk-in leads yet"
+                                            : isFiltered ? "No leads match your filters" : "No leads yet"
+                                }
+                                description={
+                                    view === "followup" ? "You're all caught up — no follow-up calls scheduled for today."
+                                        : view === "walkin" ? "Click “Add walk-in lead” to log an in-store or phone enquiry and set a follow-up reminder."
+                                            : isFiltered ? "Try adjusting your search, priority, or status filters."
+                                                : "When customers submit enquiries from your website, they will appear here."
+                                }
                             />
                         </div>
                     ) : (
@@ -293,6 +432,24 @@ export default function LeadsPage() {
                                                                 {cc.label}
                                                             </span>
                                                         )}
+                                                        {lead.source === "walk_in" && (
+                                                            <span className="px-2 py-0.5 rounded-full text-xs font-medium bg-muted text-muted-foreground inline-flex items-center gap-1">
+                                                                <UserPlus className="w-3 h-3" /> Walk-in
+                                                            </span>
+                                                        )}
+                                                        {lead.follow_up_date && isOpenLead(lead) && (() => {
+                                                            const f = followUpLabel(lead.follow_up_date as string);
+                                                            return (
+                                                                <span className={cn(
+                                                                    "px-2 py-0.5 rounded-full text-xs font-medium inline-flex items-center gap-1",
+                                                                    f.overdue ? "bg-red-50 text-red-600 dark:bg-red-500/10 dark:text-red-300"
+                                                                        : f.due ? "bg-amber-50 text-amber-600 dark:bg-amber-500/10 dark:text-amber-300"
+                                                                            : "bg-blue-50 text-blue-600 dark:bg-blue-500/10 dark:text-blue-300"
+                                                                )}>
+                                                                    <CalendarClock className="w-3 h-3" /> {f.text}
+                                                                </span>
+                                                            );
+                                                        })()}
                                                     </div>
                                                     <p className="text-sm text-muted-foreground mb-1">
                                                         {formatLeadType(lead.type)}
@@ -355,15 +512,28 @@ export default function LeadsPage() {
                                                             <Phone className="w-4 h-4" />
                                                         </Button>
                                                     )}
+                                                    {isFollowUpDue(lead) && (
+                                                        <Button
+                                                            variant="ghost"
+                                                            size="sm"
+                                                            className="text-xs"
+                                                            title="Snooze follow-up by 2 days"
+                                                            onClick={() => handleSnooze(lead.id, 2)}
+                                                        >
+                                                            <Clock className="w-3.5 h-3.5 mr-1" /> Snooze
+                                                        </Button>
+                                                    )}
                                                     <Button
                                                         variant={isDone ? "ghost" : "outline"}
                                                         size="sm"
                                                         className="text-xs"
-                                                        onClick={() => !isDone && handleMarkContacted(lead.id)}
+                                                        onClick={() => !isDone && handleMarkCalled(lead.id)}
                                                         disabled={isDone}
                                                     >
-                                                        <CheckCircle className={cn("w-3.5 h-3.5 mr-1", isDone && "text-green-600")} />
-                                                        {lead.status === "converted" ? "Converted" : lead.status === "contacted" ? "Done" : "Mark Done"}
+                                                        {isDone
+                                                            ? <CheckCircle className="w-3.5 h-3.5 mr-1 text-green-600" />
+                                                            : <PhoneCall className="w-3.5 h-3.5 mr-1" />}
+                                                        {lead.status === "converted" ? "Converted" : lead.status === "contacted" ? "Called ✓" : "Mark called"}
                                                     </Button>
                                                 </div>
                                             </div>
@@ -406,6 +576,90 @@ export default function LeadsPage() {
                     )}
                 </CardContent>
             </Card>
+
+            {/* Add walk-in lead dialog */}
+            <Dialog open={showAdd} onOpenChange={(o) => { setShowAdd(o); if (!o) setForm(emptyForm); }}>
+                <DialogContent className="sm:max-w-md">
+                    <DialogHeader>
+                        <DialogTitle className="flex items-center gap-2">
+                            <UserPlus className="w-5 h-5" /> Add walk-in lead
+                        </DialogTitle>
+                    </DialogHeader>
+                    <div className="space-y-3">
+                        <div className="grid grid-cols-2 gap-3">
+                            <div className="space-y-1">
+                                <Label htmlFor="wl-name">Customer name *</Label>
+                                <Input id="wl-name" value={form.customer_name}
+                                    onChange={(e) => setForm(f => ({ ...f, customer_name: e.target.value }))}
+                                    placeholder="Ramesh Kumar" />
+                            </div>
+                            <div className="space-y-1">
+                                <Label htmlFor="wl-phone">Phone *</Label>
+                                <Input id="wl-phone" value={form.customer_phone}
+                                    onChange={(e) => setForm(f => ({ ...f, customer_phone: e.target.value }))}
+                                    placeholder="9876543210" />
+                            </div>
+                        </div>
+                        <div className="space-y-1">
+                            <Label htmlFor="wl-email">Email (optional)</Label>
+                            <Input id="wl-email" type="email" value={form.customer_email}
+                                onChange={(e) => setForm(f => ({ ...f, customer_email: e.target.value }))}
+                                placeholder="ramesh@email.com" />
+                        </div>
+                        <div className="space-y-1">
+                            <Label htmlFor="wl-vehicle">Vehicle of interest</Label>
+                            <Input id="wl-vehicle" value={form.vehicle_interest}
+                                onChange={(e) => setForm(f => ({ ...f, vehicle_interest: e.target.value }))}
+                                placeholder="e.g. Hyundai Creta SX" />
+                        </div>
+                        <div className="grid grid-cols-2 gap-3">
+                            <div className="space-y-1">
+                                <Label>Priority</Label>
+                                <Select value={form.priority} onValueChange={(v) => setForm(f => ({ ...f, priority: v as "hot" | "warm" | "cold" }))}>
+                                    <SelectTrigger><SelectValue /></SelectTrigger>
+                                    <SelectContent>
+                                        <SelectItem value="hot">🔴 Hot</SelectItem>
+                                        <SelectItem value="warm">🟡 Warm</SelectItem>
+                                        <SelectItem value="cold">🔵 Cold</SelectItem>
+                                    </SelectContent>
+                                </Select>
+                            </div>
+                            <div className="space-y-1">
+                                <Label htmlFor="wl-followup">Follow-up on</Label>
+                                <Input id="wl-followup" type="date" min={todayISO()} value={form.follow_up_date}
+                                    onChange={(e) => setForm(f => ({ ...f, follow_up_date: e.target.value }))} />
+                            </div>
+                        </div>
+                        <div className="flex gap-2">
+                            {[1, 2, 3, 7].map((d) => (
+                                <button key={d} type="button"
+                                    onClick={() => setForm(f => ({ ...f, follow_up_date: isoDaysFromNow(d) }))}
+                                    className={cn(
+                                        "px-2.5 py-1 rounded-lg text-xs border transition",
+                                        form.follow_up_date === isoDaysFromNow(d)
+                                            ? "bg-foreground text-background border-foreground"
+                                            : "bg-card border-border text-muted-foreground hover:text-foreground"
+                                    )}>
+                                    +{d}d
+                                </button>
+                            ))}
+                        </div>
+                        <div className="space-y-1">
+                            <Label htmlFor="wl-notes">Notes</Label>
+                            <Textarea id="wl-notes" rows={2} value={form.notes}
+                                onChange={(e) => setForm(f => ({ ...f, notes: e.target.value }))}
+                                placeholder="Budget, trade-in, test-drive plans…" />
+                        </div>
+                    </div>
+                    <DialogFooter>
+                        <Button variant="outline" onClick={() => setShowAdd(false)} disabled={saving}>Cancel</Button>
+                        <Button onClick={handleAddWalkIn} disabled={saving} className="gap-2">
+                            {saving ? <Loader2 className="w-4 h-4 animate-spin" /> : <Plus className="w-4 h-4" />}
+                            Add lead
+                        </Button>
+                    </DialogFooter>
+                </DialogContent>
+            </Dialog>
         </div>
     );
 }

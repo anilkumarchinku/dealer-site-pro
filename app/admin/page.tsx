@@ -618,6 +618,12 @@ export default function AdminDashboard() {
                         {/* Current Selection */}
                         <div className="hidden md:flex items-center gap-6">
                             <Button
+                                onClick={() => router.push("/admin/360")}
+                            >
+                                <Activity className="w-4 h-4 mr-2" />
+                                Platform 360
+                            </Button>
+                            <Button
                                 variant="outline"
                                 onClick={() => router.push("/admin/inventory-audit")}
                             >

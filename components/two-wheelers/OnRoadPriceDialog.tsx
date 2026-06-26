@@ -77,7 +77,7 @@ export function OnRoadPriceDialog({
     fuelType,
     engineCc,
     variants = [],
-    brandColor = '#2563eb',
+    brandColor = '#A8793A',
     enquiryLabel = 'Send Enquiry',
     onEnquire,
 }: Props) {
@@ -149,7 +149,7 @@ export function OnRoadPriceDialog({
 
     return (
         <Dialog open={open} onOpenChange={onOpenChange}>
-            <DialogContent className="max-w-3xl p-0 bg-white text-gray-900 border border-gray-200 shadow-2xl overflow-hidden">
+            <DialogContent className="max-h-[calc(100vh-2rem)] max-w-3xl p-0 bg-white text-gray-900 border border-gray-200 shadow-2xl overflow-hidden">
                 <DialogTitle className="sr-only">
                     {brand} {model} on-road price calculator
                 </DialogTitle>
@@ -157,8 +157,8 @@ export function OnRoadPriceDialog({
                     Select your state and variant to estimate the on-road price for {brand} {model}.
                 </DialogDescription>
 
-                <div className="grid grid-cols-1 lg:grid-cols-[320px_minmax(0,1fr)]">
-                    <div className="border-r border-gray-200 bg-gray-50 p-6">
+                <div className="grid max-h-[calc(100vh-2rem)] grid-cols-1 overflow-y-auto lg:grid-cols-[320px_minmax(0,1fr)] lg:overflow-hidden">
+                    <div className="border-r border-gray-200 bg-gray-50 p-6 lg:max-h-[calc(100vh-2rem)] lg:overflow-y-auto">
                         <Badge variant="outline" className="mb-3 gap-1.5 border-gray-300 bg-white text-gray-700">
                             <MapPin className="h-3.5 w-3.5" />
                             State-based estimate
@@ -231,7 +231,7 @@ export function OnRoadPriceDialog({
                         </div>
                     </div>
 
-                    <div className="p-6">
+                    <div className="min-h-0 p-6 lg:max-h-[calc(100vh-2rem)] lg:overflow-y-auto">
                         {breakdown && (
                             <div className="space-y-6">
                                 <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">

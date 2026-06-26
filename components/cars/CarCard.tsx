@@ -40,10 +40,10 @@ import {
     Bike,
     Truck,
 } from 'lucide-react';
-import { getBrandLogo } from '@/lib/data/brand-logos';
 import { getContrastText } from '@/lib/utils/color-contrast';
 import { useCompareStore } from '@/lib/store/compare-store';
 import { getVehicleImageUrls, brandNameToId } from '@/lib/utils/brand-model-images';
+import { brandLogoUrl } from '@/lib/utils/site-assets';
 
 /**
  * Consistent "no image available" placeholder shared across all vehicle cards.
@@ -91,7 +91,7 @@ export function CarCard({
     onViewDetails,
     onCompare,
     className,
-    brandColor = '#2563eb',
+    brandColor = '#A8793A',
     light,
     detailBasePath,
     dealerPhone,
@@ -106,6 +106,7 @@ export function CarCard({
     const [aggregatedSpecs, setAggregatedSpecs] = useState<ReturnType<typeof formatSpecsForDisplay>>(null);
     const { addCar, removeCar, isSelected } = useCompareStore();
     const inCompare = isSelected(car.id);
+    const logoSrc = brandLogoUrl(car.make, car.vehicleCategory ?? '4w');
 
     const toggleCompare = (event: MouseEvent) => {
         event.stopPropagation();
@@ -254,7 +255,12 @@ export function CarCard({
         car.model,
         car.images.hero,
     );
-    const shouldPreferResolvedImages = imageCategory === '4w' || !car.images.hero || car.images.hero === '/placeholder-car.jpg' || imgError;
+    // Use the model's own cover image (car.images.hero) first — the same image
+    // the detail page shows — and only fall back to resolved brand/model assets
+    // when the hero is missing, a placeholder, or fails to load. (Previously 4W
+    // cards always skipped the hero and showed a scraped asset, which could
+    // mismatch the actual model.)
+    const shouldPreferResolvedImages = !car.images.hero || car.images.hero === '/placeholder-car.jpg' || imgError;
     const cardDisplayUrl = shouldPreferResolvedImages
         ? (cardImageUrls[scrapedIdx] || null)
         : car.images.hero;
@@ -341,8 +347,10 @@ export function CarCard({
                     <CardContent className="flex flex-1 flex-col p-5">
                         <div className="mb-5">
                             <div className="flex items-center gap-1.5 min-w-0">
-                                {getBrandLogo(car.make) && (
-                                    <Image src={getBrandLogo(car.make)!} alt={car.make} width={16} height={16} unoptimized className="object-contain shrink-0" />
+                                {logoSrc && (
+                                    <span className="relative h-4 w-4 shrink-0">
+                                        <Image src={logoSrc} alt={car.make} fill sizes="16px" unoptimized className="object-contain" />
+                                    </span>
                                 )}
                                 <p className="truncate text-[11px] font-semibold uppercase tracking-[0.22em]" style={{ color: brandColor }}>
                                     {car.make}
@@ -483,8 +491,10 @@ export function CarCard({
                     <div className="mb-3">
                         <div className="flex items-center justify-between gap-1.5">
                             <div className="flex items-center gap-1.5 min-w-0">
-                                {getBrandLogo(car.make) && (
-                                    <Image src={getBrandLogo(car.make)!} alt={car.make} width={16} height={16} unoptimized className="object-contain shrink-0" />
+                                {logoSrc && (
+                                    <span className="relative h-4 w-4 shrink-0">
+                                        <Image src={logoSrc} alt={car.make} fill sizes="16px" unoptimized className="object-contain" />
+                                    </span>
                                 )}
                                 <p className="text-[11px] font-semibold uppercase tracking-[0.22em] truncate" style={{ color: brandColor }}>
                                     {car.make}

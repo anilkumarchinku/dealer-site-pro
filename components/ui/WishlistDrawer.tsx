@@ -25,7 +25,7 @@ interface WishlistDrawerProps {
     brandColor?: string;
 }
 
-export function WishlistDrawer({ cars, dealerId, brandColor = '#2563eb' }: WishlistDrawerProps) {
+export function WishlistDrawer({ cars, dealerId, brandColor = '#A8793A' }: WishlistDrawerProps) {
     const [open, setOpen] = useState(false);
     const [alertEmail, setAlertEmail] = useState('');
     const [alertPhone, setAlertPhone] = useState('');
