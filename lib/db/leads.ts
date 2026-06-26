@@ -19,6 +19,9 @@ export interface ExternalLead {
     cyepro_sync_status?: CyeproSyncStatus;
     cyepro_error?: string;
     source: string;
+    notes?: string;
+    follow_up_date?: string | null;
+    contacted_at?: string | null;
     created_at: string;
     updated_at: string;
 }
@@ -42,11 +45,19 @@ type LeadApiRow = {
     utm_source: string | null;
     message: string | null;
     status: string;
+    priority?: string | null;
+    notes?: string | null;
+    follow_up_date?: string | null;
+    contacted_at?: string | null;
     cyepro_sync_status?: CyeproSyncStatus | null;
     cyepro_error?: string | null;
     created_at: string;
     updated_at?: string | null;
 };
+
+function isPriority(value: unknown): value is LeadPriority {
+    return value === "hot" || value === "warm" || value === "cold";
+}
 
 // Derive priority from lead age (hot < 24h, warm < 7d, cold otherwise)
 function derivePriority(createdAt: string): LeadPriority {
@@ -91,8 +102,15 @@ function mapLeadRow(row: LeadApiRow): ExternalLead {
         type: mapLeadSource(row.lead_type),
         vehicle_interest: row.vehicle_interest ?? row.vehicle_id ?? undefined,
         message: row.message ?? undefined,
-        priority: derivePriority(row.created_at),
+        // Walk-in leads carry an explicit, dealer-chosen priority; website leads
+        // fall back to age-based priority (hot < 24h, warm < 7d, cold otherwise).
+        priority: row.source === "walk_in" && isPriority(row.priority)
+            ? row.priority
+            : derivePriority(row.created_at),
         source: row.utm_source ?? row.source ?? "Website",
+        notes: row.notes ?? undefined,
+        follow_up_date: row.follow_up_date ?? null,
+        contacted_at: row.contacted_at ?? null,
         status: (row.status as LeadStatus) ?? "new",
         cyepro_sync_status: row.cyepro_sync_status ?? undefined,
         cyepro_error: row.cyepro_error ?? undefined,
@@ -143,6 +161,61 @@ export async function updateLeadStatus(
     if (!response.ok) {
         const error = await readApiError(response);
         console.warn("[updateLeadStatus]", error);
+        return { success: false, error };
+    }
+
+    return { success: true };
+}
+
+export interface WalkInLeadInput {
+    customer_name: string;
+    customer_phone: string;
+    customer_email?: string;
+    vehicle_interest?: string;
+    priority?: LeadPriority;
+    lead_type?: LeadType;
+    follow_up_date?: string | null;
+    notes?: string;
+    message?: string;
+}
+
+// Manually capture a walk-in / phone lead into the dealer's inbox.
+export async function createWalkInLead(
+    input: WalkInLeadInput
+): Promise<{ success: boolean; id?: string; error?: string }> {
+    const response = await fetch("/api/dashboard/leads", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        credentials: "include",
+        body: JSON.stringify(input),
+    });
+
+    if (!response.ok) {
+        const error = await readApiError(response);
+        console.warn("[createWalkInLead]", error);
+        return { success: false, error };
+    }
+
+    const payload = await response.json() as { id?: string };
+    return { success: true, id: payload.id };
+}
+
+// Partial lead update: status, follow-up date, or "mark called" (records
+// contacted_at + flips status to contacted). Server scopes by dealer.
+export async function patchLead(
+    leadId: string,
+    fields: { status?: LeadStatus; follow_up_date?: string | null; mark_called?: boolean }
+): Promise<{ success: boolean; error?: string }> {
+    const response = await fetch("/api/leads", {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        credentials: "include",
+        body: JSON.stringify({ id: leadId, ...fields }),
+    });
+
+    if (!response.ok) {
+        const error = await readApiError(response);
+        console.warn("[patchLead]", error);
         return { success: false, error };
     }
 

@@ -255,7 +255,12 @@ export function CarCard({
         car.model,
         car.images.hero,
     );
-    const shouldPreferResolvedImages = imageCategory === '4w' || !car.images.hero || car.images.hero === '/placeholder-car.jpg' || imgError;
+    // Use the model's own cover image (car.images.hero) first — the same image
+    // the detail page shows — and only fall back to resolved brand/model assets
+    // when the hero is missing, a placeholder, or fails to load. (Previously 4W
+    // cards always skipped the hero and showed a scraped asset, which could
+    // mismatch the actual model.)
+    const shouldPreferResolvedImages = !car.images.hero || car.images.hero === '/placeholder-car.jpg' || imgError;
     const cardDisplayUrl = shouldPreferResolvedImages
         ? (cardImageUrls[scrapedIdx] || null)
         : car.images.hero;

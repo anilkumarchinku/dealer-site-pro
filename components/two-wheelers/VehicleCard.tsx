@@ -6,7 +6,7 @@ import Link from "next/link"
 import { Fuel, Zap, Gauge, ChevronRight, Send, Eye, Heart, TrendingUp, GitCompare, Calendar, Bike } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import type { TwoWheelerVehicle } from "@/lib/types/two-wheeler"
-import { getScrapedImageUrls, brandNameToId } from "@/lib/utils/brand-model-images"
+import { getVehicleImageUrls, brandNameToId } from "@/lib/utils/brand-model-images"
 import { getContrastText } from "@/lib/utils/color-contrast"
 import { useSitePrefix } from "@/lib/hooks/useSitePrefix"
 import { QuickViewModal } from "./QuickViewModal"
@@ -61,21 +61,28 @@ export function VehicleCard({ vehicle, slug, dealerId, brandColor = "#1f2937", s
     const emiRaw = vehicle.emi_starting_paise
     const emi = emiRaw && emiRaw > 0 ? (emiRaw / 100).toLocaleString("en-IN") : null
 
-    const [jpgUrl, pngUrl] = getScrapedImageUrls("2w", brandNameToId(vehicle.brand), vehicle.model)
-    const primarySrc = vehicle.images && vehicle.images.length > 0 ? vehicle.images[0] : jpgUrl
-    const [imgSrc, setImgSrc] = useState(primarySrc)
+    const brandId = brandNameToId(vehicle.brand)
+    // DB image first (matches detail page), then resolved fallbacks — same priority as CarCard/4W fix.
+    const dbImage = vehicle.images?.[0] ?? null
+    const fallbackUrls = getVehicleImageUrls("2w", brandId, vehicle.model)
+    const imageUrls = dbImage
+        ? [dbImage, ...fallbackUrls.filter(u => u !== dbImage)]
+        : fallbackUrls
+    const [imgIdx, setImgIdx] = useState(0)
+    const imgSrc = imageUrls[imgIdx]
     const [imgFailed, setFailed] = useState(false)
     const [quickView, setQuickView] = useState(false)
     const [wishlisted, setWishlisted] = useState(false)
     const [testRideOpen, setTestRideOpen] = useState(false)
 
     // Brand logo
-    const brandId = brandNameToId(vehicle.brand)
     const brandLogoSrc = `/data/brand-logos/${brandId}.png`
 
     function handleImgError() {
-        if (imgSrc !== jpgUrl && imgSrc !== pngUrl) { setImgSrc(jpgUrl); return }
-        if (imgSrc === jpgUrl) { setImgSrc(pngUrl); return }
+        if (imgIdx < imageUrls.length - 1) {
+            setImgIdx((current) => current + 1)
+            return
+        }
         setFailed(true)
     }
 
@@ -103,7 +110,7 @@ export function VehicleCard({ vehicle, slug, dealerId, brandColor = "#1f2937", s
                 className="group relative flex h-full flex-col overflow-hidden rounded-xl border border-gray-200 bg-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
             >
                 <div className="relative aspect-[16/10] overflow-hidden bg-gray-50">
-                    {!imgFailed ? (
+                    {!imgFailed && imgSrc ? (
                         <FadeInImage
                             src={imgSrc}
                             alt={`${vehicle.brand} ${vehicle.model}`}
@@ -173,7 +180,7 @@ export function VehicleCard({ vehicle, slug, dealerId, brandColor = "#1f2937", s
 
             {/* Image */}
             <div className="relative aspect-[16/10] bg-gray-50 overflow-hidden">
-                {!imgFailed ? (
+                {!imgFailed && imgSrc ? (
                     <FadeInImage
                         src={imgSrc}
                         alt={`${vehicle.brand} ${vehicle.model}`}

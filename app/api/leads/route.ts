@@ -132,7 +132,7 @@ export async function GET() {
 
         const { data, error } = await routeSupabase
             .from('leads')
-            .select('id, dealer_id, customer_name, customer_email, customer_phone, lead_type, vehicle_id, vehicle_interest, source, utm_source, message, status, created_at, updated_at')
+            .select('id, dealer_id, customer_name, customer_email, customer_phone, lead_type, vehicle_id, vehicle_interest, source, utm_source, message, notes, priority, status, follow_up_date, contacted_at, created_at, updated_at')
             .eq('dealer_id', dealer.id)
             .order('created_at', { ascending: false })
 
@@ -169,16 +169,43 @@ export async function PATCH(request: NextRequest) {
         }
 
         const id = typeof body.id === 'string' ? body.id.trim() : ''
-        if (!UUID_PATTERN.test(id) || !isLeadStatus(body.status)) {
-            return NextResponse.json({ error: 'Valid id and status are required' }, { status: 400 })
+        if (!UUID_PATTERN.test(id)) {
+            return NextResponse.json({ error: 'Valid id is required' }, { status: 400 })
+        }
+
+        // Build a partial update from whatever the caller provided. Supports
+        // status changes, scheduling a follow-up date, and the "mark called"
+        // action (records contacted_at + flips status to contacted).
+        const update: Record<string, unknown> = { updated_at: new Date().toISOString() }
+
+        if (body.mark_called === true) {
+            update.contacted_at = new Date().toISOString()
+            update.status = 'contacted'
+        } else if ('status' in body && body.status !== undefined) {
+            if (!isLeadStatus(body.status)) {
+                return NextResponse.json({ error: 'Invalid status' }, { status: 400 })
+            }
+            update.status = body.status
+        }
+
+        if ('follow_up_date' in body) {
+            const fu = body.follow_up_date
+            if (fu === null || fu === '') {
+                update.follow_up_date = null
+            } else if (typeof fu === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(fu)) {
+                update.follow_up_date = fu
+            } else {
+                return NextResponse.json({ error: 'follow_up_date must be YYYY-MM-DD or null' }, { status: 400 })
+            }
+        }
+
+        if (Object.keys(update).length === 1) {
+            return NextResponse.json({ error: 'Nothing to update' }, { status: 400 })
         }
 
         const { data, error } = await routeSupabase
             .from('leads')
-            .update({
-                status: body.status,
-                updated_at: new Date().toISOString(),
-            })
+            .update(update)
             .eq('id', id)
             .eq('dealer_id', dealer.id)
             .select('id')
