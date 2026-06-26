@@ -40,7 +40,7 @@ export function EmiCalculatorPageContent() {
 
                 {/* Calculator */}
                 <div className="mb-12">
-                    <EmiCalculator brandColor="#2563eb" theme="light" />
+                    <EmiCalculator brandColor="#A8793A" theme="light" />
                     <div className="mt-5 grid gap-4 md:grid-cols-2">
                         <Link
                             href="/api/finance/precheck?source=emi-calculator"

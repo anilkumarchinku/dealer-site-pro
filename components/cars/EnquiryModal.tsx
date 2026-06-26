@@ -34,11 +34,11 @@ import {
     MapPin,
 } from 'lucide-react';
 import { formatPriceInLakhs } from '@/lib/utils/car-utils';
-import { getBrandLogo } from '@/lib/data/brand-logos';
 import { getContrastText, getReadableAccent } from '@/lib/utils/color-contrast';
 import { validateLeadForm, type ValidationErrors } from '@/lib/validations/client';
 import { normalizeLeadPhone } from '@/lib/validations/lead';
 import { getVehicleImageUrls, brandNameToId } from '@/lib/utils/brand-model-images';
+import { brandLogoUrl } from '@/lib/utils/site-assets';
 import {
     buildDefaultKeyFeatures,
     buildFallbackDetailedInfo,
@@ -60,7 +60,7 @@ interface EnquiryModalProps {
     resolvedImageSrc?: string | null;
 }
 
-export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', dealerId, dealerPhone, resolvedImageSrc }: EnquiryModalProps) {
+export function EnquiryModal({ car, open, onOpenChange, brandColor = '#A8793A', dealerId, dealerPhone, resolvedImageSrc }: EnquiryModalProps) {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -240,6 +240,7 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
     );
     const brandAccent = getReadableAccent(brandColor);
     const brandContrast = getContrastText(brandColor);
+    const logoSrc = brandLogoUrl(car.make, car.vehicleCategory ?? '4w');
     const fuelDisplay = aggregatedSpecs?.fuelTypes || detailedVariant?.fuel_type || car.engine.type || 'Fuel type available on request';
     const transmissionDisplay = aggregatedSpecs?.transmissions || detailedVariant?.transmission || car.transmission.type || 'Transmission details available';
     const seatingDisplay = detailedVariant?.seating_capacity || car.dimensions?.seatingCapacity ||
@@ -312,9 +313,9 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#2563eb', 
                         {/* Title Overlay */}
                         <div className="absolute bottom-4 left-6 right-6 text-white">
                             <div className="flex items-center gap-2 mb-1">
-                                {getBrandLogo(car.make) && (
+                                {logoSrc && (
                                     <span className="inline-flex items-center justify-center rounded-md bg-white border border-slate-200 p-1 shrink-0">
-                                        <Image src={getBrandLogo(car.make)!} alt={car.make} width={24} height={24} className="object-contain" />
+                                        <Image src={logoSrc} alt={car.make} width={24} height={24} className="object-contain" />
                                     </span>
                                 )}
                                 <p className="text-sm font-medium uppercase tracking-wider" style={{ color: brandAccent }}>

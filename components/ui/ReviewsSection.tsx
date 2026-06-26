@@ -100,7 +100,7 @@ function ReviewCard({ review, variant }: { review: Review; variant: 'light' | 'd
     );
 }
 
-export function ReviewsSection({ dealerId, brandColor = '#2563eb', variant = 'light' }: ReviewsSectionProps) {
+export function ReviewsSection({ dealerId, brandColor = '#A8793A', variant = 'light' }: ReviewsSectionProps) {
     const [reviews, setReviews] = useState<Review[]>([]);
     const [avgRating, setAvgRating] = useState(0);
     const [total, setTotal] = useState(0);

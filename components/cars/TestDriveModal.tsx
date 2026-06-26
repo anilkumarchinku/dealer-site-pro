@@ -98,7 +98,7 @@ export function TestDriveModal({
     dealerPhone,
     open,
     onOpenChange,
-    brandColor = '#2563eb',
+    brandColor = '#A8793A',
     vehicleType,
 }: TestDriveModalProps) {
     const [step, setStep] = useState<Step>(1);

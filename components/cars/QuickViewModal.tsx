@@ -31,9 +31,9 @@ import {
     BadgeCheck, Info,
 } from 'lucide-react';
 import { formatPriceInLakhs } from '@/lib/utils/car-utils';
-import { getBrandLogo } from '@/lib/data/brand-logos';
 import { getContrastText } from '@/lib/utils/color-contrast';
 import { getVehicleImageUrls, brandNameToId } from '@/lib/utils/brand-model-images';
+import { brandLogoUrl } from '@/lib/utils/site-assets';
 import {
     buildFallbackDetailedInfo,
     buildDefaultKeyFeatures,
@@ -119,7 +119,7 @@ function RatingBar({ label, value, color }: { label: string; value: number; colo
 }
 
 // ─── Main Component ───────────────────────────────────────────────────────────
-export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandColor = '#2563eb', resolvedImageSrc }: Props) {
+export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandColor = '#A8793A', resolvedImageSrc }: Props) {
     const [activeImage, setActiveImage] = useState<string | null>(null);
     const [imgIdx, setImgIdx] = useState(0);
     const [detailedInfo, setDetailedInfo] = useState<DetailedCarInfo[]>([]);
@@ -161,7 +161,7 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
     if (!car) return null;
 
     // Derived
-    const logoSrc = getBrandLogo(car.make);
+    const logoSrc = brandLogoUrl(car.make, car.vehicleCategory ?? '4w');
 
     // Build fallback list: local scraped path first, then CDN only for 2W/3W
     // For 4W we never use CDN (car.images.hero) — some CDN URLs serve lifestyle/

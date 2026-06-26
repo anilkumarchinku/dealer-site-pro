@@ -175,7 +175,7 @@ export function EnquireSidebar({
     onOpenChange,
     dealerName,
     dealerId = '',
-    brandColor = '#2563eb',
+    brandColor = '#A8793A',
     services,
     contactPhone,
     vehicleType,
