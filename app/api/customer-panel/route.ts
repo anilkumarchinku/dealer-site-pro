@@ -64,13 +64,24 @@ function contactOrFilter(email: string, phone?: string, emailColumn = 'customer_
 
 async function loadDealer(slug: string) {
     const admin = createAdminClient() as any
+    const select = 'id, slug, dealership_name, location, full_address, phone, whatsapp, email, branches, tagline'
     const { data, error } = await admin
         .from('dealers')
-        .select('id, slug, dealership_name, location, full_address, phone, whatsapp, email, branches, tagline')
+        .select(select)
         .eq('slug', slug)
         .maybeSingle()
-    if (error || !data) return null
-    return data
+    if (!error && data) return data
+    // Hybrid dealer used-car sites use a "-used" suffix that isn't in the DB slug
+    if (slug.endsWith('-used')) {
+        const parentSlug = slug.slice(0, -'-used'.length)
+        const { data: parent } = await admin
+            .from('dealers')
+            .select(select)
+            .eq('slug', parentSlug)
+            .maybeSingle()
+        if (parent) return parent
+    }
+    return null
 }
 
 export async function POST(request: NextRequest) {
