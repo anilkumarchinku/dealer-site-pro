@@ -53,10 +53,18 @@ function generateOtpCode(): string {
 /**
  * Send OTP to user's email — valid for 10 minutes
  */
+const MOCK_OTP_ENABLED = process.env.ALLOW_MOCK_OTP === 'true'
+const MOCK_OTP_CODE = '998909'
+
 export async function sendOtp(
     email: string,
     purpose: OtpPurpose
 ): Promise<{ success: boolean; error?: string }> {
+    // Mock mode: skip DB and email, pretend OTP was sent
+    if (MOCK_OTP_ENABLED) {
+        return { success: true }
+    }
+
     const admin = getAdminClient()
     if (!admin) return { success: false, error: 'OTP service not configured' }
 
@@ -127,8 +135,8 @@ export async function verifyOtp(
     code: string,
     purpose: OtpPurpose
 ): Promise<{ success: boolean; email?: string; error?: string }> {
-    // Mock OTP bypass for development/testing — code 998909 always succeeds
-    if (process.env.NODE_ENV !== 'production' && code === '998909') {
+    // Mock OTP bypass — code 998909 always succeeds when ALLOW_MOCK_OTP=true
+    if (MOCK_OTP_ENABLED && code === MOCK_OTP_CODE) {
         return { success: true, email }
     }
 
