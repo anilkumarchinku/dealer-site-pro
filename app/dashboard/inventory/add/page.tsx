@@ -368,6 +368,15 @@ function AddVehiclePageContent() {
                         image_url:   imageUrl,
                     }),
                 }).catch(() => { /* social post failure is non-fatal */ })
+                // Fire-and-forget push notification to opted-in subscribers
+                fetch('/api/push-trigger', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        type: 'new_listing',
+                        vehicle: { make: formData.make, model: formData.model, year: Number(formData.year), price_paise: priceNum || null },
+                    }),
+                }).catch(() => { /* push trigger failure is non-fatal */ })
                 router.push('/dashboard/inventory');
             } else {
                 setSaveError(result.error || 'Failed to save vehicle');

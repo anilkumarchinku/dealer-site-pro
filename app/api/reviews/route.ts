@@ -165,6 +165,74 @@ export async function PATCH(request: NextRequest) {
     return NextResponse.json({ success: true, review: updatedReview })
 }
 
+// ── Verify the reviewer has interacted with this dealer ──────────────────────
+async function isVerifiedCustomer(
+    supabase: ReturnType<typeof getSupabase>,
+    dealerId: string,
+    email?: string,
+    phone?: string,
+): Promise<boolean> {
+    const normalizedEmail = email?.trim().toLowerCase()
+    const phoneDigits = phone?.replace(/\D/g, '') ?? ''
+    const normalizedPhone = phoneDigits.length > 10 ? phoneDigits.slice(-10) : phoneDigits
+
+    if (!normalizedEmail && !normalizedPhone) return false
+
+    // Build OR filter for each table's email/phone columns
+    function orFilter(emailCol: string, phoneCol: string) {
+        const clauses: string[] = []
+        if (normalizedEmail) clauses.push(`${emailCol}.ilike.${normalizedEmail}`)
+        if (normalizedPhone.length === 10) clauses.push(`${phoneCol}.ilike.%${normalizedPhone}%`)
+        return clauses.join(',')
+    }
+
+    // Check leads
+    const leadsFilter = orFilter('customer_email', 'customer_phone')
+    if (leadsFilter) {
+        const { count } = await supabase
+            .from('leads')
+            .select('id', { count: 'exact', head: true })
+            .eq('dealer_id', dealerId)
+            .or(leadsFilter)
+        if (count && count > 0) return true
+    }
+
+    // Check test_drive_bookings
+    const tdFilter = orFilter('customer_email', 'customer_phone')
+    if (tdFilter) {
+        const { count } = await supabase
+            .from('test_drive_bookings')
+            .select('id', { count: 'exact', head: true })
+            .eq('dealer_id', dealerId)
+            .or(tdFilter)
+        if (count && count > 0) return true
+    }
+
+    // Check sell_requests
+    const sellFilter = orFilter('seller_email', 'seller_phone')
+    if (sellFilter) {
+        const { count } = await supabase
+            .from('sell_requests')
+            .select('id', { count: 'exact', head: true })
+            .or(`dealer_id.eq.${dealerId},dealer_id.is.null`)
+            .or(sellFilter)
+        if (count && count > 0) return true
+    }
+
+    // Check car_service_bookings
+    const serviceFilter = orFilter('email', 'phone')
+    if (serviceFilter) {
+        const { count } = await supabase
+            .from('car_service_bookings')
+            .select('id', { count: 'exact', head: true })
+            .eq('dealer_id', dealerId)
+            .or(serviceFilter)
+        if (count && count > 0) return true
+    }
+
+    return false
+}
+
 // ── POST: submit a new review ────────────────────────────────────────────────
 export async function POST(request: NextRequest) {
     // Rate limiting (5 reviews per IP per day)
@@ -174,11 +242,17 @@ export async function POST(request: NextRequest) {
     const body = await request.json().catch(() => null)
     if (!body) return NextResponse.json({ error: 'Invalid JSON' }, { status: 400 })
 
-    const { dealer_id, reviewer_name, rating, review_text, car_purchased } = body
+    const { dealer_id, reviewer_name, reviewer_email, reviewer_phone, rating, review_text, car_purchased } = body
 
     if (!dealer_id || !reviewer_name || !rating) {
         return NextResponse.json(
             { error: 'dealer_id, reviewer_name and rating are required' },
+            { status: 400 }
+        )
+    }
+    if (!reviewer_email && !reviewer_phone) {
+        return NextResponse.json(
+            { error: 'Email or phone is required to verify your identity' },
             { status: 400 }
         )
     }
@@ -205,19 +279,27 @@ export async function POST(request: NextRequest) {
         return NextResponse.json({ error: 'Invalid dealer' }, { status: 400 })
     }
 
-    // Auto-approve in dev / when env flag is set (for demo)
-    const autoApprove = getOptionalEnv('NEXT_PUBLIC_AUTO_APPROVE_REVIEWS') === 'true'
+    // Verify the reviewer has interacted with this dealer
+    const verified = await isVerifiedCustomer(supabase, dealer_id, reviewer_email, reviewer_phone)
+    if (!verified) {
+        return NextResponse.json(
+            { error: 'Only customers who have interacted with this dealership can leave a review. Please use the email or phone you used during your enquiry, purchase, or service.' },
+            { status: 403 }
+        )
+    }
 
     const { error } = await supabase
         .from('dealer_reviews')
         .insert({
             dealer_id,
             reviewer_name: reviewer_name.trim(),
+            reviewer_email: reviewer_email?.trim().toLowerCase() ?? null,
+            reviewer_phone: reviewer_phone?.trim() ?? null,
             rating,
             review_text: review_text?.trim() ?? null,
             car_purchased: car_purchased?.trim() ?? null,
-            is_approved: autoApprove,
-            moderation_status: autoApprove ? 'approved' : 'pending',
+            is_approved: false,
+            moderation_status: 'pending',
         })
 
     if (error) {
@@ -227,8 +309,6 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json({
         success: true,
-        message: autoApprove
-            ? 'Review published!'
-            : 'Thank you! Your review will be visible after dealer approval.',
+        message: 'Thank you! Your review will be visible after dealer approval.',
     })
 }

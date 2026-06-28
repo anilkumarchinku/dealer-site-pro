@@ -27,6 +27,7 @@ export default function PushNotificationsPage() {
     const [category, setCategory] = useState("announcements");
     const [targetUrl, setTargetUrl] = useState("");
     const [broadcasts, setBroadcasts] = useState<Broadcast[]>([]);
+    const [subscriberCount, setSubscriberCount] = useState<number | null>(null);
     const [loading, setLoading] = useState(false);
     const [message, setMessage] = useState("");
 
@@ -35,6 +36,10 @@ export default function PushNotificationsPage() {
             .then(res => res.json())
             .then(json => setBroadcasts(json.broadcasts ?? []))
             .catch(() => setBroadcasts([]));
+        fetch("/api/push-subscriptions")
+            .then(res => res.json())
+            .then(json => setSubscriberCount(json.count ?? 0))
+            .catch(() => setSubscriberCount(null));
     };
 
     useEffect(() => { load(); }, []);
@@ -75,7 +80,14 @@ export default function PushNotificationsPage() {
         <div className="space-y-6">
             <div>
                 <h1 className="text-2xl font-bold">Push Notifications</h1>
-                <p className="text-muted-foreground">Broadcast new listings, price drops, and announcements to opted-in devices.</p>
+                <p className="text-muted-foreground">
+                    Broadcast new listings, price drops, and announcements to opted-in devices.
+                    {subscriberCount !== null && (
+                        <span className="ml-2 inline-flex items-center rounded-full bg-emerald-100 px-2.5 py-0.5 text-xs font-medium text-emerald-800">
+                            {subscriberCount} active subscriber{subscriberCount !== 1 ? "s" : ""}
+                        </span>
+                    )}
+                </p>
             </div>
 
             <Card>

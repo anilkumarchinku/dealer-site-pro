@@ -43,6 +43,72 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ reviews: data ?? [] })
 }
 
+// ── Verify the reviewer has interacted with this dealer ──────────────────────
+async function isVerifiedCustomer(
+    supabase: ReturnType<typeof getSupabase>,
+    dealerId: string,
+    email?: string,
+    phone?: string,
+): Promise<boolean> {
+    const normalizedEmail = email?.trim().toLowerCase()
+    const phoneDigits = phone?.replace(/\D/g, '') ?? ''
+    const normalizedPhone = phoneDigits.length > 10 ? phoneDigits.slice(-10) : phoneDigits
+
+    if (!normalizedEmail && !normalizedPhone) return false
+
+    function orFilter(emailCol: string, phoneCol: string) {
+        const clauses: string[] = []
+        if (normalizedEmail) clauses.push(`${emailCol}.ilike.${normalizedEmail}`)
+        if (normalizedPhone.length === 10) clauses.push(`${phoneCol}.ilike.%${normalizedPhone}%`)
+        return clauses.join(',')
+    }
+
+    // Check car_service_bookings (most relevant for service reviews)
+    const serviceFilter = orFilter('email', 'phone')
+    if (serviceFilter) {
+        const { count } = await supabase
+            .from('car_service_bookings')
+            .select('id', { count: 'exact', head: true })
+            .eq('dealer_id', dealerId)
+            .or(serviceFilter)
+        if (count && count > 0) return true
+    }
+
+    // Check leads
+    const leadsFilter = orFilter('customer_email', 'customer_phone')
+    if (leadsFilter) {
+        const { count } = await supabase
+            .from('leads')
+            .select('id', { count: 'exact', head: true })
+            .eq('dealer_id', dealerId)
+            .or(leadsFilter)
+        if (count && count > 0) return true
+    }
+
+    // Check test_drive_bookings
+    if (leadsFilter) {
+        const { count } = await supabase
+            .from('test_drive_bookings')
+            .select('id', { count: 'exact', head: true })
+            .eq('dealer_id', dealerId)
+            .or(leadsFilter)
+        if (count && count > 0) return true
+    }
+
+    // Check sell_requests
+    const sellFilter = orFilter('seller_email', 'seller_phone')
+    if (sellFilter) {
+        const { count } = await supabase
+            .from('sell_requests')
+            .select('id', { count: 'exact', head: true })
+            .or(`dealer_id.eq.${dealerId},dealer_id.is.null`)
+            .or(sellFilter)
+        if (count && count > 0) return true
+    }
+
+    return false
+}
+
 export async function POST(request: NextRequest) {
     const rateLimit = await rateLimitOrNull('service_center_reviews', request, 5, 24 * 60 * 60 * 1000)
     if (rateLimit) return rateLimit
@@ -51,10 +117,15 @@ export async function POST(request: NextRequest) {
     if (!body) return NextResponse.json({ error: 'Invalid JSON' }, { status: 400 })
     const serviceCenterId = typeof body.service_center_id === 'string' ? body.service_center_id : ''
     const reviewerName = typeof body.reviewer_name === 'string' ? body.reviewer_name.trim().slice(0, 80) : ''
+    const reviewerEmail = typeof body.reviewer_email === 'string' ? body.reviewer_email.trim().toLowerCase() : ''
+    const reviewerPhone = typeof body.reviewer_phone === 'string' ? body.reviewer_phone.trim() : ''
     const rating = Number(body.rating)
     const reviewText = typeof body.review_text === 'string' ? body.review_text.trim().slice(0, 500) : null
     if (!serviceCenterId || !reviewerName || !Number.isInteger(rating) || rating < 1 || rating > 5) {
         return NextResponse.json({ error: 'Service center, name, and 1-5 rating are required' }, { status: 400 })
+    }
+    if (!reviewerEmail && !reviewerPhone) {
+        return NextResponse.json({ error: 'Email or phone is required to verify your identity' }, { status: 400 })
     }
 
     const supabase = getSupabase()
@@ -66,12 +137,23 @@ export async function POST(request: NextRequest) {
         .maybeSingle()
     if (centerError || !center) return NextResponse.json({ error: 'Invalid service center' }, { status: 400 })
 
+    // Verify the reviewer has interacted with this dealer
+    const verified = await isVerifiedCustomer(supabase, center.dealer_id, reviewerEmail, reviewerPhone)
+    if (!verified) {
+        return NextResponse.json(
+            { error: 'Only customers who have interacted with this dealership can leave a review. Please use the email or phone you used during your enquiry, purchase, or service.' },
+            { status: 403 }
+        )
+    }
+
     const { error } = await supabase
         .from('service_center_reviews')
         .insert({
             dealer_id: center.dealer_id,
             service_center_id: serviceCenterId,
             reviewer_name: reviewerName,
+            reviewer_email: reviewerEmail || null,
+            reviewer_phone: reviewerPhone || null,
             rating,
             review_text: reviewText || null,
         })

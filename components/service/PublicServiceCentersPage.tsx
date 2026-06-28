@@ -93,7 +93,7 @@ export function PublicServiceCentersPage({ dealerId, dealerName, siteSlug, cente
         preferred_slot: "",
         notes: "",
     })
-    const [reviewForm, setReviewForm] = useState<Record<string, { name: string; rating: number; text: string }>>({})
+    const [reviewForm, setReviewForm] = useState<Record<string, { name: string; email: string; phone: string; rating: number; text: string }>>({})
     const selectedCenter = centers.find(center => center.id === selectedCenterId) ?? centers[0]
 
     const tiersForCenter = useMemo(() => {
@@ -129,7 +129,11 @@ export function PublicServiceCentersPage({ dealerId, dealerName, siteSlug, cente
     }
 
     async function submitReview(center: ServiceCenter) {
-        const form = reviewForm[center.id] ?? { name: "", rating: 0, text: "" }
+        const form = reviewForm[center.id] ?? { name: "", email: "", phone: "", rating: 0, text: "" }
+        if (!form.email && !form.phone) {
+            setReviewStatus(prev => ({ ...prev, [center.id]: "Email or phone is required to verify your identity." }))
+            return
+        }
         setReviewStatus(prev => ({ ...prev, [center.id]: "Submitting..." }))
         const res = await fetch("/api/service-center-reviews", {
             method: "POST",
@@ -137,13 +141,15 @@ export function PublicServiceCentersPage({ dealerId, dealerName, siteSlug, cente
             body: JSON.stringify({
                 service_center_id: center.id,
                 reviewer_name: form.name,
+                reviewer_email: form.email || null,
+                reviewer_phone: form.phone || null,
                 rating: form.rating,
                 review_text: form.text,
             }),
         })
         const data = await res.json().catch(() => null)
         setReviewStatus(prev => ({ ...prev, [center.id]: res.ok ? data.message : data?.error ?? "Could not submit review." }))
-        if (res.ok) setReviewForm(prev => ({ ...prev, [center.id]: { name: "", rating: 0, text: "" } }))
+        if (res.ok) setReviewForm(prev => ({ ...prev, [center.id]: { name: "", email: "", phone: "", rating: 0, text: "" } }))
     }
 
     return (
@@ -172,7 +178,7 @@ export function PublicServiceCentersPage({ dealerId, dealerName, siteSlug, cente
                                 const imageIndex = activeImage[center.id] ?? 0
                                 const centerReviews = reviews.filter(review => review.service_center_id === center.id)
                                 const avg = centerReviews.length ? centerReviews.reduce((sum, r) => sum + r.rating, 0) / centerReviews.length : 0
-                                const form = reviewForm[center.id] ?? { name: "", rating: 0, text: "" }
+                                const form = reviewForm[center.id] ?? { name: "", email: "", phone: "", rating: 0, text: "" }
                                 return (
                                     <article key={center.id} className={`rounded-xl border p-4 ${selectedCenterId === center.id ? "border-emerald-500" : "border-slate-200"}`}>
                                         <div className="grid gap-4 md:grid-cols-[240px_1fr]">
@@ -212,9 +218,12 @@ export function PublicServiceCentersPage({ dealerId, dealerName, siteSlug, cente
                                                             <p key={review.id} className="text-sm text-slate-600"><strong>{review.reviewer_name}:</strong> {review.review_text || `${review.rating}/5 service rating`}</p>
                                                         ))}
                                                     </div>
-                                                    <div className="mt-4 grid gap-2 sm:grid-cols-[1fr_auto]">
-                                                        <Input placeholder="Your name" value={form.name} onChange={e => setReviewForm(prev => ({ ...prev, [center.id]: { ...form, name: e.target.value } }))} />
-                                                        <Stars value={form.rating} onSelect={rating => setReviewForm(prev => ({ ...prev, [center.id]: { ...form, rating } }))} />
+                                                    <div className="mt-4 grid gap-2 sm:grid-cols-2">
+                                                        <Input placeholder="Your name *" value={form.name} onChange={e => setReviewForm(prev => ({ ...prev, [center.id]: { ...form, name: e.target.value } }))} />
+                                                        <div className="flex items-center"><Stars value={form.rating} onSelect={rating => setReviewForm(prev => ({ ...prev, [center.id]: { ...form, rating } }))} /></div>
+                                                        <Input type="email" placeholder="Email" value={form.email} onChange={e => setReviewForm(prev => ({ ...prev, [center.id]: { ...form, email: e.target.value } }))} />
+                                                        <Input type="tel" placeholder="Phone" value={form.phone} onChange={e => setReviewForm(prev => ({ ...prev, [center.id]: { ...form, phone: e.target.value } }))} />
+                                                        <p className="text-[11px] text-slate-500 sm:col-span-2 -mt-1">We verify your email/phone against our records to ensure only genuine customers can review.</p>
                                                         <textarea className="rounded-md border border-input px-3 py-2 text-sm sm:col-span-2" rows={2} placeholder="Rate this service center" value={form.text} onChange={e => setReviewForm(prev => ({ ...prev, [center.id]: { ...form, text: e.target.value } }))} />
                                                         <Button type="button" variant="outline" onClick={() => submitReview(center)}>Submit Center Review</Button>
                                                         {reviewStatus[center.id] && <p className="text-xs text-slate-600 sm:self-center">{reviewStatus[center.id]}</p>}

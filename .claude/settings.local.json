@@ -11,7 +11,17 @@
       "Bash(pip3:*)",
       "Bash(pip install:*)",
       "Bash(python:*)",
-      "mcp__claude_ai_SupaBase__get_logs"
+      "mcp__claude_ai_SupaBase__get_logs",
+      "Bash(tasklist:*)",
+      "Bash(curl:*)",
+      "Skill(claude-in-chrome)",
+      "mcp__claude_ai_SupaBase__get_publishable_keys",
+      "Bash(printenv:*)",
+      "Bash(unset:*)",
+      "Bash(PORT=3001 npm run dev:*)",
+      "Bash(netstat:*)",
+      "Bash(taskkill:*)",
+      "Bash(npx web-push:*)"
     ]
   }
 }

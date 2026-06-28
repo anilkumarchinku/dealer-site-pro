@@ -143,7 +143,9 @@ export async function POST(request: NextRequest) {
     const customerFilter = contactOrFilter(verifiedEmail, phone)
     const sellerFilter = contactOrFilter(verifiedEmail, phone, 'seller_email', 'seller_phone')
 
-    const [leadsResult, testDrivesResult, sellRequestsResult, vehiclesResult, offersResult] = await Promise.all([
+    const serviceFilter = contactOrFilter(verifiedEmail, phone, 'email', 'phone')
+
+    const [leadsResult, testDrivesResult, sellRequestsResult, serviceBookingsResult, vehiclesResult, offersResult] = await Promise.all([
         admin
             .from('leads')
             .select('id, customer_name, customer_phone, customer_email, lead_type, status, vehicle_interest, message, created_at')
@@ -160,9 +162,16 @@ export async function POST(request: NextRequest) {
             .limit(20),
         admin
             .from('sell_requests')
-            .select('id, seller_name, seller_phone, seller_email, make, model, variant, year, expected_price, status, preferred_date, created_at')
+            .select('id, seller_name, seller_phone, seller_email, make, model, variant, year, expected_price_paise, status, preferred_date, created_at')
             .or(`dealer_id.eq.${dealer.id},dealer_id.is.null`)
             .or(sellerFilter)
+            .order('created_at', { ascending: false })
+            .limit(20),
+        admin
+            .from('car_service_bookings')
+            .select('id, customer_name, phone, email, vehicle_reg_no, vehicle_make, vehicle_model, service_type, preferred_date, preferred_slot, status, created_at')
+            .eq('dealer_id', dealer.id)
+            .or(serviceFilter)
             .order('created_at', { ascending: false })
             .limit(20),
         admin
@@ -182,7 +191,7 @@ export async function POST(request: NextRequest) {
             .limit(8),
     ])
 
-    if (leadsResult.error || testDrivesResult.error || sellRequestsResult.error) {
+    if (leadsResult.error || testDrivesResult.error || sellRequestsResult.error || serviceBookingsResult.error) {
         return NextResponse.json({ error: 'Failed to load customer activity' }, { status: 500 })
     }
 
@@ -193,6 +202,7 @@ export async function POST(request: NextRequest) {
             inquiries: leadsResult.data ?? [],
             test_drives: testDrivesResult.data ?? [],
             sell_requests: sellRequestsResult.data ?? [],
+            service_bookings: serviceBookingsResult.data ?? [],
         },
         new_arrivals: vehiclesResult.data ?? [],
         offers: offersResult.data ?? [],

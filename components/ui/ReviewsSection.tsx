@@ -108,7 +108,7 @@ export function ReviewsSection({ dealerId, brandColor = '#A8793A', variant = 'li
     const [showForm, setShowForm] = useState(false);
 
     // Form state
-    const [form, setForm] = useState({ name: '', rating: 0, text: '', car: '' });
+    const [form, setForm] = useState({ name: '', email: '', phone: '', rating: 0, text: '', car: '' });
     const [submitStatus, setSubmitStatus] = useState<'idle' | 'loading' | 'done' | 'error'>('idle');
     const [submitMsg, setSubmitMsg] = useState('');
 
@@ -138,6 +138,8 @@ export function ReviewsSection({ dealerId, brandColor = '#A8793A', variant = 'li
                 body: JSON.stringify({
                     dealer_id:       dealerId,
                     reviewer_name:   form.name,
+                    reviewer_email:  form.email || null,
+                    reviewer_phone:  form.phone || null,
                     rating:          form.rating,
                     review_text:     form.text || null,
                     car_purchased:   form.car || null,
@@ -147,7 +149,7 @@ export function ReviewsSection({ dealerId, brandColor = '#A8793A', variant = 'li
             if (!res.ok) throw new Error(data.error)
             setSubmitStatus('done')
             setSubmitMsg(data.message)
-            setForm({ name: '', rating: 0, text: '', car: '' })
+            setForm({ name: '', email: '', phone: '', rating: 0, text: '', car: '' })
         } catch (err) {
             setSubmitStatus('error')
             setSubmitMsg(err instanceof Error ? err.message : 'Something went wrong')
@@ -223,6 +225,30 @@ export function ReviewsSection({ dealerId, brandColor = '#A8793A', variant = 'li
                                     />
                                 </div>
                             </div>
+
+                            <div className="grid sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label className={`block text-xs font-semibold mb-1.5 ${labelCls}`}>Email *</label>
+                                    <input
+                                        type="email"
+                                        value={form.email}
+                                        onChange={e => setForm({ ...form, email: e.target.value })}
+                                        placeholder="you@example.com"
+                                        className={`w-full px-3.5 py-2.5 rounded-xl border text-sm focus:outline-none focus:ring-1 ${inputCls}`}
+                                    />
+                                </div>
+                                <div>
+                                    <label className={`block text-xs font-semibold mb-1.5 ${labelCls}`}>Phone</label>
+                                    <input
+                                        type="tel"
+                                        value={form.phone}
+                                        onChange={e => setForm({ ...form, phone: e.target.value })}
+                                        placeholder="10-digit mobile number"
+                                        className={`w-full px-3.5 py-2.5 rounded-xl border text-sm focus:outline-none focus:ring-1 ${inputCls}`}
+                                    />
+                                </div>
+                            </div>
+                            <p className={`text-[11px] -mt-2 ${subColor}`}>We verify your email/phone against our records to ensure only genuine customers can review.</p>
 
                             <div>
                                 <label className={`block text-xs font-semibold mb-2 ${labelCls}`}>Service Rating *</label>

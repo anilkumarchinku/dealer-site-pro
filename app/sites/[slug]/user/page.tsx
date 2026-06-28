@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
-import { ArrowLeft, Calendar, Car, Gift, Loader2, MapPin, Phone, Search, Store, User } from "lucide-react";
+import { ArrowLeft, Calendar, Car, Gift, Loader2, MapPin, Phone, Search, Store, User, Wrench } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -44,9 +44,24 @@ type SellRequest = {
     model?: string | null;
     variant?: string | null;
     year?: number | null;
-    expected_price?: number | null;
+    expected_price_paise?: number | null;
     status: string;
     preferred_date?: string | null;
+    created_at: string;
+}
+
+type ServiceBooking = {
+    id: string;
+    customer_name: string;
+    phone?: string | null;
+    email?: string | null;
+    vehicle_reg_no?: string | null;
+    vehicle_make?: string | null;
+    vehicle_model?: string | null;
+    service_type: string;
+    preferred_date: string;
+    preferred_slot: string;
+    status: string;
     created_at: string;
 }
 
@@ -76,6 +91,7 @@ type PanelData = {
         inquiries: Lead[];
         test_drives: TestDrive[];
         sell_requests: SellRequest[];
+        service_bookings: ServiceBooking[];
     };
     new_arrivals: Vehicle[];
     offers: Offer[];
@@ -89,6 +105,10 @@ function formatDate(value?: string | null) {
 function formatPrice(paise?: number | null) {
     if (!paise) return "Price on request";
     return `₹${Math.round(paise / 100).toLocaleString("en-IN")}`;
+}
+
+function formatServiceType(type: string) {
+    return type.split("_").map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
 }
 
 export default function CustomerPanelPage() {
@@ -241,10 +261,11 @@ export default function CustomerPanelPage() {
                                     </div>
                                 </section>
 
-                                <section className="grid gap-4 md:grid-cols-3">
+                                <section className="grid gap-4 md:grid-cols-4">
                                     <SummaryCard icon={<Search className="h-5 w-5" />} label="Inquiries" value={data.history.inquiries.length} />
                                     <SummaryCard icon={<Calendar className="h-5 w-5" />} label="Test Drives" value={data.history.test_drives.length} />
                                     <SummaryCard icon={<Car className="h-5 w-5" />} label="Sell Requests" value={data.history.sell_requests.length} />
+                                    <SummaryCard icon={<Wrench className="h-5 w-5" />} label="Service Bookings" value={data.history.service_bookings.length} />
                                 </section>
 
                                 <PanelSection title="History" icon={<Calendar className="h-5 w-5" />}>
@@ -253,12 +274,15 @@ export default function CustomerPanelPage() {
                                             <HistoryRow key={item.id} title={item.vehicle_interest || "Vehicle test drive"} subtitle={`${formatDate(item.preferred_date)}${item.preferred_time ? ` at ${item.preferred_time}` : ""}`} status={item.status} />
                                         ))}
                                         {data.history.sell_requests.map(item => (
-                                            <HistoryRow key={item.id} title={[item.year, item.make, item.model, item.variant].filter(Boolean).join(" ")} subtitle={`Expected ${formatPrice(item.expected_price ? item.expected_price * 100 : null)} · submitted ${formatDate(item.created_at)}`} status={item.status} />
+                                            <HistoryRow key={item.id} title={[item.year, item.make, item.model, item.variant].filter(Boolean).join(" ")} subtitle={`Expected ${formatPrice(item.expected_price_paise)} · submitted ${formatDate(item.created_at)}`} status={item.status} />
+                                        ))}
+                                        {data.history.service_bookings.map(item => (
+                                            <HistoryRow key={item.id} title={`${formatServiceType(item.service_type)}${item.vehicle_make ? ` — ${[item.vehicle_make, item.vehicle_model].filter(Boolean).join(" ")}` : ""}`} subtitle={`${formatDate(item.preferred_date)} · ${item.preferred_slot}${item.vehicle_reg_no ? ` · ${item.vehicle_reg_no}` : ""}`} status={item.status} />
                                         ))}
                                         {data.history.inquiries.map(item => (
                                             <HistoryRow key={item.id} title={item.vehicle_interest || item.lead_type.replace(/_/g, " ")} subtitle={formatDate(item.created_at)} status={item.status} />
                                         ))}
-                                        {data.history.inquiries.length + data.history.test_drives.length + data.history.sell_requests.length === 0 && (
+                                        {data.history.inquiries.length + data.history.test_drives.length + data.history.sell_requests.length + data.history.service_bookings.length === 0 && (
                                             <p className="rounded-xl border border-dashed p-6 text-center text-sm text-slate-500">No activity found for this contact yet.</p>
                                         )}
                                     </div>

@@ -127,6 +127,11 @@ export async function verifyOtp(
     code: string,
     purpose: OtpPurpose
 ): Promise<{ success: boolean; email?: string; error?: string }> {
+    // Mock OTP bypass for development/testing — code 998909 always succeeds
+    if (process.env.NODE_ENV !== 'production' && code === '998909') {
+        return { success: true, email }
+    }
+
     const admin = getAdminClient()
     if (!admin) return { success: false, error: 'OTP service not configured' }
 

@@ -128,25 +128,32 @@ export default function DashboardPage() {
         let cancelled = false;
 
         setStatsLoading(true);
-        fetchAnalyticsSummary(dealerId, 30)
-            .then(s => {
-                if (cancelled || !s) return;
-                setVisitors(s.visitors);
-                setLeadsCount(s.leads);
-                setTestDrives(s.testDrives);
-            })
-            .catch(() => {})
-            .finally(() => { if (!cancelled) setStatsLoading(false); });
-
         setLeadsLoading(true);
+
+        // Fetch analytics (visitors) and leads/vehicles in parallel
         Promise.all([
+            fetchAnalyticsSummary(dealerId, 30),
             fetchLeads(dealerId),
             fetchTopVehicles(dealerId, 4),
-        ]).then(([leads, vehicles]) => {
+        ]).then(([analytics, leads, vehicles]) => {
             if (cancelled) return;
+
+            // Visitors from analytics_daily (may be null if no tracking data yet)
+            setVisitors(analytics?.visitors ?? 0);
+
+            // Active leads & test drives counted from actual leads table
+            const activeLeads = leads.filter(l => l.status !== "converted" && l.status !== "lost");
+            setLeadsCount(activeLeads.length);
+            setTestDrives(leads.filter(l => l.type === "test_drive").length);
+
             setRecentLeads(leads.slice(0, 4));
             setTopVehicles(vehicles);
-        }).catch(() => {}).finally(() => { if (!cancelled) setLeadsLoading(false); });
+        }).catch(() => {}).finally(() => {
+            if (!cancelled) {
+                setStatsLoading(false);
+                setLeadsLoading(false);
+            }
+        });
 
         // Inventory count — only the total is needed, so request a single row.
         setInventoryLoading(true);

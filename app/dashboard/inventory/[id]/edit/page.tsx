@@ -213,6 +213,20 @@ export default function EditVehiclePage() {
             setError(result.error ?? "Failed to update vehicle");
             return;
         }
+        // Fire-and-forget push notification if price dropped
+        const newPricePaise = Math.round((Number(form.price_inr) || 0) * 100);
+        if (vehicle && vehicle.price_paise > 0 && newPricePaise > 0 && newPricePaise < vehicle.price_paise) {
+            fetch('/api/push-trigger', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    type: 'price_drop',
+                    vehicle: { make: form.make.trim(), model: form.model.trim(), year: Number(form.year) },
+                    old_price_paise: vehicle.price_paise,
+                    new_price_paise: newPricePaise,
+                }),
+            }).catch(() => { /* push trigger failure is non-fatal */ })
+        }
         router.push("/dashboard/inventory");
     }
 
