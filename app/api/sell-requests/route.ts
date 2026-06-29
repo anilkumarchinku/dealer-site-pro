@@ -7,7 +7,7 @@ import { getOptionalEnv } from '@/lib/env'
 import { sendSellRequestConfirmationEmail, sendSellRequestNotificationEmail } from '@/lib/services/email-service'
 import { rateLimitOrNull } from '@/lib/utils/rate-limiter'
 
-const SELL_REQUEST_STATUSES = ['new', 'reviewing', 'contacted', 'approved', 'rejected', 'listed'] as const
+const SELL_REQUEST_STATUSES = ['new', 'reviewing', 'contacted', 'approved', 'rejected', 'listed', 'sold'] as const
 type SellRequestStatus = typeof SELL_REQUEST_STATUSES[number]
 type InsuranceStatus = 'unknown' | 'active' | 'expired' | 'expiring_soon'
 type ListingOverrides = Partial<{
@@ -279,7 +279,7 @@ export async function GET() {
 
     const { data, error } = await db(routeSupabase)
         .from('sell_requests')
-        .select('*')
+        .select('*, vehicles:approved_vehicle_id(price_paise, status)')
         .or(`dealer_id.eq.${dealer.id},dealer_id.is.null`)
         .order('created_at', { ascending: false })
         .limit(100)
@@ -289,7 +289,25 @@ export async function GET() {
         return NextResponse.json({ error: 'Failed to fetch sell requests' }, { status: 500 })
     }
 
-    return NextResponse.json({ requests: data ?? [] })
+    // Flatten joined vehicle data and derive effective status
+    const requests = (data ?? []).map((row: Record<string, unknown>) => {
+        const vehicle = row.vehicles as { price_paise?: number; status?: string } | null
+        const listing_price_paise = vehicle?.price_paise ?? null
+        const vehicle_status = vehicle?.status ?? null
+        // If the linked vehicle is sold, reflect that as the sell request's effective status
+        const effective_status = row.status === 'listed' && vehicle_status === 'sold'
+            ? 'sold'
+            : row.status
+        return {
+            ...row,
+            vehicles: undefined,
+            listing_price_paise,
+            vehicle_status,
+            effective_status,
+        }
+    })
+
+    return NextResponse.json({ requests })
 }
 
 export async function POST(request: NextRequest) {

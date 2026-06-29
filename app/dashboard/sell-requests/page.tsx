@@ -7,11 +7,11 @@ import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { cn } from "@/lib/utils"
 import { deriveInsuranceStatus, getChallanSummary, parseIndianDate, parseMakeModel, type RCData } from "@/lib/utils/rc-mapper"
-import { AlertCircle, Camera, CheckCircle, Clock, ExternalLink, FileSearch, IndianRupee, Loader2, Phone, RefreshCw, Search, ShieldCheck, XCircle } from "lucide-react"
+import { AlertCircle, Camera, CheckCircle, Clock, ExternalLink, FileSearch, Loader2, Phone, RefreshCw, Search, ShieldCheck, XCircle } from "lucide-react"
 import { PremiumPageHeader } from "@/components/dashboard/premium-ui"
 import { timeAgo } from "@/lib/utils/format"
 
-type SellRequestStatus = "new" | "reviewing" | "contacted" | "approved" | "rejected" | "listed"
+type SellRequestStatus = "new" | "reviewing" | "contacted" | "approved" | "rejected" | "listed" | "sold"
 type FieldSource = "seller" | "rc"
 type ListingOverrideKey =
     | "make"
@@ -81,6 +81,9 @@ interface SellRequest {
     notes: string | null
     status: SellRequestStatus
     approved_vehicle_id: string | null
+    listing_price_paise: number | null
+    vehicle_status: string | null
+    effective_status: SellRequestStatus
     created_at: string
 }
 
@@ -91,6 +94,7 @@ const statusStyles: Record<SellRequestStatus, string> = {
     approved: "bg-emerald-50 text-emerald-700 border-emerald-200 dark:bg-emerald-500/10 dark:text-emerald-300 dark:border-emerald-500/20",
     rejected: "bg-red-50 text-red-700 border-red-200 dark:bg-red-500/10 dark:text-red-300 dark:border-red-500/20",
     listed: "bg-purple-50 text-purple-700 border-purple-200 dark:bg-purple-500/10 dark:text-purple-300 dark:border-purple-500/20",
+    sold: "bg-teal-50 text-teal-700 border-teal-200 dark:bg-teal-500/10 dark:text-teal-300 dark:border-teal-500/20",
 }
 
 function formatPaise(value: number | null | undefined) {
@@ -98,16 +102,11 @@ function formatPaise(value: number | null | undefined) {
     return `Rs. ${Math.round(value / 100).toLocaleString("en-IN")}`
 }
 
-function formatRange(low: number | null, high: number | null) {
-    if (!low || !high) return "Estimate pending"
-    return `${formatPaise(low)} - ${formatPaise(high)}`
-}
-
-function bestListingPricePaise(request: SellRequest) {
-    return request.estimated_high_paise
-        ?? request.estimated_low_paise
-        ?? request.expected_price_paise
-        ?? 0
+function formatProfit(listingPaise: number | null, sellerPaise: number | null) {
+    if (!listingPaise || !sellerPaise) return null
+    const profit = listingPaise - sellerPaise
+    if (profit <= 0) return `- ${formatPaise(Math.abs(profit))}`
+    return `+ ${formatPaise(profit)}`
 }
 
 function yesNo(value: boolean | null | undefined) {
@@ -291,10 +290,11 @@ export default function SellRequestsPage() {
             request.registration_number,
             request.vin,
         ].filter(Boolean).join(" ").toLowerCase()
+        const es = request.effective_status ?? request.status
         const matchesStatus = status === "all"
-            || request.status === status
-            // "approved" filter should also show "listed" items (API normalizes approved → listed)
-            || (status === "approved" && request.status === "listed")
+            || es === status
+            // "approved" filter shows both listed and sold items
+            || (status === "approved" && (es === "listed" || es === "sold"))
         return text.includes(query.toLowerCase()) && matchesStatus
     }), [query, requests, status])
 
@@ -574,11 +574,12 @@ export default function SellRequestsPage() {
                         <SelectTrigger className="w-full sm:w-44"><SelectValue /></SelectTrigger>
                         <SelectContent>
                             <SelectItem value="all">All statuses</SelectItem>
-                            <SelectItem value="new">Pending approval</SelectItem>
-                            {Object.keys(statusStyles).map(item => (
-                                item === "new" ? null :
-                                <SelectItem key={item} value={item}>{item}</SelectItem>
-                            ))}
+                            <SelectItem value="new">Pending</SelectItem>
+                            <SelectItem value="reviewing">Reviewing</SelectItem>
+                            <SelectItem value="contacted">Contacted</SelectItem>
+                            <SelectItem value="approved">Approved / Listed</SelectItem>
+                            <SelectItem value="sold">Sold</SelectItem>
+                            <SelectItem value="rejected">Rejected</SelectItem>
                         </SelectContent>
                     </Select>
                 </CardContent>
@@ -595,8 +596,8 @@ export default function SellRequestsPage() {
                             <div className="min-w-0 space-y-3">
                                 <div className="flex flex-wrap items-center gap-2">
                                     <h2 className="font-black tracking-tight">{request.make} {request.model} {request.variant}</h2>
-                                    <span className={cn("rounded-full border px-2 py-0.5 text-xs font-medium capitalize", statusStyles[request.status])}>
-                                        {request.status}
+                                    <span className={cn("rounded-full border px-2 py-0.5 text-xs font-medium capitalize", statusStyles[request.effective_status ?? request.status])}>
+                                        {request.effective_status ?? request.status}
                                     </span>
                                     <span className="text-xs text-muted-foreground">{timeAgo(request.created_at)}</span>
                                 </div>
@@ -614,10 +615,33 @@ export default function SellRequestsPage() {
                                     {detailChip("Body", request.body_type)}
                                     {detailChip("Colour", request.color)}
                                     {detailChip("VIN", request.vin)}
-                                    <span className="rounded-full border px-2 py-1">Expected: {formatPaise(request.expected_price_paise)}</span>
                                     <span className="rounded-full border px-2 py-1">Insurance: {request.insurance_status ?? "unknown"}</span>
                                     {detailChip("Provider", request.insurance_provider)}
                                     {detailChip("Valid until", request.insurance_valid_until)}
+                                </div>
+
+                                <div className="flex flex-wrap gap-3 text-sm">
+                                    <span className="flex items-center gap-1.5 rounded-lg border bg-muted/30 px-3 py-1.5">
+                                        <span className="text-xs text-muted-foreground">Seller Price:</span>
+                                        <span className="font-semibold">{formatPaise(request.expected_price_paise)}</span>
+                                    </span>
+                                    {request.listing_price_paise ? (
+                                        <>
+                                            <span className="flex items-center gap-1.5 rounded-lg border bg-muted/30 px-3 py-1.5">
+                                                <span className="text-xs text-muted-foreground">Listing Price:</span>
+                                                <span className="font-semibold">{formatPaise(request.listing_price_paise)}</span>
+                                            </span>
+                                            <span className={cn(
+                                                "flex items-center gap-1.5 rounded-lg border px-3 py-1.5 font-semibold",
+                                                (request.listing_price_paise - (request.expected_price_paise ?? 0)) >= 0
+                                                    ? "border-emerald-200 bg-emerald-50 text-emerald-700 dark:border-emerald-500/20 dark:bg-emerald-500/10 dark:text-emerald-300"
+                                                    : "border-red-200 bg-red-50 text-red-700 dark:border-red-500/20 dark:bg-red-500/10 dark:text-red-300"
+                                            )}>
+                                                <span className="text-xs font-normal opacity-70">Profit:</span>
+                                                {formatProfit(request.listing_price_paise, request.expected_price_paise)}
+                                            </span>
+                                        </>
+                                    ) : null}
                                 </div>
 
                                 <div className="flex flex-wrap gap-2 text-xs text-muted-foreground">
@@ -638,7 +662,6 @@ export default function SellRequestsPage() {
 
                                 <div className="flex flex-wrap gap-4 text-sm">
                                     <span className="flex items-center gap-1.5"><Phone className="h-4 w-4" />{request.seller_name} / {request.seller_phone}</span>
-                                    <span className="flex items-center gap-1.5"><IndianRupee className="h-4 w-4" />{formatRange(request.estimated_low_paise, request.estimated_high_paise)}</span>
                                     {request.preferred_slot && <span className="flex items-center gap-1.5"><Clock className="h-4 w-4" />{request.preferred_slot}</span>}
                                 </div>
 
