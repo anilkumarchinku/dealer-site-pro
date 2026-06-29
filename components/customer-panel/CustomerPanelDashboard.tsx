@@ -45,7 +45,7 @@ function buildRecentActivity(data: PanelData): ActivityItem[] {
         items.push({
             id: item.id, type: "sell-request",
             title: [item.year, item.make, item.model].filter(Boolean).join(" "),
-            subtitle: `Expected ${formatPrice(item.expected_price_paise)}`,
+            subtitle: `Price ${formatPrice(item.expected_price_paise)}`,
             status: item.status, created_at: item.created_at,
         })
     }

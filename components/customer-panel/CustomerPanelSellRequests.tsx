@@ -38,7 +38,7 @@ export function CustomerPanelSellRequests({ sellRequests }: Props) {
                         <div key={item.id} className="flex items-start justify-between gap-4 rounded-xl border bg-white p-4">
                             <div className="min-w-0 flex-1">
                                 <p className="font-semibold">{[item.year, item.make, item.model, item.variant].filter(Boolean).join(" ")}</p>
-                                <p className="mt-1 text-sm text-slate-600">Expected {formatPrice(item.expected_price_paise)}</p>
+                                <p className="mt-1 text-sm text-slate-600">Price {formatPrice(item.expected_price_paise)}</p>
                                 <p className="mt-1 text-xs text-slate-500">
                                     Submitted {formatDate(item.created_at)}
                                     {item.preferred_date ? ` · Inspection ${formatDate(item.preferred_date)}` : ""}
