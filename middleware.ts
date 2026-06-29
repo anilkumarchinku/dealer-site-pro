@@ -6,16 +6,21 @@ const PROTECTED_PREFIXES = ['/dashboard', '/onboarding', '/preview']
 const AUTH_PAGES       = ['/auth/login', '/auth/register']
 const ADMIN_SESSION_COOKIE = 'dealer_site_admin_session'
 
+// Additional main domains — comma-separated extra root domains treated as the
+// main app (not dealer subdomains). Set in Vercel env:
+// NEXT_PUBLIC_ADDITIONAL_MAIN_DOMAINS=mamacaca.com,www.mamacaca.com
+const additionalMainDomains = (process.env.NEXT_PUBLIC_ADDITIONAL_MAIN_DOMAINS ?? '')
+    .split(',')
+    .map(d => d.trim().toLowerCase().replace(/^https?:\/\//, '').replace(/\/.*$/, '').replace(/:\d+$/, ''))
+    .filter(Boolean)
+
 // Base domain from env (e.g. "your-project.vercel.app" or "indrav.in")
 const configuredBaseDomain = process.env.NEXT_PUBLIC_BASE_DOMAIN ?? 'indrav.in'
-const normalizedConfiguredBaseDomain = configuredBaseDomain
+const BASE_DOMAIN = configuredBaseDomain
     .toLowerCase()
     .replace(/^https?:\/\//, '')
     .replace(/\/.*$/, '')
     .replace(/:\d+$/, '')
-const BASE_DOMAIN = normalizedConfiguredBaseDomain === 'dealersitepro.com'
-    ? 'indrav.in'
-    : normalizedConfiguredBaseDomain
 const CONFIGURED_USE_SUBDOMAIN = process.env.NEXT_PUBLIC_USE_SUBDOMAIN
 
 // ── Domain cache (shared across all instances via Upstash, local Map as fallback) ──
@@ -117,11 +122,11 @@ export async function middleware(request: NextRequest) {
         requestHostname === `www.${baseHostname}` ||
         requestHostname.startsWith('localhost') ||
         requestHostname.startsWith('127.0.0.1') ||
-        requestHostname.endsWith('.vercel.app')   // Vercel preview/production deployments
+        requestHostname.endsWith('.vercel.app') || // Vercel preview/production deployments
+        additionalMainDomains.includes(requestHostname)
 
     const shouldUsePublicSubdomains =
         CONFIGURED_USE_SUBDOMAIN === 'true' ||
-        baseHostname === 'indrav.in' ||
         (CONFIGURED_USE_SUBDOMAIN !== 'false' &&
             !baseHostname.startsWith('localhost') &&
             !baseHostname.startsWith('127.0.0.1') &&
