@@ -6,9 +6,10 @@
  * Part of the fixed light public-site skin (white surfaces, brand-coloured CTA).
  */
 
-import { useState, type FormEvent, type CSSProperties } from 'react';
+import { useRef, useState, type FormEvent, type CSSProperties } from 'react';
 import { Send, CheckCircle2 } from 'lucide-react';
 import { getContrastText } from '@/lib/utils/color-contrast';
+import { isValidEmail, isValidIndianPhone, focusFirstInvalidField } from '@/lib/validations/client';
 
 interface ContactMessageFormProps {
     dealerId: string;
@@ -20,6 +21,7 @@ export function ContactMessageForm({ dealerId, brandColor }: ContactMessageFormP
     const [consent, setConsent] = useState(false);
     const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
     const [error, setError] = useState<string | null>(null);
+    const formRef = useRef<HTMLFormElement>(null);
 
     const ringStyle = { '--tw-ring-color': brandColor } as CSSProperties;
     const inputCls =
@@ -27,9 +29,18 @@ export function ContactMessageForm({ dealerId, brandColor }: ContactMessageFormP
 
     const handleSubmit = async (e: FormEvent) => {
         e.preventDefault();
-        if (form.name.trim().length < 2) { setError('Please enter your name.'); return; }
-        if (form.message.trim().length < 1) { setError('Please enter a message.'); return; }
-        if (!consent) { setError('Please agree to be contacted.'); return; }
+        const errors: Record<string, string> = {};
+        if (form.name.trim().length < 2) errors.name = 'Please enter your name.';
+        if (!isValidIndianPhone(form.phone)) errors.phone = 'Enter a valid 10-digit mobile number.';
+        if (!isValidEmail(form.email)) errors.email = 'Enter a valid email address.';
+        if (form.message.trim().length < 1) errors.message = 'Please enter a message.';
+        if (!consent) errors.consent = 'Please agree to be contacted.';
+        const firstError = Object.values(errors)[0];
+        if (firstError) {
+            setError(firstError);
+            focusFirstInvalidField(errors, formRef.current);
+            return;
+        }
         setError(null);
         setStatus('sending');
         try {
@@ -68,7 +79,7 @@ export function ContactMessageForm({ dealerId, brandColor }: ContactMessageFormP
     }
 
     return (
-        <form onSubmit={handleSubmit} className="space-y-4 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
+        <form ref={formRef} onSubmit={handleSubmit} className="space-y-4 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
             <div>
                 <h2 className="text-2xl font-bold text-gray-900">Send us a message</h2>
                 <p className="mt-1 text-sm text-gray-600">Have a question? Send us a note and our team will reply.</p>
@@ -79,6 +90,8 @@ export function ContactMessageForm({ dealerId, brandColor }: ContactMessageFormP
                     <input
                         type="text"
                         required
+                        name="name"
+                        data-field="name"
                         value={form.name}
                         onChange={e => setForm({ ...form, name: e.target.value })}
                         className={inputCls}
@@ -87,27 +100,34 @@ export function ContactMessageForm({ dealerId, brandColor }: ContactMessageFormP
                     />
                 </div>
                 <div>
-                    <label className="mb-1 block text-sm font-medium text-gray-700">Phone</label>
+                    <label className="mb-1 block text-sm font-medium text-gray-700">Phone *</label>
                     <input
                         type="tel"
+                        required
                         inputMode="tel"
+                        name="phone"
+                        data-field="phone"
                         value={form.phone}
-                        onChange={e => setForm({ ...form, phone: e.target.value })}
+                        onChange={e => setForm({ ...form, phone: e.target.value.replace(/\D/g, '').slice(0, 10) })}
+                        maxLength={10}
                         className={inputCls}
                         style={ringStyle}
-                        placeholder="Phone (optional)"
+                        placeholder="10 digit mobile number"
                     />
                 </div>
             </div>
             <div>
-                <label className="mb-1 block text-sm font-medium text-gray-700">Email</label>
+                <label className="mb-1 block text-sm font-medium text-gray-700">Email *</label>
                 <input
                     type="email"
+                    required
+                    name="email"
+                    data-field="email"
                     value={form.email}
                     onChange={e => setForm({ ...form, email: e.target.value })}
                     className={inputCls}
                     style={ringStyle}
-                    placeholder="you@email.com (optional)"
+                    placeholder="you@email.com"
                 />
             </div>
             <div>
@@ -126,6 +146,8 @@ export function ContactMessageForm({ dealerId, brandColor }: ContactMessageFormP
                 <textarea
                     required
                     rows={4}
+                    name="message"
+                    data-field="message"
                     value={form.message}
                     onChange={e => setForm({ ...form, message: e.target.value })}
                     className={`${inputCls} resize-none`}

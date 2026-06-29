@@ -21,7 +21,8 @@
       "Bash(PORT=3001 npm run dev:*)",
       "Bash(netstat:*)",
       "Bash(taskkill:*)",
-      "Bash(npx web-push:*)"
+      "Bash(npx web-push:*)",
+      "Bash(npx vercel --prod)"
     ]
   }
 }

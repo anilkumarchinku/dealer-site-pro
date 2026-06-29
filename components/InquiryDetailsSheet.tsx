@@ -57,16 +57,19 @@ export function InquiryDetailsSheet({
     const [tdTime, setTdTime] = useState("");
     const [tdName, setTdName] = useState("");
     const [tdPhone, setTdPhone] = useState("");
+    const [tdEmail, setTdEmail] = useState("");
 
     // ── Service form ──
     const [svcType, setSvcType] = useState("");
     const [svcModel, setSvcModel] = useState("");
     const [svcTime, setSvcTime] = useState("");
     const [svcPhone, setSvcPhone] = useState("");
+    const [svcEmail, setSvcEmail] = useState("");
 
     // ── Callback form ──
     const [cbName, setCbName] = useState("");
     const [cbPhone, setCbPhone] = useState("");
+    const [cbEmail, setCbEmail] = useState("");
     const [cbTime, setCbTime] = useState("");
     const [cbMessage, setCbMessage] = useState("");
 
@@ -75,6 +78,7 @@ export function InquiryDetailsSheet({
     const [accParts, setAccParts] = useState("");
     const [accName, setAccName] = useState("");
     const [accPhone, setAccPhone] = useState("");
+    const [accEmail, setAccEmail] = useState("");
 
     // Per-form submission status keyed by tab value.
     const [submitting, setSubmitting] = useState<string | null>(null);
@@ -96,6 +100,7 @@ export function InquiryDetailsSheet({
             leadSource: string;
             name: string;
             phone: string;
+            email?: string;
             carId?: string;
             carName?: string;
             messageLines: (string | undefined)[];
@@ -116,7 +121,7 @@ export function InquiryDetailsSheet({
         }
 
         const normalizedPhone = normalizeLeadPhone(params.phone);
-        const errors = validateLeadForm({ name: params.name, phone: normalizedPhone }, { requireConsent: false });
+        const errors = validateLeadForm({ name: params.name, phone: normalizedPhone, email: params.email }, { requireConsent: false });
         if (hasLeadFormErrors(errors)) {
             setErrorMsg((e) => ({
                 ...e,
@@ -136,6 +141,7 @@ export function InquiryDetailsSheet({
                     dealer_id: dealerId,
                     name: params.name.trim(),
                     phone: normalizedPhone,
+                    email: params.email?.trim() || undefined,
                     message,
                     car_id: params.carId || undefined,
                     car_name: params.carName || undefined,
@@ -173,6 +179,7 @@ export function InquiryDetailsSheet({
             leadSource: "test_drive",
             name: tdName,
             phone: tdPhone,
+            email: tdEmail,
             carId: tdCarId,
             carName: carNameById(tdCarId),
             messageLines: [
@@ -191,6 +198,7 @@ export function InquiryDetailsSheet({
             leadSource: "service_maintenance",
             name: svcModel ? `Service — ${svcModel}` : "Service enquiry",
             phone: svcPhone,
+            email: svcEmail,
             messageLines: [
                 "Service appointment request",
                 svcType ? `Service type: ${svcType}` : undefined,
@@ -207,6 +215,7 @@ export function InquiryDetailsSheet({
             leadSource: "phone",
             name: cbName,
             phone: cbPhone,
+            email: cbEmail,
             messageLines: [
                 "Callback request",
                 cbTime ? `Best time to call: ${cbTime}` : undefined,
@@ -222,6 +231,7 @@ export function InquiryDetailsSheet({
             leadSource: "parts_accessories",
             name: accName,
             phone: accPhone,
+            email: accEmail,
             carId: accCarId,
             carName: carNameById(accCarId),
             messageLines: [
@@ -331,23 +341,37 @@ export function InquiryDetailsSheet({
                             </div>
 
                             <div className="space-y-2">
-                                <Label>Your Name</Label>
+                                <Label>Your Name *</Label>
                                 <Input
                                     placeholder="John Doe"
                                     required
+                                    data-field="name"
                                     value={tdName}
                                     onChange={(e) => setTdName(e.target.value)}
                                 />
                             </div>
 
                             <div className="space-y-2">
-                                <Label>Phone Number</Label>
+                                <Label>Phone Number *</Label>
                                 <Input
                                     type="tel"
                                     placeholder="+91 98765 43210"
                                     required
+                                    data-field="phone"
                                     value={tdPhone}
                                     onChange={(e) => setTdPhone(e.target.value)}
+                                />
+                            </div>
+
+                            <div className="space-y-2">
+                                <Label>Email *</Label>
+                                <Input
+                                    type="email"
+                                    placeholder="you@example.com"
+                                    required
+                                    data-field="email"
+                                    value={tdEmail}
+                                    onChange={(e) => setTdEmail(e.target.value)}
                                 />
                             </div>
 
@@ -422,13 +446,26 @@ export function InquiryDetailsSheet({
                             </div>
 
                             <div className="space-y-2">
-                                <Label>Contact Number</Label>
+                                <Label>Contact Number *</Label>
                                 <Input
                                     type="tel"
                                     placeholder="+91 98765 43210"
                                     required
+                                    data-field="phone"
                                     value={svcPhone}
                                     onChange={(e) => setSvcPhone(e.target.value)}
+                                />
+                            </div>
+
+                            <div className="space-y-2">
+                                <Label>Email *</Label>
+                                <Input
+                                    type="email"
+                                    placeholder="you@example.com"
+                                    required
+                                    data-field="email"
+                                    value={svcEmail}
+                                    onChange={(e) => setSvcEmail(e.target.value)}
                                 />
                             </div>
 
@@ -454,23 +491,37 @@ export function InquiryDetailsSheet({
                             </div>
 
                             <div className="space-y-2">
-                                <Label>Name</Label>
+                                <Label>Name *</Label>
                                 <Input
                                     placeholder="Your Name"
                                     required
+                                    data-field="name"
                                     value={cbName}
                                     onChange={(e) => setCbName(e.target.value)}
                                 />
                             </div>
 
                             <div className="space-y-2">
-                                <Label>Phone Number</Label>
+                                <Label>Phone Number *</Label>
                                 <Input
                                     type="tel"
                                     placeholder="+91 98765 43210"
                                     required
+                                    data-field="phone"
                                     value={cbPhone}
                                     onChange={(e) => setCbPhone(e.target.value)}
+                                />
+                            </div>
+
+                            <div className="space-y-2">
+                                <Label>Email *</Label>
+                                <Input
+                                    type="email"
+                                    placeholder="you@example.com"
+                                    required
+                                    data-field="email"
+                                    value={cbEmail}
+                                    onChange={(e) => setCbEmail(e.target.value)}
                                 />
                             </div>
 
@@ -548,24 +599,38 @@ export function InquiryDetailsSheet({
 
                             <div className="grid grid-cols-2 gap-4">
                                 <div className="space-y-2">
-                                    <Label>Name</Label>
+                                    <Label>Name *</Label>
                                     <Input
                                         placeholder="Your Name"
                                         required
+                                        data-field="name"
                                         value={accName}
                                         onChange={(e) => setAccName(e.target.value)}
                                     />
                                 </div>
                                 <div className="space-y-2">
-                                    <Label>Phone</Label>
+                                    <Label>Phone *</Label>
                                     <Input
                                         type="tel"
                                         placeholder="+91 98765 43210"
                                         required
+                                        data-field="phone"
                                         value={accPhone}
                                         onChange={(e) => setAccPhone(e.target.value)}
                                     />
                                 </div>
+                            </div>
+
+                            <div className="space-y-2">
+                                <Label>Email *</Label>
+                                <Input
+                                    type="email"
+                                    placeholder="you@example.com"
+                                    required
+                                    data-field="email"
+                                    value={accEmail}
+                                    onChange={(e) => setAccEmail(e.target.value)}
+                                />
                             </div>
 
                             <Status tab="accessories" />

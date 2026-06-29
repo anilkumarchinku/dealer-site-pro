@@ -42,7 +42,9 @@ export function validateLeadForm(data: {
     if (!isValidIndianPhone(data.phone)) {
         errors.phone = 'Enter a valid 10-digit Indian mobile number'
     }
-    if (data.email && data.email.trim() && !isValidEmail(data.email)) {
+    if (!data.email || !data.email.trim()) {
+        errors.email = 'Email is required'
+    } else if (!isValidEmail(data.email)) {
         errors.email = 'Enter a valid email address'
     }
 
@@ -55,6 +57,7 @@ export function validateLeadForm(data: {
 export function validateServiceBookingForm(data: {
     customer_name: string
     phone: string
+    email?: string
     service_type: string
     preferred_date: string
 }): ValidationErrors {
@@ -66,6 +69,11 @@ export function validateServiceBookingForm(data: {
     if (!isValidIndianPhone(data.phone)) {
         errors.phone = 'Enter a valid 10-digit Indian mobile number'
     }
+    if (!data.email || !data.email.trim()) {
+        errors.email = 'Email is required'
+    } else if (!isValidEmail(data.email)) {
+        errors.email = 'Enter a valid email address'
+    }
     if (!data.service_type) {
         errors.service_type = 'Please select a service type'
     }
@@ -74,4 +82,23 @@ export function validateServiceBookingForm(data: {
     }
 
     return errors
+}
+
+/**
+ * Focus and scroll to the first field that has a validation error.
+ * Looks for elements with data-field, name, or id="field-{key}" attributes.
+ */
+export function focusFirstInvalidField(errors: ValidationErrors, container?: HTMLElement | null) {
+    const root = container ?? document
+    for (const field of Object.keys(errors)) {
+        if (!errors[field]) continue
+        const el = root.querySelector<HTMLElement>(
+            `[data-field="${field}"], [name="${field}"], #field-${field}`
+        )
+        if (el) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' })
+            setTimeout(() => el.focus({ preventScroll: true }), 300)
+            return
+        }
+    }
 }

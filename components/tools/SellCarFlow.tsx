@@ -4,14 +4,13 @@
 
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useMemo, useRef, useState } from 'react';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Button } from '@/components/ui/button';
-import { Separator } from '@/components/ui/separator';
 import {
     Select,
     SelectContent,
@@ -32,7 +31,6 @@ import {
     Banknote,
     ArrowRight,
     ArrowLeft,
-    Sparkles,
     Loader2,
     AlertCircle,
     FileText,
@@ -40,6 +38,7 @@ import {
     X,
 } from 'lucide-react';
 import { CAR_MAKES } from '@/lib/data/cars-static';
+import { isValidEmail, isValidIndianPhone } from '@/lib/validations/client';
 
 const CURRENT_YEAR = new Date().getFullYear();
 const OTHER_MAKE_VALUE = '__other_make__';
@@ -200,7 +199,40 @@ export function SellCarFlow({
     }), []);
 
     const canProceedStep1 = Boolean(brand && model && year && originalPrice > 0 && kmDriven >= 0);
-    const canProceedStep2 = Boolean(sellerName && phoneNumber.length === 10 && city && address && selectedDate && selectedSlot);
+    const canProceedStep2 = Boolean(sellerName.trim().length >= 2 && phoneNumber.length === 10 && isValidEmail(sellerEmail) && city && address && selectedDate && selectedSlot);
+    const formRef = useRef<HTMLDivElement>(null);
+
+    const focusFirstMissing = (fields: { id: string; valid: boolean }[]) => {
+        for (const f of fields) {
+            if (f.valid) continue;
+            const el = formRef.current?.querySelector<HTMLElement>(`[data-field="${f.id}"], #field-${f.id}`);
+            if (el) {
+                el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                setTimeout(() => el.focus({ preventScroll: true }), 300);
+                return;
+            }
+        }
+    };
+
+    const handleStep1Continue = () => {
+        if (canProceedStep1) { setStep(2); return; }
+        focusFirstMissing([
+            { id: 'brand', valid: Boolean(brand) },
+            { id: 'model', valid: Boolean(model) },
+            { id: 'originalPrice', valid: originalPrice > 0 },
+        ]);
+    };
+
+    const handleStep2Submit = () => {
+        if (canProceedStep2) { submitSellRequest(); return; }
+        focusFirstMissing([
+            { id: 'sellerName', valid: sellerName.trim().length >= 2 },
+            { id: 'phone', valid: phoneNumber.length === 10 },
+            { id: 'email', valid: isValidEmail(sellerEmail) },
+            { id: 'city', valid: Boolean(city) },
+            { id: 'address', valid: Boolean(address) },
+        ]);
+    };
 
     const handleMakeChange = (value: string) => {
         if (value === OTHER_MAKE_VALUE) {
@@ -361,7 +393,7 @@ export function SellCarFlow({
     };
 
     return (
-        <div className={lightFormRootClass}>
+        <div ref={formRef} className={lightFormRootClass}>
             <div className="mx-auto max-w-5xl px-4 py-8 sm:px-6 lg:px-8">
                 <nav className="mb-6 flex items-center gap-1.5 text-sm text-muted-foreground">
                     <Link href={returnHref} className="transition-colors hover:text-foreground">Home</Link>
@@ -412,12 +444,12 @@ export function SellCarFlow({
 
                                     <div className="grid gap-4 sm:grid-cols-2">
                                         <div>
-                                            <Label className="mb-2 block text-sm font-medium">Brand</Label>
+                                            <Label className="mb-2 block text-sm font-medium">Brand *</Label>
                                             <Select
                                                 value={makeMode === 'other' ? OTHER_MAKE_VALUE : brand || undefined}
                                                 onValueChange={handleMakeChange}
                                             >
-                                                <SelectTrigger className={lightSelectTriggerClass}>
+                                                <SelectTrigger data-field="brand" id="field-brand" className={lightSelectTriggerClass}>
                                                     <SelectValue placeholder="Choose make" />
                                                 </SelectTrigger>
                                                 <SelectContent className={lightSelectContentClass}>
@@ -438,8 +470,8 @@ export function SellCarFlow({
                                             )}
                                         </div>
                                         <div>
-                                            <Label className="mb-2 block text-sm font-medium">Model</Label>
-                                            <Input appearance="light" placeholder="Swift, Creta, Nexon" value={model} onChange={e => setModel(e.target.value)} />
+                                            <Label className="mb-2 block text-sm font-medium">Model *</Label>
+                                            <Input appearance="light" data-field="model" id="field-model" placeholder="Swift, Creta, Nexon" value={model} onChange={e => setModel(e.target.value)} />
                                         </div>
                                     </div>
 
@@ -515,32 +547,19 @@ export function SellCarFlow({
                                 <CardContent className="space-y-4 p-6">
                                     <h2 className="text-base font-semibold">Pricing, usage, and features</h2>
 
-                                    <div className="grid gap-4 sm:grid-cols-2">
-                                        <div>
-                                            <Label className="mb-2 block text-sm font-medium">Approx original/new price (Rs.)</Label>
-                                            <Input appearance="light"
-                                                type="number"
-                                                value={originalPrice || ''}
-                                                onChange={e => setOriginalPrice(Number(e.target.value))}
-                                                min={100000}
-                                                max={50000000}
-                                                step={50000}
-                                            />
-                                            <p className="mt-1 text-xs text-muted-foreground">Rs. {toIN(originalPrice)}</p>
-                                        </div>
-                                        <div>
-                                            <Label className="mb-2 block text-sm font-medium">Expected selling price (Rs.)</Label>
-                                            <Input appearance="light"
-                                                type="number"
-                                                placeholder={`Suggested Rs. ${toIN(valuation.mid)}`}
-                                                value={expectedPrice || ''}
-                                                onChange={e => setExpectedPrice(Number(e.target.value))}
-                                                min={0}
-                                                max={50000000}
-                                                step={10000}
-                                            />
-                                            <p className="mt-1 text-xs text-muted-foreground">Leave blank to use valuation midpoint.</p>
-                                        </div>
+                                    <div>
+                                        <Label className="mb-2 block text-sm font-medium">Approx original/new price (Rs.)</Label>
+                                        <Input appearance="light"
+                                            id="field-originalPrice"
+                                            data-field="originalPrice"
+                                            type="number"
+                                            value={originalPrice || ''}
+                                            onChange={e => setOriginalPrice(Number(e.target.value))}
+                                            min={100000}
+                                            max={50000000}
+                                            step={50000}
+                                        />
+                                        <p className="mt-1 text-xs text-muted-foreground">Rs. {toIN(originalPrice)}</p>
                                     </div>
 
                                     <div className="grid gap-4 sm:grid-cols-2">
@@ -590,27 +609,6 @@ export function SellCarFlow({
                         </div>
 
                         <div className="space-y-4">
-                            <Card className="border-primary/20 bg-primary/5">
-                                <CardContent className="p-6 text-center">
-                                    <Sparkles className="mx-auto mb-3 h-8 w-8 text-primary" />
-                                    <h2 className="mb-1 text-base font-semibold">Instant Valuation</h2>
-                                    <p className="mb-4 text-xs text-muted-foreground">
-                                        {brand || 'Your car'} {model} - {year} - {toIN(kmDriven)} km
-                                    </p>
-                                    <div className="mb-4 rounded-xl bg-background p-5">
-                                        <p className="mb-2 text-xs uppercase tracking-wider text-muted-foreground">Estimated Value</p>
-                                        <div className="flex flex-wrap items-center justify-center gap-2">
-                                            <span className="text-2xl font-bold">Rs. {toIN(valuation.low)}</span>
-                                            <span className="text-muted-foreground">to</span>
-                                            <span className="text-2xl font-bold text-primary">Rs. {toIN(valuation.high)}</span>
-                                        </div>
-                                    </div>
-                                    <p className="text-[11px] text-muted-foreground">
-                                        Final offer depends on inspection and document verification.
-                                    </p>
-                                </CardContent>
-                            </Card>
-
                             <Card>
                                 <CardContent className="p-5">
                                     <h3 className="mb-3 text-sm font-semibold">Dealer review includes</h3>
@@ -630,7 +628,7 @@ export function SellCarFlow({
                                 </CardContent>
                             </Card>
 
-                            <Button className="w-full" size="lg" disabled={!canProceedStep1} onClick={() => setStep(2)}>
+                            <Button className="w-full" size="lg" onClick={handleStep1Continue}>
                                 Continue
                                 <ArrowRight className="ml-2 h-4 w-4" />
                             </Button>
@@ -647,12 +645,13 @@ export function SellCarFlow({
 
                                     <div className="grid gap-4 sm:grid-cols-2">
                                         <div>
-                                            <Label className="mb-2 block text-sm font-medium">Name</Label>
-                                            <Input appearance="light" placeholder="Your name" value={sellerName} onChange={e => setSellerName(e.target.value)} />
+                                            <Label className="mb-2 block text-sm font-medium">Name *</Label>
+                                            <Input appearance="light" data-field="sellerName" id="field-sellerName" placeholder="Your name" value={sellerName} onChange={e => setSellerName(e.target.value)} />
                                         </div>
                                         <div>
-                                            <Label className="mb-2 block text-sm font-medium">Phone Number</Label>
+                                            <Label className="mb-2 block text-sm font-medium">Phone Number *</Label>
                                             <Input appearance="light"
+                                                data-field="phone" id="field-phone"
                                                 type="tel"
                                                 placeholder="10 digit mobile number"
                                                 value={phoneNumber}
@@ -664,13 +663,13 @@ export function SellCarFlow({
 
                                     <div className="grid gap-4 sm:grid-cols-2">
                                         <div>
-                                            <Label className="mb-2 block text-sm font-medium">Email</Label>
-                                            <Input appearance="light" type="email" placeholder="you@example.com" value={sellerEmail} onChange={e => setSellerEmail(e.target.value)} />
+                                            <Label className="mb-2 block text-sm font-medium">Email *</Label>
+                                            <Input appearance="light" data-field="email" id="field-email" type="email" placeholder="you@example.com" value={sellerEmail} onChange={e => setSellerEmail(e.target.value)} />
                                         </div>
                                         <div>
-                                            <Label className="mb-2 block text-sm font-medium">City</Label>
+                                            <Label className="mb-2 block text-sm font-medium">City *</Label>
                                             <Select value={city} onValueChange={setCity}>
-                                                <SelectTrigger className={lightSelectTriggerClass}><SelectValue placeholder="Select city" /></SelectTrigger>
+                                                <SelectTrigger data-field="city" id="field-city" className={lightSelectTriggerClass}><SelectValue placeholder="Select city" /></SelectTrigger>
                                                 <SelectContent className={lightSelectContentClass}>
                                                     {CITIES.map(item => <SelectItem key={item} value={item}>{item}</SelectItem>)}
                                                 </SelectContent>
@@ -679,8 +678,8 @@ export function SellCarFlow({
                                     </div>
 
                                     <div>
-                                        <Label className="mb-2 block text-sm font-medium">Inspection Address</Label>
-                                        <Input appearance="light" placeholder="Full address" value={address} onChange={e => setAddress(e.target.value)} />
+                                        <Label className="mb-2 block text-sm font-medium">Inspection Address *</Label>
+                                        <Input appearance="light" data-field="address" id="field-address" placeholder="Full address" value={address} onChange={e => setAddress(e.target.value)} />
                                     </div>
 
                                     <div>
@@ -875,15 +874,6 @@ export function SellCarFlow({
                                             <span className="text-muted-foreground">KM Driven</span>
                                             <span className="font-medium">{toIN(kmDriven)} km</span>
                                         </div>
-                                        <div className="flex justify-between gap-3">
-                                            <span className="text-muted-foreground">Expected Price</span>
-                                            <span className="font-medium">Rs. {toIN(sellerExpectedPrice)}</span>
-                                        </div>
-                                        <Separator />
-                                        <div className="flex justify-between gap-3">
-                                            <span className="font-semibold">Valuation Range</span>
-                                            <span className="text-right font-bold text-primary">Rs. {toIN(valuation.low)} - Rs. {toIN(valuation.high)}</span>
-                                        </div>
                                     </div>
                                 </CardContent>
                             </Card>
@@ -892,7 +882,7 @@ export function SellCarFlow({
                                 <Button variant="outline" className="flex-1" onClick={() => setStep(1)}>
                                     <ArrowLeft className="mr-1 h-4 w-4" /> Back
                                 </Button>
-                                <Button className="flex-1" disabled={!canProceedStep2 || submitStatus === 'submitting' || uploadingPhotos} onClick={submitSellRequest}>
+                                <Button className="flex-1" disabled={submitStatus === 'submitting' || uploadingPhotos} onClick={handleStep2Submit}>
                                     {submitStatus === 'submitting' || uploadingPhotos ? <Loader2 className="mr-1 h-4 w-4 animate-spin" /> : null}
                                     {uploadingPhotos ? 'Uploading...' : 'Submit'} <ArrowRight className="ml-1 h-4 w-4" />
                                 </Button>
@@ -959,11 +949,6 @@ export function SellCarFlow({
                                             <span className="font-medium">{registrationNumber}</span>
                                         </div>
                                     )}
-                                    <Separator />
-                                    <div className="flex items-center justify-between gap-4">
-                                        <span className="text-sm font-semibold">Estimated Offer</span>
-                                        <span className="text-right text-lg font-bold text-primary">Rs. {toIN(valuation.low)} - Rs. {toIN(valuation.high)}</span>
-                                    </div>
                                 </div>
 
                                 <div className="mb-6 space-y-2.5 text-left">

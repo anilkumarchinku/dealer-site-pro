@@ -291,7 +291,11 @@ export default function SellRequestsPage() {
             request.registration_number,
             request.vin,
         ].filter(Boolean).join(" ").toLowerCase()
-        return text.includes(query.toLowerCase()) && (status === "all" || request.status === status)
+        const matchesStatus = status === "all"
+            || request.status === status
+            // "approved" filter should also show "listed" items (API normalizes approved → listed)
+            || (status === "approved" && request.status === "listed")
+        return text.includes(query.toLowerCase()) && matchesStatus
     }), [query, requests, status])
 
     const updateStatus = async (request: SellRequest, nextStatus: SellRequestStatus) => {
@@ -700,12 +704,16 @@ export default function SellRequestsPage() {
                                             type="number"
                                             min={0}
                                             step={10000}
-                                            placeholder={`Listing ${formatPaise(bestListingPricePaise(request))}`}
+                                            placeholder="Enter listing price (Rs.)"
                                             value={listingPrices[request.id] ?? ""}
                                             onChange={event => setListingPrices(prev => ({ ...prev, [request.id]: event.target.value }))}
                                             className="h-9 min-w-40 text-sm"
                                         />
-                                        <Button size="sm" disabled={savingId === request.id} onClick={() => updateStatus(request, "listed")}>
+                                        <Button
+                                            size="sm"
+                                            disabled={savingId === request.id || !listingPrices[request.id]?.trim() || Number(listingPrices[request.id]) <= 0}
+                                            onClick={() => updateStatus(request, "listed")}
+                                        >
                                             {savingId === request.id ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <CheckCircle className="mr-2 h-4 w-4" />}
                                             Approve & List
                                         </Button>

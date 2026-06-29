@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react"
 import Image from "next/image"
 import type { ThreeWheelerLeadType } from "@/lib/types/three-wheeler"
 import { X } from "lucide-react"
-import { validateLeadForm } from "@/lib/validations/client"
+import { validateLeadForm, focusFirstInvalidField } from "@/lib/validations/client"
 import { normalizeLeadPhone } from "@/lib/validations/lead"
 
 interface Props {
@@ -91,9 +91,10 @@ export function LeadFormModal({
     async function handleSubmit(e: React.FormEvent) {
         e.preventDefault()
         const normalizedPhone = normalizeLeadPhone(phone)
-        const validationErrors = validateLeadForm({ name, phone: normalizedPhone, email: email || undefined })
+        const validationErrors = validateLeadForm({ name, phone: normalizedPhone, email })
         if (Object.keys(validationErrors).length > 0) {
             setError(Object.values(validationErrors).join('. '))
+            focusFirstInvalidField(validationErrors, dialogRef.current)
             return
         }
         setSubmitting(true)
@@ -173,15 +174,15 @@ export function LeadFormModal({
                     <form onSubmit={handleSubmit} className="space-y-4">
                         <div>
                             <label className="text-sm font-medium">Name *</label>
-                            <input value={name} onChange={e => setName(e.target.value)} required placeholder="Your name" className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm" />
+                            <input value={name} onChange={e => setName(e.target.value)} required data-field="name" placeholder="Your name" className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm" />
                         </div>
                         <div>
                             <label className="text-sm font-medium">Phone *</label>
-                            <input value={phone} onChange={e => setPhone(e.target.value)} required type="tel" placeholder="10-digit mobile number" className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm" />
+                            <input value={phone} onChange={e => setPhone(e.target.value)} required data-field="phone" type="tel" placeholder="10-digit mobile number" className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm" />
                         </div>
                         <div>
-                            <label className="text-sm font-medium">Email</label>
-                            <input value={email} onChange={e => setEmail(e.target.value)} type="email" placeholder="Optional" className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm" />
+                            <label className="text-sm font-medium">Email *</label>
+                            <input value={email} onChange={e => setEmail(e.target.value)} required data-field="email" type="email" placeholder="you@example.com" className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm" />
                         </div>
                         {leadType === "demo" && (
                             <div>
@@ -208,7 +209,7 @@ export function LeadFormModal({
 
                         {error && <p className="text-sm text-destructive">{error}</p>}
 
-                        <button type="submit" disabled={submitting || !name || !phone} className="w-full bg-primary text-primary-foreground rounded-lg py-2.5 text-sm font-semibold disabled:opacity-50">
+                        <button type="submit" disabled={submitting} className="w-full bg-primary text-primary-foreground rounded-lg py-2.5 text-sm font-semibold disabled:opacity-50">
                             {submitting ? "Submitting..." : "Submit Request"}
                         </button>
                     </form>

@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react"
 import Image from "next/image"
 import type { TwoWheelerLeadType } from "@/lib/types/two-wheeler"
 import { X } from "lucide-react"
-import { validateLeadForm } from "@/lib/validations/client"
+import { validateLeadForm, focusFirstInvalidField } from "@/lib/validations/client"
 import { normalizeLeadPhone } from "@/lib/validations/lead"
 
 interface Props {
@@ -97,9 +97,10 @@ export function LeadFormModal({
     async function handleSubmit(e: React.FormEvent) {
         e.preventDefault()
         const normalizedPhone = normalizeLeadPhone(phone)
-        const validationErrors = validateLeadForm({ name, phone: normalizedPhone, email: email || undefined })
+        const validationErrors = validateLeadForm({ name, phone: normalizedPhone, email })
         if (Object.keys(validationErrors).length > 0) {
             setError(Object.values(validationErrors).join('. '))
+            focusFirstInvalidField(validationErrors, dialogRef.current)
             return
         }
         setSubmitting(true)
@@ -184,6 +185,7 @@ export function LeadFormModal({
                                 value={name}
                                 onChange={e => setName(e.target.value)}
                                 required
+                                data-field="name"
                                 placeholder="Your name"
                                 className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm"
                             />
@@ -194,18 +196,21 @@ export function LeadFormModal({
                                 value={phone}
                                 onChange={e => setPhone(e.target.value)}
                                 required
+                                data-field="phone"
                                 type="tel"
                                 placeholder="10-digit mobile number"
                                 className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm"
                             />
                         </div>
                         <div>
-                            <label className="text-sm font-medium">Email</label>
+                            <label className="text-sm font-medium">Email *</label>
                             <input
                                 value={email}
                                 onChange={e => setEmail(e.target.value)}
+                                required
+                                data-field="email"
                                 type="email"
-                                placeholder="Optional"
+                                placeholder="you@example.com"
                                 className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm"
                             />
                         </div>
@@ -248,7 +253,7 @@ export function LeadFormModal({
 
                         <button
                             type="submit"
-                            disabled={submitting || !name || !phone}
+                            disabled={submitting}
                             className="w-full bg-primary text-primary-foreground rounded-lg py-2.5 text-sm font-semibold disabled:opacity-50"
                         >
                             {submitting ? "Submitting..." : "Submit Request"}

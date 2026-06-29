@@ -1,8 +1,8 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useRef, useState, useEffect } from "react"
 import type { TwoWheelerServiceType } from "@/lib/types/two-wheeler"
-import { validateServiceBookingForm } from "@/lib/validations/client"
+import { validateServiceBookingForm, focusFirstInvalidField } from "@/lib/validations/client"
 
 interface Props {
     dealerId: string
@@ -23,6 +23,7 @@ export function ServiceBookingForm({ dealerId }: Props) {
     const [form, setForm] = useState({
         customer_name:  "",
         phone:          "",
+        email:          "",
         vehicle_make:   "",
         vehicle_model:  "",
         vehicle_year:   "",
@@ -31,6 +32,7 @@ export function ServiceBookingForm({ dealerId }: Props) {
         preferred_date: "",
         preferred_slot: SLOTS[0],
     })
+    const formRef = useRef<HTMLFormElement>(null)
     const [submitting, setSubmitting] = useState(false)
     const [submitted,  setSubmitted]  = useState(false)
     const [error,      setError]      = useState("")
@@ -47,11 +49,13 @@ export function ServiceBookingForm({ dealerId }: Props) {
         const validationErrors = validateServiceBookingForm({
             customer_name:  form.customer_name,
             phone:          form.phone,
+            email:          form.email,
             service_type:   form.service_type,
             preferred_date: form.preferred_date,
         })
         if (Object.keys(validationErrors).length > 0) {
             setError(Object.values(validationErrors).join('. '))
+            focusFirstInvalidField(validationErrors, formRef.current)
             return
         }
         setSubmitting(true)
@@ -65,6 +69,7 @@ export function ServiceBookingForm({ dealerId }: Props) {
                     dealer_id:      dealerId,
                     customer_name:  form.customer_name,
                     phone:          form.phone,
+                    email:          form.email || null,
                     vehicle_make:   form.vehicle_make  || null,
                     vehicle_model:  form.vehicle_model || null,
                     vehicle_year:   form.vehicle_year  ? Number(form.vehicle_year) : null,
@@ -98,17 +103,21 @@ export function ServiceBookingForm({ dealerId }: Props) {
     }
 
     return (
-        <form onSubmit={handleSubmit} className="space-y-5">
+        <form ref={formRef} onSubmit={handleSubmit} className="space-y-5">
             {/* Customer info */}
             <div className="grid sm:grid-cols-2 gap-4">
                 <div>
                     <label className="text-sm font-medium">Name *</label>
-                    <input value={form.customer_name} onChange={e => set("customer_name", e.target.value)} required className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm" placeholder="Your name" />
+                    <input value={form.customer_name} onChange={e => set("customer_name", e.target.value)} required data-field="customer_name" className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm" placeholder="Your name" />
                 </div>
                 <div>
                     <label className="text-sm font-medium">Phone *</label>
-                    <input value={form.phone} onChange={e => set("phone", e.target.value)} required type="tel" className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm" placeholder="Mobile number" />
+                    <input value={form.phone} onChange={e => set("phone", e.target.value)} required data-field="phone" type="tel" className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm" placeholder="Mobile number" />
                 </div>
+            </div>
+            <div>
+                <label className="text-sm font-medium">Email *</label>
+                <input value={form.email} onChange={e => set("email", e.target.value)} required data-field="email" type="email" className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm" placeholder="you@example.com" />
             </div>
 
             {/* Vehicle info */}
