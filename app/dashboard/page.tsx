@@ -7,7 +7,7 @@ import WebsiteLiveBanner from "@/components/WebsiteLiveBanner";
 import Link from "next/link";
 import {
     Users, Car, Calendar, Plus, ArrowRight, Eye,
-    Mail, Phone, Clock, Target, Zap, BarChart3, Loader2, ChevronDown,
+    Mail, Phone, Clock, Target, Zap, BarChart3, Loader2,
     Check, Pencil, X,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -80,8 +80,6 @@ export default function DashboardPage() {
     const isMultiBrand  = (data.brands?.length ?? 0) > 1;
     const isFirstHand   = data.sellsNewCars && !data.sellsUsedCars;
     const previewSlug = dealerSlug ?? data.slug ?? "";
-
-    const [showBrandPicker, setShowBrandPicker] = useState(false);
 
     // Info & Brands editing
     const [editingBrands, setEditingBrands] = useState(false);
@@ -243,51 +241,13 @@ export default function DashboardPage() {
                     )}
                 </div>
                 <div className="flex items-center gap-3">
-                    {/* View Website — single brand: direct link; multi-brand: picker */}
-                    {isMultiBrand ? (
-                        <div className="relative">
-                            <Button
-                                variant="outline"
-                                className="h-11 rounded-xl gap-2"
-                                onClick={() => setShowBrandPicker(v => !v)}
-                            >
-                                <Eye className="w-4 h-4" />
-                                View Website
-                                <ChevronDown className={cn("w-4 h-4 transition-transform", showBrandPicker && "rotate-180")} />
-                            </Button>
-                            {showBrandPicker && (
-                                <>
-                                    <div className="fixed inset-0 z-10" onClick={() => setShowBrandPicker(false)} />
-                                    <div className="absolute right-0 mt-2 w-56 rounded-xl border border-border bg-popover shadow-lg z-20 overflow-hidden">
-                                        <div className="px-3 py-2 border-b border-border">
-                                            <p className="text-xs font-medium text-muted-foreground">Choose a brand website</p>
-                                        </div>
-                                        {data.brands?.map(brand => (
-                                            <Link
-                                                key={brand}
-                                                href={`/preview?brand=${encodeURIComponent(brand)}&template=${data.styleTemplate || "modern"}${previewSlug ? `&slug=${encodeURIComponent(previewSlug)}` : ''}`}
-                                                onClick={() => setShowBrandPicker(false)}
-                                            >
-                                                <div className="flex items-center gap-3 px-3 py-2.5 hover:bg-muted/50 cursor-pointer">
-                                                    <div className="p-1.5 rounded-lg bg-primary/10">
-                                                        <Car className="w-3.5 h-3.5 text-primary" />
-                                                    </div>
-                                                    <span className="text-sm font-medium">{brand}</span>
-                                                </div>
-                                            </Link>
-                                        ))}
-                                    </div>
-                                </>
-                            )}
-                        </div>
-                    ) : (
-                        <Link href={`/preview?brand=${encodeURIComponent(primaryBrand)}&template=${data.styleTemplate || "modern"}${previewSlug ? `&slug=${encodeURIComponent(previewSlug)}` : ''}`}>
-                            <Button variant="outline" className="h-11 rounded-xl gap-2">
-                                <Eye className="w-4 h-4" />
-                                View Website
-                            </Button>
-                        </Link>
-                    )}
+                    {/* View Website — always a direct link; multi-brand goes to /sites/:slug */}
+                    <Link href={isMultiBrand && previewSlug ? `/sites/${previewSlug}` : `/preview?brand=${encodeURIComponent(primaryBrand)}&template=${data.styleTemplate || "modern"}${previewSlug ? `&slug=${encodeURIComponent(previewSlug)}` : ''}`}>
+                        <Button variant="outline" className="h-11 rounded-xl gap-2">
+                            <Eye className="w-4 h-4" />
+                            View Website
+                        </Button>
+                    </Link>
                     {!isFirstHand && (
                         <Link href="/dashboard/inventory/add">
                             <Button className="h-11 rounded-xl gap-2 bg-blue-600 hover:bg-blue-700">

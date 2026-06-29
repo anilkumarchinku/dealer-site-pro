@@ -657,11 +657,6 @@ export default function BikeDetailPage({ params }: Props) {
     // Image fallback chain
     const brandId = brandNameToId(bike.make, '2w');
     const imageUrls = getVehicleImageUrls('2w', brandId, bike.model, bike.image_url);
-    const selectedColorImage = colorImages[selectedColorIdx]?.image ?? null;
-    const heroImageUrls = selectedColorImage
-        ? [selectedColorImage, ...imageUrls.filter((url) => url !== selectedColorImage)]
-        : imageUrls;
-
     // Features & safety from DB
     const features: string[] = bike.features ?? bike.key_features ?? [];
     const safetyFeatures: string[] = bike.safety_features ?? [];
@@ -676,6 +671,20 @@ export default function BikeDetailPage({ params }: Props) {
     for (const c of rawColors) {
         if (typeof c === 'object' && c.hex) apiColorHexMap[c.name] = c.hex;
     }
+    // Merge photo gallery colors + DB color names so ALL known colors show
+    const allColors: { name: string; image: string | null }[] = [
+        ...colorImages.map(c => ({ name: c.name, image: c.image as string | null })),
+        ...bikeColors
+            .filter(name => !colorImages.some(
+                c => c.name.toLowerCase().trim() === name.toLowerCase().trim()
+            ))
+            .map((name): { name: string; image: string | null } => ({ name, image: null })),
+    ];
+
+    const selectedColorImage = allColors[selectedColorIdx]?.image ?? null;
+    const heroImageUrls = selectedColorImage
+        ? [selectedColorImage, ...imageUrls.filter((url) => url !== selectedColorImage)]
+        : imageUrls;
 
     // Key specs for overview grid
     const keySpecs = [
@@ -782,20 +791,18 @@ export default function BikeDetailPage({ params }: Props) {
                                     </div>
 
                                     {/* Price */}
-                                    <div className="mb-4">
-                                        <div className="text-2xl font-bold text-gray-900">
+                                    <div className="mb-4 pb-4 border-b border-gray-100">
+                                        <div className="text-3xl font-black text-gray-900 tracking-tight">
                                             {formatPricePaise(bike.price_min_paise ?? 0)}
                                         </div>
-                                        <p className="text-xs text-gray-700 mt-0.5">Ex-showroom Price</p>
+                                        <p className="text-xs text-gray-500 mt-1">Ex-showroom Price</p>
                                         {emiEstimate > 0 && (
-                                            <Badge variant="secondary" className="mt-2 text-xs gap-1">
-                                                <Calculator className="w-3 h-3" />
-                                                EMI from {'\u20B9'}{emiEstimate.toLocaleString('en-IN')}/mo
-                                            </Badge>
+                                            <div className="mt-3 flex items-center gap-1.5 text-xs font-semibold text-blue-700 bg-blue-50 border border-blue-100 rounded-lg px-3 py-2">
+                                                <Calculator className="w-3.5 h-3.5 shrink-0" />
+                                                EMI from {'\u20B9'}{emiEstimate.toLocaleString('en-IN')}/month
+                                            </div>
                                         )}
                                     </div>
-
-                                    <Separator className="mb-4" />
 
                                     {/* Quick Specs */}
                                     <div className="grid grid-cols-2 gap-2 mb-4">
@@ -875,17 +882,19 @@ export default function BikeDetailPage({ params }: Props) {
                             {bike.make} {bike.model} Overview
                         </h2>
 
-                        {/* Key Highlights Grid */}
-                        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 mb-8">
-                            {keySpecs.map((spec, idx) => (
-                                <Card key={idx} className="bg-gray-50 border border-gray-200 text-center p-4">
-                                    <div className="mx-auto mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-sm">
-                                        {spec.icon}
+                        {/* Key Highlights Strip */}
+                        <div className="overflow-x-auto no-scrollbar mb-8">
+                            <div className="inline-flex min-w-full rounded-2xl border border-gray-200 bg-white divide-x divide-gray-100 shadow-sm">
+                                {keySpecs.map((spec, idx) => (
+                                    <div key={idx} className="flex flex-col items-center gap-2 px-6 py-5 shrink-0 min-w-[110px] text-center">
+                                        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-50">
+                                            {spec.icon}
+                                        </div>
+                                        <p className="text-sm font-bold text-gray-900 leading-tight">{spec.value}</p>
+                                        <p className="text-[11px] text-gray-500 leading-tight">{spec.label}</p>
                                     </div>
-                                    <p className="text-xs text-gray-700">{spec.label}</p>
-                                    <p className="text-sm font-semibold mt-0.5 text-gray-900">{spec.value}</p>
-                                </Card>
-                            ))}
+                                ))}
+                            </div>
                         </div>
 
                         {/* Description */}
@@ -983,51 +992,44 @@ export default function BikeDetailPage({ params }: Props) {
                             {bike.make} {bike.model} Features
                         </h2>
                         {(features.length > 0 || safetyFeatures.length > 0) ? (
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                {/* Key Features */}
+                            <div className="space-y-6">
                                 {features.length > 0 && (
-                                    <Card className="bg-white border border-gray-200 shadow-sm">
-                                        <CardContent className="p-5">
-                                            <h4 className="font-semibold text-sm mb-3 flex items-center gap-2 text-gray-900">
-                                                <Sparkles className="w-4 h-4 text-amber-500" />
-                                                Key Features
-                                            </h4>
-                                            <ul className="space-y-2">
-                                                {features.map((feat: string, i: number) => (
-                                                    <li key={i} className="flex items-start gap-2 text-sm">
-                                                        <Check className="w-3.5 h-3.5 mt-0.5 text-emerald-500 shrink-0" />
-                                                        <span className="text-gray-700">{feat}</span>
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        </CardContent>
-                                    </Card>
+                                    <div>
+                                        <h4 className="text-sm font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                                            <Sparkles className="w-4 h-4 text-amber-500" />
+                                            Key Features
+                                        </h4>
+                                        <div className="flex flex-wrap gap-2">
+                                            {features.map((feat: string, i: number) => (
+                                                <span key={i} className="inline-flex items-center gap-1.5 rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1.5 text-xs font-medium text-emerald-800">
+                                                    <Check className="w-3 h-3 text-emerald-600 shrink-0" />
+                                                    {feat}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    </div>
                                 )}
-
-                                {/* Safety Features */}
                                 {safetyFeatures.length > 0 && (
-                                    <Card className="bg-white border border-gray-200 shadow-sm">
-                                        <CardContent className="p-5">
-                                            <h4 className="font-semibold text-sm mb-3 flex items-center gap-2 text-gray-900">
-                                                <Shield className="w-4 h-4 text-red-500" />
-                                                Safety Features
-                                            </h4>
-                                            <ul className="space-y-2">
-                                                {safetyFeatures.map((feat: string, i: number) => (
-                                                    <li key={i} className="flex items-start gap-2 text-sm">
-                                                        <Check className="w-3.5 h-3.5 mt-0.5 text-emerald-500 shrink-0" />
-                                                        <span className="text-gray-700">{feat}</span>
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        </CardContent>
-                                    </Card>
+                                    <div>
+                                        <h4 className="text-sm font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                                            <Shield className="w-4 h-4 text-red-500" />
+                                            Safety Features
+                                        </h4>
+                                        <div className="flex flex-wrap gap-2">
+                                            {safetyFeatures.map((feat: string, i: number) => (
+                                                <span key={i} className="inline-flex items-center gap-1.5 rounded-full border border-red-200 bg-red-50 px-3 py-1.5 text-xs font-medium text-red-800">
+                                                    <Shield className="w-3 h-3 text-red-500 shrink-0" />
+                                                    {feat}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    </div>
                                 )}
                             </div>
                         ) : (
-                            <Card className="bg-white border border-gray-200 shadow-sm p-8 text-center">
-                                <p className="text-gray-700">Feature information not available for this model.</p>
-                            </Card>
+                            <div className="py-10 text-center">
+                                <p className="text-sm text-gray-500">Feature information not available for this model.</p>
+                            </div>
                         )}
                     </section>
 
@@ -1108,82 +1110,61 @@ export default function BikeDetailPage({ params }: Props) {
                         <h2 className="text-2xl font-bold text-gray-900 mb-6">
                             {bike.make} {bike.model} Colours
                         </h2>
-                        {colorImages.length > 0 ? (
-                            <Card className="bg-white border border-gray-200 shadow-sm">
-                                <CardContent className="p-6">
-                                    {/* Color image preview */}
-                                    {colorImages[selectedColorIdx]?.image && (
-                                        <div className="relative mb-6 aspect-[16/9] w-full overflow-hidden rounded-2xl border border-gray-200 bg-gray-50">
-                                            <Image
-                                                src={colorImages[selectedColorIdx].image}
-                                                alt={`${bike.make} ${bike.model} in ${colorImages[selectedColorIdx].name}`}
-                                                fill
-                                                unoptimized
-                                                className="object-contain"
+                        {allColors.length > 0 ? (
+                            <div>
+                                {/* Color photo preview — only shown when selected color has a photo */}
+                                {allColors[selectedColorIdx]?.image && (
+                                    <div className="relative mb-6 aspect-[16/9] w-full overflow-hidden rounded-2xl border border-gray-100 bg-gray-50 shadow-sm">
+                                        <Image
+                                            src={allColors[selectedColorIdx].image!}
+                                            alt={`${bike.make} ${bike.model} in ${allColors[selectedColorIdx].name}`}
+                                            fill
+                                            unoptimized
+                                            className="object-contain"
+                                        />
+                                    </div>
+                                )}
+
+                                {/* All color swatches */}
+                                <div className="flex flex-wrap gap-3 mb-5">
+                                    {allColors.map((color, idx) => (
+                                        <button
+                                            key={idx}
+                                            onClick={() => setSelectedColorIdx(idx)}
+                                            className={`group flex flex-col items-center gap-2 p-3 rounded-xl transition-all ${
+                                                selectedColorIdx === idx
+                                                    ? 'bg-amber-50 ring-2 ring-amber-400'
+                                                    : 'hover:bg-gray-50'
+                                            }`}
+                                        >
+                                            <div
+                                                className={`w-12 h-12 rounded-full border-2 shadow-sm transition-transform duration-200 group-hover:scale-110 ${
+                                                    selectedColorIdx === idx
+                                                        ? 'border-amber-400 scale-110'
+                                                        : 'border-gray-200'
+                                                }`}
+                                                style={{ backgroundColor: apiColorHexMap[color.name] || colorNameToHex(color.name) }}
                                             />
-                                        </div>
+                                            <span className="text-[11px] font-medium text-gray-800 max-w-[90px] text-center leading-tight">
+                                                {color.name}
+                                            </span>
+                                        </button>
+                                    ))}
+                                </div>
+
+                                <p className="text-sm text-gray-600">
+                                    Selected:{' '}
+                                    <span className="font-semibold text-gray-900">{allColors[selectedColorIdx]?.name}</span>
+                                    {!allColors[selectedColorIdx]?.image && (
+                                        <span className="ml-2 text-xs text-gray-400">(photo not available)</span>
                                     )}
-                                    {/* Color swatches */}
-                                    <div className="flex flex-wrap gap-3 mb-4">
-                                        {colorImages.map((color, idx) => (
-                                            <button
-                                                key={idx}
-                                                onClick={() => setSelectedColorIdx(idx)}
-                                                className={`flex flex-col items-center gap-1.5 p-3 rounded-lg transition-all ${
-                                                    selectedColorIdx === idx
-                                                        ? 'bg-blue-50 ring-2 ring-blue-600'
-                                                        : 'bg-gray-50 hover:bg-gray-100'
-                                                }`}
-                                            >
-                                                <div
-                                                    className="w-10 h-10 rounded-full border-2 border-gray-200 shadow-sm"
-                                                    style={{ backgroundColor: apiColorHexMap[color.name] || colorNameToHex(color.name) }}
-                                                />
-                                                <span className="text-xs font-medium text-gray-900 max-w-[80px] text-center leading-tight">
-                                                    {color.name}
-                                                </span>
-                                            </button>
-                                        ))}
-                                    </div>
-                                    <p className="text-sm text-gray-700">
-                                        Selected: <span className="font-semibold text-gray-900">{colorImages[selectedColorIdx]?.name}</span>
-                                    </p>
-                                </CardContent>
-                            </Card>
-                        ) : bikeColors.length > 0 ? (
-                            <Card className="bg-white border border-gray-200 shadow-sm">
-                                <CardContent className="p-6">
-                                    <div className="flex flex-wrap gap-3 mb-4">
-                                        {bikeColors.map((color: string, idx: number) => (
-                                            <button
-                                                key={idx}
-                                                onClick={() => setSelectedColorIdx(idx)}
-                                                className={`flex flex-col items-center gap-1.5 p-3 rounded-lg transition-all ${
-                                                    selectedColorIdx === idx
-                                                        ? 'bg-blue-50 ring-2 ring-blue-600'
-                                                        : 'bg-gray-50 hover:bg-gray-100'
-                                                }`}
-                                            >
-                                                <div
-                                                    className="w-8 h-8 rounded-full border-2 border-gray-200 shadow-sm"
-                                                    style={{ backgroundColor: apiColorHexMap[color] || colorNameToHex(color) }}
-                                                />
-                                                <span className="text-xs font-medium text-gray-900 max-w-[80px] text-center leading-tight">
-                                                    {color}
-                                                </span>
-                                            </button>
-                                        ))}
-                                    </div>
-                                    <p className="text-sm text-gray-700">
-                                        Selected: <span className="font-medium text-gray-900">{bikeColors[selectedColorIdx]}</span>
-                                    </p>
-                                </CardContent>
-                            </Card>
+                                </p>
+                            </div>
                         ) : (
-                            <Card className="bg-white border border-gray-200 shadow-sm p-8 text-center">
-                                <Palette className="w-10 h-10 text-gray-400 mx-auto mb-3" />
-                                <p className="text-gray-700">Colour options not available for this model.</p>
-                            </Card>
+                            <div className="py-12 text-center">
+                                <Palette className="w-10 h-10 text-gray-300 mx-auto mb-3" />
+                                <p className="text-sm text-gray-500">Colour options not available for this model.</p>
+                            </div>
                         )}
                     </section>
 

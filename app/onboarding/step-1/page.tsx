@@ -762,11 +762,11 @@ export default function Step1Page() {
 
                 <div className="space-y-4">
                     <div className="space-y-2">
-                        <label className="text-sm font-medium leading-none text-gray-700 dark:text-gray-200">
+                        <label className="text-sm font-medium leading-none text-foreground">
                             Full Address (Optional)
                         </label>
                         <textarea
-                            className="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                            className="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                             placeholder="123 Main Street, Industrial Area, City, State - Pin Code"
                             value={formData.fullAddress}
                             onChange={(e) => handleChange("fullAddress", e.target.value)}

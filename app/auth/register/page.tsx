@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { CheckCircle, Loader2, Mail } from "lucide-react";
+import { CheckCircle, XCircle, Loader2, Mail } from "lucide-react";
 
 import { BrowserFrame, FlowTopBar, SecurityPanel } from "@/components/onboarding/flow-shell";
 import { Alert } from "@/components/ui/alert";
@@ -19,6 +19,73 @@ import {
 import { useOnboardingStore } from "@/lib/store/onboarding-store";
 import { supabase } from "@/lib/supabase";
 
+// ── per-field validators ──────────────────────────────────────────────────────
+
+function validateFullName(v: string) {
+    if (!v.trim()) return "Full name is required";
+    if (v.trim().length < 2) return "Name must be at least 2 characters";
+    if (!/^[a-zA-Z\s.''-]+$/.test(v.trim())) return "Name can only contain letters and spaces";
+    return null;
+}
+
+function validateMobile(v: string) {
+    return validateRegistrationMobileNumber(v);
+}
+
+function validateDealership(v: string) {
+    if (!v.trim()) return "Dealership name is required";
+    if (v.trim().length < 2) return "Must be at least 2 characters";
+    return null;
+}
+
+function validateEmail(v: string) {
+    if (!v.trim()) return "Business email is required";
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim())) return "Enter a valid email address";
+    return null;
+}
+
+function validatePassword(v: string) {
+    if (!v) return "Password is required";
+    if (v.length < REGISTRATION_PASSWORD_MIN_LENGTH)
+        return `Password must be at least ${REGISTRATION_PASSWORD_MIN_LENGTH} characters`;
+    if (!/[0-9]/.test(v)) return "Password must include at least 1 number";
+    if (!/[^a-zA-Z0-9]/.test(v)) return "Password must include at least 1 special character";
+    return null;
+}
+
+function validateConfirm(password: string, confirm: string) {
+    if (!confirm) return "Please confirm your password";
+    if (password !== confirm) return "Passwords do not match";
+    return null;
+}
+
+// ── inline error ──────────────────────────────────────────────────────────────
+
+function FieldError({ message }: { message: string | null }) {
+    if (!message) return null;
+    return (
+        <p className="mt-1.5 flex items-center gap-1.5 text-xs font-medium text-red-600">
+            <XCircle className="h-3.5 w-3.5 shrink-0" />
+            {message}
+        </p>
+    );
+}
+
+// ── password strength pills ───────────────────────────────────────────────────
+
+function StrengthPill({ ok, label }: { ok: boolean; label: string }) {
+    return (
+        <span className={`flex items-center gap-1.5 ${ok ? "text-emerald-600" : "text-red-500"}`}>
+            {ok
+                ? <CheckCircle className="h-3.5 w-3.5 shrink-0" />
+                : <XCircle className="h-3.5 w-3.5 shrink-0" />}
+            {label}
+        </span>
+    );
+}
+
+// ── page ──────────────────────────────────────────────────────────────────────
+
 export default function RegisterPage() {
     const { updateData, reset } = useOnboardingStore();
 
@@ -31,8 +98,11 @@ export default function RegisterPage() {
         password: "",
         confirmPassword: "",
     });
+
+    // which fields the user has interacted with
+    const [touched, setTouched] = useState<Record<string, boolean>>({});
     const [loading, setLoading] = useState(false);
-    const [error, setError] = useState<string | null>(null);
+    const [submitError, setSubmitError] = useState<string | null>(null);
     const [sent, setSent] = useState(false);
     const [consentGiven, setConsentGiven] = useState(false);
 
@@ -40,29 +110,37 @@ export default function RegisterPage() {
         setForm((prev) => ({ ...prev, [field]: value }));
     };
 
-    const validate = (): string | null => {
-        if (!form.fullName.trim()) return "Full name is required";
-        const phoneError = validateRegistrationMobileNumber(form.mobileNumber);
-        if (phoneError) return phoneError;
-        if (!form.dealershipName.trim()) return "Dealership name is required";
-        if (!form.email.trim()) return "Email is required";
-        if (!/\S+@\S+\.\S+/.test(form.email)) return "Enter a valid email address";
-        if (!form.password) return "Password is required";
-        if (form.password.length < REGISTRATION_PASSWORD_MIN_LENGTH) {
-            return `Password must be at least ${REGISTRATION_PASSWORD_MIN_LENGTH} characters`;
-        }
-        if (form.password !== form.confirmPassword) return "Passwords do not match";
-        if (!consentGiven) return "Please agree to the Privacy Policy and Terms of Service to continue";
-        return null;
+    const touch = (field: string) =>
+        setTouched((prev) => ({ ...prev, [field]: true }));
+
+    // live per-field errors (only shown after touched)
+    const errors = {
+        fullName:      validateFullName(form.fullName),
+        mobileNumber:  validateMobile(form.mobileNumber),
+        dealershipName: validateDealership(form.dealershipName),
+        email:         validateEmail(form.email),
+        password:      validatePassword(form.password),
+        confirmPassword: validateConfirm(form.password, form.confirmPassword),
+    };
+
+    // password strength checks
+    const pwChecks = {
+        length:  form.password.length >= REGISTRATION_PASSWORD_MIN_LENGTH,
+        number:  /[0-9]/.test(form.password),
+        special: /[^a-zA-Z0-9]/.test(form.password),
     };
 
     const handleRegister = async (event: React.FormEvent) => {
         event.preventDefault();
-        setError(null);
+        setSubmitError(null);
 
-        const validationError = validate();
-        if (validationError) {
-            setError(validationError);
+        // touch everything so all errors show
+        setTouched({ fullName: true, mobileNumber: true, dealershipName: true, email: true, password: true, confirmPassword: true });
+
+        const firstError = Object.values(errors).find(Boolean);
+        if (firstError) return;
+        if (!consentGiven) {
+            setSubmitError("Please agree to the Terms of Service and Privacy Policy to continue");
             return;
         }
 
@@ -74,24 +152,16 @@ export default function RegisterPage() {
             const availabilityResponse = await fetch("/api/auth/registration-availability", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({
-                    email,
-                    mobileNumber: form.mobileNumber,
-                }),
+                body: JSON.stringify({ email, mobileNumber: form.mobileNumber }),
             });
             const availability = await availabilityResponse.json().catch(() => null) as { error?: string } | null;
-
             if (!availabilityResponse.ok) {
-                setError(availability?.error ?? "Could not validate registration details. Please try again.");
+                setSubmitError(availability?.error ?? "Could not validate registration details. Please try again.");
                 return;
             }
 
             reset();
-            updateData({
-                dealershipName: form.dealershipName.trim(),
-                phone: fullPhone,
-                email,
-            });
+            updateData({ dealershipName: form.dealershipName.trim(), phone: fullPhone, email });
 
             const { error: authError } = await supabase.auth.signUp({
                 email,
@@ -107,18 +177,17 @@ export default function RegisterPage() {
             });
 
             if (authError) {
-                if (/already|registered|exists/i.test(authError.message)) {
-                    setError("This email is already registered. Please login instead.");
-                } else {
-                    setError(authError.message);
-                }
+                setSubmitError(
+                    /already|registered|exists/i.test(authError.message)
+                        ? "This email is already registered. Please login instead."
+                        : authError.message
+                );
                 return;
             }
 
             setSent(true);
         } catch (err) {
-            const message = err instanceof Error ? err.message : String(err);
-            setError(message || "Registration failed");
+            setSubmitError(err instanceof Error ? err.message : "Registration failed");
         } finally {
             setLoading(false);
         }
@@ -158,58 +227,82 @@ export default function RegisterPage() {
                                 </p>
                                 <button
                                     type="button"
-                                    onClick={() => { setSent(false); setError(null); }}
+                                    onClick={() => { setSent(false); setSubmitError(null); }}
                                     className="mt-4 text-sm font-black text-primary hover:underline"
                                 >
                                     Did not receive it? Try again
                                 </button>
                             </Alert>
                         ) : (
-                            <form onSubmit={handleRegister} className="space-y-4">
-                                <Input
-                                    label="Full Name"
-                                    id="fullName"
-                                    placeholder="Raj Kumar"
-                                    maxLength={50}
-                                    value={form.fullName}
-                                    onChange={(event) => update("fullName", event.target.value)}
-                                    disabled={loading}
-                                />
+                            <form onSubmit={handleRegister} noValidate className="space-y-4">
 
-                                <PhoneInput
-                                    id="mobile"
-                                    label="Mobile Number"
-                                    value={form.mobileNumber}
-                                    countryCode={form.mobileCountryCode}
-                                    onValueChange={(value) => update("mobileNumber", value)}
-                                    onCountryCodeChange={(code) => update("mobileCountryCode", code)}
-                                    helperText="10 digits only"
-                                    disabled={loading}
-                                    required
-                                    lockCountryCode
-                                />
+                                {/* Full Name */}
+                                <div>
+                                    <Input
+                                        label="Full Name"
+                                        id="fullName"
+                                        placeholder="Raj Kumar"
+                                        maxLength={50}
+                                        value={form.fullName}
+                                        onChange={(e) => update("fullName", e.target.value)}
+                                        onBlur={() => touch("fullName")}
+                                        disabled={loading}
+                                        className={touched.fullName && errors.fullName ? "border-red-500 focus-visible:ring-red-500" : ""}
+                                    />
+                                    {touched.fullName && <FieldError message={errors.fullName} />}
+                                </div>
 
-                                <Input
-                                    label="Dealership Name"
-                                    id="dealership"
-                                    placeholder="Kumar Motors"
-                                    maxLength={50}
-                                    value={form.dealershipName}
-                                    onChange={(event) => update("dealershipName", event.target.value)}
-                                    disabled={loading}
-                                />
+                                {/* Mobile */}
+                                <div onBlur={() => touch("mobileNumber")}>
+                                    <PhoneInput
+                                        id="mobile"
+                                        label="Mobile Number"
+                                        value={form.mobileNumber}
+                                        countryCode={form.mobileCountryCode}
+                                        onValueChange={(value) => update("mobileNumber", value)}
+                                        onCountryCodeChange={(code) => update("mobileCountryCode", code)}
+                                        helperText={touched.mobileNumber && errors.mobileNumber ? undefined : "10 digits only"}
+                                        error={touched.mobileNumber ? errors.mobileNumber ?? undefined : undefined}
+                                        disabled={loading}
+                                        required
+                                        lockCountryCode
+                                    />
+                                </div>
 
-                                <Input
-                                    label="Business Email"
-                                    id="email"
-                                    type="email"
-                                    placeholder="raj.kumar@kumarmotors.in"
-                                    maxLength={100}
-                                    value={form.email}
-                                    onChange={(event) => update("email", event.target.value)}
-                                    disabled={loading}
-                                />
+                                {/* Dealership Name */}
+                                <div>
+                                    <Input
+                                        label="Dealership Name"
+                                        id="dealership"
+                                        placeholder="Kumar Motors"
+                                        maxLength={50}
+                                        value={form.dealershipName}
+                                        onChange={(e) => update("dealershipName", e.target.value)}
+                                        onBlur={() => touch("dealershipName")}
+                                        disabled={loading}
+                                        className={touched.dealershipName && errors.dealershipName ? "border-red-500 focus-visible:ring-red-500" : ""}
+                                    />
+                                    {touched.dealershipName && <FieldError message={errors.dealershipName} />}
+                                </div>
 
+                                {/* Business Email */}
+                                <div>
+                                    <Input
+                                        label="Business Email"
+                                        id="email"
+                                        type="email"
+                                        placeholder="raj.kumar@kumarmotors.in"
+                                        maxLength={100}
+                                        value={form.email}
+                                        onChange={(e) => update("email", e.target.value)}
+                                        onBlur={() => touch("email")}
+                                        disabled={loading}
+                                        className={touched.email && errors.email ? "border-red-500 focus-visible:ring-red-500" : ""}
+                                    />
+                                    {touched.email && <FieldError message={errors.email} />}
+                                </div>
+
+                                {/* Password + Confirm */}
                                 <div className="grid gap-4 sm:grid-cols-2">
                                     <div className="space-y-1.5">
                                         <Label htmlFor="password">Password</Label>
@@ -219,9 +312,12 @@ export default function RegisterPage() {
                                             minLength={REGISTRATION_PASSWORD_MIN_LENGTH}
                                             maxLength={128}
                                             value={form.password}
-                                            onChange={(event) => update("password", event.target.value)}
+                                            onChange={(e) => update("password", e.target.value)}
+                                            onBlur={() => touch("password")}
                                             disabled={loading}
+                                            className={touched.password && errors.password ? "border-red-500 focus-visible:ring-red-500" : ""}
                                         />
+                                        {touched.password && <FieldError message={errors.password} />}
                                     </div>
 
                                     <div className="space-y-1.5">
@@ -232,26 +328,31 @@ export default function RegisterPage() {
                                             minLength={REGISTRATION_PASSWORD_MIN_LENGTH}
                                             maxLength={128}
                                             value={form.confirmPassword}
-                                            onChange={(event) => update("confirmPassword", event.target.value)}
+                                            onChange={(e) => update("confirmPassword", e.target.value)}
+                                            onBlur={() => touch("confirmPassword")}
                                             disabled={loading}
+                                            className={touched.confirmPassword && errors.confirmPassword ? "border-red-500 focus-visible:ring-red-500" : ""}
                                         />
+                                        {touched.confirmPassword && <FieldError message={errors.confirmPassword} />}
                                     </div>
                                 </div>
 
-                                <div className="grid gap-2 text-xs font-semibold text-muted-foreground sm:grid-cols-3">
-                                    <span className="flex items-center gap-2"><CheckCircle className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400" /> 8+ characters</span>
-                                    <span className="flex items-center gap-2"><CheckCircle className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400" /> 1 number</span>
-                                    <span className="flex items-center gap-2"><CheckCircle className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-400" /> 1 special character</span>
+                                {/* Password strength — live */}
+                                <div className="grid gap-2 text-xs font-semibold sm:grid-cols-3">
+                                    <StrengthPill ok={pwChecks.length}  label="8+ characters" />
+                                    <StrengthPill ok={pwChecks.number}  label="1 number" />
+                                    <StrengthPill ok={pwChecks.special} label="1 special character" />
                                 </div>
 
-                                {error && <Alert variant="error">{error}</Alert>}
+                                {submitError && <Alert variant="error">{submitError}</Alert>}
 
+                                {/* Consent */}
                                 <div className="flex items-start gap-2.5">
                                     <input
                                         id="consent"
                                         type="checkbox"
                                         checked={consentGiven}
-                                        onChange={(event) => setConsentGiven(event.target.checked)}
+                                        onChange={(e) => setConsentGiven(e.target.checked)}
                                         disabled={loading}
                                         className="mt-0.5 h-4 w-4 shrink-0 cursor-pointer rounded border-border accent-primary"
                                     />
