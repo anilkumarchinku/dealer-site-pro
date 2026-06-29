@@ -776,15 +776,28 @@ export default function Step1Page() {
                         </p>
                     </div>
 
-                    <Input
-                        id="step1-mapLink"
-                        label="Google Maps Link (Optional)"
-                    placeholder="https://maps.google.com/..."
-                    value={formData.mapLink}
-                    onChange={(e) => handleChange("mapLink", e.target.value)}
-                    error={errors.mapLink}
-                    helperText="Paste your location's share link here"
-                />
+                    <div className="space-y-2">
+                        <Input
+                            id="step1-mapLink"
+                            label="Google Maps Link (Optional)"
+                            placeholder="https://www.google.com/maps/place/Your+Dealership/..."
+                            value={formData.mapLink}
+                            onChange={(e) => handleChange("mapLink", e.target.value)}
+                            error={errors.mapLink}
+                            helperText="This embeds an interactive map on your website's contact page"
+                        />
+                        <details className="text-xs text-muted-foreground">
+                            <summary className="cursor-pointer font-medium text-foreground hover:underline">How to get your Google Maps link?</summary>
+                            <ol className="mt-2 space-y-1 list-decimal list-inside pl-1">
+                                <li>Open <strong>Google Maps</strong> on your phone or computer</li>
+                                <li>Search for your <strong>dealership name</strong></li>
+                                <li>Tap/click on your business listing</li>
+                                <li>Tap the <strong>Share</strong> button</li>
+                                <li>Select <strong>Copy link</strong> and paste it here</li>
+                            </ol>
+                            <p className="mt-2 font-mono text-[10px] bg-slate-100 dark:bg-slate-800 rounded px-2 py-1 break-all">e.g. https://www.google.com/maps/place/Bharat+-+Hyundai+Showroom+Gachibowli/@17.4318917,78.3253504,15z/</p>
+                        </details>
+                    </div>
                 </div>
 
                 {/* ── Cyepro CRM key for new/hybrid 4W dealers ─────────────── */}

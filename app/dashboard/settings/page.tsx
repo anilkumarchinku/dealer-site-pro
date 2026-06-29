@@ -1312,13 +1312,25 @@ export default function SettingsPage() {
                                             setGoogleUrlSaved(false);
                                             setGoogleSyncResult(null);
                                         }}
-                                        placeholder="https://maps.google.com/maps?cid=... or google.com/maps/place/..."
+                                        placeholder="https://www.google.com/maps/place/Your+Dealership+Name/..."
                                         className="flex-1 text-xs"
                                     />
                                 </div>
-                                <p className="text-xs text-muted-foreground">
-                                    Find this by searching your dealership on Google Maps → Share → Copy Link
-                                </p>
+                                <div className="rounded-lg border border-slate-200 bg-slate-50 p-3 space-y-2 dark:border-slate-700 dark:bg-slate-800/50">
+                                    <p className="text-xs font-semibold text-foreground">How to get your Google Maps URL:</p>
+                                    <ol className="text-xs text-muted-foreground space-y-1 list-decimal list-inside">
+                                        <li>Open <span className="font-medium text-foreground">Google Maps</span> on your phone or computer</li>
+                                        <li>Search for your <span className="font-medium text-foreground">dealership name</span></li>
+                                        <li>Tap/click on your business listing</li>
+                                        <li>Tap the <span className="font-medium text-foreground">Share</span> button (arrow icon)</li>
+                                        <li>Select <span className="font-medium text-foreground">Copy link</span> and paste it here</li>
+                                    </ol>
+                                    <div className="mt-2 rounded border border-slate-200 bg-white p-2 dark:border-slate-600 dark:bg-slate-900">
+                                        <p className="text-[10px] font-semibold text-muted-foreground mb-1">Sample URL:</p>
+                                        <p className="text-[10px] font-mono text-muted-foreground break-all">https://www.google.com/maps/place/Bharat+-+Hyundai+Showroom+Gachibowli/@17.4318917,78.3253504,15z/</p>
+                                    </div>
+                                    <p className="text-[10px] text-muted-foreground">The URL must contain <span className="font-mono font-medium">google.com/maps</span> — any Google Maps link will work (short links like <span className="font-mono">goo.gl/maps/...</span> are also accepted).</p>
+                                </div>
                             </div>
 
                             {/* Status badges */}
