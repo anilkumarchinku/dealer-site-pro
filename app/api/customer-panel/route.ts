@@ -173,7 +173,7 @@ export async function POST(request: NextRequest) {
             .limit(20),
         admin
             .from('sell_requests')
-            .select('id, seller_name, seller_phone, seller_email, make, model, variant, year, expected_price_paise, status, preferred_date, created_at')
+            .select('id, seller_name, seller_phone, seller_email, make, model, variant, year, expected_price_paise, approved_vehicle_id, status, preferred_date, created_at, vehicles:approved_vehicle_id(price_paise)')
             .or(`dealer_id.eq.${dealer.id},dealer_id.is.null`)
             .or(sellerFilter)
             .order('created_at', { ascending: false })
@@ -212,7 +212,10 @@ export async function POST(request: NextRequest) {
         history: {
             inquiries: leadsResult.data ?? [],
             test_drives: testDrivesResult.data ?? [],
-            sell_requests: sellRequestsResult.data ?? [],
+            sell_requests: (sellRequestsResult.data ?? []).map((row: Record<string, unknown>) => {
+                const vehicle = row.vehicles as { price_paise?: number } | null
+                return { ...row, vehicles: undefined, listing_price_paise: vehicle?.price_paise ?? null }
+            }),
             service_bookings: serviceBookingsResult.data ?? [],
         },
         new_arrivals: vehiclesResult.data ?? [],

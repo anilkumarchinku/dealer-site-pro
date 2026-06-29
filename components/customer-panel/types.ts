@@ -44,6 +44,7 @@ export type SellRequest = {
     variant?: string | null
     year?: number | null
     expected_price_paise?: number | null
+    listing_price_paise?: number | null
     status: string
     preferred_date?: string | null
     created_at: string
