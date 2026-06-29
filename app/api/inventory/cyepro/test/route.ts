@@ -34,9 +34,9 @@ type CyeproDiagnosticResult = {
 
 export async function POST(request: Request) {
     // SECURITY: This diagnostic endpoint echoes upstream request/response
-    // details that are useful only during development. Never expose it in
-    // production — behave as if the route does not exist.
-    if (process.env.NODE_ENV === 'production') {
+    // details. Gate behind an explicit env var so it can be enabled in any
+    // environment (including Vercel production) when needed for debugging.
+    if (process.env.ALLOW_CYEPRO_DIAGNOSTICS !== 'true') {
         return new NextResponse(null, { status: 404 })
     }
 
