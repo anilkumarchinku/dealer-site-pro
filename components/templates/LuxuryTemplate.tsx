@@ -23,6 +23,7 @@ import { NavEMIModal } from '@/components/ui/NavEMIModal';
 import { FinanceSection } from '@/components/templates/sections/FinanceSection';
 import { TrustBadgesSection } from '@/components/templates/sections/TrustBadgesSection';
 import { ServiceBookingSection } from '@/components/templates/sections/ServiceBookingSection';
+import { LocationsMapSection } from '@/components/templates/sections/LocationsMapSection';
 import { SocialLinks } from '@/components/templates/shared/SocialLinks';
 import { getTemplateServiceMeta } from '@/components/templates/shared/service-meta';
 import { VideoSection } from '@/components/templates/sections/VideoSection';
@@ -711,6 +712,20 @@ export function LuxuryTemplate({
             )}
 
             <SellVehicleSection dealerName={dealerName} sellHref={sellVehicleHref} brandColor={brandAccent} />
+
+            {/* Branch & Service Center Locations */}
+            {(branches?.length || serviceCenters?.length) ? (
+                <div className="max-w-7xl mx-auto px-4 py-12">
+                    <LocationsMapSection
+                        dealerName={dealerName}
+                        mainAddress={contactInfo.address}
+                        mainPhone={contactInfo.phone}
+                        branches={branches}
+                        serviceCenters={serviceCenters?.map(sc => ({ name: sc.name, address: sc.address ?? '', city: sc.city, phone: sc.phone }))}
+                        brandColor={brandAccent}
+                    />
+                </div>
+            ) : null}
 
             {/* Footer */}
             <footer className="border-t border-gray-200 py-12 bg-gray-50">

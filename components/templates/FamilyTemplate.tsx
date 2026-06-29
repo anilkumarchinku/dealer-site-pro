@@ -23,6 +23,7 @@ import { NavEMIModal } from '@/components/ui/NavEMIModal';
 import { FinanceSection } from '@/components/templates/sections/FinanceSection';
 import { TrustBadgesSection } from '@/components/templates/sections/TrustBadgesSection';
 import { ServiceBookingSection } from '@/components/templates/sections/ServiceBookingSection';
+import { LocationsMapSection } from '@/components/templates/sections/LocationsMapSection';
 import { VideoSection } from '@/components/templates/sections/VideoSection';
 import { SocialLinks } from '@/components/templates/shared/SocialLinks';
 import { getTemplateServiceMeta } from '@/components/templates/shared/service-meta';
@@ -735,6 +736,18 @@ export function FamilyTemplate({
                                     )}
                                 </Reveal>
                             </div>
+                        </div>
+
+                        {/* Branch & Service Center Locations */}
+                        <div className="mt-12">
+                            <LocationsMapSection
+                                dealerName={dealerName}
+                                mainAddress={contactInfo.address}
+                                mainPhone={contactInfo.phone}
+                                branches={branches}
+                                serviceCenters={serviceCenters?.map(sc => ({ name: sc.name, address: sc.address ?? '', city: sc.city, phone: sc.phone }))}
+                                brandColor={brandColors.primary}
+                            />
                         </div>
                     </section>
                 </div>

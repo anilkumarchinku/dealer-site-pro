@@ -6,6 +6,7 @@ import { fetchDealerBySlug } from '@/lib/db/dealers'
 import { getBrandColors } from '@/lib/colors/automotive-brands'
 import { BASE_DOMAIN } from '@/lib/utils/domain'
 import { ContactMessageForm } from '@/components/sites/ContactMessageForm'
+import { LocationsMapSection } from '@/components/templates/sections/LocationsMapSection'
 
 interface Props { params: Promise<{ slug: string }> }
 
@@ -165,6 +166,15 @@ export default async function ContactPage({ params }: Props) {
                         </div>
                         <p className="mt-2 text-sm text-gray-600">{dealer.dealership_name} — {address}</p>
                     </div>
+
+                    {/* Branch & Service Center Locations */}
+                    <LocationsMapSection
+                        dealerName={dealer.dealership_name}
+                        mainAddress={address}
+                        mainPhone={dealer.phone}
+                        branches={dealer.branches as Array<{ city: string; address: string; phone?: string }> | null}
+                        brandColor={brandColor}
+                    />
 
                     {/* Quick actions */}
                     <div className="flex flex-col gap-3 sm:flex-row">

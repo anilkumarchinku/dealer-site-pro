@@ -6,6 +6,7 @@ import Link from "next/link"
 import { Calendar, MapPin, Phone, Star, Wrench } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import { LocationsMapSection } from "@/components/templates/sections/LocationsMapSection"
 
 type ServiceCenter = {
     id: string
@@ -44,6 +45,9 @@ type Props = {
     centers: ServiceCenter[]
     tiers: ServiceTier[]
     initialReviews: Review[]
+    mainAddress?: string
+    mainPhone?: string
+    branches?: Array<{ city: string; address: string; phone?: string }> | null
 }
 
 const SERVICE_TYPES = [
@@ -72,7 +76,7 @@ function Stars({ value, onSelect }: { value: number; onSelect?: (rating: number)
     )
 }
 
-export function PublicServiceCentersPage({ dealerId, dealerName, siteSlug, centers, tiers, initialReviews }: Props) {
+export function PublicServiceCentersPage({ dealerId, dealerName, siteSlug, centers, tiers, initialReviews, mainAddress, mainPhone, branches }: Props) {
     const [selectedCenterId, setSelectedCenterId] = useState(centers[0]?.id ?? "")
     const [activeImage, setActiveImage] = useState<Record<string, number>>({})
     const [reviews] = useState(initialReviews)
@@ -167,6 +171,23 @@ export function PublicServiceCentersPage({ dealerId, dealerName, siteSlug, cente
                     <h1 className="mt-2 text-4xl font-black tracking-tight">Book Service Appointment</h1>
                     <p className="mt-3 max-w-2xl text-slate-600">Choose a service center, compare packages, view workshop photos, and book a preferred time.</p>
                 </div>
+
+                {mainAddress && (
+                    <LocationsMapSection
+                        dealerName={dealerName}
+                        mainAddress={mainAddress}
+                        mainPhone={mainPhone ?? ""}
+                        branches={branches}
+                        serviceCenters={centers.map(c => ({
+                            name: c.name,
+                            address: c.address,
+                            city: c.city,
+                            phone: c.phone,
+                            working_hours: c.working_hours,
+                            maps_url: c.maps_url,
+                        }))}
+                    />
+                )}
 
                 {centers.length === 0 ? (
                     <div className="rounded-xl border border-slate-200 p-8 text-center text-slate-600">No service centers are available yet.</div>

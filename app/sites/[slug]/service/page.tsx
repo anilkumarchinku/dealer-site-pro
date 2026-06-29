@@ -89,6 +89,9 @@ export default async function DealerServicePage({ params }: PageProps) {
             centers={centersResult.data ?? []}
             tiers={tiersResult.data ?? []}
             initialReviews={reviewsResult.data ?? []}
+            mainAddress={dealer.full_address ?? dealer.location}
+            mainPhone={dealer.phone}
+            branches={dealer.branches as Array<{ city: string; address: string; phone?: string }> | null}
         />
     )
 }
