@@ -14,8 +14,8 @@ const additionalMainDomains = (process.env.NEXT_PUBLIC_ADDITIONAL_MAIN_DOMAINS ?
     .map(d => d.trim().toLowerCase().replace(/^https?:\/\//, '').replace(/\/.*$/, '').replace(/:\d+$/, ''))
     .filter(Boolean)
 
-// Base domain from env (e.g. "mamacaca.com")
-const configuredBaseDomain = process.env.NEXT_PUBLIC_BASE_DOMAIN ?? 'mamacaca.com'
+// Base domain from env (e.g. "your-project.vercel.app" or "indrav.in")
+const configuredBaseDomain = process.env.NEXT_PUBLIC_BASE_DOMAIN ?? 'indrav.in'
 const BASE_DOMAIN = configuredBaseDomain
     .toLowerCase()
     .replace(/^https?:\/\//, '')
