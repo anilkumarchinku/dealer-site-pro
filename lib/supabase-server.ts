@@ -90,6 +90,14 @@ export async function requireAuth(): Promise<
     const { data: { user }, error } = await supabase.auth.getUser()
 
     if (error || !user) {
+        if (process.env.NODE_ENV === 'development' && process.env.DEV_DASHBOARD_PREVIEW_USER_ID) {
+            return {
+                user: { id: process.env.DEV_DASHBOARD_PREVIEW_USER_ID },
+                supabase: createAdminClient() as RouteSupabaseClient,
+                errorResponse: null,
+            }
+        }
+
         return {
             user: null,
             supabase: null,

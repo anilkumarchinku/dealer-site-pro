@@ -9,7 +9,7 @@
 
 'use client';
 
-import { useState, useEffect, useMemo, useCallback } from 'react';
+import { useState, useEffect, useMemo, useCallback, type CSSProperties } from 'react';
 import { useParams } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -660,13 +660,13 @@ export default function AutoDetailPage() {
                 {/* ══════════════════════════════════════════════════════
                     SECTION 6: EMI CALCULATOR
                    ══════════════════════════════════════════════════════ */}
-                <section className="bg-card border border-border rounded-2xl p-6 sm:p-8 mb-8">
-                    <h2 className="text-xl font-bold text-foreground mb-6">
+                <section className="bg-card border border-border rounded-2xl p-5 sm:p-6 lg:p-8 mb-8 shadow-sm">
+                    <h2 className="text-xl font-bold text-foreground mb-6 sm:mb-8">
                         {vehicle.make} {vehicle.model} EMI Calculator
                     </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div className="grid grid-cols-1 lg:grid-cols-[1.05fr_1fr] gap-6 lg:gap-8 items-stretch">
                         {/* Inputs */}
-                        <div className="space-y-6">
+                        <div className="space-y-5 sm:space-y-6">
                             <EmiSlider
                                 label="Vehicle Price"
                                 value={emiPrice}
@@ -708,10 +708,10 @@ export default function AutoDetailPage() {
                         {/* Result */}
                         <div>
                             {emiResult ? (
-                                <div className="bg-muted rounded-2xl p-6 h-full flex flex-col">
+                                <div className="bg-muted/70 rounded-2xl p-5 sm:p-6 h-full min-h-[320px] flex flex-col">
                                     <div className="text-center pb-4 mb-4 border-b border-border">
                                         <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">Monthly EMI</p>
-                                        <p className="text-4xl font-bold text-foreground">
+                                        <p className="text-4xl sm:text-5xl font-bold text-foreground leading-tight">
                                             ₹{emiResult.emi.toLocaleString('en-IN')}
                                         </p>
                                         <p className="text-xs text-muted-foreground mt-1">per month for {emiTenure} months</p>
@@ -883,22 +883,30 @@ function EmiSlider({
     format: (v: number) => string;
 }) {
     const safeMax = Math.max(min + step, max);
+    const safeValue = Math.min(Math.max(value, min), safeMax);
+    const progress = ((safeValue - min) / (safeMax - min)) * 100;
+    const sliderStyle = {
+        '--emi-range-progress': `${progress}%`,
+    } as CSSProperties;
+
     return (
         <div>
-            <div className="flex justify-between items-center mb-2">
+            <div className="flex flex-wrap justify-between items-center gap-x-4 gap-y-1 mb-2">
                 <label className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
                     {label}
                 </label>
                 <span className="text-sm font-bold text-foreground">{format(value)}</span>
             </div>
             <input
+                aria-label={label}
                 type="range"
                 min={min}
                 max={safeMax}
                 step={step}
-                value={value}
+                value={safeValue}
                 onChange={(e) => onChange(Number(e.target.value))}
-                className="w-full h-2 bg-muted rounded-full appearance-none cursor-pointer accent-primary"
+                className="emi-range w-full cursor-pointer"
+                style={sliderStyle}
             />
         </div>
     );

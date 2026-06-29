@@ -91,6 +91,12 @@ const inr = (paise: number | null | undefined) => {
 const num = (n: number | null | undefined) => (n ?? 0).toLocaleString("en-IN")
 const initials = (name?: string | null) =>
     (name || "?").split(/\s+/).slice(0, 2).map((w) => w[0]?.toUpperCase()).join("")
+const leadText = (lead: Record<string, unknown>, key: string) =>
+    typeof lead[key] === "string" ? (lead[key] as string).trim() : ""
+const leadDate = (lead: Record<string, unknown>) => {
+    const created = leadText(lead, "created_at")
+    return created ? new Date(created).toLocaleDateString("en-IN") : "—"
+}
 
 function Logo({ url, name, size = 40 }: { url: string | null; name: string | null; size?: number }) {
     const [err, setErr] = useState(false)
@@ -567,6 +573,47 @@ function DetailDrawer({ dealer, detail, loading, total, onClose }: {
                             <CatPill label="2W" value={d.leads_2w} />
                             <CatPill label="3W" value={d.leads_3w} />
                         </div>
+                    </div>
+
+                    {/* Recent lead models */}
+                    <div>
+                        <h3 className="text-sm font-semibold mb-2">Recent leads & models</h3>
+                        {loading && <div className="text-sm text-muted-foreground flex items-center gap-2"><Loader2 className="w-4 h-4 animate-spin" /> Loading…</div>}
+                        {!loading && detail && detail.recentLeads.length === 0 && (
+                            <p className="text-sm text-muted-foreground">No recent leads yet.</p>
+                        )}
+                        {!loading && detail && detail.recentLeads.length > 0 && (
+                            <div className="space-y-2">
+                                {detail.recentLeads.slice(0, 6).map((lead, index) => {
+                                    const name = leadText(lead, "customer_name") || leadText(lead, "name") || "Unknown lead"
+                                    const source = leadText(lead, "source") || leadText(lead, "lead_source") || "unknown"
+                                    const model =
+                                        leadText(lead, "vehicle_interest") ||
+                                        leadText(lead, "vehicle_model") ||
+                                        leadText(lead, "car_name") ||
+                                        "Model not captured"
+                                    const message = leadText(lead, "message")
+                                    return (
+                                        <div key={leadText(lead, "id") || `${name}-${index}`}
+                                            className="rounded-xl border border-[#E7E0D7] bg-card p-3">
+                                            <div className="flex items-start justify-between gap-3">
+                                                <div className="min-w-0">
+                                                    <div className="font-semibold text-sm truncate">{name}</div>
+                                                    <div className="text-xs text-muted-foreground truncate">{model}</div>
+                                                </div>
+                                                <span className="shrink-0 rounded-full bg-muted px-2 py-0.5 text-[10px] font-semibold uppercase text-muted-foreground">
+                                                    {source.replace(/_/g, " ")}
+                                                </span>
+                                            </div>
+                                            <div className="mt-2 flex items-center justify-between gap-3 text-[11px] text-muted-foreground">
+                                                <span className="truncate">{message || "No message"}</span>
+                                                <span className="shrink-0">{leadDate(lead)}</span>
+                                            </div>
+                                        </div>
+                                    )
+                                })}
+                            </div>
+                        )}
                     </div>
 
                     {/* Inventory model cards (with images) */}

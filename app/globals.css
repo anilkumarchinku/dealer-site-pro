@@ -1027,6 +1027,76 @@ body {
     background-color: var(--dsp-paper);
 }
 
+/* Consistent EMI slider controls on public detail pages */
+.emi-range {
+    --emi-range-progress: 0%;
+    --emi-range-fill: hsl(var(--primary));
+    --emi-range-track: hsl(var(--border));
+    appearance: none;
+    -webkit-appearance: none;
+    background: transparent;
+    display: block;
+    height: 2rem;
+    margin: 0;
+}
+
+.emi-range:focus {
+    outline: none;
+}
+
+.emi-range::-webkit-slider-runnable-track {
+    background: linear-gradient(
+        to right,
+        var(--emi-range-fill) 0%,
+        var(--emi-range-fill) var(--emi-range-progress),
+        var(--emi-range-track) var(--emi-range-progress),
+        var(--emi-range-track) 100%
+    );
+    border-radius: 9999px;
+    height: 0.5rem;
+}
+
+.emi-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background: hsl(var(--background));
+    border: 2px solid var(--emi-range-fill);
+    border-radius: 9999px;
+    box-shadow: 0 2px 8px rgb(15 23 42 / 0.18);
+    height: 1.25rem;
+    margin-top: -0.375rem;
+    width: 1.25rem;
+}
+
+.emi-range:focus-visible::-webkit-slider-thumb {
+    box-shadow: 0 0 0 4px hsl(var(--ring) / 0.2), 0 2px 8px rgb(15 23 42 / 0.18);
+}
+
+.emi-range::-moz-range-track {
+    background: var(--emi-range-track);
+    border-radius: 9999px;
+    height: 0.5rem;
+}
+
+.emi-range::-moz-range-progress {
+    background: var(--emi-range-fill);
+    border-radius: 9999px;
+    height: 0.5rem;
+}
+
+.emi-range::-moz-range-thumb {
+    background: hsl(var(--background));
+    border: 2px solid var(--emi-range-fill);
+    border-radius: 9999px;
+    box-shadow: 0 2px 8px rgb(15 23 42 / 0.18);
+    height: 1.25rem;
+    width: 1.25rem;
+}
+
+.emi-range:focus-visible::-moz-range-thumb {
+    box-shadow: 0 0 0 4px hsl(var(--ring) / 0.2), 0 2px 8px rgb(15 23 42 / 0.18);
+}
+
 /* ============================================
    Responsive Utilities
    ============================================ */

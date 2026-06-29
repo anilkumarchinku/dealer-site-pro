@@ -157,6 +157,14 @@ async function getPlatformAdminSession(): Promise<AdminSession | null> {
 }
 
 export async function getAdminSession(): Promise<AdminSession | null> {
+    if (process.env.NODE_ENV === "development" && process.env.DEV_SUPER_ADMIN_PREVIEW === "1") {
+        return {
+            username: "local-super-admin-preview",
+            source: "legacy",
+            name: "Local Super Admin Preview",
+        }
+    }
+
     return (await getLegacyAdminSession()) ?? (await getPlatformAdminSession())
 }
 

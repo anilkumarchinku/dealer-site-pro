@@ -212,7 +212,8 @@ export async function middleware(request: NextRequest) {
     }
 
     // ── Auth guard (only on main domain) ─────────────────────
-    if (pathname.startsWith('/admin/') && !hasAdminSession) {
+    const devSuperAdminPreview = process.env.NODE_ENV === 'development' && process.env.DEV_SUPER_ADMIN_PREVIEW === '1'
+    if (pathname.startsWith('/admin/') && !hasAdminSession && !devSuperAdminPreview) {
         return NextResponse.redirect(new URL('/admin', request.url))
     }
 
@@ -269,13 +270,14 @@ export async function middleware(request: NextRequest) {
 
     const isProtected = PROTECTED_PREFIXES.some(p => pathname.startsWith(p))
     const isAuthPage  = AUTH_PAGES.some(p => pathname.startsWith(p))
+    const devDashboardPreview = process.env.NODE_ENV === 'development' && Boolean(process.env.DEV_DASHBOARD_PREVIEW_USER_ID)
 
     if (isPreviewRoute && hasAdminSession) {
         return response
     }
 
     // Redirect to login if accessing protected route without session
-    if (isProtected && !isLoggedIn) {
+    if (isProtected && !isLoggedIn && !devDashboardPreview) {
         const loginUrl = new URL('/auth/login', request.url)
         loginUrl.searchParams.set('redirect', redirectTarget)
         return NextResponse.redirect(loginUrl)
