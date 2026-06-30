@@ -1,6 +1,7 @@
 "use client";
 
 import { supabase, isSupabaseReady } from "@/lib/supabase";
+import type { Json } from "@/lib/database.types";
 
 export interface DealerProfile {
     dealership_name: string;
@@ -51,6 +52,93 @@ type DynamicSettingsTable = {
 
 function dynamicTable(table: string): DynamicSettingsTable {
     return (supabase as unknown as { from(name: string): DynamicSettingsTable }).from(table)
+}
+
+// ── Outlet types ──────────────────────────────────────────────
+export interface OutletRow {
+    id: string;
+    brand_name: string;
+    vehicle_type: string | null;
+    is_primary: boolean;
+    outlet_name: string | null;
+    phone: string | null;
+    whatsapp: string | null;
+    email: string | null;
+    full_address: string | null;
+    city: string | null;
+    state: string | null;
+    google_maps_url: string | null;
+    branches: Json | null;
+}
+
+export interface OutletProfileUpdate {
+    outlet_name?: string | null;
+    phone?: string | null;
+    whatsapp?: string | null;
+    email?: string | null;
+    full_address?: string | null;
+    city?: string | null;
+    state?: string | null;
+    google_maps_url?: string | null;
+    branches?: Json | null;
+}
+
+// ── Fetch all outlets for a dealer ────────────────────────────
+export async function fetchDealerOutlets(
+    dealerId: string
+): Promise<OutletRow[]> {
+    if (!isSupabaseReady()) return [];
+
+    const { data, error } = await supabase
+        .from("dealer_brands")
+        .select("id, brand_name, vehicle_type, is_primary, outlet_name, phone, whatsapp, email, full_address, city, state, google_maps_url, branches")
+        .eq("dealer_id", dealerId)
+        .order("is_primary", { ascending: false });
+
+    if (error) {
+        console.error("[fetchDealerOutlets]", error.message);
+        return [];
+    }
+    return (data ?? []) as unknown as OutletRow[];
+}
+
+// ── Update a single outlet's profile ──────────────────────────
+export async function updateOutletProfile(
+    outletId: string,
+    dealerId: string,
+    fields: OutletProfileUpdate
+): Promise<{ success: boolean; error?: string }> {
+    if (!isSupabaseReady()) return { success: true };
+
+    const { error } = await supabase
+        .from("dealer_brands")
+        .update(fields)
+        .eq("id", outletId)
+        .eq("dealer_id", dealerId);
+
+    if (error) return { success: false, error: error.message };
+    return { success: true };
+}
+
+// ── Create "Used Cars" outlet for hybrid dealers ──────────────
+export async function createUsedCarsOutlet(
+    dealerId: string,
+    fields?: OutletProfileUpdate
+): Promise<{ success: boolean; error?: string }> {
+    if (!isSupabaseReady()) return { success: true };
+
+    const { error } = await supabase
+        .from("dealer_brands")
+        .insert({
+            dealer_id: dealerId,
+            brand_name: "Used Cars",
+            vehicle_type: "used",
+            is_primary: false,
+            ...(fields ?? {}),
+        });
+
+    if (error) return { success: false, error: error.message };
+    return { success: true };
 }
 
 // ── Fetch dealer profile by ID ────────────────────────────────

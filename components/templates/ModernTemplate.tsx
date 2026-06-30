@@ -105,6 +105,7 @@ interface ModernTemplateProps {
     sellsUsedCars?: boolean;
     branches?: Array<{ city: string; address: string; phone?: string }>;
     serviceCenters?: Array<{ id: string; name: string; address?: string; city?: string; phone?: string }>;
+    outlets?: Array<{ brandName: string; outletName?: string | null; phone?: string | null; fullAddress?: string | null; city?: string | null; googleMapsUrl?: string | null; branches?: Array<{ city: string; address: string; phone?: string }> | null }>;
     isVerified?: boolean;
     vehicleType?: '2w' | '3w' | '4w';
     socialLinks?: { facebook: string | null; instagram: string | null; twitter?: string | null; youtube: string | null; linkedin?: string | null };
@@ -127,6 +128,7 @@ export function ModernTemplate({
     sellsUsedCars = false,
     branches,
     serviceCenters,
+    outlets,
     isVerified = false,
     vehicleType,
     socialLinks,
@@ -959,6 +961,7 @@ export function ModernTemplate({
                                 mainPhone={contactInfo.phone}
                                 branches={branches}
                                 serviceCenters={serviceCenters?.map(sc => ({ name: sc.name, address: sc.address ?? '', city: sc.city, phone: sc.phone }))}
+                                outlets={outlets}
                                 brandColor={brandColors.primary}
                             />
                         </div>

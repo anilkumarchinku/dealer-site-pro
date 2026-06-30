@@ -70,6 +70,7 @@ const initialData: Partial<OnboardingData> = {
     brandAccentColor: undefined,
     brandColorPreset: undefined,
     brandLogo: undefined,
+    outlets: [],
     inventorySource: undefined,
     inventoryEntryMode: undefined,
     cyeproApiKey: undefined,

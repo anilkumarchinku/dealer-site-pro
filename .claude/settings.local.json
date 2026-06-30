@@ -22,7 +22,8 @@
       "Bash(netstat:*)",
       "Bash(taskkill:*)",
       "Bash(npx web-push:*)",
-      "Bash(npx vercel --prod)"
+      "Bash(npx vercel --prod)",
+      "mcp__claude_ai_SupaBase__apply_migration"
     ]
   }
 }

@@ -34,7 +34,7 @@ export default async function ContactPage({ params }: Props) {
 
     const address = dealer.full_address ?? dealer.location
     const mapQuery = encodeURIComponent(address)
-    const waNumber = dealer.phone.replace(/\D/g, '')
+    const waNumber = (dealer.whatsapp ?? dealer.phone).replace(/\D/g, '')
 
     return (
         <div className="min-h-screen bg-white font-sans text-gray-900 flex flex-col">
@@ -167,12 +167,14 @@ export default async function ContactPage({ params }: Props) {
                         <p className="mt-2 text-sm text-gray-600">{dealer.dealership_name} — {address}</p>
                     </div>
 
-                    {/* Branch & Service Center Locations */}
+                    {/* Branch, Service Center & Outlet Locations */}
                     <LocationsMapSection
                         dealerName={dealer.dealership_name}
                         mainAddress={address}
                         mainPhone={dealer.phone}
                         branches={dealer.branches as Array<{ city: string; address: string; phone?: string }> | null}
+                        serviceCenters={dealer.service_centers as Array<{ name: string; address: string; city?: string | null; phone?: string | null }> | null}
+                        outlets={dealer.outlets}
                         brandColor={brandColor}
                     />
 

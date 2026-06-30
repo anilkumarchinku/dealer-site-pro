@@ -4,7 +4,7 @@ import { supabase, isSupabaseReady } from "@/lib/supabase";
 import { generateSlug, makeSlugUnique } from "@/lib/utils/slug";
 import { dealerSiteUrl } from "@/lib/utils/domain";
 import type { OnboardingData } from "@/lib/types";
-import type { Database } from "@/lib/database.types";
+import type { Database, Json } from "@/lib/database.types";
 import type { SupabaseClient } from "@supabase/supabase-js";
 
 /** Upload a base64 image to Supabase Storage and return the public URL, or null on failure */
@@ -283,21 +283,72 @@ export async function saveDealer(
             await supabase.from('dealers').update(imageUpdate).eq('id', dealerId)
         }
 
-        // ── Insert dealer_brands ────────────────────────────────
+        // ── Upsert dealer_brands (preserves outlet data) ─────────
         // Persist all three per-vehicle-type brand arrays, each tagged with its own
         // vehicle_type and per-group is_primary (first brand in each group is primary).
+        // Outlet-level fields from data.outlets are merged in when available.
+        const outletMap = new Map(
+            (data.outlets ?? []).map(o => [`${o.brandName}::${o.vehicleType}`, o])
+        );
+
         const brandRows = [
             ...(data.brands  ?? []).map((b, i) => ({ brand_name: b, vehicle_type: 'cars', is_primary: i === 0 })),
             ...(data.brands2w ?? []).map((b, i) => ({ brand_name: b, vehicle_type: '2w',   is_primary: i === 0 })),
             ...(data.brands3w ?? []).map((b, i) => ({ brand_name: b, vehicle_type: '3w',   is_primary: i === 0 })),
-        ].map(r => ({ ...r, dealer_id: dealerId }));
+        ].map(r => {
+            const outlet = outletMap.get(`${r.brand_name}::${r.vehicle_type}`);
+            return {
+                ...r,
+                dealer_id:    dealerId,
+                outlet_name:  outlet?.outletName  ?? null,
+                phone:        outlet?.phone       ?? null,
+                whatsapp:     outlet?.whatsapp    ?? null,
+                email:        outlet?.email       ?? null,
+                full_address: outlet?.fullAddress  ?? null,
+                city:         outlet?.city         ?? null,
+                state:        outlet?.state        ?? null,
+                google_maps_url: outlet?.googleMapsUrl ?? null,
+                branches:     outlet?.branches && outlet.branches.length > 0 ? (outlet.branches as unknown as Json) : null,
+            };
+        });
 
         if (brandRows.length > 0) {
-            // Delete existing brands first (clean upsert)
-            await supabase.from("dealer_brands").delete().eq("dealer_id", dealerId);
+            // Remove brands no longer in the list, then upsert current ones.
+            // This preserves outlet data for brands that are kept.
+            const currentBrandKeys = brandRows.map(r => `${r.brand_name}::${r.vehicle_type}`);
 
-            const { error } = await supabase.from("dealer_brands").insert(brandRows);
-            if (error) throw error;
+            const { data: existingBrands } = await supabase
+                .from("dealer_brands")
+                .select("id, brand_name, vehicle_type")
+                .eq("dealer_id", dealerId);
+
+            // Delete rows for brands that were removed
+            const toDelete = (existingBrands ?? []).filter(
+                eb => !currentBrandKeys.includes(`${eb.brand_name}::${eb.vehicle_type}`)
+            );
+            if (toDelete.length > 0) {
+                await supabase
+                    .from("dealer_brands")
+                    .delete()
+                    .in("id", toDelete.map(r => r.id));
+            }
+
+            // Upsert remaining brands — update existing, insert new
+            for (const row of brandRows) {
+                const existing = (existingBrands ?? []).find(
+                    eb => eb.brand_name === row.brand_name && eb.vehicle_type === row.vehicle_type
+                );
+                if (existing) {
+                    await supabase
+                        .from("dealer_brands")
+                        .update(row)
+                        .eq("id", existing.id);
+                } else {
+                    await supabase
+                        .from("dealer_brands")
+                        .insert(row);
+                }
+            }
         }
 
         // ── Insert dealer_services ──────────────────────────────

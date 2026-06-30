@@ -22,7 +22,9 @@ import { useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { supabase } from "@/lib/supabase";
-import { updateDealerProfile, saveNotificationSettings } from "@/lib/db/settings";
+import { updateDealerProfile, saveNotificationSettings, fetchDealerOutlets } from "@/lib/db/settings";
+import type { OutletRow } from "@/lib/db/settings";
+import { OutletLocationsCard } from "@/components/dashboard/OutletLocationsCard";
 import { BASE_DOMAIN } from "@/lib/utils/domain";
 import { PremiumPageHeader } from "@/components/dashboard/premium-ui";
 
@@ -100,6 +102,12 @@ export default function SettingsPage() {
     const [googleSyncResult,  setGoogleSyncResult]  = useState<{ success: boolean; message: string } | null>(null);
     const [googlePlaceId,     setGooglePlaceId]     = useState<string | null>(null);
 
+    // ── Branches, Service Centers & Outlets state ───────────────────────────────
+    const [branches,       setBranches]       = useState<Array<{ city: string; state?: string; address: string; phone?: string }>>([]);
+    const [serviceCenters, setServiceCenters] = useState<Array<{ id: string; name: string; address: string; city: string | null; phone: string | null; working_hours: string | null }>>([]);
+    const [fullAddress,    setFullAddress]    = useState("");
+    const [outlets,        setOutlets]        = useState<OutletRow[]>([]);
+
     // ── Brand Assets state ────────────────────────────────────────────────────
     const [logoPreview,    setLogoPreview]    = useState<string>("");
     const [heroPreview,    setHeroPreview]    = useState<string>("");
@@ -117,7 +125,7 @@ export default function SettingsPage() {
         if (!dealerId) return;
         supabase
             .from("dealers")
-            .select("logo_url, hero_image_url, sells_two_wheelers, sells_three_wheelers, sells_four_wheelers, sells_used_cars, google_maps_url, google_place_id, vehicle_type")
+            .select("logo_url, hero_image_url, sells_two_wheelers, sells_three_wheelers, sells_four_wheelers, sells_used_cars, google_maps_url, google_place_id, vehicle_type, branches, full_address")
             .eq("id", dealerId)
             .single()
             .then(({ data }) => {
@@ -130,9 +138,22 @@ export default function SettingsPage() {
                 if (data?.vehicle_type)            setVehicleType(data.vehicle_type);
                 if (data?.google_maps_url)         setGoogleMapsUrl(data.google_maps_url);
                 if (data?.google_place_id)         setGooglePlaceId(data.google_place_id);
+                if (data?.full_address)            setFullAddress(data.full_address);
+                if (Array.isArray(data?.branches)) setBranches(data.branches as typeof branches);
             });
-        return;
-        return;
+        // Fetch service centers (table may lag generated DB types)
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        (supabase as any)
+            .from("service_centers")
+            .select("id, name, address, city, phone, working_hours")
+            .eq("dealer_id", dealerId)
+            .eq("is_active", true)
+            .order("display_order", { ascending: true })
+            .then(({ data }: { data: typeof serviceCenters | null }) => {
+                if (data) setServiceCenters(data);
+            });
+        // Fetch outlets (dealer_brands with outlet-level details)
+        fetchDealerOutlets(dealerId).then(rows => setOutlets(rows));
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [dealerId]);
 
@@ -591,6 +612,19 @@ export default function SettingsPage() {
                             </div>
                         </CardContent>
                     </Card>
+
+                    {/* ── Dealership Locations (with Outlets) ── */}
+                    <OutletLocationsCard
+                        dealerId={dealerId ?? ""}
+                        outlets={outlets}
+                        mainAddress={fullAddress || formData.location || ""}
+                        mainPhone={formData.phone || ""}
+                        mainEmail={formData.email || ""}
+                        branches={branches}
+                        serviceCenters={serviceCenters}
+                        sellsUsedCars={sellsUsedCars}
+                        onOutletsChange={setOutlets}
+                    />
 
                     {/* ── Vehicle Segments ── */}
                     {(() => {

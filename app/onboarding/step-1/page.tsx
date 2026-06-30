@@ -337,7 +337,13 @@ export default function Step1Page() {
             });
             setStep(2);
 
-            if (isFirstHand) {
+            // Multi-brand or hybrid dealers → outlet details step before inventory
+            const needsOutletStep = (isFirstHand || isHybrid)
+                && (selectedBrands.length > 1 || isHybrid);
+
+            if (needsOutletStep) {
+                router.push("/onboarding/step-1b-outlets");
+            } else if (isFirstHand) {
                 router.push("/onboarding/step-2-inventory");
             } else {
                 router.push("/onboarding/step-2-used");

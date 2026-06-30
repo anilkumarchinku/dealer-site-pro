@@ -147,8 +147,33 @@ export interface OnboardingData {
     // Vehicles uploaded via CSV bulk upload (saved to DB in step-6)
     uploadedVehicles?: VehicleUploadRow[];
 
+    // Per-brand outlet details (multi-brand / hybrid dealers)
+    outlets?: OutletData[];
+
     // Computed
     dealerType: DealerType | null;
+}
+
+// ── Outlet types (multi-brand dealer support) ─────────────────────────────────
+export interface OutletBranch {
+    city: string;
+    state?: string;
+    address: string;
+    phone?: string;
+}
+
+export interface OutletData {
+    brandName: string;
+    vehicleType: string;
+    outletName?: string;
+    phone?: string;
+    whatsapp?: string;
+    email?: string;
+    fullAddress?: string;
+    city?: string;
+    state?: string;
+    googleMapsUrl?: string;
+    branches?: OutletBranch[];
 }
 
 // Lead types and priorities

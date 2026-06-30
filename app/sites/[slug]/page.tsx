@@ -115,13 +115,19 @@ function ComingSoon({ slug }: { slug: string }) {
 function MultiSitePortal({
     dealerName, location, phone, email, tagline, slug, brands, isHybrid,
     sellsTwoWheelers, sellsThreeWheelers, siteHrefForSlug, vehicleHubHref,
+    outlets,
 }: {
     dealerName: string; location: string; phone: string; email: string;
     tagline?: string | null; slug: string; brands: string[]; isHybrid: boolean;
     sellsTwoWheelers: boolean; sellsThreeWheelers: boolean;
     siteHrefForSlug: (siteSlug: string) => string;
     vehicleHubHref: (segment: VehicleHubSegment) => string;
+    outlets?: Array<{ brandName: string; outletName?: string | null; city?: string | null }>;
 }) {
+    // Build a map of brand → city for outlet location display
+    const outletCityMap = new Map(
+        (outlets ?? []).filter(o => o.city).map(o => [o.brandName, o.city!])
+    )
     const attractiveLine = tagline ?? `Your Trusted Automobile Partner in ${location}`
 
     // Build site cards
@@ -133,9 +139,10 @@ function MultiSitePortal({
             // Multi-brand hybrid: separate card per brand
             brands.forEach(brand => {
                 const brandSlug = brand.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')
+                const city = outletCityMap.get(brand)
                 siteCards.push({
                     label: brand,
-                    sublabel: 'New Cars · Authorised Dealer',
+                    sublabel: city ? `${city} · Authorised Dealer` : 'New Cars · Authorised Dealer',
                     href: siteHrefForSlug(`${slug}-${brandSlug}`),
                     color: 'blue',
                     emoji: '🚗',
@@ -163,9 +170,10 @@ function MultiSitePortal({
         // Multi-brand new-car only: one card per brand
         brands.forEach(brand => {
             const brandSlug = brand.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')
+            const city = outletCityMap.get(brand)
             siteCards.push({
                 label: brand,
-                sublabel: 'New Cars · Authorised Dealer',
+                sublabel: city ? `${city} · Authorised Dealer` : 'New Cars · Authorised Dealer',
                 href: siteHrefForSlug(`${slug}-${brandSlug}`),
                 color: 'blue',
                 emoji: '✨',
@@ -515,6 +523,7 @@ export default async function SitePage({ params }: SitePageProps) {
                 sellsThreeWheelers={sells_three_wheelers}
                 siteHrefForSlug={siteHrefForSlug}
                 vehicleHubHref={vehicleHubHref}
+                outlets={dealer.outlets}
             />
         )
     }
@@ -626,6 +635,7 @@ export default async function SitePage({ params }: SitePageProps) {
         contactInfo,
         branches: dealer.branches ?? undefined,
         serviceCenters: dealer.service_centers ?? undefined,
+        outlets: dealer.outlets,
         services: (dealer.services ?? []) as Service[],
         workingHours: dealer.working_hours ?? null,
         logoUrl,

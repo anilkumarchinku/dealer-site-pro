@@ -67,6 +67,15 @@ export interface Database {
           brand_name: string
           is_primary: boolean
           vehicle_type: string | null
+          outlet_name: string | null
+          phone: string | null
+          whatsapp: string | null
+          email: string | null
+          full_address: string | null
+          city: string | null
+          state: string | null
+          google_maps_url: string | null
+          branches: Json | null
           created_at: string
         }
         Insert: Partial<Database['public']['Tables']['dealer_brands']['Row']> & {

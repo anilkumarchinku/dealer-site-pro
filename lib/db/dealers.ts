@@ -75,6 +75,22 @@ export function findBrandNameByUrlSlug(brands: string[], brandSlug: string): str
     return brands.find(brand => brandToUrlSlug(brand) === normalized) ?? null
 }
 
+// ── Outlet types ──────────────────────────────────────────────────────────────
+export interface OutletPublicData {
+    brandName: string
+    vehicleType: string | null
+    isPrimary: boolean
+    outletName: string | null
+    phone: string | null
+    whatsapp: string | null
+    email: string | null
+    fullAddress: string | null
+    city: string | null
+    state: string | null
+    googleMapsUrl: string | null
+    branches: Array<{ city: string; state?: string; address: string; phone?: string }> | null
+}
+
 // ── Types ────────────────────────────────────────────────────────────────────
 export interface DealerPublicData {
     id: string
@@ -107,6 +123,12 @@ export interface DealerPublicData {
         linkedin: string | null
     }
     services: string[] | null
+    /** All outlets (brand-level contact/location data) for this dealer */
+    outlets: OutletPublicData[]
+    /** Resolved outlet when viewing a brand-specific URL */
+    activeOutlet: OutletPublicData | null
+    /** Dealer-level WhatsApp number */
+    whatsapp: string | null
     /** Set when the URL was a brand-specific slug, e.g. "abhi-motors-tata" */
     brandFilter: string | null
     /** True when the URL had the "-used" suffix — render the used-car site with Bentley colours */
@@ -236,7 +258,7 @@ async function fetchDealerCyeproApiKey(dealerId: string): Promise<string | null>
 async function findDealerByExactSlug(supabase: SupabaseClient, slug: string) {
     const { data, error } = await supabase
         .from('public_dealer_site_profiles')
-        .select('id, dealership_name, tagline, phone, email, location, full_address, slug, style_template, onboarding_complete, sells_new_cars, sells_used_cars, sells_two_wheelers, sells_three_wheelers, vehicle_type, logo_url, hero_image_url, branches')
+        .select('id, dealership_name, tagline, phone, whatsapp, email, location, full_address, slug, style_template, onboarding_complete, sells_new_cars, sells_used_cars, sells_two_wheelers, sells_three_wheelers, vehicle_type, logo_url, hero_image_url, branches')
         .eq('slug', slug)
         .single()
     if (error || !data) return null
@@ -340,7 +362,7 @@ export async function fetchDealerBySlug(
     const [brandsResult, mainConfigResult, siteConfigResult, vehiclesResult, servicesResult, serviceCentersResult, cyeproApiKey] = await Promise.all([
         supabase
             .from('public_dealer_site_brands')
-            .select('brand_name, vehicle_type')
+            .select('brand_name, vehicle_type, is_primary, outlet_name, phone, whatsapp, email, full_address, city, state, google_maps_url, branches')
             .eq('dealer_id', dealer.id),
         supabase
             .from('public_dealer_site_template_configs')
@@ -379,14 +401,41 @@ export async function fetchDealerBySlug(
     // Social links live only on the main template config (not per-brand site configs).
     const mainConfig = mainConfigResult.data
 
+    // ── Build outlets from brand rows ───────────────────────────────────
+    const outlets: OutletPublicData[] = (brandsResult.data ?? []).map(b => ({
+        brandName:   b.brand_name,
+        vehicleType: b.vehicle_type,
+        isPrimary:   b.is_primary ?? false,
+        outletName:  b.outlet_name ?? null,
+        phone:       b.phone ?? null,
+        whatsapp:    b.whatsapp ?? null,
+        email:       b.email ?? null,
+        fullAddress: b.full_address ?? null,
+        city:        b.city ?? null,
+        state:       b.state ?? null,
+        googleMapsUrl: b.google_maps_url ?? null,
+        branches:    Array.isArray(b.branches) ? b.branches as OutletPublicData['branches'] : null,
+    }))
+
+    // Resolve activeOutlet when on a brand-specific URL
+    const activeOutlet = brandFilter
+        ? outlets.find(o => o.brandName === brandFilter) ?? null
+        : null
+
+    // Outlet-level contact overrides (fall back to dealer-level)
+    const effectivePhone      = activeOutlet?.phone      || dealer.phone
+    const effectiveEmail      = activeOutlet?.email       || dealer.email
+    const effectiveAddress    = activeOutlet?.fullAddress  || dealer.full_address
+    const effectiveWhatsapp   = activeOutlet?.whatsapp    || dealer.whatsapp
+
     return {
         id:              dealer.id,
         dealership_name: dealer.dealership_name,
         tagline:         (siteConfigResult.data?.tagline ?? dealer.tagline) ?? null,
-        phone:           dealer.phone,
-        email:           dealer.email,
+        phone:           effectivePhone,
+        email:           effectiveEmail,
         location:        dealer.location,
-        full_address:    dealer.full_address ?? null,
+        full_address:    effectiveAddress ?? null,
         slug:            dealer.slug,
         style_template:  siteConfigResult.data?.style_template ?? dealer.style_template ?? 'family',
         sells_new_cars:       dealer.sells_new_cars       ?? false,
@@ -411,6 +460,9 @@ export async function fetchDealerBySlug(
             linkedin:  mainConfig?.linkedin_url  ?? null,
         },
         services:        servicesResult.data?.map(s => s.service_name) ?? null,
+        outlets,
+        activeOutlet,
+        whatsapp:        effectiveWhatsapp ?? null,
         brandFilter,
         usedCarSite,
         cyepro_api_key:  cyeproApiKey,
