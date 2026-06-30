@@ -1,12 +1,22 @@
 "use client"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useCallback } from "react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { useOnboardingStore } from "@/lib/store/onboarding-store"
 import { PremiumPageHeader } from "@/components/dashboard/premium-ui"
-import { Loader2, Plus, Trash2, Tag } from "lucide-react"
+import { fetchDealerOutlets, type OutletRow } from "@/lib/db/settings"
+import { Loader2, Plus, Trash2, Tag, Building2, ImageIcon } from "lucide-react"
+import type { Json } from "@/lib/database.types"
+
+interface OutletBranch {
+  city: string
+  state?: string
+  address: string
+  phone?: string
+  whatsapp?: string
+}
 
 interface OfferRow {
   id: string
@@ -14,10 +24,19 @@ interface OfferRow {
   description: string | null
   tag: string | null
   valid_until: string | null
+  brand_id: string | null
+  branch_city: string | null
+  image_url: string | null
+  promotion_type: string | null
   created_at: string
 }
 
 const TAG_OPTIONS = ["Finance", "Exchange", "Service", "Electric", "Offer", "Referral", "Seasonal"]
+const PROMOTION_TYPES = [
+  { value: "offer", label: "Offer" },
+  { value: "campaign", label: "Campaign" },
+  { value: "announcement", label: "Announcement" },
+]
 
 const TAG_COLORS: Record<string, string> = {
   Finance:  'bg-green-100 text-green-700 dark:bg-green-500/15 dark:text-green-300',
@@ -29,22 +48,59 @@ const TAG_COLORS: Record<string, string> = {
   Seasonal: 'bg-pink-100 text-pink-700 dark:bg-pink-500/15 dark:text-pink-300',
 }
 
+const PROMO_COLORS: Record<string, string> = {
+  offer: 'bg-emerald-100 text-emerald-700 dark:bg-emerald-500/15 dark:text-emerald-300',
+  campaign: 'bg-indigo-100 text-indigo-700 dark:bg-indigo-500/15 dark:text-indigo-300',
+  announcement: 'bg-sky-100 text-sky-700 dark:bg-sky-500/15 dark:text-sky-300',
+}
+
+interface FormState {
+  title: string
+  description: string
+  tag: string
+  valid_until: string
+  brand_id: string        // "" = all outlets
+  branch_city: string     // "" = all branches
+  image_url: string
+  promotion_type: string
+}
+
+const INITIAL_FORM: FormState = {
+  title: '', description: '', tag: 'Offer', valid_until: '',
+  brand_id: '', branch_city: '', image_url: '', promotion_type: 'offer',
+}
+
 export default function OffersPage() {
   const { dealerId } = useOnboardingStore()
   const [offers, setOffers] = useState<OfferRow[]>([])
+  const [outlets, setOutlets] = useState<OutletRow[]>([])
   const [loading, setLoading] = useState(false)
-  const [form, setForm] = useState({ title: '', description: '', tag: 'Offer', valid_until: '' })
+  const [form, setForm] = useState<FormState>(INITIAL_FORM)
   const [adding, setAdding] = useState(false)
   const [saving, setSaving] = useState(false)
 
   useEffect(() => {
     if (!dealerId) return
     setLoading(true)
-    fetch(`/api/offers?dealer_id=${dealerId}`)
-      .then(r => r.json())
-      .then(d => setOffers(d.offers ?? []))
-      .finally(() => setLoading(false))
+    Promise.all([
+      fetch(`/api/offers?dealer_id=${dealerId}`).then(r => r.json()),
+      fetchDealerOutlets(dealerId),
+    ]).then(([offersData, outletsData]) => {
+      setOffers(offersData.offers ?? [])
+      setOutlets(outletsData)
+    }).finally(() => setLoading(false))
   }, [dealerId])
+
+  // Branches for the selected outlet
+  const selectedOutlet = outlets.find(o => o.id === form.brand_id)
+  const outletBranches: OutletBranch[] = selectedOutlet && Array.isArray(selectedOutlet.branches)
+    ? (selectedOutlet.branches as unknown as OutletBranch[])
+    : []
+
+  const outletNameMap = useCallback((brandId: string | null) => {
+    if (!brandId) return null
+    return outlets.find(o => o.id === brandId)?.brand_name ?? null
+  }, [outlets])
 
   async function saveOffer() {
     if (!dealerId || !form.title.trim()) return
@@ -52,12 +108,33 @@ export default function OffersPage() {
     const res = await fetch('/api/offers', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer internal' },
-      body: JSON.stringify({ dealer_id: dealerId, ...form, valid_until: form.valid_until || null })
+      body: JSON.stringify({
+        dealer_id: dealerId,
+        title: form.title,
+        description: form.description || null,
+        tag: form.tag,
+        valid_until: form.valid_until || null,
+        brand_id: form.brand_id || null,
+        branch_city: form.branch_city || null,
+        image_url: form.image_url || null,
+        promotion_type: form.promotion_type || 'offer',
+      })
     })
     const data = await res.json()
     if (data.success) {
-      setOffers(prev => [{ id: data.id, ...form, valid_until: form.valid_until || null, created_at: new Date().toISOString() }, ...prev])
-      setForm({ title: '', description: '', tag: 'Offer', valid_until: '' })
+      setOffers(prev => [{
+        id: data.id,
+        title: form.title,
+        description: form.description || null,
+        tag: form.tag,
+        valid_until: form.valid_until || null,
+        brand_id: form.brand_id || null,
+        branch_city: form.branch_city || null,
+        image_url: form.image_url || null,
+        promotion_type: form.promotion_type || 'offer',
+        created_at: new Date().toISOString(),
+      }, ...prev])
+      setForm(INITIAL_FORM)
       setAdding(false)
     }
     setSaving(false)
@@ -74,7 +151,7 @@ export default function OffersPage() {
       <PremiumPageHeader
         eyebrow="Promotions"
         title="Offers & Schemes"
-        description="Manage special offers shown on your dealer site"
+        description="Manage special offers shown on your dealer site and customer panel"
         actions={
           <Button
             onClick={() => setAdding(v => !v)}
@@ -114,6 +191,50 @@ export default function OffersPage() {
                 className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 resize-none"
               />
             </div>
+
+            {/* Outlet & Branch Selectors */}
+            <div className="flex gap-4 flex-wrap">
+              <div className="flex-1 min-w-[160px]">
+                <label className="text-sm font-medium mb-1 block">Outlet</label>
+                <Select
+                  value={form.brand_id || "__all__"}
+                  onValueChange={v => setForm(f => ({ ...f, brand_id: v === "__all__" ? "" : v, branch_city: "" }))}
+                >
+                  <SelectTrigger>
+                    <SelectValue placeholder="All Outlets" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="__all__">All Outlets</SelectItem>
+                    {outlets.map(o => (
+                      <SelectItem key={o.id} value={o.id}>
+                        {o.outlet_name || o.brand_name}
+                        {o.city ? ` — ${o.city}` : ''}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
+              {outletBranches.length > 0 && (
+                <div className="flex-1 min-w-[160px]">
+                  <label className="text-sm font-medium mb-1 block">Branch</label>
+                  <Select
+                    value={form.branch_city || "__all__"}
+                    onValueChange={v => setForm(f => ({ ...f, branch_city: v === "__all__" ? "" : v }))}
+                  >
+                    <SelectTrigger>
+                      <SelectValue placeholder="All Branches" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="__all__">All Branches</SelectItem>
+                      {outletBranches.map((b, i) => (
+                        <SelectItem key={i} value={b.city}>{b.city}</SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+              )}
+            </div>
+
             <div className="flex gap-4 flex-wrap">
               <div className="flex-1 min-w-[160px]">
                 <label className="text-sm font-medium mb-1 block">Tag</label>
@@ -129,6 +250,19 @@ export default function OffersPage() {
                 </Select>
               </div>
               <div className="flex-1 min-w-[160px]">
+                <label className="text-sm font-medium mb-1 block">Type</label>
+                <Select value={form.promotion_type} onValueChange={v => setForm(f => ({ ...f, promotion_type: v }))}>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Select type" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {PROMOTION_TYPES.map(t => (
+                      <SelectItem key={t.value} value={t.value}>{t.label}</SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
+              <div className="flex-1 min-w-[160px]">
                 <label className="text-sm font-medium mb-1 block">Valid Until <span className="text-muted-foreground font-normal">(optional)</span></label>
                 <Input
                   type="date"
@@ -136,6 +270,14 @@ export default function OffersPage() {
                   onChange={e => setForm(f => ({ ...f, valid_until: e.target.value }))}
                 />
               </div>
+            </div>
+            <div>
+              <label className="text-sm font-medium mb-1 block">Image URL <span className="text-muted-foreground font-normal">(optional)</span></label>
+              <Input
+                placeholder="https://example.com/offer-banner.jpg"
+                value={form.image_url}
+                onChange={e => setForm(f => ({ ...f, image_url: e.target.value }))}
+              />
             </div>
             <div className="flex gap-2 pt-1">
               <Button onClick={saveOffer} disabled={saving || !form.title.trim()} size="sm" className="gap-1.5">
@@ -175,37 +317,59 @@ export default function OffersPage() {
             </div>
           ) : (
             <div className="divide-y divide-border">
-              {offers.map(offer => (
-                <div key={offer.id} className="flex items-start gap-3 p-4 hover:bg-muted/20 transition-colors">
-                  <div className="flex-1 min-w-0 space-y-1">
-                    <div className="flex items-center gap-2 flex-wrap">
-                      {offer.tag && (
-                        <span className={`inline-block text-xs font-semibold px-2 py-0.5 rounded-full ${TAG_COLORS[offer.tag] ?? 'bg-muted text-muted-foreground'}`}>
-                          {offer.tag}
-                        </span>
+              {offers.map(offer => {
+                const outletName = outletNameMap(offer.brand_id)
+                return (
+                  <div key={offer.id} className="flex items-start gap-3 p-4 hover:bg-muted/20 transition-colors">
+                    {offer.image_url && (
+                      <img
+                        src={offer.image_url}
+                        alt=""
+                        className="w-16 h-16 rounded-lg object-cover shrink-0 border border-border"
+                      />
+                    )}
+                    <div className="flex-1 min-w-0 space-y-1">
+                      <div className="flex items-center gap-2 flex-wrap">
+                        {outletName && (
+                          <span className="inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 rounded-full bg-primary/10 text-primary">
+                            <Building2 className="w-3 h-3" />
+                            {outletName}
+                            {offer.branch_city ? ` — ${offer.branch_city}` : ''}
+                          </span>
+                        )}
+                        {offer.promotion_type && offer.promotion_type !== 'offer' && (
+                          <span className={`inline-block text-xs font-semibold px-2 py-0.5 rounded-full ${PROMO_COLORS[offer.promotion_type] ?? 'bg-muted text-muted-foreground'}`}>
+                            {offer.promotion_type.charAt(0).toUpperCase() + offer.promotion_type.slice(1)}
+                          </span>
+                        )}
+                        {offer.tag && (
+                          <span className={`inline-block text-xs font-semibold px-2 py-0.5 rounded-full ${TAG_COLORS[offer.tag] ?? 'bg-muted text-muted-foreground'}`}>
+                            {offer.tag}
+                          </span>
+                        )}
+                        <h3 className="font-semibold text-sm">{offer.title}</h3>
+                      </div>
+                      {offer.description && (
+                        <p className="text-sm text-muted-foreground">{offer.description}</p>
                       )}
-                      <h3 className="font-semibold text-sm">{offer.title}</h3>
+                      {offer.valid_until && (
+                        <p className="text-xs text-muted-foreground">
+                          Expires: {new Date(offer.valid_until).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })}
+                        </p>
+                      )}
                     </div>
-                    {offer.description && (
-                      <p className="text-sm text-muted-foreground">{offer.description}</p>
-                    )}
-                    {offer.valid_until && (
-                      <p className="text-xs text-muted-foreground">
-                        Expires: {new Date(offer.valid_until).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })}
-                      </p>
-                    )}
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      className="h-8 w-8 text-muted-foreground hover:text-red-600 shrink-0"
+                      onClick={() => deleteOffer(offer.id)}
+                      title="Remove offer"
+                    >
+                      <Trash2 className="w-4 h-4" />
+                    </Button>
                   </div>
-                  <Button
-                    variant="ghost"
-                    size="icon"
-                    className="h-8 w-8 text-muted-foreground hover:text-red-600 shrink-0"
-                    onClick={() => deleteOffer(offer.id)}
-                    title="Remove offer"
-                  >
-                    <Trash2 className="w-4 h-4" />
-                  </Button>
-                </div>
-              ))}
+                )
+              })}
             </div>
           )}
         </CardContent>

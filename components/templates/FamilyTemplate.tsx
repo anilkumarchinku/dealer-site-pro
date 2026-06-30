@@ -102,6 +102,7 @@ interface FamilyTemplateProps {
     vehicleType?: '2w' | '3w' | '4w';
     socialLinks?: { facebook: string | null; instagram: string | null; twitter?: string | null; youtube: string | null; linkedin?: string | null };
     sellVehicleHref?: string;
+    dealerOffers?: Array<{ id: string; title: string; description: string | null; tag: string | null; valid_until: string | null; image_url: string | null; promotion_type: string | null; outlet_name: string | null }>;
 }
 
 export function FamilyTemplate({
@@ -125,6 +126,7 @@ export function FamilyTemplate({
     vehicleType,
     socialLinks,
     sellVehicleHref,
+    dealerOffers,
 }: FamilyTemplateProps) {
     const vl = getVehicleLabels(vehicleType);
     const pathname = usePathname();
@@ -555,7 +557,7 @@ export function FamilyTemplate({
                     </section>
 
                     {/* Offers Section */}
-                    <OffersSection brandColor={brandColors.primary} dealerName={dealerName} vehicleType={vehicleType} dealerPhone={contactInfo.phone} />
+                    <OffersSection brandColor={brandColors.primary} dealerName={dealerName} vehicleType={vehicleType} dealerPhone={contactInfo.phone} dealerOffers={dealerOffers} />
 
                     {/* Exchange Section */}
                     <div id="exchange-section">

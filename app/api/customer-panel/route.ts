@@ -194,7 +194,7 @@ export async function POST(request: NextRequest) {
             .limit(8),
         admin
             .from('dealer_offers')
-            .select('id, title, description, tag, valid_until, created_at')
+            .select('id, title, description, tag, valid_until, image_url, promotion_type, brand_id, created_at, brand:dealer_brands!brand_id(brand_name)')
             .eq('dealer_id', dealer.id)
             .eq('is_active', true)
             .or(`valid_until.is.null,valid_until.gte.${today}`)
@@ -219,6 +219,18 @@ export async function POST(request: NextRequest) {
             service_bookings: serviceBookingsResult.data ?? [],
         },
         new_arrivals: vehiclesResult.data ?? [],
-        offers: offersResult.data ?? [],
+        offers: (offersResult.data ?? []).map((row: Record<string, unknown>) => {
+            const brand = row.brand as { brand_name?: string } | null
+            return {
+                id: row.id,
+                title: row.title,
+                description: row.description,
+                tag: row.tag,
+                valid_until: row.valid_until,
+                image_url: row.image_url ?? null,
+                promotion_type: row.promotion_type ?? null,
+                outlet_name: brand?.brand_name ?? null,
+            }
+        }),
     })
 }

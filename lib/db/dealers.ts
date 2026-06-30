@@ -75,6 +75,20 @@ export function findBrandNameByUrlSlug(brands: string[], brandSlug: string): str
     return brands.find(brand => brandToUrlSlug(brand) === normalized) ?? null
 }
 
+// ── Offer types ──────────────────────────────────────────────────────────────
+export interface DealerOfferPublic {
+    id: string
+    title: string
+    description: string | null
+    tag: string | null
+    valid_until: string | null
+    image_url: string | null
+    promotion_type: string | null
+    brand_id: string | null
+    branch_city: string | null
+    outlet_name: string | null
+}
+
 // ── Outlet types ──────────────────────────────────────────────────────────────
 export interface OutletPublicData {
     brandName: string
@@ -139,6 +153,8 @@ export interface DealerPublicData {
     hero_image_url: string | null
     /** Primary vehicle category: car | two-wheeler | three-wheeler */
     vehicle_type: string | null
+    /** Active promotions/offers for this dealer */
+    offers: DealerOfferPublic[]
 }
 
 export type FetchDealerBySlugOptions = {
@@ -359,7 +375,7 @@ export async function fetchDealerBySlug(
     // For brand-specific sites, also try dealer_site_configs for per-brand overrides
     const brandSlugForConfig = brandFilter ? brandToUrlSlug(brandFilter) : null
 
-    const [brandsResult, mainConfigResult, siteConfigResult, vehiclesResult, servicesResult, serviceCentersResult, cyeproApiKey] = await Promise.all([
+    const [brandsResult, mainConfigResult, siteConfigResult, vehiclesResult, servicesResult, serviceCentersResult, offersResult, cyeproApiKey] = await Promise.all([
         supabase
             .from('public_dealer_site_brands')
             .select('brand_name, vehicle_type, is_primary, outlet_name, phone, whatsapp, email, full_address, city, state, google_maps_url, branches')
@@ -393,6 +409,12 @@ export async function fetchDealerBySlug(
             .select('id, name, address, city, phone')
             .eq('dealer_id', dealer.id)
             .order('display_order', { ascending: true }),
+        supabase
+            .from('public_dealer_site_offers')
+            .select('id, title, description, tag, valid_until, image_url, promotion_type, brand_id, branch_city, outlet_name, created_at')
+            .eq('dealer_id', dealer.id)
+            .order('created_at', { ascending: false })
+            .limit(20),
         options.includePrivate ? fetchDealerCyeproApiKey(dealer.id) : Promise.resolve(null),
     ])
 
@@ -421,6 +443,25 @@ export async function fetchDealerBySlug(
     const activeOutlet = brandFilter
         ? outlets.find(o => o.brandName === brandFilter) ?? null
         : null
+
+    // ── Build offers, filtered for brand-specific pages ──────────────────
+    const allOffers: DealerOfferPublic[] = (offersResult.data ?? []).map(o => ({
+        id:             o.id,
+        title:          o.title,
+        description:    o.description ?? null,
+        tag:            o.tag ?? null,
+        valid_until:    o.valid_until ?? null,
+        image_url:      o.image_url ?? null,
+        promotion_type: o.promotion_type ?? null,
+        brand_id:       o.brand_id ?? null,
+        branch_city:    o.branch_city ?? null,
+        outlet_name:    o.outlet_name ?? null,
+    }))
+
+    // On brand-specific URLs, show only offers for that outlet + dealer-wide offers
+    const filteredOffers = brandFilter
+        ? allOffers.filter(o => !o.brand_id || o.outlet_name === brandFilter)
+        : allOffers
 
     // Outlet-level contact overrides (fall back to dealer-level)
     const effectivePhone      = activeOutlet?.phone      || dealer.phone
@@ -469,5 +510,6 @@ export async function fetchDealerBySlug(
         logo_url:        dealer.logo_url       ?? null,
         hero_image_url:  dealer.hero_image_url ?? null,
         vehicle_type:    dealer.vehicle_type    ?? null,
+        offers:          filteredOffers,
     }
 }

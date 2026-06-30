@@ -84,6 +84,7 @@ interface LuxuryTemplateProps {
     vehicleType?: '2w' | '3w' | '4w';
     socialLinks?: { facebook: string | null; instagram: string | null; twitter?: string | null; youtube: string | null; linkedin?: string | null };
     sellVehicleHref?: string;
+    dealerOffers?: Array<{ id: string; title: string; description: string | null; tag: string | null; valid_until: string | null; image_url: string | null; promotion_type: string | null; outlet_name: string | null }>;
 }
 
 export function LuxuryTemplate({
@@ -107,6 +108,7 @@ export function LuxuryTemplate({
     vehicleType,
     socialLinks,
     sellVehicleHref,
+    dealerOffers,
 }: LuxuryTemplateProps) {
     const vl = getVehicleLabels(vehicleType);
     const pathname = usePathname();
@@ -496,7 +498,7 @@ export function LuxuryTemplate({
                     </section>
 
                     {/* Offers Section */}
-                    <OffersSection brandColor={brandAccent} dealerName={dealerName} vehicleType={vehicleType} dealerPhone={contactInfo.phone} />
+                    <OffersSection brandColor={brandAccent} dealerName={dealerName} vehicleType={vehicleType} dealerPhone={contactInfo.phone} dealerOffers={dealerOffers} />
 
                     {/* Exchange Section */}
                     <div id="exchange-section">

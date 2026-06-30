@@ -645,6 +645,7 @@ export default async function SitePage({ params }: SitePageProps) {
         socialLinks: dealer.social,
         isVerified: false,
         sellVehicleHref,
+        dealerOffers: dealer.offers,
     }
 
     // ── JSON-LD structured data ───────────────────────────────────────────────

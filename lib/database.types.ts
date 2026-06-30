@@ -153,6 +153,10 @@ export interface Database {
           tag: string | null
           valid_until: string | null
           is_active: boolean
+          brand_id: string | null
+          branch_city: string | null
+          image_url: string | null
+          promotion_type: string | null
           created_at: string
           updated_at: string
         }

@@ -83,6 +83,9 @@ export type Offer = {
     description?: string | null
     tag?: string | null
     valid_until?: string | null
+    image_url?: string | null
+    promotion_type?: string | null
+    outlet_name?: string | null
 }
 
 export type PanelData = {

@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { Calendar, Car, Gift, MapPin, Phone, Search, Wrench } from "lucide-react"
+import { Building2, Calendar, Car, Gift, MapPin, Phone, Search, Wrench } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 import { StatusBadge } from "./StatusBadge"
@@ -151,14 +151,30 @@ export function CustomerPanelDashboard({ data, slug, onSectionChange }: Props) {
                 <section>
                     <h3 className="mb-3 flex items-center gap-2 text-lg font-bold"><Gift className="h-5 w-5" /> Promotions</h3>
                     <div className="grid gap-3 sm:grid-cols-2">
-                        {data.offers.slice(0, 2).map(offer => (
-                            <div key={offer.id} className="rounded-xl border bg-white p-4">
-                                <div className="flex items-center justify-between gap-2">
+                        {data.offers.map(offer => (
+                            <div key={offer.id} className="rounded-xl border bg-white overflow-hidden">
+                                {offer.image_url && (
+                                    <img src={offer.image_url} alt="" className="w-full h-36 object-cover" />
+                                )}
+                                <div className="p-4">
+                                    <div className="flex items-center gap-2 flex-wrap mb-1">
+                                        {offer.outlet_name && (
+                                            <span className="inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 rounded-full bg-slate-100 text-slate-700">
+                                                <Building2 className="h-3 w-3" />
+                                                {offer.outlet_name}
+                                            </span>
+                                        )}
+                                        {offer.promotion_type && offer.promotion_type !== 'offer' && (
+                                            <Badge variant="outline" className="text-xs">
+                                                {offer.promotion_type.charAt(0).toUpperCase() + offer.promotion_type.slice(1)}
+                                            </Badge>
+                                        )}
+                                        {offer.tag && <Badge>{offer.tag}</Badge>}
+                                    </div>
                                     <p className="font-semibold">{offer.title}</p>
-                                    {offer.tag && <Badge>{offer.tag}</Badge>}
+                                    {offer.description && <p className="mt-2 text-sm text-slate-600">{offer.description}</p>}
+                                    {offer.valid_until && <p className="mt-3 text-xs text-slate-500">Valid until {formatDate(offer.valid_until)}</p>}
                                 </div>
-                                {offer.description && <p className="mt-2 text-sm text-slate-600">{offer.description}</p>}
-                                {offer.valid_until && <p className="mt-3 text-xs text-slate-500">Valid until {formatDate(offer.valid_until)}</p>}
                             </div>
                         ))}
                     </div>
