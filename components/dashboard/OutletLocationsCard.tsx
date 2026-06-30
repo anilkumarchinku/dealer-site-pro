@@ -19,6 +19,7 @@ interface OutletBranch {
     state?: string
     address: string
     phone?: string
+    whatsapp?: string
 }
 
 interface Props {
@@ -319,30 +320,44 @@ export function OutletLocationsCard({
                                                         </Button>
                                                     </div>
                                                     {editBranches.map((branch, idx) => (
-                                                        <div key={idx} className="grid grid-cols-[1fr_1fr_2fr_auto] gap-2 mb-2">
-                                                            <Input
-                                                                placeholder="City"
-                                                                value={branch.city}
-                                                                onChange={e => updateBranch(idx, "city", e.target.value)}
-                                                            />
-                                                            <Input
-                                                                placeholder="State"
-                                                                value={branch.state ?? ""}
-                                                                onChange={e => updateBranch(idx, "state", e.target.value)}
-                                                            />
+                                                        <div key={idx} className="space-y-2 mb-3 p-2 rounded-lg bg-muted/30 border border-border/50">
+                                                            <div className="grid grid-cols-[1fr_1fr_auto] gap-2">
+                                                                <Input
+                                                                    placeholder="City"
+                                                                    value={branch.city}
+                                                                    onChange={e => updateBranch(idx, "city", e.target.value)}
+                                                                />
+                                                                <Input
+                                                                    placeholder="State"
+                                                                    value={branch.state ?? ""}
+                                                                    onChange={e => updateBranch(idx, "state", e.target.value)}
+                                                                />
+                                                                <Button
+                                                                    variant="ghost"
+                                                                    size="sm"
+                                                                    className="h-9 w-9 p-0 text-destructive"
+                                                                    onClick={() => removeBranch(idx)}
+                                                                >
+                                                                    <Trash2 className="w-3.5 h-3.5" />
+                                                                </Button>
+                                                            </div>
                                                             <Input
                                                                 placeholder="Address"
                                                                 value={branch.address}
                                                                 onChange={e => updateBranch(idx, "address", e.target.value)}
                                                             />
-                                                            <Button
-                                                                variant="ghost"
-                                                                size="sm"
-                                                                className="h-9 w-9 p-0 text-destructive"
-                                                                onClick={() => removeBranch(idx)}
-                                                            >
-                                                                <Trash2 className="w-3.5 h-3.5" />
-                                                            </Button>
+                                                            <div className="grid grid-cols-2 gap-2">
+                                                                <Input
+                                                                    placeholder="Phone"
+                                                                    value={branch.phone ?? ""}
+                                                                    onChange={e => updateBranch(idx, "phone", e.target.value)}
+                                                                />
+                                                                <Input
+                                                                    placeholder="WhatsApp"
+                                                                    value={branch.whatsapp ?? ""}
+                                                                    onChange={e => updateBranch(idx, "whatsapp", e.target.value)}
+                                                                />
+                                                            </div>
                                                         </div>
                                                     ))}
                                                 </div>

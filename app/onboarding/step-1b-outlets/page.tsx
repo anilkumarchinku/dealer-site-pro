@@ -277,31 +277,45 @@ export default function Step1bOutletsPage() {
                                 )}
 
                                 {(outlet.branches ?? []).map((branch, bIdx) => (
-                                    <div key={bIdx} className="grid grid-cols-[1fr_1fr_2fr_auto] gap-2 mb-2">
-                                        <Input
-                                            placeholder="City"
-                                            value={branch.city}
-                                            onChange={e => updateBranch(idx, bIdx, "city", e.target.value)}
-                                        />
-                                        <Input
-                                            placeholder="State"
-                                            value={branch.state ?? ""}
-                                            onChange={e => updateBranch(idx, bIdx, "state", e.target.value)}
-                                        />
+                                    <div key={bIdx} className="space-y-2 mb-3 p-3 rounded-lg bg-muted/30 border border-border/50">
+                                        <div className="grid grid-cols-[1fr_1fr_auto] gap-2">
+                                            <Input
+                                                placeholder="City"
+                                                value={branch.city}
+                                                onChange={e => updateBranch(idx, bIdx, "city", e.target.value)}
+                                            />
+                                            <Input
+                                                placeholder="State"
+                                                value={branch.state ?? ""}
+                                                onChange={e => updateBranch(idx, bIdx, "state", e.target.value)}
+                                            />
+                                            <Button
+                                                type="button"
+                                                variant="ghost"
+                                                size="sm"
+                                                className="h-9 w-9 p-0 text-destructive"
+                                                onClick={() => removeBranch(idx, bIdx)}
+                                            >
+                                                <Trash2 className="w-3.5 h-3.5" />
+                                            </Button>
+                                        </div>
                                         <Input
                                             placeholder="Address"
                                             value={branch.address}
                                             onChange={e => updateBranch(idx, bIdx, "address", e.target.value)}
                                         />
-                                        <Button
-                                            type="button"
-                                            variant="ghost"
-                                            size="sm"
-                                            className="h-9 w-9 p-0 text-destructive"
-                                            onClick={() => removeBranch(idx, bIdx)}
-                                        >
-                                            <Trash2 className="w-3.5 h-3.5" />
-                                        </Button>
+                                        <div className="grid grid-cols-2 gap-2">
+                                            <Input
+                                                placeholder="Phone"
+                                                value={branch.phone ?? ""}
+                                                onChange={e => updateBranch(idx, bIdx, "phone", e.target.value)}
+                                            />
+                                            <Input
+                                                placeholder="WhatsApp"
+                                                value={branch.whatsapp ?? ""}
+                                                onChange={e => updateBranch(idx, bIdx, "whatsapp", e.target.value)}
+                                            />
+                                        </div>
                                     </div>
                                 ))}
                             </div>

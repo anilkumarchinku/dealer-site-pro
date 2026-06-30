@@ -160,6 +160,7 @@ export interface OutletBranch {
     state?: string;
     address: string;
     phone?: string;
+    whatsapp?: string;
 }
 
 export interface OutletData {

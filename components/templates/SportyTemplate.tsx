@@ -107,7 +107,7 @@ interface SportyTemplateProps {
     sellsUsedCars?: boolean;
     branches?: Array<{ city: string; address: string; phone?: string }>;
     serviceCenters?: Array<{ id: string; name: string; address?: string; city?: string; phone?: string }>;
-    outlets?: Array<{ brandName: string; outletName?: string | null; phone?: string | null; fullAddress?: string | null; city?: string | null; googleMapsUrl?: string | null; branches?: Array<{ city: string; address: string; phone?: string }> | null }>;
+    outlets?: Array<{ brandName: string; outletName?: string | null; phone?: string | null; fullAddress?: string | null; city?: string | null; googleMapsUrl?: string | null; branches?: Array<{ city: string; address: string; phone?: string; whatsapp?: string }> | null }>;
     isVerified?: boolean;
     vehicleType?: '2w' | '3w' | '4w';
     socialLinks?: { facebook: string | null; instagram: string | null; twitter?: string | null; youtube: string | null; linkedin?: string | null };

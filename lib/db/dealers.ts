@@ -88,7 +88,7 @@ export interface OutletPublicData {
     city: string | null
     state: string | null
     googleMapsUrl: string | null
-    branches: Array<{ city: string; state?: string; address: string; phone?: string }> | null
+    branches: Array<{ city: string; state?: string; address: string; phone?: string; whatsapp?: string }> | null
 }
 
 // ── Types ────────────────────────────────────────────────────────────────────

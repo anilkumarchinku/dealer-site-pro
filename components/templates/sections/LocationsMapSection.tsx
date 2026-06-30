@@ -1,6 +1,6 @@
-import { MapPin, Phone, Clock, Building2 } from "lucide-react"
+import { MapPin, Phone, Clock, Building2, MessageCircle } from "lucide-react"
 
-type Branch = { city: string; address: string; phone?: string }
+type Branch = { city: string; address: string; phone?: string; whatsapp?: string }
 type ServiceCenterLocation = {
     name: string
     address: string
@@ -34,6 +34,7 @@ function MapCard({
     label,
     address,
     phone,
+    whatsapp,
     workingHours,
     mapsUrl,
     googleMapsUrl,
@@ -42,6 +43,7 @@ function MapCard({
     label: string
     address: string
     phone?: string | null
+    whatsapp?: string | null
     workingHours?: string | null
     mapsUrl?: string | null
     googleMapsUrl?: string | null
@@ -75,6 +77,12 @@ function MapCard({
                     <div className="flex items-center gap-2 text-sm text-gray-600">
                         <Phone className="h-4 w-4 shrink-0" style={{ color: brandColor }} />
                         <a href={`tel:${phone}`} className="hover:underline">{phone}</a>
+                    </div>
+                )}
+                {whatsapp && (
+                    <div className="flex items-center gap-2 text-sm text-gray-600">
+                        <MessageCircle className="h-4 w-4 shrink-0" style={{ color: brandColor }} />
+                        <a href={`https://wa.me/${whatsapp.replace(/[^0-9]/g, '')}`} target="_blank" rel="noopener noreferrer" className="hover:underline">{whatsapp}</a>
                     </div>
                 )}
                 {workingHours && (
@@ -146,6 +154,7 @@ export function LocationsMapSection({
                                             label={`${outletLabel} — ${branch.city}`}
                                             address={branch.address}
                                             phone={branch.phone}
+                                            whatsapp={branch.whatsapp}
                                             brandColor={brandColor}
                                         />
                                     ))}
