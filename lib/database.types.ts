@@ -143,6 +143,9 @@ export interface Database {
           description: string | null
           tag: string | null
           valid_until: string | null
+          site_slug: string | null
+          image_url: string | null
+          show_popup: boolean
           is_active: boolean
           created_at: string
           updated_at: string
@@ -152,6 +155,26 @@ export interface Database {
           title: string
         }
         Update: Partial<Database['public']['Tables']['dealer_offers']['Row']>
+        Relationships: []
+      }
+      dealer_site_banners: {
+        Row: {
+          id: string
+          dealer_id: string
+          site_slug: string | null
+          title: string | null
+          desktop_image_url: string
+          mobile_image_url: string | null
+          sort_order: number
+          is_active: boolean
+          created_at: string
+          updated_at: string
+        }
+        Insert: Partial<Database['public']['Tables']['dealer_site_banners']['Row']> & {
+          dealer_id: string
+          desktop_image_url: string
+        }
+        Update: Partial<Database['public']['Tables']['dealer_site_banners']['Row']>
         Relationships: []
       }
       dealer_domains: {

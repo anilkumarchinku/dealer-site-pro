@@ -11,9 +11,12 @@ import { ModernTemplate } from '@/components/templates/ModernTemplate'
 import { LuxuryTemplate } from '@/components/templates/LuxuryTemplate'
 import { SportyTemplate } from '@/components/templates/SportyTemplate'
 import { FamilyTemplate } from '@/components/templates/FamilyTemplate'
+import { OfferPopup } from '@/components/templates/sections/OfferPopup'
 import type { Car } from '@/lib/types/car'
 import type { TwoWheelerVehicle, TwoWheelerUsedVehicle } from '@/lib/types/two-wheeler'
 import type { Service } from '@/lib/types'
+import { fetchDealerOfferPopup } from '@/lib/db/dealer-offers'
+import { fetchActiveDealerBanners } from '@/lib/db/dealer-banners'
 import { dedupeByBrandModel, dedupeCaseInsensitiveStrings } from '@/lib/utils/listing-dedupe'
 import { brandLogoUrl as getBrandLogoUrl, firstVehicleHeroImage, resolveDealerHeroImage } from '@/lib/utils/site-assets'
 import { brandToUrlSlug, dealerSiteHref } from '@/lib/utils/domain'
@@ -314,6 +317,9 @@ export default async function TwoWheelersPage({ params }: Props) {
 
     const dealer = await fetchDealerBySlug(slug, { includePrivate: true })
     if (!dealer) notFound()
+    const siteOfferSlug = `${slug}/two-wheelers`
+    const offerPopup = await fetchDealerOfferPopup(dealer.id, siteOfferSlug)
+    const siteBanners = await fetchActiveDealerBanners(dealer.id, siteOfferSlug)
 
     // Fetch new + used inventory in parallel
     const [{ vehicles: dbVehicles }, { vehicles: usedVehicles }] = await Promise.all([
@@ -402,15 +408,18 @@ export default async function TwoWheelersPage({ params }: Props) {
     const isMultiBrandNewOnly = selectedNew && !selectedUsed && brandsToShow.length > 1
     if (isHybrid || isMultiBrandNewOnly) {
         return (
-            <TwoWheelerPortal
-                dealerName={dealer.dealership_name}
-                location={dealer.location}
-                phone={dealer.phone}
-                email={dealer.email ?? ''}
-                slug={dealer.slug}
-                brands={brandsToShow}
-                isHybrid={isHybrid}
-            />
+            <>
+                <TwoWheelerPortal
+                    dealerName={dealer.dealership_name}
+                    location={dealer.location}
+                    phone={dealer.phone}
+                    email={dealer.email ?? ''}
+                    slug={dealer.slug}
+                    brands={brandsToShow}
+                    isHybrid={isHybrid}
+                />
+                <OfferPopup offer={offerPopup} />
+            </>
         )
     }
 
@@ -419,11 +428,14 @@ export default async function TwoWheelersPage({ params }: Props) {
     // ── No inventory yet ──────────────────────────────────────────────────────
     if (cars.length === 0) {
         return (
-            <NoStockPage
-                dealerName={dealer.dealership_name}
-                phone={dealer.phone}
-                email={dealer.email ?? ''}
-            />
+            <>
+                <NoStockPage
+                    dealerName={dealer.dealership_name}
+                    phone={dealer.phone}
+                    email={dealer.email ?? ''}
+                />
+                <OfferPopup offer={offerPopup} />
+            </>
         )
     }
 
@@ -584,6 +596,7 @@ export default async function TwoWheelersPage({ params }: Props) {
         sellsUsedCars: selectedUsed,
         isVerified:    false,
         vehicleType:   '2w' as const,
+        siteBanners,
     }
 
     // ── JSON-LD structured data ───────────────────────────────────────────────
@@ -607,14 +620,14 @@ export default async function TwoWheelersPage({ params }: Props) {
 
     switch (dealer.style_template) {
         case 'luxury':
-            return <>{jsonLd}<LuxuryTemplate {...sharedProps} config={{ heroTitle, heroSubtitle, tagline: taglines.luxury }} /></>
+            return <>{jsonLd}<LuxuryTemplate {...sharedProps} config={{ heroTitle, heroSubtitle, tagline: taglines.luxury }} /><OfferPopup offer={offerPopup} /></>
         case 'sporty':
-            return <>{jsonLd}<SportyTemplate {...sharedProps} config={{ heroTitle, heroSubtitle, tagline: taglines.sporty }} /></>
+            return <>{jsonLd}<SportyTemplate {...sharedProps} config={{ heroTitle, heroSubtitle, tagline: taglines.sporty }} /><OfferPopup offer={offerPopup} /></>
         case 'family':
-            return <>{jsonLd}<FamilyTemplate {...sharedProps} config={{ heroTitle, heroSubtitle, tagline: taglines.family }} /></>
+            return <>{jsonLd}<FamilyTemplate {...sharedProps} config={{ heroTitle, heroSubtitle, tagline: taglines.family }} /><OfferPopup offer={offerPopup} /></>
         case 'modern':
         case 'professional':
         default:
-            return <>{jsonLd}<ModernTemplate {...sharedProps} config={{ heroTitle, heroSubtitle }} /></>
+            return <>{jsonLd}<ModernTemplate {...sharedProps} config={{ heroTitle, heroSubtitle }} /><OfferPopup offer={offerPopup} /></>
     }
 }

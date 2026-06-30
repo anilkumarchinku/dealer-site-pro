@@ -5,9 +5,12 @@ import { ModernTemplate } from '@/components/templates/ModernTemplate'
 import { LuxuryTemplate } from '@/components/templates/LuxuryTemplate'
 import { SportyTemplate } from '@/components/templates/SportyTemplate'
 import { FamilyTemplate } from '@/components/templates/FamilyTemplate'
+import { OfferPopup } from '@/components/templates/sections/OfferPopup'
 import { PushPreferenceCenter } from '@/components/PushPreferenceCenter'
 import { getCarsByMake } from '@/lib/data/cars'
 import { fetchDealerBySlug } from '@/lib/db/dealers'
+import { fetchDealerOfferPopup } from '@/lib/db/dealer-offers'
+import { fetchActiveDealerBanners } from '@/lib/db/dealer-banners'
 import { fetchAllCyeproInventoryAsCars } from '@/lib/services/cyepro-service'
 import { applyUsedVehiclePriceOffersToCars, fetchActiveUsedVehiclePriceOffers } from '@/lib/services/used-vehicle-price-offers'
 import type { Car } from '@/lib/types/car'
@@ -463,6 +466,8 @@ export default async function SitePage({ params }: SitePageProps) {
     // ── Fetch real dealer data ────────────────────────────────────────────────
     const dealer = await fetchDealerBySlug(slug, { includePrivate: true })
     if (!dealer) return <ComingSoon slug={slug} />
+    const offerPopup = await fetchDealerOfferPopup(dealer.id, slug)
+    const siteBanners = await fetchActiveDealerBanners(dealer.id, slug)
 
     // ── Pure 2W/3W dealers → redirect to their vehicle hub ───────────────────
     // Keep direct main-domain access under /sites/{slug}; custom/subdomain
@@ -499,20 +504,23 @@ export default async function SitePage({ params }: SitePageProps) {
     // on their MAIN URL (no brand/used suffix in slug).
     if (!brandFilter && !usedCarSite && (isHybridDealer || isMultiBrandNewOnly)) {
         return (
-            <MultiSitePortal
-                dealerName={dealer.dealership_name}
-                location={dealer.location}
-                phone={dealer.phone}
-                email={dealer.email}
-                tagline={dealer.tagline}
-                slug={dealer.slug}
-                brands={brands}
-                isHybrid={isHybridDealer}
-                sellsTwoWheelers={sells_two_wheelers}
-                sellsThreeWheelers={sells_three_wheelers}
-                siteHrefForSlug={siteHrefForSlug}
-                vehicleHubHref={vehicleHubHref}
-            />
+            <>
+                <MultiSitePortal
+                    dealerName={dealer.dealership_name}
+                    location={dealer.location}
+                    phone={dealer.phone}
+                    email={dealer.email}
+                    tagline={dealer.tagline}
+                    slug={dealer.slug}
+                    brands={brands}
+                    isHybrid={isHybridDealer}
+                    sellsTwoWheelers={sells_two_wheelers}
+                    sellsThreeWheelers={sells_three_wheelers}
+                    siteHrefForSlug={siteHrefForSlug}
+                    vehicleHubHref={vehicleHubHref}
+                />
+                <OfferPopup offer={offerPopup} />
+            </>
         )
     }
 
@@ -585,11 +593,14 @@ export default async function SitePage({ params }: SitePageProps) {
     // with their contact CTA, instead of seeding sample cars they don't sell.
     if (cars.length === 0) {
         return (
-            <NoStockPage
-                dealerName={dealer.dealership_name}
-                phone={dealer.phone}
-                email={dealer.email}
-            />
+            <>
+                <NoStockPage
+                    dealerName={dealer.dealership_name}
+                    phone={dealer.phone}
+                    email={dealer.email}
+                />
+                <OfferPopup offer={offerPopup} />
+            </>
         )
     }
 
@@ -627,6 +638,7 @@ export default async function SitePage({ params }: SitePageProps) {
         socialLinks: dealer.social,
         isVerified: false,
         sellVehicleHref,
+        siteBanners,
     }
 
     // ── JSON-LD structured data ───────────────────────────────────────────────
@@ -677,14 +689,14 @@ export default async function SitePage({ params }: SitePageProps) {
     // ── Render the chosen template ────────────────────────────────────────────
     switch (dealer.style_template) {
         case 'luxury':
-            return <>{jsonLdScripts}<LuxuryTemplate  {...sharedProps} config={{ heroTitle, heroSubtitle, tagline: taglines.luxury }} />{customerPanelLink}{pushPreferenceCenter}{segmentsBanner}</>
+            return <>{jsonLdScripts}<LuxuryTemplate  {...sharedProps} config={{ heroTitle, heroSubtitle, tagline: taglines.luxury }} />{customerPanelLink}{pushPreferenceCenter}{segmentsBanner}<OfferPopup offer={offerPopup} /></>
         case 'sporty':
-            return <>{jsonLdScripts}<SportyTemplate  {...sharedProps} config={{ heroTitle, heroSubtitle, tagline: taglines.sporty }} />{customerPanelLink}{pushPreferenceCenter}{segmentsBanner}</>
+            return <>{jsonLdScripts}<SportyTemplate  {...sharedProps} config={{ heroTitle, heroSubtitle, tagline: taglines.sporty }} />{customerPanelLink}{pushPreferenceCenter}{segmentsBanner}<OfferPopup offer={offerPopup} /></>
         case 'family':
-            return <>{jsonLdScripts}<FamilyTemplate  {...sharedProps} config={{ heroTitle, heroSubtitle, tagline: taglines.family }} />{customerPanelLink}{pushPreferenceCenter}{segmentsBanner}</>
+            return <>{jsonLdScripts}<FamilyTemplate  {...sharedProps} config={{ heroTitle, heroSubtitle, tagline: taglines.family }} />{customerPanelLink}{pushPreferenceCenter}{segmentsBanner}<OfferPopup offer={offerPopup} /></>
         case 'modern':
         case 'professional':
         default:
-            return <>{jsonLdScripts}<ModernTemplate  {...sharedProps} config={{ heroTitle, heroSubtitle }} />{customerPanelLink}{pushPreferenceCenter}{segmentsBanner}</>
+            return <>{jsonLdScripts}<ModernTemplate  {...sharedProps} config={{ heroTitle, heroSubtitle }} />{customerPanelLink}{pushPreferenceCenter}{segmentsBanner}<OfferPopup offer={offerPopup} /></>
     }
 }

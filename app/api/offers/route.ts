@@ -5,6 +5,19 @@ function getServiceSupabase() {
   return createAdminClient()
 }
 
+function cleanText(value: unknown, maxLength: number): string | null {
+  if (typeof value !== 'string') return null
+  const trimmed = value.trim()
+  if (!trimmed) return null
+  return trimmed.slice(0, maxLength)
+}
+
+function cleanSiteSlug(value: unknown): string | null {
+  const slug = cleanText(value, 160)
+  if (!slug) return null
+  return /^[a-z0-9][a-z0-9/-]*(?:-[a-z0-9]+)?$/i.test(slug) ? slug : null
+}
+
 /** Resolve the dealer_id that belongs to the authenticated user. */
 async function getDealerIdForUser(userId: string): Promise<string | null> {
   const supabase = getServiceSupabase()
@@ -19,16 +32,23 @@ async function getDealerIdForUser(userId: string): Promise<string | null> {
 export async function GET(request: NextRequest) {
   const dealerId = request.nextUrl.searchParams.get('dealer_id')
   if (!dealerId) return NextResponse.json({ error: 'dealer_id required' }, { status: 400 })
+  const siteSlug = cleanSiteSlug(request.nextUrl.searchParams.get('site_slug'))
 
   const supabase = getServiceSupabase()
   const today = new Date().toISOString().split('T')[0]  // YYYY-MM-DD
 
-  const { data, error } = await supabase
+  let query = supabase
     .from('dealer_offers')
-    .select('id, title, description, tag, valid_until, created_at')
+    .select('id, title, description, tag, valid_until, site_slug, image_url, show_popup, created_at')
     .eq('dealer_id', dealerId)
     .eq('is_active', true)
     .or(`valid_until.is.null,valid_until.gte.${today}`)
+
+  if (siteSlug) {
+    query = query.or(`site_slug.is.null,site_slug.eq.${siteSlug}`)
+  }
+
+  const { data, error } = await query
     .order('created_at', { ascending: false })
 
   if (error) return NextResponse.json({ offers: [] })
@@ -42,7 +62,7 @@ export async function POST(request: NextRequest) {
   const body = await request.json().catch(() => null)
   if (!body) return NextResponse.json({ error: 'Invalid JSON' }, { status: 400 })
 
-  const { title, description, tag, valid_until } = body
+  const { title, description, tag, valid_until, site_slug, image_url, show_popup } = body
   if (!title) return NextResponse.json({ error: 'title is required' }, { status: 400 })
   if (title.length > 120) return NextResponse.json({ error: 'Title too long' }, { status: 400 })
 
@@ -53,12 +73,21 @@ export async function POST(request: NextRequest) {
   const supabase = getServiceSupabase()
   const { data, error } = await supabase
     .from('dealer_offers')
-    .insert({ dealer_id: dealerId, title: title.trim(), description: description?.trim() ?? null, tag: tag?.trim() ?? null, valid_until: valid_until ?? null })
-    .select('id')
+    .insert({
+      dealer_id: dealerId,
+      title: title.trim(),
+      description: cleanText(description, 1000),
+      tag: cleanText(tag, 40),
+      valid_until: valid_until || null,
+      site_slug: cleanSiteSlug(site_slug),
+      image_url: cleanText(image_url, 1000),
+      show_popup: Boolean(show_popup),
+    })
+    .select('id, title, description, tag, valid_until, site_slug, image_url, show_popup, created_at')
     .single()
 
   if (error) return NextResponse.json({ error: 'Failed to save offer' }, { status: 500 })
-  return NextResponse.json({ success: true, id: data.id })
+  return NextResponse.json({ success: true, offer: data })
 }
 
 export async function DELETE(request: NextRequest) {

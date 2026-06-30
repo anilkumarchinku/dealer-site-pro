@@ -16,6 +16,7 @@ import { VerifiedBadge } from '@/components/ui/VerifiedBadge';
 import { ReviewsSection } from '@/components/ui/ReviewsSection';
 import { SocialLinks } from '@/components/templates/shared/SocialLinks';
 import { OffersSection } from '@/components/templates/sections/OffersSection';
+import { SiteBannerCarousel } from '@/components/templates/sections/SiteBannerCarousel';
 import { FAQSection } from '@/components/templates/sections/FAQSection';
 import { ExchangeSection } from '@/components/templates/sections/ExchangeSection';
 import { SellVehicleSection } from '@/components/templates/sections/SellVehicleSection';
@@ -64,6 +65,7 @@ import { usePathname } from 'next/navigation';
 import { EnquireSidebar } from '@/components/cars/EnquireSidebar';
 import { EmiCalculator } from '@/components/ui/EmiCalculator';
 import type { Service } from '@/lib/types';
+import type { SiteBanner } from '@/lib/types/site-banner';
 import { getVehicleLabels } from '@/lib/utils/vehicle-labels';
 import { validateLeadForm, hasLeadFormErrors, normalizeLeadPhone, type LeadFormErrors } from '@/lib/validations/lead';
 
@@ -113,6 +115,7 @@ interface ModernTemplateProps {
     vehicleType?: '2w' | '3w' | '4w';
     socialLinks?: { facebook: string | null; instagram: string | null; youtube: string | null };
     sellVehicleHref?: string;
+    siteBanners?: SiteBanner[];
 }
 
 export function ModernTemplate({
@@ -135,6 +138,7 @@ export function ModernTemplate({
     vehicleType,
     socialLinks,
     sellVehicleHref,
+    siteBanners,
 }: ModernTemplateProps) {
     const vl = getVehicleLabels(vehicleType);
     const pathname = usePathname();
@@ -648,6 +652,8 @@ export function ModernTemplate({
                             </Reveal>
                         </section>
                     )}
+
+                    <SiteBannerCarousel banners={siteBanners} />
 
                     {/* Services Section */}
                     {serviceList.length > 0 && (

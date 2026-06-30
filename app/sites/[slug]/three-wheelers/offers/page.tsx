@@ -62,11 +62,11 @@ export default function OffersPage() {
     useEffect(() => {
         if (!dealerId) return
         setOffersLoading(true)
-        fetch(`/api/offers?dealer_id=${dealerId}`)
+        fetch(`/api/offers?dealer_id=${dealerId}&site_slug=${encodeURIComponent(`${slug}/three-wheelers`)}`)
             .then(r => r.json())
             .then(d => setOffers(d.offers ?? []))
             .finally(() => setOffersLoading(false))
-    }, [dealerId])
+    }, [dealerId, slug])
 
     const showFallback = !offersLoading && offers.length === 0
 

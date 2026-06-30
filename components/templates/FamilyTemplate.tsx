@@ -14,6 +14,7 @@ import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
 import { VerifiedBadge } from '@/components/ui/VerifiedBadge';
 import { ReviewsSection } from '@/components/ui/ReviewsSection';
 import { OffersSection } from '@/components/templates/sections/OffersSection';
+import { SiteBannerCarousel } from '@/components/templates/sections/SiteBannerCarousel';
 import { FAQSection } from '@/components/templates/sections/FAQSection';
 import { ExchangeSection } from '@/components/templates/sections/ExchangeSection';
 import { SellVehicleSection } from '@/components/templates/sections/SellVehicleSection';
@@ -63,6 +64,7 @@ import { Reveal } from '@/components/ui/Reveal';
 import { CountUp } from '@/components/ui/CountUp';
 import { FadeInImage } from '@/components/ui/FadeInImage';
 import type { Service } from '@/lib/types';
+import type { SiteBanner } from '@/lib/types/site-banner';
 import { getVehicleLabels } from '@/lib/utils/vehicle-labels';
 import { validateLeadForm, hasLeadFormErrors, normalizeLeadPhone, type LeadFormErrors } from '@/lib/validations/lead';
 
@@ -105,6 +107,7 @@ interface FamilyTemplateProps {
     vehicleType?: '2w' | '3w' | '4w';
     socialLinks?: { facebook: string | null; instagram: string | null; youtube: string | null };
     sellVehicleHref?: string;
+    siteBanners?: SiteBanner[];
 }
 
 export function FamilyTemplate({
@@ -127,6 +130,7 @@ export function FamilyTemplate({
     vehicleType,
     socialLinks,
     sellVehicleHref,
+    siteBanners,
 }: FamilyTemplateProps) {
     const vl = getVehicleLabels(vehicleType);
     const pathname = usePathname();
@@ -453,6 +457,8 @@ export function FamilyTemplate({
                     )}
 
                     {/* Services — family-friendly cards */}
+                    <SiteBannerCarousel banners={siteBanners} />
+
                     {serviceList.length > 0 && (
                         <section className="py-16 bg-gray-50">
                             <div className="max-w-7xl mx-auto px-4">

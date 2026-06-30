@@ -32,6 +32,8 @@ import {
     ShieldCheck,
     Menu,
     X,
+    Tag,
+    ImageIcon,
 } from "lucide-react";
 import type { StyleTemplate } from "@/lib/types";
 
@@ -51,6 +53,8 @@ const navGroups = [
             { name: "Insurance",   href: "/dashboard/insurance",     icon: ShieldCheck  },
             { name: "Push",        href: "/dashboard/push-notifications", icon: Bell    },
             { name: "Inventory",   href: "/dashboard/inventory",     icon: Car          },
+            { name: "Offers",      href: "/dashboard/offers",        icon: Tag          },
+            { name: "Banners",     href: "/dashboard/banners",       icon: ImageIcon    },
             { name: "Messages",    href: "/dashboard/messages",      icon: MessageSquare },
         ],
     },

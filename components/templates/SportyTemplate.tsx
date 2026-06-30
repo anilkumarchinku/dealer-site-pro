@@ -14,6 +14,7 @@ import { WhatsAppButton } from '@/components/ui/WhatsAppButton';
 import { VerifiedBadge } from '@/components/ui/VerifiedBadge';
 import { ReviewsSection } from '@/components/ui/ReviewsSection';
 import { OffersSection } from '@/components/templates/sections/OffersSection';
+import { SiteBannerCarousel } from '@/components/templates/sections/SiteBannerCarousel';
 import { FAQSection } from '@/components/templates/sections/FAQSection';
 import { ExchangeSection } from '@/components/templates/sections/ExchangeSection';
 import { SellVehicleSection } from '@/components/templates/sections/SellVehicleSection';
@@ -61,6 +62,7 @@ import { usePathname } from 'next/navigation';
 import { EnquireSidebar } from '@/components/cars/EnquireSidebar';
 import { EmiCalculator } from '@/components/ui/EmiCalculator';
 import type { Service } from '@/lib/types';
+import type { SiteBanner } from '@/lib/types/site-banner';
 import { getVehicleLabels } from '@/lib/utils/vehicle-labels';
 import { validateLeadForm, hasLeadFormErrors, normalizeLeadPhone, type LeadFormErrors } from '@/lib/validations/lead';
 import { Reveal } from '@/components/ui/Reveal';
@@ -114,6 +116,7 @@ interface SportyTemplateProps {
     vehicleType?: '2w' | '3w' | '4w';
     socialLinks?: { facebook: string | null; instagram: string | null; youtube: string | null };
     sellVehicleHref?: string;
+    siteBanners?: SiteBanner[];
 }
 
 export function SportyTemplate({
@@ -136,6 +139,7 @@ export function SportyTemplate({
     vehicleType,
     socialLinks,
     sellVehicleHref,
+    siteBanners,
 }: SportyTemplateProps) {
     const vl = getVehicleLabels(vehicleType);
     const pathname = usePathname();
@@ -517,6 +521,8 @@ export function SportyTemplate({
                     )}
 
                     {/* Services — sporty badges */}
+                    <SiteBannerCarousel banners={siteBanners} />
+
                     {serviceList.length > 0 && (
                         <section className="py-16 border-b border-gray-200">
                             <div className="max-w-7xl mx-auto px-4">
