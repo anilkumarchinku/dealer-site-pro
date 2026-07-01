@@ -127,6 +127,7 @@ Legend:
 - [x] Validation source scan: active auth, onboarding, contact, 2W/3W lead, booking, and legacy lead forms were checked for required/optional email mismatch; no active mismatch remained.
 - [x] Public template evidence pass: `/tmp/dealersite-ui-audit/public-template-evidence-2026-07-01-final` checked 22 public/template/detail routes across mobile/tablet/desktop; the only transient `/sites/bharat-bhai` mobile navigation probe error was rerun cleanly at all three breakpoints.
 - [x] 4W dealer detail evidence: `/sites/singh-auto-dealers/3cd9896b-f3d1-455c-bfc1-b94335443846` and `/sites/singh-auto-dealers/89999d26-c273-4bcf-a671-8f5aadefcbb3` returned 200 with no page overflow on mobile/tablet/desktop.
+- [x] Auth-gate repro: Firefox private session and direct HTTP checks against `http://127.0.0.1:3011` confirmed `/dashboard` redirects to `/auth/login?redirect=%2Fdashboard` and `/onboarding` redirects to `/auth/login?redirect=%2Fonboarding`; no authenticated dealer/admin session was available for final screenshot QA.
 
 ## Detailed Route Inventory
 
@@ -354,6 +355,6 @@ This inventory is generated from 167 current `app/**/page.tsx` files. Dynamic ro
 ## Current Open Risks
 
 - Dashboard and onboarding cannot be fully judged from a clean browser because protected routes redirect to login.
-- Full auth-gated dashboard/onboarding completion still requires an authenticated dealer session or test account.
+- Full auth-gated dashboard/onboarding completion still requires an authenticated dealer/admin session or test account; the available Firefox private session also redirected to login on the current local dev server.
 - The broad audit captured layout/readability signals, but not every possible authenticated data state, modal state, or dropdown state.
 - Some remaining console warnings are performance hints such as LCP image priority, not direct symmetry/readability failures.
