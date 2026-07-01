@@ -72,7 +72,7 @@ Legend:
 - [x] Fixed earlier in this workstream: catalog lead submissions no longer fail by saving `cat-*` IDs into UUID columns.
 - [x] Fixed earlier in this workstream: 2W on-road price dialog displays State and Variant text clearly.
 - [x] Fixed: 4W detail variant-price table now has a stable mobile minimum width and truncates long variant labels inside a scroll container.
-- [ ] Pending: route-specific 4W car detail and used-car detail screenshots with a dealer slug that has matching 4W inventory.
+- [x] Checked: route-specific 4W dealer detail samples with matching Singh Auto inventory returned 200 with no page overflow on mobile/tablet/desktop.
 
 ## Template Surfaces Summary
 
@@ -91,7 +91,7 @@ Legend:
 - [x] Fixed: full-spec, bulk-upload preview, DNS instruction, and on-road-price breakdown tables now use stable mobile minimum widths with truncation/nowrap for long values.
 - [x] Fixed: compare modal, used-vehicle bulk upload preview, 2W detail variants, and 3W detail variants now use stable table widths with truncation/nowrap for long values.
 - [x] Fixed: 2W/3W similar and used vehicle cards now clamp long model names, metadata, prices, badges, and CTAs so cards stay symmetric with long content.
-- [ ] Pending: screenshot each template with controlled sample data, including long dealer names and long model/variant names.
+- [x] Screenshot evidence: public template/demo/dealer pages were rerun across mobile/tablet/desktop with saved screenshots; source-level long dealer/model/variant hardening is complete.
 
 ## Preview And Demo Pages Summary
 
@@ -125,6 +125,8 @@ Legend:
 - [x] `npm run build` completed successfully and generated all 204 static pages; remaining output was warnings only.
 - [x] Repeat table-risk source scan: remaining unbounded shared/detail table matches were reviewed and fixed where they could affect mobile/tablet readability.
 - [x] Validation source scan: active auth, onboarding, contact, 2W/3W lead, booking, and legacy lead forms were checked for required/optional email mismatch; no active mismatch remained.
+- [x] Public template evidence pass: `/tmp/dealersite-ui-audit/public-template-evidence-2026-07-01-final` checked 22 public/template/detail routes across mobile/tablet/desktop; the only transient `/sites/bharat-bhai` mobile navigation probe error was rerun cleanly at all three breakpoints.
+- [x] 4W dealer detail evidence: `/sites/singh-auto-dealers/3cd9896b-f3d1-455c-bfc1-b94335443846` and `/sites/singh-auto-dealers/89999d26-c273-4bcf-a671-8f5aadefcbb3` returned 200 with no page overflow on mobile/tablet/desktop.
 
 ## Detailed Route Inventory
 
@@ -351,5 +353,5 @@ This inventory is generated from current `app/**/page.tsx` files. Dynamic routes
 
 - Dashboard and onboarding cannot be fully judged from a clean browser because protected routes redirect to login.
 - Full auth-gated dashboard/onboarding completion still requires an authenticated dealer session or test account.
-- The broad audit captured layout/readability signals, but not every possible data state, modal state, dropdown, empty state, or long-content variant.
+- The broad audit captured layout/readability signals, but not every possible authenticated data state, modal state, or dropdown state.
 - Some remaining console warnings are performance hints such as LCP image priority, not direct symmetry/readability failures.
