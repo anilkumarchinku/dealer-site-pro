@@ -149,6 +149,7 @@ export function FamilyTemplate({
         transmission?: string[]; year?: string[]; seating?: string[];
         priceRange?: { min: number; max: number };
     } | null>(null);
+    const vehicleEmptyMessage = `No ${vl.vehicleSingular}s found matching your criteria.`;
 
     // Lead form state
     const [formData, setFormData] = useState({ name: '', phone: '', email: '', message: '' });
@@ -498,7 +499,7 @@ export function FamilyTemplate({
                                 </span>
                                 <h2 className="text-4xl font-bold mt-2">Family-Friendly Vehicles</h2>
                             </Reveal>
-                            <CarGrid cars={featuredCars} brandColor={brandColors.primary} light summaryOnly detailBasePath={detailBasePath} dealerPhone={contactInfo.phone} dealerId={dealerId} showWishlistAction />
+                            <CarGrid cars={featuredCars} brandColor={brandColors.primary} light summaryOnly detailBasePath={detailBasePath} dealerPhone={contactInfo.phone} dealerId={dealerId} showWishlistAction emptyMessage={vehicleEmptyMessage} />
                             {showInventoryTab && (
                                 <div className="text-center mt-8">
                                     <Button variant="outline" size="lg" className="rounded-full bg-white text-gray-700 border-gray-300 hover:bg-gray-100" onClick={() => setActiveTab('inventory')}>
@@ -805,6 +806,7 @@ export function FamilyTemplate({
                                     dealerPhone={contactInfo.phone}
                                     dealerId={dealerId}
                                     showWishlistAction
+                                    emptyMessage={vehicleEmptyMessage}
                                 />
                             </div>
                         </div>

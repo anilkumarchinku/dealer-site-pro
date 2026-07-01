@@ -203,7 +203,11 @@ function buildThreeWheelerFeatureString(vehicle: ThreeWheelerVehicleInfo): strin
 /** Load and flatten all variants from a brand-specific JSON file (e.g. /data/tata.json).
  *  These files have CardDekho image_urls that carInfo.json lacks. */
 async function loadBrandFileVariants(brandKey: string): Promise<BrandFileVariant[]> {
-    const resolvedBrandKey = brandKey === 'tata_motors' ? 'tata' : brandKey;
+    const brandFileAliases: Record<string, string> = {
+        mercedes_benz: 'mercedes',
+        tata_motors:   'tata',
+    };
+    const resolvedBrandKey = brandFileAliases[brandKey] ?? brandKey;
     if (resolvedBrandKey in brandFileCache) return brandFileCache[resolvedBrandKey];
     try {
         const res = await fetch(`/data/${resolvedBrandKey}.json`);

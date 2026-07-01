@@ -317,8 +317,8 @@ export function PremiumUsedInventoryPage({
                             </div>
                         </div>
 
-                        <div className="mb-8 grid gap-3 rounded-lg border border-slate-200 bg-white p-4 shadow-sm md:grid-cols-3 xl:grid-cols-8">
-                            <div className="md:col-span-3 xl:col-span-2">
+                        <div className="mb-8 grid gap-3 rounded-lg border border-slate-200 bg-white p-4 shadow-sm sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-8">
+                            <div className="sm:col-span-2 lg:col-span-4 xl:col-span-2">
                                 <SearchInput value={query} onChange={setQuery} placeholder="Search stock" />
                             </div>
                             <FilterSelect label="Brand" value={make} onChange={setMake} options={makes} compact />
@@ -450,13 +450,13 @@ function FilterSelect({
     compact?: boolean;
 }) {
     return (
-        <label className="block">
-            {!compact && <span className="mb-1.5 block text-xs font-black uppercase tracking-wide text-slate-500">{label}</span>}
+        <label className="block min-w-0">
+            <span className={compact ? "mb-1 block text-[11px] font-black uppercase tracking-wide text-slate-500" : "mb-1.5 block text-xs font-black uppercase tracking-wide text-slate-500"}>{label}</span>
             <select
                 value={value}
                 onChange={event => onChange(event.target.value)}
                 aria-label={label}
-                className="h-11 w-full rounded-md border border-slate-200 bg-white px-3 text-sm font-bold text-[#111827] outline-none transition focus:border-[#d7a64a] focus:ring-4 focus:ring-[#d7a64a]/20"
+                className="h-11 w-full min-w-0 rounded-md border border-slate-200 bg-white px-3 text-sm font-bold text-[#111827] outline-none transition focus:border-[#d7a64a] focus:ring-4 focus:ring-[#d7a64a]/20"
             >
                 <option value="all">All {label}</option>
                 {options.map(option => {

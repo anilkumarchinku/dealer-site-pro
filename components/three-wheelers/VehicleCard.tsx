@@ -24,13 +24,13 @@ interface Props {
 
 function SpecItem({ icon, label, value }: { icon: React.ReactNode; label: string; value: string }) {
     return (
-        <div className="flex items-center gap-2 p-2 rounded-lg bg-white border border-gray-100">
+        <div className="flex min-h-[3.5rem] items-center gap-2 rounded-lg border border-gray-100 bg-white p-2">
             <div className="w-7 h-7 rounded-md flex items-center justify-center shrink-0 bg-white shadow-sm border border-gray-100">
                 {icon}
             </div>
             <div className="min-w-0">
-                <p className="text-[10px] text-gray-600 leading-none">{label}</p>
-                <p className="text-xs font-semibold text-gray-900 leading-tight truncate">{value}</p>
+                <p className="text-[10px] leading-none text-gray-600">{label}</p>
+                <p className="line-clamp-2 text-xs font-semibold leading-tight text-gray-900">{value}</p>
             </div>
         </div>
     )
@@ -118,7 +118,7 @@ export function VehicleCard({ vehicle, slug, dealerId, brandColor = "#1f2937", s
                         fill
                         unoptimized
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                        className="object-contain transition-transform duration-500 group-hover:scale-105"
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
                         onError={handleImgError}
                     />
 
@@ -180,7 +180,7 @@ export function VehicleCard({ vehicle, slug, dealerId, brandColor = "#1f2937", s
                     fill
                     unoptimized
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className="object-contain group-hover:scale-105 transition-transform duration-500"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
                     onError={handleImgError}
                 />
 
@@ -240,7 +240,7 @@ export function VehicleCard({ vehicle, slug, dealerId, brandColor = "#1f2937", s
                             {vehicle.brand}
                         </p>
                     </div>
-                    <h3 className="text-base font-bold leading-tight line-clamp-1 text-gray-900">
+                    <h3 className="min-h-10 text-base font-bold leading-tight text-gray-900 line-clamp-2">
                         {vehicle.model}
                     </h3>
                     {vehicle.variant && (

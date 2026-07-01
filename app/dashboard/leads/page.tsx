@@ -300,8 +300,8 @@ export default function LeadsPage() {
             {/* Filters */}
             <Card variant="glass" className="rounded-2xl border-border/70 bg-card/90 p-0 shadow-sm dark:bg-card/80">
                 <CardContent className="px-4 py-4">
-                    <div className="flex flex-wrap items-center gap-4">
-                        <div className="flex-1 min-w-[200px]">
+                    <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-[minmax(260px,1fr)_auto_auto_auto] lg:items-center">
+                        <div className="sm:col-span-2 lg:col-span-1">
                             <div className="relative">
                                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
                                 <Input
@@ -313,10 +313,10 @@ export default function LeadsPage() {
                                 />
                             </div>
                         </div>
-                        <div className="flex items-center gap-2">
-                            <Filter className="w-4 h-4 text-muted-foreground" />
+                        <div className="grid gap-2 sm:grid-cols-2 lg:flex lg:items-center">
+                            <Filter className="hidden w-4 h-4 text-muted-foreground lg:block" />
                             <Select value={filterPriority} onValueChange={(v) => { setFilterPriority(v); setPage(1); }}>
-                                <SelectTrigger className="w-[160px]">
+                                <SelectTrigger className="w-full lg:w-[160px]">
                                     <SelectValue placeholder="All Priorities" />
                                 </SelectTrigger>
                                 <SelectContent>
@@ -327,7 +327,7 @@ export default function LeadsPage() {
                                 </SelectContent>
                             </Select>
                             <Select value={filterStatus} onValueChange={(v) => { setFilterStatus(v); setPage(1); }}>
-                                <SelectTrigger className="w-[140px]">
+                                <SelectTrigger className="w-full lg:w-[140px]">
                                     <SelectValue placeholder="All Status" />
                                 </SelectTrigger>
                                 <SelectContent>
@@ -343,7 +343,7 @@ export default function LeadsPage() {
                                     variant="ghost"
                                     size="sm"
                                     onClick={() => { setFilterPriority("all"); setFilterStatus("all"); setSearchQuery(""); setPage(1); }}
-                                    className="h-8 text-xs text-muted-foreground hover:text-foreground px-2"
+                                    className="h-8 px-2 text-xs text-muted-foreground hover:text-foreground sm:col-span-2 lg:col-span-1"
                                 >
                                     Clear filters
                                 </Button>

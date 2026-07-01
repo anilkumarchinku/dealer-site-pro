@@ -141,7 +141,7 @@ export function EmiCalculator({ brandColor, theme = 'light' }: EmiCalculatorProp
                             min={12} max={84} step={6}
                             value={tenure}
                             onChange={(e) => setTenure(Number(e.target.value))}
-                            className="w-full h-1.5 rounded-full appearance-none cursor-pointer"
+                            className="h-4 w-full cursor-pointer appearance-none rounded-full"
                             style={{
                                 background: `linear-gradient(to right, ${brandColor} ${tenurePct}%, ${trackBg} ${tenurePct}%)`,
                                 accentColor: brandColor,
@@ -167,7 +167,7 @@ export function EmiCalculator({ brandColor, theme = 'light' }: EmiCalculatorProp
                             min={6} max={20} step={0.5}
                             value={rate}
                             onChange={(e) => setRate(Number(e.target.value))}
-                            className="w-full h-1.5 rounded-full appearance-none cursor-pointer"
+                            className="h-4 w-full cursor-pointer appearance-none rounded-full"
                             style={{
                                 background: `linear-gradient(to right, ${brandColor} ${ratePct}%, ${trackBg} ${ratePct}%)`,
                                 accentColor: brandColor,

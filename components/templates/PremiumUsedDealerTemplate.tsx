@@ -618,7 +618,7 @@ export function PremiumUsedDealerTemplate({
                 <section id="services" className="py-16 sm:py-20">
                     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                         <div className="mb-8">
-                            <p className="text-xs font-black uppercase tracking-[0.18em] text-[var(--used-accent-text)]">360 support</p>
+                            <p className="text-xs font-black uppercase tracking-[0.18em] text-[var(--used-accent-text)]">Buyer support</p>
                             <h2 className="mt-2 text-3xl font-black text-[#111827] sm:text-4xl">Everything a pre-owned buyer expects</h2>
                         </div>
                         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
@@ -906,7 +906,7 @@ function UsedCarCard({
     }
 
     return (
-        <article data-vehicle-card="true" data-model-image-source={modelImageSourceKind(image)} className="group overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+        <article data-vehicle-card="true" data-model-image-source={modelImageSourceKind(image)} className="group flex h-full flex-col overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
             <a href={href} className="block">
                 <div className="relative aspect-[4/3] overflow-hidden bg-slate-100">
                     <img src={image} alt={title} onError={handleImageError} className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
@@ -916,11 +916,11 @@ function UsedCarCard({
                     </div>
                 </div>
             </a>
-            <div className="p-5">
+            <div className="flex flex-1 flex-col p-5">
                 <div className="flex items-start justify-between gap-3">
-                    <div>
-                        <a href={href} className="text-lg font-black text-[#111827] hover:text-[var(--used-accent-text)]">{title}</a>
-                        {car.variant && <p className="mt-1 text-sm font-semibold text-slate-600">{car.variant}</p>}
+                    <div className="min-w-0">
+                        <a href={href} className="line-clamp-2 text-lg font-black leading-tight text-[#111827] hover:text-[var(--used-accent-text)]">{title}</a>
+                        {car.variant && <p className="mt-1 line-clamp-1 text-sm font-semibold text-slate-600">{car.variant}</p>}
                     </div>
                     <div className="flex items-center gap-1 rounded-full bg-[#f7f5f0] px-2.5 py-1 text-xs font-black text-[var(--used-accent-text)]">
                         <Star className="h-3.5 w-3.5 fill-current" />
@@ -939,7 +939,7 @@ function UsedCarCard({
                     <Spec icon={CarIcon} label="Trans" value={String(car.transmission?.type || 'Manual')} />
                 </div>
 
-                <div className="mt-5 flex gap-2">
+                <div className="mt-auto flex gap-2 pt-5">
                     <a href={href} className="inline-flex h-10 flex-1 items-center justify-center rounded-md bg-[#071018] px-3 text-sm font-black text-white transition hover:bg-[#162433]">
                         View Details
                     </a>
@@ -962,7 +962,7 @@ function Spec({ icon: Icon, label, value }: { icon: typeof Fuel; label: string; 
         <div className="rounded-md bg-[#f7f5f0] p-3">
             <Icon className="h-4 w-4 text-[var(--used-accent-text)]" />
             <p className="mt-2 text-[11px] font-black uppercase tracking-wide text-slate-600">{label}</p>
-            <p className="mt-0.5 truncate text-xs font-black text-[#111827]">{value}</p>
+            <p className="mt-0.5 min-h-8 text-xs font-black leading-tight text-[#111827] line-clamp-2">{value}</p>
         </div>
     );
 }

@@ -174,7 +174,15 @@ export function BrandModelAccordion({
                     {/* Logo */}
                     <div className="w-12 h-12 rounded-xl bg-gray-100 flex items-center justify-center shrink-0 overflow-hidden">
                         {logoSrc ? (
-                            <Image src={logoSrc} alt={brandDisplay} width={36} height={36} unoptimized className="object-contain" />
+                            <Image
+                                src={logoSrc}
+                                alt={brandDisplay}
+                                width={36}
+                                height={36}
+                                unoptimized
+                                className="object-contain"
+                                style={{ width: 36, height: 36 }}
+                            />
                         ) : (
                             <span className="text-xs font-bold text-gray-500">{brandDisplay.slice(0, 2).toUpperCase()}</span>
                         )}

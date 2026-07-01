@@ -134,6 +134,7 @@ interface AutoVehicle {
     passenger_capacity: number | null;
     price_min_paise: number;
     image_url: string | null;
+    image_urls?: string[];
     popularity_score: number;
     is_featured: boolean;
 }
@@ -177,7 +178,9 @@ function AutoCardSkeleton() {
 }
 
 function AutoCard({ vehicle }: { vehicle: AutoVehicle }) {
-    const imageUrls = getVehicleImageUrls('3w', brandNameToId(vehicle.make, '3w'), vehicle.model, vehicle.image_url);
+    const imageUrls = vehicle.image_urls?.length
+        ? vehicle.image_urls
+        : getVehicleImageUrls('3w', brandNameToId(vehicle.make, '3w'), vehicle.model, vehicle.image_url);
     const [imgIdx, setImgIdx] = useState(0);
     const [imgFailed, setImgFailed] = useState(false);
 
@@ -212,7 +215,7 @@ function AutoCard({ vehicle }: { vehicle: AutoVehicle }) {
     if (imageUrls.length === 0 || imgFailed) return null;
 
     return (
-        <Link href={detailHref} data-vehicle-card="true" data-model-image-source={modelImageSourceKind(imageUrls[imgIdx])} className="group bg-card border border-border rounded-xl overflow-hidden hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
+        <Link href={detailHref} data-vehicle-card="true" data-model-image-source={modelImageSourceKind(imageUrls[imgIdx])} className="group flex h-full flex-col overflow-hidden rounded-xl border border-border bg-card transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg">
             {/* Image */}
             <div className="relative aspect-[16/10] bg-muted overflow-hidden">
                 <Image
@@ -220,7 +223,7 @@ function AutoCard({ vehicle }: { vehicle: AutoVehicle }) {
                     alt={`${vehicle.make} ${vehicle.model}`}
                     fill
                     unoptimized
-                    className="object-contain group-hover:scale-105 transition-transform duration-500"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
                     onError={handleImgError}
                 />
 
@@ -240,14 +243,14 @@ function AutoCard({ vehicle }: { vehicle: AutoVehicle }) {
             </div>
 
             {/* Content */}
-            <div className="p-4">
+            <div className="flex flex-1 flex-col p-4">
                 {/* Brand */}
                 <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground mb-0.5">
                     {vehicle.make}
                 </p>
 
                 {/* Model */}
-                <h3 className="text-base font-bold text-foreground leading-tight line-clamp-1">
+                <h3 className="min-h-[2.5rem] text-base font-bold leading-tight text-foreground line-clamp-2">
                     {vehicle.model}
                 </h3>
                 {vehicle.variant && (
@@ -273,39 +276,44 @@ function AutoCard({ vehicle }: { vehicle: AutoVehicle }) {
 
                 {/* Specs */}
                 <div className="grid grid-cols-2 gap-2">
-                    <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
+                    <div className="flex min-h-8 items-center gap-1.5 text-xs text-muted-foreground">
                         <Fuel className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-                        <span>{fuelLabel}</span>
+                        <span className="line-clamp-2">{fuelLabel}</span>
                     </div>
-                    <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
+                    <div className="flex min-h-8 items-center gap-1.5 text-xs text-muted-foreground">
                         <span className="text-sm shrink-0">🛺</span>
-                        <span>{typeLabel}</span>
+                        <span className="line-clamp-2">{typeLabel}</span>
                     </div>
-                    {capacityLabel && (
-                        <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
-                            {vehicle.passenger_capacity ? (
-                                <Users className="w-3.5 h-3.5 text-blue-600 shrink-0" />
-                            ) : (
-                                <Package className="w-3.5 h-3.5 text-amber-600 shrink-0" />
-                            )}
-                            <span>{capacityLabel}</span>
-                        </div>
-                    )}
-                    {vehicle.fuel_type === 'electric' && vehicle.range_km ? (
-                        <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
-                            <Zap className="w-3.5 h-3.5 text-purple-600 shrink-0" />
-                            <span>{vehicle.range_km} km range</span>
-                        </div>
-                    ) : vehicle.mileage_kmpl ? (
-                        <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
-                            <Fuel className="w-3.5 h-3.5 text-blue-600 shrink-0" />
-                            <span>{vehicle.mileage_kmpl} km/l</span>
-                        </div>
-                    ) : null}
+                    <div className="flex min-h-8 items-center gap-1.5 text-xs text-muted-foreground">
+                        {vehicle.passenger_capacity ? (
+                            <Users className="w-3.5 h-3.5 text-blue-600 shrink-0" />
+                        ) : (
+                            <Package className="w-3.5 h-3.5 text-amber-600 shrink-0" />
+                        )}
+                        <span className="line-clamp-2">{capacityLabel ?? '--'}</span>
+                    </div>
+                    <div className="flex min-h-8 items-center gap-1.5 text-xs text-muted-foreground">
+                        {vehicle.fuel_type === 'electric' && vehicle.range_km ? (
+                            <>
+                                <Zap className="w-3.5 h-3.5 text-purple-600 shrink-0" />
+                                <span className="line-clamp-2">{vehicle.range_km} km range</span>
+                            </>
+                        ) : vehicle.mileage_kmpl ? (
+                            <>
+                                <Fuel className="w-3.5 h-3.5 text-blue-600 shrink-0" />
+                                <span className="line-clamp-2">{vehicle.mileage_kmpl} km/l</span>
+                            </>
+                        ) : (
+                            <>
+                                <Zap className="w-3.5 h-3.5 text-purple-600 shrink-0" />
+                                <span>--</span>
+                            </>
+                        )}
+                    </div>
                 </div>
 
                 {/* View Details */}
-                <div className="mt-3 pt-3 border-t border-border">
+                <div className="mt-auto pt-3 border-t border-border">
                     <span className="w-full inline-flex items-center justify-center rounded-lg bg-primary text-primary-foreground text-sm font-semibold py-2.5 group-hover:opacity-90 transition-opacity">
                         View Details <ChevronRight className="w-4 h-4 ml-1" />
                     </span>

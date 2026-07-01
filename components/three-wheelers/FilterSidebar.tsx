@@ -91,7 +91,7 @@ export function FilterSidebar({ filters, onChange, brands = [], showCargo = fals
                 <select
                     value={filters.sortBy ?? "newest"}
                     onChange={e => onChange({ ...filters, sortBy: e.target.value as ThreeWheelerFilters["sortBy"], page: 1 })}
-                    className="w-full rounded-lg border border-input bg-background px-3 py-2 text-sm"
+                    className="w-full rounded-lg border border-input bg-background px-3 py-2 text-sm text-foreground"
                 >
                     <option value="newest">Newest First</option>
                     <option value="price_asc">Price: Low to High</option>

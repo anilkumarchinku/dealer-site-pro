@@ -335,9 +335,7 @@ export function CarCard({
                             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                             className={cn(
                                 'transition-transform duration-500 group-hover:scale-105',
-                                (car.vehicleCategory === '2w' || car.vehicleCategory === '3w')
-                                    ? 'object-contain p-3'
-                                    : 'object-cover'
+                                'object-cover'
                             )}
                             onError={handleCardImageError}
                         />
@@ -360,7 +358,7 @@ export function CarCard({
                                         <Image src={logoSrc} alt={car.make} fill sizes="16px" unoptimized className="object-contain" />
                                     </span>
                                 )}
-                                <p className="truncate text-[11px] font-semibold uppercase tracking-[0.22em]" style={{ color: brandAccent }}>
+                                <p className="truncate text-[11px] font-semibold uppercase tracking-wide" style={{ color: brandAccent }}>
                                     {car.make}
                                 </p>
                             </div>
@@ -431,9 +429,7 @@ export function CarCard({
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         className={cn(
                             "transition-transform duration-500 group-hover:scale-105",
-                            (car.vehicleCategory === '2w' || car.vehicleCategory === '3w')
-                                ? "object-contain p-3"
-                                : "object-cover"
+                            "object-cover"
                         )}
                         onError={handleCardImageError}
                     />
@@ -485,7 +481,7 @@ export function CarCard({
                                         <Image src={logoSrc} alt={car.make} fill sizes="16px" unoptimized className="object-contain" />
                                     </span>
                                 )}
-                                <p className="text-[11px] font-semibold uppercase tracking-[0.22em] truncate" style={{ color: brandAccent }}>
+                                <p className="truncate text-[11px] font-semibold uppercase tracking-wide" style={{ color: brandAccent }}>
                                     {car.make}
                                 </p>
                             </div>

@@ -21,7 +21,8 @@ function MarketplaceFrame() {
     const query = searchParams.get("q") || searchParams.get("search") || ""
     const condition = (searchParams.get("condition") || "").toLowerCase()
     const iframeParams = new URLSearchParams({
-        v: "marketplace-shell-v10",
+        v: "marketplace-shell-v13",
+        surface: "marketplace",
         category,
         type: category,
         condition: "all",
@@ -36,11 +37,15 @@ function MarketplaceFrame() {
     }
 
     return (
-        <main className="min-h-screen bg-[#F5F1EA]">
+        <main className="relative min-h-screen bg-[#F5F1EA]">
+            <h1 className="sr-only">DealerSite Pro vehicle marketplace</h1>
+            <div className="absolute inset-0 flex items-center justify-center px-4 text-center text-sm font-semibold text-[#5f564c]">
+                Loading marketplace...
+            </div>
             <iframe
                 title="DealerSite Pro vehicle marketplace"
                 src={`/design-system-handoff/ui_kits/marketing/index.html?${iframeParams.toString()}#listing`}
-                className="block h-dvh w-full border-0"
+                className="relative block h-dvh w-full border-0 bg-[#F5F1EA]"
             />
         </main>
     )
@@ -48,7 +53,7 @@ function MarketplaceFrame() {
 
 export default function MarketplacePage() {
     return (
-        <Suspense fallback={<main className="min-h-screen bg-[#F5F1EA]" />}>
+        <Suspense fallback={<main className="flex min-h-screen items-center justify-center bg-[#F5F1EA] px-4 text-sm font-semibold text-[#5f564c]">Loading marketplace...</main>}>
             <MarketplaceFrame />
         </Suspense>
     )

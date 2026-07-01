@@ -182,6 +182,7 @@ export function ModernTemplate({
         transmission?: string[]; year?: string[]; seating?: string[];
         priceRange?: { min: number; max: number };
     } | null>(null);
+    const vehicleEmptyMessage = `No ${vl.vehicleSingular}s found matching your criteria.`;
 
     // Lead form state
     const [formData, setFormData] = useState({ name: '', phone: '', email: '', message: '' });
@@ -714,7 +715,7 @@ export function ModernTemplate({
                                     </Button>
                                 )}
                             </Reveal>
-                            <CarGrid cars={featuredCars} brandColor={brandColors.primary} light summaryOnly detailBasePath={detailBasePath} dealerPhone={contactInfo.phone} dealerId={dealerId} showWishlistAction />
+                            <CarGrid cars={featuredCars} brandColor={brandColors.primary} light summaryOnly detailBasePath={detailBasePath} dealerPhone={contactInfo.phone} dealerId={dealerId} showWishlistAction emptyMessage={vehicleEmptyMessage} />
                         </div>
                     </section>
 
@@ -1032,6 +1033,7 @@ export function ModernTemplate({
                                     dealerPhone={contactInfo.phone}
                                     dealerId={dealerId}
                                     showWishlistAction
+                                    emptyMessage={vehicleEmptyMessage}
                                 />
                             </div>
                         </div>
