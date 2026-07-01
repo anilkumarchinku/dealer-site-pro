@@ -67,7 +67,7 @@ export default function TwoWheelerBookingsPage() {
             ) : (
                 <>
                     <div className="overflow-x-auto rounded-xl border border-border">
-                        <table className="w-full text-sm">
+                        <table className="min-w-[840px] w-full text-sm">
                             <thead className="bg-muted/30">
                                 <tr>
                                     <th className="px-4 py-3 text-left font-medium">Customer</th>
@@ -81,18 +81,20 @@ export default function TwoWheelerBookingsPage() {
                             <tbody className="divide-y divide-border">
                                 {bookings.map(b => (
                                     <tr key={b.id} className="hover:bg-muted/10">
-                                        <td className="px-4 py-3 font-medium">{b.customer_name}</td>
-                                        <td className="px-4 py-3">
+                                        <td className="px-4 py-3 font-medium">
+                                            <div className="max-w-[180px] truncate">{b.customer_name}</div>
+                                        </td>
+                                        <td className="px-4 py-3 whitespace-nowrap">
                                             <a href={`tel:${b.phone}`} className="text-primary hover:underline">{b.phone}</a>
                                         </td>
-                                        <td className="px-4 py-3 font-medium">₹{(b.booking_amount_paise / 100).toLocaleString("en-IN")}</td>
+                                        <td className="px-4 py-3 font-medium whitespace-nowrap">₹{(b.booking_amount_paise / 100).toLocaleString("en-IN")}</td>
                                         <td className="px-4 py-3 text-muted-foreground font-mono text-xs">
-                                            {b.razorpay_order_id ?? "—"}
+                                            <div className="max-w-[220px] truncate">{b.razorpay_order_id ?? "—"}</div>
                                         </td>
-                                        <td className="px-4 py-3 text-muted-foreground">
+                                        <td className="px-4 py-3 text-muted-foreground whitespace-nowrap">
                                             {new Date(b.created_at).toLocaleDateString("en-IN")}
                                         </td>
-                                        <td className="px-4 py-3">
+                                        <td className="px-4 py-3 whitespace-nowrap">
                                             <span className={`px-2 py-0.5 rounded-full text-xs font-medium ${STATUS_COLORS[b.status]}`}>
                                                 {b.status}
                                             </span>

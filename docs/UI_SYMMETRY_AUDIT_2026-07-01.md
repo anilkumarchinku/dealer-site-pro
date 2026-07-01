@@ -27,6 +27,7 @@ Legend:
 - [x] Fixed: `/brands-accordion` brand logos now keep explicit image dimensions and no longer trigger the Next image sizing warning in focused checks.
 - [x] Fixed: `/bikes` toolbar now stacks filter/count and sort controls on small screens instead of crowding one row.
 - [x] Fixed: 4W and 2W detail-page sticky tab bars now wrap symmetrically on mobile/tablet instead of creating wide horizontal strips.
+- [x] Fixed: 2W detail key-spec highlights now use a responsive grid instead of a fixed inline strip on mobile.
 
 ## Auth And Account Pages Summary
 
@@ -45,6 +46,7 @@ Legend:
 - [x] Fixed: `/dashboard/leads` filter controls now use a responsive grid instead of cramped fixed-width controls.
 - [x] Fixed: 2W and 3W dashboard lead tables now keep readable minimum widths with nowrap phone/date/status columns inside horizontal scroll.
 - [x] Fixed: shared dashboard `InventoryTable` now uses a stable table min-width and truncates long make/model/variant text.
+- [x] Fixed: 2W/3W service, booking, used-vehicle, and insurance review tables now use readable minimum widths, nowrap numeric/date/status cells, and truncation for long names/orders.
 - [ ] Pending: full dashboard visual QA inside an authenticated dealer session.
 
 ## Onboarding Pages Summary
@@ -52,6 +54,7 @@ Legend:
 - [x] Source-reviewed: `/onboarding` and 4W/2W/3W onboarding layouts and shared components.
 - [x] Fixed earlier in this workstream: vehicle type selection is single-select instead of multi-select.
 - [x] Fixed: website image/logo upload fields have more stable symmetric preview dimensions.
+- [x] Fixed: onboarding inventory preview sample rows now use a scroll-safe min-width grid with truncation instead of a fixed four-column phone layout.
 - [ ] Pending: screenshot pass through all onboarding steps with an authenticated session.
 
 ## Public Dealer Website Routes Summary
@@ -68,6 +71,7 @@ Legend:
 - [x] Fixed earlier in this workstream: public lead modals no longer require email where email is optional or absent.
 - [x] Fixed earlier in this workstream: catalog lead submissions no longer fail by saving `cat-*` IDs into UUID columns.
 - [x] Fixed earlier in this workstream: 2W on-road price dialog displays State and Variant text clearly.
+- [x] Fixed: 4W detail variant-price table now has a stable mobile minimum width and truncates long variant labels inside a scroll container.
 - [ ] Pending: route-specific 4W car detail and used-car detail screenshots with a dealer slug that has matching 4W inventory.
 
 ## Template Surfaces Summary
@@ -81,6 +85,8 @@ Legend:
 - [x] Fixed: shared `OffersSection` now keeps dealer-authored and fallback offers inside bounded responsive cards for all template styles.
 - [x] Fixed: chatbot panel uses viewport-bounded mobile sizing so it cannot overflow narrow screens.
 - [x] Fixed: template footer/contact rows wrap long dealer names, email addresses, phone numbers, and physical addresses.
+- [x] Fixed: template desktop nav bars keep dealer names capped/truncated at xl widths so long dealership names do not collide with nav links.
+- [x] Fixed: 4W test-drive modal is capped to the visible mobile viewport with a flex scroll body and safe-area bottom padding.
 - [ ] Pending: screenshot each template with controlled sample data, including long dealer names and long model/variant names.
 
 ## Preview And Demo Pages Summary
@@ -104,8 +110,12 @@ Legend:
 - [x] Direct route checks: `/api/marketplace` returned 200 after fresh dev-server compile, `/brands/Hyundai` returned 200, and `/sites/bharat-bhai/three-wheelers` returned 200 after clearing the stale `.next` dev cache.
 - [x] Supervisor coverage agent: verified the detailed inventory covers all 165 current `app/**/page.tsx` routes; cleanup applied for summary wording and missing shared surfaces.
 - [x] Audit agent: reported remaining responsive risks in chatbot, dashboard tables, compare tables, template footers, bikes toolbar, and managed-domain modal; scoped fixes applied.
+- [x] Supervisor coverage agent second pass: confirmed no missing route patterns in the 165-page checklist; requested a more exhaustive shared-surface inventory, added below.
+- [x] Audit agent second pass: reported remaining table/modal/onboarding/detail/nav risks; scoped source fixes applied.
 - [x] Dynamic detail rerun: `/tmp/dealersite-ui-audit/dynamic-detail-rerun` identified detail-tab overflow on mobile/tablet.
 - [x] Post-risk-fix rerun: `/tmp/dealersite-ui-audit/post-audit-risk-fixes-fast` and a focused tab rerun confirmed the fixed detail tab bars no longer produce page-level or tab-strip overflow flags.
+- [x] Continuation risk rerun: `/tmp/dealersite-ui-audit/continuation-2026-07-01-risk-rerun` checked 30 high-risk routes across mobile/tablet/desktop and identified the 2W detail spec strip plus 4W variant table risks fixed above.
+- [x] Post-source-fix rerun: `/tmp/dealersite-ui-audit/continuation-2026-07-01-post-source-fixes` checked the second-pass fix set across mobile/tablet/desktop; the only transient dev-cache 500 recovered, and `/sites/singh-auto-dealers/89999d26-c273-4bcf-a671-8f5aadefcbb3` then returned 200 with no page overflow at all three breakpoints.
 - [x] `npx tsc --noEmit --pretty false --incremental false`
 - [x] `git diff --check`
 
@@ -314,11 +324,20 @@ This inventory is generated from current `app/**/page.tsx` files. Dynamic routes
 - [x] `FAQSection`, `ExchangeSection`, `FinanceSection`, `TrustBadgesSection`, `SellVehicleSection`, `ServiceBookingSection`, `LocationsMapSection`, `OnRoadPriceSection`, `VideoSection` — source-reviewed/listed as shared template sections
 - [x] `SocialLinks` — active shared template surface rendered by the main public templates
 - [x] `TemplateSelector`, `TemplatePreviewCard`, `TemplateWarning`, `TemplatePageLoader` — onboarding template selection surfaces listed/source-reviewed
+- [x] `SiteHeader`, `SiteFooter`, `FooterPageShell`, `WelcomeClient` — app shell and public marketing surfaces listed/source-reviewed
+- [x] `layout.tsx`, `loading.tsx`, `error.tsx`, `not-found.tsx`, `global-error.tsx` — app-level shell/error/loading surfaces listed/source-reviewed
+- [x] `EMICalculator`/`EmiCalculator`, `OnRoadPriceSection`, route-level calculator pages — calculator surfaces listed/source-reviewed
+- [x] `ReviewsSection`, `WhatsAppFAB`, `DealerChatbot`, `SocialLinks`, `SocialLinksFields` — floating/contact/social shared surfaces listed/source-reviewed
+- [x] `MobileFilterDrawer`, `CarFilters`, `two-wheelers/FilterSidebar`, `three-wheelers/FilterSidebar` — filter surfaces listed/source-reviewed
+- [x] `SimilarVehicles`, `UsedVehicleCard`, `FullSpecsSection`, 2W/3W used and similar cards — detail-related vehicle surfaces listed/source-reviewed
+- [x] `CustomerPanelDashboard`, `/sites/[slug]/user` — customer-session surface listed; full QA depends on customer session state
+- [x] `DomainOnboardingWizard`, `PurchaseManagedDomainModal`, dashboard domain flows — domain purchase/onboarding surfaces listed/source-reviewed
+- [x] `WebsiteImageFields`, `SocialLinksFields`, onboarding template/image field groups — onboarding form surfaces listed/source-reviewed
 - [x] `TwoWheelerTemplate`, `ThreeWheelerTemplate` — present in code; no active route imports found in this audit pass
 - [x] `CarCard`, `two-wheelers/VehicleCard`, `three-wheelers/VehicleCard` — fixed for text and spec-card readability
 - [x] `two-wheelers/FilterSidebar`, `three-wheelers/FilterSidebar` — fixed for native select readability
 - [x] `DealerChatbot` — fixed for narrow viewport panel sizing
-- [x] `InventoryTable`, 2W leads table, 3W leads table — fixed for readable dashboard table geometry
+- [x] `InventoryTable`, 2W/3W leads/service/bookings/used tables, insurance review table — fixed for readable dashboard table geometry
 - [x] `PurchaseManagedDomainModal` — fixed for mobile search row and long domain wrapping
 
 ## Current Open Risks

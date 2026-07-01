@@ -210,28 +210,30 @@ export default function Step2InventoryPage() {
                     <h2 className="text-sm font-black text-[#071436]">Inventory Preview</h2>
                     <span className="text-xs font-bold text-[#62708A]">Sample rows</span>
                 </div>
-                <div className="overflow-hidden rounded-md border border-[#E3E9F2]">
-                    <div className="grid grid-cols-4 bg-[#F7F9FC] px-4 py-3 text-xs font-black text-[#62708A]">
-                        <span>Vehicle</span>
-                        <span>Year</span>
-                        <span>Price</span>
-                        <span>Status</span>
-                    </div>
-                    {[
-                        ["Maruti Swift", "2024", "Rs 6,45,000", "Active"],
-                        ["Hero Splendor Plus", "2024", "Rs 78,900", "Active"],
-                        ["Bajaj Maxima Z", "2024", "Rs 2,45,000", "Active"],
-                    ].map((row) => (
-                        <div key={row[0]} className="grid grid-cols-4 border-t border-[#E3E9F2] px-4 py-3 text-sm font-semibold text-[#35445C]">
-                            <span>{row[0]}</span>
-                            <span>{row[1]}</span>
-                            <span>{row[2]}</span>
-                            <span className="flex items-center gap-2 text-emerald-700">
-                                <span className="h-2 w-2 rounded-full bg-emerald-500" />
-                                {row[3]}
-                            </span>
+                <div className="overflow-x-auto rounded-md border border-[#E3E9F2]">
+                    <div className="min-w-[540px]">
+                        <div className="grid grid-cols-[minmax(220px,1fr)_80px_130px_100px] bg-[#F7F9FC] px-4 py-3 text-xs font-black text-[#62708A]">
+                            <span>Vehicle</span>
+                            <span>Year</span>
+                            <span>Price</span>
+                            <span>Status</span>
                         </div>
-                    ))}
+                        {[
+                            ["Maruti Swift", "2024", "Rs 6,45,000", "Active"],
+                            ["Hero Splendor Plus", "2024", "Rs 78,900", "Active"],
+                            ["Bajaj Maxima Z", "2024", "Rs 2,45,000", "Active"],
+                        ].map((row) => (
+                            <div key={row[0]} className="grid grid-cols-[minmax(220px,1fr)_80px_130px_100px] border-t border-[#E3E9F2] px-4 py-3 text-sm font-semibold text-[#35445C]">
+                                <span className="truncate">{row[0]}</span>
+                                <span className="whitespace-nowrap">{row[1]}</span>
+                                <span className="whitespace-nowrap">{row[2]}</span>
+                                <span className="flex items-center gap-2 whitespace-nowrap text-emerald-700">
+                                    <span className="h-2 w-2 shrink-0 rounded-full bg-emerald-500" />
+                                    {row[3]}
+                                </span>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
 

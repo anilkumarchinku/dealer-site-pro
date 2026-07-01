@@ -305,9 +305,9 @@ export function SportyTemplate({
                                     </span>
                                 )}
                             </div>
-                            <span className="max-w-[180px] text-lg font-bold leading-tight text-gray-900 xl:max-w-none xl:text-xl">{dealerName}</span>
+                            <span className="max-w-[180px] truncate text-lg font-bold leading-tight text-gray-900 xl:max-w-[220px] xl:text-xl 2xl:max-w-[280px]">{dealerName}</span>
                         </div>
-                        <div className="hidden xl:flex flex-1 items-center justify-center gap-4 px-4 2xl:gap-6">
+                        <div className="hidden xl:flex flex-1 items-center justify-center gap-3 px-3 2xl:gap-5">
                             <button
                                 onClick={() => setActiveTab('home')}
                                 className="whitespace-nowrap font-bold uppercase text-sm tracking-wider text-gray-600 hover:text-gray-900"

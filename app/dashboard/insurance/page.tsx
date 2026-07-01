@@ -101,7 +101,7 @@ export default function InsuranceDashboardPage() {
                         </div>
                     ) : (
                         <div className="overflow-auto rounded-xl border">
-                            <Table>
+                            <Table className="min-w-[840px]">
                                 <TableHeader>
                                     <TableRow>
                                         <TableHead>Vehicle</TableHead>
@@ -115,14 +115,16 @@ export default function InsuranceDashboardPage() {
                                     {rows.map(({ vehicle, state }) => (
                                         <TableRow key={vehicle.id}>
                                             <TableCell>
-                                                <div className="font-semibold">{vehicle.make} {vehicle.model}</div>
-                                                <div className="text-xs text-muted-foreground">{vehicle.year}{vehicle.variant ? ` · ${vehicle.variant}` : ""}</div>
+                                                <div className="max-w-[260px] truncate font-semibold">{vehicle.make} {vehicle.model}</div>
+                                                <div className="max-w-[260px] truncate text-xs text-muted-foreground">{vehicle.year}{vehicle.variant ? ` · ${vehicle.variant}` : ""}</div>
                                             </TableCell>
-                                            <TableCell>
+                                            <TableCell className="whitespace-nowrap">
                                                 <Badge variant="outline" className={cn("border", state.cls)}>{state.label}</Badge>
                                             </TableCell>
-                                            <TableCell>{vehicle.insurance_provider || "Not recorded"}</TableCell>
                                             <TableCell>
+                                                <div className="max-w-[180px] truncate">{vehicle.insurance_provider || "Not recorded"}</div>
+                                            </TableCell>
+                                            <TableCell className="whitespace-nowrap">
                                                 <div>{formatDate(vehicle.insurance_valid_until)}</div>
                                                 {state.days !== null && (
                                                     <div className="text-xs text-muted-foreground">
@@ -130,7 +132,7 @@ export default function InsuranceDashboardPage() {
                                                     </div>
                                                 )}
                                             </TableCell>
-                                            <TableCell>
+                                            <TableCell className="whitespace-nowrap">
                                                 {vehicle.insurance_quote_url ? (
                                                     <Button asChild variant="outline" size="sm" className="gap-1.5">
                                                         <a href={vehicle.insurance_quote_url} target="_blank" rel="noreferrer">

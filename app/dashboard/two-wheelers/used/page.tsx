@@ -82,7 +82,7 @@ export default function UsedTwoWheelersPage() {
                 </div>
             ) : (
                 <div className="overflow-x-auto rounded-xl border border-border">
-                    <table className="w-full text-sm">
+                    <table className="min-w-[840px] w-full text-sm">
                         <thead className="bg-muted/30">
                             <tr>
                                 <th className="px-4 py-3 text-left font-medium">Vehicle</th>
@@ -97,25 +97,27 @@ export default function UsedTwoWheelersPage() {
                         <tbody className="divide-y divide-border">
                             {vehicles.map((v) => (
                                 <tr key={v.id} className="hover:bg-muted/10">
-                                    <td className="px-4 py-3 font-medium">{v.brand} {v.model} {v.variant ?? ""}</td>
-                                    <td className="px-4 py-3 text-muted-foreground">{v.year}</td>
-                                    <td className="px-4 py-3 text-muted-foreground">{v.km_driven.toLocaleString("en-IN")}</td>
-                                    <td className="px-4 py-3">
+                                    <td className="px-4 py-3 font-medium">
+                                        <div className="max-w-[260px] truncate">{v.brand} {v.model} {v.variant ?? ""}</div>
+                                    </td>
+                                    <td className="px-4 py-3 text-muted-foreground whitespace-nowrap">{v.year}</td>
+                                    <td className="px-4 py-3 text-muted-foreground whitespace-nowrap">{v.km_driven.toLocaleString("en-IN")}</td>
+                                    <td className="px-4 py-3 whitespace-nowrap">
                                         {v.condition_grade ? (
                                             <span className={`px-2 py-0.5 rounded-full text-xs font-medium ${GRADE_COLORS[v.condition_grade] ?? GRADE_FALLBACK}`}>
                                                 Grade {v.condition_grade}
                                             </span>
                                         ) : "—"}
                                     </td>
-                                    <td className="px-4 py-3 font-medium text-primary">₹{(v.price_paise / 100).toLocaleString("en-IN")}</td>
-                                    <td className="px-4 py-3">
+                                    <td className="px-4 py-3 font-medium text-primary whitespace-nowrap">₹{(v.price_paise / 100).toLocaleString("en-IN")}</td>
+                                    <td className="px-4 py-3 whitespace-nowrap">
                                         <span className={`px-2 py-0.5 rounded-full text-xs ${
                                             v.status === "available" ? "bg-green-100 text-green-700 dark:bg-green-500/15 dark:text-green-300" :
                                             v.status === "reserved"  ? "bg-blue-100 text-blue-700 dark:bg-blue-500/15 dark:text-blue-300"  :
                                                                        "bg-gray-100 text-gray-700 dark:bg-gray-500/15 dark:text-gray-300"
                                         }`}>{v.status}</span>
                                     </td>
-                                    <td className="px-4 py-3">
+                                    <td className="px-4 py-3 whitespace-nowrap">
                                         <div className="flex items-center gap-2">
                                             <Button variant="outline" size="sm" asChild>
                                                 <Link href={`/dashboard/two-wheelers/used/${v.id}/edit`}>

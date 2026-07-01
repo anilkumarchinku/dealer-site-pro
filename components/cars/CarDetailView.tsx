@@ -883,7 +883,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                     <h2 className="text-2xl font-bold mb-6">{car.make} {car.model} Variants & Price</h2>
                     <Card className={lightCardClass}>
                         <CardContent className="p-0">
-                            <Table>
+                            <Table className="min-w-[720px]">
                                 <TableHeader>
                                     <TableRow className="bg-gray-100/40">
                                         <TableHead className="font-semibold">Variant</TableHead>
@@ -897,17 +897,17 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                                     {car.variants?.map((variant) => (
                                         <TableRow key={variant.id} className={lightTableRowHoverClass}>
                                             <TableCell>
-                                                <div>
+                                                <div className="max-w-[240px] truncate">
                                                     <span className="font-medium">{variant.name}</span>
                                                     {variant.isPopular && (
                                                         <Badge variant="secondary" className="ml-2 text-[10px]">Popular</Badge>
                                                     )}
                                                 </div>
                                             </TableCell>
-                                            <TableCell className="font-semibold">{formatPriceInLakhs(variant.price)}</TableCell>
-                                            <TableCell>{variant.fuelType}</TableCell>
-                                            <TableCell>{variant.transmission}</TableCell>
-                                            <TableCell className="text-right">
+                                            <TableCell className="font-semibold whitespace-nowrap">{formatPriceInLakhs(variant.price)}</TableCell>
+                                            <TableCell className="whitespace-nowrap">{variant.fuelType}</TableCell>
+                                            <TableCell className="whitespace-nowrap">{variant.transmission}</TableCell>
+                                            <TableCell className="text-right whitespace-nowrap">
                                                 <Button
                                                     variant="outline"
                                                     size="sm"

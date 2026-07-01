@@ -100,7 +100,7 @@ export default function ServiceBookingsPage() {
                 </div>
             ) : (
                 <div className="overflow-x-auto rounded-xl border border-border">
-                    <table className="w-full text-sm">
+                    <table className="min-w-[840px] w-full text-sm">
                         <thead className="bg-muted/30">
                             <tr>
                                 <th className="px-4 py-3 text-left font-medium">Customer</th>
@@ -114,21 +114,25 @@ export default function ServiceBookingsPage() {
                         <tbody className="divide-y divide-border">
                             {bookings.map(b => (
                                 <tr key={b.id} className="hover:bg-muted/10">
-                                    <td className="px-4 py-3 font-medium">{b.customer_name}</td>
-                                    <td className="px-4 py-3">
+                                    <td className="px-4 py-3 font-medium">
+                                        <div className="max-w-[180px] truncate">{b.customer_name}</div>
+                                    </td>
+                                    <td className="px-4 py-3 whitespace-nowrap">
                                         <a href={`tel:${b.phone}`} className="text-primary hover:underline">{b.phone}</a>
                                     </td>
                                     <td className="px-4 py-3 text-muted-foreground">
-                                        {b.vehicle_make && b.vehicle_model
-                                            ? `${b.vehicle_make} ${b.vehicle_model} ${b.vehicle_year ?? ""}`
-                                            : "—"}
+                                        <div className="max-w-[220px] truncate">
+                                            {b.vehicle_make && b.vehicle_model
+                                                ? `${b.vehicle_make} ${b.vehicle_model} ${b.vehicle_year ?? ""}`
+                                                : "—"}
+                                        </div>
                                     </td>
-                                    <td className="px-4 py-3 capitalize text-muted-foreground">{b.service_type.replace("_", " ")}</td>
-                                    <td className="px-4 py-3 text-muted-foreground">
+                                    <td className="px-4 py-3 capitalize text-muted-foreground whitespace-nowrap">{b.service_type.replace("_", " ")}</td>
+                                    <td className="px-4 py-3 text-muted-foreground whitespace-nowrap">
                                         {new Date(b.preferred_date).toLocaleDateString("en-IN")}<br />
                                         <span className="text-xs">{b.preferred_slot}</span>
                                     </td>
-                                    <td className="px-4 py-3">
+                                    <td className="px-4 py-3 whitespace-nowrap">
                                         <select
                                             value={b.status}
                                             onChange={e => updateStatus(b.id, e.target.value as TwoWheelerServiceStatus)}

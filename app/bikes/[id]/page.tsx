@@ -895,10 +895,10 @@ export default function BikeDetailPage({ params }: Props) {
                         </h2>
 
                         {/* Key Highlights Strip */}
-                        <div className="overflow-x-auto no-scrollbar mb-8">
-                            <div className="inline-flex min-w-full rounded-2xl border border-gray-200 bg-white divide-x divide-gray-100 shadow-sm">
+                        <div className="mb-8">
+                            <div className="grid grid-cols-2 overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm sm:grid-cols-3 lg:grid-cols-6">
                                 {keySpecs.map((spec, idx) => (
-                                    <div key={idx} className="flex flex-col items-center gap-2 px-6 py-5 shrink-0 min-w-[110px] text-center">
+                                    <div key={idx} className="flex min-w-0 flex-col items-center gap-2 border-b border-r border-gray-100 px-3 py-5 text-center last:border-r-0 sm:px-4 lg:border-b-0 lg:px-5">
                                         <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-50">
                                             {spec.icon}
                                         </div>

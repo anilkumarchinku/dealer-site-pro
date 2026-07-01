@@ -248,12 +248,12 @@ export function TestDriveModal({
                 aria-modal="true"
                 aria-labelledby={titleId}
                 tabIndex={-1}
-                className="w-full max-w-md bg-white rounded-2xl shadow-2xl overflow-hidden"
+                className="flex max-h-[calc(100dvh-1rem)] w-full max-w-md flex-col overflow-hidden rounded-2xl bg-white shadow-2xl"
                 onClick={e => e.stopPropagation()}
             >
                 {/* ── Image ── */}
                 {heroSrc && (
-                    <div className="relative h-40 bg-gray-100 w-full">
+                    <div className="relative h-32 shrink-0 bg-gray-100 w-full sm:h-40">
                         <Image
                             src={heroSrc}
                             alt={`${car.make} ${car.model}`}
@@ -266,7 +266,7 @@ export function TestDriveModal({
                 )}
 
                 {/* ── Header ── */}
-                <div className="px-5 py-4 flex items-center justify-between border-b border-gray-100">
+                <div className="shrink-0 px-5 py-4 flex items-center justify-between border-b border-gray-100">
                     <div className="flex items-center gap-3">
                         {step > 1 && step < 4 && (
                             <button
@@ -299,7 +299,7 @@ export function TestDriveModal({
 
                 {/* ── Progress bar (Steps 1–3) ── */}
                 {step < 4 && (
-                    <div className="px-5 pt-3 pb-1">
+                    <div className="shrink-0 px-5 pt-3 pb-1">
                         <div className="flex items-center justify-between mb-1.5">
                             {['Choose Date', 'Choose Time', 'Your Details'].map((label, i) => (
                                 <div key={label} className="flex flex-col items-center gap-0.5" style={{ width: '30%' }}>
@@ -327,7 +327,7 @@ export function TestDriveModal({
                 )}
 
                 {/* ── Body ── */}
-                <div className="px-5 py-4 max-h-[60vh] overflow-y-auto">
+                <div className="min-h-0 flex-1 overflow-y-auto px-5 py-4 pb-[calc(1rem+env(safe-area-inset-bottom))]">
 
                     {/* STEP 1 — Choose Date */}
                     {step === 1 && (

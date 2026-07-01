@@ -269,9 +269,9 @@ export function FamilyTemplate({
                                     </span>
                                 )}
                             </div>
-                            <span className="max-w-[180px] text-lg font-semibold leading-tight text-gray-900 xl:max-w-none xl:text-xl">{dealerName}</span>
+                            <span className="max-w-[180px] truncate text-lg font-semibold leading-tight text-gray-900 xl:max-w-[220px] xl:text-xl 2xl:max-w-[280px]">{dealerName}</span>
                         </div>
-                        <div className="hidden xl:flex flex-1 items-center justify-center gap-4 px-4 2xl:gap-6">
+                        <div className="hidden xl:flex flex-1 items-center justify-center gap-3 px-3 2xl:gap-5">
                             <button onClick={() => setActiveTab('home')} className="whitespace-nowrap text-sm font-medium hover:opacity-70" style={activeTab === 'home' ? { color: brandAccent } : {}}>Home</button>
                             {showInventoryTab && (
                                 <button onClick={() => setActiveTab('inventory')} className="whitespace-nowrap text-sm font-medium hover:opacity-70" style={activeTab === 'inventory' ? { color: brandAccent } : {}}>Inventory</button>

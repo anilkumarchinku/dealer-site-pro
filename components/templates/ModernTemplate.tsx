@@ -338,13 +338,13 @@ export function ModernTemplate({
                                     </span>
                                 )}
                             </div>
-                            <span className="max-w-[145px] truncate text-base font-bold leading-tight text-gray-900 sm:max-w-[180px] sm:text-lg xl:max-w-none xl:text-xl">
+                            <span className="max-w-[145px] truncate text-base font-bold leading-tight text-gray-900 sm:max-w-[180px] sm:text-lg xl:max-w-[220px] xl:text-xl 2xl:max-w-[280px]">
                                 {dealerName}
                             </span>
                         </div>
 
                         {/* Nav Links */}
-                        <div className="hidden xl:flex flex-1 items-center justify-center gap-4 px-4 2xl:gap-6">
+                        <div className="hidden xl:flex flex-1 items-center justify-center gap-3 px-3 2xl:gap-5">
                             <button
                                 onClick={() => setActiveTab('home')}
                                 className="whitespace-nowrap font-medium transition-colors text-sm text-gray-600 hover:text-gray-900"

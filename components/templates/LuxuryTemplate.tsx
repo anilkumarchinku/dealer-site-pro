@@ -245,9 +245,9 @@ export function LuxuryTemplate({
                                     </span>
                                 )}
                             </div>
-                            <span className="max-w-[190px] text-lg font-light leading-tight tracking-wide text-gray-900 xl:max-w-none xl:text-2xl xl:tracking-widest">{dealerName}</span>
+                            <span className="max-w-[190px] truncate text-lg font-light leading-tight tracking-wide text-gray-900 xl:max-w-[220px] xl:text-2xl xl:tracking-wide 2xl:max-w-[280px] 2xl:tracking-widest">{dealerName}</span>
                         </div>
-                        <div className="hidden xl:flex flex-1 items-center justify-center gap-4 px-4 2xl:gap-8">
+                        <div className="hidden xl:flex flex-1 items-center justify-center gap-3 px-3 2xl:gap-6">
                             <button onClick={() => setActiveTab('home')} className="whitespace-nowrap text-sm tracking-wider text-gray-600 hover:text-gray-900" style={activeTab === 'home' ? { color: brandAccent } : {}}>Home</button>
                             {showInventoryTab && (
                                 <button onClick={() => setActiveTab('inventory')} className="whitespace-nowrap text-sm tracking-wider text-gray-600 hover:text-gray-900" style={activeTab === 'inventory' ? { color: brandAccent } : {}}>Collection</button>
