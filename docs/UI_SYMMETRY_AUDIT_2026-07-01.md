@@ -95,7 +95,7 @@ Legend:
 
 ## Preview And Demo Pages Summary
 
-- [x] Checked: `/preview`, `/design-previews`, `/full-design-previews`, `/five-landing-previews`
+- [x] Checked: `/preview`, `/design-previews`, `/full-design-previews`, `/five-landing-previews`, `/dealer-flow-demo`, `/dealer-flow-map`
 - [x] Checked: `/clean-design-preview`, `/clean-enhanced-preview`, `/clean-design-full`, `/clean-design-full-v2`, `/clean-design-full-v3`, `/clean-design-full-v4`, `/clean-design-same-images`
 - [x] Checked: `/demo/templates`, `/demo/next-level-templates`
 - [x] Fixed: `/cars-demo` passed focused desktop/mobile checks after reducing payload size and adding the missing brand file alias.
@@ -112,9 +112,9 @@ Legend:
 - [x] Additional public sweep: `/tmp/dealersite-ui-audit/additional-public-3vp-fast` covered 82 public/sample routes across mobile/tablet/desktop and identified the offer-rail and reset-card overflow issues fixed above.
 - [x] Focused rerun: `/tmp/dealersite-ui-audit/offer-grid-rerun` confirmed `/demo/next-level-templates`, `/auth/update-password`, `/sites/bharat-bhai/two-wheelers/new`, and `/sites/bharat-bhai/two-wheelers/used` have no horizontal overflow after the fixes.
 - [x] Direct route checks: `/api/marketplace` returned 200 after fresh dev-server compile, `/brands/Hyundai` returned 200, and `/sites/bharat-bhai/three-wheelers` returned 200 after clearing the stale `.next` dev cache.
-- [x] Supervisor coverage agent: verified the detailed inventory covers all 165 current `app/**/page.tsx` routes; cleanup applied for summary wording and missing shared surfaces.
+- [x] Supervisor coverage agent: verified the detailed inventory covers all current `app/**/page.tsx` routes; cleanup applied for summary wording and missing shared surfaces.
 - [x] Audit agent: reported remaining responsive risks in chatbot, dashboard tables, compare tables, template footers, bikes toolbar, and managed-domain modal; scoped fixes applied.
-- [x] Supervisor coverage agent second pass: confirmed no missing route patterns in the 165-page checklist; requested a more exhaustive shared-surface inventory, added below.
+- [x] Supervisor coverage agent second pass: confirmed no missing route patterns in the current route checklist; requested a more exhaustive shared-surface inventory, added below.
 - [x] Audit agent second pass: reported remaining table/modal/onboarding/detail/nav risks; scoped source fixes applied.
 - [x] Dynamic detail rerun: `/tmp/dealersite-ui-audit/dynamic-detail-rerun` identified detail-tab overflow on mobile/tablet.
 - [x] Post-risk-fix rerun: `/tmp/dealersite-ui-audit/post-audit-risk-fixes-fast` and a focused tab rerun confirmed the fixed detail tab bars no longer produce page-level or tab-strip overflow flags.
@@ -130,7 +130,7 @@ Legend:
 
 ## Detailed Route Inventory
 
-This inventory is generated from current `app/**/page.tsx` files. Dynamic routes are listed by pattern and verified with concrete sample URLs when data exists. Auth-gated routes are listed and source-reviewed, but full screenshot QA still needs an authenticated dealer/admin session.
+This inventory is generated from 167 current `app/**/page.tsx` files. Dynamic routes are listed by pattern and verified with concrete sample URLs when data exists. Auth-gated routes are listed and source-reviewed, but full screenshot QA still needs an authenticated dealer/admin session.
 
 ### Public Platform (28)
 
@@ -178,7 +178,7 @@ This inventory is generated from current `app/**/page.tsx` files. Dynamic routes
 - [x] `/auth/update-password` — rendered, fixed, and focused-rerun verified
 - [x] `/reset` — rendered or covered by public/sample sweep
 
-### Preview And Demo (15)
+### Preview And Demo (17)
 
 - [x] `/cars-demo` — rendered, fixed, and focused-rerun verified
 - [x] `/clean-design-full` — rendered or covered by public/sample sweep
@@ -190,6 +190,8 @@ This inventory is generated from current `app/**/page.tsx` files. Dynamic routes
 - [x] `/clean-enhanced-preview` — rendered or covered by public/sample sweep
 - [x] `/demo/next-level-templates` — rendered, fixed, and focused-rerun verified
 - [x] `/demo/templates` — rendered or covered by public/sample sweep
+- [x] `/dealer-flow-demo` — current onboarding-flow demo route; aliases `/onboarding` and inherits its source-reviewed state
+- [x] `/dealer-flow-map` — source-reviewed current flow-map route; vehicle-category copy corrected to one category per website setup
 - [x] `/design-previews` — rendered or covered by public/sample sweep
 - [x] `/five-landing-previews` — rendered or covered by public/sample sweep
 - [x] `/full-design-previews` — rendered or covered by public/sample sweep
