@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import type { OnboardingData, DealerType } from '@/lib/types';
+import type { OnboardingData, DealerType, OnboardingWebsitePlan } from '@/lib/types';
 
 interface OnboardingStore {
     // Current route step (car flow uses 1-6; 2W/3W use 1-5)
@@ -23,6 +23,10 @@ interface OnboardingStore {
     // Supabase: dealer URL slug
     dealerSlug: string | null;
 
+    // Draft websites selected from the onboarding entry flow
+    pendingWebsitePlans: OnboardingWebsitePlan[];
+    activeWebsitePlanId: string | null;
+
     // Actions
     setStep: (step: number) => void;
     nextStep: () => void;
@@ -34,6 +38,10 @@ interface OnboardingStore {
     setSellsFourWheelers:  (v: boolean) => void;
     setDealerId: (id: string) => void;
     setDealerSlug: (slug: string) => void;
+    setPendingWebsitePlans: (plans: OnboardingWebsitePlan[]) => void;
+    clearPendingWebsitePlans: () => void;
+    removePendingWebsitePlan: (id: string) => void;
+    setActiveWebsitePlanId: (id: string | null) => void;
     reset: (prefill?: Partial<OnboardingData>) => void;
 
     // Computed
@@ -66,6 +74,7 @@ const initialData: Partial<OnboardingData> = {
     styleTemplate: 'family',
     dealerType: null,
     dealerCategory: undefined,
+    launchMode: 'initial',
     brandColor: undefined,
     brandAccentColor: undefined,
     brandColorPreset: undefined,
@@ -115,6 +124,8 @@ export const useOnboardingStore = create<OnboardingStore>()(
             sellsFourWheelers:  false,
             dealerId: null,
             dealerSlug: null,
+            pendingWebsitePlans: [],
+            activeWebsitePlanId: null,
 
             setStep: (step) => set({ currentStep: step }),
 
@@ -140,6 +151,20 @@ export const useOnboardingStore = create<OnboardingStore>()(
 
             setDealerSlug: (slug) => set({ dealerSlug: slug }),
 
+            setPendingWebsitePlans: (plans) => set({ pendingWebsitePlans: plans }),
+
+            clearPendingWebsitePlans: () => set({ pendingWebsitePlans: [], activeWebsitePlanId: null }),
+
+            removePendingWebsitePlan: (id) => set((state) => {
+                const nextPlans = state.pendingWebsitePlans.filter((plan) => plan.id !== id);
+                return {
+                    pendingWebsitePlans: nextPlans,
+                    activeWebsitePlanId: state.activeWebsitePlanId === id ? null : state.activeWebsitePlanId,
+                };
+            }),
+
+            setActiveWebsitePlanId: (id) => set({ activeWebsitePlanId: id }),
+
             reset: (prefill = {}) => set({
                 currentStep: 1,
                 data: {
@@ -156,6 +181,7 @@ export const useOnboardingStore = create<OnboardingStore>()(
                 sellsFourWheelers: false,
                 dealerId: null,
                 dealerSlug: null,
+                activeWebsitePlanId: null,
             }),
 
             isComplete: () => {
@@ -182,14 +208,9 @@ export const useOnboardingStore = create<OnboardingStore>()(
                     return 'used_only';
                 }
 
-                // Type 1: Single OEM (new cars, one brand)
-                if (data.sellsNewCars && !data.sellsUsedCars && data.brands?.length === 1) {
+                // Type 1: Single OEM (new vehicles, one chosen brand/site)
+                if (data.sellsNewCars && !data.sellsUsedCars) {
                     return 'single_oem';
-                }
-
-                // Type 2: Multi OEM (new cars, multiple brands)
-                if (data.sellsNewCars && !data.sellsUsedCars && (data.brands?.length ?? 0) > 1) {
-                    return 'multi_oem';
                 }
 
                 // Type 4: Hybrid (new + used)

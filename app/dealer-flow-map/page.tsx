@@ -9,10 +9,10 @@ import {
     Globe2,
     LayoutDashboard,
     LayoutTemplate,
+    Layers,
     ListChecks,
     Palette,
     Rocket,
-    Store,
     Truck,
     UploadCloud,
     type LucideIcon,
@@ -25,7 +25,7 @@ type FlowNode = {
     eyebrow: string;
     description: string;
     icon: LucideIcon;
-    tone: "blue" | "amber" | "green" | "slate";
+    tone: "blue" | "amber" | "green" | "slate" | "violet";
     details: string[];
 };
 
@@ -38,9 +38,9 @@ const flowNodes: FlowNode[] = [
     {
         eyebrow: "Step 1",
         title: "Business Mode",
-        description: "Dealer selects New Vehicles, Used / Pre-Owned, or both for hybrid.",
-        icon: Store,
-        tone: "blue",
+        description: "Dealer selects New Vehicles, Used / Pre-Owned, or Hybrid as a first-class mode.",
+        icon: Layers,
+        tone: "violet",
         details: ["New", "Used", "Hybrid = New + Used"],
     },
     {
@@ -88,16 +88,16 @@ const examples = [
         sites: ["New Cars"],
     },
     {
-        title: "Used bike and auto dealer",
-        formula: "Used x 2W + 3W",
-        result: "2 websites",
-        sites: ["Pre-Owned Two-Wheelers", "Pre-Owned Three-Wheelers"],
+        title: "Used bike dealer",
+        formula: "Used x 2W",
+        result: "1 website",
+        sites: ["Pre-Owned Two-Wheelers"],
     },
     {
-        title: "Amazing hybrid dealer",
-        formula: "New + Used x 2W + 3W + 4W",
-        result: "6 websites",
-        sites: ["New Cars", "Pre-Owned Cars", "New Two-Wheelers", "Pre-Owned Two-Wheelers", "New Three-Wheelers", "Pre-Owned Three-Wheelers"],
+        title: "Hybrid bike dealer",
+        formula: "New + Used x 2W",
+        result: "2 websites",
+        sites: ["New Two-Wheelers", "Pre-Owned Two-Wheelers"],
     },
 ];
 
@@ -106,6 +106,7 @@ const toneClass = {
     amber: "border-[#F6D8A8] bg-[#FFF7EA] text-[#A85B00]",
     green: "border-emerald-200 bg-emerald-50 text-emerald-700",
     slate: "border-slate-200 bg-slate-50 text-slate-700",
+    violet: "border-violet-200 bg-violet-50 text-violet-700",
 };
 
 export default function DealerFlowMapPage() {

@@ -53,6 +53,7 @@ Legend:
 
 - [x] Source-reviewed: `/onboarding` and 4W/2W/3W onboarding layouts and shared components.
 - [x] Fixed earlier in this workstream: vehicle type selection is single-select instead of multi-select.
+- [x] Fixed: current onboarding entry flow and `/dealer-flow-map` copy now describe one vehicle category per website setup; source scan confirms no active `multi-select`, `all three`, or `6 websites` category-copy remains.
 - [x] Fixed: website image/logo upload fields have more stable symmetric preview dimensions.
 - [x] Fixed: onboarding inventory preview sample rows now use a scroll-safe min-width grid with truncation instead of a fixed four-column phone layout.
 - [ ] Pending: screenshot pass through all onboarding steps with an authenticated session.
@@ -128,6 +129,7 @@ Legend:
 - [x] Public template evidence pass: `/tmp/dealersite-ui-audit/public-template-evidence-2026-07-01-final` checked 22 public/template/detail routes across mobile/tablet/desktop; the only transient `/sites/bharat-bhai` mobile navigation probe error was rerun cleanly at all three breakpoints.
 - [x] 4W dealer detail evidence: `/sites/singh-auto-dealers/3cd9896b-f3d1-455c-bfc1-b94335443846` and `/sites/singh-auto-dealers/89999d26-c273-4bcf-a671-8f5aadefcbb3` returned 200 with no page overflow on mobile/tablet/desktop.
 - [x] Auth-gate repro: Firefox private session and direct HTTP checks against `http://127.0.0.1:3011` confirmed `/dashboard` redirects to `/auth/login?redirect=%2Fdashboard` and `/onboarding` redirects to `/auth/login?redirect=%2Fonboarding`; no authenticated dealer/admin session was available for final screenshot QA.
+- [x] Onboarding single-select source verification: `app/onboarding/page.tsx`, `app/dealer-flow-map/page.tsx`, and `lib/store/onboarding-store.ts` were scanned for stale active multi-category copy/logic and passed `npx tsc --noEmit --pretty false --incremental false`, `git diff --check`, and `npm run build`.
 
 ## Detailed Route Inventory
 
