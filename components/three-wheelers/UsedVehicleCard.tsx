@@ -73,28 +73,28 @@ export function UsedVehicleCard({ vehicle, slug, onLead }: Props) {
 
             {/* Info */}
             <div className="p-4">
-                <div className="flex items-start justify-between">
-                    <div>
-                        <h3 className="font-semibold text-base">{vehicle.brand} {vehicle.model}</h3>
-                        <p className="text-xs text-muted-foreground">
+                <div className="flex items-start justify-between gap-3">
+                    <div className="min-w-0">
+                        <h3 className="line-clamp-2 text-base font-semibold leading-tight">{vehicle.brand} {vehicle.model}</h3>
+                        <p className="mt-1 truncate text-xs text-muted-foreground">
                             {vehicle.year} · {vehicle.km_driven.toLocaleString("en-IN")} km · {vehicle.no_of_owners} owner{vehicle.no_of_owners > 1 ? "s" : ""}
                         </p>
                     </div>
                     {vehicle.condition_grade && (
-                        <span className={`text-xs font-bold px-2 py-0.5 rounded border ${GRADE_COLORS[vehicle.condition_grade]}`}>
+                        <span className={`shrink-0 text-xs font-bold px-2 py-0.5 rounded border ${GRADE_COLORS[vehicle.condition_grade]}`}>
                             Grade {vehicle.condition_grade}
                         </span>
                     )}
                 </div>
 
-                <div className="flex items-center gap-3 mt-2 text-xs text-muted-foreground">
-                    <span className="capitalize">{vehicle.fuel_type}</span>
-                    {vehicle.rc_status && <span className="capitalize">RC: {vehicle.rc_status}</span>}
-                    {vehicle.type && <span className="capitalize">{vehicle.type.replace('_', ' ')}</span>}
+                <div className="mt-2 flex min-w-0 items-center gap-3 text-xs text-muted-foreground">
+                    <span className="truncate capitalize">{vehicle.fuel_type}</span>
+                    {vehicle.rc_status && <span className="truncate capitalize">RC: {vehicle.rc_status}</span>}
+                    {vehicle.type && <span className="truncate capitalize">{vehicle.type.replace('_', ' ')}</span>}
                 </div>
 
-                <div className="flex items-baseline gap-1 mt-3">
-                    <p className="text-lg font-bold text-primary">₹{price}</p>
+                <div className="mt-3 flex min-w-0 flex-wrap items-baseline gap-x-1 gap-y-0.5">
+                    <p className="truncate text-lg font-bold text-primary">₹{price}</p>
                     {hasOffer && (
                         <span className="text-xs text-muted-foreground line-through">₹{originalPrice}</span>
                     )}
@@ -104,18 +104,18 @@ export function UsedVehicleCard({ vehicle, slug, onLead }: Props) {
                     <p className="mt-1 text-xs font-medium text-primary">{vehicle.offer_label || "Offer price"}</p>
                 )}
 
-                <div className="flex gap-2 mt-4">
+                <div className="mt-4 grid grid-cols-1 gap-2 sm:grid-cols-2">
                     {onLead && (
                         <button
                             onClick={() => onLead(vehicle.id)}
-                            className="flex-1 bg-primary text-primary-foreground text-sm font-medium rounded-lg px-3 py-2 hover:opacity-90 transition-opacity"
+                            className="min-h-10 bg-primary text-primary-foreground text-sm font-medium rounded-lg px-3 py-2 hover:opacity-90 transition-opacity"
                         >
                             Make an Offer
                         </button>
                     )}
                     <Link
                         href={`${prefix}/three-wheelers/used/${vehicle.id}`}
-                        className="flex-1 border border-border text-sm font-medium rounded-lg px-3 py-2 text-center hover:bg-muted/50 transition-colors"
+                        className="min-h-10 border border-border text-sm font-medium rounded-lg px-3 py-2 text-center hover:bg-muted/50 transition-colors"
                     >
                         View Details
                     </Link>

@@ -90,6 +90,7 @@ Legend:
 - [x] Fixed: 4W test-drive modal is capped to the visible mobile viewport with a flex scroll body and safe-area bottom padding.
 - [x] Fixed: full-spec, bulk-upload preview, DNS instruction, and on-road-price breakdown tables now use stable mobile minimum widths with truncation/nowrap for long values.
 - [x] Fixed: compare modal, used-vehicle bulk upload preview, 2W detail variants, and 3W detail variants now use stable table widths with truncation/nowrap for long values.
+- [x] Fixed: 2W/3W similar and used vehicle cards now clamp long model names, metadata, prices, badges, and CTAs so cards stay symmetric with long content.
 - [ ] Pending: screenshot each template with controlled sample data, including long dealer names and long model/variant names.
 
 ## Preview And Demo Pages Summary

@@ -47,8 +47,8 @@ function SimilarVehicleCard({ vehicle, imgSrc, href }: { vehicle: ThreeWheelerVe
                 className="w-full h-28 object-contain rounded-lg bg-muted/30"
                 onError={() => setFailed(true)}
             />
-            <p className="text-sm font-semibold mt-2">{vehicle.brand} {vehicle.model}</p>
-            <p className="text-xs text-primary mt-0.5">{priceF}</p>
+            <p className="text-sm font-semibold mt-2 leading-tight line-clamp-2">{vehicle.brand} {vehicle.model}</p>
+            <p className="text-xs text-primary mt-0.5 truncate">{priceF}</p>
         </Link>
     )
 }
