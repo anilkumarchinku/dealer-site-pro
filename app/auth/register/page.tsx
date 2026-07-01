@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { CheckCircle, XCircle, Loader2, Mail } from "lucide-react";
 
-import { BrowserFrame, FlowTopBar, SecurityPanel } from "@/components/onboarding/flow-shell";
+import { BrowserFrame, FlowTopBar } from "@/components/onboarding/flow-shell";
 import { Alert } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -196,13 +196,8 @@ export default function RegisterPage() {
     return (
         <BrowserFrame className="min-h-screen w-full max-w-none rounded-none border-0 shadow-none" contentClassName="bg-background">
             <FlowTopBar />
-            <div className="grid lg:grid-cols-[390px_1fr]">
-                <div className="hidden lg:block">
-                    <SecurityPanel />
-                </div>
-
-                <div className="px-5 py-8 sm:px-10 lg:px-12">
-                    <div className="mx-auto max-w-xl">
+            <div className="px-5 py-8 sm:px-10 lg:px-12">
+                <div className="mx-auto max-w-xl">
                         <div className="mb-7">
                             <p className="text-sm font-black uppercase tracking-[0.18em] text-primary">02 Register</p>
                             <h1 className="mt-3 text-3xl font-black tracking-[-0.03em] text-foreground">
@@ -384,7 +379,6 @@ export default function RegisterPage() {
                                 </p>
                             </form>
                         )}
-                    </div>
                 </div>
             </div>
         </BrowserFrame>

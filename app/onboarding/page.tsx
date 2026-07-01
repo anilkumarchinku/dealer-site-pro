@@ -27,7 +27,7 @@ const conditionOptions: { id: Condition; title: string; description: string; ico
     { id: "both", title: "Both New & Used",  description: "You sell new OEM stock and pre-owned vehicles.",       icon: Layers,    tone: "violet" },
 ];
 
-// Sub-step B — multi-select; any combination is allowed.
+// Sub-step B — one primary route per dealer during onboarding.
 const vehicleTypeOptions: { id: VehicleType; title: string; description: string; icon: typeof Car; tone: string }[] = [
     { id: "4w", title: "Cars (4-Wheeler)", description: "Hatchbacks, sedans, SUVs and more.",   icon: Car,   tone: "blue" },
     { id: "2w", title: "Two-Wheelers",     description: "Bikes, scooters and EV two-wheelers.",  icon: Bike,  tone: "indigo" },
@@ -58,7 +58,7 @@ export default function OnboardingIndexPage() {
     // Two sub-steps within the "Choose Type" stage.
     const [phase, setPhase] = useState<"condition" | "types">("condition");
     const [condition, setCondition] = useState<Condition | null>(null);
-    const [types, setTypes] = useState<Set<VehicleType>>(new Set());
+    const [selectedType, setSelectedType] = useState<VehicleType | null>(null);
 
     useEffect(() => {
         if (!isSupabaseReady()) return;
@@ -91,15 +91,6 @@ export default function OnboardingIndexPage() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    const toggleType = (id: VehicleType) => {
-        setTypes((prev) => {
-            const next = new Set(prev);
-            if (next.has(id)) next.delete(id);
-            else next.add(id);
-            return next;
-        });
-    };
-
     // Primary vehicle type drives which flow we enter first (cars → 2W → 3W).
     const primaryRoute: Record<"car" | "two-wheeler" | "three-wheeler", string> = {
         car: "/onboarding/step-1",
@@ -108,11 +99,11 @@ export default function OnboardingIndexPage() {
     };
 
     const handleContinue = () => {
-        if (!condition || types.size === 0) return;
+        if (!condition || !selectedType) return;
 
-        const has4w = types.has("4w");
-        const has2w = types.has("2w");
-        const has3w = types.has("3w");
+        const has4w = selectedType === "4w";
+        const has2w = selectedType === "2w";
+        const has3w = selectedType === "3w";
         const sellsNew = condition === "new" || condition === "both";
         const sellsUsed = condition === "used" || condition === "both";
 
@@ -220,24 +211,24 @@ export default function OnboardingIndexPage() {
                                 <>
                                     <p className="text-xs font-black uppercase tracking-[0.18em] text-[#155EEF]">Step 2 of 2 · {conditionTitle}</p>
                                     <h1 className="mt-2 text-[30px] font-black leading-tight tracking-[-0.035em] text-[#071436] xl:text-[32px]">
-                                        Which vehicle types do you sell?
+                                        Which vehicle type do you sell first?
                                     </h1>
                                     <p className="mt-2 max-w-xl text-sm font-medium leading-5 text-[#62708A]">
-                                        Select all that apply — cars, bikes, autos, or any mix. Your <strong className="text-[#35445C]">{conditionTitle}</strong> choice applies to each.
+                                        Choose one primary vehicle category for this setup. You can add more categories from the dashboard later.
                                     </p>
 
                                     <div className="mt-5 grid flex-1 auto-rows-fr gap-3 sm:grid-cols-3">
                                         {vehicleTypeOptions.map((option) => {
-                                            const isSelected = types.has(option.id);
+                                            const isSelected = selectedType === option.id;
                                             return (
                                                 <button
                                                     key={option.id}
                                                     type="button"
-                                                    role="checkbox"
+                                                    role="radio"
                                                     aria-checked={isSelected}
-                                                    onClick={() => toggleType(option.id)}
+                                                    onClick={() => setSelectedType(option.id)}
                                                     className={cn(
-                                                        "group relative flex min-h-[150px] flex-col items-center justify-center rounded-lg border p-4 text-center shadow-[0_10px_28px_rgba(7,20,54,0.04)] transition hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-[#155EEF]",
+                                                        "group relative flex min-h-[190px] flex-col items-center justify-center rounded-lg border p-5 text-center shadow-[0_10px_28px_rgba(7,20,54,0.04)] transition hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-[#155EEF]",
                                                         isSelected
                                                             ? "border-[#155EEF] bg-[#F5F8FF] shadow-[0_16px_42px_rgba(7,20,54,0.08)]"
                                                             : "border-[#D8E0EA] bg-white hover:border-[#155EEF] hover:shadow-[0_16px_42px_rgba(7,20,54,0.08)]"
@@ -275,9 +266,9 @@ export default function OnboardingIndexPage() {
                                             type="button"
                                             className="h-11 flex-1 rounded-md bg-[#155EEF] text-sm font-black text-white hover:bg-[#0F4FD3] disabled:cursor-not-allowed disabled:opacity-50"
                                             onClick={handleContinue}
-                                            disabled={types.size === 0}
+                                        disabled={!selectedType}
                                         >
-                                            Continue{types.size > 0 ? ` (${types.size})` : ""}
+                                            Continue
                                             <ArrowRight className="ml-2 h-4 w-4" />
                                         </Button>
                                     </div>
@@ -312,9 +303,9 @@ export default function OnboardingIndexPage() {
                                         type="button"
                                         className="h-10 flex-1 rounded-md bg-[#155EEF] text-sm font-black text-white hover:bg-[#0F4FD3] disabled:cursor-not-allowed disabled:opacity-50"
                                         onClick={handleContinue}
-                                        disabled={types.size === 0}
+                                        disabled={!selectedType}
                                     >
-                                        {types.size === 0 ? "Select to continue" : `Continue (${types.size})`}
+                                        {selectedType ? "Continue" : "Select to continue"}
                                         <ArrowRight className="ml-2 h-4 w-4" />
                                     </Button>
                                 </div>

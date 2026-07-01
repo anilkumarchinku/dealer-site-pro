@@ -33,7 +33,8 @@ export function validateLeadForm(data: {
     name: string
     phone: string
     email?: string
-}): ValidationErrors {
+}, options: { requireEmail?: boolean } = {}): ValidationErrors {
+    const { requireEmail = false } = options
     const errors: ValidationErrors = {}
 
     if (!isValidName(data.name)) {
@@ -42,9 +43,9 @@ export function validateLeadForm(data: {
     if (!isValidIndianPhone(data.phone)) {
         errors.phone = 'Enter a valid 10-digit Indian mobile number'
     }
-    if (!data.email || !data.email.trim()) {
+    if (requireEmail && (!data.email || !data.email.trim())) {
         errors.email = 'Email is required'
-    } else if (!isValidEmail(data.email)) {
+    } else if (data.email?.trim() && !isValidEmail(data.email)) {
         errors.email = 'Enter a valid email address'
     }
 
@@ -60,7 +61,8 @@ export function validateServiceBookingForm(data: {
     email?: string
     service_type: string
     preferred_date: string
-}): ValidationErrors {
+}, options: { requireEmail?: boolean } = {}): ValidationErrors {
+    const { requireEmail = false } = options
     const errors: ValidationErrors = {}
 
     if (!isValidName(data.customer_name)) {
@@ -69,9 +71,9 @@ export function validateServiceBookingForm(data: {
     if (!isValidIndianPhone(data.phone)) {
         errors.phone = 'Enter a valid 10-digit Indian mobile number'
     }
-    if (!data.email || !data.email.trim()) {
+    if (requireEmail && (!data.email || !data.email.trim())) {
         errors.email = 'Email is required'
-    } else if (!isValidEmail(data.email)) {
+    } else if (data.email?.trim() && !isValidEmail(data.email)) {
         errors.email = 'Enter a valid email address'
     }
     if (!data.service_type) {

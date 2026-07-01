@@ -175,7 +175,7 @@ export function OnRoadPriceDialog({
                             <div>
                                 <Label className="mb-2 block text-sm font-medium text-gray-700">State</Label>
                                 <Select value={stateCode} onValueChange={setStateCode}>
-                                    <SelectTrigger className="bg-white">
+                                    <SelectTrigger className="border-gray-300 bg-white text-gray-900 [&>span]:text-gray-900">
                                         <SelectValue placeholder="Select state" />
                                     </SelectTrigger>
                                     <SelectContent className="max-h-80">
@@ -191,7 +191,7 @@ export function OnRoadPriceDialog({
                             <div>
                                 <Label className="mb-2 block text-sm font-medium text-gray-700">Variant</Label>
                                 <Select value={activeVariant?.id ?? ''} onValueChange={setVariantId}>
-                                    <SelectTrigger className="bg-white">
+                                    <SelectTrigger className="border-gray-300 bg-white text-gray-900 [&>span]:text-gray-900">
                                         <SelectValue placeholder="Select variant" />
                                     </SelectTrigger>
                                     <SelectContent className="max-h-80">

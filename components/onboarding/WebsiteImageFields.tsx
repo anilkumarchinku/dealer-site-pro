@@ -68,7 +68,7 @@ export function WebsiteImageFields({
                 Website Images
             </div>
 
-            <div className="grid gap-4 md:grid-cols-2">
+            <div className="grid items-stretch gap-4 md:grid-cols-2">
                 <AssetUploadBox
                     type="logo"
                     title="Logo"
@@ -142,7 +142,7 @@ function AssetUploadBox({
                 onDragLeave={() => onDragState(false)}
                 onDrop={onDrop}
                 className={cn(
-                    "relative min-h-44 rounded-xl border border-dashed border-border bg-muted/30 p-4 transition-colors",
+                    "relative min-h-[210px] rounded-xl border border-dashed border-border bg-muted/30 p-4 transition-colors",
                     dragging && "border-primary bg-primary/5"
                 )}
             >
@@ -156,21 +156,21 @@ function AssetUploadBox({
                 />
 
                 {value ? (
-                    <div className="flex h-full min-h-36 flex-col gap-3">
+                    <div className="flex h-full min-h-[178px] flex-col gap-3">
                         <div className={cn(
                             "relative flex-1 overflow-hidden rounded-lg bg-background",
-                            type === "logo" ? "min-h-24" : "min-h-32"
+                            type === "logo" ? "min-h-[118px]" : "min-h-[118px]"
                         )}>
                             <Image
                                 src={value}
                                 alt={`${title} preview`}
                                 fill
                                 unoptimized
-                                className={type === "logo" ? "object-contain p-4" : "object-cover"}
+                                className={type === "logo" ? "object-contain p-4" : "object-contain"}
                                 sizes="(max-width: 768px) 100vw, 50vw"
                             />
                         </div>
-                        <div className="flex items-center justify-between gap-2">
+                        <div className="flex min-h-9 items-center justify-between gap-2">
                             <Button type="button" size="sm" variant="outline" onClick={handlePick}>
                                 Replace
                             </Button>
@@ -184,7 +184,7 @@ function AssetUploadBox({
                     <button
                         type="button"
                         onClick={handlePick}
-                        className="flex min-h-36 w-full flex-col items-center justify-center gap-3 rounded-lg text-center transition-colors hover:bg-background/60"
+                        className="flex min-h-[178px] w-full flex-col items-center justify-center gap-3 rounded-lg text-center transition-colors hover:bg-background/60"
                     >
                         <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-primary/10 text-primary">
                             <Upload className="h-5 w-5" />

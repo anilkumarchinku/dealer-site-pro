@@ -120,8 +120,8 @@ export function ServiceBookingForm({ dealerId }: Props) {
                 </div>
             </div>
             <div>
-                <label className="text-sm font-medium">Email *</label>
-                <input value={form.email} onChange={e => set("email", e.target.value)} required data-field="email" type="email" className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm" placeholder="you@example.com" />
+                <label className="text-sm font-medium">Email <span className="text-muted-foreground">(optional)</span></label>
+                <input value={form.email} onChange={e => set("email", e.target.value)} data-field="email" type="email" className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm" placeholder="you@example.com" />
             </div>
 
             <div className="grid sm:grid-cols-2 gap-4">

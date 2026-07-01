@@ -556,7 +556,7 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#A8793A', 
                                         </div>
                                     </div>
                                     <div>
-                                        <Label htmlFor="email">Email Address *</Label>
+                                        <Label htmlFor="email">Email Address <span className="font-normal text-gray-600">(optional)</span></Label>
                                         <Input
                                             id="email"
                                             appearance="light"
@@ -564,7 +564,6 @@ export function EnquiryModal({ car, open, onOpenChange, brandColor = '#A8793A', 
                                             placeholder="john@example.com"
                                             value={formData.email}
                                             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                                            required
                                         />
                                         {formErrors.email && <p className="text-xs text-red-500 mt-1">{formErrors.email}</p>}
                                     </div>

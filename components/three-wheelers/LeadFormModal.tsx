@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react"
 import Image from "next/image"
 import type { ThreeWheelerLeadType } from "@/lib/types/three-wheeler"
 import { X } from "lucide-react"
-import { validateLeadForm, focusFirstInvalidField } from "@/lib/validations/client"
+import { validateLeadForm, focusFirstInvalidField, type ValidationErrors } from "@/lib/validations/client"
 import { normalizeLeadPhone } from "@/lib/validations/lead"
 
 interface Props {
@@ -32,12 +32,27 @@ export function LeadFormModal({
     const [submitting,    setSubmitting]    = useState(false)
     const [submitted,     setSubmitted]     = useState(false)
     const [error,         setError]         = useState("")
+    const [fieldErrors,   setFieldErrors]   = useState<ValidationErrors>({})
     const [minDate,       setMinDate]       = useState("")
 
     const dialogRef         = useRef<HTMLDivElement>(null)
     const previouslyFocused = useRef<HTMLElement | null>(null)
 
+    function clearFieldError(field: keyof ValidationErrors) {
+        setFieldErrors(prev => {
+            const next = { ...prev }
+            delete next[field]
+            return next
+        })
+    }
+
     useEffect(() => { setMinDate(new Date().toISOString().split("T")[0]) }, [])
+    useEffect(() => {
+        if (!isOpen) return
+        setError("")
+        setFieldErrors({})
+        setSubmitted(false)
+    }, [isOpen])
 
     // Restore focus to the trigger and close on Escape; trap Tab within the dialog.
     useEffect(() => {
@@ -92,8 +107,9 @@ export function LeadFormModal({
         e.preventDefault()
         const normalizedPhone = normalizeLeadPhone(phone)
         const validationErrors = validateLeadForm({ name, phone: normalizedPhone, email })
+        setFieldErrors(validationErrors)
         if (Object.keys(validationErrors).length > 0) {
-            setError(Object.values(validationErrors).join('. '))
+            setError("")
             focusFirstInvalidField(validationErrors, dialogRef.current)
             return
         }
@@ -174,15 +190,18 @@ export function LeadFormModal({
                     <form onSubmit={handleSubmit} className="space-y-4">
                         <div>
                             <label className="text-sm font-medium">Name *</label>
-                            <input value={name} onChange={e => setName(e.target.value)} required data-field="name" placeholder="Your name" className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm" />
+                            <input value={name} onChange={e => { setName(e.target.value); if (fieldErrors.name) clearFieldError("name") }} data-field="name" aria-required="true" aria-invalid={Boolean(fieldErrors.name)} placeholder="Your name" className={`mt-1 w-full rounded-lg border bg-background px-3 py-2 text-sm ${fieldErrors.name ? "border-destructive" : "border-input"}`} />
+                            {fieldErrors.name && <p className="mt-1 text-xs text-destructive">{fieldErrors.name}</p>}
                         </div>
                         <div>
                             <label className="text-sm font-medium">Phone *</label>
-                            <input value={phone} onChange={e => setPhone(e.target.value)} required data-field="phone" type="tel" placeholder="10-digit mobile number" className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm" />
+                            <input value={phone} onChange={e => { setPhone(e.target.value); if (fieldErrors.phone) clearFieldError("phone") }} data-field="phone" aria-required="true" aria-invalid={Boolean(fieldErrors.phone)} type="tel" placeholder="10-digit mobile number" className={`mt-1 w-full rounded-lg border bg-background px-3 py-2 text-sm ${fieldErrors.phone ? "border-destructive" : "border-input"}`} />
+                            {fieldErrors.phone && <p className="mt-1 text-xs text-destructive">{fieldErrors.phone}</p>}
                         </div>
                         <div>
-                            <label className="text-sm font-medium">Email *</label>
-                            <input value={email} onChange={e => setEmail(e.target.value)} required data-field="email" type="email" placeholder="you@example.com" className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm" />
+                            <label className="text-sm font-medium">Email <span className="text-muted-foreground">(optional)</span></label>
+                            <input value={email} onChange={e => { setEmail(e.target.value); if (fieldErrors.email) clearFieldError("email") }} data-field="email" aria-invalid={Boolean(fieldErrors.email)} type="email" placeholder="you@example.com" className={`mt-1 w-full rounded-lg border bg-background px-3 py-2 text-sm ${fieldErrors.email ? "border-destructive" : "border-input"}`} />
+                            {fieldErrors.email && <p className="mt-1 text-xs text-destructive">{fieldErrors.email}</p>}
                         </div>
                         {leadType === "demo" && (
                             <div>

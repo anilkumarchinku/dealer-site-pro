@@ -64,14 +64,21 @@ type CyeproLeadPayload = {
     leadSource?: string
 }
 
+const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{12}$/i
+
+function dbUuidOrNull(value: string | null | undefined): string | null {
+    const trimmed = value?.trim()
+    return trimmed && UUID_RE.test(trimmed) ? trimmed : null
+}
+
 export function buildVehicleLeadPayload<TLead extends LeadData, TExtra extends object = Record<string, never>>(
     data: TLead,
     extraPayload?: TExtra
 ): VehicleLeadPayload<TLead> & TExtra {
     return {
         dealer_id: data.dealer_id,
-        vehicle_id: data.vehicle_id ?? null,
-        used_vehicle_id: data.used_vehicle_id ?? null,
+        vehicle_id: dbUuidOrNull(data.vehicle_id),
+        used_vehicle_id: dbUuidOrNull(data.used_vehicle_id),
         lead_type: data.lead_type,
         name: data.name,
         phone: data.phone,

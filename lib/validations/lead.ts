@@ -36,7 +36,7 @@ export function normalizeLeadPhone(raw: string): string {
 }
 
 export function validateLeadForm(input: LeadFormInput, options: LeadFormOptions = {}): LeadFormErrors {
-    const { requireEmail = true, requireConsent = true } = options
+    const { requireEmail = false, requireConsent = true } = options
     const errors: LeadFormErrors = {}
 
     if (!isValidName(input.name)) {

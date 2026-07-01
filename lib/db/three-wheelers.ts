@@ -31,6 +31,7 @@ import {
 } from '@/lib/services/used-vehicle-price-offers'
 
 const DEFAULT_PAGE_SIZE = DEFAULT_DB_PAGE_SIZE
+const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i
 
 // ── New Inventory ─────────────────────────────────────────────
 
@@ -73,6 +74,7 @@ export async function getThreeWheelerVehicles(
 }
 
 export async function getThreeWheelerVehicleById(id: string, dealerId?: string): Promise<ThreeWheelerVehicle | null> {
+    if (!UUID_RE.test(id)) return null
     return getById<ThreeWheelerVehicle>('thw_vehicles', id, dealerId)
 }
 

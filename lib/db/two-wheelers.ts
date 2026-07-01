@@ -41,6 +41,7 @@ import {
 // ── Helpers ───────────────────────────────────────────────────
 
 const DEFAULT_PAGE_SIZE = DEFAULT_DB_PAGE_SIZE
+const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i
 
 // ── tw_vehicles — New 2W Inventory ───────────────────────────
 
@@ -81,6 +82,7 @@ export async function getTwoWheelerVehicleById(
     id: string,
     dealerId?: string
 ): Promise<TwoWheelerVehicle | null> {
+    if (!UUID_RE.test(id)) return null
     return getById<TwoWheelerVehicle>('tw_vehicles', id, dealerId, 'getTwoWheelerVehicleById')
 }
 
