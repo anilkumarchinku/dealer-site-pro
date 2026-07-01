@@ -1053,7 +1053,7 @@ export default function BikeDetailPage({ params }: Props) {
                         <Card className="bg-white border border-gray-200 shadow-sm">
                             <CardContent className="p-0">
                                 <div className="overflow-x-auto">
-                                    <table className="w-full">
+                                    <table className="w-full min-w-[720px]">
                                         <thead>
                                             <tr className="bg-gray-50 border-b border-gray-200">
                                                 <th className="text-left text-xs font-semibold text-gray-700 px-4 py-3">Variant</th>
@@ -1068,8 +1068,8 @@ export default function BikeDetailPage({ params }: Props) {
                                                 variantRows.map((v) => (
                                                     <tr key={v.key} className="border-b border-gray-100 hover:bg-gray-50">
                                                         <td className="px-4 py-3">
-                                                            <div className="flex items-center gap-2">
-                                                                <span className="text-sm font-medium text-gray-900">
+                                                            <div className="flex max-w-[260px] items-center gap-2">
+                                                                <span className="truncate text-sm font-medium text-gray-900">
                                                                     {v.name}
                                                                 </span>
                                                                 {v.isCurrent && (
@@ -1077,16 +1077,16 @@ export default function BikeDetailPage({ params }: Props) {
                                                                 )}
                                                             </div>
                                                         </td>
-                                                        <td className="px-4 py-3 text-sm font-semibold text-gray-900">
+                                                        <td className="px-4 py-3 text-sm font-semibold text-gray-900 whitespace-nowrap">
                                                             {v.priceLabel}
                                                         </td>
-                                                        <td className="px-4 py-3 text-sm text-gray-700">
+                                                        <td className="px-4 py-3 text-sm text-gray-700 whitespace-nowrap">
                                                             {v.fuelLabel}
                                                         </td>
-                                                        <td className="px-4 py-3 text-sm text-gray-700">
+                                                        <td className="px-4 py-3 text-sm text-gray-700 whitespace-nowrap">
                                                             {v.engineOrBatteryLabel}
                                                         </td>
-                                                        <td className="px-4 py-3 text-right">
+                                                        <td className="px-4 py-3 text-right whitespace-nowrap">
                                                             {v.href ? (
                                                                 <Link href={v.href}>
                                                                     <Button variant="outline" size="sm" className="border-gray-200 text-gray-900 hover:bg-gray-50 text-xs">

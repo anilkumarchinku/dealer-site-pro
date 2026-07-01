@@ -660,7 +660,7 @@ export default function AutoDetailPage() {
                                 ))}
                             </div>
                             <div className="hidden overflow-x-auto md:block">
-                                <table className="w-full text-sm">
+                                <table className="w-full min-w-[720px] text-sm">
                                 <thead>
                                     <tr className="border-b border-border bg-muted/60">
                                         <th className="text-left py-3 px-4 font-semibold text-muted-foreground">Variant</th>
@@ -677,7 +677,7 @@ export default function AutoDetailPage() {
                                             className={`border-b border-border hover:bg-muted transition-colors ${v.id === vehicle.id ? 'bg-primary/5' : ''}`}
                                         >
                                             <td className="py-3 px-4">
-                                                <span className="font-medium text-foreground">
+                                                <span className="block max-w-[260px] truncate font-medium text-foreground">
                                                     {v.variant || vehicle.model}
                                                 </span>
                                                 {v.id === vehicle.id && (
@@ -686,16 +686,16 @@ export default function AutoDetailPage() {
                                                     </span>
                                                 )}
                                             </td>
-                                            <td className="py-3 px-4 font-semibold text-foreground">
+                                            <td className="py-3 px-4 font-semibold text-foreground whitespace-nowrap">
                                                 {formatPrice(v.price_min_paise)}
                                             </td>
-                                            <td className="py-3 px-4 text-muted-foreground">
+                                            <td className="py-3 px-4 text-muted-foreground whitespace-nowrap">
                                                 {parseFuelType(v.fuel_type)}
                                             </td>
-                                            <td className="py-3 px-4 text-muted-foreground">
+                                            <td className="py-3 px-4 text-muted-foreground whitespace-nowrap">
                                                 {v.max_power || '-'}
                                             </td>
-                                            <td className="py-3 px-4 text-right">
+                                            <td className="py-3 px-4 text-right whitespace-nowrap">
                                                 {v.id !== vehicle.id ? (
                                                     <Link
                                                         href={`/autos/${v.id}`}

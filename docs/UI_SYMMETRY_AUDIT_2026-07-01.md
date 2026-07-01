@@ -89,6 +89,7 @@ Legend:
 - [x] Fixed: standalone 2W/3W template nav bars keep dealer names capped/truncated and use tighter desktop nav spacing.
 - [x] Fixed: 4W test-drive modal is capped to the visible mobile viewport with a flex scroll body and safe-area bottom padding.
 - [x] Fixed: full-spec, bulk-upload preview, DNS instruction, and on-road-price breakdown tables now use stable mobile minimum widths with truncation/nowrap for long values.
+- [x] Fixed: compare modal, used-vehicle bulk upload preview, 2W detail variants, and 3W detail variants now use stable table widths with truncation/nowrap for long values.
 - [ ] Pending: screenshot each template with controlled sample data, including long dealer names and long model/variant names.
 
 ## Preview And Demo Pages Summary
@@ -121,6 +122,7 @@ Legend:
 - [x] `npx tsc --noEmit --pretty false --incremental false`
 - [x] `git diff --check`
 - [x] `npm run build` completed successfully and generated all 204 static pages; remaining output was warnings only.
+- [x] Repeat table-risk source scan: remaining unbounded shared/detail table matches were reviewed and fixed where they could affect mobile/tablet readability.
 
 ## Detailed Route Inventory
 

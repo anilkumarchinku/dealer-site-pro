@@ -253,23 +253,27 @@ export default function BulkUploadModal({ isOpen, onClose, dealerId, onSuccess }
 
                                     <div className="rounded-xl border border-border overflow-hidden">
                                         <div className="overflow-x-auto max-h-60">
-                                            <table className="w-full text-xs">
+                                            <table className="w-full min-w-[760px] text-xs">
                                                 <thead className="bg-muted/50 sticky top-0">
                                                     <tr>
-                                                        {['Make', 'Model', 'Year', 'Price (₹)', 'Mileage', 'Condition', 'Status'].map(h => (
-                                                            <th key={h} className="px-3 py-2 text-left font-semibold text-muted-foreground">{h}</th>
+                                                {['Make', 'Model', 'Year', 'Price (₹)', 'Mileage', 'Condition', 'Status'].map(h => (
+                                                            <th key={h} className="px-3 py-2 text-left font-semibold text-muted-foreground whitespace-nowrap">{h}</th>
                                                         ))}
                                                     </tr>
                                                 </thead>
                                                 <tbody className="divide-y divide-border">
                                                     {rows.map((row, i) => (
                                                         <tr key={i} className={row._error ? 'bg-destructive/5' : ''}>
-                                                            <td className="px-3 py-2">{row.make}</td>
-                                                            <td className="px-3 py-2">{row.model}</td>
-                                                            <td className="px-3 py-2">{row.year || '—'}</td>
-                                                            <td className="px-3 py-2">{row.price_paise ? `₹${(row.price_paise / 100).toLocaleString('en-IN')}` : '—'}</td>
-                                                            <td className="px-3 py-2">{row.mileage_km ? `${row.mileage_km.toLocaleString()} km` : '—'}</td>
-                                                            <td className="px-3 py-2">{row.condition === 'certified_pre_owned' ? 'CPO' : 'Used'}</td>
+                                                            <td className="px-3 py-2">
+                                                                <div className="max-w-[160px] truncate">{row.make}</div>
+                                                            </td>
+                                                            <td className="px-3 py-2">
+                                                                <div className="max-w-[180px] truncate">{row.model}</div>
+                                                            </td>
+                                                            <td className="px-3 py-2 whitespace-nowrap">{row.year || '—'}</td>
+                                                            <td className="px-3 py-2 whitespace-nowrap">{row.price_paise ? `₹${(row.price_paise / 100).toLocaleString('en-IN')}` : '—'}</td>
+                                                            <td className="px-3 py-2 whitespace-nowrap">{row.mileage_km ? `${row.mileage_km.toLocaleString()} km` : '—'}</td>
+                                                            <td className="px-3 py-2 whitespace-nowrap">{row.condition === 'certified_pre_owned' ? 'CPO' : 'Used'}</td>
                                                             <td className="px-3 py-2">
                                                                 {row._error
                                                                     ? <span className="text-destructive flex items-center gap-1"><AlertCircle className="w-3 h-3" />{row._error}</span>

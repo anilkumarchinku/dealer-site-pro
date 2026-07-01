@@ -122,7 +122,7 @@ export default function CompareModal({ open, onOpenChange, brandColor, dealerId,
 
                 {/* Scrollable comparison table */}
                 <div className="overflow-x-auto overflow-y-auto max-h-[75vh]">
-                    <table className="w-full text-sm border-collapse">
+                    <table className="w-full min-w-[640px] text-sm border-collapse">
                         <thead className="sticky top-0 z-10 bg-white">
                             <tr className="border-b border-gray-200">
                                 {/* Feature label column */}
