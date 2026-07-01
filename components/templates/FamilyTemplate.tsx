@@ -559,7 +559,7 @@ export function FamilyTemplate({
                     </section>
 
                     {/* Offers Section */}
-                    <OffersSection brandColor={brandColors.primary} dealerName={dealerName} vehicleType={vehicleType} dealerPhone={contactInfo.phone} dealerOffers={dealerOffers} />
+                    <OffersSection brandColor={brandColors.primary} dealerName={dealerName} vehicleType={vehicleType} dealerPhone={contactInfo.phone} dealerOffers={dealerOffers} templateStyle="family" />
 
                     {/* Exchange Section */}
                     <div id="exchange-section">
@@ -836,8 +836,8 @@ export function FamilyTemplate({
                                 </span>
                             )}
                         </div>
-                        <div>
-                            <span className="text-2xl font-bold block">{dealerName}</span>
+                        <div className="min-w-0">
+                            <span className="block break-words text-2xl font-bold">{dealerName}</span>
                             <span className="text-sm text-gray-600">Trusted by Families</span>
                         </div>
                     </div>
@@ -846,17 +846,17 @@ export function FamilyTemplate({
                         <div>
                             <h4 className="font-bold text-lg mb-4">Contact Us</h4>
                             <div className="space-y-2 text-gray-600">
-                                <div className="flex items-center gap-2">
-                                    <Phone className="w-4 h-4" style={{ color: brandAccent }} />
-                                    <a href={`tel:${contactInfo.phone}`}>{contactInfo.phone}</a>
+                                <div className="flex min-w-0 items-center gap-2">
+                                    <Phone className="w-4 h-4 shrink-0" style={{ color: brandAccent }} />
+                                    <a className="min-w-0 break-words" href={`tel:${contactInfo.phone}`}>{contactInfo.phone}</a>
                                 </div>
-                                <div className="flex items-center gap-2">
-                                    <Mail className="w-4 h-4" style={{ color: brandAccent }} />
-                                    <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a>
+                                <div className="flex min-w-0 items-center gap-2">
+                                    <Mail className="w-4 h-4 shrink-0" style={{ color: brandAccent }} />
+                                    <a className="min-w-0 break-all" href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a>
                                 </div>
-                                <div className="flex items-start gap-2">
-                                    <MapPin className="w-4 h-4 mt-1" style={{ color: brandAccent }} />
-                                    <span>{contactInfo.address}</span>
+                                <div className="flex min-w-0 items-start gap-2">
+                                    <MapPin className="w-4 h-4 mt-1 shrink-0" style={{ color: brandAccent }} />
+                                    <span className="min-w-0 break-words">{contactInfo.address}</span>
                                 </div>
                                 {workingHours && (
                                     <div className="flex items-center gap-2">

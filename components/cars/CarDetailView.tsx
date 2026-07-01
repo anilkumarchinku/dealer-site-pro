@@ -17,7 +17,6 @@ import { EnquiryModal } from '@/components/cars/EnquiryModal';
 import { OnRoadPriceDialog } from '@/components/cars/OnRoadPriceDialog';
 import { TestDriveModal } from '@/components/cars/TestDriveModal';
 import { ReviewsSection } from '@/components/ui/ReviewsSection';
-import { Vehicle360Gallery } from '@/components/vehicle-media/Vehicle360Gallery';
 import { Card, CardContent } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import {
@@ -475,12 +474,6 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                                 </button>
                             )}
                         </div>
-                        <Vehicle360Gallery
-                            images={allImages}
-                            alt={`${car.make} ${car.model}`}
-                            accentColor={brandAccent}
-                        />
-
                     </div>
 
                     {/* Price Summary Card */}
@@ -616,8 +609,8 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                 ref={tabBarRef}
                 className={`sticky top-14 z-40 border-b border-slate-200 bg-white/95 backdrop-blur transition-shadow ${isTabBarSticky ? 'shadow-sm' : ''}`}
             >
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="flex gap-0 overflow-x-auto no-scrollbar">
+                <div className="max-w-7xl mx-auto min-w-0 px-4 py-1 sm:px-6 lg:px-8">
+                    <div className="flex flex-wrap gap-1">
                         {TABS.map((tab) => (
                             <button
                                 key={tab.id}

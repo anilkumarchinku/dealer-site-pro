@@ -151,19 +151,19 @@ export default function PurchaseManagedDomainModal({ isOpen, onClose, dealerId, 
                                 <label className="block text-sm font-semibold mb-2">
                                     Search for your perfect domain
                                 </label>
-                                <div className="flex gap-2">
+                                <div className="flex flex-col gap-2 sm:flex-row">
                                     <input
                                         type="text"
                                         placeholder="abcmotors"
                                         value={query}
                                         onChange={(e) => setQuery(e.target.value.toLowerCase().replace(/[^a-z0-9]/g, ''))}
                                         onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
-                                        className="flex-1 px-4 py-3 border border-input bg-background rounded-xl focus:ring-2 focus:ring-violet-500 focus:outline-none"
+                                        className="min-w-0 flex-1 px-4 py-3 border border-input bg-background rounded-xl focus:ring-2 focus:ring-violet-500 focus:outline-none"
                                     />
                                     <button
                                         onClick={handleSearch}
                                         disabled={!query || isSearching}
-                                        className="px-6 py-3 bg-violet-600 text-white rounded-xl font-semibold hover:bg-violet-700 disabled:opacity-50 flex items-center gap-2 transition-colors"
+                                        className="flex w-full items-center justify-center gap-2 rounded-xl bg-violet-600 px-6 py-3 font-semibold text-white transition-colors hover:bg-violet-700 disabled:opacity-50 sm:w-auto"
                                     >
                                         {isSearching ? <Loader2 className="w-5 h-5 animate-spin" /> : <Search className="w-5 h-5" />}
                                         {isSearching ? 'Searching...' : 'Search'}
@@ -185,19 +185,19 @@ export default function PurchaseManagedDomainModal({ isOpen, onClose, dealerId, 
                                         <div
                                             key={index}
                                             onClick={() => handleSelectDomain(result)}
-                                            className={`flex items-center justify-between p-4 border rounded-xl transition-colors ${result.available
+                                            className={`flex flex-col gap-3 border p-4 transition-colors sm:flex-row sm:items-center sm:justify-between ${result.available
                                                 ? 'border-violet-500/30 bg-violet-500/5 hover:bg-violet-500/10 cursor-pointer'
                                                 : 'border-border bg-muted/30 opacity-50'
                                                 }`}
                                         >
-                                            <div className="flex items-center gap-3">
+                                            <div className="flex min-w-0 items-center gap-3">
                                                 {result.available
                                                     ? <Check className="w-5 h-5 text-emerald-500" />
                                                     : <X className="w-5 h-5 text-red-500" />
                                                 }
-                                                <span className="font-mono font-semibold">{result.domain}</span>
+                                                <span className="min-w-0 break-all font-mono font-semibold">{result.domain}</span>
                                             </div>
-                                            <div className="text-right">
+                                            <div className="text-left sm:text-right">
                                                 {result.available ? (
                                                     <>
                                                         <p className="font-bold text-violet-500">{formatPrice(result.price!)}/year</p>
@@ -219,7 +219,7 @@ export default function PurchaseManagedDomainModal({ isOpen, onClose, dealerId, 
                         <div className="space-y-4">
                             <div className="bg-violet-500/10 border border-violet-500/20 rounded-xl p-4">
                                 <p className="text-sm font-semibold text-violet-400">Selected Domain:</p>
-                                <p className="text-lg font-mono font-bold">{selectedDomain.domain}</p>
+                                <p className="break-all text-lg font-mono font-bold">{selectedDomain.domain}</p>
                             </div>
 
                             <h3 className="font-semibold">Contact Information (for WHOIS):</h3>

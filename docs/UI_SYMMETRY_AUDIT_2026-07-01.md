@@ -15,7 +15,7 @@ Legend:
 - `Auth gated`: clean-browser audit redirects to login; requires an authenticated dealer session for full visual QA.
 - `Pending`: listed for the full audit backlog.
 
-## Public Platform Pages
+## Public Platform Pages Summary
 
 - [x] Checked: `/`, `/about`, `/contact`, `/dealers`, `/privacy`, `/terms`, `/disclaimer`, `/sitemap`
 - [x] Checked: `/vehicles`, `/marketplace`, `/cars`, `/autos`, `/bikes`, `/brands`, `/brands-accordion`
@@ -25,14 +25,17 @@ Legend:
 - [x] Fixed: `/tools/emi-calculator` range controls now have enough vertical height and no longer clip in desktop/mobile checks.
 - [x] Fixed: `/cars-demo` now loads a lighter 24-car sample and resolves the Mercedes brand data alias, removing the focused timeout/404 issue.
 - [x] Fixed: `/brands-accordion` brand logos now keep explicit image dimensions and no longer trigger the Next image sizing warning in focused checks.
+- [x] Fixed: `/bikes` toolbar now stacks filter/count and sort controls on small screens instead of crowding one row.
+- [x] Fixed: 4W and 2W detail-page sticky tab bars now wrap symmetrically on mobile/tablet instead of creating wide horizontal strips.
 
-## Auth And Account Pages
+## Auth And Account Pages Summary
 
 - [x] Checked: `/auth/login`, `/auth/register`, `/auth/forgot-password`, `/auth/update-password`, `/reset`
 - [x] Fixed earlier in this workstream: register page no longer shows the extra left security panel.
+- [x] Fixed: `/auth/update-password` desktop card now uses a bounded grid column and `min-w-0` form container so the reset panel does not protrude past the viewport.
 - [ ] Pending: normalize validation message wording across auth, onboarding, and public lead forms.
 
-## Dealer Dashboard Pages
+## Dealer Dashboard Pages Summary
 
 - [x] Auth gated: `/dashboard`, `/dashboard/leads`, `/dashboard/sell-requests`, `/dashboard/messages`, `/dashboard/reviews`, `/dashboard/analytics`
 - [x] Auth gated: `/dashboard/inventory`, `/dashboard/inventory/add`, `/dashboard/inventory/[id]/edit`, `/dashboard/used-vehicles`
@@ -40,30 +43,34 @@ Legend:
 - [x] Auth gated: `/dashboard/catalog`, `/dashboard/deployment`, `/dashboard/domains`, `/dashboard/settings`, `/dashboard/help`
 - [x] Auth gated: `/dashboard/two-wheelers/*` and `/dashboard/three-wheelers/*`
 - [x] Fixed: `/dashboard/leads` filter controls now use a responsive grid instead of cramped fixed-width controls.
+- [x] Fixed: 2W and 3W dashboard lead tables now keep readable minimum widths with nowrap phone/date/status columns inside horizontal scroll.
+- [x] Fixed: shared dashboard `InventoryTable` now uses a stable table min-width and truncates long make/model/variant text.
 - [ ] Pending: full dashboard visual QA inside an authenticated dealer session.
 
-## Onboarding Pages
+## Onboarding Pages Summary
 
 - [x] Source-reviewed: `/onboarding` and 4W/2W/3W onboarding layouts and shared components.
 - [x] Fixed earlier in this workstream: vehicle type selection is single-select instead of multi-select.
 - [x] Fixed: website image/logo upload fields have more stable symmetric preview dimensions.
 - [ ] Pending: screenshot pass through all onboarding steps with an authenticated session.
 
-## Public Dealer Website Routes
+## Public Dealer Website Routes Summary
 
 - [x] Checked: `/sites/[slug]`, `/sites/[slug]/about`, `/sites/[slug]/contact`, `/sites/[slug]/privacy`, `/sites/[slug]/terms`, `/sites/[slug]/sell`, `/sites/[slug]/service`
 - [x] Checked: `/sites/[slug]/cars`
-- [x] Checked: `/sites/[slug]/two-wheelers`, `/new`, `/used`, `/bikes`, `/scooters`, `/electric`, `/offers`, `/compare`, `/emi-calculator`, `/service`, `/contact`, `/about`, and one catalog detail route.
-- [x] Checked: `/sites/[slug]/three-wheelers`, `/new`, `/used`, `/passenger`, `/cargo`, `/electric`, `/offers`, `/compare`, `/emi-calculator`, `/fleet-roi`, `/service`, `/contact`, `/about`
+- [x] Checked: `/sites/[slug]/two-wheelers` child routes: `/new`, `/used`, `/bikes`, `/scooters`, `/electric`, `/offers`, `/compare`, `/emi-calculator`, `/service`, `/contact`, `/about`, and one catalog detail route.
+- [x] Checked: `/sites/[slug]/three-wheelers` child routes: `/new`, `/used`, `/passenger`, `/cargo`, `/electric`, `/offers`, `/compare`, `/emi-calculator`, `/fleet-roi`, `/service`, `/contact`, `/about`
 - [x] Fixed: 2W and 3W cards now allow two-line model names and two-line spec values with stable spec-cell height.
 - [x] Fixed: 2W and 3W native filter selects now force readable foreground color.
 - [x] Fixed: 2W/3W template empty states now say `No bikes...` / `No autos...` based on vehicle type instead of falling back to car copy.
+- [x] Fixed: public dealer festival offer rails now render as responsive grids instead of wide animated marquee tracks, removing mobile/tablet/desktop document overflow on 2W offer-heavy pages.
+- [x] Fixed: public 2W/3W compare pages now cap compare IDs to four and use stable minimum vehicle columns.
 - [x] Fixed earlier in this workstream: public lead modals no longer require email where email is optional or absent.
 - [x] Fixed earlier in this workstream: catalog lead submissions no longer fail by saving `cat-*` IDs into UUID columns.
 - [x] Fixed earlier in this workstream: 2W on-road price dialog displays State and Variant text clearly.
 - [ ] Pending: route-specific 4W car detail and used-car detail screenshots with a dealer slug that has matching 4W inventory.
 
-## Template Surfaces
+## Template Surfaces Summary
 
 - [x] Source-reviewed: `ModernTemplate`, `LuxuryTemplate`, `SportyTemplate`, `FamilyTemplate`
 - [x] Source-reviewed: `PremiumUsedDealerTemplate`, `PremiumUsedInventoryPage`
@@ -71,14 +78,18 @@ Legend:
 - [x] Fixed: premium used dealer cards now use equal-height flex layout, clamped title/variant text, stable spec text height, and bottom-pinned CTA row.
 - [x] Fixed: premium used inventory filters now use a less cramped responsive grid with visible compact labels.
 - [x] Fixed: Modern, Luxury, Sporty, and Family templates pass vehicle-type-specific empty-state copy into shared vehicle grids.
+- [x] Fixed: shared `OffersSection` now keeps dealer-authored and fallback offers inside bounded responsive cards for all template styles.
+- [x] Fixed: chatbot panel uses viewport-bounded mobile sizing so it cannot overflow narrow screens.
+- [x] Fixed: template footer/contact rows wrap long dealer names, email addresses, phone numbers, and physical addresses.
 - [ ] Pending: screenshot each template with controlled sample data, including long dealer names and long model/variant names.
 
-## Preview And Demo Pages
+## Preview And Demo Pages Summary
 
 - [x] Checked: `/preview`, `/design-previews`, `/full-design-previews`, `/five-landing-previews`
 - [x] Checked: `/clean-design-preview`, `/clean-enhanced-preview`, `/clean-design-full`, `/clean-design-full-v2`, `/clean-design-full-v3`, `/clean-design-full-v4`, `/clean-design-same-images`
 - [x] Checked: `/demo/templates`, `/demo/next-level-templates`
 - [x] Fixed: `/cars-demo` passed focused desktop/mobile checks after reducing payload size and adding the missing brand file alias.
+- [x] Fixed: `/demo/next-level-templates` section map and festival offer rail no longer create horizontal overflow; the hero card image minimum height is responsive on mobile.
 
 ## Verification Completed
 
@@ -88,11 +99,231 @@ Legend:
 - [x] Device compatibility sweep: 80 routes across mobile `390x900`, tablet `820x1000`, and desktop `1440x1000`; results saved to `/tmp/dealersite-ui-audit/device-compat-3vp`.
 - [x] Focused rerun: `/sites/bharat-bhai` tablet transient dev-overlay failure did not reproduce and rendered cleanly.
 - [x] Focused rerun: `/sites/bharat-bhai/two-wheelers/scooters` redirected cleanly and now shows `No bikes found matching your criteria.`
+- [x] Additional public sweep: `/tmp/dealersite-ui-audit/additional-public-3vp-fast` covered 82 public/sample routes across mobile/tablet/desktop and identified the offer-rail and reset-card overflow issues fixed above.
+- [x] Focused rerun: `/tmp/dealersite-ui-audit/offer-grid-rerun` confirmed `/demo/next-level-templates`, `/auth/update-password`, `/sites/bharat-bhai/two-wheelers/new`, and `/sites/bharat-bhai/two-wheelers/used` have no horizontal overflow after the fixes.
+- [x] Direct route checks: `/api/marketplace` returned 200 after fresh dev-server compile, `/brands/Hyundai` returned 200, and `/sites/bharat-bhai/three-wheelers` returned 200 after clearing the stale `.next` dev cache.
+- [x] Supervisor coverage agent: verified the detailed inventory covers all 165 current `app/**/page.tsx` routes; cleanup applied for summary wording and missing shared surfaces.
+- [x] Audit agent: reported remaining responsive risks in chatbot, dashboard tables, compare tables, template footers, bikes toolbar, and managed-domain modal; scoped fixes applied.
+- [x] Dynamic detail rerun: `/tmp/dealersite-ui-audit/dynamic-detail-rerun` identified detail-tab overflow on mobile/tablet.
+- [x] Post-risk-fix rerun: `/tmp/dealersite-ui-audit/post-audit-risk-fixes-fast` and a focused tab rerun confirmed the fixed detail tab bars no longer produce page-level or tab-strip overflow flags.
 - [x] `npx tsc --noEmit --pretty false --incremental false`
 - [x] `git diff --check`
+
+## Detailed Route Inventory
+
+This inventory is generated from current `app/**/page.tsx` files. Dynamic routes are listed by pattern and verified with concrete sample URLs when data exists. Auth-gated routes are listed and source-reviewed, but full screenshot QA still needs an authenticated dealer/admin session.
+
+### Public Platform (28)
+
+- [x] `/` — rendered or covered by public/sample sweep
+- [x] `/[id]` — dynamic route listed; concrete visual QA depends on a matching vehicle id
+- [x] `/about` — rendered or covered by public/sample sweep
+- [x] `/autos` — rendered or covered by public/sample sweep
+- [x] `/autos/[id]` — dynamic route listed; concrete visual QA depends on a matching 3W id
+- [x] `/bikes` — rendered or covered by public/sample sweep
+- [x] `/bikes/[id]` — dynamic route listed; concrete visual QA depends on a matching 2W id
+- [x] `/body-type` — rendered or covered by public/sample sweep
+- [x] `/brands` — rendered or covered by public/sample sweep
+- [x] `/brands-accordion` — rendered or covered by public/sample sweep
+- [x] `/brands/[brand]` — sample verified with `/brands/Hyundai`
+- [x] `/budget` — rendered or covered by public/sample sweep
+- [x] `/careers` — rendered or covered by public/sample sweep
+- [x] `/cars` — rendered or covered by public/sample sweep
+- [x] `/cars/[id]` — dynamic route listed; concrete visual QA depends on a matching 4W id
+- [x] `/compare` — rendered or covered by public/sample sweep
+- [x] `/contact` — rendered or covered by public/sample sweep
+- [x] `/dealers` — rendered or covered by public/sample sweep
+- [x] `/disclaimer` — rendered or covered by public/sample sweep
+- [x] `/ev` — rendered or covered by public/sample sweep
+- [x] `/marketplace` — rendered or covered by public/sample sweep
+- [x] `/press` — rendered or covered by public/sample sweep
+- [x] `/privacy` — rendered or covered by public/sample sweep
+- [x] `/sell` — rendered or covered by public/sample sweep
+- [x] `/sitemap` — rendered or covered by public/sample sweep
+- [x] `/terms` — rendered or covered by public/sample sweep
+- [x] `/upcoming` — rendered or covered by public/sample sweep
+- [x] `/vehicles` — redirects to marketplace and is covered by marketplace sweep
+
+### Admin (4)
+
+- [x] `/admin` — auth/admin-gated; source-reviewed/listed
+- [x] `/admin/360` — auth/admin-gated; source-reviewed/listed
+- [x] `/admin/inventory-audit` — auth/admin-gated; source-reviewed/listed
+- [x] `/admin/preview-gallery` — auth/admin-gated; source-reviewed/listed
+
+### Auth And Account (5)
+
+- [x] `/auth/forgot-password` — rendered or covered by public/sample sweep
+- [x] `/auth/login` — rendered or covered by public/sample sweep
+- [x] `/auth/register` — rendered or covered by public/sample sweep
+- [x] `/auth/update-password` — rendered, fixed, and focused-rerun verified
+- [x] `/reset` — rendered or covered by public/sample sweep
+
+### Preview And Demo (15)
+
+- [x] `/cars-demo` — rendered, fixed, and focused-rerun verified
+- [x] `/clean-design-full` — rendered or covered by public/sample sweep
+- [x] `/clean-design-full-v2` — rendered or covered by public/sample sweep
+- [x] `/clean-design-full-v3` — rendered or covered by public/sample sweep
+- [x] `/clean-design-full-v4` — rendered or covered by public/sample sweep
+- [x] `/clean-design-preview` — rendered or covered by public/sample sweep
+- [x] `/clean-design-same-images` — rendered or covered by public/sample sweep
+- [x] `/clean-enhanced-preview` — rendered or covered by public/sample sweep
+- [x] `/demo/next-level-templates` — rendered, fixed, and focused-rerun verified
+- [x] `/demo/templates` — rendered or covered by public/sample sweep
+- [x] `/design-previews` — rendered or covered by public/sample sweep
+- [x] `/five-landing-previews` — rendered or covered by public/sample sweep
+- [x] `/full-design-previews` — rendered or covered by public/sample sweep
+- [x] `/preview` — rendered or covered by public/sample sweep
+- [x] `/setup-flow-preview` — rendered or covered by public/sample sweep
+
+### Dashboard And Auth-Gated App (42)
+
+- [x] `/dashboard` — auth gated; source-reviewed/listed
+- [x] `/dashboard/add-vehicle-type` — auth gated; source-reviewed/listed
+- [x] `/dashboard/analytics` — auth gated; source-reviewed/listed
+- [x] `/dashboard/catalog` — auth gated; source-reviewed/listed
+- [x] `/dashboard/deployment` — auth gated; source-reviewed/listed
+- [x] `/dashboard/domains` — auth gated; source-reviewed/listed
+- [x] `/dashboard/help` — auth gated; source-reviewed/listed
+- [x] `/dashboard/insurance` — auth gated; source-reviewed/listed
+- [x] `/dashboard/inventory` — auth gated; source-reviewed/listed
+- [x] `/dashboard/inventory/[id]/edit` — auth gated; source-reviewed/listed
+- [x] `/dashboard/inventory/add` — auth gated; source-reviewed/listed
+- [x] `/dashboard/leads` — auth gated; filter layout fixed and clean-browser redirect checked
+- [x] `/dashboard/messages` — auth gated; source-reviewed/listed
+- [x] `/dashboard/offers` — auth gated; source-reviewed/listed
+- [x] `/dashboard/push-notifications` — auth gated; source-reviewed/listed
+- [x] `/dashboard/reviews` — auth gated; source-reviewed/listed
+- [x] `/dashboard/sell-requests` — auth gated; source-reviewed/listed
+- [x] `/dashboard/service` — auth gated; source-reviewed/listed
+- [x] `/dashboard/settings` — auth gated; source-reviewed/listed
+- [x] `/dashboard/three-wheelers` — auth gated; source-reviewed/listed
+- [x] `/dashboard/three-wheelers/bookings` — auth gated; source-reviewed/listed
+- [x] `/dashboard/three-wheelers/inventory` — auth gated; source-reviewed/listed
+- [x] `/dashboard/three-wheelers/inventory/[id]/edit` — auth gated; source-reviewed/listed
+- [x] `/dashboard/three-wheelers/inventory/add` — auth gated; source-reviewed/listed
+- [x] `/dashboard/three-wheelers/leads` — auth gated; source-reviewed/listed
+- [x] `/dashboard/three-wheelers/service` — auth gated; source-reviewed/listed
+- [x] `/dashboard/three-wheelers/used` — auth gated; source-reviewed/listed
+- [x] `/dashboard/three-wheelers/used/[id]/edit` — auth gated; source-reviewed/listed
+- [x] `/dashboard/three-wheelers/used/add` — auth gated; source-reviewed/listed
+- [x] `/dashboard/two-wheelers` — auth gated; source-reviewed/listed
+- [x] `/dashboard/two-wheelers/bookings` — auth gated; source-reviewed/listed
+- [x] `/dashboard/two-wheelers/inventory` — auth gated; source-reviewed/listed
+- [x] `/dashboard/two-wheelers/inventory/[id]/edit` — auth gated; source-reviewed/listed
+- [x] `/dashboard/two-wheelers/inventory/add` — auth gated; source-reviewed/listed
+- [x] `/dashboard/two-wheelers/leads` — auth gated; source-reviewed/listed
+- [x] `/dashboard/two-wheelers/service` — auth gated; source-reviewed/listed
+- [x] `/dashboard/two-wheelers/used` — auth gated; source-reviewed/listed
+- [x] `/dashboard/two-wheelers/used/[id]/edit` — auth gated; source-reviewed/listed
+- [x] `/dashboard/two-wheelers/used/add` — auth gated; source-reviewed/listed
+- [x] `/dashboard/used-vehicles` — auth gated; source-reviewed/listed
+- [x] `/dashboard/webpage` — auth gated; source-reviewed/listed
+- [x] `/dashboard/webpage/[...siteSlug]` — auth gated; source-reviewed/listed
+
+### Onboarding (22)
+
+- [x] `/onboarding` — auth gated; source-reviewed/listed
+- [x] `/onboarding/step-1` — auth gated; source-reviewed/listed
+- [x] `/onboarding/step-1b-outlets` — auth gated; source-reviewed/listed
+- [x] `/onboarding/step-2-inventory` — auth gated; source-reviewed/listed
+- [x] `/onboarding/step-2-inventory/bulk-upload` — auth gated; source-reviewed/listed
+- [x] `/onboarding/step-2-used` — auth gated; source-reviewed/listed
+- [x] `/onboarding/step-3` — auth gated; source-reviewed/listed
+- [x] `/onboarding/step-4` — auth gated; source-reviewed/listed
+- [x] `/onboarding/step-5` — auth gated; source-reviewed/listed
+- [x] `/onboarding/step-6` — auth gated; source-reviewed/listed
+- [x] `/onboarding/three-wheelers` — auth gated; source-reviewed/listed
+- [x] `/onboarding/three-wheelers/step-1` — auth gated; source-reviewed/listed
+- [x] `/onboarding/three-wheelers/step-2` — auth gated; source-reviewed/listed
+- [x] `/onboarding/three-wheelers/step-3` — auth gated; source-reviewed/listed
+- [x] `/onboarding/three-wheelers/step-4` — auth gated; source-reviewed/listed
+- [x] `/onboarding/three-wheelers/step-5` — auth gated; source-reviewed/listed
+- [x] `/onboarding/two-wheelers` — auth gated; source-reviewed/listed
+- [x] `/onboarding/two-wheelers/step-1` — auth gated; source-reviewed/listed
+- [x] `/onboarding/two-wheelers/step-2` — auth gated; source-reviewed/listed
+- [x] `/onboarding/two-wheelers/step-3` — auth gated; source-reviewed/listed
+- [x] `/onboarding/two-wheelers/step-4` — auth gated; source-reviewed/listed
+- [x] `/onboarding/two-wheelers/step-5` — auth gated; source-reviewed/listed
+
+### Public Dealer Sites (45)
+
+- [x] `/sites/__domain_not_found` — rendered or covered by public/sample sweep
+- [x] `/sites/[slug]` — sample verified with `/sites/bharat-bhai`
+- [x] `/sites/[slug]/[id]` — dynamic route listed; concrete visual QA depends on matching dealer vehicle id
+- [x] `/sites/[slug]/about` — sample verified with `/sites/bharat-bhai/about`
+- [x] `/sites/[slug]/cars` — sample verified with `/sites/bharat-bhai/cars`
+- [x] `/sites/[slug]/cars/[id]` — dynamic route listed; concrete visual QA depends on matching 4W dealer vehicle id
+- [x] `/sites/[slug]/contact` — sample verified with `/sites/bharat-bhai/contact`
+- [x] `/sites/[slug]/privacy` — sample verified with `/sites/bharat-bhai/privacy`
+- [x] `/sites/[slug]/sell` — sample verified with `/sites/bharat-bhai/sell`
+- [x] `/sites/[slug]/service` — sample verified with `/sites/bharat-bhai/service`
+- [x] `/sites/[slug]/terms` — sample verified with `/sites/bharat-bhai/terms`
+- [x] `/sites/[slug]/three-wheelers` — sample verified with `/sites/bharat-bhai/three-wheelers`
+- [x] `/sites/[slug]/three-wheelers/[id]` — dynamic route listed; concrete visual QA depends on matching 3W id
+- [x] `/sites/[slug]/three-wheelers/about` — sample verified with `/sites/bharat-bhai/three-wheelers/about`
+- [x] `/sites/[slug]/three-wheelers/cargo` — sample verified with `/sites/bharat-bhai/three-wheelers/cargo`
+- [x] `/sites/[slug]/three-wheelers/compare` — sample verified with `/sites/bharat-bhai/three-wheelers/compare`
+- [x] `/sites/[slug]/three-wheelers/contact` — sample verified with `/sites/bharat-bhai/three-wheelers/contact`
+- [x] `/sites/[slug]/three-wheelers/electric` — sample verified with `/sites/bharat-bhai/three-wheelers/electric`
+- [x] `/sites/[slug]/three-wheelers/emi-calculator` — sample verified with `/sites/bharat-bhai/three-wheelers/emi-calculator`
+- [x] `/sites/[slug]/three-wheelers/fleet-roi` — sample verified with `/sites/bharat-bhai/three-wheelers/fleet-roi`
+- [x] `/sites/[slug]/three-wheelers/new` — sample verified with `/sites/bharat-bhai/three-wheelers/new`
+- [x] `/sites/[slug]/three-wheelers/offers` — sample verified with `/sites/bharat-bhai/three-wheelers/offers`
+- [x] `/sites/[slug]/three-wheelers/passenger` — sample verified with `/sites/bharat-bhai/three-wheelers/passenger`
+- [x] `/sites/[slug]/three-wheelers/privacy` — sample verified with `/sites/bharat-bhai/three-wheelers/privacy`
+- [x] `/sites/[slug]/three-wheelers/service` — sample verified with `/sites/bharat-bhai/three-wheelers/service`
+- [x] `/sites/[slug]/three-wheelers/terms` — sample verified with `/sites/bharat-bhai/three-wheelers/terms`
+- [x] `/sites/[slug]/three-wheelers/used` — sample verified with `/sites/bharat-bhai/three-wheelers/used`
+- [x] `/sites/[slug]/three-wheelers/used/[id]` — dynamic route listed; concrete visual QA depends on matching used 3W id
+- [x] `/sites/[slug]/two-wheelers` — sample verified with `/sites/bharat-bhai/two-wheelers`
+- [x] `/sites/[slug]/two-wheelers/[id]` — dynamic route listed; concrete visual QA depends on matching 2W id
+- [x] `/sites/[slug]/two-wheelers/about` — sample verified with `/sites/bharat-bhai/two-wheelers/about`
+- [x] `/sites/[slug]/two-wheelers/bikes` — sample verified with `/sites/bharat-bhai/two-wheelers/bikes`
+- [x] `/sites/[slug]/two-wheelers/compare` — sample verified with `/sites/bharat-bhai/two-wheelers/compare`
+- [x] `/sites/[slug]/two-wheelers/contact` — sample verified with `/sites/bharat-bhai/two-wheelers/contact`
+- [x] `/sites/[slug]/two-wheelers/electric` — sample verified with `/sites/bharat-bhai/two-wheelers/electric`
+- [x] `/sites/[slug]/two-wheelers/emi-calculator` — sample verified with `/sites/bharat-bhai/two-wheelers/emi-calculator`
+- [x] `/sites/[slug]/two-wheelers/new` — sample verified with `/sites/bharat-bhai/two-wheelers/new`
+- [x] `/sites/[slug]/two-wheelers/offers` — sample verified with `/sites/bharat-bhai/two-wheelers/offers`
+- [x] `/sites/[slug]/two-wheelers/privacy` — sample verified with `/sites/bharat-bhai/two-wheelers/privacy`
+- [x] `/sites/[slug]/two-wheelers/scooters` — sample verified with `/sites/bharat-bhai/two-wheelers/scooters`
+- [x] `/sites/[slug]/two-wheelers/service` — sample verified with `/sites/bharat-bhai/two-wheelers/service`
+- [x] `/sites/[slug]/two-wheelers/terms` — sample verified with `/sites/bharat-bhai/two-wheelers/terms`
+- [x] `/sites/[slug]/two-wheelers/used` — sample verified with `/sites/bharat-bhai/two-wheelers/used`
+- [x] `/sites/[slug]/two-wheelers/used/[id]` — dynamic route listed; concrete visual QA depends on matching used 2W id
+- [x] `/sites/[slug]/user` — dynamic route listed; sample/user-state QA depends on customer session
+
+### Tools (4)
+
+- [x] `/tools/car-valuation` — rendered or covered by public/sample sweep
+- [x] `/tools/emi-calculator` — rendered, fixed, and focused-rerun verified
+- [x] `/tools/insurance-estimator` — rendered or covered by public/sample sweep
+- [x] `/tools/on-road-price` — rendered or covered by public/sample sweep
+
+## Template And Shared Surface Inventory
+
+- [x] `ModernTemplate` — source-reviewed; shared offers and empty-state fixes applied
+- [x] `LuxuryTemplate` — source-reviewed; shared offers and empty-state fixes applied
+- [x] `SportyTemplate` — source-reviewed; shared offers and empty-state fixes applied
+- [x] `FamilyTemplate` — source-reviewed; shared offers and empty-state fixes applied
+- [x] `PremiumUsedDealerTemplate` — source-reviewed, fixed, and card symmetry rechecked
+- [x] `PremiumUsedInventoryPage` — source-reviewed, fixed, and filter responsiveness rechecked
+- [x] `OffersSection` — fixed and focused-rerun verified on dealer 2W pages
+- [x] `FAQSection`, `ExchangeSection`, `FinanceSection`, `TrustBadgesSection`, `SellVehicleSection`, `ServiceBookingSection`, `LocationsMapSection`, `OnRoadPriceSection`, `VideoSection` — source-reviewed/listed as shared template sections
+- [x] `SocialLinks` — active shared template surface rendered by the main public templates
+- [x] `TemplateSelector`, `TemplatePreviewCard`, `TemplateWarning`, `TemplatePageLoader` — onboarding template selection surfaces listed/source-reviewed
+- [x] `TwoWheelerTemplate`, `ThreeWheelerTemplate` — present in code; no active route imports found in this audit pass
+- [x] `CarCard`, `two-wheelers/VehicleCard`, `three-wheelers/VehicleCard` — fixed for text and spec-card readability
+- [x] `two-wheelers/FilterSidebar`, `three-wheelers/FilterSidebar` — fixed for native select readability
+- [x] `DealerChatbot` — fixed for narrow viewport panel sizing
+- [x] `InventoryTable`, 2W leads table, 3W leads table — fixed for readable dashboard table geometry
+- [x] `PurchaseManagedDomainModal` — fixed for mobile search row and long domain wrapping
 
 ## Current Open Risks
 
 - Dashboard and onboarding cannot be fully judged from a clean browser because protected routes redirect to login.
+- Full auth-gated dashboard/onboarding completion still requires an authenticated dealer session or test account.
 - The broad audit captured layout/readability signals, but not every possible data state, modal state, dropdown, empty state, or long-content variant.
 - Some remaining console warnings are performance hints such as LCP image priority, not direct symmetry/readability failures.

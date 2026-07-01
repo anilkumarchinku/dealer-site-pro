@@ -499,7 +499,7 @@ export function LuxuryTemplate({
                     </section>
 
                     {/* Offers Section */}
-                    <OffersSection brandColor={brandAccent} dealerName={dealerName} vehicleType={vehicleType} dealerPhone={contactInfo.phone} dealerOffers={dealerOffers} />
+                    <OffersSection brandColor={brandAccent} dealerName={dealerName} vehicleType={vehicleType} dealerPhone={contactInfo.phone} dealerOffers={dealerOffers} templateStyle="luxury" />
 
                     {/* Exchange Section */}
                     <div id="exchange-section">
@@ -755,8 +755,8 @@ export function LuxuryTemplate({
                                 </span>
                             )}
                         </div>
-                        <div>
-                            <span className="text-2xl font-light tracking-widest block text-gray-900">{dealerName}</span>
+                        <div className="min-w-0">
+                            <span className="block break-words text-2xl font-light tracking-widest text-gray-900">{dealerName}</span>
                             <span className="text-sm text-gray-600">{tagline}</span>
                         </div>
                     </div>
@@ -765,9 +765,9 @@ export function LuxuryTemplate({
                         <div>
                             <h4 className="text-gray-900 font-light text-lg mb-4">Contact</h4>
                             <div className="space-y-2">
-                                <div className="flex items-center gap-2"><Phone className="w-4 h-4" style={{ color: brandAccent }} /><a href={`tel:${contactInfo.phone}`}>{contactInfo.phone}</a></div>
-                                <div className="flex items-center gap-2"><Mail className="w-4 h-4" style={{ color: brandAccent }} /><a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a></div>
-                                <div className="flex items-start gap-2"><MapPin className="w-4 h-4 mt-1" style={{ color: brandAccent }} /><span>{contactInfo.address}</span></div>
+                                <div className="flex min-w-0 items-center gap-2"><Phone className="w-4 h-4 shrink-0" style={{ color: brandAccent }} /><a className="min-w-0 break-words" href={`tel:${contactInfo.phone}`}>{contactInfo.phone}</a></div>
+                                <div className="flex min-w-0 items-center gap-2"><Mail className="w-4 h-4 shrink-0" style={{ color: brandAccent }} /><a className="min-w-0 break-all" href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a></div>
+                                <div className="flex min-w-0 items-start gap-2"><MapPin className="w-4 h-4 mt-1 shrink-0" style={{ color: brandAccent }} /><span className="min-w-0 break-words">{contactInfo.address}</span></div>
                                 {workingHours && (
                                     <div className="flex items-center gap-2"><Clock className="w-4 h-4" style={{ color: brandAccent }} /><span>{workingHours}</span></div>
                                 )}

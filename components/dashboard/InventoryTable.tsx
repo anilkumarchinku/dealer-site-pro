@@ -63,7 +63,7 @@ export function InventoryTable({ cars, onEdit, onDelete, onView }: InventoryTabl
 
     return (
         <div className="w-full overflow-auto rounded-xl border border-border bg-card shadow-sm">
-            <table className="w-full text-sm text-left">
+            <table className="w-full min-w-[840px] text-left text-sm">
                 <thead className="bg-muted/50 text-muted-foreground font-medium border-b border-border">
                     <tr>
                         <th className="px-4 py-3 min-w-[300px]">Vehicle</th>
@@ -92,9 +92,9 @@ export function InventoryTable({ cars, onEdit, onDelete, onView }: InventoryTabl
                                     <div className="relative w-16 h-10 rounded-lg overflow-hidden bg-muted flex-shrink-0">
                                         <DashboardCarImage car={car} />
                                     </div>
-                                    <div>
-                                        <div className="font-semibold text-foreground">{car.make} {car.model}</div>
-                                        <div className="text-xs text-muted-foreground">{car.variant}</div>
+                                    <div className="min-w-0">
+                                        <div className="max-w-[260px] truncate font-semibold text-foreground">{car.make} {car.model}</div>
+                                        <div className="max-w-[260px] truncate text-xs text-muted-foreground">{car.variant}</div>
                                     </div>
                                 </div>
                             </td>

@@ -24,7 +24,7 @@ export default function ComparePage() {
     const params       = useParams()
     const searchParams = useSearchParams()
     const slug         = params.slug as string
-    const ids          = searchParams.get("ids")?.split(",").filter(Boolean) ?? []
+    const ids          = searchParams.get("ids")?.split(",").filter(Boolean).slice(0, 4) ?? []
     const prefix       = useSitePrefix(slug)
 
     const [vehicles, setVehicles] = useState<ThreeWheelerVehicle[]>([])
@@ -85,13 +85,13 @@ export default function ComparePage() {
             </div>
 
             <div className="overflow-x-auto">
-                <table className="w-full text-sm">
+                <table className="w-full min-w-[760px] text-sm">
                     {/* Header with images */}
                     <thead>
                         <tr>
                             <th className="w-40 text-left py-3 pr-4 font-medium text-muted-foreground align-top">Specification</th>
                             {vehicles.map(v => (
-                                <th key={v.id} className="py-3 px-3 text-center align-top">
+                                <th key={v.id} className="min-w-[180px] py-3 px-3 text-center align-top">
                                     <div
                                         data-vehicle-card="true"
                                         data-model-image-source={modelImageSourceKind(v.images[0])}
@@ -110,7 +110,7 @@ export default function ComparePage() {
                             <tr key={row.label} className={i % 2 === 0 ? "bg-muted/20" : ""}>
                                 <td className="py-3 pr-4 font-medium text-muted-foreground">{row.label}</td>
                                 {vehicles.map(v => (
-                                    <td key={v.id} className="py-3 px-3 text-center">{row.key(v) ?? "—"}</td>
+                                    <td key={v.id} className="min-w-[180px] py-3 px-3 text-center">{row.key(v) ?? "—"}</td>
                                 ))}
                             </tr>
                         ))}

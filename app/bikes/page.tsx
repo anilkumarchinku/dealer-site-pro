@@ -60,6 +60,7 @@ interface BikeVehicle {
     top_speed_kmph: number | null;
     price_min_paise: number;
     image_url: string | null;
+    image_urls?: string[];
     popularity_score: number;
     is_featured: boolean;
 }
@@ -139,7 +140,9 @@ function BikeCardSkeleton() {
 // ── Bike Card ──────────────────────────────────────────────────
 function BikeCard({ bike }: { bike: BikeVehicle }) {
     const brandId = brandNameToId(bike.make, '2w');
-    const imageUrls = getVehicleImageUrls('2w', brandId, bike.model, bike.image_url);
+    const imageUrls = bike.image_urls?.length
+        ? bike.image_urls
+        : getVehicleImageUrls('2w', brandId, bike.model, bike.image_url);
     const [imgIdx, setImgIdx] = useState(0);
     const [imgFailed, setImgFailed] = useState(false);
 
@@ -177,7 +180,7 @@ function BikeCard({ bike }: { bike: BikeVehicle }) {
                     src={imageUrls[imgIdx]}
                     alt={`${bike.make} ${bike.model}`}
                     fill
-                    className="object-contain group-hover:scale-105 transition-transform duration-500"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
                     onError={handleImgError}
                     unoptimized
                 />
@@ -544,8 +547,8 @@ function BikesContent() {
             {/* Main Content */}
             <div className="flex-1 min-w-0">
                 {/* Toolbar */}
-                <div className="flex items-center justify-between mb-6 gap-4">
-                    <div className="flex items-center gap-3">
+                <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                    <div className="flex min-w-0 items-center gap-3">
                         {/* Mobile filter trigger */}
                         <div className="lg:hidden">
                             <Sheet>
@@ -584,11 +587,11 @@ function BikesContent() {
 
                         {/* Result count */}
                         {!showSkeleton && (
-                            <p className="flex items-center gap-2 text-sm text-muted-foreground" aria-live="polite">
+                            <p className="flex min-w-0 items-center gap-2 text-sm text-muted-foreground" aria-live="polite">
                                 {isRefetching ? (
                                     <Loader2 className="w-3.5 h-3.5 animate-spin text-primary" aria-hidden="true" />
                                 ) : null}
-                                <span>
+                                <span className="min-w-0">
                                     <span className="font-semibold text-foreground">
                                         {totalCount.toLocaleString()}
                                     </span>{' '}
@@ -603,7 +606,7 @@ function BikesContent() {
 
                     {/* Sort */}
                     <Select value={sortBy} onValueChange={handleSortChange}>
-                        <SelectTrigger className="w-[180px]">
+                        <SelectTrigger className="w-full sm:w-[180px]">
                             <SelectValue placeholder="Sort by" />
                         </SelectTrigger>
                         <SelectContent>

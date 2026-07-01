@@ -635,7 +635,7 @@ export function SportyTemplate({
                     </section>
 
                     {/* Offers Section */}
-                    <OffersSection brandColor={brandAccent} dealerName={dealerName} vehicleType={vehicleType} dealerPhone={contactInfo.phone} dealerOffers={dealerOffers} />
+                    <OffersSection brandColor={brandAccent} dealerName={dealerName} vehicleType={vehicleType} dealerPhone={contactInfo.phone} dealerOffers={dealerOffers} templateStyle="sporty" />
 
                     {/* Exchange Section */}
                     <div id="exchange-section">
@@ -894,8 +894,8 @@ export function SportyTemplate({
                                 </span>
                             )}
                         </div>
-                        <div>
-                            <span className="text-2xl font-black block text-gray-900">{dealerName}</span>
+                        <div className="min-w-0">
+                            <span className="block break-words text-2xl font-black text-gray-900">{dealerName}</span>
                             <span className="text-sm text-gray-600 uppercase tracking-wider">Built for Speed</span>
                         </div>
                     </div>
@@ -904,17 +904,17 @@ export function SportyTemplate({
                         <div>
                             <h4 className="text-lg font-black uppercase mb-4 text-gray-900">CONTACT</h4>
                             <div className="space-y-3 text-gray-600">
-                                <div className="flex items-center gap-2">
-                                    <Phone className="w-5 h-5" style={{ color: brandAccent }} />
-                                    <a href={`tel:${contactInfo.phone}`}>{contactInfo.phone}</a>
+                                <div className="flex min-w-0 items-center gap-2">
+                                    <Phone className="w-5 h-5 shrink-0" style={{ color: brandAccent }} />
+                                    <a className="min-w-0 break-words" href={`tel:${contactInfo.phone}`}>{contactInfo.phone}</a>
                                 </div>
-                                <div className="flex items-center gap-2">
-                                    <Mail className="w-5 h-5" style={{ color: brandAccent }} />
-                                    <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a>
+                                <div className="flex min-w-0 items-center gap-2">
+                                    <Mail className="w-5 h-5 shrink-0" style={{ color: brandAccent }} />
+                                    <a className="min-w-0 break-all" href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a>
                                 </div>
-                                <div className="flex items-start gap-2">
-                                    <MapPin className="w-5 h-5 mt-1" style={{ color: brandAccent }} />
-                                    <span>{contactInfo.address}</span>
+                                <div className="flex min-w-0 items-start gap-2">
+                                    <MapPin className="w-5 h-5 mt-1 shrink-0" style={{ color: brandAccent }} />
+                                    <span className="min-w-0 break-words">{contactInfo.address}</span>
                                 </div>
                                 {workingHours && (
                                     <div className="flex items-center gap-2">

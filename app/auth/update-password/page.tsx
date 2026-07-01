@@ -50,8 +50,8 @@ export default function UpdatePasswordPage() {
     }
 
     return (
-        <main className="flex min-h-screen items-center justify-center bg-[#F7F3EA] px-4 py-10 text-[#0B0F12]">
-            <section className="grid w-full max-w-5xl overflow-hidden rounded-[28px] border border-[#E3D9C8] bg-[#FFFBF3] shadow-[0_28px_100px_rgba(11,15,18,0.14)] lg:grid-cols-[0.95fr_1.05fr]">
+        <main className="flex min-h-screen items-center justify-center overflow-x-hidden bg-[#F7F3EA] px-4 py-10 text-[#0B0F12]">
+            <section className="grid w-full max-w-5xl overflow-hidden rounded-[28px] border border-[#E3D9C8] bg-[#FFFBF3] shadow-[0_28px_100px_rgba(11,15,18,0.14)] lg:grid-cols-[0.95fr_minmax(0,1.05fr)]">
                 <div className="bg-[#0B0F12] p-8 text-[#FFF8EC] sm:p-10">
                     <BrandLogo className="[&>span]:text-[#FFF8EC] [&_.brand-logo-accent]:text-[#C79A5B]" />
                     <div className="mt-16 max-w-md">
@@ -67,8 +67,8 @@ export default function UpdatePasswordPage() {
                     </div>
                 </div>
 
-                <div className="flex flex-col justify-center p-8 sm:p-10">
-                    <Card className="border-[#E6DDCF] bg-white/80 shadow-none">
+                <div className="flex min-w-0 flex-col justify-center p-8 sm:p-10">
+                    <Card className="w-full min-w-0 border-[#E6DDCF] bg-white/80 shadow-none">
                         <CardHeader>
                             <CardTitle className="text-3xl font-black tracking-tight">Update password</CardTitle>
                             <CardDescription>Enter your new DealerSite Pro password.</CardDescription>

@@ -100,7 +100,7 @@ export default function ThreeWheelerLeadsPage() {
                 </div>
             ) : (
                 <div className="overflow-x-auto rounded-xl border border-border">
-                    <table className="w-full text-sm">
+                    <table className="w-full min-w-[840px] text-sm">
                         <thead className="bg-muted/30">
                             <tr>
                                 <th className="px-4 py-3 text-left font-medium">Name</th>
@@ -116,16 +116,16 @@ export default function ThreeWheelerLeadsPage() {
                             {leads.map(lead => (
                                 <tr key={lead.id} className="hover:bg-muted/10">
                                     <td className="px-4 py-3 font-medium">{lead.name}</td>
-                                    <td className="px-4 py-3">
+                                    <td className="whitespace-nowrap px-4 py-3">
                                         <a href={`tel:${lead.phone}`} className="text-primary hover:underline">{lead.phone}</a>
                                     </td>
                                     <td className="px-4 py-3 text-muted-foreground capitalize">{lead.lead_type.replace("_", " ")}</td>
-                                    <td className="px-4 py-3 text-muted-foreground">{lead.fleet_size ?? "—"}</td>
+                                    <td className="whitespace-nowrap px-4 py-3 text-muted-foreground">{lead.fleet_size ?? "—"}</td>
                                     <td className="px-4 py-3 text-muted-foreground max-w-[200px] truncate">{lead.message ?? "—"}</td>
-                                    <td className="px-4 py-3 text-muted-foreground">
+                                    <td className="whitespace-nowrap px-4 py-3 text-muted-foreground">
                                         {new Date(lead.created_at).toLocaleDateString("en-IN")}
                                     </td>
-                                    <td className="px-4 py-3">
+                                    <td className="whitespace-nowrap px-4 py-3">
                                         <select
                                             value={lead.status}
                                             onChange={e => updateStatus(lead.id, e.target.value as ThreeWheelerLeadStatus)}

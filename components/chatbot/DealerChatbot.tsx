@@ -355,7 +355,7 @@ export function DealerChatbot(props: DealerChatbotProps) {
                     aria-modal="true"
                     aria-label={`Chat with ${props.dealerName} virtual assistant`}
                     tabIndex={-1}
-                    className="fixed bottom-36 md:bottom-24 right-6 z-50 w-[340px] sm:w-[360px] flex flex-col bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden focus:outline-none"
+                    className="fixed bottom-36 left-4 right-4 z-50 flex w-auto max-w-[calc(100vw-2rem)] flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-2xl focus:outline-none sm:left-auto sm:w-[360px] md:bottom-24 md:right-6"
                     style={{ height: '500px', maxHeight: 'calc(100vh - 120px)' }}
                 >
                     {/* Header */}

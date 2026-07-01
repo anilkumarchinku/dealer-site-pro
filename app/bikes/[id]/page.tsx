@@ -865,8 +865,8 @@ export default function BikeDetailPage({ params }: Props) {
                     ref={tabBarRef}
                     className={`sticky top-14 z-40 border-b border-gray-200 bg-white/95 backdrop-blur transition-shadow ${isTabBarSticky ? 'shadow-sm' : ''}`}
                 >
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className="flex gap-0 overflow-x-auto no-scrollbar">
+                    <div className="max-w-7xl mx-auto min-w-0 px-4 py-1 sm:px-6 lg:px-8">
+                        <div className="flex flex-wrap gap-1">
                             {TABS.map((tab) => (
                                 <button
                                     key={tab.id}
@@ -1335,7 +1335,7 @@ export default function BikeDetailPage({ params }: Props) {
                                                         fill
                                                         unoptimized
                                                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                                                        className="object-contain transition-transform duration-500 group-hover:scale-105"
+                                                        className="object-cover transition-transform duration-500 group-hover:scale-105"
                                                     />
                                                 </div>
                                                 <div className="p-4">
