@@ -3233,14 +3233,53 @@
 <script src="../../vendor/react.development.js?v=18.2.0"></script>
 <script src="../../vendor/react-dom.development.js?v=18.2.0"></script>
 <script src="../../_ds_bundle.js?v=design-system-20260623"></script>
-<script src="marketing.compiled.js?v=marketplace-used-v9"></script>
+<script src="marketing.compiled.js?v=marketplace-shell-v10"></script>
 <script>
-  (function mountDealerSiteSearch() {
+  (function mountDealerSiteMarketingApp() {
     var root = document.getElementById('root');
-    if (!root || !window.React || !window.ReactDOM || !window.VehicleExplorer) return;
+    if (!root || !window.React || !window.ReactDOM || !window.VehicleExplorer || !window.Header) return;
 
     function App() {
-      return window.React.createElement(window.VehicleExplorer, { setMode: function () {} });
+      var React = window.React;
+      var params = new URLSearchParams(window.location.search);
+      var initialMode = params.get('mode') === 'builder'
+        ? 'builder'
+        : (params.get('mode') === 'vehicles' || params.has('category') || params.has('type') || params.has('condition') || params.has('q') || params.has('search'))
+          ? 'vehicles'
+          : 'builder';
+      var modeState = React.useState(initialMode);
+      var mode = modeState[0];
+      var setMode = modeState[1];
+      var stepState = React.useState(0);
+      var step = stepState[0];
+      var setStep = stepState[1];
+
+      React.useEffect(function () {
+        document.body.dataset.mode = mode;
+      }, [mode]);
+
+      return React.createElement(React.Fragment, null,
+        React.createElement(window.Header, { step: step, setStep: setStep, mode: mode, setMode: setMode }),
+        mode === 'vehicles'
+          ? React.createElement(window.VehicleExplorer, { setMode: setMode })
+          : React.createElement(React.Fragment, null,
+              React.createElement(window.StatsBand),
+              React.createElement(window.BrandStrip),
+              React.createElement(window.Categories),
+              React.createElement(window.HowItWorks),
+              React.createElement(window.SearchDiscover),
+              React.createElement(window.Showcase),
+              React.createElement(window.Leads),
+              React.createElement(window.BrandDomain),
+              React.createElement(window.Templates),
+              React.createElement(window.Pricing),
+              React.createElement(window.Testimonials),
+              React.createElement(window.Faq),
+              React.createElement(window.FinalCTA),
+              React.createElement(window.Footer)
+            ),
+        window.ExplorerToggle ? React.createElement(window.ExplorerToggle, { mode: mode, setMode: setMode }) : null
+      );
     }
 
     if (window.ReactDOM.createRoot) {

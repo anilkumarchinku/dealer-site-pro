@@ -129,6 +129,9 @@ function dspPremiumHeroImageFor(key = 'showroom') {
 
 function dspBadPreviewImageUrl(url) {
   const value = dspText(url).toLowerCase();
+  const normalizedPath = value
+    .split('?')[0]
+    .replace(/\.(?:avif|webp|png|jpe?g)$/i, '');
   if (!value) return true;
   return [
     'whatsapp',
@@ -138,9 +141,12 @@ function dspBadPreviewImageUrl(url) {
     'placeholder',
     'stimg.cardekho.com/images/carexteriorimages',
     'dealer-assets/dealers',
+    '/assets/cars/aston-martin/dbs-superleggera',
+    '/data/brand-model-images/4w/aston-martin/dbs-superleggera',
+    '/data/brand-model-images/4w/aston-martin/aston-martin-dbs-superleggera',
     '/assets/cars/mclaren/750s',
     '/assets/cars/bmw/8-series-gran-coupe',
-  ].some((token) => value.includes(token));
+  ].some((token) => value.includes(token) || normalizedPath.includes(token));
 }
 
 function dspPreviewVehicleKind(row) {

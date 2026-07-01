@@ -21,7 +21,7 @@ function MarketplaceFrame() {
     const query = searchParams.get("q") || searchParams.get("search") || ""
     const condition = (searchParams.get("condition") || "").toLowerCase()
     const iframeParams = new URLSearchParams({
-        v: "marketplace-used-v9",
+        v: "marketplace-shell-v10",
         category,
         type: category,
         condition: "all",

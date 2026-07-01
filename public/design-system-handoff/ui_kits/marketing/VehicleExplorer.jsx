@@ -457,6 +457,9 @@ function marketplacePageUrl(page = 1, condition = 'all') {
 
 function isBadVehicleImageUrl(url) {
   const value = compactText(url).toLowerCase();
+  const normalizedPath = value
+    .split('?')[0]
+    .replace(/\.(?:avif|webp|png|jpe?g)$/i, '');
   if (!value) return true;
   return [
     'whatsapp',
@@ -492,7 +495,7 @@ function isBadVehicleImageUrl(url) {
     '/data/brand-model-images/3w/altigreen/neev-bhai',
     '/data/brand-model-images/3w/altigreen/neev-bhai-low',
     '/data/brand-model-images/3w/altigreen/neev-high',
-  ].some((token) => value.includes(token));
+  ].some((token) => value.includes(token) || normalizedPath.includes(token));
 }
 
 async function fetchMarketplacePage(page = 1, condition = 'all') {
