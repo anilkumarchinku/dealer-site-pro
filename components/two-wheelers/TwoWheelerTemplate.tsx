@@ -445,13 +445,13 @@ export function TwoWheelerTemplate({
                                     </span>
                                 )}
                             </div>
-                            <span className={`max-w-[145px] truncate text-base font-bold leading-tight transition-colors sm:max-w-[170px] xl:max-w-none xl:text-lg ${isScrolled ? "text-gray-900" : "text-white"}`}>
+                            <span className={`max-w-[145px] truncate text-base font-bold leading-tight transition-colors sm:max-w-[170px] xl:max-w-[220px] xl:text-lg 2xl:max-w-[280px] ${isScrolled ? "text-gray-900" : "text-white"}`}>
                                 {dealerName}
                             </span>
                         </div>
 
                         {/* Desktop nav links */}
-                        <div className="hidden xl:flex flex-1 items-center justify-center gap-4 px-4 2xl:gap-5">
+                        <div className="hidden xl:flex flex-1 items-center justify-center gap-3 px-3 2xl:gap-5">
                             {navLinks.map(l => (
                                 <Link
                                     key={l.label}

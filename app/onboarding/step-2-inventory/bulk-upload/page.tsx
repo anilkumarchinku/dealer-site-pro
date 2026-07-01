@@ -393,7 +393,7 @@ export default function BulkUploadPage() {
 
                     <div className="rounded-xl border border-border overflow-hidden">
                         <div className="overflow-x-auto">
-                            <table className="w-full text-xs">
+                            <table className="w-full min-w-[820px] text-xs">
                                 <thead className="bg-muted/50 border-b border-border">
                                     <tr>
                                         {["#", "Make & Model", "Year", "Price", "KM", "Fuel", "Transmission", "Colour"].map(h => (
@@ -411,11 +411,11 @@ export default function BulkUploadPage() {
                                         >
                                             <td className="px-3 py-2.5 text-muted-foreground">{i + 1}</td>
                                             <td className="px-3 py-2.5">
-                                                <p className="font-semibold text-foreground">
+                                                <p className="max-w-[220px] truncate font-semibold text-foreground">
                                                     {row.make} {row.model}
                                                 </p>
                                                 {row.variant && (
-                                                    <p className="text-muted-foreground">{row.variant}</p>
+                                                    <p className="max-w-[220px] truncate text-muted-foreground">{row.variant}</p>
                                                 )}
                                             </td>
                                             <td className="px-3 py-2.5 text-foreground font-medium">{row.year}</td>
@@ -425,9 +425,9 @@ export default function BulkUploadPage() {
                                             <td className="px-3 py-2.5 text-muted-foreground whitespace-nowrap">
                                                 {row.km_driven ? `${row.km_driven.toLocaleString()} km` : "—"}
                                             </td>
-                                            <td className="px-3 py-2.5 text-muted-foreground">{row.fuel ?? "—"}</td>
-                                            <td className="px-3 py-2.5 text-muted-foreground">{row.transmission ?? "—"}</td>
-                                            <td className="px-3 py-2.5 text-muted-foreground">{row.color ?? "—"}</td>
+                                            <td className="px-3 py-2.5 text-muted-foreground whitespace-nowrap">{row.fuel ?? "—"}</td>
+                                            <td className="px-3 py-2.5 text-muted-foreground whitespace-nowrap">{row.transmission ?? "—"}</td>
+                                            <td className="px-3 py-2.5 text-muted-foreground whitespace-nowrap">{row.color ?? "—"}</td>
                                         </tr>
                                     ))}
                                 </tbody>

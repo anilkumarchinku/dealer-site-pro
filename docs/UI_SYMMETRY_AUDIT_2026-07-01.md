@@ -86,7 +86,9 @@ Legend:
 - [x] Fixed: chatbot panel uses viewport-bounded mobile sizing so it cannot overflow narrow screens.
 - [x] Fixed: template footer/contact rows wrap long dealer names, email addresses, phone numbers, and physical addresses.
 - [x] Fixed: template desktop nav bars keep dealer names capped/truncated at xl widths so long dealership names do not collide with nav links.
+- [x] Fixed: standalone 2W/3W template nav bars keep dealer names capped/truncated and use tighter desktop nav spacing.
 - [x] Fixed: 4W test-drive modal is capped to the visible mobile viewport with a flex scroll body and safe-area bottom padding.
+- [x] Fixed: full-spec, bulk-upload preview, DNS instruction, and on-road-price breakdown tables now use stable mobile minimum widths with truncation/nowrap for long values.
 - [ ] Pending: screenshot each template with controlled sample data, including long dealer names and long model/variant names.
 
 ## Preview And Demo Pages Summary
@@ -118,6 +120,7 @@ Legend:
 - [x] Post-source-fix rerun: `/tmp/dealersite-ui-audit/continuation-2026-07-01-post-source-fixes` checked the second-pass fix set across mobile/tablet/desktop; the only transient dev-cache 500 recovered, and `/sites/singh-auto-dealers/89999d26-c273-4bcf-a671-8f5aadefcbb3` then returned 200 with no page overflow at all three breakpoints.
 - [x] `npx tsc --noEmit --pretty false --incremental false`
 - [x] `git diff --check`
+- [x] `npm run build` completed successfully and generated all 204 static pages; remaining output was warnings only.
 
 ## Detailed Route Inventory
 
@@ -333,7 +336,7 @@ This inventory is generated from current `app/**/page.tsx` files. Dynamic routes
 - [x] `CustomerPanelDashboard`, `/sites/[slug]/user` — customer-session surface listed; full QA depends on customer session state
 - [x] `DomainOnboardingWizard`, `PurchaseManagedDomainModal`, dashboard domain flows — domain purchase/onboarding surfaces listed/source-reviewed
 - [x] `WebsiteImageFields`, `SocialLinksFields`, onboarding template/image field groups — onboarding form surfaces listed/source-reviewed
-- [x] `TwoWheelerTemplate`, `ThreeWheelerTemplate` — present in code; no active route imports found in this audit pass
+- [x] `TwoWheelerTemplate`, `ThreeWheelerTemplate` — present in code; standalone header nav long-name hardening applied even though no active route imports were found in this audit pass
 - [x] `CarCard`, `two-wheelers/VehicleCard`, `three-wheelers/VehicleCard` — fixed for text and spec-card readability
 - [x] `two-wheelers/FilterSidebar`, `three-wheelers/FilterSidebar` — fixed for native select readability
 - [x] `DealerChatbot` — fixed for narrow viewport panel sizing

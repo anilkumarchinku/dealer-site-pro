@@ -257,13 +257,13 @@ export function ThreeWheelerTemplate({
                                     {primaryBrand.slice(0, 2).toUpperCase()}
                                 </div>
                             ) : null}
-                            <span className={`max-w-[145px] truncate text-base font-semibold leading-tight tracking-wide sm:max-w-[170px] xl:max-w-none xl:text-lg ${solidNav ? "text-gray-900" : "text-white"}`}>
+                            <span className={`max-w-[145px] truncate text-base font-semibold leading-tight tracking-wide sm:max-w-[170px] xl:max-w-[220px] xl:text-lg 2xl:max-w-[280px] ${solidNav ? "text-gray-900" : "text-white"}`}>
                                 {dealerName}
                             </span>
                         </button>
 
                         {/* Desktop nav */}
-                        <div className="hidden xl:flex flex-1 items-center justify-center gap-4 px-4 2xl:gap-6">
+                        <div className="hidden xl:flex flex-1 items-center justify-center gap-3 px-3 2xl:gap-5">
                             {[
                                 { label: "Home",      tab: "home" as const },
                                 { label: "Inventory", tab: "inventory" as const },

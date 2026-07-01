@@ -361,8 +361,8 @@ export default function ConnectCustomDomainModal({ isOpen, onClose, dealerId, si
                                 </p>
                             </div>
 
-                            <div className="border border-border rounded-xl overflow-hidden">
-                                <table className="w-full text-sm">
+                            <div className="overflow-x-auto rounded-xl border border-border">
+                                <table className="w-full min-w-[720px] text-sm">
                                     <thead className="bg-muted/50">
                                         <tr>
                                             <th className="px-4 py-3 text-left font-semibold text-muted-foreground">Type</th>
@@ -375,11 +375,15 @@ export default function ConnectCustomDomainModal({ isOpen, onClose, dealerId, si
                                     <tbody className="divide-y divide-border">
                                         {dnsInstructions.records.map((record, index) => (
                                             <tr key={index} className="hover:bg-muted/30 transition-colors">
-                                                <td className="px-4 py-3 font-mono text-xs">{record.type}</td>
-                                                <td className="px-4 py-3 font-mono text-xs">{record.name}</td>
-                                                <td className="px-4 py-3 font-mono text-xs">{record.value}</td>
-                                                <td className="px-4 py-3 font-mono text-xs text-muted-foreground">{record.ttl}</td>
-                                                <td className="px-4 py-3">
+                                                <td className="px-4 py-3 font-mono text-xs whitespace-nowrap">{record.type}</td>
+                                                <td className="px-4 py-3 font-mono text-xs">
+                                                    <div className="max-w-[160px] truncate">{record.name}</div>
+                                                </td>
+                                                <td className="px-4 py-3 font-mono text-xs">
+                                                    <div className="max-w-[280px] truncate">{record.value}</div>
+                                                </td>
+                                                <td className="px-4 py-3 font-mono text-xs text-muted-foreground whitespace-nowrap">{record.ttl}</td>
+                                                <td className="px-4 py-3 whitespace-nowrap">
                                                     <button
                                                         onClick={() => copyToClipboard(record.value, index)}
                                                         className="text-blue-500 hover:text-blue-400 transition-colors"

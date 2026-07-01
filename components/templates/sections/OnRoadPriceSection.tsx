@@ -173,8 +173,8 @@ export function OnRoadPriceSection({
                     </div>
 
                     {/* Breakdown table */}
-                    <div className="rounded-xl border border-gray-200 overflow-hidden">
-                        <table className="w-full text-sm">
+                    <div className="overflow-x-auto rounded-xl border border-gray-200">
+                        <table className="w-full min-w-[420px] text-sm">
                             <thead>
                                 <tr className="bg-gray-100">
                                     <th className="text-left px-4 py-2.5 font-semibold text-gray-600">Component</th>
@@ -184,8 +184,10 @@ export function OnRoadPriceSection({
                             <tbody>
                                 {breakdown.map((row, i) => (
                                     <tr key={row.label} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
-                                        <td className="px-4 py-2.5 text-gray-700">{row.label}</td>
-                                        <td className="px-4 py-2.5 text-right font-medium text-gray-800">
+                                        <td className="px-4 py-2.5 text-gray-700">
+                                            <div className="max-w-[240px] truncate">{row.label}</div>
+                                        </td>
+                                        <td className="px-4 py-2.5 text-right font-medium text-gray-800 whitespace-nowrap">
                                             {formatINR(row.amount)}
                                         </td>
                                     </tr>

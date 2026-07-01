@@ -100,7 +100,7 @@ export function FullSpecsSection({ vehicle }: Props) {
                     <div>
                         <h3 className="text-base font-semibold text-foreground mb-3">Variants</h3>
                         <div className="overflow-x-auto rounded-2xl border border-border bg-card p-5 shadow-sm">
-                            <table className="w-full text-sm">
+                            <table className="w-full min-w-[520px] text-sm">
                                 <thead>
                                     <tr className="border-b border-border">
                                         <th className="text-left py-2 text-muted-foreground font-medium">Variant Name</th>
@@ -110,8 +110,10 @@ export function FullSpecsSection({ vehicle }: Props) {
                                 <tbody>
                                     {visibleVariants.map((v, i) => (
                                         <tr key={i} className="border-b border-border/50 last:border-b-0">
-                                            <td className="py-2.5 text-muted-foreground">{v.name}</td>
-                                            <td className="py-2.5 font-medium text-right">
+                                            <td className="py-2.5 text-muted-foreground">
+                                                <div className="max-w-[320px] truncate">{v.name}</div>
+                                            </td>
+                                            <td className="py-2.5 font-medium text-right whitespace-nowrap">
                                                 {v.price_paise > 0
                                                     ? `₹${(v.price_paise / 100).toLocaleString("en-IN")}`
                                                     : "Price on request"}
