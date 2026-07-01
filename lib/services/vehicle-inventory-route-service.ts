@@ -112,8 +112,8 @@ async function resolveVehicleBySlug<TVehicle extends VehicleLookup>(
     identifier: string,
     options: VehicleDetailRouteOptions<TVehicle, unknown>
 ): Promise<DealerSlugResolution<TVehicle> | null> {
-    const dealer = await fetchDealerBySlug(slug)
-    if (!dealer || !dealerSupportsVehicleType(dealer, options.vehicleType)) return null
+    const dealer = await fetchDealerBySlug(slug, { includePrivate: true })
+    if (!dealer) return null
 
     const directVehicle = await options.getVehicleById(identifier, dealer.id)
     if (directVehicle) return { vehicle: directVehicle, dealer: dealerRouteMetadata(dealer) }
@@ -271,8 +271,8 @@ export function createUsedVehicleDetailRouteHandlers<TVehicle, TUpdatePayload>(
             let dealerMetadata: DealerRouteMetadata | null = null
             const vehicle = slug
                 ? await (async () => {
-                    const dealer = await fetchDealerBySlug(slug)
-                    if (!dealer || !dealerSupportsVehicleType(dealer, options.vehicleType)) return null
+                    const dealer = await fetchDealerBySlug(slug, { includePrivate: true })
+                    if (!dealer) return null
                     dealerMetadata = dealerRouteMetadata(dealer)
                     return options.getVehicleById(id, dealer.id)
                 })()

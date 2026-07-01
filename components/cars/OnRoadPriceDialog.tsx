@@ -27,7 +27,7 @@ import {
 } from '@/components/ui/select'
 import { Badge } from '@/components/ui/badge'
 import { MapPin, Car as CarIcon, FileText, Shield, CreditCard, Info } from 'lucide-react'
-import { getContrastText } from '@/lib/utils/color-contrast'
+import { getContrastText, getReadableAccent } from '@/lib/utils/color-contrast'
 
 interface OnRoadPriceDialogProps {
     car: Car | null
@@ -87,6 +87,7 @@ export function OnRoadPriceDialog({
     }, [activeVariant, car, financed, stateCode])
 
     const contrast = getContrastText(brandColor)
+    const brandAccent = getReadableAccent(brandColor)
 
     if (!car) return null
 
@@ -195,7 +196,7 @@ export function OnRoadPriceDialog({
                                         </div>
                                         <div className="rounded-2xl px-5 py-4 text-right" style={{ backgroundColor: `${brandColor}12` }}>
                                             <p className="text-xs uppercase tracking-wide text-gray-600">Total payable</p>
-                                            <p className="mt-1 text-3xl font-extrabold" style={{ color: brandColor }}>
+                                            <p className="mt-1 text-3xl font-extrabold" style={{ color: brandAccent }}>
                                                 {formatInr(breakdown.total)}
                                             </p>
                                         </div>
@@ -242,7 +243,7 @@ export function OnRoadPriceDialog({
                                         ))}
                                         <div className="flex items-center justify-between px-5 py-4 text-base font-bold">
                                             <span>Total on-road price*</span>
-                                            <span style={{ color: brandColor }}>{formatInr(breakdown.total)}</span>
+                                            <span style={{ color: brandAccent }}>{formatInr(breakdown.total)}</span>
                                         </div>
                                     </div>
                                 </div>

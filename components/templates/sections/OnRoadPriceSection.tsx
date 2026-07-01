@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import { PhoneCall, Calculator } from 'lucide-react';
-import { getContrastText } from '@/lib/utils/color-contrast';
+import { getContrastText, getReadableAccent } from '@/lib/utils/color-contrast';
 
 interface OnRoadPriceSectionProps {
     brandColor: string;
@@ -41,6 +41,7 @@ export function OnRoadPriceSection({
 
     // Readable text color for the brand-filled total box / CTA.
     const onBrandText = getContrastText(brandColor);
+    const brandAccent = getReadableAccent(brandColor);
 
     const [exShowroom, setExShowroom] = useState(range.defaultVal);
     const [rtoRate, setRtoRate] = useState(0.09);
@@ -69,7 +70,7 @@ export function OnRoadPriceSection({
                 <div className="text-center mb-10">
                     <span
                         className="text-sm font-semibold uppercase tracking-widest"
-                        style={{ color: brandColor }}
+                        style={{ color: brandAccent }}
                     >
                         Pricing Tool
                     </span>
@@ -88,7 +89,7 @@ export function OnRoadPriceSection({
                             <label className="text-sm font-semibold text-gray-700">
                                 Ex-Showroom Price*
                             </label>
-                            <span className="text-base font-bold" style={{ color: brandColor }}>
+                            <span className="text-base font-bold" style={{ color: brandAccent }}>
                                 {formatLakhs(exShowroom)}
                             </span>
                         </div>
@@ -191,7 +192,7 @@ export function OnRoadPriceSection({
                                 ))}
                                 <tr className="border-t border-gray-200 font-bold">
                                     <td className="px-4 py-3 text-gray-900">Total On-Road Price*</td>
-                                    <td className="px-4 py-3 text-right" style={{ color: brandColor }}>
+                                    <td className="px-4 py-3 text-right" style={{ color: brandAccent }}>
                                         {formatINR(total)}
                                     </td>
                                 </tr>
@@ -217,7 +218,7 @@ export function OnRoadPriceSection({
                         <div className="text-center">
                             <div
                                 className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-medium"
-                                style={{ backgroundColor: `${brandColor}15`, color: brandColor }}
+                                style={{ backgroundColor: `${brandColor}15`, color: brandAccent }}
                             >
                                 <Calculator className="w-4 h-4" />
                                 Contact dealer for exact pricing

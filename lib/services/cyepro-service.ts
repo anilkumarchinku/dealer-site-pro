@@ -457,7 +457,7 @@ export function mapCyeproVehicleToCar(
         },
 
         images: {
-            hero:     imageUrls[0] || '/placeholder-car.jpg',
+            hero:     imageUrls[0] || '',
             exterior: imageUrls,
             interior: [],
         },

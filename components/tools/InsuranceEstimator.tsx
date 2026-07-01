@@ -215,7 +215,7 @@ export function InsuranceEstimator() {
                                     </SelectContent>
                                 </Select>
                                 {city === 'Delhi' && (
-                                    <p className="mt-1.5 flex items-start gap-1 text-xs text-amber-600">
+                                    <p className="mt-1.5 flex items-start gap-1 text-xs text-amber-800">
                                         <Info className="mt-0.5 h-3 w-3 shrink-0" aria-hidden="true" />
                                         <span>Estimated for <strong>Delhi</strong> by default — pick your city above for an accurate zone-based premium.</span>
                                     </p>

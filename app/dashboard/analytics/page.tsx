@@ -98,11 +98,11 @@ export default function AnalyticsPage() {
             {/* Date Range */}
             <Card variant="glass" className="rounded-2xl border-border/70 bg-card/90 shadow-sm dark:bg-card/80">
                 <CardContent className="py-3">
-                    <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-2">
+                    <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                        <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
                             <span className="text-sm text-muted-foreground">Showing data for:</span>
                             <Select value={dateRange} onValueChange={setDateRange}>
-                                <SelectTrigger className="w-[160px] h-8">
+                                <SelectTrigger className="h-8 w-full sm:w-[160px]">
                                     <SelectValue />
                                 </SelectTrigger>
                                 <SelectContent>
@@ -257,12 +257,12 @@ export default function AnalyticsPage() {
                         ) : (
                             <div className="space-y-3">
                                 {topVehicles.map((v, i) => (
-                                    <div key={v.id} className="flex items-center gap-3 p-3 rounded-xl bg-muted/30">
+                                    <div key={v.id} className="flex flex-col gap-2 rounded-xl bg-muted/30 p-3 sm:flex-row sm:items-center sm:gap-3">
                                         <span className="text-sm text-muted-foreground w-5">{i + 1}.</span>
                                         <div className="flex-1 min-w-0">
                                             <p className="font-medium text-sm truncate">{v.make} {v.model}</p>
                                         </div>
-                                        <div className="flex items-center gap-3 text-xs text-muted-foreground shrink-0">
+                                        <div className="flex flex-wrap items-center gap-3 text-xs text-muted-foreground sm:shrink-0">
                                             <span className="flex items-center gap-1">
                                                 <Eye className="w-3 h-3" /> {v.views}
                                             </span>

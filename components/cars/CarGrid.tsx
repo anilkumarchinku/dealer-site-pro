@@ -28,6 +28,10 @@ interface CarGridProps {
     dealerPhone?: string;
     /** Dealer ID — enables test drive booking modal */
     dealerId?: string;
+    /** Show per-card compare buttons */
+    showCompareAction?: boolean;
+    /** Show per-card wishlist buttons */
+    showWishlistAction?: boolean;
     /** Staggered scroll-reveal entrance for cards (default true). Set false to render statically. */
     animate?: boolean;
 }
@@ -46,12 +50,13 @@ export function CarGrid({
     detailBasePath,
     dealerPhone,
     dealerId,
+    showCompareAction,
+    showWishlistAction,
     animate = true,
 }: CarGridProps) {
     if (cars.length === 0) {
         return (
             <div className="text-center py-16 px-4">
-                <div className="text-5xl mb-3">🚗</div>
                 <p className="text-base font-medium text-foreground">{emptyMessage}</p>
                 <p className="text-sm mt-1 text-muted-foreground">Try adjusting your filters</p>
             </div>
@@ -79,6 +84,8 @@ export function CarGrid({
                         detailBasePath={detailBasePath}
                         dealerPhone={dealerPhone}
                         dealerId={dealerId}
+                        showCompareAction={showCompareAction}
+                        showWishlistAction={showWishlistAction}
                     />
                 );
                 if (!animate) return <div key={car.id} className="h-full">{card}</div>;

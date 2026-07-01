@@ -97,13 +97,6 @@ function localPublicImageExists(url: string): boolean {
     return key in (vehicleImageUrls as Record<string, string>);
 }
 
-function chooseFallbackHero(fallbackUrls: string[]): string | null {
-    return fallbackUrls.find((url) => isUsableImageUrl(url) && localPublicImageExists(url))
-        ?? fallbackUrls.find((url) => isUsableImageUrl(url) && !url.startsWith('/'))
-        ?? fallbackUrls.find(isUsableImageUrl)
-        ?? null;
-}
-
 function isLoadableImageUrl(value: string | null | undefined): value is string {
     if (!isUsableImageUrl(value)) return false;
     return !value.startsWith('/') || localPublicImageExists(value);
@@ -118,8 +111,8 @@ function buildCarImages(dbCar: GroupedCarCatalogRow): CarImages & { _fallbackUrl
     );
     const dbImages = dbCar.images;
     const dbHero = isLoadableImageUrl(dbImages?.hero) ? dbImages.hero : null;
-    const fallbackHero = chooseFallbackHero(fallbackUrls);
-    const hero = dbHero ?? fallbackHero ?? '';
+    const dbPrimary = isLoadableImageUrl(dbCar.image_url) ? dbCar.image_url : null;
+    const hero = dbHero ?? dbPrimary ?? '';
     const dbExterior = Array.isArray(dbImages?.exterior) ? dbImages.exterior.filter(isUsableImageUrl) : [];
     const dbInterior = Array.isArray(dbImages?.interior) ? dbImages.interior.filter(isUsableImageUrl) : [];
     const dbColors = Array.isArray(dbImages?.colors) ? dbImages.colors.filter(isUsableImageUrl) : [];

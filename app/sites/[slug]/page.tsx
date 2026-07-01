@@ -5,7 +5,9 @@ import { ModernTemplate } from '@/components/templates/ModernTemplate'
 import { LuxuryTemplate } from '@/components/templates/LuxuryTemplate'
 import { SportyTemplate } from '@/components/templates/SportyTemplate'
 import { FamilyTemplate } from '@/components/templates/FamilyTemplate'
+import { PremiumUsedDealerTemplate } from '@/components/templates/PremiumUsedDealerTemplate'
 import { PushPreferenceCenter } from '@/components/PushPreferenceCenter'
+import { PublicSiteAnalyticsTracker } from '@/components/analytics/PublicSiteAnalyticsTracker'
 import { getCarsByMake } from '@/lib/data/cars'
 import { fetchDealerBySlug } from '@/lib/db/dealers'
 import { fetchAllCyeproInventoryAsCars } from '@/lib/services/cyepro-service'
@@ -65,7 +67,7 @@ function dbVehiclesToCars(vehicles: DBVehicle[]): Car[] {
         },
         dimensions: { seatingCapacity: 5 },
         features: { keyFeatures },
-        images: { hero: imageUrls[0] ?? '/placeholder-car.jpg', exterior: imageUrls, interior: [] },
+        images: { hero: imageUrls[0] ?? '', exterior: imageUrls, interior: [] },
         meta: {
             viewCount: v.views,
             dataSource: 'manual',
@@ -299,7 +301,7 @@ function NoStockPage({ dealerName, phone, email }: { dealerName: string; phone: 
                     </svg>
                 </div>
                 <h1 className="text-3xl font-bold text-gray-900 mb-2">{dealerName}</h1>
-                <p className="text-amber-600 font-semibold mb-3">Inventory Coming Soon</p>
+                <p className="text-amber-800 font-semibold mb-3">Inventory Coming Soon</p>
                 <p className="text-gray-600 text-sm mb-6">
                     Our inventory is being updated. Contact us directly for available vehicles.
                 </p>
@@ -311,8 +313,8 @@ function NoStockPage({ dealerName, phone, email }: { dealerName: string; phone: 
                         ✉️ {email}
                     </a>
                 </div>
-                <div className="mt-10 text-xs text-gray-400">
-                    Powered by <span className="text-blue-600 font-semibold">DealerSite Pro</span>
+                <div className="mt-10 text-xs text-gray-600">
+                    Powered by <span className="text-blue-700 font-semibold">DealerSite Pro</span>
                 </div>
             </div>
         </div>
@@ -500,7 +502,7 @@ export default async function SitePage({ params }: SitePageProps) {
         redirect(vehicleHubHref('three-wheelers'))
     }
 
-    const { sells_new_cars, sells_used_cars, sells_two_wheelers, sells_three_wheelers, brandFilter, brands, vehicles, usedCarSite, cyepro_api_key, logo_url, hero_image_url } = dealer
+    const { sells_new_cars, sells_used_cars, sells_two_wheelers, sells_three_wheelers, brandFilter, brands, vehicles, usedCarSite, cyepro_api_key, logo_url, hero_image_url, hero_image_urls } = dealer
 
     const isHybridDealer = sells_new_cars && sells_used_cars
     const isMultiBrandNewOnly = sells_new_cars && !sells_used_cars && brands.length > 1
@@ -577,7 +579,7 @@ export default async function SitePage({ params }: SitePageProps) {
     const logoUrl = resolveDealerLogoImage({
         uploadedLogo: logo_url,
         fallbackLogo: brandLogoUrl(brandName, '4w'),
-        preferFallbackLogo: true,
+        preferFallbackLogo: !isUsedSite,
     })
     const inventoryHeroImage = firstVehicleHeroImage(cars)
     const heroImageUrl = resolveDealerHeroImage({
@@ -589,7 +591,7 @@ export default async function SitePage({ params }: SitePageProps) {
         phone: dealer.phone,
         email: dealer.email,
         city: dealer.location,
-        address: dealer.full_address ?? dealer.location,
+        address: dealer.full_address?.trim() || dealer.location,
     }
     const sellVehicleHref = isUsedSite
         ? isMainDealerHost(host, baseDomain)
@@ -600,7 +602,7 @@ export default async function SitePage({ params }: SitePageProps) {
     // ── Genuine empty inventory ───────────────────────────────────────────────
     // No catalog/listings for this dealer → show an honest "coming soon" state
     // with their contact CTA, instead of seeding sample cars they don't sell.
-    if (cars.length === 0) {
+    if (cars.length === 0 && !isUsedSite) {
         return (
             <NoStockPage
                 dealerName={dealer.dealership_name}
@@ -640,6 +642,7 @@ export default async function SitePage({ params }: SitePageProps) {
         workingHours: dealer.working_hours ?? null,
         logoUrl,
         heroImageUrl,
+        heroImageUrls: hero_image_urls,
         sellsNewCars: templateSellsNew,
         sellsUsedCars: templateSellsUsed,
         socialLinks: dealer.social,
@@ -692,18 +695,23 @@ export default async function SitePage({ params }: SitePageProps) {
         </section>
     )
     const pushPreferenceCenter = <PushPreferenceCenter dealerId={dealer.id} />
+    const analyticsTracker = <PublicSiteAnalyticsTracker dealerId={dealer.id} />
+
+    if (isUsedSite) {
+        return <>{jsonLdScripts}{analyticsTracker}<PremiumUsedDealerTemplate {...sharedProps} />{customerPanelLink}{pushPreferenceCenter}{segmentsBanner}</>
+    }
 
     // ── Render the chosen template ────────────────────────────────────────────
     switch (dealer.style_template) {
         case 'luxury':
-            return <>{jsonLdScripts}<LuxuryTemplate  {...sharedProps} config={{ heroTitle, heroSubtitle, tagline: taglines.luxury }} />{customerPanelLink}{pushPreferenceCenter}{segmentsBanner}</>
+            return <>{jsonLdScripts}{analyticsTracker}<LuxuryTemplate  {...sharedProps} config={{ heroTitle, heroSubtitle, tagline: taglines.luxury }} />{customerPanelLink}{pushPreferenceCenter}{segmentsBanner}</>
         case 'sporty':
-            return <>{jsonLdScripts}<SportyTemplate  {...sharedProps} config={{ heroTitle, heroSubtitle, tagline: taglines.sporty }} />{customerPanelLink}{pushPreferenceCenter}{segmentsBanner}</>
+            return <>{jsonLdScripts}{analyticsTracker}<SportyTemplate  {...sharedProps} config={{ heroTitle, heroSubtitle, tagline: taglines.sporty }} />{customerPanelLink}{pushPreferenceCenter}{segmentsBanner}</>
         case 'family':
-            return <>{jsonLdScripts}<FamilyTemplate  {...sharedProps} config={{ heroTitle, heroSubtitle, tagline: taglines.family }} />{customerPanelLink}{pushPreferenceCenter}{segmentsBanner}</>
+            return <>{jsonLdScripts}{analyticsTracker}<FamilyTemplate  {...sharedProps} config={{ heroTitle, heroSubtitle, tagline: taglines.family }} />{customerPanelLink}{pushPreferenceCenter}{segmentsBanner}</>
         case 'modern':
         case 'professional':
         default:
-            return <>{jsonLdScripts}<ModernTemplate  {...sharedProps} config={{ heroTitle, heroSubtitle }} />{customerPanelLink}{pushPreferenceCenter}{segmentsBanner}</>
+            return <>{jsonLdScripts}{analyticsTracker}<ModernTemplate  {...sharedProps} config={{ heroTitle, heroSubtitle }} />{customerPanelLink}{pushPreferenceCenter}{segmentsBanner}</>
     }
 }

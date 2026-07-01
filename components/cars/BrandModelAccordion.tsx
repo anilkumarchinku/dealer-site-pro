@@ -17,6 +17,8 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/sh
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
+import { getContrastText, getReadableAccent } from '@/lib/utils/color-contrast';
+import { isUsableVehicleImageUrl } from '@/lib/utils/brand-model-images';
 import {
     ChevronDown,
     ChevronUp,
@@ -94,6 +96,8 @@ export function BrandModelAccordion({
     const [sheetOpen, setSheetOpen] = useState(false);
 
     const logoSrc = getBrandLogo(brandDisplay);
+    const brandAccent = getReadableAccent(brandColor);
+    const onBrandText = getContrastText(brandColor);
     const totalModels = Object.keys(models).length;
     const totalVariants = Object.values(models).reduce((s, v) => s + v.length, 0);
 
@@ -172,7 +176,7 @@ export function BrandModelAccordion({
                         {logoSrc ? (
                             <Image src={logoSrc} alt={brandDisplay} width={36} height={36} unoptimized className="object-contain" />
                         ) : (
-                            <span className="text-2xl">🚗</span>
+                            <span className="text-xs font-bold text-gray-500">{brandDisplay.slice(0, 2).toUpperCase()}</span>
                         )}
                     </div>
 
@@ -193,7 +197,7 @@ export function BrandModelAccordion({
                         size="sm"
                         variant="outline"
                         className="shrink-0 gap-1.5 text-xs h-8 px-3 font-semibold"
-                        style={{ borderColor: brandColor, color: brandColor }}
+                        style={{ borderColor: brandColor, color: brandAccent }}
                         onClick={() => setExpanded(e => !e)}
                     >
                         {expanded ? (
@@ -335,7 +339,7 @@ export function BrandModelAccordion({
                                         {logoSrc && (
                                             <Image src={logoSrc} alt={brandDisplay} width={20} height={20} unoptimized className="object-contain" />
                                         )}
-                                        <span className="text-xs font-semibold uppercase tracking-wider" style={{ color: brandColor }}>
+                                        <span className="text-xs font-semibold uppercase tracking-wider" style={{ color: brandAccent }}>
                                             {selectedVariant.make}
                                         </span>
                                     </div>
@@ -347,7 +351,7 @@ export function BrandModelAccordion({
                             </div>
 
                             {/* Car Image */}
-                            {selectedVariant.image_urls?.[0]?.value && (
+                            {isUsableVehicleImageUrl(selectedVariant.image_urls?.[0]?.value) && (
                                 <div className="relative aspect-video bg-gray-100 shrink-0">
                                     <Image
                                         src={selectedVariant.image_urls[0].value}
@@ -366,7 +370,7 @@ export function BrandModelAccordion({
                                 {selectedVariant.ex_showroom_price_min_inr && (
                                     <div>
                                         <p className="text-xs text-gray-600 mb-1">Ex-Showroom Price*</p>
-                                        <p className="text-2xl font-bold" style={{ color: brandColor }}>
+                                        <p className="text-2xl font-bold" style={{ color: brandAccent }}>
                                             {formatPrice(selectedVariant.ex_showroom_price_min_inr)}
                                         </p>
                                         {selectedVariant.hyderabad_on_road_price && (
@@ -436,7 +440,7 @@ export function BrandModelAccordion({
                             {/* Sticky Enquire Bar */}
                             <div className="border-t border-gray-200 px-5 py-4 bg-white/95 backdrop-blur-sm">
                                 <div className="flex items-center gap-2 mb-3">
-                                    <Badge variant="outline" className="text-[11px] bg-white text-gray-700 border-gray-200" style={{ borderColor: brandColor, color: brandColor }}>
+                                    <Badge variant="outline" className="text-[11px] bg-white text-gray-700 border-gray-200" style={{ borderColor: brandColor, color: brandAccent }}>
                                         {selectedVariant.fuel_type}
                                     </Badge>
                                     <Badge variant="outline" className="text-[11px] bg-white text-gray-700 border-gray-200">
@@ -444,9 +448,9 @@ export function BrandModelAccordion({
                                     </Badge>
                                 </div>
                                 <Button
-                                    className="w-full text-white gap-2"
+                                    className="w-full gap-2"
                                     size="lg"
-                                    style={{ backgroundColor: brandColor }}
+                                    style={{ backgroundColor: brandColor, color: onBrandText }}
                                 >
                                     <Send className="w-4 h-4" />
                                     Enquire for {selectedVariant.model} {selectedVariant.variant_name}

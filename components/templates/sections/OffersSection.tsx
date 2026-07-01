@@ -1,7 +1,7 @@
 'use client';
 
 import { ArrowLeftRight, Shield, BadgePercent, Users, PhoneCall, Building2 } from 'lucide-react';
-import { getContrastText } from '@/lib/utils/color-contrast';
+import { getContrastText, getReadableAccent } from '@/lib/utils/color-contrast';
 
 interface DealerOffer {
     id: string;
@@ -85,6 +85,7 @@ export function OffersSection({
 
     // Readable text color for the brand-filled CTA (light brands need dark text).
     const onBrandText = getContrastText(brandColor);
+    const brandAccent = getReadableAccent(brandColor);
 
     function getEnquireHref() {
         if (dealerWhatsapp) {
@@ -103,7 +104,7 @@ export function OffersSection({
                 <div className="text-center mb-10">
                     <span
                         className="text-sm font-semibold uppercase tracking-widest"
-                        style={{ color: brandColor }}
+                        style={{ color: brandAccent }}
                     >
                         {hasDealerOffers ? 'Current Promotions' : 'How We Help'}
                     </span>
@@ -218,7 +219,7 @@ export function OffersSection({
                                     className="w-12 h-12 rounded-full flex items-center justify-center shrink-0"
                                     style={{ backgroundColor: `${brandColor}26` }}
                                 >
-                                    <Icon className="w-6 h-6" style={{ color: brandColor }} />
+                                    <Icon className="w-6 h-6" style={{ color: brandAccent }} />
                                 </div>
 
                                 {/* Badge */}
@@ -226,7 +227,7 @@ export function OffersSection({
                                     className="inline-flex self-start items-center rounded-full px-2.5 py-0.5 text-xs font-semibold"
                                     style={{
                                         backgroundColor: `${brandColor}26`,
-                                        color: brandColor,
+                                        color: brandAccent,
                                     }}
                                 >
                                     {offer.badge}
@@ -244,7 +245,7 @@ export function OffersSection({
                                 <a
                                     href={enquireHref}
                                     className="text-sm font-semibold hover:underline mt-auto"
-                                    style={{ color: brandColor }}
+                                    style={{ color: brandAccent }}
                                     target={dealerWhatsapp ? '_blank' : undefined}
                                     rel={dealerWhatsapp ? 'noopener noreferrer' : undefined}
                                 >

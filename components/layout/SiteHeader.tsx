@@ -80,7 +80,7 @@ export function SiteHeader() {
                 <div className="flex items-center justify-between h-14 gap-4">
                     {/* Logo */}
                     <div className="shrink-0">
-                        <BrandLogo size="sm" />
+                        <BrandLogo size="sm" className="[&_.brand-logo-accent]:text-[#C79A5B]" />
                     </div>
 
                     {/* Desktop Nav Links */}
@@ -112,7 +112,7 @@ export function SiteHeader() {
                     <div className="flex items-center gap-2 lg:hidden">
                         <Sheet>
                             <SheetTrigger asChild>
-                                <Button variant="ghost" size="sm">
+                                <Button variant="ghost" size="sm" aria-label="Open navigation menu">
                                     <Menu className="w-5 h-5" />
                                 </Button>
                             </SheetTrigger>
@@ -189,7 +189,7 @@ export function SiteHeader() {
                                         <Link
                                             key={brand}
                                             href={`/marketplace?category=4w&q=${encodeURIComponent(brand)}`}
-                                            className="flex items-center gap-2.5 py-1.5 text-sm transition-colors hover:text-[#A8793A]"
+                                            className="flex items-center gap-2.5 py-1.5 text-sm transition-colors hover:text-[#7C4F12]"
                                             onClick={() => setActiveMegaMenu(null)}
                                         >
                                             {getBrandLogo(brand) ? (
@@ -204,7 +204,7 @@ export function SiteHeader() {
                                     ))}
                                     <Link
                                         href="/brands"
-                                        className="flex items-center gap-1 py-1.5 text-sm font-medium text-[#A8793A]"
+                                        className="flex items-center gap-1 py-1.5 text-sm font-medium text-[#7C4F12]"
                                         onClick={() => setActiveMegaMenu(null)}
                                     >
                                         View All Brands <ArrowRight className="w-3.5 h-3.5" />
@@ -220,7 +220,7 @@ export function SiteHeader() {
                                         <Link
                                             key={type}
                                             href={`/marketplace?category=4w&q=${encodeURIComponent(type)}`}
-                                            className="flex items-center gap-2 py-1.5 text-sm transition-colors hover:text-[#A8793A]"
+                                            className="flex items-center gap-2 py-1.5 text-sm transition-colors hover:text-[#7C4F12]"
                                             onClick={() => setActiveMegaMenu(null)}
                                         >
                                             <span className="text-base">{BODY_TYPE_ICONS[type] ?? '🚗'}</span>
@@ -238,7 +238,7 @@ export function SiteHeader() {
                                         <Link
                                             key={range.label}
                                             href="/marketplace?category=4w"
-                                            className="block py-1.5 text-sm transition-colors hover:text-[#A8793A]"
+                                            className="block py-1.5 text-sm transition-colors hover:text-[#7C4F12]"
                                             onClick={() => setActiveMegaMenu(null)}
                                         >
                                             {range.label}
@@ -253,21 +253,21 @@ export function SiteHeader() {
                                 <div className="space-y-1">
                                     <Link
                                         href="/marketplace?category=4w"
-                                        className="flex items-center gap-2 py-1.5 text-sm transition-colors hover:text-[#A8793A]"
+                                        className="flex items-center gap-2 py-1.5 text-sm transition-colors hover:text-[#7C4F12]"
                                         onClick={() => setActiveMegaMenu(null)}
                                     >
                                         <Star className="w-4 h-4" /> All Cars
                                     </Link>
                                     <Link
                                         href="/marketplace?category=2w"
-                                        className="flex items-center gap-2 py-1.5 text-sm transition-colors hover:text-[#A8793A]"
+                                        className="flex items-center gap-2 py-1.5 text-sm transition-colors hover:text-[#7C4F12]"
                                         onClick={() => setActiveMegaMenu(null)}
                                     >
                                         <Bike className="w-4 h-4" /> Bikes & Scooters
                                     </Link>
                                     <Link
                                         href="/marketplace?category=3w"
-                                        className="flex items-center gap-2 py-1.5 text-sm transition-colors hover:text-[#A8793A]"
+                                        className="flex items-center gap-2 py-1.5 text-sm transition-colors hover:text-[#7C4F12]"
                                         onClick={() => setActiveMegaMenu(null)}
                                     >
                                         <span className="text-base">🛺</span> Autos & 3W

@@ -136,7 +136,7 @@ function AdminPreviewGalleryPageContent() {
     }
 
     return (
-        <div className="max-w-[1800px] mx-auto px-6 py-8 space-y-8">
+        <div className="max-w-[1800px] mx-auto px-4 py-6 space-y-8 sm:px-6 sm:py-8">
             <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
                 <div>
                     <Link href="/admin" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground mb-3">

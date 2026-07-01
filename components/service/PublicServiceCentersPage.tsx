@@ -195,7 +195,7 @@ export function PublicServiceCentersPage({ dealerId, dealerName, siteSlug, cente
                     <div className="grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
                         <div className="space-y-5">
                             {centers.map(center => {
-                                const images = center.image_urls?.length ? center.image_urls : ["/placeholder-car.jpg"]
+                                const images = center.image_urls?.filter(Boolean) ?? []
                                 const imageIndex = activeImage[center.id] ?? 0
                                 const centerReviews = reviews.filter(review => review.service_center_id === center.id)
                                 const avg = centerReviews.length ? centerReviews.reduce((sum, r) => sum + r.rating, 0) / centerReviews.length : 0
@@ -204,9 +204,16 @@ export function PublicServiceCentersPage({ dealerId, dealerName, siteSlug, cente
                                     <article key={center.id} className={`rounded-xl border p-4 ${selectedCenterId === center.id ? "border-emerald-500" : "border-slate-200"}`}>
                                         <div className="grid gap-4 md:grid-cols-[240px_1fr]">
                                             <div>
-                                                <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-slate-100">
-                                                    <Image src={images[imageIndex] ?? images[0]} alt={center.name} fill unoptimized className="object-cover" />
-                                                </div>
+                                                {images.length > 0 ? (
+                                                    <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-slate-100">
+                                                        <Image src={images[imageIndex] ?? images[0]} alt={center.name} fill unoptimized className="object-cover" />
+                                                    </div>
+                                                ) : (
+                                                    <div className="flex aspect-[4/3] items-center justify-center rounded-lg bg-slate-100 text-slate-500">
+                                                        <Wrench className="h-9 w-9" strokeWidth={1.5} aria-hidden="true" />
+                                                        <span className="sr-only">No service center image available</span>
+                                                    </div>
+                                                )}
                                                 {images.length > 1 && (
                                                     <div className="mt-2 flex gap-2 overflow-x-auto">
                                                         {images.map((url, index) => (

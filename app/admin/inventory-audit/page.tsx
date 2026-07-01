@@ -214,7 +214,7 @@ export default function InventoryAuditPage() {
                     <p className="text-gray-500 mt-1">Try adjusting your search or filters.</p>
                 </div>
             ) : (
-                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
+                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
                     {filteredModels.map((model, idx) => (
                         <Card key={`${model.brandId}-${model.slug}-${idx}`} className={cn(
                             "overflow-hidden group hover:shadow-md transition-all shadow-sm",

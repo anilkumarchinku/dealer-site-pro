@@ -288,7 +288,7 @@ export default function DomainSettingsPage() {
                     </CardHeader>
                     <CardContent>
                         <div className="bg-primary/10 border border-primary/20 rounded-xl p-4 mb-4">
-                            <p className="text-2xl font-mono font-bold text-blue-400">
+                            <p className="break-all text-xl font-mono font-bold text-blue-400 sm:text-2xl">
                                 {primaryDomain.domain}
                             </p>
                         </div>
@@ -350,8 +350,8 @@ export default function DomainSettingsPage() {
                                 key={d.id}
                                 className="flex flex-col gap-3 p-4 rounded-xl border border-border bg-muted/30 sm:flex-row sm:items-center sm:justify-between"
                             >
-                                <div>
-                                    <p className="font-mono font-semibold">{d.domain}</p>
+                                <div className="min-w-0">
+                                    <p className="break-all font-mono font-semibold">{d.domain}</p>
                                     <p className="text-xs text-muted-foreground capitalize mt-0.5">
                                         {d.type} domain · SSL {d.ssl_status}
                                     </p>
@@ -424,7 +424,7 @@ export default function DomainSettingsPage() {
                                         Add this <strong className="text-foreground">CNAME record</strong>:
                                     </p>
                                     <div className="rounded-xl border border-border bg-muted p-4 font-mono text-xs">
-                                        <div className="grid grid-cols-3 gap-4">
+                                        <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
                                             <div>
                                                 <p className="text-muted-foreground mb-1">Type</p>
                                                 <p className="font-bold">CNAME</p>
@@ -435,13 +435,13 @@ export default function DomainSettingsPage() {
                                             </div>
                                             <div>
                                                 <p className="text-muted-foreground mb-1">Points to / Value</p>
-                                                <div className="flex items-center gap-2">
-                                                    <p className="font-bold">{process.env.NEXT_PUBLIC_CNAME_TARGET ?? 'cname.vercel-dns.com'}</p>
+                                                <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
+                                                    <p className="break-all font-bold">{process.env.NEXT_PUBLIC_CNAME_TARGET ?? 'cname.vercel-dns.com'}</p>
                                                     <Button
                                                         variant="ghost"
                                                         size="sm"
                                                         onClick={handleCopyCname}
-                                                        className="h-6 px-1.5 text-primary hover:text-blue-400 font-normal text-xs gap-1"
+                                                        className="h-7 w-full px-1.5 text-primary hover:text-blue-400 font-normal text-xs gap-1 sm:h-6 sm:w-auto"
                                                     >
                                                         <Copy className="w-3 h-3" />
                                                         {copiedCname ? 'Copied!' : 'Copy'}
@@ -451,7 +451,7 @@ export default function DomainSettingsPage() {
                                         </div>
                                         <div className="mt-3 pt-3 border-t border-border text-muted-foreground">
                                             TTL: <span className="text-foreground">600</span>
-                                            <span className="ml-4 text-xs">
+                                            <span className="mt-1 block text-xs sm:ml-4 sm:mt-0 sm:inline">
                                                 For www subdomain: add a separate CNAME with host{' '}
                                                 <span className="text-foreground">www</span> pointing to the same value.
                                             </span>
@@ -672,7 +672,7 @@ export default function DomainSettingsPage() {
                     </CardTitle>
                 </CardHeader>
                 <CardContent>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm">
+                    <div className="grid grid-cols-1 gap-3 text-sm sm:grid-cols-2 md:grid-cols-4">
                         <div className="flex items-center gap-2">
                             <span className="w-2 h-2 rounded-full bg-amber-500" />
                             <span className="text-muted-foreground">DNS pending — awaiting A/CNAME</span>

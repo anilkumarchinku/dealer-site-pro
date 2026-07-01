@@ -1,13 +1,12 @@
 /**
  * BikeDetailHeroImage — Client component for hero image with fallback chain.
- * Tries each URL in imageUrls sequentially; shows placeholder on full failure.
+ * Tries each URL in imageUrls sequentially; hides media on full failure.
  */
 
 'use client';
 
 import { useState } from 'react';
 import Image from 'next/image';
-import { Bike } from 'lucide-react';
 
 interface BikeDetailHeroImageProps {
     imageUrls: string[];
@@ -26,13 +25,7 @@ export function BikeDetailHeroImage({ imageUrls, alt }: BikeDetailHeroImageProps
         }
     }
 
-    if (failed || imageUrls.length === 0) {
-        return (
-            <div className="flex items-center justify-center h-full">
-                <Bike className="w-16 h-16 text-gray-400" />
-            </div>
-        );
-    }
+    if (failed || imageUrls.length === 0) return null;
 
     return (
         <Image

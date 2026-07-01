@@ -181,7 +181,7 @@ export default function HelpPage() {
     const gettingStarted = buildGettingStarted({
         // Site is live once the dealer has a public slug.
         siteLive: !!(dealerSlug ?? data.slug),
-        hasBranding: !!(data.logo || data.brandLogo || data.heroImage),
+        hasBranding: !!(data.logo || data.brandLogo || data.heroImage || data.heroImages?.length),
         hasInventory: hasInventory ?? false,
         hasLeads: hasLeads ?? false,
         hasCustomDomain: hasCustomDomain ?? false,

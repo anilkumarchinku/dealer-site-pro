@@ -3,6 +3,7 @@ import { fetchDealerBySlug } from '@/lib/db/dealers'
 import { getUsedThreeWheelers } from '@/lib/db/three-wheelers'
 import { THREE_WHEELER_BRANDS } from '@/lib/data/three-wheelers'
 import { fetchAllCyeproInventoryAsCars } from '@/lib/services/cyepro-service'
+import { db } from '@/lib/db/query-helpers'
 import { notFound } from 'next/navigation'
 import { ModernTemplate } from '@/components/templates/ModernTemplate'
 import { LuxuryTemplate } from '@/components/templates/LuxuryTemplate'
@@ -13,6 +14,8 @@ import type { ThreeWheelerUsedVehicle } from '@/lib/types/three-wheeler'
 import type { Service } from '@/lib/types'
 import { brandLogoUrl as getBrandLogoUrl, firstVehicleHeroImage, resolveDealerHeroImage, resolveDealerLogoImage } from '@/lib/utils/site-assets'
 import { dealerSiteHref } from '@/lib/utils/domain'
+import { brandNameToId, isUsableVehicleImageUrl } from '@/lib/utils/brand-model-images'
+import { get3wVehicleImageUrls } from '@/lib/utils/resolve-3w-images'
 
 interface Props {
     params: Promise<{ slug: string }>
@@ -73,6 +76,112 @@ function usedThreeWheelersToCars(vehicles: ThreeWheelerUsedVehicle[]): Car[] {
     })
 }
 
+type GenericUsedThreeWheelerRow = {
+    id: string
+    make: string | null
+    model: string | null
+    variant: string | null
+    year: number | null
+    price_paise: number | null
+    image_url: string | null
+    image_urls: string[] | null
+    fuel_type: string | null
+    body_type: string | null
+    transmission: string | null
+    mileage_km: number | null
+    seating_capacity: number | null
+    condition: 'used' | 'certified_pre_owned' | 'new' | null
+}
+
+function isThreeWheelerGenericRow(row: GenericUsedThreeWheelerRow) {
+    const text = `${row.make ?? ''} ${row.model ?? ''} ${row.body_type ?? ''}`.toLowerCase()
+    return (
+        text.includes('auto') ||
+        text.includes('rickshaw') ||
+        text.includes('three-wheeler') ||
+        text.includes('three wheeler') ||
+        /\b(piaggio|ape|atul|altigreen|e alfa|treo|e rickshaw|montra|euler)\b/.test(text)
+    )
+}
+
+function genericUsedThreeWheelersToCars(rows: GenericUsedThreeWheelerRow[]): Car[] {
+    return rows.filter(isThreeWheelerGenericRow).map(row => {
+        const make = String(row.make ?? '').trim()
+        const model = String(row.model ?? '').trim()
+        const price = Math.round((row.price_paise ?? 0) / 100)
+        const uploadedImages = [
+            row.image_url,
+            ...(Array.isArray(row.image_urls) ? row.image_urls : []),
+        ].filter(isUsableVehicleImageUrl)
+        const resolvedImages = get3wVehicleImageUrls(brandNameToId(make, '3w'), model)
+        const imageUrls = Array.from(new Set([...resolvedImages, ...uploadedImages].filter(isUsableVehicleImageUrl)))
+
+        return {
+            id: row.id,
+            make,
+            model,
+            variant: row.variant ?? (row.mileage_km != null && row.mileage_km > 0 ? `${row.mileage_km.toLocaleString('en-IN')} km` : ''),
+            year: row.year ?? new Date().getFullYear(),
+            bodyType: row.body_type ?? 'Auto',
+            segment: 'B' as Car['segment'],
+            pricing: {
+                exShowroom: {
+                    min: price > 0 ? price : null,
+                    max: price > 0 ? price : null,
+                    currency: 'INR' as const,
+                },
+            },
+            engine: {
+                type: row.fuel_type === 'Electric' ? 'Electric' : row.fuel_type === 'CNG' ? 'CNG' : 'Petrol',
+                power: '—',
+                torque: '—',
+            },
+            transmission: { type: row.transmission || 'Manual' },
+            performance: {},
+            dimensions: {
+                seatingCapacity: row.seating_capacity ?? null,
+            },
+            features: { keyFeatures: [] },
+            images: {
+                hero: imageUrls[0] ?? '',
+                exterior: imageUrls,
+                interior: [],
+                _fallbackUrls: imageUrls,
+            } as Car['images'],
+            meta: { viewCount: 0, sourceVehicleId: row.id },
+            price: price > 0 ? `₹${price.toLocaleString('en-IN')}` : 'Price on request',
+            condition: row.condition === 'certified_pre_owned' ? 'certified_pre_owned' as const : 'used' as const,
+            vehicleCategory: '3w' as const,
+        }
+    })
+}
+
+async function getGenericUsedThreeWheelersForDealer(dealerId: string): Promise<Car[]> {
+    const baseQuery = (condition: 'used' | 'certified_pre_owned') => db()
+            .from('vehicles')
+            .select('id, make, model, variant, year, price_paise, image_url, image_urls, fuel_type, body_type, transmission, mileage_km, seating_capacity, condition')
+            .eq('dealer_id', dealerId)
+            .eq('status', 'available')
+            .eq('condition', condition)
+            .order('created_at', { ascending: false })
+            .range(0, 119)
+
+    const [usedResult, certifiedResult] = await Promise.all([
+        baseQuery('used'),
+        baseQuery('certified_pre_owned'),
+    ])
+
+    const error = usedResult.error ?? certifiedResult.error
+    const data = [...(usedResult.data ?? []), ...(certifiedResult.data ?? [])]
+
+    if (error) {
+        console.error('Failed to load generic used three-wheeler inventory', error)
+        return []
+    }
+
+    return genericUsedThreeWheelersToCars(data as GenericUsedThreeWheelerRow[])
+}
+
 // ── Metadata ──────────────────────────────────────────────────────────────────
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { slug } = await params
@@ -105,7 +214,10 @@ export default async function UsedThreeWheelersPage({ params }: Props) {
         ? await fetchAllCyeproInventoryAsCars(dealer.cyepro_api_key, {}, undefined, '3w')
         : []
 
-    const cars = [...usedThreeWheelersToCars(usedVehicles), ...cyeproCars]
+    const genericUsedCars = await getGenericUsedThreeWheelersForDealer(dealer.id)
+    const cars = Array.from(
+        new Map([...usedThreeWheelersToCars(usedVehicles), ...genericUsedCars, ...cyeproCars].map(car => [car.id, car])).values()
+    )
 
     const brands3w = dealer.brands.filter(b => THREE_WHEELER_BRANDS.includes(b))
     const primaryBrand = brands3w[0] ?? dealer.brands[0] ?? null

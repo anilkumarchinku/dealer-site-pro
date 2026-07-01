@@ -8,7 +8,7 @@
 
 import { useRef, useState, type FormEvent, type CSSProperties } from 'react';
 import { Send, CheckCircle2 } from 'lucide-react';
-import { getContrastText } from '@/lib/utils/color-contrast';
+import { getContrastText, getReadableAccent } from '@/lib/utils/color-contrast';
 import { isValidEmail, isValidIndianPhone, focusFirstInvalidField } from '@/lib/validations/client';
 
 interface ContactMessageFormProps {
@@ -24,6 +24,7 @@ export function ContactMessageForm({ dealerId, brandColor }: ContactMessageFormP
     const formRef = useRef<HTMLFormElement>(null);
 
     const ringStyle = { '--tw-ring-color': brandColor } as CSSProperties;
+    const brandAccent = getReadableAccent(brandColor);
     const inputCls =
         'w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900';
 
@@ -71,7 +72,7 @@ export function ContactMessageForm({ dealerId, brandColor }: ContactMessageFormP
     if (status === 'sent') {
         return (
             <div className="rounded-2xl border border-gray-200 bg-white p-8 text-center shadow-sm">
-                <CheckCircle2 className="mx-auto mb-3 h-14 w-14" style={{ color: brandColor }} />
+                <CheckCircle2 className="mx-auto mb-3 h-14 w-14" style={{ color: brandAccent }} />
                 <h2 className="text-xl font-bold text-gray-900">Message sent</h2>
                 <p className="mt-1 text-gray-600">Thanks for reaching out — our team will get back to you soon.</p>
             </div>

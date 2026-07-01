@@ -255,7 +255,7 @@ export default function EditVehiclePage() {
     return (
         <form onSubmit={handleSubmit} className="mx-auto max-w-4xl space-y-6 pb-8">
             <div className="rounded-2xl border border-border/70 bg-card/90 p-5 shadow-sm dark:bg-card/80 sm:p-6 flex items-start justify-between gap-4">
-                <div className="flex items-center gap-3">
+                <div className="flex flex-wrap items-center gap-3">
                     <Button variant="ghost" size="icon" asChild className="rounded-xl">
                         <Link href="/dashboard/inventory" aria-label="Back to inventory"><ArrowLeft className="h-4 w-4" /></Link>
                     </Button>

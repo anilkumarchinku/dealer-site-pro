@@ -22,7 +22,7 @@ export default function ResetPage() {
         <main className="flex min-h-screen items-center justify-center bg-muted px-4 py-10 text-foreground">
             <section className="grid w-full max-w-5xl overflow-hidden rounded-3xl border border-border bg-card shadow-[0_24px_90px_rgba(7,20,47,0.12)] lg:grid-cols-[0.95fr_1.05fr]">
                 <div className="bg-[#071A3D] p-8 text-white sm:p-10">
-                    <BrandLogo className="[&>span]:text-white" />
+                    <BrandLogo className="[&>span]:text-white [&_.brand-logo-accent]:text-[#C79A5B]" />
                     <div className="mt-16 max-w-md">
                         <p className="mb-3 text-xs font-black uppercase tracking-[0.24em] text-blue-300">
                             Fresh start

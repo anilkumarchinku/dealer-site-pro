@@ -23,6 +23,7 @@ import {
 import { sendLeadSmsToDealer } from '@/lib/services/sms-service'
 import { forwardLeadToCyepro } from '@/lib/services/cyepro-service'
 import { sendLeadConfirmationEmail, sendLeadNotificationEmail } from '@/lib/services/email-service'
+import { recordAnalyticsEvent } from '@/lib/services/analytics-tracking-service'
 
 import { logger } from '@/lib/utils/logger'
 import { leadSchema, formatZodErrors } from '@/lib/validations/schemas'
@@ -386,6 +387,14 @@ export async function POST(request: NextRequest) {
                 leadSource:    safeSource,
             }
         ).catch(() => { /* already logged inside */ })
+
+        recordAnalyticsEvent({
+            supabase,
+            dealerId: dealer_id,
+            eventType: 'lead',
+            page: referer,
+            source: referer,
+        }).catch((error) => logger.warn('Lead analytics update failed:', error))
 
         return NextResponse.json({ success: true, leadId: data.id })
     } catch (err) {

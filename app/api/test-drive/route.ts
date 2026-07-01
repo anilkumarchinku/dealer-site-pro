@@ -9,6 +9,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createAdminClient } from '@/lib/supabase-server';
 import { sendTestDriveConfirmationEmail, sendTestDriveNotificationEmail } from '@/lib/services/email-service';
+import { recordAnalyticsEvent } from '@/lib/services/analytics-tracking-service';
 import { testDriveSchema, formatZodErrors } from '@/lib/validations/schemas';
 import { logger } from '@/lib/utils/logger';
 import { rateLimitOrNull } from '@/lib/utils/rate-limiter';
@@ -168,6 +169,14 @@ export async function POST(req: NextRequest) {
                 vehicleType: vehicle_type,
             }).catch(() => { /* already logged inside */ });
         }
+
+        recordAnalyticsEvent({
+            supabase,
+            dealerId: dealer_id,
+            eventType: 'test_drive',
+            page: referer,
+            source: referer,
+        }).catch((error) => logger.warn('[test-drive] analytics update failed:', error));
 
         return NextResponse.json(
             { success: true, leadId: lead.id, bookingId: booking.id },

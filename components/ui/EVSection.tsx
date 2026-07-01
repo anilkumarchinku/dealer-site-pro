@@ -14,7 +14,7 @@ import { useState } from 'react';
 import { Zap, MapPin, IndianRupee, ChevronDown, ChevronUp } from 'lucide-react';
 import type { Car } from '@/lib/types/car';
 import { Button } from '@/components/ui/button';
-import { getContrastText } from '@/lib/utils/color-contrast';
+import { getContrastText, getReadableAccent } from '@/lib/utils/color-contrast';
 
 // Known electric brands — used to gate EV charging map display
 const ELECTRIC_BRAND_KEYWORDS = [
@@ -58,11 +58,12 @@ function RangeCalculator({ brandColor }: { brandColor: string }) {
     const daysPerCharge = Math.round(selectedRange / kmPerDay);
     const chargesPerMonth = Math.round(30 / daysPerCharge);
     const annualSavings = Math.round((kmPerDay * 365 * 7) / 25);  // vs petrol at ₹105/l, 15 kmpl
+    const brandAccent = getReadableAccent(brandColor);
 
     return (
         <div className="bg-white rounded-2xl border border-gray-200 p-6">
             <div className="flex items-center gap-2 mb-4">
-                <Zap className="w-5 h-5" style={{ color: brandColor }} />
+                <Zap className="w-5 h-5" style={{ color: brandAccent }} />
                 <h3 className="font-bold text-gray-900">Range Calculator</h3>
             </div>
 
@@ -70,7 +71,7 @@ function RangeCalculator({ brandColor }: { brandColor: string }) {
                 <div>
                     <div className="flex justify-between text-xs font-medium text-gray-600 mb-1">
                         <span>Daily driving distance</span>
-                        <span className="font-bold" style={{ color: brandColor }}>{kmPerDay} km/day</span>
+                        <span className="font-bold" style={{ color: brandAccent }}>{kmPerDay} km/day</span>
                     </div>
                     <input
                         type="range" min={10} max={150} step={5} value={kmPerDay}
@@ -84,7 +85,7 @@ function RangeCalculator({ brandColor }: { brandColor: string }) {
                 <div>
                     <div className="flex justify-between text-xs font-medium text-gray-600 mb-1">
                         <span>EV Range (ARAI)</span>
-                        <span className="font-bold" style={{ color: brandColor }}>{selectedRange} km</span>
+                        <span className="font-bold" style={{ color: brandAccent }}>{selectedRange} km</span>
                     </div>
                     <input
                         type="range" min={150} max={750} step={25} value={selectedRange}
@@ -97,11 +98,11 @@ function RangeCalculator({ brandColor }: { brandColor: string }) {
 
                 <div className="grid grid-cols-3 gap-3 pt-2">
                     <div className="text-center bg-gray-50 rounded-xl p-3">
-                        <p className="text-xl font-black" style={{ color: brandColor }}>{daysPerCharge}</p>
+                        <p className="text-xl font-black" style={{ color: brandAccent }}>{daysPerCharge}</p>
                         <p className="text-[10px] text-gray-600 mt-0.5">Days per charge</p>
                     </div>
                     <div className="text-center bg-gray-50 rounded-xl p-3">
-                        <p className="text-xl font-black" style={{ color: brandColor }}>{chargesPerMonth}</p>
+                        <p className="text-xl font-black" style={{ color: brandAccent }}>{chargesPerMonth}</p>
                         <p className="text-[10px] text-gray-600 mt-0.5">Charges/month</p>
                     </div>
                     <div className="text-center bg-emerald-50 rounded-xl p-3">
@@ -117,6 +118,7 @@ function RangeCalculator({ brandColor }: { brandColor: string }) {
 
 function IncentivesAccordion({ brandColor }: { brandColor: string }) {
     const [open, setOpen] = useState(false);
+    const brandAccent = getReadableAccent(brandColor);
     return (
         <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden">
             <button
@@ -124,7 +126,7 @@ function IncentivesAccordion({ brandColor }: { brandColor: string }) {
                 className="w-full flex items-center justify-between px-6 py-4 text-left"
             >
                 <div className="flex items-center gap-2">
-                    <IndianRupee className="w-5 h-5" style={{ color: brandColor }} />
+                    <IndianRupee className="w-5 h-5" style={{ color: brandAccent }} />
                     <span className="font-bold text-gray-900">Govt. EV Incentives & Subsidies</span>
                 </div>
                 {open ? <ChevronUp className="w-4 h-4 text-gray-600" /> : <ChevronDown className="w-4 h-4 text-gray-600" />}
@@ -137,7 +139,7 @@ function IncentivesAccordion({ brandColor }: { brandColor: string }) {
                                 <p className="text-sm font-semibold text-gray-900">{inc.title}</p>
                                 <p className="text-xs text-gray-600 mt-0.5">{inc.note}</p>
                             </div>
-                            <span className="text-sm font-bold shrink-0" style={{ color: brandColor }}>{inc.amount}</span>
+                            <span className="text-sm font-bold shrink-0" style={{ color: brandAccent }}>{inc.amount}</span>
                         </div>
                     ))}
                     <p className="text-[11px] text-gray-600 pt-1">Subsidies subject to change. Verify with RTO / dealer.</p>
@@ -164,14 +166,15 @@ export function EVSection({ cars, contactInfo, brandColor = '#10b981', brands }:
 
     const city = contactInfo.city?.trim() || contactInfo.address?.trim() || 'India';
     const mapQuery = `EV charging station near ${city}`;
+    const brandAccent = getReadableAccent(brandColor);
 
     return (
         <section className="py-16 bg-gradient-to-br from-emerald-50 to-white">
             <div className="max-w-7xl mx-auto px-4">
                 {/* Header */}
                 <div className="flex items-center gap-2 mb-2">
-                    <Zap className="w-5 h-5" style={{ color: brandColor }} />
-                    <span className="text-sm font-semibold uppercase tracking-wider" style={{ color: brandColor }}>Electric Vehicles</span>
+                    <Zap className="w-5 h-5" style={{ color: brandAccent }} />
+                    <span className="text-sm font-semibold uppercase tracking-wider" style={{ color: brandAccent }}>Electric Vehicles</span>
                 </div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-2">Go Electric</h2>
                 <p className="text-gray-600 mb-8 max-w-xl">

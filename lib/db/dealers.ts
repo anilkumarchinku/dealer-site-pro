@@ -151,6 +151,7 @@ export interface DealerPublicData {
     cyepro_api_key: string | null
     logo_url: string | null
     hero_image_url: string | null
+    hero_image_urls: string[]
     /** Primary vehicle category: car | two-wheeler | three-wheeler */
     vehicle_type: string | null
     /** Active promotions/offers for this dealer */
@@ -164,6 +165,27 @@ export type FetchDealerBySlugOptions = {
      * call dealer-scoped providers and will not pass the secret to client props.
      */
     includePrivate?: boolean
+}
+
+const PUBLIC_DEALER_PROFILE_SELECT = 'id, dealership_name, tagline, phone, whatsapp, email, location, full_address, slug, style_template, onboarding_complete, sells_new_cars, sells_used_cars, sells_two_wheelers, sells_three_wheelers, vehicle_type, logo_url, hero_image_url, hero_image_urls, branches'
+const LEGACY_PUBLIC_DEALER_PROFILE_SELECT = 'id, dealership_name, tagline, phone, whatsapp, email, location, full_address, slug, style_template, onboarding_complete, sells_new_cars, sells_used_cars, sells_two_wheelers, sells_three_wheelers, vehicle_type, logo_url, hero_image_url, branches'
+
+function isMissingHeroImagesColumn(error: { code?: string; message?: string; details?: string } | null | undefined) {
+    const text = `${error?.code ?? ''} ${error?.message ?? ''} ${error?.details ?? ''}`.toLowerCase()
+    return text.includes('hero_image_urls') && (text.includes('column') || text.includes('schema cache') || text.includes('does not exist'))
+}
+
+function normalizeHeroImageUrls(value: unknown, fallback?: string | null) {
+    const rawValues = Array.isArray(value)
+        ? value
+        : typeof value === 'string'
+            ? value.split(',')
+            : []
+    const images = rawValues
+        .map(item => typeof item === 'string' ? item.trim() : '')
+        .filter(Boolean)
+    const first = fallback?.trim()
+    return Array.from(new Set([...(first ? [first] : []), ...images])).slice(0, 5)
 }
 
 function getSupabaseUrl(): string | undefined {
@@ -274,10 +296,22 @@ async function fetchDealerCyeproApiKey(dealerId: string): Promise<string | null>
 async function findDealerByExactSlug(supabase: SupabaseClient, slug: string) {
     const { data, error } = await supabase
         .from('public_dealer_site_profiles')
-        .select('id, dealership_name, tagline, phone, whatsapp, email, location, full_address, slug, style_template, onboarding_complete, sells_new_cars, sells_used_cars, sells_two_wheelers, sells_three_wheelers, vehicle_type, logo_url, hero_image_url, branches')
+        .select(PUBLIC_DEALER_PROFILE_SELECT)
         .eq('slug', slug)
         .single()
-    if (error || !data) return null
+    if (error) {
+        if (!isMissingHeroImagesColumn(error)) return null
+
+        const legacyResult = await supabase
+            .from('public_dealer_site_profiles')
+            .select(LEGACY_PUBLIC_DEALER_PROFILE_SELECT)
+            .eq('slug', slug)
+            .single()
+
+        if (legacyResult.error || !legacyResult.data) return null
+        return { ...legacyResult.data, hero_image_urls: [] }
+    }
+    if (!data) return null
     return data
 }
 
@@ -509,6 +543,7 @@ export async function fetchDealerBySlug(
         cyepro_api_key:  cyeproApiKey,
         logo_url:        dealer.logo_url       ?? null,
         hero_image_url:  dealer.hero_image_url ?? null,
+        hero_image_urls: normalizeHeroImageUrls(dealer.hero_image_urls, dealer.hero_image_url),
         vehicle_type:    dealer.vehicle_type    ?? null,
         offers:          filteredOffers,
     }

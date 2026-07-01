@@ -10,12 +10,14 @@
  */
 
 import fourWColorHeroFallbacks from '@/lib/data/generated/4w-color-hero-fallbacks.json';
+import fourWAppAssets from '@/lib/data/generated/4w-app-assets.json';
 import twoWColorHeroFallbacks from '@/lib/data/generated/2w-color-hero-fallbacks.json';
 
 const SUPABASE_STORAGE_URL =
     "https://llsvbyeumrfngjvbedbz.supabase.co/storage/v1/object/public/vehicle-images";
 
 const IMAGE_EXTENSIONS = ["jpg", "png", "webp"] as const;
+const FOUR_W_APP_ASSETS = new Set(fourWAppAssets as string[]);
 
 const BAD_IMAGE_URL_MARKERS = [
     "bikedekho-logo",
@@ -38,6 +40,8 @@ const BAD_IMAGE_PATHS = new Set([
     "/data/brand-model-images/2w/bgauss/bg-ruv-350.jpg",
     "/data/brand-model-images/2w/bgauss/c12.jpg",
     "/data/brand-model-images/2w/bounce-infinity/infinity-e1.jpg",
+    "/data/brand-model-images/2w-colors/ducati-india/xdiavel-v4/black-lava.jpg",
+    "/data/brand-model-images/2w-colors/ducati-india/xdiavel-v4/burning-red.jpg",
     "/data/brand-model-images/2w/evolet/pony.jpg",
     "/data/brand-model-images/2w/ferrato/disruptor.jpg",
     "/data/brand-model-images/2w/joy-e-bike/gen-nxt.jpg",
@@ -75,6 +79,7 @@ const TWO_W_CLEAN_HERO_OVERRIDES: Record<string, string> = {
 
 const TWO_W_MODEL_IMAGE_ALIASES: Record<string, string[]> = {
     "bounce-infinity/infinity-e1": ["e1", "e1-plus"],
+    "hero-motocorp/motocorp-ltd-karizma-bsiii": ["karizma-xmr"],
 };
 
 const FOUR_W_GALLERY_ALIASES: Record<string, string> = {
@@ -95,6 +100,8 @@ const FOUR_W_GALLERY_ALIASES: Record<string, string> = {
     "mercedes-benz/v-class": "mercedes-benz/v-class",
     "mercedes-benz/eqg": "mercedes-benz/g-class-electric",
     "mercedes-benz/amg-gt-coupe": "mercedes-benz/amg-gt-4-door-coupe",
+    "ferrari/12cilindri": "ferrari/amalfi",
+    "ferrari/ferrari-12cilindri": "ferrari/amalfi",
     "toyota/fortuner": "toyota/Toyota_Fortuner",
     "toyota/urban-cruiser-hyryder": "toyota/hyryder",
     "toyota/rumion": "toyota/Toyota_Rumion",
@@ -110,6 +117,12 @@ const FOUR_W_COLOR_HERO_FALLBACKS = Object.fromEntries(
         value,
     ])
 );
+
+const KNOWN_FOUR_W_BRAND_IDS = new Set([
+    ...Object.keys(FOUR_W_COLOR_HERO_FALLBACKS).map((key) => key.split("/")[0]),
+    ...Object.keys(FOUR_W_GALLERY_ALIASES).map((key) => key.split("/")[0]),
+    ...Object.values(FOUR_W_GALLERY_ALIASES).map((key) => key.split("/")[0]),
+]);
 
 function normalize4WGalleryUrl(url: string, brandId: string): string {
     return url.replace(
@@ -206,13 +219,16 @@ export function getScrapedImageUrls(
 ): string[] {
     const slug = modelToSlug(model);
     if (vehicleCategory === "4w") {
+        if (!KNOWN_FOUR_W_BRAND_IDS.has(brandId.toLowerCase())) return [];
+
         const urls: string[] = [];
+        const colorHero = get4WColorHeroFallback(brandId, model);
+        if (colorHero) urls.push(colorHero);
+
         for (const modelSlug of get4WModelSlugCandidates(brandId, model)) {
             const base = `/data/brand-model-images/4w/${brandId}/${modelSlug}`;
             IMAGE_EXTENSIONS.forEach((ext) => urls.push(`${base}.${ext}`));
         }
-        const colorHero = get4WColorHeroFallback(brandId, model);
-        if (colorHero) urls.push(colorHero);
 
         // Fallback: strip common suffixes (tour, cargo, gen, edition) to
         // try the base model image (e.g. "wagon-r-tour" → "wagon-r")
@@ -238,8 +254,13 @@ export function getScrapedImageUrls(
     const urls = [
         cleanHero,
         ...localSlugs.flatMap((localSlug) => {
-            const localBase = `/data/brand-model-images/${vehicleCategory}/${brandId}/${localSlug}`;
-            return IMAGE_EXTENSIONS.map((ext) => `${localBase}.${ext}`);
+            const localBases = vehicleCategory === "3w"
+                ? [
+                    `/images/3w/${brandId}/${localSlug}`,
+                    `/data/brand-model-images/3w/${brandId}/${localSlug}`,
+                ]
+                : [`/data/brand-model-images/${vehicleCategory}/${brandId}/${localSlug}`];
+            return localBases.flatMap((localBase) => IMAGE_EXTENSIONS.map((ext) => `${localBase}.${ext}`));
         }),
     ].filter(isUsableVehicleImageUrl);
 
@@ -274,11 +295,16 @@ export function getScrapedImageUrls(
             }
         }
 
-        const dir3w = `/data/brand-model-images/3w/${brandId}`;
+        const dirs3w = [
+            `/images/3w/${brandId}`,
+            `/data/brand-model-images/3w/${brandId}`,
+        ];
         for (const fb of fallbackSlugs) {
-            IMAGE_EXTENSIONS.forEach((ext) => {
-                const url = `${dir3w}/${fb}.${ext}`;
-                if (isUsableVehicleImageUrl(url)) urls.push(url);
+            dirs3w.forEach((dir3w) => {
+                IMAGE_EXTENSIONS.forEach((ext) => {
+                    const url = `${dir3w}/${fb}.${ext}`;
+                    if (isUsableVehicleImageUrl(url)) urls.push(url);
+                });
             });
         }
     }
@@ -302,7 +328,9 @@ export function getAppAssetImageUrls(
 
     return get4WModelSlugCandidates(brandId, model).flatMap((slug) => {
         const base = `/assets/cars/${brandId}/${slug}`;
-        return IMAGE_EXTENSIONS.map((ext) => `${base}.${ext}`);
+        return IMAGE_EXTENSIONS
+            .map((ext) => `${base}.${ext}`)
+            .filter((url) => FOUR_W_APP_ASSETS.has(url));
     });
 }
 
@@ -315,6 +343,7 @@ export function getVehicleImageUrls(
     const curatedAssets = getAppAssetImageUrls(vehicleCategory, brandId, model);
     const scrapedAssets = getScrapedImageUrls(vehicleCategory, brandId, model);
     const normalizedPrimary = isUsableVehicleImageUrl(primaryImage) ? primaryImage : null;
+    const preferredPrimary = normalizedPrimary;
     const preferredColorHero = vehicleCategory === "2w"
         ? get2WColorHeroFallback(brandId, model)
         : vehicleCategory === "4w"
@@ -331,11 +360,10 @@ export function getVehicleImageUrls(
 
         return [...new Set([
             ...[
+                preferredPrimary,
                 ...curatedAssets,
                 ...localRepoAssets,
-                normalizedPrimary,
                 preferredColorHero,
-                ...(normalizedPrimary?.startsWith("/assets/") ? [normalizedPrimary] : []),
                 ...remoteFallbackAssets,
             ].filter(isUsableVehicleImageUrl),
         ])];
@@ -343,10 +371,10 @@ export function getVehicleImageUrls(
 
     return [...new Set([
         ...[
+            preferredPrimary,
             preferredColorHero,
             ...scrapedAssets,
             ...curatedAssets,
-            normalizedPrimary,
         ].filter(isUsableVehicleImageUrl),
     ])];
 }
@@ -359,8 +387,8 @@ export function getScrapedImageFallback(
     vehicleCategory: "2w" | "3w" | "4w",
     brandId: string,
     model: string
-): string {
-    return getScrapedImageUrls(vehicleCategory, brandId, model).find(isUsableVehicleImageUrl) ?? "/placeholder-car.jpg";
+): string | null {
+    return getScrapedImageUrls(vehicleCategory, brandId, model).find(isUsableVehicleImageUrl) ?? null;
 }
 
 /**
@@ -517,7 +545,9 @@ const BRAND_FOLDER_MAP_4W: Record<string, string> = {
     "force": "force",
     "force motors": "force-motors",
     "honda": "honda",
+    "honda city": "honda",
     "hyundai": "hyundai",
+    "hyundai creta": "hyundai",
     "isuzu": "isuzu",
     "jaguar": "jaguar",
     "jeep": "jeep",

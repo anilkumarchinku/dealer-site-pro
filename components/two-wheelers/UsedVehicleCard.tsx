@@ -2,10 +2,10 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { Bike } from "lucide-react"
 import { FadeInImage } from "@/components/ui/FadeInImage"
 import type { TwoWheelerUsedVehicle } from "@/lib/types/two-wheeler"
 import { useSitePrefix } from "@/lib/hooks/useSitePrefix"
+import { brandNameToId, getVehicleImageUrls } from "@/lib/utils/brand-model-images"
 
 interface Props {
     vehicle: TwoWheelerUsedVehicle
@@ -19,47 +19,51 @@ const GRADE_COLORS = {
     C: "bg-orange-100 text-orange-700 border-orange-300",
 }
 
-/**
- * Consistent "no image available" placeholder — matches the treatment used
- * across all two-wheeler cards (see VehicleCard).
- */
-function NoImagePlaceholder() {
-    return (
-        <div
-            role="img"
-            aria-label="No image available"
-            className="flex h-full w-full items-center justify-center bg-gray-100 border-b border-gray-200"
-        >
-            <Bike className="h-10 w-10 text-gray-400" strokeWidth={1.5} aria-hidden="true" />
-            <span className="sr-only">No image available</span>
-        </div>
-    )
+function modelImageSourceKind(src: string | null | undefined) {
+    const value = String(src ?? "").toLowerCase()
+    if (
+        value.includes("/storage/v1/object/public/dealer-assets/vehicles/") ||
+        value.includes("/storage/v1/object/public/dealer-assets/sell-requests/") ||
+        value.includes("/storage/v1/object/public/vehicle-images/")
+    ) {
+        return "inventory-photo"
+    }
+    return "resolved-model"
 }
 
 export function UsedVehicleCard({ vehicle, slug, onLead }: Props) {
     const prefix = useSitePrefix(slug)
+    const [imgIdx, setImgIdx] = useState(0)
     const [imgFailed, setImgFailed] = useState(false)
+    const imageUrls = getVehicleImageUrls("2w", brandNameToId(vehicle.brand, "2w"), vehicle.model, vehicle.images[0])
+    const image = imageUrls[imgIdx] ?? null
     const hasOffer = typeof vehicle.offer_price_paise === "number" && vehicle.offer_price_paise > 0 && vehicle.offer_price_paise < vehicle.price_paise
     const price = ((hasOffer ? vehicle.offer_price_paise! : vehicle.price_paise) / 100).toLocaleString("en-IN")
     const originalPrice = (vehicle.price_paise / 100).toLocaleString("en-IN")
 
+    if (!image || imgFailed) return null
+
+    function handleImgError() {
+        if (imgIdx < imageUrls.length - 1) {
+            setImgIdx((current) => current + 1)
+            return
+        }
+        setImgFailed(true)
+    }
+
     return (
-        <div className="bg-card border border-border rounded-2xl overflow-hidden hover:shadow-md transition-shadow group">
+        <div data-vehicle-card="true" data-model-image-source={modelImageSourceKind(image)} className="bg-card border border-border rounded-2xl overflow-hidden hover:shadow-md transition-shadow group">
             {/* Image */}
             <div className="relative aspect-[16/10] bg-gray-50 overflow-hidden">
-                {vehicle.images[0] && !imgFailed ? (
-                    <FadeInImage
-                        src={vehicle.images[0]}
-                        alt={`${vehicle.brand} ${vehicle.model}`}
-                        fill
-                        unoptimized
-                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                        className="object-contain group-hover:scale-105 transition-transform duration-300"
-                        onError={() => setImgFailed(true)}
-                    />
-                ) : (
-                    <NoImagePlaceholder />
-                )}
+                <FadeInImage
+                    src={image}
+                    alt={`${vehicle.brand} ${vehicle.model}`}
+                    fill
+                    unoptimized
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-contain group-hover:scale-105 transition-transform duration-300"
+                    onError={handleImgError}
+                />
                 {vehicle.certified_pre_owned && (
                     <div className="absolute top-3 left-3">
                         <span className="bg-primary text-primary-foreground text-[10px] font-bold px-1.5 py-0.5 rounded">CPO</span>

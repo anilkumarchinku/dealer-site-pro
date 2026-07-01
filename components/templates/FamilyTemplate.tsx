@@ -31,7 +31,7 @@ import CompareBar from '@/components/cars/CompareBar';
 import { WishlistDrawer } from '@/components/ui/WishlistDrawer';
 import { EVSection } from '@/components/ui/EVSection';
 import { generateTemplateConfig } from '@/lib/templates';
-import { getContrastText } from '@/lib/utils/color-contrast';
+import { getContrastText, getReadableAccent } from '@/lib/utils/color-contrast';
 import { buildTemplateDetailBasePath, buildTemplateSiteBase } from '@/lib/utils/template-site-paths';
 import {
     ArrowRight,
@@ -158,6 +158,7 @@ export function FamilyTemplate({
 
     const config = generateTemplateConfig(brandName, 'family');
     const { brandColors } = config;
+    const brandAccent = getReadableAccent(brandColors.primary);
 
     useEffect(() => {
         const handleScroll = () => setIsScrolled(window.scrollY > 50);
@@ -270,9 +271,9 @@ export function FamilyTemplate({
                             <span className="max-w-[180px] text-lg font-semibold leading-tight text-gray-900 xl:max-w-none xl:text-xl">{dealerName}</span>
                         </div>
                         <div className="hidden xl:flex flex-1 items-center justify-center gap-4 px-4 2xl:gap-6">
-                            <button onClick={() => setActiveTab('home')} className="whitespace-nowrap text-sm font-medium hover:opacity-70" style={activeTab === 'home' ? { color: brandColors.primary } : {}}>Home</button>
+                            <button onClick={() => setActiveTab('home')} className="whitespace-nowrap text-sm font-medium hover:opacity-70" style={activeTab === 'home' ? { color: brandAccent } : {}}>Home</button>
                             {showInventoryTab && (
-                                <button onClick={() => setActiveTab('inventory')} className="whitespace-nowrap text-sm font-medium hover:opacity-70" style={activeTab === 'inventory' ? { color: brandColors.primary } : {}}>Inventory</button>
+                                <button onClick={() => setActiveTab('inventory')} className="whitespace-nowrap text-sm font-medium hover:opacity-70" style={activeTab === 'inventory' ? { color: brandAccent } : {}}>Inventory</button>
                             )}
                             <button onClick={() => navigateTo('contact')} className="whitespace-nowrap text-sm font-medium hover:opacity-70">Contact</button>
                             <button onClick={() => setNavEMIOpen(true)} className="whitespace-nowrap text-sm font-medium hover:opacity-70">EMI Calc</button>
@@ -287,7 +288,7 @@ export function FamilyTemplate({
                                 <Button
                                     className="hidden rounded-full bg-white px-4 lg:flex"
                                     variant="outline"
-                                    style={{ borderColor: brandColors.primary, color: brandColors.primary }}
+                                    style={{ borderColor: brandColors.primary, color: brandAccent }}
                                     asChild
                                 >
                                     <a href={sellVehicleHref}>Sell Your Car</a>
@@ -296,7 +297,7 @@ export function FamilyTemplate({
                             <Button
                                 className="hidden rounded-full bg-white px-4 lg:flex"
                                 variant="outline"
-                                style={{ borderColor: brandColors.primary, color: brandColors.primary }}
+                                style={{ borderColor: brandColors.primary, color: brandAccent }}
                                 onClick={() => setEnquireSidebarOpen(true)}
                             >
                                 <MessageSquare className="w-4 h-4 mr-2" />
@@ -395,7 +396,7 @@ export function FamilyTemplate({
                             <div className="grid lg:grid-cols-2 gap-12 items-center">
                                 <div className="space-y-6">
                                     <div className="flex flex-wrap items-center gap-3 animate-fade-in-up animate-delay-100">
-                                        <div className="inline-block px-4 py-2 rounded-full text-sm font-semibold" style={{ backgroundColor: `${brandColors.primary}20`, color: brandColors.primary }}>
+                                        <div className="inline-block px-4 py-2 rounded-full text-sm font-semibold" style={{ backgroundColor: brandColors.primary, color: getContrastText(brandColors.primary) }}>
                                             {tagline}
                                         </div>
                                         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border text-sm font-semibold text-gray-700" style={{ borderColor: `${brandColors.primary}40`, backgroundColor: `${brandColors.primary}08` }}>
@@ -412,7 +413,7 @@ export function FamilyTemplate({
                                                 <ArrowRight className="ml-2 w-5 h-5" />
                                             </Button>
                                         )}
-                                        <Button size="lg" variant="outline" className="rounded-full bg-white hover-lift" style={{ borderColor: brandColors.primary, color: brandColors.primary }} asChild>
+                                        <Button size="lg" variant="outline" className="rounded-full bg-white hover-lift" style={{ borderColor: brandColors.primary, color: brandAccent }} asChild>
                                             <a href="#contact">Talk to Our Team</a>
                                         </Button>
                                     </div>
@@ -433,11 +434,11 @@ export function FamilyTemplate({
                     {heroStats.length > 0 && (
                         <section className="py-16 border-y border-gray-200">
                             <div className="max-w-7xl mx-auto px-4">
-                                <Reveal className={`grid gap-8 ${heroStats.length === 1 ? 'grid-cols-1' : heroStats.length === 2 ? 'grid-cols-2' : 'grid-cols-3'}`}>
+                                <Reveal className={`grid gap-6 sm:gap-8 ${heroStats.length === 1 ? 'grid-cols-1' : heroStats.length === 2 ? 'grid-cols-1 sm:grid-cols-2' : 'grid-cols-1 sm:grid-cols-3'}`}>
                                     {heroStats.map((stat, i) => (
                                         <div key={i} className="group text-center">
                                             <div className="w-12 h-12 mx-auto mb-3 rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-110" style={{ backgroundColor: `${brandColors.primary}20` }}>
-                                                <stat.icon className="w-6 h-6" style={{ color: brandColors.primary }} />
+                                                <stat.icon className="w-6 h-6" style={{ color: brandAccent }} />
                                             </div>
                                             <p className="text-3xl font-bold"><CountUp value={stat.value} /></p>
                                             <p className="text-sm text-gray-600">{stat.label}</p>
@@ -453,7 +454,7 @@ export function FamilyTemplate({
                         <section className="py-16 bg-gray-50">
                             <div className="max-w-7xl mx-auto px-4">
                                 <Reveal className="text-center mb-10">
-                                    <span className="font-semibold uppercase tracking-wider text-sm" style={{ color: brandColors.primary }}>
+                                    <span className="font-semibold uppercase tracking-wider text-sm" style={{ color: brandAccent }}>
                                         What We Offer
                                     </span>
                                     <h2 className="text-3xl font-bold mt-2">Services for Your Family</h2>
@@ -474,7 +475,7 @@ export function FamilyTemplate({
                                                     className="w-12 h-12 shrink-0 rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-110"
                                                     style={{ backgroundColor: `${brandColors.primary}20` }}
                                                 >
-                                                    <Icon className="w-6 h-6" style={{ color: brandColors.primary }} aria-hidden="true" />
+                                                    <Icon className="w-6 h-6" style={{ color: brandAccent }} aria-hidden="true" />
                                                 </div>
                                                 <div>
                                                     <p className="font-bold text-gray-900">{meta.label}</p>
@@ -492,12 +493,12 @@ export function FamilyTemplate({
                     <section className="py-20 bg-gray-50">
                         <div className="max-w-7xl mx-auto px-4">
                             <Reveal className="text-center mb-12">
-                                <span className="font-semibold uppercase tracking-wider text-sm" style={{ color: brandColors.primary }}>
+                                <span className="font-semibold uppercase tracking-wider text-sm" style={{ color: brandAccent }}>
                                     Our Collection
                                 </span>
                                 <h2 className="text-4xl font-bold mt-2">Family-Friendly Vehicles</h2>
                             </Reveal>
-                            <CarGrid cars={featuredCars} brandColor={brandColors.primary} light summaryOnly detailBasePath={detailBasePath} dealerPhone={contactInfo.phone} dealerId={dealerId} />
+                            <CarGrid cars={featuredCars} brandColor={brandColors.primary} light summaryOnly detailBasePath={detailBasePath} dealerPhone={contactInfo.phone} dealerId={dealerId} showWishlistAction />
                             {showInventoryTab && (
                                 <div className="text-center mt-8">
                                     <Button variant="outline" size="lg" className="rounded-full bg-white text-gray-700 border-gray-300 hover:bg-gray-100" onClick={() => setActiveTab('inventory')}>
@@ -513,7 +514,7 @@ export function FamilyTemplate({
                     <section className="py-16 bg-white">
                         <div className="max-w-4xl mx-auto px-4">
                             <Reveal className="text-center mb-8">
-                                <span className="font-semibold uppercase tracking-wider text-sm" style={{ color: brandColors.primary }}>
+                                <span className="font-semibold uppercase tracking-wider text-sm" style={{ color: brandAccent }}>
                                     Finance Tool
                                 </span>
                                 <h2 className="text-3xl font-bold mt-2">EMI Calculator</h2>
@@ -536,7 +537,7 @@ export function FamilyTemplate({
                                 ].map((f, i) => (
                                     <Reveal key={i} direction="up" delay={(i % 6) * 70} className="group p-6 rounded-2xl bg-gray-50 hover-lift hover-scale">
                                         <div className="w-12 h-12 rounded-full flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110" style={{ backgroundColor: `${brandColors.primary}20` }}>
-                                            <f.icon className="w-6 h-6" style={{ color: brandColors.primary }} />
+                                            <f.icon className="w-6 h-6" style={{ color: brandAccent }} />
                                         </div>
                                         <h3 className="text-xl font-bold mb-2">{f.title}</h3>
                                         <p className="text-gray-600">{f.desc}</p>
@@ -591,7 +592,7 @@ export function FamilyTemplate({
                             <div className="grid lg:grid-cols-2 gap-12 items-start">
                                 {/* Info */}
                                 <Reveal direction="left">
-                                    <span className="font-semibold uppercase tracking-wider text-sm" style={{ color: brandColors.primary }}>
+                                    <span className="font-semibold uppercase tracking-wider text-sm" style={{ color: brandAccent }}>
                                         We&apos;re Here to Help
                                     </span>
                                     <h2 className="text-4xl font-bold mt-2 mb-4">Talk to Our Team</h2>
@@ -601,26 +602,26 @@ export function FamilyTemplate({
                                     <div className="space-y-4">
                                         <div className="flex items-center gap-3">
                                             <div className="w-10 h-10 rounded-full flex items-center justify-center" style={{ backgroundColor: `${brandColors.primary}20` }}>
-                                                <Phone className="w-5 h-5" style={{ color: brandColors.primary }} />
+                                                <Phone className="w-5 h-5" style={{ color: brandAccent }} />
                                             </div>
                                             <a href={`tel:${contactInfo.phone}`} className="text-gray-700 font-medium hover:underline">{contactInfo.phone}</a>
                                         </div>
                                         <div className="flex items-center gap-3">
                                             <div className="w-10 h-10 rounded-full flex items-center justify-center" style={{ backgroundColor: `${brandColors.primary}20` }}>
-                                                <Mail className="w-5 h-5" style={{ color: brandColors.primary }} />
+                                                <Mail className="w-5 h-5" style={{ color: brandAccent }} />
                                             </div>
                                             <a href={`mailto:${contactInfo.email}`} className="text-gray-700 font-medium hover:underline">{contactInfo.email}</a>
                                         </div>
                                         <div className="flex items-start gap-3">
                                             <div className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: `${brandColors.primary}20` }}>
-                                                <MapPin className="w-5 h-5" style={{ color: brandColors.primary }} />
+                                                <MapPin className="w-5 h-5" style={{ color: brandAccent }} />
                                             </div>
                                             <span className="text-gray-700 pt-2">{contactInfo.address}</span>
                                         </div>
                                         {workingHours && (
                                             <div className="flex items-center gap-3">
                                                 <div className="w-10 h-10 rounded-full flex items-center justify-center" style={{ backgroundColor: `${brandColors.primary}20` }}>
-                                                    <Clock className="w-5 h-5" style={{ color: brandColors.primary }} />
+                                                    <Clock className="w-5 h-5" style={{ color: brandAccent }} />
                                                 </div>
                                                 <span className="text-gray-700">{workingHours}</span>
                                             </div>
@@ -644,7 +645,7 @@ export function FamilyTemplate({
                                 <Reveal direction="right" className="bg-white rounded-2xl shadow-xl p-8">
                                     {formStatus === 'sent' ? (
                                         <div className="text-center py-10 animate-fade-in">
-                                            <Heart className="w-16 h-16 mx-auto mb-4 animate-bounce-subtle" style={{ color: brandColors.primary }} />
+                                            <Heart className="w-16 h-16 mx-auto mb-4 animate-bounce-subtle" style={{ color: brandAccent }} />
                                             <h3 className="text-2xl font-bold mb-2">Thank You!</h3>
                                             <p className="text-gray-600">Our team will get back to you soon. We can&apos;t wait to help your family find the perfect {vl.familyVehicle}!</p>
                                         </div>
@@ -715,7 +716,7 @@ export function FamilyTemplate({
                                                     />
                                                     <span>
                                                         I agree to be contacted about my enquiry and accept the{' '}
-                                                        <a href={`${siteBase}/privacy`} target="_blank" rel="noopener noreferrer" className="underline" style={{ color: brandColors.primary }}>Privacy Policy</a>.
+                                                        <a href={`${siteBase}/privacy`} target="_blank" rel="noopener noreferrer" className="underline" style={{ color: brandAccent }}>Privacy Policy</a>.
                                                     </span>
                                                 </label>
                                                 {formErrors.consent && <p className="mt-1 text-xs text-red-600">{formErrors.consent}</p>}
@@ -766,7 +767,7 @@ export function FamilyTemplate({
                             <h1 className="text-4xl font-bold">Inventory</h1>
                             {/* Hybrid inventory tabs */}
                             {isHybrid && (
-                                <div className="flex items-center gap-1 p-1 bg-white rounded-xl border border-gray-200 shadow-sm w-fit">
+                                <div className="flex w-full items-center gap-1 overflow-x-auto rounded-xl border border-gray-200 bg-white p-1 shadow-sm sm:w-fit">
                                     {([
                                         { id: 'all', label: `All (${cars.length})` },
                                         { id: 'new', label: `New (${cars.filter(c => c.condition === 'new').length})` },
@@ -775,7 +776,7 @@ export function FamilyTemplate({
                                         <button
                                             key={t.id}
                                             onClick={() => setInventoryTab(t.id)}
-                                            className="px-4 py-1.5 rounded-lg text-sm font-medium transition-all"
+                                            className="shrink-0 px-4 py-1.5 rounded-lg text-sm font-medium transition-all"
                                             style={inventoryTab === t.id ? { backgroundColor: brandColors.primary, color: getContrastText(brandColors.primary) } : { color: '#6b7280' }}
                                         >
                                             {t.label}
@@ -803,6 +804,7 @@ export function FamilyTemplate({
                                     detailBasePath={detailBasePath}
                                     dealerPhone={contactInfo.phone}
                                     dealerId={dealerId}
+                                    showWishlistAction
                                 />
                             </div>
                         </div>
@@ -843,20 +845,20 @@ export function FamilyTemplate({
                             <h4 className="font-bold text-lg mb-4">Contact Us</h4>
                             <div className="space-y-2 text-gray-600">
                                 <div className="flex items-center gap-2">
-                                    <Phone className="w-4 h-4" style={{ color: brandColors.primary }} />
+                                    <Phone className="w-4 h-4" style={{ color: brandAccent }} />
                                     <a href={`tel:${contactInfo.phone}`}>{contactInfo.phone}</a>
                                 </div>
                                 <div className="flex items-center gap-2">
-                                    <Mail className="w-4 h-4" style={{ color: brandColors.primary }} />
+                                    <Mail className="w-4 h-4" style={{ color: brandAccent }} />
                                     <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a>
                                 </div>
                                 <div className="flex items-start gap-2">
-                                    <MapPin className="w-4 h-4 mt-1" style={{ color: brandColors.primary }} />
+                                    <MapPin className="w-4 h-4 mt-1" style={{ color: brandAccent }} />
                                     <span>{contactInfo.address}</span>
                                 </div>
                                 {workingHours && (
                                     <div className="flex items-center gap-2">
-                                        <Clock className="w-4 h-4" style={{ color: brandColors.primary }} />
+                                        <Clock className="w-4 h-4" style={{ color: brandAccent }} />
                                         <span>{workingHours}</span>
                                     </div>
                                 )}
@@ -870,12 +872,12 @@ export function FamilyTemplate({
                                         <div key={idx} className="space-y-1">
                                             <p className="font-semibold text-gray-900 text-sm">{branch.city}</p>
                                             <div className="flex items-start gap-2 text-sm">
-                                                <MapPin className="w-3.5 h-3.5 mt-0.5 shrink-0" style={{ color: brandColors.primary }} />
+                                                <MapPin className="w-3.5 h-3.5 mt-0.5 shrink-0" style={{ color: brandAccent }} />
                                                 <span>{branch.address}</span>
                                             </div>
                                             {branch.phone && (
                                                 <div className="flex items-center gap-2 text-sm">
-                                                    <Phone className="w-3.5 h-3.5 shrink-0" style={{ color: brandColors.primary }} />
+                                                    <Phone className="w-3.5 h-3.5 shrink-0" style={{ color: brandAccent }} />
                                                     <a href={`tel:${branch.phone}`}>{branch.phone}</a>
                                                 </div>
                                             )}

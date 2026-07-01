@@ -34,8 +34,8 @@ import CompareBar from '@/components/cars/CompareBar';
 import { WishlistDrawer } from '@/components/ui/WishlistDrawer';
 import { EVSection } from '@/components/ui/EVSection';
 import { generateTemplateConfig } from '@/lib/templates';
-import { getContrastText } from '@/lib/utils/color-contrast';
-import { getScrapedImageUrls, brandNameToId } from '@/lib/utils/brand-model-images';
+import { getContrastText, getReadableAccent } from '@/lib/utils/color-contrast';
+import { getVehicleImageUrls, brandNameToId } from '@/lib/utils/brand-model-images';
 import { buildTemplateDetailBasePath, buildTemplateSiteBase } from '@/lib/utils/template-site-paths';
 import {
     ArrowRight,
@@ -80,6 +80,28 @@ function matchesFuel(carFuel: string, selected: string[]): boolean {
 function matchesTransmission(carTransmission: string, selected: string[]): boolean {
     const carValues = carTransmission.split(' / ').map(normalizeTransmission);
     return selected.some(sel => carValues.includes(normalizeTransmission(sel)));
+}
+
+function resolveFeaturedVehicleImage(car: Car): string | null {
+    const category = (car.vehicleCategory ?? '4w') as '2w' | '3w' | '4w';
+    return getVehicleImageUrls(
+        category,
+        brandNameToId(car.make, category),
+        car.model,
+        car.images?.hero,
+    )[0] ?? null;
+}
+
+function modelImageSourceKind(src: string | null | undefined) {
+    const value = String(src ?? '').toLowerCase();
+    if (
+        value.includes('/storage/v1/object/public/dealer-assets/vehicles/') ||
+        value.includes('/storage/v1/object/public/dealer-assets/sell-requests/') ||
+        value.includes('/storage/v1/object/public/vehicle-images/')
+    ) {
+        return 'inventory-photo';
+    }
+    return 'resolved-model';
 }
 
 interface ModernTemplateProps {
@@ -170,6 +192,7 @@ export function ModernTemplate({
     // Get template configuration with brand colors
     const config = generateTemplateConfig(brandName, 'professional');
     const { brandColors } = config;
+    const brandAccent = getReadableAccent(brandColors.primary);
 
     // Handle scroll
     useEffect(() => {
@@ -314,7 +337,7 @@ export function ModernTemplate({
                                     </span>
                                 )}
                             </div>
-                            <span className="max-w-[180px] text-lg font-bold leading-tight text-gray-900 xl:max-w-none xl:text-xl">
+                            <span className="max-w-[145px] truncate text-base font-bold leading-tight text-gray-900 sm:max-w-[180px] sm:text-lg xl:max-w-none xl:text-xl">
                                 {dealerName}
                             </span>
                         </div>
@@ -324,7 +347,7 @@ export function ModernTemplate({
                             <button
                                 onClick={() => setActiveTab('home')}
                                 className="whitespace-nowrap font-medium transition-colors text-sm text-gray-600 hover:text-gray-900"
-                                style={activeTab === 'home' ? { color: brandColors.primary } : {}}
+                                style={activeTab === 'home' ? { color: brandAccent } : {}}
                             >
                                 Home
                             </button>
@@ -332,7 +355,7 @@ export function ModernTemplate({
                                 <button
                                     onClick={() => setActiveTab('inventory')}
                                     className="whitespace-nowrap font-medium transition-colors text-sm text-gray-600 hover:text-gray-900"
-                                    style={activeTab === 'inventory' ? { color: brandColors.primary } : {}}
+                                    style={activeTab === 'inventory' ? { color: brandAccent } : {}}
                                 >
                                     Inventory
                                 </button>
@@ -386,7 +409,7 @@ export function ModernTemplate({
                                 <WhatsAppButton phone={contactInfo.phone} variant="nav" />
                             </span>
                             <button
-                                className="xl:hidden p-2 rounded-lg transition-colors text-gray-900"
+                                className="xl:hidden rounded-lg p-1.5 text-gray-900 transition-colors sm:p-2"
                                 onClick={() => setMobileMenuOpen(o => !o)}
                                 aria-label="Toggle navigation menu"
                                 aria-expanded={mobileMenuOpen}
@@ -518,11 +541,8 @@ export function ModernTemplate({
                                 {/* Featured Car Card */}
                                 {featuredCars.length > 0 && (() => {
                                     const heroCar = featuredCars[activeCarIndex % featuredCars.length];
-                                    const cat = heroCar.vehicleCategory as '2w' | '3w' | undefined;
-                                    const scrapedSrc = (cat === '2w' || cat === '3w')
-                                        ? getScrapedImageUrls(cat, brandNameToId(heroCar.make, cat), heroCar.model)[0]
-                                        : '';
-                                    const heroSrc = heroCar.images.hero || scrapedSrc || null;
+                                    const heroSrc = resolveFeaturedVehicleImage(heroCar);
+                                    if (!heroSrc) return null;
                                     const heroPrice = heroCar.pricing.exShowroom.min != null
                                         ? heroCar.pricing.exShowroom.min.toLocaleString('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 })
                                         : (heroCar.price || 'Price on request');
@@ -541,31 +561,24 @@ export function ModernTemplate({
                                             <div className="relative">
                                                 <div
                                                     key={activeCarIndex}
+                                                    data-vehicle-card="true"
+                                                    data-model-image-source={modelImageSourceKind(heroSrc)}
                                                     className="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden hover-lift animate-fade-in"
                                                 >
                                                     <div className="aspect-video relative bg-gray-50">
-                                                        {heroSrc ? (
-                                                            <FadeInImage
-                                                                src={heroSrc}
-                                                                alt={heroCar.model}
-                                                                fill
-                                                                className="object-cover"
-                                                                sizes="(max-width: 1024px) 100vw, 420px"
-                                                            />
-                                                        ) : (
-                                                            <div className="flex items-center justify-center h-full text-gray-300">
-                                                                {(() => {
-                                                                    const PlaceholderIcon = cat === '2w' ? Bike : cat === '3w' ? Truck : CarIcon;
-                                                                    return <PlaceholderIcon className="w-16 h-16" aria-hidden="true" />;
-                                                                })()}
-                                                            </div>
-                                                        )}
+                                                        <FadeInImage
+                                                            src={heroSrc}
+                                                            alt={heroCar.model}
+                                                            fill
+                                                            className="object-cover"
+                                                            sizes="(max-width: 1024px) 100vw, 420px"
+                                                        />
                                                     </div>
                                                     <div className="p-6">
                                                         <h3 className="text-2xl font-bold text-gray-900 mb-2">
                                                             {heroCar.make}{' '}{heroCar.model}
                                                         </h3>
-                                                        <p className="text-3xl font-bold" style={{ color: brandColors.primary }}>
+                                                        <p className="text-3xl font-bold" style={{ color: brandAccent }}>
                                                             {heroPrice}
                                                         </p>
                                                     </div>
@@ -626,7 +639,7 @@ export function ModernTemplate({
                         <section className="relative -mt-16 z-20 max-w-6xl mx-auto px-4">
                             <Reveal
                                 direction="up"
-                                className={`bg-white rounded-2xl shadow-2xl p-8 grid gap-8 ${heroStats.length === 1 ? 'grid-cols-1' : heroStats.length === 2 ? 'grid-cols-2' : 'grid-cols-3'}`}
+                                className={`bg-white rounded-2xl shadow-2xl p-6 sm:p-8 grid gap-6 sm:gap-8 ${heroStats.length === 1 ? 'grid-cols-1' : heroStats.length === 2 ? 'grid-cols-1 sm:grid-cols-2' : 'grid-cols-1 sm:grid-cols-3'}`}
                             >
                                 {heroStats.map((stat, i) => (
                                     <div key={i} className="group text-center">
@@ -634,7 +647,7 @@ export function ModernTemplate({
                                             className="w-12 h-12 mx-auto mb-3 rounded-xl flex items-center justify-center transition-transform duration-300 group-hover:scale-110"
                                             style={{ backgroundColor: `${brandColors.primary}20` }}
                                         >
-                                            <stat.icon className="w-6 h-6" style={{ color: brandColors.primary }} />
+                                            <stat.icon className="w-6 h-6" style={{ color: brandAccent }} />
                                         </div>
                                         <p className="text-3xl font-bold text-gray-900">
                                             <CountUp value={stat.value} />
@@ -653,7 +666,7 @@ export function ModernTemplate({
                                 <Reveal className="text-center mb-10">
                                     <span
                                         className="font-semibold text-sm uppercase tracking-wider"
-                                        style={{ color: brandColors.primary }}
+                                        style={{ color: brandAccent }}
                                     >
                                         What We Offer
                                     </span>
@@ -671,7 +684,7 @@ export function ModernTemplate({
                                                 className="group flex items-center gap-3 px-5 py-3 rounded-xl border bg-gray-50 hover-lift"
                                                 style={{ borderColor: `${brandColors.primary}30` }}
                                             >
-                                                <Icon className="w-6 h-6 shrink-0 transition-transform duration-300 group-hover:scale-110" style={{ color: brandColors.primary }} aria-hidden="true" />
+                                                <Icon className="w-6 h-6 shrink-0 transition-transform duration-300 group-hover:scale-110" style={{ color: brandAccent }} aria-hidden="true" />
                                                 <span className="font-semibold text-gray-800">{meta.label}</span>
                                             </Reveal>
                                         );
@@ -688,7 +701,7 @@ export function ModernTemplate({
                                 <div>
                                     <span
                                         className="font-semibold text-sm uppercase tracking-wider"
-                                        style={{ color: brandColors.primary }}
+                                        style={{ color: brandAccent }}
                                     >
                                         Our Collection
                                     </span>
@@ -701,7 +714,7 @@ export function ModernTemplate({
                                     </Button>
                                 )}
                             </Reveal>
-                            <CarGrid cars={featuredCars} brandColor={brandColors.primary} light summaryOnly detailBasePath={detailBasePath} dealerPhone={contactInfo.phone} dealerId={dealerId} />
+                            <CarGrid cars={featuredCars} brandColor={brandColors.primary} light summaryOnly detailBasePath={detailBasePath} dealerPhone={contactInfo.phone} dealerId={dealerId} showWishlistAction />
                         </div>
                     </section>
 
@@ -726,7 +739,7 @@ export function ModernTemplate({
                                             className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110"
                                             style={{ backgroundColor: `${brandColors.primary}20` }}
                                         >
-                                            <feature.icon className="w-6 h-6" style={{ color: brandColors.primary }} />
+                                            <feature.icon className="w-6 h-6" style={{ color: brandAccent }} />
                                         </div>
                                         <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
                                         <p className="text-gray-600">{feature.desc}</p>
@@ -742,7 +755,7 @@ export function ModernTemplate({
                             <Reveal className="text-center mb-10">
                                 <span
                                     className="font-semibold text-sm uppercase tracking-wider"
-                                    style={{ color: brandColors.primary }}
+                                    style={{ color: brandAccent }}
                                 >
                                     Finance Tool
                                 </span>
@@ -801,7 +814,7 @@ export function ModernTemplate({
                                 <Reveal direction="right">
                                     <span
                                         className="font-semibold text-sm uppercase tracking-wider"
-                                        style={{ color: brandColors.primary }}
+                                        style={{ color: brandAccent }}
                                     >
                                         Contact Us
                                     </span>
@@ -812,26 +825,26 @@ export function ModernTemplate({
                                     <div className="space-y-4">
                                         <div className="flex items-center gap-3">
                                             <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ backgroundColor: `${brandColors.primary}20` }}>
-                                                <Phone className="w-5 h-5" style={{ color: brandColors.primary }} />
+                                                <Phone className="w-5 h-5" style={{ color: brandAccent }} />
                                             </div>
                                             <a href={`tel:${contactInfo.phone}`} className="text-gray-700 font-medium hover:underline">{contactInfo.phone}</a>
                                         </div>
                                         <div className="flex items-center gap-3">
                                             <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ backgroundColor: `${brandColors.primary}20` }}>
-                                                <Mail className="w-5 h-5" style={{ color: brandColors.primary }} />
+                                                <Mail className="w-5 h-5" style={{ color: brandAccent }} />
                                             </div>
                                             <a href={`mailto:${contactInfo.email}`} className="text-gray-700 font-medium hover:underline">{contactInfo.email}</a>
                                         </div>
                                         <div className="flex items-start gap-3">
                                             <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style={{ backgroundColor: `${brandColors.primary}20` }}>
-                                                <MapPin className="w-5 h-5" style={{ color: brandColors.primary }} />
+                                                <MapPin className="w-5 h-5" style={{ color: brandAccent }} />
                                             </div>
                                             <span className="text-gray-700">{contactInfo.address}</span>
                                         </div>
                                         {workingHours && (
                                             <div className="flex items-center gap-3">
                                                 <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ backgroundColor: `${brandColors.primary}20` }}>
-                                                    <Clock className="w-5 h-5" style={{ color: brandColors.primary }} />
+                                                    <Clock className="w-5 h-5" style={{ color: brandAccent }} />
                                                 </div>
                                                 <span className="text-gray-700">{workingHours}</span>
                                             </div>
@@ -855,7 +868,7 @@ export function ModernTemplate({
                                 <Reveal direction="left" delay={100} className="bg-white rounded-2xl shadow-xl p-8">
                                     {formStatus === 'sent' ? (
                                         <div className="text-center py-10 animate-scale-in">
-                                            <CheckCircle2 className="w-16 h-16 mx-auto mb-4" style={{ color: brandColors.primary }} />
+                                            <CheckCircle2 className="w-16 h-16 mx-auto mb-4" style={{ color: brandAccent }} />
                                             <h3 className="text-2xl font-bold text-gray-900 mb-2">Thank You!</h3>
                                             <p className="text-gray-600">We&apos;ll be in touch with you shortly.</p>
                                         </div>
@@ -926,7 +939,7 @@ export function ModernTemplate({
                                                     />
                                                     <span>
                                                         I agree to be contacted about my enquiry and accept the{' '}
-                                                        <a href={`${siteBase}/privacy`} target="_blank" rel="noopener noreferrer" className="underline" style={{ color: brandColors.primary }}>Privacy Policy</a>.
+                                                        <a href={`${siteBase}/privacy`} target="_blank" rel="noopener noreferrer" className="underline" style={{ color: brandAccent }}>Privacy Policy</a>.
                                                     </span>
                                                 </label>
                                                 {formErrors.consent && <p className="mt-1 text-xs text-red-600">{formErrors.consent}</p>}
@@ -981,7 +994,7 @@ export function ModernTemplate({
                                 <p className="text-gray-600 mt-2">Browse {cars.length}+ quality vehicles</p>
                             </div>
                             {isHybrid && (
-                                <div className="flex items-center gap-1 p-1 bg-white rounded-xl border border-gray-200 shadow-sm w-fit">
+                                <div className="flex w-full items-center gap-1 overflow-x-auto rounded-xl border border-gray-200 bg-white p-1 shadow-sm sm:w-fit">
                                     {([
                                         { id: 'all', label: `All (${cars.length})` },
                                         { id: 'new', label: `New (${cars.filter(c => c.condition === 'new').length})` },
@@ -990,7 +1003,7 @@ export function ModernTemplate({
                                         <button
                                             key={t.id}
                                             onClick={() => setInventoryTab(t.id)}
-                                            className="px-4 py-1.5 rounded-lg text-sm font-medium transition-all"
+                                            className="shrink-0 px-4 py-1.5 rounded-lg text-sm font-medium transition-all"
                                             style={inventoryTab === t.id ? { backgroundColor: brandColors.primary, color: getContrastText(brandColors.primary) } : { color: '#6b7280' }}
                                         >
                                             {t.label}
@@ -1018,6 +1031,7 @@ export function ModernTemplate({
                                     detailBasePath={detailBasePath}
                                     dealerPhone={contactInfo.phone}
                                     dealerId={dealerId}
+                                    showWishlistAction
                                 />
                             </div>
                         </div>
@@ -1059,20 +1073,20 @@ export function ModernTemplate({
                             <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
                             <div className="space-y-3">
                                 <div className="flex items-center gap-2">
-                                    <Phone className="w-5 h-5" style={{ color: brandColors.primary }} />
+                                    <Phone className="w-5 h-5" style={{ color: brandAccent }} />
                                     <a href={`tel:${contactInfo.phone}`}>{contactInfo.phone}</a>
                                 </div>
                                 <div className="flex items-center gap-2">
-                                    <Mail className="w-5 h-5" style={{ color: brandColors.primary }} />
+                                    <Mail className="w-5 h-5" style={{ color: brandAccent }} />
                                     <a href={`mailto:${contactInfo.email}`}>{contactInfo.email}</a>
                                 </div>
                                 <div className="flex items-start gap-2">
-                                    <MapPin className="w-5 h-5 mt-1" style={{ color: brandColors.primary }} />
+                                    <MapPin className="w-5 h-5 mt-1" style={{ color: brandAccent }} />
                                     <span>{contactInfo.address}</span>
                                 </div>
                                 {workingHours && (
                                     <div className="flex items-center gap-2">
-                                        <Clock className="w-5 h-5" style={{ color: brandColors.primary }} />
+                                        <Clock className="w-5 h-5" style={{ color: brandAccent }} />
                                         <span>{workingHours}</span>
                                     </div>
                                 )}
@@ -1086,12 +1100,12 @@ export function ModernTemplate({
                                         <div key={idx} className="space-y-1">
                                             <p className="font-semibold text-gray-900 text-sm">{branch.city}</p>
                                             <div className="flex items-start gap-2 text-sm text-gray-600">
-                                                <MapPin className="w-3.5 h-3.5 mt-0.5 shrink-0" style={{ color: brandColors.primary }} />
+                                                <MapPin className="w-3.5 h-3.5 mt-0.5 shrink-0" style={{ color: brandAccent }} />
                                                 <span>{branch.address}</span>
                                             </div>
                                             {branch.phone && (
                                                 <div className="flex items-center gap-2 text-sm text-gray-600">
-                                                    <Phone className="w-3.5 h-3.5 shrink-0" style={{ color: brandColors.primary }} />
+                                                    <Phone className="w-3.5 h-3.5 shrink-0" style={{ color: brandAccent }} />
                                                     <a href={`tel:${branch.phone}`}>{branch.phone}</a>
                                                 </div>
                                             )}

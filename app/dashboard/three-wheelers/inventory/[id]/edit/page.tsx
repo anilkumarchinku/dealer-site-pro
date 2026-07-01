@@ -158,7 +158,7 @@ export default function EditThreeWheelerVehiclePage() {
 
     return (
         <div className="max-w-2xl space-y-6">
-            <div className="flex items-center gap-3">
+            <div className="flex flex-wrap items-center gap-3">
                 <Button variant="ghost" size="sm" asChild>
                     <Link href="/dashboard/three-wheelers/inventory"><ArrowLeft className="w-4 h-4" /></Link>
                 </Button>
@@ -170,7 +170,7 @@ export default function EditThreeWheelerVehiclePage() {
             <form onSubmit={handleSubmit} className="space-y-5">
                 <fieldset className="bg-card border border-border rounded-xl p-5 space-y-4">
                     <legend className="text-sm font-semibold px-1">Basic Information</legend>
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                         <div>
                             <label className="text-sm font-medium">Type</label>
                             <select value={form.type} onChange={e => set("type", e.target.value)} className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm">
@@ -184,7 +184,7 @@ export default function EditThreeWheelerVehiclePage() {
                             </select>
                         </div>
                     </div>
-                    <div className="grid grid-cols-3 gap-4">
+                    <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
                         <div>
                             <label className="text-sm font-medium">Brand</label>
                             <input value={form.brand} onChange={e => set("brand", e.target.value)} className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm" />
@@ -198,7 +198,7 @@ export default function EditThreeWheelerVehiclePage() {
                             <input value={form.variant} onChange={e => set("variant", e.target.value)} className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm" />
                         </div>
                     </div>
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                         <div>
                             <label className="text-sm font-medium">Year</label>
                             <input type="number" value={form.year} onChange={e => set("year", Number(e.target.value))} className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm" />
@@ -214,7 +214,7 @@ export default function EditThreeWheelerVehiclePage() {
 
                 <fieldset className="bg-card border border-border rounded-xl p-5 space-y-4">
                     <legend className="text-sm font-semibold px-1">Pricing (₹)</legend>
-                    <div className="grid grid-cols-3 gap-4">
+                    <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
                         <div>
                             <label className="text-sm font-medium">Ex-Showroom *</label>
                             <input type="number" value={form.ex_showroom_price_paise} onChange={e => set("ex_showroom_price_paise", e.target.value)} className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm" />
@@ -278,7 +278,7 @@ export default function EditThreeWheelerVehiclePage() {
                     )}
                 </fieldset>
 
-                <div className="flex items-center gap-3">
+                <div className="flex flex-wrap items-center gap-3">
                     <Button type="submit" disabled={saving}>{saving ? "Saving..." : "Save Changes"}</Button>
                     <Button type="button" variant="outline" asChild><Link href="/dashboard/three-wheelers/inventory">Cancel</Link></Button>
                 </div>

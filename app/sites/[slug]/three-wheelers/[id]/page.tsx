@@ -17,6 +17,7 @@ import { ChevronLeft } from "lucide-react"
 import Link from "next/link"
 import { useSitePrefix } from "@/lib/hooks/useSitePrefix"
 import { resolveVehicleColorHex } from "@/lib/utils/resolve-vehicle-color"
+import { getContrastText, getReadableAccent } from "@/lib/utils/color-contrast"
 
 const BOOKING_AMOUNT = 50000 // ₹500 booking token
 
@@ -83,6 +84,8 @@ export default function ThreeWheelerDetailPage() {
             return "#2563eb"
         }
     }, [vehicle, dealerInfo])
+    const brandAccent = useMemo(() => getReadableAccent(brandColor), [brandColor])
+    const onBrandText = useMemo(() => getContrastText(brandColor), [brandColor])
 
     // Model pages should use category-specific brand marks when the same OEM
     // has different identities across 2W/3W/4W.
@@ -190,7 +193,7 @@ export default function ThreeWheelerDetailPage() {
                                 className="rounded-xl p-4 border"
                                 style={{ backgroundColor: `${brandColor}0d`, borderColor: `${brandColor}33` }}
                             >
-                                <p className="text-3xl font-bold" style={{ color: brandColor }}>₹{priceF}</p>
+                                <p className="text-3xl font-bold" style={{ color: brandAccent }}>₹{priceF}</p>
                                 <p className="text-xs text-muted-foreground">Ex-showroom</p>
                                 {vehicle.on_road_price_paise && (
                                     <p className="text-sm mt-1">On-road: <strong>₹{(vehicle.on_road_price_paise / 100).toLocaleString("en-IN")}</strong></p>
@@ -251,8 +254,8 @@ export default function ThreeWheelerDetailPage() {
                                 {/* Primary — Enquire Now (full width) */}
                                 <button
                                     onClick={() => openLead("callback", "Enquire Now")}
-                                    className="w-full rounded-xl py-3.5 font-bold text-white text-base hover:opacity-90 transition-opacity"
-                                    style={{ backgroundColor: brandColor }}
+                                    className="w-full rounded-xl py-3.5 font-bold text-base hover:opacity-90 transition-opacity"
+                                    style={{ backgroundColor: brandColor, color: onBrandText }}
                                 >
                                     Enquire Now
                                 </button>
@@ -262,14 +265,14 @@ export default function ThreeWheelerDetailPage() {
                                     <button
                                         onClick={() => openLead("demo", "Book Demo")}
                                         className="border rounded-xl py-3 font-semibold hover:bg-muted/50 transition-colors"
-                                        style={{ borderColor: brandColor, color: brandColor }}
+                                        style={{ borderColor: brandColor, color: brandAccent }}
                                     >
                                         Book Demo
                                     </button>
                                     <button
                                         onClick={() => openLead("best_price", "Get Best Price")}
                                         className="border rounded-xl py-3 font-semibold hover:bg-muted/50 transition-colors"
-                                        style={{ borderColor: brandColor, color: brandColor }}
+                                        style={{ borderColor: brandColor, color: brandAccent }}
                                     >
                                         Get Best Price
                                     </button>
@@ -288,7 +291,7 @@ export default function ThreeWheelerDetailPage() {
                                     {vehicle.stock_status === "booking_open" && (
                                         <button
                                             onClick={() => setBookingOpen(true)}
-                                            className="col-span-2 bg-green-600 text-white rounded-xl py-3 font-semibold hover:opacity-90 transition-opacity"
+                                            className="col-span-2 bg-green-700 text-white rounded-xl py-3 font-semibold hover:opacity-90 transition-opacity"
                                         >
                                             Book Now ₹500
                                         </button>

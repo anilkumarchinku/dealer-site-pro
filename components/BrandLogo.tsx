@@ -24,7 +24,7 @@ export default function BrandLogo({ className = "", showText = true, size = "md"
             />
             {showText && (
                 <span className={cn("font-black tracking-tight text-current", textSize)}>
-                    DealerSite <span className="text-[#C79A5B]">Pro</span>
+                    DealerSite <span className="brand-logo-accent text-[#7C4F12]">Pro</span>
                 </span>
             )}
         </Link>

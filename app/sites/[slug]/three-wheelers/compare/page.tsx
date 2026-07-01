@@ -8,6 +8,18 @@ import Link from "next/link"
 import { ChevronLeft } from "lucide-react"
 import { useSitePrefix } from "@/lib/hooks/useSitePrefix"
 
+function modelImageSourceKind(src: string | null | undefined) {
+    const value = String(src ?? '').toLowerCase()
+    if (
+        value.includes('/storage/v1/object/public/dealer-assets/vehicles/') ||
+        value.includes('/storage/v1/object/public/dealer-assets/sell-requests/') ||
+        value.includes('/storage/v1/object/public/vehicle-images/')
+    ) {
+        return 'inventory-photo'
+    }
+    return 'resolved-model'
+}
+
 export default function ComparePage() {
     const params       = useParams()
     const searchParams = useSearchParams()
@@ -80,9 +92,13 @@ export default function ComparePage() {
                             <th className="w-40 text-left py-3 pr-4 font-medium text-muted-foreground align-top">Specification</th>
                             {vehicles.map(v => (
                                 <th key={v.id} className="py-3 px-3 text-center align-top">
-                                    <div className="w-full max-w-[200px] mx-auto">
-                                        <VehicleDetailGallery images={v.images.slice(0, 1)} alt={`${v.brand} ${v.model}`} />
-                                        <p className="font-semibold mt-2">{v.brand} {v.model}</p>
+                                    <div
+                                        data-vehicle-card="true"
+                                        data-model-image-source={modelImageSourceKind(v.images[0])}
+                                        className="w-full max-w-[200px] mx-auto"
+                                    >
+                                        <VehicleDetailGallery images={v.images.slice(0, 1)} alt={`${v.brand} ${v.model}`} brand={v.brand} model={v.model} />
+                                        <p className="font-semibold mt-2 break-words">{v.brand} {v.model}</p>
                                     </div>
                                 </th>
                             ))}

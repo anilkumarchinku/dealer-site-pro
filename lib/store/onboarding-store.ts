@@ -71,6 +71,8 @@ const initialData: Partial<OnboardingData> = {
     brandColorPreset: undefined,
     brandLogo: undefined,
     outlets: [],
+    heroImage: undefined,
+    heroImages: undefined,
     inventorySource: undefined,
     inventoryEntryMode: undefined,
     cyeproApiKey: undefined,
@@ -205,7 +207,7 @@ export const useOnboardingStore = create<OnboardingStore>()(
         }),
         {
             name: 'dealersite-onboarding',
-            // Heavy base64 fields (logo, hero image, bulk-upload payloads) are kept
+            // Heavy base64 fields (logo, hero images, bulk-upload payloads) are kept
             // in memory only — persisting them to localStorage can exceed the ~5MB
             // quota, making the persist write throw and silently break the step that
             // sets them (e.g. the Continue button after uploading a logo + hero).
@@ -216,6 +218,7 @@ export const useOnboardingStore = create<OnboardingStore>()(
                     ...state.data,
                     brandLogo: undefined,
                     heroImage: undefined,
+                    heroImages: undefined,
                     uploadedVehicles: undefined,
                 },
             }),

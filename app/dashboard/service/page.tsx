@@ -393,15 +393,15 @@ export default function CarServicePage() {
                 <div className="mt-3 grid gap-3 lg:grid-cols-2">
                     {reviews.length === 0 ? <p className="text-sm text-muted-foreground">No service center reviews yet.</p> : reviews.map(review => (
                         <div key={review.id} className="rounded-lg bg-muted/30 p-3">
-                            <div className="flex items-start justify-between gap-3">
-                                <div>
+                            <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                                <div className="min-w-0">
                                     <p className="font-medium">{review.reviewer_name} · {review.rating}/5</p>
                                     <p className="text-xs text-muted-foreground">{review.service_centers?.name ?? "Service center"} · {review.moderation_status}</p>
                                 </div>
-                                <div className="flex gap-1">
-                                    <Button size="sm" variant="outline" onClick={() => moderateServiceReview(review, "approve")}>Approve</Button>
-                                    <Button size="sm" variant="outline" onClick={() => moderateServiceReview(review, "flag")}>Flag</Button>
-                                    <Button size="sm" variant="outline" onClick={() => moderateServiceReview(review, "reject")}>Reject</Button>
+                                <div className="flex flex-wrap gap-1">
+                                    <Button size="sm" variant="outline" className="flex-1 sm:flex-none" onClick={() => moderateServiceReview(review, "approve")}>Approve</Button>
+                                    <Button size="sm" variant="outline" className="flex-1 sm:flex-none" onClick={() => moderateServiceReview(review, "flag")}>Flag</Button>
+                                    <Button size="sm" variant="outline" className="flex-1 sm:flex-none" onClick={() => moderateServiceReview(review, "reject")}>Reject</Button>
                                 </div>
                             </div>
                             {review.review_text && <p className="mt-2 text-sm text-muted-foreground">{review.review_text}</p>}

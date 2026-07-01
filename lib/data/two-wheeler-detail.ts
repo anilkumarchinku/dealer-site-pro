@@ -2,7 +2,7 @@ import 'server-only'
 
 import type { TwoWheelerVehicle } from '@/lib/types/two-wheeler'
 import { getModelEnrichment } from '@/lib/data/2w-brand-data'
-import { brandNameToId, getScrapedImageFallback } from '@/lib/utils/brand-model-images'
+import { brandNameToId, getVehicleImageUrls } from '@/lib/utils/brand-model-images'
 import { fetchTwoWheelerColorGallery } from '@/lib/data/two-wheeler-gallery'
 import { defaultTwoWheelerVariantName, normalizeTwoWheelerVariants } from '@/lib/utils/two-wheeler-variants'
 
@@ -31,7 +31,7 @@ export function hydrateTwoWheelerWithJson(vehicle: TwoWheelerVehicle): TwoWheele
         }
     }
 
-    const fallbackImage = getScrapedImageFallback('2w', brandId, vehicle.model)
+    const modelImages = getVehicleImageUrls('2w', brandId, vehicle.model, vehicle.images[0])
     const vehicleVariants = normalizeTwoWheelerVariants(vehicle.all_variants)
     const enrichmentVariants = normalizeTwoWheelerVariants(enrichment.all_variants)
     const hasGeneratedFallbackVariant =
@@ -55,7 +55,7 @@ export function hydrateTwoWheelerWithJson(vehicle: TwoWheelerVehicle): TwoWheele
         transmission: vehicle.transmission ?? enrichment.transmission ?? null,
         mileage_kmpl: vehicle.mileage_kmpl ?? enrichment.mileage_kmpl ?? null,
         colors: vehicle.colors.length > 0 ? vehicle.colors : enrichment.colors,
-        images: vehicle.images.length > 0 ? vehicle.images : (fallbackImage ? [fallbackImage] : []),
+        images: vehicle.images.length > 0 ? vehicle.images : modelImages,
         description: vehicle.description ?? enrichment.description ?? null,
         features: vehicle.features.length > 0 ? vehicle.features : enrichment.features,
         all_variants: normalizeTwoWheelerVariants(variantSource, fallbackVariant),

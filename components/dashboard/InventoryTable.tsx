@@ -6,12 +6,31 @@ import { Button } from "@/components/ui/button";
 import { Edit, Trash2, Eye } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
+import { brandNameToId, getVehicleImageUrls } from "@/lib/utils/brand-model-images";
 
 interface InventoryTableProps {
     cars: Car[];
     onEdit?: (car: Car) => void;
     onDelete?: (car: Car) => void;
     onView?: (car: Car) => void;
+}
+
+function DashboardCarImage({ car }: { car: Car }) {
+    const category = (car.vehicleCategory ?? '4w') as '2w' | '3w' | '4w';
+    const imageSrc = getVehicleImageUrls(category, brandNameToId(car.make, category), car.model, car.images.hero)[0] ?? null;
+
+    if (!imageSrc) return null;
+
+    return (
+        <Image
+            src={imageSrc}
+            alt={car.model}
+            fill
+            className="object-cover"
+            sizes="64px"
+            unoptimized={imageSrc.startsWith('http')}
+        />
+    );
 }
 
 export function InventoryTable({ cars, onEdit, onDelete, onView }: InventoryTableProps) {
@@ -71,13 +90,7 @@ export function InventoryTable({ cars, onEdit, onDelete, onView }: InventoryTabl
                             <td className="px-4 py-3">
                                 <div className="flex items-center gap-4">
                                     <div className="relative w-16 h-10 rounded-lg overflow-hidden bg-muted flex-shrink-0">
-                                        <Image
-                                            src={car.images.hero}
-                                            alt={car.model}
-                                            fill
-                                            className="object-cover"
-                                            sizes="64px"
-                                        />
+                                        <DashboardCarImage car={car} />
                                     </div>
                                     <div>
                                         <div className="font-semibold text-foreground">{car.make} {car.model}</div>

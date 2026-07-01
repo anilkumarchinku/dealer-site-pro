@@ -31,8 +31,8 @@ import {
     BadgeCheck, Info,
 } from 'lucide-react';
 import { formatPriceInLakhs } from '@/lib/utils/car-utils';
-import { getContrastText } from '@/lib/utils/color-contrast';
-import { getVehicleImageUrls, brandNameToId } from '@/lib/utils/brand-model-images';
+import { getContrastText, getReadableAccent } from '@/lib/utils/color-contrast';
+import { getVehicleImageUrls, brandNameToId, isUsableVehicleImageUrl } from '@/lib/utils/brand-model-images';
 import { brandLogoUrl } from '@/lib/utils/site-assets';
 import {
     buildFallbackDetailedInfo,
@@ -175,7 +175,7 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
     const fallbackList = [...new Set([
         ...imageUrls,
         ...(car.vehicleCategory === '4w' ? [] : [car.images.hero, ...(car.images.exterior ?? [])]),
-    ].filter((u): u is string => !!u && u !== '/placeholder-car.jpg'))];
+    ].filter(isUsableVehicleImageUrl))];
 
     const mainImage = activeImage ?? fallbackList[imgIdx] ?? null;
     const isUsed = car.condition === 'used' || car.condition === 'certified_pre_owned';
@@ -188,6 +188,7 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
     const priceEnd = formatPriceInLakhs(car.pricing.exShowroom.max);
     const hasRange = !hasOfferPrice && car.pricing.exShowroom.min !== car.pricing.exShowroom.max;
     const originalPrice = hasOfferPrice && basePrice != null ? formatPriceInLakhs(basePrice) : null;
+    const brandAccent = getReadableAccent(brandColor);
 
     // Features merged
     const match = detailedInfo.find(v => v.variant_name?.toLowerCase().includes(car.variant?.toLowerCase())) ?? detailedInfo[0];
@@ -239,7 +240,7 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
                                     <p className="text-xs font-semibold text-gray-400 line-through">{originalPrice}</p>
                                 )}
                                 {hasOfferPrice && (
-                                    <p className="text-[11px] font-semibold" style={{ color: brandColor }}>
+                                    <p className="text-[11px] font-semibold" style={{ color: brandAccent }}>
                                         {car.offer?.label || 'Offer price'}
                                     </p>
                                 )}
@@ -264,7 +265,7 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
                         {/* Image gallery */}
                         <div className="space-y-2">
                             <div className="relative aspect-[16/7] bg-gradient-to-br from-gray-50 via-white to-gray-100 rounded-2xl overflow-hidden flex items-center justify-center border border-gray-200">
-                                {mainImage && mainImage !== '/placeholder-car.jpg'
+                                {isUsableVehicleImageUrl(mainImage)
                                     ? // eslint-disable-next-line @next/next/no-img-element
                                       <img
                                         src={mainImage}
@@ -275,12 +276,7 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
                                             else if (imgIdx < fallbackList.length - 1) { setImgIdx(i => i + 1); }
                                         }}
                                       />
-                                    : <div className="flex flex-col items-center justify-center gap-2 text-center">
-                                        <div className="text-6xl">
-                                            {car.vehicleCategory === '2w' ? '🏍️' : car.vehicleCategory === '3w' ? '🛺' : '🚗'}
-                                        </div>
-                                        <p className="text-sm text-gray-600">Image not available</p>
-                                      </div>
+                                    : null
                                 }
                             </div>
                             {fallbackList.length > 1 && car.vehicleCategory !== '4w' && (
@@ -364,7 +360,7 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
                                                                             </p>
                                                                         </span>
                                                                         {v.ex_showroom_price_min_inr && (
-                                                                            <p className="text-sm font-bold ml-2" style={{ color: brandColor }}>
+                                                                            <p className="text-sm font-bold ml-2" style={{ color: brandAccent }}>
                                                                                 {fmtL(v.ex_showroom_price_min_inr)}
                                                                             </p>
                                                                         )}
@@ -401,7 +397,7 @@ export function QuickViewModal({ car, open, onOpenChange, onEnquireNow, brandCol
                                                     </div>
                                                     <div className="text-right">
                                                         <p className="text-[10px] uppercase tracking-widest text-gray-600">{isUsed ? 'Price' : 'Ex-Showroom*'}</p>
-                                                        <p className="text-2xl font-extrabold leading-tight" style={{ color: brandColor }}>
+                                                        <p className="text-2xl font-extrabold leading-tight" style={{ color: brandAccent }}>
                                                             {isUsed ? priceStart : fmtL(selVariant.ex_showroom_price_min_inr)}
                                                         </p>
                                                     </div>

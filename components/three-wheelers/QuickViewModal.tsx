@@ -4,8 +4,9 @@ import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
 import { X, Zap, Palette, Settings, Shield, Info } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { getContrastText } from "@/lib/utils/color-contrast"
+import { getContrastText, getReadableAccent } from "@/lib/utils/color-contrast"
 import type { ThreeWheelerVehicle } from "@/lib/types/three-wheeler"
+import { isUsableVehicleImageUrl } from "@/lib/utils/brand-model-images"
 
 interface Props {
     vehicle: ThreeWheelerVehicle
@@ -13,11 +14,12 @@ interface Props {
     onClose: () => void
     brandColor?: string
     onLead?: (vehicleId: string) => void
+    imgSrc?: string | null
 }
 
 type Tab = "overview" | "specs" | "colors" | "features"
 
-export function QuickViewModal({ vehicle, open, onClose, brandColor = "#1f2937", onLead }: Props) {
+export function QuickViewModal({ vehicle, open, onClose, brandColor = "#1f2937", onLead, imgSrc: imgSrcProp }: Props) {
     const [tab, setTab] = useState<Tab>("overview")
 
     const dialogRef         = useRef<HTMLDivElement>(null)
@@ -72,13 +74,14 @@ export function QuickViewModal({ vehicle, open, onClose, brandColor = "#1f2937",
 
     if (!open) return null
 
-    // Get the first image from vehicle.images array, with robust handling
-    const imgSrc = (() => {
+    // Use the card-resolved image when available, otherwise fall back to the
+    // first inventory image for older callers.
+    const imgSrc = imgSrcProp ?? (() => {
         if (!vehicle.images) return null
         if (!Array.isArray(vehicle.images)) return null
         if (vehicle.images.length === 0) return null
         const firstImg = vehicle.images[0]
-        if (!firstImg || typeof firstImg !== 'string') return null
+        if (!isUsableVehicleImageUrl(firstImg)) return null
         return firstImg
     })()
 
@@ -94,6 +97,7 @@ export function QuickViewModal({ vehicle, open, onClose, brandColor = "#1f2937",
 
     const isEV = vehicle.fuel_type === "electric"
     const fuelLabel = isEV ? "Electric" : vehicle.fuel_type === "cng" ? "CNG" : vehicle.fuel_type === "diesel" ? "Diesel" : "Petrol"
+    const brandAccent = getReadableAccent(brandColor)
 
     const tabs: { key: Tab; label: string; icon: React.ReactNode }[] = [
         { key: "overview", label: "Overview", icon: <Info className="w-3.5 h-3.5" /> },
@@ -109,14 +113,14 @@ export function QuickViewModal({ vehicle, open, onClose, brandColor = "#1f2937",
                 <div className="relative h-52 bg-gray-50 shrink-0">
                     {imgSrc
                         ? <Image src={imgSrc} alt={`${vehicle.brand} ${vehicle.model}`} fill sizes="100%" className="object-contain bg-white p-4" priority unoptimized={imgSrc.startsWith('http')} />
-                        : <div className="flex items-center justify-center h-full text-gray-600 text-4xl">🛺</div>
+                        : <div className="h-full bg-white" aria-hidden="true" />
                     }
                     <button onClick={onClose} aria-label="Close" className="absolute top-3 right-3 w-8 h-8 rounded-full bg-black/50 text-white flex items-center justify-center hover:bg-black/70 transition-colors">
                         <X className="w-4 h-4" />
                     </button>
                     <div className="absolute top-3 left-3 flex gap-1">
-                        {isEV && <span className="bg-emerald-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-0.5"><Zap className="w-2.5 h-2.5" /> EV</span>}
-                        {vehicle.bs6_compliant && <span className="bg-green-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">BS6</span>}
+                        {isEV && <span className="bg-emerald-700 text-white text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-0.5"><Zap className="w-2.5 h-2.5" /> EV</span>}
+                        {vehicle.bs6_compliant && <span className="bg-green-700 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">BS6</span>}
                     </div>
                 </div>
 
@@ -124,7 +128,7 @@ export function QuickViewModal({ vehicle, open, onClose, brandColor = "#1f2937",
                 <div className="px-4 pt-3 pb-2 border-b border-gray-100 shrink-0">
                     <div className="flex items-start justify-between">
                         <div>
-                            <p className="text-[10px] font-semibold uppercase tracking-widest" style={{ color: brandColor }}>{vehicle.brand}</p>
+                            <p className="text-[10px] font-semibold uppercase tracking-widest" style={{ color: brandAccent }}>{vehicle.brand}</p>
                             <h3 className="text-lg font-bold text-gray-900">{vehicle.model}</h3>
                             {vehicle.variant && <p className="text-xs text-gray-600">{vehicle.variant}</p>}
                         </div>
@@ -145,7 +149,7 @@ export function QuickViewModal({ vehicle, open, onClose, brandColor = "#1f2937",
                             className={`flex items-center gap-1 px-3 py-2.5 text-xs font-medium transition-colors border-b-2 ${
                                 tab === t.key ? "border-current text-gray-900" : "border-transparent text-gray-600 hover:text-gray-900"
                             }`}
-                            style={tab === t.key ? { color: brandColor, borderColor: brandColor } : undefined}
+                            style={tab === t.key ? { color: brandAccent, borderColor: brandColor } : undefined}
                         >
                             {t.icon} {t.label}
                         </button>
@@ -267,7 +271,7 @@ export function QuickViewModal({ vehicle, open, onClose, brandColor = "#1f2937",
                                 <div className="flex flex-wrap gap-2">
                                     {vehicle.features.map((f, i) => (
                                         <span key={i} className="text-xs px-3 py-1.5 rounded-full border font-medium"
-                                            style={{ borderColor: brandColor + "40", color: brandColor, backgroundColor: brandColor + "08" }}>
+                                            style={{ borderColor: brandColor + "40", color: brandAccent, backgroundColor: brandColor + "08" }}>
                                             {f}
                                         </span>
                                     ))}

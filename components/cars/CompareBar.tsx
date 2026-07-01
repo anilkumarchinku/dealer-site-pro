@@ -30,28 +30,34 @@ export default function CompareBar({ brandColor = '#A8793A', dealerId, dealerPho
     return (
         <>
             <div
-                className="fixed bottom-20 left-1/2 -translate-x-1/2 z-40
-                           flex items-center gap-3 px-4 py-3
+                className="fixed bottom-20 inset-x-3 z-40
+                           flex max-w-[calc(100vw-1.5rem)] flex-col gap-3 px-3 py-3
                            bg-white border border-gray-200 rounded-2xl shadow-2xl
-                           animate-in slide-in-from-bottom-4 duration-300"
+                           animate-in slide-in-from-bottom-4 duration-300
+                           sm:left-1/2 sm:right-auto sm:w-auto sm:max-w-[calc(100vw-2rem)] sm:-translate-x-1/2 sm:flex-row sm:items-center sm:px-4"
             >
                 {/* Car slots */}
-                <div className="flex items-center gap-2">
-                    {selectedCars.map((car) => (
+                <div className="flex min-w-0 items-start gap-2 overflow-x-auto pb-1 sm:items-center sm:overflow-visible sm:pb-0">
+                    {selectedCars.map((car) => {
+                        const imageSrc = resolveCarImage(car)
+
+                        return (
                         <div
                             key={car.id}
                             className="relative flex flex-col items-center w-16 group"
                         >
-                            <div className="relative w-14 h-10 rounded-lg overflow-hidden border border-gray-200 bg-gray-50">
-                                <Image
-                                    src={resolveCarImage(car)}
-                                    alt={`${car.make} ${car.model}`}
-                                    fill
-                                    className="object-cover"
-                                    sizes="56px"
-                                    unoptimized
-                                />
-                            </div>
+                            {imageSrc && (
+                                <div className="relative w-14 h-10 rounded-lg overflow-hidden border border-gray-200 bg-gray-50">
+                                    <Image
+                                        src={imageSrc}
+                                        alt={`${car.make} ${car.model}`}
+                                        fill
+                                        className="object-cover"
+                                        sizes="56px"
+                                        unoptimized
+                                    />
+                                </div>
+                            )}
                             <p className="mt-0.5 text-[10px] text-gray-600 text-center leading-tight max-w-full truncate">
                                 {car.make} {car.model}
                             </p>
@@ -66,7 +72,7 @@ export default function CompareBar({ brandColor = '#A8793A', dealerId, dealerPho
                                 <X className="w-2.5 h-2.5" />
                             </button>
                         </div>
-                    ))}
+                    )})}
 
                     {/* Empty slots */}
                     {Array.from({ length: emptySlots }).map((_, i) => (
@@ -86,17 +92,17 @@ export default function CompareBar({ brandColor = '#A8793A', dealerId, dealerPho
                 </div>
 
                 {/* Divider */}
-                <div className="w-px h-10 bg-gray-200" />
+                <div className="hidden h-10 w-px bg-gray-200 sm:block" />
 
                 {/* Actions */}
-                <div className="flex items-center gap-2">
-                    <div className="flex flex-col items-stretch gap-0.5">
+                <div className="flex w-full items-center gap-2 sm:w-auto">
+                    <div className="flex min-w-0 flex-1 flex-col items-stretch gap-0.5 sm:flex-none">
                         <button
                             onClick={() => setModalOpen(true)}
                             disabled={!canCompare}
                             aria-describedby={!canCompare ? 'compare-hint' : undefined}
                             style={canCompare ? { backgroundColor: brandColor } : undefined}
-                            className="flex items-center gap-1.5 px-3 py-2 rounded-xl text-sm font-semibold text-white
+                            className="flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl text-sm font-semibold text-white
                                        transition-opacity disabled:opacity-40 disabled:cursor-not-allowed disabled:bg-gray-400"
                         >
                             <GitCompare className="w-4 h-4" />

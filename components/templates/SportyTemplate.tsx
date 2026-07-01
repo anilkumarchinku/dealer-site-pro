@@ -31,7 +31,7 @@ import { EVSection } from '@/components/ui/EVSection';
 import { SocialLinks } from '@/components/templates/shared/SocialLinks';
 import { getTemplateServiceMeta } from '@/components/templates/shared/service-meta';
 import { generateTemplateConfig } from '@/lib/templates';
-import { getContrastText } from '@/lib/utils/color-contrast';
+import { getContrastText, getReadableAccent } from '@/lib/utils/color-contrast';
 import { buildTemplateDetailBasePath, buildTemplateSiteBase } from '@/lib/utils/template-site-paths';
 import {
     ArrowRight,
@@ -59,6 +59,7 @@ import { EnquireSidebar } from '@/components/cars/EnquireSidebar';
 import { EmiCalculator } from '@/components/ui/EmiCalculator';
 import type { Service } from '@/lib/types';
 import { getVehicleLabels } from '@/lib/utils/vehicle-labels';
+import { brandNameToId, getVehicleImageUrls } from '@/lib/utils/brand-model-images';
 import { validateLeadForm, hasLeadFormErrors, normalizeLeadPhone, type LeadFormErrors } from '@/lib/validations/lead';
 import { Reveal } from '@/components/ui/Reveal';
 import { CountUp } from '@/components/ui/CountUp';
@@ -81,6 +82,28 @@ function matchesFuel(carFuel: string, selected: string[]): boolean {
 function matchesTransmission(carTransmission: string, selected: string[]): boolean {
     const carValues = carTransmission.split(' / ').map(normalizeTransmission);
     return selected.some(sel => carValues.includes(normalizeTransmission(sel)));
+}
+
+function resolveFeaturedVehicleImage(car: Car): string | null {
+    const category = (car.vehicleCategory ?? '4w') as '2w' | '3w' | '4w';
+    return getVehicleImageUrls(
+        category,
+        brandNameToId(car.make, category),
+        car.model,
+        car.images?.hero,
+    )[0] ?? null;
+}
+
+function modelImageSourceKind(src: string | null | undefined) {
+    const value = String(src ?? '').toLowerCase();
+    if (
+        value.includes('/storage/v1/object/public/dealer-assets/vehicles/') ||
+        value.includes('/storage/v1/object/public/dealer-assets/sell-requests/') ||
+        value.includes('/storage/v1/object/public/vehicle-images/')
+    ) {
+        return 'inventory-photo';
+    }
+    return 'resolved-model';
 }
 
 interface SportyTemplateProps {
@@ -169,8 +192,8 @@ export function SportyTemplate({
     const config = generateTemplateConfig(brandName, 'sporty');
     const { brandColors } = config;
 
-    // Use brand primary color directly — white backgrounds ensure good contrast
-    const brandAccent = brandColors.primary;
+    // Text/icon accents must stay readable when a generated site uses a light brand color.
+    const brandAccent = getReadableAccent(brandColors.primary);
 
     useEffect(() => {
         const handleScroll = () => setIsScrolled(window.scrollY > 50);
@@ -310,7 +333,7 @@ export function SportyTemplate({
                             <button onClick={() => navigateTo('trust-section')} className="whitespace-nowrap font-bold uppercase text-sm tracking-wider text-gray-600 hover:text-gray-900">Trust Us</button>
                         </div>
                         <div className="flex shrink-0 items-center gap-2">
-                            <WishlistDrawer cars={cars} dealerId={dealerId} brandColor={brandAccent} />
+                            <WishlistDrawer cars={cars} dealerId={dealerId} brandColor={brandColors.primary} />
                             {sellVehicleHref && (
                                 <Button
                                     className="hidden px-4 text-white font-bold lg:flex"
@@ -329,7 +352,7 @@ export function SportyTemplate({
                                 <MessageSquare className="w-4 h-4 mr-2" />
                                 ENQUIRE
                             </Button>
-                            <Button className="hidden px-4 font-bold sm:inline-flex lg:px-5" style={{ backgroundColor: brandAccent, color: getContrastText(brandAccent) }} asChild>
+                            <Button className="hidden px-4 font-bold sm:inline-flex lg:px-5" style={{ backgroundColor: brandColors.primary, color: getContrastText(brandColors.primary) }} asChild>
                                 <a href={`tel:${contactInfo.phone}`}>
                                     <Phone className="w-4 h-4 mr-2" />
                                     CALL NOW
@@ -390,7 +413,7 @@ export function SportyTemplate({
                                 <div className="pt-2 border-t border-gray-200">
                                     <Button
                                         className="w-full font-bold uppercase"
-                                        style={{ backgroundColor: brandAccent, color: getContrastText(brandAccent) }}
+                                        style={{ backgroundColor: brandColors.primary, color: getContrastText(brandColors.primary) }}
                                         onClick={() => { setEnquireSidebarOpen(true); setMobileMenuOpen(false); }}
                                     >
                                         <MessageSquare className="w-4 h-4 mr-2" />
@@ -408,7 +431,7 @@ export function SportyTemplate({
                 onOpenChange={setEnquireSidebarOpen}
                 dealerName={dealerName}
                 dealerId={dealerId}
-                brandColor={brandAccent}
+                brandColor={brandColors.primary}
                 services={services}
                 contactPhone={contactInfo.phone}
                 vehicleType={vehicleType}
@@ -453,7 +476,7 @@ export function SportyTemplate({
                                 <p className="text-2xl text-gray-600 mb-8 animate-fade-in-up animate-delay-200">{heroSubtitle}</p>
                                 <div className="flex flex-wrap gap-4 animate-fade-in-up animate-delay-300">
                                     {showInventoryTab && (
-                                        <Button size="lg" className="font-bold text-lg uppercase tracking-wider hover-glow hover-scale" style={{ backgroundColor: brandAccent, color: getContrastText(brandAccent) }} onClick={() => setActiveTab('inventory')}>
+                                        <Button size="lg" className="font-bold text-lg uppercase tracking-wider hover-glow hover-scale" style={{ backgroundColor: brandColors.primary, color: getContrastText(brandColors.primary) }} onClick={() => setActiveTab('inventory')}>
                                             EXPLORE
                                             <ArrowRight className="ml-2 w-5 h-5" />
                                         </Button>
@@ -468,21 +491,20 @@ export function SportyTemplate({
                                     hero image, so this is hidden on lg and up. */}
                                 {featuredCars.length > 0 && (() => {
                                     const heroCar = featuredCars[0];
-                                    const heroSrc = heroCar.images.hero || null;
+                                    const heroSrc = resolveFeaturedVehicleImage(heroCar);
+                                    if (!heroSrc) return null;
                                     const heroPrice = heroCar.pricing.exShowroom.min != null
                                         ? heroCar.pricing.exShowroom.min.toLocaleString('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 })
                                         : (heroCar.price || 'Price on request');
                                     return (
                                         <div className="lg:hidden mt-8 max-w-md w-full animate-fade-in-up animate-delay-300">
-                                            <div className="rounded-lg border-2 border-gray-200 bg-white shadow-sm overflow-hidden">
+                                            <div
+                                                data-vehicle-card="true"
+                                                data-model-image-source={modelImageSourceKind(heroSrc)}
+                                                className="rounded-lg border-2 border-gray-200 bg-white shadow-sm overflow-hidden"
+                                            >
                                                 <div className="aspect-video relative bg-gray-50">
-                                                    {heroSrc ? (
-                                                        <FadeInImage src={heroSrc} alt={heroCar.model} fill className="object-cover" sizes="(max-width: 1024px) 100vw, 420px" />
-                                                    ) : (
-                                                        <div className="flex items-center justify-center h-full text-gray-300">
-                                                            <CarIcon className="w-14 h-14" aria-hidden="true" />
-                                                        </div>
-                                                    )}
+                                                    <FadeInImage src={heroSrc} alt={heroCar.model} fill className="object-cover" sizes="(max-width: 1024px) 100vw, 420px" />
                                                 </div>
                                                 <div className="p-5">
                                                     <h3 className="text-xl font-black uppercase text-gray-900">{heroCar.make}{' '}{heroCar.model}</h3>
@@ -500,7 +522,7 @@ export function SportyTemplate({
                     {heroStats.length > 0 && (
                         <section className="py-16 border-y" style={{ borderColor: `${brandAccent}33` }}>
                             <div className="max-w-7xl mx-auto px-4">
-                                <Reveal className={`grid gap-8 ${heroStats.length === 1 ? 'grid-cols-1' : heroStats.length === 2 ? 'grid-cols-2' : 'grid-cols-3'}`}>
+                                <Reveal className={`grid gap-6 sm:gap-8 ${heroStats.length === 1 ? 'grid-cols-1' : heroStats.length === 2 ? 'grid-cols-1 sm:grid-cols-2' : 'grid-cols-1 sm:grid-cols-3'}`}>
                                     {heroStats.map((stat, i) => (
                                         <div key={i} className="group text-center">
                                             <stat.icon className="w-10 h-10 mx-auto mb-3 transition-transform duration-300 group-hover:scale-110" style={{ color: brandAccent }} />
@@ -560,7 +582,7 @@ export function SportyTemplate({
                                     </Button>
                                 )}
                             </Reveal>
-                            <CarGrid cars={featuredCars} brandColor={brandAccent} light summaryOnly detailBasePath={detailBasePath} dealerPhone={contactInfo.phone} dealerId={dealerId} />
+                            <CarGrid cars={featuredCars} brandColor={brandColors.primary} light summaryOnly detailBasePath={detailBasePath} dealerPhone={contactInfo.phone} dealerId={dealerId} showWishlistAction />
                         </div>
                     </section>
 
@@ -600,14 +622,14 @@ export function SportyTemplate({
                                 <h2 className="text-5xl font-black mt-2 text-gray-900">EMI CALCULATOR</h2>
                                 <p className="text-gray-600 mt-2">Know your numbers before you race to the showroom</p>
                             </Reveal>
-                            <EmiCalculator brandColor={brandAccent} theme="light" />
+                            <EmiCalculator brandColor={brandColors.primary} theme="light" />
                         </div>
                     </section>
 
                     {/* Customer Reviews */}
                     <section className="py-16 bg-gradient-to-b from-white via-gray-50 to-white border-t border-gray-200">
                         <div className="max-w-7xl mx-auto px-4">
-                            <ReviewsSection dealerId={dealerId} brandColor={brandAccent} variant="light" />
+                            <ReviewsSection dealerId={dealerId} brandColor={brandColors.primary} variant="light" />
                         </div>
                     </section>
 
@@ -616,29 +638,29 @@ export function SportyTemplate({
 
                     {/* Exchange Section */}
                     <div id="exchange-section">
-                        <ExchangeSection brandColor={brandAccent} dealerId={dealerId} dealerName={dealerName} vehicleType={vehicleType} />
+                        <ExchangeSection brandColor={brandColors.primary} dealerId={dealerId} dealerName={dealerName} vehicleType={vehicleType} />
                     </div>
 
                     {/* Trust Badges */}
                     <div id="trust-section">
-                        <TrustBadgesSection brandColor={brandAccent} dealerName={dealerName} vehicleType={vehicleType} />
+                        <TrustBadgesSection brandColor={brandColors.primary} dealerName={dealerName} vehicleType={vehicleType} />
                     </div>
 
                     {/* Finance Section */}
                     <div id="finance-section">
-                        <FinanceSection brandColor={brandAccent} dealerId={dealerId} dealerName={dealerName} />
+                        <FinanceSection brandColor={brandColors.primary} dealerId={dealerId} dealerName={dealerName} />
                     </div>
 
                     {/* Service Booking */}
                     <div id="service-section">
-                        <ServiceBookingSection brandColor={brandAccent} dealerId={dealerId} dealerName={dealerName} vehicleType={vehicleType} branches={branches} serviceCenters={serviceCenters} />
+                        <ServiceBookingSection brandColor={brandColors.primary} dealerId={dealerId} dealerName={dealerName} vehicleType={vehicleType} branches={branches} serviceCenters={serviceCenters} />
                     </div>
 
                     {/* FAQ Section */}
-                    <FAQSection brandColor={brandAccent} vehicleType={vehicleType} dealerName={dealerName} />
+                    <FAQSection brandColor={brandColors.primary} vehicleType={vehicleType} dealerName={dealerName} />
 
                     {/* Video Section */}
-                    <VideoSection brandColor={brandAccent} brandName={brandName} vehicleType={vehicleType} />
+                    <VideoSection brandColor={brandColors.primary} brandName={brandName} vehicleType={vehicleType} />
 
                     {/* Book a Test Drive / Test Ride — Lead Form */}
                     <section id="contact" className="py-20 border-t border-gray-200">
@@ -760,7 +782,7 @@ export function SportyTemplate({
                                                 type="submit"
                                                 disabled={formStatus === 'sending'}
                                                 className="w-full py-3 rounded-md font-black uppercase tracking-wider hover-glow"
-                                                style={{ backgroundColor: brandAccent, color: getContrastText(brandAccent) }}
+                                                style={{ backgroundColor: brandColors.primary, color: getContrastText(brandColors.primary) }}
                                             >
                                                 {formStatus === 'sending' ? 'SUBMITTING...' : (
                                                     <>
@@ -788,7 +810,7 @@ export function SportyTemplate({
                                 <p className="text-gray-600 mt-2">{cars.length}+ {isHybrid ? 'Vehicles' : 'Performance Machines'}</p>
                             </div>
                             {isHybrid && (
-                                <div className="flex items-center gap-1 p-1 rounded-lg border border-gray-200 w-fit">
+                                <div className="flex w-full items-center gap-1 overflow-x-auto rounded-lg border border-gray-200 p-1 sm:w-fit">
                                     {([
                                         { id: 'all', label: `All (${cars.length})` },
                                         { id: 'new', label: `New (${cars.filter(c => c.condition === 'new').length})` },
@@ -797,8 +819,8 @@ export function SportyTemplate({
                                         <button
                                             key={t.id}
                                             onClick={() => setInventoryTab(t.id)}
-                                            className="px-4 py-1.5 rounded-md text-sm font-bold uppercase tracking-widest transition-all"
-                                            style={inventoryTab === t.id ? { backgroundColor: brandAccent, color: getContrastText(brandAccent) } : { color: '#9ca3af' }}
+                                            className="shrink-0 px-4 py-1.5 rounded-md text-sm font-bold uppercase tracking-widest transition-all"
+                                            style={inventoryTab === t.id ? { backgroundColor: brandColors.primary, color: getContrastText(brandColors.primary) } : { color: '#9ca3af' }}
                                         >
                                             {t.label}
                                         </button>
@@ -819,12 +841,13 @@ export function SportyTemplate({
                                             : inventoryTab === 'used' ? filteredInventoryCars.filter(c => c.condition !== 'new')
                                                 : filteredInventoryCars
                                         : filteredInventoryCars}
-                                    brandColor={brandAccent}
+                                    brandColor={brandColors.primary}
                                     light
                                     summaryOnly
                                     detailBasePath={detailBasePath}
                                     dealerPhone={contactInfo.phone}
                                     dealerId={dealerId}
+                                    showWishlistAction
                                 />
                             </div>
                         </div>
@@ -832,7 +855,7 @@ export function SportyTemplate({
                 </div>
             )}
 
-            <SellVehicleSection dealerName={dealerName} sellHref={sellVehicleHref} brandColor={brandAccent} />
+            <SellVehicleSection dealerName={dealerName} sellHref={sellVehicleHref} brandColor={brandColors.primary} />
 
             {/* Branch & Service Center Locations */}
             {(branches?.length || serviceCenters?.length) ? (
@@ -973,12 +996,12 @@ export function SportyTemplate({
                 </div>
             </footer>
 
-            <NavEMIModal open={navEMIOpen} onOpenChange={setNavEMIOpen} brandColor={brandAccent} cars={cars} />
+            <NavEMIModal open={navEMIOpen} onOpenChange={setNavEMIOpen} brandColor={brandColors.primary} cars={cars} />
 
-            <CompareBar brandColor={brandAccent} dealerId={dealerId} dealerPhone={contactInfo.phone} />
+            <CompareBar brandColor={brandColors.primary} dealerId={dealerId} dealerPhone={contactInfo.phone} />
 
             {/* Sticky Mobile Bar */}
-            <StickyEnquiryBar phone={contactInfo.phone} brandColor={brandAccent} vehicleType={vehicleType} />
+            <StickyEnquiryBar phone={contactInfo.phone} brandColor={brandColors.primary} vehicleType={vehicleType} />
 
             {/* Rule-Based Chatbot */}
             <DealerChatbot
@@ -987,7 +1010,7 @@ export function SportyTemplate({
                 phone={contactInfo.phone}
                 address={contactInfo.address}
                 workingHours={workingHours}
-                brandColor={brandAccent}
+                brandColor={brandColors.primary}
                 vehicleType={vehicleType}
                 cars={cars.slice(0, 8).map(c => ({ make: c.make, model: c.model, price: c.price, condition: c.condition }))}
                 services={services as string[]}

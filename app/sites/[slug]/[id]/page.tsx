@@ -62,7 +62,7 @@ function dbVehiclesToCars(vehicles: DBVehicle[]): Car[] {
         },
         dimensions: { seatingCapacity: 5 },
         features: { keyFeatures },
-        images: { hero: imageUrls[0] ?? '/placeholder-car.jpg', exterior: imageUrls, interior: [] },
+        images: { hero: imageUrls[0] ?? '', exterior: imageUrls, interior: [] },
         meta: {
             viewCount: v.views,
             dataSource: 'manual',

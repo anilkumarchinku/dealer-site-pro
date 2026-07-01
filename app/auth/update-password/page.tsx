@@ -53,7 +53,7 @@ export default function UpdatePasswordPage() {
         <main className="flex min-h-screen items-center justify-center bg-[#F7F3EA] px-4 py-10 text-[#0B0F12]">
             <section className="grid w-full max-w-5xl overflow-hidden rounded-[28px] border border-[#E3D9C8] bg-[#FFFBF3] shadow-[0_28px_100px_rgba(11,15,18,0.14)] lg:grid-cols-[0.95fr_1.05fr]">
                 <div className="bg-[#0B0F12] p-8 text-[#FFF8EC] sm:p-10">
-                    <BrandLogo className="[&>span]:text-[#FFF8EC]" />
+                    <BrandLogo className="[&>span]:text-[#FFF8EC] [&_.brand-logo-accent]:text-[#C79A5B]" />
                     <div className="mt-16 max-w-md">
                         <p className="mb-3 text-xs font-black uppercase tracking-[0.24em] text-[#D6A953]">
                             Secure reset

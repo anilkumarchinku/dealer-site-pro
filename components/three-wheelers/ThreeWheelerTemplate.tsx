@@ -17,7 +17,8 @@ import { CompareBar } from "@/components/three-wheelers/CompareBar"
 import { LeadFormModal } from "@/components/three-wheelers/LeadFormModal"
 import type { ThreeWheelerCompareItem, ThreeWheelerVehicle } from "@/lib/types/three-wheeler"
 import { useSitePrefix } from "@/lib/hooks/useSitePrefix"
-import { getContrastText } from "@/lib/utils/color-contrast"
+import { getContrastText, getReadableAccent } from "@/lib/utils/color-contrast"
+import { resolveGeneratedVehicleImage } from "@/lib/utils/generated-vehicle-images"
 import { normalizeLeadPhone } from "@/lib/validations/lead"
 import brandModelsData from "@/lib/data/brand-models.json"
 
@@ -153,6 +154,9 @@ export function ThreeWheelerTemplate({
 }: Props) {
     const prefix = useSitePrefix(slug)
     const accent = resolveBrandAccent(primaryBrand)
+    const accentText = getReadableAccent(accent)
+    const accentTextOnDark = getReadableAccent(accent, "#fffdf7", "#0b0e12")
+    const onAccent = getContrastText(accent)
     const heroGradient = resolveBrandHero(primaryBrand)
     // Resolved logo: dealer's own upload → brand asset → null (initials shown)
     const resolvedLogo = getBrandLogoSrc3W(primaryBrand, logoUrl ?? null)
@@ -184,7 +188,7 @@ export function ThreeWheelerTemplate({
                 id: vehicle.id,
                 brand: vehicle.brand,
                 model: vehicle.model,
-                image: vehicle.images[0] ?? null,
+                image: resolveGeneratedVehicleImage("3w", vehicle.brand, vehicle.model, vehicle.images),
             }]
         })
     }
@@ -247,13 +251,13 @@ export function ThreeWheelerTemplate({
                                 </div>
                             ) : primaryBrand ? (
                                 <div
-                                    className="w-10 h-10 shrink-0 rounded-lg flex items-center justify-center text-sm font-bold text-white"
-                                    style={{ backgroundColor: `${accent}90` }}
+                                    className="w-10 h-10 shrink-0 rounded-lg flex items-center justify-center text-sm font-bold"
+                                    style={{ backgroundColor: accent, color: onAccent }}
                                 >
                                     {primaryBrand.slice(0, 2).toUpperCase()}
                                 </div>
                             ) : null}
-                            <span className={`max-w-[170px] text-base font-semibold leading-tight tracking-wide xl:max-w-none xl:text-lg ${solidNav ? "text-gray-900" : "text-white"}`}>
+                            <span className={`max-w-[145px] truncate text-base font-semibold leading-tight tracking-wide sm:max-w-[170px] xl:max-w-none xl:text-lg ${solidNav ? "text-gray-900" : "text-white"}`}>
                                 {dealerName}
                             </span>
                         </button>
@@ -268,7 +272,7 @@ export function ThreeWheelerTemplate({
                                     key={tab}
                                     onClick={() => setActiveTab(tab)}
                                     className={`whitespace-nowrap text-sm font-medium transition-colors ${solidNav ? "text-gray-600 hover:text-gray-900" : "text-white/80 hover:text-white"}`}
-                                    style={activeTab === tab ? { color: accent } : {}}
+                                    style={activeTab === tab ? { color: solidNav ? accentText : accentTextOnDark } : {}}
                                 >
                                     {label}
                                 </button>
@@ -294,8 +298,8 @@ export function ThreeWheelerTemplate({
                             </Button>
                             <Button
                                 size="sm"
-                                className="whitespace-nowrap"
-                                style={{ backgroundColor: accent, color: getContrastText(accent) }}
+                                className="hidden whitespace-nowrap sm:inline-flex"
+                                style={{ backgroundColor: accent, color: onAccent }}
                                 asChild
                             >
                                 <a href={`tel:${phone}`}>
@@ -304,7 +308,7 @@ export function ThreeWheelerTemplate({
                                 </a>
                             </Button>
                             <button
-                                className={`xl:hidden p-2 rounded-lg transition-colors ${solidNav ? "text-gray-900 hover:bg-gray-100" : "text-white hover:bg-white/10"}`}
+                                className={`xl:hidden rounded-lg p-1.5 transition-colors sm:p-2 ${solidNav ? "text-gray-900 hover:bg-gray-100" : "text-white hover:bg-white/10"}`}
                                 onClick={() => setMobileMenuOpen(o => !o)}
                                 aria-label="Toggle menu"
                                 aria-expanded={mobileMenuOpen}
@@ -391,18 +395,18 @@ export function ThreeWheelerTemplate({
                             {/* Contact bar */}
                             <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-white/60 mb-10">
                                 <a href={`tel:${phone}`} className="flex items-center gap-1.5 hover:text-white transition-colors">
-                                    <Phone className="w-4 h-4" style={{ color: accent }} />
+                                    <Phone className="w-4 h-4" style={{ color: accentTextOnDark }} />
                                     {phone}
                                 </a>
                                 {email && (
                                     <a href={`mailto:${email}`} className="flex items-center gap-1.5 hover:text-white transition-colors">
-                                        <Mail className="w-4 h-4" style={{ color: accent }} />
+                                        <Mail className="w-4 h-4" style={{ color: accentTextOnDark }} />
                                         {email}
                                     </a>
                                 )}
                                 {(fullAddress || location) && (
                                     <span className="flex items-center gap-1.5">
-                                        <MapPin className="w-4 h-4 shrink-0" style={{ color: accent }} />
+                                        <MapPin className="w-4 h-4 shrink-0" style={{ color: accentTextOnDark }} />
                                         <span className="max-w-xs text-left">{fullAddress || location}</span>
                                     </span>
                                 )}
@@ -413,7 +417,7 @@ export function ThreeWheelerTemplate({
                                 <Button
                                     size="lg"
                                     className="font-semibold px-8"
-                                    style={{ backgroundColor: accent, color: getContrastText(accent) }}
+                                    style={{ backgroundColor: accent, color: onAccent }}
                                     onClick={() => setActiveTab("inventory")}
                                 >
                                     Browse All Vehicles
@@ -449,7 +453,7 @@ export function ThreeWheelerTemplate({
                     {/* Categories */}
                     <section className="max-w-7xl mx-auto px-4 py-16">
                         <div className="text-center mb-10">
-                            <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: accent }}>
+                            <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: accentText }}>
                                 What We Offer
                             </span>
                             <h2 className="text-3xl font-bold mt-2 text-gray-900">Shop by Category</h2>
@@ -463,7 +467,7 @@ export function ThreeWheelerTemplate({
                                     style={{ "--accent": accent } as React.CSSProperties}
                                 >
                                     <div className="w-14 h-14 rounded-2xl flex items-center justify-center transition-colors duration-300 group-hover:text-white"
-                                        style={{ backgroundColor: `${accent}15`, color: accent }}
+                                        style={{ backgroundColor: `${accent}15`, color: accentText }}
                                     >
                                         <Icon className="w-7 h-7" />
                                     </div>
@@ -471,7 +475,7 @@ export function ThreeWheelerTemplate({
                                         <p className="font-semibold text-gray-900">{label}</p>
                                         <p className="text-xs text-gray-600 mt-0.5">{desc}</p>
                                     </div>
-                                    <ChevronRight className="w-4 h-4 text-gray-600 group-hover:translate-x-1 transition-transform" style={{ color: accent }} />
+                                    <ChevronRight className="w-4 h-4 text-gray-600 group-hover:translate-x-1 transition-transform" style={{ color: accentText }} />
                                 </Link>
                             ))}
                         </div>
@@ -482,7 +486,7 @@ export function ThreeWheelerTemplate({
                         <section className="bg-white py-12 border-t border-gray-100">
                             <div className="max-w-7xl mx-auto px-4">
                                 <div className="text-center mb-8">
-                                    <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: accent }}>
+                                    <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: accentText }}>
                                         Our Services
                                     </span>
                                     <h2 className="text-2xl font-bold mt-2 text-gray-900">Everything You Need</h2>
@@ -494,7 +498,7 @@ export function ThreeWheelerTemplate({
                                             <div
                                                 key={svc}
                                                 className="flex items-center gap-2 px-5 py-2.5 rounded-full border text-sm font-medium"
-                                                style={{ borderColor: `${accent}60`, color: accent, backgroundColor: `${accent}10` }}
+                                                style={{ borderColor: `${accent}60`, color: accentText, backgroundColor: `${accent}10` }}
                                             >
                                                 <span>{meta.icon}</span>
                                                 <span>{meta.label}</span>
@@ -511,7 +515,7 @@ export function ThreeWheelerTemplate({
                         <section className="max-w-7xl mx-auto px-4 py-16">
                             <div className="flex items-end justify-between mb-10">
                                 <div>
-                                    <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: accent }}>
+                                    <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: accentText }}>
                                         {primaryBrand ? `${primaryBrand} Range` : "Our Stock"}
                                     </span>
                                     <h2 className="text-3xl font-bold mt-2 text-gray-900">Popular Models</h2>
@@ -519,7 +523,7 @@ export function ThreeWheelerTemplate({
                                 <button
                                     onClick={() => setActiveTab("inventory")}
                                     className="text-sm font-medium flex items-center gap-1 hover:underline"
-                                    style={{ color: accent }}
+                                    style={{ color: accentText }}
                                 >
                                     View all <ChevronRight className="w-4 h-4" />
                                 </button>
@@ -554,7 +558,7 @@ export function ThreeWheelerTemplate({
                     <section className="bg-white py-16 border-t border-gray-100">
                         <div className="max-w-7xl mx-auto px-4">
                             <div className="text-center mb-12">
-                                <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: accent }}>
+                                <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: accentText }}>
                                     Why Us
                                 </span>
                                 <h2 className="text-3xl font-bold mt-2 text-gray-900">The {dealerName} Difference</h2>
@@ -567,7 +571,7 @@ export function ThreeWheelerTemplate({
                                 ].map(({ Icon, title, desc }) => (
                                     <div key={title} className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm text-center">
                                         <div className="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-5"
-                                            style={{ backgroundColor: `${accent}15`, color: accent }}
+                                            style={{ backgroundColor: `${accent}15`, color: accentText }}
                                         >
                                             <Icon className="w-7 h-7" />
                                         </div>
@@ -582,7 +586,7 @@ export function ThreeWheelerTemplate({
                     {/* EMI Calculator */}
                     <section className="max-w-4xl mx-auto px-4 py-16">
                         <div className="text-center mb-10">
-                            <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: accent }}>Finance</span>
+                            <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: accentText }}>Finance</span>
                             <h2 className="text-3xl font-bold mt-2 text-gray-900">EMI Calculator</h2>
                             <p className="text-gray-600 mt-2">Plan your monthly payments before you visit us</p>
                         </div>
@@ -600,7 +604,7 @@ export function ThreeWheelerTemplate({
                                     { Icon: CheckCircle2, label: "Permit Assistance" },
                                 ].map(({ Icon, label }) => (
                                     <div key={label} className="flex flex-col items-center gap-2">
-                                        <Icon className="w-8 h-8" style={{ color: accent }} />
+                                        <Icon className="w-8 h-8" style={{ color: accentText }} />
                                         <p className="text-base font-semibold text-gray-900">{label}</p>
                                     </div>
                                 ))}
@@ -619,7 +623,7 @@ export function ThreeWheelerTemplate({
                             <div className="grid lg:grid-cols-2 gap-16 items-start">
                                 {/* Info column */}
                                 <div>
-                                    <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: accent }}>Contact Us</span>
+                                    <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: accentText }}>Contact Us</span>
                                     <h2 className="text-4xl font-bold mt-3 mb-6 text-gray-900">Get in Touch</h2>
                                     <p className="text-gray-600 mb-8 text-lg">
                                         Our team will call you back with the best price and availability. No spam, just answers.
@@ -628,14 +632,14 @@ export function ThreeWheelerTemplate({
                                     <div className="space-y-4 mb-8">
                                         <a href={`tel:${phone}`} className="flex items-center gap-4 group">
                                             <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style={{ backgroundColor: `${accent}15` }}>
-                                                <Phone className="w-5 h-5" style={{ color: accent }} />
+                                                <Phone className="w-5 h-5" style={{ color: accentText }} />
                                             </div>
                                             <span className="text-gray-700 group-hover:text-gray-900 transition-colors">{phone}</span>
                                         </a>
                                         {email && (
                                             <a href={`mailto:${email}`} className="flex items-center gap-4 group">
                                                 <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style={{ backgroundColor: `${accent}15` }}>
-                                                    <Mail className="w-5 h-5" style={{ color: accent }} />
+                                                    <Mail className="w-5 h-5" style={{ color: accentText }} />
                                                 </div>
                                                 <span className="text-gray-700 group-hover:text-gray-900 transition-colors">{email}</span>
                                             </a>
@@ -643,7 +647,7 @@ export function ThreeWheelerTemplate({
                                         {(fullAddress || location) && (
                                             <div className="flex items-start gap-4">
                                                 <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style={{ backgroundColor: `${accent}15` }}>
-                                                    <MapPin className="w-5 h-5" style={{ color: accent }} />
+                                                    <MapPin className="w-5 h-5" style={{ color: accentText }} />
                                                 </div>
                                                 <span className="text-gray-700">{fullAddress || location}</span>
                                             </div>
@@ -651,7 +655,7 @@ export function ThreeWheelerTemplate({
                                         {workingHours && (
                                             <div className="flex items-center gap-4">
                                                 <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style={{ backgroundColor: `${accent}15` }}>
-                                                    <Clock className="w-5 h-5" style={{ color: accent }} />
+                                                    <Clock className="w-5 h-5" style={{ color: accentText }} />
                                                 </div>
                                                 <span className="text-gray-700">{workingHours}</span>
                                             </div>
@@ -676,7 +680,7 @@ export function ThreeWheelerTemplate({
                                 <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-8">
                                     {formStatus === "sent" ? (
                                         <div className="text-center py-12">
-                                            <CheckCircle2 className="w-16 h-16 mx-auto mb-4" style={{ color: accent }} />
+                                            <CheckCircle2 className="w-16 h-16 mx-auto mb-4" style={{ color: accentText }} />
                                             <h3 className="text-2xl font-bold mb-2 text-gray-900">Thank You!</h3>
                                             <p className="text-gray-600">Our team will call you back shortly.</p>
                                         </div>
@@ -718,7 +722,7 @@ export function ThreeWheelerTemplate({
                                                 type="submit"
                                                 disabled={formStatus === "sending"}
                                                 className="w-full py-3 font-semibold rounded-xl"
-                                                style={{ backgroundColor: accent, color: getContrastText(accent) }}
+                                                style={{ backgroundColor: accent, color: onAccent }}
                                             >
                                                 {formStatus === "sending" ? "Sending..." : (
                                                     <>
@@ -743,7 +747,7 @@ export function ThreeWheelerTemplate({
                         {/* Header */}
                         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 py-10 border-b border-gray-100 mb-10">
                             <div>
-                                <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: accent }}>
+                                <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: accentText }}>
                                     {primaryBrand || "All Brands"}
                                 </span>
                                 <h1 className="text-4xl font-bold mt-1 text-gray-900">
@@ -766,8 +770,9 @@ export function ThreeWheelerTemplate({
                                 <Link
                                     key={label}
                                     href={href}
+                                    data-mobile-filter-control="true"
                                     className="px-4 py-2 rounded-full border text-sm font-medium transition-colors"
-                                    style={{ borderColor: `${accent}60`, color: accent, backgroundColor: `${accent}10` }}
+                                    style={{ borderColor: `${accent}60`, color: accentText, backgroundColor: `${accent}10` }}
                                 >
                                     {label}
                                 </Link>
@@ -789,10 +794,9 @@ export function ThreeWheelerTemplate({
                             </div>
                         ) : (
                             <div className="text-center py-24 text-gray-600">
-                                <p className="text-5xl mb-4">🛺</p>
                                 <p className="text-xl font-semibold text-gray-600">Stock coming soon</p>
                                 <p className="mt-2">Call us to check current availability</p>
-                                <Button className="mt-6" style={{ backgroundColor: accent, color: getContrastText(accent) }} asChild>
+                                <Button className="mt-6" style={{ backgroundColor: accent, color: onAccent }} asChild>
                                     <a href={`tel:${phone}`}><Phone className="w-4 h-4 mr-2" />Call {phone}</a>
                                 </Button>
                             </div>
@@ -813,8 +817,8 @@ export function ThreeWheelerTemplate({
                             </div>
                         ) : primaryBrand ? (
                             <div
-                                className="w-12 h-12 shrink-0 rounded-xl flex items-center justify-center text-base font-bold text-white"
-                                style={{ backgroundColor: accent }}
+                                className="w-12 h-12 shrink-0 rounded-xl flex items-center justify-center text-base font-bold"
+                                style={{ backgroundColor: accent, color: onAccent }}
                             >
                                 {primaryBrand.slice(0, 2).toUpperCase()}
                             </div>
@@ -831,24 +835,24 @@ export function ThreeWheelerTemplate({
                             <h4 className="font-semibold text-gray-900 mb-4">Contact</h4>
                             <div className="space-y-3 text-sm">
                                 <a href={`tel:${phone}`} className="flex items-center gap-2 hover:text-gray-900">
-                                    <Phone className="w-4 h-4 shrink-0" style={{ color: accent }} />
+                                    <Phone className="w-4 h-4 shrink-0" style={{ color: accentText }} />
                                     {phone}
                                 </a>
                                 {email && (
                                     <a href={`mailto:${email}`} className="flex items-center gap-2 hover:text-gray-900">
-                                        <Mail className="w-4 h-4 shrink-0" style={{ color: accent }} />
+                                        <Mail className="w-4 h-4 shrink-0" style={{ color: accentText }} />
                                         {email}
                                     </a>
                                 )}
                                 {(fullAddress || location) && (
                                     <div className="flex items-start gap-2">
-                                        <MapPin className="w-4 h-4 mt-0.5 shrink-0" style={{ color: accent }} />
+                                        <MapPin className="w-4 h-4 mt-0.5 shrink-0" style={{ color: accentText }} />
                                         <span>{fullAddress || location}</span>
                                     </div>
                                 )}
                                 {workingHours && (
                                     <div className="flex items-center gap-2">
-                                        <Clock className="w-4 h-4 shrink-0" style={{ color: accent }} />
+                                        <Clock className="w-4 h-4 shrink-0" style={{ color: accentText }} />
                                         <span>{workingHours}</span>
                                     </div>
                                 )}

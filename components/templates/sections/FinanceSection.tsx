@@ -1,8 +1,8 @@
 'use client';
 
 import { useId, useState } from 'react';
-import { CheckCircle2, Zap, Home, Landmark } from 'lucide-react';
-import { getContrastText } from '@/lib/utils/color-contrast';
+import { CheckCircle2, Zap, Home, Landmark, ShieldCheck, CreditCard } from 'lucide-react';
+import { getContrastText, getReadableAccent } from '@/lib/utils/color-contrast';
 import { normalizeLeadPhone } from '@/lib/validations/lead';
 
 interface FinanceSectionProps {
@@ -49,6 +49,10 @@ export function FinanceSection({ brandColor, dealerId, dealerName }: FinanceSect
     // Readable text color for surfaces filled with the brand color (light brands
     // like yellow/lime need dark text, not white).
     const onBrandText = getContrastText(brandColor);
+    const brandAccent = getReadableAccent(brandColor);
+    const financePrecheckHref = `/api/finance/precheck?source=dealer-site-pro${dealerId ? `&dealer=${encodeURIComponent(dealerId)}` : ''}`;
+    const insuranceHref = `/tools/insurance-estimator${dealerId ? `?dealer=${encodeURIComponent(dealerId)}` : ''}`;
+    const fastagHref = `/api/fastag/recharge?source=dealer-site-pro${dealerId ? `&dealer=${encodeURIComponent(dealerId)}` : ''}`;
 
     // Stable, unique ids so each label is programmatically tied to its input.
     const fieldId = useId();
@@ -94,7 +98,7 @@ export function FinanceSection({ brandColor, dealerId, dealerName }: FinanceSect
                 <div className="text-center mb-10">
                     <span
                         className="text-sm font-semibold uppercase tracking-widest"
-                        style={{ color: brandColor }}
+                        style={{ color: brandAccent }}
                     >
                         Easy Finance
                     </span>
@@ -124,7 +128,7 @@ export function FinanceSection({ brandColor, dealerId, dealerName }: FinanceSect
                 {/* Finance partners — generic, not named tie-ups */}
                 <div className="mb-10">
                     <div className="flex items-center justify-center gap-2 mb-5">
-                        <Landmark className="w-4 h-4" style={{ color: brandColor }} aria-hidden="true" />
+                        <Landmark className="w-4 h-4" style={{ color: brandAccent }} aria-hidden="true" />
                         <p className="text-xs font-semibold uppercase tracking-widest text-gray-600">
                             Financing Through Leading Banks &amp; NBFCs
                         </p>
@@ -132,6 +136,32 @@ export function FinanceSection({ brandColor, dealerId, dealerName }: FinanceSect
                     <p className="text-center text-sm text-gray-600 max-w-lg mx-auto">
                         We work with a range of lenders to find a plan that suits you. Ask us which options are currently available for your purchase.
                     </p>
+                </div>
+
+                <div className="mb-10 grid grid-cols-1 gap-4 md:grid-cols-3">
+                    {[
+                        { href: financePrecheckHref, icon: Landmark, title: 'Finance Pre-check', text: 'Check partner eligibility before the showroom call.' },
+                        { href: insuranceHref, icon: ShieldCheck, title: 'Insurance Quote', text: 'Estimate cover and ask the dealer for assistance.' },
+                        { href: fastagHref, icon: CreditCard, title: 'FASTag Recharge', text: 'Continue to the configured recharge partner.' },
+                    ].map((action) => {
+                        const Icon = action.icon;
+                        return (
+                            <a
+                                key={action.title}
+                                href={action.href}
+                                className="group rounded-2xl border border-gray-200 bg-white p-5 text-left transition hover:-translate-y-0.5 hover:shadow-md"
+                            >
+                                <span
+                                    className="mb-4 flex h-11 w-11 items-center justify-center rounded-full"
+                                    style={{ backgroundColor: `${brandColor}1f`, color: brandAccent }}
+                                >
+                                    <Icon className="h-5 w-5" />
+                                </span>
+                                <span className="block text-sm font-bold text-gray-900">{action.title}</span>
+                                <span className="mt-1 block text-sm leading-6 text-gray-600">{action.text}</span>
+                            </a>
+                        );
+                    })}
                 </div>
 
                 {/* Benefits + Form */}
@@ -150,7 +180,7 @@ export function FinanceSection({ brandColor, dealerId, dealerName }: FinanceSect
                                         className="w-11 h-11 rounded-full flex items-center justify-center shrink-0"
                                         style={{ backgroundColor: `${brandColor}26` }}
                                     >
-                                        <Icon className="w-5 h-5" style={{ color: brandColor }} />
+                                        <Icon className="w-5 h-5" style={{ color: brandAccent }} />
                                     </div>
                                     <div>
                                         <h3 className="font-bold text-gray-900 mb-0.5">{benefit.title}</h3>
@@ -172,7 +202,7 @@ export function FinanceSection({ brandColor, dealerId, dealerName }: FinanceSect
                                     className="w-16 h-16 rounded-full flex items-center justify-center"
                                     style={{ backgroundColor: `${brandColor}26` }}
                                 >
-                                    <CheckCircle2 className="w-8 h-8" style={{ color: brandColor }} />
+                                    <CheckCircle2 className="w-8 h-8" style={{ color: brandAccent }} />
                                 </div>
                                 <h3 className="text-xl font-bold text-gray-900">Thank You!</h3>
                                 <p className="text-gray-600 max-w-xs">

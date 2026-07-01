@@ -305,14 +305,14 @@ function CarsContent() {
                             className={isRefetching ? 'opacity-50 pointer-events-none transition-opacity duration-200' : 'transition-opacity duration-200'}
                             aria-busy={isRefetching}
                         >
-                            <CarGrid cars={cars} light />
+                            <CarGrid cars={cars} light showCompareAction />
                         </div>
 
                         {/* Pagination */}
                         {totalPages > 1 && (
                             <div className="mt-8 space-y-4">
                                 {/* Page Navigation */}
-                                <div className="flex items-center justify-center gap-2">
+                                <div className="flex max-w-full flex-wrap items-center justify-center gap-2 px-1">
                                     <Button
                                         variant="outline"
                                         size="sm"
@@ -365,7 +365,7 @@ function CarsContent() {
                                         <ChevronRight className="w-4 h-4" />
                                     </Button>
 
-                                    <span className="text-xs text-muted-foreground ml-2">
+                                    <span className="basis-full text-center text-xs text-muted-foreground sm:basis-auto sm:ml-2">
                                         Page {currentPage} of {totalPages}
                                     </span>
                                 </div>

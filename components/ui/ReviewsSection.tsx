@@ -9,6 +9,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { Star, MessageSquare, ThumbsUp, Send } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { getContrastText, getReadableAccent } from '@/lib/utils/color-contrast';
 
 interface Review {
     id: string;
@@ -161,6 +162,8 @@ export function ReviewsSection({ dealerId, brandColor = '#A8793A', variant = 'li
     const subColor     = isMutedLight ? 'text-gray-600' : 'text-gray-600'
     const inputCls     = 'bg-gray-50 border-gray-200 text-gray-900 placeholder:text-gray-600 focus:border-gray-400'
     const labelCls     = 'text-gray-700'
+    const brandAccent = getReadableAccent(brandColor)
+    const onBrandText = getContrastText(brandColor)
 
     return (
         <section className={`py-16 ${isMutedLight ? 'rounded-[32px] border border-gray-200 bg-gradient-to-b from-white via-gray-50 to-white px-5 md:px-8 shadow-sm' : ''}`}>
@@ -168,8 +171,8 @@ export function ReviewsSection({ dealerId, brandColor = '#A8793A', variant = 'li
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
                 <div>
                     <div className="flex items-center gap-2 mb-1">
-                        <MessageSquare className="w-5 h-5" style={{ color: brandColor }} />
-                        <span className="text-sm font-semibold uppercase tracking-wider" style={{ color: brandColor }}>Customer Testimonials</span>
+                        <MessageSquare className="w-5 h-5" style={{ color: brandAccent }} />
+                        <span className="text-sm font-semibold uppercase tracking-wider" style={{ color: brandAccent }}>Customer Testimonials</span>
                     </div>
                     <h2 className={`text-3xl font-bold ${headingColor}`}>What Customers Say</h2>
                     {total > 0 && (
@@ -183,7 +186,7 @@ export function ReviewsSection({ dealerId, brandColor = '#A8793A', variant = 'li
                 <Button
                     onClick={() => setShowForm(f => !f)}
                     className="gap-2 shrink-0"
-                    style={{ backgroundColor: brandColor }}
+                    style={{ backgroundColor: brandColor, color: onBrandText }}
                 >
                     <ThumbsUp className="w-4 h-4" />
                     Rate Our Service
@@ -195,7 +198,7 @@ export function ReviewsSection({ dealerId, brandColor = '#A8793A', variant = 'li
                 <div className="rounded-2xl border border-gray-200 bg-white p-6 mb-8 shadow-sm">
                     {submitStatus === 'done' ? (
                         <div className="text-center py-4">
-                            <ThumbsUp className="w-10 h-10 mx-auto mb-2" style={{ color: brandColor }} />
+                            <ThumbsUp className="w-10 h-10 mx-auto mb-2" style={{ color: brandAccent }} />
                             <p className={`font-semibold ${headingColor}`}>{submitMsg}</p>
                             <Button variant="ghost" className="mt-3" onClick={() => { setShowForm(false); setSubmitStatus('idle'); }}>Close</Button>
                         </div>
@@ -273,7 +276,7 @@ export function ReviewsSection({ dealerId, brandColor = '#A8793A', variant = 'li
                             )}
 
                             <div className="flex gap-3">
-                                <Button type="submit" disabled={submitStatus === 'loading'} className="gap-2" style={{ backgroundColor: brandColor }}>
+                                <Button type="submit" disabled={submitStatus === 'loading'} className="gap-2" style={{ backgroundColor: brandColor, color: onBrandText }}>
                                     {submitStatus === 'loading'
                                         ? <span className="flex items-center gap-2"><div className="w-4 h-4 border-2 border-white/40 border-t-white rounded-full animate-spin" />Submitting...</span>
                                         : <><Send className="w-4 h-4" />Submit Feedback</>

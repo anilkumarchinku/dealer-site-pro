@@ -103,10 +103,10 @@ export default function OffersPage() {
                                 )}
                                 <h3 className="font-bold text-lg">{offer.title}</h3>
                                 {offer.description && (
-                                    <p className="text-sm text-muted-foreground">{offer.description}</p>
+                                    <p className="text-sm text-slate-700">{offer.description}</p>
                                 )}
                                 {offer.valid_until && (
-                                    <p className="text-xs text-muted-foreground">
+                                    <p className="text-xs text-slate-600">
                                         Valid until: {new Date(offer.valid_until).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })}
                                     </p>
                                 )}
@@ -130,7 +130,7 @@ export default function OffersPage() {
                                 <div key={offer.title} className={`rounded-2xl border p-5 space-y-3 ${cardColor}`}>
                                     <span className={`inline-block text-xs font-bold px-2.5 py-0.5 rounded-full ${badgeColor}`}>{offer.tag}</span>
                                     <h3 className="font-bold text-lg">{offer.title}</h3>
-                                    <p className="text-sm text-muted-foreground">{offer.description}</p>
+                                    <p className="text-sm text-slate-700">{offer.description}</p>
                                     <button
                                         onClick={() => setOfferOpen(true)}
                                         className="text-sm font-medium text-primary hover:underline"

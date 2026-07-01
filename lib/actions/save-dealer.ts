@@ -12,7 +12,7 @@ async function uploadBase64Image(
     client: SupabaseClient<Database>,
     base64: string,
     dealerId: string,
-    fieldName: 'logo' | 'hero'
+    fieldName: string
 ): Promise<string | null> {
     try {
         if (!base64 || !base64.startsWith('data:')) return null
@@ -34,6 +34,42 @@ async function uploadBase64Image(
     } catch {
         return null
     }
+}
+
+function isMissingHeroImagesColumn(error: { code?: string; message?: string; details?: string } | null | undefined) {
+    const text = `${error?.code ?? ''} ${error?.message ?? ''} ${error?.details ?? ''}`.toLowerCase();
+    return text.includes("hero_image_urls") && (text.includes("column") || text.includes("schema cache") || text.includes("does not exist"));
+}
+
+function existingImageUrl(value: string | null | undefined) {
+    const trimmed = value?.trim();
+    if (!trimmed || trimmed.startsWith("data:")) return null;
+    return trimmed;
+}
+
+async function resolveHeroImageUrls(
+    client: SupabaseClient<Database>,
+    data: Partial<OnboardingData>,
+    dealerId: string,
+) {
+    const requestedImages = (data.heroImages?.length ? data.heroImages : data.heroImage ? [data.heroImage] : [])
+        .filter(Boolean)
+        .slice(0, 5);
+    const uploadedUrls: string[] = [];
+
+    for (const [index, image] of requestedImages.entries()) {
+        const currentUrl = existingImageUrl(image);
+        if (currentUrl) {
+            uploadedUrls.push(currentUrl);
+            continue;
+        }
+
+        const pathName = index === 0 ? "hero" : `hero-${index + 1}`;
+        const uploadedUrl = await uploadBase64Image(client, image, dealerId, pathName);
+        if (uploadedUrl) uploadedUrls.push(uploadedUrl);
+    }
+
+    return Array.from(new Set(uploadedUrls)).slice(0, 5);
 }
 
 export interface SaveDealerResult {
@@ -272,15 +308,30 @@ export async function saveDealer(
 
         if (!dealerId) throw new Error("No dealer ID returned");
 
-        // ── Upload logo and hero image to storage ──────────────────────────
-        const logoUrl   = data.brandLogo ? await uploadBase64Image(supabase, data.brandLogo, dealerId, 'logo') : null
-        const heroUrl   = data.heroImage  ? await uploadBase64Image(supabase, data.heroImage,  dealerId, 'hero') : null
+        // ── Upload logo and used-site hero carousel images to storage ──────
+        const logoUrl  = data.brandLogo ? await uploadBase64Image(supabase, data.brandLogo, dealerId, 'logo') : null
+        const heroUrls = await resolveHeroImageUrls(supabase, data, dealerId)
 
-        if (logoUrl || heroUrl) {
-            const imageUpdate: Record<string, string> = {}
-            if (logoUrl)  imageUpdate.logo_url       = logoUrl
-            if (heroUrl)  imageUpdate.hero_image_url = heroUrl
-            await supabase.from('dealers').update(imageUpdate).eq('id', dealerId)
+        if (logoUrl || heroUrls.length > 0) {
+            const imageUpdate: Record<string, string | string[]> = {}
+            if (logoUrl) imageUpdate.logo_url = logoUrl
+            if (heroUrls.length > 0) {
+                imageUpdate.hero_image_url = heroUrls[0]
+                imageUpdate.hero_image_urls = heroUrls
+            }
+            const { error: imageUpdateError } = await supabase.from('dealers').update(imageUpdate).eq('id', dealerId)
+
+            if (imageUpdateError) {
+                if (!isMissingHeroImagesColumn(imageUpdateError)) throw imageUpdateError
+
+                const legacyImageUpdate: Record<string, string> = {}
+                if (logoUrl) legacyImageUpdate.logo_url = logoUrl
+                if (heroUrls[0]) legacyImageUpdate.hero_image_url = heroUrls[0]
+                if (Object.keys(legacyImageUpdate).length > 0) {
+                    const { error: legacyUpdateError } = await supabase.from('dealers').update(legacyImageUpdate).eq('id', dealerId)
+                    if (legacyUpdateError) throw legacyUpdateError
+                }
+            }
         }
 
         // ── Upsert dealer_brands (preserves outlet data) ─────────

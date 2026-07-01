@@ -180,7 +180,14 @@ export function BrandPageContent({
                 {filteredCars.length > 0 ? (
                     <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
                         {filteredCars.map((car) => (
-                            <CarCard key={car.id} car={car} light detailBasePath={detailBasePath} />
+                            <CarCard
+                                key={car.id}
+                                car={car}
+                                light
+                                detailBasePath={detailBasePath}
+                                showCompareAction={false}
+                                showWishlistAction={false}
+                            />
                         ))}
                     </div>
                 ) : (

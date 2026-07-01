@@ -4,8 +4,9 @@ import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
 import { X, Zap, Palette, Settings, Shield, Info } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { getContrastText } from "@/lib/utils/color-contrast"
+import { getContrastText, getReadableAccent } from "@/lib/utils/color-contrast"
 import type { TwoWheelerVehicle } from "@/lib/types/two-wheeler"
+import { isUsableVehicleImageUrl } from "@/lib/utils/brand-model-images"
 
 interface Props {
     vehicle: TwoWheelerVehicle
@@ -77,7 +78,7 @@ export function QuickViewModal({ vehicle, open, onClose, brandColor = "#1f2937",
     const imgSrc = imgSrcProp ?? (() => {
         if (!vehicle.images || !Array.isArray(vehicle.images) || vehicle.images.length === 0) return null
         const firstImg = vehicle.images[0]
-        if (!firstImg || typeof firstImg !== 'string') return null
+        if (!isUsableVehicleImageUrl(firstImg)) return null
         return firstImg
     })()
 
@@ -91,6 +92,7 @@ export function QuickViewModal({ vehicle, open, onClose, brandColor = "#1f2937",
         : null
 
     const isEV = vehicle.fuel_type === "electric"
+    const brandAccent = getReadableAccent(brandColor)
     const tabs: { key: Tab; label: string; icon: React.ReactNode }[] = [
         { key: "overview", label: "Overview", icon: <Info className="w-3.5 h-3.5" /> },
         { key: "specs",    label: "Specs",    icon: <Settings className="w-3.5 h-3.5" /> },
@@ -124,7 +126,7 @@ export function QuickViewModal({ vehicle, open, onClose, brandColor = "#1f2937",
                             unoptimized={imgSrc.startsWith('http')}
                         />
                     ) : (
-                        <div className="flex items-center justify-center h-full text-gray-600 text-4xl">🏍️</div>
+                        <div className="h-full bg-white" aria-hidden="true" />
                     )}
                     <button
                         onClick={onClose}
@@ -137,12 +139,12 @@ export function QuickViewModal({ vehicle, open, onClose, brandColor = "#1f2937",
                     {/* Badges */}
                     <div className="absolute top-3 left-3 flex gap-1">
                         {vehicle.fuel_type === "electric" && (
-                            <span className="bg-emerald-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-0.5">
+                            <span className="bg-emerald-700 text-white text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-0.5">
                                 <Zap className="w-2.5 h-2.5" /> EV
                             </span>
                         )}
                         {vehicle.bs6_compliant && (
-                            <span className="bg-green-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">BS6</span>
+                            <span className="bg-green-700 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">BS6</span>
                         )}
                     </div>
                 </div>
@@ -151,7 +153,7 @@ export function QuickViewModal({ vehicle, open, onClose, brandColor = "#1f2937",
                 <div className="px-4 pt-3 pb-2 border-b border-gray-100 shrink-0">
                     <div className="flex items-start justify-between">
                         <div>
-                            <p className="text-[10px] font-semibold uppercase tracking-widest" style={{ color: brandColor }}>
+                            <p className="text-[10px] font-semibold uppercase tracking-widest" style={{ color: brandAccent }}>
                                 {vehicle.brand}
                             </p>
                             <h3 className="text-lg font-bold text-gray-900">{vehicle.model}</h3>
@@ -176,7 +178,7 @@ export function QuickViewModal({ vehicle, open, onClose, brandColor = "#1f2937",
                                     ? "border-current text-gray-900"
                                     : "border-transparent text-gray-600 hover:text-gray-900"
                             }`}
-                            style={tab === t.key ? { color: brandColor, borderColor: brandColor } : undefined}
+                            style={tab === t.key ? { color: brandAccent, borderColor: brandColor } : undefined}
                         >
                             {t.icon} {t.label}
                         </button>
@@ -295,7 +297,7 @@ export function QuickViewModal({ vehicle, open, onClose, brandColor = "#1f2937",
                                             className="text-xs px-3 py-1.5 rounded-full border font-medium"
                                             style={{
                                                 borderColor: brandColor + "40",
-                                                color: brandColor,
+                                                color: brandAccent,
                                                 backgroundColor: brandColor + "08",
                                             }}
                                         >

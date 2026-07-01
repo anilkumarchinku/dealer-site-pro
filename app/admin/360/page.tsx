@@ -13,6 +13,7 @@ import {
     Activity, Boxes, Building2, Car, ChevronLeft, Database, Gauge, Globe,
     MessageSquare, LayoutGrid, Loader2, RefreshCw, Search, Star, TrendingUp, Trophy, Users, Wrench, X,
 } from "lucide-react"
+import { OperationsAlertsPanel } from "@/components/admin/OperationsAlertsPanel"
 
 const ACCENT = "#A8793A"
 
@@ -134,12 +135,12 @@ function RankBadge({ rank }: { rank: number }) {
 function ModelImg({ images, alt }: { images: string[]; alt: string }) {
     const [idx, setIdx] = useState(0)
     if (!images.length || idx >= images.length) {
-        return <Car className="w-6 h-6 text-muted-foreground" />
+        return null
     }
     // eslint-disable-next-line @next/next/no-img-element
     return (
         <img src={images[idx]} alt={alt} onError={() => setIdx((i) => i + 1)}
-            className="w-full h-full object-cover" />
+            className="w-full h-full object-cover" data-model-image-source="admin-360-inventory" />
     )
 }
 
@@ -256,10 +257,12 @@ export default function Admin360Page() {
                 </div>
             )}
 
+            <OperationsAlertsPanel />
+
             {/* KPI grid */}
             {kpis && (
                 <>
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 mb-4">
+                    <div className="grid grid-cols-1 gap-3 mb-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
                         <Kpi icon={<Users className="w-4 h-4" />} label="Total users" value={num(kpis.totalUsers ?? 0)} />
                         <Kpi icon={<Building2 className="w-4 h-4" />} label="Dealers" value={num(kpis.totalDealers)} sub={`${kpis.activeDealers} active`} />
                         <Kpi icon={<TrendingUp className="w-4 h-4" />} label="Leads" value={num(kpis.totalLeads)} sub={`${kpis.newDealers30d} new dealers/30d`} />
@@ -349,7 +352,7 @@ export default function Admin360Page() {
             {/* Dealer table */}
             <div className="rounded-2xl border border-[#E7E0D7] bg-card overflow-hidden">
                 <div className="overflow-x-auto">
-                    <table className="w-full text-sm">
+                    <table className="w-full min-w-[920px] text-sm">
                         <thead>
                             <tr className="text-left text-muted-foreground border-b border-[#E7E0D7] bg-muted/40">
                                 <Th onClick={() => toggleSort("rank")} active={sortKey === "rank"} dir={sortDir}>#</Th>
@@ -544,7 +547,7 @@ function DetailDrawer({ dealer, detail, loading, total, onClose }: {
                                 <div className="text-[10px] text-muted-foreground">performance score</div>
                             </div>
                         </div>
-                        <div className="grid grid-cols-4 gap-2 mt-3 pt-3 border-t border-[#E7E0D7]">
+                        <div className="grid grid-cols-2 gap-2 mt-3 pt-3 border-t border-[#E7E0D7] sm:grid-cols-4">
                             <RankCell label="Leads" rank={dealer.rank_leads} total={total} />
                             <RankCell label="Service" rank={dealer.rank_service} total={total} />
                             <RankCell label="Inventory" rank={dealer.rank_vehicles} total={total} />
@@ -553,7 +556,7 @@ function DetailDrawer({ dealer, detail, loading, total, onClose }: {
                     </div>
 
                     {/* 360 stat grid */}
-                    <div className="grid grid-cols-3 gap-2">
+                    <div className="grid grid-cols-1 gap-2 sm:grid-cols-3">
                         <Stat icon={<TrendingUp className="w-3 h-3" />} label="Leads" value={num(d.leads_total)} />
                         <Stat icon={<Wrench className="w-3 h-3" />} label="Service" value={num(d.service_bookings)} />
                         <Stat icon={<Boxes className="w-3 h-3" />} label="Vehicles" value={num(d.vehicles_total)} />
@@ -624,7 +627,7 @@ function DetailDrawer({ dealer, detail, loading, total, onClose }: {
                             <p className="text-sm text-muted-foreground">No inventory uploaded.</p>
                         )}
                         {!loading && detail && detail.vehicles.length > 0 && (
-                            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                            <div className="grid grid-cols-1 gap-2 sm:grid-cols-3">
                                 {detail.vehicles.map((v) => (
                                     <div key={v.id} className="rounded-xl border border-[#E7E0D7] bg-card overflow-hidden">
                                         <div className="aspect-[4/3] bg-muted grid place-items-center overflow-hidden">

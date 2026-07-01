@@ -35,6 +35,7 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { automotiveBrands } from "@/lib/colors/automotive-brands";
+import { getContrastText, getReadableAccent } from "@/lib/utils/color-contrast";
 import { getAllCars } from "@/lib/services/car-service";
 import { supabase } from "@/lib/supabase";
 import type { Car as CarType } from "@/lib/types/car";
@@ -671,7 +672,7 @@ export default function AdminDashboard() {
 
             <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
                 {/* Quick Stats */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4">
                     {quickStats.map((stat, i) => (
                         <Card key={i} className="p-4 border-0 shadow-sm hover:shadow-md transition-shadow">
                             <div className="flex items-center gap-3">
@@ -719,7 +720,7 @@ export default function AdminDashboard() {
                                             <Building2 className="h-4 w-4 text-blue-600" />
                                             Dealers
                                         </div>
-                                        <div className="grid grid-cols-2 gap-3 text-sm">
+                                        <div className="grid grid-cols-1 gap-3 text-sm sm:grid-cols-2">
                                             <p><span className="text-muted-foreground">Active</span><br /><strong>{insights.dealers.active}</strong></p>
                                             <p><span className="text-muted-foreground">Last 30 days</span><br /><strong>{insights.dealers.createdLast30Days}</strong></p>
                                             <p><span className="text-muted-foreground">4W</span><br /><strong>{insights.dealers.sellFlags.fourWheelers}</strong></p>
@@ -732,7 +733,7 @@ export default function AdminDashboard() {
                                             <Activity className="h-4 w-4 text-emerald-600" />
                                             Activity
                                         </div>
-                                        <div className="grid grid-cols-2 gap-3 text-sm">
+                                        <div className="grid grid-cols-1 gap-3 text-sm sm:grid-cols-2">
                                             <p><span className="text-muted-foreground">Leads</span><br /><strong>{insights.activity.leads}</strong></p>
                                             <p><span className="text-muted-foreground">2W leads</span><br /><strong>{insights.activity.twoWheelerLeads}</strong></p>
                                             <p><span className="text-muted-foreground">2W bookings</span><br /><strong>{insights.activity.twoWheelerBookings}</strong></p>
@@ -745,7 +746,7 @@ export default function AdminDashboard() {
                                             <CreditCard className="h-4 w-4 text-amber-600" />
                                             Domains & Billing
                                         </div>
-                                        <div className="grid grid-cols-2 gap-3 text-sm">
+                                        <div className="grid grid-cols-1 gap-3 text-sm sm:grid-cols-2">
                                             <p><span className="text-muted-foreground">Custom active</span><br /><strong>{insights.domains.customActive}</strong></p>
                                             <p><span className="text-muted-foreground">Custom pending</span><br /><strong>{insights.domains.customPending}</strong></p>
                                             <p><span className="text-muted-foreground">Subscriptions</span><br /><strong>{insights.billing.domainSubscriptions}</strong></p>
@@ -932,11 +933,13 @@ export default function AdminDashboard() {
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-4">
+                    <div className="grid grid-cols-2 gap-4 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8">
                         {filteredBrands.map((brandName) => {
                             const isSelected = selectedBrand === brandName;
                             const brandConfig = automotiveBrands[brandName as keyof typeof automotiveBrands];
                             const brandColor = brandConfig?.primary || '#3B82F6';
+                            const brandAccent = getReadableAccent(brandColor);
+                            const onBrandText = getContrastText(brandColor);
 
                             return (
                                 <Card
@@ -956,7 +959,7 @@ export default function AdminDashboard() {
                                         "text-xs font-medium text-center line-clamp-1",
                                         isSelected ? "font-bold" : "text-muted-foreground"
                                     )}
-                                        style={isSelected ? { color: brandColor } : {}}>
+                                        style={isSelected ? { color: brandAccent } : {}}>
                                         {brandName}
                                     </span>
 
@@ -968,8 +971,8 @@ export default function AdminDashboard() {
 
                                     {isSelected && (
                                         <div
-                                            className="absolute top-2 right-2 w-5 h-5 rounded-full text-white flex items-center justify-center"
-                                            style={{ backgroundColor: brandColor }}
+                                            className="absolute top-2 right-2 w-5 h-5 rounded-full flex items-center justify-center"
+                                            style={{ backgroundColor: brandColor, color: onBrandText }}
                                         >
                                             <Check className="w-3 h-3" />
                                         </div>

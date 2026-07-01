@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { PhoneCall, Calendar, Send } from 'lucide-react';
+import { getContrastText } from '@/lib/utils/color-contrast';
 
 interface StickyEnquiryBarProps {
     phone: string;
@@ -54,6 +55,7 @@ export function StickyEnquiryBar({
     const waNumber = (whatsapp ?? phone).replace(/\D/g, '');
     const waHref = `https://wa.me/${waNumber}`;
     const testDriveLabel = getTestDriveLabel(vehicleType);
+    const onBrandText = getContrastText(brandColor);
 
     return (
         <div
@@ -99,8 +101,8 @@ export function StickyEnquiryBar({
                     {/* Enquire — brand color */}
                     <a
                         href="#contact"
-                        className="flex flex-col items-center justify-center gap-1 py-2.5 rounded-xl text-white active:scale-95 transition-transform"
-                        style={{ backgroundColor: brandColor }}
+                        className="flex flex-col items-center justify-center gap-1 py-2.5 rounded-xl active:scale-95 transition-transform"
+                        style={{ backgroundColor: brandColor, color: onBrandText }}
                     >
                         <Send className="w-5 h-5" />
                         <span className="text-[11px] font-medium">Enquire</span>

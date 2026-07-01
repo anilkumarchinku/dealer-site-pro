@@ -246,7 +246,7 @@ export function CarFilters({ className, onFilterChange, hideBrand = false, showU
                         <AccordionContent className="pb-4">
                             <div className="flex items-center justify-between mb-3">
                                 <span className="text-sm font-semibold text-gray-900">{formatPriceInLakhs(priceRange[0])}</span>
-                                <span className="text-xs text-gray-400">to</span>
+                                <span className="text-xs text-gray-600">to</span>
                                 <span className="text-sm font-semibold text-gray-900">
                                     {priceRange[1] >= PRICE_SLIDER_MAX ? '₹10 Cr+' : formatPriceInLakhs(priceRange[1])}
                                 </span>

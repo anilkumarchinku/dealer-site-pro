@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { allTemplates, type TemplateStyle } from '@/lib/templates';
 import { getBrandColors } from '@/lib/colors/automotive-brands';
+import { getContrastText, getReadableAccent } from '@/lib/utils/color-contrast';
 
 /**
  * Template Demo Page
@@ -58,19 +59,21 @@ export default function TemplateDemoPage() {
             <div className="grid grid-cols-3 gap-2">
               {DEMO_BRANDS.map((brand) => {
                 const colors = getBrandColors(brand);
+                const selectedText = getContrastText(colors.primary);
                 return (
                   <button
                     key={brand}
                     onClick={() => setSelectedBrand(brand)}
                     className={`px-3 py-2 rounded-lg text-sm font-medium transition-all ${
                       selectedBrand === brand
-                        ? 'shadow-lg text-white'
-                        : 'bg-gray-100 hover:bg-gray-200'
+                        ? 'shadow-lg'
+                        : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
                     }`}
                     style={
                       selectedBrand === brand
                         ? {
                             backgroundColor: colors.primary,
+                            color: selectedText,
                           }
                         : {}
                     }
@@ -132,7 +135,7 @@ export default function TemplateDemoPage() {
                   }`}
                 >
                   <div className="flex items-center gap-3">
-                    <span className="text-2xl">{template.icon}</span>
+                    <span className="text-2xl text-gray-900">{template.icon}</span>
                     <div className="flex-1">
                       <div className="flex items-center gap-2">
                         <h3 className="font-bold text-gray-900">{template.name}</h3>
@@ -284,6 +287,9 @@ export default function TemplateDemoPage() {
  */
 function TemplatePreview({ brand, templateId }: { brand: string; templateId: TemplateStyle }) {
   const colors = getBrandColors(brand);
+  const primaryText = getContrastText(colors.primary);
+  const primaryAccent = getReadableAccent(colors.primary);
+  const primaryAccentOnMuted = getReadableAccent(colors.primary, '#1f2937', '#f9fafb');
 
   // Different preview layouts based on template
   const getPreviewLayout = () => {
@@ -313,7 +319,7 @@ function TemplatePreview({ brand, templateId }: { brand: string; templateId: Tem
                 <p className="text-xl text-gray-300">Experience the ultimate in automotive excellence</p>
                 <button
                   className="px-8 py-4 rounded-none font-semibold transition-all duration-500 shadow-2xl"
-                  style={{ backgroundColor: colors.primary }}
+                  style={{ backgroundColor: colors.primary, color: primaryText }}
                 >
                   Explore Collection
                 </button>
@@ -332,7 +338,7 @@ function TemplatePreview({ brand, templateId }: { brand: string; templateId: Tem
                       <p className="text-gray-400 mb-4">$XX,XXX</p>
                       <button
                         className="w-full py-3 rounded-none font-medium transition-opacity duration-500 hover:opacity-90"
-                        style={{ backgroundColor: colors.primary }}
+                        style={{ backgroundColor: colors.primary, color: primaryText }}
                       >
                         View Details
                       </button>
@@ -349,7 +355,7 @@ function TemplatePreview({ brand, templateId }: { brand: string; templateId: Tem
           <div className="bg-white rounded-lg overflow-hidden">
             {/* Header */}
             <div className="bg-white border-b p-6 flex justify-between items-center">
-              <div className="text-2xl font-bold" style={{ color: colors.primary }}>
+              <div className="text-2xl font-bold" style={{ color: primaryAccent }}>
                 {brand}
               </div>
               <div className="flex gap-6 text-sm font-medium text-gray-600">
@@ -365,7 +371,7 @@ function TemplatePreview({ brand, templateId }: { brand: string; templateId: Tem
               <div className="flex flex-col justify-center space-y-6">
                 <h1
                   className="text-5xl font-bold"
-                  style={{ fontFamily: 'Poppins, sans-serif', color: colors.primary }}
+                  style={{ fontFamily: 'Poppins, sans-serif', color: primaryAccentOnMuted }}
                 >
                   Welcome to Our Family
                 </h1>
@@ -374,14 +380,14 @@ function TemplatePreview({ brand, templateId }: { brand: string; templateId: Tem
                 </p>
                 <div className="flex gap-4">
                   <button
-                    className="px-8 py-4 rounded-lg font-semibold text-white transition-all duration-300 shadow-md hover:shadow-lg"
-                    style={{ backgroundColor: colors.primary }}
+                    className="px-8 py-4 rounded-lg font-semibold transition-all duration-300 shadow-md hover:shadow-lg"
+                    style={{ backgroundColor: colors.primary, color: primaryText }}
                   >
                     Shop Now
                   </button>
                   <button
                     className="px-8 py-4 rounded-lg font-semibold border-2 transition-all duration-300 hover:bg-opacity-10"
-                    style={{ borderColor: colors.primary, color: colors.primary }}
+                    style={{ borderColor: primaryAccentOnMuted, color: primaryAccentOnMuted }}
                   >
                     Learn More
                   </button>
@@ -392,7 +398,7 @@ function TemplatePreview({ brand, templateId }: { brand: string; templateId: Tem
 
             {/* Vehicles Grid */}
             <div className="p-12">
-              <h2 className="text-4xl font-bold text-center mb-8" style={{ color: colors.primary }}>
+              <h2 className="text-4xl font-bold text-center mb-8" style={{ color: primaryAccent }}>
                 Featured Vehicles
               </h2>
               <div className="grid grid-cols-3 gap-6">
@@ -403,8 +409,8 @@ function TemplatePreview({ brand, templateId }: { brand: string; templateId: Tem
                       <h3 className="text-xl font-bold mb-2 text-gray-900">2024 Model</h3>
                       <p className="text-gray-600 mb-4">Starting at $XX,XXX</p>
                       <button
-                        className="w-full py-3 rounded-lg font-semibold text-white transition-all"
-                        style={{ backgroundColor: colors.primary }}
+                        className="w-full py-3 rounded-lg font-semibold transition-all"
+                        style={{ backgroundColor: colors.primary, color: primaryText }}
                       >
                         View Details
                       </button>
@@ -459,7 +465,7 @@ function TemplatePreview({ brand, templateId }: { brand: string; templateId: Tem
                       <p className="text-gray-400 text-sm mb-3">FROM $XX,XXX</p>
                       <button
                         className="w-full py-2 rounded-none font-bold text-sm transition-all"
-                        style={{ backgroundColor: colors.primary }}
+                        style={{ backgroundColor: colors.primary, color: primaryText }}
                       >
                         DETAILS
                       </button>
@@ -489,7 +495,7 @@ function TemplatePreview({ brand, templateId }: { brand: string; templateId: Tem
             <div className="p-12 text-center bg-gray-50">
               <h1
                 className="text-4xl font-semibold mb-4"
-                style={{ fontFamily: 'IBM Plex Sans, sans-serif', color: colors.primary }}
+                style={{ fontFamily: 'IBM Plex Sans, sans-serif', color: primaryAccentOnMuted }}
               >
                 Professional Fleet Solutions
               </h1>
@@ -497,8 +503,8 @@ function TemplatePreview({ brand, templateId }: { brand: string; templateId: Tem
                 Trusted by businesses nationwide for reliable commercial vehicles
               </p>
               <button
-                className="px-10 py-4 rounded-lg font-semibold text-white transition-all"
-                style={{ backgroundColor: colors.primary }}
+                className="px-10 py-4 rounded-lg font-semibold transition-all"
+                style={{ backgroundColor: colors.primary, color: primaryText }}
               >
                 Request Quote
               </button>
@@ -518,7 +524,7 @@ function TemplatePreview({ brand, templateId }: { brand: string; templateId: Tem
                       <p className="text-gray-600 mb-4">Starting at $XX,XXX</p>
                       <button
                         className="w-full py-3 rounded-lg font-semibold border-2 transition-all"
-                        style={{ borderColor: colors.primary, color: colors.primary }}
+                        style={{ borderColor: primaryAccent, color: primaryAccent }}
                       >
                         Learn More
                       </button>

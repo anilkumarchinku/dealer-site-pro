@@ -201,6 +201,11 @@ function VehicleMarketMegaMenu({ closeMenu }) {
 
 function VehicleMarketTopNav({ mode, setMode }) {
   const [menuOpen, setMenuOpen] = React.useState(false);
+  const closeMenu = () => setMenuOpen(false);
+  const runTopNavAction = (action) => {
+    closeMenu();
+    action();
+  };
 
   return (
     <div className="dsp-market-topnav-shell">
@@ -223,16 +228,16 @@ function VehicleMarketTopNav({ mode, setMode }) {
             >
               New Cars <window.Icons.chevronRight size={15} style={{ transform: menuOpen ? 'rotate(90deg)' : 'rotate(0deg)', transition: 'transform 160ms var(--ease-out)' }} />
             </button>
-            <button type="button" className="dsp-market-topnav-link" onClick={() => emitVehicleFilter('type', 'Bikes')}><window.Icons.bike size={17} /> Bikes</button>
-            <button type="button" className="dsp-market-topnav-link" onClick={() => emitVehicleFilter('type', 'Autos')}><window.Icons.auto size={17} /> Autos</button>
-            <button type="button" className="dsp-market-topnav-link" onClick={() => scrollToMarketingSection('brands')}>Brands</button>
+            <button type="button" className="dsp-market-topnav-link" onClick={() => runTopNavAction(() => emitVehicleFilter('type', 'Bikes'))}><window.Icons.bike size={17} /> Bikes</button>
+            <button type="button" className="dsp-market-topnav-link" onClick={() => runTopNavAction(() => emitVehicleFilter('type', 'Autos'))}><window.Icons.auto size={17} /> Autos</button>
+            <button type="button" className="dsp-market-topnav-link" onClick={() => runTopNavAction(() => scrollToMarketingSection('brands'))}>Brands</button>
             <button type="button" className="dsp-market-topnav-cta" onClick={() => { window.top.location.href = '/onboarding'; }}>
               Create My Website <window.Icons.arrowRight size={16} />
             </button>
           </div>
         </nav>
       </window.Container>
-      {menuOpen ? <VehicleMarketMegaMenu closeMenu={() => setMenuOpen(false)} /> : null}
+      {menuOpen ? <VehicleMarketMegaMenu closeMenu={closeMenu} /> : null}
     </div>
   );
 }

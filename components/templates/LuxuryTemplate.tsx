@@ -33,7 +33,7 @@ import { EVSection } from '@/components/ui/EVSection';
 import { Reveal } from '@/components/ui/Reveal';
 import { FadeInImage } from '@/components/ui/FadeInImage';
 import { generateTemplateConfig } from '@/lib/templates';
-import { getContrastText } from '@/lib/utils/color-contrast';
+import { getContrastText, getReadableAccent } from '@/lib/utils/color-contrast';
 import { buildTemplateDetailBasePath, buildTemplateSiteBase } from '@/lib/utils/template-site-paths';
 import { ArrowRight, Phone, MapPin, Mail, Award, ShieldCheck, Star, ChevronRight, Crown, Clock, MessageSquare, CheckCircle2, Send, Menu, X, Car as CarIcon } from 'lucide-react';
 import { useState, useEffect, useMemo } from 'react';
@@ -141,8 +141,8 @@ export function LuxuryTemplate({
     const config = generateTemplateConfig(brandName, 'luxury');
     const { brandColors } = config;
 
-    // Use brand primary color directly — white backgrounds ensure good contrast
-    const brandAccent = brandColors.primary;
+    // Text/icon accents must stay readable when a generated site uses a light brand color.
+    const brandAccent = getReadableAccent(brandColors.primary);
 
     useEffect(() => {
         const handleScroll = () => setIsScrolled(window.scrollY > 50);
@@ -259,7 +259,7 @@ export function LuxuryTemplate({
                             <button onClick={() => navigateTo('trust-section')} className="whitespace-nowrap text-sm tracking-wider text-gray-600 hover:text-gray-900">Trust Us</button>
                         </div>
                         <div className="flex shrink-0 items-center gap-2">
-                            <WishlistDrawer cars={cars} dealerId={dealerId} brandColor={brandAccent} />
+                            <WishlistDrawer cars={cars} dealerId={dealerId} brandColor={brandColors.primary} />
                             {sellVehicleHref && (
                                 <Button
                                     variant="outline"
@@ -338,7 +338,7 @@ export function LuxuryTemplate({
                                 <div className="pt-2 border-t border-gray-200">
                                     <Button
                                         className="w-full"
-                                        style={{ backgroundColor: brandAccent, color: getContrastText(brandAccent) }}
+                                        style={{ backgroundColor: brandColors.primary, color: getContrastText(brandColors.primary) }}
                                         onClick={() => { setEnquireSidebarOpen(true); setMobileMenuOpen(false); }}
                                     >
                                         <MessageSquare className="w-4 h-4 mr-2" />
@@ -356,7 +356,7 @@ export function LuxuryTemplate({
                 onOpenChange={setEnquireSidebarOpen}
                 dealerName={dealerName}
                 dealerId={dealerId}
-                brandColor={brandAccent}
+                brandColor={brandColors.primary}
                 services={services}
                 contactPhone={contactInfo.phone}
                 vehicleType={vehicleType}
@@ -392,7 +392,7 @@ export function LuxuryTemplate({
                             <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto animate-fade-in-up animate-delay-300">{heroSubtitle}</p>
                             <div className="flex flex-wrap items-center justify-center gap-4 animate-fade-in-up animate-delay-400">
                                 {showInventoryTab && (
-                                    <Button size="lg" className="animate-pulse-glow" style={{ backgroundColor: brandAccent, color: getContrastText(brandAccent) }} onClick={() => setActiveTab('inventory')}>
+                                    <Button size="lg" className="animate-pulse-glow" style={{ backgroundColor: brandColors.primary, color: getContrastText(brandColors.primary) }} onClick={() => setActiveTab('inventory')}>
                                         Explore Collection
                                         <ArrowRight className="ml-2 w-5 h-5" />
                                     </Button>
@@ -444,7 +444,7 @@ export function LuxuryTemplate({
                                 <span className="text-sm tracking-widest uppercase" style={{ color: brandAccent }}>Curated Selection</span>
                                 <h2 className="text-5xl font-light mt-4 text-gray-900">Featured Collection</h2>
                             </Reveal>
-                            <CarGrid cars={featuredCars} brandColor={brandAccent} light summaryOnly detailBasePath={detailBasePath} dealerPhone={contactInfo.phone} dealerId={dealerId} />
+                            <CarGrid cars={featuredCars} brandColor={brandColors.primary} light summaryOnly detailBasePath={detailBasePath} dealerPhone={contactInfo.phone} dealerId={dealerId} showWishlistAction />
                             {showInventoryTab && (
                                 <div className="text-center mt-10">
                                     <Button variant="outline" className="border-gray-300 bg-transparent text-gray-900 hover:bg-gray-100" onClick={() => setActiveTab('inventory')}>
@@ -486,14 +486,14 @@ export function LuxuryTemplate({
                                 <h2 className="text-5xl font-light mt-4">EMI Calculator</h2>
                                 <p className="text-gray-600 mt-3">Plan your investment with precision</p>
                             </Reveal>
-                            <EmiCalculator brandColor={brandAccent} theme="light" />
+                            <EmiCalculator brandColor={brandColors.primary} theme="light" />
                         </div>
                     </section>
 
                     {/* Customer Reviews */}
                     <section className="py-16 bg-white">
                         <div className="max-w-7xl mx-auto px-4">
-                            <ReviewsSection dealerId={dealerId} brandColor={brandAccent} variant="light" />
+                            <ReviewsSection dealerId={dealerId} brandColor={brandColors.primary} variant="light" />
                         </div>
                     </section>
 
@@ -502,29 +502,29 @@ export function LuxuryTemplate({
 
                     {/* Exchange Section */}
                     <div id="exchange-section">
-                        <ExchangeSection brandColor={brandAccent} dealerId={dealerId} dealerName={dealerName} vehicleType={vehicleType} />
+                        <ExchangeSection brandColor={brandColors.primary} dealerId={dealerId} dealerName={dealerName} vehicleType={vehicleType} />
                     </div>
 
                     {/* Trust Badges */}
                     <div id="trust-section">
-                        <TrustBadgesSection brandColor={brandAccent} dealerName={dealerName} vehicleType={vehicleType} />
+                        <TrustBadgesSection brandColor={brandColors.primary} dealerName={dealerName} vehicleType={vehicleType} />
                     </div>
 
                     {/* Finance Section */}
                     <div id="finance-section">
-                        <FinanceSection brandColor={brandAccent} dealerId={dealerId} dealerName={dealerName} />
+                        <FinanceSection brandColor={brandColors.primary} dealerId={dealerId} dealerName={dealerName} />
                     </div>
 
                     {/* Service Booking */}
                     <div id="service-section">
-                        <ServiceBookingSection brandColor={brandAccent} dealerId={dealerId} dealerName={dealerName} vehicleType={vehicleType} branches={branches} serviceCenters={serviceCenters} />
+                        <ServiceBookingSection brandColor={brandColors.primary} dealerId={dealerId} dealerName={dealerName} vehicleType={vehicleType} branches={branches} serviceCenters={serviceCenters} />
                     </div>
 
                     {/* FAQ Section */}
-                    <FAQSection brandColor={brandAccent} vehicleType={vehicleType} dealerName={dealerName} />
+                    <FAQSection brandColor={brandColors.primary} vehicleType={vehicleType} dealerName={dealerName} />
 
                     {/* Video Section */}
-                    <VideoSection brandColor={brandAccent} brandName={brandName} vehicleType={vehicleType} />
+                    <VideoSection brandColor={brandColors.primary} brandName={brandName} vehicleType={vehicleType} />
 
                     {/* Request a Callback — Lead Form */}
                     <section id="contact" className="py-24 bg-gray-50">
@@ -646,7 +646,7 @@ export function LuxuryTemplate({
                                                 type="submit"
                                                 disabled={formStatus === 'sending'}
                                                 className="w-full py-3 rounded-lg font-light tracking-widest uppercase text-sm"
-                                                style={{ backgroundColor: brandAccent, color: getContrastText(brandAccent) }}
+                                                style={{ backgroundColor: brandColors.primary, color: getContrastText(brandColors.primary) }}
                                             >
                                                 {formStatus === 'sending' ? 'Sending...' : (
                                                     <>
@@ -681,7 +681,7 @@ export function LuxuryTemplate({
                                             key={t.id}
                                             onClick={() => setInventoryTab(t.id)}
                                             className="px-4 py-1.5 rounded-md text-sm font-medium tracking-wider transition-all"
-                                            style={inventoryTab === t.id ? { backgroundColor: brandAccent, color: getContrastText(brandAccent) } : { color: '#6b7280' }}
+                                            style={inventoryTab === t.id ? { backgroundColor: brandColors.primary, color: getContrastText(brandColors.primary) } : { color: '#6b7280' }}
                                         >
                                             {t.label}
                                         </button>
@@ -702,12 +702,13 @@ export function LuxuryTemplate({
                                             : inventoryTab === 'used' ? filteredInventoryCars.filter(c => c.condition !== 'new')
                                                 : filteredInventoryCars
                                         : filteredInventoryCars}
-                                    brandColor={brandAccent}
+                                    brandColor={brandColors.primary}
                                     light
                                     summaryOnly
                                     detailBasePath={detailBasePath}
                                     dealerPhone={contactInfo.phone}
                                     dealerId={dealerId}
+                                    showWishlistAction
                                 />
                             </div>
                         </div>
@@ -715,7 +716,7 @@ export function LuxuryTemplate({
                 </div>
             )}
 
-            <SellVehicleSection dealerName={dealerName} sellHref={sellVehicleHref} brandColor={brandAccent} />
+            <SellVehicleSection dealerName={dealerName} sellHref={sellVehicleHref} brandColor={brandColors.primary} />
 
             {/* Branch & Service Center Locations */}
             {(branches?.length || serviceCenters?.length) ? (
@@ -843,11 +844,11 @@ export function LuxuryTemplate({
                 </div>
             </footer>
 
-            <NavEMIModal open={navEMIOpen} onOpenChange={setNavEMIOpen} brandColor={brandAccent} cars={cars} />
-            <CompareBar brandColor={brandAccent} dealerId={dealerId} dealerPhone={contactInfo.phone} />
+            <NavEMIModal open={navEMIOpen} onOpenChange={setNavEMIOpen} brandColor={brandColors.primary} cars={cars} />
+            <CompareBar brandColor={brandColors.primary} dealerId={dealerId} dealerPhone={contactInfo.phone} />
 
             {/* Sticky Mobile Bar */}
-            <StickyEnquiryBar phone={contactInfo.phone} brandColor={brandAccent} vehicleType={vehicleType} />
+            <StickyEnquiryBar phone={contactInfo.phone} brandColor={brandColors.primary} vehicleType={vehicleType} />
 
             {/* Rule-Based Chatbot */}
             <DealerChatbot
@@ -856,7 +857,7 @@ export function LuxuryTemplate({
                 phone={contactInfo.phone}
                 address={contactInfo.address}
                 workingHours={workingHours}
-                brandColor={brandAccent}
+                brandColor={brandColors.primary}
                 vehicleType={vehicleType}
                 cars={cars.slice(0, 8).map(c => ({ make: c.make, model: c.model, price: c.price, condition: c.condition }))}
                 services={services as string[]}

@@ -9,6 +9,7 @@
 
 import { useState, useRef, useEffect, useCallback } from 'react';
 import { MessageCircle, X, Send, PhoneCall, ChevronDown } from 'lucide-react';
+import { getContrastText, getReadableAccent } from '@/lib/utils/color-contrast';
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 
@@ -257,6 +258,8 @@ type DealerChatbotProps = DealerInfo
 
 export function DealerChatbot(props: DealerChatbotProps) {
     const { brandColor, phone, whatsapp } = props;
+    const onBrandText = getContrastText(brandColor);
+    const brandAccent = getReadableAccent(brandColor);
     const [open, setOpen] = useState(false);
     const [messages, setMessages] = useState<Message[]>([]);
     const [input, setInput] = useState('');
@@ -357,16 +360,19 @@ export function DealerChatbot(props: DealerChatbotProps) {
                 >
                     {/* Header */}
                     <div
-                        className="flex items-center justify-between px-4 py-3 text-white shrink-0"
-                        style={{ background: `linear-gradient(135deg, ${brandColor}, ${brandColor}cc)` }}
+                        className="flex items-center justify-between px-4 py-3 shrink-0"
+                        style={{
+                            background: `linear-gradient(135deg, ${brandColor}, ${brandColor}cc)`,
+                            color: onBrandText,
+                        }}
                     >
                         <div className="flex items-center gap-2.5">
                             <div className="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center">
-                                <MessageCircle className="w-5 h-5 text-white" />
+                                <MessageCircle className="w-5 h-5" />
                             </div>
                             <div>
                                 <p className="text-sm font-bold leading-none">{props.dealerName}</p>
-                                <p className="text-[11px] text-white/80 mt-0.5">Virtual Assistant • Online</p>
+                                <p className="text-[11px] mt-0.5" style={{ color: onBrandText, opacity: 0.78 }}>Virtual Assistant • Online</p>
                             </div>
                         </div>
                         <div className="flex items-center gap-2">
@@ -376,14 +382,14 @@ export function DealerChatbot(props: DealerChatbotProps) {
                                 title="Call Us"
                                 aria-label={`Call ${props.dealerName}`}
                             >
-                                <PhoneCall className="w-4 h-4 text-white" />
+                                <PhoneCall className="w-4 h-4" />
                             </a>
                             <button
                                 onClick={() => setOpen(false)}
                                 className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/30 transition-colors"
                                 aria-label="Minimize chat"
                             >
-                                <ChevronDown className="w-4 h-4 text-white" />
+                                <ChevronDown className="w-4 h-4" />
                             </button>
                         </div>
                     </div>
@@ -396,8 +402,8 @@ export function DealerChatbot(props: DealerChatbotProps) {
                                 <div className={`flex ${msg.from === 'user' ? 'justify-end' : 'justify-start'}`}>
                                     {msg.from === 'bot' && (
                                         <div
-                                            className="w-7 h-7 rounded-full flex items-center justify-center mr-2 mt-1 shrink-0 text-white text-xs font-bold"
-                                            style={{ backgroundColor: brandColor }}
+                                            className="w-7 h-7 rounded-full flex items-center justify-center mr-2 mt-1 shrink-0 text-xs font-bold"
+                                            style={{ backgroundColor: brandColor, color: onBrandText }}
                                         >
                                             AI
                                         </div>
@@ -405,10 +411,10 @@ export function DealerChatbot(props: DealerChatbotProps) {
                                     <div
                                         className={`max-w-[80%] px-3.5 py-2.5 rounded-2xl text-sm leading-relaxed whitespace-pre-wrap ${
                                             msg.from === 'user'
-                                                ? 'text-white rounded-br-sm'
+                                                ? 'rounded-br-sm'
                                                 : 'bg-white text-gray-800 rounded-bl-sm shadow-sm border border-gray-100'
                                         }`}
-                                        style={msg.from === 'user' ? { backgroundColor: brandColor } : {}}
+                                        style={msg.from === 'user' ? { backgroundColor: brandColor, color: onBrandText } : {}}
                                     >
                                         {/* Bold **text** support */}
                                         {msg.text.split(/(\*\*[^*]+\*\*)/g).map((part, i) =>
@@ -426,8 +432,8 @@ export function DealerChatbot(props: DealerChatbotProps) {
                                             href={msg.link.href}
                                             target={msg.link.href.startsWith('http') ? '_blank' : undefined}
                                             rel="noopener noreferrer"
-                                            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold text-white transition-opacity hover:opacity-90"
-                                            style={{ backgroundColor: brandColor }}
+                                            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-opacity hover:opacity-90"
+                                            style={{ backgroundColor: brandColor, color: onBrandText }}
                                         >
                                             {msg.link.label}
                                         </a>
@@ -443,7 +449,7 @@ export function DealerChatbot(props: DealerChatbotProps) {
                                                 return (
                                                     <a key={qr} href={`tel:${phone}`}
                                                         className="px-3 py-1.5 rounded-full text-[11px] font-semibold border-2 bg-white transition-all hover:scale-105"
-                                                        style={{ borderColor: brandColor, color: brandColor }}
+                                                        style={{ borderColor: brandAccent, color: brandAccent }}
                                                     >{qr}</a>
                                                 );
                                             }
@@ -460,7 +466,7 @@ export function DealerChatbot(props: DealerChatbotProps) {
                                                     key={qr}
                                                     onClick={() => handleSend(qr)}
                                                     className="px-3 py-1.5 rounded-full text-[11px] font-semibold border-2 bg-white transition-all hover:scale-105"
-                                                    style={{ borderColor: brandColor, color: brandColor }}
+                                                    style={{ borderColor: brandAccent, color: brandAccent }}
                                                 >
                                                     {qr}
                                                 </button>
@@ -474,8 +480,12 @@ export function DealerChatbot(props: DealerChatbotProps) {
                         {/* Typing indicator */}
                         {isTyping && (
                             <div className="flex items-center gap-2">
-                                <div className="w-7 h-7 rounded-full flex items-center justify-center text-white text-xs font-bold"
-                                    style={{ backgroundColor: brandColor }}>AI</div>
+                                <div
+                                    className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold"
+                                    style={{ backgroundColor: brandColor, color: onBrandText }}
+                                >
+                                    AI
+                                </div>
                                 <div className="bg-white rounded-2xl rounded-bl-sm px-3.5 py-2.5 shadow-sm border border-gray-100">
                                     <div className="flex gap-1 items-center h-4">
                                         <div className="w-1.5 h-1.5 rounded-full bg-gray-400 animate-bounce" style={{ animationDelay: '0ms' }} />
@@ -503,8 +513,8 @@ export function DealerChatbot(props: DealerChatbotProps) {
                             <button
                                 onClick={() => handleSend()}
                                 disabled={!input.trim() || isTyping}
-                                className="w-9 h-9 rounded-xl flex items-center justify-center text-white transition-opacity disabled:opacity-40 hover:opacity-90"
-                                style={{ backgroundColor: brandColor }}
+                                className="w-9 h-9 rounded-xl flex items-center justify-center transition-opacity disabled:opacity-40 hover:opacity-90"
+                                style={{ backgroundColor: brandColor, color: onBrandText }}
                             >
                                 <Send className="w-4 h-4" />
                             </button>
@@ -520,8 +530,8 @@ export function DealerChatbot(props: DealerChatbotProps) {
             <button
                 ref={toggleRef}
                 onClick={() => setOpen(o => !o)}
-                className="fixed bottom-20 md:bottom-6 right-6 z-40 w-14 h-14 rounded-full flex items-center justify-center text-white shadow-lg hover:scale-110 transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
-                style={{ backgroundColor: brandColor }}
+                className="fixed bottom-20 md:bottom-6 right-6 z-40 w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
+                style={{ backgroundColor: brandColor, color: onBrandText }}
                 aria-label={open ? "Close chat" : "Open chat"}
                 aria-expanded={open}
             >
@@ -531,7 +541,7 @@ export function DealerChatbot(props: DealerChatbotProps) {
                     <>
                         <MessageCircle className="w-6 h-6" />
                         {unread > 0 && (
-                            <span className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-[10px] font-bold rounded-full flex items-center justify-center">
+                            <span className="absolute -top-1 -right-1 w-5 h-5 bg-red-700 text-white text-[10px] font-bold rounded-full flex items-center justify-center">
                                 {unread}
                             </span>
                         )}

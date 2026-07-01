@@ -91,7 +91,7 @@ export default function AddUsedTwoWheelerPage() {
 
     return (
         <div className="max-w-2xl space-y-6">
-            <div className="flex items-center gap-3">
+            <div className="flex flex-wrap items-center gap-3">
                 <Button variant="ghost" size="sm" asChild>
                     <Link href="/dashboard/two-wheelers/used"><ArrowLeft className="w-4 h-4" /></Link>
                 </Button>
@@ -101,7 +101,7 @@ export default function AddUsedTwoWheelerPage() {
             <form onSubmit={handleSubmit} className="space-y-5">
                 <fieldset className="bg-card border border-border rounded-xl p-5 space-y-4">
                     <legend className="text-sm font-semibold px-1">Vehicle Details</legend>
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                         <div>
                             <label className="text-sm font-medium">Type *</label>
                             <select value={form.type} onChange={e => set("type", e.target.value)} className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm">
@@ -116,7 +116,7 @@ export default function AddUsedTwoWheelerPage() {
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-3 gap-4">
+                    <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
                         <div>
                             <label className="text-sm font-medium">Brand *</label>
                             <input value={form.brand} onChange={e => set("brand", e.target.value)} className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm" />
@@ -131,7 +131,7 @@ export default function AddUsedTwoWheelerPage() {
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-3 gap-4">
+                    <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
                         <div>
                             <label className="text-sm font-medium">Year *</label>
                             <input type="number" value={form.year} onChange={e => set("year", Number(e.target.value))} min={1990} max={2030} className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm" />
@@ -149,7 +149,7 @@ export default function AddUsedTwoWheelerPage() {
 
                 <fieldset className="bg-card border border-border rounded-xl p-5 space-y-4">
                     <legend className="text-sm font-semibold px-1">Condition & Docs</legend>
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                         <div>
                             <label className="text-sm font-medium">Condition Grade</label>
                             <select value={form.condition_grade} onChange={e => set("condition_grade", e.target.value)} className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm">
@@ -165,9 +165,9 @@ export default function AddUsedTwoWheelerPage() {
                     </div>
                     <div>
                         <label className="text-sm font-medium">Insurance Valid Until</label>
-                        <input type="date" value={form.insurance_valid_until} onChange={e => set("insurance_valid_until", e.target.value)} className="mt-1 w-48 rounded-lg border border-input bg-background px-3 py-2 text-sm" />
+                        <input type="date" value={form.insurance_valid_until} onChange={e => set("insurance_valid_until", e.target.value)} className="mt-1 w-full sm:w-48 rounded-lg border border-input bg-background px-3 py-2 text-sm" />
                     </div>
-                    <div className="flex items-center gap-6">
+                    <div className="flex flex-wrap items-center gap-3 sm:gap-6">
                         <label className="flex items-center gap-2 text-sm">
                             <input type="checkbox" checked={form.certified_pre_owned} onChange={e => set("certified_pre_owned", e.target.checked)} className="rounded" />
                             Certified Pre-Owned
@@ -183,7 +183,7 @@ export default function AddUsedTwoWheelerPage() {
                     <legend className="text-sm font-semibold px-1">Pricing & Media</legend>
                     <div>
                         <label className="text-sm font-medium">Selling Price (₹) *</label>
-                        <input type="number" value={form.price_paise} onChange={e => set("price_paise", e.target.value)} placeholder="45000" className="mt-1 w-48 rounded-lg border border-input bg-background px-3 py-2 text-sm" />
+                        <input type="number" value={form.price_paise} onChange={e => set("price_paise", e.target.value)} placeholder="45000" className="mt-1 w-full sm:w-48 rounded-lg border border-input bg-background px-3 py-2 text-sm" />
                     </div>
                     <div>
                         <label className="text-sm font-medium mb-2 block">Vehicle Images</label>
@@ -197,7 +197,7 @@ export default function AddUsedTwoWheelerPage() {
 
                 {error && <p className="text-sm text-destructive bg-destructive/10 rounded-lg px-4 py-2">{error}</p>}
 
-                <div className="flex items-center gap-3">
+                <div className="flex flex-wrap items-center gap-3">
                     <Button type="submit" disabled={saving}>{saving ? "Saving..." : "Add Vehicle"}</Button>
                     <Button type="button" variant="outline" asChild><Link href="/dashboard/two-wheelers/used">Cancel</Link></Button>
                 </div>

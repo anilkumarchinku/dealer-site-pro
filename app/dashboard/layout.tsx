@@ -289,7 +289,7 @@ export default function DashboardLayout({
                 mobileNavOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"
             )}>
                 <div className="relative flex items-center justify-between border-b border-white/10 p-5">
-                    <BrandLogo className="[&>span]:text-white" />
+                    <BrandLogo className="[&>span]:text-white [&_.brand-logo-accent]:text-[#C79A5B]" />
                     <Button
                         variant="ghost"
                         size="icon"

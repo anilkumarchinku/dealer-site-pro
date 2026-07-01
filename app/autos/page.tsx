@@ -138,6 +138,18 @@ interface AutoVehicle {
     is_featured: boolean;
 }
 
+function modelImageSourceKind(src: string | null | undefined) {
+    const value = String(src ?? '').toLowerCase();
+    if (
+        value.includes('/storage/v1/object/public/dealer-assets/vehicles/') ||
+        value.includes('/storage/v1/object/public/dealer-assets/sell-requests/') ||
+        value.includes('/storage/v1/object/public/vehicle-images/')
+    ) {
+        return 'inventory-photo';
+    }
+    return 'resolved-model';
+}
+
 function formatPrice(paise: number): string {
     if (paise <= 0) return 'Price on request';
     const rupees = paise / 100;
@@ -197,34 +209,30 @@ function AutoCard({ vehicle }: { vehicle: AutoVehicle }) {
     const slug = `${vehicle.make.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${vehicle.model.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
     const detailHref = `/autos/${vehicle.id ?? slug}`;
 
+    if (imageUrls.length === 0 || imgFailed) return null;
+
     return (
-        <Link href={detailHref} className="group bg-card border border-border rounded-xl overflow-hidden hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
+        <Link href={detailHref} data-vehicle-card="true" data-model-image-source={modelImageSourceKind(imageUrls[imgIdx])} className="group bg-card border border-border rounded-xl overflow-hidden hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
             {/* Image */}
             <div className="relative aspect-[16/10] bg-muted overflow-hidden">
-                {!imgFailed && imageUrls.length > 0 ? (
-                    <Image
-                        src={imageUrls[imgIdx]}
-                        alt={`${vehicle.make} ${vehicle.model}`}
-                        fill
-                        unoptimized
-                        className="object-contain group-hover:scale-105 transition-transform duration-500"
-                        onError={handleImgError}
-                    />
-                ) : (
-                    <div className="flex items-center justify-center h-full text-4xl text-muted-foreground">
-                        <span>🛺</span>
-                    </div>
-                )}
+                <Image
+                    src={imageUrls[imgIdx]}
+                    alt={`${vehicle.make} ${vehicle.model}`}
+                    fill
+                    unoptimized
+                    className="object-contain group-hover:scale-105 transition-transform duration-500"
+                    onError={handleImgError}
+                />
 
                 {/* Badges */}
                 <div className="absolute top-2 left-2 flex flex-wrap gap-1">
                     {vehicle.fuel_type === 'electric' && (
-                        <span className="bg-emerald-600 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full shadow-sm flex items-center gap-0.5">
+                        <span className="bg-emerald-700 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full shadow-sm flex items-center gap-0.5">
                             <Zap className="w-2.5 h-2.5" /> EV
                         </span>
                     )}
                     {vehicle.is_featured && (
-                        <span className="bg-amber-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full shadow-sm">
+                        <span className="bg-amber-800 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full shadow-sm">
                             Popular
                         </span>
                     )}
@@ -623,7 +631,7 @@ function AutosContent() {
 
                 {/* Pagination */}
                 {totalPages > 1 && (
-                    <div className="flex items-center justify-center gap-2 mt-8">
+                    <div className="mt-8 flex max-w-full flex-wrap items-center justify-center gap-2 px-1">
                         <Button
                             variant="outline"
                             size="sm"
@@ -642,7 +650,7 @@ function AutosContent() {
                                 const prev = arr[idx - 1];
                                 const showEllipsis = prev && p - prev > 1;
                                 return (
-                                    <span key={p} className="flex items-center gap-1">
+                                    <span key={p} className="flex shrink-0 items-center gap-1">
                                         {showEllipsis && (
                                             <span className="text-muted-foreground px-1">...</span>
                                         )}

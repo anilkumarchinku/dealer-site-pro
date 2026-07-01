@@ -1,17 +1,17 @@
 // DealerSite Pro — shared copy, imagery helpers, and DB-backed vehicle preview data.
 const U = (id, w = 800) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=72`;
 
-const DSP_MARKETPLACE_PREVIEW_ENDPOINT = '/api/marketplace?pageSize=48&category=all&condition=new';
+const DSP_MARKETPLACE_PREVIEW_ENDPOINT = '/api/marketplace?pageSize=48&category=all&condition=all';
 const DSP_PREVIEW_FALLBACK_IMAGES = {
-  car: '/design-system-handoff/ride-finder-assets/hero-suv.png',
-  suv: '/design-system-handoff/ride-finder-assets/car-suv-silver.png',
-  csuv: '/design-system-handoff/ride-finder-assets/car-csuv-blue.png',
-  sedan: '/design-system-handoff/ride-finder-assets/car-sedan-black.png',
-  hatch: '/design-system-handoff/ride-finder-assets/car-hatch-red.png',
-  mpv: '/design-system-handoff/ride-finder-assets/car-mpv-white.png',
-  ev: '/design-system-handoff/ride-finder-assets/car-ev-compact.png',
-  bike: 'https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=900&q=72',
-  auto: 'https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=900&q=72',
+  car: '',
+  suv: '',
+  csuv: '',
+  sedan: '',
+  hatch: '',
+  mpv: '',
+  ev: '',
+  bike: '',
+  auto: '',
 };
 const DSP_PREVIEW_NEW_VEHICLE_IMAGES = [
   DSP_PREVIEW_FALLBACK_IMAGES.car,
@@ -136,6 +136,7 @@ function dspBadPreviewImageUrl(url) {
     'avatar',
     'icon',
     'placeholder',
+    'stimg.cardekho.com/images/carexteriorimages',
     'dealer-assets/dealers',
     '/assets/cars/mclaren/750s',
     '/assets/cars/bmw/8-series-gran-coupe',
@@ -172,22 +173,7 @@ function dspPreviewVehicleDetailHref(row) {
 }
 
 function dspPreviewFallbackImage(row, index = 0) {
-  const kind = dspPreviewVehicleKind(row);
-  if (kind === 'bike') return DSP_PREVIEW_FALLBACK_IMAGES.bike;
-  if (kind === 'auto') return DSP_PREVIEW_FALLBACK_IMAGES.auto;
-  if (kind === 'ev') return DSP_PREVIEW_FALLBACK_IMAGES.ev;
-  if (dspIsNewVehicle(row)) return DSP_PREVIEW_NEW_VEHICLE_IMAGES[index % DSP_PREVIEW_NEW_VEHICLE_IMAGES.length];
-  const body = dspText(row.body_type).toLowerCase();
-  const text = `${row.make ?? ''} ${row.model ?? ''} ${body} ${row.fuel_type ?? ''}`.toLowerCase();
-  if (text.includes('electric') || text.includes('ev')) return DSP_PREVIEW_FALLBACK_IMAGES.ev;
-  if (text.includes('motorcycle') || text.includes('bike') || text.includes('scooter')) return DSP_PREVIEW_FALLBACK_IMAGES.bike;
-  if (text.includes('auto') || text.includes('rickshaw') || text.includes('three-wheeler')) return DSP_PREVIEW_FALLBACK_IMAGES.auto;
-  if (body.includes('compact')) return DSP_PREVIEW_FALLBACK_IMAGES.csuv;
-  if (body.includes('hatch')) return DSP_PREVIEW_FALLBACK_IMAGES.hatch;
-  if (body.includes('muv') || body.includes('mpv')) return DSP_PREVIEW_FALLBACK_IMAGES.mpv;
-  if (body.includes('suv')) return DSP_PREVIEW_FALLBACK_IMAGES.suv;
-  if (body.includes('sedan')) return DSP_PREVIEW_FALLBACK_IMAGES.sedan;
-  return DSP_PREVIEW_FALLBACK_IMAGES.car;
+  return '';
 }
 
 function dspPreviewImage(row, index = 0) {

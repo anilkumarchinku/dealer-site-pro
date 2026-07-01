@@ -25,9 +25,10 @@ export interface Database {
           whatsapp: string | null
           email: string | null
           gstin: string | null
-          logo_url: string | null
-          hero_image_url: string | null
-          sells_new_cars: boolean
+	          logo_url: string | null
+	          hero_image_url: string | null
+	          hero_image_urls: string[] | null
+	          sells_new_cars: boolean
           sells_used_cars: boolean
           sells_two_wheelers: boolean
           sells_three_wheelers: boolean

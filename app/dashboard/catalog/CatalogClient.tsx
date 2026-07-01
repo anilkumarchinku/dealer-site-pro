@@ -11,7 +11,7 @@ import type { CatalogBrand, CatalogCategory, CatalogModel } from "@/lib/types/ca
 import type { Car as CarType } from "@/lib/types/car"
 import { QuickViewModal } from "@/components/cars/QuickViewModal"
 import { EnquiryModal } from "@/components/cars/EnquiryModal"
-import { getContrastText } from "@/lib/utils/color-contrast"
+import { getContrastText, getReadableAccent } from "@/lib/utils/color-contrast"
 import { getVehicleImageUrls } from "@/lib/utils/brand-model-images"
 
 type CategoryKey = CatalogCategory
@@ -113,6 +113,7 @@ function CatalogCard({ m, brandColor }: { m: CatalogModel; brandColor: string })
     const [enquireOpen, setEnquireOpen]   = useState(false)
 
     const isEV = m.fuelType?.toLowerCase().includes("electric")
+    const brandAccent = getReadableAccent(brandColor)
     const car  = useMemo(() => toCar(m), [m])
     const imageCandidates = useMemo(
         () => getVehicleImageUrls(m.category, m.brandId, m.model, m.imageUrl),
@@ -121,39 +122,35 @@ function CatalogCard({ m, brandColor }: { m: CatalogModel; brandColor: string })
     const resolvedImageSrc = imageCandidates[fallbackIdx] ?? null
     const logoId = m.logoId ?? m.brandId
 
+    if (!resolvedImageSrc || imgFailed) return null
+
     return (
         <>
             <div
+                data-vehicle-card="true"
+                data-model-image-source="resolved-model"
                 className="group relative flex flex-col overflow-hidden bg-white border border-gray-200 rounded-xl hover:border-gray-300 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 cursor-pointer h-full dark:bg-slate-950 dark:border-slate-800 dark:hover:border-slate-700"
                 onClick={() => setEnquireOpen(true)}
             >
                 {/* ── Image ── */}
                 <div className="relative aspect-[16/10] overflow-hidden bg-gray-50 dark:bg-slate-900">
-                    {resolvedImageSrc && !imgFailed ? (
-                        // eslint-disable-next-line @next/next/no-img-element
-                        <img
-                            src={resolvedImageSrc}
-                            alt={`${m.brand} ${m.model}`}
-                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                            onError={() => {
-                                if (fallbackIdx < imageCandidates.length - 1) {
-                                    setFallbackIdx((current) => current + 1)
-                                } else {
-                                    setImgFailed(true)
-                                }
-                            }}
-                        />
-                    ) : (
-                        <div className="flex items-center justify-center h-full">
-                            <span className="text-4xl">
-                                {m.category === "2w" ? "🏍️" : m.category === "3w" ? "🛺" : "🚗"}
-                            </span>
-                        </div>
-                    )}
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                        src={resolvedImageSrc}
+                        alt={`${m.brand} ${m.model}`}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        onError={() => {
+                            if (fallbackIdx < imageCandidates.length - 1) {
+                                setFallbackIdx((current) => current + 1)
+                            } else {
+                                setImgFailed(true)
+                            }
+                        }}
+                    />
 
                     {/* EV badge */}
                     {isEV && (
-                        <span className="absolute top-2 left-2 flex items-center gap-0.5 bg-emerald-600 text-white text-[9px] font-bold px-1.5 py-0.5 rounded-full">
+                        <span className="absolute top-2 left-2 flex items-center gap-0.5 bg-emerald-700 text-white text-[9px] font-bold px-1.5 py-0.5 rounded-full">
                             <Zap className="w-2.5 h-2.5" /> EV
                         </span>
                     )}
@@ -186,7 +183,7 @@ function CatalogCard({ m, brandColor }: { m: CatalogModel; brandColor: string })
                             className="w-5 h-5 object-contain rounded bg-white border border-slate-200 dark:border-slate-700 p-0.5"
                             onError={(e) => { (e.target as HTMLImageElement).style.display = "none" }}
                         />
-                        <p className="text-[11px] font-semibold uppercase tracking-wider" style={{ color: brandColor }}>
+                        <p className="text-[11px] font-semibold uppercase tracking-wider" style={{ color: brandAccent }}>
                             {m.brand}
                         </p>
                     </div>
@@ -231,7 +228,7 @@ function CatalogCard({ m, brandColor }: { m: CatalogModel; brandColor: string })
                             size="sm"
                             variant="outline"
                             className="shrink-0 gap-1 text-xs h-8 px-2.5 font-medium bg-transparent dark:bg-slate-950/60 dark:hover:bg-slate-900"
-                            style={{ borderColor: brandColor, color: brandColor }}
+                            style={{ borderColor: brandColor, color: brandAccent }}
                             onClick={(e) => { e.stopPropagation(); setQvOpen(true) }}
                             title="Quick View"
                         >

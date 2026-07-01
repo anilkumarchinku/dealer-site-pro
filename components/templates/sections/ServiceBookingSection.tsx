@@ -2,7 +2,7 @@
 
 import { useId, useState } from 'react';
 import { CheckCircle2, Wrench } from 'lucide-react';
-import { getContrastText } from '@/lib/utils/color-contrast';
+import { getContrastText, getReadableAccent } from '@/lib/utils/color-contrast';
 
 interface ServiceCenter {
     id: string;
@@ -63,6 +63,7 @@ export function ServiceBookingSection({
 
     // Readable text color for the brand-filled CTA (light brands need dark text).
     const onBrandText = getContrastText(brandColor);
+    const brandAccent = getReadableAccent(brandColor);
 
     // Stable, unique ids so each label is programmatically tied to its input.
     const fieldId = useId();
@@ -193,7 +194,7 @@ export function ServiceBookingSection({
                 <div className="text-center mb-10">
                     <span
                         className="text-sm font-semibold uppercase tracking-widest"
-                        style={{ color: brandColor }}
+                        style={{ color: brandAccent }}
                     >
                         Service Centre
                     </span>
@@ -213,7 +214,7 @@ export function ServiceBookingSection({
                                 className="w-10 h-10 rounded-full flex items-center justify-center"
                                 style={{ backgroundColor: `${brandColor}26` }}
                             >
-                                <Wrench className="w-5 h-5" style={{ color: brandColor }} />
+                                <Wrench className="w-5 h-5" style={{ color: brandAccent }} />
                             </div>
                             <div>
                                 <h3 className="font-bold text-gray-900">Select Service Type</h3>
@@ -233,7 +234,7 @@ export function ServiceBookingSection({
                                         style={{
                                             backgroundColor: active ? `${brandColor}15` : 'white',
                                             borderColor: active ? brandColor : '#e5e7eb',
-                                            color: active ? brandColor : '#374151',
+                                            color: active ? brandAccent : '#374151',
                                         }}
                                     >
                                         {type}
@@ -252,7 +253,7 @@ export function ServiceBookingSection({
                                 { tier: 'Repair', detail: 'Body, tyre, battery, insurance claim' },
                             ].map((item) => (
                                 <div key={item.tier} className="rounded-xl border border-gray-200 bg-white p-4">
-                                    <p className="text-xs font-semibold uppercase tracking-widest" style={{ color: brandColor }}>{item.tier}</p>
+                                    <p className="text-xs font-semibold uppercase tracking-widest" style={{ color: brandAccent }}>{item.tier}</p>
                                     <p className="mt-1 text-sm font-semibold text-gray-900">Quote on request</p>
                                     <p className="mt-1 text-xs text-gray-600">{item.detail}</p>
                                 </div>
@@ -265,8 +266,8 @@ export function ServiceBookingSection({
                         <div className="mt-8 rounded-2xl border border-gray-200 bg-white p-5">
                             <h3 className="font-bold text-gray-900">Service Locations</h3>
                             <div className="mt-4 grid gap-3 sm:grid-cols-2">
-                                {serviceLocations.slice(0, 4).map((location) => (
-                                    <div key={location.name} className="rounded-xl bg-gray-50 p-3">
+                                {serviceLocations.slice(0, 4).map((location, index) => (
+                                    <div key={`${location.name}-${index}`} className="rounded-xl bg-gray-50 p-3">
                                         <p className="text-sm font-semibold text-gray-900">{location.name}</p>
                                         <p className="text-xs text-gray-600">{location.meta}</p>
                                     </div>
@@ -283,7 +284,7 @@ export function ServiceBookingSection({
                                 'Pick-up & drop service available',
                             ].map((point) => (
                                 <div key={point} className="flex items-center gap-2 text-sm text-gray-600">
-                                    <CheckCircle2 className="w-4 h-4 shrink-0" style={{ color: brandColor }} />
+                                    <CheckCircle2 className="w-4 h-4 shrink-0" style={{ color: brandAccent }} />
                                     {point}
                                 </div>
                             ))}
@@ -422,8 +423,8 @@ export function ServiceBookingSection({
                                             style={{ ['--tw-ring-color' as string]: brandColor }}
                                         >
                                             <option value="">Assign nearest location</option>
-                                            {serviceLocations.map((location) => (
-                                                <option key={location.name} value={location.name}>{location.name}</option>
+                                            {serviceLocations.map((location, index) => (
+                                                <option key={`${location.name}-${index}`} value={location.name}>{location.name}</option>
                                             ))}
                                         </select>
                                     </div>

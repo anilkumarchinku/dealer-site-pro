@@ -91,7 +91,7 @@ export function OnRoadPriceCalculator() {
                                     </SelectContent>
                                 </Select>
                                 {stateCode === 'DL' && (
-                                    <p className="mt-1.5 flex items-start gap-1 text-xs text-amber-600">
+                                    <p className="mt-1.5 flex items-start gap-1 text-xs text-amber-800">
                                         <Info className="mt-0.5 h-3 w-3 shrink-0" aria-hidden="true" />
                                         <span>Prices shown for <strong>{breakdown.stateName}</strong> by default — change the state above for your city&apos;s road tax.</span>
                                     </p>
@@ -150,7 +150,7 @@ export function OnRoadPriceCalculator() {
                                         <h3 className="text-xl font-semibold">Estimated On-Road Price*</h3>
                                     </div>
                                     <div className="rounded-2xl bg-primary/10 px-5 py-4 text-right">
-                                        <p className="text-xs text-muted-foreground uppercase tracking-wide">Total payable</p>
+                                        <p className="text-xs text-slate-700 uppercase tracking-wide">Total payable</p>
                                         <p className="text-3xl font-bold text-primary">{formatInr(breakdown.total)}</p>
                                     </div>
                                 </div>

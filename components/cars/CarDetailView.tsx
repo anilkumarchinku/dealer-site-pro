@@ -17,6 +17,7 @@ import { EnquiryModal } from '@/components/cars/EnquiryModal';
 import { OnRoadPriceDialog } from '@/components/cars/OnRoadPriceDialog';
 import { TestDriveModal } from '@/components/cars/TestDriveModal';
 import { ReviewsSection } from '@/components/ui/ReviewsSection';
+import { Vehicle360Gallery } from '@/components/vehicle-media/Vehicle360Gallery';
 import { Card, CardContent } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import {
@@ -35,7 +36,7 @@ import {
 } from '@/components/ui/table';
 import { Slider } from '@/components/ui/slider';
 import { useSitePrefix } from '@/lib/hooks/useSitePrefix';
-import { getContrastText } from '@/lib/utils/color-contrast';
+import { getContrastText, getReadableAccent } from '@/lib/utils/color-contrast';
 import { resolveVehicleDetailAccent } from '@/lib/utils/site-theme';
 import { useWishlistStore } from '@/lib/store/wishlist-store';
 import { brandLogoUrl } from '@/lib/utils/site-assets';
@@ -73,6 +74,18 @@ interface CarDetailViewProps {
     siteSlug?: string;
     dealerId?: string;
     dealerPhone?: string;
+}
+
+function modelImageSourceKind(src: string | null | undefined) {
+    const value = String(src ?? '').toLowerCase();
+    if (
+        value.includes('/storage/v1/object/public/dealer-assets/vehicles/') ||
+        value.includes('/storage/v1/object/public/dealer-assets/sell-requests/') ||
+        value.includes('/storage/v1/object/public/vehicle-images/')
+    ) {
+        return 'inventory-photo';
+    }
+    return 'resolved-model';
 }
 
 const NEW_CAR_TABS = [
@@ -179,6 +192,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
     const sitePrefix = useSitePrefix(siteSlug ?? '');
     const brandColor = resolveVehicleDetailAccent(car.make, Boolean(siteSlug));
     const brandContrast = getContrastText(brandColor);
+    const brandAccent = getReadableAccent(brandColor);
     const logoSrc = brandLogoUrl(car.make, car.vehicleCategory ?? '4w');
     const isUsed = car.condition === 'used' || car.condition === 'certified_pre_owned';
     const isCPO = car.condition === 'certified_pre_owned';
@@ -217,6 +231,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
     const wishlistItems = useWishlistStore((s) => s.items);
     const toggleWishlist = useWishlistStore((s) => s.toggle);
     const isFavorite = wishlistItems.includes(car.id);
+    const showWishlistAction = Boolean(siteSlug);
     const [failedColorImages, setFailedColorImages] = useState<Record<string, boolean>>({});
 
     // Price formatting
@@ -261,7 +276,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
         : (car.performance?.fuelEfficiency ? `${car.performance.fuelEfficiency} kmpl` : '');
     const keySpecs = [
         { icon: <Fuel className="w-5 h-5 text-emerald-600" />, label: 'Fuel Type', value: car.engine?.type || '' },
-        { icon: <Gauge className="w-5 h-5" style={{ color: brandColor }} />, label: 'Transmission', value: car.transmission?.type || '' },
+        { icon: <Gauge className="w-5 h-5" style={{ color: brandAccent }} />, label: 'Transmission', value: car.transmission?.type || '' },
         { icon: <Zap className="w-5 h-5 text-amber-600" />, label: isElectric ? 'Range' : 'Mileage', value: mileageOrRange },
         { icon: <Users className="w-5 h-5 text-purple-600" />, label: 'Seating', value: car.dimensions?.seatingCapacity ? `${car.dimensions.seatingCapacity} Seater` : '' },
         { icon: <Settings className="w-5 h-5 text-gray-600" />, label: isElectric ? 'Battery' : 'Engine', value: isElectric ? (car.engine?.batteryCapacity ? `${car.engine.batteryCapacity} kWh` : '') : (car.engine?.displacement ? `${car.engine.displacement} cc` : '') },
@@ -449,16 +464,22 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                                 {activeImage ? allImages.indexOf(activeImage) + 1 : 0}/{allImages.length}
                             </div>
 
-                            {/* Favorite — persisted to the wishlist store (shows in WishlistDrawer) */}
-                            <button
-                                onClick={() => toggleWishlist(car.id)}
-                                aria-label={isFavorite ? 'Remove from wishlist' : 'Save to wishlist'}
-                                aria-pressed={isFavorite}
-                                className="absolute top-3 right-3 w-9 h-9 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-sm hover:bg-white transition-colors"
-                            >
-                                <Heart className={`w-4.5 h-4.5 ${isFavorite ? 'fill-red-500 text-red-500' : 'text-gray-600'}`} />
-                            </button>
+                            {showWishlistAction && (
+                                <button
+                                    onClick={() => toggleWishlist(car.id)}
+                                    aria-label={isFavorite ? 'Remove from wishlist' : 'Save to wishlist'}
+                                    aria-pressed={isFavorite}
+                                    className="absolute top-3 right-3 w-9 h-9 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-sm hover:bg-white transition-colors"
+                                >
+                                    <Heart className={`w-4.5 h-4.5 ${isFavorite ? 'fill-red-500 text-red-500' : 'text-gray-600'}`} />
+                                </button>
+                            )}
                         </div>
+                        <Vehicle360Gallery
+                            images={allImages}
+                            alt={`${car.make} ${car.model}`}
+                            accentColor={brandAccent}
+                        />
 
                     </div>
 
@@ -498,12 +519,12 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                                     )}
                                     <p className="text-xs text-gray-600 mt-0.5">{isUsed ? 'Price' : 'Ex-showroom Price'}</p>
                                     {hasOfferPrice && (
-                                        <p className="mt-1 text-xs font-semibold" style={{ color: brandColor }}>
+                                        <p className="mt-1 text-xs font-semibold" style={{ color: brandAccent }}>
                                             {car.offer?.label || 'Offer price'}
                                         </p>
                                     )}
                                     {car.pricing.emi && (
-                                        <Badge variant="secondary" className="mt-2 text-xs gap-1" style={{ color: brandColor }}>
+                                        <Badge variant="secondary" className="mt-2 text-xs gap-1" style={{ color: brandAccent }}>
                                             <TrendingUp className="w-3 h-3" />
                                             EMI from ₹{car.pricing.emi.monthly.toLocaleString()}/mo
                                         </Badge>
@@ -543,7 +564,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                                         size="lg"
                                         variant={dealerId && !isUsed ? 'outline' : 'default'}
                                         style={dealerId && !isUsed
-                                            ? { borderColor: brandColor, color: brandColor, backgroundColor: '#ffffff' }
+                                            ? { borderColor: brandColor, color: brandAccent, backgroundColor: '#ffffff' }
                                             : { backgroundColor: brandColor, color: brandContrast }}
                                         onClick={() => {
                                             if (isUsed) {
@@ -605,7 +626,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                                         ? ''
                                         : 'border-transparent text-gray-600 hover:text-gray-900'
                                     }`}
-                                    style={activeTab === tab.id ? { borderColor: brandColor, color: brandColor } : undefined}
+                                    style={activeTab === tab.id ? { borderColor: brandColor, color: brandAccent } : undefined}
                                 >
                                 <tab.icon className="w-3.5 h-3.5" />
                                 {tab.label}
@@ -943,11 +964,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                                                     }));
                                                 }}
                                             />
-                                        ) : (
-                                            <div className="flex h-full w-full items-center justify-center px-4 text-center text-sm text-gray-600">
-                                                Image not available for {selectedColor}
-                                            </div>
-                                        )}
+                                        ) : null}
                                     </div>
                                 )}
                                 <div className="flex flex-wrap gap-3 mb-4">
@@ -1064,7 +1081,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                                             <CardContent className="p-6 flex flex-col h-full">
                                                 <div className="text-center pb-4 mb-4 border-b">
                                                     <p className="text-xs font-semibold uppercase tracking-wider text-gray-600 mb-1">Monthly EMI</p>
-                                                    <p className="text-4xl font-bold" style={{ color: brandColor }}>
+                                                    <p className="text-4xl font-bold" style={{ color: brandAccent }}>
                                                         ₹{emiResult.emi.toLocaleString('en-IN')}
                                                     </p>
                                                     <p className="text-xs text-gray-600 mt-1">per month for {emiTenure} months</p>
@@ -1352,7 +1369,7 @@ export function CarDetailView({ car, similarCars = [], siteSlug, dealerId, deale
                     <section>
                         <div className="flex items-center justify-between mb-6">
                             <h2 className="text-2xl font-bold">Similar Cars</h2>
-                            <Link href={inventoryHref} className="text-sm hover:underline" style={{ color: brandColor }}>
+                            <Link href={inventoryHref} className="text-sm hover:underline" style={{ color: brandAccent }}>
                                 View All Cars
                             </Link>
                         </div>
@@ -1484,34 +1501,35 @@ function SimilarCarCard({
     const imageUrls = fallbacks?.length ? fallbacks : (car.images.hero ? [car.images.hero] : []);
     const [imgIdx, setImgIdx] = useState(0);
     const [imgFailed, setImgFailed] = useState(false);
+    const brandAccent = getReadableAccent(brandColor);
+    const imageSrc = imageUrls[imgIdx];
+    const imageSourceKind = modelImageSourceKind(imageSrc);
+
+    if (imageUrls.length === 0 || imgFailed) return null;
 
     return (
         <Link
             href={href}
+            data-vehicle-card="true"
+            data-model-image-source={imageSourceKind}
             className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
         >
             <div className="relative aspect-[16/10] bg-slate-50">
-                {!imgFailed && imageUrls.length > 0 ? (
-                    <Image
-                        src={imageUrls[imgIdx]}
-                        alt={`${car.make} ${car.model}`}
-                        fill
-                        unoptimized
-                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                        className="object-cover transition-transform duration-500 group-hover:scale-105"
-                        onError={() => {
-                            if (imgIdx < imageUrls.length - 1) setImgIdx(prev => prev + 1);
-                            else setImgFailed(true);
-                        }}
-                    />
-                ) : (
-                    <div className="flex h-full items-center justify-center text-sm text-slate-500">
-                        No Image
-                    </div>
-                )}
+                <Image
+                    src={imageSrc}
+                    alt={`${car.make} ${car.model}`}
+                    fill
+                    unoptimized
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    onError={() => {
+                        if (imgIdx < imageUrls.length - 1) setImgIdx(prev => prev + 1);
+                        else setImgFailed(true);
+                    }}
+                />
             </div>
             <div className="p-4">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.22em]" style={{ color: brandColor }}>
+                <p className="text-[11px] font-semibold uppercase tracking-[0.22em]" style={{ color: brandAccent }}>
                     {car.make}
                 </p>
                 <h3 className="mt-1 line-clamp-2 text-lg font-bold text-slate-900">{car.model}</h3>

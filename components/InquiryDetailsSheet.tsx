@@ -16,6 +16,7 @@ import { format } from "date-fns";
 import { cn } from "@/lib/utils";
 import { Car as CarType } from "@/lib/types/car";
 import { normalizeLeadPhone, validateLeadForm, hasLeadFormErrors } from "@/lib/validations/lead";
+import { getContrastText, getReadableAccent } from "@/lib/utils/color-contrast";
 
 interface InquiryDetailsSheetProps {
     isOpen: boolean;
@@ -50,6 +51,8 @@ export function InquiryDetailsSheet({
     initialTab = "test-drive",
     dealerId,
 }: InquiryDetailsSheetProps) {
+    const brandAccent = getReadableAccent(brandColor);
+    const onBrandText = getContrastText(brandColor);
     const [date, setDate] = useState<Date>();
 
     // ── Test Drive form ──
@@ -258,7 +261,7 @@ export function InquiryDetailsSheet({
         <Sheet open={isOpen} onOpenChange={onClose}>
             <SheetContent className="w-[400px] sm:w-[540px] overflow-y-auto">
                 <SheetHeader className="mb-6">
-                    <SheetTitle className="text-2xl font-bold" style={{ color: brandColor }}>
+                    <SheetTitle className="text-2xl font-bold" style={{ color: brandAccent }}>
                         How can we help you?
                     </SheetTitle>
                     <SheetDescription>
@@ -380,7 +383,7 @@ export function InquiryDetailsSheet({
                             <Button
                                 type="submit"
                                 className="w-full mt-4"
-                                style={{ backgroundColor: brandColor }}
+                                style={{ backgroundColor: brandColor, color: onBrandText }}
                                 disabled={submitting === "test-drive"}
                             >
                                 {submitting === "test-drive" ? "Sending…" : "Book Test Drive"}
@@ -474,7 +477,7 @@ export function InquiryDetailsSheet({
                             <Button
                                 type="submit"
                                 className="w-full mt-4"
-                                style={{ backgroundColor: brandColor }}
+                                style={{ backgroundColor: brandColor, color: onBrandText }}
                                 disabled={submitting === "service"}
                             >
                                 {submitting === "service" ? "Sending…" : "Schedule Service"}
@@ -554,7 +557,7 @@ export function InquiryDetailsSheet({
                             <Button
                                 type="submit"
                                 className="w-full"
-                                style={{ backgroundColor: brandColor }}
+                                style={{ backgroundColor: brandColor, color: onBrandText }}
                                 disabled={submitting === "callback"}
                             >
                                 {submitting === "callback" ? "Sending…" : "Request Call"}
@@ -638,7 +641,7 @@ export function InquiryDetailsSheet({
                             <Button
                                 type="submit"
                                 className="w-full"
-                                style={{ backgroundColor: brandColor }}
+                                style={{ backgroundColor: brandColor, color: onBrandText }}
                                 disabled={submitting === "accessories"}
                             >
                                 {submitting === "accessories" ? "Sending…" : "Check Availability"}

@@ -22,7 +22,7 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
                 <div className="grid min-h-screen lg:grid-cols-[0.92fr_1.08fr]">
                     <section className="relative hidden overflow-hidden bg-[#071A3D] px-10 py-12 text-white lg:flex lg:flex-col lg:justify-between xl:px-16">
                         <div className="relative z-10">
-                            <BrandLogo className="[&>span]:text-white" />
+                            <BrandLogo className="[&>span]:text-white [&_.brand-logo-accent]:text-[#C79A5B]" />
                         </div>
 
                         <div className="relative z-10 max-w-xl">
@@ -60,13 +60,13 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
                             {children}
                         </div>
 
-                        <p className="mt-8 max-w-md text-center text-xs leading-5 text-muted-foreground">
+                        <p className="mt-8 max-w-md text-center text-xs leading-5 text-slate-600 dark:text-slate-300">
                             By continuing you agree to our{" "}
-                            <Link href="/terms" className="font-semibold text-primary hover:underline">
+                            <Link href="/terms" className="font-semibold text-[#7C4F12] hover:underline dark:text-[#F3C77A]">
                                 Terms of Service
                             </Link>
                             {" "}and{" "}
-                            <Link href="/privacy" className="font-semibold text-primary hover:underline">
+                            <Link href="/privacy" className="font-semibold text-[#7C4F12] hover:underline dark:text-[#F3C77A]">
                                 Privacy Policy
                             </Link>
                         </p>
@@ -86,13 +86,13 @@ export default function AuthLayout({ children }: { children: React.ReactNode }) 
                     {children}
                 </div>
 
-                <p className="mt-8 text-center text-xs text-muted-foreground">
+                <p className="mt-8 text-center text-xs text-slate-600 dark:text-slate-300">
                     By continuing you agree to our{" "}
-                    <Link href="/terms" className="font-semibold text-primary hover:underline">
+                    <Link href="/terms" className="font-semibold text-[#7C4F12] hover:underline dark:text-[#F3C77A]">
                         Terms of Service
                     </Link>
                     {" "}and{" "}
-                    <Link href="/privacy" className="font-semibold text-primary hover:underline">
+                    <Link href="/privacy" className="font-semibold text-[#7C4F12] hover:underline dark:text-[#F3C77A]">
                         Privacy Policy
                     </Link>
                 </p>

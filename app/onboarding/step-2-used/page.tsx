@@ -94,8 +94,11 @@ export default function Step2UsedPage() {
     const [isDragging, setIsDragging] = useState(false);
     const fileInputRef = useRef<HTMLInputElement>(null);
 
-    // ── Hero image state ────────────────────────────────────────────────────
-    const [heroPreview, setHeroPreview] = useState<string>(data.heroImage || "");
+    // ── Hero carousel image state ───────────────────────────────────────────
+    const [heroPreviews, setHeroPreviews] = useState<string[]>(() => {
+        const storedImages = data.heroImages?.length ? data.heroImages : data.heroImage ? [data.heroImage] : [];
+        return storedImages.filter(Boolean).slice(0, 5);
+    });
     const [heroError, setHeroError] = useState("");
     const [isHeroDragging, setIsHeroDragging] = useState(false);
     const heroInputRef = useRef<HTMLInputElement>(null);
@@ -146,35 +149,46 @@ export default function Step2UsedPage() {
         if (file) processLogoFile(file);
     };
 
-    // ── Hero image upload ───────────────────────────────────────────────────
-    const processHeroFile = useCallback(async (file: File) => {
-        if (!file.type.startsWith("image/")) {
-            setHeroError("Please upload an image file (PNG, JPG, WEBP)");
+    // ── Hero carousel image upload ──────────────────────────────────────────
+    const processHeroFiles = useCallback(async (files: File[]) => {
+        const remainingSlots = 5 - heroPreviews.length;
+        if (remainingSlots <= 0) {
+            setHeroError("You can upload up to 5 hero images");
             return;
         }
-        if (file.size > 5 * 1024 * 1024) {
-            setHeroError("Hero image must be under 5 MB");
-            return;
+
+        const selectedFiles = files.slice(0, remainingSlots);
+        for (const file of selectedFiles) {
+            if (!file.type.startsWith("image/")) {
+                setHeroError("Please upload image files only (PNG, JPG, WEBP)");
+                return;
+            }
+            if (file.size > 5 * 1024 * 1024) {
+                setHeroError("Each hero image must be under 5 MB");
+                return;
+            }
         }
-        setHeroError("");
+
         try {
-            const base64 = await fileToBase64(file);
-            setHeroPreview(base64);
+            const base64Images = await Promise.all(selectedFiles.map(fileToBase64));
+            setHeroPreviews(current => [...current, ...base64Images].slice(0, 5));
+            setHeroError(files.length > remainingSlots ? "Only the first 5 hero images were added" : "");
         } catch {
-            setHeroError("Failed to read the file. Please try again.");
+            setHeroError("Failed to read one of the files. Please try again.");
         }
-    }, []);
+    }, [heroPreviews.length]);
 
     const handleHeroFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const file = e.target.files?.[0];
-        if (file) processHeroFile(file);
+        const files = Array.from(e.target.files ?? []);
+        if (files.length > 0) processHeroFiles(files);
+        e.target.value = "";
     };
 
     const handleHeroDrop = (e: React.DragEvent<HTMLDivElement>) => {
         e.preventDefault();
         setIsHeroDragging(false);
-        const file = e.dataTransfer.files?.[0];
-        if (file) processHeroFile(file);
+        const files = Array.from(e.dataTransfer.files ?? []);
+        if (files.length > 0) processHeroFiles(files);
     };
 
     // ── Navigation ─────────────────────────────────────────────────────────
@@ -201,7 +215,8 @@ export default function Step2UsedPage() {
             brandAccentColor: finalAccent,
             brandColorPreset: finalPreset,
             brandLogo: logoPreview || undefined,
-            heroImage: heroPreview || undefined,
+            heroImage: heroPreviews[0] || undefined,
+            heroImages: heroPreviews.length > 0 ? heroPreviews : undefined,
         });
         // Both hybrid and pure used go to inventory source selection (Cyepro / bulk upload)
         router.push("/onboarding/step-2-inventory");
@@ -515,45 +530,68 @@ export default function Step2UsedPage() {
                     )}
                 </div>
 
-                {/* ── Hero image upload ────────────────────────────────── */}
+                {/* ── Hero carousel upload ──────────────────────────────── */}
                 <div className="space-y-3">
                     <div>
-                        <h3 className="text-sm font-semibold">Upload Hero / Banner Image</h3>
-                        <p className="text-xs text-muted-foreground">Optional — shown as the background of your website&apos;s header · PNG, JPG, WEBP · Max 5 MB</p>
+                        <div className="flex items-center justify-between gap-3">
+                            <h3 className="text-sm font-semibold">Upload Hero / Banner Images</h3>
+                            <span className="rounded-full bg-muted px-2 py-0.5 text-xs font-medium text-muted-foreground">
+                                {heroPreviews.length}/5
+                            </span>
+                        </div>
+                        <p className="text-xs text-muted-foreground">Optional — upload 2-5 images to auto-scroll in your 2nd-hand website header · PNG, JPG, WEBP · Max 5 MB each</p>
                     </div>
 
-                    {heroPreview ? (
-                        <div className="relative flex items-center gap-4 p-4 rounded-xl border-2 border-emerald-500/40 bg-emerald-500/5">
-                            <div className="w-16 h-16 rounded-xl border border-border bg-white flex items-center justify-center overflow-hidden flex-shrink-0">
-                                <Image
-                                    src={heroPreview}
-                                    alt="Hero preview"
-                                    width={64}
-                                    height={64}
-                                    className="object-contain w-full h-full p-1"
-                                />
+                    {heroPreviews.length > 0 ? (
+                        <div className="space-y-3 rounded-xl border-2 border-emerald-500/40 bg-emerald-500/5 p-4">
+                            <div className="flex items-center gap-2 text-sm font-medium text-emerald-700 dark:text-emerald-300">
+                                <CheckCircle2 className="h-4 w-4" />
+                                {heroPreviews.length >= 2 ? "Auto-scroll carousel ready" : "Hero image added"}
                             </div>
-                            <div className="flex-1 min-w-0">
-                                <p className="text-sm font-medium flex items-center gap-1.5">
-                                    <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-                                    Hero image uploaded
-                                </p>
-                                <p className="text-xs text-muted-foreground">Looking great! You can replace it below.</p>
+                            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                                {heroPreviews.map((preview, index) => (
+                                    <div key={`${preview.slice(0, 24)}-${index}`} className="group relative overflow-hidden rounded-xl border border-border bg-white">
+                                        <Image
+                                            src={preview}
+                                            alt={`Hero slide ${index + 1}`}
+                                            width={240}
+                                            height={120}
+                                            className="h-28 w-full object-cover"
+                                            unoptimized
+                                        />
+                                        <span className="absolute left-2 top-2 rounded-full bg-black/70 px-2 py-0.5 text-xs font-semibold text-white">
+                                            Slide {index + 1}
+                                        </span>
+                                        <button
+                                            type="button"
+                                            aria-label={`Remove hero slide ${index + 1}`}
+                                            onClick={() => setHeroPreviews(current => current.filter((_, itemIndex) => itemIndex !== index))}
+                                            className="absolute right-2 top-2 rounded-lg bg-white/95 p-1.5 text-muted-foreground shadow-sm transition-colors hover:text-destructive"
+                                        >
+                                            <X className="h-4 w-4" />
+                                        </button>
+                                    </div>
+                                ))}
+                                {heroPreviews.length < 5 && (
+                                    <button
+                                        type="button"
+                                        onClick={() => heroInputRef.current?.click()}
+                                        className="flex h-28 flex-col items-center justify-center gap-2 rounded-xl border-2 border-dashed border-border bg-background/70 text-sm font-medium text-muted-foreground transition-colors hover:border-amber-400 hover:text-foreground"
+                                    >
+                                        <Upload className="h-4 w-4" />
+                                        Add more
+                                    </button>
+                                )}
                             </div>
-                            <button
-                                type="button"
-                                aria-label="Remove uploaded hero image"
-                                onClick={() => { setHeroPreview(""); if (heroInputRef.current) heroInputRef.current.value = ""; }}
-                                className="p-1.5 rounded-lg hover:bg-muted transition-colors text-muted-foreground hover:text-foreground"
-                            >
-                                <X className="w-4 h-4" />
-                            </button>
+                            {heroPreviews.length === 1 && (
+                                <p className="text-xs text-muted-foreground">Add one more image if you want the hero to auto-scroll.</p>
+                            )}
                         </div>
                     ) : (
                         <div
                             role="button"
                             tabIndex={0}
-                            aria-label="Upload your hero image. Click, press Enter, or drag and drop an image file here."
+                            aria-label="Upload your hero images. Click, press Enter, or drag and drop image files here."
                             onDragOver={(e) => { e.preventDefault(); setIsHeroDragging(true); }}
                             onDragLeave={() => setIsHeroDragging(false)}
                             onDrop={handleHeroDrop}
@@ -576,9 +614,9 @@ export default function Step2UsedPage() {
                             </div>
                             <div className="text-center">
                                 <p className="text-sm font-medium">
-                                    {isHeroDragging ? "Drop it here!" : "Click or drag & drop your hero image"}
+                                    {isHeroDragging ? "Drop them here!" : "Click or drag & drop your hero images"}
                                 </p>
-                                <p className="text-xs text-muted-foreground mt-0.5">PNG, JPG, WEBP · Max 5 MB</p>
+                                <p className="text-xs text-muted-foreground mt-0.5">Choose 2-5 images · PNG, JPG, WEBP · Max 5 MB each</p>
                             </div>
                         </div>
                     )}
@@ -587,6 +625,7 @@ export default function Step2UsedPage() {
                         ref={heroInputRef}
                         type="file"
                         accept="image/png,image/jpeg,image/jpg,image/webp"
+                        multiple
                         onChange={handleHeroFileChange}
                         className="hidden"
                     />

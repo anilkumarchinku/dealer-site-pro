@@ -45,26 +45,26 @@ export function EmiCalculatorPageContent() {
                         <Link
                             href="/api/finance/precheck?source=emi-calculator"
                             target="_blank"
-                            className="rounded-lg border border-blue-200 bg-blue-50 p-4 transition-colors hover:bg-blue-100 dark:border-blue-500/30 dark:bg-blue-500/10 dark:hover:bg-blue-500/20"
+                            className="rounded-lg border border-blue-200 bg-blue-50 p-4 transition-colors hover:bg-blue-100"
                         >
-                            <p className="flex items-center gap-2 text-sm font-semibold text-blue-900 dark:text-blue-200">
+                            <p className="flex items-center gap-2 text-sm font-semibold text-blue-900">
                                 <CreditCard className="h-4 w-4" />
                                 Loan eligibility pre-check
                             </p>
-                            <p className="mt-1 text-xs leading-relaxed text-blue-800/80 dark:text-blue-300/80">
+                            <p className="mt-1 text-xs leading-relaxed text-blue-800">
                                 Continue to the configured finance partner for a quick pre-check after estimating your EMI.
                             </p>
                         </Link>
                         <Link
                             href="/api/fastag/recharge?source=emi-calculator"
                             target="_blank"
-                            className="rounded-lg border border-emerald-200 bg-emerald-50 p-4 transition-colors hover:bg-emerald-100 dark:border-emerald-500/30 dark:bg-emerald-500/10 dark:hover:bg-emerald-500/20"
+                            className="rounded-lg border border-emerald-200 bg-emerald-50 p-4 transition-colors hover:bg-emerald-100"
                         >
-                            <p className="flex items-center gap-2 text-sm font-semibold text-emerald-900 dark:text-emerald-200">
+                            <p className="flex items-center gap-2 text-sm font-semibold text-emerald-900">
                                 <CreditCard className="h-4 w-4" />
                                 FASTag recharge
                             </p>
-                            <p className="mt-1 text-xs leading-relaxed text-emerald-800/80 dark:text-emerald-300/80">
+                            <p className="mt-1 text-xs leading-relaxed text-emerald-800">
                                 Open the configured FASTag recharge partner for wallet top-up or vehicle handover readiness.
                             </p>
                         </Link>

@@ -1,9 +1,11 @@
 // DealerSite Pro — Search & discover: buyers search inventory and see full specs.
 function SearchDiscover() {
   const { vehicles, status } = window.useMarketplacePreviewVehicles(1);
+  const [mockMessage, setMockMessage] = React.useState('');
   const v = vehicles[0];
-  const detailHref = v?.detailHref || '/cars';
-  const enquiryHref = detailHref.includes('?') ? `${detailHref}&intent=enquiry` : `${detailHref}?intent=enquiry`;
+  const showMockAction = (action) => {
+    setMockMessage(`${action} is mocked in this preview. No page change was made.`);
+  };
   const filters = v
     ? [v.price, v.fuel, v.transmission, v.year, v.body].filter(Boolean).slice(0, 5)
     : [status === 'loading' ? 'Loading DB vehicles' : 'No DB vehicles yet'];
@@ -71,9 +73,14 @@ function SearchDiscover() {
                     })}
                   </div>
                   <div style={{ display: 'flex', gap: 10, marginTop: 2 }}>
-                    <a href={detailHref} target="_top" style={{ flex: 1, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 7, height: 44, borderRadius: 'var(--radius-md)', background: 'var(--ink-900)', color: 'var(--cream-50)', fontFamily: 'var(--font-body)', fontSize: 'var(--text-sm)', fontWeight: 700, textDecoration: 'none' }}>View full details</a>
-                    <a href={enquiryHref} target="_top" style={{ flex: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 7, height: 44, padding: '0 18px', borderRadius: 'var(--radius-md)', background: 'var(--surface-card)', border: '1px solid var(--border-default)', color: 'var(--text-strong)', fontFamily: 'var(--font-body)', fontSize: 'var(--text-sm)', fontWeight: 700, textDecoration: 'none' }}><window.Icons.whatsapp size={16} /> Enquire</a>
+                    <button type="button" onClick={() => showMockAction('Vehicle details')} style={{ flex: 1, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 7, height: 44, border: 0, borderRadius: 'var(--radius-md)', background: 'var(--ink-900)', color: 'var(--cream-50)', fontFamily: 'var(--font-body)', fontSize: 'var(--text-sm)', fontWeight: 700, cursor: 'pointer' }}>View full details</button>
+                    <button type="button" onClick={() => showMockAction('Enquiry')} style={{ flex: 'none', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 7, height: 44, padding: '0 18px', borderRadius: 'var(--radius-md)', background: 'var(--surface-card)', border: '1px solid var(--border-default)', color: 'var(--text-strong)', fontFamily: 'var(--font-body)', fontSize: 'var(--text-sm)', fontWeight: 700, cursor: 'pointer' }}><window.Icons.whatsapp size={16} /> Enquire</button>
                   </div>
+                  {mockMessage && (
+                    <div role="status" style={{ marginTop: -6, border: '1px solid rgb(46 125 80 / 0.22)', borderRadius: 'var(--radius-md)', background: 'rgb(46 125 80 / 0.08)', color: 'var(--success)', padding: '9px 12px', fontFamily: 'var(--font-body)', fontSize: 12, fontWeight: 750 }}>
+                      {mockMessage}
+                    </div>
+                  )}
                 </div>
               </div>
             ) : (

@@ -1,6 +1,6 @@
 // DealerSite Pro — marketplace-style vehicle discovery tab for the landing page.
 const DSP_MARKETPLACE_PAGE_SIZE = 48;
-const DSP_MARKETPLACE_ENDPOINT = `/api/marketplace?pageSize=${DSP_MARKETPLACE_PAGE_SIZE}&category=all&condition=new`;
+const DSP_MARKETPLACE_ENDPOINT = `/api/marketplace?pageSize=${DSP_MARKETPLACE_PAGE_SIZE}&category=all&condition=all`;
 const DSP_BRAND_ALIASES = {
   ambasador: 'ambassador',
   ambassador: 'ambassador',
@@ -401,19 +401,51 @@ const DSP_DATA_BRAND_LOGOS = {
   "zontes india": "/data/brand-logos/zontes-india.png",
 };
 const DSP_FALLBACK_IMAGES = {
-  car: '/design-system-handoff/ride-finder-assets/hero-suv.png',
-  suv: '/design-system-handoff/ride-finder-assets/car-suv-silver.png',
-  csuv: '/design-system-handoff/ride-finder-assets/car-csuv-blue.png',
-  sedan: '/design-system-handoff/ride-finder-assets/car-sedan-black.png',
-  hatch: '/design-system-handoff/ride-finder-assets/car-hatch-red.png',
-  mpv: '/design-system-handoff/ride-finder-assets/car-mpv-white.png',
-  bike: 'https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=900&q=72',
-  scooter: 'https://images.unsplash.com/photo-1609630875171-b1321377ee65?auto=format&fit=crop&w=900&q=72',
-  auto: 'https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=900&q=72',
-  ev: '/design-system-handoff/ride-finder-assets/car-ev-compact.png',
+  car: '',
+  suv: '',
+  csuv: '',
+  sedan: '',
+  hatch: '',
+  mpv: '',
+  bike: '',
+  scooter: '',
+  auto: '',
+  ev: '',
 };
 
-function marketplacePageUrl(page = 1, condition = 'new') {
+const DSP_LOCAL_MODEL_IMAGE_OVERRIDES = [
+  ['4w', ['ferrari'], ['12cilindri'], '/data/brand-model-images/4w/ferrari/amalfi.jpg'],
+  ['4w', ['ferrari'], ['ferrari 12cilindri'], '/data/brand-model-images/4w/ferrari/amalfi.jpg'],
+  ['3w', ['altigreen'], ['neev bhai flatbed'], '/images/3w/altigreen/neev-bhai-flatbed.jpg'],
+  ['3w', ['altigreen'], ['neev bhai low deck'], '/images/3w/altigreen/neev-bhai-low-deck.jpg'],
+  ['3w', ['altigreen'], ['neev flatbed'], '/images/3w/altigreen/neev-flatbed.jpg'],
+  ['3w', ['altigreen'], ['neev high deck'], '/images/3w/altigreen/neev-high-deck.jpg'],
+  ['3w', ['altigreen'], ['neev low deck'], '/images/3w/altigreen/neev-low-deck.jpg'],
+  ['3w', ['altigreen'], ['neev rahi'], '/images/3w/altigreen/neev-rahi.jpg'],
+  ['3w', ['altigreen'], ['neev tez'], '/images/3w/altigreen/neev-tez.jpg'],
+  ['3w', ['mahindra'], ['alfa champ'], '/images/3w/mahindra-3w/alfa-champ.jpg'],
+  ['3w', ['mahindra'], ['alfa comfy'], '/images/3w/mahindra-3w/alfa-comfy.jpg'],
+  ['3w', ['mahindra'], ['alfa dx duo'], '/images/3w/mahindra-3w/alfa-dx-duo.jpg'],
+  ['3w', ['mahindra'], ['alfa dx'], '/images/3w/mahindra-3w/alfa-dx.jpg'],
+  ['3w', ['mahindra'], ['alfa plus duo'], '/data/brand-model-images/mahindra-last-mile-mobility/alfa-plus-duo.png'],
+  ['3w', ['mahindra'], ['alfa plus'], '/images/3w/mahindra-3w/alfa-plus.jpg'],
+  ['3w', ['mahindra'], ['alfa load'], '/images/3w/mahindra-3w/alfa-load.jpg'],
+  ['3w', ['mahindra'], ['e alfa cargo'], '/images/3w/mahindra-3w/e-alfa-cargo.jpg'],
+  ['3w', ['mahindra'], ['e alfa mini'], '/images/3w/mahindra-3w/e-alfa-mini.jpg'],
+  ['3w', ['mahindra'], ['e alfa plus'], '/images/3w/mahindra-3w/e-alfa-plus.jpg'],
+  ['3w', ['mahindra'], ['e alfa super'], '/images/3w/mahindra-3w/e-alfa-super.jpg'],
+  ['3w', ['mahindra'], ['treo yaari cargo'], '/images/3w/mahindra-3w/treo-yaari-cargo.jpg'],
+  ['3w', ['mahindra'], ['treo yaari passenger'], '/images/3w/mahindra-3w/treo-yaari-passenger.jpg'],
+  ['3w', ['mahindra'], ['treo yaari'], '/images/3w/mahindra-3w/treo-yaari.jpg'],
+  ['3w', ['mahindra'], ['treo plus'], '/images/3w/mahindra-3w/treo-plus.jpg'],
+  ['3w', ['mahindra'], ['treo zor'], '/images/3w/mahindra-3w/treo-zor.jpg'],
+  ['3w', ['mahindra'], ['treo'], '/images/3w/mahindra-3w/treo.jpg'],
+  ['3w', ['mahindra'], ['zor grand range plus'], '/images/3w/mahindra-3w/zor-grand-range-plus.jpg'],
+  ['3w', ['mahindra'], ['zor grand'], '/images/3w/mahindra-3w/zor-grand.jpg'],
+  ['3w', ['mahindra'], ['udo'], '/images/3w/mahindra-3w/udo.jpg'],
+];
+
+function marketplacePageUrl(page = 1, condition = 'all') {
   const params = new URLSearchParams({
     pageSize: String(DSP_MARKETPLACE_PAGE_SIZE),
     page: String(page),
@@ -432,28 +464,49 @@ function isBadVehicleImageUrl(url) {
     'avatar',
     'icon',
     'placeholder',
+    'stimg.cardekho.com/images/carexteriorimages',
     'dealer-assets/dealers',
+    '/assets/cars/aston-martin/db11',
+    '/assets/cars/aston-martin/aston-martin-db11',
+    '/assets/cars/aston-martin/dbs-superleggera',
     '/assets/cars/mclaren/750s',
     '/assets/cars/bmw/8-series-gran-coupe',
+    '/assets/cars/ferrari/12cilindri',
+    '/assets/cars/ferrari/ferrari-12cilindri',
     '/assets/cars/bugatti/divo',
     '/assets/cars/bugatti/bugatti-divo',
+    '/data/brand-model-images/4w/ferrari/12cilindri',
+    '/data/brand-model-images/4w/ferrari/ferrari-12cilindri',
     '/data/brand-model-images/4w/bugatti/divo',
     '/data/brand-model-images/4w/bugatti/bugatti-divo',
+    '/data/brand-model-images/4w/aston-martin/dbs-superleggera',
+    '/data/brand-model-images/4w/aston-martin/aston-martin-dbs-superleggera',
+    '/data/brand-model-images/4w/citroen/a',
+    '/data/brand-model-images/4w/citroen/citroen-a',
+    '/data/brand-model-images/4w/tata/indigo',
+    '/data/brand-model-images/4w/tata/tata-indigo',
+    '/data/brand-model-images/3w/altigreen/neev-bhai-flatbed',
+    '/data/brand-model-images/3w/altigreen/neev-flatbed',
+    '/data/brand-model-images/3w/altigreen/neev-bhai-low-deck',
+    '/data/brand-model-images/3w/altigreen/neev-high-deck',
+    '/data/brand-model-images/3w/altigreen/neev-bhai',
+    '/data/brand-model-images/3w/altigreen/neev-bhai-low',
+    '/data/brand-model-images/3w/altigreen/neev-high',
   ].some((token) => value.includes(token));
 }
 
-async function fetchMarketplacePage(page = 1, condition = 'new') {
+async function fetchMarketplacePage(page = 1, condition = 'all') {
   const response = await fetch(marketplacePageUrl(page, condition), { headers: { Accept: 'application/json' } });
   if (!response.ok) throw new Error(`Marketplace API returned ${response.status}`);
   return response.json();
 }
 
-async function fetchAllFirstHandVehicles() {
-  const firstPayload = await fetchMarketplacePage(1, 'new');
+async function fetchMarketplaceCondition(condition) {
+  const firstPayload = await fetchMarketplacePage(1, condition);
   const firstRows = Array.isArray(firstPayload?.data?.vehicles) ? firstPayload.data.vehicles : [];
   const totalPages = Math.max(1, Number(firstPayload?.data?.totalPages) || 1);
   const restPages = Array.from({ length: Math.max(0, totalPages - 1) }, (_, index) => index + 2);
-  const restPayloads = await Promise.all(restPages.map((page) => fetchMarketplacePage(page, 'new')));
+  const restPayloads = await Promise.all(restPages.map((page) => fetchMarketplacePage(page, condition)));
   const restRows = restPayloads.flatMap((payload) => Array.isArray(payload?.data?.vehicles) ? payload.data.vehicles : []);
 
   return {
@@ -461,6 +514,31 @@ async function fetchAllFirstHandVehicles() {
     total: Number(firstPayload?.data?.total) || firstRows.length + restRows.length,
     totalPages,
   };
+}
+
+async function fetchAllMarketplaceVehicles() {
+  const payloads = [
+    await fetchMarketplaceCondition('all').catch(() => ({ rows: [], total: 0, totalPages: 0 })),
+    await fetchMarketplaceCondition('used').catch(() => ({ rows: [], total: 0, totalPages: 0 })),
+    await fetchMarketplaceCondition('certified_pre_owned').catch(() => ({ rows: [], total: 0, totalPages: 0 })),
+  ];
+  const seen = new Set();
+  const rows = payloads.flatMap((payload) => payload.rows).filter((row) => {
+    const key = `${row?.vehicle_category || 'vehicle'}:${row?.condition || 'available'}:${row?.id || ''}`;
+    if (!row?.id || seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+
+  return {
+    rows,
+    total: payloads.reduce((sum, payload) => sum + (Number(payload.total) || payload.rows.length), 0),
+    totalPages: Math.max(...payloads.map((payload) => Number(payload.totalPages) || 0), 1),
+  };
+}
+
+async function fetchAllFirstHandVehicles() {
+  return fetchAllMarketplaceVehicles();
 }
 
 function compactText(value, fallback = '') {
@@ -579,6 +657,16 @@ function brandPageHrefFor(name, category = '4w') {
   return `/brands/${encodeURIComponent(name)}?type=${safeCategory}`;
 }
 
+function openTopWindowHref(href) {
+  const cleanHref = compactText(href);
+  if (!cleanHref) return;
+  try {
+    window.top.location.href = cleanHref;
+  } catch {
+    window.location.href = cleanHref;
+  }
+}
+
 function numberFromPaise(value) {
   const numeric = Number(value);
   return Number.isFinite(numeric) && numeric > 0 ? Math.round(numeric / 100) : 0;
@@ -664,42 +752,83 @@ function initialVehicleSearchQuery() {
   }
 }
 
+function initialMarketplaceConditionFilter() {
+  try {
+    const params = new URLSearchParams(window.location.search);
+    const condition = normalizeBrandKey(params.get('condition'));
+    if (condition === 'new') return 'New';
+    if (condition === 'used') return 'Used';
+    if (condition === 'certified' || condition === 'certified pre owned' || condition === 'certified_pre_owned') return 'Certified';
+  } catch {
+    return 'All';
+  }
+  return 'All';
+}
+
+function localModelOverrideImageFor(row) {
+  const category = validVehicleCategory(row.vehicle_category);
+  const makeKey = canonicalBrandKey(row.make);
+  const modelKey = normalizeBrandKey(`${row.model || ''} ${row.variant || ''}`);
+
+  const match = DSP_LOCAL_MODEL_IMAGE_OVERRIDES.find(([entryCategory, makes, models]) => {
+    if (entryCategory && entryCategory !== category) return false;
+    const makeMatches = makes.some((make) => makeKey === canonicalBrandKey(make));
+    if (!makeMatches) return false;
+    return models.some((model) => {
+      const normalizedModel = normalizeBrandKey(model);
+      return modelKey === normalizedModel
+        || modelKey.startsWith(`${normalizedModel} `)
+        || modelKey.includes(` ${normalizedModel} `);
+    });
+  });
+
+  return match?.[3] || '';
+}
+
 function imageForVehicle(row, vehicleType, bodyType) {
+  const localOverrideImage = localModelOverrideImageFor(row);
+  if (localOverrideImage) return localOverrideImage;
+
   const localModelImage = window.dspModelGalleryImageFor?.(row.make, row.model) || '';
-  if (compactText(row.condition).toLowerCase() === 'new' && localModelImage) return localModelImage;
+  if (compactText(row.condition).toLowerCase() === 'new' && localModelImage && !isBadVehicleImageUrl(localModelImage)) return localModelImage;
 
   const imageList = Array.isArray(row.image_urls) ? row.image_urls.filter(Boolean) : [];
   const image = [row.image_url, ...imageList]
     .map((item) => compactText(item))
     .find((item) => item && !isBadVehicleImageUrl(item));
   if (image) return image;
-  if (localModelImage) return localModelImage;
-
-  const body = bodyType.toLowerCase();
-  if (vehicleType === 'EVs') return DSP_FALLBACK_IMAGES.ev;
-  if (vehicleType === 'Bikes' && body.includes('scooter')) return DSP_FALLBACK_IMAGES.scooter;
-  if (vehicleType === 'Bikes') return DSP_FALLBACK_IMAGES.bike;
-  if (vehicleType === 'Autos') return DSP_FALLBACK_IMAGES.auto;
-  if (body.includes('compact')) return DSP_FALLBACK_IMAGES.csuv;
-  if (body.includes('hatch')) return DSP_FALLBACK_IMAGES.hatch;
-  if (body.includes('muv') || body.includes('mpv')) return DSP_FALLBACK_IMAGES.mpv;
-  if (body.includes('suv')) return DSP_FALLBACK_IMAGES.suv;
-  if (body.includes('sedan')) return DSP_FALLBACK_IMAGES.sedan;
-  return DSP_FALLBACK_IMAGES.car;
+  if (localModelImage && !isBadVehicleImageUrl(localModelImage)) return localModelImage;
+  return '';
 }
 
 function fallbackImageForExplorerVehicle(vehicle) {
-  const body = compactText(vehicle?.body).toLowerCase();
-  if (vehicle?.type === 'EVs' || compactText(vehicle?.fuel).toLowerCase().includes('electric')) return DSP_FALLBACK_IMAGES.ev;
-  if (vehicle?.category === '2w' && body.includes('scooter')) return DSP_FALLBACK_IMAGES.scooter;
-  if (vehicle?.category === '2w') return DSP_FALLBACK_IMAGES.bike;
-  if (vehicle?.category === '3w') return DSP_FALLBACK_IMAGES.auto;
-  if (body.includes('compact')) return DSP_FALLBACK_IMAGES.csuv;
-  if (body.includes('hatch')) return DSP_FALLBACK_IMAGES.hatch;
-  if (body.includes('muv') || body.includes('mpv')) return DSP_FALLBACK_IMAGES.mpv;
-  if (body.includes('suv')) return DSP_FALLBACK_IMAGES.suv;
-  if (body.includes('sedan')) return DSP_FALLBACK_IMAGES.sedan;
-  return DSP_FALLBACK_IMAGES.car;
+  return '';
+}
+
+function vehicleImageOrFallback(vehicle) {
+  return compactText(vehicle?.image);
+}
+
+function vehicleCardImageSourceKind(src) {
+  const value = compactText(src).toLowerCase();
+  if (value.includes('/storage/v1/object/public/dealer-assets/vehicles/') ||
+    value.includes('/storage/v1/object/public/dealer-assets/sell-requests/')) {
+    return 'inventory-photo';
+  }
+  return 'resolved-model';
+}
+
+function applyVehicleImageFallback(event, vehicle) {
+  const image = event.currentTarget;
+  if (image.dataset.fallbackApplied === 'true') return;
+  image.dataset.fallbackApplied = 'true';
+  const card = image.closest('.vrf-vehicle-card, [data-vehicle-card], article');
+  if (card && /\b(emi|price|dealer listing|enquire|used|new|fuel|trans|seats)\b/i.test(card.textContent || '')) {
+    card.style.display = 'none';
+    image.style.display = 'none';
+    return;
+  }
+  image.style.display = 'none';
 }
 
 function vehicleImageIdentity(url) {
@@ -732,48 +861,16 @@ function svgText(value) {
     .replace(/"/g, '&quot;');
 }
 
-function uniqueModelPlaceholderImage(vehicle) {
-  const brand = displayBrandName(compactText(vehicle?.brand, 'DealerSite'));
-  const model = compactText(vehicle?.name, 'Model');
-  const variant = compactText(vehicle?.variant);
-  const initial = brandInitials(brand);
-  const hueSeed = normalizeBrandKey(`${brand} ${model}`).split('').reduce((sum, char) => sum + char.charCodeAt(0), 0);
-  const hue = hueSeed % 360;
-  const svg = `
-    <svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560">
-      <defs>
-        <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
-          <stop offset="0" stop-color="hsl(${hue}, 30%, 92%)"/>
-          <stop offset="1" stop-color="hsl(${(hue + 24) % 360}, 34%, 78%)"/>
-        </linearGradient>
-      </defs>
-      <rect width="900" height="560" rx="44" fill="url(#bg)"/>
-      <rect x="58" y="54" width="784" height="452" rx="36" fill="#fffdf7" fill-opacity="0.78"/>
-      <circle cx="450" cy="230" r="92" fill="#0b0e12"/>
-      <text x="450" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="56" font-weight="800" fill="#fffdf7">${svgText(initial)}</text>
-      <text x="450" y="365" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" font-weight="800" fill="#0b0e12">${svgText(brand)}</text>
-      <text x="450" y="418" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#756f66">${svgText(model)}</text>
-      ${variant ? `<text x="450" y="462" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#a8793a">${svgText(variant)}</text>` : ''}
-    </svg>
-  `.trim();
-  return `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
+function noVehicleImagePlaceholder(vehicle) {
+  return '';
 }
 
 function assignUniqueVehicleCardImages(vehicles) {
-  const seen = new Map();
   return vehicles.map((vehicle) => {
     const image = compactText(vehicle.image);
-    const imageKey = vehicleImageIdentity(image);
-    const modelKey = vehicleModelIdentity(vehicle);
-    const firstOwner = imageKey ? seen.get(imageKey) : null;
-    const shouldUsePlaceholder = isSharedFallbackVehicleImage(image) || (firstOwner && firstOwner !== modelKey);
-    const nextVehicle = shouldUsePlaceholder
-      ? { ...vehicle, image: uniqueModelPlaceholderImage(vehicle), imageWasDeduped: true }
+    return isSharedFallbackVehicleImage(image)
+      ? { ...vehicle, image: '', imageWasDeduped: true }
       : vehicle;
-
-    const nextImageKey = vehicleImageIdentity(nextVehicle.image);
-    if (nextImageKey) seen.set(nextImageKey, modelKey);
-    return nextVehicle;
   });
 }
 
@@ -904,6 +1001,40 @@ function uniqueVehicleValues(vehicles, field, fallback = []) {
 function conditionMatchesVehicle(vehicle, selectedCondition) {
   if (selectedCondition === 'All') return true;
   return normalizeBrandKey(vehicle.condition || vehicle.badge) === normalizeBrandKey(selectedCondition);
+}
+
+function vehicleConditionBreakdownLabel(vehicles) {
+  const counts = vehicles.reduce((acc, vehicle) => {
+    const key = conditionLabelFromDisplay(vehicle.condition);
+    acc[key] = (acc[key] || 0) + 1;
+    return acc;
+  }, {});
+  return [
+    counts.New ? `${counts.New} new` : '',
+    counts.Used ? `${counts.Used} used` : '',
+    counts.Certified ? `${counts.Certified} certified` : '',
+  ].filter(Boolean).join(' / ');
+}
+
+function conditionLabelFromDisplay(value) {
+  const key = normalizeBrandKey(value);
+  if (key === 'certified' || key === 'certified pre owned' || key === 'certified_pre_owned') return 'Certified';
+  if (key === 'used') return 'Used';
+  if (key === 'new') return 'New';
+  return 'Available';
+}
+
+function isPreOwnedVehicle(vehicle) {
+  const label = conditionLabelFromDisplay(vehicle?.condition || vehicle?.badge);
+  return label === 'Used' || label === 'Certified';
+}
+
+function preOwnedSortRank(vehicle) {
+  const label = conditionLabelFromDisplay(vehicle?.condition || vehicle?.badge);
+  if (label === 'Used') return 0;
+  if (label === 'Certified') return 1;
+  if (label === 'New') return 2;
+  return 3;
 }
 
 function textOptionMatches(value, selectedOption) {
@@ -1239,10 +1370,10 @@ function MarketplaceFilterRail({
 }
 
 function MarketConditionToggle({ condition, setCondition }) {
-  const options = ['Used', 'New'];
+  const options = ['All', 'Used', 'Certified', 'New'];
 
   return (
-    <div role="group" aria-label="Vehicle condition" style={{ display: 'inline-grid', gridTemplateColumns: '1fr 1fr', gap: 3, minHeight: 42, minWidth: 132, padding: 4, borderRadius: 'var(--radius-full)', border: '1px solid rgba(255,253,247,0.16)', background: 'rgba(255,253,247,0.08)' }}>
+    <div role="group" aria-label="Vehicle condition" style={{ display: 'inline-grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 3, minHeight: 42, minWidth: 268, padding: 4, borderRadius: 'var(--radius-full)', border: '1px solid rgba(255,253,247,0.16)', background: 'rgba(255,253,247,0.08)' }}>
       {options.map((option) => {
         const active = condition === option;
         return (
@@ -1347,10 +1478,17 @@ function MarketplaceMetricStrip({ vehicles, brands, bodies, city }) {
 
 function VehicleCard({ vehicle, selected, onCompare, onEnquire }) {
   const specs = [vehicle.year, vehicle.fuel, vehicle.transmission, vehicle.km, `${vehicle.seats} seats`].filter(Boolean);
+  const imageSrc = vehicleImageOrFallback(vehicle);
+  if (!imageSrc) return null;
   return (
     <article style={{ overflow: 'hidden', borderRadius: 'var(--radius-xl)', border: '1px solid var(--border-subtle)', background: 'var(--surface-card)', boxShadow: 'var(--shadow-lg)' }}>
       <div style={{ position: 'relative', minHeight: 210, background: 'var(--cream-200)', overflow: 'hidden' }}>
-        <img src={vehicle.image} alt={`${vehicle.brand} ${vehicle.name}`} style={{ width: '100%', height: 230, objectFit: 'cover', display: 'block' }} />
+        <img
+          src={imageSrc}
+          alt={`${vehicle.brand} ${vehicle.name}`}
+          onError={(event) => applyVehicleImageFallback(event, vehicle)}
+          style={{ width: '100%', height: 230, objectFit: 'cover', display: 'block' }}
+        />
         {vehicle.badge && (
           <span style={{ position: 'absolute', left: 14, top: 14, borderRadius: 'var(--radius-full)', background: 'var(--ink-900)', color: 'var(--cream-50)', padding: '7px 11px', fontFamily: 'var(--font-body)', fontSize: 11, fontWeight: 900 }}>{vehicle.badge}</span>
         )}
@@ -1417,7 +1555,12 @@ function LaunchesSection({ vehicles, onNotify }) {
           {launchVehicles.map((vehicle, index) => (
             <article key={vehicle.id} style={{ overflow: 'hidden', borderRadius: 'var(--radius-2xl)', border: '1px solid var(--border-subtle)', background: index === 2 ? 'var(--ink-900)' : 'var(--surface-card)', color: index === 2 ? 'var(--cream-50)' : 'var(--text-strong)', boxShadow: 'var(--shadow-lg)' }}>
               <div style={{ height: 210, position: 'relative', overflow: 'hidden', background: 'var(--cream-200)' }}>
-                <img src={vehicle.image} alt={`${vehicle.brand} ${vehicle.name}`} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', opacity: index === 2 ? 0.66 : 1 }} />
+                <img
+                  src={vehicleImageOrFallback(vehicle)}
+                  alt={`${vehicle.brand} ${vehicle.name}`}
+                  onError={(event) => applyVehicleImageFallback(event, vehicle)}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', opacity: index === 2 ? 0.66 : 1 }}
+                />
                 <span style={{ position: 'absolute', top: 14, left: 14, borderRadius: 'var(--radius-full)', background: index === 2 ? 'var(--cream-50)' : 'var(--ink-900)', color: index === 2 ? 'var(--ink-900)' : 'var(--cream-50)', padding: '7px 11px', fontFamily: 'var(--font-body)', fontSize: 11, fontWeight: 950 }}>{index === 2 ? 'Launching soon' : vehicle.year}</span>
               </div>
               <div style={{ padding: 18 }}>
@@ -1457,7 +1600,12 @@ function EvSpotlight({ vehicle, onExplore }) {
           <button type="button" onClick={onExplore} style={{ marginTop: 26, minHeight: 52, border: 0, borderRadius: 'var(--radius-full)', background: 'var(--cream-50)', color: 'var(--ink-900)', padding: '0 22px', fontFamily: 'var(--font-body)', fontSize: 14, fontWeight: 950, cursor: 'pointer' }}>Explore EV listings</button>
         </div>
         <div style={{ minHeight: 420, position: 'relative', overflow: 'hidden' }}>
-          <img src={vehicle.image} alt="Featured EV" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.78 }} />
+          <img
+            src={vehicleImageOrFallback(vehicle)}
+            alt="Featured EV"
+            onError={(event) => applyVehicleImageFallback(event, vehicle)}
+            style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.78 }}
+          />
           <div aria-hidden="true" style={{ position: 'absolute', inset: 0, background: 'linear-gradient(90deg, rgba(11,14,18,0.2), rgba(11,14,18,0.72))' }} />
           <div style={{ position: 'absolute', left: 22, right: 22, bottom: 22, borderRadius: 'var(--radius-xl)', background: 'rgba(255,253,247,0.12)', border: '1px solid rgba(255,253,247,0.16)', padding: 18, backdropFilter: 'blur(14px)' }}>
             <p style={{ margin: 0, color: 'var(--bronze-400)', fontFamily: 'var(--font-body)', fontSize: 12, fontWeight: 950 }}>Featured EV</p>
@@ -1489,27 +1637,27 @@ function FinancePlanner({ vehicle, onEligibility = () => {} }) {
           <p style={{ margin: '14px 0 0', color: 'var(--text-body)', fontFamily: 'var(--font-body)', fontSize: 16, lineHeight: 1.55, fontWeight: 700 }}>Use the live listing price as the starting point and adjust tenure or rate before asking the dealer for exact financing.</p>
         </div>
         <div style={{ borderRadius: 'var(--radius-3xl)', background: 'var(--ink-900)', color: 'var(--cream-50)', padding: 'clamp(24px, 4vw, 42px)', boxShadow: 'var(--shadow-2xl)' }}>
-          <p style={{ margin: 0, color: 'var(--text-on-dark-muted)', fontFamily: 'var(--font-body)', fontSize: 13, fontWeight: 850 }}>Selected vehicle</p>
-          <h3 style={{ margin: '6px 0 0', fontFamily: 'var(--font-display)', fontSize: 30, fontWeight: 950, letterSpacing: '-0.04em' }}>{vehicle.brand} {vehicle.name}</h3>
+          <p style={{ margin: 0, color: 'rgb(255 253 247 / 0.78)', fontFamily: 'var(--font-body)', fontSize: 13, fontWeight: 850 }}>Selected vehicle</p>
+          <h3 style={{ margin: '6px 0 0', fontFamily: 'var(--font-display)', fontSize: 30, fontWeight: 950, letterSpacing: '-0.04em', color: 'var(--cream-50)' }}>{vehicle.brand} {vehicle.name}</h3>
           <div style={{ marginTop: 22, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
             <div style={{ borderRadius: 'var(--radius-lg)', background: 'rgba(255,253,247,0.1)', padding: 14 }}>
-              <p style={{ margin: 0, color: 'var(--text-on-dark-muted)', fontFamily: 'var(--font-body)', fontSize: 11, fontWeight: 850 }}>Vehicle price</p>
-              <p style={{ margin: '6px 0 0', fontFamily: 'var(--font-display)', fontSize: 24, fontWeight: 950 }}>{formatInrShort(principal)}</p>
+              <p style={{ margin: 0, color: 'rgb(255 253 247 / 0.78)', fontFamily: 'var(--font-body)', fontSize: 11, fontWeight: 850 }}>Vehicle price</p>
+              <p style={{ margin: '6px 0 0', color: 'var(--cream-50)', fontFamily: 'var(--font-display)', fontSize: 24, fontWeight: 950 }}>{formatInrShort(principal)}</p>
             </div>
             <div style={{ borderRadius: 'var(--radius-lg)', background: 'rgba(255,253,247,0.1)', padding: 14 }}>
-              <p style={{ margin: 0, color: 'var(--text-on-dark-muted)', fontFamily: 'var(--font-body)', fontSize: 11, fontWeight: 850 }}>Estimated EMI</p>
-              <p style={{ margin: '6px 0 0', fontFamily: 'var(--font-display)', fontSize: 24, fontWeight: 950 }}>{emi > 0 ? `₹${emi.toLocaleString('en-IN')}` : 'Ask dealer'}</p>
+              <p style={{ margin: 0, color: 'rgb(255 253 247 / 0.78)', fontFamily: 'var(--font-body)', fontSize: 11, fontWeight: 850 }}>Estimated EMI</p>
+              <p style={{ margin: '6px 0 0', color: 'var(--cream-50)', fontFamily: 'var(--font-display)', fontSize: 24, fontWeight: 950 }}>{emi > 0 ? `₹${emi.toLocaleString('en-IN')}` : 'Ask dealer'}</p>
             </div>
           </div>
           <div style={{ marginTop: 22 }}>
-            <p style={{ margin: '0 0 10px', color: 'var(--text-on-dark-muted)', fontFamily: 'var(--font-body)', fontSize: 12, fontWeight: 900 }}>Tenure</p>
+            <p style={{ margin: '0 0 10px', color: 'rgb(255 253 247 / 0.78)', fontFamily: 'var(--font-body)', fontSize: 12, fontWeight: 900 }}>Tenure</p>
             <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
               {[3, 5, 7].map((year) => (
                 <button key={year} type="button" onClick={() => setTenure(year)} style={{ minHeight: 42, minWidth: 58, borderRadius: 'var(--radius-full)', border: '1px solid rgba(255,253,247,0.16)', background: tenure === year ? 'var(--cream-50)' : 'rgba(255,253,247,0.08)', color: tenure === year ? 'var(--ink-900)' : 'var(--cream-50)', fontFamily: 'var(--font-body)', fontWeight: 950, cursor: 'pointer' }}>{year}</button>
               ))}
             </div>
           </div>
-          <label style={{ display: 'block', marginTop: 20, color: 'var(--text-on-dark-muted)', fontFamily: 'var(--font-body)', fontSize: 12, fontWeight: 900 }}>
+          <label style={{ display: 'block', marginTop: 20, color: 'rgb(255 253 247 / 0.78)', fontFamily: 'var(--font-body)', fontSize: 12, fontWeight: 900 }}>
             Interest rate
             <input type="number" min="1" max="20" step="0.1" value={rate} onChange={(event) => setRate(Number(event.target.value) || 0)} style={{ marginTop: 8, width: '100%', minHeight: 48, borderRadius: 'var(--radius-md)', border: '1px solid rgba(255,253,247,0.16)', background: 'rgba(255,253,247,0.08)', color: 'var(--cream-50)', padding: '0 14px', fontFamily: 'var(--font-body)', fontSize: 16, fontWeight: 900 }} />
           </label>
@@ -1624,7 +1772,7 @@ function LegacyVehicleExplorer({ setMode }) {
   const [fuel, setFuel] = React.useState('All');
   const [transmission, setTransmission] = React.useState('All');
   const [seats, setSeats] = React.useState('All');
-  const [condition, setCondition] = React.useState('New');
+  const [condition, setCondition] = React.useState('All');
   const [sort, setSort] = React.useState('popular');
   const [compareIds, setCompareIds] = React.useState([]);
   const [status, setStatus] = React.useState('');
@@ -1643,25 +1791,25 @@ function LegacyVehicleExplorer({ setMode }) {
 
     async function loadVehicles() {
       try {
-        const payload = await fetchAllFirstHandVehicles();
+        const payload = await fetchAllMarketplaceVehicles();
         const rows = Array.isArray(payload.rows) ? payload.rows : [];
         const mapped = rows
-          .filter((row) => conditionLabel(row.condition) === 'New')
           .map(mapDbVehicleToExplorer)
           .filter(Boolean);
 
         if (!active) return;
         if (mapped.length > 0) {
           setDbVehicles(assignUniqueVehicleCardImages(mapped));
-          setInventoryMessage(`Showing ${payload.total || mapped.length} first-hand DB vehicles from your marketplace inventory.`);
+          const breakdown = vehicleConditionBreakdownLabel(mapped);
+          setInventoryMessage(`Showing ${payload.total || mapped.length} live marketplace vehicles${breakdown ? ` (${breakdown})` : ''} including second-hand dealer and hybrid dealer stock.`);
         } else {
           setDbVehicles([]);
-          setInventoryMessage('No first-hand DB vehicles returned yet. Add new vehicles to the database to show model cards.');
+          setInventoryMessage('No marketplace vehicles returned yet. Add new or second-hand vehicles to the database to show model cards.');
         }
       } catch (error) {
         if (active) {
           setDbVehicles([]);
-          setInventoryMessage('First-hand DB inventory could not load. Model cards are hidden until the database responds.');
+          setInventoryMessage('Marketplace inventory could not load. Model cards are hidden until the database responds.');
         }
       } finally {
         if (active) setLoadingVehicles(false);
@@ -1741,7 +1889,7 @@ function LegacyVehicleExplorer({ setMode }) {
     setFuel('All');
     setTransmission('All');
     setSeats('All');
-    setCondition('New');
+    setCondition('All');
     setQuery('');
   };
 
@@ -1857,7 +2005,12 @@ function LegacyVehicleExplorer({ setMode }) {
             <div className="dsp-market-featured" style={{ alignSelf: 'stretch', minHeight: 440, position: 'relative', overflow: 'hidden', borderRadius: '36px', border: '1px solid rgba(255,253,247,0.16)', background: 'linear-gradient(180deg, rgba(255,253,247,0.16), rgba(255,253,247,0.04))', boxShadow: 'var(--shadow-2xl)' }}>
               {heroFeatured ? (
                 <React.Fragment>
-                  <img src={heroFeatured.image} alt={`${heroFeatured.brand} ${heroFeatured.name}`} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.78 }} />
+                  <img
+                    src={vehicleImageOrFallback(heroFeatured)}
+                    alt={`${heroFeatured.brand} ${heroFeatured.name}`}
+                    onError={(event) => applyVehicleImageFallback(event, heroFeatured)}
+                    style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.78 }}
+                  />
                   <div aria-hidden="true" style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(11,14,18,0.08), rgba(11,14,18,0.76))' }} />
                   <div style={{ position: 'absolute', left: 22, right: 22, bottom: 22, color: 'var(--cream-50)' }}>
                     <span style={{ display: 'inline-flex', borderRadius: 'var(--radius-full)', background: 'var(--cream-50)', color: 'var(--ink-900)', padding: '7px 11px', fontFamily: 'var(--font-body)', fontSize: 11, fontWeight: 950 }}>Featured DB listing · {heroFeatured.year}</span>
@@ -1890,8 +2043,6 @@ function LegacyVehicleExplorer({ setMode }) {
         </window.Reveal>
 
         <window.Reveal style={{ paddingTop: 42 }}>
-          <BrowseRail title="Browse by Budget" items={browseBudgets.slice(0, 6)} active={budget} onSelect={(value) => setBudget(value)} />
-          <BrowseRail title="Browse by Body Type" items={browseBodies.slice(0, 6)} active={body} onSelect={(value) => setBody(value)} />
           <BrowseRail title="Browse by Brand" items={browseBrands} active={brand} onSelect={selectBrand} />
         </window.Reveal>
 
@@ -1997,7 +2148,15 @@ function LegacyVehicleExplorer({ setMode }) {
           <div style={{ display: 'flex', alignItems: 'center', gap: 10, minWidth: 0 }}>
             {compareIds.map((id) => {
               const vehicle = vehicles.find((item) => item.id === id);
-              return vehicle ? <img key={id} src={vehicle.image} alt="" style={{ width: 52, height: 42, objectFit: 'cover', borderRadius: 12, border: '1px solid rgba(255,253,247,0.12)' }} /> : null;
+              return vehicle ? (
+                <img
+                  key={id}
+                  src={vehicleImageOrFallback(vehicle)}
+                  alt=""
+                  onError={(event) => applyVehicleImageFallback(event, vehicle)}
+                  style={{ width: 52, height: 42, objectFit: 'cover', borderRadius: 12, border: '1px solid rgba(255,253,247,0.12)' }}
+                />
+              ) : null;
             })}
             <div style={{ minWidth: 0 }}>
               <p style={{ margin: 0, fontFamily: 'var(--font-display)', fontSize: 16, fontWeight: 900 }}>{compareIds.length} selected</p>
@@ -2061,7 +2220,7 @@ function VrfSectionHead({ title, kicker, href = '#listing', action = 'View all' 
   return (
     <div className="vrf-section-head">
       <div>
-        {kicker ? <div style={{ color: 'var(--vrf-brand)', fontSize: 11, fontWeight: 950, letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: 6 }}>{kicker}</div> : null}
+        {kicker ? <div style={{ color: 'var(--vrf-brand-text)', fontSize: 11, fontWeight: 950, letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: 6 }}>{kicker}</div> : null}
         <h2>{title}</h2>
       </div>
       {action ? <a href={href}>{action} <window.Icons.chevronRight size={12} style={{ verticalAlign: '-2px' }} /></a> : null}
@@ -2076,7 +2235,7 @@ function validBrandDirectoryType(value) {
 function VrfBrandLogo({ name, category = '' }) {
   const logo = brandLogoFor(name, category);
   if (logo) return <img src={logo} alt={`${displayBrandName(name)} logo`} />;
-  return <span className="vrf-brand-fallback">{brandInitials(name)}</span>;
+  return null;
 }
 
 const VRF_BRAND_DIRECTORY_TYPES = [
@@ -2134,7 +2293,16 @@ function buildBrandDirectoryCards(vehicles, category) {
 
 function VrfBrandDirectoryCard({ brand }) {
   return (
-    <a href={brand.href} target="_top" className="vrf-directory-card">
+    <a
+      href={brand.href}
+      target="_top"
+      className="vrf-directory-card"
+      aria-label={`Open ${brand.name} brand page`}
+      onClick={(event) => {
+        event.preventDefault();
+        openTopWindowHref(brand.href);
+      }}
+    >
       <span className="vrf-directory-logo"><VrfBrandLogo name={brand.rawName} category={brand.category} /></span>
       <h3>{brand.name}</h3>
       <span className="vrf-directory-count">{brand.modelCount} {brand.modelCount === 1 ? 'Model' : 'Models'}</span>
@@ -2212,7 +2380,16 @@ function VrfAllBrandsDirectory({ vehicles, visible, activeType, setActiveType, o
 
 function VrfBrandRailCard({ brand }) {
   return (
-    <a href={brand.href} target="_top" className="vrf-brand-rail-card">
+    <a
+      href={brand.href}
+      target="_top"
+      className="vrf-brand-rail-card"
+      aria-label={`Open ${brand.name} brand page`}
+      onClick={(event) => {
+        event.preventDefault();
+        openTopWindowHref(brand.href);
+      }}
+    >
       <span className="vrf-brand-rail-logo"><VrfBrandLogo name={brand.rawName} category={brand.category} /></span>
       <span className="vrf-brand-rail-name">{brand.name}</span>
       <span className="vrf-brand-rail-meta">{brand.modelCount} {brand.modelCount === 1 ? 'model' : 'models'}</span>
@@ -2220,16 +2397,26 @@ function VrfBrandRailCard({ brand }) {
   );
 }
 
-function VrfBrandMarquee({ title, label, brands, direction = 'clockwise' }) {
+function VrfBrandMarquee({ title, label, type, brands, direction = 'clockwise' }) {
   if (!brands.length) return null;
   const loopBrands = [...brands, ...brands, ...brands];
+  const directoryHref = `/brands?type=${validBrandDirectoryType(type || brands[0]?.category || '4w')}`;
 
   return (
     <div className="vrf-brand-marquee-row" data-direction={direction}>
-      <div className="vrf-brand-marquee-label">
+      <a
+        href={directoryHref}
+        target="_top"
+        className="vrf-brand-marquee-label"
+        aria-label={`Open ${label} brand directory`}
+        onClick={(event) => {
+          event.preventDefault();
+          openTopWindowHref(directoryHref);
+        }}
+      >
         <span>{title}</span>
         <strong>{label}</strong>
-      </div>
+      </a>
       <div className="vrf-brand-marquee-viewport">
         <div className="vrf-brand-marquee-track">
           {loopBrands.map((brand, index) => (
@@ -2241,7 +2428,7 @@ function VrfBrandMarquee({ title, label, brands, direction = 'clockwise' }) {
   );
 }
 
-function VrfBrandCarouselShowcase({ vehicles, openAllBrands }) {
+function VrfBrandCarouselShowcase({ vehicles }) {
   const brandGroups = React.useMemo(() => {
     const pick = (category, limit) => buildBrandDirectoryCards(vehicles, category).slice(0, limit);
     return {
@@ -2266,15 +2453,15 @@ function VrfBrandCarouselShowcase({ vehicles, openAllBrands }) {
         </div>
         <div className="vrf-brand-actions">
           <span>{totalBrands} live brands</span>
-          <button type="button" className="vrf-link-button" onClick={() => openAllBrands('4w')}>
+          <button type="button" className="vrf-link-button" onClick={() => openTopWindowHref('/brands?type=4w')}>
             View all <window.Icons.chevronRight size={12} style={{ verticalAlign: '-2px' }} />
           </button>
         </div>
       </div>
       <div className="vrf-brand-marquee-stack" aria-label="Featured vehicle brands">
-        <VrfBrandMarquee title="4W" label="Cars" brands={brandGroups['4w']} direction="clockwise" />
-        <VrfBrandMarquee title="3W" label="Autos" brands={brandGroups['3w']} direction="anticlockwise" />
-        <VrfBrandMarquee title="2W" label="Bikes" brands={brandGroups['2w']} direction="clockwise" />
+        <VrfBrandMarquee title="4W" label="Cars" type="4w" brands={brandGroups['4w']} direction="clockwise" />
+        <VrfBrandMarquee title="3W" label="Autos" type="3w" brands={brandGroups['3w']} direction="anticlockwise" />
+        <VrfBrandMarquee title="2W" label="Bikes" type="2w" brands={brandGroups['2w']} direction="clockwise" />
       </div>
     </div>
   );
@@ -2283,112 +2470,97 @@ function VrfBrandCarouselShowcase({ vehicles, openAllBrands }) {
 function VrfHero({
   vehicles,
   heroVehicle,
-  query,
-  setQuery,
-  quickMode,
-  setQuickMode,
-  quickItems,
-  activeQuickValue,
-  applyQuickFilter,
 }) {
-  const tabs = [
-    ['budget', 'By Budget'],
-    ['brand', 'By Brand'],
-    ['body', 'By Body Type'],
-  ];
+  const heroSlides = React.useMemo(() => {
+    const uniqueModels = new Set();
+    const realImageVehicles = vehicles.filter((vehicle) => compactText(vehicle?.image) && !isSharedFallbackVehicleImage(vehicle.image));
+    const source = vehicles
+      .filter((vehicle) => vehicle?.category === '4w' && String(vehicle?.year).includes('2026'))
+      .filter((vehicle) => compactText(vehicle?.image) && !isSharedFallbackVehicleImage(vehicle.image))
+      .filter((vehicle) => {
+        const key = vehicleModelIdentity(vehicle);
+        if (!key || uniqueModels.has(key)) return false;
+        uniqueModels.add(key);
+        return true;
+      });
+    const fallback = realImageVehicles.filter((vehicle) => vehicle?.category === '4w').slice(0, 6);
+    return (source.length ? source : fallback.length ? fallback : [heroVehicle]).filter(Boolean).slice(0, 6);
+  }, [vehicles, heroVehicle]);
+  const [activeSlideIndex, setActiveSlideIndex] = React.useState(0);
+  const activeSlide = heroSlides[activeSlideIndex % Math.max(heroSlides.length, 1)] || heroVehicle;
+  const activeSlideName = activeSlide ? vrfModelLabel(activeSlide) : 'Featured vehicle';
+  const activeSlideImage = vehicleImageOrFallback(activeSlide);
+
+  React.useEffect(() => {
+    setActiveSlideIndex(0);
+  }, [heroSlides]);
+
+  React.useEffect(() => {
+    if (heroSlides.length < 2) return undefined;
+    const timer = window.setInterval(() => {
+      setActiveSlideIndex((current) => (current + 1) % heroSlides.length);
+    }, 3200);
+    return () => window.clearInterval(timer);
+  }, [heroSlides.length]);
 
   return (
     <section className="vrf-hero">
       <div className="vrf-container">
         <div className="vrf-hero-grid">
           <div className="vrf-hero-copy">
-            <span className="vrf-kicker"><window.Icons.spark size={13} /> 2026 New Lineup</span>
+            <span className="vrf-kicker"><window.Icons.spark size={13} /> New and pre-owned marketplace</span>
             <h1>
               <span className="vrf-hero-line">Find your</span>{' '}
-              <span className="vrf-hero-line">brand-new ride</span>{' '}
+              <span className="vrf-hero-line">next ride</span>{' '}
               <span className="vrf-hero-line">with</span>{' '}
-              <span className="vrf-hero-line" style={{ color: 'var(--vrf-brand)' }}>total clarity.</span>
+              <span className="vrf-hero-line" style={{ color: 'var(--bronze-400)' }}>total clarity.</span>
             </h1>
             <p>
               Verified on-road pricing, direct dealer inventory, and zero-hassle discovery on live vehicles from your marketplace database.
             </p>
 
-            <div className="vrf-search-panel">
-              <div className="vrf-tabs">
-                {tabs.map(([id, label]) => (
-                  <button
-                    key={id}
-                    type="button"
-                    className="vrf-tab"
-                    data-active={quickMode === id}
-                    aria-pressed={quickMode === id}
-                    onClick={() => setQuickMode(id)}
-                  >
-                    {label}
-                  </button>
-                ))}
-              </div>
-              <div style={{ padding: 16 }}>
-                <div className="vrf-chip-row">
-                  {quickItems.slice(0, 8).map((item) => (
-                    <button
-                      key={item}
-                      type="button"
-                      className="vrf-chip"
-                      data-active={activeQuickValue === item}
-                      onClick={() => applyQuickFilter(item)}
-                    >
-                      {quickMode === 'brand' ? displayBrandName(item) : item}
-                    </button>
-                  ))}
-                </div>
-                <form
-                  className="vrf-search-row"
-                  role="search"
-                  onSubmit={(event) => {
-                    event.preventDefault();
-                    vrfScrollToListing();
-                  }}
-                >
-                  <input
-                    className="vrf-input"
-                    value={query}
-                    onChange={(event) => setQuery(event.target.value)}
-                    placeholder="Search by brand, model, fuel, body type..."
-                    aria-label="Search first-hand vehicles"
-                    autoComplete="off"
-                    spellCheck={false}
-                  />
-                  <button type="submit" className="vrf-primary">Find Vehicles</button>
-                </form>
-              </div>
-            </div>
-
             <div className="vrf-proof-row">
               <span><window.Icons.check size={16} style={{ color: 'var(--vrf-success)' }} /> Verified on-road pricing</span>
-              <span><window.Icons.brands size={16} style={{ color: 'var(--vrf-brand)' }} /> Dealer-backed inventory</span>
+              <span><window.Icons.brands size={16} style={{ color: 'var(--vrf-warning)' }} /> Dealer-backed inventory</span>
               <span><window.Icons.spark size={16} style={{ color: 'var(--vrf-warning)' }} /> {vehicles.length}+ live offers</span>
             </div>
           </div>
 
           <div className="vrf-hero-media">
-            <div className="vrf-hero-car">
-              <img src={heroVehicle?.image || DSP_FALLBACK_IMAGES.car} alt={heroVehicle ? vrfModelLabel(heroVehicle) : 'Featured new SUV'} />
+            {activeSlideImage ? (
+            <div className="vrf-hero-car" data-carousel="true">
+              <img
+                key={activeSlide?.id || activeSlideName}
+                src={activeSlideImage}
+                alt={activeSlideName}
+                onError={(event) => applyVehicleImageFallback(event, activeSlide)}
+              />
               <div className="vrf-float-pill" style={{ left: 16, top: 16 }}>
-                Featured · {heroVehicle?.year || '2026'}
+                2026 release
+              </div>
+              <div className="vrf-hero-name-card">
+                <span>Now scrolling</span>
+                <strong>{activeSlideName}</strong>
+                <small>{[activeSlide?.fuel, activeSlide?.body].filter(Boolean).join(' · ') || 'Marketplace lineup'}</small>
               </div>
               <div className="vrf-float-pill" style={{ right: 16, bottom: 16, display: 'inline-flex', alignItems: 'center', gap: 8 }}>
                 <window.Icons.gauge size={14} /> 360° View
               </div>
               <div className="vrf-float-card" style={{ left: 16, bottom: 16 }}>
                 <div style={{ color: 'var(--vrf-muted)', fontSize: 10, fontWeight: 950, letterSpacing: '0.08em', textTransform: 'uppercase' }}>EMI from</div>
-                <div style={{ color: 'var(--vrf-success)', fontFamily: 'var(--font-display)', fontSize: 24, fontWeight: 950 }}>{heroVehicle?.emi || 'Ask dealer'}</div>
+                <div style={{ color: 'var(--vrf-success)', fontFamily: 'var(--font-display)', fontSize: 24, fontWeight: 950 }}>{activeSlide?.emi || 'Ask dealer'}</div>
               </div>
               <div className="vrf-float-card" style={{ right: 12, top: 66 }}>
                 <div style={{ color: 'var(--vrf-muted)', fontSize: 10, fontWeight: 950, letterSpacing: '0.08em', textTransform: 'uppercase' }}>On-road</div>
-                <div style={{ fontSize: 16, fontWeight: 950 }}>{heroVehicle?.onRoad || 'Ask dealer'}</div>
+                <div style={{ fontSize: 16, fontWeight: 950 }}>{activeSlide?.onRoad || 'Ask dealer'}</div>
+              </div>
+              <div className="vrf-hero-slide-dots" aria-hidden="true">
+                {heroSlides.map((vehicle, index) => (
+                  <span key={vehicle.id || `${vehicle.brand}-${vehicle.name}`} data-active={index === activeSlideIndex} />
+                ))}
               </div>
             </div>
+            ) : null}
           </div>
         </div>
       </div>
@@ -2396,35 +2568,170 @@ function VrfHero({
   );
 }
 
-function VrfBrowseRails({ vehicles, budgets, bodies, brands, budget, body, brand, setBudget, setBody, selectBrand, openAllBrands }) {
+const VRF_OFFER_THEMES = [
+  {
+    eyebrow: 'Festival offer',
+    title: 'Festival booking bonus',
+    value: 'Extra ₹25,000 benefit',
+    note: 'Priority delivery, accessory support, and dealer-backed quote help.',
+    tone: 'festival',
+  },
+  {
+    eyebrow: 'Exchange',
+    title: 'Exchange upgrade week',
+    value: 'Up to ₹35,000 upgrade value',
+    note: 'Trade in your current vehicle with quick dealer valuation support.',
+    tone: 'exchange',
+  },
+  {
+    eyebrow: 'Finance',
+    title: 'Low EMI start',
+    value: 'EMI from ₹5,250/mo',
+    note: 'Shortlist now and request a custom finance quote from the dealer.',
+    tone: 'finance',
+  },
+  {
+    eyebrow: 'Fast delivery',
+    title: 'Ready stock advantage',
+    value: 'Same-week delivery slots',
+    note: 'Find verified ready-stock vehicles from active marketplace dealers.',
+    tone: 'delivery',
+  },
+  {
+    eyebrow: 'EV offer',
+    title: 'Green drive bonus',
+    value: 'Range-focused savings',
+    note: 'Compare EV running cost, warranty, and finance options in one place.',
+    tone: 'ev',
+  },
+  {
+    eyebrow: 'Business',
+    title: 'Corporate fleet deal',
+    value: 'Bulk enquiry support',
+    note: 'Best for offices, ride-share fleets, and local delivery teams.',
+    tone: 'fleet',
+  },
+];
+
+const VRF_OFFER_FALLBACK_VEHICLES = [
+  { category: '4w', type: 'Cars', brand: 'Mahindra', name: 'XUV 3XO', image: '', fuel: 'Petrol', body: 'SUV' },
+  { category: '4w', type: 'Cars', brand: 'Hyundai', name: 'Creta', image: '', fuel: 'Petrol', body: 'Compact SUV' },
+  { category: '3w', type: 'Autos', brand: 'Altigreen', name: 'neEV Bhai', image: '', fuel: 'Electric', body: 'Cargo Auto' },
+  { category: '4w', type: 'Cars', brand: 'Tata Motors', name: 'Curvv', image: '', fuel: 'Petrol', body: 'Coupe SUV' },
+  { category: '2w', type: 'Bikes', brand: 'Ather', name: 'Rizta', image: '', fuel: 'Electric', body: 'Scooter' },
+  { category: '2w', type: 'Bikes', brand: 'Royal Enfield', name: 'Classic 350', image: '', fuel: 'Petrol', body: 'Motorcycle' },
+];
+
+function vrfOfferVehiclePool(vehicles) {
+  const realImageVehicles = vehicles.filter((vehicle) => compactText(vehicle?.image) && !isSharedFallbackVehicleImage(vehicle.image));
+  const uniqueByBrand = (items) => {
+    const seenBrands = new Set();
+    return items.filter((vehicle) => {
+      const key = canonicalBrandKey(vehicle?.brand) || normalizeBrandKey(vehicle?.name);
+      if (!key || seenBrands.has(key)) return false;
+      seenBrands.add(key);
+      return true;
+    });
+  };
+  const carPool = uniqueByBrand(realImageVehicles.filter((vehicle) => vehicle.category === '4w'));
+  const autoPool = uniqueByBrand(realImageVehicles.filter((vehicle) => vehicle.category === '3w'));
+  const bikePool = uniqueByBrand(realImageVehicles.filter((vehicle) => vehicle.category === '2w'));
+  const evPool = uniqueByBrand(realImageVehicles.filter((vehicle) => (
+    vehicle?.type === 'EVs' || compactText(vehicle?.fuel).toLowerCase().includes('electric')
+  )));
+  const preferred = [
+    carPool[0],
+    carPool[1],
+    autoPool[0] || carPool[2],
+    carPool[2] || autoPool[1],
+    evPool[0] || bikePool[0] || carPool[3],
+    bikePool[0] || autoPool[1] || carPool[4],
+    ...realImageVehicles,
+  ].filter(Boolean);
+  const seen = new Set();
+  return preferred.filter((vehicle) => {
+    const key = `${vehicle?.category || 'vehicle'}-${canonicalBrandKey(vehicle?.brand)}-${normalizeBrandKey(vehicle?.name)}`;
+    if (!key || seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+}
+
+function buildVrfOfferSlides(vehicles) {
+  const pool = vrfOfferVehiclePool(vehicles);
+  if (!pool.length) return [];
+  const source = pool;
+  return VRF_OFFER_THEMES.map((offer, index) => {
+    const vehicle = source[index % Math.max(source.length, 1)] || {};
+    const modelLabel = compactText(vrfModelLabel(vehicle));
+    return {
+      ...offer,
+      id: `${offer.tone}-${index}`,
+      vehicle,
+      vehicleName: modelLabel && !modelLabel.toLowerCase().includes('undefined') ? modelLabel : offer.title,
+    };
+  });
+}
+
+function VrfOffersCarousel({ vehicles, onExplore }) {
+  const offers = React.useMemo(() => buildVrfOfferSlides(vehicles), [vehicles]);
+  const loopedOffers = React.useMemo(() => [...offers, ...offers], [offers]);
+  if (!offers.length) return null;
+
+  return (
+    <section id="offers" className="vrf-offer-carousel" aria-label="Latest dealer offers">
+      <div className="vrf-offer-head">
+        <div>
+          <div className="vrf-offer-kicker"><window.Icons.spark size={13} /> Latest offers</div>
+          <h2>Festival deals, exchange bonuses, and finance picks.</h2>
+        </div>
+        <button type="button" className="vrf-link-button" onClick={onExplore}>
+          View all <window.Icons.chevronRight size={12} style={{ verticalAlign: '-2px' }} />
+        </button>
+      </div>
+
+      <div className="vrf-offer-marquee" aria-live="off">
+        <div className="vrf-offer-track">
+          {loopedOffers.map((offer, index) => {
+            const imageSrc = vehicleImageOrFallback(offer.vehicle);
+            if (!imageSrc) return null;
+            return (
+            <article
+              key={`${offer.id}-${index}`}
+              className="vrf-offer-card"
+              data-tone={offer.tone}
+              data-vehicle-card="true"
+              data-model-image-source={vehicleCardImageSourceKind(imageSrc)}
+            >
+              <div className="vrf-offer-media">
+                <img src={imageSrc} alt={offer.vehicleName} onError={(event) => applyVehicleImageFallback(event, offer.vehicle)} />
+                <span>{offer.eyebrow}</span>
+              </div>
+              <div className="vrf-offer-body">
+                <div className="vrf-offer-brand">{displayBrandName(offer.vehicle?.brand || 'DealerSite')}</div>
+                <h3>{offer.title}</h3>
+                <strong>{offer.value}</strong>
+                <p>{offer.note}</p>
+                <button type="button" onClick={onExplore}>
+                  Explore offer <window.Icons.arrowRight size={13} />
+                </button>
+              </div>
+            </article>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function VrfBrowseRails({ vehicles, budgets, bodies, brands, budget, body, brand, setBudget, setBody, selectBrand }) {
   return (
     <section className="vrf-section">
       <div className="vrf-container vrf-rail-stack">
-        <div id="budget">
-          <VrfSectionHead title="Browse by Budget" />
-          <div className="vrf-budget-grid">
-            {budgets.slice(0, 6).map((item) => (
-              <button key={item} type="button" className="vrf-rail-card" data-active={budget === item} onClick={() => { setBudget(item); vrfScrollToListing(); }}>
-                <div className="vrf-rail-label">Budget</div>
-                <div className="vrf-rail-value">{item}</div>
-              </button>
-            ))}
-          </div>
-        </div>
+        <VrfOffersCarousel vehicles={vehicles} onExplore={vrfScrollToListing} />
 
-        <div id="body">
-          <VrfSectionHead title="Browse by Body Type" />
-          <div className="vrf-body-grid">
-            {bodies.slice(0, 7).map((item) => (
-              <button key={item} type="button" className="vrf-rail-card" data-active={body === item} onClick={() => { setBody(item); vrfScrollToListing(); }} style={{ textAlign: 'center' }}>
-                <window.Icons.car size={30} style={{ color: body === item ? 'var(--vrf-brand)' : 'var(--vrf-muted)' }} />
-                <div className="vrf-rail-value" style={{ fontSize: 13 }}>{item}</div>
-              </button>
-            ))}
-          </div>
-        </div>
-
-        <VrfBrandCarouselShowcase vehicles={vehicles} openAllBrands={openAllBrands} />
+        <VrfBrandCarouselShowcase vehicles={vehicles} />
       </div>
     </section>
   );
@@ -2457,6 +2764,34 @@ function VrfFilterGroup({ title, children }) {
   );
 }
 
+function VrfConditionToggle({ condition, setCondition }) {
+  const options = [
+    { label: 'All', value: 'All' },
+    { label: 'New', value: 'New' },
+    { label: 'Used', value: 'Used' },
+  ];
+
+  return (
+    <div className="vrf-condition-toggle" role="group" aria-label="New or used vehicle filter">
+      {options.map((option) => {
+        const active = condition === option.value;
+        return (
+          <button
+            key={option.value}
+            type="button"
+            className="vrf-condition-toggle-option"
+            data-active={active}
+            aria-pressed={active}
+            onClick={() => setCondition(option.value)}
+          >
+            {option.label}
+          </button>
+        );
+      })}
+    </div>
+  );
+}
+
 function VrfFilterRail({
   vehicles,
   budgets,
@@ -2465,18 +2800,21 @@ function VrfFilterRail({
   fuels,
   transmissions,
   seatsList,
+  conditions,
   budget,
   brand,
   body,
   fuel,
   transmission,
   seats,
+  condition,
   setBudget,
   selectBrand,
   setBody,
   setFuel,
   setTransmission,
   setSeats,
+  setCondition,
   vehicleCategoryFilter,
   setVehicleCategoryFilter,
   clearFilters,
@@ -2516,6 +2854,9 @@ function VrfFilterRail({
     .map((item) => ({ item, count: vrfUniqueCount(scopedVehicles, (vehicle) => compactText(vehicle.seats) === item) }))
     .filter((option) => option.count > 0)
     .slice(0, 8);
+  const conditionOptions = conditions
+    .map((item) => ({ item, count: vrfUniqueCount(scopedVehicles, (vehicle) => conditionMatchesVehicle(vehicle, item)) }))
+    .filter((option) => option.count > 0);
   const selectCategory = (value) => {
     setVehicleCategoryFilter(vehicleCategoryFilter === value ? 'all' : value);
     selectBrand('All', { preserveCategory: true });
@@ -2553,6 +2894,16 @@ function VrfFilterRail({
           );
         })}
       </div>
+
+      <VrfFilterGroup title="Condition">
+        <div className="vrf-filter-options">
+          {conditionOptions.map(({ item, count }) => (
+            <VrfChipButton key={item} active={condition === item} count={count} onClick={() => setCondition(condition === item ? 'All' : item)}>
+              {item}
+            </VrfChipButton>
+          ))}
+        </div>
+      </VrfFilterGroup>
 
       <VrfFilterGroup title="Price">
         <div className="vrf-filter-options">
@@ -2618,7 +2969,12 @@ function VrfFilterRail({
 
 function VrfVehicleCard({ vehicle, compared, saved, onCompareToggle, onSaveToggle, onEnquire }) {
   const [menuOpen, setMenuOpen] = React.useState(false);
+  const imageSrc = vehicleImageOrFallback(vehicle);
   const modelLabel = vrfModelLabel(vehicle);
+  const imageSourceKind = vehicleCardImageSourceKind(imageSrc);
+  const brandLogo = brandLogoFor(vehicle.brand, vehicle.category);
+  const isNewListing = conditionLabelFromDisplay(vehicle.condition || vehicle.badge) === 'New';
+  const priceCaption = isNewListing ? 'Ex-showroom price*' : 'Dealer listing price';
   const specs = [
     { label: 'Fuel', value: vehicle.fuel, icon: 'fuel', tone: 'green' },
     { label: 'Trans', value: vehicle.transmission, icon: 'gauge', tone: 'blue' },
@@ -2626,19 +2982,16 @@ function VrfVehicleCard({ vehicle, compared, saved, onCompareToggle, onSaveToggl
     { label: vehicle.mileageLabel || (vehicle.km === 'Ready stock' ? 'Status' : 'Mileage'), value: vehicle.km, icon: 'ev', tone: 'orange' },
   ];
 
+  if (!imageSrc) return null;
+
   return (
-    <article className="vrf-vehicle-card">
+    <article className="vrf-vehicle-card" data-model-image-source={imageSourceKind}>
       <div className="vrf-card-media">
         <img
-          src={vehicle.image || fallbackImageForExplorerVehicle(vehicle)}
-          alt={vrfModelLabel(vehicle)}
+          src={imageSrc}
+          alt={modelLabel}
           loading="lazy"
-          onError={(event) => {
-            const image = event.currentTarget;
-            if (image.dataset.fallbackApplied === 'true') return;
-            image.dataset.fallbackApplied = 'true';
-            image.src = fallbackImageForExplorerVehicle(vehicle);
-          }}
+          onError={(event) => applyVehicleImageFallback(event, vehicle)}
         />
         <span className="vrf-badge" data-tone={vrfBadgeTone(vehicle)}>{vehicle.badge}</span>
         {vehicle.offer ? <span className="vrf-badge vrf-offer-badge" data-tone="warning">{vehicle.offer}</span> : null}
@@ -2646,7 +2999,7 @@ function VrfVehicleCard({ vehicle, compared, saved, onCompareToggle, onSaveToggl
 
       <div className="vrf-card-body">
         <div className="vrf-card-brand-row">
-          <span className="vrf-card-brand-logo"><VrfBrandLogo name={vehicle.brand} category={vehicle.category} /></span>
+          {brandLogo ? <span className="vrf-card-brand-logo"><VrfBrandLogo name={vehicle.brand} category={vehicle.category} /></span> : null}
           <span className="vrf-card-brand">{displayBrandName(vehicle.brand)}</span>
         </div>
         <h3 className="vrf-card-title">
@@ -2661,7 +3014,7 @@ function VrfVehicleCard({ vehicle, compared, saved, onCompareToggle, onSaveToggl
             {vehicle.price}
             <small> onwards</small>
           </div>
-          <div className="vrf-price-caption">Ex-showroom price*</div>
+          <div className="vrf-price-caption">{priceCaption}</div>
           <div className="vrf-emi-pill">
             <window.Icons.arrowUpRight size={14} /> EMI {vehicle.emi}
           </div>
@@ -2764,12 +3117,14 @@ function VrfListing(props) {
     fuel,
     transmission,
     seats,
+    condition,
     setBudget,
     selectBrand,
     setBody,
     setFuel,
     setTransmission,
     setSeats,
+    setCondition,
   } = props;
 
   const activeFilterItems = [
@@ -2797,12 +3152,18 @@ function VrfListing(props) {
     seats && seats !== 'All'
       ? { key: 'seats', label: `${seats} seats`, clear: () => setSeats('All') }
       : null,
+    condition && condition !== 'All'
+      ? { key: 'condition', label: condition, clear: () => setCondition('All') }
+      : null,
   ].filter(Boolean);
   const listingCountLabel = loadingVehicles && vehicles.length === 0
-    ? 'Loading new vehicles'
-    : `${filtered.length} new vehicles`;
+    ? 'Loading vehicles'
+    : `${filtered.length} vehicles`;
   const visibleCity = city && normalizeBrandKey(city) !== 'india' ? city : '';
   const searchNeedle = query.trim().toLowerCase();
+  const preOwnedVehicles = condition === 'All'
+    ? filtered.filter(isPreOwnedVehicle).slice(0, 6)
+    : [];
   const searchSuggestions = searchNeedle.length >= 1
     ? vehicles
         .filter((vehicle) => vehicleSearchText(vehicle).includes(searchNeedle))
@@ -2821,7 +3182,7 @@ function VrfListing(props) {
     <section id="listing" className="vrf-section vrf-listing">
       <div className="vrf-container">
         <div style={{ marginBottom: 32 }}>
-          <h2 style={{ margin: 0, fontFamily: 'var(--font-display)', fontSize: 'clamp(2rem, 4vw, 3.1rem)', lineHeight: 1, fontWeight: 950 }}>All new vehicles</h2>
+          <h2 style={{ margin: 0, fontFamily: 'var(--font-display)', fontSize: 'clamp(2rem, 4vw, 3.1rem)', lineHeight: 1, fontWeight: 950 }}>All vehicles</h2>
           <p style={{ margin: '8px 0 0', color: 'var(--vrf-muted)', fontSize: 14, fontWeight: 750 }}>{listingMessage}</p>
         </div>
 
@@ -2833,9 +3194,10 @@ function VrfListing(props) {
               <div>
                 <span style={{ fontSize: 14, fontWeight: 950 }}>{listingCountLabel}</span>
                 {visibleCity ? <span style={{ marginLeft: 8, color: 'var(--vrf-muted)', fontSize: 12, fontWeight: 750 }}> in {visibleCity}</span> : null}
-              </div>
-              <div className="vrf-toolbar-actions">
-                <div className="vrf-search-suggest">
+	              </div>
+	              <div className="vrf-toolbar-actions">
+	                <VrfConditionToggle condition={condition} setCondition={setCondition} />
+	                <div className="vrf-search-suggest">
                   <input
                     className="vrf-input"
                     style={{ minHeight: 36, width: 240 }}
@@ -2858,7 +3220,7 @@ function VrfListing(props) {
                             setVehicleCategoryFilter(vehicle.category || 'all');
                           }}
                         >
-                          <img src={vehicle.image || fallbackImageForExplorerVehicle(vehicle)} alt="" onError={(event) => { event.currentTarget.src = fallbackImageForExplorerVehicle(vehicle); }} />
+                          <img src={vehicleImageOrFallback(vehicle)} alt="" onError={(event) => applyVehicleImageFallback(event, vehicle)} />
                           <span>
                             <strong>{vehicle.name}</strong>
                             <small>{displayBrandName(vehicle.brand)} · {vehicle.variant}</small>
@@ -2897,6 +3259,42 @@ function VrfListing(props) {
                 <button type="button" className="vrf-link-button" aria-label="Clear active vehicle filters" onClick={clearFilters}>Clear all</button>
               ) : null}
             </div>
+
+            {preOwnedVehicles.length > 0 ? (
+              <section style={{ margin: '0 0 22px', border: '1px solid rgb(15 23 42 / 0.10)', borderRadius: 22, background: 'linear-gradient(135deg, rgb(255 255 255 / 0.94), rgb(245 241 234 / 0.84))', padding: 18 }}>
+                <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', gap: 14, flexWrap: 'wrap', marginBottom: 16 }}>
+                  <div>
+                    <p style={{ margin: 0, color: 'var(--vrf-accent)', fontSize: 11, fontWeight: 950, letterSpacing: '0.12em', textTransform: 'uppercase' }}>Second-hand dealer stock</p>
+                    <h3 style={{ margin: '5px 0 0', fontFamily: 'var(--font-display)', fontSize: 'clamp(1.35rem, 2.4vw, 2rem)', lineHeight: 1, fontWeight: 950 }}>Pre-owned vehicles available now</h3>
+                    <p style={{ margin: '7px 0 0', color: 'var(--vrf-muted)', fontSize: 13, fontWeight: 750 }}>Listings from used and hybrid dealers, using the same live filters below.</p>
+                  </div>
+                  <button
+                    type="button"
+                    className="vrf-secondary"
+                    style={{ minHeight: 42, padding: '0 18px' }}
+                    onClick={() => {
+                      setCondition('Used');
+                      setVisibleCount(12);
+                    }}
+                  >
+                    View all used
+                  </button>
+                </div>
+                <div className="vrf-card-grid" data-view="grid">
+                  {preOwnedVehicles.map((vehicle) => (
+                    <VrfVehicleCard
+                      key={`pre-owned-${vehicle.id}`}
+                      vehicle={vehicle}
+                      compared={compareIds.includes(vehicle.id)}
+                      saved={savedIds.includes(vehicle.id)}
+                      onCompareToggle={toggleCompare}
+                      onSaveToggle={toggleSave}
+                      onEnquire={handleEnquire}
+                    />
+                  ))}
+                </div>
+              </section>
+            ) : null}
 
             {filtered.length > 0 ? (
               <div className="vrf-card-grid" data-view={viewMode}>
@@ -2939,14 +3337,9 @@ function VrfCompareTray({ vehicles, onRemove, onClear, onCompare }) {
         {vehicles.map((vehicle) => (
           <div key={vehicle.id} className="vrf-compare-thumb">
             <img
-              src={vehicle.image || fallbackImageForExplorerVehicle(vehicle)}
+              src={vehicleImageOrFallback(vehicle)}
               alt={vehicle.name}
-              onError={(event) => {
-                const image = event.currentTarget;
-                if (image.dataset.fallbackApplied === 'true') return;
-                image.dataset.fallbackApplied = 'true';
-                image.src = fallbackImageForExplorerVehicle(vehicle);
-              }}
+              onError={(event) => applyVehicleImageFallback(event, vehicle)}
             />
             <button type="button" aria-label={`Remove ${vehicle.name}`} onClick={() => onRemove(vehicle.id)} className="vrf-compare-thumb-remove">×</button>
           </div>
@@ -3006,7 +3399,7 @@ function VrfComparePanel({ vehicles, visible, onRemove, onClose, onEnquire }) {
             <div>
               <div style={{ color: 'var(--bronze-400)', fontSize: 11, fontWeight: 950, letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: 6 }}>Side-by-side</div>
               <h2 id="vrf-compare-title">Compare selected vehicles</h2>
-              <p>Review the first-hand models you selected before opening a detail page or requesting price.</p>
+              <p>Review the marketplace listings you selected before opening a detail page or requesting price.</p>
             </div>
             <button type="button" className="vrf-secondary" onClick={onClose}>Hide comparison</button>
           </div>
@@ -3017,14 +3410,9 @@ function VrfComparePanel({ vehicles, visible, onRemove, onClose, onEnquire }) {
               <div key={vehicle.id} className="vrf-compare-model-cell">
                 <button type="button" aria-label={`Remove ${vehicle.name}`} onClick={() => onRemove(vehicle.id)} className="vrf-compare-remove">×</button>
                 <img
-                  src={vehicle.image || fallbackImageForExplorerVehicle(vehicle)}
+                  src={vehicleImageOrFallback(vehicle)}
                   alt={vrfModelLabel(vehicle)}
-                  onError={(event) => {
-                    const image = event.currentTarget;
-                    if (image.dataset.fallbackApplied === 'true') return;
-                    image.dataset.fallbackApplied = 'true';
-                    image.src = fallbackImageForExplorerVehicle(vehicle);
-                  }}
+                  onError={(event) => applyVehicleImageFallback(event, vehicle)}
                 />
                 <div className="vrf-card-brand">{displayBrandName(vehicle.brand)}</div>
                 <h3>{vehicle.name}</h3>
@@ -3073,7 +3461,11 @@ function VrfLaunches({ vehicles, onNotify }) {
             {source.map((vehicle) => (
               <div key={vehicle.id} className="vrf-launch-card">
                 <div className="vrf-launch-media">
-                  <img src={vehicle.image} alt={vehicle.name} />
+                  <img
+                    src={vehicleImageOrFallback(vehicle)}
+                    alt={vehicle.name}
+                    onError={(event) => applyVehicleImageFallback(event, vehicle)}
+                  />
                   <span className="vrf-badge" data-tone="warning" style={{ position: 'absolute', left: 12, top: 12 }}>Just launched</span>
                 </div>
                 <div style={{ padding: 16 }}>
@@ -3128,7 +3520,11 @@ function VrfEVZone({ vehicle, evCount, onExplore }) {
               <button type="button" className="vrf-primary" style={{ marginTop: 28, background: 'var(--vrf-success)' }} onClick={onExplore}>Explore all EVs <window.Icons.arrowRight size={15} style={{ verticalAlign: '-2px' }} /></button>
             </div>
             <div className="vrf-hero-car">
-              <img src={vehicle.image} alt={vrfModelLabel(vehicle)} />
+              <img
+                src={vehicleImageOrFallback(vehicle)}
+                alt={vrfModelLabel(vehicle)}
+                onError={(event) => applyVehicleImageFallback(event, vehicle)}
+              />
             </div>
           </div>
         </div>
@@ -3163,16 +3559,16 @@ function VrfEmiCalculator({ vehicle, onEligibility }) {
       <div className="vrf-container">
         <div className="vrf-emi-panel">
           <div className="vrf-emi-left">
-            <span className="vrf-card-brand" style={{ color: 'var(--vrf-brand)' }}>EMI Calculator</span>
+            <span className="vrf-card-brand" style={{ color: 'var(--vrf-brand-text)' }}>EMI Calculator</span>
             <h2 style={{ margin: '8px 0 0', fontFamily: 'var(--font-display)', fontSize: 'clamp(2rem, 4vw, 2.6rem)', lineHeight: 1.08, fontWeight: 950 }}>Plan your finance with confidence.</h2>
             <p style={{ color: 'var(--vrf-muted)', fontSize: 14, fontWeight: 700 }}>Adjust price, down payment, tenure, and interest rate to fit your budget.</p>
 
             <div className="vrf-range-row">
-              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 14, fontWeight: 850 }}><span>Vehicle price</span><strong style={{ color: 'var(--vrf-brand)' }}>{format(price)}</strong></div>
+              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 14, fontWeight: 850 }}><span>Vehicle price</span><strong style={{ color: 'var(--vrf-brand-text)' }}>{format(price)}</strong></div>
               <input type="range" min="400000" max="5000000" step="50000" value={price} onChange={(event) => setPrice(Number(event.target.value))} />
             </div>
             <div className="vrf-range-row">
-              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 14, fontWeight: 850 }}><span>Down payment</span><strong style={{ color: 'var(--vrf-brand)' }}>{format(Math.min(down, Math.floor(price / 2)))}</strong></div>
+              <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 14, fontWeight: 850 }}><span>Down payment</span><strong style={{ color: 'var(--vrf-brand-text)' }}>{format(Math.min(down, Math.floor(price / 2)))}</strong></div>
               <input type="range" min="0" max={Math.floor(price / 2)} step="10000" value={Math.min(down, Math.floor(price / 2))} onChange={(event) => setDown(Number(event.target.value))} />
             </div>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24, marginTop: 28 }}>
@@ -3191,15 +3587,15 @@ function VrfEmiCalculator({ vehicle, onEligibility }) {
 
           <div className="vrf-emi-result">
             <div>
-              <span style={{ color: 'rgb(248 250 252 / 0.62)', fontSize: 12, fontWeight: 950, letterSpacing: '0.1em', textTransform: 'uppercase' }}>Estimated EMI</span>
-              <div style={{ marginTop: 8, fontFamily: 'var(--font-display)', fontSize: 'clamp(2.8rem, 5vw, 4rem)', lineHeight: 1, fontWeight: 950 }}>{format(result.emi)}<span style={{ color: 'rgb(248 250 252 / 0.5)', fontSize: 20 }}>/mo</span></div>
+              <span className="vrf-emi-result-label" style={{ color: 'rgb(255 253 247 / 0.8)' }}>Estimated EMI</span>
+              <div className="vrf-emi-result-amount" style={{ color: '#fffdf7', textShadow: '0 1px 18px rgb(255 253 247 / 0.16)' }}>{format(result.emi)}<small style={{ color: 'rgb(255 253 247 / 0.74)' }}>/mo</small></div>
             </div>
-            <div style={{ borderTop: '1px solid rgb(248 250 252 / 0.12)', borderBottom: '1px solid rgb(248 250 252 / 0.12)', padding: '22px 0', display: 'grid', gap: 12, fontSize: 14 }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}><span style={{ color: 'rgb(248 250 252 / 0.62)' }}>Principal</span><strong>{format(result.principal)}</strong></div>
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}><span style={{ color: 'rgb(248 250 252 / 0.62)' }}>Total interest</span><strong>{format(result.interest)}</strong></div>
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}><span style={{ color: 'rgb(248 250 252 / 0.62)' }}>Total payable</span><strong>{format(result.total)}</strong></div>
+            <div className="vrf-emi-breakdown">
+              <div className="vrf-emi-breakdown-row" style={{ color: 'rgb(255 253 247 / 0.76)' }}><span>Principal</span><strong style={{ color: '#fffdf7' }}>{format(result.principal)}</strong></div>
+              <div className="vrf-emi-breakdown-row" style={{ color: 'rgb(255 253 247 / 0.76)' }}><span>Total interest</span><strong style={{ color: '#fffdf7' }}>{format(result.interest)}</strong></div>
+              <div className="vrf-emi-breakdown-row" style={{ color: 'rgb(255 253 247 / 0.76)' }}><span>Total payable</span><strong style={{ color: '#fffdf7' }}>{format(result.total)}</strong></div>
             </div>
-            <button type="button" className="vrf-primary" style={{ background: 'var(--vrf-bg)', color: 'var(--vrf-foreground)' }} onClick={() => onEligibility(vehicle, result)}>Check eligibility <window.Icons.arrowRight size={14} style={{ verticalAlign: '-2px' }} /></button>
+            <button type="button" className="vrf-primary" style={{ background: '#fffdf7', color: '#0b0e12' }} onClick={() => onEligibility(vehicle, result)}>Check eligibility <window.Icons.arrowRight size={14} style={{ verticalAlign: '-2px' }} /></button>
           </div>
         </div>
       </div>
@@ -3220,7 +3616,7 @@ function VrfTrustBand() {
     <section className="vrf-section vrf-trust">
       <div className="vrf-container">
         <div style={{ maxWidth: 680, marginBottom: 34 }}>
-          <span className="vrf-card-brand" style={{ color: 'var(--vrf-brand)' }}>Why DealerSite Market</span>
+          <span className="vrf-card-brand" style={{ color: 'var(--vrf-brand-text)' }}>Why DealerSite Market</span>
           <h2 style={{ margin: '8px 0 0', fontFamily: 'var(--font-display)', fontSize: 'clamp(2rem, 4vw, 2.6rem)', lineHeight: 1.08, fontWeight: 950 }}>Built for first-time clarity.</h2>
         </div>
         <div className="vrf-trust-grid">
@@ -3250,7 +3646,7 @@ function VrfDealerLocator({ dealers, city, onDealerAction }) {
   const visibleDealers = dealers.slice(0, 4);
 
   return (
-    <section id="dealers" className="vrf-section">
+    <section id="dealers" className="vrf-section" style={{ background: '#F5F1EA', color: '#0B0E12' }}>
       <div className="vrf-container">
         <VrfSectionHead title="Find an authorized dealer near you." kicker="Visit in person" action="" />
         <div className="vrf-dealer-grid">
@@ -3261,7 +3657,7 @@ function VrfDealerLocator({ dealers, city, onDealerAction }) {
             <span style={{ position: 'absolute', left: 16, bottom: 16, borderRadius: 8, background: 'rgb(255 255 255 / 0.82)', padding: '7px 10px', fontSize: 11, fontWeight: 950 }}>{city} · {dealers.length || 1} dealers</span>
           </div>
           <div className="vrf-dealer-list">
-            {(visibleDealers.length ? visibleDealers : [{ name: 'DealerSite partner', location: city, brands: 'Multi-brand', image: DSP_FALLBACK_IMAGES.car }]).map((dealer, index) => (
+            {(visibleDealers.length ? visibleDealers : [{ name: 'DealerSite partner', location: city, brands: 'Multi-brand', image: '' }]).map((dealer, index) => (
               <div key={`${dealer.name}-${index}`} className="vrf-dealer-row">
                 <div className="vrf-icon-tile"><window.Icons.mapPin size={17} /></div>
                 <div style={{ minWidth: 0, flex: 1 }}>
@@ -3286,28 +3682,28 @@ function VrfFooter({ onJoin, onFooterLink }) {
   const [email, setEmail] = React.useState('');
   const columns = [
     ['Browse', [
-      ['By Budget', 'budget'],
-      ['By Brand', 'brands'],
-      ['By Body Type', 'body'],
-      ['EV Zone', 'ev'],
-      ['Upcoming', 'launches'],
+      ['By Budget', '/budget'],
+      ['By Brand', '/brands'],
+      ['By Body Type', '/body-type'],
+      ['EV Zone', '/ev'],
+      ['Upcoming', '/upcoming'],
     ]],
     ['Tools', [
-      ['EMI Calculator', 'finance'],
-      ['Compare Vehicles', 'listing'],
-      ['On-Road Price', 'listing'],
-      ['Dealer Locator', 'dealers'],
+      ['EMI Calculator', '/tools/emi-calculator'],
+      ['Compare Vehicles', '/compare'],
+      ['On-Road Price', '/tools/on-road-price'],
+      ['Dealer Locator', '/dealers'],
     ]],
     ['Company', [
-      ['About', 'market-top'],
-      ['Careers', 'mailto:careers@dealersitepro.com?subject=DealerSite%20Pro%20careers'],
-      ['Press', 'mailto:press@dealersitepro.com?subject=DealerSite%20Pro%20press'],
-      ['Contact', 'mailto:sales@dealersitepro.com?subject=DealerSite%20Market%20contact'],
+      ['About', '/about'],
+      ['Careers', '/careers'],
+      ['Press', '/press'],
+      ['Contact', '/contact'],
     ]],
     ['Legal', [
       ['Privacy', '/privacy'],
       ['Terms', '/terms'],
-      ['Disclaimer', '/terms'],
+      ['Disclaimer', '/disclaimer'],
       ['Sitemap', '/sitemap.xml'],
     ]],
   ];
@@ -3317,7 +3713,7 @@ function VrfFooter({ onJoin, onFooterLink }) {
       <div className="vrf-container">
         <div className="vrf-footer-grid">
           <div>
-            <div style={{ fontFamily: 'var(--font-display)', fontSize: 22, fontWeight: 950 }}>DealerSite Market</div>
+            <div style={{ fontFamily: 'var(--font-display)', fontSize: 22, fontWeight: 950, color: '#F5F1EA' }}>DealerSite Market</div>
             <p style={{ maxWidth: 380, color: 'rgb(248 250 252 / 0.62)', fontSize: 14, lineHeight: 1.65, fontWeight: 650 }}>
               A marketplace-style discovery layer for dealer websites, powered by live database inventory.
             </p>
@@ -3363,7 +3759,7 @@ function RideFinderVehicleExplorer({ setMode }) {
   const [dbVehicles, setDbVehicles] = React.useState([]);
   const [loadingVehicles, setLoadingVehicles] = React.useState(true);
   const [inventoryMessage, setInventoryMessage] = React.useState('Loading live inventory from the database.');
-  const [query, setQuery] = React.useState('');
+  const [query, setQuery] = React.useState(initialVehicleSearchQuery);
   const [quickMode, setQuickMode] = React.useState('budget');
   const [budget, setBudget] = React.useState('All');
   const [brand, setBrand] = React.useState('All');
@@ -3371,6 +3767,7 @@ function RideFinderVehicleExplorer({ setMode }) {
   const [fuel, setFuel] = React.useState('All');
   const [transmission, setTransmission] = React.useState('All');
   const [seats, setSeats] = React.useState('All');
+  const [condition, setCondition] = React.useState(initialMarketplaceConditionFilter);
   const [vehicleCategoryFilter, setVehicleCategoryFilter] = React.useState(initialVehicleCategoryFilter);
   const [sort, setSort] = React.useState('popular');
   const [viewMode, setViewMode] = React.useState('grid');
@@ -3387,25 +3784,25 @@ function RideFinderVehicleExplorer({ setMode }) {
 
     async function loadVehicles() {
       try {
-        const payload = await fetchAllFirstHandVehicles();
+        const payload = await fetchAllMarketplaceVehicles();
         const rows = Array.isArray(payload.rows) ? payload.rows : [];
         const mapped = rows
-          .filter((row) => conditionLabel(row.condition) === 'New')
           .map(mapDbVehicleToExplorer)
           .filter(Boolean);
 
         if (!active) return;
         if (mapped.length > 0) {
           setDbVehicles(mapped);
-          setInventoryMessage(`Showing ${payload.total || mapped.length} first-hand DB vehicles from your marketplace inventory.`);
+          const breakdown = vehicleConditionBreakdownLabel(mapped);
+          setInventoryMessage(`Showing ${payload.total || mapped.length} live marketplace vehicles${breakdown ? ` (${breakdown})` : ''} including second-hand dealer and hybrid dealer stock.`);
         } else {
           setDbVehicles([]);
-          setInventoryMessage('No first-hand DB vehicles returned yet. Add new vehicles to the database to show model cards.');
+          setInventoryMessage('No marketplace vehicles returned yet. Add new or second-hand vehicles to the database to show model cards.');
         }
       } catch (error) {
         if (active) {
           setDbVehicles([]);
-          setInventoryMessage('First-hand DB inventory could not load. Model cards are hidden until the database responds.');
+          setInventoryMessage('Marketplace inventory could not load. Model cards are hidden until the database responds.');
         }
       } finally {
         if (active) setLoadingVehicles(false);
@@ -3423,12 +3820,13 @@ function RideFinderVehicleExplorer({ setMode }) {
   const fuelOptions = React.useMemo(() => uniqueVehicleValues(vehicles, 'fuel', ['Petrol', 'Diesel', 'CNG', 'Electric', 'Hybrid']), [vehicles]);
   const transmissionOptions = React.useMemo(() => uniqueVehicleValues(vehicles, 'transmission', ['Manual', 'Automatic', 'AMT', 'CVT', 'DCT']), [vehicles]);
   const seatOptions = React.useMemo(() => uniqueValues(vehicles.map((vehicle) => compactText(vehicle.seats)), ['5', '7']).slice(0, 8), [vehicles]);
+  const conditionOptions = React.useMemo(() => uniqueValues(vehicles.map((vehicle) => vehicle.condition), ['Used', 'Certified', 'New']), [vehicles]);
   const city = locationCity(vehicles[0]?.location);
   const dealers = React.useMemo(() => uniqueDealerCards(vehicles), [vehicles]);
 
   React.useEffect(() => {
     setVisibleCount(12);
-  }, [query, budget, brand, body, fuel, transmission, seats, vehicleCategoryFilter, sort, dbVehicles.length]);
+  }, [query, budget, brand, body, fuel, transmission, seats, condition, vehicleCategoryFilter, sort, dbVehicles.length]);
 
   const filters = [
     vehicleCategoryFilter !== 'all' ? categoryFilterLabel(vehicleCategoryFilter) : null,
@@ -3439,6 +3837,7 @@ function RideFinderVehicleExplorer({ setMode }) {
     fuel !== 'All' ? fuel : null,
     transmission !== 'All' ? transmission : null,
     seats !== 'All' ? `${seats} seats` : null,
+    condition !== 'All' ? condition : null,
   ].filter(Boolean);
 
   const filterVehicleList = (sourceVehicles) => sourceVehicles.filter((vehicle) => {
@@ -3450,7 +3849,8 @@ function RideFinderVehicleExplorer({ setMode }) {
       && (body === 'All' || vehicle.body === body)
       && textOptionMatches(vehicle.fuel, fuel)
       && textOptionMatches(vehicle.transmission, transmission)
-      && (seats === 'All' || compactText(vehicle.seats) === seats);
+      && (seats === 'All' || compactText(vehicle.seats) === seats)
+      && conditionMatchesVehicle(vehicle, condition);
   });
 
   let filtered = filterVehicleList(vehicles);
@@ -3459,11 +3859,17 @@ function RideFinderVehicleExplorer({ setMode }) {
     if (sort === 'low') return price(a) - price(b);
     if (sort === 'high') return price(b) - price(a);
     if (sort === 'emi') return (a.emiValue || 0) - (b.emiValue || 0);
+    if (condition === 'All') {
+      const conditionRank = preOwnedSortRank(a) - preOwnedSortRank(b);
+      if (conditionRank !== 0) return conditionRank;
+    }
     return a.name.localeCompare(b.name);
   });
 
   const heroVehicle = React.useMemo(() => {
-    return [...vehicles].sort((a, b) => vrfPriceNumber(b) - vrfPriceNumber(a))[0] || null;
+    return [...vehicles]
+      .filter((vehicle) => compactText(vehicle?.image) && !isSharedFallbackVehicleImage(vehicle.image))
+      .sort((a, b) => vrfPriceNumber(b) - vrfPriceNumber(a))[0] || null;
   }, [vehicles]);
   const evVehicles = vehicles.filter((vehicle) => vehicle.type === 'EVs' || vehicle.fuel.toLowerCase().includes('electric'));
   const evVehicle = evVehicles[0] || null;
@@ -3483,6 +3889,7 @@ function RideFinderVehicleExplorer({ setMode }) {
     setFuel('All');
     setTransmission('All');
     setSeats('All');
+    setCondition('All');
     if (!options.preserveCategory) setVehicleCategoryFilter('all');
     setQuery('');
   };
@@ -3494,6 +3901,7 @@ function RideFinderVehicleExplorer({ setMode }) {
     setFuel('All');
     setTransmission('All');
     setSeats('All');
+    setCondition('All');
     setVehicleCategoryFilter('all');
     setQuery('');
   };
@@ -3705,18 +4113,21 @@ function RideFinderVehicleExplorer({ setMode }) {
     fuels: fuelOptions,
     transmissions: transmissionOptions,
     seatsList: seatOptions,
+    conditions: conditionOptions,
     budget,
     brand,
     body,
     fuel,
     transmission,
     seats,
+    condition,
     setBudget,
     selectBrand,
     setBody,
     setFuel,
     setTransmission,
     setSeats,
+    setCondition,
   };
 
   return (

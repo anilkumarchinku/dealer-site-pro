@@ -3,7 +3,7 @@ import 'server-only'
 import type { ThreeWheelerVehicle } from '@/lib/types/three-wheeler'
 import { get3WModelEnrichment } from '@/lib/data/3w-brand-data'
 import { THREE_WHEELER_MODEL_COLORS } from '@/lib/data/3w-model-colors'
-import { brandNameToId, getScrapedImageFallback } from '@/lib/utils/brand-model-images'
+import { brandNameToId, getVehicleImageUrls } from '@/lib/utils/brand-model-images'
 
 function lookupColors(brand: string, model: string) {
     return THREE_WHEELER_MODEL_COLORS[`${brand} ${model}`] ?? []
@@ -12,12 +12,12 @@ function lookupColors(brand: string, model: string) {
 export function hydrateThreeWheelerWithJson(vehicle: ThreeWheelerVehicle): ThreeWheelerVehicle {
     const brandId = brandNameToId(vehicle.brand, '3w')
     const enrichment = get3WModelEnrichment(brandId, vehicle.model)
-    const fallbackImage = getScrapedImageFallback('3w', brandId, vehicle.model)
+    const modelImages = getVehicleImageUrls('3w', brandId, vehicle.model, vehicle.images[0])
 
     if (!enrichment) {
         return {
             ...vehicle,
-            images: vehicle.images.length > 0 ? vehicle.images : (fallbackImage ? [fallbackImage] : []),
+            images: vehicle.images.length > 0 ? vehicle.images : modelImages,
             colors: vehicle.colors.length > 0 ? vehicle.colors : lookupColors(vehicle.brand, vehicle.model),
         }
     }
@@ -40,7 +40,7 @@ export function hydrateThreeWheelerWithJson(vehicle: ThreeWheelerVehicle): Three
         cng_mileage_km_per_kg: vehicle.cng_mileage_km_per_kg ?? enrichment.cng_mileage_km_per_kg ?? null,
         gvw_kg: vehicle.gvw_kg ?? enrichment.gvw_kg ?? null,
         colors: vehicle.colors.length > 0 ? vehicle.colors : (enrichment.colors.length > 0 ? enrichment.colors : lookupColors(vehicle.brand, vehicle.model)),
-        images: vehicle.images.length > 0 ? vehicle.images : (fallbackImage ? [fallbackImage] : []),
+        images: vehicle.images.length > 0 ? vehicle.images : modelImages,
         description: vehicle.description ?? enrichment.description ?? null,
         features: vehicle.features.length > 0 ? vehicle.features : enrichment.features,
         all_variants: vehicle.all_variants && vehicle.all_variants.length > 0 ? vehicle.all_variants : enrichment.all_variants,

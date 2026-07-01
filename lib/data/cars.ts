@@ -139,7 +139,9 @@ async function getCarsByMakeFromJson(make: string): Promise<Car[]> {
         return collected.map((m, idx) => {
             // Prefer local image (always available, no hotlink issues) over CDN
             const localUrl = getLocal4WImage(make, m.model)
-            const heroImg  = localUrl ?? m.cdnImg ?? '/placeholder-car.jpg'
+            const heroImg  = localUrl && localUrl !== '/placeholder-car.jpg'
+                ? localUrl
+                : (m.cdnImg && !m.cdnImg.includes('placeholder') ? m.cdnImg : '')
             const minPrice = typeof m.price === 'number' ? m.price : parsePriceINR(m.price ?? '')
 
             return {
@@ -169,7 +171,7 @@ async function getCarsByMakeFromJson(make: string): Promise<Car[]> {
                 features: { keyFeatures: [] },
                 images: {
                     hero: heroImg,
-                    exterior: heroImg !== '/placeholder-car.jpg' ? [heroImg] : [],
+                    exterior: heroImg ? [heroImg] : [],
                     interior: [],
                 },
                 meta: {
@@ -258,7 +260,7 @@ function catalogRowToCar(row: CarCatalogDbRow): Car {
         },
         features: { keyFeatures: [] },
         images: {
-            hero:     row.image_url ?? '/placeholder-car.jpg',
+            hero:     row.image_url ?? '',
             exterior: row.image_url ? [row.image_url] : [],
             interior: [],
         },

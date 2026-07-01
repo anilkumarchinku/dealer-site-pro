@@ -232,7 +232,8 @@ export function OnboardingReviewSummary({
         href:  clean(templateConfig?.[field]),
     }))
     const selectedSegments = vehicleSegments(data, vehicleType)
-    const hasMedia = Boolean(data.brandLogo || data.heroImage)
+    const heroImageCount = data.heroImages?.length ?? (data.heroImage ? 1 : 0)
+    const hasMedia = Boolean(data.brandLogo || heroImageCount > 0)
     const hasColors = Boolean(data.brandColor || data.brandAccentColor || data.brandColorPreset)
     const hasTemplateCopy = Boolean(
         templateConfig?.heroTitle ||
@@ -404,7 +405,7 @@ export function OnboardingReviewSummary({
                     <DetailGrid
                         items={[
                             { label: "Logo", value: data.brandLogo ? "Added" : undefined },
-                            { label: "Hero image", value: data.heroImage ? "Added" : undefined },
+                            { label: "Hero images", value: heroImageCount > 0 ? `${heroImageCount} added` : undefined },
                         ]}
                     />
                 </ReviewSection>

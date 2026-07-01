@@ -2,9 +2,9 @@
 
 import { useEffect, useState } from "react"
 import Link from "next/link"
-import { Truck } from "lucide-react"
 import type { ThreeWheelerVehicle } from "@/lib/types/three-wheeler"
 import { useSitePrefix } from "@/lib/hooks/useSitePrefix"
+import { resolveGeneratedVehicleImage } from "@/lib/utils/generated-vehicle-images"
 
 interface Props {
     currentId:   string
@@ -13,32 +13,43 @@ interface Props {
     slug:        string
 }
 
-/** Neutral placeholder shown when a similar vehicle has no image. */
-function NoImagePlaceholder() {
-    return (
-        <div
-            role="img"
-            aria-label="No image available"
-            className="flex h-28 w-full items-center justify-center rounded-lg bg-muted/30"
-        >
-            <Truck className="h-8 w-8 text-gray-400" strokeWidth={1.5} aria-hidden="true" />
-            <span className="sr-only">No image available</span>
-        </div>
-    )
+function modelImageSourceKind(src: string | null | undefined) {
+    const value = String(src ?? "").toLowerCase()
+    if (
+        value.includes("/storage/v1/object/public/dealer-assets/vehicles/") ||
+        value.includes("/storage/v1/object/public/dealer-assets/sell-requests/") ||
+        value.includes("/storage/v1/object/public/vehicle-images/")
+    ) {
+        return "inventory-photo"
+    }
+    return "resolved-model"
 }
 
-/** Image that falls back to a placeholder if the source fails to load. */
-function SimilarImage({ src, alt }: { src: string; alt: string }) {
+function SimilarVehicleCard({ vehicle, imgSrc, href }: { vehicle: ThreeWheelerVehicle; imgSrc: string; href: string }) {
     const [failed, setFailed] = useState(false)
-    if (failed) return <NoImagePlaceholder />
+    if (failed) return null
+
+    const priceF = vehicle.ex_showroom_price_paise > 0
+        ? `₹${(vehicle.ex_showroom_price_paise / 100).toLocaleString("en-IN")}`
+        : "Price on request"
+
     return (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
-            src={src}
-            alt={alt}
-            className="w-full h-28 object-contain rounded-lg bg-muted/30"
-            onError={() => setFailed(true)}
-        />
+        <Link
+            href={href}
+            data-vehicle-card="true"
+            data-model-image-source={modelImageSourceKind(imgSrc)}
+            className="shrink-0 w-44 rounded-xl border border-border bg-card p-3 hover:shadow-md transition-shadow"
+        >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+                src={imgSrc}
+                alt={`${vehicle.brand} ${vehicle.model}`}
+                className="w-full h-28 object-contain rounded-lg bg-muted/30"
+                onError={() => setFailed(true)}
+            />
+            <p className="text-sm font-semibold mt-2">{vehicle.brand} {vehicle.model}</p>
+            <p className="text-xs text-primary mt-0.5">{priceF}</p>
+        </Link>
     )
 }
 
@@ -100,35 +111,23 @@ export function SimilarVehicles({ currentId, dealerId, vehicleType, slug }: Prop
         )
     }
 
-    // Show as soon as there is at least one result.
-    if (vehicles.length < 1) return null
+    const vehiclesWithImages = vehicles
+        .map(vehicle => ({
+            vehicle,
+            imgSrc: resolveGeneratedVehicleImage("3w", vehicle.brand, vehicle.model, vehicle.images),
+        }))
+        .filter((item): item is { vehicle: ThreeWheelerVehicle; imgSrc: string } => Boolean(item.imgSrc))
+
+    // Show only cards that can render a real uploaded or model image.
+    if (vehiclesWithImages.length < 1) return null
 
     return (
         <section className="mt-10">
             <h2 className="text-xl font-bold mb-4">Similar Vehicles</h2>
             <div className="flex gap-4 overflow-x-auto pb-2">
-                {vehicles.map(v => {
-                    const imgSrc = Array.isArray(v.images) && v.images.length > 0 ? v.images[0] : null
-                    return (
-                        <Link
-                            key={v.id}
-                            href={`${prefix}/three-wheelers/${v.id}`}
-                            className="shrink-0 w-44 rounded-xl border border-border bg-card p-3 hover:shadow-md transition-shadow"
-                        >
-                            {imgSrc ? (
-                                <SimilarImage src={imgSrc} alt={`${v.brand} ${v.model}`} />
-                            ) : (
-                                <NoImagePlaceholder />
-                            )}
-                            <p className="text-sm font-semibold mt-2">{v.brand} {v.model}</p>
-                            <p className="text-xs text-primary mt-0.5">
-                                {v.ex_showroom_price_paise > 0
-                                    ? `₹${(v.ex_showroom_price_paise / 100).toLocaleString("en-IN")}`
-                                    : "Price on request"}
-                            </p>
-                        </Link>
-                    )
-                })}
+                {vehiclesWithImages.map(({ vehicle: v, imgSrc }) => (
+                    <SimilarVehicleCard key={v.id} vehicle={v} imgSrc={imgSrc} href={`${prefix}/three-wheelers/${v.id}`} />
+                ))}
             </div>
         </section>
     )

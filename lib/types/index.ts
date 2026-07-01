@@ -90,7 +90,8 @@ export interface OnboardingData {
     gstin?: string;
     logo?: string;
     brandLogo?: string; // Base64 or URL — uploaded by used-car dealers
-    heroImage?: string; // Base64 or URL — hero/banner image uploaded by used-car dealers
+    heroImage?: string; // Base64 or URL — first hero/banner image uploaded by used-car dealers
+    heroImages?: string[]; // Base64 or URLs — 2-5 hero/banner images for used-site auto-scroll
     subdomain?: string; // Auto-generated FREE subdomain
     slug?: string; // URL slug for the subdomain
     hasMultipleBranches?: boolean; // For new/hybrid dealers with multiple showrooms

@@ -1,7 +1,7 @@
 'use client';
 
 import { MapPin } from 'lucide-react';
-import { getContrastText } from '@/lib/utils/color-contrast';
+import { getContrastText, getReadableAccent } from '@/lib/utils/color-contrast';
 
 interface VideoSectionProps {
     brandColor: string;
@@ -40,6 +40,8 @@ export function VideoSection({
     brandName,
     vehicleType: _vehicleType,
 }: VideoSectionProps) {
+    const brandAccent = getReadableAccent(brandColor);
+
     if (videoUrl) {
         const embedUrl = buildEmbedUrl(videoUrl);
         return (
@@ -47,7 +49,7 @@ export function VideoSection({
                 <div className="max-w-5xl mx-auto px-4">
                     {/* Section header */}
                     <div className="text-center mb-8">
-                        <span className="text-sm font-semibold uppercase tracking-widest" style={{ color: brandColor }}>
+                        <span className="text-sm font-semibold uppercase tracking-widest" style={{ color: brandAccent }}>
                             Brand Video
                         </span>
                         <h2 className="mt-2 text-3xl md:text-4xl font-bold text-gray-900">

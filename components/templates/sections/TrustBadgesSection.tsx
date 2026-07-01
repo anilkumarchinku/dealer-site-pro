@@ -1,6 +1,7 @@
 'use client';
 
 import { Shield, Settings, CheckCircle2, Wrench, IndianRupee, LifeBuoy } from 'lucide-react';
+import { getReadableAccent } from '@/lib/utils/color-contrast';
 
 interface TrustBadgesSectionProps {
     brandColor: string;
@@ -55,6 +56,8 @@ export function TrustBadgesSection({
     dealerName,
     vehicleType: _vehicleType,
 }: TrustBadgesSectionProps) {
+    const brandAccent = getReadableAccent(brandColor);
+
     return (
         <section className="py-16 bg-white">
             <div className="max-w-7xl mx-auto px-4">
@@ -62,7 +65,7 @@ export function TrustBadgesSection({
                 <div className="text-center mb-10">
                     <span
                         className="text-sm font-semibold uppercase tracking-widest"
-                        style={{ color: brandColor }}
+                        style={{ color: brandAccent }}
                     >
                         Our Promise
                     </span>
@@ -88,7 +91,7 @@ export function TrustBadgesSection({
                                     className="w-12 h-12 rounded-full flex items-center justify-center shrink-0"
                                     style={{ backgroundColor: `${brandColor}26` }}
                                 >
-                                    <Icon className="w-6 h-6" style={{ color: brandColor }} />
+                                    <Icon className="w-6 h-6" style={{ color: brandAccent }} />
                                 </div>
 
                                 {/* Title */}

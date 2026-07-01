@@ -7,6 +7,7 @@ import type { ThreeWheelerUsedVehicle } from "@/lib/types/three-wheeler"
 import { ChevronLeft, CheckCircle, AlertCircle } from "lucide-react"
 import Link from "next/link"
 import { useSitePrefix } from "@/lib/hooks/useSitePrefix"
+import { VehicleDetailGallery } from "@/components/three-wheelers/VehicleDetailGallery"
 
 type DealerDetailMetadata = {
     id: string
@@ -81,22 +82,12 @@ export default function UsedThreeWheelerDetailPage() {
             <div className="grid md:grid-cols-2 gap-8">
                 {/* Gallery */}
                 <div>
-                    {vehicle.images.length > 0 ? (
-                        <div className="space-y-2">
-                            {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img src={vehicle.images[0]} alt={`${vehicle.brand} ${vehicle.model}`} className="w-full rounded-2xl object-cover aspect-video" />
-                            {vehicle.images.length > 1 && (
-                                <div className="flex gap-2 overflow-x-auto">
-                                    {vehicle.images.slice(1).map((img, i) => (
-                                        // eslint-disable-next-line @next/next/no-img-element
-                                        <img key={i} src={img} alt="" className="h-16 w-24 object-cover rounded-lg shrink-0" />
-                                    ))}
-                                </div>
-                            )}
-                        </div>
-                    ) : (
-                        <div className="aspect-video bg-muted/30 rounded-2xl flex items-center justify-center text-muted-foreground">No Image</div>
-                    )}
+                    <VehicleDetailGallery
+                        images={vehicle.images}
+                        alt={`${vehicle.brand} ${vehicle.model}`}
+                        brand={vehicle.brand}
+                        model={vehicle.model}
+                    />
                 </div>
 
                 {/* Info panel */}
@@ -117,7 +108,7 @@ export default function UsedThreeWheelerDetailPage() {
 
                     {/* Title */}
                     <div>
-                        <h1 className="text-3xl font-bold">{vehicle.brand} {vehicle.model}</h1>
+                        <h1 className="text-3xl font-bold break-words">{vehicle.brand} {vehicle.model}</h1>
                         {vehicle.variant && <p className="text-muted-foreground mt-0.5">{vehicle.variant}</p>}
                         <p className="text-sm text-muted-foreground mt-1">{vehicle.year} · {vehicle.fuel_type.toUpperCase()} · {vehicle.type.replace("_", " ")}</p>
                         {vehicle.vehicle_reg_no && <p className="text-xs text-muted-foreground">Reg: {vehicle.vehicle_reg_no}</p>}
@@ -126,7 +117,7 @@ export default function UsedThreeWheelerDetailPage() {
                     {/* Price */}
                     <div className="bg-primary/5 border border-primary/20 rounded-xl p-4">
                         <div className="flex flex-wrap items-baseline gap-2">
-                            <p className="text-3xl font-bold text-primary">₹{priceF}</p>
+                            <p className="text-3xl font-bold text-primary break-words">₹{priceF}</p>
                             {hasOffer && (
                                 <span className="text-sm text-muted-foreground line-through">₹{originalPriceF}</span>
                             )}

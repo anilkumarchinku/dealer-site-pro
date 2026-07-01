@@ -3,11 +3,11 @@
 import { useState } from "react"
 import { FadeInImage } from "@/components/ui/FadeInImage"
 import Link from "next/link"
-import { Fuel, Zap, Gauge, ChevronRight, Send, Eye, Heart, TrendingUp, GitCompare, Calendar, Bike } from "lucide-react"
+import { Fuel, Zap, Gauge, ChevronRight, Send, Eye, Heart, TrendingUp, GitCompare, Calendar } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import type { TwoWheelerVehicle } from "@/lib/types/two-wheeler"
 import { getVehicleImageUrls, brandNameToId } from "@/lib/utils/brand-model-images"
-import { getContrastText } from "@/lib/utils/color-contrast"
+import { getContrastText, getReadableAccent } from "@/lib/utils/color-contrast"
 import { useSitePrefix } from "@/lib/hooks/useSitePrefix"
 import { QuickViewModal } from "./QuickViewModal"
 import { LeadFormModal } from "./LeadFormModal"
@@ -20,24 +20,6 @@ interface Props {
     summaryOnly?: boolean
     onLead?:    (vehicleId: string) => void
     onCompare?: (vehicle: TwoWheelerVehicle) => void
-}
-
-/**
- * Consistent "no image available" placeholder — neutral muted tile with a
- * lucide icon and an accessible (visually-hidden) label, matching the
- * treatment used across all vehicle cards.
- */
-function NoImagePlaceholder() {
-    return (
-        <div
-            role="img"
-            aria-label="No image available"
-            className="flex h-full w-full items-center justify-center bg-gray-100 border-b border-gray-200"
-        >
-            <Bike className="h-10 w-10 text-gray-400" strokeWidth={1.5} aria-hidden="true" />
-            <span className="sr-only">No image available</span>
-        </div>
-    )
 }
 
 function SpecItem({ icon, label, value }: { icon: React.ReactNode; label: string; value: string }) {
@@ -54,6 +36,18 @@ function SpecItem({ icon, label, value }: { icon: React.ReactNode; label: string
     )
 }
 
+function modelImageSourceKind(src: string | null | undefined) {
+    const value = String(src ?? "").toLowerCase()
+    if (
+        value.includes("/storage/v1/object/public/dealer-assets/vehicles/") ||
+        value.includes("/storage/v1/object/public/dealer-assets/sell-requests/") ||
+        value.includes("/storage/v1/object/public/vehicle-images/")
+    ) {
+        return "inventory-photo"
+    }
+    return "resolved-model"
+}
+
 export function VehicleCard({ vehicle, slug, dealerId, brandColor = "#1f2937", summaryOnly = false, onLead, onCompare }: Props) {
     const prefix = useSitePrefix(slug)
     const priceRaw = vehicle.ex_showroom_price_paise
@@ -61,15 +55,13 @@ export function VehicleCard({ vehicle, slug, dealerId, brandColor = "#1f2937", s
     const emiRaw = vehicle.emi_starting_paise
     const emi = emiRaw && emiRaw > 0 ? (emiRaw / 100).toLocaleString("en-IN") : null
 
-    const brandId = brandNameToId(vehicle.brand)
-    // DB image first (matches detail page), then resolved fallbacks — same priority as CarCard/4W fix.
-    const dbImage = vehicle.images?.[0] ?? null
-    const fallbackUrls = getVehicleImageUrls("2w", brandId, vehicle.model)
-    const imageUrls = dbImage
-        ? [dbImage, ...fallbackUrls.filter(u => u !== dbImage)]
-        : fallbackUrls
+    const brandId = brandNameToId(vehicle.brand, "2w")
+    // Validated primary first, then real model-image fallbacks. This prevents
+    // loadable placeholder/provider art from winning over the model photo.
+    const imageUrls = getVehicleImageUrls("2w", brandId, vehicle.model, vehicle.images?.[0])
     const [imgIdx, setImgIdx] = useState(0)
     const imgSrc = imageUrls[imgIdx]
+    const modelImageSource = modelImageSourceKind(imgSrc)
     const [imgFailed, setFailed] = useState(false)
     const [quickView, setQuickView] = useState(false)
     const [wishlisted, setWishlisted] = useState(false)
@@ -100,29 +92,30 @@ export function VehicleCard({ vehicle, slug, dealerId, brandColor = "#1f2937", s
 
     // Readable text color for branded CTAs (handles light brand colors on the light site).
     const ctaTextColor = getContrastText(brandColor)
+    const brandAccent = getReadableAccent(brandColor)
     // Primary CTAs depend on a working lead handler — hide them when absent so there are no dead buttons.
     const canLead = typeof onLead === "function"
+
+    if (!imgSrc || imgFailed) return null
 
     if (summaryOnly) {
         return (
             <Link
+                data-vehicle-card="true"
+                data-model-image-source={modelImageSource}
                 href={`${prefix}/two-wheelers/${vehicle.id}`}
                 className="group relative flex h-full flex-col overflow-hidden rounded-xl border border-gray-200 bg-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
             >
                 <div className="relative aspect-[16/10] overflow-hidden bg-gray-50">
-                    {!imgFailed && imgSrc ? (
-                        <FadeInImage
-                            src={imgSrc}
-                            alt={`${vehicle.brand} ${vehicle.model}`}
-                            fill
-                            unoptimized
-                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                            className="object-contain transition-transform duration-500 group-hover:scale-105"
-                            onError={handleImgError}
-                        />
-                    ) : (
-                        <NoImagePlaceholder />
-                    )}
+                    <FadeInImage
+                        src={imgSrc}
+                        alt={`${vehicle.brand} ${vehicle.model}`}
+                        fill
+                        unoptimized
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        className="object-contain transition-transform duration-500 group-hover:scale-105"
+                        onError={handleImgError}
+                    />
 
                     <button
                         onClick={(e) => { e.preventDefault(); e.stopPropagation(); setWishlisted(w => !w) }}
@@ -144,7 +137,7 @@ export function VehicleCard({ vehicle, slug, dealerId, brandColor = "#1f2937", s
                                 className="h-4 w-4 rounded-sm object-contain"
                                 onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
                             />
-                            <p className="truncate text-[11px] font-semibold uppercase tracking-wider" style={{ color: brandColor }}>
+                            <p className="truncate text-[11px] font-semibold uppercase tracking-wider" style={{ color: brandAccent }}>
                                 {vehicle.brand}
                             </p>
                         </div>
@@ -176,34 +169,30 @@ export function VehicleCard({ vehicle, slug, dealerId, brandColor = "#1f2937", s
     }
 
     return (
-        <div className="group relative flex flex-col bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 cursor-pointer h-full">
+        <div data-vehicle-card="true" data-model-image-source={modelImageSource} className="group relative flex flex-col bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 cursor-pointer h-full">
 
             {/* Image */}
             <div className="relative aspect-[16/10] bg-gray-50 overflow-hidden">
-                {!imgFailed && imgSrc ? (
-                    <FadeInImage
-                        src={imgSrc}
-                        alt={`${vehicle.brand} ${vehicle.model}`}
-                        fill
-                        unoptimized
-                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                        className="object-contain group-hover:scale-105 transition-transform duration-500"
-                        onError={handleImgError}
-                    />
-                ) : (
-                    <NoImagePlaceholder />
-                )}
+                <FadeInImage
+                    src={imgSrc}
+                    alt={`${vehicle.brand} ${vehicle.model}`}
+                    fill
+                    unoptimized
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-contain group-hover:scale-105 transition-transform duration-500"
+                    onError={handleImgError}
+                />
 
                 {/* Badges */}
                 <div className="absolute top-2.5 left-2.5 flex flex-wrap gap-1">
                     {vehicle.bs6_compliant && (
-                        <span className="bg-green-600 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full shadow-sm">BS6</span>
+                        <span className="bg-green-700 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full shadow-sm">BS6</span>
                     )}
                     {vehicle.fame_subsidy_eligible && (
                         <span className="bg-blue-600 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full shadow-sm">FAME</span>
                     )}
                     {vehicle.fuel_type === "electric" && (
-                        <span className="bg-emerald-600 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full shadow-sm flex items-center gap-0.5">
+                        <span className="bg-emerald-700 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full shadow-sm flex items-center gap-0.5">
                             <Zap className="w-2.5 h-2.5" /> EV
                         </span>
                     )}
@@ -250,7 +239,7 @@ export function VehicleCard({ vehicle, slug, dealerId, brandColor = "#1f2937", s
                             className="w-4 h-4 object-contain rounded-sm"
                             onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
                         />
-                        <p className="text-[11px] font-semibold uppercase tracking-wider" style={{ color: brandColor }}>
+                        <p className="text-[11px] font-semibold uppercase tracking-wider" style={{ color: brandAccent }}>
                             {vehicle.brand}
                         </p>
                     </div>
@@ -334,7 +323,7 @@ export function VehicleCard({ vehicle, slug, dealerId, brandColor = "#1f2937", s
                                 size="sm"
                                 variant="outline"
                                 className="bg-white"
-                                style={{ borderColor: brandColor, color: brandColor }}
+                                style={{ borderColor: brandColor, color: brandAccent }}
                                 onClick={(e) => { e.stopPropagation(); setTestRideOpen(true) }}
                             >
                                 <Calendar className="w-3.5 h-3.5 mr-1" />

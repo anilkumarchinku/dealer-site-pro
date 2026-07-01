@@ -83,7 +83,7 @@ function twoWheelersToCars(vehicles: TwoWheelerVehicle[]): import("@/lib/types/c
         },
         dimensions: { seatingCapacity: 2 },
         features: { keyFeatures: v.features ?? [] },
-        images: { hero: v.images?.[0] ?? '/placeholder-car.jpg', exterior: v.images ?? [], interior: [] },
+        images: { hero: v.images?.[0] ?? '', exterior: v.images ?? [], interior: [] },
         colors: (v.colors ?? []).map(c => ({ name: c.name, type: 'Solid' as const, hex: c.hex, extraCost: 0 })),
         variants: v.all_variants && v.all_variants.length > 0
             ? v.all_variants.map((av, i) => ({
@@ -137,7 +137,7 @@ function threeWheelersToCars(vehicles: ThreeWheelerVehicle[]): import("@/lib/typ
         },
         dimensions: { seatingCapacity: v.passenger_capacity ?? 3, bootSpace: v.payload_kg ?? undefined },
         features: { keyFeatures: v.features ?? [] },
-        images: { hero: v.images?.[0] ?? '/placeholder-car.jpg', exterior: v.images ?? [], interior: [] },
+        images: { hero: v.images?.[0] ?? '', exterior: v.images ?? [], interior: [] },
         colors: (v.colors ?? []).map(c => ({ name: c.name, type: 'Solid' as const, hex: c.hex, extraCost: 0 })),
         meta: { viewCount: v.views ?? 0 },
         price: v.ex_showroom_price_paise > 0
@@ -336,7 +336,8 @@ function PreviewContent() {
             sellsNewCars: true,
             sellsUsedCars: false,
             logoUrl: logoUrl || data.brandLogo,
-            heroImageUrl: data.heroImage || firstVehicleHeroImage(displayCars),
+            heroImageUrl: data.heroImages?.[0] || data.heroImage || firstVehicleHeroImage(displayCars),
+            heroImageUrls: data.heroImages,
             vehicleType: is3W ? '3w' as const : is2W ? '2w' as const : '4w' as const,
         };
 
@@ -351,9 +352,9 @@ function PreviewContent() {
     // Template color mapping
     const templateColors: Record<string, { bg: string; text: string; border: string }> = {
         modern: { bg: "bg-blue-600", text: "text-blue-600", border: "border-blue-600" },
-        luxury: { bg: "bg-amber-600", text: "text-amber-600", border: "border-amber-600" },
+        luxury: { bg: "bg-amber-800", text: "text-amber-800", border: "border-amber-800" },
         sporty: { bg: "bg-red-600", text: "text-red-600", border: "border-red-600" },
-        family: { bg: "bg-teal-600", text: "text-teal-600", border: "border-teal-600" },
+        family: { bg: "bg-teal-800", text: "text-teal-800", border: "border-teal-800" },
     };
 
     const currentColor = templateColors[templateId] || templateColors.modern;

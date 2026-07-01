@@ -76,7 +76,12 @@ export default function UsedVehicleDetailPage() {
             <div className="grid md:grid-cols-2 gap-8">
                 {/* Gallery */}
                 <div>
-                    <VehicleDetailGallery images={vehicle.images} alt={`${vehicle.brand} ${vehicle.model}`} />
+                    <VehicleDetailGallery
+                        images={vehicle.images}
+                        alt={`${vehicle.brand} ${vehicle.model}`}
+                        brand={vehicle.brand}
+                        model={vehicle.model}
+                    />
                 </div>
 
                 {/* Info panel */}
@@ -96,7 +101,7 @@ export default function UsedVehicleDetailPage() {
 
                     {/* Title */}
                     <div>
-                        <h1 className="text-3xl font-bold">{vehicle.brand} {vehicle.model}</h1>
+                        <h1 className="text-3xl font-bold break-words">{vehicle.brand} {vehicle.model}</h1>
                         {vehicle.variant && <p className="text-muted-foreground mt-0.5">{vehicle.variant}</p>}
                         <p className="text-sm text-muted-foreground mt-1">{vehicle.year} · {vehicle.fuel_type}</p>
                     </div>
@@ -104,7 +109,7 @@ export default function UsedVehicleDetailPage() {
                     {/* Price */}
                     <div className="bg-primary/5 border border-primary/20 rounded-xl p-4">
                         <div className="flex flex-wrap items-baseline gap-2">
-                            <p className="text-3xl font-bold text-primary">₹{priceF}</p>
+                            <p className="text-3xl font-bold text-primary break-words">₹{priceF}</p>
                             {hasOffer && (
                                 <span className="text-sm text-muted-foreground line-through">₹{originalPriceF}</span>
                             )}

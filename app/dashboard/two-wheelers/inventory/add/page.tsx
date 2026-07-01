@@ -171,7 +171,7 @@ export default function AddTwoWheelerVehiclePage() {
 
     return (
         <div className="max-w-2xl space-y-6">
-            <div className="flex items-center gap-3">
+            <div className="flex flex-wrap items-center gap-3">
                 <Button variant="ghost" size="sm" asChild>
                     <Link href="/dashboard/two-wheelers/inventory"><ArrowLeft className="w-4 h-4" /></Link>
                 </Button>
@@ -183,7 +183,7 @@ export default function AddTwoWheelerVehiclePage() {
                 <fieldset className="bg-card border border-border rounded-xl p-5 space-y-4">
                     <legend className="text-sm font-semibold px-1">Basic Information</legend>
 
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                         <div>
                             <label className="text-sm font-medium">Type *</label>
                             <select value={form.type} onChange={e => set("type", e.target.value)} className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm">
@@ -198,7 +198,7 @@ export default function AddTwoWheelerVehiclePage() {
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-3 gap-4">
+                    <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
                         {/* Brand picker */}
                         <div className="col-span-1 relative">
                             <label className="text-sm font-medium">Brand *</label>
@@ -268,7 +268,7 @@ export default function AddTwoWheelerVehiclePage() {
 
                     <div>
                         <label className="text-sm font-medium">Year *</label>
-                        <input type="number" value={form.year} onChange={e => set("year", Number(e.target.value))} min={2000} max={2030} className="mt-1 w-32 rounded-lg border border-input bg-background px-3 py-2 text-sm" />
+                        <input type="number" value={form.year} onChange={e => set("year", Number(e.target.value))} min={2000} max={2030} className="mt-1 w-full sm:w-32 rounded-lg border border-input bg-background px-3 py-2 text-sm" />
                     </div>
                 </fieldset>
 
@@ -276,7 +276,7 @@ export default function AddTwoWheelerVehiclePage() {
                 <fieldset className="bg-card border border-border rounded-xl p-5 space-y-4">
                     <legend className="text-sm font-semibold px-1">Technical Specs</legend>
 
-                    <div className="grid grid-cols-3 gap-4">
+                    <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
                         {!isElectric && (
                             <div>
                                 <label className="text-sm font-medium">Engine CC</label>
@@ -311,7 +311,7 @@ export default function AddTwoWheelerVehiclePage() {
                         </div>
                     </div>
 
-                    <div className="flex items-center gap-6">
+                    <div className="flex flex-wrap items-center gap-3 sm:gap-6">
                         <label className="flex items-center gap-2 text-sm">
                             <input type="checkbox" checked={form.bs6_compliant} onChange={e => set("bs6_compliant", e.target.checked)} className="rounded" />
                             BS6 Compliant
@@ -327,7 +327,7 @@ export default function AddTwoWheelerVehiclePage() {
                 <fieldset className="bg-card border border-border rounded-xl p-5 space-y-4">
                     <legend className="text-sm font-semibold px-1">Pricing (₹)</legend>
 
-                    <div className="grid grid-cols-3 gap-4">
+                    <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
                         <div>
                             <label className="text-sm font-medium">Ex-Showroom *</label>
                             <input type="number" value={form.ex_showroom_price_paise} onChange={e => set("ex_showroom_price_paise", e.target.value)} placeholder="75000" className="mt-1 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm" />
@@ -398,7 +398,7 @@ export default function AddTwoWheelerVehiclePage() {
 
                 {error && <p className="text-sm text-destructive bg-destructive/10 rounded-lg px-4 py-2">{error}</p>}
 
-                <div className="flex items-center gap-3">
+                <div className="flex flex-wrap items-center gap-3">
                     <Button type="submit" disabled={saving}>{saving ? "Saving..." : "Add Vehicle"}</Button>
                     <Button type="button" variant="outline" asChild><Link href="/dashboard/two-wheelers/inventory">Cancel</Link></Button>
                 </div>

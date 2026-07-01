@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
-import { getScrapedImageFallback, brandNameToId } from "@/lib/utils/brand-model-images"
+import { brandNameToId, getVehicleImageUrls, isUsableVehicleImageUrl } from "@/lib/utils/brand-model-images"
 
 interface Props {
     images: string[]
@@ -12,23 +12,17 @@ interface Props {
 }
 
 export function VehicleDetailGallery({ images, alt, brand, model }: Props) {
-    // Build fallback scraped images when no uploaded images exist
-    const scraped: string[] = (() => {
+    const resolvedModelImages: string[] = (() => {
         if (!brand || !model) return [];
-        return [getScrapedImageFallback("3w", brandNameToId(brand, "3w"), model)];
+        return getVehicleImageUrls("3w", brandNameToId(brand, "3w"), model);
     })();
 
-    const displayImages = images.length > 0 ? images : scraped;
+    const uploadedImages = images.filter(isUsableVehicleImageUrl);
+    const displayImages = uploadedImages.length > 0 ? uploadedImages : resolvedModelImages;
 
     const [active, setActive] = useState(0)
 
-    if (displayImages.length === 0) {
-        return (
-            <div className="w-full h-72 bg-muted/30 rounded-2xl flex items-center justify-center text-muted-foreground">
-                No Images Available
-            </div>
-        )
-    }
+    if (displayImages.length === 0) return null
 
     function prev() { setActive(i => (i - 1 + displayImages.length) % displayImages.length) }
     function next() { setActive(i => (i + 1) % displayImages.length) }

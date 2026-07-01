@@ -64,6 +64,18 @@ interface BikeVehicle {
     is_featured: boolean;
 }
 
+function modelImageSourceKind(src: string | null | undefined) {
+    const value = String(src ?? '').toLowerCase();
+    if (
+        value.includes('/storage/v1/object/public/dealer-assets/vehicles/') ||
+        value.includes('/storage/v1/object/public/dealer-assets/sell-requests/') ||
+        value.includes('/storage/v1/object/public/vehicle-images/')
+    ) {
+        return 'inventory-photo';
+    }
+    return 'resolved-model';
+}
+
 // ── Brand list — names must match the `make` field from /api/bikes ──
 // (v.make from JSON, e.g. "Hero" not "Hero MotoCorp", "BMW" not "BMW Motorrad")
 const TRADITIONAL_BRANDS = [
@@ -155,34 +167,30 @@ function BikeCard({ bike }: { bike: BikeVehicle }) {
     const slug = `${bike.make.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${bike.model.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
     const detailHref = `/bikes/${bike.id ?? slug}`;
 
+    if (imageUrls.length === 0 || imgFailed) return null;
+
     return (
-        <Link href={detailHref} className="group relative flex flex-col bg-card border border-border rounded-xl overflow-hidden hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 h-full">
+        <Link href={detailHref} data-vehicle-card="true" data-model-image-source={modelImageSourceKind(imageUrls[imgIdx])} className="group relative flex flex-col bg-card border border-border rounded-xl overflow-hidden hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 h-full">
             {/* Image */}
             <div className="relative aspect-[16/10] bg-muted overflow-hidden">
-                {!imgFailed && imageUrls.length > 0 ? (
-                    <Image
-                        src={imageUrls[imgIdx]}
-                        alt={`${bike.make} ${bike.model}`}
-                        fill
-                        className="object-contain group-hover:scale-105 transition-transform duration-500"
-                        onError={handleImgError}
-                        unoptimized
-                    />
-                ) : (
-                    <div className="flex items-center justify-center h-full text-gray-700 text-sm">
-                        <Bike className="w-10 h-10 text-gray-400" />
-                    </div>
-                )}
+                <Image
+                    src={imageUrls[imgIdx]}
+                    alt={`${bike.make} ${bike.model}`}
+                    fill
+                    className="object-contain group-hover:scale-105 transition-transform duration-500"
+                    onError={handleImgError}
+                    unoptimized
+                />
 
                 {/* Badges */}
                 <div className="absolute top-2.5 left-2.5 flex flex-wrap gap-1">
                     {isElectric && (
-                        <span className="bg-emerald-600 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full shadow-sm flex items-center gap-0.5">
+                        <span className="bg-emerald-700 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full shadow-sm flex items-center gap-0.5">
                             <Zap className="w-2.5 h-2.5" /> EV
                         </span>
                     )}
                     {bike.is_featured && (
-                        <span className="bg-amber-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full shadow-sm">
+                        <span className="bg-amber-800 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full shadow-sm">
                             Popular
                         </span>
                     )}
@@ -669,7 +677,7 @@ function BikesContent() {
                         {/* Pagination */}
                         {totalPages > 1 && (
                             <div className="mt-8 space-y-4">
-                                <div className="flex items-center justify-center gap-2">
+                                <div className="flex max-w-full flex-wrap items-center justify-center gap-2 px-1">
                                     <Button
                                         variant="outline"
                                         size="sm"
@@ -727,7 +735,7 @@ function BikesContent() {
                                         <ChevronRight className="w-4 h-4" />
                                     </Button>
 
-                                    <span className="text-xs text-muted-foreground ml-2">
+                                    <span className="basis-full text-center text-xs text-muted-foreground sm:basis-auto sm:ml-2">
                                         Page {currentPage} of {totalPages}
                                     </span>
                                 </div>

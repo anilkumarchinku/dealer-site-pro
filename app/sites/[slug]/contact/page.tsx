@@ -7,6 +7,7 @@ import { getBrandColors } from '@/lib/colors/automotive-brands'
 import { BASE_DOMAIN } from '@/lib/utils/domain'
 import { ContactMessageForm } from '@/components/sites/ContactMessageForm'
 import { LocationsMapSection } from '@/components/templates/sections/LocationsMapSection'
+import { getContrastText, getReadableAccent } from '@/lib/utils/color-contrast'
 
 interface Props { params: Promise<{ slug: string }> }
 
@@ -31,6 +32,8 @@ export default async function ContactPage({ params }: Props) {
     // /contact page picks up the same per-dealer brand colour.
     const brandName = dealer.brandFilter ?? dealer.brands[0] ?? dealer.dealership_name
     const brandColor = getBrandColors(brandName).primary
+    const brandAccent = getReadableAccent(brandColor)
+    const onBrandText = getContrastText(brandColor)
 
     const address = dealer.full_address ?? dealer.location
     const mapQuery = encodeURIComponent(address)
@@ -70,7 +73,7 @@ export default async function ContactPage({ params }: Props) {
                     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
                         <span
                             className="font-semibold text-sm uppercase tracking-wider"
-                            style={{ color: brandColor }}
+                            style={{ color: brandAccent }}
                         >
                             Get In Touch
                         </span>
@@ -140,7 +143,7 @@ export default async function ContactPage({ params }: Props) {
                                     className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl"
                                     style={{ backgroundColor: `${brandColor}20` }}
                                 >
-                                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} style={{ color: brandColor }} aria-hidden="true">
+                                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} style={{ color: brandAccent }} aria-hidden="true">
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                                     </svg>
                                 </div>
@@ -182,8 +185,8 @@ export default async function ContactPage({ params }: Props) {
                     <div className="flex flex-col gap-3 sm:flex-row">
                         <a
                             href={`tel:${dealer.phone}`}
-                            className="flex items-center justify-center gap-2 rounded-xl px-6 py-3 text-sm font-semibold text-white shadow-sm transition-opacity hover:opacity-90"
-                            style={{ backgroundColor: brandColor }}
+                            className="flex items-center justify-center gap-2 rounded-xl px-6 py-3 text-sm font-semibold shadow-sm transition-opacity hover:opacity-90"
+                            style={{ backgroundColor: brandColor, color: onBrandText }}
                         >
                             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -234,6 +237,8 @@ function ContactCard({
     external?: boolean
     icon: React.ReactNode
 }) {
+    const brandAccent = getReadableAccent(brandColor)
+
     return (
         <a
             href={href}
@@ -245,7 +250,7 @@ function ContactCard({
                 className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl transition-transform duration-300 group-hover:scale-110"
                 style={{ backgroundColor: `${brandColor}20` }}
             >
-                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} style={{ color: brandColor }} aria-hidden="true">
+                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} style={{ color: brandAccent }} aria-hidden="true">
                     {icon}
                 </svg>
             </div>

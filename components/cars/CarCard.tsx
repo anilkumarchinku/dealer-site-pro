@@ -37,32 +37,11 @@ import {
     Info,
     GitCompare,
     Car as CarIcon,
-    Bike,
-    Truck,
 } from 'lucide-react';
-import { getContrastText } from '@/lib/utils/color-contrast';
+import { getContrastText, getReadableAccent } from '@/lib/utils/color-contrast';
 import { useCompareStore } from '@/lib/store/compare-store';
-import { getVehicleImageUrls, brandNameToId } from '@/lib/utils/brand-model-images';
+import { getVehicleImageUrls, brandNameToId, isUsableVehicleImageUrl } from '@/lib/utils/brand-model-images';
 import { brandLogoUrl } from '@/lib/utils/site-assets';
-
-/**
- * Consistent "no image available" placeholder shared across all vehicle cards.
- * Neutral muted tile with a category-appropriate lucide icon and an
- * accessible (visually-hidden) label — no oversized emoji.
- */
-function NoImagePlaceholder({ category }: { category?: '2w' | '3w' | '4w' }) {
-    const Icon = category === '2w' ? Bike : category === '3w' ? Truck : CarIcon;
-    return (
-        <div
-            role="img"
-            aria-label="No image available"
-            className="flex h-full w-full items-center justify-center bg-gray-100 border-b border-gray-200"
-        >
-            <Icon className="h-10 w-10 text-gray-400" strokeWidth={1.5} aria-hidden="true" />
-            <span className="sr-only">No image available</span>
-        </div>
-    );
-}
 
 interface CarCardProps {
     car: Car;
@@ -81,6 +60,22 @@ interface CarCardProps {
     dealerPhone?: string;
     /** Dealer ID — enables test drive booking */
     dealerId?: string;
+    /** Show the compare action overlay on the image */
+    showCompareAction?: boolean;
+    /** Show the wishlist action overlay on the image */
+    showWishlistAction?: boolean;
+}
+
+function modelImageSourceKind(src: string | null | undefined) {
+    const value = String(src ?? '').toLowerCase();
+    if (
+        value.includes('/storage/v1/object/public/dealer-assets/vehicles/') ||
+        value.includes('/storage/v1/object/public/dealer-assets/sell-requests/') ||
+        value.includes('/storage/v1/object/public/vehicle-images/')
+    ) {
+        return 'inventory-photo';
+    }
+    return 'resolved-model';
 }
 
 export function CarCard({
@@ -96,6 +91,8 @@ export function CarCard({
     detailBasePath,
     dealerPhone,
     dealerId,
+    showCompareAction,
+    showWishlistAction = false,
 }: CarCardProps) {
     const router = useRouter();
     const [isEnquiryModalOpen, setIsEnquiryModalOpen] = useState(false);
@@ -107,6 +104,10 @@ export function CarCard({
     const { addCar, removeCar, isSelected } = useCompareStore();
     const inCompare = isSelected(car.id);
     const logoSrc = brandLogoUrl(car.make, car.vehicleCategory ?? '4w');
+    const shouldShowCompareAction = showCompareAction ?? Boolean(onCompare);
+    const shouldShowWishlistAction = showWishlistAction;
+    const hasImageActions = shouldShowCompareAction || shouldShowWishlistAction;
+    const brandAccent = getReadableAccent(brandColor);
 
     const toggleCompare = (event: MouseEvent) => {
         event.stopPropagation();
@@ -120,7 +121,7 @@ export function CarCard({
 
     const compareButtonStyle = inCompare
         ? { backgroundColor: brandColor, color: getContrastText(brandColor), borderColor: brandColor }
-        : { backgroundColor: 'rgba(255,255,255,0.95)', color: brandColor, borderColor: 'rgba(229,231,235,0.9)' };
+        : { backgroundColor: 'rgba(255,255,255,0.95)', color: brandAccent, borderColor: 'rgba(229,231,235,0.9)' };
 
     const compareIconButton = (
         <button
@@ -248,22 +249,37 @@ export function CarCard({
     };
 
     // Resolved image reused by detail-oriented actions and the enquiry modal.
-    const imageCategory = car.vehicleCategory as '2w' | '3w' | '4w';
+    const imageCategory = (car.vehicleCategory ?? '4w') as '2w' | '3w' | '4w';
     const cardImageUrls = getVehicleImageUrls(
         imageCategory,
         brandNameToId(car.make, imageCategory),
         car.model,
         car.images.hero,
     );
-    // Use the model's own cover image (car.images.hero) first — the same image
-    // the detail page shows — and only fall back to resolved brand/model assets
-    // when the hero is missing, a placeholder, or fails to load. (Previously 4W
-    // cards always skipped the hero and showed a scraped asset, which could
-    // mismatch the actual model.)
-    const shouldPreferResolvedImages = !car.images.hero || car.images.hero === '/placeholder-car.jpg' || imgError;
+    const localModelImage = imageCategory === '4w'
+        ? cardImageUrls.find((url) => url.startsWith('/assets/') || url.startsWith('/data/brand-model-images/4w/')) ?? null
+        : null;
+    const orderedCardImageUrls = localModelImage
+        ? [localModelImage, ...cardImageUrls.filter((url) => url !== localModelImage)]
+        : cardImageUrls;
+    // Public model cards should prefer stable app/model assets over hotlinked
+    // remote catalog heroes. If no local 4W image exists, keep the validated
+    // primary image as a last resort.
+    const shouldPreferResolvedImages = imageCategory === '4w' || !isUsableVehicleImageUrl(car.images.hero) || imgError;
     const cardDisplayUrl = shouldPreferResolvedImages
-        ? (cardImageUrls[scrapedIdx] || null)
+        ? (orderedCardImageUrls[scrapedIdx] || null)
         : car.images.hero;
+    const modelImageSource = modelImageSourceKind(cardDisplayUrl);
+    const handleCardImageError = () => {
+        if (scrapedIdx < orderedCardImageUrls.length - 1) {
+            setScrapedIdx((prev) => prev + 1);
+            return;
+        }
+        setImgError(true);
+        setScrapedIdx(orderedCardImageUrls.length);
+    };
+
+    if (!cardDisplayUrl) return null;
 
     const cardModals = (
         <>
@@ -300,6 +316,8 @@ export function CarCard({
         return (
             <>
                 <Card
+                    data-vehicle-card="true"
+                    data-model-image-source={modelImageSource}
                     className={cn(
                         'group relative flex h-full flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white text-gray-900 transition-all duration-300 hover:-translate-y-1 hover:border-gray-300 hover:shadow-xl',
                         className
@@ -309,37 +327,27 @@ export function CarCard({
                         className="relative aspect-[16/10] cursor-pointer overflow-hidden bg-white"
                         onClick={handleOpenQuickCard}
                     >
-                        {cardDisplayUrl ? (
-                            <FadeInImage
-                                src={cardDisplayUrl}
-                                alt={`${car.make} ${car.model}`}
-                                fill
-                                unoptimized
-                                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                                className={cn(
-                                    'transition-transform duration-500 group-hover:scale-105',
-                                    (car.vehicleCategory === '2w' || car.vehicleCategory === '3w')
-                                        ? 'object-contain p-3'
-                                        : 'object-cover'
-                                )}
-                                onError={() => {
-                                    if (!imgError) {
-                                        setImgError(true);
-                                    } else if (scrapedIdx < cardImageUrls.length - 1) {
-                                        setScrapedIdx((prev) => prev + 1);
-                                    } else {
-                                        setScrapedIdx(cardImageUrls.length);
-                                    }
-                                }}
-                            />
-                        ) : (
-                            <NoImagePlaceholder category={car.vehicleCategory as '2w' | '3w' | '4w'} />
-                        )}
+                        <FadeInImage
+                            src={cardDisplayUrl}
+                            alt={`${car.make} ${car.model}`}
+                            fill
+                            unoptimized
+                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                            className={cn(
+                                'transition-transform duration-500 group-hover:scale-105',
+                                (car.vehicleCategory === '2w' || car.vehicleCategory === '3w')
+                                    ? 'object-contain p-3'
+                                    : 'object-cover'
+                            )}
+                            onError={handleCardImageError}
+                        />
 
-                        <div className="absolute top-2 right-2 z-10 flex gap-2">
-                            {compareIconButton}
-                            <WishlistButton carId={car.id} />
-                        </div>
+                        {hasImageActions && (
+                            <div className="absolute top-2 right-2 z-10 flex gap-2">
+                                {shouldShowCompareAction && compareIconButton}
+                                {shouldShowWishlistAction && <WishlistButton carId={car.id} />}
+                            </div>
+                        )}
 
                         <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                     </div>
@@ -352,7 +360,7 @@ export function CarCard({
                                         <Image src={logoSrc} alt={car.make} fill sizes="16px" unoptimized className="object-contain" />
                                     </span>
                                 )}
-                                <p className="truncate text-[11px] font-semibold uppercase tracking-[0.22em]" style={{ color: brandColor }}>
+                                <p className="truncate text-[11px] font-semibold uppercase tracking-[0.22em]" style={{ color: brandAccent }}>
                                     {car.make}
                                 </p>
                             </div>
@@ -368,7 +376,7 @@ export function CarCard({
                                 </div>
                                 <p className="mt-1 text-sm text-gray-600">{isUsed ? 'Price' : 'Ex-showroom price'}</p>
                                 {hasOfferPrice && (
-                                    <p className="mt-1 text-xs font-semibold" style={{ color: brandColor }}>
+                                    <p className="mt-1 text-xs font-semibold" style={{ color: brandAccent }}>
                                         {car.offer?.label || 'Offer price'}
                                     </p>
                                 )}
@@ -400,6 +408,8 @@ export function CarCard({
     return (
         <>
             <Card
+                data-vehicle-card="true"
+                data-model-image-source={modelImageSource}
                 className={cn(
                     'group relative flex flex-col overflow-hidden transition-all duration-300 h-full',
                     'bg-white dark:bg-white border border-gray-200 dark:border-gray-200 text-gray-900 dark:text-gray-900 hover:border-gray-300 dark:hover:border-gray-300',
@@ -413,59 +423,38 @@ export function CarCard({
                     className="relative aspect-[16/10] cursor-pointer overflow-hidden bg-white"
                     onClick={handleOpenQuickCard}
                 >
-                    {(() => {
-                        const fallbackUrls = cardImageUrls;
-                        const displayUrl = shouldPreferResolvedImages
-                            ? (fallbackUrls[scrapedIdx] || null)
-                            : car.images.hero;
+                    <FadeInImage
+                        src={cardDisplayUrl}
+                        alt={`${car.make} ${car.model}`}
+                        fill
+                        unoptimized
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        className={cn(
+                            "transition-transform duration-500 group-hover:scale-105",
+                            (car.vehicleCategory === '2w' || car.vehicleCategory === '3w')
+                                ? "object-contain p-3"
+                                : "object-cover"
+                        )}
+                        onError={handleCardImageError}
+                    />
 
-                        if (displayUrl) {
-                            return (
-                                <FadeInImage
-                                    src={displayUrl}
-                                    alt={`${car.make} ${car.model}`}
-                                    fill
-                                    unoptimized
-                                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                                    className={cn(
-                                        "transition-transform duration-500 group-hover:scale-105",
-                                        (car.vehicleCategory === '2w' || car.vehicleCategory === '3w')
-                                            ? "object-contain p-3"
-                                            : "object-cover"
-                                    )}
-                                    onError={() => {
-                                        if (!imgError) {
-                                            setImgError(true);
-                                        } else if (scrapedIdx < fallbackUrls.length - 1) {
-                                            setScrapedIdx(prev => prev + 1);
-                                        } else {
-                                            setScrapedIdx(fallbackUrls.length);
-                                        }
-                                    }}
-                                />
-                            );
-                        }
-                        return (
-                            <NoImagePlaceholder category={car.vehicleCategory as '2w' | '3w' | '4w'} />
-                        );
-                    })()}
-
-                    {/* Wishlist heart — top-right */}
-                    <div className="absolute top-2 right-2 z-10 flex gap-2">
-                        {compareIconButton}
-                        <WishlistButton carId={car.id} />
-                    </div>
+                    {hasImageActions && (
+                        <div className="absolute top-2 right-2 z-10 flex gap-2">
+                            {shouldShowCompareAction && compareIconButton}
+                            {shouldShowWishlistAction && <WishlistButton carId={car.id} />}
+                        </div>
+                    )}
 
                     {/* Condition Badge — top-left */}
                     {car.condition && car.condition !== 'new' && (
                         <div className="absolute top-2 left-2 flex gap-1.5">
                             {car.condition === 'certified_pre_owned' && (
-                                <span className="flex items-center gap-1 bg-emerald-600 text-white text-[10px] font-semibold px-2 py-0.5 rounded-full shadow-sm">
+                                <span className="flex items-center gap-1 bg-emerald-700 text-white text-[10px] font-semibold px-2 py-0.5 rounded-full shadow-sm">
                                     <ShieldCheck className="w-3 h-3" /> Assured
                                 </span>
                             )}
                             {car.condition === 'used' && (
-                                <span className="bg-amber-500 text-white text-[10px] font-semibold px-2 py-0.5 rounded-full shadow-sm">
+                                <span className="bg-amber-800 text-white text-[10px] font-semibold px-2 py-0.5 rounded-full shadow-sm">
                                     Used
                                 </span>
                             )}
@@ -496,7 +485,7 @@ export function CarCard({
                                         <Image src={logoSrc} alt={car.make} fill sizes="16px" unoptimized className="object-contain" />
                                     </span>
                                 )}
-                                <p className="text-[11px] font-semibold uppercase tracking-[0.22em] truncate" style={{ color: brandColor }}>
+                                <p className="text-[11px] font-semibold uppercase tracking-[0.22em] truncate" style={{ color: brandAccent }}>
                                     {car.make}
                                 </p>
                             </div>
@@ -534,13 +523,13 @@ export function CarCard({
                         </div>
                         <p className="text-sm text-gray-600">{isUsed ? 'Price' : 'Ex-showroom price*'}</p>
                         {hasOfferPrice && (
-                            <p className="mt-1 text-xs font-semibold" style={{ color: brandColor }}>
+                            <p className="mt-1 text-xs font-semibold" style={{ color: brandAccent }}>
                                 {car.offer?.label || 'Offer price'}
                             </p>
                         )}
 
                         {showEMI && car.pricing.emi && (
-                            <Badge variant="secondary" className="mt-2 text-xs font-medium gap-1 h-6 px-2.5 rounded-full bg-gray-50 dark:bg-gray-50 border border-gray-200 dark:border-gray-200 text-gray-700 dark:text-gray-700" style={{ color: brandColor }}>
+                            <Badge variant="secondary" className="mt-2 text-xs font-medium gap-1 h-6 px-2.5 rounded-full bg-gray-50 dark:bg-gray-50 border border-gray-200 dark:border-gray-200 text-gray-700 dark:text-gray-700" style={{ color: brandAccent }}>
                                 <TrendingUp className="w-3 h-3" />
                                 EMI ₹{car.pricing.emi.monthly.toLocaleString()}/mo
                             </Badge>
@@ -590,7 +579,7 @@ export function CarCard({
                                 size="sm"
                                 variant="outline"
                                 className="shrink-0 gap-1.5 text-xs h-11 px-3 rounded-xl font-semibold bg-white dark:bg-white hover:bg-gray-50 dark:hover:bg-gray-50"
-                                style={{ borderColor: brandColor, color: brandColor }}
+                                style={{ borderColor: brandColor, color: brandAccent }}
                                 onClick={(e) => { e.stopPropagation(); setIsTestDriveOpen(true); }}
                                 title="Book Test Drive"
                             >
@@ -602,7 +591,7 @@ export function CarCard({
                             size="sm"
                             variant="outline"
                             className="shrink-0 gap-1 text-xs h-11 px-3 rounded-xl font-medium bg-white dark:bg-white hover:bg-gray-50 dark:hover:bg-gray-50"
-                            style={{ borderColor: brandColor, color: brandColor }}
+                            style={{ borderColor: brandColor, color: brandAccent }}
                             onClick={handleViewDetails}
                             title="View Details"
                             aria-label="View Details"

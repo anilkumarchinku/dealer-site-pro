@@ -19,12 +19,21 @@ function MarketplaceFrame() {
     const searchParams = useSearchParams()
     const category = CATEGORY_ALIASES[(searchParams.get("category") || searchParams.get("type") || "").toLowerCase()] || "all"
     const query = searchParams.get("q") || searchParams.get("search") || ""
+    const condition = (searchParams.get("condition") || "").toLowerCase()
     const iframeParams = new URLSearchParams({
-        v: "design-system-20260625-compare-popup-v60",
+        v: "marketplace-used-v9",
         category,
+        type: category,
+        condition: "all",
     })
 
-    if (query.trim()) iframeParams.set("q", query.trim())
+    if (query.trim()) {
+        iframeParams.set("q", query.trim())
+        iframeParams.set("search", query.trim())
+    }
+    if (condition === "used" || condition === "new" || condition === "certified_pre_owned") {
+        iframeParams.set("condition", condition)
+    }
 
     return (
         <main className="min-h-screen bg-[#F5F1EA]">

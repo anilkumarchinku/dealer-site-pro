@@ -4,6 +4,8 @@
 import { useState, useEffect } from 'react';
 import { X, Phone, Settings2, Zap, Shield } from 'lucide-react';
 import { normalizeLeadPhone } from '@/lib/validations/lead';
+import { getContrastText, getReadableAccent } from '@/lib/utils/color-contrast';
+import { isUsableVehicleImageUrl } from '@/lib/utils/brand-model-images';
 
 /**
  * Shape this modal actually reads. Broader than the slim `CarModel` in
@@ -61,6 +63,8 @@ interface FormData {
 }
 
 export default function LeadCaptureModal({ isOpen, onClose, car, dealerId, brandColors }: LeadCaptureModalProps) {
+    const primaryAccent = getReadableAccent(brandColors.primary);
+    const onPrimaryText = getContrastText(brandColors.primary);
     const [formData, setFormData] = useState<FormData>({
         fullName: '',
         phone: '',
@@ -214,11 +218,13 @@ export default function LeadCaptureModal({ isOpen, onClose, car, dealerId, brand
                 {/* Header with Car Image */}
                 <div className="relative h-64 bg-gray-900 overflow-hidden">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                        src={car.imageUrl}
-                        alt={car.name}
-                        className="absolute inset-0 w-full h-full object-cover opacity-80"
-                    />
+                    {isUsableVehicleImageUrl(car.imageUrl) ? (
+                        <img
+                            src={car.imageUrl}
+                            alt={car.name}
+                            className="absolute inset-0 w-full h-full object-cover opacity-80"
+                        />
+                    ) : null}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
 
                     {/* Close button */}
@@ -269,7 +275,7 @@ export default function LeadCaptureModal({ isOpen, onClose, car, dealerId, brand
                                     style={{
                                         backgroundColor: `${brandColors.primary}08`,
                                         borderColor: `${brandColors.primary}20`,
-                                        color: brandColors.primary
+                                        color: primaryAccent
                                     }}
                                 >
                                     <Zap className="w-3.5 h-3.5 fill-current" />
@@ -376,7 +382,7 @@ export default function LeadCaptureModal({ isOpen, onClose, car, dealerId, brand
                                 <button
                                     onClick={onClose}
                                     className="px-8 py-2.5 rounded-lg font-medium text-white shadow-md transition-all hover:shadow-lg"
-                                    style={{ backgroundColor: brandColors.primary }}
+                                    style={{ backgroundColor: brandColors.primary, color: onPrimaryText }}
                                 >
                                     Close Window
                                 </button>
@@ -442,7 +448,7 @@ export default function LeadCaptureModal({ isOpen, onClose, car, dealerId, brand
                                         type="submit"
                                         disabled={isSubmitting}
                                         className="w-full py-4 rounded-xl font-bold text-white shadow-lg transition-all hover:shadow-xl hover:-translate-y-0.5 disabled:opacity-70 disabled:cursor-not-allowed mt-4"
-                                        style={{ backgroundColor: brandColors.primary }}
+                                        style={{ backgroundColor: brandColors.primary, color: onPrimaryText }}
                                     >
                                         {isSubmitting ? 'Sending Inquiry...' : 'Submit Inquiry'}
                                     </button>

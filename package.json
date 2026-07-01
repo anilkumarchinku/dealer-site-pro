@@ -9,6 +9,8 @@
         "lint": "next lint",
         "test": "vitest run",
         "test:watch": "vitest",
+        "audit:mobile-images": "node scripts/audit_public_mobile_images.mjs",
+        "audit:mobile-images:full": "AUDIT_INTERACTIONS=true AUDIT_VIEWPORT_WIDTHS=320,390,700 AUDIT_MAX_DISCOVERED_ROUTES=200 node scripts/audit_public_mobile_images.mjs",
         "db:types": "npx supabase gen types typescript --project-id llsvbyeumrfngjvbedbz > lib/database.types.ts",
         "typecheck": "tsc --noEmit"
     },

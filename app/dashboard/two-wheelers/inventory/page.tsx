@@ -8,9 +8,49 @@ import { Button } from "@/components/ui/button"
 import { confirm } from "@/components/ui/confirm-dialog"
 import { toast } from "@/lib/utils/toast"
 import type { TwoWheelerVehicle } from "@/lib/types/two-wheeler"
-import { getScrapedImageFallback, brandNameToId } from "@/lib/utils/brand-model-images"
+import { getVehicleImageUrls, brandNameToId, isUsableVehicleImageUrl } from "@/lib/utils/brand-model-images"
 
 const PAGE_SIZE = 50
+
+function modelImageSourceKind(src: string | null | undefined) {
+    const value = String(src ?? "").toLowerCase()
+    if (
+        value.includes("/storage/v1/object/public/dealer-assets/vehicles/") ||
+        value.includes("/storage/v1/object/public/dealer-assets/sell-requests/") ||
+        value.includes("/storage/v1/object/public/vehicle-images/")
+    ) {
+        return "inventory-photo"
+    }
+    return "resolved-model"
+}
+
+function InventoryModelImage({ vehicle }: { vehicle: TwoWheelerVehicle }) {
+    const brandId = brandNameToId(vehicle.brand, "2w")
+    const uploaded = vehicle.images.find(isUsableVehicleImageUrl)
+    const imageUrls = [
+        ...getVehicleImageUrls("2w", brandId, vehicle.model),
+        ...(uploaded ? [uploaded] : []),
+    ].filter((url, index, all) => all.indexOf(url) === index)
+    const [idx, setIdx] = useState(0)
+    const imageSrc = imageUrls[idx] ?? null
+
+    if (!imageSrc) return null
+
+    return (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+            src={imageSrc}
+            alt={`${vehicle.brand} ${vehicle.model}`}
+            data-model-image-source={modelImageSourceKind(imageSrc)}
+            className="w-full h-40 object-cover bg-muted/30"
+            onError={() => {
+                if (idx < imageUrls.length - 1) {
+                    setIdx((current) => current + 1)
+                }
+            }}
+        />
+    )
+}
 
 export default function TwoWheelerInventoryPage() {
     const { dealerId } = useOnboardingStore()
@@ -106,14 +146,10 @@ export default function TwoWheelerInventoryPage() {
             ) : (
                 <>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {vehicles.map((v) => (
+                    {vehicles.map((v) => {
+                        return (
                         <div key={v.id} className="bg-card border border-border rounded-xl overflow-hidden">
-                            {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img
-                                src={v.images[0] || getScrapedImageFallback("2w", brandNameToId(v.brand), v.model)}
-                                alt={`${v.brand} ${v.model}`}
-                                className="w-full h-40 object-cover bg-muted/30"
-                            />
+                            <InventoryModelImage vehicle={v} />
                             <div className="p-4">
                                 <div className="flex items-start justify-between">
                                     <div>
@@ -145,7 +181,7 @@ export default function TwoWheelerInventoryPage() {
                                 </div>
                             </div>
                         </div>
-                    ))}
+                    )})}
                 </div>
                 {hasMore && (
                     <div className="flex justify-center">

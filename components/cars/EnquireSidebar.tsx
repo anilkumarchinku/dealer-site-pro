@@ -325,7 +325,7 @@ export function EnquireSidebar({
                     /* ── Success state ── */
                     <div className="flex-1 flex flex-col items-center justify-center p-8 text-center">
                         <div className="w-16 h-16 rounded-full flex items-center justify-center mb-4 bg-gray-50 border border-gray-100">
-                            <CheckCircle2 className="w-8 h-8" style={{ color: brandColor }} />
+                            <CheckCircle2 className="w-8 h-8" style={{ color: brandAccent }} />
                         </div>
                         <h3 className="text-xl font-bold text-gray-900 mb-2">
                             Request Received!

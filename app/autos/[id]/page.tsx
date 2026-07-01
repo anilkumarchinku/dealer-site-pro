@@ -29,6 +29,7 @@ import {
     Calculator,
     Loader2,
 } from 'lucide-react';
+import { brandNameToId, getVehicleImageUrls } from '@/lib/utils/brand-model-images';
 
 // ── Types ───────────────────────────────────────────────────────
 
@@ -65,6 +66,18 @@ interface AutoRow {
     created_at: string | null;
     updated_at: string | null;
     variants: ApiVariant[];
+}
+
+function modelImageSourceKind(src: string | null | undefined) {
+    const value = String(src ?? '').toLowerCase();
+    if (
+        value.includes('/storage/v1/object/public/dealer-assets/vehicles/') ||
+        value.includes('/storage/v1/object/public/dealer-assets/sell-requests/') ||
+        value.includes('/storage/v1/object/public/vehicle-images/')
+    ) {
+        return 'inventory-photo';
+    }
+    return 'resolved-model';
 }
 
 interface ApiVariant {
@@ -597,8 +610,57 @@ export default function AutoDetailPage() {
                         {vehicle.make} {vehicle.model} Variants & Price
                     </h2>
                     {variants.length > 0 ? (
-                        <div className="overflow-x-auto">
-                            <table className="w-full text-sm">
+                        <>
+                            <div className="space-y-3 md:hidden">
+                                {variants.map((v) => (
+                                    <article
+                                        key={v.id}
+                                        className={`rounded-xl border p-4 ${v.id === vehicle.id ? 'border-primary bg-primary/5' : 'border-border bg-background'}`}
+                                    >
+                                        <div className="flex items-start justify-between gap-3">
+                                            <div className="min-w-0">
+                                                <h3 className="break-words text-sm font-semibold text-foreground">
+                                                    {v.variant || vehicle.model}
+                                                </h3>
+                                                {v.id === vehicle.id && (
+                                                    <span className="mt-1 inline-flex items-center rounded bg-primary/10 px-1.5 py-0.5 text-[10px] font-semibold text-primary">
+                                                        Current
+                                                    </span>
+                                                )}
+                                            </div>
+                                            <div className="shrink-0 text-right text-sm font-bold text-foreground">
+                                                {formatPrice(v.price_min_paise)}
+                                            </div>
+                                        </div>
+                                        <div className="mt-3 grid grid-cols-2 gap-3 text-xs">
+                                            <div>
+                                                <span className="block text-muted-foreground">Fuel</span>
+                                                <span className="font-medium text-foreground">{parseFuelType(v.fuel_type)}</span>
+                                            </div>
+                                            <div>
+                                                <span className="block text-muted-foreground">Power</span>
+                                                <span className="font-medium text-foreground">{v.max_power || '-'}</span>
+                                            </div>
+                                        </div>
+                                        <div className="mt-4">
+                                            {v.id !== vehicle.id ? (
+                                                <Link
+                                                    href={`/autos/${v.id}`}
+                                                    className="inline-flex min-h-10 w-full items-center justify-center rounded-lg border border-border px-3 text-xs font-semibold text-foreground transition-colors hover:bg-muted"
+                                                >
+                                                    View Variant
+                                                </Link>
+                                            ) : (
+                                                <span className="inline-flex min-h-10 w-full items-center justify-center rounded-lg bg-muted text-xs font-semibold text-muted-foreground">
+                                                    Viewing
+                                                </span>
+                                            )}
+                                        </div>
+                                    </article>
+                                ))}
+                            </div>
+                            <div className="hidden overflow-x-auto md:block">
+                                <table className="w-full text-sm">
                                 <thead>
                                     <tr className="border-b border-border bg-muted/60">
                                         <th className="text-left py-3 px-4 font-semibold text-muted-foreground">Variant</th>
@@ -648,8 +710,9 @@ export default function AutoDetailPage() {
                                         </tr>
                                     ))}
                                 </tbody>
-                            </table>
-                        </div>
+                                </table>
+                            </div>
+                        </>
                     ) : (
                         <p className="text-sm text-muted-foreground text-center py-8">
                             Only one variant available for this model.
@@ -913,29 +976,33 @@ function EmiSlider({
 }
 
 function SimilarAutoCard({ auto }: { auto: VariantItem }) {
+    const imageUrls = getVehicleImageUrls('3w', brandNameToId(auto.make, '3w'), auto.model, auto.image_url);
+    const [imgIdx, setImgIdx] = useState(0);
     const [imgFailed, setImgFailed] = useState(false);
+    const imageSrc = imageUrls[imgIdx] ?? null;
+
+    if (!imageSrc || imgFailed) return null;
 
     return (
         <Link
             href={`/autos/${auto.id}`}
+            data-vehicle-card="true"
+            data-model-image-source={modelImageSourceKind(imageSrc)}
             className="group overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
         >
             <div className="relative aspect-[16/10] bg-muted">
-                {!imgFailed && auto.image_url ? (
-                    <Image
-                        src={auto.image_url}
-                        alt={`${auto.make} ${auto.model}`}
-                        fill
-                        unoptimized
-                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                        className="object-contain transition-transform duration-500 group-hover:scale-105"
-                        onError={() => setImgFailed(true)}
-                    />
-                ) : (
-                    <div className="flex h-full items-center justify-center">
-                        <span className="text-4xl">🛺</span>
-                    </div>
-                )}
+                <Image
+                    src={imageSrc}
+                    alt={`${auto.make} ${auto.model}`}
+                    fill
+                    unoptimized
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    className="object-contain transition-transform duration-500 group-hover:scale-105"
+                    onError={() => {
+                        if (imgIdx < imageUrls.length - 1) setImgIdx((current) => current + 1);
+                        else setImgFailed(true);
+                    }}
+                />
             </div>
             <div className="p-4">
                 <p className="text-[11px] font-semibold uppercase tracking-[0.15em] text-muted-foreground">
@@ -960,13 +1027,7 @@ function HeroImage({ imageUrls, alt }: { imageUrls: string[]; alt: string }) {
     const [idx, setIdx] = useState(0);
     const [failed, setFailed] = useState(false);
 
-    if (failed || imageUrls.length === 0) {
-        return (
-            <div className="aspect-[16/10] flex items-center justify-center bg-muted">
-                <span className="text-7xl">🛺</span>
-            </div>
-        );
-    }
+    if (failed || imageUrls.length === 0) return null;
 
     return (
         <div className="relative aspect-[16/10] bg-muted">

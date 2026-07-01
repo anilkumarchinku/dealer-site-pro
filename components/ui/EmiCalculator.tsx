@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
+import { getReadableAccent } from '@/lib/utils/color-contrast';
 
 interface EmiCalculatorProps {
     /** Brand accent color (hex) used for highlights, sliders, result card */
@@ -23,6 +24,9 @@ function toIN(n: number) {
 
 export function EmiCalculator({ brandColor, theme = 'light' }: EmiCalculatorProps) {
     const dark = theme === 'dark';
+    const accentColor = dark
+        ? getReadableAccent(brandColor, '#fffdf7', '#0b0f14')
+        : getReadableAccent(brandColor);
 
     /* ── Inputs ── */
     const [price,    setPrice]    = useState(1000000);
@@ -57,12 +61,12 @@ export function EmiCalculator({ brandColor, theme = 'light' }: EmiCalculatorProp
 
     /* ── Styles ── */
     const card        = dark ? 'bg-white/5 border-white/10'   : 'bg-gray-50 border-gray-200';
-    const label       = dark ? 'text-gray-600'                : 'text-gray-600';
+    const label       = dark ? 'text-gray-300'                : 'text-gray-600';
     const inputCls    = dark
         ? 'bg-white/10 border-white/20 text-white focus:border-white/50'
         : 'bg-white border-gray-300 text-gray-900 focus:border-gray-400';
     const resultCard  = dark ? 'bg-black/40 border-white/10' : 'bg-white border-gray-200 shadow-sm';
-    const resultLabel = dark ? 'text-gray-600'               : 'text-gray-600';
+    const resultLabel = dark ? 'text-gray-300'               : 'text-gray-600';
     const resultVal   = dark ? 'text-white'                  : 'text-gray-900';
     const divider     = dark ? 'border-white/10'             : 'border-gray-100';
     const trackBg     = dark ? '#ffffff22'                   : '#e5e7eb';
@@ -84,7 +88,7 @@ export function EmiCalculator({ brandColor, theme = 'light' }: EmiCalculatorProp
                             <label className={`text-xs font-semibold uppercase tracking-wider ${label}`}>
                                 Vehicle Price
                             </label>
-                            <span className="text-sm font-bold" style={{ color: brandColor }}>
+                            <span className="text-sm font-bold" style={{ color: accentColor }}>
                                 ₹{toIN(price)}
                             </span>
                         </div>
@@ -106,7 +110,7 @@ export function EmiCalculator({ brandColor, theme = 'light' }: EmiCalculatorProp
                             <label className={`text-xs font-semibold uppercase tracking-wider ${label}`}>
                                 Down Payment
                             </label>
-                            <span className="text-sm font-bold" style={{ color: brandColor }}>
+                            <span className="text-sm font-bold" style={{ color: accentColor }}>
                                 ₹{toIN(down)}
                             </span>
                         </div>
@@ -128,7 +132,7 @@ export function EmiCalculator({ brandColor, theme = 'light' }: EmiCalculatorProp
                             <label className={`text-xs font-semibold uppercase tracking-wider ${label}`}>
                                 Loan Tenure
                             </label>
-                            <span className="text-sm font-bold" style={{ color: brandColor }}>
+                            <span className="text-sm font-bold" style={{ color: accentColor }}>
                                 {tenure} mo &nbsp;·&nbsp; {(tenure / 12).toFixed(tenure % 12 === 0 ? 0 : 1)} yrs
                             </span>
                         </div>
@@ -154,7 +158,7 @@ export function EmiCalculator({ brandColor, theme = 'light' }: EmiCalculatorProp
                             <label className={`text-xs font-semibold uppercase tracking-wider ${label}`}>
                                 Interest Rate (p.a.)
                             </label>
-                            <span className="text-sm font-bold" style={{ color: brandColor }}>
+                            <span className="text-sm font-bold" style={{ color: accentColor }}>
                                 {rate.toFixed(1)}%
                             </span>
                         </div>
@@ -183,7 +187,7 @@ export function EmiCalculator({ brandColor, theme = 'light' }: EmiCalculatorProp
                             {/* Monthly EMI — hero */}
                             <div className="text-center pb-5 mb-5" style={{ borderBottom: `1px solid ${dark ? 'rgba(255,255,255,0.1)' : '#f0f0f0'}` }}>
                                 <p className={`text-xs font-semibold uppercase tracking-widest mb-2 ${resultLabel}`}>Monthly EMI</p>
-                                <p className="text-5xl font-bold leading-none" style={{ color: brandColor }}>
+                                <p className="text-5xl font-bold leading-none" style={{ color: dark ? '#fffdf7' : accentColor }}>
                                     ₹{toIN(result.emi)}
                                 </p>
                                 <p className={`text-xs mt-1.5 ${resultLabel}`}>per month for {tenure} months</p>
@@ -209,7 +213,7 @@ export function EmiCalculator({ brandColor, theme = 'light' }: EmiCalculatorProp
                             <div className="mt-5">
                                 <div className="flex justify-between text-[11px] mb-1.5">
                                     <span className={`flex items-center gap-1 ${resultLabel}`}>
-                                        <span className="w-2 h-2 rounded-full inline-block" style={{ backgroundColor: brandColor }} />
+                                        <span className="w-2 h-2 rounded-full inline-block" style={{ backgroundColor: accentColor }} />
                                         Principal {result.principalPct}%
                                     </span>
                                     <span className={`flex items-center gap-1 ${resultLabel}`}>
@@ -220,7 +224,7 @@ export function EmiCalculator({ brandColor, theme = 'light' }: EmiCalculatorProp
                                 <div className={`w-full h-2 rounded-full overflow-hidden ${dark ? 'bg-white/10' : 'bg-gray-100'}`}>
                                     <div
                                         className="h-full rounded-full transition-all duration-500"
-                                        style={{ width: `${result.principalPct}%`, backgroundColor: brandColor }}
+                                        style={{ width: `${result.principalPct}%`, backgroundColor: accentColor }}
                                     />
                                 </div>
                             </div>

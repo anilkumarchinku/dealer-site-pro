@@ -10,6 +10,7 @@
 import { useState, useMemo } from 'react';
 import { X, Calculator, ChevronDown } from 'lucide-react';
 import type { Car } from '@/lib/types/car';
+import { getContrastText, getReadableAccent } from '@/lib/utils/color-contrast';
 
 interface NavEMIModalProps {
     open: boolean;
@@ -30,6 +31,8 @@ function fmt(n: number) {
 }
 
 export function NavEMIModal({ open, onOpenChange, brandColor, cars }: NavEMIModalProps) {
+    const brandAccent = getReadableAccent(brandColor);
+    const onBrandText = getContrastText(brandColor);
     // ── Unique models from cars prop ────────────────────────────────────────
     // Use \0 as separator so multi-word makes (e.g. "Maruti Suzuki") are handled correctly
     const models = useMemo(() => {
@@ -95,7 +98,7 @@ export function NavEMIModal({ open, onOpenChange, brandColor, cars }: NavEMIModa
                 <div className="flex items-center justify-between px-5 py-4 border-b border-gray-100" style={{ borderTop: `4px solid ${brandColor}` }}>
                     <div className="flex items-center gap-2">
                         <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ backgroundColor: `${brandColor}15` }}>
-                            <Calculator className="w-4 h-4" style={{ color: brandColor }} />
+                            <Calculator className="w-4 h-4" style={{ color: brandAccent }} />
                         </div>
                         <div>
                             <h2 className="text-base font-bold text-gray-900">EMI Calculator</h2>
@@ -157,7 +160,7 @@ export function NavEMIModal({ open, onOpenChange, brandColor, cars }: NavEMIModa
                         <div className="flex items-center gap-3 px-4 py-3 rounded-xl border" style={{ borderColor: `${brandColor}40`, backgroundColor: `${brandColor}08` }}>
                             <div className="flex-1">
                                 <p className="text-xs text-gray-600">Ex-Showroom Price</p>
-                                <p className="text-xl font-bold" style={{ color: brandColor }}>{fmt(exShowroom)}</p>
+                                <p className="text-xl font-bold" style={{ color: brandAccent }}>{fmt(exShowroom)}</p>
                             </div>
                             <div className="text-right">
                                 <p className="text-xs text-gray-600">Loan Amount</p>
@@ -170,7 +173,7 @@ export function NavEMIModal({ open, onOpenChange, brandColor, cars }: NavEMIModa
                     <div>
                         <div className="flex justify-between items-center mb-1.5">
                             <label className="text-xs font-semibold text-gray-600 uppercase tracking-wide">Down Payment</label>
-                            <span className="text-sm font-bold" style={{ color: brandColor }}>{fmt(downPayment)}</span>
+                            <span className="text-sm font-bold" style={{ color: brandAccent }}>{fmt(downPayment)}</span>
                         </div>
                         <input
                             type="range"
@@ -221,7 +224,7 @@ export function NavEMIModal({ open, onOpenChange, brandColor, cars }: NavEMIModa
 
                     {/* EMI Result */}
                     {monthlyEMI > 0 && (
-                        <div className="rounded-xl p-4 text-white" style={{ backgroundColor: brandColor }}>
+                        <div className="rounded-xl p-4" style={{ backgroundColor: brandColor, color: onBrandText }}>
                             <p className="text-sm font-medium opacity-80 mb-1">Monthly EMI</p>
                             <p className="text-4xl font-black tracking-tight">{fmt(monthlyEMI)}<span className="text-base font-normal opacity-70 ml-1">/mo</span></p>
                             <div className="mt-3 pt-3 border-t border-white/20 grid grid-cols-3 gap-2 text-xs">

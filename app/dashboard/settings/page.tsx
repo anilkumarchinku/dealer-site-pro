@@ -36,6 +36,24 @@ const NOTIFICATION_CONFIG: Record<string, { label: string; description: string }
     weeklyReport:    { label: "Weekly Report",     description: "Receive a weekly performance summary" },
 };
 
+function normalizeHeroImageUrls(value: unknown, fallback?: string | null) {
+    const urls = Array.isArray(value)
+        ? value
+        : typeof value === "string"
+            ? value.split(",")
+            : [];
+    const fallbackUrl = fallback?.trim();
+    return Array.from(new Set([
+        ...(fallbackUrl ? [fallbackUrl] : []),
+        ...urls.map(item => typeof item === "string" ? item.trim() : "").filter(Boolean),
+    ])).slice(0, 5);
+}
+
+function isMissingHeroImagesColumn(error: { code?: string; message?: string; details?: string } | null | undefined) {
+    const text = `${error?.code ?? ""} ${error?.message ?? ""} ${error?.details ?? ""}`.toLowerCase();
+    return text.includes("hero_image_urls") && (text.includes("column") || text.includes("schema cache") || text.includes("does not exist"));
+}
+
 export default function SettingsPage() {
     const { data, updateData, dealerId, dealerSlug } = useOnboardingStore();
     const { theme } = useTheme();
@@ -110,7 +128,7 @@ export default function SettingsPage() {
 
     // ── Brand Assets state ────────────────────────────────────────────────────
     const [logoPreview,    setLogoPreview]    = useState<string>("");
-    const [heroPreview,    setHeroPreview]    = useState<string>("");
+    const [heroPreviews,   setHeroPreviews]   = useState<string[]>([]);
     const [logoUploading,  setLogoUploading]  = useState(false);
     const [heroUploading,  setHeroUploading]  = useState(false);
     const [logoSaved,      setLogoSaved]      = useState(false);
@@ -123,24 +141,37 @@ export default function SettingsPage() {
     // Load existing logo/hero URLs on mount
     useEffect(() => {
         if (!dealerId) return;
-        supabase
-            .from("dealers")
-            .select("logo_url, hero_image_url, sells_two_wheelers, sells_three_wheelers, sells_four_wheelers, sells_used_cars, google_maps_url, google_place_id, vehicle_type, branches, full_address")
-            .eq("id", dealerId)
-            .single()
-            .then(({ data }) => {
-                if (data?.logo_url)               setLogoPreview(data.logo_url);
-                if (data?.hero_image_url)          setHeroPreview(data.hero_image_url);
-                setSellsTwoWheelers(data?.sells_two_wheelers   ?? false);
-                setSellsThreeWheelers(data?.sells_three_wheelers ?? false);
-                setSellsFourWheelers(data?.sells_four_wheelers  ?? false);
-                setSellsUsedCars(data?.sells_used_cars ?? false);
-                if (data?.vehicle_type)            setVehicleType(data.vehicle_type);
-                if (data?.google_maps_url)         setGoogleMapsUrl(data.google_maps_url);
-                if (data?.google_place_id)         setGooglePlaceId(data.google_place_id);
-                if (data?.full_address)            setFullAddress(data.full_address);
-                if (Array.isArray(data?.branches)) setBranches(data.branches as typeof branches);
-            });
+        const currentDealerId = dealerId;
+        async function loadDealerSettings() {
+            let result = await supabase
+                .from("dealers")
+                .select("logo_url, hero_image_url, hero_image_urls, sells_two_wheelers, sells_three_wheelers, sells_four_wheelers, sells_used_cars, google_maps_url, google_place_id, vehicle_type, branches, full_address")
+                .eq("id", currentDealerId)
+                .single();
+
+            if (result.error && isMissingHeroImagesColumn(result.error)) {
+                result = await supabase
+                    .from("dealers")
+                    .select("logo_url, hero_image_url, sells_two_wheelers, sells_three_wheelers, sells_four_wheelers, sells_used_cars, google_maps_url, google_place_id, vehicle_type, branches, full_address")
+                    .eq("id", currentDealerId)
+                    .single();
+            }
+
+            const row = result.data as (typeof result.data & { hero_image_urls?: unknown; branches?: unknown; full_address?: string | null }) | null;
+            if (row?.logo_url)               setLogoPreview(row.logo_url);
+            setHeroPreviews(normalizeHeroImageUrls(row?.hero_image_urls, row?.hero_image_url ?? null));
+            setSellsTwoWheelers(row?.sells_two_wheelers   ?? false);
+            setSellsThreeWheelers(row?.sells_three_wheelers ?? false);
+            setSellsFourWheelers(row?.sells_four_wheelers  ?? false);
+            setSellsUsedCars(row?.sells_used_cars ?? false);
+            if (row?.vehicle_type)            setVehicleType(row.vehicle_type);
+            if (row?.google_maps_url)         setGoogleMapsUrl(row.google_maps_url);
+            if (row?.google_place_id)         setGooglePlaceId(row.google_place_id);
+            if (row?.full_address)            setFullAddress(row.full_address);
+            if (Array.isArray(row?.branches)) setBranches(row.branches as typeof branches);
+        }
+
+        void loadDealerSettings();
         // Fetch service centers (table may lag generated DB types)
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         (supabase as any)
@@ -152,30 +183,27 @@ export default function SettingsPage() {
             .then(({ data }: { data: typeof serviceCenters | null }) => {
                 if (data) setServiceCenters(data);
             });
-        // Fetch outlets (dealer_brands with outlet-level details)
         fetchDealerOutlets(dealerId).then(rows => setOutlets(rows));
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [dealerId]);
 
     const uploadAsset = useCallback(async (
         file: File,
-        field: "logo" | "hero",
+        field: "logo",
         maxSizeMB: number,
     ) => {
         if (!dealerId) return;
         if (!file.type.startsWith("image/")) {
-            if (field === "logo") setLogoError("Please upload a PNG, JPG, SVG or WEBP image");
-            else setHeroError("Please upload a PNG, JPG or WEBP image");
+            setLogoError("Please upload a PNG, JPG, SVG or WEBP image");
             return;
         }
         if (file.size > maxSizeMB * 1024 * 1024) {
-            if (field === "logo") setLogoError(`Logo must be under ${maxSizeMB} MB`);
-            else setHeroError(`Hero image must be under ${maxSizeMB} MB`);
+            setLogoError(`Logo must be under ${maxSizeMB} MB`);
             return;
         }
 
-        if (field === "logo") { setLogoUploading(true); setLogoError(""); }
-        else                  { setHeroUploading(true); setHeroError(""); }
+        setLogoUploading(true);
+        setLogoError("");
 
         try {
             const mime = file.type;
@@ -200,17 +228,108 @@ export default function SettingsPage() {
 
             if (dbErr) throw dbErr;
 
-            if (field === "logo") { setLogoPreview(publicUrl); setLogoSaved(true); setTimeout(() => setLogoSaved(false), 3000); }
-            else                  { setHeroPreview(publicUrl); setHeroSaved(true); setTimeout(() => setHeroSaved(false), 3000); }
+            setLogoPreview(publicUrl);
+            setLogoSaved(true);
+            setTimeout(() => setLogoSaved(false), 3000);
         } catch (err: unknown) {
             const msg = err instanceof Error ? err.message : "Upload failed";
-            if (field === "logo") setLogoError(msg);
-            else setHeroError(msg);
+            setLogoError(msg);
         } finally {
-            if (field === "logo") setLogoUploading(false);
-            else                  setHeroUploading(false);
+            setLogoUploading(false);
         }
     }, [dealerId]);
+
+    const persistHeroPreviews = useCallback(async (nextImages: string[]) => {
+        if (!dealerId) return;
+        const normalizedImages = normalizeHeroImageUrls(nextImages);
+        const firstHeroImage = normalizedImages[0] ?? null;
+        const { error } = await supabase
+            .from("dealers")
+            .update({ hero_image_url: firstHeroImage, hero_image_urls: normalizedImages })
+            .eq("id", dealerId);
+
+        if (error) {
+            if (!isMissingHeroImagesColumn(error)) throw error;
+            const { error: legacyError } = await supabase
+                .from("dealers")
+                .update({ hero_image_url: firstHeroImage })
+                .eq("id", dealerId);
+            if (legacyError) throw legacyError;
+        }
+
+        updateData({
+            heroImage: firstHeroImage ?? undefined,
+            heroImages: normalizedImages.length > 0 ? normalizedImages : undefined,
+        });
+    }, [dealerId, updateData]);
+
+    const uploadHeroFiles = useCallback(async (files: File[]) => {
+        if (!dealerId) return;
+        const remainingSlots = 5 - heroPreviews.length;
+        if (remainingSlots <= 0) {
+            setHeroError("You can upload up to 5 hero images");
+            return;
+        }
+
+        const selectedFiles = files.slice(0, remainingSlots);
+        for (const file of selectedFiles) {
+            if (!file.type.startsWith("image/")) {
+                setHeroError("Please upload image files only (PNG, JPG, WEBP)");
+                return;
+            }
+            if (file.size > 5 * 1024 * 1024) {
+                setHeroError("Each hero image must be under 5 MB");
+                return;
+            }
+        }
+
+        setHeroUploading(true);
+        setHeroError("");
+        try {
+            const batchId = Date.now();
+            const uploadedUrls: string[] = [];
+            for (const [index, file] of selectedFiles.entries()) {
+                const ext = file.type.split("/")[1]?.replace("jpeg", "jpg") ?? "png";
+                const path = `dealers/${dealerId}/hero-${batchId}-${heroPreviews.length + index + 1}.${ext}`;
+                const { error: upErr } = await supabase.storage
+                    .from("dealer-assets")
+                    .upload(path, file, { upsert: true, contentType: file.type });
+                if (upErr) throw upErr;
+
+                const { data: { publicUrl } } = supabase.storage
+                    .from("dealer-assets")
+                    .getPublicUrl(path);
+                uploadedUrls.push(publicUrl);
+            }
+
+            const nextImages = normalizeHeroImageUrls([...heroPreviews, ...uploadedUrls]);
+            await persistHeroPreviews(nextImages);
+            setHeroPreviews(nextImages);
+            setHeroSaved(true);
+            setTimeout(() => setHeroSaved(false), 3000);
+            if (files.length > remainingSlots) setHeroError("Only the first 5 hero images were added");
+        } catch (err: unknown) {
+            setHeroError(err instanceof Error ? err.message : "Upload failed");
+        } finally {
+            setHeroUploading(false);
+        }
+    }, [dealerId, heroPreviews, persistHeroPreviews]);
+
+    const removeHeroPreview = useCallback(async (index: number) => {
+        const nextImages = heroPreviews.filter((_, itemIndex) => itemIndex !== index);
+        setHeroUploading(true);
+        setHeroError("");
+        try {
+            await persistHeroPreviews(nextImages);
+            setHeroPreviews(nextImages);
+            setHeroSaved(true);
+            setTimeout(() => setHeroSaved(false), 3000);
+        } catch (err: unknown) {
+            setHeroError(err instanceof Error ? err.message : "Could not remove image");
+        } finally {
+            setHeroUploading(false);
+        }
+    }, [heroPreviews, persistHeroPreviews]);
 
     // Load existing Cyepro key (masked) from DB on mount
     useEffect(() => {
@@ -695,13 +814,13 @@ export default function SettingsPage() {
                                 </CardHeader>
                                 <CardContent className="space-y-3">
                                     {SEGMENTS.map(seg => (
-                                        <div key={seg.key} className="flex items-center justify-between px-4 py-3.5 rounded-xl bg-muted/30">
-                                            <div className="flex items-center gap-3">
-                                                <div className={`w-9 h-9 rounded-lg flex items-center justify-center text-lg ${seg.bg}`}>
+                                        <div key={seg.key} className="flex flex-col gap-3 px-4 py-3.5 rounded-xl bg-muted/30 sm:flex-row sm:items-center sm:justify-between">
+                                            <div className="flex min-w-0 items-center gap-3">
+                                                <div className={`w-9 h-9 shrink-0 rounded-lg flex items-center justify-center text-lg ${seg.bg}`}>
                                                     {seg.emoji}
                                                 </div>
-                                                <div>
-                                                    <div className="flex items-center gap-2">
+                                                <div className="min-w-0">
+                                                    <div className="flex flex-wrap items-center gap-2">
                                                         <p className="font-medium text-sm">{seg.label}</p>
                                                         {seg.isPrimary && (
                                                             <span className={`text-[10px] font-semibold px-1.5 py-0.5 rounded border ${seg.badge}`}>
@@ -712,7 +831,7 @@ export default function SettingsPage() {
                                                     <p className="text-xs text-muted-foreground">{seg.desc}</p>
                                                 </div>
                                             </div>
-                                            <div className="flex items-center gap-2">
+                                            <div className="flex items-center gap-2 self-start sm:self-center">
                                                 {seg.isActive && !seg.isPrimary && (
                                                     /* Toggle to enable/disable secondary segment */
                                                     <button
@@ -873,7 +992,7 @@ export default function SettingsPage() {
                                         </p>
                                     )}
 
-                                    <div className="flex items-center gap-2">
+                                    <div className="flex flex-wrap items-center gap-2">
                                         <Button
                                             size="sm"
                                             disabled={!cyeproKey || cyeproKey.startsWith("•") || cyeproStatus === "saving"}
@@ -963,7 +1082,7 @@ export default function SettingsPage() {
                                         Your free <span className="font-mono text-xs">.indrav.in</span> subdomain will keep working too.
                                     </p>
 
-                                    <div className="flex gap-2">
+                                    <div className="flex flex-col gap-2 sm:flex-row">
                                         <Input
                                             type="text"
                                             value={domainInput}
@@ -972,14 +1091,14 @@ export default function SettingsPage() {
                                                 setDomainError("");
                                             }}
                                             placeholder="heromotors.com"
-                                            className="flex-1"
+                                            className="w-full flex-1"
                                             onKeyDown={(e) => e.key === "Enter" && handleAddDomain()}
                                         />
                                         <Button
                                             size="sm"
                                             disabled={domainLoading || !domainInput.trim()}
                                             onClick={handleAddDomain}
-                                            className="gap-1.5 bg-primary hover:bg-primary/90"
+                                            className="w-full gap-1.5 bg-primary hover:bg-primary/90 sm:w-auto"
                                         >
                                             {domainLoading
                                                 ? <Loader2 className="w-3.5 h-3.5 animate-spin" />
@@ -1232,26 +1351,68 @@ export default function SettingsPage() {
 
                             <div className="border-t border-border" />
 
-                            {/* Hero / Banner Image */}
+                            {/* Hero / Banner Carousel */}
                             <div className="space-y-3">
                                 <div>
-                                    <p className="text-sm font-semibold">Hero / Banner Image</p>
-                                    <p className="text-xs text-muted-foreground">Shown in the header section of your website · PNG, JPG, WEBP · Max 5 MB</p>
-                                </div>
-                                <div className="flex items-start gap-4">
-                                    {/* Preview */}
-                                    <div className="w-24 h-16 rounded-xl border border-border bg-muted/40 flex items-center justify-center overflow-hidden flex-shrink-0">
-                                        {heroPreview ? (
-                                            <Image src={heroPreview} alt="Hero" width={96} height={64} className="object-cover w-full h-full" unoptimized />
-                                        ) : (
-                                            <ImageIcon className="w-6 h-6 text-muted-foreground/40" />
-                                        )}
+                                    <div className="flex items-center justify-between gap-3">
+                                        <p className="text-sm font-semibold">Used-Site Hero Carousel</p>
+                                        <Badge variant="secondary" className="text-xs">{heroPreviews.length}/5</Badge>
                                     </div>
-                                    <div className="flex-1 space-y-2">
+                                    <p className="text-xs text-muted-foreground">Upload 2-5 images to auto-scroll in the 2nd-hand website hero · PNG, JPG, WEBP · Max 5 MB each</p>
+                                </div>
+                                <div className="space-y-3">
+                                    {heroPreviews.length > 0 ? (
+                                        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                                            {heroPreviews.map((preview, index) => (
+                                                <div key={`${preview}-${index}`} className="group relative overflow-hidden rounded-xl border border-border bg-muted/40">
+                                                    <Image src={preview} alt={`Hero slide ${index + 1}`} width={220} height={124} className="h-28 w-full object-cover" unoptimized />
+                                                    <span className="absolute left-2 top-2 rounded-full bg-black/70 px-2 py-0.5 text-xs font-semibold text-white">
+                                                        Slide {index + 1}
+                                                    </span>
+                                                    <Button
+                                                        type="button"
+                                                        variant="secondary"
+                                                        size="icon"
+                                                        disabled={heroUploading}
+                                                        onClick={() => removeHeroPreview(index)}
+                                                        aria-label={`Remove hero slide ${index + 1}`}
+                                                        className="absolute right-2 top-2 h-8 w-8 rounded-lg bg-background/95 text-muted-foreground shadow-sm hover:text-destructive"
+                                                    >
+                                                        <X className="h-4 w-4" />
+                                                    </Button>
+                                                </div>
+                                            ))}
+                                            {heroPreviews.length < 5 && (
+                                                <button
+                                                    type="button"
+                                                    disabled={heroUploading}
+                                                    onClick={() => heroInputRef.current?.click()}
+                                                    className="flex h-28 flex-col items-center justify-center gap-2 rounded-xl border-2 border-dashed border-border bg-muted/20 text-sm font-medium text-muted-foreground transition-colors hover:border-primary hover:text-foreground disabled:pointer-events-none disabled:opacity-60"
+                                                >
+                                                    <Upload className="h-4 w-4" />
+                                                    Add images
+                                                </button>
+                                            )}
+                                        </div>
+                                    ) : (
+                                        <button
+                                            type="button"
+                                            disabled={heroUploading}
+                                            onClick={() => heroInputRef.current?.click()}
+                                            className="flex min-h-32 w-full flex-col items-center justify-center gap-3 rounded-xl border-2 border-dashed border-border bg-muted/20 px-4 py-6 text-center transition-colors hover:border-primary hover:bg-muted/30 disabled:pointer-events-none disabled:opacity-60"
+                                        >
+                                            <ImageIcon className="h-7 w-7 text-muted-foreground/50" />
+                                            <div>
+                                                <p className="text-sm font-medium text-foreground">Upload carousel images</p>
+                                                <p className="mt-1 text-xs text-muted-foreground">Choose 2-5 hero photos for auto-scroll</p>
+                                            </div>
+                                        </button>
+                                    )}
+                                    <div className="flex flex-wrap items-center gap-2">
                                         <Button
                                             size="sm"
                                             variant="outline"
-                                            disabled={heroUploading}
+                                            disabled={heroUploading || heroPreviews.length >= 5}
                                             onClick={() => heroInputRef.current?.click()}
                                             className="gap-1.5"
                                         >
@@ -1259,32 +1420,47 @@ export default function SettingsPage() {
                                                 ? <><Loader2 className="w-3.5 h-3.5 animate-spin" /> Uploading...</>
                                                 : heroSaved
                                                     ? <><CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" /> Saved!</>
-                                                    : <><Upload className="w-3.5 h-3.5" /> {heroPreview ? "Replace Image" : "Upload Image"}</>
+                                                    : <><Upload className="w-3.5 h-3.5" /> {heroPreviews.length ? "Add More" : "Upload Images"}</>
                                             }
                                         </Button>
-                                        {heroPreview && !heroUploading && (
+                                        {heroPreviews.length > 0 && !heroUploading && (
                                             <Button
                                                 variant="ghost"
                                                 size="sm"
                                                 onClick={async () => {
-                                                    if (!dealerId) return;
-                                                    await supabase.from("dealers").update({ hero_image_url: null }).eq("id", dealerId);
-                                                    setHeroPreview("");
+                                                    setHeroUploading(true);
+                                                    setHeroError("");
+                                                    try {
+                                                        await persistHeroPreviews([]);
+                                                        setHeroPreviews([]);
+                                                        setHeroSaved(true);
+                                                        setTimeout(() => setHeroSaved(false), 3000);
+                                                    } catch (err: unknown) {
+                                                        setHeroError(err instanceof Error ? err.message : "Could not remove images");
+                                                    } finally {
+                                                        setHeroUploading(false);
+                                                    }
                                                 }}
                                                 className="h-7 px-2 text-xs text-destructive hover:bg-destructive/10 gap-1"
                                             >
-                                                <X className="w-3 h-3" /> Remove image
+                                                <Trash2 className="w-3 h-3" /> Clear all
                                             </Button>
                                         )}
-                                        {heroError && <p className="text-xs text-destructive">{heroError}</p>}
                                     </div>
+                                    {heroPreviews.length === 1 && <p className="text-xs text-muted-foreground">Add one more image to enable auto-scroll.</p>}
+                                    {heroError && <p className="text-xs text-destructive">{heroError}</p>}
                                 </div>
                                 <input
                                     ref={heroInputRef}
                                     type="file"
                                     accept="image/png,image/jpeg,image/jpg,image/webp"
+                                    multiple
                                     className="hidden"
-                                    onChange={(e) => { const f = e.target.files?.[0]; if (f) uploadAsset(f, "hero", 5); }}
+                                    onChange={(e) => {
+                                        const files = Array.from(e.target.files ?? []);
+                                        if (files.length > 0) uploadHeroFiles(files);
+                                        e.target.value = "";
+                                    }}
                                 />
                             </div>
 

@@ -4,7 +4,7 @@ import { useEffect, useMemo, useState } from 'react';
 import Image from 'next/image';
 import type { Car } from '@/lib/types/car';
 import { formatPrice, formatPriceInLakhs } from '@/lib/utils/car-utils';
-import { getVehicleImageUrls, brandNameToId } from '@/lib/utils/brand-model-images';
+import { getVehicleImageUrls, brandNameToId, isUsableVehicleImageUrl } from '@/lib/utils/brand-model-images';
 import {
     Dialog,
     DialogContent,
@@ -82,7 +82,7 @@ export function UsedVehicleDetailModal({
         return [...new Set([
             ...resolved,
             ...(car.images.exterior ?? []),
-        ].filter((url): url is string => Boolean(url) && url !== '/placeholder-car.jpg'))];
+        ].filter(isUsableVehicleImageUrl))];
     }, [car, resolvedImageSrc]);
 
     if (!car) return null;
@@ -135,11 +135,7 @@ export function UsedVehicleDetailModal({
                                 className="h-[240px] w-full object-contain sm:h-[360px]"
                                 onError={() => setImageIndex((current) => current + 1)}
                             />
-                        ) : (
-                            <div className="flex h-[240px] items-center justify-center text-lg font-semibold text-gray-500 sm:h-[360px]">
-                                No image available
-                            </div>
-                        )}
+                        ) : null}
                         {car.year && (
                             <div
                                 className="absolute right-4 top-4 rounded-full px-4 py-2 text-sm font-bold shadow-lg sm:px-5 sm:text-base"

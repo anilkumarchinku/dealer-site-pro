@@ -142,26 +142,23 @@ function usedTwoWheelersToCars(vehicles: TwoWheelerUsedVehicle[]): Car[] {
 // ── No Stock page ─────────────────────────────────────────────────────────────
 function NoStockPage({ dealerName, phone, email }: { dealerName: string; phone: string; email: string }) {
     return (
-        <div className="min-h-screen bg-gray-950 flex items-center justify-center">
+        <div className="min-h-screen bg-gray-950 flex items-center justify-center px-4">
             <div className="text-center px-6 max-w-md">
-                <div className="w-20 h-20 rounded-2xl bg-green-500/10 flex items-center justify-center mx-auto mb-6 border border-green-500/20">
-                    <span className="text-4xl">🏍️</span>
-                </div>
                 <h1 className="text-3xl font-bold text-white mb-2">{dealerName}</h1>
-                <p className="text-green-400 font-semibold mb-3">Stock Update Coming Soon</p>
+                <p className="text-green-400 font-semibold mb-3">Inventory is being updated</p>
                 <p className="text-gray-400 text-sm mb-6">
                     Our two-wheeler inventory is being updated. Contact us directly for available bikes and scooters.
                 </p>
                 <div className="space-y-2">
                     <a href={`tel:${phone}`} className="flex items-center justify-center gap-2 text-blue-400 hover:text-blue-300 text-sm">
-                        📞 {phone}
+                        Call {phone}
                     </a>
                     <a href={`mailto:${email}`} className="flex items-center justify-center gap-2 text-blue-400 hover:text-blue-300 text-sm">
-                        ✉️ {email}
+                        Email {email}
                     </a>
                 </div>
-                <div className="mt-10 text-xs text-gray-600">
-                    Powered by <span className="text-blue-500 font-semibold">DealerSite Pro</span>
+                <div className="mt-10 text-xs text-gray-400">
+                    Powered by <span className="text-blue-400 font-semibold">DealerSite Pro</span>
                 </div>
             </div>
         </div>
@@ -177,7 +174,7 @@ function TwoWheelerPortal({
 }) {
     const prefix = `/sites/${slug}/two-wheelers`
 
-    const siteCards: { label: string; sublabel: string; href: string; color: string; emoji: string }[] = []
+    const siteCards: { label: string; sublabel: string; href: string; color: string }[] = []
 
     if (isHybrid) {
         siteCards.push({
@@ -185,14 +182,12 @@ function TwoWheelerPortal({
             sublabel: brands.length > 0 ? brands.join(' · ') : 'Latest models · Factory fresh',
             href: `${prefix}/new`,
             color: 'green',
-            emoji: '✨',
         })
         siteCards.push({
             label: 'Pre-Owned Bikes & Scooters',
             sublabel: 'Certified used · Best prices',
             href: `${prefix}/used`,
             color: 'amber',
-            emoji: '🛡️',
         })
     } else {
         // Multi-brand new-only: one card per brand, each with its own brand-filtered URL
@@ -203,7 +198,6 @@ function TwoWheelerPortal({
                 sublabel: 'New Two-Wheelers · Authorised Dealer',
                 href: `${prefix}/new?brand=${encodeURIComponent(brandSlug)}`,
                 color: 'green',
-                emoji: '🏍️',
             })
         })
     }
@@ -241,12 +235,9 @@ function TwoWheelerPortal({
                                 href={card.href}
                                 className={`group flex flex-col gap-4 p-6 rounded-2xl border-2 ${c.border} ${c.bg} hover:scale-[1.02] transition-all duration-200`}
                             >
-                                <div className="flex items-center gap-3">
-                                    <span className="text-3xl">{card.emoji}</span>
-                                    <div>
-                                        <p className="text-white font-bold text-base">{card.label}</p>
-                                        <p className={`text-xs mt-0.5 ${c.text}`}>{card.sublabel}</p>
-                                    </div>
+                                <div>
+                                    <p className="text-white font-bold text-base">{card.label}</p>
+                                    <p className={`text-xs mt-1 ${c.text}`}>{card.sublabel}</p>
                                 </div>
                                 <span className={`text-xs font-semibold ${c.text} group-hover:underline`}>
                                     Explore {card.label} →
@@ -261,7 +252,7 @@ function TwoWheelerPortal({
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
                         <a
                             href={`tel:${phone}`}
-                            className="flex items-center gap-2 px-6 py-3 rounded-xl bg-green-500 hover:bg-green-600 text-white text-sm font-semibold transition-colors w-full sm:w-auto justify-center"
+                            className="flex items-center gap-2 px-6 py-3 rounded-xl bg-green-700 hover:bg-green-800 text-white text-sm font-semibold transition-colors w-full sm:w-auto justify-center"
                         >
                             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
@@ -282,8 +273,8 @@ function TwoWheelerPortal({
                     </div>
                 </div>
 
-                <p className="text-center mt-8 text-xs text-gray-700">
-                    Powered by <span className="text-blue-500 font-semibold">DealerSite Pro</span>
+                <p className="text-center mt-8 text-xs text-gray-400">
+                    Powered by <span className="text-blue-400 font-semibold">DealerSite Pro</span>
                 </p>
             </div>
         </div>

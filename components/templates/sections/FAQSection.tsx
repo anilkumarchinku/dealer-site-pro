@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
+import { getReadableAccent } from '@/lib/utils/color-contrast';
 
 interface FAQSectionProps {
     brandColor: string;
@@ -131,6 +132,8 @@ function FAQItem({
     onToggle: () => void;
     brandColor: string;
 }) {
+    const brandAccent = getReadableAccent(brandColor);
+
     return (
         <div className="border-b border-gray-200">
             <button
@@ -145,7 +148,7 @@ function FAQItem({
                     className="w-5 h-5 shrink-0 text-gray-600 transition-transform duration-300"
                     style={{
                         transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',
-                        color: isOpen ? brandColor : undefined,
+                        color: isOpen ? brandAccent : undefined,
                     }}
                 />
             </button>
@@ -166,6 +169,7 @@ function FAQItem({
 export function FAQSection({ brandColor, vehicleType, dealerName }: FAQSectionProps) {
     const faqs = getFAQs(vehicleType);
     const [openIndex, setOpenIndex] = useState<number | null>(0);
+    const brandAccent = getReadableAccent(brandColor);
 
     function toggle(index: number) {
         setOpenIndex(openIndex === index ? null : index);
@@ -178,7 +182,7 @@ export function FAQSection({ brandColor, vehicleType, dealerName }: FAQSectionPr
                 <div className="text-center mb-10">
                     <span
                         className="text-sm font-semibold uppercase tracking-widest"
-                        style={{ color: brandColor }}
+                        style={{ color: brandAccent }}
                     >
                         Frequently Asked
                     </span>
@@ -209,7 +213,7 @@ export function FAQSection({ brandColor, vehicleType, dealerName }: FAQSectionPr
                     <a
                         href="#contact"
                         className="font-semibold hover:underline"
-                        style={{ color: brandColor }}
+                        style={{ color: brandAccent }}
                     >
                         Contact us
                     </a>{' '}

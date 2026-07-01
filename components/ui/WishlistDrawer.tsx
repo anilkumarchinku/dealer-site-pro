@@ -18,6 +18,8 @@ import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import { formatPriceInLakhs } from '@/lib/utils/car-utils';
 import { normalizeLeadPhone } from '@/lib/validations/lead';
+import { getContrastText, getReadableAccent } from '@/lib/utils/color-contrast';
+import { brandNameToId, getVehicleImageUrls } from '@/lib/utils/brand-model-images';
 
 interface WishlistDrawerProps {
     cars: Car[];   // all dealer cars — we filter by wishlist IDs
@@ -32,6 +34,8 @@ export function WishlistDrawer({ cars, dealerId, brandColor = '#A8793A' }: Wishl
     const [alertStatus, setAlertStatus] = useState<'idle' | 'loading' | 'done' | 'error'>('idle');
     const { items, remove, clear, savedCarData, hydrate } = useWishlistStore();
     const [mounted, setMounted] = useState(false);
+    const brandAccent = getReadableAccent(brandColor);
+    const onBrandText = getContrastText(brandColor);
 
     useEffect(() => { setMounted(true); }, []);
 
@@ -128,7 +132,7 @@ export function WishlistDrawer({ cars, dealerId, brandColor = '#A8793A' }: Wishl
                 {/* Header */}
                 <div className="flex items-center justify-between px-5 py-4 border-b border-gray-100 shrink-0">
                     <div className="flex items-center gap-2">
-                        <Heart className="w-4 h-4" style={{ color: brandColor }} />
+                        <Heart className="w-4 h-4" style={{ color: brandAccent }} />
                         <span className="font-semibold text-gray-900">Saved Cars ({items.length})</span>
                     </div>
                     <div className="flex items-center gap-2">
@@ -153,17 +157,19 @@ export function WishlistDrawer({ cars, dealerId, brandColor = '#A8793A' }: Wishl
                         </div>
                     ) : savedCars.map(car => {
                         const price = formatPriceInLakhs(car.pricing?.exShowroom?.min ?? null);
+                        const category = car.vehicleCategory as '2w' | '3w' | '4w' | undefined;
+                        const imageSrc = category
+                            ? getVehicleImageUrls(category, brandNameToId(car.make, category), car.model, car.images.hero)[0] ?? null
+                            : null;
                         return (
                             <div key={car.id} className="flex gap-3 p-3 rounded-xl border border-gray-100 bg-gray-50">
-                                {car.images.hero ? (
-                                    <div className="relative w-20 h-14 rounded-lg overflow-hidden shrink-0 bg-white">
-                                        <Image src={car.images.hero} alt={`${car.make} ${car.model}`} fill className="object-cover" sizes="80px" />
+                                {imageSrc ? (
+                                    <div className="relative w-20 h-14 rounded-lg overflow-hidden shrink-0 bg-white" data-model-image-source={imageSrc.includes('/storage/v1/object/public/') ? 'inventory-photo' : 'resolved-model'}>
+                                        <Image src={imageSrc} alt={`${car.make} ${car.model}`} fill className="object-cover" sizes="80px" unoptimized={imageSrc.startsWith('http')} />
                                     </div>
-                                ) : (
-                                    <div className="w-20 h-14 rounded-lg bg-white border border-gray-200 flex items-center justify-center shrink-0 text-2xl">🚗</div>
-                                )}
+                                ) : null}
                                 <div className="flex-1 min-w-0">
-                                    <p className="text-xs font-semibold uppercase tracking-wide truncate" style={{ color: brandColor }}>{car.make}</p>
+                                    <p className="text-xs font-semibold uppercase tracking-wide truncate" style={{ color: brandAccent }}>{car.make}</p>
                                     <p className="text-sm font-bold text-gray-900 leading-tight">{car.model}</p>
                                     {car.variant && <p className="text-xs text-gray-600 truncate">{car.variant}</p>}
                                     <p className="text-sm font-bold mt-1 text-gray-900">{price}</p>
@@ -180,7 +186,7 @@ export function WishlistDrawer({ cars, dealerId, brandColor = '#A8793A' }: Wishl
                 {savedCars.length > 0 && (
                     <div className="border-t border-gray-100 px-4 py-4 shrink-0">
                         <div className="flex items-center gap-2 mb-2">
-                            <Bell className="w-4 h-4" style={{ color: brandColor }} />
+                            <Bell className="w-4 h-4" style={{ color: brandAccent }} />
                             <span className="text-sm font-semibold text-gray-900">Get Price Drop Alerts</span>
                         </div>
                         {alertStatus === 'done' ? (
@@ -204,7 +210,7 @@ export function WishlistDrawer({ cars, dealerId, brandColor = '#A8793A' }: Wishl
                                         placeholder="10-digit mobile number"
                                         className="flex-1 px-3 py-2 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-gray-400 text-gray-900 bg-white placeholder:text-gray-600"
                                     />
-                                    <Button type="submit" size="sm" disabled={alertStatus === 'loading'} style={{ backgroundColor: brandColor }}>
+                                    <Button type="submit" size="sm" disabled={alertStatus === 'loading'} style={{ backgroundColor: brandColor, color: onBrandText }}>
                                         <Send className="w-3.5 h-3.5" />
                                     </Button>
                                 </div>
@@ -230,7 +236,7 @@ export function WishlistDrawer({ cars, dealerId, brandColor = '#A8793A' }: Wishl
                 {items.length > 0 && (
                     <span
                         className="absolute -top-0.5 -right-0.5 w-4 h-4 rounded-full text-[10px] font-bold text-white flex items-center justify-center"
-                        style={{ backgroundColor: brandColor }}
+                        style={{ backgroundColor: brandColor, color: onBrandText }}
                     >
                         {items.length}
                     </span>

@@ -100,13 +100,7 @@ function CarImage({ car, fill, className, sizes }: {
 
     const src = urls[idx] ?? null;
 
-    if (!src) {
-        return (
-            <div className="flex items-center justify-center h-full">
-                <CarIcon className="w-8 h-8 text-muted-foreground" />
-            </div>
-        );
-    }
+    if (!src) return null;
 
     return (
         <Image
@@ -125,6 +119,32 @@ function CarImage({ car, fill, className, sizes }: {
     );
 }
 
+function CarImageFrame({ car }: { car: Car }) {
+    const urls = useResolvedCarImage(car);
+    const [idx, setIdx] = useState(0);
+    const src = urls[idx] ?? null;
+
+    if (!src) return null;
+
+    return (
+        <div className="relative aspect-[16/10] bg-muted rounded-lg overflow-hidden mb-2">
+            <Image
+                src={src}
+                alt={`${car.make} ${car.model}`}
+                fill
+                unoptimized
+                className="object-cover"
+                sizes="(max-width: 768px) 50vw, 25vw"
+                onError={() => {
+                    if (idx < urls.length - 1) {
+                        setIdx((prev) => prev + 1);
+                    }
+                }}
+            />
+        </div>
+    );
+}
+
 /** Smaller thumbnail variant for search results */
 function CarThumbnail({ car }: { car: Car }) {
     const urls = useResolvedCarImage(car);
@@ -132,13 +152,7 @@ function CarThumbnail({ car }: { car: Car }) {
 
     const src = urls[idx] ?? null;
 
-    if (!src) {
-        return (
-            <div className="flex items-center justify-center h-full">
-                <CarIcon className="w-4 h-4 text-muted-foreground" />
-            </div>
-        );
-    }
+    if (!src) return null;
 
     return (
         <Image
@@ -153,6 +167,32 @@ function CarThumbnail({ car }: { car: Car }) {
                 }
             }}
         />
+    );
+}
+
+function CarThumbnailFrame({ car }: { car: Car }) {
+    const urls = useResolvedCarImage(car);
+    const [idx, setIdx] = useState(0);
+    const src = urls[idx] ?? null;
+
+    if (!src) return null;
+
+    return (
+        <div className="relative w-12 h-8 bg-muted rounded overflow-hidden shrink-0">
+            <Image
+                src={src}
+                alt=""
+                fill
+                unoptimized
+                className="object-cover"
+                sizes="48px"
+                onError={() => {
+                    if (idx < urls.length - 1) {
+                        setIdx((prev) => prev + 1);
+                    }
+                }}
+            />
+        </div>
     );
 }
 
@@ -249,14 +289,7 @@ export function ComparePageContent() {
                                         <X className="w-3.5 h-3.5" />
                                     </button>
                                     <CardContent className="p-3 text-center">
-                                        <div className="relative aspect-[16/10] bg-muted rounded-lg overflow-hidden mb-2">
-                                            <CarImage
-                                                car={car}
-                                                fill
-                                                className="object-cover"
-                                                sizes="(max-width: 768px) 50vw, 25vw"
-                                            />
-                                        </div>
+                                        <CarImageFrame car={car} />
                                         <div className="flex items-center justify-center gap-1">
                                             {getVehicleBrandLogo(car) && (
                                                 <span className="inline-flex items-center justify-center rounded bg-white border border-slate-200 dark:border-slate-700 p-0.5 shrink-0">
@@ -317,9 +350,7 @@ export function ComparePageContent() {
                                             onClick={() => addCar(car)}
                                             className="w-full flex items-center gap-3 p-2.5 rounded-lg hover:bg-muted/50 transition-colors text-left"
                                         >
-                                            <div className="relative w-12 h-8 bg-muted rounded overflow-hidden shrink-0">
-                                                <CarThumbnail car={car} />
-                                            </div>
+                                            <CarThumbnailFrame car={car} />
                                             <div className="flex-1 min-w-0">
                                                 <p className="text-sm font-medium flex items-center gap-1.5">
                                                     {getVehicleBrandLogo(car) && (

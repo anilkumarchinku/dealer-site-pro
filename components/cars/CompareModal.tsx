@@ -131,22 +131,27 @@ export default function CompareModal({ open, onOpenChange, brandColor, dealerId,
                                 </th>
 
                                 {/* Car columns */}
-                                {selectedCars.map((car) => (
+                                {selectedCars.map((car) => {
+                                    const imageSrc = resolveCarImage(car)
+
+                                    return (
                                     <th
                                         key={car.id}
                                         className="min-w-[10rem] py-4 px-4 align-top"
                                     >
                                         <div className="flex flex-col items-center gap-2">
-                                            <div className="relative w-full h-24 rounded-xl overflow-hidden bg-gray-100">
-                                                <Image
-                                                    src={resolveCarImage(car)}
-                                                    alt={`${car.make} ${car.model}`}
-                                                    fill
-                                                    className="object-cover"
-                                                    sizes="(max-width: 640px) 45vw, 240px"
-                                                    unoptimized
-                                                />
-                                            </div>
+                                            {imageSrc && (
+                                                <div className="relative w-full h-24 rounded-xl overflow-hidden bg-gray-100">
+                                                    <Image
+                                                        src={imageSrc}
+                                                        alt={`${car.make} ${car.model}`}
+                                                        fill
+                                                        className="object-cover"
+                                                        sizes="(max-width: 640px) 45vw, 240px"
+                                                        unoptimized
+                                                    />
+                                                </div>
+                                            )}
                                             <div className="text-center">
                                                 <p className="font-semibold text-gray-900 text-sm leading-tight">
                                                     {car.make} {car.model}
@@ -165,7 +170,7 @@ export default function CompareModal({ open, onOpenChange, brandColor, dealerId,
                                             </button>
                                         </div>
                                     </th>
-                                ))}
+                                )})}
                             </tr>
                         </thead>
 

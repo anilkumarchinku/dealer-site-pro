@@ -3,7 +3,7 @@
 import { useId, useState } from 'react';
 import { CheckCircle2, ArrowLeftRight } from 'lucide-react';
 import { normalizeLeadPhone } from '@/lib/validations/lead';
-import { getContrastText } from '@/lib/utils/color-contrast';
+import { getContrastText, getReadableAccent } from '@/lib/utils/color-contrast';
 
 interface ExchangeSectionProps {
     brandColor: string;
@@ -52,6 +52,7 @@ export function ExchangeSection({
 
     // Readable text color for the brand-filled CTA (light brands need dark text).
     const onBrandText = getContrastText(brandColor);
+    const brandAccent = getReadableAccent(brandColor);
 
     // Stable, unique ids so each label is programmatically tied to its input.
     const fieldId = useId();
@@ -128,7 +129,7 @@ export function ExchangeSection({
                     <div>
                         <span
                             className="text-sm font-semibold uppercase tracking-widest"
-                            style={{ color: brandColor }}
+                            style={{ color: brandAccent }}
                         >
                             Get Best Value
                         </span>
@@ -150,7 +151,7 @@ export function ExchangeSection({
                                 <li key={benefit} className="flex items-center gap-3">
                                     <CheckCircle2
                                         className="w-5 h-5 shrink-0"
-                                        style={{ color: brandColor }}
+                                        style={{ color: brandAccent }}
                                     />
                                     <span className="text-gray-700 font-medium">{benefit}</span>
                                 </li>
@@ -168,7 +169,7 @@ export function ExchangeSection({
                                 className="flex items-center justify-center w-12 h-12 rounded-full"
                                 style={{ backgroundColor: `${brandColor}1a` }}
                             >
-                                <ArrowLeftRight className="w-6 h-6" style={{ color: brandColor }} />
+                                <ArrowLeftRight className="w-6 h-6" style={{ color: brandAccent }} />
                             </div>
                             <p className="font-semibold text-gray-900">
                                 Get a fair, transparent exchange value for your old {vehicleLabel.toLowerCase()}.
@@ -184,7 +185,7 @@ export function ExchangeSection({
                                     className="w-16 h-16 rounded-full flex items-center justify-center"
                                     style={{ backgroundColor: `${brandColor}1a` }}
                                 >
-                                    <CheckCircle2 className="w-8 h-8" style={{ color: brandColor }} />
+                                    <CheckCircle2 className="w-8 h-8" style={{ color: brandAccent }} />
                                 </div>
                                 <h3 className="text-xl font-bold text-gray-900">Request Received!</h3>
                                 <p className="text-gray-600 text-sm max-w-xs">

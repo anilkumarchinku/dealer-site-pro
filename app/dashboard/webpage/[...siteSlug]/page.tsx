@@ -447,7 +447,7 @@ export default function SiteEditorPage() {
                                 src={previewUrl}
                                 className={cn(
                                     "rounded-xl border border-border shadow-lg bg-white transition-all duration-300",
-                                    device === "desktop" ? "w-full h-[580px]" : "w-[390px] h-[580px]"
+                                    device === "desktop" ? "w-full h-[580px]" : "w-full max-w-[390px] h-[580px]"
                                 )}
                                 title="Site preview"
                             />
@@ -480,7 +480,7 @@ export default function SiteEditorPage() {
                                     <label className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
                                         Template Style
                                     </label>
-                                    <div className="grid grid-cols-2 gap-2">
+                                    <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
                                         {TEMPLATES.map(t => (
                                             <button
                                                 key={t.id}

@@ -13,6 +13,7 @@ import { fetchLeads, createWalkInLead, patchLead, type ExternalLead } from "@/li
 import { toast } from "@/lib/utils/toast";
 import { PremiumEmptyState, PremiumPageHeader } from "@/components/dashboard/premium-ui";
 import { timeAgo, titleCaseFromSnake as formatLeadType } from "@/lib/utils/format";
+import { useDashboardRealtimeRefresh } from "@/lib/hooks/use-dashboard-realtime-refresh";
 
 function formatSourceUrl(url: string): string {
     if (!url) return "";
@@ -68,6 +69,7 @@ const cyeproSyncConfig: Record<string, { bg: string; text: string; label: string
 };
 
 const PAGE_SIZE = 20;
+const REALTIME_TABLES = ["leads"];
 
 export default function LeadsPage() {
     const [searchQuery, setSearchQuery] = useState("");
@@ -96,6 +98,7 @@ export default function LeadsPage() {
     };
 
     useEffect(() => { loadLeads(); }, []); // eslint-disable-line
+    useDashboardRealtimeRefresh({ tables: REALTIME_TABLES, onChange: loadLeads });
 
     // "He called the customer" — records contacted_at + flips status to contacted.
     const handleMarkCalled = async (id: string) => {
@@ -586,7 +589,7 @@ export default function LeadsPage() {
                         </DialogTitle>
                     </DialogHeader>
                     <div className="space-y-3">
-                        <div className="grid grid-cols-2 gap-3">
+                        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                             <div className="space-y-1">
                                 <Label htmlFor="wl-name">Customer name *</Label>
                                 <Input id="wl-name" value={form.customer_name}
@@ -612,7 +615,7 @@ export default function LeadsPage() {
                                 onChange={(e) => setForm(f => ({ ...f, vehicle_interest: e.target.value }))}
                                 placeholder="e.g. Hyundai Creta SX" />
                         </div>
-                        <div className="grid grid-cols-2 gap-3">
+                        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                             <div className="space-y-1">
                                 <Label>Priority</Label>
                                 <Select value={form.priority} onValueChange={(v) => setForm(f => ({ ...f, priority: v as "hot" | "warm" | "cold" }))}>

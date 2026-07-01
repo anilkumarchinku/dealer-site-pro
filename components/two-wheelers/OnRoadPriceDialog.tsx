@@ -27,6 +27,7 @@ import {
 } from '@/components/ui/select'
 import { Badge } from '@/components/ui/badge'
 import { Bike, MapPin, Shield, FileText, Wallet, Info, Send } from 'lucide-react'
+import { getContrastText, getReadableAccent } from '@/lib/utils/color-contrast'
 
 interface RawVariant {
     name?: string
@@ -109,6 +110,8 @@ export function OnRoadPriceDialog({
     const [stateCode, setStateCode] = useState('KA')
     const [variantId, setVariantId] = useState('')
     const [financed, setFinanced] = useState(false)
+    const onBrandText = getContrastText(brandColor)
+    const brandAccent = getReadableAccent(brandColor)
 
     useEffect(() => {
         const targetLabel = normalizeVariantLabel(defaultVariantLabel)
@@ -219,7 +222,7 @@ export function OnRoadPriceDialog({
                             </div>
                         </div>
 
-                        <div className="mt-6 rounded-2xl p-5 text-white" style={{ backgroundColor: brandColor }}>
+                        <div className="mt-6 rounded-2xl p-5" style={{ backgroundColor: brandColor, color: onBrandText }}>
                             <div className="flex items-center gap-2 text-sm opacity-90">
                                 <Bike className="h-4 w-4" />
                                 {activeVariant?.label || `${brand} ${model}`}
@@ -242,7 +245,7 @@ export function OnRoadPriceDialog({
                                         </div>
                                         <div className="rounded-2xl px-5 py-4 text-right" style={{ backgroundColor: `${brandColor}12` }}>
                                             <p className="text-xs uppercase tracking-wide text-gray-600">Total payable</p>
-                                            <p className="mt-1 text-3xl font-extrabold" style={{ color: brandColor }}>
+                                            <p className="mt-1 text-3xl font-extrabold" style={{ color: brandAccent }}>
                                                 {formatInr(breakdown.total)}
                                             </p>
                                         </div>
@@ -285,7 +288,7 @@ export function OnRoadPriceDialog({
                                         ))}
                                         <div className="flex items-center justify-between px-5 py-4 text-base font-bold">
                                             <span>Total on-road price</span>
-                                            <span style={{ color: brandColor }}>{formatInr(breakdown.total)}</span>
+                                            <span style={{ color: brandAccent }}>{formatInr(breakdown.total)}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -309,8 +312,8 @@ export function OnRoadPriceDialog({
                                         <Button
                                             type="button"
                                             onClick={handleEnquiry}
-                                            className="text-white hover:opacity-90"
-                                            style={{ backgroundColor: brandColor }}
+                                            className="hover:opacity-90"
+                                            style={{ backgroundColor: brandColor, color: onBrandText }}
                                         >
                                             <Send className="mr-2 h-4 w-4" />
                                             {enquiryLabel}

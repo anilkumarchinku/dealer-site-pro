@@ -19,7 +19,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import { Slider } from '@/components/ui/slider';
 import { Badge } from '@/components/ui/badge';
-import { getVehicleImageUrls, brandNameToId, modelToSlug } from '@/lib/utils/brand-model-images';
+import { getVehicleImageUrls, brandNameToId, modelToSlug, isUsableVehicleImageUrl } from '@/lib/utils/brand-model-images';
 import { resolveVehicleColorHex } from '@/lib/utils/resolve-vehicle-color';
 import {
     defaultTwoWheelerVariantName,
@@ -62,6 +62,18 @@ interface BikeListItem {
     top_speed_kmph: number | null;
     price_min_paise: number;
     image_url: string | null;
+}
+
+function modelImageSourceKind(src: string | null | undefined) {
+    const value = String(src ?? '').toLowerCase();
+    if (
+        value.includes('/storage/v1/object/public/dealer-assets/vehicles/') ||
+        value.includes('/storage/v1/object/public/dealer-assets/sell-requests/') ||
+        value.includes('/storage/v1/object/public/vehicle-images/')
+    ) {
+        return 'inventory-photo';
+    }
+    return 'resolved-model';
 }
 
 type BikeData = BikeListItem & {
@@ -423,7 +435,7 @@ export default function BikeDetailPage({ params }: Props) {
                             name: c.name?.trim() ?? '',
                             image: normalizeTwoWColorImagePath(c.image ?? c.file, brandId, modelSlug) ?? '',
                         }))
-                        .filter((color: { name: string; image: string }) => color.name && color.image);
+                        .filter((color: { name: string; image: string }) => color.name && isUsableVehicleImageUrl(color.image));
 
                     if (colors.length > 0) {
                         setColorImages(colors);
@@ -1307,27 +1319,24 @@ export default function BikeDetailPage({ params }: Props) {
                                             simBike.model,
                                             simBike.image_url
                                         );
+                                        if (simImageUrls.length === 0) return null;
                                         return (
                                             <Link
                                                 key={simBike.id}
                                                 href={`/bikes/${simBike.id}`}
+                                                data-vehicle-card="true"
+                                                data-model-image-source={modelImageSourceKind(simImageUrls[0])}
                                                 className="group overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                                             >
                                                 <div className="relative aspect-[16/10] bg-gray-50">
-                                                    {simImageUrls.length > 0 ? (
-                                                        <Image
-                                                            src={simImageUrls[0]}
-                                                            alt={`${simBike.make} ${simBike.model}`}
-                                                            fill
-                                                            unoptimized
-                                                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                                                            className="object-contain transition-transform duration-500 group-hover:scale-105"
-                                                        />
-                                                    ) : (
-                                                        <div className="flex h-full items-center justify-center text-sm text-gray-400">
-                                                            <Bike className="w-10 h-10" />
-                                                        </div>
-                                                    )}
+                                                    <Image
+                                                        src={simImageUrls[0]}
+                                                        alt={`${simBike.make} ${simBike.model}`}
+                                                        fill
+                                                        unoptimized
+                                                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                                                        className="object-contain transition-transform duration-500 group-hover:scale-105"
+                                                    />
                                                 </div>
                                                 <div className="p-4">
                                                     <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-blue-600">

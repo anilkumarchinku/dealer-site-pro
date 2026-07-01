@@ -12,6 +12,7 @@ ALTER TABLE public.dealers
     ADD COLUMN IF NOT EXISTS sells_four_wheelers boolean NOT NULL DEFAULT false,
     ADD COLUMN IF NOT EXISTS vehicle_type text,
     ADD COLUMN IF NOT EXISTS cyepro_api_key text,
+    ADD COLUMN IF NOT EXISTS hero_image_urls text[] NOT NULL DEFAULT '{}',
     ADD COLUMN IF NOT EXISTS branches jsonb;
 
 DROP VIEW IF EXISTS public.public_dealer_site_service_centers;
@@ -44,6 +45,7 @@ SELECT
     d.vehicle_type,
     d.logo_url,
     d.hero_image_url,
+    d.hero_image_urls,
     d.branches
 FROM public.dealers d
 WHERE d.onboarding_complete = true
