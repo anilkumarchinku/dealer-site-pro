@@ -34,7 +34,7 @@ Legend:
 - [x] Checked: `/auth/login`, `/auth/register`, `/auth/forgot-password`, `/auth/update-password`, `/reset`
 - [x] Fixed earlier in this workstream: register page no longer shows the extra left security panel.
 - [x] Fixed: `/auth/update-password` desktop card now uses a bounded grid column and `min-w-0` form container so the reset panel does not protrude past the viewport.
-- [ ] Pending: normalize validation message wording across auth, onboarding, and public lead forms.
+- [x] Source-reviewed: validation wording across auth, onboarding, contact, and public lead forms is now consistent with visible required/optional fields; optional public lead emails validate only when provided.
 
 ## Dealer Dashboard Pages Summary
 
@@ -124,6 +124,7 @@ Legend:
 - [x] `git diff --check`
 - [x] `npm run build` completed successfully and generated all 204 static pages; remaining output was warnings only.
 - [x] Repeat table-risk source scan: remaining unbounded shared/detail table matches were reviewed and fixed where they could affect mobile/tablet readability.
+- [x] Validation source scan: active auth, onboarding, contact, 2W/3W lead, booking, and legacy lead forms were checked for required/optional email mismatch; no active mismatch remained.
 
 ## Detailed Route Inventory
 
