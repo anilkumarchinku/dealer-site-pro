@@ -41,6 +41,19 @@ export function dashboardSiteHref(slug: string, siteOrigin?: DashboardSiteOrigin
     return path
 }
 
+export function withSiteLaunchLoader(href: string, trigger: 'launch' | 'update' = 'launch'): string {
+    const paramName = trigger === 'update' ? 'site_updated' : 'site_launch'
+    try {
+        const isAbsolute = /^https?:\/\//i.test(href)
+        const url = new URL(href, isAbsolute ? undefined : 'https://dealersite.local')
+        url.searchParams.set(paramName, '1')
+        return isAbsolute ? url.toString() : `${url.pathname}${url.search}${url.hash}`
+    } catch {
+        const separator = href.includes('?') ? '&' : '?'
+        return `${href}${separator}${paramName}=1`
+    }
+}
+
 export function dashboardSiteDisplayUrl(slug: string, siteOrigin?: DashboardSiteOrigin | string | null): string {
     const normalized = normalizeSiteSlug(slug)
     if (USE_SUBDOMAIN && normalized) return dealerSiteUrl(normalized)

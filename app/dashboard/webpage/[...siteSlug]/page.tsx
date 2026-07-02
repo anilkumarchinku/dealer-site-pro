@@ -15,7 +15,7 @@ import {
 } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { useDashboardSiteOrigin } from "@/lib/hooks/use-dashboard-site-origin"
-import { dashboardSiteDisplayUrl, dashboardSiteHref, dashboardSitePath } from "@/lib/utils/dashboard-site-links"
+import { dashboardSiteDisplayUrl, dashboardSiteHref, dashboardSitePath, withSiteLaunchLoader } from "@/lib/utils/dashboard-site-links"
 import { parseDashboardSiteEditorTarget } from "@/lib/utils/dashboard-site-editor"
 
 // ── Types ──────────────────────────────────────────────────────────────────────
@@ -284,6 +284,7 @@ export default function SiteEditorPage() {
     // ── Derived ───────────────────────────────────────────────────────────────
     const previewUrl     = dashboardSitePath(siteSlug)
     const liveUrl        = dashboardSiteHref(siteSlug, siteOrigin)
+    const visitUrl       = saveOk ? withSiteLaunchLoader(liveUrl, 'update') : liveUrl
     const liveUrlDisplay = dashboardSiteDisplayUrl(siteSlug, siteOrigin)
 
     return (
@@ -339,7 +340,7 @@ export default function SiteEditorPage() {
                         </div>
 
                         <a
-                            href={liveUrl}
+                            href={visitUrl}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center gap-1.5 text-sm font-mono text-primary hover:underline"
@@ -361,7 +362,7 @@ export default function SiteEditorPage() {
                                     : <><Copy className="w-3.5 h-3.5" /> Copy Link</>}
                             </Button>
                             <Button size="sm" asChild className="gap-1.5 h-8 text-xs">
-                                <a href={liveUrl} target="_blank" rel="noopener noreferrer">
+                                <a href={visitUrl} target="_blank" rel="noopener noreferrer">
                                     <ExternalLink className="w-3.5 h-3.5" />
                                     Visit Site
                                 </a>
@@ -427,7 +428,7 @@ export default function SiteEditorPage() {
                                 title="Open live site"
                                 className="w-8 h-8 text-muted-foreground"
                             >
-                                <a href={liveUrl} target="_blank" rel="noopener noreferrer">
+                                <a href={visitUrl} target="_blank" rel="noopener noreferrer">
                                     <ExternalLink className="w-4 h-4" />
                                 </a>
                             </Button>

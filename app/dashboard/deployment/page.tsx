@@ -11,6 +11,7 @@ import {
 } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { dealerSiteHref } from "@/lib/utils/domain"
+import { withSiteLaunchLoader } from "@/lib/utils/dashboard-site-links"
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 
@@ -217,7 +218,7 @@ export default function DeploymentPage() {
                             </p>
                             {multiTenantUrl && (
                                 <a
-                                    href={multiTenantUrl}
+                                    href={withSiteLaunchLoader(multiTenantUrl)}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="inline-flex items-center gap-2 text-sm text-primary hover:underline"
@@ -246,7 +247,7 @@ export default function DeploymentPage() {
 
                         {multiTenantUrl && (
                             <Button asChild className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700">
-                                <a href={multiTenantUrl} target="_blank" rel="noopener noreferrer">
+                                <a href={withSiteLaunchLoader(multiTenantUrl)} target="_blank" rel="noopener noreferrer">
                                     <ExternalLink className="mr-2 w-4 h-4" />
                                     View My Site
                                 </a>
@@ -315,7 +316,7 @@ export default function DeploymentPage() {
                         <p className="text-sm text-muted-foreground">Live URL</p>
                         {state.siteUrl ? (
                             <a
-                                href={state.siteUrl}
+                                href={withSiteLaunchLoader(state.siteUrl)}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-sm font-semibold mt-1 text-primary hover:underline flex items-center gap-1 truncate"
@@ -416,7 +417,7 @@ export default function DeploymentPage() {
                                 Your site is live!
                             </p>
                             <a
-                                href={state.siteUrl}
+                                href={withSiteLaunchLoader(state.siteUrl)}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center gap-2 text-sm text-primary hover:underline"
