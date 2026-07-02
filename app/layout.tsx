@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { PWAProvider } from "@/components/PWAProvider";
+import { PublicSiteFirstPaintLoader } from "@/components/sites/PublicSiteFirstPaintLoader";
 import '@/lib/env' // Validate required env vars at startup (throws in production if missing)
 
 export const metadata: Metadata = {
@@ -47,6 +48,7 @@ export default function RootLayout({
                 <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
             </head>
             <body className="font-sans antialiased">
+                <PublicSiteFirstPaintLoader />
                 <PWAProvider />
                 <ThemeProvider>
                     <div className="min-h-screen gradient-bg">
