@@ -36,17 +36,17 @@ type DealerPreviewProps = {
 
 export function OnboardingLogo({ className = "" }: { className?: string }) {
     return (
-        <Link href="/" className={cn("inline-flex items-center gap-3 text-[#071436]", className)}>
+        <Link href="/" className={cn("inline-flex items-center gap-3 text-[#0B0E12]", className)}>
             <Image
                 src="/dealersite-pro-shield.png"
                 alt="DealerSite Pro"
                 width={34}
                 height={34}
-                className="h-8 w-8 object-contain"
+                className="size-8 object-contain"
                 priority
             />
             <span className="text-lg font-black tracking-[-0.02em]">
-                DealerSite <span className="text-[#155EEF]">Pro</span>
+                DealerSite <span className="text-[#A8793A]">Pro</span>
             </span>
         </Link>
     );
@@ -82,15 +82,18 @@ export function FlowTopBar({
     onExit,
 }: FlowTopBarProps) {
     return (
-        <div className="flex min-h-12 items-center justify-between gap-4 border-b border-[#E3E9F2] px-5 sm:px-7">
+        <div className="flex min-h-16 items-center justify-between gap-4 border-b border-[#E7E0D7] bg-[#FFFDF7]/90 px-5 shadow-[0_12px_30px_rgba(11,14,18,0.04)] backdrop-blur sm:px-7">
             <div className="flex min-w-0 items-center gap-3">
                 <OnboardingLogo className="min-w-0" />
+                <span className="hidden rounded-full border border-[#E7E0D7] bg-[#FBF8F1] px-3 py-1 text-[11px] font-black uppercase tracking-[0.16em] text-[#6F6A61] lg:inline-flex">
+                    Setup after login
+                </span>
             </div>
 
             <div className="flex shrink-0 items-center gap-3">
                 {showHelp && (
                     <div className="hidden items-center gap-2 text-xs font-semibold text-[#35445C] md:flex">
-                        <Headphones className="h-4 w-4 text-[#155EEF]" />
+                        <Headphones className="size-4 text-[#A8793A]" />
                         <span>Need help?</span>
                         <span className="font-black text-[#071436]">1800-000-1234</span>
                     </div>
@@ -100,9 +103,9 @@ export function FlowTopBar({
                         type="button"
                         onClick={onBack}
                         aria-label="Go back"
-                        className="inline-flex h-9 shrink-0 items-center justify-center gap-1.5 rounded-md border border-[#D8E0EA] bg-white px-2.5 text-xs font-black text-[#35445C] transition hover:border-[#155EEF] hover:bg-[#F5F8FF] hover:text-[#155EEF] focus:outline-none focus:ring-2 focus:ring-[#155EEF]"
+                        className="inline-flex h-9 shrink-0 items-center justify-center gap-1.5 rounded-md border border-[#E7E0D7] bg-[#FFFDF7] px-3 text-xs font-black text-[#0B0E12] transition hover:border-[#A8793A] hover:bg-[#FBF8F1] hover:text-[#A8793A] focus:outline-none focus:ring-2 focus:ring-[#A8793A]/30"
                     >
-                        <ArrowLeft className="h-4 w-4" />
+                        <ArrowLeft className="size-4" />
                         <span className="hidden sm:inline">Back</span>
                     </button>
                 )}
@@ -110,10 +113,10 @@ export function FlowTopBar({
                     <button
                         type="button"
                         onClick={onExit}
-                        className="inline-flex h-9 items-center justify-center gap-1.5 rounded-md border border-transparent px-2.5 text-xs font-black text-[#35445C] transition hover:border-[#D8E0EA] hover:bg-[#F7F9FC] hover:text-[#071436] focus:outline-none focus:ring-2 focus:ring-[#155EEF]"
+                        className="inline-flex h-9 items-center justify-center gap-1.5 rounded-md border border-transparent px-3 text-xs font-black text-[#6F6A61] transition hover:border-[#E7E0D7] hover:bg-[#FBF8F1] hover:text-[#0B0E12] focus:outline-none focus:ring-2 focus:ring-[#A8793A]/30"
                     >
-                        <X className="h-4 w-4" />
-                        <span className="hidden sm:inline">Exit</span>
+                        <X className="size-4" />
+                        <span className="hidden sm:inline">Dashboard</span>
                     </button>
                 )}
             </div>
@@ -123,7 +126,7 @@ export function FlowTopBar({
 
 export function FlowStepper({ steps, currentStep }: { steps: FlowStep[]; currentStep: number }) {
     return (
-        <div className="rounded-lg border border-[#E7E0D7] bg-[#FFFDF7] px-3 py-2 shadow-[0_12px_34px_rgba(11,14,18,0.05)] sm:px-4">
+        <div className="rounded-lg border border-[#E7E0D7] bg-[#FFFDF7]/92 px-3 py-2 shadow-[0_14px_40px_rgba(11,14,18,0.06)] backdrop-blur sm:px-4">
             <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
                 {steps.map((step, index) => {
                     const stepNumber = index + 1;
@@ -135,13 +138,13 @@ export function FlowStepper({ steps, currentStep }: { steps: FlowStep[]; current
                             <div className="flex min-w-0 items-center gap-3">
                                 <span
                                     className={cn(
-                                        "flex h-7 w-7 shrink-0 items-center justify-center rounded-full border text-xs font-black transition",
+                                        "flex size-7 shrink-0 items-center justify-center rounded-full border text-xs font-black transition",
                                         complete && "border-[#2E8B5A] bg-[#2E8B5A] text-white",
                                         active && "border-[#0B0E12] bg-[#0B0E12] text-white shadow-[0_0_0_4px_rgba(168,121,58,0.18)]",
                                         !complete && !active && "border-[#E7E0D7] bg-[#FFFDF7] text-[#A39E94]"
                                     )}
                                 >
-                                    {complete ? <Check className="h-4 w-4" /> : stepNumber}
+                                    {complete ? <Check className="size-4" /> : stepNumber}
                                 </span>
                                 <span className="min-w-0">
                                     <span className={cn("block truncate text-[11px] font-black sm:text-xs", active ? "text-[#A8793A]" : complete ? "text-[#2E8B5A]" : "text-[#6F6A61]")}>

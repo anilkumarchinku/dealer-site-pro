@@ -160,6 +160,15 @@ export async function saveDealer(
             slug = makeSlugUnique(baseSlug, data.location, takenSlugs);
         }
 
+        const carBrands = (data.brands ?? []).slice(0, 1);
+        const twoWheelerBrands = (data.brands2w ?? []).slice(0, 1);
+        const threeWheelerBrands = (data.brands3w ?? []).slice(0, 1);
+        const dealerType =
+            data.sellsNewCars && data.sellsUsedCars ? "hybrid" :
+            data.sellsNewCars ? "single_oem" :
+            data.sellsUsedCars ? "used_only" :
+            data.dealerType ?? null;
+
         // ── Upsert dealers row ──────────────────────────────────
         const dealerPayload = {
             dealership_name:     data.dealershipName ?? "",
@@ -182,7 +191,7 @@ export async function saveDealer(
             const raw = data.styleTemplate ?? 'family';
             return VALID.includes(raw) ? raw : 'family';
         })(),
-            dealer_type:         data.dealerType ?? null,
+            dealer_type:         dealerType,
             vehicle_type:        vehicleType ?? 'car',
             sells_two_wheelers:   data.sellsTwoWheelers ?? (vehicleType === 'two-wheeler'),
             sells_three_wheelers: data.sellsThreeWheelers ?? (vehicleType === 'three-wheeler'),
@@ -193,27 +202,28 @@ export async function saveDealer(
             onboarding_complete: true,
         };
 
-        let dealerId = existingDealerId;
+        const isAdditionalLaunch = data.launchMode === "additional";
+        let dealerId = isAdditionalLaunch ? undefined : existingDealerId;
 
         // Get current auth user to link user_id
         const { data: { user } } = await supabase.auth.getUser();
 
         // ── Ownership check — prevent one user updating another dealer's row ──
-        if (existingDealerId && user) {
+        if (dealerId && user) {
             const { data: owned } = await supabase
                 .from('dealers')
                 .select('id')
-                .eq('id', existingDealerId)
+                .eq('id', dealerId)
                 .eq('user_id', user.id)
                 .maybeSingle();
             if (!owned) throw new Error('Unauthorized: dealer does not belong to current user');
         }
 
-        if (existingDealerId) {
+        if (dealerId) {
             // Happy path: update the dealer created at registration.
             // Use user-picked slug (data.slug) first; fall back to existing DB slug.
             const { data: cur } = await supabase
-                .from("dealers").select("slug").eq("id", existingDealerId).maybeSingle();
+                .from("dealers").select("slug").eq("id", dealerId).maybeSingle();
             const finalSlug = slug || cur?.slug || slug;
 
             // SECURITY/CORRECTNESS (TOCTOU guard): re-validate slug availability immediately
@@ -221,14 +231,14 @@ export async function saveDealer(
             // is allowed). The slug may have been picked much earlier (step-1), so another
             // dealer could have claimed it in the meantime. Recommend a DB UNIQUE index on
             // dealers.slug to make this atomic — see isSlugAvailableClient() note.
-            if (!(await isSlugAvailableClient(finalSlug, existingDealerId))) {
+            if (!(await isSlugAvailableClient(finalSlug, dealerId))) {
                 return { success: false, error: 'This site name is already taken. Please choose a different one.' };
             }
 
             const { data: updatedRows, error } = await supabase
                 .from("dealers")
                 .update({ ...dealerPayload, slug: finalSlug, subdomain: finalSlug })
-                .eq("id", existingDealerId)
+                .eq("id", dealerId)
                 .select("id");
 
             if (error) throw error;
@@ -243,11 +253,14 @@ export async function saveDealer(
             // The DB trigger may have already created a stub dealer row for this user,
             // so try to find it before inserting — avoids the 409 unique_violation on user_id.
             if (user) {
-                const { data: stubDealer } = await supabase
-                    .from("dealers")
-                    .select("id, slug")
-                    .eq("user_id", user.id)
-                    .maybeSingle();
+                const { data: stubDealer } = isAdditionalLaunch
+                    ? { data: null }
+                    : await supabase
+                        .from("dealers")
+                        .select("id, slug")
+                        .eq("user_id", user.id)
+                        .eq("onboarding_complete", false)
+                        .maybeSingle();
 
                 if (stubDealer) {
                     // Row exists — update it in place, prefer user-picked slug
@@ -343,9 +356,9 @@ export async function saveDealer(
         );
 
         const brandRows = [
-            ...(data.brands  ?? []).map((b, i) => ({ brand_name: b, vehicle_type: 'cars', is_primary: i === 0 })),
-            ...(data.brands2w ?? []).map((b, i) => ({ brand_name: b, vehicle_type: '2w',   is_primary: i === 0 })),
-            ...(data.brands3w ?? []).map((b, i) => ({ brand_name: b, vehicle_type: '3w',   is_primary: i === 0 })),
+            ...carBrands.map((b, i) => ({ brand_name: b, vehicle_type: 'cars', is_primary: i === 0 })),
+            ...twoWheelerBrands.map((b, i) => ({ brand_name: b, vehicle_type: '2w',   is_primary: i === 0 })),
+            ...threeWheelerBrands.map((b, i) => ({ brand_name: b, vehicle_type: '3w',   is_primary: i === 0 })),
         ].map(r => {
             const outlet = outletMap.get(`${r.brand_name}::${r.vehicle_type}`);
             return {
@@ -465,14 +478,27 @@ export async function saveDealer(
                 variant:      v.variant      ?? null,
                 year:         v.year,
                 price_paise:  v.price_inr * 100, // CSV is in ₹, DB stores paise
+                on_road_price_paise: v.on_road_price_inr ? v.on_road_price_inr * 100 : null,
                 mileage_km:   v.km_driven    ?? null,
                 fuel_type:    v.fuel         ?? null,
                 transmission: v.transmission ?? null,
                 color:        v.color        ?? null,
-                vin:          v.reg_number   ?? null,
-                features:     [],
-                condition:    'used' as const,
-                status:       'available' as const,
+                body_type:    v.body_type    ?? null,
+                seating_capacity: v.seating_capacity ?? null,
+                engine_cc:    v.engine_cc    ?? null,
+                vin:          v.vin ?? v.reg_number ?? null,
+                features:     v.features ?? [],
+                description:  v.description ?? null,
+                meta_title:   v.meta_title ?? null,
+                meta_description: v.meta_description ?? null,
+                insurance_status: v.insurance_status ?? 'unknown',
+                insurance_provider: v.insurance_provider ?? null,
+                insurance_valid_until: v.insurance_valid_until ?? null,
+                condition:    v.condition ?? 'used' as const,
+                status:       v.status ?? 'available' as const,
+                is_featured:  v.is_featured ?? false,
+                image_url:    v.image_url ?? v.image_urls?.[0] ?? null,
+                image_urls:   v.image_urls ?? (v.image_url ? [v.image_url] : []),
                 views:        0,             // DB column is "views" not "view_count"
             }))
 

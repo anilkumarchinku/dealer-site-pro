@@ -6,6 +6,7 @@ import {
     ArrowLeft,
     ArrowRight,
     CheckCircle2,
+    Download,
     Eye,
     EyeOff,
     FileUp,
@@ -17,6 +18,10 @@ import {
 import { Button } from "@/components/ui/button";
 import { CyeproApiBenefits } from "@/components/onboarding/CyeproApiBenefits";
 import { cn } from "@/lib/utils";
+import {
+    downloadVehicleUploadCsvTemplate,
+    VEHICLE_UPLOAD_CSV_HEADERS,
+} from "@/lib/inventory/vehicle-upload-template";
 import { useOnboardingStore } from "@/lib/store/onboarding-store";
 import type { InventorySource } from "@/lib/types";
 
@@ -33,7 +38,7 @@ const options = [
     {
         id: "upload" as const,
         title: "Upload Catalog",
-        caption: "Upload Excel or CSV file of your inventory.",
+        caption: "Upload Excel or CSV file of your inventory. Download the sample CSV below.",
         badge: null,
         icon: FileUp,
     },
@@ -154,6 +159,34 @@ export default function Step2InventoryPage() {
                         </button>
                     );
                 })}
+            </div>
+
+            <div className="rounded-lg border border-[#E7E0D7] bg-[#FFFDF7] p-5 shadow-[0_14px_42px_rgba(7,20,54,0.05)]">
+                <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+                    <div className="flex min-w-0 items-start gap-3">
+                        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md border border-[#D9B574] bg-[#FFF7EA] text-[#A8793A]">
+                            <FileUp className="h-5 w-5" />
+                        </div>
+                        <div className="min-w-0">
+                            <h2 className="text-sm font-black text-[#071436]">Sample CSV for Upload Catalog</h2>
+                            <p className="mt-1 text-sm font-medium leading-6 text-[#62708A]">
+                                Download a neat car inventory sheet, fill your vehicles, then upload it in the next step.
+                            </p>
+                            <p className="mt-2 text-xs font-semibold text-[#7A5528]">
+                                Includes {VEHICLE_UPLOAD_CSV_HEADERS.length} fields: vehicle, price, KM, specs, photos, insurance, features, and SEO.
+                            </p>
+                        </div>
+                    </div>
+                    <Button
+                        type="button"
+                        variant="outline"
+                        className="h-11 shrink-0 rounded-md border-[#D9B574] bg-[#FFF7EA] px-4 font-black text-[#7A5528] hover:bg-[#F5E8D4]"
+                        onClick={() => downloadVehicleUploadCsvTemplate()}
+                    >
+                        <Download className="mr-2 h-4 w-4" />
+                        Download Sample CSV
+                    </Button>
+                </div>
             </div>
 
             {/* Announce the current selection for screen readers (cards convey it via colour/check otherwise). */}

@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { Suspense, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { CheckCircle, XCircle, Loader2, Mail } from "lucide-react";
 
 import { BrowserFrame, FlowTopBar } from "@/components/onboarding/flow-shell";
@@ -87,7 +88,23 @@ function StrengthPill({ ok, label }: { ok: boolean; label: string }) {
 // ── page ──────────────────────────────────────────────────────────────────────
 
 export default function RegisterPage() {
+    return (
+        <Suspense fallback={null}>
+            <RegisterForm />
+        </Suspense>
+    );
+}
+
+function RegisterForm() {
+    const searchParams = useSearchParams();
     const { updateData, reset } = useOnboardingStore();
+    const redirectTo = searchParams.get("redirect") || null;
+    const safeRedirectTo = (() => {
+        if (!redirectTo) return "/onboarding/step-1";
+        if (!redirectTo.startsWith("/") || redirectTo.startsWith("//")) return "/onboarding/step-1";
+        return redirectTo;
+    })();
+    const loginHref = `/auth/login?redirect=${encodeURIComponent(safeRedirectTo)}`;
 
     const [form, setForm] = useState({
         fullName: "",
@@ -163,11 +180,11 @@ export default function RegisterPage() {
             reset();
             updateData({ dealershipName: form.dealershipName.trim(), phone: fullPhone, email });
 
-            const { error: authError } = await supabase.auth.signUp({
+            const { data: signUpData, error: authError } = await supabase.auth.signUp({
                 email,
                 password: form.password,
                 options: {
-                    emailRedirectTo: `${window.location.origin}/auth/callback?next=/auth/login`,
+                    emailRedirectTo: `${window.location.origin}/auth/callback?next=${encodeURIComponent(loginHref)}`,
                     data: {
                         full_name: form.fullName.trim(),
                         phone: fullPhone,
@@ -182,6 +199,11 @@ export default function RegisterPage() {
                         ? "This email is already registered. Please login instead."
                         : authError.message
                 );
+                return;
+            }
+
+            if (signUpData.session) {
+                window.location.href = safeRedirectTo;
                 return;
             }
 
@@ -216,7 +238,7 @@ export default function RegisterPage() {
                             >
                                 <p className="mt-1 text-sm leading-6 text-muted-foreground">
                                     Please check your email and click the verification link. Once verified, you can{" "}
-                                    <Link href="/auth/login" className="font-black text-primary hover:underline">
+                                    <Link href={loginHref} className="font-black text-primary hover:underline">
                                         log in with your email and password
                                     </Link>.
                                 </p>
@@ -373,7 +395,7 @@ export default function RegisterPage() {
 
                                 <p className="text-center text-sm font-medium text-muted-foreground">
                                     Already have an account?{" "}
-                                    <Link href="/auth/login" className="font-black text-primary hover:underline">
+                                    <Link href={loginHref} className="font-black text-primary hover:underline">
                                         Login
                                     </Link>
                                 </p>

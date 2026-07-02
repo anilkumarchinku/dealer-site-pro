@@ -283,9 +283,15 @@ export async function middleware(request: NextRequest) {
         return NextResponse.redirect(loginUrl)
     }
 
-    // Redirect to dashboard if already logged in and visiting auth pages
+    // Redirect logged-in users away from auth pages, but preserve an explicit
+    // onboarding target such as /auth/login?redirect=/onboarding/step-1.
     if (isAuthPage && isLoggedIn) {
-        return NextResponse.redirect(new URL('/dashboard', request.url))
+        const authRedirect = request.nextUrl.searchParams.get('redirect')
+        const safeAuthRedirect =
+            authRedirect && authRedirect.startsWith('/') && !authRedirect.startsWith('//')
+                ? authRedirect
+                : '/dashboard'
+        return NextResponse.redirect(new URL(safeAuthRedirect, request.url))
     }
 
     return response

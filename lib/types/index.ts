@@ -8,6 +8,23 @@ export type DealerType =
 // Dealer category selected at the start of onboarding
 export type DealerCategory = 'new' | 'used' | 'both';
 
+// Whether onboarding is creating the user's first dealer site or launching
+// another dealership/website from the dashboard.
+export type OnboardingLaunchMode = 'initial' | 'additional';
+
+export type OnboardingStockMode = 'new' | 'used';
+export type OnboardingVehicleSegment = '4w' | '2w' | '3w';
+
+export interface OnboardingWebsitePlan {
+    id: string;
+    stock: OnboardingStockMode;
+    segment: OnboardingVehicleSegment;
+    title: string;
+    caption: string;
+    route: string;
+    brand?: string;
+}
+
 // OEM Brands - Indian Automobile Market
 export type Brand =
     // Mass Market (Popular in India)
@@ -68,11 +85,28 @@ export interface VehicleUploadRow {
     variant?:      string;
     year:          number;
     price_inr:     number;   // selling price in ₹
+    on_road_price_inr?: number;
     km_driven?:    number;
     fuel?:         string;
     transmission?: string;
     color?:        string;
     reg_number?:   string;
+    vin?:          string;
+    body_type?:    string;
+    seating_capacity?: number;
+    engine_cc?:    number;
+    condition?:    'new' | 'used' | 'certified_pre_owned';
+    status?:       'available' | 'reserved' | 'sold' | 'inactive' | 'draft';
+    is_featured?:  boolean;
+    image_url?:    string;
+    image_urls?:   string[];
+    features?:     string[];
+    description?:  string;
+    meta_title?:   string;
+    meta_description?: string;
+    insurance_status?: 'unknown' | 'active' | 'expired' | 'expiring_soon';
+    insurance_provider?: string;
+    insurance_valid_until?: string;
 }
 
 // Onboarding data collected
@@ -99,6 +133,7 @@ export interface OnboardingData {
 
     // Dealer category chosen at onboarding entry
     dealerCategory?: DealerCategory;
+    launchMode?: OnboardingLaunchMode;
 
     // Brand color chosen by used-car dealers (hex, e.g. "#003328")
     brandColor?: string;

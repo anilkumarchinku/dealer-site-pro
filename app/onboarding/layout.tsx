@@ -4,6 +4,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
 
 import { BrowserFrame, coreFlowSteps, FlowStepper, FlowTopBar } from "@/components/onboarding/flow-shell";
+import { useOnboardingStore } from "@/lib/store/onboarding-store";
 
 function getBackHref(pathname: string) {
     if (pathname.includes("/bulk-upload")) return "/onboarding/step-2-inventory";
@@ -22,8 +23,17 @@ export default function OnboardingLayout({
 }) {
     const router = useRouter();
     const pathname = usePathname();
+    const activeWebsitePlanId = useOnboardingStore((state) => state.activeWebsitePlanId);
 
     if (pathname === "/onboarding" || pathname === "/onboarding/") {
+        return (
+            <div className="dsp-app-skin dsp-onboarding-skin min-h-screen">
+                {children}
+            </div>
+        );
+    }
+
+    if ((pathname === "/onboarding/step-1" || pathname === "/onboarding/step-1/") && !activeWebsitePlanId) {
         return (
             <div className="dsp-app-skin dsp-onboarding-skin min-h-screen">
                 {children}
@@ -57,7 +67,7 @@ export default function OnboardingLayout({
             <BrowserFrame className="min-h-screen w-full max-w-none rounded-none border-0 shadow-none" contentClassName="dsp-onboarding-canvas min-h-screen">
                 <FlowTopBar
                     onBack={() => router.push(getBackHref(pathname))}
-                    onExit={() => router.push("/")}
+                    onExit={() => router.push("/dashboard/webpage")}
                 />
 
                 <main className="mx-auto max-w-7xl px-5 py-6 sm:px-8 lg:px-10">

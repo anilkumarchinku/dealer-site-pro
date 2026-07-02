@@ -1,6 +1,10 @@
 import { brandToUrlSlug } from '@/lib/utils/domain'
 
 export interface DashboardSiteCard {
+    /** Source dealer row when dashboard cards are built from multiple dealers */
+    dealerId?: string
+    /** Display dealer name when the card belongs to a non-active dealer */
+    dealerName?: string
     /** Full URL slug, e.g. "abhi-motors-tata" or "abhi-motors/two-wheelers/used" */
     slug: string
     /** Brand name for brand-specific pages, or null for stock-type pages */

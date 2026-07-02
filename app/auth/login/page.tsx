@@ -31,6 +31,10 @@ function LoginForm() {
         if (!redirectTo.startsWith("/") || redirectTo.startsWith("//")) return null;
         return redirectTo;
     })();
+    const onboardingRedirectTo = safeRedirectTo?.startsWith("/onboarding")
+        ? safeRedirectTo
+        : "/onboarding/step-1";
+    const registerHref = `/auth/register?redirect=${encodeURIComponent(onboardingRedirectTo)}`;
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -98,9 +102,11 @@ function LoginForm() {
                     .eq("user_id", user.id)
                     .maybeSingle();
 
-                // No dealer row OR onboarding not complete → must go through onboarding
+                // No dealer row OR onboarding not complete → must go through onboarding.
+                // Preserve the intended onboarding step from middleware, especially
+                // /auth/login?redirect=/onboarding/step-1.
                 if (!dealer || !dealer.onboarding_complete) {
-                    window.location.href = "/onboarding";
+                    window.location.href = onboardingRedirectTo;
                     return;
                 }
             }
@@ -189,7 +195,7 @@ function LoginForm() {
                     <div className="flex flex-col items-center gap-2 border-t border-border pt-5">
                         <p className="text-center text-sm text-muted-foreground">
                             Don&apos;t have an account?{" "}
-                            <Link href="/auth/register" className="font-medium text-primary hover:underline">
+                            <Link href={registerHref} className="font-medium text-primary hover:underline">
                                 Create one free
                             </Link>
                         </p>

@@ -31,7 +31,12 @@ import {
     FlowStepper,
     FlowTopBar,
 } from "@/components/onboarding/flow-shell";
+import { BrandLogoMark } from "@/components/brand-logo-mark";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { Separator } from "@/components/ui/separator";
 import { getOnboardingAccountPrefill, getOnboardingResetPrefill } from "@/lib/onboarding/prefill";
 import { isSupabaseReady, supabase } from "@/lib/supabase";
 import { useOnboardingStore } from "@/lib/store/onboarding-store";
@@ -60,7 +65,7 @@ type SegmentOption = {
     tone: string;
 };
 
-const MAX_WEBSITE_PLANS = 6;
+const HYBRID_BASE_WEBSITE_COUNT = 6;
 
 const stockOptions: StockOption[] = [
     {
@@ -80,7 +85,7 @@ const stockOptions: StockOption[] = [
     {
         id: "hybrid",
         title: "Hybrid Dealer",
-        description: "New OEM website plus matching pre-owned website for one category.",
+        description: "New OEM websites plus matching pre-owned websites.",
         icon: Layers,
         tone: "violet",
     },
@@ -233,24 +238,38 @@ function toWebsiteTitle(mode: StockMode, segment: VehicleType) {
 function buildWebsitePlans(
     modes: StockMode[],
     segments: VehicleType[],
-    brandsBySegment: Partial<Record<VehicleType, string>>,
+    brandsBySegment: Partial<Record<VehicleType, string[]>>,
 ): OnboardingWebsitePlan[] {
     return orderedSegments(segments).flatMap((segment) =>
-        orderedModes(modes).map((stock) => {
-            const brand = stock === "new" ? brandsBySegment[segment] : undefined;
-            return {
-                id: `${stock}-${segment}`,
-                stock,
-                segment,
-                brand,
-                title: toWebsiteTitle(stock, segment),
-                caption: stock === "new"
-                    ? `${brand || "Authorised brand"} website with OEM model pages.`
-                    : `Second-hand ${segmentLabel[segment].toLowerCase()} website with dealer inventory.`,
-                route: routeBySegment[segment],
-            };
+        orderedModes(modes).flatMap((stock): OnboardingWebsitePlan[] => {
+            if (stock === "used") {
+                return [{
+                    id: `${stock}-${segment}`,
+                    stock,
+                    segment,
+                    title: toWebsiteTitle(stock, segment),
+                    caption: `Second-hand ${segmentLabel[segment].toLowerCase()} website with dealer inventory.`,
+                    route: routeBySegment[segment],
+                }];
+            }
+
+            const selectedBrands = brandsBySegment[segment]?.length ? brandsBySegment[segment] : [undefined];
+            return selectedBrands.map((brand) => {
+                const plan: OnboardingWebsitePlan = {
+                    id: brand ? `${stock}-${segment}-${slugify(brand)}` : `${stock}-${segment}`,
+                    stock,
+                    segment,
+                    title: brand ? `${brand} ${segmentLabel[segment]}` : toWebsiteTitle(stock, segment),
+                    caption: `${brand || "Authorised brand"} ${segmentLabel[segment].toLowerCase()} website with OEM model pages.`,
+                    route: routeBySegment[segment],
+                };
+                if (brand) {
+                    plan.brand = brand;
+                }
+                return plan;
+            });
         })
-    ).slice(0, MAX_WEBSITE_PLANS);
+    );
 }
 
 function slugify(value: string) {
@@ -281,7 +300,7 @@ export default function OnboardingIndexPage() {
     const [phase, setPhase] = useState<Phase>("stock");
     const [selectedModes, setSelectedModes] = useState<StockMode[]>([]);
     const [selectedSegments, setSelectedSegments] = useState<VehicleType[]>([]);
-    const [brandBySegment, setBrandBySegment] = useState<Partial<Record<VehicleType, string>>>({});
+    const [brandBySegment, setBrandBySegment] = useState<Partial<Record<VehicleType, string[]>>>({});
     const [isAdditionalLaunch, setIsAdditionalLaunch] = useState(data.launchMode === "additional");
 
     useEffect(() => {
@@ -337,7 +356,7 @@ export default function OnboardingIndexPage() {
     );
     const totalWebsites = websitePlans.length;
     const missingBrands = includesNew
-        ? orderedSegments(selectedSegments).filter((segment) => !brandBySegment[segment])
+        ? orderedSegments(selectedSegments).filter((segment) => !brandBySegment[segment]?.length)
         : [];
     const canContinueStock = selectedModes.length > 0;
     const canContinueSegments = selectedSegments.length > 0;
@@ -365,18 +384,38 @@ export default function OnboardingIndexPage() {
 
     const toggleSegment = (segment: VehicleType) => {
         setSelectedSegments((current) => {
-            const next = current.includes(segment) ? [] : [segment];
-            setBrandBySegment((brands) => {
-                const nextBrand = next[0] ? brands[next[0]] : undefined;
-                return next[0] && nextBrand ? { [next[0]]: nextBrand } : {};
-            });
+            if (current.includes(segment)) {
+                const next = current.filter((item) => item !== segment);
+                setBrandBySegment((brands) => {
+                    const rest = { ...brands };
+                    delete rest[segment];
+                    return rest;
+                });
+                return next;
+            }
+            return [...current, segment];
+        });
+    };
+
+    const toggleBrand = (segment: VehicleType, brand: string) => {
+        setBrandBySegment((current) => {
+            const selectedBrands = current[segment] ?? [];
+            const nextBrands = selectedBrands.includes(brand)
+                ? selectedBrands.filter((item) => item !== brand)
+                : [...selectedBrands, brand];
+            const next = { ...current };
+            if (nextBrands.length) {
+                next[segment] = nextBrands;
+            } else {
+                delete next[segment];
+            }
             return next;
         });
     };
 
     const handleBack = () => {
         if (phase === "stock") {
-            router.push("/");
+            router.push(isDemoRoute ? "/" : "/dashboard");
             return;
         }
         if (phase === "segments") setPhase("stock");
@@ -463,23 +502,26 @@ export default function OnboardingIndexPage() {
         "Ready";
 
     return (
-        <div className="dsp-onboarding-canvas min-h-screen lg:h-dvh lg:overflow-hidden">
-            <BrowserFrame className="min-h-screen w-full max-w-none rounded-none border-0 shadow-none lg:h-full lg:min-h-0" contentClassName="dsp-onboarding-canvas flex min-h-screen flex-col lg:h-full lg:min-h-0">
+        <div className="dsp-app-skin dsp-onboarding-skin dsp-onboarding-canvas min-h-screen lg:h-dvh lg:overflow-hidden">
+            <BrowserFrame className="min-h-screen w-full max-w-none rounded-none border-0 bg-transparent shadow-none lg:h-full lg:min-h-0" contentClassName="flex min-h-screen flex-col lg:h-full lg:min-h-0">
                 <FlowTopBar
                     showBack
                     onBack={handleBack}
-                    onExit={() => router.push("/")}
+                    onExit={() => router.push("/dashboard")}
                 />
 
-                <main className="flex flex-1 flex-col px-5 py-5 sm:px-8 lg:min-h-0 lg:overflow-hidden lg:px-8 lg:py-4 xl:px-10">
+                <main className="mx-auto flex w-full max-w-[1780px] flex-1 flex-col px-5 py-5 sm:px-8 lg:min-h-0 lg:overflow-hidden lg:px-8 lg:py-5 xl:px-10">
                     <FlowStepper steps={phaseSteps} currentStep={phaseNumber(phase)} />
 
                     <div className="mt-5 grid flex-1 gap-6 lg:min-h-0 lg:grid-cols-[minmax(0,1fr)_430px] xl:grid-cols-[minmax(0,1fr)_500px]">
-                        <section className="min-h-0 overflow-y-auto pr-1">
+                        <ScrollArea className="min-h-0 pr-1">
+                        <section className="flex min-h-0 flex-col gap-5 pb-6">
                             {phase === "stock" && (
-                                <div className="space-y-5">
+                                <div className="flex flex-col gap-5">
                                     <div>
-                                        <p className="text-xs font-black uppercase tracking-[0.18em] text-[#155EEF]">Step 1 · Business mode</p>
+                                        <Badge variant="outline" className="border-[#C7C1B6] bg-[#FFFDF7] px-3 py-1 text-[11px] font-black uppercase tracking-[0.18em] text-[#A8793A]">
+                                            Step 1 · Business mode
+                                        </Badge>
                                         <h1 className="mt-2 text-[34px] font-black leading-tight tracking-[-0.04em] text-[#071436] xl:text-[42px]">
                                             What kind of dealer website are we creating?
                                         </h1>
@@ -498,8 +540,8 @@ export default function OnboardingIndexPage() {
                                                     aria-pressed={selected}
                                                     onClick={() => toggleMode(option.id)}
                                                     className={cn(
-                                                        "relative min-h-[220px] rounded-lg border bg-white p-5 text-left shadow-[0_12px_34px_rgba(7,20,54,0.05)] transition hover:-translate-y-0.5 hover:border-[#155EEF] hover:shadow-[0_18px_48px_rgba(7,20,54,0.10)] focus:outline-none focus:ring-2 focus:ring-[#155EEF]",
-                                                        selected ? "border-[#155EEF] bg-[#F5F8FF]" : "border-[#D8E0EA]"
+                                                        "relative min-h-[220px] rounded-lg border bg-[#FFFDF7] p-5 text-left shadow-[0_14px_40px_rgba(11,14,18,0.06)] transition hover:-translate-y-0.5 hover:border-[#A8793A] hover:shadow-[0_20px_55px_rgba(11,14,18,0.10)] focus:outline-none focus:ring-2 focus:ring-[#A8793A]/30",
+                                                        selected ? "border-[#A8793A] bg-[#FBF8F1] ring-1 ring-[#A8793A]/30" : "border-[#E7E0D7]"
                                                     )}
                                                 >
                                                     <span className={cn("flex h-12 w-12 items-center justify-center rounded-full border", toneClasses[option.tone])}>
@@ -508,13 +550,13 @@ export default function OnboardingIndexPage() {
                                                     <h2 className="mt-5 text-xl font-black tracking-[-0.02em] text-[#071436]">{option.title}</h2>
                                                     <p className="mt-2 text-sm font-semibold leading-6 text-[#62708A]">{option.description}</p>
                                                     {option.id === "hybrid" && (
-                                                        <p className="mt-3 rounded-md bg-violet-100 px-3 py-2 text-xs font-black text-violet-800">
-                                                            New + Used websites for one selected category.
-                                                        </p>
+                                                        <Badge variant="secondary" className="mt-3 rounded-md bg-[#F5E8D4] px-3 py-1.5 text-xs font-black text-[#7A5528]">
+                                                            Starts with {HYBRID_BASE_WEBSITE_COUNT}: New + Used across 2W, 3W, and 4W.
+                                                        </Badge>
                                                     )}
                                                     <span className={cn(
                                                         "absolute right-4 top-4 flex h-6 w-6 items-center justify-center rounded-full border",
-                                                        selected ? "border-[#155EEF] bg-[#155EEF] text-white" : "border-[#CAD5E2] bg-white text-transparent"
+                                                        selected ? "border-[#0B0E12] bg-[#0B0E12] text-white" : "border-[#C7C1B6] bg-[#FFFDF7] text-transparent"
                                                     )}>
                                                         <Check className="h-4 w-4" />
                                                     </span>
@@ -524,22 +566,24 @@ export default function OnboardingIndexPage() {
                                     </div>
 
                                     {isHybrid && (
-                                        <div className="rounded-lg border border-violet-200 bg-violet-50 px-4 py-3 text-sm font-black text-violet-800">
-                                            Hybrid selected. Pick one vehicle category next; it will create separate new and pre-owned website setups.
+                                        <div className="rounded-lg border border-[#C7C1B6] bg-[#FBF8F1] px-4 py-3 text-sm font-black text-[#7A5528]">
+                                            Hybrid selected. Pick vehicle categories next; extra OEMs will add more new-brand websites.
                                         </div>
                                     )}
                                 </div>
                             )}
 
                             {phase === "segments" && (
-                                <div className="space-y-5">
+                                <div className="flex flex-col gap-5">
                                     <div>
-                                        <p className="text-xs font-black uppercase tracking-[0.18em] text-[#155EEF]">Step 2 · Vehicle category</p>
+                                        <Badge variant="outline" className="border-[#C7C1B6] bg-[#FFFDF7] px-3 py-1 text-[11px] font-black uppercase tracking-[0.18em] text-[#A8793A]">
+                                            Step 2 · Multi-select categories
+                                        </Badge>
                                         <h1 className="mt-2 text-[34px] font-black leading-tight tracking-[-0.04em] text-[#071436] xl:text-[42px]">
-                                            Select the vehicle category for this website setup.
+                                            Select every vehicle category this dealer sells.
                                         </h1>
                                         <p className="mt-3 max-w-2xl text-sm font-semibold leading-6 text-[#62708A]">
-                                            Choose one category: Cars / 4W, Two-Wheelers, or Three-Wheelers. You can add another website later from the dashboard.
+                                            You can choose 2W, 3W, 4W, or all of them. The website count updates instantly.
                                         </p>
                                     </div>
 
@@ -553,8 +597,8 @@ export default function OnboardingIndexPage() {
                                                     aria-pressed={selected}
                                                     onClick={() => toggleSegment(option.id)}
                                                     className={cn(
-                                                        "relative min-h-[210px] rounded-lg border bg-white p-5 text-left shadow-[0_12px_34px_rgba(7,20,54,0.05)] transition hover:-translate-y-0.5 hover:border-[#155EEF] hover:shadow-[0_18px_48px_rgba(7,20,54,0.10)] focus:outline-none focus:ring-2 focus:ring-[#155EEF]",
-                                                        selected ? "border-[#155EEF] bg-[#F5F8FF]" : "border-[#D8E0EA]"
+                                                        "relative min-h-[210px] rounded-lg border bg-[#FFFDF7] p-5 text-left shadow-[0_14px_40px_rgba(11,14,18,0.06)] transition hover:-translate-y-0.5 hover:border-[#A8793A] hover:shadow-[0_20px_55px_rgba(11,14,18,0.10)] focus:outline-none focus:ring-2 focus:ring-[#A8793A]/30",
+                                                        selected ? "border-[#A8793A] bg-[#FBF8F1] ring-1 ring-[#A8793A]/30" : "border-[#E7E0D7]"
                                                     )}
                                                 >
                                                     <span className={cn("flex h-12 w-12 items-center justify-center rounded-full border", toneClasses[option.tone])}>
@@ -564,7 +608,7 @@ export default function OnboardingIndexPage() {
                                                     <p className="mt-2 text-sm font-semibold leading-6 text-[#62708A]">{option.description}</p>
                                                     <span className={cn(
                                                         "absolute right-4 top-4 flex h-6 w-6 items-center justify-center rounded-full border",
-                                                        selected ? "border-[#155EEF] bg-[#155EEF] text-white" : "border-[#CAD5E2] bg-white text-transparent"
+                                                        selected ? "border-[#0B0E12] bg-[#0B0E12] text-white" : "border-[#C7C1B6] bg-[#FFFDF7] text-transparent"
                                                     )}>
                                                         <Check className="h-4 w-4" />
                                                     </span>
@@ -574,86 +618,110 @@ export default function OnboardingIndexPage() {
                                     </div>
 
                                     {totalWebsites > 0 && (
-                                        <div className="rounded-lg border border-[#D8E0EA] bg-white p-4 shadow-[0_12px_34px_rgba(7,20,54,0.05)]">
+                                        <Card className="border-[#E7E0D7] bg-[#FFFDF7] p-0 shadow-[0_14px_40px_rgba(11,14,18,0.06)]">
+                                            <CardContent className="p-4">
                                             <p className="text-sm font-black text-[#071436]">
                                                 {totalWebsites} website{totalWebsites === 1 ? "" : "s"} will be prepared.
                                             </p>
                                             <p className="mt-1 text-xs font-semibold text-[#62708A]">
-                                                Formula: {selectedModes.length} stock mode{selectedModes.length === 1 ? "" : "s"} x one vehicle category.
+                                                New sites follow selected OEMs. Used sites stay one inventory website per category.
                                             </p>
-                                            {isHybrid && selectedSegments.length === 1 && (
+                                            {isHybrid && selectedSegments.length === 3 && (
                                                 <p className="mt-3 rounded-md bg-[#071436] px-3 py-2 text-sm font-black text-white">
-                                                    New and pre-owned websites will be queued for the selected category.
+                                                    {totalWebsites} websites queued across all three categories.
                                                 </p>
                                             )}
-                                        </div>
+                                            </CardContent>
+                                        </Card>
                                     )}
                                 </div>
                             )}
 
                             {phase === "brands" && (
-                                <div className="space-y-5">
+                                <div className="flex flex-col gap-5">
                                     <div>
-                                        <p className="text-xs font-black uppercase tracking-[0.18em] text-[#155EEF]">Step 3 · Authorised brands</p>
+                                        <Badge variant="outline" className="border-[#C7C1B6] bg-[#FFFDF7] px-3 py-1 text-[11px] font-black uppercase tracking-[0.18em] text-[#A8793A]">
+                                            Step 3 · Select OEM
+                                        </Badge>
                                         <h1 className="mt-2 text-[34px] font-black leading-tight tracking-[-0.04em] text-[#071436] xl:text-[42px]">
-                                            Pick one authorised brand for each new-vehicle website.
+                                            Select every OEM brand this dealer is authorised to sell.
                                         </h1>
                                         <p className="mt-3 max-w-2xl text-sm font-semibold leading-6 text-[#62708A]">
-                                            Used websites do not need a brand here. Their stock brands will come from inventory upload or sync.
+                                            Pick multiple brands under 2W, 3W, or 4W. Each selected OEM gets its own new-vehicle website.
                                         </p>
                                     </div>
 
-                                    <div className="space-y-5">
+                                    <div className="flex flex-col gap-5">
                                         {orderedSegments(selectedSegments).map((segment) => {
                                             const option = segmentOptions.find((item) => item.id === segment);
-                                            const selectedBrand = brandBySegment[segment];
+                                            const selectedBrands = brandBySegment[segment] ?? [];
                                             const brands = brandOptionsForSegment(segment);
                                             return (
-                                                <section key={segment} className="rounded-lg border border-[#D8E0EA] bg-white p-5 shadow-[0_12px_34px_rgba(7,20,54,0.05)]">
-                                                    <div className="mb-4 flex items-start justify-between gap-4">
+                                                <Card key={segment} className="border-[#E7E0D7] bg-[#FFFDF7] p-0 shadow-[0_16px_45px_rgba(11,14,18,0.07)]">
+                                                    <CardHeader className="mb-0 flex-row items-start justify-between gap-4 p-5 pb-4">
                                                         <div className="flex items-start gap-3">
                                                             <span className={cn("flex h-10 w-10 items-center justify-center rounded-full border", toneClasses[option?.tone ?? "slate"])}>
                                                                 {option && <option.icon className="h-5 w-5" />}
                                                             </span>
                                                             <div>
-                                                                <h2 className="text-lg font-black text-[#071436]">{segmentLabel[segment]} brand</h2>
-                                                                <p className="mt-1 text-sm font-semibold text-[#62708A]">
-                                                                    Select the OEM brand for the new {segmentLabel[segment].toLowerCase()} website.
-                                                                </p>
+                                                                <CardTitle className="text-lg font-black text-[#071436]">{segmentLabel[segment]} OEM</CardTitle>
+                                                                <CardDescription className="mt-1 text-sm font-semibold text-[#62708A]">
+                                                                    Choose one or more authorised brands for this category.
+                                                                </CardDescription>
                                                             </div>
                                                         </div>
-                                                        {selectedBrand && (
-                                                            <span className="rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-xs font-black text-emerald-700">
-                                                                Selected
-                                                            </span>
+                                                        {selectedBrands.length > 0 && (
+                                                            <Badge variant="success" className="max-w-[210px] gap-2 rounded-full px-2.5 py-1 text-xs font-black">
+                                                                <BrandLogoMark
+                                                                    brand={selectedBrands[0]}
+                                                                    segment={segment}
+                                                                    className="h-6 w-6 rounded-full border-emerald-200"
+                                                                    imageClassName="h-4 w-4"
+                                                                />
+                                                                <span className="truncate">
+                                                                    {selectedBrands.length === 1 ? selectedBrands[0] : `${selectedBrands.length} selected`}
+                                                                </span>
+                                                            </Badge>
                                                         )}
-                                                    </div>
+                                                    </CardHeader>
 
-                                                    <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+                                                    <CardContent className="grid grid-cols-2 gap-3 px-5 pb-5 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
                                                         {brands.map((brand) => {
-                                                            const selected = selectedBrand === brand;
+                                                            const selected = selectedBrands.includes(brand);
                                                             return (
                                                                 <button
                                                                     key={brand}
                                                                     type="button"
-                                                                    onClick={() => setBrandBySegment((current) => ({ ...current, [segment]: brand }))}
+                                                                    onClick={() => toggleBrand(segment, brand)}
+                                                                    aria-pressed={selected}
                                                                     className={cn(
-                                                                        "flex min-h-[48px] items-center justify-between gap-3 rounded-md border px-3 py-2 text-left text-sm font-black transition hover:border-[#155EEF] hover:bg-[#F5F8FF] focus:outline-none focus:ring-2 focus:ring-[#155EEF]",
-                                                                        selected ? "border-[#155EEF] bg-[#F5F8FF] text-[#071436]" : "border-[#D8E0EA] bg-white text-[#35445C]"
+                                                                        "relative flex min-h-[118px] flex-col items-center justify-center rounded-lg border px-3 py-4 text-center transition hover:-translate-y-0.5 hover:border-[#A8793A] hover:bg-[#FBF8F1] hover:shadow-[0_16px_34px_rgba(11,14,18,0.08)] focus:outline-none focus:ring-2 focus:ring-[#A8793A]/30",
+                                                                        selected ? "border-[#A8793A] bg-[#FBF8F1] text-[#071436] ring-1 ring-[#A8793A]/30" : "border-[#E7E0D7] bg-white/70 text-[#35445C]"
                                                                     )}
                                                                 >
-                                                                    <span>{brand}</span>
                                                                     <span className={cn(
-                                                                        "flex h-5 w-5 items-center justify-center rounded-full border",
-                                                                        selected ? "border-[#155EEF] bg-[#155EEF] text-white" : "border-[#CAD5E2] text-transparent"
+                                                                        "absolute right-2.5 top-2.5 flex h-5 w-5 items-center justify-center rounded-full border",
+                                                                        selected ? "border-[#0B0E12] bg-[#0B0E12] text-white" : "border-[#C7C1B6] bg-[#FFFDF7] text-transparent"
                                                                     )}>
-                                                                        <Check className="h-3.5 w-3.5" />
+                                                                        <Check className="h-3 w-3" />
+                                                                    </span>
+                                                                    <BrandLogoMark
+                                                                        brand={brand}
+                                                                        segment={segment}
+                                                                        className={cn(
+                                                                            "h-14 w-14 rounded-md shadow-none",
+                                                                            selected ? "border-[#A8793A] shadow-[0_10px_24px_rgba(168,121,58,0.16)]" : ""
+                                                                        )}
+                                                                        imageClassName="h-10 w-10"
+                                                                    />
+                                                                    <span className="mt-3 flex min-h-[32px] w-full items-center justify-center text-[12px] font-black leading-4 tracking-[-0.01em] text-[#071436]">
+                                                                        <span className="max-w-full break-words">{brand}</span>
                                                                     </span>
                                                                 </button>
                                                             );
                                                         })}
-                                                    </div>
-                                                </section>
+                                                    </CardContent>
+                                                </Card>
                                             );
                                         })}
                                     </div>
@@ -661,9 +729,11 @@ export default function OnboardingIndexPage() {
                             )}
 
                             {phase === "websites" && (
-                                <div className="space-y-5">
+                                <div className="flex flex-col gap-5">
                                     <div>
-                                        <p className="text-xs font-black uppercase tracking-[0.18em] text-[#155EEF]">Step 4 · My Websites preview</p>
+                                        <Badge variant="outline" className="border-[#C7C1B6] bg-[#FFFDF7] px-3 py-1 text-[11px] font-black uppercase tracking-[0.18em] text-[#A8793A]">
+                                            Step 4 · My Websites preview
+                                        </Badge>
                                         <h1 className="mt-2 text-[34px] font-black leading-tight tracking-[-0.04em] text-[#071436] xl:text-[42px]">
                                             Your website queue is ready.
                                         </h1>
@@ -676,8 +746,8 @@ export default function OnboardingIndexPage() {
                                         {websitePlans.map((plan, index) => {
                                             const segment = segmentOptions.find((item) => item.id === plan.segment);
                                             return (
-                                                <article key={plan.id} className="rounded-lg border border-[#D8E0EA] bg-white p-5 shadow-[0_14px_42px_rgba(7,20,54,0.07)]">
-                                                    <div className="flex items-start justify-between gap-4">
+                                                <Card key={plan.id} className="overflow-hidden border-[#E7E0D7] bg-[#FFFDF7] p-0 shadow-[0_16px_45px_rgba(11,14,18,0.07)]">
+                                                    <CardHeader className="mb-0 flex-row items-start justify-between gap-4 bg-[#FBF8F1] p-5">
                                                         <div className="flex items-start gap-3">
                                                             <span className={cn("flex h-11 w-11 items-center justify-center rounded-full border", toneClasses[segment?.tone ?? "slate"])}>
                                                                 {segment && <segment.icon className="h-5 w-5" />}
@@ -686,26 +756,40 @@ export default function OnboardingIndexPage() {
                                                                 <p className="text-[11px] font-black uppercase tracking-[0.18em] text-[#155EEF]">
                                                                     Website {index + 1}
                                                                 </p>
-                                                                <h2 className="mt-1 text-xl font-black tracking-[-0.02em] text-[#071436]">{plan.title}</h2>
-                                                                <p className="mt-1 text-sm font-semibold leading-6 text-[#62708A]">{plan.caption}</p>
+                                                                <CardTitle className="mt-1 text-xl font-black tracking-[-0.02em] text-[#071436]">{plan.title}</CardTitle>
+                                                                <CardDescription className="mt-1 text-sm font-semibold leading-6 text-[#62708A]">{plan.caption}</CardDescription>
                                                             </div>
                                                         </div>
-                                                        <span className={cn(
-                                                            "rounded-full border px-3 py-1 text-xs font-black",
-                                                            plan.stock === "new"
-                                                                ? "border-[#CFE0FF] bg-[#EEF4FF] text-[#155EEF]"
-                                                                : "border-[#F6D8A8] bg-[#FFF7EA] text-[#A85B00]"
-                                                        )}>
+                                                        <Badge
+                                                            variant={plan.stock === "new" ? "outline" : "warning"}
+                                                            className={cn(
+                                                                "rounded-full px-3 py-1 text-xs font-black",
+                                                                plan.stock === "new" && "border-[#C7C1B6] bg-[#FFFDF7] text-[#A8793A]"
+                                                            )}
+                                                        >
                                                             {modeLabel(plan.stock)}
-                                                        </span>
-                                                    </div>
+                                                        </Badge>
+                                                    </CardHeader>
 
-                                                    <div className="mt-4 grid grid-cols-2 gap-2 text-xs font-black text-[#35445C]">
+                                                    <CardContent className="p-5">
+                                                    <div className="grid grid-cols-2 gap-2 text-xs font-black text-[#35445C]">
                                                         <div className="rounded-md border border-[#E3E9F2] bg-[#F7F9FC] px-3 py-2">
                                                             Segment: {segmentLabel[plan.segment]}
                                                         </div>
                                                         <div className="rounded-md border border-[#E3E9F2] bg-[#F7F9FC] px-3 py-2">
-                                                            Brand: {plan.brand || "Inventory based"}
+                                                            {plan.brand ? (
+                                                                <span className="flex items-center gap-2">
+                                                                    <BrandLogoMark
+                                                                        brand={plan.brand}
+                                                                        segment={plan.segment}
+                                                                        className="h-7 w-7 rounded-md"
+                                                                        imageClassName="h-5 w-5"
+                                                                    />
+                                                                    Brand: {plan.brand}
+                                                                </span>
+                                                            ) : (
+                                                            "Brand: Inventory based"
+                                                        )}
                                                         </div>
                                                     </div>
 
@@ -717,38 +801,49 @@ export default function OnboardingIndexPage() {
                                                             </div>
                                                         ))}
                                                     </div>
+                                                    </CardContent>
 
+                                                    <CardFooter className="mt-0 border-t border-[#E7E0D7] bg-[#FFFDF7] p-5 pt-5">
                                                     <Button
                                                         type="button"
                                                         onClick={() => handleStartWebsite(plan)}
-                                                        className="mt-5 h-11 w-full rounded-md bg-[#155EEF] font-black text-white hover:bg-[#0F4FD3]"
+                                                        className="h-11 w-full rounded-md bg-[#0B0E12] font-black text-[#FFFDF7] hover:bg-[#171717]"
                                                     >
                                                         Start This Website
                                                         <ArrowRight className="ml-2 h-4 w-4" />
                                                     </Button>
-                                                </article>
+                                                    </CardFooter>
+                                                </Card>
                                             );
                                         })}
                                     </div>
                                 </div>
                             )}
                         </section>
+                        </ScrollArea>
 
-                        <aside className="min-h-0 space-y-4 overflow-y-auto">
-                            <div className="rounded-lg border border-[#D8E0EA] bg-white p-5 shadow-[0_14px_42px_rgba(7,20,54,0.07)]">
-                                <p className="text-xs font-black uppercase tracking-[0.18em] text-[#155EEF]">Live plan</p>
-                                <h2 className="mt-2 text-2xl font-black tracking-[-0.03em] text-[#071436]">
+                        <ScrollArea className="min-h-0">
+                        <aside className="flex min-h-0 flex-col gap-4 pb-6">
+                            <Card className="border-[#E7E0D7] bg-[#FFFDF7]/95 p-0 shadow-[0_18px_55px_rgba(11,14,18,0.08)]">
+                                <CardHeader className="mb-0 p-5 pb-3">
+                                    <Badge variant="outline" className="w-fit border-[#C7C1B6] bg-[#FBF8F1] px-3 py-1 text-[11px] font-black uppercase tracking-[0.18em] text-[#A8793A]">
+                                        Live plan
+                                    </Badge>
+                                <CardTitle className="mt-2 text-2xl font-black tracking-[-0.03em] text-[#071436]">
                                     {totalWebsites || 0} website{totalWebsites === 1 ? "" : "s"}
-                                </h2>
-                                <p className="mt-1 text-sm font-semibold text-[#62708A]">
+                                </CardTitle>
+                                <CardDescription className="mt-1 text-sm font-semibold text-[#62708A]">
                                     {selectedModes.length === 0
                                         ? "Select New, Used, or Hybrid to begin."
                                         : isHybrid
                                             ? "Hybrid mode: new and pre-owned websites are separated."
                                             : `${modeLabel(selectedModes[0])} mode selected.`}
-                                </p>
+                                </CardDescription>
+                                </CardHeader>
+                                <CardContent className="p-5 pt-0">
+                                <Separator className="mb-4 bg-[#E7E0D7]" />
 
-                                <div className="mt-4 space-y-3">
+                                <div className="flex flex-col gap-3">
                                     <SummaryRow
                                         icon={ShieldCheck}
                                         label="Stock mode"
@@ -772,29 +867,51 @@ export default function OnboardingIndexPage() {
                                     <SummaryRow
                                         icon={Layers}
                                         label="Hybrid output"
-                                        value="New + Used websites for the selected category"
+                                        value={`Starts with ${HYBRID_BASE_WEBSITE_COUNT}; extra OEMs add new websites`}
                                     />
                                 </div>
-                            </div>
+                                </CardContent>
+                            </Card>
 
                             {phase !== "websites" ? (
                                 <StaticDealerPreview />
                             ) : (
-                                <div className="rounded-lg border border-[#D8E0EA] bg-[#071436] p-5 text-white shadow-[0_18px_48px_rgba(7,20,54,0.16)]">
-                                    <p className="text-xs font-black uppercase tracking-[0.18em] text-blue-200">Next screen after selection</p>
-                                    <h3 className="mt-2 text-2xl font-black tracking-[-0.03em]">Dashboard: My Websites</h3>
-                                    <p className="mt-2 text-sm font-semibold leading-6 text-white/75">
+                                <Card className="border-[#242424] bg-[#0B0E12] p-0 text-[#FFFDF7] shadow-[0_22px_65px_rgba(11,14,18,0.22)]">
+                                    <CardHeader className="mb-0 p-5 pb-3">
+                                    <p className="text-xs font-black uppercase tracking-[0.18em] text-[#C79A5B]">Next screen after selection</p>
+                                    <CardTitle className="mt-2 text-2xl font-black tracking-[-0.03em] text-[#FFFDF7]">Dashboard: My Websites</CardTitle>
+                                    <CardDescription className="mt-2 text-sm font-semibold leading-6 text-[#FFFDF7]/75">
                                         This preview shows exactly what the dealer should see before starting each individual website setup.
-                                    </p>
-                                    <div className="mt-4 space-y-2">
+                                    </CardDescription>
+                                    </CardHeader>
+                                    <CardContent className="flex flex-col gap-2 p-5 pt-0">
                                         {websitePlans.slice(0, 6).map((plan) => (
                                             <div key={plan.id} className="flex items-center justify-between gap-3 rounded-md bg-white/10 px-3 py-2 text-sm font-bold">
-                                                <span>{plan.title}</span>
-                                                <span className="text-white/60">{plan.brand || "Used stock"}</span>
+                                                <span className="flex min-w-0 items-center gap-2">
+                                                    {plan.brand ? (
+                                                        <BrandLogoMark
+                                                            brand={plan.brand}
+                                                            segment={plan.segment}
+                                                            className="h-7 w-7 rounded-md"
+                                                            imageClassName="h-5 w-5"
+                                                        />
+                                                    ) : (
+                                                        <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-white/10 text-white">
+                                                            {plan.segment === "2w" ? <Bike className="h-4 w-4" /> : plan.segment === "3w" ? <Truck className="h-4 w-4" /> : <Car className="h-4 w-4" />}
+                                                        </span>
+                                                    )}
+                                                    <span className="truncate">{plan.title}</span>
+                                                </span>
+                                                <span className="shrink-0 text-white/60">{plan.brand || "Used stock"}</span>
                                             </div>
                                         ))}
-                                    </div>
-                                </div>
+                                        {websitePlans.length > 6 && (
+                                            <div className="rounded-md bg-white/10 px-3 py-2 text-sm font-black text-white/75">
+                                                +{websitePlans.length - 6} more website{websitePlans.length - 6 === 1 ? "" : "s"} in the full queue
+                                            </div>
+                                        )}
+                                    </CardContent>
+                                </Card>
                             )}
 
                             {phase !== "websites" && (
@@ -802,7 +919,7 @@ export default function OnboardingIndexPage() {
                                     <Button
                                         type="button"
                                         variant="outline"
-                                        className="h-11 rounded-md border-[#D8E0EA] px-4 font-black"
+                                        className="h-11 rounded-md border-[#C7C1B6] bg-[#FFFDF7] px-4 font-black text-[#0B0E12] hover:border-[#A8793A] hover:bg-[#FBF8F1]"
                                         onClick={handleBack}
                                     >
                                         <ArrowLeft className="mr-2 h-4 w-4" />
@@ -810,7 +927,7 @@ export default function OnboardingIndexPage() {
                                     </Button>
                                     <Button
                                         type="button"
-                                        className="h-11 flex-1 rounded-md bg-[#155EEF] font-black text-white hover:bg-[#0F4FD3] disabled:opacity-50"
+                                        className="h-11 flex-1 rounded-md bg-[#0B0E12] font-black text-[#FFFDF7] hover:bg-[#171717] disabled:opacity-50"
                                         onClick={handlePrimaryContinue}
                                         disabled={
                                             (phase === "stock" && !canContinueStock) ||
@@ -828,7 +945,7 @@ export default function OnboardingIndexPage() {
                                 <Button
                                     type="button"
                                     variant="outline"
-                                    className="h-11 w-full rounded-md border-[#D8E0EA] font-black"
+                                    className="h-11 w-full rounded-md border-[#C7C1B6] bg-[#FFFDF7] font-black text-[#0B0E12] hover:border-[#A8793A] hover:bg-[#FBF8F1]"
                                     onClick={() => setPhase(includesNew ? "brands" : "segments")}
                                 >
                                     <PlusCircle className="mr-2 h-4 w-4" />
@@ -836,6 +953,7 @@ export default function OnboardingIndexPage() {
                                 </Button>
                             )}
                         </aside>
+                        </ScrollArea>
                     </div>
                 </main>
             </BrowserFrame>
@@ -853,8 +971,8 @@ function SummaryRow({
     value: string;
 }) {
     return (
-        <div className="flex items-start gap-3 rounded-md border border-[#E3E9F2] bg-[#F7F9FC] px-3 py-2.5">
-            <Icon className="mt-0.5 h-4 w-4 shrink-0 text-[#155EEF]" />
+        <div className="flex items-start gap-3 rounded-md border border-[#E7E0D7] bg-[#FBF8F1] px-3 py-2.5">
+            <Icon className="mt-0.5 h-4 w-4 shrink-0 text-[#A8793A]" />
             <div>
                 <p className="text-[11px] font-black uppercase tracking-[0.12em] text-[#62708A]">{label}</p>
                 <p className="mt-1 text-sm font-black text-[#071436]">{value}</p>
@@ -865,8 +983,8 @@ function SummaryRow({
 
 function StaticDealerPreview() {
     return (
-        <div className="hidden overflow-hidden rounded-lg border border-[#CAD5E2] bg-white shadow-[0_16px_44px_rgba(7,20,54,0.08)] lg:block">
-            <div className="flex items-center justify-between border-b border-[#E3E9F2] px-5 py-3">
+        <Card className="hidden overflow-hidden border-[#E7E0D7] bg-[#FFFDF7] p-0 shadow-[0_18px_55px_rgba(11,14,18,0.08)] lg:block">
+            <div className="flex items-center justify-between border-b border-[#E7E0D7] px-5 py-3">
                 <div>
                     <p className="text-sm font-black tracking-[-0.01em] text-[#071436]">Kumar Motors</p>
                     <p className="text-[11px] font-semibold text-[#62708A]">Your Journey, Our Priority</p>
@@ -874,19 +992,19 @@ function StaticDealerPreview() {
                 <p className="text-xs font-black text-[#071436]">+91 98765 43210</p>
             </div>
 
-            <div className="grid min-h-[230px] bg-[#071436] sm:grid-cols-[1fr_1.2fr]">
+            <div className="grid min-h-[230px] bg-[#0B0E12] sm:grid-cols-[1fr_1.2fr]">
                 <div className="p-6 text-white">
                     <h3 className="text-[23px] font-black leading-[1.08] tracking-[-0.02em]">Reliable Vehicles. Trusted Service.</h3>
                     <p className="mt-3 text-[13px] font-medium leading-5 text-white/75">
                         Cars, bikes, and autos from trusted local dealers. Best prices, easy finance.
                     </p>
-                    <span className="mt-5 inline-flex rounded-md bg-[#155EEF] px-4 py-2.5 text-xs font-black text-white" aria-hidden="true">
+                    <span className="mt-5 inline-flex rounded-md bg-[#FFFDF7] px-4 py-2.5 text-xs font-black text-[#0B0E12]" aria-hidden="true">
                         View Inventory
                     </span>
                 </div>
-                <div className="flex items-center justify-center bg-gradient-to-br from-[#DCE5F0] to-[#F7F9FC]">
-                    <div className="flex h-28 w-40 items-center justify-center rounded-xl border border-[#CAD5E2] bg-white shadow-[0_18px_45px_rgba(7,20,54,0.12)]">
-                        <Car className="h-16 w-16 text-[#155EEF]" />
+                <div className="flex items-center justify-center bg-gradient-to-br from-[#3B3024] to-[#FBF8F1]">
+                    <div className="flex h-28 w-40 items-center justify-center rounded-lg border border-[#C7C1B6] bg-[#FFFDF7] shadow-[0_18px_45px_rgba(11,14,18,0.12)]">
+                        <Car className="h-16 w-16 text-[#A8793A]" />
                     </div>
                 </div>
             </div>
@@ -898,19 +1016,19 @@ function StaticDealerPreview() {
                     { icon: Truck, label: "Autos" },
                     { icon: Store, label: "Used" },
                 ].map((item) => (
-                    <div key={item.label} className="rounded-md border border-[#E3E9F2] bg-[#F7F9FC] p-2 text-center">
-                        <item.icon className="mx-auto h-4 w-4 text-[#155EEF]" />
+                    <div key={item.label} className="rounded-md border border-[#E7E0D7] bg-[#FBF8F1] p-2 text-center">
+                        <item.icon className="mx-auto h-4 w-4 text-[#A8793A]" />
                         <p className="mt-1.5 text-[10px] font-black text-[#071436]">{item.label}</p>
                     </div>
                 ))}
             </div>
 
-            <div className="border-t border-[#E3E9F2] px-4 py-2.5">
-                <p className="flex items-center gap-2 text-xs font-semibold text-[#155EEF]">
+            <div className="border-t border-[#E7E0D7] px-4 py-2.5">
+                <p className="flex items-center gap-2 text-xs font-semibold text-[#A8793A]">
                     <Globe2 className="h-4 w-4" />
                     kumar-motors.dealersitepro.in
                 </p>
             </div>
-        </div>
+        </Card>
     );
 }

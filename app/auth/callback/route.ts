@@ -66,10 +66,13 @@ export async function GET(request: Request) {
             }
 
             // If coming from registration, redirect to login with success banner
-            if (next === '/auth/login') {
+            // while preserving its original ?redirect=/onboarding/step-1 target.
+            if (next?.startsWith('/auth/login')) {
                 // Sign out so user can log in with their password
                 await supabase.auth.signOut()
-                return NextResponse.redirect(`${origin}/auth/login?registered=true`)
+                const loginUrl = new URL(`${origin}${next}`)
+                loginUrl.searchParams.set('registered', 'true')
+                return NextResponse.redirect(loginUrl)
             }
             return NextResponse.redirect(`${origin}${next || '/dashboard'}`)
         }

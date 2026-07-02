@@ -11,23 +11,19 @@ import {
 } from "lucide-react"
 import { cn } from "@/lib/utils"
 import type { VehicleUploadRow } from "@/lib/types"
-
-// ── CSV template the dealer downloads ────────────────────────────────────────
-const CSV_HEADERS = [
-    "make", "model", "variant", "year",
-    "price_inr", "km_driven", "fuel",
-    "transmission", "color", "reg_number",
-]
-
-// Example rows for the downloadable template (filled-in sample vehicles).
-const EXAMPLE_ROWS: (string | number)[][] = [
-    ["Maruti Suzuki", "Swift", "VXi", 2020, 450000, 35000, "Petrol", "Manual", "Red", "KA01AB1234"],
-    ["Honda", "City", "SV CVT", 2019, 780000, 42000, "Petrol", "Automatic", "White", "MH02XY5678"],
-    ["Hyundai", "Creta", "SX", 2021, 1050000, 28000, "Diesel", "Manual", "Blue", "TN09CD9012"],
-]
+import {
+    downloadVehicleUploadCsvTemplate,
+    VEHICLE_UPLOAD_CSV_HEADERS,
+    VEHICLE_UPLOAD_EXAMPLE_ROWS,
+} from "@/lib/inventory/vehicle-upload-template"
 
 // Max vehicles accepted per upload (matches the advertised limit in the UI copy).
 const MAX_ROWS = 500
+const CSV_HEADERS = [...VEHICLE_UPLOAD_CSV_HEADERS]
+const EXAMPLE_ROWS = VEHICLE_UPLOAD_EXAMPLE_ROWS
+const VALID_CONDITIONS = new Set(["new", "used", "certified_pre_owned"])
+const VALID_STATUSES = new Set(["available", "reserved", "sold", "inactive", "draft"])
+const VALID_INSURANCE_STATUSES = new Set(["unknown", "active", "expired", "expiring_soon"])
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
@@ -39,7 +35,12 @@ function parseLine(line: string): string[] {
     for (let i = 0; i < line.length; i++) {
         const ch = line[i]
         if (ch === '"') {
-            inQuotes = !inQuotes
+            if (inQuotes && line[i + 1] === '"') {
+                current += '"'
+                i += 1
+            } else {
+                inQuotes = !inQuotes
+            }
         } else if (ch === "," && !inQuotes) {
             result.push(current.trim())
             current = ""
@@ -49,6 +50,33 @@ function parseLine(line: string): string[] {
     }
     result.push(current.trim())
     return result
+}
+
+function optionalNumber(value: string | undefined) {
+    if (!value?.trim()) return undefined
+    const parsed = Number(value)
+    return Number.isFinite(parsed) ? parsed : undefined
+}
+
+function optionalInteger(value: string | undefined) {
+    if (!value?.trim()) return undefined
+    const parsed = parseInt(value, 10)
+    return Number.isFinite(parsed) ? parsed : undefined
+}
+
+function optionalBoolean(value: string | undefined) {
+    const normalized = value?.trim().toLowerCase()
+    if (!normalized) return undefined
+    if (["yes", "true", "1", "featured"].includes(normalized)) return true
+    if (["no", "false", "0"].includes(normalized)) return false
+    return undefined
+}
+
+function optionalList(value: string | undefined) {
+    return value
+        ?.split(/[|;]/)
+        .map((item) => item.trim())
+        .filter(Boolean)
 }
 
 /** Parse full CSV text → array of row objects */
@@ -67,8 +95,11 @@ function parseCSV(text: string): { rows: VehicleUploadRow[]; errors: string[] } 
 
         const make  = row.make?.trim()
         const model = row.model?.trim()
-        const year  = parseInt(row.year)
+        const year  = parseInt(row.year, 10)
         const price = parseFloat(row.price_inr)
+        const condition = row.condition?.trim().toLowerCase()
+        const status = row.status?.trim().toLowerCase()
+        const insuranceStatus = row.insurance_status?.trim().toLowerCase()
 
         if (!make)              { errors.push(`Row ${i}: 'make' is required`);  continue }
         if (!model)             { errors.push(`Row ${i}: 'model' is required`); continue }
@@ -78,6 +109,15 @@ function parseCSV(text: string): { rows: VehicleUploadRow[]; errors: string[] } 
         if (isNaN(price) || price <= 0) {
             errors.push(`Row ${i}: invalid price '${row.price_inr}'`); continue
         }
+        if (condition && !VALID_CONDITIONS.has(condition)) {
+            errors.push(`Row ${i}: condition must be new, used, or certified_pre_owned`); continue
+        }
+        if (status && !VALID_STATUSES.has(status)) {
+            errors.push(`Row ${i}: status must be available, reserved, sold, inactive, or draft`); continue
+        }
+        if (insuranceStatus && !VALID_INSURANCE_STATUSES.has(insuranceStatus)) {
+            errors.push(`Row ${i}: insurance_status must be unknown, active, expired, or expiring_soon`); continue
+        }
 
         rows.push({
             make,
@@ -85,11 +125,28 @@ function parseCSV(text: string): { rows: VehicleUploadRow[]; errors: string[] } 
             variant:      row.variant      || undefined,
             year,
             price_inr:    price,
-            km_driven:    row.km_driven    ? parseInt(row.km_driven)    : undefined,
+            on_road_price_inr: optionalNumber(row.on_road_price_inr),
+            km_driven:    optionalInteger(row.km_driven),
             fuel:         row.fuel         || undefined,
             transmission: row.transmission || undefined,
             color:        row.color        || undefined,
-            reg_number:   row.reg_number   || undefined,
+            reg_number:   row.registration_number || row.reg_number || undefined,
+            vin:          row.vin          || undefined,
+            body_type:    row.body_type    || undefined,
+            seating_capacity: optionalInteger(row.seating_capacity),
+            engine_cc:    optionalInteger(row.engine_cc),
+            condition:    condition as VehicleUploadRow["condition"] || undefined,
+            status:       status as VehicleUploadRow["status"] || undefined,
+            is_featured:  optionalBoolean(row.is_featured),
+            image_url:    row.image_url || undefined,
+            image_urls:   optionalList(row.image_urls),
+            features:     optionalList(row.features),
+            description:  row.description || undefined,
+            insurance_status: insuranceStatus as VehicleUploadRow["insurance_status"] || undefined,
+            insurance_provider: row.insurance_provider || undefined,
+            insurance_valid_until: row.insurance_valid_until || undefined,
+            meta_title:   row.meta_title || undefined,
+            meta_description: row.meta_description || undefined,
         })
     }
     return { rows, errors }
@@ -254,21 +311,32 @@ export default function BulkUploadPage() {
                                 <FileText className="w-5 h-5 text-blue-500" />
                             </div>
                             <div className="min-w-0">
-                                <p className="text-sm font-semibold">vehicle-upload-template.xlsx</p>
+                                <p className="text-sm font-semibold">vehicle-inventory-sample.xlsx / .csv</p>
                                 <p className="text-xs text-muted-foreground">
-                                    Columns: {CSV_HEADERS.join(", ")}
+                                    {CSV_HEADERS.length} fields for price, specs, photos, features, insurance, and SEO.
                                 </p>
                             </div>
                         </div>
-                        <Button
-                            size="sm"
-                            variant="outline"
-                            onClick={downloadTemplate}
-                            className="gap-2 shrink-0"
-                        >
-                            <Download className="w-4 h-4" />
-                            Download Excel Template
-                        </Button>
+                        <div className="flex shrink-0 flex-wrap gap-2">
+                            <Button
+                                size="sm"
+                                variant="outline"
+                                onClick={() => downloadVehicleUploadCsvTemplate()}
+                                className="gap-2"
+                            >
+                                <Download className="w-4 h-4" />
+                                Download CSV
+                            </Button>
+                            <Button
+                                size="sm"
+                                variant="outline"
+                                onClick={downloadTemplate}
+                                className="gap-2"
+                            >
+                                <Download className="w-4 h-4" />
+                                Download Excel
+                            </Button>
+                        </div>
                     </div>
                 </CardContent>
             </Card>

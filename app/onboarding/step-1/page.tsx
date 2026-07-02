@@ -20,6 +20,7 @@ import {
     validateOnboardingContactStep,
 } from "@/lib/validations/onboarding";
 import brandData from "@/lib/data/brand-models.json";
+import OnboardingIndexPage from "../page";
 
 // Sanitize input into a URL-safe slug
 function toSlug(value: string) {
@@ -82,6 +83,16 @@ const TWO_WHEELER_BRANDS: TwoWheelerBrandEntry[] = [
 const THREE_WHEELER_BRANDS = (brandData.threeWheelers as { brandId: string; brand: string }[]);
 
 export default function Step1Page() {
+    const activeWebsitePlanId = useOnboardingStore((state) => state.activeWebsitePlanId);
+
+    if (!activeWebsitePlanId) {
+        return <OnboardingIndexPage />;
+    }
+
+    return <Step1ProfilePage />;
+}
+
+function Step1ProfilePage() {
     const router = useRouter();
     const { data, updateData, setStep } = useOnboardingStore();
 
@@ -102,7 +113,7 @@ export default function Step1Page() {
     const checkRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
     // OEM brand state (1st hand only)
-    const [selectedBrands, setSelectedBrands] = useState<Brand[]>(data.brands || []);
+    const [selectedBrands, setSelectedBrands] = useState<Brand[]>((data.brands || []).slice(0, 1));
     const [brandError,     setBrandError]     = useState("");
     const [cyeproKey,      setCyeproKey]      = useState(data.cyeproApiKey ?? "");
     const [showCyeproKey,  setShowCyeproKey]  = useState(false);
@@ -123,8 +134,8 @@ export default function Step1Page() {
     const vehicleTypesLabel = vehicleKinds.length <= 1
         ? vehicleKinds[0]
         : `${vehicleKinds.slice(0, -1).join(", ")} & ${vehicleKinds[vehicleKinds.length - 1]}`;
-    const [selectedBrands2w, setSelectedBrands2w] = useState<string[]>(data.brands2w || []);
-    const [selectedBrands3w, setSelectedBrands3w] = useState<string[]>(data.brands3w || []);
+    const [selectedBrands2w, setSelectedBrands2w] = useState<string[]>((data.brands2w || []).slice(0, 1));
+    const [selectedBrands3w, setSelectedBrands3w] = useState<string[]>((data.brands3w || []).slice(0, 1));
     const [brand2wSearch, setBrand2wSearch] = useState("");
     const [brand3wSearch, setBrand3wSearch] = useState("");
 
@@ -138,9 +149,9 @@ export default function Step1Page() {
         setFormData(nextFormData);
         setSiteSlug(data.slug || (nextFormData.dealershipName ? toSlug(nextFormData.dealershipName) : ""));
         setSlugEdited(Boolean(data.slug));
-        setSelectedBrands(data.brands || []);
-        setSelectedBrands2w(data.brands2w || []);
-        setSelectedBrands3w(data.brands3w || []);
+        setSelectedBrands((data.brands || []).slice(0, 1));
+        setSelectedBrands2w((data.brands2w || []).slice(0, 1));
+        setSelectedBrands3w((data.brands3w || []).slice(0, 1));
         setCyeproKey(data.cyeproApiKey ?? "");
         setHasMultipleBranches(Boolean(data.hasMultipleBranches));
         setBranches(getOnboardingBranchPrefill(data.branches));
@@ -195,22 +206,16 @@ export default function Step1Page() {
     };
 
     const toggleBrand = (brand: Brand) => {
-        setSelectedBrands(prev =>
-            prev.includes(brand) ? prev.filter(b => b !== brand) : [...prev, brand]
-        );
+        setSelectedBrands(prev => prev.includes(brand) ? [] : [brand]);
         setBrandError("");
     };
 
     const toggleBrand2w = (brand: string) => {
-        setSelectedBrands2w(prev =>
-            prev.includes(brand) ? prev.filter(b => b !== brand) : [...prev, brand]
-        );
+        setSelectedBrands2w(prev => prev.includes(brand) ? [] : [brand]);
     };
 
     const toggleBrand3w = (brand: string) => {
-        setSelectedBrands3w(prev =>
-            prev.includes(brand) ? prev.filter(b => b !== brand) : [...prev, brand]
-        );
+        setSelectedBrands3w(prev => prev.includes(brand) ? [] : [brand]);
     };
 
     // Scroll to and focus an element (mirrors the focus-first-error pattern used elsewhere)
@@ -286,9 +291,9 @@ export default function Step1Page() {
         if (!validate()) return;
         if (slugStatus === "checking") return;
 
-        // For 1st hand and hybrid, require at least one OEM brand
+        // For 1st hand and hybrid, require one OEM brand for this website.
         if (showBrandPicker && selectedBrands.length === 0) {
-            setBrandError("Please select at least one brand you're authorised to sell");
+            setBrandError("Please select one brand you're authorised to sell");
             document.getElementById("brand-section")?.scrollIntoView({ behavior: "smooth", block: "center" });
             return;
         }
@@ -322,24 +327,23 @@ export default function Step1Page() {
                     }))
                     : [],
                 ...(isFirstHand && {
-                    brands:        selectedBrands,
+                    brands:        selectedBrands.slice(0, 1),
                     sellsNewCars:  true,
                     sellsUsedCars: false,
                 }),
                 ...(isHybrid && {
-                    brands:        selectedBrands,
+                    brands:        selectedBrands.slice(0, 1),
                     sellsNewCars:  true,
                     sellsUsedCars: true,
                 }),
                 // Secondary 2W/3W selections (optional; only relevant when those flags are set).
-                ...(showTwoWheelers   && { brands2w: selectedBrands2w }),
-                ...(showThreeWheelers && { brands3w: selectedBrands3w }),
+                ...(showTwoWheelers   && { brands2w: selectedBrands2w.slice(0, 1) }),
+                ...(showThreeWheelers && { brands3w: selectedBrands3w.slice(0, 1) }),
             });
             setStep(2);
 
-            // Multi-brand or hybrid dealers → outlet details step before inventory
-            const needsOutletStep = (isFirstHand || isHybrid)
-                && (selectedBrands.length > 1 || isHybrid);
+            // Hybrid dealers still need the outlet/used setup step.
+            const needsOutletStep = isHybrid;
 
             if (needsOutletStep) {
                 router.push("/onboarding/step-1b-outlets");
@@ -857,7 +861,7 @@ export default function Step1Page() {
                                 <span className="text-lg">🔀</span>
                                 <div>
                                     <p className="text-sm font-semibold text-violet-700 dark:text-violet-300">New Cars (OEM Section)</p>
-                                    <p className="text-xs text-muted-foreground">Select the brands you&apos;re authorised to sell new. Your pre-owned stock will be set up in the next step.</p>
+                                    <p className="text-xs text-muted-foreground">Select the one brand for this new-vehicle website. Your pre-owned stock will be set up in the next step.</p>
                                 </div>
                             </div>
                         )}
@@ -871,10 +875,10 @@ export default function Step1Page() {
                                 )}>
                                     OEM
                                 </span>
-                                Which brands are you authorised to sell?
+                                Which brand are you authorised to sell?
                             </h3>
                             <p className="text-sm text-muted-foreground mt-1">
-                                Select all OEM brands you hold an authorised dealership for
+                                Select one OEM brand for this website. Add another website later for a different brand.
                             </p>
                         </div>
 
@@ -916,16 +920,8 @@ export default function Step1Page() {
                             <p className="text-sm text-muted-foreground">
                                 Selected:{" "}
                                 <strong className="text-foreground">
-                                    {selectedBrands.length} brand{selectedBrands.length > 1 ? "s" : ""}
+                                    {selectedBrands[0]}
                                 </strong>
-                                {selectedBrands.length <= 3 && (
-                                    <span className="text-muted-foreground"> ({selectedBrands.join(", ")})</span>
-                                )}
-                                {selectedBrands.length > 1 && (
-                                    <span className="ml-2 text-xs text-blue-600 bg-blue-500/10 px-2 py-0.5 rounded-full border border-blue-500/20">
-                                        Multi-OEM Dealer
-                                    </span>
-                                )}
                             </p>
                         )}
 
@@ -946,10 +942,10 @@ export default function Step1Page() {
                                 <span className="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold bg-indigo-500/10 border border-indigo-500/20 text-indigo-600">
                                     2W
                                 </span>
-                                Which two-wheeler brands do you sell?
+                                Which two-wheeler brand do you sell?
                             </h3>
                             <p className="text-sm text-muted-foreground mt-1">
-                                Optional — select any two-wheeler brands you also sell
+                                Optional — select one two-wheeler brand for this website
                             </p>
                         </div>
 
@@ -993,11 +989,8 @@ export default function Step1Page() {
                             <p className="text-sm text-muted-foreground">
                                 Selected:{" "}
                                 <strong className="text-foreground">
-                                    {selectedBrands2w.length} brand{selectedBrands2w.length > 1 ? "s" : ""}
+                                    {selectedBrands2w[0]}
                                 </strong>
-                                {selectedBrands2w.length <= 3 && (
-                                    <span> ({selectedBrands2w.join(", ")})</span>
-                                )}
                             </p>
                         )}
                     </div>
@@ -1011,10 +1004,10 @@ export default function Step1Page() {
                                 <span className="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold bg-green-500/10 border border-green-500/20 text-green-600">
                                     3W
                                 </span>
-                                Which three-wheeler brands do you sell?
+                                Which three-wheeler brand do you sell?
                             </h3>
                             <p className="text-sm text-muted-foreground mt-1">
-                                Optional — select any three-wheeler brands you also sell
+                                Optional — select one three-wheeler brand for this website
                             </p>
                         </div>
 
@@ -1058,11 +1051,8 @@ export default function Step1Page() {
                             <p className="text-sm text-muted-foreground">
                                 Selected:{" "}
                                 <strong className="text-foreground">
-                                    {selectedBrands3w.length} brand{selectedBrands3w.length > 1 ? "s" : ""}
+                                    {selectedBrands3w[0]}
                                 </strong>
-                                {selectedBrands3w.length <= 3 && (
-                                    <span> ({selectedBrands3w.join(", ")})</span>
-                                )}
                             </p>
                         )}
                     </div>
